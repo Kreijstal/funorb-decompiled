@@ -98,7 +98,7 @@ final class aa extends cr {
           var12 = "</col>";
           for (var13 = 0; var13 < this.field_Tb; var13++) {
             if (0 < this.field_Hb[var13]) {
-              param6[var13] = var11 + bj.a(0, this.field_Hb[var13]).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + RandomAccessCacheFile.a(0, this.field_Hb[var13]).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (this.field_Wb[var13] != null ||
@@ -220,7 +220,7 @@ final class aa extends cr {
         }
         if (null != this.field_Ib) {
           this.field_Ib.a((byte) 34);
-          this.field_Ib.c(2);
+          this.field_Ib.unlink(2);
         }
         this.field_Ib = null;
         this.field_Ub = -1;
@@ -260,7 +260,7 @@ final class aa extends cr {
                 var6 = 1;
               }
               if (ab.a(0, var6) == 2) {
-                cf.a(var6, 1, param3, (byte) 119);
+                SecondaryNodeDequeIterator.a(var6, 1, param3, (byte) 119);
               }
               var8 = (String) null;
               tf.a(ui.field_g, ea.field_b, 47, (String) null, param1, var5);

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class bj {
+final class RandomAccessCacheFile {
     private RandomAccessFile field_d;
     static int field_h;
     private long field_a;
@@ -17,7 +17,7 @@ final class bj {
 
     final static String a(int param0, char param1) {
         if (param0 != 0) {
-          bj.a(true);
+          RandomAccessCacheFile.a(true);
         }
         return String.valueOf(param1);
     }
@@ -31,7 +31,7 @@ final class bj {
           }
           this.field_d.write(param2, param1, param0);
           if (param3) {
-            bj.a(true);
+            RandomAccessCacheFile.a(true);
           }
           this.field_a = this.field_a + (long)param0;
         } catch (RuntimeException runtimeException) {
@@ -63,7 +63,7 @@ final class bj {
         }
     }
 
-    bj(File param0, String param1, long param2) throws IOException {
+    RandomAccessCacheFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {

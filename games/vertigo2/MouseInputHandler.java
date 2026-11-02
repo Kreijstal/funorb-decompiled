@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sa implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static cr field_b;
     static cr field_a;
     static int[] field_d;
@@ -10,7 +10,7 @@ final class sa implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
           if (null != as.field_b) {
-            cf.field_a = 0;
+            SecondaryNodeDequeIterator.field_a = 0;
             ja.field_h = param0.getX();
             ca.field_c = param0.getY();
             ej.field_f = true;
@@ -30,7 +30,7 @@ final class sa implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (null == as.field_b) {
             return;
           }
-          cf.field_a = 0;
+          SecondaryNodeDequeIterator.field_a = 0;
           ja.field_h = -1;
           ca.field_c = -1;
           ej.field_f = true;
@@ -68,9 +68,9 @@ final class sa implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         try {
           if (as.field_b != null) {
-            cf.field_a = 0;
+            SecondaryNodeDequeIterator.field_a = 0;
             hn.field_o = param0.getX();
-            gf.field_e = param0.getY();
+            NodeHashTableIterator.field_e = param0.getY();
             gk.a(85);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               kc.field_a = 1;
@@ -141,7 +141,7 @@ final class sa implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           field_a = null;
           return;
         }
-        sa.a(86);
+        MouseInputHandler.a(86);
         field_b = null;
         field_a = null;
     }
@@ -156,7 +156,7 @@ final class sa implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (as.field_b == null) {
             return;
           }
-          cf.field_a = 0;
+          SecondaryNodeDequeIterator.field_a = 0;
           ja.field_h = param0.getX();
           ca.field_c = param0.getY();
           ej.field_f = true;
@@ -187,7 +187,7 @@ final class sa implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         RuntimeException decompiledCaughtException = null;
         try {
           if (as.field_b != null) {
-            cf.field_a = 0;
+            SecondaryNodeDequeIterator.field_a = 0;
             cl.field_f = 0;
             ej.field_f = true;
             var2_int = param0.getModifiers();
@@ -227,7 +227,7 @@ final class sa implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (as.field_b == null) {
             return;
           }
-          cf.field_a = 0;
+          SecondaryNodeDequeIterator.field_a = 0;
           ja.field_h = param0.getX();
           ca.field_c = param0.getY();
           ej.field_f = true;

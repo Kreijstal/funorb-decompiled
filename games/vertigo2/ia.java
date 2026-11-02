@@ -4,7 +4,7 @@
 final class ia extends rk {
     static String field_I;
     static String field_H;
-    ed field_J;
+    PacketBuffer field_J;
     byte field_B;
     static String field_E;
     static int field_G;
@@ -18,7 +18,7 @@ final class ia extends rk {
         if (param0 <= 100) {
           this.a((byte) -73);
         }
-        return 100 * this.field_J.field_u / (-this.field_B + this.field_J.field_p.length);
+        return 100 * this.field_J.position / (-this.field_B + this.field_J.payload.length);
     }
 
     final byte[] a(byte param0) {
@@ -27,10 +27,10 @@ final class ia extends rk {
           ia.a((byte) -71, (bs) null);
         }
         if (this.field_z ||
-          this.field_J.field_p.length - this.field_B > this.field_J.field_u) {
+          this.field_J.payload.length - this.field_B > this.field_J.position) {
           throw new RuntimeException();
         }
-        return this.field_J.field_p;
+        return this.field_J.payload;
     }
 
     final static String a(int param0, int param1, String param2) {
@@ -49,7 +49,7 @@ final class ia extends rk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        mi var5 = null;
+        BitPacketBuffer var5 = null;
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param2);
@@ -88,11 +88,11 @@ final class ia extends rk {
             stackIn_27_0 = (String) null;
             return stackIn_27_0;
           }
-          var5.field_u = var5.field_u + 1;
-          var4 = var5.field_u;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.f(0, 127);
           var5.a((byte) 0, param2);
-          var5.b((byte) 66, -var4 + var5.field_u);
+          var5.b((byte) 66, -var4 + var5.position);
           stackIn_29_0 = null;
           return (String) (stackIn_29_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -122,7 +122,7 @@ final class ia extends rk {
           if (param0 != 77) {
             field_I = (String) null;
           }
-          param1.c(param0 - 75);
+          param1.unlink(param0 - 75);
           var2 = (bs) (mk.field_J.a((byte) 100));
           while (var2 != null) {
             if (var2.a(param1, false)) {
@@ -188,21 +188,21 @@ final class ia extends rk {
           ga.field_hb = param9.field_C;
           qp.field_g = param0.field_N;
           vm.field_a = param0.field_o;
-          sa.field_c = param0.field_A;
+          MouseInputHandler.field_c = param0.field_A;
           hn.field_s = param9.field_X;
           vf.field_y = param9.field_i;
           jr.field_f = param9.field_bb;
           rn.field_z = param9.field_A;
           ln.field_g = param9.field_D;
           al.field_s = param0.field_a;
-          vp.field_d = param0.field_bb;
+          IntrusiveDequeCursor.field_d = param0.field_bb;
           tf.field_p = param9.field_a;
           kh.field_c = param0.field_k;
           vj.field_f = param9.field_u;
           b.field_m = param9.field_o;
           lf.field_z = param9.field_k;
           hk.field_q = param0.field_C;
-          cg.field_e = param9.field_E;
+          GameKeyHandler.field_e = param9.field_E;
           ga.field_jb = param9.field_N;
           nq.a(param2.field_w, param2.field_C, param6, param2.field_u, param2.field_N, (byte[]) null, param2.field_A, param2.field_bb, param2.field_D, param2.field_i, param2.field_X, param2.field_L, param2.field_E, param4, param2.field_T, param8, param7, param2.field_k, param2.field_o, -92, (lg) null, param5, param3, param2.field_a);
           param0.field_u = hm.field_C;
@@ -215,8 +215,8 @@ final class ia extends rk {
           param0.field_C = hk.field_q;
           param0.field_W = wc.field_n;
           param0.field_i = or.field_e;
-          param0.field_A = sa.field_c;
-          param0.field_bb = vp.field_d;
+          param0.field_A = MouseInputHandler.field_c;
+          param0.field_bb = IntrusiveDequeCursor.field_d;
           param0.field_D = pd.field_a;
           param0.field_a = al.field_s;
           param0.field_o = vm.field_a;
@@ -238,7 +238,7 @@ final class ia extends rk {
           param9.field_T = no.field_b;
           param9.field_W = vo.field_x;
           param9.field_w = rm.field_y;
-          param9.field_E = cg.field_e;
+          param9.field_E = GameKeyHandler.field_e;
           param9.field_a = tf.field_p;
           if (param2.field_H != null) {
             if (param0.field_H == null ||

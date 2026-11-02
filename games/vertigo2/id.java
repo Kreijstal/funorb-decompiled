@@ -5,7 +5,7 @@ final class id {
     static int field_d;
     private jl field_e;
     static sq field_g;
-    static mi field_f;
+    static BitPacketBuffer field_f;
     private r field_h;
     private r field_b;
     static long field_a;
@@ -41,7 +41,7 @@ final class id {
         throw new IllegalStateException();
     }
 
-    final static boolean a(mi param0, int param1) {
+    final static boolean a(BitPacketBuffer param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -250,20 +250,20 @@ final class id {
         }
     }
 
-    final static qi a(int param0, int param1, byte param2, int param3, jj param4, int param5) {
+    final static FullscreenFocusCanvas a(int param0, int param1, byte param2, int param3, PlatformTaskDispatcher param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        qi var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
-        qi stackIn_2_0 = null;
-        qi stackIn_7_0 = null;
+        FullscreenFocusCanvas stackIn_2_0 = null;
+        FullscreenFocusCanvas stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 94) {
-            stackIn_2_0 = (qi) null;
+            stackIn_2_0 = (FullscreenFocusCanvas) null;
             return stackIn_2_0;
           }
           var8 = oc.a(param5, param1, param0, param4, param3, 54);
@@ -271,7 +271,7 @@ final class id {
           if (var8 == null) {
             return null;
           }
-          var7 = new qi();
+          var7 = new FullscreenFocusCanvas();
           var7.field_c = var8;
           var7.field_c.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param3, param5);
@@ -336,7 +336,7 @@ final class id {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.c(2);
+          var9.unlink(2);
           this.field_c.a(var8Lifetime1, var6, false);
           stackIn_20_0 = var8Lifetime1;
           return stackIn_20_0;

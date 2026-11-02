@@ -5,7 +5,7 @@ final class mg extends oh {
     private int field_P;
     static int[] field_J;
     private String field_U;
-    static nj field_N;
+    static IntrusiveDeque field_N;
     private int field_I;
     private boolean field_H;
     private cc field_K;
@@ -403,10 +403,10 @@ final class mg extends oh {
               var15 = 0;
               if (var4_int != 0 &&
                 var9 >= 0) {
-                if (il.field_b != null &&
-                  null != il.field_b[var7] &&
-                  (il.field_b[var7][var9] & ~ob.field_L) > 0) {
-                  var15 = ib.a(~ob.field_L & il.field_b[var7][var9], (byte) 79);
+                if (MouseWheelInput.field_b != null &&
+                  null != MouseWheelInput.field_b[var7] &&
+                  (MouseWheelInput.field_b[var7][var9] & ~ob.field_L) > 0) {
+                  var15 = ib.a(~ob.field_L & MouseWheelInput.field_b[var7][var9], (byte) 79);
                   var14 = 1;
                 }
                 if (null != sf.field_f &&
@@ -712,7 +712,7 @@ final class mg extends oh {
 
     static {
         field_J = new int[8192];
-        field_N = new nj();
+        field_N = new IntrusiveDeque();
         field_T = "Cancel draw";
         field_G = "The following settings need to be changed:  ";
         field_L = "Breaking real-world laws";

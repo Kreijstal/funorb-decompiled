@@ -329,7 +329,7 @@ final class kg extends ji {
         return ((var17 - var16) * param4 >> 12) + var16;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int dupTemp$0 = 0;
         boolean stackIn_18_1 = false;
         RuntimeException stackIn_32_0 = null;

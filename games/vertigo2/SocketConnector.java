@@ -3,18 +3,18 @@
  */
 import java.io.*;
 
-abstract class ig {
-    int field_b;
+abstract class SocketConnector {
+    int port;
     static short[] field_c;
     static String field_d;
-    String field_a;
+    String host;
 
     final static void a(int param0, boolean param1) {
         int var2;
         int var3;
         var3 = Vertigo2.field_L ? 1 : 0;
         if (param0 != 9790) {
-          ig.a(false, 96, 75, 14, 14, -20, -1);
+          SocketConnector.a(false, 96, 75, 14, 14, -20, -1);
           if (q.field_y <= 0) {
             if (!ag.b(49)) {
               var2 = 1;
@@ -118,7 +118,7 @@ abstract class ig {
 
     public static void a(int param0) {
         if (param0 != -1) {
-          ig.a(60, false);
+          SocketConnector.a(60, false);
           field_c = null;
           field_d = null;
           return;
@@ -140,7 +140,7 @@ abstract class ig {
         try {
           if (param1) {
             var3 = (String) null;
-            ig.a((String) null, true);
+            SocketConnector.a((String) null, true);
           }
           if (cl.field_c.a((byte) -82) &&
             !param0.equals(cl.field_c.d((byte) 105))) {
@@ -164,10 +164,10 @@ abstract class ig {
 
     final java.net.Socket a(byte param0) throws IOException {
         if (param0 == -39) {
-          return new java.net.Socket(this.field_a, this.field_b);
+          return new java.net.Socket(this.host, this.port);
         }
-        ig.a(29);
-        return new java.net.Socket(this.field_a, this.field_b);
+        SocketConnector.a(29);
+        return new java.net.Socket(this.host, this.port);
     }
 
     static {

@@ -8,10 +8,10 @@ final class qb implements Runnable {
     private DataInputStream field_k;
     static sd field_d;
     private wk field_c;
-    private jj field_i;
+    private PlatformTaskDispatcher field_i;
     private wk field_h;
     private int field_e;
-    private ed field_j;
+    private PacketBuffer field_j;
     static int[] field_b;
     private wk field_a;
     static lg[] field_f;
@@ -80,7 +80,7 @@ final class qb implements Runnable {
         this.field_c = null;
     }
 
-    final ed a(int param0) {
+    final PacketBuffer a(int param0) {
         if (~this.field_e != param0) {
           return null;
         }
@@ -137,7 +137,7 @@ final class qb implements Runnable {
               var3.write(bo.a(var5, -711));
               this.field_k = new DataInputStream(var4.getInputStream());
             }
-            this.field_j.field_u = 0;
+            this.field_j.position = 0;
             decompiledRegionSelector0 = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -223,16 +223,16 @@ final class qb implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = Vertigo2.field_L ? 1 : 0;
           try {
-            while (this.field_j.field_p.length > this.field_j.field_u) {
-              var1_int = this.field_k.read(this.field_j.field_p, this.field_j.field_u, this.field_j.field_p.length - this.field_j.field_u);
+            while (this.field_j.payload.length > this.field_j.position) {
+              var1_int = this.field_k.read(this.field_j.payload, this.field_j.position, this.field_j.payload.length - this.field_j.position);
               if (0 <= var1_int) {
-                this.field_j.field_u = this.field_j.field_u + var1_int;
+                this.field_j.position = this.field_j.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_j.field_u == this.field_j.field_p.length) {
-              throw qb.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_j.field_p.length + " " + this.field_g));
+            if (this.field_j.position == this.field_j.payload.length) {
+              throw qb.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_j.payload.length + " " + this.field_g));
             }
             var1 = this;
             synchronized (var1) {
@@ -257,11 +257,11 @@ final class qb implements Runnable {
         }
     }
 
-    qb(jj param0, java.net.URL param1, int param2) {
+    qb(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_i = param0;
           this.field_g = param1;
-          this.field_j = new ed(param2);
+          this.field_j = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "qb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

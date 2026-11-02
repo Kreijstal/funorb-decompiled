@@ -16,7 +16,7 @@ final class wl {
           he.field_u[0] = j.field_r.nextInt();
           he.field_u[1] = j.field_r.nextInt();
           he.field_u[2] = (int)(dc.field_F >> 32);
-          iq.field_x.field_u = 0;
+          iq.field_x.position = 0;
           he.field_u[3] = (int)dc.field_F;
           iq.field_x.e(he.field_u[0], 0);
           iq.field_x.e(he.field_u[1], 0);
@@ -25,7 +25,7 @@ final class wl {
           cn.a(iq.field_x, 117);
           iq.field_x.d(param3, -1783);
           param4.a(iq.field_x, 47);
-          uh.field_Wb.field_u = 0;
+          uh.field_Wb.position = 0;
           if (param0) {
             uh.field_Wb.f(18, 95);
           }
@@ -33,8 +33,8 @@ final class wl {
             Vertigo2.field_L) {
             uh.field_Wb.f(16, 78);
           }
-          uh.field_Wb.field_u = uh.field_Wb.field_u + 2;
-          var5_int = uh.field_Wb.field_u;
+          uh.field_Wb.position = uh.field_Wb.position + 2;
+          var5_int = uh.field_Wb.position;
           uh.field_Wb.e(ng.field_c, 0);
           uh.field_Wb.a((byte) -116, ff.field_d);
           var6 = 0;
@@ -61,7 +61,7 @@ final class wl {
           }
           var8 = -1 % ((param2 - 22) / 34);
           mq.a(jm.field_H, uh.field_Wb, lp.field_E, 12, iq.field_x);
-          uh.field_Wb.a((byte) -116, uh.field_Wb.field_u - var5_int);
+          uh.field_Wb.a((byte) -116, uh.field_Wb.position - var5_int);
           lf.d(50, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -138,10 +138,10 @@ final class wl {
             stackIn_13_0 = stackOut_12_0;
             if (var19 == 0) {
               if (stackIn_13_0) {
-                var12 = nj.field_a[var9];
+                var12 = IntrusiveDeque.field_a[var9];
                 var13 = ml.field_t[var9];
-                var14 = nj.field_a[var10] - var12;
-                var15 = -var12 + nj.field_a[var11];
+                var14 = IntrusiveDeque.field_a[var10] - var12;
+                var15 = -var12 + IntrusiveDeque.field_a[var11];
                 var16 = -var13 + ml.field_t[var10];
                 var17 = ml.field_t[var11] - var13;
               }

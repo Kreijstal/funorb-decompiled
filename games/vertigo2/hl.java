@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hl extends li {
+final class hl extends IntrusiveNode {
     byte[] field_n;
     static cr[] field_q;
     static String field_o;

@@ -17,7 +17,7 @@ final class kq extends cr {
     private int field_Tb;
     private int field_Ib;
     static ve field_Lb;
-    static nj field_Rb;
+    static IntrusiveDeque field_Rb;
     private int field_Hb;
     private nk[] field_Wb;
 
@@ -111,7 +111,7 @@ final class kq extends cr {
           var2_long = 0L;
           var4 = param1.length();
           if (param0 <= 14) {
-            field_Rb = (nj) null;
+            field_Rb = (IntrusiveDeque) null;
           }
           for (var5 = 0; var5 < var4; var5++) {
             var2_long = var2_long * 37L;

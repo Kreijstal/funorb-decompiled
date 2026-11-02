@@ -78,7 +78,7 @@ final class ql extends um implements ij {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        nj var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         tp var6 = null;
         int var7 = 0;
@@ -108,7 +108,7 @@ final class ql extends um implements ij {
             ba.field_d != 1) {
             ao.field_O.field_Lb.field_Lb.field_S = mq.field_t;
             ao.field_O.field_lb = false;
-            tg.a(0, ao.field_O.field_Mb);
+            DelegatingCanvas.a(0, ao.field_O.field_Mb);
             return;
           }
           ao.field_O.field_Lb.field_Lb.field_S = null;
@@ -118,9 +118,9 @@ final class ql extends um implements ij {
           while (var6 != null) {
             var7 = 0;
             if (var6.field_M == null) {
-              var6.field_Jb = new cr(0L, el.field_b);
+              var6.field_Jb = new cr(0L, IterableNodeHashTable.field_b);
               var6.b(var6.field_Jb, 123);
-              var6.field_Ob = new cr(0L, el.field_b);
+              var6.field_Ob = new cr(0L, IterableNodeHashTable.field_b);
               var6.b(var6.field_Ob, 122);
               var7 = 1;
               var6.i(-2147483648);
@@ -180,7 +180,7 @@ final class ql extends um implements ij {
             var6 = (tp) (var4.b(75));
           }
           if (ao.field_O.field_Hb.field_tb != 0) {
-            rc.field_d = new un(ao.field_O.field_Hb.field_ob, ao.field_O.field_Hb.field_C, ao.field_O.field_Hb.field_Fb, ao.field_O.field_Hb.field_db, gp.field_r, vf.field_B, ee.field_b, ee.field_b);
+            rc.field_d = new un(ao.field_O.field_Hb.field_ob, ao.field_O.field_Hb.field_C, ao.field_O.field_Hb.field_Fb, ao.field_O.field_Hb.field_db, DualLinkNode.field_r, vf.field_B, ee.field_b, ee.field_b);
             hk.field_n = 2;
           }
           if (ao.field_O.field_Kb.field_tb == 0) {

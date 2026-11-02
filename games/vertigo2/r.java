@@ -52,7 +52,7 @@ final class r {
           param1 = param1.toLowerCase();
           param0 = param0.toLowerCase();
           var6 = (CharSequence) ((Object) param1);
-          var4_int = this.field_g.field_k.a(og.a(var6, (byte) -116), 1);
+          var4_int = this.field_g.field_k.a(GameApplet.a(var6, (byte) -116), 1);
           if (!this.c(var4_int, (byte) -81)) {
             return false;
           }
@@ -60,7 +60,7 @@ final class r {
             this.a(((byte[]) (((Object[]) (this.field_e[0]))[0]))[5]);
           }
           var7 = (CharSequence) ((Object) param0);
-          var5 = this.field_g.field_t[var4_int].a(og.a(var7, (byte) -121), 1);
+          var5 = this.field_g.field_t[var4_int].a(GameApplet.a(var7, (byte) -121), 1);
           stackIn_10_0 = this.b(0, var4_int, var5);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -104,7 +104,7 @@ final class r {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.field_g.field_k.a(og.a(var4, (byte) -121), 1);
+          var3_int = this.field_g.field_k.a(GameApplet.a(var4, (byte) -121), 1);
           if (this.c(var3_int, (byte) -75)) {
             stackIn_10_0 = var3_int;
             return stackIn_10_0;
@@ -210,7 +210,7 @@ final class r {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_g.field_k.a(og.a(var4, (byte) -119), 1);
+          var3_int = this.field_g.field_k.a(GameApplet.a(var4, (byte) -119), 1);
           stackIn_5_0 = this.b(var3_int, 100);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -301,12 +301,12 @@ final class r {
           param0 = param0.toLowerCase();
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_g.field_k.a(og.a(var6, (byte) -94), param2 ^ 1);
+          var4_int = this.field_g.field_k.a(GameApplet.a(var6, (byte) -94), param2 ^ 1);
           if (!this.c(var4_int, (byte) -109)) {
             return null;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.field_g.field_t[var4_int].a(og.a(var7, (byte) -122), 1);
+          var5 = this.field_g.field_t[var4_int].a(GameApplet.a(var7, (byte) -122), 1);
           stackIn_7_0 = this.a(var4_int, var5, (byte) -125);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -374,12 +374,12 @@ final class r {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        ed var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        ed var29 = null;
+        PacketBuffer var29 = null;
         int[] var30 = null;
         byte[][] var31 = null;
-        ed var32 = null;
+        PacketBuffer var32 = null;
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
@@ -429,8 +429,8 @@ final class r {
             var35 = pc.a((byte) 6, true, this.field_e[param1]);
             var25 = var35;
             var9 = var25;
-            var26 = new ed(var35);
-            var26.a(param3, var26.field_p.length, 5, -123);
+            var26 = new PacketBuffer(var35);
+            var26.a(param3, var26.payload.length, 5, -123);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -458,9 +458,9 @@ final class r {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * var5_int * var12;
-              var32 = new ed(var43);
+              var32 = new PacketBuffer(var43);
               var14 = 0;
-              var32.field_u = var11;
+              var32.position = var11;
               var15 = 0;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
@@ -482,7 +482,7 @@ final class r {
               }
               var44 = new byte[var14];
               var14Lifetime1 = 0;
-              var32.field_u = var11;
+              var32.position = var11;
               var17 = 0;
               for (var18 = 0; var12 > var18; var18++) {
                 var19 = 0;
@@ -506,11 +506,11 @@ final class r {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - 4 * var5_int * var12;
-              var29 = new ed(var43);
+              var29 = new PacketBuffer(var43);
               var38 = new int[var5_int];
               var30 = var38;
               var14_ref_int__ = var30;
-              var29.field_u = var11;
+              var29.position = var11;
               for (var15 = 0; var15 < var12; var15++) {
                 var16 = 0;
                 for (var17 = 0; var5_int > var17; var17++) {
@@ -526,7 +526,7 @@ final class r {
                 var15_ref_byte____[var16] = array$1;
                 var38[var16] = 0;
               }
-              var29.field_u = var11;
+              var29.position = var11;
               var16 = 0;
               for (var17 = 0; var12 > var17; var17++) {
                 var18 = 0;
@@ -616,7 +616,7 @@ final class r {
           }
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var4_int = this.field_g.field_t[param0].a(og.a(var5, (byte) -108), 1);
+          var4_int = this.field_g.field_t[param0].a(GameApplet.a(var5, (byte) -108), 1);
           if (!this.a(param0, var4_int, -20729)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
@@ -723,7 +723,7 @@ final class r {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_g.field_k.a(og.a(var4, (byte) -100), param1 + 1);
+          var3_int = this.field_g.field_k.a(GameApplet.a(var4, (byte) -100), param1 + 1);
           stackIn_4_0 = this.c(param1 + 11321, var3_int);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -811,7 +811,7 @@ final class r {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_g.field_k.a(og.a(var4, (byte) -103), 1);
+          var3_int = this.field_g.field_k.a(GameApplet.a(var4, (byte) -103), 1);
           if (~var3_int <= param1) {
             return true;
           }

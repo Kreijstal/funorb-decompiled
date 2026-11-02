@@ -126,7 +126,7 @@ final class we extends iq {
           var3_int = 0;
           var4 = ui.field_d;
           while (var3_int < al.field_y.length) {
-            var5 = dg.field_f[var3_int];
+            var5 = ClientException.field_f[var3_int];
             if (var5 >= 0) {
               var6 = ao.a(120, al.field_y[var3_int], true);
               var7 = -(var6 >> 1) + ni.field_a;
@@ -328,7 +328,7 @@ final class we extends iq {
           ki.field_b = gk.a(param1, "commonui", "frame_bottom", true);
           qo.field_y = tn.a("jagex_logo_grey", param1, param3 - 38, "commonui");
           q.field_z = gk.a(param1, "commonui", "button", true);
-          jn.field_b = mi.a("validation", param1, (byte) 34, "commonui");
+          jn.field_b = BitPacketBuffer.a("validation", param1, (byte) 34, "commonui");
           if (param3 != -57) {
             field_L = (String) null;
           }
@@ -361,7 +361,7 @@ final class we extends iq {
             }
           }
           var9Lifetime1 = var17.field_t;
-          tg.a((byte) -123);
+          DelegatingCanvas.a((byte) -123);
           var17.d();
           bi.a(0, 0, bi.field_e, bi.field_j);
           var15 = new er(var9Lifetime1, var9Lifetime1);

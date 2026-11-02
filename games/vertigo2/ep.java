@@ -80,7 +80,7 @@ final class ep {
         field_h = (int[][]) null;
     }
 
-    final void a(ed param0, pr param1) {
+    final void a(PacketBuffer param0, pr param1) {
         int var3;
         int var4;
         int var5;

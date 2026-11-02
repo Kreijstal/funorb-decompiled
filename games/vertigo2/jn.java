@@ -28,7 +28,7 @@ final class jn {
           this.a(65, -27);
         }
         if (var4 != null) {
-          var3Lifetime1.a(new ed(var4), -88);
+          var3Lifetime1.a(new PacketBuffer(var4), -88);
         }
         if (32768 <= param1) {
           var3Lifetime1.a((byte) 93);
@@ -37,18 +37,18 @@ final class jn {
         return var3Lifetime1;
     }
 
-    final static void a(li param0, li param1, int param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, int param2) {
         if (param2 != 18724) {
           return;
         }
         try {
-          if (param0.field_a != null) {
-            param0.c(2);
+          if (param0.next != null) {
+            param0.unlink(2);
           }
-          param0.field_c = param1;
-          param0.field_a = param1.field_a;
-          param0.field_a.field_c = param0;
-          param0.field_c.field_a = param0;
+          param0.previous = param1;
+          param0.next = param1.next;
+          param0.next.previous = param0;
+          param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "jn.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -121,14 +121,14 @@ final class jn {
         }
     }
 
-    final static void a(int param0, int param1, java.awt.Component param2, int param3, boolean param4, int param5, db param6, jj param7) {
+    final static void a(int param0, int param1, java.awt.Component param2, int param3, boolean param4, int param5, db param6, PlatformTaskDispatcher param7) {
         try {
           dd.a(param0, param4, 10);
           ri.field_r = dd.a(param7, param2, 0, param3);
           mh.field_d = dd.a(param7, param2, 1, param1);
-          il.field_g = new fp();
+          MouseWheelInput.field_g = new fp();
           wp.field_a = param1 * 1000 / param0;
-          mh.field_d.a(il.field_g);
+          mh.field_d.a(MouseWheelInput.field_g);
           qc.field_v = param6;
           qc.field_v.c(-82, nd.field_k);
           if (param5 != 18246) {

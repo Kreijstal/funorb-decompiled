@@ -12,7 +12,7 @@ final class dc extends ji {
     static String field_M;
     static mc field_P;
     static long field_F;
-    static qi field_L;
+    static FullscreenFocusCanvas field_L;
     static String field_K;
     private int field_C;
     private int field_N;
@@ -21,7 +21,7 @@ final class dc extends ji {
     private int field_H;
     private int field_y;
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int dupTemp$0 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -270,11 +270,11 @@ final class dc extends ji {
 
     final static void a(boolean param0, byte param1) {
         if (param1 != -110) {
-          field_L = (qi) null;
+          field_L = (FullscreenFocusCanvas) null;
         }
-        if (nj.field_b != null) {
+        if (IntrusiveDeque.field_b != null) {
           bi.d(bi.field_d, bi.field_f, bi.field_i - bi.field_d, bi.field_c - bi.field_f);
-          nj.field_b.b(param0, param1 + 110);
+          IntrusiveDeque.field_b.b(param0, param1 + 110);
         }
     }
 
@@ -353,7 +353,7 @@ final class dc extends ji {
           }
           var6 = (-1 + (param0 + var5_int)) / param0;
           if (param2 <= 5) {
-            field_L = (qi) null;
+            field_L = (FullscreenFocusCanvas) null;
           }
           param0 = var5_int / var6;
           var6Lifetime1 = 0;

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class gp extends li {
-    gp field_p;
+class DualLinkNode extends IntrusiveNode {
+    DualLinkNode field_p;
     long field_n;
-    gp field_o;
+    DualLinkNode field_o;
     static r field_s;
     static String field_r;
     static String field_q;
@@ -44,7 +44,7 @@ class gp extends li {
         }
     }
 
-    protected gp() {
+    protected DualLinkNode() {
     }
 
     final boolean e(int param0) {
@@ -57,7 +57,7 @@ class gp extends li {
         return true;
     }
 
-    final static void a(jj param0, int param1, ed param2, int param3) {
+    final static void a(PlatformTaskDispatcher param0, int param1, PacketBuffer param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;

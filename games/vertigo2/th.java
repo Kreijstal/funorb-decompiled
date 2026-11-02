@@ -5,7 +5,7 @@ final class th {
     private qp[] field_c;
     static ho[] field_e;
     private int field_b;
-    static il field_g;
+    static MouseWheelInput field_g;
     private int field_i;
     static lg[] field_a;
     float field_j;

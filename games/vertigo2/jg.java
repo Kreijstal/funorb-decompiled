@@ -331,7 +331,7 @@ class jg extends bg {
         RuntimeException var3 = null;
         try {
           var3_int = 42 % ((-65 - param1) / 51);
-          stackIn_1_0 = (bs) (kd.field_l.a(3661, param0));
+          stackIn_1_0 = (bs) (GameShell.field_l.a(3661, param0));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

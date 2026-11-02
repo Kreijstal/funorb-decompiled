@@ -63,8 +63,8 @@ final class qk extends wh {
     }
 
     final static void d(int param0, int param1, int param2) {
-        mi var3 = null;
-        mi var3Lifetime1;
+        BitPacketBuffer var3 = null;
+        BitPacketBuffer var3Lifetime1;
         if (param2 == 18964) {
           var3 = uh.field_Wb;
           var3.j(param1, 122);

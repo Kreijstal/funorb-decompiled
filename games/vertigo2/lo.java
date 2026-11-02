@@ -7,10 +7,10 @@ final class lo {
     static java.awt.Frame field_j;
     private int field_c;
     static String field_b;
-    private el field_f;
+    private IterableNodeHashTable field_f;
     static int field_d;
     static String field_g;
-    private sr field_e;
+    private SecondaryNodeDeque field_e;
     static boolean field_i;
     private int field_h;
 
@@ -25,7 +25,7 @@ final class lo {
         }
         Object var5 = var7.a((byte) 121);
         if (var5 == null) {
-          var7.c(2);
+          var7.unlink(2);
           var7.a(-121);
           this.field_c = this.field_c + var7.field_C;
           return null;
@@ -35,10 +35,10 @@ final class lo {
           var7.field_n = 0L;
         } else {
           var6 = new oq(var5, var7.field_C);
-          this.field_f.a(var7.field_k, var6, 120);
+          this.field_f.a(var7.key, var6, 120);
           this.field_e.a((byte) 102, var6);
           ((qc) ((Object) var6)).field_n = 0L;
-          var7.c(2);
+          var7.unlink(2);
           var7.a(-122);
         }
         return var5;
@@ -47,7 +47,7 @@ final class lo {
     private final void a(qc param0, int param1) {
         try {
           if (param0 != null) {
-            param0.c(2);
+            param0.unlink(2);
             param0.a(-115);
             this.field_c = this.field_c + param0.field_C;
           }
@@ -123,13 +123,13 @@ final class lo {
 
     private lo(int param0, int param1) {
         int var3;
-        this.field_e = new sr();
+        this.field_e = new SecondaryNodeDeque();
         this.field_c = param0;
         this.field_h = param0;
         var3 = 1;
         while (true) {
           if (var3 + var3 >= param0) {
-            this.field_f = new el(var3);
+            this.field_f = new IterableNodeHashTable(var3);
             return;
           }
           if (var3 < param1) {
@@ -138,7 +138,7 @@ final class lo {
           }
           break;
         }
-        this.field_f = new el(var3);
+        this.field_f = new IterableNodeHashTable(var3);
         return;
     }
 

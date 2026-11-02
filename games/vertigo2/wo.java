@@ -233,13 +233,13 @@ final class wo {
             var11_int = 25;
             be.field_n.e(-5 + var11_int, 5 + (-be.field_n.field_B + (var8 - var9) - 20));
             va.field_s.a(16777215, (byte) 77, -1, 48, Integer.toString(this.field_g), 5 + (var8 + (-20 - var9) - (be.field_n.field_B - va.field_s.field_k)));
-            qi.a(false, var11_int, 25, var8 - 20 - (var9 + be.field_n.field_B));
+            FullscreenFocusCanvas.a(false, var11_int, 25, var8 - 20 - (var9 + be.field_n.field_B));
           }
           if (this.field_U > 0) {
-            var11_intLifetime1 = -60 - (var9 - var8) - bj.field_j.field_B;
-            bj.field_j.e(20, var11_intLifetime1 + 5);
+            var11_intLifetime1 = -60 - (var9 - var8) - RandomAccessCacheFile.field_j.field_B;
+            RandomAccessCacheFile.field_j.e(20, var11_intLifetime1 + 5);
             va.field_s.a(16777215, (byte) 124, -1, 48, Integer.toString(this.field_U), 5 + va.field_s.field_k + var11_intLifetime1);
-            qi.a(false, 25, 25, var11_intLifetime1);
+            FullscreenFocusCanvas.a(false, 25, 25, var11_intLifetime1);
           }
           if (!this.field_x) {
             var20 = Integer.toString(this.field_W);
@@ -265,17 +265,17 @@ final class wo {
           }
           if (param1 != param0) {
             var12 = va.field_s.a(param1 - 2, var11);
-            qi.a(false, 620 - var12, var12, 10);
+            FullscreenFocusCanvas.a(false, 620 - var12, var12, 10);
             va.field_s.a(16777215, (byte) 109, -1, -var12 + 620, var11, -2 + va.field_s.field_k + 16);
           }
           if (0 < this.field_H) {
             var21 = Vertigo2.a(new String[]{gl.a(-126, true, false, this.field_H)}, mc.field_f, -114);
             var13Lifetime1 = va.field_s.a(1, var21);
-            qi.a(false, -var13Lifetime1 + 620, var13Lifetime1, 10);
+            FullscreenFocusCanvas.a(false, -var13Lifetime1 + 620, var13Lifetime1, 10);
             va.field_s.a(16777215, (byte) 61, -1, -var13Lifetime1 + 620, var21, va.field_s.field_k + 16 - 2);
           }
           if (param4) {
-            var19.a(aj.field_i, 16777215, -1, 320, 64, 2);
+            var19.a(ProxySocketConnector.field_i, 16777215, -1, 320, 64, 2);
           }
           return;
         }
@@ -303,7 +303,7 @@ final class wo {
         }
     }
 
-    final void a(int param0, mi param1) {
+    final void a(int param0, BitPacketBuffer param1) {
         boolean stackIn_3_1 = false;
         boolean stackIn_6_1 = false;
         boolean stackIn_9_1 = false;
@@ -713,7 +713,7 @@ final class wo {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
-        aj.field_f[cq.field_i] = param3;
+        ProxySocketConnector.field_f[cq.field_i] = param3;
         ac.field_I[cq.field_i] = cq.field_i;
         on.field_e[cq.field_i] = param0;
         if (!(param0 <= ug.field_b)) {
@@ -725,7 +725,7 @@ final class wo {
         if (!param2) {
           wo.a(36, -58, true, -105, -9, -63);
         }
-        li.field_g[cq.field_i] = param4;
+        IntrusiveNode.field_g[cq.field_i] = param4;
         ub.field_p[cq.field_i] = param1;
         jf.field_N[cq.field_i] = param5;
         int var6 = param5 + param1 + param4;

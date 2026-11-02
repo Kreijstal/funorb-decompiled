@@ -239,7 +239,7 @@ class d extends iq {
         int fieldTemp$0 = 0;
         int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        mi var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         Object var3 = null;
@@ -323,7 +323,7 @@ class d extends iq {
             }
             ba.field_d = 1;
             var3 = var1.f(128);
-            dg.field_d = ((String) (var3)).intern();
+            ClientException.field_d = ((String) (var3)).intern();
             var4 = var1.h(-11);
             ir.a(var4, (byte) -65);
             return;
@@ -359,7 +359,7 @@ class d extends iq {
           var6Lifetime1.field_Ib = var5Lifetime1;
           var6Lifetime1.field_Mb = var4_ref_StringLifetime1;
           var6Lifetime1.field_Lb = (String) (var3Lifetime1);
-          var6Lifetime1.c(2);
+          var6Lifetime1.unlink(2);
           var7 = (tp) (tm.field_a.a((byte) 100));
           while (var7 != null) {
             if (md.a(1308, var7, var6Lifetime1)) {
@@ -505,11 +505,11 @@ class d extends iq {
           super.a((byte) 34, param1, param2, param3);
           if (this.field_A != 0 &&
             ~q.field_v != ~this.field_A) {
-            if (this.a(0, param2, param1, ed.field_n, gb.field_d) &&
+            if (this.a(0, param2, param1, PacketBuffer.field_n, gb.field_d) &&
               q.field_v == 0) {
-              this.a(ed.field_n - param1, this.field_A, (byte) 117, gb.field_d - param2);
+              this.a(PacketBuffer.field_n - param1, this.field_A, (byte) 117, gb.field_d - param2);
             }
-            this.a(param3, (byte) 46, param1, param2, ed.field_n, gb.field_d);
+            this.a(param3, (byte) 46, param1, param2, PacketBuffer.field_n, gb.field_d);
           }
           if (param0 < 6) {
             d.a('ﾬ', -84);

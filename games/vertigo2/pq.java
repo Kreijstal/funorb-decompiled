@@ -425,7 +425,7 @@ final class pq {
           field_e = 43L;
         }
         gl.field_k = true;
-        aj.field_j = 15000L + gk.a(56);
+        ProxySocketConnector.field_j = 15000L + gk.a(56);
         return hn.field_w == 11 ? true : false;
     }
 

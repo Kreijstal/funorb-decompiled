@@ -9,19 +9,19 @@ final class ng {
     public static void b(int param0) {
         field_b = null;
         if (param0 != 16952) {
-          mi var2 = (mi) null;
-          ng.a((byte) 5, (mi) null);
+          BitPacketBuffer var2 = (BitPacketBuffer) null;
+          ng.a((byte) 5, (BitPacketBuffer) null);
         }
     }
 
     final static void a(int param0) {
-        mi.k(-32460, 2);
+        BitPacketBuffer.k(-32460, 2);
         if (param0 != -10236) {
           field_a = false;
         }
     }
 
-    final static uq[] a(byte param0, mi param1) {
+    final static uq[] a(byte param0, BitPacketBuffer param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;

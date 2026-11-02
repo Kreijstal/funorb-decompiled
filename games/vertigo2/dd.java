@@ -71,7 +71,7 @@ class dd {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -104,7 +104,7 @@ class dd {
                       var12.field_n = var12.field_n + var13;
                     }
                     if (var4 >= this.field_o) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.c();
                     if (var14Lifetime2 != null) {
@@ -298,7 +298,7 @@ class dd {
         field_e = param2;
     }
 
-    final static dd a(jj param0, java.awt.Component param1, int param2, int param3) {
+    final static dd a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           vr var4 = null;
           Throwable var4_ref = null;

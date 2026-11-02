@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ta extends gp {
+final class ta extends DualLinkNode {
     he field_v;
     private float field_t;
     private int[] field_x;
@@ -279,7 +279,7 @@ final class ta extends gp {
         return this.field_x;
     }
 
-    ta(ed param0) {
+    ta(PacketBuffer param0) {
         this.field_v = new he(param0);
         this.field_w = param0.h(-11) == 1 ? true : false;
         this.field_y = param0.h(-11) == 1 ? true : false;

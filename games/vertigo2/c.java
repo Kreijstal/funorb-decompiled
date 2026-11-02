@@ -38,12 +38,12 @@ class c extends v {
         }
     }
 
-    final void a(ed param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           param0.a((byte) -126, this.field_g);
           if (param1 != 47) {
-            ed var4 = (ed) null;
-            this.a((ed) null, 82);
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, 82);
           }
           param0.b(param1 ^ 47, this.field_d);
         } catch (RuntimeException runtimeException) {
@@ -56,7 +56,7 @@ class c extends v {
           int var2_int = 0;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (id.field_f.field_u >= param0) {
+          if (id.field_f.position >= param0) {
             return true;
           }
           if (lo.field_k == null) {
@@ -65,16 +65,16 @@ class c extends v {
           try {
             var2_int = lo.field_k.a(15166);
             if (var2_int > 0) {
-              if (param0 - id.field_f.field_u < var2_int) {
-                var2_int = -id.field_f.field_u + param0;
+              if (param0 - id.field_f.position < var2_int) {
+                var2_int = -id.field_f.position + param0;
               }
-              lo.field_k.a(id.field_f.field_p, false, var2_int, id.field_f.field_u);
+              lo.field_k.a(id.field_f.payload, false, var2_int, id.field_f.position);
               gn.field_b = gk.a(89);
-              id.field_f.field_u = id.field_f.field_u + var2_int;
-              if (param0 > id.field_f.field_u) {
+              id.field_f.position = id.field_f.position + var2_int;
+              if (param0 > id.field_f.position) {
                 return false;
               }
-              id.field_f.field_u = 0;
+              id.field_f.position = 0;
               return true;
             }
             if (var2_int < 0) {
@@ -270,9 +270,9 @@ class c extends v {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        mi var13 = null;
+        BitPacketBuffer var13 = null;
         int var14 = 0;
-        mi var15 = null;
+        BitPacketBuffer var15 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
@@ -331,11 +331,11 @@ class c extends v {
               var11 = ac.field_I[var9];
               var6[0][var10] = Vertigo2.field_I[var11];
               var7[0][var10 * 4] = on.field_e[var11];
-              var7[0][4 * var10 + 1] = li.field_g[var11];
+              var7[0][4 * var10 + 1] = IntrusiveNode.field_g[var11];
               var7[0][2 + 4 * var10] = ub.field_p[var11];
               var7[0][4 * var10 + 3] = jf.field_N[var11];
               if (wc.a(Vertigo2.field_I[var11], true) &&
-                ub.field_p[var11] + li.field_g[var11] + jf.field_N[var11] == 0) {
+                ub.field_p[var11] + IntrusiveNode.field_g[var11] + jf.field_N[var11] == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -349,11 +349,11 @@ class c extends v {
               var11Lifetime1 = ac.field_I[var5 + var9Lifetime1];
               var6[1][var14] = Vertigo2.field_I[var11Lifetime1];
               var7[1][4 * var14] = on.field_e[var11Lifetime1];
-              var7[1][1 + var14 * 4] = li.field_g[var11Lifetime1];
+              var7[1][1 + var14 * 4] = IntrusiveNode.field_g[var11Lifetime1];
               var7[1][var14 * 4 + 2] = ub.field_p[var11Lifetime1];
               var7[1][3 + 4 * var14] = jf.field_N[var11Lifetime1];
               if (wc.a(Vertigo2.field_I[var11Lifetime1], true) &&
-                0 == jf.field_N[var11Lifetime1] + ub.field_p[var11Lifetime1] + li.field_g[var11Lifetime1]) {
+                0 == jf.field_N[var11Lifetime1] + ub.field_p[var11Lifetime1] + IntrusiveNode.field_g[var11Lifetime1]) {
                 var6[1][var14] = null;
                 var14--;
               }
@@ -362,7 +362,7 @@ class c extends v {
             }
           }
           var3.field_v = true;
-          var3.c(2);
+          var3.unlink(2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -64,18 +64,18 @@ final class mf {
           var1 = gk.a(param0 ^ -6287);
           var3 = -id.field_a + var1;
           if (var3 > 30000L) {
-            nj.field_d = 0;
+            IntrusiveDeque.field_d = 0;
             id.field_a = var1;
             return true;
           }
           var5 = 3000;
-          if (nj.field_d >= 7) {
+          if (IntrusiveDeque.field_d >= 7) {
             var5 = 12000;
           } else {
-            if (nj.field_d >= 5) {
+            if (IntrusiveDeque.field_d >= 5) {
               var5 = 9000;
             } else {
-              if (nj.field_d >= 3) {
+              if (IntrusiveDeque.field_d >= 3) {
                 var5 = 6000;
               }
             }
@@ -84,25 +84,25 @@ final class mf {
             return false;
           }
           id.field_a = var1;
-          nj.field_d = nj.field_d + 1;
+          IntrusiveDeque.field_d = IntrusiveDeque.field_d + 1;
           return true;
         }
         field_b = -111;
         var1Lifetime1 = gk.a(param0 ^ -6287);
         var3Lifetime1 = -id.field_a + var1Lifetime1;
         if (var3Lifetime1 > 30000L) {
-          nj.field_d = 0;
+          IntrusiveDeque.field_d = 0;
           id.field_a = var1Lifetime1;
           return true;
         }
         var5Lifetime1 = 3000;
-        if (nj.field_d >= 7) {
+        if (IntrusiveDeque.field_d >= 7) {
           var5Lifetime1 = 12000;
         } else {
-          if (nj.field_d >= 5) {
+          if (IntrusiveDeque.field_d >= 5) {
             var5Lifetime1 = 9000;
           } else {
-            if (nj.field_d >= 3) {
+            if (IntrusiveDeque.field_d >= 3) {
               var5Lifetime1 = 6000;
             }
           }
@@ -111,7 +111,7 @@ final class mf {
           return false;
         }
         id.field_a = var1Lifetime1;
-        nj.field_d = nj.field_d + 1;
+        IntrusiveDeque.field_d = IntrusiveDeque.field_d + 1;
         return true;
     }
 

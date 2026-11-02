@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class vh extends li {
+final class vh extends IntrusiveNode {
     private static float[] field_p;
     private float[] field_t;
     private static byte[] field_P;
@@ -56,7 +56,7 @@ final class vh extends li {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        ed var2 = new ed(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_y = var2.b(true);
         this.field_v = var2.b(true);
         this.field_n = var2.b(true);

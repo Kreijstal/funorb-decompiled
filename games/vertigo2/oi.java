@@ -24,7 +24,7 @@ final class oi {
         if (param2 < 119) {
           return;
         }
-        ig.a(param3, ia.field_G, 2, nl.field_k, param1, param0, r.field_f);
+        SocketConnector.a(param3, ia.field_G, 2, nl.field_k, param1, param0, r.field_f);
     }
 
     static {

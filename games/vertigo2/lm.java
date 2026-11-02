@@ -31,7 +31,7 @@ final class lm extends ji {
         this.field_y = 2048;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -340,7 +340,7 @@ final class lm extends ji {
               var23 = we.field_M - var8;
               var25 = we.field_M;
             }
-            L3: {
+            regionExit1: {
               if (var11 == 0) {
                 var26_int = var9;
                 var52 = var47[var9];
@@ -392,7 +392,7 @@ final class lm extends ji {
                       }
                     }
                     var9 = var26_int;
-                    break L3;
+                    break regionExit1;
                   }
                   var26_int++;
                   stackIn_22_0 = ~var26_int;

@@ -371,7 +371,7 @@ final class un extends cr {
           return this.field_Ob;
         }
         while (true) {
-          if (!gf.a(false)) {
+          if (!NodeHashTableIterator.a(false)) {
             this.field_Jb.field_S = this.field_Kb.toString();
             if (!param0) {
               return this.field_Ob;

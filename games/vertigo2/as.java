@@ -6,7 +6,7 @@ final class as {
     static String field_f;
     static String field_c;
     static String field_a;
-    static sa field_b;
+    static MouseInputHandler field_b;
     static s field_e;
 
     public static void a(int param0) {
@@ -35,6 +35,6 @@ final class as {
         field_a = null;
         field_c = "Report <%0> for abuse";
         field_e = null;
-        field_b = new sa();
+        field_b = new MouseInputHandler();
     }
 }

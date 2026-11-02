@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class la {
-    private gp field_b;
+    private DualLinkNode field_b;
     static int[] field_d;
     static ej field_i;
     static cr field_f;
@@ -13,8 +13,8 @@ final class la {
     private jl field_g;
     private int field_j;
 
-    final gp a(long param0, boolean param1) {
-        gp var4 = (gp) (this.field_g.a(param0, (byte) 64));
+    final DualLinkNode a(long param0, boolean param1) {
+        DualLinkNode var4 = (DualLinkNode) (this.field_g.a(param0, (byte) 64));
         if (param1) {
           field_i = (ej) null;
           if (var4 != null) {
@@ -65,9 +65,9 @@ final class la {
         field_a = null;
     }
 
-    final void a(int param0, gp param1, long param2) {
+    final void a(int param0, DualLinkNode param1, long param2) {
         RuntimeException runtimeException = null;
-        gp var5 = null;
+        DualLinkNode var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -77,11 +77,11 @@ final class la {
             this.field_j = this.field_j - 1;
           } else {
             var5 = this.field_h.a(-124);
-            var5.c(param0 ^ -3);
+            var5.unlink(param0 ^ -3);
             var5.a(-99);
             if (var5 == this.field_b) {
               var5 = this.field_h.a(-98);
-              var5.c(param0 + 3);
+              var5.unlink(param0 + 3);
               var5.a(-109);
             }
           }
@@ -122,7 +122,7 @@ final class la {
 
     la(int param0) {
         int var2 = 0;
-        this.field_b = new gp();
+        this.field_b = new DualLinkNode();
         this.field_h = new ak();
         this.field_j = param0;
         for (var2 = 1; var2 + var2 < param0; var2 = var2 + var2) {

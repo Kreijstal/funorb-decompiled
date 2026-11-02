@@ -95,7 +95,7 @@ final class ho {
             stackIn_4_0 = mp.field_b;
           }
           hq.b(stackIn_4_0, -127);
-          el.field_e.a(0, 14017, hk.field_o.field_Fb, 0, -2 + (-40 + hk.field_o.field_db));
+          IterableNodeHashTable.field_e.a(0, 14017, hk.field_o.field_Fb, 0, -2 + (-40 + hk.field_o.field_db));
           nb.field_D.a(param0 ^ 108, de.field_g.field_Fb, r.field_f, 0, 0);
           stackIn_6_0 = uc.field_a;
           stackIn_6_1 = param0 + 83;
@@ -133,10 +133,10 @@ final class ho {
               !(sp.field_O <= 1))) {
               if (!param1 &&
                 var6 == 3) {
-                dupTemp$0 = el.field_h[var6];
+                dupTemp$0 = IterableNodeHashTable.field_h[var6];
                 var14 = dupTemp$0;
                 var7 = dupTemp$0;
-                el.field_h[var6].field_db = 0;
+                IterableNodeHashTable.field_h[var6].field_db = 0;
                 var14.field_Fb = 0;
                 for (var8 = 0; mg.field_S[var6].length > var8; var8++) {
                   if (mg.field_S[var6][var8] != null) {
@@ -147,8 +147,8 @@ final class ho {
                 }
               } else if (param1 &&
                 0 == var6) {
-                var7 = el.field_h[var6];
-                el.field_h[var6].field_db = 0;
+                var7 = IterableNodeHashTable.field_h[var6];
+                IterableNodeHashTable.field_h[var6].field_db = 0;
                 var7.field_Fb = 0;
                 for (var8 = 0; var8 < mg.field_S[var6].length; var8++) {
                   if (mg.field_S[var6][var8] != null) {
@@ -173,8 +173,8 @@ final class ho {
                 }
                 var7_int = stackIn_48_0;
                 if (var7_int != 0) {
-                  var8_ref_cr = el.field_h[var6];
-                  el.field_h[var6].field_db = 0;
+                  var8_ref_cr = IterableNodeHashTable.field_h[var6];
+                  IterableNodeHashTable.field_h[var6].field_db = 0;
                   var8_ref_cr.field_Fb = 0;
                   for (var9_int = 0; var9_int < mg.field_S[var6].length; var9_int++) {
                     if (null != mg.field_S[var6][var9_int]) {
@@ -184,7 +184,7 @@ final class ho {
                     }
                   }
                 } else {
-                  el.field_h[var6].a(param0 ^ 123, 103, var3, var5, 5);
+                  IterableNodeHashTable.field_h[var6].a(param0 ^ 123, 103, var3, var5, 5);
                   var8 = 110;
                   if (param1) {
                     mg.field_S[var6][0].a(var5, 38, r.field_j, var3, 2, param0 + 1, var8);

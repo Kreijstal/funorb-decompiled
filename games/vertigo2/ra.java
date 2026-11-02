@@ -210,7 +210,7 @@ final class ra extends sn {
               this.field_D = 0;
               this.field_F = 0;
               this.field_E = 0;
-              this.c(2);
+              this.unlink(2);
               param0 = this.field_z;
             }
             this.field_z = 0;
@@ -228,7 +228,7 @@ final class ra extends sn {
         if (this.field_B < 0) {
           if (this.field_w <= 0) {
             this.f();
-            this.c(2);
+            this.unlink(2);
             return;
           }
           this.field_B = 0;
@@ -236,7 +236,7 @@ final class ra extends sn {
         if (this.field_B >= var5) {
           if (this.field_w >= 0) {
             this.f();
-            this.c(2);
+            this.unlink(2);
             return;
           }
           this.field_B = var5 - 1;
@@ -349,7 +349,7 @@ final class ra extends sn {
           if (this.field_B >= var5) {
             this.field_B = var5;
             this.f();
-            this.c(2);
+            this.unlink(2);
           }
           return;
         }
@@ -358,7 +358,7 @@ final class ra extends sn {
         }
         this.field_B = -1;
         this.f();
-        this.c(2);
+        this.unlink(2);
     }
 
     final sn a() {
@@ -447,7 +447,7 @@ final class ra extends sn {
         if (this.field_B < 0) {
           if (this.field_w <= 0) {
             this.f();
-            this.c(2);
+            this.unlink(2);
             return;
           }
           this.field_B = 0;
@@ -455,7 +455,7 @@ final class ra extends sn {
         if (this.field_B >= var7) {
           if (this.field_w >= 0) {
             this.f();
-            this.c(2);
+            this.unlink(2);
             return;
           }
           this.field_B = var7 - 1;
@@ -582,7 +582,7 @@ final class ra extends sn {
           if (this.field_B >= var7) {
             this.field_B = var7;
             this.f();
-            this.c(2);
+            this.unlink(2);
           }
           return;
         }
@@ -592,7 +592,7 @@ final class ra extends sn {
         }
         this.field_B = -1;
         this.f();
-        this.c(2);
+        this.unlink(2);
         return;
     }
 
@@ -854,7 +854,7 @@ final class ra extends sn {
           this.field_D = 0;
           this.field_F = 0;
           this.field_E = 0;
-          this.c(2);
+          this.unlink(2);
           return true;
         }
         if (this.field_E >= var1) {
@@ -1629,7 +1629,7 @@ final class ra extends sn {
         int var2Lifetime1;
         if (param0 == 0) {
           this.g(0);
-          this.c(2);
+          this.unlink(2);
           return;
         }
         if (this.field_F != 0) {
@@ -1689,7 +1689,7 @@ final class ra extends sn {
         this.field_z = 0;
         this.field_s = 0;
         this.field_E = 0;
-        this.c(2);
+        this.unlink(2);
     }
 
     final static ra a(ae param0, int param1, int param2) {

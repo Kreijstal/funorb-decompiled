@@ -4,7 +4,7 @@
 final class fm {
     static String field_h;
     static cr field_e;
-    static nj field_b;
+    static IntrusiveDeque field_b;
     static String field_c;
     static String field_a;
     static int field_d;
@@ -72,7 +72,7 @@ final class fm {
           fq.field_i = param7;
           gg.field_n[4] = 16711935;
           np.field_Ib = param9;
-          cg.field_f = param5;
+          GameKeyHandler.field_f = param5;
           wc.field_q[3] = 16736511;
           wc.field_q[1] = 6356832;
           wc.field_q[0] = 16764000;
@@ -96,13 +96,13 @@ final class fm {
           ad.field_f = new cr(0L, param0);
           td.field_c.b(ad.field_f, param4 - 12771);
           var17 = new cr(0L, (cr) null);
-          var17.field_M = new nj();
+          var17.field_M = new IntrusiveDeque();
           mg.field_R = new od(0L, var17, param1, param3);
           ad.field_f.b(mg.field_R, 119);
           bp.field_C = new cr(0L, param11);
           ad.field_f.b(bp.field_C, 125);
           dj.field_d = new cr(0L, param8);
-          dj.field_d.field_z = cg.field_f;
+          dj.field_d.field_z = GameKeyHandler.field_f;
           bp.field_C.b(dj.field_d, 120);
           bp.field_C.i(-2147483648);
           ui.field_b = new cr(0L, (cr) null);
@@ -238,7 +238,7 @@ final class fm {
         field_c = "Open in popup window";
         field_a = "Elapsed time";
         field_d = -1;
-        field_b = new nj();
+        field_b = new IntrusiveDeque();
         field_f = "You have not yet unlocked this option for use.";
     }
 }

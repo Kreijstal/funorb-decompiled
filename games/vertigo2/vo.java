@@ -150,7 +150,7 @@ final class vo extends va {
         if (param0 != 117) {
           return;
         }
-        ed.field_t = false;
+        PacketBuffer.field_t = false;
         if (tk.field_e) {
           df.field_l.m(param0 ^ 2121781);
         } else {

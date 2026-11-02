@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mi extends ed {
+final class BitPacketBuffer extends PacketBuffer {
     private int field_z;
-    private wa field_v;
+    private IsaacCipher field_v;
     private int field_y;
     static int[] field_w;
     static String field_x;
 
-    mi(byte[] param0) {
+    BitPacketBuffer(byte[] param0) {
         super(param0);
     }
 
@@ -21,38 +21,38 @@ final class mi extends ed {
         param2 = param2 & e.field_b[param1];
         while (param1 > this.field_y) {
           param1 = param1 - this.field_y;
-          fieldTemp$1 = this.field_u;
-          this.field_u = this.field_u + 1;
-          this.field_p[fieldTemp$1] = (byte)(this.field_p[fieldTemp$1] + (param2 >>> param1));
-          this.field_p[this.field_u] = (byte) 0;
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)(this.payload[fieldTemp$1] + (param2 >>> param1));
+          this.payload[this.position] = (byte) 0;
           this.field_y = 8;
         }
         var4 = -41 / ((62 - param0) / 36);
         if (this.field_y != param1) {
           this.field_y = this.field_y - param1;
-          this.field_p[this.field_u] = (byte)(this.field_p[this.field_u] + (param2 << this.field_y));
+          this.payload[this.position] = (byte)(this.payload[this.position] + (param2 << this.field_y));
           return;
         }
-        fieldTemp$0 = this.field_u;
-        this.field_u = this.field_u + 1;
-        this.field_p[fieldTemp$0] = (byte)(this.field_p[fieldTemp$0] + param2);
-        this.field_p[this.field_u] = (byte) 0;
+        fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(this.payload[fieldTemp$0] + param2);
+        this.payload[this.position] = (byte) 0;
         this.field_y = 8;
         return;
     }
 
     final void d(boolean param0) {
-        this.field_p[this.field_u] = (byte) 0;
+        this.payload[this.position] = (byte) 0;
         this.field_y = 8;
         if (param0) {
-          mi.r(42);
+          BitPacketBuffer.r(42);
         }
     }
 
     final void j(int param0, int param1) {
-        int fieldTemp$0 = this.field_u;
-        this.field_u = this.field_u + 1;
-        this.field_p[fieldTemp$0] = (byte)(this.field_v.a((byte) 72) + param0);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(this.field_v.a((byte) 72) + param0);
         if (param1 <= 117) {
           this.c((byte) -52, 85);
         }
@@ -60,9 +60,9 @@ final class mi extends ed {
 
     final int c(byte param0) {
         int var2 = -43 / ((param0 + 50) / 46);
-        int fieldTemp$0 = this.field_u;
-        this.field_u = this.field_u + 1;
-        return 255 & this.field_p[fieldTemp$0] - this.field_v.a((byte) 72);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$0] - this.field_v.a((byte) 72);
     }
 
     final static er[] a(String param0, r param1, byte param2, String param3) {
@@ -81,7 +81,7 @@ final class mi extends ed {
         try {
           var4_int = param1.a((byte) 126, param3);
           if (param2 != 34) {
-            mi.r(66);
+            BitPacketBuffer.r(66);
           }
           var5 = param1.a(var4_int, param0, 94);
           stackIn_3_0 = bk.a(var4_int, var5, param1, -2724);
@@ -115,10 +115,10 @@ final class mi extends ed {
     final void p(int param0) {
         if (param0 != 0) {
           this.d(false);
-          this.field_z = this.field_u * 8;
+          this.field_z = this.position * 8;
           return;
         }
-        this.field_z = this.field_u * 8;
+        this.field_z = this.position * 8;
     }
 
     final int c(byte param0, int param1) {
@@ -141,14 +141,14 @@ final class mi extends ed {
           while (param1 > var4) {
             incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((e.field_b[var4] & this.field_p[incrementValue$0]) << param1 - var4);
+            var5 = var5 + ((e.field_b[var4] & this.payload[incrementValue$0]) << param1 - var4);
             param1 = param1 - var4;
             var4 = 8;
           }
           if (var4 != param1) {
-            var5 = var5 + (this.field_p[var3] >> var4 - param1 & e.field_b[param1]);
+            var5 = var5 + (this.payload[var3] >> var4 - param1 & e.field_b[param1]);
           } else {
-            var5 = var5 + (this.field_p[var3] & e.field_b[var4]);
+            var5 = var5 + (this.payload[var3] & e.field_b[var4]);
           }
           return var5;
         }
@@ -159,14 +159,14 @@ final class mi extends ed {
         while (param1 > var4Lifetime1) {
           incrementValue$1 = var3Lifetime1;
           var3Lifetime1++;
-          var5Lifetime1 = var5Lifetime1 + ((e.field_b[var4Lifetime1] & this.field_p[incrementValue$1]) << param1 - var4Lifetime1);
+          var5Lifetime1 = var5Lifetime1 + ((e.field_b[var4Lifetime1] & this.payload[incrementValue$1]) << param1 - var4Lifetime1);
           param1 = param1 - var4Lifetime1;
           var4Lifetime1 = 8;
         }
         if (var4Lifetime1 != param1) {
-          var5Lifetime1 = var5Lifetime1 + (this.field_p[var3Lifetime1] >> var4Lifetime1 - param1 & e.field_b[param1]);
+          var5Lifetime1 = var5Lifetime1 + (this.payload[var3Lifetime1] >> var4Lifetime1 - param1 & e.field_b[param1]);
         } else {
-          var5Lifetime1 = var5Lifetime1 + (this.field_p[var3Lifetime1] & e.field_b[var4Lifetime1]);
+          var5Lifetime1 = var5Lifetime1 + (this.payload[var3Lifetime1] & e.field_b[var4Lifetime1]);
         }
         return var5Lifetime1;
     }
@@ -186,9 +186,9 @@ final class mi extends ed {
             field_x = (String) null;
           }
           for (var5_int = 0; var5_int < param1; var5_int++) {
-            fieldTemp$0 = this.field_u;
-            this.field_u = this.field_u + 1;
-            param2[param3 + var5_int] = (byte)(this.field_p[fieldTemp$0] - this.field_v.a((byte) 72));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param2[param3 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_v.a((byte) 72));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -210,7 +210,7 @@ final class mi extends ed {
           if (param1 < 33) {
             this.j(40, -119);
           }
-          this.field_v = new wa(param0);
+          this.field_v = new IsaacCipher(param0);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "mi.CB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -219,14 +219,14 @@ final class mi extends ed {
     final void q(int param0) {
         if (~this.field_y > param0) {
           this.field_y = 8;
-          this.field_u = this.field_u + 1;
+          this.position = this.position + 1;
         }
     }
 
     final void b(byte param0) {
-        this.field_u = (this.field_z + 7) / 8;
+        this.position = (this.field_z + 7) / 8;
         if (param0 > -49) {
-          this.field_v = (wa) null;
+          this.field_v = (IsaacCipher) null;
         }
     }
 
@@ -234,11 +234,11 @@ final class mi extends ed {
         field_w = null;
         field_x = null;
         if (param0 <= 79) {
-          mi.r(84);
+          BitPacketBuffer.r(84);
         }
     }
 
-    mi(int param0) {
+    BitPacketBuffer(int param0) {
         super(param0);
     }
 
@@ -247,7 +247,7 @@ final class mi extends ed {
         int var3;
         var3 = Vertigo2.field_L ? 1 : 0;
         if (param0 != -32460) {
-          mi.r(53);
+          BitPacketBuffer.r(53);
         }
         m.field_B = param1;
         var2 = param1;

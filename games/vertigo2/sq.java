@@ -28,7 +28,7 @@ final class sq {
         wj.field_c[21] = mg.field_L;
         wj.field_c[17] = mm.field_b;
         wj.field_c[4] = ok.field_a;
-        wj.field_c[9] = ig.field_d;
+        wj.field_c[9] = SocketConnector.field_d;
         wj.field_c[19] = ac.field_M;
         wj.field_c[6] = hm.field_B;
         wj.field_c[18] = bo.field_p;

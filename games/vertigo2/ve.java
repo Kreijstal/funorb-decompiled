@@ -9,7 +9,7 @@ final class ve {
     static cr field_f;
     static String field_b;
 
-    final static ji a(byte param0, ed param1) {
+    final static ji a(byte param0, PacketBuffer param1) {
         int var6 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;

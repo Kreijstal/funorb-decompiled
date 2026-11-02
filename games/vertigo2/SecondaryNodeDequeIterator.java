@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class cf implements Iterator {
-    private gp field_c;
-    private sr field_e;
-    private gp field_d;
+final class SecondaryNodeDequeIterator implements Iterator {
+    private DualLinkNode field_c;
+    private SecondaryNodeDeque field_e;
+    private DualLinkNode field_d;
     static String field_b;
     static volatile int field_a;
 
@@ -88,7 +88,7 @@ final class cf implements Iterator {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 68) {
-            stackIn_4_0 = li.a(10, true, param1, true);
+            stackIn_4_0 = IntrusiveNode.a(10, true, param1, true);
             return stackIn_4_0;
           }
           stackIn_2_0 = -31;
@@ -113,9 +113,9 @@ final class cf implements Iterator {
           this.field_d = null;
           var1 = null;
         } else {
-          this.field_d = ((gp) (var1)).field_p;
+          this.field_d = ((DualLinkNode) (var1)).field_p;
         }
-        this.field_c = (gp) (var1);
+        this.field_c = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -129,7 +129,7 @@ final class cf implements Iterator {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 83 % ((param2 - 8) / 48);
-          stackIn_1_0 = li.a(param0, true, param1, true);
+          stackIn_1_0 = IntrusiveNode.a(param0, true, param1, true);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,7 +149,7 @@ final class cf implements Iterator {
         return this.field_e.field_b != this.field_d;
     }
 
-    cf(sr param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.field_c = null;
         try {
           this.field_e = param0;

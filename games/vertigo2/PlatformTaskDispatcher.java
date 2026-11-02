@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class jj implements Runnable {
+final class PlatformTaskDispatcher implements Runnable {
     java.awt.EventQueue field_j;
     private static int field_f;
     private fl field_w;
@@ -12,32 +12,32 @@ final class jj implements Runnable {
     private wk field_b;
     private Object field_c;
     private boolean field_u;
-    bj field_k;
+    RandomAccessCacheFile field_k;
     private wk field_s;
     private static volatile long field_l;
     private static String field_t;
     static String field_v;
     private boolean field_q;
     private Object field_g;
-    private a field_i;
-    bj[] field_n;
+    private DisplayModeEnumerator field_i;
+    RandomAccessCacheFile[] field_n;
     static java.lang.reflect.Method field_e;
     static String field_d;
-    bj field_o;
+    RandomAccessCacheFile field_o;
     private Thread field_a;
     private static String field_x;
-    bj field_r;
+    RandomAccessCacheFile field_r;
     private static String field_h;
 
-    private final static bj a(int param0, int param1, String param2, String param3) {
+    private final static RandomAccessCacheFile a(int param0, int param1, String param2, String param3) {
         try {
           int var6 = 0;
-          bj stackIn_13_0 = null;
+          RandomAccessCacheFile stackIn_13_0 = null;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
           String var7 = null;
-          bj var8 = null;
+          RandomAccessCacheFile var8 = null;
           Exception var8_ref = null;
           if (param1 != 33) {
             if (34 != param1) {
@@ -54,7 +54,7 @@ final class jj implements Runnable {
             if (!(0 < var7.length()) ||
               new File(var7).exists()) {
               try {
-                var8 = new bj(new File(var7, var4), "rw", 10000L);
+                var8 = new RandomAccessCacheFile(new File(var7, var4), "rw", 10000L);
                 stackIn_13_0 = var8;
                 return stackIn_13_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -158,7 +158,7 @@ final class jj implements Runnable {
 
     final boolean a(int param0) {
         if (param0 >= -118) {
-          this.field_n = (bj[]) null;
+          this.field_n = (RandomAccessCacheFile[]) null;
         }
         if (!this.field_p) {
           return false;
@@ -186,7 +186,7 @@ final class jj implements Runnable {
           InterruptedException var3 = null;
           int var3_int = 0;
           Exception var3_ref = null;
-          bj var3_ref2 = null;
+          RandomAccessCacheFile var3_ref2 = null;
           rg var3_ref3 = null;
           int var4_int = 0;
           String var4 = null;
@@ -266,7 +266,7 @@ final class jj implements Runnable {
                   case 16:
                   default:
                     if (!this.field_p) {
-                      throw jj.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                     }
                     switch (var2_int) {
                       case 3:
@@ -324,21 +324,21 @@ final class jj implements Runnable {
                           Class.forName("pj").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_g, new Object[]{var12[0], var12[1], new Integer(var8.field_g), new Integer(var8.field_c), var12[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw jj.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                           }
                           try {
                             if (!field_v.startsWith("win")) {
-                              throw jj.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var13 = (String) (var8.field_f);
                             if (!var13.startsWith("http://") &&
                               !var13.startsWith("https://")) {
-                              throw jj.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var13.length() > var5; var5++) {
                               if (var4.indexOf((int) var13.charAt(var5)) == -1) {
-                                throw jj.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var13 + "\"");
@@ -347,16 +347,16 @@ final class jj implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref = (Exception) (Object) decompiledCaughtException;
                             var8.field_d = var3_ref;
-                            throw jj.<RuntimeException>$cfr$sneakyThrow(var3_ref);
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref);
                           }
                         }
                         break;
                       case 13:
-                        var3_ref2 = jj.a(0, field_f, "", (String) (var8.field_f));
+                        var3_ref2 = PlatformTaskDispatcher.a(0, field_f, "", (String) (var8.field_f));
                         var8.field_d = var3_ref2;
                         break;
                       case 12:
-                        var3_ref2 = jj.a(0, field_f, field_h, (String) (var8.field_f));
+                        var3_ref2 = PlatformTaskDispatcher.a(0, field_f, field_h, (String) (var8.field_f));
                         var8.field_d = var3_ref2;
                         break;
                       case 7:
@@ -489,13 +489,13 @@ final class jj implements Runnable {
         }
     }
 
-    jj(int param0, String param1, int param2, boolean param3) throws Exception {
+    PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
         int var5_int = 0;
         Exception exception = null;
         Throwable throwable = null;
         boolean stackIn_3_1 = false;
         Throwable decompiledCaughtException = null;
-        a var7 = null;
+        DisplayModeEnumerator var7 = null;
         this.field_p = false;
         this.field_s = null;
         this.field_b = null;
@@ -574,12 +574,12 @@ final class jj implements Runnable {
         }
         gq.a((byte) -110, field_h, field_f);
         if (this.field_p) {
-          this.field_k = new bj(gq.a(0, field_f, "random.dat", (String) null), "rw", 25L);
-          this.field_o = new bj(gq.a("main_file_cache.dat2", -122), "rw", 314572800L);
-          this.field_r = new bj(gq.a("main_file_cache.idx255", -121), "rw", 1048576L);
-          this.field_n = new bj[param2];
+          this.field_k = new RandomAccessCacheFile(gq.a(0, field_f, "random.dat", (String) null), "rw", 25L);
+          this.field_o = new RandomAccessCacheFile(gq.a("main_file_cache.dat2", -122), "rw", 314572800L);
+          this.field_r = new RandomAccessCacheFile(gq.a("main_file_cache.idx255", -121), "rw", 1048576L);
+          this.field_n = new RandomAccessCacheFile[param2];
           for (var5_int = 0; param2 > var5_int; var5_int++) {
-            this.field_n[var5_int] = new bj(gq.a("main_file_cache.idx" + var5_int, -122), "rw", 1048576L);
+            this.field_n[var5_int] = new RandomAccessCacheFile(gq.a("main_file_cache.idx" + var5_int, -122), "rw", 1048576L);
           }
           if (this.field_u) {
             try {
@@ -591,7 +591,7 @@ final class jj implements Runnable {
           }
           try {
             if (this.field_u) {
-              var7 = new a();
+              var7 = new DisplayModeEnumerator();
               this.field_i = var7;
             } else {
               this.field_c = Class.forName("pa").newInstance();

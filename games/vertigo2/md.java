@@ -13,7 +13,7 @@ final class md extends ji {
     static int field_D;
     static String field_y;
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -82,14 +82,14 @@ final class md extends ji {
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           var3_int = param2.field_Pb - param1.field_Pb;
-          if (dg.field_d == param2.field_Lb) {
+          if (ClientException.field_d == param2.field_Lb) {
             var3_int -= 200;
           } else {
             if (null == param2.field_Lb) {
               var3_int += 200;
             }
           }
-          if (param1.field_Lb != dg.field_d) {
+          if (param1.field_Lb != ClientException.field_d) {
             if (null == param1.field_Lb) {
               var3_int -= 200;
             }

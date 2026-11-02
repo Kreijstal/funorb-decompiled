@@ -156,7 +156,7 @@ final class oj extends cj implements ij {
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_G[var5] = new d(this.field_E[var5], (uf) (this));
               this.field_G[var5].field_B = (ur) ((Object) var4);
-              this.field_G[var5].field_q = og.field_k;
+              this.field_G[var5].field_q = GameApplet.field_k;
               this.field_G[var5].a(false, 0, 20 + var5 * 16, 15, 80);
               this.c((byte) -29, this.field_G[var5]);
             }

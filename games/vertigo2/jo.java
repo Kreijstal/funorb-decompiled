@@ -14,7 +14,7 @@ final class jo implements ur {
     private int field_j;
     private cc field_i;
 
-    final static void a(ed param0, int param1, int param2, int param3, int param4) {
+    final static void a(PacketBuffer param0, int param1, int param2, int param3, int param4) {
         try {
           int var5_int = 110 % ((param3 + 26) / 41);
           param0.f(12, 116);

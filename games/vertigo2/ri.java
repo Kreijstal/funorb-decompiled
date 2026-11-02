@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ri extends li {
+final class ri extends IntrusiveNode {
     int field_p;
     String[][] field_t;
     int field_s;
@@ -27,15 +27,15 @@ final class ri extends li {
     }
 
     final static void b(boolean param0, int param1) {
-        if (null != nj.field_b) {
-          if (!nj.field_b.a((byte) -51, param0)) {
+        if (null != IntrusiveDeque.field_b) {
+          if (!IntrusiveDeque.field_b.a((byte) -51, param0)) {
             if (param1 != 30834) {
               field_z = (String) null;
               return;
             }
             return;
           }
-          nj.field_b = null;
+          IntrusiveDeque.field_b = null;
         }
         if (param1 == 30834) {
           return;

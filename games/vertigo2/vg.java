@@ -57,7 +57,7 @@ final class vg {
           if (param2 < 1) {
             return false;
           }
-          if (gf.b(param1, param3, param0 - 24480) >= param2) {
+          if (NodeHashTableIterator.b(param1, param3, param0 - 24480) >= param2) {
             return true;
           }
           return false;
@@ -71,7 +71,7 @@ final class vg {
         if (param2 < 1) {
           return false;
         }
-        if (gf.b(param1, param3, param0 - 24480) >= param2) {
+        if (NodeHashTableIterator.b(param1, param3, param0 - 24480) >= param2) {
           return true;
         }
         return false;

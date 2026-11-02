@@ -4,7 +4,7 @@
 final class kn implements ur {
     private int field_e;
     private int field_c;
-    static ed[][] field_h;
+    static PacketBuffer[][] field_h;
     private cc field_b;
     private int field_j;
     private int field_d;
@@ -79,7 +79,7 @@ final class kn implements ur {
     public static void a(boolean param0) {
         field_p = null;
         field_m = null;
-        field_h = (ed[][]) null;
+        field_h = (PacketBuffer[][]) null;
         field_a = null;
         if (!param0) {
           field_a = (String) null;
@@ -106,7 +106,7 @@ final class kn implements ur {
     }
 
     static {
-        field_h = new ed[][]{new ed[50], new ed[30], new ed[40], new ed[50]};
+        field_h = new PacketBuffer[][]{new PacketBuffer[50], new PacketBuffer[30], new PacketBuffer[40], new PacketBuffer[50]};
         field_a = "You have <%0> unread messages!";
         field_m = "This password contains your Player Name, and would be easy to guess";
     }

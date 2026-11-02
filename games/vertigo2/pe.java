@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends li {
+final class pe extends IntrusiveNode {
     static boolean field_r;
     int field_x;
     int field_n;
@@ -51,7 +51,7 @@ final class pe extends li {
             return stackIn_3_0;
           }
           if (var2_int > 63) {
-            stackIn_6_0 = cg.field_a;
+            stackIn_6_0 = GameKeyHandler.field_a;
             return stackIn_6_0;
           }
           if (!param1) {

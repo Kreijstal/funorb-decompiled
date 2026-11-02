@@ -3,7 +3,7 @@
  */
 final class vj {
     static er[] field_b;
-    static nj field_d;
+    static IntrusiveDeque field_d;
     static int field_c;
     static int[] field_f;
     static boolean field_h;
@@ -18,21 +18,21 @@ final class vj {
             if (param15 > param9) {
               pq.a(param6, param10, param5, param0, param3, param7, param4, param9, param8, param12, param2, param14, param11, bi.field_l, true, param13, param15);
               if (param1 != -122) {
-                field_d = (nj) null;
+                field_d = (IntrusiveDeque) null;
                 return;
               }
               return;
             }
             pq.a(param10, param6, param11, param0, param3, param12, param13, param15, param8, param7, param2, param14, param5, bi.field_l, true, param4, param9);
             if (param1 != -122) {
-              field_d = (nj) null;
+              field_d = (IntrusiveDeque) null;
               return;
             }
             return;
           }
           pq.a(param6, param14, param5, param15, param12, param7, param2, param9, param11, param3, param4, param10, param8, bi.field_l, true, param13, param0);
           if (param1 != -122) {
-            field_d = (nj) null;
+            field_d = (IntrusiveDeque) null;
             return;
           }
           return;
@@ -40,7 +40,7 @@ final class vj {
         if (param9 < param15) {
           pq.a(param14, param6, param8, param15, param12, param3, param13, param0, param11, param7, param4, param10, param5, bi.field_l, true, param2, param9);
           if (param1 != -122) {
-            field_d = (nj) null;
+            field_d = (IntrusiveDeque) null;
             return;
           }
           return;
@@ -48,14 +48,14 @@ final class vj {
         if (param0 < param15) {
           pq.a(param14, param10, param8, param9, param7, param3, param4, param0, param5, param12, param13, param6, param11, bi.field_l, true, param2, param15);
           if (param1 != -122) {
-            field_d = (nj) null;
+            field_d = (IntrusiveDeque) null;
             return;
           }
           return;
         }
         pq.a(param10, param14, param11, param9, param7, param12, param2, param15, param5, param3, param13, param6, param8, bi.field_l, true, param4, param0);
         if (param1 != -122) {
-          field_d = (nj) null;
+          field_d = (IntrusiveDeque) null;
           return;
         }
     }

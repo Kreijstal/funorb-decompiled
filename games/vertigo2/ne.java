@@ -38,13 +38,13 @@ final class ne extends cj implements nc, ij {
     }
 
     final static void c(boolean param0) {
-        il.field_k = new cr(0L, (cr) null);
+        MouseWheelInput.field_k = new cr(0L, (cr) null);
         if (db.field_S) {
-          il.field_k.b(bf.field_c, 121);
+          MouseWheelInput.field_k.b(bf.field_c, 121);
         }
-        il.field_k.b(im.field_j, 118);
+        MouseWheelInput.field_k.b(im.field_j, 118);
         if (!param0) {
-          qo.field_D = new lb(fb.field_A, il.field_k);
+          qo.field_D = new lb(fb.field_A, MouseWheelInput.field_k);
           ca.field_h = new cr(0L, (cr) null);
           ca.field_h.b(qo.field_D.field_b, 123);
           ca.field_h.b(vb.field_j, 123);
@@ -246,7 +246,7 @@ final class ne extends cj implements nc, ij {
         var2.a(false, 20, var3, 50, 270);
         var3 += 50;
         this.c((byte) -117, var2);
-        var3 = var3 + (this.a(kd.field_q, jg.field_m, this.field_H, 170, var3, false) + 5);
+        var3 = var3 + (this.a(GameShell.field_q, jg.field_m, this.field_H, 170, var3, false) + 5);
         this.field_L.a(false, -var5 + 496 >> 1, var3, 40, var5);
         this.field_M.a(false, 3 + var4, var3 + 15, 40, 60);
         this.field_M.field_v = (uf) (this);

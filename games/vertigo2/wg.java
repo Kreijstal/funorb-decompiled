@@ -9,7 +9,7 @@ final class wg {
     private int[] field_b;
     private int field_e;
     private int field_f;
-    static nj field_i;
+    static IntrusiveDeque field_i;
     private int field_k;
     private int field_c;
     static int field_g;
@@ -311,6 +311,6 @@ final class wg {
     }
 
     static {
-        field_i = new nj();
+        field_i = new IntrusiveDeque();
     }
 }

@@ -3,7 +3,7 @@
  */
 final class ki {
     static er[] field_b;
-    static nj field_a;
+    static IntrusiveDeque field_a;
     static int field_c;
 
     final static void a(byte param0) {
@@ -86,6 +86,6 @@ final class ki {
     }
 
     static {
-        field_a = new nj();
+        field_a = new IntrusiveDeque();
     }
 }

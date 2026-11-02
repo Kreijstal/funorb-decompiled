@@ -85,7 +85,7 @@ final class dm extends cr {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        mi var27 = null;
+        BitPacketBuffer var27 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;
@@ -148,7 +148,7 @@ final class dm extends cr {
                   var20 = var27.h(-11);
                   var21 = rk.field_w[var20].field_l;
                   var22 = var27.i(param0 ^ -31016);
-                  var24 = var27.field_u;
+                  var24 = var27.position;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
                     var9[0][var12] = rk.field_w[var20].field_i;
@@ -166,7 +166,7 @@ final class dm extends cr {
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;
-                    var27.field_u = var24;
+                    var27.position = var24;
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
@@ -179,7 +179,7 @@ final class dm extends cr {
                     var8[2][var14] = var21;
                     var9[2][var14] = rk.field_w[var20].field_i;
                     var10[2][var14] = var22;
-                    var27.field_u = var24;
+                    var27.position = var24;
                     var14++;
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$5 = var17;
@@ -191,7 +191,7 @@ final class dm extends cr {
               }
             }
             var4.field_s = true;
-            var4.c(param0 ^ 2);
+            var4.unlink(param0 ^ 2);
             return;
           }
           if (var2 == 1) {
@@ -210,7 +210,7 @@ final class dm extends cr {
               return;
             }
             var6_ref_vi.field_r = var4_long;
-            var6_ref_vi.c(param0 ^ 2);
+            var6_ref_vi.unlink(param0 ^ 2);
             return;
           }
           ke.a((Throwable) null, "HS1: " + or.a(param0 + 121), 0);

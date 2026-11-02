@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fp extends sn {
-    private nj field_t;
-    private nj field_r;
+    private IntrusiveDeque field_t;
+    private IntrusiveDeque field_r;
     private int field_u;
     private int field_s;
 
     private final void a(o param0) {
-        param0.c(2);
+        param0.unlink(2);
         param0.a();
-        li var2 = this.field_r.field_h.field_c;
+        IntrusiveNode var2 = this.field_r.field_h.previous;
         if (var2 == this.field_r.field_h) {
           this.field_u = -1;
         } else {
@@ -26,21 +26,21 @@ final class fp extends sn {
         this.field_t.a(param0, (byte) 27);
     }
 
-    private final void a(li param0, o param1) {
+    private final void a(IntrusiveNode param0, o param1) {
         while (true) {
           if (param0 == this.field_r.field_h) {
             jn.a(param1, param0, 18724);
-            this.field_u = ((o) (this.field_r.field_h.field_c)).field_n;
+            this.field_u = ((o) (this.field_r.field_h.previous)).field_n;
             return;
           }
           if (((o) (param0)).field_n <= param1.field_n) {
-            param0 = param0.field_c;
+            param0 = param0.previous;
             continue;
           }
           break;
         }
         jn.a(param1, param0, 18724);
-        this.field_u = ((o) (this.field_r.field_h.field_c)).field_n;
+        this.field_u = ((o) (this.field_r.field_h.previous)).field_n;
         return;
     }
 
@@ -80,7 +80,7 @@ final class fp extends sn {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_n = var7;
-              this.a(var5.field_c, var5);
+              this.a(var5.previous, var5);
             } else {
               var5.field_n = 0;
               this.a(var5);
@@ -117,7 +117,7 @@ final class fp extends sn {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_n = var5;
-              this.a(var3.field_c, var3);
+              this.a(var3.previous, var3);
             } else {
               var3.field_n = 0;
               this.a(var3);
@@ -157,12 +157,12 @@ final class fp extends sn {
     }
 
     final synchronized void b(sn param0) {
-        param0.c(2);
+        param0.unlink(2);
     }
 
     public fp() {
-        this.field_t = new nj();
-        this.field_r = new nj();
+        this.field_t = new IntrusiveDeque();
+        this.field_r = new IntrusiveDeque();
         this.field_s = 0;
         this.field_u = -1;
     }

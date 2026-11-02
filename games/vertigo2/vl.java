@@ -70,18 +70,18 @@ final class vl {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (aj.field_f == null ||
-          !(param1 <= aj.field_f.length)) {
-          aj.field_f = new int[param1 * 2];
+        if (ProxySocketConnector.field_f == null ||
+          !(param1 <= ProxySocketConnector.field_f.length)) {
+          ProxySocketConnector.field_f = new int[param1 * 2];
         }
         if (param2 != -26418) {
           field_h = (String) null;
         }
         if (on.field_e == null) {
           on.field_e = new int[param1 * 2];
-          if (li.field_g == null ||
-            !(param1 <= li.field_g.length)) {
-            li.field_g = new int[2 * param1];
+          if (IntrusiveNode.field_g == null ||
+            !(param1 <= IntrusiveNode.field_g.length)) {
+            IntrusiveNode.field_g = new int[2 * param1];
           }
           if (null != ub.field_p &&
             param1 <= ub.field_p.length) {
@@ -178,9 +178,9 @@ final class vl {
           }
         } else {
           if (param1 <= on.field_e.length) {
-            if (li.field_g == null ||
-              !(param1 <= li.field_g.length)) {
-              li.field_g = new int[2 * param1];
+            if (IntrusiveNode.field_g == null ||
+              !(param1 <= IntrusiveNode.field_g.length)) {
+              IntrusiveNode.field_g = new int[2 * param1];
             }
             if (null != ub.field_p &&
               param1 <= ub.field_p.length) {
@@ -277,9 +277,9 @@ final class vl {
             }
           } else {
             on.field_e = new int[param1 * 2];
-            if (li.field_g == null ||
-              !(param1 <= li.field_g.length)) {
-              li.field_g = new int[2 * param1];
+            if (IntrusiveNode.field_g == null ||
+              !(param1 <= IntrusiveNode.field_g.length)) {
+              IntrusiveNode.field_g = new int[2 * param1];
             }
             if (null != ub.field_p &&
               param1 <= ub.field_p.length) {

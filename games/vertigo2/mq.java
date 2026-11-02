@@ -155,7 +155,7 @@ final class mq extends va {
           } else {
             if (ln.field_d.field_D.field_t == 0) {
               if ((1 << ln.field_d.field_B | ln.field_d.field_h) == -1 + (1 << ln.field_d.field_D.field_z)) {
-                sl.field_q[12] = kd.field_B;
+                sl.field_q[12] = GameShell.field_B;
               } else {
                 sl.field_q[12] = oq.field_H;
               }
@@ -239,13 +239,13 @@ final class mq extends va {
         }
     }
 
-    final static void a(java.math.BigInteger param0, ed param1, java.math.BigInteger param2, int param3, ed param4) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, java.math.BigInteger param2, int param3, PacketBuffer param4) {
         try {
           if (param3 != 12) {
-            ed var6 = (ed) null;
-            mq.a((java.math.BigInteger) null, (ed) null, (java.math.BigInteger) null, 66, (ed) null);
+            PacketBuffer var6 = (PacketBuffer) null;
+            mq.a((java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null, 66, (PacketBuffer) null);
           }
-          qp.a(param2, param0, param4.field_p, 0, param4.field_u, (byte) 63, param1);
+          qp.a(param2, param0, param4.payload, 0, param4.position, (byte) 63, param1);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "mq.MA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

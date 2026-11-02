@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class cc extends gp {
+abstract class cc extends DualLinkNode {
     private int[] field_A;
     private int[] field_B;
     private static StringBuilder field_y;
@@ -227,7 +227,7 @@ abstract class cc extends gp {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = cf.a(127, var13);
+                                  var10 = SecondaryNodeDequeIterator.a(127, var13);
                                   var11_ref_fq = this.field_O[var10];
                                   if (this.field_w == null) {
                                     stackIn_27_0 = var11_ref_fq.field_h;
@@ -549,7 +549,7 @@ abstract class cc extends gp {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = cf.a(99, var18);
+                                    var16_int = SecondaryNodeDequeIterator.a(99, var18);
                                     var4 = var4 + this.field_O[var16_int].field_d;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -754,7 +754,7 @@ abstract class cc extends gp {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = cf.a(78, var10);
+                                  var9_int = SecondaryNodeDequeIterator.a(78, var10);
                                   var4 = var4 + this.field_O[var9_int].field_d;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -839,7 +839,7 @@ abstract class cc extends gp {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                field_H = cf.a(16, var7, (byte) -61);
+                                field_H = SecondaryNodeDequeIterator.a(16, var7, (byte) -61);
                               }
                             } else {
                               field_J = -1;
@@ -849,7 +849,7 @@ abstract class cc extends gp {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          field_J = cf.a(16, var6, (byte) 126);
+                          field_J = SecondaryNodeDequeIterator.a(16, var6, (byte) 126);
                         }
                       } else {
                         field_G = -1;
@@ -859,21 +859,21 @@ abstract class cc extends gp {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    field_G = cf.a(16, var5, (byte) 113);
+                    field_G = SecondaryNodeDequeIterator.a(16, var5, (byte) 113);
                   }
                 } else {
                   field_P = field_L;
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_P = cf.a(69, var4);
+                field_P = SecondaryNodeDequeIterator.a(69, var4);
               }
             } else {
               field_N = field_u;
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            field_N = cf.a(16, var3, (byte) 72);
+            field_N = SecondaryNodeDequeIterator.a(16, var3, (byte) 72);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

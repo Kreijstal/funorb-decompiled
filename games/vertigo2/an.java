@@ -348,7 +348,7 @@ final class an {
           stackIn_83_1 = 0;
           stackIn_84_2 = (param2) && (!param0) && (im.field_g);
           ((cr) (Object) stackIn_83_0).a(stackIn_83_1, stackIn_84_2);
-          el.field_e.field_b.k(0);
+          IterableNodeHashTable.field_e.field_b.k(0);
           if (null != sj.field_d) {
             if (ne.field_G.field_tb != 0) {
               hc.a(-74, param3);
@@ -370,7 +370,7 @@ final class an {
         }
     }
 
-    final static cl[] a(int param0, jj param1) {
+    final static cl[] a(int param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         cl[] stackIn_4_0 = null;
         cl[] stackIn_13_0 = null;
@@ -437,7 +437,7 @@ final class an {
     final static er[] a(int param0, int param1) {
         er[] var3 = new er[9];
         er[] var2 = var3;
-        var3[4] = ed.a(param1, 64, false);
+        var3[4] = PacketBuffer.a(param1, 64, false);
         if (param0 > -63) {
           field_c = true;
         }
@@ -455,7 +455,7 @@ final class an {
           if (hn.field_w == 11) {
             pc.b((byte) -111);
           }
-          mg.a(param0 + 1244, nq.field_E, d.field_C, li.field_h);
+          mg.a(param0 + 1244, nq.field_E, d.field_C, IntrusiveNode.field_h);
           dh.a(0, (byte) -99, param1, 0);
           if (param0 != -1243) {
             var3 = (String) null;
@@ -522,7 +522,7 @@ final class an {
           ue.field_N.c(0, 0);
         }
         if (cn.field_r) {
-          lk.a(this.field_d, (byte) -48);
+          RasterBuffer.a(this.field_d, (byte) -48);
           var13 = sf.field_b;
           var2 = var13;
           var3 = sf.field_b.field_y << 4;
@@ -574,7 +574,7 @@ final class an {
             return stackIn_10_0;
           }
           if (param2 == 4) {
-            stackIn_14_0 = Vertigo2.a(new String[]{param1}, og.field_i, 47);
+            stackIn_14_0 = Vertigo2.a(new String[]{param1}, GameApplet.field_i, 47);
             return stackIn_14_0;
           }
           if (param2 == 5) {

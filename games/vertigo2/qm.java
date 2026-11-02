@@ -128,7 +128,7 @@ final class qm extends cj implements ij {
           if (param2 < 76) {
             field_G = (ba) null;
           }
-          if (!lk.a(1, param4, param1, param3, param0)) {
+          if (!RasterBuffer.a(1, param4, param1, param3, param0)) {
             return false;
           }
           if (param3 == 1) {

@@ -78,7 +78,7 @@ final class td implements ur {
         }
     }
 
-    final static qr a(boolean param0, ed param1) {
+    final static qr a(boolean param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         qr stackIn_2_0 = null;
         qr stackIn_4_0 = null;

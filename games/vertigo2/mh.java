@@ -36,7 +36,7 @@ final class mh {
               var5 = ia.a(-113, param2, var4);
             }
             if (hk.field_n == 1) {
-              var5 = lk.a((byte) 96, param2, var4);
+              var5 = RasterBuffer.a((byte) 96, param2, var4);
             }
             if (2 == hk.field_n) {
               var5 = br.a(var4, param2, 100);

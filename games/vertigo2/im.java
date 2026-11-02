@@ -10,7 +10,7 @@ final class im {
     static fe[] field_c;
     static int field_h;
     private long field_e;
-    private bj field_f;
+    private RandomAccessCacheFile field_f;
     private long field_k;
     private long field_n;
     private long field_i;
@@ -371,7 +371,7 @@ final class im {
         }
     }
 
-    im(bj param0, int param1, int param2) throws IOException {
+    im(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_k = -1L;
         this.field_l = 0;

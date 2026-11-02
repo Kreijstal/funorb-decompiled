@@ -45,7 +45,7 @@ final class bk {
           ui.field_d = -(sf.field_d >> 1) + kf.field_b;
           var2 = ui.field_d;
           for (var3 = 0; al.field_y.length > var3; var3++) {
-            var4 = dg.field_f[var3];
+            var4 = ClientException.field_f[var3];
             if (var4 < 0) {
               var5 = t.field_c;
             } else {
@@ -113,7 +113,7 @@ final class bk {
             bk.a(-14, -96, (r) null, 39);
           }
           if (hq.a(124, param0, param1, param2)) {
-            stackIn_6_0 = wa.c(param3 + 2846);
+            stackIn_6_0 = IsaacCipher.c(param3 + 2846);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

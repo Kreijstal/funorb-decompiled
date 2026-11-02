@@ -4,7 +4,7 @@
 abstract class bg {
     byte field_d;
     static boolean field_c;
-    static nj field_b;
+    static IntrusiveDeque field_b;
     static String[] field_e;
     static String field_a;
 
@@ -153,7 +153,7 @@ abstract class bg {
     static {
         field_c = false;
         field_e = new String[]{"Paint Pot", "Coin", "Dynamite", "1-Up", "Jetpack", "Save Star", "Compass"};
-        field_b = new nj();
+        field_b = new IntrusiveDeque();
         field_a = "Press any key to close";
     }
 }

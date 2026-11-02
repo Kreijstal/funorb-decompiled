@@ -99,10 +99,10 @@ final class gm {
 
     final static ej[] a(int param0) {
         if (param0 == 7554) {
-          return new ej[]{li.field_j, la.field_i, ne.field_N};
+          return new ej[]{IntrusiveNode.field_j, la.field_i, ne.field_N};
         }
         field_a = (String) null;
-        return new ej[]{li.field_j, la.field_i, ne.field_N};
+        return new ej[]{IntrusiveNode.field_j, la.field_i, ne.field_N};
     }
 
     final static void a(java.applet.Applet param0, byte param1) {

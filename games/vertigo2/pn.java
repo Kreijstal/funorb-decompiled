@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class pn extends d {
-    private nj field_P;
+    private IntrusiveDeque field_P;
     static String[] field_Q;
     private pk field_I;
     static int field_R;
@@ -91,7 +91,7 @@ class pn extends d {
             return;
           }
           if (this.field_p) {
-            var5_int = -param1 + (ed.field_n - this.field_o);
+            var5_int = -param1 + (PacketBuffer.field_n - this.field_o);
             var6 = gb.field_d - (param2 + this.field_t);
             this.field_I = this.b(var6, var5_int, 498);
           }
@@ -191,7 +191,7 @@ class pn extends d {
         String var17;
         int var7Lifetime1;
         var16 = Vertigo2.field_L ? 1 : 0;
-        this.field_P = new nj();
+        this.field_P = new IntrusiveDeque();
         var2 = 0;
         var3 = (qa) ((Object) this.field_B);
         if (param0 > -90) {
@@ -249,7 +249,7 @@ class pn extends d {
     }
 
     final static void a(int param0, byte param1, qn param2) {
-        mi var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = uh.field_Wb;
           var3.j(param0, 125);

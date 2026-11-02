@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class aj extends ig {
+final class ProxySocketConnector extends SocketConnector {
     static String field_i;
     static int[] field_f;
     static long field_j;
@@ -48,7 +48,7 @@ final class aj extends ig {
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");
         }
-        stackIn_5_0 = (this.field_b != 443) ? 0 : 1;
+        stackIn_5_0 = (this.port != 443) ? 0 : 1;
         var5 = stackIn_5_0;
         try {
           stackIn_8_0 = this.field_g;
@@ -64,7 +64,7 @@ final class aj extends ig {
             stackIn_9_2 = null;
             stackIn_9_4 = "http";
           }
-          var3 = ((java.net.ProxySelector) (Object) stackIn_8_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_8_3).append(stackIn_9_4).append("://").append(this.field_a).toString()));
+          var3 = ((java.net.ProxySelector) (Object) stackIn_8_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_8_3).append(stackIn_9_4).append("://").append(this.host).toString()));
           stackIn_11_0 = this.field_g;
           stackIn_11_1 = null;
           stackIn_11_2 = null;
@@ -78,7 +78,7 @@ final class aj extends ig {
             stackIn_12_2 = null;
             stackIn_12_4 = "http";
           }
-          var4 = ((java.net.ProxySelector) (Object) stackIn_11_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_11_3).append(stackIn_12_4).append("://").append(this.field_a).toString()));
+          var4 = ((java.net.ProxySelector) (Object) stackIn_11_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_11_3).append(stackIn_12_4).append("://").append(this.host).toString()));
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
@@ -111,7 +111,7 @@ final class aj extends ig {
           }
         }
         if (var7 != null) {
-          throw aj.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+          throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
         }
         return this.a((byte) -39);
     }
@@ -171,7 +171,7 @@ final class aj extends ig {
               return null;
             }
             var5 = new java.net.Socket(param1);
-            ((java.net.Socket) (var5)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.field_a, this.field_b)));
+            ((java.net.Socket) (var5)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.host, this.port)));
             stackIn_21_0 = var5;
             return (java.net.Socket) (stackIn_21_0);
           }
@@ -191,7 +191,7 @@ final class aj extends ig {
                 var11 = var14.getDeclaredMethod("getHeaderValue", new Class[]{java.net.URL.class, String.class});
                 var11.setAccessible(true);
                 var12 = (String) (var10.invoke(var8, new Object[]{}));
-                var13 = (String) (var11.invoke(var8, new Object[]{new java.net.URL("https://" + this.field_a + "/"), "https"}));
+                var13 = (String) (var11.invoke(var8, new Object[]{new java.net.URL("https://" + this.host + "/"), "https"}));
                 var5 = var12 + ": " + var13;
               }
             }
@@ -240,14 +240,14 @@ final class aj extends ig {
           var14 = new java.net.Socket(param2, param0);
           if (param1 != 32) {
             var13 = (vi) null;
-            aj.a(72, 23, (vi) null);
+            ProxySocketConnector.a(72, 23, (vi) null);
           }
           var14.setSoTimeout(10000);
           var6 = var14.getOutputStream();
           if (param3 == null) {
-            var6.write(("CONNECT " + this.field_a + ":" + this.field_b + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+            var6.write(("CONNECT " + this.host + ":" + this.port + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
           } else {
-            var6.write(("CONNECT " + this.field_a + ":" + this.field_b + " HTTP/1.0\n" + param3 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+            var6.write(("CONNECT " + this.host + ":" + this.port + " HTTP/1.0\n" + param3 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
           }
           boolean decompiledFrameRemainder0 = true;
           var6.flush();
@@ -317,11 +317,11 @@ final class aj extends ig {
     final static void a(int param0, int param1, vi param2) {
         int var5 = 0;
         int var6 = Vertigo2.field_L ? 1 : 0;
-        mi var7 = uh.field_Wb;
-        mi var8 = var7;
+        BitPacketBuffer var7 = uh.field_Wb;
+        BitPacketBuffer var8 = var7;
         var8.j(param0, 120);
-        var8.field_u = var8.field_u + 1;
-        int var4 = var8.field_u;
+        var8.position = var8.position + 1;
+        int var4 = var8.position;
         var8.f(1, 85);
         var8.d(param2.field_u, -1783);
         var8.d(param2.field_v, -1783);
@@ -339,13 +339,13 @@ final class aj extends ig {
             var7.e(param2.field_o[var5], 0);
           }
           var8.c(var4, 25);
-          var8.b((byte) -95, -var4 + var8.field_u);
+          var8.b((byte) -95, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "aj.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    aj() {
+    ProxySocketConnector() {
         this.field_g = java.net.ProxySelector.getDefault();
     }
 
@@ -353,10 +353,10 @@ final class aj extends ig {
         try {
           if (param0) {
             String var4 = (String) null;
-            aj.a(false, -0.6848612427711487f, (String) null);
+            ProxySocketConnector.a(false, -0.6848612427711487f, (String) null);
           }
           d.field_C = param1;
-          li.field_h = param2;
+          IntrusiveNode.field_h = param2;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "aj.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

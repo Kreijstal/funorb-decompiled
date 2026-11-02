@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nn extends li {
+final class nn extends IntrusiveNode {
     int field_u;
     int[] field_n;
     static tj field_w;
@@ -102,15 +102,15 @@ final class nn extends li {
         }
     }
 
-    final static lk a(int param0, java.awt.Component param1, boolean param2, int param3) {
+    final static RasterBuffer a(int param0, java.awt.Component param1, boolean param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          lk var5 = null;
-          ma var5_ref = null;
-          lk stackIn_3_0 = null;
-          ma stackIn_5_0 = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          RasterBuffer stackIn_3_0 = null;
+          ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -121,17 +121,17 @@ final class nn extends li {
                 nn.a(-77);
               }
               var4 = Class.forName("em");
-              var5 = (lk) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               var5.a(param1, -3, param3, param0);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new ma();
-              ((lk) ((Object) var5_ref)).a(param1, -3, param3, param0);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).a(param1, -3, param3, param0);
               stackIn_5_0 = var5_ref;
-              return (lk) ((Object) stackIn_5_0);
+              return (RasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

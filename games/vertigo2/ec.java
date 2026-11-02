@@ -20,11 +20,11 @@ final class ec extends ji {
         int var9;
         int var10;
         int var11;
-        ed var12;
+        PacketBuffer var12;
         int[] var13;
         int[] var14;
         int[] var15;
-        ed var12Lifetime1;
+        PacketBuffer var12Lifetime1;
         int[] var15Lifetime1;
         int[] var15Lifetime1Lifetime1;
         var11 = Vertigo2.field_L ? 1 : 0;
@@ -36,8 +36,8 @@ final class ec extends ji {
           if (param1 > 91) {
             return var13;
           }
-          var12 = (ed) null;
-          this.a((byte) 122, -56, (ed) null);
+          var12 = (PacketBuffer) null;
+          this.a((byte) 122, -56, (PacketBuffer) null);
           return var13;
         }
         var4 = lf.field_y[param0];
@@ -72,13 +72,13 @@ final class ec extends ji {
         if (param1 > 91) {
           return var13;
         }
-        var12Lifetime1 = (ed) null;
-        this.a((byte) 122, -56, (ed) null);
+        var12Lifetime1 = (PacketBuffer) null;
+        this.a((byte) 122, -56, (PacketBuffer) null);
         return var13;
     }
 
     final static void a(int param0, byte param1, be param2) {
-        mi var3 = uh.field_Wb;
+        BitPacketBuffer var3 = uh.field_Wb;
         var3.j(param0, 118);
         if (param1 < 116) {
           return;
@@ -116,10 +116,10 @@ final class ec extends ji {
         uk.d((byte) 106);
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
-        ed var6 = null;
+        PacketBuffer var6 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -128,8 +128,8 @@ final class ec extends ji {
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param0 != 110) {
-            var6 = (ed) null;
-            this.a((byte) 103, -106, (ed) null);
+            var6 = (PacketBuffer) null;
+            this.a((byte) 103, -106, (PacketBuffer) null);
           }
           var4_int = param1;
           if (0 == var4_int) {

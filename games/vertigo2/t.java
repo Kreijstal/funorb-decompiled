@@ -187,7 +187,7 @@ final class t implements Runnable {
 
     final static void a(fp param0, int param1, int param2, r param3) {
         try {
-          sq.field_e = param2 * el.b(true) / 1000;
+          sq.field_e = param2 * IterableNodeHashTable.b(true) / 1000;
           hi.a(param3, 56);
           jl.a(param3, (byte) -85);
           ao.a(param1 - 1513236, param3);
@@ -451,10 +451,10 @@ final class t implements Runnable {
           ia.field_G = 4;
           hc.field_b = 11;
           var7 = w.a(param2, param3, "largefont", "lobby", 121);
-          li.field_e = w.a(param2, param3, "generalfont", "lobby", 104);
+          IntrusiveNode.field_e = w.a(param2, param3, "generalfont", "lobby", 104);
           kb.field_c = w.a(param2, param3, "chatfont", "lobby", 121);
           var7.a(var5, var24);
-          li.field_e.a(var5, var24);
+          IntrusiveNode.field_e.a(var5, var24);
           kb.field_c.a(var5, var24);
           var8 = new cr(0L, (cr) null);
           var8.field_z = (cc) ((Object) var7);
@@ -464,7 +464,7 @@ final class t implements Runnable {
           var8.field_ab = 1;
           var9.field_O = 1;
           var10 = new cr(0L, (cr) null);
-          var10.field_z = (cc) ((Object) li.field_e);
+          var10.field_z = (cc) ((Object) IntrusiveNode.field_e);
           var10.field_qb = r.field_f;
           var10.field_A = 16777215;
           var10.field_ab = 1;
@@ -474,8 +474,8 @@ final class t implements Runnable {
           j.field_q.field_Bb = hq.a(gk.a(param3, "lobby", "heading", true), 202);
           rq.field_t = new cr(0L, (cr) null);
           rq.field_t.field_Bb = ml.a((byte) -13, 8421504, false, 4210752, 120, param4);
-          lk.field_a = new cr(0L, (cr) null);
-          lk.field_a.field_Bb = vl.a(114, 3, 0, 1, 6316128, 6316128);
+          RasterBuffer.field_a = new cr(0L, (cr) null);
+          RasterBuffer.field_a.field_Bb = vl.a(114, 3, 0, 1, 6316128, 6316128);
           vf.field_B = new cr(0L, (cr) null);
           vf.field_B.field_Bb = hq.a(gk.a(param3, "lobby", "popup", true), 202);
           var12 = hq.a(gk.a(param3, "lobby", "popup_mouseover", true), 202);
@@ -494,14 +494,14 @@ final class t implements Runnable {
           kl.field_Ib = new cr(0L, var10);
           kl.field_Ib.field_R = 2;
           kl.field_Ib.field_Bb = ml.a((byte) -13, 3815994, false, 2039583, 30, false);
-          sa.field_a = new cr(0L, var10);
-          sa.field_a.field_R = 2;
-          sa.field_a.field_Bb = ml.a((byte) -13, 3815994, false, 2039583, 30, true);
+          MouseInputHandler.field_a = new cr(0L, var10);
+          MouseInputHandler.field_a.field_R = 2;
+          MouseInputHandler.field_a.field_Bb = ml.a((byte) -13, 3815994, false, 2039583, 30, true);
           ee.field_b = new cr(0L, (cr) null);
           ee.field_b.field_qb = r.field_f;
           ee.field_b.field_ab = 1;
           ee.field_b.field_A = 13421772;
-          ee.field_b.field_z = (cc) ((Object) li.field_e);
+          ee.field_b.field_z = (cc) ((Object) IntrusiveNode.field_e);
           ja.field_e = new cr(0L, ee.field_b);
           ja.field_e.field_H = 16777215;
           ja.field_e.field_B = 16777215;
@@ -520,8 +520,8 @@ final class t implements Runnable {
           fm.field_e.field_R = 2;
           tm.field_b = new cr(0L, pn.field_N);
           tm.field_b.a(ja.field_e, -46);
-          el.field_b = new cr(0L, fm.field_e);
-          el.field_b.a(ja.field_e, -104);
+          IterableNodeHashTable.field_b = new cr(0L, fm.field_e);
+          IterableNodeHashTable.field_b.a(ja.field_e, -104);
           var16 = gk.a(param3, "lobby", "button_mouseover", true);
           ar.field_c = new kq(vf.field_B, var12, ee.field_b, ja.field_e, 3, 2, r.field_j, 3, r.field_f);
           bq.field_B = new cr(0L, ja.field_e);
@@ -771,7 +771,7 @@ final class t implements Runnable {
         }
     }
 
-    t(jj param0) {
+    t(PlatformTaskDispatcher param0) {
         wk var2 = null;
         this.field_e = new ak();
         this.field_d = 0;

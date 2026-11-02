@@ -29,23 +29,23 @@ final class g {
           if (null != as.field_d) {
             try {
               as.field_d.a(-23669, 0L);
-              as.field_d.a(param0 ^ 0, 24, id.field_f.field_u, id.field_f.field_p);
+              as.field_d.a(param0 ^ 0, 24, id.field_f.position, id.field_f.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
               if (param0 == 0) {
-                id.field_f.field_u = id.field_f.field_u + 24;
+                id.field_f.position = id.field_f.position + 24;
                 return;
               }
               g.b(11);
-              id.field_f.field_u = id.field_f.field_u + 24;
+              id.field_f.position = id.field_f.position + 24;
               return;
             }
           }
           if (param0 != 0) {
             g.b(11);
           }
-          id.field_f.field_u = id.field_f.field_u + 24;
+          id.field_f.position = id.field_f.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -59,17 +59,17 @@ final class g {
           rm.b((byte) 85);
           return;
         }
-        mi var2 = id.field_f;
+        BitPacketBuffer var2 = id.field_f;
         var2.b(true);
         var2.b(!param0 ? true : false);
         var2.b(true);
         var2.b(!param0 ? true : false);
         if (!param0) {
-          var1.c(2);
+          var1.unlink(2);
           return;
         }
         field_b = (String) null;
-        var1.c(2);
+        var1.unlink(2);
     }
 
     final static void a(byte param0) {

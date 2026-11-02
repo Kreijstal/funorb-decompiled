@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sd extends oh {
-    private nj field_J;
+    private IntrusiveDeque field_J;
     static ll field_I;
     static String[] field_M;
     static int[] field_P;
@@ -15,7 +15,7 @@ final class sd extends oh {
 
     final void i(int param0) {
         int var4 = Vertigo2.field_L ? 1 : 0;
-        vp var2 = new vp(this.field_J);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_J);
         if (param0 != 0) {
           return;
         }
@@ -29,31 +29,31 @@ final class sd extends oh {
 
     public sd() {
         super(0, 0, gi.field_m, im.field_h, (ur) null, (uf) null);
-        this.field_J = new nj();
+        this.field_J = new IntrusiveDeque();
     }
 
     final void h(int param0) {
         int var4 = Vertigo2.field_L ? 1 : 0;
-        vp var2 = new vp(this.field_J);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_J);
         nm var3 = (nm) (var2.d(4));
         if (param0 != 0) {
           return;
         }
         while (var3 != null) {
           if (var3.a(-1)) {
-            var3.c(2);
+            var3.unlink(2);
           }
           var3 = (nm) (var2.c(2));
         }
     }
 
     final iq a(int param0) {
-        vp var2;
+        IntrusiveDequeCursor var2;
         nm var3;
         int var4;
         iq var5;
         var4 = Vertigo2.field_L ? 1 : 0;
-        var2 = new vp(this.field_J);
+        var2 = new IntrusiveDequeCursor(this.field_J);
         var3 = (nm) (var2.d(4));
         if (param0 != 15197) {
           var5 = (iq) null;
@@ -70,11 +70,11 @@ final class sd extends oh {
 
     final void l(int param0) {
         int var4 = Vertigo2.field_L ? 1 : 0;
-        vp var2 = new vp(this.field_J);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_J);
         nm var3 = (nm) (var2.d(4));
         while (var3 != null) {
           if (var3.j(17)) {
-            var3.c(param0 ^ 2);
+            var3.unlink(param0 ^ 2);
           }
           var3 = (nm) (var2.c(2));
         }
@@ -83,7 +83,7 @@ final class sd extends oh {
 
     final static void f(byte param0) {
         String var2 = (String) null;
-        aj.a((String) null, "", (byte) 33);
+        ProxySocketConnector.a((String) null, "", (byte) 33);
         if (param0 != -1) {
           sd.f((byte) -45);
         }
@@ -112,7 +112,7 @@ final class sd extends oh {
         if (null != this.field_B) {
           this.field_B.a(true, param2, true, (iq) (this), param3);
         }
-        vp var5 = new vp(this.field_J);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_J);
         if (param0) {
           this.a(45);
         }
@@ -137,14 +137,14 @@ final class sd extends oh {
     }
 
     final nm k(int param0) {
-        vp var2;
+        IntrusiveDequeCursor var2;
         nm var3;
         int var4;
         var4 = Vertigo2.field_L ? 1 : 0;
         if (param0 != 0) {
           sd.f((byte) 76);
         }
-        var2 = new vp(this.field_J);
+        var2 = new IntrusiveDequeCursor(this.field_J);
         var3 = (nm) (var2.d(4));
         while (var3 != null) {
           if (var3.field_I) {

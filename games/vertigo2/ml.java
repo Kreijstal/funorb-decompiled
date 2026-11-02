@@ -97,7 +97,7 @@ class ml extends va {
         return new er[]{null, null, null, (er) (var10), var9, (er) (var11), null, null, null};
     }
 
-    final static void a(mi param0, byte param1) {
+    final static void a(BitPacketBuffer param0, byte param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -176,7 +176,7 @@ class ml extends va {
             if (var3 != 0) {
               return;
             }
-            var4 = param0.field_u;
+            var4 = param0.position;
             param0.e(var17.field_p, 0);
             for (var5 = 0; var5 < var17.field_n; var5++) {
               if (0 != var17.field_y[var5]) {
@@ -284,7 +284,7 @@ class ml extends va {
               }
             }
             param0.c(var4, -123);
-            var17.c(2);
+            var17.unlink(2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;

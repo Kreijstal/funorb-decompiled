@@ -3,7 +3,7 @@
  */
 final class kh {
     static String field_a;
-    static ed field_b;
+    static PacketBuffer field_b;
     static er[][] field_d;
     static int[] field_c;
 
@@ -24,7 +24,7 @@ final class kh {
 
     final static void a(byte param0) {
         tk.field_e = false;
-        ed.field_t = false;
+        PacketBuffer.field_t = false;
         rh.b(-14, -1);
         if (param0 != -32) {
           return;

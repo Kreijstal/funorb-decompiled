@@ -46,7 +46,7 @@ final class le {
         ub var5_ref_ub = null;
         int[] var6 = null;
         int var8 = 0;
-        mi var9 = null;
+        BitPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = Vertigo2.field_L ? 1 : 0;
@@ -63,7 +63,7 @@ final class le {
               rm.b((byte) -79);
               return;
             }
-            var5 = -var9.field_u + ca.field_b;
+            var5 = -var9.position + ca.field_b;
             var11 = var4.field_o;
             var10 = var11;
             var6 = var10;
@@ -74,7 +74,7 @@ final class le {
               var6[var7 >> 2] = var6[var7 >> 2] + (var9.h(-11) << b.a(768, var7 << 8));
             }
             var4.field_p = true;
-            var4.c(2);
+            var4.unlink(2);
             return;
           }
           if (var2 != 1) {
@@ -96,7 +96,7 @@ final class le {
             rm.b((byte) 83);
             return;
           }
-          var5_ref_ub.c(2);
+          var5_ref_ub.unlink(2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

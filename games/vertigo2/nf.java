@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nf extends li {
+final class nf extends IntrusiveNode {
     int field_n;
     static int[] field_q;
     static volatile long field_x;
@@ -57,18 +57,18 @@ final class nf extends li {
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
         if (-param5 + param3 < ap.field_e) {
-          og.a(param4, param1, -1, param3, param5, param6, param0);
+          GameApplet.a(param4, param1, -1, param3, param5, param6, param0);
         } else {
           if (ib.field_a < param3 + param5) {
-            og.a(param4, param1, -1, param3, param5, param6, param0);
+            GameApplet.a(param4, param1, -1, param3, param5, param6, param0);
           } else {
             if (ua.field_e > param6 - param5) {
-              og.a(param4, param1, -1, param3, param5, param6, param0);
+              GameApplet.a(param4, param1, -1, param3, param5, param6, param0);
             } else {
               if (cj.field_D >= param6 + param5) {
                 cl.a(param1, param3, param4, param6, (byte) -40, param5, param0);
               } else {
-                og.a(param4, param1, -1, param3, param5, param6, param0);
+                GameApplet.a(param4, param1, -1, param3, param5, param6, param0);
               }
             }
           }

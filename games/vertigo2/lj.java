@@ -130,7 +130,7 @@ final class lj {
         return stackIn_8_0;
     }
 
-    final void a(mi param0, byte param1) {
+    final void a(BitPacketBuffer param0, byte param1) {
         try {
           this.field_r.a(param0, 0);
           if (param1 <= 66) {

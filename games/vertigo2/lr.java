@@ -366,7 +366,7 @@ final class lr extends d {
         try {
           var1_int = 0;
           var2 = 0;
-          while (gf.a(false)) {
+          while (NodeHashTableIterator.a(false)) {
             ve.field_d.d((byte) 81);
             if (ve.field_d.a(84)) {
               var1_int = 1;
@@ -376,7 +376,7 @@ final class lr extends d {
             }
             var2 = 1;
           }
-          ve.field_d.a((byte) -29, fk.b(gb.field_d, 1282642017, ed.field_n), fk.b(no.field_e, 1282642017, sd.field_N));
+          ve.field_d.a((byte) -29, fk.b(gb.field_d, 1282642017, PacketBuffer.field_n), fk.b(no.field_e, 1282642017, sd.field_N));
           if (ve.field_d.a(84)) {
             var1_int = 1;
           }

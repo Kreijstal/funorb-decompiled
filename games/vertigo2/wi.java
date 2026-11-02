@@ -25,7 +25,7 @@ final class wi extends v {
         return lb.field_e;
     }
 
-    final void a(ed param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           if (param1 != 47) {
             this.a((byte) -76);

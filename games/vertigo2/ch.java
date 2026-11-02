@@ -44,65 +44,65 @@ final class ch {
         if (param1 != 63) {
           return true;
         }
-        if (null != nj.field_b) {
+        if (null != IntrusiveDeque.field_b) {
           if (de.field_f == 13) {
-            nj.field_b = null;
+            IntrusiveDeque.field_b = null;
             return true;
           }
-          if (!il.field_a) {
+          if (!MouseWheelInput.field_a) {
             if (!pm.field_a &&
               9 != de.field_f &&
               de.field_f != 10 &&
               de.field_f != 11) {
               if (de.field_f == 80 &&
                 im.a(-1)) {
-                il.field_a = true;
+                MouseWheelInput.field_a = true;
                 return true;
               }
               return false;
             }
-            return cf.a(param1 ^ 31066, param0, param2);
+            return SecondaryNodeDequeIterator.a(param1 ^ 31066, param0, param2);
           }
           if (!im.a(-1)) {
             return false;
           }
-          stackIn_54_0 = (!gf.a(param0, param3, 78)) ? 0 : 1;
+          stackIn_54_0 = (!NodeHashTableIterator.a(param0, param3, 78)) ? 0 : 1;
           var4 = stackIn_54_0;
           if (de.field_f == 80 ||
             de.field_f == 84) {
-            il.field_a = false;
+            MouseWheelInput.field_a = false;
             var4 = 1;
           }
         } else {
-          if (!il.field_a) {
+          if (!MouseWheelInput.field_a) {
             if (pm.field_a) {
-              return cf.a(param1 ^ 31066, param0, param2);
+              return SecondaryNodeDequeIterator.a(param1 ^ 31066, param0, param2);
             }
             if (9 == de.field_f) {
-              return cf.a(param1 ^ 31066, param0, param2);
+              return SecondaryNodeDequeIterator.a(param1 ^ 31066, param0, param2);
             }
             if (de.field_f != 10 &&
               de.field_f != 11) {
               if (de.field_f == 80 &&
                 im.a(-1)) {
-                il.field_a = true;
+                MouseWheelInput.field_a = true;
                 return true;
               }
               return false;
             }
-            return cf.a(param1 ^ 31066, param0, param2);
+            return SecondaryNodeDequeIterator.a(param1 ^ 31066, param0, param2);
           }
           if (!im.a(-1)) {
             return false;
           }
-          stackIn_23_0 = (!gf.a(param0, param3, 78)) ? 0 : 1;
+          stackIn_23_0 = (!NodeHashTableIterator.a(param0, param3, 78)) ? 0 : 1;
           var4 = stackIn_23_0;
           if (de.field_f == 80) {
-            il.field_a = false;
+            MouseWheelInput.field_a = false;
             var4 = 1;
           } else {
             if (de.field_f == 84) {
-              il.field_a = false;
+              MouseWheelInput.field_a = false;
               var4 = 1;
             }
           }
@@ -110,7 +110,7 @@ final class ch {
         if (de.field_f == 13) {
           fb.h(0);
           var4 = 1;
-          il.field_a = false;
+          MouseWheelInput.field_a = false;
         }
         return var4 != 0;
     }

@@ -249,7 +249,7 @@ abstract class um extends iq implements dq {
             var1 = (gg) (fm.field_b.a((byte) 100));
             while (var1 != null) {
               if (!var1.field_q.b(param0 + 91)) {
-                var1.c(2);
+                var1.unlink(2);
               }
               var1 = (gg) (fm.field_b.b(104));
             }
@@ -257,7 +257,7 @@ abstract class um extends iq implements dq {
               var1Lifetime1 = (gg) (ro.field_b.a((byte) 100));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_q.b(86)) {
-                  var1Lifetime1.c(2);
+                  var1Lifetime1.unlink(2);
                 }
                 var1Lifetime1 = (gg) (ro.field_b.b(96));
               }

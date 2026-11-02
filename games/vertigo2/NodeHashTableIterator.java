@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class gf implements Iterator {
+final class NodeHashTableIterator implements Iterator {
     static boolean field_g;
-    private li field_i;
-    private el field_a;
+    private IntrusiveNode field_i;
+    private IterableNodeHashTable field_a;
     static sq field_f;
-    private li field_c;
+    private IntrusiveNode field_c;
     private int field_b;
     static tj field_h;
     static volatile int field_e;
@@ -18,7 +18,7 @@ final class gf implements Iterator {
         if (this.field_c == null) {
           throw new IllegalStateException();
         }
-        this.field_c.c(2);
+        this.field_c.unlink(2);
         this.field_c = null;
     }
 
@@ -28,7 +28,7 @@ final class gf implements Iterator {
         boolean stackIn_8_0 = false;
         Throwable decompiledCaughtException = null;
         if (param0) {
-          gf.b(16, 44, -77);
+          NodeHashTableIterator.b(16, 44, -77);
         }
         var1 = kb.field_a;
         synchronized (var1) {
@@ -53,8 +53,8 @@ final class gf implements Iterator {
         while (this.field_b < this.field_a.field_c) {
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          if (this.field_a.field_f[fieldTemp$0].field_c != this.field_a.field_f[-1 + this.field_b]) {
-            this.field_i = this.field_a.field_f[this.field_b - 1].field_c;
+          if (this.field_a.field_f[fieldTemp$0].previous != this.field_a.field_f[-1 + this.field_b]) {
+            this.field_i = this.field_a.field_f[this.field_b - 1].previous;
             return true;
           }
           this.field_i = this.field_a.field_f[-1 + this.field_b];
@@ -64,20 +64,20 @@ final class gf implements Iterator {
 
     private final void a(int param0) {
         if (param0 < -99) {
-          this.field_i = this.field_a.field_f[0].field_c;
+          this.field_i = this.field_a.field_f[0].previous;
           this.field_b = 1;
           this.field_c = null;
           return;
         }
         this.a(-22);
-        this.field_i = this.field_a.field_f[0].field_c;
+        this.field_i = this.field_a.field_f[0].previous;
         this.field_b = 1;
         this.field_c = null;
     }
 
     final static boolean a(byte param0) {
         if (param0 > -41) {
-          gf.a(false);
+          NodeHashTableIterator.a(false);
           if (qb.field_d == null) {
             return false;
           }
@@ -110,12 +110,12 @@ final class gf implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        li var1;
+        IntrusiveNode var1;
         int var2;
         var2 = Vertigo2.field_L ? 1 : 0;
         if (this.field_i != this.field_a.field_f[-1 + this.field_b]) {
           var1 = this.field_i;
-          this.field_i = var1.field_c;
+          this.field_i = var1.previous;
           this.field_c = var1;
           return var1;
         }
@@ -125,10 +125,10 @@ final class gf implements Iterator {
           }
           fieldTemp$0 = this.field_b;
           this.field_b = this.field_b + 1;
-          var1 = this.field_a.field_f[fieldTemp$0].field_c;
+          var1 = this.field_a.field_f[fieldTemp$0].previous;
         } while (var1 == this.field_a.field_f[-1 + this.field_b]);
         this.field_c = var1;
-        this.field_i = var1.field_c;
+        this.field_i = var1.previous;
         return var1;
     }
 
@@ -169,7 +169,7 @@ final class gf implements Iterator {
         var39 = null;
         var11 = Vertigo2.field_L ? 1 : 0;
         if (param2 <= 28) {
-          gf.a((byte) -67);
+          NodeHashTableIterator.a((byte) -67);
         }
         var3 = 1;
         if (!nb.field_z &&
@@ -197,7 +197,7 @@ final class gf implements Iterator {
                   var5 = 1;
                 }
                 if (ab.a(0, var5) == 2) {
-                  cf.a(var5, 1, param0, (byte) 118);
+                  SecondaryNodeDequeIterator.a(var5, 1, param0, (byte) 118);
                 }
                 tf.a(ui.field_g, ea.field_b, -117, var4_ref_String, param1, -1);
                 fb.h(0);
@@ -247,8 +247,8 @@ final class gf implements Iterator {
           var7 = "";
           if (ui.field_g != 0) {
             var28 = var7 + var19 + ": ";
-            var5Lifetime1 = var5Lifetime1 - cg.field_f.c(var28);
-            if (cg.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
+            var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var28);
+            if (GameKeyHandler.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
               w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
             }
             return true;
@@ -257,8 +257,8 @@ final class gf implements Iterator {
             if (!fq.field_i) {
               if (gd.field_j == null) {
                 var33 = var7 + var19 + ": ";
-                var5Lifetime1 = var5Lifetime1 - cg.field_f.c(var33);
-                if (cg.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
+                var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var33);
+                if (GameKeyHandler.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
                   w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
                 }
                 return true;
@@ -266,8 +266,8 @@ final class gf implements Iterator {
               if (!ar.field_t) {
                 var31 = "[" + Vertigo2.a(new String[]{gd.field_j.field_Nb}, ie.field_Rb, -112) + "] ";
                 var32 = var31 + var19 + ": ";
-                var5Lifetime1 = var5Lifetime1 - cg.field_f.c(var32);
-                if (cg.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
+                var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var32);
+                if (GameKeyHandler.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
                   w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
                 }
                 return true;
@@ -275,16 +275,16 @@ final class gf implements Iterator {
               if (null == v.field_a) {
                 var29 = "[" + Vertigo2.a(new String[]{gd.field_j.field_Nb}, ie.field_Rb, -112) + "] ";
                 var30 = var29 + var19 + ": ";
-                var5Lifetime1 = var5Lifetime1 - cg.field_f.c(var30);
-                if (cg.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
+                var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var30);
+                if (GameKeyHandler.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
                   w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
                 }
                 return true;
               }
               var7 = "[" + v.field_a + "] ";
               var33Lifetime1 = var7 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - cg.field_f.c(var33Lifetime1);
-              if (cg.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
+              var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var33Lifetime1);
+              if (GameKeyHandler.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
                 w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
               }
               return true;
@@ -295,8 +295,8 @@ final class gf implements Iterator {
             if (!ar.field_t) {
               var36 = "[" + Vertigo2.a(new String[]{gd.field_j.field_Nb}, ie.field_Rb, -112) + "] ";
               var37 = var36 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - cg.field_f.c(var37);
-              if (cg.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
+              var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var37);
+              if (GameKeyHandler.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
                 w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
               }
               return true;
@@ -304,8 +304,8 @@ final class gf implements Iterator {
             if (null == v.field_a) {
               var34 = "[" + Vertigo2.a(new String[]{gd.field_j.field_Nb}, ie.field_Rb, -112) + "] ";
               var35 = var34 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - cg.field_f.c(var35);
-              if (cg.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
+              var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var35);
+              if (GameKeyHandler.field_f.c(fb.field_D.toString()) > var5Lifetime1) {
                 w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
               }
               return true;
@@ -313,20 +313,20 @@ final class gf implements Iterator {
             var7 = "[" + v.field_a + "] ";
           }
           var38 = var7 + var19 + ": ";
-          var5Lifetime1 = var5Lifetime1 - cg.field_f.c(var38);
+          var5Lifetime1 = var5Lifetime1 - GameKeyHandler.field_f.c(var38);
         } else {
           var40 = (CharSequence) ((Object) ea.field_b);
           var18 = Vertigo2.a(new String[]{vj.a(var40, (byte) 8)}, di.field_B, -117);
           var8 = Vertigo2.a(new String[]{var16}, af.field_L, 15);
-          var9 = cg.field_f.c(var18);
-          var10 = cg.field_f.c(var8);
+          var9 = GameKeyHandler.field_f.c(var18);
+          var10 = GameKeyHandler.field_f.c(var8);
           if (var10 >= var9) {
             var5Lifetime1 = var5Lifetime1 - var10;
           } else {
             var5Lifetime1 = var5Lifetime1 - var9;
           }
         }
-        if (cg.field_f.c(fb.field_D.toString()) <= var5Lifetime1) {
+        if (GameKeyHandler.field_f.c(fb.field_D.toString()) <= var5Lifetime1) {
           return true;
         }
         w.a(true, ' ', -1 + fb.field_D.length(), fb.field_D);
@@ -343,7 +343,7 @@ final class gf implements Iterator {
         field_f = null;
     }
 
-    gf(el param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_c = null;
         try {
           this.field_a = param0;

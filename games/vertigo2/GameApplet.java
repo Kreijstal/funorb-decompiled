@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class og extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String field_c;
     static String field_i;
     boolean field_f;
@@ -18,7 +18,7 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, String param6) {
         try {
-          jj dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_23_0 = null;
           StringBuilder stackIn_23_1 = null;
           String stackIn_24_2 = null;
@@ -51,7 +51,7 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
               if (param1 < 8) {
                 return;
               }
-              dupTemp$0 = new jj(param0, param6, param2, true);
+              dupTemp$0 = new PlatformTaskDispatcher(param0, param6, param2, true);
               gi.field_s = dupTemp$0;
               mr.field_b = dupTemp$0;
               var8 = gi.field_s.a(1, (Runnable) (this), 0);
@@ -160,7 +160,7 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (qe.field_T == this &&
-            !gf.field_g) {
+            !NodeHashTableIterator.field_g) {
             lf.field_B = gk.a(52);
             um.a(true, 5000L);
             mr.field_b = null;
@@ -233,7 +233,7 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
 
     public final void start() {
         if (this != qe.field_T ||
-          gf.field_g) {
+          NodeHashTableIterator.field_g) {
           return;
         }
         try {
@@ -390,7 +390,7 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
             return;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          ne.field_F = (java.awt.Canvas) ((Object) new tg((java.awt.Component) (this)));
+          ne.field_F = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ne.field_F));
           ne.field_F.setSize(op.field_c, gh.field_a);
           ne.field_F.setVisible(true);
@@ -440,7 +440,7 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (qe.field_T == this &&
-            !gf.field_g) {
+            !NodeHashTableIterator.field_g) {
             lf.field_B = 4000L + gk.a(113);
             return;
           }
@@ -744,7 +744,7 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
 
     abstract void f(int param0);
 
-    protected og() {
+    protected GameApplet() {
         this.field_f = false;
     }
 
@@ -758,10 +758,10 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
         try {
           var3_ref = this;
           synchronized (var3_ref) {
-            if (gf.field_g) {
+            if (NodeHashTableIterator.field_g) {
               return;
             }
-            gf.field_g = true;
+            NodeHashTableIterator.field_g = true;
           }
           if (null != va.field_o) {
             va.field_o.destroy();
@@ -819,7 +819,7 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
         RuntimeException var2_ref = null;
         try {
           if (qe.field_T == this &&
-            !gf.field_g) {
+            !NodeHashTableIterator.field_g) {
             uh.field_sc = true;
             if (kj.field_E &&
               gk.a(88) - nf.field_x > 1000L) {
@@ -870,7 +870,7 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
           if (var4 != 0L &&
             var2_long > var4) {
             var6_int = (int)(var2_long - var4);
-            li.field_d = ((var6_int >> 1) + 32000) / var6_int;
+            IntrusiveNode.field_d = ((var6_int >> 1) + 32000) / var6_int;
           }
           fieldTemp$1 = km.field_x;
           km.field_x = km.field_x + 1;
@@ -921,11 +921,11 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (jj.field_m != null) {
-                var1 = jj.field_m.toLowerCase();
+              if (PlatformTaskDispatcher.field_m != null) {
+                var1 = PlatformTaskDispatcher.field_m.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = jj.field_d;
+                  var2 = PlatformTaskDispatcher.field_d;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -958,7 +958,7 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (qb.a((CharSequence) ((Object) var4), -69) &&
-                        !(10 <= cf.a(86, (CharSequence) ((Object) var4)))) {
+                        !(10 <= SecondaryNodeDequeIterator.a(86, (CharSequence) ((Object) var4)))) {
                         this.a(0, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -967,8 +967,8 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (jj.field_d != null))) {
-                stackIn_68_0 = jj.field_d.startsWith("1.");
+                (decompiledFrameRemainder2 = (PlatformTaskDispatcher.field_d != null))) {
+                stackIn_68_0 = PlatformTaskDispatcher.field_d.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -977,8 +977,8 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (var1_int < jj.field_d.length()) {
-                    var3 = jj.field_d.charAt(var1_int);
+                  if (var1_int < PlatformTaskDispatcher.field_d.length()) {
+                    var3 = PlatformTaskDispatcher.field_d.charAt(var1_int);
                     stackIn_80_0 = var3;
                     stackIn_80_1 = 48;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -1005,7 +1005,7 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
                 if (null != va.field_o) {
                   var1 = va.field_o;
                 }
-                var2_ref = jj.field_e;
+                var2_ref = PlatformTaskDispatcher.field_e;
                 if (null != var2_ref) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -1018,7 +1018,7 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
                 this.a((byte) -57);
                 ro.field_g = nn.a(gh.field_a, (java.awt.Component) ((Object) ne.field_F), true, op.field_c);
                 this.b(255);
-                wa.field_i = bl.c(true);
+                IsaacCipher.field_i = bl.c(true);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (lf.field_B != 0L) {
@@ -1030,7 +1030,7 @@ public abstract class og extends java.applet.Applet implements Runnable, java.aw
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    tf.field_n = wa.field_i.a(sl.field_w, true);
+                    tf.field_n = IsaacCipher.field_i.a(sl.field_w, true);
                     stackIn_101_0 = 0;
                   }
                   var3 = stackIn_101_0;

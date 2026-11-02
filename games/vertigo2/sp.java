@@ -66,7 +66,7 @@ abstract class sp extends nm {
           }
           var2 = new gg(param0, param0);
           fm.field_b.a(var2, false);
-          il.field_g.a(param0);
+          MouseWheelInput.field_g.a(param0);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

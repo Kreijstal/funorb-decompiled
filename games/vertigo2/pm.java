@@ -16,7 +16,7 @@ final class pm implements Runnable {
     private boolean field_c;
     private boolean field_b;
     private InputStream field_m;
-    private jj field_k;
+    private PlatformTaskDispatcher field_k;
 
     final int a(int param0) throws IOException {
         if (param0 != 15166) {
@@ -182,7 +182,7 @@ final class pm implements Runnable {
             param2 = param2 - var5_int;
           }
           if (param1) {
-            this.field_k = (jj) null;
+            this.field_k = (PlatformTaskDispatcher) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -219,7 +219,7 @@ final class pm implements Runnable {
         }
     }
 
-    pm(java.net.Socket param0, jj param1) throws IOException {
+    pm(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -290,7 +290,7 @@ final class pm implements Runnable {
         return vo.a(false, 126, 1, param0, false, true);
     }
 
-    private pm(java.net.Socket param0, jj param1, int param2) throws IOException {
+    private pm(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_l = 0;
         this.field_i = 0;
         this.field_c = false;

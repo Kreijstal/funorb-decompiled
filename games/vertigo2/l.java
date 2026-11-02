@@ -163,7 +163,7 @@ abstract class l {
     final static void a(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        mi var1 = null;
+        BitPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -173,13 +173,13 @@ abstract class l {
             return;
           }
           var1 = uh.field_Wb;
-          while (kd.l(7)) {
+          while (GameShell.l(7)) {
             var1.j(8, 118);
-            fieldTemp$0 = var1.field_u + 1;
-            var1.field_u = var1.field_u + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             ml.a(var1, (byte) -25);
-            uh.field_Wb.b((byte) 15, var1.field_u - var2);
+            uh.field_Wb.b((byte) 15, var1.position - var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

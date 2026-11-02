@@ -123,13 +123,13 @@ final class nb extends ji {
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
         Throwable decompiledCaughtException = null;
-        mi var2 = null;
+        BitPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        mi var8 = null;
+        BitPacketBuffer var8 = null;
         q var9 = null;
         var7 = Vertigo2.field_L ? 1 : 0;
         if (param1 <= 32) {
@@ -202,16 +202,16 @@ final class nb extends ji {
         hh.a(-20, lr.field_H);
     }
 
-    final static il i(int param0) {
+    final static MouseWheelInput i(int param0) {
         try {
           Throwable var1 = null;
-          il stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 0) {
               nb.g(127);
             }
-            stackIn_3_0 = (il) (Class.forName("vk").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -300,7 +300,7 @@ final class nb extends ji {
         }
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -331,7 +331,7 @@ final class nb extends ji {
     }
 
     final static void d(int param0, int param1) {
-        li var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         hn var4 = null;
         RuntimeException decompiledCaughtException = null;

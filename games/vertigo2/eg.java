@@ -72,19 +72,19 @@ final class eg extends tk {
             this.field_u.c(-26206);
             var2 = (ia) (this.field_b.b((byte) -50));
             while (var2 != null) {
-              this.field_f.field_u = 0;
+              this.field_f.position = 0;
               this.field_f.f(1, param0 ^ -3703);
               this.field_f.b((byte) 90, var2.field_n);
-              this.field_u.a(0, this.field_f.field_p.length, param0 ^ -3646, this.field_f.field_p);
+              this.field_u.a(0, this.field_f.payload.length, param0 ^ -3646, this.field_f.payload);
               this.field_a.a(false, var2);
               var2 = (ia) (this.field_b.a(true));
             }
             var2Lifetime1 = (ia) (this.field_d.b((byte) -50));
             while (var2Lifetime1 != null) {
-              this.field_f.field_u = 0;
+              this.field_f.position = 0;
               this.field_f.f(0, 93);
               this.field_f.b((byte) 125, var2Lifetime1.field_n);
-              this.field_u.a(0, this.field_f.field_p.length, -93, this.field_f.field_p);
+              this.field_u.a(0, this.field_f.payload.length, -93, this.field_f.payload);
               this.field_g.a(false, var2Lifetime1);
               var2Lifetime1 = (ia) (this.field_d.a(true));
             }
@@ -104,26 +104,26 @@ final class eg extends tk {
                   }
                 }
                 if (var4 <= 0) {
-                  var5 = this.field_h.field_J.field_p.length - this.field_h.field_B;
+                  var5 = this.field_h.field_J.payload.length - this.field_h.field_B;
                   var6 = -this.field_h.field_F + 512;
-                  if (var5 - this.field_h.field_J.field_u < var6) {
-                    var6 = -this.field_h.field_J.field_u + var5;
+                  if (var5 - this.field_h.field_J.position < var6) {
+                    var6 = -this.field_h.field_J.position + var5;
                   }
                   if (var3_int < var6) {
                     var6 = var3_int;
                   }
-                  this.field_u.a(this.field_h.field_J.field_p, false, var6, this.field_h.field_J.field_u);
+                  this.field_u.a(this.field_h.field_J.payload, false, var6, this.field_h.field_J.position);
                   if (this.field_l != 0) {
                     var17 = 0;
                     var7 = var17;
                     while (var17 < var6) {
-                      this.field_h.field_J.field_p[this.field_h.field_J.field_u + var17] = (byte)tk.a((int) this.field_h.field_J.field_p[this.field_h.field_J.field_u + var17], (int) this.field_l);
+                      this.field_h.field_J.payload[this.field_h.field_J.position + var17] = (byte)tk.a((int) this.field_h.field_J.payload[this.field_h.field_J.position + var17], (int) this.field_l);
                       var17++;
                     }
                   }
                   this.field_h.field_F = this.field_h.field_F + var6;
-                  this.field_h.field_J.field_u = this.field_h.field_J.field_u + var6;
-                  if (this.field_h.field_J.field_u != var5) {
+                  this.field_h.field_J.position = this.field_h.field_J.position + var6;
+                  if (this.field_h.field_J.position != var5) {
                     if (this.field_h.field_F == 512) {
                       this.field_h.field_F = 0;
                     }
@@ -133,30 +133,30 @@ final class eg extends tk {
                     this.field_h = null;
                   }
                 } else {
-                  var5 = var4 - this.field_i.field_u;
+                  var5 = var4 - this.field_i.position;
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.field_u.a(this.field_i.field_p, false, var5, this.field_i.field_u);
+                  this.field_u.a(this.field_i.payload, false, var5, this.field_i.position);
                   if (this.field_l != 0) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_i.field_p[var6 + this.field_i.field_u] = (byte)tk.a((int) this.field_i.field_p[var6 + this.field_i.field_u], (int) this.field_l);
+                      this.field_i.payload[var6 + this.field_i.position] = (byte)tk.a((int) this.field_i.payload[var6 + this.field_i.position], (int) this.field_l);
                     }
                   }
-                  this.field_i.field_u = this.field_i.field_u + var5;
-                  if (var4 <= this.field_i.field_u) {
+                  this.field_i.position = this.field_i.position + var5;
+                  if (var4 <= this.field_i.position) {
                     if (this.field_h != null) {
                       if (this.field_h.field_F != 0) {
                         throw new IOException();
                       }
-                      if (-1 != this.field_i.field_p[0]) {
+                      if (-1 != this.field_i.payload[0]) {
                         this.field_h = null;
                       } else {
                         this.field_h.field_F = 1;
-                        this.field_i.field_u = 0;
+                        this.field_i.position = 0;
                       }
                     } else {
-                      this.field_i.field_u = 0;
+                      this.field_i.position = 0;
                       var6 = this.field_i.h(param0 + 3588);
                       var7 = this.field_i.b(true);
                       var8 = this.field_i.h(-11);
@@ -195,11 +195,11 @@ final class eg extends tk {
                       this.field_h = var14_ref;
                       stackIn_66_0 = (0 == var10) ? 5 : 9;
                       var15 = stackIn_66_0;
-                      this.field_h.field_J = new ed(var9 + (var15 + this.field_h.field_B));
+                      this.field_h.field_J = new PacketBuffer(var9 + (var15 + this.field_h.field_B));
                       this.field_h.field_J.f(var10, -127);
                       this.field_h.field_J.e(var9, param0 + 3599);
                       this.field_h.field_F = 10;
-                      this.field_i.field_u = 0;
+                      this.field_i.position = 0;
                     }
                   }
                 }
@@ -262,7 +262,7 @@ final class eg extends tk {
             this.g(0);
             this.a(param1, (byte) -50);
             this.field_h = null;
-            this.field_i.field_u = 0;
+            this.field_i.position = 0;
             while (true) {
               var4_ref = (ia) (this.field_a.a(-67));
               if (var4_ref != null) {
@@ -281,11 +281,11 @@ final class eg extends tk {
             }
             if (this.field_l != 0) {
               try {
-                this.field_f.field_u = 0;
+                this.field_f.position = 0;
                 this.field_f.f(4, -84);
                 this.field_f.f((int) this.field_l, 115);
                 this.field_f.e(0, 0);
-                this.field_u.a(0, this.field_f.field_p.length, -87, this.field_f.field_p);
+                this.field_u.a(0, this.field_f.payload.length, -87, this.field_f.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -364,8 +364,8 @@ final class eg extends tk {
             return false;
           }
         }
-        var4 = jf.field_N[param1] + li.field_g[param1] + ub.field_p[param1];
-        var5 = jf.field_N[param3] + li.field_g[param3] + ub.field_p[param3];
+        var4 = jf.field_N[param1] + IntrusiveNode.field_g[param1] + ub.field_p[param1];
+        var5 = jf.field_N[param3] + IntrusiveNode.field_g[param3] + ub.field_p[param3];
         if (var5 > var4) {
           return true;
         }
@@ -385,11 +385,11 @@ final class eg extends tk {
             return;
           }
           try {
-            this.field_f.field_u = 0;
+            this.field_f.position = 0;
             this.field_f.f(6, 118);
             this.field_f.i(param0 ^ -1725083856, 3);
             this.field_f.d(0, param0 ^ -1783);
-            this.field_u.a(param0, this.field_f.field_p.length, 34, this.field_f.field_p);
+            this.field_u.a(param0, this.field_f.payload.length, 34, this.field_f.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -426,7 +426,7 @@ final class eg extends tk {
           return;
         }
         try {
-          il.field_g.b(param1);
+          MouseWheelInput.field_g.b(param1);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "eg.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -447,7 +447,7 @@ final class eg extends tk {
     private final void a(boolean param0, byte param1) {
         try {
           IOException iOException = null;
-          ed stackIn_7_0 = null;
+          PacketBuffer stackIn_7_0 = null;
           int stackIn_8_1 = 0;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
@@ -455,7 +455,7 @@ final class eg extends tk {
             return;
           }
           try {
-            this.field_f.field_u = 0;
+            this.field_f.position = 0;
             if (param1 >= 0) {
               field_s = (int[][]) null;
             }
@@ -465,9 +465,9 @@ final class eg extends tk {
             } else {
               stackIn_8_1 = 2;
             }
-            ((ed) (Object) stackIn_7_0).f(stackIn_8_1, 100);
+            ((PacketBuffer) (Object) stackIn_7_0).f(stackIn_8_1, 100);
             this.field_f.b((byte) 50, 0L);
-            this.field_u.a(0, this.field_f.field_p.length, 26, this.field_f.field_p);
+            this.field_u.a(0, this.field_f.payload.length, 26, this.field_f.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;

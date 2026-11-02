@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class li {
-    long field_k;
-    li field_a;
+class IntrusiveNode {
+    long key;
+    IntrusiveNode next;
     static int[] field_g;
-    li field_c;
+    IntrusiveNode previous;
     static ej field_j;
     static int field_f;
     static co field_e;
@@ -26,7 +26,7 @@ class li {
         field_g = null;
         field_m = null;
         if (param0 != 55) {
-          li.d(-58);
+          IntrusiveNode.d(-58);
         }
     }
 
@@ -51,9 +51,9 @@ class li {
 
     final boolean b(int param0) {
         if (param0 < 76) {
-          this.field_a = (li) null;
+          this.next = (IntrusiveNode) null;
         }
-        if (this.field_a != null) {
+        if (this.next != null) {
           return true;
         }
         return false;
@@ -142,17 +142,17 @@ class li {
         }
     }
 
-    final void c(int param0) {
+    final void unlink(int param0) {
         if (param0 != 2) {
-          li.a(true, -15);
+          IntrusiveNode.a(true, -15);
         }
-        if (null == this.field_a) {
+        if (null == this.next) {
           return;
         }
-        this.field_a.field_c = this.field_c;
-        this.field_c.field_a = this.field_a;
-        this.field_a = null;
-        this.field_c = null;
+        this.next.previous = this.previous;
+        this.previous.next = this.next;
+        this.next = null;
+        this.previous = null;
     }
 
     final static void a(boolean param0, int param1) {

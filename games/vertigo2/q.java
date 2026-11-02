@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class q extends gp {
+final class q extends DualLinkNode {
     static int field_y;
     int[] field_w;
     static int field_u;
@@ -40,10 +40,10 @@ final class q extends gp {
         return var2.toString();
     }
 
-    final void a(ed param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
-        ed var5 = null;
+        PacketBuffer var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -52,8 +52,8 @@ final class q extends gp {
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param1 >= -20) {
-            var5 = (ed) null;
-            this.a((ed) null, 11);
+            var5 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, 11);
           }
           while (true) {
             var3_int = param0.h(-11);
@@ -89,7 +89,7 @@ final class q extends gp {
         }
     }
 
-    private final void a(ed param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -118,7 +118,7 @@ final class q extends gp {
                 this.field_A = new int[var4_int][];
                 for (var5 = 0; var4_int > var5; var5++) {
                   var6 = param0.a((byte) -11);
-                  var7 = li.a(var6, -72);
+                  var7 = IntrusiveNode.a(var6, -72);
                   if (var7 != null) {
                     this.field_C[var5] = var6;
                     array$0 = new int[var7.field_c];

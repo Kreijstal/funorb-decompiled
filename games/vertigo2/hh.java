@@ -4,7 +4,7 @@
 final class hh {
     static fe field_a;
     static String field_d;
-    static ed field_b;
+    static PacketBuffer field_b;
     static boolean field_c;
 
     final static void a(int param0, aa param1) {
@@ -27,7 +27,7 @@ final class hh {
     public static void a(int param0) {
         field_b = null;
         if (param0 > -50) {
-          field_b = (ed) null;
+          field_b = (PacketBuffer) null;
           field_d = null;
           field_a = null;
           return;
@@ -36,13 +36,13 @@ final class hh {
         field_a = null;
     }
 
-    final static String a(byte param0, int param1, ed param2) {
+    final static String a(byte param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
         String var5 = null;
-        ed var6 = null;
+        PacketBuffer var6 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
@@ -52,15 +52,15 @@ final class hh {
         try {
           try {
             if (param0 >= -63) {
-              var6 = (ed) null;
-              hh.a((byte) 33, -101, (ed) null);
+              var6 = (PacketBuffer) null;
+              hh.a((byte) 33, -101, (PacketBuffer) null);
             }
             var3_int = param2.l(-1317721944);
             if (var3_int > param1) {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param2.field_u = param2.field_u + ko.field_M.a(25330, var4, var3_int, param2.field_u, 0, param2.field_p);
+            param2.position = param2.position + ko.field_M.a(25330, var4, var3_int, param2.position, 0, param2.payload);
             var5 = mj.a(-125, var4, 0, var3_int);
             stackIn_5_0 = var5;
             return stackIn_5_0;

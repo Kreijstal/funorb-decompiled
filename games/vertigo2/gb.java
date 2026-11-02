@@ -86,7 +86,7 @@ final class gb {
         String var18 = null;
         String var19 = null;
         int var12 = 0;
-        dg var14 = null;
+        ClientException var14 = null;
         String var2 = null;
         String var11 = null;
         int var13 = Vertigo2.field_L ? 1 : 0;
@@ -100,10 +100,10 @@ final class gb {
         String var11Lifetime6;
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
-        if (param0 instanceof dg) {
-          var14 = (dg) ((Object) param0);
+        if (param0 instanceof ClientException) {
+          var14 = (ClientException) ((Object) param0);
           var2 = var14.field_e + " | ";
-          param0 = var14.field_a;
+          param0 = var14.cause;
         } else {
           var2 = "";
           var11 = var2;

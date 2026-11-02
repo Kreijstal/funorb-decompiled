@@ -17,7 +17,7 @@ final class uh extends cr {
     cr field_ec;
     cr field_ac;
     int field_Qb;
-    static mi field_Wb;
+    static BitPacketBuffer field_Wb;
     long field_Pb;
     int field_ic;
     boolean field_Tb;

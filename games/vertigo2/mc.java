@@ -11,7 +11,7 @@ final class mc {
     ur field_g;
     private int field_j;
     int field_o;
-    static nj field_i;
+    static IntrusiveDeque field_i;
     int field_m;
     static String field_f;
     cc field_n;
@@ -310,6 +310,6 @@ final class mc {
 
     static {
         field_f = "<col=DE9200>time:</col> <%0>";
-        field_i = new nj();
+        field_i = new IntrusiveDeque();
     }
 }

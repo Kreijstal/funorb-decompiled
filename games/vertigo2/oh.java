@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class oh extends iq implements dq {
     static String field_E;
-    static nj field_D;
+    static IntrusiveDeque field_D;
     iq field_C;
     static volatile boolean field_F;
 
@@ -106,7 +106,7 @@ abstract class oh extends iq implements dq {
         iq var2 = null;
         iq var2Lifetime1;
         if (param0 != 15197) {
-          field_D = (nj) null;
+          field_D = (IntrusiveDeque) null;
           var2 = this.field_C;
           if (var2 == null) {
             return null;
@@ -135,10 +135,10 @@ abstract class oh extends iq implements dq {
         int var7 = 0;
         int var8 = 0;
         try {
-          var2_int = ed.field_n;
+          var2_int = PacketBuffer.field_n;
           var3 = gb.field_d;
           if (param1) {
-            field_D = (nj) null;
+            field_D = (IntrusiveDeque) null;
           }
           var4 = ee.field_b.field_z.b(param0, 500);
           var5 = ee.field_b.field_z.a(param0, 500) + 6;
@@ -268,12 +268,12 @@ abstract class oh extends iq implements dq {
               if (!param0) {
                 return;
               }
-              field_D = (nj) null;
+              field_D = (IntrusiveDeque) null;
               return;
             }
             this.field_C.a(param0, param1, this.field_o + param2, this.field_t + param3);
             if (param0) {
-              field_D = (nj) null;
+              field_D = (IntrusiveDeque) null;
               return;
             }
             return;
@@ -285,13 +285,13 @@ abstract class oh extends iq implements dq {
           if (!param0) {
             return;
           }
-          field_D = (nj) null;
+          field_D = (IntrusiveDeque) null;
           return;
         }
         if (!param0) {
           return;
         }
-        field_D = (nj) null;
+        field_D = (IntrusiveDeque) null;
     }
 
     void a(byte param0) {
@@ -480,7 +480,7 @@ abstract class oh extends iq implements dq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 21) {
-            field_D = (nj) null;
+            field_D = (IntrusiveDeque) null;
           }
           stackIn_7_0 = (this.field_C != null) && (!this.field_C.f(38)) && (this.field_C.a((byte) 116, param1));
           return stackIn_7_0;
@@ -594,6 +594,6 @@ abstract class oh extends iq implements dq {
     static {
         field_E = "To report a player, click on the most suitable option from the Rules of Conduct. Please do not abuse this form.";
         field_F = false;
-        field_D = new nj();
+        field_D = new IntrusiveDeque();
     }
 }

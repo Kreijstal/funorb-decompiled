@@ -68,11 +68,11 @@ final class uq {
               var10_ref_int__ = var17;
               var11 = 0;
               var12 = 0;
-              L18: while (true) {
+              scanLoop1: while (true) {
                 if (var12 >= var19.length) {
                   if (var11 == 0 &&
                     ol.field_A != param4) {
-                    break L18;
+                    break scanLoop1;
                   }
                   var8_int = 0;
                   for (var12 = 0; var19.length > var12; var12 += 2) {
@@ -85,13 +85,13 @@ final class uq {
                       ng.field_a = true;
                     }
                   }
-                  break L18;
+                  break scanLoop1;
                 }
                 var13_intLifetime1 = var19[var12];
                 var14 = var10_ref_int__[var12 + 1];
                 if (var13_intLifetime1 == -1) {
                   if (rc.field_a[param6] != var14) {
-                    break L18;
+                    break scanLoop1;
                   }
                 } else {
                   if (var13_intLifetime1 == param4 &&
@@ -99,10 +99,10 @@ final class uq {
                     var11 = 1;
                   } else {
                     if (var13_intLifetime1 >= param4) {
-                      break L18;
+                      break scanLoop1;
                     }
                     if ((e.field_c[var13_intLifetime1] & 255) != var14) {
-                      break L18;
+                      break scanLoop1;
                     }
                   }
                 }

@@ -328,7 +328,7 @@ class kp extends d {
           }
           if (super.a(param0, param1, param2, param3, param4, (byte) -111, param6) &&
             this.field_B instanceof qa) {
-            var8_int = ((qa) ((Object) this.field_B)).a(ed.field_n, param2, 101, param1, (iq) (this), gb.field_d);
+            var8_int = ((qa) ((Object) this.field_B)).a(PacketBuffer.field_n, param2, 101, param1, (iq) (this), gb.field_d);
             if (var8_int == -1) {
               stackIn_7_1 = 0;
             } else {
@@ -384,7 +384,7 @@ class kp extends d {
           }
           if (this.field_B instanceof qa) {
             var5 = (qa) ((Object) this.field_B);
-            var6 = var5.a(ed.field_n, param2, 106, param1, (iq) (this), gb.field_d);
+            var6 = var5.a(PacketBuffer.field_n, param2, 106, param1, (iq) (this), gb.field_d);
             if (var6 != -1) {
               if (this.field_I &&
                 this.field_O > var6 &&

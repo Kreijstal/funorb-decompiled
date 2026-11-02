@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oc extends li {
+final class oc extends IntrusiveNode {
     int field_p;
     int[] field_u;
     int[] field_y;
@@ -59,7 +59,7 @@ final class oc extends li {
         return false;
     }
 
-    final static java.awt.Frame a(int param0, int param1, int param2, jj param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_23_0 = null;
         Object stackIn_35_0 = null;

@@ -3,22 +3,22 @@
  */
 final class mr {
     static Boolean field_a;
-    static jj field_b;
+    static PlatformTaskDispatcher field_b;
 
     final static void b(boolean param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
         var1 = as.field_b;
         synchronized (var1) {
-          cf.field_a = cf.field_a + 1;
+          SecondaryNodeDequeIterator.field_a = SecondaryNodeDequeIterator.field_a + 1;
           q.field_v = cl.field_f;
-          ed.field_n = ja.field_h;
+          PacketBuffer.field_n = ja.field_h;
           gb.field_d = ca.field_c;
           wo.field_s = ej.field_f;
           ej.field_f = param0;
           kf.field_c = kc.field_a;
           sd.field_N = hn.field_o;
-          no.field_e = gf.field_e;
+          no.field_e = NodeHashTableIterator.field_e;
           kc.field_a = 0;
         }
     }
@@ -74,7 +74,7 @@ final class mr {
           var5_int = param4 + param0;
           var6 = param2 + param1;
           if (param3 != 0) {
-            field_b = (jj) null;
+            field_b = (PlatformTaskDispatcher) null;
           }
           if (param4 > bi.field_d) {
             stackIn_6_0 = param4;

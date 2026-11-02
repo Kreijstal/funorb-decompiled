@@ -99,7 +99,7 @@ final class e {
           if (null != ha.field_a) {
             return;
           }
-          il.field_a = false;
+          MouseWheelInput.field_a = false;
           if (pe.field_r) {
             var5 = ah.field_k;
           } else {
@@ -125,7 +125,7 @@ final class e {
           }
           gg.field_o = new cr(0L, param4);
           dj.field_d = new cr(0L, param3);
-          dj.field_d.field_z = cg.field_f;
+          dj.field_d.field_z = GameKeyHandler.field_f;
           gg.field_o.b(dj.field_d, 125);
           ui.field_b = new cr(0L, gj.field_z);
           gg.field_o.b(ui.field_b, 125);
@@ -319,11 +319,11 @@ final class e {
         gk.field_c.b(param0, 0);
         if (param1 > -124) {
           Object var3 = (Object) null;
-          e.a((jj) null, (Object) null, -43);
+          e.a((PlatformTaskDispatcher) null, (Object) null, -43);
         }
     }
 
-    final static void a(jj param0, Object param1, int param2) {
+    final static void a(PlatformTaskDispatcher param0, Object param1, int param2) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

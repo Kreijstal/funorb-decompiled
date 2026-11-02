@@ -23,13 +23,13 @@ final class wn {
         field_i = null;
     }
 
-    final static dg a(Throwable param0, String param1) {
-        dg var2 = null;
-        if (param0 instanceof dg) {
-          var2 = (dg) ((Object) param0);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
           var2.field_e = var2.field_e + ' ' + param1;
         } else {
-          var2 = new dg(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }
@@ -274,10 +274,10 @@ final class wn {
     final static void a(int param0, cr param1, cr param2) {
         try {
           if (param1.field_M == null) {
-            param1.field_M = new nj();
+            param1.field_M = new IntrusiveDeque();
           }
           if (param2.field_M == null) {
-            param2.field_M = new nj();
+            param2.field_M = new IntrusiveDeque();
           }
           if (se.field_A == null) {
             se.field_A = new fi(64);
@@ -391,10 +391,10 @@ final class wn {
     final static int a(boolean param0, int param1, qj param2, int param3, String param4, boolean param5, qj param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
-        ed stackIn_16_0 = null;
+        PacketBuffer stackIn_16_0 = null;
         int stackIn_16_1 = 0;
         String stackIn_17_2 = null;
-        ed stackIn_19_0 = null;
+        PacketBuffer stackIn_19_0 = null;
         int stackIn_19_1 = 0;
         String stackIn_20_2 = null;
         int stackIn_30_0 = 0;
@@ -435,9 +435,9 @@ final class wn {
           }
           if (nn.field_w == rg.field_d) {
             mr.field_a = null;
-            uh.field_Wb.field_u = 0;
+            uh.field_Wb.position = 0;
             if (param4 == null) {
-              iq.field_x.field_u = 0;
+              iq.field_x.position = 0;
               iq.field_x.e(j.field_r.nextInt(), 0);
               iq.field_x.e(j.field_r.nextInt(), 0);
               stackIn_16_0 = iq.field_x;
@@ -447,7 +447,7 @@ final class wn {
               } else {
                 stackIn_17_2 = var14;
               }
-              ((ed) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
+              ((PacketBuffer) (Object) stackIn_16_0).a(stackIn_16_1, stackIn_17_2);
               stackIn_19_0 = iq.field_x;
               stackIn_19_1 = 684868900;
               if (param6.a(75)) {
@@ -455,18 +455,18 @@ final class wn {
               } else {
                 stackIn_20_2 = "";
               }
-              ((ed) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
+              ((PacketBuffer) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_20_2);
               uh.field_Wb.f(16, -53);
-              uh.field_Wb.field_u = uh.field_Wb.field_u + 1;
-              var9 = uh.field_Wb.field_u;
+              uh.field_Wb.position = uh.field_Wb.position + 1;
+              var9 = uh.field_Wb.position;
               mq.a(jm.field_H, uh.field_Wb, lp.field_E, 12, iq.field_x);
-              uh.field_Wb.b((byte) -97, uh.field_Wb.field_u - var9);
+              uh.field_Wb.b((byte) -97, uh.field_Wb.position - var9);
             } else {
               var9 = 0;
               if (param5) {
                 var9 = var9 | 1;
               }
-              iq.field_x.field_u = 0;
+              iq.field_x.position = 0;
               iq.field_x.e(j.field_r.nextInt(), 0);
               iq.field_x.e(j.field_r.nextInt(), 0);
               iq.field_x.a(684868900, var14);
@@ -477,15 +477,15 @@ final class wn {
               iq.field_x.f(param3, 80);
               iq.field_x.f(var9, 100);
               uh.field_Wb.f(18, -93);
-              uh.field_Wb.field_u = uh.field_Wb.field_u + 2;
-              var10 = uh.field_Wb.field_u;
+              uh.field_Wb.position = uh.field_Wb.position + 2;
+              var10 = uh.field_Wb.position;
               var11_ref_String = vq.a(ob.e((byte) 74), (byte) 114);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               uh.field_Wb.a((byte) 0, var11_ref_String);
               mq.a(jm.field_H, uh.field_Wb, lp.field_E, 12, iq.field_x);
-              uh.field_Wb.a((byte) -120, -var10 + uh.field_Wb.field_u);
+              uh.field_Wb.a((byte) -120, -var10 + uh.field_Wb.position);
             }
             lf.d(106, -1);
             rg.field_d = fi.field_b;
@@ -493,10 +493,10 @@ final class wn {
           if (fi.field_b == rg.field_d &&
             c.a(1, (byte) -104)) {
             var9Lifetime1 = id.field_f.h(-11);
-            id.field_f.field_u = 0;
+            id.field_f.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              rg.field_d = bj.field_f;
+              rg.field_d = RandomAccessCacheFile.field_f;
               na.field_m = new String[-100 + var9Lifetime1];
             } else {
               if (248 == var9Lifetime1) {
@@ -514,15 +514,15 @@ final class wn {
               } else {
                 c.a(tk.c(1), (byte) -104);
                 mr.field_a = new Boolean(nr.a(id.field_f, 67));
-                id.field_f.field_u = 0;
+                id.field_f.position = 0;
               }
             }
           }
-          if (rg.field_d == bj.field_f) {
+          if (rg.field_d == RandomAccessCacheFile.field_f) {
             var9Lifetime2 = 2;
             if (c.a(var9Lifetime2, (byte) -104)) {
               var10Lifetime1 = id.field_f.a((byte) -11);
-              id.field_f.field_u = 0;
+              id.field_f.position = 0;
               if (c.a(var10Lifetime1, (byte) -104)) {
                 var11 = na.field_m.length;
                 for (var12 = 0; var12 < var11; var12++) {

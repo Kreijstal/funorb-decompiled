@@ -34,7 +34,7 @@ final class hr extends ji {
         try {
           var4 = (vi) (mc.field_i.a((byte) 100));
           while (var4 != null) {
-            aj.a(param0, 126, var4);
+            ProxySocketConnector.a(param0, 126, var4);
             var4 = (vi) (mc.field_i.b(40));
           }
           var5 = (s) (wg.field_i.a((byte) 100));
@@ -123,7 +123,7 @@ final class hr extends ji {
         field_C = null;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;

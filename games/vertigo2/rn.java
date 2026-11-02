@@ -85,8 +85,8 @@ final class rn extends jg {
           this.field_v = param0.field_v;
           this.field_E = param0.field_E;
           if (param1 > -3) {
-            mi var4 = (mi) null;
-            this.a((mi) null, -11);
+            BitPacketBuffer var4 = (BitPacketBuffer) null;
+            this.a((BitPacketBuffer) null, -11);
           }
           this.field_A = param0.field_A;
           this.field_D = param0.field_D;
@@ -141,8 +141,8 @@ final class rn extends jg {
           vq.field_q[2] = this.field_g + 64;
           vq.field_q[0] = 64 + this.field_l;
           if (!this.field_C && (param3 == null ||
-            !(bj.field_i[0] <= param3[0]))) {
-            param3 = bj.field_i;
+            !(RandomAccessCacheFile.field_i[0] <= param3[0]))) {
+            param3 = RandomAccessCacheFile.field_i;
           }
           vq.field_q[1] = this.field_s;
           if (this.field_p == 23 &&
@@ -257,7 +257,7 @@ final class rn extends jg {
         }
     }
 
-    rn(mi param0) {
+    rn(BitPacketBuffer param0) {
         super(1, 0, 0, 0);
         int var2_int = 0;
         try {
@@ -504,7 +504,7 @@ final class rn extends jg {
         }
     }
 
-    private final void a(mi param0, int param1) {
+    private final void a(BitPacketBuffer param0, int param1) {
         try {
           this.field_p = param0.c((byte) -119, 5);
           this.field_A = param0.c((byte) -97, 3);

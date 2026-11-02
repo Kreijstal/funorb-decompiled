@@ -3,7 +3,7 @@
  */
 final class tr {
     private int field_N;
-    private nj field_z;
+    private IntrusiveDeque field_z;
     private wo[][] field_K;
     boolean field_i;
     static cr field_l;
@@ -186,41 +186,41 @@ final class tr {
               switch (var5) {
                 case 0:
                   c.field_h = c.field_h - 1;
-                  gi.field_u = gi.field_u + aj.field_e;
+                  gi.field_u = gi.field_u + ProxySocketConnector.field_e;
                   break;
                 case 1:
                   gi.field_u = gi.field_u + c.field_h;
-                  aj.field_e = aj.field_e - 1;
+                  ProxySocketConnector.field_e = ProxySocketConnector.field_e - 1;
                   break;
                 case 3:
                   gi.field_u = gi.field_u - c.field_h;
-                  aj.field_e = aj.field_e + 1;
+                  ProxySocketConnector.field_e = ProxySocketConnector.field_e + 1;
                   break;
                 case 6:
-                  pn.field_R = pn.field_R - aj.field_e;
+                  pn.field_R = pn.field_R - ProxySocketConnector.field_e;
                   c.field_h = c.field_h - 1;
                 default:
                   break;
                 case 7:
                   pn.field_R = pn.field_R - c.field_h;
-                  aj.field_e = aj.field_e - 1;
+                  ProxySocketConnector.field_e = ProxySocketConnector.field_e - 1;
                   if (var12 == 0) {
                     break;
                   }
                 case 5:
                   pn.field_R = pn.field_R + c.field_h;
-                  aj.field_e = aj.field_e + 1;
+                  ProxySocketConnector.field_e = ProxySocketConnector.field_e + 1;
                   if (var12 == 0) {
                     break;
                   }
                 case 4:
                   c.field_h = c.field_h + 1;
-                  pn.field_R = pn.field_R + aj.field_e;
+                  pn.field_R = pn.field_R + ProxySocketConnector.field_e;
                   if (var12 == 0) {
                     break;
                   }
                 case 2:
-                  gi.field_u = gi.field_u - aj.field_e;
+                  gi.field_u = gi.field_u - ProxySocketConnector.field_e;
                   c.field_h = c.field_h + 1;
                   break;
               }
@@ -256,7 +256,7 @@ final class tr {
                   qr.field_j = qr.field_j | ki.field_c + sk.field_b << 17;
                   break;
               }
-              var5 = (gi.field_u + de.field_f * aj.field_e) % 8;
+              var5 = (gi.field_u + de.field_f * ProxySocketConnector.field_e) % 8;
               switch (var5) {
                 case 2:
                   f.field_B = f.field_B + ca.field_g;
@@ -439,11 +439,11 @@ final class tr {
             var4 = 0;
           }
           if (!param1) {
-            this.a((mi) null, 48);
+            this.a((BitPacketBuffer) null, 48);
           }
           if (param0) {
             if (this.field_o &&
-              il.field_a) {
+              MouseWheelInput.field_a) {
             }
             if (!tf.a((byte) 43) &&
               kf.field_c == 1 &&
@@ -458,44 +458,44 @@ final class tr {
                 switch (var7) {
                   case 3:
                     gi.field_u = gi.field_u - c.field_h;
-                    aj.field_e = aj.field_e + 1;
+                    ProxySocketConnector.field_e = ProxySocketConnector.field_e + 1;
                     break;
                   case 4:
                     c.field_h = c.field_h + 1;
-                    pn.field_R = pn.field_R + aj.field_e;
+                    pn.field_R = pn.field_R + ProxySocketConnector.field_e;
                     break;
                   case 6:
-                    pn.field_R = pn.field_R - aj.field_e;
+                    pn.field_R = pn.field_R - ProxySocketConnector.field_e;
                     c.field_h = c.field_h - 1;
                   default:
                     break;
                   case 7:
                     pn.field_R = pn.field_R - c.field_h;
-                    aj.field_e = aj.field_e - 1;
+                    ProxySocketConnector.field_e = ProxySocketConnector.field_e - 1;
                     if (var12 == 0) {
                       break;
                     }
                   case 5:
                     pn.field_R = pn.field_R + c.field_h;
-                    aj.field_e = aj.field_e + 1;
+                    ProxySocketConnector.field_e = ProxySocketConnector.field_e + 1;
                     if (var12 == 0) {
                       break;
                     }
                   case 2:
                     c.field_h = c.field_h + 1;
-                    gi.field_u = gi.field_u - aj.field_e;
+                    gi.field_u = gi.field_u - ProxySocketConnector.field_e;
                     if (var12 == 0) {
                       break;
                     }
                   case 1:
                     gi.field_u = gi.field_u + c.field_h;
-                    aj.field_e = aj.field_e - 1;
+                    ProxySocketConnector.field_e = ProxySocketConnector.field_e - 1;
                     if (var12 == 0) {
                       break;
                     }
                   case 0:
                     c.field_h = c.field_h - 1;
-                    gi.field_u = gi.field_u + aj.field_e;
+                    gi.field_u = gi.field_u + ProxySocketConnector.field_e;
                     break;
                 }
                 var7 = (ln.field_d.field_s ^ var6 + de.field_f) % 5;
@@ -523,7 +523,7 @@ final class tr {
                     sk.field_b = sk.field_b + re.field_j;
                     break;
                 }
-                var7 = (gi.field_u + de.field_f * aj.field_e) % 8;
+                var7 = (gi.field_u + de.field_f * ProxySocketConnector.field_e) % 8;
                 switch (var7) {
                   case 2:
                     df.field_k = df.field_k + 1;
@@ -621,7 +621,7 @@ final class tr {
             }
             var5 = 0;
             if (this.field_o) {
-              if ((!il.field_a) &&
+              if ((!MouseWheelInput.field_a) &&
                 (!tf.a((byte) 49))) {
                 var6 = this.field_G.a((byte) -126);
                 if (cr.field_eb[s.field_y] ||
@@ -666,7 +666,7 @@ final class tr {
           stackIn_469_0 = this.field_G;
           stackIn_469_1 = this.field_m;
           stackIn_469_2 = -120;
-          if (this.field_o && (il.field_a ||
+          if (this.field_o && (MouseWheelInput.field_a ||
             tf.a((byte) 65))) {
             stackIn_472_3 = false;
             decompiledFrameRemainder3 = false;
@@ -737,7 +737,7 @@ final class tr {
               stackIn_538_1 = !(param1);
               ((hd) (Object) stackIn_537_0).a(stackIn_538_1);
             }
-            L108: while (true) {
+            scanLoop1: while (true) {
               if (this.field_I >= 1.0f) {
                 this.field_u = this.field_u + 1;
                 this.field_I = this.field_I - 1.0f;
@@ -746,7 +746,7 @@ final class tr {
                 }
               } else {
                 if (this.field_B < 0) {
-                  break L108;
+                  break scanLoop1;
                 }
               }
               this.field_a.a(this.field_u, var4, 7829367);
@@ -784,7 +784,7 @@ final class tr {
           if (!this.field_o ||
             !param0 ||
             tf.a((byte) 86) ||
-            il.field_a &&
+            MouseWheelInput.field_a &&
             0 <= this.field_B) {
             hj.field_g = false;
             if (var12 == 0) {
@@ -793,8 +793,8 @@ final class tr {
           }
           hj.field_g = false;
           var5 = qe.field_W.field_t;
-          if (ed.field_n >= 0 &&
-            (float)ed.field_n < np.field_Nb * 2.0f &&
+          if (PacketBuffer.field_n >= 0 &&
+            (float)PacketBuffer.field_n < np.field_Nb * 2.0f &&
             gb.field_d >= (-4 - var5 + td.field_c.field_C) &&
             gb.field_d < -4 + td.field_c.field_C) {
             hj.field_g = true;
@@ -899,7 +899,7 @@ final class tr {
           if (uh.field_Xb == null &&
             this.field_D.field_l[this.field_B].field_W > 0 &&
             !this.field_c) {
-            uh.field_Xb = new vi(0, 65535, gi.field_u, pn.field_R, aj.field_e, c.field_h, new int[]{this.field_D.field_l[this.field_B].field_W});
+            uh.field_Xb = new vi(0, 65535, gi.field_u, pn.field_R, ProxySocketConnector.field_e, c.field_h, new int[]{this.field_D.field_l[this.field_B].field_W});
             if (!ag.b(49)) {
               nr.a(3, -22754, uh.field_Xb);
             }
@@ -1142,49 +1142,49 @@ final class tr {
               var4 = (ln.field_d.field_s ^ de.field_f) % 8;
               switch (var4) {
                 case 2:
-                  gi.field_u = gi.field_u - aj.field_e;
+                  gi.field_u = gi.field_u - ProxySocketConnector.field_e;
                   c.field_h = c.field_h + 1;
                 default:
                   break;
                 case 7:
-                  aj.field_e = aj.field_e - 1;
+                  ProxySocketConnector.field_e = ProxySocketConnector.field_e - 1;
                   pn.field_R = pn.field_R - c.field_h;
                   if (var8 == 0) {
                     break;
                   }
                 case 6:
-                  pn.field_R = pn.field_R - aj.field_e;
+                  pn.field_R = pn.field_R - ProxySocketConnector.field_e;
                   c.field_h = c.field_h - 1;
                   if (var8 == 0) {
                     break;
                   }
                 case 5:
-                  aj.field_e = aj.field_e + 1;
+                  ProxySocketConnector.field_e = ProxySocketConnector.field_e + 1;
                   pn.field_R = pn.field_R + c.field_h;
                   if (var8 == 0) {
                     break;
                   }
                 case 4:
-                  pn.field_R = pn.field_R + aj.field_e;
+                  pn.field_R = pn.field_R + ProxySocketConnector.field_e;
                   c.field_h = c.field_h + 1;
                   if (var8 == 0) {
                     break;
                   }
                 case 3:
-                  aj.field_e = aj.field_e + 1;
+                  ProxySocketConnector.field_e = ProxySocketConnector.field_e + 1;
                   gi.field_u = gi.field_u - c.field_h;
                   if (var8 == 0) {
                     break;
                   }
                 case 1:
                   gi.field_u = gi.field_u + c.field_h;
-                  aj.field_e = aj.field_e - 1;
+                  ProxySocketConnector.field_e = ProxySocketConnector.field_e - 1;
                   if (var8 == 0) {
                     break;
                   }
                 case 0:
                   c.field_h = c.field_h - 1;
-                  gi.field_u = gi.field_u + aj.field_e;
+                  gi.field_u = gi.field_u + ProxySocketConnector.field_e;
                   break;
               }
               var4 = (ln.field_d.field_s ^ de.field_f + var3) % 5;
@@ -1212,7 +1212,7 @@ final class tr {
                   qr.field_j = qr.field_j | ki.field_c + sk.field_b << 17;
                   break;
               }
-              var4 = (gi.field_u + aj.field_e * de.field_f) % 8;
+              var4 = (gi.field_u + ProxySocketConnector.field_e * de.field_f) % 8;
               switch (var4) {
                 case 2:
                   df.field_k = df.field_k + 1;
@@ -1356,7 +1356,7 @@ final class tr {
               return;
             }
           }
-          L37: {
+          regionExit1: {
             if (!this.field_o &&
               ji.field_r > 0) {
               cp.field_b = cp.field_b.substring(1) + ji.field_r;
@@ -1367,7 +1367,7 @@ final class tr {
                 oo.b(var2_float);
                 if (gi.field_r) {
                   var3 = 0;
-                  L41: while (true) {
+                  scanLoop2: while (true) {
                     if (oo.field_c.length > var3) {
                       var4 = (oo.field_c[var3] & 16711680) >> 16;
                       var5 = (65280 & oo.field_c[var3]) >> 8;
@@ -1379,9 +1379,9 @@ final class tr {
                         if (stackIn_235_0 > stackIn_235_1) {
                           qq.a(oo.field_c, 0, Vertigo2.field_J[var3], 0, oo.field_c.length);
                           var3++;
-                          break L37;
+                          break regionExit1;
                         }
-                        break L41;
+                        break scanLoop2;
                       }
                       if (stackIn_235_0 < stackIn_235_1) {
                         oo.field_c[var3] = 0;
@@ -1403,7 +1403,7 @@ final class tr {
                       qq.a(oo.field_c, 0, Vertigo2.field_J[var3], 0, oo.field_c.length);
                       var3++;
                       if (var8 != 0) {
-                        break L37;
+                        break regionExit1;
                       }
                     }
                     break;
@@ -1456,7 +1456,7 @@ final class tr {
           if (this.field_o && (eo.field_o ||
             0 <= this.field_B)) {
             if ((!(0 > this.field_B)) &&
-              (!il.field_a) &&
+              (!MouseWheelInput.field_a) &&
               (!tf.a((byte) 123))) {
               if (~tn.field_c == ~de.field_f ||
                 bc.field_b == de.field_f) {
@@ -1477,7 +1477,7 @@ final class tr {
               this.field_G.b((byte) 119);
             }
           }
-          if (this.field_o && (il.field_a ||
+          if (this.field_o && (MouseWheelInput.field_a ||
             tf.a((byte) 96))) {
             return;
           }
@@ -1506,10 +1506,10 @@ final class tr {
             gj.a((byte) -66, false, am.field_n, 20);
           }
           if (this.field_A) {
-            L72: {
-              L73: {
-                L74: {
-                  L75: {
+            regionExit3: {
+              regionExit4: {
+                regionExit5: {
+                  regionExit6: {
                     boolean decompiledFrameRemainder3 = true;
                     boolean decompiledFrameRemainder2 = true;
                     boolean decompiledFrameRemainder1 = true;
@@ -1532,13 +1532,13 @@ final class tr {
                         var8 != 0))) {
                         switch (var3) {
                           case 6:
-                            break L75;
+                            break regionExit6;
                           case 7:
-                            break L74;
+                            break regionExit5;
                           case 8:
-                            break L73;
+                            break regionExit4;
                           case 9:
-                            break L72;
+                            break regionExit3;
                           default:
                             return;
                         }
@@ -1594,7 +1594,7 @@ final class tr {
                     return;
                   }
                 }
-                tk.a(param0 ^ -116, 0, 0, il.field_e, wo.field_S);
+                tk.a(param0 ^ -116, 0, 0, MouseWheelInput.field_e, wo.field_S);
                 if (var8 == 0) {
                   return;
                 }
@@ -1614,7 +1614,7 @@ final class tr {
         }
     }
 
-    final void a(mi param0, int param1) {
+    final void a(BitPacketBuffer param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -1848,7 +1848,7 @@ final class tr {
                   var8_ref_String = this.field_D.field_w[var7_intLifetime1];
                   if (0 != (1 << var7_intLifetime1 & this.field_h)) {
                     if ((1 << var7_intLifetime1 & this.field_D.field_u) != 0) {
-                      var8_ref_String = Vertigo2.a(new String[]{var8_ref_String}, kd.field_m, 121);
+                      var8_ref_String = Vertigo2.a(new String[]{var8_ref_String}, GameShell.field_m, 121);
                     } else {
                       var8_ref_String = Vertigo2.a(new String[]{var8_ref_String}, mn.field_p, -115);
                     }
@@ -1923,7 +1923,7 @@ final class tr {
               var9 = var8Lifetime1 * 2 + (int)np.field_Nb;
               var10 = var8Lifetime1 * 2 + tk.field_c.field_z;
               va.field_s.b(93);
-              qi.a(false, 25, var9, 3 + td.field_c.field_C - var10);
+              FullscreenFocusCanvas.a(false, 25, var9, 3 + td.field_c.field_C - var10);
               stackIn_171_0 = (var7_intLifetime1Lifetime1 != 0) ? 14586368 : 16777215;
               var11_intLifetime1 = stackIn_171_0;
               va.field_s.a(j.field_p, var11_intLifetime1, -1, var8Lifetime1 + ((int)np.field_Nb / 2 + 25), td.field_c.field_C - var8Lifetime1, 2);
@@ -1958,7 +1958,7 @@ final class tr {
               if (mf.a((byte) 126, 4)) {
                 tk.field_c.a("FPS:", var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
-                tk.field_c.a(Integer.toString(li.field_d), var10Lifetime1, var8Lifetime2, 16777215, -1);
+                tk.field_c.a(Integer.toString(IntrusiveNode.field_d), var10Lifetime1, var8Lifetime2, 16777215, -1);
                 var8Lifetime2 = var8Lifetime2 + var9Lifetime1;
               }
               if (mf.a((byte) 126, 8)) {
@@ -2067,7 +2067,7 @@ final class tr {
           mc.field_e = 1951;
           sl.field_l = 1954;
           ci.field_b = 1982;
-          aj.field_e = 5180;
+          ProxySocketConnector.field_e = 5180;
           pn.field_R = 617;
           c.field_h = 9170;
           gi.field_u = 8768;
@@ -2156,7 +2156,7 @@ final class tr {
             this.field_w = true;
             kh.a(param6, (byte) -84);
           }
-          this.field_z = new nj();
+          this.field_z = new IntrusiveDeque();
           this.field_g = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

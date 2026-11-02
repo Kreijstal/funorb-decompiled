@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class tm {
-    static nj field_a;
+    static IntrusiveDeque field_a;
     static String field_c;
     static cr field_b;
     private static String field_z;

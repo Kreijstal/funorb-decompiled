@@ -9,10 +9,10 @@ final class en {
     final static void a(boolean param0) {
         if (!param0) {
           field_b = (String) null;
-          mg.field_N = new nj();
+          mg.field_N = new IntrusiveDeque();
           return;
         }
-        mg.field_N = new nj();
+        mg.field_N = new IntrusiveDeque();
     }
 
     final static String a(boolean param0, String param1, r param2, int param3, String param4) {
@@ -103,7 +103,7 @@ final class en {
 
     final static String a(String param0, byte param1, String param2, int param3) {
         RuntimeException var4 = null;
-        mi var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var7 = 0;
         tp var8 = null;
@@ -133,17 +133,17 @@ final class en {
             stackIn_11_0 = Vertigo2.a(new String[]{param2}, jp.field_R, -114);
             return stackIn_11_0;
           }
-          var8.c(2);
+          var8.unlink(2);
           var8.a(-124);
           vd.field_a = vd.field_a - 1;
           var6 = 97 % ((param1 + 39) / 55);
           var5 = uh.field_Wb;
           var5.j(param3, 120);
-          var5.field_u = var5.field_u + 1;
-          var7 = var5.field_u;
+          var5.position = var5.position + 1;
+          var7 = var5.position;
           var5.f(3, 81);
           var5.a((byte) 0, param0);
-          var5.b((byte) -96, -var7 + var5.field_u);
+          var5.b((byte) -96, -var7 + var5.position);
           stackIn_13_0 = null;
           return (String) (stackIn_13_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

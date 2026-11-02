@@ -82,8 +82,8 @@ class va implements ur, qa {
               var12 = -7 + (var10 + 5 * var9);
               decompiledFrameRemainder0 = !(var12 < 0);
               if ((decompiledFrameRemainder0) &&
-                (decompiledFrameRemainder0 = !(wa.field_h.length <= var12))) {
-                var7 = wa.field_h[var12];
+                (decompiledFrameRemainder0 = !(IsaacCipher.field_h.length <= var12))) {
+                var7 = IsaacCipher.field_h[var12];
                 var8 = 14517504;
               }
             } else {

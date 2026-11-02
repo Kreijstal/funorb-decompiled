@@ -19,9 +19,9 @@ final class uk extends ab {
     static String field_y;
     private ff field_x;
     private byte[] field_l;
-    private nj field_j;
+    private IntrusiveDeque field_j;
     private boolean field_m;
-    private nj field_h;
+    private IntrusiveDeque field_h;
     private int field_B;
     private boolean field_n;
     private long field_o;
@@ -55,10 +55,10 @@ final class uk extends ab {
         }
         this.field_n = true;
         if (this.field_j == null) {
-          this.field_j = new nj();
+          this.field_j = new IntrusiveDeque();
         }
         if (param0 < 74) {
-          this.field_h = (nj) null;
+          this.field_h = (IntrusiveDeque) null;
         }
     }
 
@@ -80,14 +80,14 @@ final class uk extends ab {
           return null;
         }
         byte[] var4 = var3.a((byte) -106);
-        var3.c(2);
+        var3.unlink(2);
         return var4;
     }
 
     final void c(byte param0) {
         rk discarded$0 = null;
         rk discarded$1 = null;
-        li var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         var4 = Vertigo2.field_L ? 1 : 0;
@@ -102,7 +102,7 @@ final class uk extends ab {
         }
         var2 = this.field_h.a((byte) 100);
         while (var2 != null) {
-          var3 = (int)var2.field_k;
+          var3 = (int)var2.key;
           if (var3 >= 0 &&
             var3 < this.field_x.field_p &&
             this.field_x.field_h[var3] != 0) {
@@ -113,10 +113,10 @@ final class uk extends ab {
               discarded$1 = this.a(-66, 2, var3);
             }
             if (1 == this.field_g[var3]) {
-              var2.c(2);
+              var2.unlink(2);
             }
           } else {
-            var2.c(param0 + 96);
+            var2.unlink(param0 + 96);
           }
           var2 = this.field_h.b(27);
         }
@@ -129,14 +129,14 @@ final class uk extends ab {
         rk discarded$2 = null;
         int var2_int;
         rk var2;
-        li var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        li var6;
-        li var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        li var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = Vertigo2.field_L ? 1 : 0;
         if (null != this.field_j) {
@@ -147,14 +147,14 @@ final class uk extends ab {
             var2_int = 1;
             var3 = this.field_j.a((byte) 100);
             while (var3 != null) {
-              var4 = (int)var3.field_k;
+              var4 = (int)var3.key;
               if (this.field_g[var4] == 0) {
                 discarded$1 = this.a(112, 1, var4);
               }
               if (0 == this.field_g[var4]) {
                 var2_int = 0;
               } else {
-                var3.c(2);
+                var3.unlink(2);
               }
               var3 = this.field_j.b(27);
             }
@@ -168,8 +168,8 @@ final class uk extends ab {
                   discarded$0 = this.a(92, 1, this.field_B);
                 }
                 if (this.field_g[this.field_B] == 0) {
-                  var7 = new li();
-                  var7.field_k = (long)this.field_B;
+                  var7 = new IntrusiveNode();
+                  var7.key = (long)this.field_B;
                   var2_int = 0;
                   this.field_j.a(var7, false);
                 }
@@ -190,12 +190,12 @@ final class uk extends ab {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_j.a((byte) 100);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_k;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_g[var4Lifetime1] != 1) {
                   discarded$3 = this.a(123, 2, var4Lifetime1);
                 }
                 if (this.field_g[var4Lifetime1] == 1) {
-                  var3Lifetime1.c(2);
+                  var3Lifetime1.unlink(2);
                 } else {
                   var2_intLifetime1 = 0;
                 }
@@ -211,8 +211,8 @@ final class uk extends ab {
                     discarded$2 = this.a(-102, 2, this.field_B);
                   }
                   if (1 != this.field_g[this.field_B]) {
-                    var6 = new li();
-                    var6.field_k = (long)this.field_B;
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_B;
                     this.field_j.a(var6, false);
                     var2_intLifetime1 = 0;
                   }
@@ -245,7 +245,7 @@ final class uk extends ab {
                 if (!var2.field_u) {
                   throw new RuntimeException();
                 }
-                var2.c(2);
+                var2.unlink(2);
               } else {
                 var2.field_t = true;
               }
@@ -382,7 +382,7 @@ final class uk extends ab {
           0 == param1 &&
           !var13.field_u &&
           var13.field_z) {
-          var13.c(2);
+          var13.unlink(2);
           var5 = null;
         }
         if (var5 == null) {
@@ -418,7 +418,7 @@ final class uk extends ab {
               var5 = this.field_w.a(param2, this.field_t, true, (byte) 2, false);
             }
           }
-          this.field_q.a((li) (var5), (long)param2, false);
+          this.field_q.a((IntrusiveNode) (var5), (long)param2, false);
         }
         if (((rk) (var5)).field_z) {
           return null;
@@ -456,7 +456,7 @@ final class uk extends ab {
                 this.field_g[param2] = (byte) 1;
               }
               if (!((rk) (var5)).field_u) {
-                ((rk) (var5)).c(2);
+                ((rk) (var5)).unlink(2);
               }
               stackIn_59_0 = var5;
               return (rk) (stackIn_59_0);
@@ -466,11 +466,11 @@ final class uk extends ab {
             decompiledCaughtException = decompiledCaughtParameter1;
             var7_ref = (Exception) (Object) decompiledCaughtException;
             this.field_g[param2] = (byte)-1;
-            ((rk) (var5)).c(2);
+            ((rk) (var5)).unlink(2);
             if (((rk) (var5)).field_u &&
               !this.field_w.a(20)) {
               var5 = this.field_w.a(param2, this.field_t, true, (byte) 2, false);
-              this.field_q.a((li) (var5), (long)param2, false);
+              this.field_q.a((IntrusiveNode) (var5), (long)param2, false);
             }
             return null;
           }
@@ -506,13 +506,13 @@ final class uk extends ab {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_w.e(0);
-          ((rk) (var5)).c(2);
+          ((rk) (var5)).unlink(2);
           if (!((rk) (var5)).field_u) {
             return null;
           }
           if (!this.field_w.a(20)) {
             var5 = this.field_w.a(param2, this.field_t, true, (byte) 2, false);
-            this.field_q.a((li) (var5), (long)param2, false);
+            this.field_q.a((IntrusiveNode) (var5), (long)param2, false);
           }
           return null;
         }
@@ -525,7 +525,7 @@ final class uk extends ab {
           }
         }
         if (!((rk) (var5)).field_u) {
-          ((rk) (var5)).c(2);
+          ((rk) (var5)).unlink(2);
         }
         return (rk) (var5);
     }
@@ -570,7 +570,7 @@ final class uk extends ab {
         RuntimeException var10 = null;
         this.field_q = new jl(16);
         this.field_B = 0;
-        this.field_h = new nj();
+        this.field_h = new IntrusiveDeque();
         this.field_o = 0L;
         try {
           this.field_t = param0;
@@ -579,7 +579,7 @@ final class uk extends ab {
             this.field_m = false;
           } else {
             this.field_m = true;
-            this.field_j = new nj();
+            this.field_j = new IntrusiveDeque();
           }
           this.field_l = param6;
           this.field_w = param3;

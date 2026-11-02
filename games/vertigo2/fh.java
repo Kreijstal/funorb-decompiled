@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fh extends gp {
+class fh extends DualLinkNode {
     static String field_v;
     static java.awt.Font field_t;
     static int field_w;

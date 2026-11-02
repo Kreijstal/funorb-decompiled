@@ -135,8 +135,8 @@ final class rr extends ji {
         int var1 = 82 % ((-3 - param0) / 49);
     }
 
-    final void a(byte param0, int param1, ed param2) {
-        ed var5 = null;
+    final void a(byte param0, int param1, PacketBuffer param2) {
+        PacketBuffer var5 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -149,8 +149,8 @@ final class rr extends ji {
             this.field_o = stackIn_5_1;
           }
           if (param0 != 110) {
-            var5 = (ed) null;
-            this.a((byte) -97, 81, (ed) null);
+            var5 = (PacketBuffer) null;
+            this.a((byte) -97, 81, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

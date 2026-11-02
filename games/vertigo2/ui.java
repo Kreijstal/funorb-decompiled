@@ -41,12 +41,12 @@ final class ui {
           var10 = new er[]{new er(var9_int, var9_int), new er(param8, var9_int), new er(var9_int, var9_int), new er(var9_int, param8), new er(64, 64), new er(var9_int, param8), new er(var9_int, var9_int), new er(param8, var9_int), new er(var9_int, var9_int)};
           var11_ref_er__ = var10;
           var12 = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (var12 < var11_ref_er__.length) {
               var13 = var11_ref_er__[var12];
               stackIn_13_0 = 0;
               if (var15 != 0) {
-                break L0;
+                break scanLoop1;
               }
               var14 = stackIn_13_0;
               while (var14 < var13.field_F.length) {
@@ -54,7 +54,7 @@ final class ui {
                 var14++;
               }
               var12++;
-              continue L0;
+              continue scanLoop1;
             }
             stackIn_13_0 = param6;
             break;
@@ -63,11 +63,11 @@ final class ui {
             field_d = 37;
           }
           var11 = 0;
-          L7: while (true) {
+          scanLoop2: while (true) {
             if (var11 < param0) {
               stackIn_28_0 = 0;
               if (var15 != 0) {
-                break L7;
+                break scanLoop2;
               }
               var12Lifetime1 = stackIn_28_0;
               while (var9_int > var12Lifetime1) {
@@ -78,7 +78,7 @@ final class ui {
                 var12Lifetime1++;
               }
               var11++;
-              continue L7;
+              continue scanLoop2;
             }
             stackIn_28_0 = 0;
             break;
@@ -109,11 +109,11 @@ final class ui {
               stackIn_41_0 = 0;
             }
             var11Lifetime1 = stackIn_41_0;
-            L20: while (true) {
+            scanLoop3: while (true) {
               if (param8 > var11Lifetime1) {
                 stackIn_53_0 = 0;
                 if (var15 != 0) {
-                  break L20;
+                  break scanLoop3;
                 }
                 var12Lifetime2Lifetime1 = stackIn_53_0;
                 while (param0 > var12Lifetime2Lifetime1) {
@@ -124,13 +124,13 @@ final class ui {
                   var12Lifetime2Lifetime1++;
                 }
                 var11Lifetime1++;
-                continue L20;
+                continue scanLoop3;
               }
               stackIn_53_0 = 0;
               break;
             }
             var11Lifetime1 = stackIn_53_0;
-            L26: while (param8 >> 1 > var11Lifetime1) {
+            scanLoop4: while (param8 >> 1 > var11Lifetime1) {
               var12Lifetime2Lifetime2 = 0;
               while (true) {
                 if (param5 > var12Lifetime2Lifetime2) {
@@ -148,7 +148,7 @@ final class ui {
                 break;
               }
               if (var15 == 0) {
-                continue L26;
+                continue scanLoop4;
               }
               break;
             }
@@ -193,20 +193,20 @@ final class ui {
 
     final static void a(long param0, int param1, byte param2) {
         RuntimeException runtimeException = null;
-        mi var4 = null;
+        BitPacketBuffer var4 = null;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = uh.field_Wb;
           var4.j(param1, 124);
-          var4.field_u = var4.field_u + 1;
-          var5 = var4.field_u;
+          var4.position = var4.position + 1;
+          var5 = var4.position;
           var4.f(6, 88);
           if (param2 < 85) {
             field_b = (cr) null;
           }
           var4.a((byte) -117, param0);
-          var4.b((byte) 117, var4.field_u - var5);
+          var4.b((byte) 117, var4.position - var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -240,7 +240,7 @@ final class ui {
           if (2 == field_g &&
             !dh.a((byte) 127)) {
             if (!c.a(sm.field_Kb, (byte) -125)) {
-              var2 = Vertigo2.a(new String[]{ea.field_b}, bj.field_b, param0 ^ 410);
+              var2 = Vertigo2.a(new String[]{ea.field_b}, RandomAccessCacheFile.field_b, param0 ^ 410);
               if (var10 != 0) {
                 var2 = Vertigo2.a(new String[]{ea.field_b}, qo.field_E, 91);
               }
@@ -272,7 +272,7 @@ final class ui {
             if (var6 == 2) {
               var4 = Vertigo2.a(new String[]{ea.field_b}, di.field_B, -114);
               var8 = Vertigo2.a(new String[]{var3}, af.field_L, -128);
-              var7 = -485 + (dj.field_d.field_Fb + field_b.field_Fb) - (-cg.field_f.c(var8) + cg.field_f.c(var4));
+              var7 = -485 + (dj.field_d.field_Fb + field_b.field_Fb) - (-GameKeyHandler.field_f.c(var8) + GameKeyHandler.field_f.c(var4));
               if (var7 < 0) {
                 var7 = 0;
               }
@@ -315,10 +315,10 @@ final class ui {
                 var5 = "";
                 var4 = "<col=999999>" + var4 + ah.field_k + "</col>";
               }
-              var9 = cg.field_f.c(var4);
+              var9 = GameKeyHandler.field_f.c(var4);
               if (!tb.a((byte) 122)) {
                 if (dj.field_d.field_pb &&
-                  var9 > (-dj.field_d.field_ob + ed.field_n)) {
+                  var9 > (-dj.field_d.field_ob + PacketBuffer.field_n)) {
                   if (!pe.field_r) {
                     var1 = pb.field_c;
                   } else {
@@ -333,7 +333,7 @@ final class ui {
               }
             }
             ir.a(var5, gg.field_n[var6], var4 + cc.b(fb.field_D.toString()), var7, 0);
-            if (!il.field_a) {
+            if (!MouseWheelInput.field_a) {
               field_b.field_pb = false;
             }
             if (field_b.field_pb) {

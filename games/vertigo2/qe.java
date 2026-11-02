@@ -12,7 +12,7 @@ final class qe extends pn {
     static fe field_W;
     static long field_cb;
     private String field_ab;
-    static og field_T;
+    static GameApplet field_T;
 
     final String a(boolean param0) {
         if (!param0) {

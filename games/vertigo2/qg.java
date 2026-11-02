@@ -138,7 +138,7 @@ final class qg extends oh {
           if ((!(this.field_C instanceof d) ||
             ((d) (this.field_C)).field_F) &&
             this.field_A == 1) {
-            var5_int = -this.field_H + (ed.field_n - param1);
+            var5_int = -this.field_H + (PacketBuffer.field_n - param1);
             var6 = -this.field_J + (gb.field_d - param2);
             if (var5_int != this.field_o ||
               var6 != this.field_t) {
@@ -214,8 +214,8 @@ final class qg extends oh {
         int var7_int = 0;
         try {
           uh.field_Wb.j(param0, 127);
-          uh.field_Wb.field_u = uh.field_Wb.field_u + 1;
-          var7_int = uh.field_Wb.field_u;
+          uh.field_Wb.position = uh.field_Wb.position + 1;
+          var7_int = uh.field_Wb.position;
           if (param2 != 0) {
             qg.a(-61, -1, -60, -41);
           }
@@ -223,7 +223,7 @@ final class qg extends oh {
           uh.field_Wb.a((byte) 0, param4);
           uh.field_Wb.f(param1, -75);
           uh.field_Wb.f(param3 ? 1 : 0, 112);
-          uh.field_Wb.b((byte) -125, uh.field_Wb.field_u - var7_int);
+          uh.field_Wb.b((byte) -125, uh.field_Wb.position - var7_int);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "qg.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ub extends li {
+final class ub extends IntrusiveNode {
     int field_s;
     int field_q;
     int field_o;

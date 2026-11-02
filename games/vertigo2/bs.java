@@ -191,13 +191,13 @@ final class bs extends cr {
           h.field_D = new dm(0L, pb.field_b, we.field_J, nf.field_o);
           ao.field_O = new dm(0L, pb.field_b, sl.field_s, eq.field_B);
           wi.field_g = new cr(0L, (cr) null);
-          el.field_a = new cr(0L, ee.field_b);
-          el.field_a.field_O = 1;
+          IterableNodeHashTable.field_a = new cr(0L, ee.field_b);
+          IterableNodeHashTable.field_a.field_O = 1;
           int var2_int = -113 % ((param1 - 32) / 50);
           jg.field_q = new cr(0L, db.field_t, kc.field_c);
-          va.field_f = new cr(0L, sa.field_a, ho.field_i);
+          va.field_f = new cr(0L, MouseInputHandler.field_a, ho.field_i);
           hb.field_k = new cr(0L, ja.field_e);
-          wi.field_g.b(el.field_a, 118);
+          wi.field_g.b(IterableNodeHashTable.field_a, 118);
           wi.field_g.b(jg.field_q, 127);
           wi.field_g.b(va.field_f, 127);
           wi.field_g.b(h.field_D, 118);
@@ -231,7 +231,7 @@ final class bs extends cr {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        mi var3 = uh.field_Wb;
+        BitPacketBuffer var3 = uh.field_Wb;
         var3.j(param0, param1 ^ -89);
         if (param1 != -47) {
           return;

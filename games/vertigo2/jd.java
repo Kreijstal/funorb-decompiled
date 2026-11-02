@@ -16,7 +16,7 @@ final class jd {
             0 <= var1.indexOf('@')) {
             var1 = "";
           }
-          return new qj(hr.h(-104), wa.b((byte) -119));
+          return new qj(hr.h(-104), IsaacCipher.b((byte) -119));
         }
         jd.a(13);
         var1Lifetime1 = hr.h(-101);
@@ -24,7 +24,7 @@ final class jd {
           0 <= var1Lifetime1.indexOf('@')) {
           var1Lifetime1 = "";
         }
-        return new qj(hr.h(-104), wa.b((byte) -119));
+        return new qj(hr.h(-104), IsaacCipher.b((byte) -119));
     }
 
     public static void a(int param0) {

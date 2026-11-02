@@ -3,7 +3,7 @@
  */
 final class fg extends sp {
     private we field_W;
-    static nj field_eb;
+    static IntrusiveDeque field_eb;
     private String field_fb;
     private boolean field_ab;
     private String field_bb;
@@ -18,7 +18,7 @@ final class fg extends sp {
         field_cb = null;
         field_eb = null;
         if (param0 != -15691) {
-          field_eb = (nj) null;
+          field_eb = (IntrusiveDeque) null;
           field_X = null;
           return;
         }
@@ -163,7 +163,7 @@ final class fg extends sp {
         field_cb = "You have withdrawn your request to join.";
         field_X = "Remove <%0> from friend list";
         field_Y = 20;
-        field_eb = new nj();
+        field_eb = new IntrusiveDeque();
         field_db = "Game full";
     }
 }

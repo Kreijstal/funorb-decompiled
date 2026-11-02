@@ -19,7 +19,7 @@ final class mk extends cj implements cm, ij, nc {
     private br field_U;
     static int field_E;
     static int field_G;
-    static nj field_J;
+    static IntrusiveDeque field_J;
 
     public final void a(int param0, d param1, byte param2, int param3, int param4) {
         boolean discarded$0 = false;
@@ -323,7 +323,7 @@ final class mk extends cj implements cm, ij, nc {
         this.field_L.field_q = df.field_i;
         this.field_U.field_q = dl.field_c;
         this.field_Q.field_q = jk.field_c;
-        this.field_T.field_q = ed.field_s;
+        this.field_T.field_q = PacketBuffer.field_s;
         this.field_R.field_q = pq.field_b;
         this.field_H.a(true, new hk(this.field_H));
         this.field_F.a(true, new dk(this.field_F));
@@ -349,7 +349,7 @@ final class mk extends cj implements cm, ij, nc {
         var3 = var3 + (5 + this.a(27557, var3, 20, this.field_L, "", 170, re.field_f));
         var3 = var3 + this.b(uc.field_c, 125, this.field_U, 170, var3);
         var3 = var3 + (5 + this.a(ag.field_c, this.field_Q, var3, ln.field_a, 0, 170));
-        var3 = var3 + (this.a(jg.field_m, this.field_H, var3, kd.field_q, 0, 170) + 5);
+        var3 = var3 + (this.a(jg.field_m, this.field_H, var3, GameShell.field_q, 0, 170) + 5);
         var3 = var3 + this.a(po.field_b, 170, this.field_T, var3, 268);
         mg var4 = new mg(46, var3, this.field_n - 90, 25, this.field_R, true, -120 + this.field_n, 5, bl.field_N, 11579568, ll.field_d);
         this.c((byte) 88, var4);
@@ -378,23 +378,23 @@ final class mk extends cj implements cm, ij, nc {
     }
 
     final static void b(int param0, int param1) {
-        mi var2 = uh.field_Wb;
+        BitPacketBuffer var2 = uh.field_Wb;
         var2.j(param1, 120);
-        var2.field_u = var2.field_u + 1;
-        int var3 = var2.field_u;
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
         var2.f(2, 87);
         var2.a(0, -10140, qc.field_w, qc.field_w.length);
         var2.f(ua.field_a, 103);
         if (param0 < -76) {
           var2.f(kg.field_y, 106);
           var2.a(0, -10140, dj.field_a, dj.field_a.length);
-          var2.b((byte) 24, var2.field_u - var3);
+          var2.b((byte) 24, var2.position - var3);
           return;
         }
         mk.b(102, 66);
         var2.f(kg.field_y, 106);
         var2.a(0, -10140, dj.field_a, dj.field_a.length);
-        var2.b((byte) 24, var2.field_u - var3);
+        var2.b((byte) 24, var2.position - var3);
     }
 
     public static void k(int param0) {

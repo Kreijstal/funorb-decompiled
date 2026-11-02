@@ -97,12 +97,12 @@ final class dk extends da {
     final static void d(byte param0) {
         int var1 = 0;
         int var1Lifetime1;
-        if (tg.field_e > 32) {
-          var1 = tg.field_e % 32;
+        if (DelegatingCanvas.field_e > 32) {
+          var1 = DelegatingCanvas.field_e % 32;
           if (0 == var1) {
             var1 = 32;
           }
-          pk.b(-88, -var1 + tg.field_e);
+          pk.b(-88, -var1 + DelegatingCanvas.field_e);
         } else {
           pk.b(-128, 0);
         }
@@ -125,7 +125,7 @@ final class dk extends da {
           if (this.a(-1, param1) != ir.field_a) {
             return mh.field_b;
           }
-          stackIn_6_0 = sr.field_d;
+          stackIn_6_0 = SecondaryNodeDeque.field_d;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

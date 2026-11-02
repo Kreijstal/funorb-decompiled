@@ -10,12 +10,12 @@ abstract class tk {
     static String field_p;
     ak field_d;
     ak field_g;
-    ed field_f;
+    PacketBuffer field_f;
     int field_o;
     long field_k;
     volatile int field_j;
     byte field_l;
-    ed field_i;
+    PacketBuffer field_i;
     volatile int field_m;
     ia field_h;
 
@@ -30,15 +30,15 @@ abstract class tk {
     abstract void a(Object param0, boolean param1, int param2);
 
     final static void a(int param0, int param1, int param2, double param3, double param4) {
-        nj discarded$20 = null;
-        nj discarded$19 = null;
-        nj discarded$18 = null;
-        nj discarded$12 = null;
-        nj discarded$13 = null;
-        nj discarded$17 = null;
-        nj discarded$16 = null;
-        nj discarded$14 = null;
-        nj discarded$15 = null;
+        IntrusiveDeque discarded$20 = null;
+        IntrusiveDeque discarded$19 = null;
+        IntrusiveDeque discarded$18 = null;
+        IntrusiveDeque discarded$12 = null;
+        IntrusiveDeque discarded$13 = null;
+        IntrusiveDeque discarded$17 = null;
+        IntrusiveDeque discarded$16 = null;
+        IntrusiveDeque discarded$14 = null;
+        IntrusiveDeque discarded$15 = null;
         int var8;
         var8 = Vertigo2.field_L ? 1 : 0;
         if (ir.field_d != 0) {
@@ -48,10 +48,10 @@ abstract class tk {
               field_p = (String) null;
             }
             ir.field_d = param2;
-            il.field_e = param3;
+            MouseWheelInput.field_e = param3;
             if (0 == bq.field_E &&
               param1 > 0) {
-              discarded$20 = new nj();
+              discarded$20 = new IntrusiveDeque();
             } else {
               if (param1 != 0) {
               }
@@ -60,20 +60,20 @@ abstract class tk {
             if (param0 != -1) {
               field_p = (String) null;
               ir.field_d = param2;
-              il.field_e = param3;
+              MouseWheelInput.field_e = param3;
               if (0 == bq.field_E &&
                 param1 > 0) {
-                discarded$19 = new nj();
+                discarded$19 = new IntrusiveDeque();
               } else {
                 if (param1 != 0) {
                 }
               }
             } else {
               ir.field_d = param2;
-              il.field_e = param3;
+              MouseWheelInput.field_e = param3;
               if (0 == bq.field_E &&
                 param1 > 0) {
-                discarded$18 = new nj();
+                discarded$18 = new IntrusiveDeque();
                 bq.field_E = param1;
                 wo.field_S = param4;
                 return;
@@ -84,13 +84,13 @@ abstract class tk {
           }
         } else {
           if (param2 > 0) {
-            s.field_t = new nj();
+            s.field_t = new IntrusiveDeque();
             if (param0 == -1) {
               ir.field_d = param2;
-              il.field_e = param3;
+              MouseWheelInput.field_e = param3;
               if (0 == bq.field_E &&
                 param1 > 0) {
-                discarded$12 = new nj();
+                discarded$12 = new IntrusiveDeque();
                 bq.field_E = param1;
                 wo.field_S = param4;
                 return;
@@ -98,10 +98,10 @@ abstract class tk {
             } else {
               field_p = (String) null;
               ir.field_d = param2;
-              il.field_e = param3;
+              MouseWheelInput.field_e = param3;
               if (0 == bq.field_E &&
                 param1 > 0) {
-                discarded$13 = new nj();
+                discarded$13 = new IntrusiveDeque();
                 bq.field_E = param1;
                 wo.field_S = param4;
                 return;
@@ -115,20 +115,20 @@ abstract class tk {
               if (param0 != -1) {
                 field_p = (String) null;
                 ir.field_d = param2;
-                il.field_e = param3;
+                MouseWheelInput.field_e = param3;
                 if (0 == bq.field_E &&
                   param1 > 0) {
-                  discarded$17 = new nj();
+                  discarded$17 = new IntrusiveDeque();
                 } else {
                   if (param1 != 0) {
                   }
                 }
               } else {
                 ir.field_d = param2;
-                il.field_e = param3;
+                MouseWheelInput.field_e = param3;
                 if (0 == bq.field_E &&
                   param1 > 0) {
-                  discarded$16 = new nj();
+                  discarded$16 = new IntrusiveDeque();
                   bq.field_E = param1;
                   wo.field_S = param4;
                   return;
@@ -139,10 +139,10 @@ abstract class tk {
             } else {
               if (param0 == -1) {
                 ir.field_d = param2;
-                il.field_e = param3;
+                MouseWheelInput.field_e = param3;
                 if (0 == bq.field_E &&
                   param1 > 0) {
-                  discarded$14 = new nj();
+                  discarded$14 = new IntrusiveDeque();
                   bq.field_E = param1;
                   wo.field_S = param4;
                   return;
@@ -150,10 +150,10 @@ abstract class tk {
               } else {
                 field_p = (String) null;
                 ir.field_d = param2;
-                il.field_e = param3;
+                MouseWheelInput.field_e = param3;
                 if (0 == bq.field_E &&
                   param1 > 0) {
-                  discarded$15 = new nj();
+                  discarded$15 = new IntrusiveDeque();
                   bq.field_E = param1;
                   wo.field_S = param4;
                   return;
@@ -314,11 +314,11 @@ abstract class tk {
         this.field_a = new ak();
         this.field_d = new ak();
         this.field_g = new ak();
-        this.field_f = new ed(6);
+        this.field_f = new PacketBuffer(6);
         this.field_l = (byte) 0;
         this.field_m = 0;
         this.field_j = 0;
-        this.field_i = new ed(10);
+        this.field_i = new PacketBuffer(10);
     }
 
     static {

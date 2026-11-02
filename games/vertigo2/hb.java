@@ -84,7 +84,7 @@ final class hb extends bg {
 
     final static int b(byte param0) {
         int var1 = 125 % ((param0 + 11) / 49);
-        return cf.field_a;
+        return SecondaryNodeDequeIterator.field_a;
     }
 
     final int b(int param0) {

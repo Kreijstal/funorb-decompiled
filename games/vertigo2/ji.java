@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ji extends li {
+abstract class ji extends IntrusiveNode {
     boolean field_o;
     int field_t;
     static String field_q;
@@ -123,7 +123,7 @@ abstract class ji extends li {
         this.field_o = param1 ? true : false;
     }
 
-    void a(byte param0, int param1, ed param2) {
+    void a(byte param0, int param1, PacketBuffer param2) {
         try {
           if (param0 != 110) {
             this.field_t = 59;

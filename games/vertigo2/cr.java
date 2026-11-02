@@ -33,7 +33,7 @@ class cr extends fh {
     er[] field_Bb;
     static boolean[] field_eb;
     int field_bb;
-    nj field_M;
+    IntrusiveDeque field_M;
     static String field_Z;
     int field_ob;
     boolean field_V;
@@ -615,7 +615,7 @@ class cr extends fh {
     final void b(cr param0, int param1) {
         try {
           if (null == this.field_M) {
-            this.field_M = new nj();
+            this.field_M = new IntrusiveDeque();
           }
           if (param1 < 117) {
             this.field_lb = false;
@@ -702,7 +702,7 @@ class cr extends fh {
         if (q.field_v == 0) {
           this.field_xb = 0;
         }
-        stackIn_35_1 = (!gi.field_o) && (bi.field_d <= ed.field_n) && (ed.field_n < bi.field_i) && (gb.field_d >= bi.field_f) && (bi.field_c > gb.field_d);
+        stackIn_35_1 = (!gi.field_o) && (bi.field_d <= PacketBuffer.field_n) && (PacketBuffer.field_n < bi.field_i) && (gb.field_d >= bi.field_f) && (bi.field_c > gb.field_d);
         this.field_G = stackIn_35_1;
         stackIn_40_1 = (this.field_G) && (q.field_v == this.field_xb) && (param4);
         this.field_pb = stackIn_40_1;
@@ -723,7 +723,7 @@ class cr extends fh {
         if (this.field_xb != 0 &&
           this.field_X) {
           this.field_N = gb.field_d - this.field_fb - param1;
-          this.field_wb = -this.field_ub + (ed.field_n - param2);
+          this.field_wb = -this.field_ub + (PacketBuffer.field_n - param2);
           if (this.field_wb < 0) {
             this.field_wb = 0;
           }
@@ -836,7 +836,7 @@ class cr extends fh {
         this.field_Y = -2147483648;
         try {
           this.field_wb = param2;
-          this.field_k = param0;
+          this.key = param0;
           this.field_N = param3;
           this.field_Fb = param4;
           this.field_db = param5;

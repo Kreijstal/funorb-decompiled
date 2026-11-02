@@ -86,7 +86,7 @@ final class ha {
           gm.field_c[3] = ve.field_b;
           im.field_j = new cr(0L, (cr) null);
           hr.field_C = new cr((long)param9, db.field_t, kc.field_c);
-          rk.field_v = new cr(0L, sa.field_a, f.field_D);
+          rk.field_v = new cr(0L, MouseInputHandler.field_a, f.field_D);
           ja.field_f = new od(0L, new cr(0L, (cr) null), ua.field_c, ol.field_H);
           im.field_j.b(hr.field_C, 118);
           if (db.field_S) {
@@ -101,14 +101,14 @@ final class ha {
           bf.field_c = new cr(0L, ee.field_b);
           bf.field_c.field_O = 1;
           vb.field_j = new cr(0L, vc.field_b, sl.field_x.toUpperCase());
-          qn.field_s = new cr(0L, j.field_q, il.field_j.toUpperCase());
+          qn.field_s = new cr(0L, j.field_q, MouseWheelInput.field_j.toUpperCase());
           ja.field_b = new cr(0L, dj.field_b);
           po.field_a = new cr(0L, db.field_t, pe.field_u);
           mn.field_n = new cr(0L, kl.field_Ib, he.field_B);
           ve.field_f = new cr(0L, kl.field_Ib, uj.field_h);
           ok.field_b = new cr(0L, kl.field_Ib, fi.field_j);
           tp.field_Nb = new cr(0L, kl.field_Ib, eq.field_C);
-          sa.field_b = new cr(0L, sa.field_a, fm.field_a);
+          MouseInputHandler.field_b = new cr(0L, MouseInputHandler.field_a, fm.field_a);
           uk.field_v = new od(0L, new cr(0L, (cr) null), ua.field_c, ol.field_H);
           b.field_h = new cr(0L, fb.field_u, ja.field_c.toUpperCase());
           b.field_h.field_lb = db.field_S;
@@ -136,7 +136,7 @@ final class ha {
             ja.field_b.b(ok.field_b, 125);
           }
           ja.field_b.b(tp.field_Nb, 122);
-          ja.field_b.b(sa.field_b, 120);
+          ja.field_b.b(MouseInputHandler.field_b, 120);
           ja.field_b.b(uk.field_v, 123);
           if (db.field_S) {
             ud.field_A.b(b.field_h, 118);
@@ -158,7 +158,7 @@ final class ha {
           nb.field_D = new cr(0L, ee.field_b);
           nb.field_D.field_O = 1;
           uc.field_a = new cr(0L, db.field_t, kc.field_c);
-          eq.field_z = new cr(0L, sa.field_a, f.field_D);
+          eq.field_z = new cr(0L, MouseInputHandler.field_a, f.field_D);
           vd.field_d = new od(0L, new cr(0L, (cr) null), ua.field_c, ol.field_H);
           de.field_g.b(nb.field_D, 118);
           de.field_g.b(uc.field_a, param9 + 125);
@@ -170,15 +170,15 @@ final class ha {
           ud.field_x = new cr(0L, j.field_q);
           fd.field_s = new cr(0L, dj.field_b);
           pc.field_b = new cr(0L, gn.field_f, me.field_c.toUpperCase());
-          el.field_h = new cr[4 + param7];
+          IterableNodeHashTable.field_h = new cr[4 + param7];
           mg.field_S = new nk[param7 + 4][];
-          el.field_h[0] = new cr(0L, fm.field_e, wo.field_b);
+          IterableNodeHashTable.field_h[0] = new cr(0L, fm.field_e, wo.field_b);
           mg.field_S[0] = new nk[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
             mg.field_S[0][1 + var17_int] = new nk(0L, tr.field_l, (cr) null, ja.field_e, eg.field_r[var17_int], gm.field_c[var17_int]);
           }
           if (rc.field_a.length >= 2) {
-            el.field_h[1] = new cr(0L, fm.field_e, rq.field_v);
+            IterableNodeHashTable.field_h[1] = new cr(0L, fm.field_e, rq.field_v);
             array$0 = new nk[rc.field_a.length + 1];
             mg.field_S[1] = array$0;
             mg.field_S[1][0] = new nk(0L, tr.field_l, (cr) null, ja.field_e, (er) null, pp.field_r);
@@ -186,10 +186,10 @@ final class ha {
               mg.field_S[1][var17_intLifetime1 + 1] = new nk(0L, tr.field_l, (cr) null, ja.field_e, (er) null, Integer.toString(rc.field_a[var17_intLifetime1]));
             }
           }
-          el.field_h[2] = new cr(0L, fm.field_e, in.field_f);
+          IterableNodeHashTable.field_h[2] = new cr(0L, fm.field_e, in.field_f);
           mg.field_S[2] = new nk[]{new nk(0L, tr.field_l, (cr) null, ja.field_e, (er) null, pp.field_r), new nk(0L, tr.field_l, (cr) null, ja.field_e, sf.field_a[0], nf.field_w), new nk(0L, tr.field_l, (cr) null, ja.field_e, sf.field_a[1], rg.field_h)};
           if (sp.field_O > 1) {
-            el.field_h[3] = new cr(0L, fm.field_e, um.field_H);
+            IterableNodeHashTable.field_h[3] = new cr(0L, fm.field_e, um.field_H);
             array$1 = new nk[1 + sp.field_O];
             mg.field_S[3] = array$1;
             mg.field_S[3][0] = new nk(0L, tr.field_l, (cr) null, ja.field_e, (er) null, pp.field_r);
@@ -198,7 +198,7 @@ final class ha {
             }
           }
           for (var17_intLifetime3 = 0; var17_intLifetime3 < param7; var17_intLifetime3++) {
-            el.field_h[var17_intLifetime3 + 4] = new cr(0L, fm.field_e, md.field_C[var17_intLifetime3]);
+            IterableNodeHashTable.field_h[var17_intLifetime3 + 4] = new cr(0L, fm.field_e, md.field_C[var17_intLifetime3]);
             array$2 = new nk[b.a((int) oq.field_G[var17_intLifetime3], 255) + 1];
             mg.field_S[var17_intLifetime3 + 4] = array$2;
             mg.field_S[4 + var17_intLifetime3][0] = new nk(0L, tr.field_l, (cr) null, ja.field_e, (er) null, pp.field_r);
@@ -225,8 +225,8 @@ final class ha {
             }
           }
           for (var17_intLifetime4 = 0; var17_intLifetime4 < param7 + 4; var17_intLifetime4++) {
-            if (el.field_h[var17_intLifetime4] != null) {
-              el.field_h[var17_intLifetime4].field_qb = 11;
+            if (IterableNodeHashTable.field_h[var17_intLifetime4] != null) {
+              IterableNodeHashTable.field_h[var17_intLifetime4].field_qb = 11;
             }
             if (null != mg.field_S[var17_intLifetime4]) {
               for (var18Lifetime1 = 0; var18Lifetime1 < mg.field_S[var17_intLifetime4].length; var18Lifetime1++) {
@@ -252,7 +252,7 @@ final class ha {
             if ((1 != var18Lifetime2 ||
               !(rc.field_a.length < 2)) && (var18Lifetime2 != 3 ||
               !(sp.field_O <= 1))) {
-              fd.field_s.b(el.field_h[var18Lifetime2], param9 + 121);
+              fd.field_s.b(IterableNodeHashTable.field_h[var18Lifetime2], param9 + 121);
               for (var19 = 0; mg.field_S[var18Lifetime2].length > var19; var19++) {
                 if (mg.field_S[var18Lifetime2][var19] != null) {
                   fd.field_s.b(mg.field_S[var18Lifetime2][var19], 123);

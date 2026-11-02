@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-class iq extends li {
+class iq extends IntrusiveNode {
     uf field_v;
     int field_t;
     int field_s;
     int field_A;
     boolean field_p;
-    static ed field_x;
+    static PacketBuffer field_x;
     String field_q;
     int field_y;
     int field_o;
@@ -109,7 +109,7 @@ class iq extends li {
 
     final static int e(int param0) {
         if (param0 != 12343) {
-          field_x = (ed) null;
+          field_x = (PacketBuffer) null;
           return wp.field_a;
         }
         return wp.field_a;
@@ -123,13 +123,13 @@ class iq extends li {
         var7 = Vertigo2.field_L ? 1 : 0;
         this.a((byte) 12, param3, param0, this);
         var5 = this.f(84) ? 1 : 0;
-        sharedTailExit_1: {
+        regionExit1: {
           if (!param1) {
             if (var5 == 0) {
-              break sharedTailExit_1;
+              break regionExit1;
             }
             if (0 == kf.field_c) {
-              break sharedTailExit_1;
+              break regionExit1;
             }
             this.d((byte) 2);
           }
@@ -137,7 +137,7 @@ class iq extends li {
             var7 != 0) {
             if (uo.field_h != 0 &&
               var5 != 0) {
-              this.a(ed.field_n, uo.field_h, param3, param0, gb.field_d, (byte) -122, this);
+              this.a(PacketBuffer.field_n, uo.field_h, param3, param0, gb.field_d, (byte) -122, this);
               if (kf.field_c != 0) {
                 if (!this.a(sd.field_N, param3, param0, this, kf.field_c, (byte) -125, no.field_e)) {
                   this.d((byte) 2);
@@ -164,7 +164,7 @@ class iq extends li {
             }
             if (q.field_v == 0 &&
               rg.field_c != 0) {
-              this.a(this, (byte) 46, param3, param0, ed.field_n, gb.field_d);
+              this.a(this, (byte) 46, param3, param0, PacketBuffer.field_n, gb.field_d);
               var6_ref_qg = um.field_E;
               if (var6_ref_qg != null) {
                 if (var6_ref_qg.field_v instanceof sh) {
@@ -190,7 +190,7 @@ class iq extends li {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a(0, param2, param1, ed.field_n, gb.field_d) ? 1 : 0;
+          var5_int = this.a(0, param2, param1, PacketBuffer.field_n, gb.field_d) ? 1 : 0;
           if (param0 < 6) {
             return;
           }
@@ -709,7 +709,7 @@ class iq extends li {
     }
 
     static {
-        field_x = new ed(256);
+        field_x = new PacketBuffer(256);
         field_z = "???";
     }
 

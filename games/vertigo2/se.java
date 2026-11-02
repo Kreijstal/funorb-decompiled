@@ -59,8 +59,8 @@ final class se extends ji {
         this.field_z = 4096;
     }
 
-    final void a(byte param0, int param1, ed param2) {
-        ed var5 = null;
+    final void a(byte param0, int param1, PacketBuffer param2) {
+        PacketBuffer var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -71,8 +71,8 @@ final class se extends ji {
             this.field_z = param2.a((byte) -11);
           }
           if (param0 != 110) {
-            var5 = (ed) null;
-            this.a((byte) -52, -60, (ed) null);
+            var5 = (PacketBuffer) null;
+            this.a((byte) -52, -60, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

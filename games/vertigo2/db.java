@@ -204,7 +204,7 @@ final class db extends sn {
             if (var3.field_E < 0) {
               this.field_u[var3.field_q][var3.field_B] = null;
             }
-            var3.c(2);
+            var3.unlink(2);
           }
           var3 = (pe) (this.field_P.field_w.b(29));
         }
@@ -319,7 +319,7 @@ final class db extends sn {
           if (0 <= param1.field_E && (null == param1.field_J ||
             param1.field_J.j())) {
             param1.a(-110);
-            param1.c(2);
+            param1.unlink(2);
             if (param1.field_I > 0) {
               if (param1 != this.field_L[param1.field_q][param1.field_I]) {
                 return true;
@@ -408,7 +408,7 @@ final class db extends sn {
           }
           param1.a(-117);
           if (0 <= param1.field_E) {
-            param1.c(2);
+            param1.unlink(2);
             if (param1.field_I > 0 &&
               param1 == this.field_L[param1.field_q][param1.field_I]) {
               this.field_L[param1.field_q][param1.field_I] = null;
@@ -550,7 +550,7 @@ final class db extends sn {
           if (param1.field_E < 0) {
             return true;
           }
-          param1.c(2);
+          param1.unlink(2);
           if (param1.field_I > 0 &&
             this.field_L[param1.field_q][param1.field_I] == param1) {
             this.field_L[param1.field_q][param1.field_I] = null;
@@ -1197,7 +1197,7 @@ final class db extends sn {
           var9 = (ph) (param2.field_o.b(0));
           while (var9 != null) {
             boolean decompiledFrameRemainder0 = true;
-            var10 = (int)var9.field_k;
+            var10 = (int)var9.key;
             var13 = (al) (this.field_G.a((long)var10, (byte) 64));
             if (var13 == null) {
               var14 = ap.a(var10, param3, -125);

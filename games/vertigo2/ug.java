@@ -27,7 +27,7 @@ abstract class ug {
 
     final static void a(int param0, int param1, int param2, long param3, String param4) {
         nm.field_E = param0;
-        qi.field_b = param4;
+        FullscreenFocusCanvas.field_b = param4;
         if (param1 != -3) {
           return;
         }
@@ -66,7 +66,7 @@ abstract class ug {
             return stackIn_4_0;
           }
           if (var2_int > 255) {
-            stackIn_7_0 = cg.field_a;
+            stackIn_7_0 = GameKeyHandler.field_a;
             return stackIn_7_0;
           }
           var3 = jr.a((byte) -9, '.', param0);
@@ -124,7 +124,7 @@ abstract class ug {
         }
     }
 
-    final static gd a(ed param0, int param1) {
+    final static gd a(PacketBuffer param0, int param1) {
         RuntimeException var2 = null;
         String var3 = null;
         gd stackIn_3_0 = null;

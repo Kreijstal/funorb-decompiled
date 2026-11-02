@@ -154,7 +154,7 @@ abstract class rl extends sp {
               }
               return super.j(17);
             }
-            this.field_cb = gf.field_f;
+            this.field_cb = NodeHashTableIterator.field_f;
             this.a(this.field_X, 12 + this.field_Z.field_n, this.field_W + 12 + this.field_Z.field_s, (byte) 118);
             this.field_eb = 0;
             this.field_bb.field_J = 0;
@@ -216,7 +216,7 @@ abstract class rl extends sp {
 
     private final void b(int param0, iq param1) {
         if (this.field_bb != null) {
-          this.field_bb.c(2);
+          this.field_bb.unlink(2);
         }
         if (param1 == null) {
           this.field_bb = new wq();
@@ -246,7 +246,7 @@ abstract class rl extends sp {
             this.f((byte) 75);
           }
           this.field_Z = param1;
-          if (gf.field_f == this.field_cb) {
+          if (NodeHashTableIterator.field_f == this.field_cb) {
             this.a(this.field_X, 12 + this.field_Z.field_n, this.field_W + 12 + this.field_Z.field_s, (byte) 61);
             this.field_eb = 0;
             return;

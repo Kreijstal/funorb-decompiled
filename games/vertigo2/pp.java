@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pp extends li {
+final class pp extends IntrusiveNode {
     static String field_w;
     static String field_r;
     private int[] field_q;
@@ -197,7 +197,7 @@ final class pp extends li {
         }
     }
 
-    final void a(byte param0, int param1, mi param2) {
+    final void a(byte param0, int param1, BitPacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean[] stackIn_9_0 = null;

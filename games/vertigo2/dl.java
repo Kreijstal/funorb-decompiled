@@ -85,7 +85,7 @@ final class dl {
           }
           for (var3_int = 0; 256 > var3_int; var3_int++) {
             var4 = (int)(Math.pow((double)var3_int / 255.0, param0) * 255.0);
-            stackIn_9_0 = li.field_l;
+            stackIn_9_0 = IntrusiveNode.field_l;
             stackIn_9_1 = var3_int;
             if (var4 <= 255) {
               stackIn_10_2 = var4;
@@ -115,7 +115,7 @@ final class dl {
           }
           var4 = (ri) (ob.field_M.a((byte) 100));
           while (var4 != null) {
-            tg.a(param1, var4, param0 + 5996);
+            DelegatingCanvas.a(param1, var4, param0 + 5996);
             var4 = (ri) (ob.field_M.b(42));
           }
           return;
@@ -134,7 +134,7 @@ final class dl {
             return false;
           }
           ca.field_b = id.field_f.h(-11);
-          id.field_f.field_u = 0;
+          id.field_f.position = 0;
         }
         if (ca.field_b != -2) {
           var1 = -112 % ((param0 - 11) / 52);
@@ -144,7 +144,7 @@ final class dl {
           return false;
         }
         ca.field_b = id.field_f.a((byte) -11);
-        id.field_f.field_u = 0;
+        id.field_f.position = 0;
         var1Lifetime1 = -112 % ((param0 - 11) / 52);
         return c.a(ca.field_b, (byte) -104);
     }

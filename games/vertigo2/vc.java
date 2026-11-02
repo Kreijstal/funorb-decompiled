@@ -110,7 +110,7 @@ final class vc {
               if (var1.field_Ub == 0) {
                 var1.field_Hb = 0;
                 if (var1.k(15)) {
-                  var1.c(param0 + 61);
+                  var1.unlink(param0 + 61);
                 }
               }
             }
@@ -126,7 +126,7 @@ final class vc {
               if (0 == var1_ref.field_ic) {
                 var1_ref.field_Lb = 0;
                 if (var1_ref.k(param0 ^ -4082)) {
-                  var1_ref.c(2);
+                  var1_ref.unlink(2);
                 }
               }
             }
@@ -142,7 +142,7 @@ final class vc {
             if (0 == var1Lifetime1.field_Ub) {
               var1Lifetime1.field_Hb = 0;
               if (var1Lifetime1.k(param0 ^ -54)) {
-                var1Lifetime1.c(2);
+                var1Lifetime1.unlink(2);
               }
             }
             var1Lifetime1 = (bs) (kq.field_Rb.b(38));
@@ -196,12 +196,12 @@ final class vc {
         if (df.field_j != null) {
           for (var2 = 0; ue.field_M.length > var2; var2++) {
             if (param0 == ue.field_M[var2] &&
-              mi.field_w[var2] > 0) {
-              dupTemp$3 = mi.field_w[var2] - 1;
+              BitPacketBuffer.field_w[var2] > 0) {
+              dupTemp$3 = BitPacketBuffer.field_w[var2] - 1;
               arrayValue$4 = df.field_j[var2];
-              mi.field_w[var2] = dupTemp$3;
+              BitPacketBuffer.field_w[var2] = dupTemp$3;
               var3 = arrayValue$4[dupTemp$3];
-              df.field_j[var2][mi.field_w[var2]] = null;
+              df.field_j[var2][BitPacketBuffer.field_w[var2]] = null;
               return var3;
             }
           }

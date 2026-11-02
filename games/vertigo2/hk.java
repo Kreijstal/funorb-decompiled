@@ -64,7 +64,7 @@ final class hk extends da {
     }
 
     final static void a(int param0, byte param1, int param2) {
-        mi var3 = uh.field_Wb;
+        BitPacketBuffer var3 = uh.field_Wb;
         var3.j(param0, param1 ^ 75);
         if (param1 == 60) {
           var3.f(3, 91);
@@ -117,7 +117,7 @@ final class hk extends da {
             stackIn_17_0 = sf.field_c;
             return stackIn_17_0;
           }
-          stackIn_15_0 = wa.field_g;
+          stackIn_15_0 = IsaacCipher.field_g;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

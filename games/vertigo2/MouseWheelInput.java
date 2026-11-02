@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class il {
+abstract class MouseWheelInput {
     static int field_h;
     static String field_f;
     static fp field_g;
@@ -30,7 +30,7 @@ abstract class il {
           field_k = null;
           return;
         }
-        il.b(26);
+        MouseWheelInput.b(26);
         field_i = null;
         field_c = null;
         field_g = null;

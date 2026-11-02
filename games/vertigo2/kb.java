@@ -4,7 +4,7 @@
 final class kb implements ur {
     static co field_c;
     static er[] field_d;
-    static cg field_a;
+    static GameKeyHandler field_a;
     static tk field_e;
     static r field_b;
     static String field_f;
@@ -65,7 +65,7 @@ final class kb implements ur {
     }
 
     static {
-        field_a = new cg();
+        field_a = new GameKeyHandler();
         field_f = "<col=F62610>Red:</col> <%0> <col=25D3F7>Blue:</col> <%1>";
     }
 }

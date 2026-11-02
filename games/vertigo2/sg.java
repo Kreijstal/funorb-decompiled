@@ -16,7 +16,7 @@ final class sg {
           field_d = -110;
         }
         String var2 = (String) null;
-        aj.a((String) null, mk.field_S, (byte) 33);
+        ProxySocketConnector.a((String) null, mk.field_S, (byte) 33);
     }
 
     public static void a(byte param0) {

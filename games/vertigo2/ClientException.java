@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg extends RuntimeException {
-    Throwable field_a;
+final class ClientException extends RuntimeException {
+    Throwable cause;
     static String field_c;
     String field_e;
     static String field_d;
@@ -21,7 +21,7 @@ final class dg extends RuntimeException {
         boolean stackIn_22_2 = false;
         km.i(202);
         if (rp.field_a >= 0) {
-          bf.field_c.field_S = Vertigo2.a(new String[]{Integer.toString(rp.field_a)}, li.field_b, 126);
+          bf.field_c.field_S = Vertigo2.a(new String[]{Integer.toString(rp.field_a)}, IntrusiveNode.field_b, 126);
         } else {
           bf.field_c.field_S = null;
         }
@@ -59,9 +59,9 @@ final class dg extends RuntimeException {
         }
     }
 
-    dg(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_e = param1;
-        this.field_a = param0;
+        this.cause = param0;
     }
 
     public static void a(int param0) {
@@ -97,7 +97,7 @@ final class dg extends RuntimeException {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        nj var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         int var12 = 0;
@@ -150,7 +150,7 @@ final class dg extends RuntimeException {
           if (gd.field_j != null && (null != sf.field_f ||
             te.field_D != null ||
             null != qh.field_e ||
-            il.field_b != null)) {
+            MouseWheelInput.field_b != null)) {
             for (var9 = 0; ol.field_A > var9; var9++) {
               var10_int = gd.field_j.field_fc[var9] & 255;
               if (sf.field_f != null &&
@@ -180,9 +180,9 @@ final class dg extends RuntimeException {
                   var5_int = 1;
                 }
               }
-              if (null != il.field_b &&
-                il.field_b[var9] != null) {
-                var8 = var8 | il.field_b[var9][var10_int];
+              if (null != MouseWheelInput.field_b &&
+                MouseWheelInput.field_b[var9] != null) {
+                var8 = var8 | MouseWheelInput.field_b[var9][var10_int];
               }
             }
           }
@@ -200,7 +200,7 @@ final class dg extends RuntimeException {
           while (var13 != null) {
             var14 = 0;
             if (null == var13.field_M) {
-              var13.field_Sb = new cr(0L, el.field_b);
+              var13.field_Sb = new cr(0L, IterableNodeHashTable.field_b);
               var13.b(var13.field_Sb, 125);
               var13.field_Nb = new cr(0L, tm.field_b);
               if (db.field_S) {
@@ -287,7 +287,7 @@ final class dg extends RuntimeException {
                 if (!var13.field_Yb) {
                   if (var13.field_Ob) {
                     var13.field_Sb.field_S = Vertigo2.a(new String[]{var21}, we.field_N, -114);
-                    var13.field_Tb.field_S = ma.field_k;
+                    var13.field_Tb.field_S = ImageProducerRasterBuffer.field_k;
                     var13.field_Lb.field_S = bs.field_ac;
                   } else {
                     var13.field_Tb.field_S = ti.field_a;
@@ -366,7 +366,7 @@ final class dg extends RuntimeException {
               !var13.k(15)) {
               if (var13.field_Tb.field_tb == 0) {
                 if (var13.field_Lb.field_tb != 0) {
-                  ed.a(var13.field_Pb, param4, (byte) -128);
+                  PacketBuffer.a(var13.field_Pb, param4, (byte) -128);
                 } else {
                   tj.a(sd.field_N, 0, param1, var13, false, 0, no.field_e);
                 }
@@ -417,14 +417,14 @@ final class dg extends RuntimeException {
               } else {
                 if (var5_int != 0 &&
                   !var13.field_Zb) {
-                  var25Lifetime2 = ed.field_r;
+                  var25Lifetime2 = PacketBuffer.field_r;
                 } else {
                   if (var13.field_Mb < var7) {
                     var26_int = var7 - var13.field_Mb;
                     if (1 == var26_int) {
                       var25Lifetime2 = ak.field_c;
                     }
-                    var25Lifetime2 = Vertigo2.a(new String[]{null, Integer.toString(var26_int)}, tg.field_d, -116);
+                    var25Lifetime2 = Vertigo2.a(new String[]{null, Integer.toString(var26_int)}, DelegatingCanvas.field_d, -116);
                   } else {
                     if (var6 <= var13.field_Rb) {
                       if (0 != (var8 & ~var13.field_Kb)) {
@@ -485,9 +485,9 @@ final class dg extends RuntimeException {
                       var30 = 1;
                     }
                   }
-                  if (null != il.field_b &&
-                    null != il.field_b[var28_int] &&
-                    (~var13.field_Kb & il.field_b[var28_int][var29]) != 0) {
+                  if (null != MouseWheelInput.field_b &&
+                    null != MouseWheelInput.field_b[var28_int] &&
+                    (~var13.field_Kb & MouseWheelInput.field_b[var28_int][var29]) != 0) {
                     var30 = 1;
                   }
                   if (var30 != 0) {

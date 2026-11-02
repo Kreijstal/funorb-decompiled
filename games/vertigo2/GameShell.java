@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kd extends og {
+abstract class GameShell extends GameApplet {
     static String field_B;
     String field_u;
     static fi field_l;
@@ -59,7 +59,7 @@ abstract class kd extends og {
           uo.field_h = th.field_g.a(100);
         }
         if (oe.q(param1 + 85)) {
-          var3 = 1200 * el.b(true);
+          var3 = 1200 * IterableNodeHashTable.b(true);
           if (this.field_t ||
             !(jq.a((byte) 29) <= var3) &&
             !(hb.b((byte) -122) <= var3)) {
@@ -69,7 +69,7 @@ abstract class kd extends og {
             oq.a((byte) 102, ml.field_A, 2);
             kj.g(1);
             br.field_R = true;
-            aj.field_j = gk.a(124) + 15000L;
+            ProxySocketConnector.field_j = gk.a(124) + 15000L;
           }
         }
         if (param1 != -6) {
@@ -88,7 +88,7 @@ abstract class kd extends og {
           }
           if (-1 != tr.field_f &&
             tr.field_f != 0) {
-            aj.field_j = 15000L + gk.a(90);
+            ProxySocketConnector.field_j = 15000L + gk.a(90);
           }
         }
         if (tr.field_f != -1 &&
@@ -138,7 +138,7 @@ abstract class kd extends og {
         if ((-1 != tr.field_f &&
           tr.field_f != 0 ||
           va.b((byte) -81)) &&
-          gk.a(98) >= aj.field_j) {
+          gk.a(98) >= ProxySocketConnector.field_j) {
           br.field_R = false;
           if (tr.field_f != -1 &&
             tr.field_f != 0) {
@@ -188,11 +188,11 @@ abstract class kd extends og {
           hb.e(-1);
           vl.b(2147483647);
           mg.field_O = false;
-          li.field_h = mq.field_t;
+          IntrusiveNode.field_h = mq.field_t;
           we.a(kb.field_b, pl.field_i, (byte) -7, ke.field_b, la.field_e);
           if (pb.field_f ||
-            null != il.field_f) {
-            stackIn_102_0 = il.field_f;
+            null != MouseWheelInput.field_f) {
+            stackIn_102_0 = MouseWheelInput.field_f;
             stackIn_103_1 = !(pb.field_f);
             stackIn_105_2 = 65536;
             stackIn_106_3 = !(pb.field_f);
@@ -215,15 +215,15 @@ abstract class kd extends og {
         }
         if (10 == qc.field_A) {
           if (np.field_Lb != 0) {
-            vp.field_c = pm.a(rf.field_s, 123);
+            IntrusiveDequeCursor.field_c = pm.a(rf.field_s, 123);
           }
           qc.field_A = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (11 == qc.field_A) {
-          if (vp.field_c != null && (!vp.field_c.b(0) ||
-            !vp.field_c.a((byte) -112))) {
-            aj.a(false, 0.0f, fg.a(vp.field_c, bq.field_A, eb.field_a, 274));
+          if (IntrusiveDequeCursor.field_c != null && (!IntrusiveDequeCursor.field_c.b(0) ||
+            !IntrusiveDequeCursor.field_c.a((byte) -112))) {
+            ProxySocketConnector.a(false, 0.0f, fg.a(IntrusiveDequeCursor.field_c, bq.field_A, eb.field_a, 274));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -240,7 +240,7 @@ abstract class kd extends og {
           if (le.field_d != null) {
             stackIn_135_0 = (!le.field_d.a(-21493)) ? 0 : 1;
             var3Lifetime2 = stackIn_135_0;
-            aj.a(false, le.field_d.field_j, le.field_d.field_h);
+            ProxySocketConnector.a(false, le.field_d.field_j, le.field_d.field_h);
           }
           if (var3Lifetime2 != 0) {
             qc.field_A = 20;
@@ -281,7 +281,7 @@ abstract class kd extends og {
           int var4 = 0;
           int var5 = 0;
           Exception var6 = null;
-          ed var7 = null;
+          PacketBuffer var7 = null;
           String var8 = null;
           int var9 = 0;
           String var10 = null;
@@ -380,7 +380,7 @@ abstract class kd extends og {
               if (ja.field_d.b(-1)) {
                 var7 = ja.field_d.a(-4);
                 if (var7 != null) {
-                  var8 = mj.a(32, var7.field_p, 0, var7.field_u);
+                  var8 = mj.a(32, var7.payload, 0, var7.position);
                   om.a(var8, (byte) -125);
                 } else {
                   var10 = (String) null;
@@ -457,7 +457,7 @@ abstract class kd extends og {
         field_l = null;
         field_q = null;
         if (!param0) {
-          kd.a(false);
+          GameShell.a(false);
         }
         field_B = null;
     }
@@ -488,7 +488,7 @@ abstract class kd extends og {
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         np.field_Lb = this.field_A;
-        li.a(true, np.field_Lb);
+        IntrusiveNode.a(true, np.field_Lb);
         f.a(this.field_y, this.field_w, 5000, gi.field_s, np.field_Lb, this.field_s, this.field_p, param7, this.field_n, this.field_o, param4, this.field_u, 5000, 6);
         vi.a(np.field_Lb, this.field_s, this.field_p, this.field_u, this.field_o, param7, gi.field_s, this.field_w, (byte) 112);
         mq.c(1);
@@ -568,7 +568,7 @@ abstract class kd extends og {
                             bb.a(false, var3);
                           }
                         } else {
-                          gp.a(gi.field_s, -121, id.field_f, ca.field_b);
+                          DualLinkNode.a(gi.field_s, -121, id.field_f, ca.field_b);
                         }
                       } else {
                         this.f((byte) -117);
@@ -713,7 +713,7 @@ abstract class kd extends og {
         wi.field_h[param0] = true;
     }
 
-    protected kd() {
+    protected GameShell() {
     }
 
     private final void a(boolean param0, int param1) {
@@ -739,7 +739,7 @@ abstract class kd extends og {
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param0 != 7) {
-            kd.a(false);
+            GameShell.a(false);
           }
           var4 = (oc) (mg.field_N.a((byte) 100));
           var1 = var4;
@@ -799,7 +799,7 @@ abstract class kd extends og {
     private final void o(int param0) {
         wi.field_h[2] = true;
         if (param0 != 15000) {
-          kd.a(false);
+          GameShell.a(false);
         }
     }
 
@@ -841,7 +841,7 @@ abstract class kd extends og {
         wp.a(10);
         oq.a((byte) 102, nk.field_Kb, var2);
         br.field_R = true;
-        aj.field_j = gk.a(74) + 15000L;
+        ProxySocketConnector.field_j = gk.a(74) + 15000L;
         return var2;
     }
 

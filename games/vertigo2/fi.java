@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fi {
-    private gp field_i;
+    private DualLinkNode field_i;
     static String field_j;
     static byte[] field_c;
     static tj field_b;
@@ -10,13 +10,13 @@ final class fi {
     static String field_e;
     private int field_h;
     private int field_g;
-    private gp field_a;
-    private gp[] field_f;
+    private DualLinkNode field_a;
+    private DualLinkNode[] field_f;
 
     final static void a(int param0, boolean param1, String param2) {
         try {
           bf.field_a = param1;
-          ed.field_t = true;
+          PacketBuffer.field_t = true;
           df.field_l = new fj(ch.field_e, sg.field_a, param2, tk.field_e, bf.field_a);
           ch.field_e.b(df.field_l, param0 ^ param0);
         } catch (RuntimeException runtimeException) {
@@ -24,8 +24,8 @@ final class fi {
         }
     }
 
-    final void a(gp param0, long param1, int param2) {
-        gp var5 = null;
+    final void a(DualLinkNode param0, long param1, int param2) {
+        DualLinkNode var5 = null;
         try {
           if (null != param0.field_o) {
             param0.a(-107);
@@ -52,18 +52,18 @@ final class fi {
         field_c = null;
     }
 
-    final gp a(byte param0) {
+    final DualLinkNode a(byte param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int fieldTemp$3 = 0;
         int fieldTemp$2 = 0;
         int var3;
-        gp var4;
-        gp var5;
-        gp var29;
-        gp var57;
-        gp var58;
-        gp var59;
+        DualLinkNode var4;
+        DualLinkNode var5;
+        DualLinkNode var29;
+        DualLinkNode var57;
+        DualLinkNode var58;
+        DualLinkNode var59;
         var3 = Vertigo2.field_L ? 1 : 0;
         if (this.field_h <= 0) {
           if (param0 == -60) {
@@ -163,20 +163,20 @@ final class fi {
         }
     }
 
-    final gp b(int param0) {
+    final DualLinkNode b(int param0) {
         int var2 = 59 / ((-72 - param0) / 53);
         this.field_h = 0;
         return this.a((byte) -60);
     }
 
-    final gp a(int param0, long param1) {
-        gp var4;
-        gp var5;
+    final DualLinkNode a(int param0, long param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
         int var6;
         var6 = Vertigo2.field_L ? 1 : 0;
         this.field_d = param1;
         if (param0 != 3661) {
-          return (gp) null;
+          return (DualLinkNode) null;
         }
         var4 = this.field_f[(int)((long)(this.field_g - 1) & param1)];
         this.field_i = var4.field_p;
@@ -196,16 +196,16 @@ final class fi {
         return var5;
     }
 
-    final gp a(int param0) {
-        gp var2;
-        gp var3;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2;
+        DualLinkNode var3;
         int var4;
         var4 = Vertigo2.field_L ? 1 : 0;
         if (null == this.field_i) {
           return null;
         }
         if (param0 > -89) {
-          return (gp) null;
+          return (DualLinkNode) null;
         }
         var2 = this.field_f[(int)(this.field_d & (long)(-1 + this.field_g))];
         while (true) {
@@ -226,13 +226,13 @@ final class fi {
 
     fi(int param0) {
         int var2 = 0;
-        gp dupTemp$1 = null;
-        gp var3;
+        DualLinkNode dupTemp$1 = null;
+        DualLinkNode var3;
         this.field_h = 0;
         this.field_g = param0;
-        this.field_f = new gp[param0];
+        this.field_f = new DualLinkNode[param0];
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new gp();
+          dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
           this.field_f[var2] = dupTemp$1;
           var3.field_p = var3;

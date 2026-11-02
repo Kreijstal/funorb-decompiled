@@ -37,8 +37,8 @@ final class lc {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ed var16 = null;
-        ed var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -50,9 +50,9 @@ final class lc {
         int var4Lifetime5;
         var15 = Vertigo2.field_L ? 1 : 0;
         try {
-          var16 = new ed(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
-          var17.field_u = -2 + param1.length;
+          var17.position = -2 + param1.length;
           eo.field_m = var17.a((byte) -11);
           vi.field_w = new int[eo.field_m];
           vl.field_j = new boolean[eo.field_m];
@@ -61,7 +61,7 @@ final class lc {
           ca.field_a = new int[eo.field_m];
           ej.field_c = new byte[eo.field_m][];
           se.field_y = new byte[eo.field_m][];
-          var17.field_u = param1.length - 7 - eo.field_m * 8;
+          var17.position = param1.length - 7 - eo.field_m * 8;
           ql.field_M = var17.a((byte) -11);
           vj.field_c = var17.a((byte) -11);
           var3 = (var17.h(-11) & 255) + 1;
@@ -77,7 +77,7 @@ final class lc {
           for (var4Lifetime3 = 0; eo.field_m > var4Lifetime3; var4Lifetime3++) {
             vi.field_w[var4Lifetime3] = var17.a((byte) -11);
           }
-          var17.field_u = -(3 * (var3 - 1)) + (param1.length - 7 - eo.field_m * 8);
+          var17.position = -(3 * (var3 - 1)) + (param1.length - 7 - eo.field_m * 8);
           in.field_c = new int[var3];
           for (var4Lifetime4 = 1; var3 > var4Lifetime4; var4Lifetime4++) {
             in.field_c[var4Lifetime4] = var17.m(0);
@@ -88,7 +88,7 @@ final class lc {
           if (param0 <= 52) {
             return;
           }
-          var17.field_u = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < eo.field_m; var4Lifetime5++) {
             var5 = mh.field_c[var4Lifetime5];
             var6 = vi.field_w[var4Lifetime5];

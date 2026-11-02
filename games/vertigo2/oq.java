@@ -127,7 +127,7 @@ final class oq extends qc {
             field_H = (String) null;
           }
           un.field_Ib = false;
-          ed.field_t = false;
+          PacketBuffer.field_t = false;
           if (null != df.field_l) {
             if (!df.field_l.field_I) {
               return;

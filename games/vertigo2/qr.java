@@ -74,7 +74,7 @@ final class qr extends jq {
               var8_ref_tn.field_e = new cr(0L, np.field_Ib, var11);
               var8_ref_tn.field_e.field_A = var12;
               var8_ref_tn.field_e.field_B = (np.field_Ib.field_B >> 1 & 8355711) + var12 - (8355711 & var12 >> 1);
-              var8_ref_tn.field_e.field_z = cg.field_f;
+              var8_ref_tn.field_e.field_z = GameKeyHandler.field_f;
               var8_ref_tn.field_e.field_H = var12 + (-((var12 & 16711423) >> 1) + (8355711 & np.field_Ib.field_H >> 1));
               var6 = var6 + param3;
             }
@@ -108,7 +108,7 @@ final class qr extends jq {
           mg.field_R.field_Nb.field_N = mg.field_R.field_Lb.field_db - mg.field_R.field_Nb.field_db;
         }
         mg.field_R.field_Nb.field_kb = var7Lifetime1 - mg.field_R.field_Nb.field_db;
-        if (il.field_a) {
+        if (MouseWheelInput.field_a) {
           stackIn_40_0 = null;
           stackIn_40_1 = gk.field_c;
           if (stackIn_40_0 != stackIn_40_1) {

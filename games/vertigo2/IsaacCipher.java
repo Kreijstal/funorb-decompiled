@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wa {
+final class IsaacCipher {
     static er field_f;
     private int[] field_b;
     private int[] field_a;
@@ -79,7 +79,7 @@ final class wa {
         int var5;
         var5 = Vertigo2.field_L ? 1 : 0;
         if (param0 >= -34) {
-          wa.a(-78);
+          IsaacCipher.a(-78);
         }
         int fieldTemp$0 = this.field_d + 1;
         this.field_d = this.field_d + 1;
@@ -260,7 +260,7 @@ final class wa {
         this.field_j = 256;
     }
 
-    wa(int[] param0) {
+    IsaacCipher(int[] param0) {
         int var2_int = 0;
         try {
           this.field_a = new int[256];

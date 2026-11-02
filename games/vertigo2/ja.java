@@ -12,7 +12,7 @@ final class ja {
     static od field_f;
 
     final static boolean a(int param0) {
-        if (!il.field_a) {
+        if (!MouseWheelInput.field_a) {
           return false;
         }
         if (param0 != ~ui.field_g) {

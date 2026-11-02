@@ -10,14 +10,14 @@ final class lh {
 
     final static void a(int param0, hn param1, byte param2) {
         int var4 = 0;
-        mi var5 = uh.field_Wb;
+        BitPacketBuffer var5 = uh.field_Wb;
         var5.j(param0, 120);
-        var5.field_u = var5.field_u + 1;
+        var5.position = var5.position + 1;
         if (param2 != 81) {
           return;
         }
         try {
-          var4 = var5.field_u;
+          var4 = var5.position;
           var5.f(1, param2 ^ 57);
           if (null != param1.field_p) {
             var5.f(param1.field_p.length, -47);
@@ -26,20 +26,20 @@ final class lh {
             var5.f(0, param2 ^ 36);
           }
           var5.c(var4, -2);
-          var5.field_u = var5.field_u - 4;
+          var5.position = var5.position - 4;
           param1.field_q = var5.b(true);
-          var5.b((byte) 20, var5.field_u - var4);
+          var5.b((byte) 20, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "lh.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void a(byte param0) {
-        gp var1 = null;
+        DualLinkNode var1 = null;
         int var2 = Vertigo2.field_L ? 1 : 0;
-        gp var1Lifetime1;
+        DualLinkNode var1Lifetime1;
         try {
-          dg.field_d = null;
+          ClientException.field_d = null;
           if (param0 != -22) {
             field_a = (String) null;
           }

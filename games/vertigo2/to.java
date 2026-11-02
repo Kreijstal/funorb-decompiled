@@ -18,7 +18,7 @@ final class to {
         hn var4 = null;
         Object var5 = null;
         int var6 = 0;
-        mi var8 = null;
+        BitPacketBuffer var8 = null;
         byte[] var12 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = Vertigo2.field_L ? 1 : 0;
@@ -41,12 +41,12 @@ final class to {
             } else {
               var5 = null;
             }
-            var8.field_u = var8.field_u + 4;
+            var8.position = var8.position + 4;
             if (!var8.o(-4111)) {
               rm.b((byte) 94);
               return;
             }
-            var3_ref_j.c(2);
+            var3_ref_j.unlink(2);
             return;
           }
           if (1 != var2) {
@@ -64,7 +64,7 @@ final class to {
             break;
           }
           if (var4 != null) {
-            var4.c(2);
+            var4.unlink(2);
             return;
           }
           rm.b((byte) 87);

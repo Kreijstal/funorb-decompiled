@@ -3,20 +3,20 @@
  */
 import java.util.*;
 
-final class sr implements Iterable {
-    gp field_b;
+final class SecondaryNodeDeque implements Iterable {
+    DualLinkNode field_b;
     static int field_a;
     static String field_d;
     static String field_c;
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new cf(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    final gp a(int param0) {
-        gp var2 = this.field_b.field_p;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_b.field_p;
         if (param0 >= -3) {
-          return (gp) null;
+          return (DualLinkNode) null;
         }
         if (var2 != this.field_b) {
           var2.a(-120);
@@ -33,7 +33,7 @@ final class sr implements Iterable {
         field_c = null;
     }
 
-    final void a(byte param0, gp param1) {
+    final void a(byte param0, DualLinkNode param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -66,8 +66,8 @@ final class sr implements Iterable {
         }
     }
 
-    sr() {
-        this.field_b = new gp();
+    SecondaryNodeDeque() {
+        this.field_b = new DualLinkNode();
         this.field_b.field_p = this.field_b;
         this.field_b.field_o = this.field_b;
     }

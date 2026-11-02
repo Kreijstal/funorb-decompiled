@@ -18,7 +18,7 @@ final class jb extends ji {
     private int field_E;
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        tg.a((byte) -50);
+        DelegatingCanvas.a((byte) -50);
         if (param3 == -30486) {
           bi.c(param2, param0, param1, param4);
           return;
@@ -115,7 +115,7 @@ final class jb extends ji {
         return;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;

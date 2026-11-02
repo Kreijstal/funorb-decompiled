@@ -120,7 +120,7 @@ final class bb extends ji {
         return (int[][]) null;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -211,7 +211,7 @@ final class bb extends ji {
         if (null != param1.field_f) {
           uo.field_d = param1.field_a;
           jo.field_b = param1.field_s;
-          tg.field_a = param1.field_b;
+          DelegatingCanvas.field_a = param1.field_b;
           fj.field_lb = param1.field_f;
         }
         if (param0) {

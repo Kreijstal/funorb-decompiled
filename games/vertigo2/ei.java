@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei extends gp {
+final class ei extends DualLinkNode {
     private byte[][] field_u;
     private int field_v;
     ul[] field_t;
@@ -9,17 +9,17 @@ final class ei extends gp {
     final boolean a(byte param0) {
         int var2;
         int var3_int;
-        nj var3;
+        IntrusiveDeque var3;
         int var4;
         int var6;
-        ed var8;
+        PacketBuffer var8;
         int var9;
         Object var10;
         mb var11;
         int var12;
         r var13;
         int var14;
-        ed var17;
+        PacketBuffer var17;
         int[] var28;
         byte[] var29;
         int[] var30;
@@ -45,8 +45,8 @@ final class ei extends gp {
         var3_intLifetime1 = var14;
         while (this.field_u.length > var14) {
           var29 = this.field_u[var14];
-          var17 = new ed(var29);
-          var17.field_u = 1;
+          var17 = new PacketBuffer(var29);
+          var17.position = 1;
           var6 = var17.a((byte) -11);
           var2 = var2 != 0 & hd.field_b.a(var6, (byte) -124) ? 1 : 0;
           var14++;
@@ -58,14 +58,14 @@ final class ei extends gp {
         if (var2 == 0) {
           return false;
         }
-        var3 = new nj();
+        var3 = new IntrusiveDeque();
         var4 = oc.field_r.b(this.field_v, (byte) -47);
         this.field_t = new ul[var4];
         var30 = oc.field_r.a(0, this.field_v);
         for (var6Lifetime1 = 0; var30.length > var6Lifetime1; var6Lifetime1++) {
           var31 = this.field_u[var6Lifetime1];
-          var8 = new ed(var31);
-          var8.field_u = 1;
+          var8 = new PacketBuffer(var31);
+          var8.position = 1;
           var9 = var8.a((byte) -11);
           var10 = null;
           var11 = (mb) (var3.a((byte) 100));
@@ -79,7 +79,7 @@ final class ei extends gp {
           }
           if (var10 == null) {
             var10 = new mb(var9, hd.field_b.a(true, var9));
-            var3.a((li) (var10), false);
+            var3.a((IntrusiveNode) (var10), false);
           }
           this.field_t[var30[var6Lifetime1]] = new ul(var31, (mb) (var10));
         }

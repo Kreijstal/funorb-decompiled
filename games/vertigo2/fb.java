@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fb extends gp {
+abstract class fb extends DualLinkNode {
     int field_B;
     int field_x;
     int field_t;

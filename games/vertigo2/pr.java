@@ -22,14 +22,14 @@ final class pr {
         this.field_a = 0;
     }
 
-    final void b(ed param0) {
+    final void b(PacketBuffer param0) {
         this.field_e = param0.h(-11);
         this.field_h = param0.b(true);
         this.field_g = param0.b(true);
         this.a(param0);
     }
 
-    final void a(ed param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
         this.field_i = param0.h(-11);
         this.field_k = new int[this.field_i];

@@ -44,7 +44,7 @@ final class wb extends ji {
         int var9;
         int var10;
         int var11;
-        ed var12;
+        PacketBuffer var12;
         int[] var13;
         int var7Lifetime1;
         int var7Lifetime2;
@@ -125,8 +125,8 @@ final class wb extends ji {
           }
         }
         if (param1 <= 91) {
-          var12 = (ed) null;
-          this.a((byte) -116, 10, (ed) null);
+          var12 = (PacketBuffer) null;
+          this.a((byte) -116, 10, (PacketBuffer) null);
         }
         return var13;
     }
@@ -151,7 +151,7 @@ final class wb extends ji {
         return true;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_23_0 = null;

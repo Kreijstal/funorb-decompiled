@@ -23,7 +23,7 @@ final class k {
             mk.field_J.c(0);
             mk.field_J = null;
           }
-          kd.field_l = null;
+          GameShell.field_l = null;
           if (null != nr.field_p) {
             nr.field_p.c(0);
             nr.field_p = null;
@@ -34,15 +34,15 @@ final class k {
             kq.field_Rb = null;
           }
           ck.field_I = null;
-          if (null == kd.field_l) {
+          if (null == GameShell.field_l) {
             return;
           }
-          var3 = (bs) (kd.field_l.b(29));
+          var3 = (bs) (GameShell.field_l.b(29));
           while (var3 != null) {
             var3.a(-123);
-            var3 = (bs) (kd.field_l.a((byte) -60));
+            var3 = (bs) (GameShell.field_l.a((byte) -60));
           }
-          kd.field_l = null;
+          GameShell.field_l = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,10 +71,10 @@ final class k {
         if (param0 != -15922) {
           return (ve[]) null;
         }
-        return new ve[]{g.field_f, dk.field_o, gi.field_t, ti.field_b, f.field_H, kk.field_e, br.field_Y, bd.field_e, bj.field_g, tg.field_c, bp.field_y, kq.field_Lb, rp.field_f, nb.field_B};
+        return new ve[]{g.field_f, dk.field_o, gi.field_t, ti.field_b, f.field_H, kk.field_e, br.field_Y, bd.field_e, RandomAccessCacheFile.field_g, DelegatingCanvas.field_c, bp.field_y, kq.field_Lb, rp.field_f, nb.field_B};
     }
 
-    final void a(ed param0, byte param1, byte[] param2) {
+    final void a(PacketBuffer param0, byte param1, byte[] param2) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -85,8 +85,8 @@ final class k {
           Exception var4 = null;
           RuntimeException var4_ref = null;
           try {
-            if (param0.field_p[param0.field_u] == 31 &&
-              param0.field_p[param0.field_u + 1] == -117) {
+            if (param0.payload[param0.position] == 31 &&
+              param0.payload[param0.position + 1] == -117) {
               if (this.field_a == null) {
                 this.field_a = new java.util.zip.Inflater(true);
               }
@@ -94,7 +94,7 @@ final class k {
                 if (param1 != 88) {
                   return;
                 }
-                this.field_a.setInput(param0.field_p, 10 + param0.field_u, -8 + (-10 - param0.field_u + param0.field_p.length));
+                this.field_a.setInput(param0.payload, 10 + param0.position, -8 + (-10 - param0.position + param0.payload.length));
                 this.field_a.inflate(param2);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

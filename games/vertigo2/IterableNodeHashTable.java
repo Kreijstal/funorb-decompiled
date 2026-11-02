@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class el implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     static ll field_d;
     int field_c;
-    li[] field_f;
-    private li field_g;
+    IntrusiveNode[] field_f;
+    private IntrusiveNode field_g;
     static lb field_e;
     static cr[] field_h;
     static cr field_a;
@@ -15,7 +15,7 @@ final class el implements Iterable {
 
     final static int b(boolean param0) {
         if (!param0) {
-          el.b(false);
+          IterableNodeHashTable.b(false);
         }
         return (int)(1000000000L / sl.field_w);
     }
@@ -32,7 +32,7 @@ final class el implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new gf(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -84,41 +84,41 @@ final class el implements Iterable {
         }
     }
 
-    final li a(long param0, byte param1) {
-        li var5 = null;
+    final IntrusiveNode a(long param0, byte param1) {
+        IntrusiveNode var5 = null;
         int var6 = Vertigo2.field_L ? 1 : 0;
-        li var4 = this.field_f[(int)(param0 & (long)(this.field_c - 1))];
+        IntrusiveNode var4 = this.field_f[(int)(param0 & (long)(this.field_c - 1))];
         if (param1 < 22) {
-          return (li) null;
+          return (IntrusiveNode) null;
         }
-        this.field_g = var4.field_c;
+        this.field_g = var4.previous;
         while (this.field_g != var4) {
-          if (this.field_g.field_k == param0) {
+          if (this.field_g.key == param0) {
             var5 = this.field_g;
-            this.field_g = this.field_g.field_c;
+            this.field_g = this.field_g.previous;
             return var5;
           }
-          this.field_g = this.field_g.field_c;
+          this.field_g = this.field_g.previous;
         }
         this.field_g = null;
         return null;
     }
 
-    final void a(long param0, li param1, int param2) {
-        li var5 = null;
+    final void a(long param0, IntrusiveNode param1, int param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (param1.field_a != null) {
-            param1.c(2);
+          if (param1.next != null) {
+            param1.unlink(2);
           }
           var5 = this.field_f[(int)((long)(this.field_c - 1) & param0)];
-          param1.field_c = var5;
-          param1.field_a = var5.field_a;
-          param1.field_a.field_c = param1;
+          param1.previous = var5;
+          param1.next = var5.next;
+          param1.next.previous = param1;
           if (param2 <= 74) {
-            el.b(false);
+            IterableNodeHashTable.b(false);
           }
-          param1.field_c.field_a = param1;
-          param1.field_k = param0;
+          param1.previous.next = param1;
+          param1.key = param0;
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "el.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -129,18 +129,18 @@ final class el implements Iterable {
         return -pk.field_o + qp.field_d;
     }
 
-    el(int param0) {
+    IterableNodeHashTable(int param0) {
         int var2 = 0;
-        li dupTemp$0 = null;
-        li var3 = null;
-        this.field_f = new li[param0];
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
+        this.field_f = new IntrusiveNode[param0];
         this.field_c = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new li();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_f[var2] = dupTemp$0;
-          var3.field_c = var3;
-          var3.field_a = var3;
+          var3.previous = var3;
+          var3.next = var3;
         }
     }
 

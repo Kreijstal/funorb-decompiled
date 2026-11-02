@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qn extends li {
+final class qn extends IntrusiveNode {
     int field_n;
     static lg field_p;
     static String field_z;
@@ -59,7 +59,7 @@ final class qn extends li {
             return stackIn_4_0;
           }
           if (var2_int > 64) {
-            stackIn_8_0 = cg.field_a;
+            stackIn_8_0 = GameKeyHandler.field_a;
             return stackIn_8_0;
           }
           if (param0.charAt(param1) == 34) {

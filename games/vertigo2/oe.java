@@ -12,7 +12,7 @@ final class oe extends fj implements ij {
     static int[][] field_ob;
     static String field_vb;
 
-    final static byte[] a(int param0, byte[] param1, int param2, mi param3) {
+    final static byte[] a(int param0, byte[] param1, int param2, BitPacketBuffer param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -141,7 +141,7 @@ final class oe extends fj implements ij {
                 var4 = af.field_J;
               }
             } else {
-              var4 = wa.field_g;
+              var4 = IsaacCipher.field_g;
               if (this.field_tb != null) {
                 this.field_tb.a(-4384);
               }

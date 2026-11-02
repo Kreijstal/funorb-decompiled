@@ -28,13 +28,13 @@ final class hm extends ji {
         int var5_int = 0;
         byte[] var6 = null;
         Object var7 = null;
-        ed var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new ed(param1);
+          var9 = new PacketBuffer(param1);
           var3 = var9.h(-11);
           if (param0 != -20595) {
             stackIn_2_0 = (byte[]) null;
@@ -319,7 +319,7 @@ final class hm extends ji {
         }
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -425,7 +425,7 @@ final class hm extends ji {
     }
 
     final static void d(int param0, int param1) {
-        mi var2 = uh.field_Wb;
+        BitPacketBuffer var2 = uh.field_Wb;
         var2.j(param1, param0 + 120);
         if (param0 != 0) {
           field_F = -89;

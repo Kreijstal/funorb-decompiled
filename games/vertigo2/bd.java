@@ -220,7 +220,7 @@ final class bd {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_c[var2] = og.a(j.a((long)this.field_a[var3 + 7], 255L), og.a(og.a(j.a((long)this.field_a[5 + var3], 255L) << 16, og.a(j.a(4278190080L, (long)this.field_a[4 + var3] << 24), og.a(j.a((long)this.field_a[var3 + 3] << 32, 1095216660480L), og.a(og.a(j.a(71776119061217280L, (long)this.field_a[1 + var3] << 48), (long)this.field_a[var3] << 56), j.a((long)this.field_a[var3 + 2], 255L) << 40)))), j.a(255L, (long)this.field_a[var3 + 6]) << 8));
+          this.field_c[var2] = GameApplet.a(j.a((long)this.field_a[var3 + 7], 255L), GameApplet.a(GameApplet.a(j.a((long)this.field_a[5 + var3], 255L) << 16, GameApplet.a(j.a(4278190080L, (long)this.field_a[4 + var3] << 24), GameApplet.a(j.a((long)this.field_a[var3 + 3] << 32, 1095216660480L), GameApplet.a(GameApplet.a(j.a(71776119061217280L, (long)this.field_a[1 + var3] << 48), (long)this.field_a[var3] << 56), j.a((long)this.field_a[var3 + 2], 255L) << 40)))), j.a(255L, (long)this.field_a[var3 + 6]) << 8));
           var3 += 8;
           var2++;
         }
@@ -228,7 +228,7 @@ final class bd {
           dupTemp$0 = this.field_l[var2Lifetime1];
           arrayValue$1 = this.field_c[var2Lifetime1];
           this.field_h[var2Lifetime1] = dupTemp$0;
-          this.field_k[var2Lifetime1] = og.a(arrayValue$1, dupTemp$0);
+          this.field_k[var2Lifetime1] = GameApplet.a(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
           for (var3Lifetime1 = 0; var3Lifetime1 < 8; var3Lifetime1++) {
@@ -236,7 +236,7 @@ final class bd {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_b[var3Lifetime1] = og.a(this.field_b[var3Lifetime1], ro.field_h[var4][b.a(255, (int)(this.field_h[b.a(7, -var4 + var3Lifetime1)] >>> var5))]);
+              this.field_b[var3Lifetime1] = GameApplet.a(this.field_b[var3Lifetime1], ro.field_h[var4][b.a(255, (int)(this.field_h[b.a(7, -var4 + var3Lifetime1)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -244,14 +244,14 @@ final class bd {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_h[var3Lifetime1Lifetime1] = this.field_b[var3Lifetime1Lifetime1];
           }
-          this.field_h[0] = og.a(this.field_h[0], ro.field_d[var2Lifetime2]);
+          this.field_h[0] = GameApplet.a(this.field_h[0], ro.field_d[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_b[var3Lifetime1Lifetime2] = this.field_h[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_b[var3Lifetime1Lifetime2] = og.a(this.field_b[var3Lifetime1Lifetime2], ro.field_h[var7][b.a(255, (int)(this.field_k[b.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
+              this.field_b[var3Lifetime1Lifetime2] = GameApplet.a(this.field_b[var3Lifetime1Lifetime2], ro.field_h[var7][b.a(255, (int)(this.field_k[b.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -264,7 +264,7 @@ final class bd {
           this.b(66);
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_l[var2Lifetime3] = og.a(this.field_l[var2Lifetime3], og.a(this.field_c[var2Lifetime3], this.field_k[var2Lifetime3]));
+          this.field_l[var2Lifetime3] = GameApplet.a(this.field_l[var2Lifetime3], GameApplet.a(this.field_c[var2Lifetime3], this.field_k[var2Lifetime3]));
         }
     }
 

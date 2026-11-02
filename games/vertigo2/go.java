@@ -79,7 +79,7 @@ final class go {
         }
     }
 
-    private final void a(int param0, ed param1) {
+    private final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -87,7 +87,7 @@ final class go {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        ed var5 = null;
+        PacketBuffer var5 = null;
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           while (true) {
@@ -99,8 +99,8 @@ final class go {
             break;
           }
           if (param0 < 108) {
-            var5 = (ed) null;
-            this.a(-60, (ed) null);
+            var5 = (PacketBuffer) null;
+            this.a(-60, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -125,7 +125,7 @@ final class go {
         this(param0, param0.a((byte) 122, param1), param2);
     }
 
-    private final void a(int param0, ed param1, byte param2) {
+    private final void a(int param0, PacketBuffer param1, byte param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_56_0 = null;
@@ -272,7 +272,7 @@ final class go {
           var9 = var10;
           var4 = var9;
           if (var9 != null) {
-            this.a(121, new ed(var11));
+            this.a(121, new PacketBuffer(var11));
           }
           var5 = 0;
           for (var6 = 0; var6 < this.field_c.length; var6++) {

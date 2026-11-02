@@ -13,7 +13,7 @@ final class br extends kp implements ik {
     static int field_T;
     static int field_U;
 
-    final static void a(java.awt.Frame param0, jj param1, int param2) {
+    final static void a(java.awt.Frame param0, PlatformTaskDispatcher param1, int param2) {
         wk var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -95,7 +95,7 @@ final class br extends kp implements ik {
     final static String a(String param0, int param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
-        mi var5 = null;
+        BitPacketBuffer var5 = null;
         CharSequence var6 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -123,7 +123,7 @@ final class br extends kp implements ik {
             return stackIn_10_0;
           }
           if (iq.b(param0, 109)) {
-            stackIn_13_0 = Vertigo2.a(new String[]{param0}, lk.field_f, 55);
+            stackIn_13_0 = Vertigo2.a(new String[]{param0}, RasterBuffer.field_f, 55);
             return stackIn_13_0;
           }
           if (vd.field_a >= param2) {
@@ -136,11 +136,11 @@ final class br extends kp implements ik {
           }
           var5 = uh.field_Wb;
           var5.j(param1, 127);
-          var5.field_u = var5.field_u + 1;
-          var4 = var5.field_u;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.f(2, -92);
           var5.a((byte) 0, param0);
-          var5.b((byte) -98, var5.field_u - var4);
+          var5.b((byte) -98, var5.position - var4);
           stackIn_23_0 = null;
           return (String) (stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -161,10 +161,10 @@ final class br extends kp implements ik {
         try {
           super.a((byte) 45, param1, param2, param3);
           if (param0 < 6) {
-            jj var6 = (jj) null;
-            br.a((java.awt.Frame) null, (jj) null, -16);
+            PlatformTaskDispatcher var6 = (PlatformTaskDispatcher) null;
+            br.a((java.awt.Frame) null, (PlatformTaskDispatcher) null, -16);
           }
-          this.field_V = -param1 + (-this.field_o + ed.field_n);
+          this.field_V = -param1 + (-this.field_o + PacketBuffer.field_n);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "br.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -187,11 +187,11 @@ final class br extends kp implements ik {
           return null;
         }
         if (!param0) {
-          jn.a(gb.field_d, -4765, ed.field_n - (-this.field_n + this.field_V));
+          jn.a(gb.field_d, -4765, PacketBuffer.field_n - (-this.field_n + this.field_V));
           return this.field_q;
         }
         br.b(-110, (byte) -108);
-        jn.a(gb.field_d, -4765, ed.field_n - (-this.field_n + this.field_V));
+        jn.a(gb.field_d, -4765, PacketBuffer.field_n - (-this.field_n + this.field_V));
         return this.field_q;
     }
 

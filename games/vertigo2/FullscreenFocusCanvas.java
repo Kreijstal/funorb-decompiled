@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qi extends java.awt.Canvas implements java.awt.event.FocusListener {
+final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     static int field_a;
     static String field_b;
     static String field_f;
@@ -53,10 +53,10 @@ final class qi extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void paint(java.awt.Graphics param0) {
     }
 
-    qi() {
+    FullscreenFocusCanvas() {
     }
 
-    final void a(jj param0, int param1) {
+    final void a(PlatformTaskDispatcher param0, int param1) {
         if (param1 != 30210) {
           return;
         }

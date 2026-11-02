@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pk extends li {
+final class pk extends IntrusiveNode {
     int field_t;
     static int[] field_w;
     static int[] field_v;
@@ -57,7 +57,7 @@ final class pk extends li {
             return stackIn_3_0;
           }
           ch.field_e.l(0);
-          while (gf.a(false)) {
+          while (NodeHashTableIterator.a(false)) {
             ch.field_e.a(param0 - 93, de.field_f, ji.field_r);
           }
           if (nm.field_F != -1) {
@@ -66,7 +66,7 @@ final class pk extends li {
             stackIn_9_0 = var1_int;
             return stackIn_9_0;
           }
-          if (ed.field_t) {
+          if (PacketBuffer.field_t) {
             stackIn_12_0 = 3;
             return stackIn_12_0;
           }
@@ -102,13 +102,13 @@ final class pk extends li {
         var4 = Vertigo2.field_L ? 1 : 0;
         try {
           var2_int = -36 % ((-24 - param0) / 47);
-          tg.field_e = param1;
+          DelegatingCanvas.field_e = param1;
           var3 = (gg) (fm.field_b.a((byte) 100));
           while (var3 != null) {
             if (!var3.field_q.b(99)) {
-              var3.c(2);
+              var3.unlink(2);
             } else {
-              var3.field_r.g(128 + var3.field_p * tg.field_e >> 8);
+              var3.field_r.g(128 + var3.field_p * DelegatingCanvas.field_e >> 8);
             }
             var3 = (gg) (fm.field_b.b(117));
           }
@@ -117,9 +117,9 @@ final class pk extends li {
             while (var3Lifetime1 != null) {
               stackIn_12_0 = var3Lifetime1.field_q.b(114);
               if (!stackIn_12_0) {
-                var3Lifetime1.c(2);
+                var3Lifetime1.unlink(2);
               } else {
-                var3Lifetime1.field_r.g(128 + tg.field_e * var3Lifetime1.field_p >> 8);
+                var3Lifetime1.field_r.g(128 + DelegatingCanvas.field_e * var3Lifetime1.field_p >> 8);
               }
               var3Lifetime1 = (gg) (ro.field_b.b(41));
             }

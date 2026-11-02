@@ -32,25 +32,25 @@ final class ee {
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
           for (var2_int = 0; var2_int < 9; var2_int++) {
-            kn.field_h[0][var2_int] = new ed(param1.a("", "level0" + (var2_int + 1) + ".map", 0));
+            kn.field_h[0][var2_int] = new PacketBuffer(param1.a("", "level0" + (var2_int + 1) + ".map", 0));
           }
           for (var2_intLifetime1 = 9; 50 > var2_intLifetime1; var2_intLifetime1++) {
-            kn.field_h[0][var2_intLifetime1] = new ed(param1.a("", "level" + (var2_intLifetime1 + 1) + ".map", 0));
+            kn.field_h[0][var2_intLifetime1] = new PacketBuffer(param1.a("", "level" + (var2_intLifetime1 + 1) + ".map", 0));
           }
           for (var2_intLifetime2 = 0; var2_intLifetime2 < 9; var2_intLifetime2++) {
-            kn.field_h[1][var2_intLifetime2] = new ed(param1.a("", "level0" + (1 + var2_intLifetime2) + ".2pl", param0 - 11579));
+            kn.field_h[1][var2_intLifetime2] = new PacketBuffer(param1.a("", "level0" + (1 + var2_intLifetime2) + ".2pl", param0 - 11579));
           }
           for (var2_intLifetime3 = 9; var2_intLifetime3 < 30; var2_intLifetime3++) {
-            kn.field_h[1][var2_intLifetime3] = new ed(param1.a("", "level" + (1 + var2_intLifetime3) + ".2pl", tk.a(param0, 11579)));
+            kn.field_h[1][var2_intLifetime3] = new PacketBuffer(param1.a("", "level" + (1 + var2_intLifetime3) + ".2pl", tk.a(param0, 11579)));
           }
           for (var2_intLifetime4 = 0; var2_intLifetime4 < 9; var2_intLifetime4++) {
-            kn.field_h[2][var2_intLifetime4] = new ed(param1.a("", "level0" + (var2_intLifetime4 + 1) + ".cmp", 0));
+            kn.field_h[2][var2_intLifetime4] = new PacketBuffer(param1.a("", "level0" + (var2_intLifetime4 + 1) + ".cmp", 0));
           }
           if (param0 != 11579) {
             return;
           }
           for (var2_intLifetime5 = 9; 40 > var2_intLifetime5; var2_intLifetime5++) {
-            kn.field_h[2][var2_intLifetime5] = new ed(param1.a("", "level" + (1 + var2_intLifetime5) + ".cmp", tk.a(param0, 11579)));
+            kn.field_h[2][var2_intLifetime5] = new PacketBuffer(param1.a("", "level" + (1 + var2_intLifetime5) + ".cmp", tk.a(param0, 11579)));
           }
           for (var2_intLifetime6 = 0; var2_intLifetime6 < 9; var2_intLifetime6++) {
             kn.field_h[3][var2_intLifetime6] = kn.field_h[0][var2_intLifetime6];
@@ -108,7 +108,7 @@ final class ee {
         }
     }
 
-    final static short[] a(mi param0, int param1, int param2, short[] param3) {
+    final static short[] a(BitPacketBuffer param0, int param1, int param2, short[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -237,10 +237,10 @@ final class ee {
         }
         kf.a(-7393, param1);
         if (bg.field_c) {
-          bi.d(el.field_e.field_b.field_wb, el.field_e.field_b.field_N, el.field_e.field_b.field_Fb, el.field_e.field_b.field_db);
-          el.field_e.field_b.b(param1, param0 ^ 8);
+          bi.d(IterableNodeHashTable.field_e.field_b.field_wb, IterableNodeHashTable.field_e.field_b.field_N, IterableNodeHashTable.field_e.field_b.field_Fb, IterableNodeHashTable.field_e.field_b.field_db);
+          IterableNodeHashTable.field_e.field_b.b(param1, param0 ^ 8);
         }
-        ma.a(param1, 78);
+        ImageProducerRasterBuffer.a(param1, 78);
     }
 
     public final String toString() {

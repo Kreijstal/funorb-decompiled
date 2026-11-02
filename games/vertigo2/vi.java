@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vi extends li {
+final class vi extends IntrusiveNode {
     int field_p;
     long field_r;
     int field_A;
@@ -33,15 +33,15 @@ final class vi extends li {
         ii.b((byte) -90);
     }
 
-    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, jj param6, int param7, byte param8) {
-        il.field_h = param5;
+    final static void a(int param0, int param1, int param2, String param3, int param4, int param5, PlatformTaskDispatcher param6, int param7, byte param8) {
+        MouseWheelInput.field_h = param5;
         if (param8 != 112) {
           return;
         }
         try {
           rf.field_q = param7;
           md.field_D = param1;
-          qi.field_a = param0;
+          FullscreenFocusCanvas.field_a = param0;
           lm.field_H = param3;
           or.field_f = param6;
           rf.field_l = param2;

@@ -6,7 +6,7 @@ import java.util.*;
 final class kk {
     static ve field_e;
     private mn[] field_m;
-    private nj field_i;
+    private IntrusiveDeque field_i;
     private int field_g;
     static int field_j;
     private int field_d;
@@ -47,7 +47,7 @@ final class kk {
             var4 = (mn) (this.field_i.c((byte) -45));
             var3 = new mn(param0, var4.field_s);
             this.field_m[var4.field_r] = null;
-            var4.c(param1 ^ -4);
+            var4.unlink(param1 ^ -4);
           } else {
             var3 = new mn(param0, this.field_d);
             this.field_d = this.field_d + 1;
@@ -73,7 +73,7 @@ final class kk {
         byte[] var11;
         int var5Lifetime1;
         var9 = Vertigo2.field_L ? 1 : 0;
-        var2 = (km) (bj.field_c.a((long)param0, false));
+        var2 = (km) (RandomAccessCacheFile.field_c.a((long)param0, false));
         if (var2 == null) {
           var11 = new byte[512];
           var10 = var11;
@@ -91,7 +91,7 @@ final class kk {
             var3[var6] = (byte) var8;
           }
           var2 = new km(var11);
-          bj.field_c.a(-1, var2, (long)param0);
+          RandomAccessCacheFile.field_c.a(-1, var2, (long)param0);
         }
         if (param1 != 38) {
           kk.a((byte) 22);
@@ -114,7 +114,7 @@ final class kk {
         if (param0 != 43) {
           kk.a(-94, (byte) -26);
         }
-        nj.field_d = 0;
+        IntrusiveDeque.field_d = 0;
     }
 
     final int[][][] a(int param0) {
@@ -162,7 +162,7 @@ final class kk {
     }
 
     final static void b(byte param0) {
-        il.field_a = true;
+        MouseWheelInput.field_a = true;
         if (param0 <= 78) {
           kk.a(117, (byte) 117);
         }
@@ -184,7 +184,7 @@ final class kk {
     kk(int param0, int param1, int param2) {
         this.field_b = -1;
         this.field_d = 0;
-        this.field_i = new nj();
+        this.field_i = new IntrusiveDeque();
         this.field_c = false;
         this.field_g = param0;
         this.field_k = param1;

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class be extends li {
+final class be extends IntrusiveNode {
     boolean field_p;
     static int field_t;
     static fe field_n;

@@ -481,11 +481,11 @@ final class fk extends sn {
               var6 = uc.a(mn.field_q[var3_int], true, false);
               var7 = -(var6 >> 1) + vm.field_c;
               var4 = var4 + al.field_z;
-              if (pe.a(kd.field_z + (qc.field_z << 1), var4, param0, param2, (byte) 17, var7 - gl.field_l, (gl.field_l << 1) + var6)) {
+              if (pe.a(GameShell.field_z + (qc.field_z << 1), var4, param0, param2, (byte) 17, var7 - gl.field_l, (gl.field_l << 1) + var6)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
-              var4 = var4 + (kd.field_z + ((qc.field_z << 1) + al.field_z));
+              var4 = var4 + (GameShell.field_z + ((qc.field_z << 1) + al.field_z));
             }
             var3_int++;
           }

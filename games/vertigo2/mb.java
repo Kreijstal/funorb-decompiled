@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mb extends li {
+final class mb extends IntrusiveNode {
     int[][] field_p;
     private boolean[] field_n;
     int field_o;
     int[] field_r;
-    static nj field_v;
+    static IntrusiveDeque field_v;
     int field_x;
     int[] field_u;
     static String[] field_t;
@@ -31,14 +31,14 @@ final class mb extends li {
         if (param2 > -70) {
           mb.b((byte) 6);
         }
-        tg.a(param3, var4, 0);
+        DelegatingCanvas.a(param3, var4, 0);
         return var4;
     }
 
     public static void e(int param0) {
         field_w = null;
         if (param0 != -26523) {
-          field_v = (nj) null;
+          field_v = (IntrusiveDeque) null;
         }
         field_q = null;
         field_t = null;
@@ -89,15 +89,15 @@ final class mb extends li {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        ed var7 = null;
-        ed var8 = null;
+        PacketBuffer var7 = null;
+        PacketBuffer var8 = null;
         int var4Lifetime1;
         int var4Lifetime2;
         int var4Lifetime3;
         int var4Lifetime4;
         try {
           this.field_x = param0;
-          var7 = new ed(param1);
+          var7 = new PacketBuffer(param1);
           var8 = var7;
           this.field_o = var8.h(-11);
           this.field_p = new int[this.field_o][];
@@ -141,7 +141,7 @@ final class mb extends li {
     }
 
     static {
-        field_v = new nj();
+        field_v = new IntrusiveDeque();
         field_y = null;
         field_w = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
     }

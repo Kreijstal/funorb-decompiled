@@ -15,7 +15,7 @@ final class bh {
     static int field_c;
     int field_d;
     private int[] field_G;
-    private nj field_r;
+    private IntrusiveDeque field_r;
     static java.awt.Color field_M;
     int field_E;
     int field_z;
@@ -146,7 +146,7 @@ final class bh {
         }
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var10 = 0;
@@ -190,7 +190,7 @@ final class bh {
         int var9Lifetime5Lifetime1;
         var14 = Vertigo2.field_L ? 1 : 0;
         try {
-          param2.field_u = 0;
+          param2.position = 0;
           this.field_e = 0;
           this.field_n = 0;
           this.field_s = true;
@@ -318,8 +318,8 @@ final class bh {
           this.field_z = this.field_z * 240;
           this.field_K = this.field_K * 128;
           this.field_h = this.field_h * 128;
-          var6Lifetime2 = param2.field_u;
-          param2.field_u = param2.field_u + 375;
+          var6Lifetime2 = param2.position;
+          param2.position = param2.position + 375;
           this.field_o = param2.h(-11);
           for (var7Lifetime2 = 0; this.field_o > var7Lifetime2; var7Lifetime2++) {
             this.field_q[var7Lifetime2] = param2.g(80);
@@ -339,8 +339,8 @@ final class bh {
               }
             }
           }
-          var7Lifetime3 = 6 + param2.field_u;
-          param2.field_u = var6Lifetime2;
+          var7Lifetime3 = 6 + param2.position;
+          param2.position = var6Lifetime2;
           this.field_t = 0;
           for (var8Lifetime2 = 0; 15 > var8Lifetime2; var8Lifetime2++) {
             for (var9Lifetime1 = 0; var9Lifetime1 < 5; var9Lifetime1++) {
@@ -349,11 +349,11 @@ final class bh {
                 if (var11 > 1) {
                   var12 = -1;
                   if (var11 == 5) {
-                    var6Lifetime3 = param2.field_u;
-                    param2.field_u = var7Lifetime3;
+                    var6Lifetime3 = param2.position;
+                    param2.position = var7Lifetime3;
                     var12 = 3 * param2.h(-11) / 2;
-                    var7Lifetime3 = param2.field_u;
-                    param2.field_u = var6Lifetime3;
+                    var7Lifetime3 = param2.position;
+                    param2.position = var6Lifetime3;
                   }
                   var13 = this.a(var10, var9Lifetime1, (byte) -124, var8Lifetime2);
                   if (var11 == 10) {
@@ -495,7 +495,7 @@ final class bh {
           return;
         }
         if (null == this.field_r) {
-          this.field_r = new nj();
+          this.field_r = new IntrusiveDeque();
         }
         if (0 == this.field_r.c(true)) {
           for (var3_int = 0; var3_int < this.field_L; var3_int++) {
@@ -526,7 +526,7 @@ final class bh {
                 decompiledFrameRemainder0 = !(var10 * var10 + (var8 * var8 + var9 * var9) < var11);
               }
               if (decompiledFrameRemainder0) {
-                var3.c(2);
+                var3.unlink(2);
                 if (var15.field_p != 4) {
                   var4.field_p = 30;
                   return;
@@ -536,7 +536,7 @@ final class bh {
               }
             }
             if (decompiledFrameRemainder0) {
-              var3.c(2);
+              var3.unlink(2);
             }
             var3 = (fa) (this.field_r.b(24));
           }
@@ -596,7 +596,7 @@ final class bh {
         return this.field_L;
     }
 
-    final void a(mi param0, int param1) {
+    final void a(BitPacketBuffer param0, int param1) {
         int var6 = 0;
         int var7 = 0;
         int incrementValue$0 = 0;
@@ -945,7 +945,7 @@ final class bh {
                             gj.a((byte) 102, false, am.field_n, 15);
                           }
                         } else {
-                          if (ed.field_q) {
+                          if (PacketBuffer.field_q) {
                             bs.a(11, (byte) -47, 0);
                           }
                         }
@@ -1182,13 +1182,13 @@ final class bh {
           }
           for (var9Lifetime3 = 0; this.field_L > var9Lifetime3; var9Lifetime3++) {
             stackIn_229_0 = this.field_b[var9Lifetime3];
-            L28: {
+            regionExit1: {
               if (stackIn_229_0 != null &&
                 this.field_b[var9Lifetime3].field_p == 23) {
                 for (var10Lifetime2 = 0; this.field_f.length > var10Lifetime2; var10Lifetime2++) {
                   for (var11Lifetime3 = 0; 9 > var11Lifetime3; var11Lifetime3++) {
                     if (this.field_f[var10Lifetime2].field_L[var11Lifetime3] == var9Lifetime3) {
-                      break L28;
+                      break regionExit1;
                     }
                   }
                 }
@@ -1204,13 +1204,13 @@ final class bh {
             this.field_d = 12;
           }
           for (var9Lifetime4 = 0; var9Lifetime4 < this.field_t; var9Lifetime4++) {
-            L24: {
+            regionExit2: {
               if (this.field_i[var9Lifetime4].field_p == 23 &&
                 this.field_i[var9Lifetime4].field_k > 20) {
                 for (var10Lifetime3 = 0; this.field_f.length > var10Lifetime3; var10Lifetime3++) {
                   for (var11Lifetime4 = 0; var11Lifetime4 < 9; var11Lifetime4++) {
                     if (~var9Lifetime4 == ~this.field_f[var10Lifetime3].field_P[var11Lifetime4]) {
-                      break L24;
+                      break regionExit2;
                     }
                   }
                 }
@@ -1298,7 +1298,7 @@ final class bh {
             ci.field_b = 1982;
             var4Lifetime1 = this.field_f[var3_int].field_W;
             gi.field_u = var4Lifetime1 + 8768;
-            aj.field_e = 5180;
+            ProxySocketConnector.field_e = 5180;
             pn.field_R = 617;
             c.field_h = 9170;
             var3_int++;

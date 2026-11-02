@@ -65,18 +65,18 @@ final class ar {
 
     final static void a(int param0, int param1) {
         int var4 = 0;
-        mi var2 = uh.field_Wb;
+        BitPacketBuffer var2 = uh.field_Wb;
         int var4Lifetime1;
         var2.j(param1, 126);
-        var2.field_u = var2.field_u + 1;
-        int var3 = var2.field_u;
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
         var2.f(5, -105);
         if (param0 == 953354214) {
           var2.f(gd.field_j.field_uc, -116);
           var4 = (gd.field_j.field_xc << 6) + gd.field_j.field_Ub;
           var2.f(var4, -109);
           var2.a(0, -10140, gd.field_j.field_fc, gd.field_j.field_fc.length);
-          var2.b((byte) 6, -var3 + var2.field_u);
+          var2.b((byte) 6, -var3 + var2.position);
           return;
         }
         ar.a(-18, (byte) -22, -75, 35, 98);
@@ -84,7 +84,7 @@ final class ar {
         var4Lifetime1 = (gd.field_j.field_xc << 6) + gd.field_j.field_Ub;
         var2.f(var4Lifetime1, -109);
         var2.a(0, -10140, gd.field_j.field_fc, gd.field_j.field_fc.length);
-        var2.b((byte) 6, -var3 + var2.field_u);
+        var2.b((byte) 6, -var3 + var2.position);
     }
 
     final static java.net.URL a(java.applet.Applet param0, java.net.URL param1, int param2) {
@@ -152,9 +152,9 @@ final class ar {
         }
     }
 
-    final qi c(byte param0) {
-        qi var2 = null;
-        qi var2Lifetime1;
+    final FullscreenFocusCanvas c(byte param0) {
+        FullscreenFocusCanvas var2 = null;
+        FullscreenFocusCanvas var2Lifetime1;
         this.field_i = gh.field_a;
         this.field_h = op.field_c;
         this.field_s.a(param0 ^ 2283, this.field_g, this.field_o);
@@ -280,7 +280,7 @@ final class ar {
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
         int var5 = -101 % ((-38 - param1) / 53);
-        kd.field_z = param0;
+        GameShell.field_z = param0;
         re.field_g = param3;
         gd.field_k = param2;
         gj.field_y = param4;

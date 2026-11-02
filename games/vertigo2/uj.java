@@ -18,12 +18,12 @@ final class uj {
     final static boolean c(byte param0) {
         if (param0 != -87) {
           uj.a(-74, 73, 75, true, 41, -1);
-          if (null == nj.field_b) {
+          if (null == IntrusiveDeque.field_b) {
             return pm.field_a ? true : false;
           }
           return true;
         }
-        if (null != nj.field_b) {
+        if (null != IntrusiveDeque.field_b) {
           return true;
         }
         if (!pm.field_a) {

@@ -16,7 +16,7 @@ final class hp {
         if (var3 == null) {
           return null;
         }
-        return new hp(new ed(var3));
+        return new hp(new PacketBuffer(var3));
     }
 
     final static hp a(r param0, int param1, int param2) {
@@ -24,7 +24,7 @@ final class hp {
         if (var3 == null) {
           return null;
         }
-        return new hp(new ed(var3));
+        return new hp(new PacketBuffer(var3));
     }
 
     private final byte[] b() {
@@ -67,14 +67,14 @@ final class hp {
         return var3;
     }
 
-    private hp(ed param0) {
+    private hp(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_a = new dn[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.h(-11);
           if (var3 != 0) {
-            param0.field_u = param0.field_u - 1;
+            param0.position = param0.position - 1;
             this.field_a[var2] = new dn();
             this.field_a[var2].a(param0);
           }

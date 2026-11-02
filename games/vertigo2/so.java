@@ -45,23 +45,23 @@ final class so extends ji {
           var10_int = (var10_int + 7) / 8;
           dj.field_a = new byte[var10_int];
           if (null == param6.field_M) {
-            param6.field_M = new nj();
+            param6.field_M = new IntrusiveDeque();
           }
           mk.field_J = param6.field_M;
           mk.field_J.c(0);
-          kd.field_l = new fi(param7);
+          GameShell.field_l = new fi(param7);
           br.field_Q = 0;
           rp.field_a = -1;
           kk.field_j = 0;
           qn.field_w = -1;
           if (param4.field_M == null) {
-            param4.field_M = new nj();
+            param4.field_M = new IntrusiveDeque();
           }
           nr.field_p = param4.field_M;
           nr.field_p.c(0);
           lh.field_b = new fi(param3);
           if (null == param0.field_M) {
-            param0.field_M = new nj();
+            param0.field_M = new IntrusiveDeque();
           }
           kq.field_Rb = param0.field_M;
           kq.field_Rb.c(0);
@@ -131,7 +131,7 @@ final class so extends ji {
         field_z = null;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         RuntimeException var4 = null;
         cr var5 = null;
         boolean stackIn_5_1 = false;

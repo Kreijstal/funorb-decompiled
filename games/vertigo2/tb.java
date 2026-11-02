@@ -27,7 +27,7 @@ class tb implements ka {
     }
 
     he g(int param0, int param1) {
-        gp var3 = this.field_h.a((long)param1, false);
+        DualLinkNode var3 = this.field_h.a((long)param1, false);
         if (var3 != null) {
           return (he) (var3);
         }
@@ -38,7 +38,7 @@ class tb implements ka {
         if (var4 == null) {
           return null;
         }
-        he var5 = new he(new ed(var4));
+        he var5 = new he(new PacketBuffer(var4));
         this.field_h.a(-1, var5, (long)param1);
         return var5;
     }
@@ -87,7 +87,7 @@ class tb implements ka {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var5 = 0;
-        ed var7 = null;
+        PacketBuffer var7 = null;
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
@@ -111,7 +111,7 @@ class tb implements ka {
         try {
           this.field_e = param2;
           this.field_i = param1;
-          var7 = new ed(param0.a(0, 0, (byte) -74));
+          var7 = new PacketBuffer(param0.a(0, 0, (byte) -74));
           this.field_f = var7.a((byte) -11);
           this.field_g = new ui[this.field_f];
           for (var5 = 0; var5 < this.field_f; var5++) {

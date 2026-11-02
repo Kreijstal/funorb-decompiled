@@ -5,7 +5,7 @@ class mo {
     static String field_b;
     static String field_d;
     static String field_c;
-    static nj field_h;
+    static IntrusiveDeque field_h;
     static String field_e;
     static String field_i;
     static String field_g;
@@ -43,7 +43,7 @@ class mo {
           }
           while (rk.field_A.length > var2) {
             var3 = tk.field_c.c(rk.field_A[var2]);
-            qi.a(false, -var3 + 620, var3, var1_int);
+            FullscreenFocusCanvas.a(false, -var3 + 620, var3, var1_int);
             tk.field_c.b(rk.field_A[var2], -var3 + 620, -2 + var1_int + (tk.field_c.field_D + 30) / 2, 16777215, -1);
             var1_int += 50;
             var2++;
@@ -63,7 +63,7 @@ class mo {
         field_b = "Fullscreen";
         field_i = "Show lobby chat from my friends";
         field_g = "Searching for opponents";
-        field_h = new nj();
+        field_h = new IntrusiveDeque();
         field_a = "Names cannot contain consecutive spaces";
         field_f = "Total Time <%0>";
     }

@@ -64,7 +64,7 @@ final class ce {
         var2 = 67 % ((param0 - 60) / 39);
         if (1 != hb.field_q.field_b) {
         }
-        rg.field_d = gf.field_h;
+        rg.field_d = NodeHashTableIterator.field_h;
         hb.field_q = null;
         return true;
     }
@@ -130,7 +130,7 @@ final class ce {
         RuntimeException var2_ref = null;
         var3 = Vertigo2.field_L ? 1 : 0;
         try {
-          param1.c(2);
+          param1.unlink(2);
           if (!param0) {
             field_b = -90;
           }

@@ -6,7 +6,7 @@ final class mm {
     static volatile int field_a;
 
     final static void a(int param0, s param1, byte param2) {
-        mi var3 = uh.field_Wb;
+        BitPacketBuffer var3 = uh.field_Wb;
         if (param2 != 108) {
           return;
         }

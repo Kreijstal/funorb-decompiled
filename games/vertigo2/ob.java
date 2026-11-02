@@ -10,9 +10,9 @@ final class ob extends cj implements ih, ij {
     private String field_P;
     private d field_G;
     private boolean field_R;
-    static nj field_Q;
+    static IntrusiveDeque field_Q;
     static String field_I;
-    static nj field_M;
+    static IntrusiveDeque field_M;
     private d field_J;
     static int field_L;
     static double field_F;
@@ -101,7 +101,7 @@ final class ob extends cj implements ih, ij {
         String var4 = null;
         try {
           if (param0 != -79) {
-            field_Q = (nj) null;
+            field_Q = (IntrusiveDeque) null;
           }
           var3 = this.field_H;
           var4 = param1;
@@ -245,7 +245,7 @@ final class ob extends cj implements ih, ij {
           }
           var8 = ll.field_a;
           var9 = kf.a((byte) -100, ob.e((byte) -52));
-          if (li.field_j == var9) {
+          if (IntrusiveNode.field_j == var9) {
             var8 = la.field_c;
           } else {
             if (var9 == la.field_i) {
@@ -378,9 +378,9 @@ final class ob extends cj implements ih, ij {
     }
 
     static {
-        field_Q = new nj();
+        field_Q = new IntrusiveDeque();
         field_I = "Please log in as a subscribing member to access this feature.";
         field_F = -1.0;
-        field_M = new nj();
+        field_M = new IntrusiveDeque();
     }
 }

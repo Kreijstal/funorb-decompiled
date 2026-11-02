@@ -13,7 +13,7 @@ final class jm extends ji {
     static int field_G;
 
     final static void d(int param0, int param1) {
-        mi var2 = uh.field_Wb;
+        BitPacketBuffer var2 = uh.field_Wb;
         var2.j(param1, 119);
         var2.f(2, param0 ^ 108);
         var2.f(4, 101);
@@ -307,7 +307,7 @@ final class jm extends ji {
         return ch.a(param1, (byte) 63, param0, param3);
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var5 = 0;
         int var4_int = 0;
         int var6 = 0;

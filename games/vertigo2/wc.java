@@ -42,7 +42,7 @@ final class wc extends da {
           }
           var5 = var4;
           if (nh.a(var5, (byte) -113)) {
-            stackIn_8_0 = nj.field_f;
+            stackIn_8_0 = IntrusiveDeque.field_f;
             return stackIn_8_0;
           }
           if (vc.a(-111, var5)) {
@@ -70,7 +70,7 @@ final class wc extends da {
             return stackIn_30_0;
           }
           if (!gm.a(param0 ^ 3700, var3, var5)) {
-            stackIn_35_0 = nj.field_f;
+            stackIn_35_0 = IntrusiveDeque.field_f;
             return stackIn_35_0;
           }
           stackIn_33_0 = kn.field_m;
@@ -134,7 +134,7 @@ final class wc extends da {
 
     final static void a(byte[] param0, int param1, int param2, int param3, boolean param4, int param5) {
         RuntimeException runtimeException = null;
-        mi var6 = null;
+        BitPacketBuffer var6 = null;
         int var7 = 0;
         int var8 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -144,8 +144,8 @@ final class wc extends da {
         try {
           var6 = uh.field_Wb;
           var6.j(param2, 119);
-          var6.field_u = var6.field_u + 1;
-          var7 = var6.field_u;
+          var6.position = var6.position + 1;
+          var7 = var6.position;
           var6.f(4, -93);
           var6.f(param1, 94);
           if (param3 > -24) {
@@ -157,7 +157,7 @@ final class wc extends da {
           }
           var6.f(var8, 105);
           var6.a(0, -10140, param0, param0.length);
-          var6.b((byte) 77, var6.field_u - var7);
+          var6.b((byte) 77, var6.position - var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -351,7 +351,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mu_chat_tips", false);
                 if (var2 != null) {
-                  cg.field_c = in.a(param0 + 0, var2);
+                  GameKeyHandler.field_c = in.a(param0 + 0, var2);
                 }
                 var2 = tk.a("mu_chat_game", false);
                 if (null != var2) {
@@ -375,7 +375,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mu_x_left_lobby", false);
                 if (null != var2) {
-                  og.field_i = in.a(0, var2);
+                  GameApplet.field_i = in.a(0, var2);
                 }
                 var2 = tk.a("mu_x_lost_con", false);
                 if (null != var2) {
@@ -427,7 +427,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mu_request_declined", false);
                 if (var2 != null) {
-                  cf.field_b = in.a(param0 + 0, var2);
+                  SecondaryNodeDequeIterator.field_b = in.a(param0 + 0, var2);
                 }
                 var2 = tk.a("mu_request_withdrawn", false);
                 if (var2 != null) {
@@ -467,7 +467,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mu_gamelist_all_games", false);
                 if (null != var2) {
-                  il.field_j = in.a(0, var2);
+                  MouseWheelInput.field_j = in.a(0, var2);
                 }
                 var2 = tk.a("mu_gamelist_status", false);
                 if (var2 != null) {
@@ -547,7 +547,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("add_x_to_ignore", false);
                 if (var2 != null) {
-                  mi.field_x = in.a(param0 + 0, var2);
+                  BitPacketBuffer.field_x = in.a(param0 + 0, var2);
                 }
                 var2 = tk.a("rm_x_from_friends", false);
                 if (var2 != null) {
@@ -675,7 +675,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("your_rating_is_x", false);
                 if (null != var2) {
-                  li.field_b = in.a(0, var2);
+                  IntrusiveNode.field_b = in.a(0, var2);
                 }
                 var2 = tk.a("you_are_on_x_server", false);
                 if (var2 != null) {
@@ -787,7 +787,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("accept", false);
                 if (var2 != null) {
-                  ma.field_k = in.a(0, var2);
+                  ImageProducerRasterBuffer.field_k = in.a(0, var2);
                 }
                 var2 = tk.a("reject", false);
                 if (var2 != null) {
@@ -819,7 +819,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("status_full", false);
                 if (var2 != null) {
-                  il.field_i = in.a(param0 ^ 0, var2);
+                  MouseWheelInput.field_i = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("players_in_game", false);
                 if (null != var2) {
@@ -931,7 +931,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("esc_cancelprivatemessage", false);
                 if (null != var2) {
-                  nj.field_c = in.a(0, var2);
+                  IntrusiveDeque.field_c = in.a(0, var2);
                 }
                 var2 = tk.a("esc_cancelthisline", false);
                 if (null != var2) {
@@ -959,7 +959,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("privatechat_friend_notlisted", false);
                 if (null != var2) {
-                  bj.field_b = in.a(0, var2);
+                  RandomAccessCacheFile.field_b = in.a(0, var2);
                 }
                 var2 = tk.a("chatviewscrolledup", false);
                 if (null != var2) {
@@ -1019,7 +1019,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("gameopt_younotmember", false);
                 if (var2 != null) {
-                  ed.field_r = in.a(0, var2);
+                  PacketBuffer.field_r = in.a(0, var2);
                 }
                 var2 = tk.a("gameopt_playerneedsrating", false);
                 if (null != var2) {
@@ -1035,7 +1035,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("gameopt_youneedratedgames", false);
                 if (null != var2) {
-                  tg.field_d = in.a(param0 + 0, var2);
+                  DelegatingCanvas.field_d = in.a(param0 + 0, var2);
                 }
                 var2 = tk.a("gameopt_playerneeds1ratedgame", false);
                 if (null != var2) {
@@ -1147,7 +1147,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("rule_0_1", false);
                 if (var2 != null) {
-                  ig.field_d = in.a(0, var2);
+                  SocketConnector.field_d = in.a(0, var2);
                 }
                 var2 = tk.a("rule_0_2", false);
                 if (var2 != null) {
@@ -1605,7 +1605,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("create_displayname", false);
                 if (null != var2) {
-                  kd.field_q = in.a(0, var2);
+                  GameShell.field_q = in.a(0, var2);
                 }
                 var2 = tk.a("create_password", false);
                 if (var2 != null) {
@@ -1661,7 +1661,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("create_select_alternative", false);
                 if (null != var2) {
-                  og.field_k = in.a(0, var2);
+                  GameApplet.field_k = in.a(0, var2);
                 }
                 var2 = tk.a("create_optin_news", false);
                 if (var2 != null) {
@@ -1753,7 +1753,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("create_age_tooltip", false);
                 if (var2 != null) {
-                  ed.field_s = in.a(param0 + 0, var2);
+                  PacketBuffer.field_s = in.a(param0 + 0, var2);
                 }
                 var2 = tk.a("create_optin_news_tooltip", false);
                 if (var2 != null) {
@@ -1785,7 +1785,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("create_username_unavailable", false);
                 if (null != var2) {
-                  wa.field_g = in.a(0, var2);
+                  IsaacCipher.field_g = in.a(0, var2);
                 }
                 var2 = tk.a("create_username_available", false);
                 if (var2 != null) {
@@ -1817,7 +1817,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("create_alert_passlength", false);
                 if (null != var2) {
-                  nj.field_f = in.a(0, var2);
+                  IntrusiveDeque.field_f = in.a(0, var2);
                 }
                 var2 = tk.a("create_alert_passcontainsname", false);
                 if (var2 != null) {
@@ -1837,7 +1837,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("create_alert_invalidemail", false);
                 if (var2 != null) {
-                  sr.field_d = in.a(0, var2);
+                  SecondaryNodeDeque.field_d = in.a(0, var2);
                 }
                 var2 = tk.a("create_alert_email_unavailable", false);
                 if (var2 != null) {
@@ -1913,7 +1913,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("ignorelistdupe", false);
                 if (null != var2) {
-                  lk.field_f = in.a(0, var2);
+                  RasterBuffer.field_f = in.a(0, var2);
                 }
                 var2 = tk.a("ignorenotfound", false);
                 if (var2 != null) {
@@ -1937,7 +1937,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("enterignore_add", false);
                 if (var2 != null) {
-                  gp.field_r = in.a(0, var2);
+                  DualLinkNode.field_r = in.a(0, var2);
                 }
                 var2 = tk.a("enterignore_del", false);
                 if (null != var2) {
@@ -2069,7 +2069,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("unpacking_levels", false);
                 if (var2 != null) {
-                  lk.field_g = in.a(0, var2);
+                  RasterBuffer.field_g = in.a(0, var2);
                 }
                 var2 = tk.a("unpacking_languages", false);
                 if (var2 != null) {
@@ -2101,7 +2101,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("music_colon", false);
                 if (var2 != null) {
-                  qi.field_f = in.a(0, var2);
+                  FullscreenFocusCanvas.field_f = in.a(0, var2);
                 }
                 var2 = tk.a("fullscreen", false);
                 if (var2 != null) {
@@ -2113,7 +2113,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("highscores", false);
                 if (var2 != null) {
-                  dg.field_c = in.a(0, var2);
+                  ClientException.field_c = in.a(0, var2);
                 }
                 var2 = tk.a("rankings", false);
                 if (var2 != null) {
@@ -2567,7 +2567,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mp_rematchnewgame_unrated", false);
                 if (null != var2) {
-                  kd.field_B = in.a(param0 + 0, var2);
+                  GameShell.field_B = in.a(param0 + 0, var2);
                 }
                 var2 = tk.a("mp_x_wantstodraw", false);
                 if (null != var2) {
@@ -2606,7 +2606,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("mp_x_hasresignedandleft", false);
                 if (var2 != null) {
-                  kd.field_m = in.a(param0 ^ 0, var2);
+                  GameShell.field_m = in.a(param0 ^ 0, var2);
                 }
                 var2 = tk.a("mp_x_hasresigned_rematch", false);
                 if (null != var2) {
@@ -2906,7 +2906,7 @@ final class wc extends da {
                 }
                 var2 = tk.a("fs_focus_or_resolution", false);
                 if (var2 != null) {
-                  lk.field_c = in.a(0, var2);
+                  RasterBuffer.field_c = in.a(0, var2);
                 }
                 var2 = tk.a("fs_timeout", false);
                 if (null != var2) {
@@ -3256,9 +3256,9 @@ final class wc extends da {
                   throw wn.a((Throwable) ((Object) stackIn_2643_0), ((StringBuilder) (Object) stackIn_2643_1).append(stackIn_2644_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  var4 = og.field_a;
+                  var4 = GameApplet.field_a;
                   var4++;
-                  og.field_a = var4;
+                  GameApplet.field_a = var4;
                 }
             }
         }

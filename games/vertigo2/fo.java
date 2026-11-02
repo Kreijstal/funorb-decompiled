@@ -80,7 +80,7 @@ final class fo {
         var4 = Vertigo2.field_L ? 1 : 0;
         if (!rg.field_b &&
           !kj.field_C) {
-          while (gf.a(false)) {
+          while (NodeHashTableIterator.a(false)) {
             if (de.field_f != 13) {
               this.d((byte) 106);
               if (-1 == this.field_a.field_c) {
@@ -143,7 +143,7 @@ final class fo {
             }
             gj.a((byte) 116, false, am.field_n, -1);
           }
-          this.field_a.a((byte) -29, this.a(31, ed.field_n, gb.field_d), this.a(121, sd.field_N, no.field_e));
+          this.field_a.a((byte) -29, this.a(31, PacketBuffer.field_n, gb.field_d), this.a(121, sd.field_N, no.field_e));
           if (this.field_a.field_c != -1) {
             this.b(this.field_a.field_c, true, 404);
           }
@@ -155,17 +155,17 @@ final class fo {
           if (this.field_b != 9 &&
             this.field_b != 10) {
             if (13 == this.field_b) {
-              for (var2 = 0; var2 < qi.field_d.field_k.length; var2++) {
-                stackIn_78_0 = qi.field_d.field_y;
+              for (var2 = 0; var2 < FullscreenFocusCanvas.field_d.field_k.length; var2++) {
+                stackIn_78_0 = FullscreenFocusCanvas.field_d.field_y;
                 stackIn_78_1 = var2;
                 stackIn_79_2 = !(t.field_l < var2);
                 stackIn_78_0[stackIn_78_1] = stackIn_79_2;
               }
-              if (0 <= qi.field_d.field_t) {
-                if (t.field_l >= qi.field_d.field_t &&
-                  wi.field_f != qi.field_d.field_t) {
-                  lb.field_d.a((byte) 99, qi.field_d.field_t, kn.field_h[0][qi.field_d.field_t]);
-                  wi.field_f = qi.field_d.field_t;
+              if (0 <= FullscreenFocusCanvas.field_d.field_t) {
+                if (t.field_l >= FullscreenFocusCanvas.field_d.field_t &&
+                  wi.field_f != FullscreenFocusCanvas.field_d.field_t) {
+                  lb.field_d.a((byte) 99, FullscreenFocusCanvas.field_d.field_t, kn.field_h[0][FullscreenFocusCanvas.field_d.field_t]);
+                  wi.field_f = FullscreenFocusCanvas.field_d.field_t;
                   gm.a(29, (byte) -55);
                 }
                 if (tf.field_l != null &&
@@ -178,8 +178,8 @@ final class fo {
                   tf.field_l.a(lb.field_d, 0, -88);
                 }
               }
-              qi.field_d.b(false);
-              if (!(!qi.field_d.c(-71))) {
+              FullscreenFocusCanvas.field_d.b(false);
+              if (!(!FullscreenFocusCanvas.field_d.c(-71))) {
                 this.a(true, (byte) -120, true, 1);
               }
             } else {
@@ -235,7 +235,7 @@ final class fo {
     private final void f(int param0) {
         int var4 = Vertigo2.field_L ? 1 : 0;
         if (!am.field_b &&
-          !ed.field_q) {
+          !PacketBuffer.field_q) {
           return;
         }
         if (param0 != 380) {
@@ -281,7 +281,7 @@ final class fo {
     private final void a(boolean param0, byte param1) {
         int var4 = 0;
         int var3 = 54 % ((param1 + 46) / 59);
-        oa.field_q = this.a(param0, ed.field_n, (byte) 121, gb.field_d);
+        oa.field_q = this.a(param0, PacketBuffer.field_n, (byte) 121, gb.field_d);
         if (kf.field_c == 1) {
           var4 = this.a(param0, sd.field_N, (byte) 119, no.field_e);
           if (qc.field_t == var4) {
@@ -317,18 +317,18 @@ final class fo {
         int var2Lifetime3;
         var3 = Vertigo2.field_L ? 1 : 0;
         jq.a(87, 160, 180, 320, 140);
-        if (null == ig.field_c) {
+        if (null == SocketConnector.field_c) {
           return;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (fm.field_d < ig.field_c[cg.field_d]) {
-          va.field_s.a(16777215, (byte) 120, -1, 180, Vertigo2.a(new String[]{Integer.toString(1 + cg.field_d)}, fa.field_r, -123), 210);
+        if (fm.field_d < SocketConnector.field_c[GameKeyHandler.field_d]) {
+          va.field_s.a(16777215, (byte) 120, -1, 180, Vertigo2.a(new String[]{Integer.toString(1 + GameKeyHandler.field_d)}, fa.field_r, -123), 210);
           tk.field_c.a(Vertigo2.a(new String[]{gl.a(-36, true, false, fm.field_d)}, wq.field_L, -121), 460, 240, 16777215, -1);
-          tk.field_c.a(Vertigo2.a(new String[]{gl.a(-99, true, false, (int) ig.field_c[cg.field_d])}, or.field_g, -20), 460, 260, 16777215, -1);
-          tk.field_c.a(Vertigo2.a(new String[]{gl.a(-65, true, false, -fm.field_d + ig.field_c[cg.field_d])}, to.field_f, -120), 460, 280, 65280, -1);
-          if (te.field_B[cg.field_d] < fm.field_d) {
-            if (fm.field_d <= sf.field_e[cg.field_d]) {
-              if (ig.field_c[cg.field_d] > sf.field_e[cg.field_d]) {
+          tk.field_c.a(Vertigo2.a(new String[]{gl.a(-99, true, false, (int) SocketConnector.field_c[GameKeyHandler.field_d])}, or.field_g, -20), 460, 260, 16777215, -1);
+          tk.field_c.a(Vertigo2.a(new String[]{gl.a(-65, true, false, -fm.field_d + SocketConnector.field_c[GameKeyHandler.field_d])}, to.field_f, -120), 460, 280, 65280, -1);
+          if (te.field_B[GameKeyHandler.field_d] < fm.field_d) {
+            if (fm.field_d <= sf.field_e[GameKeyHandler.field_d]) {
+              if (SocketConnector.field_c[GameKeyHandler.field_d] > sf.field_e[GameKeyHandler.field_d]) {
                 tk.field_c.b(hd.field_h, 180, 240, 16777215, -1);
                 kq.field_Kb.c(208, 256);
                 var2 = -24 % ((33 - param0) / 60);
@@ -340,12 +340,12 @@ final class fo {
               decompiledFrameRemainder0 = false;
             }
             else {
-              if (bp.field_E[cg.field_d] < fm.field_d) {
+              if (bp.field_E[GameKeyHandler.field_d] < fm.field_d) {
                 var2Lifetime2 = -24 % ((33 - param0) / 60);
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (ig.field_c[cg.field_d] <= bp.field_E[cg.field_d]) {
+                if (SocketConnector.field_c[GameKeyHandler.field_d] <= bp.field_E[GameKeyHandler.field_d]) {
                   tk.field_c.b(ke.field_c, 180, 240, 16777215, -1);
                   hh.field_a.c(208, 256);
                 } else {
@@ -355,25 +355,25 @@ final class fo {
               }
             }
           } else {
-            if (te.field_B[cg.field_d] < ig.field_c[cg.field_d]) {
+            if (te.field_B[GameKeyHandler.field_d] < SocketConnector.field_c[GameKeyHandler.field_d]) {
               tk.field_c.b(hd.field_h, 180, 240, 16777215, -1);
-              il.field_c.c(208, 256);
+              MouseWheelInput.field_c.c(208, 256);
             } else {
               tk.field_c.b(ke.field_c, 180, 240, 16777215, -1);
-              il.field_c.c(208, 256);
+              MouseWheelInput.field_c.c(208, 256);
             }
           }
         } else {
-          va.field_s.a(16777215, (byte) 124, -1, 180, Vertigo2.a(new String[]{Integer.toString(1 + cg.field_d)}, vq.field_k, -11), 210);
+          va.field_s.a(16777215, (byte) 124, -1, 180, Vertigo2.a(new String[]{Integer.toString(1 + GameKeyHandler.field_d)}, vq.field_k, -11), 210);
           tk.field_c.a(Vertigo2.a(new String[]{gl.a(-89, true, false, fm.field_d)}, wq.field_L, -127), 460, 240, 16777215, -1);
-          tk.field_c.a(Vertigo2.a(new String[]{gl.a(-72, true, false, (int) ig.field_c[cg.field_d])}, he.field_t, 62), 460, 260, 16777215, -1);
-          tk.field_c.a(Vertigo2.a(new String[]{gl.a(-48, true, false, fm.field_d - ig.field_c[cg.field_d])}, lr.field_K, 39), 460, 280, 16711680, -1);
+          tk.field_c.a(Vertigo2.a(new String[]{gl.a(-72, true, false, (int) SocketConnector.field_c[GameKeyHandler.field_d])}, he.field_t, 62), 460, 260, 16777215, -1);
+          tk.field_c.a(Vertigo2.a(new String[]{gl.a(-48, true, false, fm.field_d - SocketConnector.field_c[GameKeyHandler.field_d])}, lr.field_K, 39), 460, 280, 16711680, -1);
           tk.field_c.b(ke.field_c, 180, 240, 16777215, -1);
-          if (ig.field_c[cg.field_d] <= te.field_B[cg.field_d]) {
-            il.field_c.c(208, 256);
+          if (SocketConnector.field_c[GameKeyHandler.field_d] <= te.field_B[GameKeyHandler.field_d]) {
+            MouseWheelInput.field_c.c(208, 256);
           } else {
-            if (sf.field_e[cg.field_d] < ig.field_c[cg.field_d]) {
-              if (ig.field_c[cg.field_d] <= bp.field_E[cg.field_d]) {
+            if (sf.field_e[GameKeyHandler.field_d] < SocketConnector.field_c[GameKeyHandler.field_d]) {
+              if (SocketConnector.field_c[GameKeyHandler.field_d] <= bp.field_E[GameKeyHandler.field_d]) {
                 hh.field_a.c(208, 256);
               }
             } else {
@@ -430,16 +430,16 @@ final class fo {
         rq.a(100, 600, 100, 20, 63, 150);
         rq.a(200, 600, 210, 20, 69, 150);
         for (var7 = 0; var7 < hi.field_i.length; var7++) {
-          L14: {
+          regionExit1: {
             if (0 == (var5 & 1 << var7)) {
               if (param1) {
-                break L14;
+                break regionExit1;
               }
               if (var7 == 12 &&
                 !on.a((byte) -104, 0)) {
-                break L14;
+                break regionExit1;
               }
-              var8_ref_er = vp.field_b;
+              var8_ref_er = IntrusiveDequeCursor.field_b;
             } else {
               var8_ref_er = vj.field_b[var7];
             }
@@ -485,7 +485,7 @@ final class fo {
             }
             var10 = 240;
             if (var9 == 0) {
-              vp.field_b.e(80, var10);
+              IntrusiveDequeCursor.field_b.e(80, var10);
             } else {
               ((fe) (vj.field_b[var7Lifetime1])).e(80, var10);
             }
@@ -494,7 +494,7 @@ final class fo {
             var10 = var10 + va.field_s.field_j;
             var12 = 128 + var11 - va.field_s.field_j;
             var13 = new String[16];
-            var14 = nj.field_i[var7Lifetime1];
+            var14 = IntrusiveDeque.field_i[var7Lifetime1];
             if (var9 == 0 &&
               var7Lifetime1 == 12) {
               var14 = iq.field_z;
@@ -508,7 +508,7 @@ final class fo {
             tk.field_c.b(vl.field_f, 250, -tk.field_c.field_M + var12, 16777215, -1);
             var16Lifetime1 = tk.field_c.c(vl.field_f) + 250;
             var17 = -((k.field_c.field_t + va.field_s.field_j) / 2) + (var12 - tk.field_c.field_M);
-            for (var18 = 0; var18 < sa.field_d[var7Lifetime1]; var18++) {
+            for (var18 = 0; var18 < MouseInputHandler.field_d[var7Lifetime1]; var18++) {
               k.field_c.e(var16Lifetime1, var17);
               var16Lifetime1 = var16Lifetime1 + k.field_c.field_y / 3;
             }
@@ -579,7 +579,7 @@ final class fo {
           va.field_s.a(16777215, (byte) 103, -1, var4, we.field_H, var6);
           va.field_s.a(var5 + var4, param0 ^ -27, 16777215, var6, -1, Integer.toString(1 + param1.b(-6133)));
           var6 += 20;
-          if (!ed.field_q) {
+          if (!PacketBuffer.field_q) {
             va.field_s.a(16777215, (byte) 103, -1, var4, w.field_B, var6);
             va.field_s.a(var5 + var4, param0 - 25, 16777215, var6, -1, Integer.toString(param1.field_h));
             var6 += 20;
@@ -610,12 +610,12 @@ final class fo {
         if (13 == this.field_b) {
           if ((de.field_f != 96 &&
             de.field_f != 97) &&
-            (decompiledFrameRemainder0 = !(!qi.field_d.field_e))) {
+            (decompiledFrameRemainder0 = !(!FullscreenFocusCanvas.field_d.field_e))) {
             return;
           }
           if (decompiledFrameRemainder0) {
-            stackIn_7_0 = qi.field_d;
-            stackIn_8_1 = !(qi.field_d.field_e);
+            stackIn_7_0 = FullscreenFocusCanvas.field_d;
+            stackIn_8_1 = !(FullscreenFocusCanvas.field_d.field_e);
             stackIn_7_0.field_e = stackIn_8_1;
           }
         }
@@ -782,7 +782,7 @@ final class fo {
         var9 = this.a(param0, (byte) -80) + this.c(param0, (byte) -116) / 2;
         if (var4 == 20 ||
           21 == var4) {
-          var6 = kd.field_x + 120;
+          var6 = GameShell.field_x + 120;
         }
         var10 = -var6 + var8 + var7 >> 1;
         var11 = -var7 + var8;
@@ -829,9 +829,9 @@ final class fo {
           var4 != 21) {
           return;
         }
-        var10 = var10 + kd.field_x;
+        var10 = var10 + GameShell.field_x;
         if (var4 == 20) {
-          stackIn_64_0 = tg.field_e * 120 / 256;
+          stackIn_64_0 = DelegatingCanvas.field_e * 120 / 256;
         } else {
           stackIn_64_0 = 120 * nd.field_k / 128;
         }
@@ -974,7 +974,7 @@ final class fo {
         lj var7;
         var6 = Vertigo2.field_L ? 1 : 0;
         if (!am.field_b &&
-          !ed.field_q) {
+          !PacketBuffer.field_q) {
           return;
         }
         if (am.field_b) {
@@ -1142,7 +1142,7 @@ final class fo {
         if (var3 != 0) {
           var5 = 2;
         }
-        L5: {
+        regionExit1: {
           if (!var4.field_s) {
             var2 = b.field_f;
           } else {
@@ -1193,7 +1193,7 @@ final class fo {
                 tk.field_c.b(qe.field_V, 60, var8, 15637810, -1);
                 tk.field_c.a(Integer.toString(var10Lifetime1), 360, var8, 15637810, -1);
               }
-              break L5;
+              break regionExit1;
             }
             var2 = sd.field_G;
           }
@@ -1265,16 +1265,16 @@ final class fo {
           this.field_a.a(84)) {
           e.a(on.field_b[0][0], false);
         }
-        if (qi.field_d.field_t >= 0) {
-          stackIn_11_0 = qi.field_d.field_t;
+        if (FullscreenFocusCanvas.field_d.field_t >= 0) {
+          stackIn_11_0 = FullscreenFocusCanvas.field_d.field_t;
         } else {
           stackIn_11_0 = 0;
         }
-        L3: {
+        regionExit1: {
           var6 = stackIn_11_0;
           var8 = var5;
           if (0 != var8) {
-            L4: {
+            regionExit2: {
               if (var8 == 28) {
                 if (this.field_a.a(84)) {
                   var8 = param2 ? 1 : 0;
@@ -1286,7 +1286,7 @@ final class fo {
                     var8 = param2 ? 1 : 0;
                     gj.a((byte) -60, var8 != 0, am.field_n, -7);
                   }
-                  break L3;
+                  break regionExit1;
                 }
                 if (32 == var8) {
                   if (!(!this.field_a.a(84))) {
@@ -1306,7 +1306,7 @@ final class fo {
                       if (!qe.field_V.equals("")) {
                         var9_ref_String = qe.field_V;
                       } else {
-                        var9_ref_String = ed.field_o;
+                        var9_ref_String = PacketBuffer.field_o;
                       }
                       tf.field_l = new am(0, 1, new String[]{var9_ref_String});
                       mh.field_a = false;
@@ -1314,14 +1314,14 @@ final class fo {
                       gj.a((byte) 55, var10 != 0, am.field_n, 19);
                     }
                   }
-                  break L3;
+                  break regionExit1;
                 }
                 if (33 == var8) {
                   if (!(!this.field_a.a(84))) {
                     var8 = param2 ? 1 : 0;
                     gj.a((byte) -51, var8 != 0, am.field_n, -6);
                   }
-                  break L3;
+                  break regionExit1;
                 }
                 if (var8 == 34) {
                   if (!(!this.field_a.a(84))) {
@@ -1334,7 +1334,7 @@ final class fo {
                       lb.field_d = new bh(0, jm.field_E, false, false);
                       lb.field_d.a((byte) -51, var6, kn.field_h[0][var6]);
                       if (null == qe.field_V) {
-                        var8_ref_String = ed.field_o;
+                        var8_ref_String = PacketBuffer.field_o;
                       } else {
                         var8_ref_String = qe.field_V;
                       }
@@ -1343,7 +1343,7 @@ final class fo {
                       gj.a((byte) -87, var9 != 0, am.field_n, 13);
                     }
                   }
-                  break L3;
+                  break regionExit1;
                 }
                 if (var8 == 1) {
                   if (!(!this.field_a.a(84))) {
@@ -1355,26 +1355,26 @@ final class fo {
                       gj.a((byte) 70, var8 != 0, am.field_n, -4);
                     }
                   }
-                  break L3;
+                  break regionExit1;
                 }
                 if (var8 == 2) {
                   if (!(!this.field_a.a(84))) {
                     var8 = param2 ? 1 : 0;
                     gj.a((byte) -90, var8 != 0, am.field_n, -1);
                   }
-                  break L3;
+                  break regionExit1;
                 }
                 if (7 == var8) {
                   if (!(!this.field_a.a(84))) {
                     if (this.field_b == 11) {
-                      il.field_a = false;
+                      MouseWheelInput.field_a = false;
                       an.field_c = true;
                       lc.field_d = false;
                     }
                     var8 = param2 ? 1 : 0;
                     gj.a((byte) -74, var8 != 0, am.field_n, 0);
                   }
-                  break L3;
+                  break regionExit1;
                 }
                 if (var8 == 24) {
                   if (this.field_a.a(84)) {
@@ -1390,7 +1390,7 @@ final class fo {
                         var8 = param2 ? 1 : 0;
                         gj.a((byte) 33, var8 != 0, am.field_n, 7);
                       }
-                      break L3;
+                      break regionExit1;
                     }
                     if (var8 == 8) {
                       if (this.field_a.a(84)) {
@@ -1404,7 +1404,7 @@ final class fo {
                           var8 = param2 ? 1 : 0;
                           gj.a((byte) -90, var8 != 0, am.field_n, 6);
                         }
-                        break L3;
+                        break regionExit1;
                       }
                       if (var8 == 3) {
                         if (!(!this.field_a.a(84))) {
@@ -1416,23 +1416,23 @@ final class fo {
                             gj.a((byte) 92, var8 != 0, am.field_n, 5);
                           }
                         }
-                        break L3;
+                        break regionExit1;
                       }
                       if (var8 == 20) {
                         var7 = 0;
                         if (this.field_a.a((byte) 45) &&
-                          0 < tg.field_e) {
+                          0 < DelegatingCanvas.field_e) {
                           var7 = 1;
                           pk.b(106, 0);
                         }
                         if (this.field_a.c(0) &&
-                          tg.field_e < 256) {
+                          DelegatingCanvas.field_e < 256) {
                           var7 = 1;
                           pk.b(31, 256);
                         }
                         if (this.field_a.b((byte) 85)) {
-                          var8 = this.b(param3, 26) - (-this.a(param3, 127) - kd.field_x) - 120 >> 1;
-                          var9Lifetime1 = ed.field_n - var8;
+                          var8 = this.b(param3, 26) - (-this.a(param3, 127) - GameShell.field_x) - 120 >> 1;
+                          var9Lifetime1 = PacketBuffer.field_n - var8;
                           var10Lifetime1 = var9Lifetime1 * 256 / 120;
                           var7 = 1;
                           if (var10Lifetime1 > 0) {
@@ -1446,24 +1446,24 @@ final class fo {
                           }
                         }
                         if (this.field_a.b(-101) &&
-                          0 < tg.field_e) {
+                          0 < DelegatingCanvas.field_e) {
                           var7 = 1;
                           dk.d((byte) -94);
                         }
                         if (this.field_a.d(-98) &&
-                          tg.field_e < 256) {
+                          DelegatingCanvas.field_e < 256) {
                           var7 = 1;
                           ti.b(10);
                         }
                         if ((var7 != 0)) {
                           if (this.field_a.b((byte) 85) &&
                             rg.field_f <= dc.field_O) {
-                            break L4;
+                            break regionExit2;
                           }
                           e.a(on.field_b[0][0], false);
                           dc.field_O = rg.field_f + 20;
                         }
-                        break L3;
+                        break regionExit1;
                       }
                       if (var8 == 21) {
                         if (this.field_a.a((byte) 45)) {
@@ -1473,8 +1473,8 @@ final class fo {
                           hj.a(128, (byte) 124);
                         }
                         if (this.field_a.b((byte) 85)) {
-                          var8 = -120 + (this.b(param3, 49) + this.a(param3, 127)) + kd.field_x >> 1;
-                          var9Lifetime1 = -var8 + ed.field_n;
+                          var8 = -120 + (this.b(param3, 49) + this.a(param3, 127)) + GameShell.field_x >> 1;
+                          var9Lifetime1 = -var8 + PacketBuffer.field_n;
                           var10Lifetime1Lifetime1 = var9Lifetime1 * 128 / 120;
                           if (0 >= var10Lifetime1Lifetime1) {
                             hj.a(0, (byte) 122);
@@ -1498,17 +1498,17 @@ final class fo {
                         if (!(nd.field_k > 0)) {
                           hj.a(0, (byte) 122);
                         }
-                        break L3;
+                        break regionExit1;
                       }
                       if (6 == var8) {
                         if (!(!this.field_a.a(84))) {
                           if (dc.field_L != null) {
                             cp.a((byte) 125);
                           } else {
-                            ig.a(9790, param2);
+                            SocketConnector.a(9790, param2);
                           }
                         }
-                        break L3;
+                        break regionExit1;
                       }
                       if (var8 == 30) {
                         if (!(!this.field_a.a(84))) {
@@ -1517,9 +1517,9 @@ final class fo {
                           if (te.field_H.length <= var8) {
                             var8 = 0;
                           }
-                          mi.k(-32460, var8);
+                          BitPacketBuffer.k(-32460, var8);
                         }
-                        break L3;
+                        break regionExit1;
                       }
                       if (var8 != 9) {
                         if (var8 == 10) {
@@ -1528,7 +1528,7 @@ final class fo {
                             var8 = param2 ? 1 : 0;
                             gj.a((byte) 94, var8 != 0, am.field_n, -1);
                           }
-                          break L3;
+                          break regionExit1;
                         }
                         if (var8 != 11) {
                           if (12 != var8) {
@@ -1546,7 +1546,7 @@ final class fo {
                                   var13.a(2, param2);
                                   an.field_c = true;
                                   lc.field_d = false;
-                                  break L3;
+                                  break regionExit1;
                                 }
                                 if (var13.field_D.field_j == 3) {
                                   mh.field_a = false;
@@ -1561,44 +1561,44 @@ final class fo {
                               if (13 != var8) {
                                 if (var8 == 14) {
                                   if (!this.field_a.a(84)) {
-                                    break L4;
+                                    break regionExit2;
                                   }
                                   nf.field_v = 0;
-                                  break L3;
+                                  break regionExit1;
                                 }
                                 if (var8 == 15) {
                                   if (!this.field_a.a(84)) {
-                                    break L4;
+                                    break regionExit2;
                                   }
                                   nf.field_v = 1;
-                                  break L3;
+                                  break regionExit1;
                                 }
                                 if (var8 == 16) {
                                   if (!this.field_a.a(84)) {
-                                    break L4;
+                                    break regionExit2;
                                   }
                                   nf.field_v = 2;
-                                  break L3;
+                                  break regionExit1;
                                 }
                                 if (var8 == 36) {
                                   if (!this.field_a.a(84)) {
-                                    break L4;
+                                    break regionExit2;
                                   }
                                   nf.field_v = 4;
-                                  break L3;
+                                  break regionExit1;
                                 }
                                 if (var8 == 17) {
                                   if (!(!this.field_a.a(84))) {
                                     vl.field_k = 0;
                                   }
-                                  break L3;
+                                  break regionExit1;
                                 }
                                 if (var8 == 18) {
                                   if (!this.field_a.a(84)) {
-                                    break L4;
+                                    break regionExit2;
                                   }
                                   vl.field_k = 1;
-                                  break L3;
+                                  break regionExit1;
                                 }
                                 if (var8 == 23) {
                                   if (!(!this.field_a.a(84))) {
@@ -1611,55 +1611,55 @@ final class fo {
                                         this.field_b != 6 &&
                                         this.field_b != 13 &&
                                         this.field_b != 19) {
-                                        break L4;
+                                        break regionExit2;
                                       }
                                       ip.a((byte) -99, oc.field_x, this.field_b);
                                     }
                                   }
-                                  break L3;
+                                  break regionExit1;
                                 }
                                 if (var8 == 25) {
                                   if (!this.field_a.a(84)) {
-                                    break L4;
+                                    break regionExit2;
                                   }
                                   if (!this.b(param3, (byte) 72)) {
-                                    break L4;
+                                    break regionExit2;
                                   }
                                   jq.field_b = jq.field_b - 1;
-                                  break L3;
+                                  break regionExit1;
                                 }
                                 if (var8 == 26) {
                                   if (!this.field_a.a(84)) {
-                                    break L4;
+                                    break regionExit2;
                                   }
                                   if (!this.b(param3, (byte) 111)) {
-                                    break L4;
+                                    break regionExit2;
                                   }
                                   jq.field_b = jq.field_b + 1;
-                                  break L3;
+                                  break regionExit1;
                                 }
                                 if (var8 == 19) {
                                   if (!(!this.field_a.a(84))) {
                                     sf.a(ob.e((byte) -95), -115);
                                   }
-                                  break L3;
+                                  break regionExit1;
                                 }
                                 if (var8 == 29) {
                                   if (!(!this.field_a.a(84))) {
                                     var8 = param2 ? 1 : 0;
                                     gj.a((byte) 54, var8 != 0, am.field_n, 17);
                                   }
-                                  break L3;
+                                  break regionExit1;
                                 }
                                 if (var8 != 31) {
-                                  break L3;
+                                  break regionExit1;
                                 }
                                 if (!this.field_a.a(84)) {
-                                  break L3;
+                                  break regionExit1;
                                 }
                                 var8 = param2 ? 1 : 0;
                                 gj.a((byte) -98, var8 != 0, am.field_n, 18);
-                                break L4;
+                                break regionExit2;
                               }
                             }
                             if ((this.field_a.a(84) ||
@@ -1668,11 +1668,11 @@ final class fo {
                                 var8 = param2 ? 1 : 0;
                                 gj.a((byte) 92, var8 != 0, am.field_n, -5);
                               }
-                              if (!(!ed.field_q)) {
+                              if (!(!PacketBuffer.field_q)) {
                                 bs.a(11, (byte) -47, 0);
                               }
                             }
-                            break L3;
+                            break regionExit1;
                           }
                           if (this.field_a.a(84)) {
                             ln.field_d.b(-27588);
@@ -1724,7 +1724,7 @@ final class fo {
         if (0 < this.field_a.field_c) {
           param2 = this.field_a.field_c;
         }
-        this.field_a.a(param1, this.a(110, ed.field_n, gb.field_d), param2, (byte) 80);
+        this.field_a.a(param1, this.a(110, PacketBuffer.field_n, gb.field_d), param2, (byte) 80);
         qc.field_t = -1;
         dc.field_O = rg.field_f;
         oa.field_q = -1;
@@ -1750,12 +1750,12 @@ final class fo {
         er var2_ref_er;
         int var3;
         er var4;
-        L0: {
+        regionExit1: {
           var3 = Vertigo2.field_L ? 1 : 0;
           if (this.field_b == 0) {
             uq.field_a.e(-70, 480 - (uq.field_a.field_t + 20));
             eq.field_F.e(50, 10);
-            rq.a(this.a(this.field_a.field_b - 1, (byte) -80) + (this.c(-1 + this.field_a.field_b, (byte) -116) - (this.a(0, (byte) -80) - 2 * li.field_f)), this.a(0, -99) + (-this.b(0, 24) + 2 * li.field_f), this.a(0, (byte) -80) - li.field_f, this.b(0, param0 ^ -17) - li.field_f, -101, 150);
+            rq.a(this.a(this.field_a.field_b - 1, (byte) -80) + (this.c(-1 + this.field_a.field_b, (byte) -116) - (this.a(0, (byte) -80) - 2 * IntrusiveNode.field_f)), this.a(0, -99) + (-this.b(0, 24) + 2 * IntrusiveNode.field_f), this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, param0 ^ -17) - IntrusiveNode.field_f, -101, 150);
           } else {
             if (this.field_b != 17 &&
               this.field_b != 18 &&
@@ -1773,7 +1773,7 @@ final class fo {
                   }
                   oo.b();
                   rq.a(320, 280, 100, 30, 86, 150);
-                  qi.field_d.b(param0 + 116);
+                  FullscreenFocusCanvas.field_d.b(param0 + 116);
                 } else {
                   if (19 == this.field_b) {
                     if (null != tf.field_l &&
@@ -1785,14 +1785,14 @@ final class fo {
                     rq.a(320, 280, 100, 30, 75, 150);
                     ap.field_d.b(2);
                     rq.a(160, 148, 100, 330, 91, 150);
-                    if (ig.field_c != null) {
-                      var2 = ig.field_c[ap.field_d.field_t];
-                      if (null != ig.field_c &&
+                    if (SocketConnector.field_c != null) {
+                      var2 = SocketConnector.field_c[ap.field_d.field_t];
+                      if (null != SocketConnector.field_c &&
                         ap.field_d.field_t >= 0 &&
                         ap.field_d.field_t < 50) {
                         tk.field_c.c(Vertigo2.a(new String[]{gl.a(-49, true, false, var2)}, wq.field_L, ~param0), 404, 125, 16777215, -1);
                       }
-                      il.field_c.a(350, 140, 28, 26);
+                      MouseWheelInput.field_c.a(350, 140, 28, 26);
                       tk.field_c.b(gl.a(-42, false, false, te.field_B[ap.field_d.field_t]), 390, 160, 16777215, -1);
                       kq.field_Kb.a(350, 175, 28, 26);
                       tk.field_c.b(gl.a(param0 + 1, false, false, sf.field_e[ap.field_d.field_t]), 390, 195, 16777215, -1);
@@ -1864,11 +1864,11 @@ final class fo {
                   }
                 }
               } else {
-                rq.a(this.a(-1 + this.field_a.field_b, (byte) -80) + this.c(this.field_a.field_b - 1, (byte) -116) - this.a(0, (byte) -80) + li.field_f * 2, this.a(0, 127) - this.b(0, 89) + 2 * li.field_f, this.a(0, (byte) -80) - li.field_f, this.b(0, 25) - li.field_f, -72, 150);
+                rq.a(this.a(-1 + this.field_a.field_b, (byte) -80) + this.c(this.field_a.field_b - 1, (byte) -116) - this.a(0, (byte) -80) + IntrusiveNode.field_f * 2, this.a(0, 127) - this.b(0, 89) + 2 * IntrusiveNode.field_f, this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, 25) - IntrusiveNode.field_f, -72, 150);
               }
-              break L0;
+              break regionExit1;
             }
-            rq.a(this.a(-2 + this.field_a.field_b, (byte) -80) - (-this.c(this.field_a.field_b - 2, (byte) -116) + this.a(0, (byte) -80)) + 2 * li.field_f, this.a(0, param0 + 239) - this.b(0, 119) + 2 * li.field_f, this.a(0, (byte) -80) - li.field_f, this.b(0, 17) - li.field_f, param0 + 51, 150);
+            rq.a(this.a(-2 + this.field_a.field_b, (byte) -80) - (-this.c(this.field_a.field_b - 2, (byte) -116) + this.a(0, (byte) -80)) + 2 * IntrusiveNode.field_f, this.a(0, param0 + 239) - this.b(0, 119) + 2 * IntrusiveNode.field_f, this.a(0, (byte) -80) - IntrusiveNode.field_f, this.b(0, 17) - IntrusiveNode.field_f, param0 + 51, 150);
           }
         }
         if (0 <= this.field_b &&
@@ -1924,7 +1924,7 @@ final class fo {
         if (!param0) {
           this.f(1);
         }
-        L2: {
+        regionExit1: {
           var3 = 16777215;
           va.field_s.a(var3, (byte) 123, -1, 48, ni.field_c, var2 - 10);
           va.field_s.a(ej.field_e, var3, -1, pn.field_K[0], var2 - 10, 2);
@@ -1957,7 +1957,7 @@ final class fo {
                 var3Lifetime1Lifetime1 = 16777215;
                 this.a(wh.field_D.field_u, var2, wh.field_D.field_p, (byte) 30, wh.field_D.field_y, -1, qe.field_V, var3Lifetime1Lifetime1, wh.field_D.field_s);
               }
-              break L2;
+              break regionExit1;
             }
             var4 = sd.field_G;
           }

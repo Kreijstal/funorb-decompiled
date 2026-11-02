@@ -33,7 +33,7 @@ final class gr extends sp implements ij {
           var3 = null;
           if (param1 != b.field_d) {
             if (sd.field_I != param1) {
-              if (el.field_d == param1) {
+              if (IterableNodeHashTable.field_d == param1) {
                 var3 = w.field_D;
                 this.field_s = this.field_s + 30;
               }
@@ -42,7 +42,7 @@ final class gr extends sp implements ij {
               this.field_s = this.field_s + 10;
               if (ui.c(-101)) {
                 this.field_s = this.field_s + 20;
-                var3 = lk.field_c;
+                var3 = RasterBuffer.field_c;
               }
             }
           } else {

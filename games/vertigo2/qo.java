@@ -3,7 +3,7 @@
  */
 final class qo extends ji {
     private jq[] field_z;
-    static nj field_B;
+    static IntrusiveDeque field_B;
     static lg field_A;
     static er field_y;
     static String field_E;
@@ -65,7 +65,7 @@ final class qo extends ji {
         return var3;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         boolean stackIn_19_1 = false;
         RuntimeException stackIn_25_0 = null;
@@ -193,6 +193,6 @@ final class qo extends ji {
 
     static {
         field_E = "You cannot chat to <%0> because <%0> is offline in your friend list.";
-        field_B = new nj();
+        field_B = new IntrusiveDeque();
     }
 }

@@ -7,7 +7,7 @@ final class di extends ji {
     static String field_y;
     private int field_z;
 
-    final static jp a(mi param0, boolean param1) {
+    final static jp a(BitPacketBuffer param0, boolean param1) {
         int var7 = 0;
         jp stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
@@ -208,7 +208,7 @@ final class di extends ji {
         int var3 = Vertigo2.field_L ? 1 : 0;
         int var1_intLifetime1;
         try {
-          wa.field_i.b(-1);
+          IsaacCipher.field_i.b(-1);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             l.field_b[var1_int] = 0L;
           }
@@ -235,7 +235,7 @@ final class di extends ji {
         ui.field_g = 2;
         CharSequence var5 = (CharSequence) ((Object) param2);
         sm.field_Kb = rc.a(var5, 320);
-        il.field_a = true;
+        MouseWheelInput.field_a = true;
         if (param0 <= 14) {
           return;
         }
@@ -311,7 +311,7 @@ final class di extends ji {
         return var3;
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
         boolean stackIn_14_1 = false;

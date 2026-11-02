@@ -36,27 +36,27 @@ final class lf extends ji {
           Throwable decompiledCaughtException = null;
           if (lo.field_k != null && (0 > param1 ||
             bm.field_I == rg.field_d)) {
-            if (0 == uh.field_Wb.field_u &&
+            if (0 == uh.field_Wb.position &&
               (10000L + bm.field_H) < gk.a(55)) {
               uh.field_Wb.j(param1, 121);
             }
             if (param0 <= 37) {
               lf.g(-114);
             }
-            if (uh.field_Wb.field_u > 0) {
+            if (uh.field_Wb.position > 0) {
               try {
-                lo.field_k.a(0, uh.field_Wb.field_u, -93, uh.field_Wb.field_p);
+                lo.field_k.a(0, uh.field_Wb.position, -93, uh.field_Wb.payload);
                 bm.field_H = gk.a(48);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 rm.b((byte) 115);
               }
-              uh.field_Wb.field_u = 0;
+              uh.field_Wb.position = 0;
             }
             return;
           }
-          uh.field_Wb.field_u = 0;
+          uh.field_Wb.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

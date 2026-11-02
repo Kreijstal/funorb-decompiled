@@ -56,7 +56,7 @@ final class in {
         }
         mn.b(param9, -127);
         if (rk.field_y > 0) {
-          dg.a(0, param5, param9, param3);
+          ClientException.a(0, param5, param9, param3);
         }
         if (param8 != -66) {
           in.a((byte) -46, -104);
@@ -73,14 +73,14 @@ final class in {
           gd.field_j.field_Qb >= gd.field_j.field_uc) {
           im.field_j.field_lb = false;
           ja.field_f.field_Lb.field_S = fg.field_db;
-          tg.a(0, ja.field_f.field_Nb);
+          DelegatingCanvas.a(0, ja.field_f.field_Nb);
         } else {
           im.field_j.field_lb = true;
           ja.field_f.field_Lb.field_S = null;
-          dg.a((byte) -86, ja.field_f, param1, param6, param5);
+          ClientException.a((byte) -86, ja.field_f, param1, param6, param5);
         }
         uo.a(param7, param2, param5, param1, param4, param6, 0);
-        dg.a((byte) -121, vd.field_d, param1, param6, param5);
+        ClientException.a((byte) -121, vd.field_d, param1, param6, param5);
         lo.field_d = lo.field_d + 1;
     }
 

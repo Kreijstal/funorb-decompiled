@@ -103,10 +103,10 @@ final class rm extends ji {
         }
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
         int var5 = 0;
-        ed var6 = null;
+        PacketBuffer var6 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -115,8 +115,8 @@ final class rm extends ji {
         var5 = Vertigo2.field_L ? 1 : 0;
         try {
           if (param0 != 110) {
-            var6 = (ed) null;
-            this.a((byte) 114, 100, (ed) null);
+            var6 = (PacketBuffer) null;
+            this.a((byte) 114, 100, (PacketBuffer) null);
           }
           var4_int = param1;
           if (var4_int != 0) {

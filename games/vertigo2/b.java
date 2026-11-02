@@ -40,7 +40,7 @@ final class b {
             if (var5 == null &&
               var6 == 0) {
               this.field_n.a(Vertigo2.a(new String[]{var7}, ln.field_e, 69), 4, 0);
-              this.field_n.a(Vertigo2.a(new String[]{var7}, mi.field_x, 103), 6, 0);
+              this.field_n.a(Vertigo2.a(new String[]{var7}, BitPacketBuffer.field_x, 103), 6, 0);
               if (param0 != null &&
                 param1 != 2 &&
                 !pe.field_r) {
@@ -288,15 +288,15 @@ final class b {
           return true;
         }
         if (param1 == 11) {
-          cf.a(this.field_c, 0, param0, (byte) 53);
+          SecondaryNodeDequeIterator.a(this.field_c, 0, param0, (byte) 53);
           return true;
         }
         if (12 == param1) {
-          cf.a(this.field_c, 1, param0, (byte) 63);
+          SecondaryNodeDequeIterator.a(this.field_c, 1, param0, (byte) 63);
           return true;
         }
         if (param1 == 13) {
-          cf.a(this.field_c, 2, param0, (byte) 104);
+          SecondaryNodeDequeIterator.a(this.field_c, 2, param0, (byte) 104);
           return true;
         }
         if (14 == param1) {
@@ -415,7 +415,7 @@ final class b {
           return true;
         }
         if (param1 == 5) {
-          var9 = lk.a((byte) -41, param0, this.field_k);
+          var9 = RasterBuffer.a((byte) -41, param0, this.field_k);
           if (var9 == null) {
             if (param2 == 0) {
               return true;
@@ -560,7 +560,7 @@ final class b {
           return true;
         }
         if (1 == param0) {
-          ed.a(this.field_o, param1, (byte) -96);
+          PacketBuffer.a(this.field_o, param1, (byte) -96);
           return true;
         }
         if (param0 == 2) {

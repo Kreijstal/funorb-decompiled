@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "vertigo2": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/vertigo2"
+      },
+      "inputTreeSha256": "b86ada205c32613a036a9e416609fcf457a10b96880520acbb3f7a85a216b7f7",
+      "sources": {
+        "files": 437,
+        "sha256": "c77d6cc5d62322e445c1488a6d9b5d828d18ce8c7ac0b5279ecf60321688833a"
+      },
+      "dictionary": {
+        "path": "decompilation/vertigo2-naming.json",
+        "sha256": "432b0ed018e4a860d2214cba77290b9072e148456a9b424a0c490e7b536f8e7e"
+      },
+      "readingGuide": {
+        "path": "games/vertigo2/README.md",
+        "sha256": "a943c2d66a4061125d50e6c0a6b811acaa9dca7d2b1f0cc32e92882c0c34473f"
+      },
+      "rulesSha256": "837a9757570eb4c794dd71c3e769409f0819564e4c118c36dbfef5aa7a153657",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -12520,6 +12544,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 437,
+          "sha256": "c77d6cc5d62322e445c1488a6d9b5d828d18ce8c7ac0b5279ecf60321688833a"
         }
       },
       "virogrid": {

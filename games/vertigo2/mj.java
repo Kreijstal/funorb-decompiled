@@ -306,7 +306,7 @@ final class mj {
           byte[] var2 = (byte[]) null;
           mj.a(31, (byte[]) null, -75, 56);
         }
-        il.field_a = true;
+        MouseWheelInput.field_a = true;
     }
 
     static {

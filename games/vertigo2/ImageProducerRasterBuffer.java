@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ma extends lk implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_j;
     static String field_k;
     private java.awt.image.ImageConsumer field_l;
@@ -137,7 +137,7 @@ final class ma extends lk implements java.awt.image.ImageProducer, java.awt.imag
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
 
-    ma() {
+    ImageProducerRasterBuffer() {
     }
 
     static {

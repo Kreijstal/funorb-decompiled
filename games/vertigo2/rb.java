@@ -13,7 +13,7 @@ abstract class rb {
         }
     }
 
-    final static pl a(byte param0, ed param1) {
+    final static pl a(byte param0, PacketBuffer param1) {
         RuntimeException var2 = null;
         pl stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

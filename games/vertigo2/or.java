@@ -6,7 +6,7 @@ final class or {
     static int[] field_e;
     private double field_i;
     private double field_d;
-    static jj field_f;
+    static PlatformTaskDispatcher field_f;
     static int field_c;
     static er field_b;
     static String field_h;
@@ -34,7 +34,7 @@ final class or {
     }
 
     final static void b(byte param0) {
-        nj.field_b = new np(hb.field_D, ji.field_s, eh.field_a, ee.field_b, fr.field_a, ja.field_e);
+        IntrusiveDeque.field_b = new np(hb.field_D, ji.field_s, eh.field_a, ee.field_b, fr.field_a, ja.field_e);
         if (param0 <= 76) {
           or.b(-8);
         }
@@ -75,7 +75,7 @@ final class or {
         String var1Lifetime3;
         var5 = Vertigo2.field_L ? 1 : 0;
         if (param0 >= 112) {
-          var15 = "(" + gf.field_d + " " + jb.field_G + " " + cp.field_c + ") " + lc.field_f;
+          var15 = "(" + NodeHashTableIterator.field_d + " " + jb.field_G + " " + cp.field_c + ") " + lc.field_f;
           var1 = var15;
           if (ca.field_b <= 0) {
             return var1;
@@ -83,7 +83,7 @@ final class or {
           var1Lifetime3 = var15 + ":";
           for (var2 = 0; ca.field_b > var2; var2++) {
             var16 = var1Lifetime3 + ' ';
-            var3 = 255 & id.field_f.field_p[var2];
+            var3 = 255 & id.field_f.payload[var2];
             var4 = var3 >> 4;
             if (10 > var4) {
               var4 += 48;
@@ -102,7 +102,7 @@ final class or {
           return var1Lifetime3;
         }
         field_n = (String[]) null;
-        var9 = "(" + gf.field_d + " " + jb.field_G + " " + cp.field_c + ") " + lc.field_f;
+        var9 = "(" + NodeHashTableIterator.field_d + " " + jb.field_G + " " + cp.field_c + ") " + lc.field_f;
         var1Lifetime1 = var9;
         if (ca.field_b <= 0) {
           return var1Lifetime1;
@@ -110,7 +110,7 @@ final class or {
         var1Lifetime2 = var9 + ":";
         for (var2Lifetime1 = 0; ca.field_b > var2Lifetime1; var2Lifetime1++) {
           var13 = var1Lifetime2 + ' ';
-          var3Lifetime1 = 255 & id.field_f.field_p[var2Lifetime1];
+          var3Lifetime1 = 255 & id.field_f.payload[var2Lifetime1];
           var4Lifetime1 = var3Lifetime1 >> 4;
           if (10 > var4Lifetime1) {
             var4Lifetime1 += 48;

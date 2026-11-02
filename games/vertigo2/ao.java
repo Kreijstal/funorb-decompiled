@@ -56,7 +56,7 @@ final class ao extends d {
           var2 = new er(param1.a("final_frame.jpg", "", 0), (java.awt.Component) ((Object) ne.field_F));
           var3 = var2.field_y;
           var4 = var2.field_t;
-          tg.a((byte) -31);
+          DelegatingCanvas.a((byte) -31);
           qn.field_r = new er(var3, param0 * var4 / 4);
           qn.field_r.d();
           var2.c(0, 0);

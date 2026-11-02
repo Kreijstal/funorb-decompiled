@@ -23,7 +23,7 @@ abstract class dh {
           field_f = (String) null;
         }
         fm.field_d = param1;
-        cg.field_d = param0;
+        GameKeyHandler.field_d = param0;
         ln.field_d.b(param0, -24066);
     }
 
@@ -136,7 +136,7 @@ abstract class dh {
               } else {
                 qn.field_y = kq.a(false, param2, param0 ^ -24430, param3);
               }
-              uh.field_Wb.field_u = 0;
+              uh.field_Wb.position = 0;
               uh.field_Wb.f(14, -47);
               uh.field_Wb.f(qn.field_y.a((byte) -83).field_b, param0 ^ 24323);
               lf.d(72, -1);
@@ -145,7 +145,7 @@ abstract class dh {
             if (rg.field_d == vi.field_D &&
               c.a(1, (byte) -104)) {
               var6_int = id.field_f.h(-11);
-              id.field_f.field_u = 0;
+              id.field_f.position = 0;
               if (var6_int != 0) {
                 lc.field_f = var6_int;
                 ca.field_b = -1;
@@ -157,7 +157,7 @@ abstract class dh {
             if (gd.field_l == rg.field_d &&
               c.a(8, (byte) -104)) {
               dc.field_F = id.field_f.i(-31016);
-              id.field_f.field_u = 0;
+              id.field_f.position = 0;
               wl.a(param5, param1, (byte) 101, param4, qn.field_y);
               rg.field_d = ir.field_c;
             }
@@ -166,7 +166,7 @@ abstract class dh {
               c.a(1, (byte) -104)) {
               var6_intLifetime1 = id.field_f.h(-11);
               lc.field_f = var6_intLifetime1;
-              id.field_f.field_u = 0;
+              id.field_f.position = 0;
               go.field_g = null;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
@@ -228,7 +228,7 @@ abstract class dh {
               rc.field_b = id.field_f.h(-11);
               rg.field_d = bm.field_I;
               if (qn.field_y.a((byte) -83) == lb.field_e) {
-                li.field_j.a(ob.e((byte) -93), (byte) -121);
+                IntrusiveNode.field_j.a(ob.e((byte) -93), (byte) -121);
               } else {
                 if (qn.field_y.a((byte) -83) == rf.field_n) {
                   la.field_i.a(ob.e((byte) 116), (byte) -99);

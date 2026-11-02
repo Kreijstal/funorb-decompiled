@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rk extends gp {
+abstract class rk extends DualLinkNode {
     boolean field_u;
     boolean field_t;
     volatile boolean field_z;
@@ -52,7 +52,7 @@ abstract class rk extends gp {
             return stackIn_19_0;
           }
           if (10 == param2) {
-            stackIn_22_0 = cf.field_b;
+            stackIn_22_0 = SecondaryNodeDequeIterator.field_b;
             return stackIn_22_0;
           }
           if (param2 == 11) {

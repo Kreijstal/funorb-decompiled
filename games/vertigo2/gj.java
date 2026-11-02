@@ -162,7 +162,7 @@ final class gj extends ji {
             am.field_n != 22 &&
             3 != am.field_n &&
             am.field_n != 4) {
-            var4 = vp.a((byte) 76, am.field_n) - 1;
+            var4 = IntrusiveDequeCursor.a((byte) 76, am.field_n) - 1;
           }
           if (am.field_n == 7) {
             var4 = 1;
@@ -219,7 +219,7 @@ final class gj extends ji {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        nj var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         bs var18_ref = null;
@@ -314,12 +314,12 @@ final class gj extends ji {
                   mn.field_t[var11_int] = false;
                   var11_int++;
                 } while (var19 == 0);
-                L17: while (true) {
+                scanLoop1: while (true) {
                   if (2 > var10) {
                     var11_int = 0;
                     stackIn_69_0 = 0;
                     if (var19 != 0) {
-                      break L17;
+                      break scanLoop1;
                     }
                     var12 = stackIn_69_0;
                     while (true) {
@@ -332,7 +332,7 @@ final class gj extends ji {
                         var13 = var20;
                         stackIn_63_0 = 0;
                         var14_int = stackIn_63_0;
-                        L24: while (true) {
+                        scanLoop2: while (true) {
                           if (var26.length > var14_int) {
                             var15 = var26[var14_int];
                             var16 = var20[var14_int + 1];
@@ -347,11 +347,11 @@ final class gj extends ji {
                               var17_int = stackIn_48_0;
                               if (var16 != var17_int &&
                                 var19 == 0) {
-                                break L24;
+                                break scanLoop2;
                               }
                             } else {
                               if ((255 & gd.field_j.field_fc[var15]) != var16) {
-                                break L24;
+                                break scanLoop2;
                               }
                             }
                             var14_int += 2;
@@ -404,7 +404,7 @@ final class gj extends ji {
                 (decompiledFrameRemainder3 = (sf.field_f != null ||
                 te.field_D != null ||
                 qh.field_e != null ||
-                null != il.field_b))) {
+                null != MouseWheelInput.field_b))) {
                 var11_int = 0;
                 var12 = 0;
                 var13_int = 0;
@@ -431,9 +431,9 @@ final class gj extends ji {
                         var11_int = 1;
                       }
                     }
-                    if (il.field_b != null &&
-                      null != il.field_b[var16]) {
-                      var15 = var15 | il.field_b[var16][var17_int];
+                    if (MouseWheelInput.field_b != null &&
+                      null != MouseWheelInput.field_b[var16]) {
+                      var15 = var15 | MouseWheelInput.field_b[var16][var17_int];
                     }
                     if (null != qh.field_e &&
                       null != qh.field_e[var16]) {
@@ -456,14 +456,14 @@ final class gj extends ji {
                 }
                 var17 = vd.field_d.field_Nb.field_M;
                 var18_ref = (bs) (var17.a((byte) 100));
-                L48: while (true) {
+                scanLoop3: while (true) {
                   boolean decompiledFrameRemainder0 = true;
                   if (var18_ref != null) {
                     stackOut_107_0 = var18_ref.k(param3 + 15);
                     stackIn_126_0 = stackOut_107_0 ? 1 : 0;
                     stackIn_108_0 = stackOut_107_0;
                     if (var19 != 0) {
-                      break L48;
+                      break scanLoop3;
                     }
                     if (!stackIn_108_0 ||
                       var19 != 0) {
@@ -531,7 +531,7 @@ final class gj extends ji {
                   (decompiledFrameRemainder1)) {
                   hd.field_g.field_lb = false;
                   if (hd.field_g.field_G) {
-                    if (el.field_e.field_b.field_Kb != 0) {
+                    if (IterableNodeHashTable.field_e.field_b.field_Kb != 0) {
                       ko.field_S = Vertigo2.a(new String[]{or.field_k}, pb.field_e, param3 ^ -117);
                       if (var19 != 0) {
                         ko.field_S = di.field_y;
@@ -625,7 +625,7 @@ final class gj extends ji {
           stackIn_188_1 = param3;
           stackIn_189_2 = (param4) && (!param2) && (im.field_g);
           ((cr) (Object) stackIn_188_0).a(stackIn_188_1, stackIn_189_2);
-          el.field_e.field_b.k(0);
+          IterableNodeHashTable.field_e.field_b.k(0);
           if (gd.field_j != null) {
             if (ne.field_G.field_tb != 0) {
               qk.d(gd.field_j.a((byte) -38), param1, 18964);
@@ -649,7 +649,7 @@ final class gj extends ji {
         }
     }
 
-    final void a(byte param0, int param1, ed param2) {
+    final void a(byte param0, int param1, PacketBuffer param2) {
         boolean stackIn_4_1 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

@@ -63,7 +63,7 @@ final class ff {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        ed var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -80,7 +80,7 @@ final class ff {
         int var13Lifetime1Lifetime1;
         var16 = Vertigo2.field_L ? 1 : 0;
         try {
-          var17 = new ed(hm.a(-20595, param0));
+          var17 = new PacketBuffer(hm.a(-20595, param0));
           var4 = var17.h(-11);
           if (var4 >= 5 &&
             var4 <= 7) {

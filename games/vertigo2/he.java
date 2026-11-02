@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he extends gp {
+final class he extends DualLinkNode {
     static String field_B;
     private int[] field_w;
     private int[] field_y;
@@ -103,12 +103,12 @@ final class he extends gp {
               if (var22 > 255) {
                 var22 = 255;
               }
-              var21 = li.field_l[var21];
+              var21 = IntrusiveNode.field_l[var21];
               if (0 > var22) {
                 var22 = 0;
               }
-              var20 = li.field_l[var20];
-              var22 = li.field_l[var22];
+              var20 = IntrusiveNode.field_l[var20];
+              var22 = IntrusiveNode.field_l[var22];
               var23 = (var20 << 16) - (-(var21 << 8) - var22);
               if (var23 != 0) {
                 var23 = var23 | -16777216;
@@ -169,13 +169,13 @@ final class he extends gp {
     }
 
     final static void a(int param0, ub param1, int param2) {
-        mi var5 = null;
+        BitPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = uh.field_Wb;
           var5.j(param0, 118);
-          var5.field_u = var5.field_u + 1;
-          var4 = var5.field_u;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.f(1, 117);
           var5.f(param1.field_u, -71);
           if (param2 != -27011) {
@@ -187,7 +187,7 @@ final class he extends gp {
           var5.e(param1.field_r, 0);
           var5.e(param1.field_n, 0);
           var5.c(var4, 85);
-          var5.b((byte) 53, var5.field_u - var4);
+          var5.b((byte) 53, var5.position - var4);
         } catch (RuntimeException runtimeException) {
           throw wn.a((Throwable) ((Object) runtimeException), "he.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -251,7 +251,7 @@ final class he extends gp {
         }
     }
 
-    he(ed param0) {
+    he(PacketBuffer param0) {
         int[] array$2 = null;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;

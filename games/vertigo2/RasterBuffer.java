@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class lk {
+abstract class RasterBuffer {
     int[] field_e;
     int field_d;
     int field_i;
@@ -26,7 +26,7 @@ abstract class lk {
         RuntimeException var3 = null;
         tp var4_ref_tp = null;
         int var4 = 0;
-        mi var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var7 = 0;
         tp var8 = null;
@@ -56,17 +56,17 @@ abstract class lk {
             }
             break;
           }
-          var8.c(2);
+          var8.unlink(2);
           var4 = 114 % ((param0 - 24) / 54);
           var8.a(-102);
           sq.field_b = sq.field_b - 1;
           var5 = uh.field_Wb;
           var5.j(param1, 120);
-          var5.field_u = var5.field_u + 1;
-          var6 = var5.field_u;
+          var5.position = var5.position + 1;
+          var6 = var5.position;
           var5.f(1, -96);
           var5.a((byte) 0, param2);
-          var5.b((byte) -100, var5.field_u - var6);
+          var5.b((byte) -100, var5.position - var6);
           stackIn_16_0 = null;
           return (String) (stackIn_16_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -122,7 +122,7 @@ abstract class lk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 1) {
-            lk.b(91);
+            RasterBuffer.b(91);
           }
           boolean decompiledFrameRemainder0 = true;
           if (param4 != null && (param3 != 2 ||

@@ -80,7 +80,7 @@ final class uo {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        nj var8 = null;
+        IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
         uh var12 = null;
@@ -166,7 +166,7 @@ final class uo {
               var12.field_rc = new cr(0L, tm.field_b);
               var12.b(var12.field_rc, param6 + 120);
               var12.field_rc.field_O = 1;
-              var12.field_Vb = new cr(0L, el.field_b);
+              var12.field_Vb = new cr(0L, IterableNodeHashTable.field_b);
               var12.b(var12.field_Vb, 124);
               var12.field_cc = new cr(0L, tm.field_b);
               var12.b(var12.field_cc, 124);
@@ -174,7 +174,7 @@ final class uo {
               var12.field_ac = new cr(0L, tm.field_b);
               var12.b(var12.field_ac, param6 + 124);
               var12.field_ac.field_R = 0;
-              var12.field_gc = new cr(0L, el.field_b);
+              var12.field_gc = new cr(0L, IterableNodeHashTable.field_b);
               var12.b(var12.field_gc, 122);
               var12.field_gc.field_O = 2;
               stackIn_11_0 = var12;
@@ -188,7 +188,7 @@ final class uo {
               } else {
                 stackIn_12_1 = null;
                 stackIn_12_2 = null;
-                stackIn_12_4 = el.field_b;
+                stackIn_12_4 = IterableNodeHashTable.field_b;
               }
               stackIn_11_0.field_pc = new cr(stackIn_11_3, stackIn_12_4);
               var12.b(var12.field_pc, 124);
@@ -234,12 +234,12 @@ final class uo {
               } else {
                 stackIn_29_1 = null;
                 stackIn_29_2 = null;
-                stackIn_29_4 = el.field_b;
+                stackIn_29_4 = IterableNodeHashTable.field_b;
               }
               stackIn_28_0.field_Ob = new cr(stackIn_28_3, stackIn_29_4);
               var12.b(var12.field_Ob, 126);
               var12.field_Ob.field_O = 2;
-              var12.field_Jb = new cr(0L, el.field_b);
+              var12.field_Jb = new cr(0L, IterableNodeHashTable.field_b);
               var12.b(var12.field_Jb, param6 + 127);
               var12.field_Ib = new cr(0L, ja.field_e);
               var12.b(var12.field_Ib, 121);
@@ -352,7 +352,7 @@ final class uo {
                   if (!var12.field_Mb) {
                     var12.field_rc.field_S = bm.field_B;
                   } else {
-                    var12.field_rc.field_S = il.field_i;
+                    var12.field_rc.field_S = MouseWheelInput.field_i;
                   }
                   decompiledFrameRemainder1 = false;
                 }
@@ -609,7 +609,7 @@ final class uo {
         }
         var3 = new ud();
         if (var4 != null) {
-          var3.a(new ed(var4), -1);
+          var3.a(new PacketBuffer(var4), -1);
         }
         if (param0 >= 32768) {
           var3.a((byte) 89);

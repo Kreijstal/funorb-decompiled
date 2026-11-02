@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tg extends java.awt.Canvas {
+final class DelegatingCanvas extends java.awt.Canvas {
     private java.awt.Component field_b;
     static ve field_c;
     static long field_a;
@@ -29,7 +29,7 @@ final class tg extends java.awt.Canvas {
           bl.a(false, 4, -30962);
           return;
         }
-        tg.a((byte) -2);
+        DelegatingCanvas.a((byte) -2);
         bl.a(false, 4, -30962);
     }
 
@@ -59,7 +59,7 @@ final class tg extends java.awt.Canvas {
     }
 
     final static void a(int param0, ri param1, int param2) {
-        mi var3 = null;
+        BitPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -97,7 +97,7 @@ final class tg extends java.awt.Canvas {
         }
     }
 
-    tg(java.awt.Component param0) {
+    DelegatingCanvas(java.awt.Component param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {

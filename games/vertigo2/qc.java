@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qc extends gp {
+abstract class qc extends DualLinkNode {
     static r field_B;
     static db field_v;
     static int field_A;
@@ -74,7 +74,7 @@ abstract class qc extends gp {
           qf.field_b = qf.field_b + 1;
           if (ek.field_E == -1 &&
             or.field_c == -1) {
-            ek.field_E = ed.field_n;
+            ek.field_E = PacketBuffer.field_n;
             or.field_c = gb.field_d;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -85,8 +85,8 @@ abstract class qc extends gp {
           }
           if (decompiledFrameRemainder0) {
             if (!gl.field_o) {
-              if (qf.field_b >= aj.field_h) {
-                stackIn_17_0 = (aj.field_h + ea.field_g > qf.field_b) ? 1 : 0;
+              if (qf.field_b >= ProxySocketConnector.field_h) {
+                stackIn_17_0 = (ProxySocketConnector.field_h + ea.field_g > qf.field_b) ? 1 : 0;
               } else {
                 stackIn_17_0 = 0;
               }
@@ -98,10 +98,10 @@ abstract class qc extends gp {
               qf.field_b = 0;
             } else {
               if (gl.field_o) {
-                qf.field_b = aj.field_h;
+                qf.field_b = ProxySocketConnector.field_h;
               } else {
                 if (var2_int != 0) {
-                  qf.field_b = aj.field_h;
+                  qf.field_b = ProxySocketConnector.field_h;
                 } else {
                   qf.field_b = 0;
                 }
@@ -119,7 +119,7 @@ abstract class qc extends gp {
           }
           as.field_a = param0;
           if (!gl.field_o &&
-            qf.field_b < aj.field_h &&
+            qf.field_b < ProxySocketConnector.field_h &&
             wo.field_s) {
             hn.field_n = ek.field_E;
             qf.field_b = 0;

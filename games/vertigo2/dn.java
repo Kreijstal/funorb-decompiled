@@ -269,7 +269,7 @@ final class dn {
         field_m = null;
     }
 
-    final void a(ed param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_y = new pr();
@@ -278,7 +278,7 @@ final class dn {
         this.field_g.b(param0);
         int var2 = param0.h(-11);
         if (var2 != 0) {
-          param0.field_u = param0.field_u - 1;
+          param0.position = param0.position - 1;
           this.field_q = new pr();
           this.field_q.b(param0);
           this.field_c = new pr();
@@ -286,7 +286,7 @@ final class dn {
         }
         var2 = param0.h(-11);
         if (var2 != 0) {
-          param0.field_u = param0.field_u - 1;
+          param0.position = param0.position - 1;
           this.field_l = new pr();
           this.field_l.b(param0);
           this.field_u = new pr();
@@ -294,7 +294,7 @@ final class dn {
         }
         var2 = param0.h(-11);
         if (var2 != 0) {
-          param0.field_u = param0.field_u - 1;
+          param0.position = param0.position - 1;
           this.field_h = new pr();
           this.field_h.b(param0);
           this.field_n = new pr();
