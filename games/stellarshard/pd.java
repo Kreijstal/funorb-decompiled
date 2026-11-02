@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pd extends vk {
-    private bd field_t;
+    private BitmapFont field_t;
     static Sprite field_s;
     private int field_o;
     static String[] field_g;
@@ -21,7 +21,7 @@ final class pd extends vk {
     private int field_i;
     static String field_p;
 
-    final void a(boolean param0, String param1, int param2, int param3, bd param4) {
+    final void a(boolean param0, String param1, int param2, int param3, BitmapFont param4) {
         uj var8 = null;
         int var7 = 0;
         if (param1 == null) {
@@ -46,7 +46,7 @@ final class pd extends vk {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, bd param4, int param5, String param6, byte param7) {
+    final void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, String param6, byte param7) {
         uj stackIn_36_0;
         uj stackIn_36_1;
         int stackIn_36_2;
@@ -84,7 +84,7 @@ final class pd extends vk {
           }
           if (param7 >= -32) {
             var16 = (String) null;
-            this.a(-57, -104, 68, -43, (bd) null, -58, (String) null, (byte) -4);
+            this.a(-57, -104, 68, -43, (BitmapFont) null, -58, (String) null, (byte) -4);
           }
           if (this.field_t == param4 &&
             !this.field_r &&
@@ -218,7 +218,7 @@ final class pd extends vk {
         }
     }
 
-    final void a(int param0, bd param1, String param2, int param3, int param4) {
+    final void a(int param0, BitmapFont param1, String param2, int param3, int param4) {
         uj var7 = null;
         uj var8 = null;
         if (param2 == null) {
@@ -244,7 +244,7 @@ final class pd extends vk {
         }
     }
 
-    final void a(int param0, bd param1, int param2, String param3, byte param4) {
+    final void a(int param0, BitmapFont param1, int param2, String param3, byte param4) {
         uj var8 = null;
         uj var9 = null;
         if (param3 == null) {
@@ -276,7 +276,7 @@ final class pd extends vk {
         }
     }
 
-    private final uj a(int param0, boolean param1, String param2, bd param3) {
+    private final uj a(int param0, boolean param1, String param2, BitmapFont param3) {
         uj var5 = null;
         RuntimeException var5_ref = null;
         uj var6 = null;
@@ -292,7 +292,7 @@ final class pd extends vk {
           var5 = var6;
           this.field_a = new uj[]{var6};
           if (param1) {
-            this.field_t = (bd) null;
+            this.field_t = (BitmapFont) null;
           }
           stackIn_3_0 = var5;
           return stackIn_3_0;
@@ -321,14 +321,14 @@ final class pd extends vk {
         try {
           var3 = pg.field_fb;
           var3.f(param0, 950);
-          var3.a(false, 5);
+          var3.writeByte(false, 5);
           if (param2 < 1) {
             field_u = (int[]) null;
           }
-          var3.a(false, 0);
+          var3.writeByte(false, 0);
           var3.c(param1.field_t, -128);
-          var3.a(false, param1.field_q);
-          var3.a(false, param1.field_r);
+          var3.writeByte(false, param1.field_q);
+          var3.writeByte(false, param1.field_r);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "pd.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

@@ -89,7 +89,7 @@ final class pl extends ae implements je {
         field_P = null;
     }
 
-    final void a(int param0, boolean param1, int param2, rj param3) {
+    final void a(int param0, boolean param1, int param2, UiWidget param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_O = -this.field_w + ni.field_e - param2;
@@ -116,7 +116,7 @@ final class pl extends ae implements je {
               stackIn_9_0 = -1;
               return stackIn_9_0;
             }
-            if (null != a.field_h[var1_int]) {
+            if (null != a.entities[var1_int]) {
               var1_int++;
               continue;
             }

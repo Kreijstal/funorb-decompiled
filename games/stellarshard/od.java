@@ -67,7 +67,7 @@ final class od extends DualLinkNode {
         var4 = stellarshard.field_B;
         try {
           while (true) {
-            var3_int = param0.f(4);
+            var3_int = param0.readUnsignedByte(4);
             if (var3_int != 0) {
               this.a(param0, -11682, var3_int);
               continue;
@@ -137,25 +137,25 @@ final class od extends DualLinkNode {
         try {
           if (param2 != 1) {
             if (2 == param2) {
-              var4_int = param0.f(param1 ^ -11686);
+              var4_int = param0.readUnsignedByte(param1 ^ -11686);
               this.field_y = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_y[var5] = param0.c((byte) 107);
+                this.field_y[var5] = param0.readUnsignedShort((byte) 107);
               }
             } else {
               if (3 == param2) {
-                var4_int = param0.f(param1 + 11686);
+                var4_int = param0.readUnsignedByte(param1 + 11686);
                 this.field_t = new int[var4_int];
                 this.field_x = new int[var4_int][];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  var6 = param0.c((byte) 54);
+                  var6 = param0.readUnsignedShort((byte) 54);
                   var7 = ee.a(var6, (byte) 8);
                   if (var7 != null) {
                     this.field_t[var5] = var6;
                     array$0 = new int[var7.field_c];
                     this.field_x[var5] = array$0;
                     for (var8 = 0; var8 < var7.field_c; var8++) {
-                      this.field_x[var5][var8] = param0.c((byte) 96);
+                      this.field_x[var5][var8] = param0.readUnsignedShort((byte) 96);
                     }
                   }
                 }

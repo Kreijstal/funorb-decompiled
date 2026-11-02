@@ -47,7 +47,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (!Boolean.parseBoolean(System.getProperty("java.net.useSystemProxies"))) {
           System.setProperty("java.net.useSystemProxies", "true");
         }
-        stackIn_6_0 = (this.field_g != 443) ? 0 : 1;
+        stackIn_6_0 = (this.port != 443) ? 0 : 1;
         var5 = stackIn_6_0;
         try {
           stackIn_9_0 = this.field_k;
@@ -63,7 +63,7 @@ final class ProxySocketConnector extends SocketConnector {
             stackIn_10_2 = null;
             stackIn_10_4 = "https";
           }
-          var3 = ((java.net.ProxySelector) (Object) stackIn_9_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_9_3).append(stackIn_10_4).append("://").append(this.field_c).toString()));
+          var3 = ((java.net.ProxySelector) (Object) stackIn_9_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_9_3).append(stackIn_10_4).append("://").append(this.host).toString()));
           stackIn_12_0 = this.field_k;
           stackIn_12_1 = null;
           stackIn_12_2 = null;
@@ -77,7 +77,7 @@ final class ProxySocketConnector extends SocketConnector {
             stackIn_13_2 = null;
             stackIn_13_4 = "https";
           }
-          var4 = ((java.net.ProxySelector) (Object) stackIn_12_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_12_3).append(stackIn_13_4).append("://").append(this.field_c).toString()));
+          var4 = ((java.net.ProxySelector) (Object) stackIn_12_0).select(new java.net.URI(((StringBuilder) (Object) stackIn_12_3).append(stackIn_13_4).append("://").append(this.host).toString()));
         } catch (java.net.URISyntaxException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (java.net.URISyntaxException) (Object) decompiledCaughtException;
@@ -148,9 +148,9 @@ final class ProxySocketConnector extends SocketConnector {
           var13.setSoTimeout(10000);
           var6 = var13.getOutputStream();
           if (param2 == null) {
-            var6.write(("CONNECT " + this.field_c + ":" + this.field_g + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+            var6.write(("CONNECT " + this.host + ":" + this.port + " HTTP/1.0\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
           } else {
-            var6.write(("CONNECT " + this.field_c + ":" + this.field_g + " HTTP/1.0\n" + param2 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
+            var6.write(("CONNECT " + this.host + ":" + this.port + " HTTP/1.0\n" + param2 + "\n\n").getBytes(java.nio.charset.Charset.forName("ISO-8859-1")));
           }
           if (param0 != 66) {
             field_i = -31;
@@ -327,7 +327,7 @@ final class ProxySocketConnector extends SocketConnector {
               return null;
             }
             var5 = new java.net.Socket(param0);
-            ((java.net.Socket) (var5)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.field_c, this.field_g)));
+            ((java.net.Socket) (var5)).connect((java.net.SocketAddress) ((Object) new java.net.InetSocketAddress(this.host, this.port)));
             stackIn_23_0 = var5;
             return (java.net.Socket) (stackIn_23_0);
           }
@@ -347,7 +347,7 @@ final class ProxySocketConnector extends SocketConnector {
                 var11 = var14.getDeclaredMethod("getHeaderValue", new Class[]{java.net.URL.class, String.class});
                 var11.setAccessible(true);
                 var12 = (String) (var10.invoke(var8, new Object[]{}));
-                var13 = (String) (var11.invoke(var8, new Object[]{new java.net.URL("https://" + this.field_c + "/"), "https"}));
+                var13 = (String) (var11.invoke(var8, new Object[]{new java.net.URL("https://" + this.host + "/"), "https"}));
                 var5 = var12 + ": " + var13;
               }
             }

@@ -26,7 +26,7 @@ abstract class SpriteState extends DualLinkNode {
             if (pd.field_f != null &&
               pd.field_f.field_c) {
               ih.b((byte) -25);
-              dg.field_z.a((byte) -111, (rj) (new ia(dg.field_z, nb.field_K)));
+              dg.field_z.a((byte) -111, (UiWidget) (new ia(dg.field_z, nb.field_K)));
             }
             return;
           }

@@ -21,7 +21,7 @@ final class ei extends dg {
         ui var3 = (ui) (var2.b((byte) 115));
         while (var3 != null) {
           if (var3.h(103)) {
-            var3.c(20);
+            var3.unlink(20);
           }
           var3 = (ui) (var2.a(true));
         }
@@ -49,11 +49,11 @@ final class ei extends dg {
         ui var3 = (ui) (var2.b((byte) 119));
         while (var3 != null) {
           if (var3.d(true)) {
-            var3.c(20);
+            var3.unlink(20);
           }
           var3 = (ui) (var2.a(true));
         }
-        this.field_y = (rj) ((Object) this.d((byte) -97));
+        this.field_y = (UiWidget) ((Object) this.d((byte) -97));
     }
 
     final void e(byte param0) {
@@ -70,7 +70,7 @@ final class ei extends dg {
         }
     }
 
-    final void a(byte param0, rj param1) {
+    final void a(byte param0, UiWidget param1) {
         ui var4 = null;
         try {
           if (!(param1 instanceof ui)) {
@@ -78,9 +78,9 @@ final class ei extends dg {
           }
           int var3_int = 32 / ((-36 - param0) / 50);
           var4 = (ui) (param1);
-          this.field_C.a(-1, var4);
+          this.field_C.addFirst(-1, var4);
           var4.field_G = true;
-          var4.a(-2147483648, (rj) (this));
+          var4.a(-2147483648, (UiWidget) (this));
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ei.K(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -89,20 +89,20 @@ final class ei extends dg {
     final void a(int param0, byte param1, int param2, int param3) {
         int var7 = stellarshard.field_B;
         if (this.field_u != null) {
-          this.field_u.a(true, param3, param2, (rj) (this), param1 + 4606);
+          this.field_u.a(true, param3, param2, (UiWidget) (this), param1 + 4606);
         }
         IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_C);
         if (param1 != -57) {
           return;
         }
-        rj var6 = (rj) (var5.a((byte) -87));
+        UiWidget var6 = (UiWidget) (var5.a((byte) -87));
         while (var6 != null) {
           var6.a(param0, (byte) -57, param2 + this.field_k, this.field_w + param3);
-          var6 = (rj) (var5.a(90));
+          var6 = (UiWidget) (var5.a(90));
         }
     }
 
-    final rj a(int param0) {
+    final UiWidget a(int param0) {
         IntrusiveDequeCursor var2;
         ui var3;
         int var4;

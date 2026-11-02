@@ -14,10 +14,10 @@ final class ph extends ki {
           return 0;
         }
         if (param0) {
-          return 100 * this.field_G.field_k / (-this.field_F + this.field_G.field_r.length);
+          return 100 * this.field_G.position / (-this.field_F + this.field_G.payload.length);
         }
         this.field_F = (byte) 65;
-        return 100 * this.field_G.field_k / (-this.field_F + this.field_G.field_r.length);
+        return 100 * this.field_G.position / (-this.field_F + this.field_G.payload.length);
     }
 
     final static void a(int param0, qc param1, int param2, int param3, int param4, qc param5) {
@@ -132,8 +132,8 @@ final class ph extends ki {
         if (this.field_w) {
           throw new RuntimeException();
         }
-        if (this.field_G.field_k >= -this.field_F + this.field_G.field_r.length) {
-          return this.field_G.field_r;
+        if (this.field_G.position >= -this.field_F + this.field_G.payload.length) {
+          return this.field_G.payload;
         }
         throw new RuntimeException();
     }

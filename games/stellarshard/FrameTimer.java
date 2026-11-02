@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ci {
+abstract class FrameTimer {
     static int field_b;
     static String field_d;
     static String[] field_a;
@@ -125,7 +125,7 @@ abstract class ci {
           synchronized (var1) {
             if (param0 <= 30) {
               var5 = (String) null;
-              ci.a((String) null, 'ￛ', (String) null, -48);
+              FrameTimer.a((String) null, 'ￛ', (String) null, -48);
             }
             ce.field_e = ce.field_e + 1;
             di.field_a = q.field_c;

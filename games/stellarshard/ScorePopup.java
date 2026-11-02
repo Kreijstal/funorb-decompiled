@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sd {
-    private double field_a;
-    private int field_e;
+final class ScorePopup {
+    private double velocityY;
+    private int value;
     static int field_d;
-    private double field_g;
-    private double field_h;
+    private double velocityX;
+    private double x;
     static boolean field_i;
     static int field_b;
     private int field_c;
-    private double field_f;
+    private double y;
 
     final static wb a(byte param0, String param1) {
         int var5 = 0;
@@ -50,7 +50,7 @@ final class sd {
           var4 = var3;
           if (param0 != -96) {
             var9 = (String) null;
-            sd.a((Sprite) null, (byte) 119, (String) null);
+            ScorePopup.a((Sprite) null, (byte) 119, (String) null);
           }
           for (var5 = 0; var5 < var4.length; var5++) {
             var6 = var4[var5];
@@ -80,58 +80,58 @@ final class sd {
         if (param0 != 107) {
           return;
         }
-        this.field_h = this.field_h + this.field_g;
-        this.field_f = this.field_f + this.field_a;
+        this.x = this.x + this.velocityX;
+        this.y = this.y + this.velocityY;
     }
 
-    final sd a(int param0) {
+    final ScorePopup update(int param0) {
         this.a((byte) 107);
-        this.field_a = this.field_a - 0.1;
-        if (this.field_h < 64.0) {
-          this.field_g = this.field_g + 0.1;
+        this.velocityY = this.velocityY - 0.1;
+        if (this.x < 64.0) {
+          this.velocityX = this.velocityX + 0.1;
         }
         if (param0 != 0) {
-          return (sd) null;
+          return (ScorePopup) null;
         }
-        if (64.0 < this.field_h) {
-          this.field_g = this.field_g - 0.1;
+        if (64.0 < this.x) {
+          this.velocityX = this.velocityX - 0.1;
         }
-        this.field_g = this.field_g * 0.99999;
+        this.velocityX = this.velocityX * 0.99999;
         hk.field_p = hk.field_p - 1;
         lg.field_f = lg.field_f + 1;
         if (!DualLinkDequeIterator.field_i) {
           return null;
         }
-        if (this.field_h < -384.0) {
-          if (this.field_e > 0) {
-            cl.field_a = cl.field_a - this.field_e;
-            te.field_c = te.field_c + this.field_e;
+        if (this.x < -384.0) {
+          if (this.value > 0) {
+            cl.field_a = cl.field_a - this.value;
+            te.field_c = te.field_c + this.value;
           }
           return null;
         }
-        if (this.field_h > 384.0) {
-          if (0 >= this.field_e) {
+        if (this.x > 384.0) {
+          if (0 >= this.value) {
             return null;
           }
-          qb.field_k = qb.field_k + this.field_e;
-          te.field_c = te.field_c + this.field_e;
+          qb.field_k = qb.field_k + this.value;
+          te.field_c = te.field_c + this.value;
           return null;
         }
-        if (this.field_f < -304.0) {
-          if (this.field_e > 0) {
-            te.field_c = te.field_c + this.field_e;
-            cl.field_a = cl.field_a - this.field_e;
+        if (this.y < -304.0) {
+          if (this.value > 0) {
+            te.field_c = te.field_c + this.value;
+            cl.field_a = cl.field_a - this.value;
           }
           return null;
         }
-        if (!(304.0 < this.field_f)) {
+        if (!(304.0 < this.y)) {
           return this;
         }
-        if (this.field_e <= 0) {
+        if (this.value <= 0) {
           return null;
         }
-        te.field_c = te.field_c + this.field_e;
-        qb.field_k = qb.field_k + this.field_e;
+        te.field_c = te.field_c + this.value;
+        qb.field_k = qb.field_k + this.value;
         return null;
     }
 
@@ -139,56 +139,56 @@ final class sd {
         int var2;
         int var3;
         String var4;
-        var2 = (int)(this.field_h + 320.0);
-        var3 = (int)(this.field_f + 240.0);
-        if (this.field_e <= 0) {
+        var2 = (int)(this.x + 320.0);
+        var3 = (int)(this.y + 240.0);
+        if (this.value <= 0) {
           var4 = ei.field_A;
-          if (this.field_e == -1) {
+          if (this.value == -1) {
             var4 = gf.field_a;
           }
-          if (-2 == this.field_e) {
+          if (-2 == this.value) {
             var4 = PacketBuffer.field_l;
           }
-          if (this.field_e == -3) {
+          if (this.value == -3) {
             var4 = he.field_l;
           }
-          if (this.field_e == -4) {
+          if (this.value == -4) {
             var4 = td.field_e;
           }
-          if (this.field_e == -5) {
+          if (this.value == -5) {
             var4 = SocketConnector.field_f;
           }
-          if (this.field_e == -6) {
+          if (this.value == -6) {
             var4 = qh.field_h;
           }
-          if (this.field_e == -7) {
+          if (this.value == -7) {
             var4 = we.field_e;
           }
-          if (this.field_e == -8) {
+          if (this.value == -8) {
             var4 = pe.field_a;
           }
-          if (this.field_e == -9) {
+          if (this.value == -9) {
             var4 = te.field_b;
           }
-          if (this.field_e == -10) {
+          if (this.value == -10) {
             var4 = ha.field_x;
           }
-          if (this.field_e == -11) {
+          if (this.value == -11) {
             var4 = fc.field_c;
           }
-          if (this.field_e == -12) {
+          if (this.value == -12) {
             var4 = ClientException.field_e;
           }
-          if (-13 == this.field_e) {
+          if (-13 == this.value) {
             var4 = nb.field_O;
           }
-          if (this.field_e == -14) {
+          if (this.value == -14) {
             var4 = ja.field_k;
           }
-          if (this.field_e == -15) {
+          if (this.value == -15) {
             var4 = rd.field_b;
           }
-          if (-16 == this.field_e) {
+          if (-16 == this.value) {
             var4 = Integer.toString(ml.field_h);
           }
           qj.field_a.c(var4, var2 - 1, var3, 0, -1);
@@ -197,14 +197,14 @@ final class sd {
           qj.field_a.c(var4, var2, 1 + var3, 0, -1);
           qj.field_a.c(var4, var2, var3, this.field_c, -1);
         } else {
-          qj.field_a.c("" + this.field_e, -1 + var2, var3, 0, -1);
-          qj.field_a.c("" + this.field_e, var2 + 1, var3, 0, -1);
-          qj.field_a.c("" + this.field_e, var2, var3 - 1, 0, -1);
-          qj.field_a.c("" + this.field_e, var2, var3 + 1, 0, -1);
-          qj.field_a.c("" + this.field_e, var2, var3, this.field_c, -1);
+          qj.field_a.c("" + this.value, -1 + var2, var3, 0, -1);
+          qj.field_a.c("" + this.value, var2 + 1, var3, 0, -1);
+          qj.field_a.c("" + this.value, var2, var3 - 1, 0, -1);
+          qj.field_a.c("" + this.value, var2, var3 + 1, 0, -1);
+          qj.field_a.c("" + this.value, var2, var3, this.field_c, -1);
         }
         if (!param0) {
-          this.field_f = -0.5996134405584707;
+          this.y = -0.5996134405584707;
         }
     }
 
@@ -214,21 +214,21 @@ final class sd {
           MouseHandler.field_f = param2;
           if (param1 != 60) {
             String var4 = (String) null;
-            sd.a((byte) 87, (String) null);
+            ScorePopup.a((byte) 87, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "sd.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    sd(int param0, qe param1, int param2) {
+    ScorePopup(int param0, GameEntity param1, int param2) {
         try {
-          this.field_f = param1.field_l;
-          this.field_h = param1.field_a;
-          this.field_g = param1.field_d;
-          this.field_a = param1.field_k;
+          this.y = param1.field_l;
+          this.x = param1.field_a;
+          this.velocityX = param1.field_d;
+          this.velocityY = param1.field_k;
           this.field_c = param2;
-          this.field_e = param0;
+          this.value = param0;
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "sd.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

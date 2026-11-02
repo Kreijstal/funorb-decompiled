@@ -144,7 +144,7 @@ final class ee {
         if (param2 >= -108) {
           field_a = 106;
         }
-        pf.field_b.b(-53, var4);
+        pf.field_b.addLast(-53, var4);
         kg.a(param0, var4, false);
         return var4;
     }

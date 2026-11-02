@@ -22,7 +22,7 @@ final class fg extends ig {
         field_G = null;
     }
 
-    final boolean a(rj param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;

@@ -5,8 +5,8 @@ final class ClientException extends RuntimeException {
     static String field_e;
     static String field_d;
     static String field_b;
-    String field_f;
-    Throwable field_a;
+    String context;
+    Throwable cause;
     static int field_c;
 
     public static void a(byte param0) {
@@ -17,8 +17,8 @@ final class ClientException extends RuntimeException {
     }
 
     ClientException(Throwable param0, String param1) {
-        this.field_a = param0;
-        this.field_f = param1;
+        this.cause = param0;
+        this.context = param1;
     }
 
     static {

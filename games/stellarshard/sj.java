@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sj extends g implements md, oi {
+final class sj extends WidgetContainer implements md, oi {
     static n[] field_B;
     private rg field_G;
     private ig field_D;
@@ -28,7 +28,7 @@ final class sj extends g implements md, oi {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        rj var7 = null;
+        UiWidget var7 = null;
         var6 = stellarshard.field_B;
         try {
           if (0 != param0) {
@@ -45,8 +45,8 @@ final class sj extends g implements md, oi {
           if (param1 == -2) {
             return;
           }
-          var7 = (rj) null;
-          this.a(100, 104, 'ﾇ', (rj) null);
+          var7 = (UiWidget) null;
+          this.a(100, 104, 'ﾇ', (UiWidget) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -145,7 +145,7 @@ final class sj extends g implements md, oi {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, rj param3) {
+    final boolean a(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;

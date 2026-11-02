@@ -4,7 +4,7 @@
 abstract class gj extends DualLinkNode {
     static int field_v;
     int field_u;
-    static gd field_r;
+    static PcmSampleStream field_r;
     static int[] field_w;
     static String field_s;
     static int field_t;
@@ -48,7 +48,7 @@ abstract class gj extends DualLinkNode {
         }
     }
 
-    final static boolean a(qe param0, int param1, boolean param2, qe param3) {
+    final static boolean a(GameEntity param0, int param1, boolean param2, GameEntity param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;

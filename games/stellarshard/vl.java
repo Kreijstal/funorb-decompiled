@@ -8,7 +8,7 @@ final class vl {
     int field_l;
     double field_j;
     static String field_i;
-    private qe field_g;
+    private GameEntity field_g;
     static bj[] field_r;
     int field_n;
     static int[][] field_o;
@@ -24,7 +24,7 @@ final class vl {
 
     private final void b(byte param0) {
         int var2 = 0;
-        qe var3;
+        GameEntity var3;
         double var4;
         double var6;
         double var8;
@@ -50,10 +50,10 @@ final class vl {
           this.a(88, 65, true);
         }
         for (var2 = 0; var2 < 1000; var2++) {
-          if (a.field_h[var2] != null &&
-            this.a(-48, a.field_h[var2], false) && (a.field_h[var2].field_m != -1 ||
+          if (a.entities[var2] != null &&
+            this.a(-48, a.entities[var2], false) && (a.entities[var2].kind != -1 ||
             nc.field_H != 2)) {
-            var3 = a.field_h[var2];
+            var3 = a.entities[var2];
             if (var3 != this.field_g &&
               !var3.a((byte) -47)) {
               var4 = -var3.field_a + this.field_c;
@@ -68,10 +68,10 @@ final class vl {
                 var18 = var10 * this.field_j + this.field_a * var12;
                 var20 = var3.field_d * var10 + var12 * var3.field_k;
                 if (var18 < var20) {
-                  var22 = var18 * (double)this.field_m + (double)var3.field_n * var20;
+                  var22 = var18 * (double)this.field_m + (double)var3.mass * var20;
                   var24 = -var20 + var18;
                   var26 = 0.0;
-                  var26Lifetime1 = (var22 - var24 * (double)var3.field_n) / (double)(this.field_m + var3.field_n);
+                  var26Lifetime1 = (var22 - var24 * (double)var3.mass) / (double)(this.field_m + var3.mass);
                   var28 = 0.0;
                   if (0.0 == var10) {
                     var10 = 0.00001;
@@ -88,7 +88,7 @@ final class vl {
                   var3.field_k = (var28Lifetime1 / var10 * var12 - var16) / (var12 * var12 / var10 + var10);
                   this.field_j = (-(this.field_a * var12) + var26Lifetime1) / var10;
                   var3.field_d = (var28Lifetime1 - var12 * var3.field_k) / var10;
-                  if (a.field_h[var2].field_m == -1) {
+                  if (a.entities[var2].kind == -1) {
                     if (el.field_I <= 0) {
                       el.field_I = 50;
                       this.field_p = this.field_p - 1;
@@ -96,14 +96,14 @@ final class vl {
                   } else {
                     this.field_p = this.field_p - 1;
                   }
-                  if (11 != var3.field_m ||
+                  if (11 != var3.kind ||
                     var3.field_c != 13) {
                     var3.field_g = var3.field_g - 1;
                   }
                   if (MouseWheelInput.field_e &&
-                    a.field_h[0] != null) {
-                    var31 = -a.field_h[0].field_a + this.field_c;
-                    var33 = this.field_k - a.field_h[0].field_l;
+                    a.entities[0] != null) {
+                    var31 = -a.entities[0].field_a + this.field_c;
+                    var33 = this.field_k - a.entities[0].field_l;
                     var35 = 128;
                     if (var31 != 0.0 ||
                       var33 != 0.0) {
@@ -116,7 +116,7 @@ final class vl {
                   }
                   if (5 < this.field_p ||
                     this.field_l > 100) {
-                    if (var3.field_m != 11 ||
+                    if (var3.kind != 11 ||
                       var3.field_c != 13) {
                       var3.field_g = var3.field_g - this.field_p;
                     }
@@ -144,7 +144,7 @@ final class vl {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        qe var10 = null;
+        GameEntity var10 = null;
         int var6_intLifetime1;
         int var6_intLifetime2;
         int var6_intLifetime3;
@@ -268,8 +268,8 @@ final class vl {
             }
           }
           if (param0 >= -35) {
-            var10 = (qe) null;
-            discarded$0 = this.a(68, (qe) null, true);
+            var10 = (GameEntity) null;
+            discarded$0 = this.a(68, (GameEntity) null, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -443,7 +443,7 @@ final class vl {
         this.field_k = this.field_k + this.field_a;
     }
 
-    private final boolean a(int param0, qe param1, boolean param2) {
+    private final boolean a(int param0, GameEntity param1, boolean param2) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -524,7 +524,7 @@ final class vl {
         }
     }
 
-    vl(int param0, qe param1) {
+    vl(int param0, GameEntity param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

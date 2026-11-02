@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ig extends rj {
+class ig extends UiWidget {
     private boolean field_A;
     static String field_C;
     boolean field_E;
@@ -58,17 +58,17 @@ class ig extends rj {
         }
     }
 
-    boolean a(int param0, int param1, char param2, rj param3) {
+    boolean a(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
-        rj var6 = null;
+        UiWidget var6 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 29657) {
-            var6 = (rj) null;
-            this.a(68, (rj) null);
+            var6 = (UiWidget) null;
+            this.a(68, (UiWidget) null);
           }
           if (!this.e(0)) {
             return false;
@@ -93,7 +93,7 @@ class ig extends rj {
         }
     }
 
-    final void a(int param0, int param1, rj param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           int var7_int = -87 % ((param1 + 50) / 57);
           if (this.field_v != null &&
@@ -107,15 +107,15 @@ class ig extends rj {
     }
 
     final void c(boolean param0) {
-        rj var3 = null;
-        rj var3Lifetime1;
-        rj var3Lifetime2;
+        UiWidget var3 = null;
+        UiWidget var3Lifetime1;
+        UiWidget var3Lifetime2;
         if (!this.field_B) {
           if (param0) {
             return;
           }
-          var3 = (rj) null;
-          this.a(-21, 2, (rj) null, 96, 23, 47);
+          var3 = (UiWidget) null;
+          this.a(-21, 2, (UiWidget) null, 96, 23, 47);
           return;
         }
         this.field_B = false;
@@ -123,21 +123,21 @@ class ig extends rj {
           if (param0) {
             return;
           }
-          var3Lifetime1 = (rj) null;
-          this.a(-21, 2, (rj) null, 96, 23, 47);
+          var3Lifetime1 = (UiWidget) null;
+          this.a(-21, 2, (UiWidget) null, 96, 23, 47);
           return;
         }
         if (this.field_v instanceof ik) {
-          ((ik) (this.field_v)).a(!param0 ? true : false, (rj) (this), this.field_B);
+          ((ik) (this.field_v)).a(!param0 ? true : false, (UiWidget) (this), this.field_B);
         }
         if (param0) {
           return;
         }
-        var3Lifetime2 = (rj) null;
-        this.a(-21, 2, (rj) null, 96, 23, 47);
+        var3Lifetime2 = (UiWidget) null;
+        this.a(-21, 2, (UiWidget) null, 96, 23, 47);
     }
 
-    boolean a(rj param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -216,7 +216,7 @@ class ig extends rj {
         this.a(-95, -122, 120, 45);
     }
 
-    void a(int param0, boolean param1, int param2, rj param3) {
+    void a(int param0, boolean param1, int param2, UiWidget param3) {
         try {
           super.a(param0, param1, param2, param3);
           if (param1) {
@@ -235,7 +235,7 @@ class ig extends rj {
         }
     }
 
-    boolean a(int param0, rj param1) {
+    boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -251,7 +251,7 @@ class ig extends rj {
             this.field_B = true;
             if (this.field_v != null &&
               this.field_v instanceof ik) {
-              ((ik) (this.field_v)).a(false, (rj) (this), this.field_B);
+              ((ik) (this.field_v)).a(false, (UiWidget) (this), this.field_B);
             }
             return true;
           }

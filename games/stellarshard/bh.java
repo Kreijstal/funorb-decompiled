@@ -34,7 +34,7 @@ final class bh {
           var1 = var6 + ":";
           for (var2 = 0; var2 < ue.field_b; var2++) {
             var7 = var1 + ' ';
-            var3 = ae.field_N.field_r[var2] & 255;
+            var3 = ae.field_N.payload[var2] & 255;
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 >= 10) {

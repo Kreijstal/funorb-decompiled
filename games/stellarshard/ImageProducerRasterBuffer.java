@@ -95,7 +95,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         }
     }
 
-    final static void a(int param0, int param1, String param2, uj param3, bd param4) {
+    final static void a(int param0, int param1, String param2, uj param3, BitmapFont param4) {
         int var7 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

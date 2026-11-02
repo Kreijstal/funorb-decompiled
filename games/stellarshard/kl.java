@@ -109,7 +109,7 @@ final class kl extends IntrusiveNode {
             stackIn_40_0 = -112;
             stackIn_40_1 = var6;
             stackIn_41_2 = !(var4 < 0);
-            var7Lifetime1 = qe.$cfr$intArgs$a$590e95718a07(stackIn_40_0, stackIn_40_1, stackIn_41_2);
+            var7Lifetime1 = GameEntity.$cfr$intArgs$a$590e95718a07(stackIn_40_0, stackIn_40_1, stackIn_41_2);
             var8Lifetime1 = DualLinkDequeIterator.field_b - (var7Lifetime1 >> 1);
             if (var4 >= 0) {
               if (var4 == ua.field_i.field_f) {

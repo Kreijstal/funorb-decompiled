@@ -30,11 +30,11 @@ final class bk {
 
     final static void a(int param0, boolean param1, int param2, PacketBuffer param3, int param4) {
         try {
-          param3.a(param1, 12);
+          param3.writeByte(param1, 12);
           param3.c(17, -117);
           param3.c(param0, -123);
           param3.c(param2, -117);
-          param3.a(false, param4);
+          param3.writeByte(false, param4);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "bk.F(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -74,7 +74,7 @@ final class bk {
           var5.field_r = param2;
           var5.field_q = param1;
           var5.field_t = param4;
-          id.field_g.b(param3 ^ -69, var5);
+          id.field_g.addLast(param3 ^ -69, var5);
           pd.a(param0, var5, 31);
           return var5;
         }

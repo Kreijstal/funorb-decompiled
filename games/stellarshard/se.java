@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class se extends g implements oi {
+final class se extends WidgetContainer implements oi {
     private ig field_D;
     private ig field_I;
     static String[] field_E;
@@ -142,7 +142,7 @@ final class se extends g implements oi {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, rj param3) {
+    final boolean a(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;

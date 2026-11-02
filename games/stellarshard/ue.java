@@ -43,25 +43,25 @@ final class ue {
           Throwable decompiledCaughtException = null;
           if (null != ob.field_b && (param1 < 0 ||
             sl.field_d == la.field_O)) {
-            if (pg.field_fb.field_k == 0 &&
+            if (pg.field_fb.position == 0 &&
               ih.a((byte) -98) > 10000L + t.field_d) {
               pg.field_fb.f(param1, 950);
             }
             var2 = 97 % ((-22 - param0) / 57);
-            if (0 < pg.field_fb.field_k) {
+            if (0 < pg.field_fb.position) {
               try {
-                ob.field_b.a(pg.field_fb.field_r, 0, 113, pg.field_fb.field_k);
+                ob.field_b.a(pg.field_fb.payload, 0, 113, pg.field_fb.position);
                 t.field_d = ih.a((byte) -98);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 IntrusiveDeque.c(-2290);
               }
-              pg.field_fb.field_k = 0;
+              pg.field_fb.position = 0;
             }
             return;
           }
-          pg.field_fb.field_k = 0;
+          pg.field_fb.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

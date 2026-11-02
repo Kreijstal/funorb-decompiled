@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-final class qe {
+final class GameEntity {
     int field_j;
     static int field_e;
-    int field_m;
+    int kind;
     int field_i;
-    int field_n;
+    int mass;
     double field_l;
     private Sprite[] field_f;
     int field_h;
@@ -38,7 +38,7 @@ final class qe {
           var7 = new am(param0);
           if (!param2) {
             var9 = (Throwable) null;
-            qe.a(-90, (String) null, (Throwable) null);
+            GameEntity.a(-90, (String) null, (Throwable) null);
           }
           var8 = new am(param3);
           stackIn_3_0 = gk.a(param4, param1, var7, param5, param6, var8, false);
@@ -169,9 +169,9 @@ final class qe {
         }
     }
 
-    final qe a(int param0) {
+    final GameEntity a(int param0) {
         Object stackIn_195_0 = null;
-        qe stackIn_195_1 = null;
+        GameEntity stackIn_195_1 = null;
         double var2_double;
         int var2;
         int var3_int;
@@ -184,7 +184,7 @@ final class qe {
         double var8;
         vl var9;
         int var10;
-        qe var11;
+        GameEntity var11;
         vl var12;
         vl var13;
         vl var14;
@@ -226,11 +226,11 @@ final class qe {
         double var4Lifetime7Lifetime1;
         var10 = stellarshard.field_B;
         this.b((byte) 124);
-        if (this.field_m == 11) {
+        if (this.kind == 11) {
           this.field_k = this.field_k * 0.99;
           this.field_d = this.field_d * 0.99;
         }
-        if (this.field_m == -1) {
+        if (this.kind == -1) {
           ff.field_k = ff.field_k + 16;
           if (this.field_j > 0) {
             this.field_j = this.field_j - 1;
@@ -266,13 +266,13 @@ final class qe {
           if (nc.field_H == 1) {
           }
         }
-        if (12 == this.field_m &&
-          a.field_h[0] != null) {
+        if (12 == this.kind &&
+          a.entities[0] != null) {
           this.field_i = this.field_i + 1;
           this.field_j = 0;
           if (this.field_i > 50) {
-            var2_double = a.field_h[0].field_a - this.field_a;
-            var4 = a.field_h[0].field_l - this.field_l;
+            var2_double = a.entities[0].field_a - this.field_a;
+            var4 = a.entities[0].field_l - this.field_l;
             var6 = (int)(Math.atan2(var4, -var2_double) * 128.0 / 3.141592653589793);
             var6 = var6 - this.field_h;
             if (var6 < -128) {
@@ -292,9 +292,9 @@ final class qe {
             }
           }
           if (this.field_i > 100 &&
-            null != a.field_h[0]) {
-            var2_doubleLifetime6 = this.field_a - a.field_h[0].field_a;
-            var4Lifetime7 = -a.field_h[0].field_l + this.field_l;
+            null != a.entities[0]) {
+            var2_doubleLifetime6 = this.field_a - a.entities[0].field_a;
+            var4Lifetime7 = -a.entities[0].field_l + this.field_l;
             var6Lifetime6 = 128;
             if (var2_doubleLifetime6 != 0.0 ||
               var4Lifetime7 != 0.0) {
@@ -307,8 +307,8 @@ final class qe {
               ll.field_c.a(sb.field_e[8], 100, var6Lifetime6 * pk.field_h / 78);
             }
             this.field_i = 0;
-            var4Lifetime7Lifetime1 = a.field_h[0].field_l - this.field_l;
-            var2_doubleLifetime6Lifetime1 = a.field_h[0].field_a - this.field_a;
+            var4Lifetime7Lifetime1 = a.entities[0].field_l - this.field_l;
+            var2_doubleLifetime6Lifetime1 = a.entities[0].field_a - this.field_a;
             var7 = Math.sqrt(var4Lifetime7Lifetime1 * var4Lifetime7Lifetime1 + var2_doubleLifetime6Lifetime1 * var2_doubleLifetime6Lifetime1);
             var9 = new vl(3, this);
             var9.field_a = var4Lifetime7Lifetime1 * 4.0 / var7;
@@ -318,16 +318,16 @@ final class qe {
             wk.field_b[eg.a(-79)] = var9;
           }
         }
-        if (this.field_m == 7 &&
-          a.field_h[0] != null) {
+        if (this.kind == 7 &&
+          a.entities[0] != null) {
           this.field_j = 5;
           this.field_i = this.field_i + 1;
           if (this.field_i > 100) {
             this.field_i = this.field_i - 100;
           }
           if (0 == this.field_i % 10) {
-            var2_doubleLifetime1 = -a.field_h[0].field_a + this.field_a;
-            var4Lifetime1 = -a.field_h[0].field_l + this.field_l;
+            var2_doubleLifetime1 = -a.entities[0].field_a + this.field_a;
+            var4Lifetime1 = -a.entities[0].field_l + this.field_l;
             var6Lifetime1 = 128;
             if (var2_doubleLifetime1 != 0.0 ||
               var4Lifetime1 != 0.0) {
@@ -341,16 +341,16 @@ final class qe {
             }
           }
         }
-        if (this.field_m == 6 &&
-          a.field_h[0] != null) {
+        if (this.kind == 6 &&
+          a.entities[0] != null) {
           this.field_j = 5;
           this.field_i = this.field_i + 1;
           if (100 < this.field_i) {
             this.field_i = this.field_i - 100;
           }
           if (this.field_i % 10 == 0) {
-            var2_doubleLifetime2 = this.field_a - a.field_h[0].field_a;
-            var4Lifetime2 = -a.field_h[0].field_l + this.field_l;
+            var2_doubleLifetime2 = this.field_a - a.entities[0].field_a;
+            var4Lifetime2 = -a.entities[0].field_l + this.field_l;
             var6Lifetime2 = 128;
             if (0.0 != var2_doubleLifetime2 ||
               0.0 != var4Lifetime2) {
@@ -364,15 +364,15 @@ final class qe {
             }
           }
         }
-        if (this.field_m == 14 &&
-          null != a.field_h[0]) {
+        if (this.kind == 14 &&
+          null != a.entities[0]) {
           this.field_k = this.field_k * 0.99;
           this.field_d = this.field_d * 0.99;
           this.field_j = this.field_i / 50;
           for (var2 = 0; var2 < 1000; var2++) {
-            if (null != a.field_h[var2] &&
-              a.field_h[var2].field_m != 14) {
-              var11 = a.field_h[var2];
+            if (null != a.entities[var2] &&
+              a.entities[var2].kind != 14) {
+              var11 = a.entities[var2];
               var4Lifetime3 = this.field_a - var11.field_a;
               if (480.0 < var4Lifetime3) {
                 var4Lifetime3 = var4Lifetime3 - 960.0;
@@ -458,8 +458,8 @@ final class qe {
           if (this.field_i % 10 != 0) {
             if ((this.field_i % 5 == 0) &&
               (!(7500 >= this.field_i))) {
-              var2_doubleLifetime3 = -a.field_h[0].field_a + this.field_a;
-              var4Lifetime3Lifetime2 = this.field_l - a.field_h[0].field_l;
+              var2_doubleLifetime3 = -a.entities[0].field_a + this.field_a;
+              var4Lifetime3Lifetime2 = this.field_l - a.entities[0].field_l;
               var6Lifetime3 = 128;
               if (var2_doubleLifetime3 != 0.0 ||
                 var4Lifetime3Lifetime2 != 0.0) {
@@ -473,8 +473,8 @@ final class qe {
               }
             }
           } else {
-            var2_doubleLifetime3 = -a.field_h[0].field_a + this.field_a;
-            var4Lifetime3Lifetime2 = this.field_l - a.field_h[0].field_l;
+            var2_doubleLifetime3 = -a.entities[0].field_a + this.field_a;
+            var4Lifetime3Lifetime2 = this.field_l - a.entities[0].field_l;
             var6Lifetime3 = 128;
             if (var2_doubleLifetime3 != 0.0 ||
               var4Lifetime3Lifetime2 != 0.0) {
@@ -488,13 +488,13 @@ final class qe {
             }
           }
         }
-        if (this.field_m == 13 &&
-          a.field_h[0] != null) {
+        if (this.kind == 13 &&
+          a.entities[0] != null) {
           this.field_i = this.field_i + 1;
           this.field_j = 16;
           if (0 == this.field_i % 10) {
-            var2_doubleLifetime4 = -a.field_h[0].field_a + this.field_a;
-            var4Lifetime4 = this.field_l - a.field_h[0].field_l;
+            var2_doubleLifetime4 = -a.entities[0].field_a + this.field_a;
+            var4Lifetime4 = this.field_l - a.entities[0].field_l;
             var6Lifetime4 = 128;
             if (0.0 != var2_doubleLifetime4 ||
               0.0 != var4Lifetime4) {
@@ -508,8 +508,8 @@ final class qe {
             }
           }
           if (this.field_i > 100) {
-            var2_doubleLifetime4Lifetime1 = -this.field_a + a.field_h[0].field_a;
-            var4Lifetime4Lifetime1 = a.field_h[0].field_l - this.field_l;
+            var2_doubleLifetime4Lifetime1 = -this.field_a + a.entities[0].field_a;
+            var4Lifetime4Lifetime1 = a.entities[0].field_l - this.field_l;
             var6_doubleLifetime1 = Math.sqrt(var4Lifetime4Lifetime1 * var4Lifetime4Lifetime1 + var2_doubleLifetime4Lifetime1 * var2_doubleLifetime4Lifetime1);
             this.field_k = this.field_k + var4Lifetime4Lifetime1 * 0.1 / var6_doubleLifetime1;
             if (this.field_i > 150) {
@@ -518,16 +518,16 @@ final class qe {
             this.field_d = this.field_d + var2_doubleLifetime4Lifetime1 * 0.1 / var6_doubleLifetime1;
           }
         }
-        if (15 == this.field_m) {
+        if (15 == this.kind) {
           this.field_i = this.field_i + 1;
           if (this.field_i > 100) {
             this.field_j = this.field_j + 1;
             if (this.field_i % 10 == 0) {
               stackIn_195_0 = null;
-              stackIn_195_1 = a.field_h[0];
+              stackIn_195_1 = a.entities[0];
               if (stackIn_195_0 != stackIn_195_1) {
-                var2_doubleLifetime5 = this.field_a - a.field_h[0].field_a;
-                var4Lifetime5 = this.field_l - a.field_h[0].field_l;
+                var2_doubleLifetime5 = this.field_a - a.entities[0].field_a;
+                var4Lifetime5 = this.field_l - a.entities[0].field_l;
                 var6Lifetime5 = 128;
                 if (0.0 != var2_doubleLifetime5 ||
                   var4Lifetime5 != 0.0) {
@@ -550,9 +550,9 @@ final class qe {
               }
             }
             if (this.field_i % 10 == 5 &&
-              a.field_h[0] != null) {
-              var2_doubleLifetime5Lifetime1 = this.field_a - a.field_h[0].field_a;
-              var4Lifetime5Lifetime1 = -a.field_h[0].field_l + this.field_l;
+              a.entities[0] != null) {
+              var2_doubleLifetime5Lifetime1 = this.field_a - a.entities[0].field_a;
+              var4Lifetime5Lifetime1 = -a.entities[0].field_l + this.field_l;
               var6Lifetime5Lifetime1 = 128;
               if (var2_doubleLifetime5Lifetime1 != 0.0 ||
                 var4Lifetime5Lifetime1 != 0.0) {
@@ -588,24 +588,24 @@ final class qe {
         if (param0 >= -81) {
           this.field_g = 109;
         }
-        if (-1 == this.field_m &&
+        if (-1 == this.kind &&
           nc.field_H == 3) {
           this.field_g = 1;
         }
-        if (this.field_m == -1 &&
+        if (this.kind == -1 &&
           nc.field_H == 4) {
           this.field_g = 1;
         }
         boolean decompiledFrameRemainder0 = true;
         if (this.field_g <= 0) {
-          if ((this.field_m == -1) &&
+          if ((this.kind == -1) &&
             (decompiledFrameRemainder0 = (nc.field_H != 1)) &&
             (decompiledFrameRemainder0 = (nc.field_H != 2)) &&
             (decompiledFrameRemainder0 = (nc.field_H != 3))) {
             decompiledFrameRemainder0 = (nc.field_H != 4);
           }
           if (decompiledFrameRemainder0) {
-            if (this.field_m != -1) {
+            if (this.kind != -1) {
               this.c(8);
               return null;
             }
@@ -634,8 +634,8 @@ final class qe {
             }
           }
         }
-        if (this.field_m != -1 &&
-          this.field_m != 11 ||
+        if (this.kind != -1 &&
+          this.kind != 11 ||
           2 != nc.field_H &&
           nc.field_H != 4) {
           this.d(-22);
@@ -723,7 +723,7 @@ final class qe {
         mc.field_a = param3;
         if (param1 != -29770) {
           String var6 = (String) null;
-          qe.$cfr$intArgs$a$590e95718a07(-45, (String) null, false);
+          GameEntity.$cfr$intArgs$a$590e95718a07(-45, (String) null, false);
         }
         l.field_e = param2;
         na.field_a = param4;
@@ -932,8 +932,8 @@ final class qe {
         var33 = stellarshard.field_B;
         var2 = (int)(this.field_a + 320.0 - 48.0);
         var3 = (int)(this.field_l + 240.0 - 48.0);
-        if (this.field_m != -1) {
-          if (this.field_m == 14) {
+        if (this.kind != -1) {
+          if (this.kind == 14) {
             var4 = var2 + 48 << 4;
             var5 = var3 + 48 << 4;
             var6 = 2048;
@@ -1000,7 +1000,7 @@ final class qe {
             var30 = var15 + var21;
             var31 = var24;
             for (var32 = var13_int; var14_int > var32; var32++) {
-              qe.b(var32, var30, var18, var20, var27, var8, var28, var9, var10, var11, var7, var29, var4, var5);
+              GameEntity.b(var32, var30, var18, var20, var27, var8, var28, var9, var10, var11, var7, var29, var4, var5);
               var30 = var30 + var31;
               var31 = var31 + var26;
               var29 += 640;
@@ -1012,12 +1012,12 @@ final class qe {
               var31Lifetime2 = var31Lifetime2 - var26;
               var30Lifetime2 = var30Lifetime2 - var31Lifetime2;
               var29Lifetime2 -= 640;
-              qe.a(var32Lifetime2, var30Lifetime2, var18, var20, var27, var8, var28, var9, var10, var11, var7, var29Lifetime2, var4, var5);
+              GameEntity.a(var32Lifetime2, var30Lifetime2, var18, var20, var27, var8, var28, var9, var10, var11, var7, var29Lifetime2, var4, var5);
             }
           }
-          if (4 != this.field_m &&
-            10 != this.field_m &&
-            this.field_m != 5) {
+          if (4 != this.kind &&
+            10 != this.kind &&
+            this.kind != 5) {
             if (!this.a((byte) -51)) {
               this.b(640).e(var2, var3);
             } else {
@@ -1084,7 +1084,7 @@ final class qe {
               var30Lifetime1 = var15 + var21Lifetime1;
               var31Lifetime1 = var24Lifetime1;
               for (var32Lifetime1 = var13_int; var32Lifetime1 < var14_int; var32Lifetime1++) {
-                qe.b(var32Lifetime1, var30Lifetime1, var18, var20Lifetime1, var27Lifetime1, var8, var28Lifetime1, var9, var10, var11, var7, var29Lifetime1, var4, var5);
+                GameEntity.b(var32Lifetime1, var30Lifetime1, var18, var20Lifetime1, var27Lifetime1, var8, var28Lifetime1, var9, var10, var11, var7, var29Lifetime1, var4, var5);
                 var30Lifetime1 = var30Lifetime1 + var31Lifetime1;
                 var29Lifetime1 += 640;
                 var31Lifetime1 = var31Lifetime1 + var26Lifetime1;
@@ -1096,7 +1096,7 @@ final class qe {
                 var31Lifetime1Lifetime1 = var31Lifetime1Lifetime1 - var26Lifetime1;
                 var30Lifetime1Lifetime1 = var30Lifetime1Lifetime1 - var31Lifetime1Lifetime1;
                 var29Lifetime1Lifetime1 -= 640;
-                qe.a(var32Lifetime1Lifetime1, var30Lifetime1Lifetime1, var18, var20Lifetime1, var27Lifetime1, var8, var28Lifetime1, var9, var10, var11, var7, var29Lifetime1Lifetime1, var4, var5);
+                GameEntity.a(var32Lifetime1Lifetime1, var30Lifetime1Lifetime1, var18, var20Lifetime1, var27Lifetime1, var8, var28Lifetime1, var9, var10, var11, var7, var29Lifetime1Lifetime1, var4, var5);
               }
             }
           } else {
@@ -1164,7 +1164,7 @@ final class qe {
               }
             }
           }
-          if (this.field_m == 11 &&
+          if (this.kind == 11 &&
             16 != this.field_c &&
             qi.field_a == 1 &&
             null == na.field_j) {
@@ -1176,18 +1176,18 @@ final class qe {
             stackIn_177_4 = (ki.field_s >= 5) ? 65535 : 16777215;
             ((ub) (Object) stackIn_176_0).c(stackIn_176_1, stackIn_176_2, stackIn_176_3, stackIn_177_4, 0);
           }
-          if (this.field_m == 13 &&
+          if (this.kind == 13 &&
             4 == qi.field_a &&
             na.field_j == null) {
             ti.b(24 + (var2 - ki.field_s / 2), -(ki.field_s / 2) + 24 + var3, 48 + ki.field_s, ki.field_s + 48, 16711680);
             stackIn_184_0 = qj.field_a;
-            stackIn_184_1 = ci.field_d;
+            stackIn_184_1 = FrameTimer.field_d;
             stackIn_184_2 = 48 + var2;
             stackIn_184_3 = 24 + var3;
             stackIn_185_4 = (ki.field_s >= 5) ? 16711680 : 16777215;
             ((ub) (Object) stackIn_184_0).c(stackIn_184_1, stackIn_184_2, stackIn_184_3, stackIn_185_4, 0);
           }
-          if (this.field_m == 12 &&
+          if (this.kind == 12 &&
             null == na.field_j) {
             if (50 < this.field_i) {
               var4 = -(int)(8.0 * (Math.cos(3.141592653589793 * (double)this.field_h / 128.0) * (double)(-50 + this.field_i)) / 25.0);
@@ -1205,7 +1205,7 @@ final class qe {
               ((ub) (Object) stackIn_197_0).c(stackIn_197_1, stackIn_197_2, stackIn_197_3, stackIn_198_4, 0);
             }
           }
-          if (this.field_m == 15 &&
+          if (this.kind == 15 &&
             7 == qi.field_a &&
             null == na.field_j) {
             ti.b(var2 + 24 - ki.field_s / 2, -(ki.field_s / 2) + var3 + 24, 48 + ki.field_s, 48 + ki.field_s, 16711680);
@@ -1216,7 +1216,7 @@ final class qe {
             stackIn_207_4 = (ki.field_s < 5) ? 16777215 : 16711680;
             ((ub) (Object) stackIn_206_0).c(stackIn_206_1, stackIn_206_2, stackIn_206_3, stackIn_207_4, 0);
           }
-          if (this.field_m == 7 &&
+          if (this.kind == 7 &&
             qi.field_a == 8 &&
             null == na.field_j) {
             ti.b(-(ki.field_s / 2) + var2, var3 - ki.field_s / 2, 96 + ki.field_s, 96 + ki.field_s, 16711680);
@@ -1227,7 +1227,7 @@ final class qe {
             stackIn_216_4 = (5 <= ki.field_s) ? 16711680 : 16777215;
             ((ub) (Object) stackIn_215_0).c(stackIn_215_1, stackIn_215_2, stackIn_215_3, stackIn_216_4, 0);
           }
-          if (this.field_m == 6 &&
+          if (this.kind == 6 &&
             qi.field_a == 9 &&
             na.field_j == null) {
             ti.b(-(ki.field_s / 2) + var2, var3 - ki.field_s / 2, 96 + ki.field_s, 96 + ki.field_s, 16711680);
@@ -1238,7 +1238,7 @@ final class qe {
             stackIn_224_4 = (ki.field_s < 5) ? 16777215 : 16711680;
             ((ub) (Object) stackIn_223_0).c(stackIn_223_1, stackIn_223_2, stackIn_223_3, stackIn_224_4, 0);
           }
-          if (this.field_m == 14 &&
+          if (this.kind == 14 &&
             qi.field_a == 10 &&
             null == na.field_j) {
             ti.b(-(ki.field_s / 2) + var2, var3 - ki.field_s / 2, ki.field_s + 96, 96 + ki.field_s, 16711680);
@@ -1396,7 +1396,7 @@ final class qe {
           }
         }
         if (ph.field_D >= 2 &&
-          this.field_m != -1 &&
+          this.kind != -1 &&
           !this.a((byte) -59)) {
           qj.field_a.c("" + this.field_g, var2 + 30, 34 + var3, 16711680, -1);
         }
@@ -1404,7 +1404,7 @@ final class qe {
           return;
         }
         if (ph.field_D >= 2 &&
-          this.field_m == 14) {
+          this.kind == 14) {
           qj.field_a.c("" + this.field_i, var2 + 30, 50 + var3, 255, -1);
         }
     }
@@ -1417,45 +1417,45 @@ final class qe {
         var4 = stellarshard.field_B;
         var2 = 1 + 64 * (int)(this.field_a + 256.0 + 320.0) / 496;
         var3 = 352 + (int)(this.field_l + 256.0 + 240.0) * 64 / 496;
-        if (-1 == this.field_m) {
+        if (-1 == this.kind) {
           ti.e(var2, var3, 4, 16777215);
           ti.b(var2, var3, 4, 0);
         } else {
-          if (this.field_m == 0) {
+          if (this.kind == 0) {
             ti.c(var2, var3, 4, 65280, 64);
             ti.b(var2, var3, 4, 0);
           } else {
-            if (this.field_m != 1) {
-              if (2 != this.field_m) {
-                if (3 == this.field_m) {
+            if (this.kind != 1) {
+              if (2 != this.kind) {
+                if (3 == this.kind) {
                   ti.c(var2, var3, 5, 65280, 64);
                   ti.b(var2, var3, 5, 0);
                 } else {
-                  if (4 != this.field_m) {
-                    if (this.field_m != 5) {
-                      if (6 != this.field_m &&
-                        this.field_m != 14 &&
-                        this.field_m != 7) {
-                        if (8 == this.field_m) {
+                  if (4 != this.kind) {
+                    if (this.kind != 5) {
+                      if (6 != this.kind &&
+                        this.kind != 14 &&
+                        this.kind != 7) {
+                        if (8 == this.kind) {
                           ti.c(var2, var3, 3, 65280, 64);
                           ti.b(var2, var3, 3, 0);
                         } else {
-                          if (this.field_m == 9) {
+                          if (this.kind == 9) {
                             ti.c(var2, var3, 3, 65280, 64);
                             ti.b(var2, var3, 3, 0);
                           } else {
-                            if (this.field_m == 10) {
+                            if (this.kind == 10) {
                               ti.c(var2, var3, 2, 65280, 64);
                               ti.b(var2, var3, 2, 0);
                             } else {
-                              if (this.field_m == 11 &&
+                              if (this.kind == 11 &&
                                 16 != this.field_c) {
                                 ti.c(var2, var3, 3, 16777215, 192);
                                 ti.b(var2, var3, 3, 0);
                               } else {
-                                if ((this.field_m == 12 ||
-                                  this.field_m == 13 ||
-                                  this.field_m == 15)) {
+                                if ((this.kind == 12 ||
+                                  this.kind == 13 ||
+                                  this.kind == 15)) {
                                   ti.c(var2, var3, 4, 16711680, 192);
                                   ti.b(var2, var3, 4, 0);
                                 }
@@ -1498,13 +1498,13 @@ final class qe {
         if (param0 > -36) {
           return true;
         }
-        stackIn_6_0 = (this.field_m == 11) && (this.field_c == 16);
+        stackIn_6_0 = (this.kind == 11) && (this.field_c == 16);
         return stackIn_6_0;
     }
 
     private final void d(int param0) {
         int var2 = 0;
-        qe var3;
+        GameEntity var3;
         double var4;
         double var6;
         double var8;
@@ -1524,16 +1524,16 @@ final class qe {
         var30 = stellarshard.field_B;
         for (var2 = 0; var2 < 1000; var2++) {
           boolean decompiledFrameRemainder0 = true;
-          if (a.field_h[var2] != null && (!a.field_h[var2].a((byte) -109) ||
-            this.field_m == -1) && (!this.a((byte) -48) ||
-            a.field_h[var2].field_m == -1) && gj.a(a.field_h[var2], 0, false, this)) {
-            if ((a.field_h[var2].field_m == -1) &&
-              (decompiledFrameRemainder0 = !(a.field_h[var2].field_g <= 0)) &&
+          if (a.entities[var2] != null && (!a.entities[var2].a((byte) -109) ||
+            this.kind == -1) && (!this.a((byte) -48) ||
+            a.entities[var2].kind == -1) && gj.a(a.entities[var2], 0, false, this)) {
+            if ((a.entities[var2].kind == -1) &&
+              (decompiledFrameRemainder0 = !(a.entities[var2].field_g <= 0)) &&
               (decompiledFrameRemainder0 = (nc.field_H != 2))) {
               decompiledFrameRemainder0 = (4 != nc.field_H);
             }
             if (decompiledFrameRemainder0) {
-              var3 = a.field_h[var2];
+              var3 = a.entities[var2];
               var4 = -var3.field_a + this.field_a;
               var6 = -var3.field_l + this.field_l;
               if (var4 != 0.0 ||
@@ -1547,13 +1547,13 @@ final class qe {
                 var20 = var3.field_k * var12 + var3.field_d * var10;
                 if (var20 > var18) {
                   if (!this.a((byte) -113) &&
-                    !a.field_h[var2].a((byte) -41)) {
-                    this.a(100, this.field_m);
-                    this.a(100, a.field_h[var2].field_m);
-                    var22 = (double)var3.field_n * var20 + (double)this.field_n * var18;
+                    !a.entities[var2].a((byte) -41)) {
+                    this.a(100, this.kind);
+                    this.a(100, a.entities[var2].kind);
+                    var22 = (double)var3.mass * var20 + (double)this.mass * var18;
                     var24 = var18 + -var20;
                     var26 = 0.0;
-                    var26Lifetime1 = (-(var24 * (double)var3.field_n) + var22) / (double)(this.field_n + var3.field_n);
+                    var26Lifetime1 = (-(var24 * (double)var3.mass) + var22) / (double)(this.mass + var3.mass);
                     var28 = 0.0;
                     var28Lifetime1 = var26Lifetime1 + var24;
                     if (0.0 == var12) {
@@ -1566,45 +1566,45 @@ final class qe {
                     this.field_d = (-(var12 * this.field_k) + var26Lifetime1) / var10;
                     var3.field_k = (var28Lifetime1 / var10 * var12 - var16) / (var12 * var12 / var10 + var10);
                     var3.field_d = (-(var3.field_k * var12) + var28Lifetime1) / var10;
-                    if (var3.field_m != 11 && (this.field_m == -1 ||
-                      var3.field_m == 14)) {
-                      if (14 == var3.field_m) {
+                    if (var3.kind != 11 && (this.kind == -1 ||
+                      var3.kind == 14)) {
+                      if (14 == var3.kind) {
                         var3.field_i = var3.field_i + 50;
                       }
-                      if (this.field_m != -1 ||
+                      if (this.kind != -1 ||
                         !(0 < el.field_I)) {
                         this.field_g = this.field_g - 1;
-                        if (this.field_m == -1) {
+                        if (this.kind == -1) {
                           el.field_I = 50;
                         }
                       }
                     }
-                    if (this.field_m != 11 && (var3.field_m == -1 ||
-                      this.field_m == 14)) {
-                      if (this.field_m == 14) {
+                    if (this.kind != 11 && (var3.kind == -1 ||
+                      this.kind == 14)) {
+                      if (this.kind == 14) {
                         this.field_i = this.field_i + 50;
                       }
-                      if (var3.field_m != -1 ||
+                      if (var3.kind != -1 ||
                         !(0 < el.field_I)) {
                         var3.field_g = var3.field_g - 1;
-                        if (var3.field_m == -1) {
+                        if (var3.kind == -1) {
                           el.field_I = 50;
                         }
                       }
                     }
                   }
-                  if (11 == this.field_m &&
-                    -1 == var3.field_m &&
+                  if (11 == this.kind &&
+                    -1 == var3.kind &&
                     var3.field_g >= 0) {
                     o.a(this, false);
                   }
-                  if (-1 == this.field_m &&
-                    var3.field_m == 11 &&
+                  if (-1 == this.kind &&
+                    var3.kind == 11 &&
                     0 <= this.field_g) {
                     o.a(var3, false);
                   }
                   if (!this.a((byte) -85) &&
-                    !a.field_h[var2].a((byte) -105)) {
+                    !a.entities[var2].a((byte) -105)) {
                     if (0.0 < var14) {
                       this.field_j = this.field_j - 1;
                     }
@@ -1630,7 +1630,7 @@ final class qe {
 
     final Sprite b(int param0) {
         int var2 = 0;
-        if (this.field_m == 11) {
+        if (this.kind == 11) {
           var2 = this.field_c;
           if (var2 >= e.field_g.length) {
             var2 = -1 + e.field_g.length;
@@ -1643,7 +1643,7 @@ final class qe {
         if (256 <= this.field_h) {
           this.field_h = this.field_h - 256;
         }
-        if (this.field_m == -1) {
+        if (this.kind == -1) {
           return this.field_f[this.field_h / 4];
         }
         if (this.c((byte) 84) == 32) {
@@ -1717,7 +1717,7 @@ final class qe {
           break;
         }
         var2 = 64;
-        if (this.field_m == 14) {
+        if (this.kind == 14) {
           var2Lifetime1 = 128;
         }
         var2Lifetime2 = 256;
@@ -1744,34 +1744,34 @@ final class qe {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$3 = 0;
-        sd dupTemp$4 = null;
+        ScorePopup dupTemp$4 = null;
         int var10_int = 0;
         int var11 = 0;
-        qe stackIn_147_0 = null;
+        GameEntity stackIn_147_0 = null;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
         vl var7_ref_vl;
-        sd var7_ref_sd;
+        ScorePopup var7_ref_sd;
         int var7_int;
         double var7;
         int var8;
-        qe var8_ref_qe;
+        GameEntity var8_ref_qe;
         int var9_int;
         double var9;
-        qe var10;
-        qe var12;
+        GameEntity var10;
+        GameEntity var12;
         int var13;
         vl var14;
-        sd var15;
+        ScorePopup var15;
         var13 = stellarshard.field_B;
         var2 = 0;
         var3 = 0;
         var4 = 0;
         var5 = 16777215;
-        if (1 == this.field_m) {
+        if (1 == this.kind) {
           var5 = 8947848;
           if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[9], 100, pk.field_h * 2);
@@ -1779,7 +1779,7 @@ final class qe {
           var4 = 80;
           stellarshard.field_U[0] = stellarshard.field_U[0] + 1;
         }
-        if (this.field_m == 3) {
+        if (this.kind == 3) {
           if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[16], 100, 2 * pk.field_h);
           }
@@ -1787,7 +1787,7 @@ final class qe {
           var4 = 100;
           stellarshard.field_U[1] = stellarshard.field_U[1] + 1;
         }
-        if (this.field_m == 5) {
+        if (this.kind == 5) {
           if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[13], 100, pk.field_h * 2);
           }
@@ -1795,49 +1795,49 @@ final class qe {
           var5 = 8947967;
           stellarshard.field_U[3] = stellarshard.field_U[3] + 1;
         }
-        if (0 == this.field_m) {
+        if (0 == this.kind) {
           if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[10], 100, pk.field_h * 2);
           }
           var5 = 8947848;
           var4 = 50;
         }
-        if (this.field_m == 2) {
+        if (this.kind == 2) {
           var4 = 50;
           if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[17], 100, 2 * pk.field_h);
           }
           var5 = 16777215;
         }
-        if (this.field_m == 4) {
+        if (this.kind == 4) {
           if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[14], 100, 2 * pk.field_h);
           }
           var5 = 8947967;
           var4 = 50;
         }
-        if (this.field_m == 8) {
+        if (this.kind == 8) {
           if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[11], 100, pk.field_h * 2);
           }
           var5 = 8947848;
           var4 = 10;
         }
-        if (9 == this.field_m) {
+        if (9 == this.kind) {
           if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[18], 100, pk.field_h * 2);
           }
           var5 = 16777215;
           var4 = 10;
         }
-        if (this.field_m == 10) {
+        if (this.kind == 10) {
           var4 = 10;
           var5 = 8947967;
           if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[15], 100, pk.field_h * 2);
           }
         }
-        if (this.field_m == 13) {
+        if (this.kind == 13) {
           fieldTemp$0 = ta.field_p;
           ta.field_p = ta.field_p + 1;
           if (fieldTemp$0 == 20) {
@@ -1850,7 +1850,7 @@ final class qe {
           var4 = 100;
           stellarshard.field_U[4] = stellarshard.field_U[4] + 1;
         }
-        if (this.field_m == 12) {
+        if (this.kind == 12) {
           fieldTemp$1 = ta.field_p;
           ta.field_p = ta.field_p + 1;
           if (fieldTemp$1 == 20) {
@@ -1863,7 +1863,7 @@ final class qe {
           var5 = 16711680;
           stellarshard.field_U[5] = stellarshard.field_U[5] + 1;
         }
-        if (14 == this.field_m) {
+        if (14 == this.kind) {
           fieldTemp$2 = ta.field_p;
           ta.field_p = ta.field_p + 1;
           if (fieldTemp$2 == 20) {
@@ -1877,9 +1877,9 @@ final class qe {
           stellarshard.field_U[9] = stellarshard.field_U[9] + 1;
         }
         var6 = -40 / ((param0 - 63) / 34);
-        if (this.field_m == 15) {
-          fieldTemp$3 = sd.field_b;
-          sd.field_b = sd.field_b + 1;
+        if (this.kind == 15) {
+          fieldTemp$3 = ScorePopup.field_b;
+          ScorePopup.field_b = ScorePopup.field_b + 1;
           if (fieldTemp$3 == 10) {
             hj.a(243, 12, 1);
           }
@@ -1890,51 +1890,51 @@ final class qe {
           }
           stellarshard.field_U[9] = stellarshard.field_U[9] + 1;
         }
-        if (this.field_m == 7) {
+        if (this.kind == 7) {
           var4 = 250;
           if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[12], 100, 2 * pk.field_h);
           }
           var5 = 16711680;
         }
-        if (6 == this.field_m) {
+        if (6 == this.kind) {
           if (MouseWheelInput.field_e) {
             ll.field_c.a(sb.field_e[12], 100, pk.field_h * 2);
           }
           var4 = 250;
           var5 = 16711680;
         }
-        if (this.field_m == 1) {
+        if (this.kind == 1) {
           var3 = 3;
           var2 = 0;
         }
-        if (this.field_m == 0) {
+        if (this.kind == 0) {
           var2 = 8;
           var3 = 4;
         }
-        if (this.field_m == 3) {
+        if (this.kind == 3) {
           var3 = 2;
           var2 = 2;
         }
-        if (2 == this.field_m) {
+        if (2 == this.kind) {
           var3 = 2;
           var2 = 9;
         }
-        if (this.field_m == 5) {
+        if (this.kind == 5) {
           var2 = 4;
           var3 = 2;
         }
-        if (4 == this.field_m) {
+        if (4 == this.kind) {
           var3 = 10;
           var2 = 10;
         }
-        if (this.field_m >= 0 &&
-          8 >= this.field_m &&
-          7 == this.field_m) {
+        if (this.kind >= 0 &&
+          8 >= this.kind &&
+          7 == this.kind) {
           var3 = 4;
           var2 = 13;
         }
-        if (this.field_m == 6) {
+        if (this.kind == 6) {
           var2 = 12;
           var3 = 4;
         }
@@ -1949,7 +1949,7 @@ final class qe {
           wk.field_b[eg.a(-71)] = var14;
         }
         if (var4 > 0) {
-          dupTemp$4 = new sd(var4, this, var5);
+          dupTemp$4 = new ScorePopup(var4, this, var5);
           var15 = dupTemp$4;
           var7_ref_sd = dupTemp$4;
           hf.field_e[ha.k(-1001)] = var15;
@@ -1962,8 +1962,8 @@ final class qe {
           }
         }
         boolean decompiledFrameRemainder0 = true;
-        if (this.field_m != 11 &&
-          this.field_m != -1 &&
+        if (this.kind != 11 &&
+          this.kind != -1 &&
           nc.field_H != 4) {
           var7_int = dc.a(-118);
           if (var7_int <= -1) {
@@ -1976,9 +1976,9 @@ final class qe {
                 var8 = 1;
                 var9_int = 0;
                 for (var10_int = 0; var10_int < 1000; var10_int++) {
-                  if (a.field_h[var10_int] != null) {
+                  if (a.entities[var10_int] != null) {
                     var9_int++;
-                    if (a.field_h[var10_int].a((byte) -55)) {
+                    if (a.entities[var10_int].a((byte) -55)) {
                       var8 = 0;
                     }
                   }
@@ -1988,27 +1988,27 @@ final class qe {
                     if ((!(ph.field_D < 2)) &&
                       (si.field_jb[52])) {
                       q.field_a = q.field_a + 1;
-                      stackIn_147_0 = new qe(11);
+                      stackIn_147_0 = new GameEntity(11);
                       var10 = stackIn_147_0;
                       var10.field_c = 16;
                       var10.field_l = this.field_l;
                       var10.field_a = this.field_a;
-                      a.field_h[pl.e((byte) 63)] = var10;
+                      a.entities[pl.e((byte) 63)] = var10;
                     }
                   } else {
                     q.field_a = q.field_a + 1;
-                    stackIn_147_0 = new qe(11);
+                    stackIn_147_0 = new GameEntity(11);
                     var10 = stackIn_147_0;
                     var10.field_c = 16;
                     var10.field_l = this.field_l;
                     var10.field_a = this.field_a;
-                    a.field_h[pl.e((byte) 63)] = var10;
+                    a.entities[pl.e((byte) 63)] = var10;
                   }
                 }
               }
             }
           } else {
-            var8_ref_qe = new qe(11);
+            var8_ref_qe = new GameEntity(11);
             var8_ref_qe.field_c = var7_int;
             var8_ref_qe.field_l = this.field_l;
             var8_ref_qe.field_a = this.field_a;
@@ -2016,14 +2016,14 @@ final class qe {
               b.a(var8_ref_qe.field_c, 6);
               var8_ref_qe.field_c = 8;
             }
-            a.field_h[pl.e((byte) 63)] = var8_ref_qe;
+            a.entities[pl.e((byte) 63)] = var8_ref_qe;
           }
         }
         if (var3 > 0) {
           var7 = 0.0;
           var9 = 0.0;
           for (var11 = 0; var11 < var3; var11++) {
-            var12 = new qe(var2);
+            var12 = new GameEntity(var2);
             var12.field_l = this.field_l;
             var12.field_a = this.field_a;
             if (var3 - 1 <= var11 &&
@@ -2034,9 +2034,9 @@ final class qe {
               var9 = var9 + var12.field_k;
               var7 = var7 + var12.field_d;
             }
-            var12.field_d = var12.field_d + (double)this.field_n * this.field_d / (double)(var3 * var12.field_n);
-            var12.field_k = var12.field_k + this.field_k * (double)this.field_n / (double)(var3 * var12.field_n);
-            a.field_h[pl.e((byte) 63)] = var12;
+            var12.field_d = var12.field_d + (double)this.mass * this.field_d / (double)(var3 * var12.mass);
+            var12.field_k = var12.field_k + this.field_k * (double)this.mass / (double)(var3 * var12.mass);
+            a.entities[pl.e((byte) 63)] = var12;
           }
         }
     }
@@ -2049,9 +2049,9 @@ final class qe {
           this.field_d = 0.12426570427502562;
         }
         if (MouseWheelInput.field_e &&
-          a.field_h[0] != null) {
-          var3 = this.field_a - a.field_h[0].field_a;
-          var5 = -a.field_h[0].field_l + this.field_l;
+          a.entities[0] != null) {
+          var3 = this.field_a - a.entities[0].field_a;
+          var5 = -a.entities[0].field_l + this.field_l;
           var7 = 128;
           if (var3 != 0.0 ||
             var5 != 0.0) {
@@ -2085,8 +2085,8 @@ final class qe {
         if (param0 <= 34) {
           this.field_j = 36;
         }
-        if (this.field_m >= 0 &&
-          this.field_m < 8) {
+        if (this.kind >= 0 &&
+          this.kind < 8) {
           return 48;
         }
         return 32;
@@ -2140,7 +2140,7 @@ final class qe {
           String var3 = null;
           Throwable decompiledCaughtException = null;
           IOException var2 = null;
-          if (param1 <= ae.field_N.field_k) {
+          if (param1 <= ae.field_N.position) {
             return true;
           }
           if (null == ob.field_b) {
@@ -2150,19 +2150,19 @@ final class qe {
             var2_int = ob.field_b.b(-111);
             if (param0 != 64) {
               var3 = (String) null;
-              qe.$cfr$intArgs$a$590e95718a07(101, (String) null, false);
+              GameEntity.$cfr$intArgs$a$590e95718a07(101, (String) null, false);
             }
             if (var2_int > 0) {
-              if (-ae.field_N.field_k + param1 < var2_int) {
-                var2_int = -ae.field_N.field_k + param1;
+              if (-ae.field_N.position + param1 < var2_int) {
+                var2_int = -ae.field_N.position + param1;
               }
-              ob.field_b.a(ae.field_N.field_k, (byte) -64, ae.field_N.field_r, var2_int);
+              ob.field_b.a(ae.field_N.position, (byte) -64, ae.field_N.payload, var2_int);
               PacketBuffer.field_o = ih.a((byte) -98);
-              ae.field_N.field_k = ae.field_N.field_k + var2_int;
-              if (ae.field_N.field_k < param1) {
+              ae.field_N.position = ae.field_N.position + var2_int;
+              if (ae.field_N.position < param1) {
                 return false;
               }
-              ae.field_N.field_k = 0;
+              ae.field_N.position = 0;
               return true;
             }
             if (var2_int >= 0 &&
@@ -2183,7 +2183,7 @@ final class qe {
         }
     }
 
-    qe(int param0) {
+    GameEntity(int param0) {
         int stackIn_3_1 = 0;
         int stackIn_9_1 = 0;
         int stackIn_14_1 = 0;
@@ -2195,7 +2195,7 @@ final class qe {
         double var2;
         double var4;
         this.field_j = 0;
-        this.field_m = param0;
+        this.kind = param0;
         this.field_i = 0;
         this.field_b = 0;
         this.field_c = 0;
@@ -2203,7 +2203,7 @@ final class qe {
         this.field_l = 0.0;
         this.field_d = 0.0;
         this.field_a = 0.0;
-        this.field_n = 100;
+        this.mass = 100;
         this.field_k = 0.0;
         var2 = 2.0 * (3.141592653589793 * Math.random());
         var4 = 100.0 * (Math.random() * 0.5 + 0.5);
@@ -2280,31 +2280,31 @@ final class qe {
         }
         if (param0 == 14) {
           this.field_g = 50;
-          this.field_n = 1000;
+          this.mass = 1000;
         }
         if (param0 == 12) {
-          this.field_n = 200;
+          this.mass = 200;
           this.field_g = 1 + qi.field_a / 6;
           this.field_h = (int)(Math.random() * 256.0);
         }
         if (param0 == 13) {
-          this.field_n = 200;
+          this.mass = 200;
           this.field_g = qi.field_a / 6 + 1;
           this.field_h = (int)(Math.random() * 256.0);
         }
         if (param0 == 15) {
           this.field_g = qi.field_a / 6 + 3;
-          this.field_n = 100;
+          this.mass = 100;
           this.field_h = (int)(256.0 * Math.random());
         }
         if (param0 == 6) {
           this.field_g = 10 + qi.field_a / 5;
-          this.field_n = 150;
+          this.mass = 150;
           this.field_h = (int)(256.0 * Math.random());
         }
         if (param0 == 7) {
           this.field_g = 10 + qi.field_a / 5;
-          this.field_n = 150;
+          this.mass = 150;
           this.field_h = (int)(Math.random() * 256.0);
         }
         if (param0 < 0) {
@@ -2322,25 +2322,25 @@ final class qe {
           4 == param0) {
           this.field_j = 5;
           this.field_h = (int)(Math.random() * 256.0);
-          this.field_n = 100;
+          this.mass = 100;
         }
         if (param0 == 8 ||
           9 == param0) {
           this.field_j = 7;
           this.field_h = (int)(256.0 * Math.random());
-          this.field_n = 50;
+          this.mass = 50;
         }
         if (param0 == 1 ||
           param0 == 3 ||
           param0 == 5) {
           this.field_j = 3;
           this.field_h = (int)(256.0 * Math.random());
-          this.field_n = 200;
+          this.mass = 200;
         }
         if (param0 == 10) {
           this.field_j = 10;
           this.field_h = (int)(Math.random() * 256.0);
-          this.field_n = 25;
+          this.mass = 25;
         }
         if (param0 < 0) {
           this.field_k = 0.0;
@@ -2348,8 +2348,8 @@ final class qe {
           this.field_d = 0.0;
           this.field_l = 0.0;
         } else {
-          this.field_d = var4 * Math.sin(var2) / (double)this.field_n;
-          this.field_k = Math.cos(var2) * var4 / (double)this.field_n;
+          this.field_d = var4 * Math.sin(var2) / (double)this.mass;
+          this.field_k = Math.cos(var2) * var4 / (double)this.mass;
           if (!(Math.random() < 0.5)) {
             this.field_l = 0.0;
             this.field_a = Math.random() * 1152.0;

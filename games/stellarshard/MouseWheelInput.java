@@ -73,19 +73,19 @@ abstract class MouseWheelInput {
           return;
         }
         try {
-          ci.field_b = param0.c((byte) 86) << 5;
-          var2_int = param0.f(4);
-          rc.field_h = (var2_int & 7) << 18;
-          ci.field_b = ci.field_b + (var2_int >> 3);
-          rc.field_h = rc.field_h + (param0.c((byte) 60) << 2);
-          var2_intLifetime1 = param0.f(4);
-          rc.field_h = rc.field_h + (var2_intLifetime1 >> 6);
+          FrameTimer.field_b = param0.readUnsignedShort((byte) 86) << 5;
+          var2_int = param0.readUnsignedByte(4);
+          NanoFrameTimer.field_h = (var2_int & 7) << 18;
+          FrameTimer.field_b = FrameTimer.field_b + (var2_int >> 3);
+          NanoFrameTimer.field_h = NanoFrameTimer.field_h + (param0.readUnsignedShort((byte) 60) << 2);
+          var2_intLifetime1 = param0.readUnsignedByte(4);
+          NanoFrameTimer.field_h = NanoFrameTimer.field_h + (var2_intLifetime1 >> 6);
           b.field_t = var2_intLifetime1 << 15 & 2064384;
-          b.field_t = b.field_t + (param0.f(param1 - 12722) << 7);
-          var2_intLifetime2 = param0.f(4);
+          b.field_t = b.field_t + (param0.readUnsignedByte(param1 - 12722) << 7);
+          var2_intLifetime2 = param0.readUnsignedByte(4);
           rb.field_w = 65536 & var2_intLifetime2 << 16;
           b.field_t = b.field_t + (var2_intLifetime2 >> 1);
-          rb.field_w = rb.field_w + param0.c((byte) 25);
+          rb.field_w = rb.field_w + param0.readUnsignedShort((byte) 25);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "fe.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

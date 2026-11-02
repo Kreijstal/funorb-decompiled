@@ -275,7 +275,7 @@ final class n {
         var20 = stellarshard.field_B;
         try {
           param0.b();
-          var3_int = rc.a((byte) -61, param0.field_z[0]);
+          var3_int = NanoFrameTimer.a((byte) -61, param0.field_z[0]);
           var4 = var3_int >> 2 & 63;
           if (var4 > 0) {
             throw new IllegalArgumentException();
@@ -293,7 +293,7 @@ final class n {
           while (!(decompiledNaturalLoopExit0 = (var8_int > var5))) {
             incrementValue$0 = var6;
             var6++;
-            var7 = var7 + var9 * rc.a((byte) -61, param0.field_z[incrementValue$0]);
+            var7 = var7 + var9 * NanoFrameTimer.a((byte) -61, param0.field_z[incrementValue$0]);
             stackIn_12_0 = var9 * 255;
             if (var20 == 0) {
               var9 = stackIn_12_0;
@@ -319,7 +319,7 @@ final class n {
               while (var11 < 4) {
                 incrementValue$1 = var6;
                 var6++;
-                var10 = var10 + rc.a((byte) -61, param0.field_z[incrementValue$1]) * var12;
+                var10 = var10 + NanoFrameTimer.a((byte) -61, param0.field_z[incrementValue$1]) * var12;
                 var12 = var12 * 255;
                 var11++;
               }
@@ -331,20 +331,20 @@ final class n {
               var9Lifetime1++;
               continue scanLoop1;
             }
-            var9Lifetime1 = 255 * rc.a((byte) -61, param0.field_z[var6]) + rc.a((byte) -61, param0.field_z[var6 + 1]);
+            var9Lifetime1 = 255 * NanoFrameTimer.a((byte) -61, param0.field_z[var6]) + NanoFrameTimer.a((byte) -61, param0.field_z[var6 + 1]);
             var6 += 2;
-            var10 = 255 * rc.a((byte) -61, param0.field_z[var6]) + rc.a((byte) -61, param0.field_z[var6 + 1]);
+            var10 = 255 * NanoFrameTimer.a((byte) -61, param0.field_z[var6]) + NanoFrameTimer.a((byte) -61, param0.field_z[var6 + 1]);
             var6 += 2;
-            var11 = 255 * rc.a((byte) -61, param0.field_z[var6]) + rc.a((byte) -61, param0.field_z[1 + var6]);
+            var11 = 255 * NanoFrameTimer.a((byte) -61, param0.field_z[var6]) + NanoFrameTimer.a((byte) -61, param0.field_z[1 + var6]);
             var6 += 2;
-            stackIn_29_0 = rc.a((byte) -61, param0.field_z[var6]) * 255 + rc.a((byte) -61, param0.field_z[1 + var6]);
+            stackIn_29_0 = NanoFrameTimer.a((byte) -61, param0.field_z[var6]) * 255 + NanoFrameTimer.a((byte) -61, param0.field_z[1 + var6]);
             break;
           }
           var12Lifetime1 = stackIn_29_0;
           var6 += 2;
-          var13 = rc.a((byte) -61, param0.field_z[var6]) * 255 + rc.a((byte) -61, param0.field_z[1 + var6]);
+          var13 = NanoFrameTimer.a((byte) -61, param0.field_z[var6]) * 255 + NanoFrameTimer.a((byte) -61, param0.field_z[1 + var6]);
           var6 += 2;
-          var14 = rc.a((byte) -61, param0.field_z[var6]) * 255 + rc.a((byte) -61, param0.field_z[var6 + 1]);
+          var14 = NanoFrameTimer.a((byte) -61, param0.field_z[var6]) * 255 + NanoFrameTimer.a((byte) -61, param0.field_z[var6 + 1]);
           var6 += 2;
           var15 = new Sprite(var13, var14);
           var15.field_t = var9Lifetime1;
@@ -360,7 +360,7 @@ final class n {
               if (var5 >= var18) {
                 incrementValue$2 = var6;
                 var6++;
-                var17 = var17 + var19 * rc.a((byte) -61, param0.field_z[incrementValue$2]);
+                var17 = var17 + var19 * NanoFrameTimer.a((byte) -61, param0.field_z[incrementValue$2]);
                 var19 = var19 * 255;
                 var18++;
                 if (var20 == 0) {
@@ -420,13 +420,13 @@ final class n {
         var8 = stellarshard.field_B;
         try {
           var1 = ae.field_N;
-          var2 = var1.f(4);
+          var2 = var1.readUnsignedByte(4);
           if (var2 == 0) {
             if (GameApplet.field_n == null) {
               GameApplet.field_n = new sb(128);
               stellarshard.field_T = 0;
             }
-            stackIn_12_0 = (var1.f(4) != 1) ? 0 : 1;
+            stackIn_12_0 = (var1.readUnsignedByte(4) != 1) ? 0 : 1;
             var3_int = stackIn_12_0;
             var4_ref_String = var1.e((byte) 121);
             if (var3_int != 0) {
@@ -450,7 +450,7 @@ final class n {
               fieldTemp$1 = stellarshard.field_T;
               stellarshard.field_T = stellarshard.field_T + 1;
               var5_ref.field_ob = fieldTemp$1;
-              la.field_I.b(-51, var5_ref);
+              la.field_I.addLast(-51, var5_ref);
             }
             var5_ref.field_rb = var4_ref_String;
             return;
@@ -472,14 +472,14 @@ final class n {
               return;
             }
             if (var2 != 4) {
-              qe.a(106, "F1: " + bh.b((byte) -108), (Throwable) null);
+              GameEntity.a(106, "F1: " + bh.b((byte) -108), (Throwable) null);
               IntrusiveDeque.c(-2290);
               return;
             }
             bi.field_r = 1;
             var3 = var1.e((byte) 117);
             uf.field_f = ((String) (var3)).intern();
-            var4 = var1.f(4);
+            var4 = var1.readUnsignedByte(4);
             pl.b((byte) 105, var4);
             return;
           }
@@ -506,14 +506,14 @@ final class n {
             fieldTemp$0 = ProxySocketConnector.field_i;
             ProxySocketConnector.field_i = ProxySocketConnector.field_i + 1;
             var6.field_ob = fieldTemp$0;
-            cm.field_c.b(-99, var6);
+            cm.field_c.addLast(-99, var6);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
           }
           var6.field_pb = (String) (var3Lifetime1);
           var6.field_rb = var4_ref_StringLifetime1;
-          var6.c(param0 ^ 16);
+          var6.unlink(param0 ^ 16);
           var7 = (fd) (cm.field_c.b(param0 - 95));
           scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
@@ -540,7 +540,7 @@ final class n {
             }
             break;
           }
-          cm.field_c.b(param0 - 85, var6);
+          cm.field_c.addLast(param0 - 85, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

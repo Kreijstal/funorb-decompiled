@@ -257,25 +257,25 @@ final class tj {
         this.field_f.b(param0);
         this.field_s = new qg();
         this.field_s.b(param0);
-        int var2 = param0.f(4);
+        int var2 = param0.readUnsignedByte(4);
         if (var2 != 0) {
-          param0.field_k = param0.field_k - 1;
+          param0.position = param0.position - 1;
           this.field_h = new qg();
           this.field_h.b(param0);
           this.field_n = new qg();
           this.field_n.b(param0);
         }
-        var2 = param0.f(4);
+        var2 = param0.readUnsignedByte(4);
         if (var2 != 0) {
-          param0.field_k = param0.field_k - 1;
+          param0.position = param0.position - 1;
           this.field_a = new qg();
           this.field_a.b(param0);
           this.field_i = new qg();
           this.field_i.b(param0);
         }
-        var2 = param0.f(4);
+        var2 = param0.readUnsignedByte(4);
         if (var2 != 0) {
-          param0.field_k = param0.field_k - 1;
+          param0.position = param0.position - 1;
           this.field_o = new qg();
           this.field_o.b(param0);
           this.field_b = new qg();
@@ -292,8 +292,8 @@ final class tj {
         }
         this.field_v = param0.d((byte) -30);
         this.field_m = param0.d((byte) -86);
-        this.field_u = param0.c((byte) 80);
-        this.field_y = param0.c((byte) 60);
+        this.field_u = param0.readUnsignedShort((byte) 80);
+        this.field_y = param0.readUnsignedShort((byte) 60);
         this.field_r = new dh();
         this.field_g = new qg();
         this.field_r.a(param0, this.field_g);

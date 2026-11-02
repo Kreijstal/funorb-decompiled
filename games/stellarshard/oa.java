@@ -34,7 +34,7 @@ final class oa extends dg {
         this.field_A = 256;
     }
 
-    oa(rj param0) {
+    oa(UiWidget param0) {
         super(param0.field_w, param0.field_k, param0.field_p, param0.field_t, (uk) null, (lf) null);
         try {
           param0.b(this.field_p, 0, 0, this.field_t, 23987);

@@ -22,36 +22,36 @@ final class cd extends rg {
 
     final static boolean e(byte param0) {
         if (ue.field_b == -1) {
-          if (!qe.b(64, 1)) {
+          if (!GameEntity.b(64, 1)) {
             return false;
           }
-          ue.field_b = ae.field_N.f(4);
-          ae.field_N.field_k = 0;
+          ue.field_b = ae.field_N.readUnsignedByte(4);
+          ae.field_N.position = 0;
         }
         if (param0 <= 111) {
           cd.e((byte) -125);
           if (ue.field_b != -2) {
-            return qe.b(64, ue.field_b);
+            return GameEntity.b(64, ue.field_b);
           }
-          if (!qe.b(64, 2)) {
+          if (!GameEntity.b(64, 2)) {
             return false;
           }
-          ue.field_b = ae.field_N.c((byte) 37);
-          ae.field_N.field_k = 0;
-          return qe.b(64, ue.field_b);
+          ue.field_b = ae.field_N.readUnsignedShort((byte) 37);
+          ae.field_N.position = 0;
+          return GameEntity.b(64, ue.field_b);
         }
         if (ue.field_b != -2) {
-          return qe.b(64, ue.field_b);
+          return GameEntity.b(64, ue.field_b);
         }
-        if (!qe.b(64, 2)) {
+        if (!GameEntity.b(64, 2)) {
           return false;
         }
-        ue.field_b = ae.field_N.c((byte) 37);
-        ae.field_N.field_k = 0;
-        return qe.b(64, ue.field_b);
+        ue.field_b = ae.field_N.readUnsignedShort((byte) 37);
+        ae.field_N.position = 0;
+        return GameEntity.b(64, ue.field_b);
     }
 
-    final void a(int param0, boolean param1, int param2, rj param3) {
+    final void a(int param0, boolean param1, int param2, UiWidget param3) {
         try {
           this.field_N = this.field_N + 1;
           super.a(param0, param1, param2, param3);
@@ -88,25 +88,25 @@ final class cd extends rg {
           dj.field_b[0] = pl.field_P.nextInt();
           dj.field_b[1] = pl.field_P.nextInt();
           dj.field_b[3] = (int)ob.field_a;
-          uc.field_c.field_k = 0;
+          uc.field_c.position = 0;
           dj.field_b[2] = (int)(ob.field_a >> 32);
-          uc.field_c.b(0, dj.field_b[0]);
-          uc.field_c.b(0, dj.field_b[1]);
-          uc.field_c.b(0, dj.field_b[2]);
-          uc.field_c.b(0, dj.field_b[3]);
+          uc.field_c.writeInt(0, dj.field_b[0]);
+          uc.field_c.writeInt(0, dj.field_b[1]);
+          uc.field_c.writeInt(0, dj.field_b[2]);
+          uc.field_c.writeInt(0, dj.field_b[3]);
           ca.a(uc.field_c, -23074);
           uc.field_c.c(param3, -113);
           param2.a(95, uc.field_c);
-          pg.field_fb.field_k = 0;
+          pg.field_fb.position = 0;
           var5_int = -4 / ((param0 + 7) / 61);
           if (!param4) {
-            pg.field_fb.a(false, 16);
+            pg.field_fb.writeByte(false, 16);
           } else {
-            pg.field_fb.a(false, 18);
+            pg.field_fb.writeByte(false, 18);
           }
-          pg.field_fb.field_k = pg.field_fb.field_k + 2;
-          var6 = pg.field_fb.field_k;
-          pg.field_fb.b(0, t.field_f);
+          pg.field_fb.position = pg.field_fb.position + 2;
+          var6 = pg.field_fb.position;
+          pg.field_fb.writeInt(0, t.field_f);
           pg.field_fb.a((byte) 127, od.field_z);
           var7 = 0;
           if (uj.field_f) {
@@ -121,7 +121,7 @@ final class cd extends rg {
           if (null != pk.field_b) {
             var7 = var7 | 16;
           }
-          pg.field_fb.a(false, var7);
+          pg.field_fb.writeByte(false, var7);
           var8 = dd.a(0, hf.a((byte) -103));
           if (var8 == null) {
             var8 = "";
@@ -131,7 +131,7 @@ final class cd extends rg {
             pg.field_fb.a(126, pk.field_b);
           }
           ha.a(fj.field_l, pg.field_fb, uc.field_c, -104, u.field_o);
-          pg.field_fb.d(-1, pg.field_fb.field_k - var6);
+          pg.field_fb.d(-1, pg.field_fb.position - var6);
           ue.a((byte) -88, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -223,7 +223,7 @@ final class cd extends rg {
           var6 = this.field_R.b(param1 ^ 28091);
           var41 = (pj) ((Object) this.field_u);
           var9 = this.field_w + param3;
-          var10 = var41.a((byte) 117, (rj) (this), param2) + (var41.b((rj) (this), (byte) 111).a(17201) >> 1);
+          var10 = var41.a((byte) 117, (UiWidget) (this), param2) + (var41.b((UiWidget) (this), (byte) 111).a(17201) >> 1);
           if (eh.field_c != var6 &&
             var6 != vk.field_d) {
             if (var6 == qj.field_c) {
@@ -273,7 +273,7 @@ final class cd extends rg {
           var6 = this.field_R.b(param1 ^ 28091);
           var42 = (pj) ((Object) this.field_u);
           var9Lifetime1 = this.field_w + param3;
-          var10Lifetime1 = var42.a((byte) 117, (rj) (this), param2) + (var42.b((rj) (this), (byte) 111).a(17201) >> 1);
+          var10Lifetime1 = var42.a((byte) 117, (UiWidget) (this), param2) + (var42.b((UiWidget) (this), (byte) 111).a(17201) >> 1);
           if (eh.field_c != var6 &&
             var6 != vk.field_d) {
             if (var6 == qj.field_c) {
@@ -325,7 +325,7 @@ final class cd extends rg {
           var6Lifetime1 = this.field_R.b(param1 ^ 28091);
           var43 = (pj) ((Object) this.field_u);
           var9Lifetime2 = this.field_w + param3;
-          var10Lifetime2 = var43.a((byte) 117, (rj) (this), param2) + (var43.b((rj) (this), (byte) 111).a(17201) >> 1);
+          var10Lifetime2 = var43.a((byte) 117, (UiWidget) (this), param2) + (var43.b((UiWidget) (this), (byte) 111).a(17201) >> 1);
           if (eh.field_c != var6Lifetime1 &&
             var6Lifetime1 != vk.field_d) {
             if (var6Lifetime1 == qj.field_c) {
@@ -372,7 +372,7 @@ final class cd extends rg {
           var6Lifetime2 = this.field_R.b(param1 ^ 28091);
           var44 = (pj) ((Object) this.field_u);
           var9Lifetime3 = this.field_w + param3;
-          var10Lifetime3 = var44.a((byte) 117, (rj) (this), param2) + (var44.b((rj) (this), (byte) 111).a(17201) >> 1);
+          var10Lifetime3 = var44.a((byte) 117, (UiWidget) (this), param2) + (var44.b((UiWidget) (this), (byte) 111).a(17201) >> 1);
           if (eh.field_c != var6Lifetime2 &&
             var6Lifetime2 != vk.field_d) {
             if (var6Lifetime2 == qj.field_c) {
@@ -416,7 +416,7 @@ final class cd extends rg {
         var6Lifetime3 = this.field_R.b(param1 ^ 28091);
         var45 = (pj) ((Object) this.field_u);
         var9Lifetime4 = this.field_w + param3;
-        var10Lifetime4 = var45.a((byte) 117, (rj) (this), param2) + (var45.b((rj) (this), (byte) 111).a(17201) >> 1);
+        var10Lifetime4 = var45.a((byte) 117, (UiWidget) (this), param2) + (var45.b((UiWidget) (this), (byte) 111).a(17201) >> 1);
         if (eh.field_c == var6Lifetime3) {
           var38 = DualLinkNode.field_p[0];
           var11Lifetime4 = var38.field_w << 1;
@@ -511,7 +511,7 @@ final class cd extends rg {
         return wl.field_W;
     }
 
-    final boolean a(int param0, rj param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

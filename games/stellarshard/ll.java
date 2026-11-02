@@ -4,7 +4,7 @@
 final class ll implements uk {
     private int field_f;
     private int field_e;
-    private bd field_a;
+    private BitmapFont field_a;
     static int field_b;
     static hl field_c;
     static int field_d;
@@ -30,7 +30,7 @@ final class ll implements uk {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, rj param3, int param4) {
+    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         int stackIn_8_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -93,7 +93,7 @@ final class ll implements uk {
         }
     }
 
-    ll(bd param0, int param1, int param2) {
+    ll(BitmapFont param0, int param1, int param2) {
         try {
           this.field_f = param2;
           this.field_a = param0;

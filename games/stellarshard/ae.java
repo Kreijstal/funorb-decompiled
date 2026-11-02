@@ -115,7 +115,7 @@ class ae extends ig {
         }
     }
 
-    final boolean a(rj param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         int stackIn_4_1 = 0;
         int stackIn_5_2 = 0;
         boolean stackIn_8_1 = false;
@@ -129,7 +129,7 @@ class ae extends ig {
         try {
           if (super.a(param0, param1, param2, param3, param4, (byte) 38, param6) &&
             this.field_u instanceof pj) {
-            var8_int = ((pj) ((Object) this.field_u)).a(-109, (rj) (this), param4, KeyHandler.field_a, param6, ni.field_e);
+            var8_int = ((pj) ((Object) this.field_u)).a(-109, (UiWidget) (this), param4, KeyHandler.field_a, param6, ni.field_e);
             stackIn_4_1 = 81;
             if (var8_int == -1) {
               stackIn_5_2 = 0;
@@ -237,9 +237,9 @@ class ae extends ig {
           return;
         }
         pj var9 = (pj) ((Object) this.field_u);
-        vk var3 = var9.b((rj) (this), (byte) 107);
+        vk var3 = var9.b((UiWidget) (this), (byte) 107);
         int var4 = var3.a(false);
-        int var5 = var9.a(-27246, (rj) (this));
+        int var5 = var9.a(-27246, (UiWidget) (this));
         int var6 = var9.a((byte) -73) >> 1;
         if (var5 - var6 > var4) {
           this.field_l = 0;
@@ -263,7 +263,7 @@ class ae extends ig {
         }
     }
 
-    void a(int param0, boolean param1, int param2, rj param3) {
+    void a(int param0, boolean param1, int param2, UiWidget param3) {
         pj var5 = null;
         int var6 = 0;
         try {
@@ -272,7 +272,7 @@ class ae extends ig {
           if (this.field_o == 1) {
             if (this.field_u instanceof pj) {
               var5 = (pj) ((Object) this.field_u);
-              var6 = var5.a(73, (rj) (this), param2, KeyHandler.field_a, param0, ni.field_e);
+              var6 = var5.a(73, (UiWidget) (this), param2, KeyHandler.field_a, param0, ni.field_e);
               if (-1 != var6) {
                 if (this.field_L &&
                   var6 < this.field_F &&
@@ -316,7 +316,7 @@ class ae extends ig {
         try {
           var8 = new ha(param1.a("logo.fo3d", "", (byte) -12));
           var10 = var8;
-          var3 = var10.f(4);
+          var3 = var10.readUnsignedByte(4);
           var10.j(8);
           e.field_d = uh.a(var10, -1);
           sj.field_B = new n[var3];
@@ -401,15 +401,15 @@ class ae extends ig {
         }
         if (null != this.field_u &&
           0 == param0) {
-          this.field_u.a(this.field_E, param3, param2, (rj) (this), 4549);
+          this.field_u.a(this.field_E, param3, param2, (UiWidget) (this), 4549);
           if (this.field_u instanceof pj) {
             var8 = (pj) ((Object) this.field_u);
             if (this.field_H != this.field_I) {
-              var8.a((rj) (this), this.field_H, param2, 0, param3, this.field_I);
+              var8.a((UiWidget) (this), this.field_H, param2, 0, param3, this.field_I);
             }
             var6 = ih.a((byte) -98);
             if (500L > (var6 - this.field_J) % 1000L) {
-              var8.a(this.field_H, false, param2, (rj) (this), param3);
+              var8.a(this.field_H, false, param2, (UiWidget) (this), param3);
             }
           }
         }
@@ -457,7 +457,7 @@ class ae extends ig {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, rj param3) {
+    final boolean a(int param0, int param1, char param2, UiWidget param3) {
         int discarded$0 = 0;
         int dupTemp$1 = 0;
         int stackIn_31_1 = 0;

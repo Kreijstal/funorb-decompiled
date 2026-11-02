@@ -27,7 +27,7 @@ final class wj extends fb {
             return;
           }
           try {
-            this.field_c.field_k = 0;
+            this.field_c.position = 0;
             stackIn_7_0 = this.field_c;
             stackIn_7_1 = false;
             if (!param1) {
@@ -35,9 +35,9 @@ final class wj extends fb {
             } else {
               stackIn_8_2 = 2;
             }
-            ((PacketBuffer) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_8_2);
+            ((PacketBuffer) (Object) stackIn_7_0).writeByte(stackIn_7_1, stackIn_8_2);
             this.field_c.a(param0 - 24175, 0L);
-            this.field_s.a(this.field_c.field_r, 0, 121, this.field_c.field_r.length);
+            this.field_s.a(this.field_c.payload, 0, 121, this.field_c.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -105,17 +105,17 @@ final class wj extends fb {
                 var11 = (String) null;
                 le.field_n = wf.a(we.field_a, (String) null, -124, param0, false);
               }
-              pg.field_fb.field_k = 0;
-              pg.field_fb.a(false, 14);
-              pg.field_fb.a(false, le.field_n.a(160).field_h);
+              pg.field_fb.position = 0;
+              pg.field_fb.writeByte(false, 14);
+              pg.field_fb.writeByte(false, le.field_n.a(160).field_h);
               ue.a((byte) 114, -1);
               sl.field_d = de.field_a;
             }
             var6_int = 119 / ((param4 + 28) / 43);
             if (sl.field_d == de.field_a &&
-              qe.b(64, 1)) {
-              var7 = ae.field_N.f(4);
-              ae.field_N.field_k = 0;
+              GameEntity.b(64, 1)) {
+              var7 = ae.field_N.readUnsignedByte(4);
+              ae.field_N.position = 0;
               if (var7 == 0) {
                 sl.field_d = vg.field_p;
               } else {
@@ -125,19 +125,19 @@ final class wj extends fb {
               }
             }
             if (sl.field_d == vg.field_p &&
-              qe.b(64, 8)) {
-              ob.field_a = ae.field_N.d(0);
-              ae.field_N.field_k = 0;
+              GameEntity.b(64, 8)) {
+              ob.field_a = ae.field_N.readLong(0);
+              ae.field_N.position = 0;
               cd.a(54, param2, le.field_n, param1, param5);
               sl.field_d = lb.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
             if (sl.field_d == lb.field_o &&
-              qe.b(64, 1)) {
-              var7Lifetime1 = ae.field_N.f(4);
+              GameEntity.b(64, 1)) {
+              var7Lifetime1 = ae.field_N.readUnsignedByte(4);
               ja.field_t = var7Lifetime1;
               pk.field_b = null;
-              ae.field_N.field_k = 0;
+              ae.field_N.position = 0;
               if (var7Lifetime1 != 0 &&
                 var7Lifetime1 != 1) {
                 if (8 != var7Lifetime1) {
@@ -159,12 +159,12 @@ final class wj extends fb {
             }
             if (sl.field_d == ge.field_m &&
               cd.e((byte) 125)) {
-              we.field_a = ae.field_N.d(0);
-              ph.field_D = ae.field_N.f(4);
-              ae.field_N.f(4);
-              mk.field_k = ae.field_N.c((byte) 56);
+              we.field_a = ae.field_N.readLong(0);
+              ph.field_D = ae.field_N.readUnsignedByte(4);
+              ae.field_N.readUnsignedByte(4);
+              mk.field_k = ae.field_N.readUnsignedShort((byte) 56);
               var7_ref_String = ae.field_N.a(0);
-              var8 = ae.field_N.f(4);
+              var8 = ae.field_N.readUnsignedByte(4);
               if ((var8 & 1) != 0) {
                 nd.g(-26923);
               }
@@ -177,19 +177,19 @@ final class wj extends fb {
                 }
               }
               if (tl.field_b) {
-                ae.field_N.f(4);
-                ae.field_N.f(4);
-                ae.field_N.b(false);
-                aj.field_a = ae.field_N.c((byte) 107);
+                ae.field_N.readUnsignedByte(4);
+                ae.field_N.readUnsignedByte(4);
+                ae.field_N.readInt(false);
+                aj.field_a = ae.field_N.readUnsignedShort((byte) 107);
                 bf.field_a = new byte[aj.field_a];
                 for (var9 = 0; aj.field_a > var9; var9++) {
-                  bf.field_a[var9] = ae.field_N.g(102);
+                  bf.field_a[var9] = ae.field_N.readByte(102);
                 }
               }
               wf.field_b = ae.field_N.e((byte) 97);
               var12 = (CharSequence) ((Object) wf.field_b);
               wb.field_b = nh.a(var12, false);
-              ag.field_c = ae.field_N.f(4);
+              ag.field_c = ae.field_N.readUnsignedByte(4);
               sl.field_d = la.field_O;
               if (le.field_n.a(160) != hc.field_s) {
                 if (le.field_n.a(160) == ea.field_o) {
@@ -347,10 +347,10 @@ final class wj extends fb {
             this.field_s.c(param0 + 32614);
             var2 = (ph) (this.field_o.a(false));
             while (var2 != null) {
-              this.field_c.field_k = 0;
-              this.field_c.a(false, 1);
+              this.field_c.position = 0;
+              this.field_c.writeByte(false, 1);
               this.field_c.a(116, var2.field_o);
-              this.field_s.a(this.field_c.field_r, 0, 107, this.field_c.field_r.length);
+              this.field_s.a(this.field_c.payload, 0, 107, this.field_c.payload.length);
               this.field_q.a((byte) 125, var2);
               var2 = (ph) (this.field_o.a(-116));
             }
@@ -359,10 +359,10 @@ final class wj extends fb {
             }
             var2Lifetime1 = (ph) (this.field_j.a(false));
             while (var2Lifetime1 != null) {
-              this.field_c.field_k = 0;
-              this.field_c.a(false, 0);
+              this.field_c.position = 0;
+              this.field_c.writeByte(false, 0);
               this.field_c.a(param0 - 26250, var2Lifetime1.field_o);
-              this.field_s.a(this.field_c.field_r, 0, 114, this.field_c.field_r.length);
+              this.field_s.a(this.field_c.payload, 0, 114, this.field_c.payload.length);
               this.field_k.a((byte) 126, var2Lifetime1);
               var2Lifetime1 = (ph) (this.field_j.a(-121));
             }
@@ -382,34 +382,34 @@ final class wj extends fb {
                   }
                 }
                 if (0 < var4) {
-                  var5 = -this.field_a.field_k + var4;
+                  var5 = -this.field_a.position + var4;
                   if (var3_int < var5) {
                     var5 = var3_int;
                   }
-                  this.field_s.a(this.field_a.field_k, (byte) -64, this.field_a.field_r, var5);
+                  this.field_s.a(this.field_a.position, (byte) -64, this.field_a.payload, var5);
                   if (0 != this.field_p) {
                     for (var6 = 0; var5 > var6; var6++) {
-                      this.field_a.field_r[var6 + this.field_a.field_k] = (byte)ih.a((int) this.field_a.field_r[var6 + this.field_a.field_k], (int) this.field_p);
+                      this.field_a.payload[var6 + this.field_a.position] = (byte)ih.a((int) this.field_a.payload[var6 + this.field_a.position], (int) this.field_p);
                     }
                   }
-                  this.field_a.field_k = this.field_a.field_k + var5;
-                  if (var4 <= this.field_a.field_k) {
+                  this.field_a.position = this.field_a.position + var5;
+                  if (var4 <= this.field_a.position) {
                     if (null != this.field_r) {
                       if (this.field_r.field_C != 0) {
                         throw new IOException();
                       }
-                      if (this.field_a.field_r[0] == -1) {
-                        this.field_a.field_k = 0;
+                      if (this.field_a.payload[0] == -1) {
+                        this.field_a.position = 0;
                         this.field_r.field_C = 1;
                       } else {
                         this.field_r = null;
                       }
                     } else {
-                      this.field_a.field_k = 0;
-                      var6 = this.field_a.f(4);
-                      var7 = this.field_a.b(false);
-                      var8 = this.field_a.f(4);
-                      var9 = this.field_a.b(false);
+                      this.field_a.position = 0;
+                      var6 = this.field_a.readUnsignedByte(4);
+                      var7 = this.field_a.readInt(false);
+                      var8 = this.field_a.readUnsignedByte(4);
+                      var9 = this.field_a.readInt(false);
                       var10 = 127 & var8;
                       stackIn_62_0 = ((var8 & 128) == 0) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -445,30 +445,30 @@ final class wj extends fb {
                       stackIn_78_0 = (var10 != 0) ? 9 : 5;
                       var15 = stackIn_78_0;
                       this.field_r.field_G = new PacketBuffer(var15 + var9 + this.field_r.field_F);
-                      this.field_r.field_G.a(false, var10);
-                      this.field_r.field_G.b(0, var9);
-                      this.field_a.field_k = 0;
+                      this.field_r.field_G.writeByte(false, var10);
+                      this.field_r.field_G.writeInt(0, var9);
+                      this.field_a.position = 0;
                       this.field_r.field_C = 10;
                     }
                   }
                 } else {
-                  var5 = -this.field_r.field_F + this.field_r.field_G.field_r.length;
+                  var5 = -this.field_r.field_F + this.field_r.field_G.payload.length;
                   var6 = -this.field_r.field_C + 512;
-                  if (var6 > -this.field_r.field_G.field_k + var5) {
-                    var6 = -this.field_r.field_G.field_k + var5;
+                  if (var6 > -this.field_r.field_G.position + var5) {
+                    var6 = -this.field_r.field_G.position + var5;
                   }
                   if (var6 > var3_int) {
                     var6 = var3_int;
                   }
-                  this.field_s.a(this.field_r.field_G.field_k, (byte) -64, this.field_r.field_G.field_r, var6);
+                  this.field_s.a(this.field_r.field_G.position, (byte) -64, this.field_r.field_G.payload, var6);
                   if (this.field_p != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_r.field_G.field_r[this.field_r.field_G.field_k + var7] = (byte)ih.a((int) this.field_r.field_G.field_r[this.field_r.field_G.field_k + var7], (int) this.field_p);
+                      this.field_r.field_G.payload[this.field_r.field_G.position + var7] = (byte)ih.a((int) this.field_r.field_G.payload[this.field_r.field_G.position + var7], (int) this.field_p);
                     }
                   }
-                  this.field_r.field_G.field_k = this.field_r.field_G.field_k + var6;
+                  this.field_r.field_G.position = this.field_r.field_G.position + var6;
                   this.field_r.field_C = this.field_r.field_C + var6;
-                  if (var5 != this.field_r.field_G.field_k) {
+                  if (var5 != this.field_r.field_G.position) {
                     if (this.field_r.field_C == 512) {
                       this.field_r.field_C = 0;
                     }
@@ -520,11 +520,11 @@ final class wj extends fb {
             this.a(34, true);
           }
           try {
-            this.field_c.field_k = 0;
-            this.field_c.a(false, 6);
+            this.field_c.position = 0;
+            this.field_c.writeByte(false, 6);
             this.field_c.b(3, (byte) 119);
             this.field_c.c(0, -121);
-            this.field_s.a(this.field_c.field_r, 0, 110, this.field_c.field_r.length);
+            this.field_s.a(this.field_c.payload, 0, 110, this.field_c.payload.length);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -586,7 +586,7 @@ final class wj extends fb {
             this.e((byte) -84);
             this.a(24215, param0);
             this.field_r = null;
-            this.field_a.field_k = 0;
+            this.field_a.position = 0;
             while (true) {
               var4_ref = (ph) (this.field_q.a((byte) 110));
               if (var4_ref != null) {
@@ -606,11 +606,11 @@ final class wj extends fb {
             var4_int = -48 % ((-59 - param2) / 61);
             if (this.field_p != 0) {
               try {
-                this.field_c.field_k = 0;
-                this.field_c.a(false, 4);
-                this.field_c.a(false, (int) this.field_p);
-                this.field_c.b(0, 0);
-                this.field_s.a(this.field_c.field_r, 0, 111, this.field_c.field_r.length);
+                this.field_c.position = 0;
+                this.field_c.writeByte(false, 4);
+                this.field_c.writeByte(false, (int) this.field_p);
+                this.field_c.writeInt(0, 0);
+                this.field_s.a(this.field_c.payload, 0, 111, this.field_c.payload.length);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var5 = (IOException) (Object) decompiledCaughtException;
@@ -724,8 +724,8 @@ final class wj extends fb {
             na.field_e = qd.a(nh.field_g, "menu_text", "benefits", (byte) 42);
             ui.field_F = qd.a(nh.field_g, "button_frame", "benefits", (byte) 59);
             ea.field_l = qd.a(nh.field_g, "arrow", "benefits", (byte) 118);
-            o.field_h = (bd) ((Object) ae.a("benefits", "large_font", nh.field_g, -109, vf.field_E));
-            fj.field_f = (bd) ((Object) ae.a("benefits", "small_font", nh.field_g, -116, vf.field_E));
+            o.field_h = (BitmapFont) ((Object) ae.a("benefits", "large_font", nh.field_g, -109, vf.field_E));
+            fj.field_f = (BitmapFont) ((Object) ae.a("benefits", "small_font", nh.field_g, -116, vf.field_E));
             var27 = ti.field_a;
             var2 = ti.field_i;
             var3 = ti.field_b;

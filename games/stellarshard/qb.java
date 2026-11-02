@@ -9,12 +9,12 @@ final class qb extends lk {
         super(param0);
     }
 
-    final static ci f(int param0) {
+    final static FrameTimer f(int param0) {
         if (param0 != -17887) {
           field_l = (String) null;
-          return (ci) ((Object) new rc());
+          return (FrameTimer) ((Object) new NanoFrameTimer());
         }
-        return (ci) ((Object) new rc());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final cg a(byte param0, String param1) {

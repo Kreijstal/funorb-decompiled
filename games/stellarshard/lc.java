@@ -142,7 +142,7 @@ final class lc extends lk {
 
     final static li[] e(byte param0) {
         if (param0 == 33) {
-          return new li[]{ua.field_a, de.field_d, il.field_u, g.field_z, g.field_A, ok.field_c, bb.field_m, va.field_b, kf.field_a, ef.field_n, ui.field_C, DualLinkDequeIterator.field_f, MouseHandler.field_c, tf.field_b};
+          return new li[]{ua.field_a, de.field_d, il.field_u, WidgetContainer.field_z, WidgetContainer.field_A, ok.field_c, bb.field_m, va.field_b, kf.field_a, ef.field_n, ui.field_C, DualLinkDequeIterator.field_f, MouseHandler.field_c, tf.field_b};
         }
         return (li[]) null;
     }

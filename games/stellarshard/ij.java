@@ -563,14 +563,14 @@ final class ij extends ib {
                 fb.field_n != 0 &&
                 gh.field_c != 1) {
                 if (param1 == 0 &&
-                  a.field_h[0] != null &&
-                  a.field_h[0].field_m == -1) {
+                  a.entities[0] != null &&
+                  a.entities[0].kind == -1) {
                   na.field_j = null;
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  if ((param1 == 0 && (null == a.field_h[0] ||
-                    a.field_h[0].field_m != -1)) &&
+                  if ((param1 == 0 && (null == a.entities[0] ||
+                    a.entities[0].kind != -1)) &&
                     (decompiledFrameRemainder0 = !(of.field_A <= 1))) {
                     ea.e((byte) 97);
                     vc.field_h.m((byte) 127);
@@ -686,13 +686,13 @@ final class ij extends ib {
                     if ((decompiledFrameRemainder0) &&
                       (1 == param1 ||
                       var4 != 0)) {
-                      if (a.field_h[0] == null ||
-                        a.field_h[0].field_m != -1) {
+                      if (a.entities[0] == null ||
+                        a.entities[0].kind != -1) {
                         if (!(of.field_A > 1)) {
                           ea.e((byte) 93);
                           vc.field_h.m((byte) 127);
                           DualLinkDequeIterator.field_i = true;
-                          qe.field_e = 0;
+                          GameEntity.field_e = 0;
                           nf.field_r = true;
                           stellarshard.field_K = true;
                           tl.field_a = 0;
@@ -704,7 +704,7 @@ final class ij extends ib {
                           na.field_j = null;
                           if (var4 != 0) {
                             nc.field_H = 0;
-                            a.field_h[0].field_g = -150;
+                            a.entities[0].field_g = -150;
                             na.field_j = null;
                             if (DualLinkDequeIterator.field_e != null) {
                               nd.a(-26621, DualLinkDequeIterator.field_e);
@@ -717,7 +717,7 @@ final class ij extends ib {
                         }
                       } else {
                         nc.field_H = 0;
-                        a.field_h[0].field_g = -150;
+                        a.entities[0].field_g = -150;
                         na.field_j = null;
                         if (var4 != 0) {
                           if (DualLinkDequeIterator.field_e != null) {
@@ -863,8 +863,8 @@ final class ij extends ib {
           if (tl.field_c == 0) {
             var5_int = 5883647;
             if (param2 == 0) {
-              if (a.field_h[0] != null &&
-                a.field_h[0].field_m == -1) {
+              if (a.entities[0] != null &&
+                a.entities[0].kind == -1) {
                 ic.a(dj.field_c, param2, -1, false, 320, var5_int, param3);
                 if (var6 == 0) {
                   return;
@@ -879,8 +879,8 @@ final class ij extends ib {
               }
             }
             if (1 == param2) {
-              if (null != a.field_h[0] &&
-                -1 == a.field_h[0].field_m) {
+              if (null != a.entities[0] &&
+                -1 == a.entities[0].kind) {
                 ic.a(kk.field_n, param2, -1, false, 320, var5_int, param3);
                 if (var6 == 0) {
                   return;
@@ -980,7 +980,7 @@ final class ij extends ib {
                 return;
               }
             }
-            ic.a(rc.field_f, param2, -1, false, 320, var5_int, param3);
+            ic.a(NanoFrameTimer.field_f, param2, -1, false, 320, var5_int, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1289,7 +1289,7 @@ final class ij extends ib {
           }
           boolean decompiledFrameRemainder3 = true;
           if (tl.field_c == 6) {
-            rj.c((byte) -94);
+            UiWidget.c((byte) -94);
             tl.field_c = 7;
             decompiledFrameRemainder3 = (var14 != 0);
           }
@@ -1422,7 +1422,7 @@ final class ij extends ib {
             ed.a(-6313, 103, 183, fg.field_P, 434, 80 + var4 * 5 + 14);
             var2.c(qj.field_b, 320, var3, 10742263, -1);
             stackIn_104_0 = var2;
-            stackIn_105_1 = !(tf.field_a.a(0));
+            stackIn_105_1 = !(tf.field_a.isEmpty(0));
             stackIn_109_2 = (tl.field_a != 0);
             stackIn_113_3 = (0 != te.field_c);
             ((ub) (Object) stackIn_104_0).c(ch.a(stackIn_105_1, stackIn_109_2, stackIn_113_3, 0), 320, var4 + var3, 10742263, -1);
@@ -1435,7 +1435,7 @@ final class ij extends ib {
             }
             stackIn_126_0 = var2;
             stackIn_127_1 = (te.field_c != 0);
-            stackIn_131_2 = !(tf.field_a.a(0));
+            stackIn_131_2 = !(tf.field_a.isEmpty(0));
             stackIn_134_3 = -72;
             stackIn_135_4 = (tl.field_a != 0);
             ((ub) (Object) stackIn_126_0).c(pe.$cfr$intArgs$a$3214d41809e1(stackIn_127_1, stackIn_131_2, stackIn_134_3, stackIn_135_4), 320, 30 + (3 * var4 + var3), 10742263, -1);
@@ -1447,8 +1447,8 @@ final class ij extends ib {
               tl.field_a = 0;
               ue.field_a = 0;
               ta.a(true, 713);
-              ue.field_c.a((byte) -8);
-              tf.field_a.a((byte) -8);
+              ue.field_c.clear((byte) -8);
+              tf.field_a.clear((byte) -8);
               qi.field_a = 0;
               n.field_L = 255;
               tl.field_c = 8;
@@ -1457,7 +1457,7 @@ final class ij extends ib {
             stackIn_146_1 = (0 != te.field_c);
             stackIn_150_2 = (tl.field_a != 0);
             stackIn_153_3 = 6;
-            stackIn_154_4 = !(tf.field_a.a(param0 - 85));
+            stackIn_154_4 = !(tf.field_a.isEmpty(param0 - 85));
             ((ub) (Object) stackIn_145_0).c(stellarshard.a(stackIn_146_1, stackIn_150_2, stackIn_153_3, stackIn_154_4), 320, 4 * var4 + var3 + 60, 10742263, -1);
             ti.b(112, 190, 416, 80 + var4 * 5, 16777215, n.field_L);
           }
@@ -1750,7 +1750,7 @@ final class ij extends ib {
               stackIn_289_0 = tl.field_a;
             } else {
               if (!DualLinkNode.a(-1)) {
-                stackIn_289_0 = sd.field_d;
+                stackIn_289_0 = ScorePopup.field_d;
               } else {
                 stackIn_289_0 = 0;
               }
@@ -1760,7 +1760,7 @@ final class ij extends ib {
             var6Lifetime2 = 1;
             var7Lifetime2 = 0;
             while (true) {
-              if (rc.field_e.length > var7Lifetime2) {
+              if (NanoFrameTimer.field_e.length > var7Lifetime2) {
                 stackIn_407_0 = var7Lifetime2;
                 stackIn_407_1 = 13;
                 if (var14 == 0) {
@@ -1806,7 +1806,7 @@ final class ij extends ib {
                         !((32 + var2_intLifetime3) < ni.field_e) &&
                         !(var3Lifetime3 > KeyHandler.field_a) &&
                         !(KeyHandler.field_a > var3Lifetime3 + 32)) {
-                        qj.field_a.c(rc.field_e[var7Lifetime2], 320, 230, 16777215, -1);
+                        qj.field_a.c(NanoFrameTimer.field_e[var7Lifetime2], 320, 230, 16777215, -1);
                         var6Lifetime2 = 0;
                         if ((1 << var7Lifetime2 & var4Lifetime2) != 0) {
                           qj.field_a.c(jg.field_ob, 320, qj.field_a.field_N + 234, 16777215, -1);

@@ -10,7 +10,7 @@ abstract class rb extends GameApplet {
     static String field_t;
     String field_C;
     private int field_r;
-    static ci field_u;
+    static FrameTimer field_u;
     private int field_v;
     private int field_D;
     static int field_w;
@@ -121,7 +121,7 @@ abstract class rb extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = qe.a(tc.c(-5), kg.e(false), param2, rb.j(5), this.field_v, wh.a((byte) 88), jg.i((byte) 113));
+            var5_intLifetime1 = GameEntity.a(tc.c(-5), kg.e(false), param2, rb.j(5), this.field_v, wh.a((byte) 88), jg.i((byte) 113));
             if (var5_intLifetime1 != -1) {
               pk.a(NodeHashTableIterator.field_a, fc.field_b, var5_intLifetime1, (byte) 125);
               NodeHashTableIterator.field_a = null;
@@ -192,7 +192,7 @@ abstract class rb extends GameApplet {
               if (q.field_d.a(14709)) {
                 var12 = q.field_d.b(-4);
                 if (var12 != null) {
-                  var7 = kk.a(var12.field_k, (byte) 97, 0, var12.field_r);
+                  var7 = kk.a(var12.position, (byte) 97, 0, var12.payload);
                   il.a(7110, var7);
                 } else {
                   var9 = (String) null;
@@ -203,7 +203,7 @@ abstract class rb extends GameApplet {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              qe.a(-123, "S1", (Throwable) ((Object) var5));
+              GameEntity.a(-123, "S1", (Throwable) ((Object) var5));
               var10 = (String) null;
               il.a(7110, (String) null);
               q.field_d = null;
@@ -278,7 +278,7 @@ abstract class rb extends GameApplet {
     private final void j(byte param0) {
         int var4 = 0;
         byte[] var5 = null;
-        int var2 = ae.field_N.f(4);
+        int var2 = ae.field_N.readUnsignedByte(4);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         if (param0 == 108) {
           var4 = -1 + ue.field_b;
@@ -333,7 +333,7 @@ abstract class rb extends GameApplet {
           }
           ja.field_m.b(0);
         }
-        ci.a(36);
+        FrameTimer.a(36);
         ii.g(256);
         if (!ee.b(-117) &&
           eg.field_d != 11) {
@@ -456,7 +456,7 @@ abstract class rb extends GameApplet {
               pg.field_db = null;
             } else {
               if (pg.field_db.a("", (byte) -109)) {
-                g.a(pg.field_db, 1);
+                WidgetContainer.a(pg.field_db, 1);
                 pg.field_db = null;
                 rg.g(-33);
               }
@@ -507,7 +507,7 @@ abstract class rb extends GameApplet {
         if (rk.field_f == 11) {
           if (ld.field_G != null && (!ld.field_G.a((byte) -36) ||
             !ld.field_G.c((byte) -111))) {
-            rd.a((byte) -76, 0.0f, pi.a(kf.field_d, ld.field_G, rg.field_I, 1));
+            rd.a((byte) -76, 0.0f, Quaternion.a(kf.field_d, ld.field_G, rg.field_I, 1));
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -660,7 +660,7 @@ abstract class rb extends GameApplet {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            qe.a(-105, (String) null, (Throwable) ((Object) var6_ref));
+            GameEntity.a(-105, (String) null, (Throwable) ((Object) var6_ref));
             this.a(1, "crash");
           }
           return;
@@ -726,7 +726,7 @@ abstract class rb extends GameApplet {
                                 sl.a((byte) 51);
                                 return;
                               }
-                              qe.a(-6, "MGS1: " + bh.b((byte) -98), (Throwable) null);
+                              GameEntity.a(-6, "MGS1: " + bh.b((byte) -98), (Throwable) null);
                               IntrusiveDeque.c(-2290);
                               return;
                             }
@@ -752,7 +752,7 @@ abstract class rb extends GameApplet {
           }
           return;
         }
-        qe.a(86, "MGS2: " + bh.b((byte) -118), (Throwable) null);
+        GameEntity.a(86, "MGS2: " + bh.b((byte) -118), (Throwable) null);
         IntrusiveDeque.c(-2290);
     }
 

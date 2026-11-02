@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rc extends ci {
+final class NanoFrameTimer extends FrameTimer {
     static int field_h;
     private long field_g;
     static String[] field_e;
@@ -44,7 +44,7 @@ final class rc extends ci {
         field_e = null;
         if (param0 != 23805) {
           CharSequence var2 = (CharSequence) null;
-          rc.a(true, 103, (CharSequence) null);
+          NanoFrameTimer.a(true, 103, (CharSequence) null);
         }
     }
 
@@ -79,7 +79,7 @@ final class rc extends ci {
         }
         if (param0 != -61) {
           String var3 = (String) null;
-          rc.a((String) null, (String) null, false);
+          NanoFrameTimer.a((String) null, (String) null, false);
         }
         return (15 & param1 >> 4) + ((param1 & 61440) >> 8);
     }
@@ -88,7 +88,7 @@ final class rc extends ci {
         this.field_n = this.field_n + this.b((byte) 51);
         if (param0 != 30393) {
           String var3 = (String) null;
-          rc.a((String) null, (String) null, true);
+          NanoFrameTimer.a((String) null, (String) null, true);
         }
         if (this.field_g > this.field_n) {
           return (-this.field_n + this.field_g) / 1000000L;
@@ -159,7 +159,7 @@ final class rc extends ci {
         }
     }
 
-    rc() {
+    NanoFrameTimer() {
         this.field_g = 0L;
         this.field_i = 1;
         this.field_j = 0L;

@@ -32,7 +32,7 @@ final class qd {
         if (this.field_d != 0 &&
           fb.field_n != 0) {
           if (this.field_a <= 0) {
-            this.field_a = rc.field_m;
+            this.field_a = NanoFrameTimer.field_m;
           }
           this.field_a = this.field_a - 1;
         }

@@ -388,7 +388,7 @@ final class qc {
             stackIn_87_0 = -39;
             stackIn_87_1 = stellarshard.field_L[var4Lifetime1];
             stackIn_88_2 = !(sj.field_J[var4Lifetime1] < 0);
-            var5Lifetime1 = qe.$cfr$intArgs$a$590e95718a07(stackIn_87_0, stackIn_87_1, stackIn_88_2);
+            var5Lifetime1 = GameEntity.$cfr$intArgs$a$590e95718a07(stackIn_87_0, stackIn_87_1, stackIn_88_2);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
             }
@@ -398,7 +398,7 @@ final class qc {
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
               var11 = var10[var5Lifetime2];
-              var7Lifetime1 = qe.$cfr$intArgs$a$590e95718a07(-33, var11, false);
+              var7Lifetime1 = GameEntity.$cfr$intArgs$a$590e95718a07(-33, var11, false);
               if (var7Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1;
               }
@@ -406,7 +406,7 @@ final class qc {
             var4_ref_String__Lifetime1 = fb.field_e;
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 < var4_ref_String__Lifetime1.length; var5Lifetime2Lifetime1++) {
               var12 = var4_ref_String__Lifetime1[var5Lifetime2Lifetime1];
-              var7Lifetime1Lifetime1 = qe.$cfr$intArgs$a$590e95718a07(-40, var12, false);
+              var7Lifetime1Lifetime1 = GameEntity.$cfr$intArgs$a$590e95718a07(-40, var12, false);
               if (var7Lifetime1Lifetime1 > var3_intLifetime1) {
                 var3_intLifetime1 = var7Lifetime1Lifetime1;
               }
@@ -431,7 +431,7 @@ final class qc {
           while (var4Lifetime3 < stellarshard.field_L.length) {
             var6Lifetime1 = sj.field_J[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
-              var7Lifetime2 = qe.$cfr$intArgs$a$590e95718a07(-21, stellarshard.field_L[var4Lifetime3], true);
+              var7Lifetime2 = GameEntity.$cfr$intArgs$a$590e95718a07(-21, stellarshard.field_L[var4Lifetime3], true);
               var5Lifetime3 = var5Lifetime3 + nh.field_f;
               var8Lifetime1 = DualLinkDequeIterator.field_b - (var7Lifetime2 >> 1);
               vl.field_o[var4Lifetime3] = new int[4];

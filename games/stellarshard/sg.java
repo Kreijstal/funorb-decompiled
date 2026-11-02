@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class sg {
-    static pi field_a;
+    static Quaternion field_a;
     static String field_b;
     static String field_d;
     static String[] field_c;
@@ -140,7 +140,7 @@ final class sg {
 
     static {
         field_b = "Discard";
-        field_a = new pi();
+        field_a = new Quaternion();
         field_c = new String[]{"Battle alien squadrons", "Play in fullscreen", "Activate the Phoenix Device"};
         field_d = "Current level : ";
     }

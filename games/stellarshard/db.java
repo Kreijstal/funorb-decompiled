@@ -47,7 +47,7 @@ final class db {
         return this;
     }
 
-    final void a(tc param0, db param1, int param2, int param3, rj param4, int param5) {
+    final void a(tc param0, db param1, int param2, int param3, UiWidget param4, int param5) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -255,8 +255,8 @@ final class db {
         this.field_f = -2147483648;
     }
 
-    final void a(int param0, tc param1, rj param2, int param3, int param4) {
-        bd stackIn_19_0 = null;
+    final void a(int param0, tc param1, UiWidget param2, int param3, int param4) {
+        BitmapFont stackIn_19_0 = null;
         String stackIn_19_1 = null;
         int stackIn_20_2 = 0;
         int stackIn_22_2 = 0;
@@ -328,7 +328,7 @@ final class db {
             } else {
               stackIn_26_8 = this.field_f;
             }
-            ((bd) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param1.field_h, param1.field_d, param1.field_j);
+            ((BitmapFont) (Object) stackIn_19_0).a(stackIn_19_1, stackIn_22_2, stackIn_25_3, stackIn_25_4, stackIn_25_5, stackIn_25_6, stackIn_25_7, stackIn_26_8, param1.field_h, param1.field_d, param1.field_j);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

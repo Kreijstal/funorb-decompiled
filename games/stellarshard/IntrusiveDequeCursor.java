@@ -20,19 +20,19 @@ final class IntrusiveDequeCursor {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == null) {
-            var3 = this.field_e.field_d.field_g;
+            var3 = this.field_e.sentinel.next;
           } else {
             var3 = param1;
           }
           if (param0 != 4993) {
             this.b((byte) -10);
           }
-          if (this.field_e.field_d == var3) {
+          if (this.field_e.sentinel == var3) {
             this.field_a = null;
             stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);
           }
-          this.field_a = var3.field_g;
+          this.field_a = var3.next;
           stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -52,8 +52,8 @@ final class IntrusiveDequeCursor {
     final IntrusiveNode a(int param0) {
         int var2 = 26 % ((4 - param0) / 50);
         IntrusiveNode var3 = this.field_a;
-        if (var3 != this.field_e.field_d) {
-          this.field_a = var3.field_c;
+        if (var3 != this.field_e.sentinel) {
+          this.field_a = var3.previous;
           return var3;
         }
         this.field_a = null;
@@ -66,19 +66,19 @@ final class IntrusiveDequeCursor {
         if (!param0) {
           this.field_a = (IntrusiveNode) null;
           var2 = this.field_a;
-          if (var2 == this.field_e.field_d) {
+          if (var2 == this.field_e.sentinel) {
             this.field_a = null;
             return null;
           }
-          this.field_a = var2.field_g;
+          this.field_a = var2.next;
           return var2;
         }
         var2Lifetime1 = this.field_a;
-        if (var2Lifetime1 == this.field_e.field_d) {
+        if (var2Lifetime1 == this.field_e.sentinel) {
           this.field_a = null;
           return null;
         }
-        this.field_a = var2Lifetime1.field_g;
+        this.field_a = var2Lifetime1.next;
         return var2Lifetime1;
     }
 
@@ -93,15 +93,15 @@ final class IntrusiveDequeCursor {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == null) {
-            var3 = this.field_e.field_d.field_c;
+            var3 = this.field_e.sentinel.previous;
           } else {
             var3 = param1;
           }
           if (param0 != -25888) {
             field_d = (String) null;
           }
-          if (var3 != this.field_e.field_d) {
-            this.field_a = var3.field_c;
+          if (var3 != this.field_e.sentinel) {
+            this.field_a = var3.previous;
             stackIn_9_0 = var3;
             return stackIn_9_0;
           }
@@ -131,17 +131,17 @@ final class IntrusiveDequeCursor {
     }
 
     final IntrusiveNode a(byte param0) {
-        IntrusiveNode var2 = this.field_e.field_d.field_c;
-        if (var2 == this.field_e.field_d) {
+        IntrusiveNode var2 = this.field_e.sentinel.previous;
+        if (var2 == this.field_e.sentinel) {
           this.field_a = null;
           return null;
         }
         if (param0 < -25) {
-          this.field_a = var2.field_c;
+          this.field_a = var2.previous;
           return var2;
         }
         field_c = (String[]) null;
-        this.field_a = var2.field_c;
+        this.field_a = var2.previous;
         return var2;
     }
 
@@ -202,17 +202,17 @@ final class IntrusiveDequeCursor {
         IntrusiveNode var2Lifetime1;
         if (param0 <= 114) {
           field_f = (Sprite) null;
-          var2 = this.field_e.field_d.field_g;
-          if (this.field_e.field_d != var2) {
-            this.field_a = var2.field_g;
+          var2 = this.field_e.sentinel.next;
+          if (this.field_e.sentinel != var2) {
+            this.field_a = var2.next;
             return var2;
           }
           this.field_a = null;
           return null;
         }
-        var2Lifetime1 = this.field_e.field_d.field_g;
-        if (this.field_e.field_d != var2Lifetime1) {
-          this.field_a = var2Lifetime1.field_g;
+        var2Lifetime1 = this.field_e.sentinel.next;
+        if (this.field_e.sentinel != var2Lifetime1) {
+          this.field_a = var2Lifetime1.next;
           return var2Lifetime1;
         }
         this.field_a = null;

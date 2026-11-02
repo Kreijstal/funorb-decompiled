@@ -13,7 +13,7 @@ final class fj {
     private int field_h;
     static rd field_i;
     static java.math.BigInteger field_l;
-    static bd field_f;
+    static BitmapFont field_f;
     static int[] field_b;
     static long field_j;
 

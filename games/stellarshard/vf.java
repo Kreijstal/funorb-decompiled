@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vf extends g implements oi {
+final class vf extends WidgetContainer implements oi {
     private String field_C;
     private int[] field_K;
     static pf field_E;
@@ -9,7 +9,7 @@ final class vf extends g implements oi {
     static String field_D;
     private ck field_I;
     static int field_F;
-    private bd field_G;
+    private BitmapFont field_G;
     private int field_B;
     private ig[] field_J;
 
@@ -69,7 +69,7 @@ final class vf extends g implements oi {
         this.field_G.a(this.field_C, 14 + (param3 + this.field_w), 10 + param2 + this.field_k, this.field_p - 28, this.field_t, 16777215, -1, 0, 0, this.field_G.field_N);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5, bd param6, int param7, Sprite[] param8, int param9, int param10, int param11, int param12, boolean param13, int param14, bd param15) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5, BitmapFont param6, int param7, Sprite[] param8, int param9, int param10, int param11, int param12, boolean param13, int param14, BitmapFont param15) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -235,7 +235,7 @@ final class vf extends g implements oi {
         return mk.field_l;
     }
 
-    vf(ck param0, bd param1, String param2) {
+    vf(ck param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (uk) null);
         int var4_int = 0;
         this.field_B = 0;

@@ -113,9 +113,9 @@ final class vc {
               k.field_b = new BufferedSocket((java.net.Socket) (dl.field_A.field_b), fa.field_p);
               var3 = new PacketBuffer(13);
               bk.a(fd.field_nb, false, sk.field_b, var3, ld.field_C);
-              var3.a(false, 15);
-              var3.b(0, n.field_d);
-              k.field_b.a(var3.field_r, 0, 120, 13);
+              var3.writeByte(false, 15);
+              var3.writeInt(0, n.field_d);
+              k.field_b.a(var3.payload, 0, 120, 13);
               kc.field_b = kc.field_b + 1;
               fj.field_j = ih.a((byte) -98) + 30000L;
             }
@@ -139,7 +139,7 @@ final class vc {
               stackIn_34_0 = -1;
               return stackIn_34_0;
             }
-            od.field_v.a(sd.field_i, k.field_b, 70);
+            od.field_v.a(ScorePopup.field_i, k.field_b, 70);
             dl.field_A = null;
             k.field_b = null;
             kc.field_b = 0;

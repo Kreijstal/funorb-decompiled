@@ -3,7 +3,7 @@
  */
 final class sb {
     static ek[] field_c;
-    static ud[] field_e;
+    static PcmSample[] field_e;
     private int field_d;
     private DualLinkNode[] field_f;
     private long field_h;

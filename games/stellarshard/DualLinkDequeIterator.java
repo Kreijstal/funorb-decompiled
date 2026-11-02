@@ -9,7 +9,7 @@ final class DualLinkDequeIterator implements Iterator {
     private DualLinkNode field_h;
     static int field_b;
     static li field_f;
-    static bd field_c;
+    static BitmapFont field_c;
     static va field_e;
     private DualLinkDeque field_a;
     static String field_g;

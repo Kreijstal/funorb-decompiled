@@ -30,16 +30,16 @@ final class jf extends IntrusiveNode {
             return;
           }
           var14 = ae.field_N;
-          var2 = var14.f(4);
+          var2 = var14.readUnsignedByte(4);
           if (var2 == 0) {
             var11 = GameApplet.d((byte) 127);
             var3 = var11;
             var10 = var11;
             var4 = var10;
             var5 = var14;
-            var6 = ((PacketBuffer) ((Object) var5)).f(4);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(4);
             for (var7 = 0; var7 < var6; var7++) {
-              var10[var7] = ((PacketBuffer) ((Object) var5)).b(false);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(false);
             }
             var13 = (he) (pl.field_W.b(-78));
             if (var13 == null) {
@@ -48,12 +48,12 @@ final class jf extends IntrusiveNode {
             }
             var13.field_m = var3;
             var13.field_n = true;
-            var13.c(20);
+            var13.unlink(20);
             return;
           }
           if (var2 != 1) {
             if (var2 != 2) {
-              qe.a(115, "A1: " + bh.b((byte) -121), (Throwable) null);
+              GameEntity.a(115, "A1: " + bh.b((byte) -121), (Throwable) null);
               IntrusiveDeque.c(-2290);
             } else {
               var15 = (he) (pl.field_W.b(-98));
@@ -63,7 +63,7 @@ final class jf extends IntrusiveNode {
               }
               var15.field_m = GameApplet.d((byte) 126);
               var15.field_n = true;
-              var15.c(20);
+              var15.unlink(20);
             }
           } else {
             var12 = (kl) (SocketConnector.field_e.b(-97));
@@ -71,7 +71,7 @@ final class jf extends IntrusiveNode {
               IntrusiveDeque.c(-2290);
               return;
             }
-            var12.c(20);
+            var12.unlink(20);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

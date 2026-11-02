@@ -76,7 +76,7 @@ final class fk extends IntrusiveNode {
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4 = (java.net.MalformedURLException) (Object) decompiledCaughtException;
-              qe.a(12, "MGR1: " + param2, (Throwable) null);
+              GameEntity.a(12, "MGR1: " + param2, (Throwable) null);
               return;
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

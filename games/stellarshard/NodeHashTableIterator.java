@@ -14,7 +14,7 @@ final class NodeHashTableIterator implements Iterator {
         if (this.field_b == null) {
           throw new IllegalStateException();
         }
-        this.field_b.c(20);
+        this.field_b.unlink(20);
         this.field_b = null;
     }
 
@@ -42,13 +42,13 @@ final class NodeHashTableIterator implements Iterator {
           }
           fieldTemp$0 = this.field_d;
           this.field_d = this.field_d + 1;
-          if (this.field_e.field_e[fieldTemp$0].field_g == this.field_e.field_e[-1 + this.field_d]) {
+          if (this.field_e.field_e[fieldTemp$0].next == this.field_e.field_e[-1 + this.field_d]) {
             this.field_c = this.field_e.field_e[-1 + this.field_d];
             continue;
           }
           break;
         }
-        this.field_c = this.field_e.field_e[this.field_d - 1].field_g;
+        this.field_c = this.field_e.field_e[this.field_d - 1].next;
         return true;
     }
 
@@ -69,7 +69,7 @@ final class NodeHashTableIterator implements Iterator {
         var2 = stellarshard.field_B;
         if (this.field_e.field_e[-1 + this.field_d] != this.field_c) {
           var4 = this.field_c;
-          this.field_c = var4.field_g;
+          this.field_c = var4.next;
           this.field_b = var4;
           return var4;
         }
@@ -79,15 +79,15 @@ final class NodeHashTableIterator implements Iterator {
           }
           fieldTemp$0 = this.field_d;
           this.field_d = this.field_d + 1;
-          var3 = this.field_e.field_e[fieldTemp$0].field_g;
+          var3 = this.field_e.field_e[fieldTemp$0].next;
         } while (this.field_e.field_e[this.field_d - 1] == var3);
         this.field_b = var3;
-        this.field_c = var3.field_g;
+        this.field_c = var3.next;
         return var3;
     }
 
     private final void a(int param0) {
-        this.field_c = this.field_e.field_e[0].field_g;
+        this.field_c = this.field_e.field_e[0].next;
         this.field_b = null;
         this.field_d = param0;
     }

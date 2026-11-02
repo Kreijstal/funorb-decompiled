@@ -126,9 +126,9 @@ final class vh {
               stackIn_8_0 = this.field_a[param4];
               return stackIn_8_0;
             }
-            this.field_d.field_k = 6 + 72 * param4;
-            var6_int = this.field_d.b(false);
-            var7 = this.field_d.b(false);
+            this.field_d.position = 6 + 72 * param4;
+            var6_int = this.field_d.readInt(false);
+            var7 = this.field_d.readInt(false);
             var13 = new byte[param0];
             this.field_d.a(0, (byte) -101, 64, var13);
             var9 = new wc(param4, param1, param2, this.field_g, this.field_j, var6_int, var13, var7, param3);
@@ -255,10 +255,10 @@ final class vh {
           return false;
         }
         var11 = new PacketBuffer(this.field_f.g(-27203));
-        var11.field_k = 5;
-        var3 = var11.f(4);
-        var11.field_k = var11.field_k + 72 * var3;
-        var14 = new byte[-var11.field_k + var11.field_r.length];
+        var11.position = 5;
+        var3 = var11.readUnsignedByte(4);
+        var11.position = var11.position + 72 * var3;
+        var14 = new byte[-var11.position + var11.payload.length];
         var12 = var14;
         var4 = var12;
         var11.a(0, (byte) -124, var14.length, var14);
@@ -274,7 +274,7 @@ final class vh {
           throw new RuntimeException();
         }
         var6 = -19 % ((param0 - 54) / 60);
-        var16 = ProxySocketConnector.a(0, 5, -5 + (-var14.length + var11.field_k), var11.field_r);
+        var16 = ProxySocketConnector.a(0, 5, -5 + (-var14.length + var11.position), var11.payload);
         for (var8 = 0; var8 < 64; var8++) {
           if (var16[var8] != var5[1 + var8]) {
             throw new RuntimeException();

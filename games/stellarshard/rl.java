@@ -28,7 +28,7 @@ final class rl {
         int var9Lifetime1;
         var10 = stellarshard.field_B;
         try {
-          var7_int = rj.a((byte) -12, param5);
+          var7_int = UiWidget.a((byte) -12, param5);
           if (null == wb.field_a) {
             wb.field_a = new java.security.SecureRandom();
           }
@@ -39,10 +39,10 @@ final class rl {
             var8[var9] = wb.field_a.nextInt();
           }
           if (null == a.field_b ||
-            !(a.field_b.field_r.length >= var7_int)) {
+            !(a.field_b.payload.length >= var7_int)) {
             a.field_b = new PacketBuffer(var7_int);
           }
-          a.field_b.field_k = 0;
+          a.field_b.position = 0;
           a.field_b.a(param5, param6, (byte) -13, param4);
           if (param0 != -13791) {
             return;
@@ -50,21 +50,21 @@ final class rl {
           a.field_b.a(var7_int, -18920);
           a.field_b.a((byte) 12, var13);
           if (null == kl.field_r ||
-            !(kl.field_r.field_r.length >= 100)) {
+            !(kl.field_r.payload.length >= 100)) {
             kl.field_r = new PacketBuffer(100);
           }
-          kl.field_r.field_k = 0;
-          kl.field_r.a(false, 10);
+          kl.field_r.position = 0;
+          kl.field_r.writeByte(false, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            kl.field_r.b(0, var13[var11]);
+            kl.field_r.writeInt(0, var13[var11]);
             var11++;
           }
           kl.field_r.c(param5, param0 + 13664);
           kl.field_r.a(false, param2, param3);
-          param1.a(kl.field_r.field_k, 0, (byte) -13, kl.field_r.field_r);
-          param1.a(a.field_b.field_k, 0, (byte) -13, a.field_b.field_r);
+          param1.a(kl.field_r.position, 0, (byte) -13, kl.field_r.payload);
+          param1.a(a.field_b.position, 0, (byte) -13, a.field_b.payload);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

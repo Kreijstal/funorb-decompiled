@@ -19,7 +19,7 @@ final class hc {
     int field_o;
     static int[] field_f;
     int field_p;
-    bd field_g;
+    BitmapFont field_g;
     static String[] field_t;
     static String field_h;
     int field_q;
@@ -116,8 +116,8 @@ final class hc {
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         ti.a(param4, param1, param3, param5, param0);
         if (param2 != 10066329) {
-          bd var8 = (bd) null;
-          this.a(-79, (bd) null);
+          BitmapFont var8 = (BitmapFont) null;
+          this.a(-79, (BitmapFont) null);
         }
     }
 
@@ -209,7 +209,7 @@ final class hc {
         }
     }
 
-    final void a(int param0, bd param1) {
+    final void a(int param0, BitmapFont param1) {
         id var17 = null;
         tc var4 = null;
         Sprite[] var5 = null;

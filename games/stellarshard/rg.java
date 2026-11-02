@@ -17,8 +17,8 @@ class rg extends ig {
           return null;
         }
         if (param0 != 3690) {
-          rj var3 = (rj) null;
-          this.a(86, (rj) null);
+          UiWidget var3 = (UiWidget) null;
+          this.a(86, (UiWidget) null);
         }
         if (this.field_K.field_l >= this.field_G.length) {
           return null;
@@ -27,7 +27,7 @@ class rg extends ig {
     }
 
     final void b(int param0, byte param1, int param2, int param3) {
-        this.b(param0, param2, param3, ((pj) ((Object) this.field_u)).a((rj) (this), 28361), 23987);
+        this.b(param0, param2, param3, ((pj) ((Object) this.field_u)).a((UiWidget) (this), 28361), 23987);
         if (param1 != -11) {
           CharSequence var6 = (CharSequence) null;
           rg.a((byte) -126, (CharSequence) null);
@@ -162,7 +162,7 @@ class rg extends ig {
         }
     }
 
-    boolean a(int param0, rj param1) {
+    boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -213,8 +213,8 @@ class rg extends ig {
         ja var6 = this.field_K;
         if (var6 == null) {
         } else {
-          var7 = var9.a(param1 ^ -57, (rj) (this), param3);
-          var8 = var9.a((byte) -2, (rj) (this), param2);
+          var7 = var9.a(param1 ^ -57, (UiWidget) (this), param3);
+          var8 = var9.a((byte) -2, (UiWidget) (this), param2);
           do {
             og.a(-2 + var7 + var6.field_s, (byte) 105, var6.field_n + 2, 2 + var6.field_o, -2 + (var8 + var6.field_r));
             var6 = var6.field_p;
@@ -247,7 +247,7 @@ class rg extends ig {
         var2 = 0;
         var3 = (pj) ((Object) this.field_u);
         var5 = -101 / ((param0 + 30) / 33);
-        var4 = var3.b((rj) (this), (byte) 94);
+        var4 = var3.b((UiWidget) (this), (byte) 94);
         while (true) {
           var6 = this.field_m.indexOf("<hotspot=", var2);
           if (var6 == -1) {
@@ -283,7 +283,7 @@ class rg extends ig {
               ((ja) (var11)).field_p = var16;
             }
             var11 = var16;
-            this.field_H.b(-71, var16);
+            this.field_H.addLast(-71, var16);
           }
         }
     }
@@ -296,7 +296,7 @@ class rg extends ig {
         }
     }
 
-    void a(int param0, boolean param1, int param2, rj param3) {
+    void a(int param0, boolean param1, int param2, UiWidget param3) {
         int var5_int = 0;
         int var6 = 0;
         try {
@@ -313,7 +313,7 @@ class rg extends ig {
     }
 
     static {
-        pi discarded$0 = new pi();
+        Quaternion discarded$0 = new Quaternion();
         field_J = new ua(0);
     }
 }

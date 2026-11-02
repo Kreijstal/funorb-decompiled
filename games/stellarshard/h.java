@@ -128,7 +128,7 @@ final class h {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.f(param1 - 31180);
+          var2_int = param0.readUnsignedByte(param1 - 31180);
           stackIn_3_0 = (var2_int == 1) ? 1 : 0;
           var3 = stackIn_3_0;
           if (param1 != 31184) {

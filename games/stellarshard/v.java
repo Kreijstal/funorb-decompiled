@@ -54,16 +54,16 @@ final class v implements Runnable {
           Object var2_ref = null;
           var4 = stellarshard.field_B;
           try {
-            while (this.field_h.field_k < this.field_h.field_r.length) {
-              var1_int = this.field_i.read(this.field_h.field_r, this.field_h.field_k, this.field_h.field_r.length - this.field_h.field_k);
+            while (this.field_h.position < this.field_h.payload.length) {
+              var1_int = this.field_i.read(this.field_h.payload, this.field_h.position, this.field_h.payload.length - this.field_h.position);
               if (var1_int >= 0) {
-                this.field_h.field_k = this.field_h.field_k + var1_int;
+                this.field_h.position = this.field_h.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_h.field_k == this.field_h.field_r.length) {
-              throw v.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.field_r.length + " " + this.field_f));
+            if (this.field_h.position == this.field_h.payload.length) {
+              throw v.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_h.payload.length + " " + this.field_f));
             }
             var1 = this;
             synchronized (var1) {
@@ -148,7 +148,7 @@ final class v implements Runnable {
               var3.write(kl.a(var5, -20650));
               this.field_i = new DataInputStream(var4.getInputStream());
             }
-            this.field_h.field_k = 0;
+            this.field_h.position = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
@@ -196,15 +196,15 @@ final class v implements Runnable {
         try {
           boolean decompiledFrameRemainder0 = true;
           var10 = ae.field_N;
-          var2 = var10.f(4);
-          var3 = var10.f(4);
+          var2 = var10.readUnsignedByte(4);
+          var3 = var10.readUnsignedByte(4);
           if (var2 == 0) {
             var4 = (af) (pf.field_b.b(-79));
             if (var4 == null) {
               IntrusiveDeque.c(-2290);
               return;
             }
-            var5 = -var10.field_k + ue.field_b;
+            var5 = -var10.position + ue.field_b;
             var12 = var4.field_s;
             var11 = var12;
             var6 = var11;
@@ -212,10 +212,10 @@ final class v implements Runnable {
               var5 = var12.length << 2;
             }
             for (var7 = 0; var7 < var5; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.f(4) << sa.a(768, var7 << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(4) << sa.a(768, var7 << 8));
             }
             var4.field_m = true;
-            var4.c(20);
+            var4.unlink(20);
           } else {
             if (var2 == 1) {
               var4_int = var10.e(-64);
@@ -232,11 +232,11 @@ final class v implements Runnable {
                 IntrusiveDeque.c(-2290);
                 return;
               }
-              var5_ref_fk.c(20);
+              var5_ref_fk.unlink(20);
               decompiledFrameRemainder0 = false;
             }
             else {
-              qe.a(-115, "LR1: " + bh.b((byte) -96), (Throwable) null);
+              GameEntity.a(-115, "LR1: " + bh.b((byte) -96), (Throwable) null);
               IntrusiveDeque.c(-2290);
             }
           }

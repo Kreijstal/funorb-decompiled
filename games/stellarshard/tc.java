@@ -37,7 +37,7 @@ final class tc extends id {
 
     final static void a(kl param0, int param1, boolean param2) {
         try {
-          SocketConnector.field_e.b(-104, param0);
+          SocketConnector.field_e.addLast(-104, param0);
           if (param2) {
             field_u = (java.applet.Applet) null;
           }
@@ -210,8 +210,8 @@ final class tc extends id {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, rj param3, int param4) {
-        rj stackIn_3_0 = null;
+    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -226,7 +226,7 @@ final class tc extends id {
         db var14 = null;
         try {
           if (param3 instanceof ig) {
-            stackIn_3_0 = (rj) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           } else {
             stackIn_3_0 = null;
           }

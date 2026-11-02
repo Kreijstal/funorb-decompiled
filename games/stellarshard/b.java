@@ -202,7 +202,7 @@ final class b extends id {
         this.field_s = ImageProducerRasterBuffer.field_i;
     }
 
-    public final void a(boolean param0, int param1, int param2, rj param3, int param4) {
+    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;

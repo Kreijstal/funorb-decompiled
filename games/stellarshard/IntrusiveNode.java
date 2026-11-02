@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class IntrusiveNode {
-    IntrusiveNode field_c;
+    IntrusiveNode previous;
     static IntrusiveDeque field_b;
-    long field_j;
+    long key;
     static long field_a;
     static int field_d;
     static int field_i;
     static byte[] field_e;
     static af field_f;
-    IntrusiveNode field_g;
+    IntrusiveNode next;
     static int[] field_h;
 
     final static void a(String param0, int param1) {
@@ -47,8 +47,8 @@ class IntrusiveNode {
         }
     }
 
-    final boolean b(int param0) {
-        if (this.field_c == null) {
+    final boolean isLinked(int param0) {
+        if (this.previous == null) {
           return false;
         }
         if (param0 != 48) {
@@ -70,19 +70,19 @@ class IntrusiveNode {
         field_e = null;
     }
 
-    final void c(int param0) {
-        if (this.field_c == null) {
+    final void unlink(int param0) {
+        if (this.previous == null) {
           return;
         }
-        this.field_c.field_g = this.field_g;
-        this.field_g.field_c = this.field_c;
-        this.field_g = null;
+        this.previous.next = this.next;
+        this.next.previous = this.previous;
+        this.next = null;
         if (param0 == 20) {
-          this.field_c = null;
+          this.previous = null;
           return;
         }
         field_b = (IntrusiveDeque) null;
-        this.field_c = null;
+        this.previous = null;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {

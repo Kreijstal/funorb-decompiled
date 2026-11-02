@@ -116,7 +116,7 @@ final class IterableNodeHashTable implements Iterable {
           na.field_d.e((byte) 16);
           af.field_r = new la(va.field_a, (String) null, gk.field_a, param3, param0);
           sf.field_f = new pg(na.field_d, af.field_r);
-          na.field_d.a((byte) -128, (rj) (sf.field_f));
+          na.field_d.a((byte) -128, (UiWidget) (sf.field_f));
           if (param1 != -1) {
             IterableNodeHashTable.a(100);
           }
@@ -131,38 +131,38 @@ final class IterableNodeHashTable implements Iterable {
         int var6;
         var6 = stellarshard.field_B;
         var4 = this.field_e[(int)((long)(param1 + this.field_b) & param0)];
-        this.field_f = var4.field_g;
+        this.field_f = var4.next;
         while (true) {
           if (this.field_f == var4) {
             this.field_f = null;
             return null;
           }
-          if (~this.field_f.field_j != ~param0) {
-            this.field_f = this.field_f.field_g;
+          if (~this.field_f.key != ~param0) {
+            this.field_f = this.field_f.next;
             continue;
           }
           break;
         }
         var5 = this.field_f;
-        this.field_f = this.field_f.field_g;
+        this.field_f = this.field_f.next;
         return var5;
     }
 
     final void a(byte param0, IntrusiveNode param1, long param2) {
         IntrusiveNode var5 = null;
         try {
-          if (null != param1.field_c) {
-            param1.c(20);
+          if (null != param1.previous) {
+            param1.unlink(20);
           }
           var5 = this.field_e[(int)((long)(this.field_b - 1) & param2)];
-          param1.field_g = var5;
+          param1.next = var5;
           if (param0 <= 1) {
             IterableNodeHashTable.a((byte) 37);
           }
-          param1.field_c = var5.field_c;
-          param1.field_c.field_g = param1;
-          param1.field_g.field_c = param1;
-          param1.field_j = param2;
+          param1.previous = var5.previous;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
+          param1.key = param2;
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ai.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

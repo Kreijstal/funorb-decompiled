@@ -136,62 +136,62 @@ final class le extends IntrusiveNode {
           b.field_u = param0;
           var2 = ImageProducerRasterBuffer.a(false, "achievement_names,0");
           if (null != var2) {
-            rc.field_e[0] = se.a(0, var2);
+            NanoFrameTimer.field_e[0] = se.a(0, var2);
           }
           var2Lifetime1 = ImageProducerRasterBuffer.a(false, "achievement_names,1");
           if (var2Lifetime1 != null) {
-            rc.field_e[1] = se.a(0, var2Lifetime1);
+            NanoFrameTimer.field_e[1] = se.a(0, var2Lifetime1);
           }
           var2Lifetime2 = ImageProducerRasterBuffer.a(false, "achievement_names,2");
           if (var2Lifetime2 != null) {
-            rc.field_e[2] = se.a(0, var2Lifetime2);
+            NanoFrameTimer.field_e[2] = se.a(0, var2Lifetime2);
           }
           var2Lifetime3 = ImageProducerRasterBuffer.a(false, "achievement_names,3");
           if (null != var2Lifetime3) {
-            rc.field_e[3] = se.a(ih.a(param1, 26949), var2Lifetime3);
+            NanoFrameTimer.field_e[3] = se.a(ih.a(param1, 26949), var2Lifetime3);
           }
           var2Lifetime4 = ImageProducerRasterBuffer.a(false, "achievement_names,4");
           if (null != var2Lifetime4) {
-            rc.field_e[4] = se.a(param1 - 26949, var2Lifetime4);
+            NanoFrameTimer.field_e[4] = se.a(param1 - 26949, var2Lifetime4);
           }
           var2Lifetime5 = ImageProducerRasterBuffer.a(false, "achievement_names,5");
           if (var2Lifetime5 != null) {
-            rc.field_e[5] = se.a(0, var2Lifetime5);
+            NanoFrameTimer.field_e[5] = se.a(0, var2Lifetime5);
           }
           var2Lifetime6 = ImageProducerRasterBuffer.a(false, "achievement_names,6");
           if (null != var2Lifetime6) {
-            rc.field_e[6] = se.a(0, var2Lifetime6);
+            NanoFrameTimer.field_e[6] = se.a(0, var2Lifetime6);
           }
           var2Lifetime7 = ImageProducerRasterBuffer.a(false, "achievement_names,7");
           if (null != var2Lifetime7) {
-            rc.field_e[7] = se.a(0, var2Lifetime7);
+            NanoFrameTimer.field_e[7] = se.a(0, var2Lifetime7);
           }
           var2Lifetime8 = ImageProducerRasterBuffer.a(false, "achievement_names,8");
           if (null != var2Lifetime8) {
-            rc.field_e[8] = se.a(0, var2Lifetime8);
+            NanoFrameTimer.field_e[8] = se.a(0, var2Lifetime8);
           }
           var2Lifetime9 = ImageProducerRasterBuffer.a(false, "achievement_names,9");
           if (null != var2Lifetime9) {
-            rc.field_e[9] = se.a(0, var2Lifetime9);
+            NanoFrameTimer.field_e[9] = se.a(0, var2Lifetime9);
           }
           var2Lifetime10 = ImageProducerRasterBuffer.a(false, "achievement_names,10");
           if (var2Lifetime10 != null) {
-            rc.field_e[10] = se.a(0, var2Lifetime10);
+            NanoFrameTimer.field_e[10] = se.a(0, var2Lifetime10);
           }
           var2Lifetime11 = ImageProducerRasterBuffer.a(false, "achievement_names,11");
           if (param1 != 26949) {
             return;
           }
           if (null != var2Lifetime11) {
-            rc.field_e[11] = se.a(0, var2Lifetime11);
+            NanoFrameTimer.field_e[11] = se.a(0, var2Lifetime11);
           }
           var2Lifetime12 = ImageProducerRasterBuffer.a(false, "achievement_names,12");
           if (var2Lifetime12 != null) {
-            rc.field_e[12] = se.a(param1 - 26949, var2Lifetime12);
+            NanoFrameTimer.field_e[12] = se.a(param1 - 26949, var2Lifetime12);
           }
           var2Lifetime13 = ImageProducerRasterBuffer.a(false, "achievement_names,13");
           if (var2Lifetime13 != null) {
-            rc.field_e[13] = se.a(0, var2Lifetime13);
+            NanoFrameTimer.field_e[13] = se.a(0, var2Lifetime13);
           }
           var2Lifetime14 = ImageProducerRasterBuffer.a(false, "achievement_criteria,0");
           if (null != var2Lifetime14) {
@@ -271,7 +271,7 @@ final class le extends IntrusiveNode {
           }
           var2Lifetime33 = ImageProducerRasterBuffer.a(false, "homesin");
           if (null != var2Lifetime33) {
-            ci.field_d = se.a(param1 ^ 26949, var2Lifetime33);
+            FrameTimer.field_d = se.a(param1 ^ 26949, var2Lifetime33);
           }
           var2Lifetime34 = ImageProducerRasterBuffer.a(false, "collectme");
           if (var2Lifetime34 != null) {
@@ -279,7 +279,7 @@ final class le extends IntrusiveNode {
           }
           var2Lifetime35 = ImageProducerRasterBuffer.a(false, "musoff");
           if (null != var2Lifetime35) {
-            rc.field_f = se.a(0, var2Lifetime35);
+            NanoFrameTimer.field_f = se.a(0, var2Lifetime35);
           }
           var2Lifetime36 = ImageProducerRasterBuffer.a(false, "musicspaces");
           if (null != var2Lifetime36) {

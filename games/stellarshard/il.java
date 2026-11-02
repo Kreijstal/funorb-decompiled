@@ -22,7 +22,7 @@ final class il extends vg {
         this(si.field_V, param0);
     }
 
-    final String b(rj param0, int param1) {
+    final String b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -51,7 +51,7 @@ final class il extends vg {
         }
     }
 
-    private il(bd param0, int param1) {
+    private il(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

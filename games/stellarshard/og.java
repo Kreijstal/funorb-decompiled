@@ -33,8 +33,8 @@ final class og {
           if (param0 >= -119) {
             field_c = (MouseWheelInput) null;
           }
-          ((SocketConnector) ((Object) var3)).field_g = param2;
-          ((SocketConnector) ((Object) var3)).field_c = param1;
+          ((SocketConnector) ((Object) var3)).port = param2;
+          ((SocketConnector) ((Object) var3)).host = param1;
           stackIn_3_0 = var3;
           return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

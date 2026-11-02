@@ -44,11 +44,11 @@ class vg extends id {
         return (Sprite) null;
     }
 
-    vg(bd param0, int param1) {
+    vg(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_N, -1, 2147483647, false);
     }
 
-    public final void a(boolean param0, int param1, int param2, rj param3, int param4) {
+    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         try {
           if (param0) {
             nd.a(param3.field_p, param2 + param3.field_k, param3.field_t, param3.field_w + param1, (byte) -103);

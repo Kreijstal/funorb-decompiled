@@ -7,12 +7,12 @@ final class a {
     int field_e;
     static PacketBuffer field_b;
     static String field_g;
-    static qe[] field_h;
+    static GameEntity[] entities;
     int field_f;
     static String field_d;
 
     public static void a(int param0) {
-        field_h = null;
+        entities = null;
         field_d = null;
         field_g = null;
         field_b = null;
@@ -46,7 +46,7 @@ final class a {
 
     static {
         field_g = "Please enter your age in years";
-        field_h = new qe[1000];
+        entities = new GameEntity[1000];
         field_d = "To Customer Support";
     }
 }

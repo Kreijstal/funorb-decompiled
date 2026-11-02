@@ -5,7 +5,7 @@ class si extends bi {
     private int field_bb;
     private int field_W;
     static String field_I;
-    static bd field_V;
+    static BitmapFont field_V;
     private boolean field_x;
     private int field_fb;
     private boolean field_A;
@@ -43,7 +43,7 @@ class si extends bi {
     private int field_C;
     private String field_D;
     private int field_M;
-    private bd field_v;
+    private BitmapFont field_v;
     static int field_X;
 
     public static void f(int param0) {
@@ -213,7 +213,7 @@ class si extends bi {
         this.field_db = -2147483648;
         this.field_C = -1;
         try {
-          this.field_j = param0;
+          this.key = param0;
           this.a((byte) -62, param1);
           if (param6 != null) {
             this.field_G = param6;

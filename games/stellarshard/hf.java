@@ -8,7 +8,7 @@ final class hf extends sk {
     private String field_h;
     static String field_j;
     static boolean field_f;
-    static sd[] field_e;
+    static ScorePopup[] field_e;
 
     final static void c(int param0) {
         if (ni.field_d == 0 - tc.field_p) {
@@ -39,7 +39,7 @@ final class hf extends sk {
           return;
         }
         try {
-          ib.field_c.b(-45, param0);
+          ib.field_c.addLast(-45, param0);
           th.a(param2, param0, 1);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "hf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -183,6 +183,6 @@ final class hf extends sk {
         field_g = "Game ending in ";
         field_j = null;
         field_i = new IntrusiveDeque();
-        field_e = new sd[1000];
+        field_e = new ScorePopup[1000];
     }
 }

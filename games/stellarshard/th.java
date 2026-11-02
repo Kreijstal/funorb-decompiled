@@ -105,7 +105,7 @@ final class th {
         }
     }
 
-    final static void a(bd param0, bd param1, int param2, int param3) {
+    final static void a(BitmapFont param0, BitmapFont param1, int param2, int param3) {
         try {
           pe.field_c = param1;
           mj.field_E = param0;
@@ -115,7 +115,7 @@ final class th {
           }
           IntrusiveNode.field_d = param2;
           ki.a(ti.field_i / 2, ti.field_b / 2, -116);
-          qe.a(param0.field_x, -29770, param1.field_r + param1.field_x, param1.field_x, param0.field_r + param0.field_x);
+          GameEntity.a(param0.field_x, -29770, param1.field_r + param1.field_x, param1.field_x, param0.field_r + param0.field_x);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "th.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -139,17 +139,17 @@ final class th {
         try {
           var5 = pg.field_fb;
           var5.f(param0, 950);
-          var5.field_k = var5.field_k + 1;
-          var4 = var5.field_k;
-          var5.a(false, param2);
-          var5.a(false, param1.field_l);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(false, param2);
+          var5.writeByte(false, param1.field_l);
           var5.a((byte) 67, param1.field_p);
-          var5.b(0, param1.field_m);
-          var5.b(0, param1.field_s);
-          var5.b(0, param1.field_o);
-          var5.b(0, param1.field_n);
+          var5.writeInt(0, param1.field_m);
+          var5.writeInt(0, param1.field_s);
+          var5.writeInt(0, param1.field_o);
+          var5.writeInt(0, param1.field_n);
           var5.c(var4, (byte) -3);
-          var5.a(-var4 + var5.field_k, (byte) 80);
+          var5.a(-var4 + var5.position, (byte) 80);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "th.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

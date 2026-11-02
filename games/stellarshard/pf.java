@@ -772,7 +772,7 @@ final class pf {
             var25 = var35;
             var9 = var25;
             var26 = new PacketBuffer(var35);
-            var26.a(99, param3, 5, var26.field_r.length);
+            var26.a(99, param3, 5, var26.payload.length);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -802,12 +802,12 @@ final class pf {
               var11 = var11 - var5_int * (var12 * 4);
               var29 = new PacketBuffer(var43);
               var14_int = 0;
-              var29.field_k = var11;
+              var29.position = var11;
               var15_int = 0;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var29.b(false);
+                  var17 = var17 + var29.readInt(false);
                   if (var6 != null) {
                     var19 = var34[var18];
                   } else {
@@ -824,12 +824,12 @@ final class pf {
               }
               var44 = new byte[var14_int];
               var14_intLifetime1 = 0;
-              var29.field_k = var11;
+              var29.position = var11;
               var17 = 0;
               for (var18 = 0; var18 < var12; var18++) {
                 var19 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
-                  var19 = var19 + var29.b(false);
+                  var19 = var19 + var29.readInt(false);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -852,11 +852,11 @@ final class pf {
               var39 = new int[var5_int];
               var32 = var39;
               var14 = var32;
-              var31.field_k = var11;
+              var31.position = var11;
               for (var15_int = 0; var12 > var15_int; var15_int++) {
                 var16 = 0;
                 for (var17 = 0; var17 < var5_int; var17++) {
-                  var16 = var16 + var31.b(false);
+                  var16 = var16 + var31.readInt(false);
                   var14[var17] = var14[var17] + var16;
                 }
               }
@@ -868,12 +868,12 @@ final class pf {
                 var15[var16] = array$1;
                 var39[var16] = 0;
               }
-              var31.field_k = var11;
+              var31.position = var11;
               var16 = 0;
               for (var17 = 0; var12 > var17; var17++) {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
-                  var18 = var18 + var31.b(false);
+                  var18 = var18 + var31.readInt(false);
                   ri.a(var43, var16, var40[var19], var39[var19], var18);
                   var14[var19] = var14[var19] + var18;
                   var16 = var16 + var18;

@@ -7,9 +7,9 @@ abstract class SocketConnector {
     static IntrusiveDeque field_e;
     static String field_b;
     static String field_d;
-    int field_g;
+    int port;
     static String field_a;
-    String field_c;
+    String host;
     static String field_f;
 
     final static int[] a(int param0, int param1, int param2) {
@@ -42,10 +42,10 @@ abstract class SocketConnector {
 
     final java.net.Socket a(int param0) throws IOException {
         if (param0 == -28548) {
-          return new java.net.Socket(this.field_c, this.field_g);
+          return new java.net.Socket(this.host, this.port);
         }
         field_a = (String) null;
-        return new java.net.Socket(this.field_c, this.field_g);
+        return new java.net.Socket(this.host, this.port);
     }
 
     static {

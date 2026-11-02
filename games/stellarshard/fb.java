@@ -83,12 +83,12 @@ abstract class fb {
     final static void a(int param0, byte param1, ta param2) {
         ha var3 = pg.field_fb;
         var3.f(param0, 950);
-        var3.a(false, param2.field_o);
+        var3.writeByte(false, param2.field_o);
         if (param1 > -117) {
           return;
         }
         try {
-          var3.a(false, param2.field_t);
+          var3.writeByte(false, param2.field_t);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "fb.R(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -170,8 +170,8 @@ abstract class fb {
           var14 = stellarshard.field_B;
           try {
             var18 = new lb();
-            var18.field_s = param0.f(4);
-            var18.field_l = param0.b(false);
+            var18.field_s = param0.readUnsignedByte(4);
+            var18.field_l = param0.readInt(false);
             var18.field_p = new int[var18.field_s];
             var18.field_n = new int[var18.field_s];
             var18.field_k = new int[var18.field_s];
@@ -183,7 +183,7 @@ abstract class fb {
             }
             for (var5 = 0; var5 < var18.field_s; var5++) {
               try {
-                var6_int = param0.f(4);
+                var6_int = param0.readUnsignedByte(4);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   var6_int != 2) {
@@ -191,7 +191,7 @@ abstract class fb {
                     var6_int == 4) {
                     var7 = param0.e((byte) 106);
                     var8 = param0.e((byte) 117);
-                    var9 = param0.f(param3 ^ 16);
+                    var9 = param0.readUnsignedByte(param3 ^ 16);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
                       var10[var11_int] = param0.e((byte) 85);
@@ -201,7 +201,7 @@ abstract class fb {
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param0.b(false);
+                        var13 = param0.readInt(false);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
                         param0.a(0, (byte) -106, var13, var20[var12_int]);
@@ -225,7 +225,7 @@ abstract class fb {
                   var8 = var16;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param0.b(false);
+                    var9 = param0.readInt(false);
                   }
                   var18.field_k[var5] = var6_int;
                   var18.field_n[var5] = var9;
@@ -253,7 +253,7 @@ abstract class fb {
                 var18.field_p[var5] = -5;
               }
             }
-            oc.field_c.b(param3 - 136, var18);
+            oc.field_c.addLast(param3 - 136, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

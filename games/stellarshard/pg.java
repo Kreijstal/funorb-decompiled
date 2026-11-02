@@ -9,7 +9,7 @@ final class pg extends wl {
     static String field_eb;
     static pf field_db;
 
-    final void b(rj param0, int param1) {
+    final void b(UiWidget param0, int param1) {
         try {
           super.b(param0, param1 ^ 0);
           if (param1 != 23143) {
@@ -20,7 +20,7 @@ final class pg extends wl {
         }
     }
 
-    pg(ei param0, rj param1) {
+    pg(ei param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 

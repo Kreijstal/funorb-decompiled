@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class la extends g implements ec, oi {
+final class la extends WidgetContainer implements ec, oi {
     private boolean field_N;
     static th field_O;
     private ig field_E;
@@ -36,7 +36,7 @@ final class la extends g implements ec, oi {
         RuntimeException decompiledCaughtException = null;
         b var6 = null;
         RuntimeException var6_ref = null;
-        bd var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         bh var9 = null;
         kg var12 = null;
@@ -118,12 +118,12 @@ final class la extends g implements ec, oi {
           dupTemp$0 = new kg(10, this.field_k, -20 + this.field_p, 25, this.field_Q, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.b(4, dupTemp$0);
-          this.field_k = this.field_k + (5 + ((rj) ((Object) var12)).field_t);
+          this.field_k = this.field_k + (5 + ((UiWidget) ((Object) var12)).field_t);
           dupTemp$1 = new kg(10, this.field_k, -20 + this.field_p, 25, this.field_K, false, 80, 3, var7, 16777215, th.field_b);
           var13 = dupTemp$1;
           this.b(4, dupTemp$1);
           this.field_D.field_v = (lf) (this);
-          this.field_k = this.field_k + (((rj) ((Object) var13)).field_t + 5);
+          this.field_k = this.field_k + (((UiWidget) ((Object) var13)).field_t + 5);
           if (this.field_E != null) {
             this.field_E.field_v = (lf) (this);
           }
@@ -216,7 +216,7 @@ final class la extends g implements ec, oi {
         RuntimeException var3 = null;
         try {
           if (param0 == this.field_Q) {
-            this.field_K.a(-2147483648, (rj) (this));
+            this.field_K.a(-2147483648, (UiWidget) (this));
           }
           if (this.field_K == param0) {
             this.g((byte) 107);
@@ -275,7 +275,7 @@ final class la extends g implements ec, oi {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, rj param3) {
+    final boolean a(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_13_0 = false;
@@ -396,7 +396,7 @@ final class la extends g implements ec, oi {
         if (sg.a((byte) 102) ||
           !(this.field_Q.field_m.length() <= 0) &&
           !(this.field_K.field_m.length() <= 0)) {
-          rc.a(this.field_K.field_m, this.field_Q.field_m, true);
+          NanoFrameTimer.a(this.field_K.field_m, this.field_Q.field_m, true);
         }
     }
 

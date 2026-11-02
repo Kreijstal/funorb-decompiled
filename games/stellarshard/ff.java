@@ -15,8 +15,8 @@ final class ff extends nh {
     final static void a(int param0, int param1) {
         ha var2 = pg.field_fb;
         var2.f(param1, 950);
-        var2.a(false, param0);
-        var2.a(false, 0);
+        var2.writeByte(false, param0);
+        var2.writeByte(false, 0);
     }
 
     ff(long param0, String param1) {
@@ -38,20 +38,20 @@ final class ff extends nh {
         od var10 = null;
         var8 = stellarshard.field_B;
         var9 = ae.field_N;
-        var3 = var9.f(4);
+        var3 = var9.readUnsignedByte(4);
         ii.field_J = var3 & 127;
         stackIn_3_0 = ((var3 & 128) != 0);
         eh.field_d = stackIn_3_0;
-        ha.field_t = var9.f(4);
-        k.field_d = var9.d(0);
+        ha.field_t = var9.readUnsignedByte(4);
+        k.field_d = var9.readLong(0);
         if (ii.field_J != 2) {
           il.field_w = 0;
           mg.field_y = 0;
         } else {
-          mg.field_y = var9.c((byte) 79);
+          mg.field_y = var9.readUnsignedShort((byte) 79);
           il.field_w = var9.c(true);
         }
-        stackIn_9_0 = (var9.f(4) != 1) ? 0 : 1;
+        stackIn_9_0 = (var9.readUnsignedByte(4) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
         ld.field_z = var9.e((byte) 122);
         var5 = -101 % ((param1 - 46) / 36);
@@ -61,20 +61,20 @@ final class ff extends nh {
           oe.field_d = var9.e((byte) 110);
         }
         if (ii.field_J == 1) {
-          var9.c((byte) 105);
+          var9.readUnsignedShort((byte) 105);
           var9.e((byte) 106);
         } else {
           if (ii.field_J == 4) {
-            var9.c((byte) 105);
+            var9.readUnsignedShort((byte) 105);
             var9.e((byte) 106);
           }
         }
         if (!param0) {
           IntrusiveDequeCursor.field_b = ni.a(false, 80, var9);
-          rc.field_k = null;
+          NanoFrameTimer.field_k = null;
           return new nj(param0);
         }
-        var6 = var9.c((byte) 62);
+        var6 = var9.readUnsignedShort((byte) 62);
         try {
           var10 = qh.field_e.a(32767, var6);
           IntrusiveDequeCursor.field_b = var10.e(0);
@@ -83,12 +83,12 @@ final class ff extends nh {
           } else {
             stackIn_23_0 = null;
           }
-          rc.field_k = stackIn_23_0;
+          NanoFrameTimer.field_k = stackIn_23_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = (Exception) (Object) decompiledCaughtException;
-          qe.a(-105, "CC1", (Throwable) ((Object) var7));
-          rc.field_k = null;
+          GameEntity.a(-105, "CC1", (Throwable) ((Object) var7));
+          NanoFrameTimer.field_k = null;
           IntrusiveDequeCursor.field_b = null;
           return new nj(param0);
         }

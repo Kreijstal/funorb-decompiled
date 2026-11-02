@@ -36,7 +36,7 @@ final class nf extends IntrusiveNode {
         var6 = stellarshard.field_B;
         try {
           var9 = ae.field_N;
-          var2 = var9.f(4);
+          var2 = var9.readUnsignedByte(4);
           if (param0 <= 61) {
             return;
           }
@@ -46,27 +46,27 @@ final class nf extends IntrusiveNode {
               IntrusiveDeque.c(-2290);
               return;
             }
-            var4_int = var9.f(4);
+            var4_int = var9.readUnsignedByte(4);
             if (var4_int == 0) {
               var5 = null;
             } else {
               var13 = new byte[var4_int];
               var9.a(0, (byte) -126, var4_int, var13);
             }
-            var9.field_k = var9.field_k + 4;
+            var9.position = var9.position + 4;
             if (var9.a(true)) {
-              var3_ref_mk.c(20);
+              var3_ref_mk.unlink(20);
               return;
             }
             IntrusiveDeque.c(-2290);
             return;
           }
           if (var2 != 1) {
-            qe.a(-111, "A1: " + bh.b((byte) -127), (Throwable) null);
+            GameEntity.a(-111, "A1: " + bh.b((byte) -127), (Throwable) null);
             IntrusiveDeque.c(-2290);
             return;
           }
-          var3 = var9.b(false);
+          var3 = var9.readInt(false);
           var4 = (le) (fg.field_G.b(-90));
           while (var4 != null) {
             if (var4.field_o != var3) {
@@ -76,7 +76,7 @@ final class nf extends IntrusiveNode {
             break;
           }
           if (var4 != null) {
-            var4.c(20);
+            var4.unlink(20);
             return;
           }
           IntrusiveDeque.c(-2290);

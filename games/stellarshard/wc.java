@@ -60,7 +60,7 @@ final class wc extends wf {
           param2 == 0 &&
           !var12.field_u &&
           var12.field_w) {
-          var12.c(20);
+          var12.unlink(20);
           var4 = null;
         }
         if (var4 == null) {
@@ -134,7 +134,7 @@ final class wc extends wf {
                 this.field_B[param1] = (byte) 1;
               }
               if (!((ki) (var4)).field_u) {
-                ((ki) (var4)).c(20);
+                ((ki) (var4)).unlink(20);
               }
               stackIn_58_0 = var4;
               return (ki) (stackIn_58_0);
@@ -144,7 +144,7 @@ final class wc extends wf {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_B[param1] = (byte)-1;
-            ((ki) (var4)).c(20);
+            ((ki) (var4)).unlink(20);
             if (!((ki) (var4)).field_u) {
               return null;
             }
@@ -187,7 +187,7 @@ final class wc extends wf {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_q.b(-116);
-          ((ki) (var4)).c(param0 + 28549);
+          ((ki) (var4)).unlink(param0 + 28549);
           if (!((ki) (var4)).field_u) {
             return null;
           }
@@ -208,7 +208,7 @@ final class wc extends wf {
           }
         }
         if (!((ki) (var4)).field_u) {
-          ((ki) (var4)).c(20);
+          ((ki) (var4)).unlink(20);
         }
         return (ki) (var4);
     }
@@ -229,15 +229,15 @@ final class wc extends wf {
         }
         IntrusiveNode var2 = this.field_u.b(-84);
         while (var2 != null) {
-          var3 = (int)var2.field_j;
+          var3 = (int)var2.key;
           if (var3 < 0) {
-            var2.c(20);
+            var2.unlink(20);
           } else {
             if (var3 >= this.field_k.field_e) {
-              var2.c(20);
+              var2.unlink(20);
             } else {
               if (this.field_k.field_p[var3] == 0) {
-                var2.c(20);
+                var2.unlink(20);
               } else {
                 if (0 == this.field_B[var3]) {
                   discarded$0 = this.a(-28529, var3, 1);
@@ -246,7 +246,7 @@ final class wc extends wf {
                   discarded$1 = this.a(-28529, var3, 2);
                 }
                 if (this.field_B[var3] == 1) {
-                  var2.c(20);
+                  var2.unlink(20);
                 }
               }
             }
@@ -351,7 +351,7 @@ final class wc extends wf {
           return null;
         }
         byte[] var4 = var3.g(-27203);
-        var3.c(20);
+        var3.unlink(20);
         if (param0 != 35) {
           this.c(-36);
         }
@@ -406,12 +406,12 @@ final class wc extends wf {
             var2_int = 1;
             var3 = this.field_v.b(-87);
             while (var3 != null) {
-              var4 = (int)var3.field_j;
+              var4 = (int)var3.key;
               if (this.field_B[var4] == 0) {
                 discarded$3 = this.a(-28529, var4, 1);
               }
               if (this.field_B[var4] != 0) {
-                var3.c(20);
+                var3.unlink(20);
               } else {
                 var2_int = 0;
               }
@@ -429,9 +429,9 @@ final class wc extends wf {
                   }
                   if (0 == this.field_B[this.field_m]) {
                     var6 = new IntrusiveNode();
-                    var6.field_j = (long)this.field_m;
+                    var6.key = (long)this.field_m;
                     var2_int = 0;
-                    this.field_v.b(-93, var6);
+                    this.field_v.addLast(-93, var6);
                   }
                 }
                 this.field_m = this.field_m + 1;
@@ -450,14 +450,14 @@ final class wc extends wf {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_v.b(-125);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_j;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_B[var4Lifetime1] != 1) {
                   discarded$1 = this.a(-28529, var4Lifetime1, 2);
                 }
                 if (this.field_B[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.c(20);
+                  var3Lifetime1.unlink(20);
                 }
                 var3Lifetime1 = this.field_v.b((byte) -44);
               }
@@ -473,9 +473,9 @@ final class wc extends wf {
                     }
                     if (this.field_B[this.field_m] != 1) {
                       var7 = new IntrusiveNode();
-                      var7.field_j = (long)this.field_m;
+                      var7.key = (long)this.field_m;
                       var2_intLifetime1 = 0;
-                      this.field_v.b(-80, var7);
+                      this.field_v.addLast(-80, var7);
                     }
                   }
                   this.field_m = this.field_m + 1;
@@ -506,7 +506,7 @@ final class wc extends wf {
                 if (!var2.field_u) {
                   throw new RuntimeException();
                 }
-                var2.c(20);
+                var2.unlink(20);
               } else {
                 var2.field_y = true;
               }

@@ -191,7 +191,7 @@ final class we {
           if (param1 != 12757) {
             field_e = (String) null;
           }
-          na.field_d.a((byte) -108, (rj) (ei.field_G));
+          na.field_d.a((byte) -108, (UiWidget) (ei.field_G));
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "we.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

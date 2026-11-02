@@ -46,13 +46,13 @@ final class kk extends lk {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (null != param1.field_c) {
-            param1.c(20);
+          if (null != param1.previous) {
+            param1.unlink(20);
           }
-          param1.field_c = param2.field_c;
-          param1.field_g = param2;
-          param1.field_c.field_g = param1;
-          param1.field_g.field_c = param1;
+          param1.previous = param2.previous;
+          param1.next = param2;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
           if (param0 < 53) {
             kk.e((byte) 58);
           }

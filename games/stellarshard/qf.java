@@ -50,7 +50,7 @@ final class qf implements Runnable {
           }
         } catch (Exception exception) {
           String var6 = (String) null;
-          qe.a(68, (String) null, (Throwable) ((Object) exception));
+          GameEntity.a(68, (String) null, (Throwable) ((Object) exception));
         } finally {
           this.field_c = false;
         }

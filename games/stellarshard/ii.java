@@ -125,7 +125,7 @@ final class ii extends ig {
           }
           var3 = pg.field_fb;
           var3.f(param1, 950);
-          var3.a(false, param0.field_q);
+          var3.writeByte(false, param0.field_q);
           var3.c(param0.field_n, -115);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "ii.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
@@ -154,17 +154,17 @@ final class ii extends ig {
         }
     }
 
-    final boolean a(int param0, rj param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        rj var4 = null;
+        UiWidget var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -2147483648) {
-            var4 = (rj) null;
-            this.a(43, false, 76, (rj) null);
+            var4 = (UiWidget) null;
+            this.a(43, false, 76, (UiWidget) null);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -181,7 +181,7 @@ final class ii extends ig {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, rj param3) {
+    final void a(int param0, boolean param1, int param2, UiWidget param3) {
         try {
           this.field_I = this.field_I + 1;
           super.a(param0, param1, param2, param3);

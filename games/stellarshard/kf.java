@@ -277,7 +277,7 @@ final class kf implements uk {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, rj param3, int param4) {
+    public final void a(boolean param0, int param1, int param2, UiWidget param3, int param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;

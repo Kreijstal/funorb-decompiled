@@ -635,7 +635,7 @@ final class ad extends IntrusiveNode {
         return true;
     }
 
-    final ud b() {
+    final PcmSample b() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -667,7 +667,7 @@ final class ad extends IntrusiveNode {
           }
         }
         this.field_E = null;
-        return new ud(this.field_v, var1, this.field_F, this.field_q, this.field_l);
+        return new PcmSample(this.field_v, var1, this.field_F, this.field_q, this.field_l);
     }
 
     private final void b(byte[] param0) throws IOException {
@@ -676,15 +676,15 @@ final class ad extends IntrusiveNode {
         int var6_int = 0;
         byte[] var6 = null;
         PacketBuffer var2 = new PacketBuffer(param0);
-        this.field_v = var2.b(false);
-        this.field_I = var2.b(false);
-        this.field_F = var2.b(false);
-        this.field_q = var2.b(false);
+        this.field_v = var2.readInt(false);
+        this.field_I = var2.readInt(false);
+        this.field_F = var2.readInt(false);
+        this.field_q = var2.readInt(false);
         if (this.field_q < 0) {
           this.field_q = ~this.field_q;
           this.field_l = true;
         }
-        int var3 = var2.b(false);
+        int var3 = var2.readInt(false);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -692,7 +692,7 @@ final class ad extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.f(4);
+            var6_int = var2.readUnsignedByte(4);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
@@ -701,7 +701,7 @@ final class ad extends IntrusiveNode {
         }
     }
 
-    final ud a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -751,7 +751,7 @@ final class ad extends IntrusiveNode {
         this.field_E = null;
         var12 = this.field_O;
         this.field_O = null;
-        return new ud(this.field_v, var12, this.field_F, this.field_q, this.field_l);
+        return new PcmSample(this.field_v, var12, this.field_F, this.field_q, this.field_l);
     }
 
     private ad(byte[] param0) throws IOException {

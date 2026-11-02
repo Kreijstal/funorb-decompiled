@@ -36,9 +36,9 @@ final class BufferedSocket implements Runnable {
         ul.field_B = qd.a(param2, "jagex_logo_grey", "commonui", (byte) 55);
         ImageProducerRasterBuffer.field_i = ml.a("commonui", (byte) 85, param2, "button");
         DualLinkNode.field_p = pf.a("commonui", (byte) -98, "validation", param2);
-        de.field_c = (bd) ((Object) eh.a("arezzo12", "commonui", param1, param2, (byte) 63));
-        si.field_V = (bd) ((Object) eh.a("arezzo14", "commonui", param1, param2, (byte) 63));
-        DualLinkDequeIterator.field_c = (bd) ((Object) eh.a("arezzo14bold", "commonui", param1, param2, (byte) 63));
+        de.field_c = (BitmapFont) ((Object) eh.a("arezzo12", "commonui", param1, param2, (byte) 63));
+        si.field_V = (BitmapFont) ((Object) eh.a("arezzo14", "commonui", param1, param2, (byte) 63));
+        DualLinkDequeIterator.field_c = (BitmapFont) ((Object) eh.a("arezzo14bold", "commonui", param1, param2, (byte) 63));
         Sprite var17 = new Sprite(param0.a("button.gif", "", (byte) -12), (java.awt.Component) ((Object) qd.field_j));
         el.a("dropdown", param2, (byte) -89, "commonui");
         ek[] var5 = bf.a("screen_options", (byte) 37, "commonui", param2);
@@ -227,7 +227,7 @@ final class BufferedSocket implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            qe.a(119, (String) null, (Throwable) ((Object) var1_ref));
+            GameEntity.a(119, (String) null, (Throwable) ((Object) var1_ref));
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -288,11 +288,11 @@ final class BufferedSocket implements Runnable {
             var4_ref_fa = (fa) (uj.field_e.b(-103));
             if (var4_ref_fa != null &&
               var2_long > var4_ref_fa.field_m) {
-              var4_ref_fa.c(20);
+              var4_ref_fa.unlink(20);
               ue.field_b = var4_ref_fa.field_l.length;
-              ae.field_N.field_k = 0;
+              ae.field_N.position = 0;
               for (var5_int = 0; ue.field_b > var5_int; var5_int++) {
-                ae.field_N.field_r[var5_int] = var4_ref_fa.field_l[var5_int];
+                ae.field_N.payload[var5_int] = var4_ref_fa.field_l[var5_int];
               }
               ld.field_E = t.field_e;
               t.field_e = ig.field_y;
@@ -306,12 +306,12 @@ final class BufferedSocket implements Runnable {
           }
           while (true) {
             if (hk.field_k < 0) {
-              ae.field_N.field_k = 0;
-              if (!qe.b(64, 1)) {
+              ae.field_N.position = 0;
+              if (!GameEntity.b(64, 1)) {
                 return false;
               }
               hk.field_k = ae.field_N.h((byte) -9);
-              ae.field_N.field_k = 0;
+              ae.field_N.position = 0;
               ue.field_b = param1[hk.field_k];
             }
             if (!cd.e((byte) 118)) {
@@ -334,9 +334,9 @@ final class BufferedSocket implements Runnable {
             }
             var5 = new fa(var2_long + (long)var4, hk.field_k, new byte[ue.field_b]);
             for (var6 = 0; ue.field_b > var6; var6++) {
-              var5.field_l[var6] = ae.field_N.field_r[var6];
+              var5.field_l[var6] = ae.field_N.payload[var6];
             }
-            uj.field_e.b(-41, var5);
+            uj.field_e.addLast(-41, var5);
             hk.field_k = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

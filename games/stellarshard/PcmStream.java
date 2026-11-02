@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class PcmStream extends IntrusiveNode {
-    gb field_l;
+    AbstractAudioSample field_l;
     PcmStream field_k;
     volatile boolean field_m;
     int field_n;

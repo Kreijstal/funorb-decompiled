@@ -52,7 +52,7 @@ abstract class i {
             var6 = 35 % ((param0 - 58) / 48);
             var5 = ok.a(var3, 1);
             if (var5 == null) {
-              return sd.a((byte) -96, var4);
+              return ScorePopup.a((byte) -96, var4);
             }
             stackIn_11_0 = var5;
             return stackIn_11_0;

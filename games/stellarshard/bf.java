@@ -650,8 +650,8 @@ final class bf {
         ha var2 = pg.field_fb;
         if (param1 < -32) {
           var2.f(param0, 950);
-          var2.a(false, 1);
-          var2.a(false, 2);
+          var2.writeByte(false, 1);
+          var2.writeByte(false, 2);
           return;
         }
     }

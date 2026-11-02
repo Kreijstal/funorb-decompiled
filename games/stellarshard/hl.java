@@ -35,7 +35,7 @@ final class hl extends PcmStream {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_l = var7;
-              this.a(var5.field_g, var5);
+              this.a(var5.next, var5);
             } else {
               var5.field_l = 0;
               this.c(var5);
@@ -70,7 +70,7 @@ final class hl extends PcmStream {
           this.e();
           param0.field_k = this;
           param0.b();
-          this.a(this.field_r.field_d.field_g, param0);
+          this.a(this.field_r.sentinel.next, param0);
           return;
         }
         throw new RuntimeException();
@@ -116,7 +116,7 @@ final class hl extends PcmStream {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_l = var5;
-              this.a(var3.field_g, var3);
+              this.a(var3.next, var3);
             } else {
               var3.field_l = 0;
               this.c(var3);
@@ -131,7 +131,7 @@ final class hl extends PcmStream {
     }
 
     final synchronized void b(PcmStream param0) {
-        param0.c(20);
+        param0.unlink(20);
     }
 
     final int b() {
@@ -139,15 +139,15 @@ final class hl extends PcmStream {
     }
 
     final synchronized void a(PcmStream param0) {
-        this.field_o.a(-1, param0);
+        this.field_o.addFirst(-1, param0);
     }
 
     private final void c(p param0) {
-        param0.c(20);
+        param0.unlink(20);
         param0.a();
         param0.field_k = null;
-        IntrusiveNode var2 = this.field_r.field_d.field_g;
-        if (var2 == this.field_r.field_d) {
+        IntrusiveNode var2 = this.field_r.sentinel.next;
+        if (var2 == this.field_r.sentinel) {
           this.field_q = -1;
         } else {
           this.field_q = ((p) (var2)).field_l;
@@ -168,24 +168,24 @@ final class hl extends PcmStream {
 
     private final void a(IntrusiveNode param0, p param1) {
         while (true) {
-          if (param0 == this.field_r.field_d) {
+          if (param0 == this.field_r.sentinel) {
             kk.a(103, param1, param0);
-            this.field_q = ((p) (this.field_r.field_d.field_g)).field_l;
+            this.field_q = ((p) (this.field_r.sentinel.next)).field_l;
             return;
           }
           if (((p) (param0)).field_l <= param1.field_l) {
-            param0 = param0.field_g;
+            param0 = param0.next;
             continue;
           }
           break;
         }
         kk.a(103, param1, param0);
-        this.field_q = ((p) (this.field_r.field_d.field_g)).field_l;
+        this.field_q = ((p) (this.field_r.sentinel.next)).field_l;
         return;
     }
 
-    final void a(ud param0, int param1, int param2) {
-        this.a(gd.a(param0, param1, param2));
+    final void a(PcmSample param0, int param1, int param2) {
+        this.a(PcmSampleStream.a(param0, param1, param2));
     }
 
     public hl() {

@@ -23,14 +23,14 @@ final class uh {
         int var7 = stellarshard.field_B;
         int var4 = 33 % ((-51 - param1) / 53);
         IntrusiveNode var5 = this.field_b[(int)(param0 & (long)(this.field_d - 1))];
-        this.field_c = var5.field_g;
+        this.field_c = var5.next;
         while (this.field_c != var5) {
-          if (~this.field_c.field_j == ~param0) {
+          if (~this.field_c.key == ~param0) {
             var6 = this.field_c;
-            this.field_c = this.field_c.field_g;
+            this.field_c = this.field_c.next;
             return var6;
           }
-          this.field_c = this.field_c.field_g;
+          this.field_c = this.field_c.next;
         }
         this.field_c = null;
         return null;
@@ -97,7 +97,7 @@ final class uh {
         if (this.field_e > 0 &&
           this.field_a != this.field_b[-1 + this.field_e]) {
           var2 = this.field_a;
-          this.field_a = var2.field_g;
+          this.field_a = var2.next;
           return var2;
         }
         do {
@@ -110,9 +110,9 @@ final class uh {
           }
           fieldTemp$0 = this.field_e;
           this.field_e = this.field_e + 1;
-          var2 = this.field_b[fieldTemp$0].field_g;
+          var2 = this.field_b[fieldTemp$0].next;
         } while (this.field_b[this.field_e - 1] == var2);
-        this.field_a = var2.field_g;
+        this.field_a = var2.next;
         return var2;
     }
 
@@ -186,15 +186,15 @@ final class uh {
     final void a(IntrusiveNode param0, long param1, int param2) {
         IntrusiveNode var5 = null;
         try {
-          if (param0.field_c != null) {
-            param0.c(20);
+          if (param0.previous != null) {
+            param0.unlink(20);
           }
           var5 = this.field_b[(int)((long)(this.field_d - param2) & param1)];
-          param0.field_g = var5;
-          param0.field_c = var5.field_c;
-          param0.field_c.field_g = param0;
-          param0.field_g.field_c = param0;
-          param0.field_j = param1;
+          param0.next = var5;
+          param0.previous = var5.previous;
+          param0.previous.next = param0;
+          param0.next.previous = param0;
+          param0.key = param1;
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "uh.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -211,8 +211,8 @@ final class uh {
           dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_b[var2] = dupTemp$0;
-          var3.field_c = var3;
-          var3.field_g = var3;
+          var3.previous = var3;
+          var3.next = var3;
         }
     }
 

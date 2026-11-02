@@ -66,19 +66,19 @@ class nh extends sk {
           return;
         }
         try {
-          var5.field_k = var5.field_k + 1;
-          var4 = var5.field_k;
-          var5.a(false, 1);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
+          var5.writeByte(false, 1);
           if (param0.field_p == null) {
-            var5.a(false, 0);
+            var5.writeByte(false, 0);
           } else {
-            var5.a(false, param0.field_p.length);
+            var5.writeByte(false, param0.field_p.length);
             var5.a(param0.field_p.length, 0, (byte) -13, param0.field_p);
           }
           var5.c(var4, (byte) -3);
-          var5.field_k = var5.field_k - 4;
-          param0.field_o = var5.b(false);
-          var5.a(-var4 + var5.field_k, (byte) 70);
+          var5.position = var5.position - 4;
+          param0.field_o = var5.readInt(false);
+          var5.a(-var4 + var5.position, (byte) 70);
         } catch (RuntimeException runtimeException) {
           throw ma.a((Throwable) ((Object) runtimeException), "nh.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

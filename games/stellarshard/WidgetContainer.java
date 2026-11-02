@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-class g extends rj implements f {
+class WidgetContainer extends UiWidget implements f {
     static li field_z;
     IntrusiveDeque field_y;
     static li field_A;
 
-    g(int param0, int param1, int param2, int param3, uk param4) {
+    WidgetContainer(int param0, int param1, int param2, int param3, uk param4) {
         super(param0, param1, param2, param3, param4, (lf) null);
         this.field_y = new IntrusiveDeque();
     }
 
     void a(int param0, byte param1, int param2, int param3) {
         IntrusiveDequeCursor var5 = null;
-        rj var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
@@ -23,19 +23,19 @@ class g extends rj implements f {
         try {
           if (param0 == 0 &&
             this.field_u != null) {
-            this.field_u.a(true, param3, param2, (rj) (this), 4549);
+            this.field_u.a(true, param3, param2, (UiWidget) (this), 4549);
           }
           var5 = new IntrusiveDequeCursor(this.field_y);
-          var6 = (rj) (var5.a((byte) -83));
+          var6 = (UiWidget) (var5.a((byte) -83));
           while (var6 != null) {
             var6.a(param0, (byte) -57, param2 + this.field_k, param3 + this.field_w);
-            var6 = (rj) (var5.a(-49));
+            var6 = (UiWidget) (var5.a(-49));
             if (var7 != 0) {
               return;
             }
           }
           if (param1 != -57) {
-            this.a(106, 53, (rj) null, -90, -41, -21);
+            this.a(106, 53, (UiWidget) null, -90, -41, -21);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -51,7 +51,7 @@ class g extends rj implements f {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.a(-54, 114, (rj) null, 10, -60, -113, 115);
+            this.a(-54, 114, (UiWidget) null, 10, -60, -113, 115);
           }
           stackIn_7_0 = (null != this.a((byte) -45));
           return stackIn_7_0;
@@ -62,11 +62,11 @@ class g extends rj implements f {
         }
     }
 
-    final void a(int param0, int param1, rj param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var7 = null;
         int var8 = 0;
-        rj var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -76,11 +76,11 @@ class g extends rj implements f {
         try {
           var8 = 42 % ((param1 + 50) / 57);
           var7 = new IntrusiveDequeCursor(this.field_y);
-          var9 = (rj) (var7.b((byte) 122));
+          var9 = (UiWidget) (var7.b((byte) 122));
           while (var9 != null) {
-            if (var9.b(48)) {
+            if (var9.isLinked(48)) {
               var9.a(param0, 97, param2, this.field_w + param3, param4 + this.field_k, param5);
-              var9 = (rj) (var7.a(true));
+              var9 = (UiWidget) (var7.a(true));
               if (var10 == 0) {
                 continue;
               }
@@ -102,9 +102,9 @@ class g extends rj implements f {
         }
     }
 
-    final boolean a(int param0, rj param1) {
+    final boolean a(int param0, UiWidget param1) {
         IntrusiveDequeCursor var3 = null;
-        rj var4 = null;
+        UiWidget var4 = null;
         int var5 = 0;
         boolean stackIn_7_0 = false;
         boolean stackIn_15_0 = false;
@@ -120,7 +120,7 @@ class g extends rj implements f {
           if (param0 != -2147483648) {
             this.field_y = (IntrusiveDeque) null;
           }
-          var4 = (rj) (var3.b((byte) 120));
+          var4 = (UiWidget) (var3.b((byte) 120));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (null == var4))) {
             stackOut_6_0 = var4.a(-2147483648, param1);
@@ -130,7 +130,7 @@ class g extends rj implements f {
               if (stackIn_7_0) {
                 return true;
               }
-              var4 = (rj) (var3.a(true));
+              var4 = (UiWidget) (var3.a(true));
               continue;
             }
             break;
@@ -153,9 +153,9 @@ class g extends rj implements f {
         }
     }
 
-    void a(int param0, boolean param1, int param2, rj param3) {
+    void a(int param0, boolean param1, int param2, UiWidget param3) {
         IntrusiveDequeCursor var5 = null;
-        rj var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -169,11 +169,11 @@ class g extends rj implements f {
             this.g(111);
           }
           var5 = new IntrusiveDequeCursor(this.field_y);
-          var6 = (rj) (var5.b((byte) 126));
+          var6 = (UiWidget) (var5.b((byte) 126));
           while (null != var6) {
-            if (var6.b(48)) {
+            if (var6.isLinked(48)) {
               var6.a(this.field_k + param0, false, param2 + this.field_w, param3);
-              var6 = (rj) (var5.a(true));
+              var6 = (UiWidget) (var5.a(true));
               if (var7 == 0) {
                 continue;
               }
@@ -195,34 +195,34 @@ class g extends rj implements f {
         }
     }
 
-    rj a(byte param0) {
+    UiWidget a(byte param0) {
         IntrusiveDequeCursor var2 = null;
         RuntimeException var2_ref = null;
-        rj var3 = null;
+        UiWidget var3 = null;
         int var4 = 0;
-        rj stackIn_7_0 = null;
+        UiWidget stackIn_7_0 = null;
         Object stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = stellarshard.field_B;
         try {
           var2 = new IntrusiveDequeCursor(this.field_y);
-          var3 = (rj) (var2.b((byte) 123));
+          var3 = (UiWidget) (var2.b((byte) 123));
           if (param0 != -45) {
-            this.a((rj) null, (byte) 114);
+            this.a((UiWidget) null, (byte) 114);
           }
           while (var3 != null) {
             if (var3.e(0)) {
               stackIn_7_0 = var3;
               return stackIn_7_0;
             }
-            var3 = (rj) (var2.a(true));
+            var3 = (UiWidget) (var2.a(true));
             if (var4 == 0) {
               continue;
             }
             break;
           }
           stackIn_10_0 = null;
-          return (rj) (stackIn_10_0);
+          return (UiWidget) (stackIn_10_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -230,10 +230,10 @@ class g extends rj implements f {
         }
     }
 
-    final boolean a(int param0, int param1, rj param2, int param3, int param4, int param5, int param6) {
+    final boolean a(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
-        rj var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         boolean stackIn_4_0 = false;
         int stackIn_19_0 = 0;
@@ -245,10 +245,10 @@ class g extends rj implements f {
         var10 = stellarshard.field_B;
         try {
           var8 = new IntrusiveDequeCursor(this.field_y);
-          var9 = (rj) (var8.b((byte) 125));
+          var9 = (UiWidget) (var8.b((byte) 125));
           scanLoop1: while (true) {
             if (var9 != null) {
-              stackOut_3_0 = var9.b(48);
+              stackOut_3_0 = var9.isLinked(48);
               stackIn_19_0 = stackOut_3_0 ? 1 : 0;
               stackIn_4_0 = stackOut_3_0;
               if (var10 != 0) {
@@ -259,7 +259,7 @@ class g extends rj implements f {
                   var9.a(param0, param1, param2, param3, 90, param5, param6)) {
                   return true;
                 }
-                var9 = (rj) (var8.a(true));
+                var9 = (UiWidget) (var8.a(true));
                 continue;
               }
             }
@@ -267,7 +267,7 @@ class g extends rj implements f {
             break;
           }
           if (stackIn_19_0 < 30) {
-            g.a((pf) null, 14);
+            WidgetContainer.a((pf) null, 14);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -323,10 +323,10 @@ class g extends rj implements f {
         }
     }
 
-    boolean a(int param0, int param1, char param2, rj param3) {
+    boolean a(int param0, int param1, char param2, UiWidget param3) {
         IntrusiveDequeCursor var5 = null;
         RuntimeException var5_ref = null;
-        rj var6_ref_rj = null;
+        UiWidget var6_ref_rj = null;
         int var6 = 0;
         int var7 = 0;
         boolean stackIn_7_0 = false;
@@ -343,10 +343,10 @@ class g extends rj implements f {
           if (param0 != 29657) {
             this.a(true);
           }
-          var6_ref_rj = (rj) (var5.b((byte) 119));
+          var6_ref_rj = (UiWidget) (var5.b((byte) 119));
           scanLoop1: while (true) {
             if (var6_ref_rj != null) {
-              stackOut_6_0 = var6_ref_rj.b(48);
+              stackOut_6_0 = var6_ref_rj.isLinked(48);
               stackIn_22_0 = stackOut_6_0 ? 1 : 0;
               stackIn_7_0 = stackOut_6_0;
               if (var7 != 0) {
@@ -357,7 +357,7 @@ class g extends rj implements f {
                   var6_ref_rj.a(29657, param1, param2, param3)) {
                   return true;
                 }
-                var6_ref_rj = (rj) (var5.a(true));
+                var6_ref_rj = (UiWidget) (var5.a(true));
                 continue;
               }
             }
@@ -388,10 +388,10 @@ class g extends rj implements f {
         }
     }
 
-    final boolean a(rj param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
-        rj var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         boolean stackIn_7_0 = false;
         boolean stackIn_17_0 = false;
@@ -406,10 +406,10 @@ class g extends rj implements f {
             return false;
           }
           var8 = new IntrusiveDequeCursor(this.field_y);
-          var9 = (rj) (var8.b((byte) 117));
+          var9 = (UiWidget) (var8.b((byte) 117));
           scanLoop1: while (true) {
             if (var9 != null) {
-              stackOut_6_0 = var9.b(48);
+              stackOut_6_0 = var9.isLinked(48);
               stackIn_17_0 = stackOut_6_0;
               stackIn_7_0 = stackOut_6_0;
               if (var10 != 0) {
@@ -419,7 +419,7 @@ class g extends rj implements f {
                 if (var9.a(param0, param1, param2, param3, this.field_w + param4, (byte) 59, param6 + this.field_k)) {
                   return true;
                 }
-                var9 = (rj) (var8.a(true));
+                var9 = (UiWidget) (var8.a(true));
                 continue;
               }
             }
@@ -444,22 +444,22 @@ class g extends rj implements f {
     private final void g(int param0) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var2 = null;
-        rj var3 = null;
+        UiWidget var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = stellarshard.field_B;
         try {
           var2 = new IntrusiveDequeCursor(this.field_y);
-          var3 = (rj) (var2.b((byte) 115));
+          var3 = (UiWidget) (var2.b((byte) 115));
           while (null != var3) {
             var3.f(0);
-            var3 = (rj) (var2.a(true));
+            var3 = (UiWidget) (var2.a(true));
             if (var4 != 0) {
               return;
             }
           }
           if (param0 > -33) {
-            g.d((byte) 66);
+            WidgetContainer.d((byte) 66);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -469,13 +469,13 @@ class g extends rj implements f {
         }
     }
 
-    final boolean a(rj param0, byte param1) {
+    final boolean a(UiWidget param0, byte param1) {
         IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        rj var5 = null;
+        UiWidget var5 = null;
         IntrusiveDequeCursor var6 = null;
-        rj var7 = null;
+        UiWidget var7 = null;
         int var8 = 0;
         boolean stackIn_9_0 = false;
         boolean stackIn_15_0 = false;
@@ -488,12 +488,12 @@ class g extends rj implements f {
         boolean stackOut_14_0;
         var8 = stellarshard.field_B;
         try {
-          if (this.field_y.a(0)) {
+          if (this.field_y.isEmpty(0)) {
             return false;
           }
           var4 = 73 / ((param1 - 17) / 38);
           var3 = new IntrusiveDequeCursor(this.field_y);
-          var5 = (rj) (var3.b((byte) 125));
+          var5 = (UiWidget) (var3.b((byte) 125));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var5 == null))) {
             stackOut_8_0 = var5.e(0);
@@ -503,7 +503,7 @@ class g extends rj implements f {
               if (stackIn_9_0) {
                 var6 = new IntrusiveDequeCursor(this.field_y);
                 var6.b(4993, var5);
-                var7 = (rj) (var6.a(true));
+                var7 = (UiWidget) (var6.a(true));
                 while (var7 != null) {
                   stackOut_14_0 = var7.a(-2147483648, param0);
                   stackIn_23_0 = stackOut_14_0;
@@ -511,10 +511,10 @@ class g extends rj implements f {
                   if (stackIn_15_0) {
                     return true;
                   }
-                  var7 = (rj) (var6.a(true));
+                  var7 = (UiWidget) (var6.a(true));
                 }
               }
-              var5 = (rj) (var3.a(true));
+              var5 = (UiWidget) (var3.a(true));
               continue;
             }
             break;
@@ -2075,7 +2075,7 @@ class g extends rj implements f {
                 }
                 var2 = ca.a(param1 + 100, "create_optin_news_tooltip");
                 if (var2 != null) {
-                  ci.field_c = se.a(0, var2);
+                  FrameTimer.field_c = se.a(0, var2);
                 }
                 var2 = ca.a(param1 ^ 103, "create_u13_email_tooltip");
                 if (var2 != null) {
@@ -3461,31 +3461,31 @@ class g extends rj implements f {
                 }
                 var2 = ca.a(116, "mustlogin_alternate,1");
                 if (null != var2) {
-                  ci.field_a[1] = se.a(0, var2);
+                  FrameTimer.field_a[1] = se.a(0, var2);
                 }
                 var2 = ca.a(param1 + 113, "mustlogin_alternate,2");
                 if (var2 != null) {
-                  ci.field_a[2] = se.a(param1 - 1, var2);
+                  FrameTimer.field_a[2] = se.a(param1 - 1, var2);
                 }
                 var2 = ca.a(param1 + 112, "mustlogin_alternate,3");
                 if (var2 != null) {
-                  ci.field_a[3] = se.a(0, var2);
+                  FrameTimer.field_a[3] = se.a(0, var2);
                 }
                 var2 = ca.a(118, "mustlogin_alternate,4");
                 if (null != var2) {
-                  ci.field_a[4] = se.a(0, var2);
+                  FrameTimer.field_a[4] = se.a(0, var2);
                 }
                 var2 = ca.a(115, "mustlogin_alternate,5");
                 if (var2 != null) {
-                  ci.field_a[5] = se.a(param1 - 1, var2);
+                  FrameTimer.field_a[5] = se.a(param1 - 1, var2);
                 }
                 var2 = ca.a(98, "mustlogin_alternate,6");
                 if (null != var2) {
-                  ci.field_a[6] = se.a(ih.a(param1, 1), var2);
+                  FrameTimer.field_a[6] = se.a(ih.a(param1, 1), var2);
                 }
                 var2 = ca.a(86, "mustlogin_alternate,7");
                 if (var2 != null) {
-                  ci.field_a[7] = se.a(0, var2);
+                  FrameTimer.field_a[7] = se.a(0, var2);
                 }
                 var2 = ca.a(param1 + 120, "subscription_cost_monthly,0");
                 if (null != var2) {
@@ -3589,7 +3589,7 @@ class g extends rj implements f {
         StringBuilder discarded$3 = null;
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var5 = null;
-        rj var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         int var8 = 0;
         int stackIn_13_0 = 0;
@@ -3602,7 +3602,7 @@ class g extends rj implements f {
         var8 = stellarshard.field_B;
         try {
           var5 = new IntrusiveDequeCursor(this.field_y);
-          var6 = (rj) (var5.b((byte) 115));
+          var6 = (UiWidget) (var5.b((byte) 115));
           scanLoop1: while (true) {
             if (null != var6) {
               discarded$2 = param2.append('\n');
@@ -3616,14 +3616,14 @@ class g extends rj implements f {
                 var7++;
               }
               var6.a(param0 + 1, false, param2, param3);
-              var6 = (rj) (var5.a(true));
+              var6 = (UiWidget) (var5.a(true));
               continue scanLoop1;
             }
             stackIn_13_0 = param1;
             break;
           }
           if (stackIn_13_0 <= 111) {
-            this.a(62, 110, (rj) null, -48, -92, -28);
+            this.a(62, 110, (UiWidget) null, -48, -92, -28);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3649,19 +3649,19 @@ class g extends rj implements f {
     final void c(boolean param0) {
         RuntimeException runtimeException = null;
         IntrusiveDequeCursor var2 = null;
-        rj var3 = null;
+        UiWidget var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = stellarshard.field_B;
         try {
           var2 = new IntrusiveDequeCursor(this.field_y);
           if (!param0) {
-            this.a(-114, -125, (rj) null, -28, 57, -83, 71);
+            this.a(-114, -125, (UiWidget) null, -28, 57, -83, 71);
           }
-          var3 = (rj) (var2.b((byte) 120));
+          var3 = (UiWidget) (var2.b((byte) 120));
           while (var3 != null) {
             var3.c(true);
-            var3 = (rj) (var2.a(true));
+            var3 = (UiWidget) (var2.a(true));
             if (var4 != 0) {
               return;
             }
@@ -3677,7 +3677,7 @@ class g extends rj implements f {
     final String d(int param0) {
         IntrusiveDequeCursor var2 = null;
         RuntimeException var2_ref = null;
-        rj var3 = null;
+        UiWidget var3 = null;
         String var4 = null;
         int var5 = 0;
         String stackIn_11_0 = null;
@@ -3689,7 +3689,7 @@ class g extends rj implements f {
             field_z = (li) null;
           }
           var2 = new IntrusiveDequeCursor(this.field_y);
-          var3 = (rj) (var2.b((byte) 122));
+          var3 = (UiWidget) (var2.b((byte) 122));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var3 == null))) {
             var4 = var3.d(param0 ^ 0);
@@ -3699,7 +3699,7 @@ class g extends rj implements f {
                 stackIn_11_0 = var4;
                 return stackIn_11_0;
               }
-              var3 = (rj) (var2.a(true));
+              var3 = (UiWidget) (var2.a(true));
               continue;
             }
             break;
@@ -3715,14 +3715,14 @@ class g extends rj implements f {
         }
     }
 
-    final void b(int param0, rj param1) {
+    final void b(int param0, UiWidget param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_y.b(-48, param1);
+          this.field_y.addLast(-48, param1);
           if (param0 != 4) {
             this.field_y = (IntrusiveDeque) null;
           }
@@ -3741,11 +3741,11 @@ class g extends rj implements f {
         }
     }
 
-    final boolean a(rj param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         IntrusiveDequeCursor var3 = null;
-        rj var4 = null;
+        UiWidget var4 = null;
         IntrusiveDequeCursor var5 = null;
-        rj var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         boolean stackIn_10_0 = false;
         boolean stackIn_19_0 = false;
@@ -3762,11 +3762,11 @@ class g extends rj implements f {
           if (param1 != -8666) {
             this.a((byte) -111);
           }
-          if (this.field_y.a(0)) {
+          if (this.field_y.isEmpty(0)) {
             return false;
           }
           var3 = new IntrusiveDequeCursor(this.field_y);
-          var4 = (rj) (var3.a((byte) -120));
+          var4 = (UiWidget) (var3.a((byte) -120));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 == null))) {
             stackOut_9_0 = var4.e(0);
@@ -3776,7 +3776,7 @@ class g extends rj implements f {
               if (stackIn_10_0) {
                 var5 = new IntrusiveDequeCursor(this.field_y);
                 var5.a(-25888, var4);
-                var6 = (rj) (var5.a(69));
+                var6 = (UiWidget) (var5.a(69));
                 while (var6 != null) {
                   stackOut_18_0 = var6.a(-2147483648, param0);
                   stackIn_28_0 = stackOut_18_0;
@@ -3784,10 +3784,10 @@ class g extends rj implements f {
                   if (stackIn_19_0) {
                     return true;
                   }
-                  var6 = (rj) (var5.a(106));
+                  var6 = (UiWidget) (var5.a(106));
                 }
               }
-              var4 = (rj) (var3.a(103));
+              var4 = (UiWidget) (var3.a(103));
               continue;
             }
             break;
@@ -3831,7 +3831,7 @@ class g extends rj implements f {
         int var2_int = 0;
         RuntimeException var2 = null;
         IntrusiveDequeCursor var3 = null;
-        rj var4 = null;
+        UiWidget var4 = null;
         int var5 = 0;
         int var6 = 0;
         int stackIn_3_0 = 0;
@@ -3847,7 +3847,7 @@ class g extends rj implements f {
           }
           var2_int = 0;
           var3 = new IntrusiveDequeCursor(this.field_y);
-          var4 = (rj) (var3.b((byte) 116));
+          var4 = (UiWidget) (var3.b((byte) 116));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 == null))) {
             var5 = var4.a(false);
@@ -3858,7 +3858,7 @@ class g extends rj implements f {
               }
               stackIn_14_0 = var3;
               stackIn_15_1 = !(param0);
-              var4 = (rj) (((IntrusiveDequeCursor) (Object) stackIn_14_0).a(stackIn_15_1));
+              var4 = (UiWidget) (((IntrusiveDequeCursor) (Object) stackIn_14_0).a(stackIn_15_1));
               continue;
             }
             break;

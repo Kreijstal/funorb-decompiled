@@ -7,12 +7,12 @@ class ck extends wl implements oi {
     static int field_hb;
     private boolean field_fb;
     private nc field_cb;
-    private bd field_jb;
+    private BitmapFont field_jb;
     static byte[][] field_ib;
     private boolean field_kb;
     private boolean field_gb;
 
-    ck(ei param0, bd param1, String param2, boolean param3, boolean param4) {
+    ck(ei param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new vf((ck) null, param1, param2), 77, 10, 10);
         try {
           this.field_jb = param1;
@@ -105,7 +105,7 @@ class ck extends wl implements oi {
         }
     }
 
-    final boolean a(int param0, int param1, char param2, rj param3) {
+    final boolean a(int param0, int param1, char param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;

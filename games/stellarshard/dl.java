@@ -38,7 +38,7 @@ final class dl extends dg {
         field_K = null;
     }
 
-    final void a(int param0, int param1, rj param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           super.a(param0, -118, param2, param3, param4, param5);
           int var7_int = -65 / ((-50 - param1) / 57);
@@ -96,7 +96,7 @@ final class dl extends dg {
         StringBuilder discarded$64 = null;
         StringBuilder discarded$65 = null;
         RuntimeException var5 = null;
-        rj var6 = null;
+        UiWidget var6 = null;
         StringBuilder stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -115,8 +115,8 @@ final class dl extends dg {
             }
           }
           if (param1) {
-            var6 = (rj) null;
-            this.a(108, true, -82, (rj) null);
+            var6 = (UiWidget) null;
+            this.a(108, true, -82, (UiWidget) null);
           }
           stackIn_8_0 = (StringBuilder) (param2);
           return stackIn_8_0;
@@ -147,7 +147,7 @@ final class dl extends dg {
         this.field_F = this.field_w;
     }
 
-    private dl(int param0, int param1, int param2, int param3, uk param4, lf param5, rj param6, boolean param7, boolean param8) {
+    private dl(int param0, int param1, int param2, int param3, uk param4, lf param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_E = 2147483647;
         this.field_F = 2147483647;
@@ -224,7 +224,7 @@ final class dl extends dg {
         }
     }
 
-    final boolean a(rj param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_12_0 = 0;
@@ -267,7 +267,7 @@ final class dl extends dg {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, rj param3) {
+    final void a(int param0, boolean param1, int param2, UiWidget param3) {
         int stackIn_15_1 = 0;
         int stackIn_18_2 = 0;
         int stackIn_25_1 = 0;

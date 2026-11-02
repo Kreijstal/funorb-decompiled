@@ -108,9 +108,9 @@ final class eh {
         var26 = stellarshard.field_B;
         try {
           var28 = ae.field_N;
-          var2 = var28.f(4);
+          var2 = var28.readUnsignedByte(4);
           if (param0 == ~var2) {
-            var3 = var28.c((byte) 26);
+            var3 = var28.readUnsignedShort((byte) 26);
             var4 = (hk) (id.field_g.b(-114));
             while (var4 != null) {
               if (var4.field_t != var3) {
@@ -123,7 +123,7 @@ final class eh {
               IntrusiveDeque.c(-2290);
               return;
             }
-            var5 = var28.f(4);
+            var5 = var28.readUnsignedByte(4);
             if (var5 != 0) {
               var6 = var4.field_q;
               DelegatingCanvas.field_e[0].field_e = wf.field_b;
@@ -133,7 +133,7 @@ final class eh {
               for (var8_int = 1; var5 > var8_int; var8_int++) {
                 DelegatingCanvas.field_e[var8_int].field_e = var28.e((byte) 115);
                 DelegatingCanvas.field_e[var8_int].field_a = false;
-                if (1 != var28.f(4)) {
+                if (1 != var28.readUnsignedByte(4)) {
                   DelegatingCanvas.field_e[var8_int].field_d = null;
                 } else {
                   DelegatingCanvas.field_e[var8_int].field_d = var28.e((byte) 117);
@@ -155,13 +155,13 @@ final class eh {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var28.f(4);
+              var18 = var28.readUnsignedByte(4);
               if (0 < var18) {
                 for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var28.f(4);
+                  var20 = var28.readUnsignedByte(4);
                   var21 = DelegatingCanvas.field_e[var20].field_e;
-                  var22 = var28.d(~param0);
-                  var24 = var28.field_k;
+                  var22 = var28.readLong(~param0);
+                  var24 = var28.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
                     var9[0][var12] = DelegatingCanvas.field_e[var20].field_d;
@@ -169,7 +169,7 @@ final class eh {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var28.b(false);
+                      var11[0][incrementValue$3] = var28.readInt(false);
                     }
                     var12++;
                   }
@@ -179,11 +179,11 @@ final class eh {
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;
-                    var28.field_k = var24;
+                    var28.position = var24;
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var28.b(false);
+                      var11[1][incrementValue$4] = var28.readInt(false);
                     }
                   }
                   if (var14 < var6 &&
@@ -193,23 +193,23 @@ final class eh {
                     var9[2][var14] = DelegatingCanvas.field_e[var20].field_d;
                     var10[2][var14] = var22;
                     var14++;
-                    var28.field_k = var24;
+                    var28.position = var24;
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var28.b(false);
+                      var11[2][incrementValue$5] = var28.readInt(false);
                     }
                   }
                 }
               }
             }
             var4.field_s = true;
-            var4.c(20);
+            var4.unlink(20);
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var28.c((byte) 83);
-            var4_long = var28.d(0);
+            var3Lifetime1 = var28.readUnsignedShort((byte) 83);
+            var4_long = var28.readLong(0);
             var6_ref_nf = (nf) (wb.field_f.b(-89));
             while (var6_ref_nf != null) {
               if (var6_ref_nf.field_u != var3Lifetime1) {
@@ -223,10 +223,10 @@ final class eh {
               return;
             }
             var6_ref_nf.field_k = var4_long;
-            var6_ref_nf.c(20);
+            var6_ref_nf.unlink(20);
             return;
           }
-          qe.a(-121, "HS1: " + bh.b((byte) -106), (Throwable) null);
+          GameEntity.a(-121, "HS1: " + bh.b((byte) -106), (Throwable) null);
           IntrusiveDeque.c(param0 ^ 2289);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

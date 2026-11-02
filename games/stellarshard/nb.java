@@ -17,7 +17,7 @@ final class nb extends ig {
         try {
           if (qf.field_d == null) {
             qf.field_d = new ql(na.field_d, ii.field_F);
-            na.field_d.a((byte) -104, (rj) (qf.field_d));
+            na.field_d.a((byte) -104, (UiWidget) (qf.field_d));
           }
           if (param3 > -117) {
             String var5 = (String) null;
@@ -36,7 +36,7 @@ final class nb extends ig {
         return this.field_J;
     }
 
-    final boolean a(rj param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, byte param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -114,8 +114,8 @@ final class nb extends ig {
 
     final int d(boolean param0) {
         if (!param0) {
-          rj var3 = (rj) null;
-          this.a((rj) null, -89, -58, -17, 18, (byte) 87, -5);
+          UiWidget var3 = (UiWidget) null;
+          this.a((UiWidget) null, -89, -58, -17, 18, (byte) 87, -5);
         }
         return this.field_L.a(19692);
     }
