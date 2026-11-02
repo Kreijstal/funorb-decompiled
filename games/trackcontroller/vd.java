@@ -425,14 +425,14 @@ final class vd extends td implements jg, ButtonListener, a {
             this.field_O = (ed) null;
           }
           if (param1 == 0) {
-            ue.a("terms.ws", false);
+            IntrusiveDequeCursor.a("terms.ws", false);
           } else {
             if (param1 != 1) {
               if (2 == param1) {
-                ue.a("conduct.ws", false);
+                IntrusiveDequeCursor.a("conduct.ws", false);
               }
             } else {
-              ue.a("privacy.ws", false);
+              IntrusiveDequeCursor.a("privacy.ws", false);
             }
           }
           return;

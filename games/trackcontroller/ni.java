@@ -4,7 +4,7 @@
 final class ni extends di {
     private lb field_o;
     static k field_n;
-    static boolean[] field_m;
+    static boolean[] keyDown;
 
     final ud a(int param0, String param1) {
         eh var3 = null;
@@ -104,9 +104,9 @@ final class ni extends di {
     }
 
     public static void g(int param0) {
-        field_m = null;
+        keyDown = null;
         if (param0 != 112) {
-          field_m = (boolean[]) null;
+          keyDown = (boolean[]) null;
           field_n = null;
           return;
         }
@@ -119,7 +119,7 @@ final class ni extends di {
           Throwable var2 = null;
           try {
             if (param0 > -115) {
-              field_m = (boolean[]) null;
+              keyDown = (boolean[]) null;
             }
             sj.a(CachedArchiveSource.b((byte) 77), new Object[]{new Integer(param1)}, 7648, "resizing");
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -134,6 +134,6 @@ final class ni extends di {
     }
 
     static {
-        field_m = new boolean[112];
+        keyDown = new boolean[112];
     }
 }

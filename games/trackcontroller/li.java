@@ -9,14 +9,14 @@ final class li extends IntrusiveNode {
     static boolean field_i;
 
     final static String d(int param0) {
-        if (ue.field_a == null) {
+        if (IntrusiveDequeCursor.field_a == null) {
           return "";
         }
         if (param0 != -579139480) {
           field_l = (String) null;
-          return ue.field_a;
+          return IntrusiveDequeCursor.field_a;
         }
-        return ue.field_a;
+        return IntrusiveDequeCursor.field_a;
     }
 
     public static void a(byte param0) {

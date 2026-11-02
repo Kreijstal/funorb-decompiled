@@ -27,14 +27,14 @@ final class ge extends td implements jg, ButtonListener {
         var6 = TrackController.field_F ? 1 : 0;
         try {
           if (param1 == 0) {
-            ue.a("terms.ws", false);
+            IntrusiveDequeCursor.a("terms.ws", false);
           } else {
             if (1 != param1) {
               if (param1 == 2) {
-                ue.a("conduct.ws", false);
+                IntrusiveDequeCursor.a("conduct.ws", false);
               }
             } else {
-              ue.a("privacy.ws", false);
+              IntrusiveDequeCursor.a("privacy.ws", false);
             }
           }
           if (param3 != 1) {

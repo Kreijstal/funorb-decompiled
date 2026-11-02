@@ -261,8 +261,8 @@ final class bk extends td implements a, ButtonListener {
     }
 
     final static void j(int param0) {
-        ue.field_a = ne.field_a.readString(param0 + param0);
-        CharSequence var2 = (CharSequence) ((Object) ue.field_a);
+        IntrusiveDequeCursor.field_a = ne.field_a.readString(param0 + param0);
+        CharSequence var2 = (CharSequence) ((Object) IntrusiveDequeCursor.field_a);
         dd.field_p = r.a(var2, param0 - 11133);
     }
 

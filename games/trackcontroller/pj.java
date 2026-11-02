@@ -60,7 +60,7 @@ final class pj extends db {
         try {
           var9 = od.field_a.a(98, var5);
           li.field_l = var9.a((byte) 2);
-          if (o.field_b.equals(ue.field_a)) {
+          if (o.field_b.equals(IntrusiveDequeCursor.field_a)) {
             stackIn_24_0 = null;
           } else {
             stackIn_24_0 = var9.field_r;

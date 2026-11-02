@@ -56,10 +56,10 @@ class td extends UiWidget implements je {
         RuntimeException var3 = null;
         int var4 = 0;
         UiWidget var5 = null;
-        ue var6 = null;
+        IntrusiveDequeCursor var6 = null;
         UiWidget var7 = null;
         int var8 = 0;
-        ue var9 = null;
+        IntrusiveDequeCursor var9 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -69,12 +69,12 @@ class td extends UiWidget implements je {
           if (this.field_B.isEmpty(false)) {
             return false;
           }
-          var9 = new ue(this.field_B);
+          var9 = new IntrusiveDequeCursor(this.field_B);
           var4 = 61 % ((53 - param1) / 47);
           var5 = (UiWidget) (var9.a(53));
           while (var5 != null) {
             if (var5.h(-118)) {
-              var6 = new ue(this.field_B);
+              var6 = new IntrusiveDequeCursor(this.field_B);
               var6.a(true, var5);
               var7 = (UiWidget) (var6.c(-114));
               while (var7 != null) {
@@ -104,10 +104,10 @@ class td extends UiWidget implements je {
     final boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
-        ue var5 = null;
+        IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
         int var7 = 0;
-        ue var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -117,11 +117,11 @@ class td extends UiWidget implements je {
           if (this.field_B.isEmpty(false)) {
             return false;
           }
-          var8 = new ue(this.field_B);
+          var8 = new IntrusiveDequeCursor(this.field_B);
           var4 = (UiWidget) (var8.d(-47));
           while (var4 != null) {
             if (var4.h(-92)) {
-              var5 = new ue(this.field_B);
+              var5 = new IntrusiveDequeCursor(this.field_B);
               var5.a((byte) -37, var4);
               var6 = (UiWidget) (var5.e(37));
               while (var6 != null) {
@@ -158,7 +158,7 @@ class td extends UiWidget implements je {
         if (param0 != 0) {
           this.a(67, 29, 21, 61, -112);
         }
-        ue var2 = new ue(this.field_B);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_B);
         UiWidget var3 = (UiWidget) (var2.d(120));
         while (var3 != null) {
           var3.g(119);
@@ -172,7 +172,7 @@ class td extends UiWidget implements je {
     }
 
     final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
-        ue var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
         int var10 = 0;
@@ -182,7 +182,7 @@ class td extends UiWidget implements je {
         RuntimeException decompiledCaughtException = null;
         var10 = TrackController.field_F ? 1 : 0;
         try {
-          var8 = new ue(this.field_B);
+          var8 = new IntrusiveDequeCursor(this.field_B);
           var9 = (UiWidget) (var8.d(81));
           if (param6 != 127) {
             return false;
@@ -214,7 +214,7 @@ class td extends UiWidget implements je {
     }
 
     final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        ue var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         UiWidget var9 = null;
         int var10 = 0;
@@ -224,7 +224,7 @@ class td extends UiWidget implements je {
         RuntimeException decompiledCaughtException = null;
         var10 = TrackController.field_F ? 1 : 0;
         try {
-          var8 = new ue(this.field_B);
+          var8 = new IntrusiveDequeCursor(this.field_B);
           if (param4 != 0) {
             this.field_B = (IntrusiveDeque) null;
           }
@@ -256,13 +256,13 @@ class td extends UiWidget implements je {
 
     final int c(byte param0) {
         int var2;
-        ue var3;
+        IntrusiveDequeCursor var3;
         UiWidget var4;
         int var5;
         int var6;
         var6 = TrackController.field_F ? 1 : 0;
         var2 = 0;
-        var3 = new ue(this.field_B);
+        var3 = new IntrusiveDequeCursor(this.field_B);
         var4 = (UiWidget) (var3.d(0));
         while (var4 != null) {
           var5 = var4.c((byte) -14);
@@ -279,7 +279,7 @@ class td extends UiWidget implements je {
 
     UiWidget d(byte param0) {
         int var4 = TrackController.field_F ? 1 : 0;
-        ue var2 = new ue(this.field_B);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_B);
         UiWidget var3 = (UiWidget) (var2.d(124));
         while (var3 != null) {
           if (var3.h(-94)) {
@@ -306,7 +306,7 @@ class td extends UiWidget implements je {
     }
 
     final String e(int param0) {
-        ue var2;
+        IntrusiveDequeCursor var2;
         UiWidget var3;
         String var4;
         int var5;
@@ -316,7 +316,7 @@ class td extends UiWidget implements je {
           var6 = (UiWidget) null;
           this.a((UiWidget) null, -92, 62, 7, -56, 58, -36);
         }
-        var2 = new ue(this.field_B);
+        var2 = new IntrusiveDequeCursor(this.field_B);
         var3 = (UiWidget) (var2.d(86));
         while (var3 != null) {
           var4 = var3.e(0);
@@ -329,7 +329,7 @@ class td extends UiWidget implements je {
     }
 
     final void a(UiWidget param0, boolean param1, int param2, int param3, int param4, int param5) {
-        ue var7 = null;
+        IntrusiveDequeCursor var7 = null;
         UiWidget var8 = null;
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -339,7 +339,7 @@ class td extends UiWidget implements je {
         RuntimeException var7_ref = null;
         var9 = TrackController.field_F ? 1 : 0;
         try {
-          var7 = new ue(this.field_B);
+          var7 = new IntrusiveDequeCursor(this.field_B);
           var8 = (UiWidget) (var7.d(127));
           while (var8 != null) {
             if (var8.isLinked(10000536)) {
@@ -369,7 +369,7 @@ class td extends UiWidget implements je {
 
     final void f(int param0) {
         int var4 = TrackController.field_F ? 1 : 0;
-        ue var2 = new ue(this.field_B);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_B);
         UiWidget var3 = (UiWidget) (var2.d(-58));
         while (var3 != null) {
           var3.f(-24174);
@@ -386,7 +386,7 @@ class td extends UiWidget implements je {
         int var7 = 0;
         int var8 = 0;
         UiWidget var9 = null;
-        ue var10 = null;
+        IntrusiveDequeCursor var10 = null;
         boolean stackIn_14_0 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -395,7 +395,7 @@ class td extends UiWidget implements je {
         var8 = TrackController.field_F ? 1 : 0;
         try {
           var6 = -126 % ((17 - param0) / 51);
-          var10 = new ue(this.field_B);
+          var10 = new IntrusiveDequeCursor(this.field_B);
           var9 = (UiWidget) (var10.d(125));
           while (var9 != null) {
             if (var9.isLinked(10000536)) {
@@ -412,7 +412,7 @@ class td extends UiWidget implements je {
           if (var7 != 80) {
             return false;
           }
-          if (!ni.field_m[81]) {
+          if (!ni.keyDown[81]) {
             stackIn_14_0 = this.a(param2, true);
           } else {
             stackIn_14_0 = this.a(param2, -27);
@@ -436,7 +436,7 @@ class td extends UiWidget implements je {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
-        ue var5 = null;
+        IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -451,7 +451,7 @@ class td extends UiWidget implements je {
           if (param0 != -62) {
             this.field_B = (IntrusiveDeque) null;
           }
-          var5 = new ue(this.field_B);
+          var5 = new IntrusiveDequeCursor(this.field_B);
           var6 = (UiWidget) (var5.d(-99));
           while (var6 != null) {
             discarded$3 = param3.append('\n');
@@ -488,7 +488,7 @@ class td extends UiWidget implements je {
           null != this.field_y) {
           this.field_y.a(-24969, (UiWidget) (this), param2, true, param1);
         }
-        ue var5 = new ue(this.field_B);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_B);
         UiWidget var6 = (UiWidget) (var5.a(79));
         while (var6 != null) {
           var6.a(param0, this.field_p + param1, this.field_m + param2, 29221);
@@ -500,7 +500,7 @@ class td extends UiWidget implements je {
     }
 
     final boolean a(byte param0, UiWidget param1) {
-        ue var3 = null;
+        IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         UiWidget var4 = null;
         int var5 = 0;
@@ -511,7 +511,7 @@ class td extends UiWidget implements je {
         RuntimeException decompiledCaughtException = null;
         var5 = TrackController.field_F ? 1 : 0;
         try {
-          var3 = new ue(this.field_B);
+          var3 = new IntrusiveDequeCursor(this.field_B);
           var4 = (UiWidget) (var3.d(-122));
           if (param0 >= -104) {
             var6 = (UiWidget) null;
@@ -551,7 +551,7 @@ class td extends UiWidget implements je {
 
     void a(int param0, int param1, byte param2, UiWidget param3) {
         RuntimeException runtimeException = null;
-        ue var5 = null;
+        IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -561,7 +561,7 @@ class td extends UiWidget implements je {
         var7 = TrackController.field_F ? 1 : 0;
         try {
           super.a(param0, param1, param2, param3);
-          var5 = new ue(this.field_B);
+          var5 = new IntrusiveDequeCursor(this.field_B);
           var6 = (UiWidget) (var5.d(-66));
           while (var6 != null) {
             if (var6.isLinked(10000536)) {

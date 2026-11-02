@@ -81,17 +81,17 @@ class lb extends ButtonWidget {
                       this.c(false);
                       return true;
                     }
-                    if (ni.field_m[82] &&
+                    if (ni.keyDown[82] &&
                       param3 == 65) {
                       this.d((byte) 13);
                       return true;
                     }
-                    if (ni.field_m[82] &&
+                    if (ni.keyDown[82] &&
                       66 == param3) {
                       this.m(118);
                       return true;
                     }
-                    if (ni.field_m[82]) {
+                    if (ni.keyDown[82]) {
                       if (param3 != 67) {
                         return false;
                       }
@@ -101,7 +101,7 @@ class lb extends ButtonWidget {
                   } else {
                     if (this.field_Q < this.field_s.length()) {
                       stackIn_28_1 = -19166;
-                      if (!ni.field_m[82]) {
+                      if (!ni.keyDown[82]) {
                         stackIn_29_2 = 1 + this.field_Q;
                       } else {
                         stackIn_29_2 = this.r(0);
@@ -113,7 +113,7 @@ class lb extends ButtonWidget {
                 } else {
                   if (this.field_Q > 0) {
                     stackIn_21_1 = -19166;
-                    if (ni.field_m[82]) {
+                    if (ni.keyDown[82]) {
                       stackIn_22_2 = this.k(-1);
                     } else {
                       stackIn_22_2 = -1 + this.field_Q;
@@ -311,7 +311,7 @@ class lb extends ButtonWidget {
           return;
         }
         this.field_Q = param1;
-        if (!ni.field_m[81]) {
+        if (!ni.keyDown[81]) {
           this.field_N = this.field_Q;
         }
     }

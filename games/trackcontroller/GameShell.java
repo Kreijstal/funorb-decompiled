@@ -558,7 +558,7 @@ abstract class GameShell extends GameApplet {
           }
           AsyncRequest.field_u.b(true);
         }
-        ob.h(16473);
+        ob.publishKeyState(16473);
         of.publishInputState((byte) 66);
         if (!IterableNodeHashTable.a(-107) &&
           rl.field_N != 11) {

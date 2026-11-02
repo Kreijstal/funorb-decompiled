@@ -40,7 +40,7 @@ final class oe {
             return stackIn_5_0;
           }
           for (var4 = 0; var4 < param0.length(); var4++) {
-            if (!ue.a(-16490, param0.charAt(var4))) {
+            if (!IntrusiveDequeCursor.a(-16490, param0.charAt(var4))) {
               stackIn_12_0 = gj.field_d;
               return stackIn_12_0;
             }

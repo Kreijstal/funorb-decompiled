@@ -9,7 +9,7 @@ abstract class vh extends DualLinkNode {
     final static void h(int param0) {
         bk.field_J = null;
         jf.field_i = null;
-        ue.field_c = null;
+        IntrusiveDequeCursor.field_c = null;
         mh.field_i = false;
         el.field_O = null;
         if (param0 != -2532) {

@@ -544,7 +544,7 @@ final class ActiveLevel extends LevelGrid {
         int var9Lifetime1;
         var13 = TrackController.field_F ? 1 : 0;
         if (LevelGrid.field_j >= 2 &&
-          ni.field_m[12]) {
+          ni.keyDown[12]) {
           return true;
         }
         if (param0 < 79) {
@@ -787,17 +787,17 @@ final class ActiveLevel extends LevelGrid {
           this.field_K = false;
           this.field_r = -1;
           this.field_U = -1;
-          stackIn_50_0 = (!ni.field_m[98]) ? 0 : -1;
-          stackIn_53_1 = (ni.field_m[99]) ? 1 : 0;
+          stackIn_50_0 = (!ni.keyDown[98]) ? 0 : -1;
+          stackIn_53_1 = (ni.keyDown[99]) ? 1 : 0;
           var7_intLifetime1 = stackIn_50_0 + stackIn_53_1;
-          if (ni.field_m[98] ||
-            ni.field_m[99] ||
-            ni.field_m[96] ||
-            ni.field_m[97]) {
+          if (ni.keyDown[98] ||
+            ni.keyDown[99] ||
+            ni.keyDown[96] ||
+            ni.keyDown[97]) {
             this.field_A.field_a = false;
           }
-          stackIn_62_0 = (ni.field_m[96]) ? -1 : 0;
-          stackIn_65_1 = (ni.field_m[97]) ? 1 : 0;
+          stackIn_62_0 = (ni.keyDown[96]) ? -1 : 0;
+          stackIn_65_1 = (ni.keyDown[97]) ? 1 : 0;
           var8 = stackIn_62_0 + stackIn_65_1;
           if (SecondaryNodeDeque.mouseButton != 0) {
             var9 = (kf.mouseX - 16) / 26;
@@ -1480,7 +1480,7 @@ final class ActiveLevel extends LevelGrid {
           } else {
             ii.tileSprites[-65 & var2.tileValue].e(var3Lifetime1, var4);
             if ((var2.tileValue & 64) != 0) {
-              ue.a(var3Lifetime1, var2.tileValue, (byte) 91, var4);
+              IntrusiveDequeCursor.a(var3Lifetime1, var2.tileValue, (byte) 91, var4);
             }
           }
           var2 = (MovingBlock) (this.movingBlocks.next(10));

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GameScreen {
-    static int field_f;
+    static int keyQueueWrite;
     static vl field_b;
     private int field_c;
     cd field_e;
@@ -132,7 +132,7 @@ final class GameScreen {
 
     private final int b(byte param0) {
         if (param0 != 125) {
-          field_f = 111;
+          keyQueueWrite = 111;
         }
         int var2 = 0;
         if (8 > qh.field_b.levelIndex) {
@@ -340,7 +340,7 @@ final class GameScreen {
                     var2 = "";
                     var8 = var17[var7];
                     if (var4 < 0 &&
-                      var3_ref_String__[var7] == ue.field_a &&
+                      var3_ref_String__[var7] == IntrusiveDequeCursor.field_a &&
                       null != rk.field_bb &&
                       ~rk.field_bb.field_j == ~SpriteState.field_w.field_q[di.field_i][var7] &&
                       ua.field_L != null &&
@@ -355,7 +355,7 @@ final class GameScreen {
                     (decompiledFrameRemainder0 = (null != ua.field_L))) {
                     var8 = ua.field_L.score;
                     var4 = var7;
-                    var9 = ue.field_a;
+                    var9 = IntrusiveDequeCursor.field_a;
                   }
                 }
                 if (decompiledFrameRemainder0) {
@@ -704,9 +704,9 @@ final class GameScreen {
               this.field_e.f(0);
             } else {
               if (kg.field_d != 97 && (kg.field_d != 80 ||
-                ni.field_m[81])) {
+                ni.keyDown[81])) {
                 if (kg.field_d != 96 && (kg.field_d != 80 ||
-                  !ni.field_m[81])) {
+                  !ni.keyDown[81])) {
                   if (this.field_e.field_e >= 0) {
                     this.field_e.b((byte) -113);
                   } else {
@@ -1313,7 +1313,7 @@ final class GameScreen {
           if (this.field_e.b(false)) {
             si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
             if (2 <= LevelGrid.field_j &&
-              ni.field_m[48]) {
+              ni.keyDown[48]) {
               ArchiveIndex.field_i = 31;
             }
             if (this.field_c != 0) {
@@ -1669,7 +1669,7 @@ final class GameScreen {
     }
 
     static {
-        field_f = 0;
+        keyQueueWrite = 0;
         mouseMoved = false;
     }
 }

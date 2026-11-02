@@ -35,7 +35,7 @@ final class fi extends IntrusiveNode {
           if (param0 <= 114) {
             field_o = true;
           }
-          stackIn_3_0 = ue.a(0, param1, (byte) 57, param1.length);
+          stackIn_3_0 = IntrusiveDequeCursor.a(0, param1, (byte) 57, param1.length);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

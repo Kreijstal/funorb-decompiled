@@ -174,8 +174,8 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                   qa.field_a[var8] = ne.field_a.readByte(-127);
                 }
               }
-              ue.field_a = ne.field_a.readString(0);
-              var11 = (CharSequence) ((Object) ue.field_a);
+              IntrusiveDequeCursor.field_a = ne.field_a.readString(0);
+              var11 = (CharSequence) ((Object) IntrusiveDequeCursor.field_a);
               dd.field_p = r.a(var11, -11133);
               si.field_d = ne.field_a.readUnsignedByte(16383);
               jc.field_a = ka.field_b;
@@ -200,7 +200,7 @@ final class SocketArchiveRequestConnection extends ArchiveRequestConnection {
                 }
               } else {
                 try {
-                  sj.a(CachedArchiveSource.b((byte) 77), new Object[]{ue.a(ClientException.field_e, (byte) 114)}, 7648, "zap");
+                  sj.a(CachedArchiveSource.b((byte) 77), new Object[]{IntrusiveDequeCursor.a(ClientException.field_e, (byte) 114)}, 7648, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

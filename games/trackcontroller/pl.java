@@ -29,7 +29,7 @@ final class pl {
               field_c = (int[]) null;
               return true;
             }
-            if (ue.a(-16490, param1.charAt(var3_int))) {
+            if (IntrusiveDequeCursor.a(-16490, param1.charAt(var3_int))) {
               var3_int++;
               continue;
             }
@@ -123,7 +123,7 @@ final class pl {
               var6 = var4.field_l;
               var7 = var4.field_k;
               MouseInputHandler.field_c[0].field_f = null;
-              MouseInputHandler.field_c[0].field_h = ue.field_a;
+              MouseInputHandler.field_c[0].field_h = IntrusiveDequeCursor.field_a;
               MouseInputHandler.field_c[0].field_i = false;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
                 MouseInputHandler.field_c[var8_int].field_h = var27.readString(0);
@@ -170,7 +170,7 @@ final class pl {
                   }
                   if (var21 != null &&
                     rb.a(false, var21)) {
-                    var8[1][var13] = ue.field_a;
+                    var8[1][var13] = IntrusiveDequeCursor.field_a;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;

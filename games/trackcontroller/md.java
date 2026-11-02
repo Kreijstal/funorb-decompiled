@@ -4,7 +4,7 @@
 final class md {
     static String field_f;
     static char field_d;
-    static int[] field_b;
+    static int[] keyQueue;
     static String field_c;
     static double field_a;
     static ba field_e;
@@ -107,7 +107,7 @@ final class md {
     public static void a(boolean param0) {
         field_f = null;
         field_e = null;
-        field_b = null;
+        keyQueue = null;
         field_c = null;
         if (param0) {
           kd var2 = (kd) null;
@@ -116,7 +116,7 @@ final class md {
     }
 
     static {
-        field_b = new int[128];
+        keyQueue = new int[128];
         field_c = "To Customer Support";
         field_f = "Create a free Account";
         field_a = Math.atan2(1.0, 0.0);

@@ -73,10 +73,10 @@ final class ClientException extends RuntimeException {
                 stackIn_19_0 = jf.field_i.length;
               }
               var7 = stackIn_19_0;
-              if (bk.field_J.length >= ue.field_c.length) {
+              if (bk.field_J.length >= IntrusiveDequeCursor.field_c.length) {
                 stackIn_22_0 = bk.field_J.length;
               } else {
-                stackIn_22_0 = ue.field_c.length;
+                stackIn_22_0 = IntrusiveDequeCursor.field_c.length;
               }
               var8 = stackIn_22_0;
               if (var3 >= 6 &&

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ue {
+final class IntrusiveDequeCursor {
     static String field_a;
     private IntrusiveNode field_d;
     private IntrusiveDeque field_b;
@@ -151,7 +151,7 @@ final class ue {
         try {
           if (param0 != -37) {
             var4 = (String) null;
-            ue.a((java.net.URL) null, 89, (String) null, 12, (String) null);
+            IntrusiveDequeCursor.a((java.net.URL) null, 89, (String) null, 12, (String) null);
           }
           if (param1 == null) {
             var3 = this.field_b.field_d.next;
@@ -348,7 +348,7 @@ final class ue {
         param1 = -65 & param1;
         int var4 = ud.a((byte) 54, param1);
         if (param2 != 91) {
-          ue.a(-77, '\037');
+          IntrusiveDequeCursor.a(-77, '\037');
         }
         ClientException.a(e.a(param1, -1932340400, var4), true, -257, param0, 0, var4, param3, param1);
     }
@@ -395,7 +395,7 @@ final class ue {
         var6.setCharAt(0, Character.toUpperCase(var6.charAt(0)));
         if (param1 <= 28) {
           var12 = (String) null;
-          ue.a((String) null, true);
+          IntrusiveDequeCursor.a((String) null, true);
         }
         return var6.toString();
     }
@@ -437,7 +437,7 @@ final class ue {
           ab.field_b = param0;
           ProxySocketConnector.b(12, (byte) -42);
           if (param1) {
-            ue.a(-17L, (byte) 10);
+            IntrusiveDequeCursor.a(-17L, (byte) 10);
           }
         } catch (RuntimeException runtimeException) {
           throw LevelGrid.toClientException((Throwable) ((Object) runtimeException), "ue.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -455,7 +455,7 @@ final class ue {
         return var2;
     }
 
-    ue(IntrusiveDeque param0) {
+    IntrusiveDequeCursor(IntrusiveDeque param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {

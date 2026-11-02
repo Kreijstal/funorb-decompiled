@@ -110,7 +110,7 @@ final class gk {
           }
           var4 = var15.readUnsignedByte(16383);
           if (var4 != 0) {
-            Model.field_C[0] = ue.field_a;
+            Model.field_C[0] = IntrusiveDequeCursor.field_a;
             var5 = var3.field_k;
             for (var6_int = 1; var6_int < var4; var6_int++) {
               Model.field_C[var6_int] = var13.readString(0);

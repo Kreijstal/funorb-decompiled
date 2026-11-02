@@ -61,7 +61,7 @@ final class ob extends DualLinkNode {
             }
           }
           if (param2) {
-            ob.h(-53);
+            ob.publishKeyState(-53);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -266,7 +266,7 @@ final class ob extends DualLinkNode {
         return rl.field_N == 11 ? true : false;
     }
 
-    final static void h(int param0) {
+    final static void publishKeyState(int param0) {
         Object var1 = null;
         int var2 = 0;
         int var4 = 0;
@@ -281,20 +281,20 @@ final class ob extends DualLinkNode {
           synchronized (var1) {
             mb.field_f = mb.field_f + 1;
             GameKeyHandler.field_d = IntrusiveNode.field_d;
-            if (GameScreen.field_f < 0) {
+            if (GameScreen.keyQueueWrite < 0) {
               for (var2 = 0; var2 < 112; var2++) {
-                ni.field_m[var2] = false;
+                ni.keyDown[var2] = false;
               }
-              GameScreen.field_f = hb.field_f;
+              GameScreen.keyQueueWrite = hb.keyQueueRead;
             } else {
-              while (hb.field_f != GameScreen.field_f) {
-                var2 = md.field_b[hb.field_f];
-                hb.field_f = hb.field_f + 1 & 127;
+              while (hb.keyQueueRead != GameScreen.keyQueueWrite) {
+                var2 = md.keyQueue[hb.keyQueueRead];
+                hb.keyQueueRead = hb.keyQueueRead + 1 & 127;
                 if (var2 < 0) {
-                  ni.field_m[~var2] = false;
+                  ni.keyDown[~var2] = false;
                   continue;
                 }
-                ni.field_m[var2] = true;
+                ni.keyDown[var2] = true;
               }
             }
             IntrusiveNode.field_d = ActiveLevel.field_V;
@@ -321,7 +321,7 @@ final class ob extends DualLinkNode {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          var2 = ue.a(vh.a((byte) -127, param1), (byte) 76);
+          var2 = IntrusiveDequeCursor.a(vh.a((byte) -127, param1), (byte) 76);
           if (var2 == null) {
             var2 = "";
           }

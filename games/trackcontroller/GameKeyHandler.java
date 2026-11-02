@@ -33,12 +33,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           } else {
             var2_int = -1;
           }
-          if (GameScreen.field_f >= 0 &&
+          if (GameScreen.keyQueueWrite >= 0 &&
             var2_int >= 0) {
-            md.field_b[GameScreen.field_f] = var2_int;
-            GameScreen.field_f = GameScreen.field_f + 1 & 127;
-            if (hb.field_f == GameScreen.field_f) {
-              GameScreen.field_f = -1;
+            md.keyQueue[GameScreen.keyQueueWrite] = var2_int;
+            GameScreen.keyQueueWrite = GameScreen.keyQueueWrite + 1 & 127;
+            if (hb.keyQueueRead == GameScreen.keyQueueWrite) {
+              GameScreen.keyQueueWrite = -1;
             }
           }
           if (var2_int >= 0) {
@@ -88,12 +88,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             } else {
               var2_int = -1;
             }
-            if (GameScreen.field_f >= 0 &&
+            if (GameScreen.keyQueueWrite >= 0 &&
               0 <= var2_int) {
-              md.field_b[GameScreen.field_f] = ~var2_int;
-              GameScreen.field_f = 1 + GameScreen.field_f & 127;
-              if (GameScreen.field_f == hb.field_f) {
-                GameScreen.field_f = -1;
+              md.keyQueue[GameScreen.keyQueueWrite] = ~var2_int;
+              GameScreen.keyQueueWrite = 1 + GameScreen.keyQueueWrite & 127;
+              if (GameScreen.keyQueueWrite == hb.keyQueueRead) {
+                GameScreen.keyQueueWrite = -1;
               }
             }
           }
@@ -196,7 +196,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (null == cj.field_o) {
             return;
           }
-          GameScreen.field_f = -1;
+          GameScreen.keyQueueWrite = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

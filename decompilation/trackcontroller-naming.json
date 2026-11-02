@@ -532,6 +532,14 @@
       "renamedSymbol": "C:AsyncRequest"
     },
     {
+      "symbol": "C:ue",
+      "originalName": "ue",
+      "to": "IntrusiveDequeCursor",
+      "evidence": "Cursor constructed from an IntrusiveDeque that tracks the current IntrusiveNode.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:IntrusiveDequeCursor"
+    },
+    {
       "symbol": "C:uf",
       "originalName": "uf",
       "to": "PlatformTaskDispatcher",
@@ -668,6 +676,14 @@
       "renamedSymbol": "F:fg.mouseY:I"
     },
     {
+      "symbol": "F:hb.field_f:I",
+      "originalName": "field_f",
+      "to": "keyQueueRead",
+      "evidence": "GameKeyHandler appends codes (release as bitwise complement) to a 128-entry ring that ob.h drains into the down-state array.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:hb.keyQueueRead:I"
+    },
+    {
       "symbol": "F:hd.field_p:Lcb;",
       "originalName": "field_p",
       "to": "mouseHandler",
@@ -772,6 +788,14 @@
       "renamedSymbol": "F:SoftwareRasterizer.pixels:[I"
     },
     {
+      "symbol": "F:md.field_b:[I",
+      "originalName": "field_b",
+      "to": "keyQueue",
+      "evidence": "GameKeyHandler appends codes (release as bitwise complement) to a 128-entry ring that ob.h drains into the down-state array.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:md.keyQueue:[I"
+    },
+    {
       "symbol": "F:me.field_j:I",
       "originalName": "field_j",
       "to": "rowStep",
@@ -834,6 +858,22 @@
       "evidence": "MouseInputHandler writes the live value on events and of.c publishes it once per frame.",
       "confidence": "reviewed",
       "renamedSymbol": "F:GameScreen.mouseMoved:Z"
+    },
+    {
+      "symbol": "F:mg.field_f:I",
+      "originalName": "field_f",
+      "to": "keyQueueWrite",
+      "evidence": "GameKeyHandler appends codes (release as bitwise complement) to a 128-entry ring that ob.h drains into the down-state array.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GameScreen.keyQueueWrite:I"
+    },
+    {
+      "symbol": "F:ni.field_m:[Z",
+      "originalName": "field_m",
+      "to": "keyDown",
+      "evidence": "GameKeyHandler appends codes (release as bitwise complement) to a 128-entry ring that ob.h drains into the down-state array.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ni.keyDown:[Z"
     },
     {
       "symbol": "F:pa.field_a:I",
@@ -970,6 +1010,46 @@
       "evidence": "MouseInputHandler writes the live value on events and of.c publishes it once per frame.",
       "confidence": "reviewed",
       "renamedSymbol": "F:ArchiveSource.liveMouseY:I"
+    },
+    {
+      "symbol": "M:TrackController.a(I)V",
+      "originalName": "a",
+      "to": "drawFrame",
+      "evidence": "TrackController implements it with the loading-bar and per-screen painting. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TrackController.drawFrame(I)V"
+    },
+    {
+      "symbol": "M:TrackController.b(IZ)Z",
+      "originalName": "b",
+      "to": "loadAssets",
+      "evidence": "Reads the basic and comic12 fonts and the sprite sets from the Archive while the loading bar advances.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TrackController.loadAssets(IZ)Z"
+    },
+    {
+      "symbol": "M:TrackController.c(B)V",
+      "originalName": "c",
+      "to": "initialise",
+      "evidence": "TrackController implements it by creating the MidiPlayer, starting audio at 22050 Hz and setting display defaults. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TrackController.initialise(B)V"
+    },
+    {
+      "symbol": "M:TrackController.e(I)V",
+      "originalName": "e",
+      "to": "clearStatics",
+      "evidence": "TrackController implements it by calling the static clear method of nearly every class. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TrackController.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:TrackController.h(I)V",
+      "originalName": "h",
+      "to": "shutdown",
+      "evidence": "GameApplet calls it from the destroy path just before clearStatics; TrackController closes its audio state there. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TrackController.shutdown(I)V"
     },
     {
       "symbol": "M:be.a(BLjava/lang/String;)V",
@@ -1324,6 +1404,14 @@
       "renamedSymbol": "M:MidiPlayer.skip(I)V"
     },
     {
+      "symbol": "M:ob.h(I)V",
+      "originalName": "h",
+      "to": "publishKeyState",
+      "evidence": "GameKeyHandler appends codes (release as bitwise complement) to a 128-entry ring that ob.h drains into the down-state array.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ob.publishKeyState(I)V"
+    },
+    {
       "symbol": "M:of.c(B)V",
       "originalName": "c",
       "to": "publishInputState",
@@ -1386,6 +1474,38 @@
       "evidence": "Base implementation only increments the frame counter; ActiveLevel and the level view override it. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:LevelView.tick(ZI)V"
+    },
+    {
+      "symbol": "M:re.a(I)V",
+      "originalName": "a",
+      "to": "drawFrame",
+      "evidence": "TrackController implements it with the loading-bar and per-screen painting.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.drawFrame(I)V"
+    },
+    {
+      "symbol": "M:re.c(B)V",
+      "originalName": "c",
+      "to": "initialise",
+      "evidence": "TrackController implements it by creating the MidiPlayer, starting audio at 22050 Hz and setting display defaults.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.initialise(B)V"
+    },
+    {
+      "symbol": "M:re.e(I)V",
+      "originalName": "e",
+      "to": "clearStatics",
+      "evidence": "TrackController implements it by calling the static clear method of nearly every class.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.clearStatics(I)V"
+    },
+    {
+      "symbol": "M:re.h(I)V",
+      "originalName": "h",
+      "to": "shutdown",
+      "evidence": "GameApplet calls it from the destroy path just before clearStatics; TrackController closes its audio state there.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.shutdown(I)V"
     },
     {
       "symbol": "M:rh.b(IIII)V",
@@ -4562,9 +4682,9 @@
     },
     {
       "symbol": "C:ue",
-      "renamedSymbol": "C:ue",
+      "renamedSymbol": "C:IntrusiveDequeCursor",
       "originalName": "ue",
-      "renamedName": "ue",
+      "renamedName": "IntrusiveDequeCursor",
       "declaration": {
         "file": "ue.java",
         "start": 50,
@@ -11569,9 +11689,9 @@
     },
     {
       "symbol": "F:hb.field_f:I",
-      "renamedSymbol": "F:hb.field_f:I",
+      "renamedSymbol": "F:hb.keyQueueRead:I",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "keyQueueRead",
       "declaration": {
         "file": "hb.java",
         "start": 151,
@@ -15892,9 +16012,9 @@
     },
     {
       "symbol": "F:md.field_b:[I",
-      "renamedSymbol": "F:md.field_b:[I",
+      "renamedSymbol": "F:md.keyQueue:[I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "keyQueue",
       "declaration": {
         "file": "md.java",
         "start": 124,
@@ -16222,9 +16342,9 @@
     },
     {
       "symbol": "F:mg.field_f:I",
-      "renamedSymbol": "F:GameScreen.field_f:I",
+      "renamedSymbol": "F:GameScreen.keyQueueWrite:I",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "keyQueueWrite",
       "declaration": {
         "file": "mg.java",
         "start": 70,
@@ -17663,9 +17783,9 @@
     },
     {
       "symbol": "F:ni.field_m:[Z",
-      "renamedSymbol": "F:ni.field_m:[Z",
+      "renamedSymbol": "F:ni.keyDown:[Z",
       "originalName": "field_m",
-      "renamedName": "field_m",
+      "renamedName": "keyDown",
       "declaration": {
         "file": "ni.java",
         "start": 133,
@@ -24582,7 +24702,7 @@
     },
     {
       "symbol": "F:ue.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:ue.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:IntrusiveDequeCursor.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -24593,7 +24713,7 @@
     },
     {
       "symbol": "F:ue.field_b:Lja;",
-      "renamedSymbol": "F:ue.field_b:LIntrusiveDeque;",
+      "renamedSymbol": "F:IntrusiveDequeCursor.field_b:LIntrusiveDeque;",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -24604,7 +24724,7 @@
     },
     {
       "symbol": "F:ue.field_c:[Ljava/lang/String;",
-      "renamedSymbol": "F:ue.field_c:[Ljava/lang/String;",
+      "renamedSymbol": "F:IntrusiveDequeCursor.field_c:[Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -24615,7 +24735,7 @@
     },
     {
       "symbol": "F:ue.field_d:Lfc;",
-      "renamedSymbol": "F:ue.field_d:LIntrusiveNode;",
+      "renamedSymbol": "F:IntrusiveDequeCursor.field_d:LIntrusiveNode;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -27002,7 +27122,7 @@
     },
     {
       "symbol": "L:TrackController.a(I)V#0",
-      "renamedSymbol": "L:TrackController.a(I)V#0",
+      "renamedSymbol": "L:TrackController.drawFrame(I)V#0",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -27013,7 +27133,7 @@
     },
     {
       "symbol": "L:TrackController.a(I)V#1",
-      "renamedSymbol": "L:TrackController.a(I)V#1",
+      "renamedSymbol": "L:TrackController.drawFrame(I)V#1",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -27024,7 +27144,7 @@
     },
     {
       "symbol": "L:TrackController.a(I)V#10",
-      "renamedSymbol": "L:TrackController.a(I)V#10",
+      "renamedSymbol": "L:TrackController.drawFrame(I)V#10",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -27035,7 +27155,7 @@
     },
     {
       "symbol": "L:TrackController.a(I)V#11",
-      "renamedSymbol": "L:TrackController.a(I)V#11",
+      "renamedSymbol": "L:TrackController.drawFrame(I)V#11",
       "originalName": "var3Lifetime2",
       "renamedName": "var3Lifetime2",
       "declaration": {
@@ -27046,7 +27166,7 @@
     },
     {
       "symbol": "L:TrackController.a(I)V#12",
-      "renamedSymbol": "L:TrackController.a(I)V#12",
+      "renamedSymbol": "L:TrackController.drawFrame(I)V#12",
       "originalName": "var3Lifetime3",
       "renamedName": "var3Lifetime3",
       "declaration": {
@@ -27057,7 +27177,7 @@
     },
     {
       "symbol": "L:TrackController.a(I)V#13",
-      "renamedSymbol": "L:TrackController.a(I)V#13",
+      "renamedSymbol": "L:TrackController.drawFrame(I)V#13",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -27068,7 +27188,7 @@
     },
     {
       "symbol": "L:TrackController.a(I)V#14",
-      "renamedSymbol": "L:TrackController.a(I)V#14",
+      "renamedSymbol": "L:TrackController.drawFrame(I)V#14",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -27079,7 +27199,7 @@
     },
     {
       "symbol": "L:TrackController.a(I)V#2",
-      "renamedSymbol": "L:TrackController.a(I)V#2",
+      "renamedSymbol": "L:TrackController.drawFrame(I)V#2",
       "originalName": "stackIn_7_1",
       "renamedName": "stackIn_7_1",
       "declaration": {
@@ -27090,7 +27210,7 @@
     },
     {
       "symbol": "L:TrackController.a(I)V#3",
-      "renamedSymbol": "L:TrackController.a(I)V#3",
+      "renamedSymbol": "L:TrackController.drawFrame(I)V#3",
       "originalName": "stackIn_54_0",
       "renamedName": "stackIn_54_0",
       "declaration": {
@@ -27101,7 +27221,7 @@
     },
     {
       "symbol": "L:TrackController.a(I)V#4",
-      "renamedSymbol": "L:TrackController.a(I)V#4",
+      "renamedSymbol": "L:TrackController.drawFrame(I)V#4",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -27112,7 +27232,7 @@
     },
     {
       "symbol": "L:TrackController.a(I)V#5",
-      "renamedSymbol": "L:TrackController.a(I)V#5",
+      "renamedSymbol": "L:TrackController.drawFrame(I)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -27123,7 +27243,7 @@
     },
     {
       "symbol": "L:TrackController.a(I)V#6",
-      "renamedSymbol": "L:TrackController.a(I)V#6",
+      "renamedSymbol": "L:TrackController.drawFrame(I)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -27134,7 +27254,7 @@
     },
     {
       "symbol": "L:TrackController.a(I)V#7",
-      "renamedSymbol": "L:TrackController.a(I)V#7",
+      "renamedSymbol": "L:TrackController.drawFrame(I)V#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -27145,7 +27265,7 @@
     },
     {
       "symbol": "L:TrackController.a(I)V#8",
-      "renamedSymbol": "L:TrackController.a(I)V#8",
+      "renamedSymbol": "L:TrackController.drawFrame(I)V#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -27156,7 +27276,7 @@
     },
     {
       "symbol": "L:TrackController.a(I)V#9",
-      "renamedSymbol": "L:TrackController.a(I)V#9",
+      "renamedSymbol": "L:TrackController.drawFrame(I)V#9",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -27266,7 +27386,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#0",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#0",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#0",
       "originalName": "array$6",
       "renamedName": "array$6",
       "declaration": {
@@ -27277,7 +27397,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#1",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#1",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#1",
       "originalName": "dupTemp$5",
       "renamedName": "dupTemp$5",
       "declaration": {
@@ -27288,7 +27408,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#10",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#10",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#10",
       "originalName": "stackIn_146_0",
       "renamedName": "stackIn_146_0",
       "declaration": {
@@ -27299,7 +27419,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#11",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#11",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#11",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -27310,7 +27430,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#12",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#12",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#12",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -27321,7 +27441,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#13",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#13",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#13",
       "originalName": "var3_ref_byte__",
       "renamedName": "var3_ref_byte__",
       "declaration": {
@@ -27332,7 +27452,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#14",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#14",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#14",
       "originalName": "var4_ref_byte__",
       "renamedName": "var4_ref_byte__",
       "declaration": {
@@ -27343,7 +27463,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#15",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#15",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#15",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -27354,7 +27474,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#16",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#16",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#16",
       "originalName": "var4_ref_String",
       "renamedName": "var4_ref_String",
       "declaration": {
@@ -27365,7 +27485,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#17",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#17",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#17",
       "originalName": "var4_ref_ng__",
       "renamedName": "var4_ref_ng__",
       "declaration": {
@@ -27376,7 +27496,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#18",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#18",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#18",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -27387,7 +27507,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#19",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#19",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#19",
       "originalName": "var5_ref_IOException",
       "renamedName": "var5_ref_IOException",
       "declaration": {
@@ -27398,7 +27518,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#2",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#2",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#2",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -27409,7 +27529,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#20",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#20",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#20",
       "originalName": "var5_ref_oh",
       "renamedName": "var5_ref_oh",
       "declaration": {
@@ -27420,7 +27540,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#21",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#21",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#21",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -27431,7 +27551,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#22",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#22",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#22",
       "originalName": "var6_ref_int__",
       "renamedName": "var6_ref_int__",
       "declaration": {
@@ -27442,7 +27562,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#23",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#23",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#23",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -27453,7 +27573,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#24",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#24",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#24",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -27464,7 +27584,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#25",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#25",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#25",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -27475,7 +27595,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#26",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#26",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#26",
       "originalName": "var8_ref_qj",
       "renamedName": "var8_ref_qj",
       "declaration": {
@@ -27486,7 +27606,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#27",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#27",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#27",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -27497,7 +27617,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#28",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#28",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#28",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -27508,7 +27628,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#29",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#29",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#29",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -27519,7 +27639,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#3",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#3",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#3",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -27530,7 +27650,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#30",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#30",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#30",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -27541,7 +27661,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#31",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#31",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#31",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -27552,7 +27672,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#32",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#32",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#32",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -27563,7 +27683,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#33",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#33",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#33",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -27574,7 +27694,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#34",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#34",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#34",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -27585,7 +27705,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#35",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#35",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#35",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -27596,7 +27716,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#36",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#36",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#36",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -27607,7 +27727,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#37",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#37",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#37",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -27618,7 +27738,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#38",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#38",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#38",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -27629,7 +27749,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#39",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#39",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#39",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -27640,7 +27760,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#4",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#4",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#4",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -27651,7 +27771,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#40",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#40",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#40",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -27662,7 +27782,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#41",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#41",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#41",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -27673,7 +27793,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#42",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#42",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#42",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -27684,7 +27804,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#43",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#43",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#43",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -27695,7 +27815,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#44",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#44",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#44",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -27706,7 +27826,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#45",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#45",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#45",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -27717,7 +27837,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#46",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#46",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#46",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -27728,7 +27848,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#47",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#47",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#47",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -27739,7 +27859,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#48",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#48",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#48",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -27750,7 +27870,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#49",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#49",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#49",
       "originalName": "var33",
       "renamedName": "var33",
       "declaration": {
@@ -27761,7 +27881,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#5",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#5",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#5",
       "originalName": "dupTemp$3",
       "renamedName": "dupTemp$3",
       "declaration": {
@@ -27772,7 +27892,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#50",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#50",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#50",
       "originalName": "var35",
       "renamedName": "var35",
       "declaration": {
@@ -27783,7 +27903,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#51",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#51",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#51",
       "originalName": "var39",
       "renamedName": "var39",
       "declaration": {
@@ -27794,7 +27914,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#52",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#52",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#52",
       "originalName": "var40",
       "renamedName": "var40",
       "declaration": {
@@ -27805,7 +27925,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#53",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#53",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#53",
       "originalName": "var23Lifetime1",
       "renamedName": "var23Lifetime1",
       "declaration": {
@@ -27816,7 +27936,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#54",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#54",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#54",
       "originalName": "var23Lifetime2",
       "renamedName": "var23Lifetime2",
       "declaration": {
@@ -27827,7 +27947,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#55",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#55",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#55",
       "originalName": "stackIn_90_0Lifetime1",
       "renamedName": "stackIn_90_0Lifetime1",
       "declaration": {
@@ -27838,7 +27958,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#56",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#56",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#56",
       "originalName": "stackIn_90_1Lifetime1",
       "renamedName": "stackIn_90_1Lifetime1",
       "declaration": {
@@ -27849,7 +27969,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#57",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#57",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#57",
       "originalName": "var7_intLifetime1",
       "renamedName": "var7_intLifetime1",
       "declaration": {
@@ -27860,7 +27980,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#58",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#58",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#58",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -27871,7 +27991,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#59",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#59",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#59",
       "originalName": "var8Lifetime2",
       "renamedName": "var8Lifetime2",
       "declaration": {
@@ -27882,7 +28002,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#6",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#6",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#6",
       "originalName": "dupTemp$4",
       "renamedName": "dupTemp$4",
       "declaration": {
@@ -27893,7 +28013,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#60",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#60",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#60",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -27904,7 +28024,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#61",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#61",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#61",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -27915,7 +28035,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#62",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#62",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#62",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -27926,7 +28046,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#7",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#7",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#7",
       "originalName": "stackIn_90_0",
       "renamedName": "stackIn_90_0",
       "declaration": {
@@ -27937,7 +28057,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#8",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#8",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#8",
       "originalName": "stackIn_90_1",
       "renamedName": "stackIn_90_1",
       "declaration": {
@@ -27948,7 +28068,7 @@
     },
     {
       "symbol": "L:TrackController.b(IZ)Z#9",
-      "renamedSymbol": "L:TrackController.b(IZ)Z#9",
+      "renamedSymbol": "L:TrackController.loadAssets(IZ)Z#9",
       "originalName": "stackIn_93_0",
       "renamedName": "stackIn_93_0",
       "declaration": {
@@ -27959,7 +28079,7 @@
     },
     {
       "symbol": "L:TrackController.c(B)V#0",
-      "renamedSymbol": "L:TrackController.c(B)V#0",
+      "renamedSymbol": "L:TrackController.initialise(B)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -27970,7 +28090,7 @@
     },
     {
       "symbol": "L:TrackController.c(B)V#1",
-      "renamedSymbol": "L:TrackController.c(B)V#1",
+      "renamedSymbol": "L:TrackController.initialise(B)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -94641,7 +94761,7 @@
     },
     {
       "symbol": "L:ob.h(I)V#0",
-      "renamedSymbol": "L:ob.h(I)V#0",
+      "renamedSymbol": "L:ob.publishKeyState(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -94652,7 +94772,7 @@
     },
     {
       "symbol": "L:ob.h(I)V#1",
-      "renamedSymbol": "L:ob.h(I)V#1",
+      "renamedSymbol": "L:ob.publishKeyState(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -94663,7 +94783,7 @@
     },
     {
       "symbol": "L:ob.h(I)V#2",
-      "renamedSymbol": "L:ob.h(I)V#2",
+      "renamedSymbol": "L:ob.publishKeyState(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -94674,7 +94794,7 @@
     },
     {
       "symbol": "L:ob.h(I)V#3",
-      "renamedSymbol": "L:ob.h(I)V#3",
+      "renamedSymbol": "L:ob.publishKeyState(I)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -94685,7 +94805,7 @@
     },
     {
       "symbol": "L:ob.h(I)V#4",
-      "renamedSymbol": "L:ob.h(I)V#4",
+      "renamedSymbol": "L:ob.publishKeyState(I)V#4",
       "originalName": "var1_ref",
       "renamedName": "var1_ref",
       "declaration": {
@@ -94696,7 +94816,7 @@
     },
     {
       "symbol": "L:ob.h(I)V#5",
-      "renamedSymbol": "L:ob.h(I)V#5",
+      "renamedSymbol": "L:ob.publishKeyState(I)V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -127696,7 +127816,7 @@
     },
     {
       "symbol": "L:ue.<init>(Lja;)V#0",
-      "renamedSymbol": "L:ue.<init>(LIntrusiveDeque;)V#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.<init>(LIntrusiveDeque;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -127707,7 +127827,7 @@
     },
     {
       "symbol": "L:ue.a(BLfc;)Lfc;#0",
-      "renamedSymbol": "L:ue.a(BLIntrusiveNode;)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -127718,7 +127838,7 @@
     },
     {
       "symbol": "L:ue.a(BLfc;)Lfc;#1",
-      "renamedSymbol": "L:ue.a(BLIntrusiveNode;)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -127729,7 +127849,7 @@
     },
     {
       "symbol": "L:ue.a(BLfc;)Lfc;#2",
-      "renamedSymbol": "L:ue.a(BLIntrusiveNode;)LIntrusiveNode;#2",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -127740,7 +127860,7 @@
     },
     {
       "symbol": "L:ue.a(BLfc;)Lfc;#3",
-      "renamedSymbol": "L:ue.a(BLIntrusiveNode;)LIntrusiveNode;#3",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -127751,7 +127871,7 @@
     },
     {
       "symbol": "L:ue.a(BLfc;)Lfc;#4",
-      "renamedSymbol": "L:ue.a(BLIntrusiveNode;)LIntrusiveNode;#4",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -127762,7 +127882,7 @@
     },
     {
       "symbol": "L:ue.a(BLfc;)Lfc;#5",
-      "renamedSymbol": "L:ue.a(BLIntrusiveNode;)LIntrusiveNode;#5",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#5",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -127773,7 +127893,7 @@
     },
     {
       "symbol": "L:ue.a(BLfc;)Lfc;#6",
-      "renamedSymbol": "L:ue.a(BLIntrusiveNode;)LIntrusiveNode;#6",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#6",
       "originalName": "stackIn_12_1",
       "renamedName": "stackIn_12_1",
       "declaration": {
@@ -127784,7 +127904,7 @@
     },
     {
       "symbol": "L:ue.a(BLfc;)Lfc;#7",
-      "renamedSymbol": "L:ue.a(BLIntrusiveNode;)LIntrusiveNode;#7",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#7",
       "originalName": "stackIn_13_2",
       "renamedName": "stackIn_13_2",
       "declaration": {
@@ -127795,7 +127915,7 @@
     },
     {
       "symbol": "L:ue.a(BLfc;)Lfc;#8",
-      "renamedSymbol": "L:ue.a(BLIntrusiveNode;)LIntrusiveNode;#8",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -127806,7 +127926,7 @@
     },
     {
       "symbol": "L:ue.a(BLfc;)Lfc;#9",
-      "renamedSymbol": "L:ue.a(BLIntrusiveNode;)LIntrusiveNode;#9",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -127817,7 +127937,7 @@
     },
     {
       "symbol": "L:ue.a(I)Lfc;#0",
-      "renamedSymbol": "L:ue.a(I)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -127828,7 +127948,7 @@
     },
     {
       "symbol": "L:ue.a(IIBI)V#0",
-      "renamedSymbol": "L:ue.a(IIBI)V#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(IIBI)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -127839,7 +127959,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#0",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#0",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -127850,7 +127970,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#1",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#1",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -127861,7 +127981,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#10",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#10",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#10",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -127872,7 +127992,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#11",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#11",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#11",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -127883,7 +128003,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#12",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#12",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#12",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -127894,7 +128014,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#13",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#13",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#13",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -127905,7 +128025,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#14",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#14",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#14",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -127916,7 +128036,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#15",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#15",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#15",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -127927,7 +128047,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#16",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#16",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#16",
       "originalName": "stackIn_25_0",
       "renamedName": "stackIn_25_0",
       "declaration": {
@@ -127938,7 +128058,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#17",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#17",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#17",
       "originalName": "stackIn_28_0",
       "renamedName": "stackIn_28_0",
       "declaration": {
@@ -127949,7 +128069,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#18",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#18",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#18",
       "originalName": "stackIn_28_1",
       "renamedName": "stackIn_28_1",
       "declaration": {
@@ -127960,7 +128080,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#19",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#19",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#19",
       "originalName": "stackIn_29_2",
       "renamedName": "stackIn_29_2",
       "declaration": {
@@ -127971,7 +128091,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#2",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#2",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#2",
       "originalName": "discarded$3",
       "renamedName": "discarded$3",
       "declaration": {
@@ -127982,7 +128102,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#20",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#20",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#20",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -127993,7 +128113,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#21",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#21",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#21",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -128004,7 +128124,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#3",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#3",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#3",
       "originalName": "discarded$4",
       "renamedName": "discarded$4",
       "declaration": {
@@ -128015,7 +128135,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#4",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#4",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -128026,7 +128146,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#5",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#5",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#5",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -128037,7 +128157,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#6",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#6",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#6",
       "originalName": "var4_ref",
       "renamedName": "var4_ref",
       "declaration": {
@@ -128048,7 +128168,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#7",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#7",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -128059,7 +128179,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#8",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#8",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#8",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -128070,7 +128190,7 @@
     },
     {
       "symbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#9",
-      "renamedSymbol": "L:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#9",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#9",
       "originalName": "var7_ref_CharSequence",
       "renamedName": "var7_ref_CharSequence",
       "declaration": {
@@ -128081,7 +128201,7 @@
     },
     {
       "symbol": "L:ue.a(JB)Ljava/lang/String;#0",
-      "renamedSymbol": "L:ue.a(JB)Ljava/lang/String;#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(JB)Ljava/lang/String;#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -128092,7 +128212,7 @@
     },
     {
       "symbol": "L:ue.a(JB)Ljava/lang/String;#1",
-      "renamedSymbol": "L:ue.a(JB)Ljava/lang/String;#1",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(JB)Ljava/lang/String;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -128103,7 +128223,7 @@
     },
     {
       "symbol": "L:ue.a(JB)Ljava/lang/String;#2",
-      "renamedSymbol": "L:ue.a(JB)Ljava/lang/String;#2",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(JB)Ljava/lang/String;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -128114,7 +128234,7 @@
     },
     {
       "symbol": "L:ue.a(JB)Ljava/lang/String;#3",
-      "renamedSymbol": "L:ue.a(JB)Ljava/lang/String;#3",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(JB)Ljava/lang/String;#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -128125,7 +128245,7 @@
     },
     {
       "symbol": "L:ue.a(JB)Ljava/lang/String;#4",
-      "renamedSymbol": "L:ue.a(JB)Ljava/lang/String;#4",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(JB)Ljava/lang/String;#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -128136,7 +128256,7 @@
     },
     {
       "symbol": "L:ue.a(JB)Ljava/lang/String;#5",
-      "renamedSymbol": "L:ue.a(JB)Ljava/lang/String;#5",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(JB)Ljava/lang/String;#5",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -128147,7 +128267,7 @@
     },
     {
       "symbol": "L:ue.a(JB)Ljava/lang/String;#6",
-      "renamedSymbol": "L:ue.a(JB)Ljava/lang/String;#6",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(JB)Ljava/lang/String;#6",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -128158,7 +128278,7 @@
     },
     {
       "symbol": "L:ue.a(JB)Ljava/lang/String;#7",
-      "renamedSymbol": "L:ue.a(JB)Ljava/lang/String;#7",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(JB)Ljava/lang/String;#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -128169,7 +128289,7 @@
     },
     {
       "symbol": "L:ue.a(JB)Ljava/lang/String;#8",
-      "renamedSymbol": "L:ue.a(JB)Ljava/lang/String;#8",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(JB)Ljava/lang/String;#8",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -128180,7 +128300,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/lang/String;Z)V#0",
-      "renamedSymbol": "L:ue.a(Ljava/lang/String;Z)V#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/lang/String;Z)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -128191,7 +128311,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#0",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -128202,7 +128322,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#1",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#1",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#1",
       "originalName": "discarded$1",
       "renamedName": "discarded$1",
       "declaration": {
@@ -128213,7 +128333,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#10",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#10",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#10",
       "originalName": "stackIn_43_0",
       "renamedName": "stackIn_43_0",
       "declaration": {
@@ -128224,7 +128344,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#11",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#11",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#11",
       "originalName": "stackIn_46_0",
       "renamedName": "stackIn_46_0",
       "declaration": {
@@ -128235,7 +128355,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#12",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#12",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#12",
       "originalName": "stackIn_46_1",
       "renamedName": "stackIn_46_1",
       "declaration": {
@@ -128246,7 +128366,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#13",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#13",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#13",
       "originalName": "stackIn_47_2",
       "renamedName": "stackIn_47_2",
       "declaration": {
@@ -128257,7 +128377,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#14",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#14",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#14",
       "originalName": "stackIn_49_1",
       "renamedName": "stackIn_49_1",
       "declaration": {
@@ -128268,7 +128388,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#15",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#15",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#15",
       "originalName": "stackIn_50_2",
       "renamedName": "stackIn_50_2",
       "declaration": {
@@ -128279,7 +128399,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#16",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#16",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#16",
       "originalName": "stackIn_52_1",
       "renamedName": "stackIn_52_1",
       "declaration": {
@@ -128290,7 +128410,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#17",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#17",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#17",
       "originalName": "stackIn_53_2",
       "renamedName": "stackIn_53_2",
       "declaration": {
@@ -128301,7 +128421,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#18",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#18",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#18",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -128312,7 +128432,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#19",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#19",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#19",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -128323,7 +128443,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#2",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#2",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#2",
       "originalName": "discarded$2",
       "renamedName": "discarded$2",
       "declaration": {
@@ -128334,7 +128454,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#20",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#20",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#20",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -128345,7 +128465,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#21",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#21",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#21",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -128356,7 +128476,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#22",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#22",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#22",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -128367,7 +128487,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#23",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#23",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#23",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -128378,7 +128498,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#24",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#24",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#24",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -128389,7 +128509,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#25",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#25",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#25",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -128400,7 +128520,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#26",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#26",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#26",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -128411,7 +128531,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#27",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#27",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#27",
       "originalName": "var7_intLifetime1",
       "renamedName": "var7_intLifetime1",
       "declaration": {
@@ -128422,7 +128542,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#28",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#28",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#28",
       "originalName": "var7_intLifetime2",
       "renamedName": "var7_intLifetime2",
       "declaration": {
@@ -128433,7 +128553,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#29",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#29",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#29",
       "originalName": "var7_intLifetime3",
       "renamedName": "var7_intLifetime3",
       "declaration": {
@@ -128444,7 +128564,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#3",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#3",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#3",
       "originalName": "discarded$3",
       "renamedName": "discarded$3",
       "declaration": {
@@ -128455,7 +128575,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#30",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#30",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#30",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -128466,7 +128586,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#31",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#31",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#31",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -128477,7 +128597,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#32",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#32",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#32",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -128488,7 +128608,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#33",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#33",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#33",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -128499,7 +128619,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#4",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#4",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#4",
       "originalName": "discarded$4",
       "renamedName": "discarded$4",
       "declaration": {
@@ -128510,7 +128630,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#5",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#5",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#5",
       "originalName": "discarded$5",
       "renamedName": "discarded$5",
       "declaration": {
@@ -128521,7 +128641,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#6",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#6",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#6",
       "originalName": "discarded$6",
       "renamedName": "discarded$6",
       "declaration": {
@@ -128532,7 +128652,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#7",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#7",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#7",
       "originalName": "discarded$7",
       "renamedName": "discarded$7",
       "declaration": {
@@ -128543,7 +128663,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#8",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#8",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#8",
       "originalName": "discarded$8",
       "renamedName": "discarded$8",
       "declaration": {
@@ -128554,7 +128674,7 @@
     },
     {
       "symbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#9",
-      "renamedSymbol": "L:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#9",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#9",
       "originalName": "stackIn_41_0",
       "renamedName": "stackIn_41_0",
       "declaration": {
@@ -128565,7 +128685,7 @@
     },
     {
       "symbol": "L:ue.a(ZLfc;)Lfc;#0",
-      "renamedSymbol": "L:ue.a(ZLIntrusiveNode;)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -128576,7 +128696,7 @@
     },
     {
       "symbol": "L:ue.a(ZLfc;)Lfc;#1",
-      "renamedSymbol": "L:ue.a(ZLIntrusiveNode;)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -128587,7 +128707,7 @@
     },
     {
       "symbol": "L:ue.a(ZLfc;)Lfc;#2",
-      "renamedSymbol": "L:ue.a(ZLIntrusiveNode;)LIntrusiveNode;#2",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#2",
       "originalName": "stackIn_5_0",
       "renamedName": "stackIn_5_0",
       "declaration": {
@@ -128598,7 +128718,7 @@
     },
     {
       "symbol": "L:ue.a(ZLfc;)Lfc;#3",
-      "renamedSymbol": "L:ue.a(ZLIntrusiveNode;)LIntrusiveNode;#3",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#3",
       "originalName": "stackIn_8_0",
       "renamedName": "stackIn_8_0",
       "declaration": {
@@ -128609,7 +128729,7 @@
     },
     {
       "symbol": "L:ue.a(ZLfc;)Lfc;#4",
-      "renamedSymbol": "L:ue.a(ZLIntrusiveNode;)LIntrusiveNode;#4",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#4",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -128620,7 +128740,7 @@
     },
     {
       "symbol": "L:ue.a(ZLfc;)Lfc;#5",
-      "renamedSymbol": "L:ue.a(ZLIntrusiveNode;)LIntrusiveNode;#5",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#5",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -128631,7 +128751,7 @@
     },
     {
       "symbol": "L:ue.a(ZLfc;)Lfc;#6",
-      "renamedSymbol": "L:ue.a(ZLIntrusiveNode;)LIntrusiveNode;#6",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#6",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -128642,7 +128762,7 @@
     },
     {
       "symbol": "L:ue.a(ZLfc;)Lfc;#7",
-      "renamedSymbol": "L:ue.a(ZLIntrusiveNode;)LIntrusiveNode;#7",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#7",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -128653,7 +128773,7 @@
     },
     {
       "symbol": "L:ue.a(ZLfc;)Lfc;#8",
-      "renamedSymbol": "L:ue.a(ZLIntrusiveNode;)LIntrusiveNode;#8",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -128664,7 +128784,7 @@
     },
     {
       "symbol": "L:ue.a(ZLfc;)Lfc;#9",
-      "renamedSymbol": "L:ue.a(ZLIntrusiveNode;)LIntrusiveNode;#9",
+      "renamedSymbol": "L:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -128675,7 +128795,7 @@
     },
     {
       "symbol": "L:ue.c(I)Lfc;#0",
-      "renamedSymbol": "L:ue.c(I)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.c(I)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -128686,7 +128806,7 @@
     },
     {
       "symbol": "L:ue.d(I)Lfc;#0",
-      "renamedSymbol": "L:ue.d(I)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.d(I)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -128697,7 +128817,7 @@
     },
     {
       "symbol": "L:ue.d(I)Lfc;#1",
-      "renamedSymbol": "L:ue.d(I)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IntrusiveDequeCursor.d(I)LIntrusiveNode;#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -128708,7 +128828,7 @@
     },
     {
       "symbol": "L:ue.e(I)Lfc;#0",
-      "renamedSymbol": "L:ue.e(I)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IntrusiveDequeCursor.e(I)LIntrusiveNode;#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -139829,9 +139949,9 @@
     },
     {
       "symbol": "M:TrackController.a(I)V",
-      "renamedSymbol": "M:TrackController.a(I)V",
+      "renamedSymbol": "M:TrackController.drawFrame(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawFrame",
       "declaration": {
         "file": "TrackController.java",
         "start": 5491,
@@ -139851,9 +139971,9 @@
     },
     {
       "symbol": "M:TrackController.b(IZ)Z",
-      "renamedSymbol": "M:TrackController.b(IZ)Z",
+      "renamedSymbol": "M:TrackController.loadAssets(IZ)Z",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "loadAssets",
       "declaration": {
         "file": "TrackController.java",
         "start": 20204,
@@ -139862,9 +139982,9 @@
     },
     {
       "symbol": "M:TrackController.c(B)V",
-      "renamedSymbol": "M:TrackController.c(B)V",
+      "renamedSymbol": "M:TrackController.initialise(B)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "initialise",
       "declaration": {
         "file": "TrackController.java",
         "start": 19785,
@@ -139873,9 +139993,9 @@
     },
     {
       "symbol": "M:TrackController.e(I)V",
-      "renamedSymbol": "M:TrackController.e(I)V",
+      "renamedSymbol": "M:TrackController.clearStatics(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "clearStatics",
       "declaration": {
         "file": "TrackController.java",
         "start": 9487,
@@ -139884,9 +140004,9 @@
     },
     {
       "symbol": "M:TrackController.h(I)V",
-      "renamedSymbol": "M:TrackController.h(I)V",
+      "renamedSymbol": "M:TrackController.shutdown(I)V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "shutdown",
       "declaration": {
         "file": "TrackController.java",
         "start": 5278,
@@ -154250,9 +154370,9 @@
     },
     {
       "symbol": "M:ob.h(I)V",
-      "renamedSymbol": "M:ob.h(I)V",
+      "renamedSymbol": "M:ob.publishKeyState(I)V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "publishKeyState",
       "declaration": {
         "file": "ob.java",
         "start": 9053,
@@ -157583,9 +157703,9 @@
     },
     {
       "symbol": "M:re.a(I)V",
-      "renamedSymbol": "M:GameApplet.a(I)V",
+      "renamedSymbol": "M:GameApplet.drawFrame(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawFrame",
       "declaration": {
         "file": "re.java",
         "start": 1565,
@@ -157660,9 +157780,9 @@
     },
     {
       "symbol": "M:re.c(B)V",
-      "renamedSymbol": "M:GameApplet.c(B)V",
+      "renamedSymbol": "M:GameApplet.initialise(B)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "initialise",
       "declaration": {
         "file": "re.java",
         "start": 25390,
@@ -157704,9 +157824,9 @@
     },
     {
       "symbol": "M:re.e(I)V",
-      "renamedSymbol": "M:GameApplet.e(I)V",
+      "renamedSymbol": "M:GameApplet.clearStatics(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "clearStatics",
       "declaration": {
         "file": "re.java",
         "start": 24654,
@@ -157803,9 +157923,9 @@
     },
     {
       "symbol": "M:re.h(I)V",
-      "renamedSymbol": "M:GameApplet.h(I)V",
+      "renamedSymbol": "M:GameApplet.shutdown(I)V",
       "originalName": "h",
-      "renamedName": "h",
+      "renamedName": "shutdown",
       "declaration": {
         "file": "re.java",
         "start": 15760,
@@ -160740,9 +160860,9 @@
     },
     {
       "symbol": "M:ue.<init>(Lja;)V",
-      "renamedSymbol": "M:ue.<init>(LIntrusiveDeque;)V",
+      "renamedSymbol": "M:IntrusiveDequeCursor.<init>(LIntrusiveDeque;)V",
       "originalName": "ue",
-      "renamedName": "ue",
+      "renamedName": "IntrusiveDequeCursor",
       "declaration": {
         "file": "ue.java",
         "start": 15824,
@@ -160751,7 +160871,7 @@
     },
     {
       "symbol": "M:ue.a(BLfc;)Lfc;",
-      "renamedSymbol": "M:ue.a(BLIntrusiveNode;)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -160762,7 +160882,7 @@
     },
     {
       "symbol": "M:ue.a(I)Lfc;",
-      "renamedSymbol": "M:ue.a(I)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.a(I)LIntrusiveNode;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -160773,7 +160893,7 @@
     },
     {
       "symbol": "M:ue.a(IC)Z",
-      "renamedSymbol": "M:ue.a(IC)Z",
+      "renamedSymbol": "M:IntrusiveDequeCursor.a(IC)Z",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -160784,7 +160904,7 @@
     },
     {
       "symbol": "M:ue.a(IIBI)V",
-      "renamedSymbol": "M:ue.a(IIBI)V",
+      "renamedSymbol": "M:IntrusiveDequeCursor.a(IIBI)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -160795,7 +160915,7 @@
     },
     {
       "symbol": "M:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;",
-      "renamedSymbol": "M:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -160806,7 +160926,7 @@
     },
     {
       "symbol": "M:ue.a(JB)Ljava/lang/String;",
-      "renamedSymbol": "M:ue.a(JB)Ljava/lang/String;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.a(JB)Ljava/lang/String;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -160817,7 +160937,7 @@
     },
     {
       "symbol": "M:ue.a(Ljava/lang/String;Z)V",
-      "renamedSymbol": "M:ue.a(Ljava/lang/String;Z)V",
+      "renamedSymbol": "M:IntrusiveDequeCursor.a(Ljava/lang/String;Z)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -160828,7 +160948,7 @@
     },
     {
       "symbol": "M:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;",
-      "renamedSymbol": "M:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -160839,7 +160959,7 @@
     },
     {
       "symbol": "M:ue.a(ZLfc;)Lfc;",
-      "renamedSymbol": "M:ue.a(ZLIntrusiveNode;)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -160850,7 +160970,7 @@
     },
     {
       "symbol": "M:ue.b(I)V",
-      "renamedSymbol": "M:ue.b(I)V",
+      "renamedSymbol": "M:IntrusiveDequeCursor.b(I)V",
       "originalName": "b",
       "renamedName": "b",
       "declaration": {
@@ -160861,7 +160981,7 @@
     },
     {
       "symbol": "M:ue.c(I)Lfc;",
-      "renamedSymbol": "M:ue.c(I)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.c(I)LIntrusiveNode;",
       "originalName": "c",
       "renamedName": "c",
       "declaration": {
@@ -160872,7 +160992,7 @@
     },
     {
       "symbol": "M:ue.d(I)Lfc;",
-      "renamedSymbol": "M:ue.d(I)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.d(I)LIntrusiveNode;",
       "originalName": "d",
       "renamedName": "d",
       "declaration": {
@@ -160883,7 +161003,7 @@
     },
     {
       "symbol": "M:ue.e(I)Lfc;",
-      "renamedSymbol": "M:ue.e(I)LIntrusiveNode;",
+      "renamedSymbol": "M:IntrusiveDequeCursor.e(I)LIntrusiveNode;",
       "originalName": "e",
       "renamedName": "e",
       "declaration": {
@@ -163072,7 +163192,7 @@
     },
     {
       "symbol": "P:TrackController.a(I)V#0",
-      "renamedSymbol": "P:TrackController.a(I)V#0",
+      "renamedSymbol": "P:TrackController.drawFrame(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -163094,7 +163214,7 @@
     },
     {
       "symbol": "P:TrackController.b(IZ)Z#0",
-      "renamedSymbol": "P:TrackController.b(IZ)Z#0",
+      "renamedSymbol": "P:TrackController.loadAssets(IZ)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -163105,7 +163225,7 @@
     },
     {
       "symbol": "P:TrackController.b(IZ)Z#1",
-      "renamedSymbol": "P:TrackController.b(IZ)Z#1",
+      "renamedSymbol": "P:TrackController.loadAssets(IZ)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -163116,7 +163236,7 @@
     },
     {
       "symbol": "P:TrackController.c(B)V#0",
-      "renamedSymbol": "P:TrackController.c(B)V#0",
+      "renamedSymbol": "P:TrackController.initialise(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -163127,7 +163247,7 @@
     },
     {
       "symbol": "P:TrackController.e(I)V#0",
-      "renamedSymbol": "P:TrackController.e(I)V#0",
+      "renamedSymbol": "P:TrackController.clearStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -163138,7 +163258,7 @@
     },
     {
       "symbol": "P:TrackController.h(I)V#0",
-      "renamedSymbol": "P:TrackController.h(I)V#0",
+      "renamedSymbol": "P:TrackController.shutdown(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -197568,7 +197688,7 @@
     },
     {
       "symbol": "P:ob.h(I)V#0",
-      "renamedSymbol": "P:ob.h(I)V#0",
+      "renamedSymbol": "P:ob.publishKeyState(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -206566,7 +206686,7 @@
     },
     {
       "symbol": "P:re.a(I)V#0",
-      "renamedSymbol": "P:GameApplet.a(I)V#0",
+      "renamedSymbol": "P:GameApplet.drawFrame(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -206731,7 +206851,7 @@
     },
     {
       "symbol": "P:re.c(B)V#0",
-      "renamedSymbol": "P:GameApplet.c(B)V#0",
+      "renamedSymbol": "P:GameApplet.initialise(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -206764,7 +206884,7 @@
     },
     {
       "symbol": "P:re.e(I)V#0",
-      "renamedSymbol": "P:GameApplet.e(I)V#0",
+      "renamedSymbol": "P:GameApplet.clearStatics(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -206830,7 +206950,7 @@
     },
     {
       "symbol": "P:re.h(I)V#0",
-      "renamedSymbol": "P:GameApplet.h(I)V#0",
+      "renamedSymbol": "P:GameApplet.shutdown(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -212968,7 +213088,7 @@
     },
     {
       "symbol": "P:ue.<init>(Lja;)V#0",
-      "renamedSymbol": "P:ue.<init>(LIntrusiveDeque;)V#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.<init>(LIntrusiveDeque;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -212979,7 +213099,7 @@
     },
     {
       "symbol": "P:ue.a(BLfc;)Lfc;#0",
-      "renamedSymbol": "P:ue.a(BLIntrusiveNode;)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -212990,7 +213110,7 @@
     },
     {
       "symbol": "P:ue.a(BLfc;)Lfc;#1",
-      "renamedSymbol": "P:ue.a(BLIntrusiveNode;)LIntrusiveNode;#1",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(BLIntrusiveNode;)LIntrusiveNode;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213001,7 +213121,7 @@
     },
     {
       "symbol": "P:ue.a(I)Lfc;#0",
-      "renamedSymbol": "P:ue.a(I)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(I)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213012,7 +213132,7 @@
     },
     {
       "symbol": "P:ue.a(IC)Z#0",
-      "renamedSymbol": "P:ue.a(IC)Z#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(IC)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213023,7 +213143,7 @@
     },
     {
       "symbol": "P:ue.a(IC)Z#1",
-      "renamedSymbol": "P:ue.a(IC)Z#1",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(IC)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213034,7 +213154,7 @@
     },
     {
       "symbol": "P:ue.a(IIBI)V#0",
-      "renamedSymbol": "P:ue.a(IIBI)V#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(IIBI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213045,7 +213165,7 @@
     },
     {
       "symbol": "P:ue.a(IIBI)V#1",
-      "renamedSymbol": "P:ue.a(IIBI)V#1",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(IIBI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213056,7 +213176,7 @@
     },
     {
       "symbol": "P:ue.a(IIBI)V#2",
-      "renamedSymbol": "P:ue.a(IIBI)V#2",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(IIBI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -213067,7 +213187,7 @@
     },
     {
       "symbol": "P:ue.a(IIBI)V#3",
-      "renamedSymbol": "P:ue.a(IIBI)V#3",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(IIBI)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -213078,7 +213198,7 @@
     },
     {
       "symbol": "P:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#0",
-      "renamedSymbol": "P:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213089,7 +213209,7 @@
     },
     {
       "symbol": "P:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#1",
-      "renamedSymbol": "P:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#1",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213100,7 +213220,7 @@
     },
     {
       "symbol": "P:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#2",
-      "renamedSymbol": "P:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#2",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -213111,7 +213231,7 @@
     },
     {
       "symbol": "P:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#3",
-      "renamedSymbol": "P:ue.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#3",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(I[Ljava/lang/CharSequence;BI)Ljava/lang/String;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -213122,7 +213242,7 @@
     },
     {
       "symbol": "P:ue.a(JB)Ljava/lang/String;#0",
-      "renamedSymbol": "P:ue.a(JB)Ljava/lang/String;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(JB)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213133,7 +213253,7 @@
     },
     {
       "symbol": "P:ue.a(JB)Ljava/lang/String;#1",
-      "renamedSymbol": "P:ue.a(JB)Ljava/lang/String;#1",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(JB)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213144,7 +213264,7 @@
     },
     {
       "symbol": "P:ue.a(Ljava/lang/String;Z)V#0",
-      "renamedSymbol": "P:ue.a(Ljava/lang/String;Z)V#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(Ljava/lang/String;Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213155,7 +213275,7 @@
     },
     {
       "symbol": "P:ue.a(Ljava/lang/String;Z)V#1",
-      "renamedSymbol": "P:ue.a(Ljava/lang/String;Z)V#1",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(Ljava/lang/String;Z)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213166,7 +213286,7 @@
     },
     {
       "symbol": "P:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#0",
-      "renamedSymbol": "P:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213177,7 +213297,7 @@
     },
     {
       "symbol": "P:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#1",
-      "renamedSymbol": "P:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#1",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213188,7 +213308,7 @@
     },
     {
       "symbol": "P:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#2",
-      "renamedSymbol": "P:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#2",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -213199,7 +213319,7 @@
     },
     {
       "symbol": "P:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#3",
-      "renamedSymbol": "P:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#3",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -213210,7 +213330,7 @@
     },
     {
       "symbol": "P:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#4",
-      "renamedSymbol": "P:ue.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#4",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(Ljava/net/URL;ILjava/lang/String;ILjava/lang/String;)Ljava/net/URL;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -213221,7 +213341,7 @@
     },
     {
       "symbol": "P:ue.a(ZLfc;)Lfc;#0",
-      "renamedSymbol": "P:ue.a(ZLIntrusiveNode;)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213232,7 +213352,7 @@
     },
     {
       "symbol": "P:ue.a(ZLfc;)Lfc;#1",
-      "renamedSymbol": "P:ue.a(ZLIntrusiveNode;)LIntrusiveNode;#1",
+      "renamedSymbol": "P:IntrusiveDequeCursor.a(ZLIntrusiveNode;)LIntrusiveNode;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -213243,7 +213363,7 @@
     },
     {
       "symbol": "P:ue.b(I)V#0",
-      "renamedSymbol": "P:ue.b(I)V#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.b(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213254,7 +213374,7 @@
     },
     {
       "symbol": "P:ue.c(I)Lfc;#0",
-      "renamedSymbol": "P:ue.c(I)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.c(I)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213265,7 +213385,7 @@
     },
     {
       "symbol": "P:ue.d(I)Lfc;#0",
-      "renamedSymbol": "P:ue.d(I)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.d(I)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -213276,7 +213396,7 @@
     },
     {
       "symbol": "P:ue.e(I)Lfc;#0",
-      "renamedSymbol": "P:ue.e(I)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IntrusiveDequeCursor.e(I)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -218054,7 +218174,7 @@
       "original": "TrackController.java",
       "renamed": "TrackController.java",
       "inputSha256": "49d744ca886e6641bafaca916524c2cb5d5fa26126d63ff119698b88cb016b28",
-      "outputSha256": "d519c08a59a3b32ac0b3795b0efc3b9a81847c3cd205a18d2071f1174babe92a",
+      "outputSha256": "a9a178f65d01b8578a5a529860b3d3b3f773e28bb1bf7e11988165ce40c19af2",
       "edits": [
         {
           "start": 100,
@@ -218085,11 +218205,25 @@
           "renamed": "mouseButton"
         },
         {
+          "start": 794,
+          "end": 801,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
           "start": 1003,
           "end": 1005,
           "symbol": "C:id",
           "original": "id",
           "renamed": "NodeHashTable"
+        },
+        {
+          "start": 1038,
+          "end": 1045,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
         },
         {
           "start": 1069,
@@ -218125,6 +218259,13 @@
           "symbol": "M:ri.a(ZI)V",
           "original": "a",
           "renamed": "tick"
+        },
+        {
+          "start": 1692,
+          "end": 1699,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
         },
         {
           "start": 1799,
@@ -218295,11 +218436,32 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 5278,
+          "end": 5279,
+          "symbol": "M:TrackController.h(I)V",
+          "original": "h",
+          "renamed": "shutdown"
+        },
+        {
           "start": 5302,
           "end": 5304,
           "symbol": "C:fc",
           "original": "fc",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 5362,
+          "end": 5363,
+          "symbol": "M:TrackController.h(I)V",
+          "original": "h",
+          "renamed": "shutdown"
+        },
+        {
+          "start": 5491,
+          "end": 5492,
+          "symbol": "M:TrackController.a(I)V",
+          "original": "a",
+          "renamed": "drawFrame"
         },
         {
           "start": 6096,
@@ -218482,6 +218644,13 @@
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "LevelView"
+        },
+        {
+          "start": 9487,
+          "end": 9488,
+          "symbol": "M:TrackController.e(I)V",
+          "original": "e",
+          "renamed": "clearStatics"
         },
         {
           "start": 9546,
@@ -218729,6 +218898,13 @@
           "renamed": "ButtonWidget"
         },
         {
+          "start": 12740,
+          "end": 12742,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 12975,
           "end": 12977,
           "symbol": "C:hk",
@@ -218797,6 +218973,13 @@
           "symbol": "C:ga",
           "original": "ga",
           "renamed": "IterableNodeHashTable"
+        },
+        {
+          "start": 15818,
+          "end": 15819,
+          "symbol": "M:TrackController.b(IZ)Z",
+          "original": "b",
+          "renamed": "loadAssets"
         },
         {
           "start": 15905,
@@ -218904,6 +219087,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 18254,
+          "end": 18255,
+          "symbol": "M:TrackController.b(IZ)Z",
+          "original": "b",
+          "renamed": "loadAssets"
+        },
+        {
           "start": 18282,
           "end": 18284,
           "symbol": "C:pf",
@@ -218974,6 +219164,13 @@
           "renamed": "GameStringTable"
         },
         {
+          "start": 19785,
+          "end": 19786,
+          "symbol": "M:TrackController.c(B)V",
+          "original": "c",
+          "renamed": "initialise"
+        },
+        {
           "start": 19864,
           "end": 19866,
           "symbol": "C:nb",
@@ -218993,6 +219190,13 @@
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "LevelGrid"
+        },
+        {
+          "start": 20204,
+          "end": 20205,
+          "symbol": "M:TrackController.b(IZ)Z",
+          "original": "b",
+          "renamed": "loadAssets"
         },
         {
           "start": 20292,
@@ -219205,6 +219409,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 24420,
+          "end": 24421,
+          "symbol": "M:TrackController.a(I)V",
+          "original": "a",
+          "renamed": "drawFrame"
+        },
+        {
           "start": 25013,
           "end": 25015,
           "symbol": "C:oh",
@@ -219240,11 +219451,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 28416,
+          "end": 28417,
+          "symbol": "M:TrackController.a(I)V",
+          "original": "a",
+          "renamed": "drawFrame"
+        },
+        {
           "start": 29829,
           "end": 29831,
           "symbol": "C:ik",
           "original": "ik",
           "renamed": "PcmSample"
+        },
+        {
+          "start": 30250,
+          "end": 30251,
+          "symbol": "M:TrackController.a(I)V",
+          "original": "a",
+          "renamed": "drawFrame"
         },
         {
           "start": 30272,
@@ -219329,6 +219554,13 @@
           "symbol": "C:rj",
           "original": "rj",
           "renamed": "SecondaryNodeDeque"
+        },
+        {
+          "start": 31278,
+          "end": 31279,
+          "symbol": "M:TrackController.a(I)V",
+          "original": "a",
+          "renamed": "drawFrame"
         },
         {
           "start": 31473,
@@ -225318,7 +225550,7 @@
       "original": "bk.java",
       "renamed": "bk.java",
       "inputSha256": "53306c9a90d23208269472df964070f2b80e81606a4297f1874947a4545511be",
-      "outputSha256": "91b1a28e84ba7b67a5342d1dfd33a8c3d27ccb8e4dbc9a4bec79070ae7777b4c",
+      "outputSha256": "3ac7442370615d6525fad1093f4a1e38093e7cd9a69de90c21709b90ab377ada",
       "edits": [
         {
           "start": 78,
@@ -225517,11 +225749,25 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 10342,
+          "end": 10344,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 10366,
           "end": 10367,
           "symbol": "M:be.g(I)Ljava/lang/String;",
           "original": "g",
           "renamed": "readString"
+        },
+        {
+          "start": 10439,
+          "end": 10441,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 10553,
@@ -226916,7 +227162,7 @@
       "original": "ch.java",
       "renamed": "GameShell.java",
       "inputSha256": "cb861a0f7a64cd9ac5744ebfd1a3a0e60284fe192a73d2d049a008640a0463d8",
-      "outputSha256": "f9015680cf5105c9b5656b0b58f87507117e023f9629afafa4d58e611d2dc1a9",
+      "outputSha256": "fbe991fc936b6dceb9319af57f553b11bef92c29e618da04a4c351b1ec005c2a",
       "edits": [
         {
           "start": 53,
@@ -227288,6 +227534,13 @@
           "symbol": "C:tk",
           "original": "tk",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 17796,
+          "end": 17797,
+          "symbol": "M:ob.h(I)V",
+          "original": "h",
+          "renamed": "publishKeyState"
         },
         {
           "start": 17817,
@@ -230730,7 +230983,7 @@
       "original": "da.java",
       "renamed": "SocketArchiveRequestConnection.java",
       "inputSha256": "a7b71151284e1c1226adce764b06eaf7dec7fc8bf88231b269bd446c1392b393",
-      "outputSha256": "387f67f4dda779801f0edd02114262f7c701da6551c371dd8facff915629e88d",
+      "outputSha256": "bf94ec77220f251c9b5721ac9ea288d2f6d71f755359ad9b5f14d63947cf9054",
       "edits": [
         {
           "start": 69,
@@ -231027,11 +231280,25 @@
           "renamed": "readByte"
         },
         {
+          "start": 6278,
+          "end": 6280,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 6302,
           "end": 6303,
           "symbol": "M:be.g(I)Ljava/lang/String;",
           "original": "g",
           "renamed": "readString"
+        },
+        {
+          "start": 6355,
+          "end": 6357,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 6453,
@@ -231081,6 +231348,13 @@
           "symbol": "C:gd",
           "original": "gd",
           "renamed": "CachedArchiveSource"
+        },
+        {
+          "start": 7396,
+          "end": 7398,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 7401,
@@ -236332,7 +236606,7 @@
       "original": "fi.java",
       "renamed": "fi.java",
       "inputSha256": "3c1754ac78450bc447f84a60452137c68b8622ede8df907c5804cb85c708b882",
-      "outputSha256": "34a134bf704e5d1a5553b5d90b5ba3dc4d5d80ca8789486a8b89fa7fca6be168",
+      "outputSha256": "67e6a2e028b14a53ef06aad836ea616aeb5ecfb4d3cc5aeed650b154f644de25",
       "edits": [
         {
           "start": 61,
@@ -236340,6 +236614,13 @@
           "symbol": "C:fc",
           "original": "fc",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 935,
+          "end": 937,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 1458,
@@ -237984,7 +238265,7 @@
       "original": "ge.java",
       "renamed": "ge.java",
       "inputSha256": "2f326b9b3b02c390ab38af2f477db7e5b025955ca10d109b8355b01e6f12ba13",
-      "outputSha256": "ef57228055208e92ef9de18b3aa310928127ba2f96213e41ea4379053d52076d",
+      "outputSha256": "4831bb1133365abf4ecb91c58cb4f974d4005e621d0d5cb99c0411f4a17d3f4f",
       "edits": [
         {
           "start": 79,
@@ -237999,6 +238280,27 @@
           "symbol": "C:rh",
           "original": "rh",
           "renamed": "ButtonWidget"
+        },
+        {
+          "start": 846,
+          "end": 848,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 970,
+          "end": 972,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 1048,
+          "end": 1050,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 1659,
@@ -238641,7 +238943,7 @@
       "original": "gk.java",
       "renamed": "gk.java",
       "inputSha256": "934356f8aae8596dd178e5d78dc9bbb3d0f9fb18bfef37245a0df363455ff25d",
-      "outputSha256": "29939b343417e2174908297f592fd84bef2116995a33232621df8df839ceeb3c",
+      "outputSha256": "5b9ce286a9db31447b0c94c1646ab99c234f9594b6d956f2cbe7f5196a5a0299",
       "edits": [
         {
           "start": 66,
@@ -238712,6 +239014,13 @@
           "symbol": "C:pf",
           "original": "pf",
           "renamed": "Model"
+        },
+        {
+          "start": 3849,
+          "end": 3851,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 3970,
@@ -239429,8 +239738,15 @@
       "original": "hb.java",
       "renamed": "hb.java",
       "inputSha256": "992fa967a47724b0ea5476e5a2f42e78f5cedefb77855cc04ef6120647b231b9",
-      "outputSha256": "92a97e12ba7dd4a604d8d4cc69993d7dc514ca3a0d65cbb5ef9249081709bc44",
+      "outputSha256": "6661031e485e9ba2dbea484a3211ec7f8c1d9964c0088f0af56d01189e34ad96",
       "edits": [
+        {
+          "start": 151,
+          "end": 158,
+          "symbol": "F:hb.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueRead"
+        },
         {
           "start": 222,
           "end": 224,
@@ -239598,6 +239914,13 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 9493,
+          "end": 9500,
+          "symbol": "F:hb.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueRead"
         }
       ]
     },
@@ -243050,7 +243373,7 @@
       "original": "ij.java",
       "renamed": "ij.java",
       "inputSha256": "c2042d34c5ef4d79155afa45156028b829ff34ea02ca3c79358dbae732456c38",
-      "outputSha256": "57d3f330dc8c7b8a8cf172ab47c1b4f9ff8a9138989ea398f0eac6523d456705",
+      "outputSha256": "7a91c2a3d688a5e4f125fecdeb43f58ca55290afc90b46381ea4a831dc6cae0a",
       "edits": [
         {
           "start": 130,
@@ -243310,6 +243633,48 @@
           "symbol": "C:h",
           "original": "h",
           "renamed": "MouseWheelInput"
+        },
+        {
+          "start": 13890,
+          "end": 13892,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 13976,
+          "end": 13978,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 14253,
+          "end": 14255,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 14393,
+          "end": 14395,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 15810,
+          "end": 15812,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 15937,
+          "end": 15939,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 17945,
@@ -243578,7 +243943,7 @@
       "original": "j.java",
       "renamed": "j.java",
       "inputSha256": "5c1629e7061089a57e24180eb4eb080201471c9ad7987d964d873f59675a6dda",
-      "outputSha256": "dc66c30985aea3ac3f47c61a5778a0d93ddb56be039e9d4df4afd94d6697ff3c",
+      "outputSha256": "0ff8da9bab45ca825f75bfd6dc630412272e72b3c13bf998ad97d19c89e9d0e1",
       "edits": [
         {
           "start": 84,
@@ -243621,6 +243986,13 @@
           "symbol": "C:mg",
           "original": "mg",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 8531,
+          "end": 8538,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
         },
         {
           "start": 8683,
@@ -247824,7 +248196,7 @@
       "original": "lb.java",
       "renamed": "lb.java",
       "inputSha256": "947c9e7a6c62528914152b8c51183b4b072a9fd19ba092b664549af5e88bcabe",
-      "outputSha256": "8f8fb8e2fd02655d6b9a62f861c855e553e8c56c3e99b338393c034dadab92cc",
+      "outputSha256": "42bfad7ec6d14f6cdb8b1581df034b0d66abb8ea7ce79a5a055b6c2560a2085a",
       "edits": [
         {
           "start": 55,
@@ -247839,6 +248211,41 @@
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 2903,
+          "end": 2910,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
+          "start": 3081,
+          "end": 3088,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
+          "start": 3253,
+          "end": 3260,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
+          "start": 3636,
+          "end": 3643,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
+          "start": 4085,
+          "end": 4092,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
         },
         {
           "start": 5268,
@@ -247930,6 +248337,13 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 11502,
+          "end": 11509,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
         },
         {
           "start": 14441,
@@ -248566,7 +248980,7 @@
       "original": "li.java",
       "renamed": "li.java",
       "inputSha256": "9f02d247e708d5f40cb407228659e9cdfd6cf958d74edc5b969463a6fc6a867e",
-      "outputSha256": "ba2ba94ad98e8a2426c81baf617b39345cf2aacf59cc524e0ccb7cc63a0c230f",
+      "outputSha256": "181db14d1c6c79b7cc460b62835fe99717ed75a80dd9baf0402da5769cc069cd",
       "edits": [
         {
           "start": 61,
@@ -248588,6 +249002,27 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 223,
+          "end": 225,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 364,
+          "end": 366,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 401,
+          "end": 403,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 545,
@@ -248623,7 +249058,7 @@
       "original": "lj.java",
       "renamed": "GameKeyHandler.java",
       "inputSha256": "f4e2ac55f5db7106af612761f91b215731829341dc9b5d1c7e3e5c76a3263aef",
-      "outputSha256": "64cbbcf8fed204bfdc4795f9a40562a132ee17bb9ba51a7a9992c87c96dfd901",
+      "outputSha256": "89ab77570f6aabfd095b6215d2dd4ad20af0b00f195ae551279dc5d4d81aeb3a",
       "edits": [
         {
           "start": 50,
@@ -248640,11 +249075,32 @@
           "renamed": "GameScreen"
         },
         {
+          "start": 1085,
+          "end": 1092,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
+        },
+        {
+          "start": 1145,
+          "end": 1152,
+          "symbol": "F:md.field_b:[I",
+          "original": "field_b",
+          "renamed": "keyQueue"
+        },
+        {
           "start": 1153,
           "end": 1155,
           "symbol": "C:mg",
           "original": "mg",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 1156,
+          "end": 1163,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
         },
         {
           "start": 1189,
@@ -248654,11 +249110,32 @@
           "renamed": "GameScreen"
         },
         {
+          "start": 1192,
+          "end": 1199,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
+        },
+        {
           "start": 1202,
           "end": 1204,
           "symbol": "C:mg",
           "original": "mg",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 1205,
+          "end": 1212,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
+        },
+        {
+          "start": 1243,
+          "end": 1250,
+          "symbol": "F:hb.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueRead"
         },
         {
           "start": 1254,
@@ -248668,11 +249145,25 @@
           "renamed": "GameScreen"
         },
         {
+          "start": 1257,
+          "end": 1264,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
+        },
+        {
           "start": 1282,
           "end": 1284,
           "symbol": "C:mg",
           "original": "mg",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 1285,
+          "end": 1292,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
         },
         {
           "start": 1375,
@@ -248731,11 +249222,32 @@
           "renamed": "GameScreen"
         },
         {
+          "start": 3078,
+          "end": 3085,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
+        },
+        {
+          "start": 3142,
+          "end": 3149,
+          "symbol": "F:md.field_b:[I",
+          "original": "field_b",
+          "renamed": "keyQueue"
+        },
+        {
           "start": 3150,
           "end": 3152,
           "symbol": "C:mg",
           "original": "mg",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 3153,
+          "end": 3160,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
         },
         {
           "start": 3189,
@@ -248745,11 +249257,25 @@
           "renamed": "GameScreen"
         },
         {
+          "start": 3192,
+          "end": 3199,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
+        },
+        {
           "start": 3206,
           "end": 3208,
           "symbol": "C:mg",
           "original": "mg",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 3209,
+          "end": 3216,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
         },
         {
           "start": 3242,
@@ -248759,11 +249285,32 @@
           "renamed": "GameScreen"
         },
         {
+          "start": 3245,
+          "end": 3252,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
+        },
+        {
+          "start": 3259,
+          "end": 3266,
+          "symbol": "F:hb.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueRead"
+        },
+        {
           "start": 3286,
           "end": 3288,
           "symbol": "C:mg",
           "original": "mg",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 3289,
+          "end": 3296,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
         },
         {
           "start": 3852,
@@ -248932,6 +249479,13 @@
           "symbol": "C:mg",
           "original": "mg",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 6573,
+          "end": 6580,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
         },
         {
           "start": 7036,
@@ -251773,8 +252327,15 @@
       "original": "md.java",
       "renamed": "md.java",
       "inputSha256": "396b2b10f67db56d226108af18b6bed3ab869fab9990d689c3902b1d994868ed",
-      "outputSha256": "09765904e2693ad035fd9f173362f2deba5ae49ddedecb493d92a7991caf0e40",
+      "outputSha256": "c8ed4b47e711ddc48e46a69390fbf754b4f8c0d72d161e2d5eff49c30f84895e",
       "edits": [
+        {
+          "start": 124,
+          "end": 131,
+          "symbol": "F:md.field_b:[I",
+          "original": "field_b",
+          "renamed": "keyQueue"
+        },
         {
           "start": 743,
           "end": 744,
@@ -252131,6 +252692,20 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 3951,
+          "end": 3958,
+          "symbol": "F:md.field_b:[I",
+          "original": "field_b",
+          "renamed": "keyQueue"
+        },
+        {
+          "start": 4130,
+          "end": 4137,
+          "symbol": "F:md.field_b:[I",
+          "original": "field_b",
+          "renamed": "keyQueue"
         }
       ]
     },
@@ -253218,7 +253793,7 @@
       "original": "mg.java",
       "renamed": "GameScreen.java",
       "inputSha256": "1d966ea7c21f0b236b9e7fb8a64f352ad290f268c5dd3bfb6366fc020599c70c",
-      "outputSha256": "6db59642fc45d28aa9914a672ed998496334e1364b0839c7220465f5d8578fc7",
+      "outputSha256": "799be040b60c64736426770f19cd74adb487b5cea3645e98192df302c05859a1",
       "edits": [
         {
           "start": 50,
@@ -253226,6 +253801,13 @@
           "symbol": "C:mg",
           "original": "mg",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 70,
+          "end": 77,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
         },
         {
           "start": 187,
@@ -253550,6 +254132,13 @@
           "renamed": "ProxySocketConnector"
         },
         {
+          "start": 3962,
+          "end": 3969,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
+        },
+        {
           "start": 4036,
           "end": 4043,
           "symbol": "F:ea.field_x:I",
@@ -253809,6 +254398,13 @@
           "renamed": "SpriteState"
         },
         {
+          "start": 10823,
+          "end": 10825,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 10929,
           "end": 10930,
           "symbol": "C:g",
@@ -253828,6 +254424,13 @@
           "symbol": "F:ri.field_O:I",
           "original": "field_O",
           "renamed": "score"
+        },
+        {
+          "start": 11519,
+          "end": 11521,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 13343,
@@ -253940,6 +254543,20 @@
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "LevelGrid"
+        },
+        {
+          "start": 23084,
+          "end": 23091,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
+          "start": 23183,
+          "end": 23190,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
         },
         {
           "start": 23364,
@@ -254638,6 +255255,13 @@
           "renamed": "LevelGrid"
         },
         {
+          "start": 45174,
+          "end": 45181,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
           "start": 45203,
           "end": 45205,
           "symbol": "C:pc",
@@ -254797,6 +255421,13 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 66547,
+          "end": 66554,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
         },
         {
           "start": 66568,
@@ -257918,8 +258549,15 @@
       "original": "ni.java",
       "renamed": "ni.java",
       "inputSha256": "0284ec7b579e4ee3ddba179823e48408b80d7042f15d55f218aa97c247c804e5",
-      "outputSha256": "6b5cea86b4e9813c2c712b5305aa299287596ea47890974bea705a4524c22083",
+      "outputSha256": "e0af02a8dcbbdd0ffdedf63575a491e24582f34ba7c82b80b41ffb144c1a61f5",
       "edits": [
+        {
+          "start": 133,
+          "end": 140,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
         {
           "start": 1635,
           "end": 1637,
@@ -257963,11 +258601,39 @@
           "renamed": "toClientException"
         },
         {
+          "start": 3893,
+          "end": 3900,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
+          "start": 3948,
+          "end": 3955,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
+          "start": 4275,
+          "end": 4282,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
           "start": 4334,
           "end": 4336,
           "symbol": "C:gd",
           "original": "gd",
           "renamed": "CachedArchiveSource"
+        },
+        {
+          "start": 4881,
+          "end": 4888,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
         }
       ]
     },
@@ -258278,7 +258944,7 @@
       "original": "nl.java",
       "renamed": "ClientException.java",
       "inputSha256": "ba4887b1c38324c3b7bedc323a70af85c776ab1387396e89edcdd219bc374c9f",
-      "outputSha256": "cf9051b343c2416b4d1ab3888d5ee7b342ba07657c4a856d376ff474157fdc85",
+      "outputSha256": "0d1c48f6bd9450553842068206b6a360e71d034f6985230d3de40bc6a7e0be52",
       "edits": [
         {
           "start": 50,
@@ -258300,6 +258966,20 @@
           "symbol": "C:sl",
           "original": "sl",
           "renamed": "LevelGrid"
+        },
+        {
+          "start": 2121,
+          "end": 2123,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 2246,
+          "end": 2248,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 3594,
@@ -258899,7 +259579,7 @@
       "original": "ob.java",
       "renamed": "ob.java",
       "inputSha256": "0cb8803ff1acfebdf33d07cf087a552c3ab9f513be8337a765e06085b983c0e4",
-      "outputSha256": "2d87de814f1799728e5a5b18c5a09e36d93a0a8063ec8ee4520cbd91d60010ca",
+      "outputSha256": "2659c4f88d804969a68dbbdd2e5b9a176fa29f747c1823b386fd95b3749a714d",
       "edits": [
         {
           "start": 61,
@@ -258970,6 +259650,13 @@
           "symbol": "M:be.d(B)I",
           "original": "d",
           "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 2106,
+          "end": 2107,
+          "symbol": "M:ob.h(I)V",
+          "original": "h",
+          "renamed": "publishKeyState"
         },
         {
           "start": 2571,
@@ -259077,6 +259764,13 @@
           "renamed": "toClientException"
         },
         {
+          "start": 9053,
+          "end": 9054,
+          "symbol": "M:ob.h(I)V",
+          "original": "h",
+          "renamed": "publishKeyState"
+        },
+        {
           "start": 9479,
           "end": 9481,
           "symbol": "C:lj",
@@ -259098,6 +259792,20 @@
           "renamed": "GameScreen"
         },
         {
+          "start": 9523,
+          "end": 9530,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
+        },
+        {
+          "start": 9608,
+          "end": 9615,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
           "start": 9661,
           "end": 9663,
           "symbol": "C:mg",
@@ -259105,11 +259813,81 @@
           "renamed": "GameScreen"
         },
         {
+          "start": 9664,
+          "end": 9671,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
+        },
+        {
+          "start": 9677,
+          "end": 9684,
+          "symbol": "F:hb.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueRead"
+        },
+        {
+          "start": 9731,
+          "end": 9738,
+          "symbol": "F:hb.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueRead"
+        },
+        {
           "start": 9742,
           "end": 9744,
           "symbol": "C:mg",
           "original": "mg",
           "renamed": "GameScreen"
+        },
+        {
+          "start": 9745,
+          "end": 9752,
+          "symbol": "F:mg.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueWrite"
+        },
+        {
+          "start": 9782,
+          "end": 9789,
+          "symbol": "F:md.field_b:[I",
+          "original": "field_b",
+          "renamed": "keyQueue"
+        },
+        {
+          "start": 9793,
+          "end": 9800,
+          "symbol": "F:hb.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueRead"
+        },
+        {
+          "start": 9822,
+          "end": 9829,
+          "symbol": "F:hb.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueRead"
+        },
+        {
+          "start": 9835,
+          "end": 9842,
+          "symbol": "F:hb.field_f:I",
+          "original": "field_f",
+          "renamed": "keyQueueRead"
+        },
+        {
+          "start": 9907,
+          "end": 9914,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
+          "start": 9996,
+          "end": 10003,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
         },
         {
           "start": 10060,
@@ -259138,6 +259916,13 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 10958,
+          "end": 10960,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 11587,
@@ -259216,8 +260001,15 @@
       "original": "oe.java",
       "renamed": "oe.java",
       "inputSha256": "d4639ba3f3f6d74169d59464148ed7837c4dfa5c23628a4989d2d8a1e5489ad2",
-      "outputSha256": "e00f1b304a6be9bfeb4823692b9148139062946d0781409ee82522ed118cf982",
+      "outputSha256": "4e31e00c16925bcc7e77a733be290c9a4eddc3fe7f93a60e06a9a800ea197250",
       "edits": [
+        {
+          "start": 1240,
+          "end": 1242,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
         {
           "start": 1837,
           "end": 1839,
@@ -259287,8 +260079,15 @@
       "original": "of.java",
       "renamed": "of.java",
       "inputSha256": "93066d93420bf0462b7f85850aeaf78b1989612b4347c1cfc0f321cc01020ba4",
-      "outputSha256": "6510dc9058603859b97fcc39cdc90fbf6ca3b848ec09b0e1a0bf42cde1b9c155",
+      "outputSha256": "99667905712740ea5d4f93daa05f8a0b1ebeabc1a86a61be80fe72ffa369ef77",
       "edits": [
+        {
+          "start": 1156,
+          "end": 1158,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
         {
           "start": 1903,
           "end": 1905,
@@ -260092,7 +260891,7 @@
       "original": "ok.java",
       "renamed": "ok.java",
       "inputSha256": "4aad1a60ed00d8eea2d7b55a79c439152d74751178f45bd208382f4ee93bbd14",
-      "outputSha256": "7286652e8f2b3cbbe30ade1d012a28b9db3fb6a3e7ffa5fc65d7196feeec4a6a",
+      "outputSha256": "91d9e5ec20a43f56ebeac774d4d85d7316ec82386bd565582929ec39d9ee1997",
       "edits": [
         {
           "start": 85,
@@ -260156,6 +260955,13 @@
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 2921,
+          "end": 2928,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
         },
         {
           "start": 3590,
@@ -261397,7 +262203,7 @@
       "original": "pj.java",
       "renamed": "pj.java",
       "inputSha256": "8f61c5b49967c9e6e29e151006b0fea81eec33457b300e9709ac0ca0e633f3fa",
-      "outputSha256": "3f0214f2c702fbfc6244c96de0d4c69515cd9090a405d539ec6319d433c94ab6",
+      "outputSha256": "5709e37ae1032afabae913e81cc5e4fb466ebfb29975a698fcfa659ba08ad7ff",
       "edits": [
         {
           "start": 646,
@@ -261496,6 +262302,13 @@
           "symbol": "M:be.d(B)I",
           "original": "d",
           "renamed": "readUnsignedShort"
+        },
+        {
+          "start": 1775,
+          "end": 1777,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 2143,
@@ -261602,7 +262415,7 @@
       "original": "pl.java",
       "renamed": "pl.java",
       "inputSha256": "71b687fef947a2ab304f5810b071040d26269826736c4af8c7350a12540c98ef",
-      "outputSha256": "9bc572d341ce2d4d76490815546c2d3ae783e9869a77ac528dcff2d25aa5f7ee",
+      "outputSha256": "3fa3409c9b01ba29681f4c00762027495d982d554c6c4ecb2d3a02961dc45bc2",
       "edits": [
         {
           "start": 66,
@@ -261610,6 +262423,13 @@
           "symbol": "C:il",
           "original": "il",
           "renamed": "BufferedCacheFile"
+        },
+        {
+          "start": 930,
+          "end": 932,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 1544,
@@ -261701,6 +262521,13 @@
           "symbol": "C:cb",
           "original": "cb",
           "renamed": "MouseInputHandler"
+        },
+        {
+          "start": 3832,
+          "end": 3834,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 3858,
@@ -261806,6 +262633,13 @@
           "symbol": "M:be.e(B)I",
           "original": "e",
           "renamed": "readInt"
+        },
+        {
+          "start": 5770,
+          "end": 5772,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 5925,
@@ -267453,7 +268287,7 @@
       "original": "re.java",
       "renamed": "GameApplet.java",
       "inputSha256": "f0e397977ac1a0f4a9efefe99bd28839a0a5341e0a41ba14154d28437d7222fa",
-      "outputSha256": "d643ce709e69247215fcf9b41a9466bd54b431c5ba967e517a66caeda152cf9e",
+      "outputSha256": "6261fff13fd73ff59d36fcc28912c84e4b1283f26b532cf76a3edeb30b412695",
       "edits": [
         {
           "start": 60,
@@ -267489,6 +268323,13 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 1565,
+          "end": 1566,
+          "symbol": "M:re.a(I)V",
+          "original": "a",
+          "renamed": "drawFrame"
         },
         {
           "start": 1632,
@@ -267778,6 +268619,13 @@
           "renamed": "toClientException"
         },
         {
+          "start": 15760,
+          "end": 15761,
+          "symbol": "M:re.h(I)V",
+          "original": "h",
+          "renamed": "shutdown"
+        },
+        {
           "start": 16283,
           "end": 16285,
           "symbol": "C:sl",
@@ -267883,6 +268731,13 @@
           "renamed": "RandomAccessCacheFile"
         },
         {
+          "start": 22358,
+          "end": 22359,
+          "symbol": "M:re.c(B)V",
+          "original": "c",
+          "renamed": "initialise"
+        },
+        {
           "start": 23637,
           "end": 23638,
           "symbol": "M:hb.a(Ljava/lang/Throwable;ILjava/lang/String;)V",
@@ -267911,6 +268766,13 @@
           "renamed": "GameApplet"
         },
         {
+          "start": 24654,
+          "end": 24655,
+          "symbol": "M:re.e(I)V",
+          "original": "e",
+          "renamed": "clearStatics"
+        },
+        {
           "start": 25295,
           "end": 25297,
           "symbol": "C:sl",
@@ -267923,6 +268785,13 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 25390,
+          "end": 25391,
+          "symbol": "M:re.c(B)V",
+          "original": "c",
+          "renamed": "initialise"
         },
         {
           "start": 26375,
@@ -268086,6 +268955,13 @@
           "renamed": "ActiveLevel"
         },
         {
+          "start": 33714,
+          "end": 33715,
+          "symbol": "M:re.a(I)V",
+          "original": "a",
+          "renamed": "drawFrame"
+        },
+        {
           "start": 33952,
           "end": 33954,
           "symbol": "C:sl",
@@ -268098,6 +268974,20 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 34657,
+          "end": 34658,
+          "symbol": "M:re.h(I)V",
+          "original": "h",
+          "renamed": "shutdown"
+        },
+        {
+          "start": 35709,
+          "end": 35710,
+          "symbol": "M:re.e(I)V",
+          "original": "e",
+          "renamed": "clearStatics"
         },
         {
           "start": 36348,
@@ -268682,7 +269572,7 @@
       "original": "ri.java",
       "renamed": "ActiveLevel.java",
       "inputSha256": "edabddc46b2e6a2367a80c44d28b3fdaca9b91c3c81158c5ccacf75c054d42b8",
-      "outputSha256": "62bc3d0d741ce7d43d989675b1c159597ae00c954dc975b435be0a24d2a6db94",
+      "outputSha256": "02a2e50a18b78c35298ba4c1c64d5eed2b3d99b309611727f3352069e5bf8efb",
       "edits": [
         {
           "start": 50,
@@ -269455,6 +270345,13 @@
           "renamed": "LevelGrid"
         },
         {
+          "start": 17462,
+          "end": 17469,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
           "start": 17593,
           "end": 17600,
           "symbol": "F:ri.field_S:Lja;",
@@ -269833,6 +270730,62 @@
           "symbol": "F:ri.field_Z:I",
           "original": "field_Z",
           "renamed": "playerColumn"
+        },
+        {
+          "start": 24766,
+          "end": 24773,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
+          "start": 24818,
+          "end": 24825,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
+          "start": 24916,
+          "end": 24923,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
+          "start": 24946,
+          "end": 24953,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
+          "start": 24976,
+          "end": 24983,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
+          "start": 25006,
+          "end": 25013,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
+          "start": 25104,
+          "end": 25111,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
+          "start": 25156,
+          "end": 25163,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
         },
         {
           "start": 25238,
@@ -271263,6 +272216,13 @@
           "symbol": "F:me.field_m:I",
           "original": "field_m",
           "renamed": "tileValue"
+        },
+        {
+          "start": 49458,
+          "end": 49460,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 49483,
@@ -274083,7 +275043,7 @@
       "original": "sl.java",
       "renamed": "LevelGrid.java",
       "inputSha256": "135a4f518a96a528fbd156bb5366a88bb536eca25c01079e10c08e4bddd601bf",
-      "outputSha256": "8d2b078fb2d48edefb8b1efee370fd10f289f7f581f3ff961cbef746830e2827",
+      "outputSha256": "b92f87e9dfc3c4563c2f2c5c8b7487cc9cb1dc45bc74068656a24c1a849df0bb",
       "edits": [
         {
           "start": 53,
@@ -274175,6 +275135,13 @@
           "symbol": "F:sl.field_d:[[I",
           "original": "field_d",
           "renamed": "tileFlags"
+        },
+        {
+          "start": 1235,
+          "end": 1237,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 1392,
@@ -274751,7 +275718,7 @@
       "original": "td.java",
       "renamed": "td.java",
       "inputSha256": "8e1000da8fda478d067f333433ff9ec73c0c95376a6c78ab87078ca932904883",
-      "outputSha256": "18c71a70a2d05c6397c75c43e5e75e73a53ea593ceb24039b3420ce24332ab57",
+      "outputSha256": "50a52d3b079cf063373b3c4690f35b5380c8c0edbb935f29d68388bae05e95f5",
       "edits": [
         {
           "start": 76,
@@ -274803,11 +275770,25 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 2150,
+          "end": 2152,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 2174,
           "end": 2176,
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 2220,
+          "end": 2222,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 2509,
@@ -274817,11 +275798,25 @@
           "renamed": "isEmpty"
         },
         {
+          "start": 2580,
+          "end": 2582,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 2660,
           "end": 2662,
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 2768,
+          "end": 2770,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 2842,
@@ -274873,11 +275868,25 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 3868,
+          "end": 3870,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 3892,
           "end": 3894,
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 3938,
+          "end": 3940,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 4227,
@@ -274887,11 +275896,25 @@
           "renamed": "isEmpty"
         },
         {
+          "start": 4298,
+          "end": 4300,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 4334,
           "end": 4336,
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 4442,
+          "end": 4444,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 4522,
@@ -274936,6 +275959,20 @@
           "renamed": "toClientException"
         },
         {
+          "start": 5726,
+          "end": 5728,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 5740,
+          "end": 5742,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 5766,
           "end": 5768,
           "symbol": "C:al",
@@ -274964,11 +276001,25 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 6188,
+          "end": 6190,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 6254,
           "end": 6256,
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 6561,
+          "end": 6563,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 6597,
@@ -275013,11 +276064,25 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 7915,
+          "end": 7917,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 7981,
           "end": 7983,
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 8288,
+          "end": 8290,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 8363,
@@ -275062,11 +276127,25 @@
           "renamed": "toClientException"
         },
         {
+          "start": 9590,
+          "end": 9592,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 9607,
           "end": 9609,
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 9737,
+          "end": 9739,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 9771,
@@ -275088,6 +276167,20 @@
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 10155,
+          "end": 10157,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 10169,
+          "end": 10171,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 10195,
@@ -275153,6 +276246,13 @@
           "renamed": "toClientException"
         },
         {
+          "start": 10917,
+          "end": 10919,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 10934,
           "end": 10936,
           "symbol": "C:al",
@@ -275181,6 +276281,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 11186,
+          "end": 11188,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 11220,
           "end": 11222,
           "symbol": "C:al",
@@ -275202,11 +276309,25 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 11549,
+          "end": 11551,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 11573,
           "end": 11575,
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 11920,
+          "end": 11922,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 11956,
@@ -275244,6 +276365,20 @@
           "renamed": "toClientException"
         },
         {
+          "start": 13138,
+          "end": 13140,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 13152,
+          "end": 13154,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 13178,
           "end": 13180,
           "symbol": "C:al",
@@ -275279,6 +276414,20 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 13615,
+          "end": 13617,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 13984,
+          "end": 13986,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 14020,
           "end": 14022,
           "symbol": "C:al",
@@ -275300,6 +276449,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 14469,
+          "end": 14476,
+          "symbol": "F:ni.field_m:[Z",
+          "original": "field_m",
+          "renamed": "keyDown"
+        },
+        {
           "start": 15125,
           "end": 15127,
           "symbol": "C:sl",
@@ -275314,6 +276470,13 @@
           "renamed": "toClientException"
         },
         {
+          "start": 15503,
+          "end": 15505,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 15527,
           "end": 15529,
           "symbol": "C:al",
@@ -275326,6 +276489,13 @@
           "symbol": "C:ja",
           "original": "ja",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 16034,
+          "end": 16036,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 16070,
@@ -275363,6 +276533,20 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 17536,
+          "end": 17538,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 17550,
+          "end": 17552,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 17576,
           "end": 17578,
           "symbol": "C:al",
@@ -275398,6 +276582,13 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 17912,
+          "end": 17914,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 17978,
           "end": 17980,
           "symbol": "C:al",
@@ -275410,6 +276601,13 @@
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 18307,
+          "end": 18309,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 18343,
@@ -275461,11 +276659,25 @@
           "renamed": "UiWidget"
         },
         {
+          "start": 19642,
+          "end": 19644,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 19666,
           "end": 19668,
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 20019,
+          "end": 20021,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 20055,
@@ -276532,10 +277744,17 @@
     },
     {
       "original": "ue.java",
-      "renamed": "ue.java",
+      "renamed": "IntrusiveDequeCursor.java",
       "inputSha256": "3bbb910bc7899fd51385eb36da33d1a6876aa9568de17977cecfe529e7d35742",
-      "outputSha256": "0981ea48c3b36fef082f678618b224d6eddad504f21c4ee085d3b3f33e5fe0e9",
+      "outputSha256": "6b27debf42ce5339d69da9afd92dd739d20423fd6c7661e90b7cb9f8dc9b47d2",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
         {
           "start": 94,
           "end": 96,
@@ -276705,6 +277924,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 5267,
+          "end": 5269,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 5416,
           "end": 5423,
           "symbol": "F:fc.field_h:Lfc;",
@@ -276775,11 +278001,25 @@
           "renamed": "next"
         },
         {
+          "start": 12945,
+          "end": 12947,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 12982,
           "end": 12984,
           "symbol": "C:nl",
           "original": "nl",
           "renamed": "ClientException"
+        },
+        {
+          "start": 14305,
+          "end": 14307,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 14391,
@@ -276808,6 +278048,13 @@
           "symbol": "C:qc",
           "original": "qc",
           "renamed": "ProxySocketConnector"
+        },
+        {
+          "start": 15287,
+          "end": 15289,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 15392,
@@ -276850,6 +278097,13 @@
           "symbol": "F:fc.field_h:Lfc;",
           "original": "field_h",
           "renamed": "next"
+        },
+        {
+          "start": 15824,
+          "end": 15826,
+          "symbol": "M:ue.<init>(Lja;)V",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 15827,
@@ -277777,7 +279031,7 @@
       "original": "vd.java",
       "renamed": "vd.java",
       "inputSha256": "5a7c0f9d4b50fbc2a66da3ab8f2fb238712c3150c012980d2c35f82a45007746",
-      "outputSha256": "66e4182b68168e648f897f16d9ad021992ab74fb02cb992f75e4429eae920276",
+      "outputSha256": "885210cdaf74b481d6bfc03e16123b3eed9b6ec1a2743575606ea66b80184625",
       "edits": [
         {
           "start": 98,
@@ -278086,6 +279340,27 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 16993,
+          "end": 16995,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 17117,
+          "end": 17119,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 17195,
+          "end": 17197,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 17693,
@@ -278560,7 +279835,7 @@
       "original": "vh.java",
       "renamed": "vh.java",
       "inputSha256": "a570890fa96f9d1f84faa89abef8a93ff6bc87a50c481116c597562d3886ac4d",
-      "outputSha256": "b9a553aa3542b614bb73c0d880d9ac4c2d7db2ed49ce5423052f0f69f298d509",
+      "outputSha256": "41261c2bd64eaf7807741e3c56d3d3c0cc4f4383b55efbab315a95e09753eba8",
       "edits": [
         {
           "start": 64,
@@ -278568,6 +279843,13 @@
           "symbol": "C:gb",
           "original": "gb",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 251,
+          "end": 253,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 2655,
@@ -279439,7 +280721,7 @@
       "original": "vl.java",
       "renamed": "vl.java",
       "inputSha256": "f761c82d38f3ddb2ddd76c5e92e78c5b022f4a5173b93b2077c1971db7037d81",
-      "outputSha256": "a66d808166b56ef48421f37bbeb9005aff93b33fe39699b2343006cd7e4dab2c",
+      "outputSha256": "02dc9f2897dc54c90cc3f5064e6d1680e5e20cb85b675da06daca7e0962003b5",
       "edits": [
         {
           "start": 129,
@@ -279470,6 +280752,20 @@
           "renamed": "SpriteState"
         },
         {
+          "start": 1072,
+          "end": 1074,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 1086,
+          "end": 1088,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 1218,
           "end": 1219,
           "symbol": "M:fc.a(I)V",
@@ -279496,6 +280792,20 @@
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 1790,
+          "end": 1792,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 1804,
+          "end": 1806,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 1879,
@@ -279531,6 +280841,20 @@
           "symbol": "C:al",
           "original": "al",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 2137,
+          "end": 2139,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 2308,
+          "end": 2310,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 2678,
@@ -279687,11 +281011,39 @@
           "renamed": "toClientException"
         },
         {
+          "start": 5232,
+          "end": 5234,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 5246,
+          "end": 5248,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
           "start": 5377,
           "end": 5378,
           "symbol": "M:fc.a(I)V",
           "original": "a",
           "renamed": "unlink"
+        },
+        {
+          "start": 5487,
+          "end": 5489,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 5598,
+          "end": 5600,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         },
         {
           "start": 5933,
@@ -279734,6 +281086,20 @@
           "symbol": "M:sl.a(Ljava/lang/Throwable;Ljava/lang/String;)Lnl;",
           "original": "a",
           "renamed": "toClientException"
+        },
+        {
+          "start": 6773,
+          "end": 6775,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
+        },
+        {
+          "start": 6787,
+          "end": 6789,
+          "symbol": "C:ue",
+          "original": "ue",
+          "renamed": "IntrusiveDequeCursor"
         }
       ]
     },
@@ -282032,10 +283398,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/trackcontroller"
     },
-    "rulesSha256": "780c0c76c78d3e05d11e21278520e943c2f97cd59b19dd2f805d4918554d3971",
+    "rulesSha256": "ee4bcdc1426fe02a7d29fc027623d783179c768df31e73eabcc2c4bfa710f250",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "78a266fb3e910cf36289bf150b4632ec135a3d86382a63cb13b8e75c7d49ce74",
-    "outputTreeSha256": "250f31823a29c82f3a141694f7fe87af55aa5847a643d8566527fad81e399d1b",
+    "outputTreeSha256": "ea1e6ff38f590236a4d36c23f9d54414e0843170d86cbefa990d73d809741e10",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

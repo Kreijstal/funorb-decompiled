@@ -41,7 +41,7 @@ final class vl extends ok {
         if (!param0) {
           return;
         }
-        ue var2 = new ue(this.field_L);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_L);
         hl var3 = (hl) (var2.d(91));
         while (var3 != null) {
           if (var3.j(-27)) {
@@ -65,7 +65,7 @@ final class vl extends ok {
         if (null != this.field_y) {
           this.field_y.a(param3 ^ -5038, (UiWidget) (this), param2, true, param1);
         }
-        ue var5 = new ue(this.field_L);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_L);
         if (param3 != 29221) {
           this.field_L = (IntrusiveDeque) null;
         }
@@ -77,14 +77,14 @@ final class vl extends ok {
     }
 
     final UiWidget i(int param0) {
-        ue var2;
+        IntrusiveDequeCursor var2;
         hl var3;
         int var4;
         var4 = TrackController.field_F ? 1 : 0;
         if (param0 != 199) {
           vl.n(-90);
         }
-        var2 = new ue(this.field_L);
+        var2 = new IntrusiveDequeCursor(this.field_L);
         var3 = (hl) (var2.d(param0 ^ 148));
         while (var3 != null) {
           if (var3.field_E) {
@@ -168,7 +168,7 @@ final class vl extends ok {
         if (param0 > -84) {
           field_E = (String) null;
         }
-        ue var2 = new ue(this.field_L);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_L);
         hl var3 = (hl) (var2.d(105));
         while (var3 != null) {
           if (var3.k(0)) {
@@ -179,11 +179,11 @@ final class vl extends ok {
     }
 
     final hl j(int param0) {
-        ue var2;
+        IntrusiveDequeCursor var2;
         hl var3;
         int var4;
         var4 = TrackController.field_F ? 1 : 0;
-        var2 = new ue(this.field_L);
+        var2 = new IntrusiveDequeCursor(this.field_L);
         if (param0 != -6121) {
           return (hl) null;
         }
@@ -224,7 +224,7 @@ final class vl extends ok {
 
     final void l(int param0) {
         int var4 = TrackController.field_F ? 1 : 0;
-        ue var2 = new ue(this.field_L);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_L);
         hl var3 = (hl) (var2.d(75));
         while (var3 != null) {
           var3.field_E = false;

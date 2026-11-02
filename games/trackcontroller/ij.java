@@ -378,18 +378,18 @@ final class ij implements t {
             }
             jf.field_i = new String[var4];
             pd.a(ok.field_C, 0, jf.field_i, 0, var4);
-            ue.field_c = new String[-var4 + var3_int - 1];
-            pd.a(ok.field_C, 1 + var4, ue.field_c, 0, -1 + (var3_int - var4));
+            IntrusiveDequeCursor.field_c = new String[-var4 + var3_int - 1];
+            pd.a(ok.field_C, 1 + var4, IntrusiveDequeCursor.field_c, 0, -1 + (var3_int - var4));
             if (jf.field_i.length > el.field_O.length) {
               stackIn_22_0 = jf.field_i.length;
             } else {
               stackIn_22_0 = el.field_O.length;
             }
             var5 = stackIn_22_0;
-            if (ue.field_c.length <= bk.field_J.length) {
+            if (IntrusiveDequeCursor.field_c.length <= bk.field_J.length) {
               stackIn_25_0 = bk.field_J.length;
             } else {
-              stackIn_25_0 = ue.field_c.length;
+              stackIn_25_0 = IntrusiveDequeCursor.field_c.length;
             }
             var6 = stackIn_25_0;
             var7 = var6 + var5 + 7;
@@ -424,10 +424,10 @@ final class ij implements t {
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
               stackIn_38_0 = sa.field_I;
               stackIn_38_1 = var8Lifetime3 + (var5 + 7);
-              if (ue.field_c.length <= var8Lifetime3) {
+              if (IntrusiveDequeCursor.field_c.length <= var8Lifetime3) {
                 stackIn_39_2 = "";
               } else {
-                stackIn_39_2 = ue.field_c[var8Lifetime3];
+                stackIn_39_2 = IntrusiveDequeCursor.field_c[var8Lifetime3];
               }
               stackIn_38_0[stackIn_38_1] = stackIn_39_2;
             }

@@ -6,7 +6,7 @@ import java.io.*;
 final class hb {
     static String field_a;
     static java.awt.Image field_i;
-    static int field_f;
+    static int keyQueueRead;
     private int field_g;
     private int field_b;
     private IterableNodeHashTable field_e;
@@ -275,6 +275,6 @@ final class hb {
         field_a = "OK";
         field_d = "Type your password again to make sure it's correct";
         field_c = "Time bonus: ";
-        field_f = 0;
+        keyQueueRead = 0;
     }
 }

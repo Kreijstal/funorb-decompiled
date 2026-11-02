@@ -33,7 +33,7 @@ final class of extends ec {
             !sa.field_P.equals(param0.getParameter("session"))) {
             var4 = sa.field_P;
           }
-          stackIn_10_0 = ue.a(param1, 56, (String) (var3), -1, (String) (var4));
+          stackIn_10_0 = IntrusiveDequeCursor.a(param1, 56, (String) (var3), -1, (String) (var4));
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

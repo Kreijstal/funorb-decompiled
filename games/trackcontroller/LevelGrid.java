@@ -41,7 +41,7 @@ abstract class LevelGrid {
               var8 < 38) {
               ii.tileSprites[var8].e(var6, var4);
               if ((this.tileFlags[var5][var7] & 64) != 0) {
-                ue.a(var6, var8, (byte) 91, var4);
+                IntrusiveDequeCursor.a(var6, var8, (byte) 91, var4);
               }
             } else {
               if (var8 == 38) {

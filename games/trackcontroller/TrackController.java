@@ -27,14 +27,14 @@ public final class TrackController extends GameShell {
           fieldTemp$0 = na.field_b + 1;
           na.field_b = na.field_b + 1;
           if (fieldTemp$0 < 0 && (0 != SecondaryNodeDeque.mouseButton ||
-            ni.field_m[84])) {
+            ni.keyDown[84])) {
             na.field_b = 0;
           }
           if (na.field_b >= 80) {
             boolean decompiledFrameRemainder1 = true;
             if (~ib.field_a == ~sc.field_g &&
               0 == NodeHashTable.field_g) {
-              if (ni.field_m[85]) {
+              if (ni.keyDown[85]) {
                 SpriteState.field_p = SpriteState.field_p + 1;
               } else {
                 SpriteState.field_p = 0;
@@ -50,7 +50,7 @@ public final class TrackController extends GameShell {
               }
               if ((decompiledFrameRemainder1) &&
                 (decompiledFrameRemainder0)) {
-                if (ni.field_m[13]) {
+                if (ni.keyDown[13]) {
                   si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
                   stackIn_50_0 = (SocketConnector.field_d <= 0) ? 13 : 12;
                   sc.field_g = stackIn_50_0;
@@ -159,10 +159,10 @@ public final class TrackController extends GameShell {
 
     }
 
-    final void h(int param0) {
+    final void shutdown(int param0) {
         IntrusiveNode.a(false);
         if (param0 != -24452) {
-          this.h(-78);
+          this.shutdown(-78);
         }
         if (null != og.field_rb) {
           oj.a(-111);
@@ -170,7 +170,7 @@ public final class TrackController extends GameShell {
         ei.d(-18601);
     }
 
-    final void a(int param0) {
+    final void drawFrame(int param0) {
         Object stackIn_3_0 = null;
         int stackIn_6_0 = 0;
         boolean stackIn_7_1 = false;
@@ -291,7 +291,7 @@ public final class TrackController extends GameShell {
         l.a((byte) 105, (java.awt.Canvas) (var7));
     }
 
-    final void e(int param0) {
+    final void clearStatics(int param0) {
         TrackController.q(-29224);
         MouseInputHandler.a((byte) 120);
         IntrusiveDeque.c(false);
@@ -435,7 +435,7 @@ public final class TrackController extends GameShell {
         ok.d((byte) -7);
         wd.p(35);
         hl.l(param0 ^ -66);
-        ue.b(param0 ^ -18);
+        IntrusiveDequeCursor.b(param0 ^ -18);
         ie.b(82);
         df.b();
         kf.b(-1688814815);
@@ -568,7 +568,7 @@ public final class TrackController extends GameShell {
             if (!ic.a(1)) {
               return;
             }
-            discarded$0 = this.b(467, false);
+            discarded$0 = this.loadAssets(467, false);
             return;
           }
           if (!jj.s(109)) {
@@ -642,7 +642,7 @@ public final class TrackController extends GameShell {
           }
         } else {
           od.a((byte) -116, NodeHashTableIterator.field_c);
-          if (this.b(467, true)) {
+          if (this.loadAssets(467, true)) {
             Model.field_T = true;
           }
         }
@@ -704,7 +704,7 @@ public final class TrackController extends GameShell {
         o.a((byte) -46);
     }
 
-    final void c(byte param0) {
+    final void initialise(byte param0) {
         this.a(false, 0, 10, 12, 7, (byte) 3, 11, 9);
         MidiPlayer var2 = new MidiPlayer();
         var2.a(false, 128, 9);
@@ -716,7 +716,7 @@ public final class TrackController extends GameShell {
         LevelGrid.field_n = 0;
     }
 
-    private final boolean b(int param0, boolean param1) {
+    private final boolean loadAssets(int param0, boolean param1) {
         try {
           int[] array$6 = null;
           Sprite dupTemp$5 = null;
@@ -824,7 +824,7 @@ public final class TrackController extends GameShell {
                               return false;
                             }
                             mf.c((byte) 114);
-                            this.a(160);
+                            this.drawFrame(160);
                             vj.field_a = ab.a("basic", -15383, "unachieved", el.field_L);
                             ei.a(vj.field_a, -1);
                             ii.field_p = ab.a("basic", -15383, "locked", el.field_L);
@@ -890,7 +890,7 @@ public final class TrackController extends GameShell {
           if (sg.field_a == null) {
             if (null != j.field_h) {
               ud.a(param0 ^ 339, 75.0f, ld.field_a);
-              this.a(160);
+              this.drawFrame(160);
               od.field_d = new jc(j.field_h, lh.field_C);
               va.field_d[0] = cc.a(j.field_h, "", "track_wrong_password").b();
               va.field_d[1] = cc.a(j.field_h, "", "track_correct_password").b();
@@ -925,7 +925,7 @@ public final class TrackController extends GameShell {
             }
             if (sk.field_j != null) {
               ud.a(128, 80.0f, ji.field_e);
-              this.a(160);
+              this.drawFrame(160);
               Model.field_P[0] = MidiFile.a(sk.field_j, "", "track controller titlescreen");
               Model.field_P[1] = MidiFile.a(sk.field_j, "", "track controller new");
               Model.field_P[2] = MidiFile.a(sk.field_j, "", "track controller level complete");
@@ -949,7 +949,7 @@ public final class TrackController extends GameShell {
             }
             if (SocketArchiveRequestConnection.avatarSprites[1][0] == null) {
               ud.a(128, 95.0f, SecondaryNodeDeque.field_f);
-              this.a(160);
+              this.drawFrame(160);
               var3 = 208;
               for (var4 = 1; 32 > var4; var4++) {
                 var5 = var4 * 65536 / 32;

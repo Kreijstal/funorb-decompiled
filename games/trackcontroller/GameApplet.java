@@ -41,7 +41,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void a(int param0);
+    abstract void drawFrame(int param0);
 
     public abstract void init();
 
@@ -411,7 +411,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void h(int param0);
+    abstract void shutdown(int param0);
 
     public final void start() {
         RuntimeException runtimeException = null;
@@ -576,7 +576,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 RandomAccessCacheFile.c((byte) 46);
                 this.f(-121);
                 ia.field_b = tf.a(og.field_pb, true, wf.field_b, (java.awt.Component) ((Object) ki.field_f));
-                this.c((byte) 122);
+                this.initialise((byte) 122);
                 wl.field_i = qk.j(-17514);
                 do {
                   boolean decompiledFrameRemainder0 = true;
@@ -634,7 +634,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         System.out.println("Error: " + bb.a(param1, (byte) -82, "\n", "%0a"));
     }
 
-    abstract void e(int param0);
+    abstract void clearStatics(int param0);
 
     public final void windowIconified(java.awt.event.WindowEvent param0) {
     }
@@ -658,7 +658,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    abstract void c(byte param0);
+    abstract void initialise(byte param0);
 
     private final void d(int param0) {
         RuntimeException runtimeException = null;
@@ -878,7 +878,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               ki.field_f.setLocation(DualLinkNode.field_i, ActiveLevel.field_P);
             }
           }
-          this.a(160);
+          this.drawFrame(160);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -908,7 +908,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             q.field_c.destroy();
           }
           try {
-            this.h(-24452);
+            this.shutdown(-24452);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
@@ -930,7 +930,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               exception = (Exception) (Object) decompiledCaughtException;
             }
           }
-          this.e(105);
+          this.clearStatics(105);
           if (null != ii.field_s) {
             try {
               System.exit(0);

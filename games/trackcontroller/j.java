@@ -243,7 +243,7 @@ final class j {
         try {
           param0.removeKeyListener(cj.field_o);
           param0.removeFocusListener(cj.field_o);
-          GameScreen.field_f = -1;
+          GameScreen.keyQueueWrite = -1;
           if (param1 <= 55) {
             field_c = -8;
           }
