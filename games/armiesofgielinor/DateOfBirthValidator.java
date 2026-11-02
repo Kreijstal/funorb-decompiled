@@ -64,7 +64,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements EditableT
           currentYear = ActionSpell.b(true);
           if (year >= 1890 &&
             year <= currentYear - 3) {
-            if (dt.isValidDate(year, -24375, monthIndex, day)) {
+            if (DateValiditySupport.isValidDate(year, -24375, monthIndex, day)) {
               validDiagnostic = null;
               return (String) (validDiagnostic);
             }
@@ -79,17 +79,17 @@ final class DateOfBirthValidator extends DebouncedValidator implements EditableT
         return StateChangeEvent.field_z;
     }
 
-    final static rn a(String param0, byte param1) {
+    final static ProceduralMapSupport a(String param0, byte param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
         int var4 = 0;
         int var5 = 0;
         String var6 = null;
-        rn stackIn_4_0 = null;
-        rn stackIn_8_0 = null;
-        rn stackIn_18_0 = null;
-        rn stackIn_21_0 = null;
+        ProceduralMapSupport stackIn_4_0 = null;
+        ProceduralMapSupport stackIn_8_0 = null;
+        ProceduralMapSupport stackIn_18_0 = null;
+        ProceduralMapSupport stackIn_21_0 = null;
         Object stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -111,12 +111,12 @@ final class DateOfBirthValidator extends DebouncedValidator implements EditableT
             if (var4 == 45) {
               if (var3 == 0 ||
                 var2_int - 1 == var3) {
-                stackIn_18_0 = ov.field_h;
+                stackIn_18_0 = SpectateRoomRequestSupport.field_h;
                 return stackIn_18_0;
               }
             } else {
               if (ArchiveProvider.field_c.indexOf(var4) == -1) {
-                stackIn_21_0 = ov.field_h;
+                stackIn_21_0 = SpectateRoomRequestSupport.field_h;
                 return stackIn_21_0;
               }
             }
@@ -127,7 +127,7 @@ final class DateOfBirthValidator extends DebouncedValidator implements EditableT
           var6 = (String) null;
           DateOfBirthValidator.a((String) null, (byte) -62);
           stackIn_26_0 = null;
-          return (rn) (stackIn_26_0);
+          return (ProceduralMapSupport) (stackIn_26_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -159,24 +159,24 @@ final class DateOfBirthValidator extends DebouncedValidator implements EditableT
           year = this.input.getYear((byte) -77);
           currentYear = ActionSpell.b(true);
           if (year < 1890) {
-            tooOldState = rn.validationInvalid;
+            tooOldState = ProceduralMapSupport.validationInvalid;
             return tooOldState;
           }
           guardRemainder = 26 % ((obfuscationGuard - 56) / 32);
           if (year > -3 + currentYear) {
-            tooRecentState = rn.validationInvalid;
+            tooRecentState = ProceduralMapSupport.validationInvalid;
             return tooRecentState;
           }
-          if (!dt.isValidDate(year, -24375, monthIndex, day)) {
-            invalidCalendarState = rn.validationInvalid;
+          if (!DateValiditySupport.isValidDate(year, -24375, monthIndex, day)) {
+            invalidCalendarState = ProceduralMapSupport.validationInvalid;
             return invalidCalendarState;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           parseFailure = (NumberFormatException) (Object) decompiledCaughtException;
-          return rn.validationInvalid;
+          return ProceduralMapSupport.validationInvalid;
         }
-        return oo.validationValid;
+        return MembershipExpansionScreen.validationValid;
     }
 
     public final boolean isInputEmpty(int obfuscationGuard) {

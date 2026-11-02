@@ -53,7 +53,7 @@ final class ScrollWidgetContainer extends ArrayWidgetContainer {
           if (!obfuscationGuard) {
             field_N = (String) null;
           }
-          stackIn_3_0 = de.readTieredSignedInt(-102, packet, 4, 14, 30, 20);
+          stackIn_3_0 = SpellCastErrorSupport.readTieredSignedInt(-102, packet, 4, 14, 30, 20);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

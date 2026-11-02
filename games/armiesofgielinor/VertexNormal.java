@@ -87,9 +87,9 @@ final class VertexNormal {
           var8 = 0;
           if (ToggleWidget.currentRoom != null && (null != ep.field_p ||
             GameAppletShell.field_e != null ||
-            jv.field_d != null ||
+            SoundPanSupport.field_d != null ||
             CombatPresentation.field_j != null)) {
-            for (var9 = 0; var9 < tq.gameOptionCount; var9++) {
+            for (var9 = 0; var9 < NineSliceSpriteSupport.gameOptionCount; var9++) {
               var10_int = ToggleWidget.currentRoom.gameOptions[var9] & 255;
               if (null != ep.field_p &&
                 null != ep.field_p[var9] &&
@@ -103,15 +103,15 @@ final class VertexNormal {
                   var6 = var11_int;
                 }
                 if (var11_int != 0 &&
-                  !bj.field_k) {
+                  !AlphaDecodedSpriteSupport.field_k) {
                   var5_int = 1;
                 }
               }
-              if (jv.field_d != null &&
-                jv.field_d[var9] != null) {
-                var11_intLifetime1 = jv.field_d[var9][var10_int];
+              if (SoundPanSupport.field_d != null &&
+                SoundPanSupport.field_d[var9] != null) {
+                var11_intLifetime1 = SoundPanSupport.field_d[var9][var10_int];
                 if (var11_intLifetime1 != 0 &&
-                  !bj.field_k) {
+                  !AlphaDecodedSpriteSupport.field_k) {
                   var5_int = 1;
                 }
                 if (var11_intLifetime1 > var7) {
@@ -307,7 +307,7 @@ final class VertexNormal {
                 ActionSpell.writePlayerAdmissionRequest(var12.accountId, param3, 6);
               } else {
                 if (0 == var12.cancelRejectButton.pressedButton) {
-                  bk.a(false, 0, BattleTutorial.pointerPressX, 0, var12, param4, TeleportAction.pointerPressY);
+                  MusicTrackSelectionSupport.a(false, 0, BattleTutorial.pointerPressX, 0, var12, param4, TeleportAction.pointerPressY);
                 } else {
                   SoundPlaybackHandle.writePlayerAdmissionCancellation(param3, var12.accountId, (byte) 97);
                 }
@@ -343,7 +343,7 @@ final class VertexNormal {
                         }
                       }
                     } else {
-                      var24Lifetime2 = EmailCheckResult.a(4800, bk.field_g, new String[]{var20, Integer.toString(var6)});
+                      var24Lifetime2 = EmailCheckResult.a(4800, MusicTrackSelectionSupport.field_g, new String[]{var20, Integer.toString(var6)});
                     }
                   } else {
                     var25_int = -var12.ratedGamesPlayed + var7;
@@ -377,7 +377,7 @@ final class VertexNormal {
                         }
                       }
                     } else {
-                      var24Lifetime2 = EmailCheckResult.a(4800, vi.field_b, new String[]{null, Integer.toString(var6)});
+                      var24Lifetime2 = EmailCheckResult.a(4800, MonotonicClockSupport.field_b, new String[]{null, Integer.toString(var6)});
                     }
                   }
                 }
@@ -391,7 +391,7 @@ final class VertexNormal {
                 var25 = var30_refLifetime1;
                 var25 = null;
                 var26Lifetime1 = 0;
-                for (var27_int = 0; var27_int < tq.gameOptionCount; var27_int++) {
+                for (var27_int = 0; var27_int < NineSliceSpriteSupport.gameOptionCount; var27_int++) {
                   var28 = ToggleWidget.currentRoom.gameOptions[var27_int] & 255;
                   var29 = 0;
                   if (ep.field_p != null &&
@@ -404,7 +404,7 @@ final class VertexNormal {
                     null != GameAppletShell.field_e[var27_int]) {
                     var30_int = GameAppletShell.field_e[var27_int][var28];
                     if (var30_int != 0 &&
-                      !bj.field_k &&
+                      !AlphaDecodedSpriteSupport.field_k &&
                       !var12.packedFlag0) {
                       var29 = 1;
                     }
@@ -412,11 +412,11 @@ final class VertexNormal {
                       var29 = 1;
                     }
                   }
-                  if (jv.field_d != null &&
-                    null != jv.field_d[var27_int]) {
-                    var30_intLifetime1 = jv.field_d[var27_int][var28];
+                  if (SoundPanSupport.field_d != null &&
+                    null != SoundPanSupport.field_d[var27_int]) {
+                    var30_intLifetime1 = SoundPanSupport.field_d[var27_int][var28];
                     if (var30_intLifetime1 != 0 &&
-                      !bj.field_k &&
+                      !AlphaDecodedSpriteSupport.field_k &&
                       !var12.packedFlag0) {
                       var29 = 1;
                     }

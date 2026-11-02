@@ -891,10 +891,10 @@ abstract class BitmapFont extends DualLinkedNode {
               }
               left = left + this.advances[character];
               if (strikethroughColour != -1) {
-                SoftwareRaster.e(glyphLeft, baselineY + (int)((double)this.baselineHeight * 0.7), left - glyphLeft, strikethroughColour);
+                SoftwareRaster.drawHorizontalLine(glyphLeft, baselineY + (int)((double)this.baselineHeight * 0.7), left - glyphLeft, strikethroughColour);
               }
               if (underlineColour != -1) {
-                SoftwareRaster.e(glyphLeft, baselineY + this.baselineHeight + 1, left - glyphLeft, underlineColour);
+                SoftwareRaster.drawHorizontalLine(glyphLeft, baselineY + this.baselineHeight + 1, left - glyphLeft, underlineColour);
               }
               previousGlyph = character;
             }

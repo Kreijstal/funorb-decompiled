@@ -18,7 +18,7 @@ final class FullscreenConfirmationDialog extends ResizableModalDialog implements
         super(host, 200, 200);
         Widget var3 = null;
         try {
-          this.startedAtMillis = vi.monotonicMillis(-95);
+          this.startedAtMillis = MonotonicClockSupport.monotonicMillis(-95);
           var3 = new Widget(ProgressMessageDialog.field_vb, (WidgetListener) null);
           var3.y = 50;
           var3.height = 100;
@@ -52,7 +52,7 @@ final class FullscreenConfirmationDialog extends ResizableModalDialog implements
             this.closeConfirmation(10);
           } else {
             if (widget == this.cancelButton) {
-              ck.b(-65);
+              StructureTerrainSupport.b(-65);
               this.closeConfirmation(10);
             }
           }
@@ -119,10 +119,10 @@ final class FullscreenConfirmationDialog extends ResizableModalDialog implements
           if (BitmapTextWidgetPainter.pointerChangedSnapshot) {
             rootWidget.blur(obfuscationGuard - 32721);
           }
-          elapsedMillis = vi.monotonicMillis(92) - this.startedAtMillis;
+          elapsedMillis = MonotonicClockSupport.monotonicMillis(92) - this.startedAtMillis;
           remainingSeconds = (int)((10999L - elapsedMillis) / 1000L);
           if (0 >= remainingSeconds) {
-            ck.b(-62);
+            StructureTerrainSupport.b(-62);
             this.closeConfirmation(10);
             this.host.showDialog(new FullscreenStatusDialog(this.host, FullscreenMembershipDialog.field_cb), 0);
           } else {

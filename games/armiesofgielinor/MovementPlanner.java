@@ -61,7 +61,7 @@ final class MovementPlanner {
             packet.writeByte(1, 0);
             packet.writeByte(1, this.unit.tileX);
             packet.writeByte(1, this.unit.tileY);
-            pd.a(this.targetDeltaX, this.targetDeltaY, packet, -100);
+            PasswordLengthSupport.a(this.targetDeltaX, this.targetDeltaY, packet, -100);
             stackIn_3_0 = var4_int;
             return stackIn_3_0;
           }
@@ -94,8 +94,8 @@ final class MovementPlanner {
           packet.writeByte(1, 255 & this.pathLength);
           packet.writeByte(1, this.unit.tileX);
           packet.writeByte(1, this.unit.tileY);
-          jj.a((byte) -112, this.pathLength, packet, this.pathDirections);
-          pd.a(this.targetDeltaX, this.targetDeltaY, packet, -73);
+          FriendLookupSupport.a((byte) -112, this.pathLength, packet, this.pathDirections);
+          PasswordLengthSupport.a(this.targetDeltaX, this.targetDeltaY, packet, -73);
           stackIn_19_0 = var4_intLifetime1;
           return stackIn_19_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -211,7 +211,7 @@ final class MovementPlanner {
           this.targetDeltaX = 0;
           this.targetX = targetX;
           if (this.unit.unitType != 51 && (this.spellId <= -1 ||
-            uc.spellDefinitions[this.spellId][5] != 24)) {
+            SpellDefinitionTable.spellDefinitions[this.spellId][5] != 24)) {
             targetUnit = this.battlefield.getUnitAt(targetY, true, targetX);
             if (targetUnit == null) {
               this.reconstructPath(targetY, (byte) -116, targetX);
@@ -253,7 +253,7 @@ final class MovementPlanner {
         pathStepIndex = 0;
         this.showMovementPath = true;
         if (-1 < this.spellId &&
-          uc.spellDefinitions[this.spellId][5] == 18) {
+          SpellDefinitionTable.spellDefinitions[this.spellId][5] == 18) {
         }
         while (true) {
           if (this.movementCosts[pathTileIndex] > 0) {
@@ -386,7 +386,7 @@ final class MovementPlanner {
             bestMovementCost = 0;
           }
           if (this.spellId > -1 &&
-            uc.spellDefinitions[this.spellId][5] == 18) {
+            SpellDefinitionTable.spellDefinitions[this.spellId][5] == 18) {
             bestMovementCost = bestMovementCost << 1;
           }
           selectedOriginX = this.unit.tileX;
@@ -620,7 +620,7 @@ final class MovementPlanner {
         }
         int var2 = 3 * WhirlpoolHasher.unitDefinitions[this.unitType][3];
         if (this.spellId > -1 &&
-          18 == uc.spellDefinitions[this.spellId][5]) {
+          18 == SpellDefinitionTable.spellDefinitions[this.spellId][5]) {
           var2 = var2 << 1;
         }
         if (this.unit != null) {
@@ -706,8 +706,8 @@ final class MovementPlanner {
           minimumAttackRange = this.unit.getMinimumAttackRange((byte) -79);
           this.resetCosts(0);
           if (this.spellId > -1 &&
-            24 == uc.spellDefinitions[this.spellId][5]) {
-            this.fillDirectRangeCosts(false, uc.spellDefinitions[this.spellId][6], 93);
+            24 == SpellDefinitionTable.spellDefinitions[this.spellId][5]) {
+            this.fillDirectRangeCosts(false, SpellDefinitionTable.spellDefinitions[this.spellId][6], 93);
             return;
           }
           if (this.unitType == 51) {
@@ -1114,7 +1114,7 @@ final class MovementPlanner {
           if (centerPattern == 2) {
             preferredScatteredTerrain = 5;
           }
-          on.scatterMapTerrain(battlefield, preferredScatteredTerrain, false, random);
+          TerrainScatterSupport.scatterMapTerrain(battlefield, preferredScatteredTerrain, false, random);
           battlefield.installMap((byte) -119, battlefield.mapWidth, battlefield.mapHeight, battlefield.tiles);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1162,7 +1162,7 @@ final class MovementPlanner {
             packet.writeByte(1, 0);
             packet.writeByte(1, this.unit.tileX);
             packet.writeByte(1, this.unit.tileY);
-            pd.a(this.targetDeltaX, this.targetDeltaY, packet, 127);
+            PasswordLengthSupport.a(this.targetDeltaX, this.targetDeltaY, packet, 127);
             stackIn_7_0 = var3_int;
             return stackIn_7_0;
           }
@@ -1186,11 +1186,11 @@ final class MovementPlanner {
           packet.writeByte(1, this.pathLength & 255);
           packet.writeByte(1, this.unit.tileX);
           packet.writeByte(1, this.unit.tileY);
-          jj.a((byte) -27, this.pathLength, packet, this.pathDirections);
+          FriendLookupSupport.a((byte) -27, this.pathLength, packet, this.pathDirections);
           if (!obfuscationGuard) {
             this.resetCosts(-21);
           }
-          pd.a(this.targetDeltaX, this.targetDeltaY, packet, -78);
+          PasswordLengthSupport.a(this.targetDeltaX, this.targetDeltaY, packet, -78);
           stackIn_20_0 = var3_intLifetime1;
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

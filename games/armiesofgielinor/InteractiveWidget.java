@@ -106,7 +106,7 @@ class InteractiveWidget extends Widget {
     }
 
     InteractiveWidget(String text, WidgetListener listener) {
-        this(text, t.field_c.field_j, listener);
+        this(text, ReloadPageSupport.field_c.field_j, listener);
     }
 
     boolean handleKey(Widget rootWidget, int keyCode, char character, int obfuscationGuard) {
@@ -326,7 +326,7 @@ class InteractiveWidget extends Widget {
         this.focusable = true;
         this.focused = false;
         this.lastActivationButton = 0;
-        this.painter = t.field_c.field_q;
+        this.painter = ReloadPageSupport.field_c.field_q;
     }
 
     static {

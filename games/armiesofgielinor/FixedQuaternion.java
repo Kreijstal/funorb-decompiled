@@ -100,7 +100,7 @@ final class FixedQuaternion {
         }
         int squaredMagnitude = Spell.multiplyFixed16((long)this.w, (long)this.w, -1700635440) + Spell.multiplyFixed16((long)this.x, (long)this.x, -1700635440) + (Spell.multiplyFixed16((long)this.y, (long)this.y, -1700635440) + Spell.multiplyFixed16((long)this.z, (long)this.z, -1700635440));
         if (squaredMagnitude < 65535) {
-          squaredMagnitude = so.sqrtFixed16(squaredMagnitude, -129);
+          squaredMagnitude = FixedSquareRootSupport.sqrtFixed16(squaredMagnitude, -129);
           this.w = BufferedFile.divideFixed16((long)this.w, (long)squaredMagnitude, (byte) 97);
           this.x = BufferedFile.divideFixed16((long)this.x, (long)squaredMagnitude, (byte) 97);
           this.y = BufferedFile.divideFixed16((long)this.y, (long)squaredMagnitude, (byte) 97);
@@ -110,7 +110,7 @@ final class FixedQuaternion {
         if (squaredMagnitude <= 65537) {
           return;
         }
-        squaredMagnitude = so.sqrtFixed16(squaredMagnitude, -129);
+        squaredMagnitude = FixedSquareRootSupport.sqrtFixed16(squaredMagnitude, -129);
         this.w = BufferedFile.divideFixed16((long)this.w, (long)squaredMagnitude, (byte) 97);
         this.x = BufferedFile.divideFixed16((long)this.x, (long)squaredMagnitude, (byte) 97);
         this.y = BufferedFile.divideFixed16((long)this.y, (long)squaredMagnitude, (byte) 97);
@@ -119,7 +119,7 @@ final class FixedQuaternion {
 
     final void setAxisAngle(byte obfuscationGuard, int axisX, int axisZ, int axisY, int angle) {
         angle = angle >> 1;
-        int var6 = CombatViewTransition.c(angle, 125);
+        int var6 = CombatViewTransition.sine2048(angle, 125);
         int var7 = MoveAttackAction.a((byte) 67, angle);
         this.w = var7;
         this.x = Spell.multiplyFixed16((long)axisX, (long)var6, -1700635440);
@@ -135,7 +135,7 @@ final class FixedQuaternion {
     final static boolean a(boolean param0, int param1, int param2, int param3, int param4, int param5, byte param6) {
         String var8 = null;
         String var8Lifetime1;
-        if (jj.b((byte) -73)) {
+        if (FriendLookupSupport.b((byte) -73)) {
           jt.a(param6 - 32133, param0, param4, param3);
           if (null != FullscreenMembershipDialog.activeContextMenu) {
             if (!FullscreenMembershipDialog.activeContextMenu.pollAndDispatch(param1, (byte) 103, param4, param5, param0)) {

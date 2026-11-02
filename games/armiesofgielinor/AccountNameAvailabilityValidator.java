@@ -23,27 +23,27 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
         try {
           candidateName = (CharSequence) ((Object) text);
           if (!vq.a(candidateName, true)) {
-            invalidSyntaxState = rn.validationInvalid;
+            invalidSyntaxState = ProceduralMapSupport.validationInvalid;
             return invalidSyntaxState;
           }
           if (obfuscationGuard != -3137) {
             field_o = (int[]) null;
           }
           if (!text.equals(this.checkedName)) {
-            result = ji.pollAccountNameCheck(0, text);
+            result = AccountNameCheckSupport.pollAccountNameCheck(0, text);
             if (result != null &&
               null == result.errorText) {
               this.checkedName = text;
               this.accepted = result.accepted;
             } else {
-              checkingState = so.validationChecking;
+              checkingState = FixedSquareRootSupport.validationChecking;
               return checkingState;
             }
           }
           if (this.accepted) {
-            cachedResultState = oo.validationValid;
+            cachedResultState = MembershipExpansionScreen.validationValid;
           } else {
-            cachedResultState = rn.validationInvalid;
+            cachedResultState = ProceduralMapSupport.validationInvalid;
           }
           return cachedResultState;
         } catch (java.lang.RuntimeException caughtParameter) {
@@ -80,7 +80,7 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
             return syntaxDiagnostic;
           }
           if (!text.equals(this.checkedName)) {
-            result = ji.pollAccountNameCheck(0, text);
+            result = AccountNameCheckSupport.pollAccountNameCheck(0, text);
             if (result == null) {
               return null;
             }
@@ -133,10 +133,10 @@ final class AccountNameAvailabilityValidator extends TextFieldValidator {
 
     final static QuickChatCommandDefinition[] getQuickChatCommands(byte obfuscationGuard) {
         if (obfuscationGuard > 100) {
-          return new QuickChatCommandDefinition[]{jk.field_b, AccountNameSelectionForm.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, ab.field_d, GzipDecoder.field_e, SocketFactory.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, rs.field_v, kq.field_M};
+          return new QuickChatCommandDefinition[]{jk.field_b, AccountNameSelectionForm.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, AlphanumericTextSupport.field_d, GzipDecoder.field_e, SocketFactory.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, PowerOfTwoSupport.field_v, kq.field_M};
         }
         AccountNameAvailabilityValidator.h(67);
-        return new QuickChatCommandDefinition[]{jk.field_b, AccountNameSelectionForm.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, ab.field_d, GzipDecoder.field_e, SocketFactory.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, rs.field_v, kq.field_M};
+        return new QuickChatCommandDefinition[]{jk.field_b, AccountNameSelectionForm.field_G, ToggleTurnSkipConsoleCommand.field_F, PacketBuffer.field_l, NodeHashIterator.field_i, MovementPlanner.field_c, AlphanumericTextSupport.field_d, GzipDecoder.field_e, SocketFactory.field_e, Widget.field_y, MapLayout.field_q, IconTextComponent.field_Ib, PowerOfTwoSupport.field_v, kq.field_M};
     }
 
     AccountNameAvailabilityValidator(EditableTextWidget input) {

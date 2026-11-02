@@ -18,7 +18,7 @@ final class UiSelectionState {
         this.keyCode = 0;
         this.buttonPress = 0;
         if (this.pressedPointerButton == 0 &&
-          rs.keyCode == 98) {
+          PowerOfTwoSupport.keyCode == 98) {
           if (this.selectedIndex <= 0) {
             this.selectedIndex = this.itemCount;
           }
@@ -29,10 +29,10 @@ final class UiSelectionState {
           return;
         }
         if (0 == this.pressedPointerButton) {
-          this.keyCode = rs.keyCode;
+          this.keyCode = PowerOfTwoSupport.keyCode;
         }
         if (this.pressedPointerButton == 0 &&
-          rs.keyCode == 99) {
+          PowerOfTwoSupport.keyCode == 99) {
           this.selectedIndex = this.selectedIndex + 1;
           if (this.selectedIndex >= this.itemCount) {
             this.selectedIndex = 0;
@@ -41,8 +41,8 @@ final class UiSelectionState {
         }
     }
 
-    final boolean b(int param0) {
-        if (param0 != 96) {
+    final boolean isKeyCode103Pressed(int obfuscationGuard) {
+        if (obfuscationGuard != 96) {
           return true;
         }
         return this.keyCode == 103 ? true : false;
@@ -77,19 +77,19 @@ final class UiSelectionState {
           this.selectedIndex = index;
         }
         if (obfuscationGuard) {
-          this.b(15);
+          this.isKeyCode103Pressed(15);
         }
     }
 
-    final static void a(byte param0, boolean param1) {
-        se.emailCheckResult.setResult(param1, true);
-        if (param0 != 32) {
+    final static void setSharedEmailCheckResult(byte obfuscationGuard, boolean accepted) {
+        IgnoreRequestSupport.emailCheckResult.setResult(accepted, true);
+        if (obfuscationGuard != 32) {
           field_c = (int[]) null;
         }
     }
 
-    final boolean e(int param0) {
-        int var2 = -105 % ((param0 + 19) / 60);
+    final boolean isKeyCode102Pressed(int obfuscationGuard) {
+        int var2 = -105 % ((obfuscationGuard + 19) / 60);
         return this.keyCode == 102 ? true : false;
     }
 
@@ -98,10 +98,10 @@ final class UiSelectionState {
         int var3 = 61 % ((obfuscationGuard - 78) / 48);
         this.buttonPress = 0;
         if (this.pressedPointerButton == 0) {
-          this.keyCode = rs.keyCode;
+          this.keyCode = PowerOfTwoSupport.keyCode;
         }
         if (0 == this.pressedPointerButton &&
-          rs.keyCode == 96) {
+          PowerOfTwoSupport.keyCode == 96) {
           if (this.selectedIndex <= 0) {
             this.selectedIndex = this.itemCount;
           }
@@ -109,7 +109,7 @@ final class UiSelectionState {
           this.pointerDrivenSelection = false;
         }
         if (0 == this.pressedPointerButton &&
-          rs.keyCode == 97) {
+          PowerOfTwoSupport.keyCode == 97) {
           this.selectedIndex = this.selectedIndex + 1;
           this.pointerDrivenSelection = false;
           if (this.selectedIndex >= this.itemCount) {
@@ -117,7 +117,7 @@ final class UiSelectionState {
           }
         }
         if (this.pressedPointerButton == 0 &&
-          (rs.keyCode == 98 || rs.keyCode == 99)) {
+          (PowerOfTwoSupport.keyCode == 98 || PowerOfTwoSupport.keyCode == 99)) {
           this.pointerDrivenSelection = false;
           if (this.selectedIndex < 0) {
             this.selectedIndex = fallbackIndex;
@@ -150,7 +150,7 @@ final class UiSelectionState {
         this.buttonPress = 0;
         this.keyCode = 0;
         if (pointerButton == this.pressedPointerButton) {
-          this.keyCode = rs.keyCode;
+          this.keyCode = PowerOfTwoSupport.keyCode;
         }
     }
 
@@ -172,17 +172,17 @@ final class UiSelectionState {
         ChatMessage var9 = null;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          if (mj.field_c > TurnTimerDial.field_d) {
+          if (AudioShutdownSupport.field_c > TurnTimerDial.field_d) {
             TurnTimerDial.field_d = TurnTimerDial.field_d + 1;
           }
-          if (EquipmentBattleTutorial.field_y != so.field_b.height) {
-            UnitAnimationPreview.field_l = UnitAnimationPreview.field_l + (-EquipmentBattleTutorial.field_y + so.field_b.height);
-            EquipmentBattleTutorial.field_y = so.field_b.height;
+          if (EquipmentBattleTutorial.field_y != FixedSquareRootSupport.field_b.height) {
+            UnitAnimationPreview.field_l = UnitAnimationPreview.field_l + (-EquipmentBattleTutorial.field_y + FixedSquareRootSupport.field_b.height);
+            EquipmentBattleTutorial.field_y = FixedSquareRootSupport.field_b.height;
           }
           if (TurnTimerDial.field_d <= 0) {
             return;
           }
-          vi.a(-68);
+          MonotonicClockSupport.a(-68);
           CombatEvent.field_I.updateInput(true, param3);
           if (BestScoreStrategy.field_i != null) {
             if (NodeIterator.field_a) {
@@ -192,7 +192,7 @@ final class UiSelectionState {
             }
           }
           for (var4_int = param2; var4_int < 5; var4_int++) {
-            var5 = gt.field_b[var4_int];
+            var5 = LocalAccountNameSupport.field_b[var4_int];
             if (var5 != null) {
               if (0 != var5.pressedButton) {
                 QuickChatMenu.a(var5, var4_int, false);
@@ -203,11 +203,11 @@ final class UiSelectionState {
             }
           }
           if (UnitLossCondition.field_f.pressedButton != 0) {
-            Spell.field_b = new ReportAbuseDialog(UnitLossCondition.field_f.screenX, UnitLossCondition.field_f.screenY, UnitLossCondition.field_f.width, UnitLossCondition.field_f.height, param0, ArchiveIndex.field_b, UnitModelPreview.field_m, uc.field_b, PasswordLoginCredentials.field_h, ArrayWidgetContainer.field_H, DualLinkedNode.field_k, (String) null, 0L);
+            Spell.field_b = new ReportAbuseDialog(UnitLossCondition.field_f.screenX, UnitLossCondition.field_f.screenY, UnitLossCondition.field_f.width, UnitLossCondition.field_f.height, param0, ArchiveIndex.field_b, UnitModelPreview.field_m, SpellDefinitionTable.field_b, PasswordLoginCredentials.field_h, ArrayWidgetContainer.field_H, DualLinkedNode.field_k, (String) null, 0L);
           }
           var9 = wm.a(jn.field_d, MusicPatchNode.field_l, (byte) 127, param1);
           if (var9 != null) {
-            pg.openChatMessageContextMenu(0, var9);
+            UnitAnimationSelectionSupport.openChatMessageContextMenu(0, var9);
           }
           var8 = AccountRequestResult.a(false);
           if (var8 != null) {

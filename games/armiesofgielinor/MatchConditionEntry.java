@@ -17,7 +17,7 @@ final class MatchConditionEntry extends IntrusiveNode {
           if (param1 != 94) {
             MatchConditionEntry.a((byte) -104);
           }
-          stackIn_4_0 = param0 + (so.field_b.height - se.field_a >> 1);
+          stackIn_4_0 = param0 + (FixedSquareRootSupport.field_b.height - IgnoreRequestSupport.field_a >> 1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,8 +56,8 @@ final class MatchConditionEntry extends IntrusiveNode {
           packet = ByteStorage.incomingPacket;
           updateType = packet.readUnsignedByte(0);
           if (updateType == 0) {
-            if (null == bk.ignoredAccountsByName) {
-              bk.ignoredAccountsByName = new DualNodeHashTable(128);
+            if (null == MusicTrackSelectionSupport.ignoredAccountsByName) {
+              MusicTrackSelectionSupport.ignoredAccountsByName = new DualNodeHashTable(128);
               vg.ignoreCount = 0;
             }
             stackIn_12_0 = (1 != packet.readUnsignedByte(0)) ? 0 : 1;
@@ -70,21 +70,21 @@ final class MatchConditionEntry extends IntrusiveNode {
               obfuscationControl != 0) {
               ignoreAccountName = packet.readNullTerminatedString(1);
             }
-            ignoreEntry = db.findIgnoredAccount(ignoreDisplayName, -124);
+            ignoreEntry = IgnoreListLookupSupport.findIgnoredAccount(ignoreDisplayName, -124);
             previousIgnoreName = packet.readNullTerminatedString(1);
             ignoreNameKey = AccountNameNormalizer.normalize((CharSequence) ((Object) ignoreDisplayName), false);
             if (null == ignoreNameKey) {
               ignoreNameKey = ignoreDisplayName;
             }
             if (null == ignoreEntry) {
-              ignoreEntry = db.findIgnoredAccount(previousIgnoreName, obfuscationGuard - 47);
+              ignoreEntry = IgnoreListLookupSupport.findIgnoredAccount(previousIgnoreName, obfuscationGuard - 47);
               if (null != ignoreEntry) {
-                bk.ignoredAccountsByName.put(-1, (long)ignoreNameKey.hashCode(), ignoreEntry);
+                MusicTrackSelectionSupport.ignoredAccountsByName.put(-1, (long)ignoreNameKey.hashCode(), ignoreEntry);
               }
             }
             if (null == ignoreEntry) {
               ignoreEntry = new SocialListEntry();
-              bk.ignoredAccountsByName.put(-1, (long)ignoreNameKey.hashCode(), ignoreEntry);
+              MusicTrackSelectionSupport.ignoredAccountsByName.put(-1, (long)ignoreNameKey.hashCode(), ignoreEntry);
               newIgnoreOrder = vg.ignoreCount;
               vg.ignoreCount = vg.ignoreCount + 1;
               ignoreEntry.orderIndex = newIgnoreOrder;
@@ -97,14 +97,14 @@ final class MatchConditionEntry extends IntrusiveNode {
           }
           if (updateType != 1) {
             if (updateType == 2) {
-              if (th.socialListState == 1) {
-                th.socialListState = 2;
+              if (FloorModSupport.socialListState == 1) {
+                FloorModSupport.socialListState = 2;
               }
               return;
             }
             if (updateType == 3) {
-              if (th.socialListState == 2) {
-                th.socialListState = 1;
+              if (FloorModSupport.socialListState == 2) {
+                FloorModSupport.socialListState = 1;
               }
               return;
             }
@@ -113,10 +113,10 @@ final class MatchConditionEntry extends IntrusiveNode {
             }
             if (updateType != 4) {
               LoginCredentials.a((Throwable) null, -66, "F1: " + CampaignProgress.b(false));
-              dj.a((byte) -125);
+              TextSplitSupport.a((byte) -125);
               return;
             }
-            th.socialListState = 1;
+            FloorModSupport.socialListState = 1;
             initialLocation = packet.readNullTerminatedString(1);
             EmailValidator.currentLocationLabel = ((String) (initialLocation)).intern();
             chatFilterBits = packet.readUnsignedByte(0);
@@ -125,7 +125,7 @@ final class MatchConditionEntry extends IntrusiveNode {
           }
           if (DiskCacheRequest.friendsByName == null) {
             DiskCacheRequest.friendsByName = new DualNodeHashTable(128);
-            dj.friendCount = 0;
+            TextSplitSupport.friendCount = 0;
           }
           friendLocation = packet.readNullTerminatedString(1);
           if (((String) (friendLocation)).equals("")) {
@@ -143,8 +143,8 @@ final class MatchConditionEntry extends IntrusiveNode {
           if (friendEntry == null) {
             friendEntry = new SocialListEntry();
             DiskCacheRequest.friendsByName.put(-1, (long)AccountNameNormalizer.normalize((CharSequence) ((Object) friendDisplayName), false).hashCode(), friendEntry);
-            newFriendOrder = dj.friendCount;
-            dj.friendCount = dj.friendCount + 1;
+            newFriendOrder = TextSplitSupport.friendCount;
+            TextSplitSupport.friendCount = TextSplitSupport.friendCount + 1;
             friendEntry.orderIndex = newFriendOrder;
             wh.friendEntries.addLast((byte) -119, (IntrusiveNode) (friendEntry));
           }

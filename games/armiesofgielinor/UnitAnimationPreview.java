@@ -127,11 +127,11 @@ final class UnitAnimationPreview {
           copyFlagOne = 0;
           copyFlagTwo = 0;
           firstRotation = 0;
-          wrappedYaw = th.floorModWithOffset(this.yaw, 1, 2048);
+          wrappedYaw = FloorModSupport.floorModWithOffset(this.yaw, 1, 2048);
           halfTurn = 1024;
           fullTurn = 2048;
           tiltDivisor = 12;
-          wrappedTilt = th.floorModWithOffset(this.tilt - fullTurn / tiltDivisor + fullTurn, 1, 2048);
+          wrappedTilt = FloorModSupport.floorModWithOffset(this.tilt - fullTurn / tiltDivisor + fullTurn, 1, 2048);
           translationX = 0;
           translationY = (!this.projectionVariant ? 300 : 400) - this.tilt * 2;
           translationZ = -400;
@@ -156,11 +156,11 @@ final class UnitAnimationPreview {
         alternateCopyFlagOne = 0;
         alternateCopyFlagTwo = 0;
         alternateFirstRotation = 0;
-        alternateWrappedYaw = th.floorModWithOffset(this.yaw, 1, 2048);
+        alternateWrappedYaw = FloorModSupport.floorModWithOffset(this.yaw, 1, 2048);
         alternateHalfTurn = 1024;
         alternateFullTurn = 2048;
         alternateTiltDivisor = 12;
-        alternateWrappedTilt = th.floorModWithOffset(this.tilt - alternateFullTurn / alternateTiltDivisor + alternateFullTurn, 1, 2048);
+        alternateWrappedTilt = FloorModSupport.floorModWithOffset(this.tilt - alternateFullTurn / alternateTiltDivisor + alternateFullTurn, 1, 2048);
         alternateTranslationX = 0;
         alternateTranslationY = (!this.projectionVariant ? 300 : 400) - this.tilt * 2;
         alternateTranslationZ = -400;
@@ -193,7 +193,7 @@ final class UnitAnimationPreview {
         }
         this.animationVariant = animationVariant;
         animationGroup = ResizableModalDialog.unitAnimationGroups[this.unitType];
-        sequence = ck.animationSequencesByGroup[animationGroup][this.animationVariant];
+        sequence = StructureTerrainSupport.animationSequencesByGroup[animationGroup][this.animationVariant];
         guardRemainder = 81 % ((obfuscationGuard + 53) / 59);
         this.animationPlayer.selectSequence(-1, sequence);
         this.installFrameSet((byte) 122);
@@ -283,7 +283,7 @@ final class UnitAnimationPreview {
         this.selectModel(0, 0);
         this.enableAnimation(-28);
         this.selectAnimation(0, 0, (byte) 115);
-        this.configureProjection(0, 1, so.field_b.height >> 1, -29001, 0, so.field_b.width >> 1);
+        this.configureProjection(0, 1, FixedSquareRootSupport.field_b.height >> 1, -29001, 0, FixedSquareRootSupport.field_b.width >> 1);
         this.hidePreview((byte) -79);
     }
 

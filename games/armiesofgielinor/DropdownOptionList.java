@@ -93,7 +93,7 @@ final class DropdownOptionList extends kq {
         var5 = originX + this.x;
         if (obfuscationGuard <= -82) {
           var6 = this.y + originY;
-          SoftwareRaster.f(var5, var6, this.width, this.height, 0);
+          SoftwareRaster.fillRectangle(var5, var6, this.width, this.height, 0);
           var7 = this.selectedIndex;
           if (-1 != this.hoveredIndex) {
             var7 = this.hoveredIndex;
@@ -105,7 +105,7 @@ final class DropdownOptionList extends kq {
             var16 = this.options[var8];
             var17 = var16.toString();
             if (var7 == var8) {
-              SoftwareRaster.b(var5 + 2, 4 + var6, this.width - 4, this.rowHeight, 2188450, 128);
+              SoftwareRaster.fillRectangleBlended(var5 + 2, 4 + var6, this.width - 4, this.rowHeight, 2188450, 128);
             }
             var6 = var6 + this.rowHeight;
             this.font.drawText(var17, var5 + 2, var6, 10000536, -1);
@@ -114,7 +114,7 @@ final class DropdownOptionList extends kq {
         }
         this.containsPointer(((int[]) (this.options[13]))[3], -51, -121, ((int[]) (this.options[9]))[0], -117);
         var6Lifetime1 = this.y + originY;
-        SoftwareRaster.f(var5, var6Lifetime1, this.width, this.height, 0);
+        SoftwareRaster.fillRectangle(var5, var6Lifetime1, this.width, this.height, 0);
         var7Lifetime1 = this.selectedIndex;
         if (-1 != this.hoveredIndex) {
           var7Lifetime1 = this.hoveredIndex;
@@ -126,7 +126,7 @@ final class DropdownOptionList extends kq {
           var14 = this.options[var8Lifetime1];
           var15 = var14.toString();
           if (var7Lifetime1 == var8Lifetime1) {
-            SoftwareRaster.b(var5 + 2, 4 + var6Lifetime1, this.width - 4, this.rowHeight, 2188450, 128);
+            SoftwareRaster.fillRectangleBlended(var5 + 2, 4 + var6Lifetime1, this.width - 4, this.rowHeight, 2188450, 128);
           }
           var6Lifetime1 = var6Lifetime1 + this.rowHeight;
           this.font.drawText(var15, var5 + 2, var6Lifetime1, 10000536, -1);

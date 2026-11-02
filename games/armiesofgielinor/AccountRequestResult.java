@@ -46,7 +46,7 @@ final class AccountRequestResult {
             param5 < ResourceRequest.field_y &&
             param3 < ConsoleParseException.field_c) {
             var6_int = ResourceRequest.field_y * param3 + param5;
-            var7 = vs.field_e[var6_int];
+            var7 = QuickChatMenuDisplaySupport.field_e[var6_int];
             var8 = RegionAnchor.a(16711680, param3, var6_int, param5);
             if (param2 != -128) {
               return;
@@ -54,16 +54,16 @@ final class AccountRequestResult {
             var9 = -(var8 >>> 24 & 2102808831) + 255;
             var8 = var8 & 16777215;
             if (!param0) {
-              po.a((byte) 91, param3, param4, param1, var9, var8, var6_int, param5);
+              QuickChatShortcutSupport.a((byte) 91, param3, param4, param1, var9, var8, var6_int, param5);
               ResizableModalDialog.b(param3, param5, param2 + 128, param1, var6_int, param4);
             }
             IntrusiveNode.a(78, param5, param3, param4 + 19, var6_int, param1 + 39);
-            cw.a(var6_int, param4 + 19, 39 + param1, -125, param5, param3);
+            AttackRangeOverlaySupport.a(var6_int, param4 + 19, 39 + param1, -125, param5, param3);
             TickCounter.a(var9, param0, param3, param4, var6_int, param2 ^ -128, param5, param1, var8);
             var10 = var7.metadata;
             if (null != var10 &&
               (var10.modifierFlags & 1) != 0 &&
-              -1 < vs.field_e[var6_int].ownerPlayer) {
+              -1 < QuickChatMenuDisplaySupport.field_e[var6_int].ownerPlayer) {
               var11 = var7.ownerPlayer;
               if (null != CipherPacketBuffer.currentBattlefield) {
                 var11 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var11, -1);
@@ -73,7 +73,7 @@ final class AccountRequestResult {
             if (var7.hasModifierFlag4((byte) -125)) {
               GameEvent.a(20 + param4, true, var6_int + ProxyAuthenticationRequiredException.field_b, var7.ownerPlayer, param1 + 22);
             }
-            fs.a(param4, false, param0, var9, param1, var6_int, param5, var8, param3);
+            PrivateTextRecipientSupport.a(param4, false, param0, var9, param1, var6_int, param5, var8, param3);
             return;
           }
           EquipmentBattleTutorial.a(param3, param5, param1, param4, (byte) -82);
@@ -163,13 +163,13 @@ final class AccountRequestResult {
           }
           var1 = null;
           var2 = null;
-          if (rs.outgoingChatChannel == 0 &&
+          if (PowerOfTwoSupport.outgoingChatChannel == 0 &&
             NumericDateInputWidget.roomSetup != null) {
             var2 = DraggableWidgetContainer.field_K;
           }
-          if (rs.outgoingChatChannel == 2 &&
+          if (PowerOfTwoSupport.outgoingChatChannel == 2 &&
             !ToggleWidget.isChatRecipientAvailable(6)) {
-            if (!jj.isFriend(62, wm.chatRecipientNameKey)) {
+            if (!FriendLookupSupport.isFriend(62, wm.chatRecipientNameKey)) {
               var2 = EmailCheckResult.a(4800, DiskCacheWorker.field_h, new String[]{RegistrationAgreementPane.chatRecipientName});
               if (var10 != 0) {
                 var2 = EmailCheckResult.a(4800, ContentTransitionDialog.field_gb, new String[]{RegistrationAgreementPane.chatRecipientName});
@@ -188,17 +188,17 @@ final class AccountRequestResult {
             var2 = CacheEntry.field_w;
           }
           if (var2 != null) {
-            fs.a(MeshObject.field_d, (String) null, (String) (var2), -122, 0);
+            PrivateTextRecipientSupport.a(MeshObject.field_d, (String) null, (String) (var2), -122, 0);
           } else {
             var3 = mv.localAccountName;
             var3 = nt.a(-121, var3);
             var4 = "";
             var5 = "|";
-            var6 = rs.outgoingChatChannel;
+            var6 = PowerOfTwoSupport.outgoingChatChannel;
             var7 = 0;
             if (var6 == 2) {
               var4 = EmailCheckResult.a(4800, LabeledWidgetContainer.field_Q, new String[]{RegistrationAgreementPane.chatRecipientName});
-              var8 = EmailCheckResult.a(4800, ov.field_l, new String[]{var3});
+              var8 = EmailCheckResult.a(4800, SpectateRoomRequestSupport.field_l, new String[]{var3});
               var7 = DebouncedValidator.field_b.width + UpkeepEvent.field_z.width - 485 - (-IntrusiveNode.field_e.textWidth(var8) + IntrusiveNode.field_e.textWidth(var4));
               if (var7 < 0) {
                 var7 = 0;
@@ -236,7 +236,7 @@ final class AccountRequestResult {
                 decompiledSharedTail0 = (var10 != 0);
               }
               if ((decompiledSharedTail0) &&
-                (vi.field_d)) {
+                (MonotonicClockSupport.field_d)) {
                 var5 = "";
                 var4 = "<col=999999>" + var4 + DisplayModeOptionPainter.field_z + "</col>";
               }
@@ -257,8 +257,8 @@ final class AccountRequestResult {
                 }
               }
             }
-            fs.a(CombatEvent.field_A[var6], var5, var4 + BitmapFont.escapeMarkup(UpkeepEvent.chatTextBuffer.toString()), 33, var7);
-            if (!hf.textChatActive) {
+            PrivateTextRecipientSupport.a(CombatEvent.field_A[var6], var5, var4 + BitmapFont.escapeMarkup(UpkeepEvent.chatTextBuffer.toString()), 33, var7);
+            if (!ClientStateChecksumSupport.textChatActive) {
               DebouncedValidator.field_b.heldButtonMatches = false;
             }
             if (DebouncedValidator.field_b.heldButtonMatches) {

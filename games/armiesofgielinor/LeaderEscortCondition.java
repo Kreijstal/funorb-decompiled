@@ -107,7 +107,7 @@ final class LeaderEscortCondition implements MatchCondition {
             return stackIn_13_0;
           }
           if (9 == param0) {
-            stackIn_16_0 = ke.field_d;
+            stackIn_16_0 = SoundEffectPreloadSupport.field_d;
             return stackIn_16_0;
           }
           if (param0 == 10) {
@@ -115,7 +115,7 @@ final class LeaderEscortCondition implements MatchCondition {
             return stackIn_19_0;
           }
           if (11 == param0) {
-            stackIn_23_0 = qt.field_b;
+            stackIn_23_0 = BitReversalSupport.field_b;
             return stackIn_23_0;
           }
           if (param0 != 14) {
@@ -137,14 +137,14 @@ final class LeaderEscortCondition implements MatchCondition {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_a = null;
         field_b = null;
         baseTerrainMovementCosts = (int[][]) null;
         field_e = null;
         field_f = null;
         field_g = null;
-        if (param0 != 25931) {
+        if (obfuscationGuard != 25931) {
           LeaderEscortCondition.f(-9);
         }
     }
@@ -205,23 +205,23 @@ final class LeaderEscortCondition implements MatchCondition {
               break;
             }
             if (var4_ref == null) {
-              dj.a((byte) -126);
+              TextSplitSupport.a((byte) -126);
               return;
             }
             var5 = var27.readUnsignedByte(param0 - 9);
             if (0 != var5) {
               var6 = var4_ref.field_k;
-              th.field_b[0].field_d = false;
+              FloorModSupport.field_b[0].field_d = false;
               var7 = var4_ref.field_p;
-              th.field_b[0].field_f = mv.localAccountName;
-              th.field_b[0].field_c = null;
+              FloorModSupport.field_b[0].field_f = mv.localAccountName;
+              FloorModSupport.field_b[0].field_c = null;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                th.field_b[var8_int].field_f = var27.readNullTerminatedString(param0 ^ 8);
-                th.field_b[var8_int].field_d = false;
+                FloorModSupport.field_b[var8_int].field_f = var27.readNullTerminatedString(param0 ^ 8);
+                FloorModSupport.field_b[var8_int].field_d = false;
                 if (var27.readUnsignedByte(0) == 1) {
-                  th.field_b[var8_int].field_c = var27.readNullTerminatedString(1);
+                  FloorModSupport.field_b[var8_int].field_c = var27.readNullTerminatedString(1);
                 } else {
-                  th.field_b[var8_int].field_c = null;
+                  FloorModSupport.field_b[var8_int].field_c = null;
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -242,12 +242,12 @@ final class LeaderEscortCondition implements MatchCondition {
               if (var18 > 0) {
                 for (var19 = 0; var19 < var18; var19++) {
                   var20 = var27.readUnsignedByte(0);
-                  var21 = th.field_b[var20].field_f;
+                  var21 = FloorModSupport.field_b[var20].field_f;
                   var22 = var27.readLong((byte) -2);
                   var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = th.field_b[var20].field_c;
+                    var9[0][var12] = FloorModSupport.field_b[var20].field_c;
                     var31[0][var12] = var22;
                     var12++;
                     for (var25 = 0; var7 > var25; var25++) {
@@ -257,7 +257,7 @@ final class LeaderEscortCondition implements MatchCondition {
                     }
                   }
                   if (var21 != null &&
-                    gt.isLocalAccountName(var21, (byte) 125)) {
+                    LocalAccountNameSupport.isLocalAccountName(var21, (byte) 125)) {
                     var8[1][var13] = mv.localAccountName;
                     var9[1][var13] = null;
                     var31[1][var13] = var22;
@@ -270,10 +270,10 @@ final class LeaderEscortCondition implements MatchCondition {
                     }
                   }
                   if (var6 > var14 &&
-                    !th.field_b[var20].field_d) {
-                    th.field_b[var20].field_d = true;
+                    !FloorModSupport.field_b[var20].field_d) {
+                    FloorModSupport.field_b[var20].field_d = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = th.field_b[var20].field_c;
+                    var9[2][var14] = FloorModSupport.field_b[var20].field_c;
                     var31[2][var14] = var22;
                     var14++;
                     var27.position = var24;
@@ -305,11 +305,11 @@ final class LeaderEscortCondition implements MatchCondition {
               var4.unlink(param0 ^ -103);
               return;
             }
-            dj.a((byte) -126);
+            TextSplitSupport.a((byte) -126);
             return;
           }
           LoginCredentials.a((Throwable) null, 76, "HS1: " + CampaignProgress.b(false));
-          dj.a((byte) -127);
+          TextSplitSupport.a((byte) -127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

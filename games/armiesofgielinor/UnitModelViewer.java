@@ -70,16 +70,16 @@ final class UnitModelViewer {
         if (obfuscationGuard <= 116) {
           this.drawDropdowns((byte) -94);
         }
-        if (br.heldKeys[96]) {
+        if (CampaignLookupSupport.heldKeys[96]) {
           this.previewYaw = this.previewYaw + 5;
         }
-        if (br.heldKeys[97]) {
+        if (CampaignLookupSupport.heldKeys[97]) {
           this.previewYaw = this.previewYaw - 5;
         }
-        if (br.heldKeys[98]) {
+        if (CampaignLookupSupport.heldKeys[98]) {
           this.previewTilt = this.previewTilt + 2;
         }
-        if (br.heldKeys[99]) {
+        if (CampaignLookupSupport.heldKeys[99]) {
           this.previewTilt = this.previewTilt - 2;
         }
     }
@@ -99,8 +99,8 @@ final class UnitModelViewer {
         if (obfuscationGuard) {
           this.frameSprites = (RgbSprite[]) null;
         }
-        int hintCenterX = so.field_b.width >> 1;
-        int hintBaselineY = -this.font.maxAscent + (so.field_b.height - (this.font.maxDescent << 1));
+        int hintCenterX = FixedSquareRootSupport.field_b.width >> 1;
+        int hintBaselineY = -this.font.maxAscent + (FixedSquareRootSupport.field_b.height - (this.font.maxDescent << 1));
         int hintColour = this.colours[0];
         this.font.drawCentered("Press Esc to return to the main menu", hintCenterX, hintBaselineY, hintColour, -1);
     }
@@ -137,7 +137,7 @@ final class UnitModelViewer {
         }
         if (this.unitDropdown.hasInputChanged((byte) 111) ||
           this.animationDropdown.hasInputChanged((byte) 74)) {
-          this.layoutControls(0, so.field_b.width >> 1, so.field_b.width >> 1, so.field_b.height, 0);
+          this.layoutControls(0, FixedSquareRootSupport.field_b.width >> 1, FixedSquareRootSupport.field_b.width >> 1, FixedSquareRootSupport.field_b.height, 0);
           return;
         }
     }
@@ -201,8 +201,8 @@ final class UnitModelViewer {
           if (param1) {
             UnitModelViewer.a(-115, false);
           }
-          for (var2_int = 0; var2_int < vs.field_e.length; var2_int++) {
-            var3 = vs.field_e[var2_int];
+          for (var2_int = 0; var2_int < QuickChatMenuDisplaySupport.field_e.length; var2_int++) {
+            var3 = QuickChatMenuDisplaySupport.field_e[var2_int];
             var4 = var3.occupant;
             if (var4 != null &&
               param0 == var4.ownerPlayer) {
@@ -219,7 +219,7 @@ final class UnitModelViewer {
     }
 
     final void drawViewer(byte obfuscationGuard) {
-        SoftwareRaster.b();
+        SoftwareRaster.clearPixels();
         this.unitLabel.drawLabel(71);
         this.animationLabel.drawLabel(45);
         this.font.drawCentered("shift: " + DiskCacheRequest.unitProjectionVariants[this.selectedUnitType], 480, 230, 16777215, -1);
@@ -332,9 +332,9 @@ final class UnitModelViewer {
     }
 
     private final void initializePreview(int heightMultiplier) {
-        this.previewCenterY = heightMultiplier * (so.field_b.height >> 2);
+        this.previewCenterY = heightMultiplier * (FixedSquareRootSupport.field_b.height >> 2);
         this.previewYaw = 0;
-        this.previewCenterX = so.field_b.width / 3;
+        this.previewCenterX = FixedSquareRootSupport.field_b.width / 3;
         this.preview = new UnitAnimationPreview();
     }
 
@@ -359,7 +359,7 @@ final class UnitModelViewer {
     private final void createControls(byte obfuscationGuard) {
         this.unitLabel = new SpriteFramedLabel(this.frameSprites, this.font, this.colours, "Model", 0, 0);
         this.animationLabel = new SpriteFramedLabel(this.frameSprites, this.font, this.colours, "Animation", 0, 0);
-        this.unitOptions = hf.unitModelNames;
+        this.unitOptions = ClientStateChecksumSupport.unitModelNames;
         this.unitDropdown = new SpriteDropdownControl(this.frameSprites, this.arrowSprites, this.font, this.colours, this.unitOptions, 0, 0);
         if (obfuscationGuard >= -122) {
           campaignMetricMutationCounter = 61;
@@ -421,8 +421,8 @@ final class UnitModelViewer {
           this.createControls((byte) -127);
           this.initializePreview(3);
           this.selectUnit(initialUnitType, (byte) 39);
-          this.layoutControls(0, so.field_b.width >> 1, so.field_b.width >> 1, so.field_b.height, 0);
-          qt.a(false);
+          this.layoutControls(0, FixedSquareRootSupport.field_b.width >> 1, FixedSquareRootSupport.field_b.width >> 1, FixedSquareRootSupport.field_b.height, 0);
+          BitReversalSupport.a(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

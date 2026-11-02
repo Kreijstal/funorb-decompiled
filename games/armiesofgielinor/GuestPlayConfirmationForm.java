@@ -62,12 +62,12 @@ final class GuestPlayConfirmationForm extends DequeWidgetContainer implements Wi
         int widgetX = originX + this.x;
         int widgetY = this.y + originY;
         if (obfuscationGuard < -82) {
-          ArmiesOfGielinor.field_J.drawParagraph(aq.field_a, 20 + widgetX, widgetY + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.maxAscent);
+          ArmiesOfGielinor.field_J.drawParagraph(AccountCreationInfoText.field_a, 20 + widgetX, widgetY + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.maxAscent);
           super.drawWidget(originX, originY, (byte) -107, renderLayer);
           return;
         }
         field_F = (RgbSprite[]) null;
-        ArmiesOfGielinor.field_J.drawParagraph(aq.field_a, 20 + widgetX, widgetY + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.maxAscent);
+        ArmiesOfGielinor.field_J.drawParagraph(AccountCreationInfoText.field_a, 20 + widgetX, widgetY + 20, -40 + this.width, -50 + this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.maxAscent);
         super.drawWidget(originX, originY, (byte) -107, renderLayer);
     }
 

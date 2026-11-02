@@ -29,7 +29,7 @@ final class ScreenWipeTransition {
     }
 
     private final int triangleWave(int position, int period, int obfuscationGuard) {
-        int var4 = th.floorModWithOffset(position, 1, period);
+        int var4 = FloorModSupport.floorModWithOffset(position, 1, period);
         if (var4 > period / 2) {
           var4 = period - var4;
         }
@@ -61,7 +61,7 @@ final class ScreenWipeTransition {
                 var7 = SoftwareRaster.pixels[var6];
                 var8 = this.snapshot[var5];
                 var9 = (-progress + this.thresholds[var5]) * 256 / 8;
-                SoftwareRaster.pixels[var6] = AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(var9 * rn.bitwiseAnd(var8, 255) + rn.bitwiseAnd(var7, 255) * (-var9 + 256) >> 8, rn.bitwiseAnd(var9 * (rn.bitwiseAnd(var8, 65280) >> 8) + (-var9 + 256) * (rn.bitwiseAnd(var7, 65280) >> 8), 65280)), rn.bitwiseAnd((rn.bitwiseAnd(var7, 16711680) >> 16) * (256 - var9) + (rn.bitwiseAnd(var8, 16711680) >> 16) * var9 << 8, 16711851));
+                SoftwareRaster.pixels[var6] = AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(var9 * ProceduralMapSupport.bitwiseAnd(var8, 255) + ProceduralMapSupport.bitwiseAnd(var7, 255) * (-var9 + 256) >> 8, ProceduralMapSupport.bitwiseAnd(var9 * (ProceduralMapSupport.bitwiseAnd(var8, 65280) >> 8) + (-var9 + 256) * (ProceduralMapSupport.bitwiseAnd(var7, 65280) >> 8), 65280)), ProceduralMapSupport.bitwiseAnd((ProceduralMapSupport.bitwiseAnd(var7, 16711680) >> 16) * (256 - var9) + (ProceduralMapSupport.bitwiseAnd(var8, 16711680) >> 16) * var9 << 8, 16711851));
               } else {
                 SoftwareRaster.pixels[var6] = this.snapshot[var5];
               }
@@ -87,8 +87,8 @@ final class ScreenWipeTransition {
         int var2Lifetime1;
         this.field_l = 0;
         this.field_k = 0;
-        this.height = so.field_b.height;
-        this.width = so.field_b.width;
+        this.height = FixedSquareRootSupport.field_b.height;
+        this.width = FixedSquareRootSupport.field_b.width;
         this.field_g = 50;
         this.thresholds = new byte[this.height * this.width];
         this.snapshot = new int[this.width * this.height];

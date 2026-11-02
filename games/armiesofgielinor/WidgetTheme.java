@@ -32,7 +32,7 @@ final class WidgetTheme {
           if (obfuscationGuard >= -107) {
             field_f = (int[]) null;
           }
-          hf.recomputeClientStateChecksum(battlefield, (byte) 9, true);
+          ClientStateChecksumSupport.recomputeClientStateChecksum(battlefield, (byte) 9, true);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fl.I(" + (battlefield != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
@@ -42,7 +42,7 @@ final class WidgetTheme {
         if (obfuscationGuard < 44) {
           this.a(69, 37, 82, 84, -66);
         }
-        SoftwareRaster.h(startX, startY, endX, endY, colour);
+        SoftwareRaster.drawLine(startX, startY, endX, endY, colour);
     }
 
     private final void drawSingleLineTooltip(int param0, int param1, int param2, String text) {
@@ -61,8 +61,8 @@ final class WidgetTheme {
           if (SoftwareRaster.height < var6 + (var8 + 6)) {
             var8 = -6 - var6 + SoftwareRaster.height;
           }
-          SoftwareRaster.b(var7, var8, 6 + var5_int, var6 + 6, this.field_v);
-          SoftwareRaster.f(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_c);
+          SoftwareRaster.drawRectangleOutline(var7, var8, 6 + var5_int, var6 + 6, this.field_v);
+          SoftwareRaster.fillRectangle(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_c);
           this.font.drawText(text, var7 + 3, this.font.capitalHeight + var8 + 3, this.field_v, -1);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "fl.J(" + param0 + ',' + param1 + ',' + param2 + ',' + (text != null ? "{...}" : "null") + ')');
@@ -173,8 +173,8 @@ final class WidgetTheme {
           if (SoftwareRaster.height < var6 + var13Lifetime1 + var10) {
             var13Lifetime1 = -var10 + (param1 - var6);
           }
-          SoftwareRaster.b(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_s);
-          SoftwareRaster.f(var12 + 1, 1 + var13Lifetime1, var5_int + (var9 - 2), -2 + (var10 + var6), this.field_c);
+          SoftwareRaster.drawRectangleOutline(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_s);
+          SoftwareRaster.fillRectangle(var12 + 1, 1 + var13Lifetime1, var5_int + (var9 - 2), -2 + (var10 + var6), this.field_c);
           this.font.drawParagraph(text, var12 + this.field_x, this.field_h + var13Lifetime1, var9, var10, this.field_v, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -197,7 +197,7 @@ final class WidgetTheme {
     }
 
     final void fillRectangle(int alpha, int left, int top, boolean obfuscationGuard, int height, int width, int colour) {
-        SoftwareRaster.b(left, top, width, height, colour, alpha);
+        SoftwareRaster.fillRectangleBlended(left, top, width, height, colour, alpha);
         if (!obfuscationGuard) {
           WidgetTheme.a((byte) 3);
         }
@@ -295,13 +295,13 @@ final class WidgetTheme {
           this.field_a = 10;
           var14 = new StatefulWidgetPainter(var4, true);
           var14.setContentSprite(0, var13.copySprite());
-          var13.d();
+          var13.rotateClockwise();
           var14Lifetime1 = new StatefulWidgetPainter(var4, true);
           var14Lifetime1.setContentSprite(0, var13.copySprite());
-          var13.d();
+          var13.rotateClockwise();
           var14Lifetime2 = new StatefulWidgetPainter(var4, true);
           var14Lifetime2.setContentSprite(0, var13.copySprite());
-          var13.d();
+          var13.rotateClockwise();
           var19 = new StatefulWidgetPainter(var4, true);
           var19.setContentSprite(0, var13);
         } catch (RuntimeException runtimeException) {

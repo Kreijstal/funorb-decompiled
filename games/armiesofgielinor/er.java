@@ -111,7 +111,7 @@ final class er {
         if (PointerInputHandler.field_a != null) {
           PointerInputHandler.field_a.freezeNormalProgressAnimation((byte) 2);
         }
-        qh.a((byte) 124);
+        QuicksaveRequestSupport.a((byte) 124);
     }
 
     static {

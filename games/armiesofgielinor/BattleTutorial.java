@@ -48,7 +48,7 @@ class BattleTutorial {
           this.message = message;
           if (this.message != null &&
             this.expanded) {
-            this.expandedPanelHeight = 50 + rs.field_n.getParagraphHeight(this.message, 220, 0);
+            this.expandedPanelHeight = 50 + PowerOfTwoSupport.field_n.getParagraphHeight(this.message, 220, 0);
             this.targetPanelWidth = 240;
             if (ArmiesOfGielinor.obfuscationControl) {
               this.expandedPanelHeight = 40;
@@ -1639,17 +1639,17 @@ class BattleTutorial {
           this.expandedPanelHeight = -21;
         }
         if (this.stage == 0) {
-          MaskedTextEntryPainter.field_y.drawTransparent(db.a(true, 320) - (MaskedTextEntryPainter.field_y.pixelWidth >> 1), MatchConditionEntry.a(100, (byte) 94));
-          GradientUiRenderer.drawCenteredTextBackdrop(this.message, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94));
-          GradientUiRenderer.drawCenteredGradientText(this.message, db.a(true, 320), MatchConditionEntry.a(130, (byte) 94), ConsoleValue.field_b, false);
+          MaskedTextEntryPainter.field_y.drawTransparent(IgnoreListLookupSupport.a(true, 320) - (MaskedTextEntryPainter.field_y.pixelWidth >> 1), MatchConditionEntry.a(100, (byte) 94));
+          GradientUiRenderer.drawCenteredTextBackdrop(this.message, IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(130, (byte) 94));
+          GradientUiRenderer.drawCenteredGradientText(this.message, IgnoreListLookupSupport.a(true, 320), MatchConditionEntry.a(130, (byte) 94), ConsoleValue.field_b, false);
           this.panelHeight = 40;
         }
         if (0 == this.panelHeight) {
           return;
         }
         boolean decompiledFrameRemainder0 = true;
-        var2 = so.field_b.width;
-        var3 = so.field_b.height;
+        var2 = FixedSquareRootSupport.field_b.width;
+        var3 = FixedSquareRootSupport.field_b.height;
         SoftwareRaster.setClip(-10 + var2 - this.panelWidth, -this.panelHeight + var3 - 10, -10 + var2, var3);
         GradientUiRenderer.drawHollowGradientFrame(-10 + (-this.panelWidth + var2), -10 - this.panelHeight + var3, this.panelWidth, this.panelHeight, MusicPatch.field_m, ConsoleValue.field_b, 0, 192);
         if (4 != this.buttonMode) {
@@ -1723,9 +1723,9 @@ class BattleTutorial {
         }
         if (this.message != null) {
           SoftwareRaster.setClip(var2 - this.panelWidth, -this.panelHeight + var3, var2 - 10, var3 - 45);
-          rs.field_n.drawParagraph(this.message, -this.panelWidth + var2, -this.panelHeight + var3, 220, 400, 16777215, -1, 0, 0, 0);
+          PowerOfTwoSupport.field_n.drawParagraph(this.message, -this.panelWidth + var2, -this.panelHeight + var3, 220, 400, 16777215, -1, 0, 0, 0);
         }
-        SoftwareRaster.a();
+        SoftwareRaster.resetClip();
     }
 
     private final void a(int param0, int param1, int param2) {

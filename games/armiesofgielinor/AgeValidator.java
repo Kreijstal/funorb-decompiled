@@ -85,10 +85,10 @@ final class AgeValidator extends TextFieldValidator {
                     var17 = 0;
                     var13Lifetime1 = var17;
                     while (var9 > var17) {
-                      var12[var17] = ah.a(var10[var17], (byte) 90);
+                      var12[var17] = LocalCoatSupport.loadClassOrPrimitive(var10[var17], (byte) 90);
                       var17++;
                     }
-                    var18.field_r[var5] = param1.findDeclaredMethodAsync(ah.a(var20, (byte) 90), 0, var12, var21);
+                    var18.field_r[var5] = param1.findDeclaredMethodAsync(LocalCoatSupport.loadClassOrPrimitive(var20, (byte) 90), 0, var12, var21);
                     var18.field_u[var5] = var22;
                   }
                 } else {
@@ -100,7 +100,7 @@ final class AgeValidator extends TextFieldValidator {
                   }
                   var18.field_t[var5] = var6_int;
                   var18.field_v[var5] = var9;
-                  var18.field_k[var5] = param1.findDeclaredFieldAsync(-30598, ah.a(var15, (byte) 90), var16);
+                  var18.field_k[var5] = param1.findDeclaredFieldAsync(-30598, LocalCoatSupport.loadClassOrPrimitive(var15, (byte) 90), var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -171,17 +171,17 @@ final class AgeValidator extends TextFieldValidator {
             field_k = (int[]) null;
           }
           syntaxText = (CharSequence) ((Object) text);
-          if (!vv.a(-66, syntaxText)) {
-            invalidSyntaxState = rn.validationInvalid;
+          if (!ConsoleTokenSupport.a(-66, syntaxText)) {
+            invalidSyntaxState = ProceduralMapSupport.validationInvalid;
             return invalidSyntaxState;
           }
           numericText = (CharSequence) ((Object) text);
           age = HuffmanCodec.a(46, numericText);
           if (age > 0 &&
             age <= 130) {
-            return oo.validationValid;
+            return MembershipExpansionScreen.validationValid;
           }
-          invalidRangeState = rn.validationInvalid;
+          invalidRangeState = ProceduralMapSupport.validationInvalid;
           return invalidRangeState;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -201,32 +201,32 @@ final class AgeValidator extends TextFieldValidator {
         if (obfuscationGuard != 2) {
           field_l = (RgbSprite[]) null;
         }
-        if (fk.packetPayloadLength == -1) {
+        if (DropdownSelectorPainter.packetPayloadLength == -1) {
           if (!ConsoleTokenCursor.receivePacketBytes(-122, 1)) {
             return false;
           }
-          fk.packetPayloadLength = ByteStorage.incomingPacket.readUnsignedByte(0);
+          DropdownSelectorPainter.packetPayloadLength = ByteStorage.incomingPacket.readUnsignedByte(0);
           ByteStorage.incomingPacket.position = 0;
         }
-        if (-2 == fk.packetPayloadLength) {
+        if (-2 == DropdownSelectorPainter.packetPayloadLength) {
           if (!ConsoleTokenCursor.receivePacketBytes(-96, 2)) {
             return false;
           }
-          fk.packetPayloadLength = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
+          DropdownSelectorPainter.packetPayloadLength = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
           ByteStorage.incomingPacket.position = 0;
         }
-        return ConsoleTokenCursor.receivePacketBytes(-105, fk.packetPayloadLength);
+        return ConsoleTokenCursor.receivePacketBytes(-105, DropdownSelectorPainter.packetPayloadLength);
     }
 
     final static void rememberLastQuickChat(String recipientName, long accountId, int phraseId, int channelId, int obfuscationGuard) {
         SpriteControlNode.lastQuickChatChannel = channelId;
         AdaptiveMidiPcmStream.lastQuickChatRecipientName = recipientName;
-        vi.lastQuickChatPhraseId = phraseId;
+        MonotonicClockSupport.lastQuickChatPhraseId = phraseId;
         if (obfuscationGuard != 19212) {
           return;
         }
         try {
-          lq.hasLastQuickChat = true;
+          IntegerPowerSupport.hasLastQuickChat = true;
           RevivalEvent.lastQuickChatRecipientAccountId = accountId;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "jh.Q(" + (recipientName != null ? "{...}" : "null") + ',' + accountId + ',' + phraseId + ',' + channelId + ',' + obfuscationGuard + ')');
@@ -244,7 +244,7 @@ final class AgeValidator extends TextFieldValidator {
           if (obfuscationGuard <= 89) {
             field_l = (RgbSprite[]) null;
           }
-          if (this.validateText(-3137, text) != rn.validationInvalid) {
+          if (this.validateText(-3137, text) != ProceduralMapSupport.validationInvalid) {
             return null;
           }
           stackIn_5_0 = jg.field_n;

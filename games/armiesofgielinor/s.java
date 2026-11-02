@@ -8,7 +8,7 @@ final class s {
     static int field_d;
     static String field_b;
 
-    final static void a(int param0, int param1, on param2) {
+    final static void a(int param0, int param1, TerrainScatterSupport param2) {
         CipherPacketBuffer var3 = null;
         try {
           var3 = EmailValidator.outgoingPacket;
@@ -90,7 +90,7 @@ final class s {
           if (param2 != 13) {
             return null;
           }
-          stackIn_41_0 = EmailCheckResult.a(4800, cp.field_f, new String[]{param1});
+          stackIn_41_0 = EmailCheckResult.a(4800, EventPresenterFactory.field_f, new String[]{param1});
           return stackIn_41_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

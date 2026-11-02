@@ -50,7 +50,7 @@ class KeyedLoginCredentials extends LoginCredentials {
             if (8 != param2) {
             } else {
               if (!GrowableIntArray.field_i) {
-                param0 = rs.field_x;
+                param0 = PowerOfTwoSupport.field_x;
               } else {
                 param0 = ConsoleTextNode.field_o;
               }
@@ -66,7 +66,7 @@ class KeyedLoginCredentials extends LoginCredentials {
               if (DeployAction.field_A) {
                 param0 = EmailCheckResult.a(4800, field_d, new String[]{param0});
               }
-              if (se.field_f) {
+              if (IgnoreRequestSupport.field_f) {
                 param0 = SummonAction.field_D;
               }
               GameClock.loginProgressDialog.showResult(param2, (byte) 98, param0);

@@ -81,8 +81,8 @@ final class uu {
             var22 = lm.field_b;
             var26 = var22;
             var26.width = 0;
-            so.field_d.height = 0;
-            var6 = so.field_d;
+            FixedSquareRootSupport.field_d.height = 0;
+            var6 = FixedSquareRootSupport.field_d;
             var6.width = 0;
             var7 = MarkerSliderWidget.field_N;
             MarkerSliderWidget.field_N.height = 0;
@@ -90,15 +90,15 @@ final class uu {
             if (!ToggleWidget.isCurrentRoomOwner(false)) {
               var9_ref_String = ToggleWidget.currentRoom.ownerName;
               AccountRegistrationForm.field_F.text = EmailCheckResult.a(4800, CampaignMenu.field_m, new String[]{var9_ref_String}).toUpperCase();
-              MarkerSliderWidget.field_N.setBounds(40, param3 - 20500, pd.field_c.width, -40 + pd.field_c.height, 0);
+              MarkerSliderWidget.field_N.setBounds(40, param3 - 20500, PasswordLengthSupport.field_c.width, -40 + PasswordLengthSupport.field_c.height, 0);
               MarkerSliderWidget.field_N.text = EmailCheckResult.a(4800, GiveTileConsoleCommand.field_F, new String[]{var9_ref_String});
               var8 = MarkerSliderWidget.field_N;
               decompiledFrameRemainder1 = (var19 != 0);
             }
             if (decompiledFrameRemainder1) {
               AccountRegistrationForm.field_F.text = DualNodeHashTable.field_f.toUpperCase();
-              var9 = (2 + pd.field_c.width) / 2;
-              lm.field_b.setBounds(40, -20500, var9 - 2, -40 + pd.field_c.height, 0);
+              var9 = (2 + PasswordLengthSupport.field_c.width) / 2;
+              lm.field_b.setBounds(40, -20500, var9 - 2, -40 + PasswordLengthSupport.field_c.height, 0);
               if (ToggleWidget.currentRoom.playerCapacity > ToggleWidget.currentRoom.playerCount) {
                 lm.field_b.text = TickCounter.field_d.toUpperCase();
                 lm.field_b.inputEnabled = true;
@@ -126,25 +126,25 @@ final class uu {
                 }
                 lm.field_b.text = lm.field_b.text + "<br>" + var10_ref_String;
               }
-              so.field_d.setBounds(40, -20500, -var9 + pd.field_c.width, pd.field_c.height - 40, var9);
-              so.field_d.text = ArchiveProvider.field_b.toUpperCase();
-              var8 = so.field_d;
-              stackIn_23_0 = so.field_d;
-              stackIn_24_1 = (param4) && (ph.field_d == 0L);
+              FixedSquareRootSupport.field_d.setBounds(40, -20500, -var9 + PasswordLengthSupport.field_c.width, PasswordLengthSupport.field_c.height - 40, var9);
+              FixedSquareRootSupport.field_d.text = ArchiveProvider.field_b.toUpperCase();
+              var8 = FixedSquareRootSupport.field_d;
+              stackIn_23_0 = FixedSquareRootSupport.field_d;
+              stackIn_24_1 = (param4) && (AccountNameCharacterSupport.field_d == 0L);
               stackIn_23_0.inputEnabled = stackIn_24_1;
               var10 = 2;
-              if (null != fs.field_d) {
+              if (null != PrivateTextRecipientSupport.field_d) {
                 if (null == TeleportAction.field_B) {
-                  TeleportAction.field_B = new byte[tq.gameOptionCount];
-                  dt.field_d = new boolean[tq.gameOptionCount];
+                  TeleportAction.field_B = new byte[NineSliceSpriteSupport.gameOptionCount];
+                  DateValiditySupport.field_d = new boolean[NineSliceSpriteSupport.gameOptionCount];
                 }
                 var11_int = 0;
                 do {
-                  if (!(var11_int < tq.gameOptionCount)) {
+                  if (!(var11_int < NineSliceSpriteSupport.gameOptionCount)) {
                     var10 = 0;
                     break;
                   }
-                  dt.field_d[var11_int] = false;
+                  DateValiditySupport.field_d[var11_int] = false;
                   var11_int++;
                 } while (var19 == 0);
                 scanLoop1: while (true) {
@@ -157,9 +157,9 @@ final class uu {
                     var12 = stackIn_73_0;
                     while (true) {
                       stackIn_39_0 = var12;
-                      stackIn_39_1 = fs.field_d.length;
+                      stackIn_39_1 = PrivateTextRecipientSupport.field_d.length;
                       if (stackIn_39_0 < stackIn_39_1) {
-                        var25 = fs.field_d[var12];
+                        var25 = PrivateTextRecipientSupport.field_d[var12];
                         var23 = var25;
                         var20 = var23;
                         var13 = var20;
@@ -208,7 +208,7 @@ final class uu {
                             }
                             var15 += 2;
                           }
-                          dt.field_d[var14_int] = true;
+                          DateValiditySupport.field_d[var14_int] = true;
                           break;
                         }
                         var12++;
@@ -226,14 +226,14 @@ final class uu {
                   break;
                 }
                 if (stackIn_73_0 <= -3 &&
-                  br.heldKeys[12]) {
+                  CampaignLookupSupport.heldKeys[12]) {
                   var10 = 2;
                 }
               }
               if ((var10 >= 2) &&
                 (decompiledFrameRemainder1 = (ep.field_p != null ||
                 null != GameAppletShell.field_e ||
-                jv.field_d != null ||
+                SoundPanSupport.field_d != null ||
                 null != CombatPresentation.field_j))) {
                 var11_int = 0;
                 var12 = 0;
@@ -242,7 +242,7 @@ final class uu {
                 var15 = 0;
                 var16 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
-                while (!(decompiledNaturalLoopExit0 = (!(var16 < tq.gameOptionCount)))) {
+                while (!(decompiledNaturalLoopExit0 = (!(var16 < NineSliceSpriteSupport.gameOptionCount)))) {
                   var17_int = 255 & ToggleWidget.currentRoom.gameOptions[var16];
                   if (var19 == 0) {
                     if (null != ep.field_p &&
@@ -257,7 +257,7 @@ final class uu {
                         var13_int = var18_int;
                       }
                       if (var18_int != 0 &&
-                        !bj.field_k) {
+                        !AlphaDecodedSpriteSupport.field_k) {
                         var11_int = 1;
                       }
                     }
@@ -265,11 +265,11 @@ final class uu {
                       null != CombatPresentation.field_j[var16]) {
                       var15 = var15 | CombatPresentation.field_j[var16][var17_int];
                     }
-                    if (jv.field_d != null &&
-                      jv.field_d[var16] != null) {
-                      var18_intLifetime1 = jv.field_d[var16][var17_int];
+                    if (SoundPanSupport.field_d != null &&
+                      SoundPanSupport.field_d[var16] != null) {
+                      var18_intLifetime1 = SoundPanSupport.field_d[var16][var17_int];
                       if (0 != var18_intLifetime1 &&
-                        !bj.field_k) {
+                        !AlphaDecodedSpriteSupport.field_k) {
                         var11_int = 1;
                       }
                       if (var18_intLifetime1 > var14_int) {
@@ -336,12 +336,12 @@ final class uu {
                   break;
                 }
                 if (stackIn_132_0 <= -3 &&
-                  br.heldKeys[12]) {
+                  CampaignLookupSupport.heldKeys[12]) {
                   var16 = 0;
                 }
                 if (var16 != 0) {
-                  so.field_d.inputEnabled = false;
-                  if (so.field_d.hovered) {
+                  FixedSquareRootSupport.field_d.inputEnabled = false;
+                  if (FixedSquareRootSupport.field_d.hovered) {
                     if (DebugConsole.field_w.tabs.activeTab != 0) {
                       DialogMessagePane.field_I = EmailCheckResult.a(4800, Battlefield.field_pb, new String[]{GridWidgetContainer.field_O});
                       if (var19 != 0) {
@@ -356,14 +356,14 @@ final class uu {
               if ((decompiledFrameRemainder1) &&
                 (!(var10 >= 2) ||
                 var19 != 0)) {
-                so.field_d.inputEnabled = false;
-                if (so.field_d.hovered) {
+                FixedSquareRootSupport.field_d.inputEnabled = false;
+                if (FixedSquareRootSupport.field_d.hovered) {
                   var11 = null;
                   var12 = 0;
                   var13_intLifetime1 = 0;
                   while (true) {
-                    if (var13_intLifetime1 < tq.gameOptionCount) {
-                      stackOut_147_0 = dt.field_d[var13_intLifetime1];
+                    if (var13_intLifetime1 < NineSliceSpriteSupport.gameOptionCount) {
+                      stackOut_147_0 = DateValiditySupport.field_d[var13_intLifetime1];
                       stackIn_155_0 = stackOut_147_0 ? 1 : 0;
                       stackIn_148_0 = stackOut_147_0;
                       if (var19 == 0) {
@@ -385,7 +385,7 @@ final class uu {
                     break;
                   }
                   if (stackIn_155_0 != 0) {
-                    var13_ref = l.field_h;
+                    var13_ref = QuickChatCategoryMenuSupport.field_h;
                     if (var12 == 0) {
                       var14 = EmailCheckResult.a(4800, er.field_c, new String[]{(String) (var11)});
                       if (var19 != 0) {
@@ -409,8 +409,8 @@ final class uu {
                 }
               }
             }
-            if (ph.field_d != 0L) {
-              var9 = (int)(-vi.monotonicMillis(-111) + ph.field_d);
+            if (AccountNameCharacterSupport.field_d != 0L) {
+              var9 = (int)(-MonotonicClockSupport.monotonicMillis(-111) + AccountNameCharacterSupport.field_d);
               var9 = (var9 + 999) / 1000;
               if (1 > var9) {
                 var9 = 1;
@@ -423,7 +423,7 @@ final class uu {
           stackIn_173_1 = true;
           stackIn_174_2 = (param0) && (!param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_173_0).updateInput(stackIn_173_1, stackIn_174_2);
-          stackIn_178_0 = pd.field_c;
+          stackIn_178_0 = PasswordLengthSupport.field_c;
           stackIn_178_1 = true;
           stackIn_179_2 = (param0) && (!param1) && (!ChannelGainProfile.field_f);
           ((ClientUiComponent) (Object) stackIn_178_0).updateInput(stackIn_178_1, stackIn_179_2);
@@ -439,8 +439,8 @@ final class uu {
             if (lm.field_b.pressedButton != 0) {
               ChannelGainProfile.field_f = true;
             }
-            if (0 != so.field_d.pressedButton) {
-              cp.field_h = true;
+            if (0 != FixedSquareRootSupport.field_d.pressedButton) {
+              EventPresenterFactory.field_h = true;
             }
             if (ConsolePanel.field_m.pressedButton != 0) {
               ChannelGainProfile.field_f = false;

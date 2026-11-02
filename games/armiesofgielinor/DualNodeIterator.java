@@ -81,9 +81,9 @@ final class DualNodeIterator implements Iterator {
         return this.cursor != this.deque.sentinel;
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_d = null;
-        if (param0 > -60) {
+        if (obfuscationGuard > -60) {
           DualNodeIterator.b((byte) -85);
           field_g = null;
           return;

@@ -48,7 +48,7 @@ final class CheckBoxWidgetPainter implements WidgetPainter {
               }
               var7 = new SectorCacheStore(param0, SpellMenuGroup.field_b, mu.field_b[param0], 2097152);
             }
-            var8 = oi.field_c.openProvider(param3, (SectorCacheStore) (var7), param0, 0, (SectorCacheStore) (var6));
+            var8 = CheckMarkWidgetPainter.field_c.openProvider(param3, (SectorCacheStore) (var7), param0, 0, (SectorCacheStore) (var6));
             if (param4) {
               var8.c(31637);
             }
@@ -66,9 +66,9 @@ final class CheckBoxWidgetPainter implements WidgetPainter {
         }
     }
 
-    public static void a(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         acceptedPacketOpcodes = null;
-        if (param0 > -36) {
+        if (obfuscationGuard > -36) {
           CheckBoxWidgetPainter.a(-28, true, 82, false, false, -112);
         }
     }
@@ -99,17 +99,17 @@ final class CheckBoxWidgetPainter implements WidgetPainter {
             this.verticalAlignment = -101;
           }
           boxColour = 5592405;
-          SoftwareRaster.f(originX + widget.x, widget.y + originY, widget.width, widget.height, this.backgroundColour);
+          SoftwareRaster.fillRectangle(originX + widget.x, widget.y + originY, widget.width, widget.height, this.backgroundColour);
           if (renderFlag) {
             boxColour = 16777215;
           }
           boxX = this.boxOffsetX + (originX + widget.x);
           boxY = widget.y + (originY + this.boxOffsetY);
-          SoftwareRaster.g(boxX, boxY, this.boxWidth, this.boxHeight, 5592405);
-          SoftwareRaster.f(boxX, boxY, this.boxWidth, this.boxHeight, boxColour);
+          SoftwareRaster.drawBevelShadow(boxX, boxY, this.boxWidth, this.boxHeight, 5592405);
+          SoftwareRaster.fillRectangle(boxX, boxY, this.boxWidth, this.boxHeight, boxColour);
           if (toggle.active) {
-            SoftwareRaster.h(boxX, boxY, this.boxWidth + boxX, this.boxHeight + boxY, 1);
-            SoftwareRaster.h(boxX + this.boxWidth, boxY, boxX, this.boxHeight + boxY, 1);
+            SoftwareRaster.drawLine(boxX, boxY, this.boxWidth + boxX, this.boxHeight + boxY, 1);
+            SoftwareRaster.drawLine(boxX + this.boxWidth, boxY, boxX, this.boxHeight + boxY, 1);
           }
           if (this.font != null) {
             textLeft = this.textPadding + this.boxWidth + this.boxOffsetX;

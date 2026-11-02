@@ -49,7 +49,7 @@ abstract class LoginCredentials {
                 message.privateMessageIdLow24 == 0) {
                 var3_ref = EmailCheckResult.a(obfuscationGuard + 4697, LabeledWidgetContainer.field_Q, new String[]{(String) (var2)});
               } else {
-                var3_ref = EmailCheckResult.a(obfuscationGuard + 4697, ov.field_l, new String[]{(String) (var2)});
+                var3_ref = EmailCheckResult.a(obfuscationGuard + 4697, SpectateRoomRequestSupport.field_l, new String[]{(String) (var2)});
               }
             }
           } else {
@@ -146,7 +146,7 @@ abstract class LoginCredentials {
             if (NanoGameClock.field_l == null) {
               stackIn_13_1 = null;
               stackIn_13_2 = null;
-              stackIn_13_5 = "" + ck.field_b;
+              stackIn_13_5 = "" + StructureTerrainSupport.field_b;
             } else {
               stackIn_13_1 = null;
               stackIn_13_2 = null;
@@ -179,9 +179,9 @@ abstract class LoginCredentials {
 
     final static void openLoginProgress(boolean closeFlowB, String message, int obfuscationGuard) {
         try {
-          se.field_f = closeFlowB;
+          IgnoreRequestSupport.field_f = closeFlowB;
           ManaStarParticle.field_n = true;
-          GameClock.loginProgressDialog = new ProgressMessageDialog(KingBlackDragonEvent.field_C, CipherPacketBuffer.field_t, message, GrowableIntArray.field_i, se.field_f);
+          GameClock.loginProgressDialog = new ProgressMessageDialog(KingBlackDragonEvent.field_C, CipherPacketBuffer.field_t, message, GrowableIntArray.field_i, IgnoreRequestSupport.field_f);
           KingBlackDragonEvent.field_C.showDialog(GameClock.loginProgressDialog, obfuscationGuard ^ obfuscationGuard);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "af.K(" + closeFlowB + ',' + (message != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');

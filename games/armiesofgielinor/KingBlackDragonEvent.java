@@ -54,7 +54,7 @@ final class KingBlackDragonEvent extends GameEvent {
         int var7;
         Unit var8;
         Unit var9;
-        var8 = vs.field_e[param1].occupant;
+        var8 = QuickChatMenuDisplaySupport.field_e[param1].occupant;
         var9 = var8;
         stackIn_3_0 = (var9 == null) ? 0 : 1;
         var6 = stackIn_3_0;
@@ -74,7 +74,7 @@ final class KingBlackDragonEvent extends GameEvent {
           stackIn_15_0 = TeamRoster.playerRingSprite;
           stackIn_15_1 = param2 + 10;
           stackIn_15_2 = 5 + param4;
-          stackIn_15_3 = op.field_c;
+          stackIn_15_3 = FriendRequestSupport.field_c;
           stackIn_16_4 = (CipherPacketBuffer.currentBattlefield.teamGame) ? 1 : 0;
           ((RgbSprite) (Object) stackIn_15_0).drawShadedGrayscale(stackIn_15_1, stackIn_15_2, stackIn_15_3[stackIn_16_4][var8.ownerPlayer]);
           if (NetworkResourceRequest.field_C.selectedUnit == var9) {

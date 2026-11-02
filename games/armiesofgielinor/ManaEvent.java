@@ -306,7 +306,7 @@ final class ManaEvent extends GameEvent {
             ManaEvent.releaseStatics(-17);
           }
           if (MarkerSliderPainter.decodeSpriteSheetFromArchive(false, param0, param3, param1)) {
-            return gv.buildFirstDecodedRgbSprite(2809);
+            return DecodedSpriteSupport.buildFirstDecodedRgbSprite(2809);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

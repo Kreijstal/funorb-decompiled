@@ -22,7 +22,7 @@ final class AiActionCandidate extends IntrusiveNode {
         if (ActionSpell.viewportManager != null) {
           ActionSpell.viewportManager.resizeEnabled = false;
         }
-        ds.a(0, param0 ^ -16982);
+        PointerCaptureSupport.a(0, param0 ^ -16982);
     }
 
     public static void releaseStatics(int obfuscationGuard) {

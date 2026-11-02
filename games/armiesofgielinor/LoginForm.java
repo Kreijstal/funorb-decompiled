@@ -100,7 +100,7 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
             }
           } else {
             this.submitButton = new InteractiveWidget(RegionAnchor.field_k, (WidgetListener) null);
-            this.navigationButton = new InteractiveWidget(dt.field_c, (WidgetListener) null);
+            this.navigationButton = new InteractiveWidget(DateValiditySupport.field_c, (WidgetListener) null);
             this.accountInput.enabled = false;
           }
           this.accountInput.painter = (WidgetPainter) ((Object) new TextEntryWidgetPainter(10000536));
@@ -113,7 +113,7 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
           if (this.registerButton != null) {
             this.registerButton.painter = (WidgetPainter) ((Object) buttonPainter);
           }
-          this.accountInput.tooltipText = de.field_d;
+          this.accountInput.tooltipText = SpellCastErrorSupport.field_d;
           if (null != this.registerButton) {
             this.registerButton.tooltipText = hb.field_b;
           }
@@ -145,7 +145,7 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
           accountRow = accountRowAlias;
           this.addChild((byte) 10, (Widget) (accountRowAlias));
           this.y = this.y + (((Widget) ((Object) accountRow)).height + 5);
-          passwordRowAlias = new LabeledWidgetContainer(10, this.y, -20 + this.width, 25, this.passwordInput, false, 80, 3, font, 16777215, jj.field_h);
+          passwordRowAlias = new LabeledWidgetContainer(10, this.y, -20 + this.width, 25, this.passwordInput, false, 80, 3, font, 16777215, FriendLookupSupport.field_h);
           passwordRow = passwordRowAlias;
           this.addChild((byte) 10, (Widget) (passwordRowAlias));
           this.submitButton.listener = (WidgetListener) (this);
@@ -247,7 +247,7 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
           ArmiesOfGielinor.field_J.drawParagraph(this.description, originX - (-this.x - 20), 15 + originY + this.y, -40 + this.width, this.height, 16777215, -1, 1, 0, ArmiesOfGielinor.field_J.maxAscent);
         }
         if (this.registerButton != null) {
-          SoftwareRaster.e(10 + originX, 134 + originY, -20 + this.width, 4210752);
+          SoftwareRaster.drawHorizontalLine(10 + originX, 134 + originY, -20 + this.width, 4210752);
         }
         super.drawWidget(originX, originY, (byte) -104, renderLayer);
     }
@@ -352,7 +352,7 @@ final class LoginForm extends DequeWidgetContainer implements EditableTextWidget
     }
 
     final static void l(int param0) {
-        hf.field_a = param0;
+        ClientStateChecksumSupport.field_a = param0;
     }
 
     final static String a(String param0, int param1, ResourceArchive param2, int param3, String param4) {

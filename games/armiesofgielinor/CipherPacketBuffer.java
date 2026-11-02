@@ -98,18 +98,18 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (obfuscationGuard == -16807) {
           while (this.writeBitsRemaining < bitCount) {
             bitCount = bitCount - this.writeBitsRemaining;
-            this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(value >>> bitCount, rn.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
+            this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(value >>> bitCount, ProceduralMapSupport.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
             this.writeBitsRemaining = 8;
             this.position = this.position + 1;
           }
           if (bitCount == this.writeBitsRemaining) {
-            this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(value, rn.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
+            this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(value, ProceduralMapSupport.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
             this.position = this.position + 1;
             this.writeBitsRemaining = 8;
           } else {
             var4 = -bitCount + this.writeBitsRemaining;
             var5 = ~(GameEvent.bitMasks[bitCount] << var4);
-            this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(rn.bitwiseAnd(var5, (int) this.payload[this.position]), value << var4);
+            this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(ProceduralMapSupport.bitwiseAnd(var5, (int) this.payload[this.position]), value << var4);
             this.writeBitsRemaining = this.writeBitsRemaining - bitCount;
             return;
           }
@@ -118,18 +118,18 @@ final class CipherPacketBuffer extends PacketBuffer {
         this.setReadBitPosition((byte) -128, -74);
         while (this.writeBitsRemaining < bitCount) {
           bitCount = bitCount - this.writeBitsRemaining;
-          this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(value >>> bitCount, rn.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
+          this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(value >>> bitCount, ProceduralMapSupport.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
           this.writeBitsRemaining = 8;
           this.position = this.position + 1;
         }
         if (bitCount == this.writeBitsRemaining) {
-          this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(value, rn.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
+          this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(value, ProceduralMapSupport.bitwiseAnd((int) this.payload[this.position], 255 << this.writeBitsRemaining));
           this.position = this.position + 1;
           this.writeBitsRemaining = 8;
         } else {
           var4Lifetime1 = -bitCount + this.writeBitsRemaining;
           var5Lifetime1 = ~(GameEvent.bitMasks[bitCount] << var4Lifetime1);
-          this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(rn.bitwiseAnd(var5Lifetime1, (int) this.payload[this.position]), value << var4Lifetime1);
+          this.payload[this.position] = (byte)AccountRegistrationDialog.bitwiseOr(ProceduralMapSupport.bitwiseAnd(var5Lifetime1, (int) this.payload[this.position]), value << var4Lifetime1);
           this.writeBitsRemaining = this.writeBitsRemaining - bitCount;
           return;
         }
@@ -159,13 +159,13 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
     }
 
-    public static void k(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         field_x = null;
         field_t = null;
         field_A = null;
         currentBattlefield = null;
         field_u = null;
-        if (param0 != -97) {
+        if (obfuscationGuard != -97) {
           CipherPacketBuffer.a(true, -32, -99, 30);
           return;
         }
@@ -251,13 +251,13 @@ final class CipherPacketBuffer extends PacketBuffer {
                   if (jt.field_a == 16) {
                     RasterState.a((byte) 111);
                     TextLineLayout.a((byte) -41);
-                    vr.a(iw.field_l, 18);
+                    ThemeSpriteLoadingSupport.loadThemeSprites(iw.field_l, 18);
                   }
                   jt.field_a = param1;
                   if (param2 == 1) {
                     return;
                   }
-                  CipherPacketBuffer.k((byte) -51);
+                  CipherPacketBuffer.releaseStatics((byte) -51);
                   return;
                 }
                 var4 = -2;
@@ -290,13 +290,13 @@ final class CipherPacketBuffer extends PacketBuffer {
                 if (jt.field_a == 16) {
                   RasterState.a((byte) 111);
                   TextLineLayout.a((byte) -41);
-                  vr.a(iw.field_l, 18);
+                  ThemeSpriteLoadingSupport.loadThemeSprites(iw.field_l, 18);
                 }
                 jt.field_a = param1;
                 if (param2 == 1) {
                   return;
                 }
-                CipherPacketBuffer.k((byte) -51);
+                CipherPacketBuffer.releaseStatics((byte) -51);
                 return;
               }
               ConsoleTextNode.field_p[jt.field_a].clearSelectionResources(true);
@@ -335,13 +335,13 @@ final class CipherPacketBuffer extends PacketBuffer {
         if (jt.field_a == 16) {
           RasterState.a((byte) 111);
           TextLineLayout.a((byte) -41);
-          vr.a(iw.field_l, 18);
+          ThemeSpriteLoadingSupport.loadThemeSprites(iw.field_l, 18);
         }
         jt.field_a = param1;
         if (param2 == 1) {
           return;
         }
-        CipherPacketBuffer.k((byte) -51);
+        CipherPacketBuffer.releaseStatics((byte) -51);
     }
 
     final void endBitReading(int obfuscationGuard) {

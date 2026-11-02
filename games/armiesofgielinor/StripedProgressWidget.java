@@ -44,13 +44,13 @@ final class StripedProgressWidget extends Widget {
           rowFromCenter = row - halfHeight;
           intensity = (int)(Math.sqrt((double)(halfHeight * halfHeight - rowFromCenter * rowFromCenter)) / (double)halfHeight * 128.0) + 128;
           primaryShade = intensity < 256 ? (primaryRedBlue * intensity & -16711936 | 16711680 & intensity * primaryGreen) >>> 8 : primaryGreen | primaryRedBlue;
-          SoftwareRaster.e(stripeX, row, this.stripeWidth, primaryShade);
+          SoftwareRaster.drawHorizontalLine(stripeX, row, this.stripeWidth, primaryShade);
           secondaryRedBlue = 16711935 & secondaryColour;
-          SoftwareRaster.e(stripeX - this.stripeWidth * 2, row, this.stripeWidth, primaryShade);
+          SoftwareRaster.drawHorizontalLine(stripeX - this.stripeWidth * 2, row, this.stripeWidth, primaryShade);
           secondaryGreen = 65280 & secondaryColour;
           secondaryShade = intensity >= 256 ? secondaryGreen | secondaryRedBlue : (16711680 & secondaryGreen * intensity | -16711936 & intensity * secondaryRedBlue) >>> 8;
-          SoftwareRaster.e(stripeX + this.stripeWidth, row, this.stripeWidth, secondaryShade);
-          SoftwareRaster.e(-this.stripeWidth + stripeX, row, this.stripeWidth, secondaryShade);
+          SoftwareRaster.drawHorizontalLine(stripeX + this.stripeWidth, row, this.stripeWidth, secondaryShade);
+          SoftwareRaster.drawHorizontalLine(-this.stripeWidth + stripeX, row, this.stripeWidth, secondaryShade);
         }
         QuickChatPhraseRepository.popRasterState(-18862);
         return texture;
@@ -98,7 +98,7 @@ final class StripedProgressWidget extends Widget {
             CombatSandbox.a(this.capScratch, 3);
             texture.drawTransparent(-this.stripeOffset, 0);
             texture.drawTransparent(this.stripeWidth * 2 - this.stripeOffset, 0);
-            this.leftCapMask.b(0, 0);
+            this.leftCapMask.drawMultiplied(0, 0);
             QuickChatPhraseRepository.popRasterState(-18862);
             this.capScratch.drawTransparent(x, y);
           }
@@ -108,7 +108,7 @@ final class StripedProgressWidget extends Widget {
             }
             texture.drawTransparent(-rightTileOffset, 0);
             texture.drawTransparent(-rightTileOffset + this.stripeWidth * 2, 0);
-            this.rightCapMask.b(0, 0);
+            this.rightCapMask.drawMultiplied(0, 0);
             QuickChatPhraseRepository.popRasterState(-18862);
             this.capScratch.drawTransparent(rightX - this.rightCapMask.pixelWidth, y);
             return;
@@ -254,7 +254,7 @@ final class StripedProgressWidget extends Widget {
         byte[] var1 = var2;
         var2[param0] = (byte)(ek.field_d << 2);
         var2[0] = (byte) 1;
-        if (uc.field_a) {
+        if (SpellDefinitionTable.field_a) {
           var2[1] = (byte)AccountRegistrationDialog.bitwiseOr((int) var2[1], 2);
         }
         if (cu.field_a) {
@@ -284,7 +284,7 @@ final class StripedProgressWidget extends Widget {
               curveRatio = Math.sqrt(-curveRatio + 1.0);
               maskIntensity = 1.0 <= curveRatio ? 255 : (int)(curveRatio * 255.0);
             }
-            SoftwareRaster.a(column, row, maskIntensity | maskIntensity << 8 | maskIntensity << 16);
+            SoftwareRaster.setPixel(column, row, maskIntensity | maskIntensity << 8 | maskIntensity << 16);
           }
         }
         QuickChatPhraseRepository.popRasterState(obfuscationGuard - 19612);
@@ -294,7 +294,7 @@ final class StripedProgressWidget extends Widget {
     private final void refreshTextures(int obfuscationGuard) {
         this.stripeTextures = new RgbSprite[]{this.createStripeTexture(this.secondaryColour, -61, this.primaryColour), this.createStripeTexture(this.dimSecondaryColour, -120, this.dimPrimaryColour)};
         this.rightCapMask = this.createCapMask(750);
-        this.leftCapMask = this.rightCapMask.e();
+        this.leftCapMask = this.rightCapMask.createMirroredCopy();
         if (obfuscationGuard != 3) {
           field_Q = (int[]) null;
         }

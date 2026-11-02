@@ -80,7 +80,7 @@ final class InstructionsPanel {
         if (param1 < 90) {
           discarded$0 = this.c(60, 20);
         }
-        ArrayWidgetContainer.a(false, true, this.auxiliaryPreviewUnit, 0, db.a(true, param2), 0, var4Lifetime1, MatchConditionEntry.a(param0, (byte) 94));
+        ArrayWidgetContainer.a(false, true, this.auxiliaryPreviewUnit, 0, IgnoreListLookupSupport.a(true, param2), 0, var4Lifetime1, MatchConditionEntry.a(param0, (byte) 94));
     }
 
     private final void a(byte param0, int param1, int param2) {
@@ -106,21 +106,21 @@ final class InstructionsPanel {
             }
             var7 = var6;
             var8 = var6 + 1;
-            if (null != gt.field_c &&
+            if (null != LocalAccountNameSupport.field_c &&
               0 <= var7 &&
-              gt.field_c.length > var7) {
-              var9 = -(gt.field_c[var7].canvasWidth >> 1) + 50 >> 1;
+              LocalAccountNameSupport.field_c.length > var7) {
+              var9 = -(LocalAccountNameSupport.field_c[var7].canvasWidth >> 1) + 50 >> 1;
               param1 = param1 + var9;
               if (null != UnitModelPreview.field_d &&
                 1 + var7 >= 0 &&
                 1 + var7 < UnitModelPreview.field_d.length) {
-                UnitModelPreview.field_d[1 + var7].drawHalfSize(db.a(true, 6 + param1), MatchConditionEntry.a(param2 + 9, (byte) 94));
-                gt.field_c[var7 + 1].drawHalfSize(db.a(true, param1), MatchConditionEntry.a(param2, (byte) 94));
+                UnitModelPreview.field_d[1 + var7].drawHalfSize(IgnoreListLookupSupport.a(true, 6 + param1), MatchConditionEntry.a(param2 + 9, (byte) 94));
+                LocalAccountNameSupport.field_c[var7 + 1].drawHalfSize(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param2, (byte) 94));
                 if (var8 > 0 &&
                   null != GradientUiRenderer.particlePalettes &&
                   0 <= 1 + var7 &&
                   var7 + 1 < GradientUiRenderer.particlePalettes.length) {
-                  GradientUiRenderer.drawParticleRings(db.a(true, 18 + param1), MatchConditionEntry.a(param2 + 21, (byte) 94), var7 + 1, var8, var4);
+                  GradientUiRenderer.drawParticleRings(IgnoreListLookupSupport.a(true, 18 + param1), MatchConditionEntry.a(param2 + 21, (byte) 94), var7 + 1, var8, var4);
                   param1 = 50 + param1 - var9;
                   var6++;
                   continue;
@@ -175,8 +175,8 @@ final class InstructionsPanel {
           QuickChatCategory.field_G.length > param2) {
           var6 = QuickChatCategory.field_G[param2];
           var7 = QuickChatCategory.field_G[0];
-          ds.a(param1, param0, var7, 27066, true, param3, true, var6);
-          ds.a(param1, param0, var7, 27066, true, param3, false, var6);
+          PointerCaptureSupport.a(param1, param0, var7, 27066, true, param3, true, var6);
+          PointerCaptureSupport.a(param1, param0, var7, 27066, true, param3, false, var6);
           if (param2 == 3) {
             ToggleWidget.a(true, true, param1, param0, param3, 1, param4 ^ 0);
           }
@@ -203,8 +203,8 @@ final class InstructionsPanel {
     }
 
     private final int a(int param0, byte param1, int param2) {
-        int var4 = fk.matchupDamagePercent[param2][param0];
-        int var5 = fk.matchupDamagePercent[param0][param2];
+        int var4 = DropdownSelectorPainter.matchupDamagePercent[param2][param0];
+        int var5 = DropdownSelectorPainter.matchupDamagePercent[param0][param2];
         if (var5 < var4) {
           if (-var5 + var4 <= 45) {
             return 1;
@@ -337,13 +337,13 @@ final class InstructionsPanel {
             return;
           }
           illustrationModes = TeamRoster.instructionIllustrationModes[this.pageIndex];
-          if (da.instructionIllustrationArguments[this.pageIndex] == null) {
+          if (LocalAccountSupport.instructionIllustrationArguments[this.pageIndex] == null) {
             return;
           }
           if (obfuscationGuard >= -73) {
             this.l(58);
           }
-          illustrationArguments = da.instructionIllustrationArguments[this.pageIndex];
+          illustrationArguments = LocalAccountSupport.instructionIllustrationArguments[this.pageIndex];
           topY = this.field_T - this.a(true);
           for (sectionIndex = 0; sectionIndex < sectionTitles.length; sectionIndex++) {
             if (titles != null &&
@@ -393,7 +393,7 @@ final class InstructionsPanel {
           }
           var12 = title;
           if (var12 != null) {
-            GradientUiRenderer.drawCenteredGradientText(var12, db.a(true, var9_int), MatchConditionEntry.a(var10, (byte) 94), ConsoleValue.field_b, true);
+            GradientUiRenderer.drawCenteredGradientText(var12, IgnoreListLookupSupport.a(true, var9_int), MatchConditionEntry.a(var10, (byte) 94), ConsoleValue.field_b, true);
           }
           var13 = topY;
           var11Lifetime1 = this.field_Y - this.field_T + (this.a(true) >> 1);
@@ -467,18 +467,18 @@ final class InstructionsPanel {
           if (var8 < 0) {
             return;
           }
-          if (null != l.activeStructureSprites &&
+          if (null != QuickChatCategoryMenuSupport.activeStructureSprites &&
             0 <= param5 &&
-            l.activeStructureSprites.length > param5 &&
-            null != l.activeStructureSprites[param5] &&
-            l.activeStructureSprites.length != 0) {
+            QuickChatCategoryMenuSupport.activeStructureSprites.length > param5 &&
+            null != QuickChatCategoryMenuSupport.activeStructureSprites[param5] &&
+            QuickChatCategoryMenuSupport.activeStructureSprites.length != 0) {
             if (2 == var8) {
-              if (17 < l.activeStructureSprites.length &&
-                l.activeStructureSprites.length > 16) {
-                l.activeStructureSprites[17].draw(db.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
+              if (17 < QuickChatCategoryMenuSupport.activeStructureSprites.length &&
+                QuickChatCategoryMenuSupport.activeStructureSprites.length > 16) {
+                QuickChatCategoryMenuSupport.activeStructureSprites[17].draw(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
                 var9 = 1;
-                if (null == ds.field_a ||
-                  !(param2 < ds.field_a.length)) {
+                if (null == PointerCaptureSupport.field_a ||
+                  !(param2 < PointerCaptureSupport.field_a.length)) {
                   var9 = 0;
                 }
                 if (null == GameCanvas.field_c ||
@@ -486,46 +486,46 @@ final class InstructionsPanel {
                   var9 = 0;
                 }
                 if (var9 != 0) {
-                  mv.a(db.a(true, 20 + param0), (byte) -70, var7, param2, MatchConditionEntry.a(param1, (byte) 94));
+                  mv.a(IgnoreListLookupSupport.a(true, 20 + param0), (byte) -70, var7, param2, MatchConditionEntry.a(param1, (byte) 94));
                 }
                 if (-1 < param2) {
-                  ResourceRequest.a(ActionRequest.unitModels[76][param2], false, MatchConditionEntry.a(-40 + param1, (byte) 94), this.illustrationAnimation, 128, 150, db.a(true, param0), (MeshData) null, -10374);
+                  ResourceRequest.a(ActionRequest.unitModels[76][param2], false, MatchConditionEntry.a(-40 + param1, (byte) 94), this.illustrationAnimation, 128, 150, IgnoreListLookupSupport.a(true, param0), (MeshData) null, -10374);
                 }
-                l.activeStructureSprites[16].draw(db.a(true, param0), MatchConditionEntry.a(param1 - 40, (byte) 94));
+                QuickChatCategoryMenuSupport.activeStructureSprites[16].draw(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(param1 - 40, (byte) 94));
                 return;
               }
               return;
             }
             if (var8 == 1) {
-              if (l.activeStructureSprites.length <= 8) {
+              if (QuickChatCategoryMenuSupport.activeStructureSprites.length <= 8) {
                 return;
               }
-              l.activeStructureSprites[8].draw(db.a(true, param0), MatchConditionEntry.a(-50 + param1, (byte) 94));
+              QuickChatCategoryMenuSupport.activeStructureSprites[8].draw(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(-50 + param1, (byte) 94));
               if (param2 > -1 &&
-                param2 < op.field_c.length) {
-                wb.a(7816226, db.a(true, param0 + 21), param2, var7, MatchConditionEntry.a(-30 + param1, (byte) 94));
+                param2 < FriendRequestSupport.field_c.length) {
+                LoginCredentialStagingSupport.a(7816226, IgnoreListLookupSupport.a(true, param0 + 21), param2, var7, MatchConditionEntry.a(-30 + param1, (byte) 94));
               }
             } else {
               if (0 != var8) {
                 if (var8 == 8) {
-                  if (11 >= l.activeStructureSprites.length) {
+                  if (11 >= QuickChatCategoryMenuSupport.activeStructureSprites.length) {
                     return;
                   }
-                  l.activeStructureSprites[11].draw(db.a(true, param0), MatchConditionEntry.a(-10 + (param1 - 40), (byte) 94));
+                  QuickChatCategoryMenuSupport.activeStructureSprites[11].draw(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(-10 + (param1 - 40), (byte) 94));
                   if (param2 > -1 &&
-                    op.field_c.length > param2) {
-                    wb.a(7816226, db.a(true, param0 + 20), param2, var7, MatchConditionEntry.a(param1 - 20, (byte) 94));
-                    UnitCycler.a(db.a(true, param0 + 15), param2, 11, 127, MatchConditionEntry.a(21 + param1, (byte) 94));
+                    FriendRequestSupport.field_c.length > param2) {
+                    LoginCredentialStagingSupport.a(7816226, IgnoreListLookupSupport.a(true, param0 + 20), param2, var7, MatchConditionEntry.a(param1 - 20, (byte) 94));
+                    UnitCycler.a(IgnoreListLookupSupport.a(true, param0 + 15), param2, 11, 127, MatchConditionEntry.a(21 + param1, (byte) 94));
                   }
                 }
               } else {
-                if (l.activeStructureSprites.length <= 0) {
+                if (QuickChatCategoryMenuSupport.activeStructureSprites.length <= 0) {
                   return;
                 }
-                l.activeStructureSprites[0].draw(db.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
+                QuickChatCategoryMenuSupport.activeStructureSprites[0].draw(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(-40 + param1, (byte) 94));
                 if (param2 > -1 &&
-                  op.field_c.length > param2) {
-                  wb.a(param3 + 7841939, db.a(true, 20 + param0), param2, var7, MatchConditionEntry.a(10 + param1, (byte) 94));
+                  FriendRequestSupport.field_c.length > param2) {
+                  LoginCredentialStagingSupport.a(param3 + 7841939, IgnoreListLookupSupport.a(true, 20 + param0), param2, var7, MatchConditionEntry.a(10 + param1, (byte) 94));
                 }
               }
             }
@@ -554,8 +554,8 @@ final class InstructionsPanel {
         int var3 = this.footerStart.second;
         int var4 = this.footerEnd.first - var2;
         int var5 = -var3 + this.footerEnd.second;
-        SoftwareRaster.f(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_cb);
-        GradientUiRenderer.drawHollowGradientFrame(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_A, this.field_e);
+        SoftwareRaster.fillRectangle(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_cb);
+        GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_A, this.field_e);
         int var6 = this.footerStart.second;
         int var7 = this.footerEnd.second;
         var3 = var6 + var7 >> 1;
@@ -569,7 +569,7 @@ final class InstructionsPanel {
         int[] var12 = this.footerHighlighted ? TutorialController.field_e : ConsoleValue.field_b;
         int[] var11 = var12;
         int[] var10 = var11;
-        GradientUiRenderer.drawCenteredGradientText(var9, db.a(true, this.field_F.first), MatchConditionEntry.a(var3, (byte) 94), var12, true);
+        GradientUiRenderer.drawCenteredGradientText(var9, IgnoreListLookupSupport.a(true, this.field_F.first), MatchConditionEntry.a(var3, (byte) 94), var12, true);
     }
 
     final void f(byte param0) {
@@ -583,13 +583,13 @@ final class InstructionsPanel {
         this.field_V = new IntPair(614, 446);
         this.field_A = 0;
         this.field_e = 128;
-        if (wb.field_b != null &&
-          7 <= wb.field_b.length) {
-          this.field_a = wb.field_b[7];
+        if (LoginCredentialStagingSupport.field_b != null &&
+          7 <= LoginCredentialStagingSupport.field_b.length) {
+          this.field_a = LoginCredentialStagingSupport.field_b[7];
         } else {
           this.field_a = null;
         }
-        this.field_F = new IntPair(so.field_b.width >> 1, so.field_b.height >> 1);
+        this.field_F = new IntPair(FixedSquareRootSupport.field_b.width >> 1, FixedSquareRootSupport.field_b.height >> 1);
         this.field_x = new IntPair(42, 63);
         this.field_K = new IntPair(597, 417);
         this.initializePanel(99);
@@ -641,28 +641,28 @@ final class InstructionsPanel {
     private final void a(int param0, int param1, int param2, int param3, int param4, Unit param5, Unit param6, int param7) {
         int var9_int = 0;
         int var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        SpellConfirmationDialog.field_j.b();
-        SoftwareRaster.b();
+        SpellConfirmationDialog.field_j.bindAsRasterTarget();
+        SoftwareRaster.clearPixels();
         GradientUiRenderer.drawHollowGradientFrame(0, 0, 134, 61, MusicPatch.field_m, ConsoleValue.field_b, 0, 0);
-        qt.field_e.drawOpaque(2, 2);
-        SoftwareRaster.b(5, 5, 124, 18, 0, 192);
+        BitReversalSupport.field_e.drawOpaque(2, 2);
+        SoftwareRaster.fillRectangleBlended(5, 5, 124, 18, 0, 192);
         if (param4 < 70) {
           return;
         }
         try {
-          SoftwareRaster.b(5, 25, 30, 30, 0, 192);
-          DateInputWidget.field_E.drawText(ScrollContainer.unitDisplayNames[param5.unitType], 10, 17, op.field_c[0][param5.ownerPlayer], -1);
-          DateInputWidget.field_E.drawRightAligned(param5.bonusStrength + param5.strength + "/" + param5.maximumStrength, 126, 18, op.field_c[0][param5.ownerPlayer], -1);
+          SoftwareRaster.fillRectangleBlended(5, 25, 30, 30, 0, 192);
+          DateInputWidget.field_E.drawText(ScrollContainer.unitDisplayNames[param5.unitType], 10, 17, FriendRequestSupport.field_c[0][param5.ownerPlayer], -1);
+          DateInputWidget.field_E.drawRightAligned(param5.bonusStrength + param5.strength + "/" + param5.maximumStrength, 126, 18, FriendRequestSupport.field_c[0][param5.ownerPlayer], -1);
           if (param5.ownerPlayer == param2) {
-            SoftwareRaster.b(99, 25, 30, 30, 0, 128);
-            SoftwareRaster.b(52, 25, 30, 30, 0, 128);
-            var9_int = param5.l(-27014);
-            cp.field_e[eb.bitCount((byte) -126, ~var9_int & 3)].draw(56, 25);
+            SoftwareRaster.fillRectangleBlended(99, 25, 30, 30, 0, 128);
+            SoftwareRaster.fillRectangleBlended(52, 25, 30, 30, 0, 128);
+            var9_int = param5.getStatusIconMask(-27014);
+            EventPresenterFactory.field_e[BitCountSupport.bitCount((byte) -126, ~var9_int & 3)].draw(56, 25);
           } else {
             if (param6 == null) {
-              SoftwareRaster.b(99, 25, 30, 30, 0, 128);
+              SoftwareRaster.fillRectangleBlended(99, 25, 30, 30, 0, 128);
             } else {
-              SoftwareRaster.b(37, 25, 92, 30, 0, 128);
+              SoftwareRaster.fillRectangleBlended(37, 25, 92, 30, 0, 128);
               ProgressMessageDialog.field_rb[param6.getUnitCategory(0)].draw(43, 32);
               sg.field_b[this.a(param6.getUnitCategory(0), (byte) -6, param5.getUnitCategory(0))].draw(75, 32);
             }
@@ -670,8 +670,8 @@ final class InstructionsPanel {
           ProgressMessageDialog.field_rb[param5.getUnitCategory(0)].draw(106, 32);
           DateInputWidget.field_E.drawCentered(100 - param3 + "%", 20, 45, 16777215, -1);
           EventPresenter.field_t.drawShadedGrayscale(68, 60, ConsoleValue.field_b[-1 + ConsoleValue.field_b.length]);
-          so.field_b.bindRasterTarget(5605);
-          SpellConfirmationDialog.field_j.drawWithOpacity(db.a(true, param1), MatchConditionEntry.a(param7, (byte) 94), -param0 + 32 << 3);
+          FixedSquareRootSupport.field_b.bindRasterTarget(5605);
+          SpellConfirmationDialog.field_j.drawWithOpacity(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param7, (byte) 94), -param0 + 32 << 3);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "rk.R(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
@@ -808,7 +808,7 @@ final class InstructionsPanel {
         var3 = this.navigationStart.second;
         var4 = this.navigationEnd.first - var2;
         var5 = this.navigationEnd.second - var3;
-        SoftwareRaster.b(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_A, this.field_e);
+        SoftwareRaster.fillRectangleBlended(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, this.field_A, this.field_e);
         var6 = this.navigationStart.second;
         if (param0 != 10) {
           this.j(76);
@@ -831,7 +831,7 @@ final class InstructionsPanel {
         if (this.previousEnabled &&
           var13 != null &&
           var13.length() > 0) {
-          GradientUiRenderer.drawGradientText(var13, db.a(true, var2Lifetime1), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var17, true);
+          GradientUiRenderer.drawGradientText(var13, IgnoreListLookupSupport.a(true, var2Lifetime1), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var17, true);
         }
         if (this.nextHighlighted) {
           stackIn_12_0 = TutorialController.field_e;
@@ -847,25 +847,25 @@ final class InstructionsPanel {
         if (this.nextEnabled &&
           var15 != null &&
           var15.length() > 0) {
-          GradientUiRenderer.drawRightAlignedGradientText(var15, db.a(true, var2Lifetime2), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var18, true);
+          GradientUiRenderer.drawRightAlignedGradientText(var15, IgnoreListLookupSupport.a(true, var2Lifetime2), MatchConditionEntry.a(var3Lifetime1, (byte) 94), var18, true);
         }
         var2Lifetime3 = this.field_F.first;
         var9 = qk.a(this.pageCount, -2823, this.pageIndex);
-        GradientUiRenderer.drawCenteredGradientText(var9, db.a(true, var2Lifetime3), MatchConditionEntry.a(var3Lifetime1, (byte) 94), TutorialController.field_e, true);
+        GradientUiRenderer.drawCenteredGradientText(var9, IgnoreListLookupSupport.a(true, var2Lifetime3), MatchConditionEntry.a(var3Lifetime1, (byte) 94), TutorialController.field_e, true);
     }
 
     private final int d(int param0) {
         if (param0 != 17) {
           this.getPanelStart((byte) -89);
         }
-        return rs.field_n.maxDescent + rs.field_n.maxAscent;
+        return PowerOfTwoSupport.field_n.maxDescent + PowerOfTwoSupport.field_n.maxAscent;
     }
 
     private final void c(int param0, int param1, int param2) {
         if (null != this.auxiliaryPreviewModel) {
-          this.auxiliaryPreviewModel.setScreenPosition(db.a(true, 40 + param1), MatchConditionEntry.a(param2 + 50, (byte) 94), (byte) -117);
+          this.auxiliaryPreviewModel.setScreenPosition(IgnoreListLookupSupport.a(true, 40 + param1), MatchConditionEntry.a(param2 + 50, (byte) 94), (byte) -117);
           this.auxiliaryPreviewModel.drawAtStoredPosition((byte) -72, false);
-          SpriteScrollBar.a(db.a(true, param1), MatchConditionEntry.a(param2 + 38, (byte) 94), (byte) -97, (Unit) null);
+          SpriteScrollBar.a(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param2 + 38, (byte) 94), (byte) -97, (Unit) null);
         }
         if (param0 != 50) {
           return;
@@ -908,7 +908,7 @@ final class InstructionsPanel {
         if (param1 != 16) {
           this.field_F = (IntPair) null;
         }
-        if (null == gt.field_c) {
+        if (null == LocalAccountNameSupport.field_c) {
           return null;
         }
         if (param0 != 0) {
@@ -919,10 +919,10 @@ final class InstructionsPanel {
         }
         var3 = 150;
         var4 = -1;
-        for (var5 = 0; gt.field_c.length > var5; var5++) {
-          var6 = gt.field_c[var5].canvasWidth;
+        for (var5 = 0; LocalAccountNameSupport.field_c.length > var5; var5++) {
+          var6 = LocalAccountNameSupport.field_c[var5].canvasWidth;
           var6 = var6 >> 1;
-          var7 = gt.field_c[var5].canvasHeight;
+          var7 = LocalAccountNameSupport.field_c[var5].canvasHeight;
           if (0 > var3 &&
             var6 >= 0) {
             var3 = var6;
@@ -952,7 +952,7 @@ final class InstructionsPanel {
         if (~playerId > obfuscationGuard) {
           return null;
         }
-        if (playerId >= op.field_c.length) {
+        if (playerId >= FriendRequestSupport.field_c.length) {
           return null;
         }
         if (unitType < 0) {
@@ -987,15 +987,15 @@ final class InstructionsPanel {
               this.navigationEnd != null) {
               var3 = this.itemIds[itemIndex];
               if (22 == var3) {
-                return -1 + (so.field_b.width >> 1);
+                return -1 + (FixedSquareRootSupport.field_b.width >> 1);
               }
               if (var3 == 23) {
-                return db.a(!obfuscationGuard, this.navigationEnd.first);
+                return IgnoreListLookupSupport.a(!obfuscationGuard, this.navigationEnd.first);
               }
               if (var3 != 8) {
                 return 1;
               }
-              return db.a(true, this.footerEnd.first);
+              return IgnoreListLookupSupport.a(true, this.footerEnd.first);
             }
             return 1;
           }
@@ -1056,13 +1056,13 @@ final class InstructionsPanel {
           if (param1 >= 0 &&
             param1 < BufferedFile.field_k.length &&
             UnitModelPreview.field_d.length > param1 + 1 &&
-            gt.field_c.length > param1) {
+            LocalAccountNameSupport.field_c.length > param1) {
             if (param3 != null &&
               param0 != null &&
               this.field_J != null) {
-              SoftwareRaster.b(this.field_J);
-              param3.b();
-              SoftwareRaster.b();
+              SoftwareRaster.saveClip(this.field_J);
+              param3.bindAsRasterTarget();
+              SoftwareRaster.clearPixels();
               var7_int = this.highlightPulse.isRisingHalf(-122) ? 1 : 0;
               var8 = this.highlightPulse.getValue(-1953891327);
               var9 = this.highlightPulse.maximum;
@@ -1099,20 +1099,20 @@ final class InstructionsPanel {
               var21 = -12;
               var22 = -17;
               var24 = 105 / ((param4 + 25) / 48);
-              var23 = gt.field_c[1 + param1];
+              var23 = LocalAccountNameSupport.field_c[1 + param1];
               var23.drawTransparent(var21 - var17, var22 - var18);
-              so.field_b.bindRasterTarget(5605);
-              SoftwareRaster.a(this.field_J);
-              SoftwareRaster.b(this.field_J);
-              param0.b();
-              SoftwareRaster.b();
+              FixedSquareRootSupport.field_b.bindRasterTarget(5605);
+              SoftwareRaster.restoreClip(this.field_J);
+              SoftwareRaster.saveClip(this.field_J);
+              param0.bindAsRasterTarget();
+              SoftwareRaster.clearPixels();
               var25 = param0.canvasWidth;
               var26 = param0.canvasHeight;
               param3.d(param5, param2, var25, var26);
-              so.field_b.bindRasterTarget(5605);
-              SoftwareRaster.a(this.field_J);
+              FixedSquareRootSupport.field_b.bindRasterTarget(5605);
+              SoftwareRaster.restoreClip(this.field_J);
               GradientUiRenderer.clearSentinelPixels(param0);
-              param0.a();
+              param0.trimTransparentBorder();
               return;
             }
             return;
@@ -1283,12 +1283,12 @@ final class InstructionsPanel {
           }
           param4 = stackIn_26_0;
           if (param3 != null) {
-            param3.drawTransparent(db.a(true, param1), MatchConditionEntry.a(param4, (byte) 94));
+            param3.drawTransparent(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param4, (byte) 94));
           } else {
             if (param5 == null) {
               return null;
             }
-            param5.draw(db.a(true, param1), MatchConditionEntry.a(param4, (byte) 94));
+            param5.draw(IgnoreListLookupSupport.a(true, param1), MatchConditionEntry.a(param4, (byte) 94));
           }
           stackIn_34_0 = null;
           return (IntPair) (stackIn_34_0);
@@ -1314,9 +1314,9 @@ final class InstructionsPanel {
 
     final static void e(int param0) {
         int var2 = 122 % ((param0 + 31) / 56);
-        bj var1 = (bj) (ArchiveIndex.field_o.first((byte) 126));
+        AlphaDecodedSpriteSupport var1 = (AlphaDecodedSpriteSupport) (ArchiveIndex.field_o.first((byte) 126));
         if (var1 == null) {
-          dj.a((byte) -128);
+          TextSplitSupport.a((byte) -128);
           return;
         }
         CipherPacketBuffer var3 = ByteStorage.incomingPacket;
@@ -1329,7 +1329,7 @@ final class InstructionsPanel {
 
     private final int i(int param0) {
         int var2 = 32 % ((-32 - param0) / 59);
-        return rs.field_n.maxDescent + rs.field_n.maxAscent;
+        return PowerOfTwoSupport.field_n.maxDescent + PowerOfTwoSupport.field_n.maxAscent;
     }
 
     private final int h(int param0) {
@@ -1385,7 +1385,7 @@ final class InstructionsPanel {
           if (param4 != null) {
             param3 = param3 - param4.offsetY;
             if (param4 != null) {
-              param4.drawHalfSize(db.a(true, param2), MatchConditionEntry.a(param3, (byte) 94));
+              param4.drawHalfSize(IgnoreListLookupSupport.a(true, param2), MatchConditionEntry.a(param3, (byte) 94));
             }
           }
           if (param1 == 26823) {
@@ -1407,9 +1407,9 @@ final class InstructionsPanel {
         }
     }
 
-    public static void q(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_y = null;
-        if (param0 >= -20) {
+        if (obfuscationGuard >= -20) {
           InstructionsPanel.e(41);
         }
         field_gb = null;
@@ -1436,19 +1436,19 @@ final class InstructionsPanel {
     }
 
     private final void a(int param0, int param1, int param2, byte param3, int param4) {
-        if (l.activeStructureSprites != null &&
+        if (QuickChatCategoryMenuSupport.activeStructureSprites != null &&
           param2 >= 0 &&
-          l.activeStructureSprites.length > param2) {
-          if (null != l.activeStructureSprites &&
+          QuickChatCategoryMenuSupport.activeStructureSprites.length > param2) {
+          if (null != QuickChatCategoryMenuSupport.activeStructureSprites &&
             param1 >= 0 &&
-            l.activeStructureSprites.length > param1) {
+            QuickChatCategoryMenuSupport.activeStructureSprites.length > param1) {
             if (param3 != 114) {
               this.j((byte) 86);
             }
-            if (null == l.activeStructureSprites[param1]) {
+            if (null == QuickChatCategoryMenuSupport.activeStructureSprites[param1]) {
               return;
             }
-            l.activeStructureSprites[param1].d(db.a(true, param0), MatchConditionEntry.a(-20 + param4, (byte) 94));
+            QuickChatCategoryMenuSupport.activeStructureSprites[param1].drawHalfSize(IgnoreListLookupSupport.a(true, param0), MatchConditionEntry.a(-20 + param4, (byte) 94));
             return;
           }
           return;
@@ -1500,9 +1500,9 @@ final class InstructionsPanel {
               NineSliceFrame.activeFoliageSprites[var11Lifetime1] != null) {
               var12 = NineSliceFrame.activeFoliageSprites[var11Lifetime1];
               if (param3) {
-                var12.d(db.a(true, var8 + param4), MatchConditionEntry.a(var9 + param5, (byte) 94));
+                var12.drawHalfSize(IgnoreListLookupSupport.a(true, var8 + param4), MatchConditionEntry.a(var9 + param5, (byte) 94));
               } else {
-                var12.draw(db.a(true, param4 + var8), MatchConditionEntry.a(param5 + var9, (byte) 94));
+                var12.draw(IgnoreListLookupSupport.a(true, param4 + var8), MatchConditionEntry.a(param5 + var9, (byte) 94));
               }
             }
           }
@@ -1595,22 +1595,22 @@ final class InstructionsPanel {
           if (this.pageIndex == 9 &&
             param2 == 0 &&
             param4 == 1) {
-            return this.a(param5, 26823, param3, param0, bj.field_p[0]);
+            return this.a(param5, 26823, param3, param0, AlphaDecodedSpriteSupport.field_p[0]);
           }
           if (9 == this.pageIndex &&
             param2 == 0 &&
             2 == param4) {
-            return this.a(param5, 26823, param3, param0, bj.field_p[2]);
+            return this.a(param5, 26823, param3, param0, AlphaDecodedSpriteSupport.field_p[2]);
           }
           if (this.pageIndex == 9 &&
             0 == param2 &&
             param4 == 3) {
-            return this.a(param5, 26823, param3, param0, bj.field_p[1]);
+            return this.a(param5, 26823, param3, param0, AlphaDecodedSpriteSupport.field_p[1]);
           }
           if (this.pageIndex == 9 &&
             param2 == 0 &&
             param4 == 4) {
-            return this.a(param5, 26823, param3, param0, bj.field_p[3]);
+            return this.a(param5, 26823, param3, param0, AlphaDecodedSpriteSupport.field_p[3]);
           }
           if (this.pageIndex == 9 &&
             param2 == 1 &&
@@ -1699,17 +1699,17 @@ final class InstructionsPanel {
               param4 == 3) {
               return this.b(-2, param3, param5, 4, param0);
             }
-            if (gv.field_a != null &&
+            if (DecodedSpriteSupport.field_a != null &&
               this.pageIndex >= 0 &&
-              gv.field_a.length > this.pageIndex &&
-              null != gv.field_a[this.pageIndex] &&
+              DecodedSpriteSupport.field_a.length > this.pageIndex &&
+              null != DecodedSpriteSupport.field_a[this.pageIndex] &&
               param2 >= 0 &&
-              param2 < gv.field_a[this.pageIndex].length &&
-              null != gv.field_a[this.pageIndex][param2] &&
+              param2 < DecodedSpriteSupport.field_a[this.pageIndex].length &&
+              null != DecodedSpriteSupport.field_a[this.pageIndex][param2] &&
               param4 >= 0 &&
-              gv.field_a[this.pageIndex][param2].length > param4 &&
-              null != gv.field_a[this.pageIndex][param2][param4]) {
-              var7 = gv.field_a[this.pageIndex][param2][param4];
+              DecodedSpriteSupport.field_a[this.pageIndex][param2].length > param4 &&
+              null != DecodedSpriteSupport.field_a[this.pageIndex][param2][param4]) {
+              var7 = DecodedSpriteSupport.field_a[this.pageIndex][param2][param4];
             }
           }
         }
@@ -1758,14 +1758,14 @@ final class InstructionsPanel {
           var7 = this.field_fb;
         }
         if (var7 != null) {
-          var7.setScreenPosition(db.a(true, param5 + 40), MatchConditionEntry.a(param2 + 60, (byte) 94), (byte) -117);
+          var7.setScreenPosition(IgnoreListLookupSupport.a(true, param5 + 40), MatchConditionEntry.a(param2 + 60, (byte) 94), (byte) -117);
           var7.drawAtStoredPosition((byte) -72, false);
         }
         if (param4 != -1) {
           discarded$0 = this.e(-40, -71, -63, -38, 73);
         }
         if (param3) {
-          this.a(db.a(true, param5), param1, MatchConditionEntry.a(param2 + 40, (byte) 94), false);
+          this.a(IgnoreListLookupSupport.a(true, param5), param1, MatchConditionEntry.a(param2 + 40, (byte) 94), false);
         }
     }
 
@@ -1774,7 +1774,7 @@ final class InstructionsPanel {
           return;
         }
         try {
-          param2.setScreenPosition(db.a(true, param3), MatchConditionEntry.a(param0, (byte) 94), (byte) 77);
+          param2.setScreenPosition(IgnoreListLookupSupport.a(true, param3), MatchConditionEntry.a(param0, (byte) 94), (byte) 77);
           param2.drawAtStoredPosition((byte) -72, false);
           int var5_int = -57 % ((param1 - 3) / 48);
         } catch (RuntimeException runtimeException) {
@@ -1805,9 +1805,9 @@ final class InstructionsPanel {
           this.field_t = -120;
         }
         if (this.field_S != null) {
-          this.field_S.setScreenPosition(db.a(true, 40 + param2), MatchConditionEntry.a(90 + param0, (byte) 94), (byte) -3);
+          this.field_S.setScreenPosition(IgnoreListLookupSupport.a(true, 40 + param2), MatchConditionEntry.a(90 + param0, (byte) 94), (byte) -3);
           this.field_S.drawAtStoredPosition((byte) -72, false);
-          UnitCycler.a(-10, MatchConditionEntry.a(38 + param0, (byte) 94), db.a(true, param2), (Unit) null);
+          UnitCycler.a(-10, MatchConditionEntry.a(38 + param0, (byte) 94), IgnoreListLookupSupport.a(true, param2), (Unit) null);
         }
     }
 
@@ -1846,8 +1846,8 @@ final class InstructionsPanel {
           return;
         }
         int var8 = QuickChatCategory.field_G[param1];
-        ds.a(param4, 40 + param0, var7, param2 + 58616, false, var6, true, var8);
-        ds.a(param4, param0 + 40, var7, param2 + 58616, false, var6, false, var8);
+        PointerCaptureSupport.a(param4, 40 + param0, var7, param2 + 58616, false, var6, true, var8);
+        PointerCaptureSupport.a(param4, param0 + 40, var7, param2 + 58616, false, var6, false, var8);
         this.b(param4, 40 + param0, param3, -25713, param1, var6);
     }
 
@@ -1868,15 +1868,15 @@ final class InstructionsPanel {
             }
             var3 = this.itemIds[itemIndex];
             if (var3 == 22) {
-              return db.a(true, this.navigationStart.first);
+              return IgnoreListLookupSupport.a(true, this.navigationStart.first);
             }
             if (var3 == 23) {
-              return so.field_b.width >> 1;
+              return FixedSquareRootSupport.field_b.width >> 1;
             }
             if (var3 != 8) {
               return 1;
             }
-            return db.a(true, this.footerStart.first);
+            return IgnoreListLookupSupport.a(true, this.footerStart.first);
           }
           return 1;
         }
@@ -2151,8 +2151,8 @@ final class InstructionsPanel {
           this.g((byte) 9);
         }
         int var4 = var3 + var2;
-        GradientUiRenderer.drawCenteredTextBackdrop(this.field_a, db.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94));
-        GradientUiRenderer.drawCenteredGradientText(this.field_a, db.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94), ConsoleValue.field_b, false);
+        GradientUiRenderer.drawCenteredTextBackdrop(this.field_a, IgnoreListLookupSupport.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94));
+        GradientUiRenderer.drawCenteredGradientText(this.field_a, IgnoreListLookupSupport.a(true, this.field_F.first), MatchConditionEntry.a(var4, (byte) 94), ConsoleValue.field_b, false);
     }
 
     private final void f(int param0) {
@@ -2162,15 +2162,15 @@ final class InstructionsPanel {
         if (null != ResizableModalDialog.unitAnimationGroups &&
           ResizableModalDialog.unitAnimationGroups.length > 76) {
           var2 = ResizableModalDialog.unitAnimationGroups[76];
-          if (null != ck.animationSequencesByGroup &&
+          if (null != StructureTerrainSupport.animationSequencesByGroup &&
             var2 >= 0 &&
-            ck.animationSequencesByGroup.length > var2) {
-            if (null != ck.animationSequencesByGroup[var2] &&
-              ck.animationSequencesByGroup[var2].length > 0) {
+            StructureTerrainSupport.animationSequencesByGroup.length > var2) {
+            if (null != StructureTerrainSupport.animationSequencesByGroup[var2] &&
+              StructureTerrainSupport.animationSequencesByGroup[var2].length > 0) {
               if (param0 != -11195) {
                 this.nextEnabled = false;
               }
-              var3 = ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[76]][0];
+              var3 = StructureTerrainSupport.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[76]][0];
               if (var3 == null) {
                 return;
               }
@@ -2350,10 +2350,10 @@ final class InstructionsPanel {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
-            if (ov.connectionState == sg.field_a) {
+            if (SpectateRoomRequestSupport.connectionState == sg.field_a) {
               if (param5) {
                 var10 = (String) null;
-                CampaignRewardPreview.field_g = oi.a((String) null, param3, false, 1, dc.field_o);
+                CampaignRewardPreview.field_g = CheckMarkWidgetPainter.a((String) null, param3, false, 1, dc.field_o);
               } else {
                 CampaignRewardPreview.field_g = TabbedPanel.a(false, param4, (byte) 10, param3);
               }
@@ -2361,29 +2361,29 @@ final class InstructionsPanel {
               EmailValidator.outgoingPacket.writeByte(1, 14);
               EmailValidator.outgoingPacket.writeByte(param0 ^ -54, CampaignRewardPreview.field_g.getLoginKind((byte) -16).code);
               hb.$cfr$intArgs$a$e9dea5688aa5(67, -1);
-              ov.connectionState = gi.field_d;
+              SpectateRoomRequestSupport.connectionState = AccountNameCheckStatusSupport.field_d;
             }
-            if (ov.connectionState == gi.field_d &&
+            if (SpectateRoomRequestSupport.connectionState == AccountNameCheckStatusSupport.field_d &&
               ConsoleTokenCursor.receivePacketBytes(-111, 1)) {
               var6_int = ByteStorage.incomingPacket.readUnsignedByte(0);
               if (0 != var6_int) {
                 MusicCrossfadeStream.deliveredOpcode = var6_int;
-                fk.packetPayloadLength = -1;
-                ov.connectionState = SummonAction.field_z;
+                DropdownSelectorPainter.packetPayloadLength = -1;
+                SpectateRoomRequestSupport.connectionState = SummonAction.field_z;
               } else {
-                ov.connectionState = mh.field_a;
+                SpectateRoomRequestSupport.connectionState = EffectsGainSupport.field_a;
               }
               ByteStorage.incomingPacket.position = 0;
             }
-            if (mh.field_a == ov.connectionState &&
+            if (EffectsGainSupport.field_a == SpectateRoomRequestSupport.connectionState &&
               ConsoleTokenCursor.receivePacketBytes(-115, 8)) {
               TextLineLayout.field_h = ByteStorage.incomingPacket.readLong((byte) -2);
               ByteStorage.incomingPacket.position = 0;
-              bk.a(param2, param5, CampaignRewardPreview.field_g, 0, param1);
-              ov.connectionState = NetworkResourceRequest.field_D;
+              MusicTrackSelectionSupport.a(param2, param5, CampaignRewardPreview.field_g, 0, param1);
+              SpectateRoomRequestSupport.connectionState = NetworkResourceRequest.field_D;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (ov.connectionState == NetworkResourceRequest.field_D &&
+            if (SpectateRoomRequestSupport.connectionState == NetworkResourceRequest.field_D &&
               ConsoleTokenCursor.receivePacketBytes(-90, 1)) {
               var6_intLifetime1 = ByteStorage.incomingPacket.readUnsignedByte(param0 + 53);
               ByteStorage.incomingPacket.position = 0;
@@ -2392,27 +2392,27 @@ final class InstructionsPanel {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  ov.connectionState = SummonAction.field_z;
-                  fk.packetPayloadLength = -1;
+                  SpectateRoomRequestSupport.connectionState = SummonAction.field_z;
+                  DropdownSelectorPainter.packetPayloadLength = -1;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  dj.a((byte) -126);
+                  TextSplitSupport.a((byte) -126);
                   RasterViewportResizeHandler.field_b = false;
                   stackIn_30_0 = var6_intLifetime1;
                   return stackIn_30_0;
                 }
               }
               if (decompiledFrameRemainder0) {
-                ov.connectionState = oq.field_m;
-                fk.packetPayloadLength = -1;
+                SpectateRoomRequestSupport.connectionState = oq.field_m;
+                DropdownSelectorPainter.packetPayloadLength = -1;
               }
             }
             if (param0 != -53) {
               stackIn_35_0 = -46;
               return stackIn_35_0;
             }
-            if (oq.field_m == ov.connectionState &&
+            if (oq.field_m == SpectateRoomRequestSupport.connectionState &&
               AgeValidator.isPacketPayloadReady(2)) {
               dc.field_o = ByteStorage.incomingPacket.readLong((byte) -2);
               ModalDialog.field_I = param3;
@@ -2428,11 +2428,11 @@ final class InstructionsPanel {
                 stackIn_52_0 = ((var7 & 8) != 0);
                 NodeIterator.field_a = stackIn_52_0;
                 stackIn_55_0 = ((2 & var7) != 0);
-                vi.field_d = stackIn_55_0;
+                MonotonicClockSupport.field_d = stackIn_55_0;
                 stackIn_58_0 = ((4 & var7) != 0);
                 LineOfSightGrid.field_m = stackIn_58_0;
                 if (NodeIterator.field_a) {
-                  vi.field_d = true;
+                  MonotonicClockSupport.field_d = true;
                 }
                 stackIn_63_0 = ((16 & var7) != 0);
                 c.field_c = stackIn_63_0;
@@ -2464,7 +2464,7 @@ final class InstructionsPanel {
               var11 = (CharSequence) ((Object) mv.localAccountName);
               IntPair.localAccountNameKey = AccountNameNormalizer.normalize(var11, false);
               SpriteControlNode.field_n = ByteStorage.incomingPacket.readUnsignedByte(0);
-              ov.connectionState = ResourceArchive.connectedState;
+              SpectateRoomRequestSupport.connectionState = ResourceArchive.connectedState;
               if (CampaignRewardPreview.field_g.getLoginKind((byte) 50) != ContentTransitionDialog.field_db) {
                 if (CampaignRewardPreview.field_g.getLoginKind((byte) -11) == WidgetTheme.field_u) {
                   DisplayModeOptionPainter.usernameLoginMethod.persistLoginMethod(param0 - 84, CombatEvent.d((byte) -120));
@@ -2474,7 +2474,7 @@ final class InstructionsPanel {
               }
               RasterViewportResizeHandler.field_b = false;
               if (var6 != null) {
-                ph.a(var6, CombatEvent.d((byte) -117), false);
+                AccountNameCharacterSupport.a(var6, CombatEvent.d((byte) -117), false);
               }
               if (LoginForm.memberEntitlementValue <= 0 &&
                 !LineOfSightGrid.field_m) {
@@ -2503,9 +2503,9 @@ final class InstructionsPanel {
               stackIn_88_0 = MusicCrossfadeStream.deliveredOpcode;
               return stackIn_88_0;
             }
-            if (SummonAction.field_z == ov.connectionState &&
+            if (SummonAction.field_z == SpectateRoomRequestSupport.connectionState &&
               AgeValidator.isPacketPayloadReady(2)) {
-              dj.a((byte) -128);
+              TextSplitSupport.a((byte) -128);
               if (MusicCrossfadeStream.deliveredOpcode == 7 &&
                 !RasterViewportResizeHandler.field_b) {
                 RasterViewportResizeHandler.field_b = true;
@@ -2531,8 +2531,8 @@ final class InstructionsPanel {
                 stackIn_109_0 = 3;
                 return stackIn_109_0;
               }
-              var6_intLifetime2 = rn.field_d;
-              rn.field_d = AiPlanningStrategy.field_c;
+              var6_intLifetime2 = ProceduralMapSupport.field_d;
+              ProceduralMapSupport.field_d = AiPlanningStrategy.field_c;
               AiPlanningStrategy.field_c = var6_intLifetime2;
               RasterViewportResizeHandler.field_b = true;
             }
@@ -2637,7 +2637,7 @@ final class InstructionsPanel {
         if (0 <= param0 &&
           param0 < BufferedFile.field_k.length &&
           1 + param0 < UnitModelPreview.field_d.length &&
-          gt.field_c.length > param0) {
+          LocalAccountNameSupport.field_c.length > param0) {
           if (param1 != 1) {
             this.previousEnabled = false;
           }
@@ -2732,7 +2732,7 @@ final class InstructionsPanel {
             var18Lifetime1 = var10_int;
             var19Lifetime1 = var12;
             var20 = var11 - var10_int;
-            var21 = rs.field_n.getParagraphHeight(param2, var20, var15);
+            var21 = PowerOfTwoSupport.field_n.getParagraphHeight(param2, var20, var15);
             var22 = this.field_z;
             var23 = 0;
             if (param5 == 1 &&
@@ -2740,7 +2740,7 @@ final class InstructionsPanel {
               var17 != null) {
               var23 = 1;
             }
-            rs.field_n.drawParagraph(param2, db.a(true, var18Lifetime1), MatchConditionEntry.a(var19Lifetime1, (byte) 94), var20, var21, var22, -1, var23, 0, var15);
+            PowerOfTwoSupport.field_n.drawParagraph(param2, IgnoreListLookupSupport.a(true, var18Lifetime1), MatchConditionEntry.a(var19Lifetime1, (byte) 94), var20, var21, var22, -1, var23, 0, var15);
             var12 = var12 + var21;
             if (param1 != null) {
               var12 = var12 + this.field_g;
@@ -2749,16 +2749,16 @@ final class InstructionsPanel {
             var13 = var12 - param7;
           }
           if (param1 != null &&
-            rs.field_n != null) {
+            PowerOfTwoSupport.field_n != null) {
             var18Lifetime2 = var10_int;
             var19Lifetime2 = var12;
             var20Lifetime1 = var11 - var10_int;
             var25 = 0;
             var21Lifetime1 = var25;
             while (param1.length > var25) {
-              var22Lifetime1 = rs.field_n.getParagraphHeight(param1[var25], var20Lifetime1, var15);
+              var22Lifetime1 = PowerOfTwoSupport.field_n.getParagraphHeight(param1[var25], var20Lifetime1, var15);
               var23Lifetime1 = this.field_l;
-              rs.field_n.drawParagraph(param1[var25], db.a(true, var18Lifetime2), MatchConditionEntry.a(var19Lifetime2, (byte) 94), var20Lifetime1, var22Lifetime1, var23Lifetime1, -1, 0, 0, var15);
+              PowerOfTwoSupport.field_n.drawParagraph(param1[var25], IgnoreListLookupSupport.a(true, var18Lifetime2), MatchConditionEntry.a(var19Lifetime2, (byte) 94), var20Lifetime1, var22Lifetime1, var23Lifetime1, -1, 0, 0, var15);
               var19Lifetime2 = var19Lifetime2 + var22Lifetime1;
               if ((-1 + param1.length) > var25) {
                 var19Lifetime2 = var19Lifetime2 + this.field_E;
@@ -2828,7 +2828,7 @@ final class InstructionsPanel {
         int var8;
         int var9;
         if (param1 >= 0 &&
-          op.field_c.length > param1) {
+          FriendRequestSupport.field_c.length > param1) {
           if (this.progressCounter != null &&
             this.progressCounter.elapsedTicks >= 0 &&
             this.progressCounter.limit > 0 &&
@@ -2842,8 +2842,8 @@ final class InstructionsPanel {
             param2 = param2 + var6;
             var7 = 42;
             var8 = 6;
-            SoftwareRaster.b(param0, param2, var7, var8, 16777215);
-            SoftwareRaster.f(param0 + 1, param2 + 1, -2 + var7, var8 - 2, 0);
+            SoftwareRaster.drawRectangleOutline(param0, param2, var7, var8, 16777215);
+            SoftwareRaster.fillRectangle(param0 + 1, param2 + 1, -2 + var7, var8 - 2, 0);
             var9 = 0;
             if (this.progressCounter.limit > 0) {
               var9 = 1 + this.progressCounter.elapsedTicks * (var7 - 2) / 100;
@@ -2854,7 +2854,7 @@ final class InstructionsPanel {
             if (var9 > var7 - 2) {
               var9 = var7 - 2;
             }
-            SoftwareRaster.f(param0 + 1, param2 + 1, var9, var8 - 2, op.field_c[0][param1]);
+            SoftwareRaster.fillRectangle(param0 + 1, param2 + 1, var9, var8 - 2, FriendRequestSupport.field_c[0][param1]);
             return;
           }
           return;
@@ -2872,13 +2872,13 @@ final class InstructionsPanel {
         int var3 = this.field_C.second;
         int var4 = this.field_V.first - var2;
         int var5 = this.field_V.second - var3;
-        GradientUiRenderer.drawHollowGradientFrame(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_A, this.field_e);
+        GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_A, this.field_e);
         this.g(120);
         var2 = this.field_x.first;
         var3 = this.field_x.second;
         var4 = -var2 + this.field_K.first;
         var5 = -var3 + this.field_K.second;
-        GradientUiRenderer.drawHollowGradientFrame(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_A, this.field_e);
+        GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_A, this.field_e);
         this.drawPageSections(-107);
         this.l(obfuscationGuard + 19);
         this.g((byte) 10);

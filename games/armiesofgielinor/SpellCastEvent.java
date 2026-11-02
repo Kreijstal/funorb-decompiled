@@ -65,7 +65,7 @@ final class SpellCastEvent extends GameEvent {
             var4 = DirectByteStorage.field_k[var3];
             if (var4 >= 0) {
               if (var4 == MovementPlanner.field_z.selectedIndex) {
-                var5 = jv.field_c;
+                var5 = SoundPanSupport.field_c;
               } else {
                 var5 = DualNodeDeque.field_g;
               }
@@ -80,7 +80,7 @@ final class SpellCastEvent extends GameEvent {
             if (0 <= var4) {
               var2 = var2 + QuickChatPhrase.field_w;
               if (MovementPlanner.field_z.selectedIndex != var4) {
-                stackIn_17_0 = ov.field_m;
+                stackIn_17_0 = SpectateRoomRequestSupport.field_m;
               } else {
                 stackIn_17_0 = ed.field_d;
               }
@@ -124,7 +124,7 @@ final class SpellCastEvent extends GameEvent {
           }
           var2 = AccountRegistrationDialog.field_Bb.first((byte) 105);
           while (var2 != null) {
-            tq.a(param0, 0);
+            NineSliceSpriteSupport.a(param0, 0);
             var2 = AccountRegistrationDialog.field_Bb.next((byte) 123);
           }
           return;
@@ -141,7 +141,7 @@ final class SpellCastEvent extends GameEvent {
         }
         if (null != IconTextComponent.field_Nb) {
           if (!IconTextComponent.field_Nb.ensureIndex((byte) 82)) {
-            return db.field_b;
+            return IgnoreListLookupSupport.field_b;
           }
           return LobbyPlayer.field_Jb;
         }
@@ -169,10 +169,10 @@ final class SpellCastEvent extends GameEvent {
         return fm.field_c;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_E = null;
         field_A = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           SpellCastEvent.b(-127, -31);
         }
         field_D = null;
@@ -224,8 +224,8 @@ final class SpellCastEvent extends GameEvent {
           var16 = 0;
           stackIn_12_0 = (WhirlpoolHasher.unitDefinitions[unit.unitType][1] != 2) ? 0 : 1;
           kind2Override = stackIn_12_0;
-          costThreeOverride = unit.r((byte) 55) ? 1 : 0;
-          costOneOverride = unit.o((byte) 98) ? 1 : 0;
+          costThreeOverride = unit.hasSpellCostThreeOverride((byte) 55) ? 1 : 0;
+          costOneOverride = unit.hasSpellCostOneOverride((byte) 98) ? 1 : 0;
           stackIn_15_0 = (unitCategory != 4) ? 0 : 1;
           category4 = stackIn_15_0;
           sourceCost = LeaderEscortCondition.baseTerrainMovementCosts[unitCategory][sourceTerrain];
@@ -358,12 +358,12 @@ final class SpellCastEvent extends GameEvent {
             SpellCastEvent.b(30, -93);
           }
           var4_int = var4_int != 0 | this.a((byte) -39, param2, param0, false) ? 1 : 0;
-          if (uc.spellDefinitions[this.spell.spellId][3] != 4 &&
-            uc.spellDefinitions[this.spell.spellId][4] != 5) {
+          if (SpellDefinitionTable.spellDefinitions[this.spell.spellId][3] != 4 &&
+            SpellDefinitionTable.spellDefinitions[this.spell.spellId][4] != 5) {
             var5 = ((UnitSpell) (this.spell)).targetX;
             var6 = ((UnitSpell) (this.spell)).targetY;
-            if (6 != uc.spellDefinitions[this.spell.spellId][3]) {
-              var7 = uc.spellDefinitions[this.spell.spellId][7];
+            if (6 != SpellDefinitionTable.spellDefinitions[this.spell.spellId][3]) {
+              var7 = SpellDefinitionTable.spellDefinitions[this.spell.spellId][7];
               for (var8 = -var7 + var5; var8 <= var7 + var5; var8++) {
                 if (var8 >= 0 &&
                   var8 < param2.battlefield.mapWidth) {

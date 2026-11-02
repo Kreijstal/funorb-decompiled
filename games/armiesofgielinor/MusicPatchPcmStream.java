@@ -93,17 +93,17 @@ final class MusicPatchPcmStream extends PcmStream {
 
     final static boolean e(int param0) {
         if (param0 == -1) {
-          return !vi.field_d ? true : false;
+          return !MonotonicClockSupport.field_d ? true : false;
         }
         MusicPatchPcmStream.floorDivide(-56, 74, 21);
-        return !vi.field_d ? true : false;
+        return !MonotonicClockSupport.field_d ? true : false;
     }
 
     final static int getPointerIdleTicks(int obfuscationGuard) {
         if (obfuscationGuard != 4) {
           return 68;
         }
-        return av.pointerIdleTicks;
+        return PointerIdleState.pointerIdleTicks;
     }
 
     final void skip(int frameCount) {

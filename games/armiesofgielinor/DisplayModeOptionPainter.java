@@ -43,11 +43,11 @@ final class DisplayModeOptionPainter extends BitmapTextWidgetPainter {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         usernameLoginMethod = null;
         field_w = null;
         field_A = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           field_x = null;
           field_z = null;
           field_u = null;
@@ -81,7 +81,7 @@ final class DisplayModeOptionPainter extends BitmapTextWidgetPainter {
         int iconY = 0;
         int captionCenterX = 0;
         try {
-          SoftwareRaster.b(widget.x + originX, originY + widget.y, widget.width, widget.height, 10197915);
+          SoftwareRaster.drawRectangleOutline(widget.x + originX, originY + widget.y, widget.width, widget.height, 10197915);
           if (obfuscationGuard > -79) {
             field_A = (String) null;
           }
@@ -131,8 +131,8 @@ final class DisplayModeOptionPainter extends BitmapTextWidgetPainter {
         int var2 = 0;
         int var3 = 0;
         UnitAnimationPreview.field_l = param0;
-        if (TurnTimerDial.field_d != mj.field_c) {
-          var2 = mj.field_c * mj.field_c;
+        if (TurnTimerDial.field_d != AudioShutdownSupport.field_c) {
+          var2 = AudioShutdownSupport.field_c * AudioShutdownSupport.field_c;
           var3 = var2 - TurnTimerDial.field_d * TurnTimerDial.field_d;
           param0 = param0 + var3 * (EquipmentBattleTutorial.field_y - param0) / var2;
         }
@@ -147,7 +147,7 @@ final class DisplayModeOptionPainter extends BitmapTextWidgetPainter {
     final static void a(int param0, ResourceArchive param1, ResourceArchive param2) {
         try {
           if (param0 < 30) {
-            DisplayModeOptionPainter.c(false);
+            DisplayModeOptionPainter.releaseStatics(false);
           }
           iw.field_p = param2;
           AlphaWidgetContainer.field_H = param1;

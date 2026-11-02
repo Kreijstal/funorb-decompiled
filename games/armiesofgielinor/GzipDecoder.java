@@ -24,10 +24,10 @@ final class GzipDecoder {
           var4 = var2.pixelHeight;
           ConsoleTextNode.pushRasterState((byte) -56);
           AccountRequestResult.field_k = new RgbSprite(var3, 3 * var4 / 4);
-          AccountRequestResult.field_k.b();
+          AccountRequestResult.field_k.bindAsRasterTarget();
           var2.drawPixels(0, 0);
           SpriteControlNode.field_k = new RgbSprite(var3, var4 - AccountRequestResult.field_k.pixelHeight);
-          SpriteControlNode.field_k.b();
+          SpriteControlNode.field_k.bindAsRasterTarget();
           var2.drawPixels(0, -AccountRequestResult.field_k.pixelHeight);
           SpriteControlNode.field_k.offsetY = AccountRequestResult.field_k.pixelHeight;
           QuickChatPhraseRepository.popRasterState(-18862);

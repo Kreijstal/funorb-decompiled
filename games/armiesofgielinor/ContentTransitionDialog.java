@@ -32,7 +32,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
         if (this.transitionStage == TeleportAction.contentFadeOutStage) {
           return;
         }
-        this.transitionStage = ki.contentFadeInStage;
+        this.transitionStage = QuinticFadeSupport.contentFadeInStage;
         int var2 = 113 % ((obfuscationGuard - 69) / 50);
         this.transitionTick = 0;
         this.installContent(72, this.pendingContent);
@@ -69,7 +69,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
           this.snapDialogAnimation(117);
           return super.advanceDialogAnimation((byte) -1);
         }
-        if (ki.contentFadeInStage != this.transitionStage) {
+        if (QuinticFadeSupport.contentFadeInStage != this.transitionStage) {
           if (obfuscationGuard == -1) {
             return super.advanceDialogAnimation((byte) -1);
           }
@@ -112,7 +112,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
           var2 = 71 % ((obfuscationGuard + 25) / 57);
           return;
         }
-        if (ki.contentFadeInStage != this.transitionStage) {
+        if (QuinticFadeSupport.contentFadeInStage != this.transitionStage) {
           this.setCenteredSize(this.pendingContent.width + 12, (byte) 98, 12 + (this.contentInsetTop + this.pendingContent.height));
           this.installContent(107, this.pendingContent);
         } else {
@@ -217,7 +217,7 @@ abstract class ContentTransitionDialog extends ResizableModalDialog {
             if (param1 != 12) {
               field_Y = (String) null;
             }
-            so.field_b.paint(255, var4, param0, param3);
+            FixedSquareRootSupport.field_b.paint(255, var4, param0, param3);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

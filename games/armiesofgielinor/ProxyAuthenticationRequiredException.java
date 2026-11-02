@@ -23,7 +23,7 @@ final class ProxyAuthenticationRequiredException extends IOException {
           EmailValidator.outgoingPacket.writeInt((byte) -98, var4);
           if (param2) {
             hb.$cfr$intArgs$a$e9dea5688aa5(116, 0);
-            dj.a((byte) -125);
+            TextSplitSupport.a((byte) -125);
           }
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ug.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

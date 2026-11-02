@@ -191,7 +191,7 @@ final class UnitModelPreview {
 
     private final void loadSequence(byte obfuscationGuard) {
         this.animationAvailable = true;
-        AnimationSequence var2 = pg.selectUnitAnimation(this.animationIndex, 176, false, this.unitType);
+        AnimationSequence var2 = UnitAnimationSelectionSupport.selectUnitAnimation(this.animationIndex, 176, false, this.unitType);
         if (var2 == null) {
           this.animationAvailable = false;
           return;

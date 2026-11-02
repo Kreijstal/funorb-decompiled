@@ -49,7 +49,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
             stackIn_7_0 = param1;
             stackIn_8_1 = !(var10 <= param0 - 60);
             if (stackIn_7_0 ^ stackIn_8_1) {
-              NineSliceFrame.activeFoliageSprites[0 + param3 % 6].b(var9, var10, param4, param7);
+              NineSliceFrame.activeFoliageSprites[0 + param3 % 6].drawFadedToColour(var9, var10, param4, param7);
             }
             var8_int = var8_int >> 1;
             param3 = param3 >> 1;
@@ -67,10 +67,10 @@ final class PasswordLoginCredentials extends LoginCredentials {
         return ContentTransitionDialog.field_db;
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_n = null;
         field_m = null;
-        if (param0) {
+        if (obfuscationGuard) {
           field_h = null;
           field_g = null;
           field_j = null;
@@ -132,7 +132,7 @@ final class PasswordLoginCredentials extends LoginCredentials {
             stackIn_7_0 = param1;
             stackIn_8_1 = !(var10 <= param0 - 60);
             if (stackIn_7_0 ^ stackIn_8_1) {
-              NineSliceFrame.activeFoliageSprites[0 + param3 % 6].b(var9, var10, param4, param7);
+              NineSliceFrame.activeFoliageSprites[0 + param3 % 6].drawFadedToColour(var9, var10, param4, param7);
             }
             var8_int = var8_int >> 1;
             param3 = param3 >> 1;

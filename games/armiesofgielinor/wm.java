@@ -36,11 +36,11 @@ final class wm {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          br.a(param14, param9, 333, param17);
+          CampaignLookupSupport.a(param14, param9, 333, param17);
           if (param8 <= 80) {
             return;
           }
-          uc.a(param11, param19, param5, false, param4);
+          SpellDefinitionTable.a(param11, param19, param5, false, param4);
           ContentTransitionDialog.c(param0, param2, 56);
           qf.a(param6, param10, param7, param12, param15, -125);
           ConsoleCommand.a(param16, (byte) 96, param13, param20);
@@ -178,7 +178,7 @@ final class wm {
             MoveEvent.field_J = false;
             cu.field_c = true;
           }
-          if (hf.textChatActive) {
+          if (ClientStateChecksumSupport.textChatActive) {
             if (null == UnitCycler.field_g) {
               var9Lifetime1 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
               if (cu.field_c) {
@@ -211,7 +211,7 @@ final class wm {
           MoveEvent.field_J = false;
           cu.field_c = true;
         }
-        if (hf.textChatActive) {
+        if (ClientStateChecksumSupport.textChatActive) {
           if (null == UnitCycler.field_g) {
             var9Lifetime2 = -vq.field_a.content.pendingHeightDelta - (vq.field_a.content.height - vq.field_a.viewport.height);
             if (!cu.field_c) {

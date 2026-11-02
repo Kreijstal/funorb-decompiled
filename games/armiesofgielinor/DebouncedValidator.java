@@ -110,7 +110,7 @@ abstract class DebouncedValidator implements ValidationSource {
           }
           var3 = new MapTile();
           NumericDateInputWidget.readTaggedFields(packet, var3, recordBitLength, -24721);
-          var3.j(-78);
+          var3.refreshGodFromMetadata(-78);
           var4 = -72 / ((-5 - obfuscationGuard) / 60);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -181,9 +181,9 @@ abstract class DebouncedValidator implements ValidationSource {
             var8 = ActionRequest.field_t[9] >> 2;
             var9 = ActionRequest.field_t[10] >> 2;
             var10_int = ActionRequest.field_t[11] >> 2;
-            var11 = var8 * pd.field_a[3] + pd.field_a[4] * var9 + pd.field_a[5] * var10_int >> 14;
-            var12 = var10_int * pd.field_a[8] + (var8 * pd.field_a[6] + var9 * pd.field_a[7]) >> 14;
-            var13 = pd.field_a[10] * var9 + pd.field_a[9] * var8 + pd.field_a[11] * var10_int >> 14;
+            var11 = var8 * PasswordLengthSupport.field_a[3] + PasswordLengthSupport.field_a[4] * var9 + PasswordLengthSupport.field_a[5] * var10_int >> 14;
+            var12 = var10_int * PasswordLengthSupport.field_a[8] + (var8 * PasswordLengthSupport.field_a[6] + var9 * PasswordLengthSupport.field_a[7]) >> 14;
+            var13 = PasswordLengthSupport.field_a[10] * var9 + PasswordLengthSupport.field_a[9] * var8 + PasswordLengthSupport.field_a[11] * var10_int >> 14;
             var2[var3] = var11 * var5 + var12 * var6 + var7 * var13 >> 16;
           }
           var3Lifetime1 = ActionRequest.field_t[param0] >> 8;
@@ -191,7 +191,7 @@ abstract class DebouncedValidator implements ValidationSource {
           var5Lifetime1 = ActionRequest.field_t[11] >> 8;
           var6Lifetime1 = PasswordValidator.field_j << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = SocketResourceClient.b(var6Lifetime1, 100) >> 8;
+          var8Lifetime1 = SocketResourceClient.sine8192(var6Lifetime1, 100) >> 8;
           var9Lifetime1 = ContextualRuntimeException.a(param0 - 10, var6Lifetime1) >> 8;
           if (AiPlanningStrategy.pointerX != -1 &&
             ko.pointerY != -1) {
@@ -221,9 +221,9 @@ abstract class DebouncedValidator implements ValidationSource {
             var17 = CampaignMenuButton.field_a[var16];
             CampaignMenuEntry.a((byte) -116, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              pd.field_a[var18] = pd.field_a[var18] + CampaignParticipant.field_s[var15][var18];
+              PasswordLengthSupport.field_a[var18] = PasswordLengthSupport.field_a[var18] + CampaignParticipant.field_s[var15][var18];
             }
-            MapRepository.a(var17, true, true, false, false, pd.field_a, ActionRequest.field_t);
+            MapRepository.a(var17, true, true, false, false, PasswordLengthSupport.field_a, ActionRequest.field_t);
             IconLabelControl.a(var13Lifetime1, var17, var9Lifetime1, var8Lifetime1, var12Lifetime1, var7Lifetime1, var14, (byte) 120);
           }
           return;
@@ -238,7 +238,7 @@ abstract class DebouncedValidator implements ValidationSource {
         if (obfuscationGuard <= 123) {
           return;
         }
-        this.lastChangeMillis = vi.monotonicMillis(99);
+        this.lastChangeMillis = MonotonicClockSupport.monotonicMillis(99);
     }
 
     public final ValidationState getValidationState(boolean obfuscationGuard) {
@@ -246,9 +246,9 @@ abstract class DebouncedValidator implements ValidationSource {
           return (ValidationState) null;
         }
         if (this.isInputEmpty(81)) {
-          return lq.validationEmpty;
+          return IntegerPowerSupport.validationEmpty;
         }
-        if (!((350L + this.lastChangeMillis) <= vi.monotonicMillis(-96))) {
+        if (!((350L + this.lastChangeMillis) <= MonotonicClockSupport.monotonicMillis(-96))) {
           return DialogMessagePane.validationWaiting;
         }
         return this.evaluateState(118);
@@ -338,7 +338,7 @@ abstract class DebouncedValidator implements ValidationSource {
                     } else {
                       var18 = SoftwareRaster.pixels[var8];
                       var19 = (var17 & 16711935) * var15 + (16711935 & var18) * var16 >> 8 & 16711935;
-                      SoftwareRaster.pixels[var8] = var19 + rn.bitwiseAnd(65280, rn.bitwiseAnd(var17, 65280) * var15 + rn.bitwiseAnd(var18, 65280) * var16 >> 8);
+                      SoftwareRaster.pixels[var8] = var19 + ProceduralMapSupport.bitwiseAnd(65280, ProceduralMapSupport.bitwiseAnd(var17, 65280) * var15 + ProceduralMapSupport.bitwiseAnd(var18, 65280) * var16 >> 8);
                     }
                   }
                   var8++;
@@ -398,7 +398,7 @@ abstract class DebouncedValidator implements ValidationSource {
         if (this.isInputEmpty(88)) {
           return null;
         }
-        if (vi.monotonicMillis(65) < (350L + this.lastChangeMillis)) {
+        if (MonotonicClockSupport.monotonicMillis(65) < (350L + this.lastChangeMillis)) {
           return null;
         }
         if (obfuscationGuard != 55) {

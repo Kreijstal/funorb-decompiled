@@ -314,7 +314,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final void releasePayload(int obfuscationGuard) {
         if (null != this.payload) {
-          od.a(-30001, this.payload);
+          ByteArrayPoolSupport.releaseByteArray(-30001, this.payload);
         }
         this.payload = null;
         if (obfuscationGuard <= 99) {
@@ -402,7 +402,7 @@ class PacketBuffer extends IntrusiveNode {
         ImageProducerSurface.d(-1);
         Spell.field_b = null;
         int var1 = -111 % ((-16 - param0) / 46);
-        e.closeQuickChatMenu((byte) -117);
+        QuickChatMenuCloseSupport.closeQuickChatMenu((byte) -117);
     }
 
     final byte readByte(byte obfuscationGuard) {
@@ -427,7 +427,7 @@ class PacketBuffer extends IntrusiveNode {
             return (RgbSprite) (stackIn_2_0);
           }
           if (param0 == -1) {
-            stackIn_7_0 = bj.e(12722);
+            stackIn_7_0 = AlphaDecodedSpriteSupport.buildFirstDecodedSprite(12722);
             return stackIn_7_0;
           }
           stackIn_5_0 = (RgbSprite) null;
@@ -783,7 +783,7 @@ class PacketBuffer extends IntrusiveNode {
 
     PacketBuffer(int param0) {
         this.position = 0;
-        this.payload = od.a(param0, 50);
+        this.payload = ByteArrayPoolSupport.acquireByteArray(param0, 50);
     }
 
     PacketBuffer(byte[] param0) {

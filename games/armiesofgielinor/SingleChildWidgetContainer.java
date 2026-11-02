@@ -301,18 +301,18 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           lm.field_e = param11;
           GridWidgetContainer.field_M = param10;
           VerticalScrollbar.field_Mb = param6;
-          wb.field_a = param4;
+          LoginCredentialStagingSupport.field_a = param4;
           DirectByteStorage.field_j = param3;
-          gt.field_f = param12;
+          LocalAccountNameSupport.field_f = param12;
           BoundedFile.field_h = param14;
           MusicPatchNode.field_r = param0;
           jn.field_b = param8;
           TextLayout.field_a = param9;
           TextCursor.field_d = param2;
-          rs.field_p = fk.loadRgbSpritesByName("gameprivacy", (byte) -128, param7, "lobby");
-          ResourceProtocolClient.field_d = fk.loadRgbSpritesByName("ratedgame", (byte) -125, param7, "lobby");
-          ChatMessage.field_g = fk.loadRgbSpritesByName("opentome", (byte) -124, param7, "lobby");
-          lm.field_h = fk.loadRgbSpritesByName("allowspectators", (byte) -125, param7, "lobby");
+          PowerOfTwoSupport.field_p = DropdownSelectorPainter.loadRgbSpritesByName("gameprivacy", (byte) -128, param7, "lobby");
+          ResourceProtocolClient.field_d = DropdownSelectorPainter.loadRgbSpritesByName("ratedgame", (byte) -125, param7, "lobby");
+          ChatMessage.field_g = DropdownSelectorPainter.loadRgbSpritesByName("opentome", (byte) -124, param7, "lobby");
+          lm.field_h = DropdownSelectorPainter.loadRgbSpritesByName("allowspectators", (byte) -125, param7, "lobby");
           ResourceRequest.field_u = new String[5];
           ResourceRequest.field_u[1] = ProxySocketFactory.field_i;
           ResourceRequest.field_u[3] = ek.field_f;
@@ -320,8 +320,8 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           ResourceRequest.field_u[0] = AttackEvent.field_D;
           ResourceRequest.field_u[4] = MusicPatch.field_p;
           IconTextComponent.field_Kb = new ClientUiComponent(0L, (ClientUiComponent) null);
-          StripedProgressWidget.field_F = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
-          CampaignProgress.field_a = new ClientUiComponent(0L, br.field_e, PcmPlayerService.ratingLabel);
+          StripedProgressWidget.field_F = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, AiWeightProfile.field_b);
+          CampaignProgress.field_a = new ClientUiComponent(0L, CampaignLookupSupport.field_e, PcmPlayerService.ratingLabel);
           MapTile.field_f = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
           IconTextComponent.field_Kb.addChild(StripedProgressWidget.field_F, 79);
           if (GrowableIntArray.field_c) {
@@ -333,19 +333,19 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           var24 = MapTile.field_f.viewport;
           var25 = var24;
           var25.horizontalAlignment = 1;
-          t.field_g = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
-          t.field_g.horizontalAlignment = 1;
-          cp.field_d = new ClientUiComponent(0L, AccountRegistrationForm.field_M, PasswordLoginCredentials.field_e.toUpperCase());
+          ReloadPageSupport.field_g = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
+          ReloadPageSupport.field_g.horizontalAlignment = 1;
+          EventPresenterFactory.field_d = new ClientUiComponent(0L, AccountRegistrationForm.field_M, PasswordLoginCredentials.field_e.toUpperCase());
           ClientContextMenu.field_n = new ClientUiComponent(0L, SummonAction.field_y, NineSliceFrame.field_d.toUpperCase());
           LobbyPlayer.field_Lb = new ClientUiComponent(0L, UnitAnimationPreview.field_m);
           SpriteDropdownControl.field_v = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, IntrusiveNode.field_a);
-          ek.field_c = new ClientUiComponent(0L, CampaignResult.field_a, wb.field_c);
-          CombatViewTransition.field_p = new ClientUiComponent(0L, CampaignResult.field_a, fk.field_g);
+          ek.field_c = new ClientUiComponent(0L, CampaignResult.field_a, LoginCredentialStagingSupport.field_c);
+          CombatViewTransition.field_p = new ClientUiComponent(0L, CampaignResult.field_a, DropdownSelectorPainter.field_g);
           bs.field_a = new ClientUiComponent(0L, CampaignResult.field_a, InteractiveWidget.field_H);
           SphinxActionRequest.field_A = new ClientUiComponent(0L, CampaignResult.field_a, ArrayWidgetContainer.field_D);
-          ModalDialog.field_K = new ClientUiComponent(0L, br.field_e, RevivalEvent.field_B);
+          ModalDialog.field_K = new ClientUiComponent(0L, CampaignLookupSupport.field_e, RevivalEvent.field_B);
           CipherPacketBuffer.field_x = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
-          ViewportManager.field_d = new ClientUiComponent(0L, ConsoleValue.field_a, l.field_f.toUpperCase());
+          ViewportManager.field_d = new ClientUiComponent(0L, ConsoleValue.field_a, QuickChatCategoryMenuSupport.field_f.toUpperCase());
           ViewportManager.field_d.inputEnabled = GrowableIntArray.field_c;
           stackIn_5_0 = null;
           stackIn_5_1 = null;
@@ -361,9 +361,9 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
             stackIn_6_4 = CampaignMenuEntry.field_C;
           }
           VineGrowthAction.field_x = new ClientUiComponent(stackIn_5_2, stackIn_5_3, ((String) (Object) stackIn_6_4).toUpperCase());
-          ov.field_i = new ClientUiComponent(0L, (ClientUiComponent) null);
-          ov.field_i.addChild(ClientContextMenu.field_n, 92);
-          ov.field_i.addChild(LobbyPlayer.field_Lb, 47);
+          SpectateRoomRequestSupport.field_i = new ClientUiComponent(0L, (ClientUiComponent) null);
+          SpectateRoomRequestSupport.field_i.addChild(ClientContextMenu.field_n, 92);
+          SpectateRoomRequestSupport.field_i.addChild(LobbyPlayer.field_Lb, 47);
           LobbyPlayer.field_Lb.addChild(SpriteDropdownControl.field_v, 38);
           LobbyPlayer.field_Lb.addChild(ek.field_c, 114);
           LobbyPlayer.field_Lb.addChild(CombatViewTransition.field_p, 121);
@@ -374,9 +374,9 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           LobbyPlayer.field_Lb.addChild(ModalDialog.field_K, 99);
           LobbyPlayer.field_Lb.addChild(CipherPacketBuffer.field_x, 70);
           if (GrowableIntArray.field_c) {
-            ov.field_i.addChild(ViewportManager.field_d, 127);
+            SpectateRoomRequestSupport.field_i.addChild(ViewportManager.field_d, 127);
           }
-          ov.field_i.addChild(VineGrowthAction.field_x, 93);
+          SpectateRoomRequestSupport.field_i.addChild(VineGrowthAction.field_x, 93);
           ToggleWidget.field_Q = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
           ToggleWidget.field_Q.horizontalAlignment = 1;
           ToggleWidget.field_Q.verticalAlignment = 0;
@@ -389,54 +389,54 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           AccountNameAvailabilityValidator.field_l.verticalAlignment = 1;
           var16 = AccountNameAvailabilityValidator.field_l;
           var16.horizontalAlignment = 1;
-          eb.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
+          BitCountSupport.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
           PrintVictoryConditionsConsoleCommand.field_E = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
           PrintVictoryConditionsConsoleCommand.field_E.horizontalAlignment = 1;
-          MatchingTextValidator.field_l = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
-          SpellCastEvent.field_D = new ClientUiComponent(0L, br.field_e, PcmPlayerService.ratingLabel);
+          MatchingTextValidator.field_l = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, AiWeightProfile.field_b);
+          SpellCastEvent.field_D = new ClientUiComponent(0L, CampaignLookupSupport.field_e, PcmPlayerService.ratingLabel);
           bu.field_a = new ScrollContainer(0L, new ClientUiComponent(0L, (ClientUiComponent) null), ConsoleEvaluationException.field_c, WeightedLruCache.field_b);
-          eb.field_c.addChild(PrintVictoryConditionsConsoleCommand.field_E, 72);
-          eb.field_c.addChild(MatchingTextValidator.field_l, 83);
+          BitCountSupport.field_c.addChild(PrintVictoryConditionsConsoleCommand.field_E, 72);
+          BitCountSupport.field_c.addChild(MatchingTextValidator.field_l, 83);
           if (GrowableIntArray.field_c) {
-            eb.field_c.addChild(SpellCastEvent.field_D, 107);
+            BitCountSupport.field_c.addChild(SpellCastEvent.field_D, 107);
           }
-          eb.field_c.addChild(bu.field_a, 109);
+          BitCountSupport.field_c.addChild(bu.field_a, 109);
           SocialListPanel.field_Lb = new ClientUiComponent(0L, AccountRegistrationForm.field_M, DeployAction.field_v.toUpperCase());
           AccountRegistrationForm.field_F = new ClientUiComponent(0L, SummonAction.field_y);
           MusicPatchUsage.gameOptionsGrid = new ClientUiComponent(0L, UnitAnimationPreview.field_m);
-          BattleTutorial.field_d = new ClientUiComponent(0L, rn.field_a, EffectPresentation.field_d.toUpperCase());
+          BattleTutorial.field_d = new ClientUiComponent(0L, ProceduralMapSupport.field_a, EffectPresentation.field_d.toUpperCase());
           KingBlackDragonEvent.field_z = new ClientUiComponent[param1 + 4];
           pu.field_k = new IconTextComponent[4 + param1][];
           KingBlackDragonEvent.field_z[0] = new ClientUiComponent(0L, IconLabelControl.field_Lb, et.field_c);
           pu.field_k[0] = new IconTextComponent[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            pu.field_k[0][var17_int + 1] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, rs.field_p[var17_int], ResourceRequest.field_u[var17_int]);
+            pu.field_k[0][var17_int + 1] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, PowerOfTwoSupport.field_p[var17_int], ResourceRequest.field_u[var17_int]);
           }
           if (lm.field_e.length >= 2) {
             KingBlackDragonEvent.field_z[1] = new ClientUiComponent(0L, IconLabelControl.field_Lb, ep.field_h);
             array$0 = new IconTextComponent[1 + lm.field_e.length];
             pu.field_k[1] = array$0;
-            pu.field_k[1][0] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
+            pu.field_k[1][0] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a);
             for (var17_intLifetime1 = 0; lm.field_e.length > var17_intLifetime1; var17_intLifetime1++) {
-              pu.field_k[1][var17_intLifetime1 + 1] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, Integer.toString(lm.field_e[var17_intLifetime1]));
+              pu.field_k[1][var17_intLifetime1 + 1] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, Integer.toString(lm.field_e[var17_intLifetime1]));
             }
           }
           KingBlackDragonEvent.field_z[2] = new ClientUiComponent(0L, IconLabelControl.field_Lb, GameEvent.field_p);
-          pu.field_k[2] = new IconTextComponent[]{new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a), new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, lm.field_h[0], LeaderEscortCondition.field_e), new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, lm.field_h[1], po.field_b)};
+          pu.field_k[2] = new IconTextComponent[]{new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a), new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, lm.field_h[0], LeaderEscortCondition.field_e), new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, lm.field_h[1], QuickChatShortcutSupport.field_b)};
           if (BoundedFile.field_h > 1) {
             KingBlackDragonEvent.field_z[3] = new ClientUiComponent(0L, IconLabelControl.field_Lb, AnimationFrameSet.field_u);
             array$1 = new IconTextComponent[1 + BoundedFile.field_h];
             pu.field_k[3] = array$1;
-            pu.field_k[3][0] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
+            pu.field_k[3][0] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < BoundedFile.field_h; var17_intLifetime2++) {
-              pu.field_k[3][1 + var17_intLifetime2] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, gt.field_f[var17_intLifetime2]);
+              pu.field_k[3][1 + var17_intLifetime2] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, LocalAccountNameSupport.field_f[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param1 > var17_intLifetime3; var17_intLifetime3++) {
             KingBlackDragonEvent.field_z[var17_intLifetime3 + 4] = new ClientUiComponent(0L, IconLabelControl.field_Lb, GridWidgetContainer.field_M[var17_intLifetime3]);
-            array$2 = new IconTextComponent[rn.bitwiseAnd(255, (int) MusicPatchNode.field_r[var17_intLifetime3]) + 1];
+            array$2 = new IconTextComponent[ProceduralMapSupport.bitwiseAnd(255, (int) MusicPatchNode.field_r[var17_intLifetime3]) + 1];
             pu.field_k[var17_intLifetime3 + 4] = array$2;
-            pu.field_k[var17_intLifetime3 + 4][0] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, ki.field_a);
+            pu.field_k[var17_intLifetime3 + 4][0] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) null, QuinticFadeSupport.field_a);
             for (var18 = 0; var18 < (MusicPatchNode.field_r[var17_intLifetime3] & 255); var18++) {
               if (jn.field_b == null) {
                 var19_ref = null;
@@ -456,7 +456,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
               } else {
                 var20 = null;
               }
-              pu.field_k[var17_intLifetime3 + 4][1 + var18] = new IconTextComponent(0L, eb.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) (var19_ref), (String) (var20));
+              pu.field_k[var17_intLifetime3 + 4][1 + var18] = new IconTextComponent(0L, BitCountSupport.field_a, (ClientUiComponent) null, DualLinkedNode.field_k, (RgbSprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; param1 + 4 > var17_intLifetime4; var17_intLifetime4++) {
@@ -473,8 +473,8 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
             }
           }
           lm.field_b = new ClientUiComponent(0L, ConsoleValue.field_a);
-          so.field_d = new ClientUiComponent(0L, ConsoleValue.field_a);
-          MarkerSliderWidget.field_N = new ClientUiComponent(0L, ke.field_e);
+          FixedSquareRootSupport.field_d = new ClientUiComponent(0L, ConsoleValue.field_a);
+          MarkerSliderWidget.field_N = new ClientUiComponent(0L, SoundEffectPreloadSupport.field_e);
           MarkerSliderWidget.field_N.applyStyle(0, PasswordLoginCredentials.field_h);
           var17 = MarkerSliderWidget.field_N;
           MarkerSliderWidget.field_N.verticalAlignment = 1;
@@ -483,9 +483,9 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
             SingleChildWidgetContainer.a(-73, 39, (iw) null);
           }
           var17.horizontalAlignment = 1;
-          pd.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
-          pd.field_c.addChild(AccountRegistrationForm.field_F, 44);
-          pd.field_c.addChild(MusicPatchUsage.gameOptionsGrid, 68);
+          PasswordLengthSupport.field_c = new ClientUiComponent(0L, (ClientUiComponent) null);
+          PasswordLengthSupport.field_c.addChild(AccountRegistrationForm.field_F, 44);
+          PasswordLengthSupport.field_c.addChild(MusicPatchUsage.gameOptionsGrid, 68);
           MusicPatchUsage.gameOptionsGrid.addChild(BattleTutorial.field_d, 106);
           for (var18Lifetime2 = 0; var18Lifetime2 < param1 + 4; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
@@ -499,10 +499,10 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
               }
             }
           }
-          pd.field_c.addChild(lm.field_b, 77);
-          pd.field_c.addChild(so.field_d, 69);
-          pd.field_c.addChild(MarkerSliderWidget.field_N, 91);
-          bk.field_f = new ClientUiComponent(0L, UnitModelPreview.field_m, TickCounter.field_d.toUpperCase());
+          PasswordLengthSupport.field_c.addChild(lm.field_b, 77);
+          PasswordLengthSupport.field_c.addChild(FixedSquareRootSupport.field_d, 69);
+          PasswordLengthSupport.field_c.addChild(MarkerSliderWidget.field_N, 91);
+          MusicTrackSelectionSupport.field_f = new ClientUiComponent(0L, UnitModelPreview.field_m, TickCounter.field_d.toUpperCase());
           ConsolePanel.field_m = new ClientUiComponent(0L, WhirlpoolHasher.field_h, ConsoleCommand.field_D.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -688,7 +688,7 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
           if (80 != var5_int) {
             return false;
           }
-          if (!br.heldKeys[81]) {
+          if (!CampaignLookupSupport.heldKeys[81]) {
             stackIn_12_0 = this.focusNextChild(rootWidget, (byte) 107);
           } else {
             stackIn_12_0 = this.focusPreviousChild(4, rootWidget);
@@ -772,10 +772,10 @@ abstract class SingleChildWidgetContainer extends Widget implements WidgetContai
                       var13 = WeightedScoreStrategy.a(0, var12) ? 1 : 0;
                       if (var13 == 0) {
                         var14 = new fd(param2, param0, var12);
-                        if (null == bk.field_e) {
-                          bk.field_e = new NodeDeque();
+                        if (null == MusicTrackSelectionSupport.field_e) {
+                          MusicTrackSelectionSupport.field_e = new NodeDeque();
                         }
-                        bk.field_e.addLast((byte) -119, (IntrusiveNode) (var14));
+                        MusicTrackSelectionSupport.field_e.addLast((byte) -119, (IntrusiveNode) (var14));
                       }
                     }
                   }

@@ -84,8 +84,8 @@ final class RevivalEvent extends GameEvent {
         return null;
     }
 
-    public static void e(byte param0) {
-        if (param0 < 78) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard < 78) {
           RevivalEvent.getCampaignPacketWord3(98);
           field_B = null;
           return;
@@ -128,7 +128,7 @@ final class RevivalEvent extends GameEvent {
         var2 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0 <= 102) {
-            RevivalEvent.e((byte) -63);
+            RevivalEvent.releaseStatics((byte) -63);
           }
           if (MoveEvent.tutorialStageItems[0] == null) {
             return;
@@ -171,7 +171,7 @@ final class RevivalEvent extends GameEvent {
           this.unit.tileY = this.destinationY;
           this.unit.poisoned = false;
           if (obfuscationGuard != -26661) {
-            RevivalEvent.e((byte) -101);
+            RevivalEvent.releaseStatics((byte) -101);
           }
           this.unit.strength = this.unit.maximumStrength;
           this.unit.tileX = this.destinationX;
@@ -197,7 +197,7 @@ final class RevivalEvent extends GameEvent {
           if (null == DialogMessagePane.field_I) {
             return;
           }
-          op.a(-110, DialogMessagePane.field_I);
+          FriendRequestSupport.a(-110, DialogMessagePane.field_I);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

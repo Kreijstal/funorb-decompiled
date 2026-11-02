@@ -90,7 +90,7 @@ final class GameCanvas extends java.awt.Canvas {
               var3_int = maximumLength;
             }
             var4 = new byte[var3_int];
-            packet.position = packet.position + ds.chatHuffmanCodec.decompress(packet.payload, packet.position, false, var3_int, 0, var4);
+            packet.position = packet.position + PointerCaptureSupport.chatHuffmanCodec.decompress(packet.payload, packet.position, false, var3_int, 0, var4);
             var5 = BattlefieldTheme.decodeSingleByteText(0, var3_int, -107, var4);
             stackIn_7_0 = var5;
             return stackIn_7_0;

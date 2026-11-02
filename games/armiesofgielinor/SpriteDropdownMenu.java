@@ -391,7 +391,7 @@ final class SpriteDropdownMenu {
         if (!this.horizontalScrollBar.isEnabled(false)) {
           frameHeight = frameHeight - this.horizontalScrollBar.getThickness(26787);
         }
-        SoftwareRaster.f(frameX, frameY, frameWidth, frameHeight, 7829367);
+        SoftwareRaster.fillRectangle(frameX, frameY, frameWidth, frameHeight, 7829367);
         ReportAbuseDialog.drawNineSlice(this.frameSprites, frameHeight, frameX, (byte) -47, frameY, frameWidth);
     }
 
@@ -432,15 +432,15 @@ final class SpriteDropdownMenu {
         return this.enabled;
     }
 
-    final static rn a(String param0, int param1) {
-        rn stackIn_3_0 = null;
-        rn stackIn_6_0 = null;
-        rn stackIn_12_0 = null;
+    final static ProceduralMapSupport a(String param0, int param1) {
+        ProceduralMapSupport stackIn_3_0 = null;
+        ProceduralMapSupport stackIn_6_0 = null;
+        ProceduralMapSupport stackIn_12_0 = null;
         int stackIn_20_0 = 0;
-        rn stackIn_24_0 = null;
-        rn stackIn_30_0 = null;
-        rn stackIn_40_0 = null;
-        rn stackIn_45_0 = null;
+        ProceduralMapSupport stackIn_24_0 = null;
+        ProceduralMapSupport stackIn_30_0 = null;
+        ProceduralMapSupport stackIn_40_0 = null;
+        ProceduralMapSupport stackIn_45_0 = null;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
         String stackIn_52_2 = null;
@@ -467,7 +467,7 @@ final class SpriteDropdownMenu {
           }
           if (param0.charAt(0) == 34) {
             if (param0.charAt(var2_int - 1) != 34) {
-              stackIn_12_0 = ov.field_h;
+              stackIn_12_0 = SpectateRoomRequestSupport.field_h;
               return stackIn_12_0;
             }
             var3 = 0;
@@ -476,7 +476,7 @@ final class SpriteDropdownMenu {
               if (var5 != 92) {
                 if (var5 == 34 &&
                   var3 == 0) {
-                  stackIn_24_0 = ov.field_h;
+                  stackIn_24_0 = SpectateRoomRequestSupport.field_h;
                   return stackIn_24_0;
                 }
                 var3 = 0;
@@ -488,7 +488,7 @@ final class SpriteDropdownMenu {
             return null;
           }
           if (param1 != 15026) {
-            stackIn_30_0 = (rn) null;
+            stackIn_30_0 = (ProceduralMapSupport) null;
             return stackIn_30_0;
           }
           var3Lifetime1 = 0;
@@ -503,13 +503,13 @@ final class SpriteDropdownMenu {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                stackIn_40_0 = ov.field_h;
+                stackIn_40_0 = SpectateRoomRequestSupport.field_h;
                 return stackIn_40_0;
               }
             }
             if (decompiledFrameRemainder0) {
               if (-1 == FullscreenStatusDialog.field_Z.indexOf(var5Lifetime1)) {
-                stackIn_45_0 = ov.field_h;
+                stackIn_45_0 = SpectateRoomRequestSupport.field_h;
                 return stackIn_45_0;
               }
               var3Lifetime1 = 0;
@@ -581,15 +581,15 @@ final class SpriteDropdownMenu {
             SpriteDropdownMenu.w(33);
           }
           TriangleRasterizer.useRasterClip();
-          SoftwareRaster.b();
+          SoftwareRaster.clearPixels();
           PasswordValidator.field_j = 0;
           DebouncedValidator.e(9);
           var2 = var1.copySprite();
           for (var3 = 0; 15 > var3; var3++) {
-            var2.a(-2, -2, 16777215);
+            var2.drawSilhouette(-2, -2, 16777215);
             SoftwareRaster.c(4, 4, 0, 0, 540, 140);
           }
-          kq.field_P.b();
+          kq.field_P.bindAsRasterTarget();
           var1.drawHalfSize(0, 0);
           QuickChatPhraseRepository.popRasterState(-18862);
         } catch (RuntimeException runtimeException) {
@@ -715,8 +715,8 @@ final class SpriteDropdownMenu {
         int textX = this.getContentLeft(-116);
         int contentRight = textX + this.getContentWidth(1);
         int horizontalOffset = this.horizontalOffset;
-        SoftwareRaster.b(this.savedClip);
-        SoftwareRaster.b(textX, textY, contentRight, contentBottom);
+        SoftwareRaster.saveClip(this.savedClip);
+        SoftwareRaster.intersectClip(textX, textY, contentRight, contentBottom);
         textX = -horizontalOffset + textX;
         textY = textY + this.font.maxAscent;
         int rowHeight = this.getRowHeight((byte) -85);
@@ -729,7 +729,7 @@ final class SpriteDropdownMenu {
           this.font.drawText(optionText, textX, textY, textColour, -1);
           textY = textY + rowHeight;
         }
-        SoftwareRaster.a(this.savedClip);
+        SoftwareRaster.restoreClip(this.savedClip);
     }
 
     final static void x(int param0) {
@@ -745,7 +745,7 @@ final class SpriteDropdownMenu {
           ArchiveProvider.field_d = null;
         }
         UnitCycler.field_g = null;
-        hf.textChatActive = true;
+        ClientStateChecksumSupport.textChatActive = true;
         DateOfBirthValidator.field_i = null;
         int var1 = 89 % ((param0 + 51) / 39);
     }
@@ -762,17 +762,17 @@ final class SpriteDropdownMenu {
         RuntimeException var3 = null;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          ds.field_a = new RgbSprite[op.field_c[param1].length];
-          GameCanvas.field_c = new RgbSprite[op.field_c[0].length];
+          PointerCaptureSupport.field_a = new RgbSprite[FriendRequestSupport.field_c[param1].length];
+          GameCanvas.field_c = new RgbSprite[FriendRequestSupport.field_c[0].length];
           DiskCacheWorker.field_d = param0;
           ClientUiNode.field_y = param2;
-          for (var3_int = 0; op.field_c[0].length > var3_int; var3_int++) {
-            ds.field_a[var3_int] = new RgbSprite(DiskCacheWorker.field_d.pixelWidth, DiskCacheWorker.field_d.pixelHeight);
+          for (var3_int = 0; FriendRequestSupport.field_c[0].length > var3_int; var3_int++) {
+            PointerCaptureSupport.field_a[var3_int] = new RgbSprite(DiskCacheWorker.field_d.pixelWidth, DiskCacheWorker.field_d.pixelHeight);
             GameCanvas.field_c[var3_int] = new RgbSprite(ClientUiNode.field_y.pixelWidth, ClientUiNode.field_y.pixelHeight);
-            ds.field_a[var3_int].b();
-            DiskCacheWorker.field_d.drawTintedGrayscale(0, 0, op.field_c[0][var3_int]);
-            GameCanvas.field_c[var3_int].b();
-            ClientUiNode.field_y.drawShadedGrayscale(0, 0, op.field_c[0][var3_int]);
+            PointerCaptureSupport.field_a[var3_int].bindAsRasterTarget();
+            DiskCacheWorker.field_d.drawTintedGrayscale(0, 0, FriendRequestSupport.field_c[0][var3_int]);
+            GameCanvas.field_c[var3_int].bindAsRasterTarget();
+            ClientUiNode.field_y.drawShadedGrayscale(0, 0, FriendRequestSupport.field_c[0][var3_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

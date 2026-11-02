@@ -41,7 +41,7 @@ final class ActionSpell extends Spell {
             }
             try {
               var3 = new java.net.URL(param0.getCodeBase(), param2);
-              var3 = ck.a(-3780, var3, param0);
+              var3 = StructureTerrainSupport.a(-3780, var3, param0);
               SpellCastAction.a(param0, -109, var3.toString(), true);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -97,7 +97,7 @@ final class ActionSpell extends Spell {
           campaignIndex = mission.campaign.campaignIndex;
           missionId = mission.missionId;
           MoveEvent.campaignMenu.updateMissionScore(missionId, (byte) 33, candidateScore);
-          if (!(pg.playerProfile.campaignProgress.getMissionScore(campaignIndex, -63, missionId) >= candidateScore) ||
+          if (!(UnitAnimationSelectionSupport.playerProfile.campaignProgress.getMissionScore(campaignIndex, -63, missionId) >= candidateScore) ||
             candidateScore == 1) {
             if (1 < candidateScore) {
               UnitModelViewer.campaignMetricMutationCounter = UnitModelViewer.campaignMetricMutationCounter + 1;
@@ -146,7 +146,7 @@ final class ActionSpell extends Spell {
                 }
               }
             }
-            pg.playerProfile.campaignProgress.setResult(65535, missionId, turnsTaken, campaignIndex, damageTaken);
+            UnitAnimationSelectionSupport.playerProfile.campaignProgress.setResult(65535, missionId, turnsTaken, campaignIndex, damageTaken);
             EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 79);
             EmailValidator.outgoingPacket.writeByte(obfuscationGuard - 3, campaignIndex);
             EmailValidator.outgoingPacket.writeByte(1, missionId);
@@ -166,7 +166,7 @@ final class ActionSpell extends Spell {
             EmailValidator.outgoingPacket.writeInt((byte) -59, RadialSummonItem.getCampaignPacketWord2(false));
             EmailValidator.outgoingPacket.writeInt((byte) -50, RevivalEvent.getCampaignPacketWord3(0));
           }
-          qh.requestDeleteQuicksave((byte) 27);
+          QuicksaveRequestSupport.requestDeleteQuicksave((byte) 27);
           if (obfuscationGuard == 4) {
             return;
           }
@@ -187,16 +187,16 @@ final class ActionSpell extends Spell {
     }
 
     final static void resizeRasterViewport(int width, int obfuscationGuard, int height) {
-        bn.viewportWidth = width;
+        CalendarSupport.viewportWidth = width;
         GuestPlayConfirmationForm.canvasWidth = width;
-        dt.viewportHeight = height;
+        DateValiditySupport.viewportHeight = height;
         MatchSetupPanel.canvasHeight = height;
-        tq.canvasRebuildRequested = true;
-        so.field_b = null;
+        NineSliceSpriteSupport.canvasRebuildRequested = true;
+        FixedSquareRootSupport.field_b = null;
         int[] var4 = (int[]) null;
         SoftwareRaster.setTarget((int[]) null, 0, 0);
-        so.field_b = StripedProgressWidget.a(width, height, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
-        so.field_b.bindRasterTarget(obfuscationGuard - 17900);
+        FixedSquareRootSupport.field_b = StripedProgressWidget.a(width, height, 1423111778, (java.awt.Component) ((Object) IndexedSpriteBase.field_b));
+        FixedSquareRootSupport.field_b.bindRasterTarget(obfuscationGuard - 17900);
         ContextualRuntimeException.a((byte) -85, width / 2, height / 2);
         if (obfuscationGuard == 23505) {
           MeshObject.a(-8994, width, height);

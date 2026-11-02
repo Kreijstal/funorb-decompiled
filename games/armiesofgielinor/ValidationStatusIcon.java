@@ -50,7 +50,7 @@ final class ValidationStatusIcon extends InteractiveWidget {
 
     final String getTooltipText(int obfuscationGuard) {
         if (obfuscationGuard != 21384) {
-          ValidationStatusIcon.b(true);
+          ValidationStatusIcon.releaseStatics(true);
           if (this.hovered) {
             return this.validationSource.getValidationMessage((byte) 55);
           }
@@ -92,20 +92,20 @@ final class ValidationStatusIcon extends InteractiveWidget {
         if (obfuscationGuard <= -82) {
           var8 = this.validationSource.getValidationState(false);
           if (DialogMessagePane.validationWaiting != var8 &&
-            so.validationChecking != var8) {
-            if (var8 == rn.validationInvalid) {
-              var19 = db.validationStatusIcons[2];
+            FixedSquareRootSupport.validationChecking != var8) {
+            if (var8 == ProceduralMapSupport.validationInvalid) {
+              var19 = IgnoreListLookupSupport.validationStatusIcons[2];
               var19.drawAdditive(-(var19.pixelWidth >> 1) + var5, -(var19.pixelHeight >> 1) + var6, 256);
               return;
             }
-            if (var8 != oo.validationValid) {
+            if (var8 != MembershipExpansionScreen.validationValid) {
               return;
             }
-            var20 = db.validationStatusIcons[1];
+            var20 = IgnoreListLookupSupport.validationStatusIcons[1];
             var20.drawAdditive(-(var20.pixelWidth >> 1) + var5, var6 - (var20.pixelHeight >> 1), 256);
             return;
           }
-          var21 = db.validationStatusIcons[0];
+          var21 = IgnoreListLookupSupport.validationStatusIcons[0];
           var9 = var21.canvasWidth << 1;
           var10 = var21.canvasHeight << 1;
           if (null == PreparedAction.field_p) {
@@ -118,14 +118,14 @@ final class ValidationStatusIcon extends InteractiveWidget {
             } else {
               if (var10 <= PreparedAction.field_p.pixelHeight) {
                 CombatSandbox.a(PreparedAction.field_p, 3);
-                SoftwareRaster.b();
+                SoftwareRaster.clearPixels();
               } else {
                 PreparedAction.field_p = new RgbSprite(var9, var10);
                 CombatSandbox.a(PreparedAction.field_p, 3);
               }
             }
           }
-          var21.b(112, 144, var21.canvasWidth << 4, var21.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
+          var21.drawRotatedAboutPivot(112, 144, var21.canvasWidth << 4, var21.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
           QuickChatPhraseRepository.popRasterState(-18862);
           PreparedAction.field_p.drawAdditive(-var21.canvasWidth + var5, -var21.canvasHeight + var6, 256);
           return;
@@ -133,37 +133,37 @@ final class ValidationStatusIcon extends InteractiveWidget {
         this.drawWidget(105, -107, (byte) -98, -86);
         var8Lifetime1 = this.validationSource.getValidationState(false);
         if (DialogMessagePane.validationWaiting == var8Lifetime1) {
-          var15 = db.validationStatusIcons[0];
+          var15 = IgnoreListLookupSupport.validationStatusIcons[0];
           var9Lifetime1 = var15.canvasWidth << 1;
           var10Lifetime1 = var15.canvasHeight << 1;
           if (null != PreparedAction.field_p &&
             var9Lifetime1 <= PreparedAction.field_p.pixelWidth &&
             var10Lifetime1 <= PreparedAction.field_p.pixelHeight) {
             CombatSandbox.a(PreparedAction.field_p, 3);
-            SoftwareRaster.b();
+            SoftwareRaster.clearPixels();
           } else {
             PreparedAction.field_p = new RgbSprite(var9Lifetime1, var10Lifetime1);
             CombatSandbox.a(PreparedAction.field_p, 3);
           }
-          var15.b(112, 144, var15.canvasWidth << 4, var15.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
+          var15.drawRotatedAboutPivot(112, 144, var15.canvasWidth << 4, var15.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
           QuickChatPhraseRepository.popRasterState(-18862);
           PreparedAction.field_p.drawAdditive(-var15.canvasWidth + var5, -var15.canvasHeight + var6, 256);
           return;
         }
-        if (so.validationChecking != var8Lifetime1) {
-          if (var8Lifetime1 == rn.validationInvalid) {
-            var17 = db.validationStatusIcons[2];
+        if (FixedSquareRootSupport.validationChecking != var8Lifetime1) {
+          if (var8Lifetime1 == ProceduralMapSupport.validationInvalid) {
+            var17 = IgnoreListLookupSupport.validationStatusIcons[2];
             var17.drawAdditive(-(var17.pixelWidth >> 1) + var5, -(var17.pixelHeight >> 1) + var6, 256);
             return;
           }
-          if (var8Lifetime1 != oo.validationValid) {
+          if (var8Lifetime1 != MembershipExpansionScreen.validationValid) {
             return;
           }
-          var18 = db.validationStatusIcons[1];
+          var18 = IgnoreListLookupSupport.validationStatusIcons[1];
           var18.drawAdditive(-(var18.pixelWidth >> 1) + var5, var6 - (var18.pixelHeight >> 1), 256);
           return;
         }
-        var16 = db.validationStatusIcons[0];
+        var16 = IgnoreListLookupSupport.validationStatusIcons[0];
         var14 = var16;
         var9Lifetime2 = var16.canvasWidth << 1;
         var10Lifetime2 = var16.canvasHeight << 1;
@@ -177,14 +177,14 @@ final class ValidationStatusIcon extends InteractiveWidget {
           } else {
             if (var10Lifetime2 <= PreparedAction.field_p.pixelHeight) {
               CombatSandbox.a(PreparedAction.field_p, 3);
-              SoftwareRaster.b();
+              SoftwareRaster.clearPixels();
             } else {
               PreparedAction.field_p = new RgbSprite(var9Lifetime2, var10Lifetime2);
               CombatSandbox.a(PreparedAction.field_p, 3);
             }
           }
         }
-        var16.b(112, 144, var16.canvasWidth << 4, var16.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
+        var16.drawRotatedAboutPivot(112, 144, var16.canvasWidth << 4, var16.canvasHeight << 4, -this.spinnerTicks << 10, 4096);
         QuickChatPhraseRepository.popRasterState(-18862);
         PreparedAction.field_p.drawAdditive(-var16.canvasWidth + var5, -var16.canvasHeight + var6, 256);
     }
@@ -436,11 +436,11 @@ final class ValidationStatusIcon extends InteractiveWidget {
         return (byte) var2Lifetime3;
     }
 
-    public static void b(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_N = null;
         awtToClientKeyCodes = null;
         field_P = (int[][]) null;
-        if (param0) {
+        if (obfuscationGuard) {
           field_Q = null;
           return;
         }

@@ -89,10 +89,10 @@ final class CommunityTabGroup {
         ModalDialogHost.decodedChatAccountId = packet.readLong((byte) -2);
         if (2 == MatchConditionEntry.decodedChatChannel) {
           PcmPlayerService.decodedPrivateMessageIdHigh16 = packet.readUnsignedShort((byte) -104);
-          th.decodedPrivateMessageIdLow24 = packet.readUnsignedMedium((byte) -13);
+          FloorModSupport.decodedPrivateMessageIdLow24 = packet.readUnsignedMedium((byte) -13);
         } else {
           PcmPlayerService.decodedPrivateMessageIdHigh16 = 0;
-          th.decodedPrivateMessageIdLow24 = 0;
+          FloorModSupport.decodedPrivateMessageIdLow24 = 0;
         }
         separateAccountName = (packet.readUnsignedByte(0) != 1) ? 0 : 1;
         hasSeparateAccountName = separateAccountName;
@@ -156,7 +156,7 @@ final class CommunityTabGroup {
         RuntimeException caughtFailure = null;
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          cookieValue = fk.readBrowserCookie((byte) 102, applet, "jagex-last-login-method");
+          cookieValue = DropdownSelectorPainter.readBrowserCookie((byte) 102, applet, "jagex-last-login-method");
           if (cookieValue == null) {
             defaultWithoutCookie = MatchConditionEntry.defaultLoginMethod;
             return defaultWithoutCookie;
@@ -198,10 +198,10 @@ final class CommunityTabGroup {
           CommunityTabGroup.decodeChatMessageWithIntGuard(-115, true);
         }
         this.tabs.setLayout(width, y, x, var7, 0, var6, height);
-        bn.field_c.setBounds(jn.field_d, -20500, su.field_d.width, 0, 0);
-        AdaptiveMidiPcmStream.field_kb.setBounds(18, -20500, -2 + (-2 + su.field_d.width + (-jn.field_c - 80)), 2 + jn.field_d, 0);
-        ek.field_a.setBounds(18, -20500, 82 + jn.field_c, jn.field_d + 2, -82 + (su.field_d.width - jn.field_c));
-        ListMissionsConsoleCommand.field_E.setLayout(0, jn.field_c, 2, 20, su.field_d.width, 20 + (2 + jn.field_d), -2 + (su.field_d.height - jn.field_d) - 20, (byte) -92);
+        CalendarSupport.field_c.setBounds(jn.field_d, -20500, AiWeightProfile.field_d.width, 0, 0);
+        AdaptiveMidiPcmStream.field_kb.setBounds(18, -20500, -2 + (-2 + AiWeightProfile.field_d.width + (-jn.field_c - 80)), 2 + jn.field_d, 0);
+        ek.field_a.setBounds(18, -20500, 82 + jn.field_c, jn.field_d + 2, -82 + (AiWeightProfile.field_d.width - jn.field_c));
+        ListMissionsConsoleCommand.field_E.setLayout(0, jn.field_c, 2, 20, AiWeightProfile.field_d.width, 20 + (2 + jn.field_d), -2 + (AiWeightProfile.field_d.height - jn.field_d) - 20, (byte) -92);
         TaggedMapData.field_g.layoutControls((byte) -110, jn.field_c, 20, 2);
     }
 
@@ -209,8 +209,8 @@ final class CommunityTabGroup {
         String[] var3 = null;
         ClientUiComponent[] var4 = null;
         try {
-          var3 = new String[]{firstTabLabel, IterableDualNodeDeque.field_a, op.field_e};
-          var4 = new ClientUiComponent[]{firstPanel, su.field_d, (ClientUiComponent) ((Object) TaggedMapData.field_g)};
+          var3 = new String[]{firstTabLabel, IterableDualNodeDeque.field_a, FriendRequestSupport.field_e};
+          var4 = new ClientUiComponent[]{firstPanel, AiWeightProfile.field_d, (ClientUiComponent) ((Object) TaggedMapData.field_g)};
           this.tabs = new TabbedPanel(0L, LoginKind.field_d, var3, wm.field_c, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ea.<init>(" + (firstTabLabel != null ? "{...}" : "null") + ',' + (firstPanel != null ? "{...}" : "null") + ')');
@@ -255,10 +255,10 @@ final class CommunityTabGroup {
         ModalDialogHost.decodedChatAccountId = packet.readLong((byte) -2);
         if (2 == MatchConditionEntry.decodedChatChannel) {
           PcmPlayerService.decodedPrivateMessageIdHigh16 = packet.readUnsignedShort((byte) -104);
-          th.decodedPrivateMessageIdLow24 = packet.readUnsignedMedium((byte) -13);
+          FloorModSupport.decodedPrivateMessageIdLow24 = packet.readUnsignedMedium((byte) -13);
         } else {
           PcmPlayerService.decodedPrivateMessageIdHigh16 = 0;
-          th.decodedPrivateMessageIdLow24 = 0;
+          FloorModSupport.decodedPrivateMessageIdLow24 = 0;
         }
         separateAccountName = (packet.readUnsignedByte(0) != 1) ? 0 : 1;
         hasSeparateAccountName = separateAccountName;

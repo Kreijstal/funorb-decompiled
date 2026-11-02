@@ -31,24 +31,24 @@ final class DialWidgetPainter implements WidgetPainter {
           var14 = widget instanceof DialWidget ? (DialWidget) (widget) : null;
           if (var14 == null) {
           }
-          SoftwareRaster.f(originX + widget.x, originY + widget.y, widget.width, widget.height, this.field_b);
+          SoftwareRaster.fillRectangle(originX + widget.x, originY + widget.y, widget.width, widget.height, this.field_b);
           var7 = var14.centerOffsetX + widget.x + originX;
           if (obfuscationGuard > -79) {
             field_e = (String) null;
           }
           var8 = widget.y + originY + var14.centerOffsetY;
-          SoftwareRaster.a(var7, var8, var14.radius, this.field_i);
+          SoftwareRaster.fillCircle(var7, var8, var14.radius, this.field_i);
           if (var14.markedStep != -1) {
             var9 = 2.0 * ((double)var14.markedStep * 3.141592653589793) / (double)var14.stepCount;
             var11 = (int)(-Math.sin(var9) * (double)var14.radius);
             var12 = (int)(Math.cos(var9) * (double)var14.radius);
-            SoftwareRaster.a(var11 + var7, var12 + var8, 1, this.field_k);
+            SoftwareRaster.fillCircle(var11 + var7, var12 + var8, 1, this.field_k);
           }
-          SoftwareRaster.a(var7, var8, 2, 1);
+          SoftwareRaster.fillCircle(var7, var8, 2, 1);
           var9Lifetime1 = (double)var14.currentStep * 3.141592653589793 * 2.0 / (double)var14.stepCount;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.radius);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.radius);
-          SoftwareRaster.h(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          SoftwareRaster.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (this.field_g != null) {
             var13 = this.field_h + var14.radius + var14.centerOffsetX;
             this.field_g.drawParagraph(widget.text, originX + widget.x + var13, this.field_d + originY + widget.y, widget.width - this.field_h - var13, widget.height - (this.field_h << 1), this.field_m, this.field_l, 1, 1, 0);

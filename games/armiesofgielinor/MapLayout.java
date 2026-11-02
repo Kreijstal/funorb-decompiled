@@ -41,7 +41,7 @@ final class MapLayout extends IntrusiveNode {
           }
           if (null != message.responsePhraseIds) {
             ValidatedTextWidget.responseTargetAccountId = message.accountId;
-            rv.responsePhraseIds = message.responsePhraseIds;
+            LocalizedUrlSupport.responsePhraseIds = message.responsePhraseIds;
             WeightedScoreStrategy.responseTargetAccountName = message.accountName;
             NumericDateInputWidget.responseTargetChannel = message.channelId;
           }
@@ -232,7 +232,7 @@ final class MapLayout extends IntrusiveNode {
           this.mapWidth = 72;
         }
         if (this.formatVersion == 2) {
-          var3_ref_sc = po.readLengthPrefixedMap(var8, obfuscationGuard - 24046);
+          var3_ref_sc = QuickChatShortcutSupport.readLengthPrefixedMap(var8, obfuscationGuard - 24046);
           this.mapWidth = var3_ref_sc.mapWidth;
           this.mapTheme = var3_ref_sc.mapTheme;
           this.mapHeight = var3_ref_sc.mapHeight;
@@ -374,7 +374,7 @@ final class MapLayout extends IntrusiveNode {
             var3 = var16;
             for (var4_int = 0; var4_int < var16.length; var4_int++) {
               var5_ref_ne = var16[var4_int];
-              var5_ref_ne.a((byte) -68, battlefield);
+              var5_ref_ne.attachBattlefield((byte) -68, battlefield);
               if (var5_ref_ne.hasModifierFlag4((byte) -122) &&
                 var5_ref_ne.getTag((byte) -107) == 0) {
                 var5_ref_ne.setTag(true, 1);

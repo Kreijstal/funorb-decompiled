@@ -33,14 +33,14 @@ final class AccountNameNormalizer {
           trimmedStart = 0;
           trimmedEnd = name.length();
           while (trimmedStart < trimmedEnd) {
-            if (rs.isAccountNameSeparator(name.charAt(trimmedStart), (byte) -52)) {
+            if (PowerOfTwoSupport.isAccountNameSeparator(name.charAt(trimmedStart), (byte) -52)) {
               trimmedStart++;
               continue;
             }
             break;
           }
           while (trimmedStart < trimmedEnd) {
-            if (rs.isAccountNameSeparator(name.charAt(trimmedEnd - 1), (byte) -52)) {
+            if (PowerOfTwoSupport.isAccountNameSeparator(name.charAt(trimmedEnd - 1), (byte) -52)) {
               trimmedEnd--;
               continue;
             }
@@ -60,8 +60,8 @@ final class AccountNameNormalizer {
           }
           while (trimmedEnd > characterIndex) {
             character = name.charAt(characterIndex);
-            if (ph.isAccountNameCharacter(-14, (char) character)) {
-              foldedCharacter = pv.foldAccountNameCharacter(124, (char) character);
+            if (AccountNameCharacterSupport.isAccountNameCharacter(-14, (char) character)) {
+              foldedCharacter = AccountNameFoldingSupport.foldAccountNameCharacter(124, (char) character);
               if (foldedCharacter != 0) {
                 discarded$0 = canonicalName.append((char) foldedCharacter);
               }

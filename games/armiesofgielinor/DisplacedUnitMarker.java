@@ -11,8 +11,8 @@ final class DisplacedUnitMarker extends PreparedAction {
           return "Please use a value from 0 to 256, inclusive.";
         }
         if (gain >= 0) {
-          previousGainText = "old volume: " + gi.campaignBaseChannelGain;
-          gi.campaignBaseChannelGain = gain;
+          previousGainText = "old volume: " + AccountNameCheckStatusSupport.campaignBaseChannelGain;
+          AccountNameCheckStatusSupport.campaignBaseChannelGain = gain;
           return previousGainText;
         }
         return "Please use a value from 0 to 256, inclusive.";

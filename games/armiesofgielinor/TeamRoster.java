@@ -22,7 +22,7 @@ final class TeamRoster {
         int var1;
         boolean stackIn_4_0 = false;
         var1 = -85 / ((param0 + 50) / 45);
-        stackIn_4_0 = (MoveAttackRequest.sessionSocket != null) && (ResourceArchive.connectedState == ov.connectionState);
+        stackIn_4_0 = (MoveAttackRequest.sessionSocket != null) && (ResourceArchive.connectedState == SpectateRoomRequestSupport.connectionState);
         return stackIn_4_0;
     }
 
@@ -44,10 +44,10 @@ final class TeamRoster {
         return false;
     }
 
-    public static void b(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         playerRingSprite = null;
         field_d = null;
-        if (param0 >= -15) {
+        if (obfuscationGuard >= -15) {
           TeamRoster.a(62);
         }
         field_c = null;

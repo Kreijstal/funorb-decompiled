@@ -43,7 +43,7 @@ final class ProgressDialog extends ResizableModalDialog {
         super.drawDialogBackground(x, obfuscationGuard, y);
         CipherPacketBuffer.field_t.drawCentered(this.progressText, (this.width >> 1) + x, y + 103, 16777215, -1);
         if (null != this.description) {
-          SoftwareRaster.e(20 + x, -7 + (120 + y), 260, 8421504);
+          SoftwareRaster.drawHorizontalLine(20 + x, -7 + (120 + y), 260, 8421504);
           CipherPacketBuffer.field_t.drawParagraph(this.description, 20 + x, y + 120 + 8, 260, 100, 16777215, -1, 1, 0, CipherPacketBuffer.field_t.maxAscent);
         }
     }

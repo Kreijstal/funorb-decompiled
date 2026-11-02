@@ -31,7 +31,7 @@ final class WhirlpoolHasher {
               }
             }
           } else {
-            DisplacedUnitMarker.field_t[12] = ti.field_a;
+            DisplacedUnitMarker.field_t[12] = TurnSkipToggleSupport.field_a;
           }
         } else {
           if (0 != (1 << FullscreenFocusCanvas.gameplayController.controlledPlayerId & FullscreenFocusCanvas.gameplayController.battlefield.field_i)) {
@@ -41,9 +41,9 @@ final class WhirlpoolHasher {
               DisplacedUnitMarker.field_t[12] = BitmapTextWidgetPainter.field_s;
             } else {
               if (-1 + (1 << FullscreenFocusCanvas.gameplayController.battlefield.playerCount) != (1 << FullscreenFocusCanvas.gameplayController.controlledPlayerId | FullscreenFocusCanvas.gameplayController.field_hb)) {
-                DisplacedUnitMarker.field_t[12] = db.field_h;
+                DisplacedUnitMarker.field_t[12] = IgnoreListLookupSupport.field_h;
               } else {
-                DisplacedUnitMarker.field_t[12] = ji.field_b;
+                DisplacedUnitMarker.field_t[12] = AccountNameCheckSupport.field_b;
               }
             }
           }
@@ -98,7 +98,7 @@ final class WhirlpoolHasher {
                 this.bufferedBits = 0;
                 this.bufferPosition = 0;
               }
-              this.inputBlock[this.bufferPosition] = (byte)rn.bitwiseAnd(255, alignedByte << -bufferBitOffset + 8);
+              this.inputBlock[this.bufferPosition] = (byte)ProceduralMapSupport.bitwiseAnd(255, alignedByte << -bufferBitOffset + 8);
               inputIndex++;
               this.bufferedBits = this.bufferedBits + bufferBitOffset;
               bitCount = bitCount - 8L;
@@ -121,7 +121,7 @@ final class WhirlpoolHasher {
               this.bufferedBits = 0;
               this.bufferPosition = 0;
             }
-            this.inputBlock[this.bufferPosition] = (byte)rn.bitwiseAnd(255, tailByte << -bufferBitOffset + 8);
+            this.inputBlock[this.bufferPosition] = (byte)ProceduralMapSupport.bitwiseAnd(255, tailByte << -bufferBitOffset + 8);
             this.bufferedBits = this.bufferedBits + (int)bitCount;
           } else {
             this.bufferedBits = (int)((long)this.bufferedBits + bitCount);
@@ -156,7 +156,7 @@ final class WhirlpoolHasher {
           }
           var5 = (wj) (BattleCharacter.field_c.first((byte) 117));
           while (var5 != null) {
-            gn.a(param1, var5, 0);
+            IndentedTextBuilder.a(param1, var5, 0);
             var5 = (wj) (BattleCharacter.field_c.next((byte) 123));
           }
           if (param0 < 120) {
@@ -192,10 +192,10 @@ final class WhirlpoolHasher {
         LobbyRoom var6 = null;
         LobbyRoom var7 = null;
         CipherPacketBuffer var4 = null;
-        if (roomId != oo.watchedRoomId) {
-          var6 = (LobbyRoom) (ClippedWidgetContainer.lobbyRoomsById.get((byte) -27, (long)oo.watchedRoomId));
+        if (roomId != MembershipExpansionScreen.watchedRoomId) {
+          var6 = (LobbyRoom) (ClippedWidgetContainer.lobbyRoomsById.get((byte) -27, (long)MembershipExpansionScreen.watchedRoomId));
           var7 = var6;
-          oo.watchedRoomId = roomId;
+          MembershipExpansionScreen.watchedRoomId = roomId;
           if (var7 != null) {
             var7.playerNames = null;
           }
@@ -257,7 +257,7 @@ final class WhirlpoolHasher {
             keyTableIndex = 0;
             keyByteShift = 56;
             while (keyTableIndex < 8) {
-              this.roundTemporary[keyTransformIndex] = BufferedFile.a(this.roundTemporary[keyTransformIndex], ClientConnectionState.whirlpoolRoundTables[keyTableIndex][rn.bitwiseAnd(255, (int)(this.roundKey[rn.bitwiseAnd(7, keyTransformIndex - keyTableIndex)] >>> keyByteShift))]);
+              this.roundTemporary[keyTransformIndex] = BufferedFile.a(this.roundTemporary[keyTransformIndex], ClientConnectionState.whirlpoolRoundTables[keyTableIndex][ProceduralMapSupport.bitwiseAnd(255, (int)(this.roundKey[ProceduralMapSupport.bitwiseAnd(7, keyTransformIndex - keyTableIndex)] >>> keyByteShift))]);
               keyByteShift -= 8;
               keyTableIndex++;
             }
@@ -272,7 +272,7 @@ final class WhirlpoolHasher {
             unusedCipherTableStart = cipherTableIndex;
             cipherByteShift = 56;
             while (cipherTableIndex < 8) {
-              this.roundTemporary[cipherTransformIndex] = BufferedFile.a(this.roundTemporary[cipherTransformIndex], ClientConnectionState.whirlpoolRoundTables[cipherTableIndex][rn.bitwiseAnd((int)(this.cipherState[rn.bitwiseAnd(cipherTransformIndex - cipherTableIndex, 7)] >>> cipherByteShift), 255)]);
+              this.roundTemporary[cipherTransformIndex] = BufferedFile.a(this.roundTemporary[cipherTransformIndex], ClientConnectionState.whirlpoolRoundTables[cipherTableIndex][ProceduralMapSupport.bitwiseAnd((int)(this.cipherState[ProceduralMapSupport.bitwiseAnd(cipherTransformIndex - cipherTableIndex, 7)] >>> cipherByteShift), 255)]);
               cipherByteShift -= 8;
               cipherTableIndex++;
             }
@@ -315,7 +315,7 @@ final class WhirlpoolHasher {
         int obfuscationControl = 0;
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          this.inputBlock[this.bufferPosition] = (byte)AccountRegistrationDialog.bitwiseOr((int) this.inputBlock[this.bufferPosition], 128 >>> rn.bitwiseAnd(this.bufferedBits, 7));
+          this.inputBlock[this.bufferPosition] = (byte)AccountRegistrationDialog.bitwiseOr((int) this.inputBlock[this.bufferPosition], 128 >>> ProceduralMapSupport.bitwiseAnd(this.bufferedBits, 7));
           this.bufferPosition = this.bufferPosition + 1;
           if (32 < this.bufferPosition) {
             while (64 > this.bufferPosition) {
@@ -334,7 +334,7 @@ final class WhirlpoolHasher {
           if (!obfuscationGuard) {
             WhirlpoolHasher.a(54, 79);
           }
-          vm.a(this.bitLength, 0, this.inputBlock, 32, 32);
+          ArrayBlockSupport.copyBytes(this.bitLength, 0, this.inputBlock, 32, 32);
           this.compressBlock(-11);
           hashWordIndex = 0;
           digestByteIndex = outputOffset;

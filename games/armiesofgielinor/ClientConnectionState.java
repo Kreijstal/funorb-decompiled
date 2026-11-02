@@ -67,12 +67,12 @@ final class ClientConnectionState {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, boolean param1) {
-        if (!param1) {
+    final static void setTicksPerSecond(int ticksPerSecond, boolean obfuscationGuard) {
+        if (!obfuscationGuard) {
           gl var3 = (gl) null;
           ClientConnectionState.a(false, (gl) null, (gl) null);
         }
-        FullscreenFocusCanvas.tickDurationNanos = 1000000000L / (long)param0;
+        FullscreenFocusCanvas.tickDurationNanos = 1000000000L / (long)ticksPerSecond;
     }
 
     final static int a(boolean param0, gl param1, gl param2) {

@@ -1,0 +1,84 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SoundPanSupport {
+    static boolean field_a;
+    static int field_c;
+    static int[][] field_d;
+    static RgbSprite[] field_b;
+    static String field_e;
+
+    final static int getUnitUnlockGroup(boolean obfuscationGuard, int unitType) {
+        int var2_int = 0;
+        int var3 = 0;
+        RuntimeException var2 = null;
+        int var4 = 0;
+        int stackIn_3_0 = 0;
+        int stackIn_11_0 = 0;
+        int stackIn_15_0 = 0;
+        RuntimeException decompiledCaughtException = null;
+        var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        try {
+          if (obfuscationGuard) {
+            stackIn_3_0 = -40;
+            return stackIn_3_0;
+          }
+          for (var2_int = 0; var2_int < AnimationFrameSet.unitUnlockGroups.length; var2_int++) {
+            for (var3 = 0; var3 < AnimationFrameSet.unitUnlockGroups[var2_int].length; var3++) {
+              if (AnimationFrameSet.unitUnlockGroups[var2_int][var3] == unitType) {
+                stackIn_11_0 = var2_int;
+                return stackIn_11_0;
+              }
+            }
+          }
+          stackIn_15_0 = 0;
+          return stackIn_15_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "jv.A(" + obfuscationGuard + ',' + unitType + ')');
+        }
+    }
+
+    public static void a(byte param0) {
+        field_b = null;
+        field_d = (int[][]) null;
+        field_e = null;
+        if (param0 != 36) {
+          PcmSample var2 = (PcmSample) null;
+          SoundPanSupport.playSoundWithPan((PcmSample) null, -72, 76, (byte) 115);
+        }
+    }
+
+    final static SoundPlaybackHandle playSoundWithPan(PcmSample sample, int pan, int volume, byte obfuscationGuard) {
+        RuntimeException failure = null;
+        SoundPlaybackHandle handle = null;
+        RuntimeException failureForContext = null;
+        StringBuilder errorContext = null;
+        String sampleDescription = null;
+        RuntimeException caughtFailure = null;
+        try {
+          if (obfuscationGuard <= 26) {
+            field_b = (RgbSprite[]) null;
+          }
+          handle = MapTile.playRawSound(-92, RawPcmStream.createAtRateAndPan(sample, 100, volume, pan));
+          return handle;
+        } catch (java.lang.RuntimeException caughtParameter) {
+          caughtFailure = caughtParameter;
+          failure = caughtFailure;
+          failureForContext = failure;
+          errorContext = new StringBuilder().append("jv.C(");
+          if (sample == null) {
+            sampleDescription = "null";
+          } else {
+            sampleDescription = "{...}";
+          }
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failureForContext), ((StringBuilder) (Object) errorContext).append(sampleDescription).append(',').append(pan).append(',').append(volume).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    static {
+        field_a = false;
+        field_e = "The cannon cannot be built on a structure";
+    }
+}

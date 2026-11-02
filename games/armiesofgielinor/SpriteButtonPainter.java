@@ -131,10 +131,10 @@ final class SpriteButtonPainter extends BitmapTextWidgetPainter {
           return;
         }
         if (param0 % 10L == 0L) {
-          SocketResourceClient.a(-1L + param0, 116);
-          SocketResourceClient.a(1L, param1 ^ 125);
+          SocketResourceClient.sleepMillis(-1L + param0, 116);
+          SocketResourceClient.sleepMillis(1L, param1 ^ 125);
         } else {
-          SocketResourceClient.a(param0, 53);
+          SocketResourceClient.sleepMillis(param0, 53);
         }
     }
 

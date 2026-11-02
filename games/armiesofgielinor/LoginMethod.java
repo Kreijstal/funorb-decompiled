@@ -18,7 +18,7 @@ final class LoginMethod {
           if (!cd.c(9501)) {
             if (FixedQuaternion.fullscreenCanvas != null &&
               FixedQuaternion.fullscreenCanvas.focusLost) {
-              ck.b(-110);
+              StructureTerrainSupport.b(-110);
               SphinxActionRequest.field_v.showDialog(new FullscreenStatusDialog(SphinxActionRequest.field_v, SocialListPanel.field_Mb), 0);
             }
             return;
@@ -26,7 +26,7 @@ final class LoginMethod {
           SphinxActionRequest.field_v.a(true, -6226, DateInputWidget.field_F, AiUnitPlanner.field_s);
           SphinxActionRequest.field_v.advanceDialogs((byte) -117);
           while (Unit.pollKeyEvent((byte) 107)) {
-            SphinxActionRequest.field_v.a(rs.keyCode, DualNodeDeque.typedCharacter, 80);
+            SphinxActionRequest.field_v.a(PowerOfTwoSupport.keyCode, DualNodeDeque.typedCharacter, 80);
           }
           if (param0 >= 10) {
             return;

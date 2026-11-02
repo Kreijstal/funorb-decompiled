@@ -35,9 +35,9 @@ final class ContextualRuntimeException extends RuntimeException {
           ContextualRuntimeException.a((byte) 1, -105, -40);
         }
         if (param1 >= 4096) {
-          return param1 < 6144 ? -e.field_a[-param1 + 6144] : e.field_a[-6144 + param1];
+          return param1 < 6144 ? -QuickChatMenuCloseSupport.field_a[-param1 + 6144] : QuickChatMenuCloseSupport.field_a[-6144 + param1];
         }
-        return param1 >= 2048 ? -e.field_a[-2048 + param1] : e.field_a[2048 - param1];
+        return param1 >= 2048 ? -QuickChatMenuCloseSupport.field_a[-2048 + param1] : QuickChatMenuCloseSupport.field_a[2048 - param1];
     }
 
     final static void a(int param0, ResourceArchive param1) {
@@ -46,19 +46,19 @@ final class ContextualRuntimeException extends RuntimeException {
         ClientUiComponent var3 = null;
         try {
           NodeHashIterator.field_e = GameplayController.a("display_name_changed", (byte) 51, "basic", param1);
-          ListMissionsConsoleCommand.field_E = new SocialListPanel(0L, br.field_g, LoginKind.field_b, AnimationFrameSet.field_y);
-          TaggedMapData.field_g = new SocialListPanel(0L, br.field_g, lm.field_a, ArchiveIndex.field_u);
-          su.field_d = new ClientUiComponent(0L, (ClientUiComponent) null);
-          bn.field_c = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
-          bn.field_c.horizontalAlignment = 1;
-          AdaptiveMidiPcmStream.field_kb = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, su.field_b);
-          ek.field_a = new ClientUiComponent(0L, br.field_e, SingleChildWidgetContainer.field_C);
+          ListMissionsConsoleCommand.field_E = new SocialListPanel(0L, CampaignLookupSupport.field_g, LoginKind.field_b, AnimationFrameSet.field_y);
+          TaggedMapData.field_g = new SocialListPanel(0L, CampaignLookupSupport.field_g, lm.field_a, ArchiveIndex.field_u);
+          AiWeightProfile.field_d = new ClientUiComponent(0L, (ClientUiComponent) null);
+          CalendarSupport.field_c = new ClientUiComponent(0L, PasswordLoginCredentials.field_h);
+          CalendarSupport.field_c.horizontalAlignment = 1;
+          AdaptiveMidiPcmStream.field_kb = new ClientUiComponent(0L, SoundPlaybackHandle.field_p, AiWeightProfile.field_b);
+          ek.field_a = new ClientUiComponent(0L, CampaignLookupSupport.field_e, SingleChildWidgetContainer.field_C);
           PlayerProfile.field_f = new ClientUiComponent(0L, DualLinkedNode.field_k);
-          su.field_d.addChild(bn.field_c, 49);
-          su.field_d.addChild(AdaptiveMidiPcmStream.field_kb, 109);
-          su.field_d.addChild(ek.field_a, 49);
-          su.field_d.addChild(ListMissionsConsoleCommand.field_E, 105);
-          su.field_d.addChild(PlayerProfile.field_f, 56);
+          AiWeightProfile.field_d.addChild(CalendarSupport.field_c, 49);
+          AiWeightProfile.field_d.addChild(AdaptiveMidiPcmStream.field_kb, 109);
+          AiWeightProfile.field_d.addChild(ek.field_a, 49);
+          AiWeightProfile.field_d.addChild(ListMissionsConsoleCommand.field_E, 105);
+          AiWeightProfile.field_d.addChild(PlayerProfile.field_f, 56);
           ListMissionsConsoleCommand.field_E.scrollContainer.viewport.applyStyle(param0 + 6145, PasswordLoginCredentials.field_h);
           ListMissionsConsoleCommand.field_E.scrollContainer.viewport.verticalAlignment = 1;
           var6 = ListMissionsConsoleCommand.field_E.scrollContainer.viewport;

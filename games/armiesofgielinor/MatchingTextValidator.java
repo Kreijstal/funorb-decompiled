@@ -36,8 +36,8 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (this.primaryInput instanceof ValidationProvider) {
             var3 = ((ValidationProvider) ((Object) this.primaryInput)).getValidationSource(-918933630);
             if (var3 != null &&
-              var3.getValidationState(false) != oo.validationValid) {
-              stackIn_5_0 = rn.validationInvalid;
+              var3.getValidationState(false) != MembershipExpansionScreen.validationValid) {
+              stackIn_5_0 = ProceduralMapSupport.validationInvalid;
               return stackIn_5_0;
             }
           }
@@ -45,9 +45,9 @@ final class MatchingTextValidator extends TextFieldValidator {
             field_l = (ClientUiComponent) null;
           }
           if (!text.equals(this.primaryInput.text)) {
-            stackIn_11_0 = rn.validationInvalid;
+            stackIn_11_0 = ProceduralMapSupport.validationInvalid;
           } else {
-            stackIn_11_0 = oo.validationValid;
+            stackIn_11_0 = MembershipExpansionScreen.validationValid;
           }
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -87,7 +87,7 @@ final class MatchingTextValidator extends TextFieldValidator {
           if (this.primaryInput instanceof ValidationProvider) {
             var3 = ((ValidationProvider) ((Object) this.primaryInput)).getValidationSource(-918933630);
             if (var3 != null) {
-              if (var3.getValidationState(false) == oo.validationValid &&
+              if (var3.getValidationState(false) == MembershipExpansionScreen.validationValid &&
                 !text.equals(this.primaryInput.text)) {
                 stackIn_7_0 = BitmapTextLayout.field_j;
                 return stackIn_7_0;

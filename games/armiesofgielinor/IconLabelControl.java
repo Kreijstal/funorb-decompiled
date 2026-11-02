@@ -129,7 +129,7 @@ final class IconLabelControl extends ClientUiComponent {
           var44 = 0;
           var13Lifetime1 = var44;
           while (var44 < UnitModelViewer.field_q) {
-            var14Lifetime1 = ab.field_c[var44];
+            var14Lifetime1 = AlphanumericTextSupport.field_c[var44];
             var15Lifetime1 = param1.field_c[var14Lifetime1];
             var16 = param1.field_j[var14Lifetime1];
             var17 = param1.field_e[var14Lifetime1];
@@ -151,12 +151,12 @@ final class IconLabelControl extends ClientUiComponent {
               stackIn_33_0 = param1.field_d[var14Lifetime1];
             }
             var20 = stackIn_33_0;
-            if (null != pg.field_a &&
+            if (null != UnitAnimationSelectionSupport.field_a &&
               param1.field_u != null &&
               param1.field_u.length > var14Lifetime1 &&
               param1.field_u[var14Lifetime1] != -1 &&
-              pg.field_a.length > param1.field_u[var14Lifetime1]) {
-              stackIn_41_0 = pg.field_a[param1.field_u[var14Lifetime1]];
+              UnitAnimationSelectionSupport.field_a.length > param1.field_u[var14Lifetime1]) {
+              stackIn_41_0 = UnitAnimationSelectionSupport.field_a[param1.field_u[var14Lifetime1]];
             } else {
               stackIn_41_0 = null;
             }
@@ -242,7 +242,7 @@ final class IconLabelControl extends ClientUiComponent {
           !(var1.indexOf('@') < 0)) {
           var1 = "";
         }
-        return new gl(CombatPresentation.i(-4938), gi.a(false));
+        return new gl(CombatPresentation.i(-4938), AccountNameCheckStatusSupport.isAccountNameCheckPending(false));
     }
 
     final static void a(java.math.BigInteger param0, java.math.BigInteger param1, byte param2, PacketBuffer param3, PacketBuffer param4) {
@@ -303,7 +303,7 @@ final class IconLabelControl extends ClientUiComponent {
     }
 
     static {
-        db.a(true, ' ');
+        IgnoreListLookupSupport.a(true, ' ');
         field_Ib = "Open portal - Opens a single portal for a single god's forces at the current map tile";
     }
 }

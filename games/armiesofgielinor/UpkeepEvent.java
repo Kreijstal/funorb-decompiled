@@ -82,10 +82,10 @@ final class UpkeepEvent extends GameEvent {
           SectorCacheStore.field_j[3] = MapLayout.loadIndexedSpritesByName("coatofarms_banners", -28106, "basic", param0);
           SectorCacheStore.field_j[5] = MapLayout.loadIndexedSpritesByName("coatofarms_icons", -28106, "basic", param0);
           SectorCacheStore.field_j[4] = MapLayout.loadIndexedSpritesByName("coatofarms_toppers", -28106, "basic", param0);
-          RegionAnchor.field_m = fk.loadRgbSpritesByName("coatofarms_effects", (byte) -124, param0, "basic");
+          RegionAnchor.field_m = DropdownSelectorPainter.loadRgbSpritesByName("coatofarms_effects", (byte) -124, param0, "basic");
           GameplayController.a("coatofarms_palette", (byte) 51, "basic", param0);
           ClientConnectionState.field_a = GameplayController.a("coatofarms_scrollbutton", (byte) 51, "basic", param0);
-          KeyedLoginCredentials.field_h = fk.loadRgbSpritesByName("coatofarms_buttons", (byte) -128, param0, "basic");
+          KeyedLoginCredentials.field_h = DropdownSelectorPainter.loadRgbSpritesByName("coatofarms_buttons", (byte) -128, param0, "basic");
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

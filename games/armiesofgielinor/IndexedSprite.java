@@ -93,7 +93,7 @@ final class IndexedSprite extends IndexedSpriteBase {
         return new RgbSprite(this.canvasWidth, this.canvasHeight, this.offsetX, this.offsetY, this.pixelWidth, this.pixelHeight, var2);
     }
 
-    final void d(int param0, int param1) {
+    final void drawHalfSize(int x, int y) {
         int var10 = 0;
         int var11 = 0;
         int var17 = 0;
@@ -117,30 +117,30 @@ final class IndexedSprite extends IndexedSpriteBase {
         int[] var19;
         var3 = this.pixelWidth >> 1;
         var4 = this.pixelHeight >> 1;
-        param0 = param0 + this.offsetX / 2;
-        param1 = param1 + this.offsetY / 2;
-        if (param0 >= SoftwareRaster.clipLeft) {
+        x = x + this.offsetX / 2;
+        y = y + this.offsetY / 2;
+        if (x >= SoftwareRaster.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = SoftwareRaster.clipLeft - param0 << 1;
+          stackIn_3_0 = SoftwareRaster.clipLeft - x << 1;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= SoftwareRaster.clipRight) {
+        if (x + var3 <= SoftwareRaster.clipRight) {
           stackIn_6_0 = this.pixelWidth - 2;
         } else {
-          stackIn_6_0 = (SoftwareRaster.clipRight - param0 << 1) - 2;
+          stackIn_6_0 = (SoftwareRaster.clipRight - x << 1) - 2;
         }
         var6 = stackIn_6_0;
-        if (param1 >= SoftwareRaster.clipTop) {
+        if (y >= SoftwareRaster.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = SoftwareRaster.clipTop - param1 << 1;
+          stackIn_9_0 = SoftwareRaster.clipTop - y << 1;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= SoftwareRaster.clipBottom) {
+        if (y + var4 <= SoftwareRaster.clipBottom) {
           stackIn_12_0 = this.pixelHeight - 2;
         } else {
-          stackIn_12_0 = (SoftwareRaster.clipBottom - param1 << 1) - 2;
+          stackIn_12_0 = (SoftwareRaster.clipBottom - y << 1) - 2;
         }
         var8 = stackIn_12_0;
         var19 = new int[4];
@@ -149,7 +149,7 @@ final class IndexedSprite extends IndexedSpriteBase {
         for (var10 = var7; var10 <= var8; var10 += 2) {
           for (var11 = var5; var11 <= var6; var11 += 2) {
             var12 = var10 * this.pixelWidth + var11;
-            var13 = (param1 + (var10 >> 1)) * SoftwareRaster.width + (param0 + (var11 >> 1));
+            var13 = (y + (var10 >> 1)) * SoftwareRaster.width + (x + (var11 >> 1));
             var9[0] = this.palette[this.pixelIndices[var12] & 255];
             var9[1] = this.palette[this.pixelIndices[var12 + 1] & 255];
             var9[2] = this.palette[this.pixelIndices[var12 + this.pixelWidth] & 255];
@@ -170,43 +170,43 @@ final class IndexedSprite extends IndexedSpriteBase {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawFadedToColour(int x, int y, int alpha, int fadeColour) {
         int var11 = 0;
         int var11Lifetime1;
         int var11Lifetime2;
-        if (param2 == 256) {
-          this.draw(param0, param1);
+        if (alpha == 256) {
+          this.draw(x, y);
           return;
         }
-        param0 = param0 + this.offsetX;
-        param1 = param1 + this.offsetY;
-        int var5 = param0 + param1 * SoftwareRaster.width;
+        x = x + this.offsetX;
+        y = y + this.offsetY;
+        int var5 = x + y * SoftwareRaster.width;
         int var6 = 0;
         int var7 = this.pixelHeight;
         int var8 = this.pixelWidth;
         int var9 = SoftwareRaster.width - var8;
         int var10 = 0;
-        if (param1 < SoftwareRaster.clipTop) {
-          var11 = SoftwareRaster.clipTop - param1;
+        if (y < SoftwareRaster.clipTop) {
+          var11 = SoftwareRaster.clipTop - y;
           var7 = var7 - var11;
-          param1 = SoftwareRaster.clipTop;
+          y = SoftwareRaster.clipTop;
           var6 = var6 + var11 * var8;
           var5 = var5 + var11 * SoftwareRaster.width;
         }
-        if (param1 + var7 > SoftwareRaster.clipBottom) {
-          var7 = var7 - (param1 + var7 - SoftwareRaster.clipBottom);
+        if (y + var7 > SoftwareRaster.clipBottom) {
+          var7 = var7 - (y + var7 - SoftwareRaster.clipBottom);
         }
-        if (param0 < SoftwareRaster.clipLeft) {
-          var11Lifetime1 = SoftwareRaster.clipLeft - param0;
+        if (x < SoftwareRaster.clipLeft) {
+          var11Lifetime1 = SoftwareRaster.clipLeft - x;
           var8 = var8 - var11Lifetime1;
-          param0 = SoftwareRaster.clipLeft;
+          x = SoftwareRaster.clipLeft;
           var6 = var6 + var11Lifetime1;
           var5 = var5 + var11Lifetime1;
           var10 = var10 + var11Lifetime1;
           var9 = var9 + var11Lifetime1;
         }
-        if (param0 + var8 > SoftwareRaster.clipRight) {
-          var11Lifetime2 = param0 + var8 - SoftwareRaster.clipRight;
+        if (x + var8 > SoftwareRaster.clipRight) {
+          var11Lifetime2 = x + var8 - SoftwareRaster.clipRight;
           var8 = var8 - var11Lifetime2;
           var10 = var10 + var11Lifetime2;
           var9 = var9 + var11Lifetime2;
@@ -215,7 +215,7 @@ final class IndexedSprite extends IndexedSpriteBase {
           var7 <= 0) {
           return;
         }
-        IndexedSprite.b(SoftwareRaster.pixels, this.pixelIndices, this.palette, 0, var6, var5, var8, var7, var9, var10, param2, param3);
+        IndexedSprite.b(SoftwareRaster.pixels, this.pixelIndices, this.palette, 0, var6, var5, var8, var7, var9, var10, alpha, fadeColour);
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {
@@ -383,7 +383,7 @@ final class IndexedSprite extends IndexedSpriteBase {
         IndexedSprite.a(SoftwareRaster.pixels, this.pixelIndices, this.palette, var5, var4, var7, var6, var8, var9, alpha);
     }
 
-    final void c(int param0, int param1) {
+    final void drawQuarterSize(int x, int y) {
         int var9 = 0;
         int var10 = 0;
         int var16 = 0;
@@ -406,36 +406,36 @@ final class IndexedSprite extends IndexedSpriteBase {
         int var13Lifetime1;
         var3 = this.pixelWidth >> 2;
         var4 = this.pixelHeight >> 2;
-        param0 = param0 + this.offsetX / 4;
-        param1 = param1 + this.offsetY / 4;
-        if (param0 >= SoftwareRaster.clipLeft) {
+        x = x + this.offsetX / 4;
+        y = y + this.offsetY / 4;
+        if (x >= SoftwareRaster.clipLeft) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = SoftwareRaster.clipLeft - param0 << 2;
+          stackIn_3_0 = SoftwareRaster.clipLeft - x << 2;
         }
         var5 = stackIn_3_0;
-        if (param0 + var3 <= SoftwareRaster.clipRight) {
+        if (x + var3 <= SoftwareRaster.clipRight) {
           stackIn_6_0 = this.pixelWidth - 4;
         } else {
-          stackIn_6_0 = (SoftwareRaster.clipRight - param0 << 2) - 4;
+          stackIn_6_0 = (SoftwareRaster.clipRight - x << 2) - 4;
         }
         var6 = stackIn_6_0;
-        if (param1 >= SoftwareRaster.clipTop) {
+        if (y >= SoftwareRaster.clipTop) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = SoftwareRaster.clipTop - param1 << 2;
+          stackIn_9_0 = SoftwareRaster.clipTop - y << 2;
         }
         var7 = stackIn_9_0;
-        if (param1 + var4 <= SoftwareRaster.clipBottom) {
+        if (y + var4 <= SoftwareRaster.clipBottom) {
           stackIn_12_0 = this.pixelHeight - 4;
         } else {
-          stackIn_12_0 = (SoftwareRaster.clipBottom - param1 << 2) - 4;
+          stackIn_12_0 = (SoftwareRaster.clipBottom - y << 2) - 4;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 4) {
           for (var10 = var5; var10 <= var6; var10 += 4) {
             var11 = var9 * this.pixelWidth + var10;
-            var12 = (param1 + (var9 >> 2)) * SoftwareRaster.width + (param0 + (var10 >> 2));
+            var12 = (y + (var9 >> 2)) * SoftwareRaster.width + (x + (var10 >> 2));
             var13 = 0;
             var14 = 0;
             var15 = 0;

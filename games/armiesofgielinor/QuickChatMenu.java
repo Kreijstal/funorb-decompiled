@@ -79,7 +79,7 @@ final class QuickChatMenu extends ClientUiComponent {
     final boolean handleKeyboard(boolean obfuscationGuard, int selectionContext, int messageContext) {
         int var6 = 0;
         int var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        int var4 = 85 == rs.keyCode ? 1 : 0;
+        int var4 = 85 == PowerOfTwoSupport.keyCode ? 1 : 0;
         if (this.activeSubmenu != null) {
           if (var4 != 0 &&
             -1 == this.activeSubmenu.openItemIndex) {
@@ -91,7 +91,7 @@ final class QuickChatMenu extends ClientUiComponent {
         }
         if (null == this.activeSubmenu && this == RegistrationAgreementPane.activeQuickChatMenu &&
           var4 != 0) {
-          e.closeQuickChatMenu((byte) -101);
+          QuickChatMenuCloseSupport.closeQuickChatMenu((byte) -101);
           return true;
         }
         int var5 = DualNodeDeque.typedCharacter;
@@ -155,11 +155,11 @@ final class QuickChatMenu extends ClientUiComponent {
             this.activeSubmenu.setCollapseTicks(12, 42);
           } else {
             if (this.phraseIds[itemIndex] == -1) {
-              gn.openQuickChatHelp(5);
-              e.closeQuickChatMenu((byte) -115);
+              IndentedTextBuilder.openQuickChatHelp(5);
+              QuickChatMenuCloseSupport.closeQuickChatMenu((byte) -115);
             } else {
               var5 = 32768 | this.phraseIds[itemIndex];
-              var6 = rs.outgoingChatChannel;
+              var6 = PowerOfTwoSupport.outgoingChatChannel;
               if (var6 == 0 &&
                 null != ToggleWidget.currentRoom) {
                 var6 = 1;
@@ -168,9 +168,9 @@ final class QuickChatMenu extends ClientUiComponent {
                 FullscreenStatusDialog.setChatFilter(1, false, var6, selectionContext);
               }
               String var8 = (String) null;
-              it.writeChatMessage(var5, -91, rs.outgoingChatChannel, RegistrationAgreementPane.chatRecipientName, messageContext, (String) null);
-              AgeValidator.rememberLastQuickChat(RegistrationAgreementPane.chatRecipientName, dj.chatRecipientAccountId, var5, rs.outgoingChatChannel, obfuscationGuard ^ 4124);
-              e.closeQuickChatMenu((byte) -126);
+              ChatMessageWriteSupport.writeChatMessage(var5, -91, PowerOfTwoSupport.outgoingChatChannel, RegistrationAgreementPane.chatRecipientName, messageContext, (String) null);
+              AgeValidator.rememberLastQuickChat(RegistrationAgreementPane.chatRecipientName, TextSplitSupport.chatRecipientAccountId, var5, PowerOfTwoSupport.outgoingChatChannel, obfuscationGuard ^ 4124);
+              QuickChatMenuCloseSupport.closeQuickChatMenu((byte) -126);
               NetworkGameShell.resetIdleTracking(-20873);
             }
           }
@@ -185,7 +185,7 @@ final class QuickChatMenu extends ClientUiComponent {
         int var10;
         int var11;
         int var12;
-        ManaStarParticle.activeTerrainSprites[0].b(param0, param4, param5, param1);
+        ManaStarParticle.activeTerrainSprites[0].drawFadedToColour(param0, param4, param5, param1);
         var8 = 0;
         var9 = CampaignMenuEntry.field_u[param2];
         if (var9 == 11) {
@@ -197,8 +197,8 @@ final class QuickChatMenu extends ClientUiComponent {
         }
         var10 = 53 % ((param6 + 10) / 62);
         if (var9 == 7) {
-          pv.field_b = var9;
-          gt.field_i = var9;
+          AccountNameFoldingSupport.field_b = var9;
+          LocalAccountNameSupport.field_i = var9;
           FullscreenConfirmationDialog.field_Y = var9;
           ContextActionMenu.field_Wb = var9;
           QuickChatCategory.field_z = var9;
@@ -214,7 +214,7 @@ final class QuickChatMenu extends ClientUiComponent {
             if (var11 != 0) {
               ContextActionMenu.field_Wb = CampaignMenuEntry.field_u[-1 + (param2 - ResourceRequest.field_y)];
             }
-            pv.field_b = CampaignMenuEntry.field_u[param2 - ResourceRequest.field_y];
+            AccountNameFoldingSupport.field_b = CampaignMenuEntry.field_u[param2 - ResourceRequest.field_y];
             if (var12 != 0) {
               ConsoleTextNode.field_m = CampaignMenuEntry.field_u[-ResourceRequest.field_y + (param2 + 1)];
             }
@@ -232,17 +232,17 @@ final class QuickChatMenu extends ClientUiComponent {
             }
             QuickChatCategory.field_z = CampaignMenuEntry.field_u[param2 + ResourceRequest.field_y];
             if (var12 != 0) {
-              gt.field_i = CampaignMenuEntry.field_u[param2 + ResourceRequest.field_y + 1];
+              LocalAccountNameSupport.field_i = CampaignMenuEntry.field_u[param2 + ResourceRequest.field_y + 1];
             }
           }
-          ManaStarParticle.activeTerrainSprites[FullscreenDisplayMode.a(ConsoleTextNode.field_m, j.field_b, pv.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].b(param0, param4, param5, param1);
-          ManaStarParticle.activeTerrainSprites[var9 - (-1 - FullscreenDisplayMode.a(ContextActionMenu.field_Wb, j.field_b, pv.field_b, FullscreenConfirmationDialog.field_Y, -87))].b(param0, param4, param5, param1);
-          ManaStarParticle.activeTerrainSprites[2 + var9 + FullscreenDisplayMode.a(gt.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, -68)].b(param0, param4, param5, param1);
-          ManaStarParticle.activeTerrainSprites[3 + (var9 + FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, FullscreenConfirmationDialog.field_Y, -72))].b(param0, param4, param5, param1);
+          ManaStarParticle.activeTerrainSprites[FullscreenDisplayMode.a(ConsoleTextNode.field_m, j.field_b, AccountNameFoldingSupport.field_b, SpellConfirmationDialog.field_e, -26) + (0 + var9)].drawFadedToColour(param0, param4, param5, param1);
+          ManaStarParticle.activeTerrainSprites[var9 - (-1 - FullscreenDisplayMode.a(ContextActionMenu.field_Wb, j.field_b, AccountNameFoldingSupport.field_b, FullscreenConfirmationDialog.field_Y, -87))].drawFadedToColour(param0, param4, param5, param1);
+          ManaStarParticle.activeTerrainSprites[2 + var9 + FullscreenDisplayMode.a(LocalAccountNameSupport.field_i, j.field_b, QuickChatCategory.field_z, SpellConfirmationDialog.field_e, -68)].drawFadedToColour(param0, param4, param5, param1);
+          ManaStarParticle.activeTerrainSprites[3 + (var9 + FullscreenDisplayMode.a(ChannelBaseVolumeConsoleCommand.field_E, j.field_b, QuickChatCategory.field_z, FullscreenConfirmationDialog.field_Y, -72))].drawFadedToColour(param0, param4, param5, param1);
           if (cu.field_a &&
             var8 == 0 &&
             (ConsoleExpression.field_p[param2] + param2 & 5) == 5) {
-            NineSliceFrame.activeFoliageSprites[6 + ConsoleExpression.field_p[param2] % 8].b(param0, -40 + param4, param5, param1);
+            NineSliceFrame.activeFoliageSprites[6 + ConsoleExpression.field_p[param2] % 8].drawFadedToColour(param0, -40 + param4, param5, param1);
           }
         }
         return;
@@ -345,7 +345,7 @@ final class QuickChatMenu extends ClientUiComponent {
             var26.menu.addIconAction(param2, var27, 11, var28Lifetime2);
             var29 = FullscreenMembershipDialog.activeContextMenu;
             var31 = ImageProducerSurface.field_n[1];
-            var30 = jj.field_e;
+            var30 = FriendLookupSupport.field_e;
             var29.menu.addIconAction(param2, var30, 12, var31);
             var32 = FullscreenMembershipDialog.activeContextMenu;
             var34 = ImageProducerSurface.field_n[2];
@@ -457,7 +457,7 @@ final class QuickChatMenu extends ClientUiComponent {
           shortcutSuffix = "</col>";
           for (itemIndex = 0; this.itemCount > itemIndex; itemIndex++) {
             if (this.shortcuts[itemIndex] > 0) {
-              labels[itemIndex] = shortcutPrefix + db.a(true, this.shortcuts[itemIndex]).toUpperCase() + ": " + shortcutSuffix + labels[itemIndex];
+              labels[itemIndex] = shortcutPrefix + IgnoreListLookupSupport.a(true, this.shortcuts[itemIndex]).toUpperCase() + ": " + shortcutSuffix + labels[itemIndex];
             }
             arrow = null;
             if (this.submenus[itemIndex] != null ||

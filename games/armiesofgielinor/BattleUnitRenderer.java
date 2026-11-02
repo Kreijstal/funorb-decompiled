@@ -14,8 +14,8 @@ final class BattleUnitRenderer {
           Unit var7 = (Unit) null;
           this.refreshUnitModel(-96, -101, (Unit) null);
         }
-        int surfaceWidth = so.field_b.width;
-        int surfaceHeight = so.field_b.height;
+        int surfaceWidth = FixedSquareRootSupport.field_b.width;
+        int surfaceHeight = FixedSquareRootSupport.field_b.height;
         if (screenX > surfaceWidth) {
           return false;
         }
@@ -157,7 +157,7 @@ final class BattleUnitRenderer {
                       -1 >= var6 + var10 ||
                       !(param3.pixelHeight > var10 + var6) ||
                       param3.pixelIndices[(var10 + var6) * param3.pixelWidth + (var7 + var9)] == 0) {
-                      SoftwareRaster.g(var7 + (param0 + var9), var10 + param4 + var6, param1, var9 * var9 + var10 * var10);
+                      SoftwareRaster.addPixel(var7 + (param0 + var9), var10 + param4 + var6, param1, var9 * var9 + var10 * var10);
                     }
                   }
                 }

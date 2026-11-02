@@ -96,7 +96,7 @@ final class SpellCastAction extends PreparedAction {
             SpellCastAction.a((java.applet.Applet) null, 31, (String) null, false);
           }
           var3 = ContentTransitionDialog.unitAnimationSlotNames[param0];
-          var4 = db.a(true, '_');
+          var4 = IgnoreListLookupSupport.a(true, '_');
           var5 = var3 + var4 + param2;
           stackIn_3_0 = var5;
           return stackIn_3_0;
@@ -118,7 +118,7 @@ final class SpellCastAction extends PreparedAction {
         try {
           int var4_int = 0;
           if (PlatformTaskService.lowercaseOsName.startsWith("win") &&
-            br.a(param2, true)) {
+            CampaignLookupSupport.a(param2, true)) {
             return;
           }
           var4_int = -80 / ((param1 - 12) / 48);
@@ -146,11 +146,11 @@ final class SpellCastAction extends PreparedAction {
         }
     }
 
-    public static void e(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_v = null;
         keyEventCharacters = null;
         field_y = null;
-        if (param0 != -4541) {
+        if (obfuscationGuard != -4541) {
           SpellCastAction.b(-26, 75);
         }
     }

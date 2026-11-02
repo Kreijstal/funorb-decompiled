@@ -318,7 +318,7 @@ final class StatefulWidgetPainter extends BitmapTextWidgetPainter {
             }
             return;
           }
-          vm.a(this.field_w, 0, target.field_w, 0, 6);
+          ArrayBlockSupport.copyObjects(this.field_w, 0, target.field_w, 0, 6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

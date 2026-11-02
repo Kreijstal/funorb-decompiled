@@ -14,7 +14,7 @@ final class DeployAction extends PreparedAction {
     static String field_v;
     private int deployModifier;
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_y = null;
         field_s = null;
         field_v = null;
@@ -23,7 +23,7 @@ final class DeployAction extends PreparedAction {
         field_t = null;
         field_D = null;
         field_z = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           DeployAction.a(-31, -19, 87, -24, -42);
         }
     }
@@ -78,7 +78,7 @@ final class DeployAction extends PreparedAction {
         var5.field_k = param3;
         var5.field_r = param1;
         BattleCharacter.field_c.addLast((byte) -119, (IntrusiveNode) (var5));
-        gn.a(param2, var5, 0);
+        IndentedTextBuilder.a(param2, var5, 0);
         if (param0 == 34) {
           return var5;
         }

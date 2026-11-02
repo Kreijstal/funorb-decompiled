@@ -102,7 +102,7 @@ final class MovementPresentation implements EventPresentation {
               var10.unit = this.battlefield.getUnitAt(var10.sourceY, true, var10.sourceX);
               if (null == var10.unit) {
                 var11 = Battlefield.field_q + ": Can see parasite";
-                this.battlefield.a(0, var11, event);
+                this.battlefield.reportEventFailure(0, var11, event);
                 return false;
               }
               var14 = new int[1];
@@ -135,7 +135,7 @@ final class MovementPresentation implements EventPresentation {
             }
             if (var8.unit == null) {
               var9 = Battlefield.field_q + ": Can see start";
-              this.battlefield.a(0, var9, event);
+              this.battlefield.reportEventFailure(0, var9, event);
               return false;
             }
             if (var8.unit.packedFlag256) {

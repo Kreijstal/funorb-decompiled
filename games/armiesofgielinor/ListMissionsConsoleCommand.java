@@ -48,15 +48,15 @@ final class ListMissionsConsoleCommand extends ConsoleCommand {
           var11 = 0;
           for (var12 = 0; var12 < 6; var12++) {
             if (var12 >= 5 ||
-              null != gt.field_b[var12]) {
-              var13 = 3 + var11 * (2 + (-6 + CombatEvent.field_I.height)) / (1 + se.field_d);
+              null != LocalAccountNameSupport.field_b[var12]) {
+              var13 = 3 + var11 * (2 + (-6 + CombatEvent.field_I.height)) / (1 + IgnoreRequestSupport.field_d);
               var11++;
-              var7Lifetime1 = 3 + (var11 * (2 + CombatEvent.field_I.height - 6) / (se.field_d + 1) - 2 - var13);
+              var7Lifetime1 = 3 + (var11 * (2 + CombatEvent.field_I.height - 6) / (IgnoreRequestSupport.field_d + 1) - 2 - var13);
               if (5 <= var12) {
                 UnitLossCondition.field_f.setBounds(var7Lifetime1, param5 ^ -20499, var8, var13, var6_int);
               } else {
-                gt.field_b[var12].setBounds(var7Lifetime1, param5 ^ -20499, var8, var13, var6_int);
-                jj.field_i[var12].setBounds(var7Lifetime1, -20500, -param2 + var9, 0, param2);
+                LocalAccountNameSupport.field_b[var12].setBounds(var7Lifetime1, param5 ^ -20499, var8, var13, var6_int);
+                FriendLookupSupport.field_i[var12].setBounds(var7Lifetime1, -20500, -param2 + var9, 0, param2);
                 ArchiveLoadStep.field_g[var12].setBounds(-param3 + (var7Lifetime1 - param3), -20500, param0, param3, var9);
                 ResourceProtocolClient.field_j[var12].setBounds(-param3 + (-param3 + var7Lifetime1), param5 - 20501, -var10 + (-param2 + var8), param3, var10);
               }
@@ -116,7 +116,7 @@ final class ListMissionsConsoleCommand extends ConsoleCommand {
           var1_int = MoveAttackRequest.field_K[0];
           for (var2 = 1; MoveAttackRequest.field_K.length > var2; var2++) {
             var3 = MoveAttackRequest.field_K[var2];
-            vm.a(ab.field_c, var2 << 4, ab.field_c, var1_int, var3);
+            ArrayBlockSupport.copyInts(AlphanumericTextSupport.field_c, var2 << 4, AlphanumericTextSupport.field_c, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
@@ -131,7 +131,7 @@ final class ListMissionsConsoleCommand extends ConsoleCommand {
         int var0 = 0;
         noiseFade12 = new int[4096];
         for (var0 = 0; 4096 > var0; var0++) {
-          noiseFade12[var0] = ki.quinticNoiseFade12(var0, -111);
+          noiseFade12[var0] = QuinticFadeSupport.quinticNoiseFade12(var0, -111);
         }
     }
 }

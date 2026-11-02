@@ -140,14 +140,14 @@ final class ImageProducerSurface extends RasterImageSurface implements java.awt.
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (se.emailCheckResult.isComplete((byte) 124) &&
-            !email.equals(se.emailCheckResult.getEmail(true))) {
-            se.emailCheckResult = ProgressDialog.createEmailCheckResult(email, obfuscationGuard ^ 4210691);
+          if (IgnoreRequestSupport.emailCheckResult.isComplete((byte) 124) &&
+            !email.equals(IgnoreRequestSupport.emailCheckResult.getEmail(true))) {
+            IgnoreRequestSupport.emailCheckResult = ProgressDialog.createEmailCheckResult(email, obfuscationGuard ^ 4210691);
           }
           if (obfuscationGuard != 67) {
             field_i = (String) null;
           }
-          sharedResult = se.emailCheckResult;
+          sharedResult = IgnoreRequestSupport.emailCheckResult;
           return sharedResult;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -23,7 +23,7 @@ final class BattleGraphicsAssets {
         if (param0 == -61) {
           var1 = 352;
           stackIn_12_0 = SectorCacheStore.field_j[AccountRegistrationForm.field_X].length;
-          stackIn_13_1 = (od.field_c[AccountRegistrationForm.field_X]) ? 1 : 0;
+          stackIn_13_1 = (ByteArrayPoolSupport.field_c[AccountRegistrationForm.field_X]) ? 1 : 0;
           var2 = stackIn_12_0 + stackIn_13_1;
           var2 = (var2 / 2 + var2 % 2) * 80;
           if (-80 + (var1 + 8) >= var2) {
@@ -36,7 +36,7 @@ final class BattleGraphicsAssets {
         BattleGraphicsAssets.a(38);
         var1Lifetime1 = 352;
         stackIn_5_0 = SectorCacheStore.field_j[AccountRegistrationForm.field_X].length;
-        stackIn_6_1 = (od.field_c[AccountRegistrationForm.field_X]) ? 1 : 0;
+        stackIn_6_1 = (ByteArrayPoolSupport.field_c[AccountRegistrationForm.field_X]) ? 1 : 0;
         var2Lifetime1 = stackIn_5_0 + stackIn_6_1;
         var2Lifetime1 = (var2Lifetime1 / 2 + var2Lifetime1 % 2) * 80;
         if (-80 + (var1Lifetime1 + 8) >= var2Lifetime1) {
@@ -53,7 +53,7 @@ final class BattleGraphicsAssets {
             var1 = ContextActionMenu.loginForm.getAccountIdentifier(-15056);
           }
           if (var1.length() == 0) {
-            var1 = rn.b(true);
+            var1 = ProceduralMapSupport.b(true);
           }
           if (var1.length() == 0) {
             var1 = ko.field_a;
@@ -65,7 +65,7 @@ final class BattleGraphicsAssets {
           var1 = ContextActionMenu.loginForm.getAccountIdentifier(-15056);
         }
         if (var1.length() == 0) {
-          var1 = rn.b(true);
+          var1 = ProceduralMapSupport.b(true);
         }
         if (var1.length() == 0) {
           var1 = ko.field_a;
@@ -99,7 +99,7 @@ final class BattleGraphicsAssets {
           FullscreenMembershipDialog.activeFoliageShadows = nextAlias.foliageShadowSprites;
           NineSliceFrame.activeFoliageSprites = nextAlias.foliageSprites;
           TextFieldValidator.currentThemeId = themeId;
-          l.activeStructureSprites = nextAlias.structureSprites;
+          QuickChatCategoryMenuSupport.activeStructureSprites = nextAlias.structureSprites;
           oq.activeStructureShadows = nextTheme.structureShadowSprites;
           ArchiveMasterIndex.activeTerrainSample = ManaStarParticle.activeTerrainSprites[1].toRgbSprite();
           return;
@@ -110,17 +110,17 @@ final class BattleGraphicsAssets {
         int spriteIndex = 0;
         int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         LobbyPlayer.cannotMoveSprites = MapLayout.loadIndexedSpritesByName("cantmove", -28106, "basic", this.basicArchive);
-        bk.attackTargetSprites = MapLayout.loadIndexedSpritesByName("attacktargets", -28106, "basic", this.basicArchive);
+        MusicTrackSelectionSupport.attackTargetSprites = MapLayout.loadIndexedSpritesByName("attacktargets", -28106, "basic", this.basicArchive);
         hq.surroundTileSprites = MapLayout.loadIndexedSpritesByName("surround_tiles", -28106, "basic", this.basicArchive);
-        TileableNoiseGenerator.smokeSprites = fk.loadRgbSpritesByName("smoke", (byte) -124, this.basicArchive, "basic");
-        SetCoatConsoleCommand.kalphiteSprites = fk.loadRgbSpritesByName("kalphites", (byte) -124, this.basicArchive, "basic");
+        TileableNoiseGenerator.smokeSprites = DropdownSelectorPainter.loadRgbSpritesByName("smoke", (byte) -124, this.basicArchive, "basic");
+        SetCoatConsoleCommand.kalphiteSprites = DropdownSelectorPainter.loadRgbSpritesByName("kalphites", (byte) -124, this.basicArchive, "basic");
         for (spriteIndex = obfuscationGuard; SetCoatConsoleCommand.kalphiteSprites.length > spriteIndex; spriteIndex++) {
           SetCoatConsoleCommand.kalphiteSprites[spriteIndex].normalizeCanvas();
         }
         ConsoleTokenCursor.boneSprites = MapLayout.loadIndexedSpritesByName("bones", obfuscationGuard - 28106, "basic", this.basicArchive);
-        NetworkGameShell.boneShadowSprites = fk.loadRgbSpritesByName("boneshadows", (byte) -124, this.basicArchive, "basic");
+        NetworkGameShell.boneShadowSprites = DropdownSelectorPainter.loadRgbSpritesByName("boneshadows", (byte) -124, this.basicArchive, "basic");
         TeamRoster.playerRingSprite = DiskCacheRequest.loadRgbSpriteByName("player_ring", "basic", this.basicArchive, false);
-        ModalDialog.groundShadowSprite = fk.loadRgbSpritesByName("shadows", (byte) -128, this.basicArchive, "basic")[0];
+        ModalDialog.groundShadowSprite = DropdownSelectorPainter.loadRgbSpritesByName("shadows", (byte) -128, this.basicArchive, "basic")[0];
     }
 
     BattleGraphicsAssets(ResourceArchive basicArchive) {

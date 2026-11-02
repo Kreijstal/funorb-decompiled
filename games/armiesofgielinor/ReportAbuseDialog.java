@@ -100,71 +100,71 @@ final class ReportAbuseDialog extends ClientUiComponent {
               var19 = y + var8 * height / (var9 + var8);
               var18 = y + var8 * height / (var9 + var8);
             }
-            SoftwareRaster.b(pd.field_g);
+            SoftwareRaster.saveClip(PasswordLengthSupport.field_g);
             if (null != sprites[0]) {
-              SoftwareRaster.b(x, y, var16, var18);
+              SoftwareRaster.intersectClip(x, y, var16, var18);
               sprites[0].drawTransparent(x, y);
-              SoftwareRaster.a(pd.field_g);
+              SoftwareRaster.restoreClip(PasswordLengthSupport.field_g);
             }
             if (sprites[2] != null) {
-              SoftwareRaster.b(var17, y, var10, var18);
+              SoftwareRaster.intersectClip(var17, y, var10, var18);
               sprites[2].drawTransparent(var13, y);
-              SoftwareRaster.a(pd.field_g);
+              SoftwareRaster.restoreClip(PasswordLengthSupport.field_g);
             }
             if (sprites[6] != null) {
-              SoftwareRaster.b(x, var19, var16, var11);
+              SoftwareRaster.intersectClip(x, var19, var16, var11);
               sprites[6].drawTransparent(x, var15);
-              SoftwareRaster.a(pd.field_g);
+              SoftwareRaster.restoreClip(PasswordLengthSupport.field_g);
             }
             if (null != sprites[8]) {
-              SoftwareRaster.b(var17, var19, var10, var11);
+              SoftwareRaster.intersectClip(var17, var19, var10, var11);
               sprites[8].drawTransparent(var13, var15);
-              SoftwareRaster.a(pd.field_g);
+              SoftwareRaster.restoreClip(PasswordLengthSupport.field_g);
             }
             if (sprites[1] != null &&
               sprites[1].canvasWidth != 0) {
-              SoftwareRaster.b(var16, y, var17, var18);
+              SoftwareRaster.intersectClip(var16, y, var17, var18);
               for (var20 = var12; var20 < var13; var20 = var20 + sprites[1].canvasWidth) {
                 sprites[1].drawTransparent(var20, y);
               }
-              SoftwareRaster.a(pd.field_g);
+              SoftwareRaster.restoreClip(PasswordLengthSupport.field_g);
             }
             if (null != sprites[7] &&
               0 != sprites[7].canvasWidth) {
-              SoftwareRaster.b(var16, var19, var17, var11);
+              SoftwareRaster.intersectClip(var16, var19, var17, var11);
               for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + sprites[7].canvasWidth) {
                 sprites[7].drawTransparent(var20Lifetime1, var15);
               }
-              SoftwareRaster.a(pd.field_g);
+              SoftwareRaster.restoreClip(PasswordLengthSupport.field_g);
             }
             if (null != sprites[3] &&
               0 != sprites[3].canvasHeight) {
-              SoftwareRaster.b(x, var18, var16, var19);
+              SoftwareRaster.intersectClip(x, var18, var16, var19);
               for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + sprites[3].canvasHeight) {
                 sprites[3].drawTransparent(x, var20Lifetime2);
               }
-              SoftwareRaster.a(pd.field_g);
+              SoftwareRaster.restoreClip(PasswordLengthSupport.field_g);
             }
             if (null != sprites[5] &&
               sprites[5].canvasHeight != 0) {
-              SoftwareRaster.b(var17, var18, var10, var19);
+              SoftwareRaster.intersectClip(var17, var18, var10, var19);
               for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + sprites[5].canvasHeight) {
                 sprites[5].drawTransparent(var13, var20Lifetime3);
               }
-              SoftwareRaster.a(pd.field_g);
+              SoftwareRaster.restoreClip(PasswordLengthSupport.field_g);
             }
             if (null != sprites[4] &&
               sprites[4].canvasWidth != 0) {
               if (sprites[4].canvasHeight == 0) {
                 return;
               }
-              SoftwareRaster.b(var16, var18, var17, var19);
+              SoftwareRaster.intersectClip(var16, var18, var17, var19);
               for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + sprites[4].canvasHeight) {
                 for (var21 = var12; var21 < var13; var21 = var21 + sprites[4].canvasWidth) {
                   sprites[4].drawTransparent(var21, var20Lifetime4);
                 }
               }
-              SoftwareRaster.a(pd.field_g);
+              SoftwareRaster.restoreClip(PasswordLengthSupport.field_g);
             }
             return;
           }
@@ -241,7 +241,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
         if (this.pendingResult != -2) {
           return false;
         }
-        if (rs.keyCode == 13) {
+        if (PowerOfTwoSupport.keyCode == 13) {
           this.pendingResult = -1;
         }
         if (obfuscationGuard != 18585) {
@@ -340,7 +340,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
         var2[2] = 16777215;
         var2[0] = 1;
         var2[1] = param0;
-        TurnEffectEvent.field_z = new UnitModelViewer(ChannelBaseVolumeConsoleCommand.field_J, IsaacRandom.field_k, rs.field_n, var2, 0, 0);
+        TurnEffectEvent.field_z = new UnitModelViewer(ChannelBaseVolumeConsoleCommand.field_J, IsaacRandom.field_k, PowerOfTwoSupport.field_n, var2, 0, 0);
     }
 
     final boolean isMuteSelected(int obfuscationGuard) {
@@ -508,7 +508,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = titleStyle.font.textWidth(op.field_d);
+            var17Lifetime3 = titleStyle.font.textWidth(FriendRequestSupport.field_d);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -547,7 +547,7 @@ final class ReportAbuseDialog extends ClientUiComponent {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(titleStyle, var18Lifetime5, var28[2], var16Lifetime2, op.field_d, 24);
+            var18Lifetime5 = this.a(titleStyle, var18Lifetime5, var28[2], var16Lifetime2, FriendRequestSupport.field_d, 24);
             var18Lifetime5 = this.a(var16Lifetime2, 2, var28[2], this.offenceButtons[13], var18Lifetime5);
             var18Lifetime5 = this.a(var16Lifetime2, 2, var28[2], this.offenceButtons[21], var18Lifetime5);
             var18Lifetime5 = this.a(var16Lifetime2, 2, var28[2], this.offenceButtons[11], var18Lifetime5);
@@ -584,11 +584,11 @@ final class ReportAbuseDialog extends ClientUiComponent {
             var28[2].setBounds(var17Lifetime5, -20500, var16Lifetime2, var21, 26 + (2 * var16Lifetime2 + 13));
             var22 = var21;
             this.content.setBounds(10 + var17Lifetime5 + var22, -20500, var19 + 13 + 13, 24, 0);
-            this.content.skinSprites = tq.a(11579568, false, this.content.height, 2105376, 3, 8421504);
+            this.content.skinSprites = NineSliceSpriteSupport.buildSolidFrameSprites(11579568, false, this.content.height, 2105376, 3, 8421504);
             var23 = var19 + 26;
             var24 = 10 + (var17Lifetime5 + (var22 + 24));
             var25 = ArchiveLoadSequence.a(anchorX, anchorWidth, var23, -1);
-            var26 = pd.a(var24, 0, anchorY, anchorHeight);
+            var26 = PasswordLengthSupport.a(var24, 0, anchorY, anchorHeight);
             this.setBounds(var24, -20500, var23, var26, var25);
             return;
           }
@@ -602,11 +602,11 @@ final class ReportAbuseDialog extends ClientUiComponent {
           this.instructions.setBounds(jn.field_d * var17Lifetime1, -20500, var15_int, var16Lifetime1, 13);
           var16Lifetime1 = var16Lifetime1 + jn.field_d * var17Lifetime1;
           this.content.setBounds(var16Lifetime1 + 10, -20500, 13 + (var15_int + 13), 24, 0);
-          this.content.skinSprites = tq.a(11579568, false, this.content.height, 2105376, 3, 8421504);
+          this.content.skinSprites = NineSliceSpriteSupport.buildSolidFrameSprites(11579568, false, this.content.height, 2105376, 3, 8421504);
           var18Lifetime1 = 13 + var15_int + 13;
           var19Lifetime1 = var16Lifetime1 + 34;
           var20Lifetime1 = ArchiveLoadSequence.a(anchorX, anchorWidth, var18Lifetime1, -1);
-          var21Lifetime1 = pd.a(var19Lifetime1, 0, anchorY, anchorHeight);
+          var21Lifetime1 = PasswordLengthSupport.a(var19Lifetime1, 0, anchorY, anchorHeight);
           this.setBounds(var19Lifetime1, -20500, var18Lifetime1, var21Lifetime1, var20Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

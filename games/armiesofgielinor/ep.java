@@ -26,7 +26,7 @@ final class ep {
         if (param0 > -22) {
           return 69;
         }
-        return (-mj.field_b + so.field_b.height >> 1) + param1;
+        return (-AudioShutdownSupport.field_b + FixedSquareRootSupport.field_b.height >> 1) + param1;
     }
 
     private final RgbSprite b(int param0, int param1) {
@@ -136,7 +136,7 @@ final class ep {
           discarded$0 = this.a(53, -105);
         }
         if (this.field_j != 3) {
-          SoftwareRaster.b();
+          SoftwareRaster.clearPixels();
           var12 = new String[10];
           var13 = var12;
           var3_int = NineSliceFrame.field_e.wrapLines(TextLineLayout.field_b, new int[]{1000}, var13);
@@ -149,14 +149,14 @@ final class ep {
             if (this.field_j == 2) {
               var4Lifetime1 = 256 - var4Lifetime1;
             }
-            SoftwareRaster.b(this.a(0, param0 ^ 4336), this.a((byte) -56, 0), so.field_b.width, so.field_b.height, 65793, var4Lifetime1);
+            SoftwareRaster.fillRectangleBlended(this.a(0, param0 ^ 4336), this.a((byte) -56, 0), FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height, 65793, var4Lifetime1);
           }
         } else {
-          if (ck.field_c == null) {
-            ck.field_c = new RgbSprite[16];
+          if (StructureTerrainSupport.field_c == null) {
+            StructureTerrainSupport.field_c = new RgbSprite[16];
             try {
               for (var2 = 0; var2 < 16; var2++) {
-                ck.field_c[var2] = this.b(GrowthEvent.bitwiseXor(param0, -383), var2);
+                StructureTerrainSupport.field_c[var2] = this.b(GrowthEvent.bitwiseXor(param0, -383), var2);
               }
             } catch (java.lang.OutOfMemoryError decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -169,7 +169,7 @@ final class ep {
           if (var2 > 0) {
             var3 = (double)this.a(-320, 4592);
             this.a(var5, (byte) -79);
-            SoftwareRaster.b(0, 0, so.field_b.width, so.field_b.height, 65793, var2);
+            SoftwareRaster.fillRectangleBlended(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height, 65793, var2);
           } else {
             this.a(var5, (byte) -79);
           }
@@ -195,15 +195,15 @@ final class ep {
               var7 = (int)Math.pow(1.1, (double)var7);
               stackIn_43_0 = 0;
               stackIn_43_1 = 0;
-              stackIn_43_2 = so.field_b.width;
-              stackIn_43_3 = so.field_b.height;
+              stackIn_43_2 = FixedSquareRootSupport.field_b.width;
+              stackIn_43_3 = FixedSquareRootSupport.field_b.height;
               stackIn_43_4 = 65793;
               if (var7 <= 256) {
                 stackIn_44_5 = var7;
               } else {
                 stackIn_44_5 = 256;
               }
-              SoftwareRaster.b(stackIn_43_0, stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_43_4, stackIn_44_5);
+              SoftwareRaster.fillRectangleBlended(stackIn_43_0, stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_43_4, stackIn_44_5);
             }
             var8Lifetime1 = this.field_q << 2;
             stackIn_48_0 = (var8Lifetime1 <= 256) ? var8Lifetime1 : 256;
@@ -213,23 +213,23 @@ final class ep {
               CipherPacketBuffer.a(false, 0, 1, jt.field_a);
             }
           } else {
-            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1105, param0 + 4336))), this.a((byte) -73, 119) << 4, 480, (SocketResourceClient.b(var6Lifetime1, 100) >> 13) + 32, GradientUiRenderer.particlePalettes[1]);
-            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1068, 4592))), this.a((byte) -42, 219) << 4, 480, 32 + (SocketResourceClient.b(800 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[2]);
-            SoftwareRaster.a((int)(16.0 * ((double)this.a(1105, 4592) - var3)), this.a((byte) -39, 286) << 4, 480, (SocketResourceClient.b(var6Lifetime1 + 1600, param0 - 156) >> 13) + 32, GradientUiRenderer.particlePalettes[3]);
-            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1443, 4592))), this.a((byte) -89, 116) << 4, 480, 32 + (SocketResourceClient.b(2400 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[4]);
-            SoftwareRaster.a((int)((-var3 + (double)this.a(1478, 4592)) * 16.0), this.a((byte) -62, 207) << 4, 480, 32 + (SocketResourceClient.b(var6Lifetime1 + 3200, param0 ^ 356) >> 13), GradientUiRenderer.particlePalettes[5]);
-            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(1446, 4592))), this.a((byte) -103, 295) << 4, 480, 32 + (SocketResourceClient.b(4000 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[6]);
-            SoftwareRaster.b((int)(this.a(1890.0 - this.field_k, 16) * 16.0), this.a((byte) -78, 160) << 4, 1600, 32 + (SocketResourceClient.b(150 + (var6Lifetime1 >> 1), 100) >> 14), GradientUiRenderer.particlePalettes[0]);
-            SoftwareRaster.a((int)(16.0 * (-var3 + (double)this.a(2614, 4592))), this.a((byte) -74, 219) << 4, 80, (SocketResourceClient.b(var6Lifetime1, 100) >> 13) + 32 >> 2, GradientUiRenderer.particlePalettes[1]);
-            var7 = 256 + (SocketResourceClient.b(var6Lifetime1 / 4, 100) - 65536);
+            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.a(1105, param0 + 4336))), this.a((byte) -73, 119) << 4, 480, (SocketResourceClient.sine8192(var6Lifetime1, 100) >> 13) + 32, GradientUiRenderer.particlePalettes[1]);
+            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.a(1068, 4592))), this.a((byte) -42, 219) << 4, 480, 32 + (SocketResourceClient.sine8192(800 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[2]);
+            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * ((double)this.a(1105, 4592) - var3)), this.a((byte) -39, 286) << 4, 480, (SocketResourceClient.sine8192(var6Lifetime1 + 1600, param0 - 156) >> 13) + 32, GradientUiRenderer.particlePalettes[3]);
+            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.a(1443, 4592))), this.a((byte) -89, 116) << 4, 480, 32 + (SocketResourceClient.sine8192(2400 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[4]);
+            SoftwareRaster.fillRadialPaletteCircle((int)((-var3 + (double)this.a(1478, 4592)) * 16.0), this.a((byte) -62, 207) << 4, 480, 32 + (SocketResourceClient.sine8192(var6Lifetime1 + 3200, param0 ^ 356) >> 13), GradientUiRenderer.particlePalettes[5]);
+            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.a(1446, 4592))), this.a((byte) -103, 295) << 4, 480, 32 + (SocketResourceClient.sine8192(4000 + var6Lifetime1, 100) >> 13), GradientUiRenderer.particlePalettes[6]);
+            SoftwareRaster.b((int)(this.a(1890.0 - this.field_k, 16) * 16.0), this.a((byte) -78, 160) << 4, 1600, 32 + (SocketResourceClient.sine8192(150 + (var6Lifetime1 >> 1), 100) >> 14), GradientUiRenderer.particlePalettes[0]);
+            SoftwareRaster.fillRadialPaletteCircle((int)(16.0 * (-var3 + (double)this.a(2614, 4592))), this.a((byte) -74, 219) << 4, 80, (SocketResourceClient.sine8192(var6Lifetime1, 100) >> 13) + 32 >> 2, GradientUiRenderer.particlePalettes[1]);
+            var7 = 256 + (SocketResourceClient.sine8192(var6Lifetime1 / 4, 100) - 65536);
             if (var7 > 0) {
               MidiPcmStream.field_H.drawWithOpacity((int)(-var3 + (double)this.a(2568, 4592)), this.a((byte) -29, 141), var7);
             }
-            var7 = 256 + (SocketResourceClient.b(var6Lifetime1 / 2, 100) - 65536);
+            var7 = 256 + (SocketResourceClient.sine8192(var6Lifetime1 / 2, 100) - 65536);
             if (var7 > 0) {
               MidiPcmStream.field_H.drawWithOpacity((int)((double)this.a(2516, 4592) - var3), this.a((byte) -119, 206), var7);
             }
-            var7 = -65536 + SocketResourceClient.b(var6Lifetime1 / 3, 100) + 256;
+            var7 = -65536 + SocketResourceClient.sine8192(var6Lifetime1 / 3, 100) + 256;
             if (var7 > 0) {
               MidiPcmStream.field_H.drawWithOpacity((int)((double)this.a(2665, param0 + 4336) - var3), this.a((byte) -53, 168), var7);
             }
@@ -251,12 +251,12 @@ final class ep {
           if (param1 > -20) {
             field_o = -46;
           }
-          if (bk.ignoredAccountsByName == null) {
-            bk.ignoredAccountsByName = new DualNodeHashTable(64);
+          if (MusicTrackSelectionSupport.ignoredAccountsByName == null) {
+            MusicTrackSelectionSupport.ignoredAccountsByName = new DualNodeHashTable(64);
           }
           FixInvisibleUnitsConsoleCommand.ignoreEntries = param0.children;
           wh.friendEntries = param2.children;
-          da.clearSocialLists(-123);
+          LocalAccountSupport.clearSocialLists(-123);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ep.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -287,10 +287,10 @@ final class ep {
           var7 = var4;
           var8 = (var7 >> 4) + this.a(0, 4592);
           if (SoftwareRaster.width > var8) {
-            if (null == ck.field_c[var6]) {
-              ck.field_c[var6] = this.b(-99, var6);
+            if (null == StructureTerrainSupport.field_c[var6]) {
+              StructureTerrainSupport.field_c[var6] = this.b(-99, var6);
             }
-            var9 = ck.field_c[var6].pixelWidth;
+            var9 = StructureTerrainSupport.field_c[var6].pixelWidth;
             var4 = var4 + (var9 << 4);
             var10 = var8 + var9;
             if (var10 >= 0) {
@@ -310,18 +310,18 @@ final class ep {
               if (0 > var12) {
                 var12 = 0;
               }
-              GradientUiRenderer.resampleSpriteWithCarry(ck.field_c[var6], var11, 0, var8, var12, var9, var17);
+              GradientUiRenderer.resampleSpriteWithCarry(StructureTerrainSupport.field_c[var6], var11, 0, var8, var12, var9, var17);
             } else {
               us.field_a = 1 + var6;
               NameSuggestionList.field_F = NameSuggestionList.field_F + (var9 << 4);
-              ck.field_c[var6] = null;
+              StructureTerrainSupport.field_c[var6] = null;
             }
             continue;
           }
           break;
         }
         for (var6Lifetime1 = 0; var6Lifetime1 < 64; var6Lifetime1++) {
-          SoftwareRaster.d(var6Lifetime1 + var5, this.a((byte) -45, 0), SoftwareRaster.height, 0, 255 - (var6Lifetime1 << 2));
+          SoftwareRaster.drawVerticalLineBlended(var6Lifetime1 + var5, this.a((byte) -45, 0), SoftwareRaster.height, 0, 255 - (var6Lifetime1 << 2));
         }
         return;
     }
@@ -349,7 +349,7 @@ final class ep {
           }
           try {
             if (LabeledWidgetContainer.field_N == 0) {
-              AccountRegistrationForm.field_R = vq.field_c.openSocketAsync(LeaderEscortCondition.field_i, (byte) 114, db.field_c);
+              AccountRegistrationForm.field_R = vq.field_c.openSocketAsync(LeaderEscortCondition.field_i, (byte) 114, IgnoreListLookupSupport.field_c);
               LabeledWidgetContainer.field_N = LabeledWidgetContainer.field_N + 1;
             }
             if (LabeledWidgetContainer.field_N == 1) {
@@ -362,23 +362,23 @@ final class ep {
               }
             }
             if (LabeledWidgetContainer.field_N == 2) {
-              jj.field_g = new BufferedSocket((java.net.Socket) (AccountRegistrationForm.field_R.result), vq.field_c);
+              FriendLookupSupport.field_g = new BufferedSocket((java.net.Socket) (AccountRegistrationForm.field_R.result), vq.field_c);
               var2 = new PacketBuffer(13);
-              it.a(hq.field_e, false, MoveAttackRequest.field_x, var2, ek.field_e);
+              ChatMessageWriteSupport.a(hq.field_e, false, MoveAttackRequest.field_x, var2, ek.field_e);
               var2.writeByte(1, 15);
               var2.writeInt((byte) -124, vq.field_d);
-              jj.field_g.write(var2.payload, (byte) 20, 0, 13);
+              FriendLookupSupport.field_g.write(var2.payload, (byte) 20, 0, 13);
               LabeledWidgetContainer.field_N = LabeledWidgetContainer.field_N + 1;
-              UnitInfoPopup.field_s = 30000L + vi.monotonicMillis(103);
+              UnitInfoPopup.field_s = 30000L + MonotonicClockSupport.monotonicMillis(103);
             }
             if (3 == LabeledWidgetContainer.field_N) {
-              if (jj.field_g.available((byte) 43) <= 0) {
-                if (vi.monotonicMillis(97) > UnitInfoPopup.field_s) {
+              if (FriendLookupSupport.field_g.available((byte) 43) <= 0) {
+                if (MonotonicClockSupport.monotonicMillis(97) > UnitInfoPopup.field_s) {
                   stackIn_30_0 = OwnerChangeEvent.a(-2, (byte) 101);
                   return stackIn_30_0;
                 }
               } else {
-                var1_int = jj.field_g.readByte(70);
+                var1_int = FriendLookupSupport.field_g.readByte(70);
                 if (var1_int != 0) {
                   stackIn_25_0 = OwnerChangeEvent.a(var1_int, (byte) 101);
                   return stackIn_25_0;
@@ -387,10 +387,10 @@ final class ep {
               }
             }
             if (4 == LabeledWidgetContainer.field_N) {
-              ScrollWidgetContainer.field_T.attachTransport(jj.field_g, TextLineLayout.field_m, -68);
+              ScrollWidgetContainer.field_T.attachTransport(FriendLookupSupport.field_g, TextLineLayout.field_m, -68);
               AccountRegistrationForm.field_R = null;
               LabeledWidgetContainer.field_N = 0;
-              jj.field_g = null;
+              FriendLookupSupport.field_g = null;
               stackIn_34_0 = 0;
               return stackIn_34_0;
             }
@@ -432,7 +432,7 @@ final class ep {
         if (param1 != 4592) {
           this.field_m = -45;
         }
-        return (so.field_b.width - GuestPlayConfirmationForm.field_Q >> 1) + param0;
+        return (FixedSquareRootSupport.field_b.width - GuestPlayConfirmationForm.field_Q >> 1) + param0;
     }
 
     public static void a(byte param0) {
@@ -471,7 +471,7 @@ final class ep {
         if (param1 != 16) {
           discarded$0 = this.b(-62, 105);
         }
-        return (double)(-GuestPlayConfirmationForm.field_Q + so.field_b.width >> 1) + param0;
+        return (double)(-GuestPlayConfirmationForm.field_Q + FixedSquareRootSupport.field_b.width >> 1) + param0;
     }
 
     static {

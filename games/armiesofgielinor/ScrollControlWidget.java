@@ -201,7 +201,7 @@ final class ScrollControlWidget extends ArrayWidgetContainer implements WidgetAc
             }
             if (keyCode == 102) {
               if (this.verticalEnabled &&
-                br.heldKeys[82]) {
+                CampaignLookupSupport.heldKeys[82]) {
                 this.adjustVerticalPosition(0, obfuscationGuard ^ -12215);
                 return true;
               }
@@ -212,7 +212,7 @@ final class ScrollControlWidget extends ArrayWidgetContainer implements WidgetAc
             } else {
               if (keyCode == 103) {
                 if (this.verticalEnabled &&
-                  br.heldKeys[82]) {
+                  CampaignLookupSupport.heldKeys[82]) {
                   this.adjustVerticalPosition(65536, obfuscationGuard + 12215);
                   return true;
                 }

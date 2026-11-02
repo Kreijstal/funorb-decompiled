@@ -56,7 +56,7 @@ abstract class RasterImageSurface {
             !text.equals("false")) {
             if (text.charAt(0) != 45 &&
               !Character.isDigit(text.charAt(0))) {
-              kind = rn.consoleCallKind;
+              kind = ProceduralMapSupport.consoleCallKind;
             } else {
               kind = PrintVictoryConditionsConsoleCommand.consoleNumberKind;
             }

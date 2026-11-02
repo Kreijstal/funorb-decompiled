@@ -156,9 +156,9 @@ final class SpriteSheetDecoder extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_n = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           SpriteSheetDecoder.calculateMissionScore(94, 33, -110, (byte) 28, -37);
         }
     }

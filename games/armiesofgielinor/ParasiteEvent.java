@@ -45,7 +45,7 @@ final class ParasiteEvent extends GameEvent {
           var4 = AnimationPlayer.decodedSpriteIndices[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
-            var5[var6] = MovementPresentation.decodedSpritePalette[rn.bitwiseAnd(255, (int) var4[var6])];
+            var5[var6] = MovementPresentation.decodedSpritePalette[ProceduralMapSupport.bitwiseAnd(255, (int) var4[var6])];
           }
           var1[var2] = new RgbSprite(GzipDecoder.decodedSpriteCanvasWidth, BirthDateChatEnableForm.decodedSpriteCanvasHeight, j.decodedSpriteOffsetXs[var2], CampaignMenuButton.decodedSpriteOffsetYs[var2], ClippedWidgetContainer.decodedSpriteWidths[var2], c.decodedSpriteHeights[var2], var5);
         }
@@ -116,7 +116,7 @@ final class ParasiteEvent extends GameEvent {
             if (var7 != null &&
               var7.aiPlanner != null &&
               var5 != null) {
-              var7.aiPlanner.planner.a(80, var5);
+              var7.aiPlanner.planner.activateUnitPlanner(80, var5);
             }
           }
           if (var7 != null) {

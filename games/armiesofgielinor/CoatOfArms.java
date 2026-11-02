@@ -95,16 +95,16 @@ final class CoatOfArms {
         int var4_intLifetime1;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          ck.animationSequencesByGroup = new AnimationSequence[DialWidgetPainter.field_f.length][];
+          StructureTerrainSupport.animationSequencesByGroup = new AnimationSequence[DialWidgetPainter.field_f.length][];
           for (var4_int = param3; DialWidgetPainter.field_f.length > var4_int; var4_int++) {
             var10 = DialWidgetPainter.field_f[var4_int];
             var5 = var10;
             var6_int = SetCoatConsoleCommand.field_I[var4_int].length;
             array$0 = new AnimationSequence[var6_int];
-            ck.animationSequencesByGroup[var4_int] = array$0;
+            StructureTerrainSupport.animationSequencesByGroup[var4_int] = array$0;
             for (var7 = 0; var6_int > var7; var7++) {
               var8 = SetCoatConsoleCommand.field_I[var4_int][var7];
-              ck.animationSequencesByGroup[var4_int][var7] = new AnimationSequence(param0, var10, var8);
+              StructureTerrainSupport.animationSequencesByGroup[var4_int][var7] = new AnimationSequence(param0, var10, var8);
             }
           }
           if (!LabeledWidgetContainer.field_L) {
@@ -114,17 +114,17 @@ final class CoatOfArms {
               var11 = ArmiesOfGielinor.field_N[var12];
               var5Lifetime1 = var11;
               if (var5Lifetime1 == null) {
-                pv.field_a[var12] = new AnimationSequence[]{};
+                AccountNameFoldingSupport.field_a[var12] = new AnimationSequence[]{};
               } else {
-                pv.field_a[var12] = new AnimationSequence[1];
+                AccountNameFoldingSupport.field_a[var12] = new AnimationSequence[1];
                 var6 = CipherPacketBuffer.field_u[var12];
-                pv.field_a[var12][0] = new AnimationSequence(param0, var11, var6);
+                AccountNameFoldingSupport.field_a[var12][0] = new AnimationSequence(param0, var11, var6);
               }
               var12++;
             }
           }
-          SingleChildWidgetContainer.a(param1, ck.animationSequencesByGroup, param2, (byte) 126);
-          SingleChildWidgetContainer.a(param1, pv.field_a, param2, (byte) 126);
+          SingleChildWidgetContainer.a(param1, StructureTerrainSupport.animationSequencesByGroup, param2, (byte) 126);
+          SingleChildWidgetContainer.a(param1, AccountNameFoldingSupport.field_a, param2, (byte) 126);
           MovementPresentation.c(param3 ^ -11757);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -177,8 +177,8 @@ final class CoatOfArms {
           }
           NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
           NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
-          DropTargetWidgetContainer.field_J.b();
-          SoftwareRaster.b();
+          DropTargetWidgetContainer.field_J.bindAsRasterTarget();
+          SoftwareRaster.clearPixels();
           if (!param2) {
             var4_int = this.parts[3];
             this.parts[3] = -1;
@@ -186,7 +186,7 @@ final class CoatOfArms {
             this.parts[3] = var4_int;
           }
           MatchSetupPanel.a(-1, -1, this.parts, -1, false, this.colourIndices, -1, false, 0, false, 0, param0);
-          NumericDateInputWidget.field_P.b();
+          NumericDateInputWidget.field_P.bindAsRasterTarget();
           stackIn_5_0 = ArchiveProvider.a((byte) 107, DropTargetWidgetContainer.field_J);
           return (RgbSprite) ((Object) stackIn_5_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -228,7 +228,7 @@ final class CoatOfArms {
           NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
           if (param8) {
             if (null == ConsolePanel.field_k ||
-              param1 != t.field_f) {
+              param1 != ReloadPageSupport.field_f) {
               ConsolePanel.field_k = RegionAnchor.field_m[0].copySprite();
               var21 = ConsolePanel.field_k.pixels;
               var20 = var21;
@@ -244,8 +244,8 @@ final class CoatOfArms {
             }
             ConsolePanel.field_k.d(-20 + param4, param2 - 15, 92, 92, 256);
           }
-          DropTargetWidgetContainer.field_J.b();
-          SoftwareRaster.b();
+          DropTargetWidgetContainer.field_J.bindAsRasterTarget();
+          SoftwareRaster.clearPixels();
           if (param6) {
             cc.a(0, -1, this.parts, -1, -1, false, -1, param5, this.colourIndices, 0);
           } else {
@@ -266,7 +266,7 @@ final class CoatOfArms {
           } else {
             RegionAnchor.field_m[1].drawTransparent(0, 0);
           }
-          NumericDateInputWidget.field_P.b();
+          NumericDateInputWidget.field_P.bindAsRasterTarget();
           DropTargetWidgetContainer.field_J.drawQuarterSize(param4, param2);
           if (param9 == -19744) {
             return;
@@ -301,8 +301,8 @@ final class CoatOfArms {
           NumericDateInputWidget.field_P.pixelHeight = SoftwareRaster.height;
           NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
           NumericDateInputWidget.field_P.pixelWidth = SoftwareRaster.width;
-          DropTargetWidgetContainer.field_J.b();
-          SoftwareRaster.b();
+          DropTargetWidgetContainer.field_J.bindAsRasterTarget();
+          SoftwareRaster.clearPixels();
           if (!param3) {
             var10_int = this.parts[3];
             this.parts[3] = -1;
@@ -326,10 +326,10 @@ final class CoatOfArms {
           if (param2 != 68) {
             field_d = (byte[]) null;
           }
-          ko.field_g.b();
-          SoftwareRaster.b();
+          ko.field_g.bindAsRasterTarget();
+          SoftwareRaster.clearPixels();
           DropTargetWidgetContainer.field_J.drawQuarterSize(0, 0);
-          NumericDateInputWidget.field_P.b();
+          NumericDateInputWidget.field_P.bindAsRasterTarget();
           ko.field_g.drawHalfSize(param8, param6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -371,8 +371,8 @@ final class CoatOfArms {
           if (param6) {
             RegionAnchor.field_m[0].d(-40 + param0, -30 + param4, 184, 184, 256);
           }
-          DropTargetWidgetContainer.field_J.b();
-          SoftwareRaster.b();
+          DropTargetWidgetContainer.field_J.bindAsRasterTarget();
+          SoftwareRaster.clearPixels();
           cc.a(0, -1, this.parts, -1, -1, false, -1, param1, this.colourIndices, 0);
           if (!param3) {
             if (!param2) {
@@ -386,7 +386,7 @@ final class CoatOfArms {
           } else {
             RegionAnchor.field_m[1].drawTransparent(0, 0);
           }
-          NumericDateInputWidget.field_P.b();
+          NumericDateInputWidget.field_P.bindAsRasterTarget();
           DropTargetWidgetContainer.field_J.drawHalfSize(param0, param4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

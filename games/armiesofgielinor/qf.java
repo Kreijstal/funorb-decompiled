@@ -27,7 +27,7 @@ final class qf {
         vq.field_c = param8;
         ek.field_e = param4;
         hq.field_e = param0;
-        db.field_c = param1;
+        IgnoreListLookupSupport.field_c = param1;
         if (param3 < 9) {
           return;
         }
@@ -36,7 +36,7 @@ final class qf {
           LeaderEscortCondition.field_i = param7;
           ScrollWidgetContainer.field_T = (ResourceProtocolClient) ((Object) new SocketResourceClient());
           MapRepository.field_h = new DiskCacheWorker(param8);
-          oi.field_c = new ArchiveMasterIndex(ScrollWidgetContainer.field_T, MapRepository.field_h);
+          CheckMarkWidgetPainter.field_c = new ArchiveMasterIndex(ScrollWidgetContainer.field_T, MapRepository.field_h);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qf.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
@@ -72,7 +72,7 @@ final class qf {
           }
           et.field_b = param1;
           MouseWheelSource.field_c = param2;
-          cp.field_a = param4;
+          EventPresenterFactory.field_a = param4;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qf.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

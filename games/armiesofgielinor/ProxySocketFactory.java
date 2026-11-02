@@ -13,7 +13,7 @@ final class ProxySocketFactory extends SocketFactory {
     final static void b(byte param0) {
         UiSelectionState.f(0);
         if (param0 != 16) {
-          ProxySocketFactory.d(-107);
+          ProxySocketFactory.releaseStatics(-107);
         }
     }
 
@@ -120,10 +120,10 @@ final class ProxySocketFactory extends SocketFactory {
         throw ProxySocketFactory.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
     }
 
-    public static void d(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_k = (int[][]) null;
         field_i = null;
-        if (param0 < 32) {
+        if (obfuscationGuard < 32) {
           ProxySocketFactory.b((byte) -90);
         }
         field_j = null;

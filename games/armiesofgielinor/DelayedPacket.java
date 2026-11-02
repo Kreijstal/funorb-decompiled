@@ -14,7 +14,7 @@ final class DelayedPacket extends IntrusiveNode {
 
     final static void e(int param0) {
         if (BattleTutorial.quickChatMenuVisible) {
-          e.closeQuickChatMenu((byte) -93);
+          QuickChatMenuCloseSupport.closeQuickChatMenu((byte) -93);
           if (param0 == -3) {
             return;
           }
@@ -274,10 +274,10 @@ final class DelayedPacket extends IntrusiveNode {
         if (param0 != 2) {
           return;
         }
-        pd.field_e = 2147483647;
-        sq.field_k = 2147483647;
+        PasswordLengthSupport.field_e = 2147483647;
+        ToastMessage.field_k = 2147483647;
         LoginForm.field_T = -2147483648;
-        se.field_e = -2147483648;
+        IgnoreRequestSupport.field_e = -2147483648;
     }
 
     public static void releaseStatics(int obfuscationGuard) {

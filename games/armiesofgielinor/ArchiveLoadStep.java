@@ -13,8 +13,8 @@ final class ArchiveLoadStep {
     static String field_i;
     String field_e;
 
-    public static void a(byte param0) {
-        if (param0 == 120) {
+    public static void releaseStatics(byte obfuscationGuard) {
+        if (obfuscationGuard == 120) {
           field_g = null;
           field_f = null;
           field_h = null;
@@ -39,10 +39,10 @@ final class ArchiveLoadStep {
         int var3;
         NodeDeque stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
-        if (null == bk.field_e) {
+        if (null == MusicTrackSelectionSupport.field_e) {
           return null;
         }
-        stackIn_5_0 = bk.field_e;
+        stackIn_5_0 = MusicTrackSelectionSupport.field_e;
         stackIn_6_1 = (param1) ? false : true;
         if (((NodeDeque) (Object) stackIn_5_0).size(stackIn_6_1) == 0) {
           return null;
@@ -50,13 +50,13 @@ final class ArchiveLoadStep {
         if (!param1) {
           return (AnimationFrameSet) null;
         }
-        var2 = (fd) (bk.field_e.first((byte) 109));
+        var2 = (fd) (MusicTrackSelectionSupport.field_e.first((byte) 109));
         while (var2 != null) {
           var3 = var2.field_k;
           if (var3 == param0) {
             return var2.field_p;
           }
-          var2 = (fd) (bk.field_e.next((byte) 123));
+          var2 = (fd) (MusicTrackSelectionSupport.field_e.next((byte) 123));
         }
         return null;
     }

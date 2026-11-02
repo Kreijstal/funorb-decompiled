@@ -206,7 +206,7 @@ final class MoveAttackRequest extends ActionRequest {
             return (PreparedAction) (stackIn_7_0);
           }
           if (var17.unitType != 51 && (!(this.spellId > -1) ||
-            uc.spellDefinitions[this.spellId][5] != 24)) {
+            SpellDefinitionTable.spellDefinitions[this.spellId][5] != 24)) {
             if (var17.unitType == 39) {
               stackIn_16_0 = this.prepareVineGrowth(var17, (byte) 32, battlefield);
               return stackIn_16_0;
@@ -224,7 +224,7 @@ final class MoveAttackRequest extends ActionRequest {
               discarded$1 = this.formatMoveRejection(new String[]{"unit at ", TutorialController.formatCoordinatePair(this.startX, 0, this.startY), "Moved when in range of cyclops"}, 0);
             }
             if (this.spellId > -1 &&
-              uc.spellDefinitions[this.spellId][5] == 18) {
+              SpellDefinitionTable.spellDefinitions[this.spellId][5] == 18) {
               var4 = var4 << 1;
             }
             if (7 == var17.statusEffectType) {
@@ -397,7 +397,7 @@ final class MoveAttackRequest extends ActionRequest {
               var6 != 4 &&
               var6 != 6) {
               if (obfuscationGuard > ~this.spellId &&
-                uc.spellDefinitions[this.spellId][5] == 24) {
+                SpellDefinitionTable.spellDefinitions[this.spellId][5] == 24) {
                 stackIn_16_0 = new TeleportAction(this.startX, this.startY, this.targetDeltaX, this.targetDeltaY, this.actingPlayer, unit, false);
                 return (PreparedAction) ((Object) stackIn_16_0);
               }
@@ -452,7 +452,7 @@ final class MoveAttackRequest extends ActionRequest {
             if (0 == pathIndex % 4) {
               packedDirections = packet.readUnsignedByte(0);
             }
-            this.pathDirections[pathIndex] = rn.bitwiseAnd(3, packedDirections);
+            this.pathDirections[pathIndex] = ProceduralMapSupport.bitwiseAnd(3, packedDirections);
             packedDirections = packedDirections >> 2;
           }
           packedTargetDelta = packet.readUnsignedShort((byte) -104);

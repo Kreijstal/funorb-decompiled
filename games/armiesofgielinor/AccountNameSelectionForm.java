@@ -118,7 +118,7 @@ final class AccountNameSelectionForm extends DequeWidgetContainer implements Nam
             return true;
           }
           state = source.getValidationState(false);
-          valid = (state == oo.validationValid);
+          valid = (state == MembershipExpansionScreen.validationValid);
           return valid;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

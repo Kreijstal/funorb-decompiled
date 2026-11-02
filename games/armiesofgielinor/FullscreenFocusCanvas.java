@@ -41,11 +41,11 @@ final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.ev
         if (obfuscationGuard != 8445) {
           FullscreenFocusCanvas.clearChatText(33);
           UpkeepEvent.chatTextBuffer.setLength(0);
-          rs.outgoingChatChannel = 0;
+          PowerOfTwoSupport.outgoingChatChannel = 0;
           return;
         }
         UpkeepEvent.chatTextBuffer.setLength(0);
-        rs.outgoingChatChannel = 0;
+        PowerOfTwoSupport.outgoingChatChannel = 0;
     }
 
     public final void focusGained(java.awt.event.FocusEvent param0) {

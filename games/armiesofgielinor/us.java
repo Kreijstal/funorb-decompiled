@@ -10,7 +10,7 @@ final class us {
         if (param0 <= 74) {
           return true;
         }
-        return oi.field_c.pollMasterIndex((byte) 14);
+        return CheckMarkWidgetPainter.field_c.pollMasterIndex((byte) 14);
     }
 
     final static boolean a(boolean param0) {

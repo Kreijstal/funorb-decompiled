@@ -119,7 +119,7 @@ final class MatchSetupPanel {
               if (param3 <= 36) {
                 return;
               }
-              var7.drawPixels(db.a(true, param2.first), MatchConditionEntry.a(param2.second, (byte) 94));
+              var7.drawPixels(IgnoreListLookupSupport.a(true, param2.first), MatchConditionEntry.a(param2.second, (byte) 94));
               var8 = 0;
               if (this.selectedPreviewIndex == var6_int) {
                 var8 = 1;
@@ -133,7 +133,7 @@ final class MatchSetupPanel {
                 var9 = this.field_F;
               }
               for (var10 = 0; this.field_L > var10; var10++) {
-                SoftwareRaster.b(db.a(true, param2.first + var10), MatchConditionEntry.a(var10 + param2.second, (byte) 94), -(var10 << 1) + (param4.first - param2.first), -param2.second + (param4.second - (var10 << 1)), var9);
+                SoftwareRaster.drawRectangleOutline(IgnoreListLookupSupport.a(true, param2.first + var10), MatchConditionEntry.a(var10 + param2.second, (byte) 94), -(var10 << 1) + (param4.first - param2.first), -param2.second + (param4.second - (var10 << 1)), var9);
               }
               return;
             }
@@ -180,7 +180,7 @@ final class MatchSetupPanel {
             if (var5 == 0) {
               return;
             }
-            GradientUiRenderer.drawHollowGradientFrame(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_Q, this.field_p);
+            GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, ConsoleValue.field_b, this.field_Q, this.field_p);
             return;
           }
         }
@@ -204,7 +204,7 @@ final class MatchSetupPanel {
             if (var5 == 0) {
               return;
             }
-            GradientUiRenderer.drawHollowGradientFrame(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_p);
+            GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_p);
             if (param0 != 33) {
               discarded$0 = this.d(true);
             }
@@ -239,7 +239,7 @@ final class MatchSetupPanel {
           var3 = this.itemEnds[itemIndex];
           if (var3 != null &&
             var3.first >= 0) {
-            return db.a(true, var3.first);
+            return IgnoreListLookupSupport.a(true, var3.first);
           }
           return 1;
         }
@@ -328,13 +328,13 @@ final class MatchSetupPanel {
         try {
           if (param5 != null &&
             param2 != null) {
-            var7_int = db.a(true, param5.first);
+            var7_int = IgnoreListLookupSupport.a(true, param5.first);
             var8 = MatchConditionEntry.a(param5.second, (byte) 94);
             var9 = -var7_int + param2.first;
             var10 = param2.second - var8;
-            SoftwareRaster.b(var7_int, var8, var9, var10, this.field_Q, this.field_p);
+            SoftwareRaster.fillRectangleBlended(var7_int, var8, var9, var10, this.field_Q, this.field_p);
             if (this.field_y) {
-              SoftwareRaster.b(var7_int, var8, var9, var10, this.field_P);
+              SoftwareRaster.drawRectangleOutline(var7_int, var8, var9, var10, this.field_P);
             }
             if (param1 != null &&
               param1.length() != 0) {
@@ -352,9 +352,9 @@ final class MatchSetupPanel {
               var15 = var16;
               var14 = var15;
               if (param3 < ~param0) {
-                GradientUiRenderer.drawCenteredGradientText(param1, db.a(true, this.field_c.first), var8Lifetime1, var16, true);
+                GradientUiRenderer.drawCenteredGradientText(param1, IgnoreListLookupSupport.a(true, this.field_c.first), var8Lifetime1, var16, true);
               } else {
-                GradientUiRenderer.drawGradientText(param1, db.a(true, param0), var8Lifetime1, var16, true);
+                GradientUiRenderer.drawGradientText(param1, IgnoreListLookupSupport.a(true, param0), var8Lifetime1, var16, true);
               }
               return;
             }
@@ -400,7 +400,7 @@ final class MatchSetupPanel {
             return 1;
           }
           if (var3.first >= 0) {
-            return db.a(true, var3.first);
+            return IgnoreListLookupSupport.a(true, var3.first);
           }
           return 1;
         }
@@ -541,7 +541,7 @@ final class MatchSetupPanel {
             if (var5 == 0) {
               return;
             }
-            GradientUiRenderer.drawHollowGradientFrame(db.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_p);
+            GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var2), MatchConditionEntry.a(var3, (byte) 94), var4, var5, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_p);
             return;
           }
         }
@@ -699,7 +699,7 @@ final class MatchSetupPanel {
                   if (param2 == 29 &&
                     0 <= this.mapSizeSetting &&
                     LoginKind.field_e.length >= this.mapSizeSetting) {
-                    param1 = param1 + LoginKind.field_e[t.field_e];
+                    param1 = param1 + LoginKind.field_e[ReloadPageSupport.field_e];
                   }
                 } else {
                   stackIn_15_0 = new StringBuilder().append(param1);
@@ -876,8 +876,8 @@ final class MatchSetupPanel {
             if (param4 != 26709) {
               this.option33Enabled = true;
             }
-            SoftwareRaster.f(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, this.field_M);
-            GradientUiRenderer.drawHollowGradientFrame(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, MusicPatch.field_m, ConsoleValue.field_b, this.field_Q, this.field_p);
+            SoftwareRaster.fillRectangle(IgnoreListLookupSupport.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, this.field_M);
+            GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, MusicPatch.field_m, ConsoleValue.field_b, this.field_Q, this.field_p);
             var10 = MatchConditionEntry.a(param0.second, (byte) 94);
             var11 = MatchConditionEntry.a(param3.second, (byte) 94);
             var7Lifetime1 = var10 + var11 >> 1;
@@ -891,7 +891,7 @@ final class MatchSetupPanel {
             var15 = stackIn_11_0;
             var14 = var15;
             var13 = var14;
-            GradientUiRenderer.drawCenteredGradientText(param1, db.a(true, this.field_c.first), var7Lifetime1, var15, true);
+            GradientUiRenderer.drawCenteredGradientText(param1, IgnoreListLookupSupport.a(true, this.field_c.first), var7Lifetime1, var15, true);
             return;
           }
           return;
@@ -946,7 +946,7 @@ final class MatchSetupPanel {
             if (!Unit.pollKeyEvent((byte) 90)) {
               return;
             }
-            if (rs.keyCode == 13) {
+            if (PowerOfTwoSupport.keyCode == 13) {
               CipherPacketBuffer.a(true, 0, 1, jt.field_a);
               if (null != VerticalScrollbar.field_Rb.combatPresentation) {
                 VerticalScrollbar.field_Rb.combatPresentation.framebuffer = null;
@@ -958,11 +958,11 @@ final class MatchSetupPanel {
               }
               VerticalScrollbar.field_Rb = null;
             }
-            if (rs.keyCode == 12) {
+            if (PowerOfTwoSupport.keyCode == 12) {
               stackIn_20_0 = !(CoatOfArms.field_e);
               CoatOfArms.field_e = stackIn_20_0;
             }
-            if (rs.keyCode != 11) {
+            if (PowerOfTwoSupport.keyCode != 11) {
               continue;
             }
             if (BufferedSocket.field_j < 2) {
@@ -970,8 +970,8 @@ final class MatchSetupPanel {
             }
             break;
           }
-          stackIn_27_0 = !(jv.field_a);
-          jv.field_a = stackIn_27_0;
+          stackIn_27_0 = !(SoundPanSupport.field_a);
+          SoundPanSupport.field_a = stackIn_27_0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1015,14 +1015,14 @@ final class MatchSetupPanel {
             if (param0) {
               var10 = TutorialController.field_e;
             }
-            GradientUiRenderer.drawGradientFrame(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, DisplacedUnitMarker.field_s, var10, this.field_Q, this.field_b, true);
-            GradientUiRenderer.drawHollowGradientFrame(db.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_A);
+            GradientUiRenderer.drawGradientFrame(IgnoreListLookupSupport.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, DisplacedUnitMarker.field_s, var10, this.field_Q, this.field_b, true);
+            GradientUiRenderer.drawHollowGradientFrame(IgnoreListLookupSupport.a(true, var6_int), MatchConditionEntry.a(var7, (byte) 94), var8, var9, MusicPatch.field_m, TutorialController.field_e, this.field_Q, this.field_A);
             var11 = param1.second;
             var12 = param2.second;
             var7Lifetime1 = var11 + var12 >> 1;
             var13 = SocialListPanel.k(-74);
             var7Lifetime1 = var7Lifetime1 + var13;
-            GradientUiRenderer.drawCenteredSolidText(param4, db.a(true, this.field_c.first), MatchConditionEntry.a(var7Lifetime1, (byte) 94), this.field_Q, true);
+            GradientUiRenderer.drawCenteredSolidText(param4, IgnoreListLookupSupport.a(true, this.field_c.first), MatchConditionEntry.a(var7Lifetime1, (byte) 94), this.field_Q, true);
             return;
           }
           return;
@@ -1346,11 +1346,11 @@ final class MatchSetupPanel {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        if (wb.field_b != null) {
-          if (!(5 < wb.field_b.length)) {
+        if (LoginCredentialStagingSupport.field_b != null) {
+          if (!(5 < LoginCredentialStagingSupport.field_b.length)) {
             return;
           }
-          this.field_R = wb.field_b[5];
+          this.field_R = LoginCredentialStagingSupport.field_b[5];
           if (null == this.field_R) {
             return;
           }
@@ -1360,8 +1360,8 @@ final class MatchSetupPanel {
             this.getItemLeftX(70, true);
           }
           var4 = var3 + var2;
-          GradientUiRenderer.drawCenteredTextBackdrop(this.field_R, db.a(true, this.field_c.first), MatchConditionEntry.a(var4, (byte) 94));
-          GradientUiRenderer.drawCenteredGradientText(this.field_R, db.a(true, this.field_c.first), MatchConditionEntry.a(var4, (byte) 94), ConsoleValue.field_b, false);
+          GradientUiRenderer.drawCenteredTextBackdrop(this.field_R, IgnoreListLookupSupport.a(true, this.field_c.first), MatchConditionEntry.a(var4, (byte) 94));
+          GradientUiRenderer.drawCenteredGradientText(this.field_R, IgnoreListLookupSupport.a(true, this.field_c.first), MatchConditionEntry.a(var4, (byte) 94), ConsoleValue.field_b, false);
           return;
         }
     }

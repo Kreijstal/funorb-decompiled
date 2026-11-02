@@ -427,7 +427,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               sampleId = input.readVarInt(110);
             }
-            this.pitchAndLoopFlags[sampleKey] = (short)(this.pitchAndLoopFlags[sampleKey] + (rn.bitwiseAnd(-1 + sampleId, 2) << 14));
+            this.pitchAndLoopFlags[sampleKey] = (short)(this.pitchAndLoopFlags[sampleKey] + (ProceduralMapSupport.bitwiseAnd(-1 + sampleId, 2) << 14));
             this.sampleIds[sampleKey] = sampleId;
             sampleRunRemaining--;
           }

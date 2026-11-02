@@ -227,15 +227,15 @@ final class ViewportManager {
           }
           return;
         }
-        if (bn.viewportWidth < this.containerWidth) {
-          DualNodeIterator.canvasOffsetX = (this.containerWidth - bn.viewportWidth) / 2;
+        if (CalendarSupport.viewportWidth < this.containerWidth) {
+          DualNodeIterator.canvasOffsetX = (this.containerWidth - CalendarSupport.viewportWidth) / 2;
         } else {
           if (this.containerWidth > 0) {
             DualNodeIterator.canvasOffsetX = 0;
           }
         }
-        if (bn.viewportWidth == this.fixedWidth &&
-          dt.viewportHeight == this.fixedHeight) {
+        if (CalendarSupport.viewportWidth == this.fixedWidth &&
+          DateValiditySupport.viewportHeight == this.fixedHeight) {
           return;
         }
         this.listener.viewportResized(this.fixedHeight, -32263, this.fixedWidth);
@@ -244,23 +244,23 @@ final class ViewportManager {
     final FullscreenFocusCanvas enterFullscreen(int obfuscationGuard) {
         FullscreenFocusCanvas fullscreen = null;
         FullscreenFocusCanvas canonicalFullscreen;
-        this.savedHeight = dt.viewportHeight;
+        this.savedHeight = DateValiditySupport.viewportHeight;
         if (obfuscationGuard != -1) {
           ViewportManager.releaseStatics((byte) -86);
-          this.savedWidth = bn.viewportWidth;
+          this.savedWidth = CalendarSupport.viewportWidth;
           this.listener.viewportResized(this.fullscreenHeight, obfuscationGuard ^ 32262, this.fullscreenWidth);
-          tq.canvasRebuildRequested = false;
-          fullscreen = dj.openFullscreenCanvas(this.fullscreenWidth, 0, IntPair.field_m, -71, 0, this.fullscreenHeight);
+          NineSliceSpriteSupport.canvasRebuildRequested = false;
+          fullscreen = TextSplitSupport.openFullscreenCanvas(this.fullscreenWidth, 0, IntPair.field_m, -71, 0, this.fullscreenHeight);
           if (fullscreen == null) {
             this.restoreViewport(124);
             return fullscreen;
           }
           return fullscreen;
         }
-        this.savedWidth = bn.viewportWidth;
+        this.savedWidth = CalendarSupport.viewportWidth;
         this.listener.viewportResized(this.fullscreenHeight, obfuscationGuard ^ 32262, this.fullscreenWidth);
-        tq.canvasRebuildRequested = false;
-        canonicalFullscreen = dj.openFullscreenCanvas(this.fullscreenWidth, 0, IntPair.field_m, -71, 0, this.fullscreenHeight);
+        NineSliceSpriteSupport.canvasRebuildRequested = false;
+        canonicalFullscreen = TextSplitSupport.openFullscreenCanvas(this.fullscreenWidth, 0, IntPair.field_m, -71, 0, this.fullscreenHeight);
         if (canonicalFullscreen != null) {
           return canonicalFullscreen;
         }
@@ -327,17 +327,17 @@ final class ViewportManager {
               }
             }
           }
-          if (bn.viewportWidth != candidateWidth) {
+          if (CalendarSupport.viewportWidth != candidateWidth) {
             this.listener.viewportResized(candidateHeight, -32263, candidateWidth);
           } else {
-            if (dt.viewportHeight != candidateHeight) {
+            if (DateValiditySupport.viewportHeight != candidateHeight) {
               this.listener.viewportResized(candidateHeight, -32263, candidateWidth);
             }
           }
           if (this.containerWidth <= 0) {
             return;
           }
-          DualNodeIterator.canvasOffsetX = (-bn.viewportWidth + this.containerWidth) / 2;
+          DualNodeIterator.canvasOffsetX = (-CalendarSupport.viewportWidth + this.containerWidth) / 2;
           return;
         }
         this.fullscreenHeight = 17;
@@ -365,31 +365,31 @@ final class ViewportManager {
               }
             }
           }
-          if (bn.viewportWidth != candidateWidth ||
-            dt.viewportHeight != alternateHeight) {
+          if (CalendarSupport.viewportWidth != candidateWidth ||
+            DateValiditySupport.viewportHeight != alternateHeight) {
             this.listener.viewportResized(alternateHeight, -32263, candidateWidth);
           }
           if (this.containerWidth <= 0) {
             return;
           }
-          DualNodeIterator.canvasOffsetX = (-bn.viewportWidth + this.containerWidth) / 2;
+          DualNodeIterator.canvasOffsetX = (-CalendarSupport.viewportWidth + this.containerWidth) / 2;
           return;
         }
         if (this.minimumHeight > alternateHeight) {
           alternateHeight = this.minimumHeight;
         }
         if (!(0.0f < this.aspectRatio)) {
-          if (bn.viewportWidth != candidateWidth) {
+          if (CalendarSupport.viewportWidth != candidateWidth) {
             this.listener.viewportResized(alternateHeight, -32263, candidateWidth);
           } else {
-            if (dt.viewportHeight != alternateHeight) {
+            if (DateValiditySupport.viewportHeight != alternateHeight) {
               this.listener.viewportResized(alternateHeight, -32263, candidateWidth);
             }
           }
           if (this.containerWidth <= 0) {
             return;
           }
-          DualNodeIterator.canvasOffsetX = (-bn.viewportWidth + this.containerWidth) / 2;
+          DualNodeIterator.canvasOffsetX = (-CalendarSupport.viewportWidth + this.containerWidth) / 2;
           return;
         }
         lowerBoundAspectWidth = (int)(this.aspectRatio * (float)alternateHeight + 0.5f);
@@ -400,17 +400,17 @@ final class ViewportManager {
             candidateWidth = lowerBoundAspectWidth;
           }
         }
-        if (bn.viewportWidth != candidateWidth) {
+        if (CalendarSupport.viewportWidth != candidateWidth) {
           this.listener.viewportResized(alternateHeight, -32263, candidateWidth);
         } else {
-          if (dt.viewportHeight != alternateHeight) {
+          if (DateValiditySupport.viewportHeight != alternateHeight) {
             this.listener.viewportResized(alternateHeight, -32263, candidateWidth);
           }
         }
         if (this.containerWidth <= 0) {
           return;
         }
-        DualNodeIterator.canvasOffsetX = (-bn.viewportWidth + this.containerWidth) / 2;
+        DualNodeIterator.canvasOffsetX = (-CalendarSupport.viewportWidth + this.containerWidth) / 2;
         return;
     }
 

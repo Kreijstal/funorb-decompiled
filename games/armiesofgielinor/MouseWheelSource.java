@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class MouseWheelSource {
-    static rn field_e;
+    static ProceduralMapSupport field_e;
     static int[][] field_f;
     static int field_c;
     static String field_a;
@@ -45,11 +45,11 @@ abstract class MouseWheelSource {
               }
               incrementValue$1 = var6;
               var6++;
-              param3 = ab.field_c[incrementValue$1];
+              param3 = AlphanumericTextSupport.field_c[incrementValue$1];
               dupTemp$2 = param1[param3];
               dupTemp$3 = param2[dupTemp$2];
               param2[dupTemp$2] = dupTemp$3 + 1;
-              ab.field_c[dupTemp$3] = param3;
+              AlphanumericTextSupport.field_c[dupTemp$3] = param3;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -119,9 +119,9 @@ abstract class MouseWheelSource {
               var10 = var12;
               var6 = var10;
               if (1 != var3) {
-                var7 = ph.field_c;
+                var7 = AccountNameCharacterSupport.field_c;
                 synchronized (var7) {
-                  ph.field_c.decompress((byte) -71, var9, var12);
+                  AccountNameCharacterSupport.field_c.decompress((byte) -71, var9, var12);
                 }
               } else {
                 Bzip2Decoder.decompress(var12, var5_int, encodedContainer, var4, 9);
@@ -161,7 +161,7 @@ abstract class MouseWheelSource {
     static {
         field_f = new int[][]{new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, new int[]{0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}, new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10}};
         field_a = "Rankings";
-        field_e = new rn();
+        field_e = new ProceduralMapSupport();
         field_b = new PcmSample[9];
     }
 }

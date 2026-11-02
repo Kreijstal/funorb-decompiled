@@ -27,7 +27,7 @@ final class CampaignProgress {
         if (obfuscationGuard) {
           this.setResult(-6, 29, -98, 117, 69);
         }
-        CampaignDefinition var10 = br.getCampaign(campaignIndex, (byte) -93);
+        CampaignDefinition var10 = CampaignLookupSupport.getCampaign(campaignIndex, (byte) -93);
         CampaignDefinition var3 = var10;
         int var4 = 0;
         for (var5 = 0; var5 < var3.missions.length; var5++) {
@@ -51,9 +51,9 @@ final class CampaignProgress {
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var6 = "(" + QuickChatCommandDefinition.thirdPreviousOpcode + " " + PrintCoatConsoleCommand.secondPreviousOpcode + " " + TurnTimerDial.previousOpcode + ") " + MusicCrossfadeStream.deliveredOpcode;
         var1 = var6;
-        if (fk.packetPayloadLength > 0) {
+        if (DropdownSelectorPainter.packetPayloadLength > 0) {
           var1 = var6 + ":";
-          for (var2 = 0; var2 < fk.packetPayloadLength; var2++) {
+          for (var2 = 0; var2 < DropdownSelectorPainter.packetPayloadLength; var2++) {
             var7 = var1 + ' ';
             var3 = 255 & ByteStorage.incomingPacket.payload[var2];
             var4 = var3 >> 4;
@@ -142,7 +142,7 @@ final class CampaignProgress {
           if (obfuscationGuard != 0) {
             CampaignProgress.b(false);
           }
-          wb.stageLoginCredentials(false, (byte) 32, accountIdentifier, password);
+          LoginCredentialStagingSupport.stageLoginCredentials(false, (byte) 32, accountIdentifier, password);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "cm.D(" + (password != null ? "{...}" : "null") + ',' + obfuscationGuard + ',' + (accountIdentifier != null ? "{...}" : "null") + ')');
         }
@@ -155,7 +155,7 @@ final class CampaignProgress {
         var4 = 54 / ((67 - obfuscationGuard) / 36);
         if (this.resultsByCampaign[campaignIndex] != null &&
           null != this.resultsByCampaign[campaignIndex][missionIndex]) {
-          var5 = br.getCampaign(campaignIndex, (byte) -57);
+          var5 = CampaignLookupSupport.getCampaign(campaignIndex, (byte) -57);
           var6 = var5.missions[missionIndex];
           return SpriteSheetDecoder.calculateMissionScore(var6.scoreTurnTarget, var6.scoreDamageTarget, this.resultsByCampaign[campaignIndex][missionIndex].damageTaken, (byte) 25, this.resultsByCampaign[campaignIndex][missionIndex].turnsTaken);
         }
@@ -180,12 +180,12 @@ final class CampaignProgress {
     }
 
     final static void a(int param0, boolean param1) {
-        if (jj.b((byte) -73)) {
+        if (FriendLookupSupport.b((byte) -73)) {
           param1 = false;
         }
         MusicCrossfadeStream.a((byte) 95, param1);
         if (gl.field_b) {
-          SoftwareRaster.d(DebugConsole.field_w.tabs.x, DebugConsole.field_w.tabs.y, DebugConsole.field_w.tabs.width, DebugConsole.field_w.tabs.height);
+          SoftwareRaster.darkenRectangle(DebugConsole.field_w.tabs.x, DebugConsole.field_w.tabs.y, DebugConsole.field_w.tabs.width, DebugConsole.field_w.tabs.height);
           DebugConsole.field_w.tabs.draw(param1, 20);
         }
         if (param0 != 2000) {

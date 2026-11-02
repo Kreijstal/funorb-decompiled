@@ -240,9 +240,9 @@ final class TurnEffectEvent extends GameEvent {
           if (param0 != 8) {
             TurnEffectEvent.a(-95, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null, (ClientUiComponent) null);
           }
-          hf.textChatActive = false;
+          ClientStateChecksumSupport.textChatActive = false;
           if (!NodeIterator.field_a) {
-            if (vi.field_d) {
+            if (MonotonicClockSupport.field_d) {
               var5 = TabbedPanel.field_Lb;
               if (var6 != 0) {
                 var5 = VerticalScrollbar.field_Tb;
@@ -257,7 +257,7 @@ final class TurnEffectEvent extends GameEvent {
           } else {
             var5 = dc.field_l;
           }
-          fs.a(MeshObject.field_d, (String) null, var5, 112, 0);
+          PrivateTextRecipientSupport.a(MeshObject.field_d, (String) null, var5, 112, 0);
           UpkeepEvent.field_z.matchedButtonTextColour = (8355711 & SpellConfirmationDialog.field_i.matchedButtonTextColour >> 1) - (MeshObject.field_d >> 1 & 8355711) + MeshObject.field_d;
           jl.field_b = UpkeepEvent.field_z;
           UpkeepEvent.field_z.heldPressTextColour = (8355711 & SpellConfirmationDialog.field_i.heldPressTextColour >> 1) + (MeshObject.field_d - ((MeshObject.field_d & 16711422) >> 1));

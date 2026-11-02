@@ -71,7 +71,7 @@ final class TurnTimerDial {
             var5 = var5 + var6;
           }
         }
-        DeployEvent.field_z.b(384, 2464, screenX + (CampaignProgress.field_b >> 1) << 4, screenY + (ManaStarParticle.field_m >> 1) << 4, this.sweepPosition * 65535 / this.cycleLength, 1024);
+        DeployEvent.field_z.drawRotatedAboutPivot(384, 2464, screenX + (CampaignProgress.field_b >> 1) << 4, screenY + (ManaStarParticle.field_m >> 1) << 4, this.sweepPosition * 65535 / this.cycleLength, 1024);
         if (obfuscationGuard == 121) {
           return;
         }
@@ -216,7 +216,7 @@ final class TurnTimerDial {
               LinkButtonPainter.field_d[var3][var4] = var5;
             }
           }
-          ke.a((byte) 90, param1);
+          SoundEffectPreloadSupport.loadSoundEffectsByName((byte) 90, param1);
           wh.field_f = true;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sj.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

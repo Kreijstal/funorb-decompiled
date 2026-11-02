@@ -79,10 +79,10 @@ final class DialWidget extends InteractiveWidget {
           if (!QuickChatPhraseRepository.a(27875)) {
             SummonRequest.a((byte) 54, ScreenWipeTransition.field_b, 1);
             SummonRequest.a((byte) 91, GameEvent.field_t, 24);
-            SummonRequest.a((byte) 101, op.field_f, 17);
+            SummonRequest.a((byte) 101, FriendRequestSupport.field_f, 17);
             SummonRequest.a((byte) 39, ClientConnectionState.field_i, 3);
             SummonRequest.a((byte) 78, AnimationFrameSet.field_D, 4);
-            DisplacedUnitMarker.field_t[40] = od.field_f;
+            DisplacedUnitMarker.field_t[40] = ByteArrayPoolSupport.field_f;
           }
           return;
         }
@@ -99,10 +99,10 @@ final class DialWidget extends InteractiveWidget {
         if (!QuickChatPhraseRepository.a(27875)) {
           SummonRequest.a((byte) 54, ScreenWipeTransition.field_b, 1);
           SummonRequest.a((byte) 91, GameEvent.field_t, 24);
-          SummonRequest.a((byte) 101, op.field_f, 17);
+          SummonRequest.a((byte) 101, FriendRequestSupport.field_f, 17);
           SummonRequest.a((byte) 39, ClientConnectionState.field_i, 3);
           SummonRequest.a((byte) 78, AnimationFrameSet.field_D, 4);
-          DisplacedUnitMarker.field_t[40] = od.field_f;
+          DisplacedUnitMarker.field_t[40] = ByteArrayPoolSupport.field_f;
         }
     }
 
@@ -123,7 +123,7 @@ final class DialWidget extends InteractiveWidget {
                 DialWidget.openServerListPage((java.applet.Applet) null, -54);
               }
               var2 = new java.net.URL(applet.getCodeBase(), "toserverlist.ws");
-              applet.getAppletContext().showDocument(ck.a(-3780, var2, applet), "_top");
+              applet.getAppletContext().showDocument(StructureTerrainSupport.a(-3780, var2, applet), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

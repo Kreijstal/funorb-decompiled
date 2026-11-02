@@ -67,7 +67,7 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
         var2[0] = 1;
         var2[2] = 16777215;
         var2[1] = 14737632;
-        VerticalScrollbar.field_Rb = new CombatSandbox(ChannelBaseVolumeConsoleCommand.field_J, IsaacRandom.field_k, rs.field_n, var2, 0, 0);
+        VerticalScrollbar.field_Rb = new CombatSandbox(ChannelBaseVolumeConsoleCommand.field_J, IsaacRandom.field_k, PowerOfTwoSupport.field_n, var2, 0, 0);
         if (param0 != -28541) {
           field_F = 18;
         }
@@ -117,7 +117,7 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!ph.isAccountNameCharacter(-19, character)) {
+          if (!AccountNameCharacterSupport.isAccountNameCharacter(-19, character)) {
             return false;
           }
           if (text == null) {
@@ -130,7 +130,7 @@ final class NameSuggestionList extends DequeWidgetContainer implements WidgetAct
           if (var3_int >= 12) {
             return false;
           }
-          if (!rs.isAccountNameSeparator(character, (byte) -87)) {
+          if (!PowerOfTwoSupport.isAccountNameSeparator(character, (byte) -87)) {
             return true;
           }
           if (var3_int != 0) {

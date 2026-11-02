@@ -61,14 +61,14 @@ final class GrowableIntArray {
         }
         if (obfuscationGuard < -64) {
           if (index != this.lastIndex) {
-            vm.a(this.values, 1 + index, this.values, index, this.lastIndex - index);
+            ArrayBlockSupport.copyInts(this.values, 1 + index, this.values, index, this.lastIndex - index);
           }
           this.lastIndex = this.lastIndex - 1;
           return;
         }
         field_c = true;
         if (index != this.lastIndex) {
-          vm.a(this.values, 1 + index, this.values, index, this.lastIndex - index);
+          ArrayBlockSupport.copyInts(this.values, 1 + index, this.values, index, this.lastIndex - index);
         }
         this.lastIndex = this.lastIndex - 1;
     }
@@ -104,7 +104,7 @@ final class GrowableIntArray {
     private final void grow(int obfuscationGuard, int requiredIndex) {
         int[] var4 = new int[this.computeCapacity(requiredIndex, -18113)];
         int[] var3 = var4;
-        vm.a(this.values, 0, var4, 0, this.values.length);
+        ArrayBlockSupport.copyInts(this.values, 0, var4, 0, this.values.length);
         this.values = var4;
         if (obfuscationGuard > 34) {
           return;
@@ -140,7 +140,7 @@ final class GrowableIntArray {
         if (null == MoveAttackRequest.sessionSocket) {
           return false;
         }
-        if (ov.connectionState.b((byte) -121)) {
+        if (SpectateRoomRequestSupport.connectionState.b((byte) -121)) {
           return true;
         }
         return false;
@@ -177,7 +177,7 @@ final class GrowableIntArray {
           }
           var13 = (param5 << 9) / var12 + var7_int;
           var14 = var8 + (var11 << 9) / var12;
-          SoftwareRaster.a(var13 << 4, var14 << 4, param1, param4, param3);
+          SoftwareRaster.fillRadialPaletteCircle(var13 << 4, var14 << 4, param1, param4, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -230,7 +230,7 @@ final class GrowableIntArray {
           }
           var13 = (param5 << 9) / var12 + var7_int;
           var14 = var8 + (var11 << 9) / var12;
-          SoftwareRaster.a(var13 << 4, var14 << 4, param1, param4, param3);
+          SoftwareRaster.fillRadialPaletteCircle(var13 << 4, var14 << 4, param1, param4, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

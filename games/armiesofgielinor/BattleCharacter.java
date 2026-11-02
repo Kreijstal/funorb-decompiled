@@ -320,7 +320,7 @@ final class BattleCharacter {
             this.field_E = true;
           }
         }
-        for (var8 = 0; var8 < lb.field_a; var8++) {
+        for (var8 = 0; var8 < ResourceClientErrorSupport.field_a; var8++) {
           if (0 < this.field_k[var8]) {
             this.field_k[var8] = this.field_k[var8] - 1;
             this.field_z[var8] = this.field_z[var8] + this.field_o[var8];
@@ -364,7 +364,7 @@ final class BattleCharacter {
     }
 
     private final void d(int param0) {
-        this.field_x.selectSequence(-1, pg.selectUnitAnimation(this.field_y, 176, true, this.modelIndex));
+        this.field_x.selectSequence(-1, UnitAnimationSelectionSupport.selectUnitAnimation(this.field_y, 176, true, this.modelIndex));
         this.a(-313055120);
         if (param0 > -77) {
           this.a(-77, 60);
@@ -378,7 +378,7 @@ final class BattleCharacter {
         if (param6 != 122) {
           this.field_o = (int[]) null;
         }
-        for (var8 = 0; lb.field_a > var8; var8++) {
+        for (var8 = 0; ResourceClientErrorSupport.field_a > var8; var8++) {
           this.field_z[var8] = param4 << 16;
           this.field_I[var8] = param5 << 16;
           this.field_k[var8] = AttackEvent.nextBoundedInt(false, param1 >> 1, li.field_n) + param1;
@@ -523,7 +523,7 @@ final class BattleCharacter {
             } else {
               stackIn_20_1 = -1;
             }
-            var6 = th.floorModWithOffset(stackIn_19_0 * stackIn_20_1, 1, 2048);
+            var6 = FloorModSupport.floorModWithOffset(stackIn_19_0 * stackIn_20_1, 1, 2048);
           }
         }
         if (param2) {
@@ -547,7 +547,7 @@ final class BattleCharacter {
         ((ModelMesh) (Object) stackIn_26_0).a(stackIn_26_1, stackIn_26_2, stackIn_26_3, stackIn_26_4, stackIn_30_5, stackIn_30_6 - stackIn_31_7, this.destinationY);
         if (!param2) {
           if (this.field_w == 1) {
-            for (var9Lifetime1 = 0; var9Lifetime1 < lb.field_a; var9Lifetime1++) {
+            for (var9Lifetime1 = 0; var9Lifetime1 < ResourceClientErrorSupport.field_a; var9Lifetime1++) {
               if (0 < this.field_k[var9Lifetime1]) {
                 stackIn_58_0 = this.destinationY;
                 stackIn_58_1 = ArrayWidgetContainer.field_F[this.field_k[var9Lifetime1] % ArrayWidgetContainer.field_F.length];
@@ -571,7 +571,7 @@ final class BattleCharacter {
             var9Lifetime1Lifetime1 = WhirlpoolHasher.unitDefinitions[this.unitType][1] + 1;
             var12 = 0;
             var10Lifetime1 = var12;
-            while (var12 < lb.field_a) {
+            while (var12 < ResourceClientErrorSupport.field_a) {
               if (this.field_k[var12] > 0) {
                 stackIn_42_0 = 600 - (this.field_I[var12] >> 16);
                 if (255 >= this.field_k[var12] << 4) {
@@ -665,18 +665,18 @@ final class BattleCharacter {
                       this.field_F[this.animationState] = 0;
                       return;
                     }
-                    if (null != ck.animationSequencesByGroup &&
+                    if (null != StructureTerrainSupport.animationSequencesByGroup &&
                       null != ResizableModalDialog.unitAnimationGroups &&
                       0 <= this.modelIndex &&
                       ResizableModalDialog.unitAnimationGroups.length > this.modelIndex) {
                       if (ResizableModalDialog.unitAnimationGroups[this.modelIndex] >= 0 &&
-                        ResizableModalDialog.unitAnimationGroups[this.modelIndex] < ck.animationSequencesByGroup.length) {
-                        if (null != ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.modelIndex]] &&
+                        ResizableModalDialog.unitAnimationGroups[this.modelIndex] < StructureTerrainSupport.animationSequencesByGroup.length) {
+                        if (null != StructureTerrainSupport.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.modelIndex]] &&
                           BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0] >= 0 &&
-                          BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0] < ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.modelIndex]].length) {
+                          BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0] < StructureTerrainSupport.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.modelIndex]].length) {
                           var3 = new AnimationPlayer();
                           this.a(-313055120);
-                          var3.selectSequence(-1, ck.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.modelIndex]][BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0]]);
+                          var3.selectSequence(-1, StructureTerrainSupport.animationSequencesByGroup[ResizableModalDialog.unitAnimationGroups[this.modelIndex]][BestScoreStrategy.unitAnimationVariants[this.modelIndex][this.field_y][0]]);
                           var4 = 0;
                           var5 = 0;
                           var6 = 10000;
@@ -837,18 +837,18 @@ final class BattleCharacter {
         }
         this.field_n = DiskCacheRequest.unitProjectionVariants[this.modelIndex];
         this.destinationX = param2 + param5;
-        this.field_z = new int[lb.field_a];
-        this.field_k = new int[lb.field_a];
+        this.field_z = new int[ResourceClientErrorSupport.field_a];
+        this.field_k = new int[ResourceClientErrorSupport.field_a];
         stackIn_16_1 = (param1);
         this.field_u = stackIn_16_1;
-        this.field_I = new int[lb.field_a];
+        this.field_I = new int[ResourceClientErrorSupport.field_a];
         this.field_J = 0;
         this.currentX = param2;
         this.currentY = param3;
         this.destinationY = param3;
         this.field_y = 0;
-        this.field_r = new int[lb.field_a];
-        this.field_o = new int[lb.field_a];
+        this.field_r = new int[ResourceClientErrorSupport.field_a];
+        this.field_o = new int[ResourceClientErrorSupport.field_a];
         this.d(-104);
         this.field_F = new int[4];
         for (var8 = 0; var8 < this.field_F.length; var8++) {

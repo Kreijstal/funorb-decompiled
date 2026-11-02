@@ -68,19 +68,19 @@ final class mu {
           }
           MapLayout.addCustomQuickChatOption(var4, 19003);
           var12 = (BitmapFont) null;
-          hf.field_f = PaletteRegionMap.a(65793, 2245737, 65793, 65793, 8947848, 0, (BitmapFont) null, 1127256, 1513239, 4020342, 5138823, (byte) 39, 1513239);
-          vs.field_g = PaletteRegionMap.a(param1, 0, 0, 0, 0, 16764006, param0, 0, 0, 0, 0, (byte) 107, 0);
+          ClientStateChecksumSupport.field_f = PaletteRegionMap.a(65793, 2245737, 65793, 65793, 8947848, 0, (BitmapFont) null, 1127256, 1513239, 4020342, 5138823, (byte) 39, 1513239);
+          QuickChatMenuDisplaySupport.field_g = PaletteRegionMap.a(param1, 0, 0, 0, 0, 16764006, param0, 0, 0, 0, 0, (byte) 107, 0);
           AccountNameAvailabilityValidator.field_n = PaletteRegionMap.a(0, 0, 0, 0, 0, 16777215, param0, 0, 0, 0, 0, (byte) -124, 0);
           var5 = SoftwareRaster.width;
           var6 = SoftwareRaster.height;
           var16 = SoftwareRaster.pixels;
           s.quickChatArrow = new RgbSprite(10, 14);
-          s.quickChatArrow.b();
+          s.quickChatArrow.bindAsRasterTarget();
           for (var8 = 2; var8 < 7; var8++) {
-            SoftwareRaster.h(var8, var8 + 1, 14 - (var8 << 1), 16777215);
+            SoftwareRaster.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           SoftwareRaster.setTarget(var16, var5, var6);
-          AdaptiveMidiPcmStream.defaultQuickChatMenu = l.buildQuickChatCategoryMenu(var4, hf.field_f, param1 ^ 0, vs.field_g, AccountNameAvailabilityValidator.field_n);
+          AdaptiveMidiPcmStream.defaultQuickChatMenu = QuickChatCategoryMenuSupport.buildQuickChatCategoryMenu(var4, ClientStateChecksumSupport.field_f, param1 ^ 0, QuickChatMenuDisplaySupport.field_g, AccountNameAvailabilityValidator.field_n);
           OwnerChangeEvent.quickChatMenuHost.children = new NodeDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

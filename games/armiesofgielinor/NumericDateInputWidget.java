@@ -194,7 +194,7 @@ final class NumericDateInputWidget extends DateInputWidget {
           originX = originX + this.x;
           originY = originY + this.y;
           this.a(MusicPatchNode.field_z, this.dayInput, originY, 16777215, originX);
-          this.a(eb.field_e, this.monthInput, originY, 16777215, originX);
+          this.a(BitCountSupport.field_e, this.monthInput, originY, 16777215, originX);
           this.a(BattleTutorial.field_l, this.yearInput, originY, 16777215, originX);
           return;
         }

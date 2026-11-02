@@ -57,7 +57,7 @@ abstract class ByteStorage {
               var9 = param1.getParameter("cookieprefix");
               var3 = var9 + "settings";
               var4 = (String) (AppletScriptBridge.callScriptFunction("getcookies", (byte) 114, param1));
-              var5 = dj.splitText(-111, ';', var4);
+              var5 = TextSplitSupport.splitText(-111, ';', var4);
               for (var6 = param0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (var7 >= 0 &&

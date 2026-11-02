@@ -82,13 +82,13 @@ final class EmailValidator extends TextFieldValidator {
           if (obfuscationGuard != -3137) {
             field_l = (String) null;
           }
-          syntaxResult = (null != gt.b(text, (byte) -24)) ? 0 : 1;
+          syntaxResult = (null != LocalAccountNameSupport.b(text, (byte) -24)) ? 0 : 1;
           syntaxValid = syntaxResult;
           if (syntaxValid != 0) {
-            validState = oo.validationValid;
+            validState = MembershipExpansionScreen.validationValid;
             return validState;
           }
-          invalidState = rn.validationInvalid;
+          invalidState = ProceduralMapSupport.validationInvalid;
           return invalidState;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -122,7 +122,7 @@ final class EmailValidator extends TextFieldValidator {
 
     final static void c(byte param0) {
         if (param0 == 91) {
-          ProgressMessageDialog.field_vb = c.field_d + " <b>" + DualNodeDeque.field_e + "</b> " + od.field_e + " <b>" + WeightedScoreStrategy.field_m + "</b> " + TextLineLayout.field_f + "<br>" + "<br>" + FullscreenDisplayMode.field_d;
+          ProgressMessageDialog.field_vb = c.field_d + " <b>" + DualNodeDeque.field_e + "</b> " + ByteArrayPoolSupport.field_e + " <b>" + WeightedScoreStrategy.field_m + "</b> " + TextLineLayout.field_f + "<br>" + "<br>" + FullscreenDisplayMode.field_d;
           return;
         }
     }
@@ -139,7 +139,7 @@ final class EmailValidator extends TextFieldValidator {
           if (obfuscationGuard < 89) {
             EmailValidator.c((byte) -118);
           }
-          if (this.validateText(-3137, text) != rn.validationInvalid) {
+          if (this.validateText(-3137, text) != ProceduralMapSupport.validationInvalid) {
             stackIn_6_0 = CampaignRewardPreview.field_a;
             return stackIn_6_0;
           }

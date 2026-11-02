@@ -8,7 +8,7 @@ final class ValidationState {
     final static boolean a(int param0) {
         int var1 = -61 / ((-54 - param0) / 62);
         if (ToggleTurnSkipConsoleCommand.debugConsole != null) {
-          return ToggleTurnSkipConsoleCommand.debugConsole.handleKey(-30847, DualNodeDeque.typedCharacter, rs.keyCode);
+          return ToggleTurnSkipConsoleCommand.debugConsole.handleKey(-30847, DualNodeDeque.typedCharacter, PowerOfTwoSupport.keyCode);
         }
         return false;
     }

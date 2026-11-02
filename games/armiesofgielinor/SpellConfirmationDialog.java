@@ -59,9 +59,9 @@ final class SpellConfirmationDialog {
     }
 
     final int getActionAtPointer(int cancelAction, byte obfuscationGuard, int confirmAction) {
-        int surfaceWidth = so.field_b.width;
-        int surfaceHeight = so.field_b.height;
-        int dialogHeight = 30 + (rs.field_n.getParagraphHeight(this.prompt, 200, 0) + 5);
+        int surfaceWidth = FixedSquareRootSupport.field_b.width;
+        int surfaceHeight = FixedSquareRootSupport.field_b.height;
+        int dialogHeight = 30 + (PowerOfTwoSupport.field_n.getParagraphHeight(this.prompt, 200, 0) + 5);
         if (IterableDualNodeDeque.isPointerInBounds(-33, surfaceWidth / 2 - 100, -2 + surfaceWidth / 2, surfaceHeight / 2 + ((dialogHeight >> 1) - 30), (dialogHeight >> 1) + surfaceHeight / 2)) {
           return confirmAction;
         }
@@ -86,15 +86,15 @@ final class SpellConfirmationDialog {
     }
 
     final void draw(int obfuscationGuard) {
-        int var2 = so.field_b.width;
-        int var3 = so.field_b.height;
+        int var2 = FixedSquareRootSupport.field_b.width;
+        int var3 = FixedSquareRootSupport.field_b.height;
         if (obfuscationGuard != 1619620993) {
           return;
         }
-        SoftwareRaster.b(0, 0, var2, var3, 0, 128);
-        int var4 = 5 + (rs.field_n.getParagraphHeight(this.prompt, 200, 0) + 30);
+        SoftwareRaster.fillRectangleBlended(0, 0, var2, var3, 0, 128);
+        int var4 = 5 + (PowerOfTwoSupport.field_n.getParagraphHeight(this.prompt, 200, 0) + 30);
         GradientUiRenderer.drawHollowGradientFrame(212, -(var4 >> 1) + (-8 + var3 / 2), 216, 16 + var4, MusicPatch.field_m, ConsoleValue.field_b, 0, 128);
-        rs.field_n.drawParagraph(this.prompt, var2 / 2 - 100, -(var4 >> 1) + var3 / 2, 200, var4, 16777215, 0, 1, 0, 0);
+        PowerOfTwoSupport.field_n.drawParagraph(this.prompt, var2 / 2 - 100, -(var4 >> 1) + var3 / 2, 200, var4, 16777215, 0, 1, 0, 0);
         int[] var10 = IterableDualNodeDeque.isPointerInBounds(obfuscationGuard - 1619621026, var2 / 2 - 100, 318, -30 + var3 / 2 + (var4 >> 1), (var4 >> 1) + var3 / 2) ? TutorialController.field_e : ConsoleValue.field_b;
         int[] var8 = var10;
         int[] var6 = var8;

@@ -163,7 +163,7 @@ final class DeployRequest extends ActionRequest {
           }
           var4 = battlefield.tiles[var6.tileX + var6.tileY * battlefield.mapWidth];
           if (34 == var6.unitType &&
-            !var4.f(19725)) {
+            !var4.isNotStructure(19725)) {
             discarded$6 = this.formatDeployRejection(new String[]{"can't deploy on top of structure at ", TutorialController.formatCoordinatePair(this.tileX, 0, this.tileY)}, false);
             stackIn_15_0 = null;
             return (PreparedAction) (stackIn_15_0);

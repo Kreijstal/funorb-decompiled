@@ -74,7 +74,7 @@ final class TelefragEvent extends GameEvent {
           var4 = battlefield.tiles[battlefield.mapWidth * this.unit.tileY + this.unit.tileX];
           var3 = var4;
           if (null != var4.occupant) {
-            var4.occupant.a(false, (byte) 105);
+            var4.occupant.removeFromPlay(false, (byte) 105);
           }
           var3.occupant = this.unit;
           this.unit.refreshTileEffects((byte) 82);

@@ -52,7 +52,7 @@ final class TextLineLayout {
         int var12 = 0;
         try {
           DateOfBirthValidator.field_i.text = param0;
-          if (rs.outgoingChatChannel != 2) {
+          if (PowerOfTwoSupport.outgoingChatChannel != 2) {
             ed.field_e.text = FixedQuaternion.field_c;
           } else {
             ed.field_e.text = bq.field_d;
@@ -72,7 +72,7 @@ final class TextLineLayout {
           DateOfBirthValidator.field_i.setBounds(param3, -20500, var9_int, 0, 0);
           var12 = 5 + param4 + var10;
           StrongCacheEntry.field_C.setBounds(var12, -20500, var9_int, param3, 0);
-          StrongCacheEntry.field_C.skinSprites = tq.a(11579568, false, StrongCacheEntry.field_C.height, 2105376, 3, 8421504);
+          StrongCacheEntry.field_C.skinSprites = NineSliceSpriteSupport.buildSolidFrameSprites(11579568, false, StrongCacheEntry.field_C.height, 2105376, 3, 8421504);
           var12 = var12 + param3;
           UnitCycler.field_g.setBounds(var12, -20500, var9_int, param8 - var12 / 2, -(var9_int / 2) + param1);
         } catch (RuntimeException runtimeException) {
@@ -147,7 +147,7 @@ final class TextLineLayout {
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           regionExit1: {
-            l.activeCampaignMission = mission;
+            QuickChatCategoryMenuSupport.activeCampaignMission = mission;
             PointerInputHandler.field_f = null;
             var8 = mission.getParticipantNames(-23209);
             var3 = var8;
@@ -188,7 +188,7 @@ final class TextLineLayout {
           FullscreenFocusCanvas.gameplayController.battlefield.playerCoats = new CoatOfArms[mission.participantIds.length];
           for (var5_int = 0; FullscreenFocusCanvas.gameplayController.battlefield.playerCoats.length > var5_int; var5_int++) {
             if (~var5_int == ~mission.playerSlot) {
-              FullscreenFocusCanvas.gameplayController.battlefield.playerCoats[var5_int] = ah.localCoat;
+              FullscreenFocusCanvas.gameplayController.battlefield.playerCoats[var5_int] = LocalCoatSupport.localCoat;
             } else {
               var9 = mission.campaign.participants[mission.participantIds[var5_int]];
               var6_ref = var9;

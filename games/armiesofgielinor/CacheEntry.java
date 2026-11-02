@@ -52,7 +52,7 @@ abstract class CacheEntry extends DualLinkedNode {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
-          if (ov.connectionState == sg.field_a) {
+          if (SpectateRoomRequestSupport.connectionState == sg.field_a) {
             EmailValidator.outgoingPacket.position = 0;
             CampaignMenu.field_s = null;
             if (param0 != null) {
@@ -105,64 +105,64 @@ abstract class CacheEntry extends DualLinkedNode {
               EmailValidator.outgoingPacket.writeByteLengthPrefix(EmailValidator.outgoingPacket.position - var9, 5930);
             }
             hb.$cfr$intArgs$a$e9dea5688aa5(54, -1);
-            ov.connectionState = DirectByteStorage.field_m;
+            SpectateRoomRequestSupport.connectionState = DirectByteStorage.field_m;
           }
-          if (ov.connectionState == DirectByteStorage.field_m &&
+          if (SpectateRoomRequestSupport.connectionState == DirectByteStorage.field_m &&
             ConsoleTokenCursor.receivePacketBytes(param2 ^ 20080, 1)) {
             var9Lifetime1 = ByteStorage.incomingPacket.readUnsignedByte(0);
             ByteStorage.incomingPacket.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
-              ov.connectionState = mv.field_c;
-              br.field_b = new String[var9Lifetime1 - 100];
+              SpectateRoomRequestSupport.connectionState = mv.field_c;
+              CampaignLookupSupport.field_b = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
                 tf.a((byte) -99, CombatEvent.d((byte) -127));
                 BitmapTextWidgetPainter.field_r = CampaignMission.field_s;
-                dj.a((byte) -128);
+                TextSplitSupport.a((byte) -128);
                 RasterViewportResizeHandler.field_b = false;
                 stackIn_31_0 = var9Lifetime1;
                 return stackIn_31_0;
               }
               if (var9Lifetime1 == 99) {
                 ConsoleTokenCursor.receivePacketBytes(-81, ChannelFadeTimeConsoleCommand.h(1));
-                CampaignMenu.field_s = new Boolean(rr.a((byte) -76, ByteStorage.incomingPacket));
+                CampaignMenu.field_s = new Boolean(IndexedDecodedSpriteSupport.a((byte) -76, ByteStorage.incomingPacket));
                 ByteStorage.incomingPacket.position = 0;
               } else {
-                fk.packetPayloadLength = -1;
+                DropdownSelectorPainter.packetPayloadLength = -1;
                 MusicCrossfadeStream.deliveredOpcode = var9Lifetime1;
-                ov.connectionState = da.field_b;
+                SpectateRoomRequestSupport.connectionState = LocalAccountSupport.field_b;
               }
             }
           }
-          if (mv.field_c == ov.connectionState) {
+          if (mv.field_c == SpectateRoomRequestSupport.connectionState) {
             var9Lifetime2 = 2;
             if (ConsoleTokenCursor.receivePacketBytes(-79, var9Lifetime2)) {
               var10Lifetime1 = ByteStorage.incomingPacket.readUnsignedShort((byte) -104);
               ByteStorage.incomingPacket.position = 0;
               if (ConsoleTokenCursor.receivePacketBytes(-83, var10Lifetime1)) {
-                var11 = br.field_b.length;
+                var11 = CampaignLookupSupport.field_b.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  br.field_b[var12] = ByteStorage.incomingPacket.readNullCircumfixedString((byte) 121);
+                  CampaignLookupSupport.field_b[var12] = ByteStorage.incomingPacket.readNullCircumfixedString((byte) 121);
                 }
-                dj.a((byte) -128);
+                TextSplitSupport.a((byte) -128);
                 RasterViewportResizeHandler.field_b = false;
                 stackIn_44_0 = 100 + var11;
                 return stackIn_44_0;
               }
             }
           }
-          if (da.field_b == ov.connectionState &&
+          if (LocalAccountSupport.field_b == SpectateRoomRequestSupport.connectionState &&
             AgeValidator.isPacketPayloadReady(2)) {
             if (MusicCrossfadeStream.deliveredOpcode == 255) {
               var9_ref_String = ByteStorage.incomingPacket.readOptionalString((byte) -85);
               if (var9_ref_String != null) {
-                ph.a(var9_ref_String, CombatEvent.d((byte) -5), false);
+                AccountNameCharacterSupport.a(var9_ref_String, CombatEvent.d((byte) -5), false);
               }
             } else {
               BitmapTextWidgetPainter.field_r = ByteStorage.incomingPacket.readNullTerminatedString(1);
             }
-            dj.a((byte) -127);
+            TextSplitSupport.a((byte) -127);
             RasterViewportResizeHandler.field_b = false;
             stackIn_53_0 = MusicCrossfadeStream.deliveredOpcode;
             return stackIn_53_0;
@@ -181,8 +181,8 @@ abstract class CacheEntry extends DualLinkedNode {
               stackIn_62_0 = 249;
               return stackIn_62_0;
             }
-            var9Lifetime3 = rn.field_d;
-            rn.field_d = AiPlanningStrategy.field_c;
+            var9Lifetime3 = ProceduralMapSupport.field_d;
+            ProceduralMapSupport.field_d = AiPlanningStrategy.field_c;
             RasterViewportResizeHandler.field_b = true;
             AiPlanningStrategy.field_c = var9Lifetime3;
           }

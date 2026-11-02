@@ -43,8 +43,8 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
     int playerId;
     private int field_s;
 
-    public static void a(int param0) {
-        if (param0 != -27464) {
+    public static void releaseStatics(int obfuscationGuard) {
+        if (obfuscationGuard != -27464) {
           AiPlanner.b(-7, -126, -85, -67);
         }
         field_R = null;
@@ -87,10 +87,10 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                 var8_int == 51 ||
                 52 == var8_int ||
                 53 == var8_int) && var7.occupant != null) {
-                if (uc.spellDefinitions[spellId][6] > var7.occupant.strength) {
+                if (SpellDefinitionTable.spellDefinitions[spellId][6] > var7.occupant.strength) {
                   stackIn_64_0 = (float)var7.occupant.strength;
                 } else {
-                  stackIn_64_0 = (float)uc.spellDefinitions[spellId][6];
+                  stackIn_64_0 = (float)SpellDefinitionTable.spellDefinitions[spellId][6];
                 }
                 var8 = stackIn_64_0;
                 stackIn_66_0 = var5;
@@ -180,7 +180,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
     }
 
-    private final void a(int param0, boolean param1, int param2) {
+    private final void addStructureCaptureInfluence(int tileIndex, boolean guard, int sign) {
         int var8 = 0;
         float stackIn_7_0 = 0.0f;
         float var4;
@@ -190,10 +190,10 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         int var9;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var4 = 0.0f;
-        var5 = param0 % this.battlefield.mapWidth;
-        var6 = param0 / this.battlefield.mapWidth;
-        var7 = this.battlefield.tiles[param0];
-        if (!var7.isStructure(param1)) {
+        var5 = tileIndex % this.battlefield.mapWidth;
+        var6 = tileIndex / this.battlefield.mapWidth;
+        var7 = this.battlefield.tiles[tileIndex];
+        if (!var7.isStructure(guard)) {
           return;
         }
         if (var7.isPortal(-60)) {
@@ -221,10 +221,10 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
         if (0.0f < var4) {
           for (var8 = 0; var8 < 7; var8++) {
-            this.influenceMap.a(-101, var6, (float)param2 * var4, var8, 9, this.field_n, var5);
+            this.influenceMap.a(-101, var6, (float)sign * var4, var8, 9, this.field_n, var5);
           }
         }
-        this.field_v[param0] = (float)param2 * var4;
+        this.field_v[tileIndex] = (float)sign * var4;
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4) {
@@ -301,9 +301,9 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           if (0 != this.field_t % 2) {
             return false;
           }
-          vi.monotonicMillis(-128);
+          MonotonicClockSupport.monotonicMillis(-128);
           this.c((byte) -117);
-          vi.monotonicMillis(111);
+          MonotonicClockSupport.monotonicMillis(111);
           return false;
         }
         var2 = this.field_k;
@@ -476,10 +476,10 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         int var2Lifetime2;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.field_o == 0) {
-          this.a((byte) 108, this.field_A);
-          this.a((byte) 111, this.field_K);
+          this.clearFloatGrid((byte) 108, this.field_A);
+          this.clearFloatGrid((byte) 111, this.field_K);
           for (var2 = 0; this.field_n.length > var2; var2++) {
-            this.a((byte) 73, this.field_n[var2]);
+            this.clearFloatGrid((byte) 73, this.field_n[var2]);
           }
           this.field_o = this.field_o + 1;
           this.field_x = 0;
@@ -557,7 +557,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
               var10 = this.battlefield.tiles[var3];
               var11 = var10;
               var11 = var10;
-              this.a(var3, false, 1);
+              this.addStructureCaptureInfluence(var3, false, 1);
               if (!var10.isPortal(-16)) {
               }
             }
@@ -654,7 +654,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           if (obfuscationGuard != -2) {
             field_G = (BitmapFont) null;
           }
-          this.a(80, unit);
+          this.activateUnitPlanner(80, unit);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ej.A(" + (unit != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
@@ -692,8 +692,8 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         if (param2 != 18) {
           this.f(22);
         }
-        for (var6 = 0; var6 < fs.field_b.length; var6++) {
-          fs.field_b[var6] = 0.0f;
+        for (var6 = 0; var6 < PrivateTextRecipientSupport.field_b.length; var6++) {
+          PrivateTextRecipientSupport.field_b[var6] = 0.0f;
         }
         var7_int = param0;
         if (var7_int != 0) {
@@ -752,7 +752,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           var13 = 0;
           var6Lifetime1 = var13;
           while (java.lang.reflect.Array.getLength(var5) > var13) {
-            fs.field_b[var13] = ((float[]) (var5))[var13];
+            PrivateTextRecipientSupport.field_b[var13] = ((float[]) (var5))[var13];
             var13++;
           }
         }
@@ -772,7 +772,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         var4 = 0.0f;
         var5 = 0;
         var6 = WhirlpoolHasher.unitDefinitions[unitType][0];
-        var4 = var4 + this.weights[43] * (this.field_K[8][tileIndex] * (float)fk.matchupDamagePercent[var6][0]);
+        var4 = var4 + this.weights[43] * (this.field_K[8][tileIndex] * (float)DropdownSelectorPainter.matchupDamagePercent[var6][0]);
         if (var5 != 0) {
           System.out.println("Analyzing " + ScrollContainer.unitDisplayNames[unitType] + " base score " + var4);
         }
@@ -785,13 +785,13 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           var10 = var10 + this.field_K[var11][tileIndex];
           if (var11 != 4 ||
             c.a(unitType, (byte) -69)) {
-            var7 = var7 + this.field_n[var6][var11][tileIndex] * (float)fk.matchupDamagePercent[var6][var11] * this.weights[28];
+            var7 = var7 + this.field_n[var6][var11][tileIndex] * (float)DropdownSelectorPainter.matchupDamagePercent[var6][var11] * this.weights[28];
           }
           if (var6 != 4 ||
             4 == var11 ||
             2 == var11 ||
             var11 == 3) {
-            var8 = var8 + this.field_K[var11][tileIndex] * (float)fk.matchupDamagePercent[var11][var6] * this.weights[29];
+            var8 = var8 + this.field_K[var11][tileIndex] * (float)DropdownSelectorPainter.matchupDamagePercent[var11][var6] * this.weights[29];
           }
         }
         if (var5 != 0) {
@@ -817,7 +817,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
         var2 = this.battlefield.getUnitAt(this.field_y, true, this.field_E);
         if (var2 != null) {
-          this.a(80, var2);
+          this.activateUnitPlanner(80, var2);
           this.b(3, param0 + 24240);
         } else {
           if (this.field_t > this.field_B + 100) {
@@ -851,7 +851,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                 break;
               }
               if (var5 == 0) {
-                this.a(param0[var4_int], false, param1);
+                this.addStructureCaptureInfluence(param0[var4_int], false, param1);
               }
             }
           }
@@ -874,7 +874,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
     }
 
-    private final void a(byte param0, float[][] param1) {
+    private final void clearFloatGrid(byte obfuscationGuard, float[][] grid) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -887,10 +887,10 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var3_int = 0;
-          var4 = -13 % ((30 - param0) / 40);
-          while (param1.length > var3_int) {
-            for (var5 = 0; param1[var3_int].length > var5; var5++) {
-              param1[var3_int][var5] = 0.0f;
+          var4 = -13 % ((30 - obfuscationGuard) / 40);
+          while (grid.length > var3_int) {
+            for (var5 = 0; grid[var3_int].length > var5; var5++) {
+              grid[var3_int][var5] = 0.0f;
             }
             var3_int++;
           }
@@ -899,8 +899,8 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_10_0 = var3;
-          stackIn_10_1 = new StringBuilder().append("ej.Q(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_10_1 = new StringBuilder().append("ej.Q(").append(obfuscationGuard).append(',');
+          if (grid == null) {
             stackIn_11_2 = "null";
           } else {
             stackIn_11_2 = "{...}";
@@ -921,7 +921,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           if (!obfuscationGuard) {
             field_G = (BitmapFont) null;
           }
-          var2_int = de.readTieredSignedInt(-108, packet, 4, 14, 30, 20);
+          var2_int = SpellCastErrorSupport.readTieredSignedInt(-108, packet, 4, 14, 30, 20);
           stackIn_3_0 = var2_int;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -938,7 +938,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
     }
 
-    final void c(Unit param0, byte param1) {
+    final void reevaluateUnitActions(Unit unit, byte obfuscationGuard) {
         AiUnitPlanner var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -949,10 +949,10 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         RuntimeException var3_ref = null;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4 = 123 % ((param1 - 53) / 41);
+          var4 = 123 % ((obfuscationGuard - 53) / 41);
           var3 = (AiUnitPlanner) (this.unitPlanners.first((byte) 95));
           while (var3 != null) {
-            if (var3.unit == param0) {
+            if (var3.unit == unit) {
               var3.evaluateActions(false, (byte) -124);
               return;
             }
@@ -964,12 +964,12 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           var3_ref = decompiledCaughtException;
           stackIn_11_0 = var3_ref;
           stackIn_11_1 = new StringBuilder().append("ej.EA(");
-          if (param0 == null) {
+          if (unit == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -1026,7 +1026,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                         var8_int != 47 &&
                         48 != var8_int) {
                         if (49 == var8_int) {
-                          var6 = uc.spellDefinitions[var4][7];
+                          var6 = SpellDefinitionTable.spellDefinitions[var4][7];
                           var8_int = var6;
                           if (-var6 + this.battlefield.mapHeight <= var8_int) {
                             break regionExit1;
@@ -1051,7 +1051,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                           break regionExit5;
                         }
                         if (50 == var8_int) {
-                          var6 = uc.spellDefinitions[var4][7];
+                          var6 = SpellDefinitionTable.spellDefinitions[var4][7];
                           var8_int = var6;
                           if (-var6 + this.battlefield.mapHeight <= var8_int) {
                             break regionExit1;
@@ -1075,11 +1075,11 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
                           return;
                         }
                       }
-                      var6 = uc.spellDefinitions[var4][7];
+                      var6 = SpellDefinitionTable.spellDefinitions[var4][7];
                       var8_int = var6;
                       break regionExit2;
                     }
-                    var6 = uc.spellDefinitions[var4][7];
+                    var6 = SpellDefinitionTable.spellDefinitions[var4][7];
                     var8_int = var6;
                     if (-var6 + this.battlefield.mapHeight <= var8_int) {
                       break regionExit1;
@@ -1177,7 +1177,7 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         return;
     }
 
-    final void a(int param0, Unit param1) {
+    final void activateUnitPlanner(int obfuscationGuard, Unit unit) {
         AiUnitPlanner var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -1185,22 +1185,22 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          if (param1 == null) {
+          if (unit == null) {
             return;
           }
-          if (this.playerId != param1.ownerPlayer) {
+          if (this.playerId != unit.ownerPlayer) {
             return;
           }
-          if (param1.aiPlanner != null &&
-            this == param1.aiPlanner.planner) {
+          if (unit.aiPlanner != null &&
+            this == unit.aiPlanner.planner) {
             return;
           }
-          var3 = this.registerUnitPlanner(param1, (byte) -98);
-          var3.refreshDecisionPriority(param0 ^ 14);
-          if (param0 != 80) {
-            AiPlanner.a(-94);
+          var3 = this.registerUnitPlanner(unit, (byte) -98);
+          var3.refreshDecisionPriority(obfuscationGuard ^ 14);
+          if (obfuscationGuard != 80) {
+            AiPlanner.releaseStatics(-94);
           }
-          this.influenceMap.a(this.field_A, 1, param0 ^ -19465, var3.unit);
+          this.influenceMap.a(this.field_A, 1, obfuscationGuard ^ -19465, var3.unit);
           if (6 == this.field_k) {
             this.b(3, 4);
             this.field_M = (AiUnitPlanner) (this.unitPlanners.startForwardAt(true, var3));
@@ -1211,8 +1211,8 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
           stackIn_15_0 = var3_ref;
-          stackIn_15_1 = new StringBuilder().append("ej.W(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_15_1 = new StringBuilder().append("ej.W(").append(obfuscationGuard).append(',');
+          if (unit == null) {
             stackIn_16_2 = "null";
           } else {
             stackIn_16_2 = "{...}";
@@ -1309,16 +1309,16 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         return;
     }
 
-    final void a(byte param0) {
+    final void resetUnitPlanners(byte obfuscationGuard) {
         int var2_int = 0;
         Unit var2;
         Unit var3;
         int var4;
         var4 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        this.b(0, param0 + 127);
+        this.b(0, obfuscationGuard + 127);
         this.field_q = 0;
-        this.field_H.clear(param0 ^ -28);
-        this.field_O.clear(param0 ^ -42);
+        this.field_H.clear(obfuscationGuard ^ -28);
+        this.field_O.clear(obfuscationGuard ^ -42);
         for (var2_int = 0; var2_int < this.battlefield.unitsByPlayer.length; var2_int++) {
           var3 = (Unit) (this.battlefield.unitsByPlayer[var2_int].first((byte) 112));
           while (var3 != null) {
@@ -1326,19 +1326,19 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
             var3 = (Unit) (this.battlefield.unitsByPlayer[var2_int].next((byte) 123));
           }
         }
-        if (param0 != -123) {
+        if (obfuscationGuard != -123) {
           this.battlefield = (Battlefield) null;
         }
         var2 = (Unit) (this.battlefield.unitsByPlayer[this.playerId].first((byte) 99));
         while (var2 != null) {
           if (var2.aiPlanner != null &&
             this != var2.aiPlanner.planner) {
-            var2.aiPlanner.unlink(param0 ^ -11);
+            var2.aiPlanner.unlink(obfuscationGuard ^ -11);
             var2.aiPlanner = null;
           }
           if (var2.aiPlanner == null) {
             var2.aiPlanner = new AiUnitPlanner(this, var2);
-            this.unitPlanners.addFirst(param0 + 873, var2.aiPlanner);
+            this.unitPlanners.addFirst(obfuscationGuard + 873, var2.aiPlanner);
           }
           var2 = (Unit) (this.battlefield.unitsByPlayer[this.playerId].next((byte) 123));
         }
@@ -1462,16 +1462,16 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
             if (var37.canCaptureStructures(-21428)) {
               var4 = var4 - (double)(this.weights[22] * 2.0f / (float)this.battlefield.playerCount);
             } else {
-              if (!var37.f((byte) -125)) {
-                if (var37.s(param0 + 127)) {
+              if (!var37.hasUnitDefinitionFlag8((byte) -125)) {
+                if (var37.hasUnitDefinitionFlag32(param0 + 127)) {
                   var10 = var10 - (double)this.weights[18];
                 }
               } else {
                 var6 = var6 - (double)this.weights[14];
               }
             }
-            if (!var37.p((byte) -113) &&
-              !var37.d((byte) 105)) {
+            if (!var37.hasUnitDefinitionFlag2((byte) -113) &&
+              !var37.hasUnitDefinitionFlag16((byte) 105)) {
               var8 = var8 + (double)this.weights[27];
             } else {
               var8 = var8 - (double)this.weights[16];
@@ -1614,22 +1614,22 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
           field_G = (BitmapFont) null;
         }
         if (null != Spell.quickChatHelpDialog &&
-          rs.keyCode == 13) {
+          PowerOfTwoSupport.keyCode == 13) {
           Spell.quickChatHelpDialog = null;
           return true;
         }
-        if (!hf.textChatActive) {
+        if (!ClientStateChecksumSupport.textChatActive) {
           if (!BattleTutorial.quickChatMenuVisible &&
-            rs.keyCode != 9 &&
-            rs.keyCode != 10 &&
-            rs.keyCode != 11) {
-            if (80 != rs.keyCode) {
+            PowerOfTwoSupport.keyCode != 9 &&
+            PowerOfTwoSupport.keyCode != 10 &&
+            PowerOfTwoSupport.keyCode != 11) {
+            if (80 != PowerOfTwoSupport.keyCode) {
               return false;
             }
             if (!MusicPatchPcmStream.e(-1)) {
               return false;
             }
-            hf.textChatActive = true;
+            ClientStateChecksumSupport.textChatActive = true;
             return true;
           }
           return cd.a(param0, param1, false);
@@ -1639,14 +1639,14 @@ final class AiPlanner extends IntrusiveNode implements UnitObserver {
         }
         stackIn_22_0 = (!ProgressMessageDialog.b(param3, (byte) -59, param0)) ? 0 : 1;
         var4 = stackIn_22_0;
-        if (80 == rs.keyCode ||
-          84 == rs.keyCode) {
-          hf.textChatActive = false;
+        if (80 == PowerOfTwoSupport.keyCode ||
+          84 == PowerOfTwoSupport.keyCode) {
+          ClientStateChecksumSupport.textChatActive = false;
           var4 = 1;
         }
-        if (rs.keyCode == 13) {
+        if (PowerOfTwoSupport.keyCode == 13) {
           FullscreenFocusCanvas.clearChatText(8445);
-          hf.textChatActive = false;
+          ClientStateChecksumSupport.textChatActive = false;
           var4 = 1;
         }
         return var4 != 0;

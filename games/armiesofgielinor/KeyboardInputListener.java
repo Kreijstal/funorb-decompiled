@@ -53,7 +53,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         RuntimeException caughtFailure = null;
         try {
           if (QuickChatCategory.keyboardListener != null) {
-            fc.keyboardIdleTicks = 0;
+            EmptyWidgetPainter.keyboardIdleTicks = 0;
             mappedKeyCode = event.getKeyCode();
             if (mappedKeyCode >= 0 &&
               mappedKeyCode < ValidationStatusIcon.awtToClientKeyCodes.length) {
@@ -99,7 +99,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
               AiActionCandidate.a((char) characterCode, 16150)) {
               nextEventIndex = 127 & ProgressDialog.keyEventWriteIndex + 1;
               if (nextEventIndex != SummonAction.keyEventReadIndex) {
-                gt.keyEventCodes[ProgressDialog.keyEventWriteIndex] = -1;
+                LocalAccountNameSupport.keyEventCodes[ProgressDialog.keyEventWriteIndex] = -1;
                 SpellCastAction.keyEventCharacters[ProgressDialog.keyEventWriteIndex] = (char)characterCode;
                 ProgressDialog.keyEventWriteIndex = nextEventIndex;
               }
@@ -122,7 +122,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
         int modifiers;
         try {
           if (null != QuickChatCategory.keyboardListener) {
-            fc.keyboardIdleTicks = 0;
+            EmptyWidgetPainter.keyboardIdleTicks = 0;
             mappedKeyCode = event.getKeyCode();
             if (0 <= mappedKeyCode &&
               ValidationStatusIcon.awtToClientKeyCodes.length > mappedKeyCode) {
@@ -144,7 +144,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             if (mappedKeyCode >= 0) {
               nextEventIndex = 127 & ProgressDialog.keyEventWriteIndex + 1;
               if (nextEventIndex != SummonAction.keyEventReadIndex) {
-                gt.keyEventCodes[ProgressDialog.keyEventWriteIndex] = mappedKeyCode;
+                LocalAccountNameSupport.keyEventCodes[ProgressDialog.keyEventWriteIndex] = mappedKeyCode;
                 SpellCastAction.keyEventCharacters[ProgressDialog.keyEventWriteIndex] = (char)0;
                 ProgressDialog.keyEventWriteIndex = nextEventIndex;
               }
@@ -199,7 +199,7 @@ final class KeyboardInputListener implements java.awt.event.KeyListener, java.aw
             if (var2_int >= name.length()) {
               return true;
             }
-            if (ph.isAccountNameCharacter(-48, name.charAt(var2_int))) {
+            if (AccountNameCharacterSupport.isAccountNameCharacter(-48, name.charAt(var2_int))) {
               var2_int++;
               continue;
             }

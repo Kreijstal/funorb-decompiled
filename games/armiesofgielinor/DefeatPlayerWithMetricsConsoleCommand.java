@@ -17,7 +17,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
           if (obfuscationGuard != -24872) {
             DefeatPlayerWithMetricsConsoleCommand.g(125);
           }
-          result = new ConsoleValue(sq.defeatPlayerWithMetricsForConsole(arguments[2].asInt(obfuscationGuard ^ -24870), (byte) -2, arguments[0].asInt(2), arguments[1].asInt(2)));
+          result = new ConsoleValue(ToastMessage.defeatPlayerWithMetricsForConsole(arguments[2].asInt(obfuscationGuard ^ -24870), (byte) -2, arguments[0].asInt(2), arguments[1].asInt(2)));
           return result;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;
@@ -67,8 +67,8 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
           NumericDateInputWidget.field_P.pixels = SoftwareRaster.pixels;
           if (param6) {
             if (ConsolePanel.field_k == null ||
-              t.field_f != param7) {
-              t.field_f = param7;
+              ReloadPageSupport.field_f != param7) {
+              ReloadPageSupport.field_f = param7;
               ConsolePanel.field_k = RegionAnchor.field_m[0].copySprite();
               var19 = ConsolePanel.field_k.pixels;
               var18 = var19;
@@ -99,8 +99,8 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
               RegionAnchor.field_m[1].drawQuarterSize(param3, param2);
             }
           } else {
-            DropTargetWidgetContainer.field_J.b();
-            SoftwareRaster.b();
+            DropTargetWidgetContainer.field_J.bindAsRasterTarget();
+            SoftwareRaster.clearPixels();
             param9.drawTransparent(0, 0);
             if (!param1) {
               if (param8) {
@@ -108,7 +108,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
                 RegionAnchor.field_m[2].d(0, 0, 56, 56, 228);
               } else {
                 if (!param4) {
-                  NumericDateInputWidget.field_P.b();
+                  NumericDateInputWidget.field_P.bindAsRasterTarget();
                   DropTargetWidgetContainer.field_J.drawHalfSize(param3, param2);
                   return;
                 }
@@ -117,7 +117,7 @@ final class DefeatPlayerWithMetricsConsoleCommand extends ConsoleCommand {
             } else {
               RegionAnchor.field_m[1].drawQuarterSize(0, 0);
             }
-            NumericDateInputWidget.field_P.b();
+            NumericDateInputWidget.field_P.bindAsRasterTarget();
             DropTargetWidgetContainer.field_J.drawHalfSize(param3, param2);
           }
           return;

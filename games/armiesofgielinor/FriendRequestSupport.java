@@ -1,0 +1,176 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class FriendRequestSupport {
+    static String field_a;
+    static int[][] field_c;
+    static String field_g;
+    static String field_d;
+    static String field_e;
+    static ResourceArchive field_b;
+    static int[] field_f;
+
+    final static void a(int param0, String param1) {
+        int var7 = 0;
+        int var8 = 0;
+        int var2_int = AiPlanningStrategy.pointerX;
+        int var3 = ko.pointerY;
+        int var4 = PasswordLoginCredentials.field_h.font.getLineCount(param1, 500);
+        int var5 = 6 + PasswordLoginCredentials.field_h.font.getWrappedWidth(param1, 500);
+        int var6 = 2 + var4 * jn.field_d;
+        if (param0 >= -105) {
+          return;
+        }
+        try {
+          var7 = ArchiveLoadSequence.a(var2_int, 12, var5, -1);
+          var8 = PasswordLengthSupport.a(var6, 0, var3, 20);
+          SoftwareRaster.drawRectangleOutline(var7, var8, var5, var6, 0);
+          SoftwareRaster.fillRectangle(1 + var7, var8 + 1, var5 - 2, -2 + var6, 16777088);
+          PasswordLoginCredentials.field_h.font.drawParagraph(param1, 3 + var7, -PasswordLoginCredentials.field_h.font.maxAscent + is.field_b + (var8 + 1), 500, 1000, 0, -1, 0, 0, jn.field_d);
+        } catch (RuntimeException runtimeException) {
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "op.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static void a(int param0, int param1, NineSliceFrame param2, NineSliceFrame param3, int param4, int param5) {
+        try {
+          LoginForm.field_E = param1;
+          QuickChatPhrase.field_w = param0;
+          ed.field_d = param3;
+          FullscreenFocusCanvas.field_b = param5;
+          int var6_int = -13 / ((53 - param4) / 48);
+          SpectateRoomRequestSupport.field_m = param2;
+        } catch (RuntimeException runtimeException) {
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "op.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+        }
+    }
+
+    final static void a(int param0, boolean param1) {
+        int var3 = 0;
+        NineSliceFrame var4 = null;
+        PowerOfTwoSupport var5 = null;
+        TerrainScatterSupport var6 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
+        try {
+          var5 = (PowerOfTwoSupport) (PrintVictoryConditionsConsoleCommand.field_F.first((byte) 94));
+          while (var5 != null) {
+            IntrusiveNode.a(param0, var5, (byte) 105);
+            var5 = (PowerOfTwoSupport) (PrintVictoryConditionsConsoleCommand.field_F.next((byte) 123));
+          }
+          if (!param1) {
+            var4 = (NineSliceFrame) null;
+            FriendRequestSupport.a(108, -59, (NineSliceFrame) null, (NineSliceFrame) null, -23, 0);
+          }
+          var6 = (TerrainScatterSupport) (StateChangeMarker.field_t.first((byte) 112));
+          while (var6 != null) {
+            s.a(127, param0, var6);
+            var6 = (TerrainScatterSupport) (StateChangeMarker.field_t.next((byte) 123));
+          }
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) var2), "op.C(" + param0 + ',' + param1 + ')');
+        }
+    }
+
+    final static String requestAddFriend(int obfuscationGuard, String name, int packetOpcode) {
+        String stackIn_2_0 = null;
+        String stackIn_6_0 = null;
+        String stackIn_9_0 = null;
+        String stackIn_13_0 = null;
+        String stackIn_18_0 = null;
+        String stackIn_21_0 = null;
+        String stackIn_24_0 = null;
+        String stackIn_27_0 = null;
+        Object stackIn_29_0 = null;
+        RuntimeException stackIn_32_0 = null;
+        StringBuilder stackIn_32_1 = null;
+        String stackIn_33_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        int payloadStart = 0;
+        CipherPacketBuffer packet = null;
+        CharSequence nameCharacters = null;
+        try {
+          nameCharacters = (CharSequence) ((Object) name);
+          if (!KeyboardInputListener.isValidSocialTargetName((byte) -18, nameCharacters)) {
+            stackIn_2_0 = SectorCacheStore.field_d;
+            return stackIn_2_0;
+          }
+          if (2 != FloorModSupport.socialListState) {
+            stackIn_6_0 = GameAppletShell.field_c;
+            return stackIn_6_0;
+          }
+          if (LocalAccountNameSupport.isLocalAccountName(name, (byte) -89)) {
+            stackIn_9_0 = MoveAttackRequest.field_F;
+            return stackIn_9_0;
+          }
+          if (FriendLookupSupport.isFriend(obfuscationGuard ^ 58, name)) {
+            stackIn_13_0 = EmailCheckResult.a(4800, ReportAbuseDialog.field_Ob, new String[]{name});
+            return stackIn_13_0;
+          }
+          if (TextSplitSupport.friendCount >= 100 &&
+            LoginForm.memberEntitlementValue <= 0) {
+            stackIn_18_0 = MapLayout.field_m;
+            return stackIn_18_0;
+          }
+          if (TextSplitSupport.friendCount >= 200) {
+            stackIn_21_0 = MapLayout.field_m;
+            return stackIn_21_0;
+          }
+          if (IndexedSpriteBase.isIgnoredAccount(name, -3404)) {
+            stackIn_24_0 = EmailCheckResult.a(4800, ProjectileEffect.field_a, new String[]{name});
+            return stackIn_24_0;
+          }
+          packet = EmailValidator.outgoingPacket;
+          packet.writeCipheredOpcode(32161, packetOpcode);
+          packet.position = packet.position + 1;
+          payloadStart = packet.position;
+          packet.writeByte(1, 0);
+          if (obfuscationGuard != 20) {
+            stackIn_27_0 = (String) null;
+            return stackIn_27_0;
+          }
+          packet.writeNullTerminatedString(name, 13851);
+          packet.writeByteLengthPrefix(-payloadStart + packet.position, 5930);
+          stackIn_29_0 = null;
+          return (String) (stackIn_29_0);
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_32_0 = var3;
+          stackIn_32_1 = new StringBuilder().append("op.B(").append(obfuscationGuard).append(',');
+          if (name == null) {
+            stackIn_33_2 = "null";
+          } else {
+            stackIn_33_2 = "{...}";
+          }
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(packetOpcode).append(')').toString());
+        }
+    }
+
+    public static void releaseStatics(boolean obfuscationGuard) {
+        field_d = null;
+        field_f = null;
+        field_g = null;
+        field_a = null;
+        if (obfuscationGuard) {
+          field_c = (int[][]) null;
+          field_e = null;
+          field_b = null;
+          return;
+        }
+    }
+
+    static {
+        field_g = "Need to move others first";
+        field_c = new int[][]{new int[]{2718708, 13182994, 7325724, 13094936, 16351443, 39065, 11545598, 14322432}, new int[]{37119, 15400960, 1441791, 16737792, 1278598, 16763904, 10712575, 10240578}};
+        field_a = "This is <%0>'s RuneScape clan if they have one.";
+        field_e = "Ignore";
+        field_d = "Security";
+        field_f = new int[]{2, 17, 18, 36, 37, 38, 6, 43};
+    }
+}

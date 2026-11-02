@@ -1,0 +1,47 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ResourceClientErrorSupport {
+    static String field_d;
+    static int field_a;
+    static IndexedSprite[] field_e;
+    static String field_c;
+    static String field_b;
+
+    final static void resetResourceClientErrors(byte obfuscationGuard) {
+        ScrollWidgetContainer.field_T.errorCount = 0;
+        ScrollWidgetContainer.field_T.errorCode = 0;
+        if (obfuscationGuard != -8) {
+          field_b = (String) null;
+        }
+    }
+
+    final static boolean b(int param0) {
+        if (param0 != 0) {
+          field_e = (IndexedSprite[]) null;
+          return RadialSummonMenu.field_e;
+        }
+        return RadialSummonMenu.field_e;
+    }
+
+    public static void releaseStatics(int obfuscationGuard) {
+        field_d = null;
+        if (obfuscationGuard == 13916) {
+          field_c = null;
+          field_e = null;
+          field_b = null;
+          return;
+        }
+        ResourceClientErrorSupport.resetResourceClientErrors((byte) 83);
+        field_c = null;
+        field_e = null;
+        field_b = null;
+    }
+
+    static {
+        field_d = "Zamorak Returns Highscores";
+        field_b = "This unit is already about to clone itself.";
+        field_c = "Back";
+        field_a = 10;
+    }
+}

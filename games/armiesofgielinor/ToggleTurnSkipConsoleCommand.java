@@ -55,7 +55,7 @@ final class ToggleTurnSkipConsoleCommand extends ConsoleCommand {
           if (obfuscationGuard != -24872) {
             ToggleTurnSkipConsoleCommand.releaseStatics(-45);
           }
-          result = new ConsoleValue(ti.toggleAutomaticTurnSkipping((byte) -120));
+          result = new ConsoleValue(TurnSkipToggleSupport.toggleAutomaticTurnSkipping((byte) -120));
           return result;
         } catch (java.lang.RuntimeException caughtParameter) {
           caughtFailure = caughtParameter;

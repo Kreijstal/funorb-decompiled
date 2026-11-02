@@ -301,7 +301,7 @@ final class Battlefield {
           } else {
             var5_ref_jd = (Unit) (this.unitsByPlayer[this.currentPlayer].first((byte) 102));
             while (var5_ref_jd != null) {
-              var5_ref_jd.n((byte) -42);
+              var5_ref_jd.queueTurnEffectEvents((byte) -42);
               var5_ref_jd = (Unit) (this.unitsByPlayer[this.currentPlayer].next((byte) 123));
               if (var8 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -597,7 +597,7 @@ final class Battlefield {
             }
             var6 = (Unit) (((NodeDeque) (Object) stackIn_50_0).first((byte) 119));
             while (var6 != null) {
-              var6.n((byte) -42);
+              var6.queueTurnEffectEvents((byte) -42);
               var6 = (Unit) (this.unitsByPlayer[(1 + this.currentPlayer) % this.playerCount].next((byte) 123));
             }
             var6Lifetime1 = (Unit) (this.unitsByPlayer[(this.currentPlayer + 1) % this.playerCount].first((byte) 95));
@@ -619,13 +619,13 @@ final class Battlefield {
           }
           decompiledFrameRemainder1 = (param0);
           if ((decompiledFrameRemainder1) &&
-            (decompiledFrameRemainder1 = !(!this.i(0)))) {
+            (decompiledFrameRemainder1 = !(!this.isMatchLimitReached(0)))) {
             stackIn_42_0 = ~var4;
             stackIn_42_1 = ~this.currentPlayer;
           }
         }
         if ((decompiledFrameRemainder1) && (decompiledFrameCompleted0) && (stackIn_42_0 < stackIn_42_1 ||
-          this.c((byte) 103))) {
+          this.haveAllPlayersReachedTurnLimit((byte) 103))) {
           this.field_qb = true;
           return null;
         }
@@ -698,14 +698,14 @@ final class Battlefield {
             return true;
           }
           if (~var6 == ~var5_int) {
-            var7 = this.i(param3, -12710);
-            var8 = this.i(param1, param2 + 11397);
+            var7 = this.getCollectedManaScore(param3, -12710);
+            var8 = this.getCollectedManaScore(param1, param2 + 11397);
             if (var8 >= var7) {
               if (~var8 != ~var7) {
                 return false;
               }
-              var9 = this.b((byte) 31, param3);
-              var10 = this.b((byte) 31, param1);
+              var9 = this.computeTeamStructureScore((byte) 31, param3);
+              var10 = this.computeTeamStructureScore((byte) 31, param1);
               if (var10 < var9) {
                 return true;
               }
@@ -909,7 +909,7 @@ final class Battlefield {
         }
     }
 
-    private final boolean i(int param0) {
+    private final boolean isMatchLimitReached(int obfuscationGuard) {
         int var2;
         int var3;
         int stackIn_14_0 = 0;
@@ -917,7 +917,7 @@ final class Battlefield {
         if (!this.field_V) {
           return false;
         }
-        var2 = param0;
+        var2 = obfuscationGuard;
         while (var2 < this.teamCount) {
           stackIn_14_0 = var2;
           if (var3 != 0) {
@@ -929,21 +929,21 @@ final class Battlefield {
           if (var2 >= this.teamManaCollected.length) {
             return false;
           }
-          if (this.i(var2, param0 - 12710) >= this.collectedManaTarget) {
+          if (this.getCollectedManaScore(var2, obfuscationGuard - 12710) >= this.collectedManaTarget) {
             return true;
           }
           var2++;
         }
-        return this.c((byte) 51);
+        return this.haveAllPlayersReachedTurnLimit((byte) 51);
     }
 
-    private final int f(byte param0) {
+    private final int computeManaTarget(byte obfuscationGuard) {
         int var2;
         int var3;
         int var4;
         if (this.mapStructureTotals != null &&
           this.mapStructureTotals.length == 3) {
-          if (param0 > -65) {
+          if (obfuscationGuard > -65) {
             return 72;
           }
           var2 = 2 * this.turnLimit / 3;
@@ -960,7 +960,7 @@ final class Battlefield {
         return 0;
     }
 
-    final boolean a(int param0, int param1, int param2, Unit param3) {
+    final boolean hasEnemyOccupant(int tileY, int obfuscationGuard, int tileX, Unit unit) {
         MapTile var5 = null;
         RuntimeException var5_ref = null;
         RuntimeException stackIn_20_0 = null;
@@ -968,20 +968,20 @@ final class Battlefield {
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param2 >= 0 &&
-            param0 >= 0 &&
-            param2 < this.mapWidth) {
-            if (this.mapHeight < param0) {
+          if (tileX >= 0 &&
+            tileY >= 0 &&
+            tileX < this.mapWidth) {
+            if (this.mapHeight < tileY) {
               return false;
             }
-            if (param1 != -26633) {
+            if (obfuscationGuard != -26633) {
               this.field_N = (int[]) null;
             }
-            var5 = this.tiles[param2 + this.mapWidth * param0];
+            var5 = this.tiles[tileX + this.mapWidth * tileY];
             if (null == var5.occupant) {
               return false;
             }
-            if (!this.arePlayersAllied(var5.occupant.ownerPlayer, -16985, param3.ownerPlayer)) {
+            if (!this.arePlayersAllied(var5.occupant.ownerPlayer, -16985, unit.ownerPlayer)) {
               return true;
             }
             return false;
@@ -991,8 +991,8 @@ final class Battlefield {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
           stackIn_20_0 = var5_ref;
-          stackIn_20_1 = new StringBuilder().append("ha.JD(").append(param0).append(',').append(param1).append(',').append(param2).append(',');
-          if (param3 == null) {
+          stackIn_20_1 = new StringBuilder().append("ha.JD(").append(tileY).append(',').append(obfuscationGuard).append(',').append(tileX).append(',');
+          if (unit == null) {
             stackIn_21_2 = "null";
           } else {
             stackIn_21_2 = "{...}";
@@ -1001,21 +1001,21 @@ final class Battlefield {
         }
     }
 
-    final void a(int param0, MapTile param1) {
+    final void consumeTileCorpse(int obfuscationGuard, MapTile tile) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (null != param1.occupant &&
-            param1.hasCorpse(-32)) {
-            param1.clearCorpse(param0 + 114);
-            if (param1.occupant.maximumStrength < 99) {
-              this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(param1.occupant, 4)));
+          if (null != tile.occupant &&
+            tile.hasCorpse(-32)) {
+            tile.clearCorpse(obfuscationGuard + 114);
+            if (tile.occupant.maximumStrength < 99) {
+              this.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new TurnEffectEvent(tile.occupant, 4)));
             }
           }
-          if (param0 != -100) {
+          if (obfuscationGuard != -100) {
             this.unitsByPlayer = (NodeDeque[]) null;
           }
           return;
@@ -1023,8 +1023,8 @@ final class Battlefield {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
           stackIn_11_0 = var3;
-          stackIn_11_1 = new StringBuilder().append("ha.AE(").append(param0).append(',');
-          if (param1 == null) {
+          stackIn_11_1 = new StringBuilder().append("ha.AE(").append(obfuscationGuard).append(',');
+          if (tile == null) {
             stackIn_12_2 = "null";
           } else {
             stackIn_12_2 = "{...}";
@@ -1372,18 +1372,18 @@ final class Battlefield {
         }
     }
 
-    final void a(int param0, boolean param1, int param2, int param3, int param4, int param5) {
+    final void healUnitAt(int obfuscationGuard, boolean allowLifeStealers, int tileX, int tileY, int playerId, int amount) {
         Unit var8;
-        var8 = this.getUnitAt(param3, true, param2);
-        if (param0 >= -117) {
+        var8 = this.getUnitAt(tileY, true, tileX);
+        if (obfuscationGuard >= -117) {
           this.playerTurnCounts = (int[]) null;
         }
         if (var8 != null &&
-          this.arePlayersAllied(var8.ownerPlayer, -16985, param4) && (!var8.a(23072) ||
-          param1)) {
-          var8.strength = var8.strength + param5;
+          this.arePlayersAllied(var8.ownerPlayer, -16985, playerId) && (!var8.canLifeSteal(23072) ||
+          allowLifeStealers)) {
+          var8.strength = var8.strength + amount;
           if (this.field_b) {
-            this.field_ob[param4] = this.field_ob[param4] + param5;
+            this.field_ob[playerId] = this.field_ob[playerId] + amount;
           }
           if (var8.maximumStrength < var8.strength) {
             var8.strength = var8.maximumStrength;
@@ -1416,7 +1416,7 @@ final class Battlefield {
           }
           if (consumeSlot != 0) {
             this.equippedSpellIds[castingPlayer][equippedSlot] = -1;
-            this.remainingRuneCap[castingPlayer] = this.remainingRuneCap[castingPlayer] - uc.spellDefinitions[spell.spellId][0];
+            this.remainingRuneCap[castingPlayer] = this.remainingRuneCap[castingPlayer] - SpellDefinitionTable.spellDefinitions[spell.spellId][0];
           }
           this.spellCastPending = false;
           return;
@@ -1500,7 +1500,7 @@ final class Battlefield {
         }
     }
 
-    private final void appendPlayerDiagnostics(int playerId, gn output, int obfuscationGuard) {
+    private final void appendPlayerDiagnostics(int playerId, IndentedTextBuilder output, int obfuscationGuard) {
         int stackIn_9_0 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -1512,8 +1512,8 @@ final class Battlefield {
         int var6 = 0;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          output.a(new String[]{this.e(playerId, obfuscationGuard + 3395), ": "}, (byte) -124);
-          output.a(0, 2);
+          output.appendJoinedLine(new String[]{this.getPlayerLabel(playerId, obfuscationGuard + 3395), ": "}, (byte) -124);
+          output.changeIndent(0, 2);
           var4_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4_int >= this.chosenGods[playerId].length))) {
@@ -1521,7 +1521,7 @@ final class Battlefield {
             stackIn_9_0 = var5;
             if (var6 == 0) {
               if (stackIn_9_0 >= 0) {
-                output.a(new String[]{"god: ", NetworkGameShell.field_q[var5 + 1], " level: ", Integer.toString(this.godFavourLevels[playerId][var5])}, (byte) -57);
+                output.appendJoinedLine(new String[]{"god: ", NetworkGameShell.field_q[var5 + 1], " level: ", Integer.toString(this.godFavourLevels[playerId][var5])}, (byte) -57);
               }
               var4_int++;
               continue;
@@ -1529,14 +1529,14 @@ final class Battlefield {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            output.a(new String[]{"mana: ", Integer.toString(this.playerMana[playerId]), ", collected: ", Integer.toString(this.teamManaCollected[this.playerTeamIndices[playerId]])}, (byte) -49);
-            output.a(new String[]{"turns: ", Integer.toString(this.playerTurnCounts[playerId])}, (byte) -102);
+            output.appendJoinedLine(new String[]{"mana: ", Integer.toString(this.playerMana[playerId]), ", collected: ", Integer.toString(this.teamManaCollected[this.playerTeamIndices[playerId]])}, (byte) -49);
+            output.appendJoinedLine(new String[]{"turns: ", Integer.toString(this.playerTurnCounts[playerId])}, (byte) -102);
             stackIn_9_0 = ~BattleCharacter.runeCapsByOption[this.runeCapOption];
           }
           if (stackIn_9_0 != -1) {
-            output.a(new String[]{"rune cap remaining: ", Integer.toString(this.remainingRuneCap[playerId])}, (byte) -62);
+            output.appendJoinedLine(new String[]{"rune cap remaining: ", Integer.toString(this.remainingRuneCap[playerId])}, (byte) -62);
           }
-          output.a(0, -2);
+          output.changeIndent(0, -2);
           if (obfuscationGuard != -3396) {
             this.hasCapturingUnit(91, true);
           }
@@ -1894,7 +1894,7 @@ final class Battlefield {
         regionExit1: {
           regionExit2: {
             regionExit3: {
-              var11.a(-104, param2);
+              var11.assignOwner(-104, param2);
               var7Lifetime1 = var11.terrainType;
               if (var7Lifetime1 != 7) {
                 if (var7Lifetime1 == 14) {
@@ -1966,7 +1966,7 @@ final class Battlefield {
         }
         if (var11.hasModifierFlag1(12)) {
           this.eliminatePlayer(param3 + 10116, var6, false);
-          var11.d((byte) 61);
+          var11.clearModifierFlag1((byte) 61);
         }
         if (this.campaignMission != null &&
           var6 != -1) {
@@ -1975,12 +1975,12 @@ final class Battlefield {
         this.updateMatchOutcome(1);
     }
 
-    final void g(int param0, int param1, int param2, int param3) {
+    final void assignChosenGodsToAllPlayers(int thirdGod, int firstGod, int secondGod, int obfuscationGuard) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         var7 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (param3 != -9513) {
+        if (obfuscationGuard != -9513) {
           this.eliminatePlayer(-46, 97, true);
         }
         var5 = 0;
@@ -1988,12 +1988,12 @@ final class Battlefield {
           var7 == 0) {
           var6 = 0;
           while (var6 < 6) {
-            this.godFavourLevels[var5][param1] = 1;
-            this.godFavourLevels[var5][param2] = 1;
-            this.godFavourLevels[var5][param0] = 1;
-            this.chosenGods[var5][0] = param1;
-            this.chosenGods[var5][1] = param2;
-            this.chosenGods[var5][2] = param0;
+            this.godFavourLevels[var5][firstGod] = 1;
+            this.godFavourLevels[var5][secondGod] = 1;
+            this.godFavourLevels[var5][thirdGod] = 1;
+            this.chosenGods[var5][0] = firstGod;
+            this.chosenGods[var5][1] = secondGod;
+            this.chosenGods[var5][2] = thirdGod;
             var6++;
           }
           var5++;
@@ -2303,7 +2303,7 @@ final class Battlefield {
         }
     }
 
-    private final void a(boolean param0, Unit param1, gn param2) {
+    private final void a(boolean param0, Unit param1, IndentedTextBuilder param2) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -2312,27 +2312,27 @@ final class Battlefield {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          param2.a(new String[]{"unit type: ", ScrollContainer.unitDisplayNames[param1.unitType].toLowerCase(), " at ", TutorialController.formatCoordinatePair(param1.tileX, 0, param1.tileY)}, (byte) -120);
-          param2.a(0, 2);
-          param2.a(new String[]{"owner: ", this.e(param1.ownerPlayer, -1)}, (byte) -120);
+          param2.appendJoinedLine(new String[]{"unit type: ", ScrollContainer.unitDisplayNames[param1.unitType].toLowerCase(), " at ", TutorialController.formatCoordinatePair(param1.tileX, 0, param1.tileY)}, (byte) -120);
+          param2.changeIndent(0, 2);
+          param2.appendJoinedLine(new String[]{"owner: ", this.getPlayerLabel(param1.ownerPlayer, -1)}, (byte) -120);
           if (param1.poisoned) {
-            param2.a((byte) 19, "poisoned");
+            param2.appendLine((byte) 19, "poisoned");
           }
           if (param1.packedFlag8) {
-            param2.a((byte) 19, "deployed");
+            param2.appendLine((byte) 19, "deployed");
           }
           if (param1.movementSpent) {
-            param2.a((byte) 19, "moved");
+            param2.appendLine((byte) 19, "moved");
           }
           if (param1.packedFlag512) {
-            param2.a((byte) 19, "trinket used");
+            param2.appendLine((byte) 19, "trinket used");
           }
-          param2.a((byte) 19, "attacksleft: " + param1.attacksRemaining);
+          param2.appendLine((byte) 19, "attacksleft: " + param1.attacksRemaining);
           if (param1.bonusStrength != 0) {
-            param2.a(new String[]{"bonus: ", Integer.toString(param1.bonusStrength)}, (byte) -54);
+            param2.appendJoinedLine(new String[]{"bonus: ", Integer.toString(param1.bonusStrength)}, (byte) -54);
           }
-          param2.a(new String[]{"strength: ", Integer.toString(param1.strength), "/", Integer.toString(param1.maximumStrength)}, (byte) -105);
-          param2.a(0, -2);
+          param2.appendJoinedLine(new String[]{"strength: ", Integer.toString(param1.strength), "/", Integer.toString(param1.maximumStrength)}, (byte) -105);
+          param2.changeIndent(0, -2);
           if (param0) {
             this.getSummoningFavourAt(-59, (byte) 114, 16, 49);
           }
@@ -2360,21 +2360,21 @@ final class Battlefield {
     final boolean isPlayerInactive(int obfuscationGuard, int playerId) {
         boolean stackIn_7_0 = false;
         if (obfuscationGuard != -1) {
-          this.a(56, (String) null, (GameEvent) null);
+          this.reportEventFailure(56, (String) null, (GameEvent) null);
         }
         stackIn_7_0 = ((this.eliminatedPlayerMask & 1 << playerId) != 0) || ((this.inactivePlayerMask & 1 << playerId) != 0);
         return stackIn_7_0;
     }
 
-    final int a(int param0, int param1, boolean param2) {
+    final int getTileEffectsByIndex(int tileIndex, int playerId, boolean obfuscationGuard) {
         int var4 = -1;
-        if (param1 >= 0) {
-          var4 = this.getPlayerTeamIndex(param1, -1);
+        if (playerId >= 0) {
+          var4 = this.getPlayerTeamIndex(playerId, -1);
         }
-        if (!param2) {
+        if (!obfuscationGuard) {
           this.mapTheme = -93;
         }
-        return this.tiles[param0].getEffectsForPlayer((byte) 97, param1, var4);
+        return this.tiles[tileIndex].getEffectsForPlayer((byte) 97, playerId, var4);
     }
 
     private final int computeAttackPower(int attackerY, int priorDamage, int attackerX, Unit defender, Unit attacker, byte obfuscationGuard) {
@@ -2394,7 +2394,7 @@ final class Battlefield {
             defender.statusEffectType == 8) {
             priorDamage = 0;
           }
-          matchupPercent = fk.matchupDamagePercent[attacker.getUnitCategory(0)][defender.getUnitCategory(0)];
+          matchupPercent = DropdownSelectorPainter.matchupDamagePercent[attacker.getUnitCategory(0)][defender.getUnitCategory(0)];
           if (obfuscationGuard > -127) {
             discarded$0 = this.computeTileChecksum((byte) -69, -60, (MapTile) null);
           }
@@ -2451,17 +2451,17 @@ final class Battlefield {
         int var7 = 0;
         MapTile var8 = null;
         int var9 = 0;
-        gn var10 = null;
+        IndentedTextBuilder var10 = null;
         Unit var11 = null;
-        gn var12 = null;
+        IndentedTextBuilder var12 = null;
         int var5Lifetime1;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        var10 = new gn();
+        var10 = new IndentedTextBuilder();
         var12 = var10;
-        var10.a(new String[]{"seed: ", Integer.toString(this.randomSeed, 16)}, (byte) -116);
-        var10.a(new String[]{"size: ", Integer.toString(this.mapSizeSetting), ", theme: ", Integer.toString(this.mapTheme)}, (byte) -103);
+        var10.appendJoinedLine(new String[]{"seed: ", Integer.toString(this.randomSeed, 16)}, (byte) -116);
+        var10.appendJoinedLine(new String[]{"size: ", Integer.toString(this.mapSizeSetting), ", theme: ", Integer.toString(this.mapTheme)}, (byte) -103);
         if (this.kingBlackDragonSummoned) {
-          var12.a((byte) 19, "kbd summoned");
+          var12.appendLine((byte) 19, "kbd summoned");
         }
         if (playerId >= 0) {
           this.appendPlayerDiagnostics(playerId, var12, obfuscationGuard - 3148);
@@ -2513,7 +2513,7 @@ final class Battlefield {
           }
           break;
         }
-        return var12.c(1024);
+        return var12.toText(1024);
     }
 
     private final void readSpecialEvent(PacketBuffer packet, byte obfuscationGuard) {
@@ -2641,40 +2641,40 @@ final class Battlefield {
         }
     }
 
-    final int h(int param0, int param1) {
-        if (param1 != 0) {
+    final int getPlayerTeamSize(int playerId, int obfuscationGuard) {
+        if (obfuscationGuard != 0) {
           return -38;
         }
         if (!this.teamGame) {
           return -1;
         }
-        return this.teams[this.playerTeamIndices[param0]].getPlayerCount(16648);
+        return this.teams[this.playerTeamIndices[playerId]].getPlayerCount(16648);
     }
 
-    final void a(int param0, String param1, GameEvent param2) {
+    final void reportEventFailure(int obfuscationGuard, String context, GameEvent event) {
         String var4 = null;
         try {
-          var4 = param2.describeEvent((byte) -8, false);
-          if (param0 != 0) {
+          var4 = event.describeEvent((byte) -8, false);
+          if (obfuscationGuard != 0) {
             this.field_D = -23;
           }
           this.j(7);
-          var4 = param1 + "\n" + var4;
-          this.pendingEvents.clear(param0 ^ 98);
+          var4 = context + "\n" + var4;
+          this.pendingEvents.clear(obfuscationGuard ^ 98);
           Spell.a("Dropping conection: turn: " + this.turnNumber + ", player: " + this.currentPlayer + "\n" + var4, (byte) 40);
         } catch (RuntimeException runtimeException) {
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ha.JC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "ha.JC(" + obfuscationGuard + ',' + (context != null ? "{...}" : "null") + ',' + (event != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int c(int param0, int param1) {
+    final int getTeamSize(int obfuscationGuard, int teamIndex) {
         if (!this.teamGame) {
           return -1;
         }
-        if (param0 != -9650) {
+        if (obfuscationGuard != -9650) {
           return 126;
         }
-        return this.teams[param1].getPlayerCount(16648);
+        return this.teams[teamIndex].getPlayerCount(16648);
     }
 
     private final void readCombatEvent(PacketBuffer packet, int obfuscationGuard) {
@@ -2814,24 +2814,24 @@ final class Battlefield {
         int var8 = 0;
         int var9 = 0;
         var9 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
-        if (~eb.bitCount((byte) -95, 85 & this.eliminatedPlayerMask) == ~(this.playerCount / this.teamCount)) {
+        if (~BitCountSupport.bitCount((byte) -95, 85 & this.eliminatedPlayerMask) == ~(this.playerCount / this.teamCount)) {
           return false;
         }
-        if (~eb.bitCount((byte) -97, this.eliminatedPlayerMask & 170) == ~(this.playerCount / this.teamCount)) {
+        if (~BitCountSupport.bitCount((byte) -97, this.eliminatedPlayerMask & 170) == ~(this.playerCount / this.teamCount)) {
           return true;
         }
-        var2 = this.i(0, -12710);
+        var2 = this.getCollectedManaScore(0, -12710);
         if (param0 <= 68) {
           this.unitsByPlayer = (NodeDeque[]) null;
         }
         boolean decompiledFrameRemainder1 = true;
-        var3 = this.i(1, -12710);
+        var3 = this.getCollectedManaScore(1, -12710);
         if (var2 <= var3) {
           boolean decompiledFrameRemainder0 = true;
           if (var3 == var2) {
             boolean decompiledFrameCompleted0 = true;
-            var4 = this.b((byte) 31, 0);
-            var5 = this.b((byte) 31, 1);
+            var4 = this.computeTeamStructureScore((byte) 31, 0);
+            var5 = this.computeTeamStructureScore((byte) 31, 1);
             if (var5 >= var4) {
               if (~var4 == ~var5) {
                 var6 = 0;
@@ -2899,7 +2899,7 @@ final class Battlefield {
           var3_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (this.playerCount <= var3_int))) {
-            stackOut_6_0 = vr.a(11987, this.playerNames[var3_int], param0);
+            stackOut_6_0 = ThemeSpriteLoadingSupport.accountNamesMatch(11987, this.playerNames[var3_int], param0);
             stackIn_13_0 = stackOut_6_0 ? 1 : 0;
             stackIn_7_0 = stackOut_6_0;
             if (var4 == 0) {
@@ -3084,7 +3084,7 @@ final class Battlefield {
                   if (stackIn_38_0 <= stackIn_38_1) {
                     this.chosenGods[this.localPlayer][var6] = -1;
                   } else {
-                    this.godFavourLevels[this.localPlayer][this.chosenGods[this.localPlayer][var6]] = rn.bitwiseAnd(15, var7);
+                    this.godFavourLevels[this.localPlayer][this.chosenGods[this.localPlayer][var6]] = ProceduralMapSupport.bitwiseAnd(15, var7);
                     this.field_D = this.field_D + 1;
                     if (var6 == 2) {
                       this.field_Cb = true;
@@ -3189,7 +3189,7 @@ final class Battlefield {
                 }
                 if (0 < (1 & var9Lifetime2) ||
                   var13 != 0) {
-                  var10_ref_ne.a(obfuscationGuard + 63);
+                  var10_ref_ne.setModifierFlag8(obfuscationGuard + 63);
                 }
                 if ((var9Lifetime2 & 2) > 0) {
                   var10_ref_ne.terrainType = packet.readUnsignedByte(0);
@@ -3245,7 +3245,7 @@ final class Battlefield {
           }
           this.initializeMatchConditions(-29673);
           this.recountMapStructures(-2);
-          this.collectedManaTarget = this.f((byte) -82);
+          this.collectedManaTarget = this.computeManaTarget((byte) -82);
           this.recountStructures(obfuscationGuard ^ 2);
           this.refreshTileEffectsNear(0, 0, obfuscationGuard + 0, -1);
           WidgetTheme.recomputeClientStateChecksum(this, -118);
@@ -3296,23 +3296,23 @@ final class Battlefield {
         return;
     }
 
-    private final void a(int param0, boolean param1, int param2, int param3) {
-        if (param0 > -1 && -1 < param2 && param0 < this.mapWidth &&
-          this.mapHeight > param2) {
-          this.tiles[param0 + param2 * this.mapWidth].setExplicitOwner(true, param3);
+    private final void assignTileOwner(int tileX, boolean markChanged, int tileY, int ownerPlayer) {
+        if (tileX > -1 && -1 < tileY && tileX < this.mapWidth &&
+          this.mapHeight > tileY) {
+          this.tiles[tileX + tileY * this.mapWidth].setExplicitOwner(true, ownerPlayer);
         }
-        if (param1) {
+        if (markChanged) {
           this.field_kb = true;
         }
     }
 
-    final void f(int param0, int param1, int param2, int param3) {
-        Unit var5 = this.getUnitAt(param3, true, param0);
+    final void grantBonusStrengthAt(int tileX, int playerId, int obfuscationGuard, int tileY) {
+        Unit var5 = this.getUnitAt(tileY, true, tileX);
         if (var5 != null &&
-          this.arePlayersAllied(var5.ownerPlayer, -16985, param1)) {
+          this.arePlayersAllied(var5.ownerPlayer, -16985, playerId)) {
           var5.bonusStrength = 5;
         }
-        if (param2 < 117) {
+        if (obfuscationGuard < 117) {
           this.field_Cb = true;
         }
     }
@@ -3333,7 +3333,7 @@ final class Battlefield {
         int[] var11;
         int[] var12;
         if (obfuscationGuard != 255) {
-          this.appendPlayerDiagnostics(30, (gn) null, -50);
+          this.appendPlayerDiagnostics(30, (IndentedTextBuilder) null, -50);
         }
         var6 = 0;
         var12 = this.getSummoningFavourAt(tileY, (byte) 118, tileX, playerId);
@@ -3363,17 +3363,17 @@ final class Battlefield {
         return var6;
     }
 
-    final int e(int param0, int param1, int param2) {
+    final int getSpellCastDelay(int obfuscationGuard, int playerId, int spellId) {
         if (this.campaignMission != null) {
-          if (uc.spellDefinitions[param2][4] == 4 &&
-            0 != uc.spellDefinitions[param2][3]) {
-            return -this.playerTurnCounts[param1] + 1;
+          if (SpellDefinitionTable.spellDefinitions[spellId][4] == 4 &&
+            0 != SpellDefinitionTable.spellDefinitions[spellId][3]) {
+            return -this.playerTurnCounts[playerId] + 1;
           }
           return 0;
         }
-        int var4 = -66 % ((param0 + 19) / 35);
-        if (this.playerTurnCounts[param1] < uc.spellDefinitions[param2][1]) {
-          return uc.spellDefinitions[param2][1] - this.playerTurnCounts[param1];
+        int var4 = -66 % ((obfuscationGuard + 19) / 35);
+        if (this.playerTurnCounts[playerId] < SpellDefinitionTable.spellDefinitions[spellId][1]) {
+          return SpellDefinitionTable.spellDefinitions[spellId][1] - this.playerTurnCounts[playerId];
         }
         return 0;
     }
@@ -3784,7 +3784,7 @@ final class Battlefield {
                   if (stackIn_50_0 > stackIn_50_1 ||
                     var9_ref_ne.terrainChanged ||
                     null != var9_ref_ne.occupant &&
-                    var9_ref_ne.l(obfuscationGuard ^ 25770) ||
+                    var9_ref_ne.isCaptureStrengthReduced(obfuscationGuard ^ 25770) ||
                     (var9_ref_ne.hasCorpse(67) ||
                     var9_ref_ne.hasExplicitOwner((byte) -79))) {
                     var6++;
@@ -3798,7 +3798,7 @@ final class Battlefield {
               stackIn_67_0 = obfuscationGuard;
             }
             if (stackIn_67_0 != -25771) {
-              this.a(89, (String) null, (GameEvent) null);
+              this.reportEventFailure(89, (String) null, (GameEvent) null);
             }
             if (var4_int != 0) {
               var6 = this.mapHeight * this.mapWidth;
@@ -3828,7 +3828,7 @@ final class Battlefield {
                   var9 = var9 | 16;
                 }
                 if (null != var13.occupant &&
-                  var13.l(-1)) {
+                  var13.isCaptureStrengthReduced(-1)) {
                   var9 = var9 | 4;
                 }
                 if (var13.hasExplicitOwner((byte) -79)) {
@@ -3991,8 +3991,8 @@ final class Battlefield {
         }
     }
 
-    final GameEvent b(boolean param0) {
-        if (0 == this.pendingEvents.size(param0)) {
+    final GameEvent peekPendingEvent(boolean obfuscationGuard) {
+        if (0 == this.pendingEvents.size(obfuscationGuard)) {
           return null;
         }
         GameEvent var2 = (GameEvent) (this.pendingEvents.first((byte) 118));
@@ -4158,7 +4158,7 @@ final class Battlefield {
                     this.refreshTileEffectsNear(var11, var10, 0, 3);
                   }
                   if (var16 != 0) {
-                    var17.z(10);
+                    var17.resetPreviewAnimation(10);
                     var17.packedFlag8 = true;
                   }
                   var17.objectiveId = var26.objectiveId;
@@ -4172,7 +4172,7 @@ final class Battlefield {
                     this.field_V = false;
                   }
                   if (var26.tankId >= 0) {
-                    if (uc.spellDefinitions[var22.tankId][4] == 5) {
+                    if (SpellDefinitionTable.spellDefinitions[var22.tankId][4] == 5) {
                       throw new IllegalStateException("");
                     }
                     var18 = new PacketBuffer(4);
@@ -4262,7 +4262,7 @@ final class Battlefield {
         }
     }
 
-    private final void a(int param0, MapTile param1, byte param2, int param3, gn param4, int param5) {
+    private final void a(int param0, MapTile param1, byte param2, int param3, IndentedTextBuilder param4, int param5) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -4280,21 +4280,21 @@ final class Battlefield {
             -1 == param1.ownerPlayer) {
             return;
           }
-          param4.a(new String[]{"cell at ", TutorialController.formatCoordinatePair(param5, 0, param3), ": "}, (byte) -95);
-          param4.a(0, 2);
+          param4.appendJoinedLine(new String[]{"cell at ", TutorialController.formatCoordinatePair(param5, 0, param3), ": "}, (byte) -95);
+          param4.changeIndent(0, 2);
           if (param1.terrainChanged) {
-            param4.a(new String[]{"changed type: ", Integer.toString(param1.terrainType)}, (byte) -106);
+            param4.appendJoinedLine(new String[]{"changed type: ", Integer.toString(param1.terrainType)}, (byte) -106);
           }
           if (param1.hasCorpse(125)) {
-            param4.a((byte) 19, "bones");
+            param4.appendLine((byte) 19, "bones");
           }
           if (param1.hasExplicitOwner((byte) -79)) {
-            param4.a(new String[]{"fort: owner: ", this.e(param1.getExplicitOwner((byte) -54), -1)}, (byte) -57);
+            param4.appendJoinedLine(new String[]{"fort: owner: ", this.getPlayerLabel(param1.getExplicitOwner((byte) -54), -1)}, (byte) -57);
           }
           if (param1.ownerPlayer != -1) {
-            param4.a(new String[]{"owner: ", this.e(param1.ownerPlayer, param2 ^ 39)}, (byte) -93);
+            param4.appendJoinedLine(new String[]{"owner: ", this.getPlayerLabel(param1.ownerPlayer, param2 ^ 39)}, (byte) -93);
           }
-          param4.a(0, -2);
+          param4.changeIndent(0, -2);
           if (param2 != -40) {
             this.readMoveEvent((byte) -3, (PacketBuffer) null);
           }
@@ -4408,11 +4408,11 @@ final class Battlefield {
         return false;
     }
 
-    private final int b(byte param0, int param1) {
-        if (param0 != 31) {
+    private final int computeTeamStructureScore(byte obfuscationGuard, int teamIndex) {
+        if (obfuscationGuard != 31) {
           return -126;
         }
-        return this.teamStructureCounts[param1][0] * 10 - (-(5 * this.teamStructureCounts[param1][1]) - 2 * this.teamStructureCounts[param1][2]);
+        return this.teamStructureCounts[teamIndex][0] * 10 - (-(5 * this.teamStructureCounts[teamIndex][1]) - 2 * this.teamStructureCounts[teamIndex][2]);
     }
 
     private final boolean includesTileInChecksum(int playerId, MapTile tile, int obfuscationGuard) {
@@ -4490,7 +4490,7 @@ final class Battlefield {
           var5 = this.getPlayerTeamIndex(playerId, obfuscationGuard ^ -32);
         }
         if (obfuscationGuard != 31) {
-          this.c(-23, -102);
+          this.getTeamSize(-23, -102);
         }
         return this.tiles[tileX + this.mapWidth * tileY].getEffectsForPlayer((byte) 97, playerId, var5);
     }
@@ -4566,14 +4566,14 @@ final class Battlefield {
         }
     }
 
-    final void e(int param0, int param1, int param2, int param3) {
+    final void curePoisonAt(int obfuscationGuard, int tileX, int playerId, int tileY) {
         boolean discarded$0 = false;
-        if (param0 != 14) {
+        if (obfuscationGuard != 14) {
           discarded$0 = this.includesTileInChecksum(-18, (MapTile) null, 8);
         }
-        Unit var5 = this.getUnitAt(param3, true, param1);
+        Unit var5 = this.getUnitAt(tileY, true, tileX);
         if (var5 != null &&
-          this.arePlayersAllied(var5.ownerPlayer, -16985, param2)) {
+          this.arePlayersAllied(var5.ownerPlayer, -16985, playerId)) {
           var5.poisoned = false;
         }
     }
@@ -5043,7 +5043,7 @@ final class Battlefield {
           this.mapHeight = dupTemp$0;
           if ((0 > this.mapSizeSetting ||
             2 < this.mapSizeSetting) && tutorialSelection == 0) {
-            rn.generateProceduralMap(-118, this);
+            ProceduralMapSupport.generateProceduralMap(-118, this);
             if (var6 == 0) {
               return;
             }
@@ -5113,7 +5113,7 @@ final class Battlefield {
               var3_int = 2;
             }
           }
-          stackIn_9_0 = op.field_c[0][var3_int];
+          stackIn_9_0 = FriendRequestSupport.field_c[0][var3_int];
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5288,7 +5288,7 @@ final class Battlefield {
               while (stepsInByte < 4) {
                 stackIn_3_0 = stepsRemaining;
                 if (stackIn_3_0 > 0) {
-                  directions[stepIndex] = rn.bitwiseAnd(3, packedDirections);
+                  directions[stepIndex] = ProceduralMapSupport.bitwiseAnd(3, packedDirections);
                   packedDirections = packedDirections >> 2;
                   stepIndex++;
                   stepsRemaining--;
@@ -5320,7 +5320,7 @@ final class Battlefield {
     private final boolean f(int param0, int param1, int param2) {
         int var4 = param1 >= param0 ? 1 : 0;
         if (param2 != 0) {
-          this.e(73, 49, -89);
+          this.getSpellCastDelay(73, 49, -89);
         }
         return var4 != 0;
     }
@@ -5341,14 +5341,14 @@ final class Battlefield {
         return var3;
     }
 
-    final String e(int param0, int param1) {
-        if (-1 > param0) {
-          return "id: " + param0;
+    final String getPlayerLabel(int playerId, int obfuscationGuard) {
+        if (-1 > playerId) {
+          return "id: " + playerId;
         }
-        if (param1 < ~param0) {
+        if (obfuscationGuard < ~playerId) {
           return "none";
         }
-        return this.playerNames[param0];
+        return this.playerNames[playerId];
     }
 
     final void readGameEvent(PacketBuffer packet, byte obfuscationGuard) {
@@ -5419,7 +5419,7 @@ final class Battlefield {
         return 0;
     }
 
-    private final boolean c(byte param0) {
+    private final boolean haveAllPlayersReachedTurnLimit(byte obfuscationGuard) {
         int var2 = 0;
         int var3 = 0;
         int stackIn_22_0 = 0;
@@ -5427,7 +5427,7 @@ final class Battlefield {
         if (!this.field_V) {
           return false;
         }
-        if (param0 < 45) {
+        if (obfuscationGuard < 45) {
           this.registerUnit(-102, (Unit) null);
         }
         var2 = 0;
@@ -5584,7 +5584,7 @@ final class Battlefield {
         }
         if ((decompiledNaturalLoopExit0) &&
           (obfuscationGuard != -29673)) {
-          this.appendPlayerDiagnostics(23, (gn) null, 119);
+          this.appendPlayerDiagnostics(23, (IndentedTextBuilder) null, 119);
         }
         boolean decompiledFrameCompleted0 = true;
         boolean decompiledFrameRemainder1 = true;
@@ -5784,23 +5784,23 @@ final class Battlefield {
         return this.playerTeamIndices[playerId];
     }
 
-    final int i(int param0, int param1) {
+    final int getCollectedManaScore(int playerId, int obfuscationGuard) {
         int var3;
         if (null == this.teamManaCollected) {
           return 0;
         }
-        if (param0 < 0) {
+        if (playerId < 0) {
           return 0;
         }
-        if (param0 >= this.playerCount) {
+        if (playerId >= this.playerCount) {
           return 0;
         }
-        var3 = 25 * param0;
-        var3 = var3 + this.teamManaCollected[this.playerTeamIndices[param0]];
+        var3 = 25 * playerId;
+        var3 = var3 + this.teamManaCollected[this.playerTeamIndices[playerId]];
         if (var3 > this.collectedManaTarget) {
           var3 = this.collectedManaTarget;
         }
-        if (param1 != -12710) {
+        if (obfuscationGuard != -12710) {
           this.field_A = -76;
         }
         return var3;
@@ -5829,7 +5829,7 @@ final class Battlefield {
         do {
           if (var2 >= this.teamStructureCounts.length) {
             if (obfuscationGuard != 2) {
-              this.a(-11, (String) null, (GameEvent) null);
+              this.reportEventFailure(-11, (String) null, (GameEvent) null);
             }
             break;
           }
@@ -5955,7 +5955,7 @@ final class Battlefield {
           return true;
         }
         if (!this.teamGame) {
-          stackIn_24_0 = (eb.bitCount((byte) -125, this.getSurvivingPlayerMask((byte) 78)) == 1);
+          stackIn_24_0 = (BitCountSupport.bitCount((byte) -125, this.getSurvivingPlayerMask((byte) 78)) == 1);
           return stackIn_24_0;
         }
         survivingTeams = 0;
@@ -6029,7 +6029,7 @@ final class Battlefield {
             checksum = checksum ^ tile.getExplicitOwner((byte) -71) * 75;
           }
           if (obfuscationGuard != 103) {
-            this.c(-105, 88);
+            this.getTeamSize(-105, 88);
           }
           checksum = checksum ^ 7657 * tile.ownerPlayer;
           stackIn_12_0 = checksum;
@@ -6123,7 +6123,7 @@ final class Battlefield {
         return;
     }
 
-    final boolean a(Unit param0, int param1, int param2, int param3) {
+    final boolean canEnterTile(Unit unit, int tileX, int tileY, int obfuscationGuard) {
         MapTile var5 = null;
         RuntimeException var5_ref = null;
         RuntimeException stackIn_19_0 = null;
@@ -6131,18 +6131,18 @@ final class Battlefield {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param1 >= 0 &&
-            param2 >= 0 &&
-            param1 < this.mapWidth &&
-            param2 <= this.mapHeight) {
-            if (param3 >= -117) {
+          if (tileX >= 0 &&
+            tileY >= 0 &&
+            tileX < this.mapWidth &&
+            tileY <= this.mapHeight) {
+            if (obfuscationGuard >= -117) {
               return false;
             }
-            var5 = this.tiles[param2 * this.mapWidth + param1];
+            var5 = this.tiles[tileY * this.mapWidth + tileX];
             if (null == var5.occupant) {
               return true;
             }
-            if (param0.unitType == 51) {
+            if (unit.unitType == 51) {
               return true;
             }
             return false;
@@ -6153,12 +6153,12 @@ final class Battlefield {
           var5_ref = decompiledCaughtException;
           stackIn_19_0 = var5_ref;
           stackIn_19_1 = new StringBuilder().append("ha.W(");
-          if (param0 == null) {
+          if (unit == null) {
             stackIn_20_2 = "null";
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(tileX).append(',').append(tileY).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -6448,7 +6448,7 @@ final class Battlefield {
           stackIn_85_1 = 1;
         }
         if (stackIn_85_0 != stackIn_85_1) {
-          discarded$0 = this.f((byte) 28);
+          discarded$0 = this.computeManaTarget((byte) 28);
         }
         boolean decompiledFrameCompleted0 = true;
         this.winnerCount = var3;
@@ -6487,14 +6487,14 @@ final class Battlefield {
         return;
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
-        this.a(param1, false, param0, param3);
-        this.a(param1, false, 1 + param0, param3);
-        this.a(1 + param1, false, param0, param3);
-        if (param2 != -13) {
+    final void assignOwnerToTileSquare(int tileY, int tileX, byte obfuscationGuard, int ownerPlayer) {
+        this.assignTileOwner(tileX, false, tileY, ownerPlayer);
+        this.assignTileOwner(tileX, false, 1 + tileY, ownerPlayer);
+        this.assignTileOwner(1 + tileX, false, tileY, ownerPlayer);
+        if (obfuscationGuard != -13) {
           return;
         }
-        this.a(1 + param1, false, 1 + param0, param3);
+        this.assignTileOwner(1 + tileX, false, 1 + tileY, ownerPlayer);
     }
 
     final void healOrRaiseSkeletonAt(byte obfuscationGuard, int playerId, int tileY, int tileX) {
@@ -6680,12 +6680,12 @@ final class Battlefield {
               (this.mapSizeSetting != 4)) {
               this.mapSizeSetting = 2;
               if (var25 != 0) {
-                stackIn_35_1 = (mh.getProfileMissionScore(this.campaignMission.campaign.campaignIndex, -126, this.campaignMission.missionId) == 0);
+                stackIn_35_1 = (EffectsGainSupport.getProfileMissionScore(this.campaignMission.campaign.campaignIndex, -126, this.campaignMission.missionId) == 0);
                 this.field_kb = stackIn_35_1;
               }
             }
           } else {
-            stackIn_35_1 = (mh.getProfileMissionScore(this.campaignMission.campaign.campaignIndex, -126, this.campaignMission.missionId) == 0);
+            stackIn_35_1 = (EffectsGainSupport.getProfileMissionScore(this.campaignMission.campaign.campaignIndex, -126, this.campaignMission.missionId) == 0);
             this.field_kb = stackIn_35_1;
           }
           boolean decompiledFrameCompleted5 = true;
@@ -7176,7 +7176,7 @@ final class Battlefield {
             }
             this.turnLimit = this.b((byte) 32);
             this.recountMapStructures(-2);
-            this.collectedManaTarget = this.f((byte) -80);
+            this.collectedManaTarget = this.computeManaTarget((byte) -80);
             this.field_F = false;
             return;
           }

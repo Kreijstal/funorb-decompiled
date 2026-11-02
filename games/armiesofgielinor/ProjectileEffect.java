@@ -244,11 +244,11 @@ final class ProjectileEffect {
         this.field_d = param2;
         if (this.effectKind == 0) {
           this.animationPlayer = new AnimationPlayer(1);
-          this.animationPlayer.selectSequence(-1, pv.field_a[0][0]);
+          this.animationPlayer.selectSequence(-1, AccountNameFoldingSupport.field_a[0][0]);
         }
         if (this.effectKind == 5) {
           this.animationPlayer = new AnimationPlayer(1);
-          this.animationPlayer.selectSequence(-1, pv.field_a[5][0]);
+          this.animationPlayer.selectSequence(-1, AccountNameFoldingSupport.field_a[5][0]);
         }
     }
 

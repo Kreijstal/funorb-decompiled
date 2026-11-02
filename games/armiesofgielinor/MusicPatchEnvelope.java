@@ -48,7 +48,7 @@ final class MusicPatchEnvelope {
         String[] var5 = null;
         String[] var6 = null;
         String var8 = null;
-        sq var9 = null;
+        ToastMessage var9 = null;
         int var10 = 0;
         String[] var11 = null;
         RuntimeException stackIn_10_0 = null;
@@ -60,18 +60,18 @@ final class MusicPatchEnvelope {
         RuntimeException var4 = null;
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var4_int = rs.field_n.textWidth(param1) + 8;
+          var4_int = PowerOfTwoSupport.field_n.textWidth(param1) + 8;
           if (var4_int <= 200) {
             var5 = new String[]{param1};
           } else {
-            var11 = new String[rs.field_n.getLineCount(param1, 196)];
+            var11 = new String[PowerOfTwoSupport.field_n.getLineCount(param1, 196)];
             var5 = var11;
-            rs.field_n.wrapLines(param1, new int[]{196}, var11);
+            PowerOfTwoSupport.field_n.wrapLines(param1, new int[]{196}, var11);
           }
           var6 = var5;
           for (var7 = param2; var6.length > var7; var7++) {
             var8 = var6[var7];
-            var9 = new sq(var8, param3, param0);
+            var9 = new ToastMessage(var8, param3, param0);
             param0.addLast((byte) -119, (IntrusiveNode) (var9));
           }
           return;
@@ -107,7 +107,7 @@ final class MusicPatchEnvelope {
         if (param0 == -82) {
           var8 = PopupPresentation.field_c.get(12);
           var9 = PopupPresentation.field_c.get(13);
-          return so.field_c[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + gi.field_c[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
+          return FixedSquareRootSupport.field_c[-1 + var3] + ", " + var4 / 10 + var4 % 10 + "-" + AccountNameCheckStatusSupport.field_c[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
         }
         return (String) null;
     }
@@ -118,13 +118,13 @@ final class MusicPatchEnvelope {
         if (param0 == 14663) {
           var2 = new vg();
           AccountRegistrationDialog.field_Bb.addLast((byte) -119, (IntrusiveNode) (var2));
-          tq.a(param1, 0);
+          NineSliceSpriteSupport.a(param1, 0);
           return var2;
         }
         MusicPatchEnvelope.a((byte) -111, -125L);
         var2Lifetime1 = new vg();
         AccountRegistrationDialog.field_Bb.addLast((byte) -119, (IntrusiveNode) (var2Lifetime1));
-        tq.a(param1, 0);
+        NineSliceSpriteSupport.a(param1, 0);
         return var2Lifetime1;
     }
 
@@ -151,11 +151,11 @@ final class MusicPatchEnvelope {
             stackIn_3_0 = SectorCacheStore.field_d;
             return stackIn_3_0;
           }
-          if (th.socialListState != 2) {
+          if (FloorModSupport.socialListState != 2) {
             stackIn_6_0 = EffectPresentation.field_a;
             return stackIn_6_0;
           }
-          ignoredAccount = db.findIgnoredAccount(displayName, -122);
+          ignoredAccount = IgnoreListLookupSupport.findIgnoredAccount(displayName, -122);
           if (ignoredAccount == null) {
             stackIn_10_0 = EmailCheckResult.a(4800, CacheEntry.field_x, new String[]{displayName});
             return stackIn_10_0;
@@ -198,7 +198,7 @@ final class MusicPatchEnvelope {
 
     final static void b(byte param0) {
         NodeIterator.field_a = false;
-        vi.field_d = ByteStorage.incomingPacket.readUnsignedByte(0) == 0 ? true : false;
+        MonotonicClockSupport.field_d = ByteStorage.incomingPacket.readUnsignedByte(0) == 0 ? true : false;
         if (param0 < 70) {
           field_h = (BoundedUrlRequest) null;
           return;

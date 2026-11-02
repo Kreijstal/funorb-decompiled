@@ -79,7 +79,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "login_gameupdated");
                 if (null != var2) {
-                  fk.field_f = uu.a(var2, (byte) -107);
+                  DropdownSelectorPainter.field_f = uu.a(var2, (byte) -107);
                 }
                 var2 = NodeIterator.a(50, "create_unable");
                 if (null != var2) {
@@ -147,7 +147,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_chat_ignore");
                 if (null != var2) {
-                  op.field_e = uu.a(var2, (byte) 42);
+                  FriendRequestSupport.field_e = uu.a(var2, (byte) 42);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mu_chat_tips");
                 if (var2 != null) {
@@ -159,7 +159,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_chat_private");
                 if (null != var2) {
-                  tq.field_d = uu.a(var2, (byte) 29);
+                  NineSliceSpriteSupport.field_d = uu.a(var2, (byte) 29);
                 }
                 var2 = NodeIterator.a(50, "mu_x_entered_game");
                 if (null != var2) {
@@ -203,7 +203,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_x_dropped_out");
                 if (null != var2) {
-                  cp.field_f = uu.a(var2, (byte) -99);
+                  EventPresenterFactory.field_f = uu.a(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(50, "mu_entered_other_game");
                 if (var2 != null) {
@@ -223,7 +223,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_invite_withdrawn");
                 if (null != var2) {
-                  ke.field_d = uu.a(var2, (byte) 41);
+                  SoundEffectPreloadSupport.field_d = uu.a(var2, (byte) 41);
                 }
                 var2 = NodeIterator.a(50, "mu_request_declined");
                 if (var2 != null) {
@@ -231,7 +231,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_request_withdrawn");
                 if (var2 != null) {
-                  qt.field_b = uu.a(var2, (byte) 6);
+                  BitReversalSupport.field_b = uu.a(var2, (byte) 6);
                 }
                 var2 = NodeIterator.a(50, "mu_all_players_have_left");
                 if (null != var2) {
@@ -239,7 +239,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_lobby_name");
                 if (var2 != null) {
-                  su.field_b = uu.a(var2, (byte) -113);
+                  AiWeightProfile.field_b = uu.a(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(50, "mu_lobby_rating");
                 if (var2 != null) {
@@ -275,11 +275,11 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "mu_gamelist_owner");
                 if (null != var2) {
-                  wb.field_c = uu.a(var2, (byte) 5);
+                  LoginCredentialStagingSupport.field_c = uu.a(var2, (byte) 5);
                 }
                 var2 = NodeIterator.a(50, "mu_gamelist_players");
                 if (var2 != null) {
-                  fk.field_g = uu.a(var2, (byte) -111);
+                  DropdownSelectorPainter.field_g = uu.a(var2, (byte) -111);
                 }
                 var2 = NodeIterator.a(50, "mu_gamelist_avg_rating");
                 if (var2 != null) {
@@ -295,7 +295,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_play_rated");
                 if (var2 != null) {
-                  l.field_f = uu.a(var2, (byte) 123);
+                  QuickChatCategoryMenuSupport.field_f = uu.a(var2, (byte) 123);
                 }
                 var2 = NodeIterator.a(50, "mu_create_unrated");
                 if (null != var2) {
@@ -315,7 +315,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_options_dontmind");
                 if (var2 != null) {
-                  ki.field_a = uu.a(var2, (byte) -112);
+                  QuinticFadeSupport.field_a = uu.a(var2, (byte) -112);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mu_options_allow_spectate");
                 if (null != var2) {
@@ -327,7 +327,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "yes");
                 if (var2 != null) {
-                  po.field_b = uu.a(var2, (byte) -96);
+                  QuickChatShortcutSupport.field_b = uu.a(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "no");
                 if (var2 != null) {
@@ -347,7 +347,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "add_x_to_ignore");
                 if (null != var2) {
-                  sq.field_o = uu.a(var2, (byte) 64);
+                  ToastMessage.field_o = uu.a(var2, (byte) 64);
                 }
                 var2 = NodeIterator.a(50, "rm_x_from_friends");
                 if (var2 != null) {
@@ -367,7 +367,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "send_pm");
                 if (null != var2) {
-                  eb.field_d = uu.a(var2, (byte) -124);
+                  BitCountSupport.field_d = uu.a(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "invite_accept_xs_game");
                 if (null != var2) {
@@ -443,7 +443,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_chat_game_friends_only");
                 if (var2 != null) {
-                  jj.field_b = uu.a(var2, (byte) 40);
+                  FriendLookupSupport.field_b = uu.a(var2, (byte) 40);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mu_chat_game_friends");
                 if (var2 != null) {
@@ -463,7 +463,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mu_chat_pm_friends");
                 if (null != var2) {
-                  jj.field_e = uu.a(var2, (byte) -122);
+                  FriendLookupSupport.field_e = uu.a(var2, (byte) -122);
                 }
                 var2 = NodeIterator.a(50, "mu_chat_invisible_and_silent_mode");
                 if (var2 != null) {
@@ -503,7 +503,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "find_opponent_singular");
                 if (null != var2) {
-                  fk.field_e = uu.a(var2, (byte) -125);
+                  DropdownSelectorPainter.field_e = uu.a(var2, (byte) -125);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "find_opponents_plural");
                 if (var2 != null) {
@@ -511,7 +511,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rated_game_tips_setup_singular");
                 if (var2 != null) {
-                  ov.field_k = uu.a(var2, (byte) 105);
+                  SpectateRoomRequestSupport.field_k = uu.a(var2, (byte) 105);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "rated_game_tips_setup_plural");
                 if (var2 != null) {
@@ -567,7 +567,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "message_team");
                 if (null != var2) {
-                  l.field_d = uu.a(var2, (byte) 118);
+                  QuickChatCategoryMenuSupport.field_d = uu.a(var2, (byte) 118);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "quickchat_game");
                 if (var2 != null) {
@@ -627,7 +627,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "you_are_invited_to_xs_game");
                 if (var2 != null) {
-                  sq.field_n = uu.a(var2, (byte) 41);
+                  ToastMessage.field_n = uu.a(var2, (byte) 41);
                 }
                 var2 = NodeIterator.a(50, "asking_to_join_xs_game");
                 if (var2 != null) {
@@ -655,7 +655,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "you_can_not_spectate");
                 if (var2 != null) {
-                  jj.field_d = uu.a(var2, (byte) -104);
+                  FriendLookupSupport.field_d = uu.a(var2, (byte) -104);
                 }
                 var2 = NodeIterator.a(50, "spectate_xs_game");
                 if (null != var2) {
@@ -663,11 +663,11 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "hide_players_in_xs_game");
                 if (null != var2) {
-                  cp.field_g = uu.a(var2, (byte) 3);
+                  EventPresenterFactory.field_g = uu.a(var2, (byte) 3);
                 }
                 var2 = NodeIterator.a(50, "show_players_in_xs_game");
                 if (var2 != null) {
-                  fs.field_a = uu.a(var2, (byte) -115);
+                  PrivateTextRecipientSupport.field_a = uu.a(var2, (byte) -115);
                 }
                 var2 = NodeIterator.a(50, "connecting_to_friend_server_twoline");
                 if (null != var2) {
@@ -739,7 +739,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "privatequickchat_from_x");
                 if (var2 != null) {
-                  ov.field_l = uu.a(var2, (byte) -96);
+                  SpectateRoomRequestSupport.field_l = uu.a(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "privatequickchat_to_x");
                 if (var2 != null) {
@@ -771,7 +771,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "thisisrunescapeclan_notowner");
                 if (null != var2) {
-                  op.field_a = uu.a(var2, (byte) 116);
+                  FriendRequestSupport.field_a = uu.a(var2, (byte) 116);
                 }
                 var2 = NodeIterator.a(50, "runescapeclan");
                 if (var2 != null) {
@@ -783,7 +783,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "gameopt_membersonly");
                 if (var2 != null) {
-                  gt.field_a = uu.a(var2, (byte) 58);
+                  LocalAccountNameSupport.field_a = uu.a(var2, (byte) 58);
                 }
                 var2 = NodeIterator.a(50, "gameopt_1moreratedgame");
                 if (null != var2) {
@@ -807,11 +807,11 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "gameopt_cannotbecombined1");
                 if (null != var2) {
-                  ab.field_e = uu.a(var2, (byte) -106);
+                  AlphanumericTextSupport.field_e = uu.a(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(50, "gameopt_cannotbecombined2");
                 if (null != var2) {
-                  mj.field_a = uu.a(var2, (byte) 6);
+                  AudioShutdownSupport.field_a = uu.a(var2, (byte) 6);
                 }
                 var2 = NodeIterator.a(50, "gameopt_playernotmember");
                 if (var2 != null) {
@@ -823,11 +823,11 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "gameopt_playerneedsrating");
                 if (var2 != null) {
-                  bk.field_g = uu.a(var2, (byte) 24);
+                  MusicTrackSelectionSupport.field_g = uu.a(var2, (byte) 24);
                 }
                 var2 = NodeIterator.a(50, "gameopt_youneedrating");
                 if (var2 != null) {
-                  vi.field_b = uu.a(var2, (byte) 37);
+                  MonotonicClockSupport.field_b = uu.a(var2, (byte) 37);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "gameopt_playerneedsratedgames");
                 if (var2 != null) {
@@ -895,7 +895,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_badnumplayers");
                 if (var2 != null) {
-                  l.field_h = uu.a(var2, (byte) -99);
+                  QuickChatCategoryMenuSupport.field_h = uu.a(var2, (byte) -99);
                 }
                 var2 = NodeIterator.a(param0 + 132, "gameopt_inviteplayers_or_trychanging1");
                 if (null != var2) {
@@ -913,7 +913,7 @@ final class CampaignUnitOverride {
             void runChunk1() throws java.lang.RuntimeException {
                 var2 = NodeIterator.a(50, "gameopt_pleasetrychanging");
                 if (null != var2) {
-                  ov.field_j = uu.a(var2, (byte) -94);
+                  SpectateRoomRequestSupport.field_j = uu.a(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "ra_title");
                 if (null != var2) {
@@ -957,7 +957,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "rule_0_3");
                 if (var2 != null) {
-                  vs.field_d = uu.a(var2, (byte) -92);
+                  QuickChatMenuDisplaySupport.field_d = uu.a(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "rule_0_4");
                 if (null != var2) {
@@ -993,7 +993,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rule_pillar_2");
                 if (null != var2) {
-                  op.field_d = uu.a(var2, (byte) -110);
+                  FriendRequestSupport.field_d = uu.a(var2, (byte) -110);
                 }
                 var2 = NodeIterator.a(50, "rule_2_0");
                 if (var2 != null) {
@@ -1029,7 +1029,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "invaliduserorpass");
                 if (var2 != null) {
-                  rs.field_x = uu.a(var2, (byte) -119);
+                  PowerOfTwoSupport.field_x = uu.a(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(50, "pleasetryagain");
                 if (null != var2) {
@@ -1145,7 +1145,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "quittowebsite");
                 if (var2 != null) {
-                  dt.field_c = uu.a(var2, (byte) -113);
+                  DateValiditySupport.field_c = uu.a(var2, (byte) -113);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "connectionrestored");
                 if (null != var2) {
@@ -1241,7 +1241,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "checking");
                 if (var2 != null) {
-                  gt.validationPendingText = uu.a(var2, (byte) -92);
+                  LocalAccountNameSupport.validationPendingText = uu.a(var2, (byte) -92);
                 }
                 var2 = NodeIterator.a(50, "create_namealreadytaken");
                 if (null != var2) {
@@ -1333,7 +1333,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "month");
                 if (var2 != null) {
-                  eb.field_e = uu.a(var2, (byte) 94);
+                  BitCountSupport.field_e = uu.a(var2, (byte) 94);
                 }
                 var2 = NodeIterator.a(param0 + 132, "year");
                 if (null != var2) {
@@ -1389,7 +1389,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_welcome");
                 if (null != var2) {
-                  aq.field_a = uu.a(var2, (byte) -104);
+                  AccountCreationInfoText.field_a = uu.a(var2, (byte) -104);
                 }
                 var2 = NodeIterator.a(50, "create_u13_welcome");
                 if (null != var2) {
@@ -1409,7 +1409,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_password");
                 if (null != var2) {
-                  jj.field_h = uu.a(var2, (byte) -124);
+                  FriendLookupSupport.field_h = uu.a(var2, (byte) -124);
                 }
                 var2 = NodeIterator.a(50, "create_password_confirm");
                 if (null != var2) {
@@ -1489,7 +1489,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "login_username_tooltip");
                 if (var2 != null) {
-                  de.field_d = uu.a(var2, (byte) -96);
+                  SpellCastErrorSupport.field_d = uu.a(var2, (byte) -96);
                 }
                 var2 = NodeIterator.a(50, "login_password_tooltip");
                 if (null != var2) {
@@ -1597,7 +1597,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_alert_namechars");
                 if (null != var2) {
-                  od.field_h = uu.a(var2, (byte) -98);
+                  ByteArrayPoolSupport.field_h = uu.a(var2, (byte) -98);
                 }
                 var2 = NodeIterator.a(50, "create_alert_nameleadingspace");
                 if (var2 != null) {
@@ -1621,7 +1621,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "create_alert_passcontainsname");
                 if (null != var2) {
-                  de.field_c = uu.a(var2, (byte) -119);
+                  SpellCastErrorSupport.field_c = uu.a(var2, (byte) -119);
                 }
                 var2 = NodeIterator.a(50, "create_alert_passcontainsemail");
                 if (var2 != null) {
@@ -1733,7 +1733,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "enterfriend_del");
                 if (var2 != null) {
-                  se.field_b = uu.a(var2, (byte) -122);
+                  IgnoreRequestSupport.field_b = uu.a(var2, (byte) -122);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "enterignore_add");
                 if (null != var2) {
@@ -1821,7 +1821,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "loading_soundeffects");
                 if (null != var2) {
-                  ds.field_b = uu.a(var2, (byte) -112);
+                  PointerCaptureSupport.field_b = uu.a(var2, (byte) -112);
                 }
             }
             void runChunk2() throws java.lang.RuntimeException {
@@ -1863,7 +1863,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 + 132, "unpacking_soundeffects");
                 if (var2 != null) {
-                  ph.field_a = uu.a(var2, (byte) -114);
+                  AccountNameCharacterSupport.field_a = uu.a(var2, (byte) -114);
                 }
                 var2 = NodeIterator.a(50, "unpacking_music");
                 if (var2 != null) {
@@ -1899,7 +1899,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "sound_colon");
                 if (var2 != null) {
-                  su.field_c = uu.a(var2, (byte) -121);
+                  AiWeightProfile.field_c = uu.a(var2, (byte) -121);
                 }
                 var2 = NodeIterator.a(50, "music_colon");
                 if (null != var2) {
@@ -1915,7 +1915,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "highscores");
                 if (var2 != null) {
-                  bj.field_o = uu.a(var2, (byte) 126);
+                  AlphaDecodedSpriteSupport.field_o = uu.a(var2, (byte) 126);
                 }
                 var2 = NodeIterator.a(param0 + 132, "rankings");
                 if (var2 != null) {
@@ -1971,7 +1971,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "optionsmenu_notpaused");
                 if (var2 != null) {
-                  hf.field_i = uu.a(var2, (byte) -94);
+                  ClientStateChecksumSupport.field_i = uu.a(var2, (byte) -94);
                 }
                 var2 = NodeIterator.a(50, "menu");
                 if (var2 != null) {
@@ -2266,7 +2266,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mouseoveranicon");
                 if (var2 != null) {
-                  ck.field_a = uu.a(var2, (byte) 96);
+                  StructureTerrainSupport.field_a = uu.a(var2, (byte) 96);
                 }
                 var2 = NodeIterator.a(50, "notyetachieved");
                 if (null != var2) {
@@ -2342,7 +2342,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mp_offerrematch");
                 if (var2 != null) {
-                  db.field_h = uu.a(var2, (byte) 78);
+                  IgnoreListLookupSupport.field_h = uu.a(var2, (byte) 78);
                 }
                 var2 = NodeIterator.a(50, "mp_offerrematch_unrated");
                 if (var2 != null) {
@@ -2362,11 +2362,11 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mp_cancelrematch_unrated");
                 if (var2 != null) {
-                  ti.field_a = uu.a(var2, (byte) 64);
+                  TurnSkipToggleSupport.field_a = uu.a(var2, (byte) 64);
                 }
                 var2 = NodeIterator.a(50, "mp_rematchnewgame");
                 if (var2 != null) {
-                  ji.field_b = uu.a(var2, (byte) 28);
+                  AccountNameCheckSupport.field_b = uu.a(var2, (byte) 28);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mp_rematchnewgame_unrated");
                 if (null != var2) {
@@ -2450,7 +2450,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mp_hidechat");
                 if (null != var2) {
-                  bn.field_d = uu.a(var2, (byte) -100);
+                  CalendarSupport.field_d = uu.a(var2, (byte) -100);
                 }
                 var2 = NodeIterator.a(50, "mp_showchat_nounread");
                 if (null != var2) {
@@ -2550,7 +2550,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "rating_lost");
                 if (var2 != null) {
-                  vi.field_c = uu.a(var2, (byte) -106);
+                  MonotonicClockSupport.field_c = uu.a(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(50, "rating_drawn");
                 if (var2 != null) {
@@ -2570,19 +2570,19 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "members_expansion_benefits,0");
                 if (null != var2) {
-                  db.field_e[0] = uu.a(var2, (byte) 112);
+                  IgnoreListLookupSupport.field_e[0] = uu.a(var2, (byte) 112);
                 }
                 var2 = NodeIterator.a(50, "members_expansion_benefits,1");
                 if (var2 != null) {
-                  db.field_e[1] = uu.a(var2, (byte) 59);
+                  IgnoreListLookupSupport.field_e[1] = uu.a(var2, (byte) 59);
                 }
                 var2 = NodeIterator.a(50, "members_expansion_benefits,2");
                 if (var2 != null) {
-                  db.field_e[2] = uu.a(var2, (byte) -101);
+                  IgnoreListLookupSupport.field_e[2] = uu.a(var2, (byte) -101);
                 }
                 var2 = NodeIterator.a(50, "members_expansion_price_top");
                 if (var2 != null) {
-                  rv.field_a = uu.a(var2, (byte) 68);
+                  LocalizedUrlSupport.field_a = uu.a(var2, (byte) 68);
                 }
                 var2 = NodeIterator.a(50, "members_expansion_price_bottom");
                 if (var2 != null) {
@@ -2662,7 +2662,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "fs_accept_afteraccept");
                 if (null != var2) {
-                  od.field_e = uu.a(var2, (byte) -106);
+                  ByteArrayPoolSupport.field_e = uu.a(var2, (byte) -106);
                 }
                 var2 = NodeIterator.a(50, "fs_button_cancel");
                 if (var2 != null) {
@@ -2674,7 +2674,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "fs_accept_countdown_sing");
                 if (null != var2) {
-                  db.field_f = uu.a(var2, (byte) 65);
+                  IgnoreListLookupSupport.field_f = uu.a(var2, (byte) 65);
                 }
                 var2 = NodeIterator.a(50, "fs_accept_countdown_pl");
                 if (var2 != null) {
@@ -2686,7 +2686,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "fs_button_close");
                 if (null != var2) {
-                  pd.field_f = uu.a(var2, (byte) 74);
+                  PasswordLengthSupport.field_f = uu.a(var2, (byte) 74);
                 }
                 var2 = NodeIterator.a(50, "fs_button_members");
                 if (var2 != null) {
@@ -2714,7 +2714,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "fs_button_tryagain");
                 if (var2 != null) {
-                  oo.field_j = uu.a(var2, (byte) 73);
+                  MembershipExpansionScreen.field_j = uu.a(var2, (byte) 73);
                 }
                 var2 = NodeIterator.a(50, "graphics_ui_fs_countdown");
                 if (null != var2) {
@@ -2804,7 +2804,7 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "graphics_config_fullscreen");
                 if (null != var2) {
-                  oo.field_e = uu.a(var2, (byte) 30);
+                  MembershipExpansionScreen.field_e = uu.a(var2, (byte) 30);
                 }
                 var2 = NodeIterator.a(50, "graphics_config_done");
                 if (var2 != null) {
@@ -2948,31 +2948,31 @@ final class CampaignUnitOverride {
                 }
                 var2 = NodeIterator.a(50, "mustlogin_alternate,1");
                 if (var2 != null) {
-                  cp.field_b[1] = uu.a(var2, (byte) 120);
+                  EventPresenterFactory.field_b[1] = uu.a(var2, (byte) 120);
                 }
                 var2 = NodeIterator.a(50, "mustlogin_alternate,2");
                 if (var2 != null) {
-                  cp.field_b[2] = uu.a(var2, (byte) 69);
+                  EventPresenterFactory.field_b[2] = uu.a(var2, (byte) 69);
                 }
                 var2 = NodeIterator.a(param0 + 132, "mustlogin_alternate,3");
                 if (null != var2) {
-                  cp.field_b[3] = uu.a(var2, (byte) 66);
+                  EventPresenterFactory.field_b[3] = uu.a(var2, (byte) 66);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mustlogin_alternate,4");
                 if (var2 != null) {
-                  cp.field_b[4] = uu.a(var2, (byte) 13);
+                  EventPresenterFactory.field_b[4] = uu.a(var2, (byte) 13);
                 }
                 var2 = NodeIterator.a(param0 ^ -100, "mustlogin_alternate,5");
                 if (null != var2) {
-                  cp.field_b[5] = uu.a(var2, (byte) -93);
+                  EventPresenterFactory.field_b[5] = uu.a(var2, (byte) -93);
                 }
                 var2 = NodeIterator.a(50, "mustlogin_alternate,6");
                 if (null != var2) {
-                  cp.field_b[6] = uu.a(var2, (byte) -108);
+                  EventPresenterFactory.field_b[6] = uu.a(var2, (byte) -108);
                 }
                 var2 = NodeIterator.a(50, "mustlogin_alternate,7");
                 if (null != var2) {
-                  cp.field_b[7] = uu.a(var2, (byte) 77);
+                  EventPresenterFactory.field_b[7] = uu.a(var2, (byte) 77);
                 }
                 var2 = NodeIterator.a(50, "subscription_cost_monthly,0");
                 if (var2 != null) {
@@ -3067,7 +3067,7 @@ final class CampaignUnitOverride {
     final static void a(int param0, int param1, int param2, int param3, byte param4) {
         try {
           ConsoleTextNode.pushRasterState((byte) -56);
-          SoftwareRaster.b(param0, param3, param1, param2);
+          SoftwareRaster.intersectClip(param0, param3, param1, param2);
           if (param4 < 70) {
             field_c = (String) null;
           }

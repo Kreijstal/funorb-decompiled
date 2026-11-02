@@ -73,7 +73,7 @@ final class vq {
             AnimationFrameSet.field_v[-2 + var4] = ClientContextMenu.field_j;
             TileMetadata.field_h[var4 - 2] = 0;
             MusicPatchNode.field_G[0] = 4;
-            AnimationFrameSet.field_v[-1 + var4] = pd.field_f;
+            AnimationFrameSet.field_v[-1 + var4] = PasswordLengthSupport.field_f;
             TileMetadata.field_h[-1 + var4] = 1;
             MusicPatchNode.field_G[1] = 5;
           } else if (1 == NumericDateInputWidget.field_J) {
@@ -89,7 +89,7 @@ final class vq {
               AnimationFrameSet.field_v[var5] = SocketFactory.field_b[var5];
             }
             AnimationFrameSet.field_v[var4 - 2] = "";
-            AnimationFrameSet.field_v[-1 + var4] = pd.field_f;
+            AnimationFrameSet.field_v[-1 + var4] = PasswordLengthSupport.field_f;
             TileMetadata.field_h[-1 + var4] = 0;
             MusicPatchNode.field_G[0] = 5;
           } else if (NumericDateInputWidget.field_J != 2) {
@@ -110,7 +110,7 @@ final class vq {
                 AnimationFrameSet.field_v[var5] = SocketFactory.field_b[var5];
               }
               AnimationFrameSet.field_v[-2 + var4] = "";
-              AnimationFrameSet.field_v[var4 - 1] = pd.field_f;
+              AnimationFrameSet.field_v[var4 - 1] = PasswordLengthSupport.field_f;
               TileMetadata.field_h[-1 + var4] = 0;
               MusicPatchNode.field_G[0] = 5;
             } else if (NumericDateInputWidget.field_J == 4) {
@@ -126,7 +126,7 @@ final class vq {
                 AnimationFrameSet.field_v[var5] = SocketFactory.field_b[var5];
               }
               AnimationFrameSet.field_v[-2 + var4] = "";
-              AnimationFrameSet.field_v[-1 + var4] = pd.field_f;
+              AnimationFrameSet.field_v[-1 + var4] = PasswordLengthSupport.field_f;
               TileMetadata.field_h[-1 + var4] = 0;
               MusicPatchNode.field_G[0] = 5;
             } else {
@@ -145,15 +145,15 @@ final class vq {
                 AnimationFrameSet.field_v[var5] = SocketFactory.field_b[var5];
               }
               AnimationFrameSet.field_v[var4 - 3] = "";
-              AnimationFrameSet.field_v[var4 - 2] = oo.field_j;
+              AnimationFrameSet.field_v[var4 - 2] = MembershipExpansionScreen.field_j;
               TileMetadata.field_h[-2 + var4] = 0;
               MusicPatchNode.field_G[0] = 3;
-              AnimationFrameSet.field_v[-1 + var4] = pd.field_f;
+              AnimationFrameSet.field_v[-1 + var4] = PasswordLengthSupport.field_f;
               TileMetadata.field_h[var4 - 1] = 1;
               MusicPatchNode.field_G[1] = 5;
             }
           } else {
-            var3_int = BattleTutorial.a(LoginMethod.field_d, EmailCheckResult.a(4800, db.field_f, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, SocketFactory.field_b);
+            var3_int = BattleTutorial.a(LoginMethod.field_d, EmailCheckResult.a(4800, IgnoreListLookupSupport.field_f, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, SocketFactory.field_b);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(SocketFactory.field_b[var5])) {
@@ -166,9 +166,9 @@ final class vq {
               throw new IllegalStateException();
             }
             ChatMessage.field_i = new String[var4];
-            vm.a(SocketFactory.field_b, 0, ChatMessage.field_i, 0, var4);
+            ArrayBlockSupport.copyObjects(SocketFactory.field_b, 0, ChatMessage.field_i, 0, var4);
             KeyboardInputListener.field_d = new String[var3_int + (-var4 - 1)];
-            vm.a(SocketFactory.field_b, 1 + var4, KeyboardInputListener.field_d, 0, -1 + var3_int - var4);
+            ArrayBlockSupport.copyObjects(SocketFactory.field_b, 1 + var4, KeyboardInputListener.field_d, 0, -1 + var3_int - var4);
             var4 = -1;
             var3_int = BattleTutorial.a(LoginMethod.field_d, EmailCheckResult.a(4800, SummonAction.field_v, new String[]{"<br><%0><br>"}), 7502, TaggedMapData.field_b, SocketFactory.field_b);
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -182,9 +182,9 @@ final class vq {
               throw new IllegalStateException();
             }
             QuickChatCategory.field_A = new String[var4];
-            vm.a(SocketFactory.field_b, 0, QuickChatCategory.field_A, 0, var4);
+            ArrayBlockSupport.copyObjects(SocketFactory.field_b, 0, QuickChatCategory.field_A, 0, var4);
             IntrusiveNode.field_f = new String[var3_int - var4 - 1];
-            vm.a(SocketFactory.field_b, var4 + 1, IntrusiveNode.field_f, 0, -1 + (-var4 + var3_int));
+            ArrayBlockSupport.copyObjects(SocketFactory.field_b, var4 + 1, IntrusiveNode.field_f, 0, -1 + (-var4 + var3_int));
             if (QuickChatCategory.field_A.length <= ChatMessage.field_i.length) {
               stackIn_31_0 = ChatMessage.field_i.length;
             } else {
@@ -211,7 +211,7 @@ final class vq {
             AnimationFrameSet.field_v[5] = "";
             MusicPatchNode.field_G[0] = 5;
             AnimationFrameSet.field_v[4] = TextLineLayout.field_f;
-            AnimationFrameSet.field_v[2] = od.field_e;
+            AnimationFrameSet.field_v[2] = ByteArrayPoolSupport.field_e;
             AnimationFrameSet.field_v[3] = WeightedScoreStrategy.field_m;
             TileMetadata.field_h[3] = 1;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
@@ -236,7 +236,7 @@ final class vq {
               }
               stackIn_47_0[stackIn_47_1] = stackIn_48_2;
             }
-            vi.monotonicMillis(71);
+            MonotonicClockSupport.monotonicMillis(71);
           }
           ProxyAuthenticationRequiredException.field_c.itemCount = MusicPatchNode.field_G.length;
           var3_intLifetime1 = 0;
@@ -267,7 +267,7 @@ final class vq {
               }
             }
           }
-          IterableNodeHashTable.field_i = (MouseWheelSource.field_c + cp.field_a << 1) * ProxyAuthenticationRequiredException.field_c.itemCount;
+          IterableNodeHashTable.field_i = (MouseWheelSource.field_c + EventPresenterFactory.field_a << 1) * ProxyAuthenticationRequiredException.field_c.itemCount;
           var4Lifetime2 = 0;
           var5Lifetime3 = -42 % ((-39 - param2) / 37);
           while (AnimationFrameSet.field_v.length > var4Lifetime2) {
@@ -280,21 +280,21 @@ final class vq {
             IterableNodeHashTable.field_i = stackIn_115_0 + stackIn_116_1;
             var4Lifetime2++;
           }
-          od.field_b = -(IterableNodeHashTable.field_i >> 1) + QuickChatPhrase.field_C;
+          ByteArrayPoolSupport.field_b = -(IterableNodeHashTable.field_i >> 1) + QuickChatPhrase.field_C;
           GzipDecoder.field_b = new int[AnimationFrameSet.field_v.length][];
           var4Lifetime3 = 0;
-          var5Lifetime4 = od.field_b;
+          var5Lifetime4 = ByteArrayPoolSupport.field_b;
           while (AnimationFrameSet.field_v.length > var4Lifetime3) {
             var6Lifetime1 = TileMetadata.field_h[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = GzipDecoder.a(AnimationFrameSet.field_v[var4Lifetime3], true, (byte) -89);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + InstructionsPanel.field_B;
-              var5Lifetime4 = var5Lifetime4 + cp.field_a;
+              var5Lifetime4 = var5Lifetime4 + EventPresenterFactory.field_a;
               GzipDecoder.field_b[var4Lifetime3] = new int[4];
               GzipDecoder.field_b[var4Lifetime3][0] = var8Lifetime1 - et.field_b;
               GzipDecoder.field_b[var4Lifetime3][1] = var5Lifetime4;
               GzipDecoder.field_b[var4Lifetime3][2] = var7Lifetime2 + (et.field_b << 1);
-              var5Lifetime4 = var5Lifetime4 + (TelepopEvent.field_B + (cp.field_a + (MouseWheelSource.field_c << 1)));
+              var5Lifetime4 = var5Lifetime4 + (TelepopEvent.field_B + (EventPresenterFactory.field_a + (MouseWheelSource.field_c << 1)));
               GzipDecoder.field_b[var4Lifetime3][3] = TelepopEvent.field_B + (MouseWheelSource.field_c << 1);
             } else {
               var5Lifetime4 = var5Lifetime4 + GrowableIntArray.field_e;

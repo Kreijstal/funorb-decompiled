@@ -219,7 +219,7 @@ final class AiUnitPlanner extends IntrusiveNode {
               var6Lifetime1 = stackIn_96_0 + (float)stackIn_97_1 * ((float)(-this.unit.strength + this.unit.maximumStrength) * this.planner.weights[12]);
             }
             if (sourceTileIndex == tileIndex &&
-              !this.unit.a(23072)) {
+              !this.unit.canLifeSteal(23072)) {
               var6Lifetime1 = var6Lifetime1 + (float)(-this.unit.strength + this.unit.maximumStrength) * this.planner.weights[12];
             }
             if ((tile.terrainType == 11 ||
@@ -239,16 +239,16 @@ final class AiUnitPlanner extends IntrusiveNode {
               if (1 != var24Lifetime1 &&
                 0 != var24Lifetime1 ||
                 var22Lifetime1 != 4) {
-                var17 = var17 + (float)fk.matchupDamagePercent[var24Lifetime1][var22Lifetime1] * this.planner.field_K[var24Lifetime1][tileIndex] / 100.0f;
+                var17 = var17 + (float)DropdownSelectorPainter.matchupDamagePercent[var24Lifetime1][var22Lifetime1] * this.planner.field_K[var24Lifetime1][tileIndex] / 100.0f;
               }
               if (var24Lifetime1 != 4 ||
                 this.unit.canAttackFlying((byte) 92)) {
-                var18Lifetime1 = var18Lifetime1 + (float)fk.matchupDamagePercent[var22Lifetime1][var24Lifetime1] * this.planner.field_n[var23Lifetime1][var24Lifetime1][tileIndex] / 100.0f;
+                var18Lifetime1 = var18Lifetime1 + (float)DropdownSelectorPainter.matchupDamagePercent[var22Lifetime1][var24Lifetime1] * this.planner.field_n[var23Lifetime1][var24Lifetime1][tileIndex] / 100.0f;
               }
               var30 = 0;
               var25_int = var30;
               while (8 > var30) {
-                var20 = var20 + this.planner.field_A[var30][tileIndex] * this.planner.field_K[var24Lifetime1][tileIndex] * (float)fk.matchupDamagePercent[var30][var24Lifetime1] / 100.0f;
+                var20 = var20 + this.planner.field_A[var30][tileIndex] * this.planner.field_K[var24Lifetime1][tileIndex] * (float)DropdownSelectorPainter.matchupDamagePercent[var30][var24Lifetime1] / 100.0f;
                 var30++;
               }
               var21 = var21 + this.planner.field_K[var24Lifetime1][tileIndex];
@@ -274,7 +274,7 @@ final class AiUnitPlanner extends IntrusiveNode {
               }
               var6Lifetime1 = var6Lifetime1 + var15Lifetime1 * this.field_v;
             }
-            if (this.unit.u(8)) {
+            if (this.unit.hasMovementFlag8AtFullStrength(8)) {
               stackIn_146_0 = (this.unit.objectiveId == 0) ? 1 : 0;
             } else {
               stackIn_146_0 = 0;
@@ -308,7 +308,7 @@ final class AiUnitPlanner extends IntrusiveNode {
                 this.planner.playerId != tile.ownerPlayer) {
                 var14Lifetime1 = var14Lifetime1 - this.planner.weights[38] * var19Lifetime1;
               }
-              if (this.unit.f((byte) -109)) {
+              if (this.unit.hasUnitDefinitionFlag8((byte) -109)) {
                 var27_int = 0;
                 if (0 < tileX &&
                   battlefield.tiles[-1 + tileIndex].hasCorpse(-58)) {
@@ -328,8 +328,8 @@ final class AiUnitPlanner extends IntrusiveNode {
                 }
                 var14Lifetime1 = var14Lifetime1 + this.planner.weights[10] * (float)var27_int;
               }
-              if (this.unit.p((byte) -107) ||
-                this.unit.d((byte) 105)) {
+              if (this.unit.hasUnitDefinitionFlag2((byte) -107) ||
+                this.unit.hasUnitDefinitionFlag16((byte) 105)) {
                 var27_intLifetime1 = 0;
                 if (sourceTileIndex != tileIndex - 1 &&
                   tileX > 0 &&
@@ -357,7 +357,7 @@ final class AiUnitPlanner extends IntrusiveNode {
                 }
                 var14Lifetime1 = var14Lifetime1 + (float)var27_intLifetime1 * this.planner.weights[11];
               }
-              if (this.unit.s(124) &&
+              if (this.unit.hasUnitDefinitionFlag32(124) &&
                 battlefield.tiles[tileIndex].hasCorpse(81)) {
                 var14Lifetime1 = var14Lifetime1 + this.planner.weights[51];
               }
@@ -447,14 +447,14 @@ final class AiUnitPlanner extends IntrusiveNode {
         var5 = -3.4028234663852886e+38f;
         for (var6Lifetime1 = 0; var9.movementCosts.length > var6Lifetime1; var6Lifetime1++) {
           if (!selectAction) {
-            fs.field_b[var6Lifetime1] = 0.0f;
+            PrivateTextRecipientSupport.field_b[var6Lifetime1] = 0.0f;
           }
           var7 = this.scoreTile(var6Lifetime1, -5, selectAction, var9);
           if (var5 < var7) {
             var5 = var7;
           }
           if (!selectAction) {
-            stackIn_27_0 = fs.field_b;
+            stackIn_27_0 = PrivateTextRecipientSupport.field_b;
             stackIn_27_1 = var6Lifetime1;
             if (-3.4028234663852886e+38f != var7) {
               stackIn_28_2 = var7;
@@ -764,7 +764,7 @@ final class AiUnitPlanner extends IntrusiveNode {
           !targetUnit.hasMovementFlag1(false)) {
           score = score - this.planner.weights[32];
         }
-        if (targetUnit.a(23072)) {
+        if (targetUnit.canLifeSteal(23072)) {
           score = score * this.planner.weights[47];
         }
         if (targetUnit.getUnitCategory(0) == matchupCategory) {

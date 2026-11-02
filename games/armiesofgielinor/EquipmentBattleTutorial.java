@@ -40,7 +40,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
           controller.battlefield.tiles[65].ownerPlayer = 0;
           var2_int = 0;
           do {
-            if (!(br.field_c.length > var2_int)) {
+            if (!(CampaignLookupSupport.field_c.length > var2_int)) {
               controller.battlefield.a(true, 14, 74, 13, 1, 1, 0);
               controller.battlefield.a(true, 17, 0, 8, 1, 1, 0);
               controller.battlefield.a(true, 10, 0, 14, 1, 1, 0);
@@ -55,7 +55,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
               controller.battlefield.a(true, 5, 52, 5, 1, 1, 3);
               break;
             }
-            controller.battlefield.tiles[br.field_c[var2_int]].a(126);
+            controller.battlefield.tiles[CampaignLookupSupport.field_c[var2_int]].setModifierFlag8(126);
             var2_int++;
           } while (var3 == 0);
           var2 = (Unit) (controller.battlefield.unitsByPlayer[1].first((byte) 95));
@@ -105,13 +105,13 @@ final class EquipmentBattleTutorial extends BattleTutorial {
               var5_int++;
             }
             if (var5_int > 0) {
-              boolean decompiledSharedTail0 = (th.floorModWithOffset(param0 + param1, 1, 2) != 0);
+              boolean decompiledSharedTail0 = (FloorModSupport.floorModWithOffset(param0 + param1, 1, 2) != 0);
               if (!decompiledSharedTail0) {
                 hq.surroundTileSprites[0].draw(param2, param3);
                 decompiledSharedTail0 = (ArmiesOfGielinor.obfuscationControl);
               }
               if (decompiledSharedTail0) {
-                hq.surroundTileSprites[(ConsoleExpression.field_p[th.floorModWithOffset(param1, 1, ResourceRequest.field_y) + th.floorModWithOffset(param0, 1, ConsoleParseException.field_c) * ResourceRequest.field_y] % 6 + 1 << 2) - 1 + var5_int].draw(param2, param3);
+                hq.surroundTileSprites[(ConsoleExpression.field_p[FloorModSupport.floorModWithOffset(param1, 1, ResourceRequest.field_y) + FloorModSupport.floorModWithOffset(param0, 1, ConsoleParseException.field_c) * ResourceRequest.field_y] % 6 + 1 << 2) - 1 + var5_int].draw(param2, param3);
               }
             }
             var6 = 88 / ((-21 - param4) / 46);
@@ -277,7 +277,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
                 if ((interactionKind == 28 ||
                   interactionKind == 4) &&
                   this.isSelectedUnitEligible(-36)) {
-                  if (uc.spellDefinitions[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]][4] != 5) {
+                  if (SpellDefinitionTable.spellDefinitions[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]][4] != 5) {
                     break;
                   }
                   this.setEquipmentStage(-123, 10);
@@ -330,10 +330,10 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = SpriteSheetDecoder.getUnitUnlockOrdinal(false, unitType);
-          if (this.controller.battlefield.godFavourLevels[0][-1 + jv.getUnitUnlockGroup(false, unitType)] == 0) {
+          if (this.controller.battlefield.godFavourLevels[0][-1 + SoundPanSupport.getUnitUnlockGroup(false, unitType)] == 0) {
             return true;
           }
-          if ((this.controller.battlefield.godUnitUnlockMasks[0][jv.getUnitUnlockGroup(false, unitType) - 1] & 1 << var3_int) == 0) {
+          if ((this.controller.battlefield.godUnitUnlockMasks[0][SoundPanSupport.getUnitUnlockGroup(false, unitType) - 1] & 1 << var3_int) == 0) {
             return true;
           }
           if (obfuscationGuard > 0) {
@@ -359,9 +359,9 @@ final class EquipmentBattleTutorial extends BattleTutorial {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (uc.spellDefinitions[param1][3] == 4 &&
-            1 == uc.spellDefinitions[param1][5] &&
-            this.isGodLocked(uc.spellDefinitions[param1][6], 121)) {
+          if (SpellDefinitionTable.spellDefinitions[param1][3] == 4 &&
+            1 == SpellDefinitionTable.spellDefinitions[param1][5] &&
+            this.isGodLocked(SpellDefinitionTable.spellDefinitions[param1][6], 121)) {
             stackIn_10_0 = SpriteDropdownControl.equipmentTutorialMessages[23];
             return stackIn_10_0;
           }
@@ -1010,7 +1010,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
                                                                                     break regionExit1;
                                                                                   }
                                                                                 }
-                                                                                if (!this.isGodLocked(uc.spellDefinitions[var2_int][6], 120)) {
+                                                                                if (!this.isGodLocked(SpellDefinitionTable.spellDefinitions[var2_int][6], 120)) {
                                                                                   this.setEquipmentStage(-119, 12);
                                                                                   if (var4 == 0) {
                                                                                     break regionExit1;
@@ -1282,8 +1282,8 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             var7 = param0[1].canvasWidth;
             param0[0].drawTransparent(param1, param2);
             param0[2].drawTransparent(param3 + (param1 - var6), param2);
-            SoftwareRaster.b(DefeatPlayerConsoleCommand.field_H);
-            SoftwareRaster.b(param1 + var5_int, param2, param1 + (param3 - var6), param0[1].canvasHeight + param2);
+            SoftwareRaster.saveClip(DefeatPlayerConsoleCommand.field_H);
+            SoftwareRaster.intersectClip(param1 + var5_int, param2, param1 + (param3 - var6), param0[1].canvasHeight + param2);
             var8 = var5_int + param1;
             var9 = param3 + param1 - var6;
             for (param1 = var8; var9 > param1; param1 = param1 + var7) {
@@ -1292,7 +1292,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
             if (param4 != 8941) {
               EquipmentBattleTutorial.a((RgbSprite[]) null, -52, 126, 81, -73);
             }
-            SoftwareRaster.a(DefeatPlayerConsoleCommand.field_H);
+            SoftwareRaster.restoreClip(DefeatPlayerConsoleCommand.field_H);
             return;
           }
           return;
@@ -2215,7 +2215,7 @@ final class EquipmentBattleTutorial extends BattleTutorial {
                   continue;
                 }
               }
-              stackIn_87_0 = uc.spellDefinitions[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]][3];
+              stackIn_87_0 = SpellDefinitionTable.spellDefinitions[this.controller.battlefield.equippedSpellIds[0][this.equipmentSlot]][3];
               break;
             }
             var3_int = stackIn_87_0;

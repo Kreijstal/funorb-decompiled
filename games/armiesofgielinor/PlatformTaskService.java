@@ -306,7 +306,7 @@ final class PlatformTaskService implements Runnable {
                     }
                     switch (var2_int) {
                       case 3:
-                        if (vi.monotonicMillis(-127) < networkBlockedUntilMillis) {
+                        if (MonotonicClockSupport.monotonicMillis(-127) < networkBlockedUntilMillis) {
                           throw new IOException();
                         }
                         var15 = (var8.integerArgument >> 24 & 255) + "." + (255 & var8.integerArgument >> 16) + "." + (255 & var8.integerArgument >> 8) + "." + (var8.integerArgument & 255);
@@ -403,7 +403,7 @@ final class PlatformTaskService implements Runnable {
                         }
                         break;
                       case 21:
-                        if (networkBlockedUntilMillis > vi.monotonicMillis(46)) {
+                        if (networkBlockedUntilMillis > MonotonicClockSupport.monotonicMillis(46)) {
                           throw new IOException();
                         }
                         var8.result = java.net.InetAddress.getByName((String) (var8.objectArgument)).getAddress();
@@ -419,7 +419,7 @@ final class PlatformTaskService implements Runnable {
                     var8.result = ((Class) (var10[0])).getDeclaredMethod((String) (var10[1]), (Class[]) (var10[2]));
                     break;
                   case 4:
-                    if (vi.monotonicMillis(89) < networkBlockedUntilMillis) {
+                    if (MonotonicClockSupport.monotonicMillis(89) < networkBlockedUntilMillis) {
                       throw new IOException();
                     }
                     var8.result = new DataInputStream(((java.net.URL) (var8.objectArgument)).openStream());
@@ -432,12 +432,12 @@ final class PlatformTaskService implements Runnable {
                     var8.result = var9;
                     break;
                   case 22:
-                    if (vi.monotonicMillis(-118) < networkBlockedUntilMillis) {
+                    if (MonotonicClockSupport.monotonicMillis(-118) < networkBlockedUntilMillis) {
                       throw new IOException();
                     }
                     try {
                       if (false) throw (ProxyAuthenticationRequiredException) null;
-                      var8.result = ti.a((String) (var8.objectArgument), (byte) 102, var8.integerArgument).openSocket(111);
+                      var8.result = TurnSkipToggleSupport.a((String) (var8.objectArgument), (byte) 102, var8.integerArgument).openSocket(111);
                     } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter2) {
                       decompiledCaughtException = decompiledCaughtParameter2;
                       var3_ref3 = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
@@ -446,7 +446,7 @@ final class PlatformTaskService implements Runnable {
                     }
                     break;
                   case 1:
-                    if (vi.monotonicMillis(-108) < networkBlockedUntilMillis) {
+                    if (MonotonicClockSupport.monotonicMillis(-108) < networkBlockedUntilMillis) {
                       throw new IOException();
                     }
                     var8.result = new java.net.Socket(java.net.InetAddress.getByName((String) (var8.objectArgument)), var8.integerArgument);

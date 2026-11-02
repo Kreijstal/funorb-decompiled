@@ -150,7 +150,7 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
           if (resizeAvailable != 0) {
             this.resizableModeButton = this.createModeButton((WidgetListener) (this), Unit.field_n, HuffmanCodec.field_e, false);
           }
-          this.fullscreenModeButton = this.createModeButton((WidgetListener) (this), oo.field_e, ClientContextMenu.field_b, false);
+          this.fullscreenModeButton = this.createModeButton((WidgetListener) (this), MembershipExpansionScreen.field_e, ClientContextMenu.field_b, false);
           if (resizeAvailable != 0) {
             modeButtonCount = 3;
           } else {
@@ -319,12 +319,12 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
         int selectedModeIndex = 0;
         int obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         if (this.classicModeButton == this.selectedModeButton) {
-          ck.b(obfuscationGuard - 59);
+          StructureTerrainSupport.b(obfuscationGuard - 59);
           AiActionCandidate.e(obfuscationGuard ^ -17024);
         } else {
           if (this.selectedModeButton == this.resizableModeButton) {
-            ck.b(-109);
-            jj.a(-4223);
+            StructureTerrainSupport.b(-109);
+            FriendLookupSupport.a(-4223);
           } else {
             if (this.fullscreenModeButton == this.selectedModeButton) {
               if (this.displayModeDropdown != null) {
@@ -364,10 +364,10 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
         SpriteControlNode.field_m[EmailConfirmationValidator.field_p] = EmailConfirmationValidator.field_p;
         NumericDateInputWidget.field_U[EmailConfirmationValidator.field_p] = param2;
         if (LoginForm.field_T < param2) {
-          se.field_e = param2;
+          IgnoreRequestSupport.field_e = param2;
         }
-        if (param2 < pd.field_e) {
-          sq.field_k = param2;
+        if (param2 < PasswordLengthSupport.field_e) {
+          ToastMessage.field_k = param2;
         }
         AnimationFrameSet.field_w[EmailConfirmationValidator.field_p] = param3;
         TutorialController.field_c[EmailConfirmationValidator.field_p] = param0;
@@ -376,14 +376,14 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
         int var7 = var6 == 0 ? 0 : 1000 * param3 / var6;
         EffectPresentation.field_h[EmailConfirmationValidator.field_p] = var7;
         EmailConfirmationValidator.field_p = EmailConfirmationValidator.field_p + 1;
-        if (!(sq.field_k <= var7)) {
-          sq.field_k = var7;
+        if (!(ToastMessage.field_k <= var7)) {
+          ToastMessage.field_k = var7;
         }
         if (param4 <= 120) {
           DisplaySettingsDialog.i((byte) 86);
         }
-        if (se.field_e < var7) {
-          se.field_e = var7;
+        if (IgnoreRequestSupport.field_e < var7) {
+          IgnoreRequestSupport.field_e = var7;
         }
     }
 
@@ -454,13 +454,13 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
         try {
           mu.field_a = null;
           GameClock.field_j = 0;
-          if (vs.field_j) {
+          if (QuickChatMenuDisplaySupport.field_j) {
             FullscreenFocusCanvas.gameplayController = null;
-            vs.field_j = false;
+            QuickChatMenuDisplaySupport.field_j = false;
             SectorCacheStore.field_a = null;
             ConsoleParseException.b(-1);
           }
-          if (pv.field_c) {
+          if (AccountNameFoldingSupport.field_c) {
             PointerInputHandler.field_f = null;
             UnitInfoPopup.field_u = new NodeDeque();
             var10 = BoundedFile.field_e;
@@ -484,12 +484,12 @@ final class DisplaySettingsDialog extends ResizableModalDialog implements Widget
             for (var2Lifetime2 = 0; 8 > var2Lifetime2; var2Lifetime2++) {
               var12[var2Lifetime2] = 0;
             }
-            pv.field_c = false;
+            AccountNameFoldingSupport.field_c = false;
           }
           if (AiUnitPlanner.field_t) {
             PacketBuffer.i((byte) -97);
             pu.d(-112);
-            da.clearSocialLists(-120);
+            LocalAccountSupport.clearSocialLists(-120);
             AiUnitPlanner.field_t = false;
           }
           if (param0 < 120) {

@@ -180,43 +180,43 @@ final class BattleCamera {
         this.updateViewportOriginGrid(-1);
     }
 
-    private final int b(int param0, int param1, int param2) {
+    private final int getAveragedOverlayCorner(int tileY, int obfuscationGuard, int tileX) {
         int var4;
         int var5;
         var5 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         var4 = 0;
-        if (-1 < param2 &&
-          param2 < this.mapWidth &&
-          param0 > -1 &&
-          this.mapWidth > param0) {
-          var4 = var4 + this.overlayValues[param2 + param0 * this.mapWidth];
+        if (-1 < tileX &&
+          tileX < this.mapWidth &&
+          tileY > -1 &&
+          this.mapWidth > tileY) {
+          var4 = var4 + this.overlayValues[tileX + tileY * this.mapWidth];
         } else {
           var4 += 255;
         }
-        if (-1 < param2 + 1 &&
-          this.mapWidth > param2 + 1 &&
-          param0 > -1 &&
-          param0 < this.mapWidth) {
-          var4 = var4 + this.overlayValues[this.mapWidth * param0 + 1 + param2];
+        if (-1 < tileX + 1 &&
+          this.mapWidth > tileX + 1 &&
+          tileY > -1 &&
+          tileY < this.mapWidth) {
+          var4 = var4 + this.overlayValues[this.mapWidth * tileY + 1 + tileX];
         } else {
           var4 += 255;
         }
-        if (param2 + 1 > -1 &&
-          this.mapWidth > 1 + param2 &&
-          param0 + 1 > -1 &&
-          param0 + 1 < this.mapWidth) {
-          var4 = var4 + this.overlayValues[(1 + param0) * this.mapWidth + (param2 + 1)];
+        if (tileX + 1 > -1 &&
+          this.mapWidth > 1 + tileX &&
+          tileY + 1 > -1 &&
+          tileY + 1 < this.mapWidth) {
+          var4 = var4 + this.overlayValues[(1 + tileY) * this.mapWidth + (tileX + 1)];
         } else {
           var4 += 255;
         }
-        if (param1 != -4510) {
+        if (obfuscationGuard != -4510) {
           BattleCamera.releaseStatics((byte) -11);
         }
-        if (param2 > -1 &&
-          param2 < this.mapWidth &&
-          -1 < param0 + 1 &&
-          this.mapWidth > 1 + param0) {
-          var4 = var4 + this.overlayValues[this.mapWidth * (1 + param0) + param2];
+        if (tileX > -1 &&
+          tileX < this.mapWidth &&
+          -1 < tileY + 1 &&
+          this.mapWidth > 1 + tileY) {
+          var4 = var4 + this.overlayValues[this.mapWidth * (1 + tileY) + tileX];
         } else {
           var4 += 255;
         }
@@ -225,11 +225,11 @@ final class BattleCamera {
 
     final void projectModelAnchor(int obfuscationGuard) {
         this.projectGridToTarget(-41);
-        this.screenPosition[0] = -this.currentPosition[0] + (this.targetPosition[0] + (so.field_b.width >> 1));
+        this.screenPosition[0] = -this.currentPosition[0] + (this.targetPosition[0] + (FixedSquareRootSupport.field_b.width >> 1));
         if (obfuscationGuard != 9470337) {
           this.eventFocusActive = false;
         }
-        this.screenPosition[1] = -this.currentPosition[1] + (this.targetPosition[1] + (so.field_b.height >> 1) - 20);
+        this.screenPosition[1] = -this.currentPosition[1] + (this.targetPosition[1] + (FixedSquareRootSupport.field_b.height >> 1) - 20);
     }
 
     final void refreshViewportGrid(int obfuscationGuard) {
@@ -355,8 +355,8 @@ final class BattleCamera {
         var8 = var6;
         var9 = var3;
         var10 = var4;
-        var11 = so.field_b.width;
-        var12 = so.field_b.height;
+        var11 = FixedSquareRootSupport.field_b.width;
+        var12 = FixedSquareRootSupport.field_b.height;
         SoftwareRaster.setClip(0, 0, var11, var12);
         var13 = 0;
         while (var8 < 256 + var12 + 40) {
@@ -407,8 +407,8 @@ final class BattleCamera {
         }
         int var3 = this.screenPosition[1];
         int var2 = this.screenPosition[0];
-        var3 = var3 - (so.field_b.height >> 1);
-        var2 = var2 - (so.field_b.width >> 1);
+        var3 = var3 - (FixedSquareRootSupport.field_b.height >> 1);
+        var2 = var2 - (FixedSquareRootSupport.field_b.width >> 1);
         int var4 = var2 + this.currentPosition[0];
         int var5 = var3 + this.currentPosition[1];
         this.targetPosition[1] = var5;
@@ -454,8 +454,8 @@ final class BattleCamera {
         }
         var11 = var5;
         var12 = 0;
-        var13 = so.field_b.width;
-        var14 = so.field_b.height;
+        var13 = FixedSquareRootSupport.field_b.width;
+        var14 = FixedSquareRootSupport.field_b.height;
         for (var15 = var6; var15 <= var13; var15 += 40) {
           var8 = var10;
           var9 = var11;
@@ -546,18 +546,18 @@ final class BattleCamera {
           this.overlayValues = (int[]) null;
         }
         if (!param3) {
-          var13 = this.b(param2, -4510, param0);
-          var12 = this.b(-1 + param5, -4510, param1 - 1);
+          var13 = this.getAveragedOverlayCorner(param2, -4510, param0);
+          var12 = this.getAveragedOverlayCorner(-1 + param5, -4510, param1 - 1);
         } else {
-          var14 = this.b(param2 - 1, -4510, -1 + param0);
-          var11 = this.b(param5, -4510, param1);
+          var14 = this.getAveragedOverlayCorner(param2 - 1, -4510, -1 + param0);
+          var11 = this.getAveragedOverlayCorner(param5, -4510, param1);
         }
         this.a(-8302, param2, var12, param3, var13, param6, param7, var14, param0, param4, param9, param1, var11, param5);
     }
 
     private final void updateViewportCenterGrid(boolean obfuscationGuard) {
-        this.screenPosition[1] = so.field_b.height >> 1;
-        this.screenPosition[0] = so.field_b.width >> 1;
+        this.screenPosition[1] = FixedSquareRootSupport.field_b.height >> 1;
+        this.screenPosition[0] = FixedSquareRootSupport.field_b.width >> 1;
         this.screenToGrid(obfuscationGuard);
         this.viewportCenterGrid[1] = this.gridPosition[1];
         this.viewportCenterGrid[0] = this.gridPosition[0];
@@ -706,8 +706,8 @@ final class BattleCamera {
         var14 = 0;
         stackIn_3_0 = (0 != (var3 + var2) % 2) ? 0 : 1;
         var15 = stackIn_3_0;
-        var16 = so.field_b.width;
-        var17 = so.field_b.height;
+        var16 = FixedSquareRootSupport.field_b.width;
+        var17 = FixedSquareRootSupport.field_b.height;
         for (var18 = var4; var18 <= var16; var18 += 40) {
           var8 = var12;
           var6 = var10;
@@ -743,7 +743,7 @@ final class BattleCamera {
         int var3 = this.targetPosition[1];
         int var4 = 0;
         int var5 = 0;
-        int var6 = so.sqrtFixed16(327680, -129);
+        int var6 = FixedSquareRootSupport.sqrtFixed16(327680, -129);
         var4 = var4 + RasterViewportResizeHandler.multiplyFixed16(-48, var2 << 14, var6);
         var5 = var5 + RasterViewportResizeHandler.multiplyFixed16(-70, var2 << 14, var6);
         var4 = var4 - RasterViewportResizeHandler.multiplyFixed16(-94, var2 << 15, var6);
@@ -758,8 +758,8 @@ final class BattleCamera {
         int var2 = this.targetPosition[0];
         int var5 = var3 - this.currentPosition[1];
         int var4 = var2 - this.currentPosition[currentXSlot];
-        var4 = var4 + (so.field_b.width >> 1);
-        var5 = (so.field_b.height >> 1) + var5;
+        var4 = var4 + (FixedSquareRootSupport.field_b.width >> 1);
+        var5 = (FixedSquareRootSupport.field_b.height >> 1) + var5;
         this.screenPosition[1] = var5;
         this.screenPosition[0] = var4;
     }
@@ -830,8 +830,8 @@ final class BattleCamera {
           stackIn_22_0 = 0;
           stackIn_23_1 = (param9 ^ param5) ? 0 : 40;
           var21 = stackIn_22_0 + stackIn_23_1;
-          var22 = so.field_b.width;
-          var23 = so.field_b.height;
+          var22 = FixedSquareRootSupport.field_b.width;
+          var23 = FixedSquareRootSupport.field_b.height;
           for (var24 = param6; var24 < param6 + 40; var24++) {
             stackIn_27_0 = 0;
             stackIn_28_1 = (param3 != param5);
@@ -929,8 +929,8 @@ final class BattleCamera {
         stackIn_2_0 = 0;
         stackIn_3_1 = (param4 ^ param9) ? 0 : 40;
         var18 = stackIn_2_0 + stackIn_3_1;
-        var19 = so.field_b.width;
-        var20 = so.field_b.height;
+        var19 = FixedSquareRootSupport.field_b.width;
+        var20 = FixedSquareRootSupport.field_b.height;
         if (param3 >= -51) {
           this.focusWorldX = -88;
         }
@@ -1057,8 +1057,8 @@ final class BattleCamera {
         var7 = var5;
         var8 = var2;
         var9 = var3;
-        var10 = so.field_b.width;
-        var11 = so.field_b.height;
+        var10 = FixedSquareRootSupport.field_b.width;
+        var11 = FixedSquareRootSupport.field_b.height;
         SoftwareRaster.setClip(0, 0, var10, var11);
         var12 = 0;
         while (var11 + 200 + 256 > var7) {
@@ -1131,8 +1131,8 @@ final class BattleCamera {
             if (var4 == 0) {
               this.eventFocusActive = true;
             }
-            this.focusWorldY = -(so.field_b.height >> 1) + var3.screenY + this.currentPosition[1];
-            this.focusWorldX = this.currentPosition[0] + var3.screenX - (so.field_b.width >> 1);
+            this.focusWorldY = -(FixedSquareRootSupport.field_b.height >> 1) + var3.screenY + this.currentPosition[1];
+            this.focusWorldX = this.currentPosition[0] + var3.screenX - (FixedSquareRootSupport.field_b.width >> 1);
             var5 = this.currentPosition[0] - this.focusWorldX;
             var6 = -this.focusWorldY + this.currentPosition[1];
             if (var6 * var6 + var5 * var5 < 40000) {
@@ -1189,7 +1189,7 @@ final class BattleCamera {
         byte[] var3 = new OctaveNoiseMap(AttackEvent.nextBoundedInt(false, 2147483647, li.field_n), 4, this.mapWidth / 5, this.mapHeight / 5, 7, 0.5f, true).generateMap(this.mapHeight, (byte) 93, this.mapWidth);
         this.overlayValues = new int[var3.length];
         for (var4 = 0; var3.length > var4; var4++) {
-          this.overlayValues[var4] = 256 - rn.bitwiseAnd((int) var3[var4], 255);
+          this.overlayValues[var4] = 256 - ProceduralMapSupport.bitwiseAnd((int) var3[var4], 255);
         }
     }
 
@@ -1231,7 +1231,7 @@ final class BattleCamera {
         this.mapHeight = mapHeight;
         this.mapWidth = mapWidth;
         this.generateOverlayValues(63);
-        this.handleInput(101, false, so.field_b.height >> 1, false, false, false, false, false, so.field_b.width >> 1);
+        this.handleInput(101, false, FixedSquareRootSupport.field_b.height >> 1, false, false, false, false, false, FixedSquareRootSupport.field_b.width >> 1);
         this.updateViewportOriginGrid(-1);
     }
 

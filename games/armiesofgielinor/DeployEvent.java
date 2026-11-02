@@ -26,7 +26,7 @@ final class DeployEvent extends GameEvent {
     final static void h(int param0) {
         GlobalSpell.field_f = new ClientUiComponent(0L, (ClientUiComponent) null);
         if (GrowableIntArray.field_c) {
-          GlobalSpell.field_f.addChild(t.field_g, 84);
+          GlobalSpell.field_f.addChild(ReloadPageSupport.field_g, 84);
         }
         GlobalSpell.field_f.addChild(IconTextComponent.field_Kb, 104);
         SpellCastEvent.field_E = new CommunityTabGroup(ClientConnectionState.field_c, GlobalSpell.field_f);
@@ -35,7 +35,7 @@ final class DeployEvent extends GameEvent {
         }
         NumericDateInputWidget.field_T = new ClientUiComponent(0L, (ClientUiComponent) null);
         NumericDateInputWidget.field_T.addChild(SpellCastEvent.field_E.tabs, 127);
-        NumericDateInputWidget.field_T.addChild(cp.field_d, 39);
+        NumericDateInputWidget.field_T.addChild(EventPresenterFactory.field_d, 39);
         BitmapTextLayout.b(false);
     }
 
@@ -88,7 +88,7 @@ final class DeployEvent extends GameEvent {
         if (obfuscationGuard != 121) {
           DeployEvent.h(23);
         }
-        return (LobbyPlayer) (oi.lobbyPlayersById.get((byte) -27, accountId));
+        return (LobbyPlayer) (CheckMarkWidgetPainter.lobbyPlayersById.get((byte) -27, accountId));
     }
 
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {
@@ -125,7 +125,7 @@ final class DeployEvent extends GameEvent {
               var6.strength = 20;
               var6.maximumStrength = 20;
               var6.refreshTileEffects((byte) 71);
-              var6.z(10);
+              var6.resetPreviewAnimation(10);
             }
             if (var6.unitType == 17) {
               var6.removeFromBattlefield(obfuscationGuard ^ 26692);
@@ -141,7 +141,7 @@ final class DeployEvent extends GameEvent {
                 stackIn_16_0 = var6.tileY;
               }
               var5 = stackIn_16_0;
-              battlefield.a(var5, var4, (byte) -13, var6.ownerPlayer);
+              battlefield.assignOwnerToTileSquare(var5, var4, (byte) -13, var6.ownerPlayer);
             }
           }
           WidgetTheme.recomputeClientStateChecksum(battlefield, -115);
@@ -198,8 +198,8 @@ final class DeployEvent extends GameEvent {
           stackIn_6_4 = (PointerInputHandler.contextMenuScrollContainer == TaggedMapData.field_g.scrollContainer);
           var3_int = ((ScrollContainer) (Object) stackIn_5_0).updateContentLayout(stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, 0, 2) ? 1 : 0;
           var4 = TaggedMapData.field_g.listContent.children;
-          if (th.socialListState != 2 &&
-            th.socialListState != 1) {
+          if (FloorModSupport.socialListState != 2 &&
+            FloorModSupport.socialListState != 1) {
             TaggedMapData.field_g.scrollContainer.viewport.text = ConsoleParseException.field_a;
             TaggedMapData.field_g.inputEnabled = false;
             ArchiveIndex.a(TaggedMapData.field_g.listContent, -71);

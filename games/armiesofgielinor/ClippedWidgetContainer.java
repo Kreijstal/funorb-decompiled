@@ -33,9 +33,9 @@ final class ClippedWidgetContainer extends SingleChildWidgetContainer {
             return;
           }
           if (this.height != 0) {
-            t.field_c.a(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
+            ReloadPageSupport.field_c.a(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
             this.child.drawWidget(this.x + originX, this.y + originY, (byte) -110, renderLayer);
-            t.field_c.restoreRasterState(58);
+            ReloadPageSupport.field_c.restoreRasterState(58);
             return;
           }
           return;
@@ -45,9 +45,9 @@ final class ClippedWidgetContainer extends SingleChildWidgetContainer {
             return;
           }
           if (this.height != 0) {
-            t.field_c.a(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
+            ReloadPageSupport.field_c.a(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
             this.child.drawWidget(this.x + originX, this.y + originY, (byte) -110, renderLayer);
-            t.field_c.restoreRasterState(58);
+            ReloadPageSupport.field_c.restoreRasterState(58);
             return;
           }
           return;
@@ -57,9 +57,9 @@ final class ClippedWidgetContainer extends SingleChildWidgetContainer {
           return;
         }
         if (this.height != 0) {
-          t.field_c.a(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
+          ReloadPageSupport.field_c.a(this.y + originY + this.height, this.x + originX + this.width, this.y + originY, -101, this.x + originX);
           this.child.drawWidget(this.x + originX, this.y + originY, (byte) -110, renderLayer);
-          t.field_c.restoreRasterState(58);
+          ReloadPageSupport.field_c.restoreRasterState(58);
           return;
         }
     }

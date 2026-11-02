@@ -27,7 +27,7 @@ final class RadialSummonItem {
         if (SocketFactory.nameCheckPending == ChannelBaseVolumeConsoleCommand.field_L) {
           return qk.field_b;
         }
-        return ah.loginPassword;
+        return LocalCoatSupport.loginPassword;
     }
 
     public static void releaseStatics(int obfuscationGuard) {
@@ -197,9 +197,9 @@ final class RadialSummonItem {
         var12 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           SpellConfirmationDialog.field_a = param7;
-          t.field_b = param3;
+          ReloadPageSupport.field_b = param3;
           ChannelBaseVolumeConsoleCommand.localAccountId = -1L;
-          tq.gameOptionCount = param3.length;
+          NineSliceSpriteSupport.gameOptionCount = param3.length;
           NumericDateInputWidget.roomSetup = null;
           SpellCastAction.field_s = false;
           if (param8 >= -52) {
@@ -210,12 +210,12 @@ final class RadialSummonItem {
           var10_int = 0;
           var11 = 0;
           do {
-            if (!(t.field_b.length > var11)) {
+            if (!(ReloadPageSupport.field_b.length > var11)) {
               var10_int = (7 + var10_int) / 8;
               ClientContextMenu.field_d = new byte[var10_int];
               break;
             }
-            var10_int = var10_int + (t.field_b[var11] & 255);
+            var10_int = var10_int + (ReloadPageSupport.field_b[var11] & 255);
             var11++;
           } while (var12 == 0);
           if (param9.children == null) {
@@ -223,10 +223,10 @@ final class RadialSummonItem {
           }
           SummonAction.lobbyPlayerOrder = param9.children;
           SummonAction.lobbyPlayerOrder.clear(80);
-          oi.lobbyPlayersById = new DualNodeHashTable(param4);
+          CheckMarkWidgetPainter.lobbyPlayersById = new DualNodeHashTable(param4);
           AnimationPlayer.pendingJoinRequestCount = 0;
           SummonAction.field_s = -1;
-          oo.watchedRoomId = 0;
+          MembershipExpansionScreen.watchedRoomId = 0;
           GlobalSpell.field_g = -1;
           if (null == param1.children) {
             param1.children = new NodeDeque();
@@ -241,7 +241,7 @@ final class RadialSummonItem {
           ModalDialog.currentRoomPlayers.clear(122);
           UnitCycler.currentRoomPlayersById = new DualNodeHashTable(param0);
           RegistrationAgreementPane.lobbyNotificationDuration = param2;
-          ph.field_d = 0L;
+          AccountNameCharacterSupport.field_d = 0L;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

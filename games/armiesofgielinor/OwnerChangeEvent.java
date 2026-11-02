@@ -50,7 +50,7 @@ final class OwnerChangeEvent extends GameEvent {
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         LabeledWidgetContainer.field_N = 0;
         AccountRegistrationForm.field_R = null;
-        jj.field_g = null;
+        FriendLookupSupport.field_g = null;
         int var2 = LeaderEscortCondition.field_i;
         LeaderEscortCondition.field_i = er.field_a;
         ScrollWidgetContainer.field_T.errorCount = ScrollWidgetContainer.field_T.errorCount + 1;
@@ -280,13 +280,13 @@ final class OwnerChangeEvent extends GameEvent {
                 BoundedFile.field_b = true;
               }
             }
-            lq.field_e = QuickChatCommandDefinition.field_e;
+            IntegerPowerSupport.field_e = QuickChatCommandDefinition.field_e;
           }
           if (!BoundedFile.field_b &&
             RasterViewportResizeHandler.field_a < NodeIterator.field_c &&
             BitmapTextWidgetPainter.pointerChangedSnapshot) {
             cc.field_b = LobbyPlayer.field_Ib;
-            lq.field_e = QuickChatCommandDefinition.field_e;
+            IntegerPowerSupport.field_e = QuickChatCommandDefinition.field_e;
             RasterViewportResizeHandler.field_a = 0;
           }
           TextLineLayout.field_a = param1;

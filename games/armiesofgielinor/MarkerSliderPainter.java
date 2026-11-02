@@ -50,7 +50,7 @@ final class MarkerSliderPainter implements WidgetPainter {
             stackIn_4_0 = null;
           }
           var12 = (MarkerSliderWidget) (stackIn_4_0);
-          SoftwareRaster.f(widget.x + originX, originY + widget.y, widget.width, widget.height, this.field_d);
+          SoftwareRaster.fillRectangle(widget.x + originX, originY + widget.y, widget.width, widget.height, this.field_d);
           if (var12 != null) {
           }
           var7 = widget.width - 2 * var12.horizontalPadding;
@@ -59,9 +59,9 @@ final class MarkerSliderPainter implements WidgetPainter {
             return;
           }
           var9 = originY - (-widget.y - var12.baselineOffsetY);
-          SoftwareRaster.h(var8, var9, var7 + var8, var9, this.field_b);
+          SoftwareRaster.drawLine(var8, var9, var7 + var8, var9, this.field_b);
           for (var10 = var12.getMarkerCount((byte) -39) - 1; var10 >= 0; var10--) {
-            SoftwareRaster.a(var7 * var12.getMarker(var10, (byte) -47) / var12.getMaximumValue(-1) + var8, var9, this.field_h, this.field_f);
+            SoftwareRaster.fillCircle(var7 * var12.getMarker(var10, (byte) -47) / var12.getMaximumValue(-1) + var8, var9, this.field_h, this.field_f);
           }
           if (null == this.field_a) {
             return;

@@ -20,7 +20,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
           if (this.resultReceived) {
             return super.advanceDialogAnimation((byte) -1);
           }
-          var2 = ki.a(-61440);
+          var2 = QuinticFadeSupport.a(-61440);
           if (var2 == null) {
             return super.advanceDialogAnimation((byte) -1);
           }
@@ -35,7 +35,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
         if (this.resultReceived) {
           return super.advanceDialogAnimation((byte) -1);
         }
-        var2Lifetime1 = ki.a(-61440);
+        var2Lifetime1 = QuinticFadeSupport.a(-61440);
         if (var2Lifetime1 != null) {
           this.handleRegistrationResult(false, (byte) -53, var2Lifetime1);
         }
@@ -144,7 +144,7 @@ final class AccountRegistrationDialog extends ProgressMessageDialog implements W
                 messagePane.addActionButton(ViewportManager.field_a, -1, 1);
               } else {
                 messagePane.addActionButton(QuickChatCommandDefinition.field_d, 11, 1);
-                messagePane.addActionButton(dt.field_c, 17, 1);
+                messagePane.addActionButton(DateValiditySupport.field_c, 17, 1);
               }
             } else {
               messagePane.addListenerButton(ProgressMessageDialog.field_kb, (WidgetListener) (this), (byte) 110);

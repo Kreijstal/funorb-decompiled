@@ -39,7 +39,7 @@ final class hq {
             BestScoreStrategy.field_l = param9;
             AiPlanningStrategy.field_c = param2;
             wj.field_n = param11;
-            rn.field_d = param8;
+            ProceduralMapSupport.field_d = param8;
             LineOfSightGrid.field_a = param4;
             DefeatPlayerConsoleCommand.field_E = param12;
             CampaignRewardPreview.field_d = param0;

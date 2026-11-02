@@ -68,7 +68,7 @@ final class StateChangeEvent extends GameEvent {
                   null == this.unit ||
                   var13 != null &&
                   param2.battlefield.arePlayersAllied(var13.ownerPlayer, -16985, this.playerId) &&
-                  var13.a(23072)) {
+                  var13.canLifeSteal(23072)) {
                   this.pendingPresentations = this.pendingPresentations + 1;
                   if (this.a(this.tileY, 15, param2, param0, this.tileX - 1)) {
                     var4_int = 1;
@@ -81,7 +81,7 @@ final class StateChangeEvent extends GameEvent {
                   this.unit == null ||
                   var14 != null &&
                   param2.battlefield.arePlayersAllied(var14.ownerPlayer, -16985, this.playerId) &&
-                  var14.a(23072)) {
+                  var14.canLifeSteal(23072)) {
                   this.pendingPresentations = this.pendingPresentations + 1;
                   if (this.a(this.tileY, 15, param2, param0, 1 + this.tileX)) {
                     var4_int = 1;
@@ -94,7 +94,7 @@ final class StateChangeEvent extends GameEvent {
                   this.unit == null ||
                   var15 != null &&
                   param2.battlefield.arePlayersAllied(var15.ownerPlayer, -16985, this.playerId) &&
-                  var15.a(23072)) {
+                  var15.canLifeSteal(23072)) {
                   this.pendingPresentations = this.pendingPresentations + 1;
                   if (this.a(-1 + this.tileY, 15, param2, param0, this.tileX)) {
                     var4_int = 1;
@@ -107,7 +107,7 @@ final class StateChangeEvent extends GameEvent {
                   null == this.unit ||
                   var16 != null &&
                   param2.battlefield.arePlayersAllied(var16.ownerPlayer, -16985, this.playerId) &&
-                  var16.a(23072)) {
+                  var16.canLifeSteal(23072)) {
                   this.pendingPresentations = this.pendingPresentations + 1;
                   if (this.a(this.tileY + 1, 15, param2, param0, this.tileX)) {
                     var4_int = 1;
@@ -230,8 +230,8 @@ final class StateChangeEvent extends GameEvent {
         int var2 = 0;
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          AccountRequestResult.field_b = rs.field_n.textWidth(DisplacedUnitMarker.field_t[17]) + 20;
-          var1_int = rs.field_n.textWidth(DisplacedUnitMarker.field_t[18]);
+          AccountRequestResult.field_b = PowerOfTwoSupport.field_n.textWidth(DisplacedUnitMarker.field_t[17]) + 20;
+          var1_int = PowerOfTwoSupport.field_n.textWidth(DisplacedUnitMarker.field_t[18]);
           if (AccountRequestResult.field_b < var1_int) {
             AccountRequestResult.field_b = var1_int;
           }
@@ -294,20 +294,20 @@ final class StateChangeEvent extends GameEvent {
             } else {
               if (var3_int != 2) {
                 if (3 == var3_int) {
-                  battlefield.f(this.tileX + 1, this.playerId, 126, this.tileY);
-                  battlefield.f(-1 + this.tileX, this.playerId, obfuscationGuard + 26785, this.tileY);
-                  battlefield.f(this.tileX, this.playerId, 121, this.tileY + 1);
-                  battlefield.f(this.tileX, this.playerId, 119, -1 + this.tileY);
+                  battlefield.grantBonusStrengthAt(this.tileX + 1, this.playerId, 126, this.tileY);
+                  battlefield.grantBonusStrengthAt(-1 + this.tileX, this.playerId, obfuscationGuard + 26785, this.tileY);
+                  battlefield.grantBonusStrengthAt(this.tileX, this.playerId, 121, this.tileY + 1);
+                  battlefield.grantBonusStrengthAt(this.tileX, this.playerId, 119, -1 + this.tileY);
                 } else {
                   if (4 == var3_int) {
-                    battlefield.a(-100, battlefield.tiles[battlefield.mapWidth * this.tileY + this.tileX]);
+                    battlefield.consumeTileCorpse(-100, battlefield.tiles[battlefield.mapWidth * this.tileY + this.tileX]);
                   }
                 }
               } else {
-                battlefield.a(-122, false, this.tileX + 1, this.tileY, this.playerId, 3);
-                battlefield.a(-125, false, -1 + this.tileX, this.tileY, this.playerId, 3);
-                battlefield.a(-119, false, this.tileX, 1 + this.tileY, this.playerId, 3);
-                battlefield.a(-128, false, this.tileX, -1 + this.tileY, this.playerId, 3);
+                battlefield.healUnitAt(-122, false, this.tileX + 1, this.tileY, this.playerId, 3);
+                battlefield.healUnitAt(-125, false, -1 + this.tileX, this.tileY, this.playerId, 3);
+                battlefield.healUnitAt(-119, false, this.tileX, 1 + this.tileY, this.playerId, 3);
+                battlefield.healUnitAt(-128, false, this.tileX, -1 + this.tileY, this.playerId, 3);
               }
             }
           } else {
@@ -319,10 +319,10 @@ final class StateChangeEvent extends GameEvent {
           }
           if (2 == this.effectType ||
             3 == this.effectType) {
-            battlefield.e(14, this.tileX + 1, this.playerId, this.tileY);
-            battlefield.e(14, -1 + this.tileX, this.playerId, this.tileY);
-            battlefield.e(14, this.tileX, this.playerId, 1 + this.tileY);
-            battlefield.e(obfuscationGuard + 26675, this.tileX, this.playerId, -1 + this.tileY);
+            battlefield.curePoisonAt(14, this.tileX + 1, this.playerId, this.tileY);
+            battlefield.curePoisonAt(14, -1 + this.tileX, this.playerId, this.tileY);
+            battlefield.curePoisonAt(14, this.tileX, this.playerId, 1 + this.tileY);
+            battlefield.curePoisonAt(obfuscationGuard + 26675, this.tileX, this.playerId, -1 + this.tileY);
           }
           WidgetTheme.recomputeClientStateChecksum(battlefield, -111);
           return;
@@ -370,8 +370,8 @@ final class StateChangeEvent extends GameEvent {
         RuntimeException var5 = null;
         var11 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          SoftwareRaster.e(param1, param4, 1 + param0, 10000536);
-          SoftwareRaster.e(param1, param4 + param2, param0 + 1, 12105912);
+          SoftwareRaster.drawHorizontalLine(param1, param4, 1 + param0, 10000536);
+          SoftwareRaster.drawHorizontalLine(param1, param4 + param2, param0 + 1, 12105912);
           var5_int = 1;
           if (SoftwareRaster.clipTop > var5_int + param4) {
             var5_int = -param4 + SoftwareRaster.clipTop;
@@ -466,16 +466,16 @@ final class StateChangeEvent extends GameEvent {
     }
 
     final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3, boolean param4) {
-        se.emailCheckResult = ProgressDialog.createEmailCheckResult("", 4210752);
-        se.emailCheckResult.setResult(false, true);
+        IgnoreRequestSupport.emailCheckResult = ProgressDialog.createEmailCheckResult("", 4210752);
+        IgnoreRequestSupport.emailCheckResult.setResult(false, true);
         if (param3 != 0) {
           return;
         }
         try {
           MoveEvent.a(param2, false, param1, param0);
-          da.b(-2);
+          LocalAccountSupport.b(-2);
           ChannelBaseVolumeConsoleCommand.field_L = SpriteScrollBar.nameCheckResultConsumed;
-          mh.accountNameCheckState = SpriteScrollBar.nameCheckResultConsumed;
+          EffectsGainSupport.accountNameCheckState = SpriteScrollBar.nameCheckResultConsumed;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "qq.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

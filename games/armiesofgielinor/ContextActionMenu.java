@@ -46,7 +46,7 @@ final class ContextActionMenu extends ClientUiComponent {
           return;
         }
         if (param0) {
-          SoftwareRaster.b(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, 192);
+          SoftwareRaster.fillRectangleBlended(0, 0, SoftwareRaster.width, SoftwareRaster.height, 0, 192);
         }
         SphinxActionRequest.field_v.drawAllLayers(0, -118, 0);
         if (param1 >= -111) {
@@ -62,7 +62,7 @@ final class ContextActionMenu extends ClientUiComponent {
         if (this.pendingResult != -2) {
           return false;
         }
-        if (rs.keyCode == 13) {
+        if (PowerOfTwoSupport.keyCode == 13) {
           this.pendingResult = -1;
           return true;
         }
@@ -70,7 +70,7 @@ final class ContextActionMenu extends ClientUiComponent {
     }
 
     final static void openPublicQuickChat(int obfuscationGuard) {
-        rs.outgoingChatChannel = 0;
+        PowerOfTwoSupport.outgoingChatChannel = 0;
         if (obfuscationGuard <= 63) {
           field_Jb = (String) null;
         }
@@ -107,7 +107,7 @@ final class ContextActionMenu extends ClientUiComponent {
         popupWidth = popupWidth + 2 * this.horizontalPadding;
         popupHeight = this.verticalPadding + this.itemCount * this.rowHeight + this.verticalPadding;
         popupX = ArchiveLoadSequence.a(anchorX, anchorWidth, popupWidth, -1);
-        popupY = pd.a(popupHeight, 0, anchorY, anchorHeight);
+        popupY = PasswordLengthSupport.a(popupHeight, 0, anchorY, anchorHeight);
         this.setBounds(popupHeight, -20500, popupWidth, popupY, popupX);
         for (itemIndex = 0; this.itemCount > itemIndex; itemIndex++) {
           this.items[itemIndex].setLayout(this.rowHeight, this.itemPadding, -30061, -(2 * this.horizontalPadding) + popupWidth, this.rowHeight * itemIndex + this.verticalPadding, this.horizontalPadding, this.iconTextGap);
@@ -134,9 +134,9 @@ final class ContextActionMenu extends ClientUiComponent {
         }
     }
 
-    public static void e(byte param0) {
+    public static void releaseStatics(byte obfuscationGuard) {
         loginForm = null;
-        if (param0 != 5) {
+        if (obfuscationGuard != 5) {
           ContextActionMenu.openPublicQuickChat(-69);
         }
         field_Jb = null;
@@ -166,7 +166,7 @@ final class ContextActionMenu extends ClientUiComponent {
         int var3 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           if (param0) {
-            ContextActionMenu.e((byte) 102);
+            ContextActionMenu.releaseStatics((byte) 102);
           }
           for (var2_int = 0; var2_int < param1.vertexCount; var2_int++) {
             param1.verticesY[var2_int] = 0;

@@ -82,7 +82,7 @@ abstract class ArchiveProvider {
               if (var17 == 0) {
                 var23[var11] = 0;
               } else {
-                var8[var11] = AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(rn.bitwiseAnd(var14 / var17, 16711680), AccountRegistrationDialog.bitwiseOr(var18Lifetime1 << 24, rn.bitwiseAnd(255, var15 / var17))), rn.bitwiseAnd(var16 / var17, 65280));
+                var8[var11] = AccountRegistrationDialog.bitwiseOr(AccountRegistrationDialog.bitwiseOr(ProceduralMapSupport.bitwiseAnd(var14 / var17, 16711680), AccountRegistrationDialog.bitwiseOr(var18Lifetime1 << 24, ProceduralMapSupport.bitwiseAnd(255, var15 / var17))), ProceduralMapSupport.bitwiseAnd(var16 / var17, 65280));
               }
               var11++;
               var12 += 4;
@@ -119,7 +119,7 @@ abstract class ArchiveProvider {
         field_d = null;
     }
 
-    final static rn a(String param0, byte param1) {
+    final static ProceduralMapSupport a(String param0, byte param1) {
         int var6 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -127,13 +127,13 @@ abstract class ArchiveProvider {
         String[] var4 = null;
         String[] var5 = null;
         String var7 = null;
-        rn var8 = null;
+        ProceduralMapSupport var8 = null;
         int var9 = 0;
-        rn stackIn_3_0 = null;
-        rn stackIn_7_0 = null;
-        rn stackIn_11_0 = null;
-        rn stackIn_17_0 = null;
-        rn stackIn_20_0 = null;
+        ProceduralMapSupport stackIn_3_0 = null;
+        ProceduralMapSupport stackIn_7_0 = null;
+        ProceduralMapSupport stackIn_11_0 = null;
+        ProceduralMapSupport stackIn_17_0 = null;
+        ProceduralMapSupport stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -150,7 +150,7 @@ abstract class ArchiveProvider {
             return stackIn_7_0;
           }
           var3 = 82 / ((param1 - 50) / 49);
-          var4 = dj.splitText(32, '.', param0);
+          var4 = TextSplitSupport.splitText(32, '.', param0);
           if (var4.length < 2) {
             stackIn_11_0 = HotspotTextWidget.field_N;
             return stackIn_11_0;

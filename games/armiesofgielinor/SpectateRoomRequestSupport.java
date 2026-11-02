@@ -1,0 +1,94 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SpectateRoomRequestSupport {
+    static String field_d;
+    static int field_e;
+    static ProceduralMapSupport field_h;
+    static String field_f;
+    static ClientUiComponent field_i;
+    static String field_c;
+    static ClientConnectionState connectionState;
+    static NineSliceFrame field_m;
+    static String field_l;
+    static int field_b;
+    static String field_k;
+    static String field_a;
+    static String field_j;
+
+    public static void releaseStatics(byte obfuscationGuard) {
+        field_j = null;
+        field_h = null;
+        int var1 = 16 % ((obfuscationGuard + 4) / 43);
+        field_m = null;
+        field_d = null;
+        field_a = null;
+        field_i = null;
+        field_f = null;
+        field_c = null;
+        connectionState = null;
+        field_l = null;
+        field_k = null;
+    }
+
+    final static void writeSpectateRoomRequest(int packetOpcode, int payloadLength, int roomId) {
+        CipherPacketBuffer var3 = EmailValidator.outgoingPacket;
+        var3.writeCipheredOpcode(32161, packetOpcode);
+        var3.writeByte(payloadLength - 2, payloadLength);
+        var3.writeByte(1, 10);
+        var3.writeShort(true, roomId);
+    }
+
+    final static void a(java.applet.Applet param0, int param1) {
+        try {
+          java.net.URL var2 = null;
+          Exception var2_ref = null;
+          RuntimeException var2_ref2 = null;
+          RuntimeException stackIn_8_0 = null;
+          StringBuilder stackIn_8_1 = null;
+          String stackIn_9_2 = null;
+          Throwable decompiledCaughtException = null;
+          try {
+            try {
+              if (param1 != 11982) {
+                return;
+              }
+              var2 = new java.net.URL(param0.getCodeBase(), "tosupport.ws");
+              param0.getAppletContext().showDocument(StructureTerrainSupport.a(-3780, var2, param0), "_top");
+              return;
+            } catch (java.lang.Exception decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = (Exception) (Object) decompiledCaughtException;
+              var2_ref.printStackTrace();
+              return;
+            }
+          } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var2_ref2 = (RuntimeException) (Object) decompiledCaughtException;
+            stackIn_8_0 = var2_ref2;
+            stackIn_8_1 = new StringBuilder().append("ov.A(");
+            if (param0 == null) {
+              stackIn_9_2 = "null";
+            } else {
+              stackIn_9_2 = "{...}";
+            }
+            throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    static {
+        field_f = "Purse";
+        field_c = "Catalysts";
+        field_d = "Options";
+        field_h = new ProceduralMapSupport();
+        field_l = "From <%0>: ";
+        field_k = "Here you can set up a rated game. If you win, your rating will go up. If<nbsp>you lose, it will go down!<br><br>Please specify your preferences and click '<%0>'. Our system will then attempt to find a suitable opponent in under a minute, depending on how busy the lobby<nbsp>is.<br><br>This is an excellent way to get to know new people!";
+        field_a = "Barbarian Chieftain";
+        field_j = "Please try changing the following settings:  ";
+    }
+}

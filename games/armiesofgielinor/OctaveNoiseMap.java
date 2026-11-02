@@ -18,19 +18,19 @@ final class OctaveNoiseMap extends TileableNoiseGenerator {
         }
         if (param0 != 488997228) {
           field_s = (String) null;
-          if (!se.emailCheckResult.isComplete((byte) 126)) {
-            return se.emailCheckResult.getEmail(true);
+          if (!IgnoreRequestSupport.emailCheckResult.isComplete((byte) 126)) {
+            return IgnoreRequestSupport.emailCheckResult.getEmail(true);
           }
-          if (SocketFactory.nameCheckPending == mh.accountNameCheckState) {
-            return se.emailCheckResult.getEmail(true);
+          if (SocketFactory.nameCheckPending == EffectsGainSupport.accountNameCheckState) {
+            return IgnoreRequestSupport.emailCheckResult.getEmail(true);
           }
           return IsaacRandom.loginAccountIdentifier;
         }
-        if (!se.emailCheckResult.isComplete((byte) 126)) {
-          return se.emailCheckResult.getEmail(true);
+        if (!IgnoreRequestSupport.emailCheckResult.isComplete((byte) 126)) {
+          return IgnoreRequestSupport.emailCheckResult.getEmail(true);
         }
-        if (SocketFactory.nameCheckPending == mh.accountNameCheckState) {
-          return se.emailCheckResult.getEmail(true);
+        if (SocketFactory.nameCheckPending == EffectsGainSupport.accountNameCheckState) {
+          return IgnoreRequestSupport.emailCheckResult.getEmail(true);
         }
         return IsaacRandom.loginAccountIdentifier;
     }
@@ -105,9 +105,9 @@ final class OctaveNoiseMap extends TileableNoiseGenerator {
         }
     }
 
-    public static void f(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_q = null;
-        if (param0 < 106) {
+        if (obfuscationGuard < 106) {
           OctaveNoiseMap.e(-21);
           field_s = null;
           return;

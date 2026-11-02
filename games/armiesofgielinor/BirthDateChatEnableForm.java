@@ -43,15 +43,15 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
         try {
           WhirlpoolHasher.field_g = true;
           ToggleWidget.field_Q.text = param1;
-          var2_int = so.field_b.width;
-          var3 = so.field_b.height;
+          var2_int = FixedSquareRootSupport.field_b.width;
+          var3 = FixedSquareRootSupport.field_b.height;
           var4 = ToggleWidget.field_Q.font.getParagraphHeight(param1, 272, ToggleWidget.field_Q.textLineSpacing);
           var5 = -(var4 / 2) + var3 / 2 - 103;
           if (param0 < 27) {
             decodedSpriteCanvasHeight = -20;
           }
           GameClock.field_c.setBounds(-(var5 * 2) + (-120 + var3), -20500, 320, var5, (var2_int - 320) / 2);
-          GameClock.field_c.skinSprites = tq.a(11579568, false, GameClock.field_c.height, 2105376, 3, 8421504);
+          GameClock.field_c.skinSprites = NineSliceSpriteSupport.buildSolidFrameSprites(11579568, false, GameClock.field_c.height, 2105376, 3, 8421504);
           ToggleWidget.field_Q.setBounds(-20 + (GameClock.field_c.height - 24), -20500, GameClock.field_c.width - 48, 16, 24);
           LinkButtonPainter.field_g.setBounds(24, -20500, 80, GameClock.field_c.height - 20 - 24, 120);
         } catch (RuntimeException runtimeException) {
@@ -60,7 +60,7 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
     }
 
     public final void widgetActivated(int pointerX, int obfuscationGuard, int button, int pointerY, InteractiveWidget widget) {
-        if (this.dateInput.getValidationSource(-918933630).getValidationState(false) != oo.validationValid) {
+        if (this.dateInput.getValidationSource(-918933630).getValidationState(false) != MembershipExpansionScreen.validationValid) {
           return;
         }
         if (obfuscationGuard != 11) {
@@ -85,7 +85,7 @@ final class BirthDateChatEnableForm extends ArrayWidgetContainer implements Widg
     final void updatePointer(int obfuscationGuard, int originX, int originY, Widget rootWidget) {
         try {
           super.updatePointer(obfuscationGuard, originX, originY, rootWidget);
-          this.submitButton.enabled = this.dateInput.getValidationSource(-918933630).getValidationState(false) == oo.validationValid ? true : false;
+          this.submitButton.enabled = this.dateInput.getValidationSource(-918933630).getValidationState(false) == MembershipExpansionScreen.validationValid ? true : false;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "wr.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');
         }

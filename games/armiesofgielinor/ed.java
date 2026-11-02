@@ -25,7 +25,7 @@ final class ed {
     final static boolean a(int param0) {
         if (param0 <= -66) {
           TurnEffectEvent.field_C = true;
-          jl.field_a = vi.monotonicMillis(124) + 15000L;
+          jl.field_a = MonotonicClockSupport.monotonicMillis(124) + 15000L;
           return 11 == SoundCache.field_b ? true : false;
         }
         return true;
@@ -35,7 +35,7 @@ final class ed {
         if (!QuickChatCategoryRepository.guestSession) {
           throw new IllegalStateException();
         }
-        it.field_b = true;
+        ChatMessageWriteSupport.field_b = true;
         if (!param0) {
           DraggableWidgetContainer.a(true, -49);
           SoundCache.field_b = 0;

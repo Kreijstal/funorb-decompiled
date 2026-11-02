@@ -46,11 +46,11 @@ final class StandardContentDialog extends ContentTransitionDialog {
 
     final static ScrollControlWidget createVerticalScrollControl(int obfuscationGuard) {
         if (obfuscationGuard == 0) {
-          return new ScrollControlWidget(0, 0, t.field_c.field_a, 0, (WidgetPainter) null, t.field_c.field_k, t.field_c.field_p, t.field_c.field_a, t.field_c.field_a, t.field_c.field_b, t.field_c.field_n, false, true, 32768, 0);
+          return new ScrollControlWidget(0, 0, ReloadPageSupport.field_c.field_a, 0, (WidgetPainter) null, ReloadPageSupport.field_c.field_k, ReloadPageSupport.field_c.field_p, ReloadPageSupport.field_c.field_a, ReloadPageSupport.field_c.field_a, ReloadPageSupport.field_c.field_b, ReloadPageSupport.field_c.field_n, false, true, 32768, 0);
         }
         QuickChatMenu var2 = (QuickChatMenu) null;
         StandardContentDialog.attachQuickChatMenu((byte) -16, (QuickChatMenu) null);
-        return new ScrollControlWidget(0, 0, t.field_c.field_a, 0, (WidgetPainter) null, t.field_c.field_k, t.field_c.field_p, t.field_c.field_a, t.field_c.field_a, t.field_c.field_b, t.field_c.field_n, false, true, 32768, 0);
+        return new ScrollControlWidget(0, 0, ReloadPageSupport.field_c.field_a, 0, (WidgetPainter) null, ReloadPageSupport.field_c.field_k, ReloadPageSupport.field_c.field_p, ReloadPageSupport.field_c.field_a, ReloadPageSupport.field_c.field_a, ReloadPageSupport.field_c.field_b, ReloadPageSupport.field_c.field_n, false, true, 32768, 0);
     }
 
     static {

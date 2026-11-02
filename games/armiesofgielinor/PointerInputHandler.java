@@ -19,7 +19,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
           if (BattleCharacter.pointerInputHandler == null) {
             return;
           }
-          av.pointerIdleTicks = 0;
+          PointerIdleState.pointerIdleTicks = 0;
           DiskCacheRequest.livePointerX = -1;
           ResourceArchive.livePointerY = -1;
           DropTargetWidgetContainer.pointerChanged = true;
@@ -56,10 +56,10 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (BattleCharacter.pointerInputHandler != null) {
-            av.pointerIdleTicks = 0;
+            PointerIdleState.pointerIdleTicks = 0;
             QuickChatMenu.lastPointerPressX = event.getX();
             BoundedFile.lastPointerPressY = event.getY();
-            vi.monotonicMillis(-112);
+            MonotonicClockSupport.monotonicMillis(-112);
             if (javax.swing.SwingUtilities.isRightMouseButton(event)) {
               ArchiveIndex.pressedPointerButton = 2;
               GridWidgetContainer.heldPointerButton = 2;
@@ -108,7 +108,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
           if (BattleCharacter.pointerInputHandler == null) {
             return;
           }
-          av.pointerIdleTicks = 0;
+          PointerIdleState.pointerIdleTicks = 0;
           DiskCacheRequest.livePointerX = event.getX();
           ResourceArchive.livePointerY = event.getY();
           DropTargetWidgetContainer.pointerChanged = true;
@@ -158,7 +158,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
           if (BattleCharacter.pointerInputHandler == null) {
             return;
           }
-          av.pointerIdleTicks = 0;
+          PointerIdleState.pointerIdleTicks = 0;
           DiskCacheRequest.livePointerX = event.getX();
           ResourceArchive.livePointerY = event.getY();
           DropTargetWidgetContainer.pointerChanged = true;
@@ -195,7 +195,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
     public final synchronized void mouseEntered(java.awt.event.MouseEvent event) {
         try {
           if (BattleCharacter.pointerInputHandler != null) {
-            av.pointerIdleTicks = 0;
+            PointerIdleState.pointerIdleTicks = 0;
             DiskCacheRequest.livePointerX = event.getX();
             ResourceArchive.livePointerY = event.getY();
             DropTargetWidgetContainer.pointerChanged = true;
@@ -224,7 +224,7 @@ final class PointerInputHandler implements java.awt.event.MouseListener, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != BattleCharacter.pointerInputHandler) {
-            av.pointerIdleTicks = 0;
+            PointerIdleState.pointerIdleTicks = 0;
             GridWidgetContainer.heldPointerButton = 0;
             DropTargetWidgetContainer.pointerChanged = true;
             var2_int = event.getModifiers();

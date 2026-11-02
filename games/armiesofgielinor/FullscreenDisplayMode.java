@@ -122,7 +122,7 @@ final class FullscreenDisplayMode {
             return null;
           }
           if (param3 <= -2) {
-            stackIn_7_0 = rr.b(0);
+            stackIn_7_0 = IndexedDecodedSpriteSupport.buildFirstDecodedIndexedSprite(0);
             return stackIn_7_0;
           }
           stackIn_5_0 = (IndexedSprite) null;
@@ -164,14 +164,14 @@ final class FullscreenDisplayMode {
         var10 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           var7_int = SetCoatConsoleCommand.b(7, param4);
-          if (dt.field_b == null) {
-            dt.field_b = new java.security.SecureRandom();
+          if (DateValiditySupport.field_b == null) {
+            DateValiditySupport.field_b = new java.security.SecureRandom();
           }
           var13 = new int[4];
           var12 = var13;
           var8 = var12;
           for (var9 = 0; var9 < 4; var9++) {
-            var8[var9] = dt.field_b.nextInt();
+            var8[var9] = DateValiditySupport.field_b.nextInt();
           }
           if (null == DateOfBirthValidator.field_h ||
             !(DateOfBirthValidator.field_h.payload.length >= var7_int)) {

@@ -196,7 +196,7 @@ final class PopupPresentation implements EventPresentation {
             this.field_r = -10 + AttackEvent.nextBoundedInt(false, 21, li.field_n);
             if ((!this.field_g[param2 + this.field_s * param1].hasCorpse(92) ||
               null != this.unit) && (this.unit == null ||
-              !this.unit.a(23072) ||
+              !this.unit.canLifeSteal(23072) ||
               this.unit.ownerPlayer != ((StateChangeEvent) (param3)).playerId ||
               this.unit.maximumStrength == this.unit.strength)) {
               this.elapsedFrames = 50;
@@ -231,20 +231,20 @@ final class PopupPresentation implements EventPresentation {
           this.field_n = 7;
           var7 = (UnitSpell) (((SpellCastEvent) (param3)).spell);
           var8 = var7;
-          if (6 == uc.spellDefinitions[var7.spellId][4]) {
+          if (6 == SpellDefinitionTable.spellDefinitions[var7.spellId][4]) {
             this.field_n = 10;
           }
-          if (uc.spellDefinitions[var7.spellId][4] == 4 &&
-            uc.spellDefinitions[var7.spellId][5] != 64 &&
-            uc.spellDefinitions[var7.spellId][5] != 0) {
-            if (uc.spellDefinitions[var7.spellId][6] >= 0) {
-              if (uc.spellDefinitions[var8.spellId][7] <= 0) {
+          if (SpellDefinitionTable.spellDefinitions[var7.spellId][4] == 4 &&
+            SpellDefinitionTable.spellDefinitions[var7.spellId][5] != 64 &&
+            SpellDefinitionTable.spellDefinitions[var7.spellId][5] != 0) {
+            if (SpellDefinitionTable.spellDefinitions[var7.spellId][6] >= 0) {
+              if (SpellDefinitionTable.spellDefinitions[var8.spellId][7] <= 0) {
                 this.field_n = 12;
               } else {
                 this.field_n = 11;
               }
             } else {
-              if (uc.spellDefinitions[var7.spellId][7] > 0) {
+              if (SpellDefinitionTable.spellDefinitions[var7.spellId][7] > 0) {
                 this.field_n = 14;
               } else {
                 this.field_n = 13;
@@ -514,14 +514,14 @@ final class PopupPresentation implements EventPresentation {
         }
         int var3 = this.field_m > 0 ? this.field_m : -this.field_m;
         if (var3 != 1) {
-          od.field_d[param0].drawScaledWithOpacity(this.field_f + (40 + (this.presenter.screenX - var3 * 5)), this.field_r + (this.presenter.screenY + (-20 - var3 * 5) - this.elapsedFrames), this.field_m * 10, var3 * 10, 40 - this.elapsedFrames << 2);
+          ByteArrayPoolSupport.field_d[param0].drawScaledWithOpacity(this.field_f + (40 + (this.presenter.screenX - var3 * 5)), this.field_r + (this.presenter.screenY + (-20 - var3 * 5) - this.elapsedFrames), this.field_m * 10, var3 * 10, 40 - this.elapsedFrames << 2);
         } else {
-          od.field_d[param0].drawWithOpacity(this.field_f + 35 + this.presenter.screenX, -this.elapsedFrames + (this.presenter.screenY - 25) + this.field_r, -this.elapsedFrames + 40 << 2);
+          ByteArrayPoolSupport.field_d[param0].drawWithOpacity(this.field_f + 35 + this.presenter.screenX, -this.elapsedFrames + (this.presenter.screenY - 25) + this.field_r, -this.elapsedFrames + 40 << 2);
         }
     }
 
     private final void c(int param0) {
-        SoftwareRaster.a(this.presenter.screenX + 40, -20 + this.presenter.screenY, 10, this.field_i);
+        SoftwareRaster.fillCircle(this.presenter.screenX + 40, -20 + this.presenter.screenY, 10, this.field_i);
         mv.field_a[this.field_a ? 1 : 0].drawTransparent(20 + this.presenter.screenX, this.presenter.screenY - 35);
         if (param0 != 3) {
           this.drawBaseLayer((byte) -24);

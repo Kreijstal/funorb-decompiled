@@ -17,7 +17,7 @@ final class ToggleWidget extends InteractiveWidget {
     private ToggleWidget(String text, WidgetPainter initialPainter, WidgetListener listener) {
         super(text, initialPainter, listener);
         try {
-          this.painter = t.field_c.field_i;
+          this.painter = ReloadPageSupport.field_c.field_i;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vu.<init>(" + (text != null ? "{...}" : "null") + ',' + (initialPainter != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
         }
@@ -46,13 +46,13 @@ final class ToggleWidget extends InteractiveWidget {
         if (obfuscationGuard != 6) {
           field_P = (String) null;
         }
-        return FixedQuaternion.isOnlineFriendOrRoomMember(dj.chatRecipientAccountId, wm.chatRecipientNameKey, (byte) -116);
+        return FixedQuaternion.isOnlineFriendOrRoomMember(TextSplitSupport.chatRecipientAccountId, wm.chatRecipientNameKey, (byte) -116);
     }
 
     private ToggleWidget(String text, WidgetListener listener) {
-        this(text, t.field_c.field_j, listener);
+        this(text, ReloadPageSupport.field_c.field_j, listener);
         try {
-          this.painter = t.field_c.field_i;
+          this.painter = ReloadPageSupport.field_c.field_i;
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "vu.<init>(" + (text != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ')');
         }
@@ -94,9 +94,9 @@ final class ToggleWidget extends InteractiveWidget {
                   NineSliceFrame.activeFoliageSprites[var11] != null) {
                   var12 = NineSliceFrame.activeFoliageSprites[var11];
                   if (param1) {
-                    var12.d(db.a(true, param2 + var8), MatchConditionEntry.a(var9 + param3, (byte) 94));
+                    var12.drawHalfSize(IgnoreListLookupSupport.a(true, param2 + var8), MatchConditionEntry.a(var9 + param3, (byte) 94));
                   } else {
-                    var12.draw(db.a(true, var8 + param2), MatchConditionEntry.a(var9 + param3, (byte) 94));
+                    var12.draw(IgnoreListLookupSupport.a(true, var8 + param2), MatchConditionEntry.a(var9 + param3, (byte) 94));
                   }
                 }
               }

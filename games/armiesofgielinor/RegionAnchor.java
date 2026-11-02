@@ -30,8 +30,8 @@ final class RegionAnchor extends IntrusiveNode {
         try {
           var4_int = 16777215;
           var5 = GameplayController.field_f >> 1 << 24;
-          if (vs.field_e[param2].hasModifierFlag2(-1)) {
-            var6 = vs.field_e[param2].ownerPlayer;
+          if (QuickChatMenuDisplaySupport.field_e[param2].hasModifierFlag2(-1)) {
+            var6 = QuickChatMenuDisplaySupport.field_e[param2].ownerPlayer;
             if (null != CipherPacketBuffer.currentBattlefield) {
               var6 = CipherPacketBuffer.currentBattlefield.getPlayerTeamIndex(var6, param0 ^ -16711681);
             }
@@ -102,8 +102,8 @@ final class RegionAnchor extends IntrusiveNode {
               var8 = NetworkResourceRequest.field_C.movementPlanner.targetX;
               var9 = NetworkResourceRequest.field_C.movementPlanner.targetY;
               if (NetworkResourceRequest.field_C.selectedUnit.hasMovementTarget(-28467)) {
-                var8 = NetworkResourceRequest.field_C.selectedUnit.a(false);
-                var9 = NetworkResourceRequest.field_C.selectedUnit.D(param0 - 16711795);
+                var8 = NetworkResourceRequest.field_C.selectedUnit.getMovementTargetX(false);
+                var9 = NetworkResourceRequest.field_C.selectedUnit.getMovementTargetY(param0 - 16711795);
               }
               var10 = Math.abs(var8 - param3);
               var11 = Math.abs(-param1 + var9);
@@ -216,7 +216,7 @@ final class RegionAnchor extends IntrusiveNode {
               }
             }
           }
-          var6 = CipherPacketBuffer.currentBattlefield.a(param2, -1, true) & 28;
+          var6 = CipherPacketBuffer.currentBattlefield.getTileEffectsByIndex(param2, -1, true) & 28;
           if (param0 != 16711680) {
             field_o = (ResourceArchive) null;
           }
@@ -235,12 +235,12 @@ final class RegionAnchor extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_m = null;
         field_o = null;
         field_k = null;
         field_n = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           RegionAnchor.a(-107, -22, -114, 71);
         }
     }

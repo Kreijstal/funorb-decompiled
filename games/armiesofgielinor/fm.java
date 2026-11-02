@@ -7,11 +7,11 @@ final class fm {
     static int[] field_d;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_d = null;
         field_b = null;
         field_c = null;
-        if (param0 < 80) {
+        if (obfuscationGuard < 80) {
           fm.a(8, 105, 64);
         }
     }

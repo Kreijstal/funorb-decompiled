@@ -323,7 +323,7 @@ final class CampaignMission extends IntrusiveNode implements TaggedFieldReader {
         int var5Lifetime1;
         var6 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var7 = fk.loadRgbSpritesByName(param1, (byte) -126, param3, param2);
+          var7 = DropdownSelectorPainter.loadRgbSpritesByName(param1, (byte) -126, param3, param2);
           var4 = var7;
           for (var5 = 0; var5 < 9; var5++) {
             var7[var5].normalizeCanvas();

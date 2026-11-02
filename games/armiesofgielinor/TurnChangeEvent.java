@@ -15,7 +15,7 @@ final class TurnChangeEvent extends GameEvent {
     }
 
     final static void d(byte param0) {
-        vi.a(-76);
+        MonotonicClockSupport.a(-76);
         if (param0 != -112) {
           return;
         }

@@ -78,12 +78,12 @@ final class AlphaWidgetContainer extends SingleChildWidgetContainer {
     }
 
     final static void d(boolean param0) {
-        int var1 = (tq.field_c - 640) / 2;
-        int var2 = mj.field_c * mj.field_c;
+        int var1 = (NineSliceSpriteSupport.field_c - 640) / 2;
+        int var2 = AudioShutdownSupport.field_c * AudioShutdownSupport.field_c;
         int var3 = -(ModalDialogHost.field_J * ModalDialogHost.field_J) + var2;
         if (!param0) {
           NumericDateInputWidget.field_T.setBounds(-4 + (SoftwareRaster.height - 120) - 90, -20500, 199, 90, var1 - var3 * 199 / var2);
-          ov.field_i.setBounds(-4 + (SoftwareRaster.height - 120), -20500, 438, 0, var3 * 438 / var2 + 202 + var1);
+          SpectateRoomRequestSupport.field_i.setBounds(-4 + (SoftwareRaster.height - 120), -20500, 438, 0, var3 * 438 / var2 + 202 + var1);
           return;
         }
     }

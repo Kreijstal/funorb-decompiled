@@ -774,7 +774,7 @@ final class AiInfluenceMap {
             break;
           }
           if (var3 == null) {
-            dj.a((byte) -127);
+            TextSplitSupport.a((byte) -127);
             return;
           }
           var4 = var14.readUnsignedByte(0);
@@ -789,12 +789,12 @@ final class AiInfluenceMap {
               ArchiveLoadSequence.a(var14, -83);
               if (0 == var6_intLifetime1) {
                 var3.field_r = RevivalEvent.field_D;
-                var3.field_s = ov.field_e;
+                var3.field_s = SpectateRoomRequestSupport.field_e;
                 var3.field_k = la.field_d;
                 var3.field_m = Bzip2State.field_m;
-                DisplaySettingsDialog.a(RevivalEvent.field_D, Bzip2State.field_m, ov.field_e, la.field_d, (byte) 127, var6_intLifetime1);
+                DisplaySettingsDialog.a(RevivalEvent.field_D, Bzip2State.field_m, SpectateRoomRequestSupport.field_e, la.field_d, (byte) 127, var6_intLifetime1);
               } else {
-                DisplaySettingsDialog.a(RevivalEvent.field_D, Bzip2State.field_m, ov.field_e, la.field_d, (byte) 125, var6_intLifetime1);
+                DisplaySettingsDialog.a(RevivalEvent.field_D, Bzip2State.field_m, SpectateRoomRequestSupport.field_e, la.field_d, (byte) 125, var6_intLifetime1);
               }
             }
             ArchiveIndex.a(var5, 0);
@@ -814,7 +814,7 @@ final class AiInfluenceMap {
               var7[0][1 + 4 * var10] = AnimationFrameSet.field_w[var11];
               var7[0][var10 * 4 + 2] = TutorialController.field_c[var11];
               var7[0][3 + var10 * 4] = VineGrowthAction.field_s[var11];
-              if (gt.isLocalAccountName(LeaderEscortCondition.field_a[var11], (byte) 121) &&
+              if (LocalAccountNameSupport.isLocalAccountName(LeaderEscortCondition.field_a[var11], (byte) 121) &&
                 0 == TutorialController.field_c[var11] + AnimationFrameSet.field_w[var11] + VineGrowthAction.field_s[var11]) {
                 var6[0][var10] = null;
                 var10--;
@@ -832,7 +832,7 @@ final class AiInfluenceMap {
               var7[1][var13 * 4 + 1] = AnimationFrameSet.field_w[var11Lifetime1];
               var7[1][var13 * 4 + 2] = TutorialController.field_c[var11Lifetime1];
               var7[1][var13 * 4 + 3] = VineGrowthAction.field_s[var11Lifetime1];
-              if (gt.isLocalAccountName(LeaderEscortCondition.field_a[var11Lifetime1], (byte) 109) &&
+              if (LocalAccountNameSupport.isLocalAccountName(LeaderEscortCondition.field_a[var11Lifetime1], (byte) 109) &&
                 VineGrowthAction.field_s[var11Lifetime1] + (AnimationFrameSet.field_w[var11Lifetime1] + TutorialController.field_c[var11Lifetime1]) == 0) {
                 var6[1][var13] = null;
                 var13--;

@@ -55,7 +55,7 @@ class kq extends InteractiveWidget {
           if (obfuscationGuard != 7) {
             field_N = (ClientUiComponent) null;
           }
-          if (uc.spellDefinitions[spellId][3] != 0) {
+          if (SpellDefinitionTable.spellDefinitions[spellId][3] != 0) {
             return null;
           }
           var7 = battlefield.getUnitAt(tileY, true, tileX);
@@ -64,7 +64,7 @@ class kq extends InteractiveWidget {
             stackIn_7_0 = null;
             return (String) (stackIn_7_0);
           }
-          if (uc.spellDefinitions[spellId][4] == 1 &&
+          if (SpellDefinitionTable.spellDefinitions[spellId][4] == 1 &&
             var8.getEquipmentId((byte) 81) > 0) {
             var6 = UiSelectionState.field_e[var7.getEquipmentId((byte) 81)][var7.getEquipmentCategory(20640)];
             array$0 = new String[3];
@@ -89,7 +89,7 @@ class kq extends InteractiveWidget {
             stackIn_18_0 = EmailCheckResult.a(stackIn_13_0, stackIn_13_1, stackIn_13_2);
             return stackIn_18_0;
           }
-          if (uc.spellDefinitions[spellId][4] == 0 &&
+          if (SpellDefinitionTable.spellDefinitions[spellId][4] == 0 &&
             0 != var8.statusEffectType) {
             var6Lifetime1 = PaletteRegionMap.field_f[var7.statusEffectType];
             if (7 != var8.statusEffectType &&
@@ -98,7 +98,7 @@ class kq extends InteractiveWidget {
             }
             array$1 = new String[3];
             stackIn_29_0 = 4800;
-            stackIn_29_1 = oo.field_o;
+            stackIn_29_1 = MembershipExpansionScreen.field_o;
             stackIn_29_2 = array$1;
             stackIn_29_3 = array$1;
             stackIn_29_4 = 1;
@@ -118,7 +118,7 @@ class kq extends InteractiveWidget {
             stackIn_34_0 = EmailCheckResult.a(stackIn_29_0, stackIn_29_1, stackIn_29_2);
             return stackIn_34_0;
           }
-          if (uc.spellDefinitions[spellId][4] != 3) {
+          if (SpellDefinitionTable.spellDefinitions[spellId][4] != 3) {
             stackIn_48_0 = null;
             return (String) (stackIn_48_0);
           }
@@ -250,7 +250,7 @@ class kq extends InteractiveWidget {
             var3 = (String) null;
             kq.a((String) null, true);
           }
-          var2 = db.a(true, ' ');
+          var2 = IgnoreListLookupSupport.a(true, ' ');
           if (!param0.equals(var2)) {
             return false;
           }

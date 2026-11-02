@@ -47,7 +47,7 @@ final class UnitCycler {
         int var19Lifetime1Lifetime1;
         var20 = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
-          var5_int = op.field_c[0][param1];
+          var5_int = FriendRequestSupport.field_c[0][param1];
           var6 = var5_int << 1 & 105984 | (13566159 & var5_int) << 1;
           param0 += 16;
           var7 = 3;
@@ -69,23 +69,23 @@ final class UnitCycler {
             var12 = param4 + var8 * 2;
             var13 = -var10 + (var9 / 5 + 1);
             var14 = var9 >> var7;
-            SoftwareRaster.c(var11, var12, var13, var6, var14);
-            SoftwareRaster.c(var11, var12 + 1, var13, var6, var14);
+            SoftwareRaster.drawHorizontalLineAdditive(var11, var12, var13, var6, var14);
+            SoftwareRaster.drawHorizontalLineAdditive(var11, var12 + 1, var13, var6, var14);
             var15 = var11;
             var15 = var11 + var15 >> 1 << 8;
             var16 = (var13 << 8) / 6;
             var17 = var16 / 2 + (var15 + (ContextualRuntimeException.a(-1, param2 + var8 << 5) * 4 >> 8));
             var18 = var9 >> 3;
             for (var19 = 0; 3 > var19; var19++) {
-              SoftwareRaster.c(var17 >> 8, var12, var16 >> 8, var5_int, var18);
-              SoftwareRaster.c(var17 >> 8, 1 + var12, var16 >> 8, var5_int, var18);
+              SoftwareRaster.drawHorizontalLineAdditive(var17 >> 8, var12, var16 >> 8, var5_int, var18);
+              SoftwareRaster.drawHorizontalLineAdditive(var17 >> 8, 1 + var12, var16 >> 8, var5_int, var18);
               var17 = var17 + 2 * var16;
             }
             var17Lifetime2 = var16 / 4 + (var16 / 2 + var15);
             var16 = var16 / 2;
             for (var19Lifetime2 = 0; var19Lifetime2 < 3; var19Lifetime2++) {
-              SoftwareRaster.c(var17Lifetime2 >> 8, var12, var16 >> 8, var5_int, var18);
-              SoftwareRaster.c(var17Lifetime2 >> 8, 1 + var12, var16 >> 8, var5_int, var18);
+              SoftwareRaster.drawHorizontalLineAdditive(var17Lifetime2 >> 8, var12, var16 >> 8, var5_int, var18);
+              SoftwareRaster.drawHorizontalLineAdditive(var17Lifetime2 >> 8, 1 + var12, var16 >> 8, var5_int, var18);
               var17Lifetime2 = var17Lifetime2 + var16 * 4;
             }
           }
@@ -104,23 +104,23 @@ final class UnitCycler {
             var12Lifetime1 = param4 + var8Lifetime1 * 2;
             var13Lifetime1 = 1 + var9Lifetime1 / 5 - var10Lifetime1;
             var14Lifetime1 = var9Lifetime1 >> 3;
-            SoftwareRaster.c(var11Lifetime1, var12Lifetime1, var13Lifetime1, var6, var14Lifetime1);
-            SoftwareRaster.c(var11Lifetime1, 1 + var12Lifetime1, var13Lifetime1, var6, var14Lifetime1);
+            SoftwareRaster.drawHorizontalLineAdditive(var11Lifetime1, var12Lifetime1, var13Lifetime1, var6, var14Lifetime1);
+            SoftwareRaster.drawHorizontalLineAdditive(var11Lifetime1, 1 + var12Lifetime1, var13Lifetime1, var6, var14Lifetime1);
             var15Lifetime1 = var11Lifetime1;
             var15Lifetime1 = var15Lifetime1 + var11Lifetime1 >> 1 << 8;
             var16Lifetime1 = (var13Lifetime1 << 8) / 6;
-            var17Lifetime1 = var15Lifetime1 - (-(var16Lifetime1 / 2) - (4 * SocketResourceClient.b(var8Lifetime1 + param2 << 4, 100) >> 8));
+            var17Lifetime1 = var15Lifetime1 - (-(var16Lifetime1 / 2) - (4 * SocketResourceClient.sine8192(var8Lifetime1 + param2 << 4, 100) >> 8));
             var18Lifetime1 = var9Lifetime1 >> 4;
             for (var19Lifetime1 = 0; 3 > var19Lifetime1; var19Lifetime1++) {
-              SoftwareRaster.c(var17Lifetime1 >> 8, var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
-              SoftwareRaster.c(var17Lifetime1 >> 8, 1 + var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
+              SoftwareRaster.drawHorizontalLineAdditive(var17Lifetime1 >> 8, var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
+              SoftwareRaster.drawHorizontalLineAdditive(var17Lifetime1 >> 8, 1 + var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
               var17Lifetime1 = var17Lifetime1 + var16Lifetime1 * 2;
             }
             var17Lifetime1Lifetime1 = var16Lifetime1 / 4 + var15Lifetime1 + var16Lifetime1 / 2;
             var16Lifetime1 = var16Lifetime1 / 2;
             for (var19Lifetime1Lifetime1 = 0; var19Lifetime1Lifetime1 < 3; var19Lifetime1Lifetime1++) {
-              SoftwareRaster.c(var17Lifetime1Lifetime1 >> 8, var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
-              SoftwareRaster.c(var17Lifetime1Lifetime1 >> 8, 1 + var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
+              SoftwareRaster.drawHorizontalLineAdditive(var17Lifetime1Lifetime1 >> 8, var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
+              SoftwareRaster.drawHorizontalLineAdditive(var17Lifetime1Lifetime1 >> 8, 1 + var12Lifetime1, var16Lifetime1 >> 8, var5_int, var18Lifetime1);
               var17Lifetime1Lifetime1 = var17Lifetime1Lifetime1 + 4 * var16Lifetime1;
             }
           }

@@ -27,7 +27,7 @@ final class TrianglePulse {
     }
 
     final static void openDefaultQuickChatMenu(byte obfuscationGuard) {
-        vs.showQuickChatMenu(256, AdaptiveMidiPcmStream.defaultQuickChatMenu);
+        QuickChatMenuDisplaySupport.showQuickChatMenu(256, AdaptiveMidiPcmStream.defaultQuickChatMenu);
         if (obfuscationGuard < 113) {
           field_d = (RgbSprite) null;
         }
@@ -228,7 +228,7 @@ final class TrianglePulse {
           hasPlayerNames = stackIn_28_0;
           packet.readBytes(0, room.gameOptions.length, 0, room.gameOptions);
           room.displayRating = packet.readUnsignedShort((byte) -104);
-          room.activityStartedMillis = vi.monotonicMillis(39) - (long)packet.readInt(1);
+          room.activityStartedMillis = MonotonicClockSupport.monotonicMillis(39) - (long)packet.readInt(1);
           if (hasCompletedDuration == 0) {
             room.completedDurationMillis = -1;
           } else {

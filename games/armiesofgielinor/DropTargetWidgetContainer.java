@@ -34,7 +34,7 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
         try {
           super.pointerReleased(originY, rootWidget, pointerX, (byte) 42, pointerY, originX);
           int guardRemainder = -111 % ((-58 - obfuscationGuard) / 53);
-          draggedWidget = bn.draggedWidget;
+          draggedWidget = CalendarSupport.draggedWidget;
           if (draggedWidget != null &&
             this.containsPointer(1, originX, pointerY, pointerX, originY)) {
             if (!(this.listener instanceof WidgetDropListener)) {
@@ -42,11 +42,11 @@ final class DropTargetWidgetContainer extends SingleChildWidgetContainer {
                 return;
               }
               ((WidgetDropListener) (draggedWidget.listener)).widgetDropped(draggedWidget, -14486, this);
-              bn.draggedWidget = null;
+              CalendarSupport.draggedWidget = null;
               return;
             }
             ((WidgetDropListener) (this.listener)).widgetDropped(draggedWidget, -14486, this);
-            bn.draggedWidget = null;
+            CalendarSupport.draggedWidget = null;
             return;
           }
         } catch (RuntimeException failure) {

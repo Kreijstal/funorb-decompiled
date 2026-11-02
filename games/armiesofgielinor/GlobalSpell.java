@@ -61,13 +61,13 @@ final class GlobalSpell extends Spell {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (uc.spellDefinitions[this.spellId][5] == 1) {
-            battlefield.addGodFavour(uc.spellDefinitions[this.spellId][6], castingPlayer, 1, (byte) 92);
+          if (SpellDefinitionTable.spellDefinitions[this.spellId][5] == 1) {
+            battlefield.addGodFavour(SpellDefinitionTable.spellDefinitions[this.spellId][6], castingPlayer, 1, (byte) 92);
           }
-          if (uc.spellDefinitions[this.spellId][5] == 0) {
-            battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ManaEvent(4, uc.spellDefinitions[this.spellId][6], castingPlayer)));
+          if (SpellDefinitionTable.spellDefinitions[this.spellId][5] == 0) {
+            battlefield.pendingEvents.addLast((byte) -119, (IntrusiveNode) (new ManaEvent(4, SpellDefinitionTable.spellDefinitions[this.spellId][6], castingPlayer)));
           }
-          if (uc.spellDefinitions[this.spellId][5] == 2) {
+          if (SpellDefinitionTable.spellDefinitions[this.spellId][5] == 2) {
             battlefield.kingBlackDragonSummoned = false;
           }
           if (obfuscationGuard == 26123) {
@@ -93,10 +93,10 @@ final class GlobalSpell extends Spell {
         CampaignProgress.a(2000, param1);
         if (param0 >= -21) {
           GlobalSpell.a(-83, true);
-          da.a(-10820, param1);
+          LocalAccountSupport.a(-10820, param1);
           return;
         }
-        da.a(-10820, param1);
+        LocalAccountSupport.a(-10820, param1);
     }
 
     final void prepareEffect(byte obfuscationGuard, Battlefield battlefield) {

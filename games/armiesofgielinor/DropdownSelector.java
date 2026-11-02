@@ -120,7 +120,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
           this.expanded = false;
           this.optionList.listener = (WidgetListener) (this);
           this.maximumDropdownHeight = maximumDropdownHeight;
-          this.textButton = new InteractiveWidget("", new fk(this), (WidgetListener) (this));
+          this.textButton = new InteractiveWidget("", new DropdownSelectorPainter(this), (WidgetListener) (this));
           this.arrowButton = new InteractiveWidget();
           this.arrowButton.painter = (WidgetPainter) ((Object) new DropdownArrowPainter());
           this.arrowButton.listener = (WidgetListener) (this);
@@ -253,7 +253,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
               var9 = 0;
               var3Lifetime1 = var9;
               while (var9 < 8) {
-                var7[var9] = rn.bitwiseAnd(var13[var9], ~var17[var9]);
+                var7[var9] = ProceduralMapSupport.bitwiseAnd(var13[var9], ~var17[var9]);
                 var9++;
               }
               ValidationState.field_b = null;
@@ -273,9 +273,9 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
             }
           }
           if (!ClientUiNode.field_w &&
-            !de.field_a) {
+            !SpellCastErrorSupport.field_a) {
             EmailValidator.outgoingPacket.writeCipheredOpcode(32161, 69);
-            de.field_a = true;
+            SpellCastErrorSupport.field_a = true;
           }
           if (!ve.field_b &&
             !LoginCredentials.field_c) {
@@ -298,7 +298,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
                 stackIn_37_0 = ((AnimationFrameSet.field_E & 1) != 0);
                 cu.field_a = stackIn_37_0;
                 stackIn_40_0 = ((2 & AnimationFrameSet.field_E) != 0);
-                uc.field_a = stackIn_40_0;
+                SpellDefinitionTable.field_a = stackIn_40_0;
                 if (3 <= ek.field_d) {
                   ek.field_d = 0;
                 }
@@ -555,7 +555,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
           if (param11 != -99) {
             return;
           }
-          op.a(param7, param1, param12, param14, -3, param6);
+          FriendRequestSupport.a(param7, param1, param12, param14, -3, param6);
           ContextualRuntimeException.a((byte) -85, param15, param9);
           MusicPatchNode.a(param8, param0, param13, 3815);
           return;
@@ -607,7 +607,7 @@ final class DropdownSelector extends DequeWidgetContainer implements WidgetActiv
         }
         this.a(var3 + this.collapsedHeight, this.y, (byte) 50, this.x, this.width);
         this.optionList.setBounds(0, this.width, obfuscationGuard, obfuscationGuard ^ 8192, var2);
-        this.dropdownViewport = new ScrollWidgetContainer(0, 0, 0, 0, new fc(), this.optionList, (WidgetPainter) null);
+        this.dropdownViewport = new ScrollWidgetContainer(0, 0, 0, 0, new EmptyWidgetPainter(), this.optionList, (WidgetPainter) null);
         if (var4 != 0) {
           this.dropdownViewport.setVerticalControl((byte) 118, true, StandardContentDialog.createVerticalScrollControl(obfuscationGuard ^ 0));
         }

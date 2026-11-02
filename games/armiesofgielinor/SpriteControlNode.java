@@ -9,15 +9,15 @@ abstract class SpriteControlNode extends IntrusiveNode {
 
     final static boolean a(int param0, int param1, int param2, byte param3) {
         if (NodeIterator.field_a) {
-          return BestScoreStrategy.field_i.a(rs.keyCode, DualNodeDeque.typedCharacter, 80);
+          return BestScoreStrategy.field_i.a(PowerOfTwoSupport.keyCode, DualNodeDeque.typedCharacter, 80);
         }
         if (BattleTutorial.quickChatMenuVisible) {
           return cd.a(param2, param0, false);
         }
-        if (po.handleQuickChatShortcuts(param0, 6150, param2)) {
+        if (QuickChatShortcutSupport.handleQuickChatShortcuts(param0, 6150, param2)) {
           return true;
         }
-        if (vi.field_d) {
+        if (MonotonicClockSupport.field_d) {
           return false;
         }
         if (param3 > 25) {

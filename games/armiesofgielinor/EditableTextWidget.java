@@ -86,7 +86,7 @@ class EditableTextWidget extends InteractiveWidget {
                 this.caretIndex = hitIndex;
               }
             }
-            this.lastInputMillis = vi.monotonicMillis(98);
+            this.lastInputMillis = MonotonicClockSupport.monotonicMillis(98);
           }
         } catch (RuntimeException failure) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "fn.P(" + obfuscationGuard + ',' + originX + ',' + originY + ',' + (rootWidget != null ? "{...}" : "null") + ')');
@@ -177,15 +177,15 @@ class EditableTextWidget extends InteractiveWidget {
             }
           }
           if (param1 == 76) {
-            bn.field_a = new ModelMeshBase[ActionRequest.field_m[param1].length];
-            bn.field_a[0] = ActionRequest.unitModels[param1][0];
+            CalendarSupport.field_a = new ModelMeshBase[ActionRequest.field_m[param1].length];
+            CalendarSupport.field_a[0] = ActionRequest.unitModels[param1][0];
           }
           for (var4 = 1; var4 < ActionRequest.field_m[param1].length; var4++) {
             if (null == ActionRequest.unitModels[param1][var4]) {
               var5 = ActionRequest.field_m[param1][var4];
               var6 = ArrayWidgetContainer.a(var5, param2 ^ -32697, var9);
               if (var6 != null) {
-                if (th.a(var6, -17900)) {
+                if (FloorModSupport.a(var6, -17900)) {
                   DiskCacheRequest.unitProjectionVariants[param1] = true;
                 }
                 if (null != var6.faceRenderTypes) {
@@ -199,7 +199,7 @@ class EditableTextWidget extends InteractiveWidget {
                 }
                 ActionRequest.unitModels[param1][var4] = var6.createModel(SummonAction.field_x, fm.field_a, MaskedTextEntryPainter.field_A, BattleCharacter.field_t, MeshObject.field_a);
                 if (param1 == 76) {
-                  bn.field_a[var4] = ActionRequest.unitModels[param1][var4];
+                  CalendarSupport.field_a[var4] = ActionRequest.unitModels[param1][var4];
                 }
                 if (0 == ((ModelMesh) (ActionRequest.unitModels[param1][var4])).vertexCount) {
                   ActionRequest.unitModels[param1] = null;
@@ -227,7 +227,7 @@ class EditableTextWidget extends InteractiveWidget {
         RuntimeException caughtFailure = null;
         RuntimeException failure = null;
         try {
-          this.lastInputMillis = vi.monotonicMillis(-82);
+          this.lastInputMillis = MonotonicClockSupport.monotonicMillis(-82);
           if (obfuscationGuard != -12215) {
             return true;
           }
@@ -295,24 +295,24 @@ class EditableTextWidget extends InteractiveWidget {
                     this.submitText(-92);
                     return true;
                   }
-                  if (br.heldKeys[82] &&
+                  if (CampaignLookupSupport.heldKeys[82] &&
                     keyCode == 65) {
                     this.cutSelection(true);
                     return true;
                   }
-                  if (br.heldKeys[82] &&
+                  if (CampaignLookupSupport.heldKeys[82] &&
                     keyCode == 66) {
                     this.copySelection((byte) -53);
                     return true;
                   }
-                  if (br.heldKeys[82] &&
+                  if (CampaignLookupSupport.heldKeys[82] &&
                     67 == keyCode) {
                     this.pasteClipboard((byte) -104);
                     return true;
                   }
                 } else {
                   if (this.caretIndex < this.text.length()) {
-                    if (!br.heldKeys[82]) {
+                    if (!CampaignLookupSupport.heldKeys[82]) {
                       rightIndex = this.caretIndex + 1;
                     } else {
                       rightIndex = this.nextWordBoundary(-97);
@@ -323,7 +323,7 @@ class EditableTextWidget extends InteractiveWidget {
                 }
               } else {
                 if (this.caretIndex > 0) {
-                  if (br.heldKeys[82]) {
+                  if (CampaignLookupSupport.heldKeys[82]) {
                     leftIndex = this.previousWordBoundary((byte) 81);
                   } else {
                     leftIndex = -1 + this.caretIndex;
@@ -433,11 +433,11 @@ class EditableTextWidget extends InteractiveWidget {
         this.wordDragSelection = false;
         this.doubleClickWordEnd = -1;
         try {
-          this.painter = t.field_c.field_w;
+          this.painter = ReloadPageSupport.field_c.field_w;
           this.maximumLength = maximumLength;
           this.setText(true, text, -27934);
           this.autoScrollCaret = true;
-          this.lastInputMillis = vi.monotonicMillis(-83);
+          this.lastInputMillis = MonotonicClockSupport.monotonicMillis(-83);
         } catch (RuntimeException failure) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) failure), "fn.<init>(" + (text != null ? "{...}" : "null") + ',' + (listener != null ? "{...}" : "null") + ',' + maximumLength + ')');
         }
@@ -521,7 +521,7 @@ class EditableTextWidget extends InteractiveWidget {
 
     private final void moveCaret(int index, byte obfuscationGuard) {
         this.caretIndex = index;
-        if (!br.heldKeys[81]) {
+        if (!CampaignLookupSupport.heldKeys[81]) {
           this.selectionAnchor = this.caretIndex;
         }
         if (obfuscationGuard != -59) {
@@ -556,7 +556,7 @@ class EditableTextWidget extends InteractiveWidget {
             caretIndex = 0;
           }
           this.moveCaret(caretIndex, (byte) -59);
-          now = vi.monotonicMillis(39);
+          now = MonotonicClockSupport.monotonicMillis(39);
           doubleClick = !(-this.lastPointerPressMillis + now >= 250L);
           this.wordDragSelection = doubleClick;
           if (this.wordDragSelection) {
@@ -606,7 +606,7 @@ class EditableTextWidget extends InteractiveWidget {
             if (this.caretIndex != this.selectionAnchor) {
               textPainter.drawSelection(-21259, this.caretIndex, this.selectionAnchor, (Widget) (this), originY, originX);
             }
-            now = vi.monotonicMillis(-126);
+            now = MonotonicClockSupport.monotonicMillis(-126);
             if ((now - this.lastInputMillis) % 1000L < 500L) {
               textPainter.drawCaret(originY, 1024, originX, (Widget) (this), this.caretIndex);
             }

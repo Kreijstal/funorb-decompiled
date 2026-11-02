@@ -29,9 +29,9 @@ final class gl {
         this(param0, false);
     }
 
-    public static void a(boolean param0) {
+    public static void releaseStatics(boolean obfuscationGuard) {
         field_e = null;
-        if (!param0) {
+        if (!obfuscationGuard) {
           gl.a(-75, -111);
         }
     }

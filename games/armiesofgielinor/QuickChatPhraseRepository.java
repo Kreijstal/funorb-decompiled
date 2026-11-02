@@ -11,10 +11,10 @@ final class QuickChatPhraseRepository {
 
     final static boolean c(int param0) {
         if (param0 <= -97) {
-          return !se.emailCheckResult.isComplete((byte) 125) ? true : false;
+          return !IgnoreRequestSupport.emailCheckResult.isComplete((byte) 125) ? true : false;
         }
         field_a = (String) null;
-        return !se.emailCheckResult.isComplete((byte) 125) ? true : false;
+        return !IgnoreRequestSupport.emailCheckResult.isComplete((byte) 125) ? true : false;
     }
 
     public static void releaseStatics(byte obfuscationGuard) {
@@ -78,7 +78,7 @@ final class QuickChatPhraseRepository {
                 return;
               }
               var2 = new java.net.URL(param1.getCodeBase(), "subscribe.ws");
-              param1.getAppletContext().showDocument(ck.a(-3780, var2, param1), "_top");
+              param1.getAppletContext().showDocument(StructureTerrainSupport.a(-3780, var2, param1), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

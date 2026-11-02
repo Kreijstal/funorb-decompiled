@@ -181,7 +181,7 @@ final class CampaignQuicksave {
           this.hasLostUnit = hasLostUnit ? true : false;
           this.damageTaken = damageTaken;
           this.playerMana = new int[battlefield.playerMana.length];
-          vm.a(battlefield.playerMana, 0, this.playerMana, 0, battlefield.playerMana.length);
+          ArrayBlockSupport.copyInts(battlefield.playerMana, 0, this.playerMana, 0, battlefield.playerMana.length);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "sl.<init>(" + campaignIndex + ',' + missionId + ',' + (battlefield != null ? "{...}" : "null") + ',' + damageTaken + ',' + hasLostUnit + ')');
         }

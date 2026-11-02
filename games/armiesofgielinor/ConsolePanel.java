@@ -71,21 +71,21 @@ abstract class ConsolePanel implements ap {
         int suggestionY;
         int initialSuggestionIndex;
         if (!(this.panel.height + this.panel.y <= 0)) {
-          SoftwareRaster.b(this.panel.screenX, this.panel.screenY, this.outputScroll.x, this.panel.height, 5592405, 230);
-          SoftwareRaster.b(this.outputScroll.width + this.outputScroll.screenX, this.panel.screenY, this.outputScroll.x, this.panel.height, 5592405, 230);
-          SoftwareRaster.b(this.outputScroll.screenX, this.panel.screenY, this.outputScroll.width, this.outputScroll.y, 5592405, 230);
-          SoftwareRaster.b(this.outputScroll.screenX, this.outputScroll.height + this.outputScroll.screenY, this.outputScroll.width, this.input.screenY + (-this.outputScroll.screenY - this.outputScroll.height), 5592405, 230);
-          SoftwareRaster.b(this.outputScroll.screenX, this.input.height + this.input.screenY, this.outputScroll.width, -this.input.height + this.panel.height - this.input.y, 5592405, 230);
-          SoftwareRaster.b(this.outputScroll.screenX, this.outputScroll.screenY, this.outputScroll.width, this.outputScroll.height, 2236962, 240);
-          SoftwareRaster.b(this.input.screenX, this.input.screenY, this.input.width, this.input.height, 2236962, 240);
+          SoftwareRaster.fillRectangleBlended(this.panel.screenX, this.panel.screenY, this.outputScroll.x, this.panel.height, 5592405, 230);
+          SoftwareRaster.fillRectangleBlended(this.outputScroll.width + this.outputScroll.screenX, this.panel.screenY, this.outputScroll.x, this.panel.height, 5592405, 230);
+          SoftwareRaster.fillRectangleBlended(this.outputScroll.screenX, this.panel.screenY, this.outputScroll.width, this.outputScroll.y, 5592405, 230);
+          SoftwareRaster.fillRectangleBlended(this.outputScroll.screenX, this.outputScroll.height + this.outputScroll.screenY, this.outputScroll.width, this.input.screenY + (-this.outputScroll.screenY - this.outputScroll.height), 5592405, 230);
+          SoftwareRaster.fillRectangleBlended(this.outputScroll.screenX, this.input.height + this.input.screenY, this.outputScroll.width, -this.input.height + this.panel.height - this.input.y, 5592405, 230);
+          SoftwareRaster.fillRectangleBlended(this.outputScroll.screenX, this.outputScroll.screenY, this.outputScroll.width, this.outputScroll.height, 2236962, 240);
+          SoftwareRaster.fillRectangleBlended(this.input.screenX, this.input.screenY, this.input.width, this.input.height, 2236962, 240);
           overlayOpacity = this.panel.y + 256;
           if (overlayOpacity < 0) {
             overlayOpacity = 0;
           }
-          SoftwareRaster.b(this.panel.screenX, this.panel.screenY + this.panel.height, this.panel.width, -this.panel.height + (-this.panel.screenY + dt.viewportHeight), 0, overlayOpacity >> 1);
+          SoftwareRaster.fillRectangleBlended(this.panel.screenX, this.panel.screenY + this.panel.height, this.panel.width, -this.panel.height + (-this.panel.screenY + DateValiditySupport.viewportHeight), 0, overlayOpacity >> 1);
           shadowY = 5 + this.panel.y + this.panel.height;
           for (shadowLayer = 0; shadowLayer < 6; shadowLayer++) {
-            SoftwareRaster.e(0, shadowY, bn.viewportWidth, 0, shadowLayer << 5);
+            SoftwareRaster.drawHorizontalLineBlended(0, shadowY, CalendarSupport.viewportWidth, 0, shadowLayer << 5);
             shadowY--;
           }
           this.panel.draw(0 == (8 & this.frameTicks) ? true : false, 20);
@@ -239,7 +239,7 @@ abstract class ConsolePanel implements ap {
         obfuscationControl = ArmiesOfGielinor.obfuscationControl ? 1 : 0;
         try {
           maximumWidth = -10 + (this.outputScroll.width - 15);
-          lines = dj.splitText(-100, '\n', text);
+          lines = TextSplitSupport.splitText(-100, '\n', text);
           linesAlias = lines;
           if (obfuscationGuard > -25) {
             return;
@@ -562,7 +562,7 @@ abstract class ConsolePanel implements ap {
           selectionStyle = this.createSelectionStyle((byte) 71, 2263074);
           suggestionStyle = this.createBorderStyle(5592405, 2236962, 65793);
           this.panel = new ClientUiComponent(0L, panelStyle);
-          this.panel.setBounds(200, -20500, bn.viewportWidth, -200, 0);
+          this.panel.setBounds(200, -20500, CalendarSupport.viewportWidth, -200, 0);
           scrollbar = new VerticalScrollbar(0L, arrowStyle, arrowStyle, trackStyle, thumbStyle);
           outputContent = new ClientUiComponent();
           outputContent.children = new NodeDeque();

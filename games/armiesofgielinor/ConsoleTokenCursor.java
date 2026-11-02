@@ -49,7 +49,7 @@ final class ConsoleTokenCursor {
                 var2_int = -ByteStorage.incomingPacket.position + requiredLength;
               }
               MoveAttackRequest.sessionSocket.readFully(0, ByteStorage.incomingPacket.position, var2_int, ByteStorage.incomingPacket.payload);
-              CampaignMenuButton.lastPacketReadMillis = vi.monotonicMillis(46);
+              CampaignMenuButton.lastPacketReadMillis = MonotonicClockSupport.monotonicMillis(46);
               ByteStorage.incomingPacket.position = ByteStorage.incomingPacket.position + var2_int;
               if (ByteStorage.incomingPacket.position < requiredLength) {
                 return false;
@@ -61,11 +61,11 @@ final class ConsoleTokenCursor {
               TileMetadata.b(0) <= 30000L) {
               return false;
             }
-            dj.a((byte) -127);
+            TextSplitSupport.a((byte) -127);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
-            dj.a((byte) -127);
+            TextSplitSupport.a((byte) -127);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -116,14 +116,14 @@ final class ConsoleTokenCursor {
             var9_int = 1;
             var10 = 0;
             while (true) {
-              if (fs.field_d.length <= var10) {
+              if (PrivateTextRecipientSupport.field_d.length <= var10) {
                 if (var9_int == 0) {
                   return;
                 }
-                fc.field_a = true;
+                EmptyWidgetPainter.field_a = true;
                 return;
               }
-              var18 = fs.field_d[var10];
+              var18 = PrivateTextRecipientSupport.field_d[var10];
               var17 = var18;
               var11_ref_int__ = var17;
               var12 = 0;
@@ -131,7 +131,7 @@ final class ConsoleTokenCursor {
               scanLoop1: while (true) {
                 if (var13 >= var18.length) {
                   if (var12 == 0 &&
-                    param3 != tq.gameOptionCount) {
+                    param3 != NineSliceSpriteSupport.gameOptionCount) {
                     break scanLoop1;
                   }
                   var9_int = 0;
@@ -141,7 +141,7 @@ final class ConsoleTokenCursor {
                       ArchiveLoadSequence.field_a = true;
                     } else {
                       if (param3 > var14_int) {
-                        dt.field_d[var14_int] = true;
+                        DateValiditySupport.field_d[var14_int] = true;
                       }
                     }
                   }
@@ -190,7 +190,7 @@ final class ConsoleTokenCursor {
                 var10 = 0;
                 break;
               }
-              param0 = param0 + (255 & t.field_b[param3]);
+              param0 = param0 + (255 & ReloadPageSupport.field_b[param3]);
             } else {
               var11 = 0;
               while (!(var11 >= lm.field_e.length)) {
@@ -220,7 +220,7 @@ final class ConsoleTokenCursor {
                     param7 = var12;
                   }
                   ConsoleTokenCursor.a(param0, param1, param2, param3 + 1, param4, param5, (byte) -72, param7);
-                  if (fc.field_a) {
+                  if (EmptyWidgetPainter.field_a) {
                     return;
                   }
                 }
@@ -262,7 +262,7 @@ final class ConsoleTokenCursor {
               ConsoleTokenCursor.a(param0, param1, param2, param3 + 1, param4, param5, (byte) 120, param7);
               var11Lifetime1 = 1;
             }
-            if (fc.field_a) {
+            if (EmptyWidgetPainter.field_a) {
               return;
             }
             var12++;

@@ -52,11 +52,11 @@ final class QuickChatPhrase extends DualLinkedNode {
         if (param1) {
           var4++;
         }
-        return cp.field_b[var4];
+        return EventPresenterFactory.field_b[var4];
     }
 
     final static CampaignMission getCampaignMission(int campaignIndex, int missionIndex, int minimumMissionIndex) {
-        CampaignDefinition var4 = br.getCampaign(campaignIndex, (byte) -14);
+        CampaignDefinition var4 = CampaignLookupSupport.getCampaign(campaignIndex, (byte) -14);
         CampaignDefinition var3 = var4;
         if (var3 == null) {
           return null;
@@ -307,7 +307,7 @@ final class QuickChatPhrase extends DualLinkedNode {
               }
             }
           } else {
-            this.textFragments = dj.splitText(61, '<', packet.readNullTerminatedString(1));
+            this.textFragments = TextSplitSupport.splitText(61, '<', packet.readNullTerminatedString(1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

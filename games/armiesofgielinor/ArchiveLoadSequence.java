@@ -75,9 +75,9 @@ final class ArchiveLoadSequence {
           Bzip2State.field_m = Bzip2State.field_m + (param0.readUnsignedByte(0) << 7);
           int var3 = 16 % ((param1 + 45) / 34);
           var2_intLifetime2 = param0.readUnsignedByte(0);
-          ov.field_e = (1 & var2_intLifetime2) << 16;
+          SpectateRoomRequestSupport.field_e = (1 & var2_intLifetime2) << 16;
           Bzip2State.field_m = Bzip2State.field_m + (var2_intLifetime2 >> 1);
-          ov.field_e = ov.field_e + param0.readUnsignedShort((byte) -104);
+          SpectateRoomRequestSupport.field_e = SpectateRoomRequestSupport.field_e + param0.readUnsignedShort((byte) -104);
         } catch (RuntimeException runtimeException) {
           throw AnimationSkeleton.addExceptionContext((Throwable) ((Object) runtimeException), "jp.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

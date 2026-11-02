@@ -13,7 +13,7 @@ final class IterableDualNodeDeque implements Iterable {
 
     final static boolean isPointerInBounds(int obfuscationGuard, int minimumX, int maximumX, int minimumY, int maximumY) {
         if (obfuscationGuard != -33) {
-          IterableDualNodeDeque.a(-108);
+          IterableDualNodeDeque.releaseStatics(-108);
           if (AiPlanningStrategy.pointerX < minimumX) {
             return false;
           }
@@ -118,13 +118,13 @@ final class IterableDualNodeDeque implements Iterable {
         this.sentinel.secondaryNext = this.sentinel;
     }
 
-    public static void a(int param0) {
+    public static void releaseStatics(int obfuscationGuard) {
         field_d = null;
         field_e = null;
         field_b = null;
         field_a = null;
         field_c = null;
-        if (param0 != 19345) {
+        if (obfuscationGuard != 19345) {
           IterableDualNodeDeque.a('`', -95);
         }
     }

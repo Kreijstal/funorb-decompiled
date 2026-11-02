@@ -238,8 +238,8 @@ final class DiskCacheWorker implements Runnable {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         String var7 = null;
-        if (rs.outgoingChatChannel == param1) {
-          var7 = eb.field_d;
+        if (PowerOfTwoSupport.outgoingChatChannel == param1) {
+          var7 = BitCountSupport.field_d;
         } else {
           var7 = CampaignMenu.field_q;
         }
@@ -334,12 +334,12 @@ final class DiskCacheWorker implements Runnable {
         if (param0 != -10232) {
           DiskCacheWorker.a(-87, -49, 69, -51, 90, -121, false);
         }
-        if (so.field_b.height != EquipmentBattleTutorial.field_y) {
-          UnitAnimationPreview.field_l = UnitAnimationPreview.field_l + (so.field_b.height - EquipmentBattleTutorial.field_y);
-          EquipmentBattleTutorial.field_y = so.field_b.height;
+        if (FixedSquareRootSupport.field_b.height != EquipmentBattleTutorial.field_y) {
+          UnitAnimationPreview.field_l = UnitAnimationPreview.field_l + (FixedSquareRootSupport.field_b.height - EquipmentBattleTutorial.field_y);
+          EquipmentBattleTutorial.field_y = FixedSquareRootSupport.field_b.height;
         }
         if (!(TurnTimerDial.field_d <= 0)) {
-          vi.a(-67);
+          MonotonicClockSupport.a(-67);
         }
     }
 

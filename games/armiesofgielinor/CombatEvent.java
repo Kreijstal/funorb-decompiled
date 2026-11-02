@@ -127,7 +127,7 @@ final class CombatEvent extends GameEvent {
             }
           }
           param2.d(this.battleId, 4);
-          if (!uc.field_a) {
+          if (!SpellDefinitionTable.field_a) {
             stackIn_34_0 = this.a((byte) -39, param2, param0, true);
             return stackIn_34_0;
           }
@@ -159,7 +159,7 @@ final class CombatEvent extends GameEvent {
     final void applyToBattlefield(Battlefield battlefield, int obfuscationGuard) {
         try {
           battlefield.queueCombatConsequences(this.attackerY, this.targetDeltaX, this.attackerDies, this.attackerX, this.targetDeltaY, 111, this.defenderDies, this.attackerDamage, this.defenderDamage, this.unseenUnitType);
-          hf.recomputeClientStateChecksum(battlefield, (byte) 9, true);
+          ClientStateChecksumSupport.recomputeClientStateChecksum(battlefield, (byte) 9, true);
           if (obfuscationGuard != -26661) {
             this.targetDeltaY = -38;
           }

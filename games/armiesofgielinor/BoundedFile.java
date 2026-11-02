@@ -86,52 +86,52 @@ final class BoundedFile {
         } else {
           if (19 == param0) {
             ModalDialog.a(65, false);
-            SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
+            SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
             ConsoleTextNode.field_p[param0].e(param3);
           } else {
             if (param0 == 25) {
               ModalDialog.a(65, false);
-              SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
+              SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
               ConsoleTextNode.field_p[param0].e(param3);
             } else {
               if (param0 == 1) {
                 ModalDialog.a(65, false);
-                SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
+                SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
                 ConsoleTextNode.field_p[param0].e(param3);
               } else {
                 if (param0 == 24) {
                   ModalDialog.a(65, false);
-                  SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
+                  SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
                   ConsoleTextNode.field_p[param0].e(param3);
                 } else {
                   if (param0 == 2) {
                     ModalDialog.a(65, false);
-                    SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
+                    SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
                     ConsoleTextNode.field_p[param0].e(param3);
                   } else {
                     if (param0 == 17) {
                       ModalDialog.a(65, false);
-                      SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
+                      SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
                       ConsoleTextNode.field_p[param0].e(param3);
                     } else {
                       if (param0 == 3) {
                         ModalDialog.a(65, false);
-                        SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
+                        SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
                         ConsoleTextNode.field_p[param0].e(param3);
                       } else {
                         if (param0 == 4) {
                           ModalDialog.a(65, false);
-                          SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
+                          SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
                           ConsoleTextNode.field_p[param0].e(param3);
                         } else {
                           if (param0 == -2) {
-                            SoftwareRaster.b();
+                            SoftwareRaster.clearPixels();
                           } else {
                             if (param0 == -4) {
-                              SoftwareRaster.b();
+                              SoftwareRaster.clearPixels();
                             } else {
                               if (param0 == -5) {
-                                SoftwareRaster.b();
+                                SoftwareRaster.clearPixels();
                               } else {
                                 if (-6 == param0) {
                                   SphinxActionRequest.e(0);
@@ -140,11 +140,11 @@ final class BoundedFile {
                                     NodeHashIterator.b((byte) -90);
                                   } else {
                                     if (!param2) {
-                                      jg.field_m.drawPixels(so.field_b.width / 2 - jg.field_m.canvasWidth / 2, -(jg.field_m.canvasHeight / 2) + so.field_b.height / 2);
+                                      jg.field_m.drawPixels(FixedSquareRootSupport.field_b.width / 2 - jg.field_m.canvasWidth / 2, -(jg.field_m.canvasHeight / 2) + FixedSquareRootSupport.field_b.height / 2);
                                     } else {
                                       ModalDialog.a(61, false);
                                     }
-                                    SoftwareRaster.d(0, 0, so.field_b.width, so.field_b.height);
+                                    SoftwareRaster.darkenRectangle(0, 0, FixedSquareRootSupport.field_b.width, FixedSquareRootSupport.field_b.height);
                                     ConsoleTextNode.field_p[param0].e(false);
                                   }
                                 }
