@@ -143,7 +143,7 @@ final class af extends di {
                 param2 = dh.a((byte) -73, new String[]{param2}, od.field_b);
               }
               if (pc.field_h) {
-                param2 = cb.field_a;
+                param2 = MouseInputHandler.field_a;
               }
               kb.field_a.a(param1, param2, -10);
             }
@@ -208,7 +208,7 @@ final class af extends di {
             stackIn_17_0 = qk.field_K;
             return stackIn_17_0;
           }
-          stackIn_15_0 = ga.field_f;
+          stackIn_15_0 = IterableNodeHashTable.field_f;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -250,7 +250,7 @@ final class af extends di {
             try {
               var2 = "tuhstatbut";
               var3 = (String) (sj.a((byte) -29, "getcookies", param1));
-              var4 = te.a(var3, ';', (byte) -46);
+              var4 = DelegatingCanvas.a(var3, ';', (byte) -46);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (0 <= var6 &&

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ch extends re {
+abstract class ch extends GameApplet {
     private int field_A;
     private long field_w;
     String field_t;
@@ -41,7 +41,7 @@ abstract class ch extends re {
               if (var2 != 3) {
                 if (var2 != 4) {
                   if (var2 == 5) {
-                    cb.b((byte) -107);
+                    MouseInputHandler.b((byte) -107);
                   } else {
                     if (6 == var2) {
                       gk.a((byte) -126);
@@ -68,7 +68,7 @@ abstract class ch extends re {
                                 return;
                               }
                               hb.a((Throwable) null, 0, "MGS1: " + jc.b(100));
-                              lj.a((byte) 119);
+                              GameKeyHandler.a((byte) 119);
                               return;
                             }
                             stackIn_29_0 = (var2 == 12);
@@ -92,7 +92,7 @@ abstract class ch extends re {
           return;
         }
         hb.a((Throwable) null, 0, "MGS2: " + jc.b(90));
-        lj.a((byte) 123);
+        GameKeyHandler.a((byte) 123);
     }
 
     private final void p(int param0) {
@@ -151,7 +151,7 @@ abstract class ch extends re {
             pa.a(5, (byte) 40);
           }
           if (kb.field_f[5]) {
-            gb.a(4, 6);
+            DualLinkNode.a(4, 6);
           }
           if (kb.field_f[6]) {
             cl.a(7, 7);
@@ -255,7 +255,7 @@ abstract class ch extends re {
               if (0 == rl.field_N) {
                 discarded$1 = this.a(true, false, false);
               } else {
-                od.a((byte) -105, ee.field_c);
+                od.a((byte) -105, NodeHashTableIterator.field_c);
               }
             }
           }
@@ -351,11 +351,11 @@ abstract class ch extends re {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          be var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = TrackController.field_F ? 1 : 0;
-          var4 = lf.a(hl.field_F, ee.field_c, (byte) 95, param2);
+          var4 = lf.a(hl.field_F, NodeHashTableIterator.field_c, (byte) 95, param2);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -376,7 +376,7 @@ abstract class ch extends re {
             stackIn_16_0 = this.field_B;
             stackIn_16_1 = sf.j(-4409);
             stackIn_17_2 = (param0) ? false : true;
-            var5_intLifetime1 = ba.a(stackIn_16_0, stackIn_16_1, qk.b(stackIn_17_2), re.c(6), l.h(0), gj.a((byte) -119), 0);
+            var5_intLifetime1 = ba.a(stackIn_16_0, stackIn_16_1, qk.b(stackIn_17_2), GameApplet.c(6), l.h(0), gj.a((byte) -119), 0);
             if (var5_intLifetime1 != -1) {
               gl.a(fi.field_t, ca.field_a, var5_intLifetime1, (byte) 113);
               fi.field_t = null;
@@ -396,7 +396,7 @@ abstract class ch extends re {
                   af.a(-114, var5_intLifetime2, fi.field_t);
                   fi.field_t = null;
                 } else {
-                  fi.field_p = nl.field_e;
+                  fi.field_p = ClientException.field_e;
                   ri.e(-45);
                   rl.field_N = 10;
                   ge.field_D = false;
@@ -418,7 +418,7 @@ abstract class ch extends re {
             af.a(gd.b((byte) 77), (byte) -9);
           }
           if (var4 == 6 &&
-            bc.field_d) {
+            BufferedSocket.field_d) {
             rl.field_N = 10;
           }
           if (var4 == 7) {
@@ -490,7 +490,7 @@ abstract class ch extends re {
         if (this.field_e) {
           return -1;
         }
-        if (!fc.c(96)) {
+        if (!IntrusiveNode.c(96)) {
           return -1;
         }
         if (li.field_i) {
@@ -552,7 +552,7 @@ abstract class ch extends re {
         var3 = 110 % ((param0 + 46) / 32);
         if (tk.field_u != null) {
           if (og.field_rb == null) {
-            var4_ref_java_awt_Container = be.c((byte) -128);
+            var4_ref_java_awt_Container = PacketBuffer.c((byte) -128);
             var5 = var4_ref_java_awt_Container.getSize();
             tk.field_u.a(0, var5.width, var5.height);
           }
@@ -560,12 +560,12 @@ abstract class ch extends re {
         }
         ob.h(16473);
         of.c((byte) 66);
-        if (!ga.a(-107) &&
+        if (!IterableNodeHashTable.a(-107) &&
           rl.field_N != 11) {
           vd.k(123);
         }
         if (null != rd.field_l) {
-          ee.field_c = rd.field_l.a(86);
+          NodeHashTableIterator.field_c = rd.field_l.a(86);
         }
         if (gh.a(3100)) {
           var4 = il.c(-14496) * 1200;
@@ -573,7 +573,7 @@ abstract class ch extends re {
             !(mg.a((byte) -29) <= var4) &&
             !(uk.a(0) <= var4)) {
             this.field_s = false;
-            lj.a((byte) 112);
+            GameKeyHandler.a((byte) 112);
             hh.a(-28717);
             af.a(-93, 2, oc.field_k);
             dk.a(9888);
@@ -585,11 +585,11 @@ abstract class ch extends re {
           0 == gj.field_c) {
           stackIn_24_0 = (-1 != gj.field_c) ? 0 : 1;
           var4Lifetime1 = stackIn_24_0;
-          gj.field_c = nl.b((byte) 104);
+          gj.field_c = ClientException.b((byte) 104);
           if (var4Lifetime1 != 0 &&
             gj.field_c == 0 &&
             rl.field_N == 11 &&
-            !fc.c(76)) {
+            !IntrusiveNode.c(76)) {
             ri.e(-96);
           }
           if (gj.field_c != -1 &&
@@ -614,7 +614,7 @@ abstract class ch extends re {
                     af.a(-71, 256, wd.field_I);
                   }
                 } else {
-                  af.a(-76, 256, qc.field_f);
+                  af.a(-76, 256, ProxySocketConnector.field_f);
                 }
               } else {
                 af.a(-80, 256, bk.field_G);
@@ -643,7 +643,7 @@ abstract class ch extends re {
         }
         if ((gj.field_c != -1 &&
           0 != gj.field_c ||
-          fc.c(124)) &&
+          IntrusiveNode.c(124)) &&
           rk.field_eb <= qg.a(false)) {
           li.field_i = false;
           if (-1 != gj.field_c &&
@@ -653,7 +653,7 @@ abstract class ch extends re {
           }
         }
         if (gj.field_c == 0 &&
-          !fc.c(38)) {
+          !IntrusiveNode.c(38)) {
           qh.field_i = false;
         }
         if (gl.field_I == 0 &&
@@ -694,7 +694,7 @@ abstract class ch extends re {
           nj.b((byte) -98);
           sl.b((byte) -51);
           qi.field_k = gj.field_a;
-          bc.field_d = false;
+          BufferedSocket.field_d = false;
           oe.a(oc.field_i, ei.field_i, ha.field_x, ok.field_G, -28484);
           if (dg.field_B ||
             null != sk.field_h) {
@@ -720,7 +720,7 @@ abstract class ch extends re {
         }
         if (10 == gl.field_I) {
           if (hl.field_F != 0) {
-            ed.field_I = mf.a(rj.field_b, (byte) -74);
+            ed.field_I = mf.a(SecondaryNodeDeque.field_b, (byte) -74);
           }
           gl.field_I = 11;
         }
@@ -755,7 +755,7 @@ abstract class ch extends re {
           mj.field_c) {
           r.a(-32652, ki.field_f);
           this.f(-80);
-          te.a(true, ki.field_f);
+          DelegatingCanvas.a(true, ki.field_f);
         }
         if (kb.field_f[8]) {
           q.a(true);
@@ -781,11 +781,11 @@ abstract class ch extends re {
         wj.a(this.field_u, rg.field_c, hl.field_F, this.field_q, this.field_t, this.field_o, param3, 101, this.field_p);
         kf.a(false);
         rd.field_l = lg.a(124);
-        te.a(true, ki.field_f);
+        DelegatingCanvas.a(true, ki.field_f);
         rf.field_b = param4;
         cg.field_c = param1;
         fk.field_b = param6;
-        rj.field_b = param2;
+        SecondaryNodeDeque.field_b = param2;
         tf.field_a = param7;
         this.o(param5 - 9168);
         th.d(-31574);

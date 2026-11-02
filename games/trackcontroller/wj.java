@@ -9,7 +9,7 @@ abstract class wj {
 
     abstract int a(int param0, long param1);
 
-    final static void a(int param0, uf param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, PlatformTaskDispatcher param1, int param2, int param3, String param4, int param5, int param6, int param7, int param8) {
         try {
           kb.field_d = param1;
           gi.field_r = param3;
@@ -17,12 +17,12 @@ abstract class wj {
           sa.field_T = param6;
           kf.field_a = param5;
           int var9_int = 41 % ((-36 - param7) / 32);
-          fc.field_g = param4;
+          IntrusiveNode.field_g = param4;
           vk.field_j = param2;
-          ga.field_e = param0;
-          rj.field_d = (ae) ((Object) new da());
+          IterableNodeHashTable.field_e = param0;
+          SecondaryNodeDeque.field_d = (ae) ((Object) new da());
           rb.field_a = new sd(param1);
-          ij.field_d = new wg(rj.field_d, rb.field_a);
+          ij.field_d = new wg(SecondaryNodeDeque.field_d, rb.field_a);
         } catch (RuntimeException runtimeException) {
           throw sl.a((Throwable) ((Object) runtimeException), "wj.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -53,7 +53,7 @@ abstract class wj {
         int var3Lifetime1;
         var4 = TrackController.field_F ? 1 : 0;
         var2 = -64 / ((44 - param0) / 37);
-        if (0 >= hk.field_d) {
+        if (0 >= SocketConnector.field_d) {
           if (jj.s(109)) {
             var3 = 0;
           } else {
@@ -72,7 +72,7 @@ abstract class wj {
           if (og.field_rb == null) {
             var3Lifetime1 = 3;
           } else {
-            te.a(true, og.field_rb);
+            DelegatingCanvas.a(true, og.field_rb);
             var3Lifetime1 = 2;
           }
         } else {
@@ -81,7 +81,7 @@ abstract class wj {
           if (og.field_rb == null) {
             var3Lifetime1 = 3;
           } else {
-            te.a(true, og.field_rb);
+            DelegatingCanvas.a(true, og.field_rb);
             var3Lifetime1 = 2;
           }
         }

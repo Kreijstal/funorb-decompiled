@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wb extends fc {
+final class wb extends IntrusiveNode {
     byte[] field_j;
     id field_i;
 
@@ -111,14 +111,14 @@ final class wb extends fc {
         if (var3 == null) {
           return null;
         }
-        return new wb(new be(var3));
+        return new wb(new PacketBuffer(var3));
     }
 
     final void b() {
         this.field_i = null;
     }
 
-    private wb(be param0) {
+    private wb(PacketBuffer param0) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
@@ -147,7 +147,7 @@ final class wb extends fc {
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
         int incrementValue$20 = 0;
-        be stackIn_84_0 = null;
+        PacketBuffer stackIn_84_0 = null;
         int stackIn_85_1 = 0;
         int stackIn_91_0 = 0;
         int var2;
@@ -199,7 +199,7 @@ final class wb extends fc {
         int var48;
         int var49;
         int var50;
-        be var51;
+        PacketBuffer var51;
         int var52;
         int var53;
         int var54;
@@ -420,7 +420,7 @@ final class wb extends fc {
         var50 = param0.field_k;
         param0.field_k = param0.field_k + var5 * 3;
         this.field_j = new byte[var4];
-        var51 = new be(this.field_j);
+        var51 = new PacketBuffer(this.field_j);
         var51.b(false, 1297377380);
         var51.b(false, 6);
         stackIn_84_0 = var51;
@@ -429,7 +429,7 @@ final class wb extends fc {
         } else {
           stackIn_85_1 = 1;
         }
-        ((be) (Object) stackIn_84_0).b(stackIn_85_1, (byte) -126);
+        ((PacketBuffer) (Object) stackIn_84_0).b(stackIn_85_1, (byte) -126);
         var51.b(var2, (byte) -123);
         var51.b(var3, (byte) -119);
         param0.field_k = var13Lifetime1;

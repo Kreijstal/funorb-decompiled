@@ -61,10 +61,10 @@ final class ab {
 
     final static kh a(boolean param0) {
         if (!param0) {
-          return new kh(re.c(6), r.b(true));
+          return new kh(GameApplet.c(6), r.b(true));
         }
         field_a = 107;
-        return new kh(re.c(6), r.b(!param0 ? true : false));
+        return new kh(GameApplet.c(6), r.b(!param0 ? true : false));
     }
 
     static {

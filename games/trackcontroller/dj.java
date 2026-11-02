@@ -11,13 +11,13 @@ final class dj extends IOException {
         super(param0);
     }
 
-    final static ih a(int param0, int param1, int param2, byte param3, uf param4, int param5) {
+    final static FullscreenFocusCanvas a(int param0, int param1, int param2, byte param3, PlatformTaskDispatcher param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        ih var7 = null;
-        uf var8 = null;
+        FullscreenFocusCanvas var7 = null;
+        PlatformTaskDispatcher var8 = null;
         java.awt.Frame var9 = null;
-        ih stackIn_6_0 = null;
+        FullscreenFocusCanvas stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -28,14 +28,14 @@ final class dj extends IOException {
           if (var9 == null) {
             return null;
           }
-          var7 = new ih();
+          var7 = new FullscreenFocusCanvas();
           var7.field_a = var9;
           var7.field_a.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param2, param1);
           var7.addFocusListener(var7);
           if (param3 < 15) {
-            var8 = (uf) null;
-            dj.a(-91, -4, 110, (byte) 50, (uf) null, 31);
+            var8 = (PlatformTaskDispatcher) null;
+            dj.a(-91, -4, 110, (byte) 50, (PlatformTaskDispatcher) null, 31);
           }
           var7.requestFocus();
           stackIn_6_0 = var7;

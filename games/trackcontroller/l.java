@@ -179,7 +179,7 @@ final class l extends di {
     }
 
     final static void a(int param0, int param1) {
-        fc var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         cf var4 = null;
         RuntimeException decompiledCaughtException = null;

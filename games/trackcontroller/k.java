@@ -14,7 +14,7 @@ final class k extends wh {
     private final void a(i param0) {
         param0.a(-110);
         param0.a();
-        fc var2 = this.field_o.field_d.field_h;
+        IntrusiveNode var2 = this.field_o.field_d.field_h;
         if (var2 == this.field_o.field_d) {
           this.field_n = -1;
         } else {
@@ -85,10 +85,10 @@ final class k extends wh {
         }
     }
 
-    private final void a(fc param0, i param1) {
+    private final void a(IntrusiveNode param0, i param1) {
         while (true) {
           if (param0 == this.field_o.field_d) {
-            lj.a(param0, param1, -126);
+            GameKeyHandler.a(param0, param1, -126);
             this.field_n = ((i) (this.field_o.field_d.field_h)).field_i;
             return;
           }
@@ -98,7 +98,7 @@ final class k extends wh {
           }
           break;
         }
-        lj.a(param0, param1, -126);
+        GameKeyHandler.a(param0, param1, -126);
         this.field_n = ((i) (this.field_o.field_d.field_h)).field_i;
         return;
     }

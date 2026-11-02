@@ -89,7 +89,7 @@ final class vd extends td implements jg, m, a {
         var3 = var3 + (this.a(var3, ti.field_r, 127, 170, bj.field_c, this.field_E) + 5);
         var3 = var3 + (this.a(var3, pb.field_b, 127, 170, rg.field_a, this.field_F) + 5);
         var3 = var3 + this.a((byte) -128, 170, this.field_L, var3, di.field_j);
-        sa var4 = new sa(46, var3, -90 + this.field_x, 25, this.field_O, true, -120 + this.field_x, 5, fk.field_a, 11579568, lj.field_c);
+        sa var4 = new sa(46, var3, -90 + this.field_x, 25, this.field_O, true, -120 + this.field_x, 5, fk.field_a, 11579568, GameKeyHandler.field_c);
         this.a(false, var4);
         var3 = var3 + var4.field_u;
         ic var5 = new ic(gk.field_c, 0, 0, 0, 0, 16777215, -1, 0, 0, gk.field_c.field_G, -1, 2147483647, true);
@@ -299,7 +299,7 @@ final class vd extends td implements jg, m, a {
             if (null != og.field_rb &&
               og.field_rb.field_b) {
               oj.a(-93);
-              mg.field_b.d((byte) -84, new w(mg.field_b, te.field_b));
+              mg.field_b.d((byte) -84, new w(mg.field_b, DelegatingCanvas.field_b));
             }
             return;
           }
@@ -504,7 +504,7 @@ final class vd extends td implements jg, m, a {
         }
     }
 
-    final static void a(be param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         try {
           int var4 = 0;
           RuntimeException runtimeException = null;

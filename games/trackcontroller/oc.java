@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oc extends fc {
+final class oc extends IntrusiveNode {
     static oi field_j;
     static ba field_m;
     int field_l;
@@ -15,7 +15,7 @@ final class oc extends fc {
           }
           ra.field_y = new rl(param0, param2, false, true, true);
           int var3_int = -95 / ((param1 + 25) / 60);
-          re.field_g.b(ra.field_y, -120);
+          GameApplet.field_g.b(ra.field_y, -120);
         } catch (RuntimeException runtimeException) {
           throw sl.a((Throwable) ((Object) runtimeException), "oc.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

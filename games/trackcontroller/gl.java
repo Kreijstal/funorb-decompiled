@@ -57,17 +57,17 @@ final class gl extends ok {
           fd.field_h = cj.field_e;
           if (param2 != 255) {
             if (param2 < 100) {
-              h.field_c = wg.a((byte) 54, param2, param0);
+              MouseWheelInput.field_c = wg.a((byte) 54, param2, param0);
             } else {
               if (param2 > 105) {
-                h.field_c = wg.a((byte) 54, param2, param0);
+                MouseWheelInput.field_c = wg.a((byte) 54, param2, param0);
               } else {
-                h.field_c = qg.a(param1, 91);
+                MouseWheelInput.field_c = qg.a(param1, 91);
               }
             }
           } else {
             stackIn_5_0 = !(da.field_o >= 13);
-            h.field_c = oc.a(stackIn_5_0, -21017);
+            MouseWheelInput.field_c = oc.a(stackIn_5_0, -21017);
           }
           if (param3 >= 93) {
             return;
@@ -97,19 +97,19 @@ final class gl extends ok {
     final static qj[] b(int param0, int param1, int param2, int param3, int param4) {
         qj[] var7 = new qj[9];
         qj[] var5 = var7;
-        qj dupTemp$0 = ee.a(param0, param1, (byte) 104);
+        qj dupTemp$0 = NodeHashTableIterator.a(param0, param1, (byte) 104);
         var7[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        qj dupTemp$1 = ee.a(param2, param1, (byte) -74);
+        qj dupTemp$1 = NodeHashTableIterator.a(param2, param1, (byte) -74);
         var7[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         int var6 = 87 % ((-23 - param3) / 37);
         if (param4 != 0) {
-          var7[4] = ee.a(param4, 64, (byte) 104);
+          var7[4] = NodeHashTableIterator.a(param4, 64, (byte) 104);
         }
         return var5;
     }

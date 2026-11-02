@@ -64,7 +64,7 @@ final class ki {
           field_c = (int[]) null;
         }
         if (var4 != null) {
-          var5.a(false, new be(var4));
+          var5.a(false, new PacketBuffer(var4));
         }
         if (param1 >= 32768) {
           var5.f(32768);

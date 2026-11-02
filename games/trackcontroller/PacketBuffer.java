@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class be extends fc {
+class PacketBuffer extends IntrusiveNode {
     static nh field_m;
     static String field_l;
     byte[] field_j;
@@ -115,7 +115,7 @@ class be extends fc {
         field_m = null;
         field_l = null;
         if (param0 != 3) {
-          be.i(33);
+          PacketBuffer.i(33);
         }
     }
 
@@ -200,7 +200,7 @@ class be extends fc {
 
     final int d(byte param0) {
         if (param0 >= -40) {
-          be.i(45);
+          PacketBuffer.i(45);
         }
         this.field_k = this.field_k + 2;
         return (65280 & this.field_j[this.field_k - 2] << 8) + (255 & this.field_j[this.field_k - 1]);
@@ -414,7 +414,7 @@ class be extends fc {
 
     final static java.awt.Container c(byte param0) {
         if (param0 > -105) {
-          be.a((byte) -126, -44, 61);
+          PacketBuffer.a((byte) -126, -44, 61);
         }
         if (null != ii.field_s) {
           return (java.awt.Container) ((Object) ii.field_s);
@@ -626,7 +626,7 @@ class be extends fc {
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_pf = ef.field_a[var3];
             var4_ref_pf.b(14702);
-            h.a((byte) -103, var3);
+            MouseWheelInput.a((byte) -103, var3);
             var5 = var4_ref_pf.field_i + var4_ref_pf.field_u >> 1;
             var6 = var4_ref_pf.field_n + var4_ref_pf.field_p >> 1;
             var7 = var4_ref_pf.field_k + var4_ref_pf.field_w >> 1;
@@ -674,7 +674,7 @@ class be extends fc {
             }
             var2[var16] = -2147483648;
             var17 = ef.field_a[var16];
-            h.a((byte) -107, var16);
+            MouseWheelInput.a((byte) -107, var16);
             for (var18 = 0; var18 < 3; var18++) {
               ba.field_a[var18] = ba.field_a[var18] + kc.field_c[var15][var18];
             }
@@ -897,7 +897,7 @@ class be extends fc {
         return (255 & this.field_j[this.field_k - 1]) + (this.field_j[-2 + this.field_k] << 8 & 65280) + (((255 & this.field_j[this.field_k - 4]) << 24) + ((255 & this.field_j[this.field_k - 3]) << 16));
     }
 
-    be(int param0) {
+    PacketBuffer(int param0) {
         this.field_j = ke.b(param0, -30001);
         this.field_k = 0;
     }
@@ -919,7 +919,7 @@ class be extends fc {
         throw new IllegalArgumentException();
     }
 
-    be(byte[] param0) {
+    PacketBuffer(byte[] param0) {
         try {
           this.field_j = param0;
           this.field_k = 0;

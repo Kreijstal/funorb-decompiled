@@ -69,11 +69,11 @@ final class ke {
           }
           if (param0 != 5000) {
             if (param1 == ~param0 &&
-              0 < ee.field_e) {
-              fieldTemp$19 = ee.field_e - 1;
-              ee.field_e = ee.field_e - 1;
+              0 < NodeHashTableIterator.field_e) {
+              fieldTemp$19 = NodeHashTableIterator.field_e - 1;
+              NodeHashTableIterator.field_e = NodeHashTableIterator.field_e - 1;
               var2Lifetime4 = hf.field_b[fieldTemp$19];
-              hf.field_b[ee.field_e] = null;
+              hf.field_b[NodeHashTableIterator.field_e] = null;
               return var2Lifetime4;
             }
             if (null == me.field_i) {
@@ -92,11 +92,11 @@ final class ke {
             }
             return new byte[param0];
           }
-          if (be.field_i > 0) {
-            fieldTemp$18 = be.field_i - 1;
-            be.field_i = be.field_i - 1;
+          if (PacketBuffer.field_i > 0) {
+            fieldTemp$18 = PacketBuffer.field_i - 1;
+            PacketBuffer.field_i = PacketBuffer.field_i - 1;
             var2Lifetime5 = ch.field_z[fieldTemp$18];
-            ch.field_z[be.field_i] = null;
+            ch.field_z[PacketBuffer.field_i] = null;
             return var2Lifetime5;
           }
           if (param1 != ~param0) {
@@ -116,11 +116,11 @@ final class ke {
             }
             return new byte[param0];
           }
-          if (0 < ee.field_e) {
-            fieldTemp$17 = ee.field_e - 1;
-            ee.field_e = ee.field_e - 1;
+          if (0 < NodeHashTableIterator.field_e) {
+            fieldTemp$17 = NodeHashTableIterator.field_e - 1;
+            NodeHashTableIterator.field_e = NodeHashTableIterator.field_e - 1;
             var2Lifetime6 = hf.field_b[fieldTemp$17];
-            hf.field_b[ee.field_e] = null;
+            hf.field_b[NodeHashTableIterator.field_e] = null;
             return var2Lifetime6;
           }
           if (null == me.field_i) {
@@ -157,11 +157,11 @@ final class ke {
             }
             return new byte[param0];
           }
-          if (0 < ee.field_e) {
-            fieldTemp$10 = ee.field_e - 1;
-            ee.field_e = ee.field_e - 1;
+          if (0 < NodeHashTableIterator.field_e) {
+            fieldTemp$10 = NodeHashTableIterator.field_e - 1;
+            NodeHashTableIterator.field_e = NodeHashTableIterator.field_e - 1;
             var2Lifetime1 = hf.field_b[fieldTemp$10];
-            hf.field_b[ee.field_e] = null;
+            hf.field_b[NodeHashTableIterator.field_e] = null;
             return var2Lifetime1;
           }
           if (null == me.field_i) {
@@ -180,11 +180,11 @@ final class ke {
           }
           return new byte[param0];
         }
-        if (be.field_i > 0) {
-          fieldTemp$2 = be.field_i - 1;
-          be.field_i = be.field_i - 1;
+        if (PacketBuffer.field_i > 0) {
+          fieldTemp$2 = PacketBuffer.field_i - 1;
+          PacketBuffer.field_i = PacketBuffer.field_i - 1;
           var2Lifetime2 = ch.field_z[fieldTemp$2];
-          ch.field_z[be.field_i] = null;
+          ch.field_z[PacketBuffer.field_i] = null;
           return var2Lifetime2;
         }
         if (param1 != ~param0) {
@@ -204,11 +204,11 @@ final class ke {
           }
           return new byte[param0];
         }
-        if (0 < ee.field_e) {
-          fieldTemp$5 = ee.field_e - 1;
-          ee.field_e = ee.field_e - 1;
+        if (0 < NodeHashTableIterator.field_e) {
+          fieldTemp$5 = NodeHashTableIterator.field_e - 1;
+          NodeHashTableIterator.field_e = NodeHashTableIterator.field_e - 1;
           var2Lifetime3 = hf.field_b[fieldTemp$5];
-          hf.field_b[ee.field_e] = null;
+          hf.field_b[NodeHashTableIterator.field_e] = null;
           return var2Lifetime3;
         }
         if (null == me.field_i) {

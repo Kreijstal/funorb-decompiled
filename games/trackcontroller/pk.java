@@ -65,7 +65,7 @@ final class pk extends oa {
           this.field_x = param0;
         } catch (javax.sound.sampled.LineUnavailableException lineUnavailableException) {
           if (sc.a(param0, -1) != 1) {
-            this.b(bc.a(param0, -93));
+            this.b(BufferedSocket.a(param0, -93));
             return;
           }
           this.field_v = null;

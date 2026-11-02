@@ -25,7 +25,7 @@ final class vl extends ok {
     }
 
     final static void n(int param0) {
-        re.field_k = false;
+        GameApplet.field_k = false;
         fe.field_L = 0;
         g.field_y = -1;
         ha.field_z = -1;
@@ -123,29 +123,29 @@ final class vl extends ok {
           if (var2_int >= 0) {
             var3 = 3158064;
             var4 = 16777120;
-            var5 = re.field_c.a(param1);
-            var6 = re.field_c.field_H + re.field_c.field_u;
+            var5 = GameApplet.field_c.a(param1);
+            var6 = GameApplet.field_c.field_H + GameApplet.field_c.field_u;
             var7 = 1;
             var8 = var6;
             if (200 < var5) {
               var7 = (199 + var5) / 200;
-              var5 = jh.a(re.field_c, param1, var5 / var7, false);
+              var5 = jh.a(GameApplet.field_c, param1, var5 / var7, false);
               var6 = var6 * var7;
             }
             var9 = ha.field_z;
             if (var5 + var9 + 6 > ll.field_d) {
               var9 = -6 - var5 + ll.field_d;
             }
-            var10 = 32 + (-re.field_c.field_H + kj.field_o);
+            var10 = 32 + (-GameApplet.field_c.field_H + kj.field_o);
             if (ll.field_k < var6 + var10 + 6) {
               var10 = kj.field_o - (var6 + 6);
             }
             ll.f(var9, var10, 6 + var5, var6 + 6, var3);
             ll.c(1 + var9, 1 + var10, var5 + 4, var6 + 4, var4);
             if (1 < var7) {
-              re.field_c.a(param1, var9 + 3, re.field_c.field_H + (var10 - (-3 + re.field_c.field_G)), var5, 1000, var3, -1, 0, 0, var8);
+              GameApplet.field_c.a(param1, var9 + 3, GameApplet.field_c.field_H + (var10 - (-3 + GameApplet.field_c.field_G)), var5, 1000, var3, -1, 0, 0, var8);
             } else {
-              re.field_c.c(param1, var9 + 3, var10 + (3 + re.field_c.field_H), var3, -1);
+              GameApplet.field_c.c(param1, var9 + 3, var10 + (3 + GameApplet.field_c.field_H), var3, -1);
             }
           }
           return;

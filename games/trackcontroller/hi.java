@@ -6,7 +6,7 @@ final class hi extends tk {
     int field_z;
     static int field_y;
     static int[] field_A;
-    be field_x;
+    PacketBuffer field_x;
 
     final static void b(int param0, int param1, int param2) {
         int var3;
@@ -37,7 +37,7 @@ final class hi extends tk {
         mb.a((byte) -35, kj.field_l);
         ig.a();
         ll.a();
-        be.a((byte) -78);
+        PacketBuffer.a((byte) -78);
         if (256 > var5) {
           ll.c(0, 0, ll.field_d, ll.field_k, 0, -var5 + 256);
           ch.m(119);

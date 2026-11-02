@@ -616,7 +616,7 @@ class lb extends rh {
 
     final static void o(int param0) {
         mc.field_H = new vd();
-        re.field_g.b(mc.field_H, -103);
+        GameApplet.field_g.b(mc.field_H, -103);
         if (param0 > -78) {
           CharSequence var2 = (CharSequence) null;
           lb.a((CharSequence) null, false, -68);

@@ -16,7 +16,7 @@ final class vf {
         return var1 * 3.1415927410125732f / 11025.0f;
     }
 
-    final void a(be param0, jl param1) {
+    final void a(PacketBuffer param0, jl param1) {
         int var3;
         int var4;
         int var5;

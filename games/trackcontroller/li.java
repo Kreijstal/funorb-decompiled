@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class li extends fc {
-    fc field_k;
+final class li extends IntrusiveNode {
+    IntrusiveNode field_k;
     int field_m;
     static String field_l;
     bh field_j;
@@ -24,7 +24,7 @@ final class li extends fc {
         int var1 = -101 % ((param0 - 0) / 63);
     }
 
-    li(bh param0, fc param1) {
+    li(bh param0, IntrusiveNode param1) {
         try {
           this.field_j = param0;
           this.field_m = param0.e();

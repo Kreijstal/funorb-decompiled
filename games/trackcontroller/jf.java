@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jf extends fc {
+final class jf extends IntrusiveNode {
     int field_m;
     static String[] field_i;
     int field_k;
@@ -11,7 +11,7 @@ final class jf extends fc {
     final static void e(int param0) {
         gh.field_k = false;
         vg.field_o = false;
-        qc.b(-1, (byte) -42);
+        ProxySocketConnector.b(-1, (byte) -42);
         if (param0 != 640) {
           return;
         }

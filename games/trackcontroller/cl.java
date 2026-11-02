@@ -232,7 +232,7 @@ final class cl {
         try {
           var4_int = -1;
           for (var5 = param2; param1 > var5; var5++) {
-            var4_int = lj.field_e[(param3[var5] ^ var4_int) & 255] ^ var4_int >>> 8;
+            var4_int = GameKeyHandler.field_e[(param3[var5] ^ var4_int) & 255] ^ var4_int >>> 8;
           }
           if (param0 != 1) {
             var7 = (qj[]) null;

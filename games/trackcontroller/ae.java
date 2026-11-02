@@ -8,10 +8,10 @@ abstract class ae {
     mb field_k;
     int field_d;
     long field_j;
-    be field_g;
+    PacketBuffer field_g;
     volatile int field_b;
     byte field_i;
-    be field_a;
+    PacketBuffer field_a;
     volatile int field_e;
     hi field_l;
 
@@ -121,11 +121,11 @@ abstract class ae {
         this.field_c = new mb();
         this.field_h = new mb();
         this.field_k = new mb();
-        this.field_g = new be(6);
+        this.field_g = new PacketBuffer(6);
         this.field_e = 0;
         this.field_i = (byte) 0;
         this.field_b = 0;
-        this.field_a = new be(10);
+        this.field_a = new PacketBuffer(10);
     }
 
     static {

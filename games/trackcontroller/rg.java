@@ -4,11 +4,11 @@
 final class rg {
     static String field_a;
     static int field_b;
-    static uf field_c;
+    static PlatformTaskDispatcher field_c;
 
     final static void a(boolean param0) {
         if (param0) {
-          field_c = (uf) null;
+          field_c = (PlatformTaskDispatcher) null;
         }
     }
 

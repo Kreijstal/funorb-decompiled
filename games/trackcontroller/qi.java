@@ -431,7 +431,7 @@ final class qi {
           int var1_int = -103 % ((-24 - param0) / 34);
           wl.field_i.b(-19635);
           for (var2 = 0; var2 < 32; var2++) {
-            bc.field_a[var2] = 0L;
+            BufferedSocket.field_a[var2] = 0L;
           }
           for (var2Lifetime1 = 0; var2Lifetime1 < 32; var2Lifetime1++) {
             ai.field_g[var2Lifetime1] = 0L;

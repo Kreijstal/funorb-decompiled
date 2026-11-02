@@ -26,7 +26,7 @@ final class ra extends sl {
         int var3 = TrackController.field_F ? 1 : 0;
         gd.field_x = param0 ? true : false;
         super.a(false, 1000, param0);
-        this.field_p = nl.a(this.field_s, this.field_E, -257, this.field_a + 26 * this.field_D, this.field_G, this.field_F, this.field_u * 26 + this.field_f, this.field_d[this.field_u][this.field_D]);
+        this.field_p = ClientException.a(this.field_s, this.field_E, -257, this.field_a + 26 * this.field_D, this.field_G, this.field_F, this.field_u * 26 + this.field_f, this.field_d[this.field_u][this.field_D]);
         if (this.field_h >= this.field_A) {
           if (this.field_p != null) {
             this.field_x.a(this.field_p, (byte) -78);
@@ -168,7 +168,7 @@ final class ra extends sl {
           this.a(param1, (byte) 50, param2, param0);
           this.field_B = new short[param0.length][param0[0].length];
           var7_int = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (var7_int >= param1.length) {
               return;
             }
@@ -176,7 +176,7 @@ final class ra extends sl {
             while (true) {
               if (var8 >= param1[var7_int].length) {
                 var7_int++;
-                continue L0;
+                continue scanLoop1;
               }
               if ((64 & param1[var7_int][var8]) == 0) {
                 var8++;
@@ -382,12 +382,12 @@ final class ra extends sl {
         var6Lifetime1 = -1;
         var7Lifetime1 = -1;
         var8 = 0;
-        L4: while (true) {
+        scanLoop1: while (true) {
           if (var8 < 32) {
             if (1 == (param0 & 1)) {
               if (var7Lifetime1 != -1) {
                 var6Lifetime1 = var8;
-                break L4;
+                break scanLoop1;
               }
               var7Lifetime1 = var8;
             }

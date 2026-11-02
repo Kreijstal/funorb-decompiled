@@ -95,7 +95,7 @@ class jj extends db implements m {
           if (!this.field_jb) {
             gk.a("tochangedisplayname.ws", gd.b((byte) 77), -110);
           } else {
-            qc.b(3, (byte) -42);
+            ProxySocketConnector.b(3, (byte) -42);
             this.t(20252);
           }
           if (param4 == -27322) {

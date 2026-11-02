@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ii extends gb {
+class ii extends DualLinkNode {
     static qj field_p;
     static int field_o;
     static int[] field_q;

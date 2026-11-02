@@ -5,26 +5,26 @@ final class mb {
     static qj[] field_d;
     static volatile int field_f;
     static int field_b;
-    private gb field_e;
+    private DualLinkNode field_e;
     static String field_a;
     static int field_c;
-    private gb field_g;
+    private DualLinkNode field_g;
 
-    final gb b(int param0) {
-        gb var2 = this.field_e.field_k;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2 = this.field_e.field_k;
         if (this.field_e == var2) {
           this.field_g = null;
           return null;
         }
         this.field_g = var2.field_k;
         if (param0 != 48) {
-          return (gb) null;
+          return (DualLinkNode) null;
         }
         return var2;
     }
 
-    final gb a(int param0) {
-        gb var2 = this.field_e.field_k;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_e.field_k;
         if (this.field_e == var2) {
           return null;
         }
@@ -142,7 +142,7 @@ final class mb {
         }
     }
 
-    final void a(gb param0, boolean param1) {
+    final void a(DualLinkNode param0, boolean param1) {
         try {
           if (null != param0.field_j) {
             param0.e(0);
@@ -159,12 +159,12 @@ final class mb {
         }
     }
 
-    final gb a(byte param0) {
+    final DualLinkNode a(byte param0) {
         if (param0 <= 70) {
-          gb var3 = (gb) null;
-          this.a((gb) null, true);
+          DualLinkNode var3 = (DualLinkNode) null;
+          this.a((DualLinkNode) null, true);
         }
-        gb var2 = this.field_g;
+        DualLinkNode var2 = this.field_g;
         if (var2 == this.field_e) {
           this.field_g = null;
           return null;
@@ -174,7 +174,7 @@ final class mb {
     }
 
     public mb() {
-        this.field_e = new gb();
+        this.field_e = new DualLinkNode();
         this.field_e.field_j = this.field_e;
         this.field_e.field_k = this.field_e;
     }
@@ -185,7 +185,7 @@ final class mb {
         if (param0 > -42) {
           return -128;
         }
-        gb var3 = this.field_e.field_k;
+        DualLinkNode var3 = this.field_e.field_k;
         while (var3 != this.field_e) {
           var2++;
           var3 = var3.field_k;

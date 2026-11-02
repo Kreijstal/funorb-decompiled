@@ -26,7 +26,7 @@ public final class TrackController extends ch {
         if (dd.field_o == param0) {
           fieldTemp$0 = na.field_b + 1;
           na.field_b = na.field_b + 1;
-          if (fieldTemp$0 < 0 && (0 != rj.field_a ||
+          if (fieldTemp$0 < 0 && (0 != SecondaryNodeDeque.field_a ||
             ni.field_m[84])) {
             na.field_b = 0;
           }
@@ -52,7 +52,7 @@ public final class TrackController extends ch {
                 (decompiledFrameRemainder0)) {
                 if (ni.field_m[13]) {
                   si.$cfr$intArgs$a$e9dea5688aa5(-68, 5);
-                  stackIn_50_0 = (hk.field_d <= 0) ? 13 : 12;
+                  stackIn_50_0 = (SocketConnector.field_d <= 0) ? 13 : 12;
                   sc.field_g = stackIn_50_0;
                 }
                 if (ib.field_a == -1) {
@@ -111,7 +111,7 @@ public final class TrackController extends ch {
               if (ib.field_a == -4) {
                 stackIn_21_0 = (jj.s(96)) ? 0 : 1;
                 ib.field_a = stackIn_21_0;
-                oi.a(26, gb.field_l, 26, bk.field_E, bk.field_E, 10, 320, 20, 240, gb.field_l, -3748, true, 18, 0, 0);
+                oi.a(26, DualLinkNode.field_l, 26, bk.field_E, bk.field_E, 10, 320, 20, 240, DualLinkNode.field_l, -3748, true, 18, 0, 0);
               }
               if (ib.field_a == -3) {
                 if (jj.s(123)) {
@@ -148,7 +148,7 @@ public final class TrackController extends ch {
             id.field_g = id.field_g + 1;
             if (id.field_g == 32) {
               if (ag.b(74)) {
-                te.a((byte) -89);
+                DelegatingCanvas.a((byte) -89);
               } else {
                 v.e(6);
               }
@@ -160,7 +160,7 @@ public final class TrackController extends ch {
     }
 
     final void h(int param0) {
-        fc.a(false);
+        IntrusiveNode.a(false);
         if (param0 != -24452) {
           this.h(-78);
         }
@@ -193,7 +193,7 @@ public final class TrackController extends ch {
         }
         var7 = stackIn_3_0;
         var2 = var7;
-        if (ga.a(-122)) {
+        if (IterableNodeHashTable.a(-122)) {
           stackIn_6_0 = -128;
           if (og.field_rb == null) {
             stackIn_7_1 = lb.field_M;
@@ -257,14 +257,14 @@ public final class TrackController extends ch {
           ll.d();
           if (ag.b(param0 - 142)) {
             ll.c(0, 0, ll.field_d, ll.field_k);
-            var3Lifetime2 = re.g(48);
+            var3Lifetime2 = GameApplet.g(48);
             var4Lifetime1 = var3Lifetime2 % 26;
             if (var4Lifetime1 != 0) {
               var3Lifetime2 = var3Lifetime2 + (26 - var4Lifetime1);
             }
             var5 = ii.b(false);
             cl.a(nd.field_L, -(var3Lifetime2 >> 1) + 320 - nd.field_L[0].field_t, nd.field_L[0].field_q + var5 + nd.field_L[6].field_q, -(var5 >> 1) + 240 - nd.field_L[0].field_q, var3Lifetime2 - (-nd.field_L[0].field_t - nd.field_L[2].field_t), 4);
-            nl.a(-77);
+            ClientException.a(-77);
           }
           if (0 != dd.field_o) {
             var3Lifetime3 = id.field_g << 3;
@@ -293,7 +293,7 @@ public final class TrackController extends ch {
 
     final void e(int param0) {
         TrackController.q(-29224);
-        cb.a((byte) 120);
+        MouseInputHandler.a((byte) 120);
         ja.c(false);
         kk.a(-1);
         bg.a(61);
@@ -301,20 +301,20 @@ public final class TrackController extends ch {
         ib.a((byte) -78);
         ii.f(-5146);
         ia.a(true);
-        lj.a(param0 ^ 5);
+        GameKeyHandler.a(param0 ^ 5);
         uk.b(10);
         od.a(8192);
         we.a((byte) 57);
         ch.n(-8511);
-        nl.a((byte) -96);
-        re.b((byte) -91);
+        ClientException.a((byte) -96);
+        GameApplet.b((byte) -91);
         ej.b(17);
-        h.b(-31279);
+        MouseWheelInput.b(-31279);
         ll.c();
         oh.a();
         e.a(-1102);
         qf.a((byte) 98);
-        be.i(3);
+        PacketBuffer.i(3);
         qg.b(false);
         ai.a((byte) 116);
         o.b((byte) 88);
@@ -338,8 +338,8 @@ public final class TrackController extends ch {
         sd.a((byte) -108);
         wg.c(param0 + 6778);
         il.b(-1);
-        bc.c(32);
-        fc.b((byte) 118);
+        BufferedSocket.c(32);
+        IntrusiveNode.b((byte) 118);
         nb.d((byte) 84);
         id.a(param0 - 104);
         ha.d(4);
@@ -374,7 +374,7 @@ public final class TrackController extends ch {
         mj.b(-2069072125);
         ab.a((byte) 98);
         gk.a(69);
-        gb.d(-126);
+        DualLinkNode.d(-126);
         fd.a((byte) 111);
         g.a((byte) 12);
         sl.a((byte) 107);
@@ -420,7 +420,7 @@ public final class TrackController extends ch {
         kg.a(-1);
         ug.g(param0 ^ -13);
         bj.a(false);
-        te.a(param0 ^ -18);
+        DelegatingCanvas.a(param0 ^ -18);
         sb.a((byte) 123);
         kj.b(false);
         ke.a(false);
@@ -446,7 +446,7 @@ public final class TrackController extends ch {
         si.a((byte) 47);
         ff.a(-1);
         rf.a(0);
-        hk.a(-88);
+        SocketConnector.a(-88);
         dj.a(-60);
         ub.a((byte) 12);
         ca.a(118);
@@ -476,13 +476,13 @@ public final class TrackController extends ch {
         fj.e((byte) 118);
         mc.b(false);
         aa.a((byte) -14);
-        ga.a((byte) 72);
-        rj.a((byte) 59);
+        IterableNodeHashTable.a((byte) 72);
+        SecondaryNodeDeque.a((byte) 59);
         vh.g(32);
         ad.i(param0 ^ 104);
-        qc.a(true);
+        ProxySocketConnector.a(true);
         kl.a(119);
-        ee.a(31399);
+        NodeHashTableIterator.a(31399);
         hh.b((byte) 52);
         ti.c((byte) -121);
         ag.a(10);
@@ -562,9 +562,9 @@ public final class TrackController extends ch {
           this.r(-23);
           ag.field_e = false;
         }
-        if (ga.a(43)) {
+        if (IterableNodeHashTable.a(43)) {
           this.l(-122);
-          if (ga.a(114)) {
+          if (IterableNodeHashTable.a(114)) {
             if (!ic.a(1)) {
               return;
             }
@@ -604,7 +604,7 @@ public final class TrackController extends ch {
                 } else {
                   var2 = rk.s(-1);
                   if (var2 == 3) {
-                    oi.a(26, gb.field_l, 26, bk.field_E, bk.field_E, 10, 320, 20, 240, gb.field_l, -3748, true, 18, 0, 0);
+                    oi.a(26, DualLinkNode.field_l, 26, bk.field_E, bk.field_E, 10, 320, 20, 240, DualLinkNode.field_l, -3748, true, 18, 0, 0);
                   } else {
                     if (2 != var2) {
                       if (var2 == 4) {
@@ -641,7 +641,7 @@ public final class TrackController extends ch {
             }
           }
         } else {
-          od.a((byte) -116, ee.field_c);
+          od.a((byte) -116, NodeHashTableIterator.field_c);
           if (this.b(467, true)) {
             pf.field_T = true;
           }
@@ -674,7 +674,7 @@ public final class TrackController extends ch {
           this.e((byte) 85);
         }
         me.a(-1, 0);
-        if (fc.c(72)) {
+        if (IntrusiveNode.c(72)) {
           var2Lifetime1 = this.d((byte) 103);
           if (2 == var2Lifetime1) {
             hh.a(-28717);
@@ -857,7 +857,7 @@ public final class TrackController extends ch {
                             ((de) (var5_ref_oh)).field_M[8][1] = 15252224;
                             ((de) (var5_ref_oh)).field_M[8][2] = 0;
                             ba.field_b = (oh) ((Object) uk.a("comic12", el.field_L, fb.field_b, "", 8));
-                            re.field_c = (oh) ((Object) uk.a("kartika13", el.field_L, fb.field_b, "", -43));
+                            GameApplet.field_c = (oh) ((Object) uk.a("kartika13", el.field_L, fb.field_b, "", -43));
                             el.field_L = null;
                             fb.field_b = null;
                             qi.d(71);
@@ -869,7 +869,7 @@ public final class TrackController extends ch {
                         ud.a(128, 50.0f, mk.a(0, wl.field_l, wa.field_j, ob.field_w, (byte) 117));
                         return false;
                       }
-                      ud.a(128, 40.0f, wf.a("", fc.field_f, ql.field_q, j.field_h, 23));
+                      ud.a(128, 40.0f, wf.a("", IntrusiveNode.field_f, ql.field_q, j.field_h, 23));
                       return false;
                     }
                     ud.a(param0 - 339, 31.0f, wf.a("", fd.field_f, v.field_c, si.field_c, param0 - 394));
@@ -948,7 +948,7 @@ public final class TrackController extends ch {
               return false;
             }
             if (da.field_p[1][0] == null) {
-              ud.a(128, 95.0f, rj.field_f);
+              ud.a(128, 95.0f, SecondaryNodeDeque.field_f);
               this.a(160);
               var3 = 208;
               for (var4 = 1; 32 > var4; var4++) {
@@ -1031,13 +1031,13 @@ public final class TrackController extends ch {
           ab.a("", -15383, "titlescreen2", sg.field_a).e(0, 0);
           ia.field_b.a(-91);
           nd.field_L = ib.a(10, "", sg.field_a, "frame");
-          gb.field_l = ib.a(param0 - 457, "", sg.field_a, "buttonframe");
+          DualLinkNode.field_l = ib.a(param0 - 457, "", sg.field_a, "buttonframe");
           aa.field_a = ib.a(10, "", sg.field_a, "buttonframe38");
           for (var4 = 0; var4 < 9; var4++) {
             nd.field_L[var4].field_s = nd.field_L[var4].field_t;
             nd.field_L[var4].field_v = nd.field_L[var4].field_q;
-            gb.field_l[var4].field_s = gb.field_l[var4].field_t;
-            gb.field_l[var4].field_v = gb.field_l[var4].field_q;
+            DualLinkNode.field_l[var4].field_s = DualLinkNode.field_l[var4].field_t;
+            DualLinkNode.field_l[var4].field_v = DualLinkNode.field_l[var4].field_q;
           }
           ii.field_r = ib.a(10, "", sg.field_a, "tiles");
           ha.field_m = new qj[9];
@@ -1083,7 +1083,7 @@ public final class TrackController extends ch {
           pd.a(var22, 0, da.field_p[0], 0, 4);
           pd.a(var22, 4, da.field_p[32], 0, 4);
           j.field_b = ib.a(param0 ^ 473, var4_ref_String, sg.field_a, "man_face");
-          hk.field_a = ib.a(10, "", sg.field_a, "smoke");
+          SocketConnector.field_a = ib.a(10, "", sg.field_a, "smoke");
           kg.field_e = ib.a(10, "", sg.field_a, "tickbox");
           var25 = ib.a(10, "", sg.field_a, "titlebg");
           var7 = ib.a(10, "", sg.field_a, "titles");

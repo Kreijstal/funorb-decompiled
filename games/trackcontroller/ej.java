@@ -4,22 +4,22 @@
 import java.io.*;
 
 final class ej implements Runnable {
-    private be field_g;
+    private PacketBuffer field_g;
     static String[] field_f;
     private java.net.URL field_l;
     private ce field_h;
     static mk field_e;
     private ce field_i;
     static String field_b;
-    private uf field_c;
+    private PlatformTaskDispatcher field_c;
     private int field_j;
     private ce field_k;
     private DataInputStream field_a;
     static qj field_d;
 
-    final be a(int param0) {
+    final PacketBuffer a(int param0) {
         if (param0 != -5) {
-          return (be) null;
+          return (PacketBuffer) null;
         }
         if (this.field_j == 3) {
           return this.field_g;
@@ -116,7 +116,7 @@ final class ej implements Runnable {
             var3 = var4.getOutputStream();
             var3.write(17);
             var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_l.getFile() + "\n\n"));
-            var3.write(bc.a((byte) -6, var5));
+            var3.write(BufferedSocket.a((byte) -6, var5));
             this.field_a = new DataInputStream(var4.getInputStream());
           }
           this.field_g.field_k = 0;
@@ -170,52 +170,52 @@ final class ej implements Runnable {
         ob.field_u = null;
         w.field_V = null;
         rf.field_c = 0;
-        var2 = ga.field_e;
-        ga.field_e = fj.field_T;
+        var2 = IterableNodeHashTable.field_e;
+        IterableNodeHashTable.field_e = fj.field_T;
         fj.field_T = var2;
         if (param0 > 8) {
-          rj.field_d.field_e = rj.field_d.field_e + 1;
+          SecondaryNodeDeque.field_d.field_e = SecondaryNodeDeque.field_d.field_e + 1;
           if (param1 == 51) {
-            rj.field_d.field_b = 2;
+            SecondaryNodeDeque.field_d.field_b = 2;
           } else {
             if (param1 != 50) {
-              rj.field_d.field_b = 1;
+              SecondaryNodeDeque.field_d.field_b = 1;
             } else {
-              rj.field_d.field_b = 5;
+              SecondaryNodeDeque.field_d.field_b = 5;
             }
           }
-          if (rj.field_d.field_e >= 2 &&
+          if (SecondaryNodeDeque.field_d.field_e >= 2 &&
             param1 == 51) {
             return 2;
           }
-          if (rj.field_d.field_e >= 2 &&
+          if (SecondaryNodeDeque.field_d.field_e >= 2 &&
             param1 == 50) {
             return 5;
           }
-          if (rj.field_d.field_e < 4) {
+          if (SecondaryNodeDeque.field_d.field_e < 4) {
             return -1;
           }
           return 1;
         }
         field_b = (String) null;
-        rj.field_d.field_e = rj.field_d.field_e + 1;
+        SecondaryNodeDeque.field_d.field_e = SecondaryNodeDeque.field_d.field_e + 1;
         if (param1 == 51) {
-          rj.field_d.field_b = 2;
-          if (rj.field_d.field_e >= 2) {
+          SecondaryNodeDeque.field_d.field_b = 2;
+          if (SecondaryNodeDeque.field_d.field_e >= 2) {
             if (param1 == 51) {
               return 2;
             }
-            if (rj.field_d.field_e >= 2 &&
+            if (SecondaryNodeDeque.field_d.field_e >= 2 &&
               param1 == 50) {
               return 5;
             }
-            if (rj.field_d.field_e < 4) {
+            if (SecondaryNodeDeque.field_d.field_e < 4) {
               return -1;
             }
             return 1;
           }
-          if (rj.field_d.field_e < 2) {
-            if (rj.field_d.field_e < 4) {
+          if (SecondaryNodeDeque.field_d.field_e < 2) {
+            if (SecondaryNodeDeque.field_d.field_e < 4) {
               return -1;
             }
             return 1;
@@ -225,20 +225,20 @@ final class ej implements Runnable {
           }
         } else {
           if (param1 != 50) {
-            rj.field_d.field_b = 1;
+            SecondaryNodeDeque.field_d.field_b = 1;
           } else {
-            rj.field_d.field_b = 5;
+            SecondaryNodeDeque.field_d.field_b = 5;
           }
-          if (rj.field_d.field_e >= 2 &&
+          if (SecondaryNodeDeque.field_d.field_e >= 2 &&
             param1 == 51) {
             return 2;
           }
-          if (rj.field_d.field_e >= 2 &&
+          if (SecondaryNodeDeque.field_d.field_e >= 2 &&
             param1 == 50) {
             return 5;
           }
         }
-        if (rj.field_d.field_e >= 4) {
+        if (SecondaryNodeDeque.field_d.field_e >= 4) {
           return 1;
         }
         return -1;
@@ -355,11 +355,11 @@ final class ej implements Runnable {
         field_e = null;
     }
 
-    ej(uf param0, java.net.URL param1, int param2) {
+    ej(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_l = param1;
           this.field_c = param0;
-          this.field_g = new be(param2);
+          this.field_g = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw sl.a((Throwable) ((Object) runtimeException), "ej.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

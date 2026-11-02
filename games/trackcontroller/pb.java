@@ -22,7 +22,7 @@ final class pb {
           if (!sk.a(param1, param2, 1, param0)) {
             return null;
           }
-          stackIn_4_0 = bc.a(12587, param3.a(param0, param1, (byte) -25));
+          stackIn_4_0 = BufferedSocket.a(12587, param3.a(param0, param1, (byte) -25));
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

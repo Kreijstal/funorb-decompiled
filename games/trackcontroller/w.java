@@ -106,7 +106,7 @@ final class w extends wd implements m {
           if (param1 == jf.field_l) {
             var3 = bf.field_c;
           } else {
-            if (param1 != te.field_b) {
+            if (param1 != DelegatingCanvas.field_b) {
               if (param1 == ej.field_e) {
                 this.field_u = this.field_u + 30;
                 var3 = cg.field_e;

@@ -34,7 +34,7 @@ final class bl {
         }
     }
 
-    final static void a(int param0, int param1, uf param2, be param3) {
+    final static void a(int param0, int param1, PlatformTaskDispatcher param2, PacketBuffer param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -193,19 +193,19 @@ final class bl {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          be var2 = null;
-          if (rj.field_d.field_e >= 4) {
-            if (rj.field_d.field_b == -1) {
+          PacketBuffer var2 = null;
+          if (SecondaryNodeDeque.field_d.field_e >= 4) {
+            if (SecondaryNodeDeque.field_d.field_b == -1) {
               return 3;
             }
-            if (rj.field_d.field_b == -2) {
+            if (SecondaryNodeDeque.field_d.field_b == -2) {
               return 4;
             }
             return 1;
           }
           try {
             if (rf.field_c == 0) {
-              w.field_V = kb.field_d.a(35, ga.field_e, fc.field_g);
+              w.field_V = kb.field_d.a(35, IterableNodeHashTable.field_e, IntrusiveNode.field_g);
               rf.field_c = rf.field_c + 1;
             }
             if (1 == rf.field_c) {
@@ -221,8 +221,8 @@ final class bl {
               field_a = (qj) null;
             }
             if (rf.field_c == 2) {
-              ob.field_u = new bc((java.net.Socket) (w.field_V.field_e), kb.field_d);
-              var2 = new be(13);
+              ob.field_u = new BufferedSocket((java.net.Socket) (w.field_V.field_e), kb.field_d);
+              var2 = new PacketBuffer(13);
               hl.a(kf.field_a, var2, 17, sa.field_T, vk.field_j);
               var2.a(15, (byte) -100);
               var2.b(false, gi.field_r);
@@ -249,7 +249,7 @@ final class bl {
               stackIn_40_0 = -1;
               return stackIn_40_0;
             }
-            rj.field_d.a((byte) 121, ai.field_b, ob.field_u);
+            SecondaryNodeDeque.field_d.a((byte) 121, ai.field_b, ob.field_u);
             ob.field_u = null;
             w.field_V = null;
             rf.field_c = 0;

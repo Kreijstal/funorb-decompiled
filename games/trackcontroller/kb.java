@@ -3,7 +3,7 @@
  */
 final class kb {
     static aa field_e;
-    static uf field_d;
+    static PlatformTaskDispatcher field_d;
     static jj field_a;
     static boolean[] field_f;
     static int field_b;

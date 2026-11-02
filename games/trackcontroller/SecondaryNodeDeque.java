@@ -3,17 +3,17 @@
  */
 import java.util.*;
 
-final class rj implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static ae field_d;
-    gb field_e;
+    DualLinkNode field_e;
     static int field_b;
     static int field_a;
     static volatile long field_c;
     static String field_f;
 
-    final gb a(int param0) {
-        gb var2 = null;
-        gb var2Lifetime1;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 != 65) {
           this.iterator();
           var2 = this.field_e.field_k;
@@ -79,7 +79,7 @@ final class rj implements Iterable {
         }
     }
 
-    private rj() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 
@@ -87,7 +87,7 @@ final class rj implements Iterable {
         return (Iterator) ((Object) new hh(this));
     }
 
-    final void a(gb param0, int param1) {
+    final void a(DualLinkNode param0, int param1) {
         try {
           if (null != param0.field_j) {
             param0.e(0);
@@ -97,7 +97,7 @@ final class rj implements Iterable {
           param0.field_j.field_k = param0;
           if (param1 != 8466) {
             java.applet.Applet var4 = (java.applet.Applet) null;
-            rj.a((java.applet.Applet) null, (byte) -6);
+            SecondaryNodeDeque.a((java.applet.Applet) null, (byte) -6);
           }
           param0.field_k.field_j = param0;
         } catch (RuntimeException runtimeException) {
@@ -117,7 +117,7 @@ final class rj implements Iterable {
 
     final static boolean a(char param0, int param1) {
         if (param1 != 122) {
-          rj.a((byte) -18);
+          SecondaryNodeDeque.a((byte) -18);
           if (param0 < 65) {
             if (param0 < 97) {
               return false;

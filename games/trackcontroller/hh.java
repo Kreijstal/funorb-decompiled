@@ -5,9 +5,9 @@ import java.util.*;
 
 final class hh implements Iterator {
     static String field_b;
-    private gb field_d;
-    private gb field_c;
-    private rj field_a;
+    private DualLinkNode field_d;
+    private DualLinkNode field_c;
+    private SecondaryNodeDeque field_a;
 
     public final boolean hasNext() {
         return this.field_a.field_e != this.field_d;
@@ -118,7 +118,7 @@ final class hh implements Iterator {
             }
             if (var2 != 4) {
               hb.a((Throwable) null, 0, "F1: " + jc.b(77));
-              lj.a((byte) 118);
+              GameKeyHandler.a((byte) 118);
               return;
             }
             q.field_a = 1;
@@ -175,7 +175,7 @@ final class hh implements Iterator {
               return;
             }
           }
-          lj.a(var7, var6, -126);
+          GameKeyHandler.a(var7, var6, -126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -191,7 +191,7 @@ final class hh implements Iterator {
         try {
           var1 = this.field_d;
           if (var1 != this.field_a.field_e) {
-            this.field_d = ((gb) (var1)).field_k;
+            this.field_d = ((DualLinkNode) (var1)).field_k;
             if (TrackController.field_F) {
               var1 = null;
               this.field_d = null;
@@ -200,7 +200,7 @@ final class hh implements Iterator {
             var1 = null;
             this.field_d = null;
           }
-          this.field_c = (gb) (var1);
+          this.field_c = (DualLinkNode) (var1);
           stackIn_6_0 = var1;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -226,9 +226,9 @@ final class hh implements Iterator {
           }
           var1 = uj.a(-119);
           ra.field_y = new rl(var1, (String) null, true, false, false);
-          gl.field_E.d((byte) -120, re.field_g);
-          re.field_g.b(ra.field_y, -82);
-          re.field_g.o(0);
+          gl.field_E.d((byte) -120, GameApplet.field_g);
+          GameApplet.field_g.b(ra.field_y, -82);
+          GameApplet.field_g.o(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -237,7 +237,7 @@ final class hh implements Iterator {
         }
     }
 
-    hh(rj param0) {
+    hh(SecondaryNodeDeque param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

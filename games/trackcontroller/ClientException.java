@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nl extends RuntimeException {
+final class ClientException extends RuntimeException {
     String field_a;
     Throwable field_d;
     static String field_c;
@@ -135,16 +135,16 @@ final class nl extends RuntimeException {
 
     final static int b(byte param0) {
         ij.field_d.a((byte) 95);
-        if (!rj.field_d.b(29166)) {
+        if (!SecondaryNodeDeque.field_d.b(29166)) {
           return bl.a((byte) -124);
         }
         if (param0 <= 71) {
-          nl.a(20);
+          ClientException.a(20);
         }
         return 0;
     }
 
-    nl(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_a = param1;
         this.field_d = param0;
     }

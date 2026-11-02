@@ -192,7 +192,7 @@ final class ri extends sl {
         if (param0 != 247) {
           return;
         }
-        var3 = bc.field_c[this.field_bb & 7][this.field_E & 7];
+        var3 = BufferedSocket.field_c[this.field_bb & 7][this.field_E & 7];
         this.field_R = this.field_R - var3 * this.field_E;
         this.field_cb = this.field_cb + var3;
         this.field_bb = this.field_bb + var3;
@@ -577,11 +577,11 @@ final class ri extends sl {
         var9Lifetime1 = 0;
         var10 = this.field_d[0].length;
         var11 = this.field_d.length - 1;
-        L5: while (true) {
+        scanLoop1: while (true) {
           if (var11 >= 0) {
             for (var12 = 0; var10 > var12; var12++) {
               if (this.a((byte) 121, this.field_d[var11][var12]) != 0) {
-                break L5;
+                break scanLoop1;
               }
             }
             var11--;
@@ -799,7 +799,7 @@ final class ri extends sl {
           stackIn_62_0 = (ni.field_m[96]) ? -1 : 0;
           stackIn_65_1 = (ni.field_m[97]) ? 1 : 0;
           var8 = stackIn_62_0 + stackIn_65_1;
-          if (rj.field_a != 0) {
+          if (SecondaryNodeDeque.field_a != 0) {
             var9 = (kf.field_b - 16) / 26;
             var10 = (fg.field_a - 48) / 26;
             if (var10 >= 0 &&
@@ -1002,7 +1002,7 @@ final class ri extends sl {
             stackIn_206_1Lifetime1 = 8;
             si.$cfr$intArgs$a$e9dea5688aa5(stackIn_206_0Lifetime1, stackIn_206_1Lifetime1);
           } else {
-            if (rj.field_a == 0) {
+            if (SecondaryNodeDeque.field_a == 0) {
               this.field_x = -1;
               this.field_G = -1;
             }
@@ -1038,14 +1038,14 @@ final class ri extends sl {
           var7_ref = (oc) (this.field_M.a(10));
         }
         var7Lifetime1 = (me) (var5.b(2));
-        L60: while (true) {
+        scanLoop1: while (true) {
           if (var7Lifetime1 != null) {
             if (0 == (32640 & this.field_d[var7Lifetime1.field_s][var7Lifetime1.field_r]) && (this.a(this.field_d, var7Lifetime1.field_r, 21278, var7Lifetime1.field_s - 1) != 0 ||
               this.a(this.field_d, var7Lifetime1.field_r, 21278, 1 + var7Lifetime1.field_s) != 0 ||
               0 != this.a(this.field_d, var7Lifetime1.field_r - 1, 21278, var7Lifetime1.field_s) ||
               this.a(this.field_d, 1 + var7Lifetime1.field_r, 21278, var7Lifetime1.field_s) != 0)) {
               vd.b(0, 7, 23636);
-              break L60;
+              break scanLoop1;
             }
             var7Lifetime1 = (me) (var5.a(10));
             continue;
@@ -1193,8 +1193,8 @@ final class ri extends sl {
     }
 
     final void a(ea param0, int param1) {
-        if (null == bc.field_c) {
-          bc.field_c = new int[][]{new int[]{3, 2, 1, 4, 1, 2, 1, 0}, new int[]{1, 2, 3, 4, 1, 2, 0, 0}, new int[]{5, 4, 1, 4, 1, 0, 1, 0}, new int[]{1, 4, 3, 4, 0, 0, 0, 0}, new int[]{2, 2, 1, -4, 1, 2, 1, 0}, new int[]{1, 2, -4, -4, 2, 2, 0, 0}, new int[]{1, -4, -3, -4, -2, -2, 1, 0}, new int[]{-6, -2, -1, -4, -1, -2, -1, 0}};
+        if (null == BufferedSocket.field_c) {
+          BufferedSocket.field_c = new int[][]{new int[]{3, 2, 1, 4, 1, 2, 1, 0}, new int[]{1, 2, 3, 4, 1, 2, 0, 0}, new int[]{5, 4, 1, 4, 1, 0, 1, 0}, new int[]{1, 4, 3, 4, 0, 0, 0, 0}, new int[]{2, 2, 1, -4, 1, 2, 1, 0}, new int[]{1, 2, -4, -4, 2, 2, 0, 0}, new int[]{1, -4, -3, -4, -2, -2, 1, 0}, new int[]{-6, -2, -1, -4, -1, -2, -1, 0}};
         }
         this.field_F = param0 != this.field_I ? true : false;
         this.field_I = param0;
@@ -1355,7 +1355,7 @@ final class ri extends sl {
           if (param0 != 56) {
             ri.a(106);
           }
-          if (cb.a(param2, param1, (byte) 96)) {
+          if (MouseInputHandler.a(param2, param1, (byte) 96)) {
             return false;
           }
           if (rh.a(19438, param2, param1)) {
@@ -1502,12 +1502,12 @@ final class ri extends sl {
         }
         if (!this.field_F) {
           cl.a(nd.field_L, -(-156 + this.field_Y >> 1) - 10 + this.field_t, 72, this.field_C - 10, 20 + this.field_Y, param0 - 24657);
-          cl.a(gb.field_l, this.field_t, 26, 26 + this.field_C, 156, 4);
+          cl.a(DualLinkNode.field_l, this.field_t, 26, 26 + this.field_C, 156, 4);
           bk.field_E.b(this.field_y, 78 + this.field_t, this.field_C + bk.field_E.field_G, 5, -1);
           bk.field_E.b(var2_ref, 78 + this.field_t, bk.field_E.field_G + this.field_C + 24, var3Lifetime2, -1);
         } else {
           cl.a(nd.field_L, -(this.field_Y - 156 >> 1) + (this.field_t - 10), 98, -26 + (-10 + this.field_C), 20 + this.field_Y, 4);
-          cl.a(gb.field_l, this.field_t, 26, 26 + this.field_C, 156, param0 - 24657);
+          cl.a(DualLinkNode.field_l, this.field_t, 26, 26 + this.field_C, 156, param0 - 24657);
           bk.field_E.b(this.field_y, 78 + this.field_t, this.field_C + bk.field_E.field_G - 26, 5, -1);
           bk.field_E.b(this.field_L, this.field_t + 78, bk.field_E.field_G + this.field_C, 5, -1);
           bk.field_E.b(var2_ref, 78 + this.field_t, this.field_C + (26 + (bk.field_E.field_G - 2)), var3Lifetime2, -1);
@@ -1572,7 +1572,7 @@ final class ri extends sl {
           var3_int = param0.length;
           var4 = param0[param1].length;
           var5 = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (var5 >= var3_int) {
               throw new IllegalStateException();
             }
@@ -1580,7 +1580,7 @@ final class ri extends sl {
             while (true) {
               if (var6 >= var4) {
                 var5++;
-                continue L0;
+                continue scanLoop1;
               }
               if (this.a((byte) 119, param0[var5][var6]) == 0) {
                 var6++;
@@ -1870,7 +1870,7 @@ final class ri extends sl {
           fi.field_i) {
           ak.field_b = -1;
         }
-        qc.a(ak.field_b, (byte) 20);
+        ProxySocketConnector.a(ak.field_b, (byte) 20);
     }
 
     final static void e(int param0) {
@@ -1888,9 +1888,9 @@ final class ri extends sl {
             if (var1 == 1) {
               tk.field_r = ob.field_x;
             } else {
-              tk.field_r = dh.a((byte) -75, new String[]{Integer.toString(var1)}, be.field_l);
+              tk.field_r = dh.a((byte) -75, new String[]{Integer.toString(var1)}, PacketBuffer.field_l);
             }
-            tk.field_r = fi.a(116, new CharSequence[]{(CharSequence) ((Object) tk.field_r), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) cb.field_e)});
+            tk.field_r = fi.a(116, new CharSequence[]{(CharSequence) ((Object) tk.field_r), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) MouseInputHandler.field_e)});
           }
           kb.field_a.t(20252);
           r.f(-635);

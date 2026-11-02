@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fc {
+class IntrusiveNode {
     static String field_a;
     static String field_g;
-    fc field_e;
+    IntrusiveNode field_e;
     static String field_f;
     static String[] field_c;
     static int field_d;
-    fc field_h;
+    IntrusiveNode field_h;
     long field_b;
 
     final static boolean c(int param0) {
@@ -22,7 +22,7 @@ class fc {
 
     final boolean b(int param0) {
         if (param0 != 10000536) {
-          fc.a(20, 32, 14, (byte) -49, 34);
+          IntrusiveNode.a(20, 32, 14, (byte) -49, 34);
         }
         if (null == this.field_e) {
           return false;
@@ -110,7 +110,7 @@ class fc {
         var4 = TrackController.field_F ? 1 : 0;
         try {
           try {
-            if (!uf.field_b.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_b.startsWith("win")) {
               return false;
             }
             if (param0) {

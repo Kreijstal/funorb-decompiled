@@ -4,11 +4,11 @@
 final class ja {
     static int[] field_a;
     static String[] field_c;
-    fc field_d;
-    private fc field_b;
+    IntrusiveNode field_d;
+    private IntrusiveNode field_b;
 
-    final fc a(int param0) {
-        fc var2 = this.field_b;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = this.field_b;
         if (var2 == this.field_d) {
           this.field_b = null;
           return null;
@@ -21,10 +21,10 @@ final class ja {
         return var2;
     }
 
-    final fc a(byte param0) {
-        fc var2 = this.field_d.field_e;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_d.field_e;
         if (param0 != 95) {
-          return (fc) null;
+          return (IntrusiveNode) null;
         }
         if (this.field_d == var2) {
           this.field_b = null;
@@ -34,10 +34,10 @@ final class ja {
         return var2;
     }
 
-    final fc b(int param0) {
-        fc var2 = this.field_d.field_h;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = this.field_d.field_h;
         if (param0 != 2) {
-          return (fc) null;
+          return (IntrusiveNode) null;
         }
         if (this.field_d == var2) {
           this.field_b = null;
@@ -47,8 +47,8 @@ final class ja {
         return var2;
     }
 
-    final fc d(int param0) {
-        fc var2 = this.field_b;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = this.field_b;
         if (this.field_d == var2) {
           this.field_b = null;
           return null;
@@ -61,7 +61,7 @@ final class ja {
         return var2;
     }
 
-    final void a(fc param0, byte param1) {
+    final void a(IntrusiveNode param0, byte param1) {
         try {
           if (param0.field_e != null) {
             param0.a(-107);
@@ -76,10 +76,10 @@ final class ja {
         }
     }
 
-    final fc c(byte param0) {
-        fc var2 = this.field_d.field_e;
+    final IntrusiveNode c(byte param0) {
+        IntrusiveNode var2 = this.field_d.field_e;
         if (param0 >= -59) {
-          return (fc) null;
+          return (IntrusiveNode) null;
         }
         if (var2 != this.field_d) {
           var2.a(-92);
@@ -88,8 +88,8 @@ final class ja {
         return null;
     }
 
-    final fc b(byte param0) {
-        fc var2 = this.field_d.field_h;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = this.field_d.field_h;
         if (var2 == this.field_d) {
           return null;
         }
@@ -97,12 +97,12 @@ final class ja {
         if (param0 < -77) {
           return var2;
         }
-        fc var3 = (fc) null;
-        this.a((byte) -94, (fc) null);
+        IntrusiveNode var3 = (IntrusiveNode) null;
+        this.a((byte) -94, (IntrusiveNode) null);
         return var2;
     }
 
-    final void a(byte param0, fc param1) {
+    final void a(byte param0, IntrusiveNode param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -119,7 +119,7 @@ final class ja {
           if (param0 <= -90) {
             return;
           }
-          this.field_b = (fc) null;
+          this.field_b = (IntrusiveNode) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -164,10 +164,10 @@ final class ja {
     }
 
     final int a(boolean param0) {
-        fc var3 = null;
+        IntrusiveNode var3 = null;
         int var4 = TrackController.field_F ? 1 : 0;
         int var2 = 0;
-        fc var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         if (param0) {
           var3 = this.field_d.field_h;
           while (this.field_d != var3) {
@@ -186,13 +186,13 @@ final class ja {
     }
 
     public ja() {
-        this.field_d = new fc();
+        this.field_d = new IntrusiveNode();
         this.field_d.field_e = this.field_d;
         this.field_d.field_h = this.field_d;
     }
 
     final void e(int param0) {
-        fc var2;
+        IntrusiveNode var2;
         int var3;
         var3 = TrackController.field_F ? 1 : 0;
         if (param0 != 1) {

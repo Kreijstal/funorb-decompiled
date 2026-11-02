@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class la extends be {
+final class la extends PacketBuffer {
     private int field_r;
     static volatile int field_s;
     private nf field_n;

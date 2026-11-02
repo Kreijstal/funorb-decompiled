@@ -86,7 +86,7 @@ final class oj {
           var21Lifetime2 = ig.field_h;
           var22Lifetime2 = ig.field_a;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (param3.field_q > var23Lifetime2) {
               var24Lifetime1 = param3.field_y[var23Lifetime2];
               var25Lifetime1 = param3.field_o[var23Lifetime2];
@@ -169,7 +169,7 @@ final class oj {
                   stackIn_62_0 = wf.field_c.length;
                   stackIn_62_1 = var18;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_62_0 <= stackIn_62_1) {
                     break;
@@ -216,23 +216,23 @@ final class oj {
         }
     }
 
-    final static hk a(String param0, int param1, int param2) {
-        qc var3 = null;
+    final static SocketConnector a(String param0, int param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        qc stackIn_4_0 = null;
+        ProxySocketConnector stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new qc();
+          var3 = new ProxySocketConnector();
           if (param2 != 0) {
             field_d = (ja) null;
           }
-          ((hk) ((Object) var3)).field_b = param0;
-          ((hk) ((Object) var3)).field_c = param1;
+          ((SocketConnector) ((Object) var3)).field_b = param0;
+          ((SocketConnector) ((Object) var3)).field_c = param1;
           stackIn_4_0 = var3;
-          return (hk) ((Object) stackIn_4_0);
+          return (SocketConnector) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

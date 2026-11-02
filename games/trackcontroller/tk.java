@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tk extends gb {
+abstract class tk extends DualLinkNode {
     boolean field_q;
     volatile boolean field_w;
     static gf field_u;

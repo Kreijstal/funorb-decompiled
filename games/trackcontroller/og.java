@@ -3,7 +3,7 @@
  */
 final class og extends jj implements m {
     static int field_pb;
-    static ih field_rb;
+    static FullscreenFocusCanvas field_rb;
     static String field_qb;
     private vd field_mb;
     private boolean field_lb;
@@ -75,7 +75,7 @@ final class og extends jj implements m {
                 this.field_lb = true;
               }
             } else {
-              var4 = ga.field_f;
+              var4 = IterableNodeHashTable.field_f;
               if (this.field_mb != null) {
                 this.field_mb.a((byte) 121);
               }

@@ -58,7 +58,7 @@ final class pl {
         if (param0 != 0) {
           field_d = (String) null;
         }
-        re.field_g.b(ne.field_d, -113);
+        GameApplet.field_g.b(ne.field_d, -113);
     }
 
     final static void b(int param0) {
@@ -115,23 +115,23 @@ final class pl {
               break;
             }
             if (var4 == null) {
-              lj.a((byte) 115);
+              GameKeyHandler.a((byte) 115);
               return;
             }
             var5 = var27.h(16383);
             if (0 != var5) {
               var6 = var4.field_l;
               var7 = var4.field_k;
-              cb.field_c[0].field_f = null;
-              cb.field_c[0].field_h = ue.field_a;
-              cb.field_c[0].field_i = false;
+              MouseInputHandler.field_c[0].field_f = null;
+              MouseInputHandler.field_c[0].field_h = ue.field_a;
+              MouseInputHandler.field_c[0].field_i = false;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                cb.field_c[var8_int].field_h = var27.g(0);
-                cb.field_c[var8_int].field_i = false;
+                MouseInputHandler.field_c[var8_int].field_h = var27.g(0);
+                MouseInputHandler.field_c[var8_int].field_i = false;
                 if (var27.h(param0 + 19953) == 1) {
-                  cb.field_c[var8_int].field_f = var27.g(param0 ^ -3570);
+                  MouseInputHandler.field_c[var8_int].field_f = var27.g(param0 ^ -3570);
                 } else {
-                  cb.field_c[var8_int].field_f = null;
+                  MouseInputHandler.field_c[var8_int].field_f = null;
                 }
               }
               dupTemp$0 = new String[3][var6];
@@ -154,12 +154,12 @@ final class pl {
               if (0 < var18) {
                 for (var19 = 0; var18 > var19; var19++) {
                   var20 = var27.h(16383);
-                  var21 = cb.field_c[var20].field_h;
+                  var21 = MouseInputHandler.field_c[var20].field_h;
                   var22 = var27.f((byte) 38);
                   var24 = var27.field_k;
                   if (var6 > var19) {
                     var8[0][var12] = var21;
-                    var9[0][var12] = cb.field_c[var20].field_f;
+                    var9[0][var12] = MouseInputHandler.field_c[var20].field_f;
                     var10[0][var12] = var22;
                     var12++;
                     for (var25 = 0; var7 > var25; var25++) {
@@ -182,10 +182,10 @@ final class pl {
                     }
                   }
                   if (var14 < var6 &&
-                    !cb.field_c[var20].field_i) {
-                    cb.field_c[var20].field_i = true;
+                    !MouseInputHandler.field_c[var20].field_i) {
+                    MouseInputHandler.field_c[var20].field_i = true;
                     var8[2][var14] = var21;
-                    var9[2][var14] = cb.field_c[var20].field_f;
+                    var9[2][var14] = MouseInputHandler.field_c[var20].field_f;
                     var10[2][var14] = var22;
                     var14++;
                     var27.field_k = var24;
@@ -212,14 +212,14 @@ final class pl {
               break;
             }
             if (var6_ref_aj == null) {
-              lj.a((byte) 114);
+              GameKeyHandler.a((byte) 114);
               return;
             }
             var6_ref_aj.field_j = var4_long;
             var6_ref_aj.a(-62);
           } else {
             hb.a((Throwable) null, param0 + 3570, "HS1: " + jc.b(116));
-            lj.a((byte) 118);
+            GameKeyHandler.a((byte) 118);
           }
           if (param0 != -3570) {
             field_a = (int[]) null;

@@ -122,22 +122,22 @@ final class bf {
 
     final static boolean a(boolean param0, byte param1) {
         long dupTemp$2 = 0L;
-        if (null == ga.field_d) {
-          ga.field_d = gf.field_o.a(79, ke.field_c, dc.field_o);
+        if (null == IterableNodeHashTable.field_d) {
+          IterableNodeHashTable.field_d = gf.field_o.a(79, ke.field_c, dc.field_o);
         }
-        if (0 == ga.field_d.field_f) {
+        if (0 == IterableNodeHashTable.field_d.field_f) {
           return false;
         }
         dupTemp$2 = qg.a(false);
         qh.field_f = dupTemp$2;
         he.field_a = dupTemp$2;
-        if (ga.field_d.field_f != 1) {
+        if (IterableNodeHashTable.field_d.field_f != 1) {
         }
         jc.field_a = oc.field_m;
         if (param1 < 31) {
           field_a = (int[]) null;
         }
-        ga.field_d = null;
+        IterableNodeHashTable.field_d = null;
         return true;
     }
 

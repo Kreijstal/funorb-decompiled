@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class h {
+abstract class MouseWheelInput {
     static char[] field_e;
     static String field_a;
     static nj field_c;
@@ -14,7 +14,7 @@ abstract class h {
         field_a = null;
         field_c = null;
         if (param0 != -31279) {
-          h.a((byte) -80, 8);
+          MouseWheelInput.a((byte) -80, 8);
         }
     }
 
@@ -34,7 +34,7 @@ abstract class h {
         var6 = TrackController.field_F ? 1 : 0;
         var2 = 0;
         if (param0 > -22) {
-          h.b(109);
+          MouseWheelInput.b(109);
           var3 = fb.field_a;
           if (5 > var3) {
             var2 = var3 * (var3 * 8192) / 1100;
@@ -96,7 +96,7 @@ abstract class h {
             var5 = 1;
             var4 = 1;
           }
-          ba.field_a = te.a(var5 * var2, 0, var2 * var4);
+          ba.field_a = DelegatingCanvas.a(var5 * var2, 0, var2 * var4);
           return;
         }
         var3Lifetime1 = fb.field_a;
@@ -205,7 +205,7 @@ abstract class h {
                 var5Lifetime1 = 1;
                 var4Lifetime1 = 1;
               }
-              ba.field_a = te.a(var5Lifetime1 * var2, 0, var2 * var4Lifetime1);
+              ba.field_a = DelegatingCanvas.a(var5Lifetime1 * var2, 0, var2 * var4Lifetime1);
               return;
             }
             var3Lifetime1 = -var3Lifetime1 + 120;
@@ -256,7 +256,7 @@ abstract class h {
           var5Lifetime1 = 1;
           var4Lifetime1 = 1;
         }
-        ba.field_a = te.a(var5Lifetime1 * var2, 0, var2 * var4Lifetime1);
+        ba.field_a = DelegatingCanvas.a(var5Lifetime1 * var2, 0, var2 * var4Lifetime1);
         return;
     }
 

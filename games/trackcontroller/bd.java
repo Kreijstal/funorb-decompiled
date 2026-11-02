@@ -21,7 +21,7 @@ final class bd {
             return stackIn_2_0;
           }
           kd.field_a.a((byte) -122, var2);
-          qc.field_e.a(param1);
+          ProxySocketConnector.field_e.a(param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

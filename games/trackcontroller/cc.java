@@ -16,7 +16,7 @@ final class cc {
         if (var3 == null) {
           return null;
         }
-        return new cc(new be(var3));
+        return new cc(new PacketBuffer(var3));
     }
 
     private final byte[] a() {
@@ -64,10 +64,10 @@ final class cc {
         if (var3 == null) {
           return null;
         }
-        return new cc(new be(var3));
+        return new cc(new PacketBuffer(var3));
     }
 
-    private cc(be param0) {
+    private cc(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new pg[10];

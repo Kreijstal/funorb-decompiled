@@ -269,11 +269,11 @@ class rh extends al {
         try {
           super.a(param0, param1, param2, param3);
           if (this.field_r != 0) {
-            if (this.field_r == rj.field_a) {
+            if (this.field_r == SecondaryNodeDeque.field_a) {
               return;
             }
             if (this.a(param1, param0, kf.field_b, false, fg.field_a) &&
-              0 == rj.field_a) {
+              0 == SecondaryNodeDeque.field_a) {
               this.b(-param0 + fg.field_a, -param1 + kf.field_b, 0, this.field_r);
             }
             this.a(param3, false, fg.field_a, param0, kf.field_b, param1);

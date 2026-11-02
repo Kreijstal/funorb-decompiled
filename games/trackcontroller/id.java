@@ -4,23 +4,23 @@
 final class id {
     static int field_h;
     static int field_e;
-    private fc[] field_c;
-    private fc field_d;
+    private IntrusiveNode[] field_c;
+    private IntrusiveNode field_d;
     static String field_a;
     private int field_f;
     static int field_g;
     private int field_b;
-    private fc field_j;
+    private IntrusiveNode field_j;
     static int[] field_k;
     static String field_i;
 
-    final fc a(int param0, long param1) {
-        fc var5 = null;
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = TrackController.field_F ? 1 : 0;
         if (param0 != 8434) {
-          return (fc) null;
+          return (IntrusiveNode) null;
         }
-        fc var4 = this.field_c[(int)((long)(this.field_b - 1) & param1)];
+        IntrusiveNode var4 = this.field_c[(int)((long)(this.field_b - 1) & param1)];
         this.field_j = var4.field_h;
         while (var4 != this.field_j) {
           if (~param1 == ~this.field_j.field_b) {
@@ -100,9 +100,9 @@ final class id {
         }
     }
 
-    final fc a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         int fieldTemp$0 = 0;
-        fc var2;
+        IntrusiveNode var2;
         int var3;
         var3 = TrackController.field_F ? 1 : 0;
         if (this.field_f > 0 &&
@@ -127,8 +127,8 @@ final class id {
         return var2;
     }
 
-    final void a(boolean param0, long param1, fc param2) {
-        fc var5 = null;
+    final void a(boolean param0, long param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
           if (null != param2.field_e) {
             param2.a(-38);
@@ -147,7 +147,7 @@ final class id {
         }
     }
 
-    final fc b(int param0) {
+    final IntrusiveNode b(int param0) {
         if (param0 > -34) {
           this.b(16);
         }
@@ -166,13 +166,13 @@ final class id {
 
     id(int param0) {
         int var2 = 0;
-        fc dupTemp$0 = null;
-        fc var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_f = 0;
-        this.field_c = new fc[param0];
+        this.field_c = new IntrusiveNode[param0];
         this.field_b = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new fc();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_c[var2] = dupTemp$0;
           var3.field_h = var3;

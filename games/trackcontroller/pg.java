@@ -258,7 +258,7 @@ final class pg {
         return field_x;
     }
 
-    final void a(be param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_y = new jl();

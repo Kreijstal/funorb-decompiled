@@ -42,7 +42,7 @@ final class j {
         int var10;
         String var11;
         int var13;
-        nl var14;
+        ClientException var14;
         StringWriter var15;
         String var20;
         BufferedReader var21;
@@ -100,13 +100,13 @@ final class j {
         String var11Lifetime8Lifetime2;
         String var11Lifetime8Lifetime3;
         var13 = TrackController.field_F ? 1 : 0;
-        if (!(param1 instanceof nl)) {
+        if (!(param1 instanceof ClientException)) {
           var2 = "";
           var11 = var2;
           var2 = var11;
           var11Lifetime9 = var2;
         } else {
-          var14 = (nl) ((Object) param1);
+          var14 = (ClientException) ((Object) param1);
           var2 = var14.field_a + " | ";
           param1 = var14.field_d;
         }

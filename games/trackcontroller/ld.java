@@ -355,7 +355,7 @@ final class ld {
     }
 
     final static void a(int param0, byte param1) {
-        ee.field_f = TrackController.field_E[param0];
+        NodeHashTableIterator.field_f = TrackController.field_E[param0];
         if (param1 != -29) {
           return;
         }

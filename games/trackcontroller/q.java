@@ -104,7 +104,7 @@ final class q {
         } else {
           this.field_i = hi.field_A;
         }
-        this.field_l = nl.field_b;
+        this.field_l = ClientException.field_b;
         this.field_g = lg.field_a;
         this.field_d = o.field_b;
         this.field_b = jb.field_d;

@@ -111,11 +111,11 @@ final class hf {
               30000L >= bj.b(-21676)) {
               return false;
             }
-            lj.a((byte) 113);
+            GameKeyHandler.a((byte) 113);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = (IOException) (Object) decompiledCaughtException;
-            lj.a((byte) 117);
+            GameKeyHandler.a((byte) 117);
           }
           return false;
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -325,7 +325,7 @@ final class hf {
                 this.field_g.a(6, -1, fh.field_a, 0);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param2 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -341,7 +341,7 @@ final class hf {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var11 = ((fh.field_a[1] & 255) << 16) + (-16777216 & fh.field_a[0] << 24) + ((255 & fh.field_a[2]) << 8) + (255 & fh.field_a[3]);
                         var12 = (fh.field_a[4] << 8 & 65280) + (fh.field_a[5] & 255);
@@ -357,7 +357,7 @@ final class hf {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var12 = (255 & fh.field_a[3]) + ((255 & fh.field_a[2]) << 8);
                         var13 = 255 & fh.field_a[7];

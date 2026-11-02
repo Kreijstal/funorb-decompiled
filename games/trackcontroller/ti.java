@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ti extends fc {
+final class ti extends IntrusiveNode {
     long[][] field_q;
     int[][] field_n;
     String[][] field_m;
@@ -91,12 +91,12 @@ final class ti extends fc {
 
     final static void a(byte param0) {
         if (param0 == -58) {
-          qc.b(17, (byte) -42);
+          ProxySocketConnector.b(17, (byte) -42);
           return;
         }
         String var2 = (String) null;
         ti.a((String) null, (kk) null, (String) null, -73);
-        qc.b(17, (byte) -42);
+        ProxySocketConnector.b(17, (byte) -42);
     }
 
     ti() {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_b;
     static String field_f;
     static int field_a;
@@ -128,7 +128,7 @@ final class lj implements java.awt.event.KeyListener, java.awt.event.FocusListen
         field_c = null;
     }
 
-    final static void a(fc param0, fc param1, int param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, int param2) {
         try {
           if (null != param1.field_e) {
             param1.a(-91);
@@ -156,7 +156,7 @@ final class lj implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           return;
         }
-        lj.a(-39);
+        GameKeyHandler.a(-39);
         if (r.field_i != null) {
           r.field_i.d(16777215);
           r.field_i = null;

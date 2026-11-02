@@ -63,8 +63,8 @@ final class ib {
           Throwable decompiledCaughtException = null;
           java.net.MalformedURLException var4_ref = null;
           try {
-            if (uf.field_b.startsWith("win") &&
-              fc.b(false, param1)) {
+            if (PlatformTaskDispatcher.field_b.startsWith("win") &&
+              IntrusiveNode.b(false, param1)) {
               return;
             }
             try {

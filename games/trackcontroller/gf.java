@@ -5,7 +5,7 @@ final class gf {
     private int field_c;
     private boolean field_d;
     private int field_u;
-    static uf field_o;
+    static PlatformTaskDispatcher field_o;
     private int field_n;
     private int field_p;
     private int field_e;
@@ -30,15 +30,15 @@ final class gf {
         if (null != og.field_rb) {
           return;
         }
-        if (hk.field_d <= 0) {
+        if (SocketConnector.field_d <= 0) {
           this.field_d = false;
         }
         if (!this.field_d) {
           if (this.field_j > og.field_pb) {
-            gb.field_i = (-og.field_pb + this.field_j) / 2;
+            DualLinkNode.field_i = (-og.field_pb + this.field_j) / 2;
           } else {
             if (0 < this.field_j) {
-              gb.field_i = 0;
+              DualLinkNode.field_i = 0;
             }
           }
           if (this.field_s == og.field_pb &&
@@ -122,7 +122,7 @@ final class gf {
                 }
               }
               if (0 < this.field_j) {
-                gb.field_i = (this.field_j - og.field_pb) / 2;
+                DualLinkNode.field_i = (this.field_j - og.field_pb) / 2;
               }
               return;
             }
@@ -162,14 +162,14 @@ final class gf {
                   if (0 >= this.field_j) {
                     return;
                   }
-                  gb.field_i = (this.field_j - og.field_pb) / 2;
+                  DualLinkNode.field_i = (this.field_j - og.field_pb) / 2;
                   return;
                 }
                 this.field_b.a(var2, var3, (byte) 4);
               }
             }
             if (0 < this.field_j) {
-              gb.field_i = (this.field_j - og.field_pb) / 2;
+              DualLinkNode.field_i = (this.field_j - og.field_pb) / 2;
             }
             return;
           }
@@ -187,7 +187,7 @@ final class gf {
             }
           }
           if (0 < this.field_j) {
-            gb.field_i = (this.field_j - og.field_pb) / 2;
+            DualLinkNode.field_i = (this.field_j - og.field_pb) / 2;
           }
           return;
         }
@@ -222,7 +222,7 @@ final class gf {
             if (og.field_pb != var2) {
               this.field_b.a(var2, var3, (byte) 4);
               if (0 < this.field_j) {
-                gb.field_i = (this.field_j - og.field_pb) / 2;
+                DualLinkNode.field_i = (this.field_j - og.field_pb) / 2;
               }
               return;
             }
@@ -234,7 +234,7 @@ final class gf {
         if (0 >= this.field_j) {
           return;
         }
-        gb.field_i = (this.field_j - og.field_pb) / 2;
+        DualLinkNode.field_i = (this.field_j - og.field_pb) / 2;
     }
 
     final boolean a(int param0) {
@@ -243,7 +243,7 @@ final class gf {
           if (eb.field_i < this.field_t) {
             return false;
           }
-          if (hk.field_d > 0) {
+          if (SocketConnector.field_d > 0) {
             return true;
           }
           return false;
@@ -251,18 +251,18 @@ final class gf {
         if (eb.field_i < this.field_t) {
           return false;
         }
-        if (hk.field_d > 0) {
+        if (SocketConnector.field_d > 0) {
           return true;
         }
         return false;
     }
 
-    final ih c(int param0) {
+    final FullscreenFocusCanvas c(int param0) {
         this.field_p = wf.field_b;
         this.field_n = og.field_pb;
         this.field_b.a(this.field_f, this.field_v, (byte) 4);
         mj.field_c = false;
-        ih var2 = dj.a(param0, this.field_v, this.field_f, (byte) 28, rg.field_c, 0);
+        FullscreenFocusCanvas var2 = dj.a(param0, this.field_v, this.field_f, (byte) 28, rg.field_c, 0);
         if (var2 != null) {
           return var2;
         }

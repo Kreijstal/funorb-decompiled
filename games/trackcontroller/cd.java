@@ -202,7 +202,7 @@ final class cd {
         }
         if (this.field_l == 0) {
           if (uk.field_a == 0) {
-            if (rj.field_a != 0) {
+            if (SecondaryNodeDeque.field_a != 0) {
               if (0 == this.field_l && (this.field_a ||
                 mg.field_a)) {
                 if (0 <= param1) {
@@ -270,10 +270,10 @@ final class cd {
           this.a(true);
           return;
         }
-        if (rj.field_a == 0) {
+        if (SecondaryNodeDeque.field_a == 0) {
           boolean decompiledFrameRemainder0 = true;
           if (uk.field_a == 0) {
-            if (rj.field_a != 0) {
+            if (SecondaryNodeDeque.field_a != 0) {
               if (0 == this.field_l && (this.field_a ||
                 mg.field_a)) {
                 if (0 <= param1) {
@@ -347,7 +347,7 @@ final class cd {
           }
           this.field_k = this.field_k - 1;
           if (uk.field_a == 0) {
-            if (rj.field_a != 0) {
+            if (SecondaryNodeDeque.field_a != 0) {
               if (0 == this.field_l && (this.field_a ||
                 mg.field_a)) {
                 if (0 <= param1) {

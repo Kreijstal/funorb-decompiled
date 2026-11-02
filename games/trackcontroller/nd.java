@@ -12,7 +12,7 @@ final class nd extends td implements m {
     static String field_H;
     static qj[] field_L;
 
-    final static String a(int param0, be param1, int param2) {
+    final static String a(int param0, PacketBuffer param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -74,7 +74,7 @@ final class nd extends td implements m {
 
     final static ng[] a(kk param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        be var5 = null;
+        PacketBuffer var5 = null;
         Object stackIn_4_0 = null;
         ng[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -83,8 +83,8 @@ final class nd extends td implements m {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 16777215) {
-            var5 = (be) null;
-            nd.a(83, (be) null, -120);
+            var5 = (PacketBuffer) null;
+            nd.a(83, (PacketBuffer) null, -120);
           }
           if (sk.a(param1, param0, 1, param2)) {
             stackIn_6_0 = me.d(-104);
@@ -157,7 +157,7 @@ final class nd extends td implements m {
             return true;
           }
           if (param1 != 0) {
-            var6 = h.field_e;
+            var6 = MouseWheelInput.field_e;
             var2 = var6;
             var3 = 0;
             while (var3 < var6.length) {
@@ -188,7 +188,7 @@ final class nd extends td implements m {
         RuntimeException var3 = null;
         ne var4 = null;
         int var6 = 0;
-        be var7 = null;
+        PacketBuffer var7 = null;
         var6 = TrackController.field_F ? 1 : 0;
         try {
           this.field_B.e(1);
@@ -202,8 +202,8 @@ final class nd extends td implements m {
             var4 = new ne(gk.field_c, 0, 1);
             this.field_K = new rh[1 + var3_int];
             if (param1 != -58) {
-              var7 = (be) null;
-              nd.a(59, (be) null, -116);
+              var7 = (PacketBuffer) null;
+              nd.a(59, (PacketBuffer) null, -116);
             }
             for (var5 = 0; var3_int > var5; var5++) {
               this.field_K[var5] = new rh(this.field_D[var5], (tg) (this));

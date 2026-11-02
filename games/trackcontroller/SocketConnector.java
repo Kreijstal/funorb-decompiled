@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class hk {
+abstract class SocketConnector {
     int field_c;
     String field_b;
     static qj[] field_a;
@@ -55,7 +55,7 @@ abstract class hk {
         field_a = null;
         if (param0 >= -19) {
           CharSequence var2 = (CharSequence) null;
-          hk.a((CharSequence) null, 33);
+          SocketConnector.a((CharSequence) null, 33);
         }
     }
 

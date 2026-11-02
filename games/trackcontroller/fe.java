@@ -16,7 +16,7 @@ final class fe extends rh {
 
     final static void a(bh param0, int param1) {
         try {
-          qc.field_e.b(param0);
+          ProxySocketConnector.field_e.b(param0);
           if (param1 != 2) {
             kk var3 = (kk) null;
             fe.a(-87, (kk) null);

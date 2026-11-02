@@ -35,7 +35,7 @@ final class ig {
         field_d = param3 - param1;
         ig.c();
         if (field_i.length < field_d) {
-          field_i = new int[bc.a(field_d, -73)];
+          field_i = new int[BufferedSocket.a(field_d, -73)];
         }
         int var4 = param1 * ll.field_d + param0;
         for (var5 = 0; var5 < field_d; var5++) {

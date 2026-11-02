@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fi extends fc {
+final class fi extends IntrusiveNode {
     int field_q;
     static boolean field_o;
     fi field_j;
@@ -53,10 +53,10 @@ final class fi extends fc {
 
     final static aa[] e(int param0) {
         if (param0 == 0) {
-          return new aa[]{hl.field_C, mj.field_e, ia.field_a, cb.field_b, dj.field_b, qe.field_n, sl.field_e, gb.field_n, cb.field_d, gi.field_q, ui.field_m, uj.field_a, kb.field_e, oj.field_a};
+          return new aa[]{hl.field_C, mj.field_e, ia.field_a, MouseInputHandler.field_b, dj.field_b, qe.field_n, sl.field_e, DualLinkNode.field_n, MouseInputHandler.field_d, gi.field_q, ui.field_m, uj.field_a, kb.field_e, oj.field_a};
         }
         fi.d(93);
-        return new aa[]{hl.field_C, mj.field_e, ia.field_a, cb.field_b, dj.field_b, qe.field_n, sl.field_e, gb.field_n, cb.field_d, gi.field_q, ui.field_m, uj.field_a, kb.field_e, oj.field_a};
+        return new aa[]{hl.field_C, mj.field_e, ia.field_a, MouseInputHandler.field_b, dj.field_b, qe.field_n, sl.field_e, DualLinkNode.field_n, MouseInputHandler.field_d, gi.field_q, ui.field_m, uj.field_a, kb.field_e, oj.field_a};
     }
 
     fi(int param0, int param1, int param2, int param3, int param4) {

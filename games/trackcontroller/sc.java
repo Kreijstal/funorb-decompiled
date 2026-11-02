@@ -9,7 +9,7 @@ final class sc extends kd {
     static int field_g;
     static int field_f;
 
-    final static java.awt.Frame a(uf param0, int param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_7_0 = null;
@@ -88,7 +88,7 @@ final class sc extends kd {
         }
     }
 
-    final void a(byte param0, be param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           if (param0 != -6) {
             field_g = 54;

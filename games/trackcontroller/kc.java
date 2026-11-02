@@ -64,13 +64,13 @@ final class kc {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((be) ((Object) var5)).h(16383);
+            var6 = ((PacketBuffer) ((Object) var5)).h(16383);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((be) ((Object) var5)).e((byte) 113);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).e((byte) 113);
             }
             var14 = (th) (fh.field_b.b(2));
             if (var14 == null) {
-              lj.a((byte) 116);
+              GameKeyHandler.a((byte) 116);
               return;
             }
             var14.field_m = var16[0];
@@ -85,17 +85,17 @@ final class kc {
               var11.a(-77);
               return;
             }
-            lj.a((byte) 114);
+            GameKeyHandler.a((byte) 114);
             return;
           }
           if (var2 != 2) {
             hb.a((Throwable) null, 0, "A1: " + jc.b(96));
-            lj.a((byte) 120);
+            GameKeyHandler.a((byte) 120);
             return;
           }
           var15 = (th) (fh.field_b.b(2));
           if (var15 == null) {
-            lj.a((byte) 125);
+            GameKeyHandler.a((byte) 125);
             return;
           }
           var15.field_k = lc.b(false);
@@ -146,7 +146,7 @@ final class kc {
               sj.a(param0, "document.cookie=\"" + var5Lifetime4 + "\"", -24531);
             } catch (Throwable throwable) {
             }
-            rj.a(param0, (byte) -128);
+            SecondaryNodeDeque.a(param0, (byte) -128);
           } catch (RuntimeException runtimeException) {
             throw sl.a((Throwable) ((Object) runtimeException), "kc.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }

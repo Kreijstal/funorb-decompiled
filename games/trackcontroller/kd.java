@@ -15,7 +15,7 @@ abstract class kd {
         }
     }
 
-    abstract void a(byte param0, be param1);
+    abstract void a(byte param0, PacketBuffer param1);
 
     public static void a(byte param0) {
         field_a = null;

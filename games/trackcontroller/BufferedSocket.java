@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class bc implements Runnable {
+final class BufferedSocket implements Runnable {
     static long[] field_a;
     private InputStream field_g;
     private int field_h;
@@ -11,7 +11,7 @@ final class bc implements Runnable {
     static int field_o;
     private java.net.Socket field_k;
     private int field_n;
-    private uf field_m;
+    private PlatformTaskDispatcher field_m;
     private boolean field_j;
     static int[][] field_c;
     private ce field_f;
@@ -52,7 +52,7 @@ final class bc implements Runnable {
           var3 = new byte[var2_int];
           if (param0 != -6) {
             var7 = (CharSequence) null;
-            bc.a((byte) 8, (CharSequence) null);
+            BufferedSocket.a((byte) 8, (CharSequence) null);
           }
           for (var4 = 0; var2_int > var4; var4++) {
             {
@@ -184,7 +184,7 @@ final class bc implements Runnable {
           }
           if (param0 != 12587) {
             var3 = (CharSequence) null;
-            bc.a((byte) -122, (CharSequence) null);
+            BufferedSocket.a((byte) -122, (CharSequence) null);
           }
           var2 = new ck(param1, ka.field_f, vb.field_a, cf.field_p, j.field_f, qe.field_z, qk.field_M);
           ff.b(26);
@@ -211,7 +211,7 @@ final class bc implements Runnable {
     final int b(int param0) throws IOException {
         if (param0 != 0) {
           CharSequence var3 = (CharSequence) null;
-          bc.a((byte) 44, (CharSequence) null);
+          BufferedSocket.a((byte) 44, (CharSequence) null);
           if (this.field_j) {
             return 0;
           }
@@ -273,7 +273,7 @@ final class bc implements Runnable {
           var4 = TrackController.field_F ? 1 : 0;
           if (param0 != 16777215) {
             var5 = (byte[]) null;
-            bc.a(-6, (byte[]) null);
+            BufferedSocket.a(-6, (byte[]) null);
           }
           if (this.field_j) {
             return;
@@ -420,7 +420,7 @@ final class bc implements Runnable {
         }
     }
 
-    bc(java.net.Socket param0, uf param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -582,7 +582,7 @@ final class bc implements Runnable {
         }
         if (!param0) {
           byte[] var3 = (byte[]) null;
-          bc.a(113, (byte[]) null);
+          BufferedSocket.a(113, (byte[]) null);
           return;
         }
     }
@@ -605,7 +605,7 @@ final class bc implements Runnable {
         return this.field_g.read();
     }
 
-    private bc(java.net.Socket param0, uf param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_h = 0;
         this.field_j = false;
         this.field_l = false;

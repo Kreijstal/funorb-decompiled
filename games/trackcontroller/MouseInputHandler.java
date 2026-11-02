@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cb implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static ag[] field_c;
     static String field_e;
     static aa field_b;
@@ -118,7 +118,7 @@ final class cb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         field_b = null;
         if (param0 <= 13) {
           qj[] var2 = (qj[]) null;
-          cb.a(-60, (byte) -87, 63, -125, (qj[]) null, -25);
+          MouseInputHandler.a(-60, (byte) -87, 63, -125, (qj[]) null, -25);
         }
         field_c = null;
     }
@@ -309,7 +309,7 @@ final class cb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (var3 == 0) {
             var9 = (r) (ne.field_b.b(2));
             if (var9 == null) {
-              lj.a((byte) 113);
+              GameKeyHandler.a((byte) 113);
               return;
             }
             var5 = var10.h(16383);
@@ -321,7 +321,7 @@ final class cb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             }
             var10.field_k = var10.field_k + 4;
             if (!var10.b(false)) {
-              lj.a((byte) 118);
+              GameKeyHandler.a((byte) 118);
               return;
             }
             var9.a(-110);
@@ -340,11 +340,11 @@ final class cb implements java.awt.event.MouseListener, java.awt.event.MouseMoti
                 var5_ref_ei.a(-119);
                 return;
               }
-              lj.a((byte) 121);
+              GameKeyHandler.a((byte) 121);
               return;
             }
             hb.a((Throwable) null, 0, "A1: " + jc.b(84));
-            lj.a((byte) 123);
+            GameKeyHandler.a((byte) 123);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

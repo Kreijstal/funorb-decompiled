@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class g extends gb {
+abstract class g extends DualLinkNode {
     int field_t;
     static int[] field_u;
     static int field_p;
@@ -18,8 +18,8 @@ abstract class g extends gb {
         if (param0 != 1) {
           g.f(-106);
         }
-        if (!re.field_k && fe.field_L >= bc.field_o &&
-          !(bc.field_o + cl.field_a <= fe.field_L)) {
+        if (!GameApplet.field_k && fe.field_L >= BufferedSocket.field_o &&
+          !(BufferedSocket.field_o + cl.field_a <= fe.field_L)) {
           return field_y;
         }
         return -1;

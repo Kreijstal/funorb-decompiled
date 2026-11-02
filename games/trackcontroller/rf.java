@@ -13,8 +13,8 @@ final class rf {
         field_d = null;
         field_e = null;
         if (param0 != 0) {
-          uf var2 = (uf) null;
-          rf.a((uf) null, false);
+          PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+          rf.a((PlatformTaskDispatcher) null, false);
         }
     }
 
@@ -63,13 +63,13 @@ final class rf {
         if (!param0) {
           return;
         }
-        nl.field_f = null;
+        ClientException.field_f = null;
         cd.field_j = false;
         aj.field_m = -1;
         vl.field_H = 0;
     }
 
-    final static ji[] a(uf param0, boolean param1) {
+    final static ji[] a(PlatformTaskDispatcher param0, boolean param1) {
         int var5 = 0;
         ji[] stackIn_4_0 = null;
         ji[] stackIn_10_0 = null;
@@ -83,7 +83,7 @@ final class rf {
         ji[] var4 = null;
         ji var6 = null;
         int var7 = 0;
-        uf var8 = null;
+        PlatformTaskDispatcher var8 = null;
         ce var9 = null;
         int[] var10 = null;
         int[] var11 = null;
@@ -106,8 +106,8 @@ final class rf {
           var3 = var10;
           var4 = new ji[var11.length >> 2];
           if (param1) {
-            var8 = (uf) null;
-            rf.a((uf) null, false);
+            var8 = (PlatformTaskDispatcher) null;
+            rf.a((PlatformTaskDispatcher) null, false);
           }
           for (var5 = 0; var4.length > var5; var5++) {
             var6 = new ji();

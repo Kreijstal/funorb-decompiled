@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei extends fc {
+final class ei extends IntrusiveNode {
     static ja field_m;
     int field_n;
     static int field_o;
@@ -76,7 +76,7 @@ final class ei extends fc {
 
     final static String a(byte param0) {
         if (!(gl.field_I >= 2)) {
-          return ee.field_f;
+          return NodeHashTableIterator.field_f;
         }
         if (null != ff.field_b) {
           if (!ff.field_b.c(96)) {
@@ -170,7 +170,7 @@ final class ei extends fc {
         if (param0 != -18601) {
           return;
         }
-        lj.a((byte) 117);
+        GameKeyHandler.a((byte) 117);
     }
 
     private ei() throws Throwable {

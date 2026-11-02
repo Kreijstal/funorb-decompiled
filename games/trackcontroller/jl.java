@@ -41,14 +41,14 @@ final class jl {
         return this.field_c - this.field_h >> 15;
     }
 
-    final void b(be param0) {
+    final void b(PacketBuffer param0) {
         this.field_k = param0.h(16383);
         this.field_a = param0.e((byte) 113);
         this.field_g = param0.e((byte) 113);
         this.a(param0);
     }
 
-    final void a(be param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
         this.field_f = param0.h(16383);
         this.field_i = new int[this.field_f];

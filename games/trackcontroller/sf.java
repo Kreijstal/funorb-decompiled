@@ -215,7 +215,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "error_js5io");
                 if (null != var2) {
-                  qc.field_f = ta.a(32200, var2);
+                  ProxySocketConnector.field_f = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "error_js5connect_full");
                 if (null != var2) {
@@ -263,11 +263,11 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "ticketing_xunread");
                 if (null != var2) {
-                  be.field_l = ta.a(32200, var2);
+                  PacketBuffer.field_l = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "ticketing_gotowebsite");
                 if (null != var2) {
-                  cb.field_e = ta.a(32200, var2);
+                  MouseInputHandler.field_e = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "ticketing_waitingformessages");
                 if (null != var2) {
@@ -1179,7 +1179,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "pleasetryagain");
                 if (var2 != null) {
-                  cb.field_a = ta.a(32200, var2);
+                  MouseInputHandler.field_a = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "pleasereenterpass");
                 if (null != var2) {
@@ -1613,7 +1613,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "create_optin_news");
                 if (var2 != null) {
-                  lj.field_c = ta.a(32200, var2);
+                  GameKeyHandler.field_c = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_agreeterms");
                 if (null != var2) {
@@ -1633,7 +1633,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "login_email");
                 if (null != var2) {
-                  re.field_m = ta.a(32200, var2);
+                  GameApplet.field_m = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "login_username_tooltip");
                 if (null != var2) {
@@ -1733,7 +1733,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "create_username_unavailable");
                 if (null != var2) {
-                  ga.field_f = ta.a(32200, var2);
+                  IterableNodeHashTable.field_f = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_username_available");
                 if (null != var2) {
@@ -1765,7 +1765,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "create_alert_passlength");
                 if (var2 != null) {
-                  nl.field_c = ta.a(32200, var2);
+                  ClientException.field_c = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_alert_passcontainsname");
                 if (var2 != null) {
@@ -1773,7 +1773,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "create_alert_passcontainsemail");
                 if (null != var2) {
-                  h.field_a = ta.a(32200, var2);
+                  MouseWheelInput.field_a = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "create_alert_passcontainsname_partial");
                 if (null != var2) {
@@ -1925,7 +1925,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "waitingfor_soundeffects");
                 if (null != var2) {
-                  fc.field_f = ta.a(32200, var2);
+                  IntrusiveNode.field_f = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "waitingfor_music");
                 if (var2 != null) {
@@ -2017,7 +2017,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "unpacking_levels");
                 if (null != var2) {
-                  rj.field_f = ta.a(32200, var2);
+                  SecondaryNodeDeque.field_f = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "unpacking_languages");
                 if (null != var2) {
@@ -2651,27 +2651,27 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "quickchat_shortcut_keys,0");
                 if (var2 != null) {
-                  h.field_b[0] = ta.a(32200, var2);
+                  MouseWheelInput.field_b[0] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "quickchat_shortcut_keys,1");
                 if (null != var2) {
-                  h.field_b[1] = ta.a(32200, var2);
+                  MouseWheelInput.field_b[1] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "quickchat_shortcut_keys,2");
                 if (var2 != null) {
-                  h.field_b[2] = ta.a(32200, var2);
+                  MouseWheelInput.field_b[2] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "quickchat_shortcut_keys,3");
                 if (null != var2) {
-                  h.field_b[3] = ta.a(32200, var2);
+                  MouseWheelInput.field_b[3] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "quickchat_shortcut_keys,4");
                 if (null != var2) {
-                  h.field_b[4] = ta.a(32200, var2);
+                  MouseWheelInput.field_b[4] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "quickchat_shortcut_keys,5");
                 if (var2 != null) {
-                  h.field_b[5] = ta.a(32200, var2);
+                  MouseWheelInput.field_b[5] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "keychar_the_character_under_questionmark");
                 if (null != var2) {
@@ -2840,7 +2840,7 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "fs_unavailable");
                 if (null != var2) {
-                  lj.field_b = ta.a(32200, var2);
+                  GameKeyHandler.field_b = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
@@ -3028,31 +3028,31 @@ final class sf extends td implements m {
                 }
                 var2 = va.a(0, "mustlogin3,1");
                 if (var2 != null) {
-                  fc.field_c[1] = ta.a(32200, var2);
+                  IntrusiveNode.field_c[1] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin3,2");
                 if (null != var2) {
-                  fc.field_c[2] = ta.a(32200, var2);
+                  IntrusiveNode.field_c[2] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin3,3");
                 if (var2 != null) {
-                  fc.field_c[3] = ta.a(32200, var2);
+                  IntrusiveNode.field_c[3] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin3,4");
                 if (null != var2) {
-                  fc.field_c[4] = ta.a(32200, var2);
+                  IntrusiveNode.field_c[4] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin3,5");
                 if (var2 != null) {
-                  fc.field_c[5] = ta.a(32200, var2);
+                  IntrusiveNode.field_c[5] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin3,6");
                 if (null != var2) {
-                  fc.field_c[6] = ta.a(32200, var2);
+                  IntrusiveNode.field_c[6] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "mustlogin3,7");
                 if (null != var2) {
-                  fc.field_c[7] = ta.a(32200, var2);
+                  IntrusiveNode.field_c[7] = ta.a(32200, var2);
                 }
                 var2 = va.a(0, "discard");
                 if (null != var2) {
@@ -3198,9 +3198,9 @@ final class sf extends td implements m {
                   throw sl.a((Throwable) ((Object) stackIn_2635_0), ((StringBuilder) (Object) stackIn_2635_1).append(stackIn_2636_2).append(')').toString());
                 }
                 if (var4 != 0) {
-                  var5 = re.field_j;
+                  var5 = GameApplet.field_j;
                   var5++;
-                  re.field_j = var5;
+                  GameApplet.field_j = var5;
                 }
             }
         }

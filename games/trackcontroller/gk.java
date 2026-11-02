@@ -105,7 +105,7 @@ final class gk {
             field_c = (oh) null;
           }
           if (var3 == null) {
-            lj.a((byte) 116);
+            GameKeyHandler.a((byte) 116);
             return;
           }
           var4 = var15.h(16383);

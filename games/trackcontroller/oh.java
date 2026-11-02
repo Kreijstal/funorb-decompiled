@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class oh extends gb {
+abstract class oh extends DualLinkNode {
     int field_H;
     private static StringBuilder field_C;
     private int[] field_v;

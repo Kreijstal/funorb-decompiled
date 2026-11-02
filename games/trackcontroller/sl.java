@@ -175,7 +175,7 @@ abstract class sl {
     final void a(int param0, int param1, int param2, int param3) {
         int var5;
         int var6;
-        L0: {
+        regionExit1: {
           var6 = TrackController.field_F ? 1 : 0;
           var5 = param3;
           if (var5 != 0) {
@@ -184,18 +184,18 @@ abstract class sl {
               switch (var5) {
                 case 4:
                   ii.field_r[ri.field_H[this.field_m]].g(param0, param1);
-                  break L0;
+                  break regionExit1;
                 case 3:
                   ii.field_r[ri.field_H[this.field_m]].e(param0, param1);
-                  break L0;
+                  break regionExit1;
                 case 6:
                   ii.field_r[ki.field_c[this.field_m]].f(param0, param1);
-                  break L0;
+                  break regionExit1;
                 default:
-                  break L0;
+                  break regionExit1;
                 case 5:
                   ii.field_r[ki.field_c[this.field_m]].e(param0, param1);
-                  break L0;
+                  break regionExit1;
               }
             }
             ii.field_r[param3].e(param0, param1);
@@ -229,12 +229,12 @@ abstract class sl {
         }
     }
 
-    final static nl a(Throwable param0, String param1) {
-        nl var2 = null;
-        if (!(param0 instanceof nl)) {
-          var2 = new nl(param0, param1);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
         } else {
-          var2 = (nl) ((Object) param0);
+          var2 = (ClientException) ((Object) param0);
           var2.field_a = var2.field_a + ' ' + param1;
         }
         return var2;

@@ -24,7 +24,7 @@ final class pj extends db {
         var3 = var8.h(16383);
         fd.field_e = 127 & var3;
         stackIn_5_0 = (0 != (128 & var3));
-        nl.field_b = stackIn_5_0;
+        ClientException.field_b = stackIn_5_0;
         id.field_h = var8.h(16383);
         lg.field_a = var8.f((byte) 84);
         if (fd.field_e == 2) {

@@ -36,7 +36,7 @@ final class wf {
           bf.field_f = param2;
           fi.field_l = param3;
           th.field_n = param1;
-          h.field_c = null;
+          MouseWheelInput.field_c = null;
           v.field_e = param5;
           fd.field_h = oe.field_b;
           da.field_o = param6;

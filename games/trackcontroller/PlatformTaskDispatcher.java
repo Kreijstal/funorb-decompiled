@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class uf implements Runnable {
+final class PlatformTaskDispatcher implements Runnable {
     private tb field_w;
     tc field_p;
     private Thread field_u;
@@ -322,7 +322,7 @@ final class uf implements Runnable {
                   case 16:
                   default:
                     if (!this.field_l) {
-                      throw uf.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                     }
                     switch (var2_int) {
                       case 3:
@@ -349,11 +349,11 @@ final class uf implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref = uf.a((String) (var8.field_c), field_s, 40, field_a);
+                        var3_ref = PlatformTaskDispatcher.a((String) (var8.field_c), field_s, 40, field_a);
                         var8.field_e = var3_ref;
                         break;
                       case 13:
-                        var3_ref = uf.a((String) (var8.field_c), field_s, 124, "");
+                        var3_ref = PlatformTaskDispatcher.a((String) (var8.field_c), field_s, 124, "");
                         var8.field_e = var3_ref;
                         break;
                       case 16:
@@ -387,21 +387,21 @@ final class uf implements Runnable {
                           Class.forName("wc").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_f, new Object[]{var11[0], var11[1], new Integer(var8.field_b), new Integer(var8.field_d), var11[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw uf.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                           }
                           try {
                             if (!field_b.startsWith("win")) {
-                              throw uf.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var12 = (String) (var8.field_c);
                             if (!var12.startsWith("http://") &&
                               !var12.startsWith("https://")) {
-                              throw uf.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var4 = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var5 < var12.length(); var5++) {
                               if (var4.indexOf((int) var12.charAt(var5)) == -1) {
-                                throw uf.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var12 + "\"");
@@ -410,7 +410,7 @@ final class uf implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref2 = (Exception) (Object) decompiledCaughtException;
                             var8.field_e = var3_ref2;
-                            throw uf.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
                           }
                         }
                         break;
@@ -494,7 +494,7 @@ final class uf implements Runnable {
         return this.a(0, 1484280784, (Object) null, 0, 5);
     }
 
-    uf(int param0, String param1, int param2, boolean param3) throws Exception {
+    PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
         int var5_int = 0;
         Exception exception = null;
         Throwable throwable = null;

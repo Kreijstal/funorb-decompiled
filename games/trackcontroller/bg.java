@@ -11,7 +11,7 @@ final class bg {
         field_a = null;
     }
 
-    final static boolean a(be param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -66,7 +66,7 @@ final class bg {
               var9 = param0.getParameter("cookieprefix");
               var3 = var9 + "settings";
               var4 = (String) (sj.a((byte) -77, "getcookies", param0));
-              var5 = te.a(var4, ';', (byte) -64);
+              var5 = DelegatingCanvas.a(var4, ';', (byte) -64);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (0 <= var7 &&

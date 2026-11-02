@@ -27,7 +27,7 @@ final class vi {
         field_a = null;
     }
 
-    final void a(byte param0, byte[] param1, be param2) {
+    final void a(byte param0, byte[] param1, PacketBuffer param2) {
         try {
           if (param2.field_j[param2.field_k] != 31 ||
             param2.field_j[param2.field_k + 1] != -117) {

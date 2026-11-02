@@ -6,7 +6,7 @@ final class hd extends di {
     private boolean field_n;
     static String field_r;
     static volatile boolean field_q;
-    static cb field_p;
+    static MouseInputHandler field_p;
     private ni field_t;
     static int field_s;
     private String field_u;
@@ -146,6 +146,6 @@ final class hd extends di {
         field_q = false;
         field_r = "Sound: ";
         field_m = "Continue";
-        field_p = new cb();
+        field_p = new MouseInputHandler();
     }
 }

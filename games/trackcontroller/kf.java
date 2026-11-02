@@ -112,7 +112,7 @@ final class kf {
 
     final static void a(int param0) {
         r.f(-635);
-        qc.b(param0, (byte) -42);
+        ProxySocketConnector.b(param0, (byte) -42);
     }
 
     final static void a(boolean param0) {

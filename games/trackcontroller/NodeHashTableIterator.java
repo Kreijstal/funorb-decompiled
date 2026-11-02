@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class ee implements Iterator {
+final class NodeHashTableIterator implements Iterator {
     static int field_c;
-    private ga field_a;
+    private IterableNodeHashTable field_a;
     static String field_f;
     private int field_b;
-    private fc field_d;
-    private fc field_g;
+    private IntrusiveNode field_d;
+    private IntrusiveNode field_g;
     static int field_e;
 
     public final boolean hasNext() {
@@ -43,7 +43,7 @@ final class ee implements Iterator {
         this.field_d = null;
     }
 
-    final static void a(java.math.BigInteger param0, be param1, java.math.BigInteger param2, int param3, be param4) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, java.math.BigInteger param2, int param3, PacketBuffer param4) {
         try {
           ha.a(param2, param0, param4.field_k, param4.field_j, param3, (byte) 77, param1);
         } catch (RuntimeException runtimeException) {
@@ -61,8 +61,8 @@ final class ee implements Iterator {
     public final Object next() {
         int fieldTemp$0 = 0;
         int var2;
-        fc var3;
-        fc var4;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
         var2 = TrackController.field_F ? 1 : 0;
         if (this.field_g != this.field_a.field_c[-1 + this.field_b]) {
           var4 = this.field_g;
@@ -96,7 +96,7 @@ final class ee implements Iterator {
         return var3;
     }
 
-    ee(ga param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_d = null;
         try {
           this.field_a = param0;
@@ -111,8 +111,8 @@ final class ee implements Iterator {
           field_f = null;
           return;
         }
-        be var2 = (be) null;
-        ee.a((java.math.BigInteger) null, (be) null, (java.math.BigInteger) null, -9, (be) null);
+        PacketBuffer var2 = (PacketBuffer) null;
+        NodeHashTableIterator.a((java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null, -9, (PacketBuffer) null);
         field_f = null;
     }
 

@@ -7,7 +7,7 @@ final class ui extends di {
     static aa field_m;
     static int[] field_r;
     private lb field_o;
-    static be field_p;
+    static PacketBuffer field_p;
 
     final ud a(int param0, String param1) {
         String var3 = null;
@@ -249,7 +249,7 @@ final class ui extends di {
           }
           var5 = var4;
           if (ac.a(var5, -23797)) {
-            stackIn_8_0 = nl.field_c;
+            stackIn_8_0 = ClientException.field_c;
             return stackIn_8_0;
           }
           if (sd.a(var5, (byte) 115)) {
@@ -261,14 +261,14 @@ final class ui extends di {
             return stackIn_14_0;
           }
           if (this.b(param0, 35)) {
-            stackIn_17_0 = h.field_a;
+            stackIn_17_0 = MouseWheelInput.field_a;
             return stackIn_17_0;
           }
           if (var6.length() <= 0) {
             stackIn_31_0 = pf.field_N;
             return stackIn_31_0;
           }
-          if (cb.a(var6, var5, (byte) -11)) {
+          if (MouseInputHandler.a(var6, var5, (byte) -11)) {
             stackIn_21_0 = qd.field_c;
             return stackIn_21_0;
           }
@@ -277,7 +277,7 @@ final class ui extends di {
             return stackIn_25_0;
           }
           if (!ui.a(var5, var6, (byte) 103)) {
-            return nl.field_c;
+            return ClientException.field_c;
           }
           stackIn_29_0 = qd.field_c;
           return stackIn_29_0;
@@ -319,6 +319,6 @@ final class ui extends di {
         field_n = "Congratulations! You've completed the full game!";
         field_m = new aa(12, 0, 1, 0);
         field_r = new int[8192];
-        field_p = new be(256);
+        field_p = new PacketBuffer(256);
     }
 }

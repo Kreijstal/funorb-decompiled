@@ -4,9 +4,9 @@
 final class bj {
     private long field_e;
     static String field_c;
-    private gb[] field_d;
+    private DualLinkNode[] field_d;
     private int field_a;
-    private gb field_b;
+    private DualLinkNode field_b;
 
     final static long b(int param0) {
         if (param0 != -21676) {
@@ -45,13 +45,13 @@ final class bj {
         }
     }
 
-    final gb a(int param0) {
-        gb var3 = null;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var3 = null;
         int var4 = TrackController.field_F ? 1 : 0;
         if (null == this.field_b) {
           return null;
         }
-        gb var2 = this.field_d[(int)(this.field_e & (long)(param0 + this.field_a))];
+        DualLinkNode var2 = this.field_d[(int)(this.field_e & (long)(param0 + this.field_a))];
         while (this.field_b != var2) {
           if (this.field_b.field_m == this.field_e) {
             var3 = this.field_b;
@@ -64,8 +64,8 @@ final class bj {
         return null;
     }
 
-    final void a(gb param0, long param1, int param2) {
-        gb var5 = null;
+    final void a(DualLinkNode param0, long param1, int param2) {
+        DualLinkNode var5 = null;
         try {
           if (null != param0.field_j) {
             param0.e(0);
@@ -82,11 +82,11 @@ final class bj {
         }
     }
 
-    final gb a(int param0, long param1) {
-        gb var5 = null;
+    final DualLinkNode a(int param0, long param1) {
+        DualLinkNode var5 = null;
         int var6 = TrackController.field_F ? 1 : 0;
         this.field_e = param1;
-        gb var4 = this.field_d[(int)(param1 & (long)(param0 + this.field_a))];
+        DualLinkNode var4 = this.field_d[(int)(param1 & (long)(param0 + this.field_a))];
         this.field_b = var4.field_k;
         while (this.field_b != var4) {
           if (param1 == this.field_b.field_m) {
@@ -102,12 +102,12 @@ final class bj {
 
     bj(int param0) {
         int var2 = 0;
-        gb dupTemp$0 = null;
-        gb var3 = null;
-        this.field_d = new gb[param0];
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
+        this.field_d = new DualLinkNode[param0];
         this.field_a = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new gb();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_d[var2] = dupTemp$0;
           var3.field_j = var3;

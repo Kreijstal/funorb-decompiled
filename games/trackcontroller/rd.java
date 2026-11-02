@@ -11,7 +11,7 @@ final class rd {
     t field_e;
     private int field_n;
     int field_q;
-    static h field_l;
+    static MouseWheelInput field_l;
     int field_p;
     t field_g;
     static bl field_o;
@@ -156,7 +156,7 @@ final class rd {
         }
         vk var1 = (vk) (ea.field_t.b(2));
         if (var1 == null) {
-          lj.a((byte) 114);
+          GameKeyHandler.a((byte) 114);
           return;
         }
         la var2 = ne.field_a;
@@ -274,7 +274,7 @@ final class rd {
           ll.f(var7, var8, var5_int + 6, 6 + var6, this.field_n);
           ll.c(var7 + 1, 1 + var8, var5_int + 4, var6 + 4, this.field_t);
           if (param0) {
-            field_l = (h) null;
+            field_l = (MouseWheelInput) null;
           }
           this.field_c.c(param3, var7 + 3, 3 + var8 + this.field_c.field_H, this.field_n, -1);
           return;
@@ -349,8 +349,8 @@ final class rd {
           var6.field_f = 0;
           var7 = new gi(var4, true);
           var7.field_f = 0;
-          var7.a(-75, re.a((byte) 125, 8947848));
-          var7.a((byte) 118, 1).a(124, re.a((byte) 121, 11184810)).a(2236962, false);
+          var7.a(-75, GameApplet.a((byte) 125, 8947848));
+          var7.a((byte) 118, 1).a(124, GameApplet.a((byte) 121, 11184810)).a(2236962, false);
           this.field_j = (t) ((Object) new ij(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new gh(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new jd(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);

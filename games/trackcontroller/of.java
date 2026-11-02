@@ -61,7 +61,7 @@ final class of extends ec {
         Object var1 = null;
         var1 = hd.field_p;
         synchronized (var1) {
-          rj.field_a = db.field_bb;
+          SecondaryNodeDeque.field_a = db.field_bb;
           pa.field_a = pa.field_a + 1;
           if (param0 != 66) {
             var3 = (java.net.URL) null;
@@ -92,9 +92,9 @@ final class of extends ec {
     final nh a(boolean param0) {
         if (param0) {
           of.c((byte) 60);
-          return be.field_m;
+          return PacketBuffer.field_m;
         }
-        return be.field_m;
+        return PacketBuffer.field_m;
     }
 
     final static void a(int param0, java.applet.Applet param1) {

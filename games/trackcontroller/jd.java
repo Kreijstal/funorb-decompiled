@@ -104,7 +104,7 @@ final class jd implements t {
             stackIn_8_0 = bl.field_c;
             return stackIn_8_0;
           }
-          var3 = te.a(param0, '.', (byte) -67);
+          var3 = DelegatingCanvas.a(param0, '.', (byte) -67);
           if (2 > var3.length) {
             stackIn_12_0 = oc.field_j;
             return stackIn_12_0;

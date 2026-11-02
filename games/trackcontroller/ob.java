@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends gb {
+final class ob extends DualLinkNode {
     static String field_v;
     static String field_o;
-    static bc field_u;
+    static BufferedSocket field_u;
     int[] field_r;
     static char[] field_q;
     private int[][] field_t;
@@ -13,7 +13,7 @@ final class ob extends gb {
     static String field_x;
     private int[] field_p;
 
-    private final void a(be param0, int param1, boolean param2) {
+    private final void a(PacketBuffer param0, int param1, boolean param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -29,7 +29,7 @@ final class ob extends gb {
         var9 = TrackController.field_F ? 1 : 0;
         try {
           if (param1 == 1) {
-            this.field_s = te.a(param0.g(0), '<', (byte) -94);
+            this.field_s = DelegatingCanvas.a(param0.g(0), '<', (byte) -94);
           } else {
             if (2 == param1) {
               var4_int = param0.h(16383);
@@ -129,7 +129,7 @@ final class ob extends gb {
         return var2.toString();
     }
 
-    final void a(boolean param0, be param1) {
+    final void a(boolean param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -184,7 +184,7 @@ final class ob extends gb {
         int var2 = 0;
         int var3 = TrackController.field_F ? 1 : 0;
         if (param0 != 32768) {
-          field_u = (bc) null;
+          field_u = (BufferedSocket) null;
         }
         if (null != this.field_r) {
           for (var2 = 0; var2 < this.field_r.length; var2++) {
@@ -280,7 +280,7 @@ final class ob extends gb {
           var1 = cj.field_o;
           synchronized (var1) {
             mb.field_f = mb.field_f + 1;
-            lj.field_d = fc.field_d;
+            GameKeyHandler.field_d = IntrusiveNode.field_d;
             if (mg.field_f < 0) {
               for (var2 = 0; var2 < 112; var2++) {
                 ni.field_m[var2] = false;
@@ -297,7 +297,7 @@ final class ob extends gb {
                 ni.field_m[var2] = true;
               }
             }
-            fc.field_d = ri.field_V;
+            IntrusiveNode.field_d = ri.field_V;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

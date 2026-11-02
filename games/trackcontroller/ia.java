@@ -38,7 +38,7 @@ final class ia {
           }
           if (ra.field_v != -1) {
             var1_int = ra.field_v;
-            qc.b(-1, (byte) -42);
+            ProxySocketConnector.b(-1, (byte) -42);
             stackIn_9_0 = var1_int;
             return stackIn_9_0;
           }

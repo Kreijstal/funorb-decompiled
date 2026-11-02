@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class r extends fc {
+final class r extends IntrusiveNode {
     static oh field_k;
-    static bc field_i;
+    static BufferedSocket field_i;
     static int field_j;
 
     public static void d(int param0) {
@@ -124,7 +124,7 @@ final class r extends fc {
           j.a((java.awt.Component) ((Object) param1), 103);
           fb.a(param0 + 32539, (java.awt.Component) ((Object) param1));
           if (param0 != -32652) {
-            field_i = (bc) null;
+            field_i = (BufferedSocket) null;
           }
           if (null != rd.field_l) {
             rd.field_l.a((java.awt.Component) ((Object) param1), 23817);

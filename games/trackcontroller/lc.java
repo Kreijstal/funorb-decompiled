@@ -56,7 +56,7 @@ final class lc extends td implements m {
             }
             var7 = this.field_C[var6_int];
             if (-1 != var7) {
-              qc.b(this.field_C[var6_int], (byte) -42);
+              ProxySocketConnector.b(this.field_C[var6_int], (byte) -42);
             } else {
               this.field_D.t(20252);
             }

@@ -6,7 +6,7 @@ final class dg extends al {
     private qj field_G;
     private int field_F;
     private int field_K;
-    static be field_H;
+    static PacketBuffer field_H;
     private qj field_R;
     private int field_P;
     boolean field_C;

@@ -63,7 +63,7 @@ final class ne implements t {
             } else {
               var10 = var10 + (param1.field_u - var8);
             }
-            bc.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
+            BufferedSocket.a(var8, -28846, 4 + var7, 2 + var10, var9 - 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

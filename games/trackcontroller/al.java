@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-class al extends fc {
+class al extends IntrusiveNode {
     String field_n;
     tg field_l;
     int field_A;
     int field_u;
     String field_s;
     boolean field_q;
-    static be field_w;
+    static PacketBuffer field_w;
     int field_m;
     t field_y;
     int field_p;
@@ -31,7 +31,7 @@ class al extends fc {
         byte[] var5_ref_byte__ = null;
         int var5 = 0;
         byte[] var6 = null;
-        be var9 = null;
+        PacketBuffer var9 = null;
         byte[] stackIn_7_0 = null;
         byte[] stackIn_10_0 = null;
         byte[] stackIn_24_0 = null;
@@ -41,7 +41,7 @@ class al extends fc {
         Throwable decompiledCaughtException = null;
         Object var7 = null;
         try {
-          var9 = new be(param1);
+          var9 = new PacketBuffer(param1);
           var3 = var9.h(16383);
           var4 = var9.e((byte) 113);
           if (0 <= var4 && (he.field_b == 0 ||
@@ -140,9 +140,9 @@ class al extends fc {
           this.field_n = (String) null;
         }
         if (param1) {
-          if (ee.field_c != 0 &&
+          if (NodeHashTableIterator.field_c != 0 &&
             var5 != 0) {
-            this.a(kf.field_b, param3, ee.field_c, param0, fg.field_a, this, (byte) 127);
+            this.a(kf.field_b, param3, NodeHashTableIterator.field_c, param0, fg.field_a, this, (byte) 127);
           }
           if (uk.field_a != 0) {
             if (!this.a(this, wg.field_e, db.field_X, uk.field_a, 0, param0, param3)) {
@@ -153,7 +153,7 @@ class al extends fc {
               param1 = false;
             }
           }
-          if (0 == rj.field_a &&
+          if (0 == SecondaryNodeDeque.field_a &&
             sc.field_h != 0) {
             this.a(this, false, fg.field_a, param3, kf.field_b, param0);
             var6 = rf.field_e;
@@ -170,7 +170,7 @@ class al extends fc {
             this.f(-24174);
           }
         }
-        sc.field_h = rj.field_a;
+        sc.field_h = SecondaryNodeDeque.field_a;
         aj.a((byte) -127, this.e(0));
         return param1;
     }

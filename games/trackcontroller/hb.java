@@ -9,14 +9,14 @@ final class hb {
     static int field_f;
     private int field_g;
     private int field_b;
-    private ga field_e;
-    private rj field_h;
+    private IterableNodeHashTable field_e;
+    private SecondaryNodeDeque field_h;
     static String field_c;
     static String field_d;
 
     final static void a(Throwable param0, int param1, String param2) {
         try {
-          uf stackIn_14_0;
+          PlatformTaskDispatcher stackIn_14_0;
           boolean stackIn_14_1;
           java.net.URL stackIn_14_2;
           java.net.URL stackIn_14_3;
@@ -47,7 +47,7 @@ final class hb {
               }
               var3 = var3 + param2;
             }
-            re.a((byte) 53, var3);
+            GameApplet.a((byte) 53, var3);
             var7 = bb.a(var3, (byte) -82, "%3a", ":");
             var8 = bb.a(var7, (byte) -82, "%40", "@");
             var9 = bb.a(var8, (byte) -82, "%26", "&");
@@ -58,12 +58,12 @@ final class hb {
             if (null == qf.field_b) {
               return;
             }
-            stackIn_14_0 = re.field_f;
+            stackIn_14_0 = GameApplet.field_f;
             stackIn_14_1 = false;
             stackIn_14_2 = null;
             stackIn_14_3 = null;
             stackIn_14_4 = qf.field_b.getCodeBase();
-            stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(lj.field_a).append("&u=");
+            stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(GameKeyHandler.field_a).append("&u=");
             if (null != ac.field_b) {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
@@ -73,7 +73,7 @@ final class hb {
               stackIn_15_3 = null;
               stackIn_15_6 = "" + fi.field_p;
             }
-            var4 = ((uf) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(uf.field_e).append("&v2=").append(uf.field_g).append("&e=").append(var10).toString()));
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a(stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_e).append("&v2=").append(PlatformTaskDispatcher.field_g).append("&e=").append(var10).toString()));
             while (0 == var4.field_f) {
               wl.a(1L, false);
             }
@@ -127,7 +127,7 @@ final class hb {
               param1.d(0, 12);
               var4[var5] = var6;
             } else {
-              var6_int = param1.d(0, be.d((byte) -98, -1 + var5));
+              var6_int = param1.d(0, PacketBuffer.d((byte) -98, -1 + var5));
               var4[var5] = var4[var6_int];
             }
           }

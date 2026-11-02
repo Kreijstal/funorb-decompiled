@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ml extends fc {
+final class ml extends IntrusiveNode {
     private static float[] field_p;
     private byte[] field_F;
     private int field_G;
@@ -622,7 +622,7 @@ final class ml extends fc {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        be var2 = new be(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_E = var2.e((byte) 113);
         this.field_B = var2.e((byte) 113);
         this.field_O = var2.e((byte) 113);

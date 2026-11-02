@@ -8,7 +8,7 @@ class dd extends ic {
     public final void a(int param0, al param1, int param2, boolean param3, int param4) {
         try {
           if (param3) {
-            fc.a(param1.field_x, param2 + param1.field_m, param1.field_u, (byte) -22, param1.field_p + param4);
+            IntrusiveNode.a(param1.field_x, param2 + param1.field_m, param1.field_u, (byte) -22, param1.field_p + param4);
           }
           super.a(param0, param1, param2, param3, param4);
         } catch (RuntimeException runtimeException) {
@@ -37,7 +37,7 @@ class dd extends ic {
         }
         if (fd.field_h == cj.field_e) {
           fd.field_h = hf.field_f;
-          return h.field_c;
+          return MouseWheelInput.field_c;
         }
         return null;
     }

@@ -175,7 +175,7 @@ final class ma implements t {
         try {
           var6_int = param1.field_p + param4;
           var7 = param1.field_m + param2;
-          fc.a(param1.field_x, var7, param1.field_u, (byte) -77, var6_int);
+          IntrusiveNode.a(param1.field_x, var7, param1.field_u, (byte) -77, var6_int);
           if (param0 != -24969) {
             return;
           }
@@ -185,7 +185,7 @@ final class ma implements t {
             var8.a((param1.field_x - var8.field_s >> 1) + (1 + var6_int), var7 + 1 + (param1.field_u - var8.field_v >> 1), 256);
           }
           if (param1.h(-111)) {
-            bc.a(param1.field_u - 4, -28846, param1.field_x - 4, var7 + 2, var6_int + 2);
+            BufferedSocket.a(param1.field_u - 4, -28846, param1.field_x - 4, var7 + 2, var6_int + 2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

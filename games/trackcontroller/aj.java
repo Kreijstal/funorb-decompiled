@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aj extends fc {
+final class aj extends IntrusiveNode {
     int field_q;
     int field_n;
     int field_i;
@@ -94,9 +94,9 @@ final class aj extends fc {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null) {
-            decompiledFrameRemainder0 = !(param1.equals(nl.field_f));
+            decompiledFrameRemainder0 = !(param1.equals(ClientException.field_f));
           } else {
-            decompiledFrameRemainder0 = (nl.field_f == null);
+            decompiledFrameRemainder0 = (ClientException.field_f == null);
           }
           if (decompiledFrameRemainder0) {
             if (!cd.field_j) {
@@ -132,7 +132,7 @@ final class aj extends fc {
             }
             r.field_j = j.field_c;
           }
-          nl.field_f = param1;
+          ClientException.field_f = param1;
           if (!cd.field_j &&
             ib.field_d > vl.field_H &&
             mg.field_a) {

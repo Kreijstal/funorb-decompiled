@@ -244,7 +244,7 @@ final class ve extends ug {
         StringBuilder stackIn_102_1 = null;
         String stackIn_103_2 = null;
         RuntimeException decompiledCaughtException = null;
-        be var2 = null;
+        PacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         int var4 = 0;
@@ -270,14 +270,14 @@ final class ve extends ug {
         int var12Lifetime3;
         var15 = TrackController.field_F ? 1 : 0;
         try {
-          var2 = new be(param1);
+          var2 = new PacketBuffer(param1);
           var2.field_k = -2 + param1.length;
           gi.field_o = var2.d((byte) -46);
           fk.field_d = new byte[gi.field_o][];
           ka.field_f = new int[gi.field_o];
           j.field_f = new int[gi.field_o];
           cf.field_p = new int[gi.field_o];
-          ga.field_b = new boolean[gi.field_o];
+          IterableNodeHashTable.field_b = new boolean[gi.field_o];
           qk.field_M = new byte[gi.field_o][];
           vb.field_a = new int[gi.field_o];
           var2.field_k = -(gi.field_o * 8) + (param1.length - 7);
@@ -342,7 +342,7 @@ final class ve extends ug {
           }
           var2.field_k = 0;
           var4 = 0;
-          L17: while (true) {
+          scanLoop1: while (true) {
             stackIn_47_0 = var4;
             if (stackIn_47_0 < gi.field_o) {
               var5 = cf.field_p[var4];
@@ -429,9 +429,9 @@ final class ve extends ug {
                     }
                   }
                 }
-                ga.field_b[var4] = var10 != 0;
+                IterableNodeHashTable.field_b[var4] = var10 != 0;
                 var4++;
-                continue L17;
+                continue scanLoop1;
               }
             }
             break;

@@ -10,8 +10,8 @@ abstract class hl extends td {
 
     boolean k(int param0) {
         if (param0 != 0) {
-          be var3 = (be) null;
-          hl.a(47, (be) null, -39, 90, -67);
+          PacketBuffer var3 = (PacketBuffer) null;
+          hl.a(47, (PacketBuffer) null, -39, 90, -67);
           this.field_G = this.n(127);
           if (0 != this.field_G) {
             return false;
@@ -31,7 +31,7 @@ abstract class hl extends td {
         return false;
     }
 
-    final static void a(int param0, be param1, int param2, int param3, int param4) {
+    final static void a(int param0, PacketBuffer param1, int param2, int param3, int param4) {
         try {
           param1.a(12, (byte) -69);
           param1.b(param2, (byte) -123);
@@ -45,11 +45,11 @@ abstract class hl extends td {
 
     final static void m(int param0) {
         if (param0 == -1217366687) {
-          re.field_g.b(new sf(), param0 ^ 1217366722);
+          GameApplet.field_g.b(new sf(), param0 ^ 1217366722);
           return;
         }
         hl.l(-40);
-        re.field_g.b(new sf(), param0 ^ 1217366722);
+        GameApplet.field_g.b(new sf(), param0 ^ 1217366722);
     }
 
     private final int n(int param0) {

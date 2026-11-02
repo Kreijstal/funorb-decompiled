@@ -106,7 +106,7 @@ abstract class wd extends hl {
         if (param0 != 11782) {
           field_O = (String[]) null;
         }
-        return qc.field_e;
+        return ProxySocketConnector.field_e;
     }
 
     public static void p(int param0) {

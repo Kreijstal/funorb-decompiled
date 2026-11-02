@@ -82,7 +82,7 @@ final class uj {
         field_b = null;
     }
 
-    final static void a(String param0, long param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8, uf param9, boolean param10, int param11, int param12, boolean param13) {
+    final static void a(String param0, long param1, int param2, int param3, int param4, int param5, int param6, int param7, boolean param8, PlatformTaskDispatcher param9, boolean param10, int param11, int param12, boolean param13) {
         try {
           RuntimeException stackIn_13_0 = null;
           StringBuilder stackIn_13_1 = null;

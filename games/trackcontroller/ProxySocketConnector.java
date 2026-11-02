@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class qc extends hk {
+final class ProxySocketConnector extends SocketConnector {
     private java.net.ProxySelector field_g;
     static k field_e;
     static String field_f;
@@ -13,7 +13,7 @@ final class qc extends hk {
         field_f = null;
         field_e = null;
         if (!param0) {
-          qc.a(true);
+          ProxySocketConnector.a(true);
         }
     }
 
@@ -120,9 +120,9 @@ final class qc extends hk {
         var3 = TrackController.field_F ? 1 : 0;
         fe.field_L = fe.field_L + 1;
         if (param0 != g.field_y) {
-          if (!re.field_k) {
-            if (fe.field_L >= bc.field_o) {
-              stackIn_9_0 = (fe.field_L < cl.field_a + bc.field_o) ? 1 : 0;
+          if (!GameApplet.field_k) {
+            if (fe.field_L >= BufferedSocket.field_o) {
+              stackIn_9_0 = (fe.field_L < cl.field_a + BufferedSocket.field_o) ? 1 : 0;
             } else {
               stackIn_9_0 = 0;
             }
@@ -131,14 +131,14 @@ final class qc extends hk {
           }
           var2 = stackIn_9_0;
           if (param0 != -1) {
-            if (!re.field_k) {
+            if (!GameApplet.field_k) {
               if (var2 != 0) {
-                fe.field_L = bc.field_o;
+                fe.field_L = BufferedSocket.field_o;
               } else {
                 fe.field_L = 0;
               }
             } else {
-              fe.field_L = bc.field_o;
+              fe.field_L = BufferedSocket.field_o;
             }
           } else {
             fe.field_L = 0;
@@ -147,31 +147,31 @@ final class qc extends hk {
           kj.field_o = fg.field_a;
           if (param0 == -1) {
             if (var2 != 0) {
-              re.field_k = true;
+              GameApplet.field_k = true;
             }
           } else {
-            re.field_k = false;
+            GameApplet.field_k = false;
           }
         }
         if (param1 != 20) {
           return;
         }
         g.field_y = param0;
-        if (!re.field_k &&
-          fe.field_L < bc.field_o &&
+        if (!GameApplet.field_k &&
+          fe.field_L < BufferedSocket.field_o &&
           mg.field_a) {
           fe.field_L = 0;
           kj.field_o = fg.field_a;
           ha.field_z = kf.field_b;
         }
-        if (re.field_k &&
+        if (GameApplet.field_k &&
           rk.field_Y == fe.field_L) {
           fe.field_L = 0;
-          re.field_k = false;
+          GameApplet.field_k = false;
         }
     }
 
-    qc() {
+    ProxySocketConnector() {
         this.field_g = java.net.ProxySelector.getDefault();
     }
 
@@ -273,7 +273,7 @@ final class qc extends hk {
           }
         }
         if (var8 != null) {
-          throw qc.<RuntimeException>$cfr$sneakyThrow((Throwable) var8);
+          throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var8);
         }
         return this.b(0);
     }
@@ -290,7 +290,7 @@ final class qc extends hk {
           var4++;
         }
         if (param1 >= -59) {
-          qc.$cfr$intArgs$a$feb7e63b59d8(true, -37, false, false);
+          ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(true, -37, false, false);
         }
         return al.field_i[var4];
     }
@@ -403,7 +403,7 @@ final class qc extends hk {
           var4++;
         }
         if (param1 >= -59) {
-          qc.$cfr$intArgs$a$feb7e63b59d8(true, -37, false, false);
+          ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(true, -37, false, false);
         }
         return al.field_i[var4];
     }

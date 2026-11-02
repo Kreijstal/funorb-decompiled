@@ -253,7 +253,7 @@ final class ij implements t {
           di.field_h = param1;
           mh.field_i = true;
           if (di.field_h == 0) {
-            var3_int = h.a((byte) -8, r.field_k, sc.field_f, s.field_a, ok.field_C);
+            var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, s.field_a, ok.field_C);
             var4 = var3_int + 3;
             sa.field_I = new String[var4];
             mj.field_b = new int[var4];
@@ -272,7 +272,7 @@ final class ij implements t {
             mj.field_b[-1 + var4] = 1;
             ac.field_c[1] = 5;
           } else if (di.field_h == 1) {
-            var3_int = h.a((byte) -8, r.field_k, sc.field_f, s.field_a, ok.field_C);
+            var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, s.field_a, ok.field_C);
             var4 = var3_int + 2;
             sa.field_I = new String[var4];
             mj.field_b = new int[var4];
@@ -290,9 +290,9 @@ final class ij implements t {
           } else if (di.field_h != 2) {
             if (di.field_h == 3) {
               if (!rg.field_c.field_l) {
-                var3_int = h.a((byte) -8, r.field_k, sc.field_f, bf.field_c, ok.field_C);
+                var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, bf.field_c, ok.field_C);
               } else {
-                var3_int = h.a((byte) -8, r.field_k, sc.field_f, lj.field_b, ok.field_C);
+                var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, GameKeyHandler.field_b, ok.field_C);
               }
               var4 = var3_int + 2;
               mj.field_b = new int[var4];
@@ -309,7 +309,7 @@ final class ij implements t {
               mj.field_b[var4 - 1] = 0;
               ac.field_c[0] = 5;
             } else if (di.field_h == 4) {
-              var3_int = h.a((byte) -8, r.field_k, sc.field_f, fj.field_O, ok.field_C);
+              var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, fj.field_O, ok.field_C);
               var4 = 2 + var3_int;
               sa.field_I = new String[var4];
               mj.field_b = new int[var4];
@@ -328,7 +328,7 @@ final class ij implements t {
               if (di.field_h != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = h.a((byte) -8, r.field_k, sc.field_f, cg.field_e, ok.field_C);
+              var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, cg.field_e, ok.field_C);
               var4 = var3_int + 3;
               sa.field_I = new String[var4];
               mj.field_b = new int[var4];
@@ -348,7 +348,7 @@ final class ij implements t {
               ac.field_c[1] = 5;
             }
           } else {
-            var3_int = h.a((byte) -8, r.field_k, sc.field_f, dh.a((byte) -64, new String[]{"<br><%0><br>"}, mc.field_J), ok.field_C);
+            var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, dh.a((byte) -64, new String[]{"<br><%0><br>"}, mc.field_J), ok.field_C);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(ok.field_C[var5])) {
@@ -364,7 +364,7 @@ final class ij implements t {
             pd.a(ok.field_C, 0, el.field_O, 0, var4);
             bk.field_J = new String[-1 + var3_int - var4];
             pd.a(ok.field_C, var4 + 1, bk.field_J, 0, var3_int - var4 - 1);
-            var3_int = h.a((byte) -8, r.field_k, sc.field_f, dh.a((byte) -61, new String[]{"<br><%0><br>"}, le.field_a), ok.field_C);
+            var3_int = MouseWheelInput.a((byte) -8, r.field_k, sc.field_f, dh.a((byte) -61, new String[]{"<br><%0><br>"}, le.field_a), ok.field_C);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(ok.field_C[var5])) {

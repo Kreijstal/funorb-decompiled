@@ -3,12 +3,12 @@
  */
 final class ue {
     static String field_a;
-    private fc field_d;
+    private IntrusiveNode field_d;
     private ja field_b;
     static String[] field_c;
 
-    final fc a(int param0) {
-        fc var2 = this.field_b.field_d.field_e;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = this.field_b.field_d.field_e;
         if (param0 <= 43) {
           this.field_b = (ja) null;
         }
@@ -20,12 +20,12 @@ final class ue {
         return var2;
     }
 
-    final fc a(boolean param0, fc param1) {
-        fc var3 = null;
+    final IntrusiveNode a(boolean param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
-        fc stackIn_8_0 = null;
-        fc stackIn_10_0 = null;
+        IntrusiveNode stackIn_8_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -39,10 +39,10 @@ final class ue {
           if (var3 == this.field_b.field_d) {
             this.field_d = null;
             stackIn_5_0 = null;
-            return (fc) (stackIn_5_0);
+            return (IntrusiveNode) (stackIn_5_0);
           }
           if (!param0) {
-            stackIn_8_0 = (fc) null;
+            stackIn_8_0 = (IntrusiveNode) null;
             return stackIn_8_0;
           }
           this.field_d = var3.field_e;
@@ -138,12 +138,12 @@ final class ue {
         }
     }
 
-    final fc a(byte param0, fc param1) {
-        fc var3 = null;
+    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         Object stackIn_7_0 = null;
-        fc stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -165,7 +165,7 @@ final class ue {
           }
           this.field_d = null;
           stackIn_7_0 = null;
-          return (fc) (stackIn_7_0);
+          return (IntrusiveNode) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -323,8 +323,8 @@ final class ue {
         }
     }
 
-    final fc e(int param0) {
-        fc var2 = this.field_d;
+    final IntrusiveNode e(int param0) {
+        IntrusiveNode var2 = this.field_d;
         if (var2 == this.field_b.field_d) {
           this.field_d = null;
           return null;
@@ -350,7 +350,7 @@ final class ue {
         if (param2 != 91) {
           ue.a(-77, '\037');
         }
-        nl.a(e.a(param1, -1932340400, var4), true, -257, param0, 0, var4, param3, param1);
+        ClientException.a(e.a(param1, -1932340400, var4), true, -257, param0, 0, var4, param3, param1);
     }
 
     final static String a(long param0, byte param1) {
@@ -400,8 +400,8 @@ final class ue {
         return var6.toString();
     }
 
-    final fc c(int param0) {
-        fc var2 = this.field_d;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_d;
         if (this.field_b.field_d == var2) {
           this.field_d = null;
           return null;
@@ -435,7 +435,7 @@ final class ue {
     final static void a(String param0, boolean param1) {
         try {
           ab.field_b = param0;
-          qc.b(12, (byte) -42);
+          ProxySocketConnector.b(12, (byte) -42);
           if (param1) {
             ue.a(-17L, (byte) 10);
           }
@@ -444,8 +444,8 @@ final class ue {
         }
     }
 
-    final fc d(int param0) {
-        fc var2 = this.field_b.field_d.field_h;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = this.field_b.field_d.field_h;
         int var3 = 61 / ((38 - param0) / 34);
         if (this.field_b.field_d == var2) {
           this.field_d = null;

@@ -24,8 +24,8 @@ final class mi extends el {
         try {
           int var1_int = 0;
           int var3 = TrackController.field_F ? 1 : 0;
-          if (rj.field_d != null) {
-            rj.field_d.c((byte) 101);
+          if (SecondaryNodeDeque.field_d != null) {
+            SecondaryNodeDeque.field_d.c((byte) 101);
           }
           if (param0 != 10228) {
             return;
@@ -77,26 +77,26 @@ final class mi extends el {
         if (param3 != 29221) {
           return;
         }
-        L0: {
-          L1: {
-            L2: {
+        regionExit1: {
+          regionExit2: {
+            regionExit3: {
               var6 = this.field_S.a((byte) -61);
               if (lh.field_x != var6 &&
                 var6 != tk.field_t) {
                 var5 = this.field_S.c(param3 ^ 19471);
                 if (var5 == null) {
                   var5 = this.field_R;
-                  break L2;
+                  break regionExit3;
                 }
                 if (!var5.equals(this.field_s)) {
-                  break L1;
+                  break regionExit2;
                 }
-                break L0;
+                break regionExit1;
               }
               var5 = bf.field_d;
             }
             if (var5.equals(this.field_s)) {
-              break L0;
+              break regionExit1;
             }
           }
           this.field_s = var5;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dh extends fc {
+final class dh extends IntrusiveNode {
     static int field_l;
     int field_n;
     static String field_r;
@@ -127,7 +127,7 @@ final class dh extends fc {
         for (var2 = 0; var2 < gi.field_o; var2++) {
           var3 = cf.field_p[var2] * j.field_f[var2];
           var20 = qk.field_M[var2];
-          if (!ga.field_b[var2]) {
+          if (!IterableNodeHashTable.field_b[var2]) {
             var9 = new int[var3];
             var21 = var9;
             for (var6_int = 0; var3 > var6_int; var6_int++) {
@@ -194,7 +194,7 @@ final class dh extends fc {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            rj.a(param2, (byte) -99);
+            SecondaryNodeDeque.a(param2, (byte) -99);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

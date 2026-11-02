@@ -12,7 +12,7 @@ final class cj extends rb {
     static ja field_j;
     private int field_h;
     private String field_k;
-    static lj field_o;
+    static GameKeyHandler field_o;
 
     private final va a(oh param0, int param1, String param2, int param3) {
         va var5 = null;
@@ -257,7 +257,7 @@ final class cj extends rb {
           ig.a();
           ll.a();
           fb.field_a = 0;
-          be.a((byte) -108);
+          PacketBuffer.a((byte) -108);
           var2 = var1.b();
           if (param0 <= 81) {
             field_e = (le) null;
@@ -340,6 +340,6 @@ final class cj extends rb {
     static {
         field_e = new le();
         field_j = new ja();
-        field_o = new lj();
+        field_o = new GameKeyHandler();
     }
 }

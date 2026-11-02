@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class me extends fc {
+final class me extends IntrusiveNode {
     int field_j;
     static String field_k;
     static String[] field_p;
@@ -56,7 +56,7 @@ final class me extends fc {
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
-                lj.a((byte) 118);
+                GameKeyHandler.a((byte) 118);
               }
               ra.field_C.field_k = 0;
             }
@@ -110,9 +110,9 @@ final class me extends fc {
     final static int a(String param0, boolean param1, int param2, kh param3, int param4, int param5, kh param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
-        be stackIn_17_0 = null;
+        PacketBuffer stackIn_17_0 = null;
         String stackIn_18_1 = null;
-        be stackIn_20_0 = null;
+        PacketBuffer stackIn_20_0 = null;
         String stackIn_21_1 = null;
         int stackIn_33_0 = 0;
         int stackIn_45_0 = 0;
@@ -172,18 +172,18 @@ final class me extends fc {
               } else {
                 stackIn_18_1 = "";
               }
-              ((be) (Object) stackIn_17_0).b(stackIn_18_1, 115);
+              ((PacketBuffer) (Object) stackIn_17_0).b(stackIn_18_1, 115);
               stackIn_20_0 = ui.field_p;
               if (!param6.a(-46)) {
                 stackIn_21_1 = "";
               } else {
                 stackIn_21_1 = var8;
               }
-              ((be) (Object) stackIn_20_0).b(stackIn_21_1, 112);
+              ((PacketBuffer) (Object) stackIn_20_0).b(stackIn_21_1, 112);
               ra.field_C.a(16, (byte) -87);
               ra.field_C.field_k = ra.field_C.field_k + 1;
               var9 = ra.field_C.field_k;
-              ee.a(sc.field_d, ra.field_C, fj.field_N, 0, ui.field_p);
+              NodeHashTableIterator.a(sc.field_d, ra.field_C, fj.field_N, 0, ui.field_p);
               ra.field_C.a(true, -var9 + ra.field_C.field_k);
             } else {
               var9 = 0;
@@ -208,7 +208,7 @@ final class me extends fc {
                 var11_ref_StringLifetime4 = "";
               }
               ra.field_C.a((byte) -57, var11_ref_StringLifetime4);
-              ee.a(sc.field_d, ra.field_C, fj.field_N, 0, ui.field_p);
+              NodeHashTableIterator.a(sc.field_d, ra.field_C, fj.field_N, 0, ui.field_p);
               ra.field_C.c(-var10 + ra.field_C.field_k, (byte) -96);
             }
             me.a(-1, -1);
@@ -226,7 +226,7 @@ final class me extends fc {
               if (var9Lifetime1 == 248) {
                 ob.a(209, gd.b((byte) 77));
                 fi.field_t = gh.field_c;
-                lj.a((byte) 125);
+                GameKeyHandler.a((byte) 125);
                 kg.field_f = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
@@ -252,7 +252,7 @@ final class me extends fc {
                 for (var12 = 0; var11 > var12; var12++) {
                   ca.field_a[var12] = ne.field_a.j(-1);
                 }
-                lj.a((byte) 121);
+                GameKeyHandler.a((byte) 121);
                 kg.field_f = false;
                 stackIn_45_0 = var11 + 100;
                 return stackIn_45_0;
@@ -270,7 +270,7 @@ final class me extends fc {
             } else {
               fi.field_t = ne.field_a.g(0);
             }
-            lj.a((byte) 115);
+            GameKeyHandler.a((byte) 115);
             kg.field_f = false;
             stackIn_55_0 = uk.field_c;
             return stackIn_55_0;

@@ -21,7 +21,7 @@ final class mf {
         p.a((byte) 25);
     }
 
-    final static void a(int param0, boolean param1, int param2, uf param3, java.awt.Component param4, nb param5) {
+    final static void a(int param0, boolean param1, int param2, PlatformTaskDispatcher param3, java.awt.Component param4, nb param5) {
         if (param0 != 15) {
           return;
         }
@@ -57,7 +57,7 @@ final class mf {
           if (0 == var2) {
             var5_ref_nk = (nk) (qh.field_e.b(2));
             if (var5_ref_nk == null) {
-              lj.a((byte) 113);
+              GameKeyHandler.a((byte) 113);
               return;
             }
             var6_int = hd.field_o - var10.field_k;
@@ -76,7 +76,7 @@ final class mf {
           }
           if (var2 != 1) {
             hb.a((Throwable) null, 0, "LR1: " + jc.b(96));
-            lj.a((byte) 126);
+            GameKeyHandler.a((byte) 126);
             return;
           }
           var5 = var10.k(118);
@@ -93,7 +93,7 @@ final class mf {
             var6.a(-78);
             return;
           }
-          lj.a((byte) 112);
+          GameKeyHandler.a((byte) 112);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -132,7 +132,7 @@ final class mf {
         return -var3Lifetime1 + (param2 + var3Lifetime1) / param0;
     }
 
-    final static void a(int param0, be param1) {
+    final static void a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;

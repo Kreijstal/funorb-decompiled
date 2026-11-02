@@ -127,7 +127,7 @@ final class mg {
         if (var5Lifetime1 != -1) {
           var4Lifetime1 = this.b(79, var5Lifetime1);
         }
-        qc.a(var4Lifetime1, (byte) 20);
+        ProxySocketConnector.a(var4Lifetime1, (byte) 20);
     }
 
     private final int b(byte param0) {
@@ -258,7 +258,7 @@ final class mg {
             }
           }
         }
-        var11.a(be.a((byte) 22, 2, 1 + rd.field_b), 606, 406, 0, -1);
+        var11.a(PacketBuffer.a((byte) 22, 2, 1 + rd.field_b), 606, 406, 0, -1);
     }
 
     private final void d(int param0) {
@@ -420,7 +420,7 @@ final class mg {
         var13 = TrackController.field_F ? 1 : 0;
         var6 = this.b(66, param3);
         var7 = ja.field_c[var6];
-        cl.a(gb.field_l, param1, 26, param2, 156, param4 ^ 5);
+        cl.a(DualLinkNode.field_l, param1, 26, param2, 156, param4 ^ 5);
         if (var6 != 2 &&
           var6 != 3) {
           stackIn_5_0 = 0;
@@ -1121,7 +1121,7 @@ final class mg {
         if (param0 != -1) {
           return;
         }
-        L9: while (true) {
+        scanLoop1: while (true) {
           boolean decompiledFrameRemainder0 = true;
           if (mf.field_f[this.field_c].length > var4) {
             stackIn_127_1 = ~var4;
@@ -1152,7 +1152,7 @@ final class mg {
                   if (this.field_c == 16) {
                     al.field_z[5].e(640 - al.field_z[5].field_t >> 1, 1);
                     this.a(true, param0 + 17461);
-                    break L9;
+                    break scanLoop1;
                   }
                   if (this.field_c != 15) {
                     if (this.field_c != 4 &&
@@ -1162,11 +1162,11 @@ final class mg {
                       if (this.field_c != 2 &&
                         this.field_c != 3) {
                         if (this.field_c != 14) {
-                          break L9;
+                          break scanLoop1;
                         }
                         var4 = 154 - (-bk.field_E.field_G + 2);
                         bk.field_E.b(ui.field_n, 320, var4, 5, -1);
-                        break L9;
+                        break scanLoop1;
                       }
                       al.field_z[3].e(-al.field_z[3].field_t + 640 >> 1, 1);
                       if (qh.field_b.field_x > (1 + pc.field_i)) {
@@ -1176,7 +1176,7 @@ final class mg {
                           var12 = var4_ref_String;
                           var12Lifetime2 = var4_ref_String;
                         } else {
-                          var4_ref_String = lj.field_f;
+                          var4_ref_String = GameKeyHandler.field_f;
                         }
                         bk.field_E.a(var4_ref_String, 100, 67, 156, 234, 0, -1, 1, 1, 26);
                       } else {
@@ -1222,10 +1222,10 @@ final class mg {
                         var6 += 26;
                       }
                       ll.d();
-                      break L9;
+                      break scanLoop1;
                     }
                     this.c((byte) -114);
-                    break L9;
+                    break scanLoop1;
                   }
                   al.field_z[0].e(-al.field_z[0].field_t + 640 >> 1, 1);
                   bk.field_E.b(qg.field_b, 320, bk.field_E.field_G + 154, 5, -1);
@@ -1238,14 +1238,14 @@ final class mg {
                   stackIn_109_1 = (0 != ua.field_L.field_O);
                   stackIn_112_2 = (oe.field_e != 0);
                   stackIn_115_3 = (ua.field_L.field_O != 0);
-                  ((oh) (Object) stackIn_108_0).b(fc.a(stackIn_109_1, stackIn_112_2, stackIn_115_3, 12105912), 320, bk.field_E.field_G + 258, 5, -1);
+                  ((oh) (Object) stackIn_108_0).b(IntrusiveNode.a(stackIn_109_1, stackIn_112_2, stackIn_115_3, 12105912), 320, bk.field_E.field_G + 258, 5, -1);
                   stackIn_117_0 = bk.field_E;
                   stackIn_118_1 = (ua.field_L.field_O != 0);
                   stackIn_120_2 = -98;
                   stackIn_121_3 = (oe.field_e != 0);
                   stackIn_124_4 = (ua.field_L.field_O != 0);
-                  ((oh) (Object) stackIn_117_0).b(qc.$cfr$intArgs$a$feb7e63b59d8(stackIn_118_1, stackIn_120_2, stackIn_121_3, stackIn_124_4), 320, bk.field_E.field_G + 310, 5, -1);
-                  break L9;
+                  ((oh) (Object) stackIn_117_0).b(ProxySocketConnector.$cfr$intArgs$a$feb7e63b59d8(stackIn_118_1, stackIn_120_2, stackIn_121_3, stackIn_124_4), 320, bk.field_E.field_G + 310, 5, -1);
+                  break scanLoop1;
                 }
                 al.field_z[1].e(-al.field_z[1].field_t + 640 >> 1, 1);
                 stackIn_127_1 = 0;
@@ -1255,17 +1255,17 @@ final class mg {
               else {
                 al.field_z[4].e(-al.field_z[4].field_t + 640 >> 1, 1);
                 this.d(-25);
-                break L9;
+                break scanLoop1;
               }
             }
             if (decompiledFrameRemainder0) {
               al.field_z[0].e(41, 1);
-              break L9;
+              break scanLoop1;
             }
           }
           if (decompiledFrameRemainder0) {
             al.field_z[0].e(640 - al.field_z[0].field_t >> 1, 1);
-            break L9;
+            break scanLoop1;
           }
           this.a(stackIn_127_1 != 0, stackIn_127_2);
           break;
@@ -1343,7 +1343,7 @@ final class mg {
                   oj.a(-127);
                 } else {
                   var6 = param1 ? 1 : 0;
-                  oi.a(26, gb.field_l, 26, bk.field_E, bk.field_E, 10, 320, 20, 240, gb.field_l, -3748, var6 != 0, 18, 0, 0);
+                  oi.a(26, DualLinkNode.field_l, 26, bk.field_E, bk.field_E, 10, 320, 20, 240, DualLinkNode.field_l, -3748, var6 != 0, 18, 0, 0);
                 }
               }
               decompiledFrameRemainder0 = false;

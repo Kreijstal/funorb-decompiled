@@ -6,7 +6,7 @@ class ec extends kd {
     static int[] field_d;
     private long field_e;
 
-    final void a(byte param0, be param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           if (param0 != -6) {
             ec.b((byte) 6);

@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class ga implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     static int field_e;
-    fc[] field_c;
+    IntrusiveNode[] field_c;
     static String field_f;
     int field_a;
     static ce field_d;
-    private fc field_g;
+    private IntrusiveNode field_g;
     static boolean[] field_b;
 
     public static void a(byte param0) {
@@ -22,7 +22,7 @@ final class ga implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ee(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     final static boolean a(int param0) {
@@ -42,8 +42,8 @@ final class ga implements Iterable {
         return false;
     }
 
-    final void a(fc param0, long param1, int param2) {
-        fc var5 = null;
+    final void a(IntrusiveNode param0, long param1, int param2) {
+        IntrusiveNode var5 = null;
         try {
           if (null != param0.field_e) {
             param0.a(param2 ^ 64);
@@ -59,10 +59,10 @@ final class ga implements Iterable {
         }
     }
 
-    final fc a(long param0, int param1) {
-        fc var5 = null;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var5 = null;
         int var6 = TrackController.field_F ? 1 : 0;
-        fc var4 = this.field_c[(int)((long)(-1 + this.field_a) & param0)];
+        IntrusiveNode var4 = this.field_c[(int)((long)(-1 + this.field_a) & param0)];
         this.field_g = var4.field_h;
         while (var4 != this.field_g) {
           if (param0 == this.field_g.field_b) {
@@ -81,7 +81,7 @@ final class ga implements Iterable {
         return null;
     }
 
-    private ga() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 

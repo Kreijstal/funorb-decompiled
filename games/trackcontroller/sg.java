@@ -11,7 +11,7 @@ final class sg {
     static String field_e;
     static kk field_a;
 
-    final static void a(java.awt.Frame param0, byte param1, uf param2) {
+    final static void a(java.awt.Frame param0, byte param1, PlatformTaskDispatcher param2) {
         ce var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;

@@ -4,7 +4,7 @@
 final class hj implements Runnable {
     static String[] field_c;
     volatile boolean field_b;
-    uf field_d;
+    PlatformTaskDispatcher field_d;
     static char[] field_f;
     volatile boolean field_e;
     volatile oa[] field_a;

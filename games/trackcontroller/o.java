@@ -27,7 +27,7 @@ final class o {
           ja.field_c[14] = nh.field_d;
           ja.field_c[13] = ua.field_K;
           ja.field_c[4] = fj.field_R;
-          ja.field_c[19] = fc.field_a;
+          ja.field_c[19] = IntrusiveNode.field_a;
           ja.field_c[3] = c.field_b;
           ja.field_c[27] = dj.field_a;
           ja.field_c[10] = nh.field_d;
@@ -46,7 +46,7 @@ final class o {
         ja.field_c[14] = nh.field_d;
         ja.field_c[13] = ua.field_K;
         ja.field_c[4] = fj.field_R;
-        ja.field_c[19] = fc.field_a;
+        ja.field_c[19] = IntrusiveNode.field_a;
         ja.field_c[3] = c.field_b;
         ja.field_c[27] = dj.field_a;
         ja.field_c[10] = nh.field_d;

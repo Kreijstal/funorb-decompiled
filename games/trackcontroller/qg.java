@@ -9,7 +9,7 @@ final class qg {
     final static String b(int param0) {
         if (!cd.field_j && vl.field_H >= ib.field_d &&
           !(kj.field_r + ib.field_d <= vl.field_H)) {
-          return nl.field_f;
+          return ClientException.field_f;
         }
         if (param0 == 32) {
           return null;

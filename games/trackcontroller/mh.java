@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mh extends fc {
+final class mh extends IntrusiveNode {
     static String[] field_k;
     short[] field_q;
     byte[] field_l;
@@ -105,12 +105,12 @@ final class mh extends fc {
         Throwable decompiledCaughtException = null;
         var1_ref = cj.field_o;
         synchronized (var1_ref) {
-          if (lj.field_d == fc.field_d) {
+          if (GameKeyHandler.field_d == IntrusiveNode.field_d) {
             return false;
           }
-          kg.field_d = mc.field_K[lj.field_d];
-          md.field_d = tk.field_o[lj.field_d];
-          lj.field_d = 1 + lj.field_d & param0;
+          kg.field_d = mc.field_K[GameKeyHandler.field_d];
+          md.field_d = tk.field_o[GameKeyHandler.field_d];
+          GameKeyHandler.field_d = 1 + GameKeyHandler.field_d & param0;
           stackIn_5_0 = true;
         }
         return stackIn_5_0;
@@ -176,7 +176,7 @@ final class mh extends fc {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        be var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         uh var40 = null;
         byte[] var41 = null;
@@ -261,7 +261,7 @@ final class mh extends fc {
           this.field_n = new int[128];
           this.field_p = new uh[128];
           this.field_o = new ik[128];
-          var38 = new be(param0);
+          var38 = new PacketBuffer(param0);
           for (var3 = 0; var38.field_j[var3 + var38.field_k] != 0; var3++) {
           }
           var55 = new byte[var3];

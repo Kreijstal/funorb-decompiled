@@ -5,7 +5,7 @@ import java.io.*;
 
 final class da extends ae {
     static int field_m;
-    private bc field_q;
+    private BufferedSocket field_q;
     static qe field_n;
     static qj[][] field_p;
     static int field_o;
@@ -90,7 +90,7 @@ final class da extends ae {
             if (jc.field_a == gk.field_a) {
               if (param1) {
                 var10 = (String) null;
-                af.field_o = ie.a(nl.field_e, param3, false, (String) null, (byte) -119);
+                af.field_o = ie.a(ClientException.field_e, param3, false, (String) null, (byte) -119);
               } else {
                 af.field_o = rl.a(20, false, param3, param2);
               }
@@ -114,7 +114,7 @@ final class da extends ae {
             }
             if (jc.field_a == md.field_e &&
               hf.a(8, false)) {
-              h.field_d = ne.field_a.f((byte) 110);
+              MouseWheelInput.field_d = ne.field_a.f((byte) 110);
               ne.field_a.field_k = 0;
               md.a(af.field_o, param5, param1, -1, param0);
               jc.field_a = ca.field_b;
@@ -134,7 +134,7 @@ final class da extends ae {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  lj.a((byte) 124);
+                  GameKeyHandler.a((byte) 124);
                   kg.field_f = false;
                   stackIn_35_0 = var6_intLifetime1;
                   return stackIn_35_0;
@@ -147,10 +147,10 @@ final class da extends ae {
             }
             if (jc.field_a == qe.field_C &&
               fh.a(520)) {
-              nl.field_e = ne.field_a.f((byte) 28);
+              ClientException.field_e = ne.field_a.f((byte) 28);
               sl.field_j = ne.field_a.h(16383);
               ne.field_a.h(16383);
-              hk.field_d = ne.field_a.d((byte) -67);
+              SocketConnector.field_d = ne.field_a.d((byte) -67);
               var6 = ne.field_a.d(19016);
               var7 = ne.field_a.h(16383);
               if ((1 & var7) != 0) {
@@ -190,7 +190,7 @@ final class da extends ae {
               if (var6 != null) {
                 dh.a(-19136, var6, gd.b((byte) 77));
               }
-              if (hk.field_d <= 0 &&
+              if (SocketConnector.field_d <= 0 &&
                 !fd.field_i) {
                 try {
                   sj.a((byte) -128, "unzap", gd.b((byte) 77));
@@ -200,13 +200,13 @@ final class da extends ae {
                 }
               } else {
                 try {
-                  sj.a(gd.b((byte) 77), new Object[]{ue.a(nl.field_e, (byte) 114)}, 7648, "zap");
+                  sj.a(gd.b((byte) 77), new Object[]{ue.a(ClientException.field_e, (byte) 114)}, 7648, "zap");
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (hk.field_d > 0) {
+              if (SocketConnector.field_d > 0) {
                 oc.field_i = true;
               }
               ra.field_C.a((byte) -83, pl.field_a);
@@ -219,7 +219,7 @@ final class da extends ae {
             }
             if (jc.field_a == ij.field_j &&
               fh.a(520)) {
-              lj.a((byte) 124);
+              GameKeyHandler.a((byte) 124);
               if (uk.field_c == 7 &&
                 !kg.field_f) {
                 kg.field_f = true;
@@ -302,7 +302,7 @@ final class da extends ae {
     private final void a(boolean param0, int param1) {
         try {
           IOException iOException = null;
-          be stackIn_4_0 = null;
+          PacketBuffer stackIn_4_0 = null;
           int stackIn_5_1 = 0;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
@@ -317,7 +317,7 @@ final class da extends ae {
             } else {
               stackIn_5_1 = 2;
             }
-            ((be) (Object) stackIn_4_0).a(stackIn_5_1, (byte) -127);
+            ((PacketBuffer) (Object) stackIn_4_0).a(stackIn_5_1, (byte) -127);
             this.field_g.a(2488, 0L);
             this.field_q.a(-103, this.field_g.field_j, this.field_g.field_j.length, param1);
           } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -447,7 +447,7 @@ final class da extends ae {
               }
               this.field_q = null;
             }
-            this.field_q = (bc) (param2);
+            this.field_q = (BufferedSocket) (param2);
             this.d((byte) -42);
             this.a(param1, 0);
             this.field_l = null;
@@ -669,7 +669,7 @@ final class da extends ae {
                       stackIn_78_0 = (0 == var10) ? 5 : 9;
                       var15 = stackIn_78_0;
                       this.field_l = var14_ref;
-                      this.field_l.field_x = new be(var9 - (-var15 - this.field_l.field_B));
+                      this.field_l.field_x = new PacketBuffer(var9 - (-var15 - this.field_l.field_B));
                       this.field_l.field_x.a(var10, (byte) -120);
                       this.field_l.field_x.b(false, var9);
                       this.field_l.field_z = 10;

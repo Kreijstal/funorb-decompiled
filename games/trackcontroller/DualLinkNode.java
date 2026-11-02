@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class gb extends fc {
+class DualLinkNode extends IntrusiveNode {
     static aa field_n;
-    gb field_j;
-    gb field_k;
+    DualLinkNode field_j;
+    DualLinkNode field_k;
     long field_m;
     static int field_i;
     static qj[] field_l;
 
     final static void a(int param0, int param1) {
-        fc var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         ei var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -42,11 +42,11 @@ class gb extends fc {
         field_l = null;
         field_n = null;
         if (param0 > -111) {
-          gb.d(-127);
+          DualLinkNode.d(-127);
         }
     }
 
-    protected gb() {
+    protected DualLinkNode() {
     }
 
     final static byte[] a(String param0, int param1) {

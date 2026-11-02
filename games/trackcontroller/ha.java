@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ha extends fc {
+final class ha extends IntrusiveNode {
     int field_s;
     int field_t;
     bh field_l;
@@ -28,7 +28,7 @@ final class ha extends fc {
     int field_r;
     int field_D;
 
-    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, int param2, byte[] param3, int param4, byte param5, be param6) {
+    final static void a(java.math.BigInteger param0, java.math.BigInteger param1, int param2, byte[] param3, int param4, byte param5, PacketBuffer param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -67,7 +67,7 @@ final class ha extends fc {
           }
           if (null == dg.field_H ||
             !(dg.field_H.field_j.length >= var7_int)) {
-            dg.field_H = new be(var7_int);
+            dg.field_H = new PacketBuffer(var7_int);
           }
           dg.field_H.field_k = 0;
           dg.field_H.a(param2, 121, param4, param3);
@@ -75,7 +75,7 @@ final class ha extends fc {
           dg.field_H.a(29715, var13);
           if (al.field_w == null ||
             !(al.field_w.field_j.length >= 100)) {
-            al.field_w = new be(100);
+            al.field_w = new PacketBuffer(100);
           }
           al.field_w.field_k = 0;
           al.field_w.a(10, (byte) -83);

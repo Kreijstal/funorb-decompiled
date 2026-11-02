@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj extends fc {
+final class kj extends IntrusiveNode {
     int field_n;
     static int[] field_s;
     static int field_r;
@@ -102,7 +102,7 @@ final class kj extends fc {
         }
         if (var2 >= 128 &&
           var2 < 160) {
-          var3 = h.field_e[-128 + var2];
+          var3 = MouseWheelInput.field_e[-128 + var2];
           if (var3 == 0) {
             var3 = 63;
           }

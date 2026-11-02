@@ -40,7 +40,7 @@ final class gd extends wi {
     final void a(byte param0) {
         tk discarded$0 = null;
         tk discarded$1 = null;
-        fc var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         var4 = TrackController.field_F ? 1 : 0;
@@ -268,7 +268,7 @@ final class gd extends wi {
               var4 = this.field_i.a(true, param2, this.field_w);
             }
           }
-          this.field_v.a(false, (long)param2, (fc) (var4));
+          this.field_v.a(false, (long)param2, (IntrusiveNode) (var4));
         }
         if (((tk) (var4)).field_w) {
           return null;
@@ -323,7 +323,7 @@ final class gd extends wi {
             }
             if (!this.field_g.d(-18316)) {
               var4 = this.field_g.a(this.field_m, true, false, param2, (byte) 2);
-              this.field_v.a(false, (long)param2, (fc) (var4));
+              this.field_v.a(false, (long)param2, (IntrusiveNode) (var4));
             }
             return null;
           }
@@ -365,7 +365,7 @@ final class gd extends wi {
               return null;
             }
             var4 = this.field_g.a(this.field_m, true, false, param2, (byte) 2);
-            this.field_v.a(false, (long)param2, (fc) (var4));
+            this.field_v.a(false, (long)param2, (IntrusiveNode) (var4));
           }
           return null;
         }
@@ -392,15 +392,15 @@ final class gd extends wi {
         tk discarded$2 = null;
         int var2_int;
         tk var2;
-        fc var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        fc var6;
-        fc var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
         tk var2Lifetime1;
-        fc var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder1 = true;
         boolean decompiledFrameRemainder0 = true;
         boolean decompiledFrameRemainder2 = true;
@@ -435,7 +435,7 @@ final class gd extends wi {
                   discarded$0 = this.a(1, (byte) 2, this.field_k);
                 }
                 if (this.field_d[this.field_k] == 0) {
-                  var7 = new fc();
+                  var7 = new IntrusiveNode();
                   var7.field_b = (long)this.field_k;
                   var2_int = 0;
                   this.field_r.a((byte) -128, var7);
@@ -478,7 +478,7 @@ final class gd extends wi {
                     discarded$2 = this.a(2, (byte) -120, this.field_k);
                   }
                   if (this.field_d[this.field_k] != 1) {
-                    var6 = new fc();
+                    var6 = new IntrusiveNode();
                     var6.field_b = (long)this.field_k;
                     this.field_r.a((byte) -110, var6);
                     var2_intLifetime1 = 0;

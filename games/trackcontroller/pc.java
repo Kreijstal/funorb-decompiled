@@ -53,7 +53,7 @@ final class pc {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        be var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -70,7 +70,7 @@ final class pc {
         int var13Lifetime1Lifetime1;
         var16 = TrackController.field_F ? 1 : 0;
         try {
-          var17 = new be(al.a(-128, param1));
+          var17 = new PacketBuffer(al.a(-128, param1));
           var4 = var17.h(16383);
           if (5 <= var4 &&
             var4 <= 7) {

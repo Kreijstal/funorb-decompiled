@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class te extends java.awt.Canvas {
+final class DelegatingCanvas extends java.awt.Canvas {
     static mk field_b;
     private java.awt.Component field_a;
 
@@ -23,13 +23,13 @@ final class te extends java.awt.Canvas {
           throw new IllegalStateException();
         }
         if (param0 < -22) {
-          bc.field_d = true;
+          BufferedSocket.field_d = true;
           wg.a(-100, false);
           rl.field_N = 0;
           return;
         }
         field_b = (mk) null;
-        bc.field_d = true;
+        BufferedSocket.field_d = true;
         wg.a(-100, false);
         rl.field_N = 0;
     }
@@ -42,7 +42,7 @@ final class te extends java.awt.Canvas {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            te.a(-20, 81, -51);
+            DelegatingCanvas.a(-20, 81, -51);
           }
           ug.a(82, (java.awt.Component) ((Object) param1));
           ei.a((byte) -125, (java.awt.Component) ((Object) param1));
@@ -87,13 +87,13 @@ final class te extends java.awt.Canvas {
           var10 = (int)((long)var4 * (long)var6 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
-        te.a(-86, 13, 8);
+        DelegatingCanvas.a(-86, 13, 8);
         var9 = (int)((long)var5 * (long)var4 >> 16);
         var10 = (int)((long)var4 * (long)var6 >> 16);
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    te(java.awt.Component param0) {
+    DelegatingCanvas(java.awt.Component param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {

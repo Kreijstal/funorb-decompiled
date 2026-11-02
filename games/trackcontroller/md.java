@@ -21,8 +21,8 @@ final class md {
         try {
           pl.field_a[0] = ta.field_c.nextInt();
           pl.field_a[1] = ta.field_c.nextInt();
-          pl.field_a[3] = (int)h.field_d;
-          pl.field_a[2] = (int)(h.field_d >> 32);
+          pl.field_a[3] = (int)MouseWheelInput.field_d;
+          pl.field_a[2] = (int)(MouseWheelInput.field_d >> 32);
           ui.field_p.field_k = 0;
           ui.field_p.b(false, pl.field_a[0]);
           ui.field_p.b(false, pl.field_a[1]);
@@ -63,7 +63,7 @@ final class md {
           if (null != kg.field_a) {
             ra.field_C.b(kg.field_a, 126);
           }
-          ee.a(sc.field_d, ra.field_C, fj.field_N, ~param3, ui.field_p);
+          NodeHashTableIterator.a(sc.field_d, ra.field_C, fj.field_N, ~param3, ui.field_p);
           ra.field_C.c(ra.field_C.field_k - var5_int, (byte) -96);
           me.a(param3, -1);
           return;

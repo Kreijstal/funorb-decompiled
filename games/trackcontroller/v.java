@@ -14,7 +14,7 @@ abstract class v implements eh {
         if (!ge.field_D) {
           throw new IllegalStateException();
         }
-        bc.field_d = true;
+        BufferedSocket.field_d = true;
         if (param0 == 6) {
           wg.a(param0 - 107, true);
           rl.field_N = 0;

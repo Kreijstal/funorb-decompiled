@@ -198,10 +198,10 @@ final class ie {
     final static void a(byte param0) {
         if (param0 != 93) {
           field_a = (String) null;
-          qc.b(4, (byte) -42);
+          ProxySocketConnector.b(4, (byte) -42);
           return;
         }
-        qc.b(4, (byte) -42);
+        ProxySocketConnector.b(4, (byte) -42);
     }
 
     static {

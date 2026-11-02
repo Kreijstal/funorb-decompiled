@@ -168,7 +168,7 @@ final class kk {
             this.field_d[6] = (Object) null;
           }
           var5 = (CharSequence) ((Object) param0);
-          var4_int = this.field_b.field_e[param1].a(hk.a(var5, 0), param2 ^ 26555);
+          var4_int = this.field_b.field_e[param1].a(SocketConnector.a(var5, 0), param2 ^ 26555);
           if (this.a(true, param1, var4_int)) {
             return var4_int;
           }
@@ -239,12 +239,12 @@ final class kk {
             ((long[]) (this.field_d[16]))[11] = -121L;
           }
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_b.field_q.a(hk.a(var6, 0), param2 - 26511);
+          var4_int = this.field_b.field_q.a(SocketConnector.a(var6, 0), param2 - 26511);
           if (!this.c(param2 ^ -110, var4_int)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.field_b.field_e[var4_int].a(hk.a(var7, param2 + 45), param2 - 26511);
+          var5 = this.field_b.field_e[var4_int].a(SocketConnector.a(var7, param2 + 45), param2 - 26511);
           stackIn_10_0 = this.a(var4_int, var5, param2 ^ 44);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -286,7 +286,7 @@ final class kk {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_b.field_q.a(hk.a(var4, 0), -26556);
+          var3_int = this.field_b.field_q.a(SocketConnector.a(var4, 0), -26556);
           stackIn_6_0 = this.a((byte) -40, var3_int);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -343,7 +343,7 @@ final class kk {
           }
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var3_int = this.field_b.field_q.a(hk.a(var5, 0), -26556);
+          var3_int = this.field_b.field_q.a(SocketConnector.a(var5, 0), -26556);
           if (this.c(74, var3_int)) {
             stackIn_9_0 = var3_int;
             return stackIn_9_0;
@@ -474,12 +474,12 @@ final class kk {
           param0 = param0.toLowerCase();
           param2 = param2.toLowerCase();
           var6 = (CharSequence) ((Object) param0);
-          var4_int = this.field_b.field_q.a(hk.a(var6, param1 ^ param1), param1 - 26555);
+          var4_int = this.field_b.field_q.a(SocketConnector.a(var6, param1 ^ param1), param1 - 26555);
           if (!this.c(93, var4_int)) {
             return null;
           }
           var7 = (CharSequence) ((Object) param2);
-          var5 = this.field_b.field_e[var4_int].a(hk.a(var7, 0), -26556);
+          var5 = this.field_b.field_e[var4_int].a(SocketConnector.a(var7, 0), -26556);
           stackIn_7_0 = this.a(var4_int, var5, (byte) -64);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -516,7 +516,7 @@ final class kk {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_b.field_q.a(hk.a(var4, 0), -26556);
+          var3_int = this.field_b.field_q.a(SocketConnector.a(var4, 0), -26556);
           if (param1 > -85) {
             this.field_b = (pc) null;
           }
@@ -587,10 +587,10 @@ final class kk {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        be var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        be var29 = null;
-        be var31 = null;
+        PacketBuffer var29 = null;
+        PacketBuffer var31 = null;
         int[] var32 = null;
         byte[][] var33 = null;
         int[] var34 = null;
@@ -664,7 +664,7 @@ final class kk {
               var35 = me.a(true, 22692, this.field_d[param1]);
               var25 = var35;
               var9 = var25;
-              var26 = new be(var35);
+              var26 = new PacketBuffer(var35);
               var26.a(5, param3, var26.field_j.length, false);
               decompiledFrameRemainder1 = false;
             }
@@ -694,7 +694,7 @@ final class kk {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - 4 * (var12 * var5_int);
-              var29 = new be(var43);
+              var29 = new PacketBuffer(var43);
               var14_int = 0;
               var29.field_k = var11;
               var15_int = 0;
@@ -743,7 +743,7 @@ final class kk {
             var11--;
             var12Lifetime1 = 255 & var23[var11];
             var11 = var11 - 4 * var5_int * var12Lifetime1;
-            var31 = new be(var43);
+            var31 = new PacketBuffer(var43);
             var31.field_k = var11;
             var39 = new int[var5_int];
             var32 = var39;
@@ -830,7 +830,7 @@ final class kk {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.field_b.field_q.a(hk.a(var4, param1), -26556);
+          var3_int = this.field_b.field_q.a(SocketConnector.a(var4, param1), -26556);
           stackIn_4_0 = this.a(var3_int, -24214);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

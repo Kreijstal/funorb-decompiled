@@ -3,7 +3,7 @@
  */
 final class wg {
     static int field_e;
-    private be field_i;
+    private PacketBuffer field_i;
     private sd field_f;
     private gd[] field_g;
     private ae field_a;
@@ -63,7 +63,7 @@ final class wg {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        be var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -81,7 +81,7 @@ final class wg {
         if (this.field_c.field_w) {
           return false;
         }
-        var10 = new be(this.field_c.g(512));
+        var10 = new PacketBuffer(this.field_c.g(512));
         var10.field_k = 5;
         var3 = var10.h(16383);
         var10.field_k = var10.field_k + 72 * var3;

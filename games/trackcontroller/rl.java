@@ -210,7 +210,7 @@ final class rl extends td implements se, m {
               var8 = nb.field_q;
             }
           } else {
-            var8 = re.field_m;
+            var8 = GameApplet.field_m;
           }
           dupTemp$0 = new sa(10, this.field_m, this.field_x - 20, 25, this.field_H, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
