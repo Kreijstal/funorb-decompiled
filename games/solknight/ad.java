@@ -249,14 +249,14 @@ final class ad implements Runnable {
     }
 
     final static int a(int param0, int param1, int param2) {
-        if (null == dh.field_j) {
+        if (null == GameApplet.field_j) {
           return -1;
         }
         if (param2 == 0) {
           if (param1 >= sa.field_m &&
-            sa.field_m + dh.field_j.field_p > param1 &&
+            sa.field_m + GameApplet.field_j.field_p > param1 &&
             param0 >= da.field_f &&
-            dh.field_j.field_t + da.field_f > param0) {
+            GameApplet.field_j.field_t + da.field_f > param0) {
             return 0;
           }
         } else {
@@ -265,47 +265,47 @@ final class ad implements Runnable {
             if (ke.field_I > param1) {
               return -1;
             }
-            if (ke.field_I + dh.field_j.field_p <= param1) {
+            if (ke.field_I + GameApplet.field_j.field_p <= param1) {
               return -1;
             }
             if (lk.field_c > param0) {
               return -1;
             }
-            if (param0 >= dh.field_j.field_t + lk.field_c) {
+            if (param0 >= GameApplet.field_j.field_t + lk.field_c) {
               return -1;
             }
             return 1;
           }
-          if (sa.field_m + dh.field_j.field_p <= param1) {
+          if (sa.field_m + GameApplet.field_j.field_p <= param1) {
             if (ke.field_I > param1) {
               return -1;
             }
-            if (ke.field_I + dh.field_j.field_p <= param1) {
+            if (ke.field_I + GameApplet.field_j.field_p <= param1) {
               return -1;
             }
             if (lk.field_c > param0) {
               return -1;
             }
-            if (param0 >= dh.field_j.field_t + lk.field_c) {
+            if (param0 >= GameApplet.field_j.field_t + lk.field_c) {
               return -1;
             }
             return 1;
           }
           if (param0 >= da.field_f &&
-            dh.field_j.field_t + da.field_f > param0) {
+            GameApplet.field_j.field_t + da.field_f > param0) {
             return 0;
           }
         }
         if (ke.field_I > param1) {
           return -1;
         }
-        if (ke.field_I + dh.field_j.field_p <= param1) {
+        if (ke.field_I + GameApplet.field_j.field_p <= param1) {
           return -1;
         }
         if (lk.field_c > param0) {
           return -1;
         }
-        if (param0 < dh.field_j.field_t + lk.field_c) {
+        if (param0 < GameApplet.field_j.field_t + lk.field_c) {
           return 1;
         }
         return -1;
@@ -474,7 +474,7 @@ final class ad implements Runnable {
             }
             var2 = 1;
           }
-          bc.field_K.a(-121, uc.a(gb.field_j, 1691746689, field_m), uc.a(db.field_o, 1691746689, s.field_gb));
+          bc.field_K.a(-121, uc.a(PacketBuffer.field_j, 1691746689, field_m), uc.a(db.field_o, 1691746689, s.field_gb));
           if (bc.field_K.d((byte) -36)) {
             var1_int = 1;
           }

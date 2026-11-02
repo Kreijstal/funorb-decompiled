@@ -35,7 +35,7 @@ final class e extends ej {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_h = var7;
-              this.a(var5.field_d, var5);
+              this.a(var5.previous, var5);
             } else {
               var5.field_h = 0;
               this.a(var5);
@@ -62,9 +62,9 @@ final class e extends ej {
     }
 
     private final void a(ag param0) {
-        param0.c(10);
+        param0.unlink(10);
         param0.a();
-        gg var2 = this.field_n.field_e.field_d;
+        IntrusiveNode var2 = this.field_n.field_e.previous;
         if (var2 == this.field_n.field_e) {
           this.field_o = -1;
         } else {
@@ -99,7 +99,7 @@ final class e extends ej {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_h = var5;
-              this.a(var3.field_d, var3);
+              this.a(var3.previous, var3);
             } else {
               var3.field_h = 0;
               this.a(var3);
@@ -130,21 +130,21 @@ final class e extends ej {
         }
     }
 
-    private final void a(gg param0, ag param1) {
+    private final void a(IntrusiveNode param0, ag param1) {
         while (true) {
           if (param0 == this.field_n.field_e) {
             ha.a(param1, (byte) 93, param0);
-            this.field_o = ((ag) (this.field_n.field_e.field_d)).field_h;
+            this.field_o = ((ag) (this.field_n.field_e.previous)).field_h;
             return;
           }
           if (((ag) (param0)).field_h <= param1.field_h) {
-            param0 = param0.field_d;
+            param0 = param0.previous;
             continue;
           }
           break;
         }
         ha.a(param1, (byte) 93, param0);
-        this.field_o = ((ag) (this.field_n.field_e.field_d)).field_h;
+        this.field_o = ((ag) (this.field_n.field_e.previous)).field_h;
         return;
     }
 

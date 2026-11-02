@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fj extends gg {
+final class fj extends IntrusiveNode {
     static int field_i;
     int[] field_h;
     static String field_j;
@@ -95,9 +95,9 @@ final class fj extends gg {
         }
         String var1 = s.o(-74);
         if (param0 >= 26) {
-          ve.field_a = new bb(var1, (String) null, true, false, false);
+          ClientException.field_a = new bb(var1, (String) null, true, false, false);
           u.field_b.b(gf.field_cb, 125);
-          gf.field_cb.c(-3399, ve.field_a);
+          gf.field_cb.c(-3399, ClientException.field_a);
           gf.field_cb.e(true);
           return;
         }

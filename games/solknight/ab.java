@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class ab extends dh {
+abstract class ab extends GameApplet {
     static String field_q;
     private int field_C;
     static int[] field_A;
@@ -220,7 +220,7 @@ abstract class ab extends dh {
           if (var2 == 0) {
             return;
           }
-          L1: {
+          regionExit1: {
             switch (var2) {
               case 3:
                 db.f(0);
@@ -243,17 +243,17 @@ abstract class ab extends dh {
                   switch (var2) {
                     case 13:
                       li.d(117);
-                      break L1;
+                      break regionExit1;
                     case 17:
                       this.l(-73);
-                      break L1;
+                      break regionExit1;
                     case 18:
                       u.a(2);
-                      break L1;
+                      break regionExit1;
                     default:
                       hi.a((Throwable) null, "MGS1: " + oc.a(false), 1);
                       je.a(false);
-                      break L1;
+                      break regionExit1;
                   }
                 }
                 stackIn_32_0 = 112;
@@ -353,7 +353,7 @@ abstract class ab extends dh {
           String var9 = null;
           String var10 = null;
           Boolean var11 = null;
-          gb var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = SolKnight.field_L ? 1 : 0;
@@ -448,11 +448,11 @@ abstract class ab extends dh {
               if (wi.field_j.a((byte) -106)) {
                 var12 = wi.field_j.a(true);
                 if (var12 != null) {
-                  var7 = vd.a(var12.field_l, 0, var12.field_m, 160);
-                  dh.a(var7, false);
+                  var7 = vd.a(var12.payload, 0, var12.position, 160);
+                  GameApplet.a(var7, false);
                 } else {
                   var9 = (String) null;
-                  dh.a((String) null, false);
+                  GameApplet.a((String) null, false);
                 }
                 wi.field_j = null;
               }
@@ -461,7 +461,7 @@ abstract class ab extends dh {
               var5 = (Exception) (Object) decompiledCaughtException;
               hi.a((Throwable) ((Object) var5), "S1", 1);
               var10 = (String) null;
-              dh.a((String) null, false);
+              GameApplet.a((String) null, false);
               wi.field_j = null;
             }
           }
@@ -804,7 +804,7 @@ abstract class ab extends dh {
         if (kj.field_R == 11) {
           if (null != wc.field_b && (!wc.field_b.c((byte) -121) ||
             !wc.field_b.b(true))) {
-            a.a((byte) 102, ve.a(uf.field_r, wa.field_a, wc.field_b, (byte) -94), 0.0f);
+            a.a((byte) 102, ClientException.a(uf.field_r, wa.field_a, wc.field_b, (byte) -94), 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -961,7 +961,7 @@ abstract class ab extends dh {
     }
 
     private final void l(int param0) {
-        int var2 = te.field_N.j(255);
+        int var2 = te.field_N.readUnsignedByte(255);
         int var3 = 0 != (1 & var2) ? 1 : 0;
         if (param0 >= -10) {
           field_u = false;

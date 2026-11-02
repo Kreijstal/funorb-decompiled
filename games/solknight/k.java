@@ -12,7 +12,7 @@ final class k {
           ce.field_b = false;
           field_b = false;
           h.a(-1, true);
-          gb.field_i = el.field_p;
+          PacketBuffer.field_i = el.field_p;
           ma.field_o = el.field_p;
           return;
         }
@@ -20,7 +20,7 @@ final class k {
         ce.field_b = false;
         field_b = false;
         h.a(-1, true);
-        gb.field_i = el.field_p;
+        PacketBuffer.field_i = el.field_p;
         ma.field_o = el.field_p;
     }
 

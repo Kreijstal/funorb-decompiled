@@ -39,11 +39,11 @@ abstract class lf {
             var4_ref_sa = (sa) (jl.field_h.a((byte) 51));
             if (var4_ref_sa != null &&
               var2_long > var4_ref_sa.field_h) {
-              var4_ref_sa.c(10);
+              var4_ref_sa.unlink(10);
               te.field_O = var4_ref_sa.field_k.length;
-              te.field_N.field_m = 0;
+              te.field_N.position = 0;
               for (var5_int = 0; var5_int < te.field_O; var5_int++) {
-                te.field_N.field_l[var5_int] = var4_ref_sa.field_k[var5_int];
+                te.field_N.payload[var5_int] = var4_ref_sa.field_k[var5_int];
               }
               nf.field_U = kl.field_b;
               kl.field_b = jg.field_e;
@@ -68,12 +68,12 @@ abstract class lf {
         try {
           while (true) {
             if (stackIn_21_0 < 0) {
-              te.field_N.field_m = 0;
+              te.field_N.position = 0;
               if (!bf.c(114, 1)) {
                 return false;
               }
               qg.field_a = te.field_N.l(27310);
-              te.field_N.field_m = 0;
+              te.field_N.position = 0;
               te.field_O = param0[qg.field_a];
             }
             if (!qd.b((byte) 127)) {
@@ -96,7 +96,7 @@ abstract class lf {
             }
             var5 = new sa(var2_long + (long)var4, qg.field_a, new byte[te.field_O]);
             for (var6 = 0; var6 < te.field_O; var6++) {
-              var5.field_k[var6] = te.field_N.field_l[var6];
+              var5.field_k[var6] = te.field_N.payload[var6];
             }
             jl.field_h.a(var5, -7044);
             qg.field_a = -1;

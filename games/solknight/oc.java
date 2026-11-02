@@ -24,7 +24,7 @@ final class oc {
           return (ba) null;
         }
         if (var4 != null) {
-          var5.a(new gb(var4), false);
+          var5.a(new PacketBuffer(var4), false);
           if (32768 <= param1) {
             var5.g(39);
             this.field_d.a(87, var5, (long)param1);
@@ -77,7 +77,7 @@ final class oc {
           var1 = var6 + ":";
           for (var2 = 0; te.field_O > var2; var2++) {
             var14 = var1 + ' ';
-            var3 = te.field_N.field_l[var2] & 255;
+            var3 = te.field_N.payload[var2] & 255;
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (10 <= var4) {
@@ -102,7 +102,7 @@ final class oc {
         var1Lifetime1 = var6 + ":";
         for (var2Lifetime1 = 0; te.field_O > var2Lifetime1; var2Lifetime1++) {
           var12 = var1Lifetime1 + ' ';
-          var3Lifetime1 = te.field_N.field_l[var2Lifetime1] & 255;
+          var3Lifetime1 = te.field_N.payload[var2Lifetime1] & 255;
           var4Lifetime1 = var3Lifetime1 >> 4;
           var3Lifetime1 = var3Lifetime1 & 15;
           if (10 <= var4Lifetime1) {

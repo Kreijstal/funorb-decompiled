@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class al extends gg {
+final class al extends IntrusiveNode {
     int field_m;
     static int field_n;
     int[] field_h;
@@ -29,7 +29,7 @@ final class al extends gg {
           }
           if (param0 != -70) {
             var5 = (java.math.BigInteger) null;
-            al.a((gb) null, (gb) null, (byte) 2, (java.math.BigInteger) null, (java.math.BigInteger) null);
+            al.a((PacketBuffer) null, (PacketBuffer) null, (byte) 2, (java.math.BigInteger) null, (java.math.BigInteger) null);
           }
           if (0 != param1.field_j ||
             param1.field_a != 0) {
@@ -75,12 +75,12 @@ final class al extends gg {
         }
     }
 
-    final static void a(gb param0, gb param1, byte param2, java.math.BigInteger param3, java.math.BigInteger param4) {
+    final static void a(PacketBuffer param0, PacketBuffer param1, byte param2, java.math.BigInteger param3, java.math.BigInteger param4) {
         try {
-          ci.a(param0.field_l, param0.field_m, 8, param3, 0, param4, param1);
+          ci.a(param0.payload, param0.position, 8, param3, 0, param4, param1);
           if (param2 <= 71) {
             java.math.BigInteger var6 = (java.math.BigInteger) null;
-            al.a((gb) null, (gb) null, (byte) 9, (java.math.BigInteger) null, (java.math.BigInteger) null);
+            al.a((PacketBuffer) null, (PacketBuffer) null, (byte) 9, (java.math.BigInteger) null, (java.math.BigInteger) null);
           }
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "al.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');

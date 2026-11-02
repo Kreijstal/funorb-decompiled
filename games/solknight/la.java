@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class la extends gg {
+final class la extends IntrusiveNode {
     static af field_i;
     static String field_m;
     static nc field_j;
@@ -251,8 +251,8 @@ final class la extends gg {
     final static void a(int param0, int param1, bl param2) {
         jd var5 = id.field_c;
         var5.e(param1, -2147483648);
-        var5.field_m = var5.field_m + 1;
-        int var4 = var5.field_m;
+        var5.position = var5.position + 1;
+        int var4 = var5.position;
         var5.c(20, 1);
         var5.c(31, param2.field_n);
         var5.c(param0 ^ -104, param2.field_j);
@@ -265,7 +265,7 @@ final class la extends gg {
           var5.b(param2.field_o, false);
           var5.b(param2.field_l, false);
           var5.b(true, var4);
-          var5.b(1, -var4 + var5.field_m);
+          var5.b(1, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "la.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -306,7 +306,7 @@ final class la extends gg {
           lj.a(param14, (byte) 127, param12, param4);
           rj.a(param17, param10, (byte) 106, param19, param0);
           qk.a(param1, param3, -102);
-          ug.a(param18, param8, param20, param6, (byte) 117, param5);
+          SocketConnector.a(param18, param8, param20, param6, (byte) 117, param5);
           if (param11 > -89) {
             return;
           }

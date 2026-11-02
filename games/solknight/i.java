@@ -17,7 +17,7 @@ final class i extends si {
         kf var3 = (kf) (var2.a((byte) 94));
         while (var3 != null) {
           if (var3.h(1784)) {
-            var3.c(10);
+            var3.unlink(10);
           }
           var3 = (kf) (var2.c(122));
         }
@@ -122,7 +122,7 @@ final class i extends si {
         kf var3 = (kf) (var2.a((byte) -66));
         while (var3 != null) {
           if (var3.e((byte) 124)) {
-            var3.c(10);
+            var3.unlink(10);
           }
           var3 = (kf) (var2.c(119));
         }

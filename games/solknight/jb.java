@@ -12,7 +12,7 @@ final class jb extends aa {
     static int[] field_a;
     static int field_e;
 
-    final void a(int param0, gb param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           param1.b(-1955895016, this.field_b);
           param1.a(64, this.field_c);

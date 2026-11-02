@@ -48,7 +48,7 @@ abstract class pd {
           if (ch.field_b == -1 &&
             ql.field_v == -1) {
             ql.field_v = ad.field_m;
-            ch.field_b = gb.field_j;
+            ch.field_b = PacketBuffer.field_j;
           }
           boolean decompiledFrameRemainder0 = true;
           kk.field_d = kk.field_d + 1;

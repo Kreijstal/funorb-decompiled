@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class li extends gg {
+final class li extends IntrusiveNode {
     int field_n;
     static String field_j;
     int field_m;
@@ -48,26 +48,26 @@ final class li extends gg {
         var8 = SolKnight.field_L ? 1 : 0;
         try {
           var1 = te.field_N;
-          var2 = var1.j(255);
+          var2 = var1.readUnsignedByte(255);
           if (var2 == 0) {
             if (null == lc.field_m) {
               lc.field_m = new jh(128);
               kj.field_O = 0;
             }
-            stackIn_11_0 = (var1.j(255) != 1) ? 0 : 1;
+            stackIn_11_0 = (var1.readUnsignedByte(255) != 1) ? 0 : 1;
             var3_int = stackIn_11_0;
-            var4_ref_String = var1.h(20);
+            var4_ref_String = var1.readString(20);
             if (var3_int != 0) {
-              var1.h(31);
+              var1.readString(31);
             }
-            var5_ref = ug.a(var4_ref_String, 113);
-            var6_ref = var1.h(105);
+            var5_ref = SocketConnector.a(var4_ref_String, 113);
+            var6_ref = var1.readString(105);
             var7_ref = jg.a((CharSequence) ((Object) var4_ref_String), -2);
             if (null == var7_ref) {
               var7_ref = var4_ref_String;
             }
             if (var5_ref == null) {
-              var5_ref = ug.a(var6_ref, 115);
+              var5_ref = SocketConnector.a(var6_ref, 115);
               if (var5_ref != null) {
                 lc.field_m.a((long)var7_ref.hashCode(), (byte) -109, var5_ref);
               }
@@ -105,9 +105,9 @@ final class li extends gg {
               return;
             }
             lh.field_p = 1;
-            var3 = var1.h(37);
+            var3 = var1.readString(37);
             qa.field_r = ((String) (var3)).intern();
-            var4 = var1.j(255);
+            var4 = var1.readUnsignedByte(255);
             pk.a((byte) -48, var4);
             return;
           }
@@ -115,12 +115,12 @@ final class li extends gg {
             ok.field_a = new jh(128);
             ng.field_c = 0;
           }
-          var3Lifetime1 = var1.h(55);
+          var3Lifetime1 = var1.readString(55);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.h(75);
-          var5 = var1.h(56);
+          var4_ref_StringLifetime1 = var1.readString(75);
+          var5 = var1.readString(56);
           var6 = mc.a(var4_ref_StringLifetime1, (byte) 105);
           if (var6 == null) {
             var6 = mc.a(var5, (byte) 105);
@@ -141,13 +141,13 @@ final class li extends gg {
           }
           var6.field_gb = (String) (var3Lifetime1);
           var6.field_ib = var4_ref_StringLifetime1;
-          var6.c(10);
+          var6.unlink(10);
           var7 = (ia) (va.field_f.a((byte) 51));
-          L6: while (true) {
+          scanLoop1: while (true) {
             if (var7 != null) {
               stackIn_56_0 = var6;
               if (var8 != 0) {
-                break L6;
+                break scanLoop1;
               }
               if (je.a(stackIn_56_0, var7, true)) {
                 var7 = (ia) (va.field_f.b(-40));

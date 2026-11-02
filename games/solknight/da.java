@@ -639,10 +639,10 @@ final class da {
         StringBuilder stackIn_38_1 = null;
         boolean stackIn_39_2 = false;
         int stackIn_57_0 = 0;
-        gb stackIn_57_1 = null;
+        PacketBuffer stackIn_57_1 = null;
         boolean stackIn_58_2 = false;
         int stackIn_100_0 = 0;
-        gb stackIn_100_1 = null;
+        PacketBuffer stackIn_100_1 = null;
         boolean stackIn_101_2 = false;
         RuntimeException stackIn_113_0 = null;
         StringBuilder stackIn_113_1 = null;
@@ -671,12 +671,12 @@ final class da {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        gb var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
         int[] var29 = null;
-        gb var30 = null;
+        PacketBuffer var30 = null;
         byte[][] var31 = null;
-        gb var32 = null;
+        PacketBuffer var32 = null;
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
@@ -734,8 +734,8 @@ final class da {
               var35 = tk.a((byte) -76, true, this.field_c[param2]);
               var25 = var35;
               var9 = var25;
-              var26 = new gb(var35);
-              var26.a(param1, 5, 5838, var26.field_l.length);
+              var26 = new PacketBuffer(var35);
+              var26.a(param1, 5, 5838, var26.payload.length);
               decompiledFrameRemainder1 = false;
             }
           }
@@ -764,14 +764,14 @@ final class da {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * var12 * var5_int;
-              var32 = new gb(var43);
+              var32 = new PacketBuffer(var43);
               var14 = 0;
-              var32.field_m = var11;
+              var32.position = var11;
               var15 = 0;
               for (var16 = 0; var12 > var16; var16++) {
                 var17 = 0;
                 for (var18 = 0; var18 < var5_int; var18++) {
-                  var17 = var17 + var32.e(true);
+                  var17 = var17 + var32.readInt(true);
                   if (var6 != null) {
                     var19 = var34[var18];
                   } else {
@@ -788,7 +788,7 @@ final class da {
               }
               var44 = new byte[var14];
               var14Lifetime1 = 0;
-              var32.field_m = var11;
+              var32.position = var11;
               var17 = 0;
               for (var18 = 0; var18 < var12; var18++) {
                 var19 = 0;
@@ -796,7 +796,7 @@ final class da {
                   stackIn_100_0 = var19;
                   stackIn_100_1 = var32;
                   stackIn_101_2 = !(param3);
-                  var19 = stackIn_100_0 + ((gb) (Object) stackIn_100_1).e(stackIn_101_2);
+                  var19 = stackIn_100_0 + ((PacketBuffer) (Object) stackIn_100_1).readInt(stackIn_101_2);
                   if (var6 != null) {
                     var21 = var34[var20];
                   } else {
@@ -815,8 +815,8 @@ final class da {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - 4 * (var12 * var5_int);
-              var30 = new gb(var43);
-              var30.field_m = var11;
+              var30 = new PacketBuffer(var43);
+              var30.position = var11;
               var38 = new int[var5_int];
               var29 = var38;
               var14_ref_int__ = var29;
@@ -826,7 +826,7 @@ final class da {
                   stackIn_57_0 = var16;
                   stackIn_57_1 = var30;
                   stackIn_58_2 = !(param3);
-                  var16 = stackIn_57_0 + ((gb) (Object) stackIn_57_1).e(stackIn_58_2);
+                  var16 = stackIn_57_0 + ((PacketBuffer) (Object) stackIn_57_1).readInt(stackIn_58_2);
                   var14_ref_int__[var17] = var14_ref_int__[var17] + var16;
                 }
               }
@@ -838,12 +838,12 @@ final class da {
                 var15_ref_byte____[var16] = array$1;
                 var38[var16] = 0;
               }
-              var30.field_m = var11;
+              var30.position = var11;
               var16 = 0;
               for (var17 = 0; var12 > var17; var17++) {
                 var18 = 0;
                 for (var19 = 0; var19 < var5_int; var19++) {
-                  var18 = var18 + var30.e(true);
+                  var18 = var18 + var30.readInt(true);
                   fk.a(var43, var16, var39[var19], var38[var19], var18);
                   var16 = var16 + var18;
                   var14_ref_int__[var19] = var14_ref_int__[var19] + var18;

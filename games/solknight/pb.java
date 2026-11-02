@@ -26,7 +26,7 @@ final class pb implements j {
         try {
           var8 = new jd(param0.a(4, "logo.fo3d", ""));
           var10 = var8;
-          var3 = var10.j(255);
+          var3 = var10.readUnsignedByte(255);
           var10.d((byte) -83);
           vc.field_f = ml.a(22795, var10);
           wk.field_d = new uh[var3];
@@ -78,7 +78,7 @@ final class pb implements j {
           }
           var7 = param4.field_j + param1;
           pl.a(true, param4.field_x, param4.field_t, var7, var6_int);
-          var8 = gb.field_k[1];
+          var8 = PacketBuffer.field_k[1];
           if (param4 instanceof pj &&
             ((pj) (param4)).field_F) {
             var8.a((-var8.field_q + param4.field_t >> 1) + 1 + var6_int, (param4.field_x - var8.field_r >> 1) + (1 + var7), 256);

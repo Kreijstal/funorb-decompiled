@@ -73,7 +73,7 @@ final class hj {
         if (!param0) {
           return false;
         }
-        return gf.field_Z == gb.field_i ? true : false;
+        return gf.field_Z == PacketBuffer.field_i ? true : false;
     }
 
     public static void b(byte param0) {

@@ -18,10 +18,10 @@ final class vb extends il {
     final static int a(int param0, int param1, boolean param2, String param3, mb param4, mb param5, int param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
-        gb stackIn_11_0 = null;
+        PacketBuffer stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         String stackIn_12_2 = null;
-        gb stackIn_14_0 = null;
+        PacketBuffer stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         String stackIn_15_2 = null;
         int stackIn_32_0 = 0;
@@ -69,10 +69,10 @@ final class vb extends il {
           }
           if (qc.field_i == ef.field_e) {
             n.field_b = null;
-            id.field_c.field_m = 0;
+            id.field_c.position = 0;
             if (param3 != null) {
               var9 = 0;
-              ic.field_z.field_m = 0;
+              ic.field_z.position = 0;
               if (param2) {
                 var9 = var9 | 1;
               }
@@ -86,17 +86,17 @@ final class vb extends il {
               ic.field_z.c(-112, param0);
               ic.field_z.c(105, var9);
               id.field_c.c(-112, 18);
-              id.field_c.field_m = id.field_c.field_m + 2;
-              var10 = id.field_c.field_m;
+              id.field_c.position = id.field_c.position + 2;
+              var10 = id.field_c.position;
               var11_ref_StringLifetime2 = hh.a(false, ia.g(-79));
               if (var11_ref_StringLifetime2 == null) {
                 var11_ref_StringLifetime2 = "";
               }
               id.field_c.a(var11_ref_StringLifetime2, 0);
               al.a(ic.field_z, id.field_c, (byte) 76, nc.field_d, qa.field_p);
-              id.field_c.a(id.field_c.field_m - var10, true);
+              id.field_c.a(id.field_c.position - var10, true);
             } else {
-              ic.field_z.field_m = 0;
+              ic.field_z.position = 0;
               ic.field_z.b(ib.field_i.nextInt(), false);
               ic.field_z.b(ib.field_i.nextInt(), false);
               stackIn_11_0 = ic.field_z;
@@ -106,7 +106,7 @@ final class vb extends il {
               } else {
                 stackIn_12_2 = "";
               }
-              ((gb) (Object) stackIn_11_0).b(stackIn_11_1, stackIn_12_2);
+              ((PacketBuffer) (Object) stackIn_11_0).b(stackIn_11_1, stackIn_12_2);
               stackIn_14_0 = ic.field_z;
               stackIn_14_1 = -1955895016;
               if (param4.a(true)) {
@@ -114,20 +114,20 @@ final class vb extends il {
               } else {
                 stackIn_15_2 = "";
               }
-              ((gb) (Object) stackIn_14_0).b(stackIn_14_1, stackIn_15_2);
+              ((PacketBuffer) (Object) stackIn_14_0).b(stackIn_14_1, stackIn_15_2);
               id.field_c.c(-110, 16);
-              id.field_c.field_m = id.field_c.field_m + 1;
-              var9 = id.field_c.field_m;
+              id.field_c.position = id.field_c.position + 1;
+              var9 = id.field_c.position;
               al.a(ic.field_z, id.field_c, (byte) 75, nc.field_d, qa.field_p);
-              id.field_c.b(param6 + 21761, id.field_c.field_m - var9);
+              id.field_c.b(param6 + 21761, id.field_c.position - var9);
             }
             qf.a(0, -1);
             ef.field_e = di.field_l;
           }
           if (ef.field_e == di.field_l &&
             bf.c(param6 ^ -21696, 1)) {
-            var9Lifetime1 = te.field_N.j(255);
-            te.field_N.field_m = 0;
+            var9Lifetime1 = te.field_N.readUnsignedByte(255);
+            te.field_N.position = 0;
             if (100 <= var9Lifetime1 &&
               var9Lifetime1 <= 105) {
               ef.field_e = ta.field_e;
@@ -148,15 +148,15 @@ final class vb extends il {
               } else {
                 bf.c(54, sk.g(-9917));
                 n.field_b = new Boolean(lj.a(te.field_N, -2));
-                te.field_N.field_m = 0;
+                te.field_N.position = 0;
               }
             }
           }
           if (ta.field_e == ef.field_e) {
             var9Lifetime2 = 2;
             if (bf.c(110, var9Lifetime2)) {
-              var10Lifetime1 = te.field_N.i(-121);
-              te.field_N.field_m = 0;
+              var10Lifetime1 = te.field_N.readUnsignedShort(-121);
+              te.field_N.position = 0;
               if (bf.c(82, var10Lifetime1)) {
                 var11 = ke.field_O.length;
                 for (var12 = 0; var11 > var12; var12++) {
@@ -172,7 +172,7 @@ final class vb extends il {
           if (bj.field_a == ef.field_e &&
             qd.b((byte) 125)) {
             if (ob.field_h != 255) {
-              md.field_v = te.field_N.h(15);
+              md.field_v = te.field_N.readString(15);
             } else {
               var9_ref_String = te.field_N.g(86);
               if (var9_ref_String != null) {
@@ -186,7 +186,7 @@ final class vb extends il {
           }
           if (lf.field_d == null) {
             if (je.field_c) {
-              if (30000L < dh.b(-1)) {
+              if (30000L < GameApplet.b(-1)) {
                 md.field_v = il.field_d;
               } else {
                 md.field_v = cl.field_j;

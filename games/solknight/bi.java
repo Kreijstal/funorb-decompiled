@@ -439,7 +439,7 @@ final class bi {
                 }
                 var8 = 0;
                 var9 = 0;
-                L4: while (true) {
+                scanLoop1: while (true) {
                   if (param2 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -455,7 +455,7 @@ final class bi {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var10 = (255 & aj.field_t[8]) + (aj.field_t[6] << 16 & 16711680) + (aj.field_t[7] << 8 & 65280);
                         var11 = (255 & aj.field_t[3]) + (((aj.field_t[2] & 255) << 8) + (aj.field_t[1] << 16 & 16711680) + ((aj.field_t[0] & 255) << 24));
@@ -471,7 +471,7 @@ final class bi {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var10 = (16711680 & aj.field_t[4] << 16) - (-(aj.field_t[5] << 8 & 65280) - (aj.field_t[6] & 255));
                         var12 = ((255 & aj.field_t[2]) << 8) + (aj.field_t[3] & 255);

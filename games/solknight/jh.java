@@ -32,14 +32,14 @@ final class jh {
           fj.a(37, new int[]{2, 5}, 498, (byte) -127, 400, 7, 260);
           fj.a(28, new int[]{15, 16}, 446, (byte) 98, 200, 8, 194);
           fj.a(28, new int[]{19, 5}, 288, (byte) -128, 400, 9, 50);
-          for (var2_int = 0; gg.field_f.length > var2_int; var2_int++) {
-            gg.field_f[var2_int] = false;
+          for (var2_int = 0; IntrusiveNode.field_f.length > var2_int; var2_int++) {
+            IntrusiveNode.field_f[var2_int] = false;
           }
           if (param0 != -1) {
             field_b = (o) null;
           }
-          gg.field_f[1] = true;
-          var2 = gg.field_f;
+          IntrusiveNode.field_f[1] = true;
+          var2 = IntrusiveNode.field_f;
           var2[0] = true;
           var3 = ad.field_b.field_s + (ad.field_b.field_m + 4);
           ah.field_i[8] = ad.field_b.field_s + dd.field_b - (-ad.field_b.field_F - var3);
@@ -63,18 +63,18 @@ final class jh {
         byte[] var5_ref_byte__ = null;
         byte[] var6 = null;
         Object var7 = null;
-        gb var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new gb(param0);
+          var9 = new PacketBuffer(param0);
           if (param1 != 6) {
             field_b = (o) null;
           }
-          var3 = var9.j(param1 + 249);
-          var4 = var9.e(true);
+          var3 = var9.readUnsignedByte(param1 + 249);
+          var4 = var9.readInt(true);
           if (var4 >= 0 && (0 == jb.field_f ||
             !(var4 > jb.field_f))) {
             if (var3 == 0) {
@@ -85,7 +85,7 @@ final class jh {
               stackIn_9_0 = var5_ref_byte__;
               return stackIn_9_0;
             }
-            var5 = var9.e(true);
+            var5 = var9.readInt(true);
             if (var5 >= 0 && (jb.field_f == 0 ||
               !(jb.field_f < var5))) {
               var13 = new byte[var5];
@@ -250,12 +250,12 @@ final class jh {
             field_g = (mg) null;
           }
           cf.field_e = cf.field_e + 1;
-          gb.field_j = le.field_f;
+          PacketBuffer.field_j = le.field_f;
           ad.field_m = c.field_J;
           ne.field_d = pe.field_n;
           pe.field_n = false;
           hg.field_F = SolKnight.field_G;
-          db.field_o = ug.field_a;
+          db.field_o = SocketConnector.field_a;
           s.field_gb = wd.field_d;
           SolKnight.field_G = 0;
         }

@@ -24,10 +24,10 @@ final class ah {
           wc.field_a = param1;
           var2 = (ud) (uc.field_j.a((byte) 51));
           while (var2 != null) {
-            if (var2.field_m.a(false)) {
+            if (var2.field_m.isLinked(false)) {
               var2.field_h.h(wc.field_a * var2.field_l + 128 >> 8);
             } else {
-              var2.c(10);
+              var2.unlink(10);
             }
             var2 = (ud) (uc.field_j.b(-78));
           }
@@ -37,8 +37,8 @@ final class ah {
           if (la.field_j != null) {
             var2Lifetime1 = (ud) (la.field_j.a((byte) 51));
             while (var2Lifetime1 != null) {
-              if (!var2Lifetime1.field_m.a(false)) {
-                var2Lifetime1.c(10);
+              if (!var2Lifetime1.field_m.isLinked(false)) {
+                var2Lifetime1.unlink(10);
               } else {
                 var2Lifetime1.field_h.h(wc.field_a * var2Lifetime1.field_l + 128 >> 8);
               }
@@ -273,8 +273,8 @@ final class ah {
           var7 = id.field_c;
           var8 = var7;
           var8.e(param1, -2147483648);
-          var8.field_m = var8.field_m + 1;
-          var4 = var8.field_m;
+          var8.position = var8.position + 1;
+          var4 = var8.position;
           var8.c(-118, 1);
           var8.a(true, param2.field_u);
           var8.a(true, param2.field_m);
@@ -288,7 +288,7 @@ final class ah {
             var7.b(param2.field_r[var5], false);
           }
           var8.b(true, var4);
-          var8.b(1, -var4 + var8.field_m);
+          var8.b(1, -var4 + var8.position);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "ah.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

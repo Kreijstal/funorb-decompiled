@@ -44,7 +44,7 @@ final class kl implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (ee.field_j != null) {
             cf.field_e = 0;
-            ug.field_a = param0.getX();
+            SocketConnector.field_a = param0.getX();
             wd.field_d = param0.getY();
             je.a(1);
             if (!javax.swing.SwingUtilities.isRightMouseButton(param0)) {

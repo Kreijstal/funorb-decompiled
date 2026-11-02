@@ -186,7 +186,7 @@ class ki extends rc implements oh {
           var11 = new ck(this.field_B);
           var9 = (rc) (var11.a((byte) 125));
           while (var9 != null) {
-            if (var9.a(false)) {
+            if (var9.isLinked(false)) {
               if (!var9.a(param0, param1 + this.field_m, false, param3, param4, param5 + this.field_j, param6)) {
                 var9 = (rc) (var11.c(122));
                 continue;
@@ -295,7 +295,7 @@ class ki extends rc implements oh {
           var9 = new ck(this.field_B);
           var8 = (rc) (var9.a((byte) 77));
           while (var8 != null) {
-            if (var8.a(false)) {
+            if (var8.isLinked(false)) {
               if (var8.b(true) &&
                 var8.a(param0, (byte) 88, param2, param3)) {
                 return true;
@@ -388,7 +388,7 @@ class ki extends rc implements oh {
           }
           var8 = (rc) (var7.a((byte) 93));
           while (var8 != null) {
-            if (var8.a(false)) {
+            if (var8.isLinked(false)) {
               var8.a(param0, param1 + 0, param2, this.field_j + param3, param4, this.field_m + param5);
               var8 = (rc) (var7.c(param1 ^ 127));
               continue;
@@ -424,7 +424,7 @@ class ki extends rc implements oh {
           var8 = new ck(this.field_B);
           var9 = (rc) (var8.a((byte) 98));
           while (var9 != null) {
-            if (var9.a(false)) {
+            if (var9.isLinked(false)) {
               if (var9.b(true) &&
                 var9.a(param0, param1, param2, param3, param4, param5, (byte) 50)) {
                 return true;
@@ -568,7 +568,7 @@ class ki extends rc implements oh {
     }
 
     final static void a(int param0) {
-        ne.field_g = te.field_N.h(92);
+        ne.field_g = te.field_N.readString(92);
         if (param0 > -100) {
           return;
         }
@@ -591,7 +591,7 @@ class ki extends rc implements oh {
           var5 = new ck(this.field_B);
           var6 = (rc) (var5.a((byte) 117));
           while (var6 != null) {
-            if (var6.a(false)) {
+            if (var6.isLinked(false)) {
               var6.a(param0 + this.field_m, 18874, param2 + this.field_j, param3);
               var6 = (rc) (var5.c(param1 ^ 18880));
               continue;

@@ -184,12 +184,12 @@ final class ke extends si {
               uc.field_e < ti.field_e &&
               var3 < ad.field_m &&
               ad.field_m < var3 + kj.field_S.field_t) {
-              if (gb.field_j > 269 - kj.field_S.field_p &&
-                gb.field_j < 269) {
+              if (PacketBuffer.field_j > 269 - kj.field_S.field_p &&
+                PacketBuffer.field_j < 269) {
                 ti.field_e = uc.field_e;
               }
-              if (586 < gb.field_j &&
-                kj.field_S.field_p + 586 > gb.field_j) {
+              if (586 < PacketBuffer.field_j &&
+                kj.field_S.field_p + 586 > PacketBuffer.field_j) {
                 ti.field_e = uc.field_e;
               }
             }
@@ -197,7 +197,7 @@ final class ke extends si {
           if (!param0) {
             return 0;
           }
-          qh.field_b.a(-117, ad.a(ad.field_m, gb.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
+          qh.field_b.a(-117, ad.a(ad.field_m, PacketBuffer.field_j, 0), ad.a(s.field_gb, db.field_o, 0));
           if (qh.field_b.d((byte) -8)) {
             if (qh.field_b.field_f == 0) {
               stackIn_62_0 = 3;

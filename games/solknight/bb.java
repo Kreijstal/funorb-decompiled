@@ -214,7 +214,7 @@ final class bb extends ki implements pi, ka {
               this.field_M = new pj(wk.field_g, (dg) (this));
             }
           } else {
-            this.field_N = new pj(gg.field_c, (dg) null);
+            this.field_N = new pj(IntrusiveNode.field_c, (dg) null);
             this.field_D = new pj(ph.field_e, (dg) null);
             this.field_O.field_B = false;
           }

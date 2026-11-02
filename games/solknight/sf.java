@@ -159,7 +159,7 @@ final class sf {
         if (this.field_l != 0 &&
           wb.field_c != 0) {
           if (0 >= this.field_h) {
-            this.field_h = dh.field_i;
+            this.field_h = GameApplet.field_i;
             this.field_e = this.field_l;
           }
           this.field_h = this.field_h - 1;

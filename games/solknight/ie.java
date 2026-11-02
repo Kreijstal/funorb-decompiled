@@ -53,7 +53,7 @@ final class ie {
         if (param1 != 2647) {
           this.field_b = -116;
         }
-        L1: {
+        regionExit1: {
           var4 = ab.field_s[this.field_d][param2];
           var5 = var4;
           if (var5 != 0) {
@@ -61,31 +61,31 @@ final class ie {
               if (var5 != 5) {
                 if (var5 == 16) {
                   if (this.field_f.f(0)) {
-                    gb.a(param0, 9, -128);
+                    PacketBuffer.a(param0, 9, -128);
                     mb.a(true, 14, 256);
                   }
                 } else {
                   if (var5 != 14) {
                     if (var5 == 3) {
                       if (!(!this.field_f.f(0))) {
-                        gb.a(param0, 4, param1 - 2774);
+                        PacketBuffer.a(param0, 4, param1 - 2774);
                         fb.field_c = this.field_d;
                         mb.a(true, 14, 256);
                       }
-                      break L1;
+                      break regionExit1;
                     }
                     if (6 == var5) {
                       if (this.field_f.f(0)) {
-                        gb.a(param0, fb.field_c, param1 - 2775);
+                        PacketBuffer.a(param0, fb.field_c, param1 - 2775);
                         mb.a(true, 14, 256);
                       }
                     } else {
                       if (var5 == 2) {
                         if (!(!this.field_f.f(0))) {
-                          gb.a(param0, 2, -127);
+                          PacketBuffer.a(param0, 2, -127);
                           mb.a(true, 14, 256);
                         }
-                        break L1;
+                        break regionExit1;
                       }
                       if (17 == var5) {
                         if (!(!this.field_f.f(param1 ^ 2647))) {
@@ -116,15 +116,15 @@ final class ie {
                             nf.field_W[var5] = bk.a(1280, jb.field_g, (byte) -116) - 640;
                             nf.field_W[var5 + 1] = bk.a(720, jb.field_g, (byte) 83);
                           }
-                          gb.a(param0, -1, -128);
+                          PacketBuffer.a(param0, -1, -128);
                           mb.a(true, 14, 256);
                         }
-                        break L1;
+                        break regionExit1;
                       }
                       if (var5 == 18) {
                         if (!(!this.field_f.f(0))) {
                           f.field_d = 0;
-                          ve.field_b = 0;
+                          ClientException.field_b = 0;
                           kh.field_d = 255;
                           pg.field_e = true;
                           uf.field_p = -1;
@@ -133,38 +133,38 @@ final class ie {
                           }
                           kh.field_c = null;
                           if (il.b(507)) {
-                            gb.a(param0, 8, -128);
+                            PacketBuffer.a(param0, 8, -128);
                           } else {
                             if (jl.field_d != 0) {
-                              gb.a(param0, 7, -127);
+                              PacketBuffer.a(param0, 7, -127);
                               mb.a(true, 14, 256);
                             } else {
-                              gb.a(param0, 2, -127);
+                              PacketBuffer.a(param0, 2, -127);
                               mb.a(true, 14, 256);
                             }
                           }
                         }
-                        break L1;
+                        break regionExit1;
                       }
                       if (var5 != 12) {
                         if (var5 == 13) {
                           if (this.field_f.c((byte) 11)) {
-                            gg.a(0, 10);
+                            IntrusiveNode.a(0, 10);
                           }
                           if (this.field_f.e(12542)) {
-                            gg.a(256, 10);
+                            IntrusiveNode.a(256, 10);
                           }
                           if (this.field_f.a(param1 ^ 2570)) {
                             var5 = 64 + (wb.field_a + 9);
                             var6 = (this.a(param2, -3) + (this.a(param2, (byte) 55) - var5) >> 1) + wb.field_a + 8;
-                            var7 = gb.field_j - var6 << 2;
+                            var7 = PacketBuffer.field_j - var6 << 2;
                             if (var7 <= 0) {
-                              gg.a(0, 10);
+                              IntrusiveNode.a(0, 10);
                             } else {
                               if (var7 < 256) {
-                                gg.a(var7, param1 - 2637);
+                                IntrusiveNode.a(var7, param1 - 2637);
                               } else {
-                                gg.a(256, 10);
+                                IntrusiveNode.a(256, 10);
                               }
                             }
                           }
@@ -174,20 +174,20 @@ final class ie {
                               if (var5 == 0) {
                                 var5 = 32;
                               }
-                              gg.a(td.field_l - var5, 10);
+                              IntrusiveNode.a(td.field_l - var5, 10);
                             } else {
-                              gg.a(0, param1 - 2637);
+                              IntrusiveNode.a(0, param1 - 2637);
                             }
                           }
                           if (!(!this.field_f.e((byte) -72))) {
                             if (td.field_l >= 224) {
-                              gg.a(256, param1 ^ 2653);
+                              IntrusiveNode.a(256, param1 ^ 2653);
                             } else {
                               var5 = td.field_l % 32;
-                              gg.a(32 + (td.field_l - var5), 10);
+                              IntrusiveNode.a(32 + (td.field_l - var5), 10);
                             }
                           }
-                          break L1;
+                          break regionExit1;
                         }
                         if (4 == var5) {
                           if (!(!this.field_f.d((byte) -107))) {
@@ -196,11 +196,11 @@ final class ie {
                               mb.a(true, 14, 256);
                             } else {
                               var5 = param0 ? 1 : 0;
-                              ta.a(false, 320, w.field_b, 2, ug.field_g.field_F + ug.field_g.field_s, ug.field_g, 8, ad.field_b.field_F + ad.field_b.field_s, ad.field_b.field_F, w.field_b, 8, 240, ad.field_b, ug.field_g.field_F, var5 != 0);
+                              ta.a(false, 320, w.field_b, 2, SocketConnector.field_g.field_F + SocketConnector.field_g.field_s, SocketConnector.field_g, 8, ad.field_b.field_F + ad.field_b.field_s, ad.field_b.field_F, w.field_b, 8, 240, ad.field_b, SocketConnector.field_g.field_F, var5 != 0);
                               mb.a(true, 14, 256);
                             }
                           }
-                          break L1;
+                          break regionExit1;
                         }
                         switch (var5) {
                           case 7:
@@ -213,15 +213,15 @@ final class ie {
                               }
                               kh.field_c = null;
                               if (0 == jl.field_d) {
-                                gb.a(param0, 2, -128);
+                                PacketBuffer.a(param0, 2, -128);
                               } else {
-                                gb.a(param0, 7, -127);
+                                PacketBuffer.a(param0, 7, -127);
                               }
                             } else {
                               if (lk.field_e != 0) {
-                                gb.a(param0, 8, -128);
+                                PacketBuffer.a(param0, 8, -128);
                               } else {
-                                gb.a(param0, 0, -127);
+                                PacketBuffer.a(param0, 0, -127);
                               }
                             }
                             stackIn_151_0 = (0 < ob.field_l) ? 0 : 9;
@@ -297,7 +297,7 @@ final class ie {
                         if (this.field_f.a(65)) {
                           var5 = 64 + (wb.field_a + 9);
                           var6 = 8 + (-var5 + (this.a(param2, -3) + this.a(param2, (byte) 55)) >> 1) + wb.field_a;
-                          var7 = -var6 + gb.field_j << 2;
+                          var7 = -var6 + PacketBuffer.field_j << 2;
                           if (0 >= var7) {
                             ah.a((byte) -86, 0);
                           } else {
@@ -318,7 +318,7 @@ final class ie {
                     }
                   } else {
                     if (this.field_f.f(param1 - 2647)) {
-                      gb.a(param0, 3, -128);
+                      PacketBuffer.a(param0, 3, -128);
                       fb.field_c = this.field_d;
                       mb.a(true, 14, 256);
                     }
@@ -326,13 +326,13 @@ final class ie {
                 }
               } else {
                 if (this.field_f.f(0)) {
-                  gb.a(param0, 0, -128);
+                  PacketBuffer.a(param0, 0, -128);
                   mb.a(true, 14, 256);
                 }
               }
             } else {
               if (this.field_f.f(0)) {
-                gb.a(param0, -1, -128);
+                PacketBuffer.a(param0, -1, -128);
                 stackIn_46_0 = (ob.field_l > 0) ? 0 : 9;
                 fb.field_c = stackIn_46_0;
                 mb.a(true, 14, 256);
@@ -341,7 +341,7 @@ final class ie {
           } else {
             if (this.field_f.f(0)) {
               oa.field_n = false;
-              ve.field_b = -1;
+              ClientException.field_b = -1;
               ic.field_t = ic.field_t + lc.field_p;
               bi.field_b = null;
               kh.field_c = null;
@@ -376,7 +376,7 @@ final class ie {
               ud.field_k = 0;
               kf.field_G = null;
               pk.a((byte) -96, 1, true);
-              gb.a(param0, -1, param1 ^ -2601);
+              PacketBuffer.a(param0, -1, param1 ^ -2601);
               stackIn_40_0 = (ob.field_l > 0) ? 0 : 9;
               fb.field_c = stackIn_40_0;
               mb.a(true, 14, 256);
@@ -445,7 +445,7 @@ final class ie {
           !il.b(507)) {
           return 180 + this.a(param0, param1 ^ -54);
         }
-        if (!gg.field_f[this.field_d]) {
+        if (!IntrusiveNode.field_f[this.field_d]) {
           var3 = ab.field_s[this.field_d][param0];
           var4 = te.field_I[var3];
           if (var4 == null) {
@@ -506,7 +506,7 @@ final class ie {
           rg.field_c == param2) {
           var8 = 16776960;
         }
-        if (!gg.field_f[this.field_d]) {
+        if (!IntrusiveNode.field_f[this.field_d]) {
           uj.a(var10, var11, var5, w.field_b, var4, 2);
         }
         var12 = ad.field_b;
@@ -549,13 +549,13 @@ final class ie {
         int var2;
         int var3;
         var3 = SolKnight.field_L ? 1 : 0;
-        if (ve.field_b > 240) {
+        if (ClientException.field_b > 240) {
           if (hg.field_F == 0 &&
             !fh.field_d[83] &&
             !fh.field_d[84]) {
             return;
           }
-          ve.field_b = 240;
+          ClientException.field_b = 240;
           return;
         }
         if (9 == this.field_d) {
@@ -564,18 +564,18 @@ final class ie {
             fh.a(62, ia.g(param0 ^ -89));
           }
           if (var2 == 1) {
-            gb.a(false, 0, -128);
+            PacketBuffer.a(false, 0, -128);
             this.field_f.field_f = 0;
           }
           if (2 == var2) {
-            gb.a(true, 0, param0 ^ -128);
+            PacketBuffer.a(true, 0, param0 ^ -128);
           }
         }
         while (wk.a((byte) -56)) {
           if (13 == el.field_n &&
             5 != this.field_d) {
             if (this.field_d == 1) {
-              gb.a(false, -1, param0 ^ -127);
+              PacketBuffer.a(false, -1, param0 ^ -127);
               stackIn_23_0 = (ob.field_l > 0) ? 0 : 9;
               fb.field_c = stackIn_23_0;
               continue;
@@ -583,7 +583,7 @@ final class ie {
             if (8 == this.field_d) {
               continue;
             }
-            gb.a(false, fb.field_c, -127);
+            PacketBuffer.a(false, fb.field_c, -127);
             continue;
           }
           this.e(-257);
@@ -592,7 +592,7 @@ final class ie {
           }
           this.a(false, 2647, this.field_f.field_f);
         }
-        this.field_f.a(param0 - 125, this.a(gb.field_j, (byte) 111, ad.field_m), this.a(db.field_o, (byte) 111, s.field_gb));
+        this.field_f.a(param0 - 125, this.a(PacketBuffer.field_j, (byte) 111, ad.field_m), this.a(db.field_o, (byte) 111, s.field_gb));
         if (-1 != this.field_f.field_f) {
           this.a(true, 2647, this.field_f.field_f);
         }
@@ -633,7 +633,7 @@ final class ie {
           }
           return 200 + jb.field_a[this.field_d];
         }
-        if (!gg.field_f[this.field_d]) {
+        if (!IntrusiveNode.field_f[this.field_d]) {
           var3 = ab.field_s[this.field_d][param0];
           var4 = te.field_I[var3];
           if (var4 == null) {
@@ -718,7 +718,7 @@ final class ie {
           -1 != kd.field_a) {
           var3Lifetime1 = this.field_f.field_f;
         }
-        this.field_f.a(param0, var3Lifetime1, this.a(gb.field_j, (byte) 111, ad.field_m), 127);
+        this.field_f.a(param0, var3Lifetime1, this.a(PacketBuffer.field_j, (byte) 111, ad.field_m), 127);
         this.field_e = -1;
     }
 
@@ -781,14 +781,14 @@ final class ie {
         if (this.field_d == 0 ||
           this.field_d == 1) {
           ah.a(false, param0 ^ 577);
-          je.a(-75, -128, gb.field_j);
+          je.a(-75, -128, PacketBuffer.field_j);
         }
         if (!pg.field_e &&
-          gb.field_j != -1) {
-          ie.a(gb.field_j, ad.field_m, param0 ^ 520);
+          PacketBuffer.field_j != -1) {
+          ie.a(PacketBuffer.field_j, ad.field_m, param0 ^ 520);
         }
-        if (400 <= ve.field_b) {
-          var2 = (-ve.field_b + 500) * 96 / 100;
+        if (400 <= ClientException.field_b) {
+          var2 = (-ClientException.field_b + 500) * 96 / 100;
           mi.a(320, 240, var2, 16711680, 128);
           mi.a(320, 240, var2 * 62 / 64, 16776960, 128);
           mi.a(320, 240, 60 * var2 / 64, 16776960, 128);
@@ -798,9 +798,9 @@ final class ie {
           mi.a(320, 240, 55 * var2 / 64, 16777215, 128);
           mi.a(320, 240, var2 * 54 / 64, 16777215, 128);
         } else {
-          if (ve.field_b >= 350) {
+          if (ClientException.field_b >= 350) {
             var2 = 96;
-            var3 = -(440 * (ve.field_b - 350) / 50) + 440;
+            var3 = -(440 * (ClientException.field_b - 350) / 50) + 440;
             mi.a(320, 240, var2, 16711680, 128);
             mi.a(320, 240, 62 * var2 / 64, 16776960, 128);
             mi.a(320, 240, 60 * var2 / 64, 16776960, 128);
@@ -811,16 +811,16 @@ final class ie {
             mi.a(320, 240, 54 * var2 / 64, 16777215, 128);
             hj.field_n.c(320 - hj.field_n.field_q * 200 / hj.field_n.field_r, -440 + var3, hj.field_n.field_q * 400 / hj.field_n.field_r, 400);
           } else {
-            if (ve.field_b >= 250) {
+            if (ClientException.field_b >= 250) {
               hj.field_n.c(320 - 250 * hj.field_n.field_q / hj.field_n.field_r, -10, 500 * hj.field_n.field_q / hj.field_n.field_r, 500);
               hj.field_p.d(320 - hj.field_p.field_q / 2, 3 * (480 - hj.field_p.field_r) / 5);
-              if (330 <= ve.field_b) {
-                mi.a(0, 0, 640, 480, 16777215, -3944 + 12 * ve.field_b);
+              if (330 <= ClientException.field_b) {
+                mi.a(0, 0, 640, 480, 16777215, -3944 + 12 * ClientException.field_b);
               }
             }
           }
         }
-        if (ve.field_b >= 250) {
+        if (ClientException.field_b >= 250) {
           return;
         }
         qd.field_f[this.field_d].d(10, 11);
@@ -835,14 +835,14 @@ final class ie {
         }
         var6 = -var2Lifetime1 + var3Lifetime1 >> 1;
         var7 = -var4 + var5;
-        if (gg.field_f[this.field_d]) {
+        if (IntrusiveNode.field_f[this.field_d]) {
           var3Lifetime2 = bb.field_P[this.field_d];
           var2Lifetime2 = jb.field_a[this.field_d];
           var6Lifetime1 = -var2Lifetime2 + var3Lifetime2 >> 1;
           uj.a((var6Lifetime1 << 1) + 40, var7 + 50, -20 + var2Lifetime2, h.field_d, var4 - 20, 2);
         }
         if (this.field_d == 0) {
-          ug.field_g.a(uc.field_h[kb.field_b], 480, 95, 16776960, 1);
+          SocketConnector.field_g.a(uc.field_h[kb.field_b], 480, 95, 16776960, 1);
           var8 = 28;
           var9 = 110;
           var10 = 316;
@@ -850,7 +850,7 @@ final class ie {
           h.field_b.c(var8, var9, var11, var10);
           h.field_b.c(-var11 + (640 - var8), var9, var11, var10);
         }
-        L7: {
+        regionExit1: {
           if (2 == this.field_d) {
             this.a(-56);
           } else {
@@ -869,7 +869,7 @@ final class ie {
                         var11Lifetime1 = -37 + (-var8 + 480) + var10Lifetime1 >> 1;
                         fi.a(var9Lifetime1, true, 1, 230, 638, var8, var11Lifetime1);
                         ad.field_b.a(Integer.toString(100 * oa.field_m), 112, -103 + (var11Lifetime1 + 155), 16777215, -1);
-                        ug.field_g.a(qb.field_X, 112, 57 + var11Lifetime1, 0, 0, 16777215, -1, 1, 0, ug.field_g.field_F + ug.field_g.field_s);
+                        SocketConnector.field_g.a(qb.field_X, 112, 57 + var11Lifetime1, 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_F + SocketConnector.field_g.field_s);
                         if (ob.field_l > 0) {
                           var15 = 5000;
                           var13_ref_String = w.field_d;
@@ -883,7 +883,7 @@ final class ie {
                         }
                         ad.field_b.a(var12_ref_String, 222, -103 + (71 + var11Lifetime1), 194, 82, 16776960, 16777215, 1, 1, ad.field_b.field_s + ad.field_b.field_F);
                         ad.field_b.a(Integer.toString(var15), 528, var11Lifetime1 + 155 - 103, 16777215, -1);
-                        ug.field_g.a(var13_ref_String, 528, -103 + (160 + var11Lifetime1), 0, 0, 16777215, -1, 1, 0, ug.field_g.field_F + ug.field_g.field_s);
+                        SocketConnector.field_g.a(var13_ref_String, 528, -103 + (160 + var11Lifetime1), 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_F + SocketConnector.field_g.field_s);
                         ad.field_b.a(var14_ref_String, 320, var11Lifetime1 + 229 - 103, 16776960, -1);
                         h.field_b.c(45, var11Lifetime1 + 200 - 103, 100 * h.field_b.field_q / h.field_b.field_r, 100);
                         h.field_b.c(-(100 * h.field_b.field_q / h.field_b.field_r) + 595, -103 + (var11Lifetime1 + 200), h.field_b.field_q * 100 / h.field_b.field_r, 100);
@@ -904,9 +904,9 @@ final class ie {
                       fi.a(var11Lifetime1Lifetime1, true, 1, 230, 638, var10Lifetime1Lifetime1, var13);
                       ad.field_b.a(bb.a(he.field_e, new String[]{Integer.toString(1 + var8)}, -63), 222, -32 + var13, 194, 82, 16776960, 16777215, 1, 1, ad.field_b.field_F + ad.field_b.field_s);
                       ad.field_b.a(Integer.toString(oa.field_m * 100), 112, var13 + 52, 16777215, -1);
-                      ug.field_g.a(qb.field_X, 112, var13 + 57, 0, 0, 16777215, -1, 1, 0, ug.field_g.field_s + ug.field_g.field_F);
+                      SocketConnector.field_g.a(qb.field_X, 112, var13 + 57, 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_s + SocketConnector.field_g.field_F);
                       ad.field_b.a(Integer.toString(oa.field_m * 100 + lk.field_e), 528, 52 + var13, 16777215, -1);
-                      ug.field_g.a(dc.field_m, 528, -103 + (160 + var13), 0, 0, 16777215, -1, 1, 0, ug.field_g.field_s + ug.field_g.field_F);
+                      SocketConnector.field_g.a(dc.field_m, 528, -103 + (160 + var13), 0, 0, 16777215, -1, 1, 0, SocketConnector.field_g.field_s + SocketConnector.field_g.field_F);
                       ad.field_b.a(gd.field_b, 320, 229 + var13 - 103, 16776960, -1);
                       var14 = var8 + 1 << 3;
                       if (var8 == 0) {
@@ -949,7 +949,7 @@ final class ie {
                   stackIn_75_5 = (jl.field_d != 0);
                   var8 = stackIn_71_0 + ((hd) (Object) stackIn_71_1).a(jl.a(stackIn_72_2, stackIn_74_3, stackIn_74_4, stackIn_75_5), 20, var8, 600, 1000, 16777215, -1, 1, 0, var9Lifetime1Lifetime1) * var9Lifetime1Lifetime1;
                 }
-                break L7;
+                break regionExit1;
               }
               fi.a(118, true, 1, 398, 638, 277, 129);
               stackIn_37_1 = (7 == this.field_d);
@@ -973,8 +973,8 @@ final class ie {
     }
 
     private final void b(byte param0) {
-        int var2 = ug.field_g.field_F + ug.field_g.field_s;
-        int var3 = ug.field_g.b(c.field_E, 600);
+        int var2 = SocketConnector.field_g.field_F + SocketConnector.field_g.field_s;
+        int var3 = SocketConnector.field_g.b(c.field_E, 600);
         int var4 = (4 + var3) * var2 + 60;
         int var5 = -var4 + 574 >> 1;
         ah.field_i[this.field_d] = -30 + var5 + var4;
@@ -982,13 +982,13 @@ final class ie {
         if (param0 <= 39) {
           field_c = (long[][]) null;
         }
-        var5 = var5 + ug.field_g.a(c.field_E, 20, var5, 600, 640, 16777215, -1, 1, 0, var2) * var2;
+        var5 = var5 + SocketConnector.field_g.a(c.field_E, 20, var5, 600, 640, 16777215, -1, 1, 0, var2) * var2;
         var5 = var5 + (var2 << 1);
-        ug.field_g.a(ii.field_i, 320, var5, 16776960, -1);
+        SocketConnector.field_g.a(ii.field_i, 320, var5, 16776960, -1);
         var5 = var5 + var2;
-        ug.field_g.a(pg.field_c, 320, var5, 16776960, -1);
+        SocketConnector.field_g.a(pg.field_c, 320, var5, 16776960, -1);
         var5 = var5 + var2;
-        ug.field_g.a(h.field_c, 320, var5, 16776960, -1);
+        SocketConnector.field_g.a(h.field_c, 320, var5, 16776960, -1);
     }
 
     private final void a(int param0) {
@@ -1012,8 +1012,8 @@ final class ie {
         if (param0 > -22) {
           this.field_e = -45;
         }
-        L1: {
-          var3 = ug.field_g;
+        regionExit1: {
+          var3 = SocketConnector.field_g;
           uj.a(638, 313, 1, h.field_d, 86, 2);
           if (!il.b(507)) {
             if (kh.field_c == null) {
@@ -1056,7 +1056,7 @@ final class ie {
                   var3.b(ne.field_a, 380, var8Lifetime1, 1134591, -1);
                   var3.b(mf.field_K, 582, var8Lifetime1, 1134591, -1);
                 }
-                break L1;
+                break regionExit1;
               }
               var2 = lk.field_a;
             }
@@ -1110,12 +1110,12 @@ final class ie {
         var6 = 0;
         var7 = -1;
         for (var8 = 0; var8 < hb.field_m.length; var8++) {
-          L10: {
+          regionExit1: {
             if ((var5 & 1 << var8) != 0) {
               ii.field_f[var8].e(var3, var4);
             } else {
               if (param0) {
-                break L10;
+                break regionExit1;
               }
               if (ob.field_l <= 0) {
                 if ((1 << var8 & 28032) != 0) {
@@ -1127,8 +1127,8 @@ final class ie {
                 jc.field_b.e(var3, var4);
               }
             }
-            if (var3 <= gb.field_j &&
-              gb.field_j <= 32 + var3 &&
+            if (var3 <= PacketBuffer.field_j &&
+              PacketBuffer.field_j <= 32 + var3 &&
               var4 <= ad.field_m &&
               ad.field_m <= 32 + var4) {
               var7 = var8;
@@ -1221,7 +1221,7 @@ final class ie {
 
     final static void b(int param0) {
         String var2 = (String) null;
-        le.a(-88, ug.field_d, (String) null);
+        le.a(-88, SocketConnector.field_d, (String) null);
         if (param0 > -98) {
           ie.a(-121, 32, 65);
         }

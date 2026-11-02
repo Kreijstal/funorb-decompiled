@@ -10,10 +10,10 @@ abstract class va {
     hl field_k;
     long field_b;
     int field_j;
-    gb field_e;
+    PacketBuffer field_e;
     byte field_n;
     volatile int field_c;
-    gb field_h;
+    PacketBuffer field_h;
     volatile int field_l;
     ic field_a;
 
@@ -123,11 +123,11 @@ abstract class va {
         this.field_i = new hl();
         this.field_d = new hl();
         this.field_k = new hl();
-        this.field_e = new gb(6);
+        this.field_e = new PacketBuffer(6);
         this.field_n = (byte) 0;
         this.field_l = 0;
         this.field_c = 0;
-        this.field_h = new gb(10);
+        this.field_h = new PacketBuffer(10);
     }
 
     static {

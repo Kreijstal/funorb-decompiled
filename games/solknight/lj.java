@@ -11,7 +11,7 @@ final class lj extends ki implements ka {
     private pj[] field_E;
     static long field_G;
 
-    final static boolean a(gb param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -22,7 +22,7 @@ final class lj extends ki implements ka {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.j(255);
+          var2_int = param0.readUnsignedByte(255);
           stackIn_4_0 = (param1 != ~var2_int) ? 0 : 1;
           var3 = stackIn_4_0;
           stackIn_5_0 = var3;
@@ -1257,7 +1257,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("retry", 4);
                 if (var2 != null) {
-                  gg.field_c = da.a(true, var2);
+                  IntrusiveNode.field_c = da.a(true, var2);
                 }
                 var2 = vd.a("back", 4);
                 if (var2 != null) {
@@ -1988,7 +1988,7 @@ final class lj extends ki implements ka {
                 }
                 var2 = vd.a("unpacking_soundeffects", param0 - 26704);
                 if (var2 != null) {
-                  ug.field_e = da.a(true, var2);
+                  SocketConnector.field_e = da.a(true, var2);
                 }
                 var2 = vd.a("unpacking_music", 4);
                 if (null != var2) {
@@ -3176,8 +3176,8 @@ final class lj extends ki implements ka {
                   throw fc.a((Throwable) ((Object) stackIn_2614_0), ((StringBuilder) (Object) stackIn_2614_1).append(stackIn_2615_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2623_0 = (!dh.field_l);
-                  dh.field_l = stackIn_2623_0;
+                  stackIn_2623_0 = (!GameApplet.field_l);
+                  GameApplet.field_l = stackIn_2623_0;
                 }
             }
         }
@@ -3279,7 +3279,7 @@ final class lj extends ki implements ka {
         var8 = SolKnight.field_L ? 1 : 0;
         try {
           var6_int = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (this.field_K > var6_int) {
               if (var8 != 0) {
                 return;
@@ -3289,10 +3289,10 @@ final class lj extends ki implements ka {
                 var7 = this.field_L[var6_int];
                 if (var7 == -1) {
                   this.field_H.f(param4);
-                  break L2;
+                  break scanLoop1;
                 }
                 h.a(this.field_L[var6_int], true);
-                break L2;
+                break scanLoop1;
               }
               var6_int++;
               continue;

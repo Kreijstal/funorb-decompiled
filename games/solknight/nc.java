@@ -2,44 +2,44 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nc {
-    gg field_e;
+    IntrusiveNode field_e;
     static String field_b;
     static int field_g;
     static long field_f;
     static java.math.BigInteger field_d;
-    private gg field_c;
+    private IntrusiveNode field_c;
     static int field_a;
 
-    final gg e(byte param0) {
+    final IntrusiveNode e(byte param0) {
         if (param0 != 86) {
-          return (gg) null;
+          return (IntrusiveNode) null;
         }
-        gg var2 = this.field_e.field_a;
+        IntrusiveNode var2 = this.field_e.next;
         if (var2 != this.field_e) {
-          var2.c(10);
+          var2.unlink(10);
           return var2;
         }
         return null;
     }
 
-    final gg b(int param0) {
-        gg var2 = this.field_c;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = this.field_c;
         if (this.field_e == var2) {
           this.field_c = null;
           return null;
         }
         if (param0 < -13) {
-          this.field_c = var2.field_d;
+          this.field_c = var2.previous;
           return var2;
         }
         this.c(125);
-        this.field_c = var2.field_d;
+        this.field_c = var2.previous;
         return var2;
     }
 
-    final gg b(byte param0) {
-        gg var2 = null;
-        gg var2Lifetime1;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 94) {
           field_f = 120L;
           var2 = this.field_c;
@@ -47,7 +47,7 @@ final class nc {
             this.field_c = null;
             return null;
           }
-          this.field_c = var2.field_a;
+          this.field_c = var2.next;
           return var2;
         }
         var2Lifetime1 = this.field_c;
@@ -55,24 +55,24 @@ final class nc {
           this.field_c = null;
           return null;
         }
-        this.field_c = var2Lifetime1.field_a;
+        this.field_c = var2Lifetime1.next;
         return var2Lifetime1;
     }
 
-    final gg a(int param0) {
+    final IntrusiveNode a(int param0) {
         if (param0 != 0) {
-          return (gg) null;
+          return (IntrusiveNode) null;
         }
-        gg var2 = this.field_e.field_d;
+        IntrusiveNode var2 = this.field_e.previous;
         if (var2 != this.field_e) {
-          var2.c(10);
+          var2.unlink(10);
           return var2;
         }
         return null;
     }
 
-    final gg c(byte param0) {
-        gg var2 = this.field_e.field_a;
+    final IntrusiveNode c(byte param0) {
+        IntrusiveNode var2 = this.field_e.next;
         if (param0 != 96) {
           java.awt.Canvas var3 = (java.awt.Canvas) null;
           nc.a((byte) 61, (java.awt.Canvas) null);
@@ -80,14 +80,14 @@ final class nc {
             this.field_c = null;
             return null;
           }
-          this.field_c = var2.field_a;
+          this.field_c = var2.next;
           return var2;
         }
         if (var2 == this.field_e) {
           this.field_c = null;
           return null;
         }
-        this.field_c = var2.field_a;
+        this.field_c = var2.next;
         return var2;
     }
 
@@ -103,24 +103,24 @@ final class nc {
 
     final boolean c(int param0) {
         if (param0 == -1) {
-          return this.field_e == this.field_e.field_d ? true : false;
+          return this.field_e == this.field_e.previous ? true : false;
         }
         field_f = 105L;
-        return this.field_e == this.field_e.field_d ? true : false;
+        return this.field_e == this.field_e.previous ? true : false;
     }
 
-    final void a(gg param0, int param1) {
+    final void a(IntrusiveNode param0, int param1) {
         try {
           if (param1 != -7044) {
             field_g = -70;
           }
-          if (null != param0.field_a) {
-            param0.c(param1 ^ -7050);
+          if (null != param0.next) {
+            param0.unlink(param1 ^ -7050);
           }
-          param0.field_d = this.field_e;
-          param0.field_a = this.field_e.field_a;
-          param0.field_a.field_d = param0;
-          param0.field_d.field_a = param0;
+          param0.previous = this.field_e;
+          param0.next = this.field_e.next;
+          param0.next.previous = param0;
+          param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "nc.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -159,42 +159,42 @@ final class nc {
         }
     }
 
-    final void a(int param0, gg param1) {
+    final void a(int param0, IntrusiveNode param1) {
         try {
-          if (null != param1.field_a) {
-            param1.c(10);
+          if (null != param1.next) {
+            param1.unlink(10);
           }
-          param1.field_d = this.field_e.field_d;
-          param1.field_a = this.field_e;
-          param1.field_a.field_d = param1;
+          param1.previous = this.field_e.previous;
+          param1.next = this.field_e;
+          param1.next.previous = param1;
           if (param0 != -3024) {
             this.c((byte) -25);
           }
-          param1.field_d.field_a = param1;
+          param1.previous.next = param1;
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "nc.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final gg a(byte param0) {
-        gg var2 = null;
-        gg var2Lifetime1;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 51) {
           field_f = -72L;
-          var2 = this.field_e.field_d;
+          var2 = this.field_e.previous;
           if (this.field_e == var2) {
             this.field_c = null;
             return null;
           }
-          this.field_c = var2.field_d;
+          this.field_c = var2.previous;
           return var2;
         }
-        var2Lifetime1 = this.field_e.field_d;
+        var2Lifetime1 = this.field_e.previous;
         if (this.field_e == var2Lifetime1) {
           this.field_c = null;
           return null;
         }
-        this.field_c = var2Lifetime1.field_d;
+        this.field_c = var2Lifetime1.previous;
         return var2Lifetime1;
     }
 
@@ -298,19 +298,19 @@ final class nc {
     }
 
     public nc() {
-        this.field_e = new gg();
-        this.field_e.field_d = this.field_e;
-        this.field_e.field_a = this.field_e;
+        this.field_e = new IntrusiveNode();
+        this.field_e.previous = this.field_e;
+        this.field_e.next = this.field_e;
     }
 
     final void a(boolean param0) {
-        gg var2;
+        IntrusiveNode var2;
         int var3;
         var3 = SolKnight.field_L ? 1 : 0;
         while (true) {
-          var2 = this.field_e.field_d;
+          var2 = this.field_e.previous;
           if (var2 != this.field_e) {
-            var2.c(10);
+            var2.unlink(10);
             continue;
           }
           break;

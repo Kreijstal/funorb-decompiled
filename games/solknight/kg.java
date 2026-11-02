@@ -35,11 +35,11 @@ final class kg {
     private kg(int param0, int param1, int param2) {
     }
 
-    final void a(byte param0, gb param1, byte[] param2) {
+    final void a(byte param0, PacketBuffer param1, byte[] param2) {
         try {
           try {
-            if (param1.field_l[param1.field_m] != 31 ||
-              -117 != param1.field_l[param1.field_m + 1]) {
+            if (param1.payload[param1.position] != 31 ||
+              -117 != param1.payload[param1.position + 1]) {
               throw new RuntimeException("");
             }
             if (null == this.field_d) {
@@ -47,10 +47,10 @@ final class kg {
             }
             if (param0 != 97) {
               byte[] var5 = (byte[]) null;
-              this.a((byte) 118, (gb) null, (byte[]) null);
+              this.a((byte) 118, (PacketBuffer) null, (byte[]) null);
             }
             try {
-              this.field_d.setInput(param1.field_l, 10 + param1.field_m, -param1.field_m + (-10 + (-8 + param1.field_l.length)));
+              this.field_d.setInput(param1.payload, 10 + param1.position, -param1.position + (-10 + (-8 + param1.payload.length)));
               this.field_d.inflate(param2);
             } catch (Exception exception) {
               this.field_d.reset();

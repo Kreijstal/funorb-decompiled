@@ -56,9 +56,9 @@ final class pg {
             field_d = (long[]) null;
           }
           var27 = te.field_N;
-          var2 = var27.j(255);
+          var2 = var27.readUnsignedByte(255);
           if (var2 == 0) {
-            var3 = var27.i(-109);
+            var3 = var27.readUnsignedShort(-109);
             var4_ref_sd = (sd) (r.field_b.a((byte) 51));
             while (var4_ref_sd != null) {
               if (var3 != var4_ref_sd.field_o) {
@@ -71,7 +71,7 @@ final class pg {
               je.a(false);
               return;
             }
-            var5 = var27.j(255);
+            var5 = var27.readUnsignedByte(255);
             if (var5 != 0) {
               var6_int = var4_ref_sd.field_k;
               da.field_a[0].field_c = false;
@@ -79,12 +79,12 @@ final class pg {
               var7 = var4_ref_sd.field_l;
               da.field_a[0].field_a = null;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                da.field_a[var8_int].field_d = var27.h(115);
+                da.field_a[var8_int].field_d = var27.readString(115);
                 da.field_a[var8_int].field_c = false;
-                if (var27.j(255) != 1) {
+                if (var27.readUnsignedByte(255) != 1) {
                   da.field_a[var8_int].field_a = null;
                 } else {
-                  da.field_a[var8_int].field_a = var27.h(105);
+                  da.field_a[var8_int].field_a = var27.readString(105);
                 }
               }
               dupTemp$0 = new String[3][var6_int];
@@ -103,13 +103,13 @@ final class pg {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var27.j(255);
+              var18 = var27.readUnsignedByte(255);
               if (0 < var18) {
                 for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var27.j(255);
+                  var20 = var27.readUnsignedByte(255);
                   var21 = da.field_a[var20].field_d;
-                  var22 = var27.a(10526);
-                  var24 = var27.field_m;
+                  var22 = var27.readLong(10526);
+                  var24 = var27.position;
                   if (var6_int > var19) {
                     var8[0][var12] = var21;
                     var9[0][var12] = da.field_a[var20].field_a;
@@ -117,7 +117,7 @@ final class pg {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var27.e(true);
+                      var11[0][incrementValue$3] = var27.readInt(true);
                     }
                     var12++;
                   }
@@ -126,12 +126,12 @@ final class pg {
                     var8[1][var13] = ne.field_g;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
-                    var27.field_m = var24;
+                    var27.position = var24;
                     var13++;
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var27.e(true);
+                      var11[1][incrementValue$4] = var27.readInt(true);
                     }
                   }
                   if (var14 < var6_int &&
@@ -140,24 +140,24 @@ final class pg {
                     var8[2][var14] = var21;
                     var9[2][var14] = da.field_a[var20].field_a;
                     var10[2][var14] = var22;
-                    var27.field_m = var24;
+                    var27.position = var24;
                     var14++;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var27.e(true);
+                      var11[2][incrementValue$5] = var27.readInt(true);
                     }
                   }
                 }
               }
             }
             var4_ref_sd.field_h = true;
-            var4_ref_sd.c(10);
+            var4_ref_sd.unlink(10);
             return;
           }
           if (1 == var2) {
-            var3Lifetime1 = var27.i(-4);
-            var4 = var27.a(10526);
+            var3Lifetime1 = var27.readUnsignedShort(-4);
+            var4 = var27.readLong(10526);
             var6 = (qc) (sb.field_c.a((byte) 51));
             while (var6 != null) {
               if (var6.field_u != var3Lifetime1) {
@@ -171,7 +171,7 @@ final class pg {
               return;
             }
             var6.field_n = var4;
-            var6.c(10);
+            var6.unlink(10);
             return;
           }
           hi.a((Throwable) null, "HS1: " + oc.a(false), 1);
@@ -194,7 +194,7 @@ final class pg {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          gb var2 = null;
+          PacketBuffer var2 = null;
           if (il.field_c.field_l >= 4) {
             if (-1 == il.field_c.field_c) {
               return 3;
@@ -205,30 +205,30 @@ final class pg {
             return 4;
           }
           try {
-            if (0 == ug.field_f) {
+            if (0 == SocketConnector.field_f) {
               ik.field_b = n.field_a.a(qk.field_o, ue.field_a, -28148);
-              ug.field_f = ug.field_f + 1;
+              SocketConnector.field_f = SocketConnector.field_f + 1;
             }
-            if (ug.field_f == 1) {
+            if (SocketConnector.field_f == 1) {
               if (2 == ik.field_b.field_c) {
                 stackIn_14_0 = ua.a(-1, (byte) -86);
                 return stackIn_14_0;
               }
               if (ik.field_b.field_c == 1) {
-                ug.field_f = ug.field_f + 1;
+                SocketConnector.field_f = SocketConnector.field_f + 1;
               }
             }
-            if (ug.field_f == 2) {
+            if (SocketConnector.field_f == 2) {
               qf.field_a = new ad((java.net.Socket) (ik.field_b.field_e), n.field_a);
-              var2 = new gb(13);
+              var2 = new PacketBuffer(13);
               si.a(hj.field_x, (byte) 22, sa.field_o, q.field_a, var2);
               var2.c(param0 + 35, 15);
               var2.b(nc.field_a, false);
-              qf.field_a.a(-28748, 0, 13, var2.field_l);
-              ug.field_f = ug.field_f + 1;
+              qf.field_a.a(-28748, 0, 13, var2.payload);
+              SocketConnector.field_f = SocketConnector.field_f + 1;
               cj.field_c = 30000L + je.a(1);
             }
-            if (ug.field_f == 3) {
+            if (SocketConnector.field_f == 3) {
               if (qf.field_a.b(-30119) <= 0) {
                 if (cj.field_c < je.a(param0 ^ 82)) {
                   stackIn_29_0 = ua.a(-2, (byte) -86);
@@ -240,18 +240,18 @@ final class pg {
                   stackIn_25_0 = ua.a(var1_int, (byte) -86);
                   return stackIn_25_0;
                 }
-                ug.field_f = ug.field_f + 1;
+                SocketConnector.field_f = SocketConnector.field_f + 1;
               }
             }
             if (param0 != 83) {
               pg.a((byte) 9);
             }
-            if (ug.field_f != 4) {
+            if (SocketConnector.field_f != 4) {
               stackIn_36_0 = -1;
               return stackIn_36_0;
             }
             il.field_c.a(la.field_n, (byte) 106, qf.field_a);
-            ug.field_f = 0;
+            SocketConnector.field_f = 0;
             ik.field_b = null;
             qf.field_a = null;
             stackIn_34_0 = 0;

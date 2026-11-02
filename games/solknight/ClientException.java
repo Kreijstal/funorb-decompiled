@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ve extends RuntimeException {
+final class ClientException extends RuntimeException {
     static bb field_a;
     String field_d;
     static int field_b;
@@ -23,7 +23,7 @@ final class ve extends RuntimeException {
         try {
           var4_int = param0.c(103, param3);
           if (param1 >= -62) {
-            ve.a((byte) -74);
+            ClientException.a((byte) -74);
           }
           var5 = param0.a(param2, -1, var4_int);
           stackIn_3_0 = wg.a((byte) 47, param0, var4_int, var5);
@@ -111,7 +111,7 @@ final class ve extends RuntimeException {
         field_a = null;
     }
 
-    ve(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_c = param0;
         this.field_d = param1;
     }

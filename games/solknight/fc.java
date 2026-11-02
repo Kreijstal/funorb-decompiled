@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fc extends gg {
+final class fc extends IntrusiveNode {
     static int field_o;
     static boolean field_m;
     byte[] field_h;
@@ -59,7 +59,7 @@ final class fc extends gg {
               } else {
                 lf.field_a = rj.a(param0, (byte) 102, param4, false);
               }
-              id.field_c.field_m = 0;
+              id.field_c.position = 0;
               id.field_c.c(param5 ^ -121, 14);
               id.field_c.c(-127, lf.field_a.a(77).field_e);
               qf.a(param5 + 0, -1);
@@ -67,8 +67,8 @@ final class fc extends gg {
             }
             if (ef.field_e == gl.field_s &&
               bf.c(81, 1)) {
-              var6_int = te.field_N.j(255);
-              te.field_N.field_m = 0;
+              var6_int = te.field_N.readUnsignedByte(255);
+              te.field_N.position = 0;
               if (0 != var6_int) {
                 ef.field_e = ik.field_e;
                 ob.field_h = var6_int;
@@ -79,17 +79,17 @@ final class fc extends gg {
             }
             if (ef.field_e == pl.field_b &&
               bf.c(54, 8)) {
-              i.field_H = te.field_N.a(10526);
-              te.field_N.field_m = 0;
+              i.field_H = te.field_N.readLong(10526);
+              te.field_N.position = 0;
               ci.a(-25776, param2, param1, lf.field_a, param3);
               ef.field_e = rc.field_o;
             }
             boolean decompiledFrameRemainder0 = true;
             if (ef.field_e == rc.field_o &&
               bf.c(53, 1)) {
-              var6_intLifetime1 = te.field_N.j(255);
+              var6_intLifetime1 = te.field_N.readUnsignedByte(255);
               ob.field_h = var6_intLifetime1;
-              te.field_N.field_m = 0;
+              te.field_N.position = 0;
               ri.field_a = null;
               if (0 != var6_intLifetime1 &&
                 var6_intLifetime1 != 1) {
@@ -112,12 +112,12 @@ final class fc extends gg {
             }
             if (dk.field_h == ef.field_e &&
               qd.b((byte) 127)) {
-              kc.field_P = te.field_N.a(10526);
-              lh.field_s = te.field_N.j(255);
-              te.field_N.j(param5 + 255);
-              ob.field_l = te.field_N.i(param5 - 103);
+              kc.field_P = te.field_N.readLong(10526);
+              lh.field_s = te.field_N.readUnsignedByte(255);
+              te.field_N.readUnsignedByte(param5 + 255);
+              ob.field_l = te.field_N.readUnsignedShort(param5 - 103);
               var12 = te.field_N.g(87);
-              var7 = te.field_N.j(255);
+              var7 = te.field_N.readUnsignedByte(255);
               if (0 != (var7 & 1)) {
                 uf.d(31911);
               }
@@ -130,19 +130,19 @@ final class fc extends gg {
                 }
               }
               if (b.field_b) {
-                te.field_N.j(255);
-                te.field_N.j(255);
-                te.field_N.e(true);
-                me.field_d = te.field_N.i(param5 - 105);
+                te.field_N.readUnsignedByte(255);
+                te.field_N.readUnsignedByte(255);
+                te.field_N.readInt(true);
+                me.field_d = te.field_N.readUnsignedShort(param5 - 105);
                 dk.field_l = new byte[me.field_d];
                 for (var8 = 0; var8 < me.field_d; var8++) {
-                  dk.field_l[var8] = te.field_N.a((byte) -14);
+                  dk.field_l[var8] = te.field_N.readByte((byte) -14);
                 }
               }
-              ne.field_g = te.field_N.h(16);
+              ne.field_g = te.field_N.readString(16);
               var13 = (CharSequence) ((Object) ne.field_g);
               kf.field_D = jg.a(var13, -2);
-              c.field_H = te.field_N.j(255);
+              c.field_H = te.field_N.readUnsignedByte(255);
               ef.field_e = jj.field_Y;
               if (lf.field_a.a(123) != dc.field_k) {
                 if (lf.field_a.a(param5 + 70) == qb.field_L) {
@@ -194,7 +194,7 @@ final class fc extends gg {
               if (ob.field_h == 7) {
                 ob.field_h = 3;
               }
-              md.field_v = te.field_N.h(param5 + 121);
+              md.field_v = te.field_N.readString(param5 + 121);
               je.field_c = false;
               stackIn_85_0 = ob.field_h;
               return stackIn_85_0;
@@ -205,7 +205,7 @@ final class fc extends gg {
             }
             if (null == lf.field_d) {
               if (je.field_c) {
-                if (dh.b(-1) > 30000L) {
+                if (GameApplet.b(-1) > 30000L) {
                   md.field_v = il.field_d;
                 } else {
                   md.field_v = cl.field_j;
@@ -338,13 +338,13 @@ final class fc extends gg {
         }
     }
 
-    final static ve a(Throwable param0, String param1) {
-        ve var2 = null;
-        if (param0 instanceof ve) {
-          var2 = (ve) ((Object) param0);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
           var2.field_d = var2.field_d + ' ' + param1;
         } else {
-          var2 = new ve(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }
@@ -402,7 +402,7 @@ final class fc extends gg {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        gb var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         g var40 = null;
         byte[] var41 = null;
@@ -488,41 +488,41 @@ final class fc extends gg {
           this.field_q = new sh[128];
           this.field_s = new short[128];
           this.field_k = new int[128];
-          var38 = new gb(param0);
-          for (var3 = 0; 0 != var38.field_l[var3 + var38.field_m]; var3++) {
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; 0 != var38.payload[var3 + var38.position]; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
           var4 = var42;
           for (var5 = 0; var3 > var5; var5++) {
-            var4[var5] = var38.a((byte) -14);
+            var4[var5] = var38.readByte((byte) -14);
           }
           var3++;
-          var38.field_m = var38.field_m + 1;
-          var5Lifetime1 = var38.field_m;
-          var38.field_m = var38.field_m + var3;
-          for (var6 = 0; var38.field_l[var38.field_m + var6] != 0; var6++) {
+          var38.position = var38.position + 1;
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; var38.payload[var38.position + var6] != 0; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
           var7 = var43;
           for (var8 = 0; var6 > var8; var8++) {
-            var7[var8] = var38.a((byte) -14);
+            var7[var8] = var38.readByte((byte) -14);
           }
           var6++;
-          var38.field_m = var38.field_m + 1;
-          var8Lifetime1 = var38.field_m;
-          var38.field_m = var38.field_m + var6;
-          for (var9 = 0; var38.field_l[var9 + var38.field_m] != 0; var9++) {
+          var38.position = var38.position + 1;
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; var38.payload[var9 + var38.position] != 0; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
           var10 = var44;
           for (var11_int = 0; var9 > var11_int; var11_int++) {
-            var10[var11_int] = var38.a((byte) -14);
+            var10[var11_int] = var38.readByte((byte) -14);
           }
           var9++;
-          var38.field_m = var38.field_m + 1;
+          var38.position = var38.position + 1;
           var53 = new byte[var9];
           var39 = var53;
           var11 = var39;
@@ -531,7 +531,7 @@ final class fc extends gg {
             var13_int = 1;
             var12 = 2;
             for (var14 = 2; var9 > var14; var14++) {
-              var15_int = var38.j(255);
+              var15_int = var38.readUnsignedByte(255);
               if (var15_int != 0) {
                 if (var13_int >= var15_int) {
                   var15_int--;
@@ -553,17 +553,17 @@ final class fc extends gg {
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
-            var16_int = var38.j(255);
+            var16_int = var38.readUnsignedByte(255);
             if (var16_int > 0) {
               var15_ref.field_j = new byte[2 * var16_int];
             }
-            var16_intLifetime1 = var38.j(255);
+            var16_intLifetime1 = var38.readUnsignedByte(255);
             if (var16_intLifetime1 > 0) {
               var15_ref.field_i = new byte[2 + 2 * var16_intLifetime1];
               var40.field_i[1] = (byte)64;
             }
           }
-          var14Lifetime2 = var38.j(255);
+          var14Lifetime2 = var38.readUnsignedByte(255);
           if (var14Lifetime2 > 0) {
             stackIn_39_0 = new byte[2 * var14Lifetime2];
           } else {
@@ -572,7 +572,7 @@ final class fc extends gg {
           var58 = stackIn_39_0;
           var46 = var58;
           var15 = var46;
-          var14Lifetime3 = var38.j(255);
+          var14Lifetime3 = var38.readUnsignedByte(255);
           if (var14Lifetime3 <= 0) {
             stackIn_42_0 = null;
           } else {
@@ -580,24 +580,24 @@ final class fc extends gg {
           }
           var47 = stackIn_42_0;
           var16 = var47;
-          for (var17 = 0; var38.field_l[var38.field_m + var17] != 0; var17++) {
+          for (var17 = 0; var38.payload[var38.position + var17] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
           var18 = var41;
           for (var19 = 0; var17 > var19; var19++) {
-            var18[var19] = var38.a((byte) -14);
+            var18[var19] = var38.readByte((byte) -14);
           }
-          var38.field_m = var38.field_m + 1;
+          var38.position = var38.position + 1;
           var17++;
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
-            var19Lifetime1 = var19Lifetime1 + var38.j(255);
+            var19Lifetime1 = var19Lifetime1 + var38.readUnsignedByte(255);
             this.field_s[var20] = (short)var19Lifetime1;
           }
           var19Lifetime2 = 0;
           for (var20Lifetime1 = 0; var20Lifetime1 < 128; var20Lifetime1++) {
-            var19Lifetime2 = var19Lifetime2 + var38.j(255);
+            var19Lifetime2 = var19Lifetime2 + var38.readUnsignedByte(255);
             this.field_s[var20Lifetime1] = (short)(this.field_s[var20Lifetime1] + (var19Lifetime2 << 8));
           }
           var20Lifetime2 = 0;
@@ -629,7 +629,7 @@ final class fc extends gg {
                 }
                 incrementValue$6 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = -1 + var38.field_l[incrementValue$6];
+                var23Lifetime1 = -1 + var38.payload[incrementValue$6];
               }
               this.field_h[var24] = (byte)var23Lifetime1;
               var20Lifetime3--;
@@ -643,7 +643,7 @@ final class fc extends gg {
               if (var20Lifetime4 == 0) {
                 incrementValue$3 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = 16 + var38.field_l[incrementValue$3] << 2;
+                var24Lifetime1 = 16 + var38.payload[incrementValue$3] << 2;
                 if (var56.length <= var21Lifetime2) {
                   var20Lifetime4 = -1;
                 } else {
@@ -682,34 +682,34 @@ final class fc extends gg {
                 var20Lifetime6 = -1;
               }
               if (0 < this.field_k[var27]) {
-                var26Lifetime1 = 1 + var38.j(255);
+                var26Lifetime1 = 1 + var38.readUnsignedByte(255);
               }
             }
             var20Lifetime6--;
             this.field_p[var27] = (byte)var26Lifetime1;
           }
-          this.field_j = var38.j(255) + 1;
+          this.field_j = var38.readUnsignedByte(255) + 1;
           for (var27Lifetime1 = 0; var27Lifetime1 < var12; var27Lifetime1++) {
             var45 = var13[var27Lifetime1];
             if (null != var45.field_j) {
               for (var29 = 1; var29 < var45.field_j.length; var29 += 2) {
-                var45.field_j[var29] = var38.a((byte) -14);
+                var45.field_j[var29] = var38.readByte((byte) -14);
               }
             }
             if (null != var45.field_i) {
               for (var29Lifetime5 = 3; -2 + var45.field_i.length > var29Lifetime5; var29Lifetime5 += 2) {
-                var45.field_i[var29Lifetime5] = var38.a((byte) -14);
+                var45.field_i[var29Lifetime5] = var38.readByte((byte) -14);
               }
             }
           }
           if (var15 != null) {
             for (var27Lifetime2 = 1; var58.length > var27Lifetime2; var27Lifetime2 += 2) {
-              var15[var27Lifetime2] = var38.a((byte) -14);
+              var15[var27Lifetime2] = var38.readByte((byte) -14);
             }
           }
           if (null != var16) {
             for (var27Lifetime3 = 1; var27Lifetime3 < var47.length; var27Lifetime3 += 2) {
-              var16[var27Lifetime3] = var38.a((byte) -14);
+              var16[var27Lifetime3] = var38.readByte((byte) -14);
             }
           }
           for (var27Lifetime4 = 0; var12 > var27Lifetime4; var27Lifetime4++) {
@@ -718,7 +718,7 @@ final class fc extends gg {
             if (null != var48.field_i) {
               var19Lifetime3 = 0;
               for (var29Lifetime1 = 2; var48.field_i.length > var29Lifetime1; var29Lifetime1 += 2) {
-                var19Lifetime3 = 1 + (var19Lifetime3 + var38.j(255));
+                var19Lifetime3 = 1 + (var19Lifetime3 + var38.readUnsignedByte(255));
                 var48.field_i[var29Lifetime1] = (byte)var19Lifetime3;
               }
             }
@@ -728,16 +728,16 @@ final class fc extends gg {
             if (var49.field_j != null) {
               var19Lifetime4 = 0;
               for (var29Lifetime2 = 2; var29Lifetime2 < var49.field_j.length; var29Lifetime2 += 2) {
-                var19Lifetime4 = var38.j(255) + var19Lifetime4 + 1;
+                var19Lifetime4 = var38.readUnsignedByte(255) + var19Lifetime4 + 1;
                 var49.field_j[var29Lifetime2] = (byte)var19Lifetime4;
               }
             }
           }
           if (var15 != null) {
-            var19Lifetime5 = var38.j(255);
+            var19Lifetime5 = var38.readUnsignedByte(255);
             var15[0] = (byte)var19Lifetime5;
             for (var27Lifetime6 = 2; var27Lifetime6 < var58.length; var27Lifetime6 += 2) {
-              var19Lifetime5 = 1 + (var19Lifetime5 + var38.j(255));
+              var19Lifetime5 = 1 + (var19Lifetime5 + var38.readUnsignedByte(255));
               var15[var27Lifetime6] = (byte)var19Lifetime5;
             }
             var27Lifetime6Lifetime1 = var58[0];
@@ -765,10 +765,10 @@ final class fc extends gg {
             var15 = null;
           }
           if (var16 != null) {
-            var19Lifetime6 = var38.j(255);
+            var19Lifetime6 = var38.readUnsignedByte(255);
             var16[0] = (byte)var19Lifetime6;
             for (var27Lifetime7 = 2; var47.length > var27Lifetime7; var27Lifetime7 += 2) {
-              var19Lifetime6 = var19Lifetime6 + (1 + var38.j(255));
+              var19Lifetime6 = var19Lifetime6 + (1 + var38.readUnsignedByte(255));
               var16[var27Lifetime7] = (byte)var19Lifetime6;
             }
             var27Lifetime7Lifetime1 = var47[0];
@@ -820,34 +820,34 @@ final class fc extends gg {
             var16 = null;
           }
           for (var27Lifetime8 = 0; var27Lifetime8 < var12; var27Lifetime8++) {
-            var13[var27Lifetime8].field_c = var38.j(255);
+            var13[var27Lifetime8].field_c = var38.readUnsignedByte(255);
           }
           for (var27Lifetime9 = 0; var27Lifetime9 < var12; var27Lifetime9++) {
             var50 = var13[var27Lifetime9];
             var28Lifetime1 = var50;
             if (null != var50.field_j) {
-              var28Lifetime1.field_b = var38.j(255);
+              var28Lifetime1.field_b = var38.readUnsignedByte(255);
             }
             if (var28Lifetime1.field_i != null) {
-              var28Lifetime1.field_h = var38.j(255);
+              var28Lifetime1.field_h = var38.readUnsignedByte(255);
             }
             if (var28Lifetime1.field_c > 0) {
-              var28Lifetime1.field_g = var38.j(255);
+              var28Lifetime1.field_g = var38.readUnsignedByte(255);
             }
           }
           for (var27Lifetime10 = 0; var12 > var27Lifetime10; var27Lifetime10++) {
-            var13[var27Lifetime10].field_m = var38.j(255);
+            var13[var27Lifetime10].field_m = var38.readUnsignedByte(255);
           }
           for (var27Lifetime11 = 0; var27Lifetime11 < var12; var27Lifetime11++) {
             var51 = var13[var27Lifetime11];
             if (var51.field_m > 0) {
-              var51.field_d = var38.j(255);
+              var51.field_d = var38.readUnsignedByte(255);
             }
           }
           for (var27Lifetime12 = 0; var27Lifetime12 < var12; var27Lifetime12++) {
             var52 = var13[var27Lifetime12];
             if (var52.field_d > 0) {
-              var52.field_f = var38.j(255);
+              var52.field_f = var38.readUnsignedByte(255);
             }
           }
           return;

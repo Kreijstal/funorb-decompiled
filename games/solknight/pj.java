@@ -350,13 +350,13 @@ class pj extends rc {
           var3 = var2.field_p;
           var4 = var2.field_t;
           fl.b((byte) 91);
-          gg.field_e = new o(var3, var4 * param0 / 4);
-          gg.field_e.a();
+          IntrusiveNode.field_e = new o(var3, var4 * param0 / 4);
+          IntrusiveNode.field_e.a();
           var2.c(0, 0);
-          ql.field_p = new o(var3, -gg.field_e.field_t + var4);
+          ql.field_p = new o(var3, -IntrusiveNode.field_e.field_t + var4);
           ql.field_p.a();
-          var2.c(0, -gg.field_e.field_t);
-          ql.field_p.field_n = gg.field_e.field_t;
+          var2.c(0, -IntrusiveNode.field_e.field_t);
+          ql.field_p.field_n = IntrusiveNode.field_e.field_t;
           mf.e(4096);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "pj.KA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -368,11 +368,11 @@ class pj extends rc {
           super.a(param0, param1, param2, param3);
           if (this.field_u != 0 &&
             wb.field_c != this.field_u) {
-            if (this.a(ad.field_m, gb.field_j, param0, param2, -107) &&
+            if (this.a(ad.field_m, PacketBuffer.field_j, param0, param2, -107) &&
               wb.field_c == 0) {
-              this.a(true, gb.field_j - param0, this.field_u, -param2 + ad.field_m);
+              this.a(true, PacketBuffer.field_j - param0, this.field_u, -param2 + ad.field_m);
             }
-            this.a(ad.field_m, 0, param3, param2, gb.field_j, param0);
+            this.a(ad.field_m, 0, param3, param2, PacketBuffer.field_j, param0);
           }
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "pj.JA(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

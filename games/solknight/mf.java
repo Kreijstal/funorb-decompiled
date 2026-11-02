@@ -70,7 +70,7 @@ final class mf extends ej {
           }
           var8_ref_ee = (ee) (param1.field_h.b(0));
           while (var8_ref_ee != null) {
-            var9 = (int)var8_ref_ee.field_g;
+            var9 = (int)var8_ref_ee.key;
             var12 = (fc) (this.field_C.a(true, (long)var9));
             if (var12 == null) {
               var13 = oa.a(-1803587230, var9, param3);
@@ -142,7 +142,7 @@ final class mf extends ej {
           if (param4.field_k >= 0 && (null == param4.field_w ||
             param4.field_w.i())) {
             param4.a((byte) 104);
-            param4.c(10);
+            param4.unlink(10);
             if (0 < param4.field_m) {
               if (param4 != this.field_O[param4.field_z][param4.field_m]) {
                 return true;
@@ -228,7 +228,7 @@ final class mf extends ej {
           }
           param4.a((byte) 112);
           if (param4.field_k >= 0) {
-            param4.c(10);
+            param4.unlink(10);
             if (param4.field_m > 0 &&
               this.field_O[param4.field_z][param4.field_m] == param4) {
               this.field_O[param4.field_z][param4.field_m] = null;
@@ -275,7 +275,7 @@ final class mf extends ej {
             if (var3.field_k < 0) {
               this.field_p[var3.field_z][var3.field_o] = null;
             }
-            var3.c(10);
+            var3.unlink(10);
           }
           var3 = (hg) (this.field_Q.field_m.b(-18));
         }
@@ -1136,7 +1136,7 @@ final class mf extends ej {
             return false;
           }
           if (param0.field_k >= 0) {
-            param0.c(10);
+            param0.unlink(10);
             if (param0.field_m > 0) {
               if (this.field_O[param0.field_z][param0.field_m] != param0) {
                 return true;

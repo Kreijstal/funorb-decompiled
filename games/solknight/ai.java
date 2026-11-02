@@ -52,14 +52,14 @@ final class ai {
           } else {
             try {
               lf.field_d = new ad((java.net.Socket) (bk.field_a.field_e), qa.field_n);
-              id.field_c.field_m = 0;
+              id.field_c.position = 0;
               var4 = te.field_N;
               var5 = var4;
               stackIn_11_0 = (param0) ? -2 : -1;
               nf.field_U = stackIn_11_0;
               kl.field_b = stackIn_11_0;
               jg.field_e = stackIn_11_0;
-              var5.field_m = 0;
+              var5.position = 0;
               ef.field_e = qc.field_i;
               si.a(jj.field_s, (byte) 22, jh.field_f, ci.field_jb, id.field_c);
               qf.a(param1 + 37, -1);

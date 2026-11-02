@@ -185,23 +185,23 @@ class uf extends af {
           if (null != pj.field_D) {
             try {
               pj.field_D.a(0L, (byte) 45);
-              pj.field_D.a(te.field_N.field_l, -20291, 24, te.field_N.field_m);
+              pj.field_D.a(te.field_N.payload, -20291, 24, te.field_N.position);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
               if (param0 == 31911) {
-                te.field_N.field_m = te.field_N.field_m + 24;
+                te.field_N.position = te.field_N.position + 24;
                 return;
               }
               field_q = -95;
-              te.field_N.field_m = te.field_N.field_m + 24;
+              te.field_N.position = te.field_N.position + 24;
               return;
             }
           }
           if (param0 != 31911) {
             field_q = -95;
           }
-          te.field_N.field_m = te.field_N.field_m + 24;
+          te.field_N.position = te.field_N.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

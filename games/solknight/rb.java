@@ -114,7 +114,7 @@ final class rb {
             this.field_i = bk.a(120, jb.field_g, (byte) 49);
             this.field_n = bk.a(120, jb.field_g, (byte) 57);
           }
-          L9: {
+          regionExit1: {
             var4 = this.field_j;
             if (var4 == 0) {
               this.field_g = 4;
@@ -125,7 +125,7 @@ final class rb {
                   this.field_a = this.field_a - this.field_c * (50 - this.field_e) / 100;
                   if (this.field_e % 2 != 0) {
                     this.a(9, -19, 16);
-                    break L9;
+                    break regionExit1;
                   }
                   pk.a((byte) 32, new rb(12, this));
                 }
@@ -275,9 +275,9 @@ final class rb {
                           this.field_g = 6;
                           var4 = 320 + (-wd.field_c + (this.field_a >> 4));
                           var5 = (this.field_b >> 4) - si.field_E;
-                          var6 = -var4 + gb.field_j;
+                          var6 = -var4 + PacketBuffer.field_j;
                           var7 = ad.field_m - var5;
-                          if (ve.field_b >= 0) {
+                          if (ClientException.field_b >= 0) {
                             var6 = -var4 + (sk.field_o >> 4) - wd.field_c + 320;
                             var7 = -var5 + ((wg.field_e >> 4) - si.field_E);
                           }
@@ -343,7 +343,7 @@ final class rb {
                                         if (18 == var4) {
                                           this.field_e = this.field_e + 1;
                                           if (this.field_e <= 32) {
-                                            break L9;
+                                            break regionExit1;
                                           }
                                           return null;
                                         }
@@ -352,7 +352,7 @@ final class rb {
                                           this.field_a = this.field_a - this.field_c;
                                           this.field_e = this.field_e + 1;
                                           if (this.field_e <= 1) {
-                                            break L9;
+                                            break regionExit1;
                                           }
                                           return null;
                                         }
@@ -639,18 +639,18 @@ final class rb {
                                                       23 != var4 &&
                                                       24 != var4) {
                                                       if (var4 != 31) {
-                                                        break L9;
+                                                        break regionExit1;
                                                       }
                                                       this.field_e = this.field_e + 2;
                                                       if (256 >= this.field_e) {
-                                                        break L9;
+                                                        break regionExit1;
                                                       }
                                                       this.field_h = true;
                                                       return null;
                                                     }
                                                     this.field_e = this.field_e + 1;
                                                     if (this.field_g >= this.field_e) {
-                                                      break L9;
+                                                      break regionExit1;
                                                     }
                                                     this.field_h = true;
                                                     return null;
@@ -714,13 +714,13 @@ final class rb {
                                             }
                                           }
                                         }
-                                        break L9;
+                                        break regionExit1;
                                       }
                                       this.field_e = this.field_e + 1;
                                       this.field_a = this.field_a - this.field_c;
                                       this.field_b = this.field_b - this.field_d;
                                       if (this.field_e <= 2) {
-                                        break L9;
+                                        break regionExit1;
                                       }
                                       return null;
                                     }
@@ -783,9 +783,9 @@ final class rb {
                 if (this.field_e < 100) {
                   var4 = (this.field_a >> 4) - wd.field_c + 320;
                   var5 = (this.field_b >> 4) - si.field_E;
-                  var6 = -var4 + gb.field_j;
+                  var6 = -var4 + PacketBuffer.field_j;
                   var7 = -var5 + ad.field_m;
-                  if (ve.field_b >= 0) {
+                  if (ClientException.field_b >= 0) {
                     var7 = -si.field_E + (wg.field_e >> 4) - var5;
                     var6 = -var4 + 320 + (-wd.field_c + (sk.field_o >> 4));
                   }
@@ -796,7 +796,7 @@ final class rb {
                     var8 = (int)Math.sqrt((double)(this.field_c * this.field_c + this.field_d * this.field_d));
                     if (var8 <= 128) {
                       this.a(9, -19, 42);
-                      break L9;
+                      break regionExit1;
                     }
                     this.field_d = 128 * this.field_d / var8;
                     this.field_c = this.field_c * 128 / var8;

@@ -215,7 +215,7 @@ final class we implements j {
             r.field_d = rb.a("button", "benefits", kc.field_Q, (byte) -117);
             a.field_e = rb.a("signup_text", "benefits", kc.field_Q, (byte) -119);
             jh.field_b = rb.a("menu_text", "benefits", kc.field_Q, (byte) -114);
-            dh.field_j = rb.a("button_frame", "benefits", kc.field_Q, (byte) -121);
+            GameApplet.field_j = rb.a("button_frame", "benefits", kc.field_Q, (byte) -121);
             kj.field_S = rb.a("arrow", "benefits", kc.field_Q, (byte) -111);
             kg.field_a = (mg) ((Object) lc.a(kc.field_Q, 1, "large_font", "benefits", eb.field_b));
             sk.field_n = (mg) ((Object) lc.a(kc.field_Q, 1, "small_font", "benefits", eb.field_b));
@@ -252,11 +252,11 @@ final class we implements j {
             ii.a(mi.field_d * 2 / 3, 0, 0, 64, mi.field_a, true);
             mi.a(var28, var2, var3);
             mi.a(lj.field_D);
-            sa.field_m = 231 + (-dh.field_j.field_p + r.field_d.field_p) / 2;
+            sa.field_m = 231 + (-GameApplet.field_j.field_p + r.field_d.field_p) / 2;
             kc.field_Q = null;
-            lk.field_c = (r.field_d.field_t - dh.field_j.field_t) / 2 + 390;
-            da.field_f = 390 + (-dh.field_j.field_t + r.field_d.field_t) / 2;
-            ke.field_I = 434 + (r.field_d.field_p - dh.field_j.field_p) / 2;
+            lk.field_c = (r.field_d.field_t - GameApplet.field_j.field_t) / 2 + 390;
+            da.field_f = 390 + (-GameApplet.field_j.field_t + r.field_d.field_t) / 2;
+            ke.field_I = 434 + (r.field_d.field_p - GameApplet.field_j.field_p) / 2;
           }
           if (!param0) {
             field_e = 49;
@@ -380,7 +380,7 @@ final class we implements j {
             rh.field_g.d(0, 0);
           }
           if (null != r.field_d &&
-            null != dh.field_j) {
+            null != GameApplet.field_j) {
             r.field_d.d(231, 390);
             var1 = a.field_e;
             if (qh.field_b.field_f == 0) {
@@ -411,7 +411,7 @@ final class we implements j {
             kb.a(stackIn_55_0, stackIn_55_1, stackIn_56_2, da.field_f);
           }
           if (null != r.field_d &&
-            dh.field_j != null) {
+            GameApplet.field_j != null) {
             r.field_d.d(434, 390);
             jh.field_b.d(0, 0);
             if (qh.field_b.field_f == 1) {
@@ -437,15 +437,15 @@ final class we implements j {
                 qd.field_e[field_h].d(269, 340);
                 return;
               }
-              if (gb.field_j > 269 - kj.field_S.field_p &&
-                gb.field_j < 269) {
+              if (PacketBuffer.field_j > 269 - kj.field_S.field_p &&
+                PacketBuffer.field_j < 269) {
                 kj.field_S.a(269 - kj.field_S.field_q - 1, -1 + var1_int, var2Lifetime5);
                 kj.field_S.a(1 + (-kj.field_S.field_q + 269), -1 + var1_int, var2Lifetime5);
                 kj.field_S.a(-1 + (-kj.field_S.field_q + 269), 1 + var1_int, var2Lifetime5);
                 kj.field_S.a(-kj.field_S.field_q + 269 + 1, 1 + var1_int, var2Lifetime5);
               } else {
-                if (586 < gb.field_j &&
-                  gb.field_j < kj.field_S.field_p + 586) {
+                if (586 < PacketBuffer.field_j &&
+                  PacketBuffer.field_j < kj.field_S.field_p + 586) {
                   fh.field_f.a(585, -1 + var1_int, var2Lifetime5);
                   fh.field_f.a(587, var1_int - 1, var2Lifetime5);
                   fh.field_f.a(585, 1 + var1_int, var2Lifetime5);

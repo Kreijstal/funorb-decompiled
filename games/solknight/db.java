@@ -90,7 +90,7 @@ abstract class db extends ec {
             if (var3 != 0) {
               return;
             }
-            var4 = param0.field_m;
+            var4 = param0.position;
             param0.b(var17.field_o, false);
             if (param1 >= -25) {
               db.c(false);
@@ -201,7 +201,7 @@ abstract class db extends ec {
               }
             }
             param0.b(true, var4);
-            var17.c(10);
+            var17.unlink(10);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -251,7 +251,7 @@ abstract class db extends ec {
         var8 = SolKnight.field_L ? 1 : 0;
         try {
           var11 = te.field_N;
-          var2 = var11.j(255);
+          var2 = var11.readUnsignedByte(255);
           if (var2 == 0) {
             var10 = uk.i(-1);
             var16 = var10;
@@ -260,9 +260,9 @@ abstract class db extends ec {
             var9 = var10;
             var4 = var9;
             var5 = var11;
-            var6 = ((gb) ((Object) var5)).j(255);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(255);
             for (var7 = 0; var6 > var7; var7++) {
-              var9[var7] = ((gb) ((Object) var5)).e(true);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(true);
             }
             var15 = (ib) (kh.field_a.a((byte) 51));
             if (var15 == null) {
@@ -272,7 +272,7 @@ abstract class db extends ec {
             var15.field_k = true;
             var15.field_n = var3;
             var15.field_m = var16[0];
-            var15.c(10);
+            var15.unlink(10);
           } else {
             if (1 == var2) {
               var13 = (bl) (m.field_h.a((byte) 51));
@@ -280,7 +280,7 @@ abstract class db extends ec {
                 je.a(false);
                 return;
               }
-              var13.c(param0 ^ 10);
+              var13.unlink(param0 ^ 10);
             } else {
               if (var2 == 2) {
                 var12 = (ib) (kh.field_a.a((byte) 51));
@@ -291,7 +291,7 @@ abstract class db extends ec {
                 var12.field_n = uk.i(-1);
                 var12.field_k = true;
                 var12.field_m = var12.field_n[0];
-                var12.c(10);
+                var12.unlink(10);
               } else {
                 hi.a((Throwable) null, "A1: " + oc.a(false), 1);
                 je.a(false);

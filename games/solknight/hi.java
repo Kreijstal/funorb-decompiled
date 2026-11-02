@@ -122,7 +122,7 @@ final class hi {
     }
 
     final static void a(int param0, int param1) {
-        gg var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         bl var4 = null;
         RuntimeException decompiledCaughtException = null;

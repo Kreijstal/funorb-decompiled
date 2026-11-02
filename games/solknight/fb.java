@@ -24,7 +24,7 @@ final class fb {
           if (param0 != 12239) {
             field_b = (int[]) null;
           }
-          gb.field_i = da.field_d;
+          PacketBuffer.field_i = da.field_d;
           if (param2 != 255) {
             if (param2 < 100) {
               a.field_h = mh.a(param2, true, param3);

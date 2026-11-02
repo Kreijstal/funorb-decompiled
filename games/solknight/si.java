@@ -353,7 +353,7 @@ abstract class si extends rc implements oh {
         }
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, gb param4) {
+    final static void a(int param0, byte param1, int param2, int param3, PacketBuffer param4) {
         try {
           param4.c(-115, 12);
           param4.a(true, 17);

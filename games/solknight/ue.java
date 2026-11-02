@@ -520,7 +520,7 @@ final class ue {
           }
           throw fc.a((Throwable) ((Object) stackIn_355_0), ((StringBuilder) (Object) stackIn_355_1).append(stackIn_356_2).append(',').append(param1).append(')').toString());
         }
-        if (dh.field_l) {
+        if (GameApplet.field_l) {
           SolKnight.field_L = (var3 == 0);
         }
     }
@@ -552,7 +552,7 @@ final class ue {
             var8 = param1.charAt(param5 + var7);
             stackIn_187_0 = 0;
             if (var9 == 0) {
-              L3: {
+              regionExit1: {
                 if (stackIn_187_0 < var8 &&
                   128 > var8 ||
                   var8 >= 160 &&
@@ -562,88 +562,88 @@ final class ue {
                   switch (var8) {
                     case 8218:
                       param4[var7 + param0] = (byte) -126;
-                      break L3;
+                      break regionExit1;
                     case 402:
                       param4[param0 + var7] = (byte) -125;
-                      break L3;
+                      break regionExit1;
                     case 8222:
                       param4[var7 + param0] = (byte) -124;
-                      break L3;
+                      break regionExit1;
                     case 8230:
                       param4[var7 + param0] = (byte) -123;
-                      break L3;
+                      break regionExit1;
                     case 8225:
                       param4[var7 + param0] = (byte) -121;
-                      break L3;
+                      break regionExit1;
                     case 710:
                       param4[param0 + var7] = (byte) -120;
-                      break L3;
+                      break regionExit1;
                     default:
                       switch (var8) {
                         case 8249:
                           param4[param0 + var7] = (byte) -117;
-                          break L3;
+                          break regionExit1;
                         case 381:
                           param4[param0 + var7] = (byte) -114;
-                          break L3;
+                          break regionExit1;
                         case 8212:
                           param4[param0 + var7] = (byte) -105;
-                          break L3;
+                          break regionExit1;
                         case 8482:
                           param4[param0 + var7] = (byte) -103;
-                          break L3;
+                          break regionExit1;
                         case 8250:
                           param4[param0 + var7] = (byte) -101;
-                          break L3;
+                          break regionExit1;
                         case 339:
                           param4[var7 + param0] = (byte) -100;
-                          break L3;
+                          break regionExit1;
                         case 382:
                           param4[param0 + var7] = (byte) -98;
-                          break L3;
+                          break regionExit1;
                         default:
                           param4[param0 + var7] = (byte) 63;
-                          break L3;
+                          break regionExit1;
                         case 376:
                           param4[param0 + var7] = (byte) -97;
-                          break L3;
+                          break regionExit1;
                         case 353:
                           param4[var7 + param0] = (byte) -102;
-                          break L3;
+                          break regionExit1;
                         case 732:
                           param4[param0 + var7] = (byte) -104;
-                          break L3;
+                          break regionExit1;
                         case 8211:
                           param4[var7 + param0] = (byte) -106;
-                          break L3;
+                          break regionExit1;
                         case 8226:
                           param4[param0 + var7] = (byte) -107;
-                          break L3;
+                          break regionExit1;
                         case 8221:
                           param4[var7 + param0] = (byte) -108;
-                          break L3;
+                          break regionExit1;
                         case 8220:
                           param4[var7 + param0] = (byte) -109;
-                          break L3;
+                          break regionExit1;
                         case 8217:
                           param4[var7 + param0] = (byte) -110;
-                          break L3;
+                          break regionExit1;
                         case 8216:
                           param4[var7 + param0] = (byte) -111;
-                          break L3;
+                          break regionExit1;
                         case 338:
                           param4[var7 + param0] = (byte) -116;
-                          break L3;
+                          break regionExit1;
                       }
                     case 352:
                       param4[param0 + var7] = (byte) -118;
-                      break L3;
+                      break regionExit1;
                     case 8240:
                       param4[var7 + param0] = (byte) -119;
-                      break L3;
+                      break regionExit1;
                     case 8224:
                       param4[param0 + var7] = (byte) -122;
-                      break L3;
+                      break regionExit1;
                     case 8364:
                       param4[param0 + var7] = (byte) -128;
                       break;

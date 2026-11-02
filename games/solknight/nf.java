@@ -140,7 +140,7 @@ final class nf extends ld implements ka {
             return true;
           }
           lf.field_e = param5;
-          ug.field_d = param2;
+          SocketConnector.field_d = param2;
           ma.field_o = gf.field_Z;
           og.field_b = param1;
           te.field_K = param3;

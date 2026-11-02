@@ -7,8 +7,8 @@ final class ii implements Iterable {
     static String field_a;
     static String field_c;
     static o[] field_g;
-    private gg field_d;
-    gg[] field_b;
+    private IntrusiveNode field_d;
+    IntrusiveNode[] field_b;
     static o[] field_f;
     static int field_h;
     int field_e;
@@ -29,21 +29,21 @@ final class ii implements Iterable {
         return (Iterator) ((Object) new n(this));
     }
 
-    final gg a(long param0, int param1) {
-        gg var5 = null;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var5 = null;
         int var6 = SolKnight.field_L ? 1 : 0;
-        gg var4 = this.field_b[(int)((long)(this.field_e - 1) & param0)];
-        this.field_d = var4.field_d;
+        IntrusiveNode var4 = this.field_b[(int)((long)(this.field_e - 1) & param0)];
+        this.field_d = var4.previous;
         if (param1 >= -83) {
           ii.a(-1);
         }
         while (var4 != this.field_d) {
-          if (~this.field_d.field_g == ~param0) {
+          if (~this.field_d.key == ~param0) {
             var5 = this.field_d;
-            this.field_d = this.field_d.field_d;
+            this.field_d = this.field_d.previous;
             return var5;
           }
-          this.field_d = this.field_d.field_d;
+          this.field_d = this.field_d.previous;
         }
         this.field_d = null;
         return null;
@@ -126,21 +126,21 @@ final class ii implements Iterable {
         throw new Error();
     }
 
-    final void a(int param0, long param1, gg param2) {
-        gg var5 = null;
+    final void a(int param0, long param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (null != param2.field_a) {
-            param2.c(10);
+          if (null != param2.next) {
+            param2.unlink(10);
           }
           var5 = this.field_b[(int)(param1 & (long)(-1 + this.field_e))];
-          param2.field_d = var5;
-          param2.field_a = var5.field_a;
-          param2.field_a.field_d = param2;
-          param2.field_g = param1;
+          param2.previous = var5;
+          param2.next = var5.next;
+          param2.next.previous = param2;
+          param2.key = param1;
           if (param0 != -858993458) {
             field_g = (o[]) null;
           }
-          param2.field_d.field_a = param2;
+          param2.previous.next = param2;
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "ii.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

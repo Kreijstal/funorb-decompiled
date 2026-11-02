@@ -47,7 +47,7 @@ final class td implements j {
         try {
           var14 = te.field_N;
           var16 = var14;
-          var2 = var16.j(255);
+          var2 = var16.readUnsignedByte(255);
           var3 = (dj) (sa.field_n.a((byte) 51));
           while (var3 != null) {
             if (var3.field_i != var2) {
@@ -60,12 +60,12 @@ final class td implements j {
             je.a(false);
             return;
           }
-          var4 = var16.j(255);
+          var4 = var16.readUnsignedByte(255);
           if (0 != var4) {
             var5 = var3.field_h;
             cg.field_a[0] = ne.field_g;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              cg.field_a[var6_int] = var14.h(20);
+              cg.field_a[var6_int] = var14.readString(20);
             }
             ld.c(var5, var4, 42);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
@@ -119,9 +119,9 @@ final class td implements j {
           if (param0 > -125) {
             var13 = (da) null;
             td.a(25, (da) null);
-            var3.c(10);
+            var3.unlink(10);
           } else {
-            var3.c(10);
+            var3.unlink(10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

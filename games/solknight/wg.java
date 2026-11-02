@@ -194,7 +194,7 @@ final class wg {
           return false;
         }
         if (param1 <= -104) {
-          if (gb.a(param0, 121)) {
+          if (PacketBuffer.a(param0, 121)) {
             return true;
           }
           if (param0 != 45 &&
@@ -206,7 +206,7 @@ final class wg {
           return true;
         }
         field_e = 70;
-        if (gb.a(param0, 121)) {
+        if (PacketBuffer.a(param0, 121)) {
           return true;
         }
         if (param0 == 45) {

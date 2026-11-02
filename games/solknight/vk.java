@@ -190,7 +190,7 @@ final class vk extends jf {
           if (-16000 == var1_int) {
             var1_int = 0;
           }
-          if (0 <= ve.field_b) {
+          if (0 <= ClientException.field_b) {
             ic.field_t = ic.field_t - (lc.field_h >>> 17) * ud.field_k;
             bi.field_i = bi.field_i - ud.field_k;
             ud.field_k = 0;

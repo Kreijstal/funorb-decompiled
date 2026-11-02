@@ -93,7 +93,7 @@ final class bc extends si {
           if ((!(this.field_G instanceof pj) ||
             ((pj) (this.field_G)).field_B) &&
             this.field_u == 1) {
-            var5_int = -this.field_N + (gb.field_j - param0);
+            var5_int = -this.field_N + (PacketBuffer.field_j - param0);
             var6 = -this.field_L + (ad.field_m - param2);
             if ((var5_int != this.field_m ||
               var6 != this.field_j)) {

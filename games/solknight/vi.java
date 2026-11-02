@@ -41,21 +41,21 @@ final class vi {
         return this.field_d - this.field_e >> 15;
     }
 
-    final void a(gb param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_k = param0.j(255);
+        this.field_k = param0.readUnsignedByte(255);
         this.field_f = new int[this.field_k];
         this.field_j = new int[this.field_k];
         for (var2 = 0; var2 < this.field_k; var2++) {
-          this.field_f[var2] = param0.i(-111);
-          this.field_j[var2] = param0.i(106);
+          this.field_f[var2] = param0.readUnsignedShort(-111);
+          this.field_j[var2] = param0.readUnsignedShort(106);
         }
     }
 
-    final void b(gb param0) {
-        this.field_g = param0.j(255);
-        this.field_h = param0.e(true);
-        this.field_i = param0.e(true);
+    final void b(PacketBuffer param0) {
+        this.field_g = param0.readUnsignedByte(255);
+        this.field_h = param0.readInt(true);
+        this.field_i = param0.readInt(true);
         this.a(param0);
     }
 

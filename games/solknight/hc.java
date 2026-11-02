@@ -291,7 +291,7 @@ final class hc {
             }
           }
           pk.field_ab = sb.field_d - (var3_intLifetime1 >> 1);
-          dh.field_h = sb.field_d + var3_intLifetime1 - (var3_intLifetime1 >> 1);
+          GameApplet.field_h = sb.field_d + var3_intLifetime1 - (var3_intLifetime1 >> 1);
           v.field_d = (g.field_l + vg.field_N << 1) * bc.field_K.field_g;
           for (var4Lifetime2 = 0; vc.field_d.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_110_0 = v.field_d;
@@ -329,7 +329,7 @@ final class hc {
           if (te.field_M == 2) {
             bc.field_K.a(param0, -1, -1, 125);
           } else {
-            bc.field_K.a(param0, 0, uc.a(gb.field_j, 1691746689, ad.field_m), 122);
+            bc.field_K.a(param0, 0, uc.a(PacketBuffer.field_j, 1691746689, ad.field_m), 122);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -52,7 +52,7 @@ final class ha {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        gb var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -69,22 +69,22 @@ final class ha {
         int var13Lifetime1Lifetime1;
         var16 = SolKnight.field_L ? 1 : 0;
         try {
-          var17 = new gb(jh.a(param1, 6));
-          var4 = var17.j(255);
+          var17 = new PacketBuffer(jh.a(param1, 6));
+          var4 = var17.readUnsignedByte(255);
           if (5 <= var4 &&
             var4 <= 7) {
             if (var4 < 6) {
               this.field_m = 0;
             } else {
-              this.field_m = var17.e(true);
+              this.field_m = var17.readInt(true);
             }
-            var5 = var17.j(255);
+            var5 = var17.readUnsignedByte(255);
             stackIn_11_0 = ((1 & var5) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             stackIn_14_0 = ((2 & var5) == 0) ? 0 : 1;
             var7 = stackIn_14_0;
             if (var4 < 7) {
-              this.field_h = var17.i(-107);
+              this.field_h = var17.readUnsignedShort(-107);
             } else {
               this.field_h = var17.e(6715);
             }
@@ -102,7 +102,7 @@ final class ha {
               }
             } else {
               for (var10 = 0; var10 < this.field_h; var10++) {
-                dupTemp$1 = var8 + var17.i(-126);
+                dupTemp$1 = var8 + var17.readUnsignedShort(-126);
                 var8 = dupTemp$1;
                 this.field_f[var10] = dupTemp$1;
                 if (var9 < this.field_f[var10]) {
@@ -128,12 +128,12 @@ final class ha {
                 this.field_i[var10Lifetime1] = -1;
               }
               for (var10Lifetime1Lifetime1 = 0; var10Lifetime1Lifetime1 < this.field_h; var10Lifetime1Lifetime1++) {
-                this.field_i[this.field_f[var10Lifetime1Lifetime1]] = var17.e(true);
+                this.field_i[this.field_f[var10Lifetime1Lifetime1]] = var17.readInt(true);
               }
               this.field_e = new qg(this.field_i);
             }
             for (var10Lifetime2 = 0; var10Lifetime2 < this.field_h; var10Lifetime2++) {
-              this.field_b[this.field_f[var10Lifetime2]] = var17.e(true);
+              this.field_b[this.field_f[var10Lifetime2]] = var17.readInt(true);
             }
             if (var7 != 0) {
               for (var10Lifetime3 = 0; this.field_h > var10Lifetime3; var10Lifetime3++) {
@@ -143,11 +143,11 @@ final class ha {
               }
             }
             for (var10Lifetime4 = 0; this.field_h > var10Lifetime4; var10Lifetime4++) {
-              this.field_s[this.field_f[var10Lifetime4]] = var17.e(true);
+              this.field_s[this.field_f[var10Lifetime4]] = var17.readInt(true);
             }
             if (7 > var4) {
               for (var10Lifetime5 = 0; this.field_h > var10Lifetime5; var10Lifetime5++) {
-                this.field_r[this.field_f[var10Lifetime5]] = var17.i(46);
+                this.field_r[this.field_f[var10Lifetime5]] = var17.readUnsignedShort(46);
               }
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_h; var10Lifetime5++) {
                 var11 = this.field_f[var10Lifetime5];
@@ -157,7 +157,7 @@ final class ha {
                 array$2 = new int[var12];
                 this.field_a[var11] = array$2;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.i(-118);
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShort(-118);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_a[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -215,7 +215,7 @@ final class ha {
                   } else {
                     var14Lifetime1 = this.field_a[var11Lifetime1][var13Lifetime1Lifetime1];
                   }
-                  this.field_k[var11Lifetime1][var14Lifetime1] = var17.e(true);
+                  this.field_k[var11Lifetime1][var14Lifetime1] = var17.readInt(true);
                 }
                 this.field_j[var11Lifetime1] = new qg(this.field_k[var11Lifetime1]);
               }
@@ -238,18 +238,18 @@ final class ha {
         }
     }
 
-    final static void a(gg param0, byte param1, gg param2) {
-        if (param0.field_a != null) {
-          param0.c(10);
+    final static void a(IntrusiveNode param0, byte param1, IntrusiveNode param2) {
+        if (param0.next != null) {
+          param0.unlink(10);
         }
-        param0.field_d = param2;
-        param0.field_a = param2.field_a;
-        param0.field_a.field_d = param0;
+        param0.previous = param2;
+        param0.next = param2.next;
+        param0.next.previous = param0;
         if (param1 <= 15) {
           return;
         }
         try {
-          param0.field_d.field_a = param0;
+          param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "ha.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

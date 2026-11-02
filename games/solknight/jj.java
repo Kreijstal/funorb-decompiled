@@ -212,7 +212,7 @@ class jj extends ma {
         this.field_C = -2147483648;
         this.field_J = -1;
         try {
-          this.field_g = param0;
+          this.key = param0;
           this.a(27759, param1);
           if (param6 != null) {
             this.field_L = param6;

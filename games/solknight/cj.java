@@ -44,7 +44,7 @@ final class cj {
             stackIn_10_0 = 3;
             return stackIn_10_0;
           }
-          if (gf.field_Z == gb.field_i) {
+          if (gf.field_Z == PacketBuffer.field_i) {
             stackIn_13_0 = 1;
             return stackIn_13_0;
           }

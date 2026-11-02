@@ -22,11 +22,11 @@ abstract class wd {
           var1 = id.field_c;
           while (ec.e(param0 ^ 7697789)) {
             var1.e(8, -2147483648);
-            fieldTemp$0 = var1.field_m + 1;
-            var1.field_m = var1.field_m + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             db.a(var1, (byte) -115);
-            id.field_c.b(1, -var2 + var1.field_m);
+            id.field_c.b(1, -var2 + var1.position);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -114,7 +114,7 @@ abstract class wd {
             stackIn_11_0 = var6;
             return stackIn_11_0;
           }
-          stackIn_4_0 = gb.field_h;
+          stackIn_4_0 = PacketBuffer.field_h;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

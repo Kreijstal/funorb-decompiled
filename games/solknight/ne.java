@@ -9,7 +9,7 @@ final class ne {
     private java.math.BigInteger field_e;
     static boolean field_d;
     private java.math.BigInteger field_c;
-    private gb field_b;
+    private PacketBuffer field_b;
     private ic field_m;
     static String field_g;
     static ng field_i;
@@ -34,7 +34,7 @@ final class ne {
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var7;
         int var9;
-        gb var11;
+        PacketBuffer var11;
         byte[] var12;
         java.math.BigInteger var13;
         byte[] var14;
@@ -52,11 +52,11 @@ final class ne {
         if (this.field_m.field_m) {
           return false;
         }
-        var11 = new gb(this.field_m.f(0));
-        var11.field_m = 5;
-        var3 = var11.j(255);
-        var11.field_m = var11.field_m + 72 * var3;
-        var14 = new byte[var11.field_l.length - var11.field_m];
+        var11 = new PacketBuffer(this.field_m.f(0));
+        var11.position = 5;
+        var3 = var11.readUnsignedByte(255);
+        var11.position = var11.position + 72 * var3;
+        var14 = new byte[var11.payload.length - var11.position];
         var12 = var14;
         var4 = var12;
         var11.a(var14.length, 0, -118, var14);
@@ -72,7 +72,7 @@ final class ne {
           throw new RuntimeException();
         }
         var7 = -39 % ((11 - param0) / 35);
-        var16 = q.a(-var14.length + (var11.field_m - 5), 5, 87, var11.field_l);
+        var16 = q.a(-var14.length + (var11.position - 5), 5, 87, var11.payload);
         for (var8 = 0; var8 < 64; var8++) {
           if (var16[var8] != var5[var8 + 1]) {
             throw new RuntimeException();
@@ -112,9 +112,9 @@ final class ne {
               stackIn_11_0 = this.field_k[param4];
               return stackIn_11_0;
             }
-            this.field_b.field_m = param4 * 72 + 6;
-            var6_int = this.field_b.e(true);
-            var7 = this.field_b.e(true);
+            this.field_b.position = param4 * 72 + 6;
+            var6_int = this.field_b.readInt(true);
+            var7 = this.field_b.readInt(true);
             var13 = new byte[64];
             this.field_b.a(64, 0, -127, var13);
             var9 = new lg(param4, param1, param3, this.field_h, this.field_l, var6_int, var13, var7, param2);

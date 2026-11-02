@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ud extends gg {
+final class ud extends IntrusiveNode {
     int field_l;
     qi field_h;
     static int[] field_i;
-    gg field_m;
+    IntrusiveNode field_m;
     static String field_j;
     static int field_k;
 
@@ -31,8 +31,8 @@ final class ud extends gg {
         try {
           var5 = id.field_c;
           var5.e(param2, -2147483648);
-          var5.field_m = var5.field_m + 1;
-          var4 = var5.field_m;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.c(-102, 1);
           var5.c(106, param1.field_n);
           var5.a(param1.field_o, (byte) 98);
@@ -41,7 +41,7 @@ final class ud extends gg {
           var5.b(param1.field_j, false);
           var5.b(param1.field_i, false);
           var5.b(true, var4);
-          var5.b(1, -var4 + var5.field_m);
+          var5.b(1, -var4 + var5.position);
           if (param0 < -105) {
             return;
           }
@@ -74,7 +74,7 @@ final class ud extends gg {
         }
     }
 
-    ud(qi param0, gg param1) {
+    ud(qi param0, IntrusiveNode param1) {
         try {
           this.field_h = param0;
           this.field_l = param0.e();

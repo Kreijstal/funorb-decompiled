@@ -24,16 +24,16 @@ final class be extends pj {
         var8 = SolKnight.field_L ? 1 : 0;
         var1 = -wd.field_c + 320;
         var2 = -si.field_E + (-ea.field_p[kb.field_b] + 720);
-        if (ve.field_b >= 0) {
+        if (ClientException.field_b >= 0) {
           var3 = -var1 - wd.field_c + ((sk.field_o >> 4) + 320);
           var4 = -var2 - si.field_E + (wg.field_e >> 4);
         } else {
           var4 = -var2 + ad.field_m;
-          var3 = gb.field_j - var1;
+          var3 = PacketBuffer.field_j - var1;
         }
-        L1: {
+        regionExit1: {
           var5 = (int)Math.sqrt((double)(var3 * var3 + var4 * var4));
-          if ((!(0 > gb.field_j) ||
+          if ((!(0 > PacketBuffer.field_j) ||
             wb.field_c != 0) && (!(wb.field_b > 0) ||
             !(kb.field_b >= 7))) {
             if (var5 <= kd.field_b[kb.field_b]) {
@@ -46,19 +46,19 @@ final class be extends pj {
             jj.field_t = (int)(Math.atan2((double)(-var3), (double)(-var4)) * 128.0 / 3.141592653589793);
             var3 = rj.field_b;
             var4 = ci.field_sb + (ea.field_p[kb.field_b] - 720);
-            break L1;
+            break regionExit1;
           }
           var3 = rj.field_b;
           var4 = ci.field_sb + ea.field_p[kb.field_b] - 720;
         }
         var5 = (int)Math.sqrt((double)(var3 * var3 + var4 * var4));
-        if (ve.field_b > 250) {
+        if (ClientException.field_b > 250) {
           return;
         }
         if (param0) {
           be.a(-111);
         }
-        L7: {
+        regionExit2: {
           var6 = kb.field_b;
           if (0 == var6) {
             if (wb.field_b > 0) {
@@ -69,7 +69,7 @@ final class be extends pj {
             } else {
               if (wb.field_c == 1 &&
                 jg.field_b == 0 ||
-                !(0 > ve.field_b)) {
+                !(0 > ClientException.field_b)) {
                 if (bi.field_h != 1) {
                   mb.a(!param0, 3, 256);
                 } else {
@@ -99,7 +99,7 @@ final class be extends pj {
               } else {
                 if (((wb.field_c == 1 &&
                   0 == jg.field_b) ||
-                  !(ve.field_b < 0))) {
+                  !(ClientException.field_b < 0))) {
                   if (bi.field_h != 1) {
                     mb.a(true, 8, 256);
                   } else {
@@ -119,7 +119,7 @@ final class be extends pj {
                   }
                 }
               }
-              break L7;
+              break regionExit2;
             }
             switch (var6) {
               case 1:
@@ -132,7 +132,7 @@ final class be extends pj {
                 }
                 if ((wb.field_c != 1 ||
                   jg.field_b != 0) &&
-                  0 > ve.field_b) {
+                  0 > ClientException.field_b) {
                   break;
                 }
                 mb.a(true, 15, 256);
@@ -152,7 +152,7 @@ final class be extends pj {
                 }
                 if ((wb.field_c != 1 ||
                   jg.field_b != 0) &&
-                  ve.field_b < 0) {
+                  ClientException.field_b < 0) {
                   break;
                 }
                 mb.a(true, 10, 256);
@@ -168,7 +168,7 @@ final class be extends pj {
                 } else {
                   if ((wb.field_c != 1 ||
                     jg.field_b != 0) &&
-                    ve.field_b < 0) {
+                    ClientException.field_b < 0) {
                     break;
                   }
                   mb.a(true, 11, 256);
@@ -193,7 +193,7 @@ final class be extends pj {
                 }
                 if ((wb.field_c != 1 ||
                   jg.field_b != 0) &&
-                  ve.field_b < 0) {
+                  ClientException.field_b < 0) {
                   break;
                 }
                 mb.a(true, 5, 256);
@@ -206,7 +206,7 @@ final class be extends pj {
                 if (wb.field_b <= 0) {
                   if (wb.field_c == 1 &&
                     0 == jg.field_b ||
-                    !(ve.field_b < 0)) {
+                    !(ClientException.field_b < 0)) {
                     wb.field_b = 175;
                     mb.a(true, 19, 256);
                   }
@@ -240,7 +240,7 @@ final class be extends pj {
                 }
                 if (wb.field_b <= 0 && (wb.field_c == 1 &&
                   0 == jg.field_b ||
-                  !(0 > ve.field_b))) {
+                  !(0 > ClientException.field_b))) {
                   wb.field_b = 100;
                 }
                 if (wb.field_b == 90 ||

@@ -138,18 +138,18 @@ final class pk extends kj {
           if (var6 != hg.field_E &&
             db.field_u != var6) {
             if (rg.field_f == var6) {
-              var20 = gb.field_k[2];
+              var20 = PacketBuffer.field_k[2];
               var20.a(var9, -(var20.field_t >> 1) + var10, 256);
               return;
             }
             if (var6 != ph.field_g) {
               return;
             }
-            var19 = gb.field_k[1];
+            var19 = PacketBuffer.field_k[1];
             var19.a(var9, var10 - (var19.field_t >> 1), 256);
             return;
           }
-          var21 = gb.field_k[0];
+          var21 = PacketBuffer.field_k[0];
           var11 = var21.field_q << 1;
           var12 = var21.field_r << 1;
           if (null == this.field_W) {
@@ -188,18 +188,18 @@ final class pk extends kj {
           if (var6 != hg.field_E &&
             db.field_u != var6) {
             if (rg.field_f == var6) {
-              var25 = gb.field_k[2];
+              var25 = PacketBuffer.field_k[2];
               var25.a(var9Lifetime1, -(var25.field_t >> 1) + var10Lifetime1, 256);
               return;
             }
             if (var6 != ph.field_g) {
               return;
             }
-            var24 = gb.field_k[1];
+            var24 = PacketBuffer.field_k[1];
             var24.a(var9Lifetime1, var10Lifetime1 - (var24.field_t >> 1), 256);
             return;
           }
-          var26 = gb.field_k[0];
+          var26 = PacketBuffer.field_k[0];
           var11Lifetime1 = var26.field_q << 1;
           var12Lifetime1 = var26.field_r << 1;
           if (null == this.field_W) {
@@ -238,18 +238,18 @@ final class pk extends kj {
           if (var6Lifetime1 != hg.field_E &&
             db.field_u != var6Lifetime1) {
             if (rg.field_f == var6Lifetime1) {
-              var30 = gb.field_k[2];
+              var30 = PacketBuffer.field_k[2];
               var30.a(var9Lifetime2, -(var30.field_t >> 1) + var10Lifetime2, 256);
             } else {
               if (var6Lifetime1 != ph.field_g) {
                 return;
               }
-              var29 = gb.field_k[1];
+              var29 = PacketBuffer.field_k[1];
               var29.a(var9Lifetime2, var10Lifetime2 - (var29.field_t >> 1), 256);
             }
             return;
           }
-          var31 = gb.field_k[0];
+          var31 = PacketBuffer.field_k[0];
           var16 = var31;
           var11Lifetime2 = var31.field_q << 1;
           var12Lifetime2 = var31.field_r << 1;
@@ -288,18 +288,18 @@ final class pk extends kj {
         if (var6Lifetime2 != hg.field_E &&
           db.field_u != var6Lifetime2) {
           if (rg.field_f == var6Lifetime2) {
-            var35 = gb.field_k[2];
+            var35 = PacketBuffer.field_k[2];
             var35.a(var9Lifetime3, -(var35.field_t >> 1) + var10Lifetime3, 256);
             return;
           }
           if (var6Lifetime2 != ph.field_g) {
             return;
           }
-          var34 = gb.field_k[1];
+          var34 = PacketBuffer.field_k[1];
           var34.a(var9Lifetime3, var10Lifetime3 - (var34.field_t >> 1), 256);
           return;
         }
-        var36 = gb.field_k[0];
+        var36 = PacketBuffer.field_k[0];
         var11Lifetime3 = var36.field_q << 1;
         var12Lifetime3 = var36.field_r << 1;
         if (null == this.field_W) {

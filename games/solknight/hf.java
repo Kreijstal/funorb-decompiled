@@ -379,12 +379,12 @@ final class hf {
         try {
           k.a((byte) -35);
           u.field_b.j(param1 ^ 17073);
-          ve.field_a = new bb(me.field_h, (String) null, k.field_b, param0, param2);
+          ClientException.field_a = new bb(me.field_h, (String) null, k.field_b, param0, param2);
           if (param1 != 17072) {
             String var5 = (String) null;
             hf.a(false, -42, false, (String) null);
           }
-          gf.field_cb = new s(u.field_b, ve.field_a);
+          gf.field_cb = new s(u.field_b, ClientException.field_a);
           u.field_b.b(gf.field_cb, param1 ^ 17105);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "hf.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

@@ -7,9 +7,9 @@ final class n implements Iterator {
     private int field_g;
     static String field_c;
     static Boolean field_b;
-    private gg field_f;
+    private IntrusiveNode field_f;
     static dl field_a;
-    private gg field_d;
+    private IntrusiveNode field_d;
     private ii field_e;
 
     public static void a(int param0) {
@@ -32,13 +32,13 @@ final class n implements Iterator {
           }
           fieldTemp$0 = this.field_g;
           this.field_g = this.field_g + 1;
-          if (this.field_e.field_b[fieldTemp$0].field_d == this.field_e.field_b[this.field_g - 1]) {
+          if (this.field_e.field_b[fieldTemp$0].previous == this.field_e.field_b[this.field_g - 1]) {
             this.field_f = this.field_e.field_b[this.field_g - 1];
             continue;
           }
           break;
         }
-        this.field_f = this.field_e.field_b[this.field_g - 1].field_d;
+        this.field_f = this.field_e.field_b[this.field_g - 1].previous;
         return true;
     }
 
@@ -46,12 +46,12 @@ final class n implements Iterator {
         if (null == this.field_d) {
           throw new IllegalStateException();
         }
-        this.field_d.c(10);
+        this.field_d.unlink(10);
         this.field_d = null;
     }
 
     private final void b(int param0) {
-        this.field_f = this.field_e.field_b[0].field_d;
+        this.field_f = this.field_e.field_b[0].previous;
         this.field_d = null;
         if (param0 <= -23) {
           this.field_g = 1;
@@ -63,12 +63,12 @@ final class n implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        gg var1;
+        IntrusiveNode var1;
         int var2;
         var2 = SolKnight.field_L ? 1 : 0;
         if (this.field_f != this.field_e.field_b[this.field_g - 1]) {
           var1 = this.field_f;
-          this.field_f = var1.field_d;
+          this.field_f = var1.previous;
           this.field_d = var1;
           return var1;
         }
@@ -78,9 +78,9 @@ final class n implements Iterator {
           }
           fieldTemp$0 = this.field_g;
           this.field_g = this.field_g + 1;
-          var1 = this.field_e.field_b[fieldTemp$0].field_d;
+          var1 = this.field_e.field_b[fieldTemp$0].previous;
         } while (this.field_e.field_b[this.field_g - 1] == var1);
-        this.field_f = var1.field_d;
+        this.field_f = var1.previous;
         this.field_d = var1;
         return var1;
     }

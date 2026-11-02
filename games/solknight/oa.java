@@ -47,15 +47,15 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
             return;
           }
           var9 = te.field_N;
-          var2 = var9.j(255);
-          var3 = var9.j(255);
+          var2 = var9.readUnsignedByte(255);
+          var3 = var9.readUnsignedByte(255);
           if (var2 == 0) {
             var4_ref_fj = (fj) (ti.field_b.a((byte) 51));
             if (var4_ref_fj == null) {
               je.a(false);
               return;
             }
-            var5_int = te.field_O - var9.field_m;
+            var5_int = te.field_O - var9.position;
             var11 = var4_ref_fj.field_h;
             var10 = var11;
             var6 = var10;
@@ -63,9 +63,9 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
               var5_int = var11.length << 2;
             }
             for (var7 = 0; var7 < var5_int; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.j(255) << fi.a(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte(255) << fi.a(var7 << 8, 768));
             }
-            var4_ref_fj.c(10);
+            var4_ref_fj.unlink(10);
             return;
           }
           if (var2 == 1) {
@@ -83,7 +83,7 @@ final class oa extends pd implements java.awt.image.ImageProducer, java.awt.imag
               je.a(false);
               return;
             }
-            var5.c(10);
+            var5.unlink(10);
             return;
           }
           hi.a((Throwable) null, "LR1: " + oc.a(false), 1);

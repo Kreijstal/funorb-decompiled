@@ -11,7 +11,7 @@ final class ra {
         if (var3 == null) {
           return null;
         }
-        return new ra(new gb(var3));
+        return new ra(new PacketBuffer(var3));
     }
 
     private final byte[] a() {
@@ -64,22 +64,22 @@ final class ra {
         if (var3 == null) {
           return null;
         }
-        return new ra(new gb(var3));
+        return new ra(new PacketBuffer(var3));
     }
 
-    private ra(gb param0) {
+    private ra(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_a = new fe[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.j(255);
+          var3 = param0.readUnsignedByte(255);
           if (var3 != 0) {
-            param0.field_m = param0.field_m - 1;
+            param0.position = param0.position - 1;
             this.field_a[var2] = new fe();
             this.field_a[var2].a(param0);
           }
         }
-        this.field_c = param0.i(59);
-        this.field_b = param0.i(-113);
+        this.field_c = param0.readUnsignedShort(59);
+        this.field_b = param0.readUnsignedShort(-113);
     }
 }

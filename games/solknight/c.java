@@ -225,7 +225,7 @@ final class c extends rc {
           if (Character.isISOControl(param1)) {
             return false;
           }
-          if (gb.a(param1, 126)) {
+          if (PacketBuffer.a(param1, 126)) {
             return true;
           }
           var6 = hh.field_N;

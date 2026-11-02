@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class qk extends ug {
+final class qk extends SocketConnector {
     static char[] field_k;
     static String field_j;
     static int field_m;

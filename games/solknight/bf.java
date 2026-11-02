@@ -50,7 +50,7 @@ final class bf {
           int var2_int = 0;
           IOException var2 = null;
           Throwable decompiledCaughtException = null;
-          if (te.field_N.field_m >= param1) {
+          if (te.field_N.position >= param1) {
             return true;
           }
           if (lf.field_d == null) {
@@ -66,22 +66,22 @@ final class bf {
                 je.a(false);
                 return false;
               }
-              if (30000L >= dh.b(-1)) {
+              if (30000L >= GameApplet.b(-1)) {
                 return false;
               }
               je.a(false);
               return false;
             }
-            if (param1 - te.field_N.field_m < var2_int) {
-              var2_int = param1 - te.field_N.field_m;
+            if (param1 - te.field_N.position < var2_int) {
+              var2_int = param1 - te.field_N.position;
             }
-            lf.field_d.a((byte) 59, te.field_N.field_m, var2_int, te.field_N.field_l);
+            lf.field_d.a((byte) 59, te.field_N.position, var2_int, te.field_N.payload);
             md.field_y = je.a(1);
-            te.field_N.field_m = te.field_N.field_m + var2_int;
-            if (te.field_N.field_m < param1) {
+            te.field_N.position = te.field_N.position + var2_int;
+            if (te.field_N.position < param1) {
               return false;
             }
-            te.field_N.field_m = 0;
+            te.field_N.position = 0;
             return true;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -173,7 +173,7 @@ final class bf {
         if (param0 > -34) {
           return -84;
         }
-        return -pk.field_ab + dh.field_h;
+        return -pk.field_ab + GameApplet.field_h;
     }
 
     final bf d(int param0, int param1) {

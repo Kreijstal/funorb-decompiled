@@ -661,7 +661,7 @@ class af implements j, eg {
         }
     }
 
-    final static void a(dl param0, gb param1, byte param2, int param3) {
+    final static void a(dl param0, PacketBuffer param1, byte param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -699,8 +699,8 @@ class af implements j, eg {
           var14 = SolKnight.field_L ? 1 : 0;
           try {
             var18 = new di();
-            var18.field_h = param1.j(255);
-            var18.field_o = param1.e(true);
+            var18.field_h = param1.readUnsignedByte(255);
+            var18.field_o = param1.readInt(true);
             var18.field_k = new nj[var18.field_h];
             var18.field_s = new nj[var18.field_h];
             var18.field_m = new int[var18.field_h];
@@ -709,25 +709,25 @@ class af implements j, eg {
             var18.field_r = new int[var18.field_h];
             for (var5 = 0; var18.field_h > var5; var5++) {
               try {
-                var6_int = param1.j(255);
+                var6_int = param1.readUnsignedByte(255);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param1.h(123);
-                    var8 = param1.h(11);
-                    var9 = param1.j(255);
+                    var20 = param1.readString(123);
+                    var8 = param1.readString(11);
+                    var9 = param1.readUnsignedByte(255);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param1.h(19);
+                      var10[var11_int] = param1.readString(19);
                     }
                     var21 = new byte[var9][];
                     var19 = var21;
                     var11 = var19;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param1.e(true);
+                        var13 = param1.readInt(true);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
                         param1.a(var13, 0, -113, var21[var12_int]);
@@ -745,13 +745,13 @@ class af implements j, eg {
                     var18.field_q[var5] = var21;
                   }
                 } else {
-                  var15 = param1.h(94);
+                  var15 = param1.readString(94);
                   var7 = var15;
-                  var16 = param1.h(36);
+                  var16 = param1.readString(36);
                   var8 = var16;
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param1.e(true);
+                    var9 = param1.readInt(true);
                   }
                   var18.field_r[var5] = var6_int;
                   var18.field_m[var5] = var9;

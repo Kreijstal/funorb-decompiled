@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ee extends gg {
+final class ee extends IntrusiveNode {
     byte[] field_k;
     static kl field_j;
     static int field_l;
     static boolean field_i;
-    static gb field_h;
+    static PacketBuffer field_h;
 
     final static rj e(int param0) {
         if (param0 != -1) {
@@ -239,10 +239,10 @@ final class ee extends gg {
           var7Lifetime1 = 0;
           var8Lifetime1 = uk.a((byte) -64, var6Lifetime1) >> 8;
           var9Lifetime1 = rd.a((byte) -30, var6Lifetime1) >> 8;
-          if (gb.field_j != -1 &&
+          if (PacketBuffer.field_j != -1 &&
             ad.field_m != -1) {
             var9Lifetime1 = -128;
-            var7Lifetime1 = gb.field_j - 320;
+            var7Lifetime1 = PacketBuffer.field_j - 320;
             var8Lifetime1 = 240 - ad.field_m;
           }
           var10 = 256.0 / Math.sqrt((double)(var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1 + var9Lifetime1 * var9Lifetime1));

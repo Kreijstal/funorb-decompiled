@@ -83,7 +83,7 @@ abstract class gf extends ld {
 
     private final void b(rc param0, int param1) {
         if (this.field_V != null) {
-          this.field_V.c(10);
+          this.field_V.unlink(10);
         }
         if (param0 == null) {
           this.field_V = new te();

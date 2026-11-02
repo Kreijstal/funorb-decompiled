@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jd extends gb {
+final class jd extends PacketBuffer {
     private int field_o;
     static volatile boolean field_p;
     private r field_n;
@@ -17,9 +17,9 @@ final class jd extends gb {
             stackIn_2_0 = -26;
             return stackIn_2_0;
           }
-          fieldTemp$1 = this.field_m;
-          this.field_m = this.field_m + 1;
-          stackIn_4_0 = this.field_l[fieldTemp$1] - this.field_n.a((byte) 7) & 255;
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          stackIn_4_0 = this.payload[fieldTemp$1] - this.field_n.a((byte) 7) & 255;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -290,9 +290,9 @@ final class jd extends gb {
           }
           var5_int = 0;
           while (param1 > var5_int) {
-            fieldTemp$0 = this.field_m;
-            this.field_m = this.field_m + 1;
-            param3[var5_int + param2] = (byte)(this.field_l[fieldTemp$0] - this.field_n.a((byte) -78));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param3[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_n.a((byte) -78));
             var5_int++;
             if (var6 != 0) {
               return;
@@ -315,7 +315,7 @@ final class jd extends gb {
 
     final void d(byte param0) {
         try {
-          this.field_o = 8 * this.field_m;
+          this.field_o = 8 * this.position;
           if (param0 >= -78) {
             this.m(55);
           }
@@ -326,7 +326,7 @@ final class jd extends gb {
 
     final void m(int param0) {
         try {
-          this.field_m = (this.field_o + 7) / 8;
+          this.position = (this.field_o + 7) / 8;
           if (param0 != 0) {
             this.l(69);
           }
@@ -353,11 +353,11 @@ final class jd extends gb {
           }
           var5 = 0;
           this.field_o = this.field_o + param1;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var4 < param1) {
               incrementValue$1 = var3_int;
               var3_int++;
-              var5 = var5 + ((sd.field_j[var4] & this.field_l[incrementValue$1]) << param1 - var4);
+              var5 = var5 + ((sd.field_j[var4] & this.payload[incrementValue$1]) << param1 - var4);
               param1 = param1 - var4;
               var4 = 8;
               if (var6 == 0) {
@@ -365,13 +365,13 @@ final class jd extends gb {
               }
             } else {
               if (var4 == param1) {
-                var5 = var5 + (this.field_l[var3_int] & sd.field_j[var4]);
+                var5 = var5 + (this.payload[var3_int] & sd.field_j[var4]);
                 if (var6 == 0) {
-                  break L2;
+                  break scanLoop1;
                 }
               }
             }
-            var5 = var5 + (this.field_l[var3_int] >> var4 - param1 & sd.field_j[param1]);
+            var5 = var5 + (this.payload[var3_int] >> var4 - param1 & sd.field_j[param1]);
             break;
           }
           stackIn_14_0 = var5;
@@ -404,9 +404,9 @@ final class jd extends gb {
           if (param1 != -2147483648) {
             jd.a((String) null, 29L, (java.applet.Applet) null, -35, (String) null);
           }
-          fieldTemp$1 = this.field_m;
-          this.field_m = this.field_m + 1;
-          this.field_l[fieldTemp$1] = (byte)(this.field_n.a((byte) 103) + param0);
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte)(this.field_n.a((byte) 103) + param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

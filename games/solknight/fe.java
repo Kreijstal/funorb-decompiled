@@ -258,32 +258,32 @@ final class fe {
         return field_t;
     }
 
-    final void a(gb param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_a = new vi();
         this.field_a.b(param0);
         this.field_o = new vi();
         this.field_o.b(param0);
-        int var2 = param0.j(255);
+        int var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
-          param0.field_m = param0.field_m - 1;
+          param0.position = param0.position - 1;
           this.field_b = new vi();
           this.field_b.b(param0);
           this.field_e = new vi();
           this.field_e.b(param0);
         }
-        var2 = param0.j(255);
+        var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
-          param0.field_m = param0.field_m - 1;
+          param0.position = param0.position - 1;
           this.field_x = new vi();
           this.field_x.b(param0);
           this.field_h = new vi();
           this.field_h.b(param0);
         }
-        var2 = param0.j(255);
+        var2 = param0.readUnsignedByte(255);
         if (var2 != 0) {
-          param0.field_m = param0.field_m - 1;
+          param0.position = param0.position - 1;
           this.field_u = new vi();
           this.field_u.b(param0);
           this.field_f = new vi();
@@ -300,8 +300,8 @@ final class fe {
         }
         this.field_j = param0.c(false);
         this.field_s = param0.c(false);
-        this.field_n = param0.i(127);
-        this.field_m = param0.i(-105);
+        this.field_n = param0.readUnsignedShort(127);
+        this.field_m = param0.readUnsignedShort(-105);
         this.field_k = new tj();
         this.field_i = new vi();
         this.field_k.a(param0, this.field_i);

@@ -14,7 +14,7 @@ final class vh {
         ta.field_a = 1000000000L / (long)param1;
     }
 
-    final static void a(gb param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -78,8 +78,8 @@ final class vh {
 
     public static void a(boolean param0) {
         if (param0) {
-          gb var2 = (gb) null;
-          vh.a((gb) null, 57);
+          PacketBuffer var2 = (PacketBuffer) null;
+          vh.a((PacketBuffer) null, 57);
         }
         field_b = null;
         field_a = null;

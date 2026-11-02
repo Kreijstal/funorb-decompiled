@@ -153,7 +153,7 @@ final class me {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.c(10);
+          var9.unlink(10);
           if (param3 > -52) {
             stackIn_17_0 = (sh) null;
             return stackIn_17_0;

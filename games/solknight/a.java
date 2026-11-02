@@ -86,7 +86,7 @@ abstract class a extends wf implements pi {
         }
     }
 
-    final static String a(gb param0, int param1, boolean param2) {
+    final static String a(PacketBuffer param0, int param1, boolean param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -105,7 +105,7 @@ abstract class a extends wf implements pi {
               var3_int = param1;
             }
             var4 = new byte[var3_int];
-            param0.field_m = param0.field_m + v.field_g.a(0, param0.field_m, 4, var4, var3_int, param0.field_l);
+            param0.position = param0.position + v.field_g.a(0, param0.position, 4, var4, var3_int, param0.payload);
             var5 = vd.a(var4, 0, var3_int, 160);
             stackIn_3_0 = var5;
             return stackIn_3_0;

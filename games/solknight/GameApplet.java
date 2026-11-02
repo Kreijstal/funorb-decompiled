@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class dh extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     boolean field_c;
     static int field_h;
     static o field_j;
@@ -310,7 +310,7 @@ public abstract class dh extends java.applet.Applet implements Runnable, java.aw
 
     public abstract void init();
 
-    protected dh() {
+    protected GameApplet() {
         this.field_c = false;
     }
 
@@ -747,7 +747,7 @@ public abstract class dh extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            dh.d((byte) 96);
+            GameApplet.d((byte) 96);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

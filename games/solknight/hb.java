@@ -304,7 +304,7 @@ final class hb {
               kh.field_d = 255;
               if (kb.field_b != 7 && (kb.field_b != 2 ||
                 !(ob.field_l <= 0))) {
-                gb.a(true, 5, -128);
+                PacketBuffer.a(true, 5, -128);
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -315,7 +315,7 @@ final class hb {
                   ic.field_t = ic.field_t - 5000;
                 }
                 me.a(false);
-                gb.a(true, 6, -128);
+                PacketBuffer.a(true, 6, -128);
                 pk.a((byte) -96, 5, false);
               }
               vk.field_p = 0;
@@ -342,7 +342,7 @@ final class hb {
           if (cb.field_a < 0) {
             cb.field_a = 0;
           }
-          if (0 <= ve.field_b) {
+          if (0 <= ClientException.field_b) {
             pl.field_a = 0;
           }
           if (cb.field_a < 128 &&
@@ -392,7 +392,7 @@ final class hb {
           }
           if (pg.field_e &&
             kd.field_a != -1 ||
-            !(0 > ve.field_b)) {
+            !(0 > ClientException.field_b)) {
             lk.field_b = 0;
           }
           if (qh.field_a[kb.field_b] > lk.field_b && (kd.field_a == -1 ||
@@ -405,7 +405,7 @@ final class hb {
           }
           if (pg.field_e &&
             -1 == kd.field_a) {
-            if (ve.field_b < 0 &&
+            if (ClientException.field_b < 0 &&
               of.field_g > 50) {
               k.field_c = k.field_c + 1;
             }
@@ -424,14 +424,14 @@ final class hb {
                 !(0 <= uf.field_p)) {
                 kh.field_d = 255;
                 if (il.b(507)) {
-                  gb.a(true, 8, -128);
+                  PacketBuffer.a(true, 8, -128);
                 } else {
                   ah.b(true);
                   kh.field_c = null;
                   if (jl.field_d != 0) {
-                    gb.a(true, 7, -127);
+                    PacketBuffer.a(true, 7, -127);
                   } else {
-                    gb.a(true, 2, -128);
+                    PacketBuffer.a(true, 2, -128);
                   }
                 }
                 stackIn_142_0 = (ob.field_l <= 0) ? 9 : 0;
@@ -439,12 +439,12 @@ final class hb {
                 for (var2Lifetime1 = 0; var2Lifetime1 < kf.field_G.length; var2Lifetime1++) {
                   kf.field_G[var2Lifetime1] = null;
                 }
-                ve.field_b = 240;
+                ClientException.field_b = 240;
                 pk.a((byte) -96, 4, false);
               }
             }
           }
-          if (ve.field_b >= 0) {
+          if (ClientException.field_b >= 0) {
             lk.field_b = 0;
           }
           if (!pg.field_e) {
@@ -452,11 +452,11 @@ final class hb {
           }
           if (kd.field_a == -1 ||
             pg.field_e ||
-            !(ve.field_b < 0)) {
+            !(ClientException.field_b < 0)) {
             if (100 < mf.field_A && (!pg.field_e ||
               -1 != kd.field_a &&
               pg.field_e ||
-              !(ve.field_b < 0))) {
+              !(ClientException.field_b < 0))) {
               var2Lifetime2 = bk.a(5, jb.field_g, (byte) -52);
               if (kb.field_b == 0 &&
                 var2Lifetime2 == 0) {
@@ -536,7 +536,7 @@ final class hb {
               if (var2Lifetime2 == 5) {
                 var6 = 0;
               }
-              if (ve.field_b >= 0) {
+              if (ClientException.field_b >= 0) {
                 if (var4 >= 0) {
                   stackIn_219_0 = var6 / 5 - 5120;
                 } else {
@@ -572,8 +572,8 @@ final class hb {
           }
           if (!pg.field_e &&
             kd.field_a == -1 ||
-            !(ve.field_b < 0)) {
-            var2Lifetime3 = gb.field_j;
+            !(ClientException.field_b < 0)) {
+            var2Lifetime3 = PacketBuffer.field_j;
             if (var2Lifetime3 < 0) {
               var2Lifetime3 = 0;
             }
@@ -587,7 +587,7 @@ final class hb {
             if (var3Lifetime1 >= 480) {
               var3Lifetime1 = 479;
             }
-            if (kd.field_a == -1 && (!(gb.field_j <= -1) ||
+            if (kd.field_a == -1 && (!(PacketBuffer.field_j <= -1) ||
               0 != wb.field_c)) {
               si.field_E = (var3Lifetime1 / 2 + 9 * si.field_E) / 10;
               wd.field_c = (9 * wd.field_c + (var2Lifetime3 - 320)) / 10;
@@ -600,7 +600,7 @@ final class hb {
                 continue;
               }
               if (!pg.field_e) {
-                gb.a(true, 1, -128);
+                PacketBuffer.a(true, 1, -128);
                 continue;
               }
               f.field_d = 0;
@@ -613,7 +613,7 @@ final class hb {
             -1 == kd.field_a &&
             lh.field_s >= 2) {
             kh.field_d = 255;
-            gb.a(false, 5, -127);
+            PacketBuffer.a(false, 5, -127);
             lc.field_p = lc.field_p + 1;
             ic.field_t = ic.field_t - 1;
             vk.field_p = 0;
@@ -633,7 +633,7 @@ final class hb {
                 ah.b(param0);
                 kh.field_c = null;
               }
-              gb.a(true, 6, -127);
+              PacketBuffer.a(true, 6, -127);
               pk.a((byte) -96, 5, false);
             }
             lk.field_f = 0;

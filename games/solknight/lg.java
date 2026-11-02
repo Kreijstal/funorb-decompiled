@@ -50,7 +50,7 @@ final class lg extends wd {
           param2 == 0 &&
           !var12.field_r &&
           var12.field_m) {
-          var12.c(param1 ^ 10);
+          var12.unlink(param1 ^ 10);
           var4 = null;
         }
         if (var4 == null) {
@@ -86,7 +86,7 @@ final class lg extends wd {
               var4 = this.field_h.a(this.field_o, true, param0, 437409504, (byte) 2);
             }
           }
-          this.field_w.a((byte) 126, (gg) (var4), (long)param0);
+          this.field_w.a((byte) 126, (IntrusiveNode) (var4), (long)param0);
         }
         if (param1 != 0) {
           this.c(-104);
@@ -127,7 +127,7 @@ final class lg extends wd {
                 this.field_u[param0] = (byte) 1;
               }
               if (!((sk) (var4)).field_r) {
-                ((sk) (var4)).c(param1 ^ 10);
+                ((sk) (var4)).unlink(param1 ^ 10);
               }
               stackIn_60_0 = var4;
               return (sk) (stackIn_60_0);
@@ -137,13 +137,13 @@ final class lg extends wd {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_u[param0] = (byte)-1;
-            ((sk) (var4)).c(param1 + 10);
+            ((sk) (var4)).unlink(param1 + 10);
             if (!((sk) (var4)).field_r) {
               return null;
             }
             if (!this.field_h.b(-21)) {
               var4 = this.field_h.a(this.field_o, true, param0, 437409504, (byte) 2);
-              this.field_w.a((byte) 73, (gg) (var4), (long)param0);
+              this.field_w.a((byte) 73, (IntrusiveNode) (var4), (long)param0);
             }
             return null;
           }
@@ -179,13 +179,13 @@ final class lg extends wd {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_h.c((byte) 59);
-          ((sk) (var4)).c(10);
+          ((sk) (var4)).unlink(10);
           if (((sk) (var4)).field_r) {
             if (this.field_h.b(-21)) {
               return null;
             }
             var4 = this.field_h.a(this.field_o, true, param0, 437409504, (byte) 2);
-            this.field_w.a((byte) 79, (gg) (var4), (long)param0);
+            this.field_w.a((byte) 79, (IntrusiveNode) (var4), (long)param0);
           }
           return null;
         }
@@ -198,7 +198,7 @@ final class lg extends wd {
           }
         }
         if (!((sk) (var4)).field_r) {
-          ((sk) (var4)).c(param1 + 10);
+          ((sk) (var4)).unlink(param1 + 10);
         }
         return (sk) (var4);
     }
@@ -210,14 +210,14 @@ final class lg extends wd {
         sk discarded$2 = null;
         int var2_int;
         sk var2;
-        gg var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        gg var6;
-        gg var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        gg var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         var5 = SolKnight.field_L ? 1 : 0;
         if (param0 != 18055) {
           this.c(79);
@@ -231,12 +231,12 @@ final class lg extends wd {
             var2_int = 1;
             var3 = this.field_m.a((byte) 51);
             while (var3 != null) {
-              var4 = (int)var3.field_g;
+              var4 = (int)var3.key;
               if (0 == this.field_u[var4]) {
                 discarded$1 = this.a(var4, (byte) 0, 1);
               }
               if (this.field_u[var4] != 0) {
-                var3.c(10);
+                var3.unlink(10);
               } else {
                 var2_int = 0;
               }
@@ -252,8 +252,8 @@ final class lg extends wd {
                   discarded$0 = this.a(this.field_q, (byte) 0, 1);
                 }
                 if (0 == this.field_u[this.field_q]) {
-                  var7 = new gg();
-                  var7.field_g = (long)this.field_q;
+                  var7 = new IntrusiveNode();
+                  var7.key = (long)this.field_q;
                   this.field_m.a(var7, -7044);
                   var2_int = 0;
                 }
@@ -274,14 +274,14 @@ final class lg extends wd {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_m.a((byte) 51);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_g;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (1 != this.field_u[var4Lifetime1]) {
                   discarded$3 = this.a(var4Lifetime1, (byte) 0, 2);
                 }
                 if (this.field_u[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.c(param0 - 18045);
+                  var3Lifetime1.unlink(param0 - 18045);
                 }
                 var3Lifetime1 = this.field_m.b(-47);
               }
@@ -295,8 +295,8 @@ final class lg extends wd {
                     discarded$2 = this.a(this.field_q, (byte) 0, 2);
                   }
                   if (this.field_u[this.field_q] != 1) {
-                    var6 = new gg();
-                    var6.field_g = (long)this.field_q;
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_q;
                     var2_intLifetime1 = 0;
                     this.field_m.a(var6, -7044);
                   }
@@ -326,7 +326,7 @@ final class lg extends wd {
                 if (!var2.field_r) {
                   throw new RuntimeException();
                 }
-                var2.c(10);
+                var2.unlink(10);
               } else {
                 var2.field_q = true;
               }
@@ -414,7 +414,7 @@ final class lg extends wd {
     final void d(int param0) {
         sk discarded$0 = null;
         sk discarded$1 = null;
-        gg var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         var4 = SolKnight.field_L ? 1 : 0;
@@ -429,7 +429,7 @@ final class lg extends wd {
         }
         var2 = this.field_e.a((byte) 51);
         while (var2 != null) {
-          var3 = (int)var2.field_g;
+          var3 = (int)var2.key;
           if (var3 >= 0 &&
             var3 < this.field_j.field_l &&
             this.field_j.field_r[var3] != 0) {
@@ -440,10 +440,10 @@ final class lg extends wd {
               discarded$1 = this.a(var3, (byte) 0, 2);
             }
             if (1 == this.field_u[var3]) {
-              var2.c(10);
+              var2.unlink(10);
             }
           } else {
-            var2.c(param0 + 11);
+            var2.unlink(param0 + 11);
           }
           var2 = this.field_e.b(-41);
         }
@@ -464,7 +464,7 @@ final class lg extends wd {
           return null;
         }
         byte[] var4 = var3.f(param1);
-        var3.c(10);
+        var3.unlink(10);
         return var4;
     }
 

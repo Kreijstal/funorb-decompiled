@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-final class ib extends gg {
+final class ib extends IntrusiveNode {
     static Random field_i;
     int[] field_n;
     int field_m;
     boolean field_k;
     static boolean field_o;
     static int field_h;
-    static dh field_l;
+    static GameApplet field_l;
     static int field_j;
 
     public static void a(int param0) {

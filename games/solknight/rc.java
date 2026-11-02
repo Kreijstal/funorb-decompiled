@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class rc extends gg {
+class rc extends IntrusiveNode {
     int field_t;
     static kb field_o;
     String field_z;
@@ -60,7 +60,7 @@ class rc extends gg {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a(ad.field_m, gb.field_j, param0, param2, param1 - 18970) ? 1 : 0;
+          var5_int = this.a(ad.field_m, PacketBuffer.field_j, param0, param2, param1 - 18970) ? 1 : 0;
           if (param1 != 18874) {
             return;
           }
@@ -340,7 +340,7 @@ class rc extends gg {
           }
           if (0 != cl.field_n &&
             var5 != 0) {
-            this.a(param3, this, param1, gb.field_j, cl.field_n, ad.field_m, (byte) 96);
+            this.a(param3, this, param1, PacketBuffer.field_j, cl.field_n, ad.field_m, (byte) 96);
             if (hg.field_F != 0) {
               if (this.a(hg.field_F, param3, false, db.field_o, s.field_gb, param1, this)) {
                 param2 = false;
@@ -361,7 +361,7 @@ class rc extends gg {
               pd.a(125, this.c((byte) 78));
               return param2;
             }
-            this.a(ad.field_m, 0, this, param1, gb.field_j, param3);
+            this.a(ad.field_m, 0, this, param1, PacketBuffer.field_j, param3);
             var8 = jf.field_a;
             if (var8 != null) {
               if (var8.field_n instanceof gk) {
@@ -373,12 +373,12 @@ class rc extends gg {
             pd.a(125, this.c((byte) 78));
             return param2;
           }
-          L12: {
+          regionExit1: {
             if (hg.field_F != 0) {
               if (this.a(hg.field_F, param3, false, db.field_o, s.field_gb, param1, this)) {
                 param2 = false;
                 if (var7 == 0) {
-                  break L12;
+                  break regionExit1;
                 }
               }
               if (var5 != 0) {
@@ -394,7 +394,7 @@ class rc extends gg {
                 pd.a(125, this.c((byte) 78));
                 return param2;
               }
-              this.a(ad.field_m, 0, this, param1, gb.field_j, param3);
+              this.a(ad.field_m, 0, this, param1, PacketBuffer.field_j, param3);
               var9 = jf.field_a;
               if (var9 != null) {
                 if (!(var9.field_n instanceof gk)) {
@@ -419,7 +419,7 @@ class rc extends gg {
             pd.a(125, this.c((byte) 78));
             return param2;
           }
-          this.a(ad.field_m, 0, this, param1, gb.field_j, param3);
+          this.a(ad.field_m, 0, this, param1, PacketBuffer.field_j, param3);
           var10 = jf.field_a;
           if (var10 != null) {
             if (var10.field_n instanceof gk) {
@@ -453,12 +453,12 @@ class rc extends gg {
           }
         }
         if (0 == cl.field_n) {
-          L5: {
+          regionExit2: {
             if (hg.field_F != 0) {
               if (this.a(hg.field_F, param3, false, db.field_o, s.field_gb, param1, this)) {
                 param2 = false;
                 if (var7 == 0) {
-                  break L5;
+                  break regionExit2;
                 }
               }
               if (var5Lifetime1 != 0) {
@@ -473,7 +473,7 @@ class rc extends gg {
                   pd.a(125, this.c((byte) 78));
                   return param2;
                 }
-                this.a(ad.field_m, 0, this, param1, gb.field_j, param3);
+                this.a(ad.field_m, 0, this, param1, PacketBuffer.field_j, param3);
                 var11 = jf.field_a;
                 if (var11 == null) {
                   ne.field_j = wb.field_c;
@@ -504,7 +504,7 @@ class rc extends gg {
             pd.a(125, this.c((byte) 78));
             return param2;
           }
-          this.a(ad.field_m, 0, this, param1, gb.field_j, param3);
+          this.a(ad.field_m, 0, this, param1, PacketBuffer.field_j, param3);
           var12 = jf.field_a;
           if (var12 != null) {
             if (var12.field_n instanceof gk) {
@@ -517,7 +517,7 @@ class rc extends gg {
           return param2;
         }
         if (var5Lifetime1 != 0) {
-          this.a(param3, this, param1, gb.field_j, cl.field_n, ad.field_m, (byte) 96);
+          this.a(param3, this, param1, PacketBuffer.field_j, cl.field_n, ad.field_m, (byte) 96);
           if (hg.field_F != 0) {
             if (this.a(hg.field_F, param3, false, db.field_o, s.field_gb, param1, this)) {
               param2 = false;
@@ -538,7 +538,7 @@ class rc extends gg {
             pd.a(125, this.c((byte) 78));
             return param2;
           }
-          this.a(ad.field_m, 0, this, param1, gb.field_j, param3);
+          this.a(ad.field_m, 0, this, param1, PacketBuffer.field_j, param3);
           var14 = jf.field_a;
           var6 = var14;
           if (var14 != null) {
@@ -567,7 +567,7 @@ class rc extends gg {
           pd.a(125, this.c((byte) 78));
           return param2;
         }
-        this.a(ad.field_m, 0, this, param1, gb.field_j, param3);
+        this.a(ad.field_m, 0, this, param1, PacketBuffer.field_j, param3);
         var24 = jf.field_a;
         if (var24 != null) {
           if (var24.field_n instanceof gk) {

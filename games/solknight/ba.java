@@ -10,7 +10,7 @@ final class ba extends ec {
     int[] field_n;
     private int[] field_m;
 
-    final void a(gb param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -24,7 +24,7 @@ final class ba extends ec {
             ba.f(1);
           }
           while (true) {
-            var3_int = param0.j(255);
+            var3_int = param0.readUnsignedByte(255);
             if (var3_int == 0) {
               return;
             }
@@ -44,7 +44,7 @@ final class ba extends ec {
         }
     }
 
-    private final void a(int param0, gb param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -57,32 +57,32 @@ final class ba extends ec {
         int var6 = 0;
         ff var7 = null;
         int var9 = 0;
-        gb var10 = null;
+        PacketBuffer var10 = null;
         var9 = SolKnight.field_L ? 1 : 0;
         try {
           if (1 == param0) {
-            this.field_p = b.$cfr$intArgs$a$25ae83805f84(param1.h(72), 60, true);
+            this.field_p = b.$cfr$intArgs$a$25ae83805f84(param1.readString(72), 60, true);
           } else {
             if (param0 == 2) {
-              var4_int = param1.j(255);
+              var4_int = param1.readUnsignedByte(255);
               this.field_n = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_n[var5] = param1.i(-108);
+                this.field_n[var5] = param1.readUnsignedShort(-108);
               }
             } else {
               if (param0 == 3) {
-                var4_int = param1.j(param2 + 255);
+                var4_int = param1.readUnsignedByte(param2 + 255);
                 this.field_q = new int[var4_int][];
                 this.field_m = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  var6 = param1.i(38);
+                  var6 = param1.readUnsignedShort(38);
                   var7 = uf.a(var6, (byte) -121);
                   if (var7 != null) {
                     this.field_m[var5] = var6;
                     array$0 = new int[var7.field_c];
                     this.field_q[var5] = array$0;
                     for (var8 = 0; var8 < var7.field_c; var8++) {
-                      this.field_q[var5][var8] = param1.i(-122);
+                      this.field_q[var5][var8] = param1.readUnsignedShort(-122);
                     }
                   }
                 }
@@ -93,8 +93,8 @@ final class ba extends ec {
             }
           }
           if (param2 != 0) {
-            var10 = (gb) null;
-            this.a((gb) null, true);
+            var10 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

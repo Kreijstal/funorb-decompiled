@@ -186,9 +186,9 @@ final class bk {
     final static String a(int param0) {
         if (param0 != 0) {
           field_a = (nj) null;
-          return te.field_N.h(param0 + 109);
+          return te.field_N.readString(param0 + 109);
         }
-        return te.field_N.h(param0 + 109);
+        return te.field_N.readString(param0 + 109);
     }
 
     static {

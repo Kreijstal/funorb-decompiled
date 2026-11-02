@@ -102,12 +102,12 @@ public final class SolKnight extends ab {
                 if (7 == kd.field_a &&
                   jl.field_d == 0) {
                   kd.field_a = 2;
-                  gb.a(false, 2, -127);
+                  PacketBuffer.a(false, 2, -127);
                 }
               }
             } else {
               if (!sg.b((byte) -104)) {
-                if (gg.b((byte) 89)) {
+                if (IntrusiveNode.b((byte) 89)) {
                   stackIn_55_0 = (dj.field_k != null);
                   var2_int = rk.a(stackIn_55_0, (byte) 20, (ab) (this));
                   if (var2_int != 2364824) {
@@ -135,7 +135,7 @@ public final class SolKnight extends ab {
                     qk.d(14995);
                   } else {
                     if (var2_int == 3) {
-                      ta.a(false, 320, w.field_b, 2, ug.field_g.field_s + ug.field_g.field_F, ug.field_g, 8, ad.field_b.field_s + ad.field_b.field_F, ad.field_b.field_F, w.field_b, 8, 240, ad.field_b, ug.field_g.field_F, true);
+                      ta.a(false, 320, w.field_b, 2, SocketConnector.field_g.field_s + SocketConnector.field_g.field_F, SocketConnector.field_g, 8, ad.field_b.field_s + ad.field_b.field_F, ad.field_b.field_F, w.field_b, 8, 240, ad.field_b, SocketConnector.field_g.field_F, true);
                     } else {
                       if (var2_int == 4) {
                         bb.a((byte) -14, -2, 0);
@@ -183,7 +183,7 @@ public final class SolKnight extends ab {
             }
           }
           if (var2_intLifetime1 != 0) {
-            aa.a(ad.field_b.field_F, (byte) -93, ad.field_b, ug.field_g.field_F + ug.field_g.field_s, 8, w.field_b, 320, 8, ad.field_b.field_F + ad.field_b.field_s, ug.field_g, w.field_b, ug.field_g.field_F, 2, 240);
+            aa.a(ad.field_b.field_F, (byte) -93, ad.field_b, SocketConnector.field_g.field_F + SocketConnector.field_g.field_s, 8, w.field_b, 320, 8, ad.field_b.field_F + ad.field_b.field_s, SocketConnector.field_g, w.field_b, SocketConnector.field_g.field_F, 2, 240);
           }
           var3Lifetime1 = 55 % ((51 - param0) / 39);
           return;
@@ -204,8 +204,8 @@ public final class SolKnight extends ab {
           eb.a((byte) 113);
           rg.a((byte) -40);
           ab.e((byte) -99);
-          ve.a((byte) 125);
-          dh.d((byte) -41);
+          ClientException.a((byte) 125);
+          GameApplet.d((byte) -41);
           na.a(-13357);
           lf.b(18609);
           mi.c();
@@ -213,7 +213,7 @@ public final class SolKnight extends ab {
           mg.a();
           bk.a((byte) 84);
           vc.a(true);
-          gb.f(-11);
+          PacketBuffer.f(-11);
           je.a((byte) 64);
           cj.b(-26497);
           ah.a(true);
@@ -240,7 +240,7 @@ public final class SolKnight extends ab {
           gj.e();
           mf.g(103);
           se.b(false);
-          gg.b(12516);
+          IntrusiveNode.b(12516);
           qd.a(4);
           hg.a(8192);
           oi.c();
@@ -342,7 +342,7 @@ public final class SolKnight extends ab {
           h.a(-94);
           ta.b((byte) 14);
           fh.a((byte) 58);
-          ug.b(100);
+          SocketConnector.b(100);
           cb.a(-107);
           dk.e(-108);
           oa.b(768);
@@ -497,7 +497,7 @@ public final class SolKnight extends ab {
                         fh.field_c.b(true)) {
                         if (field_I.c((byte) -121) &&
                           field_I.b(true)) {
-                          a.a((byte) 102, ug.field_e, 65.0f);
+                          a.a((byte) 102, SocketConnector.field_e, 65.0f);
                           this.a(-11633);
                           if (!param1) {
                             stackIn_44_0 = pb.field_c;
@@ -634,7 +634,7 @@ public final class SolKnight extends ab {
             return stackIn_86_0;
           }
           ad.field_b = lc.a(fh.field_c, 1, "b24", "", field_I);
-          ug.field_g = lc.a(fh.field_c, 1, "b12", "", field_I);
+          SocketConnector.field_g = lc.a(fh.field_c, 1, "b12", "", field_I);
           td.field_e = ik.a(fh.field_c, -18362, "guns", "");
           of.field_d = rb.a("husk", "", fh.field_c, (byte) -125);
           uh.field_l = ik.a(fh.field_c, -18362, "stars", "");
@@ -662,7 +662,7 @@ public final class SolKnight extends ab {
           var20 = var19;
           var20.a();
           ak.field_e[4].a(0, 0, 152, 152);
-          ai.a(10, ug.field_g, 31, 132, 132, 16776960, -122, 10, var20, 0, 5500);
+          ai.a(10, SocketConnector.field_g, 31, 132, 132, 16776960, -122, 10, var20, 0, 5500);
           dd.field_c = ik.a(fh.field_c, param0 ^ -18362, "uberframe", "");
           this.a(dd.field_c, (byte) 31);
           dd.field_c = null;
@@ -722,7 +722,7 @@ public final class SolKnight extends ab {
         this.a(0, false, 6, 9, true, 16, 10, 8);
         mf var2 = new mf();
         var2.d(-4474, 128, 9);
-        dh.a(var2, (java.awt.Component) ((Object) dc.field_q), true, (byte) -40, 22050, wh.field_c);
+        GameApplet.a(var2, (java.awt.Component) ((Object) dc.field_q), true, (byte) -40, 22050, wh.field_c);
         hc.field_d = 16777088;
         if (param0 != -31680) {
           return;
@@ -761,23 +761,23 @@ public final class SolKnight extends ab {
             return;
           }
           if (wb.field_c != 0) {
-            if (0 < (gb.field_j << 17) + lc.field_h) {
-              lc.field_h = lc.field_h + (gb.field_j << 17);
-              ic.field_t = ic.field_t + gb.field_j * ud.field_k;
+            if (0 < (PacketBuffer.field_j << 17) + lc.field_h) {
+              lc.field_h = lc.field_h + (PacketBuffer.field_j << 17);
+              ic.field_t = ic.field_t + PacketBuffer.field_j * ud.field_k;
             } else {
-              ic.field_t = ic.field_t - gb.field_j * ud.field_k;
-              lc.field_h = lc.field_h - (gb.field_j << 17);
+              ic.field_t = ic.field_t - PacketBuffer.field_j * ud.field_k;
+              lc.field_h = lc.field_h - (PacketBuffer.field_j << 17);
             }
           }
           if (je.field_d == 0) {
-            if (ve.field_b > 0) {
-              ve.field_b = ve.field_b - 1;
-              if (ve.field_b == 385) {
+            if (ClientException.field_b > 0) {
+              ClientException.field_b = ClientException.field_b - 1;
+              if (ClientException.field_b == 385) {
                 mb.a(true, 35, 256);
               }
             }
-            if (ve.field_b >= 0) {
-              si.field_E = 240 - ve.field_b;
+            if (ClientException.field_b >= 0) {
+              si.field_E = 240 - ClientException.field_b;
               wd.field_c = -160;
               if (si.field_E < 0) {
                 si.field_E = 0;
@@ -812,7 +812,7 @@ public final class SolKnight extends ab {
                 hb.a(true);
               }
             }
-            if (!(0 > ve.field_b) ||
+            if (!(0 > ClientException.field_b) ||
               pg.field_e &&
               kd.field_a != -1) {
               var4 = 1;
@@ -856,7 +856,7 @@ public final class SolKnight extends ab {
                 kd.field_a = h.field_g;
                 if (kd.field_a == -2) {
                   kd.field_a = 0;
-                  ta.a(false, 320, w.field_b, 2, ug.field_g.field_s + ug.field_g.field_F, ug.field_g, 8, ad.field_b.field_F + ad.field_b.field_s, ad.field_b.field_F, w.field_b, 8, 240, ad.field_b, ug.field_g.field_F, false);
+                  ta.a(false, 320, w.field_b, 2, SocketConnector.field_g.field_s + SocketConnector.field_g.field_F, SocketConnector.field_g, 8, ad.field_b.field_F + ad.field_b.field_s, ad.field_b.field_F, w.field_b, 8, 240, ad.field_b, SocketConnector.field_g.field_F, false);
                 }
               } else {
                 kd.field_a = me.field_b;
@@ -998,10 +998,10 @@ public final class SolKnight extends ab {
             } else {
               var5Lifetime1 = 480 - var6Lifetime1;
             }
-            var7Lifetime1 = ug.field_g.b(hb.field_m[var4.field_h]);
+            var7Lifetime1 = SocketConnector.field_g.b(hb.field_m[var4.field_h]);
             uj.a(60 + var7Lifetime1, 70, -60 - var7Lifetime1 + 640 >> 1, gf.field_fb, var5Lifetime1, 2);
-            ii.field_f[var4.field_h].e(304, 10 + ug.field_g.field_s + (ug.field_g.field_F + var5Lifetime1));
-            ug.field_g.a(hb.field_m[var4.field_h], 320, var5Lifetime1 + ug.field_g.field_F + 8, 16776960, 1);
+            ii.field_f[var4.field_h].e(304, 10 + SocketConnector.field_g.field_s + (SocketConnector.field_g.field_F + var5Lifetime1));
+            SocketConnector.field_g.a(hb.field_m[var4.field_h], 320, var5Lifetime1 + SocketConnector.field_g.field_F + 8, 16776960, 1);
           }
           if (sg.b((byte) -115)) {
             mi.a(0, 0, mi.field_a, mi.field_d);
@@ -1198,15 +1198,15 @@ public final class SolKnight extends ab {
           gf.field_fb[6] = ig.a(var19, 30, var19.field_r - var31.field_r, 0, var12.field_q, var31.field_r);
           gf.field_fb[7] = var22;
           gf.field_fb[8] = ig.a(var18, 30, var18.field_r - var31.field_r, 0, var41.field_q, var31.field_r);
-          dh.field_f = new o[9];
-          dh.field_f[0] = ig.a(var16, 30, 0, 0, var43.field_q, var29.field_r);
-          dh.field_f[3] = var27;
-          dh.field_f[7] = var26;
-          dh.field_f[2] = var29;
-          dh.field_f[1] = var20;
-          dh.field_f[6] = var43;
-          dh.field_f[5] = var21;
-          dh.field_f[8] = ig.a(var18, 30, 0, var18.field_q - var29.field_q, var29.field_q, var43.field_r);
+          GameApplet.field_f = new o[9];
+          GameApplet.field_f[0] = ig.a(var16, 30, 0, 0, var43.field_q, var29.field_r);
+          GameApplet.field_f[3] = var27;
+          GameApplet.field_f[7] = var26;
+          GameApplet.field_f[2] = var29;
+          GameApplet.field_f[1] = var20;
+          GameApplet.field_f[6] = var43;
+          GameApplet.field_f[5] = var21;
+          GameApplet.field_f[8] = ig.a(var18, 30, 0, var18.field_q - var29.field_q, var29.field_q, var43.field_r);
           le.field_d = new o[9];
           le.field_d[0] = var28;
           le.field_d[1] = var20;
@@ -1215,7 +1215,7 @@ public final class SolKnight extends ab {
           le.field_d[5] = var25;
           le.field_d[6] = ig.a(var19, 30, 0, 0, var28.field_q, var42.field_r);
           le.field_d[8] = var42;
-          le.field_d[7] = dh.field_f[7];
+          le.field_d[7] = GameApplet.field_f[7];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -52,7 +52,7 @@ class vg extends pj {
         if (ad.field_h < 150) {
           tg.field_J.f(var3, var4);
         } else {
-          gg.field_e.c(15 + var3, var4 + 10, var5);
+          IntrusiveNode.field_e.c(15 + var3, var4 + 10, var5);
         }
         var6 = ad.field_h - 125;
         if (0 < var6 &&
@@ -261,7 +261,7 @@ class vg extends pj {
           if (1 == this.field_u) {
             if (this.field_w instanceof eg) {
               var5 = (eg) ((Object) this.field_w);
-              var6 = var5.a((rc) (this), 0, gb.field_j, ad.field_m, param2, param0);
+              var6 = var5.a((rc) (this), 0, PacketBuffer.field_j, ad.field_m, param2, param0);
               if (-1 != var6) {
                 if (this.field_U &&
                   var6 < this.field_R &&
@@ -539,8 +539,8 @@ class vg extends pj {
         jd var5 = id.field_c;
         jd var3 = var5;
         var5.e(param0, -2147483648);
-        var5.field_m = var5.field_m + 1;
-        int var4 = var5.field_m;
+        var5.position = var5.position + 1;
+        int var4 = var5.position;
         var5.c(-104, 1);
         if (null != param1.field_k) {
           var5.c(-126, param1.field_k.length);
@@ -549,13 +549,13 @@ class vg extends pj {
           var5.c(126, 0);
         }
         var5.b(true, var4);
-        var5.field_m = var5.field_m - 4;
+        var5.position = var5.position - 4;
         if (param2 < 113) {
           return;
         }
         try {
-          param1.field_i = var5.e(true);
-          var5.b(1, -var4 + var5.field_m);
+          param1.field_i = var5.readInt(true);
+          var5.b(1, -var4 + var5.position);
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "vg.R(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -594,7 +594,7 @@ class vg extends pj {
           if (!(this.field_w instanceof eg)) {
             return false;
           }
-          var8_int = ((eg) ((Object) this.field_w)).a((rc) (this), 0, gb.field_j, ad.field_m, param5, param1);
+          var8_int = ((eg) ((Object) this.field_w)).a((rc) (this), 0, PacketBuffer.field_j, ad.field_m, param5, param1);
           if (-1 != var8_int) {
             stackIn_7_1 = var8_int;
           } else {

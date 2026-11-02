@@ -73,7 +73,7 @@ final class kc extends pj {
         int var6 = (this.field_x >> 1) + param0 + this.field_j;
         qf var8 = this.field_J.b(param3 ^ -9362);
         if (hg.field_E == var8) {
-          var15 = gb.field_k[0];
+          var15 = PacketBuffer.field_k[0];
           var9 = var15.field_q << 1;
           var10 = var15.field_r << 1;
           if (null == pk.field_Y) {
@@ -108,7 +108,7 @@ final class kc extends pj {
           return;
         }
         if (db.field_u == var8) {
-          var16 = gb.field_k[0];
+          var16 = PacketBuffer.field_k[0];
           var9Lifetime1 = var16.field_q << 1;
           var10Lifetime1 = var16.field_r << 1;
           if (null == pk.field_Y) {
@@ -143,12 +143,12 @@ final class kc extends pj {
           return;
         }
         if (var8 == rg.field_f) {
-          var13 = gb.field_k[2];
+          var13 = PacketBuffer.field_k[2];
           var13.a(var5 - (var13.field_p >> 1), -(var13.field_t >> 1) + var6, 256);
           return;
         }
         if (var8 == ph.field_g) {
-          var12 = gb.field_k[1];
+          var12 = PacketBuffer.field_k[1];
           var12.a(-(var12.field_p >> 1) + var5, -(var12.field_t >> 1) + var6, 256);
           return;
         }

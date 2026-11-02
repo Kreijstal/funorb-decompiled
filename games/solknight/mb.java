@@ -56,7 +56,7 @@ final class mb {
 
     final static void a(boolean param0, int param1, int param2) {
         try {
-          ug.a((byte) -76, bf.field_b[param1], qc.field_l[param1] * param2 >> 9);
+          SocketConnector.a((byte) -76, bf.field_b[param1], qc.field_l[param1] * param2 >> 9);
           if (!param0) {
             field_b = (ff) null;
           }
@@ -151,7 +151,7 @@ final class mb {
           var21Lifetime2 = hk.field_f;
           var22Lifetime2 = hk.field_e;
           var23Lifetime2 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var23Lifetime2 < param0.field_y) {
               var24Lifetime1 = param0.field_n[var23Lifetime2];
@@ -166,7 +166,7 @@ final class mb {
                 if (stackIn_56_0 > stackIn_56_1) {
                   stackIn_65_0 = ~var18;
                   stackIn_65_1 = ~mh.field_a.length;
-                  break L1;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -254,7 +254,7 @@ final class mb {
                   stackIn_65_0 = ~var18;
                   stackIn_65_1 = ~mh.field_a.length;
                   if (var30 != 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                   if (stackIn_65_0 <= stackIn_65_1) {
                     break;
@@ -309,7 +309,7 @@ final class mb {
           if (param2 < 4) {
             mb.b(-114);
           }
-          stackIn_4_0 = ug.a(param0, -8591, 1, param3, param1);
+          stackIn_4_0 = SocketConnector.a(param0, -8591, 1, param3, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

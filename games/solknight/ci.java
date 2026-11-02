@@ -215,7 +215,7 @@ class ci extends gf implements ka {
         }
     }
 
-    final static void a(byte[] param0, int param1, int param2, java.math.BigInteger param3, int param4, java.math.BigInteger param5, gb param6) {
+    final static void a(byte[] param0, int param1, int param2, java.math.BigInteger param3, int param4, java.math.BigInteger param5, PacketBuffer param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -248,18 +248,18 @@ class ci extends gf implements ka {
             var8[var9] = f.field_e.nextInt();
           }
           if (lc.field_k == null ||
-            !(var7_int <= lc.field_k.field_l.length)) {
-            lc.field_k = new gb(var7_int);
+            !(var7_int <= lc.field_k.payload.length)) {
+            lc.field_k = new PacketBuffer(var7_int);
           }
-          lc.field_k.field_m = 0;
+          lc.field_k.position = 0;
           lc.field_k.a(param2, param1, param0, param4);
           lc.field_k.b((byte) -65, var7_int);
           lc.field_k.a((byte) 97, var13);
           if (null == ee.field_h ||
-            !(ee.field_h.field_l.length >= 100)) {
-            ee.field_h = new gb(100);
+            !(ee.field_h.payload.length >= 100)) {
+            ee.field_h = new PacketBuffer(100);
           }
-          ee.field_h.field_m = 0;
+          ee.field_h.position = 0;
           ee.field_h.c(19, 10);
           var11 = 0;
           var9Lifetime1 = var11;
@@ -269,8 +269,8 @@ class ci extends gf implements ka {
           }
           ee.field_h.a(true, param1);
           ee.field_h.a(param5, 59769888, param3);
-          param6.a(8, ee.field_h.field_m, ee.field_h.field_l, 0);
-          param6.a(param2 ^ 0, lc.field_k.field_m, lc.field_k.field_l, 0);
+          param6.a(8, ee.field_h.position, ee.field_h.payload, 0);
+          param6.a(param2 ^ 0, lc.field_k.position, lc.field_k.payload, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -345,7 +345,7 @@ class ci extends gf implements ka {
           qk.field_l = ik.a(param3, -18362, "frame_bottom", "commonui");
           fa.field_b = rb.a("jagex_logo_grey", "commonui", param3, (byte) -125);
           vk.field_i = ik.a(param3, -18362, "button", "commonui");
-          gb.field_k = nh.a(param3, "validation", 0, "commonui");
+          PacketBuffer.field_k = nh.a(param3, "validation", 0, "commonui");
           stackIn_3_0 = (da) (param0);
           stackIn_3_1 = "commonui";
           stackIn_4_2 = !(param1);
@@ -356,7 +356,7 @@ class ci extends gf implements ka {
           ua.field_G = (mg) ((Object) si.a(stackIn_6_0, stackIn_6_1, stackIn_7_2, "arezzo14", param3));
           uc.field_g = (mg) ((Object) si.a(param0, "commonui", true, "arezzo14bold", param3));
           var18 = new o(param2.a(4, "button.gif", ""), (java.awt.Component) ((Object) dc.field_q));
-          ve.a(param3, -97, "dropdown", "commonui");
+          ClientException.a(param3, -97, "dropdown", "commonui");
           var5 = dj.a(8108, "screen_options", param3, "commonui");
           md.field_s = new od[4];
           r.field_i = new od[4];
@@ -458,7 +458,7 @@ class ci extends gf implements ka {
     }
 
     final static void a(byte param0, int param1) {
-        gg var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         ob var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -528,7 +528,7 @@ class ci extends gf implements ka {
           ed.field_a[0] = ib.field_i.nextInt();
           ed.field_a[1] = ib.field_i.nextInt();
           ed.field_a[2] = (int)(i.field_H >> 32);
-          ic.field_z.field_m = 0;
+          ic.field_z.position = 0;
           ed.field_a[3] = (int)i.field_H;
           ic.field_z.b(ed.field_a[0], false);
           ic.field_z.b(ed.field_a[1], false);
@@ -537,14 +537,14 @@ class ci extends gf implements ka {
           vh.a(ic.field_z, 107);
           ic.field_z.a(true, param2);
           param3.a(-12518, ic.field_z);
-          id.field_c.field_m = 0;
+          id.field_c.position = 0;
           if (param1) {
             id.field_c.c(param0 ^ -25840, 18);
           } else {
             id.field_c.c(param0 ^ 25812, 16);
           }
-          id.field_c.field_m = id.field_c.field_m + 2;
-          var5_int = id.field_c.field_m;
+          id.field_c.position = id.field_c.position + 2;
+          var5_int = id.field_c.position;
           id.field_c.b(al.field_n, false);
           id.field_c.a(wk.field_b, (byte) 63);
           var6 = 0;
@@ -573,7 +573,7 @@ class ci extends gf implements ka {
             id.field_c.b(param0 ^ 1955918408, ri.field_a);
           }
           al.a(ic.field_z, id.field_c, (byte) 110, nc.field_d, qa.field_p);
-          id.field_c.a(id.field_c.field_m - var5_int, true);
+          id.field_c.a(id.field_c.position - var5_int, true);
           qf.a(0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -622,14 +622,14 @@ class ci extends gf implements ka {
             var6.a(17, ph.field_e, 1);
           } else {
             if (param1 == 256) {
-              var6.a(0, gg.field_c, (dg) (this));
+              var6.a(0, IntrusiveNode.field_c, (dg) (this));
             } else {
               stackIn_13_0 = var6;
               stackIn_13_1 = -1;
               if (!this.field_ob) {
                 stackIn_14_2 = u.field_e;
               } else {
-                stackIn_14_2 = gg.field_c;
+                stackIn_14_2 = IntrusiveNode.field_c;
               }
               ((lj) (Object) stackIn_13_0).a(stackIn_13_1, stackIn_14_2, 1);
             }

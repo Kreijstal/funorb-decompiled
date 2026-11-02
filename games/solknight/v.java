@@ -147,7 +147,7 @@ final class v {
         try {
           var3_int = -7 / ((68 - param1) / 53);
           if (param0 != null) {
-            param0.c(10);
+            param0.unlink(10);
             param0.a(97);
             this.field_e = this.field_e + param0.field_o;
           }
@@ -195,7 +195,7 @@ final class v {
         }
         Object var5 = var7.h(31476);
         if (var5 == null) {
-          var7.c(10);
+          var7.unlink(10);
           var7.a(97);
           this.field_e = this.field_e + var7.field_o;
           return null;
@@ -208,10 +208,10 @@ final class v {
           var7.field_l = 0L;
         } else {
           var6 = new tk(var5, var7.field_o);
-          this.field_f.a(-858993458, var7.field_g, var6);
+          this.field_f.a(-858993458, var7.key, var6);
           this.field_c.a(param0 - 110, var6);
           ((pe) ((Object) var6)).field_l = 0L;
-          var7.c(10);
+          var7.unlink(10);
           var7.a(97);
         }
         return var5;

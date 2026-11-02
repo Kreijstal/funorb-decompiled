@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class ug {
+abstract class SocketConnector {
     static String field_d;
     static String field_e;
     static volatile int field_a;
@@ -28,7 +28,7 @@ abstract class ug {
         try {
           if (param0 != -76) {
             var4 = (sh) null;
-            ug.a((byte) -126, (sh) null, -3);
+            SocketConnector.a((byte) -126, (sh) null, -3);
           }
           stackIn_3_0 = qb.a(true, qi.a(param1, 100, param2));
           return stackIn_3_0;
@@ -77,7 +77,7 @@ abstract class ug {
           return;
         }
         hi var2 = (hi) null;
-        ug.a((hi) null, 114, 25, 55, (byte) -101, (hi) null);
+        SocketConnector.a((hi) null, 114, 25, 55, (byte) -101, (hi) null);
         field_g = null;
     }
 

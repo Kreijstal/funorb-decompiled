@@ -22,10 +22,10 @@ final class d {
         var7 = SolKnight.field_L ? 1 : 0;
         try {
           ah.a(pg.field_e, 7);
-          je.a(-76, ad.field_m, gb.field_j);
+          je.a(-76, ad.field_m, PacketBuffer.field_j);
           if (!pg.field_e &&
-            gb.field_j != -1) {
-            ie.a(gb.field_j, ad.field_m, 57);
+            PacketBuffer.field_j != -1) {
+            ie.a(PacketBuffer.field_j, ad.field_m, 57);
           }
           if (cb.field_a > 0 &&
             ob.field_j > 1) {
@@ -66,28 +66,28 @@ final class d {
               }
             }
           }
-          var2_int = 30 + ug.field_g.b(bb.a(wk.field_a, new String[]{Integer.toString(100)}, -63));
-          var3 = 30 + ug.field_g.b(bb.a(nb.field_b, new String[]{Integer.toString(1300)}, -63));
+          var2_int = 30 + SocketConnector.field_g.b(bb.a(wk.field_a, new String[]{Integer.toString(100)}, -63));
+          var3 = 30 + SocketConnector.field_g.b(bb.a(nb.field_b, new String[]{Integer.toString(1300)}, -63));
           if (var2_int < var3) {
             var2_int = var3;
           }
-          var3Lifetime1 = 30 + ug.field_g.b(wf.field_b);
+          var3Lifetime1 = 30 + SocketConnector.field_g.b(wf.field_b);
           if (var3Lifetime1 > var2_int) {
             var2_int = var3Lifetime1;
           }
-          uj.a(var2_int + 15, 47, 0, dh.field_f, 433, 2);
-          ug.field_g.c(bb.a(wk.field_a, new String[]{Integer.toString(ud.field_k * 100 / qh.field_a[7])}, -63), 30, 467, 16777215, -1);
+          uj.a(var2_int + 15, 47, 0, GameApplet.field_f, 433, 2);
+          SocketConnector.field_g.c(bb.a(wk.field_a, new String[]{Integer.toString(ud.field_k * 100 / qh.field_a[7])}, -63), 30, 467, 16777215, -1);
           if (-ud.field_k + (qh.field_a[kb.field_b] - lk.field_f) > 0) {
-            ug.field_g.c(bb.a(nb.field_b, new String[]{Integer.toString(-ud.field_k + (qh.field_a[kb.field_b] - lk.field_f))}, -63), 30, 455, 16777215, -1);
+            SocketConnector.field_g.c(bb.a(nb.field_b, new String[]{Integer.toString(-ud.field_k + (qh.field_a[kb.field_b] - lk.field_f))}, -63), 30, 455, 16777215, -1);
           }
           if (-ud.field_k + qh.field_a[kb.field_b] - lk.field_f <= 0) {
-            ug.field_g.c(wf.field_b, 30, 455, 16777215, -1);
+            SocketConnector.field_g.c(wf.field_b, 30, 455, 16777215, -1);
           }
-          var2_intLifetime1 = 74 + ug.field_g.b(field_a);
+          var2_intLifetime1 = 74 + SocketConnector.field_g.b(field_a);
           var4 = h.field_b;
           var5 = 641 - var2_intLifetime1;
-          ug.field_g.c(field_a, var5, 461, 16777215, -1);
-          var5 = var5 + (ug.field_g.b(field_a) + 1);
+          SocketConnector.field_g.c(field_a, var5, 461, 16777215, -1);
+          var5 = var5 + (SocketConnector.field_g.b(field_a) + 1);
           for (var6 = 0; uf.field_p > var6; var6++) {
             var4.a(var5, -(var4.field_r * 12 / var4.field_q) + 470, 12, var4.field_r * 12 / var4.field_q);
             var5 += 22;
@@ -151,7 +151,7 @@ final class d {
         try {
           ff.b(-13408);
           ma.field_o = el.field_p;
-          gb.field_i = el.field_p;
+          PacketBuffer.field_i = el.field_p;
         } catch (RuntimeException runtimeException) {
           throw fc.a((Throwable) ((Object) runtimeException), "d.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

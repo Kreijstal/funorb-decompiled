@@ -11,7 +11,7 @@ final class df extends a {
         wd.field_a = 0;
         ti.field_e = uc.field_e;
         qh.field_b = new sf(2);
-        qh.field_b.a(param1, -1, ad.a(ad.field_m, gb.field_j, param0), param0 + 121);
+        qh.field_b.a(param1, -1, ad.a(ad.field_m, PacketBuffer.field_j, param0), param0 + 121);
     }
 
     final String a(String param0, boolean param1) {
@@ -40,7 +40,7 @@ final class df extends a {
             return stackIn_5_0;
           }
           if (!param0.equals(this.field_j)) {
-            var4 = gb.a(param0, (byte) 122);
+            var4 = PacketBuffer.a(param0, (byte) 122);
             if (var4 == null) {
               return null;
             }
@@ -106,7 +106,7 @@ final class df extends a {
             return stackIn_2_0;
           }
           if (!param0.equals(this.field_j)) {
-            var3 = gb.a(param0, (byte) 100);
+            var3 = PacketBuffer.a(param0, (byte) 100);
             if (var3 != null &&
               var3.field_d == null) {
               this.field_j = param0;

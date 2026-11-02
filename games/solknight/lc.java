@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lc extends gg {
+final class lc extends IntrusiveNode {
     int field_o;
     static jh field_m;
     int field_q;
@@ -9,7 +9,7 @@ final class lc extends gg {
     int field_i;
     int field_n;
     static int field_h;
-    static gb field_k;
+    static PacketBuffer field_k;
     static volatile long field_s;
     int field_j;
     static nc field_t;

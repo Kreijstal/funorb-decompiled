@@ -97,10 +97,10 @@ final class gh extends af {
         RuntimeException decompiledCaughtException = null;
         var3 = SolKnight.field_L ? 1 : 0;
         try {
-          var4 = (m) (gg.field_b.a((byte) 51));
+          var4 = (m) (IntrusiveNode.field_b.a((byte) 51));
           while (var4 != null) {
             l.a(param0, param1 ^ -9489, var4);
-            var4 = (m) (gg.field_b.b(-121));
+            var4 = (m) (IntrusiveNode.field_b.b(-121));
           }
           if (param1 == 9543) {
             return;

@@ -845,7 +845,7 @@ final class qi extends ej {
           this.field_o = 0;
           this.field_t = 0;
           this.field_v = 0;
-          this.c(10);
+          this.unlink(10);
           return true;
         }
         if (this.field_v >= var1) {
@@ -1018,7 +1018,7 @@ final class qi extends ej {
         int var2Lifetime1;
         if (param0 == 0) {
           this.h(0);
-          this.c(10);
+          this.unlink(10);
           return;
         }
         if (this.field_t != 0) {
@@ -1078,7 +1078,7 @@ final class qi extends ej {
         this.field_p = 0;
         this.field_y = 0;
         this.field_v = 0;
-        this.c(10);
+        this.unlink(10);
     }
 
     final synchronized int f() {
@@ -1107,7 +1107,7 @@ final class qi extends ej {
               this.field_o = 0;
               this.field_t = 0;
               this.field_v = 0;
-              this.c(10);
+              this.unlink(10);
               param0 = this.field_p;
             }
             this.field_p = 0;
@@ -1125,7 +1125,7 @@ final class qi extends ej {
         if (this.field_u < 0) {
           if (this.field_x <= 0) {
             this.l();
-            this.c(10);
+            this.unlink(10);
             return;
           }
           this.field_u = 0;
@@ -1133,7 +1133,7 @@ final class qi extends ej {
         if (this.field_u >= var5) {
           if (this.field_x >= 0) {
             this.l();
-            this.c(10);
+            this.unlink(10);
             return;
           }
           this.field_u = var5 - 1;
@@ -1246,7 +1246,7 @@ final class qi extends ej {
           if (this.field_u >= var5) {
             this.field_u = var5;
             this.l();
-            this.c(10);
+            this.unlink(10);
           }
           return;
         }
@@ -1255,7 +1255,7 @@ final class qi extends ej {
         }
         this.field_u = -1;
         this.l();
-        this.c(10);
+        this.unlink(10);
     }
 
     final synchronized void d(int param0) {
@@ -1443,7 +1443,7 @@ final class qi extends ej {
         if (this.field_u < 0) {
           if (this.field_x <= 0) {
             this.l();
-            this.c(10);
+            this.unlink(10);
             return;
           }
           this.field_u = 0;
@@ -1451,7 +1451,7 @@ final class qi extends ej {
         if (this.field_u >= var7) {
           if (this.field_x >= 0) {
             this.l();
-            this.c(10);
+            this.unlink(10);
             return;
           }
           this.field_u = var7 - 1;
@@ -1578,7 +1578,7 @@ final class qi extends ej {
           if (this.field_u >= var7) {
             this.field_u = var7;
             this.l();
-            this.c(10);
+            this.unlink(10);
           }
           return;
         }
@@ -1588,7 +1588,7 @@ final class qi extends ej {
         }
         this.field_u = -1;
         this.l();
-        this.c(10);
+        this.unlink(10);
         return;
     }
 

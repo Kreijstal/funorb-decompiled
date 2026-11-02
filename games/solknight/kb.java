@@ -26,22 +26,22 @@ final class kb {
         if (param0 >= -5) {
           return;
         }
-        dh.field_j.d(param1, param3);
+        GameApplet.field_j.d(param1, param3);
         if (!param2) {
           return;
         }
-        var4 = wd.field_a % dh.field_j.field_p * 2;
-        if (var4 >= dh.field_j.field_p) {
-          var4 = -var4 - (-dh.field_j.field_p - dh.field_j.field_p);
+        var4 = wd.field_a % GameApplet.field_j.field_p * 2;
+        if (var4 >= GameApplet.field_j.field_p) {
+          var4 = -var4 - (-GameApplet.field_j.field_p - GameApplet.field_j.field_p);
         }
         if (var4 < 10) {
           var4 = 10;
         } else {
-          if (var4 > -40 + dh.field_j.field_p) {
-            var4 = dh.field_j.field_p - 40;
+          if (var4 > -40 + GameApplet.field_j.field_p) {
+            var4 = GameApplet.field_j.field_p - 40;
           }
         }
-        gd.a(param1, dh.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
+        gd.a(param1, GameApplet.field_j, 30, (byte) 118, 0, param3, var4, 0, 80);
     }
 
     public static void a(byte param0) {

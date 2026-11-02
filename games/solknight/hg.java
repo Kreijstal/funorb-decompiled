@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hg extends gg {
+final class hg extends IntrusiveNode {
     int field_z;
     int field_s;
     int field_k;

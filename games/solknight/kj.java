@@ -184,7 +184,7 @@ class kj extends pj {
         int var12;
         int var13;
         String var14;
-        ve var15;
+        ClientException var15;
         StringWriter var16;
         String var17;
         String var18;
@@ -214,8 +214,8 @@ class kj extends pj {
           var14 = (String) null;
           kj.a((java.applet.Applet) null, 117, (String) null);
         }
-        if (param1 instanceof ve) {
-          var15 = (ve) ((Object) param1);
+        if (param1 instanceof ClientException) {
+          var15 = (ClientException) ((Object) param1);
           param1 = var15.field_c;
           var2 = var15.field_d + " | ";
           var11 = var2;
@@ -419,7 +419,7 @@ class kj extends pj {
           super.a(param0, param1 ^ 0, param2, param3);
           this.field_Q = null;
           if (this.field_v) {
-            var5_int = -param0 + (gb.field_j - this.field_m);
+            var5_int = -param0 + (PacketBuffer.field_j - this.field_m);
             var6 = -this.field_j + (ad.field_m - param2);
             this.field_Q = this.a(var6, (byte) 22, var5_int);
           }
