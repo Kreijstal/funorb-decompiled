@@ -11,7 +11,7 @@ final class ng {
     static String field_i;
     private int[] field_h;
     private int field_c;
-    static ut[] field_j;
+    static Sprite[] field_j;
     static boolean field_e;
 
     final static kg[] a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
@@ -21,9 +21,9 @@ final class ng {
         kg[] var6;
         kg var7_ref_kg;
         int var7;
-        tf var8;
+        IntrusiveDeque var8;
         int var9;
-        ut var10;
+        Sprite var10;
         int var11;
         int var12;
         int var13;
@@ -48,7 +48,7 @@ final class ng {
         }
         stackIn_11_0 = (!param4) ? 2 : 6;
         var7 = stackIn_11_0;
-        var8 = new tf();
+        var8 = new IntrusiveDeque();
         for (var9 = 0; var9 < 4; var9++) {
           for (var10_int = 0; 2 + param3 > var10_int; var10_int++) {
             if (p.a((byte) -24, 256) <= param1) {
@@ -93,7 +93,7 @@ final class ng {
           this.field_g = new int[this.field_c];
           this.field_f = new String[this.field_c];
           if (param1 != -20363) {
-            field_j = (ut[]) null;
+            field_j = (Sprite[]) null;
           }
           for (var3_int = 0; this.field_c > var3_int; var3_int++) {
             this.field_g[var3_int] = param0.h((byte) -108);
@@ -159,11 +159,11 @@ final class ng {
         return vo.$cfr$intArgs$a$53ce4ab4c593(-18, rv.field_d[this.field_b], var5);
     }
 
-    final static ut[] a(String param0, String param1, int param2, sj param3) {
+    final static Sprite[] a(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ut[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -175,7 +175,7 @@ final class ng {
         try {
           var4_int = param3.b(param1, param2 - 3);
           if (param2 != 2) {
-            field_j = (ut[]) null;
+            field_j = (Sprite[]) null;
           }
           var5 = param3.a((byte) -104, param0, var4_int);
           stackIn_3_0 = dk.a(var4_int, var5, (byte) -123, param3);

@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class be implements hc {
-    private tf field_m;
+    private IntrusiveDeque field_m;
     vg field_k;
     static hd field_q;
-    hu field_d;
+    BitmapFont field_d;
     private hd field_l;
     hd field_j;
     private int field_f;
     np field_g;
     String field_a;
-    static tf field_i;
+    static IntrusiveDeque field_i;
     private String[] field_c;
     private boolean field_h;
     private int field_b;
@@ -26,7 +26,7 @@ abstract class be implements hc {
         String[] var5 = null;
         String[] var6 = null;
         String var8 = null;
-        tf var9 = null;
+        IntrusiveDeque var9 = null;
         lj var10 = null;
         int var11 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -80,21 +80,21 @@ abstract class be implements hc {
         int var3Lifetime1;
         int var4Lifetime1;
         if (this.field_l.field_mb + this.field_l.field_J > 0) {
-          on.a(this.field_l.field_F, this.field_l.field_T, this.field_g.field_s, this.field_l.field_mb, 5592405, 230);
-          on.a(this.field_g.field_F + this.field_g.field_q, this.field_l.field_T, this.field_g.field_s, this.field_l.field_mb, 5592405, 230);
-          on.a(this.field_g.field_F, this.field_l.field_T, this.field_g.field_q, this.field_g.field_J, 5592405, 230);
-          on.a(this.field_g.field_F, this.field_g.field_mb + this.field_g.field_T, this.field_g.field_q, -this.field_g.field_mb - this.field_g.field_T + this.field_k.field_T, 5592405, 230);
-          on.a(this.field_g.field_F, this.field_k.field_mb + this.field_k.field_T, this.field_g.field_q, -this.field_k.field_mb + (this.field_l.field_mb - this.field_k.field_J), 5592405, 230);
-          on.a(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, 2236962, 240);
-          on.a(this.field_k.field_F, this.field_k.field_T, this.field_k.field_q, this.field_k.field_mb, 2236962, 240);
+          SoftwareRasterizer.a(this.field_l.field_F, this.field_l.field_T, this.field_g.field_s, this.field_l.field_mb, 5592405, 230);
+          SoftwareRasterizer.a(this.field_g.field_F + this.field_g.field_q, this.field_l.field_T, this.field_g.field_s, this.field_l.field_mb, 5592405, 230);
+          SoftwareRasterizer.a(this.field_g.field_F, this.field_l.field_T, this.field_g.field_q, this.field_g.field_J, 5592405, 230);
+          SoftwareRasterizer.a(this.field_g.field_F, this.field_g.field_mb + this.field_g.field_T, this.field_g.field_q, -this.field_g.field_mb - this.field_g.field_T + this.field_k.field_T, 5592405, 230);
+          SoftwareRasterizer.a(this.field_g.field_F, this.field_k.field_mb + this.field_k.field_T, this.field_g.field_q, -this.field_k.field_mb + (this.field_l.field_mb - this.field_k.field_J), 5592405, 230);
+          SoftwareRasterizer.a(this.field_g.field_F, this.field_g.field_T, this.field_g.field_q, this.field_g.field_mb, 2236962, 240);
+          SoftwareRasterizer.a(this.field_k.field_F, this.field_k.field_T, this.field_k.field_q, this.field_k.field_mb, 2236962, 240);
           var2 = 256 + this.field_l.field_J;
           if (var2 < 0) {
             var2 = 0;
           }
-          on.a(this.field_l.field_F, this.field_l.field_T + this.field_l.field_mb, this.field_l.field_q, -this.field_l.field_mb + vc.field_B - this.field_l.field_T, 0, var2 >> 1);
+          SoftwareRasterizer.a(this.field_l.field_F, this.field_l.field_T + this.field_l.field_mb, this.field_l.field_q, -this.field_l.field_mb + vc.field_B - this.field_l.field_T, 0, var2 >> 1);
           var3 = 5 + (this.field_l.field_mb + this.field_l.field_J);
           for (var4 = 0; 6 > var4; var4++) {
-            on.c(0, var3, f.field_d, 0, var4 << 5);
+            SoftwareRasterizer.c(0, var3, f.field_d, 0, var4 << 5);
             var3--;
           }
           this.field_l.a(127, 0 == (this.field_n & 8) ? true : false);
@@ -116,16 +116,16 @@ abstract class be implements hc {
         }
     }
 
-    private final tf b(int param0, String param1, int param2) {
+    private final IntrusiveDeque b(int param0, String param1, int param2) {
         hd discarded$0 = null;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
-        tf stackIn_20_0 = null;
+        IntrusiveDeque stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        tf var4 = null;
+        IntrusiveDeque var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         String var6 = null;
@@ -138,7 +138,7 @@ abstract class be implements hc {
             var9 = (String) null;
             discarded$0 = this.a(92, (String) null, -8);
           }
-          var4 = new tf();
+          var4 = new IntrusiveDeque();
           while (param1 != null) {
             boolean decompiledFrameRemainder0 = true;
             var5 = this.field_d.a(param1);
@@ -491,7 +491,7 @@ abstract class be implements hc {
         this.field_k.b(11570);
     }
 
-    be(hu param0, bu param1) {
+    be(BitmapFont param0, PlatformTaskDispatcher param1) {
         int var3_int = 0;
         hd var4 = null;
         hd var5 = null;
@@ -506,7 +506,7 @@ abstract class be implements hc {
         hd var14 = null;
         hd var15 = null;
         this.field_a = "# ";
-        this.field_m = new tf();
+        this.field_m = new IntrusiveDeque();
         this.field_h = false;
         this.field_n = 0;
         this.field_c = null;
@@ -528,9 +528,9 @@ abstract class be implements hc {
           this.field_l.a(true, f.field_d, 0, -200, 200);
           var13 = new na(0L, var8, var8, var9, var10);
           var14 = new hd();
-          var14.field_jb = new tf();
+          var14.field_jb = new IntrusiveDeque();
           this.field_g = new np(0L, var14, var6, var13);
-          this.field_g.field_Ab.field_jb = new tf();
+          this.field_g.field_Ab.field_jb = new IntrusiveDeque();
           this.field_g.a(0, 94, -var3_int + 185, 5, 5, -10 + this.field_l.field_q, 15);
           this.field_l.a((byte) -118, (hd) (this.field_g));
           var15 = new hd();

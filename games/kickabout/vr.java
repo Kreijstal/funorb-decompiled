@@ -92,7 +92,7 @@ final class vr {
         try {
           hw.field_k = false;
           uv.field_i = null;
-          ow.field_b = null;
+          ArchiveSource.field_b = null;
           if (rp.field_B != null) {
             rp.field_B.b(param0 + 22999);
             rp.field_B = null;

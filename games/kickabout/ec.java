@@ -5,7 +5,7 @@ final class ec {
     static boolean field_e;
     private String field_b;
     private boolean field_c;
-    static tf field_f;
+    static IntrusiveDeque field_f;
     static String field_d;
     static String field_a;
     static String field_g;
@@ -184,7 +184,7 @@ final class ec {
     static {
         field_d = "Day";
         field_a = "Click";
-        field_f = new tf();
+        field_f = new IntrusiveDeque();
         field_g = "You cannot add yourself!";
     }
 }

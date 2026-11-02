@@ -7,7 +7,7 @@ final class LoggedGoal extends IntrusiveNode {
     private int field_i;
     private int field_p;
     int goalType;
-    static ut field_o;
+    static Sprite field_o;
     int field_k;
     private int field_r;
     private int field_q;
@@ -19,18 +19,18 @@ final class LoggedGoal extends IntrusiveNode {
     int field_f;
     private int field_g;
 
-    final static void a(ut param0, ot param1, ot param2, int param3) {
+    final static void a(Sprite param0, ArgbSprite param1, ArgbSprite param2, int param3) {
         int var4_int = 0;
         int var5 = Kickabout.field_G;
         int var4_intLifetime1;
         try {
           ra.field_L = param1;
           pn.field_w = param2;
-          qe.field_i = new ot[73];
+          qe.field_i = new ArgbSprite[73];
           for (var4_int = 0; var4_int < qe.field_i.length; var4_int++) {
             qe.field_i[var4_int] = param2;
           }
-          qs.field_R = new ut(32, 32);
+          qs.field_R = new Sprite(32, 32);
           PacketBuffer.a(-49, qs.field_R);
           var4_intLifetime1 = 88 / ((param3 + 76) / 44);
           param0.b(0, 0, 32, 32);
@@ -132,8 +132,8 @@ final class LoggedGoal extends IntrusiveNode {
           this.field_s = param1.field_s;
           this.field_j = param1.field_j;
           if (param0 != -4) {
-            sj var4 = (sj) null;
-            LoggedGoal.a(-13, (sj) null);
+            ResourceArchive var4 = (ResourceArchive) null;
+            LoggedGoal.a(-13, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ch.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -219,7 +219,7 @@ final class LoggedGoal extends IntrusiveNode {
         }
     }
 
-    final static boolean a(int param0, sj param1) {
+    final static boolean a(int param0, ResourceArchive param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -228,7 +228,7 @@ final class LoggedGoal extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -2) {
-            field_o = (ut) null;
+            field_o = (Sprite) null;
           }
           stackIn_3_0 = param1.a(false);
           return stackIn_3_0;

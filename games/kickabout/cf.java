@@ -112,9 +112,9 @@ final class cf extends hd {
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime1Lifetime1;
-        on.a(this.field_F, this.field_T, 40, this.field_mb, 0, var2);
-        on.a(46 + this.field_F, this.field_T, 196, this.field_mb, 0, var2);
-        on.a(248 + this.field_F, this.field_T, 70, this.field_mb, 0, var2);
+        SoftwareRasterizer.a(this.field_F, this.field_T, 40, this.field_mb, 0, var2);
+        SoftwareRasterizer.a(46 + this.field_F, this.field_T, 196, this.field_mb, 0, var2);
+        SoftwareRasterizer.a(248 + this.field_F, this.field_T, 70, this.field_mb, 0, var2);
         if (null == this.field_Hb) {
           q.field_d.a(uf.field_a, this.field_F + 60, 4 + (this.field_T + this.field_mb / 2), this.field_Jb, -1);
           var3 = 52 % ((-31 - param0) / 59);

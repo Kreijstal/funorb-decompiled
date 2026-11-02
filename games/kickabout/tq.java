@@ -19,74 +19,74 @@ final class tq extends tm {
         qn.a(param0 - 24776, il.field_d[0].field_o, el.field_I, eb.field_b, sh.field_c, TeamSelectionAgent.field_f);
     }
 
-    final static ut[] a(int param0, boolean param1, int param2, int param3, boolean param4, byte param5) {
-        ut var19 = null;
-        ut var20 = null;
-        ut var17 = null;
-        ut var18 = null;
+    final static Sprite[] a(int param0, boolean param1, int param2, int param3, boolean param4, byte param5) {
+        Sprite var19 = null;
+        Sprite var20 = null;
+        Sprite var17 = null;
+        Sprite var18 = null;
         Object var10 = null;
         Object var11 = null;
-        int[] var16 = on.field_a;
+        int[] var16 = SoftwareRasterizer.field_a;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
-        int var7 = on.field_g;
-        int var8 = on.field_f;
-        ut var9 = new ut(16, param0);
+        int var7 = SoftwareRasterizer.field_g;
+        int var8 = SoftwareRasterizer.field_f;
+        Sprite var9 = new Sprite(16, param0);
         var9.e();
         if (param5 == -46) {
-          on.g(0, 0, 16, param0, param2, param3);
+          SoftwareRasterizer.g(0, 0, 16, param0, param2, param3);
           var10 = null;
           var11 = null;
           if (param4) {
             var19 = var9.b();
             var10 = var19;
             var19.e();
-            on.f(0, 0, 5, 0);
-            on.f(0, 1, 3, 0);
-            on.f(0, 2, 2, 0);
-            on.f(0, 3, 1, 0);
-            on.f(0, 4, 1, 0);
+            SoftwareRasterizer.f(0, 0, 5, 0);
+            SoftwareRasterizer.f(0, 1, 3, 0);
+            SoftwareRasterizer.f(0, 2, 2, 0);
+            SoftwareRasterizer.f(0, 3, 1, 0);
+            SoftwareRasterizer.f(0, 4, 1, 0);
           }
           if (param1) {
             var20 = var9.b();
             var11 = var20;
             var20.e();
-            on.f(11, 0, 5, 0);
-            on.f(13, 1, 3, 0);
-            on.f(14, 2, 2, 0);
-            on.f(15, 3, 1, 0);
-            on.f(15, 4, 1, 0);
+            SoftwareRasterizer.f(11, 0, 5, 0);
+            SoftwareRasterizer.f(13, 1, 3, 0);
+            SoftwareRasterizer.f(14, 2, 2, 0);
+            SoftwareRasterizer.f(15, 3, 1, 0);
+            SoftwareRasterizer.f(15, 4, 1, 0);
           }
-          on.a(var16, var7, var8);
-          return new ut[]{null, null, null, (ut) (var10), var9, (ut) (var11), null, null, null};
+          SoftwareRasterizer.a(var16, var7, var8);
+          return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
         }
         field_E = (String) null;
-        on.g(0, 0, 16, param0, param2, param3);
+        SoftwareRasterizer.g(0, 0, 16, param0, param2, param3);
         var10 = null;
         var11 = null;
         if (param4) {
           var17 = var9.b();
           var10 = var17;
           var17.e();
-          on.f(0, 0, 5, 0);
-          on.f(0, 1, 3, 0);
-          on.f(0, 2, 2, 0);
-          on.f(0, 3, 1, 0);
-          on.f(0, 4, 1, 0);
+          SoftwareRasterizer.f(0, 0, 5, 0);
+          SoftwareRasterizer.f(0, 1, 3, 0);
+          SoftwareRasterizer.f(0, 2, 2, 0);
+          SoftwareRasterizer.f(0, 3, 1, 0);
+          SoftwareRasterizer.f(0, 4, 1, 0);
         }
         if (param1) {
           var18 = var9.b();
           var11 = var18;
           var18.e();
-          on.f(11, 0, 5, 0);
-          on.f(13, 1, 3, 0);
-          on.f(14, 2, 2, 0);
-          on.f(15, 3, 1, 0);
-          on.f(15, 4, 1, 0);
+          SoftwareRasterizer.f(11, 0, 5, 0);
+          SoftwareRasterizer.f(13, 1, 3, 0);
+          SoftwareRasterizer.f(14, 2, 2, 0);
+          SoftwareRasterizer.f(15, 3, 1, 0);
+          SoftwareRasterizer.f(15, 4, 1, 0);
         }
-        on.a(var16, var7, var8);
-        return new ut[]{null, null, null, (ut) (var10), var9, (ut) (var11), null, null, null};
+        SoftwareRasterizer.a(var16, var7, var8);
+        return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
     }
 
     final li a(byte param0, li[] param1) {

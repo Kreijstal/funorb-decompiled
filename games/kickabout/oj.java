@@ -78,7 +78,7 @@ final class oj extends cm {
         if (this.field_S == null) {
           return;
         }
-        on.f(param0 + 20, -7 + (param2 + 120), 260, 8421504);
+        SoftwareRasterizer.f(param0 + 20, -7 + (param2 + 120), 260, 8421504);
         fj.field_b.a(this.field_S, param0 + 20, 120 + (param2 + 8), 260, 100, 16777215, -1, 1, 0, fj.field_b.field_G);
     }
 

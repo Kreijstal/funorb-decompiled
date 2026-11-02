@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fr extends wj implements vh {
+final class fr extends WidgetContainer implements vh {
     static String field_I;
     private ur field_C;
     private String[] field_H;
@@ -111,7 +111,7 @@ final class fr extends wj implements vh {
         }
     }
 
-    final boolean a(char param0, byte param1, fd param2, int param3) {
+    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -159,11 +159,11 @@ final class fr extends wj implements vh {
     }
 
     final static void a(byte param0) {
-        wm.field_u = new ae();
+        CachedArchiveSource.field_u = new ae();
         if (param0 != -76) {
           field_B = (String) null;
         }
-        we.field_a.a((byte) -118, (fd) (wm.field_u));
+        we.field_a.a((byte) -118, (UiWidget) (CachedArchiveSource.field_u));
     }
 
     final static qv h(byte param0) {
@@ -181,7 +181,7 @@ final class fr extends wj implements vh {
         if (0 != param0) {
           return;
         }
-        hu var5 = gf.field_a;
+        BitmapFont var5 = gf.field_a;
         if (null != this.field_H) {
           var5.a(md.field_d, param2 + this.field_t, param3 + this.field_g, this.field_n, 20, 16777215, -1, 0, 0, var5.field_G + var5.field_p);
         }

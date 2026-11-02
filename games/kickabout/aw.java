@@ -17,22 +17,22 @@ final class aw extends i {
           field_I = null;
           return;
         }
-        sj var2 = (sj) null;
-        aw.a(90, 5, (sj) null, 24);
+        ResourceArchive var2 = (ResourceArchive) null;
+        aw.a(90, 5, (ResourceArchive) null, 24);
         field_K = null;
         field_I = null;
     }
 
-    final static rg g(byte param0) {
+    final static MouseWheelInput g(byte param0) {
         try {
           Throwable var1 = null;
-          rg stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 3) {
               aw.h((byte) -117);
             }
-            stackIn_3_0 = (rg) (Class.forName("rh").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("AwtMouseWheelInput").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -46,7 +46,7 @@ final class aw extends i {
         }
     }
 
-    final static kg a(int param0, int param1, sj param2, int param3) {
+    final static kg a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         kg stackIn_6_0 = null;

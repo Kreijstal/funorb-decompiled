@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mr extends ga implements cw {
+final class mr extends TextInputWidget implements cw {
     static String field_F;
     static se field_Z;
     static String field_bb;
@@ -85,7 +85,7 @@ final class mr extends ga implements cw {
         }
     }
 
-    final void a(byte param0, fd param1, int param2, int param3) {
+    final void a(byte param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_ab = -param2 + el.field_A - this.field_t;

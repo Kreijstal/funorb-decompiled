@@ -8,10 +8,10 @@ final class fb extends cj {
     static String field_C;
     static String field_O;
     static int field_T;
-    private ga field_K;
-    private ga field_L;
+    private TextInputWidget field_K;
+    private TextInputWidget field_L;
     static int[] field_M;
-    private ga field_P;
+    private TextInputWidget field_P;
     static int field_R;
     static bo field_J;
     private boolean field_U;
@@ -19,7 +19,7 @@ final class fb extends cj {
 
     final static void a(int param0, boolean param1) {
         if (null != field_J) {
-          on.g(on.field_b, on.field_e, -on.field_b + on.field_c, on.field_h - on.field_e);
+          SoftwareRasterizer.g(SoftwareRasterizer.field_b, SoftwareRasterizer.field_e, -SoftwareRasterizer.field_b + SoftwareRasterizer.field_c, SoftwareRasterizer.field_h - SoftwareRasterizer.field_e);
           field_J.a(param0 ^ 30543, param1);
         }
         if (param0 != 30521) {
@@ -94,9 +94,9 @@ final class fb extends cj {
     private fb(gj param0, boolean param1) {
         super(0, 0, 0, 0, (gj) null);
         try {
-          this.field_L = (ga) ((Object) new mr("", (jv) null, 2));
-          this.field_K = (ga) ((Object) new mr("", (jv) null, 2));
-          this.field_P = (ga) ((Object) new mr("", (jv) null, 4));
+          this.field_L = (TextInputWidget) ((Object) new mr("", (jv) null, 2));
+          this.field_K = (TextInputWidget) ((Object) new mr("", (jv) null, 2));
+          this.field_P = (TextInputWidget) ((Object) new mr("", (jv) null, 4));
           this.field_P.field_r = param0;
           this.field_K.field_r = param0;
           this.field_L.field_r = param0;
@@ -151,7 +151,7 @@ final class fb extends cj {
         }
     }
 
-    private final void a(fd param0, String param1, int param2, byte param3, int param4) {
+    private final void a(UiWidget param0, String param1, int param2, byte param3, int param4) {
         try {
           if (param3 < 86) {
             field_R = 41;
@@ -167,7 +167,7 @@ final class fb extends cj {
         int var3 = Kickabout.field_G;
         kg[] var1 = new kg[io.field_l];
         for (var2 = 0; var2 < io.field_l; var2++) {
-          var1[var2] = new kg(kw.field_i, ai.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], ku.field_c[var2], lo.field_j[var2], pq.field_O[var2], lt.field_a);
+          var1[var2] = new kg(kw.field_i, ai.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], lo.field_j[var2], pq.field_O[var2], lt.field_a);
         }
         if (param0 <= 78) {
           fb.n(-91);

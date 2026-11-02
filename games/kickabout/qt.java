@@ -6,7 +6,7 @@ class qt extends js {
     private String field_s;
     private int field_p;
     private int field_q;
-    static ut field_u;
+    static Sprite field_u;
     private String field_w;
     private io[] field_v;
     private int field_t;
@@ -18,7 +18,7 @@ class qt extends js {
     static String field_h;
     int field_j;
     static int field_l;
-    static gq field_y;
+    static PcmStreamMixer field_y;
     private int field_o;
     private boolean field_m;
     static hd field_n;
@@ -70,7 +70,7 @@ class qt extends js {
           var2 = 12;
         }
         if (param0 <= 41) {
-          field_y = (gq) null;
+          field_y = (PcmStreamMixer) null;
         }
         if (this.field_c == 25) {
           var2 = 14;
@@ -106,10 +106,10 @@ class qt extends js {
         int var4;
         js var4_ref_js;
         int var5;
-        ut var5_ref_ut;
+        Sprite var5_ref_ut;
         int var6;
         int var7;
-        ut var8;
+        Sprite var8;
         int var3Lifetime1;
         int var3Lifetime2;
         int var4Lifetime1;
@@ -135,7 +135,7 @@ class qt extends js {
           var6 = this.a(60, 0) - (this.field_i[0].field_h >> 1);
           var5Lifetime3 = var5Lifetime3 - 7 + this.field_j;
           var6 = var6 - 7;
-          on.a(var5Lifetime3, var6, var4Lifetime2, var3, 12, 0, 128);
+          SoftwareRasterizer.a(var5Lifetime3, var6, var4Lifetime2, var3, 12, 0, 128);
         }
         if (param0 != -5) {
           return;
@@ -202,7 +202,7 @@ class qt extends js {
                 var5Lifetime2 == 21 ||
                 var5Lifetime2 == 22 ||
                 var5Lifetime2 == 37) {
-                on.a(-4 + (var4Lifetime1 - (this.field_i[var3Lifetime2].field_d >> 1)), this.a(123, var3Lifetime2) + (-(this.field_i[var3Lifetime2].field_h >> 1) - 4), 8 + this.field_i[var3Lifetime2].field_d, 8 + this.field_i[var3Lifetime2].field_h, 10, 0, 128);
+                SoftwareRasterizer.a(-4 + (var4Lifetime1 - (this.field_i[var3Lifetime2].field_d >> 1)), this.a(123, var3Lifetime2) + (-(this.field_i[var3Lifetime2].field_h >> 1) - 4), 8 + this.field_i[var3Lifetime2].field_d, 8 + this.field_i[var3Lifetime2].field_h, 10, 0, 128);
               }
               this.field_i[var3Lifetime2].a(this.a(-106, var3Lifetime2), var4Lifetime1, 13800);
             }

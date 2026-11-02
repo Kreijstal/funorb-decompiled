@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class el extends tm {
-    static ut field_D;
+    static Sprite field_D;
     static int field_A;
     static int field_I;
     static int field_H;
@@ -69,7 +69,7 @@ final class el extends tm {
         }
     }
 
-    final static void a(hu param0, hd param1, hd param2, na param3, hd param4, boolean param5, hd param6, hd param7, hd param8, hd param9, int param10, hd param11) {
+    final static void a(BitmapFont param0, hd param1, hd param2, na param3, hd param4, boolean param5, hd param6, hd param7, hd param8, hd param9, int param10, hd param11) {
         String stackIn_13_0 = null;
         int stackIn_31_0 = 0;
         RuntimeException stackIn_41_0 = null;
@@ -94,12 +94,12 @@ final class el extends tm {
         StringBuilder stackIn_77_1 = null;
         String stackIn_78_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ut var12 = null;
+        Sprite var12 = null;
         RuntimeException var12_ref = null;
         int[] var13 = null;
         int[] var14 = null;
         int[] var15 = null;
-        ut[] var16 = null;
+        Sprite[] var16 = null;
         hd var17 = null;
         int var18 = 0;
         String var19 = null;
@@ -120,7 +120,7 @@ final class el extends tm {
           sb.field_h[0] = 16764000;
           sg.field_c[4] = 16711935;
           sb.field_h[1] = 6356832;
-          var12 = new ut(4, 4);
+          var12 = new Sprite(4, 4);
           var13 = var12.field_y;
           var14 = var12.field_y;
           var15 = var12.field_y;
@@ -128,13 +128,13 @@ final class el extends tm {
           var14[param10] = 7368816;
           var15[8] = 7368816;
           var13[2] = 7368816;
-          var16 = new ut[9];
+          var16 = new Sprite[9];
           var16[4] = var12;
           g.field_a = new hd(0L, param7);
           uf.field_b = new hd(0L, param6);
           g.field_a.a((byte) -121, uf.field_b);
           var17 = new hd(0L, (hd) null);
-          var17.field_jb = new tf();
+          var17.field_jb = new IntrusiveDeque();
           pw.field_G = new np(0L, var17, param1, param3);
           uf.field_b.a((byte) -110, (hd) (pw.field_G));
           kd.field_z = new hd(0L, param11);
@@ -149,7 +149,7 @@ final class el extends tm {
           ds.field_a = new hd[5];
           mr.field_W = new hd[5];
           kt.field_m = new hd[5];
-          av.field_b = new hd[5];
+          SocketConnector.field_b = new hd[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -175,12 +175,12 @@ final class el extends tm {
               if (decompiledFrameRemainder0) {
                 mr.field_W[var18] = new hd(0L, param4);
                 kt.field_m[var18] = new hd(0L, vv.field_o, var19);
-                av.field_b[var18] = new hd(0L, (hd) null);
-                av.field_b[var18].field_p = 1;
+                SocketConnector.field_b[var18] = new hd(0L, (hd) null);
+                SocketConnector.field_b[var18].field_p = 1;
                 ds.field_a[var18] = new hd(0L, vv.field_o);
                 ds.field_a[var18].field_p = 1;
                 mr.field_W[var18].a((byte) -126, kt.field_m[var18]);
-                mr.field_W[var18].a((byte) -113, av.field_b[var18]);
+                mr.field_W[var18].a((byte) -113, SocketConnector.field_b[var18]);
                 mr.field_W[var18].a((byte) -127, ds.field_a[var18]);
                 mr.field_W[var18].b(false);
                 g.field_a.a((byte) -104, mr.field_W[var18]);
@@ -308,7 +308,7 @@ final class el extends tm {
         try {
           field_G = null;
           if (param0 != 52) {
-            el.a((hu) null, (hd) null, (hd) null, (na) null, (hd) null, true, (hd) null, (hd) null, (hd) null, (hd) null, -39, (hd) null);
+            el.a((BitmapFont) null, (hd) null, (hd) null, (na) null, (hd) null, true, (hd) null, (hd) null, (hd) null, (hd) null, -39, (hd) null);
           }
           field_D = null;
           field_E = null;

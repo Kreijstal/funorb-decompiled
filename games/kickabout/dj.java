@@ -61,7 +61,7 @@ abstract class dj extends qt {
           var4_int = this.field_i[0].field_h;
           var5_int = this.b(0, -22667) + (this.field_j - (var3_int >> 1));
           var6 = this.a(-124, 0) - (var4_int >> 1);
-          on.a(var5_int - 4, -4 + var6, 8 + var3_int, var4_int + 8, 10, 0, 128);
+          SoftwareRasterizer.a(var5_int - 4, -4 + var6, 8 + var3_int, var4_int + 8, 10, 0, 128);
           eo.field_r[0][3].c(var5_int, var6);
         }
         if (!this.b(false)) {
@@ -69,14 +69,14 @@ abstract class dj extends qt {
           var4_intLifetime1 = this.field_i[2].field_h;
           var5_intLifetime1 = -(var3_intLifetime1 >> 1) + (this.b(2, param0 ^ 22670) + this.field_j);
           var6Lifetime1 = -(var4_intLifetime1 >> 1) + this.a(101, 2);
-          on.a(-4 + var5_intLifetime1, -4 + var6Lifetime1, 8 + var3_intLifetime1, var4_intLifetime1 + 8, 10, 0, 128);
+          SoftwareRasterizer.a(-4 + var5_intLifetime1, -4 + var6Lifetime1, 8 + var3_intLifetime1, var4_intLifetime1 + 8, 10, 0, 128);
           eo.field_c[0][3].c(var5_intLifetime1, var6Lifetime1);
         }
-        on.a(this.field_j + 15, 60, 610, 355, 10, 0, 128);
+        SoftwareRasterizer.a(this.field_j + 15, 60, 610, 355, 10, 0, 128);
         String[] var7 = this.a(true);
         String[] var3 = var7;
         String var4 = var7[this.field_C].toUpperCase();
-        on.a(this.field_j + 40, 76, 560, 36, 10, 65793, 140);
+        SoftwareRasterizer.a(this.field_j + 40, 76, 560, 36, 10, 65793, 140);
         un.field_d.d(var4, this.field_j + 320, 101, 16777215, -1);
         String var5 = this.field_C + 1 + " / " + var7.length;
         un.field_d.c(var5, 580 + this.field_j, 101, 16777215, -1);

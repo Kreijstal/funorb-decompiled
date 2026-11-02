@@ -6,7 +6,7 @@ final class hj extends js {
     static hd field_h;
 
     final void a(int param0, boolean param1) {
-        on.a(0, 0, 640, 480, 65793);
+        SoftwareRasterizer.a(0, 0, 640, 480, 65793);
         if (param0 != -5) {
           field_h = (hd) null;
         }

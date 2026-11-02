@@ -6,7 +6,7 @@ import java.util.*;
 final class kd extends be {
     static String field_w;
     private tm[] field_t;
-    static ut[][] field_y;
+    static Sprite[][] field_y;
     static ff field_r;
     static boolean field_s;
     static String field_x;
@@ -18,7 +18,7 @@ final class kd extends be {
     final boolean a(String param0, boolean param1) {
         try {
           lk var5 = null;
-          tf var6 = null;
+          IntrusiveDeque var6 = null;
           q var7 = null;
           RuntimeException stackIn_14_0 = null;
           StringBuilder stackIn_14_1 = null;
@@ -129,7 +129,7 @@ final class kd extends be {
         int var12 = 0;
         String var13 = null;
         lk var14 = null;
-        o var15 = null;
+        DualLinkDeque var15 = null;
         String var6Lifetime1;
         String var6Lifetime2;
         int var9Lifetime1;
@@ -155,7 +155,7 @@ final class kd extends be {
               var9 = var5;
               var10 = 0;
               while (var9 >= 0) {
-                if (~var4[var9].field_k == ~og.field_c) {
+                if (~var4[var9].field_k == ~RasterBuffer.field_c) {
                   var10++;
                 }
                 if (si.field_g == var4[var9].field_k) {
@@ -194,7 +194,7 @@ final class kd extends be {
         }
     }
 
-    kd(tf param0, hu param1, bu param2) {
+    kd(IntrusiveDeque param0, BitmapFont param1, PlatformTaskDispatcher param2) {
         super(param1, param2);
         int incrementValue$3 = 0;
         int var4_int = 0;
@@ -267,7 +267,7 @@ final class kd extends be {
           }
           field_r = null;
           field_v = null;
-          field_y = (ut[][]) null;
+          field_y = (Sprite[][]) null;
           field_x = null;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "kd.V(" + param0 + ')');
@@ -411,13 +411,13 @@ final class kd extends be {
         }
     }
 
-    private final o b(String param0, byte param1) {
+    private final DualLinkDeque b(String param0, byte param1) {
         int var5 = 0;
-        o var3 = null;
+        DualLinkDeque var3 = null;
         int var4 = 0;
         int var6 = 0;
-        o var7 = null;
-        o stackIn_9_0 = null;
+        DualLinkDeque var7 = null;
+        DualLinkDeque stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -426,7 +426,7 @@ final class kd extends be {
         var6 = Kickabout.field_G;
         try {
           var4 = 117 / ((param1 - 27) / 48);
-          var7 = new o();
+          var7 = new DualLinkDeque();
           var3 = var7;
           for (var5 = 0; this.field_t.length > var5; var5++) {
             if (this.field_t[var5].field_o.startsWith(param0)) {
@@ -473,7 +473,7 @@ final class kd extends be {
         int var15 = 0;
         String var16 = null;
         lk var17 = null;
-        o var18 = null;
+        DualLinkDeque var18 = null;
         String var6Lifetime1;
         String var6Lifetime2;
         int var13Lifetime1;
@@ -648,7 +648,7 @@ final class kd extends be {
         kg var7_ref_kg = null;
         int var7 = 0;
         int var8 = 0;
-        tf var9 = null;
+        IntrusiveDeque var9 = null;
         int var10 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -662,7 +662,7 @@ final class kd extends be {
           var16 = new kg[6];
           var6 = var16;
           if (!vi.field_n) {
-            var7_ref_kg = pj.a(param2, -87, new tf(), 0);
+            var7_ref_kg = pj.a(param2, -87, new IntrusiveDeque(), 0);
             for (var8 = 0; var16.length > var8; var8++) {
               var16[var8] = var7_ref_kg;
             }
@@ -675,7 +675,7 @@ final class kd extends be {
           }
           stackIn_16_0 = (param2) ? 6 : 2;
           var8Lifetime1 = stackIn_16_0;
-          var9 = new tf();
+          var9 = new IntrusiveDeque();
           for (var10 = 0; var10 < 3; var10++) {
             for (var11 = 0; var11 < 9; var11++) {
               if (param5 >= p.a((byte) -24, 256)) {

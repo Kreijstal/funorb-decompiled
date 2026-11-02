@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pw extends i {
-    static ut field_H;
+    static Sprite field_H;
     static np field_G;
     private boolean field_F;
     static hd field_J;
@@ -44,7 +44,7 @@ final class pw extends i {
                 var3 = var3 | 4;
               }
               or.field_d.b(51, (byte) 127);
-              or.field_d.a(105, bi.field_m);
+              or.field_d.a(105, ArchiveNetworkClient.field_m);
               or.field_d.a(126, ee.field_d);
               or.field_d.a(109, var3);
               or.field_d.b(-95, ad.field_f);
@@ -227,15 +227,15 @@ final class pw extends i {
         var7 = var4 + 50;
         var8 = 6 + (var6 + 75);
         var9 = 75 + var8 + 6;
-        on.a(-47 + var4, var6, 90, 75, 10, 65793, 128);
-        on.a(160 + var5 + 7, var6, 90, 75, 10, 65793, 128);
+        SoftwareRasterizer.a(-47 + var4, var6, 90, 75, 10, 65793, 128);
+        SoftwareRasterizer.a(160 + var5 + 7, var6, 90, 75, 10, 65793, 128);
         un.field_d.d(oj.field_T.toLowerCase(), var4 - 2, var6 + 30, 16777215, -1);
         pb.field_C.d(ad.a(an.field_c, 26300), var4 - 2, var6 + 54, 16777215, -1);
-        un.field_d.d(tu.field_D.toLowerCase(), 52 + (160 + var5), var6 + 30, 16777215, -1);
+        un.field_d.d(GameLoopApplet.field_D.toLowerCase(), 52 + (160 + var5), var6 + 30, 16777215, -1);
         pb.field_C.d(ad.a(qd.field_g, 26300), 52 + (160 + var5), 54 + var6, 16777215, -1);
-        on.a(var5, var6, 160, 75, 10, 65793, 128);
-        on.a(var7, var8, 160, 75, 10, 65793, 128);
-        on.a(var4, var9, 260, 120, 10, 65793, 128);
+        SoftwareRasterizer.a(var5, var6, 160, 75, 10, 65793, 128);
+        SoftwareRasterizer.a(var7, var8, 160, 75, 10, 65793, 128);
+        SoftwareRasterizer.a(var4, var9, 260, 120, 10, 65793, 128);
         un.field_d.d(gl.field_f.toLowerCase(), 130 + var4, 21 + var6, 16777215, -1);
         un.field_d.d(Kickabout.field_F.toLowerCase(), var4 + 130, var9 + 21, 16777215, -1);
         if (pn.g(2368)) {
@@ -246,12 +246,12 @@ final class pw extends i {
         var10 = stackIn_8_0;
         uq.field_b.field_s = var4 + 10;
         uq.field_b.field_J = 27 + var6;
-        on.a(uq.field_b.field_s + 85, uq.field_b.field_J + 6, bd.field_A.field_q + 4, -4 + bd.field_A.field_mb, 7829367, 128);
+        SoftwareRasterizer.a(uq.field_b.field_s + 85, uq.field_b.field_J + 6, bd.field_A.field_q + 4, -4 + bd.field_A.field_mb, 7829367, 128);
         pb.field_C.a('£', 91 + uq.field_b.field_s, uq.field_b.field_J + 19, 16777215);
         uq.field_b.a(110, var10 != 0 & this.field_F);
         oa.field_b.field_J = 5 + (var8 - 13);
         oa.field_b.field_s = var4 + 10;
-        on.a(oa.field_b.field_s + 85, 40 + oa.field_b.field_J, rt.field_F.field_q + 4, -4 + rt.field_F.field_mb, 7829367, 128);
+        SoftwareRasterizer.a(oa.field_b.field_s + 85, 40 + oa.field_b.field_J, rt.field_F.field_q + 4, -4 + rt.field_F.field_mb, 7829367, 128);
         if (ng.field_e) {
           pb.field_C.a('£', oa.field_b.field_s + 91, 53 + oa.field_b.field_J, 16777215);
         }
@@ -287,7 +287,7 @@ final class pw extends i {
         for (var11 = 0; var11 < 5; var11++) {
           of.field_d[var11].a(true, of.field_d[var11].field_q, var4 + 10, 26 + (var9 + var11 * 18), of.field_d[var11].field_mb);
           if (of.field_d[var11].field_gb) {
-            on.a(of.field_d[var11].field_F, of.field_d[var11].field_T, of.field_d[var11].field_q, of.field_d[var11].field_mb - 2, 6, 16777215, 140);
+            SoftwareRasterizer.a(of.field_d[var11].field_F, of.field_d[var11].field_T, of.field_d[var11].field_q, of.field_d[var11].field_mb - 2, 6, 16777215, 140);
           }
           if (ee.field_d == var11) {
             su.field_a.c(10 + (var4 + 74), 26 + var9 - (-(var11 * 18) - 2));
@@ -316,9 +316,9 @@ final class pw extends i {
         int var3_int = 0;
         hd var7 = null;
         hd var8 = null;
-        bi.field_m = param0;
+        ArchiveNetworkClient.field_m = param0;
         ng.field_e = true;
-        wk.field_c = tu.field_E.field_i[bi.field_m];
+        wk.field_c = GameLoopApplet.field_E.field_i[ArchiveNetworkClient.field_m];
         an.field_c = su.a((byte) -107, wk.field_c);
         qd.field_g = af.a(wk.field_c, -31);
         ad.field_f = an.field_c;
@@ -328,7 +328,7 @@ final class pw extends i {
         of.field_d = new hd[5];
         var9.field_y = 16777215;
         var9.field_ub = 65793;
-        var9.field_X = (hu) ((Object) pb.field_C);
+        var9.field_X = (BitmapFont) ((Object) pb.field_C);
         var9.field_D = 95;
         for (var3_int = 0; var3_int < 5; var3_int++) {
           of.field_d[var3_int] = new hd();
@@ -346,16 +346,16 @@ final class pw extends i {
         uq.field_b.field_A = 1;
         uq.field_b.field_mb = 24;
         uq.field_b.field_q = 240;
-        uq.field_b.field_X = (hu) ((Object) pb.field_C);
+        uq.field_b.field_X = (BitmapFont) ((Object) pb.field_C);
         oa.field_b = new hd();
         oa.field_b.field_B = 40;
         oa.field_b.field_mb = 60;
-        oa.field_b.field_X = (hu) ((Object) pb.field_C);
+        oa.field_b.field_X = (BitmapFont) ((Object) pb.field_C);
         oa.field_b.field_A = 1;
         oa.field_b.field_q = 240;
         oa.field_b.field_y = 16777215;
         hd var3 = new hd();
-        var3.field_X = (hu) ((Object) pb.field_C);
+        var3.field_X = (BitmapFont) ((Object) pb.field_C);
         var3.field_p = 1;
         var3.field_A = 1;
         var3.field_y = 16777215;
@@ -364,7 +364,7 @@ final class pw extends i {
         hd var5 = new hd();
         var5.field_B = 2;
         var5.field_y = 16777215;
-        var5.field_X = (hu) ((Object) pb.field_C);
+        var5.field_X = (BitmapFont) ((Object) pb.field_C);
         var5.field_D = 5;
         bd.field_A = new vg(0L, var3, var10, var5, 20);
         bd.field_A.field_R = null;
@@ -401,7 +401,7 @@ final class pw extends i {
     public static void g(int param0) {
         field_J = null;
         if (param0 != -8332) {
-          field_H = (ut) null;
+          field_H = (Sprite) null;
         }
         field_G = null;
         field_H = null;
@@ -494,7 +494,7 @@ final class pw extends i {
           if (an.field_c != ad.field_f) {
             qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, np.field_Ib, new String[]{ad.a(1, 26300)}));
           } else {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, fd.field_j);
+            qd.$cfr$intArgs$a$b6210757cdab(-67, UiWidget.field_j);
           }
         }
         if (fn.field_a.field_Q) {
@@ -502,7 +502,7 @@ final class pw extends i {
             if (hk.field_L == qd.field_g) {
               qd.$cfr$intArgs$a$b6210757cdab(-67, hm.field_E);
             } else {
-              qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, nw.field_c, new String[]{ad.a(1, param0 ^ 26303)}));
+              qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, IntrusiveDequeCursor.field_c, new String[]{ad.a(1, param0 ^ 26303)}));
             }
           } else {
             qd.$cfr$intArgs$a$b6210757cdab(-67, im.field_zb);

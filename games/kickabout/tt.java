@@ -4,7 +4,7 @@
 final class tt {
     static String field_a;
     static String field_d;
-    static ut field_e;
+    static Sprite field_e;
     static boolean field_c;
     static int field_b;
 
@@ -106,7 +106,7 @@ final class tt {
             if (var2 == 4) {
               ts.field_d = 1;
               var3 = var1.a(111);
-              bh.field_h = ((String) (var3)).intern();
+              BufferedSocket.field_h = ((String) (var3)).intern();
               var4 = var1.h((byte) -115);
               en.a(var4, -1);
               return;
@@ -114,7 +114,7 @@ final class tt {
             bd.a("F1: " + tr.b(0), (Throwable) null, 1);
             lr.b((byte) -116);
             if (param0 <= 38) {
-              field_e = (ut) null;
+              field_e = (Sprite) null;
             }
             return;
           }
@@ -204,7 +204,7 @@ final class tt {
             stackIn_5_0 = null;
             return (uo) (stackIn_5_0);
           }
-          var2 = new uo(param1, IsaacRandom.field_f, fc.field_g, ku.field_c, lo.field_j, pq.field_O);
+          var2 = new uo(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, lo.field_j, pq.field_O);
           tk.h((byte) -82);
           stackIn_7_0 = var2;
           return stackIn_7_0;

@@ -122,7 +122,7 @@ abstract class hs {
             stackIn_4_0 = pu.a(param9, param2, param4, (byte) -103, param6, param3, param10);
             return stackIn_4_0;
           }
-          var27 = new vn(new vn[]{wj.field_v[param2][param8]}, 1);
+          var27 = new vn(new vn[]{WidgetContainer.field_v[param2][param8]}, 1);
           var29 = var27;
           if (param9) {
             var12_int = wc.field_e[param2];
@@ -313,7 +313,7 @@ abstract class hs {
     abstract void e(int param0);
 
     final void c(int param0) {
-        on.a(10, 50, 620, 320, 20, 65793, 128);
+        SoftwareRasterizer.a(10, 50, 620, 320, 20, 65793, 128);
         if (param0 < 43) {
           this.c(-47, -123);
         }
@@ -378,9 +378,9 @@ abstract class hs {
         var4 = 83;
         var5 = Integer.toString(param1 / 50);
         PacketBuffer.a(-45, hg.field_G);
-        on.b();
-        var6 = on.field_g >> 1;
-        var7 = on.field_f >> 1;
+        SoftwareRasterizer.b();
+        var6 = SoftwareRasterizer.field_g >> 1;
+        var7 = SoftwareRasterizer.field_f >> 1;
         un.field_d.d(var5, var6, var7, 16777215, -1);
         pw.field_H.c(-16 + var6, var7 - 31);
         ta.e(124);
@@ -446,7 +446,7 @@ abstract class hs {
         } else {
           stackIn_14_2 = he.field_Ub;
         }
-        wj.a(stackIn_13_0, stackIn_13_1, stackIn_14_2, param3, param1, 114);
+        WidgetContainer.a(stackIn_13_0, stackIn_13_1, stackIn_14_2, param3, param1, 114);
         param1 += 39;
         if (param2 >= -43) {
           return;
@@ -464,8 +464,8 @@ abstract class hs {
               var10 = un.field_d.a(var9);
               var11 = param3 + (-var10 + 160 >> 1);
               var12 = 10;
-              on.b(var11, -2 + param1 - var12, var10 + var11, param1 - 1, 13382451);
-              on.b(var11, param1 - 1, var10 + var11, -var12 + (param1 - 2), 13382451);
+              SoftwareRasterizer.b(var11, -2 + param1 - var12, var10 + var11, param1 - 1, 13382451);
+              SoftwareRasterizer.b(var11, param1 - 1, var10 + var11, -var12 + (param1 - 2), 13382451);
             }
             param1 += 23;
           }
@@ -476,7 +476,7 @@ abstract class hs {
 
     final void a(boolean param0, String param1) {
         try {
-          on.a(22, 62, 596, 28, 10, 65793, 128);
+          SoftwareRasterizer.a(22, 62, 596, 28, 10, 65793, 128);
           if (param0) {
             this.field_a = (CommonGame) null;
           }
@@ -566,7 +566,7 @@ abstract class hs {
         while (this.field_a.playerCount > var10) {
           var8 = this.field_a.field_g[var10].field_p;
           pt.a(640, -22914, 2 + (var4[var8] + 160), 480, 0);
-          on.a(var4[var8], var5[var8], 186, 21, 7, 65793, 128);
+          SoftwareRasterizer.a(var4[var8], var5[var8], 186, 21, 7, 65793, 128);
           ta.e(123);
           if (this.field_a.participantStatus[var10].loadedPitch) {
             vb.field_l.c(2 + (160 + var4[var8]), -4 + var5[var8]);

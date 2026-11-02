@@ -3,18 +3,18 @@
  */
 final class vo extends mu {
     static String field_db;
-    static ut field_cb;
+    static Sprite field_cb;
     static int field_bb;
     static int[][] field_eb;
 
-    vo(se param0, fd param1) {
+    vo(se param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
-    final void a(byte param0, fd param1) {
+    final void a(byte param0, UiWidget param1) {
         try {
           if (param0 > -117) {
-            field_cb = (ut) null;
+            field_cb = (Sprite) null;
           }
           super.a((byte) -127, param1);
         } catch (RuntimeException runtimeException) {
@@ -190,7 +190,7 @@ final class vo extends mu {
           lo.field_j = new int[io.field_l];
           rm.field_B = new boolean[io.field_l];
           es.field_e = new byte[io.field_l][];
-          ku.field_c = new int[io.field_l];
+          MouseInputHandler.field_c = new int[io.field_l];
           IsaacRandom.field_f = new int[io.field_l];
           fc.field_g = new int[io.field_l];
           pq.field_O = new byte[io.field_l][];
@@ -205,7 +205,7 @@ final class vo extends mu {
             fc.field_g[var4Lifetime1] = var17.a((byte) 81);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < io.field_l; var4Lifetime2++) {
-            ku.field_c[var4Lifetime2] = var17.a((byte) 81);
+            MouseInputHandler.field_c[var4Lifetime2] = var17.a((byte) 81);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < io.field_l; var4Lifetime3++) {
             lo.field_j[var4Lifetime3] = var17.a((byte) 81);
@@ -220,7 +220,7 @@ final class vo extends mu {
           }
           var17.field_n = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < io.field_l; var4Lifetime5++) {
-            var5 = ku.field_c[var4Lifetime5];
+            var5 = MouseInputHandler.field_c[var4Lifetime5];
             var6 = lo.field_j[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];

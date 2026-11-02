@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ae extends wj implements qu, vh, ur {
+final class ae extends WidgetContainer implements qu, vh, ur {
     private mr field_E;
-    static ut[][][] field_C;
-    static ut field_H;
+    static Sprite[][][] field_C;
+    static Sprite field_H;
     private wi field_Q;
     private wi field_F;
     private mr field_K;
@@ -21,7 +21,7 @@ final class ae extends wj implements qu, vh, ur {
     private qk field_O;
     fr field_L;
 
-    final void a(byte param0, fd param1, int param2, int param3) {
+    final void a(byte param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_Q.field_y = this.k(-123);
@@ -30,34 +30,34 @@ final class ae extends wj implements qu, vh, ur {
         }
     }
 
-    final static ut a(boolean param0, byte param1, int param2, int param3, int param4) {
+    final static Sprite a(boolean param0, byte param1, int param2, int param3, int param4) {
         int var10 = 0;
         int var9 = 0;
         int var7 = 0;
         int stackIn_5_0 = 0;
         int stackIn_5_1 = 0;
-        ut stackIn_6_2 = null;
+        Sprite stackIn_6_2 = null;
         int stackIn_8_0 = 0;
         int stackIn_8_1 = 0;
-        ut stackIn_9_2 = null;
+        Sprite stackIn_9_2 = null;
         int stackIn_11_0 = 0;
         int stackIn_11_1 = 0;
-        ut stackIn_12_2 = null;
-        ut var5;
+        Sprite stackIn_12_2 = null;
+        Sprite var5;
         int var6;
         int[] var7_ref_int__;
         int var8;
         int[] var8_ref_int__;
-        ut var9_ref_ut;
+        Sprite var9_ref_ut;
         int var11;
         int var12;
-        ut var13;
-        ut var14;
-        ut var15;
-        ut var16;
-        ut var17;
-        ut var18;
-        ut var19;
+        Sprite var13;
+        Sprite var14;
+        Sprite var15;
+        Sprite var16;
+        Sprite var17;
+        Sprite var18;
+        Sprite var19;
         int[] var20;
         int[] var21;
         int[] var22;
@@ -83,7 +83,7 @@ final class ae extends wj implements qu, vh, ur {
             stackIn_8_0 = param4;
             stackIn_8_1 = -95;
             if (param0) {
-              stackIn_9_2 = (ut) (field_H);
+              stackIn_9_2 = (Sprite) (field_H);
             } else {
               stackIn_9_2 = uj.field_B;
             }
@@ -96,7 +96,7 @@ final class ae extends wj implements qu, vh, ur {
               stackIn_12_2 = fv.field_b;
             }
             var9_ref_ut = nm.a(stackIn_11_0, stackIn_11_1, stackIn_12_2);
-            var15 = new ut(param3, var14.field_v);
+            var15 = new Sprite(param3, var14.field_v);
             var5 = var15;
             PacketBuffer.a(-116, var15);
             var9_ref_ut.d(var15.field_o - var9_ref_ut.field_o, 0);
@@ -111,7 +111,7 @@ final class ae extends wj implements qu, vh, ur {
             PacketBuffer.a(98, var13);
           }
         }
-        pt.a(-3 + on.field_g, -22914, 3, on.field_f - 3, 3);
+        pt.a(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
         if (param2 == 0 &&
           var6 == 0) {
           var25 = new int[64];
@@ -123,8 +123,8 @@ final class ae extends wj implements qu, vh, ur {
             var7_ref_int__[var12] = 263172 * var12;
             var12++;
           }
-          nh.a(10, 6, on.field_g - 10, 6, 6, 8, var25);
-          nh.a(10, 8, on.field_g - 10, 8, 6, 8, var25);
+          nh.a(10, 6, SoftwareRasterizer.field_g - 10, 6, 6, 8, var25);
+          nh.a(10, 8, SoftwareRasterizer.field_g - 10, 8, 6, 8, var25);
         } else if (1 == param2) {
           PacketBuffer.a(109, var5);
           var5.c(0, 0, 60);
@@ -135,23 +135,23 @@ final class ae extends wj implements qu, vh, ur {
           for (var8 = 0; var24.length > var8; var8++) {
             var7_ref_int__[var8] = 197379 * var8;
           }
-          nh.a(4, 6, on.field_g - 4, 6, 8, -40 + var24.length, var24);
+          nh.a(4, 6, SoftwareRasterizer.field_g - 4, 6, 8, -40 + var24.length, var24);
         } else if (2 == param2) {
           ta.e(param1 ^ -69);
           ta.e(123);
           var19 = var5;
-          var18 = new ut(var5.field_o, var5.field_v);
+          var18 = new Sprite(var5.field_o, var5.field_v);
           var5 = var18;
           PacketBuffer.a(-45, var18);
           eo.a(var19, 0, 0, 230);
-          pt.a(-3 + on.field_g, -22914, 3, on.field_f - 3, 3);
+          pt.a(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
           var23 = new int[64];
           var20 = var23;
           var8_ref_int__ = var20;
           for (var9 = 0; var9 < var23.length; var9++) {
             var8_ref_int__[var9] = 197379 * var9;
           }
-          nh.a(4, 6, on.field_g, 6, 8, -40 + var23.length, var23);
+          nh.a(4, 6, SoftwareRasterizer.field_g, 6, 8, -40 + var23.length, var23);
         } else {
           if (3 == param2) {
             nh.a(var5, 0.0, 0.0, 0.7);
@@ -164,8 +164,8 @@ final class ae extends wj implements qu, vh, ur {
           } else {
             if (!param0) {
               tt.field_e.c(0, 0, 16);
-              pt.a(on.field_g - cg.field_K.field_o, -22914, 0, on.field_f, 0);
-              for (var7 = tt.field_e.field_o; on.field_g - cg.field_K.field_o > var7; var7 = var7 + GameAppletShell.field_l.field_o) {
+              pt.a(SoftwareRasterizer.field_g - cg.field_K.field_o, -22914, 0, SoftwareRasterizer.field_f, 0);
+              for (var7 = tt.field_e.field_o; SoftwareRasterizer.field_g - cg.field_K.field_o > var7; var7 = var7 + GameAppletShell.field_l.field_o) {
                 GameAppletShell.field_l.c(var7, 0, 16);
               }
               ta.e(124);
@@ -182,7 +182,7 @@ final class ae extends wj implements qu, vh, ur {
         return var5;
     }
 
-    private final int a(int param0, String param1, int param2, int param3, fd param4) {
+    private final int a(int param0, String param1, int param2, int param3, UiWidget param4) {
         cg var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_3_0 = 0;
@@ -237,7 +237,7 @@ final class ae extends wj implements qu, vh, ur {
         this.field_K.field_u = aw.field_G;
         this.field_T.field_u = od.field_o;
         this.field_N.field_u = hd.field_Z;
-        this.field_J.field_u = lu.field_r;
+        this.field_J.field_u = SpriteState.field_r;
         this.field_O.field_u = le.field_b;
         this.field_E.a(6, new bv(this.field_E));
         this.field_S.a(6, new qo(this.field_S));
@@ -291,7 +291,7 @@ final class ae extends wj implements qu, vh, ur {
         this.a(var6 + (55 + var3), 1, 0, 496, 0);
     }
 
-    private final int a(int param0, boolean param1, String param2, fd param3, int param4, String param5, int param6) {
+    private final int a(int param0, boolean param1, String param2, UiWidget param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         ju var9 = null;
         cg var10 = null;
@@ -392,7 +392,7 @@ final class ae extends wj implements qu, vh, ur {
     public static void a(byte param0) {
         field_M = null;
         field_I = null;
-        field_C = (ut[][][]) null;
+        field_C = (Sprite[][][]) null;
         field_D = null;
         field_P = null;
         field_H = null;
@@ -445,7 +445,7 @@ final class ae extends wj implements qu, vh, ur {
         int discarded$0 = 0;
         if (param0 >= -82) {
           String var4 = (String) null;
-          discarded$0 = this.a(-122, true, (String) null, (fd) null, 3, (String) null, -84);
+          discarded$0 = this.a(-122, true, (String) null, (UiWidget) null, 3, (String) null, -84);
         }
         if (!this.k(-112)) {
           return false;
@@ -458,7 +458,7 @@ final class ae extends wj implements qu, vh, ur {
         return gp.a((byte) 117, this.field_S.field_q, this.field_O.field_A, this.field_E.field_q, this, var2, this.field_T.field_q);
     }
 
-    private final int a(fd param0, String param1, int param2, int param3, int param4, String param5) {
+    private final int a(UiWidget param0, String param1, int param2, int param3, int param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -548,7 +548,7 @@ final class ae extends wj implements qu, vh, ur {
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final int a(int param0, String param1, int param2, fd param3, byte param4) {
+    private final int a(int param0, String param1, int param2, UiWidget param3, byte param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         cg var7 = null;
@@ -589,7 +589,7 @@ final class ae extends wj implements qu, vh, ur {
         }
     }
 
-    final boolean a(char param0, byte param1, fd param2, int param3) {
+    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -681,10 +681,10 @@ final class ae extends wj implements qu, vh, ur {
         try {
           var3 = this.field_E;
           var4 = param0;
-          ((ga) ((Object) var3)).a(var4, (byte) -17, false);
+          ((TextInputWidget) ((Object) var3)).a(var4, (byte) -17, false);
           if (param1 != 15) {
             var5 = (String) null;
-            discarded$1 = this.a(24, false, (String) null, (fd) null, 103, (String) null, 84);
+            discarded$1 = this.a(24, false, (String) null, (UiWidget) null, 103, (String) null, 84);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

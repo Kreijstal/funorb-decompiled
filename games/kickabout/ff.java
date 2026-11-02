@@ -3,7 +3,7 @@
  */
 final class ff {
     int field_a;
-    static ut field_b;
+    static Sprite field_b;
     int field_d;
     static String field_c;
 
@@ -28,7 +28,7 @@ final class ff {
     }
 
     static {
-        field_b = new ut(80, 10);
+        field_b = new Sprite(80, 10);
         field_c = "Withdraw request to join <%0>'s game";
     }
 }

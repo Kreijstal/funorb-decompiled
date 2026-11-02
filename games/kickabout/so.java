@@ -3,7 +3,7 @@
  */
 final class so {
     static int field_e;
-    static ut[] field_d;
+    static Sprite[] field_d;
     static int[][] field_f;
     static int field_b;
     static String field_c;
@@ -59,9 +59,9 @@ final class so {
         }
     }
 
-    final static boolean a(sj param0, boolean param1, sj param2, sj param3) {
+    final static boolean a(ResourceArchive param0, boolean param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
-        sj var5 = null;
+        ResourceArchive var5 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -82,8 +82,8 @@ final class so {
             if (param3.d(-124) &&
               param3.a(false, "button.gif")) {
               if (!param1) {
-                var5 = (sj) null;
-                so.a((sj) null, true, (sj) null, (sj) null);
+                var5 = (ResourceArchive) null;
+                so.a((ResourceArchive) null, true, (ResourceArchive) null, (ResourceArchive) null);
               }
               return true;
             }
@@ -124,8 +124,8 @@ final class so {
           field_f = (int[][]) null;
           return;
         }
-        sj var2 = (sj) null;
-        so.a((sj) null, false, (sj) null, (sj) null);
+        ResourceArchive var2 = (ResourceArchive) null;
+        so.a((ResourceArchive) null, false, (ResourceArchive) null, (ResourceArchive) null);
         field_a = null;
         field_c = null;
         field_d = null;

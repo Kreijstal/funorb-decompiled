@@ -20,47 +20,47 @@ final class kr {
 
     final static void a(hd param0, boolean param1, int param2) {
         uv var9 = null;
-        ut var11 = null;
+        Sprite var11 = null;
         String var10 = null;
         uv var12 = null;
-        ut var14 = null;
+        Sprite var14 = null;
         String var13 = null;
         uv var15 = null;
-        ut var17 = null;
+        Sprite var17 = null;
         String var16 = null;
         uv var18 = null;
-        ut var20 = null;
+        Sprite var20 = null;
         String var19 = null;
         uv var21 = null;
-        ut var23 = null;
+        Sprite var23 = null;
         String var22 = null;
         uv var24 = null;
-        ut var26 = null;
+        Sprite var26 = null;
         String var25 = null;
         uv var27 = null;
         String var28 = null;
         uv var30 = null;
-        ut var32 = null;
+        Sprite var32 = null;
         String var31 = null;
         uv var33 = null;
-        ut var35 = null;
+        Sprite var35 = null;
         String var34 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ut var29 = null;
-        ut var29Lifetime1;
-        ut var29Lifetime2;
-        ut var29Lifetime3;
-        ut var29Lifetime4;
-        ut var29Lifetime5;
-        ut var29Lifetime6;
-        ut var29Lifetime7;
-        ut var29Lifetime1Lifetime1;
-        ut var29Lifetime1Lifetime2;
-        ut var29Lifetime1Lifetime3;
-        ut var29Lifetime1Lifetime4;
-        ut var29Lifetime1Lifetime5;
+        Sprite var29 = null;
+        Sprite var29Lifetime1;
+        Sprite var29Lifetime2;
+        Sprite var29Lifetime3;
+        Sprite var29Lifetime4;
+        Sprite var29Lifetime5;
+        Sprite var29Lifetime6;
+        Sprite var29Lifetime7;
+        Sprite var29Lifetime1Lifetime1;
+        Sprite var29Lifetime1Lifetime2;
+        Sprite var29Lifetime1Lifetime3;
+        Sprite var29Lifetime1Lifetime4;
+        Sprite var29Lifetime1Lifetime5;
         el.a(param0, false, (np) null, param2, (String) null, (int[]) null, 0L, (String) null, -1);
         if (param2 == 0) {
           var9 = wi.field_v;
@@ -242,7 +242,7 @@ final class kr {
         }
     }
 
-    final static cl[] a(byte param0, bu param1) {
+    final static cl[] a(byte param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         cl[] stackIn_4_0 = null;
         cl[] stackIn_10_0 = null;
@@ -256,7 +256,7 @@ final class kr {
         cl[] var4 = null;
         cl var6 = null;
         int var7 = 0;
-        wu var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = Kickabout.field_G;

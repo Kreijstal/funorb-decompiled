@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki extends am {
+final class ki extends DualLinkNode {
     int field_v;
     static mb field_n;
     up[] field_s;
     byte field_o;
     int field_u;
     int field_r;
-    static ut field_q;
+    static Sprite field_q;
     gr field_t;
     byte field_p;
 
@@ -40,7 +40,7 @@ final class ki extends am {
           return CommonGame.field_M;
         }
         if (!bw.field_b.a(false, "commonui")) {
-          return bh.field_q + " - " + bw.field_b.a("commonui", -16248) + "%";
+          return BufferedSocket.field_q + " - " + bw.field_b.a("commonui", -16248) + "%";
         }
         if (!gs.field_c.d(-122)) {
           return te.field_b;
@@ -108,7 +108,7 @@ final class ki extends am {
           }
           var4 = var14.h((byte) -127);
           if (0 != var4) {
-            sc.field_B[0] = ow.field_e;
+            sc.field_B[0] = ArchiveSource.field_e;
             var5 = var3.field_p;
             for (var6_int = 1; var6_int < var4; var6_int++) {
               sc.field_B[var6_int] = var14.a(124);

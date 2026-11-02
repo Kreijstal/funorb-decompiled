@@ -3,7 +3,7 @@
  */
 final class up implements lv {
     static String field_d;
-    static sj field_m;
+    static ResourceArchive field_m;
     int field_q;
     int field_e;
     int field_j;
@@ -16,7 +16,7 @@ final class up implements lv {
     int field_l;
     int[] field_h;
     int field_o;
-    static sj field_k;
+    static ResourceArchive field_k;
     static long field_b;
     int field_i;
     int field_r;
@@ -154,7 +154,7 @@ final class up implements lv {
         var2.a(112, 2);
         var2.a(param1, er.field_h.length, param1 ^ 1991220144, er.field_h);
         var2.a(param1 ^ 124, lk.field_l);
-        var2.a(124, ru.field_C);
+        var2.a(124, MidiPcmStream.field_C);
         var2.a(0, rf.field_d.length, param1 + 1991220144, rf.field_d);
         var2.c(62, -var3 + var2.field_n);
     }
@@ -631,7 +631,7 @@ final class up implements lv {
         int var5 = 0;
         int var6 = 0;
         if (!this.field_c) {
-          var7 = tu.field_E;
+          var7 = GameLoopApplet.field_E;
           var4 = var7.field_w;
           var6 = var7.field_R;
           var5 = var7.field_k;
@@ -893,13 +893,13 @@ final class up implements lv {
         int var14;
         int var15;
         int var16_int;
-        ot var16;
+        ArgbSprite var16;
         int var17_int;
         String var17;
         int var18;
         int var19;
         fn var20;
-        ot var21;
+        ArgbSprite var21;
         int var22;
         int var23;
         int[] var24;
@@ -952,8 +952,8 @@ final class up implements lv {
         }
         while (var16_int < 4) {
           if (var26[var16_int] != 0) {
-            on.a(param1, var15, var13, var26[var16_int] + 1, var25[var14], var10[var14]);
-            on.e(param1, var15, var13, var26[var16_int] + 1, 65793);
+            SoftwareRasterizer.a(param1, var15, var13, var26[var16_int] + 1, var25[var14], var10[var14]);
+            SoftwareRasterizer.e(param1, var15, var13, var26[var16_int] + 1, 65793);
             var15 = var15 + var26[var16_int];
             var14 = var14 ^ 1;
           }
@@ -1001,7 +1001,7 @@ final class up implements lv {
               while (this.field_h.length > var23) {
                 var20 = pa.field_g[this.field_h[var23]];
                 var21 = var20.d(false);
-                ((ut) ((Object) var21)).f(var17_int - (((ut) ((Object) var21)).field_o >> 2), -(((ut) ((Object) var21)).field_v >> 2) + var18);
+                ((Sprite) ((Object) var21)).f(var17_int - (((Sprite) ((Object) var21)).field_o >> 2), -(((Sprite) ((Object) var21)).field_v >> 2) + var18);
                 q.field_d.a(var20.f((byte) -1), 15 + var17_int, var18 + 4, 16777215, 65793);
                 var18 += 18;
                 var23++;
@@ -1009,12 +1009,12 @@ final class up implements lv {
             }
             if (this.f(13467)) {
               eo.d(1 + param1, 1 + param6, var13, var26[2] - 1);
-              on.a(-1 + var13 + param1, param6, var26[2] + 1, 65793);
+              SoftwareRasterizer.a(-1 + var13 + param1, param6, var26[2] + 1, 65793);
               q.field_d.d(oo.field_h, (var13 >> 1) + param1, -4 + var26[2] + param6, 16777215, 65793);
             }
             param6 = param6 + var26[2];
             if (param2) {
-              var17 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ti.field_g, new String[]{ad.a(dh.a(this, true), 26300)});
+              var17 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ti.field_g, new String[]{ad.a(ImageProducerRasterBuffer.a(this, true), 26300)});
               q.field_d.a(var17, param1 + 10, param6 + 15, 16777215, 65793);
             }
             return;

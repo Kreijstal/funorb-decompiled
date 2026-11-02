@@ -20,12 +20,12 @@ final class ii extends IntrusiveNode {
         RuntimeException var1 = null;
         var3 = Kickabout.field_G;
         try {
-          ad.field_c = new ut[je.field_g.length];
+          ad.field_c = new Sprite[je.field_g.length];
           if (param0 != 65280) {
             field_l = -68;
           }
           for (var1_int = 0; var1_int < je.field_g.length; var1_int++) {
-            ad.field_c[var1_int] = new ut(94, 84);
+            ad.field_c[var1_int] = new Sprite(94, 84);
             var2 = df.a(var1_int, (int) wk.a(255, 63), true, (int) wk.a(65280, param0 - 65217)).b(100, 728, 20, -56, -20);
             pe.a(var2, ad.field_c[var1_int], var1_int, 40);
           }

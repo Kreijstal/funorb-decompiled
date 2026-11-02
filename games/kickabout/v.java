@@ -6,11 +6,11 @@ final class v {
     private int field_c;
     private int field_g;
     private int field_e;
-    static sj field_b;
+    static ResourceArchive field_b;
     private int field_h;
     private int field_j;
     int field_a;
-    private ut field_f;
+    private Sprite field_f;
     static int field_d;
 
     final void a(int param0) {
@@ -41,7 +41,7 @@ final class v {
           this.field_g = 64;
           this.field_h = 96;
           PacketBuffer.a(74, this.field_f);
-          on.b();
+          SoftwareRasterizer.b();
           var4_int = 486400 / hw.field_i;
           param0.a(var4_int, 300, this.field_g, this.field_h, (byte) -74);
           ta.e(124);
@@ -94,7 +94,7 @@ final class v {
     }
 
     v() {
-        this.field_f = new ut(128, 128);
+        this.field_f = new Sprite(128, 128);
     }
 
     final void a(int param0, byte param1, ob param2) {
@@ -107,7 +107,7 @@ final class v {
           this.field_j = param2.c(true);
           this.field_a = 17;
           PacketBuffer.a(-57, this.field_f);
-          on.b();
+          SoftwareRasterizer.b();
           int var5 = 64 / ((-64 - param1) / 38);
           var4_int = (param2.j(-1) << 8) / hw.field_i;
           param2.a(300, this.field_g, this.field_h, var4_int, 300);

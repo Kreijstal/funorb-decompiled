@@ -68,7 +68,7 @@ final class ba extends sr {
         }
     }
 
-    final static ut[] a(int param0, int param1, int param2, byte param3) {
+    final static Sprite[] a(int param0, int param1, int param2, byte param3) {
         int var4 = -62 / ((param3 + 13) / 55);
         return te.a(1, param2, param0, false, param1);
     }
@@ -130,7 +130,7 @@ final class ba extends sr {
           nn.field_D = true;
           ck.field_a = param2;
           if (ck.field_a == 0) {
-            var3_int = lu.a(cv.field_f, tt.field_a, -46, ta.field_C, vp.field_k);
+            var3_int = SpriteState.a(cv.field_f, tt.field_a, -46, ta.field_C, vp.field_k);
             var4 = 3 + var3_int;
             dk.field_g = new int[var4];
             eq.field_c = new String[var4];
@@ -149,7 +149,7 @@ final class ba extends sr {
             dk.field_g[-1 + var4] = 1;
             sh.field_f[1] = 5;
           } else if (ck.field_a == 1) {
-            var3_int = lu.a(cv.field_f, tt.field_a, param1 ^ -44, ta.field_C, vp.field_k);
+            var3_int = SpriteState.a(cv.field_f, tt.field_a, param1 ^ -44, ta.field_C, vp.field_k);
             var4 = 2 + var3_int;
             eq.field_c = new String[var4];
             dk.field_g = new int[var4];
@@ -167,9 +167,9 @@ final class ba extends sr {
           } else if (2 != ck.field_a) {
             if (ck.field_a == 3) {
               if (!oo.field_c.field_l) {
-                var3_int = lu.a(cv.field_f, mr.field_bb, -46, ta.field_C, vp.field_k);
+                var3_int = SpriteState.a(cv.field_f, mr.field_bb, -46, ta.field_C, vp.field_k);
               } else {
-                var3_int = lu.a(cv.field_f, fu.field_a, param1 - 52, ta.field_C, vp.field_k);
+                var3_int = SpriteState.a(cv.field_f, fu.field_a, param1 - 52, ta.field_C, vp.field_k);
               }
               var4 = 2 + var3_int;
               eq.field_c = new String[var4];
@@ -186,7 +186,7 @@ final class ba extends sr {
               dk.field_g[-1 + var4] = 0;
               sh.field_f[0] = 5;
             } else if (ck.field_a == 4) {
-              var3_int = lu.a(cv.field_f, je.field_n, -46, ta.field_C, vp.field_k);
+              var3_int = SpriteState.a(cv.field_f, je.field_n, -46, ta.field_C, vp.field_k);
               var4 = var3_int + 2;
               dk.field_g = new int[var4];
               eq.field_c = new String[var4];
@@ -205,7 +205,7 @@ final class ba extends sr {
               if (ck.field_a != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = lu.a(cv.field_f, dr.field_b, -46, ta.field_C, vp.field_k);
+              var3_int = SpriteState.a(cv.field_f, dr.field_b, -46, ta.field_C, vp.field_k);
               var4 = 3 + var3_int;
               eq.field_c = new String[var4];
               dk.field_g = new int[var4];
@@ -225,7 +225,7 @@ final class ba extends sr {
               sh.field_f[1] = 5;
             }
           } else {
-            var3_int = lu.a(cv.field_f, vo.$cfr$intArgs$a$53ce4ab4c593(-18, vg.field_Kb, new String[]{"<br><%0><br>"}), -46, ta.field_C, vp.field_k);
+            var3_int = SpriteState.a(cv.field_f, vo.$cfr$intArgs$a$53ce4ab4c593(-18, vg.field_Kb, new String[]{"<br><%0><br>"}), -46, ta.field_C, vp.field_k);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(ta.field_C[var5])) {
@@ -242,7 +242,7 @@ final class ba extends sr {
             pg.field_a = new String[-1 + (-var4 + var3_int)];
             dv.a(ta.field_C, var4 + 1, pg.field_a, 0, -var4 + (var3_int - 1));
             var4 = -1;
-            var3_int = lu.a(cv.field_f, vo.$cfr$intArgs$a$53ce4ab4c593(-18, lr.field_o, new String[]{"<br><%0><br>"}), -46, ta.field_C, vp.field_k);
+            var3_int = SpriteState.a(cv.field_f, vo.$cfr$intArgs$a$53ce4ab4c593(-18, lr.field_o, new String[]{"<br><%0><br>"}), -46, ta.field_C, vp.field_k);
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(ta.field_C[var5])) {
                 continue;
@@ -345,19 +345,19 @@ final class ba extends sr {
               }
             }
           }
-          bh.field_j = ll.field_k.field_a * (pr.field_d + aj.field_a << 1);
+          BufferedSocket.field_j = ll.field_k.field_a * (pr.field_d + aj.field_a << 1);
           ka.field_a = -(var3_intLifetime1 >> 1) + ta.field_A;
-          bh.field_l = var3_intLifetime1 + (ta.field_A - (var3_intLifetime1 >> 1));
+          BufferedSocket.field_l = var3_intLifetime1 + (ta.field_A - (var3_intLifetime1 >> 1));
           for (var4Lifetime2 = 0; var4Lifetime2 < eq.field_c.length; var4Lifetime2++) {
-            stackIn_114_0 = bh.field_j;
+            stackIn_114_0 = BufferedSocket.field_j;
             if (dk.field_g[var4Lifetime2] >= 0) {
               stackIn_115_1 = nr.field_j;
             } else {
               stackIn_115_1 = la.field_c;
             }
-            bh.field_j = stackIn_114_0 + stackIn_115_1;
+            BufferedSocket.field_j = stackIn_114_0 + stackIn_115_1;
           }
-          uq.field_c = -(bh.field_j >> 1) + tb.field_s;
+          uq.field_c = -(BufferedSocket.field_j >> 1) + tb.field_s;
           ld.field_j = new int[eq.field_c.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = uq.field_c;
@@ -381,7 +381,7 @@ final class ba extends sr {
           if (ck.field_a == 2) {
             ll.field_k.a(-1, 0, -1, param0);
           } else {
-            ll.field_k.a(sj.a(el.field_A, n.field_m, (byte) -127), param1 ^ 6, 0, param0);
+            ll.field_k.a(ResourceArchive.a(el.field_A, n.field_m, (byte) -127), param1 ^ 6, 0, param0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -399,7 +399,7 @@ final class ba extends sr {
           return;
         }
         if (param1) {
-          on.a(0, 0, on.field_g, on.field_f, 0, 192);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 192);
         }
         mr.field_Z.a(0, 0, (byte) -103);
         if (param0 <= 108) {
@@ -433,19 +433,19 @@ final class ba extends sr {
             if (null != e.field_i) {
               e.field_i.b(109);
             }
-            if (ao.field_h != null) {
+            if (RandomAccessCacheFile.field_h != null) {
               try {
-                ao.field_h.c(1);
+                RandomAccessCacheFile.field_h.c(1);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
               }
             }
-            if (u.field_j != null) {
-              for (var1_int = 0; u.field_j.length > var1_int; var1_int++) {
-                if (u.field_j[var1_int] != null) {
+            if (JaggrabDownloader.field_j != null) {
+              for (var1_int = 0; JaggrabDownloader.field_j.length > var1_int; var1_int++) {
+                if (JaggrabDownloader.field_j[var1_int] != null) {
                   try {
-                    u.field_j[var1_int].c(param0 - 43);
+                    JaggrabDownloader.field_j[var1_int].c(param0 - 43);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

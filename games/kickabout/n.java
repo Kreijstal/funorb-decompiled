@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class n {
-    private bi field_g;
+    private ArchiveNetworkClient field_g;
     private PacketBuffer field_i;
     static qv field_e;
     static String[] field_f;
@@ -12,7 +12,7 @@ final class n {
     private java.math.BigInteger field_l;
     static String field_j;
     static boolean field_c;
-    private wm[] field_k;
+    private CachedArchiveSource[] field_k;
     static int field_d;
     private ui field_a;
 
@@ -100,13 +100,13 @@ final class n {
         }
     }
 
-    n(bi param0, eb param1) {
+    n(ArchiveNetworkClient param0, eb param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    final wm a(qh param0, int param1, int param2, boolean param3, qh param4) {
-        wm stackIn_9_0 = null;
-        wm stackIn_11_0 = null;
+    final CachedArchiveSource a(SectorCacheStore param0, int param1, int param2, boolean param3, SectorCacheStore param4) {
+        CachedArchiveSource stackIn_9_0 = null;
+        CachedArchiveSource stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -116,7 +116,7 @@ final class n {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        wm var9 = null;
+        CachedArchiveSource var9 = null;
         int var10 = 0;
         byte[] var14 = null;
         try {
@@ -135,7 +135,7 @@ final class n {
             var14 = new byte[64];
             this.field_i.a(var14, 0, (byte) -6, 64);
             var10 = -31 / ((param1 - 39) / 51);
-            var9 = new wm(param2, param0, param4, this.field_g, this.field_h, var6_int, var14, var7, param3);
+            var9 = new CachedArchiveSource(param2, param0, param4, this.field_g, this.field_h, var6_int, var14, var7, param3);
             this.field_k[param2] = var9;
             stackIn_11_0 = var9;
             return stackIn_11_0;
@@ -177,7 +177,7 @@ final class n {
           kk.field_j.a(true, 320, (-320 + var2_int) / 2, var6, -120 + (var3 - 2 * var6));
           kk.field_j.field_R = fs.a(kk.field_j.field_mb, 3, 2105376, 11579568, 8421504, (byte) 126);
           jw.field_Cb.a(true, -24 + kk.field_j.field_q - 24, 24, 16, -24 + (-20 + kk.field_j.field_mb));
-          ao.field_a.a(true, 80, 120, -20 + kk.field_j.field_mb - 24, 24);
+          RandomAccessCacheFile.field_a.a(true, 80, 120, -20 + kk.field_j.field_mb - 24, 24);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "n.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -548,7 +548,7 @@ final class n {
                 throw new RuntimeException();
               }
             }
-            this.field_k = new wm[var3];
+            this.field_k = new CachedArchiveSource[var3];
             this.field_i = var10;
             return true;
           }
@@ -565,7 +565,7 @@ final class n {
             throw new RuntimeException();
           }
         }
-        this.field_k = new wm[var3];
+        this.field_k = new CachedArchiveSource[var3];
         this.field_i = var10;
         return true;
     }
@@ -583,7 +583,7 @@ final class n {
         return true;
     }
 
-    private n(bi param0, eb param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private n(ArchiveNetworkClient param0, eb param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

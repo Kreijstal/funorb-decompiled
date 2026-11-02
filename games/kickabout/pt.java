@@ -56,7 +56,7 @@ final class pt extends IntrusiveNode {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         try {
           tr.d(-12974);
-          on.h(param2, param4, param0, param3);
+          SoftwareRasterizer.h(param2, param4, param0, param3);
           if (param1 != -22914) {
             field_e = -72;
           }
@@ -71,7 +71,7 @@ final class pt extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 37) {
-            pt.a(true, (sj) null);
+            pt.a(true, (ResourceArchive) null);
           }
           stackIn_4_0 = this.field_f;
           return stackIn_4_0;
@@ -252,7 +252,7 @@ final class pt extends IntrusiveNode {
         }
     }
 
-    final static void a(boolean param0, sj param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2604_0;
             StringBuilder stackIn_2604_1;
@@ -262,9 +262,9 @@ final class pt extends IntrusiveNode {
             RuntimeException var2_ref;
             int var3;
             boolean param0;
-            sj param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(boolean initialParam0, sj initialParam1) {
+            $CfrPartitionedBody(boolean initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2604_0 = null;
@@ -343,7 +343,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -55, "ticketing_oneunread");
                 if (null != var2) {
-                  dq.field_h = kt.a(var2, true);
+                  ProxySocketConnector.field_h = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -77, "ticketing_xunread");
                 if (var2 != null) {
@@ -575,7 +575,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -124, "add_x_to_friends");
                 if (null != var2) {
-                  am.field_m = kt.a(var2, true);
+                  DualLinkNode.field_m = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -61, "add_x_to_ignore");
                 if (null != var2) {
@@ -627,7 +627,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -79, "mu_gameopt_withdraw_invite_to_x");
                 if (var2 != null) {
-                  vq.field_f = kt.a(var2, param0);
+                  FullscreenFocusCanvas.field_f = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -58, "mu_gameopt_accept_x_into_game");
                 if (var2 != null) {
@@ -691,7 +691,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -111, "mu_chat_pm_friends_only");
                 if (var2 != null) {
-                  lu.field_u = kt.a(var2, true);
+                  SpriteState.field_u = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -74, "mu_chat_pm_friends");
                 if (null != var2) {
@@ -847,7 +847,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -91, "status_private");
                 if (var2 != null) {
-                  dh.field_m = kt.a(var2, true);
+                  ImageProducerRasterBuffer.field_m = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -121, "status_full");
                 if (null != var2) {
@@ -883,7 +883,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -122, "you_can_spectate");
                 if (null != var2) {
-                  ga.field_U = kt.a(var2, param0);
+                  TextInputWidget.field_U = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -117, "you_can_not_spectate");
                 if (var2 != null) {
@@ -911,7 +911,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -119, "offline");
                 if (null != var2) {
-                  ga.field_K = kt.a(var2, true);
+                  TextInputWidget.field_K = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -50, "multiconst_invite_only");
                 if (null != var2) {
@@ -935,7 +935,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -112, "no_options_available");
                 if (null != var2) {
-                  ga.field_M = kt.a(var2, true);
+                  TextInputWidget.field_M = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -118, "reportabuse");
                 if (var2 != null) {
@@ -1209,7 +1209,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -54, "rule_1_1");
                 if (var2 != null) {
-                  dh.field_k = kt.a(var2, true);
+                  ImageProducerRasterBuffer.field_k = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -81, "rule_1_2");
                 if (null != var2) {
@@ -1329,7 +1329,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -94, "logging_in");
                 if (var2 != null) {
-                  dh.field_g = kt.a(var2, true);
+                  ImageProducerRasterBuffer.field_g = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -54, "reconnect");
                 if (var2 != null) {
@@ -1473,7 +1473,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -116, "checking");
                 if (var2 != null) {
-                  qh.field_a = kt.a(var2, param0);
+                  SectorCacheStore.field_a = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -121, "create_namealreadytaken");
                 if (null != var2) {
@@ -1705,7 +1705,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -119, "create_u13terms");
                 if (null != var2) {
-                  ov.field_a = kt.a(var2, param0);
+                  NodeHashTableIterator.field_a = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -65, "login_username_email");
                 if (null != var2) {
@@ -1788,7 +1788,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -103, "create_age_tooltip");
                 if (null != var2) {
-                  lu.field_r = kt.a(var2, true);
+                  SpriteState.field_r = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -107, "create_optin_news_tooltip");
                 if (null != var2) {
@@ -2044,7 +2044,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -117, "loading_graphics");
                 if (var2 != null) {
-                  bh.field_q = kt.a(var2, true);
+                  BufferedSocket.field_q = kt.a(var2, true);
                 }
             }
             void runChunk2() throws java.lang.RuntimeException {
@@ -2158,7 +2158,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -50, "achievements");
                 if (null != var2) {
-                  o.field_b = kt.a(var2, true);
+                  DualLinkDeque.field_b = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -108, "achievementsthisgame");
                 if (null != var2) {
@@ -2518,7 +2518,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -114, "orbpoints_colon");
                 if (null != var2) {
-                  dh.field_l = kt.a(var2, true);
+                  ImageProducerRasterBuffer.field_l = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -92, "orbcoins_colon");
                 if (var2 != null) {
@@ -2698,7 +2698,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -69, "click_to_quickchat");
                 if (null != var2) {
-                  ru.field_t = kt.a(var2, true);
+                  MidiPcmStream.field_t = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -68, "autorespond");
                 if (null != var2) {
@@ -2770,7 +2770,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -100, "rating_rating");
                 if (var2 != null) {
-                  wm.field_p = kt.a(var2, param0);
+                  CachedArchiveSource.field_p = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -96, "rating_played");
                 if (null != var2) {
@@ -2782,7 +2782,7 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -50, "rating_lost");
                 if (null != var2) {
-                  ku.field_e = kt.a(var2, param0);
+                  MouseInputHandler.field_e = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -71, "rating_drawn");
                 if (null != var2) {
@@ -2802,15 +2802,15 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -110, "members_expansion_benefits,0");
                 if (var2 != null) {
-                  ow.field_f[0] = kt.a(var2, true);
+                  ArchiveSource.field_f[0] = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -101, "members_expansion_benefits,1");
                 if (null != var2) {
-                  ow.field_f[1] = kt.a(var2, true);
+                  ArchiveSource.field_f[1] = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -71, "members_expansion_benefits,2");
                 if (var2 != null) {
-                  ow.field_f[2] = kt.a(var2, true);
+                  ArchiveSource.field_f[2] = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -93, "members_expansion_price_top");
                 if (null != var2) {
@@ -3088,31 +3088,31 @@ final class pt extends IntrusiveNode {
                 }
                 var2 = ni.a((byte) -101, "mustlogin2,1");
                 if (var2 != null) {
-                  lu.field_x[1] = kt.a(var2, param0);
+                  SpriteState.field_x[1] = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -85, "mustlogin2,2");
                 if (var2 != null) {
-                  lu.field_x[2] = kt.a(var2, param0);
+                  SpriteState.field_x[2] = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -77, "mustlogin2,3");
                 if (var2 != null) {
-                  lu.field_x[3] = kt.a(var2, true);
+                  SpriteState.field_x[3] = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -76, "mustlogin2,4");
                 if (var2 != null) {
-                  lu.field_x[4] = kt.a(var2, param0);
+                  SpriteState.field_x[4] = kt.a(var2, param0);
                 }
                 var2 = ni.a((byte) -117, "mustlogin2,5");
                 if (var2 != null) {
-                  lu.field_x[5] = kt.a(var2, true);
+                  SpriteState.field_x[5] = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -53, "mustlogin2,6");
                 if (null != var2) {
-                  lu.field_x[6] = kt.a(var2, true);
+                  SpriteState.field_x[6] = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -103, "mustlogin2,7");
                 if (var2 != null) {
-                  lu.field_x[7] = kt.a(var2, true);
+                  SpriteState.field_x[7] = kt.a(var2, true);
                 }
                 var2 = ni.a((byte) -66, "mustlogin3,1");
                 if (var2 != null) {

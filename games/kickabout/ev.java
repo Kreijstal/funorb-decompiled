@@ -85,20 +85,20 @@ final class ev extends tm {
         gg.a(param2, 0, param0.field_V);
         int var3_int = ug.a(0, param0.field_V.a(true));
         int var4 = lf.a((byte) -110, param0.field_V.c(879306160));
-        on.e(var3_int, var4, ug.a(0, kk.field_B[0]), lf.a((byte) -70, or.field_a[0]), 16777215, 64);
-        on.e(var3_int, var4, ug.a(0, kk.field_B[1]), lf.a((byte) -68, or.field_a[1]), 16777215, 64);
-        on.b(ug.a(0, kk.field_B[0]), lf.a((byte) -92, or.field_a[0]), ug.a(0, kk.field_B[1]), lf.a((byte) -98, or.field_a[1]), 16777215);
+        SoftwareRasterizer.e(var3_int, var4, ug.a(0, kk.field_B[0]), lf.a((byte) -70, or.field_a[0]), 16777215, 64);
+        SoftwareRasterizer.e(var3_int, var4, ug.a(0, kk.field_B[1]), lf.a((byte) -68, or.field_a[1]), 16777215, 64);
+        SoftwareRasterizer.b(ug.a(0, kk.field_B[0]), lf.a((byte) -92, or.field_a[0]), ug.a(0, kk.field_B[1]), lf.a((byte) -98, or.field_a[1]), 16777215);
         if (param1 <= 22) {
           return;
         }
         try {
           var5 = ug.a(0, pu.field_zb[0]);
           var6 = lf.a((byte) -102, pu.field_zb[1]);
-          on.b(ug.a(0, kk.field_B[0] + kk.field_B[1] >> 1), lf.a((byte) -86, or.field_a[0] + or.field_a[1] >> 1), var5, var6, 16777215);
-          on.b(-4 + var5, var6 - 4, var5 + 4, 4 + var6, 16776960);
-          on.b(var5 - 4, var6 + 4, var5 + 4, var6 - 4, 16776960);
+          SoftwareRasterizer.b(ug.a(0, kk.field_B[0] + kk.field_B[1] >> 1), lf.a((byte) -86, or.field_a[0] + or.field_a[1] >> 1), var5, var6, 16777215);
+          SoftwareRasterizer.b(-4 + var5, var6 - 4, var5 + 4, 4 + var6, 16776960);
+          SoftwareRasterizer.b(var5 - 4, var6 + 4, var5 + 4, var6 - 4, 16776960);
           var7 = param0.field_P[param2][0];
-          on.c(ug.a(0, 372), lf.a((byte) -110, var7.a(true)), ug.a(0, 523) - ug.a(0, 372), 16776960, 128);
+          SoftwareRasterizer.c(ug.a(0, 372), lf.a((byte) -110, var7.a(true)), ug.a(0, 523) - ug.a(0, 372), 16776960, 128);
           var8 = 4474111;
           var9 = var7.f(-105) - param0.field_V.a(true);
           var10 = var7.a(true) - param0.field_V.c(879306160);
@@ -107,9 +107,9 @@ final class ev extends tm {
             var8 = 16711680;
           }
           var12 = var11 * hw.field_i >> 8;
-          on.c(ug.a(0, var7.f(-101)), lf.a((byte) -125, var7.a(true)), var12, var8);
+          SoftwareRasterizer.c(ug.a(0, var7.f(-101)), lf.a((byte) -125, var7.a(true)), var12, var8);
           var12Lifetime1 = 28 * hw.field_i >> 8;
-          on.c(ug.a(0, var7.f(-120)), lf.a((byte) -64, var7.a(true)), var12Lifetime1, 16777215);
+          SoftwareRasterizer.c(ug.a(0, var7.f(-120)), lf.a((byte) -64, var7.a(true)), var12Lifetime1, 16777215);
           var12Lifetime2 = 250 * hw.field_i >> 8;
           var13 = 0 == param2 ? 1344 : 0;
           var9Lifetime1 = -param0.field_V.a(true) + 448;
@@ -118,7 +118,7 @@ final class ev extends tm {
           if (var9Lifetime1 * var9Lifetime1 + var10Lifetime1 * var10Lifetime1 < 62500) {
             var14 = 16711680;
           }
-          on.c(ug.a(0, 448), lf.a((byte) -65, var13), var12Lifetime2, var14);
+          SoftwareRasterizer.c(ug.a(0, 448), lf.a((byte) -65, var13), var12Lifetime2, var14);
           if (-1 == param0.field_V.field_m) {
             if (param0.field_V.field_h == 0) {
             } else {
@@ -131,16 +131,16 @@ final class ev extends tm {
                 20 > var15) {
                 var16 = param0.field_V.field_t + var15 * param0.field_V.field_q >> 16;
                 if (param2 != 1) {
-                  on.a(ug.a(0, var16) - 10, lf.a((byte) -126, 1344), 20, 16776960);
+                  SoftwareRasterizer.a(ug.a(0, var16) - 10, lf.a((byte) -126, 1344), 20, 16776960);
                 } else {
-                  on.a(-10 + ug.a(0, var16), lf.a((byte) -118, 0), 20, 16711935);
+                  SoftwareRasterizer.a(-10 + ug.a(0, var16), lf.a((byte) -118, 0), 20, 16711935);
                 }
               }
             }
           }
           var15Lifetime1 = ug.a(0, var7.f(-116));
           var16Lifetime1 = lf.a((byte) -82, var7.a(true));
-          on.a(var15Lifetime1 - 50, -6 + var16Lifetime1, 100, 12, 65793, 208);
+          SoftwareRasterizer.a(var15Lifetime1 - 50, -6 + var16Lifetime1, 100, 12, 65793, 208);
           q.field_d.d("DMG=" + var7.field_o + "  A=" + var7.action + "  T=" + var7.field_L, var15Lifetime1, var16Lifetime1 + 4, 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ev.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

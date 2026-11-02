@@ -3,7 +3,7 @@
  */
 final class gf {
     static volatile int field_b;
-    static hu field_a;
+    static BitmapFont field_a;
     static String field_i;
     int field_g;
     static String field_d;
@@ -129,13 +129,13 @@ final class gf {
         }
     }
 
-    final static vq a(bu param0, int param1, int param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        vq var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
         Object stackIn_2_0 = null;
-        vq stackIn_4_0 = null;
+        FullscreenFocusCanvas stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -145,9 +145,9 @@ final class gf {
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;
-            return (vq) (stackIn_2_0);
+            return (FullscreenFocusCanvas) (stackIn_2_0);
           }
-          var7 = new vq();
+          var7 = new FullscreenFocusCanvas();
           var7.field_c = var8;
           var7.field_c.add((java.awt.Component) ((Object) var7));
           var7.setBounds(param1, 0, param4, param2);
@@ -177,8 +177,8 @@ final class gf {
         field_a = null;
         field_h = null;
         if (param0 != 64) {
-          bu var2 = (bu) null;
-          gf.a((bu) null, 79, 33, -42, -123, 17);
+          PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+          gf.a((PlatformTaskDispatcher) null, 79, 33, -42, -123, 17);
         }
     }
 

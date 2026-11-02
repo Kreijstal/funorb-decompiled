@@ -69,7 +69,7 @@ final class vn extends cv {
         return fieldTemp$0;
     }
 
-    final static vn a(sj param0, String param1, String param2) {
+    final static vn a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param2, param1, 28);
         if (var3 == null) {
           return null;

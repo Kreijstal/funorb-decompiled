@@ -190,7 +190,7 @@ final class gp extends ps {
           var8 = new jn(wd.field_l, param4);
           wd.field_l.a(var8, false);
           if (!wq.c((byte) 59)) {
-            kl.field_a = null;
+            ArchiveIndex.field_a = null;
             n.field_c = param2;
             tn.field_b = param5;
             wn.field_i = param6;

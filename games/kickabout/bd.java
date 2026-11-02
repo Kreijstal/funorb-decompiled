@@ -34,7 +34,7 @@ final class bd extends qt {
             var4 = 62 / ((38 - param0) / 60);
             return;
           } else {
-            fd.h(0);
+            UiWidget.h(0);
             cq.a(so.a(-98), (byte) 126);
           }
         }
@@ -81,7 +81,7 @@ final class bd extends qt {
             if (var1 != 1) {
               st.field_m = vo.$cfr$intArgs$a$53ce4ab4c593(-18, tk.field_Lb, new String[]{Integer.toString(var1)});
             } else {
-              st.field_m = dq.field_h;
+              st.field_m = ProxySocketConnector.field_h;
             }
             st.field_m = kr.a(new CharSequence[]{(CharSequence) ((Object) st.field_m), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) he.field_Kb)}, false);
           }
@@ -92,7 +92,7 @@ final class bd extends qt {
 
     final static void a(String param0, Throwable param1, int param2) {
         try {
-          bu stackIn_13_0;
+          PlatformTaskDispatcher stackIn_13_0;
           java.net.URL stackIn_13_1;
           java.net.URL stackIn_13_2;
           java.net.URL stackIn_13_3;
@@ -103,7 +103,7 @@ final class bd extends qt {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          wu var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -144,7 +144,7 @@ final class bd extends qt {
               stackIn_14_2 = null;
               stackIn_14_5 = ds.field_b;
             }
-            var4 = ((bu) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(bu.field_u).append("&v2=").append(bu.field_r).append("&e=").append(var10).toString()), (byte) -29);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_r).append("&e=").append(var10).toString()), (byte) -29);
             while (var4.field_a == 0) {
               aj.a(1L, param2 + 0);
             }

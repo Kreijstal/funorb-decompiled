@@ -49,19 +49,19 @@ final class te {
         }
     }
 
-    final static ut[] a(int param0, int param1, int param2, boolean param3, int param4) {
-        ut[] var6 = new ut[9];
-        ut[] var5 = var6;
+    final static Sprite[] a(int param0, int param1, int param2, boolean param3, int param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
         if (param3) {
-          return (ut[]) null;
+          return (Sprite[]) null;
         }
-        ut dupTemp$0 = lh.a(param4, (byte) -96, param0);
+        Sprite dupTemp$0 = lh.a(param4, (byte) -96, param0);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        ut dupTemp$1 = lh.a(param2, (byte) -96, param0);
+        Sprite dupTemp$1 = lh.a(param2, (byte) -96, param0);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;

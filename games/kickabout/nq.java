@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nq extends i {
-    static ut field_G;
+    static Sprite field_G;
     static int field_I;
     static String field_H;
     static int field_J;
@@ -110,7 +110,7 @@ final class nq extends i {
     nq(String param0) {
         super(42);
         String var2 = null;
-        ut var3 = null;
+        Sprite var3 = null;
         try {
           var2 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[42], new String[]{param0});
           var3 = kb.field_E[6];
@@ -137,7 +137,7 @@ final class nq extends i {
         RuntimeException var6 = null;
         try {
           if (param4 <= 36) {
-            field_G = (ut) null;
+            field_G = (Sprite) null;
           }
           var6_int = param2.f(-95);
           var7 = param2.a(true);
@@ -205,7 +205,7 @@ final class nq extends i {
 
     public static void h(int param0) {
         if (param0 != 0) {
-          field_G = (ut) null;
+          field_G = (Sprite) null;
         }
         field_H = null;
         field_G = null;

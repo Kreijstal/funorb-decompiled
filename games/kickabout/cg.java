@@ -5,8 +5,8 @@ final class cg extends ct {
     private int field_J;
     static String[] field_G;
     private String field_A;
-    private hu field_I;
-    static ut field_K;
+    private BitmapFont field_I;
+    static Sprite field_K;
     private boolean field_B;
     static String[] field_E;
     static int field_D;
@@ -134,7 +134,7 @@ final class cg extends ct {
         return var3;
     }
 
-    cg(int param0, int param1, int param2, int param3, fd param4, boolean param5, int param6, int param7, hu param8, int param9, String param10) {
+    cg(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (gj) null, (jv) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

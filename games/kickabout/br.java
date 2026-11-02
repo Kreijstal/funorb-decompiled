@@ -18,7 +18,7 @@ final class br {
           }
           var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[35], new String[]{kw.field_c[param1], var3});
           if (hv.field_a[param1] &&
-            !c.a(param1, 0, bh.field_f)) {
+            !c.a(param1, 0, BufferedSocket.field_f)) {
             var4 = vu.field_Gb;
           }
           np.field_Jb.a(new i(35, (lv) null, var2, var4), 3);
@@ -32,7 +32,7 @@ final class br {
         }
         var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[35], new String[]{kw.field_c[param1], var3});
         if (hv.field_a[param1] &&
-          !c.a(param1, 0, bh.field_f)) {
+          !c.a(param1, 0, BufferedSocket.field_f)) {
           var4 = vu.field_Gb;
         }
         np.field_Jb.a(new i(35, (lv) null, var2, var4), 3);

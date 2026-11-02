@@ -13,12 +13,12 @@ final class kj {
         }
     }
 
-    final static ot a(int param0, int param1, up param2, int param3, int param4, boolean param5) {
+    final static ArgbSprite a(int param0, int param1, up param2, int param3, int param4, boolean param5) {
         int var6_int = 0;
         boolean stackIn_9_0 = false;
         int stackIn_10_1 = 0;
-        ot stackIn_13_0 = null;
-        ot stackIn_21_0 = null;
+        ArgbSprite stackIn_13_0 = null;
+        ArgbSprite stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -106,21 +106,21 @@ final class kj {
         RuntimeException var5 = null;
         var10 = Kickabout.field_G;
         try {
-          on.f(param2, param1, 1 + param4, 10000536);
-          on.f(param2, param3 + param1, param4 + 1, param0);
+          SoftwareRasterizer.f(param2, param1, 1 + param4, 10000536);
+          SoftwareRasterizer.f(param2, param3 + param1, param4 + 1, param0);
           var5_int = 1;
-          if (param1 + var5_int < on.field_e) {
-            var5_int = -param1 + on.field_e;
+          if (param1 + var5_int < SoftwareRasterizer.field_e) {
+            var5_int = -param1 + SoftwareRasterizer.field_e;
           }
           var6 = param3;
-          if (param1 + var6 > on.field_h) {
-            var6 = on.field_h - param1;
+          if (param1 + var6 > SoftwareRasterizer.field_h) {
+            var6 = SoftwareRasterizer.field_h - param1;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = 152 + var7 * 48 / param3;
             var9 = var8 | (var8 << 8 | var8 << 16);
-            on.field_a[(param1 + var7) * on.field_g + param2] = var9;
-            on.field_a[param4 + (param2 + (var7 + param1) * on.field_g)] = var9;
+            SoftwareRasterizer.field_a[(param1 + var7) * SoftwareRasterizer.field_g + param2] = var9;
+            SoftwareRasterizer.field_a[param4 + (param2 + (var7 + param1) * SoftwareRasterizer.field_g)] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

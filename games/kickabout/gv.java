@@ -33,7 +33,7 @@ final class gv extends IntrusiveNode {
           return;
         }
         int var4 = al.a(true, (byte) -120);
-        on.a(95, param1 + 1, this.field_e, 17, 6, 0, var4 * this.field_g >> 8);
+        SoftwareRasterizer.a(95, param1 + 1, this.field_e, 17, 6, 0, var4 * this.field_g >> 8);
         if (256 != this.field_g) {
           cq.field_e.b(this.field_f, 107, -4 + (18 + param1), 16777215, -1, this.field_g);
         } else {

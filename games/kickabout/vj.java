@@ -68,18 +68,18 @@ final class vj {
         int[] var13;
         int[] var14;
         int var12;
-        var14 = on.field_a;
+        var14 = SoftwareRasterizer.field_a;
         var13 = var14;
         var1 = var13;
-        for (var2 = 1; var2 < on.field_f - 2; var2++) {
-          for (var3 = 1; var3 < on.field_g - 2; var3++) {
-            var4 = on.field_g * var2 + var3;
+        for (var2 = 1; var2 < SoftwareRasterizer.field_f - 2; var2++) {
+          for (var3 = 1; var3 < SoftwareRasterizer.field_g - 2; var3++) {
+            var4 = SoftwareRasterizer.field_g * var2 + var3;
             var5 = var14[var4];
             var6 = var5 >>> 24;
             var7 = var1[var4 - 1] >>> 24;
             var8 = var1[var4 + 1] >>> 24;
-            var9 = var1[var4 - on.field_g] >>> 24;
-            var10 = var1[var4 + on.field_g] >>> 24;
+            var9 = var1[var4 - SoftwareRasterizer.field_g] >>> 24;
+            var10 = var1[var4 + SoftwareRasterizer.field_g] >>> 24;
             var11 = (var6 + var7 + var8 + var9 + var10) / 5;
             if (var11 > 0) {
               var11 = var11 | (var11 << 8 | var11 << 16);

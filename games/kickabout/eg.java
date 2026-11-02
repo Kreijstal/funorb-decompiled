@@ -892,7 +892,7 @@ final class eg extends qc {
                 this.b(bq.field_c + t.field_p, vs.field_i + t.field_e, field_s[var9], field_s[var10], field_s[var11], var12, var13, var14_int)) {
                 fieldTemp$13 = jk.field_f;
                 jk.field_f = jk.field_f + 1;
-                rg.field_c[fieldTemp$13] = param2;
+                MouseWheelInput.field_c[fieldTemp$13] = param2;
                 param1 = false;
               }
               if ((var12 - var13) * (field_s[var11] - field_s[var10]) - (field_s[var9] - field_s[var10]) * (var14_int - var13) > 0) {

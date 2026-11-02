@@ -113,18 +113,18 @@ final class qa extends dj {
         super.a(param0, param1);
         if (0 == this.field_C) {
           ms.a(cd.field_b, 40 + this.field_j, 280, true, 0, 263);
-          on.a(350 + this.field_j, 144, 226, 232, 10, 65793, 140);
+          SoftwareRasterizer.a(350 + this.field_j, 144, 226, 232, 10, 65793, 140);
           un.field_d.a(ic.field_b.toLowerCase(), 370 + this.field_j, 172, 16777215, -1);
           var3 = this.field_j + 370;
-          on.a(var3, 186, 184, 174, 16777215, 30);
-          on.h(var3 - 1, 185, 186, 176, 16777215, 128);
+          SoftwareRasterizer.a(var3, 186, 184, 174, 16777215, 30);
+          SoftwareRasterizer.h(var3 - 1, 185, 186, 176, 16777215, 128);
           for (var4 = 0; var4 < 6; var4++) {
             pb.field_C.c(q.field_h[var4 + 1], 120 + var3, 180 + (var4 + 1) * 28, 16777215, -1);
             pb.field_C.a(Integer.toString(ps.field_d[1 + var4]), 134 + var3, var4 * 28 + 28 + 180, 16777215, -1);
           }
-          on.f(var3 + 127, 186, 174, 16777215, 128);
+          SoftwareRasterizer.f(var3 + 127, 186, 174, 16777215, 128);
           for (var4Lifetime2 = 0; var4Lifetime2 < 5; var4Lifetime2++) {
-            on.c(var3 + 4, 187 + 28 * var4Lifetime2 + 28, 174, 16777215, 30);
+            SoftwareRasterizer.c(var3 + 4, 187 + 28 * var4Lifetime2 + 28, 174, 16777215, 30);
           }
           lo.a(206, this.field_j + 180, 100);
         }
@@ -138,7 +138,7 @@ final class qa extends dj {
             var6 = stackIn_18_0;
             var6 = var6 + this.field_j;
             var7 = 146;
-            on.a(var6 - 10, 126, 265, 270, 10, 65793, 140);
+            SoftwareRasterizer.a(var6 - 10, 126, 265, 270, 10, 65793, 140);
             if (var4Lifetime1 == 0) {
               var7 += 60;
             }

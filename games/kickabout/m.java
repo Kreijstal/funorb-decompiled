@@ -113,7 +113,7 @@ final class m {
         RuntimeException var9 = null;
         try {
           h.field_e.field_E = param2;
-          if (ov.field_b == 2) {
+          if (NodeHashTableIterator.field_b == 2) {
             b.field_N.field_E = IntrusiveNodeHashTable.field_f;
           } else {
             b.field_N.field_E = im.field_Bb;
@@ -425,7 +425,7 @@ final class m {
         }
     }
 
-    final static void a(sj param0, sj param1, int param2) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, int param2) {
         try {
           if (param2 != 5198) {
             field_a = 1.2037987668274452;

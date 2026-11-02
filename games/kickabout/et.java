@@ -8,17 +8,17 @@ final class et {
     static String field_a;
     static CommonGame field_d;
 
-    final static ut[] a(int param0, String param1, ut param2, int param3) {
+    final static Sprite[] a(int param0, String param1, Sprite param2, int param3) {
         int var5 = 0;
-        ut[] var4 = null;
+        Sprite[] var4 = null;
         RuntimeException var4_ref = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ut[] var9 = null;
+        Sprite[] var9 = null;
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
-        ut[] stackIn_14_0 = null;
+        Sprite[] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -27,21 +27,21 @@ final class et {
         RuntimeException decompiledCaughtException = null;
         var8 = Kickabout.field_G;
         try {
-          param2 = wm.a((byte) -86, param2, param3);
-          var9 = new ut[2];
+          param2 = CachedArchiveSource.a((byte) -86, param2, param3);
+          var9 = new Sprite[2];
           var4 = var9;
           for (var5 = param0; var5 < 2; var5++) {
-            var4[var5] = new ut(param2.field_o, param2.field_v);
+            var4[var5] = new Sprite(param2.field_o, param2.field_v);
             stackIn_6_0 = (1 != var5) ? 0 : 1;
             var6 = stackIn_6_0;
             PacketBuffer.a(param0 ^ 55, var9[var5]);
             param2.d(0, 0);
             if (var6 == 0) {
-              on.g(0, 0, on.field_g, on.field_f);
+              SoftwareRasterizer.g(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
             }
             stackIn_12_0 = (var6 != 0) ? 2 : 0;
             var7 = stackIn_12_0;
-            un.field_d.d(param1.toLowerCase(), var7 + (on.field_g >> 1), -13 + (on.field_f + var7), 0, -1);
+            un.field_d.d(param1.toLowerCase(), var7 + (SoftwareRasterizer.field_g >> 1), -13 + (SoftwareRasterizer.field_f + var7), 0, -1);
             ta.e(123);
             sd.a(var9[var5], (byte) -51);
           }
@@ -71,8 +71,8 @@ final class et {
         field_d = null;
         field_a = null;
         if (param0 < 116) {
-          ut var2 = (ut) null;
-          et.a(49, (String) null, (ut) null, 57);
+          Sprite var2 = (Sprite) null;
+          et.a(49, (String) null, (Sprite) null, 57);
         }
         field_e = null;
     }

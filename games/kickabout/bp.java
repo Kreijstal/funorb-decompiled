@@ -137,7 +137,7 @@ class bp extends hd {
         var10 = Kickabout.field_G;
         try {
           this.field_Fb = param2;
-          this.field_Ab.field_jb = new tf();
+          this.field_Ab.field_jb = new IntrusiveDeque();
           this.field_Ab.field_J = 0;
           var11 = this.field_Fb;
           var5 = var11;
@@ -290,7 +290,7 @@ class bp extends hd {
         int var8;
         int var9;
         sr var10;
-        ut var11;
+        Sprite var11;
         int var12;
         hd var13;
         im[] var14;
@@ -303,10 +303,10 @@ class bp extends hd {
         int var8Lifetime1Lifetime1;
         int var8Lifetime1Lifetime2;
         var12 = Kickabout.field_G;
-        on.a(this.field_F, this.field_T + 20, this.field_q, this.field_mb - 20, 16777215, 60);
+        SoftwareRasterizer.a(this.field_F, this.field_T + 20, this.field_q, this.field_mb - 20, 16777215, 60);
         if (this.field_Cb.field_Eb.e((byte) -113)) {
           var2_ref_ji = this.field_Cb.field_Eb;
-          on.g(3 + ((hd) ((Object) var2_ref_ji)).field_F, ((hd) ((Object) var2_ref_ji)).field_T, ((hd) ((Object) var2_ref_ji)).field_q - 6, ((hd) ((Object) var2_ref_ji)).field_mb);
+          SoftwareRasterizer.g(3 + ((hd) ((Object) var2_ref_ji)).field_F, ((hd) ((Object) var2_ref_ji)).field_T, ((hd) ((Object) var2_ref_ji)).field_q - 6, ((hd) ((Object) var2_ref_ji)).field_mb);
         }
         for (var2 = 0; var2 < this.field_Bb.length; var2++) {
           var13 = this.field_Bb[var2];
@@ -319,9 +319,9 @@ class bp extends hd {
           pt.a(var13.field_F + var13.field_q, -22914, var13.field_F, var13.field_T - (-var13.field_mb + 1), var13.field_T);
           stackIn_13_0 = (var4 != 0) ? 65793 : 5592405;
           var5_int = stackIn_13_0;
-          on.a(1 + var13.field_F, var13.field_T, -1 + var13.field_q, 40, 10, 16777215, 60);
+          SoftwareRasterizer.a(1 + var13.field_F, var13.field_T, -1 + var13.field_q, 40, 10, 16777215, 60);
           if (var4 != 0) {
-            on.a(var13.field_F + 1, var13.field_T, -1 + var13.field_q, 40, 10, 2280703, 90);
+            SoftwareRasterizer.a(var13.field_F + 1, var13.field_T, -1 + var13.field_q, 40, 10, 2280703, 90);
           }
           ta.e(118);
           var6 = (var13.field_q >> 1) + var13.field_F;
@@ -359,21 +359,21 @@ class bp extends hd {
             if (!var5.field_gb) {
               for (var8Lifetime1 = 0; var8Lifetime1 < this.field_Bb.length; var8Lifetime1++) {
                 if (!this.field_Bb[var8Lifetime1].field_gb) {
-                  on.g(var7Lifetime1, var5.field_T, this.field_Bb[var8Lifetime1].field_q, var5.field_mb);
+                  SoftwareRasterizer.g(var7Lifetime1, var5.field_T, this.field_Bb[var8Lifetime1].field_q, var5.field_mb);
                 } else {
-                  on.a(var7Lifetime1, var5.field_T, this.field_Bb[var8Lifetime1].field_q, var5.field_mb, 2280703, 90);
+                  SoftwareRasterizer.a(var7Lifetime1, var5.field_T, this.field_Bb[var8Lifetime1].field_q, var5.field_mb, 2280703, 90);
                   stackIn_35_0 = (var8Lifetime1 == this.field_Bb.length - 1) ? 0 : 1;
                   var9Lifetime1 = stackIn_35_0;
-                  on.e(var7Lifetime1, var5.field_T, var9Lifetime1 + this.field_Bb[var8Lifetime1].field_q, var5.field_mb, 65793);
+                  SoftwareRasterizer.e(var7Lifetime1, var5.field_T, var9Lifetime1 + this.field_Bb[var8Lifetime1].field_q, var5.field_mb, 65793);
                 }
                 var7Lifetime1 = var7Lifetime1 + this.field_Bb[var8Lifetime1].field_q;
               }
             } else {
-              on.a(var5.field_F, var5.field_T, var5.field_q, var5.field_mb, 2280703, 90);
+              SoftwareRasterizer.a(var5.field_F, var5.field_T, var5.field_q, var5.field_mb, 2280703, 90);
             }
-            on.e(var5.field_F, var5.field_T, var5.field_q, var5.field_mb, 65793);
+            SoftwareRasterizer.e(var5.field_F, var5.field_T, var5.field_q, var5.field_mb, 65793);
             for (var8Lifetime1Lifetime1 = 0; var8Lifetime1Lifetime1 < 4; var8Lifetime1Lifetime1++) {
-              on.h(-var8Lifetime1Lifetime1 + (var5.field_F + 3), -var8Lifetime1Lifetime1 + 3 + var5.field_T, var8Lifetime1Lifetime1 - 6 + (var5.field_q + var8Lifetime1Lifetime1), var5.field_mb + (-6 + var8Lifetime1Lifetime1 + var8Lifetime1Lifetime1), 65793, var8Lifetime1Lifetime1 << 4);
+              SoftwareRasterizer.h(-var8Lifetime1Lifetime1 + (var5.field_F + 3), -var8Lifetime1Lifetime1 + 3 + var5.field_T, var8Lifetime1Lifetime1 - 6 + (var5.field_q + var8Lifetime1Lifetime1), var5.field_mb + (-6 + var8Lifetime1Lifetime1 + var8Lifetime1Lifetime1), 65793, var8Lifetime1Lifetime1 << 4);
             }
             for (var8Lifetime1Lifetime2 = 0; var8Lifetime1Lifetime2 < this.field_Bb.length; var8Lifetime1Lifetime2++) {
               if (this.field_Bb[var8Lifetime1Lifetime2].field_gb) {

@@ -3,7 +3,7 @@
  */
 final class hg extends i {
     static String field_H;
-    static ut field_G;
+    static Sprite field_G;
     static int[] field_I;
     static String field_F;
 
@@ -13,7 +13,7 @@ final class hg extends i {
         String var2 = var6;
         String var3 = q.field_h[param0];
         String var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[10], new String[]{var6, var3});
-        ut var5 = kb.field_E[param0];
+        Sprite var5 = kb.field_E[param0];
         this.a(var4, this.field_t, var5, -110, this.field_u);
         this.a(ds.a(this.field_y, 1), pg.a(false, 10), 1054928844);
     }
@@ -34,10 +34,10 @@ final class hg extends i {
           if (param1 >= -120) {
             hg.h(96);
           }
-          var5 = (dl) (ru.field_M.g(24009));
+          var5 = (dl) (MidiPcmStream.field_M.g(24009));
           while (var5 != null) {
             pf.a(param0, var5, (byte) -114);
-            var5 = (dl) (ru.field_M.c(33));
+            var5 = (dl) (MidiPcmStream.field_M.c(33));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,6 +117,6 @@ final class hg extends i {
         field_I = new int[8192];
         field_F = "total: <%0> ";
         field_H = "Class: ";
-        field_G = new ut(32, 64);
+        field_G = new Sprite(32, 64);
     }
 }

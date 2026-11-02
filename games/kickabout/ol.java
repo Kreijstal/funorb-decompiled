@@ -5,7 +5,7 @@ final class ol extends hs {
     private boolean field_t;
     private int field_B;
     private int field_mb;
-    tf field_bb;
+    IntrusiveDeque field_bb;
     static String field_n;
     private int[] field_hb;
     private int[] field_J;
@@ -20,7 +20,7 @@ final class ol extends hs {
     private int field_L;
     private int field_Y;
     private int[] field_l;
-    private tf field_gb;
+    private IntrusiveDeque field_gb;
     private boolean field_K;
     private boolean field_U;
     private int field_ib;
@@ -53,9 +53,9 @@ final class ol extends hs {
     private int field_jb;
     private String field_Z;
     private boolean field_W;
-    private ut[] field_fb;
+    private Sprite[] field_fb;
     private int field_T;
-    tf field_q;
+    IntrusiveDeque field_q;
     int[][] field_p;
     int[][] field_ab;
 
@@ -70,7 +70,7 @@ final class ol extends hs {
         var4 = Kickabout.field_G;
         try {
           if (param0 != -109) {
-            discarded$1 = this.a((tf) null, -84, -44, false);
+            discarded$1 = this.a((IntrusiveDeque) null, -84, -44, false);
           }
           if (0 > this.field_g) {
             return false;
@@ -84,7 +84,7 @@ final class ol extends hs {
             stackIn_32_0 = ~this.field_hb[var2_int];
             if (var4 == 0) {
               if (stackIn_32_0 != 0) {
-                var3 = tu.field_E.field_i[this.field_hb[var2_int]];
+                var3 = GameLoopApplet.field_E.field_i[this.field_hb[var2_int]];
                 if (100 <= var3.field_r && (!(var3.field_n >= 100) ||
                   !(100 <= var3.field_g) ||
                   !(var3.field_o >= 100))) {
@@ -211,14 +211,14 @@ final class ol extends hs {
         int var8 = 0;
         int var9 = 0;
         ParticipantStatus var10 = null;
-        tf var10_ref = null;
+        IntrusiveDeque var10_ref = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
         ParticipantStatus var10Lifetime1;
-        tf var10_refLifetime1;
+        IntrusiveDeque var10_refLifetime1;
         int stackIn_34_0Lifetime1;
         int stackIn_34_1Lifetime1;
         int stackIn_61_0Lifetime1;
@@ -232,7 +232,7 @@ final class ol extends hs {
         int var14Lifetime1;
         var15 = Kickabout.field_G;
         try {
-          on.a(22, 95, 596, 225, 10, 0, 96);
+          SoftwareRasterizer.a(22, 95, 596, 225, 10, 0, 96);
           pt.a(618, param0 ^ -16754303, 22, 305, 110);
           var2_int = this.field_ib;
           un.field_d.d("<u=FFFFFF>" + dw.field_b.toUpperCase() + "</u>", 320 + var2_int, 125 + this.field_Q, 16777215, -1);
@@ -275,7 +275,7 @@ final class ol extends hs {
           var7 = var2_int + 60;
           var8 = this.field_Q + 140;
           pt.a(160 + var7, -22914, var7, var8 + 21, var8);
-          on.i(var7, var8, 160, 42, 10, 65793);
+          SoftwareRasterizer.i(var7, var8, 160, 42, 10, 65793);
           un.field_d.d(ib.field_H, 80 + var7, 17 + var8, 16777215, -1);
           ta.e(124);
           var8 += 40;
@@ -287,8 +287,8 @@ final class ol extends hs {
               stackIn_34_1 = this.field_a.field_g[var9].field_p;
               if (var15 != 0) {
                 if (stackIn_34_0 > stackIn_34_1) {
-                  on.c(var7, var9 + (4 + (var8 - 21)), 160, 65793, -(var9 << 3) + 128);
-                  on.c(160 + var7 + 2, 4 + var8 - (21 - var9), 40, 65793, -(var9 << 3) + 128);
+                  SoftwareRasterizer.c(var7, var9 + (4 + (var8 - 21)), 160, 65793, -(var9 << 3) + 128);
+                  SoftwareRasterizer.c(160 + var7 + 2, 4 + var8 - (21 - var9), 40, 65793, -(var9 << 3) + 128);
                   var9++;
                   break scanLoop1;
                 }
@@ -307,9 +307,9 @@ final class ol extends hs {
                     var13 = 16777215;
                     var14 = 50;
                   }
-                  on.a(var7, -17 + var8, 160, 21, var13, var14);
+                  SoftwareRasterizer.a(var7, -17 + var8, 160, 21, var13, var14);
                   un.field_d.d(this.field_a.field_S[var9], var7 + 80, var8, var12, -1);
-                  on.a(2 + var7 + 160, -17 + var8, 40, 21, var13, var14);
+                  SoftwareRasterizer.a(2 + var7 + 160, -17 + var8, 40, 21, var13, var14);
                   un.field_d.d(vo.$cfr$intArgs$a$53ce4ab4c593(-18, ei.field_c, new String[]{Integer.toString(this.field_k[var9])}), 160 + (var7 + 22), var8, var12, -1);
                   var8 += 23;
                 }
@@ -325,8 +325,8 @@ final class ol extends hs {
                 if (stackIn_34_0Lifetime1 <= stackIn_34_1Lifetime1) {
                   break;
                 }
-                on.c(var7, var9 + (4 + (var8 - 21)), 160, 65793, -(var9 << 3) + 128);
-                on.c(160 + var7 + 2, 4 + var8 - (21 - var9), 40, 65793, -(var9 << 3) + 128);
+                SoftwareRasterizer.c(var7, var9 + (4 + (var8 - 21)), 160, 65793, -(var9 << 3) + 128);
+                SoftwareRasterizer.c(160 + var7 + 2, 4 + var8 - (21 - var9), 40, 65793, -(var9 << 3) + 128);
                 var9++;
                 if (var15 != 0) {
                   break scanLoop1;
@@ -336,7 +336,7 @@ final class ol extends hs {
             var8 = 140 + this.field_Q;
             var7 = var2_int + 420;
             pt.a(var7 + 160, param0 - 16800129, var7, var8 + 21, var8);
-            on.i(var7, var8, 160, 42, 10, 65793);
+            SoftwareRasterizer.i(var7, var8, 160, 42, 10, 65793);
             un.field_d.d(ib.field_H, var7 + 80, var8 + 17, 16777215, -1);
             ta.e(117);
             var8 += 40;
@@ -350,8 +350,8 @@ final class ol extends hs {
               stackIn_61_1 = ~this.field_a.field_g[var9].field_p;
               if (var15 != 0) {
                 if (stackIn_61_0 < stackIn_61_1) {
-                  on.c(var7, var9 - 17 + var8, 160, 65793, 128 - (var9 << 3));
-                  on.c(-42 + var7, var9 - 21 + (var8 + 4), 40, 65793, -(var9 << 3) + 128);
+                  SoftwareRasterizer.c(var7, var9 - 17 + var8, 160, 65793, 128 - (var9 << 3));
+                  SoftwareRasterizer.c(-42 + var7, var9 - 21 + (var8 + 4), 40, 65793, -(var9 << 3) + 128);
                   var9++;
                   break scanLoop2;
                 }
@@ -370,9 +370,9 @@ final class ol extends hs {
                     var13Lifetime1 = 16777215;
                     var14Lifetime1 = 50;
                   }
-                  on.a(var7, var8 - 17, 160, 21, var13Lifetime1, var14Lifetime1);
+                  SoftwareRasterizer.a(var7, var8 - 17, 160, 21, var13Lifetime1, var14Lifetime1);
                   un.field_d.d(this.field_a.field_S[var9], var7 + 80, var8, var12Lifetime1, -1);
-                  on.a(var7 - 42, var8 - 17, 40, 21, var13Lifetime1, var14Lifetime1);
+                  SoftwareRasterizer.a(var7 - 42, var8 - 17, 40, 21, var13Lifetime1, var14Lifetime1);
                   un.field_d.d(vo.$cfr$intArgs$a$53ce4ab4c593(-18, ei.field_c, new String[]{Integer.toString(this.field_k[var9])}), -22 + var7, var8, var12Lifetime1, -1);
                   var8 += 23;
                 }
@@ -388,8 +388,8 @@ final class ol extends hs {
                 if (stackIn_61_0Lifetime1 >= stackIn_61_1Lifetime1) {
                   break;
                 }
-                on.c(var7, var9 - 17 + var8, 160, 65793, 128 - (var9 << 3));
-                on.c(-42 + var7, var9 - 21 + (var8 + 4), 40, 65793, -(var9 << 3) + 128);
+                SoftwareRasterizer.c(var7, var9 - 17 + var8, 160, 65793, 128 - (var9 << 3));
+                SoftwareRasterizer.c(-42 + var7, var9 - 21 + (var8 + 4), 40, 65793, -(var9 << 3) + 128);
                 var9++;
                 if (var15 != 0) {
                   break scanLoop2;
@@ -407,7 +407,7 @@ final class ol extends hs {
             } else {
               stackIn_75_5 = 11184810;
             }
-            on.a(stackIn_72_0, stackIn_72_1, stackIn_72_2, stackIn_72_3, stackIn_72_4, stackIn_75_5, 128);
+            SoftwareRasterizer.a(stackIn_72_0, stackIn_72_1, stackIn_72_2, stackIn_72_3, stackIn_72_4, stackIn_75_5, 128);
             break;
           }
           stackIn_82_0 = un.field_d;
@@ -436,13 +436,13 @@ final class ol extends hs {
           var9 = this.field_Q;
           un.field_d.d("<u=FFFFFF>" + qb.field_Vb.toUpperCase() + "</u>", 320 + var2_int, 125 + var9, 16777215, -1);
           var9 += 160;
-          on.a(var2_int + 42, var9 - 20, 552, 28, 10, 65793, 128);
+          SoftwareRasterizer.a(var2_int + 42, var9 - 20, 552, 28, 10, 65793, 128);
           un.field_d.d(he.field_Ub.toUpperCase(), var2_int + 320, var9, param0, -1);
           var9 += 20;
           var10_ref = this.field_bb;
           var9 = this.a(var10_ref, var2_int, var9, true);
           var9 += 35;
-          on.a(42 + var2_int, var9 - 20, 552, 28, 10, 65793, 128);
+          SoftwareRasterizer.a(42 + var2_int, var9 - 20, 552, 28, 10, 65793, 128);
           un.field_d.d(CommonGame.field_a.toUpperCase(), var2_int + 320, var9, 16777215, -1);
           var10_refLifetime1 = this.field_q;
           var9 += 20;
@@ -461,7 +461,7 @@ final class ol extends hs {
             } else {
               stackIn_100_5 = this.field_cb;
             }
-            on.a(stackIn_99_0, stackIn_99_1, stackIn_99_2, stackIn_99_3, stackIn_99_4, stackIn_100_5, 128);
+            SoftwareRasterizer.a(stackIn_99_0, stackIn_99_1, stackIn_99_2, stackIn_99_3, stackIn_99_4, stackIn_100_5, 128);
             stackIn_103_0 = un.field_d;
             stackIn_103_1 = qt.field_h;
             stackIn_103_2 = this.field_x + 285;
@@ -488,7 +488,7 @@ final class ol extends hs {
             } else {
               stackIn_112_5 = this.field_cb;
             }
-            on.a(stackIn_111_0, stackIn_111_1, stackIn_111_2, stackIn_111_3, stackIn_111_4, stackIn_112_5, 128);
+            SoftwareRasterizer.a(stackIn_111_0, stackIn_111_1, stackIn_111_2, stackIn_111_3, stackIn_111_4, stackIn_112_5, 128);
             stackIn_115_0 = un.field_d;
             stackIn_115_1 = gu.field_Ib;
             stackIn_115_2 = this.field_T + 285;
@@ -513,7 +513,7 @@ final class ol extends hs {
           } else {
             stackIn_124_5 = 11184810;
           }
-          on.a(stackIn_121_0, stackIn_121_1, stackIn_121_2, stackIn_121_3, stackIn_121_4, stackIn_124_5, 128);
+          SoftwareRasterizer.a(stackIn_121_0, stackIn_121_1, stackIn_121_2, stackIn_121_3, stackIn_121_4, stackIn_124_5, 128);
           stackIn_128_0 = un.field_d;
           stackIn_128_1 = rd.field_d;
           stackIn_128_2 = this.field_L + 14;
@@ -540,13 +540,13 @@ final class ol extends hs {
           var9 = this.field_Q;
           un.field_d.d("<u=FFFFFF>" + rd.field_d.toUpperCase() + "</u>", 320 + var2_int, 125 + this.field_Q, 16777215, -1);
           var9 += 160;
-          on.a(42 + var2_int, -20 + var9, 552, 28, 10, 65793, 128);
+          SoftwareRasterizer.a(42 + var2_int, -20 + var9, 552, 28, 10, 65793, 128);
           un.field_d.d(lw.field_f.toUpperCase(), var2_int + 320, var9, 16777215, -1);
           var11Lifetime2 = var2_int + 240;
           var12Lifetime2 = 80 + var9;
           eo.a(var11Lifetime2, var12Lifetime2, qe.field_j, this.field_p, (String[]) null, 160, 21, this.field_a.playerCount, this.field_a.field_S, this.field_g);
           var9 = var9 + (140 + 25 * (this.field_a.playerCount + 1));
-          on.a(var2_int + 42, -20 + var9, 552, 28, 10, 65793, 128);
+          SoftwareRasterizer.a(var2_int + 42, -20 + var9, 552, 28, 10, 65793, 128);
           var12Lifetime3 = var9 + 80;
           un.field_d.d(ad.field_b.toUpperCase(), var2_int + 320, var9, 16777215, -1);
           eo.a(var11Lifetime2, var12Lifetime3, d.field_c, this.field_ab, (String[]) null, 160, 21, this.field_a.playerCount, this.field_a.field_S, this.field_g);
@@ -565,7 +565,7 @@ final class ol extends hs {
             } else {
               stackIn_148_5 = 11184810;
             }
-            on.a(stackIn_147_0, stackIn_147_1, stackIn_147_2, stackIn_147_3, stackIn_147_4, stackIn_148_5, 128);
+            SoftwareRasterizer.a(stackIn_147_0, stackIn_147_1, stackIn_147_2, stackIn_147_3, stackIn_147_4, stackIn_148_5, 128);
             stackIn_151_0 = un.field_d;
             stackIn_151_1 = qt.field_h;
             stackIn_151_2 = 285 + this.field_H;
@@ -592,7 +592,7 @@ final class ol extends hs {
             } else {
               stackIn_160_5 = 11184810;
             }
-            on.a(stackIn_159_0, stackIn_159_1, stackIn_159_2, stackIn_159_3, stackIn_159_4, stackIn_160_5, 128);
+            SoftwareRasterizer.a(stackIn_159_0, stackIn_159_1, stackIn_159_2, stackIn_159_3, stackIn_159_4, stackIn_160_5, 128);
             stackIn_163_0 = un.field_d;
             stackIn_163_1 = gu.field_Ib;
             stackIn_163_2 = 285 + this.field_v;
@@ -701,7 +701,7 @@ final class ol extends hs {
             if (var10 == 0) {
               if (stackIn_25_0 != stackIn_25_1) {
                 var7 = this.field_o[var6_int].field_Eb;
-                on.a(-30 + this.field_o[var6_int].field_F, 92, 110, 180, 10, 0, 128);
+                SoftwareRasterizer.a(-30 + this.field_o[var6_int].field_F, 92, 110, 180, 10, 0, 128);
                 this.field_o[var6_int].h((byte) -116);
                 this.field_s[var6_int].a(59, true);
                 if (var7.field_n >= 100 &&
@@ -715,7 +715,7 @@ final class ol extends hs {
                   eo.a(this.field_o[var6_int].field_F - 25, this.field_o[var6_int].field_T + 80, var7.field_r, 3, false, 0);
                   var9 = "";
                   if (this.field_l[var6_int] > 0) {
-                    var9 = var9 + rg.field_d + "+" + this.field_l[var6_int];
+                    var9 = var9 + MouseWheelInput.field_d + "+" + this.field_l[var6_int];
                   }
                   if (var7.field_r >= 100) {
                     var9 = var9 + "<br>" + ss.field_e + "<col=" + Integer.toHexString(var8) + ">Max</col>";
@@ -732,15 +732,15 @@ final class ol extends hs {
           }
           if (decompiledNaturalLoopExit0) {
             param4 += 6;
-            on.b(159, param4 + 36, 159, 63 + param4, 4473924);
-            on.b(160, param4 + 35, 160, 64 + param4, 11184810);
-            on.b(161, 36 + param4, 161, param4 + 63, 4473924);
-            on.b(469, 36 + param4, 469, param4 + 63, 4473924);
-            on.b(470, param4 + 35, 470, param4 + 64, 11184810);
-            on.b(471, param4 + 36, 471, 63 + param4, 4473924);
-            on.b(33, param4 + 71, 602, param4 + 71, 4473924);
-            on.b(32, 72 + param4, 603, param4 + 72, 11184810);
-            on.b(33, 73 + param4, 602, 73 + param4, 4473924);
+            SoftwareRasterizer.b(159, param4 + 36, 159, 63 + param4, 4473924);
+            SoftwareRasterizer.b(160, param4 + 35, 160, 64 + param4, 11184810);
+            SoftwareRasterizer.b(161, 36 + param4, 161, param4 + 63, 4473924);
+            SoftwareRasterizer.b(469, 36 + param4, 469, param4 + 63, 4473924);
+            SoftwareRasterizer.b(470, param4 + 35, 470, param4 + 64, 11184810);
+            SoftwareRasterizer.b(471, param4 + 36, 471, 63 + param4, 4473924);
+            SoftwareRasterizer.b(33, param4 + 71, 602, param4 + 71, 4473924);
+            SoftwareRasterizer.b(32, 72 + param4, 603, param4 + 72, 11184810);
+            SoftwareRasterizer.b(33, 73 + param4, 602, 73 + param4, 4473924);
             stackIn_25_0 = param3;
             stackIn_25_1 = 119;
           }
@@ -749,7 +749,7 @@ final class ol extends hs {
           }
           wq.a(param2, param1, param4, (byte) 32, IntrusiveNode.field_c, param0);
           var6 = pj.field_D + "+" + ad.a(this.field_G, 26300);
-          var6 = var6 + "<br>" + ss.field_e + ad.a(tu.field_E.field_x, 26300);
+          var6 = var6 + "<br>" + ss.field_e + ad.a(GameLoopApplet.field_E.field_x, 26300);
           wq.a(25, param1, param4, (byte) 32, var6, 140);
           stackIn_30_0 = new StringBuilder().append(bt.field_c);
           if (this.field_Y > 0) {
@@ -759,10 +759,10 @@ final class ol extends hs {
           }
           var7_ref = ((StringBuilder) (Object) stackIn_30_0).append(stackIn_31_1).append(Integer.toString(this.field_Y)).toString();
           stackIn_34_0 = new StringBuilder().append(var7_ref).append("<br>").append(ss.field_e);
-          if (tu.field_E.field_t == 6) {
-            stackIn_35_1 = Integer.toString(tu.field_E.field_r);
+          if (GameLoopApplet.field_E.field_t == 6) {
+            stackIn_35_1 = Integer.toString(GameLoopApplet.field_E.field_r);
           } else {
-            stackIn_35_1 = Integer.toString(tu.field_E.field_E);
+            stackIn_35_1 = Integer.toString(GameLoopApplet.field_E.field_E);
           }
           var7_refLifetime1 = ((StringBuilder) (Object) stackIn_34_0).append(stackIn_35_1).toString();
           wq.a(475, param1, param4, (byte) 32, var7_refLifetime1, 135);
@@ -864,17 +864,17 @@ final class ol extends hs {
         }
     }
 
-    final tf h(int param0) {
+    final IntrusiveDeque h(int param0) {
         RuntimeException var2 = null;
-        tf stackIn_2_0 = null;
-        tf stackIn_4_0 = null;
+        IntrusiveDeque stackIn_2_0 = null;
+        IntrusiveDeque stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -19510) {
             stackIn_4_0 = this.field_gb;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (tf) null;
+          stackIn_2_0 = (IntrusiveDeque) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -938,8 +938,8 @@ final class ol extends hs {
         this.field_x = 32 + this.field_ib + 596;
         this.field_T = 596 + (this.field_ib + 32);
         this.field_v = this.field_ib + 1192 + 32;
-        this.field_bb = new tf();
-        this.field_q = new tf();
+        this.field_bb = new IntrusiveDeque();
+        this.field_q = new IntrusiveDeque();
         try {
           boolean decompiledFrameCompleted3 = true;
           var4 = new int[]{47, 56, 50, 44, 11, 12, 55};
@@ -961,7 +961,7 @@ final class ol extends hs {
           }
           if (decompiledFrameCompleted3) {
             ia.field_c = false;
-            this.field_gb = new tf();
+            this.field_gb = new IntrusiveDeque();
             this.field_Z = rl.field_u;
           }
           if (null != param0.field_X) {
@@ -1086,7 +1086,7 @@ final class ol extends hs {
             stackIn_76_0 = 111;
           }
           mv.$cfr$intArgs$a$6121ff5511c4(stackIn_76_0);
-          this.field_fb = new ut[2];
+          this.field_fb = new Sprite[2];
           this.field_j = 256;
           this.field_fb[0] = ae.a(true, (byte) -52, 0, 80, 7126504);
           this.field_fb[1] = ae.a(true, (byte) -52, 1, 80, 7126504);
@@ -1144,14 +1144,14 @@ final class ol extends hs {
           } else {
             stackIn_9_3 = 0;
           }
-          on.a(stackIn_4_0, stackIn_8_1, stackIn_8_2, stackIn_9_3 + 35, 10, 0, 128);
+          SoftwareRasterizer.a(stackIn_4_0, stackIn_8_1, stackIn_8_2, stackIn_9_3 + 35, 10, 0, 128);
           this.d(123);
           if (this.e(3, 50) &&
             this.field_S == 0) {
             var3 = this.d(127, 3);
             var4 = this.c(342, 3);
             pt.a(31 + var3, -22914, var3 - 31, var4 - 17, var4 - 37);
-            on.a(-30 + var3, var4 - 32, 60, 30, 8, 65793, 128);
+            SoftwareRasterizer.a(-30 + var3, var4 - 32, 60, 30, 8, 65793, 128);
             ta.e(param0 + 116);
             uv.a(var3 - 19, (byte) -82, -22 + var4);
             pb.field_C.a(eq.field_b, -6 + var3, -16 + var4, 16777215, -1);
@@ -1164,7 +1164,7 @@ final class ol extends hs {
             var3Lifetime1 = this.d(param0 ^ 126, 0);
             var4Lifetime1 = this.c(342, 0);
             pt.a(31 + var3Lifetime1, -22914, -31 + var3Lifetime1, var4Lifetime1 - 17, -37 + var4Lifetime1);
-            on.a(var3Lifetime1 - 30, -32 + var4Lifetime1, 60, 30, 8, 65793, 128);
+            SoftwareRasterizer.a(var3Lifetime1 - 30, -32 + var4Lifetime1, 60, 30, 8, 65793, 128);
             ta.e(126);
             uv.a(var3Lifetime1 - 19, (byte) 99, var4Lifetime1 - 22);
             pb.field_C.a(eq.field_b, var3Lifetime1 - 6, -16 + var4Lifetime1, 16777215, -1);
@@ -1244,18 +1244,18 @@ final class ol extends hs {
             stackIn_13_0 = -1;
           }
           if (stackIn_13_0 == ~param3) {
-            dupTemp$0 = tu.field_E.field_i[this.field_hb[param2]];
+            dupTemp$0 = GameLoopApplet.field_E.field_i[this.field_hb[param2]];
             dupTemp$0.field_n = dupTemp$0.field_n + 1;
           }
           if (param3 == param0) {
-            dupTemp$1 = tu.field_E.field_i[this.field_hb[param2]];
+            dupTemp$1 = GameLoopApplet.field_E.field_i[this.field_hb[param2]];
             dupTemp$1.field_g = dupTemp$1.field_g + 1;
           }
           if (2 == param3) {
-            dupTemp$2 = tu.field_E.field_i[this.field_hb[param2]];
+            dupTemp$2 = GameLoopApplet.field_E.field_i[this.field_hb[param2]];
             dupTemp$2.field_o = dupTemp$2.field_o + 1;
           }
-          dupTemp$3 = tu.field_E.field_i[this.field_hb[param2]];
+          dupTemp$3 = GameLoopApplet.field_E.field_i[this.field_hb[param2]];
           dupTemp$3.field_r = dupTemp$3.field_r - 100;
           this.field_gb.a(param1, 3);
           return;
@@ -1273,7 +1273,7 @@ final class ol extends hs {
         }
     }
 
-    private final int a(tf param0, int param1, int param2, boolean param3) {
+    private final int a(IntrusiveDeque param0, int param1, int param2, boolean param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -1304,9 +1304,9 @@ final class ol extends hs {
             var8 = 160;
             pt.a(4 + (var5_int + 320), -22914, var5_int, param2 + 21, param2);
             var9 = 80;
-            on.i(var5_int, param2, var8, 42, 10, 65793);
-            on.i(var6, param2, var9, 42, 10, 65793);
-            on.i(var7, param2, var9, 42, 10, 65793);
+            SoftwareRasterizer.i(var5_int, param2, var8, 42, 10, 65793);
+            SoftwareRasterizer.i(var6, param2, var9, 42, 10, 65793);
+            SoftwareRasterizer.i(var7, param2, var9, 42, 10, 65793);
             un.field_d.d(ib.field_H, var5_int + (var8 >> 1), param2 + 17, 16777215, -1);
             un.field_d.d(et.field_e, var6 + (var9 >> 1), param2 + 17, 16777215, -1);
             un.field_d.d(lt.field_e, var7 + (var9 >> 1), 17 + param2, 16777215, -1);
@@ -1331,10 +1331,10 @@ final class ol extends hs {
                 var13 = 50;
                 var12 = 16777215;
               }
-              on.a(-26 + var5_int, param2, 24, 21, var12, var13);
-              on.a(var5_int, param2, var8, 21, var12, var13);
-              on.a(var6, param2, var9, 21, var12, var13);
-              on.a(var7, param2, var9, 21, var12, var13);
+              SoftwareRasterizer.a(-26 + var5_int, param2, 24, 21, var12, var13);
+              SoftwareRasterizer.a(var5_int, param2, var8, 21, var12, var13);
+              SoftwareRasterizer.a(var6, param2, var9, 21, var12, var13);
+              SoftwareRasterizer.a(var7, param2, var9, 21, var12, var13);
               var10++;
               un.field_d.d(Integer.toString(var10), -14 + var5_int, 16 + param2, 16777215, -1);
               un.field_d.d(var14, (var8 >> 1) + var5_int, 16 + param2, 16777215, -1);
@@ -1347,10 +1347,10 @@ final class ol extends hs {
               var11 = 0;
               while (true) {
                 if (16 > var11) {
-                  on.c(-26 + var5_int, param2 + var11, 24, 65793, 128 - (var11 << 3));
-                  on.c(var5_int, param2 + var11, var8, 65793, 128 - (var11 << 3));
-                  on.c(var6, param2 + var11, var9, 65793, 128 - (var11 << 3));
-                  on.c(var7, param2 + var11, var9, 65793, -(var11 << 3) + 128);
+                  SoftwareRasterizer.c(-26 + var5_int, param2 + var11, 24, 65793, 128 - (var11 << 3));
+                  SoftwareRasterizer.c(var5_int, param2 + var11, var8, 65793, 128 - (var11 << 3));
+                  SoftwareRasterizer.c(var6, param2 + var11, var9, 65793, 128 - (var11 << 3));
+                  SoftwareRasterizer.c(var7, param2 + var11, var9, 65793, -(var11 << 3) + 128);
                   var11++;
                   if (var15 == 0) {
                     continue;
@@ -1489,7 +1489,7 @@ final class ol extends hs {
             if (var13 == 0) {
               if (stackIn_49_0 != stackIn_49_1) {
                 var7 = var3[var5];
-                wj.a(this.field_J[var5], var6, this.field_I[var5], var7, 100, 124);
+                WidgetContainer.a(this.field_J[var5], var6, this.field_I[var5], var7, 100, 124);
                 var8 = 140;
                 var9 = 0;
                 while (this.field_m[var5] > var9) {
@@ -1522,7 +1522,7 @@ final class ol extends hs {
                 stackIn_40_0Lifetime1 = 0;
                 var9Lifetime1 = stackIn_40_0Lifetime1;
                 while (var9Lifetime1 < 16) {
-                  on.c(var3[var5], var9Lifetime1 + var8, 160, 65793, -(var9Lifetime1 << 3) + 128);
+                  SoftwareRasterizer.c(var3[var5], var9Lifetime1 + var8, 160, 65793, -(var9Lifetime1 << 3) + 128);
                   var9Lifetime1++;
                 }
               }
@@ -1710,7 +1710,7 @@ final class ol extends hs {
         }
     }
 
-    final static java.awt.Frame a(int param0, int param1, int param2, int param3, bu param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5) {
         Object stackIn_5_0 = null;
         Object stackIn_9_0 = null;
         int stackIn_36_0 = 0;
@@ -1724,7 +1724,7 @@ final class ol extends hs {
         String stackIn_58_2 = null;
         RuntimeException decompiledCaughtException = null;
         cl[] var6 = null;
-        wu var6_ref = null;
+        PlatformTask var6_ref = null;
         RuntimeException var6_ref2 = null;
         int var7_int = 0;
         java.awt.Frame var7 = null;
@@ -1795,7 +1795,7 @@ final class ol extends hs {
             stackIn_53_0 = var7;
             return stackIn_53_0;
           }
-          dq.a(param4, var7, 0);
+          ProxySocketConnector.a(param4, var7, 0);
           stackIn_51_0 = null;
           return (java.awt.Frame) (stackIn_51_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1914,25 +1914,25 @@ final class ol extends hs {
             stackIn_151_1 = (el.field_A >= this.field_x) && (el.field_A <= 570 + this.field_x) && (n.field_m >= this.field_B) && (this.field_B + 12 >= n.field_m);
             this.field_y = stackIn_151_1;
             if (this.field_K &&
-              wj.field_A == 1 &&
+              WidgetContainer.field_A == 1 &&
               this.field_ib == 0) {
               ii.a((byte) -124);
               this.field_X = this.field_X - 596;
             }
             if (this.field_W &&
-              wj.field_A == 1 &&
+              WidgetContainer.field_A == 1 &&
               this.field_ib == -596) {
               ii.a((byte) -119);
               this.field_X = this.field_X + 596;
             }
             if (this.field_C &&
-              wj.field_A == 1 &&
+              WidgetContainer.field_A == 1 &&
               -596 == this.field_ib) {
               ii.a((byte) -117);
               this.field_X = this.field_X - 596;
             }
             if (this.field_D &&
-              wj.field_A == 1 &&
+              WidgetContainer.field_A == 1 &&
               this.field_ib == -1192) {
               ii.a((byte) -125);
               this.field_X = this.field_X + 596;
@@ -1941,7 +1941,7 @@ final class ol extends hs {
               FootballerAgent.field_p == 1 &&
               this.field_P != 0 &&
               this.field_M > this.field_P) {
-              if (wj.field_A == 1) {
+              if (WidgetContainer.field_A == 1) {
                 ii.a((byte) -118);
               }
               this.field_M = this.field_M - 32;
@@ -1949,7 +1949,7 @@ final class ol extends hs {
             if (this.field_F &&
               1 == FootballerAgent.field_p &&
               this.field_M < 0) {
-              if (wj.field_A == 1) {
+              if (WidgetContainer.field_A == 1) {
                 ii.a((byte) -122);
               }
               this.field_M = this.field_M + 32;
@@ -1958,7 +1958,7 @@ final class ol extends hs {
               FootballerAgent.field_p == 1 &&
               this.field_lb != 0 &&
               this.field_M > this.field_lb) {
-              if (wj.field_A == 1) {
+              if (WidgetContainer.field_A == 1) {
                 ii.a((byte) -121);
               }
               this.field_M = this.field_M - 32;
@@ -1966,7 +1966,7 @@ final class ol extends hs {
             if (this.field_t &&
               FootballerAgent.field_p == 1 &&
               this.field_M < 0) {
-              if (wj.field_A == 1) {
+              if (WidgetContainer.field_A == 1) {
                 ii.a((byte) -127);
               }
               this.field_M = this.field_M + 32;
@@ -2038,7 +2038,7 @@ final class ol extends hs {
                 return;
               }
               if (this.field_hb[var13] != -1) {
-                var14 = tu.field_E.field_i[this.field_hb[var13]];
+                var14 = GameLoopApplet.field_E.field_i[this.field_hb[var13]];
                 this.field_o[var13].b(0, param1);
                 this.field_o[var13].a(this.field_a.field_Q[this.field_h], this.field_a.field_H[this.field_h], (byte) 126, this.field_a.field_d[this.field_h], var14);
                 this.field_s[var13].b(0, param1);

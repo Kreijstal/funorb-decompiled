@@ -27,7 +27,7 @@ final class r {
     }
 
     final static void a(boolean param0) {
-        fd.h(0);
+        UiWidget.h(0);
         if (null != ic.field_d) {
           hm.a(-120, ic.field_d);
         }

@@ -93,7 +93,7 @@ final class sl extends hd {
           }
           this.field_Db.field_E = this.field_yb.toString();
           if (param1 &&
-            wj.field_A != 0) {
+            WidgetContainer.field_A != 0) {
             if (this.field_sb != 0) {
               return this.field_Fb;
             }
@@ -108,7 +108,7 @@ final class sl extends hd {
               if (!param1) {
                 return this.field_Fb;
               }
-              if (wj.field_A == 0) {
+              if (WidgetContainer.field_A == 0) {
                 return this.field_Fb;
               }
               if (this.field_sb != 0) {
@@ -122,7 +122,7 @@ final class sl extends hd {
             if (!param1) {
               return this.field_Fb;
             }
-            if (wj.field_A == 0) {
+            if (WidgetContainer.field_A == 0) {
               return this.field_Fb;
             }
             if (this.field_sb != 0) {

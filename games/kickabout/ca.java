@@ -8,7 +8,7 @@ final class ca {
     static String field_b;
     static String field_d;
     static String field_e;
-    static ot[] field_c;
+    static ArgbSprite[] field_c;
 
     public static void a(byte param0) {
         field_c = null;

@@ -82,7 +82,7 @@ final class ul {
           for (var4 = 0; mc.field_a > var4; var4++) {
             mk.field_a.d(var2_int + var4, var3 - 368);
           }
-          on.c(var2_int, var3, mc.field_a, 112, 2, 65793);
+          SoftwareRasterizer.c(var2_int, var3, mc.field_a, 112, 2, 65793);
           if (param1 != null) {
             un.field_d.a(param1.toLowerCase(), 20 + var2_int, var3 + 22, 16777215, -1);
           }
@@ -90,10 +90,10 @@ final class ul {
           ta.e(param0 ^ -7);
           var4Lifetime1 = 12 + ((mc.field_a + 640 >> 1) - 22);
           pt.a(320, param0 - 22788, var2_int, 480, 0);
-          on.a(var2_int, 388, 640, 72, 8, 65793, 128);
+          SoftwareRasterizer.a(var2_int, 388, 640, 72, 8, 65793, 128);
           ta.e(122);
           pt.a(var4Lifetime1, -22914, 320, 480, 0);
-          on.a(0, 388, var4Lifetime1, 72, 8, 65793, 128);
+          SoftwareRasterizer.a(0, 388, var4Lifetime1, 72, 8, 65793, 128);
           ta.e(122);
           var5 = je.a(false);
           if (var5 != -1) {
@@ -255,7 +255,7 @@ final class ul {
             } else {
               stackIn_5_1 = -4;
             }
-            on.f(stackIn_4_0, stackIn_5_1 + param2, param5, var10_int, 10, 983040);
+            SoftwareRasterizer.f(stackIn_4_0, stackIn_5_1 + param2, param5, var10_int, 10, 983040);
             stackIn_7_0 = param7;
             stackIn_7_1 = param2;
             if (0 >= param1) {
@@ -263,7 +263,7 @@ final class ul {
             } else {
               stackIn_8_2 = -var10_int + param0 >> 1;
             }
-            on.a(stackIn_7_0, stackIn_7_1 + stackIn_8_2, param5, var10_int, 10, 65793, 140);
+            SoftwareRasterizer.a(stackIn_7_0, stackIn_7_1 + stackIn_8_2, param5, var10_int, 10, 65793, 140);
           }
           pb.field_C.a(param9, param7 + 10, param2, -10 + param5 - 10, param0, 16777215, -1, param8, param1, param6);
           return;

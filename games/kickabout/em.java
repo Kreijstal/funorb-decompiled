@@ -4,10 +4,10 @@
 final class em {
     static boolean field_e;
     private long field_f;
-    private am[] field_b;
-    private am field_h;
+    private DualLinkNode[] field_b;
+    private DualLinkNode field_h;
     private int field_a;
-    private am field_i;
+    private DualLinkNode field_i;
     static String field_c;
     static hd field_d;
     private int field_g;
@@ -22,14 +22,14 @@ final class em {
         field_c = null;
     }
 
-    final am a(int param0) {
+    final DualLinkNode a(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var3;
-        am var4;
-        am var5;
-        am var9;
-        am var12;
+        DualLinkNode var4;
+        DualLinkNode var5;
+        DualLinkNode var9;
+        DualLinkNode var12;
         var3 = Kickabout.field_G;
         if (param0 >= this.field_g) {
           do {
@@ -62,8 +62,8 @@ final class em {
         return var9;
     }
 
-    final void a(am param0, byte param1, long param2) {
-        am var5 = null;
+    final void a(DualLinkNode param0, byte param1, long param2) {
+        DualLinkNode var5 = null;
         if (param0.field_e != null) {
           param0.f(param1 ^ 74);
         }
@@ -82,20 +82,20 @@ final class em {
         }
     }
 
-    final am b(byte param0) {
+    final DualLinkNode b(byte param0) {
         this.field_g = 0;
         if (param0 != 72) {
-          return (am) null;
+          return (DualLinkNode) null;
         }
         return this.a(0);
     }
 
-    final am a(byte param0) {
-        am var2;
-        am var3;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2;
+        DualLinkNode var3;
         int var4;
-        am var2Lifetime1;
-        am var3Lifetime1;
+        DualLinkNode var2Lifetime1;
+        DualLinkNode var3Lifetime1;
         var4 = Kickabout.field_G;
         if (null == this.field_h) {
           return null;
@@ -137,13 +137,13 @@ final class em {
 
     em(int param0) {
         int var2 = 0;
-        am dupTemp$1 = null;
-        am var3;
+        DualLinkNode dupTemp$1 = null;
+        DualLinkNode var3;
         this.field_g = 0;
         this.field_a = param0;
-        this.field_b = new am[param0];
+        this.field_b = new DualLinkNode[param0];
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new am();
+          dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
           this.field_b[var2] = dupTemp$1;
           var3.field_e = var3;
@@ -151,11 +151,11 @@ final class em {
         }
     }
 
-    final am a(int param0, long param1) {
-        am var4;
-        am var5;
+    final DualLinkNode a(int param0, long param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
         int var6;
-        am var5Lifetime1;
+        DualLinkNode var5Lifetime1;
         var6 = Kickabout.field_G;
         this.field_f = param1;
         var4 = this.field_b[(int)((long)(this.field_a - 1) & param1)];
@@ -176,7 +176,7 @@ final class em {
           this.field_h = this.field_h.field_f;
           return var5;
         }
-        this.field_h = (am) null;
+        this.field_h = (DualLinkNode) null;
         this.field_h = var4.field_f;
         while (true) {
           if (var4 == this.field_h) {

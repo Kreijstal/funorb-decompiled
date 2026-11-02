@@ -1,0 +1,130 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
+    static IntrusiveDeque field_g;
+    static ps field_h;
+    static Sprite field_d;
+    java.awt.Frame field_c;
+    static String[] field_i;
+    static String field_e;
+    volatile boolean field_b;
+    static String field_f;
+    static Sprite field_a;
+
+    public final void paint(java.awt.Graphics param0) {
+    }
+
+    public final void update(java.awt.Graphics param0) {
+    }
+
+    public final void focusLost(java.awt.event.FocusEvent param0) {
+        try {
+          this.field_b = true;
+        } catch (RuntimeException runtimeException) {
+          throw nb.a((Throwable) ((Object) runtimeException), "vq.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    final static byte[] a(int param0, byte[] param1) {
+        int var2_int = 0;
+        RuntimeException var2 = null;
+        byte[] var3 = null;
+        byte[] stackIn_3_0 = null;
+        RuntimeException stackIn_6_0 = null;
+        StringBuilder stackIn_6_1 = null;
+        String stackIn_7_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param0 < 53) {
+            field_e = (String) null;
+          }
+          var2_int = param1.length;
+          var3 = new byte[var2_int];
+          dv.a(param1, 0, var3, 0, var2_int);
+          stackIn_3_0 = var3;
+          return stackIn_3_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_6_0 = var2;
+          stackIn_6_1 = new StringBuilder().append("vq.B(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_7_2 = "null";
+          } else {
+            stackIn_7_2 = "{...}";
+          }
+          throw nb.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+        }
+    }
+
+    final void a(PlatformTaskDispatcher param0, int param1) {
+        try {
+          ProxySocketConnector.a(param0, this.field_c, 0);
+          if (param1 != 9) {
+            java.awt.event.FocusEvent var4 = (java.awt.event.FocusEvent) null;
+            this.focusGained((java.awt.event.FocusEvent) null);
+          }
+        } catch (RuntimeException runtimeException) {
+          throw nb.a((Throwable) ((Object) runtimeException), "vq.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    public static void a(byte param0) {
+        field_e = null;
+        field_i = null;
+        field_f = null;
+        field_d = null;
+        field_a = null;
+        if (param0 != 25) {
+          return;
+        }
+        field_h = null;
+        field_g = null;
+    }
+
+    final static void a(PlatformTaskDispatcher param0, byte param1, java.awt.Component param2) {
+        int var5 = 0;
+        int var3_int = 0;
+        int var4 = Kickabout.field_G;
+        int var3_intLifetime1;
+        try {
+          PcmPlayerService.a(22050, true, 10);
+          wd.field_n = new int[3];
+          for (var3_int = 0; var3_int < wd.field_n.length; var3_int++) {
+            wd.field_n[var3_int] = 256;
+          }
+          cb.field_d = PcmPlayerService.a(param0, param2, 0, 22050);
+          pg.field_d = PcmPlayerService.a(param0, param2, 1, 1024);
+          if (param1 != 23) {
+            FullscreenFocusCanvas.a((byte) 30);
+          }
+          sk.field_d = new jj(3);
+          sk.field_d.a(param1 - 23, 128, 9);
+          var5 = 0;
+          var3_intLifetime1 = var5;
+          while (3 > var5) {
+            sk.field_d.a(var5, wd.field_n[var5], (byte) -85);
+            var5++;
+          }
+          cb.field_d.a(sk.field_d);
+          pi.field_b = new PcmStreamMixer();
+          pg.field_d.a(pi.field_b);
+        } catch (RuntimeException runtimeException) {
+          throw nb.a((Throwable) ((Object) runtimeException), "vq.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public final void focusGained(java.awt.event.FocusEvent param0) {
+    }
+
+    FullscreenFocusCanvas() {
+    }
+
+    static {
+        field_h = null;
+        field_e = "filter <%0>";
+        field_g = new IntrusiveDeque();
+        field_f = "Withdraw invitation to <%0> to join this game";
+    }
+}

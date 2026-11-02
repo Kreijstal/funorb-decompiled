@@ -3,7 +3,7 @@
  */
 final class sp extends im {
     private int[] field_Pb;
-    static ut[] field_Hb;
+    static Sprite[] field_Hb;
     int field_Fb;
     int field_Qb;
     up field_Sb;
@@ -76,7 +76,7 @@ final class sp extends im {
         int stackIn_24_3;
         boolean stackIn_26_4;
         int var3;
-        ot var4;
+        ArgbSprite var4;
         int var5;
         int var6;
         int var7;
@@ -86,8 +86,8 @@ final class sp extends im {
         int var3Lifetime1;
         int var6Lifetime1;
         var10 = Kickabout.field_G;
-        if (on.field_h >= this.field_T &&
-          on.field_e <= this.field_T + this.field_mb) {
+        if (SoftwareRasterizer.field_h >= this.field_T &&
+          SoftwareRasterizer.field_e <= this.field_T + this.field_mb) {
           if (this.field_Lb) {
             uv.a(56 + this.field_F, (byte) 95, 39 + this.field_T);
             var3 = q.field_d.a(eq.field_b);
@@ -150,12 +150,12 @@ final class sp extends im {
         }
     }
 
-    final static ut[] a(byte param0, int param1) {
+    final static Sprite[] a(byte param0, int param1) {
         if (param0 != 26) {
-          return (ut[]) null;
+          return (Sprite[]) null;
         }
-        ut[] var3 = new ut[9];
-        ut[] var2 = var3;
+        Sprite[] var3 = new Sprite[9];
+        Sprite[] var2 = var3;
         var3[4] = lh.a(param1, (byte) -96, 64);
         return var2;
     }
@@ -247,7 +247,7 @@ final class sp extends im {
         field_Kb = null;
         field_Hb = null;
         if (param0 != -240) {
-          field_Hb = (ut[]) null;
+          field_Hb = (Sprite[]) null;
         }
         field_Eb = null;
         field_Rb = null;
@@ -278,7 +278,7 @@ final class sp extends im {
           this.field_Sb = param0;
           this.field_mb = 50;
           this.field_Fb = param2;
-          this.field_X = (hu) ((Object) pb.field_C);
+          this.field_X = (BitmapFont) ((Object) pb.field_C);
           this.field_Pb = param1;
           this.field_Qb = param3;
           this.field_Mb = eo.b();

@@ -90,7 +90,7 @@ final class mi {
             param3 = 0;
           }
           at.field_Kb = param1;
-          ov.field_b = param3;
+          NodeHashTableIterator.field_b = param3;
           var7 = (CharSequence) ((Object) param1);
           qi.field_o = MatchAgent.a(0, var7);
           if (param2 < 114) {

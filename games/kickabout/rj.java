@@ -4,10 +4,10 @@
 import java.util.*;
 
 final class rj {
-    private sj field_d;
+    private ResourceArchive field_d;
     private IntrusiveNodeHashTable field_f;
     static boolean[] field_a;
-    private sj field_e;
+    private ResourceArchive field_e;
     static hd field_b;
     private IntrusiveNodeHashTable field_c;
 
@@ -82,7 +82,7 @@ final class rj {
         RuntimeException var5 = null;
         long var6 = 0L;
         to var8 = null;
-        ed var9 = null;
+        SoundEffect var9 = null;
         int var10 = 0;
         to var11 = null;
         to stackIn_3_0 = null;
@@ -108,7 +108,7 @@ final class rj {
             return (to) (stackIn_7_0);
           }
           var10 = 85 / ((72 - param3) / 45);
-          var9 = ed.a(this.field_e, param0, param2);
+          var9 = SoundEffect.a(this.field_e, param0, param2);
           if (var9 == null) {
             return null;
           }
@@ -147,7 +147,7 @@ final class rj {
         RuntimeException var5 = null;
         long var6 = 0L;
         to var8 = null;
-        tg var9 = null;
+        VorbisSample var9 = null;
         to var8Lifetime1;
         try {
           var5_int = (65524 & param2 << 4 | param2 >>> 12) ^ param3;
@@ -166,9 +166,9 @@ final class rj {
             stackIn_9_0 = null;
             return (to) (stackIn_9_0);
           }
-          var9 = (tg) (this.field_f.a(true, var6));
+          var9 = (VorbisSample) (this.field_f.a(true, var6));
           if (var9 == null) {
-            var9 = tg.a(this.field_d, param2, param3);
+            var9 = VorbisSample.a(this.field_d, param2, param3);
             if (var9 == null) {
               return null;
             }
@@ -262,7 +262,7 @@ final class rj {
             return stackIn_3_0;
           }
           if (param0 != 10) {
-            this.field_d = (sj) null;
+            this.field_d = (ResourceArchive) null;
           }
           if (1 != this.field_e.a(true, param1)) {
             throw new RuntimeException();
@@ -320,7 +320,7 @@ final class rj {
         }
     }
 
-    rj(sj param0, sj param1) {
+    rj(ResourceArchive param0, ResourceArchive param1) {
         this.field_f = new IntrusiveNodeHashTable(256);
         this.field_c = new IntrusiveNodeHashTable(256);
         try {

@@ -11,7 +11,7 @@ final class nt extends hd implements lv {
     boolean field_Ib;
     static int[] field_zb;
     private int field_Ab;
-    static sj field_Bb;
+    static ResourceArchive field_Bb;
     private int field_Fb;
     rd field_Cb;
     private gr field_Hb;
@@ -143,8 +143,8 @@ final class nt extends hd implements lv {
         eo.a(la.field_e, 13421772);
         eo.a(la.field_e, 11184810);
         if (param1 != 23) {
-          gq var5 = (gq) null;
-          nt.a(-77, (sj) null, 47, (gq) null);
+          PcmStreamMixer var5 = (PcmStreamMixer) null;
+          nt.a(-77, (ResourceArchive) null, 47, (PcmStreamMixer) null);
         }
         la.field_e.f(-(la.field_e.field_o >> 2) + param2, param0 - (la.field_e.field_v >> 2));
     }
@@ -157,8 +157,8 @@ final class nt extends hd implements lv {
     final static void c(boolean param0) {
         up.e(-1456);
         if (param0) {
-          gq var2 = (gq) null;
-          nt.a(-120, (sj) null, 13, (gq) null);
+          PcmStreamMixer var2 = (PcmStreamMixer) null;
+          nt.a(-120, (ResourceArchive) null, 13, (PcmStreamMixer) null);
         }
     }
 
@@ -171,12 +171,12 @@ final class nt extends hd implements lv {
         int var4;
         int var5;
         int var6;
-        ot var8;
+        ArgbSprite var8;
         int var9;
-        ot var10;
-        ot var11;
+        ArgbSprite var10;
+        ArgbSprite var11;
         var9 = Kickabout.field_G;
-        stackIn_4_1 = (this.field_F < on.field_c) && (on.field_b < this.field_q + this.field_F);
+        stackIn_4_1 = (this.field_F < SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_b < this.field_q + this.field_F);
         this.field_Gb = stackIn_4_1;
         if (!this.field_Gb) {
           return;
@@ -205,10 +205,10 @@ final class nt extends hd implements lv {
           var4 = 210;
         }
         if (0 != var4) {
-          on.a(this.field_Jb.field_F, this.field_Jb.field_T, this.field_Jb.field_q, this.field_Jb.field_mb, 8, 16777215, var4);
+          SoftwareRasterizer.a(this.field_Jb.field_F, this.field_Jb.field_T, this.field_Jb.field_q, this.field_Jb.field_mb, 8, 16777215, var4);
         }
         if (var2 != 0) {
-          on.f(this.field_Jb.field_F, this.field_Jb.field_T, this.field_Jb.field_q, this.field_Jb.field_mb, 8, 16777215);
+          SoftwareRasterizer.f(this.field_Jb.field_F, this.field_Jb.field_T, this.field_Jb.field_q, this.field_Jb.field_mb, 8, 16777215);
         }
         if (null != this.field_Eb) {
           js.a(this.field_Eb, this.field_Db, la.field_e, -101);
@@ -236,13 +236,13 @@ final class nt extends hd implements lv {
         if (this.field_Kb) {
           var10 = sh.field_g;
           var10.c(-(var10.field_q >> 1) + var5, var6 - (var10.field_w >> 1));
-          var8 = new ot(18, 13);
+          var8 = new ArgbSprite(18, 13);
           PacketBuffer.a(param0 ^ -24576, var8);
-          q.field_d.d("10", on.field_g >> 1, on.field_f - 2, -1, -1);
+          q.field_d.d("10", SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 2, -1, -1);
           eo.a(var8, -16711423);
           eo.a(var8, 1996554497);
           ta.e(122);
-          ((ut) ((Object) var8)).c(-(((ut) ((Object) var8)).field_o >> 1) + var5, -(((ut) ((Object) var8)).field_v >> 1) + var6);
+          ((Sprite) ((Object) var8)).c(-(((Sprite) ((Object) var8)).field_o >> 1) + var5, -(((Sprite) ((Object) var8)).field_v >> 1) + var6);
         }
         if (this.field_Ib) {
           var11 = fc.field_h;
@@ -251,7 +251,7 @@ final class nt extends hd implements lv {
         return;
     }
 
-    final static void a(int param0, sj param1, int param2, gq param3) {
+    final static void a(int param0, ResourceArchive param1, int param2, PcmStreamMixer param3) {
         try {
           qt.field_l = nb.b((byte) 119) * param0 / 1000;
           GameAppletShell.a(param1, (byte) 60);
@@ -306,7 +306,7 @@ final class nt extends hd implements lv {
         if (this.field_gb) {
           if (this.field_Cb.field_k != -1) {
             if (hv.field_a[this.field_Cb.field_k] &&
-              !c.a(this.field_Cb.field_k, 0, bh.field_f)) {
+              !c.a(this.field_Cb.field_k, 0, BufferedSocket.field_f)) {
               qd.$cfr$intArgs$a$b6210757cdab(-67, ja.field_W.toLowerCase());
             } else {
               stackIn_23_0 = -67;
@@ -354,7 +354,7 @@ final class nt extends hd implements lv {
         field_yb = null;
         field_zb = null;
         if (param0 != 4476) {
-          field_Bb = (sj) null;
+          field_Bb = (ResourceArchive) null;
         }
         field_Bb = null;
     }
@@ -376,12 +376,12 @@ final class nt extends hd implements lv {
               }
               var4 = param0.getCodeBase();
               var3 = qr.a(param0, var4, 3).getFile();
-              mm.a(new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks", 25449);
-              mm.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks", 25449);
-              mm.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks", 25449);
-              mm.a(new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks", 25449);
-              mm.a(new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks", 25449);
-              mm.a(new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.a(new Object[]{"home", var3 + "home.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.a(new Object[]{"options", var3 + "options.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.a(new Object[]{"terms", var3 + "terms.ws"}, param0, "updatelinks", 25449);
+              AppletJavaScriptBridge.a(new Object[]{"privacy", var3 + "privacy.ws"}, param0, "updatelinks", 25449);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = decompiledCaughtException;
@@ -420,7 +420,7 @@ final class nt extends hd implements lv {
           this.a((byte) -128, this.field_Jb);
           this.field_q = 50;
           this.field_Jb.a(true, 60, (this.field_q - 50 >> 1) - 5, 0, 60);
-          this.field_Ib = this.field_Cb.a(tk.field_Ib, (byte) 54, bh.field_f);
+          this.field_Ib = this.field_Cb.a(tk.field_Ib, (byte) 54, BufferedSocket.field_f);
           this.field_Kb = this.field_Cb.a(tk.field_Ib, field_yb, (byte) -81);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "nt.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

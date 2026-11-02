@@ -4,7 +4,7 @@
 final class vf extends i {
     private int field_J;
     private int field_L;
-    static ut field_F;
+    static Sprite field_F;
     static byte[][][][] field_K;
     static String field_H;
     static int[] field_I;
@@ -230,7 +230,7 @@ final class vf extends i {
     }
 
     static {
-        field_F = new ut(96, 96);
+        field_F = new Sprite(96, 96);
         field_H = "Starting price at max";
         field_I = new int[15];
         field_I[6] = 80;

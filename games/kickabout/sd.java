@@ -27,7 +27,7 @@ final class sd {
         return param0 ^ param1;
     }
 
-    final static void a(ut param0, byte param1) {
+    final static void a(Sprite param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException stackIn_15_0 = null;

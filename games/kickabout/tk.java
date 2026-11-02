@@ -6,7 +6,7 @@ final class tk extends hd {
     hd field_Gb;
     hd field_Db;
     ji field_Eb;
-    static tf field_Ab;
+    static IntrusiveDeque field_Ab;
     static String field_yb;
     static String field_Hb;
     static String field_Lb;
@@ -15,7 +15,7 @@ final class tk extends hd {
     static String field_Cb;
     static String field_Bb;
     static int field_Ib;
-    static ot[][] field_Fb;
+    static ArgbSprite[][] field_Fb;
 
     final void a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6) {
         this.field_mb = param4;
@@ -82,7 +82,7 @@ final class tk extends hd {
     }
 
     final static void h(byte param0) {
-        ku.field_c = null;
+        MouseInputHandler.field_c = null;
         lt.field_a = null;
         pq.field_O = (byte[][]) null;
         IsaacRandom.field_f = null;
@@ -207,16 +207,16 @@ final class tk extends hd {
         field_Hb = null;
         field_Ab = null;
         field_Cb = null;
-        field_Fb = (ot[][]) null;
+        field_Fb = (ArgbSprite[][]) null;
         field_yb = null;
         field_Lb = null;
         if (param0 != -69) {
-          field_Ab = (tf) null;
+          field_Ab = (IntrusiveDeque) null;
         }
     }
 
     static {
-        field_Ab = new tf();
+        field_Ab = new IntrusiveDeque();
         field_Jb = "Members";
         field_Cb = "Please check if address is correct";
         field_Lb = "You have <%0> unread messages!";

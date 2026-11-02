@@ -73,10 +73,10 @@ final class ej extends hd {
         int var3;
         var3 = Kickabout.field_G;
         if (pt.field_e == this.field_Bb) {
-          on.a(-4 + this.field_F, this.field_T - 4, 40, 40, 2, 65793, 128);
-          on.f(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
+          SoftwareRasterizer.a(-4 + this.field_F, this.field_T - 4, 40, 40, 2, 65793, 128);
+          SoftwareRasterizer.f(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
           if (param0) {
-            if (c.a(this.field_Bb, 0, bh.field_f)) {
+            if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {
               qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
             } else {
               if (pc.field_e) {
@@ -95,7 +95,7 @@ final class ej extends hd {
             }
           } else {
             this.c(true);
-            if (c.a(this.field_Bb, 0, bh.field_f)) {
+            if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {
               qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
             } else {
               if (!pc.field_e) {
@@ -115,11 +115,11 @@ final class ej extends hd {
           }
         } else {
           if (this.field_Bb == ob.field_C) {
-            on.a(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 65793, 32);
-            on.f(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
+            SoftwareRasterizer.a(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 65793, 32);
+            SoftwareRasterizer.f(this.field_F - 4, -4 + this.field_T, 40, 40, 2, 6710886);
           }
           if (param0) {
-            if (c.a(this.field_Bb, 0, bh.field_f)) {
+            if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {
               qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
             } else {
               if (pc.field_e) {
@@ -138,7 +138,7 @@ final class ej extends hd {
             }
           } else {
             this.c(true);
-            if (c.a(this.field_Bb, 0, bh.field_f)) {
+            if (c.a(this.field_Bb, 0, BufferedSocket.field_f)) {
               qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(this.field_F, this.field_T);
             } else {
               if (!pc.field_e) {

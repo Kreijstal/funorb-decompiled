@@ -3,7 +3,7 @@
  */
 class i extends jb {
     String field_v;
-    static ut[] field_E;
+    static Sprite[] field_E;
     private int field_C;
     private int field_s;
     static vc[] field_A;
@@ -14,7 +14,7 @@ class i extends jb {
     static double field_B;
     lv field_t;
     static long field_z;
-    ut field_D;
+    Sprite field_D;
 
     void a(int param0, boolean param1) {
         if (param0 != 3) {
@@ -37,14 +37,14 @@ class i extends jb {
         boolean stackIn_33_3 = false;
         int stackIn_35_2 = 0;
         boolean stackIn_36_3 = false;
-        ut[][][] stackIn_38_0 = null;
+        Sprite[][][] stackIn_38_0 = null;
         int stackIn_39_1 = 0;
-        ut[] stackIn_43_0 = null;
+        Sprite[] stackIn_43_0 = null;
         int stackIn_44_1 = 0;
         int stackIn_49_0 = 0;
-        ut[][] stackIn_51_0 = null;
+        Sprite[][] stackIn_51_0 = null;
         int stackIn_52_1 = 0;
-        ut[] stackIn_54_0 = null;
+        Sprite[] stackIn_54_0 = null;
         int stackIn_55_1 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
@@ -53,21 +53,21 @@ class i extends jb {
         FootballerAgent var3 = null;
         int var4 = 0;
         boolean[] var5 = null;
-        ut var5_ref = null;
+        Sprite var5_ref = null;
         int var6 = 0;
         int var7 = 0;
         int[] var8_ref_int__ = null;
         int var8 = 0;
         int[] var9_ref_int__ = null;
         int var9 = 0;
-        ut[][] var10 = null;
+        Sprite[][] var10 = null;
         int var12 = 0;
-        ut var13 = null;
+        Sprite var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
         boolean[] var17 = null;
-        ut var18 = null;
+        Sprite var18 = null;
         int var4Lifetime1;
         var16 = Kickabout.field_G;
         try {
@@ -287,7 +287,7 @@ class i extends jb {
         int var5 = 45 + param2;
         int var6 = -20 + this.b(-1379118556);
         int var7 = -20 + this.a((byte) 80) - 80;
-        on.a(var4, var5, var6, var7, 10, 65793, 140);
+        SoftwareRasterizer.a(var4, var5, var6, var7, 10, 65793, 140);
         un.field_d.a(this.field_u, 5 + var4, var5 - 12, 16777215, -1);
         int var8 = 25 + param2 + 35;
         if (27 == this.field_y) {
@@ -307,7 +307,7 @@ class i extends jb {
         }
     }
 
-    final void a(String param0, lv param1, ut param2, int param3, String param4) {
+    final void a(String param0, lv param1, Sprite param2, int param3, String param4) {
         int stackIn_9_1 = 0;
         int stackIn_10_2 = 0;
         int stackIn_12_1 = 0;

@@ -9,7 +9,7 @@ final class kh {
     private int field_h;
     private int field_e;
     private int field_o;
-    static ut field_r;
+    static Sprite field_r;
     static String field_t;
     private int field_p;
     private ro field_j;
@@ -22,13 +22,13 @@ final class kh {
     private int field_d;
     private int field_a;
     private float field_n;
-    static sj field_g;
+    static ResourceArchive field_g;
     private int field_f;
 
     final boolean e(int param0) {
         if (param0 != 0) {
           this.field_h = 72;
-          if (this.field_e > nw.field_d) {
+          if (this.field_e > IntrusiveDequeCursor.field_d) {
             return false;
           }
           if (0 < eq.field_d) {
@@ -36,7 +36,7 @@ final class kh {
           }
           return false;
         }
-        if (this.field_e > nw.field_d) {
+        if (this.field_e > IntrusiveDequeCursor.field_d) {
           return false;
         }
         if (0 < eq.field_d) {
@@ -45,25 +45,25 @@ final class kh {
         return false;
     }
 
-    final static ut[] a(byte param0, ut param1) {
-        ut[] var2 = null;
+    final static Sprite[] a(byte param0, Sprite param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        ut[] var3 = null;
-        ut[] stackIn_2_0 = null;
-        ut[] stackIn_4_0 = null;
+        Sprite[] var3 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new ut[9];
+          var3 = new Sprite[9];
           var2 = var3;
           var3[4] = param1;
           if (param0 < -82) {
             stackIn_4_0 = var2;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (ut[]) null;
+          stackIn_2_0 = (Sprite[]) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,7 +100,7 @@ final class kh {
           stackIn_3_4 = !(param3);
           var7 = (eg) (((dd) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_2_2, stackIn_2_3, stackIn_3_4));
           PacketBuffer.a(102, vf.field_F);
-          on.b();
+          SoftwareRasterizer.b();
           t.c();
           if (FormationAgent.field_l == 3) {
             var6 = 256 + param2;
@@ -141,12 +141,12 @@ final class kh {
         }
     }
 
-    final vq b(int param0) {
+    final FullscreenFocusCanvas b(int param0) {
         this.field_v = f.field_d;
         this.field_f = vc.field_B;
         this.field_j.a(111, this.field_u, this.field_b);
         mf.field_Ib = false;
-        vq var2 = gf.a(oo.field_c, 0, this.field_b, 0, this.field_u, 0);
+        FullscreenFocusCanvas var2 = gf.a(oo.field_c, 0, this.field_b, 0, this.field_u, 0);
         if (param0 != 30182) {
           this.c(119);
           if (var2 == null) {
@@ -170,8 +170,8 @@ final class kh {
           field_r = null;
           return;
         }
-        ut var2 = (ut) null;
-        kh.a((byte) -104, (ut) null);
+        Sprite var2 = (Sprite) null;
+        kh.a((byte) -104, (Sprite) null);
         field_r = null;
     }
 
@@ -190,7 +190,7 @@ final class kh {
             return;
           }
           this.field_p = this.field_i;
-          if (this.field_e > nw.field_d) {
+          if (this.field_e > IntrusiveDequeCursor.field_d) {
             this.field_l = false;
           } else {
             this.a((byte) -113);

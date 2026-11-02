@@ -37,8 +37,8 @@ final class bq {
         int var16 = 0;
         var13 = Kickabout.field_G;
         try {
-          bh.field_s = on.field_f;
-          ea.field_a = on.field_g;
+          BufferedSocket.field_s = SoftwareRasterizer.field_f;
+          ea.field_a = SoftwareRasterizer.field_g;
           stackIn_3_0 = 127;
           if (param1) {
             stackIn_4_1 = fj.field_a;
@@ -48,7 +48,7 @@ final class bq {
           dw.a(stackIn_3_0, stackIn_4_1);
           ni.field_l.a(0, dn.field_Cb.field_q, 0, -2 + (-40 + dn.field_Cb.field_mb), (byte) -80);
           ka.field_c.a(true, fm.field_C.field_q, 0, 0, sh.field_c);
-          stackIn_6_0 = bh.field_u;
+          stackIn_6_0 = BufferedSocket.field_u;
           stackIn_6_1 = true;
           stackIn_6_2 = fm.field_C.field_q;
           if (!ui.field_t) {
@@ -80,12 +80,12 @@ final class bq {
           if (param0 < 81) {
             field_b = (String) null;
           }
-          ku.field_d.a(true, -10 + sg.field_a.field_q, 5, 5, var4);
+          MouseInputHandler.field_d.a(true, -10 + sg.field_a.field_q, 5, 5, var4);
           var5 = var4 + 5 + 2;
           for (var6 = 0; var6 < ss.field_j + 4; var6++) {
             if ((var6 != 1 ||
               !(rn.field_d.length < 2)) && (var6 != 3 ||
-              !(ku.field_f <= 1))) {
+              !(MouseInputHandler.field_f <= 1))) {
               if (!param1 &&
                 var6 == 3) {
                 var14 = qr.field_b[var6];
@@ -163,7 +163,7 @@ final class bq {
               }
             }
           }
-          tn.field_f.a(true, 360, -360 + on.field_g >> 1, 10, on.field_f - 120 - 4 - 10 - 10);
+          tn.field_f.a(true, 360, -360 + SoftwareRasterizer.field_g >> 1, 10, SoftwareRasterizer.field_f - 120 - 4 - 10 - 10);
           is.field_b.a(true, tn.field_f.field_q, 0, 0, 24);
           vj.field_g.a(true, tn.field_f.field_q, 0, 24, -24 + tn.field_f.field_mb);
           vj.field_g.field_R = fs.a(vj.field_g.field_mb, 3, 1, 11579568, 8421504, (byte) 97);

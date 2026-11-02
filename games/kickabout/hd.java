@@ -5,22 +5,22 @@ class hd extends iv {
     int field_x;
     int field_A;
     boolean field_lb;
-    ut field_N;
+    Sprite field_N;
     private int field_w;
     int field_L;
     boolean field_nb;
-    ut field_t;
+    Sprite field_t;
     int field_T;
     int field_hb;
-    ut[] field_R;
+    Sprite[] field_R;
     int field_y;
     int field_O;
-    hu field_X;
+    BitmapFont field_X;
     int field_H;
-    ut[] field_u;
+    Sprite[] field_u;
     int field_mb;
     private int field_pb;
-    ut field_r;
+    Sprite field_r;
     String field_E;
     int field_s;
     int field_D;
@@ -32,7 +32,7 @@ class hd extends iv {
     static String field_Z;
     int field_sb;
     int field_bb;
-    ut field_vb;
+    Sprite field_vb;
     static String field_C;
     static String field_ib;
     private boolean field_db;
@@ -42,19 +42,19 @@ class hd extends iv {
     int field_F;
     int field_fb;
     int field_q;
-    ut[] field_tb;
+    Sprite[] field_tb;
     int field_eb;
-    ut[] field_S;
+    Sprite[] field_S;
     int field_xb;
-    ut[] field_rb;
+    Sprite[] field_rb;
     boolean field_Q;
     boolean field_gb;
     int field_p;
-    tf field_jb;
+    IntrusiveDeque field_jb;
     int field_qb;
     int field_B;
     int field_U;
-    ut field_W;
+    Sprite field_W;
     private boolean field_z;
     int field_ub;
     int field_v;
@@ -65,7 +65,7 @@ class hd extends iv {
     static double field_K;
 
     final static void a(int param0, int param1, int param2, int param3) {
-        ut var10 = null;
+        Sprite var10 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -76,17 +76,17 @@ class hd extends iv {
           var10 = j.a(-5275);
           var5 = var10.field_o;
           var6 = var10.field_v;
-          for (var7 = 0; var7 < on.field_g; var7 = var7 + var5) {
-            for (var8 = 0; on.field_f > var8; var8 = var8 + var6) {
+          for (var7 = 0; var7 < SoftwareRasterizer.field_g; var7 = var7 + var5) {
+            for (var8 = 0; SoftwareRasterizer.field_f > var8; var8 = var8 + var6) {
               var10.d(var7, var8);
             }
           }
           td.a(param0, 15, param2, param1, param3, false);
           if (ih.field_c == 0) {
-            og.a(75, gw.field_d, 15, 15);
+            RasterBuffer.a(75, gw.field_d, 15, 15);
           }
           if (1 == ih.field_c) {
-            og.a(116, tv.field_b, 15, 15);
+            RasterBuffer.a(116, tv.field_b, 15, 15);
           }
           if (2 == ih.field_c) {
             wd.a(15, 15, 124);
@@ -177,7 +177,7 @@ class hd extends iv {
     }
 
     final void a(int param0, boolean param1) {
-        this.a(true, -105, false, 0, false, 0, param1, on.field_g, false, false, on.field_f);
+        this.a(true, -105, false, 0, false, 0, param1, SoftwareRasterizer.field_g, false, false, SoftwareRasterizer.field_f);
         if (param0 <= 45) {
           this.field_y = 117;
         }
@@ -327,7 +327,7 @@ class hd extends iv {
     final void b(int param0, boolean param1) {
         ic.field_f = !param1 ? true : false;
         bd.field_D = !param1 ? true : false;
-        this.a(0, ~param0, true, on.field_f, param0, on.field_g);
+        this.a(0, ~param0, true, SoftwareRasterizer.field_f, param0, SoftwareRasterizer.field_g);
     }
 
     final static boolean a(boolean param0, int param1, int param2) {
@@ -365,17 +365,17 @@ class hd extends iv {
           mu.field_Y == null) {
           var3 = 0;
         }
-        if (ov.field_b == 0 &&
-          ow.field_b != null) {
+        if (NodeHashTableIterator.field_b == 0 &&
+          ArchiveSource.field_b != null) {
           var3 = 0;
         }
-        if (2 == ov.field_b &&
+        if (2 == NodeHashTableIterator.field_b &&
           !LoggedPlayer.b(-3197)) {
           var3 = 0;
         }
         if (84 == cc.field_e) {
           if (var3 == 0) {
-            if (ov.field_b == 0) {
+            if (NodeHashTableIterator.field_b == 0) {
               return true;
             }
             td.a(-108);
@@ -386,7 +386,7 @@ class hd extends iv {
                 wi.a((String) null, (String) null, 0, 2, ng.field_i, -125);
                 wi.a((String) null, (String) null, 0, 2, mg.field_e, -126);
               } else {
-                var5 = ov.field_b;
+                var5 = NodeHashTableIterator.field_b;
                 if (var5 == 0 &&
                   uv.field_i != null) {
                   var5 = 1;
@@ -394,7 +394,7 @@ class hd extends iv {
                 if (r.a(0, var5) == 2) {
                   gd.a(-117, 1, var5, param2);
                 }
-                gp.a(-1, 82, ov.field_b, param1, at.field_Kb, var4_ref_String);
+                gp.a(-1, 82, NodeHashTableIterator.field_b, param1, at.field_Kb, var4_ref_String);
               }
             }
             td.a(99);
@@ -416,18 +416,18 @@ class hd extends iv {
           cq.field_m.length() < 80) {
           discarded$0 = cq.field_m.append((char) var4);
           var5Lifetime1 = 485;
-          var13 = ow.field_e;
+          var13 = ArchiveSource.field_e;
           var7 = var13;
           var7Lifetime1 = var13;
-          var12 = ga.a(false, var13);
+          var12 = TextInputWidget.a(false, var13);
           var7Lifetime2 = var12;
           var7Lifetime3 = var12;
           var15 = var12;
           var7Lifetime4 = var15;
           var7Lifetime5 = var15;
-          if (2 != ov.field_b) {
+          if (2 != NodeHashTableIterator.field_b) {
             var7Lifetime6 = "";
-            if (ov.field_b == 0) {
+            if (NodeHashTableIterator.field_b == 0) {
               if (uv.field_i == null &&
                 uk.field_d) {
                 var7Lifetime6 = "[" + qt.field_z + "] ";
@@ -530,31 +530,31 @@ class hd extends iv {
         this.field_mb = this.field_mb + var7Lifetime3;
         this.field_F = this.field_s + param0;
         param2 = param2 & this.field_lb;
-        var8 = on.field_b;
-        var9 = on.field_e;
-        var10 = on.field_c;
-        var11 = on.field_h;
-        on.h(this.field_F, this.field_T, this.field_F + this.field_q, this.field_mb + this.field_T);
+        var8 = SoftwareRasterizer.field_b;
+        var9 = SoftwareRasterizer.field_e;
+        var10 = SoftwareRasterizer.field_c;
+        var11 = SoftwareRasterizer.field_h;
+        SoftwareRasterizer.h(this.field_F, this.field_T, this.field_F + this.field_q, this.field_mb + this.field_T);
         var12 = 0;
         if (!ic.field_f &&
           param2 &&
-          wj.field_A != 0 &&
-          on.field_b <= sm.field_q &&
-          on.field_c > sm.field_q &&
-          vc.field_y >= on.field_e &&
-          on.field_h > vc.field_y) {
+          WidgetContainer.field_A != 0 &&
+          SoftwareRasterizer.field_b <= sm.field_q &&
+          SoftwareRasterizer.field_c > sm.field_q &&
+          vc.field_y >= SoftwareRasterizer.field_e &&
+          SoftwareRasterizer.field_h > vc.field_y) {
           var12 = 1;
           this.field_bb = -this.field_F + sm.field_q;
-          this.field_qb = wj.field_A;
-          this.field_sb = wj.field_A;
+          this.field_qb = WidgetContainer.field_A;
+          this.field_sb = WidgetContainer.field_A;
           this.field_M = vc.field_y - this.field_T;
         } else {
-          if (wj.field_A != 0) {
+          if (WidgetContainer.field_A != 0) {
             this.field_qb = 0;
           }
           this.field_sb = 0;
         }
-        stackIn_31_1 = (!bd.field_D) && (on.field_b <= el.field_A) && (el.field_A < on.field_c) && (on.field_e <= n.field_m) && (n.field_m < on.field_h);
+        stackIn_31_1 = (!bd.field_D) && (SoftwareRasterizer.field_b <= el.field_A) && (el.field_A < SoftwareRasterizer.field_c) && (SoftwareRasterizer.field_e <= n.field_m) && (n.field_m < SoftwareRasterizer.field_h);
         this.field_Q = stackIn_31_1;
         if (FootballerAgent.field_p == 0) {
           this.field_qb = 0;
@@ -574,7 +574,7 @@ class hd extends iv {
         if (var12 != 0) {
           ic.field_f = true;
         }
-        on.e(var8, var9, var10, var11);
+        SoftwareRasterizer.e(var8, var9, var10, var11);
         if (this.field_qb != 0 &&
           this.field_Y) {
           this.field_J = -param4 - this.field_M + n.field_m;
@@ -640,7 +640,7 @@ class hd extends iv {
 
     final void a(byte param0, hd param1) {
         if (this.field_jb == null) {
-          this.field_jb = new tf();
+          this.field_jb = new IntrusiveDeque();
         }
         if (param0 > -103) {
           return;
@@ -688,8 +688,8 @@ class hd extends iv {
         int var13;
         int var14;
         int var15;
-        ut[] var16;
-        ut var17;
+        Sprite[] var16;
+        Sprite var17;
         int var18;
         int var19;
         int var20;
@@ -706,14 +706,14 @@ class hd extends iv {
         var25 = Kickabout.field_G;
         this.field_F = param5 + this.field_s;
         this.field_T = this.field_J + param3;
-        var12 = on.field_b;
-        var13 = on.field_e;
-        var14 = on.field_c;
+        var12 = SoftwareRasterizer.field_b;
+        var13 = SoftwareRasterizer.field_e;
+        var14 = SoftwareRasterizer.field_c;
         if (param1 >= -7) {
           return;
         }
-        var15 = on.field_h;
-        on.h(this.field_F, this.field_T, this.field_F + this.field_q, this.field_mb + this.field_T);
+        var15 = SoftwareRasterizer.field_h;
+        SoftwareRasterizer.h(this.field_F, this.field_T, this.field_F + this.field_q, this.field_mb + this.field_T);
         if (!this.field_z) {
           param4 = this.field_gb;
           stackIn_6_0 = (this.field_qb != 0);
@@ -862,17 +862,17 @@ class hd extends iv {
             var23_ref = (hd) (this.field_jb.c(33));
           }
         }
-        on.e(var12, var13, var14, var15);
+        SoftwareRasterizer.e(var12, var13, var14, var15);
         return;
     }
 
     final void a(int param0, hd param1) {
-        nw var3 = null;
+        IntrusiveDequeCursor var3 = null;
         hd var4 = null;
         int var5 = Kickabout.field_G;
         try {
           if (this.field_jb != null) {
-            var3 = new nw(this.field_jb);
+            var3 = new IntrusiveDequeCursor(this.field_jb);
             var4 = (hd) (var3.a((byte) 54));
             while (var4 != null) {
               var4.a(103, param1);

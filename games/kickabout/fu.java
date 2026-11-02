@@ -89,10 +89,10 @@ final class fu {
         oi var8 = null;
         int var9 = 0;
         int var10 = 0;
-        tf var11 = null;
+        IntrusiveDeque var11 = null;
         var10 = Kickabout.field_G;
         try {
-          var11 = new tf();
+          var11 = new IntrusiveDeque();
           if (param0 != 5464) {
             field_b = (tv[]) null;
           }

@@ -6,7 +6,7 @@ final class ja extends ta {
     private hd field_K;
     static String field_L;
     private int field_V;
-    static ut field_S;
+    static Sprite field_S;
     private hd field_ab;
     private int field_U;
     private hd field_X;
@@ -35,7 +35,7 @@ final class ja extends ta {
         int var3;
         nt var4_ref_nt;
         int var4;
-        tf var5;
+        IntrusiveDeque var5;
         gi var6;
         int var7;
         int var4Lifetime1;
@@ -111,14 +111,14 @@ final class ja extends ta {
         up var8;
         int var9;
         up[] var10;
-        tf var11;
+        IntrusiveDeque var11;
         var9 = Kickabout.field_G;
         super.a(0, param1, param2);
         this.field_P.field_s = 656;
         this.field_P.b(0, false);
         this.field_ab.field_s = 640;
         this.field_ab.b(param0 ^ 0, false);
-        var11 = new tf();
+        var11 = new IntrusiveDeque();
         var5_ref_rd__ = je.field_f;
         for (var6_int = 0; var5_ref_rd__.length > var6_int; var6_int++) {
           var7_ref_rd = var5_ref_rd__[var6_int];
@@ -264,15 +264,15 @@ final class ja extends ta {
         int var3Lifetime1;
         var6 = Kickabout.field_G;
         super.a(param0, param1);
-        on.a(this.field_P.field_F - 8, -8 + this.field_P.field_T, this.field_P.field_q + 16, this.field_P.field_mb + 16, 65793, 96);
+        SoftwareRasterizer.a(this.field_P.field_F - 8, -8 + this.field_P.field_T, this.field_P.field_q + 16, this.field_P.field_mb + 16, 65793, 96);
         var3_ref_hd = (hd) (this.field_P.field_jb.g(param0 + 24014));
         while (var3_ref_hd != null) {
-          on.a(var3_ref_hd.field_F, var3_ref_hd.field_T, var3_ref_hd.field_q, var3_ref_hd.field_mb, 10, 65793, 96);
+          SoftwareRasterizer.a(var3_ref_hd.field_F, var3_ref_hd.field_T, var3_ref_hd.field_q, var3_ref_hd.field_mb, 10, 65793, 96);
           var3_ref_hd = (hd) (this.field_P.field_jb.c(33));
         }
         un.field_d.a(le.field_c, -26 + this.field_G.field_F, this.field_G.field_T - 16, 16777215, -1);
         for (var3 = 0; var3 < 2; var3++) {
-          un.field_d.a(dh.field_j[var3], 6 + this.field_J[var3].field_F, -8 + this.field_J[var3].field_T, 16777215, -1);
+          un.field_d.a(ImageProducerRasterBuffer.field_j[var3], 6 + this.field_J[var3].field_F, -8 + this.field_J[var3].field_T, 16777215, -1);
         }
         this.field_P.a(114, false);
         pt.a(this.field_G.field_F + this.field_G.field_q, -22914, this.field_G.field_F, this.field_G.field_mb + this.field_G.field_T, this.field_G.field_T);
@@ -456,7 +456,7 @@ final class ja extends ta {
           var7 = (eg) (this.field_cb.a(this.field_db.b(var12[2], var12[3], var5, var12[1], var6), false, true, true));
           var7.a(0, var3, 0, 0, 0, 0, 0, 540);
           var8 = Math.max(120, pb.field_C.a(this.field_T) + 30);
-          on.a(this.field_j + (532 - (var8 >> 1)), 412, var8, 56, 12, 65793, 128);
+          SoftwareRasterizer.a(this.field_j + (532 - (var8 >> 1)), 412, var8, 56, 12, 65793, 128);
           pb.field_C.d(this.field_T, 532 + this.field_j, 430, 16777215, -1);
           this.field_ab.a(123, false);
         }
@@ -464,7 +464,7 @@ final class ja extends ta {
 
     public static void h(int param0) {
         if (param0 != 8) {
-          field_S = (ut) null;
+          field_S = (Sprite) null;
         }
         field_W = null;
         field_I = null;

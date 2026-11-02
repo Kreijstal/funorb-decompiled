@@ -3,7 +3,7 @@
  */
 final class kb extends tm {
     static boolean field_C;
-    static ut[] field_E;
+    static Sprite[] field_E;
     static String field_D;
     static eg[] field_B;
 
@@ -110,8 +110,8 @@ final class kb extends tm {
         int var2 = 0;
         int var1_int = 0;
         int var3 = 0;
-        ut[][] var4 = null;
-        ut var5 = null;
+        Sprite[][] var4 = null;
+        Sprite var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -128,8 +128,8 @@ final class kb extends tm {
           }
           for (var2 = 0; 2 > var2; var2++) {
             var3 = 102 * var2 + 20;
-            on.a(var1_int, var3, 160, 92, 12, 65793, 128);
-            un.field_d.d(ao.field_f[var2].toLowerCase(), 80 + var1_int, var3 + 20, 16777215, -1);
+            SoftwareRasterizer.a(var1_int, var3, 160, 92, 12, 65793, 128);
+            un.field_d.d(RandomAccessCacheFile.field_f[var2].toLowerCase(), 80 + var1_int, var3 + 20, 16777215, -1);
             var4 = ae.field_C[var2];
             var4[0][1].b(14 + var1_int, 49 + var3, 20, 20);
             var4[1][1].b(var1_int + 14 + 38, var3 + 49, 20, 20);

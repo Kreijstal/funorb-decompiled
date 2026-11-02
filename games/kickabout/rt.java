@@ -92,7 +92,7 @@ final class rt extends i {
             this.field_L.a((byte) -127, this.field_O[var4_int]);
           }
           regionExit1: {
-            var6 = tu.field_E;
+            var6 = GameLoopApplet.field_E;
             stackIn_10_0 = this;
             stackIn_10_1 = this.field_J;
             stackIn_10_2 = var6.field_w;
@@ -328,8 +328,8 @@ final class rt extends i {
         this.field_L.field_s = param1 + 180;
         this.field_L.b(0, true);
         PacketBuffer.a(-65, c.field_b);
-        on.b();
-        this.field_I.a(1200, 0, on.field_g >> 1, on.field_f - 10, (byte) -68);
+        SoftwareRasterizer.b();
+        this.field_I.a(1200, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 10, (byte) -68);
         if (param0 >= -11) {
           this.field_P = 5;
         }
@@ -348,12 +348,12 @@ final class rt extends i {
                 q.field_d.a(ne.field_L, 123 + var5, var6 + 19, 13382451, 65793);
               }
             } else {
-              on.f(var5, var6, var7, var8, 8, 4473924);
+              SoftwareRasterizer.f(var5, var6, var7, var8, 8, 4473924);
               q.field_d.a("+1%", 123 + var5, var6 + 19, 5592405, -1);
             }
           } else {
-            on.a(var5, var6, var7, var8, 8, 65793, 128);
-            on.f(var5, var6, var7, var8, 8, 10066329);
+            SoftwareRasterizer.a(var5, var6, var7, var8, 8, 65793, 128);
+            SoftwareRasterizer.f(var5, var6, var7, var8, 8, 10066329);
             q.field_d.a("+1%", 123 + var5, 19 + var6, 16777215, 65793);
           }
           var9 = 0;

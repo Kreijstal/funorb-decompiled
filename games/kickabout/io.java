@@ -14,7 +14,7 @@ final class io {
     private int field_a;
     private j field_b;
     int field_d;
-    private ut[] field_n;
+    private Sprite[] field_n;
     static int[] field_q;
     String field_p;
     static String field_o;
@@ -35,8 +35,8 @@ final class io {
           ((qt) (cq.field_h)).d((byte) 52);
         } else {
           if (this.field_m == 0) {
-            if (tu.field_E.d((byte) 91)) {
-              if (tu.field_E.field_J[0]) {
+            if (GameLoopApplet.field_E.d((byte) 91)) {
+              if (GameLoopApplet.field_E.field_J[0]) {
                 vr.b((byte) -124);
               } else {
                 wf.b(10, true);
@@ -174,7 +174,7 @@ final class io {
                                                                 if (e.field_m == null) {
                                                                   dw.a(param1, 0);
                                                                 } else {
-                                                                  fd.h(0);
+                                                                  UiWidget.h(0);
                                                                 }
                                                                 op.field_v = 2147483647;
                                                               }
@@ -220,13 +220,13 @@ final class io {
               }
             } else {
               if (!la.a(100)) {
-                if (!tu.field_E.field_J[0]) {
+                if (!GameLoopApplet.field_E.field_J[0]) {
                   tb.a((byte) 126, 26);
                 } else {
-                  if (!tu.field_E.d((byte) 64)) {
+                  if (!GameLoopApplet.field_E.d((byte) 64)) {
                     tb.a((byte) 126, 5);
                   } else {
-                    rg.a(-1822);
+                    MouseWheelInput.a(-1822);
                   }
                 }
               } else {
@@ -332,13 +332,13 @@ final class io {
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        ut[] var3 = null;
-        ut[] var4 = null;
+        Sprite[] var3 = null;
+        Sprite[] var4 = null;
         int var6 = 0;
-        ut[] var7 = null;
-        ut[] var8 = null;
-        ut var9 = null;
-        ut var10 = null;
+        Sprite[] var7 = null;
+        Sprite[] var8 = null;
+        Sprite var9 = null;
+        Sprite var10 = null;
         var6 = Kickabout.field_G;
         try {
           if (ug.field_c == null) {
@@ -348,7 +348,7 @@ final class io {
             var7 = se.a(bo.field_Cb, 53, "stadium_icon", "park");
             var8 = se.a(bo.field_Cb, param0 ^ 20, "stadium_icon", "beach");
             var3 = se.a(bo.field_Cb, -121, "stadium_icon", "street");
-            var4 = new ut[12];
+            var4 = new Sprite[12];
             for (var5 = 0; var5 < 4; var5++) {
               var4[var5] = var7[var5];
               var4[4 + var5] = var8[var5];
@@ -363,8 +363,8 @@ final class io {
             var9 = bg.a("instructions", bo.field_Cb, (byte) 119, "arrowkey");
             var10 = bg.a("instructions", bo.field_Cb, (byte) 43, "key");
             ae.field_C = wf.a(3, var9);
-            kd.field_y = new ut[][]{et.a(0, oo.field_a, var10, var10.field_o), et.a(0, tn.field_c, var10, 62)};
-            lt.field_d = new ut[]{et.a(0, ip.field_d[0], var10, 50)[1], et.a(param0 - 2, ip.field_d[1], var10, 50)[1]};
+            kd.field_y = new Sprite[][]{et.a(0, oo.field_a, var10, var10.field_o), et.a(0, tn.field_c, var10, 62)};
+            lt.field_d = new Sprite[]{et.a(0, ip.field_d[0], var10, 50)[1], et.a(param0 - 2, ip.field_d[1], var10, 50)[1]};
             ll.field_g = bg.a("instructions", bo.field_Cb, (byte) 78, "mouse");
             jn.field_qb = bg.a("instructions", bo.field_Cb, (byte) 108, "mouse_left");
             ki.field_q = bg.a("instructions", bo.field_Cb, (byte) 103, "mouse_right");
@@ -398,7 +398,7 @@ final class io {
         int var11;
         var11 = Kickabout.field_G;
         if (this.field_m == 1 &&
-          !tu.field_E.field_J[0]) {
+          !GameLoopApplet.field_E.field_J[0]) {
           this.field_g = false;
         }
         if (param1 - (this.field_d >> 1) < wt.field_x &&
@@ -459,7 +459,7 @@ final class io {
           var5 = this.field_k >> 1;
           param1 = param1 + (-20 + (-wo.field_m + aw.field_J) - var5);
           var6 = param1 - (-var5 - 20);
-          on.e(var6, param0 - 2, wo.field_m, 4, 65793);
+          SoftwareRasterizer.e(var6, param0 - 2, wo.field_m, 4, 65793);
           if (this.field_m != 17) {
             stackIn_46_0 = IntrusiveNode.b((byte) -61);
           } else {
@@ -475,7 +475,7 @@ final class io {
             if (16 == this.field_m) {
               var10 = var10 << 8 | 255 | var10 << 16;
             }
-            on.a(1 + (var9 + var6), 1 + param0 - 2, 2, var10);
+            SoftwareRasterizer.a(1 + (var9 + var6), 1 + param0 - 2, 2, var10);
           }
           this.field_b.a(24, param0 + 10, var6 + var8);
         }
@@ -487,10 +487,10 @@ final class io {
           return;
         }
         ll.field_o.d(this.field_p, param1, 2 + param0, 16777215, -1);
-        if (this.field_m == 1 && (!tu.field_E.field_J[0] ||
+        if (this.field_m == 1 && (!GameLoopApplet.field_E.field_J[0] ||
           la.a(100))) {
           param0 -= 4;
-          on.a(-(this.field_d >> 1) + param1, -(this.field_h >> 1) + param0, this.field_d, this.field_h, 0, 128);
+          SoftwareRasterizer.a(-(this.field_d >> 1) + param1, -(this.field_h >> 1) + param0, this.field_d, this.field_h, 0, 128);
         }
     }
 
@@ -500,7 +500,7 @@ final class io {
         String stackIn_37_1 = null;
         int var4;
         int var5;
-        ot var6;
+        ArgbSprite var6;
         int[] var7;
         int[] var10;
         int[] var11;
@@ -584,7 +584,7 @@ final class io {
         if (this.field_a == -3) {
           var5 = ll.field_m.field_o;
         }
-        this.field_n = new ut[3];
+        this.field_n = new Sprite[3];
         if (21 != this.field_m) {
           if (22 != this.field_m) {
             if (49 == this.field_m &&
@@ -595,11 +595,11 @@ final class io {
               this.field_n[2] = ae.a(var4 != 0, (byte) -52, 2, var5, param1);
             } else {
               if (this.field_a == -5) {
-                this.field_n[0] = (ut) ((Object) kl.field_m);
-                var6 = kl.field_m.h();
-                this.field_n[2] = (ut) ((Object) kl.field_m);
+                this.field_n[0] = (Sprite) ((Object) ArchiveIndex.field_m);
+                var6 = ArchiveIndex.field_m.h();
+                this.field_n[2] = (Sprite) ((Object) ArchiveIndex.field_m);
                 PacketBuffer.a(-104, var6);
-                pt.a(-3 + on.field_g, -22914, 3, on.field_f - 3, 3);
+                pt.a(-3 + SoftwareRasterizer.field_g, -22914, 3, SoftwareRasterizer.field_f - 3, 3);
                 PacketBuffer.a(103, var6);
                 var6.c(0, 0, 60);
                 ta.e(119);
@@ -609,10 +609,10 @@ final class io {
                 for (var8 = 0; var11.length > var8; var8++) {
                   var7[var8] = 131586 * var8;
                 }
-                nh.a(4, 6, -4 + on.field_g, 6, 8, -40 + var11.length, var11);
+                nh.a(4, 6, -4 + SoftwareRasterizer.field_g, 6, 8, -40 + var11.length, var11);
                 ta.e(127);
                 ta.e(125);
-                this.field_n[1] = (ut) ((Object) var6);
+                this.field_n[1] = (Sprite) ((Object) var6);
               } else {
                 this.field_n[0] = ae.a(var4 != 0, (byte) -52, 0, var5, param1);
                 this.field_n[1] = ae.a(var4 != 0, (byte) -52, 1, var5, param1);
@@ -620,11 +620,11 @@ final class io {
               }
             }
           } else {
-            this.field_n = (ut[]) ((Object) eo.field_c[0]);
+            this.field_n = (Sprite[]) ((Object) eo.field_c[0]);
             this.field_p = null;
           }
         } else {
-          this.field_n = (ut[]) ((Object) eo.field_r[0]);
+          this.field_n = (Sprite[]) ((Object) eo.field_r[0]);
           this.field_p = null;
         }
         this.field_h = this.field_n[0].field_v;

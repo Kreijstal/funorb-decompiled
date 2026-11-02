@@ -23,19 +23,19 @@ final class nc {
         try {
           vu.field_Cb = param2;
           vt.field_c = param0;
-          u.field_c = param3;
+          JaggrabDownloader.field_c = param3;
           var9 = un.field_d;
           var4 = var9;
           kn.field_G = new String[vt.field_c.playerCount];
           var5 = 0;
           for (var6 = 0; var6 < vt.field_c.playerCount; var6++) {
             kn.field_G[var6] = vt.field_c.field_S[var6].toLowerCase();
-            var7 = ((hu) ((Object) var9)).a(kn.field_G[var6]);
+            var7 = ((BitmapFont) ((Object) var9)).a(kn.field_G[var6]);
             if (var7 > var5) {
               var5 = var7;
             }
           }
-          rb.field_yb = -8 + ((hu) ((Object) var4)).field_G + ((hu) ((Object) var4)).field_p;
+          rb.field_yb = -8 + ((BitmapFont) ((Object) var4)).field_G + ((BitmapFont) ((Object) var4)).field_p;
           et.field_c = 18 + var5 + 20;
           if (param1 != -85) {
             return;

@@ -12,7 +12,7 @@ final class md implements hc {
     private gm[] field_i;
     private int field_c;
     private boolean field_a;
-    private ut field_b;
+    private Sprite field_b;
     static String field_d;
 
     private final void a(int param0, int param1) {
@@ -27,7 +27,7 @@ final class md implements hc {
           this.field_i[var4] = new gm(var6, var3, true);
           this.field_i[var4].field_G = 1;
           this.field_i[var4].g((byte) 127);
-          this.field_i[var4].field_mb.a(dq.$cfr$intArgs$a$7f8aad568c81(85, this.field_i[var4].field_mb.a(true), new Random()), 123);
+          this.field_i[var4].field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(85, this.field_i[var4].field_mb.a(true), new Random()), 123);
         }
         if (param0 >= -10) {
           this.field_i = (gm[]) null;
@@ -48,7 +48,7 @@ final class md implements hc {
         } else {
           if (!ng.a(param0 ^ 27302)) {
             if (vi.c(2915)) {
-              on.g(0, 0, on.field_g, on.field_f);
+              SoftwareRasterizer.g(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
               var1 = 1;
               ph.b(true);
             }
@@ -72,7 +72,7 @@ final class md implements hc {
           var2 = (-1 + vo.field_bb << 8) / 16;
           if (0 < var2) {
             var1 = 1;
-            on.a(0, 0, on.field_g, on.field_f, 0, var2);
+            SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, var2);
           }
         }
         if (param0 != -27302) {
@@ -152,8 +152,8 @@ final class md implements hc {
           var8 = (int)stackIn_16_0 + 320;
           var9 = (int)var7 + 140;
           PacketBuffer.a(-102, this.field_b);
-          on.b();
-          this.field_i[var4].a(var3, 0, on.field_g >> 1, on.field_f, (byte) -105);
+          SoftwareRasterizer.b();
+          this.field_i[var4].a(var3, 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, (byte) -105);
           ta.e(120);
           if (this.field_f > 136) {
             this.field_b.b(-(this.field_b.field_o >> 1) + var8, -(this.field_b.field_v >> 1) + var9, 200 - this.field_f << 2);
@@ -206,7 +206,7 @@ final class md implements hc {
 
     private final void b(int param0) {
         this.field_i = new gm[4];
-        this.field_b = new ut(100, 200);
+        this.field_b = new Sprite(100, 200);
         int var2 = 26 / ((43 - param0) / 54);
     }
 

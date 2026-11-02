@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tc extends am {
+final class tc extends DualLinkNode {
     int[] field_n;
     boolean field_t;
     String field_r;
@@ -130,18 +130,18 @@ final class tc extends am {
             dc.field_d = -cf.field_Db + param0;
           }
           if (dc.field_d == 0) {
-            if (wm.field_s > 1) {
-              wm.field_s = wm.field_s - 1;
+            if (CachedArchiveSource.field_s > 1) {
+              CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
             }
           } else {
-            if (wm.field_s < 18) {
-              wm.field_s = wm.field_s + 1;
+            if (CachedArchiveSource.field_s < 18) {
+              CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
             }
           }
           if (wt.field_x > qj.field_e &&
             vo.field_cb.field_q + qj.field_e > wt.field_x &&
-            bi.field_i < us.field_j &&
-            nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+            ArchiveNetworkClient.field_i < us.field_j &&
+            nn.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
             ka.a(dc.field_d, cf.field_Db, (byte) -113);
           }
           return;
@@ -160,18 +160,18 @@ final class tc extends am {
               dc.field_d = -cf.field_Db + param0;
             }
             if (dc.field_d == 0) {
-              if (wm.field_s > 1) {
-                wm.field_s = wm.field_s - 1;
+              if (CachedArchiveSource.field_s > 1) {
+                CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
               }
             } else {
-              if (wm.field_s < 18) {
-                wm.field_s = wm.field_s + 1;
+              if (CachedArchiveSource.field_s < 18) {
+                CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
               }
             }
             if (wt.field_x > qj.field_e &&
               vo.field_cb.field_q + qj.field_e > wt.field_x &&
-              bi.field_i < us.field_j &&
-              nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+              ArchiveNetworkClient.field_i < us.field_j &&
+              nn.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
               ka.a(dc.field_d, cf.field_Db, (byte) -113);
             }
             return;
@@ -187,18 +187,18 @@ final class tc extends am {
         }
         if (cf.field_Db + dc.field_d == param0) {
           if (dc.field_d == 0) {
-            if (wm.field_s > 1) {
-              wm.field_s = wm.field_s - 1;
+            if (CachedArchiveSource.field_s > 1) {
+              CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
             }
           } else {
-            if (wm.field_s < 18) {
-              wm.field_s = wm.field_s + 1;
+            if (CachedArchiveSource.field_s < 18) {
+              CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
             }
           }
           if (wt.field_x > qj.field_e &&
             vo.field_cb.field_q + qj.field_e > wt.field_x &&
-            bi.field_i < us.field_j &&
-            nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+            ArchiveNetworkClient.field_i < us.field_j &&
+            nn.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
             ka.a(dc.field_d, cf.field_Db, (byte) -113);
             return;
           }
@@ -206,23 +206,23 @@ final class tc extends am {
         }
         dc.field_d = -cf.field_Db + param0;
         if (dc.field_d == 0) {
-          if (wm.field_s > 1) {
-            wm.field_s = wm.field_s - 1;
+          if (CachedArchiveSource.field_s > 1) {
+            CachedArchiveSource.field_s = CachedArchiveSource.field_s - 1;
             if (wt.field_x > qj.field_e &&
               vo.field_cb.field_q + qj.field_e > wt.field_x &&
-              bi.field_i < us.field_j &&
-              nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+              ArchiveNetworkClient.field_i < us.field_j &&
+              nn.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
               ka.a(dc.field_d, cf.field_Db, (byte) -113);
             }
             return;
           }
         } else {
-          if (wm.field_s < 18) {
-            wm.field_s = wm.field_s + 1;
+          if (CachedArchiveSource.field_s < 18) {
+            CachedArchiveSource.field_s = CachedArchiveSource.field_s + 1;
             if (wt.field_x > qj.field_e &&
               vo.field_cb.field_q + qj.field_e > wt.field_x &&
-              bi.field_i < us.field_j &&
-              nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+              ArchiveNetworkClient.field_i < us.field_j &&
+              nn.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
               ka.a(dc.field_d, cf.field_Db, (byte) -113);
             }
             return;
@@ -234,8 +234,8 @@ final class tc extends am {
         if (vo.field_cb.field_q + qj.field_e <= wt.field_x) {
           return;
         }
-        if (bi.field_i < us.field_j &&
-          nn.field_C.field_w * wm.field_s + (bi.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
+        if (ArchiveNetworkClient.field_i < us.field_j &&
+          nn.field_C.field_w * CachedArchiveSource.field_s + (ArchiveNetworkClient.field_i + vo.field_cb.field_w + du.field_i.field_w) > us.field_j) {
           ka.a(dc.field_d, cf.field_Db, (byte) -113);
           return;
         }

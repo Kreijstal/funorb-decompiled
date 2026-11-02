@@ -7,7 +7,7 @@ class dg {
     static java.util.zip.CRC32 field_b;
     static String field_f;
     static boolean field_a;
-    private ut[] field_d;
+    private Sprite[] field_d;
     static boolean field_e;
     static String field_c;
 

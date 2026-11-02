@@ -5,7 +5,7 @@ final class iu extends IntrusiveNode {
     static int field_i;
     static String field_e;
     static boolean field_j;
-    static ut field_k;
+    static Sprite field_k;
     bc field_g;
     static boolean field_h;
     int field_f;

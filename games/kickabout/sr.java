@@ -11,7 +11,7 @@ abstract class sr {
     static lk[] field_a;
     static em field_f;
     static String field_d;
-    static sj field_h;
+    static ResourceArchive field_h;
     static String field_m;
     static String[] field_g;
     static String field_e;
@@ -27,7 +27,7 @@ abstract class sr {
     abstract int a(int param0);
 
     final static kg[] a(int param0, int param1, boolean param2, byte param3, int param4, int param5) {
-        ut[] array$0 = null;
+        Sprite[] array$0 = null;
         kg[][] stackIn_3_0 = null;
         int stackIn_12_0 = 0;
         int stackIn_17_0 = 0;
@@ -36,7 +36,7 @@ abstract class sr {
         int stackIn_26_0 = 0;
         kg[] var6;
         kg[][] var7;
-        ut[][] var8;
+        Sprite[][] var8;
         int var9;
         int var10;
         int var11;
@@ -45,7 +45,7 @@ abstract class sr {
         int var13;
         int var15;
         kg var15_ref_kg;
-        ut var16;
+        Sprite var16;
         int var16_int;
         int var17;
         nr[] var18_ref_nr__;
@@ -54,7 +54,7 @@ abstract class sr {
         nr var20;
         int var21;
         nr[][] var22;
-        ut var23;
+        Sprite var23;
         nr[][] var24;
         int var10Lifetime1;
         int var15Lifetime1;
@@ -75,9 +75,9 @@ abstract class sr {
           stackIn_3_0 = bf.field_s;
         }
         var7 = stackIn_3_0;
-        var8 = new ut[var7.length][];
+        var8 = new Sprite[var7.length][];
         for (var9 = 0; var9 < var8.length; var9++) {
-          array$0 = new ut[var7[var9].length];
+          array$0 = new Sprite[var7[var9].length];
           var8[var9] = array$0;
           for (var10 = 0; var10 < var8[var9].length; var10++) {
             var11_ref_kg = var7[var9][var10];

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class po {
-    static ut field_e;
-    static ut field_h;
+    static Sprite field_e;
+    static Sprite field_h;
     static String field_b;
     static String[] field_a;
     static String field_d;
@@ -48,14 +48,14 @@ final class po {
           if (param1 != -21) {
             return true;
           }
-          if (param2.field_zb != bh.field_h) {
+          if (param2.field_zb != BufferedSocket.field_h) {
             if (null == param2.field_zb) {
               var3_int += 200;
             }
           } else {
             var3_int -= 200;
           }
-          if (bh.field_h == param0.field_zb) {
+          if (BufferedSocket.field_h == param0.field_zb) {
             var3_int += 200;
           } else {
             if (null == param0.field_zb) {
@@ -225,14 +225,14 @@ final class po {
           if (param1 != -21) {
             return true;
           }
-          if (param2.field_zb != bh.field_h) {
+          if (param2.field_zb != BufferedSocket.field_h) {
             if (null == param2.field_zb) {
               var3_int += 200;
             }
           } else {
             var3_int -= 200;
           }
-          if (bh.field_h == param0.field_zb) {
+          if (BufferedSocket.field_h == param0.field_zb) {
             var3_int += 200;
           } else {
             if (null == param0.field_zb) {

@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nn extends wj implements vh {
+final class nn extends WidgetContainer implements vh {
     private wi field_H;
-    static ot field_B;
+    static ArgbSprite field_B;
     static String field_L;
-    static ot field_K;
+    static ArgbSprite field_K;
     static String[] field_G;
     private wi field_J;
     static boolean field_D;
     static String[] field_I;
     private wi field_E;
-    static ut field_C;
+    static Sprite field_C;
 
     public final void a(int param0, wi param1, int param2, byte param3, int param4) {
         RuntimeException var6 = null;
@@ -36,7 +36,7 @@ final class nn extends wj implements vh {
           if (this.field_H != param1) {
             return;
           }
-          bh.a(true);
+          BufferedSocket.a(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -75,7 +75,7 @@ final class nn extends wj implements vh {
           field_C = null;
           return;
         }
-        field_C = (ut) null;
+        field_C = (Sprite) null;
         field_L = null;
         field_B = null;
         field_I = null;
@@ -109,7 +109,7 @@ final class nn extends wj implements vh {
         this.a(-54, this.field_H);
     }
 
-    final boolean a(char param0, byte param1, fd param2, int param3) {
+    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_14_0 = false;

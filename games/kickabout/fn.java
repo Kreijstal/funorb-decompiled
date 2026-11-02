@@ -7,12 +7,12 @@ final class fn {
     int field_k;
     static String[] field_j;
     static String field_i;
-    static ot field_f;
+    static ArgbSprite field_f;
     static int field_c;
     static int[] field_g;
-    static ot field_d;
+    static ArgbSprite field_d;
     static hd field_a;
-    static sj field_b;
+    static ResourceArchive field_b;
 
     final boolean k(int param0) {
         RuntimeException var2 = null;
@@ -47,16 +47,16 @@ final class fn {
         }
     }
 
-    final ot d(boolean param0) {
+    final ArgbSprite d(boolean param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        ot stackIn_2_0 = null;
-        ot stackIn_7_0 = null;
-        ot stackIn_9_0 = null;
+        ArgbSprite stackIn_2_0 = null;
+        ArgbSprite stackIn_7_0 = null;
+        ArgbSprite stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            stackIn_2_0 = (ot) null;
+            stackIn_2_0 = (ArgbSprite) null;
             return stackIn_2_0;
           }
           if (0 == this.field_h) {
@@ -114,7 +114,7 @@ final class fn {
         RuntimeException var2 = null;
         try {
           var2_int = 100 % ((42 - param0) / 49);
-          stackIn_1_0 = de.field_b[this.field_h];
+          stackIn_1_0 = GameKeyHandler.field_b[this.field_h];
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -316,31 +316,31 @@ final class fn {
 
     final static void d(byte param0) {
         RuntimeException runtimeException = null;
-        ut var1 = null;
-        ut var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Kickabout.field_G;
         try {
-          var1 = new ut(540, 140);
+          var1 = new Sprite(540, 140);
           PacketBuffer.a(param0 + 26, var1);
           t.c();
-          on.b();
+          SoftwareRasterizer.b();
           up.field_p = 0;
           fp.a((byte) -112);
           var2 = var1.b();
           var3 = 0;
           while (var3 < 15) {
             var2.a(-2, -2, 16777215);
-            on.b(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.b(4, 4, 0, 0, 540, 140);
             var3++;
             if (var4 != 0) {
               return;
             }
           }
           if (param0 != -128) {
-            field_b = (sj) null;
+            field_b = (ResourceArchive) null;
           }
           tm.field_v.e();
           var1.f(0, 0);
@@ -493,7 +493,7 @@ final class fn {
         RuntimeException decompiledCaughtException = null;
         try {
           te.a(true, param1);
-          ku.a(dh.field_g, 4, false);
+          MouseInputHandler.a(ImageProducerRasterBuffer.field_g, 4, false);
           if (param0 < 14) {
             field_c = -13;
           }
@@ -548,11 +548,11 @@ final class fn {
         try {
           var1 = null;
           var2 = null;
-          if (ov.field_b == 0 &&
-            null != ow.field_b) {
+          if (NodeHashTableIterator.field_b == 0 &&
+            null != ArchiveSource.field_b) {
             var2 = vp.field_g;
           }
-          if (~ov.field_b == param0 &&
+          if (~NodeHashTableIterator.field_b == param0 &&
             !LoggedPlayer.b(param0 - 3194)) {
             boolean decompiledSharedTail1 = !(lf.a(qi.field_o, -39));
             if (!decompiledSharedTail1) {
@@ -578,11 +578,11 @@ final class fn {
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
-            var3 = ow.field_e;
-            var3 = ga.a(false, var3);
+            var3 = ArchiveSource.field_e;
+            var3 = TextInputWidget.a(false, var3);
             var4 = "";
             var5 = "|";
-            var6 = ov.field_b;
+            var6 = NodeHashTableIterator.field_b;
             var7 = 0;
             if (var6 == 2) {
               var4 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, b.field_F, new String[]{at.field_Kb});
@@ -627,7 +627,7 @@ final class fn {
               }
               if ((decompiledSharedTail0) &&
                 (kb.field_C)) {
-                var4 = "<col=999999>" + var4 + ru.field_t + "</col>";
+                var4 = "<col=999999>" + var4 + MidiPcmStream.field_t + "</col>";
                 var5 = "";
               }
               var9 = FootballerAgent.field_i.a(var4);
@@ -635,7 +635,7 @@ final class fn {
                 if (ei.field_b.field_gb &&
                   el.field_A - ei.field_b.field_F < var9) {
                   if (!PacketBuffer.field_l) {
-                    var1 = ru.field_t;
+                    var1 = MidiPcmStream.field_t;
                   } else {
                     var1 = "Broken!";
                   }
@@ -647,7 +647,7 @@ final class fn {
                 }
               }
             }
-            nv.a(var7, sg.field_c[var6], var4 + hu.c(cq.field_m.toString()), var5, (byte) 34);
+            nv.a(var7, sg.field_c[var6], var4 + BitmapFont.c(cq.field_m.toString()), var5, (byte) 34);
             if (!vg.field_Wb) {
               ij.field_s.field_gb = false;
             }

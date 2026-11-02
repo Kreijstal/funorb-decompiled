@@ -91,12 +91,12 @@ final class jh extends bp {
             if (si.field_g != var6.field_k) {
               throw new fi(var6.field_f);
             }
-            var5.field_j = new tf();
+            var5.field_j = new IntrusiveDeque();
             while (true) {
               if (param0.a(6)) {
                 throw new fi(var5.field_f);
               }
-              if (param0.a((byte) 90).field_k == og.field_c) {
+              if (param0.a((byte) 90).field_k == RasterBuffer.field_c) {
                 stackIn_23_0 = var5;
                 return stackIn_23_0;
               }
@@ -106,7 +106,7 @@ final class jh extends bp {
                 throw new fi(var5.field_f);
               }
               var7 = param0.a((byte) 72);
-              if (og.field_c == var7.field_k) {
+              if (RasterBuffer.field_c == var7.field_k) {
                 stackIn_28_0 = var5;
                 return stackIn_28_0;
               }

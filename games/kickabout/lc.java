@@ -4,8 +4,8 @@
 import java.util.*;
 
 final class lc implements Iterator {
-    private am field_a;
-    private am field_d;
+    private DualLinkNode field_a;
+    private DualLinkNode field_d;
     static String field_b;
     static kw field_e;
     private ci field_c;
@@ -13,12 +13,12 @@ final class lc implements Iterator {
     public final Object next() {
         Object var1 = this.field_a;
         if (this.field_c.field_d != var1) {
-          this.field_a = ((am) (var1)).field_f;
+          this.field_a = ((DualLinkNode) (var1)).field_f;
         } else {
           var1 = null;
           this.field_a = null;
         }
-        this.field_d = (am) (var1);
+        this.field_d = (DualLinkNode) (var1);
         return var1;
     }
 

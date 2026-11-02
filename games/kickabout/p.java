@@ -118,7 +118,7 @@ final class p {
         if (param0 != -24) {
           return 63;
         }
-        return dq.$cfr$intArgs$a$7f8aad568c81(112, param1, is.field_e);
+        return ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(112, param1, is.field_e);
     }
 
     final void a(int param0, CommonGame param1) {

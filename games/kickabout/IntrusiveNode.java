@@ -70,9 +70,9 @@ class IntrusiveNode {
     final static int d(byte param0) {
         if (param0 <= 44) {
           field_c = (String) null;
-          return bh.field_j;
+          return BufferedSocket.field_j;
         }
-        return bh.field_j;
+        return BufferedSocket.field_j;
     }
 
     public static void d(int param0) {
@@ -93,8 +93,8 @@ class IntrusiveNode {
     }
 
     final static void c(int param0) {
-        ow.field_e = un.field_e.a(-117);
-        CharSequence var2 = (CharSequence) ((Object) ow.field_e);
+        ArchiveSource.field_e = un.field_e.a(-117);
+        CharSequence var2 = (CharSequence) ((Object) ArchiveSource.field_e);
         kd.field_w = MatchAgent.a(0, var2);
         if (param0 != -49) {
           field_c = (String) null;

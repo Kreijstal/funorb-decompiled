@@ -5,10 +5,10 @@ import java.io.*;
 
 final class c {
     static String field_h;
-    static ut[] field_f;
-    static ut field_e;
+    static Sprite[] field_f;
+    static Sprite field_e;
     static StringBuilder field_a;
-    static ut field_b;
+    static Sprite field_b;
     static String field_d;
     static boolean field_g;
     static int field_c;
@@ -30,7 +30,7 @@ final class c {
           field_e = null;
           return;
         }
-        field_b = (ut) null;
+        field_b = (Sprite) null;
         field_e = null;
     }
 
@@ -98,7 +98,7 @@ final class c {
     static {
         field_h = "Auction Settings";
         field_a = new StringBuilder(100);
-        field_b = new ut(190, 190);
+        field_b = new Sprite(190, 190);
         field_d = "Game";
         field_c = 360;
     }

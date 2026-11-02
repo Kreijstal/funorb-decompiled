@@ -20,7 +20,7 @@ final class sc extends qt {
         int var5 = 0;
         int var6 = Kickabout.field_G;
         super.a(param0, 116);
-        on.a(this.field_A.field_F - 150, this.field_A.field_T - 150, this.field_A.field_q + 300, this.field_A.field_mb + 160, 8, 65793, this.field_C >> 1);
+        SoftwareRasterizer.a(this.field_A.field_F - 150, this.field_A.field_T - 150, this.field_A.field_q + 300, this.field_A.field_mb + 160, 8, 65793, this.field_C >> 1);
         this.field_A.a(50, param0);
         String var3 = ct.field_w.toLowerCase();
         int var4 = (int)Math.abs(-(nj.a(-58) / 1000L % 6L) + 3L);
@@ -76,11 +76,11 @@ final class sc extends qt {
 
     final static void g(byte param0) {
         if (param0 < -112) {
-          eo.b(ug.a(0, (int)wm.field_C), lf.a((byte) -125, (int)cq.field_f), 10, 16711680);
+          eo.b(ug.a(0, (int)CachedArchiveSource.field_C), lf.a((byte) -125, (int)cq.field_f), 10, 16711680);
           return;
         }
         sc.e(70);
-        eo.b(ug.a(0, (int)wm.field_C), lf.a((byte) -125, (int)cq.field_f), 10, 16711680);
+        eo.b(ug.a(0, (int)CachedArchiveSource.field_C), lf.a((byte) -125, (int)cq.field_f), 10, 16711680);
     }
 
     private final void a(boolean param0) {

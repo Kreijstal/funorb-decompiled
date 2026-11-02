@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class iv extends am {
+class iv extends DualLinkNode {
     static String field_n;
-    static wu field_o;
+    static PlatformTask field_o;
 
     final static void a(cn param0, byte param1) {
         int var15_int = 0;
@@ -53,10 +53,10 @@ class iv extends am {
           be.field_q.field_y = 14540253;
           be.field_q.field_p = 1;
           be.field_q.field_A = 1;
-          be.field_q.field_X = (hu) ((Object) un.field_d);
+          be.field_q.field_X = (BitmapFont) ((Object) un.field_d);
           rr.field_b = new ji("scrollbar", var6, var7, var5, var4, true);
           it.field_m = new ji("scrollbar", be.field_q, be.field_q, be.field_q, be.field_q, true);
-          ug.field_b = new ut[2][2];
+          ug.field_b = new Sprite[2][2];
           ug.field_b[0][0] = nm.a(16679959, -87, qt.field_u);
           ug.field_b[0][1] = nm.a(16679959, -104, mg.field_g);
           ug.field_b[1][0] = nm.a(7126504, -119, qt.field_u);
@@ -309,7 +309,7 @@ class iv extends am {
         field_o = null;
         field_n = null;
         if (param0) {
-          field_o = (wu) null;
+          field_o = (PlatformTask) null;
         }
     }
 

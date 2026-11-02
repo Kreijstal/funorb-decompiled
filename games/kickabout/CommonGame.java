@@ -8,7 +8,7 @@ final class CommonGame {
     int phaseTime;
     int field_c;
     static String field_M;
-    tf field_E;
+    IntrusiveDeque field_E;
     private int field_U;
     boolean field_f;
     int timeLimit;
@@ -1211,7 +1211,7 @@ final class CommonGame {
         var4 = Kickabout.field_G;
         try {
           if (null != af.field_a &&
-            nw.field_b.participantStatus[ek.field_G].d(3511)) {
+            IntrusiveDequeCursor.field_b.participantStatus[ek.field_G].d(3511)) {
             var1 = af.field_a;
             var2 = 0;
             if (param0) {
@@ -2263,7 +2263,7 @@ final class CommonGame {
             var9 = var9 + ((var9 * 3 >> 1) + 1280 * param0);
             this.field_V.highFriction = 25;
           }
-          var11 = de.a(param5 * param5 + param3 * param3, (byte) 84);
+          var11 = GameKeyHandler.a(param5 * param5 + param3 * param3, (byte) 84);
           this.field_V.field_n = var10;
           if (var11 != 0) {
             this.field_V.field_q = param3 * var9 / var11;
@@ -3268,7 +3268,7 @@ final class CommonGame {
         int var10_intLifetime2;
         var12 = Kickabout.field_G;
         this.phase = -1;
-        this.field_E = new tf();
+        this.field_E = new IntrusiveDeque();
         this.field_l = false;
         this.field_A = false;
         this.field_h = false;

@@ -4,7 +4,7 @@
 final class mk {
     static String[] field_b;
     static int field_c;
-    static ut field_a;
+    static Sprite field_a;
 
     public static void a(int param0) {
         if (param0 != 17437) {
@@ -234,7 +234,7 @@ final class mk {
                   if (t.field_k <= param7) {
                     return;
                   }
-                  var36Lifetime2 = var36Lifetime2 + on.field_g;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_g;
                   var26 = var26 + var28;
                   var22 = var22 + var24;
                   var17_int = var17_int + var19;
@@ -322,7 +322,7 @@ final class mk {
                 return;
               }
               var18 = var18 + var20;
-              var35Lifetime1 = var35Lifetime1 + on.field_g;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_g;
               var22 = var22 + var24;
               var21 = var21 + var23;
               var25 = var25 + var27;
@@ -352,13 +352,13 @@ final class mk {
         try {
           int var2_int = 0;
           int var3 = 0;
-          tf var4 = null;
+          IntrusiveDeque var4 = null;
           RuntimeException decompiledCaughtException = null;
           RuntimeException var1 = null;
           ak var2 = null;
           var3 = Kickabout.field_G;
           try {
-            var4 = new tf();
+            var4 = new IntrusiveDeque();
             if (param0 != -1622) {
               return;
             }

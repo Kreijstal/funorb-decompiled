@@ -5,7 +5,7 @@ class aa extends ps {
     private long field_g;
     private String field_i;
     static String field_h;
-    static ut field_f;
+    static Sprite field_f;
 
     final static void a(byte param0, int param1, mp param2) {
         CipherPacketBuffer var3 = null;
@@ -69,7 +69,7 @@ class aa extends ps {
 
     public static void b(byte param0) {
         if (param0 > -101) {
-          field_f = (ut) null;
+          field_f = (Sprite) null;
           field_h = null;
           field_f = null;
           return;

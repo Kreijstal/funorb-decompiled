@@ -9,10 +9,10 @@ class wv extends mu implements vh {
     private ou field_jb;
     private boolean field_hb;
     static r field_fb;
-    private hu field_eb;
+    private BitmapFont field_eb;
     static String field_bb;
 
-    final static void a(byte param0, int param1, tf param2, java.awt.Point[] param3) {
+    final static void a(byte param0, int param1, IntrusiveDeque param2, java.awt.Point[] param3) {
         int var4_int = 0;
         java.awt.Point var5 = null;
         java.awt.Point var6 = null;
@@ -115,10 +115,10 @@ class wv extends mu implements vh {
         this.field_jb.a((byte) 21, 4210752, param0);
         qp var2 = new qp(this, this.field_eb, ii.field_m);
         var2.a((byte) 99, 15, ta.field_E);
-        this.a((byte) -124, (fd) (var2));
+        this.a((byte) -124, (UiWidget) (var2));
     }
 
-    final boolean a(char param0, byte param1, fd param2, int param3) {
+    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -210,9 +210,9 @@ class wv extends mu implements vh {
           }
           if (param1 < 96) {
             var6 = (java.awt.Point[]) null;
-            wv.a((byte) -60, 109, (tf) null, (java.awt.Point[]) null);
+            wv.a((byte) -60, 109, (IntrusiveDeque) null, (java.awt.Point[]) null);
           }
-          this.a((byte) -120, (fd) (var7));
+          this.a((byte) -120, (UiWidget) (var7));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -228,7 +228,7 @@ class wv extends mu implements vh {
         }
     }
 
-    wv(se param0, hu param1, String param2, boolean param3, boolean param4) {
+    wv(se param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new qp((wv) null, param1, param2), 77, 10, 10);
         try {
           this.field_cb = false;

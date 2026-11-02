@@ -4,7 +4,7 @@
 final class pa extends dg {
     static String field_i;
     private int field_h;
-    private ut field_k;
+    private Sprite field_k;
     static String field_j;
     static fn[] field_g;
 
@@ -65,13 +65,13 @@ final class pa extends dg {
         int var2 = rb.field_Bb * rb.field_Bb;
         int var3 = var2 - ns.field_a * ns.field_a;
         if (param0 > 81) {
-          ss.field_c.a(true, 199, var1 - 199 * var3 / var2, 90, -90 + (on.field_f - 124));
-          af.field_d.a(true, 438, 202 + var1 + 438 * var3 / var2, 0, -4 + (-120 + on.field_f));
+          ss.field_c.a(true, 199, var1 - 199 * var3 / var2, 90, -90 + (SoftwareRasterizer.field_f - 124));
+          af.field_d.a(true, 438, 202 + var1 + 438 * var3 / var2, 0, -4 + (-120 + SoftwareRasterizer.field_f));
           return;
         }
         field_j = (String) null;
-        ss.field_c.a(true, 199, var1 - 199 * var3 / var2, 90, -90 + (on.field_f - 124));
-        af.field_d.a(true, 438, 202 + var1 + 438 * var3 / var2, 0, -4 + (-120 + on.field_f));
+        ss.field_c.a(true, 199, var1 - 199 * var3 / var2, 90, -90 + (SoftwareRasterizer.field_f - 124));
+        af.field_d.a(true, 438, 202 + var1 + 438 * var3 / var2, 0, -4 + (-120 + SoftwareRasterizer.field_f));
     }
 
     static {

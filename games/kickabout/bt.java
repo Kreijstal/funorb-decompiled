@@ -5,9 +5,9 @@ final class bt {
     private eq field_f;
     static java.awt.Image field_i;
     static String field_d;
-    private sj field_g;
+    private ResourceArchive field_g;
     static hd field_b;
-    private sj field_h;
+    private ResourceArchive field_h;
     static String field_c;
     static boolean field_e;
     static int[] field_a;
@@ -19,12 +19,12 @@ final class bt {
           if (sr.field_l.c(0)) {
             gu.a(uv.field_i.h((byte) -77), (byte) -88, 11);
           } else {
-            tu.b(15848, 11, 0);
+            GameLoopApplet.b(15848, 11, 0);
           }
         } else {
           if (um.field_e.e(param0 - 2) &&
             !um.field_e.b(-21660)) {
-            tu.b(param0 + 15848, 11, 0);
+            GameLoopApplet.b(param0 + 15848, 11, 0);
           } else {
             gu.a(uv.field_i.h((byte) 74), (byte) -114, 11);
             an.field_d = true;
@@ -35,16 +35,16 @@ final class bt {
         }
     }
 
-    final static ut a(int param0, boolean param1, int param2) {
+    final static Sprite a(int param0, boolean param1, int param2) {
         int var8 = 0;
         int var9 = Kickabout.field_G;
         int var3 = af.field_b[param1 ? 0 : 1];
         int[] var4 = sm.field_o[param1 ? 0 : 1];
         kg[] var5 = ph.field_e[param1 ? 0 : 2];
         if (param0 > -125) {
-          return (ut) null;
+          return (Sprite) null;
         }
-        ut var6 = new ut(var3, param2 * var4[1] + var4[2] + var4[0]);
+        Sprite var6 = new Sprite(var3, param2 * var4[1] + var4[2] + var4[0]);
         PacketBuffer.a(83, var6);
         int var7 = 0;
         var5[0].a(0, var7);
@@ -278,7 +278,7 @@ final class bt {
         return var3;
     }
 
-    bt(int param0, sj param1, sj param2) {
+    bt(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

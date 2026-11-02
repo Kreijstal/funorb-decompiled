@@ -84,16 +84,16 @@ abstract class MatchAgent {
         }
     }
 
-    final static ut b(int param0) {
+    final static Sprite b(int param0) {
         int var4_int = 0;
         int var5 = Kickabout.field_G;
-        int var1 = ku.field_c[0] * lo.field_j[0];
+        int var1 = MouseInputHandler.field_c[0] * lo.field_j[0];
         byte[] var2 = pq.field_O[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = lt.field_a[qj.b(255, (int) var2[var4_int])];
         }
-        ut var4 = new ut(kw.field_i, ai.field_J, IsaacRandom.field_f[0], fc.field_g[param0], ku.field_c[0], lo.field_j[0], var3);
+        Sprite var4 = new Sprite(kw.field_i, ai.field_J, IsaacRandom.field_f[0], fc.field_g[param0], MouseInputHandler.field_c[0], lo.field_j[0], var3);
         tk.h((byte) -81);
         return var4;
     }

@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pp extends lq {
+final class pp extends PcmStream {
     static String field_k;
     static String field_m;
-    private ru field_l;
-    tf field_j;
-    gq field_i;
+    private MidiPcmStream field_l;
+    IntrusiveDeque field_j;
+    PcmStreamMixer field_i;
 
     final int d() {
         return 0;
     }
 
-    final lq b() {
+    final PcmStream b() {
         da var1;
         while (true) {
           var1 = (da) (this.field_j.c(33));
@@ -20,18 +20,18 @@ final class pp extends lq {
             return null;
           }
           if (null != var1.field_F) {
-            return (lq) ((Object) var1.field_F);
+            return (PcmStream) ((Object) var1.field_F);
           }
         }
     }
 
-    final lq c() {
+    final PcmStream c() {
         da var1 = (da) (this.field_j.g(24009));
         if (var1 == null) {
           return null;
         }
         if (var1.field_F != null) {
-          return (lq) ((Object) var1.field_F);
+          return (PcmStream) ((Object) var1.field_F);
         }
         return this.b();
     }
@@ -67,7 +67,7 @@ final class pp extends lq {
     }
 
     private final void a(int param0, da param1, byte param2) {
-        ru stackIn_7_0 = null;
+        MidiPcmStream stackIn_7_0 = null;
         boolean stackIn_7_1 = false;
         da stackIn_7_2 = null;
         boolean stackIn_8_3;
@@ -83,19 +83,19 @@ final class pp extends lq {
           var4_int = 65 / ((-22 - param2) / 49);
           if ((4 & this.field_l.field_i[param1.field_q]) != 0 &&
             param1.field_s < 0) {
-            var5 = this.field_l.field_o[param1.field_q] / uh.field_i;
+            var5 = this.field_l.field_o[param1.field_q] / PcmPlayerService.field_i;
             var6 = (1048575 + var5 - param1.field_r) / var5;
             param1.field_r = param0 * var5 + param1.field_r & 1048575;
             if (var6 <= param0) {
               if (this.field_l.field_s[param1.field_q] == 0) {
-                param1.field_F = vm.b(param1.field_y, param1.field_F.e(), param1.field_F.m(), param1.field_F.k());
+                param1.field_F = PcmSampleStream.b(param1.field_y, param1.field_F.e(), param1.field_F.m(), param1.field_F.k());
               } else {
-                param1.field_F = vm.b(param1.field_y, param1.field_F.e(), 0, param1.field_F.k());
+                param1.field_F = PcmSampleStream.b(param1.field_y, param1.field_F.e(), 0, param1.field_F.k());
                 stackIn_7_0 = this.field_l;
                 stackIn_7_1 = false;
                 stackIn_7_2 = (da) (param1);
                 stackIn_8_3 = !(param1.field_g.field_r[param1.field_e] >= 0);
-                ((ru) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3);
+                ((MidiPcmStream) (Object) stackIn_7_0).a(stackIn_7_1, stackIn_7_2, stackIn_8_3);
               }
               if (0 > param1.field_g.field_r[param1.field_e]) {
                 param1.field_F.g(-1);
@@ -181,8 +181,8 @@ final class pp extends lq {
           if (param0 != 18267) {
             pp.b(-60);
           }
-          if (null != wm.field_u) {
-            wm.field_u.field_L.a(param1, -48);
+          if (null != CachedArchiveSource.field_u) {
+            CachedArchiveSource.field_u.field_L.a(param1, -48);
           }
           if (ki.field_n != null) {
             ki.field_n.field_G.a(param1, -71);
@@ -218,55 +218,55 @@ final class pp extends lq {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$0 = 0;
-        ut stackIn_9_0 = null;
-        ut stackIn_15_0 = null;
+        Sprite stackIn_9_0 = null;
+        Sprite stackIn_15_0 = null;
         oh[] stackIn_25_0;
         int stackIn_25_1;
         oh stackIn_25_2;
         oh stackIn_25_3;
         oh stackIn_26_2 = null;
         oh stackIn_26_3 = null;
-        ut stackIn_26_4 = null;
+        Sprite stackIn_26_4 = null;
         oh[] stackIn_28_0;
         int stackIn_28_1;
         oh stackIn_28_2;
         oh stackIn_28_3;
         oh stackIn_29_2;
         oh stackIn_29_3;
-        ut stackIn_29_4;
-        ut stackIn_35_0 = null;
+        Sprite stackIn_29_4;
+        Sprite stackIn_35_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
-        ut var2 = null;
+        Sprite var2 = null;
         int var2_int = 0;
-        ut var3 = null;
-        ut var4 = null;
+        Sprite var3 = null;
+        Sprite var4 = null;
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
-        ut var7 = null;
+        Sprite var7 = null;
         int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ut var11 = null;
-        ut var12 = null;
-        ut var13 = null;
-        ut var14 = null;
-        ut var3Lifetime1;
-        ut var7Lifetime1;
-        ut var13Lifetime1;
-        ut var7Lifetime2;
-        ut var13Lifetime2;
-        ut var7Lifetime1Lifetime1;
-        ut var7Lifetime1Lifetime2;
-        ut var7Lifetime1Lifetime3;
-        ut var7Lifetime1Lifetime4;
-        ut var7Lifetime1Lifetime5;
-        ut var7Lifetime1Lifetime6;
-        ut var7Lifetime1Lifetime7;
-        ut var7Lifetime1Lifetime8;
+        Sprite var11 = null;
+        Sprite var12 = null;
+        Sprite var13 = null;
+        Sprite var14 = null;
+        Sprite var3Lifetime1;
+        Sprite var7Lifetime1;
+        Sprite var13Lifetime1;
+        Sprite var7Lifetime2;
+        Sprite var13Lifetime2;
+        Sprite var7Lifetime1Lifetime1;
+        Sprite var7Lifetime1Lifetime2;
+        Sprite var7Lifetime1Lifetime3;
+        Sprite var7Lifetime1Lifetime4;
+        Sprite var7Lifetime1Lifetime5;
+        Sprite var7Lifetime1Lifetime6;
+        Sprite var7Lifetime1Lifetime7;
+        Sprite var7Lifetime1Lifetime8;
         int var2_intLifetime1;
         int var4_intLifetime1;
         int var5Lifetime1;
@@ -283,7 +283,7 @@ final class pp extends lq {
             var1_int = 0;
             incrementValue$3 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$3] = new oh(ao.field_c, -100, -100);
+            oi.field_e[incrementValue$3] = new oh(RandomAccessCacheFile.field_c, -100, -100);
             incrementValue$4 = var1_int;
             var1_int++;
             oi.field_e[incrementValue$4] = new oh(pi.field_a, 60, -180);
@@ -292,7 +292,7 @@ final class pp extends lq {
             oi.field_e[incrementValue$5] = new oh(ng.field_j[0], 280, -280);
             incrementValue$6 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$6] = new oh(ao.field_c, -190, 1184);
+            oi.field_e[incrementValue$6] = new oh(RandomAccessCacheFile.field_c, -190, 1184);
             incrementValue$7 = var1_int;
             var1_int++;
             oi.field_e[incrementValue$7] = new oh(pi.field_a, -280, 994);
@@ -444,7 +444,7 @@ final class pp extends lq {
     }
 
     private final void a(int param0, int param1, int param2, int[] param3, da param4, int param5) {
-        ru stackIn_11_0 = null;
+        MidiPcmStream stackIn_11_0 = null;
         boolean stackIn_11_1 = false;
         da stackIn_11_2 = null;
         boolean stackIn_12_3;
@@ -459,13 +459,13 @@ final class pp extends lq {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        vm var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         var12 = Kickabout.field_G;
         try {
           if ((this.field_l.field_i[param4.field_q] & 4) != param0 &&
             0 > param4.field_s) {
-            var7_int = this.field_l.field_o[param4.field_q] / uh.field_i;
+            var7_int = this.field_l.field_o[param4.field_q] / PcmPlayerService.field_i;
             while (true) {
               var8 = (var7_int + 1048575 - param4.field_r) / var7_int;
               if (param1 < var8) {
@@ -476,22 +476,22 @@ final class pp extends lq {
               param1 = param1 - var8;
               param4.field_r = param4.field_r + (var7_int * var8 - 1048576);
               param2 = param2 + var8;
-              var9 = uh.field_i / 100;
+              var9 = PcmPlayerService.field_i / 100;
               var10 = 262144 / var7_int;
               if (var9 > var10) {
                 var9 = var10;
               }
               var11 = param4.field_F;
               if (this.field_l.field_s[param4.field_q] != 0) {
-                param4.field_F = vm.b(param4.field_y, var11.e(), 0, var11.k());
+                param4.field_F = PcmSampleStream.b(param4.field_y, var11.e(), 0, var11.k());
                 stackIn_11_0 = this.field_l;
                 stackIn_11_1 = false;
                 stackIn_11_2 = (da) (param4);
                 stackIn_12_3 = !(0 <= param4.field_g.field_r[param4.field_e]);
-                ((ru) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
+                ((MidiPcmStream) (Object) stackIn_11_0).a(stackIn_11_1, stackIn_11_2, stackIn_12_3);
                 param4.field_F.c(var9, var11.m());
               } else {
-                param4.field_F = vm.b(param4.field_y, var11.e(), var11.m(), var11.k());
+                param4.field_F = PcmSampleStream.b(param4.field_y, var11.e(), var11.m(), var11.k());
               }
               if (param4.field_g.field_r[param4.field_e] < 0) {
                 param4.field_F.g(-1);
@@ -534,9 +534,9 @@ final class pp extends lq {
         }
     }
 
-    pp(ru param0) {
-        this.field_j = new tf();
-        this.field_i = new gq();
+    pp(MidiPcmStream param0) {
+        this.field_j = new IntrusiveDeque();
+        this.field_i = new PcmStreamMixer();
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {

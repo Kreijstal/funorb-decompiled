@@ -115,7 +115,7 @@ final class dd {
           for (var1_intLifetime1 = 0; var1_intLifetime1 < 32; var1_intLifetime1++) {
             cp.field_d[var1_intLifetime1] = 0L;
           }
-          qh.field_b = 0;
+          SectorCacheStore.field_b = 0;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "dd.F(" + param0 + ')');
         }

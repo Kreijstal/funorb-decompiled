@@ -5,20 +5,20 @@ import java.util.*;
 
 final class ci implements Iterable {
     static hd field_b;
-    am field_d;
-    static tf field_f;
+    DualLinkNode field_d;
+    static IntrusiveDeque field_f;
     static hd field_h;
     static int field_a;
     static long field_c;
-    static ut field_g;
+    static Sprite field_g;
     static String field_e;
 
     public final Iterator iterator() {
         return (Iterator) ((Object) new lc(this));
     }
 
-    final am a(byte param0) {
-        am var2 = this.field_d.field_f;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_d.field_f;
         if (var2 == this.field_d) {
           return null;
         }
@@ -30,7 +30,7 @@ final class ci implements Iterable {
         return var2;
     }
 
-    final void a(int param0, am param1) {
+    final void a(int param0, DualLinkNode param1) {
         if (null != param1.field_e) {
           param1.f(-81);
         }
@@ -48,7 +48,7 @@ final class ci implements Iterable {
     }
 
     ci() {
-        this.field_d = new am();
+        this.field_d = new DualLinkNode();
         this.field_d.field_f = this.field_d;
         this.field_d.field_e = this.field_d;
     }
@@ -58,7 +58,7 @@ final class ci implements Iterable {
         int var1 = wq.b((byte) 46);
         if (!param0) {
           var2 = IntrusiveNode.d((byte) 101);
-          ba.field_p.a(-dq.field_f + ka.field_a, (mt.field_a << 1) + var2, uq.field_c - mt.field_a, (dq.field_f << 1) + var1, 3);
+          ba.field_p.a(-ProxySocketConnector.field_f + ka.field_a, (mt.field_a << 1) + var2, uq.field_c - mt.field_a, (ProxySocketConnector.field_f << 1) + var1, 3);
           re.a(0);
           return;
         }
@@ -73,12 +73,12 @@ final class ci implements Iterable {
           field_b = null;
           return;
         }
-        field_f = (tf) null;
+        field_f = (IntrusiveDeque) null;
         field_b = null;
     }
 
     static {
-        field_f = new tf();
+        field_f = new IntrusiveDeque();
         field_e = "concluded";
     }
 }

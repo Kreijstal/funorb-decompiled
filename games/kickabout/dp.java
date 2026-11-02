@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dp extends lq {
-    private lq field_r;
+final class dp extends PcmStream {
+    private PcmStream field_r;
     private float field_s;
     private float field_u;
     private int[] field_i;
@@ -84,7 +84,7 @@ final class dp extends lq {
           for (var6Lifetime1 = 0; var6Lifetime1 < 4; var6Lifetime1++) {
             var5 = dp.a(var5, this.field_k[var6Lifetime1].field_a, this.field_k[var6Lifetime1].field_b, var4);
           }
-          if (uh.field_o) {
+          if (PcmPlayerService.field_o) {
             for (var6Lifetime2 = 0; var6Lifetime2 < 8; var6Lifetime2++) {
               var5 = dp.a(var5, this.field_n[var6Lifetime2].field_c, this.field_n[var6Lifetime2].field_a, var4);
             }
@@ -112,7 +112,7 @@ final class dp extends lq {
           var8 = (int)(this.field_q * 4096.0f);
           var9 = (int)(this.field_w * 4096.0f);
           var10 = (int)(this.field_u * 65536.0f);
-          if (!uh.field_o) {
+          if (!PcmPlayerService.field_o) {
             var11 = (int)(this.field_t * 4096.0f);
             for (var12 = 0; var12 < var4; var12++) {
               var13 = this.field_i[var12] >> var6Lifetime4;
@@ -258,7 +258,7 @@ final class dp extends lq {
 
     private final void e() {
         int var1;
-        if (!uh.field_o) {
+        if (!PcmPlayerService.field_o) {
           if (this.field_n != null) {
             for (var1 = 0; var1 < 8; var1++) {
               this.field_m[var1].a();
@@ -279,19 +279,19 @@ final class dp extends lq {
               this.field_k[var1].a();
             }
             this.field_n = new tp[8];
-            this.field_n[0] = new tp(1139 * uh.field_i / 44100);
-            this.field_n[1] = new tp(1211 * uh.field_i / 44100);
-            this.field_n[2] = new tp(1300 * uh.field_i / 44100);
-            this.field_n[3] = new tp(1379 * uh.field_i / 44100);
-            this.field_n[4] = new tp(1445 * uh.field_i / 44100);
-            this.field_n[5] = new tp(1514 * uh.field_i / 44100);
-            this.field_n[6] = new tp(1580 * uh.field_i / 44100);
-            this.field_n[7] = new tp(1640 * uh.field_i / 44100);
+            this.field_n[0] = new tp(1139 * PcmPlayerService.field_i / 44100);
+            this.field_n[1] = new tp(1211 * PcmPlayerService.field_i / 44100);
+            this.field_n[2] = new tp(1300 * PcmPlayerService.field_i / 44100);
+            this.field_n[3] = new tp(1379 * PcmPlayerService.field_i / 44100);
+            this.field_n[4] = new tp(1445 * PcmPlayerService.field_i / 44100);
+            this.field_n[5] = new tp(1514 * PcmPlayerService.field_i / 44100);
+            this.field_n[6] = new tp(1580 * PcmPlayerService.field_i / 44100);
+            this.field_n[7] = new tp(1640 * PcmPlayerService.field_i / 44100);
             this.field_v = new mq[4];
-            this.field_v[0] = new mq(579 * uh.field_i / 44100);
-            this.field_v[1] = new mq(464 * uh.field_i / 44100);
-            this.field_v[2] = new mq(364 * uh.field_i / 44100);
-            this.field_v[3] = new mq(248 * uh.field_i / 44100);
+            this.field_v[0] = new mq(579 * PcmPlayerService.field_i / 44100);
+            this.field_v[1] = new mq(464 * PcmPlayerService.field_i / 44100);
+            this.field_v[2] = new mq(364 * PcmPlayerService.field_i / 44100);
+            this.field_v[3] = new mq(248 * PcmPlayerService.field_i / 44100);
             this.field_i = new int[512];
           }
         }
@@ -325,7 +325,7 @@ final class dp extends lq {
 
     final synchronized void c(float param0) {
         this.field_l = param0;
-        this.field_q = 1.0f - (float)Math.pow(0.5, 1000000.0 / (double)(this.field_l * (float)uh.field_i));
+        this.field_q = 1.0f - (float)Math.pow(0.5, 1000000.0 / (double)(this.field_l * (float)PcmPlayerService.field_i));
     }
 
     final synchronized void b(float param0) {
@@ -338,11 +338,11 @@ final class dp extends lq {
         this.field_u = param0;
     }
 
-    final lq b() {
+    final PcmStream b() {
         return null;
     }
 
-    final lq c() {
+    final PcmStream c() {
         return this.field_r;
     }
 
@@ -356,22 +356,22 @@ final class dp extends lq {
         return 8;
     }
 
-    dp(lq param0) {
+    dp(PcmStream param0) {
         this.field_m = new tp[8];
-        this.field_m[0] = new tp(1116 * uh.field_i / 44100);
-        this.field_m[1] = new tp(1188 * uh.field_i / 44100);
-        this.field_m[2] = new tp(1277 * uh.field_i / 44100);
-        this.field_m[3] = new tp(1356 * uh.field_i / 44100);
-        this.field_m[4] = new tp(1422 * uh.field_i / 44100);
-        this.field_m[5] = new tp(1491 * uh.field_i / 44100);
-        this.field_m[6] = new tp(1557 * uh.field_i / 44100);
-        this.field_m[7] = new tp(1617 * uh.field_i / 44100);
+        this.field_m[0] = new tp(1116 * PcmPlayerService.field_i / 44100);
+        this.field_m[1] = new tp(1188 * PcmPlayerService.field_i / 44100);
+        this.field_m[2] = new tp(1277 * PcmPlayerService.field_i / 44100);
+        this.field_m[3] = new tp(1356 * PcmPlayerService.field_i / 44100);
+        this.field_m[4] = new tp(1422 * PcmPlayerService.field_i / 44100);
+        this.field_m[5] = new tp(1491 * PcmPlayerService.field_i / 44100);
+        this.field_m[6] = new tp(1557 * PcmPlayerService.field_i / 44100);
+        this.field_m[7] = new tp(1617 * PcmPlayerService.field_i / 44100);
         this.field_k = new mq[4];
-        this.field_k[0] = new mq(556 * uh.field_i / 44100);
-        this.field_k[1] = new mq(441 * uh.field_i / 44100);
-        this.field_k[2] = new mq(341 * uh.field_i / 44100);
-        this.field_k[3] = new mq(225 * uh.field_i / 44100);
-        if (!uh.field_o) {
+        this.field_k[0] = new mq(556 * PcmPlayerService.field_i / 44100);
+        this.field_k[1] = new mq(441 * PcmPlayerService.field_i / 44100);
+        this.field_k[2] = new mq(341 * PcmPlayerService.field_i / 44100);
+        this.field_k[3] = new mq(225 * PcmPlayerService.field_i / 44100);
+        if (!PcmPlayerService.field_o) {
           this.field_i = new int[256];
         }
         this.e();

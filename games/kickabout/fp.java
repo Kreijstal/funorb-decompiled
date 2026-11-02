@@ -99,7 +99,7 @@ class fp extends IntrusiveNode {
         int var13Lifetime1;
         var20 = Kickabout.field_G;
         try {
-          dh.field_i = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
+          ImageProducerRasterBuffer.field_i = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
           var1_int = ba.field_n.length;
           var22 = new int[var1_int];
           var21 = var22;
@@ -107,21 +107,21 @@ class fp extends IntrusiveNode {
           for (var3 = 0; var3 < var1_int; var3++) {
             var4_ref_kk = ba.field_n[var3];
             var4_ref_kk.a(false);
-            rg.a(var3, 1);
+            MouseWheelInput.a(var3, 1);
             var5 = var4_ref_kk.field_y + var4_ref_kk.field_h >> 1;
             var6 = var4_ref_kk.field_s + var4_ref_kk.field_x >> 1;
             var7 = var4_ref_kk.field_w + var4_ref_kk.field_t >> 1;
-            var8 = dh.field_i[9] >> 2;
-            var9 = dh.field_i[10] >> 2;
-            var10_int = dh.field_i[11] >> 2;
+            var8 = ImageProducerRasterBuffer.field_i[9] >> 2;
+            var9 = ImageProducerRasterBuffer.field_i[10] >> 2;
+            var10_int = ImageProducerRasterBuffer.field_i[11] >> 2;
             var11 = hh.field_g[3] * var8 + var9 * hh.field_g[4] + var10_int * hh.field_g[5] >> 14;
             var12 = var10_int * hh.field_g[8] + var9 * hh.field_g[7] + var8 * hh.field_g[6] >> 14;
             var13 = var8 * hh.field_g[9] + hh.field_g[10] * var9 + hh.field_g[11] * var10_int >> 14;
             var2[var3] = var13 * var7 + var11 * var5 + var6 * var12 >> 16;
           }
-          var3Lifetime1 = dh.field_i[9] >> 8;
-          var4 = dh.field_i[10] >> 8;
-          var5Lifetime1 = dh.field_i[11] >> 8;
+          var3Lifetime1 = ImageProducerRasterBuffer.field_i[9] >> 8;
+          var4 = ImageProducerRasterBuffer.field_i[10] >> 8;
+          var5Lifetime1 = ImageProducerRasterBuffer.field_i[11] >> 8;
           var6Lifetime1 = up.field_p << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = ei.a(var6Lifetime1, (byte) -23) >> 8;
@@ -153,11 +153,11 @@ class fp extends IntrusiveNode {
             }
             var22[var17] = -2147483648;
             var18 = ba.field_n[var17];
-            rg.a(var17, 1);
+            MouseWheelInput.a(var17, 1);
             for (var19 = 0; var19 < 3; var19++) {
               hh.field_g[var19] = hh.field_g[var19] + sm.field_l[var16][var19];
             }
-            os.a(var18, false, hh.field_g, dh.field_i, (byte) -96, false, true);
+            os.a(var18, false, hh.field_g, ImageProducerRasterBuffer.field_i, (byte) -96, false, true);
             ei.a(var8Lifetime1, var7Lifetime1, var13Lifetime1, var9Lifetime1, var14, (byte) -125, var18, var15);
           }
           return;

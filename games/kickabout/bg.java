@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg extends am {
+final class bg extends DualLinkNode {
     static String field_r;
     static String field_o;
     static String field_q;
@@ -118,12 +118,12 @@ final class bg extends am {
         return var6.toString();
     }
 
-    final static ut a(String param0, sj param1, byte param2, String param3) {
+    final static Sprite a(String param0, ResourceArchive param1, byte param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ut stackIn_2_0 = null;
-        ut stackIn_4_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -134,12 +134,12 @@ final class bg extends am {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= 35) {
-            stackIn_2_0 = (ut) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           var4_int = param1.b(param0, -1);
           var5 = param1.a((byte) -126, param3, var4_int);
-          stackIn_4_0 = ow.a(param1, var4_int, (byte) 89, var5);
+          stackIn_4_0 = ArchiveSource.a(param1, var4_int, (byte) 89, var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

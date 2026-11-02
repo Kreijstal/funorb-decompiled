@@ -3,13 +3,13 @@
  */
 import java.io.*;
 
-final class tb extends bi {
+final class tb extends ArchiveNetworkClient {
     static int field_s;
     static ff field_t;
-    private bh field_x;
+    private BufferedSocket field_x;
     static int field_v;
     static String field_r;
-    static ut[] field_q;
+    static Sprite[] field_q;
     static CommonGame field_w;
     static String field_u;
 
@@ -240,8 +240,8 @@ final class tb extends bi {
         int var3 = Kickabout.field_G;
         try {
           if (param0 != 126) {
-            sj var4 = (sj) null;
-            tb.a(5, (sj) null);
+            ResourceArchive var4 = (ResourceArchive) null;
+            tb.a(5, (ResourceArchive) null);
           }
           if (param1 == 28) {
             if (su.field_c != null) {
@@ -317,7 +317,7 @@ final class tb extends bi {
               }
               this.field_x = null;
             }
-            this.field_x = (bh) (param0);
+            this.field_x = (BufferedSocket) (param0);
             this.g(0);
             if (param1 != 20) {
               this.b((byte) 19);
@@ -396,7 +396,7 @@ final class tb extends bi {
         this.field_g = (byte)(int)(1.0 + Math.random() * 255.0);
     }
 
-    final static void a(int param0, sj param1) {
+    final static void a(int param0, ResourceArchive param1) {
         hd var6 = null;
         hd var7 = null;
         hd var3 = null;
@@ -417,8 +417,8 @@ final class tb extends bi {
           kk.field_R.a((byte) -108, hj.field_h);
           ei.field_d.field_Cb.field_zb.a(dw.field_e, (byte) 87);
           if (param0 >= -59) {
-            sj var4 = (sj) null;
-            tb.a(-39, (sj) null);
+            ResourceArchive var4 = (ResourceArchive) null;
+            tb.a(-39, (ResourceArchive) null);
           }
           ei.field_d.field_Cb.field_zb.field_p = 1;
           var6 = ei.field_d.field_Cb.field_zb;

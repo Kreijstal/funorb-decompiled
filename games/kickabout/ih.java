@@ -6,9 +6,9 @@ final class ih {
     static int field_c;
     static String field_b;
 
-    final static ut[] a(int param0, int param1, int param2) {
+    final static Sprite[] a(int param0, int param1, int param2) {
         if (param1 != 0) {
-          return (ut[]) null;
+          return (Sprite[]) null;
         }
         return cq.a(1, param2, param0, 124);
     }
@@ -88,17 +88,17 @@ final class ih {
             stackIn_6_2 = 1900;
           }
           stackIn_5_0[stackIn_5_1] = stackIn_6_2;
-          nb.field_j = new ut[2];
+          nb.field_j = new Sprite[2];
           var10[1] = -var12[0] + 2048;
           for (var4 = 0; var4 < 2; var4++) {
             var5 = jo.field_F.field_H[var4];
             var6 = jo.field_F.field_d[var4];
             var7 = jo.field_F.field_Q[var4];
             var8 = df.a(var5, ev.field_B[var7], true, ev.field_B[var6]).b(100, 4369, 20, -56, -20);
-            nb.field_j[var4] = new ut(200, 200);
+            nb.field_j[var4] = new Sprite(200, 200);
             PacketBuffer.a(param0 - 124, nb.field_j[var4]);
             t.c();
-            t.b(on.field_g >> 1, 410);
+            t.b(SoftwareRasterizer.field_g >> 1, 410);
             var8.a(0, var12[var4], 0, 0, 0, 0, 0, 350);
             ta.e(127);
             eo.a(nb.field_j[var4], 65793);

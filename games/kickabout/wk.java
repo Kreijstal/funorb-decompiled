@@ -8,7 +8,7 @@ final class wk {
     static String field_a;
     static String field_e;
     static String field_b;
-    static ut[] field_d;
+    static Sprite[] field_d;
     static la[] field_g;
     static up field_c;
 
@@ -110,7 +110,7 @@ final class wk {
           }
           var3 = (hn) (da.field_h.g(24009));
           while (var3 != null) {
-            tu.field_E.a(var3, false, 0);
+            GameLoopApplet.field_E.a(var3, false, 0);
             var3 = (hn) (da.field_h.c(param0 ^ 19));
           }
           da.field_h.b(22997);
@@ -151,8 +151,8 @@ final class wk {
           if (param0) {
             var5.field_q = 0;
           }
-          var5.field_e = dq.$cfr$intArgs$a$7f8aad568c81(-126, td.field_a.length, var3);
-          var5.field_l = 1 + dq.$cfr$intArgs$a$7f8aad568c81(-62, -1 + ce.field_G[var5.field_q].length, var3);
+          var5.field_e = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-126, td.field_a.length, var3);
+          var5.field_l = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, -1 + ce.field_G[var5.field_q].length, var3);
           var5.field_r = 0;
           if (param0 &&
             var4 != 3) {
@@ -165,9 +165,9 @@ final class wk {
             var5.field_n = 50;
           }
           var5.field_h = new int[]{};
-          var6 = dq.$cfr$intArgs$a$7f8aad568c81(-48, 5, var3);
-          var7 = dq.$cfr$intArgs$a$7f8aad568c81(-40, 3, var3);
-          var8 = dq.$cfr$intArgs$a$7f8aad568c81(107, 3, var3);
+          var6 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-48, 5, var3);
+          var7 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-40, 3, var3);
+          var8 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(107, 3, var3);
           var9 = var8;
           var9 = var9 | var7 << 4;
           var9 = var9 | var6 << 8;
@@ -181,7 +181,7 @@ final class wk {
     final static void a(long param0, int param1) {
         oa.field_a.setTime(new Date(param0));
         if (param1 != 0) {
-          field_d = (ut[]) null;
+          field_d = (Sprite[]) null;
         }
     }
 

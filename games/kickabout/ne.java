@@ -8,7 +8,7 @@ final class ne extends dj {
     static boolean[] field_G;
     static String field_H;
     static String field_L;
-    static tf field_I;
+    static IntrusiveDeque field_I;
     private tk field_E;
     private up[] field_F;
     private kq[] field_K;
@@ -40,18 +40,18 @@ final class ne extends dj {
         var3 = ca.field_f.length;
         if (!vl.b(param0 - 15) ||
           !wn.a((byte) 50) &&
-          !c.a(bo.field_Ab[32], 0, bh.field_f)) {
+          !c.a(bo.field_Ab[32], 0, BufferedSocket.field_f)) {
           var3--;
         }
         for (var4 = 0; var4 < var3; var4++) {
           var5 = new hd();
           var5.a(true, fn.field_d.field_q, 20, 44 + var4 * 44 - 10, fn.field_d.field_w);
-          var5.field_N = (ut) ((Object) fn.field_d);
+          var5.field_N = (Sprite) ((Object) fn.field_d);
           var12.a((byte) -121, var5);
           var6 = ca.field_f[var4];
           for (var7 = 0; var7 < ca.field_f[var4]; var7++) {
             if (hv.field_a[bo.field_Ab[var2 + var7]] &&
-              !c.a(bo.field_Ab[var7 + var2], 0, bh.field_f)) {
+              !c.a(bo.field_Ab[var7 + var2], 0, BufferedSocket.field_f)) {
               var6--;
             }
           }
@@ -59,7 +59,7 @@ final class ne extends dj {
           for (var8 = 0; var8 < ca.field_f[var4]; var8++) {
             var9 = 0;
             if (hv.field_a[bo.field_Ab[var2]] &&
-              !c.a(bo.field_Ab[var2], 0, bh.field_f)) {
+              !c.a(bo.field_Ab[var2], 0, BufferedSocket.field_f)) {
               var9 = 1;
             }
             if (var9 == 0) {
@@ -238,7 +238,7 @@ final class ne extends dj {
         }
         for (var2 = 0; ip.field_b.length > var2; var2++) {
           PacketBuffer.a(73, sn.field_k);
-          on.b();
+          SoftwareRasterizer.b();
           if (var2 != 3 &&
             var2 != 4) {
             stackIn_9_0 = 700;
@@ -246,8 +246,8 @@ final class ne extends dj {
             stackIn_9_0 = 600;
           }
           var3 = stackIn_9_0;
-          var4 = on.field_g >> 1;
-          var5 = on.field_f - 15;
+          var4 = SoftwareRasterizer.field_g >> 1;
+          var5 = SoftwareRasterizer.field_f - 15;
           ip.field_b[var2].a(var3, 128, var4, var5, (byte) -87);
           ta.e(param0 - 204);
           var6 = tv.field_f[var2][0] + this.field_j;
@@ -292,7 +292,7 @@ final class ne extends dj {
           var5 = stackIn_10_0;
           var5 = var5 + this.field_j;
           var6 = 146;
-          on.a(-10 + var5, 126, 265, 270, 10, 65793, 140);
+          SoftwareRasterizer.a(-10 + var5, 126, 265, 270, 10, 65793, 140);
           while (s.field_M.length > var2) {
             var7 = s.field_M[var2];
             var8 = pb.field_C.c(var7, 245, 16);
@@ -308,14 +308,14 @@ final class ne extends dj {
 
     private final void l(byte param0) {
         int stackIn_3_0 = 0;
-        ut stackIn_12_0 = null;
+        Sprite stackIn_12_0 = null;
         int var2;
         int var3;
         int var4;
         int var5;
         int var6;
         int var7;
-        ut var8;
+        Sprite var8;
         int var9;
         int var10;
         int var4Lifetime1;
@@ -330,11 +330,11 @@ final class ne extends dj {
         pb.field_C.a(gd.field_g, this.field_j + 60, 136, 16777215, -1);
         var3 = 40 + this.field_j;
         for (var4 = 0; var4 < 2; var4++) {
-          on.a(var3, 150, 210, 200, 10, 65793, 140);
+          SoftwareRasterizer.a(var3, 150, 210, 200, 10, 65793, 140);
           un.field_d.a(qq.field_L[var4].toUpperCase(), 20 + var3, 175, 16777215, -1);
           for (var5 = 0; var5 < 2; var5++) {
             var6 = var5 * 120 + (var3 + 20);
-            pb.field_C.a(u.field_e[var4][var5], 90 + (var3 - 80 * var5), 84 * var5 + 185, 110, 70, 16777215, -1, var5 << 1, 1, 16);
+            pb.field_C.a(JaggrabDownloader.field_e[var4][var5], 90 + (var3 - 80 * var5), 84 * var5 + 185, 110, 70, 16777215, -1, var5 << 1, 1, 16);
             var7 = 186 + 74 * var5;
             if (var5 == 0) {
               stackIn_12_0 = jn.field_qb;
@@ -348,7 +348,7 @@ final class ne extends dj {
           }
           var3 += 220;
         }
-        on.a(40 + this.field_j, 360, 430, 43, 10, 65793, 140);
+        SoftwareRasterizer.a(40 + this.field_j, 360, 430, 43, 10, 65793, 140);
         if (ak.field_f != null) {
           ak.field_f.c(120 + this.field_j, 363);
         }
@@ -392,7 +392,7 @@ final class ne extends dj {
           ip.field_b[var2] = new gm(fp.a(11, 16, 0, var3_int, 0, 0, 31, false, false, false), var3_int, true);
           ip.field_b[var2].archetype = var3_int;
           ip.field_b[var2].g((byte) 127);
-          ip.field_b[var2].field_mb.a(dq.$cfr$intArgs$a$7f8aad568c81(79, ip.field_b[var2].field_mb.a(true), new Random()), -61);
+          ip.field_b[var2].field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, ip.field_b[var2].field_mb.a(true), new Random()), -61);
         }
         bk.field_a = new gm[2];
         up var6 = new up();
@@ -402,7 +402,7 @@ final class ne extends dj {
           bk.field_a[var3_intLifetime1] = new gm(fp.a(4, 16, var3_intLifetime1, 0, var3_intLifetime1, var3_intLifetime1, 31, false, false, false), 0, true);
           bk.field_a[var3_intLifetime1].a(true, var6, 3);
         }
-        sn.field_k = new ut(200, 300);
+        sn.field_k = new Sprite(200, 300);
         for (var3_intLifetime2 = 0; 9 > var3_intLifetime2; var3_intLifetime2++) {
           this.field_F[var3_intLifetime2] = new up();
           this.field_K[var3_intLifetime2] = new kq();
@@ -478,13 +478,13 @@ final class ne extends dj {
         boolean stackIn_19_3 = false;
         int stackIn_21_2 = 0;
         boolean stackIn_22_3 = false;
-        ut[] stackIn_27_0 = null;
+        Sprite[] stackIn_27_0 = null;
         int stackIn_28_1 = 0;
         uo stackIn_31_0 = null;
         String stackIn_31_1 = null;
         int stackIn_32_2 = 0;
         int stackIn_38_0 = 0;
-        ut[] stackIn_42_0 = null;
+        Sprite[] stackIn_42_0 = null;
         int stackIn_43_1 = 0;
         int stackIn_46_0 = 0;
         int var2;
@@ -497,9 +497,9 @@ final class ne extends dj {
         int var10;
         int var12;
         int var13;
-        ut var14;
-        ut var15;
-        ut var16;
+        Sprite var14;
+        Sprite var15;
+        Sprite var16;
         int var10Lifetime1;
         var13 = Kickabout.field_G;
         stackIn_3_0 = (null == ae.field_C) ? 0 : 1;
@@ -510,7 +510,7 @@ final class ne extends dj {
           this.field_F = (up[]) null;
         }
         for (var4 = 0; 2 > var4; var4++) {
-          on.a(var3, 150, 275, 250, 10, 65793, 140);
+          SoftwareRasterizer.a(var3, 150, 275, 250, 10, 65793, 140);
           stackIn_9_0 = 137 + var3;
           if (var4 == 0) {
             stackIn_10_1 = -60;
@@ -520,8 +520,8 @@ final class ne extends dj {
           var5 = stackIn_9_0 + stackIn_10_1;
           un.field_d.a(sa.field_d[var4].toUpperCase(), var3 + 20, 180, 16777215, -1);
           PacketBuffer.a(param0 ^ -19, sn.field_k);
-          on.b();
-          bk.field_a[var4].a(950, 300, on.field_g >> 1, (on.field_f >> 1) + 60, (byte) -71);
+          SoftwareRasterizer.b();
+          bk.field_a[var4].a(950, 300, SoftwareRasterizer.field_g >> 1, (SoftwareRasterizer.field_f >> 1) + 60, (byte) -71);
           ta.e(param0 ^ 24);
           var6 = bk.field_a[var4].field_G;
           array$0 = new boolean[4];
@@ -626,12 +626,12 @@ final class ne extends dj {
         int var5 = 0;
         int var7 = Kickabout.field_G;
         int var5Lifetime1;
-        on.a(40 + this.field_j, 121, 560, 60, 10, 65793, param0);
+        SoftwareRasterizer.a(40 + this.field_j, 121, 560, 60, 10, 65793, param0);
         pb.field_C.a(vc.field_H, this.field_j + 55, 131, 530, 40, 16777215, -1, 0, 1, 16);
         int var2 = 40 + this.field_j;
         int[][] var3 = new int[][]{new int[]{0, 1, 2, 3}, new int[]{4, 36, 80, 87}};
         for (var4 = 0; var4 < 2; var4++) {
-          on.a(var2, 190, 275, 208, 10, 65793, 140);
+          SoftwareRasterizer.a(var2, 190, 275, 208, 10, 65793, 140);
           un.field_d.a(gf.field_e[var4].toLowerCase(), var2 + 10, 212, 16777215, -1);
           for (var5 = 0; var5 < 4; var5++) {
             pa.field_g[var3[var4][var5]].d(false).c(110 + (var2 + var5 * 40), 200);
@@ -678,9 +678,9 @@ final class ne extends dj {
           this.field_K[var3Lifetime1].b(0, false);
           this.field_K[var3Lifetime1].h((byte) -122);
         }
-        on.a(this.field_j + 40, 120, 560, 50, 10, 65793, 140);
+        SoftwareRasterizer.a(this.field_j + 40, 120, 560, 50, 10, 65793, 140);
         pb.field_C.a(sh.field_e, 70 + this.field_j, 126, 500, 40, 16777215, -1, 0, 1, 16);
-        on.a(this.field_j + 210, 178, 390, 225, 10, 65793, 140);
+        SoftwareRasterizer.a(this.field_j + 210, 178, 390, 225, 10, 65793, 140);
         this.field_E.a(94, false);
         pt.a(this.field_E.field_Gb.field_q + this.field_E.field_F, -22914, this.field_E.field_F, this.field_E.field_T + this.field_E.field_Gb.field_mb, this.field_E.field_T);
         var3Lifetime2 = this.field_E.field_F + 10;

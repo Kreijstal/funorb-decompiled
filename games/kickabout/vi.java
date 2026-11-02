@@ -18,7 +18,7 @@ final class vi extends mc {
         if (param0 != 2915) {
           vi.c((byte) 16);
         }
-        return tf.field_f;
+        return IntrusiveDeque.field_f;
     }
 
     final static kk a(byte param0, CipherPacketBuffer param1) {

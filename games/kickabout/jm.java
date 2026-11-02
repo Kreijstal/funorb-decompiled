@@ -4,21 +4,21 @@
 final class jm extends IntrusiveNode {
     static int field_e;
     byte[] field_k;
-    static ut[] field_i;
+    static Sprite[] field_i;
     static int field_h;
     int field_j;
     long field_f;
-    static ot field_g;
+    static ArgbSprite field_g;
 
-    final static og a(int param0, int param1, int param2, java.awt.Component param3) {
+    final static RasterBuffer a(int param0, int param1, int param2, java.awt.Component param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          og var5 = null;
-          dh var5_ref = null;
-          og stackIn_3_0 = null;
-          dh stackIn_5_0 = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          RasterBuffer stackIn_3_0 = null;
+          ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -29,17 +29,17 @@ final class jm extends IntrusiveNode {
                 jm.a(93, true, 85);
               }
               var4 = Class.forName("pm");
-              var5 = (og) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               var5.a(30, param1, param2, param3);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new dh();
-              ((og) ((Object) var5_ref)).a(30, param1, param2, param3);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).a(30, param1, param2, param3);
               stackIn_5_0 = var5_ref;
-              return (og) ((Object) stackIn_5_0);
+              return (RasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -83,7 +83,7 @@ final class jm extends IntrusiveNode {
         int var5 = 0;
         int var6 = 0;
         hn var7 = null;
-        tf var8 = null;
+        IntrusiveDeque var8 = null;
         int var3_intLifetime1;
         int var4Lifetime1;
         var6 = Kickabout.field_G;
@@ -96,7 +96,7 @@ final class jm extends IntrusiveNode {
           }
           if (cq.field_h instanceof ta &&
             nb.a(param2 + 66)) {
-            og.a(false);
+            RasterBuffer.a(false);
             return;
           }
           if (cq.field_h instanceof ap &&
@@ -125,20 +125,20 @@ final class jm extends IntrusiveNode {
           }
           boolean decompiledFrameRemainder0 = true;
           if (cq.field_h.field_c == 12) {
-            if (sk.a((byte) 97) == tu.field_E.field_p &&
-              IntrusiveNode.b((byte) -110) == tu.field_E.field_F) {
-              stackIn_31_0 = (tu.field_E.field_A) ? 0 : 1;
+            if (sk.a((byte) 97) == GameLoopApplet.field_E.field_p &&
+              IntrusiveNode.b((byte) -110) == GameLoopApplet.field_E.field_F) {
+              stackIn_31_0 = (GameLoopApplet.field_E.field_A) ? 0 : 1;
               if (stackIn_31_0 != (ei.field_n ? 1 : 0)) {
-                stackIn_35_0 = (tu.field_E.field_d) ? 0 : 1;
+                stackIn_35_0 = (GameLoopApplet.field_E.field_d) ? 0 : 1;
                 if (pf.field_c) {
                   stackIn_38_1 = 0;
                 } else {
                   stackIn_38_1 = 1;
                 }
                 if ((stackIn_35_0 == stackIn_38_1 && (tb.field_v != 1 ||
-                  tu.field_E.field_L)) &&
+                  GameLoopApplet.field_E.field_L)) &&
                   (decompiledFrameRemainder0 = (tb.field_v == 0))) {
-                  decompiledFrameRemainder0 = !(!tu.field_E.field_L);
+                  decompiledFrameRemainder0 = !(!GameLoopApplet.field_E.field_L);
                 }
               }
             }
@@ -167,10 +167,10 @@ final class jm extends IntrusiveNode {
                 or.field_d.a(param2 ^ -113, var4Lifetime1);
                 or.field_d.a(param2 + 119, var3_int);
               }
-              tu.field_E.field_p = sk.a((byte) 97);
-              tu.field_E.field_F = IntrusiveNode.b((byte) -95);
-              tu.field_E.field_d = pf.field_c;
-              tu.field_E.field_A = ei.field_n;
+              GameLoopApplet.field_E.field_p = sk.a((byte) 97);
+              GameLoopApplet.field_E.field_F = IntrusiveNode.b((byte) -95);
+              GameLoopApplet.field_E.field_d = pf.field_c;
+              GameLoopApplet.field_E.field_A = ei.field_n;
             }
           }
           if (param2 != -2) {
@@ -232,15 +232,15 @@ final class jm extends IntrusiveNode {
         int var7 = vr.a(-2, 1 + rl.field_r);
         if (param1 == 9863) {
           var8 = var7 - var6;
-          ga.field_R = (float)var6 + (float)var8 * var5;
-          mf.field_Db = dg.field_c + ": " + (int)ga.field_R + "%";
+          TextInputWidget.field_R = (float)var6 + (float)var8 * var5;
+          mf.field_Db = dg.field_c + ": " + (int)TextInputWidget.field_R + "%";
           nm.field_g.b((byte) 63);
           return;
         }
         field_h = -66;
         var8Lifetime1 = var7 - var6;
-        ga.field_R = (float)var6 + (float)var8Lifetime1 * var5;
-        mf.field_Db = dg.field_c + ": " + (int)ga.field_R + "%";
+        TextInputWidget.field_R = (float)var6 + (float)var8Lifetime1 * var5;
+        mf.field_Db = dg.field_c + ": " + (int)TextInputWidget.field_R + "%";
         nm.field_g.b((byte) 63);
     }
 

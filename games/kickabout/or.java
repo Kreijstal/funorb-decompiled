@@ -128,16 +128,16 @@ final class or {
               var26 = lf.a((byte) -79, var22[var23][var24][1]);
               var27 = ug.a(0, var22[var23][var24 + 1][0]);
               var28 = lf.a((byte) -99, var22[var23][var24 + 1][1]);
-              on.e(var25, var26, var27, var28, var19, 128);
+              SoftwareRasterizer.e(var25, var26, var27, var28, var19, 128);
             }
           }
           eo.b(var14, var15, var16, 16777045);
-          on.e(var12, var13, var14, var15, 16776960, 160);
-          on.h(var12 - (var20 >> 1), var13 - (var21 >> 1), var20, var21, 16776960, 160);
-          on.a(var12 - (var18 >> 1), 10 + var13, var18, 6, 65793);
-          on.a(-(var18 >> 1) + var12 + 1, var13 + 11, -2 + var18 - var17, 4, 13369344);
-          on.c(1 + (var12 - (var18 >> 1)), var13 + 12, -2 + (var18 - var17), 16777215, 220);
-          on.c(-(var18 >> 1) + var12 + 1, var13 + 13, var18 - var17 - 2, 16777215, 120);
+          SoftwareRasterizer.e(var12, var13, var14, var15, 16776960, 160);
+          SoftwareRasterizer.h(var12 - (var20 >> 1), var13 - (var21 >> 1), var20, var21, 16776960, 160);
+          SoftwareRasterizer.a(var12 - (var18 >> 1), 10 + var13, var18, 6, 65793);
+          SoftwareRasterizer.a(-(var18 >> 1) + var12 + 1, var13 + 11, -2 + var18 - var17, 4, 13369344);
+          SoftwareRasterizer.c(1 + (var12 - (var18 >> 1)), var13 + 12, -2 + (var18 - var17), 16777215, 220);
+          SoftwareRasterizer.c(-(var18 >> 1) + var12 + 1, var13 + 13, var18 - var17 - 2, 16777215, 120);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "or.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }

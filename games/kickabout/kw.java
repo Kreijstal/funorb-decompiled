@@ -3,7 +3,7 @@
  */
 final class kw {
     static int field_i;
-    static ut field_f;
+    static Sprite field_f;
     static int field_h;
     private String field_d;
     static String field_a;
@@ -27,12 +27,12 @@ final class kw {
         if (!bo.field_Cb.a(false, "stadium")) {
           return bo.field_Cb.a("stadium", -16248);
         }
-        eb.field_i = new ot[4];
+        eb.field_i = new ArgbSprite[4];
         ju.field_T = true;
-        eb.field_i[0] = (ot) (bg.a("stadium", bo.field_Cb, (byte) 74, "top_left_seats"));
-        eb.field_i[1] = (ot) (bg.a("stadium", bo.field_Cb, (byte) 86, "top_right_seats"));
-        eb.field_i[2] = (ot) (bg.a("stadium", bo.field_Cb, (byte) 46, "bot_left_seats"));
-        eb.field_i[3] = (ot) (bg.a("stadium", bo.field_Cb, (byte) 115, "bot_right_seats"));
+        eb.field_i[0] = (ArgbSprite) (bg.a("stadium", bo.field_Cb, (byte) 74, "top_left_seats"));
+        eb.field_i[1] = (ArgbSprite) (bg.a("stadium", bo.field_Cb, (byte) 86, "top_right_seats"));
+        eb.field_i[2] = (ArgbSprite) (bg.a("stadium", bo.field_Cb, (byte) 46, "bot_left_seats"));
+        eb.field_i[3] = (ArgbSprite) (bg.a("stadium", bo.field_Cb, (byte) 115, "bot_right_seats"));
         ph.field_e = new kg[4][3];
         ph.field_e[0][0] = fw.a(bo.field_Cb, "stadium", true, "left_seats_1");
         ph.field_e[0][1] = fw.a(bo.field_Cb, "stadium", true, "left_seats_2");
@@ -161,7 +161,7 @@ final class kw {
             }
             vd.field_c = FootballerAgent.field_p;
             dn.field_yb = sm.field_q;
-            ip.field_a = wj.field_A;
+            ip.field_a = WidgetContainer.field_A;
             kf.field_Eb = vc.field_y;
             if (dr.field_a &&
               1 == vd.field_c) {
@@ -178,7 +178,7 @@ final class kw {
               }
               vd.field_c = FootballerAgent.field_p;
               dn.field_yb = sm.field_q;
-              ip.field_a = wj.field_A;
+              ip.field_a = WidgetContainer.field_A;
               kf.field_Eb = vc.field_y;
               if (dr.field_a &&
                 1 == vd.field_c) {
@@ -204,7 +204,7 @@ final class kw {
               }
               vd.field_c = FootballerAgent.field_p;
               dn.field_yb = sm.field_q;
-              ip.field_a = wj.field_A;
+              ip.field_a = WidgetContainer.field_A;
               kf.field_Eb = vc.field_y;
               if (dr.field_a &&
                 1 == vd.field_c) {
@@ -243,7 +243,7 @@ final class kw {
             }
             vd.field_c = FootballerAgent.field_p;
             dn.field_yb = sm.field_q;
-            ip.field_a = wj.field_A;
+            ip.field_a = WidgetContainer.field_A;
             kf.field_Eb = vc.field_y;
             if (dr.field_a &&
               1 == vd.field_c) {
@@ -271,7 +271,7 @@ final class kw {
               }
               vd.field_c = FootballerAgent.field_p;
               dn.field_yb = sm.field_q;
-              ip.field_a = wj.field_A;
+              ip.field_a = WidgetContainer.field_A;
               kf.field_Eb = vc.field_y;
               if (dr.field_a &&
                 1 == vd.field_c) {
@@ -288,7 +288,7 @@ final class kw {
                 }
                 vd.field_c = FootballerAgent.field_p;
                 dn.field_yb = sm.field_q;
-                ip.field_a = wj.field_A;
+                ip.field_a = WidgetContainer.field_A;
                 kf.field_Eb = vc.field_y;
                 if (dr.field_a &&
                   1 == vd.field_c) {
@@ -314,7 +314,7 @@ final class kw {
                 }
                 vd.field_c = FootballerAgent.field_p;
                 dn.field_yb = sm.field_q;
-                ip.field_a = wj.field_A;
+                ip.field_a = WidgetContainer.field_A;
                 kf.field_Eb = vc.field_y;
                 if (dr.field_a &&
                   1 == vd.field_c) {
@@ -352,7 +352,7 @@ final class kw {
               }
               vd.field_c = FootballerAgent.field_p;
               dn.field_yb = sm.field_q;
-              ip.field_a = wj.field_A;
+              ip.field_a = WidgetContainer.field_A;
               kf.field_Eb = vc.field_y;
               if (dr.field_a &&
                 1 == vd.field_c) {
@@ -370,7 +370,7 @@ final class kw {
                 }
                 vd.field_c = FootballerAgent.field_p;
                 dn.field_yb = sm.field_q;
-                ip.field_a = wj.field_A;
+                ip.field_a = WidgetContainer.field_A;
                 kf.field_Eb = vc.field_y;
                 if (dr.field_a &&
                   1 == vd.field_c) {
@@ -407,7 +407,7 @@ final class kw {
                 }
                 vd.field_c = FootballerAgent.field_p;
                 dn.field_yb = sm.field_q;
-                ip.field_a = wj.field_A;
+                ip.field_a = WidgetContainer.field_A;
                 kf.field_Eb = vc.field_y;
                 if (dr.field_a &&
                   1 == vd.field_c) {
@@ -423,7 +423,7 @@ final class kw {
                   }
                   vd.field_c = FootballerAgent.field_p;
                   dn.field_yb = sm.field_q;
-                  ip.field_a = wj.field_A;
+                  ip.field_a = WidgetContainer.field_A;
                   kf.field_Eb = vc.field_y;
                   if (dr.field_a &&
                     1 == vd.field_c) {
@@ -449,7 +449,7 @@ final class kw {
                   }
                   vd.field_c = FootballerAgent.field_p;
                   dn.field_yb = sm.field_q;
-                  ip.field_a = wj.field_A;
+                  ip.field_a = WidgetContainer.field_A;
                   kf.field_Eb = vc.field_y;
                   if (dr.field_a &&
                     1 == vd.field_c) {
@@ -487,6 +487,6 @@ final class kw {
         field_c = new String[]{"The Ultimate", "Grass Roots", "Muddying Your Knees", "In the Big Leagues", "Hot on the Heels", "Rising Star", "League of Their Own", "We are the Champions", "Notching up the Goals", "Team Player", "All Kitted Out", "World in Motion", "Aggregate Win", "A Decent Margin", "They Think It's All Over", "Globetrotter", "Beat Your Maker", "The Head of God", "The Untouchables", "Cinq Without a Trace", "A-Team", "Coach's Playbook", "Goldenballs", "Team Goldenballs", "Pinpoint Accuracy", "Blink and You'll Miss It", "Comeback Kid", "All Four One", "Pass and Move", "Don't Stop Me Now", "Save the Day", "Route-One", "Hallowe'en", "One for the Cabinet", "There can be Only One", "Undisputed", "Impenetrable", "I Got a Touch!", "Owned", "Pwned", "Slipping Away", "Holding On", "Never Gonna Give You Up", "Mod Off!", "Trapped", "Trampled", "Stomped", "Grounded", "Flattened", "Splatted", "On a Roll", "Hot Potato", "Brutal Contender", "Slow and Steady Wins the Race", "Diamonds Aren't Forever", "Blitzkrieg!", "Queen's Park", "Topper Harley", "Pacifist", "Slow Coach", "Tactically Superior", "Frontier", "The Wall", "By the Skin of Their Teeth", "It's a Funny Old Game", "Flair for Finishing", "The Veterans", "Slip 'n' Slide", "Keepy-uppy", "Longshot", "Wonder Goal", "Man of the Match", "Up, Under, and In"};
         field_a = "Accept";
         field_g = "Loading extra data (1/2)";
-        field_f = new ut(256, 256);
+        field_f = new Sprite(256, 256);
     }
 }

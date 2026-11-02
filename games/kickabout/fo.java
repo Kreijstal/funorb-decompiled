@@ -192,7 +192,7 @@ final class fo extends jd {
         }
     }
 
-    fo(ga param0) {
+    fo(TextInputWidget param0) {
         super(param0);
     }
 

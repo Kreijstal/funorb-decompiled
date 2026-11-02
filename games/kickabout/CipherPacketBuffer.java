@@ -5,7 +5,7 @@ final class CipherPacketBuffer extends PacketBuffer {
     static String[] field_s;
     private int field_u;
     static String[] field_t;
-    static ot field_q;
+    static ArgbSprite field_q;
     private int field_o;
     static int[] field_r;
     private IsaacRandom field_p;
@@ -28,19 +28,19 @@ final class CipherPacketBuffer extends PacketBuffer {
         this.field_o = this.field_n * 8;
     }
 
-    final static void a(int param0, sj param1) {
-        ut var2 = null;
+    final static void a(int param0, ResourceArchive param1) {
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new ut(param1.a("", "final_frame.jpg", 8), (java.awt.Component) ((Object) ic.field_d));
+          var2 = new Sprite(param1.a("", "final_frame.jpg", 8), (java.awt.Component) ((Object) ic.field_d));
           var3 = var2.field_q;
           var4 = var2.field_w;
           tr.d(-12974);
-          js.field_a = new ut(var3, param0 * var4 / 4);
+          js.field_a = new Sprite(var3, param0 * var4 / 4);
           js.field_a.e();
           var2.d(0, 0);
-          po.field_e = new ut(var3, var4 - js.field_a.field_w);
+          po.field_e = new Sprite(var3, var4 - js.field_a.field_w);
           po.field_e.e();
           var2.d(0, -js.field_a.field_w);
           po.field_e.field_n = js.field_a.field_w;
@@ -159,16 +159,16 @@ final class CipherPacketBuffer extends PacketBuffer {
         int var1;
         int var2;
         int var3;
-        sj var4;
-        ea.field_a = on.field_g;
-        bh.field_s = on.field_f;
+        ResourceArchive var4;
+        ea.field_a = SoftwareRasterizer.field_g;
+        BufferedSocket.field_s = SoftwareRasterizer.field_f;
         pa.b((byte) 92);
         tn.field_d.a(0, ss.field_c.field_q, 0, -2 + ss.field_c.field_mb - 40, (byte) -123);
         li.field_a.a(true, m.field_m.field_q, 0, 0, sh.field_c);
         var1 = sh.field_c + 2;
         if (param0) {
-          var4 = (sj) null;
-          CipherPacketBuffer.a(-41, (sj) null);
+          var4 = (ResourceArchive) null;
+          CipherPacketBuffer.a(-41, (ResourceArchive) null);
         }
         stackIn_4_0 = mc.field_d;
         stackIn_5_1 = (param0) ? false : true;
@@ -187,7 +187,7 @@ final class CipherPacketBuffer extends PacketBuffer {
         }
         ((hd) (Object) stackIn_4_0).a(stackIn_5_1, stackIn_7_2, stackIn_7_3, stackIn_8_4, stackIn_10_5 - stackIn_11_6);
         ClientException.a(0);
-        rg.field_a.a(true, ss.field_c.field_q, 0, ss.field_c.field_mb - 40, 40);
+        MouseWheelInput.field_a.a(true, ss.field_c.field_q, 0, ss.field_c.field_mb - 40, 40);
         fp.field_o.a(true, af.field_d.field_q, 0, 0, 30);
         stackIn_13_0 = bt.field_b;
         stackIn_14_1 = (param0) ? false : true;

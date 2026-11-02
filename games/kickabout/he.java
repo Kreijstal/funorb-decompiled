@@ -127,8 +127,8 @@ final class he extends hd {
           return ld.field_a;
         }
         if (param0 != 320) {
-          vm var2 = (vm) null;
-          he.a((vm) null, false);
+          PcmSampleStream var2 = (PcmSampleStream) null;
+          he.a((PcmSampleStream) null, false);
         }
         if (!lc.field_e.a((byte) -80)) {
           return lc.field_e.a(3);
@@ -154,8 +154,8 @@ final class he extends hd {
         var9 = Kickabout.field_G;
         try {
           if (null != af.field_a &&
-            nw.field_b.participantStatus[ek.field_G].d(3511)) {
-            var10 = (gm) (nw.field_b.a((byte) -76, ek.field_G));
+            IntrusiveDequeCursor.field_b.participantStatus[ek.field_G].d(3511)) {
+            var10 = (gm) (IntrusiveDequeCursor.field_b.a((byte) -76, ek.field_G));
             var2 = ug.a(param0, var10.field_kb >> 16);
             var3 = lf.a((byte) -119, var10.field_bb >> 16);
             if (!lb.a(var2, var3, param0 ^ 480)) {
@@ -166,9 +166,9 @@ final class he extends hd {
             for (var5 = 0; var5 < var4.length; var5++) {
               var6 = var4[var5];
               var7 = -1;
-              for (var8 = 0; nw.field_b.playerCount > var8; var8++) {
-                if (nw.field_b.field_g[ek.field_G].field_p == nw.field_b.field_g[var8].field_p &&
-                  var6.field_h == nw.field_b.participantStatus[var8].field_g) {
+              for (var8 = 0; IntrusiveDequeCursor.field_b.playerCount > var8; var8++) {
+                if (IntrusiveDequeCursor.field_b.field_g[ek.field_G].field_p == IntrusiveDequeCursor.field_b.field_g[var8].field_p &&
+                  var6.field_h == IntrusiveDequeCursor.field_b.participantStatus[var8].field_g) {
                   var7 = var8;
                 }
                 var6.a(var2, var3, var7, -113);
@@ -209,10 +209,10 @@ final class he extends hd {
         if (param2 != 240) {
           field_Ub = (String) null;
         }
-        return wt.a(param3, ga.field_O[param4], em.field_e ? !param1 ? true : false : param1, param4, param0, -121);
+        return wt.a(param3, TextInputWidget.field_O[param4], em.field_e ? !param1 ? true : false : param1, param4, param0, -121);
     }
 
-    final static void a(vm param0, boolean param1) {
+    final static void a(PcmSampleStream param0, boolean param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

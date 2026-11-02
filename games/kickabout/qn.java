@@ -5,7 +5,7 @@ final class qn {
     static String field_c;
     static dg field_a;
     static String field_d;
-    static tf field_b;
+    static IntrusiveDeque field_b;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
@@ -51,7 +51,7 @@ final class qn {
               } else {
                 mr.field_W[var12].a(true, var8, var6_int, var13, var7Lifetime1);
                 kt.field_m[var12].a(true, -param3 + var9, param3, 0, var7Lifetime1);
-                av.field_b[var12].a(true, param1, var9, param2, -param2 + (var7Lifetime1 - param2));
+                SocketConnector.field_b[var12].a(true, param1, var9, param2, -param2 + (var7Lifetime1 - param2));
                 ds.field_a[var12].a(true, -var10 - param3 + var8, var10, param2, -param2 - param2 + var7Lifetime1);
               }
             }

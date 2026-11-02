@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ph {
-    static ut field_b;
+    static Sprite field_b;
     static hd field_f;
     static String field_c;
     static String field_d;
@@ -86,6 +86,6 @@ final class ph {
         field_c = "Create";
         field_d = "Playing";
         field_a = 0;
-        field_b = new ut(50, 20);
+        field_b = new Sprite(50, 20);
     }
 }

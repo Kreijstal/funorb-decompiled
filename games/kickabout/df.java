@@ -119,9 +119,9 @@ final class df extends dj {
         int var7 = 0;
         int stackIn_9_0 = 0;
         int stackIn_12_0 = 0;
-        ot stackIn_23_0 = null;
+        ArgbSprite stackIn_23_0 = null;
         int var3;
-        ot var4;
+        ArgbSprite var4;
         int var4_int;
         int var5;
         int var6;
@@ -130,7 +130,7 @@ final class df extends dj {
         var9 = Kickabout.field_G;
         super.a(param0, param1);
         if (this.field_C == 0) {
-          on.a(this.field_j + 40, 198, 560, 200, 10, 65793, 128);
+          SoftwareRasterizer.a(this.field_j + 40, 198, 560, 200, 10, 65793, 128);
           ms.a(wa.field_b, this.field_j + 40, 560, false, 0, 126);
           un.field_d.a(c.field_h.toLowerCase(), 56 + this.field_j, 222, 16777215, -1);
           for (var3 = 0; var3 < 3; var3++) {
@@ -146,7 +146,7 @@ final class df extends dj {
               var5 = stackIn_12_0;
               var5 = var5 + this.field_j;
               var6 = 146;
-              on.a(-10 + var5, 126, 265, 270, 10, 65793, 140);
+              SoftwareRasterizer.a(-10 + var5, 126, 265, 270, 10, 65793, 140);
               if (var3 == 1) {
                 var6 += 50;
               }
@@ -162,7 +162,7 @@ final class df extends dj {
                 stackIn_23_0 = CipherPacketBuffer.field_q;
               }
               var4 = stackIn_23_0;
-              ((ut) ((Object) var4)).c(var3 * 45 + 380 + this.field_j, 145);
+              ((Sprite) ((Object) var4)).c(var3 * 45 + 380 + this.field_j, 145);
             }
           }
         }
@@ -206,7 +206,7 @@ final class df extends dj {
             re.field_c.field_e >= 0) {
             var2 = gl.field_d[re.field_c.field_e];
             if (2 == var2) {
-              dh.c((byte) -77);
+              ImageProducerRasterBuffer.c((byte) -77);
             }
           }
           stackIn_16_0 = var2;

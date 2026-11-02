@@ -13,7 +13,7 @@ final class jo extends tm {
         super(param0, param1, param2);
     }
 
-    final static kg[] a(sj param0, int param1, String param2, String param3) {
+    final static kg[] a(ResourceArchive param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -99,8 +99,8 @@ final class jo extends tm {
                 kr.a(var6, true, var5_int);
               }
               var7 = r.a(0, var5_int);
-              av.field_b[var5_int].field_N = il.field_d[var7];
-              ds.field_a[var5_int].field_E = tf.field_h[var7];
+              SocketConnector.field_b[var5_int].field_N = il.field_d[var7];
+              ds.field_a[var5_int].field_E = IntrusiveDeque.field_h[var7];
             }
           }
           if (0 != uq.field_a.field_sb) {
@@ -159,7 +159,7 @@ final class jo extends tm {
         field_A = null;
     }
 
-    final static boolean a(tf param0, boolean param1) {
+    final static boolean a(IntrusiveDeque param0, boolean param1) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

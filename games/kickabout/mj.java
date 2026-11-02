@@ -7,23 +7,23 @@ final class mj {
 
     final static void a(byte param0, int param1) {
         int var2_int = 0;
-        ot var3 = null;
+        ArgbSprite var3 = null;
         double[] var7 = null;
         double[] var6 = null;
         double[] var5 = null;
         int var4 = Kickabout.field_G;
         hl.field_e = ng.a(0, param1, param0 - 7, 11, true, 30);
         hq.field_e = ng.a(30, param1, param0 ^ 111, 11, false, 60);
-        am.field_h = sr.a(60, param1, true, (byte) -67, 80, 11);
+        DualLinkNode.field_h = sr.a(60, param1, true, (byte) -67, 80, 11);
         ub.field_G = sr.a(80, param1, false, (byte) -120, 95, 11);
-        c.field_f = (ut[]) ((Object) new ot[4]);
+        c.field_f = (Sprite[]) ((Object) new ArgbSprite[4]);
         if (param0 != -39) {
           return;
         }
         try {
           for (var2_int = 0; var2_int < 4; var2_int++) {
             var3 = eb.field_i[var2_int];
-            c.field_f[var2_int] = ih.field_c == 0 ? (ut) ((Object) var3) : (ut) ((Object) var3.h());
+            c.field_f[var2_int] = ih.field_c == 0 ? (Sprite) ((Object) var3) : (Sprite) ((Object) var3.h());
             pd.a(c.field_f[var2_int], 20684);
             jm.a(100, 9863, var2_int + 96);
           }
@@ -40,13 +40,13 @@ final class mj {
           wh.field_p = eo.b(bf.field_x);
           tm.field_z = eo.a(wh.field_p);
           pf.field_b = eo.b(tm.field_z);
-          mt.field_d = new ut(tm.field_z.field_o, LoggedGoal.field_o.field_v);
-          qj.field_a = new ut(od.field_p.field_o, bf.field_x.field_v);
+          mt.field_d = new Sprite(tm.field_z.field_o, LoggedGoal.field_o.field_v);
+          qj.field_a = new Sprite(od.field_p.field_o, bf.field_x.field_v);
           PacketBuffer.a(-70, mt.field_d);
-          LoggedGoal.field_o.d(on.field_g - LoggedGoal.field_o.field_o, 0);
+          LoggedGoal.field_o.d(SoftwareRasterizer.field_g - LoggedGoal.field_o.field_o, 0);
           ta.e(param0 + 158);
           PacketBuffer.a(-42, qj.field_a);
-          od.field_p.d(0, -od.field_p.field_v + on.field_f);
+          od.field_p.d(0, -od.field_p.field_v + SoftwareRasterizer.field_f);
           ta.e(118);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "mj.D(" + param0 + ',' + param1 + ')');
@@ -60,7 +60,7 @@ final class mj {
         }
     }
 
-    final static void a(boolean param0, vm param1) {
+    final static void a(boolean param0, PcmSampleStream param1) {
         try {
           if (!param0) {
             mj.a(-0.3391155972284911, 69, -1.3430351906994813, -0.23628554021572995);
@@ -72,14 +72,14 @@ final class mj {
     }
 
     final static void a(double param0, int param1, double param2, double param3) {
-        wm.field_C = param2;
+        CachedArchiveSource.field_C = param2;
         cq.field_f = param3;
         if (param1 != 60) {
           mj.a(49);
         }
         la.field_d = param0 * 8.0;
         if (ia.field_c) {
-          wm.field_C = 896.0 - wm.field_C;
+          CachedArchiveSource.field_C = 896.0 - CachedArchiveSource.field_C;
           cq.field_f = 1344.0 - cq.field_f;
         }
     }

@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ug {
-    static ut[] field_c;
+    static Sprite[] field_c;
     static java.applet.Applet field_a;
-    static ut[][] field_b;
+    static Sprite[][] field_b;
     static String field_d;
     static wd field_e;
     static boolean[] field_f;
@@ -15,7 +15,7 @@ final class ug {
         field_d = null;
         field_c = null;
         field_a = null;
-        field_b = (ut[][]) null;
+        field_b = (Sprite[][]) null;
         if (param0 != -1) {
           IntrusiveNode var2 = (IntrusiveNode) null;
           ug.a((IntrusiveNode) null, 81, (IntrusiveNode) null);
@@ -59,7 +59,7 @@ final class ug {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        tf var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         gg var6 = null;
         int var7 = 0;
@@ -119,7 +119,7 @@ final class ug {
             }
             stackIn_18_0 = var6.field_Bb;
             if (0 < var10) {
-              stackIn_19_1 = hu.a(var6.field_Bb.field_X, var6.field_Gb, var10);
+              stackIn_19_1 = BitmapFont.a(var6.field_Bb.field_X, var6.field_Gb, var10);
             } else {
               stackIn_19_1 = var6.field_Gb;
             }

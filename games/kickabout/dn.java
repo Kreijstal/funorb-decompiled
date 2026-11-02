@@ -16,8 +16,8 @@ final class dn extends hd {
 
     dn(int param0) {
         this.field_Bb = param0;
-        ut var3 = new ut(qe.field_i[PacketBuffer.field_e[this.field_Bb]].field_q >> 2, qe.field_i[PacketBuffer.field_e[this.field_Bb]].field_w >> 2);
-        ut var2 = var3;
+        Sprite var3 = new Sprite(qe.field_i[PacketBuffer.field_e[this.field_Bb]].field_q >> 2, qe.field_i[PacketBuffer.field_e[this.field_Bb]].field_w >> 2);
+        Sprite var2 = var3;
         PacketBuffer.a(-59, var3);
         qe.field_i[PacketBuffer.field_e[this.field_Bb]].g(0, 0);
         ta.e(121);

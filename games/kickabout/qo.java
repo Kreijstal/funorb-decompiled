@@ -4,12 +4,12 @@
 import java.io.*;
 
 final class qo extends jd {
-    static hu field_k;
+    static BitmapFont field_k;
     static eg[] field_l;
     static String field_j;
 
-    final static tf d(byte param0) {
-        tf var1 = new tf();
+    final static IntrusiveDeque d(byte param0) {
+        IntrusiveDeque var1 = new IntrusiveDeque();
         var1.a(new hm("sumIntegers", new Class[]{int[].class}, (String) null), 3);
         var1.a(new kb("writeIntegers", new Class[]{int[].class}, (String) null), 3);
         var1.a(new jo("demoIntegers", new Class[]{}, (String) null), 3);
@@ -73,23 +73,23 @@ final class qo extends jd {
         return (int)(param1 * param2 >> 16);
     }
 
-    final static ot g(int param0) {
+    final static ArgbSprite g(int param0) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = Kickabout.field_G;
-        ut var6 = new ut(108, 108);
+        Sprite var6 = new Sprite(108, 108);
         int var3Lifetime1;
         PacketBuffer.a(-110, var6);
-        on.d(54, 54, 51, 204);
+        SoftwareRasterizer.d(54, 54, 51, 204);
         for (var2_int = 43; var2_int > 0; var2_int--) {
           var3 = 119 * var2_int / 43 + 34;
-          on.d(54, 54, var2_int, var3);
+          SoftwareRasterizer.d(54, 54, var2_int, var3);
         }
         if (param0 != -22976) {
           qo.g(126);
         }
         ta.e(param0 ^ -22987);
-        ot var2 = new ot(54, 54);
+        ArgbSprite var2 = new ArgbSprite(54, 54);
         PacketBuffer.a(param0 ^ -23017, var2);
         var6.f(0, 0);
         ta.e(125);
@@ -159,7 +159,7 @@ final class qo extends jd {
             un.field_c = cp.field_h;
           } else {
             try {
-              op.field_y = new bh((java.net.Socket) (wt.field_A.field_b), vl.field_c);
+              op.field_y = new BufferedSocket((java.net.Socket) (wt.field_A.field_b), vl.field_c);
               or.field_d.field_n = 0;
               var2_ref_ml = un.field_e;
               un.field_c = sd.field_d;
@@ -167,7 +167,7 @@ final class qo extends jd {
               dj.field_A = param0 ? -2 : -1;
               wb.field_n = param0 ? -2 : -1;
               kq.field_Ab = param0 ? -2 : -1;
-              dh.a(fp.field_g, il.field_g, or.field_d, -3210, s.field_E);
+              ImageProducerRasterBuffer.a(fp.field_g, il.field_g, or.field_d, -3210, s.field_E);
               c.a(-1, false);
             } catch (IOException iOException) {
               un.field_c = cp.field_h;
@@ -183,7 +183,7 @@ final class qo extends jd {
         }
     }
 
-    qo(ga param0) {
+    qo(TextInputWidget param0) {
         super(param0);
     }
 

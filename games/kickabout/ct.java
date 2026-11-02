@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-abstract class ct extends fd implements jp {
+abstract class ct extends UiWidget implements jp {
     static String field_w;
     static Calendar field_y;
-    fd field_z;
+    UiWidget field_z;
     static String field_x;
     static int[][] field_v;
 
@@ -16,7 +16,7 @@ abstract class ct extends fd implements jp {
         }
         if (0 == param0 &&
           null != this.field_r) {
-          this.field_r.a(121, true, param3, (fd) (this), param2);
+          this.field_r.a(121, true, param3, (UiWidget) (this), param2);
         }
         if (null != this.field_z) {
           this.field_z.a(param0, 65, param2 + this.field_t, param3 + this.field_g);
@@ -30,8 +30,8 @@ abstract class ct extends fd implements jp {
         return null != this.a(0) ? true : false;
     }
 
-    fd a(int param0) {
-        fd var2 = this.field_z;
+    UiWidget a(int param0) {
+        UiWidget var2 = this.field_z;
         if (var2 != null &&
           var2.b(19)) {
           return var2;
@@ -43,7 +43,7 @@ abstract class ct extends fd implements jp {
         return null;
     }
 
-    final boolean a(fd param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -74,7 +74,7 @@ abstract class ct extends fd implements jp {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    private final boolean b(byte param0, fd param1) {
+    private final boolean b(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -119,7 +119,7 @@ abstract class ct extends fd implements jp {
         return var2;
     }
 
-    final boolean a(char param0, byte param1, fd param2, int param3) {
+    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_12_0 = false;
@@ -175,7 +175,7 @@ abstract class ct extends fd implements jp {
         return var3 + (param1 + (param1 >>> 31)) % param2;
     }
 
-    final boolean a(int param0, fd param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         boolean stackIn_5_0 = false;
@@ -201,7 +201,7 @@ abstract class ct extends fd implements jp {
         }
     }
 
-    boolean a(boolean param0, int param1, int param2, fd param3, int param4, int param5, int param6) {
+    boolean a(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -276,7 +276,7 @@ abstract class ct extends fd implements jp {
         }
     }
 
-    private final boolean a(byte param0, fd param1) {
+    private final boolean a(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
@@ -350,7 +350,7 @@ abstract class ct extends fd implements jp {
         }
     }
 
-    void a(int param0, int param1, int param2, fd param3, int param4, int param5) {
+    void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -378,7 +378,7 @@ abstract class ct extends fd implements jp {
         }
     }
 
-    void a(byte param0, fd param1, int param2, int param3) {
+    void a(byte param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
           if (null != this.field_z) {
@@ -406,7 +406,7 @@ abstract class ct extends fd implements jp {
                 var2 = Runtime.getRuntime();
                 var4 = (Object[]) null;
                 var3 = (Long) (var1_ref_java_lang_reflect_Method.invoke((Object) (var2), (Object[]) null));
-                nw.field_d = (int)(var3.longValue() / 1048576L) + 1;
+                IntrusiveDequeCursor.field_d = (int)(var3.longValue() / 1048576L) + 1;
               } catch (java.lang.Throwable decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = decompiledCaughtException;

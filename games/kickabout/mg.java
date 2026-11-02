@@ -4,9 +4,9 @@
 import java.util.*;
 
 final class mg {
-    static ut field_g;
+    static Sprite field_g;
     static String field_d;
-    static gq field_a;
+    static PcmStreamMixer field_a;
     static int[] field_b;
     static boolean field_f;
     static String field_e;
@@ -58,7 +58,7 @@ final class mg {
           }
           var7 = new gm(var6, param0.field_q, true);
           var7.a((byte) -31, 0);
-          var7.field_mb.a(dq.$cfr$intArgs$a$7f8aad568c81(-121, var7.field_mb.a(true), new Random()), -38);
+          var7.field_mb.a(ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-121, var7.field_mb.a(true), new Random()), -38);
           stackIn_3_0 = var7;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

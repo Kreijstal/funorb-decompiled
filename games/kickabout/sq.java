@@ -4,10 +4,10 @@
 final class sq extends i {
     static gf[] field_H;
     static boolean field_G;
-    static ut[] field_F;
+    static Sprite[] field_F;
 
     final static boolean b(int param0, int param1, int param2) {
-        int var3 = null != ow.field_b ? 1 : 0;
+        int var3 = null != ArchiveSource.field_b ? 1 : 0;
         if (cc.field_e == 9 &&
           cb.a(ol.field_z, mv.field_a, (byte) -64, qs.field_S, nr.field_r)) {
           if (ol.field_z != 2 &&
@@ -27,7 +27,7 @@ final class sq extends i {
         if (11 == cc.field_e &&
           CommonGame.field_j) {
           if (qs.field_K == 2 &&
-            !nq.a(false, oc.field_f, qh.field_c)) {
+            !nq.a(false, oc.field_f, SectorCacheStore.field_c)) {
             return false;
           }
           if (2 != qs.field_K &&

@@ -7,9 +7,9 @@ final class cp implements Runnable {
     static hd field_g;
     volatile boolean field_c;
     volatile boolean field_e;
-    bu field_f;
+    PlatformTaskDispatcher field_f;
     static long[] field_d;
-    volatile uh[] field_b;
+    volatile PcmPlayerService[] field_b;
 
     final static wn a(int param0, String param1) {
         int var2_int = 0;
@@ -30,12 +30,12 @@ final class cp implements Runnable {
           if (mj.field_a == cr.field_d &&
             param1.equals(pr.field_c)) {
             mj.field_a = vj.field_a;
-            stackIn_9_0 = u.field_h;
+            stackIn_9_0 = JaggrabDownloader.field_h;
             return stackIn_9_0;
           }
           mj.field_a = nr.field_f;
           pr.field_c = param1;
-          u.field_h = null;
+          JaggrabDownloader.field_h = null;
           stackIn_7_0 = null;
           return (wn) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -62,7 +62,7 @@ final class cp implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        uh var2 = null;
+        PcmPlayerService var2 = null;
         int var4 = Kickabout.field_G;
         this.field_c = true;
         try {
@@ -114,7 +114,7 @@ final class cp implements Runnable {
     }
 
     cp() {
-        this.field_b = new uh[2];
+        this.field_b = new PcmPlayerService[2];
         this.field_e = false;
         this.field_c = false;
     }

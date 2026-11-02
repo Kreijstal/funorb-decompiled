@@ -4,7 +4,7 @@
 final class sa extends java.awt.Canvas {
     static String[] field_c;
     private java.awt.Component field_b;
-    static bu field_a;
+    static PlatformTaskDispatcher field_a;
     static String[] field_d;
     static int field_e;
 
@@ -49,7 +49,7 @@ final class sa extends java.awt.Canvas {
             try {
               var10 = param0.getParameter("cookieprefix");
               var3 = var10 + "settings";
-              var4 = (String) (mm.a(30858, "getcookies", param0));
+              var4 = (String) (AppletJavaScriptBridge.a(30858, "getcookies", param0));
               var5 = FormationAgent.a(var4, 2, ';');
               var6 = 0;
               var7 = 35 % ((param1 - 32) / 57);
@@ -109,7 +109,7 @@ final class sa extends java.awt.Canvas {
 
     static {
         field_c = new String[]{"Press the spacebar to sprint.", "Press 'CTRL' to sprint."};
-        tf discarded$0 = new tf();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
         field_d = new String[]{"Modern", "Old School"};
     }
 }

@@ -3,7 +3,7 @@
  */
 final class qe {
     String field_a;
-    static ot[] field_i;
+    static ArgbSprite[] field_i;
     private int field_c;
     private oc[] field_d;
     private int field_g;
@@ -13,7 +13,7 @@ final class qe {
     static int[] field_b;
     float field_h;
 
-    final void a(sj param0, byte param1, String param2, String param3) {
+    final void a(ResourceArchive param0, byte param1, String param2, String param3) {
         try {
           this.a(18476, param0, (String) null, param2, param3, -1);
           if (param1 > -105) {
@@ -40,7 +40,7 @@ final class qe {
           }
           this.field_h = (float)this.field_c * var4_float / (float)(1 + this.field_e);
           if (param0 != -1) {
-            field_i = (ot[]) null;
+            field_i = (ArgbSprite[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -218,7 +218,7 @@ final class qe {
                   }
                   var10 = var10 + var12;
                   var9_int = var9_int + var11;
-                  var16Lifetime2 = var16Lifetime2 + on.field_g;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_g;
                 }
               }
               var16Lifetime3 = -param0 + param3;
@@ -268,7 +268,7 @@ final class qe {
                 return;
               }
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + on.field_g;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_g;
               var10 = var10 + var12;
             }
             return;
@@ -323,7 +323,7 @@ final class qe {
         return true;
     }
 
-    final void a(sj param0, String param1, int param2, String param3, String param4) {
+    final void a(ResourceArchive param0, String param1, int param2, String param3, String param4) {
         if (param2 != -6869) {
           return;
         }
@@ -334,7 +334,7 @@ final class qe {
         }
     }
 
-    private final void a(int param0, sj param1, String param2, String param3, String param4, int param5) {
+    private final void a(int param0, ResourceArchive param1, String param2, String param3, String param4, int param5) {
         int fieldTemp$1 = 0;
         oc[] var7 = null;
         oc var7_ref = null;
@@ -416,11 +416,11 @@ final class qe {
         field_j = null;
     }
 
-    final void a(String param0, sj param1, int param2) {
+    final void a(String param0, ResourceArchive param1, int param2) {
         try {
           if (param2 >= -67) {
-            sj var5 = (sj) null;
-            this.a((String) null, (sj) null, -7);
+            ResourceArchive var5 = (ResourceArchive) null;
+            this.a((String) null, (ResourceArchive) null, -7);
           }
           this.a(18476, param1, (String) null, (String) null, param0, -1);
         } catch (RuntimeException runtimeException) {

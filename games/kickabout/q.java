@@ -35,7 +35,7 @@ final class q {
           hw.field_k = false;
           er.field_h = new byte[(7 + qi.field_p) / 8];
           uv.field_i = null;
-          ow.field_b = null;
+          ArchiveSource.field_b = null;
           var10_int = 0;
           for (var11 = 0; var11 < rp.field_x.length; var11++) {
             var10_int = var10_int + (rp.field_x[var11] & 255);
@@ -43,7 +43,7 @@ final class q {
           var10_int = (7 + var10_int) / 8;
           rf.field_d = new byte[var10_int];
           if (null == param0.field_jb) {
-            param0.field_jb = new tf();
+            param0.field_jb = new IntrusiveDeque();
           }
           rp.field_B = param0.field_jb;
           rp.field_B.b(22997);
@@ -53,13 +53,13 @@ final class q {
           da.field_o = -1;
           fh.field_b = 0;
           if (param6.field_jb == null) {
-            param6.field_jb = new tf();
+            param6.field_jb = new IntrusiveDeque();
           }
           kq.field_yb = param6.field_jb;
           kq.field_yb.b(22997);
           sr.field_f = new em(param9);
           if (param4.field_jb == null) {
-            param4.field_jb = new tf();
+            param4.field_jb = new IntrusiveDeque();
           }
           lw.field_d = param4.field_jb;
           lw.field_d.b(22997);
@@ -127,14 +127,14 @@ final class q {
         return this.field_a >= this.field_g.length ? true : false;
     }
 
-    final static ut[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        ut[] var10;
-        ut[] var11_ref_ut__;
+        Sprite[] var10;
+        Sprite[] var11_ref_ut__;
         int var11;
         int var12;
-        ut var13;
+        Sprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -145,7 +145,7 @@ final class q {
         int var12Lifetime4;
         var15 = Kickabout.field_G;
         var9 = param1 + (param3 + param0);
-        var10 = new ut[]{new ut(var9, var9), new ut(param4, var9), new ut(var9, var9), new ut(var9, param4), new ut(64, 64), new ut(var9, param4), new ut(var9, var9), new ut(param4, var9), new ut(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param4, var9), new Sprite(var9, var9), new Sprite(var9, param4), new Sprite(64, 64), new Sprite(var9, param4), new Sprite(var9, var9), new Sprite(param4, var9), new Sprite(var9, var9)};
         var11_ref_ut__ = var10;
         for (var12 = 0; var12 < var11_ref_ut__.length; var12++) {
           var13 = var11_ref_ut__[var12];
@@ -180,7 +180,7 @@ final class q {
           }
         }
         if (param5 != -1481) {
-          return (ut[]) null;
+          return (Sprite[]) null;
         }
         for (var11Lifetime3 = 0; param4 >> 1 > var11Lifetime3; var11Lifetime3++) {
           for (var12Lifetime4 = 0; var12Lifetime4 < param1; var12Lifetime4++) {
@@ -193,7 +193,7 @@ final class q {
         return var10;
     }
 
-    q(tf param0) {
+    q(IntrusiveDeque param0) {
         int incrementValue$2 = 0;
         int var2_int = 0;
         lk var3 = null;

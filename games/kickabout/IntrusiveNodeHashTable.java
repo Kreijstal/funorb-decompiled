@@ -8,7 +8,7 @@ final class IntrusiveNodeHashTable {
     private IntrusiveNode field_c;
     static String field_f;
     private int field_b;
-    static ut[] field_g;
+    static Sprite[] field_g;
 
     final IntrusiveNode b(int param0) {
         this.field_a = param0;
@@ -61,7 +61,7 @@ final class IntrusiveNodeHashTable {
         }
         cf.field_Db = param0;
         dc.field_d = 0;
-        wm.field_s = 1;
+        CachedArchiveSource.field_s = 1;
     }
 
     final void a(boolean param0) {
@@ -120,7 +120,7 @@ final class IntrusiveNodeHashTable {
         return var2;
     }
 
-    final static void a(boolean param0, ut[] param1) {
+    final static void a(boolean param0, Sprite[] param1) {
         int var2_int = 0;
         int var6 = 0;
         RuntimeException stackIn_19_0 = null;
@@ -128,14 +128,14 @@ final class IntrusiveNodeHashTable {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        ut var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var7 = 0;
         var7 = Kickabout.field_G;
         try {
           ug.field_c = param1;
-          sp.field_Hb = new ut[ug.field_c.length];
+          sp.field_Hb = new Sprite[ug.field_c.length];
           for (var2_int = 0; var2_int < ug.field_c.length; var2_int++) {
             var3 = ug.field_c[var2_int].b();
             var4 = 0;
@@ -155,7 +155,7 @@ final class IntrusiveNodeHashTable {
             sp.field_Hb[var2_int] = var3;
           }
           if (!param0) {
-            field_g = (ut[]) null;
+            field_g = (Sprite[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -190,6 +190,6 @@ final class IntrusiveNodeHashTable {
 
     static {
         field_f = "ESC - cancel private message";
-        field_g = (ut[]) ((Object) new ot[7]);
+        field_g = (Sprite[]) ((Object) new ArgbSprite[7]);
     }
 }

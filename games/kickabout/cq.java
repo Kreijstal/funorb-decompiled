@@ -6,9 +6,9 @@ final class cq extends IntrusiveNode {
     static int field_g;
     static js field_h;
     static double field_f;
-    static hu field_e;
+    static BitmapFont field_e;
     long field_i;
-    static ut field_j;
+    static Sprite field_j;
     static int field_n;
     int field_k;
     static StringBuilder field_m;
@@ -17,7 +17,7 @@ final class cq extends IntrusiveNode {
         field_h = null;
         field_j = null;
         if (param0 <= 46) {
-          field_j = (ut) null;
+          field_j = (Sprite) null;
         }
         field_m = null;
         field_e = null;
@@ -64,7 +64,7 @@ final class cq extends IntrusiveNode {
         return fc.field_a + (q.field_b << 2) + (ng.field_a << 4);
     }
 
-    final static uo a(int param0, sj param1, int param2, int param3, sj param4) {
+    final static uo a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         java.applet.Applet var6 = null;
         uo stackIn_6_0 = null;
@@ -193,14 +193,14 @@ final class cq extends IntrusiveNode {
         if (param1 != 0) {
           field_m = (StringBuilder) null;
         }
-        rg.a((byte) -125, param0);
+        MouseWheelInput.a((byte) -125, param0);
     }
 
-    final static ut[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var7 = Kickabout.field_G;
-        ut[] var8 = new ut[9];
-        ut[] var4 = var8;
+        Sprite[] var8 = new Sprite[9];
+        Sprite[] var4 = var8;
         var8[0] = lh.a(param2, (byte) -96, param0);
         for (var5 = 1; var5 < 9; var5++) {
           var8[var5] = var8[0];
@@ -262,7 +262,7 @@ final class cq extends IntrusiveNode {
             stackIn_11_0 = (byte[]) (param0);
             return stackIn_11_0;
           }
-          stackIn_9_0 = vq.a(82, param0);
+          stackIn_9_0 = FullscreenFocusCanvas.a(82, param0);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

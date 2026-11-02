@@ -3,7 +3,7 @@
  */
 final class cb {
     static String field_a;
-    static uh field_d;
+    static PcmPlayerService field_d;
     static ld field_c;
     static byte[][][] field_b;
     static String field_f;
@@ -66,7 +66,7 @@ final class cb {
         try {
           np.field_Jb.a(new vf(param0), 3);
           if (param1 < 118) {
-            field_d = (uh) null;
+            field_d = (PcmPlayerService) null;
           }
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "cb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

@@ -32,7 +32,7 @@ final class gm extends FootballerAgent {
     boolean field_Z;
     private boolean field_Y;
 
-    final static cn a(sj param0, int param1, String param2, sj param3, String param4) {
+    final static cn a(ResourceArchive param0, int param1, String param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -53,7 +53,7 @@ final class gm extends FootballerAgent {
           var6 = param3.a((byte) -107, param2, var5_int);
           if (param1 != 10) {
             var7 = (String) null;
-            gm.a((sj) null, -21, (String) null, (sj) null, (String) null);
+            gm.a((ResourceArchive) null, -21, (String) null, (ResourceArchive) null, (String) null);
           }
           stackIn_3_0 = kk.a(var5_int, param3, param1 - 84, var6, param0);
           return stackIn_3_0;
@@ -102,7 +102,7 @@ final class gm extends FootballerAgent {
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ot var4 = null;
+        ArgbSprite var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
@@ -116,9 +116,9 @@ final class gm extends FootballerAgent {
         try {
           if (param0 != -5186) {
             var12 = (String) null;
-            gm.a((sj) null, -89, (String) null, (sj) null, (String) null);
+            gm.a((ResourceArchive) null, -89, (String) null, (ResourceArchive) null, (String) null);
           }
-          on.a(param2.field_F + 6, 26 + param2.field_T, -12 + param2.field_q, -32 + param2.field_mb, 10, 65793, 96);
+          SoftwareRasterizer.a(param2.field_F + 6, 26 + param2.field_T, -12 + param2.field_q, -32 + param2.field_mb, 10, 65793, 96);
           if (param3 != null) {
             stackIn_7_0 = param3.field_Eb;
             stackIn_7_1 = 0;
@@ -132,9 +132,9 @@ final class gm extends FootballerAgent {
             if (var4 == null) {
               jr.a(var5, -128, var6);
             } else {
-              ((ut) ((Object) var4)).c(var5 - (((ut) ((Object) var4)).field_o >> 1), var6 - (((ut) ((Object) var4)).field_v >> 1));
+              ((Sprite) ((Object) var4)).c(var5 - (((Sprite) ((Object) var4)).field_o >> 1), var6 - (((Sprite) ((Object) var4)).field_v >> 1));
             }
-            var7 = ad.a(dh.a(param3.field_Eb, true), 26300);
+            var7 = ad.a(ImageProducerRasterBuffer.a(param3.field_Eb, true), 26300);
             var8 = Math.max(param2.field_F + 15, 66 + (param2.field_F - (pb.field_C.a(var7) >> 1)));
             pb.field_C.a(var7, var8, param2.field_T + 51, 16777215, -1);
             if (!param1) {
@@ -238,7 +238,7 @@ final class gm extends FootballerAgent {
         } else {
           var2 = (ih.field_c != 1) ? 62 : 68;
         }
-        var2 = var2 + dq.$cfr$intArgs$a$7f8aad568c81(127, 2, ru.field_l);
+        var2 = var2 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(127, 2, MidiPcmStream.field_l);
         var3 = tq.h(-2521);
         var4 = IsaacRandom.a(true);
         if (512 > Math.abs((this.field_M >> 16) - var3) &&
@@ -294,7 +294,7 @@ final class gm extends FootballerAgent {
         StringBuilder var11_ref_StringBuilder;
         int var12;
         int var13;
-        ut var14;
+        Sprite var14;
         uo var15;
         int var16;
         int var17;
@@ -334,7 +334,7 @@ final class gm extends FootballerAgent {
           discarded$11 = var11_ref_StringBuilder.append(')');
           var12 = this.field_N.b(0);
           var13 = this.field_N.a(15);
-          var14 = new ut(var12, 10 * var8_ref_String__.length + 5 + var13 + 20);
+          var14 = new Sprite(var12, 10 * var8_ref_String__.length + 5 + var13 + 20);
           PacketBuffer.a(-64, var14);
           this.field_N.a(var13 >> 1, 23, var12 >> 1);
           var15 = q.field_d;
@@ -353,7 +353,7 @@ final class gm extends FootballerAgent {
           var18 = hw.field_i * var14.field_v >> 8;
           var19 = -(var17Lifetime1 >> 1) + var3;
           var20 = 10 + var4;
-          on.a(var19 - 5, -5 + var20, var17Lifetime1 + 10, var18 + 10, 5, 65793, 200);
+          SoftwareRasterizer.a(var19 - 5, -5 + var20, var17Lifetime1 + 10, var18 + 10, 5, 65793, 200);
           var14.b(var19, var20, var17Lifetime1, var18);
         }
         if (var3 + var5 < 0) {
@@ -382,7 +382,7 @@ final class gm extends FootballerAgent {
           this.field_ab ||
           this.field_T)) {
           PacketBuffer.a(-88, kw.field_f);
-          on.b();
+          SoftwareRasterizer.b();
           var2 = (var2 << 7) / hw.field_i;
           this.a(var2, var8, 128, 190, (byte) -91);
           ta.e(119);
@@ -961,7 +961,7 @@ final class gm extends FootballerAgent {
         try {
           this.field_jb = param2 ? true : false;
           if (!param2) {
-            param0.field_o = am.field_j;
+            param0.field_o = DualLinkNode.field_j;
           }
           this.field_U = param1;
           this.a(param0, (byte) -117);

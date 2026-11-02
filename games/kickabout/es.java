@@ -9,7 +9,7 @@ final class es extends IntrusiveNode {
     private int field_l;
     static String field_g;
     static vn field_k;
-    static ut field_f;
+    static Sprite field_f;
 
     final void a(CipherPacketBuffer param0, byte param1) {
         try {

@@ -11,7 +11,7 @@ final class eq {
     private IterableNodeHashTable field_e;
     private int field_f;
     static String field_g;
-    static ot field_h;
+    static ArgbSprite field_h;
     private ci field_i;
 
     public static void a(byte param0) {

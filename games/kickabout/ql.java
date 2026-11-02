@@ -27,25 +27,25 @@ final class ql {
         np.field_Jb.a(new ha(), 3);
     }
 
-    final static av a(String param0, int param1, int param2) {
-        dq var3 = null;
+    final static SocketConnector a(String param0, int param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        dq stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new dq();
+          var3 = new ProxySocketConnector();
           if (param2 != -13067) {
             var4 = (String) null;
             ql.a(true, (String) null, (String) null, 68);
           }
-          ((av) ((Object) var3)).field_a = param1;
-          ((av) ((Object) var3)).field_c = param0;
+          ((SocketConnector) ((Object) var3)).field_a = param1;
+          ((SocketConnector) ((Object) var3)).field_c = param0;
           stackIn_3_0 = var3;
-          return (av) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -93,7 +93,7 @@ final class ql {
         try {
           ep.field_b = param2;
           NetworkGameClient.field_y = param1;
-          ku.a(dh.field_g, 4, param0);
+          MouseInputHandler.a(ImageProducerRasterBuffer.field_g, 4, param0);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ql.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -119,7 +119,7 @@ final class ql {
               ig.a(param1, 16777215, var3_int);
             }
           }
-          if (!u.field_c) {
+          if (!JaggrabDownloader.field_c) {
             return;
           }
           kt.b((byte) -85);

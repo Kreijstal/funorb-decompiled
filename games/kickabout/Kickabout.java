@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class Kickabout extends tu {
+public final class Kickabout extends GameLoopApplet {
     private boolean field_L;
-    static sj field_J;
+    static ResourceArchive field_J;
     static String field_I;
     static hd field_H;
     static String field_F;
@@ -86,9 +86,9 @@ public final class Kickabout extends tu {
             cv.a((byte) 105);
           }
         }
-        dh.b(true);
+        ImageProducerRasterBuffer.b(true);
         if (this.field_L) {
-          var9 = (pt) (tu.field_E.field_g.g(24009));
+          var9 = (pt) (GameLoopApplet.field_E.field_g.g(24009));
           while (true) {
             if (var9 != null) {
               var9.c((byte) -109);
@@ -96,7 +96,7 @@ public final class Kickabout extends tu {
               if (stackIn_59_0) {
                 gu.a((byte) -25, var9, true);
               }
-              var9 = (pt) (tu.field_E.field_g.c(33));
+              var9 = (pt) (GameLoopApplet.field_E.field_g.c(33));
               continue;
             }
             break;
@@ -110,10 +110,10 @@ public final class Kickabout extends tu {
             }
             var8 = (pt) (vd.field_a.c(33));
           }
-          stackIn_59_0Lifetime2 = tu.field_E.field_m;
+          stackIn_59_0Lifetime2 = GameLoopApplet.field_E.field_m;
           if (stackIn_59_0Lifetime2) {
             gw.c(0);
-            tu.field_E.field_m = false;
+            GameLoopApplet.field_E.field_m = false;
           }
           this.u(param0 ^ 23294);
         }
@@ -135,7 +135,7 @@ public final class Kickabout extends tu {
         if (ak.a(cq.field_h, param0 + 23275) == 0) {
           return;
         }
-        ot var2 = jm.field_g == null ? (ot) (sf.field_C) : jm.field_g;
+        ArgbSprite var2 = jm.field_g == null ? (ArgbSprite) (sf.field_C) : jm.field_g;
         int var3 = -var2.field_o + 640 >> 1;
         if (el.field_A >= var3 && var2.field_o + var3 >= el.field_A && 10 <= n.field_m &&
           !(n.field_m > (10 + var2.field_v))) {
@@ -201,7 +201,7 @@ public final class Kickabout extends tu {
         int var4;
         int var5;
         int var6;
-        ot var7;
+        ArgbSprite var7;
         Object stackIn_5_0 = null;
         if (param0 < 95) {
           return;
@@ -211,7 +211,7 @@ public final class Kickabout extends tu {
         } else {
           stackIn_5_0 = sf.field_C;
         }
-        var7 = (ot) (stackIn_5_0);
+        var7 = (ArgbSprite) (stackIn_5_0);
         var3 = 640 - var7.field_o >> 1;
         var4 = ak.a(cq.field_h, 4);
         if (ra.field_G != null) {
@@ -307,7 +307,7 @@ public final class Kickabout extends tu {
             }
             if (decompiledFrameRemainder0) {
               var11 = "The quick brown fox jumped over the lazy rabbit. Also this sentence is getting quite long with some long words that might not fit at end of a sentence/line but we shall see. Oooh double-barrel-ness, see how it deals with that.";
-              var10 = og.a(var11, 100, (byte) -69);
+              var10 = RasterBuffer.a(var11, 100, (byte) -69);
               var7_ref_String__ = var10;
               if (var7_ref_String__ == null) {
                 return true;
@@ -368,8 +368,8 @@ public final class Kickabout extends tu {
               }
               decompiledFrameRemainder1 = (param1 == 21);
               if (decompiledFrameRemainder1) {
-                for (var6_int = 0; tu.field_E.field_J.length > var6_int; var6_int++) {
-                  tu.field_E.field_J[var6_int] = true;
+                for (var6_int = 0; GameLoopApplet.field_E.field_J.length > var6_int; var6_int++) {
+                  GameLoopApplet.field_E.field_J[var6_int] = true;
                 }
                 decompiledFrameRemainder3 = false;
               }
@@ -405,8 +405,8 @@ public final class Kickabout extends tu {
             }
             decompiledFrameRemainder1 = (param1 == 21);
             if (decompiledFrameRemainder1) {
-              for (var6_intLifetime3 = 0; tu.field_E.field_J.length > var6_intLifetime3; var6_intLifetime3++) {
-                tu.field_E.field_J[var6_intLifetime3] = true;
+              for (var6_intLifetime3 = 0; GameLoopApplet.field_E.field_J.length > var6_intLifetime3; var6_intLifetime3++) {
+                GameLoopApplet.field_E.field_J[var6_intLifetime3] = true;
               }
             }
           }
@@ -414,8 +414,8 @@ public final class Kickabout extends tu {
             (decompiledFrameRemainder1) &&
             (!la.a(100))) {
             var6_intLifetime2 = 0;
-            for (var7 = 0; var7 < tu.field_E.field_J.length; var7++) {
-              stackOut_139_0 = tu.field_E.field_J[var7];
+            for (var7 = 0; var7 < GameLoopApplet.field_E.field_J.length; var7++) {
+              stackOut_139_0 = GameLoopApplet.field_E.field_J[var7];
               stackIn_146_0 = stackOut_139_0 ? 1 : 0;
               stackIn_140_0 = stackOut_139_0;
               if (stackIn_140_0) {
@@ -559,23 +559,23 @@ public final class Kickabout extends tu {
     }
 
     private final void v(int param0) {
-        on.a(0, 300, 640, 87, 0, 190);
-        int var2 = (int)(250.0f * ga.field_R / 100.0f);
+        SoftwareRasterizer.a(0, 300, 640, 87, 0, 190);
+        int var2 = (int)(250.0f * TextInputWidget.field_R / 100.0f);
         int var3 = var2 + 196;
         un.field_d.d(vo.$cfr$intArgs$a$53ce4ab4c593(-18, mc.field_e, new String[]{h.field_b[ih.field_c][rm.field_C].toUpperCase()}), 320, 332, 16777215, 0);
-        on.f(193, 348, 254, 19, 8, 268435455);
+        SoftwareRasterizer.f(193, 348, 254, 19, 8, 268435455);
         if (param0 != 81) {
           return;
         }
         if (var2 <= 16) {
           pt.a((var2 >> 1) + 195, -22914, 0, 480, 0);
-          on.i(195, 350, 250, 15, 6, 268435455);
+          SoftwareRasterizer.i(195, 350, 250, 15, 6, 268435455);
           ta.e(117);
           pt.a(640, -22914, (var2 >> 1) + 195, 480, 0);
-          on.i(-250 + (var2 + 195), 350, 250, 15, 6, 268435455);
+          SoftwareRasterizer.i(-250 + (var2 + 195), 350, 250, 15, 6, 268435455);
           ta.e(122);
         } else {
-          on.i(195, 350, var2, 15, 6, 268435455);
+          SoftwareRasterizer.i(195, 350, var2, 15, 6, 268435455);
         }
         pt.a(640, -22914, var3, 480, 0);
         q.field_d.d(mf.field_Db, 320, 362, 16777215, -1);
@@ -587,7 +587,7 @@ public final class Kickabout extends tu {
 
     public Kickabout() {
         CharSequence var2 = (CharSequence) ((Object) gw.field_b);
-        tu.field_E = new gr(LoggedPlayer.a(var2, false));
+        GameLoopApplet.field_E = new gr(LoggedPlayer.a(var2, false));
         nm.field_g = this;
     }
 
@@ -603,14 +603,14 @@ public final class Kickabout extends tu {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
-        ot var3 = null;
+        ArgbSprite var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var9 = 0;
         int var10 = 0;
-        ot var11 = null;
+        ArgbSprite var11 = null;
         int stackIn_11_0Lifetime1;
         int var4Lifetime1;
         int var5Lifetime1;
@@ -630,22 +630,22 @@ public final class Kickabout extends tu {
             }
           }
           var3 = nn.field_B;
-          vq.field_d = new ut(((ut) ((Object) var3)).field_o, ((ut) ((Object) var3)).field_v);
+          FullscreenFocusCanvas.field_d = new Sprite(((Sprite) ((Object) var3)).field_o, ((Sprite) ((Object) var3)).field_v);
           var10 = 0;
           var4Lifetime1 = var10;
           var5Lifetime1 = 0;
           while (true) {
-            stackIn_11_0 = ~((ut) ((Object) var3)).field_v;
+            stackIn_11_0 = ~((Sprite) ((Object) var3)).field_v;
             if (stackIn_11_0 >= ~var5Lifetime1) {
-              po.field_h = new ut(((ut) ((Object) var3)).field_o, ((ut) ((Object) var3)).field_v);
+              po.field_h = new Sprite(((Sprite) ((Object) var3)).field_o, ((Sprite) ((Object) var3)).field_v);
               return;
             }
             var6 = 0;
             var7 = 0;
-            for (var8 = 0; var8 < ((ut) ((Object) var3)).field_o; var8++) {
+            for (var8 = 0; var8 < ((Sprite) ((Object) var3)).field_o; var8++) {
               stackIn_11_0Lifetime1 = var6;
               if (stackIn_11_0Lifetime1 == 0 &&
-                (((ut) ((Object) var3)).field_y[var10] & -16777216) != 0) {
+                (((Sprite) ((Object) var3)).field_y[var10] & -16777216) != 0) {
                 incrementValue$0 = var7;
                 var7++;
                 if (5 < incrementValue$0) {
@@ -654,7 +654,7 @@ public final class Kickabout extends tu {
               }
               incrementValue$1 = var10;
               var10++;
-              stackIn_21_0 = vq.field_d.field_y;
+              stackIn_21_0 = FullscreenFocusCanvas.field_d.field_y;
               stackIn_21_1 = incrementValue$1;
               if (var6 != 0) {
                 stackIn_22_2 = -1;
@@ -686,7 +686,7 @@ public final class Kickabout extends tu {
         }
         this.a(1, 69, 0, 2, 18, (byte) -4, 4, true);
         this.a(107, new eh());
-        vq.a(oo.field_c, (byte) 23, (java.awt.Component) ((Object) ic.field_d));
+        FullscreenFocusCanvas.a(oo.field_c, (byte) 23, (java.awt.Component) ((Object) ic.field_d));
         bc.a((byte) -8, uc.field_A);
     }
 
@@ -696,7 +696,7 @@ public final class Kickabout extends tu {
           if (op.field_v != -3) {
             jm.a(op.field_v, false, -2);
           } else {
-            rg.a(-1822);
+            MouseWheelInput.a(-1822);
           }
         }
         gm.i(0);
@@ -926,7 +926,7 @@ public final class Kickabout extends tu {
             if (param0 == 77) {
               var4_intLifetime3 = un.field_e.h((byte) -115);
               k.a(true, var4_intLifetime3);
-              bh.field_k = var4_intLifetime3;
+              BufferedSocket.field_k = var4_intLifetime3;
               if (cq.field_h instanceof qs) {
                 if (null != ra.field_G) {
                   return true;
@@ -947,17 +947,17 @@ public final class Kickabout extends tu {
             }
             if (70 == param0) {
               ui.field_y = true;
-              tu.field_E.a(85, param1, 4);
-              pf.field_c = tu.field_E.field_d;
-              if (tu.field_E.field_L) {
+              GameLoopApplet.field_E.a(85, param1, 4);
+              pf.field_c = GameLoopApplet.field_E.field_d;
+              if (GameLoopApplet.field_E.field_L) {
                 tb.field_v = 1;
               } else {
                 tb.field_v = 0;
               }
-              ei.field_n = tu.field_E.field_A;
+              ei.field_n = GameLoopApplet.field_E.field_A;
               if (!iu.field_h) {
-                li.a(tu.field_E.field_p, (byte) 33);
-                pe.a(tu.field_E.field_F, (byte) -116);
+                li.a(GameLoopApplet.field_E.field_p, (byte) 33);
+                pe.a(GameLoopApplet.field_E.field_F, (byte) -116);
               }
               if (cq.field_h instanceof ta &&
                 ra.field_G == null) {
@@ -993,7 +993,7 @@ public final class Kickabout extends tu {
             }
             if (param0 == 14) {
               cv.a((byte) 81);
-              q.a(NetworkGameClient.f(param2 ^ 1), 120, ig.a((byte) 6, 1250), ig.a((byte) 6, 16), dd.b(-116), sn.field_c, dr.a(param2 ^ 1), 150, ow.field_c.length, 1024);
+              q.a(NetworkGameClient.f(param2 ^ 1), 120, ig.a((byte) 6, 1250), ig.a((byte) 6, 16), dd.b(-116), sn.field_c, dr.a(param2 ^ 1), 150, ArchiveSource.field_c.length, 1024);
               ln.a(64, qq.h((byte) -64), qt.f((byte) -63));
               ec.field_e = false;
               od.field_n = true;
@@ -1034,7 +1034,7 @@ public final class Kickabout extends tu {
               var33 = var46;
               var24 = var33;
               var5_ref_int__ = var24;
-              var47 = bh.field_f;
+              var47 = BufferedSocket.field_f;
               var34 = var47;
               var25 = var34;
               var6_ref_int__ = var25;
@@ -1047,7 +1047,7 @@ public final class Kickabout extends tu {
                   ok.field_a.a(new oi(var5Lifetime2Lifetime1), 3);
                 }
               }
-              var49 = bh.field_f;
+              var49 = BufferedSocket.field_f;
               var36 = var49;
               var26 = var36;
               var5_ref_int__Lifetime1 = var26;
@@ -1069,8 +1069,8 @@ public final class Kickabout extends tu {
               for (var7Lifetime4 = 0; var7Lifetime4 < 8; var7Lifetime4++) {
                 var28[var7Lifetime4] = hf.a(var51[var7Lifetime4], var52[var7Lifetime4]);
               }
-              if (sj.field_g) {
-                og.a(20164);
+              if (ResourceArchive.field_g) {
+                RasterBuffer.a(20164);
               }
               return true;
             }
@@ -1197,10 +1197,10 @@ public final class Kickabout extends tu {
                 var42 = new ng();
                 var42.a(param1, param2 ^ -20364);
                 var43 = var42.a((byte) 51);
-                var44 = og.a(var43, 80, (byte) 123);
+                var44 = RasterBuffer.a(var43, 80, (byte) 123);
                 for (var7Lifetime1 = 0; var7Lifetime1 < var44.length; var7Lifetime1++) {
                   var8 = new tv(2, "", 0, "", var44[var7Lifetime1]);
-                  qh.a((byte) 94, var8);
+                  SectorCacheStore.a((byte) 94, var8);
                 }
                 return true;
               }
@@ -1366,10 +1366,10 @@ public final class Kickabout extends tu {
         if (cq.field_h.field_c == -3 && (null == ra.field_G ||
           18 == ra.field_G.field_c)) {
           var4Lifetime1 = 0;
-          for (var5Lifetime1 = -on.field_a.length; var5Lifetime1 < 0; var5Lifetime1++) {
+          for (var5Lifetime1 = -SoftwareRasterizer.field_a.length; var5Lifetime1 < 0; var5Lifetime1++) {
             incrementValue$0 = var4Lifetime1;
             var4Lifetime1++;
-            on.field_a[incrementValue$0] = 65793;
+            SoftwareRasterizer.field_a[incrementValue$0] = 65793;
           }
           decompiledFrameRemainder0 = false;
         }
@@ -1398,7 +1398,7 @@ public final class Kickabout extends tu {
         pt.a(FormationAgent.field_f, -22914, 0, 480, 0);
         var4Lifetime2 = -nn.field_B.field_o + FormationAgent.field_f;
         if (var3 > 0) {
-          eo.a(po.field_h, vq.field_d, var4Lifetime2);
+          eo.a(po.field_h, FullscreenFocusCanvas.field_d, var4Lifetime2);
           eo.a(mk.field_a, 0, 0, FormationAgent.field_f, 480, var3, 0);
           cq.field_j.c(-36, 50, 64);
         }
@@ -1478,25 +1478,25 @@ public final class Kickabout extends tu {
         pl.a(20177);
         pr.a(0);
         oi.a(false);
-        tf.a(param0 - 133);
-        on.c();
+        IntrusiveDeque.a(param0 - 133);
+        SoftwareRasterizer.c();
         jl.a(param0 ^ 8198);
         CipherPacketBuffer.m(0);
         gs.b((byte) -117);
         mi.a(param0 - 6);
         nc.a((byte) 72);
         ss.a((byte) -90);
-        tu.q(30907);
-        de.a(param0 + 3896);
+        GameLoopApplet.q(30907);
+        GameKeyHandler.a(param0 + 3896);
         gw.d(param0 + 92);
         qr.a(false);
         NetworkGameClient.d(true);
         ClientException.a((byte) -95);
         GameAppletShell.c(1);
-        u.a(param0 - 8);
-        ku.a(param0 - 7);
-        rg.a((byte) 66);
-        sj.c(param0 ^ -122);
+        JaggrabDownloader.a(param0 - 8);
+        MouseInputHandler.a(param0 - 7);
+        MouseWheelInput.a((byte) 66);
+        ResourceArchive.c(param0 ^ -122);
         fc.a(29136);
         td.a(false);
         PacketBuffer.g((byte) 88);
@@ -1512,15 +1512,15 @@ public final class Kickabout extends tu {
         ns.a((byte) 60);
         mc.a((byte) -116);
         qe.a(true);
-        vq.a((byte) 25);
+        FullscreenFocusCanvas.a((byte) 25);
         kh.d(param0 - 1712);
         sd.a(-1);
         ap.a(true);
         lm.a(true);
         js.a((byte) 125);
         kd.c(-1);
-        lu.g((byte) -28);
-        am.e(13421568);
+        SpriteState.g((byte) -28);
+        DualLinkNode.e(13421568);
         IntrusiveNode.d(126);
         hj.a(param0 + 50);
         rd.a(true);
@@ -1553,7 +1553,7 @@ public final class Kickabout extends tu {
         ck.a(false);
         rj.a((byte) -116);
         ks.a(0);
-        uh.a();
+        PcmPlayerService.a();
         jj.a((byte) -99);
         qt.c((byte) -107);
         fv.b((byte) 108);
@@ -1562,14 +1562,14 @@ public final class Kickabout extends tu {
         hd.g(-14457);
         io.a((byte) -6);
         ko.a((byte) -22);
-        ew.d(81);
+        BufferedCacheFile.d(81);
         te.a(true);
         ec.a(0);
         we.a((byte) -43);
         kr.a(param0 ^ -121);
         kj.b((byte) -118);
         ps.b(-27680);
-        bh.c(param0 ^ -109);
+        BufferedSocket.c(param0 ^ -109);
         kt.a(125);
         e.a(-1);
         ta.g((byte) 91);
@@ -1580,11 +1580,11 @@ public final class Kickabout extends tu {
         ParticipantStatus.a(true);
         LoggedGoal.a((byte) 119);
         qn.a((byte) -124);
-        hu.a();
+        BitmapFont.a();
         CommonGame.a(true);
         IsaacRandom.b(1);
         vj.a((byte) 111);
-        tg.a();
+        VorbisSample.a();
         wh.a(0);
         bd.f(param0 ^ -54);
         gk.a((byte) -127);
@@ -1636,7 +1636,7 @@ public final class Kickabout extends tu {
         eg.d();
         sh.a(320);
         ul.a(param0 ^ 125);
-        o.d(1603);
+        DualLinkDeque.d(1603);
         be.d((byte) -53);
         lj.a(-64);
         ts.a((byte) 123);
@@ -1666,11 +1666,11 @@ public final class Kickabout extends tu {
         ac.b((byte) 16);
         wa.a((byte) 116);
         rr.a(param0 - 121);
-        ru.a((byte) -32);
-        kl.a(param0 ^ 6);
+        MidiPcmStream.a((byte) -32);
+        ArchiveIndex.a(param0 ^ 6);
         rc.a(113);
-        ow.a(false);
-        km.a();
+        ArchiveSource.a(false);
+        VorbisFloor.a();
         cp.a((byte) 60);
         fw.f(-107);
         i.f((byte) 90);
@@ -1714,14 +1714,14 @@ public final class Kickabout extends tu {
         cm.o(1);
         qv.a(true);
         wi.a(79);
-        fd.g((byte) 88);
+        UiWidget.g((byte) 88);
         ub.a((byte) -103);
-        wj.i(param0 ^ -336184830);
-        nw.c((byte) -65);
+        WidgetContainer.i(param0 ^ -336184830);
+        IntrusiveDequeCursor.c((byte) -65);
         iq.b(0);
         ct.j(31068);
         pg.b(127);
-        bi.f(param0 - 6);
+        ArchiveNetworkClient.f(param0 - 6);
         eb.a(2);
         n.b(-2147483648);
         gf.a(64);
@@ -1730,12 +1730,12 @@ public final class Kickabout extends tu {
         wq.a(-109);
         f.a((byte) -88);
         tl.c(0);
-        ao.b(113);
+        RandomAccessCacheFile.b(113);
         sa.a((byte) 125);
         di.a(-10);
         lf.a((byte) 94);
         pf.a((byte) 98);
-        au.a();
+        Bzip2Decoder.a();
         os.b(3);
         si.a(0);
         un.a((byte) 106);
@@ -1752,10 +1752,10 @@ public final class Kickabout extends tu {
         an.a(30297);
         bg.a(71);
         eq.a((byte) -32);
-        av.b(99);
+        SocketConnector.b(99);
         lw.a((byte) -125);
         vi.d(125);
-        dh.a((byte) -29);
+        ImageProducerRasterBuffer.a((byte) -29);
         hq.a(param0 + 55);
         cl.a(-1);
         tr.a(false);
@@ -1781,20 +1781,20 @@ public final class Kickabout extends tu {
         ip.a(-123);
         vp.b((byte) 125);
         da.a((byte) -80);
-        rs.b();
+        MidiFileReader.b();
         pp.a(false);
         dj.e(param0 - 29110);
         tb.c((byte) -115);
         ui.a(true);
-        qh.b(-1);
+        SectorCacheStore.b(-1);
         hi.g(-26236);
-        wm.a((byte) -119);
+        CachedArchiveSource.a((byte) -119);
         or.a((byte) 69);
         vv.g((byte) 18);
         af.a((byte) 105);
         cg.k(115);
         mr.n((byte) 74);
-        ga.l(param0 - 6);
+        TextInputWidget.l(param0 - 6);
         mu.p(12);
         fr.a(param0 - 6);
         lb.i(param0 + 9568);
@@ -1805,7 +1805,7 @@ public final class Kickabout extends tu {
         br.a(true);
         ai.l(0);
         bk.b(-79);
-        kv.a();
+        SynthesizedSoundInstrument.a();
         hw.a(96);
         sf.f(90);
         ra.g(128);
@@ -1835,13 +1835,13 @@ public final class Kickabout extends tu {
         ij.g((byte) -46);
         ff.a((byte) 101);
         pn.b(-1);
-        dq.a(false);
+        ProxySocketConnector.a(false);
         dt.a(43);
         cj.a(param0 ^ -104);
         vt.a(-73);
-        as.a();
+        SoundFilter.a();
         nt.i(4476);
-        ov.a(1);
+        NodeHashTableIterator.a(1);
         lc.a(-119);
         nb.a(true);
         ag.a((byte) 100);

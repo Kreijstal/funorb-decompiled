@@ -4,11 +4,11 @@
 class lb extends wi {
     static String[] field_K;
     private String[] field_J;
-    static ut field_L;
+    static Sprite field_L;
     static String field_H;
     static String field_G;
     static String field_N;
-    private tf field_E;
+    private IntrusiveDeque field_E;
     static volatile int field_M;
     static boolean field_F;
     private er field_I;
@@ -85,7 +85,7 @@ class lb extends wi {
         if (param0 != -1) {
           field_H = (String) null;
         }
-        this.a(((ke) ((Object) this.field_r)).b(param0 + 4, (fd) (this)), 1, param2, param1, param3);
+        this.a(((WidgetTextLayout) ((Object) this.field_r)).b(param0 + 4, (UiWidget) (this)), 1, param2, param1, param3);
     }
 
     lb(String param0, gj param1) {
@@ -105,7 +105,7 @@ class lb extends wi {
         }
         try {
           if (param0 != -28153) {
-            field_L = (ut) null;
+            field_L = (Sprite) null;
           }
           or.field_d.b(89, (byte) 77);
           or.field_d.field_n = or.field_d.field_n + 2;
@@ -133,7 +133,7 @@ class lb extends wi {
         return this.field_J[this.field_I.field_i];
     }
 
-    void a(byte param0, fd param1, int param2, int param3) {
+    void a(byte param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         try {
@@ -228,7 +228,7 @@ class lb extends wi {
         }
     }
 
-    boolean a(fd param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -260,11 +260,11 @@ class lb extends wi {
         if (0 != param0) {
           return;
         }
-        ke var5 = (ke) ((Object) this.field_r);
+        WidgetTextLayout var5 = (WidgetTextLayout) ((Object) this.field_r);
         er var6 = this.field_I;
         if (var6 != null) {
-          var7 = var5.a((fd) (this), param2, -1);
-          var8 = var5.a(true, (fd) (this), param3);
+          var7 = var5.a((UiWidget) (this), param2, -1);
+          var8 = var5.a(true, (UiWidget) (this), param3);
           do {
             ob.b(param1 - 63, 2 + var6.field_e, var6.field_m + (var8 - 2), var6.field_f + 2, -2 + (var7 + var6.field_g));
             var6 = var6.field_j;
@@ -277,7 +277,7 @@ class lb extends wi {
         int stackIn_9_0 = 0;
         int stackIn_14_0 = 0;
         int var2;
-        ke var3;
+        WidgetTextLayout var3;
         iq var4;
         int var5;
         String var6;
@@ -292,10 +292,10 @@ class lb extends wi {
         int var16;
         int var7Lifetime1;
         var16 = Kickabout.field_G;
-        this.field_E = new tf();
+        this.field_E = new IntrusiveDeque();
         var2 = 0;
-        var3 = (ke) ((Object) this.field_r);
-        var4 = var3.a(param0 ^ -4996, (fd) (this));
+        var3 = (WidgetTextLayout) ((Object) this.field_r);
+        var4 = var3.a(param0 ^ -4996, (UiWidget) (this));
         if (param0 != -41) {
           field_H = (String) null;
         }

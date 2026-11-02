@@ -5,9 +5,9 @@ abstract class jd extends lg implements sv {
     static String field_e;
     static int[] field_h;
     static String[] field_i;
-    static ut[] field_d;
+    static Sprite[] field_d;
     static int[] field_g;
-    private ga field_f;
+    private TextInputWidget field_f;
 
     final static tv a(byte param0, boolean param1) {
         boolean stackIn_3_0 = false;
@@ -71,7 +71,7 @@ abstract class jd extends lg implements sv {
         try {
           var9 = lm.field_j.a(-39, var5);
           ee.field_a = var9.g((byte) -98);
-          if (hr.field_f.equals(ow.field_e)) {
+          if (hr.field_f.equals(ArchiveSource.field_e)) {
             stackIn_22_0 = null;
           } else {
             stackIn_22_0 = var9.field_n;
@@ -123,7 +123,7 @@ abstract class jd extends lg implements sv {
         return this.a(this.field_f.field_q, -5);
     }
 
-    public final void a(int param0, ga param1) {
+    public final void a(int param0, TextInputWidget param1) {
         try {
           int var3_int = -82 % ((param0 - 8) / 47);
         } catch (RuntimeException runtimeException) {
@@ -131,7 +131,7 @@ abstract class jd extends lg implements sv {
         }
     }
 
-    public final void a(byte param0, ga param1) {
+    public final void a(byte param0, TextInputWidget param1) {
         if (param0 < 65) {
           return;
         }
@@ -157,7 +157,7 @@ abstract class jd extends lg implements sv {
         return this.a((byte) 25, this.field_f.field_q);
     }
 
-    jd(ga param0) {
+    jd(TextInputWidget param0) {
         try {
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
@@ -258,7 +258,7 @@ abstract class jd extends lg implements sv {
         try {
           var9 = lm.field_j.a(-39, var5);
           ee.field_a = var9.g((byte) -98);
-          if (hr.field_f.equals(ow.field_e)) {
+          if (hr.field_f.equals(ArchiveSource.field_e)) {
             stackIn_22_0 = null;
           } else {
             stackIn_22_0 = var9.field_n;

@@ -6,14 +6,14 @@ final class vb {
     static String field_e;
     static int field_b;
     static int field_d;
-    static ut[] field_a;
+    static Sprite[] field_a;
     static String field_i;
     static int field_j;
     static double field_c;
     static String field_f;
     static int field_h;
     static byte[][] field_g;
-    static ut field_l;
+    static Sprite field_l;
 
     final static long a(int param0, CharSequence param1) {
         int var5 = 0;

@@ -16,7 +16,7 @@ final class uv {
     String field_k;
     private int field_l;
     private String field_a;
-    static ut field_m;
+    static Sprite field_m;
 
     private final boolean c(int param0, int param1, int param2) {
         if (param2 == 17) {
@@ -99,28 +99,28 @@ final class uv {
           if (param1 == 0) {
             return;
           }
-          field_m = (ut) null;
+          field_m = (Sprite) null;
           return;
         }
         if (this.field_b == dd.field_c) {
           if (param1 == 0) {
             return;
           }
-          field_m = (ut) null;
+          field_m = (Sprite) null;
           return;
         }
         if (field_i == null) {
           if (param1 == 0) {
             return;
           }
-          field_m = (ut) null;
+          field_m = (Sprite) null;
           return;
         }
         if (!np.a(param1 + 123)) {
           if (param1 == 0) {
             return;
           }
-          field_m = (ut) null;
+          field_m = (Sprite) null;
           return;
         }
         var7 = lo.a(this.field_b, false);
@@ -139,7 +139,7 @@ final class uv {
             field_i.field_ic &&
             field_i.field_gc < field_i.field_bc) {
             if (var7.field_Gb) {
-              this.field_j.a(0, 1, vo.$cfr$intArgs$a$53ce4ab4c593(-18, vq.field_f, new String[]{var5}));
+              this.field_j.a(0, 1, vo.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_f, new String[]{var5}));
             } else {
               if (!param0) {
                 this.field_j.a(0, 0, vo.$cfr$intArgs$a$53ce4ab4c593(-18, va.field_F, new String[]{var5}));
@@ -157,7 +157,7 @@ final class uv {
         if (param1 == 0) {
           return;
         }
-        field_m = (ut) null;
+        field_m = (Sprite) null;
         return;
     }
 
@@ -226,7 +226,7 @@ final class uv {
         return true;
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6, int param7, bu param8, int param9, long param10, int param11, int param12, String param13) {
+    final static void a(int param0, int param1, boolean param2, int param3, int param4, boolean param5, int param6, int param7, PlatformTaskDispatcher param8, int param9, long param10, int param11, int param12, String param13) {
         try {
           RuntimeException stackIn_13_0 = null;
           StringBuilder stackIn_13_1 = null;
@@ -246,7 +246,7 @@ final class uv {
             cm.field_J = param4;
             if (param0 <= 119) {
               var16 = (String) null;
-              uv.a(39, 24, true, 46, 63, true, -76, 49, (bu) null, 107, -22L, -59, -43, (String) null);
+              uv.a(39, 24, true, 46, 63, true, -76, 49, (PlatformTaskDispatcher) null, 107, -22L, -59, -43, (String) null);
             }
             it.field_n = param5;
             il.field_g = param6;
@@ -259,7 +259,7 @@ final class uv {
               return;
             }
             try {
-              pd.field_G = new ew(vl.field_c.field_q, 64, 0);
+              pd.field_G = new BufferedCacheFile(vl.field_c.field_q, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -394,7 +394,7 @@ final class uv {
                     ue.a(0, -58, param1);
                   }
                 } else {
-                  tu.b(15848, param1, this.field_c);
+                  GameLoopApplet.b(15848, param1, this.field_c);
                 }
               }
             }
@@ -577,7 +577,7 @@ final class uv {
               var7 = hi.a(0, this.field_k) ? 1 : 0;
               if (var6 == null &&
                 var7 == 0) {
-                this.field_j.a(0, 4, vo.$cfr$intArgs$a$53ce4ab4c593(-18, am.field_m, new String[]{var5}));
+                this.field_j.a(0, 4, vo.$cfr$intArgs$a$53ce4ab4c593(-18, DualLinkNode.field_m, new String[]{var5}));
                 this.field_j.a(0, 6, vo.$cfr$intArgs$a$53ce4ab4c593(-18, ij.field_r, new String[]{var5}));
                 if (param2 != null &&
                   param0 != 2 &&
@@ -587,7 +587,7 @@ final class uv {
                 }
               }
               if (var6 != null) {
-                if (!ew.a(121, this.field_k) &&
+                if (!BufferedCacheFile.a(121, this.field_k) &&
                   !PacketBuffer.field_l) {
                   if (!kb.field_C) {
                     this.field_j.a(0, 8, vo.$cfr$intArgs$a$53ce4ab4c593(-18, wp.field_a, new String[]{var5}));
@@ -647,7 +647,7 @@ final class uv {
           }
           if (param0.field_c == 2) {
             if (0 == fc.field_a) {
-              this.field_j.a(0, 12, lu.field_u);
+              this.field_j.a(0, 12, SpriteState.field_u);
             }
             this.field_j.a(0, 13, qv.field_g);
           }
@@ -655,7 +655,7 @@ final class uv {
             return;
           }
           var4 = (String) null;
-          uv.a(-113, 85, false, 126, -61, false, -59, 112, (bu) null, -96, 71L, 73, -56, (String) null);
+          uv.a(-113, 85, false, 126, -61, false, -59, 112, (PlatformTaskDispatcher) null, -96, 71L, 73, -56, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

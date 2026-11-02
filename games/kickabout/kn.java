@@ -3,7 +3,7 @@
  */
 final class kn extends i {
     static String[] field_G;
-    static ut field_J;
+    static Sprite field_J;
     static hd field_F;
     static String field_H;
     private hd field_K;
@@ -97,8 +97,8 @@ final class kn extends i {
           var6 = var13[var5];
           if (var6 != null &&
             var6.field_gb) {
-            on.a(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 65793, 128);
-            on.f(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 6710886);
+            SoftwareRasterizer.a(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 65793, 128);
+            SoftwareRasterizer.f(var6.field_F, var6.field_T, var6.field_q, var6.field_mb, 8, 6710886);
             qe.field_i[PacketBuffer.field_e[var6.field_Bb]].c(64 + param1, param2 + 70);
             un.field_d.d(kw.field_c[var6.field_Bb].toLowerCase(), (qe.field_i[PacketBuffer.field_e[var6.field_Bb]].field_q >> 1) + (64 + param1), 205 + param2, 16777215, -1);
             var7 = new String[16];

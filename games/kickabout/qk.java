@@ -35,11 +35,11 @@ final class qk extends wi {
         }
     }
 
-    final static uo a(String param0, sj param1, int param2, String param3, sj param4) {
+    final static uo a(String param0, ResourceArchive param1, int param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        sj var7 = null;
+        ResourceArchive var7 = null;
         uo stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -53,8 +53,8 @@ final class qk extends wi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= 63) {
-            var7 = (sj) null;
-            qk.a((String) null, (sj) null, -54, (String) null, (sj) null);
+            var7 = (ResourceArchive) null;
+            qk.a((String) null, (ResourceArchive) null, -54, (String) null, (ResourceArchive) null);
           }
           var5_int = param4.b(param3, -1);
           var6 = param4.a((byte) -98, param0, var5_int);

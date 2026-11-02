@@ -6,13 +6,13 @@ abstract class js {
     int field_c;
     static String field_f;
     int field_b;
-    static tf field_d;
-    static ut field_a;
+    static IntrusiveDeque field_d;
+    static Sprite field_a;
 
-    final static ut a(eg param0, int param1, ut param2, int param3) {
+    final static Sprite a(eg param0, int param1, Sprite param2, int param3) {
         RuntimeException var4 = null;
-        ut stackIn_2_0 = null;
-        ut stackIn_4_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -21,16 +21,16 @@ abstract class js {
         RuntimeException decompiledCaughtException = null;
         try {
           PacketBuffer.a(-94, param2);
-          on.b();
+          SoftwareRasterizer.b();
           t.c();
-          t.b(on.field_g >> 1, 202);
+          t.b(SoftwareRasterizer.field_g >> 1, 202);
           param0.a(0, param1, 0, 0, 0, 0, 0, 700);
           if (param3 >= -25) {
-            stackIn_2_0 = (ut) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           ta.e(123);
-          stackIn_4_0 = (ut) (param2);
+          stackIn_4_0 = (Sprite) (param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -67,7 +67,7 @@ abstract class js {
         field_f = null;
     }
 
-    final static void a(String param0, int param1, bu param2, int param3, int param4, int param5, int param6, int param7, boolean param8) {
+    final static void a(String param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, int param5, int param6, int param7, boolean param8) {
         try {
           hf.field_e = param2;
           tk.field_yb = param0;
@@ -80,7 +80,7 @@ abstract class js {
           rc.field_f = param1;
           wo.field_k = param5;
           or.field_c = param3;
-          ParticipantStatus.field_t = (bi) ((Object) new tb());
+          ParticipantStatus.field_t = (ArchiveNetworkClient) ((Object) new tb());
           e.field_i = new eb(param2);
           al.field_Ab = new n(ParticipantStatus.field_t, e.field_i);
         } catch (RuntimeException runtimeException) {
@@ -130,13 +130,13 @@ abstract class js {
             if (sd.field_d == un.field_c) {
               if (param3) {
                 var10 = (String) null;
-                vq.field_h = ti.a(param4, wq.field_d, (byte) 30, false, (String) null);
+                FullscreenFocusCanvas.field_h = ti.a(param4, wq.field_d, (byte) 30, false, (String) null);
               } else {
-                vq.field_h = wp.a(-111, param4, false, param1);
+                FullscreenFocusCanvas.field_h = wp.a(-111, param4, false, param1);
               }
               or.field_d.field_n = 0;
               or.field_d.a(108, 14);
-              or.field_d.a(124, vq.field_h.a((byte) -104).field_a);
+              or.field_d.a(124, FullscreenFocusCanvas.field_h.a((byte) -104).field_a);
               c.a(-1, false);
               un.field_c = uk.field_c;
             }
@@ -156,7 +156,7 @@ abstract class js {
               uj.a((byte) 115, 8)) {
               ld.field_c = un.field_e.i((byte) -124);
               un.field_e.field_n = 0;
-              nc.a(param2, param3, vq.field_h, -16161, param5);
+              nc.a(param2, param3, FullscreenFocusCanvas.field_h, -16161, param5);
               un.field_c = gr.field_c;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -233,13 +233,13 @@ abstract class js {
                   }
                 }
               }
-              ow.field_e = un.field_e.a(8);
-              var12 = (CharSequence) ((Object) ow.field_e);
+              ArchiveSource.field_e = un.field_e.a(8);
+              var12 = (CharSequence) ((Object) ArchiveSource.field_e);
               kd.field_w = MatchAgent.a(0, var12);
               rl.field_n = un.field_e.h((byte) -128);
               un.field_c = jn.field_rb;
-              if (vq.field_h.a((byte) -109) != qq.field_K) {
-                if (vq.field_h.a((byte) -115) == ap.field_w) {
+              if (FullscreenFocusCanvas.field_h.a((byte) -109) != qq.field_K) {
+                if (FullscreenFocusCanvas.field_h.a((byte) -115) == ap.field_w) {
                   ae.field_I.a(-122, so.a(-115));
                 }
               } else {
@@ -252,14 +252,14 @@ abstract class js {
               if (eq.field_d <= 0 &&
                 !fc.field_f) {
                 try {
-                  mm.a(30858, "unzap", so.a(-110));
+                  AppletJavaScriptBridge.a(30858, "unzap", so.a(-110));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  mm.a(new Object[]{bg.a((byte) 112, wq.field_d)}, so.a(param0 - 122), "zap", param0 + 25449);
+                  AppletJavaScriptBridge.a(new Object[]{bg.a((byte) 112, wq.field_d)}, so.a(param0 - 122), "zap", param0 + 25449);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -294,7 +294,7 @@ abstract class js {
               return stackIn_102_0;
             }
             if (param0 != 0) {
-              field_d = (tf) null;
+              field_d = (IntrusiveDeque) null;
             }
             if (op.field_y == null) {
               if (vu.field_Db) {

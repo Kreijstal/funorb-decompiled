@@ -119,7 +119,7 @@ class BallAgent extends MatchAgent {
               } else {
                 var7Lifetime4 = var9 + "; Expires=" + rj.a(nj.a(-121) + 1000L * param3, -102) + "; Max-Age=" + param3;
               }
-              mm.a("document.cookie=\"" + var7Lifetime4 + "\"", param1, (byte) 24);
+              AppletJavaScriptBridge.a("document.cookie=\"" + var7Lifetime4 + "\"", param1, (byte) 24);
               return;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -201,12 +201,12 @@ class BallAgent extends MatchAgent {
             return;
           }
           if (mu.a(param0, (byte) -39)) {
-            this.field_t = this.field_t + ew.a((byte) 125, 17, param0, 0, 22, 30);
-            this.field_p = this.field_p + ew.a((byte) 125, 17, param0, 0, 22, 30);
-            this.field_v = this.field_v + ew.a((byte) 125, 20, param0, 0, 24, 30);
-            this.field_q = this.field_q + ew.a((byte) 125, 11, param0, 0, 16, 30);
-            this.field_h = this.field_h + ew.a((byte) 125, 11, param0, 0, 16, 30);
-            this.field_n = this.field_n + ew.a((byte) 125, 18, param0, 0, 24, 30);
+            this.field_t = this.field_t + BufferedCacheFile.a((byte) 125, 17, param0, 0, 22, 30);
+            this.field_p = this.field_p + BufferedCacheFile.a((byte) 125, 17, param0, 0, 22, 30);
+            this.field_v = this.field_v + BufferedCacheFile.a((byte) 125, 20, param0, 0, 24, 30);
+            this.field_q = this.field_q + BufferedCacheFile.a((byte) 125, 11, param0, 0, 16, 30);
+            this.field_h = this.field_h + BufferedCacheFile.a((byte) 125, 11, param0, 0, 16, 30);
+            this.field_n = this.field_n + BufferedCacheFile.a((byte) 125, 18, param0, 0, 24, 30);
           }
           if (!mu.a(param0, (byte) -39)) {
             return;

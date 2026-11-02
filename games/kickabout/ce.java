@@ -6,7 +6,7 @@ final class ce extends i {
     static String[][] field_G;
     static String field_F;
     private int field_H;
-    static tf field_K;
+    static IntrusiveDeque field_K;
     static int field_I;
 
     ce(sp param0) {
@@ -63,6 +63,6 @@ final class ce extends i {
     static {
         field_G = new String[][]{new String[]{"EMPTY", "Juggernaut", "Brute", "Lugg", "Oaf", "Colossus", "Hulk", "Granite", "Slab", "Thuggish", "Bluto", "Bully", "Brickhouse", "Boulder", "Carthorse", "Muscleman", "Behemoth", "Galactic", "Sherman", "Abrams", "Boomer", "Panzer", "Titan", "Troll", "Barbarian", "Gorilla", "Muttonhead", "Knucklehead", "Lumber", "Clodhopper", "Brobding", "Jumbo", "Ogre", "Titanic", "Kong", "Hercules", "Atlas", "Bumper", "Bertha", "Tugboat", "Meatslab", "Buller", "Bouncer", "Tombstone", "Donkey", "Noneck", "Gristle", "Haystacks", "Undertaker", "Biggie", "Rockslab", "Flintstone", "Bushwhack", "Sumo", "Honda", "Ox", "Shed"}, new String[]{"EMPTY", "Viper", "Snipes", "Quickfire", "Sundance", "Cassidy", "Sharpshooter", "Adder", "Cobra", "Goldengun", "Hitman", "Assassin", "Venom", "Buckshot", "Snapshot", "Bombardier", "Scuttle", "Howitzer", "Missile", "Bullet", "Torpedo", "Pouncer", "Sureshot", "Bourne", "Vanity", "Hubris", "Napalm", "Reaper", "Panache", "Elan", "Finesse", "Zesty", "Esprit", "Gusto", "Altair", "Lion", "Romero", "Mamba", "Nuka", "Buster", "Bond", "Whistler", "Piranha", "Razor"}, new String[]{"EMPTY", "Dos Santos", "Del Peiro", "El Tel", "Kakaka", "Rolando", "Rubery", "Carloz", "Zidamn", "Mezzi", "Henri", "Gerhard", "Cannavero", "Rooni", "Peerlo", "Alfes", "Gristlerooy", "Ayaya", "Tootti", "Viller", "Carvalo", "Nester", "Abelda", "Berbajov", "De Rozzi", "Luchio", "Tevaz", "Inesta", "Sambrosa", "Czechchenko", "Nevdev", "Rodrigues", "Pooyol", "Charesma", "Mitilo", "Zanetto", "Inzaggy", "Robinyou", "Granola", "Beckingham", "Schools", "Sheerer", "Maridona", "Geordio", "Van Basti", "Gascoin", "Linacre", "Badgero", "Kostakutter", "Pelay"}, new String[]{"EMPTY", "Wily", "Rocket", "Fizzbang", "Whizz", "Skimmer", "Hermes", "Flash", "Whippet", "Greyhound", "Scorch", "Blaze", "Zoomer", "Hightail", "Hitops", "Skittish", "Hasty", "Galloper", "Pronto", "Swift", "Cheetah", "Billyo", "Licketysplit", "Lightning", "Brisk", "Dervish", "Scrapper", "Racer", "Lambstail", "Doublequick", "Pulsar", "Rabbit", "Skedaddle", "Belter", "Clappers", "Whoosh", "Vespa", "Scooter", "Springheel", "Rogue", "Scoundrel", "Grifter", "Whizzer", "Streaker", "Whipper", "Chambers", "Springbok", "Grasshopper", "Shooter", "Hummingbird", "Kingfisher"}};
         field_F = "Honour";
-        field_K = new tf();
+        field_K = new IntrusiveDeque();
     }
 }

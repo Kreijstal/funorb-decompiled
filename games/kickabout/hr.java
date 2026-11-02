@@ -56,7 +56,7 @@ final class hr extends IntrusiveNode {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        ut var15 = null;
+        Sprite var15 = null;
         int var2_intLifetime1;
         int var2_intLifetime2;
         int var2_intLifetime3;
@@ -88,7 +88,7 @@ final class hr extends IntrusiveNode {
           var15 = j.a(-5275);
           if (pb.field_B &&
             var15 != null) {
-            on.a(0, 0, 640, 480, tm.field_x[ih.field_c][rm.field_C]);
+            SoftwareRasterizer.a(0, 0, 640, 480, tm.field_x[ih.field_c][rm.field_C]);
             var2_int = var15.field_v;
             var3 = var15.field_v;
             var4_int = -1 + ai.a(0, 6784) / var2_int;
@@ -101,7 +101,7 @@ final class hr extends IntrusiveNode {
                 var11 = lf.a((byte) -85, var9 * var3);
                 var12 = ug.a(param0 + 48, var8 * var2_int + var2_int);
                 var13 = lf.a((byte) -97, var3 * var9 + var3);
-                on.e(var10, var11, var12 - var10, var13 - var11, 65793);
+                SoftwareRasterizer.e(var10, var11, var12 - var10, var13 - var11, 65793);
                 pb.field_C.d('(' + Integer.toString(var8) + ',' + Integer.toString(var9) + ')', var10 + (-var10 + var12 >> 1), (-var11 + var13 >> 1) + var11, 16777215, 65793);
               }
             }
@@ -192,7 +192,7 @@ final class hr extends IntrusiveNode {
               }
             }
           } else {
-            on.a(0, 0, 640, 480, tm.field_x[ih.field_c][rm.field_C]);
+            SoftwareRasterizer.a(0, 0, 640, 480, tm.field_x[ih.field_c][rm.field_C]);
           }
           if (lg.field_a != null) {
             var2_intLifetime2 = b.c(-29, -15);
@@ -205,7 +205,7 @@ final class hr extends IntrusiveNode {
           }
           if (!wh.field_q) {
             if (rm.field_C == 3) {
-              de.a((byte) 92);
+              GameKeyHandler.a((byte) 92);
             }
             if (rm.field_C == 2) {
               pd.a((byte) -79);

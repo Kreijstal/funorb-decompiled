@@ -19,8 +19,8 @@ final class ud extends qt {
           return;
         }
         if (!um.field_b) {
-          var4 = nv.field_E[ew.field_a];
-          var5 = qt.field_r[ew.field_a];
+          var4 = nv.field_E[BufferedCacheFile.field_a];
+          var5 = qt.field_r[BufferedCacheFile.field_a];
           mj.a(256.0, 60, (double)var4, (double)var5);
           gg.h((byte) 93);
           jm.a(ig.field_d, false, -2);
@@ -307,7 +307,7 @@ final class ud extends qt {
             ri.a(102, param4, param7, param6);
           }
           if (ee.field_b > 0) {
-            lu.a(param7, param6, -2, param9, param4);
+            SpriteState.a(param7, param6, -2, param9, param4);
           }
           if (td.field_b &&
             uv.field_i.field_gc >= uv.field_i.field_bc) {
@@ -320,11 +320,11 @@ final class ud extends qt {
             e.a(bf.field_u, param3, param2, param6, 92);
           }
         } else {
-          if (ea.field_a != on.field_g) {
-            if (ea.field_f.field_e == on.field_f &&
-              ea.field_f.field_a == on.field_g) {
+          if (ea.field_a != SoftwareRasterizer.field_g) {
+            if (ea.field_f.field_e == SoftwareRasterizer.field_f &&
+              ea.field_f.field_a == SoftwareRasterizer.field_g) {
               if (null == uv.field_i) {
-                if (ow.field_b == null) {
+                if (ArchiveSource.field_b == null) {
                   CipherPacketBuffer.c(false);
                   if (param4) {
                     df.field_H = ub.field_B;
@@ -341,7 +341,7 @@ final class ud extends qt {
                     ri.a(102, param4, param7, param6);
                   }
                   if (ee.field_b > 0) {
-                    lu.a(param7, param6, -2, param9, param4);
+                    SpriteState.a(param7, param6, -2, param9, param4);
                   }
                   if (td.field_b &&
                     uv.field_i.field_gc >= uv.field_i.field_bc) {
@@ -355,7 +355,7 @@ final class ud extends qt {
                   }
                   w.a(param2, param0, param6, param8, param5, param3, param1);
                   e.a(ClientException.field_c, param3, param2, param6, 38);
-                  de.field_c = de.field_c + 1;
+                  GameKeyHandler.field_c = GameKeyHandler.field_c + 1;
                   return;
                 }
                 bq.a(103, true);
@@ -375,7 +375,7 @@ final class ud extends qt {
                 ri.a(102, param4, param7, param6);
               }
               if (ee.field_b > 0) {
-                lu.a(param7, param6, -2, param9, param4);
+                SpriteState.a(param7, param6, -2, param9, param4);
               }
               if (td.field_b &&
                 uv.field_i.field_gc >= uv.field_i.field_bc) {
@@ -399,7 +399,7 @@ final class ud extends qt {
                 ri.a(102, param4, param7, param6);
               }
               if (ee.field_b > 0) {
-                lu.a(param7, param6, -2, param9, param4);
+                SpriteState.a(param7, param6, -2, param9, param4);
               }
               if (td.field_b &&
                 uv.field_i.field_gc >= uv.field_i.field_bc) {
@@ -413,11 +413,11 @@ final class ud extends qt {
               }
             }
           } else {
-            if (on.field_f != bh.field_s &&
-              ea.field_f.field_e == on.field_f &&
-              ea.field_f.field_a == on.field_g) {
+            if (SoftwareRasterizer.field_f != BufferedSocket.field_s &&
+              ea.field_f.field_e == SoftwareRasterizer.field_f &&
+              ea.field_f.field_a == SoftwareRasterizer.field_g) {
               if (null == uv.field_i) {
-                if (ow.field_b == null) {
+                if (ArchiveSource.field_b == null) {
                   CipherPacketBuffer.c(false);
                   if (param4) {
                     df.field_H = ub.field_B;
@@ -434,7 +434,7 @@ final class ud extends qt {
                     ri.a(102, param4, param7, param6);
                   }
                   if (ee.field_b > 0) {
-                    lu.a(param7, param6, -2, param9, param4);
+                    SpriteState.a(param7, param6, -2, param9, param4);
                   }
                   if (td.field_b &&
                     uv.field_i.field_gc >= uv.field_i.field_bc) {
@@ -448,7 +448,7 @@ final class ud extends qt {
                   }
                   w.a(param2, param0, param6, param8, param5, param3, param1);
                   e.a(ClientException.field_c, param3, param2, param6, 38);
-                  de.field_c = de.field_c + 1;
+                  GameKeyHandler.field_c = GameKeyHandler.field_c + 1;
                   return;
                 }
                 bq.a(103, true);
@@ -468,7 +468,7 @@ final class ud extends qt {
                 ri.a(102, param4, param7, param6);
               }
               if (ee.field_b > 0) {
-                lu.a(param7, param6, -2, param9, param4);
+                SpriteState.a(param7, param6, -2, param9, param4);
               }
               if (td.field_b &&
                 uv.field_i.field_gc >= uv.field_i.field_bc) {
@@ -491,7 +491,7 @@ final class ud extends qt {
               if (fj.field_a > 0) {
                 ri.a(102, param4, param7, param6);
                 if (ee.field_b > 0) {
-                  lu.a(param7, param6, -2, param9, param4);
+                  SpriteState.a(param7, param6, -2, param9, param4);
                 }
                 if (td.field_b &&
                   uv.field_i.field_gc >= uv.field_i.field_bc) {
@@ -505,7 +505,7 @@ final class ud extends qt {
                 }
               } else {
                 if (ee.field_b > 0) {
-                  lu.a(param7, param6, -2, param9, param4);
+                  SpriteState.a(param7, param6, -2, param9, param4);
                 }
                 if (!td.field_b) {
                   bf.field_u.field_zb.field_E = null;
@@ -528,7 +528,7 @@ final class ud extends qt {
         }
         w.a(param2, param0, param6, param8, param5, param3, param1);
         e.a(ClientException.field_c, param3, param2, param6, 38);
-        de.field_c = de.field_c + 1;
+        GameKeyHandler.field_c = GameKeyHandler.field_c + 1;
     }
 
     final void a(int param0, boolean param1) {
@@ -552,16 +552,16 @@ final class ud extends qt {
         if (fb.field_J == null) {
           if (!vg.field_Wb) {
             if (kd.field_s) {
-              return ov.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
             if (9 == cc.field_e) {
-              return ov.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
             if (cc.field_e == 10) {
-              return ov.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
             if (11 == cc.field_e) {
-              return ov.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
             if (cc.field_e != 80) {
               return false;
@@ -589,16 +589,16 @@ final class ud extends qt {
           }
           if (!vg.field_Wb) {
             if (kd.field_s) {
-              return ov.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
             if (9 == cc.field_e) {
-              return ov.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
             if (cc.field_e == 10) {
-              return ov.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
             if (11 == cc.field_e) {
-              return ov.a(param3, param2 ^ -17866, param0);
+              return NodeHashTableIterator.a(param3, param2 ^ -17866, param0);
             }
             if (cc.field_e != 80) {
               return false;

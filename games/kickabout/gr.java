@@ -4,12 +4,12 @@
 import java.util.*;
 
 final class gr {
-    tf field_O;
+    IntrusiveDeque field_O;
     int field_w;
     int field_o;
     private int field_f;
     int[] field_q;
-    tf field_g;
+    IntrusiveDeque field_g;
     private int field_j;
     private long field_H;
     boolean[] field_J;
@@ -165,14 +165,14 @@ final class gr {
             this.field_i[var3_intLifetime1].a((byte) -61, param0.field_i[var3_intLifetime1]);
             this.field_q[var3_intLifetime1] = param0.field_q[var3_intLifetime1];
           }
-          this.field_O = new tf();
+          this.field_O = new IntrusiveDeque();
           var3 = (cq) (param0.field_O.g(24009));
           while (var3 != null) {
             var4 = new cq(var3.field_k, var3.field_l, var3.field_i);
             this.field_O.a(var4, 3);
             var3 = (cq) (param0.field_O.c(33));
           }
-          this.field_g = new tf();
+          this.field_g = new IntrusiveDeque();
           var8 = (pt) (param0.field_g.g(24009));
           while (var8 != null) {
             var9 = new up();
@@ -588,10 +588,10 @@ final class gr {
         int var4Lifetime1;
         var10 = Kickabout.field_G;
         var14 = new Random(this.field_e);
-        var3 = dq.$cfr$intArgs$a$7f8aad568c81(-60, 3, var14);
-        this.field_w = dq.$cfr$intArgs$a$7f8aad568c81(91, 3, var14);
-        this.field_k = dq.$cfr$intArgs$a$7f8aad568c81(97, 16, var14) + 16;
-        this.field_R = dq.$cfr$intArgs$a$7f8aad568c81(127, 16, var14);
+        var3 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-60, 3, var14);
+        this.field_w = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(91, 3, var14);
+        this.field_k = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(97, 16, var14) + 16;
+        this.field_R = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(127, 16, var14);
         if (param0 != -27595) {
           this.field_E = -108;
         }
@@ -618,17 +618,17 @@ final class gr {
           if (var4 == 3) {
             var15.field_q = 1;
           }
-          var15.field_e = dq.$cfr$intArgs$a$7f8aad568c81(79, td.field_a.length, var14);
-          var15.field_l = 1 + dq.$cfr$intArgs$a$7f8aad568c81(106, -1 + ce.field_G[var15.field_q].length, var14);
-          var15.field_n = dq.$cfr$intArgs$a$7f8aad568c81(-86, 10, var14) + 6;
-          var15.field_o = dq.$cfr$intArgs$a$7f8aad568c81(97, 10, var14) + 6;
-          var15.field_g = 6 + dq.$cfr$intArgs$a$7f8aad568c81(-111, 10, var14);
+          var15.field_e = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, td.field_a.length, var14);
+          var15.field_l = 1 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(106, -1 + ce.field_G[var15.field_q].length, var14);
+          var15.field_n = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-86, 10, var14) + 6;
+          var15.field_o = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(97, 10, var14) + 6;
+          var15.field_g = 6 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-111, 10, var14);
           var15.field_r = 0;
           var15.field_h = new int[1];
           var15.field_h[0] = 0;
-          var6 = dq.$cfr$intArgs$a$7f8aad568c81(84, 5, var14);
-          var7 = dq.$cfr$intArgs$a$7f8aad568c81(-70, 3, var14);
-          var8 = dq.$cfr$intArgs$a$7f8aad568c81(-57, 3, var14);
+          var6 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(84, 5, var14);
+          var7 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-70, 3, var14);
+          var8 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-57, 3, var14);
           var9 = var8;
           var9 = var9 | var7 << 4;
           var9 = var9 | var6 << 8;
@@ -906,7 +906,7 @@ final class gr {
                 if (this.a((byte) -112, var5Lifetime1)) {
                   throw new IllegalStateException("User tried to sell a player in auction " + param0.toString());
                 }
-                this.field_x = this.field_x + dh.a(this.field_i[var5Lifetime1], true);
+                this.field_x = this.field_x + ImageProducerRasterBuffer.a(this.field_i[var5Lifetime1], true);
                 this.field_i[var5Lifetime1] = new up();
                 return;
               }
@@ -1235,13 +1235,13 @@ final class gr {
           for (var11Lifetime2 = 0; var11Lifetime2 < 9; var11Lifetime2++) {
             this.field_q[var11Lifetime2] = param1.h((byte) -109);
           }
-          this.field_O = new tf();
+          this.field_O = new IntrusiveDeque();
           var11Lifetime3 = param1.h((byte) -114);
           for (var12Lifetime1 = 0; var12Lifetime1 < var11Lifetime3; var12Lifetime1++) {
             var13_ref_cq = new cq(param1);
             this.field_O.a(var13_ref_cq, 3);
           }
-          this.field_g = new tf();
+          this.field_g = new IntrusiveDeque();
           var12Lifetime2 = param1.h((byte) -108);
           for (var13 = 0; var12Lifetime2 > var13; var13++) {
             var14_ref_pt = new pt(param1);
@@ -1319,8 +1319,8 @@ final class gr {
         this.field_i = new up[9];
         this.field_o = 0;
         this.field_K = 0;
-        this.field_O = new tf();
-        this.field_g = new tf();
+        this.field_O = new IntrusiveDeque();
+        this.field_g = new IntrusiveDeque();
         this.field_q = new int[9];
         int var2 = 0;
         var1Lifetime1 = var2;

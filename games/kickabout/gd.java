@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gd {
-    static sj field_c;
+    static ResourceArchive field_c;
     static String field_g;
     static String field_d;
     static String field_b;
-    static sj field_h;
+    static ResourceArchive field_h;
     static String field_f;
     static String[] field_e;
     static boolean field_a;
@@ -70,19 +70,19 @@ final class gd {
         var4 = 115 / ((-39 - param0) / 47);
         if (param2 == 0 &&
           param1 != ng.field_a) {
-          wj.field_z = true;
+          WidgetContainer.field_z = true;
           ng.field_a = param1;
           ca.a(3, param3);
         }
         if (param2 == 1 &&
           q.field_b != param1) {
           q.field_b = param1;
-          wj.field_z = true;
+          WidgetContainer.field_z = true;
           ca.a(3, param3);
         }
         if (param2 == 2 &&
           fc.field_a != param1) {
-          wj.field_z = true;
+          WidgetContainer.field_z = true;
           fc.field_a = param1;
           ca.a(3, param3);
         }
@@ -102,7 +102,7 @@ final class gd {
           for (var5_int = 0; var5_int < 3; var5_int++) {
             for (var6 = 0; 3 > var6; var6++) {
               dk.a(param2, -112, param1, var5_int, var6);
-              on.a(param2, param1, 156, 225, 10, 65793, 96);
+              SoftwareRasterizer.a(param2, param1, 156, 225, 10, 65793, 96);
               ta.e(126);
             }
           }

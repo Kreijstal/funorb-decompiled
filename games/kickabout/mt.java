@@ -5,7 +5,7 @@ final class mt {
     static int field_a;
     static String field_c;
     static String field_e;
-    static ut field_d;
+    static Sprite field_d;
     static int[] field_f;
     static String field_b;
 

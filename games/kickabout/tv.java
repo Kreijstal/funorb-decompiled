@@ -19,7 +19,7 @@ final class tv {
     int field_o;
     int[] field_r;
     int field_n;
-    static ut[] field_b;
+    static Sprite[] field_b;
     static int[][] field_f;
 
     public static void a(int param0) {

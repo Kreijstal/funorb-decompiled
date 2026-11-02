@@ -7,7 +7,7 @@ final class gb extends wi {
     static String field_I;
     static String field_H;
     static boolean field_F;
-    static ut[] field_G;
+    static Sprite[] field_G;
     private l field_J;
 
     public static void a(byte param0) {
@@ -17,7 +17,7 @@ final class gb extends wi {
         field_I = null;
     }
 
-    final void a(byte param0, fd param1, int param2, int param3) {
+    final void a(byte param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_L = this.field_L + 1;
           super.a(param0, param1, param2, param3);
@@ -28,7 +28,7 @@ final class gb extends wi {
 
     final String f(int param0) {
         if (param0 != -1) {
-          field_G = (ut[]) null;
+          field_G = (Sprite[]) null;
           if (this.field_m) {
             return this.field_J.b(param0 ^ 79);
           }
@@ -41,9 +41,9 @@ final class gb extends wi {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        ut var15 = null;
-        ut var16 = null;
-        ut var13 = null;
+        Sprite var15 = null;
+        Sprite var16 = null;
+        Sprite var13 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = Kickabout.field_G;
@@ -61,7 +61,7 @@ final class gb extends wi {
           var9 = var15.field_o << 1;
           var10 = var15.field_v << 1;
           if (null == nq.field_G) {
-            nq.field_G = new ut(var9, var10);
+            nq.field_G = new Sprite(var9, var10);
             PacketBuffer.a(-54, nq.field_G);
             var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
@@ -69,7 +69,7 @@ final class gb extends wi {
             return;
           }
           if (nq.field_G.field_q < var9) {
-            nq.field_G = new ut(var9, var10);
+            nq.field_G = new Sprite(var9, var10);
             PacketBuffer.a(-54, nq.field_G);
             var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
@@ -77,7 +77,7 @@ final class gb extends wi {
             return;
           }
           if (nq.field_G.field_w < var10) {
-            nq.field_G = new ut(var9, var10);
+            nq.field_G = new Sprite(var9, var10);
             PacketBuffer.a(-54, nq.field_G);
             var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
@@ -85,7 +85,7 @@ final class gb extends wi {
             return;
           }
           PacketBuffer.a(116, nq.field_G);
-          on.b();
+          SoftwareRasterizer.b();
           var15.b(112, 144, var15.field_o << 4, var15.field_v << 4, -this.field_L << 10, 4096);
           ta.e(120);
           nq.field_G.c(var5 - var15.field_o, var6 - var15.field_v, 256);
@@ -96,7 +96,7 @@ final class gb extends wi {
           var9Lifetime1 = var16.field_o << 1;
           var10Lifetime1 = var16.field_v << 1;
           if (null == nq.field_G) {
-            nq.field_G = new ut(var9Lifetime1, var10Lifetime1);
+            nq.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
             PacketBuffer.a(-54, nq.field_G);
             var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
@@ -104,7 +104,7 @@ final class gb extends wi {
             return;
           }
           if (nq.field_G.field_q < var9Lifetime1) {
-            nq.field_G = new ut(var9Lifetime1, var10Lifetime1);
+            nq.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
             PacketBuffer.a(-54, nq.field_G);
             var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
@@ -112,7 +112,7 @@ final class gb extends wi {
             return;
           }
           if (nq.field_G.field_w < var10Lifetime1) {
-            nq.field_G = new ut(var9Lifetime1, var10Lifetime1);
+            nq.field_G = new Sprite(var9Lifetime1, var10Lifetime1);
             PacketBuffer.a(-54, nq.field_G);
             var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
             ta.e(120);
@@ -120,7 +120,7 @@ final class gb extends wi {
             return;
           }
           PacketBuffer.a(116, nq.field_G);
-          on.b();
+          SoftwareRasterizer.b();
           var16.b(112, 144, var16.field_o << 4, var16.field_v << 4, -this.field_L << 10, 4096);
           ta.e(120);
           nq.field_G.c(var5 - var16.field_o, var6 - var16.field_v, 256);
@@ -134,11 +134,11 @@ final class gb extends wi {
         if (var8 != he.field_yb) {
           return;
         }
-        ut var12 = LoggedPlayer.field_g[1];
+        Sprite var12 = LoggedPlayer.field_g[1];
         var12.c(-(var12.field_q >> 1) + var5, var6 - (var12.field_w >> 1), 256);
     }
 
-    final boolean a(fd param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

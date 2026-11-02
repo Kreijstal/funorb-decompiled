@@ -4,8 +4,8 @@
 final class ge extends jd {
     static ff field_j;
     static String[] field_o;
-    private ga field_l;
-    static ut field_k;
+    private TextInputWidget field_l;
+    static Sprite field_k;
     static int[] field_m;
     static hd field_n;
 
@@ -30,7 +30,7 @@ final class ge extends jd {
         ((b) (cq.field_h)).h((byte) 84);
     }
 
-    ge(ga param0, ga param1) {
+    ge(TextInputWidget param0, TextInputWidget param1) {
         super(param0);
         try {
           this.field_l = param1;
@@ -157,7 +157,7 @@ final class ge extends jd {
         }
     }
 
-    final static byte[] a(int param0, ut param1) {
+    final static byte[] a(int param0, Sprite param1) {
         int var5 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;

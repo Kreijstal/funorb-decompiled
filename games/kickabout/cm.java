@@ -115,14 +115,14 @@ abstract class cm extends ub {
         var6 = Kickabout.field_G;
         try {
           var1_int = -19 % ((param0 + 57) / 45);
-          lt.field_c = new ut[100];
+          lt.field_c = new Sprite[100];
           var2 = wt.field_y.field_o;
           var3 = wt.field_y.field_v;
           for (var4 = 0; var4 < 100; var4++) {
-            lt.field_c[var4] = new ut(var2, var3);
+            lt.field_c[var4] = new Sprite(var2, var3);
             PacketBuffer.a(123, lt.field_c[var4]);
             var5 = (var4 << 16) / 100;
-            wt.field_y.b(wt.field_y.field_o << 3, wt.field_y.field_v << 3, on.field_g << 3, on.field_f << 3, -var5, 4096);
+            wt.field_y.b(wt.field_y.field_o << 3, wt.field_y.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, -var5, 4096);
             ta.e(127);
           }
           return;
@@ -163,7 +163,7 @@ abstract class cm extends ub {
         int var13Lifetime1;
         int var14Lifetime1;
         var17 = Kickabout.field_G;
-        on.g(param0 + 6, 35 + param2, this.field_n - 12, -40 + this.field_i, 2105376, 0);
+        SoftwareRasterizer.g(param0 + 6, 35 + param2, this.field_n - 12, -40 + this.field_i, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
@@ -171,8 +171,8 @@ abstract class cm extends ub {
         var8 = 0;
         var9 = param2;
         while (var4 > var8) {
-          if (var9 >= on.field_e &&
-            var9 < on.field_h) {
+          if (var9 >= SoftwareRasterizer.field_e &&
+            var9 < SoftwareRasterizer.field_h) {
             var10 = var8 * (var6 - var5) / var4 + var5;
             var11 = 0;
             var12 = this.field_n;
@@ -185,7 +185,7 @@ abstract class cm extends ub {
                   }
                   var14 = var10 * (462 - var13) / 42;
                   var14 = var14 | (var14 << 16 | var14 << 8);
-                  on.field_a[var9 * on.field_g + param0 + var11] = var14;
+                  SoftwareRasterizer.field_a[var9 * SoftwareRasterizer.field_g + param0 + var11] = var14;
                 }
                 var11++;
               }
@@ -201,7 +201,7 @@ abstract class cm extends ub {
                   } else {
                     var16 = (462 - var15) * var10 / 42;
                     var16 = var16 | (var16 << 16 | var16 << 8);
-                    on.field_a[var12 + param0 + on.field_g * var9] = var16;
+                    SoftwareRasterizer.field_a[var12 + param0 + SoftwareRasterizer.field_g * var9] = var16;
                   }
                   var12++;
                   continue;
@@ -211,7 +211,7 @@ abstract class cm extends ub {
               var12 = var13Lifetime1;
             }
             var10 = var10 | (var10 << 16 | var10 << 8);
-            on.f(var11 + param0, var9, var12 - var11, var10);
+            SoftwareRasterizer.f(var11 + param0, var9, var12 - var11, var10);
           }
           var8++;
           var9++;
@@ -224,8 +224,8 @@ abstract class cm extends ub {
         while (var4Lifetime1 > var8Lifetime1) {
           var10Lifetime1 = (var6Lifetime1 - var5Lifetime1) * var8Lifetime1 / var4Lifetime1 + var5Lifetime1;
           var10Lifetime1 = var10Lifetime1 | (var10Lifetime1 << 16 | var10Lifetime1 << 8);
-          on.f(param0, var9Lifetime1, 6, var10Lifetime1);
-          on.f(-6 + this.field_n + param0, var9Lifetime1, 6, var10Lifetime1);
+          SoftwareRasterizer.f(param0, var9Lifetime1, 6, var10Lifetime1);
+          SoftwareRasterizer.f(-6 + this.field_n + param0, var9Lifetime1, 6, var10Lifetime1);
           var9Lifetime1++;
           var8Lifetime1++;
         }
@@ -240,8 +240,8 @@ abstract class cm extends ub {
         while (var8Lifetime2 < var4Lifetime2) {
           var10Lifetime2 = var8Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2 + var5Lifetime2;
           var10Lifetime2 = var10Lifetime2 | (var10Lifetime2 << 16 | var10Lifetime2 << 8);
-          on.f(param0, var9Lifetime2, 6, var10Lifetime2);
-          on.f(-6 + this.field_n + param0, var9Lifetime2, 6, var10Lifetime2);
+          SoftwareRasterizer.f(param0, var9Lifetime2, 6, var10Lifetime2);
+          SoftwareRasterizer.f(-6 + this.field_n + param0, var9Lifetime2, 6, var10Lifetime2);
           var9Lifetime2++;
           var8Lifetime2++;
         }

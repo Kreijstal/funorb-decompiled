@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wo extends aa {
-    static ut[] field_n;
+    static Sprite[] field_n;
     static int field_m;
     static int field_k;
     static String field_l;
     static String[] field_j;
     static int field_o;
 
-    final static void a(ot param0, gm param1, byte param2, int param3) {
+    final static void a(ArgbSprite param0, gm param1, byte param2, int param3) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;

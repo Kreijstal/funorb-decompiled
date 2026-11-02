@@ -10,10 +10,10 @@ final class je extends IntrusiveNode {
     int[] field_o;
     static String field_n;
     static rd[] field_g;
-    static ut field_h;
+    static Sprite field_h;
     private boolean[] field_i;
     static String field_p;
-    static bh field_e;
+    static BufferedSocket field_e;
     static int field_k;
     static int field_m;
 

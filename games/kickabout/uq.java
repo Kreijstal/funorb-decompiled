@@ -13,10 +13,10 @@ final class uq {
         vg.field_Wb = true;
         if (param0 != -122) {
           uq.a(-68);
-          ov.field_b = 0;
+          NodeHashTableIterator.field_b = 0;
           return;
         }
-        ov.field_b = 0;
+        NodeHashTableIterator.field_b = 0;
     }
 
     public static void a(int param0) {

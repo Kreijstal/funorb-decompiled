@@ -3,10 +3,10 @@
  */
 final class ti {
     private int field_a;
-    static tf field_c;
-    private tf field_e;
+    static IntrusiveDeque field_c;
+    private IntrusiveDeque field_e;
     static String field_g;
-    static ut field_f;
+    static Sprite field_f;
     static int[] field_d;
     static int[] field_b;
 
@@ -123,10 +123,10 @@ final class ti {
         boolean stackIn_154_2 = false;
         String var3;
         String var3Lifetime1;
-        pt.a(on.field_g + 640 >> 1, -22914, -640 + on.field_g >> 1, on.field_f, 0);
+        pt.a(SoftwareRasterizer.field_g + 640 >> 1, -22914, -640 + SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f, 0);
         if (0 < ns.field_a) {
-          if (tf.field_e != null) {
-            tf.field_e.d(ss.field_c.field_s, 0);
+          if (IntrusiveDeque.field_e != null) {
+            IntrusiveDeque.field_e.d(ss.field_c.field_s, 0);
             stackIn_5_0 = ss.field_c;
             stackIn_5_1 = 65;
             stackIn_6_2 = (param1) && (!qv.field_f);
@@ -138,8 +138,8 @@ final class ti {
             if (param0 == 63) {
               if (!(0 >= fj.field_a) ||
                 !(ee.field_b <= 0)) {
-                if (null != tf.field_e) {
-                  tf.field_e.d(dn.field_Cb.field_s, 0);
+                if (null != IntrusiveDeque.field_e) {
+                  IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
                 }
                 stackIn_19_0 = dn.field_Cb;
                 stackIn_19_1 = 102;
@@ -156,8 +156,8 @@ final class ti {
             var3 = (String) null;
             ti.a((String) null, 87L, (byte) -24, false, (String) null);
             if (0 < fj.field_a) {
-              if (null != tf.field_e) {
-                tf.field_e.d(dn.field_Cb.field_s, 0);
+              if (null != IntrusiveDeque.field_e) {
+                IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
               }
               stackIn_32_0 = dn.field_Cb;
               stackIn_32_1 = 102;
@@ -169,7 +169,7 @@ final class ti {
               ((hd) (Object) stackIn_36_0).a(stackIn_36_1, stackIn_37_2);
             } else {
               if (ee.field_b > 0) {
-                if (null == tf.field_e) {
+                if (null == IntrusiveDeque.field_e) {
                   stackIn_44_0 = dn.field_Cb;
                   stackIn_44_1 = 102;
                   stackIn_45_2 = (param1) && (!td.field_b);
@@ -179,7 +179,7 @@ final class ti {
                   stackIn_49_2 = (param1) && (!td.field_b);
                   ((hd) (Object) stackIn_48_0).a(stackIn_48_1, stackIn_49_2);
                 } else {
-                  tf.field_e.d(dn.field_Cb.field_s, 0);
+                  IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
                   stackIn_53_0 = dn.field_Cb;
                   stackIn_53_1 = 102;
                   stackIn_54_2 = (param1) && (!td.field_b);
@@ -205,7 +205,7 @@ final class ti {
         }
         if (param0 == 63) {
           if (0 < fj.field_a) {
-            if (null == tf.field_e) {
+            if (null == IntrusiveDeque.field_e) {
               stackIn_140_0 = dn.field_Cb;
               stackIn_140_1 = 102;
               stackIn_141_2 = (param1) && (!td.field_b);
@@ -215,7 +215,7 @@ final class ti {
               stackIn_145_2 = (param1) && (!td.field_b);
               ((hd) (Object) stackIn_144_0).a(stackIn_144_1, stackIn_145_2);
             } else {
-              tf.field_e.d(dn.field_Cb.field_s, 0);
+              IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
               stackIn_149_0 = dn.field_Cb;
               stackIn_149_1 = 102;
               stackIn_150_2 = (param1) && (!td.field_b);
@@ -227,7 +227,7 @@ final class ti {
             }
           } else {
             if (ee.field_b > 0) {
-              if (null == tf.field_e) {
+              if (null == IntrusiveDeque.field_e) {
                 stackIn_120_0 = dn.field_Cb;
                 stackIn_120_1 = 102;
                 stackIn_121_2 = (param1) && (!td.field_b);
@@ -237,7 +237,7 @@ final class ti {
                 stackIn_125_2 = (param1) && (!td.field_b);
                 ((hd) (Object) stackIn_124_0).a(stackIn_124_1, stackIn_125_2);
               } else {
-                tf.field_e.d(dn.field_Cb.field_s, 0);
+                IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
                 stackIn_129_0 = dn.field_Cb;
                 stackIn_129_1 = 102;
                 stackIn_130_2 = (param1) && (!td.field_b);
@@ -253,7 +253,7 @@ final class ti {
           var3Lifetime1 = (String) null;
           ti.a((String) null, 87L, (byte) -24, false, (String) null);
           if (0 < fj.field_a) {
-            if (null == tf.field_e) {
+            if (null == IntrusiveDeque.field_e) {
               stackIn_97_0 = dn.field_Cb;
               stackIn_97_1 = 102;
               stackIn_98_2 = (param1) && (!td.field_b);
@@ -263,7 +263,7 @@ final class ti {
               stackIn_102_2 = (param1) && (!td.field_b);
               ((hd) (Object) stackIn_101_0).a(stackIn_101_1, stackIn_102_2);
             } else {
-              tf.field_e.d(dn.field_Cb.field_s, 0);
+              IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
               stackIn_106_0 = dn.field_Cb;
               stackIn_106_1 = 102;
               stackIn_107_2 = (param1) && (!td.field_b);
@@ -275,7 +275,7 @@ final class ti {
             }
           } else {
             if (ee.field_b > 0) {
-              if (null == tf.field_e) {
+              if (null == IntrusiveDeque.field_e) {
                 stackIn_86_0 = dn.field_Cb;
                 stackIn_86_1 = 102;
                 stackIn_87_2 = (param1) && (!td.field_b);
@@ -285,7 +285,7 @@ final class ti {
                 stackIn_91_2 = (param1) && (!td.field_b);
                 ((hd) (Object) stackIn_90_0).a(stackIn_90_1, stackIn_91_2);
               } else {
-                tf.field_e.d(dn.field_Cb.field_s, 0);
+                IntrusiveDeque.field_e.d(dn.field_Cb.field_s, 0);
                 stackIn_77_0 = dn.field_Cb;
                 stackIn_77_1 = 102;
                 stackIn_78_2 = (param1) && (!td.field_b);
@@ -458,7 +458,7 @@ final class ti {
         Throwable var8 = null;
         try {
           var3_int = param0.field_n + param1;
-          this.field_e = new tf();
+          this.field_e = new IntrusiveDeque();
           this.field_a = 2;
           while (var3_int - this.field_a > param0.field_n) {
             var4 = (int)param0.h(119, this.field_a);
@@ -532,9 +532,9 @@ final class ti {
     }
 
     static {
-        field_c = new tf();
+        field_c = new IntrusiveDeque();
         field_g = "Value: <%0>";
-        field_f = new ut(540, 140);
+        field_f = new Sprite(540, 140);
         field_b = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
         field_d = new int[12];
         field_d[2] = 541558757;

@@ -65,7 +65,7 @@ final class gg extends hd {
           for (var5Lifetime1 = 0; var5Lifetime1 < 2; var5Lifetime1++) {
             var6 = -var3_int + kk.field_B[var5Lifetime1];
             var7 = -var4 + or.field_a[var5Lifetime1];
-            mu.field_Q[var5Lifetime1] = de.a(var6 * var6 + var7 * var7, (byte) -128);
+            mu.field_Q[var5Lifetime1] = GameKeyHandler.a(var6 * var6 + var7 * var7, (byte) -128);
           }
           var5Lifetime2 = mu.field_Q[0] - 30;
           var9 = 0;
@@ -106,14 +106,14 @@ final class gg extends hd {
     }
 
     final static void h(byte param0) {
-        hd.field_K = wm.field_C;
+        hd.field_K = CachedArchiveSource.field_C;
         hw.field_f = la.field_d;
         jr.field_Gb = cq.field_f;
         up.field_f = 0.0;
-        o.field_e = 0.0;
+        DualLinkDeque.field_e = 0.0;
         int var1 = -104 % ((param0 + 10) / 60);
         hw.field_i = (int)hw.field_f >> 3;
-        tf.field_a = 0.0;
+        IntrusiveDeque.field_a = 0.0;
     }
 
     final static void a(int param0) {

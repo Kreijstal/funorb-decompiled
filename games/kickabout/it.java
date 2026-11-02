@@ -38,7 +38,7 @@ final class it extends MatchAgent {
         }
     }
 
-    final static void a(rj param0, sj param1, byte param2) {
+    final static void a(rj param0, ResourceArchive param1, byte param2) {
         bq.field_a = param0;
         sr.field_h = param1;
         vg.field_Db[44] = new nb(bq.field_a.a("", true, "KaB_menu_btn"));

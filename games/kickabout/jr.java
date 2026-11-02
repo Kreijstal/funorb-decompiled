@@ -23,7 +23,7 @@ final class jr extends im {
         boolean stackIn_30_1 = false;
         int var3;
         int var5;
-        sj var6;
+        ResourceArchive var6;
         var5 = Kickabout.field_G;
         if (!this.field_Lb) {
           if (cq.e(15137)) {
@@ -33,10 +33,10 @@ final class jr extends im {
           }
           var3 = stackIn_8_0;
           stackIn_18_0 = this.field_Cb;
-          stackIn_19_1 = (!la.a(100)) && (!dg.field_e) && (!ds.field_g) && (var3 == 0) && (!tu.field_E.a(1, this.field_Hb.field_a)) && (this.field_Hb.field_r) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!this.field_Hb.field_q);
+          stackIn_19_1 = (!la.a(100)) && (!dg.field_e) && (!ds.field_g) && (var3 == 0) && (!GameLoopApplet.field_E.a(1, this.field_Hb.field_a)) && (this.field_Hb.field_r) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!this.field_Hb.field_q);
           stackIn_18_0.field_lb = stackIn_19_1;
           stackIn_29_0 = this.field_Jb;
-          stackIn_30_1 = (!la.a(100)) && (!dg.field_e) && (!ds.field_g) && (var3 == 0) && (!tu.field_E.a(1, this.field_Hb.field_a)) && (-1L != this.field_Hb.field_k) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!tu.field_E.a(this.field_Hb.field_a, (byte) -79));
+          stackIn_30_1 = (!la.a(100)) && (!dg.field_e) && (!ds.field_g) && (var3 == 0) && (!GameLoopApplet.field_E.a(1, this.field_Hb.field_a)) && (-1L != this.field_Hb.field_k) && (!this.field_Hb.field_j) && (!this.field_Hb.field_h) && (!GameLoopApplet.field_E.a(this.field_Hb.field_a, (byte) -79));
           stackIn_29_0.field_lb = stackIn_30_1;
           if (param1) {
             for (var4 = 0; var4 < this.field_Eb.length; var4++) {
@@ -44,20 +44,20 @@ final class jr extends im {
             }
           }
           if (this.field_Jb.field_sb == 1) {
-            if (tu.field_E.a(param0 ^ 1, this.field_Hb.field_a)) {
+            if (GameLoopApplet.field_E.a(param0 ^ 1, this.field_Hb.field_a)) {
               tb.a((byte) 126, 31);
               sp.c(53, param0 - 9);
             } else {
-              if (tu.field_E.a(this.field_Hb.field_a, (byte) -79)) {
+              if (GameLoopApplet.field_E.a(this.field_Hb.field_a, (byte) -79)) {
                 tb.a((byte) 126, 3);
                 sp.c(53, -3);
               } else {
-                if (tu.field_E.c(-3)) {
-                  if (tu.field_E.d(-1) == -1) {
+                if (GameLoopApplet.field_E.c(-3)) {
+                  if (GameLoopApplet.field_E.d(-1) == -1) {
                     tb.a((byte) 126, 2);
                     sp.c(53, 112);
                   } else {
-                    if (this.field_Hb.field_i > tu.field_E.field_x) {
+                    if (this.field_Hb.field_i > GameLoopApplet.field_E.field_x) {
                       tb.a((byte) 126, 4);
                       sp.c(53, 9);
                     } else {
@@ -72,21 +72,21 @@ final class jr extends im {
             }
           }
           if (this.field_Cb.field_sb == 1) {
-            if (tu.field_E.a(this.field_Hb.field_a, (byte) -79)) {
-              if (this.field_Hb.field_t > tu.field_E.field_x) {
+            if (GameLoopApplet.field_E.a(this.field_Hb.field_a, (byte) -79)) {
+              if (this.field_Hb.field_t > GameLoopApplet.field_E.field_x) {
                 tb.a((byte) 126, 4);
                 sp.c(53, -113);
               } else {
                 ca.a(this.field_Hb, 255);
               }
             } else {
-              if (!tu.field_E.a(param0 + 1, this.field_Hb.field_a)) {
-                if (this.field_Hb.field_t > tu.field_E.field_x) {
+              if (!GameLoopApplet.field_E.a(param0 + 1, this.field_Hb.field_a)) {
+                if (this.field_Hb.field_t > GameLoopApplet.field_E.field_x) {
                   tb.a((byte) 126, 4);
                   sp.c(53, -12);
                 } else {
-                  if (tu.field_E.c(-3)) {
-                    if (tu.field_E.d(-1) == -1) {
+                  if (GameLoopApplet.field_E.c(-3)) {
+                    if (GameLoopApplet.field_E.d(-1) == -1) {
                       tb.a((byte) 126, 2);
                       sp.c(53, 40);
                     } else {
@@ -105,8 +105,8 @@ final class jr extends im {
           }
         }
         if (param0 != 0) {
-          var6 = (sj) null;
-          jr.a((sj) null, 41, 84);
+          var6 = (ResourceArchive) null;
+          jr.a((ResourceArchive) null, 41, 84);
         }
     }
 
@@ -137,7 +137,7 @@ final class jr extends im {
         boolean stackIn_46_4;
         String stackIn_58_0 = null;
         int var4;
-        ot var5;
+        ArgbSprite var5;
         int var6;
         int var7;
         int var8;
@@ -149,8 +149,8 @@ final class jr extends im {
         int var7Lifetime1;
         int var8Lifetime1;
         var11 = Kickabout.field_G;
-        if (on.field_h >= this.field_T &&
-          this.field_T + this.field_mb >= on.field_e) {
+        if (SoftwareRasterizer.field_h >= this.field_T &&
+          this.field_T + this.field_mb >= SoftwareRasterizer.field_e) {
           var12 = new up();
           if (param0 != 0) {
             field_Fb = (String) null;
@@ -158,7 +158,7 @@ final class jr extends im {
           if (!this.field_Lb) {
             var12.a((byte) -81, this.field_Hb.field_m);
             stackIn_9_0 = var12;
-            stackIn_10_1 = (tu.field_E.a(1, this.field_Hb.field_a)) ? false : true;
+            stackIn_10_1 = (GameLoopApplet.field_E.a(1, this.field_Hb.field_a)) ? false : true;
             stackIn_9_0.field_c = stackIn_10_1;
           }
           var4 = this.field_F;
@@ -177,11 +177,11 @@ final class jr extends im {
             }
             this.field_X.a(var12.d(100), 45 + var4, (this.field_mb >> 1) + this.field_T + 4, this.field_y, -1);
             var4 = var4 + this.field_Db[0];
-            if (tu.field_E.a(this.field_Hb.field_a, (byte) -79)) {
-              q.field_d.c(tf.field_b.toUpperCase(), var4 - 10, -7 + (this.field_mb + this.field_T), 6745702, -1);
+            if (GameLoopApplet.field_E.a(this.field_Hb.field_a, (byte) -79)) {
+              q.field_d.c(IntrusiveDeque.field_b.toUpperCase(), var4 - 10, -7 + (this.field_mb + this.field_T), 6745702, -1);
             } else {
-              if (!tu.field_E.a(1, this.field_Hb.field_a)) {
-                if (tu.field_E.b(30524, this.field_Hb.field_a)) {
+              if (!GameLoopApplet.field_E.a(1, this.field_Hb.field_a)) {
+                if (GameLoopApplet.field_E.b(30524, this.field_Hb.field_a)) {
                   q.field_d.c(fb.field_O.toUpperCase(), -10 + var4, -7 + this.field_mb + this.field_T, 16777028, -1);
                 }
               } else {
@@ -250,8 +250,8 @@ final class jr extends im {
           }
           if (this.field_Db == null) {
             if (this.field_Ib != null) {
-              on.f(this.field_F + (-320 + this.field_q >> 1), 23 + this.field_T, 320, 27, 8, 65793);
-              on.a((-320 + this.field_q >> 1) + this.field_F, this.field_T + 23, 320, 27, 8, 65793, 160);
+              SoftwareRasterizer.f(this.field_F + (-320 + this.field_q >> 1), 23 + this.field_T, 320, 27, 8, 65793);
+              SoftwareRasterizer.a((-320 + this.field_q >> 1) + this.field_F, this.field_T + 23, 320, 27, 8, 65793, 160);
               pb.field_C.d(this.field_Ib, this.field_F + (this.field_q >> 1), this.field_T + 42, 16777215, -1);
             }
           } else {
@@ -270,7 +270,7 @@ final class jr extends im {
         w.field_f[var3].c(param0 - 19, param2 - 23);
     }
 
-    final static jk a(sj param0, int param1, int param2) {
+    final static jk a(ResourceArchive param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -381,8 +381,8 @@ final class jr extends im {
             stackIn_14_0 = un.field_d;
           }
           var5 = stackIn_14_0;
-          this.field_Jb = eo.a(he.field_Eb, 7126504, (hu) (var5), 50, true);
-          this.field_Cb = eo.a(mc.field_f, 7126504, (hu) (var5), 50, true);
+          this.field_Jb = eo.a(he.field_Eb, 7126504, (BitmapFont) (var5), 50, true);
+          this.field_Cb = eo.a(mc.field_f, 7126504, (BitmapFont) (var5), 50, true);
           this.a((byte) -117, this.field_Jb);
           this.a((byte) -120, this.field_Cb);
           this.field_Jb.field_J = this.field_T + 20;

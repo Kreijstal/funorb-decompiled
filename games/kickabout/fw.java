@@ -9,7 +9,7 @@ final class fw extends ta {
     static double field_G;
     private boolean field_F;
 
-    final static kg a(sj param0, String param1, boolean param2, String param3) {
+    final static kg a(ResourceArchive param0, String param1, boolean param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -69,7 +69,7 @@ final class fw extends ta {
         super.a(0, param1, param2);
         this.field_F = gf.a(nt.field_yb, param0, tk.field_Ib, 3231);
         this.field_I = gf.a(nt.field_yb, 1, tk.field_Ib, 3231);
-        cf.field_Gb.field_jb = new tf();
+        cf.field_Gb.field_jb = new IntrusiveDeque();
         for (var4 = 0; 3 > var4; var4++) {
           for (var5 = 0; 4 > var5; var5++) {
             boolean decompiledFrameRemainder0 = true;
@@ -107,18 +107,18 @@ final class fw extends ta {
         int var4Lifetime2;
         super.a(param0, param1);
         int var3 = this.field_j + 18;
-        on.a(this.field_j + 10, 53, 365, 371, 65793, 96);
-        on.a(var3, 62, 348, 24, 6, 65793, 96);
+        SoftwareRasterizer.a(this.field_j + 10, 53, 365, 371, 65793, 96);
+        SoftwareRasterizer.a(var3, 62, 348, 24, 6, 65793, 96);
         pb.field_C.a(e.field_o, 30 + this.field_j, 80, 16777215, -1);
-        on.a(var3, 95, 348, 106, 10, 65793, 96);
-        on.a(var3, 207, 348, 102, 10, 65793, 96);
-        on.a(var3, 314, 348, 100, 10, 65793, 96);
+        SoftwareRasterizer.a(var3, 95, 348, 106, 10, 65793, 96);
+        SoftwareRasterizer.a(var3, 207, 348, 102, 10, 65793, 96);
+        SoftwareRasterizer.a(var3, 314, 348, 100, 10, 65793, 96);
         for (var4 = 0; var4 < cf.field_Gb.field_jb.f(606511077).length; var4++) {
           ((jt) (cf.field_Gb.field_jb.f(param0 ^ -606511074)[var4])).j(0);
         }
         cf.field_Gb.a(96, false);
         if (!this.field_F) {
-          on.a(var3, 207, 348, 102, 10, 65793, 228);
+          SoftwareRasterizer.a(var3, 207, 348, 102, 10, 65793, 228);
           for (var4Lifetime1 = 0; var4Lifetime1 < 3; var4Lifetime1++) {
             sh.field_g.c(30 + (var3 - var4Lifetime1), 241 - var4Lifetime1 * 2);
           }
@@ -126,7 +126,7 @@ final class fw extends ta {
           pb.field_C.a(we.field_d, var3, 269, 348, 40, 16777215, -1, 1, 1, 0);
         }
         if (!this.field_I) {
-          on.a(var3, 314, 348, 100, 10, 65793, 228);
+          SoftwareRasterizer.a(var3, 314, 348, 100, 10, 65793, 228);
           for (var4Lifetime2 = 0; var4Lifetime2 < 3; var4Lifetime2++) {
             sh.field_g.c(-var4Lifetime2 + (30 + var3), -(2 * var4Lifetime2) + 348);
           }
@@ -135,7 +135,7 @@ final class fw extends ta {
         }
         un.field_d.a(ca.field_a, this.field_j + 25, 115, 16777215, -1);
         un.field_d.a(lr.field_j, 25 + this.field_j, 223, 16777215, -1);
-        un.field_d.a(tu.field_C, 25 + this.field_j, 331, 16777215, -1);
+        un.field_d.a(GameLoopApplet.field_C, 25 + this.field_j, 331, 16777215, -1);
     }
 
     final void b(int param0) {
@@ -221,9 +221,9 @@ final class fw extends ta {
               }
             }
             if (ci.field_a == 2) {
-              je.field_e = new bh((java.net.Socket) (iv.field_o.field_b), hf.field_e);
+              je.field_e = new BufferedSocket((java.net.Socket) (iv.field_o.field_b), hf.field_e);
               var2 = new PacketBuffer(13);
-              dh.a(or.field_c, rc.field_f, var2, -3210, wo.field_k);
+              ImageProducerRasterBuffer.a(or.field_c, rc.field_f, var2, -3210, wo.field_k);
               var2.a(param0 + 52, 15);
               var2.b(param0 ^ -44, gg.field_Db);
               je.field_e.a(13, (byte) -127, 0, var2.field_f);

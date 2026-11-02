@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ou extends fd {
-    private ut field_I;
-    private ut field_D;
+final class ou extends UiWidget {
+    private Sprite field_I;
+    private Sprite field_D;
     static int field_y;
     private int field_F;
-    private ut[] field_z;
+    private Sprite[] field_z;
     private int field_x;
     private int field_A;
     private int field_G;
     boolean field_w;
     int field_C;
-    private ut field_v;
+    private Sprite field_v;
     private int field_H;
     private int field_E;
     static int field_B;
 
-    private final ut a(boolean param0) {
+    private final Sprite a(boolean param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -25,9 +25,9 @@ final class ou extends fd {
         int var9 = Kickabout.field_G;
         int var2 = this.field_i >> 1;
         if (param0) {
-          this.field_D = (ut) null;
+          this.field_D = (Sprite) null;
         }
-        ut var3 = new ut(var2, this.field_i);
+        Sprite var3 = new Sprite(var2, this.field_i);
         PacketBuffer.a(99, var3);
         for (var4 = 0; this.field_i > var4; var4++) {
           for (var5 = 0; var2 > var5; var5++) {
@@ -37,14 +37,14 @@ final class ou extends fd {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(1.0 <= var6) ? (int)(255.0 * var6) : 255;
             }
-            on.a(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.a(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         ta.e(124);
         return var3;
     }
 
-    final static void a(byte param0, sj param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
         kk var5 = null;
@@ -101,7 +101,7 @@ final class ou extends fd {
         }
     }
 
-    private final void a(ut param0, int param1, byte param2, int param3) {
+    private final void a(Sprite param0, int param1, byte param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -122,7 +122,7 @@ final class ou extends fd {
             param0.c(var6, param3);
           }
           ta.e(param2 - 1);
-          if (on.field_b <= this.field_v.field_q + param1) {
+          if (SoftwareRasterizer.field_b <= this.field_v.field_q + param1) {
             PacketBuffer.a(param2 ^ -84, this.field_I);
             param0.c(-this.field_H, 0);
             param0.c(this.field_G * 2 - this.field_H, 0);
@@ -130,7 +130,7 @@ final class ou extends fd {
             ta.e(117);
             this.field_I.c(param1, param3);
           }
-          if (on.field_c >= var5_int - this.field_v.field_q) {
+          if (SoftwareRasterizer.field_c >= var5_int - this.field_v.field_q) {
             PacketBuffer.a(-107, this.field_I);
             for (var7 = this.field_n - this.field_v.field_q + this.field_H; var7 > this.field_G * 2; var7 = var7 - this.field_G * 2) {
             }
@@ -171,8 +171,8 @@ final class ou extends fd {
         this.field_A = param1;
         this.field_F = 8355711 & param2 >> 1;
         if (param0 != 21) {
-          sj var5 = (sj) null;
-          ou.a((byte) -30, (sj) null);
+          ResourceArchive var5 = (ResourceArchive) null;
+          ou.a((byte) -30, (ResourceArchive) null);
         }
         this.field_E = param2;
         this.field_x = (16711422 & param1) >> 1;
@@ -184,7 +184,7 @@ final class ou extends fd {
         this.a((byte) 121);
     }
 
-    private final ut a(int param0, int param1, int param2) {
+    private final Sprite a(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -193,13 +193,13 @@ final class ou extends fd {
         int var11 = 0;
         int var12 = 0;
         int var13 = Kickabout.field_G;
-        ut var14 = new ut(this.field_G * 2, this.field_i);
+        Sprite var14 = new Sprite(this.field_G * 2, this.field_i);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         PacketBuffer.a(-66, var14);
         if (param0 != -257) {
-          return (ut) null;
+          return (Sprite) null;
         }
         int var5 = this.field_i >> 1;
         for (var6 = 0; this.field_i > var6; var6++) {
@@ -209,13 +209,13 @@ final class ou extends fd {
           var10 = var6 - var5;
           var11 = (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0) + 128;
           var12 = var11 >= 256 ? var8 | var9 : (var11 * var8 & -16711936 | 16711680 & var9 * var11) >>> 8;
-          on.f(var7, var6, this.field_G, var12);
+          SoftwareRasterizer.f(var7, var6, this.field_G, var12);
           var9Lifetime1 = 65280 & param1;
-          on.f(-(this.field_G * 2) + var7, var6, this.field_G, var12);
+          SoftwareRasterizer.f(-(this.field_G * 2) + var7, var6, this.field_G, var12);
           var8Lifetime1 = param1 & 16711935;
           var12Lifetime1 = 256 > var11 ? (-16711936 & var11 * var8Lifetime1 | var11 * var9Lifetime1 & 16711680) >>> 8 : var8Lifetime1 | var9Lifetime1;
-          on.f(var7 + this.field_G, var6, this.field_G, var12Lifetime1);
-          on.f(-this.field_G + var7, var6, this.field_G, var12Lifetime1);
+          SoftwareRasterizer.f(var7 + this.field_G, var6, this.field_G, var12Lifetime1);
+          SoftwareRasterizer.f(-this.field_G + var7, var6, this.field_G, var12Lifetime1);
         }
         ta.e(122);
         return var14;
@@ -226,7 +226,7 @@ final class ou extends fd {
     }
 
     final static int b(int param0, int param1, int param2, int param3) {
-        if (!(on.field_g < param1 + param0)) {
+        if (!(SoftwareRasterizer.field_g < param1 + param0)) {
           return param1;
         }
         if (param1 + (param2 - param0) >= 0) {
@@ -235,7 +235,7 @@ final class ou extends fd {
         if (param3 < 126) {
           ou.b(80, 123, -76, -16);
         }
-        return -param0 + on.field_g;
+        return -param0 + SoftwareRasterizer.field_g;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
@@ -255,7 +255,7 @@ final class ou extends fd {
         }
     }
 
-    final void a(byte param0, fd param1, int param2, int param3) {
+    final void a(byte param0, UiWidget param1, int param2, int param3) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -291,10 +291,10 @@ final class ou extends fd {
         if (param0 != 121) {
           return;
         }
-        this.field_z = new ut[]{this.a(-257, this.field_A, this.field_E), this.a(-257, this.field_x, this.field_F)};
+        this.field_z = new Sprite[]{this.a(-257, this.field_A, this.field_E), this.a(-257, this.field_x, this.field_F)};
         this.field_v = this.a(false);
         this.field_D = this.field_v.f();
-        this.field_I = new ut(this.field_i >> 1, this.field_i);
+        this.field_I = new Sprite(this.field_i >> 1, this.field_i);
     }
 
     final static int b(int param0, int param1, int param2, boolean param3) {

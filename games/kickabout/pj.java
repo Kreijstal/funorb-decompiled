@@ -8,15 +8,15 @@ final class pj extends ct {
     static String field_D;
     static hd field_E;
 
-    final static kg a(boolean param0, int param1, tf param2, int param3) {
-        ut var4 = null;
+    final static kg a(boolean param0, int param1, IntrusiveDeque param2, int param3) {
+        Sprite var4 = null;
         RuntimeException var4_ref = null;
-        ut var5 = null;
+        Sprite var5 = null;
         nr var6 = null;
         int var7 = 0;
-        ut[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         int stackIn_4_1 = 0;
-        ut stackIn_6_0 = null;
+        Sprite stackIn_6_0 = null;
         int stackIn_7_1 = 0;
         kg stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
@@ -32,7 +32,7 @@ final class pj extends ct {
             stackIn_4_1 = 1;
           }
           var4 = stackIn_3_0[stackIn_4_1];
-          var5 = new ut(var4.field_o, var4.field_v);
+          var5 = new Sprite(var4.field_o, var4.field_v);
           PacketBuffer.a(-55, var5);
           stackIn_6_0 = j.a(-5275);
           if (!param0) {
@@ -40,7 +40,7 @@ final class pj extends ct {
           } else {
             stackIn_7_1 = -120;
           }
-          ((ut) (Object) stackIn_6_0).d(stackIn_7_1, 0);
+          ((Sprite) (Object) stackIn_6_0).d(stackIn_7_1, 0);
           var4.c(0, 0);
           var6 = (nr) (param2.g(24009));
           while (var6 != null) {
@@ -67,7 +67,7 @@ final class pj extends ct {
         }
     }
 
-    pj(fd param0) {
+    pj(UiWidget param0) {
         super(param0.field_t, param0.field_g, param0.field_n, param0.field_i, (gj) null, (jv) null);
         try {
           param0.a(this.field_i, 1, 0, this.field_n, 0);
@@ -109,7 +109,7 @@ final class pj extends ct {
           this.field_z.a(param0, 65, this.field_t + param2, this.field_g + param3);
           return;
         }
-        ut var6 = new ut(this.field_z.field_n, this.field_z.field_i);
+        Sprite var6 = new Sprite(this.field_z.field_n, this.field_z.field_i);
         PacketBuffer.a(-46, var6);
         this.field_z.a(param0, (int) (char)param1, 0, 0);
         ta.e(127);

@@ -3,9 +3,9 @@
  */
 final class ag extends IntrusiveNode {
     static int field_h;
-    vm field_i;
+    PcmSampleStream field_i;
     static String field_l;
-    static rg field_f;
+    static MouseWheelInput field_f;
     static int field_e;
     int field_j;
     static int field_g;
@@ -25,7 +25,7 @@ final class ag extends IntrusiveNode {
         }
     }
 
-    ag(vm param0, IntrusiveNode param1) {
+    ag(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_i = param0;
           this.field_j = param0.m();

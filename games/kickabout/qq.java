@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qq extends i {
-    static sj field_H;
+    static ResourceArchive field_H;
     static hd field_G;
     static long field_I;
     static kj field_K;
@@ -21,14 +21,14 @@ final class qq extends i {
     final static void a(int param0, byte param1, int param2, String param3, int param4, int param5, int param6) {
         int var7_int = 15 + un.field_d.a(param3);
         pt.a(640, -22914, 630, 480, 0);
-        on.a(-20 + (param5 + 160), -17 + param4, var7_int + 20, 21, 8, 65793, 128);
+        SoftwareRasterizer.a(-20 + (param5 + 160), -17 + param4, var7_int + 20, 21, 8, 65793, 128);
         if (param1 != -101) {
           return;
         }
         try {
           ta.e(117);
           pt.a(640, -22914, param5 + 160, 480, 0);
-          on.a(-20 + param5 + 160, -17 + param4, 20 + var7_int, 21, 8, param6, param0);
+          SoftwareRasterizer.a(-20 + param5 + 160, -17 + param4, 20 + var7_int, 21, 8, param6, param0);
           ta.e(119);
           un.field_d.a(param3, 10 + (param5 + 160), param4, param2, -1);
         } catch (RuntimeException runtimeException) {

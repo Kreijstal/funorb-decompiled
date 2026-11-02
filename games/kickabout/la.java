@@ -5,7 +5,7 @@ final class la {
     private int field_b;
     private int field_h;
     private int field_j;
-    static ut field_e;
+    static Sprite field_e;
     private int field_g;
     private int field_i;
     private int field_l;
@@ -38,8 +38,8 @@ final class la {
         int var4 = lf.a((byte) -123, this.field_b >> 16);
         int var5 = -var3 + ug.a(param0 ^ param0, this.field_i >> 16);
         int var6 = -var4 + lf.a((byte) -117, this.field_h >> 16);
-        on.a(var3, var4, var5, var6, param1, 50);
-        on.e(var3, var4, var5, var6, param1);
+        SoftwareRasterizer.a(var3, var4, var5, var6, param1, 50);
+        SoftwareRasterizer.e(var3, var4, var5, var6, param1);
     }
 
     final static void a(CommonGame param0, int param1) {
@@ -131,7 +131,7 @@ final class la {
     final static void a(boolean param0) {
         ad.a(gk.field_h, (byte) -49);
         if (!param0) {
-          field_e = (ut) null;
+          field_e = (Sprite) null;
         }
     }
 
@@ -145,7 +145,7 @@ final class la {
     }
 
     static {
-        field_e = new ut(100, 100);
+        field_e = new Sprite(100, 100);
         field_f = "You can't auction this player as his value is £0";
     }
 }

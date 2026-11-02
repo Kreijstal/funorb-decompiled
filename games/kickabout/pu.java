@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pu extends hd implements lv {
-    private ot field_Cb;
+    private ArgbSprite field_Cb;
     private String field_Hb;
     static em field_Eb;
     private String field_Gb;
@@ -27,11 +27,11 @@ final class pu extends hd implements lv {
         int var5 = this.a(param1 ^ 24);
         int var6 = -(var4 >> 1) + param2;
         int var7 = -(var5 >> 1) + param0;
-        on.a(var6, var7, var4, var5, 52479, 60);
+        SoftwareRasterizer.a(var6, var7, var4, var5, 52479, 60);
         if (this.field_Bb.field_h != 0) {
-          on.a(var6, var7, var4, 50, 16777215, 60);
+          SoftwareRasterizer.a(var6, var7, var4, 50, 16777215, 60);
         }
-        on.e(var6, var7, var4, var5, 65793);
+        SoftwareRasterizer.e(var6, var7, var4, var5, 65793);
         q.field_d.c(this.field_yb, -10 + (var6 + var4), 22 + var7, 16777215, 65793);
         q.field_d.c(this.field_Hb, -10 + (var6 + var4), var7 + 36, 16777215, 65793);
         if (param1 != 23) {
@@ -39,7 +39,7 @@ final class pu extends hd implements lv {
         }
         this.field_Cb.c(var6 + 8, 9 + var7);
         if (0 != this.field_Bb.field_h) {
-          on.f(var6, var7 + 50, var4, 65793);
+          SoftwareRasterizer.f(var6, var7 + 50, var4, 65793);
           q.field_d.a(this.field_Gb, 5 + var6, var7 + 50, var4 - 10, var5 - 50 - 2, 16777215, 65793, 0, 1, 12);
         }
     }
@@ -257,11 +257,11 @@ final class pu extends hd implements lv {
           this.field_q = 32;
           this.field_Bb = param0;
           this.field_Cb = param0.d(false);
-          this.field_N = (ut) ((Object) this.field_Cb);
+          this.field_N = (Sprite) ((Object) this.field_Cb);
           if (param1) {
             this.field_q = this.field_q >> 1;
             this.field_mb = this.field_mb >> 1;
-            this.field_N = (ut) ((Object) nh.b(this.field_Cb));
+            this.field_N = (Sprite) ((Object) nh.b(this.field_Cb));
           }
           this.field_yb = rv.field_b[this.field_Bb.field_h].toUpperCase();
           this.field_Hb = vo.$cfr$intArgs$a$53ce4ab4c593(-18, kd.field_u, new String[]{wq.field_a[this.field_Bb.field_k]}).toLowerCase();

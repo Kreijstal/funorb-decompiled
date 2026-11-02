@@ -38,14 +38,14 @@ final class ts {
           if (param2 < 31) {
             return;
           }
-          var3_int = on.field_g >> 1;
-          var4 = on.field_f >> 1;
+          var3_int = SoftwareRasterizer.field_g >> 1;
+          var4 = SoftwareRasterizer.field_f >> 1;
           for (var5 = 0; var5 < 2; var5++) {
             for (var6 = 0; var6 < 900; var6++) {
               var7 = param0 + (2048 * var5 + var6);
               var8 = 54 * we.a(var7, false) >> 16;
               var9 = ei.a(var7, (byte) -23) * -54 >> 16;
-              on.b(var3_int + var8, var4 + var9, var3_int - var8, -var9 + var4, param1);
+              SoftwareRasterizer.b(var3_int + var8, var4 + var9, var3_int - var8, -var9 + var4, param1);
             }
           }
           return;
@@ -84,7 +84,7 @@ final class ts {
           var3_int = 0;
           var4 = hm.field_I;
           while (var3_int < j.field_a.length) {
-            var5 = wj.field_x[var3_int];
+            var5 = WidgetContainer.field_x[var3_int];
             if (var5 < 0) {
               var4 = var4 + qp.field_H;
             } else {

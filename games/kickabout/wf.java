@@ -12,7 +12,7 @@ final class wf extends qt {
     static String field_I;
     private jh field_G;
     private hd field_R;
-    private tf field_T;
+    private IntrusiveDeque field_T;
     private hd field_L;
     static int field_O;
     private boolean field_N;
@@ -44,7 +44,7 @@ final class wf extends qt {
         this.field_P.field_J = 86;
         this.field_P.field_s = 10;
         this.field_K = new hd();
-        this.field_K.field_E = bi.field_a.toLowerCase();
+        this.field_K.field_E = ArchiveNetworkClient.field_a.toLowerCase();
         this.field_K.a(true, 420, 195, 51, 66);
         this.field_E = new jw[4];
         for (var2 = 0; 4 > var2; var2++) {
@@ -205,7 +205,7 @@ final class wf extends qt {
         return stackIn_14_0;
     }
 
-    final static ut[][][] a(int param0, ut param1) {
+    final static Sprite[][][] a(int param0, Sprite param1) {
         int var4_int = 0;
         int var6_int = 0;
         int var7_int = 0;
@@ -213,48 +213,48 @@ final class wf extends qt {
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_21_0 = 0;
-        ut[][][] stackIn_28_0 = null;
+        Sprite[][][] stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        ut var3 = null;
+        Sprite var3 = null;
         float var4 = 0.0f;
         float var5 = 0.0f;
-        ut[] var6 = null;
-        ut[][][] var7 = null;
+        Sprite[] var6 = null;
+        Sprite[][][] var7 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        ut var13 = null;
+        Sprite var13 = null;
         String var14 = null;
         int var15 = 0;
         int[] var16 = null;
         var15 = Kickabout.field_G;
         try {
           var16 = new int[]{uv.field_e, pb.field_A, rb.field_Kb, oc.field_e};
-          var3 = new ut(32, 32);
+          var3 = new Sprite(32, 32);
           PacketBuffer.a(-111, var3);
           for (var4_int = 15; var4_int < 19; var4_int++) {
-            on.f(4, var4_int, 26, 592137);
+            SoftwareRasterizer.f(4, var4_int, 26, 592137);
           }
           var4 = 1.0f;
           var5 = 0.4000000059604645f;
           for (var6_int = 2; 20 > var6_int; var6_int++) {
-            on.a(var6_int, -(int)var4 + 17, (int)(2.0f * var4), 65793);
+            SoftwareRasterizer.a(var6_int, -(int)var4 + 17, (int)(2.0f * var4), 65793);
             var4 = var4 + var5;
           }
           ta.e(117);
-          var6 = new ut[4];
+          var6 = new Sprite[4];
           for (var7_int = 0; 4 > var7_int; var7_int++) {
             var6[var7_int] = var3.b();
           }
           var6[1].g();
           var6[2].d();
           var6[param0].c();
-          var7 = new ut[2][4][2];
+          var7 = new Sprite[2][4][2];
           for (var8 = 0; var8 < 16; var8++) {
             stackIn_15_0 = ((8 & var8) != 0) ? 0 : 1;
             var9 = stackIn_15_0;
@@ -263,17 +263,17 @@ final class wf extends qt {
             var11 = stackIn_18_0;
             stackIn_21_0 = (var11 != 0) ? 1 : 0;
             var12 = stackIn_21_0;
-            var13 = new ut(param1.field_o, param1.field_v);
+            var13 = new Sprite(param1.field_o, param1.field_v);
             PacketBuffer.a(-96, var13);
             param1.d(0, 0);
             if (var11 == 0) {
-              on.g(0, 0, on.field_g, on.field_f);
+              SoftwareRasterizer.g(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
             }
             if (var9 == 0) {
-              var6[var10].f(-7 + (on.field_g >> 1), var12 + 5);
+              var6[var10].f(-7 + (SoftwareRasterizer.field_g >> 1), var12 + 5);
             } else {
               var14 = mk.field_b[var16[var10]].toLowerCase();
-              un.field_d.d(var14, (on.field_g >> 1) + var12, 18 + var12, 65793, -1);
+              un.field_d.d(var14, (SoftwareRasterizer.field_g >> 1) + var12, 18 + var12, 65793, -1);
             }
             ta.e(120);
             sd.a(var13, (byte) -51);
@@ -302,7 +302,7 @@ final class wf extends qt {
 
     final void a(int param0, int param1, boolean param2) {
         super.a(param0 ^ 0, param1, param2);
-        IntrusiveNodeHashTable.a(tu.field_E.field_x, param0 + 415422632);
+        IntrusiveNodeHashTable.a(GameLoopApplet.field_E.field_x, param0 + 415422632);
         this.field_N = true;
         this.field_B = new jr[param0];
         this.field_G.a(0, (byte) -47, this.field_B, 5);
@@ -372,8 +372,8 @@ final class wf extends qt {
         int var4;
         var4 = Kickabout.field_G;
         super.a(param0, param1);
-        on.a(this.field_K.field_F, this.field_K.field_T, this.field_K.field_q, this.field_K.field_mb, 65793, 96);
-        on.a(this.field_K.field_F + 8, 23 + this.field_K.field_T, this.field_K.field_q - 16, -30 + this.field_K.field_mb, 10, 65793, 96);
+        SoftwareRasterizer.a(this.field_K.field_F, this.field_K.field_T, this.field_K.field_q, this.field_K.field_mb, 65793, 96);
+        SoftwareRasterizer.a(this.field_K.field_F + 8, 23 + this.field_K.field_T, this.field_K.field_q - 16, -30 + this.field_K.field_mb, 10, 65793, 96);
         un.field_d.a(this.field_K.field_E, 13 + this.field_K.field_F, 17 + this.field_K.field_T, 16777215, -1);
         for (var3_int = 0; 4 > var3_int; var3_int++) {
           this.field_E[var3_int].a(false, (byte) 46);
@@ -384,18 +384,18 @@ final class wf extends qt {
           if (this.field_U == 0) {
             stackIn_8_0 = aa.field_h;
           } else {
-            stackIn_8_0 = bh.field_t;
+            stackIn_8_0 = BufferedSocket.field_t;
           }
           var3 = stackIn_8_0;
           pb.field_C.d(var3, this.field_G.field_F + (this.field_G.field_q >> 1), (this.field_G.field_mb >> 1) + this.field_G.field_T, 16777215, -1);
         }
         if (la.a(param0 ^ -97)) {
-          on.a(this.field_j, 48, 640, 383, 0, 196);
+          SoftwareRasterizer.a(this.field_j, 48, 640, 383, 0, 196);
         }
         if (ds.field_g ||
           dg.field_e) {
-          on.a(this.field_j, 48, 640, 383, 0, 196);
-          pb.field_C.a(ew.field_d, this.field_j, 0, 640, 480, 16777215, -1, 1, 1, 0);
+          SoftwareRasterizer.a(this.field_j, 48, 640, 383, 0, 196);
+          pb.field_C.a(BufferedCacheFile.field_d, this.field_j, 0, 640, 480, 16777215, -1, 1, 1, 0);
         }
     }
 
@@ -455,7 +455,7 @@ final class wf extends qt {
         int var14 = 0;
         int var15 = 0;
         Object var16 = null;
-        tf var17 = null;
+        IntrusiveDeque var17 = null;
         vc var18 = null;
         jr var10_ref_jrLifetime1;
         jr var10_ref_jrLifetime2;
@@ -466,7 +466,7 @@ final class wf extends qt {
         var15 = Kickabout.field_G;
         try {
           ui.field_w = param1;
-          var17 = new tf();
+          var17 = new IntrusiveDeque();
           var6 = 0;
           var7 = 0;
           var8 = 0;
@@ -476,7 +476,7 @@ final class wf extends qt {
               if (var7 >= param3) {
                 if (var7 == 0) {
                   var10_ref_jr = new jr(nc.field_b);
-                  var10_ref_jr.field_X = (hu) ((Object) pb.field_C);
+                  var10_ref_jr.field_X = (BitmapFont) ((Object) pb.field_C);
                   var10_ref_jr.field_mb = 50;
                   var10_ref_jr.field_y = 16777215;
                   var17.a(var10_ref_jr, 3);
@@ -485,7 +485,7 @@ final class wf extends qt {
                 var10_ref_jrLifetime2 = new jr(var18, gk.field_f);
                 var10_ref_jrLifetime2.field_y = 16777215;
                 var10_ref_jrLifetime2.field_mb = 50;
-                var10_ref_jrLifetime2.field_X = (hu) ((Object) pb.field_C);
+                var10_ref_jrLifetime2.field_X = (BitmapFont) ((Object) pb.field_C);
                 var8++;
                 var17.a(var10_ref_jrLifetime2, 3);
               }
@@ -497,7 +497,7 @@ final class wf extends qt {
             var9_ref_jr = new jr(ko.field_k);
             var9_ref_jr.field_mb = 50;
             var9_ref_jr.field_y = 16777215;
-            var9_ref_jr.field_X = (hu) ((Object) pb.field_C);
+            var9_ref_jr.field_X = (BitmapFont) ((Object) pb.field_C);
             var8++;
             var17.a(var9_ref_jr, 3);
           }
@@ -510,7 +510,7 @@ final class wf extends qt {
             }
             var10_ref_jrLifetime1 = new jr(ui.field_w[var9], gk.field_f);
             var10_ref_jrLifetime1.field_mb = 50;
-            var10_ref_jrLifetime1.field_X = (hu) ((Object) pb.field_C);
+            var10_ref_jrLifetime1.field_X = (BitmapFont) ((Object) pb.field_C);
             var10_ref_jrLifetime1.field_y = 16777215;
             var6++;
             var17.a(var10_ref_jrLifetime1, 3);
@@ -537,7 +537,7 @@ final class wf extends qt {
           for (var12 = 0; var11 > var12; var12++) {
             this.field_B[var12] = new jr(gk.field_f);
             this.field_B[var12].field_mb = 50;
-            this.field_B[var12].field_X = (hu) ((Object) pb.field_C);
+            this.field_B[var12].field_X = (BitmapFont) ((Object) pb.field_C);
             this.field_B[var12].field_y = 16777215;
           }
           var12_ref_jr = (jr) (var17.g(24009));
@@ -549,7 +549,7 @@ final class wf extends qt {
           for (var12Lifetime1 = var11; var12Lifetime1 < this.field_B.length; var12Lifetime1++) {
             this.field_B[var12Lifetime1] = new jr(gk.field_f);
             this.field_B[var12Lifetime1].field_mb = 50;
-            this.field_B[var12Lifetime1].field_X = (hu) ((Object) pb.field_C);
+            this.field_B[var12Lifetime1].field_X = (BitmapFont) ((Object) pb.field_C);
             this.field_B[var12Lifetime1].field_y = 16777215;
           }
           if (this.field_T.a(false) + var6 == 0) {
@@ -626,12 +626,12 @@ final class wf extends qt {
         }
         for (var3 = 0; var3 < this.field_E.length; var3++) {
           if (this.field_E[var3].field_gb) {
-            qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, vq.field_e, new String[]{uf.field_e[var3]}));
+            qd.$cfr$intArgs$a$b6210757cdab(-67, vo.$cfr$intArgs$a$53ce4ab4c593(-18, FullscreenFocusCanvas.field_e, new String[]{uf.field_e[var3]}));
           }
         }
         if (this.field_R.field_sb == 1) {
-          if (tu.field_E.c(-3)) {
-            if (tu.field_E.a((byte) -97)) {
+          if (GameLoopApplet.field_E.c(-3)) {
+            if (GameLoopApplet.field_E.a((byte) -97)) {
               rm.e(25);
               sp.c(49, 55);
             } else {
@@ -663,7 +663,7 @@ final class wf extends qt {
           this.a(false, (byte) -126);
           kj.a((byte) 24);
         }
-        tc.a(tu.field_E.field_x, 5464);
+        tc.a(GameLoopApplet.field_E.field_x, 5464);
     }
 
     final static void b(int param0, boolean param1) {
@@ -677,7 +677,7 @@ final class wf extends qt {
         int var8 = Kickabout.field_G;
         try {
           vs.field_g = null;
-          var9 = wq.field_d == 0L ? gw.field_b : ow.field_e;
+          var9 = wq.field_d == 0L ? gw.field_b : ArchiveSource.field_e;
           String var2 = var9;
           var3 = new String[]{var9, rp.field_D};
           if (param0 != 10) {
@@ -687,7 +687,7 @@ final class wf extends qt {
           var4.field_k = 15;
           var4.field_w = 0;
           var4.field_R = 15;
-          var5 = tu.field_E;
+          var5 = GameLoopApplet.field_E;
           if (param1) {
             var10 = wk.a(false, true);
             var5 = var10;
@@ -724,7 +724,7 @@ final class wf extends qt {
             la.a(um.field_e.field_o, 0);
           } else {
             um.field_e.b(26415, 2);
-            gm.a(de.field_a, true, (byte) -117);
+            gm.a(GameKeyHandler.field_a, true, (byte) -117);
           }
           sb.a(false, (byte) -122, um.field_e.field_o.tier, um.field_e.field_o.surface);
         } catch (RuntimeException runtimeException) {
@@ -742,7 +742,7 @@ final class wf extends qt {
         RuntimeException var3 = null;
         var4 = Kickabout.field_G;
         try {
-          this.field_T = new tf();
+          this.field_T = new IntrusiveDeque();
           for (var3_int = 0; var3_int < param1.length; var3_int++) {
             this.field_T.a(param1[var3_int], 3);
           }
@@ -792,7 +792,7 @@ final class wf extends qt {
     }
 
     wf() {
-        this.field_T = new tf();
+        this.field_T = new IntrusiveDeque();
         this.field_N = true;
         this.field_F = 4;
         this.field_V = 0;

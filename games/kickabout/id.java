@@ -6,7 +6,7 @@ final class id extends qv {
     private hf[] field_w;
     static r field_t;
     private hf field_x;
-    static sj field_y;
+    static ResourceArchive field_y;
     static String field_r;
     static int field_v;
     static hd field_s;
@@ -33,7 +33,7 @@ final class id extends qv {
         hf var5 = null;
         hf var6 = null;
         int var7 = 0;
-        fd var8 = null;
+        UiWidget var8 = null;
         var7 = Kickabout.field_G;
         try {
           super.a(param0, (byte) -112);
@@ -59,8 +59,8 @@ final class id extends qv {
             dv.a(this.field_w, 0, param0.field_w, 0, 6);
           }
           if (param2 >= -97) {
-            var8 = (fd) null;
-            this.a(-126, true, -77, (fd) null, 67);
+            var8 = (UiWidget) null;
+            this.a(-126, true, -77, (UiWidget) null, 67);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -116,7 +116,7 @@ final class id extends qv {
         }
     }
 
-    final void a(ut[] param0, int param1) {
+    final void a(Sprite[] param0, int param1) {
         int var4 = 0;
         hf[] var3 = null;
         hf var5 = null;
@@ -155,7 +155,7 @@ final class id extends qv {
         }
     }
 
-    final static void a(sj param0, sj param1, boolean param2, sj param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, boolean param2, ResourceArchive param3) {
         int var11_int = 0;
         kg[] var5 = null;
         kg[][] var6 = null;
@@ -163,16 +163,16 @@ final class id extends qv {
         int var8 = 0;
         int var9 = 0;
         kg[] var10 = null;
-        ut var11 = null;
-        ut var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var13 = 0;
         kg[] var14 = null;
-        ut var15 = null;
+        Sprite var15 = null;
         int[][] var16 = null;
-        ut var17 = null;
-        ut var18 = null;
+        Sprite var17 = null;
+        Sprite var18 = null;
         int[][] var19 = null;
-        sj stackIn_3_0 = null;
+        ResourceArchive stackIn_3_0 = null;
         String stackIn_3_1 = null;
         boolean stackIn_4_2 = false;
         RuntimeException stackIn_18_0 = null;
@@ -191,13 +191,13 @@ final class id extends qv {
           sk.field_a = se.a(param3, -9, "commonui", "frame_top");
           vb.field_a = se.a(param3, -120, "commonui", "frame_bottom");
           aa.field_f = wa.a((byte) 112, "commonui", param3, "jagex_logo_grey");
-          nw.field_a = se.a(param3, -29, "commonui", "button");
+          IntrusiveDequeCursor.field_a = se.a(param3, -29, "commonui", "button");
           LoggedPlayer.field_g = ng.a("validation", "commonui", 2, param3);
-          qo.field_k = (hu) ((Object) gm.a(param1, 10, "arezzo12", param3, "commonui"));
-          gf.field_a = (hu) ((Object) gm.a(param1, 10, "arezzo14", param3, "commonui"));
-          fj.field_b = (hu) ((Object) gm.a(param1, 10, "arezzo14bold", param3, "commonui"));
-          var17 = new ut(param0.a("", "button.gif", 34), (java.awt.Component) ((Object) ic.field_d));
-          stackIn_3_0 = (sj) (param3);
+          qo.field_k = (BitmapFont) ((Object) gm.a(param1, 10, "arezzo12", param3, "commonui"));
+          gf.field_a = (BitmapFont) ((Object) gm.a(param1, 10, "arezzo14", param3, "commonui"));
+          fj.field_b = (BitmapFont) ((Object) gm.a(param1, 10, "arezzo14bold", param3, "commonui"));
+          var17 = new Sprite(param0.a("", "button.gif", 34), (java.awt.Component) ((Object) ic.field_d));
+          stackIn_3_0 = (ResourceArchive) (param3);
           stackIn_3_1 = "commonui";
           stackIn_4_2 = !(param2);
           fw.a(stackIn_3_0, stackIn_3_1, stackIn_4_2, "dropdown");
@@ -227,19 +227,19 @@ final class id extends qv {
           var9Lifetime1 = var17.field_w;
           tr.d(-12974);
           var17.e();
-          on.b(0, 0, on.field_g, on.field_f);
-          var15 = new ut(var9Lifetime1, var9Lifetime1);
+          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.e();
           var17.d(0, 0);
-          var11 = new ut(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.e();
           var17.d(-var17.field_q + var9Lifetime1, 0);
-          var12 = new ut(-(2 * var9Lifetime1) + var17.field_q, var9Lifetime1);
+          var12 = new Sprite(-(2 * var9Lifetime1) + var17.field_q, var9Lifetime1);
           var12.e();
           var17.d(-var9Lifetime1, 0);
           ta.e(119);
-          nw.field_a = new ut[]{var15, var12, var11};
+          IntrusiveDequeCursor.field_a = new Sprite[]{var15, var12, var11};
           if (param2) {
             id.a(false, (CharSequence) null, 'ﾺ');
           }
@@ -270,8 +270,8 @@ final class id extends qv {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, fd param3, int param4) {
-        fd stackIn_3_0 = null;
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
@@ -287,7 +287,7 @@ final class id extends qv {
         hf var15 = null;
         try {
           if (param3 instanceof wi) {
-            stackIn_3_0 = (fd) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           } else {
             stackIn_3_0 = null;
           }
@@ -378,7 +378,7 @@ final class id extends qv {
         }
     }
 
-    final void a(ut param0, byte param1) {
+    final void a(Sprite param0, byte param1) {
         hf[] var3 = null;
         int var4 = 0;
         hf var5 = null;
@@ -417,7 +417,7 @@ final class id extends qv {
         }
     }
 
-    final void a(int param0, ut[] param1, int param2) {
+    final void a(int param0, Sprite[] param1, int param2) {
         int var5 = 0;
         try {
           int var4_int = -99 / ((11 - param2) / 60);

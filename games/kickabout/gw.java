@@ -5,7 +5,7 @@ final class gw {
     static hd field_a;
     static String field_e;
     static vn[] field_f;
-    static ut[] field_d;
+    static Sprite[] field_d;
     static int field_c;
     static String field_b;
 
@@ -103,7 +103,7 @@ final class gw {
         np.field_Jb.a(new no(), 3);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, ut[] param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -121,20 +121,20 @@ final class gw {
             param3 > 0) {
             var6_int = param5[0].field_o;
             if (param1 != -27981) {
-              field_d = (ut[]) null;
+              field_d = (Sprite[]) null;
             }
             var7 = param5[2].field_o;
             var8 = param5[1].field_o;
             param5[0].d(param2, param0, param4);
             param5[2].d(-var7 + param2 + param3, param0, param4);
-            on.a(vi.field_q);
-            on.h(param2 + var6_int, param0, param2 - (-param3 + var7), param5[1].field_v + param0);
+            SoftwareRasterizer.a(vi.field_q);
+            SoftwareRasterizer.h(param2 + var6_int, param0, param2 - (-param3 + var7), param5[1].field_v + param0);
             var9 = param2 + var6_int;
             var10 = param3 + (param2 - var7);
             for (param2 = var9; var10 > param2; param2 = param2 + var8) {
               param5[1].d(param2, param0, param4);
             }
-            on.b(vi.field_q);
+            SoftwareRasterizer.b(vi.field_q);
             return;
           }
           return;

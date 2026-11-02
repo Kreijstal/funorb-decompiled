@@ -7,8 +7,8 @@ class PacketBuffer extends IntrusiveNode {
     static vn[] field_m;
     static String field_j;
     int field_n;
-    static ut[] field_h;
-    static ut field_g;
+    static Sprite[] field_h;
+    static Sprite field_g;
     static int field_i;
     static String field_k;
     static boolean field_l;
@@ -90,7 +90,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final byte j(byte param0) {
         if (param0 > -45) {
-          field_h = (ut[]) null;
+          field_h = (Sprite[]) null;
         }
         int fieldTemp$0 = this.field_n;
         this.field_n = this.field_n + 1;
@@ -177,7 +177,7 @@ class PacketBuffer extends IntrusiveNode {
         this.field_n = this.field_n + 1;
         this.field_f[fieldTemp$0] = (byte)param1;
         if (param0 < 101) {
-          field_g = (ut) null;
+          field_g = (Sprite) null;
         }
     }
 
@@ -186,7 +186,7 @@ class PacketBuffer extends IntrusiveNode {
         this.field_n = this.field_n + 1;
         this.field_f[fieldTemp$0] = (byte)(int)(param0 >> 56);
         if (param1 != -1781890008) {
-          field_h = (ut[]) null;
+          field_h = (Sprite[]) null;
         }
         int fieldTemp$1 = this.field_n;
         this.field_n = this.field_n + 1;
@@ -484,7 +484,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final void c(int param0, int param1) {
         if (param0 != 62) {
-          field_h = (ut[]) null;
+          field_h = (Sprite[]) null;
         }
         this.field_f[-param1 + (this.field_n - 1)] = (byte)param1;
     }
@@ -510,11 +510,11 @@ class PacketBuffer extends IntrusiveNode {
         return var4 | var3;
     }
 
-    final static void a(int param0, ut param1) {
+    final static void a(int param0, Sprite param1) {
         try {
           int var2_int = 120 % ((param0 - 9) / 46);
           tr.d(-12974);
-          on.a(param1.field_y, param1.field_o, param1.field_v);
+          SoftwareRasterizer.a(param1.field_y, param1.field_o, param1.field_v);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "iw.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -734,7 +734,7 @@ class PacketBuffer extends IntrusiveNode {
         byte[] var8 = null;
         try {
           if (param2 != 38) {
-            field_g = (ut) null;
+            field_g = (Sprite) null;
           }
           var4_int = this.field_n;
           this.field_n = 0;

@@ -7,13 +7,13 @@ final class rf {
     kf field_b;
     static vu[][] field_c;
 
-    final static void a(int param0, sj param1, sj param2, sj param3) {
+    final static void a(int param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3) {
         int var5 = 0;
         int var6 = 0;
         int incrementValue$1 = 0;
         int var7 = 0;
         int var8 = 0;
-        sj var9 = null;
+        ResourceArchive var9 = null;
         ef var10 = null;
         ef var11 = null;
         RuntimeException stackIn_18_0 = null;
@@ -29,7 +29,7 @@ final class rf {
         try {
           pv.field_I = new nm[5][17];
           hq.field_b = new nm[5];
-          de.a(param1, param3, (byte) -69);
+          GameKeyHandler.a(param1, param3, (byte) -69);
           var10 = new ef(0);
           var11 = var10;
           while (!var11.g((byte) 103)) {
@@ -48,8 +48,8 @@ final class rf {
           sk.a(94, 6, 1);
           pv.field_I[3][0] = new nm(param2, "characters", "ka_scout_aggressive_tackle");
           if (param0 != 20113) {
-            var9 = (sj) null;
-            rf.a(103, (sj) null, (sj) null, (sj) null);
+            var9 = (ResourceArchive) null;
+            rf.a(103, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null);
           }
           pv.field_I[3][1] = new nm(param2, "characters", "ka_scout_fall");
           pv.field_I[3][2] = new nm(param2, "characters", "ka_scout_fall_stand");
@@ -271,7 +271,7 @@ final class rf {
         try {
           var3 = new String[]{param0, lk.field_n, at.field_Jb};
           var4 = new hd[]{param1, kk.field_R, (hd) ((Object) nq.field_F)};
-          this.field_b = new kf(0L, ge.field_n, var3, ku.field_b, var4, 0);
+          this.field_b = new kf(0L, ge.field_n, var3, MouseInputHandler.field_b, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "rf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

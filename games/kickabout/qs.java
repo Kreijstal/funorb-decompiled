@@ -8,7 +8,7 @@ final class qs extends ta {
     static String field_H;
     private int field_N;
     static String field_V;
-    private tf field_I;
+    private IntrusiveDeque field_I;
     static int[] field_P;
     static java.applet.Applet field_M;
     private hd field_G;
@@ -18,12 +18,12 @@ final class qs extends ta {
     static int field_K;
     private mf field_T;
     private hd field_L;
-    static ut field_R;
+    static Sprite field_R;
 
     final void a(boolean param0, int param1) {
         ig.b(this.field_j, -12452);
         if (param1 < 99) {
-          this.field_I = (tf) null;
+          this.field_I = (IntrusiveDeque) null;
         }
     }
 
@@ -66,8 +66,8 @@ final class qs extends ta {
         kq var6 = null;
         int var7 = Kickabout.field_G;
         super.a(0, param1, param2);
-        this.field_I = new tf();
-        this.field_Q.field_jb = new tf();
+        this.field_I = new IntrusiveDeque();
+        this.field_Q.field_jb = new IntrusiveDeque();
         this.field_T = new mf(ic.field_h);
         kq[] var8 = this.field_T.field_Eb;
         kq[] var4 = var8;
@@ -202,13 +202,13 @@ final class qs extends ta {
         oi var7;
         int var8;
         int var9;
-        tf var10;
+        IntrusiveDeque var10;
         int var3Lifetime1;
         var9 = Kickabout.field_G;
         if (!param0) {
           return;
         }
-        var10 = new tf();
+        var10 = new IntrusiveDeque();
         var3 = -1;
         scanLoop1: while (true) {
           if (6 >= var3) {
@@ -219,7 +219,7 @@ final class qs extends ta {
               }
               for (var4_int = 0; var4_int < 8; var4_int++) {
                 var5 = ha.a(ic.field_h.field_e, var4_int, ic.field_h.field_N[var4_int + 8 * var3 + 8], -84, var3);
-                stackIn_16_0 = (~bh.field_k != ~var3) ? 0 : 1;
+                stackIn_16_0 = (~BufferedSocket.field_k != ~var3) ? 0 : 1;
                 var6 = stackIn_16_0;
                 var7 = (oi) (this.field_I.g(24009));
                 while (var7 != null) {
@@ -281,10 +281,10 @@ final class qs extends ta {
 
     final void a(int param0, boolean param1) {
         super.a(param0, param1);
-        on.a(this.field_Q.field_F, this.field_Q.field_T, this.field_Q.field_q, this.field_Q.field_mb, 65793, 96);
+        SoftwareRasterizer.a(this.field_Q.field_F, this.field_Q.field_T, this.field_Q.field_q, this.field_Q.field_mb, 65793, 96);
         un.field_d.a(oc.field_b, 14 + this.field_Q.field_F, this.field_Q.field_T + 25, 16777215, -1);
         this.field_T.k((byte) 55);
-        on.a(this.field_G.field_F, this.field_G.field_T, this.field_G.field_q, this.field_G.field_mb, 65793, 96);
+        SoftwareRasterizer.a(this.field_G.field_F, this.field_G.field_T, this.field_G.field_q, this.field_G.field_mb, 65793, 96);
         un.field_d.a(da.field_i, 14 + this.field_G.field_F, 21 + this.field_G.field_T, 16777215, -1);
         gm.a(param0 - 5181, this.field_U.e((byte) -113), this.field_G, this.field_T.j((byte) 21));
         this.field_J.a(-120);

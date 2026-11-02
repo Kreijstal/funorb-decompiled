@@ -11,7 +11,7 @@ final class mh extends jd {
     static String field_o;
     static int[] field_j;
 
-    mh(ga param0, ga param1) {
+    mh(TextInputWidget param0, TextInputWidget param1) {
         super(param0);
         this.field_n = false;
         this.field_m = "";

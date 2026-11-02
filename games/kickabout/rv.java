@@ -59,10 +59,10 @@ final class rv {
           }
           PacketBuffer.a(110, ti.field_f);
           t.c();
-          on.b();
+          SoftwareRasterizer.b();
           fp.a((byte) 47);
           if (256 > var5) {
-            on.a(0, 0, on.field_g, on.field_f, 0, 256 - var5);
+            SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 256 - var5);
           }
           ta.e(122);
           if (up.field_p >= 150) {
@@ -116,10 +116,10 @@ final class rv {
         }
         PacketBuffer.a(110, ti.field_f);
         t.c();
-        on.b();
+        SoftwareRasterizer.b();
         fp.a((byte) 47);
         if (256 > var5Lifetime1) {
-          on.a(0, 0, on.field_g, on.field_f, 0, 256 - var5Lifetime1);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 256 - var5Lifetime1);
         }
         ta.e(122);
         if (up.field_p >= 150) {

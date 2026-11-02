@@ -37,7 +37,7 @@ final class hm extends tm {
         RuntimeException decompiledCaughtException = null;
         try {
           lr.a((java.awt.Component) ((Object) param1), -63);
-          ao.a(false, (java.awt.Component) ((Object) param1));
+          RandomAccessCacheFile.a(false, (java.awt.Component) ((Object) param1));
           if (param0 > -102) {
             return;
           }

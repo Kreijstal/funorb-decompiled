@@ -54,7 +54,7 @@ final class qg extends IntrusiveNode {
           if (param0 != 2235) {
             qg.a(-120, 112, -101, 49);
           }
-          var11 = de.a(var10 * var10 + var9 * var9, (byte) 80);
+          var11 = GameKeyHandler.a(var10 * var10 + var9 * var9, (byte) 80);
           if (0 == var11) {
             var5 = param3;
             var6 = param1;
@@ -92,7 +92,7 @@ final class qg extends IntrusiveNode {
           if (param0 != 2235) {
             qg.a(-120, 112, -101, 49);
           }
-          var11 = de.a(var10 * var10 + var9 * var9, (byte) 80);
+          var11 = GameKeyHandler.a(var10 * var10 + var9 * var9, (byte) 80);
           if (0 == var11) {
             var5 = param3;
             var6 = param1;
@@ -125,13 +125,13 @@ final class qg extends IntrusiveNode {
     }
 
     final static void a(int param0) {
-        am var1 = null;
+        DualLinkNode var1 = null;
         int var2 = Kickabout.field_G;
-        am var1Lifetime1;
+        DualLinkNode var1Lifetime1;
         try {
           ou.field_y = 0;
           bc.field_d = 0;
-          bh.field_h = null;
+          BufferedSocket.field_h = null;
           ne.field_I.b(22997);
           qn.field_b.b(22997);
           var1 = kw.field_b.b((byte) 72);

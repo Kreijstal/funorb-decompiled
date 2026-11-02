@@ -7,7 +7,7 @@ final class rp extends ri {
     static int field_w;
     static String field_C;
     static String field_D;
-    static tf field_B;
+    static IntrusiveDeque field_B;
     static byte[] field_x;
     static String[][] field_z;
 
@@ -105,20 +105,20 @@ final class rp extends ri {
               sm.field_m = true;
             }
           }
-          if (null != ga.field_E) {
-            var3 = -(ga.field_E.field_v / 2) + 357;
+          if (null != TextInputWidget.field_E) {
+            var3 = -(TextInputWidget.field_E.field_v / 2) + 357;
             var4 = 0;
-            if (0 != wj.field_A &&
+            if (0 != WidgetContainer.field_A &&
               vc.field_y > var3 &&
-              ga.field_E.field_w + var3 > vc.field_y) {
-              if (269 - ga.field_E.field_q < sm.field_q &&
+              TextInputWidget.field_E.field_w + var3 > vc.field_y) {
+              if (269 - TextInputWidget.field_E.field_q < sm.field_q &&
                 sm.field_q < 269) {
                 sm.field_m = false;
                 ig.field_g = vp.field_f;
                 var4 = 1;
               }
               if (sm.field_q > 586 &&
-                sm.field_q < ga.field_E.field_q + 586) {
+                sm.field_q < TextInputWidget.field_E.field_q + 586) {
                 ig.field_g = vp.field_f;
                 var4 = 1;
                 sm.field_m = true;
@@ -127,13 +127,13 @@ final class rp extends ri {
             if (var4 == 0 &&
               ig.field_g > vp.field_c &&
               var3 < n.field_m &&
-              var3 + ga.field_E.field_w > n.field_m) {
-              if (el.field_A > 269 - ga.field_E.field_q &&
+              var3 + TextInputWidget.field_E.field_w > n.field_m) {
+              if (el.field_A > 269 - TextInputWidget.field_E.field_q &&
                 269 > el.field_A) {
                 ig.field_g = vp.field_c;
               }
               if (el.field_A > 586 &&
-                el.field_A < ga.field_E.field_q + 586) {
+                el.field_A < TextInputWidget.field_E.field_q + 586) {
                 ig.field_g = vp.field_c;
               }
             }
@@ -184,11 +184,11 @@ final class rp extends ri {
         }
     }
 
-    private rp(hu param0, int param1) {
+    private rp(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
-    final String b(byte param0, fd param1) {
+    final String b(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

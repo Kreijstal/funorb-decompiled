@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class qv implements gj, ke {
+class qv implements gj, WidgetTextLayout {
     int field_q;
     int field_c;
     private int field_j;
@@ -17,14 +17,14 @@ class qv implements gj, ke {
     int field_l;
     int field_i;
     static String[] field_d;
-    hu field_a;
+    BitmapFont field_a;
     int field_b;
 
-    private final void a(int param0, fd param1, int param2, int param3) {
+    private final void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           if (param2 > -59) {
-            fd var6 = (fd) null;
-            this.a((fd) null, -115);
+            UiWidget var6 = (UiWidget) null;
+            this.a((UiWidget) null, -115);
           }
           this.a(this.field_b, this.field_j, param3, 118, param1, 0, 0, param0);
         } catch (RuntimeException runtimeException) {
@@ -32,7 +32,7 @@ class qv implements gj, ke {
         }
     }
 
-    public void a(int param0, boolean param1, int param2, fd param3, int param4) {
+    public void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         if (this.field_a == null) {
           return;
         }
@@ -67,7 +67,7 @@ class qv implements gj, ke {
         }
     }
 
-    private final void d(byte param0, fd param1) {
+    private final void d(byte param0, UiWidget param1) {
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -78,13 +78,13 @@ class qv implements gj, ke {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        fd var8 = null;
+        UiWidget var8 = null;
         int var6Lifetime1;
         var7 = Kickabout.field_G;
         try {
           if (param0 > -60) {
-            var8 = (fd) null;
-            this.b(-77, (fd) null);
+            var8 = (UiWidget) null;
+            this.b(-77, (UiWidget) null);
           }
           if (null == param1.field_h) {
             param1.field_h = (iq) ((Object) new st());
@@ -142,11 +142,11 @@ class qv implements gj, ke {
         }
     }
 
-    qv(hu param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    qv(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final int a(int param0, fd param1, int param2, int param3, int param4, int param5) {
+    public final int a(int param0, UiWidget param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -174,7 +174,7 @@ class qv implements gj, ke {
         }
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, fd param4) {
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         int var7 = 0;
         qj var8 = null;
         int var9 = 0;
@@ -239,7 +239,7 @@ class qv implements gj, ke {
         return this.field_a.field_p + this.field_a.field_G;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, fd param4, int param5, int param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6, int param7) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -308,7 +308,7 @@ class qv implements gj, ke {
         }
     }
 
-    private final int b(int param0, fd param1, int param2, int param3) {
+    private final int b(int param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -337,7 +337,7 @@ class qv implements gj, ke {
         }
     }
 
-    public final int a(fd param0, int param1, int param2) {
+    public final int a(UiWidget param0, int param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -364,7 +364,7 @@ class qv implements gj, ke {
         }
     }
 
-    public final int a(boolean param0, fd param1, int param2) {
+    public final int a(boolean param0, UiWidget param1, int param2) {
         RuntimeException var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -397,13 +397,13 @@ class qv implements gj, ke {
         field_n = null;
         field_d = null;
         if (!param0) {
-          bu var2 = (bu) null;
-          qv.a((PacketBuffer) null, -40, 96, (bu) null);
+          PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+          qv.a((PacketBuffer) null, -40, 96, (PlatformTaskDispatcher) null);
         }
         field_g = null;
     }
 
-    public final int a(byte param0, fd param1) {
+    public final int a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -432,7 +432,7 @@ class qv implements gj, ke {
         }
     }
 
-    public final int b(int param0, fd param1) {
+    public final int b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -460,7 +460,7 @@ class qv implements gj, ke {
         }
     }
 
-    public final int a(fd param0, int param1) {
+    public final int a(UiWidget param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -487,9 +487,9 @@ class qv implements gj, ke {
         }
     }
 
-    private final int a(int param0, byte param1, fd param2, int param3) {
+    private final int a(int param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
-        fd var6 = null;
+        UiWidget var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -497,8 +497,8 @@ class qv implements gj, ke {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 90) {
-            var6 = (fd) null;
-            this.a((fd) null, 89);
+            var6 = (UiWidget) null;
+            this.a((UiWidget) null, 89);
           }
           stackIn_3_0 = param2.field_o + (this.field_q + param2.field_g + param0) + param3;
           return stackIn_3_0;
@@ -516,7 +516,7 @@ class qv implements gj, ke {
         }
     }
 
-    final static void a(PacketBuffer param0, int param1, int param2, bu param3) {
+    final static void a(PacketBuffer param0, int param1, int param2, PlatformTaskDispatcher param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -557,12 +557,12 @@ class qv implements gj, ke {
             var18 = new si();
             var18.field_n = param0.h((byte) -118);
             var18.field_p = param0.k(4);
-            var18.field_e = new wu[var18.field_n];
+            var18.field_e = new PlatformTask[var18.field_n];
             var18.field_h = new int[var18.field_n];
             var18.field_l = new byte[var18.field_n][][];
             var18.field_o = new int[var18.field_n];
             var18.field_m = new int[var18.field_n];
-            var18.field_f = new wu[var18.field_n];
+            var18.field_f = new PlatformTask[var18.field_n];
             for (var5 = 0; var18.field_n > var5; var5++) {
               try {
                 var6_int = param0.h((byte) -108);
@@ -665,7 +665,7 @@ class qv implements gj, ke {
         }
     }
 
-    String b(byte param0, fd param1) {
+    String b(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -694,9 +694,9 @@ class qv implements gj, ke {
         }
     }
 
-    private final int c(byte param0, fd param1) {
+    private final int c(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        fd var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -704,8 +704,8 @@ class qv implements gj, ke {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -109) {
-            var4 = (fd) null;
-            this.b(-71, (fd) null);
+            var4 = (UiWidget) null;
+            this.b(-71, (UiWidget) null);
           }
           stackIn_3_0 = -this.field_o + (param1.field_i - this.field_q);
           return stackIn_3_0;
@@ -723,7 +723,7 @@ class qv implements gj, ke {
         }
     }
 
-    public final void a(int param0, int param1, int param2, fd param3, int param4, int param5) {
+    public final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         int var12 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -801,7 +801,7 @@ class qv implements gj, ke {
         }
     }
 
-    public final iq a(int param0, fd param1) {
+    public final iq a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         iq stackIn_5_0 = null;
         iq stackIn_10_0 = null;
@@ -841,7 +841,7 @@ class qv implements gj, ke {
     protected qv() {
     }
 
-    qv(hu param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    qv(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_i = param10;
           this.field_b = param5;

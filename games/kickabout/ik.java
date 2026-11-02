@@ -4,7 +4,7 @@
 final class ik extends tm {
     static String field_F;
     static String field_E;
-    static tf field_C;
+    static IntrusiveDeque field_C;
     static long field_A;
     static int field_D;
 
@@ -261,7 +261,7 @@ final class ik extends tm {
             ik.a((byte) -14, 61, 24, 8, -65, -11, 102, -101);
           }
           nm.field_d.a(param1, param0, 9255, param2);
-          on.b();
+          SoftwareRasterizer.b();
           oa.a((byte) -106, true);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "ik.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -271,6 +271,6 @@ final class ik extends tm {
     static {
         field_E = "Too Low";
         field_F = "Game options";
-        field_C = new tf();
+        field_C = new IntrusiveDeque();
     }
 }

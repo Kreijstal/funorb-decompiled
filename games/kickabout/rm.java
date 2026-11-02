@@ -92,18 +92,18 @@ final class rm extends qt {
         }
         try {
           var12 = 140;
-          on.a(this.field_j + var11, param8 - 17, var12, 25, 0, var10_int);
+          SoftwareRasterizer.a(this.field_j + var11, param8 - 17, var12, 25, 0, var10_int);
           var11 = 4 + (var11 + var12);
           var12Lifetime1 = 36;
-          on.a(this.field_j + var11, param8 - 17, var12Lifetime1, 25, 0, var10_int);
+          SoftwareRasterizer.a(this.field_j + var11, param8 - 17, var12Lifetime1, 25, 0, var10_int);
           var11 = 4 + var12Lifetime1 + var11;
-          on.a(this.field_j + var11, param8 - 17, var12Lifetime1, 25, 0, var10_int);
+          SoftwareRasterizer.a(this.field_j + var11, param8 - 17, var12Lifetime1, 25, 0, var10_int);
           var11 = var12Lifetime1 + var11 + 4;
-          on.a(this.field_j + var11, param8 - 17, var12Lifetime1, 25, 0, var10_int);
+          SoftwareRasterizer.a(this.field_j + var11, param8 - 17, var12Lifetime1, 25, 0, var10_int);
           var11 = 4 + var11 + var12Lifetime1;
-          on.a(this.field_j + var11, -17 + param8, var12Lifetime1, 25, 0, var10_int);
+          SoftwareRasterizer.a(this.field_j + var11, -17 + param8, var12Lifetime1, 25, 0, var10_int);
           var11 = 4 + var12Lifetime1 + var11;
-          on.a(var11 + this.field_j, param8 - 17, var12Lifetime1, 25, 0, var10_int);
+          SoftwareRasterizer.a(var11 + this.field_j, param8 - 17, var12Lifetime1, 25, 0, var10_int);
           var13 = param1 + (param4 + param6);
           if (param7 != -1) {
             q.field_d.c(param7 + 1 + ". ", this.field_j + 35, param8, param5, -1);
@@ -236,7 +236,7 @@ final class rm extends qt {
         String var13Lifetime1Lifetime1;
         var10 = Kickabout.field_G;
         pt.a(374 + this.field_j, -22914, this.field_j + 10, 390, 80);
-        on.a(10 + this.field_j, 80, 364, 320, 10, 0, 128);
+        SoftwareRasterizer.a(10 + this.field_j, 80, 364, 320, 10, 0, 128);
         ta.e(126);
         super.a(param0, param1);
         if (la.a(param0 ^ -97)) {
@@ -248,11 +248,11 @@ final class rm extends qt {
         }
         var3 = 99;
         var4 = 11184810;
-        q.field_d.d(wm.field_p, CipherPacketBuffer.field_r[0] + this.field_j, var3, var4, -1);
+        q.field_d.d(CachedArchiveSource.field_p, CipherPacketBuffer.field_r[0] + this.field_j, var3, var4, -1);
         q.field_d.d(k.field_e, this.field_j + CipherPacketBuffer.field_r[1], var3, var4, -1);
         q.field_d.d(mt.field_e, this.field_j + CipherPacketBuffer.field_r[2], var3, var4, -1);
         q.field_d.d(ta.field_D, CipherPacketBuffer.field_r[3] + this.field_j, var3, var4, -1);
-        q.field_d.d(ku.field_e, CipherPacketBuffer.field_r[4] + this.field_j, var3, var4, -1);
+        q.field_d.d(MouseInputHandler.field_e, CipherPacketBuffer.field_r[4] + this.field_j, var3, var4, -1);
         var3 = var3 + (q.field_d.field_G + 8);
         if (!ug.field_e.field_e) {
           var5 = uf.field_a;
@@ -286,7 +286,7 @@ final class rm extends qt {
           }
           if (var8 == 0) {
             var4Lifetime1Lifetime1 = 16777215;
-            this.a(ug.field_e.field_f, ug.field_e.field_h, (byte) 105, ow.field_e, ug.field_e.field_m, var4Lifetime1Lifetime1, ug.field_e.field_j, -1, var3);
+            this.a(ug.field_e.field_f, ug.field_e.field_h, (byte) 105, ArchiveSource.field_e, ug.field_e.field_m, var4Lifetime1Lifetime1, ug.field_e.field_j, -1, var3);
           }
         }
         var3Lifetime1 = 385 + q.field_d.field_G;

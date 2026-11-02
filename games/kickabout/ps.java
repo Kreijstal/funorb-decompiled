@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ps {
-    static tf field_a;
+    static IntrusiveDeque field_a;
     static hd field_b;
     static int field_e;
     static kg[][] field_c;
@@ -124,7 +124,7 @@ abstract class ps {
     abstract void a(PacketBuffer param0, int param1);
 
     static {
-        field_a = new tf();
+        field_a = new IntrusiveDeque();
         field_d = new int[7];
         field_d[6] = 14000;
         field_d[0] = 0;

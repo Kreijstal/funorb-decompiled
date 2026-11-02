@@ -10,7 +10,7 @@ final class ib extends wt implements vh {
     static int[] field_C;
     private wi field_D;
 
-    final void a(byte param0, fd param1, int param2, int param3) {
+    final void a(byte param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_D.field_y = this.field_G.a((byte) -125).c(-24407) == he.field_yb ? true : false;
@@ -80,7 +80,7 @@ final class ib extends wt implements vh {
         this.field_G = new fb(new ri(10000536), field_E, 0, 0, 140, 25);
         this.field_G.a(new hl(), -20274);
         this.field_D = new wi(es.field_g, (jv) (this));
-        this.field_w = new fd[]{(fd) ((Object) this.field_G), (fd) ((Object) this.field_D)};
+        this.field_w = new UiWidget[]{(UiWidget) ((Object) this.field_G), (UiWidget) ((Object) this.field_D)};
         this.field_D.field_r = (gj) ((Object) new op());
         this.e(-1947);
     }

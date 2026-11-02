@@ -104,19 +104,19 @@ final class no extends i {
           }
           if (255 != param1) {
             if (param1 < 100) {
-              u.field_h = wb.a(-124, param2, param1);
+              JaggrabDownloader.field_h = wb.a(-124, param2, param1);
             } else {
               if (105 < param1) {
-                u.field_h = wb.a(-124, param2, param1);
+                JaggrabDownloader.field_h = wb.a(-124, param2, param1);
               } else {
                 var7 = args;
                 pp.a(18267, var7);
-                u.field_h = wt.a(-117, args);
+                JaggrabDownloader.field_h = wt.a(-117, args);
               }
             }
           } else {
             stackIn_7_0 = !(tn.field_b >= 13);
-            u.field_h = mf.a(stackIn_7_0, param3 ^ -42);
+            JaggrabDownloader.field_h = mf.a(stackIn_7_0, param3 ^ -42);
             pp.a(param3 ^ -18268, (String[]) null);
           }
           return;
@@ -142,7 +142,7 @@ final class no extends i {
 
     no() {
         super(9);
-        ut var1 = kb.field_E[-1 + kb.field_E.length];
+        Sprite var1 = kb.field_E[-1 + kb.field_E.length];
         String var2 = q.field_h[-1 + q.field_h.length];
         String var3 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[9], new String[]{var2});
         this.a(var3, this.field_t, var1, -117, this.field_u);

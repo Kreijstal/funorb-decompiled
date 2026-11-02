@@ -4,8 +4,8 @@
 final class ad {
     static String field_a;
     static int[][] field_e;
-    static qm[] field_d;
-    static ut[] field_c;
+    static MusicTrack[] field_d;
+    static Sprite[] field_c;
     static int field_f;
     static String field_b;
 
@@ -182,7 +182,7 @@ final class ad {
         }
     }
 
-    final static void a(sj param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_3808_0;
             StringBuilder stackIn_3808_1;
@@ -192,10 +192,10 @@ final class ad {
             byte[] var2;
             RuntimeException var2_ref;
             int var3;
-            sj param0;
+            ResourceArchive param0;
             int param1;
             boolean finished;
-            $CfrPartitionedBody(sj initialParam0, int initialParam1) {
+            $CfrPartitionedBody(ResourceArchive initialParam0, int initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_3808_0 = null;
@@ -1229,7 +1229,7 @@ final class ad {
                 }
                 var2 = ib.a("cancel", -93);
                 if (var2 != null) {
-                  ku.field_a = kt.a(var2, true);
+                  MouseInputHandler.field_a = kt.a(var2, true);
                 }
                 var2 = ib.a("gotoauctions", param1 - 121);
                 if (null != var2) {
@@ -2334,7 +2334,7 @@ final class ad {
                 }
                 var2 = ib.a("street", -87);
                 if (var2 != null) {
-                  tu.field_C = kt.a(var2, true);
+                  GameLoopApplet.field_C = kt.a(var2, true);
                 }
                 var2 = ib.a("surface,0", -87);
                 if (var2 != null) {
@@ -2390,7 +2390,7 @@ final class ad {
                 }
                 var2 = ib.a("exp_colon_space", param1 ^ -112);
                 if (null != var2) {
-                  rg.field_d = kt.a(var2, true);
+                  MouseWheelInput.field_d = kt.a(var2, true);
                 }
                 var2 = ib.a("total_colon_space", -86);
                 if (var2 != null) {
@@ -2422,7 +2422,7 @@ final class ad {
                 }
                 var2 = ib.a("reserve_at_min", -82);
                 if (var2 != null) {
-                  fd.field_j = kt.a(var2, true);
+                  UiWidget.field_j = kt.a(var2, true);
                 }
                 var2 = ib.a("duration_name,0", -86);
                 if (var2 != null) {
@@ -2538,7 +2538,7 @@ final class ad {
                 }
                 var2 = ib.a("search_no_auctions", -111);
                 if (null != var2) {
-                  bh.field_t = kt.a(var2, true);
+                  BufferedSocket.field_t = kt.a(var2, true);
                 }
                 var2 = ib.a("pending", -108);
                 if (var2 != null) {
@@ -2916,7 +2916,7 @@ final class ad {
                 }
                 var2 = ib.a("no_gold_league_winner_justplaymode", -95);
                 if (var2 != null) {
-                  qh.field_g = kt.a(var2, true);
+                  SectorCacheStore.field_g = kt.a(var2, true);
                 }
                 var2 = ib.a("training_mouseover_text,0", -105);
                 if (null != var2) {
@@ -3052,11 +3052,11 @@ final class ad {
                 }
                 var2 = ib.a("palette_title,0", -102);
                 if (var2 != null) {
-                  dh.field_j[0] = kt.a(var2, true);
+                  ImageProducerRasterBuffer.field_j[0] = kt.a(var2, true);
                 }
                 var2 = ib.a("palette_title,1", -101);
                 if (null != var2) {
-                  dh.field_j[1] = kt.a(var2, true);
+                  ImageProducerRasterBuffer.field_j[1] = kt.a(var2, true);
                 }
                 var2 = ib.a("game_ended_early", param1 - 96);
                 if (null != var2) {
@@ -3108,11 +3108,11 @@ final class ad {
                 }
                 var2 = ib.a("filter", -104);
                 if (var2 != null) {
-                  vq.field_e = kt.a(var2, true);
+                  FullscreenFocusCanvas.field_e = kt.a(var2, true);
                 }
                 var2 = ib.a("increase_stat", param1 - 114);
                 if (var2 != null) {
-                  ov.field_c = kt.a(var2, true);
+                  NodeHashTableIterator.field_c = kt.a(var2, true);
                 }
                 var2 = ib.a("replace", param1 ^ -87);
                 if (null != var2) {
@@ -3196,7 +3196,7 @@ final class ad {
                 }
                 var2 = ib.a("filter_auctions", -119);
                 if (null != var2) {
-                  bi.field_a = kt.a(var2, true);
+                  ArchiveNetworkClient.field_a = kt.a(var2, true);
                 }
                 var2 = ib.a("kit_lock_achievement1", -122);
                 if (var2 != null) {
@@ -3232,7 +3232,7 @@ final class ad {
                 }
                 var2 = ib.a("search_for_user", param1 - 125);
                 if (null != var2) {
-                  bi.field_e = kt.a(var2, true);
+                  ArchiveNetworkClient.field_e = kt.a(var2, true);
                 }
                 var2 = ib.a("sell_player", -125);
                 if (var2 != null) {
@@ -3352,7 +3352,7 @@ final class ad {
                 }
                 var2 = ib.a("winning", param1 - 82);
                 if (var2 != null) {
-                  tf.field_b = kt.a(var2, true);
+                  IntrusiveDeque.field_b = kt.a(var2, true);
                 }
                 var2 = ib.a("outbidded", param1 ^ -119);
                 if (null != var2) {
@@ -3384,7 +3384,7 @@ final class ad {
                 }
                 var2 = ib.a("click_to_increase_buyout", param1 - 89);
                 if (null != var2) {
-                  nw.field_c = kt.a(var2, true);
+                  IntrusiveDequeCursor.field_c = kt.a(var2, true);
                 }
                 var2 = ib.a("click_to_decrease_buyout", param1 - 90);
                 if (var2 != null) {
@@ -3440,7 +3440,7 @@ final class ad {
                 }
                 var2 = ib.a("training_escape", -117);
                 if (null != var2) {
-                  de.field_a = kt.a(var2, true);
+                  GameKeyHandler.field_a = kt.a(var2, true);
                 }
                 var2 = ib.a("space_name", -106);
                 if (null != var2) {
@@ -3456,7 +3456,7 @@ final class ad {
                 }
                 var2 = ib.a("no_user_found", -127);
                 if (null != var2) {
-                  qh.field_e = kt.a(var2, true);
+                  SectorCacheStore.field_e = kt.a(var2, true);
                 }
                 var2 = ib.a("auction_successful", -95);
                 if (null != var2) {
@@ -3552,19 +3552,19 @@ final class ad {
                 }
                 var2 = ib.a("instructions_gameplay7,0,0", -89);
                 if (var2 != null) {
-                  u.field_e[0][0] = kt.a(var2, true);
+                  JaggrabDownloader.field_e[0][0] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_gameplay7,0,1", -97);
                 if (null != var2) {
-                  u.field_e[0][1] = kt.a(var2, true);
+                  JaggrabDownloader.field_e[0][1] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_gameplay7,1,0", -110);
                 if (null != var2) {
-                  u.field_e[1][0] = kt.a(var2, true);
+                  JaggrabDownloader.field_e[1][0] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_gameplay7,1,1", param1 - 90);
                 if (var2 != null) {
-                  u.field_e[1][1] = kt.a(var2, true);
+                  JaggrabDownloader.field_e[1][1] = kt.a(var2, true);
                 }
                 var2 = ib.a("instructions_gameplay8", param1 ^ -118);
                 if (null != var2) {
@@ -3794,11 +3794,11 @@ final class ad {
                 }
                 var2 = ib.a("tutorial_controls,0", -98);
                 if (var2 != null) {
-                  ao.field_f[0] = kt.a(var2, true);
+                  RandomAccessCacheFile.field_f[0] = kt.a(var2, true);
                 }
                 var2 = ib.a("tutorial_controls,1", -91);
                 if (null != var2) {
-                  ao.field_f[1] = kt.a(var2, true);
+                  RandomAccessCacheFile.field_f[1] = kt.a(var2, true);
                 }
                 var2 = ib.a("done", -119);
                 if (var2 != null) {
@@ -3862,7 +3862,7 @@ final class ad {
                 }
                 var2 = ib.a("tournament_currentgames", param1 ^ -112);
                 if (null != var2) {
-                  ow.field_a = kt.a(var2, true);
+                  ArchiveSource.field_a = kt.a(var2, true);
                 }
                 var2 = ib.a("player_wants_draw", -117);
                 if (null != var2) {
@@ -3874,7 +3874,7 @@ final class ad {
                 }
                 var2 = ib.a("auctions_offline", -124);
                 if (null != var2) {
-                  ew.field_d = kt.a(var2, true);
+                  BufferedCacheFile.field_d = kt.a(var2, true);
                 }
                 var2 = ib.a("rating_too_low", param1 - 82);
                 if (null != var2) {
@@ -3894,7 +3894,7 @@ final class ad {
                 }
                 var2 = ib.a("maxprice", -111);
                 if (var2 != null) {
-                  tu.field_D = kt.a(var2, true);
+                  GameLoopApplet.field_D = kt.a(var2, true);
                 }
                 var2 = ib.a("too_low", param1 - 119);
                 if (null != var2) {
@@ -4246,7 +4246,7 @@ final class ad {
                 }
                 var2 = ib.a("stage_tothefinal", param1 - 108);
                 if (null != var2) {
-                  av.field_d = kt.a(var2, true);
+                  SocketConnector.field_d = kt.a(var2, true);
                 }
                 var2 = ib.a("stage_tothesemifinal", -123);
                 if (null != var2) {
@@ -4595,7 +4595,7 @@ final class ad {
 
     static {
         field_a = "starting price can't go above buyout";
-        field_d = new qm[8];
+        field_d = new MusicTrack[8];
         field_e = new int[5][3];
         field_e[0][1] = 18124;
         field_e[0][0] = 9011;

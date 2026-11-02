@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bo extends hd {
-    static sj field_Cb;
+    static ResourceArchive field_Cb;
     static String field_zb;
     static String field_Db;
     static int[] field_Ab;
@@ -54,7 +54,7 @@ final class bo extends hd {
         boolean decompiledFrameRemainder0 = true;
         this.b(0, true);
         var3 = 118 % ((3 - param0) / 62);
-        if ((wj.field_A == 0 ||
+        if ((WidgetContainer.field_A == 0 ||
           0 != this.field_sb) && this.field_yb.field_sb == 0) {
           stackIn_7_0 = false;
           decompiledFrameRemainder0 = false;

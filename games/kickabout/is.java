@@ -12,7 +12,7 @@ final class is {
     static boolean field_c;
     static String field_f;
 
-    final static void a(hu param0, String param1, qj param2, int param3, int param4) {
+    final static void a(BitmapFont param0, String param1, qj param2, int param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;

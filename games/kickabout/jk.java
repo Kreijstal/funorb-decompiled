@@ -110,8 +110,8 @@ final class jk extends IntrusiveNode {
                 }
                 var9 = 23 * var9 >> 8;
                 var8 = var8 * 23 >> 8;
-                on.d(var8 + (var1_int + 1), var9 + (1 + var2), 3, var7);
-                on.c(var8 + var1_int + 1, var9 + 1 + var2, 3, 65793);
+                SoftwareRasterizer.d(var8 + (var1_int + 1), var9 + (1 + var2), 3, var7);
+                SoftwareRasterizer.c(var8 + var1_int + 1, var9 + 1 + var2, 3, 65793);
               }
             }
             var3 = (ob) (tb.field_w.field_V);
@@ -130,8 +130,8 @@ final class jk extends IntrusiveNode {
             }
             var5Lifetime1 = var5Lifetime1 * 23 >> 8;
             var4Lifetime1 = var4Lifetime1 * 23 >> 8;
-            on.d(var4Lifetime1 + (1 + var1_int), var5Lifetime1 + (var2 + 1), 3, 16777215);
-            on.c(var4Lifetime1 + 1 + var1_int, 1 + (var2 + var5Lifetime1), 3, 65793);
+            SoftwareRasterizer.d(var4Lifetime1 + (1 + var1_int), var5Lifetime1 + (var2 + 1), 3, 16777215);
+            SoftwareRasterizer.c(var4Lifetime1 + 1 + var1_int, 1 + (var2 + var5Lifetime1), 3, 65793);
             ta.e(125);
             return;
           }
@@ -221,7 +221,7 @@ final class jk extends IntrusiveNode {
     }
 
     final static void a(byte param0) {
-        we.field_a.a((byte) -124, (fd) (new nn()));
+        we.field_a.a((byte) -124, (UiWidget) (new nn()));
         if (param0 > -119) {
           jk.b(114);
         }

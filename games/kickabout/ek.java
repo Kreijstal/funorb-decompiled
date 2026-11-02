@@ -74,30 +74,30 @@ final class ek extends i {
         tk var11 = this.field_L;
         this.field_L.a(true, 210, param1 + 250, param2 + 55, 240);
         this.field_L.b(0, true);
-        on.a(-4 + var11.field_F, var11.field_T - 5, 8 + var11.field_q, var11.field_mb, 8, 65793, 96);
+        SoftwareRasterizer.a(-4 + var11.field_F, var11.field_T - 5, 8 + var11.field_q, var11.field_mb, 8, 65793, 96);
         if (param0 >= -11) {
           return;
         }
         if (var11.field_Eb.e((byte) -113)) {
-          on.g(var11.field_Eb.field_F + 3, var11.field_Eb.field_T, -6 + var11.field_Eb.field_q, var11.field_Eb.field_mb);
+          SoftwareRasterizer.g(var11.field_Eb.field_F + 3, var11.field_Eb.field_T, -6 + var11.field_Eb.field_q, var11.field_Eb.field_mb);
         }
         pt.a(-2 + (var11.field_F - (-var11.field_q + 15)), -22914, 0, -2 + (var11.field_mb + var11.field_T) - 15, var11.field_T);
         Object var5 = null;
         at var6_ref_at = (at) (this.field_L.field_Db.field_jb.g(24009));
         while (var6_ref_at != null) {
           if (this.field_H == var6_ref_at) {
-            on.a(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 65793, 128);
-            on.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 10066329);
+            SoftwareRasterizer.a(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 65793, 128);
+            SoftwareRasterizer.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 10066329);
           } else {
             if (var6_ref_at.field_gb) {
-              on.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 4473924);
+              SoftwareRasterizer.f(var6_ref_at.field_F, var6_ref_at.field_T, var6_ref_at.field_q, var6_ref_at.field_mb, 8, 4473924);
             }
           }
           var6_ref_at.i((byte) -76);
           var6_ref_at = (at) (this.field_L.field_Db.field_jb.c(33));
         }
         if (this.field_t != var5) {
-          this.a(this.field_v, (lv) (var5), (ut) null, -94, this.field_u);
+          this.a(this.field_v, (lv) (var5), (Sprite) null, -94, this.field_u);
         }
         ta.e(123);
         if (null != this.field_H) {
@@ -105,7 +105,7 @@ final class ek extends i {
           var7 = 160 + param2;
           var8 = this.field_H.field_Cb.b(0);
           var9 = this.field_H.field_Cb.a(15);
-          on.a(-(var8 >> 1) + var6 - 10, -(var9 >> 1) + (var7 - 10), 20 + var8, var9 + 40, 10, 65793, 128);
+          SoftwareRasterizer.a(-(var8 >> 1) + var6 - 10, -(var9 >> 1) + (var7 - 10), 20 + var8, var9 + 40, 10, 65793, 128);
           this.field_H.field_Cb.a(var7, 23, var6);
           pb.field_C.d(this.field_H.field_Eb, var6, 20 + ((var9 >> 1) + var7), this.field_H.c(true), -1);
           if (!(this.field_H.field_Db <= ic.field_h.field_x)) {

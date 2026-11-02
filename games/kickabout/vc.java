@@ -231,7 +231,7 @@ final class vc extends fp {
         ns.field_c = bg.a("beach", bo.field_Cb, (byte) 92, "ball");
         je.field_h = bg.a("beach", bo.field_Cb, (byte) 68, "bucket");
         c.field_e = bg.a("beach", bo.field_Cb, (byte) 76, "palmtree");
-        vq.field_a = bg.a("beach", bo.field_Cb, (byte) 76, "starfish");
+        FullscreenFocusCanvas.field_a = bg.a("beach", bo.field_Cb, (byte) 76, "starfish");
         el.field_D = bg.a("beach", bo.field_Cb, (byte) 93, "icecream");
         int var1 = 88 % ((65 - param0) / 42);
         tv.field_b = ng.a("stains", "beach", 2, bo.field_Cb);

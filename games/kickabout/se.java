@@ -3,27 +3,27 @@
  */
 final class se extends ct {
     static ef field_C;
-    private tf field_A;
+    private IntrusiveDeque field_A;
     static String field_B;
 
     public se() {
         super(0, 0, il.field_b, im.field_Ab, (gj) null, (jv) null);
-        this.field_A = new tf();
+        this.field_A = new IntrusiveDeque();
     }
 
-    final fd a(int param0) {
-        nw var2 = null;
+    final UiWidget a(int param0) {
+        IntrusiveDequeCursor var2 = null;
         RuntimeException var2_ref = null;
         ub var3 = null;
         int var4 = 0;
-        fd stackIn_10_0 = null;
+        UiWidget stackIn_10_0 = null;
         Object stackIn_13_0 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = Kickabout.field_G;
         try {
-          var2 = new nw(this.field_A);
+          var2 = new IntrusiveDequeCursor(this.field_A);
           if (param0 != 0) {
-            this.field_A = (tf) null;
+            this.field_A = (IntrusiveDeque) null;
           }
           var3 = (ub) (var2.a((byte) 98));
           while (var3 != null) {
@@ -38,7 +38,7 @@ final class se extends ct {
             break;
           }
           stackIn_13_0 = null;
-          return (fd) (stackIn_13_0);
+          return (UiWidget) (stackIn_13_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -46,12 +46,12 @@ final class se extends ct {
         }
     }
 
-    final static ut[] a(sj param0, int param1, String param2, String param3) {
+    final static Sprite[] a(ResourceArchive param0, int param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        ut[] stackIn_1_0 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -108,7 +108,7 @@ final class se extends ct {
         gg stackOut_8_0;
         int var3_int = 0;
         RuntimeException var3 = null;
-        tf var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         Object var6 = null;
         gg var7 = null;
@@ -137,7 +137,7 @@ final class se extends ct {
           var5 = null;
           if (ts.field_d == 2) {
             kk.field_R.field_lb = true;
-            du.field_f.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, uf.field_d, new String[]{bh.field_h});
+            du.field_f.field_E = vo.$cfr$intArgs$a$53ce4ab4c593(-18, uf.field_d, new String[]{BufferedSocket.field_h});
             ei.field_d.field_Cb.field_zb.field_E = null;
             var6 = null;
             var7 = (gg) (var4.g(24009));
@@ -162,7 +162,7 @@ final class se extends ct {
                 var7.field_q = ei.field_d.field_yb.field_q;
                 var9 = 0;
                 if (null != var7.field_zb) {
-                  if (var7.field_zb != bh.field_h) {
+                  if (var7.field_zb != BufferedSocket.field_h) {
                     var10 = 13421568;
                     var11 = 16777062;
                   } else {
@@ -197,7 +197,7 @@ final class se extends ct {
                 }
                 stackIn_36_0 = var7.field_Bb;
                 if (var14 > 0) {
-                  stackIn_37_1 = hu.a(var7.field_Bb.field_X, var7.field_Gb, var14);
+                  stackIn_37_1 = BitmapFont.a(var7.field_Bb.field_X, var7.field_Gb, var14);
                 } else {
                   stackIn_37_1 = var7.field_Gb;
                 }
@@ -205,7 +205,7 @@ final class se extends ct {
                 var7.field_Bb.a(true, var14, var13, var9, sh.field_c);
                 stackIn_40_0 = var7.field_Ab;
                 if (var7.field_zb == null) {
-                  stackIn_41_1 = ga.field_K;
+                  stackIn_41_1 = TextInputWidget.field_K;
                 } else {
                   stackIn_41_1 = var7.field_zb;
                 }
@@ -229,7 +229,7 @@ final class se extends ct {
                   el.a(var7, false, ei.field_d.field_Cb, -1, var16, (int[]) null, 0L, (String) null, -1);
                   var5 = var7;
                   if (null != var7.field_zb &&
-                    !ew.a(118, wi.field_v.field_k) &&
+                    !BufferedCacheFile.a(118, wi.field_v.field_k) &&
                     !PacketBuffer.field_l) {
                     if (!kb.field_C) {
                       var17 = wi.field_v;
@@ -287,8 +287,8 @@ final class se extends ct {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        nw var5 = null;
-        fd var6 = null;
+        IntrusiveDequeCursor var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
@@ -298,13 +298,13 @@ final class se extends ct {
             return;
           }
           if (null != this.field_r) {
-            this.field_r.a(113, true, param3, (fd) (this), param2);
+            this.field_r.a(113, true, param3, (UiWidget) (this), param2);
           }
-          var5 = new nw(this.field_A);
-          var6 = (fd) (var5.b(0));
+          var5 = new IntrusiveDequeCursor(this.field_A);
+          var6 = (UiWidget) (var5.b(0));
           while (null != var6) {
             var6.a(param0, 65, param2 + this.field_t, this.field_g + param3);
-            var6 = (fd) (var5.b((byte) 46));
+            var6 = (UiWidget) (var5.b((byte) 46));
             if (var7 != 0) {
               return;
             }
@@ -318,7 +318,7 @@ final class se extends ct {
     }
 
     final ub h(byte param0) {
-        nw var2 = null;
+        IntrusiveDequeCursor var2 = null;
         RuntimeException var2_ref = null;
         ub var3 = null;
         int var4 = 0;
@@ -332,7 +332,7 @@ final class se extends ct {
             stackIn_3_0 = (ub) null;
             return stackIn_3_0;
           }
-          var2 = new nw(this.field_A);
+          var2 = new IntrusiveDequeCursor(this.field_A);
           var3 = (ub) (var2.a((byte) 70));
           while (null != var3) {
             if (var3.field_C) {
@@ -356,13 +356,13 @@ final class se extends ct {
 
     final void l(int param0) {
         RuntimeException runtimeException = null;
-        nw var2 = null;
+        IntrusiveDequeCursor var2 = null;
         ub var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Kickabout.field_G;
         try {
-          var2 = new nw(this.field_A);
+          var2 = new IntrusiveDequeCursor(this.field_A);
           if (param0 != 4508) {
             return;
           }
@@ -384,7 +384,7 @@ final class se extends ct {
         }
     }
 
-    final void a(fd param0, boolean param1) {
+    final void a(UiWidget param0, boolean param1) {
         ub var3 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -398,10 +398,10 @@ final class se extends ct {
           var3 = (ub) (param0);
           this.field_A.a(0, var3);
           if (param1) {
-            this.field_A = (tf) null;
+            this.field_A = (IntrusiveDeque) null;
           }
           var3.field_C = true;
-          var3.a((fd) (this), 0);
+          var3.a((UiWidget) (this), 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -447,13 +447,13 @@ final class se extends ct {
 
     final void k(int param0) {
         RuntimeException runtimeException = null;
-        nw var2 = null;
+        IntrusiveDequeCursor var2 = null;
         ub var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
         var4 = Kickabout.field_G;
         try {
-          var2 = new nw(this.field_A);
+          var2 = new IntrusiveDequeCursor(this.field_A);
           if (param0 <= 82) {
             this.h((byte) 110);
           }
@@ -512,7 +512,7 @@ final class se extends ct {
     }
 
     final void n(int param0) {
-        nw var2 = null;
+        IntrusiveDequeCursor var2 = null;
         ub var3 = null;
         int var4 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -522,7 +522,7 @@ final class se extends ct {
           if (param0 != 2) {
             se.a((byte) 111, '\007');
           }
-          var2 = new nw(this.field_A);
+          var2 = new IntrusiveDequeCursor(this.field_A);
           var3 = (ub) (var2.a((byte) 107));
           while (null != var3) {
             if (var4 != 0) {
@@ -533,7 +533,7 @@ final class se extends ct {
             }
             var3 = (ub) (var2.a(0));
           }
-          this.field_z = (fd) ((Object) this.h((byte) 18));
+          this.field_z = (UiWidget) ((Object) this.h((byte) 18));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

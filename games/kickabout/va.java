@@ -7,7 +7,7 @@ final class va extends hs {
     private boolean field_B;
     private int field_z;
     static String[][] field_y;
-    private ut[] field_C;
+    private Sprite[] field_C;
     static hd field_w;
     static long field_o;
     private int field_G;
@@ -20,7 +20,7 @@ final class va extends hs {
     private int[] field_v;
     private boolean field_m;
     private boolean field_L;
-    private tf field_r;
+    private IntrusiveDeque field_r;
     private int field_H;
     static String field_F;
     private int field_s;
@@ -69,7 +69,7 @@ final class va extends hs {
         if (param0 >= -56) {
           return -33;
         }
-        return dq.$cfr$intArgs$a$7f8aad568c81(-61, param1, ru.field_l);
+        return ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-61, param1, MidiPcmStream.field_l);
     }
 
     private final void a(boolean param0, int param1, int param2) {
@@ -93,7 +93,7 @@ final class va extends hs {
             stackIn_12_2 = -79;
             stackIn_12_3 = param0;
             stackIn_13_4 = !(param0);
-            ParticipantStatus.$cfr$intArgs$a$60f25194e713(stackIn_12_0, stackIn_12_1, stackIn_12_2, fd.a(stackIn_12_3, stackIn_13_4, (byte) 97, false, false));
+            ParticipantStatus.$cfr$intArgs$a$60f25194e713(stackIn_12_0, stackIn_12_1, stackIn_12_2, UiWidget.a(stackIn_12_3, stackIn_13_4, (byte) 97, false, false));
           }
           if (rm.field_C == 1) {
             if (!param0) {
@@ -406,7 +406,7 @@ final class va extends hs {
           this.g(-34, -31);
         }
         this.a(this.field_a, this.field_f, 370);
-        this.a((tf) null, (byte) -126);
+        this.a((IntrusiveDeque) null, (byte) -126);
     }
 
     private final void n(int param0) {
@@ -548,7 +548,7 @@ final class va extends hs {
           if (var2[f.field_a]) {
             var10 += 16;
           }
-          sj.a((double)var9, (byte) 127, (double)var8, (double)var10);
+          ResourceArchive.a((double)var9, (byte) 127, (double)var8, (double)var10);
         }
     }
 
@@ -565,7 +565,7 @@ final class va extends hs {
         int var5;
         int var2Lifetime1;
         var5 = Kickabout.field_G;
-        if (kl.b(640) &&
+        if (ArchiveIndex.b(640) &&
           !this.b((byte) -65)) {
           return;
         }
@@ -659,15 +659,15 @@ final class va extends hs {
           }
         } else {
           if (0 < var2Lifetime1) {
-            sj.a(0.0, (byte) 127, 0.0, -16.0);
+            ResourceArchive.a(0.0, (byte) 127, 0.0, -16.0);
           }
           if (var2Lifetime1 < 0) {
-            sj.a(0.0, (byte) 127, 0.0, 16.0);
+            ResourceArchive.a(0.0, (byte) 127, 0.0, 16.0);
           }
         }
     }
 
-    final void a(tf param0, byte param1) {
+    final void a(IntrusiveDeque param0, byte param1) {
         int var4_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -681,7 +681,7 @@ final class va extends hs {
         var5 = Kickabout.field_G;
         try {
           if (null == this.field_r) {
-            this.field_r = new tf();
+            this.field_r = new IntrusiveDeque();
           } else {
             this.field_r.b(22997);
           }
@@ -830,8 +830,8 @@ final class va extends hs {
 
     final void f(int param0, int param1) {
         if (param0 <= 98) {
-          tf var4 = (tf) null;
-          this.a((tf) null, (byte) -3);
+          IntrusiveDeque var4 = (IntrusiveDeque) null;
+          this.a((IntrusiveDeque) null, (byte) -3);
         }
     }
 
@@ -1086,7 +1086,7 @@ final class va extends hs {
     }
 
     private final void k(int param0) {
-        ut var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -1151,7 +1151,7 @@ final class va extends hs {
           stackIn_7_1 = !(param3);
           this.field_B = stackIn_7_1;
           this.a(param0, param3, 370);
-          this.a((tf) null, (byte) -97);
+          this.a((IntrusiveDeque) null, (byte) -97);
           var6_int = this.h(-41);
           this.field_C = uj.a((byte) -97, param0.field_g, param0.field_S, param0.field_g[var6_int].field_p);
           this.field_l = true;
@@ -1225,7 +1225,7 @@ final class va extends hs {
         wh var6 = null;
         if (this.field_p <= 0 &&
           40 > this.field_a.field_X.goalCount) {
-          var4 = !param0 ? fd.a(false, true, (byte) 97, false, false) : fd.a(true, false, (byte) 97, true, !param2 ? true : false);
+          var4 = !param0 ? UiWidget.a(false, true, (byte) 97, false, false) : UiWidget.a(true, false, (byte) 97, true, !param2 ? true : false);
           var5 = this.a((byte) -64, 2) == 0 ? 1 : 0;
           var6 = ParticipantStatus.$cfr$intArgs$a$60f25194e713(false, var5 == 0 ? 256 : 0, 65, var4);
           if (var6 != null) {
@@ -1311,7 +1311,7 @@ final class va extends hs {
         if (gs.field_g) {
           var2Lifetime2 = 370;
           var3Lifetime2 = -45;
-          on.e(ug.a(0, var2Lifetime2), lf.a((byte) -89, var3Lifetime2), 155 * hw.field_i >> 8, 45 * hw.field_i >> 8, 16711935);
+          SoftwareRasterizer.e(ug.a(0, var2Lifetime2), lf.a((byte) -89, var3Lifetime2), 155 * hw.field_i >> 8, 45 * hw.field_i >> 8, 16711935);
           ev.a(this.field_a, param0 ^ 72, 0);
           ev.a(this.field_a, 48, 1);
         }
@@ -1389,8 +1389,8 @@ final class va extends hs {
               }
             }
             if (var5 != -1 &&
-              null != tu.field_E) {
-              if (!this.field_a.a(var5, false, tu.field_E.field_e, this.field_g, tk.field_Ib)) {
+              null != GameLoopApplet.field_E) {
+              if (!this.field_a.a(var5, false, GameLoopApplet.field_E.field_e, this.field_g, tk.field_Ib)) {
                 return true;
               }
               if (var5 != 11 &&
@@ -1432,8 +1432,8 @@ final class va extends hs {
         uc.a(this.field_r, -22488);
         is.a(7249);
         this.l(2115);
-        de.b(40);
-        kl.c(88);
+        GameKeyHandler.b(40);
+        ArchiveIndex.c(88);
         he.i(0);
         qs.a(false);
     }
@@ -1540,7 +1540,7 @@ final class va extends hs {
             fo.a(var3_int != 0, -68, ki.g((byte) 60), hm.field_A, pe.a((byte) 92));
           } else {
             if (!nq.i(-86)) {
-              on.b();
+              SoftwareRasterizer.b();
               rv.a(320, 240, (byte) 122);
               su.a(27744, 0, 0, param0);
             } else {

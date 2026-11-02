@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class cj extends wj implements cw {
+abstract class cj extends WidgetContainer implements cw {
     static hd field_D;
     private hl field_B;
     static String field_H;
@@ -15,7 +15,7 @@ abstract class cj extends wj implements cw {
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6) {
         String var7 = null;
-        if (ov.field_b == 2) {
+        if (NodeHashTableIterator.field_b == 2) {
           var7 = ds.field_e;
         } else {
           var7 = vo.field_db;

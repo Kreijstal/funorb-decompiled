@@ -4,7 +4,7 @@
 final class kq extends hd {
     private gm field_Db;
     boolean field_Kb;
-    static tf field_yb;
+    static IntrusiveDeque field_yb;
     boolean field_Gb;
     up field_Eb;
     static String field_Ib;
@@ -12,7 +12,7 @@ final class kq extends hd {
     static int field_Jb;
     static int field_Ab;
     boolean field_Hb;
-    private ut field_Fb;
+    private Sprite field_Fb;
     private boolean field_Cb;
     boolean field_Lb;
     boolean field_zb;
@@ -25,7 +25,7 @@ final class kq extends hd {
             this.field_Fb = null;
             this.field_Gb = false;
           } else {
-            this.field_Fb = param1.a(1, var4.field_i) ? (ut) ((Object) eq.field_h) : (ut) ((Object) CipherPacketBuffer.field_q);
+            this.field_Fb = param1.a(1, var4.field_i) ? (Sprite) ((Object) eq.field_h) : (Sprite) ((Object) CipherPacketBuffer.field_q);
             this.field_Gb = true;
           }
           int var5 = -66 / ((-50 - param0) / 34);
@@ -61,7 +61,7 @@ final class kq extends hd {
             this.field_Fb.c(18 + this.field_F, 41 + this.field_T);
             return;
           }
-          on.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
+          SoftwareRasterizer.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
           uv.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
           q.field_d.a(eq.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
           if (param0 < -114) {
@@ -78,7 +78,7 @@ final class kq extends hd {
           return;
         }
         PacketBuffer.a(85, dc.field_b);
-        on.b();
+        SoftwareRasterizer.b();
         var5 = new int[4];
         var4 = var5;
         var3 = var4;
@@ -87,7 +87,7 @@ final class kq extends hd {
         var5[3] = 1260;
         var5[2] = 1400;
         var5[1] = 1400;
-        this.field_Db.a(var3[this.field_Eb.field_q], 0, on.field_g >> 1, on.field_f - 8, (byte) -122);
+        this.field_Db.a(var3[this.field_Eb.field_q], 0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 8, (byte) -122);
         ta.e(117);
         if (this.field_zb) {
           eo.a(dc.field_b, 1);
@@ -98,7 +98,7 @@ final class kq extends hd {
             eo.a(dc.field_b, 2);
             dc.field_b.f(this.field_F, this.field_T);
             if (this.field_Hb) {
-              on.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
+              SoftwareRasterizer.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
               uv.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
               q.field_d.a(eq.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
             }
@@ -113,7 +113,7 @@ final class kq extends hd {
         }
         dc.field_b.f(this.field_F, this.field_T);
         if (this.field_Hb) {
-          on.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
+          SoftwareRasterizer.a(this.field_F + 1, -22 + this.field_mb + this.field_T, this.field_q - 2, 19, 7, 65793, 170);
           uv.a(this.field_F + 12, (byte) 126, this.field_T + (this.field_mb - 12));
           q.field_d.a(eq.field_b, this.field_F + 23, this.field_mb + (this.field_T - 8), 16763955, 65793);
         }

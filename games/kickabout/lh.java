@@ -8,20 +8,20 @@ final class lh extends tm {
     static String field_C;
     static String field_F;
 
-    final static ut a(int param0, byte param1, int param2) {
-        ut var6 = null;
-        ut var3 = null;
+    final static Sprite a(int param0, byte param1, int param2) {
+        Sprite var6 = null;
+        Sprite var3 = null;
         int var4 = 0;
         int var5 = Kickabout.field_G;
         if (param1 == -96) {
-          var6 = new ut(param2, param2);
+          var6 = new Sprite(param2, param2);
           var3 = var6;
           for (var4 = 0; var3.field_y.length > var4; var4++) {
             var6.field_y[var4] = param0;
           }
           return var3;
         }
-        return (ut) null;
+        return (Sprite) null;
     }
 
     lh(String param0, Class[] param1, String param2) {

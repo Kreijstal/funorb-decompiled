@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class nr extends IntrusiveNode {
-    static de field_q;
+    static GameKeyHandler field_q;
     private int field_i;
     private eg field_p;
     private int field_n;
@@ -20,7 +20,7 @@ final class nr extends IntrusiveNode {
     static vd field_f;
     static String field_k;
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, hu param10, hu param11, dg param12, int param13, int param14, int param15, dg param16, int param17, int param18, dg param19, int param20) {
+    final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, BitmapFont param10, BitmapFont param11, dg param12, int param13, int param14, int param15, dg param16, int param17, int param18, dg param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -35,15 +35,15 @@ final class nr extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          ew.a(126, param5, param10, param11);
+          BufferedCacheFile.a(126, param5, param10, param11);
           sb.a(param18, param0, param13, param7, (byte) 5);
           if (param2 <= 25) {
-            field_q = (de) null;
+            field_q = (GameKeyHandler) null;
           }
           ClientException.a(param8, 0, param4);
           rn.a(param19, param6, param16, param9, param15, -110);
           tm.a(param3, param1, false, param12);
-          bi.a(param20, param14, param17, 20);
+          ArchiveNetworkClient.a(param20, param14, param17, 20);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -90,9 +90,9 @@ final class nr extends IntrusiveNode {
         }
         this.field_h.a(param0, 111);
         eg var5 = (eg) (this.field_h.a(this.field_p, false, true, true));
-        nh.a(param1 + this.field_g << 4, this.field_i << 4, 320, -4 + fd.field_f.length, fd.field_f);
+        nh.a(param1 + this.field_g << 4, this.field_i << 4, 320, -4 + UiWidget.field_f.length, UiWidget.field_f);
         PacketBuffer.a(103, ok.field_d);
-        on.b();
+        SoftwareRasterizer.b();
         t.c();
         int var4 = 950;
         t.b(128, 240);
@@ -160,10 +160,10 @@ final class nr extends IntrusiveNode {
         this.field_s = param3;
         Random var8 = new Random();
         var8 = var8;
-        this.field_o = dq.$cfr$intArgs$a$7f8aad568c81(-34, 6, var8);
+        this.field_o = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-34, 6, var8);
         this.field_p = ok.a(-49, this.field_s, var8);
         this.field_h = new dd(1);
-        int var6 = dq.$cfr$intArgs$a$7f8aad568c81(-48, 5, var8);
+        int var6 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-48, 5, var8);
         this.field_h.a(hq.field_b[var6], (byte) -107);
     }
 
@@ -178,7 +178,7 @@ final class nr extends IntrusiveNode {
 
     static {
         field_l = "The Quater Finals start in <%0> seconds...";
-        field_q = new de();
+        field_q = new GameKeyHandler();
         field_m = "This option cannot be combined with the current settings for:  ";
         field_k = "Sprint";
         field_f = new vd();

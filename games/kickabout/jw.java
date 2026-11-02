@@ -186,7 +186,7 @@ final class jw extends hd {
         field_Ab = null;
     }
 
-    jw(String param0, hu param1) {
+    jw(String param0, BitmapFont param1) {
         this(param0, param1, -1);
     }
 
@@ -194,16 +194,16 @@ final class jw extends hd {
         int var3;
         int var4;
         int var5;
-        ut var6;
+        Sprite var6;
         int var7;
         int stackIn_5_0 = 0;
-        ut[] stackIn_9_0 = null;
+        Sprite[] stackIn_9_0 = null;
         int stackIn_12_1 = 0;
-        ut[] stackIn_24_0 = null;
+        Sprite[] stackIn_24_0 = null;
         int stackIn_27_1 = 0;
         int stackIn_40_0 = 0;
         int stackIn_43_0 = 0;
-        ut[] stackIn_48_0 = null;
+        Sprite[] stackIn_48_0 = null;
         int stackIn_51_1 = 0;
         int var7Lifetime1;
         var3 = this.field_F + (this.field_q + this.field_zb >> 1);
@@ -223,7 +223,7 @@ final class jw extends hd {
                 }
                 stackIn_12_1 = (!this.field_Gb) ? 0 : 1;
                 var6 = stackIn_9_0[stackIn_12_1];
-                on.a(this.field_F, this.field_T, this.field_q, this.field_mb, 6, var4, 128);
+                SoftwareRasterizer.a(this.field_F, this.field_T, this.field_q, this.field_mb, 6, var4, 128);
                 if (param0 &&
                   this.field_lb) {
                   if (this.field_gb) {
@@ -233,7 +233,7 @@ final class jw extends hd {
                   }
                   var7 = uc.h(40);
                   if (0 <= var7) {
-                    on.f(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7);
+                    SoftwareRasterizer.f(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7);
                   }
                 }
                 this.field_X.c(this.field_Hb, -35 + var3, this.field_mb + this.field_T - 9, var5, -1);
@@ -266,20 +266,20 @@ final class jw extends hd {
           stackIn_51_1 = (!this.field_Gb) ? 0 : 1;
           var6 = stackIn_48_0[stackIn_51_1];
         }
-        on.a(this.field_F, this.field_T, this.field_q, this.field_mb, 6, var4, 128);
+        SoftwareRasterizer.a(this.field_F, this.field_T, this.field_q, this.field_mb, 6, var4, 128);
         if (param0 &&
           this.field_lb &&
           !this.field_gb) {
           var7Lifetime1 = uc.h(40);
           if (0 <= var7Lifetime1) {
-            on.f(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7Lifetime1);
+            SoftwareRasterizer.f(this.field_F, this.field_T, this.field_q, this.field_mb, 6, 65793 * var7Lifetime1);
           }
         }
         this.field_X.c(this.field_Hb, -35 + var3, this.field_mb + this.field_T - 9, var5, -1);
         var6.c(-26 + var3, this.field_T + ((this.field_mb - var6.field_v >> 1) - 2));
     }
 
-    jw(String param0, hu param1, int param2) {
+    jw(String param0, BitmapFont param1, int param2) {
         try {
           this.field_X = param1;
           this.field_Hb = param0;

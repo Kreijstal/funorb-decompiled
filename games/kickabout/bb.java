@@ -130,8 +130,8 @@ final class bb extends hd {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        hu var17 = null;
-        hu var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_Cb = -1;
         try {
           this.field_Ob = param4;
@@ -155,7 +155,7 @@ final class bb extends hd {
               this.field_Jb[var13] == -1) {
               var14 = ci.field_g;
             }
-            this.field_Eb[var13] = new vu(0L, param2, (hd) null, param3, (ut) (var14), param6[var13]);
+            this.field_Eb[var13] = new vu(0L, param2, (hd) null, param3, (Sprite) (var14), param6[var13]);
             this.a((byte) -112, (hd) (this.field_Eb[var13]));
             var15 = var17.a(param6[var13]);
             if (var15 > this.field_Gb) {
@@ -288,7 +288,7 @@ final class bb extends hd {
           } else {
             if (this.field_Jb[param0] != -1) {
               var5 = this.field_Jb[param0] | 32768;
-              var6 = ov.field_b;
+              var6 = NodeHashTableIterator.field_b;
               if (var6 == 0 &&
                 uv.field_i != null) {
                 var6 = 1;
@@ -297,8 +297,8 @@ final class bb extends hd {
                 gd.a(21, 1, var6, param2);
               }
               String var8 = (String) null;
-              gp.a(var5, -128, ov.field_b, param3, at.field_Kb, (String) null);
-              gk.a(at.field_Kb, var5, ik.field_A, ov.field_b, (byte) -51);
+              gp.a(var5, -128, NodeHashTableIterator.field_b, param3, at.field_Kb, (String) null);
+              gk.a(at.field_Kb, var5, ik.field_A, NodeHashTableIterator.field_b, (byte) -51);
               fa.b(125);
               jm.b(68);
             } else {

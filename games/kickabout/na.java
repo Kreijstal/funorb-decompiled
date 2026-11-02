@@ -175,7 +175,7 @@ final class na extends hd {
         tn.field_d = new rf(qt.field_z, m.field_m);
         ss.field_c = new hd((long)param0, (hd) null);
         ss.field_c.a((byte) -127, (hd) (tn.field_d.field_b));
-        ss.field_c.a((byte) -116, rg.field_a);
+        ss.field_c.a((byte) -116, MouseWheelInput.field_a);
         CipherPacketBuffer.c(false);
     }
 
@@ -341,7 +341,7 @@ final class na extends hd {
           hm.field_I = -(fr.field_G >> 1) + eh.field_e;
           var2 = hm.field_I;
           for (var3 = param0; j.field_a.length > var3; var3++) {
-            var4 = wj.field_x[var3];
+            var4 = WidgetContainer.field_x[var3];
             if (0 > var4) {
               var5 = du.field_a;
             } else {
@@ -805,10 +805,10 @@ final class na extends hd {
           }
           if (var2 != 2 &&
             var2 != 3) {
-            ow.field_b = null;
+            ArchiveSource.field_b = null;
           } else {
-            if (null == ow.field_b) {
-              ow.field_b = new qb(ss.field_j);
+            if (null == ArchiveSource.field_b) {
+              ArchiveSource.field_b = new qb(ss.field_j);
             }
           }
           if (var2 != 3) {
@@ -820,7 +820,7 @@ final class na extends hd {
             er.field_h[var3_intLifetime2] = ((PacketBuffer) ((Object) var1)).j((byte) -82);
           }
           lk.field_l = ((PacketBuffer) ((Object) var1)).h((byte) -110);
-          ru.field_C = ((PacketBuffer) ((Object) var1)).h((byte) -105);
+          MidiPcmStream.field_C = ((PacketBuffer) ((Object) var1)).h((byte) -105);
           for (var3_intLifetime3 = 0; rf.field_d.length > var3_intLifetime3; var3_intLifetime3++) {
             rf.field_d[var3_intLifetime3] = ((PacketBuffer) ((Object) var1)).j((byte) -81);
           }

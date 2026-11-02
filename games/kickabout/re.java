@@ -9,13 +9,13 @@ final class re implements gj {
     private int field_i;
     static int field_k;
     private int field_p;
-    private hu field_m;
+    private BitmapFont field_m;
     private int field_g;
     private int field_f;
     private int field_j;
     private int field_a;
     private int field_e;
-    static ot field_o;
+    static ArgbSprite field_o;
     private int field_l;
     private int field_h;
 
@@ -240,9 +240,9 @@ final class re implements gj {
               }
             }
           }
-          if (kl.field_t) {
+          if (ArchiveIndex.field_t) {
             hl.field_e = null;
-            am.field_h = null;
+            DualLinkNode.field_h = null;
             ub.field_G = null;
             hq.field_e = null;
             c.field_f = null;
@@ -280,7 +280,7 @@ final class re implements gj {
             }
             vd.a(0, 10);
             vp.a(-4121, rm.field_C);
-            kl.field_t = false;
+            ArchiveIndex.field_t = false;
           }
           wh.field_q = false;
         }
@@ -323,7 +323,7 @@ final class re implements gj {
           if (-param1 + param2 > 32) {
             param2 = 32 + param1;
           }
-          vq.field_g.b(22997);
+          FullscreenFocusCanvas.field_g.b(22997);
           var4_int = 0;
           if (param0 <= 120) {
             field_c = (ko) null;
@@ -339,23 +339,23 @@ final class re implements gj {
             } else {
               if (var5 > 0) {
                 var4_int++;
-                vq.field_g.a(new es(param3, var6, var5), 3);
+                FullscreenFocusCanvas.field_g.a(new es(param3, var6, var5), 3);
               }
               var5 = 0;
             }
           }
           if (var5 > 0) {
-            vq.field_g.a(new es(param3, var6, var5), 3);
+            FullscreenFocusCanvas.field_g.a(new es(param3, var6, var5), 3);
             var4_int++;
           }
           if (0 < var4_int) {
             or.field_d.b(53, (byte) 118);
             or.field_d.g(-1207444472, 2 + 5 * var4_int);
             or.field_d.a(121, var4_int);
-            var9 = (es) (vq.field_g.b((byte) 126));
+            var9 = (es) (FullscreenFocusCanvas.field_g.b((byte) 126));
             while (var9 != null) {
               var9.a(or.field_d, (byte) 95);
-              var9 = (es) (vq.field_g.b((byte) 127));
+              var9 = (es) (FullscreenFocusCanvas.field_g.b((byte) 127));
             }
             or.field_d.a(105, param3);
             uv.field_f = true;
@@ -379,7 +379,7 @@ final class re implements gj {
         return var2;
     }
 
-    public final void a(int param0, boolean param1, int param2, fd param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         qk var12 = null;
         int var7 = 0;
         int var8 = 0;
@@ -391,18 +391,18 @@ final class re implements gj {
             param1 = param1 & var12.field_y;
           }
           var7 = 5592405;
-          on.a(param4 + param3.field_t, param3.field_g + param2, param3.field_n, param3.field_i, this.field_a);
+          SoftwareRasterizer.a(param4 + param3.field_t, param3.field_g + param2, param3.field_n, param3.field_i, this.field_a);
           if (param1) {
             var7 = 16777215;
           }
           var8 = param4 - (-param3.field_t - this.field_f);
           var9 = this.field_n + (param2 + param3.field_g);
           int var10 = -126 / ((59 - param0) / 53);
-          on.d(var8, var9, this.field_h, this.field_g, 5592405);
-          on.a(var8, var9, this.field_h, this.field_g, var7);
+          SoftwareRasterizer.d(var8, var9, this.field_h, this.field_g, 5592405);
+          SoftwareRasterizer.a(var8, var9, this.field_h, this.field_g, var7);
           if (var12.field_A) {
-            on.b(var8, var9, this.field_h + var8, this.field_g + var9, 1);
-            on.b(var8 + this.field_h, var9, var8, this.field_g + var9, 1);
+            SoftwareRasterizer.b(var8, var9, this.field_h + var8, this.field_g + var9, 1);
+            SoftwareRasterizer.b(var8 + this.field_h, var9, var8, this.field_g + var9, 1);
           }
           if (null != this.field_m) {
             var11 = this.field_h + (this.field_f + this.field_i);
@@ -413,7 +413,7 @@ final class re implements gj {
         }
     }
 
-    re(hu param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    re(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_d = 1;
         this.field_j = 1;
         try {

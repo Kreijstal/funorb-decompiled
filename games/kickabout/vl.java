@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vl {
-    static bu field_c;
+    static PlatformTaskDispatcher field_c;
     static String field_f;
     static String field_e;
-    static ut field_g;
+    static Sprite field_g;
     static String field_b;
     static boolean field_d;
     private String field_a;
@@ -162,7 +162,7 @@ final class vl {
           var5 = -672 + var3;
           var6 = var4 * var4 + var5 * var5;
           if (var6 > 202500) {
-            var7 = de.a(var6, (byte) -118);
+            var7 = GameKeyHandler.a(var6, (byte) -118);
             var3 = 450 * var5 / var7 + 672;
             var2_int = 448 + var4 * 450 / var7;
           }
@@ -173,12 +173,12 @@ final class vl {
         }
     }
 
-    final static ut a(int param0, int param1, boolean param2, int param3) {
+    final static Sprite a(int param0, int param1, boolean param2, int param3) {
         int var4 = (param1 << 1) + 1;
-        ut var5 = new ut(var4, var4);
+        Sprite var5 = new Sprite(var4, var4);
         PacketBuffer.a(56, var5);
-        on.d(param1, param1, param1, param3);
-        on.d(param1, param1, param1 - param0, 0);
+        SoftwareRasterizer.d(param1, param1, param1, param3);
+        SoftwareRasterizer.d(param1, param1, param1 - param0, 0);
         ta.e(120);
         if (!param2) {
           vl.a(8);
@@ -188,7 +188,7 @@ final class vl {
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         dk.a(param2, -109, param1, param3 / param0, param3 % 3);
-        on.a(param2, param1, 156, 225, 10, 16777215, param4);
+        SoftwareRasterizer.a(param2, param1, 156, 225, 10, 16777215, param4);
         ta.e(126);
     }
 

@@ -11,7 +11,7 @@ final class b extends ta {
     private hd field_P;
     private int field_S;
     static String field_O;
-    static ut[] field_U;
+    static Sprite[] field_U;
     private hd[] field_K;
     static hd field_N;
     private hd field_Q;
@@ -20,14 +20,14 @@ final class b extends ta {
     private hd field_Y;
     static String field_J;
     private hd field_I;
-    static sj field_H;
+    static ResourceArchive field_H;
     private hd field_G;
 
     final void a(int param0, int param1, boolean param2) {
         int var4 = 0;
         int var5 = Kickabout.field_G;
         super.a(param0, param1, param2);
-        this.field_V.field_jb = new tf();
+        this.field_V.field_jb = new IntrusiveDeque();
         this.field_L = new mf(ic.field_h);
         this.field_V.a((byte) -113, (hd) (this.field_L));
         this.field_V.a(true, 12 + this.field_L.field_q, 3, 60, 12 + this.field_L.field_mb + 30);
@@ -147,7 +147,7 @@ final class b extends ta {
         kq var4;
         uo var5;
         String var6;
-        ot var7;
+        ArgbSprite var7;
         int var8;
         int var9;
         int var10;
@@ -179,15 +179,15 @@ final class b extends ta {
         var22 = Kickabout.field_G;
         super.a(param0, param1);
         var25 = this.field_Y;
-        on.a(var25.field_F, var25.field_T, var25.field_q, var25.field_mb, 65793, 96);
+        SoftwareRasterizer.a(var25.field_F, var25.field_T, var25.field_q, var25.field_mb, 65793, 96);
         var3 = (hd) (this.field_Y.field_jb.g(24009));
         while (var3 != null) {
-          on.a(var3.field_F, var3.field_T, var3.field_q, var3.field_mb, 10, 65793, 96);
+          SoftwareRasterizer.a(var3.field_F, var3.field_T, var3.field_q, var3.field_mb, 10, 65793, 96);
           un.field_d.a(var3.field_E, var3.field_F + 10, var3.field_T + 20, 16777215, -1);
           var3 = (hd) (this.field_Y.field_jb.c(33));
         }
         boolean decompiledFrameRemainder0 = true;
-        on.g(this.field_V.field_F, this.field_V.field_T, this.field_V.field_q, this.field_V.field_mb);
+        SoftwareRasterizer.g(this.field_V.field_F, this.field_V.field_T, this.field_V.field_q, this.field_V.field_mb);
         un.field_d.a(oc.field_b, 14 + this.field_V.field_F, 25 + this.field_V.field_T, 16777215, -1);
         this.field_L.k((byte) -109);
         var4 = this.field_L.j((byte) 21);
@@ -206,7 +206,7 @@ final class b extends ta {
           var8 = -36 + this.field_I.field_F + this.field_I.field_q;
           var9 = this.field_I.field_T + 40;
           if (var7 != null) {
-            ((ut) ((Object) var7)).c(var8 - (((ut) ((Object) var7)).field_o >> 1), -(((ut) ((Object) var7)).field_v >> 1) + var9);
+            ((Sprite) ((Object) var7)).c(var8 - (((Sprite) ((Object) var7)).field_o >> 1), -(((Sprite) ((Object) var7)).field_v >> 1) + var9);
           } else {
             jr.a(var8, param0 - 94, var9);
           }
@@ -306,7 +306,7 @@ final class b extends ta {
               var5.a(na.field_Eb, 10 + this.field_G.field_F, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
             }
           } else {
-            var5.a(ew.field_d, this.field_G.field_F + 10, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
+            var5.a(BufferedCacheFile.field_d, this.field_G.field_F + 10, this.field_G.field_T, -20 + this.field_G.field_q, this.field_G.field_mb, 11184810, -1, 1, 1, 16);
           }
         }
         this.field_R.a(param0 + 129, false);
@@ -346,7 +346,7 @@ final class b extends ta {
         var12 = Kickabout.field_G;
         var13 = this.field_L.j((byte) 21);
         this.field_Q.c((byte) -109);
-        this.field_X.field_jb = new tf();
+        this.field_X.field_jb = new IntrusiveDeque();
         var3 = -36 / ((param0 - 11) / 33);
         if (var13 != null) {
           var4 = var13.field_Eb;
@@ -411,7 +411,7 @@ final class b extends ta {
         this.field_P.field_E = fi.field_d.toLowerCase();
         this.field_G.field_E = ca.field_d.toLowerCase();
         this.field_X.field_E = mp.field_k.toLowerCase();
-        this.field_Q = eo.a(ov.field_c, 7126504);
+        this.field_Q = eo.a(NodeHashTableIterator.field_c, 7126504);
         this.field_K = new hd[]{};
         this.field_T = new pu[]{};
         this.field_Q.field_s = -this.field_Q.field_q + this.field_P.field_q >> 1;

@@ -12,7 +12,7 @@ final class s extends wi {
     static String field_F;
     int field_J;
 
-    final boolean a(boolean param0, int param1, int param2, fd param3, int param4, int param5, int param6) {
+    final boolean a(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;

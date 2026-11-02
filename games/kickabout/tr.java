@@ -19,7 +19,7 @@ final class tr implements hc {
         if (param0 != -12974) {
           tr.a(true);
         }
-        var1.a((byte) -96, on.field_e, on.field_b, on.field_a, on.field_g, on.field_f, on.field_h, on.field_c);
+        var1.a((byte) -96, SoftwareRasterizer.field_e, SoftwareRasterizer.field_b, SoftwareRasterizer.field_a, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, SoftwareRasterizer.field_h, SoftwareRasterizer.field_c);
         ik.field_C.a(var1, 3);
     }
 
@@ -48,7 +48,7 @@ final class tr implements hc {
         var3 = g.field_a.field_T;
         if (!this.a((byte) 103) &&
           480 > var3) {
-          on.c(0, var3, 640, 0, 128);
+          SoftwareRasterizer.c(0, var3, 640, 0, 128);
         }
     }
 
@@ -113,9 +113,9 @@ final class tr implements hc {
         var17 = Kickabout.field_G;
         try {
           var13 = fr.a(param2, ra.field_F, true);
-          var14 = fr.a(param2, tf.field_g, true);
+          var14 = fr.a(param2, IntrusiveDeque.field_g, true);
           var15 = fr.a(param2, gm.field_fb, true);
-          var16 = fr.a(param2, ao.field_i, true);
+          var16 = fr.a(param2, RandomAccessCacheFile.field_i, true);
           var7 = rq.a(2, param2.field_l, (byte) -99, var15, param2, var13, var16, param2.field_c + 1, var14);
           var4 = jr.field_Mb;
           var9 = rq.a(1, param2.field_d, (byte) -99, var15, param2, var13, var16, 1 + param2.field_i, var14);
@@ -298,7 +298,7 @@ final class tr implements hc {
           kp.a(-121);
           if (null != uv.field_i) {
             if (sp.a(uv.field_i.field_Eb, -3, uv.field_i.field_bc, uv.field_i.field_gc)) {
-              stackIn_19_0 = (tu.field_E.d((byte) 46)) ? 1 : 0;
+              stackIn_19_0 = (GameLoopApplet.field_E.d((byte) 46)) ? 1 : 0;
             } else {
               stackIn_19_0 = 0;
             }
@@ -354,7 +354,7 @@ final class tr implements hc {
           if (84 != param1) {
           } else {
             if (null != e.field_m) {
-              fd.h(0);
+              UiWidget.h(0);
             } else {
               dw.a(true, param0 - 11516);
             }

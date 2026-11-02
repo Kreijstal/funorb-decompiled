@@ -7,7 +7,7 @@ final class e extends js {
     private int field_l;
     private int field_h;
     static v[] field_n;
-    static vq field_m;
+    static FullscreenFocusCanvas field_m;
     static int field_j;
     private boolean field_g;
     static eb field_i;
@@ -49,7 +49,7 @@ final class e extends js {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        tf var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         he var12 = null;
@@ -194,7 +194,7 @@ final class e extends js {
             if (bf.field_u == param0) {
               var21 += 42;
             }
-            var33 = hu.a(var12.field_Lb.field_X, var32, var21);
+            var33 = BitmapFont.a(var12.field_Lb.field_X, var32, var21);
             var20 = var33;
             stackIn_62_0 = (var33.equals(var12.field_Nb)) ? 0 : 1;
             var22 = stackIn_62_0;
@@ -282,17 +282,17 @@ final class e extends js {
               if (var12.field_Lb.field_gb &&
                 var22 != 0) {
                 sn.field_e = var12.field_Nb;
-                if (((wm.field_o != null)) &&
-                  ((null != wm.field_o[var12.field_Sb]))) {
-                  sn.field_e = sn.field_e + " - " + wm.field_o[var12.field_Sb];
+                if (((CachedArchiveSource.field_o != null)) &&
+                  ((null != CachedArchiveSource.field_o[var12.field_Sb]))) {
+                  sn.field_e = sn.field_e + " - " + CachedArchiveSource.field_o[var12.field_Sb];
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (var12.field_Lb.field_gb &&
-                  null != wm.field_o &&
-                  null != wm.field_o[var12.field_Sb]) {
-                  sn.field_e = wm.field_o[var12.field_Sb];
+                  null != CachedArchiveSource.field_o &&
+                  null != CachedArchiveSource.field_o[var12.field_Sb]) {
+                  sn.field_e = CachedArchiveSource.field_o[var12.field_Sb];
                 }
               }
             }

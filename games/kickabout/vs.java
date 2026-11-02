@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vs {
-    ot field_h;
+    ArgbSprite field_h;
     int field_a;
     int field_e;
     int field_b;
@@ -42,7 +42,7 @@ final class vs {
 
     final static void a(boolean param0, boolean param1, byte param2) {
         if (param0) {
-          on.a(0, 0, on.field_g, on.field_f, 0, 192);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 192);
           oa.a((byte) -126, param0);
           if (param2 != 39) {
             vs.a(115, 82L);
@@ -50,7 +50,7 @@ final class vs {
           }
           return;
         }
-        on.b();
+        SoftwareRasterizer.b();
         oa.a((byte) -126, param0);
         if (param2 != 39) {
           vs.a(115, 82L);
@@ -116,8 +116,8 @@ final class vs {
           var12 = mg.a(this.field_d, var9, var10, this.field_j, var11, (byte) 108);
           var12.field_mb.a(0, 99);
           PacketBuffer.a(-81, tm.field_u);
-          on.b();
-          var12.a(var8[this.field_d.field_q], 0, on.field_g >> 1, var17[this.field_d.field_q], (byte) -118);
+          SoftwareRasterizer.b();
+          var12.a(var8[this.field_d.field_q], 0, SoftwareRasterizer.field_g >> 1, var17[this.field_d.field_q], (byte) -118);
           ta.e(122);
           eo.a(tm.field_u, this.field_h);
           var13 = (this.field_h.field_v - 2) * this.field_h.field_o;
@@ -150,7 +150,7 @@ final class vs {
 
     vs() {
         this.field_d = new up();
-        this.field_h = new ot(38, 46);
+        this.field_h = new ArgbSprite(38, 46);
     }
 
     final static void a(String param0, String[] param1, byte param2, int param3) {
@@ -171,15 +171,15 @@ final class vs {
           wk.field_f = cr.field_d;
           if (param3 == 255) {
             stackIn_12_0 = !(tn.field_b >= 13);
-            kl.field_a = mf.a(stackIn_12_0, 124);
+            ArchiveIndex.field_a = mf.a(stackIn_12_0, 124);
             return;
           }
           if (param3 >= 100 &&
             105 >= param3) {
-            kl.field_a = wt.a(-111, param1);
+            ArchiveIndex.field_a = wt.a(-111, param1);
             return;
           }
-          kl.field_a = wb.a(-126, param0, param3);
+          ArchiveIndex.field_a = wb.a(-126, param0, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

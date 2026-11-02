@@ -19,7 +19,7 @@ final class wq {
         if (param0 != 46) {
           field_c = (String) null;
         }
-        return bh.field_l - ka.field_a;
+        return BufferedSocket.field_l - ka.field_a;
     }
 
     final static void a(int param0, int param1, int param2, byte param3, String param4, int param5) {
@@ -94,10 +94,10 @@ final class wq {
             return;
           }
           var1_int = var1_int * 20 + 10;
-          on.a(470, 10, 160, var1_int, 34);
-          on.e(470, 10, 160, var1_int, 3355477);
-          on.e(471, 11, 158, -2 + var1_int, 11184844);
-          on.e(472, 12, 156, var1_int - 4, 5592439);
+          SoftwareRasterizer.a(470, 10, 160, var1_int, 34);
+          SoftwareRasterizer.e(470, 10, 160, var1_int, 3355477);
+          SoftwareRasterizer.e(471, 11, 158, -2 + var1_int, 11184844);
+          SoftwareRasterizer.e(472, 12, 156, var1_int - 4, 5592439);
           if (param0 < 13) {
             return;
           }

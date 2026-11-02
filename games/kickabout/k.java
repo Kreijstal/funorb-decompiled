@@ -4,7 +4,7 @@
 final class k extends IntrusiveNode {
     static boolean field_k;
     static sl field_m;
-    static ut field_j;
+    static Sprite field_j;
     static hd field_f;
     static ff field_l;
     static int field_g;

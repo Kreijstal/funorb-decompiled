@@ -59,7 +59,7 @@ final class wb extends hs {
               var5_ref_String = CommonGame.field_a;
             }
           }
-          wj.a(var3, 8, var5_ref_String, var4 * 162 + 78, 105, 126);
+          WidgetContainer.a(var3, 8, var5_ref_String, var4 * 162 + 78, 105, 126);
         }
         if (this.a((byte) 13)) {
           if (var2 != 0) {
@@ -81,15 +81,15 @@ final class wb extends hs {
             var7 = un.field_d.a(var6.field_E);
             var8 = (var6.field_q - var7 >> 1) + var6.field_F;
             var9 = 20;
-            on.b(var8, 6 + var4Lifetime1, var7 + var8, var4Lifetime1 + var9 - 2, 13382451);
-            on.b(var8 + var7, var4Lifetime1 + 6, var8, -2 + var4Lifetime1 + var9, 13382451);
+            SoftwareRasterizer.b(var8, 6 + var4Lifetime1, var7 + var8, var4Lifetime1 + var9 - 2, 13382451);
+            SoftwareRasterizer.b(var8 + var7, var4Lifetime1 + 6, var8, -2 + var4Lifetime1 + var9, 13382451);
           }
           pt.a(76, -22914, 0, 480, 0);
-          on.a(52, var4Lifetime1, 486, 21, 7, 65793, 128);
+          SoftwareRasterizer.a(52, var4Lifetime1, 486, 21, 7, 65793, 128);
           ta.e(120);
           b.field_U[this.field_a.field_g[var5].field_f].c(55, 1 + var4Lifetime1);
           pt.a(640, -22914, 564, 480, 0);
-          on.a(78, var4Lifetime1, 512, 21, 7, 65793, 128);
+          SoftwareRasterizer.a(78, var4Lifetime1, 512, 21, 7, 65793, 128);
           ta.e(121);
           var4Lifetime1 += 23;
           if (this.field_a.field_n.a(param0 ^ 8659, var5)) {
@@ -204,7 +204,7 @@ final class wb extends hs {
             var5 = new hd();
             var5.field_E = param0.field_S[var4_int].toLowerCase();
             var5.field_y = 16777215;
-            var5.field_X = (hu) ((Object) un.field_d);
+            var5.field_X = (BitmapFont) ((Object) un.field_d);
             var5.field_A = 1;
             var5.field_q = 158;
             var5.field_mb = 21;
@@ -263,7 +263,7 @@ final class wb extends hs {
         int var2 = 0;
         int var3 = Kickabout.field_G;
         try {
-          da.field_u = new ot[32];
+          da.field_u = new ArgbSprite[32];
           for (var1_int = 0; var1_int < 32; var1_int++) {
             var2 = -(var1_int << 11) / 32;
             da.field_u[var1_int] = wa.a(-116, var2);

@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gs {
-    static sj field_c;
+    static ResourceArchive field_c;
     static boolean field_b;
     static String field_f;
     static int[] field_a;
     static boolean field_g;
-    static sj field_d;
+    static ResourceArchive field_d;
     static boolean field_e;
 
     final static void a(byte param0) {
@@ -72,7 +72,7 @@ final class gs {
         if (param0 == 25957) {
           return;
         }
-        field_c = (sj) null;
+        field_c = (ResourceArchive) null;
     }
 
     final static void a(int param0) {

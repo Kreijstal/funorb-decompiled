@@ -10,7 +10,7 @@ final class ig {
     static int field_c;
     static String field_k;
     static String field_h;
-    static ut[] field_a;
+    static Sprite[] field_a;
     static int field_d;
     static String field_j;
 
@@ -45,17 +45,17 @@ final class ig {
         var5 = Kickabout.field_G;
         try {
           param0 = param0 >> 1;
-          vo.field_cb.c(param0 + qj.field_e, bi.field_i);
-          nn.field_C.c(param0 + qj.field_e, 18 + bi.field_i);
+          vo.field_cb.c(param0 + qj.field_e, ArchiveNetworkClient.field_i);
+          nn.field_C.c(param0 + qj.field_e, 18 + ArchiveNetworkClient.field_i);
           var2_int = 2;
-          if (wm.field_s > 1) {
-            for (var3 = 1; var3 < wm.field_s; var3++) {
-              nn.field_C.c(qj.field_e + param0, 18 + bi.field_i + var2_int);
+          if (CachedArchiveSource.field_s > 1) {
+            for (var3 = 1; var3 < CachedArchiveSource.field_s; var3++) {
+              nn.field_C.c(qj.field_e + param0, 18 + ArchiveNetworkClient.field_i + var2_int);
               var2_int += 2;
             }
           }
-          du.field_i.c(qj.field_e + param0, bi.field_i + (18 + var2_int));
-          un.field_d.a(qn.field_c, 13 + qj.field_e + param0, var2_int / 2 + (20 + bi.field_i), 16777215, -1);
+          du.field_i.c(qj.field_e + param0, ArchiveNetworkClient.field_i + (18 + var2_int));
+          un.field_d.a(qn.field_c, 13 + qj.field_e + param0, var2_int / 2 + (20 + ArchiveNetworkClient.field_i), 16777215, -1);
           var3Lifetime1 = 0;
           if (param1 != -12452) {
             field_c = -16;
@@ -63,10 +63,10 @@ final class ig {
           var4 = 0;
           if (0 != dc.field_d) {
             var3Lifetime2 = 0;
-            pt.a(param0 + (qj.field_e + vo.field_cb.field_q), -22914, qj.field_e + param0, -14 + (bi.field_i - (-vo.field_cb.field_w - 2 * wm.field_s)), bi.field_i + 8);
+            pt.a(param0 + (qj.field_e + vo.field_cb.field_q), -22914, qj.field_e + param0, -14 + (ArchiveNetworkClient.field_i - (-vo.field_cb.field_w - 2 * CachedArchiveSource.field_s)), ArchiveNetworkClient.field_i + 8);
             var4Lifetime1 = cf.field_Db;
             while (var4Lifetime1 > 0) {
-              field_a[var4Lifetime1 % 10].c(qj.field_e + 140 + (-(var3Lifetime2 * field_a[0].field_q) + param0), 9 + (bi.field_i - 2 * (-wm.field_s + 18)));
+              field_a[var4Lifetime1 % 10].c(qj.field_e + 140 + (-(var3Lifetime2 * field_a[0].field_q) + param0), 9 + (ArchiveNetworkClient.field_i - 2 * (-CachedArchiveSource.field_s + 18)));
               var3Lifetime2++;
               var4Lifetime1 = var4Lifetime1 / 10;
             }
@@ -74,28 +74,28 @@ final class ig {
             var3Lifetime2Lifetime1 = 0;
             while (var4Lifetime1Lifetime1 > 0) {
               if (dc.field_d < 0) {
-                wk.field_d[var4Lifetime1Lifetime1 % 10].c(param0 - wk.field_d[0].field_q * var3Lifetime2Lifetime1 + (140 + qj.field_e), -36 - (-(2 * wm.field_s) - (24 + bi.field_i)));
+                wk.field_d[var4Lifetime1Lifetime1 % 10].c(param0 - wk.field_d[0].field_q * var3Lifetime2Lifetime1 + (140 + qj.field_e), -36 - (-(2 * CachedArchiveSource.field_s) - (24 + ArchiveNetworkClient.field_i)));
               } else {
-                gb.field_G[var4Lifetime1Lifetime1 % 10].c(param0 + qj.field_e + (140 - gb.field_G[0].field_q * var3Lifetime2Lifetime1), 24 + bi.field_i - (18 - wm.field_s) * 2);
+                gb.field_G[var4Lifetime1Lifetime1 % 10].c(param0 + qj.field_e + (140 - gb.field_G[0].field_q * var3Lifetime2Lifetime1), 24 + ArchiveNetworkClient.field_i - (18 - CachedArchiveSource.field_s) * 2);
               }
               var4Lifetime1Lifetime1 = var4Lifetime1Lifetime1 / 10;
               var3Lifetime2Lifetime1++;
             }
             if (dc.field_d < 0) {
-              un.field_d.a(vl.field_b, qj.field_e + (140 - var3Lifetime2Lifetime1 * field_a[0].field_q + param0), bi.field_i - (-35 + 2 * (-wm.field_s + 18)), 16729156, -1);
+              un.field_d.a(vl.field_b, qj.field_e + (140 - var3Lifetime2Lifetime1 * field_a[0].field_q + param0), ArchiveNetworkClient.field_i - (-35 + 2 * (-CachedArchiveSource.field_s + 18)), 16729156, -1);
             } else {
-              un.field_d.a(ks.field_b, -(var3Lifetime2Lifetime1 * field_a[0].field_q) + (qj.field_e + 140 + param0), 35 + bi.field_i - 2 * (18 - wm.field_s), 4521796, -1);
+              un.field_d.a(ks.field_b, -(var3Lifetime2Lifetime1 * field_a[0].field_q) + (qj.field_e + 140 + param0), 35 + ArchiveNetworkClient.field_i - 2 * (18 - CachedArchiveSource.field_s), 4521796, -1);
             }
-            un.field_d.a("-----------", 64 + qj.field_e, -(2 * (18 - wm.field_s)) + 44 + bi.field_i, 16777215, -1);
+            un.field_d.a("-----------", 64 + qj.field_e, -(2 * (18 - CachedArchiveSource.field_s)) + 44 + ArchiveNetworkClient.field_i, 16777215, -1);
             ta.e(param1 ^ -12506);
           }
           var4Lifetime2 = GoalStateAgent.field_l;
           var3Lifetime3 = 0;
           if (var4Lifetime2 == 0) {
-            field_a[0].c(param0 + (140 + (qj.field_e - field_a[0].field_q * var3Lifetime3)), bi.field_i + 7 + wm.field_s * 2);
+            field_a[0].c(param0 + (140 + (qj.field_e - field_a[0].field_q * var3Lifetime3)), ArchiveNetworkClient.field_i + 7 + CachedArchiveSource.field_s * 2);
           }
           while (var4Lifetime2 > 0) {
-            field_a[var4Lifetime2 % 10].c(qj.field_e + 140 - (var3Lifetime3 * field_a[0].field_q - param0), bi.field_i + 7 + 2 * wm.field_s);
+            field_a[var4Lifetime2 % 10].c(qj.field_e + 140 - (var3Lifetime3 * field_a[0].field_q - param0), ArchiveNetworkClient.field_i + 7 + 2 * CachedArchiveSource.field_s);
             var3Lifetime3++;
             var4Lifetime2 = var4Lifetime2 / 10;
           }
@@ -131,7 +131,7 @@ final class ig {
     final static void a(long param0, String param1, byte param2) {
         CharSequence var6 = null;
         try {
-          ov.field_b = 2;
+          NodeHashTableIterator.field_b = 2;
           at.field_Kb = param1;
           if (param2 <= 46) {
             String var5 = (String) null;
@@ -189,7 +189,7 @@ final class ig {
           var5 = var16;
           for (var6_int = 0; var16.length > var6_int; var6_int++) {
             var17 = var16[var6_int];
-            var8 = ((hu) ((Object) var3)).a(var17);
+            var8 = ((BitmapFont) ((Object) var3)).a(var17);
             if (var4 < var8) {
               var4 = var8;
             }
@@ -197,7 +197,7 @@ final class ig {
           var5Lifetime1 = w.field_g;
           for (var6_intLifetime1 = 0; var5Lifetime1.length > var6_intLifetime1; var6_intLifetime1++) {
             var18 = var5Lifetime1[var6_intLifetime1];
-            var8Lifetime1 = ((hu) ((Object) var3)).a(var18);
+            var8Lifetime1 = ((BitmapFont) ((Object) var3)).a(var18);
             if (var4 < var8Lifetime1) {
               var4 = var8Lifetime1;
             }
@@ -227,7 +227,7 @@ final class ig {
           var9_ref_String__ = var6;
           for (var10 = 0; var10 < var9_ref_String__.length; var10++) {
             var11_ref_String = var9_ref_String__[var10];
-            var12 = ((hu) ((Object) var3)).a(var11_ref_String);
+            var12 = ((BitmapFont) ((Object) var3)).a(var11_ref_String);
             if (var12 > var8Lifetime2) {
               var8Lifetime2 = var12;
             }
@@ -235,15 +235,15 @@ final class ig {
           var9 = 20 + (var4 + var8Lifetime2 + 65);
           var10Lifetime1 = rb.field_yb * (var6.length + 1) + 20;
           var11 = -6 + (-var10Lifetime1 + (473 - rn.field_c * vt.field_c.playerCount) - 22);
-          on.a(-var9 + 644, var11, var9, var10Lifetime1, 2, 0, param2);
+          SoftwareRasterizer.a(-var9 + 644, var11, var9, var10Lifetime1, 2, 0, param2);
           var12Lifetime1 = 619 - (var4 + 20);
           var13 = 6 + var11 + rb.field_yb;
-          ((hu) ((Object) var3)).c(var20, 599, var13, param1, -1);
+          ((BitmapFont) ((Object) var3)).c(var20, 599, var13, param1, -1);
           var13 = var13 + (rb.field_yb + 6);
           for (var14 = 0; var6.length > var14; var14++) {
-            ((hu) ((Object) var3)).a(':', var12Lifetime1, var13, 16777215);
-            ((hu) ((Object) var3)).c(var6[var14], -20 + var12Lifetime1, var13, 16777215, -1);
-            ((hu) ((Object) var3)).a(var21[var14], 20 + var12Lifetime1, var13, 16777215, -1);
+            ((BitmapFont) ((Object) var3)).a(':', var12Lifetime1, var13, 16777215);
+            ((BitmapFont) ((Object) var3)).c(var6[var14], -20 + var12Lifetime1, var13, 16777215, -1);
+            ((BitmapFont) ((Object) var3)).a(var21[var14], 20 + var12Lifetime1, var13, 16777215, -1);
             var13 = var13 + (2 + rb.field_yb);
           }
           return;

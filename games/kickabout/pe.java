@@ -75,7 +75,7 @@ final class pe {
           if (!n.a(false)) {
             if (null != e.field_m &&
               e.field_m.field_b) {
-              fd.h(0);
+              UiWidget.h(0);
               mr.field_Z.a(new ve(mr.field_Z, hf.field_a), false);
             }
             return;
@@ -159,16 +159,16 @@ final class pe {
         }
     }
 
-    final static void a(eg param0, ut param1, int param2, int param3) {
+    final static void a(eg param0, Sprite param1, int param2, int param3) {
         try {
           PacketBuffer.a(-51, param1);
-          on.b();
+          SoftwareRasterizer.b();
           if (param3 != 40) {
             int[] var5 = (int[]) null;
             pe.a((la[]) null, (byte) 103, (int[]) null);
           }
           t.c();
-          t.b(on.field_g >> 1, 198);
+          t.b(SoftwareRasterizer.field_g >> 1, 198);
           param0.a(0, 0, 0, 0, 0, 0, 0, 700);
           ta.e(param3 + 77);
         } catch (RuntimeException runtimeException) {
@@ -190,8 +190,8 @@ final class pe {
     final static void a(int param0, byte param1) {
         fn.a(param0, (byte) -32);
         if (param1 >= -114) {
-          ut var3 = (ut) null;
-          pe.a((eg) null, (ut) null, -104, -61);
+          Sprite var3 = (Sprite) null;
+          pe.a((eg) null, (Sprite) null, -104, -61);
         }
     }
 

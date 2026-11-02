@@ -4,7 +4,7 @@
 final class ln extends ct {
     static int[] field_B;
 
-    private ln(int param0, int param1, int param2, int param3, gj param4, jv param5, fd param6) {
+    private ln(int param0, int param1, int param2, int param3, gj param4, jv param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_z = param6;
@@ -13,7 +13,7 @@ final class ln extends ct {
         }
     }
 
-    final void a(int param0, int param1, int param2, fd param3, int param4, int param5) {
+    final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         jg var7 = null;
         try {
           super.a(param0, param1, param2, param3, param4, param5);
@@ -38,10 +38,10 @@ final class ln extends ct {
 
     final static void a(int param0, hd param1, hd param2) {
         if (null == param1.field_jb) {
-          param1.field_jb = new tf();
+          param1.field_jb = new IntrusiveDeque();
         }
         if (param2.field_jb == null) {
-          param2.field_jb = new tf();
+          param2.field_jb = new IntrusiveDeque();
         }
         if (param0 != 64) {
           return;

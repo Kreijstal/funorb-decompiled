@@ -8,7 +8,7 @@ final class ParticipantStatus extends MatchAgent {
     boolean loadedPitch;
     boolean rewardEligible;
     boolean resigned;
-    static bi field_t;
+    static ArchiveNetworkClient field_t;
     static String field_m;
     int field_g;
     static String field_r;
@@ -64,7 +64,7 @@ final class ParticipantStatus extends MatchAgent {
           }
           var2 = new ak(5);
           var1 = var2;
-          var2.field_e = ((ot) (lu.field_p[2])).h();
+          var2.field_e = ((ArgbSprite) (SpriteState.field_p[2])).h();
           stackIn_4_0 = var1;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -141,7 +141,7 @@ final class ParticipantStatus extends MatchAgent {
         try {
           var4_int = -54 / ((param2 - 2) / 63);
           stackIn_3_0 = nm.field_i[param3];
-          stackIn_3_1 = ga.field_O[param3];
+          stackIn_3_1 = TextInputWidget.field_O[param3];
           if (em.field_e) {
             stackIn_6_0 = stackIn_3_0;
             stackIn_6_1 = stackIn_3_1;
@@ -255,7 +255,7 @@ final class ParticipantStatus extends MatchAgent {
             }
           } else {
             if (uv.field_i == null) {
-              if (null == ow.field_b) {
+              if (null == ArchiveSource.field_b) {
                 td.field_b = false;
                 if (fj.field_a > 0) {
                   fj.field_a = fj.field_a - 1;
@@ -579,7 +579,7 @@ final class ParticipantStatus extends MatchAgent {
         try {
           var4_int = -54 / ((param2 - 2) / 63);
           stackIn_3_0 = nm.field_i[param3];
-          stackIn_3_1 = ga.field_O[param3];
+          stackIn_3_1 = TextInputWidget.field_O[param3];
           if (em.field_e) {
             stackIn_6_0 = stackIn_3_0;
             stackIn_6_1 = stackIn_3_1;

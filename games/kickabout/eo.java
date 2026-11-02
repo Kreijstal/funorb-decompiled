@@ -4,21 +4,21 @@
 import java.util.*;
 
 final class eo {
-    static ot[] field_k;
-    static ut[] field_p;
-    private static ut field_d;
-    static ut field_q;
-    static ot field_b;
-    static ot field_a;
-    static ut[] field_l;
-    static ot[][] field_r;
-    private static ut[][] field_h;
-    private static ut[] field_n;
-    static ut[] field_j;
-    static ut[] field_m;
-    static ot[][] field_c;
-    static ot[] field_i;
-    private static ut field_g;
+    static ArgbSprite[] field_k;
+    static Sprite[] field_p;
+    private static Sprite field_d;
+    static Sprite field_q;
+    static ArgbSprite field_b;
+    static ArgbSprite field_a;
+    static Sprite[] field_l;
+    static ArgbSprite[][] field_r;
+    private static Sprite[][] field_h;
+    private static Sprite[] field_n;
+    static Sprite[] field_j;
+    static Sprite[] field_m;
+    static ArgbSprite[][] field_c;
+    static ArgbSprite[] field_i;
+    private static Sprite field_g;
     static kg[] field_f;
     private static int field_e;
     private static int[] field_o;
@@ -62,12 +62,12 @@ final class eo {
         int var14Lifetime1;
         int var15Lifetime1;
         var4 = param1 - param2;
-        if (var4 < on.field_e) {
-          var4 = on.field_e;
+        if (var4 < SoftwareRasterizer.field_e) {
+          var4 = SoftwareRasterizer.field_e;
         }
         var5 = param1 + param2 + 1;
-        if (var5 > on.field_h) {
-          var5 = on.field_h;
+        if (var5 > SoftwareRasterizer.field_h) {
+          var5 = SoftwareRasterizer.field_h;
         }
         var6 = var4;
         var7 = param2 * param2;
@@ -83,19 +83,19 @@ final class eo {
             if (var11 > var7 &&
               var10 > var7) {
               var12 = param0 - var8 + 1;
-              if (var12 < on.field_b) {
-                var12 = on.field_b;
+              if (var12 < SoftwareRasterizer.field_b) {
+                var12 = SoftwareRasterizer.field_b;
               }
               var13 = param0 + var8;
-              if (var13 > on.field_c) {
-                var13 = on.field_c;
+              if (var13 > SoftwareRasterizer.field_c) {
+                var13 = SoftwareRasterizer.field_c;
               }
-              var14 = var12 + var6 * on.field_g;
+              var14 = var12 + var6 * SoftwareRasterizer.field_g;
               if (!param3) {
                 for (var15 = var12; var15 < var13; var15++) {
                   incrementValue$5 = var14;
                   var14++;
-                  on.field_a[incrementValue$5] = on.field_a[incrementValue$5] & 16777215;
+                  SoftwareRasterizer.field_a[incrementValue$5] = SoftwareRasterizer.field_a[incrementValue$5] & 16777215;
                 }
               } else {
                 for (var15 = var12; var15 < var13; var15++) {
@@ -103,7 +103,7 @@ final class eo {
                   var14++;
                   fieldTemp$7 = field_e;
                   field_e = field_e + 1;
-                  on.field_a[incrementValue$6] = on.field_a[incrementValue$6] | field_o[fieldTemp$7 % 307];
+                  SoftwareRasterizer.field_a[incrementValue$6] = SoftwareRasterizer.field_a[incrementValue$6] | field_o[fieldTemp$7 % 307];
                 }
               }
               var6++;
@@ -136,19 +136,19 @@ final class eo {
             break;
           }
           var12Lifetime1 = param0 - var8Lifetime1;
-          if (var12Lifetime1 < on.field_b) {
-            var12Lifetime1 = on.field_b;
+          if (var12Lifetime1 < SoftwareRasterizer.field_b) {
+            var12Lifetime1 = SoftwareRasterizer.field_b;
           }
           var13Lifetime1 = param0 + var8Lifetime1;
-          if (var13Lifetime1 > on.field_c - 1) {
-            var13Lifetime1 = on.field_c - 1;
+          if (var13Lifetime1 > SoftwareRasterizer.field_c - 1) {
+            var13Lifetime1 = SoftwareRasterizer.field_c - 1;
           }
-          var14Lifetime1 = var12Lifetime1 + var6 * on.field_g;
+          var14Lifetime1 = var12Lifetime1 + var6 * SoftwareRasterizer.field_g;
           if (!param3) {
             for (var15Lifetime1 = var12Lifetime1; var15Lifetime1 < var13Lifetime1; var15Lifetime1++) {
               incrementValue$1 = var14Lifetime1;
               var14Lifetime1++;
-              on.field_a[incrementValue$1] = on.field_a[incrementValue$1] & 16777215;
+              SoftwareRasterizer.field_a[incrementValue$1] = SoftwareRasterizer.field_a[incrementValue$1] & 16777215;
             }
           } else {
             for (var15Lifetime1 = var12Lifetime1; var15Lifetime1 < var13Lifetime1; var15Lifetime1++) {
@@ -156,7 +156,7 @@ final class eo {
               var14Lifetime1++;
               fieldTemp$3 = field_e;
               field_e = field_e + 1;
-              on.field_a[incrementValue$2] = on.field_a[incrementValue$2] | field_o[fieldTemp$3 % 307];
+              SoftwareRasterizer.field_a[incrementValue$2] = SoftwareRasterizer.field_a[incrementValue$2] | field_o[fieldTemp$3 % 307];
             }
           }
           var6++;
@@ -178,11 +178,11 @@ final class eo {
         field_i = null;
         field_a = null;
         field_b = null;
-        field_c = (ot[][]) null;
-        field_r = (ot[][]) null;
+        field_c = (ArgbSprite[][]) null;
+        field_r = (ArgbSprite[][]) null;
         field_l = null;
         field_n = null;
-        field_h = (ut[][]) null;
+        field_h = (Sprite[][]) null;
         field_g = null;
         field_d = null;
         field_o = null;
@@ -200,7 +200,7 @@ final class eo {
         }
     }
 
-    final static void a(ut param0, ot param1) {
+    final static void a(Sprite param0, ArgbSprite param1) {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -257,15 +257,15 @@ final class eo {
         int var9Lifetime1;
         int var10Lifetime1;
         int var10Lifetime2;
-        var5 = on.field_g * param1 + param0;
-        var6 = on.field_g - param2;
+        var5 = SoftwareRasterizer.field_g * param1 + param0;
+        var6 = SoftwareRasterizer.field_g - param2;
         for (var7 = 0; var7 < param4; var7++) {
           for (var8 = 0; var8 < param2; var8++) {
             incrementValue$6 = var5;
             var5++;
             fieldTemp$7 = field_e;
             field_e = field_e + 1;
-            on.field_a[incrementValue$6] = on.field_a[incrementValue$6] | field_o[fieldTemp$7 % 307];
+            SoftwareRasterizer.field_a[incrementValue$6] = SoftwareRasterizer.field_a[incrementValue$6] | field_o[fieldTemp$7 % 307];
           }
           var5 = var5 + var6;
         }
@@ -277,7 +277,7 @@ final class eo {
             var5++;
             fieldTemp$5 = field_e;
             field_e = field_e + 1;
-            on.field_a[incrementValue$4] = on.field_a[incrementValue$4] | field_o[fieldTemp$5 % 307];
+            SoftwareRasterizer.field_a[incrementValue$4] = SoftwareRasterizer.field_a[incrementValue$4] | field_o[fieldTemp$5 % 307];
           }
           var5 = var5 + var8Lifetime1;
           for (var10Lifetime2 = 0; var10Lifetime2 < param4; var10Lifetime2++) {
@@ -285,7 +285,7 @@ final class eo {
             var5++;
             fieldTemp$3 = field_e;
             field_e = field_e + 1;
-            on.field_a[incrementValue$2] = on.field_a[incrementValue$2] | field_o[fieldTemp$3 % 307];
+            SoftwareRasterizer.field_a[incrementValue$2] = SoftwareRasterizer.field_a[incrementValue$2] | field_o[fieldTemp$3 % 307];
           }
           var5 = var5 + var6;
         }
@@ -295,7 +295,7 @@ final class eo {
             var5++;
             fieldTemp$1 = field_e;
             field_e = field_e + 1;
-            on.field_a[incrementValue$0] = on.field_a[incrementValue$0] | field_o[fieldTemp$1 % 307];
+            SoftwareRasterizer.field_a[incrementValue$0] = SoftwareRasterizer.field_a[incrementValue$0] | field_o[fieldTemp$1 % 307];
           }
           var5 = var5 + var6;
         }
@@ -311,37 +311,37 @@ final class eo {
         int var9;
         int var11;
         var4 = 65793;
-        if (param0 < on.field_b) {
-          param2 = param2 - (on.field_b - param0);
-          param0 = on.field_b;
+        if (param0 < SoftwareRasterizer.field_b) {
+          param2 = param2 - (SoftwareRasterizer.field_b - param0);
+          param0 = SoftwareRasterizer.field_b;
         }
-        if (param1 < on.field_e) {
-          param3 = param3 - (on.field_e - param1);
-          param1 = on.field_e;
+        if (param1 < SoftwareRasterizer.field_e) {
+          param3 = param3 - (SoftwareRasterizer.field_e - param1);
+          param1 = SoftwareRasterizer.field_e;
         }
-        if (param0 + param2 > on.field_c) {
-          param2 = on.field_c - param0;
+        if (param0 + param2 > SoftwareRasterizer.field_c) {
+          param2 = SoftwareRasterizer.field_c - param0;
         }
-        if (param1 + param3 > on.field_h) {
-          param3 = on.field_h - param1;
+        if (param1 + param3 > SoftwareRasterizer.field_h) {
+          param3 = SoftwareRasterizer.field_h - param1;
         }
         var4 = ((var4 & 16711935) * 150 >> 8 & 16711935) + ((var4 & 65280) * 150 >> 8 & 65280);
         var5 = 106;
-        var6 = on.field_g - param2;
-        var7 = param0 + param1 * on.field_g;
+        var6 = SoftwareRasterizer.field_g - param2;
+        var7 = param0 + param1 * SoftwareRasterizer.field_g;
         for (var8 = 0; var8 < param3; var8++) {
           var9 = var8 & 1;
           for (var10 = (-param2 >> 1) + (param2 & 1); var10 < 0; var10++) {
-            var11 = on.field_a[var7 + var9];
+            var11 = SoftwareRasterizer.field_a[var7 + var9];
             var11 = ((var11 & 16711935) * var5 >> 8 & 16711935) + ((var11 & 65280) * var5 >> 8 & 65280);
-            on.field_a[var7 + var9] = var4 + var11;
+            SoftwareRasterizer.field_a[var7 + var9] = var4 + var11;
             var7 += 2;
           }
           var7 = var7 + (var6 + (param2 & 1));
         }
     }
 
-    final static void a(ut param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (param3 > 640) {
           param3 = 640;
         }
@@ -357,18 +357,18 @@ final class eo {
         int var7 = 640 - param3;
         int var8 = param2 * 640;
         if (param5 == 256) {
-          eo.a(on.field_a, param0.field_y, 0, param6, param1 + var8, var7, param3, param4);
+          eo.a(SoftwareRasterizer.field_a, param0.field_y, 0, param6, param1 + var8, var7, param3, param4);
         } else {
           if (param5 == 240) {
-            eo.b(on.field_a, param0.field_y, 0, param6, param1 + var8, var7, param3, param4);
+            eo.b(SoftwareRasterizer.field_a, param0.field_y, 0, param6, param1 + var8, var7, param3, param4);
           } else {
-            eo.a(on.field_a, param0.field_y, 0, param6, param1 + var8, var7, param3, param4, param5);
+            eo.a(SoftwareRasterizer.field_a, param0.field_y, 0, param6, param1 + var8, var7, param3, param4, param5);
           }
         }
     }
 
-    private final static void a(String param0, hu param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        ut var8 = new ut(param4, param5);
+    private final static void a(String param0, BitmapFont param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+        Sprite var8 = new Sprite(param4, param5);
         PacketBuffer.a(-79, var8);
         param1.a(param0, 0, 0, param4, param5, param6, -1, 1, 1, 0);
         ta.e(126);
@@ -437,8 +437,8 @@ final class eo {
         }
         int var10 = var9 == 1 ? 5592405 : 16777215;
         int var11 = var9 == 0 ? 5592405 : 16777215;
-        on.a(param3, param4, param5 - 20, param6 - 2 >> 1, 65793, 128);
-        on.a(param3 + param5 - 19, param4, 20, param6 - 2 >> 1, 65793, 128);
+        SoftwareRasterizer.a(param3, param4, param5 - 20, param6 - 2 >> 1, 65793, 128);
+        SoftwareRasterizer.a(param3 + param5 - 19, param4, 20, param6 - 2 >> 1, 65793, 128);
         pt.a(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
         if (un.field_d.a(param2) > param5 - 20) {
           var12 = (double)(pb.field_C.a(param2) - (param5 - 30));
@@ -450,11 +450,11 @@ final class eo {
         ta.e(125);
         pb.field_C.d(Integer.toString(param0.field_b), param3 + param5 - 8, param4 + (param6 >> 1) - 3, var11, -1);
         if (var9 == 0) {
-          on.e(param3 + 2, param4 + (param6 >> 2), param3 + param5 - 1, param4 + (param6 >> 2), 11141377, 196);
-          on.e(param3 + 2, param4 + (param6 >> 2) - 1, param3 + param5 - 1, param4 + (param6 >> 2) - 1, 11141377, 196);
+          SoftwareRasterizer.e(param3 + 2, param4 + (param6 >> 2), param3 + param5 - 1, param4 + (param6 >> 2), 11141377, 196);
+          SoftwareRasterizer.e(param3 + 2, param4 + (param6 >> 2) - 1, param3 + param5 - 1, param4 + (param6 >> 2) - 1, 11141377, 196);
         }
-        on.a(param3, param4 + (param6 >> 1), param5 - 20, param6 - 2 >> 1, 65793, 128);
-        on.a(param3 + param5 - 19, param4 + (param6 >> 1), 20, param6 - 2 >> 1, 65793, 128);
+        SoftwareRasterizer.a(param3, param4 + (param6 >> 1), param5 - 20, param6 - 2 >> 1, 65793, 128);
+        SoftwareRasterizer.a(param3 + param5 - 19, param4 + (param6 >> 1), 20, param6 - 2 >> 1, 65793, 128);
         pt.a(param3 + param5 - 20, -22914, param3, param4 + param6, param4);
         if (un.field_d.a(param1) > param5 - 20) {
           var12Lifetime1 = (double)(pb.field_C.a(param1) - (param5 - 30));
@@ -466,8 +466,8 @@ final class eo {
         ta.e(124);
         pb.field_C.d(Integer.toString(param0.field_j), param3 + param5 - 8, param4 + param6 - 3, var10, -1);
         if (var9 == 1) {
-          on.e(param3 + 2, param4 + 3 * (param6 >> 2), param3 + param5 - 1, param4 + 3 * (param6 >> 2), 11141377, 196);
-          on.e(param3 + 2, param4 + 3 * (param6 >> 2) - 1, param3 + param5 - 1, param4 + 3 * (param6 >> 2) - 1, 11141377, 196);
+          SoftwareRasterizer.e(param3 + 2, param4 + 3 * (param6 >> 2), param3 + param5 - 1, param4 + 3 * (param6 >> 2), 11141377, 196);
+          SoftwareRasterizer.e(param3 + 2, param4 + 3 * (param6 >> 2) - 1, param3 + param5 - 1, param4 + 3 * (param6 >> 2) - 1, 11141377, 196);
           return;
         }
     }
@@ -503,18 +503,18 @@ final class eo {
     }
 
     final static void b(int param0, int param1, int param2, int param3) {
-        on.c(param0, param1, param2, param3);
-        on.f(param0 - param2, param1, param2 << 1, param3);
-        on.a(param0, param1 - param2, param2 << 1, param3);
+        SoftwareRasterizer.c(param0, param1, param2, param3);
+        SoftwareRasterizer.f(param0 - param2, param1, param2 << 1, param3);
+        SoftwareRasterizer.a(param0, param1 - param2, param2 << 1, param3);
     }
 
     final static hd a(boolean param0, int param1) {
-        ot[] var2 = param0 ? field_c[param1] : field_r[param1];
+        ArgbSprite[] var2 = param0 ? field_c[param1] : field_r[param1];
         hd var3 = new hd();
-        var3.field_N = (ut) ((Object) var2[0].h());
-        var3.field_vb = (ut) ((Object) var2[1].h());
-        var3.field_r = (ut) ((Object) var2[2].h());
-        var3.field_t = (ut) ((Object) var2[3].h());
+        var3.field_N = (Sprite) ((Object) var2[0].h());
+        var3.field_vb = (Sprite) ((Object) var2[1].h());
+        var3.field_r = (Sprite) ((Object) var2[2].h());
+        var3.field_t = (Sprite) ((Object) var2[3].h());
         var3.field_q = var2[0].field_o;
         var3.field_mb = var2[0].field_v;
         return var3;
@@ -534,14 +534,14 @@ final class eo {
         for (var7 = 0; var7 < 100; var7++) {
           var8 = (var7 & 3) == param3 ? param6 : 256;
           var9 = ((param2 & 16711935) * var8 & -16711936 | (param2 & 65280) * var8 & 16711680) >> 8;
-          on.a(param0 + var7, param1, 11, var9);
+          SoftwareRasterizer.a(param0 + var7, param1, 11, var9);
         }
         for (var7Lifetime1 = 0; var7Lifetime1 < 3; var7Lifetime1++) {
-          on.h(param0 + var7Lifetime1 - 1, param1 + var7Lifetime1 - 1, 100 - var7Lifetime1 - var7Lifetime1 + 1, 11 - var7Lifetime1 - var7Lifetime1 + 1, 65793, (3 - var7Lifetime1) * param4);
+          SoftwareRasterizer.h(param0 + var7Lifetime1 - 1, param1 + var7Lifetime1 - 1, 100 - var7Lifetime1 - var7Lifetime1 + 1, 11 - var7Lifetime1 - var7Lifetime1 + 1, 65793, (3 - var7Lifetime1) * param4);
         }
         var7Lifetime2 = param5 * 65793;
-        on.d(param0, param1, 100, 2, 0, var7Lifetime2);
-        on.d(param0, param1 + 2, 100, 4, var7Lifetime2, 0);
+        SoftwareRasterizer.d(param0, param1, 100, 2, 0, var7Lifetime2);
+        SoftwareRasterizer.d(param0, param1 + 2, 100, 4, var7Lifetime2, 0);
     }
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7) {
@@ -573,16 +573,16 @@ final class eo {
         int var3;
         int var4;
         int var5;
-        ut var7;
+        Sprite var7;
         int var0_intLifetime1;
         int var0_intLifetime2;
         int var1Lifetime1;
         int var5Lifetime1;
-        field_r = new ot[3][4];
-        field_c = new ot[3][4];
+        field_r = new ArgbSprite[3][4];
+        field_c = new ArgbSprite[3][4];
         for (var0_int = 0; var0_int < 3; var0_int++) {
           field_r[var0_int][0] = field_k[var0_int];
-          field_r[var0_int][1] = eo.b((ut) (field_r[var0_int][0]));
+          field_r[var0_int][1] = eo.b((Sprite) (field_r[var0_int][0]));
           field_r[var0_int][2] = field_i[var0_int];
           field_r[var0_int][3] = field_k[var0_int].h();
           nh.a(field_r[var0_int][3], 0.0, 0.0, 0.7);
@@ -593,9 +593,9 @@ final class eo {
             field_c[var0_intLifetime1][var1].g();
           }
         }
-        field_l = new ut[3];
+        field_l = new Sprite[3];
         for (var0_intLifetime2 = 0; var0_intLifetime2 < 3; var0_intLifetime2++) {
-          field_l[var0_intLifetime2] = (ut) ((Object) field_a.h());
+          field_l[var0_intLifetime2] = (Sprite) ((Object) field_a.h());
           field_l[var0_intLifetime2].a();
         }
         nh.a(field_l[0], 0.321875, 1.0, 1.0);
@@ -619,23 +619,23 @@ final class eo {
         var2 = stackIn_23_0;
         stackIn_26_0 = (var1Lifetime1 == 0) ? 24 : 12;
         var3 = stackIn_26_0;
-        var4 = ((hu) (var2)).a(var0) + var3;
-        field_n = new ut[4];
+        var4 = ((BitmapFont) (var2)).a(var0) + var3;
+        field_n = new Sprite[4];
         for (var5 = 0; var5 < 4; var5++) {
           field_n[var5] = ae.a(true, (byte) -52, var5, var4, 7126504);
           PacketBuffer.a(-41, field_n[var5]);
-          ((hu) (var2)).d(var0, on.field_g >> 1, on.field_f - 8, 16777215, -1);
+          ((BitmapFont) (var2)).d(var0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - 8, 16777215, -1);
           ta.e(127);
         }
-        field_g = new ut(102, 13);
+        field_g = new Sprite(102, 13);
         PacketBuffer.a(-67, field_g);
         eo.a(1, 1, 10066329, 2, 20, 0, 200);
-        on.e(0, 0, on.field_g, on.field_f, 65793);
+        SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 65793);
         ta.e(124);
-        field_h = new ut[4][4];
+        field_h = new Sprite[4][4];
         for (var5Lifetime1 = 0; var5Lifetime1 < 4; var5Lifetime1++) {
           for (var6 = 0; var6 < 4; var6++) {
-            var7 = new ut(100, 11);
+            var7 = new Sprite(100, 11);
             PacketBuffer.a(81, var7);
             eo.a(0, 0, pd.field_B[var5Lifetime1], var6, 40, 90, 160);
             ta.e(120);
@@ -644,7 +644,7 @@ final class eo {
         }
     }
 
-    private final static hd a(String param0, int param1, hu param2) {
+    private final static hd a(String param0, int param1, BitmapFont param2) {
         int var3 = param2.a(param0) + 24;
         return eo.a(param0, param1, param2, var3, true);
     }
@@ -689,7 +689,7 @@ final class eo {
         return var0;
     }
 
-    final static void a(ut param0, int param1, int param2, int param3) {
+    final static void a(Sprite param0, int param1, int param2, int param3) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
@@ -699,33 +699,33 @@ final class eo {
         }
         param1 = param1 + param0.field_s;
         param2 = param2 + param0.field_n;
-        int var4 = param1 + param2 * on.field_g;
+        int var4 = param1 + param2 * SoftwareRasterizer.field_g;
         int var5 = 0;
         int var6 = param0.field_w;
         int var7 = param0.field_q;
-        int var8 = on.field_g - var7;
+        int var8 = SoftwareRasterizer.field_g - var7;
         int var9 = 0;
-        if (param2 < on.field_e) {
-          var10 = on.field_e - param2;
+        if (param2 < SoftwareRasterizer.field_e) {
+          var10 = SoftwareRasterizer.field_e - param2;
           var6 = var6 - var10;
-          param2 = on.field_e;
+          param2 = SoftwareRasterizer.field_e;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * on.field_g;
+          var4 = var4 + var10 * SoftwareRasterizer.field_g;
         }
-        if (param2 + var6 > on.field_h) {
-          var6 = var6 - (param2 + var6 - on.field_h);
+        if (param2 + var6 > SoftwareRasterizer.field_h) {
+          var6 = var6 - (param2 + var6 - SoftwareRasterizer.field_h);
         }
-        if (param1 < on.field_b) {
-          var10Lifetime1 = on.field_b - param1;
+        if (param1 < SoftwareRasterizer.field_b) {
+          var10Lifetime1 = SoftwareRasterizer.field_b - param1;
           var7 = var7 - var10Lifetime1;
-          param1 = on.field_b;
+          param1 = SoftwareRasterizer.field_b;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param1 + var7 > on.field_c) {
-          var10Lifetime2 = param1 + var7 - on.field_c;
+        if (param1 + var7 > SoftwareRasterizer.field_c) {
+          var10Lifetime2 = param1 + var7 - SoftwareRasterizer.field_c;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -734,12 +734,12 @@ final class eo {
           if (var6 <= 0) {
             return;
           }
-          eo.a(on.field_a, param0.field_y, 0, var5, var4, var7, var6, var8, var9, param3);
+          eo.a(SoftwareRasterizer.field_a, param0.field_y, 0, var5, var4, var7, var6, var8, var9, param3);
           return;
         }
     }
 
-    final static kg a(ut param0) {
+    final static kg a(Sprite param0) {
         int var3 = 0;
         kg var1;
         int[] var2;
@@ -765,8 +765,8 @@ final class eo {
         return var1;
     }
 
-    private final static ot b(ut param0) {
-        ot var1 = ((ot) (param0)).h();
+    private final static ArgbSprite b(Sprite param0) {
+        ArgbSprite var1 = ((ArgbSprite) (param0)).h();
         PacketBuffer.a(-112, var1);
         param0.c(0, 0, 90);
         ta.e(117);
@@ -775,35 +775,35 @@ final class eo {
 
     final static void b(byte[] param0, int param1, int param2, int param3, int param4) {
         int var10 = 0;
-        int var5 = param1 + param2 * on.field_g;
+        int var5 = param1 + param2 * SoftwareRasterizer.field_g;
         int var6 = 0;
-        int var7 = on.field_g - param3;
+        int var7 = SoftwareRasterizer.field_g - param3;
         int var8 = 0;
         int var9 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        if (param2 < on.field_e) {
-          var10 = on.field_e - param2;
+        if (param2 < SoftwareRasterizer.field_e) {
+          var10 = SoftwareRasterizer.field_e - param2;
           param4 = param4 - var10;
-          param2 = on.field_e;
+          param2 = SoftwareRasterizer.field_e;
           var6 = var6 + var10 * (param3 >> 3);
-          var5 = var5 + var10 * on.field_g;
+          var5 = var5 + var10 * SoftwareRasterizer.field_g;
         }
-        if (param2 + param4 > on.field_h) {
-          param4 = param4 - (param2 + param4 - on.field_h);
+        if (param2 + param4 > SoftwareRasterizer.field_h) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_h);
         }
-        if (param1 < on.field_b) {
-          var10Lifetime1 = on.field_b - param1;
+        if (param1 < SoftwareRasterizer.field_b) {
+          var10Lifetime1 = SoftwareRasterizer.field_b - param1;
           param3 = param3 - var10Lifetime1;
-          param1 = on.field_b;
+          param1 = SoftwareRasterizer.field_b;
           var6 = var6 + (var10Lifetime1 >> 3);
           var9 = (byte)(1 << (var10Lifetime1 & 7));
           var5 = var5 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
           var7 = var7 + var10Lifetime1;
         }
-        if (param1 + param3 > on.field_c) {
-          var10Lifetime2 = param1 + param3 - on.field_c;
+        if (param1 + param3 > SoftwareRasterizer.field_c) {
+          var10Lifetime2 = param1 + param3 - SoftwareRasterizer.field_c;
           param3 = param3 - var10Lifetime2;
           var8 = var8 + var10Lifetime2;
           var7 = var7 + var10Lifetime2;
@@ -812,7 +812,7 @@ final class eo {
           if (param4 <= 0) {
             return;
           }
-          eo.a(on.field_a, param0, (byte) 0, (byte) var9, var6, var5, param3, param4, var7, var8 >> 3);
+          eo.a(SoftwareRasterizer.field_a, param0, (byte) 0, (byte) var9, var6, var5, param3, param4, var7, var8 >> 3);
           return;
         }
     }
@@ -828,49 +828,49 @@ final class eo {
         int var11;
         int var12;
         int var14;
-        if (param0 < on.field_b) {
+        if (param0 < SoftwareRasterizer.field_b) {
           return;
         }
-        if (param0 >= on.field_c) {
+        if (param0 >= SoftwareRasterizer.field_c) {
           return;
         }
-        if (param1 < on.field_e) {
-          param2 = param2 - (on.field_e - param1);
-          param1 = on.field_e;
+        if (param1 < SoftwareRasterizer.field_e) {
+          param2 = param2 - (SoftwareRasterizer.field_e - param1);
+          param1 = SoftwareRasterizer.field_e;
         }
-        if (param1 + param2 > on.field_h) {
-          param2 = on.field_h - param1;
+        if (param1 + param2 > SoftwareRasterizer.field_h) {
+          param2 = SoftwareRasterizer.field_h - param1;
         }
         var5 = 256 - param4;
         var6 = (param3 >> 16 & 255) * param4;
         var7 = (param3 >> 8 & 255) * param4;
         var8 = (param3 & 255) * param4;
-        var12 = param0 + param1 * on.field_g;
+        var12 = param0 + param1 * SoftwareRasterizer.field_g;
         for (var13 = 0; var13 < param2; var13++) {
           if ((var13 & 2) != 0) {
-            var9 = (on.field_a[var12] >> 16 & 255) * var5;
-            var10 = (on.field_a[var12] >> 8 & 255) * var5;
-            var11 = (on.field_a[var12] & 255) * var5;
+            var9 = (SoftwareRasterizer.field_a[var12] >> 16 & 255) * var5;
+            var10 = (SoftwareRasterizer.field_a[var12] >> 8 & 255) * var5;
+            var11 = (SoftwareRasterizer.field_a[var12] & 255) * var5;
             var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-            on.field_a[var12] = var14;
-            var12 = var12 + on.field_g;
+            SoftwareRasterizer.field_a[var12] = var14;
+            var12 = var12 + SoftwareRasterizer.field_g;
           } else {
-            var12 = var12 + on.field_g;
+            var12 = var12 + SoftwareRasterizer.field_g;
           }
         }
         return;
     }
 
-    final static hd a(String param0, int param1, hu param2, int param3, boolean param4) {
+    final static hd a(String param0, int param1, BitmapFont param2, int param3, boolean param4) {
         int var6_int = 0;
         int var7 = 0;
         param0 = param0.toLowerCase();
-        ut[] var5 = new ut[4];
+        Sprite[] var5 = new Sprite[4];
         for (var6_int = 0; var6_int < 4; var6_int++) {
           var5[var6_int] = ae.a(param4, (byte) -52, var6_int, param3, param1);
           PacketBuffer.a(-52, var5[var6_int]);
           var7 = param4 ? 8 : 9;
-          param2.d(param0, on.field_g >> 1, on.field_f - var7, 16777215, -1);
+          param2.d(param0, SoftwareRasterizer.field_g >> 1, SoftwareRasterizer.field_f - var7, 16777215, -1);
           ta.e(122);
         }
         hd var6 = new hd();
@@ -888,9 +888,9 @@ final class eo {
         int var8 = 0;
         int var9 = 0;
         int var4 = 256 - (param2 - param1 << 8) / param2;
-        ot var5 = new ot(param3, param3);
+        ArgbSprite var5 = new ArgbSprite(param3, param3);
         PacketBuffer.a(-38, var5);
-        on.a(on.field_g << 3, on.field_f << 3, on.field_g << 3, param0.length - 1, param0);
+        SoftwareRasterizer.a(SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, SoftwareRasterizer.field_g << 3, param0.length - 1, param0);
         ta.e(122);
         byte[] var6 = new byte[var5.field_y.length];
         for (var7 = 0; var7 < var6.length; var7++) {
@@ -903,13 +903,13 @@ final class eo {
         return var6;
     }
 
-    final static ot b(ot param0) {
+    final static ArgbSprite b(ArgbSprite param0) {
         int var5 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
         int var1 = param0.field_o;
         int var2 = param0.field_v;
-        ot var3 = new ot(var1, var2);
+        ArgbSprite var3 = new ArgbSprite(var1, var2);
         int var4 = 0;
         for (var5 = 0; var5 < var2; var5++) {
           for (var6 = 0; var6 < var1; var6++) {
@@ -927,32 +927,32 @@ final class eo {
         int var8 = 0;
         int var9 = (param3 << 16) / param5;
         int var10 = (param4 << 16) / param6;
-        int var11 = param1 + param2 * on.field_g;
-        int var12 = on.field_g - param5;
+        int var11 = param1 + param2 * SoftwareRasterizer.field_g;
+        int var12 = SoftwareRasterizer.field_g - param5;
         int var13Lifetime1;
         int var13Lifetime2;
-        if (param2 + param6 > on.field_h) {
-          param6 = param6 - (param2 + param6 - on.field_h);
+        if (param2 + param6 > SoftwareRasterizer.field_h) {
+          param6 = param6 - (param2 + param6 - SoftwareRasterizer.field_h);
         }
-        if (param2 < on.field_e) {
-          var13 = on.field_e - param2;
+        if (param2 < SoftwareRasterizer.field_e) {
+          var13 = SoftwareRasterizer.field_e - param2;
           param6 = param6 - var13;
-          var11 = var11 + var13 * on.field_g;
+          var11 = var11 + var13 * SoftwareRasterizer.field_g;
           var8 = var8 + var10 * var13;
         }
-        if (param1 + param5 > on.field_c) {
-          var13Lifetime1 = param1 + param5 - on.field_c;
+        if (param1 + param5 > SoftwareRasterizer.field_c) {
+          var13Lifetime1 = param1 + param5 - SoftwareRasterizer.field_c;
           param5 = param5 - var13Lifetime1;
           var12 = var12 + var13Lifetime1;
         }
-        if (param1 < on.field_b) {
-          var13Lifetime2 = on.field_b - param1;
+        if (param1 < SoftwareRasterizer.field_b) {
+          var13Lifetime2 = SoftwareRasterizer.field_b - param1;
           param5 = param5 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var7 = var7 + var9 * var13Lifetime2;
           var12 = var12 + var13Lifetime2;
         }
-        eo.a(on.field_a, param0, 0, var7, var8, var11, var12, param5, param6, var9, var10, param3 >> 3);
+        eo.a(SoftwareRasterizer.field_a, param0, 0, var7, var8, var11, var12, param5, param6, var9, var10, param3 >> 3);
     }
 
     final static void c(int param0, int param1, int param2, int param3) {
@@ -960,22 +960,22 @@ final class eo {
         int var7 = 0;
         int incrementValue$0 = 0;
         int fieldTemp$1 = 0;
-        int var4 = on.field_g * param1 + param0;
-        int var5 = on.field_g - param2;
+        int var4 = SoftwareRasterizer.field_g * param1 + param0;
+        int var5 = SoftwareRasterizer.field_g - param2;
         for (var6 = 0; var6 < param3; var6++) {
           for (var7 = 0; var7 < param2; var7++) {
             incrementValue$0 = var4;
             var4++;
             fieldTemp$1 = field_e;
             field_e = field_e + 1;
-            on.field_a[incrementValue$0] = on.field_a[incrementValue$0] | field_o[fieldTemp$1 % 307];
+            SoftwareRasterizer.field_a[incrementValue$0] = SoftwareRasterizer.field_a[incrementValue$0] | field_o[fieldTemp$1 % 307];
           }
           var4 = var4 + var5;
         }
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5) {
-        ut var6_ref_ut = null;
+        Sprite var6_ref_ut = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -988,7 +988,7 @@ final class eo {
         StringBuilder discarded$41 = null;
         StringBuilder discarded$42 = null;
         if (param2 > 100) {
-          var6_ref_ut = new ut(102, 13);
+          var6_ref_ut = new Sprite(102, 13);
           PacketBuffer.a(73, var6_ref_ut);
           eo.a(0, 0, param2 - 100, param3, false, 0);
           ta.e(126);
@@ -1002,10 +1002,10 @@ final class eo {
         pt.a(param0 + param2, -22914, param0, param1 + 11, param1);
         field_h[param3][var6].d(param0, param1);
         ta.e(127);
-        on.e(param0 - 1, param1 - 1, 102, 13, 65793);
+        SoftwareRasterizer.e(param0 - 1, param1 - 1, 102, 13, 65793);
         if (param4) {
           PacketBuffer.a(-38, field_d);
-          on.b();
+          SoftwareRasterizer.b();
           var7 = 131586;
           var8 = 10;
           var9 = 54 - (param5 != 0 ? var8 : 0);
@@ -1032,7 +1032,7 @@ final class eo {
         int var3 = 0;
         Random var2 = new Random();
         for (var3 = 0; var3 < field_o.length; var3++) {
-          field_o[var3] = param0 + dq.$cfr$intArgs$a$7f8aad568c81(113, param1, var2) << 24;
+          field_o[var3] = param0 + ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(113, param1, var2) << 24;
         }
     }
 
@@ -1078,7 +1078,7 @@ final class eo {
         var17 = 4;
         for (var18 = 0; var18 < var14; var18++) {
           for (var19 = 0; var19 < var11; var19++) {
-            on.e(param0, param1, param0 + var13, param1 - var12, var16, var15);
+            SoftwareRasterizer.e(param0, param1, param0 + var13, param1 - var12, var16, var15);
             param0++;
           }
           eo.a(param2[var18], un.field_d, param0, param1 - (var12 >> 1), var11, var12, 16777215, 8192);
@@ -1092,7 +1092,7 @@ final class eo {
           if (var19Lifetime1 == param9) {
             var20 = 11184810;
           }
-          on.a(param0 - var18Lifetime1 - var17, param1 + var19Lifetime1 * (param6 + var17), var18Lifetime1, param6, var20, var15);
+          SoftwareRasterizer.a(param0 - var18Lifetime1 - var17, param1 + var19Lifetime1 * (param6 + var17), var18Lifetime1, param6, var20, var15);
           var21 = param8[var19Lifetime1].toLowerCase();
           stackIn_12_0 = un.field_d;
           stackIn_12_1 = var21;
@@ -1105,7 +1105,7 @@ final class eo {
           }
           ((cn) (Object) stackIn_12_0).d(stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_13_4, -1);
           for (var22 = 0; var22 < var14; var22++) {
-            on.a(param0 + var22 * (var11 + var17), param1 + var19Lifetime1 * (param6 + var17), var11, param6, var20, var15);
+            SoftwareRasterizer.a(param0 + var22 * (var11 + var17), param1 + var19Lifetime1 * (param6 + var17), var11, param6, var20, var15);
             if (param3 != null) {
               stackIn_18_0 = param3[var19Lifetime1][var22];
             } else {
@@ -1131,9 +1131,9 @@ final class eo {
         }
         for (var19Lifetime2 = 0; var19Lifetime2 < 16; var19Lifetime2++) {
           for (var20Lifetime1 = 0; var20Lifetime1 < var14; var20Lifetime1++) {
-            on.c(param0 + var20Lifetime1 * (var11 + var17), param1 + param7 * (param6 + var17) + var19Lifetime2, var11, 65793, 128 - (var19Lifetime2 << 3));
+            SoftwareRasterizer.c(param0 + var20Lifetime1 * (var11 + var17), param1 + param7 * (param6 + var17) + var19Lifetime2, var11, 65793, 128 - (var19Lifetime2 << 3));
           }
-          on.c(param0 - var18Lifetime1 - var17, param1 + param7 * (param6 + var17) + var19Lifetime2, var18Lifetime1, 65793, 128 - (var19Lifetime2 << 3));
+          SoftwareRasterizer.c(param0 - var18Lifetime1 - var17, param1 + param7 * (param6 + var17) + var19Lifetime2, var18Lifetime1, 65793, 128 - (var19Lifetime2 << 3));
         }
         return param1;
     }
@@ -1200,35 +1200,35 @@ final class eo {
 
     final static void a(byte[] param0, int param1, int param2, int param3) {
         int var10 = 0;
-        int var4 = param1 + param2 * on.field_g;
+        int var4 = param1 + param2 * SoftwareRasterizer.field_g;
         int var5 = 0;
         int var6 = param3;
         int var7 = param3;
-        int var8 = on.field_g - var7;
+        int var8 = SoftwareRasterizer.field_g - var7;
         int var9 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        if (param2 < on.field_e) {
-          var10 = on.field_e - param2;
+        if (param2 < SoftwareRasterizer.field_e) {
+          var10 = SoftwareRasterizer.field_e - param2;
           var6 = var6 - var10;
-          param2 = on.field_e;
+          param2 = SoftwareRasterizer.field_e;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * on.field_g;
+          var4 = var4 + var10 * SoftwareRasterizer.field_g;
         }
-        if (param2 + var6 > on.field_h) {
-          var6 = var6 - (param2 + var6 - on.field_h);
+        if (param2 + var6 > SoftwareRasterizer.field_h) {
+          var6 = var6 - (param2 + var6 - SoftwareRasterizer.field_h);
         }
-        if (param1 < on.field_b) {
-          var10Lifetime1 = on.field_b - param1;
+        if (param1 < SoftwareRasterizer.field_b) {
+          var10Lifetime1 = SoftwareRasterizer.field_b - param1;
           var7 = var7 - var10Lifetime1;
-          param1 = on.field_b;
+          param1 = SoftwareRasterizer.field_b;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param1 + var7 > on.field_c) {
-          var10Lifetime2 = param1 + var7 - on.field_c;
+        if (param1 + var7 > SoftwareRasterizer.field_c) {
+          var10Lifetime2 = param1 + var7 - SoftwareRasterizer.field_c;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -1237,7 +1237,7 @@ final class eo {
           if (var6 <= 0) {
             return;
           }
-          eo.a(on.field_a, param0, var5, var4, var7, var6, var8, var9);
+          eo.a(SoftwareRasterizer.field_a, param0, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -1254,33 +1254,33 @@ final class eo {
         int var11;
         int var12;
         int var14;
-        if (param1 < on.field_e) {
+        if (param1 < SoftwareRasterizer.field_e) {
           return;
         }
-        if (param1 >= on.field_h) {
+        if (param1 >= SoftwareRasterizer.field_h) {
           return;
         }
-        if (param0 < on.field_b) {
-          param2 = param2 - (on.field_b - param0);
-          param0 = on.field_b;
+        if (param0 < SoftwareRasterizer.field_b) {
+          param2 = param2 - (SoftwareRasterizer.field_b - param0);
+          param0 = SoftwareRasterizer.field_b;
         }
-        if (param0 + param2 > on.field_c) {
-          param2 = on.field_c - param0;
+        if (param0 + param2 > SoftwareRasterizer.field_c) {
+          param2 = SoftwareRasterizer.field_c - param0;
         }
         var5 = 256 - param4;
         var6 = (param3 >> 16 & 255) * param4;
         var7 = (param3 >> 8 & 255) * param4;
         var8 = (param3 & 255) * param4;
-        var12 = param0 + param1 * on.field_g;
+        var12 = param0 + param1 * SoftwareRasterizer.field_g;
         for (var13 = 0; var13 < param2; var13++) {
           if ((var13 & 2) != 0) {
-            var9 = (on.field_a[var12] >> 16 & 255) * var5;
-            var10 = (on.field_a[var12] >> 8 & 255) * var5;
-            var11 = (on.field_a[var12] & 255) * var5;
+            var9 = (SoftwareRasterizer.field_a[var12] >> 16 & 255) * var5;
+            var10 = (SoftwareRasterizer.field_a[var12] >> 8 & 255) * var5;
+            var11 = (SoftwareRasterizer.field_a[var12] & 255) * var5;
             var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
             incrementValue$0 = var12;
             var12++;
-            on.field_a[incrementValue$0] = var14;
+            SoftwareRasterizer.field_a[incrementValue$0] = var14;
           } else {
             var12++;
           }
@@ -1350,7 +1350,7 @@ final class eo {
         }
     }
 
-    final static void a(ut param0, int param1, int param2, int param3, int param4) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1394,30 +1394,30 @@ final class eo {
           if (var6 < var10) {
             param4 = ((var6 << 16) - var8 + var12 - 1) / var12;
           }
-          var13Lifetime2 = param1 + param2 * on.field_g;
-          var14 = on.field_g - param3;
-          if (param2 + param4 > on.field_h) {
-            param4 = param4 - (param2 + param4 - on.field_h);
+          var13Lifetime2 = param1 + param2 * SoftwareRasterizer.field_g;
+          var14 = SoftwareRasterizer.field_g - param3;
+          if (param2 + param4 > SoftwareRasterizer.field_h) {
+            param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_h);
           }
-          if (param2 < on.field_e) {
-            var15 = on.field_e - param2;
+          if (param2 < SoftwareRasterizer.field_e) {
+            var15 = SoftwareRasterizer.field_e - param2;
             param4 = param4 - var15;
-            var13Lifetime2 = var13Lifetime2 + var15 * on.field_g;
+            var13Lifetime2 = var13Lifetime2 + var15 * SoftwareRasterizer.field_g;
             var8 = var8 + var12 * var15;
           }
-          if (param1 + param3 > on.field_c) {
-            var15Lifetime1 = param1 + param3 - on.field_c;
+          if (param1 + param3 > SoftwareRasterizer.field_c) {
+            var15Lifetime1 = param1 + param3 - SoftwareRasterizer.field_c;
             param3 = param3 - var15Lifetime1;
             var14 = var14 + var15Lifetime1;
           }
-          if (param1 < on.field_b) {
-            var15Lifetime2 = on.field_b - param1;
+          if (param1 < SoftwareRasterizer.field_b) {
+            var15Lifetime2 = SoftwareRasterizer.field_b - param1;
             param3 = param3 - var15Lifetime2;
             var13Lifetime2 = var13Lifetime2 + var15Lifetime2;
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          eo.a(0, 0, 0, var7, param0.field_y, on.field_a, 0, 0, -param4, var8, var13Lifetime2, var14, param3, var11, var12, var5);
+          eo.a(0, 0, 0, var7, param0.field_y, SoftwareRasterizer.field_a, 0, 0, -param4, var8, var13Lifetime2, var14, param3, var11, var12, var5);
           return;
         }
     }
@@ -1428,7 +1428,7 @@ final class eo {
         int var3;
         int var4;
         int var5;
-        ot var6;
+        ArgbSprite var6;
         byte[] var7;
         int var8;
         int var11;
@@ -1437,9 +1437,9 @@ final class eo {
         var3 = (param2 - param1) * 3000 / param2 + 1092;
         var4 = var3 * var3 >> 8;
         var5 = var3 * var3 >> 12;
-        var6 = new ot(72, 72);
+        var6 = new ArgbSprite(72, 72);
         PacketBuffer.a(-115, var6);
-        on.a(on.field_g << 3, on.field_f << 3, on.field_g << 3, param0.length - 1, param0);
+        SoftwareRasterizer.a(SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, SoftwareRasterizer.field_g << 3, param0.length - 1, param0);
         ta.e(119);
         var7 = new byte[var6.field_y.length];
         var8 = 0;
@@ -1460,7 +1460,7 @@ final class eo {
         return var7;
     }
 
-    final static void a(ut param0, ut param1, int param2) {
+    final static void a(Sprite param0, Sprite param1, int param2) {
         int var10 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -1480,17 +1480,17 @@ final class eo {
         var6 = param0.field_o;
         var7 = 640 - var6;
         var8 = 0;
-        if (param2 < on.field_b) {
-          var9 = on.field_b - param2;
+        if (param2 < SoftwareRasterizer.field_b) {
+          var9 = SoftwareRasterizer.field_b - param2;
           var6 = var6 - var9;
-          param2 = on.field_b;
+          param2 = SoftwareRasterizer.field_b;
           var4 = var4 + var9;
           var3 = var3 + var9;
           var8 = var8 + var9;
           var7 = var7 + var9;
         }
-        if (param2 + var6 > on.field_c) {
-          var9Lifetime1 = param2 + var6 - on.field_c;
+        if (param2 + var6 > SoftwareRasterizer.field_c) {
+          var9Lifetime1 = param2 + var6 - SoftwareRasterizer.field_c;
           var6 = var6 - var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
@@ -1513,7 +1513,7 @@ final class eo {
               var4++;
               incrementValue$2 = var3;
               var3++;
-              param0.field_y[incrementValue$1] = on.field_a[incrementValue$2];
+              param0.field_y[incrementValue$1] = SoftwareRasterizer.field_a[incrementValue$2];
             }
           }
           var3 = var3 + var7;
@@ -1521,13 +1521,13 @@ final class eo {
         }
     }
 
-    final static ot a(ot param0) {
+    final static ArgbSprite a(ArgbSprite param0) {
         int var5 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
         int var1 = param0.field_o;
         int var2 = param0.field_v;
-        ot var3 = new ot(var1, var2);
+        ArgbSprite var3 = new ArgbSprite(var1, var2);
         int var4 = 0;
         for (var5 = 0; var5 < var2; var5++) {
           for (var6 = 0; var6 < var1; var6++) {
@@ -1539,7 +1539,7 @@ final class eo {
         return var3;
     }
 
-    final static void a(ut param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         int var6 = 0;
         int var7 = 0;
         int var2;
@@ -1610,30 +1610,30 @@ final class eo {
         if (var10 < var14) {
           var6 = ((var10 << 16) - var12 + var16 - 1) / var16;
         }
-        int var17 = param1 + param2 * on.field_g;
-        int var18 = on.field_g - var5;
-        if (param2 + var6 > on.field_h) {
-          var6 = var6 - (param2 + var6 - on.field_h);
+        int var17 = param1 + param2 * SoftwareRasterizer.field_g;
+        int var18 = SoftwareRasterizer.field_g - var5;
+        if (param2 + var6 > SoftwareRasterizer.field_h) {
+          var6 = var6 - (param2 + var6 - SoftwareRasterizer.field_h);
         }
-        if (param2 < on.field_e) {
-          var19 = on.field_e - param2;
+        if (param2 < SoftwareRasterizer.field_e) {
+          var19 = SoftwareRasterizer.field_e - param2;
           var6 = var6 - var19;
-          var17 = var17 + var19 * on.field_g;
+          var17 = var17 + var19 * SoftwareRasterizer.field_g;
           var12 = var12 + var16 * var19;
         }
-        if (param1 + var5 > on.field_c) {
-          var19Lifetime1 = param1 + var5 - on.field_c;
+        if (param1 + var5 > SoftwareRasterizer.field_c) {
+          var19Lifetime1 = param1 + var5 - SoftwareRasterizer.field_c;
           var5 = var5 - var19Lifetime1;
           var18 = var18 + var19Lifetime1;
         }
-        if (param1 < on.field_b) {
-          var19Lifetime2 = on.field_b - param1;
+        if (param1 < SoftwareRasterizer.field_b) {
+          var19Lifetime2 = SoftwareRasterizer.field_b - param1;
           var5 = var5 - var19Lifetime2;
           var17 = var17 + var19Lifetime2;
           var11 = var11 + var15 * var19Lifetime2;
           var18 = var18 + var19Lifetime2;
         }
-        eo.a(on.field_a, param0, var11, var12, var17, var18, var5, var6, var15, var16, var9);
+        eo.a(SoftwareRasterizer.field_a, param0, var11, var12, var17, var18, var5, var6, var15, var16, var9);
     }
 
     final static hd a(boolean param0) {
@@ -1641,7 +1641,7 @@ final class eo {
     }
 
     static {
-        field_d = new ut(100, 11);
+        field_d = new Sprite(100, 11);
         field_e = 0;
         field_o = new int[307];
     }

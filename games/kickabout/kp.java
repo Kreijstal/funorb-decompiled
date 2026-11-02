@@ -7,7 +7,7 @@ final class kp {
     static String[] field_g;
     int field_k;
     int field_b;
-    static ut field_m;
+    static Sprite field_m;
     static String field_i;
     boolean field_d;
     int[] field_c;
@@ -258,7 +258,7 @@ final class kp {
 
     public static void a(byte param0) {
         if (param0 != 101) {
-          field_m = (ut) null;
+          field_m = (Sprite) null;
         }
         field_a = null;
         field_g = null;

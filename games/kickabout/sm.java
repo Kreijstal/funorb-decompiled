@@ -50,7 +50,7 @@ final class sm extends IntrusiveNode {
           var3 = var2.h((byte) -123);
           var4 = var2.h((byte) -112);
           if (0 == var3) {
-            var5 = (dl) (ru.field_M.g(24009));
+            var5 = (dl) (MidiPcmStream.field_M.g(24009));
             if (var5 == null) {
               lr.b((byte) -116);
               return;

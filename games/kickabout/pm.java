@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class pm extends og {
+final class pm extends RasterBuffer {
     private java.awt.Component field_f;
 
     public pm() {

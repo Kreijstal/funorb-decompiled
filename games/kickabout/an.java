@@ -4,10 +4,10 @@
 final class an {
     static boolean field_d;
     private eq field_e;
-    private sj field_b;
+    private ResourceArchive field_b;
     static int field_c;
     static String field_f;
-    private sj field_a;
+    private ResourceArchive field_a;
 
     final bg a(int param0, int param1) {
         byte[] var4 = null;
@@ -41,7 +41,7 @@ final class an {
         }
     }
 
-    an(int param0, sj param1, sj param2, fg param3) {
+    an(int param0, ResourceArchive param1, ResourceArchive param2, fg param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

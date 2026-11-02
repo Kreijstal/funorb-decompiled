@@ -3,7 +3,7 @@
  */
 abstract class qd {
     int field_k;
-    static tf field_c;
+    static IntrusiveDeque field_c;
     static boolean[][] field_e;
     int field_h;
     static vn[] field_j;
@@ -23,7 +23,7 @@ abstract class qd {
 
     abstract void a(int param0, int param1);
 
-    final static void a(int param0, tf param1, java.awt.Point[] param2) {
+    final static void a(int param0, IntrusiveDeque param1, java.awt.Point[] param2) {
         try {
           wv.a((byte) -108, 38, param1, param2);
           if (param0 >= -39) {
@@ -43,7 +43,7 @@ abstract class qd {
           return;
         }
         java.awt.Point[] var2 = (java.awt.Point[]) null;
-        qd.a(-75, (tf) null, (java.awt.Point[]) null);
+        qd.a(-75, (IntrusiveDeque) null, (java.awt.Point[]) null);
         field_j = null;
         field_c = null;
         field_e = (boolean[][]) null;

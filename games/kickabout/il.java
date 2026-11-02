@@ -3,11 +3,11 @@
  */
 final class il {
     static char field_c;
-    static tf field_a;
+    static IntrusiveDeque field_a;
     static int field_g;
     static long field_f;
     static int field_b;
-    static ut[] field_d;
+    static Sprite[] field_d;
     static String field_e;
     static int field_h;
 
@@ -163,7 +163,7 @@ final class il {
 
     static {
         field_b = 640;
-        field_a = new tf();
+        field_a = new IntrusiveDeque();
         field_e = "<%0> has not yet unlocked this option for use.";
         field_h = 66;
     }

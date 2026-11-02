@@ -8,7 +8,7 @@ final class oh {
     static double[][] field_a;
     static int field_f;
     private int field_e;
-    private ut field_c;
+    private Sprite field_c;
     static String field_h;
 
     final static boolean b(int param0) {
@@ -105,7 +105,7 @@ final class oh {
         }
     }
 
-    oh(ut param0, int param1, int param2) {
+    oh(Sprite param0, int param1, int param2) {
         try {
           this.field_b = param1;
           this.field_c = param0;

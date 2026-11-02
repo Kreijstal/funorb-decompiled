@@ -4,7 +4,7 @@
 abstract class mu extends cm {
     private int field_W;
     private ic field_X;
-    private fd field_V;
+    private UiWidget field_V;
     static String field_S;
     private int field_T;
     private pj field_ab;
@@ -14,7 +14,7 @@ abstract class mu extends cm {
     private int field_Z;
     private int field_R;
 
-    private final void b(fd param0, int param1) {
+    private final void b(UiWidget param0, int param1) {
         try {
           if (null != this.field_ab) {
             this.field_ab.c((byte) -109);
@@ -54,7 +54,7 @@ abstract class mu extends cm {
         super.m(param0);
     }
 
-    boolean a(char param0, byte param1, fd param2, int param3) {
+    boolean a(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -90,10 +90,10 @@ abstract class mu extends cm {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, qm param3, int param4, boolean param5) {
+    final static void a(int param0, boolean param1, int param2, MusicTrack param3, int param4, boolean param5) {
         if (!param5) {
-          qm var7 = (qm) null;
-          mu.a(-65, false, -66, (qm) null, -42, true);
+          MusicTrack var7 = (MusicTrack) null;
+          mu.a(-65, false, -66, (MusicTrack) null, -42, true);
         }
         if (param2 < 0 ||
           param2 >= sk.field_d.field_o) {
@@ -118,7 +118,7 @@ abstract class mu extends cm {
         field_Y = null;
     }
 
-    void a(byte param0, fd param1) {
+    void a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -154,7 +154,7 @@ abstract class mu extends cm {
         }
     }
 
-    mu(se param0, fd param1, int param2, int param3, int param4) {
+    mu(se param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_n, param1.field_i + (12 + param2));
         try {
           this.field_U = param4;

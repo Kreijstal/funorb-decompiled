@@ -35,7 +35,7 @@ final class hl extends lg implements sv, ft {
         }
     }
 
-    public final void a(int param0, ga param1) {
+    public final void a(int param0, TextInputWidget param1) {
         try {
           int var3_int = -20 % ((8 - param0) / 47);
         } catch (RuntimeException runtimeException) {
@@ -131,7 +131,7 @@ final class hl extends lg implements sv, ft {
         return this.field_g.b(true);
     }
 
-    public final void a(byte param0, ga param1) {
+    public final void a(byte param0, TextInputWidget param1) {
         try {
           this.a(113);
           if (param0 <= 65) {

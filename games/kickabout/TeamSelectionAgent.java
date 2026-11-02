@@ -11,7 +11,7 @@ final class TeamSelectionAgent extends MatchAgent {
     static String field_n;
     static int field_f;
     int[] field_k;
-    static ut[] field_p;
+    static Sprite[] field_p;
     static String field_g;
 
     final boolean a(int param0, int param1) {

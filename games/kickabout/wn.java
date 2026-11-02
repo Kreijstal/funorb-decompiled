@@ -9,9 +9,9 @@ final class wn {
     boolean field_c;
     String[] field_f;
     static String field_i;
-    static ut field_j;
+    static Sprite field_j;
     static String field_h;
-    static ut[] field_a;
+    static Sprite[] field_a;
 
     final static boolean a(byte param0) {
         int var1 = -55 / ((-40 - param0) / 36);

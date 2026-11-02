@@ -26,10 +26,10 @@ final class rq extends qt {
         uo var3 = pb.field_C;
         int var4 = 20 + this.field_j;
         int var5 = this.field_j + 360;
-        int var6 = ((hu) ((Object) var3)).field_p + ((hu) ((Object) var3)).field_G;
-        int var7 = ((hu) ((Object) var3)).c(vp.field_p, -var4 + var5, var6);
-        on.a(-12 + var4, 155, -var4 + (var5 + 24), 12 + var7, 6, 0, 128);
-        ((hu) ((Object) var3)).a(vp.field_p, var4, 160, -var4 + var5, 1000, 16777215, -1, 0, 0, var6);
+        int var6 = ((BitmapFont) ((Object) var3)).field_p + ((BitmapFont) ((Object) var3)).field_G;
+        int var7 = ((BitmapFont) ((Object) var3)).c(vp.field_p, -var4 + var5, var6);
+        SoftwareRasterizer.a(-12 + var4, 155, -var4 + (var5 + 24), 12 + var7, 6, 0, 128);
+        ((BitmapFont) ((Object) var3)).a(vp.field_p, var4, 160, -var4 + var5, 1000, 16777215, -1, 0, 0, var6);
     }
 
     final static double a(int param0, int param1, byte param2, int param3, ea param4, int param5, int param6, int param7, int param8) {
@@ -54,9 +54,9 @@ final class rq extends qt {
         var22 = Kickabout.field_G;
         try {
           var13 = go.a(param4, param0, 0, ra.field_F);
-          var14 = go.a(param4, param0, 0, tf.field_g);
+          var14 = go.a(param4, param0, 0, IntrusiveDeque.field_g);
           var15 = go.a(param4, param0, 0, gm.field_fb);
-          var16 = go.a(param4, param0, 0, ao.field_i);
+          var16 = go.a(param4, param0, 0, RandomAccessCacheFile.field_i);
           var19 = 0.0;
           jr.field_Mb = -1;
           if (param2 != -99) {
@@ -64,9 +64,9 @@ final class rq extends qt {
           }
           for (var21 = param7; param1 > var21; var21++) {
             var9_int = var13 + ll.a(ra.field_F, param2 ^ -4, param0, param4, var21);
-            var10 = ll.a(tf.field_g, 111, param0, param4, var21) + var14;
+            var10 = ll.a(IntrusiveDeque.field_g, 111, param0, param4, var21) + var14;
             var11 = var15 + ll.a(gm.field_fb, 121, param0, param4, var21);
-            var12 = var16 + ll.a(ao.field_i, 110, param0, param4, var21);
+            var12 = var16 + ll.a(RandomAccessCacheFile.field_i, 110, param0, param4, var21);
             if (var12 != 0) {
               var17 = ((double)var10 * (double)var10 + (double)var9_int * (double)var9_int + (double)var11 * (double)var11) / (double)var12;
               var12 = -var12 + param6;

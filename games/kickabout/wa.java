@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wa {
-    static ut field_a;
+    static Sprite field_a;
     static String field_c;
     static String field_b;
 
-    final static ut a(byte param0, String param1, sj param2, String param3) {
+    final static Sprite a(byte param0, String param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ut stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -60,20 +60,20 @@ final class wa {
         field_b = null;
     }
 
-    final static ot a(int param0, int param1) {
-        ut var8 = null;
-        ot var9 = null;
+    final static ArgbSprite a(int param0, int param1) {
+        Sprite var8 = null;
+        ArgbSprite var9 = null;
         int var4 = 0;
         int var5 = Kickabout.field_G;
         int var4Lifetime1;
         if (param0 < -89) {
-          var8 = new ut(108, 108);
+          var8 = new Sprite(108, 108);
           PacketBuffer.a(-118, var8);
-          on.d(54, 54, 51, 255);
-          on.d(54, 54, 43, 0);
+          SoftwareRasterizer.d(54, 54, 51, 255);
+          SoftwareRasterizer.d(54, 54, 43, 0);
           ts.a(param1, 0, 124);
           ta.e(117);
-          var9 = new ot(54, 54);
+          var9 = new ArgbSprite(54, 54);
           PacketBuffer.a(-92, var9);
           var8.f(0, 0);
           ta.e(119);
@@ -83,13 +83,13 @@ final class wa {
           return var9;
         }
         wa.b((byte) 1);
-        ut var6 = new ut(108, 108);
+        Sprite var6 = new Sprite(108, 108);
         PacketBuffer.a(-118, var6);
-        on.d(54, 54, 51, 255);
-        on.d(54, 54, 43, 0);
+        SoftwareRasterizer.d(54, 54, 51, 255);
+        SoftwareRasterizer.d(54, 54, 43, 0);
         ts.a(param1, 0, 124);
         ta.e(117);
-        ot var7 = new ot(54, 54);
+        ArgbSprite var7 = new ArgbSprite(54, 54);
         PacketBuffer.a(-92, var7);
         var6.f(0, 0);
         ta.e(119);
@@ -148,7 +148,7 @@ final class wa {
     }
 
     static {
-        field_a = new ut(96, 100);
+        field_a = new Sprite(96, 100);
         field_c = "Waiting for <%0> to start the game...";
         field_b = "The online auction system is a marketplace where your characters can be traded with other FunOrb players.<br><col=ffff00>Note: Auctions may not appear in the system for a few minutes after they are created.</col>";
     }

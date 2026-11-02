@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pg {
-    static uh field_d;
+    static PcmPlayerService field_d;
     static String field_c;
     static int field_b;
     static String[] field_a;
@@ -59,7 +59,7 @@ final class pg {
             }
             var2 = 1;
           }
-          ll.field_k.a(-21174, sj.a(el.field_A, n.field_m, (byte) -96), sj.a(sm.field_q, vc.field_y, (byte) -101));
+          ll.field_k.a(-21174, ResourceArchive.a(el.field_A, n.field_m, (byte) -96), ResourceArchive.a(sm.field_q, vc.field_y, (byte) -101));
           if (ll.field_k.c(-1)) {
             var1_int = 1;
           }
@@ -111,7 +111,7 @@ final class pg {
           return rd.field_e;
         }
         if (param1 == 8) {
-          return ow.field_d;
+          return ArchiveSource.field_d;
         }
         if (param1 == 11) {
           return fs.field_a;
@@ -138,7 +138,7 @@ final class pg {
           pg.a(false, -50);
         }
         if (23 == param1) {
-          return vq.field_i;
+          return FullscreenFocusCanvas.field_i;
         }
         if (param1 == 29) {
           return fs.field_a;

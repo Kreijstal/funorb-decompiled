@@ -6,10 +6,10 @@ final class si extends IntrusiveNode {
     static kj field_j;
     byte[][][] field_l;
     int field_p;
-    wu[] field_e;
+    PlatformTask[] field_e;
     int field_n;
     int[] field_m;
-    wu[] field_f;
+    PlatformTask[] field_f;
     static String field_i;
     static String[] field_q;
     int[] field_o;
@@ -29,7 +29,7 @@ final class si extends IntrusiveNode {
         field_j = null;
     }
 
-    final static void a(byte param0, bu param1, Object param2) {
+    final static void a(byte param0, PlatformTaskDispatcher param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

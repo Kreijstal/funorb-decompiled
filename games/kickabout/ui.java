@@ -22,7 +22,7 @@ final class ui extends vv {
             rk.field_f.q(-123);
           }
           pb.field_E = new pd(param0, param2, false, true, true);
-          we.field_a.a((byte) -122, (fd) (pb.field_E));
+          we.field_a.a((byte) -122, (UiWidget) (pb.field_E));
           if (param1 != 111) {
             field_y = true;
           }

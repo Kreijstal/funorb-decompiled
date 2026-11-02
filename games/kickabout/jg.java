@@ -4,11 +4,11 @@
 import java.util.*;
 
 final class jg extends ct {
-    static ut field_K;
+    static Sprite field_K;
     static String field_F;
     private int field_E;
     static String field_I;
-    static sj field_J;
+    static ResourceArchive field_J;
     private int field_D;
     static String field_A;
     private int field_H;
@@ -32,7 +32,7 @@ final class jg extends ct {
     final static void a(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5, int param6) {
         int var9 = 0;
         RuntimeException decompiledCaughtException = null;
-        ut var7 = null;
+        Sprite var7 = null;
         RuntimeException var7_ref = null;
         int[] var8 = null;
         int var10 = 0;
@@ -62,12 +62,12 @@ final class jg extends ct {
             }
             return;
           }
-          if (am.field_k != param0) {
+          if (DualLinkNode.field_k != param0) {
             if (kp.field_m == null) {
-              kp.field_m = new ut(var7.field_o + 8, var7.field_v + 8);
+              kp.field_m = new Sprite(var7.field_o + 8, var7.field_v + 8);
             }
             PacketBuffer.a(-56, kp.field_m);
-            on.b();
+            SoftwareRasterizer.b();
             var7.c(4, 4);
             nh.a(kp.field_m, 0.0, 1.3, 1.2);
             eo.a(kp.field_m, 65793);
@@ -80,10 +80,10 @@ final class jg extends ct {
             for (var9 = 0; var9 < 255; var9++) {
               var8[var9] = 65793 * var9;
             }
-            nh.a(20, 40, -20 + on.field_g, 40, 28, 40, var12);
+            nh.a(20, 40, -20 + SoftwareRasterizer.field_g, 40, 28, 40, var12);
             ta.e(119);
             ta.e(param6 + 123);
-            am.field_k = param0;
+            DualLinkNode.field_k = param0;
           }
           kp.field_m.c(param3 - 4, -4 + param2);
           return;
@@ -103,7 +103,7 @@ final class jg extends ct {
         field_A = null;
     }
 
-    final boolean a(boolean param0, int param1, int param2, fd param3, int param4, int param5, int param6) {
+    final boolean a(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         StringBuilder var9 = null;
@@ -147,7 +147,7 @@ final class jg extends ct {
         }
     }
 
-    final void a(byte param0, fd param1, int param2, int param3) {
+    final void a(byte param0, UiWidget param1, int param2, int param3) {
         int stackIn_17_1 = 0;
         int stackIn_18_2 = 0;
         int stackIn_22_1 = 0;
@@ -223,7 +223,7 @@ final class jg extends ct {
         }
     }
 
-    final void a(int param0, int param1, int param2, fd param3, int param4, int param5) {
+    final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         try {
           super.a(param0, param1, param2, param3, param4 ^ 0, param5);
           this.field_p = 0;
@@ -281,7 +281,7 @@ final class jg extends ct {
         }
     }
 
-    private jg(int param0, int param1, int param2, int param3, gj param4, jv param5, fd param6, boolean param7, boolean param8) {
+    private jg(int param0, int param1, int param2, int param3, gj param4, jv param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_H = 2147483647;
         this.field_C = 2147483647;
@@ -307,7 +307,7 @@ final class jg extends ct {
         }
         qa.field_E.b(0, param2);
         int var4 = dr.field_g.h(-113) ? 1 : 0;
-        if (wj.field_A != 0 &&
+        if (WidgetContainer.field_A != 0 &&
           var4 == 0) {
           param2 = false;
           hq.b((byte) 114);

@@ -172,7 +172,7 @@ final class gl {
         }
     }
 
-    final static ut[] a(int param0, byte param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
         int var5 = 34 % ((param1 - 38) / 37);
         return q.a(1, 1, param2, 1, 3, -1481, param4, param0, param3);
     }

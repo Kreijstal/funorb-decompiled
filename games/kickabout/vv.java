@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class vv extends am {
+abstract class vv extends DualLinkNode {
     boolean field_q;
     static hd field_o;
     boolean field_n;

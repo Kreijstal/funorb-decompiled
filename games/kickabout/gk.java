@@ -3,7 +3,7 @@
  */
 final class gk {
     static String field_c;
-    static ut[] field_a;
+    static Sprite[] field_a;
     static int[] field_b;
     static boolean field_e;
     static int[] field_f;
@@ -19,7 +19,7 @@ final class gk {
           return;
         }
         try {
-          qh.field_c = param2;
+          SectorCacheStore.field_c = param2;
           qs.field_K = param3;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "gk.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');

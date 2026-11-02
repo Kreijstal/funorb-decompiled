@@ -165,11 +165,11 @@ final class kk {
         this.field_q = false;
     }
 
-    final static boolean a(int param0, tf param1) {
+    final static boolean a(int param0, IntrusiveDeque param1) {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        tf var4 = null;
+        IntrusiveDeque var4 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -178,8 +178,8 @@ final class kk {
         try {
           var2 = param1.g(24009);
           if (param0 != -27054) {
-            var4 = (tf) null;
-            kk.a(-43, (tf) null);
+            var4 = (IntrusiveDeque) null;
+            kk.a(-43, (IntrusiveDeque) null);
           }
           while (var2 instanceof ak) {
             if (var2.field_d instanceof ak) {
@@ -206,13 +206,13 @@ final class kk {
         }
     }
 
-    final static ot a(up param0, int param1, boolean param2) {
+    final static ArgbSprite a(up param0, int param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         gr var6 = null;
-        ot stackIn_4_0 = null;
+        ArgbSprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -222,7 +222,7 @@ final class kk {
           var4 = 0;
           var5 = param1;
           if (!param0.field_c) {
-            var6 = tu.field_E;
+            var6 = GameLoopApplet.field_E;
             var3_int = var6.field_w;
             var5 = var6.field_R;
             var4 = var6.field_k;
@@ -243,7 +243,7 @@ final class kk {
         }
     }
 
-    final static cn a(int param0, sj param1, int param2, int param3, sj param4) {
+    final static cn a(int param0, ResourceArchive param1, int param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         Object stackIn_4_0 = null;
         cn stackIn_6_0 = null;

@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class d {
-    static sj field_b;
+    static ResourceArchive field_b;
     static String[] field_c;
-    static ut field_a;
+    static Sprite field_a;
 
     public static void a(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 0) {
-          field_a = (ut) null;
+          field_a = (Sprite) null;
           field_c = null;
           return;
         }

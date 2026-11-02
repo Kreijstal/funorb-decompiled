@@ -5,7 +5,7 @@ final class sk {
     static int field_c;
     static String field_b;
     static jj field_d;
-    static ut[] field_a;
+    static Sprite[] field_a;
 
     final static void a(int param0, int param1) {
         ea.a(vt.field_c.phaseTime, 5, true, 636, param1, -51);
@@ -16,7 +16,7 @@ final class sk {
 
     final static int a(byte param0) {
         if (param0 != 97) {
-          field_a = (ut[]) null;
+          field_a = (Sprite[]) null;
           return wd.field_n[0];
         }
         return wd.field_n[0];
@@ -73,7 +73,7 @@ final class sk {
           field_a = null;
           return;
         }
-        field_a = (ut[]) null;
+        field_a = (Sprite[]) null;
         field_d = null;
         field_b = null;
         field_a = null;

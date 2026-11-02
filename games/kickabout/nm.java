@@ -17,29 +17,29 @@ final class nm {
     static dp field_k;
     static String field_a;
 
-    final static ut a(int param0, int param1, ut param2) {
+    final static Sprite a(int param0, int param1, Sprite param2) {
         int var6 = 0;
         RuntimeException var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var7 = 0;
         int var8 = 0;
-        ut var9 = null;
-        ut var10 = null;
-        ut stackIn_3_0 = null;
-        ut stackIn_11_0 = null;
+        Sprite var9 = null;
+        Sprite var10 = null;
+        Sprite stackIn_3_0 = null;
+        Sprite stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         var8 = Kickabout.field_G;
         try {
-          var9 = new ut(param2.field_q, param2.field_w);
+          var9 = new Sprite(param2.field_q, param2.field_w);
           var10 = var9;
           var4 = 16711935 & param0;
           var5 = param0 & 65280;
           if (param1 >= -73) {
-            stackIn_3_0 = (ut) null;
+            stackIn_3_0 = (Sprite) null;
             return stackIn_3_0;
           }
           for (var6 = 0; var10.field_y.length > var6; var6++) {
@@ -75,11 +75,11 @@ final class nm {
         return 55 + var2 * 45 / 100;
     }
 
-    private nm(sj param0, int param1, String param2) {
+    private nm(ResourceArchive param0, int param1, String param2) {
         this(param0, param1, param0.a((byte) -111, param2, param1));
     }
 
-    nm(sj param0, String param1, String param2) {
+    nm(ResourceArchive param0, String param1, String param2) {
         this(param0, param0.b(param1, -1), param2);
     }
 
@@ -103,7 +103,7 @@ final class nm {
           field_b = (int[]) null;
         }
         boolean decompiledFrameRemainder0 = true;
-        stackIn_8_0 = kl.field_t;
+        stackIn_8_0 = ArchiveIndex.field_t;
         if (param3 == ih.field_c &&
           rm.field_C == param0) {
           if (param2) {
@@ -119,7 +119,7 @@ final class nm {
         if (decompiledFrameRemainder0) {
           stackIn_10_1 = true;
         }
-        kl.field_t = stackIn_8_0 | stackIn_10_1;
+        ArchiveIndex.field_t = stackIn_8_0 | stackIn_10_1;
         wh.field_q = true;
         rl.field_r = -1;
         vi.field_n = param2;
@@ -250,7 +250,7 @@ final class nm {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, tf param5, byte param6) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, IntrusiveDeque param5, byte param6) {
         int var11 = 0;
         int var7_int = 0;
         int var8 = 0;
@@ -266,7 +266,7 @@ final class nm {
         try {
           var7_int = param0 - param4;
           var8 = param2 - param3;
-          var9 = de.a(var7_int * var7_int + var8 * var8, (byte) -98);
+          var9 = GameKeyHandler.a(var7_int * var7_int + var8 * var8, (byte) -98);
           var10 = var9 / param1;
           if (param6 >= -10) {
             return;
@@ -325,7 +325,7 @@ final class nm {
         }
     }
 
-    private nm(sj param0, int param1, int param2) {
+    private nm(ResourceArchive param0, int param1, int param2) {
         int var7 = 0;
         byte[] var4 = null;
         int var5 = 0;

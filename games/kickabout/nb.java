@@ -10,7 +10,7 @@ final class nb {
     static wc field_i;
     to field_l;
     static int[] field_e;
-    static ut[] field_j;
+    static Sprite[] field_j;
     boolean field_d;
     static String field_h;
     static boolean field_f;
@@ -60,7 +60,7 @@ final class nb {
           return false;
         }
         if (param0 == 32) {
-          this.field_l = tg.a(sr.field_h, this.field_a, "").c();
+          this.field_l = VorbisSample.a(sr.field_h, this.field_a, "").c();
           this.field_d = true;
           return true;
         }

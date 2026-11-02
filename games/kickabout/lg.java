@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class lg implements l {
-    static ut field_a;
+    static Sprite field_a;
     static String field_c;
     private long field_b;
 
@@ -27,7 +27,7 @@ abstract class lg implements l {
           if (param0 instanceof byte[]) {
             var3 = (byte[]) (param0);
             if (param1) {
-              stackIn_9_0 = vq.a(70, var3);
+              stackIn_9_0 = FullscreenFocusCanvas.a(70, var3);
               return stackIn_9_0;
             }
             stackIn_7_0 = var3;
@@ -84,7 +84,7 @@ abstract class lg implements l {
         if (param0 == -24407) {
           return this.a(false);
         }
-        field_a = (ut) null;
+        field_a = (Sprite) null;
         return this.a(false);
     }
 
@@ -159,6 +159,6 @@ abstract class lg implements l {
 
     static {
         field_c = "Records";
-        field_a = new ut(926, 1374);
+        field_a = new Sprite(926, 1374);
     }
 }

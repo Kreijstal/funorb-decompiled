@@ -75,13 +75,13 @@ final class lr extends hs {
         stackIn_22_0 = 10 + var4Lifetime1;
         stackIn_23_1 = (var3_intLifetime1 == 0) ? 0 : 60;
         var6 = stackIn_22_0 + stackIn_23_1;
-        on.f(390, var5, 205, var6, 10, 983040);
-        on.a(390, var5, 205, var6, 10, 65793, 140);
+        SoftwareRasterizer.f(390, var5, 205, var6, 10, 983040);
+        SoftwareRasterizer.a(390, var5, 205, var6, 10, 65793, 140);
         pb.field_C.a(var2_ref_String, 400, var5 + 8, 185, var6, 16777215, -1, param0, 0, 16);
         this.d(param0 - 95);
         this.b(param0 ^ -2352, this.field_a.phaseTime);
         var2 = this.field_a.field_C.field_k[this.field_h];
-        on.a(220, 332, 150, 26, 8, 65793, 128);
+        SoftwareRasterizer.a(220, 332, 150, 26, 8, 65793, 128);
         var3 = df.field_F[var2].toLowerCase();
         un.field_d.d(var3, 293, 351, 16777215, -1);
         qj.field_f.c(220, 100);

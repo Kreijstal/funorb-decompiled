@@ -185,9 +185,9 @@ final class kt extends js {
 
     final void a(int param0, boolean param1) {
         if (this.field_h != 256) {
-          on.a(0, 0, 640, 480, 0, this.field_h);
+          SoftwareRasterizer.a(0, 0, 640, 480, 0, this.field_h);
         } else {
-          on.b();
+          SoftwareRasterizer.b();
         }
         if (param0 != -5) {
           field_m = (hd[]) null;

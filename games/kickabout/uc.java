@@ -74,7 +74,7 @@ final class uc extends tm {
         return -1;
     }
 
-    final static void a(tf param0, int param1) {
+    final static void a(IntrusiveDeque param0, int param1) {
         int var4 = 0;
         int stackIn_7_0 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -84,11 +84,11 @@ final class uc extends tm {
         IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         IntrusiveNode var3 = null;
-        tf var5 = null;
+        IntrusiveDeque var5 = null;
         var4 = Kickabout.field_G;
         try {
           if (ia.field_c) {
-            ov.a(param0, 0);
+            NodeHashTableIterator.a(param0, 0);
             return;
           }
           stackIn_7_0 = -27054;
@@ -111,8 +111,8 @@ final class uc extends tm {
           if (param1 == -22488) {
             return;
           }
-          var5 = (tf) null;
-          uc.a((tf) null, 81);
+          var5 = (IntrusiveDeque) null;
+          uc.a((IntrusiveDeque) null, 81);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -149,7 +149,7 @@ final class uc extends tm {
         }
         po.field_f = true;
         wd.field_l.k(103);
-        ku.a(ul.field_a, 4, false);
+        MouseInputHandler.a(ul.field_a, 4, false);
     }
 
     static {

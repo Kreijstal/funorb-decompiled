@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qp extends wj implements vh {
+final class qp extends WidgetContainer implements vh {
     static hd field_L;
     static String field_C;
     static int[] field_I;
-    private hu field_B;
+    private BitmapFont field_B;
     private wv field_E;
     static int field_H;
     private int[] field_M;
@@ -160,7 +160,7 @@ final class qp extends wj implements vh {
         }
     }
 
-    qp(wv param0, hu param1, String param2) {
+    qp(wv param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (gj) null);
         int var4_int = 0;
         this.field_N = 0;

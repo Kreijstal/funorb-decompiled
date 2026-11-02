@@ -48,10 +48,10 @@ final class ko {
         }
         this.field_b = 0;
         this.field_h = 0;
-        if (0 != wj.field_A) {
+        if (0 != WidgetContainer.field_A) {
           this.field_g = true;
-          this.field_i = wj.field_A;
-          this.field_h = wj.field_A;
+          this.field_i = WidgetContainer.field_A;
+          this.field_h = WidgetContainer.field_A;
           this.field_e = param2;
           this.field_d = rl.field_q;
         }
@@ -62,7 +62,7 @@ final class ko {
           }
           this.field_d = this.field_d - 1;
         }
-        if (wj.field_A == 0 &&
+        if (WidgetContainer.field_A == 0 &&
           FootballerAgent.field_p == 0) {
           this.field_i = 0;
         }

@@ -8,10 +8,10 @@ final class gu extends hd {
     private hd field_Lb;
     private hd field_Nb;
     private int field_Fb;
-    static ut field_zb;
+    static Sprite field_zb;
     private int[] field_Kb;
     private int field_Ab;
-    private ut[] field_Ob;
+    private Sprite[] field_Ob;
     static char[] field_yb;
     static String field_Db;
     private int field_Eb;
@@ -49,7 +49,7 @@ final class gu extends hd {
             return this.field_Kb[var4];
           }
         }
-        if (0 == wj.field_A) {
+        if (0 == WidgetContainer.field_A) {
           return this.field_Gb;
         }
         return -1;
@@ -66,7 +66,7 @@ final class gu extends hd {
         int var8Lifetime1;
         var11 = Kickabout.field_G;
         if (0 == this.field_Ab) {
-          this.field_Bb[this.field_Ab] = new vu(0L, (hd) null, (hd) null, this.field_Nb, (ut) null, ga.field_M);
+          this.field_Bb[this.field_Ab] = new vu(0L, (hd) null, (hd) null, this.field_Nb, (Sprite) null, TextInputWidget.field_M);
           this.field_Bb[this.field_Ab].field_p = 1;
           this.a((byte) -111, (hd) (this.field_Bb[this.field_Ab]));
           this.field_Kb[this.field_Ab] = -1;
@@ -91,7 +91,7 @@ final class gu extends hd {
 
     final void a(int param0, int param1, String param2) {
         try {
-          this.field_Bb[this.field_Ab] = new vu((long)param0, (hd) null, (hd) null, this.field_Lb, (ut) null, param2);
+          this.field_Bb[this.field_Ab] = new vu((long)param0, (hd) null, (hd) null, this.field_Lb, (Sprite) null, param2);
           this.field_Bb[this.field_Ab].field_S = this.field_Ob;
           this.field_Bb[this.field_Ab].field_ob = true;
           this.field_Bb[this.field_Ab].field_p = 1;
@@ -114,14 +114,14 @@ final class gu extends hd {
         return true;
     }
 
-    final static sj a(boolean param0, int param1, int param2, boolean param3, int param4) {
+    final static ResourceArchive a(boolean param0, int param1, int param2, boolean param3, int param4) {
         if (param4 <= 107) {
-          return (sj) null;
+          return (ResourceArchive) null;
         }
         return uj.a(param1, (byte) 112, param2, param0, false, param3);
     }
 
-    final void a(String param0, boolean param1, int param2, ut param3) {
+    final void a(String param0, boolean param1, int param2, Sprite param3) {
         try {
           this.field_Bb[this.field_Ab] = new vu(0L, (hd) null, (hd) null, this.field_Lb, param3, param0);
           this.field_Bb[this.field_Ab].field_S = this.field_Ob;
@@ -198,7 +198,7 @@ final class gu extends hd {
         var3.g(-1207444472, param0);
     }
 
-    gu(hd param0, ut[] param1, hd param2, hd param3, int param4, int param5, int param6, int param7, int param8) {
+    gu(hd param0, Sprite[] param1, hd param2, hd param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Kb = new int[256];
         this.field_Bb = new vu[256];

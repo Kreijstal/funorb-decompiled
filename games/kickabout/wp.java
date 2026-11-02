@@ -22,7 +22,7 @@ final class wp {
         field_e = null;
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, String[] param3, int param4, int param5, String[][] param6, ut[][] param7, String[] param8, sj param9, ut[][] param10, String[] param11, String[][] param12, byte param13, byte[] param14) {
+    final static void a(int[] param0, byte[] param1, int param2, String[] param3, int param4, int param5, String[][] param6, Sprite[][] param7, String[] param8, ResourceArchive param9, Sprite[][] param10, String[] param11, String[][] param12, byte param13, byte[] param14) {
         vu[] array$0 = null;
         vu[] array$1 = null;
         vu[] array$2 = null;
@@ -77,7 +77,7 @@ final class wp {
         var21 = Kickabout.field_G;
         try {
           ok.field_b = param11;
-          ku.field_f = param2;
+          MouseInputHandler.field_f = param2;
           ni.field_f = param10;
           fh.field_a = param7;
           ir.field_D = param5;
@@ -89,15 +89,15 @@ final class wp {
           oi.field_f = param3;
           ca.field_g = param6;
           jd.field_d = se.a(param9, 70, "lobby", "gameprivacy");
-          wm.field_m = se.a(param9, 86, "lobby", "ratedgame");
+          CachedArchiveSource.field_m = se.a(param9, 86, "lobby", "ratedgame");
           nv.field_L = se.a(param9, -6, "lobby", "opentome");
           i.field_E = se.a(param9, -119, "lobby", "allowspectators");
-          wj.field_w = new String[5];
-          wj.field_w[0] = lk.field_m;
-          wj.field_w[4] = TeamSelectionAgent.field_g;
-          wj.field_w[3] = bq.field_b;
-          wj.field_w[2] = bl.field_h;
-          wj.field_w[1] = mn.field_d;
+          WidgetContainer.field_w = new String[5];
+          WidgetContainer.field_w[0] = lk.field_m;
+          WidgetContainer.field_w[4] = TeamSelectionAgent.field_g;
+          WidgetContainer.field_w[3] = bq.field_b;
+          WidgetContainer.field_w[2] = bl.field_h;
+          WidgetContainer.field_w[1] = mn.field_d;
           mc.field_d = new hd(0L, (hd) null);
           id.field_s = new hd(0L, dn.field_zb, oh.field_h);
           ck.field_c = new hd(0L, pq.field_P, mt.field_b);
@@ -114,7 +114,7 @@ final class wp {
           var24.field_A = 1;
           li.field_a = new hd(0L, dw.field_e);
           li.field_a.field_A = 1;
-          rg.field_a = new hd(0L, ev.field_D, ic.field_g.toUpperCase());
+          MouseWheelInput.field_a = new hd(0L, ev.field_D, ic.field_g.toUpperCase());
           fp.field_o = new hd(0L, qa.field_H, li.field_f.toUpperCase());
           bt.field_b = new hd(0L, cp.field_g);
           va.field_w = new hd(0L, dn.field_zb, fr.field_B);
@@ -162,10 +162,10 @@ final class wp {
           jw.field_Cb = new hd(0L, dw.field_e);
           jw.field_Cb.field_p = 0;
           jw.field_Cb.field_A = 1;
-          ao.field_a = new hd(0L, dc.field_a, ap.field_x.toUpperCase());
+          RandomAccessCacheFile.field_a = new hd(0L, dc.field_a, ap.field_x.toUpperCase());
           kk.field_j = new hd(0L, tv.field_e);
           kk.field_j.a((byte) -112, jw.field_Cb);
-          kk.field_j.a((byte) -113, ao.field_a);
+          kk.field_j.a((byte) -113, RandomAccessCacheFile.field_a);
           w.field_e = new hd(0L, rj.field_b);
           w.field_e.a(dw.field_e, (byte) -110);
           w.field_e.field_p = 1;
@@ -174,11 +174,11 @@ final class wp {
           fm.field_C = new hd(0L, (hd) null);
           ka.field_c = new hd(0L, dw.field_e);
           ka.field_c.field_A = 1;
-          bh.field_u = new hd(0L, dn.field_zb, oh.field_h);
+          BufferedSocket.field_u = new hd(0L, dn.field_zb, oh.field_h);
           jf.field_D = new hd(0L, pq.field_P, mt.field_b);
           ClientException.field_c = new np(0L, new hd(0L, (hd) null), rj.field_b, uk.field_b);
           fm.field_C.a((byte) -114, ka.field_c);
-          fm.field_C.a((byte) -105, bh.field_u);
+          fm.field_C.a((byte) -105, BufferedSocket.field_u);
           if (ui.field_t) {
             fm.field_C.a((byte) -123, jf.field_D);
           }
@@ -186,39 +186,39 @@ final class wp {
           ac.field_b = new hd(0L, ev.field_D, ns.field_b.toUpperCase());
           ci.field_h = new hd(0L, qa.field_H);
           sg.field_a = new hd(0L, cp.field_g);
-          ku.field_d = new hd(0L, oi.field_i, ik.field_F.toUpperCase());
+          MouseInputHandler.field_d = new hd(0L, oi.field_i, ik.field_F.toUpperCase());
           rf.field_c = new vu[param4 + 4][];
           qr.field_b = new hd[4 + param4];
           qr.field_b[0] = new hd(0L, kr.field_b, mi.field_a);
           rf.field_c[0] = new vu[6];
           for (var17_int = 0; 5 > var17_int; var17_int++) {
-            rf.field_c[0][var17_int + 1] = new vu(0L, k.field_f, (hd) null, ul.field_c, jd.field_d[var17_int], wj.field_w[var17_int]);
+            rf.field_c[0][var17_int + 1] = new vu(0L, k.field_f, (hd) null, ul.field_c, jd.field_d[var17_int], WidgetContainer.field_w[var17_int]);
           }
           if (2 <= rn.field_d.length) {
             qr.field_b[1] = new hd(0L, kr.field_b, qk.field_H);
             array$0 = new vu[rn.field_d.length + 1];
             rf.field_c[1] = array$0;
-            rf.field_c[1][0] = new vu(0L, k.field_f, (hd) null, ul.field_c, (ut) null, ia.field_b);
+            rf.field_c[1][0] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, ia.field_b);
             for (var17_intLifetime1 = 0; rn.field_d.length > var17_intLifetime1; var17_intLifetime1++) {
-              rf.field_c[1][1 + var17_intLifetime1] = new vu(0L, k.field_f, (hd) null, ul.field_c, (ut) null, Integer.toString(rn.field_d[var17_intLifetime1]));
+              rf.field_c[1][1 + var17_intLifetime1] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, Integer.toString(rn.field_d[var17_intLifetime1]));
             }
           }
           qr.field_b[2] = new hd(0L, kr.field_b, rc.field_b);
-          rf.field_c[2] = new vu[]{new vu(0L, k.field_f, (hd) null, ul.field_c, (ut) null, ia.field_b), new vu(0L, k.field_f, (hd) null, ul.field_c, i.field_E[0], np.field_Db), new vu(0L, k.field_f, (hd) null, ul.field_c, i.field_E[1], um.field_g)};
-          if (ku.field_f > 1) {
+          rf.field_c[2] = new vu[]{new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, ia.field_b), new vu(0L, k.field_f, (hd) null, ul.field_c, i.field_E[0], np.field_Db), new vu(0L, k.field_f, (hd) null, ul.field_c, i.field_E[1], um.field_g)};
+          if (MouseInputHandler.field_f > 1) {
             qr.field_b[3] = new hd(0L, kr.field_b, pc.field_b);
-            array$1 = new vu[1 + ku.field_f];
+            array$1 = new vu[1 + MouseInputHandler.field_f];
             rf.field_c[3] = array$1;
-            rf.field_c[3][0] = new vu(0L, k.field_f, (hd) null, ul.field_c, (ut) null, ia.field_b);
-            for (var17_intLifetime2 = 0; ku.field_f > var17_intLifetime2; var17_intLifetime2++) {
-              rf.field_c[3][1 + var17_intLifetime2] = new vu(0L, k.field_f, (hd) null, ul.field_c, (ut) null, vc.field_D[var17_intLifetime2]);
+            rf.field_c[3][0] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, ia.field_b);
+            for (var17_intLifetime2 = 0; MouseInputHandler.field_f > var17_intLifetime2; var17_intLifetime2++) {
+              rf.field_c[3][1 + var17_intLifetime2] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, vc.field_D[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param4 > var17_intLifetime3; var17_intLifetime3++) {
             qr.field_b[4 + var17_intLifetime3] = new hd(0L, kr.field_b, ok.field_b[var17_intLifetime3]);
             array$2 = new vu[qj.b(255, (int) ue.field_k[var17_intLifetime3]) + 1];
             rf.field_c[var17_intLifetime3 + 4] = array$2;
-            rf.field_c[4 + var17_intLifetime3][0] = new vu(0L, k.field_f, (hd) null, ul.field_c, (ut) null, ia.field_b);
+            rf.field_c[4 + var17_intLifetime3][0] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) null, ia.field_b);
             for (var18 = 0; (255 & ue.field_k[var17_intLifetime3]) > var18; var18++) {
               if (ni.field_f != null) {
                 if (null == ni.field_f[var17_intLifetime3]) {
@@ -238,7 +238,7 @@ final class wp {
               } else {
                 var20 = null;
               }
-              rf.field_c[4 + var17_intLifetime3][var18 + 1] = new vu(0L, k.field_f, (hd) null, ul.field_c, (ut) (var19_ref), (String) (var20));
+              rf.field_c[4 + var17_intLifetime3][var18 + 1] = new vu(0L, k.field_f, (hd) null, ul.field_c, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param4 > var17_intLifetime4; var17_intLifetime4++) {
@@ -264,11 +264,11 @@ final class wp {
           fp.field_p = new hd(0L, (hd) null);
           fp.field_p.a((byte) -106, ci.field_h);
           fp.field_p.a((byte) -111, sg.field_a);
-          sg.field_a.a((byte) -107, ku.field_d);
+          sg.field_a.a((byte) -107, MouseInputHandler.field_d);
           for (var18Lifetime2 = 0; var18Lifetime2 < 4 + param4; var18Lifetime2++) {
             if ((1 != var18Lifetime2 ||
               !(rn.field_d.length < 2)) && (var18Lifetime2 != 3 ||
-              !(ku.field_f <= 1))) {
+              !(MouseInputHandler.field_f <= 1))) {
               sg.field_a.a((byte) -121, qr.field_b[var18Lifetime2]);
               for (var19 = 0; var19 < rf.field_c[var18Lifetime2].length; var19++) {
                 if (rf.field_c[var18Lifetime2][var19] != null) {
@@ -357,11 +357,11 @@ final class wp {
         }
     }
 
-    final static ut[] a(int param0) {
+    final static Sprite[] a(int param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
-        ut[] var1;
+        Sprite[] var1;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
@@ -375,9 +375,9 @@ final class wp {
         byte[] var21;
         int[] var22;
         var8 = Kickabout.field_G;
-        var1 = new ut[io.field_l];
+        var1 = new Sprite[io.field_l];
         for (var2 = 0; io.field_l > var2; var2++) {
-          var3 = lo.field_j[var2] * ku.field_c[var2];
+          var3 = lo.field_j[var2] * MouseInputHandler.field_c[var2];
           var21 = pq.field_O[var2];
           if (!rm.field_B[var2]) {
             var10 = new int[var3];
@@ -385,7 +385,7 @@ final class wp {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = lt.field_a[qj.b((int) var21[var6], 255)];
             }
-            var1[var2] = new ut(kw.field_i, ai.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], ku.field_c[var2], lo.field_j[var2], var22);
+            var1[var2] = new Sprite(kw.field_i, ai.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], lo.field_j[var2], var22);
           } else {
             var16 = es.field_e[var2];
             var12 = var16;
@@ -397,11 +397,11 @@ final class wp {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = hf.a(lt.field_a[qj.b((int) var21[var7], 255)], qj.b(-16777216, var16[var7] << 24));
             }
-            var1[var2] = (ut) ((Object) new ot(kw.field_i, ai.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], ku.field_c[var2], lo.field_j[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(kw.field_i, ai.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], lo.field_j[var2], var17));
           }
         }
         if (param0 >= -123) {
-          return (ut[]) null;
+          return (Sprite[]) null;
         }
         tk.h((byte) -79);
         return var1;
@@ -423,7 +423,7 @@ final class wp {
         try {
           if (param0 >= -31) {
             var7 = (byte[]) null;
-            wp.a((int[]) null, (byte[]) null, 68, (String[]) null, -103, -47, (String[][]) null, (ut[][]) null, (String[]) null, (sj) null, (ut[][]) null, (String[]) null, (String[][]) null, (byte) 59, (byte[]) null);
+            wp.a((int[]) null, (byte[]) null, 68, (String[]) null, -103, -47, (String[][]) null, (Sprite[][]) null, (String[]) null, (ResourceArchive) null, (Sprite[][]) null, (String[]) null, (String[][]) null, (byte) 59, (byte[]) null);
           }
           var4_long = 0L;
           var6 = null;

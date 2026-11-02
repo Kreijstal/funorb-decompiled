@@ -11,7 +11,7 @@ abstract class jb extends IntrusiveNode {
     private int field_r;
     private int field_e;
     hd[] field_i;
-    private ut field_l;
+    private Sprite field_l;
     int field_n;
     static java.security.SecureRandom field_g;
     private String[] field_o;
@@ -109,7 +109,7 @@ abstract class jb extends IntrusiveNode {
         if (param0) {
           this.field_r = 11;
         }
-        on.a(0, 0, 640, 480, 0, var2);
+        SoftwareRasterizer.a(0, 0, 640, 480, 0, var2);
         if (this.field_q == 4096) {
           this.a(32, this.field_p, this.field_k);
           var12 = 0;
@@ -252,7 +252,7 @@ abstract class jb extends IntrusiveNode {
           this.field_r = this.a((byte) 115);
           this.field_k = 480 - this.field_r >> 1;
           this.field_p = -this.field_e + 640 >> 1;
-          this.field_l = new ut(this.field_e, this.field_r);
+          this.field_l = new Sprite(this.field_e, this.field_r);
           this.field_i = new hd[param1.length];
           var4_int = this.field_i.length;
           var5 = -(95 * var4_int) - 5 * (var4_int - 1) + 640 >> 1;
@@ -279,7 +279,7 @@ abstract class jb extends IntrusiveNode {
         }
         cq.field_j.e(param1 - 10, 15 + param2, cq.field_j.field_o * 2 / 3, 2 * cq.field_j.field_v / 3, param0);
         this.a((byte) -29, param1, param2);
-        on.c(param1, param2, this.field_e, this.field_r, 2, 65793);
+        SoftwareRasterizer.c(param1, param2, this.field_e, this.field_r, 2, 65793);
         ta.e(124);
     }
 

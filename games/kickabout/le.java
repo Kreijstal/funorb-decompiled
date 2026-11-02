@@ -5,7 +5,7 @@ import java.io.*;
 
 final class le {
     static byte[][][] field_e;
-    static tf field_d;
+    static IntrusiveDeque field_d;
     static String field_b;
     static String field_a;
     static String field_c;
@@ -224,7 +224,7 @@ final class le {
     }
 
     static {
-        field_d = new tf();
+        field_d = new IntrusiveDeque();
         field_b = "Updates will sent to the email address you've given";
         field_c = "kit style";
         field_a = "Add friend";

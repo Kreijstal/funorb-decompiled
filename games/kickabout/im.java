@@ -124,7 +124,7 @@ abstract class im extends hd {
         }
     }
 
-    final static void a(int param0, int param1, int param2, ut param3) {
+    final static void a(int param0, int param1, int param2, Sprite param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

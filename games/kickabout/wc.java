@@ -10,7 +10,7 @@ final class wc {
     int field_f;
     int field_d;
     gj field_l;
-    hu field_a;
+    BitmapFont field_a;
     static String field_q;
     int field_i;
     static sn field_k;
@@ -32,16 +32,16 @@ final class wc {
           var5_int = this.field_a.a(param3);
           var6 = this.field_a.field_L + this.field_a.field_p;
           var7 = param0;
-          if (var7 + var5_int + 6 > on.field_g) {
-            var7 = -6 - var5_int + on.field_g;
+          if (var7 + var5_int + 6 > SoftwareRasterizer.field_g) {
+            var7 = -6 - var5_int + SoftwareRasterizer.field_g;
           }
           var8 = -this.field_a.field_L + param1 + 32;
-          if (!(var6 + var8 + 6 <= on.field_f)) {
-            var8 = -6 + (on.field_f - var6);
+          if (!(var6 + var8 + 6 <= SoftwareRasterizer.field_f)) {
+            var8 = -6 + (SoftwareRasterizer.field_f - var6);
           }
-          on.e(var7, var8, 6 + var5_int, 6 + var6, this.field_b);
+          SoftwareRasterizer.e(var7, var8, 6 + var5_int, 6 + var6, this.field_b);
           int var9 = -76 / ((param2 - 58) / 54);
-          on.a(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_t);
+          SoftwareRasterizer.a(1 + var7, 1 + var8, 4 + var5_int, var6 + 4, this.field_t);
           this.field_a.a(param3, var7 + 3, 3 + var8 + this.field_a.field_L, this.field_b, -1);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "wc.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -49,7 +49,7 @@ final class wc {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {
-        on.b(param2, param3, param4, param1, param0);
+        SoftwareRasterizer.b(param2, param3, param4, param1, param0);
         if (!param5) {
           this.a(-95, 103, -98, -54, -82, true);
         }
@@ -89,22 +89,22 @@ final class wc {
         if (param6 != -2) {
           return;
         }
-        on.a(param0, param4, param3, param1, param2, param5);
+        SoftwareRasterizer.a(param0, param4, param3, param1, param2, param5);
     }
 
-    final void a(hu param0, int param1) {
+    final void a(BitmapFont param0, int param1) {
         int var7_int = 0;
         id var6 = null;
         id var7 = null;
         ei discarded$0 = null;
         du discarded$1 = null;
         id var8 = null;
-        ut[] var9 = null;
-        ut[] var10 = null;
-        ut dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         id var11 = null;
         id var12 = null;
-        ut var13 = null;
+        Sprite var13 = null;
         id var14 = null;
         id var19 = null;
         int var15 = Kickabout.field_G;
@@ -129,9 +129,9 @@ final class wc {
         var4.a(0, param1 ^ -8811).b(-2, 15658734).a(true, ba.a(7829367, 10066329, 8947848, (byte) -88));
         var4.a(1, -12085).a(true, ba.a(13421772, 10066329, 11184810, (byte) 46));
         var4.a(3, -12085).a(true, ba.a(10066329, 7829367, 8947848, (byte) 46)).a((byte) -90, 1).b((byte) 111, 1);
-        ut[] var5 = new ut[9];
-        ot var16 = new ot(32, 32);
-        ot var18 = var16;
+        Sprite[] var5 = new Sprite[9];
+        ArgbSprite var16 = new ArgbSprite(32, 32);
+        ArgbSprite var18 = var16;
         for (var7_int = 0; var18.field_y.length > var7_int; var7_int++) {
           var16.field_y[var7_int] = 1077952576;
         }
@@ -139,7 +139,7 @@ final class wc {
           return;
         }
         try {
-          var5[4] = (ut) ((Object) var18);
+          var5[4] = (Sprite) ((Object) var18);
           var4.a(4, -12085).a(true, (byte) 113).a(true, var5);
           var4.a(5, -12085).a(true, gl.a(65793, (byte) 115, 0, 0, 0)).a(true, (byte) -90).b(param1 - 3424, -1);
           this.field_l = (gj) ((Object) var4);
@@ -157,10 +157,10 @@ final class wc {
           var8.a(0, param1 ^ -8811).a(true, ba.a(10066329, 7829367, 15658734, (byte) -118)).b(-2, 1118481).a(-1, true);
           var8.a(4, param1 ^ -8811).a(true, (byte) -58).a(true, var5);
           this.field_h = (gj) ((Object) var8);
-          var9 = new ut[9];
-          var10 = new ut[9];
-          var9[4] = new ut(2, 1);
-          var10[4] = new ut(1, 2);
+          var9 = new Sprite[9];
+          var10 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_y = new int[]{6710886, 7829367};
           var10[4].field_y = new int[]{6710886, 7829367};
@@ -168,7 +168,7 @@ final class wc {
           var12 = new id();
           var11.a(0, var9, 79);
           var12.a(0, var10, -77);
-          var13 = new ut(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_y = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new id(var4, true);
           var14.a(var13.b(), (byte) -95);
@@ -250,7 +250,7 @@ final class wc {
           if (-1 == var7) {
             var7 = this.field_a.field_p + this.field_a.field_G;
           }
-          var8 = on.field_g >> 2;
+          var8 = SoftwareRasterizer.field_g >> 2;
           var9 = this.field_a.a(param1);
           var10 = this.field_a.field_G + this.field_a.field_p;
           var11 = 1;
@@ -276,15 +276,15 @@ final class wc {
             }
           }
           var12 = param0;
-          if (var5_int + (var12 + var9) > on.field_g) {
-            var12 = on.field_g + (-var9 - var5_int);
+          if (var5_int + (var12 + var9) > SoftwareRasterizer.field_g) {
+            var12 = SoftwareRasterizer.field_g + (-var9 - var5_int);
           }
           var13Lifetime1 = 32 - this.field_a.field_L + param3;
-          if (on.field_f < var6 + (var13Lifetime1 + var10)) {
+          if (SoftwareRasterizer.field_f < var6 + (var13Lifetime1 + var10)) {
             var13Lifetime1 = -var10 + (param3 - var6);
           }
-          on.e(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_j);
-          on.a(1 + var12, 1 + var13Lifetime1, -2 + var9 + var5_int, -2 + (var6 + var10), this.field_t);
+          SoftwareRasterizer.e(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_j);
+          SoftwareRasterizer.a(1 + var12, 1 + var13Lifetime1, -2 + var9 + var5_int, -2 + (var6 + var10), this.field_t);
           this.field_a.a(param1, var12 + this.field_i, this.field_m + var13Lifetime1, var9, var10, this.field_b, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

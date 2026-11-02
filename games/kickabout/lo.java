@@ -4,8 +4,8 @@
 final class lo extends jd {
     static int[] field_j;
     static String field_k;
-    private ga field_n;
-    private ga field_o;
+    private TextInputWidget field_n;
+    private TextInputWidget field_o;
     static String field_m;
     static boolean field_l;
 
@@ -58,7 +58,7 @@ final class lo extends jd {
         }
     }
 
-    lo(ga param0, ga param1, ga param2) {
+    lo(TextInputWidget param0, TextInputWidget param1, TextInputWidget param2) {
         super(param0);
         try {
           this.field_n = param1;
@@ -101,7 +101,7 @@ final class lo extends jd {
             stackIn_5_0 = jt.field_Bb;
             return stackIn_5_0;
           }
-          if (!bi.a(var4, param1 - 32336, var3)) {
+          if (!ArchiveNetworkClient.a(var4, param1 - 32336, var3)) {
             stackIn_9_0 = jt.field_Bb;
             return stackIn_9_0;
           }
@@ -140,37 +140,37 @@ final class lo extends jd {
             param1 == jr.field_Kb &&
             wi.field_C == param3 &&
             param4 == gb.field_K &&
-            rg.field_f == param5) {
+            MouseWheelInput.field_f == param5) {
             return;
           }
           gb.field_K = param4;
           gv.field_h = param2;
           wi.field_C = param3;
           stackIn_11_0 = param5;
-          rg.field_f = stackIn_11_0;
+          MouseWheelInput.field_f = stackIn_11_0;
           jr.field_Kb = param1;
           var6_int = (100 * jr.field_Kb >> 8) + 50;
           var7 = (116 * gv.field_h >> 8) + 40;
           PacketBuffer.a(-68, wn.field_j);
-          on.b();
-          pt.a(var7, -22914, 0, on.field_f, 0);
+          SoftwareRasterizer.b();
+          pt.a(var7, -22914, 0, SoftwareRasterizer.field_f, 0);
           tn.field_e.a(0, 0, tn.field_e.field_o * var7 / 140, tn.field_e.field_v);
           ta.e(124);
-          pt.a(on.field_g, -22914, var7, on.field_f, 0);
+          pt.a(SoftwareRasterizer.field_g, -22914, var7, SoftwareRasterizer.field_f, 0);
           tn.field_e.d(-140 + var7, 0);
           ta.e(param0 - 706856552);
-          if (rg.field_f) {
-            for (var8 = 0; on.field_a.length > var8; var8++) {
-              on.field_a[var8] = (var6_int * on.field_a[var8] >> 8) * 65793;
+          if (MouseWheelInput.field_f) {
+            for (var8 = 0; SoftwareRasterizer.field_a.length > var8; var8++) {
+              SoftwareRasterizer.field_a[var8] = (var6_int * SoftwareRasterizer.field_a[var8] >> 8) * 65793;
             }
           } else {
-            for (var8 = 0; var8 < on.field_a.length; var8++) {
-              on.field_a[var8] = 16777215 - 257 * (var6_int * on.field_a[var8] >> 8);
+            for (var8 = 0; var8 < SoftwareRasterizer.field_a.length; var8++) {
+              SoftwareRasterizer.field_a[var8] = 16777215 - 257 * (var6_int * SoftwareRasterizer.field_a[var8] >> 8);
             }
           }
           ta.e(121);
           PacketBuffer.a(65, PacketBuffer.field_g);
-          on.b();
+          SoftwareRasterizer.b();
           var8Lifetime1 = uv.b(-gb.field_K, wi.field_C, (byte) 2);
           if (param0 != 706856675) {
             field_j = (int[]) null;
@@ -178,7 +178,7 @@ final class lo extends jd {
           var9 = wn.field_j.field_o;
           sa.field_e = -(var9 * we.a(var8Lifetime1, false)) >> 17;
           lr.field_m = var9 * ei.a(var8Lifetime1, (byte) -23) >> 17;
-          wn.field_j.a(wn.field_j.field_o << 3, wn.field_j.field_v << 3, on.field_g << 3, on.field_f << 3, var8Lifetime1 << 3, 4096);
+          wn.field_j.a(wn.field_j.field_o << 3, wn.field_j.field_v << 3, SoftwareRasterizer.field_g << 3, SoftwareRasterizer.field_f << 3, var8Lifetime1 << 3, 4096);
           ta.e(118);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -235,7 +235,7 @@ final class lo extends jd {
         }
         int var5 = (int)(nj.a(-62) % 2000L * 100L) / 2000;
         var5 = (var5 + (param0 * 100 >> 16)) % 100;
-        ut var6 = lt.field_c[var5];
+        Sprite var6 = lt.field_c[var5];
         if (!param3) {
           var6.c(-(var6.field_o >> 1) + param1, -(var6.field_v >> 1) + param2);
         } else {
@@ -332,30 +332,30 @@ final class lo extends jd {
           return;
         }
         try {
-          var4 = Math.max(((hu) ((Object) var11)).a(ns.field_d[0]), Math.max(((hu) ((Object) var11)).a(ns.field_d[3]), ((hu) ((Object) var11)).a(ns.field_d[4]))) + 20;
-          var5 = Math.max(((hu) ((Object) var11)).a(ns.field_d[1]), ((hu) ((Object) var11)).a(ns.field_d[2])) + 20;
+          var4 = Math.max(((BitmapFont) ((Object) var11)).a(ns.field_d[0]), Math.max(((BitmapFont) ((Object) var11)).a(ns.field_d[3]), ((BitmapFont) ((Object) var11)).a(ns.field_d[4]))) + 20;
+          var5 = Math.max(((BitmapFont) ((Object) var11)).a(ns.field_d[1]), ((BitmapFont) ((Object) var11)).a(ns.field_d[2])) + 20;
           var6 = var5 + var5 + var4;
           var7 = -(var6 >> 1) + param1;
           var8 = -34 + param0;
-          on.a(var7, var8, var4 + (var5 << 1), 69, 16777215, 30);
-          on.h(var7 - 1, -1 + var8, 2 + (var4 + (var5 << 1)), 71, 16777215, 128);
+          SoftwareRasterizer.a(var7, var8, var4 + (var5 << 1), 69, 16777215, 30);
+          SoftwareRasterizer.h(var7 - 1, -1 + var8, 2 + (var4 + (var5 << 1)), 71, 16777215, 128);
           for (var9 = 1; var9 < 3; var9++) {
-            on.c(var7 + 4, var8 + (var9 * 22 - 1), -10 + var6, 16777215, 100);
+            SoftwareRasterizer.c(var7 + 4, var8 + (var9 * 22 - 1), -10 + var6, 16777215, 100);
           }
-          on.f(var7 + var4, 4 + var8, 59, 16777215, 100);
-          on.f(var4 + var7 + var5, 4 + var8, 59, 16777215, 100);
+          SoftwareRasterizer.f(var7 + var4, 4 + var8, 59, 16777215, 100);
+          SoftwareRasterizer.f(var4 + var7 + var5, 4 + var8, 59, 16777215, 100);
           var9Lifetime1 = 22 + var8 - 4;
-          ((hu) ((Object) var3)).c(ns.field_d[0], var7 - (-var4 + 5), var9Lifetime1, 16777215, 65793);
-          ((hu) ((Object) var3)).d(ns.field_d[1], (var5 >> 1) + (var7 + var4), var9Lifetime1, 16777215, 65793);
-          ((hu) ((Object) var3)).d(ns.field_d[2], (var5 >> 1) + (var5 + var7 + var4), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).c(ns.field_d[0], var7 - (-var4 + 5), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).d(ns.field_d[1], (var5 >> 1) + (var7 + var4), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).d(ns.field_d[2], (var5 >> 1) + (var5 + var7 + var4), var9Lifetime1, 16777215, 65793);
           var9Lifetime1 += 22;
-          ((hu) ((Object) var3)).c(ns.field_d[3], -5 + var7 + var4, var9Lifetime1, 16777215, 65793);
-          ((hu) ((Object) var3)).d("+30", (var5 >> 1) + (var4 + var7), var9Lifetime1, 16777215, 65793);
-          ((hu) ((Object) var3)).d("+3", -2 + var7 + (var4 + (var5 + (var5 >> 1))), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).c(ns.field_d[3], -5 + var7 + var4, var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).d("+30", (var5 >> 1) + (var4 + var7), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).d("+3", -2 + var7 + (var4 + (var5 + (var5 >> 1))), var9Lifetime1, 16777215, 65793);
           var9Lifetime1 += 22;
-          ((hu) ((Object) var3)).c(ns.field_d[4], -5 + (var4 + var7), var9Lifetime1, 16777215, 65793);
-          ((hu) ((Object) var3)).d("-10", (var5 >> 1) + (var4 + var7), var9Lifetime1, 16777215, 65793);
-          ((hu) ((Object) var3)).d("0", -2 + (var4 + var7 - (-var5 - (var5 >> 1))), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).c(ns.field_d[4], -5 + (var4 + var7), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).d("-10", (var5 >> 1) + (var4 + var7), var9Lifetime1, 16777215, 65793);
+          ((BitmapFont) ((Object) var3)).d("0", -2 + (var4 + var7 - (-var5 - (var5 >> 1))), var9Lifetime1, 16777215, 65793);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "lo.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }

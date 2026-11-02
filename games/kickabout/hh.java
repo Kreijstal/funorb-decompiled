@@ -58,7 +58,7 @@ final class hh {
                   lj.field_g.a(-4019, var9, var13);
                 }
               } else {
-                au.a(var13, var5, param0, var4, 9);
+                Bzip2Decoder.a(var13, var5, param0, var4, 9);
               }
               stackIn_23_0 = var6;
               return stackIn_23_0;

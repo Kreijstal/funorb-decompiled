@@ -57,7 +57,7 @@ final class mp extends IntrusiveNode {
               } else {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              mm.a("document.cookie=\"" + var5Lifetime6 + "\"", param0, (byte) 115);
+              AppletJavaScriptBridge.a("document.cookie=\"" + var5Lifetime6 + "\"", param0, (byte) 115);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;

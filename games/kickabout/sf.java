@@ -3,8 +3,8 @@
  */
 final class sf extends qt {
     private hd field_B;
-    static hu field_F;
-    static ut field_C;
+    static BitmapFont field_F;
+    static Sprite field_C;
     private int field_E;
     static String field_G;
     static String[] field_D;
@@ -43,33 +43,33 @@ final class sf extends qt {
         if (param1 < 99) {
           this.field_B = (hd) null;
           super.a(param0, 110);
-          on.a(this.field_B.field_F - 10, this.field_B.field_T - 20, 20 + this.field_B.field_q, 100 + this.field_B.field_mb, 8, 65793, this.field_E >> 1);
+          SoftwareRasterizer.a(this.field_B.field_F - 10, this.field_B.field_T - 20, 20 + this.field_B.field_q, 100 + this.field_B.field_mb, 8, 65793, this.field_E >> 1);
           this.field_B.a(76, param0);
           un.field_d.c(sk.field_b, this.field_B.field_F + (this.field_B.field_q >> 1), (this.field_B.field_mb >> 1) + (this.field_B.field_T - 28), 16777215, -1, this.field_E);
           un.field_d.c(jd.field_e.toUpperCase(), (this.field_B.field_q >> 1) + this.field_B.field_F, 6 + this.field_B.field_T + (this.field_B.field_mb >> 1), 16777215, -1, this.field_E);
           un.field_d.a(ri.field_v.toLowerCase(), this.field_B.field_F, this.field_B.field_mb + this.field_B.field_T, this.field_B.field_q, 80, 16777215, -1, this.field_E, 1, 1, 0);
-          if (!tu.field_E.field_J[0]) {
-            on.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
+          if (!GameLoopApplet.field_E.field_J[0]) {
+            SoftwareRasterizer.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
             return;
           }
           if (la.a(100)) {
-            on.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
+            SoftwareRasterizer.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
             return;
           }
           return;
         }
         super.a(param0, 110);
-        on.a(this.field_B.field_F - 10, this.field_B.field_T - 20, 20 + this.field_B.field_q, 100 + this.field_B.field_mb, 8, 65793, this.field_E >> 1);
+        SoftwareRasterizer.a(this.field_B.field_F - 10, this.field_B.field_T - 20, 20 + this.field_B.field_q, 100 + this.field_B.field_mb, 8, 65793, this.field_E >> 1);
         this.field_B.a(76, param0);
         un.field_d.c(sk.field_b, this.field_B.field_F + (this.field_B.field_q >> 1), (this.field_B.field_mb >> 1) + (this.field_B.field_T - 28), 16777215, -1, this.field_E);
         un.field_d.c(jd.field_e.toUpperCase(), (this.field_B.field_q >> 1) + this.field_B.field_F, 6 + this.field_B.field_T + (this.field_B.field_mb >> 1), 16777215, -1, this.field_E);
         un.field_d.a(ri.field_v.toLowerCase(), this.field_B.field_F, this.field_B.field_mb + this.field_B.field_T, this.field_B.field_q, 80, 16777215, -1, this.field_E, 1, 1, 0);
-        if (!tu.field_E.field_J[0]) {
-          on.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
+        if (!GameLoopApplet.field_E.field_J[0]) {
+          SoftwareRasterizer.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
           return;
         }
         if (la.a(100)) {
-          on.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
+          SoftwareRasterizer.a(this.field_B.field_F, this.field_B.field_T, this.field_B.field_q, this.field_B.field_mb, 8, 0, this.field_E >> 1);
           return;
         }
     }
@@ -260,7 +260,7 @@ final class sf extends qt {
         var4 = Kickabout.field_G;
         super.a((byte) 123, param1);
         this.field_B.b(0, param1);
-        if (!tu.field_E.field_J[0]) {
+        if (!GameLoopApplet.field_E.field_J[0]) {
           this.field_B.field_gb = false;
           var3 = 46 % ((param0 - 38) / 60);
           if (this.field_B.field_sb != 1) {
@@ -270,10 +270,10 @@ final class sf extends qt {
           if (la.a(100)) {
             qt.a(16144);
           } else {
-            if (!tu.field_E.field_J[0]) {
+            if (!GameLoopApplet.field_E.field_J[0]) {
               tb.a((byte) 126, 40);
             } else {
-              if (!tu.field_E.d((byte) 116)) {
+              if (!GameLoopApplet.field_E.d((byte) 116)) {
                 tb.a((byte) 126, 5);
               } else {
                 or.field_d.b(90, (byte) 93);
@@ -294,10 +294,10 @@ final class sf extends qt {
         if (la.a(100)) {
           qt.a(16144);
         } else {
-          if (!tu.field_E.field_J[0]) {
+          if (!GameLoopApplet.field_E.field_J[0]) {
             tb.a((byte) 126, 40);
           } else {
-            if (!tu.field_E.d((byte) 116)) {
+            if (!GameLoopApplet.field_E.d((byte) 116)) {
               tb.a((byte) 126, 5);
             } else {
               or.field_d.b(90, (byte) 93);
@@ -353,7 +353,7 @@ final class sf extends qt {
         try {
           super.a(param0, param1, -96, param3);
           if (param2 >= -28) {
-            field_C = (ut) null;
+            field_C = (Sprite) null;
           }
           this.e(20378);
           if (!param1) {

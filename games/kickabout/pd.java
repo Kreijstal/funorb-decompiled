@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class pd extends wj implements sv, vh {
-    private ga field_J;
-    private ga field_N;
+final class pd extends WidgetContainer implements sv, vh {
+    private TextInputWidget field_J;
+    private TextInputWidget field_N;
     private wi field_K;
     private boolean field_C;
     private wi field_F;
@@ -14,7 +14,7 @@ final class pd extends wj implements sv, vh {
     private wi field_L;
     private String field_D;
     private boolean field_I;
-    static ew field_G;
+    static BufferedCacheFile field_G;
     static int[] field_B;
     static String[] field_M;
 
@@ -37,7 +37,7 @@ final class pd extends wj implements sv, vh {
         }
     }
 
-    final static void a(ut param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         double[] var3 = null;
         if (ih.field_c == 0) {
           return;
@@ -66,10 +66,10 @@ final class pd extends wj implements sv, vh {
         }
     }
 
-    public final void a(int param0, ga param1) {
+    public final void a(int param0, TextInputWidget param1) {
         try {
           if (this.field_N == param1) {
-            this.field_J.a((fd) (this), 0);
+            this.field_J.a((UiWidget) (this), 0);
           }
           if (this.field_J == param1) {
             this.l(60);
@@ -85,7 +85,7 @@ final class pd extends wj implements sv, vh {
           gf.field_a.a(this.field_D, 20 + param2 + this.field_t, 15 + param3 + this.field_g, -40 + this.field_n, this.field_i, 16777215, -1, 1, 0, gf.field_a.field_G);
         }
         if (null != this.field_L) {
-          on.f(param2 + 10, param3 + 134, -20 + this.field_n, 4210752);
+          SoftwareRasterizer.f(param2 + 10, param3 + 134, -20 + this.field_n, 4210752);
         }
         super.a(param0, (int) (char)param1, param2, param3);
     }
@@ -136,7 +136,7 @@ final class pd extends wj implements sv, vh {
         }
     }
 
-    final boolean a(char param0, byte param1, fd param2, int param3) {
+    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_12_0 = false;
@@ -175,7 +175,7 @@ final class pd extends wj implements sv, vh {
     }
 
     final void a(String param0, byte param1) {
-        ga var3 = null;
+        TextInputWidget var3 = null;
         String var4 = null;
         try {
           var3 = this.field_N;
@@ -198,7 +198,7 @@ final class pd extends wj implements sv, vh {
         field_M = null;
     }
 
-    public final void a(byte param0, ga param1) {
+    public final void a(byte param0, TextInputWidget param1) {
         try {
           if (param0 < 65) {
             this.h((byte) -105);
@@ -228,7 +228,7 @@ final class pd extends wj implements sv, vh {
         RuntimeException decompiledCaughtException = null;
         op var6 = null;
         RuntimeException var6_ref = null;
-        hu var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         vl var9 = null;
         cg var12 = null;
@@ -245,8 +245,8 @@ final class pd extends wj implements sv, vh {
             this.field_C)) {
             throw new IllegalStateException();
           }
-          this.field_N = (ga) ((Object) new mr(param0, (jv) (this), 100));
-          this.field_J = (ga) ((Object) new mr("", (jv) (this), 20));
+          this.field_N = (TextInputWidget) ((Object) new mr(param0, (jv) (this), 100));
+          this.field_J = (TextInputWidget) ((Object) new mr("", (jv) (this), 20));
           if (!this.field_H) {
             this.field_K = new wi(ju.field_P, (jv) null);
             stackIn_18_1 = null;
@@ -310,12 +310,12 @@ final class pd extends wj implements sv, vh {
           dupTemp$0 = new cg(10, this.field_g, -20 + this.field_n, 25, this.field_N, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.a(-120, dupTemp$0);
-          this.field_g = this.field_g + (((fd) ((Object) var12)).field_i + 5);
+          this.field_g = this.field_g + (((UiWidget) ((Object) var12)).field_i + 5);
           dupTemp$1 = new cg(10, this.field_g, -20 + this.field_n, 25, this.field_J, false, 80, 3, var7, 16777215, at.field_Ib);
           var13 = dupTemp$1;
           this.a(-55, dupTemp$1);
           this.field_K.field_k = (jv) (this);
-          this.field_g = this.field_g + (((fd) ((Object) var13)).field_i + 5);
+          this.field_g = this.field_g + (((UiWidget) ((Object) var13)).field_i + 5);
           if (this.field_L != null) {
             this.field_L.field_k = (jv) (this);
           }
@@ -374,8 +374,8 @@ final class pd extends wj implements sv, vh {
 
     final String a(int param0) {
         if (param0 <= 84) {
-          fd var3 = (fd) null;
-          this.a('f', (byte) 111, (fd) null, -119);
+          UiWidget var3 = (UiWidget) null;
+          this.a('f', (byte) 111, (UiWidget) null, -119);
         }
         if (null == this.field_N.field_q) {
           return "";
@@ -394,7 +394,7 @@ final class pd extends wj implements sv, vh {
         kg[] var9 = null;
         int var10 = 0;
         sm var11 = null;
-        ut var12 = null;
+        Sprite var12 = null;
         kg[] stackIn_8_0 = null;
         kg[] stackIn_11_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -415,7 +415,7 @@ final class pd extends wj implements sv, vh {
             if ((var7 & 1) == 0) {
               stackIn_8_0 = hl.field_e;
             } else {
-              stackIn_8_0 = am.field_h;
+              stackIn_8_0 = DualLinkNode.field_h;
             }
             var8 = stackIn_8_0;
             if ((var7 & 1) != 0) {

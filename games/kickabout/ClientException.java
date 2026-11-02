@@ -27,13 +27,13 @@ final class ClientException extends RuntimeException {
         field_a = null;
     }
 
-    final static ut[] a(ut[] param0, byte param1) {
+    final static Sprite[] a(Sprite[] param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        ut var3_ref_ut = null;
+        Sprite var3_ref_ut = null;
         int var3 = 0;
         int var4 = 0;
-        ut[] stackIn_5_0 = null;
+        Sprite[] stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -48,7 +48,7 @@ final class ClientException extends RuntimeException {
             param0[var2_int].field_v = param0[var2_int].field_w;
           }
           var3 = 45 % ((param1 + 62) / 35);
-          stackIn_5_0 = (ut[]) (param0);
+          stackIn_5_0 = (Sprite[]) (param0);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,8 +70,8 @@ final class ClientException extends RuntimeException {
           ta.field_A = param2;
           return;
         }
-        ut[] var4 = (ut[]) null;
-        ClientException.a((ut[]) null, (byte) 5);
+        Sprite[] var4 = (Sprite[]) null;
+        ClientException.a((Sprite[]) null, (byte) 5);
         tb.field_s = param0;
         ta.field_A = param2;
     }

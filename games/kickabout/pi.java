@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pi {
-    static gq field_b;
+    static PcmStreamMixer field_b;
     static String field_c;
     static String field_d;
-    static ut field_a;
+    static Sprite field_a;
 
     final static void a(int param0, sp param1) {
         if (param0 != 6022) {

@@ -4,7 +4,7 @@
 final class np extends hd {
     static int field_Bb;
     na field_Fb;
-    static tf field_Jb;
+    static IntrusiveDeque field_Jb;
     static String field_Eb;
     hd field_Ab;
     static String field_yb;
@@ -302,9 +302,9 @@ final class np extends hd {
           if (vs.field_g != null) {
             pd.a((byte) 70, 3, vs.field_g);
           }
-          dh.c((byte) -77);
-          if (dq.field_e) {
-            dq.field_e = false;
+          ImageProducerRasterBuffer.c((byte) -77);
+          if (ProxySocketConnector.field_e) {
+            ProxySocketConnector.field_e = false;
             dw.a(false, 0);
           }
         }
@@ -333,7 +333,7 @@ final class np extends hd {
         field_Db = "No";
         field_Eb = "Players: ";
         field_Ib = "decrease starting price by <%0>";
-        field_Jb = new tf();
+        field_Jb = new IntrusiveDeque();
         field_Gb = "gamemodes";
     }
 }

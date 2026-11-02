@@ -92,7 +92,7 @@ final class GoalStateAgent extends MatchAgent {
         return "AgentGoalState\tscore=[" + this.score[0] + "," + this.score[1] + "]\tgoal_count=" + this.goalCount + "\tgoal_scorer=" + this.goalScorer;
     }
 
-    final static kg[] a(int param0, int param1, sj param2, boolean param3) {
+    final static kg[] a(int param0, int param1, ResourceArchive param2, boolean param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         kg[] stackIn_6_0 = null;

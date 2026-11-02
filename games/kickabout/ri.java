@@ -131,11 +131,11 @@ class ri extends qv {
         }
     }
 
-    final static void a(sj param0, int[] param1, int param2, kg[] param3, sj param4) {
-        ut[] dupTemp$0 = null;
-        ut[] dupTemp$1 = null;
-        ut[] dupTemp$2 = null;
-        ut[] dupTemp$3 = null;
+    final static void a(ResourceArchive param0, int[] param1, int param2, kg[] param3, ResourceArchive param4) {
+        Sprite[] dupTemp$0 = null;
+        Sprite[] dupTemp$1 = null;
+        Sprite[] dupTemp$2 = null;
+        Sprite[] dupTemp$3 = null;
         kg[] var5 = null;
         int[] var6 = null;
         kg[] var6_array = null;
@@ -163,12 +163,12 @@ class ri extends qv {
         hd var9 = null;
         hd var10 = null;
         hd var11 = null;
-        ut[] var12 = null;
-        ut[] var13 = null;
-        ut[] var14 = null;
+        Sprite[] var12 = null;
+        Sprite[] var13 = null;
+        Sprite[] var14 = null;
         hd var15 = null;
-        ut[] var16 = null;
-        ut[] var17 = null;
+        Sprite[] var16 = null;
+        Sprite[] var17 = null;
         CommonGame var19 = null;
         int var7_intLifetime1;
         var18 = Kickabout.field_G;
@@ -237,7 +237,7 @@ class ri extends qv {
           jw.field_Ab.a(var5, var25);
           var8 = new hd(0L, (hd) null);
           var8.field_y = 16777215;
-          var8.field_X = (hu) ((Object) var7);
+          var8.field_X = (BitmapFont) ((Object) var7);
           var8.field_xb = sh.field_c;
           var8.field_p = 1;
           var9 = var8;
@@ -248,7 +248,7 @@ class ri extends qv {
             var19 = (CommonGame) null;
             ri.a((byte) -76, -14, (CommonGame) null, 71);
           }
-          var10.field_X = (hu) ((Object) rq.field_E);
+          var10.field_X = (BitmapFont) ((Object) rq.field_E);
           var10.field_xb = sh.field_c;
           var10.field_p = 1;
           var11 = var10;
@@ -281,7 +281,7 @@ class ri extends qv {
           pq.field_P.field_kb = 2;
           pq.field_P.field_R = tq.a(30, true, 3815994, 2039583, false, (byte) -46);
           dw.field_e = new hd(0L, (hd) null);
-          dw.field_e.field_X = (hu) ((Object) rq.field_E);
+          dw.field_e.field_X = (BitmapFont) ((Object) rq.field_E);
           dw.field_e.field_y = 13421772;
           dw.field_e.field_xb = sh.field_c;
           dw.field_e.field_p = 1;
@@ -293,7 +293,7 @@ class ri extends qv {
           ul.field_c.field_y = 16764006;
           var15 = new hd(0L, ul.field_c);
           var15.field_y = 16777215;
-          var15.field_X = (hu) ((Object) var7);
+          var15.field_X = (BitmapFont) ((Object) var7);
           var15.field_xb = sh.field_c;
           ip.field_c = new hd(0L, dw.field_e);
           ip.field_c.field_R = tq.a(16, false, 2236962, 2236962, false, (byte) -46);
@@ -307,24 +307,24 @@ class ri extends qv {
           mp.field_f.a(ul.field_c, (byte) -85);
           var16 = se.a(param4, 108, "lobby", "button_mouseover");
           su.field_b = new gu(pn.field_u, var12, dw.field_e, ul.field_c, 3, 2, mj.field_b, 3, sh.field_c);
-          rg.field_e = new hd(0L, ul.field_c);
-          rg.field_e.field_R = var13;
-          rg.field_e.field_eb = 1;
-          rg.field_e.field_S = var16;
-          rg.field_e.field_O = 1;
-          rg.field_e.field_cb = 1;
-          rg.field_e.field_x = 1;
-          rg.field_e.field_rb = se.a(param4, 7, "lobby", "button_mouseheld");
-          rg.field_e.field_u = se.a(param4, -119, "lobby", "button_active");
-          rg.field_e.field_tb = se.a(param4, -119, "lobby", "button_disabled");
-          rg.field_e.field_A = 1;
+          MouseWheelInput.field_e = new hd(0L, ul.field_c);
+          MouseWheelInput.field_e.field_R = var13;
+          MouseWheelInput.field_e.field_eb = 1;
+          MouseWheelInput.field_e.field_S = var16;
+          MouseWheelInput.field_e.field_O = 1;
+          MouseWheelInput.field_e.field_cb = 1;
+          MouseWheelInput.field_e.field_x = 1;
+          MouseWheelInput.field_e.field_rb = se.a(param4, 7, "lobby", "button_mouseheld");
+          MouseWheelInput.field_e.field_u = se.a(param4, -119, "lobby", "button_active");
+          MouseWheelInput.field_e.field_tb = se.a(param4, -119, "lobby", "button_disabled");
+          MouseWheelInput.field_e.field_A = 1;
           ge.field_n = new hd(0L, ul.field_c);
           ge.field_n.field_A = 1;
           ge.field_n.field_R = ClientException.a(se.a(param4, 6, "lobby", "tab_inactive"), (byte) 49);
           ge.field_n.field_S = ClientException.a(se.a(param4, -125, "lobby", "tab_mouseover"), (byte) 37);
           ge.field_n.field_u = var14;
-          ku.field_b = new hd(0L, (hd) null);
-          ku.field_b.field_R = fs.a(206, 3, -1, 1856141, 1127256, (byte) 91);
+          MouseInputHandler.field_b = new hd(0L, (hd) null);
+          MouseInputHandler.field_b.field_R = fs.a(206, 3, -1, 1856141, 1127256, (byte) 91);
           cp.field_g = new hd(0L, (hd) null);
           cp.field_g.field_R = fs.a(290, 3, -1, 11579568, 6052956, (byte) 118);
           vg.field_Qb = new hd(0L, var15);
@@ -442,37 +442,37 @@ class ri extends qv {
         }
     }
 
-    final static ot a(ot param0, boolean param1) {
+    final static ArgbSprite a(ArgbSprite param0, boolean param1) {
         int var3_int = 0;
-        ot stackIn_15_0 = null;
+        ArgbSprite stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        ot var3 = null;
+        ArgbSprite var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         CharSequence var9 = null;
-        ut var10 = null;
+        Sprite var10 = null;
         int var11 = 0;
-        ut var12 = null;
+        Sprite var12 = null;
         int var4Lifetime1;
         var8 = Kickabout.field_G;
         try {
-          var10 = new ut(param0.field_o, param0.field_v);
+          var10 = new Sprite(param0.field_o, param0.field_v);
           var12 = var10;
           for (var3_int = 0; var3_int < var12.field_y.length; var3_int++) {
             if (param0.field_y[var3_int] >>> 24 > 170) {
               var10.field_y[var3_int] = 8947848;
             }
           }
-          var3 = new ot(param0.field_o, param0.field_v);
+          var3 = new ArgbSprite(param0.field_o, param0.field_v);
           PacketBuffer.a(-54, var3);
-          on.a(0, 0, on.field_g, on.field_f, 6710886);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 6710886);
           for (var4 = 2; 10 > var4; var4++) {
             var5 = (-var4 + 12 << 7) / 13;
             var6 = param0.field_o - var4;
@@ -506,7 +506,7 @@ class ri extends qv {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, fd param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         try {
           if (param1) {
             kj.a(12105912, param2 + param3.field_g, param3.field_t + param4, param3.field_i, param3.field_n);
@@ -564,7 +564,7 @@ class ri extends qv {
         try {
           var4_int = -109 / ((-55 - param0) / 60);
           dw.a(127, fj.field_a);
-          if (null != ow.field_b) {
+          if (null != ArchiveSource.field_b) {
             var5 = em.field_d;
             em.field_d.field_mb = 0;
             var5.field_q = 0;
@@ -621,15 +621,15 @@ class ri extends qv {
               var10 = var15;
               var10 = var15;
               var11Lifetime1 = nv.field_F.field_X.a(var15) + nv.field_F.field_X.a('.') * 3;
-              if (16 == (de.field_c & 48)) {
+              if (16 == (GameKeyHandler.field_c & 48)) {
                 var10 = var15 + ".";
               }
               nv.field_F.field_A = 0;
               nv.field_F.field_kb = (nv.field_F.field_q - var11Lifetime1) / 2;
-              if ((de.field_c & 48) == 32) {
+              if ((GameKeyHandler.field_c & 48) == 32) {
                 var10 = (String) (var10) + "..";
               }
-              if (48 == (48 & de.field_c)) {
+              if (48 == (48 & GameKeyHandler.field_c)) {
                 var10 = (String) (var10) + "...";
               }
               nv.field_F.field_E = (String) (var10);
@@ -666,7 +666,7 @@ class ri extends qv {
                   m.field_f[var14] = false;
                   var14++;
                 }
-                pl.a(0, ss.field_j, ow.field_b, -1, (byte) -121, -1, -1, true);
+                pl.a(0, ss.field_j, ArchiveSource.field_b, -1, (byte) -121, -1, -1, true);
                 if (!(2 > tk.field_Ib) &&
                   ne.field_G[12]) {
                   tt.field_c = true;
@@ -713,7 +713,7 @@ class ri extends qv {
           stackIn_76_2 = (param2) && (!param1) && (td.field_b);
           ((hd) (Object) stackIn_75_0).b(stackIn_75_1, stackIn_76_2);
           ni.field_l.field_b.h((byte) 118);
-          if (null != ow.field_b) {
+          if (null != ArchiveSource.field_b) {
             stackIn_78_0 = 0;
             if (stackIn_78_0 != ac.field_b.field_sb) {
               nv.a(param3, 32361);
@@ -725,7 +725,7 @@ class ri extends qv {
                 up.a(param3, 0);
               }
             }
-            NetworkGameClient.a(param3, (byte) -127, ow.field_b, true);
+            NetworkGameClient.a(param3, (byte) -127, ArchiveSource.field_b, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -735,7 +735,7 @@ class ri extends qv {
         }
     }
 
-    ri(hu param0, int param1) {
+    ri(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_G, -1, 2147483647, false);
     }
 

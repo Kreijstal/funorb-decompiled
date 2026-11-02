@@ -13,7 +13,7 @@ final class ra extends dj {
     private kp[] field_I;
     static int field_N;
     static String field_O;
-    static ot field_L;
+    static ArgbSprite field_L;
     static js field_G;
 
     final static void a(boolean param0, int param1, PacketBuffer param2, qb param3) {
@@ -131,7 +131,7 @@ final class ra extends dj {
         int[] var8;
         var6 = Kickabout.field_G;
         if (param3 != 0) {
-          field_L = (ot) null;
+          field_L = (ArgbSprite) null;
         }
         var7 = new int[]{param0, param4};
         var8 = var7;
@@ -263,9 +263,9 @@ final class ra extends dj {
             this.field_K[var12Lifetime4].b(0, false);
             this.field_K[var12Lifetime4].h((byte) -123);
           }
-          on.a(40 + this.field_j, 120, 560, 50, 10, 65793, 140);
+          SoftwareRasterizer.a(40 + this.field_j, 120, 560, 50, 10, 65793, 140);
           pb.field_C.a(tr.field_c, this.field_j + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
-          on.a(210 + this.field_j, 178, 390, 225, 10, 65793, 140);
+          SoftwareRasterizer.a(210 + this.field_j, 178, 390, 225, 10, 65793, 140);
           var12Lifetime5 = 0;
           var13 = this.field_j + 230;
           var14 = var4;
@@ -280,7 +280,7 @@ final class ra extends dj {
           }
         }
         if (this.field_C == 1) {
-          on.a(40 + this.field_j, 120, 560, 50, 10, 65793, 140);
+          SoftwareRasterizer.a(40 + this.field_j, 120, 560, 50, 10, 65793, 140);
           var6 -= 50;
           pb.field_C.a(jb.field_h, this.field_j + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
           var4 += 50;
@@ -294,7 +294,7 @@ final class ra extends dj {
             }
             var13Lifetime1 = stackIn_29_0;
             var13Lifetime1 = var13Lifetime1 + this.field_j;
-            on.a(-var8 + var13Lifetime1, var4, var5, var6, 10, 65793, 140);
+            SoftwareRasterizer.a(-var8 + var13Lifetime1, var4, var5, var6, 10, 65793, 140);
             var14Lifetime1 = 40 + var7;
             for (var15 = 0; tn.field_g[var11Lifetime1].length > var15; var15++) {
               var26 = tn.field_g[var11Lifetime1][var15];
@@ -303,9 +303,9 @@ final class ra extends dj {
           }
         }
         if (this.field_C == 2) {
-          on.a(40 + this.field_j, 120, 560, 50, 10, 65793, 140);
+          SoftwareRasterizer.a(40 + this.field_j, 120, 560, 50, 10, 65793, 140);
           pb.field_C.a(ll.field_l, this.field_j + 70, 126, 500, 40, 16777215, -1, 0, 1, 16);
-          on.a(40 + this.field_j, 178, 275, 225, 10, 65793, 140);
+          SoftwareRasterizer.a(40 + this.field_j, 178, 275, 225, 10, 65793, 140);
           var4 = 195;
           var11Lifetime2 = 0;
           var6 = 230;
@@ -321,7 +321,7 @@ final class ra extends dj {
             }
             break;
           }
-          on.a(this.field_j + 325, 178, 275, 225, 10, 65793, 140);
+          SoftwareRasterizer.a(this.field_j + 325, 178, 275, 225, 10, 65793, 140);
           pt.a(this.field_j + 595, -22914, this.field_j + 330, 398, 183);
           var14Lifetime2 = 7;
           var15Lifetime1Lifetime1 = 110;
@@ -376,12 +376,12 @@ final class ra extends dj {
               }
               var24 = stackIn_62_0;
               eo.a(var22, var23, var24, -(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), var15Lifetime1Lifetime1, var16Lifetime1);
-              on.e(-(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, -(var16Lifetime1 >> 1) + var13Lifetime2Lifetime1, 11184810, 128);
-              on.e(var12Lifetime2Lifetime1 - (var15Lifetime1Lifetime1 >> 1), (var16Lifetime1 >> 1) + var13Lifetime2Lifetime1, var12Lifetime2Lifetime1 + (var15Lifetime1Lifetime1 >> 1), var13Lifetime2Lifetime1 + (var16Lifetime1 >> 1), 11184810, 128);
-              on.e(var12Lifetime2Lifetime1 - (var15Lifetime1Lifetime1 >> 1), -(var16Lifetime1 >> 1) + (var13Lifetime2Lifetime1 + 1), -(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, -1 + ((var16Lifetime1 >> 1) + var13Lifetime2Lifetime1), 11184810, 128);
-              on.e((var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 + (var16Lifetime1 >> 1) - 1, (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, 1 + (var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1)), 11184810, 128);
-              on.e(-(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1 + 1, var13Lifetime2Lifetime1, -1 + (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1, 11184810, 128);
-              on.e((var15Lifetime1Lifetime1 >> 1) + (var12Lifetime2Lifetime1 - 19), 1 + var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1 - 19, -1 + var13Lifetime2Lifetime1 + (var16Lifetime1 >> 1), 11184810, 128);
+              SoftwareRasterizer.e(-(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, -(var16Lifetime1 >> 1) + var13Lifetime2Lifetime1, 11184810, 128);
+              SoftwareRasterizer.e(var12Lifetime2Lifetime1 - (var15Lifetime1Lifetime1 >> 1), (var16Lifetime1 >> 1) + var13Lifetime2Lifetime1, var12Lifetime2Lifetime1 + (var15Lifetime1Lifetime1 >> 1), var13Lifetime2Lifetime1 + (var16Lifetime1 >> 1), 11184810, 128);
+              SoftwareRasterizer.e(var12Lifetime2Lifetime1 - (var15Lifetime1Lifetime1 >> 1), -(var16Lifetime1 >> 1) + (var13Lifetime2Lifetime1 + 1), -(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, -1 + ((var16Lifetime1 >> 1) + var13Lifetime2Lifetime1), 11184810, 128);
+              SoftwareRasterizer.e((var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1 + (var16Lifetime1 >> 1) - 1, (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, 1 + (var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1)), 11184810, 128);
+              SoftwareRasterizer.e(-(var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1 + 1, var13Lifetime2Lifetime1, -1 + (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1, var13Lifetime2Lifetime1, 11184810, 128);
+              SoftwareRasterizer.e((var15Lifetime1Lifetime1 >> 1) + (var12Lifetime2Lifetime1 - 19), 1 + var13Lifetime2Lifetime1 - (var16Lifetime1 >> 1), (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1 - 19, -1 + var13Lifetime2Lifetime1 + (var16Lifetime1 >> 1), 11184810, 128);
             }
             if (var21 != -1 + var14Lifetime2) {
               stackIn_66_0 = (var15Lifetime1Lifetime1 >> 1) + var12Lifetime2Lifetime1;
@@ -392,7 +392,7 @@ final class ra extends dj {
               } else {
                 stackIn_67_3 = -(var18 >> 1);
               }
-              on.b(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3 + var13Lifetime2Lifetime1, 11184810);
+              SoftwareRasterizer.b(stackIn_66_0, stackIn_66_1, stackIn_66_2, stackIn_67_3 + var13Lifetime2Lifetime1, 11184810);
               stackIn_69_0 = var12Lifetime2Lifetime1 + (var15Lifetime1Lifetime1 >> 1);
               stackIn_69_1 = 1 + var13Lifetime2Lifetime1;
               stackIn_69_2 = var12Lifetime2Lifetime1 - (-(var17 << 1) + (var15Lifetime1Lifetime1 >> 1));
@@ -402,7 +402,7 @@ final class ra extends dj {
               } else {
                 stackIn_70_4 = -(var18 >> 1);
               }
-              on.b(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_69_3 + stackIn_70_4, 11184810);
+              SoftwareRasterizer.b(stackIn_69_0, stackIn_69_1, stackIn_69_2, stackIn_69_3 + stackIn_70_4, 11184810);
             }
             var13Lifetime2Lifetime1 = var13Lifetime2Lifetime1 + var18;
             if (var21 == var14Lifetime2 - 8 ||
@@ -429,7 +429,7 @@ final class ra extends dj {
             var13Lifetime3 = stackIn_89_0;
             var13Lifetime3 = var13Lifetime3 + this.field_j;
             var14Lifetime3 = var7 - 5;
-            on.a(var13Lifetime3 - var8, var4, var5, var6, 10, 65793, 140);
+            SoftwareRasterizer.a(var13Lifetime3 - var8, var4, var5, var6, 10, 65793, 140);
             for (var15Lifetime2 = 0; va.field_y[var11Lifetime3].length > var15Lifetime2; var15Lifetime2++) {
               var27 = va.field_y[var11Lifetime3][var15Lifetime2];
               var14Lifetime3 = var14Lifetime3 + (pb.field_C.a(var27, var13Lifetime3, var14Lifetime3, var9, 999, 16777215, -1, 0, 0, var10) * var10 + 15);
@@ -445,7 +445,7 @@ final class ra extends dj {
         field_G = null;
         field_L = null;
         if (param0 != 128) {
-          field_L = (ot) null;
+          field_L = (ArgbSprite) null;
         }
     }
 
@@ -489,11 +489,11 @@ final class ra extends dj {
           var5.field_g = 50;
           var5.field_q = var4;
           var5.field_o = 50;
-          var5.field_l = dq.$cfr$intArgs$a$7f8aad568c81(-110, ce.field_G[var5.field_q].length, var7);
-          var5.field_e = dq.$cfr$intArgs$a$7f8aad568c81(-92, td.field_a.length, var7);
-          var5.field_j = var5.field_j | dq.$cfr$intArgs$a$7f8aad568c81(-62, 3, var7);
-          var5.field_j = var5.field_j | dq.$cfr$intArgs$a$7f8aad568c81(95, 3, var7) << 4;
-          var5.field_j = var5.field_j | dq.$cfr$intArgs$a$7f8aad568c81(91, 5, var7) << 8;
+          var5.field_l = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-110, ce.field_G[var5.field_q].length, var7);
+          var5.field_e = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-92, td.field_a.length, var7);
+          var5.field_j = var5.field_j | ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-62, 3, var7);
+          var5.field_j = var5.field_j | ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(95, 3, var7) << 4;
+          var5.field_j = var5.field_j | ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(91, 5, var7) << 8;
           this.field_K[var3] = new kq();
           this.field_K[var3].field_s = 45 + var3 % 3 * 52;
           this.field_K[var3].field_J = var3 / 3 * 75 + 178;

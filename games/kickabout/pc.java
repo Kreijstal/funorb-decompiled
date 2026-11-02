@@ -131,19 +131,19 @@ final class pc {
           ki.field_n = new mb();
           if (param0 > -8) {
             pc.a((byte) -11);
-            we.field_a.a((byte) -124, (fd) (ki.field_n));
+            we.field_a.a((byte) -124, (UiWidget) (ki.field_n));
             return;
           }
-          we.field_a.a((byte) -124, (fd) (ki.field_n));
+          we.field_a.a((byte) -124, (UiWidget) (ki.field_n));
           return;
         }
         ki.field_n = new mb();
         if (param0 <= -8) {
-          we.field_a.a((byte) -124, (fd) (ki.field_n));
+          we.field_a.a((byte) -124, (UiWidget) (ki.field_n));
           return;
         }
         pc.a((byte) -11);
-        we.field_a.a((byte) -124, (fd) (ki.field_n));
+        we.field_a.a((byte) -124, (UiWidget) (ki.field_n));
     }
 
     static {

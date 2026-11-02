@@ -6,7 +6,7 @@ final class cd {
     static String field_b;
 
     final static void a(byte param0, int param1, int param2) {
-        ku.a(16777215, al.a(false, (byte) 66), param2, -1, param1, 0);
+        MouseInputHandler.a(16777215, al.a(false, (byte) 66), param2, -1, param1, 0);
         if (param0 >= -126) {
           cd.a((byte) 70);
         }

@@ -4,11 +4,11 @@
 abstract class cv {
     static int field_d;
     static boolean field_e;
-    static ut[][] field_b;
+    static Sprite[][] field_b;
     static int[] field_a;
     static String field_c;
     static String field_g;
-    static hu field_f;
+    static BitmapFont field_f;
 
     final static void a(int param0) {
         int incrementValue$45 = 0;
@@ -50,7 +50,7 @@ abstract class cv {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        ut var3_ref_ut = null;
+        Sprite var3_ref_ut = null;
         int var4 = 0;
         int var5 = 0;
         int var2Lifetime1;
@@ -77,7 +77,7 @@ abstract class cv {
               for (var3 = 0; var3 < 6; var3++) {
                 incrementValue$44 = var1_int;
                 var1_int++;
-                oi.field_e[incrementValue$44] = new oh(ku.field_g[p.a((byte) -24, 2)], var2Lifetime1, 1394);
+                oi.field_e[incrementValue$44] = new oh(MouseInputHandler.field_g[p.a((byte) -24, 2)], var2Lifetime1, 1394);
                 stackIn_17_0 = var2Lifetime1;
                 if (0 == (var3 & 1)) {
                   stackIn_18_1 = 95;
@@ -90,7 +90,7 @@ abstract class cv {
               for (var3Lifetime1 = 0; var3Lifetime1 < 6; var3Lifetime1++) {
                 incrementValue$43 = var1_int;
                 var1_int++;
-                oi.field_e[incrementValue$43] = new oh(ku.field_g[p.a((byte) -24, 2)], var2Lifetime2, -90);
+                oi.field_e[incrementValue$43] = new oh(MouseInputHandler.field_g[p.a((byte) -24, 2)], var2Lifetime2, -90);
                 stackIn_22_0 = var2Lifetime2;
                 stackIn_22_1 = ~(1 & var3Lifetime1);
                 stackIn_22_2 = -1;
@@ -143,16 +143,16 @@ abstract class cv {
             oi.field_e[incrementValue$54] = new oh(oo.field_b[0], -141, 1275);
             incrementValue$55 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$55] = new oh(ku.field_g[0], -390, 629);
+            oi.field_e[incrementValue$55] = new oh(MouseInputHandler.field_g[0], -390, 629);
             incrementValue$56 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$56] = new oh(ku.field_g[1], -264, 584);
+            oi.field_e[incrementValue$56] = new oh(MouseInputHandler.field_g[1], -264, 584);
             incrementValue$57 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$57] = new oh(ku.field_g[1], -357, 447);
+            oi.field_e[incrementValue$57] = new oh(MouseInputHandler.field_g[1], -357, 447);
             incrementValue$58 = var1_int;
             var1_int++;
-            oi.field_e[incrementValue$58] = new oh(ku.field_g[0], -259, 379);
+            oi.field_e[incrementValue$58] = new oh(MouseInputHandler.field_g[0], -259, 379);
             incrementValue$59 = var1_int;
             var1_int++;
             oi.field_e[incrementValue$59] = new oh(oo.field_b[0], 180, 1371);
@@ -239,8 +239,8 @@ abstract class cv {
           }
           if (mc.field_j) {
             vs.field_g = null;
-            ve.field_R = new tf();
-            var9 = bh.field_f;
+            ve.field_R = new IntrusiveDeque();
+            var9 = BufferedSocket.field_f;
             var7 = var9;
             var4 = var7;
             var1 = var4;
@@ -281,7 +281,7 @@ abstract class cv {
         field_f = null;
         field_c = null;
         field_a = null;
-        field_b = (ut[][]) null;
+        field_b = (Sprite[][]) null;
         if (param0 > -5) {
           cv.a(117);
         }
@@ -289,7 +289,7 @@ abstract class cv {
 
     static {
         field_e = true;
-        field_b = new ut[3][4];
+        field_b = new Sprite[3][4];
         field_a = new int[6];
         field_a[0] = 1549;
         field_a[4] = -1;

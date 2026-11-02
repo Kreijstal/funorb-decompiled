@@ -5,7 +5,7 @@ final class td {
     static char[] field_a;
     static boolean field_b;
     static int field_d;
-    static ut field_c;
+    static Sprite field_c;
 
     public static void a(boolean param0) {
         if (param0) {
@@ -696,7 +696,7 @@ final class td {
     final static void a(int param0) {
         cq.field_m.setLength(0);
         int var1 = -33 % ((-43 - param0) / 47);
-        ov.field_b = 0;
+        NodeHashTableIterator.field_b = 0;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {

@@ -9,17 +9,17 @@ final class mf extends hd {
     static int field_Gb;
     private hn field_Bb;
     static volatile boolean field_Ib;
-    static ut field_Cb;
+    static Sprite field_Cb;
     static String field_Db;
     static String field_yb;
     kq[] field_Eb;
 
-    final static void a(ut[] param0, boolean param1) {
+    final static void a(Sprite[] param0, boolean param1) {
         int var2_int = 0;
         int var3 = Kickabout.field_G;
         try {
           gk.field_a = param0;
-          sq.field_F = new ut[2];
+          sq.field_F = new Sprite[2];
           for (var2_int = 0; 2 > var2_int; var2_int++) {
             sq.field_F[var2_int] = gk.field_a[var2_int].b();
             nh.a(sq.field_F[var2_int], 0.0, 0.0, 1.0);
@@ -262,7 +262,7 @@ final class mf extends hd {
               break;
             }
           }
-          qh.a(94);
+          SectorCacheStore.a(94);
           uv.field_f = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -610,22 +610,22 @@ final class mf extends hd {
         }
         df.field_F = new String[8];
         df.field_F[7] = kr.field_c;
-        fs.field_a = new String[]{s.field_F, ku.field_a};
+        fs.field_a = new String[]{s.field_F, MouseInputHandler.field_a};
         rd.field_e = new String[]{gm.field_Q};
         df.field_F[1] = uq.field_f;
         df.field_F[4] = kr.field_d;
         df.field_F[6] = pq.field_M;
         df.field_F[0] = qs.field_H;
         ge.field_o = new String[57];
-        pd.field_M = new String[]{mc.field_g, ku.field_a};
-        ow.field_d = new String[]{fb.field_C, iv.field_n, ku.field_a};
+        pd.field_M = new String[]{mc.field_g, MouseInputHandler.field_a};
+        ArchiveSource.field_d = new String[]{fb.field_C, iv.field_n, MouseInputHandler.field_a};
         si.field_q = new String[]{s.field_F, lh.field_F};
         df.field_F[3] = rl.field_t;
-        vq.field_i = new String[]{s.field_F, mc.field_g};
+        FullscreenFocusCanvas.field_i = new String[]{s.field_F, mc.field_g};
         fp.field_u = new String[]{s.field_F};
         df.field_F[2] = m.field_i;
         df.field_F[5] = fc.field_e;
-        nn.field_I = new String[]{ob.field_H, in.field_a, ku.field_a};
+        nn.field_I = new String[]{ob.field_H, in.field_a, MouseInputHandler.field_a};
         ge.field_o[10] = nj.field_b;
         ge.field_o[12] = ns.field_b;
         ge.field_o[3] = sl.field_zb;
@@ -644,7 +644,7 @@ final class mf extends hd {
         ge.field_o[7] = at.field_Fb;
         ge.field_o[15] = hn.field_e;
         ge.field_o[24] = GameAppletShell.field_f;
-        ge.field_o[18] = o.field_b;
+        ge.field_o[18] = DualLinkDeque.field_b;
         ge.field_o[23] = nb.field_h;
         ge.field_o[40] = ms.field_a;
         ge.field_o[14] = wh.field_h;
@@ -665,7 +665,7 @@ final class mf extends hd {
         ge.field_o[35] = lj.field_m;
         ge.field_o[42] = at.field_Fb;
         ge.field_o[21] = ei.field_f;
-        ge.field_o[44] = o.field_b;
+        ge.field_o[44] = DualLinkDeque.field_b;
         ge.field_o[13] = cu.field_f[0];
         ge.field_o[20] = ol.field_n;
         ge.field_o[17] = kd.field_A;
@@ -677,7 +677,7 @@ final class mf extends hd {
         ge.field_o[52] = ia.field_h;
         ge.field_o[32] = "";
         ge.field_o[56] = ia.field_h;
-        ge.field_o[54] = ow.field_a;
+        ge.field_o[54] = ArchiveSource.field_a;
         ge.field_o[53] = ul.field_b;
         ge.field_o[51] = vp.field_d;
         ge.field_o[49] = aw.field_K;
@@ -731,7 +731,7 @@ final class mf extends hd {
         qb.field_Qb[2] = MatchAgent.field_a;
         eb.field_g[1] = qa.field_F;
         eb.field_g[3] = bv.field_n;
-        eb.field_g[0] = av.field_d;
+        eb.field_g[0] = SocketConnector.field_d;
         eb.field_g[2] = bb.field_Db;
     }
 
@@ -845,7 +845,7 @@ final class mf extends hd {
               break;
             }
           }
-          qh.a(94);
+          SectorCacheStore.a(94);
           uv.field_f = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -19,7 +19,7 @@ final class bf extends hs {
     static kg[][] field_s;
     private int field_w;
     static ic field_m;
-    static ot field_x;
+    static ArgbSprite field_x;
     static String field_n;
 
     private final int a(byte param0, int param1) {
@@ -47,7 +47,7 @@ final class bf extends hs {
         int stackIn_6_3;
         int stackIn_6_4;
         int stackIn_7_5;
-        ut stackIn_17_0;
+        Sprite stackIn_17_0;
         int stackIn_17_1;
         int stackIn_17_2;
         int stackIn_17_3;
@@ -75,14 +75,14 @@ final class bf extends hs {
           stackIn_3_4 = 10;
           stackIn_3_5 = 65793;
           stackIn_4_6 = (!param3) ? 200 : 256;
-          on.a(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6);
+          SoftwareRasterizer.a(stackIn_3_0, stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_3_5, stackIn_4_6);
           stackIn_6_0 = var5;
           stackIn_6_1 = var6;
           stackIn_6_2 = var7;
           stackIn_6_3 = var8;
           stackIn_6_4 = 10;
           stackIn_7_5 = (param3) ? 16777215 : 8947848;
-          on.f(stackIn_6_0, stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
+          SoftwareRasterizer.f(stackIn_6_0, stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4, stackIn_7_5);
         }
         var11 = (var7 - var9 >> 1) + var5;
         if (param0 > -72) {
@@ -102,7 +102,7 @@ final class bf extends hs {
         } else {
           stackIn_18_5 = (!param1) ? 100 : 200;
         }
-        ((ut) (Object) stackIn_17_0).d(stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5);
+        ((Sprite) (Object) stackIn_17_0).d(stackIn_17_1, stackIn_17_2, stackIn_17_3, stackIn_17_4, stackIn_18_5);
         if (param1) {
           un.field_d.d(Integer.toString(1 + param2), (var7 >> 1) + var5, 23 + var12, 65793, -1);
         }
@@ -180,18 +180,18 @@ final class bf extends hs {
             if (this.field_a.field_e) {
               stackIn_6_0 = var3;
             } else {
-              stackIn_6_0 = tu.field_E.field_q[var3];
+              stackIn_6_0 = GameLoopApplet.field_E.field_q[var3];
             }
             var5 = stackIn_6_0;
             if (this.field_a.field_e) {
               stackIn_9_0 = this.field_k[var5];
             } else {
-              stackIn_9_0 = tu.field_E.field_i[var5];
+              stackIn_9_0 = GameLoopApplet.field_E.field_i[var5];
             }
             var6 = stackIn_9_0;
             var11.a(this.field_r, this.field_w, (byte) 125, this.field_B, var6);
             if (!this.field_a.field_e) {
-              var11.a((byte) -128, tu.field_E, var5);
+              var11.a((byte) -128, GameLoopApplet.field_E, var5);
             }
             if (!var11.field_Eb.c(-2) &&
               var11.field_qb != 0 &&
@@ -322,9 +322,9 @@ final class bf extends hs {
           }
           el.a(stackIn_2_0, stackIn_2_1, (np) (stackIn_2_2), stackIn_2_3, stackIn_2_4, (int[]) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (param0.field_c == 0 &&
-            !wm.c((byte) -121) &&
+            !CachedArchiveSource.c((byte) -121) &&
             null == uv.field_i &&
-            ow.field_b == null) {
+            ArchiveSource.field_b == null) {
             if (!kb.field_C) {
               var5 = wi.field_v;
               var6 = sp.field_Cb;
@@ -335,7 +335,7 @@ final class bf extends hs {
             var7.field_j.a(0, 20, var8);
           }
           if (param0.field_c == 1 &&
-            !wm.c((byte) -121) &&
+            !CachedArchiveSource.c((byte) -121) &&
             uv.field_i != null &&
             param0.field_n == uv.field_i.h((byte) -105)) {
             if (!kb.field_C) {
@@ -454,8 +454,8 @@ final class bf extends hs {
             var6 = (this.field_t[var4Lifetime4].field_q >> 1) + this.field_t[var4Lifetime4].field_F;
             var7 = -16 + this.field_t[var4Lifetime4].field_T + this.field_t[var4Lifetime4].field_mb;
             PacketBuffer.a(67, ff.field_b);
-            on.b();
-            q.field_d.d(this.field_a.field_S[var5_int].toLowerCase(), on.field_g >> 1, -1 + on.field_f, 16777062, -1);
+            SoftwareRasterizer.b();
+            q.field_d.d(this.field_a.field_S[var5_int].toLowerCase(), SoftwareRasterizer.field_g >> 1, -1 + SoftwareRasterizer.field_f, 16777062, -1);
             ta.e(param0 + 116);
             eo.a(ff.field_b, 65793);
             ff.field_b.c(-(ff.field_b.field_o >> 1) + var6, var7 - ff.field_b.field_v);
@@ -472,7 +472,7 @@ final class bf extends hs {
           var5_intLifetime1 = var11;
           while (var11 < this.field_a.playerCount) {
             if (this.field_h == this.field_a.field_g[var11].field_p) {
-              on.a(412, var4Lifetime5, 186, 21, 7, 65793, 128);
+              SoftwareRasterizer.a(412, var4Lifetime5, 186, 21, 7, 65793, 128);
               if (this.field_a.field_o.a(param0 - 87, var11)) {
                 vb.field_l.c(574, var4Lifetime5 - 4);
               }
@@ -539,9 +539,9 @@ final class bf extends hs {
             gr.a((byte) 15, (CharSequence) ((Object) var6))) {
             rr.a(10, (CharSequence) ((Object) var6));
           }
-          sb.field_b = new ut[param1.length];
+          sb.field_b = new Sprite[param1.length];
           for (var7 = 0; param1.length > var7; var7++) {
-            sb.field_b[var7] = new ut(317, 34);
+            sb.field_b[var7] = new Sprite(317, 34);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -576,7 +576,7 @@ final class bf extends hs {
     }
 
     private final void i(int param0, int param1) {
-        this.field_a.a(wd.a(18238, this.field_k, tu.field_E, param1, this.field_g), -121);
+        this.field_a.a(wd.a(18238, this.field_k, GameLoopApplet.field_E, param1, this.field_g), -121);
         if (param0 != 74) {
           return;
         }
@@ -708,7 +708,7 @@ final class bf extends hs {
           if (this.field_a.field_i[this.field_h][var3] == this.field_g && (this.field_a.field_e &&
             param0 == this.field_a.field_k[this.field_h][var3] ||
             !this.field_a.field_e &&
-            tu.field_E.field_q[param0] == this.field_a.field_k[this.field_h][var3])) {
+            GameLoopApplet.field_E.field_q[param0] == this.field_a.field_k[this.field_h][var3])) {
             return var3;
           }
         }

@@ -5,7 +5,7 @@ final class hi extends vv {
     byte[] field_u;
     int field_t;
     static String field_w;
-    qh field_v;
+    SectorCacheStore field_v;
 
     final int a(int param0) {
         if (param0 != 0) {
@@ -43,7 +43,7 @@ final class hi extends vv {
         if (param0 == 12802) {
           return this.field_u;
         }
-        this.field_v = (qh) null;
+        this.field_v = (SectorCacheStore) null;
         return this.field_u;
     }
 

@@ -49,8 +49,8 @@ final class fm extends qt {
         int var14Lifetime5;
         var16 = Kickabout.field_G;
         super.a(param0, param1);
-        on.a(vu.field_Ib.field_F, vu.field_Ib.field_T, vu.field_Ib.field_q, vu.field_Ib.field_mb, 8, 0, 96);
-        on.a(-4 + bq.field_d.field_F, -4 + bq.field_d.field_T, 2 + bq.field_d.field_q, 4 + (bq.field_d.field_mb << 1), 8, 0, 128);
+        SoftwareRasterizer.a(vu.field_Ib.field_F, vu.field_Ib.field_T, vu.field_Ib.field_q, vu.field_Ib.field_mb, 8, 0, 96);
+        SoftwareRasterizer.a(-4 + bq.field_d.field_F, -4 + bq.field_d.field_T, 2 + bq.field_d.field_q, 4 + (bq.field_d.field_mb << 1), 8, 0, 128);
         bq.field_d.a(46, false);
         ub.field_D.a(97, false);
         vu.field_Ib.a(param0 + 84, false);
@@ -64,7 +64,7 @@ final class fm extends qt {
         }
         ta.e(117);
         var18 = pb.field_C;
-        var21 = bh.field_f;
+        var21 = BufferedSocket.field_f;
         if (pt.field_e == -1) {
           stackIn_9_0 = ob.field_C;
         } else {
@@ -79,9 +79,9 @@ final class fm extends qt {
         var6 = stackIn_12_0;
         var7 = 142 + this.field_j;
         var8 = 289;
-        on.a(this.field_j + 8, 280, 120, 145, 8, 0, 148);
+        SoftwareRasterizer.a(this.field_j + 8, 280, 120, 145, 8, 0, 148);
         var9 = 230;
-        on.a(this.field_j + 135, 280, 244, 145, 8, 0, 148);
+        SoftwareRasterizer.a(this.field_j + 135, 280, 244, 145, 8, 0, 148);
         if (-1 == var5) {
           if (!la.a(100)) {
             pb.field_C.a(rt.field_K, var7, 250, var9, 200, 16777215, -1, 1, 1, 0);
@@ -104,8 +104,8 @@ final class fm extends qt {
               var12 = field_A;
             }
             var11 += 16;
-            var13 = Math.max(var18.a(dh.field_l), var18.a(po.field_d)) + 30;
-            var18.c(dh.field_l, var7 + var13, var11, 16777215, -1);
+            var13 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
+            var18.c(ImageProducerRasterBuffer.field_l, var7 + var13, var11, 16777215, -1);
             var18.a(Integer.toString(wc.field_g[var5]), 5 + var13 + var7, var11, 16777215, -1);
             var11 += 18;
             var18.c(po.field_d, var7 + var13, var11, 16777215, -1);
@@ -132,8 +132,8 @@ final class fm extends qt {
             var12Lifetime2 = field_A;
           }
           var11Lifetime2 += 16;
-          var13Lifetime2 = Math.max(var18.a(dh.field_l), var18.a(po.field_d)) + 30;
-          var18.c(dh.field_l, var7 + var13Lifetime2, var11Lifetime2, 16777215, -1);
+          var13Lifetime2 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
+          var18.c(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime2, var11Lifetime2, 16777215, -1);
           var18.a(Integer.toString(wc.field_g[var5]), 5 + var13Lifetime2 + var7, var11Lifetime2, 16777215, -1);
           var11Lifetime2 += 18;
           var18.c(po.field_d, var7 + var13Lifetime2, var11Lifetime2, 16777215, -1);
@@ -161,8 +161,8 @@ final class fm extends qt {
             var12Lifetime1 = field_A;
           }
           var11Lifetime1 += 16;
-          var13Lifetime1 = Math.max(var18.a(dh.field_l), var18.a(po.field_d)) + 30;
-          var18.c(dh.field_l, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
+          var13Lifetime1 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
+          var18.c(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
           var18.a(Integer.toString(wc.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
           var11Lifetime1 += 18;
           var18.c(po.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
@@ -177,8 +177,8 @@ final class fm extends qt {
             var12Lifetime1 = field_A;
           }
           var11Lifetime1 += 16;
-          var13Lifetime1 = Math.max(var18.a(dh.field_l), var18.a(po.field_d)) + 30;
-          var18.c(dh.field_l, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
+          var13Lifetime1 = Math.max(var18.a(ImageProducerRasterBuffer.field_l), var18.a(po.field_d)) + 30;
+          var18.c(ImageProducerRasterBuffer.field_l, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
           var18.a(Integer.toString(wc.field_g[var5]), 5 + var13Lifetime1 + var7, var11Lifetime1, 16777215, -1);
           var11Lifetime1 += 18;
           var18.c(po.field_d, var7 + var13Lifetime1, var11Lifetime1, 16777215, -1);
@@ -213,11 +213,11 @@ final class fm extends qt {
         vu.field_Ib = new tk("Cabinet", ne.j((byte) 15), be.field_q, it.field_m);
         vu.field_Ib.a(16, 100, 4, (byte) -114, 200, 300, 70);
         if (param0 == -38) {
-          sj.field_g = true;
+          ResourceArchive.field_g = true;
           return;
         }
         fm.a(true);
-        sj.field_g = true;
+        ResourceArchive.field_g = true;
     }
 
     public static void g(byte param0) {

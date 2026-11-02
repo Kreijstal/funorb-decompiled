@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cu {
-    static tf field_a;
+    static IntrusiveDeque field_a;
     static String[] field_f;
     static String field_g;
     static int field_c;
@@ -68,7 +68,7 @@ final class cu {
         return var6_refLifetime1;
     }
 
-    final static boolean a(int param0, sj param1, int param2, int param3) {
+    final static boolean a(int param0, ResourceArchive param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -143,7 +143,7 @@ final class cu {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 104) {
-            field_a = (tf) null;
+            field_a = (IntrusiveDeque) null;
           }
           var3_int = param2.field_n;
           var5 = (CharSequence) ((Object) param1);
@@ -174,7 +174,7 @@ final class cu {
 
     static {
         field_f = new String[]{"By rating", "By win percentage"};
-        field_a = new tf();
+        field_a = new IntrusiveDeque();
         field_c = 0;
         field_b = "Waiting for animations";
         field_g = "kick";

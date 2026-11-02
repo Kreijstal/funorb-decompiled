@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ai extends wj implements qu, vh {
-    static ut field_E;
+final class ai extends WidgetContainer implements qu, vh {
+    static Sprite field_E;
     private wi field_I;
     private jn field_B;
     static String field_L;
@@ -40,10 +40,10 @@ final class ai extends wj implements qu, vh {
 
     final static boolean a(int param0) {
         int var1 = 61 % ((-62 - param0) / 44);
-        if (null == kl.field_h) {
+        if (null == ArchiveIndex.field_h) {
           return false;
         }
-        if (kl.field_h.e(0)) {
+        if (ArchiveIndex.field_h.e(0)) {
           return true;
         }
         return false;
@@ -60,7 +60,7 @@ final class ai extends wj implements qu, vh {
           this.field_B = param0;
           this.field_I = new wi(es.field_g, (jv) null);
           this.field_I.field_r = (gj) ((Object) new op());
-          var7 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, ov.field_a, new String[]{this.k(107), this.m(-1522433695)});
+          var7 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, NodeHashTableIterator.field_a, new String[]{this.k(107), this.m(-1522433695)});
           var3 = 20;
           var4 = new qv(gf.field_a, 0, 0, 0, 0, 16777215, -1, 3, 0, gf.field_a.field_G, -1, 2147483647, true);
           this.field_D = new lb(var7, var4);
@@ -83,7 +83,7 @@ final class ai extends wj implements qu, vh {
         }
     }
 
-    final boolean a(char param0, byte param1, fd param2, int param3) {
+    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class LoggedPlayer {
-    static ut[] field_g;
+    static Sprite[] field_g;
     boolean home;
     int field_c;
     int field_q;
@@ -100,7 +100,7 @@ final class LoggedPlayer {
 
     final static int a(int param0, boolean param1) {
         if (!param1) {
-          field_g = (ut[]) null;
+          field_g = (Sprite[]) null;
         }
         return 2 * param0;
     }

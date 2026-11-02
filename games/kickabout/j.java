@@ -54,7 +54,7 @@ final class j {
         }
     }
 
-    final static ut a(int param0) {
+    final static Sprite a(int param0) {
         if (param0 != -5275) {
           field_a = (String[]) null;
           return cv.field_b[ih.field_c][rm.field_C];
@@ -67,7 +67,7 @@ final class j {
         if (ia.field_c) {
           this.field_b.field_R = (this.field_b.field_R + 1024) % 2048;
           PacketBuffer.a(param0 + 39, wa.field_a);
-          on.b();
+          SoftwareRasterizer.b();
           this.field_b.a(1200, 300, 48, 90, (byte) -105);
           ta.e(127);
           wa.field_a.f(param2 - param0, -47 + param1);
@@ -78,7 +78,7 @@ final class j {
           return;
         }
         PacketBuffer.a(param0 + 39, wa.field_a);
-        on.b();
+        SoftwareRasterizer.b();
         this.field_b.a(1200, 300, 48, 90, (byte) -105);
         ta.e(127);
         wa.field_a.f(param2 - param0, -47 + param1);

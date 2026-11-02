@@ -22,13 +22,13 @@ final class eh implements pk {
           this.field_a = true;
           var2_ref_oi = (oi) (ec.field_f.g(24009));
           while (var2_ref_oi != null) {
-            if (c.a(var2_ref_oi.field_j, 0, bh.field_f)) {
+            if (c.a(var2_ref_oi.field_j, 0, BufferedSocket.field_f)) {
               var2_ref_oi.c((byte) -109);
             }
             var2_ref_oi = (oi) (ec.field_f.c(param0 ^ -27629));
           }
           ok.field_a.b(22997);
-          og.a(20164);
+          RasterBuffer.a(20164);
         }
         if (param0 != -27598) {
           this.field_a = true;
@@ -50,28 +50,28 @@ final class eh implements pk {
     }
 
     public final boolean a(boolean param0) {
-        ut var4 = null;
+        Sprite var4 = null;
         kg var5 = null;
-        ut var6 = null;
-        ut[] var7 = null;
-        ut[] var8 = null;
+        Sprite var6 = null;
+        Sprite[] var7 = null;
+        Sprite[] var8 = null;
         int var9 = 0;
         int var11_int = 0;
         kg[] var10 = null;
-        ut[][] var11 = null;
-        ut[][] var12 = null;
+        Sprite[][] var11 = null;
+        Sprite[][] var12 = null;
         int var10_int = 0;
         int var13 = Kickabout.field_G;
         int var10_intLifetime1;
         int var10_intLifetime2;
         if (!param0) {
-          ot var14 = (ot) null;
-          this.a(28, (ot) null);
+          ArgbSprite var14 = (ArgbSprite) null;
+          this.a(28, (ArgbSprite) null);
         }
         mf.h((byte) -19);
         up.e(-1456);
-        sj var16 = kh.field_g;
-        sj var17 = IterableNodeHashTable.field_b;
+        ResourceArchive var16 = kh.field_g;
+        ResourceArchive var17 = IterableNodeHashTable.field_b;
         if (null != IterableNodeHashTable.field_c &&
           null != d.field_b) {
           CipherPacketBuffer.k(61, 0);
@@ -98,27 +98,27 @@ final class eh implements pk {
           eo.field_q = wa.a((byte) 124, "lobby", bo.field_Cb, "logo");
           eo.field_p = se.a(bo.field_Cb, -28, "lobby", "time");
           eo.field_j = se.a(bo.field_Cb, -121, "lobby", "tournament_icons");
-          eo.field_j[0] = new ut(0, 0);
+          eo.field_j[0] = new Sprite(0, 0);
           eo.field_m = se.a(bo.field_Cb, -121, "lobby", "exhibition_icons");
-          eo.field_m[0] = new ut(0, 0);
+          eo.field_m[0] = new Sprite(0, 0);
           eo.field_f = jo.a(bo.field_Cb, 17369, "lobby", "orb_icons");
           se.a(bo.field_Cb, -127, "lobby", "players");
-          tf.field_e = eo.field_q;
+          IntrusiveDeque.field_e = eo.field_q;
           un.field_d = gm.a(v.field_b, 10, "font2", bo.field_Cb, "fonts");
           q.field_d = qk.a("font", v.field_b, 75, "fonts", bo.field_Cb);
           pb.field_C = qk.a("", var17, 105, "arialish12", var16);
-          var4 = new ut(16, 9);
+          var4 = new Sprite(16, 9);
           PacketBuffer.a(-64, var4);
-          on.d(4, 4, 3, 7829367);
-          on.d(4, 4, 2, 13421772);
+          SoftwareRasterizer.d(4, 4, 3, 7829367);
+          SoftwareRasterizer.d(4, 4, 2, 13421772);
           ta.e(122);
           var5 = eo.a(var4);
           pb.field_C.a(new kg[]{var5}, new int[]{10});
           sk.a(83, 100, 10);
           var6 = wa.a((byte) 100, "basic", var16, "orbcoin");
-          LoggedGoal.a(var6, (ot) (bg.a("menu", bo.field_Cb, (byte) 77, "locked")), (ot) (bg.a("menu", bo.field_Cb, (byte) 77, "unachieved")), -123);
+          LoggedGoal.a(var6, (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 77, "locked")), (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 77, "unachieved")), -123);
           sh.field_g = nh.b(nh.a(var6));
-          nn.field_B = (ot) (bg.a("menu", bo.field_Cb, (byte) 69, "divider"));
+          nn.field_B = (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 69, "divider"));
           tt.field_e = wa.a((byte) 122, "menu", bo.field_Cb, "button_left_shine");
           GameAppletShell.field_l = wa.a((byte) 106, "menu", bo.field_Cb, "button_middle_shine");
           sk.a(-109, 100, 20);
@@ -129,60 +129,60 @@ final class eh implements pk {
           sk.a(90, 100, 25);
           wt.field_z = ng.a("swatch_overlay", "menu", 2, bo.field_Cb);
           var7 = ng.a("arrows", "menu", 2, bo.field_Cb);
-          eo.field_k = new ot[]{(ot) (var7[0]), (ot) (var7[2]), (ot) (var7[4])};
-          eo.field_i = new ot[]{(ot) (var7[1]), (ot) (var7[3]), (ot) (var7[5])};
+          eo.field_k = new ArgbSprite[]{(ArgbSprite) (var7[0]), (ArgbSprite) (var7[2]), (ArgbSprite) (var7[4])};
+          eo.field_i = new ArgbSprite[]{(ArgbSprite) (var7[1]), (ArgbSprite) (var7[3]), (ArgbSprite) (var7[5])};
           sk.a(86, 100, 30);
           sk.a(103, 100, 35);
           sk.a(-94, 100, 40);
           tb.field_q = ng.a("digits", "hud", 2, bo.field_Cb);
-          ku.field_g = se.a(bo.field_Cb, -121, "hud", "cones");
-          lu.field_p = ng.a("tutorial", "hud", 2, bo.field_Cb);
+          MouseInputHandler.field_g = se.a(bo.field_Cb, -121, "hud", "cones");
+          SpriteState.field_p = ng.a("tutorial", "hud", 2, bo.field_Cb);
           tn.field_e = wa.a((byte) 114, "hud", bo.field_Cb, "arrow");
-          nw.a(-128, wa.a((byte) 114, "hud", bo.field_Cb, "cursor"));
+          IntrusiveDequeCursor.a(-128, wa.a((byte) 114, "hud", bo.field_Cb, "cursor"));
           sk.a(86, 100, 45);
           mc.field_k = ng.a("dialog_icon", "menu", 2, bo.field_Cb);
           wt.field_y = wa.a((byte) 107, "menu", bo.field_Cb, "star");
           sk.a(-48, 100, 60);
           var8 = ng.a("trinkets", "menu", 2, bo.field_Cb);
-          tk.field_Fb = new ot[4][6];
+          tk.field_Fb = new ArgbSprite[4][6];
           var9 = 0;
           for (var10_int = 0; var10_int < 3; var10_int++) {
             for (var11_int = 0; var11_int < 6; var11_int++) {
-              tk.field_Fb[var10_int][var11_int] = (ot) (var8[var9]);
+              tk.field_Fb[var10_int][var11_int] = (ArgbSprite) (var8[var9]);
               var9++;
             }
           }
           for (var10_intLifetime1 = 0; var10_intLifetime1 < 6; var10_intLifetime1++) {
-            tk.field_Fb[3][var10_intLifetime1] = (ot) (var8[var9]);
+            tk.field_Fb[3][var10_intLifetime1] = (ArgbSprite) (var8[var9]);
           }
-          ca.field_c = new ot[4];
+          ca.field_c = new ArgbSprite[4];
           for (var10_intLifetime2 = 0; var10_intLifetime2 < ca.field_c.length; var10_intLifetime2++) {
             ca.field_c[var10_intLifetime2] = ri.a(tk.field_Fb[var10_intLifetime2][0], param0);
           }
-          kl.field_m = (ot) (bg.a("menu", bo.field_Cb, (byte) 96, "help_up"));
+          ArchiveIndex.field_m = (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 96, "help_up"));
           bg.a("menu", bo.field_Cb, (byte) 100, "help_dwn");
           mf.a(se.a(bo.field_Cb, -124, "menu", "tickbox"), true);
           sk.a(80, 100, 75);
-          eq.field_h = (ot) (bg.a("menu", bo.field_Cb, (byte) 93, "hammer_icon"));
-          CipherPacketBuffer.field_q = (ot) (bg.a("menu", bo.field_Cb, (byte) 89, "hammer_icon_buy"));
+          eq.field_h = (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 93, "hammer_icon"));
+          CipherPacketBuffer.field_q = (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 89, "hammer_icon_buy"));
           sk.a(113, 100, 70);
           qj.field_f = bg.a("menu", bo.field_Cb, (byte) 60, "tactics_pitch");
-          fc.field_h = (ot) (bg.a("menu", bo.field_Cb, (byte) 109, "lock_icon"));
+          fc.field_h = (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 109, "lock_icon"));
           sk.a(90, 100, 80);
           es.field_f = bg.a("menu", bo.field_Cb, (byte) 78, "kit");
           kb.field_E = ng.a("cups", "menu", 2, bo.field_Cb);
           jm.field_i = ng.a("cups_empty", "menu", 2, bo.field_Cb);
           sk.a(102, 100, 90);
-          fn.field_d = (ot) (bg.a("menu", bo.field_Cb, (byte) 88, "shelf"));
+          fn.field_d = (ArgbSprite) (bg.a("menu", bo.field_Cb, (byte) 88, "shelf"));
           rk.field_g = bg.a("menu", bo.field_Cb, (byte) 76, "scroll_button");
           bn.field_B = this.a("menu", bo.field_Cb, (byte) 26, "scroll_bar");
           su.field_a = wa.a((byte) 106, "menu", bo.field_Cb, "mini_ball");
           sk.a(-91, 100, 95);
           var10 = eo.field_f;
-          var11 = new ut[][]{eo.field_p, null, eo.field_m, eo.field_j};
-          var12 = new ut[][]{eo.field_p, null, eo.field_m, eo.field_j};
+          var11 = new Sprite[][]{eo.field_p, null, eo.field_m, eo.field_j};
+          var12 = new Sprite[][]{eo.field_p, null, eo.field_m, eo.field_j};
           int[] var15 = (int[]) null;
-          uf.a(var11, id.field_y, ow.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, rk.field_e, var17, sn.field_c, rp.field_y, ld.field_h, os.field_i, var12, (int[]) null, 8, 3, jd.field_i);
+          uf.a(var11, id.field_y, ArchiveSource.field_c, true, ld.field_g, var10, var16, 16971, or.field_b, rk.field_e, var17, sn.field_c, rp.field_y, ld.field_h, os.field_i, var12, (int[]) null, 8, 3, jd.field_i);
           la.field_k = da.field_k;
           qd.field_e = lr.field_n;
           wi.field_z = ja.field_Z;
@@ -196,50 +196,50 @@ final class eh implements pk {
           dd.a((byte) 104);
           return false;
         }
-        if (sj.field_f != null) {
+        if (ResourceArchive.field_f != null) {
           CipherPacketBuffer.k(61, 3);
-          cq.field_j = new ut(sj.field_f.a("background_guy.png", "", 36), (java.awt.Component) ((Object) ln.l(64)));
-          mk.field_a = new ut(sj.field_f.a("background.png", "", 66), (java.awt.Component) ((Object) ln.l(64)));
-          iu.field_k = new ut(sj.field_f.a("splash.jpg", "", 8), (java.awt.Component) ((Object) ln.l(64)));
-          ai.field_E = new ut(sj.field_f.a("botbar.png", "", 66), (java.awt.Component) ((Object) ln.l(64)));
+          cq.field_j = new Sprite(ResourceArchive.field_f.a("background_guy.png", "", 36), (java.awt.Component) ((Object) ln.l(64)));
+          mk.field_a = new Sprite(ResourceArchive.field_f.a("background.png", "", 66), (java.awt.Component) ((Object) ln.l(64)));
+          iu.field_k = new Sprite(ResourceArchive.field_f.a("splash.jpg", "", 8), (java.awt.Component) ((Object) ln.l(64)));
+          ai.field_E = new Sprite(ResourceArchive.field_f.a("botbar.png", "", 66), (java.awt.Component) ((Object) ln.l(64)));
           sk.a(-114, 23, 2);
-          vo.field_cb = nh.a(new ot(sj.field_f.a("bank_top.png", "", 3), (java.awt.Component) ((Object) ln.l(64))));
-          nn.field_C = nh.a(new ot(sj.field_f.a("bank_mid.png", "", 52), (java.awt.Component) ((Object) ln.l(64))));
-          du.field_i = nh.a(new ot(sj.field_f.a("bank_bot.png", "", 123), (java.awt.Component) ((Object) ln.l(64))));
-          lb.field_L = nh.a(new ot(sj.field_f.a("button_lrg.png", "", 91), (java.awt.Component) ((Object) ln.l(64))));
-          ll.field_m = nh.a(new ot(sj.field_f.a("button_sml.png", "", 81), (java.awt.Component) ((Object) ln.l(64))));
+          vo.field_cb = nh.a(new ArgbSprite(ResourceArchive.field_f.a("bank_top.png", "", 3), (java.awt.Component) ((Object) ln.l(64))));
+          nn.field_C = nh.a(new ArgbSprite(ResourceArchive.field_f.a("bank_mid.png", "", 52), (java.awt.Component) ((Object) ln.l(64))));
+          du.field_i = nh.a(new ArgbSprite(ResourceArchive.field_f.a("bank_bot.png", "", 123), (java.awt.Component) ((Object) ln.l(64))));
+          lb.field_L = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_lrg.png", "", 91), (java.awt.Component) ((Object) ln.l(64))));
+          ll.field_m = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_sml.png", "", 81), (java.awt.Component) ((Object) ln.l(64))));
           sk.a(122, 23, 4);
-          nn.field_K = new ot(sj.field_f.a("cone_1.png", "", 91), (java.awt.Component) ((Object) ln.l(64)));
-          re.field_o = new ot(sj.field_f.a("cone_2.png", "", 91), (java.awt.Component) ((Object) ln.l(64)));
-          uv.field_m = nh.a(new ot(sj.field_f.a("button_left.png", "", 8), (java.awt.Component) ((Object) ln.l(64))));
-          uj.field_B = nh.a(new ot(sj.field_f.a("button_middle.png", "", 97), (java.awt.Component) ((Object) ln.l(64))));
+          nn.field_K = new ArgbSprite(ResourceArchive.field_f.a("cone_1.png", "", 91), (java.awt.Component) ((Object) ln.l(64)));
+          re.field_o = new ArgbSprite(ResourceArchive.field_f.a("cone_2.png", "", 91), (java.awt.Component) ((Object) ln.l(64)));
+          uv.field_m = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_left.png", "", 8), (java.awt.Component) ((Object) ln.l(64))));
+          uj.field_B = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_middle.png", "", 97), (java.awt.Component) ((Object) ln.l(64))));
           sk.a(-114, 23, 6);
-          mf.field_Cb = nh.a(new ot(sj.field_f.a("button_right.png", "", 90), (java.awt.Component) ((Object) ln.l(64))));
-          pw.field_H = (ut) ((Object) new ot(sj.field_f.a("stopwatch.png", "", 101), (java.awt.Component) ((Object) ln.l(64))));
+          mf.field_Cb = nh.a(new ArgbSprite(ResourceArchive.field_f.a("button_right.png", "", 90), (java.awt.Component) ((Object) ln.l(64))));
+          pw.field_H = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.a("stopwatch.png", "", 101), (java.awt.Component) ((Object) ln.l(64))));
           sk.a(-58, 23, 8);
-          nh.a(new ot(sj.field_f.a("thin_button_endl.png", "", 89), (java.awt.Component) ((Object) ln.l(64))));
-          nh.a(new ot(sj.field_f.a("thin_button_mid.png", "", 5), (java.awt.Component) ((Object) ln.l(64))));
+          nh.a(new ArgbSprite(ResourceArchive.field_f.a("thin_button_endl.png", "", 89), (java.awt.Component) ((Object) ln.l(64))));
+          nh.a(new ArgbSprite(ResourceArchive.field_f.a("thin_button_mid.png", "", 5), (java.awt.Component) ((Object) ln.l(64))));
           sk.a(-105, 23, 10);
-          nh.a(new ot(sj.field_f.a("thin_button_endr.png", "", 58), (java.awt.Component) ((Object) ln.l(64))));
-          gu.field_zb = nh.a(new ot(sj.field_f.a("small_button_L.png", "", 52), (java.awt.Component) ((Object) ln.l(64))));
+          nh.a(new ArgbSprite(ResourceArchive.field_f.a("thin_button_endr.png", "", 58), (java.awt.Component) ((Object) ln.l(64))));
+          gu.field_zb = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_L.png", "", 52), (java.awt.Component) ((Object) ln.l(64))));
           sk.a(-61, 23, 12);
-          ae.field_H = nh.a(new ot(sj.field_f.a("small_button_mid.png", "", 53), (java.awt.Component) ((Object) ln.l(64))));
-          fv.field_b = nh.a(new ot(sj.field_f.a("small_button_R.png", "", 117), (java.awt.Component) ((Object) ln.l(64))));
+          ae.field_H = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_mid.png", "", 53), (java.awt.Component) ((Object) ln.l(64))));
+          fv.field_b = nh.a(new ArgbSprite(ResourceArchive.field_f.a("small_button_R.png", "", 117), (java.awt.Component) ((Object) ln.l(64))));
           sk.a(-85, 23, 14);
-          mg.field_g = nh.a(new ot(sj.field_f.a("top_bar_Seg.png", "", 127), (java.awt.Component) ((Object) ln.l(64))));
+          mg.field_g = nh.a(new ArgbSprite(ResourceArchive.field_f.a("top_bar_Seg.png", "", 127), (java.awt.Component) ((Object) ln.l(64))));
           sk.a(-49, 23, 16);
-          qt.field_u = nh.a(new ot(sj.field_f.a("top.png", "", 82), (java.awt.Component) ((Object) ln.l(64))));
+          qt.field_u = nh.a(new ArgbSprite(ResourceArchive.field_f.a("top.png", "", 82), (java.awt.Component) ((Object) ln.l(64))));
           sk.a(-98, 23, 18);
-          fn.field_f = new ot(sj.field_f.a("asphalt_corner.png", "", 6), (java.awt.Component) ((Object) ln.l(64)));
-          kn.field_J = new ut(sj.field_f.a("asphalt_v.png", "", 69), (java.awt.Component) ((Object) ln.l(64)));
+          fn.field_f = new ArgbSprite(ResourceArchive.field_f.a("asphalt_corner.png", "", 6), (java.awt.Component) ((Object) ln.l(64)));
+          kn.field_J = new Sprite(ResourceArchive.field_f.a("asphalt_v.png", "", 69), (java.awt.Component) ((Object) ln.l(64)));
           sk.a(126, 23, 20);
-          vl.field_g = new ut(sj.field_f.a("asphalt_h.png", "", 124), (java.awt.Component) ((Object) ln.l(64)));
-          eo.field_a = new ot(sj.field_f.a("arrow_on.png", "", 63), (java.awt.Component) ((Object) ln.l(64)));
-          eo.field_b = new ot(sj.field_f.a("arrow_off.png", "", 4), (java.awt.Component) ((Object) ln.l(64)));
+          vl.field_g = new Sprite(ResourceArchive.field_f.a("asphalt_h.png", "", 124), (java.awt.Component) ((Object) ln.l(64)));
+          eo.field_a = new ArgbSprite(ResourceArchive.field_f.a("arrow_on.png", "", 63), (java.awt.Component) ((Object) ln.l(64)));
+          eo.field_b = new ArgbSprite(ResourceArchive.field_f.a("arrow_off.png", "", 4), (java.awt.Component) ((Object) ln.l(64)));
           sk.a(-89, 23, 23);
-          this.a(11264, new ot(sj.field_f.a("achievements_large.png", "", 63), (java.awt.Component) ((Object) ln.l(64))));
-          sf.field_C = (ut) ((Object) new ot(sj.field_f.a("ka_logo.png", "", 37), (java.awt.Component) ((Object) ln.l(64))));
-          sj.field_f = null;
+          this.a(11264, new ArgbSprite(ResourceArchive.field_f.a("achievements_large.png", "", 63), (java.awt.Component) ((Object) ln.l(64))));
+          sf.field_C = (Sprite) ((Object) new ArgbSprite(ResourceArchive.field_f.a("ka_logo.png", "", 37), (java.awt.Component) ((Object) ln.l(64))));
+          ResourceArchive.field_f = null;
           dd.a((byte) 99);
           return false;
         }
@@ -307,16 +307,16 @@ final class eh implements pk {
         int incrementValue$45 = 0;
         int incrementValue$46 = 0;
         int incrementValue$47 = 0;
-        ut var2 = null;
-        ut var3 = null;
+        Sprite var2 = null;
+        Sprite var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
         StringBuilder var9 = null;
-        ut var10 = null;
-        ut var11 = null;
+        Sprite var10 = null;
+        Sprite var11 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var4Lifetime1;
@@ -337,8 +337,8 @@ final class eh implements pk {
           }
           var10 = tv.field_b[2];
           var11 = var10;
-          var2 = nh.a((ot) (c.field_e));
-          var3 = nh.a((ot) (st.field_q));
+          var2 = nh.a((ArgbSprite) (c.field_e));
+          var3 = nh.a((ArgbSprite) (st.field_q));
           if (rm.field_C == 0) {
             oi.field_e = new oh[30];
             var4 = 0;
@@ -384,13 +384,13 @@ final class eh implements pk {
             oi.field_e[incrementValue$59] = new oh(var3, -171, 1037);
             incrementValue$60 = var4;
             var4++;
-            oi.field_e[incrementValue$60] = new oh(vq.field_a, -51, 1082);
+            oi.field_e[incrementValue$60] = new oh(FullscreenFocusCanvas.field_a, -51, 1082);
             incrementValue$61 = var4;
             var4++;
-            oi.field_e[incrementValue$61] = new oh(vq.field_a, -30, 1105);
+            oi.field_e[incrementValue$61] = new oh(FullscreenFocusCanvas.field_a, -30, 1105);
             incrementValue$62 = var4;
             var4++;
-            oi.field_e[incrementValue$62] = new oh(vq.field_a, -20, 1055);
+            oi.field_e[incrementValue$62] = new oh(FullscreenFocusCanvas.field_a, -20, 1055);
             incrementValue$63 = var4;
             var4++;
             oi.field_e[incrementValue$63] = new oh(ns.field_c, -68, 1143);
@@ -498,10 +498,10 @@ final class eh implements pk {
     public final void b(int param0) {
         int var2 = 0;
         int var4 = 0;
-        ot var3;
+        ArgbSprite var3;
         int var5;
         var5 = Kickabout.field_G;
-        nm.a(0, -76, false, dq.$cfr$intArgs$a$7f8aad568c81(79, 3, new Random()));
+        nm.a(0, -76, false, ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(79, 3, new Random()));
         CipherPacketBuffer.k(param0 ^ 12774, 7);
         t.a(0.6000000238418579f);
         g.b(false);
@@ -519,7 +519,7 @@ final class eh implements pk {
         uf.a((byte) -32);
         cm.l(96);
         sk.a(-49, 6, 5);
-        tu.n((byte) -10);
+        GameLoopApplet.n((byte) -10);
         CipherPacketBuffer.k(61, 10);
         wb.b((byte) -47);
         rf.a((byte) -124);
@@ -528,9 +528,9 @@ final class eh implements pk {
         sk.a(-69, 4, 2);
         os.a(param0 - 12857);
         sk.a(-124, 4, 3);
-        b.field_U = (ut[]) ((Object) new ot[kb.field_E.length]);
+        b.field_U = (Sprite[]) ((Object) new ArgbSprite[kb.field_E.length]);
         for (var2 = 0; var2 < kb.field_E.length; var2++) {
-          var3 = new ot(40, 40);
+          var3 = new ArgbSprite(40, 40);
           PacketBuffer.a(-100, var3);
           kb.field_E[var2].c(0, 0);
           ta.e(param0 - 12637);
@@ -541,14 +541,14 @@ final class eh implements pk {
           }
           var3.a(-16777216);
           var3.a(2130706432);
-          b.field_U[var2] = (ut) ((Object) nh.b(var3));
+          b.field_U[var2] = (Sprite) ((Object) nh.b(var3));
         }
         CipherPacketBuffer.k(61, 11);
         if (param0 != 12763) {
           return;
         }
-        ew.field_a = dq.$cfr$intArgs$a$7f8aad568c81(-65, nv.field_E.length, new Random());
-        mj.a(256.0, 60, (double)nv.field_E[ew.field_a], (double)qt.field_r[ew.field_a]);
+        BufferedCacheFile.field_a = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(-65, nv.field_E.length, new Random());
+        mj.a(256.0, 60, (double)nv.field_E[BufferedCacheFile.field_a], (double)qt.field_r[BufferedCacheFile.field_a]);
         gg.h((byte) 51);
         jm.a(-5, false, -2);
         CipherPacketBuffer.k(61, 12);
@@ -610,7 +610,7 @@ final class eh implements pk {
             var8.field_n = var10.field_i;
             var14 = new byte[var10.field_h];
             var8.a(var14, 0, (byte) -6, var10.field_h);
-            jm.field_g = new ot(var14, (java.awt.Component) ((Object) nm.field_g));
+            jm.field_g = new ArgbSprite(var14, (java.awt.Component) ((Object) nm.field_g));
             if (-1 == jm.field_g.field_q &&
               jm.field_g.field_w == -1) {
               jm.field_g = null;
@@ -635,28 +635,28 @@ final class eh implements pk {
           fn.field_b = null;
           dd.a((byte) 85);
         }
-        b.field_H = dh.a((byte) -126, 3);
-        id.field_y = dh.a((byte) -128, 11);
-        bo.field_Cb = dh.a((byte) -128, 5);
-        v.field_b = dh.a((byte) -125, 6);
-        IterableNodeHashTable.field_c = dh.a((byte) -127, 7);
-        d.field_b = dh.a((byte) -128, 8);
-        vp.field_j = dh.a((byte) -127, 9);
-        ni.field_i = dh.a((byte) -127, 10);
+        b.field_H = ImageProducerRasterBuffer.a((byte) -126, 3);
+        id.field_y = ImageProducerRasterBuffer.a((byte) -128, 11);
+        bo.field_Cb = ImageProducerRasterBuffer.a((byte) -128, 5);
+        v.field_b = ImageProducerRasterBuffer.a((byte) -125, 6);
+        IterableNodeHashTable.field_c = ImageProducerRasterBuffer.a((byte) -127, 7);
+        d.field_b = ImageProducerRasterBuffer.a((byte) -128, 8);
+        vp.field_j = ImageProducerRasterBuffer.a((byte) -127, 9);
+        ni.field_i = ImageProducerRasterBuffer.a((byte) -127, 10);
         if (param0 != 7312) {
           this.field_d = false;
         }
-        Kickabout.field_J = dh.a((byte) -126, 12);
-        nt.field_Bb = dh.a((byte) -128, 14);
-        vu.field_Eb = dh.a((byte) -126, 15);
-        gd.field_h = dh.a((byte) -126, 16);
-        sj.field_f = dh.a((byte) -126, 17);
-        sj var4 = kh.field_g;
-        sj var3 = IterableNodeHashTable.field_b;
+        Kickabout.field_J = ImageProducerRasterBuffer.a((byte) -126, 12);
+        nt.field_Bb = ImageProducerRasterBuffer.a((byte) -128, 14);
+        vu.field_Eb = ImageProducerRasterBuffer.a((byte) -126, 15);
+        gd.field_h = ImageProducerRasterBuffer.a((byte) -126, 16);
+        ResourceArchive.field_f = ImageProducerRasterBuffer.a((byte) -126, 17);
+        ResourceArchive var4 = kh.field_g;
+        ResourceArchive var3 = IterableNodeHashTable.field_b;
         mp.field_h = new qe(55);
-        mp.field_h.a(var4, bh.field_q, -6869, "basic", CommonGame.field_M);
-        mp.field_h.a(sj.field_f, bh.field_q, -6869, "", CommonGame.field_M);
-        mp.field_h.a(var4, bh.field_q, -6869, "arialish12", CommonGame.field_M);
+        mp.field_h.a(var4, BufferedSocket.field_q, -6869, "basic", CommonGame.field_M);
+        mp.field_h.a(ResourceArchive.field_f, BufferedSocket.field_q, -6869, "", CommonGame.field_M);
+        mp.field_h.a(var4, BufferedSocket.field_q, -6869, "arialish12", CommonGame.field_M);
         mp.field_h.a(bo.field_Cb, lj.field_l, -6869, "fonts", CommonGame.field_M);
         mp.field_h.a(v.field_b, lj.field_l, -6869, "fonts", te.field_b);
         mp.field_h.a(var3, lj.field_l, -6869, "arialish12", te.field_b);
@@ -689,7 +689,7 @@ final class eh implements pk {
         mp.field_h.a(id.field_y, (byte) -116, bb.field_Ib, ac.field_e);
     }
 
-    private final void a(int param0, ot param1) {
+    private final void a(int param0, ArgbSprite param1) {
         int var6 = 0;
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -699,7 +699,7 @@ final class eh implements pk {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        ot[] var5 = null;
+        ArgbSprite[] var5 = null;
         int var7 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -707,12 +707,12 @@ final class eh implements pk {
         try {
           var3_int = param1.field_q / 8;
           var4 = param1.field_w / 10;
-          var5 = new ot[80];
+          var5 = new ArgbSprite[80];
           if (param0 != 11264) {
             field_f = (int[][]) null;
           }
           for (var6 = 0; qe.field_i.length > var6; var6++) {
-            var5[var6] = new ot(var3_int, var4);
+            var5[var6] = new ArgbSprite(var3_int, var4);
             var7 = param1.field_q * var4 * (var6 / 8) + var3_int * (var6 % 8);
             for (var8 = 0; var8 < var5[var6].field_y.length; var8++) {
               var9 = var8 % var3_int + param1.field_q * (var8 / var3_int);
@@ -735,11 +735,11 @@ final class eh implements pk {
         }
     }
 
-    private final ut[] a(String param0, sj param1, byte param2, String param3) {
-        ut[] var5 = null;
+    private final Sprite[] a(String param0, ResourceArchive param1, byte param2, String param3) {
+        Sprite[] var5 = null;
         RuntimeException var5_ref = null;
-        ut[] var6 = null;
-        ut[] stackIn_3_0 = null;
+        Sprite[] var6 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

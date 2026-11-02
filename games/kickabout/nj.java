@@ -40,7 +40,7 @@ final class nj {
           var7 = Kickabout.field_G;
           try {
             try {
-              var3 = (String) (mm.a(param0 ^ 30858, "getcookies", param2));
+              var3 = (String) (AppletJavaScriptBridge.a(param0 ^ 30858, "getcookies", param2));
               var4 = FormationAgent.a(var3, param0 ^ 2, ';');
               for (var5 = param0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -104,19 +104,19 @@ final class nj {
     final static int a(int param0, int param1, int param2, int param3) {
         if (param3 != 29079) {
           field_b = (String) null;
-          if (param2 + (param1 + param0) <= on.field_f) {
+          if (param2 + (param1 + param0) <= SoftwareRasterizer.field_f) {
             return param1 + param0;
           }
           if (-param2 + param0 < 0) {
-            return on.field_f - param2;
+            return SoftwareRasterizer.field_f - param2;
           }
           return param0 - param2;
         }
-        if (param2 + (param1 + param0) <= on.field_f) {
+        if (param2 + (param1 + param0) <= SoftwareRasterizer.field_f) {
           return param1 + param0;
         }
         if (-param2 + param0 < 0) {
-          return on.field_f - param2;
+          return SoftwareRasterizer.field_f - param2;
         }
         return param0 - param2;
     }

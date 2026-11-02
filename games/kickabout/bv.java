@@ -138,7 +138,7 @@ final class bv extends jd {
           String var5Lifetime5;
           String var5Lifetime6;
           try {
-            lu.field_t = param1;
+            SpriteState.field_t = param1;
             try {
               if (param2 != 15) {
                 String var6 = (String) null;
@@ -157,7 +157,7 @@ final class bv extends jd {
               if (0 == param1.length()) {
                 var5Lifetime6 = var8 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }
-              mm.a("document.cookie=\"" + var5Lifetime6 + "\"", param0, (byte) -19);
+              AppletJavaScriptBridge.a("document.cookie=\"" + var5Lifetime6 + "\"", param0, (byte) -19);
             } catch (Throwable throwable) {
             }
             nt.a(param0, (byte) 99);
@@ -196,7 +196,7 @@ final class bv extends jd {
         }
     }
 
-    bv(ga param0) {
+    bv(TextInputWidget param0) {
         super(param0);
         this.field_j = false;
     }
@@ -215,7 +215,7 @@ final class bv extends jd {
             if (param0 != 0) {
               return;
             }
-            if (bu.field_h.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_h.startsWith("win") &&
               fv.a((byte) -92, param1)) {
               return;
             }
@@ -354,17 +354,17 @@ final class bv extends jd {
               var25 = 0;
               var13Lifetime1 = var25;
               while (var25 < 33) {
-                ao.field_i[var11Lifetime1][var12Lifetime1][var25] = 0;
+                RandomAccessCacheFile.field_i[var11Lifetime1][var12Lifetime1][var25] = 0;
                 ra.field_F[var11Lifetime1][var12Lifetime1][var25] = 0;
-                tf.field_g[var11Lifetime1][var12Lifetime1][var25] = 0;
+                IntrusiveDeque.field_g[var11Lifetime1][var12Lifetime1][var25] = 0;
                 gm.field_fb[var11Lifetime1][var12Lifetime1][var25] = 0;
                 uc.field_C[var11Lifetime1][var12Lifetime1][var25] = 0.0;
                 var25++;
               }
             }
           }
-          wp.a(uc.field_C, ao.field_i, ra.field_F, 121, gm.field_fb, tf.field_g);
-          ld.a(ao.field_i, gm.field_fb, uc.field_C, ra.field_F, tf.field_g, false);
+          wp.a(uc.field_C, RandomAccessCacheFile.field_i, ra.field_F, 121, gm.field_fb, IntrusiveDeque.field_g);
+          ld.a(RandomAccessCacheFile.field_i, gm.field_fb, uc.field_C, ra.field_F, IntrusiveDeque.field_g, false);
           var14 = var26[0];
           var26[0].field_k = 0;
           var15 = var26[0];
@@ -420,13 +420,13 @@ final class bv extends jd {
           var18 = var28;
           var24 = new int[35937];
           for (var12Lifetime3 = 0; var12Lifetime3 < hh.field_d; var12Lifetime3++) {
-            av.a(var12Lifetime3, 1, var24, var26[var12Lifetime3]);
-            var9Lifetime1 = fr.a(var26[var12Lifetime3], ao.field_i, true);
+            SocketConnector.a(var12Lifetime3, 1, var24, var26[var12Lifetime3]);
+            var9Lifetime1 = fr.a(var26[var12Lifetime3], RandomAccessCacheFile.field_i, true);
             if (var9Lifetime1 == 0) {
               var30[var12Lifetime3] = 0;
             } else {
               var19 = fr.a(var26[var12Lifetime3], ra.field_F, true) / var9Lifetime1 & 255;
-              var20 = fr.a(var26[var12Lifetime3], tf.field_g, true) / var9Lifetime1 & 255;
+              var20 = fr.a(var26[var12Lifetime3], IntrusiveDeque.field_g, true) / var9Lifetime1 & 255;
               var21 = fr.a(var26[var12Lifetime3], gm.field_fb, param0) / var9Lifetime1 & 255;
               var18[var12Lifetime3] = var21 + (var19 << 16) + (var20 << 8);
             }

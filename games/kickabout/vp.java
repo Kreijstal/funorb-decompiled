@@ -4,7 +4,7 @@
 final class vp implements hc {
     private int field_i;
     static String field_d;
-    static sj field_j;
+    static ResourceArchive field_j;
     static String field_n;
     static ff field_o;
     static int field_f;
@@ -220,7 +220,7 @@ final class vp implements hc {
         field_n = "Play rated game";
         field_d = "tournament lobby";
         field_o = new ff(8, 0, 4, 1);
-        de.b(50, (byte) -110);
+        GameKeyHandler.b(50, (byte) -110);
         field_l = "Loading animations";
         field_g = "Public chat is unavailable while setting up a rated game.";
         field_b = "Quick Chat Help";

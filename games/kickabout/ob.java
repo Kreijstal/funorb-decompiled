@@ -84,12 +84,12 @@ final class ob extends BallAgent {
             var4 != 0) &&
             (8388608 > Math.abs(var3_intLifetime1) &&
             Math.abs(var4) < 8388608)) {
-            var5 = tu.a(var3_intLifetime1, var4, -23146);
+            var5 = GameLoopApplet.a(var3_intLifetime1, var4, -23146);
             if (var5 != 0) {
               var4 = (int)(((long)var4 << 16) / (long)var5);
               var3_intLifetime1 = (int)(((long)var3_intLifetime1 << 16) / (long)var5);
-              tf.field_d.a(var3_intLifetime1, true, 0, var4, var5 >> 12);
-              this.field_Q.a(tf.field_d, -49);
+              IntrusiveDeque.field_d.a(var3_intLifetime1, true, 0, var4, var5 >> 12);
+              this.field_Q.a(IntrusiveDeque.field_d, -49);
               this.field_L = true;
             }
           }
@@ -97,7 +97,7 @@ final class ob extends BallAgent {
             if (!this.field_y &&
               this.field_x) {
               var5Lifetime1 = 41;
-              var6 = tu.a(var3_intLifetime1, var4, -23146);
+              var6 = GameLoopApplet.a(var3_intLifetime1, var4, -23146);
               var7 = var6 >> 10;
               he.a(128, false, 240, we.field_f + var7, var5Lifetime1);
             }
@@ -226,14 +226,14 @@ final class ob extends BallAgent {
           var5 = 26 / ((param1 + 55) / 54);
           var3 = pb.field_C;
           var4 = 300;
-          var6 = ((hu) ((Object) var3)).b(var2, var4);
+          var6 = ((BitmapFont) ((Object) var3)).b(var2, var4);
           if (var6 > 3) {
-            while (((hu) ((Object) var3)).b(var2, var4) > 3) {
+            while (((BitmapFont) ((Object) var3)).b(var2, var4) > 3) {
               var4 += 20;
             }
           } else {
             if (var6 > 1) {
-              while (((hu) ((Object) var3)).b(var2, var4) == var6) {
+              while (((BitmapFont) ((Object) var3)).b(var2, var4) == var6) {
                 var4 += 20;
               }
               if (var4 > 500) {
@@ -348,7 +348,7 @@ final class ob extends BallAgent {
           if (!mh.field_q.field_f) {
             return false;
           }
-          var6 = bh.field_f;
+          var6 = BufferedSocket.field_f;
           var7 = mh.field_q.field_e;
           for (var4 = 0; var4 < 8; var4++) {
             var6[var4] = hf.a(var6[var4], var7[var4]);
@@ -557,84 +557,84 @@ final class ob extends BallAgent {
         try {
           var5_int = param4 + param1;
           var6 = param3 + param2;
-          if (on.field_b >= param4) {
-            stackIn_4_0 = on.field_b;
+          if (SoftwareRasterizer.field_b >= param4) {
+            stackIn_4_0 = SoftwareRasterizer.field_b;
           } else {
             stackIn_4_0 = param4;
           }
           var7 = stackIn_4_0;
-          if (on.field_e >= param2) {
-            stackIn_7_0 = on.field_e;
+          if (SoftwareRasterizer.field_e >= param2) {
+            stackIn_7_0 = SoftwareRasterizer.field_e;
           } else {
             stackIn_7_0 = param2;
           }
           var8 = stackIn_7_0;
-          if (on.field_c <= var5_int) {
-            stackIn_10_0 = on.field_c;
+          if (SoftwareRasterizer.field_c <= var5_int) {
+            stackIn_10_0 = SoftwareRasterizer.field_c;
           } else {
             stackIn_10_0 = var5_int;
           }
           var9 = stackIn_10_0;
-          if (on.field_h > var6) {
+          if (SoftwareRasterizer.field_h > var6) {
             stackIn_13_0 = var6;
           } else {
-            stackIn_13_0 = on.field_h;
+            stackIn_13_0 = SoftwareRasterizer.field_h;
           }
           var10 = stackIn_13_0;
-          if (on.field_b <= param4 &&
-            on.field_c > param4) {
-            var11 = param4 + var8 * on.field_g;
+          if (SoftwareRasterizer.field_b <= param4 &&
+            SoftwareRasterizer.field_c > param4) {
+            var11 = param4 + var8 * SoftwareRasterizer.field_g;
             var12 = -var8 + var10 + 1 >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              on.field_a[var11] = 16777215;
-              var11 = var11 + on.field_g * 2;
+              SoftwareRasterizer.field_a[var11] = 16777215;
+              var11 = var11 + SoftwareRasterizer.field_g * 2;
             }
           }
-          if (on.field_e <= param2 &&
-            var6 < on.field_h) {
-            var11Lifetime1 = on.field_g * param2 + var7;
+          if (SoftwareRasterizer.field_e <= param2 &&
+            var6 < SoftwareRasterizer.field_h) {
+            var11Lifetime1 = SoftwareRasterizer.field_g * param2 + var7;
             var12Lifetime1 = 1 + (var9 - var7) >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              on.field_a[var11Lifetime1] = 16777215;
+              SoftwareRasterizer.field_a[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
           if (param0 != 2) {
             ob.m(53);
           }
-          if (on.field_b <= var5_int &&
-            on.field_c > var5_int) {
-            var11Lifetime2 = ((1 & var5_int - param4) + var8) * on.field_g + var5_int;
+          if (SoftwareRasterizer.field_b <= var5_int &&
+            SoftwareRasterizer.field_c > var5_int) {
+            var11Lifetime2 = ((1 & var5_int - param4) + var8) * SoftwareRasterizer.field_g + var5_int;
             var12Lifetime2 = 1 + (var10 - var8) >> 1;
             while (true) {
               var12Lifetime2--;
               if (0 > var12Lifetime2) {
                 break;
               }
-              on.field_a[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + on.field_g * 2;
+              SoftwareRasterizer.field_a[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + SoftwareRasterizer.field_g * 2;
             }
           }
-          if (on.field_e <= param2) {
-            if (var6 >= on.field_h) {
+          if (SoftwareRasterizer.field_e <= param2) {
+            if (var6 >= SoftwareRasterizer.field_h) {
               return;
             }
-            var11Lifetime3 = (1 & var6 - param2) + on.field_g * var6 + var7;
+            var11Lifetime3 = (1 & var6 - param2) + SoftwareRasterizer.field_g * var6 + var7;
             var12Lifetime3 = var9 + 1 - var7 >> 1;
             while (true) {
               var12Lifetime3--;
               if (var12Lifetime3 < 0) {
                 break;
               }
-              on.field_a[var11Lifetime3] = 16777215;
+              SoftwareRasterizer.field_a[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }
@@ -658,7 +658,7 @@ final class ob extends BallAgent {
           this.a(300, var3, var4, var2, 300);
         } else {
           PacketBuffer.a(-115, kw.field_f);
-          on.b();
+          SoftwareRasterizer.b();
           var2 = (var2 << 7) / hw.field_i;
           this.a(300, 64, 64, var2, 300);
           ta.e(118);

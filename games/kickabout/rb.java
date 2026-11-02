@@ -56,11 +56,11 @@ final class rb extends hd {
           }
           if (var9 != 0) {
             if (var8_ref_tv.field_s == null ||
-              wj.field_z) {
+              WidgetContainer.field_z) {
               if (var8_ref_tv.field_s != null) {
               }
               var10 = ob.a((byte) -92, var8_ref_tv);
-              var11 = var10 + hu.c(var8_ref_tv.field_g);
+              var11 = var10 + BitmapFont.c(var8_ref_tv.field_g);
               var12 = qa.a(var8_ref_tv, 31100);
               var8_ref_tv.field_s = new hd(0L, vv.field_o, var11);
               var6 = var6 + param1;
@@ -89,17 +89,17 @@ final class rb extends hd {
         var8Lifetime1 = var6 - var7Lifetime1 + pw.field_G.field_Ab.field_L + pw.field_G.field_Ab.field_mb;
         pw.field_G.field_Ab.field_mb = pw.field_G.field_Ab.field_mb - var8Lifetime1;
         pw.field_G.field_Ab.field_J = pw.field_G.field_Ab.field_J + var8Lifetime1;
-        if (wj.field_z) {
+        if (WidgetContainer.field_z) {
           pw.field_G.field_Ab.field_mb = var7Lifetime1;
         }
         if (param2 != 26) {
           return (tv) null;
         }
         pw.field_G.field_Ab.field_L = var7Lifetime1 - pw.field_G.field_Ab.field_mb;
-        if (wj.field_z) {
+        if (WidgetContainer.field_z) {
           dg.field_a = true;
           pw.field_G.field_Ab.field_J = -pw.field_G.field_Ab.field_mb + pw.field_G.field_zb.field_mb;
-          wj.field_z = false;
+          WidgetContainer.field_z = false;
           pw.field_G.field_Ab.field_v = 0;
         }
         if (vg.field_Wb &&
@@ -180,7 +180,7 @@ final class rb extends hd {
           return -1;
         }
         if (param0 &&
-          0 != wj.field_A &&
+          0 != WidgetContainer.field_A &&
           this.field_sb == 0) {
           return -1;
         }
@@ -375,8 +375,8 @@ final class rb extends hd {
             this.field_Nb.a((byte) -127, var28[2]);
             this.field_Jb = new hd[ob.field_B];
             for (var16 = 0; ob.field_B > var16; var16++) {
-              if (null != bh.field_i[var16]) {
-                this.field_Jb[var16] = new hd(0L, param10, bh.field_i[var16]);
+              if (null != BufferedSocket.field_i[var16]) {
+                this.field_Jb[var16] = new hd(0L, param10, BufferedSocket.field_i[var16]);
                 this.field_Jb[var16].field_A = 0;
                 stackIn_14_0 = this.field_Jb[var16];
                 stackIn_15_1 = (param11 != null);

@@ -165,14 +165,14 @@ final class hv {
         field_c = (String[][]) null;
     }
 
-    final static void a(hu param0, int param1) {
+    final static void a(BitmapFont param0, int param1) {
         if (param1 != -448) {
           return;
         }
         try {
           cq.field_e = param0;
           ae.field_D = h.a(17475);
-          js.field_d = new tf();
+          js.field_d = new IntrusiveDeque();
           bk.field_c = new gv[6];
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "hv.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

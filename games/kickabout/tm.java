@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class tm extends am {
-    static ot field_z;
-    static ut field_u;
+abstract class tm extends DualLinkNode {
+    static ArgbSprite field_z;
+    static Sprite field_u;
     static String field_r;
-    static ut field_v;
+    static Sprite field_v;
     static int field_t;
     String field_s;
     static int[][] field_x;
     Class[] field_p;
     String field_o;
     static int[] field_y;
-    static ut[] field_n;
-    static ut field_w;
+    static Sprite[] field_n;
+    static Sprite field_w;
     static String[] field_q;
 
     public static void a(int param0) {
@@ -149,7 +149,7 @@ abstract class tm extends am {
         }
         try {
           ba.field_p = param3;
-          dq.field_f = param0;
+          ProxySocketConnector.field_f = param0;
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "tm.H(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -186,7 +186,7 @@ abstract class tm extends am {
     }
 
     static {
-        field_u = new ut(76, 92);
+        field_u = new Sprite(76, 92);
         field_t = 0;
         field_x = new int[3][4];
         field_x[0][0] = 7508762;
@@ -202,7 +202,7 @@ abstract class tm extends am {
         field_x[2][2] = 2960685;
         field_x[2][3] = 6568505;
         field_r = "<%0> has joined your game.";
-        field_v = new ut(270, 70);
+        field_v = new Sprite(270, 70);
         field_y = new int[3];
         field_q = new String[]{"<img=0>The highest league in Kickabout is known as the Diamond Division. The rules here are slightly different.", "<img=0>When you reach the Diamond Division, your league points vanish and are replaced with <col=ffff00>diamond league points</col>.", "<img=0>Players compete with each other in a weekly battle to get the highest score. There is no maximum value or target score to reach.", "<img=0>Diamond league points are reset every week at <col=ffff00>10am GMT on Tuesdays</col>. All players' scores are set back to 0.", "<img=0>The player(s) with the highest score at the end of each week receives the Diamond Trophy and the famous 'We Are The Champions' Achievement!"};
         field_y[2] = 22;

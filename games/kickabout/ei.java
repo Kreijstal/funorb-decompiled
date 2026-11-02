@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ei implements gj {
-    private hu field_k;
+    private BitmapFont field_k;
     static String field_c;
     static boolean field_n;
     static String field_f;
@@ -27,7 +27,7 @@ final class ei implements gj {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, fd param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
@@ -36,7 +36,7 @@ final class ei implements gj {
         int var13 = 0;
         int var14 = 0;
         s var15 = null;
-        fd stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -49,27 +49,27 @@ final class ei implements gj {
           if (!(param3 instanceof s)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (fd) (param3);
+            stackIn_3_0 = (UiWidget) (param3);
           }
           var15 = (s) (stackIn_3_0);
           if (var15 != null) {
           }
-          on.a(param4 + param3.field_t, param2 + param3.field_g, param3.field_n, param3.field_i, this.field_m);
+          SoftwareRasterizer.a(param4 + param3.field_t, param2 + param3.field_g, param3.field_n, param3.field_i, this.field_m);
           var7 = param4 + (param3.field_t + var15.field_H);
           var8 = param3.field_g + (param2 + var15.field_G);
-          on.d(var7, var8, var15.field_J, this.field_i);
+          SoftwareRasterizer.d(var7, var8, var15.field_J, this.field_i);
           var12 = -80 % ((59 - param0) / 53);
           if (var15.field_I != -1) {
             var9 = 2.0 * (3.141592653589793 * (double)var15.field_I) / (double)var15.field_K;
             var11 = (int)(-Math.sin(var9) * (double)var15.field_J);
             var13 = (int)(Math.cos(var9) * (double)var15.field_J);
-            on.d(var11 + var7, var13 + var8, 1, this.field_g);
+            SoftwareRasterizer.d(var11 + var7, var13 + var8, 1, this.field_g);
           }
-          on.d(var7, var8, 2, 1);
+          SoftwareRasterizer.d(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var15.field_L) / (double)var15.field_K;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_J);
           var13Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_J);
-          on.b(var7, var8, var11Lifetime1 + var7, var13Lifetime1 + var8, 1);
+          SoftwareRasterizer.b(var7, var8, var11Lifetime1 + var7, var13Lifetime1 + var8, 1);
           if (this.field_k != null) {
             var14 = this.field_h + (var15.field_J + var15.field_H);
             this.field_k.a(param3.field_q, param4 - (-param3.field_t - var14), param2 + (param3.field_g + this.field_a), -var14 - this.field_h + param3.field_n, param3.field_i - (this.field_h << 1), this.field_l, this.field_j, 1, 1, 0);
@@ -299,7 +299,7 @@ final class ei implements gj {
         return param0 >= 2048 ? mg.field_b[-param0 + 4096] : mg.field_b[param0];
     }
 
-    ei(hu param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    ei(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_g = param6;
           this.field_j = param4;

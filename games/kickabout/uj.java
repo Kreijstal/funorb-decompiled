@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class uj extends tm {
-    static ut field_B;
+    static Sprite field_B;
     static String field_C;
     static int[] field_D;
     static String field_A;
@@ -52,21 +52,21 @@ final class uj extends tm {
         field_B = null;
         field_C = null;
         if (param0) {
-          field_B = (ut) null;
+          field_B = (Sprite) null;
         }
         field_D = null;
     }
 
-    final static ut[] a(byte param0, it[] param1, String[] param2, int param3) {
+    final static Sprite[] a(byte param0, it[] param1, String[] param2, int param3) {
         int var6 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
-        ut[] var5 = null;
+        Sprite[] var5 = null;
         String var7 = null;
         int var8 = 0;
         int var9 = 0;
         int stackIn_8_0 = 0;
-        ut[] stackIn_10_0 = null;
+        Sprite[] stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -76,17 +76,17 @@ final class uj extends tm {
         var9 = Kickabout.field_G;
         try {
           var4_int = param2.length;
-          var5 = new ut[var4_int];
+          var5 = new Sprite[var4_int];
           if (param0 > -58) {
-            field_B = (ut) null;
+            field_B = (Sprite) null;
           }
           for (var6 = 0; var6 < var4_int; var6++) {
             var7 = param2[var6];
-            var5[var6] = new ut(q.field_d.a(var7) + 4, 18);
+            var5[var6] = new Sprite(q.field_d.a(var7) + 4, 18);
             PacketBuffer.a(82, var5[var6]);
             stackIn_8_0 = (param1[var6].field_p == param3) ? 11184895 : 16755370;
             var8 = stackIn_8_0;
-            q.field_d.d(var7, on.field_g >> 1, -4 + on.field_f, var8, -1);
+            q.field_d.d(var7, SoftwareRasterizer.field_g >> 1, -4 + SoftwareRasterizer.field_f, var8, -1);
             ta.e(117);
             var5[var6].a(65793);
           }
@@ -199,43 +199,43 @@ final class uj extends tm {
         String var1 = vg.a(-110);
         pb.field_E = new pd(var1, (String) null, param0, false, false);
         wd.field_l.a(we.field_a, false);
-        we.field_a.a((byte) -126, (fd) (pb.field_E));
+        we.field_a.a((byte) -126, (UiWidget) (pb.field_E));
         we.field_a.m(4000);
     }
 
-    final static sj a(int param0, byte param1, int param2, boolean param3, boolean param4, boolean param5) {
+    final static ResourceArchive a(int param0, byte param1, int param2, boolean param3, boolean param4, boolean param5) {
         try {
           int var6_int = 0;
           IOException var6 = null;
           Object var7 = null;
           Object var8 = null;
-          wm var9 = null;
-          sj stackIn_14_0 = null;
+          CachedArchiveSource var9 = null;
+          ResourceArchive stackIn_14_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6_int = 60 % ((20 - param1) / 35);
             var7 = null;
             if (hf.field_e.field_c != null) {
-              ao.field_h = new ew(hf.field_e.field_c, 5200, 0);
+              RandomAccessCacheFile.field_h = new BufferedCacheFile(hf.field_e.field_c, 5200, 0);
               hf.field_e.field_c = null;
-              var7 = new qh(255, ao.field_h, new ew(hf.field_e.field_j, 12000, 0), 2097152);
+              var7 = new SectorCacheStore(255, RandomAccessCacheFile.field_h, new BufferedCacheFile(hf.field_e.field_j, 12000, 0), 2097152);
             }
             var8 = null;
-            if (null != ao.field_h) {
-              if (null == u.field_j) {
-                u.field_j = new ew[hf.field_e.field_v.length];
+            if (null != RandomAccessCacheFile.field_h) {
+              if (null == JaggrabDownloader.field_j) {
+                JaggrabDownloader.field_j = new BufferedCacheFile[hf.field_e.field_v.length];
               }
-              if (u.field_j[param0] == null) {
-                u.field_j[param0] = new ew(hf.field_e.field_v[param0], 12000, 0);
+              if (JaggrabDownloader.field_j[param0] == null) {
+                JaggrabDownloader.field_j[param0] = new BufferedCacheFile(hf.field_e.field_v[param0], 12000, 0);
                 hf.field_e.field_v[param0] = null;
               }
-              var8 = new qh(param0, ao.field_h, u.field_j[param0], 2097152);
+              var8 = new SectorCacheStore(param0, RandomAccessCacheFile.field_h, JaggrabDownloader.field_j[param0], 2097152);
             }
-            var9 = al.field_Ab.a((qh) (var8), -122, param0, param4, (qh) (var7));
+            var9 = al.field_Ab.a((SectorCacheStore) (var8), -122, param0, param4, (SectorCacheStore) (var7));
             if (param3) {
               var9.b((byte) 55);
             }
-            stackIn_14_0 = new sj(var9, param5, param2);
+            stackIn_14_0 = new ResourceArchive(var9, param5, param2);
             return stackIn_14_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

@@ -3,7 +3,7 @@
  */
 final class su {
     static jb field_c;
-    static ut field_a;
+    static Sprite field_a;
     static gu field_b;
 
     final static kw a(int param0, String param1) {
@@ -45,7 +45,7 @@ final class su {
           try {
             var4 = param3.getGraphics();
             if (param0 != 27744) {
-              field_a = (ut) null;
+              field_a = (Sprite) null;
             }
             ea.field_f.a(param1, 10, param2, var4);
             var4.dispose();
@@ -227,7 +227,7 @@ final class su {
         }
     }
 
-    final static hd a(int param0, int param1, int param2, boolean param3, int param4, hu param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    final static hd a(int param0, int param1, int param2, boolean param3, int param4, BitmapFont param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         hd var13 = null;
         RuntimeException var13_ref = null;
         hd stackIn_3_0 = null;

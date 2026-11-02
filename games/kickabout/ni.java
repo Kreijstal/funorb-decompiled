@@ -11,10 +11,10 @@ final class ni extends IntrusiveNode {
     static em field_m;
     int field_g;
     static String[] field_k;
-    static sj field_i;
+    static ResourceArchive field_i;
     int field_o;
     static String field_n;
-    static ut[][] field_f;
+    static Sprite[][] field_f;
 
     final static byte[] a(byte param0, String param1) {
         RuntimeException var2 = null;
@@ -52,7 +52,7 @@ final class ni extends IntrusiveNode {
         field_n = null;
         if (param0 == -1859) {
           field_e = null;
-          field_f = (ut[][]) null;
+          field_f = (Sprite[][]) null;
           field_h = null;
           field_q = null;
           field_i = null;
@@ -69,7 +69,7 @@ final class ni extends IntrusiveNode {
           return la.field_a.a(il.field_c, (byte) 127, cc.field_e);
         }
         if (kd.field_s) {
-          return ov.a(param1, -14, param0);
+          return NodeHashTableIterator.a(param1, -14, param0);
         }
         if (sq.b(param3 + 20963, param0, param1)) {
           return true;

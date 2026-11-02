@@ -30,13 +30,13 @@ class FootballerAgent extends MatchAgent {
     private int field_t;
     boolean field_s;
     up field_N;
-    static tf field_f;
+    static IntrusiveDeque field_f;
     int field_P;
     int action;
     int field_F;
     int field_L;
     int field_k;
-    static hu field_i;
+    static BitmapFont field_i;
 
     final boolean b(boolean param0) {
         if (param0) {
@@ -321,7 +321,7 @@ class FootballerAgent extends MatchAgent {
           this.field_M = param1.l(26, param0 ^ -13927);
           this.field_w = param1.l(27, 59);
           this.field_v = hq.a(22531, 30, param1, 0);
-          this.field_K = ew.a((byte) 125, 17, param1, 0, 24, 25);
+          this.field_K = BufferedCacheFile.a((byte) 125, 17, param1, 0, 24, 25);
           this.field_G = param1.l(4, 59);
           this.field_n = param1.l(2, 59) - 1;
           this.field_j = -1 + param1.l(2, param0 + 13977);
@@ -402,9 +402,9 @@ class FootballerAgent extends MatchAgent {
         RuntimeException var3 = null;
         try {
           if (mu.a(param1, (byte) -39)) {
-            this.field_M = this.field_M + ew.a((byte) 125, 19, param1, 0, 23, 30);
-            this.field_w = this.field_w + ew.a((byte) 125, 19, param1, 0, 23, 30);
-            this.field_v = this.field_v + ew.a((byte) 125, 19, param1, 0, 23, 30);
+            this.field_M = this.field_M + BufferedCacheFile.a((byte) 125, 19, param1, 0, 23, 30);
+            this.field_w = this.field_w + BufferedCacheFile.a((byte) 125, 19, param1, 0, 23, 30);
+            this.field_v = this.field_v + BufferedCacheFile.a((byte) 125, 19, param1, 0, 23, 30);
           }
           this.field_K = mk.a(param1, 25, (byte) 6, 0);
           if (mu.a(param1, (byte) -39)) {
@@ -778,6 +778,6 @@ class FootballerAgent extends MatchAgent {
 
     static {
         field_p = 0;
-        field_f = new tf();
+        field_f = new IntrusiveDeque();
     }
 }

@@ -11,7 +11,7 @@ final class lk extends IntrusiveNode {
     static int field_l;
     static String field_i;
     String field_h;
-    tf field_j;
+    IntrusiveDeque field_j;
 
     final static void a(int param0, CommonGame param1, int param2, FootballerAgent param3) {
         RuntimeException var4 = null;
@@ -86,7 +86,7 @@ final class lk extends IntrusiveNode {
 
     final li a(boolean param0, tm[] param1) throws dw, fi {
         int incrementValue$0 = 0;
-        tf stackIn_5_0 = null;
+        IntrusiveDeque stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
         li stackIn_10_0 = null;
         li stackIn_15_0 = null;
@@ -116,7 +116,7 @@ final class lk extends IntrusiveNode {
             if (this.field_k == vu.field_Ab) {
               stackIn_5_0 = this.field_j;
               stackIn_6_1 = !(param0);
-              var7 = new li[((tf) (Object) stackIn_5_0).a(stackIn_6_1)];
+              var7 = new li[((IntrusiveDeque) (Object) stackIn_5_0).a(stackIn_6_1)];
               var8 = var7;
               var4 = 0;
               var5 = (lk) (this.field_j.g(24009));
@@ -209,7 +209,7 @@ final class lk extends IntrusiveNode {
         if (si.field_g == this.field_k) {
           return "ArgStart";
         }
-        if (this.field_k == og.field_c) {
+        if (this.field_k == RasterBuffer.field_c) {
           return "ArgEnd";
         }
         if (this.field_k == bp.field_Gb) {

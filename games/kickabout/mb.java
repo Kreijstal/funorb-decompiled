@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mb extends wj implements ur, vh {
+final class mb extends WidgetContainer implements ur, vh {
     fr field_G;
     private wi field_E;
     static hd field_F;
@@ -17,7 +17,7 @@ final class mb extends wj implements ur, vh {
           }
           var3 = this.field_C;
           var4 = param0;
-          ((ga) ((Object) var3)).a(var4, (byte) -17, false);
+          ((TextInputWidget) ((Object) var3)).a(var4, (byte) -17, false);
         } catch (RuntimeException runtimeException) {
           throw nb.a((Throwable) ((Object) runtimeException), "mb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -30,7 +30,7 @@ final class mb extends wj implements ur, vh {
         ((bv) (this.field_C.a((byte) -116))).c((byte) 101);
     }
 
-    private final int a(String param0, int param1, int param2, fd param3, int param4, int param5, String param6) {
+    private final int a(String param0, int param1, int param2, UiWidget param3, int param4, int param5, String param6) {
         RuntimeException var8 = null;
         ju var9 = null;
         int var10 = 0;
@@ -114,7 +114,7 @@ final class mb extends wj implements ur, vh {
         }
     }
 
-    final boolean a(char param0, byte param1, fd param2, int param3) {
+    final boolean a(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -156,7 +156,7 @@ final class mb extends wj implements ur, vh {
         super(0, 0, 496, 0, (gj) null);
         this.field_C = new mr("", (jv) null, 12);
         qv var1 = new qv(qo.field_k, 0, 0, 0, 0, 16777215, -1, 3, 0, gf.field_a.field_G, -1, 2147483647, true);
-        fd var2 = new fd(vt.field_b, var1, (jv) null);
+        UiWidget var2 = new UiWidget(vt.field_b, var1, (jv) null);
         this.field_B = new wi(ap.field_x, (jv) null);
         this.field_E = new wi(vt.field_a, (jv) null);
         this.field_C.field_u = sr.field_b;
@@ -191,12 +191,12 @@ final class mb extends wj implements ur, vh {
         if (param0 == 20) {
           return true;
         }
-        fd var3 = (fd) null;
-        this.a('L', (byte) 88, (fd) null, -112);
+        UiWidget var3 = (UiWidget) null;
+        this.a('L', (byte) 88, (UiWidget) null, -112);
         return true;
     }
 
-    private final int a(int param0, String param1, String param2, fd param3, byte param4, int param5) {
+    private final int a(int param0, String param1, String param2, UiWidget param3, byte param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -282,7 +282,7 @@ final class mb extends wj implements ur, vh {
         }
     }
 
-    final void a(byte param0, fd param1, int param2, int param3) {
+    final void a(byte param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_B.field_y = this.l(20);

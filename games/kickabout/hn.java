@@ -6,7 +6,7 @@ final class hn extends IntrusiveNode {
     int field_i;
     int[] field_g;
     static String field_e;
-    static ut field_f;
+    static Sprite field_f;
 
     public final String toString() {
         StringBuilder discarded$37 = null;
@@ -154,10 +154,10 @@ final class hn extends IntrusiveNode {
         try {
           var7_int = un.field_d.a(param6) + 15;
           pt.a(10, -22914, 0, 480, 0);
-          on.a(param3 - var7_int, param4 - 17, var7_int + 20, 21, param0, 65793, 128);
+          SoftwareRasterizer.a(param3 - var7_int, param4 - 17, var7_int + 20, 21, param0, 65793, 128);
           ta.e(123);
           pt.a(param3, -22914, 0, 480, 0);
-          on.a(-var7_int + param3, param4 - 17, 20 + var7_int, 21, 8, param1, param2);
+          SoftwareRasterizer.a(-var7_int + param3, param4 - 17, 20 + var7_int, 21, 8, param1, param2);
           ta.e(param0 + 113);
           un.field_d.c(param6, param3, param4, param5, -1);
         } catch (RuntimeException runtimeException) {
@@ -204,9 +204,9 @@ final class hn extends IntrusiveNode {
         }
     }
 
-    final static String a(String param0, String param1, int param2, sj param3) {
+    final static String a(String param0, String param1, int param2, ResourceArchive param3) {
         RuntimeException var4 = null;
-        sj var5 = null;
+        ResourceArchive var5 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
@@ -223,8 +223,8 @@ final class hn extends IntrusiveNode {
             return stackIn_3_0;
           }
           if (param2 > -9) {
-            var5 = (sj) null;
-            hn.a((String) null, (String) null, 74, (sj) null);
+            var5 = (ResourceArchive) null;
+            hn.a((String) null, (String) null, 74, (ResourceArchive) null);
           }
           stackIn_7_0 = param0 + " - " + param3.e(-8185) + "%";
           return stackIn_7_0;

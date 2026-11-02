@@ -5,12 +5,12 @@ final class hf {
     static hh field_a;
     private int field_f;
     private int field_i;
-    ut[] field_g;
+    Sprite[] field_g;
     private int field_h;
     private int field_b;
-    static bu field_e;
+    static PlatformTaskDispatcher field_e;
     private boolean field_d;
-    ut field_j;
+    Sprite field_j;
     private int field_c;
 
     final void a(int param0) {
@@ -26,7 +26,7 @@ final class hf {
         this.field_c = -1;
     }
 
-    final hf a(boolean param0, ut[] param1) {
+    final hf a(boolean param0, Sprite[] param1) {
         RuntimeException var3 = null;
         hf var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -64,7 +64,7 @@ final class hf {
 
     final hf a(int param0, boolean param1) {
         if (!param1) {
-          this.field_j = (ut) null;
+          this.field_j = (Sprite) null;
         }
         this.field_c = param0;
         return this;
@@ -135,7 +135,7 @@ final class hf {
 
     public static void a(boolean param0) {
         if (!param0) {
-          field_e = (bu) null;
+          field_e = (PlatformTaskDispatcher) null;
         }
         field_e = null;
         field_a = null;
@@ -155,7 +155,7 @@ final class hf {
         return this;
     }
 
-    final void a(int param0, int param1, id param2, fd param3, int param4, hf param5) {
+    final void a(int param0, int param1, id param2, UiWidget param3, int param4, hf param5) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -335,8 +335,8 @@ final class hf {
         }
     }
 
-    final void a(fd param0, id param1, int param2, int param3, int param4) {
-        hu stackIn_21_0;
+    final void a(UiWidget param0, id param1, int param2, int param3, int param4) {
+        BitmapFont stackIn_21_0;
         String stackIn_21_1;
         int stackIn_21_2;
         int stackIn_21_3;
@@ -418,7 +418,7 @@ final class hf {
             } else {
               stackIn_28_8 = this.field_i;
             }
-            ((hu) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param1.field_e, param1.field_m, param1.field_p);
+            ((BitmapFont) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param1.field_e, param1.field_m, param1.field_p);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

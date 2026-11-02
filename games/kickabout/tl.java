@@ -87,7 +87,7 @@ final class tl {
             var6 = var4.field_g;
             sc.field_F[0].field_d = null;
             var7 = var4.field_j;
-            sc.field_F[0].field_b = ow.field_e;
+            sc.field_F[0].field_b = ArchiveSource.field_e;
             sc.field_F[0].field_g = false;
             for (var8_int = 1; var8_int < var5; var8_int++) {
               sc.field_F[var8_int].field_b = var28.a(param0 ^ 34);
@@ -131,7 +131,7 @@ final class tl {
               }
               if (var21 != null &&
                 hm.a((byte) 78, var21)) {
-                var8[1][var13] = ow.field_e;
+                var8[1][var13] = ArchiveSource.field_e;
                 var9[1][var13] = null;
                 var35[1][var13] = var22;
                 var13++;

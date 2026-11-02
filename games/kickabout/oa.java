@@ -15,10 +15,10 @@ final class oa {
         }
     }
 
-    final static ut a(boolean param0, int param1, byte param2) {
+    final static Sprite a(boolean param0, int param1, byte param2) {
         kg[] var17 = null;
         int[] var15 = null;
-        ut var16 = null;
+        Sprite var16 = null;
         kg[] var10 = null;
         int var4 = 0;
         int var7 = 0;
@@ -32,7 +32,7 @@ final class oa {
           var17 = var10;
           var4 = var10[0].field_a;
           var15 = new int[]{var10[0].field_i, var10[1].field_i, var10[2].field_i};
-          var16 = new ut(var15[1] * param1 + var15[0] + var15[2], var4);
+          var16 = new Sprite(var15[1] * param1 + var15[0] + var15[2], var4);
           PacketBuffer.a(-122, var16);
           var7 = 0;
           var10[0].a(var7, 0);
@@ -51,7 +51,7 @@ final class oa {
         kg[] var14 = var10;
         var4Lifetime1 = var10[0].field_a;
         int[] var12 = new int[]{var10[0].field_i, var10[1].field_i, var10[2].field_i};
-        ut var13 = new ut(var12[1] * param1 + var12[0] + var12[2], var4Lifetime1);
+        Sprite var13 = new Sprite(var12[1] * param1 + var12[0] + var12[2], var4Lifetime1);
         PacketBuffer.a(-122, var13);
         var7Lifetime1 = 0;
         var10[0].a(var7Lifetime1, 0);

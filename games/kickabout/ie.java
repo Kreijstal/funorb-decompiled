@@ -42,7 +42,7 @@ final class ie extends i {
             fieldTemp$0 = je.field_m - 1;
             je.field_m = je.field_m - 1;
             if (fieldTemp$0 == 0) {
-              gm.a(de.field_a, true, (byte) -118);
+              gm.a(GameKeyHandler.field_a, true, (byte) -118);
             }
           }
           if (null == et.field_d) {
@@ -103,7 +103,7 @@ final class ie extends i {
           ul.b(11);
           vc.h((byte) 125);
           if (ks.field_e == 6) {
-            o.a((byte) -127);
+            DualLinkDeque.a((byte) -127);
           }
           boolean decompiledFrameRemainder0 = true;
           if (ks.field_e == 7) {
@@ -198,7 +198,7 @@ final class ie extends i {
             ja.field_O &&
             et.field_d.phase == 4) {
             ja.field_O = false;
-            var10 = tu.field_E.field_J;
+            var10 = GameLoopApplet.field_E.field_J;
             var9 = var10;
             var5 = var9;
             if (!var5[0]) {
@@ -315,7 +315,7 @@ final class ie extends i {
           this.field_I = param0;
           var6 = param1.d(100);
           String var3 = var6;
-          var4 = ad.a(dh.a(param1, true), 26300);
+          var4 = ad.a(ImageProducerRasterBuffer.a(param1, true), 26300);
           var5 = vo.$cfr$intArgs$a$53ce4ab4c593(-18, gd.field_e[34], new String[]{var6, var4});
           this.a(var5, this.field_t, this.field_D, -71, this.field_u);
         } catch (RuntimeException runtimeException) {

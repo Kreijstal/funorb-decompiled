@@ -4,7 +4,7 @@
 final class dc {
     static hd field_a;
     static int field_d;
-    static ut field_b;
+    static Sprite field_b;
     static int field_c;
 
     final static void a(int param0, byte param1) {
@@ -32,7 +32,7 @@ final class dc {
     }
 
     static {
-        field_b = new ut(104, 150);
+        field_b = new Sprite(104, 150);
         field_c = -1;
     }
 }

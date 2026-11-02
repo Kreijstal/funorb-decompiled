@@ -68,9 +68,9 @@ final class gi extends hd {
           var5 = -4 + var3;
           var7 = 29;
         }
-        on.e(var5 + 1, var6, -2 + var7, var7, 0);
-        on.e(var5, 1 + var6, var7, var7 - 2, 0);
-        on.a(2 + var5, var6 + 2, -4 + var7, -4 + var7, this.field_Cb);
+        SoftwareRasterizer.e(var5 + 1, var6, -2 + var7, var7, 0);
+        SoftwareRasterizer.e(var5, 1 + var6, var7, var7 - 2, 0);
+        SoftwareRasterizer.a(2 + var5, var6 + 2, -4 + var7, -4 + var7, this.field_Cb);
         if (var2 != 0) {
           if (!this.field_gb) {
             wt.field_z[0].d(var5 + 2, var6 + 2, -4 + var7, var7 - 4, 140);
@@ -78,23 +78,23 @@ final class gi extends hd {
             wt.field_z[3].e(2 + var5, var6 + 2, -4 + var7, -4 + var7, 256);
           }
           su.field_a.c((-su.field_a.field_o + var7 >> 1) + var5, (var7 - su.field_a.field_v >> 1) + var6);
-          on.c(var5 + 2, -3 + var7 + var6, -4 + var7, 0, 90);
-          on.f(var5 - (-var7 + param0), 2 + var6, -5 + var7, 0, 90);
-          on.f(2 + var5, 2 + var6, var7 - 5, 0, 90);
+          SoftwareRasterizer.c(var5 + 2, -3 + var7 + var6, -4 + var7, 0, 90);
+          SoftwareRasterizer.f(var5 - (-var7 + param0), 2 + var6, -5 + var7, 0, 90);
+          SoftwareRasterizer.f(2 + var5, 2 + var6, var7 - 5, 0, 90);
           return;
         }
         if (this.field_gb) {
-          on.c(var5 + 2, -3 + var7 + var6, -4 + var7, 0, 90);
-          on.f(var5 - (-var7 + param0), 2 + var6, -5 + var7, 0, 90);
-          on.f(2 + var5, 2 + var6, var7 - 5, 0, 90);
+          SoftwareRasterizer.c(var5 + 2, -3 + var7 + var6, -4 + var7, 0, 90);
+          SoftwareRasterizer.f(var5 - (-var7 + param0), 2 + var6, -5 + var7, 0, 90);
+          SoftwareRasterizer.f(2 + var5, 2 + var6, var7 - 5, 0, 90);
           return;
         }
         wt.field_z[0].b(var5 + 2, var6 + 2, 140);
         wt.field_z[1].b(var5 + 2, var6 + 2, 128);
         wt.field_z[3].c(2 + var5, 2 + var6, 128);
-        on.c(var5 + 2, -3 + var7 + var6, -4 + var7, 0, 90);
-        on.f(var5 - (-var7 + param0), 2 + var6, -5 + var7, 0, 90);
-        on.f(2 + var5, 2 + var6, var7 - 5, 0, 90);
+        SoftwareRasterizer.c(var5 + 2, -3 + var7 + var6, -4 + var7, 0, 90);
+        SoftwareRasterizer.f(var5 - (-var7 + param0), 2 + var6, -5 + var7, 0, 90);
+        SoftwareRasterizer.f(2 + var5, 2 + var6, var7 - 5, 0, 90);
     }
 
     public static void h(int param0) {

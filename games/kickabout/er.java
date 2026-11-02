@@ -35,14 +35,14 @@ final class er extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_double = (double)fr.a(param1, ra.field_F, true);
-          var4 = (double)fr.a(param1, tf.field_g, true);
+          var4 = (double)fr.a(param1, IntrusiveDeque.field_g, true);
           var6 = (double)fr.a(param1, gm.field_fb, true);
           if (param0 <= 91) {
             stackIn_2_0 = 1.8026836499173446;
             return stackIn_2_0;
           }
           var8 = -uc.field_C[param1.field_c][param1.field_i][param1.field_k] + (uc.field_C[param1.field_c][param1.field_i][param1.field_e] + (uc.field_C[param1.field_c][param1.field_d][param1.field_k] + (-uc.field_C[param1.field_l][param1.field_i][param1.field_e] + (-uc.field_C[param1.field_l][param1.field_d][param1.field_k] + uc.field_C[param1.field_l][param1.field_d][param1.field_e]) + uc.field_C[param1.field_l][param1.field_i][param1.field_k] - uc.field_C[param1.field_c][param1.field_d][param1.field_e])));
-          stackIn_4_0 = var8 - (var6 * var6 + (var4 * var4 + var2_double * var2_double)) / (double)fr.a(param1, ao.field_i, true);
+          stackIn_4_0 = var8 - (var6 * var6 + (var4 * var4 + var2_double * var2_double)) / (double)fr.a(param1, RandomAccessCacheFile.field_i, true);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

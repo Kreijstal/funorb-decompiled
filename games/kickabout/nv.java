@@ -7,8 +7,8 @@ final class nv extends wi {
     static int[] field_E;
     int field_H;
     static String[] field_I;
-    static tf field_N;
-    static ut[] field_L;
+    static IntrusiveDeque field_N;
+    static Sprite[] field_L;
     static hd field_F;
     int field_J;
     private int field_M;
@@ -35,7 +35,7 @@ final class nv extends wi {
           if (param1 == null) {
             return null;
           }
-          var3 = new cn(param1, IsaacRandom.field_f, fc.field_g, ku.field_c, lo.field_j, lt.field_a, pq.field_O);
+          var3 = new cn(param1, IsaacRandom.field_f, fc.field_g, MouseInputHandler.field_c, lo.field_j, lt.field_a, pq.field_O);
           tk.h((byte) -92);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -62,7 +62,7 @@ final class nv extends wi {
           }
         } else {
           if (param4 > 0) {
-            be.field_i = new tf();
+            be.field_i = new IntrusiveDeque();
           } else {
             if (param4 == 0) {
               be.field_i = null;
@@ -73,14 +73,14 @@ final class nv extends wi {
         cu.field_c = param4;
         if (param3 != go.field_b) {
           if (0 == param0) {
-            am.field_g = null;
+            DualLinkNode.field_g = null;
           }
         } else {
           if (param0 > 0) {
-            am.field_g = new tf();
+            DualLinkNode.field_g = new IntrusiveDeque();
           } else {
             if (0 == param0) {
-              am.field_g = null;
+              DualLinkNode.field_g = null;
             }
           }
         }
@@ -126,7 +126,7 @@ final class nv extends wi {
         }
     }
 
-    final boolean a(boolean param0, int param1, int param2, fd param3, int param4, int param5, int param6) {
+    final boolean a(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -234,6 +234,6 @@ final class nv extends wi {
         field_E = new int[]{100, 696, 796};
         field_I = new String[]{"Lacing up boots", "Practising dives", "Buffing silverware", "Group hugging", "Dressing the mascot", "Practising keepy-uppy", "Buying a half-time pie", "Memorising chants", "Never walking alone", "Learning offside", "Getting a glamorous girlfriend", "Cursing the ref", "Painting fans' faces", "Pacing the touchline", "Brushing up on clichès", "Learning formations", "Goading opposition fans", "Kissing our badges", "Finetuning longshots", "Wiping up dribbles", "Doing shuttle runs", "Dribbling round cones", "Warming up", "Stretching hamstrings", "Downloading smell of victory", "Loading boyish enthusiasm", "Downloading smell of grass", "Loading sheepskin coats", "Downloading the spirit of '66", "Loading Mexican waves", "Loading half-time talking to", "Loading referee's glasses", "Loading corner flags", "Loading goal celebrations", "Downloading post-game interviews", "Loading buckets and sponges", "Loading streakers", "Loading penalty shootouts", "Loading sudden death", "Loading golden goal", "Loading banana shots"};
         field_G = "auto-switch automatically switches player when you pass the ball";
-        field_N = new tf();
+        field_N = new IntrusiveDeque();
     }
 }

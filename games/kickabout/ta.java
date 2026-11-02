@@ -102,7 +102,7 @@ abstract class ta extends qt {
 
     void a(int param0, int param1, boolean param2) {
         super.a(param0 + param0, param1, param2);
-        ic.field_h.a(tu.field_E, (byte) 120);
+        ic.field_h.a(GameLoopApplet.field_E, (byte) 120);
         da.field_h.b(22997);
         IntrusiveNodeHashTable.a(ic.field_h.field_x, 415422632);
     }
@@ -116,8 +116,8 @@ abstract class ta extends qt {
           java.math.BigInteger var2 = (java.math.BigInteger) null;
           ta.a((PacketBuffer) null, (java.math.BigInteger) null, -77, 44, (byte[]) null, -52, (java.math.BigInteger) null);
         }
-        on.a(var1.field_h, var1.field_g, var1.field_j);
-        on.e(var1.field_e, var1.field_l, var1.field_i, var1.field_f);
+        SoftwareRasterizer.a(var1.field_h, var1.field_g, var1.field_j);
+        SoftwareRasterizer.e(var1.field_e, var1.field_l, var1.field_i, var1.field_f);
         var1.field_h = null;
         tk.field_Ab.a(var1, 3);
     }

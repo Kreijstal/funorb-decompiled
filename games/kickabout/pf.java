@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class pf {
-    static ot field_b;
+    static ArgbSprite field_b;
     static String field_a;
     static r field_e;
     static int[] field_d;

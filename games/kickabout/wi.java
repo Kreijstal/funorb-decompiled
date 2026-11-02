@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class wi extends fd {
+class wi extends UiWidget {
     static String field_x;
     private boolean field_D;
     static boolean field_B;
@@ -34,7 +34,7 @@ class wi extends fd {
         }
     }
 
-    boolean a(boolean param0, int param1, int param2, fd param3, int param4, int param5, int param6) {
+    boolean a(boolean param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -80,7 +80,7 @@ class wi extends fd {
         field_z = null;
     }
 
-    boolean a(char param0, byte param1, fd param2, int param3) {
+    boolean a(char param0, byte param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -125,16 +125,16 @@ class wi extends fd {
           this.field_D = false;
           if (null != this.field_k &&
             this.field_k instanceof ab) {
-            ((ab) (this.field_k)).a(this.field_D, (fd) (this), -9307);
+            ((ab) (this.field_k)).a(this.field_D, (UiWidget) (this), -9307);
           }
         }
         if (param0 != 84) {
-          fd var3 = (fd) null;
-          this.a('￱', (byte) 74, (fd) null, -102);
+          UiWidget var3 = (UiWidget) null;
+          this.a('￱', (byte) 74, (UiWidget) null, -102);
         }
     }
 
-    final void a(int param0, int param1, int param2, fd param3, int param4, int param5) {
+    final void a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         try {
           if (null != this.field_k &&
             this.field_k instanceof nf) {
@@ -153,7 +153,7 @@ class wi extends fd {
         this(param0, nb.field_i.field_l, param1);
     }
 
-    void a(byte param0, fd param1, int param2, int param3) {
+    void a(byte param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
           if (this.field_p != 0 &&
@@ -169,7 +169,7 @@ class wi extends fd {
         }
     }
 
-    boolean a(fd param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -187,7 +187,7 @@ class wi extends fd {
               if (!(this.field_k instanceof ab)) {
                 return true;
               }
-              ((ab) (this.field_k)).a(this.field_D, (fd) (this), param1 ^ -9307);
+              ((ab) (this.field_k)).a(this.field_D, (UiWidget) (this), param1 ^ -9307);
             }
             return true;
           }

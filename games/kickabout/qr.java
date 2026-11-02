@@ -71,9 +71,9 @@ final class qr {
             var4 = var3;
             var4 = var3;
           }
-          if (lu.field_t != null &&
-            !lu.field_t.equals(param0.getParameter("session"))) {
-            var4 = lu.field_t;
+          if (SpriteState.field_t != null &&
+            !SpriteState.field_t.equals(param0.getParameter("session"))) {
+            var4 = SpriteState.field_t;
           }
           stackIn_11_0 = rt.a(param1, (String) (var4), -1, (String) (var3), false);
           return stackIn_11_0;

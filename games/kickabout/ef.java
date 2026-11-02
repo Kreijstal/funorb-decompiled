@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ef extends am {
+final class ef extends DualLinkNode {
     private int field_o;
     static String field_p;
     static String field_n;
@@ -63,7 +63,7 @@ final class ef extends am {
         int[] var2_ref_int__;
         int var2;
         int var3_int;
-        tf var3;
+        IntrusiveDeque var3;
         int var4;
         int var5;
         PacketBuffer var5_ref_iw;
@@ -114,7 +114,7 @@ final class ef extends am {
           return false;
         }
         var5 = 57 % ((param0 - 36) / 42);
-        var3 = new tf();
+        var3 = new IntrusiveDeque();
         var4 = gd.field_c.a(true, this.field_o);
         this.field_q = new db[var4];
         var29 = gd.field_c.c(this.field_o, 4);

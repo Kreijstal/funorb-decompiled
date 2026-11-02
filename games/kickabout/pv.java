@@ -32,7 +32,7 @@ final class pv extends i {
         if (la.a(100)) {
           return;
         }
-        var7 = tu.field_E.field_J;
+        var7 = GameLoopApplet.field_E.field_J;
         var3 = var7;
         if (param0 < 60) {
           return;

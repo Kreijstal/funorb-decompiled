@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cn extends hu {
+final class cn extends BitmapFont {
     private byte[][] field_B;
 
     final void b(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
@@ -13,31 +13,31 @@ final class cn extends hu {
         int var13;
         int var13Lifetime1;
         int var13Lifetime2;
-        var8 = param1 + param2 * on.field_g;
-        var9 = on.field_g - param3;
+        var8 = param1 + param2 * SoftwareRasterizer.field_g;
+        var9 = SoftwareRasterizer.field_g - param3;
         var10 = param4;
         var11 = -1;
         var12 = param4 - 1;
-        if (param2 < on.field_e) {
-          var13 = on.field_e - param2;
+        if (param2 < SoftwareRasterizer.field_e) {
+          var13 = SoftwareRasterizer.field_e - param2;
           param4 = param4 - var13;
-          param2 = on.field_e;
+          param2 = SoftwareRasterizer.field_e;
           var12 = var12 - var13;
-          var8 = var8 + var13 * on.field_g;
+          var8 = var8 + var13 * SoftwareRasterizer.field_g;
         }
-        if (param2 + param4 > on.field_h) {
-          param4 = param4 - (param2 + param4 - on.field_h);
+        if (param2 + param4 > SoftwareRasterizer.field_h) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_h);
         }
-        if (param1 < on.field_b) {
-          var13Lifetime1 = on.field_b - param1;
+        if (param1 < SoftwareRasterizer.field_b) {
+          var13Lifetime1 = SoftwareRasterizer.field_b - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = on.field_b;
+          param1 = SoftwareRasterizer.field_b;
           var12 = var12 + var13Lifetime1 * var10;
           var8 = var8 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
         }
-        if (param1 + param3 > on.field_c) {
-          var13Lifetime2 = param1 + param3 - on.field_c;
+        if (param1 + param3 > SoftwareRasterizer.field_c) {
+          var13Lifetime2 = param1 + param3 - SoftwareRasterizer.field_c;
           param3 = param3 - var13Lifetime2;
           var9 = var9 + var13Lifetime2;
         }
@@ -45,9 +45,9 @@ final class cn extends hu {
           param4 > 0) {
           var11 = var11 - var10 * param3;
           if (!param6) {
-            cn.b(on.field_a, this.field_B[param0], param5, var12, var8, var10, param3, param4, var9, var11);
+            cn.b(SoftwareRasterizer.field_a, this.field_B[param0], param5, var12, var8, var10, param3, param4, var9, var11);
           } else {
-            uo.a(on.field_a, this.field_B[param0], param5, var12, var8, var10, param3, param4, var9, var11);
+            uo.a(SoftwareRasterizer.field_a, this.field_B[param0], param5, var12, var8, var10, param3, param4, var9, var11);
           }
           return;
         }
@@ -61,31 +61,31 @@ final class cn extends hu {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * on.field_g;
-        var9 = on.field_g - param3;
+        var8 = param1 + param2 * SoftwareRasterizer.field_g;
+        var9 = SoftwareRasterizer.field_g - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < on.field_e) {
-          var12 = on.field_e - param2;
+        if (param2 < SoftwareRasterizer.field_e) {
+          var12 = SoftwareRasterizer.field_e - param2;
           param4 = param4 - var12;
-          param2 = on.field_e;
+          param2 = SoftwareRasterizer.field_e;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * on.field_g;
+          var8 = var8 + var12 * SoftwareRasterizer.field_g;
         }
-        if (param2 + param4 > on.field_h) {
-          param4 = param4 - (param2 + param4 - on.field_h);
+        if (param2 + param4 > SoftwareRasterizer.field_h) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_h);
         }
-        if (param1 < on.field_b) {
-          var12Lifetime1 = on.field_b - param1;
+        if (param1 < SoftwareRasterizer.field_b) {
+          var12Lifetime1 = SoftwareRasterizer.field_b - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = on.field_b;
+          param1 = SoftwareRasterizer.field_b;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > on.field_c) {
-          var12Lifetime2 = param1 + param3 - on.field_c;
+        if (param1 + param3 > SoftwareRasterizer.field_c) {
+          var12Lifetime2 = param1 + param3 - SoftwareRasterizer.field_c;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
@@ -93,9 +93,9 @@ final class cn extends hu {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            cn.a(on.field_a, this.field_B[param0], param5, var11, var8, param3, param4, var9, var10);
+            cn.a(SoftwareRasterizer.field_a, this.field_B[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            uo.a(on.field_a, this.field_B[param0], param5, var11, var8, param3, param4, var9, var10);
+            uo.a(SoftwareRasterizer.field_a, this.field_B[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }
@@ -165,31 +165,31 @@ final class cn extends hu {
         int var13;
         int var13Lifetime1;
         int var13Lifetime2;
-        var9 = param1 + param2 * on.field_g;
-        var10 = on.field_g - param3;
+        var9 = param1 + param2 * SoftwareRasterizer.field_g;
+        var10 = SoftwareRasterizer.field_g - param3;
         var11 = 0;
         var12 = 0;
-        if (param2 < on.field_e) {
-          var13 = on.field_e - param2;
+        if (param2 < SoftwareRasterizer.field_e) {
+          var13 = SoftwareRasterizer.field_e - param2;
           param4 = param4 - var13;
-          param2 = on.field_e;
+          param2 = SoftwareRasterizer.field_e;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * on.field_g;
+          var9 = var9 + var13 * SoftwareRasterizer.field_g;
         }
-        if (param2 + param4 > on.field_h) {
-          param4 = param4 - (param2 + param4 - on.field_h);
+        if (param2 + param4 > SoftwareRasterizer.field_h) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_h);
         }
-        if (param1 < on.field_b) {
-          var13Lifetime1 = on.field_b - param1;
+        if (param1 < SoftwareRasterizer.field_b) {
+          var13Lifetime1 = SoftwareRasterizer.field_b - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = on.field_b;
+          param1 = SoftwareRasterizer.field_b;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > on.field_c) {
-          var13Lifetime2 = param1 + param3 - on.field_c;
+        if (param1 + param3 > SoftwareRasterizer.field_c) {
+          var13Lifetime2 = param1 + param3 - SoftwareRasterizer.field_c;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -197,9 +197,9 @@ final class cn extends hu {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            cn.a(on.field_a, this.field_B[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            cn.a(SoftwareRasterizer.field_a, this.field_B[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           } else {
-            uo.b(on.field_a, this.field_B[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            uo.b(SoftwareRasterizer.field_a, this.field_B[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }
@@ -214,31 +214,31 @@ final class cn extends hu {
         int var14;
         int var14Lifetime1;
         int var14Lifetime2;
-        var9 = param1 + param2 * on.field_g;
-        var10 = on.field_g - param3;
+        var9 = param1 + param2 * SoftwareRasterizer.field_g;
+        var10 = SoftwareRasterizer.field_g - param3;
         var11 = param4;
         var12 = -1;
         var13 = param4 - 1;
-        if (param2 < on.field_e) {
-          var14 = on.field_e - param2;
+        if (param2 < SoftwareRasterizer.field_e) {
+          var14 = SoftwareRasterizer.field_e - param2;
           param4 = param4 - var14;
-          param2 = on.field_e;
+          param2 = SoftwareRasterizer.field_e;
           var13 = var13 - var14;
-          var9 = var9 + var14 * on.field_g;
+          var9 = var9 + var14 * SoftwareRasterizer.field_g;
         }
-        if (param2 + param4 > on.field_h) {
-          param4 = param4 - (param2 + param4 - on.field_h);
+        if (param2 + param4 > SoftwareRasterizer.field_h) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_h);
         }
-        if (param1 < on.field_b) {
-          var14Lifetime1 = on.field_b - param1;
+        if (param1 < SoftwareRasterizer.field_b) {
+          var14Lifetime1 = SoftwareRasterizer.field_b - param1;
           param3 = param3 - var14Lifetime1;
-          param1 = on.field_b;
+          param1 = SoftwareRasterizer.field_b;
           var13 = var13 + var14Lifetime1 * var11;
           var9 = var9 + var14Lifetime1;
           var10 = var10 + var14Lifetime1;
         }
-        if (param1 + param3 > on.field_c) {
-          var14Lifetime2 = param1 + param3 - on.field_c;
+        if (param1 + param3 > SoftwareRasterizer.field_c) {
+          var14Lifetime2 = param1 + param3 - SoftwareRasterizer.field_c;
           param3 = param3 - var14Lifetime2;
           var10 = var10 + var14Lifetime2;
         }
@@ -246,9 +246,9 @@ final class cn extends hu {
           param4 > 0) {
           var12 = var12 - var11 * param3;
           if (!param7) {
-            cn.a(on.field_a, this.field_B[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
+            cn.a(SoftwareRasterizer.field_a, this.field_B[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
           } else {
-            uo.a(on.field_a, this.field_B[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
+            uo.a(SoftwareRasterizer.field_a, this.field_B[param0], param5, var13, var9, var11, param3, param4, var10, var12, param6);
           }
           return;
         }

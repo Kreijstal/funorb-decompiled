@@ -3,7 +3,7 @@
  */
 final class jn extends wv implements vh {
     static hd field_lb;
-    static ut field_qb;
+    static Sprite field_qb;
     private boolean field_nb;
     private boolean field_pb;
     static int field_ob;
@@ -45,7 +45,7 @@ final class jn extends wv implements vh {
             }
             try {
               var2 = "tuhstatbut";
-              var3 = (String) (mm.a(30858, "getcookies", param1));
+              var3 = (String) (AppletJavaScriptBridge.a(30858, "getcookies", param1));
               var4 = FormationAgent.a(var3, 2, ';');
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
@@ -95,7 +95,7 @@ final class jn extends wv implements vh {
     final void t(int param0) {
         this.a(true, wb.a(param0 ^ -105, nb.field_g, 248), (byte) -71);
         if (param0 != 17) {
-          field_qb = (ut) null;
+          field_qb = (Sprite) null;
         }
     }
 
@@ -187,7 +187,7 @@ final class jn extends wv implements vh {
           var5 = new qp((wv) (this), fj.field_b, var4);
           if (param1.field_g) {
             if (param1.field_c) {
-              this.a((byte) -126, (fd) (new ai(this)));
+              this.a((byte) -126, (UiWidget) (new ai(this)));
               return;
             }
             var5.a(es.field_g, (jv) (this), (byte) 79);
@@ -204,7 +204,7 @@ final class jn extends wv implements vh {
             }
             if (param1.field_e != 3) {
               if (param1.field_e != 6) {
-                this.a((byte) -122, (fd) (var5));
+                this.a((byte) -122, (UiWidget) (var5));
                 return;
               }
               var5.a((byte) 114, 9, bv.field_p);
@@ -212,7 +212,7 @@ final class jn extends wv implements vh {
               var5.a((byte) 94, 7, ha.field_J);
             }
           }
-          this.a((byte) -122, (fd) (var5));
+          this.a((byte) -122, (UiWidget) (var5));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -18,12 +18,12 @@ final class mn implements gj {
         field_e = null;
     }
 
-    public final void a(int param0, boolean param1, int param2, fd param3, int param4) {
+    public final void a(int param0, boolean param1, int param2, UiWidget param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        ut var9 = null;
+        Sprite var9 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

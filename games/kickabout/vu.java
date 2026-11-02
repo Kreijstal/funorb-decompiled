@@ -3,7 +3,7 @@
  */
 final class vu extends hd {
     private hd field_Bb;
-    static sj field_Eb;
+    static ResourceArchive field_Eb;
     static int[] field_zb;
     static int field_Ab;
     static volatile int field_Fb;
@@ -59,7 +59,7 @@ final class vu extends hd {
         field_Ib = null;
     }
 
-    vu(long param0, hd param1, hd param2, hd param3, ut param4, String param5) {
+    vu(long param0, hd param1, hd param2, hd param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

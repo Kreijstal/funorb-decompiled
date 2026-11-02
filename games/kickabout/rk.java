@@ -6,10 +6,10 @@ import java.util.*;
 final class rk {
     private int field_b;
     private int field_a;
-    private ut[] field_c;
-    static ut field_h;
-    static ut field_g;
-    static u field_d;
+    private Sprite[] field_c;
+    static Sprite field_h;
+    static Sprite field_g;
+    static JaggrabDownloader field_d;
     static String[][] field_e;
     static wv field_f;
 
@@ -20,24 +20,24 @@ final class rk {
         int var5;
         nr var6;
         int var7;
-        ut var8;
-        ut var9;
+        Sprite var8;
+        Sprite var9;
         int var10;
         int var11;
         int var12;
         int var13;
-        ut var15;
+        Sprite var15;
         int var16;
         Random var19;
         this.field_a = param0;
-        this.field_c = new ut[4];
+        this.field_c = new Sprite[4];
         this.field_b = param1;
         var19 = new Random();
-        var5 = dq.$cfr$intArgs$a$7f8aad568c81(87, 5, var19);
+        var5 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(87, 5, var19);
         var6 = new nr(27, 64, param2, var5);
-        var7 = dq.$cfr$intArgs$a$7f8aad568c81(83, 4, var19);
+        var7 = ProxySocketConnector.$cfr$intArgs$a$7f8aad568c81(83, 4, var19);
         var8 = j.a(-5275);
-        var9 = new ut(54, 85);
+        var9 = new Sprite(54, 85);
         PacketBuffer.a(114, var9);
         var10 = var8.field_o;
         var11 = var8.field_v;
@@ -49,7 +49,7 @@ final class rk {
         var8.d(var12 + var10, var11 + var13);
         ta.e(120);
         for (var14 = 0; var14 < 4; var14++) {
-          this.field_c[var14] = new ut(54, 85);
+          this.field_c[var14] = new Sprite(54, 85);
           var15 = this.field_c[var14];
           PacketBuffer.a(-114, var15);
           var9.d(0, 0);
@@ -74,7 +74,7 @@ final class rk {
           this.a(-41, true);
         }
         int var4 = go.a(this.field_b - 64, (byte) -56);
-        ut var5 = this.field_c[param0];
+        Sprite var5 = this.field_c[param0];
         if (hw.field_i == 256) {
           var5.c(var3, var4);
         } else {
@@ -96,7 +96,7 @@ final class rk {
     }
 
     static {
-        field_h = new ut(640, 480);
+        field_h = new Sprite(640, 480);
         field_e = new String[][]{new String[]{"4 Minutes", "8 Minutes", "12 Minutes"}, new String[]{"Off", "On"}, new String[]{"Normal", "Exhibition"}, new String[]{"Off", "On"}};
     }
 }

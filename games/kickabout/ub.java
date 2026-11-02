@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ub extends wj {
+abstract class ub extends WidgetContainer {
     private int field_F;
     static int field_B;
     static kg[] field_G;
@@ -11,7 +11,7 @@ abstract class ub extends wj {
     static hd field_D;
 
     final static kg h(byte param0) {
-        kg var1 = new kg(kw.field_i, ai.field_J, IsaacRandom.field_f[0], fc.field_g[0], ku.field_c[0], lo.field_j[0], pq.field_O[0], lt.field_a);
+        kg var1 = new kg(kw.field_i, ai.field_J, IsaacRandom.field_f[0], fc.field_g[0], MouseInputHandler.field_c[0], lo.field_j[0], pq.field_O[0], lt.field_a);
         int var2 = 103 / ((param0 + 65) / 46);
         tk.h((byte) -98);
         return var1;
@@ -30,9 +30,9 @@ abstract class ub extends wj {
           return;
         }
         if (null == d.field_a) {
-          d.field_a = new ut(this.field_n, this.field_i);
+          d.field_a = new Sprite(this.field_n, this.field_i);
           PacketBuffer.a(param1 - 190, d.field_a);
-          on.b();
+          SoftwareRasterizer.b();
           this.a(0, (byte) 125, 0);
           super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
           ta.e(127);
@@ -40,9 +40,9 @@ abstract class ub extends wj {
           return;
         }
         if (d.field_a.field_q < this.field_n) {
-          d.field_a = new ut(this.field_n, this.field_i);
+          d.field_a = new Sprite(this.field_n, this.field_i);
           PacketBuffer.a(param1 - 190, d.field_a);
-          on.b();
+          SoftwareRasterizer.b();
           this.a(0, (byte) 125, 0);
           super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
           ta.e(127);
@@ -50,9 +50,9 @@ abstract class ub extends wj {
           return;
         }
         if (this.field_i > d.field_a.field_w) {
-          d.field_a = new ut(this.field_n, this.field_i);
+          d.field_a = new Sprite(this.field_n, this.field_i);
           PacketBuffer.a(param1 - 190, d.field_a);
-          on.b();
+          SoftwareRasterizer.b();
           this.a(0, (byte) 125, 0);
           super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
           ta.e(127);
@@ -60,35 +60,35 @@ abstract class ub extends wj {
           return;
         }
         PacketBuffer.a(param1 - 190, d.field_a);
-        on.b();
+        SoftwareRasterizer.b();
         this.a(0, (byte) 125, 0);
         super.a(param0, (int) (char)param1, -param2 - this.field_t, -this.field_g - param3);
         ta.e(127);
         d.field_a.b(this.field_t + param2, this.field_g + param3, this.field_F);
     }
 
-    final static ut[] i(byte param0) {
+    final static Sprite[] i(byte param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = Kickabout.field_G;
-        ut[] var1 = new ut[io.field_l];
+        Sprite[] var1 = new Sprite[io.field_l];
         if (param0 == 78) {
           for (var2 = 0; io.field_l > var2; var2++) {
-            var3 = ku.field_c[var2] * lo.field_j[var2];
+            var3 = MouseInputHandler.field_c[var2] * lo.field_j[var2];
             var4 = pq.field_O[var2];
             var5 = new int[var3];
             for (var6 = 0; var3 > var6; var6++) {
               var5[var6] = lt.field_a[qj.b((int) var4[var6], 255)];
             }
-            var1[var2] = new ut(kw.field_i, ai.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], ku.field_c[var2], lo.field_j[var2], var5);
+            var1[var2] = new Sprite(kw.field_i, ai.field_J, IsaacRandom.field_f[var2], fc.field_g[var2], MouseInputHandler.field_c[var2], lo.field_j[var2], var5);
           }
           tk.h((byte) -70);
           return var1;
         }
-        return (ut[]) null;
+        return (Sprite[]) null;
     }
 
     final static void a(int param0, byte param1) {
@@ -134,12 +134,12 @@ abstract class ub extends wj {
         }
     }
 
-    final fd a(boolean param0) {
-        fd var2 = super.a(param0);
+    final UiWidget a(boolean param0) {
+        UiWidget var2 = super.a(param0);
         if (var2 != null) {
           return var2;
         }
-        return (fd) (this);
+        return (UiWidget) (this);
     }
 
     boolean k(int param0) {

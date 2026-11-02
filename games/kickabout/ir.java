@@ -42,7 +42,7 @@ final class ir extends tm {
           ir.a(false, 111);
           ti.a(63, param0);
           if (gs.field_b) {
-            on.g(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
+            SoftwareRasterizer.g(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
             ni.field_l.field_b.a(122, param0);
             gp.a(param0, (byte) -93);
             return;
@@ -55,7 +55,7 @@ final class ir extends tm {
           gp.a(param0, (byte) -93);
           return;
         }
-        on.g(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
+        SoftwareRasterizer.g(ni.field_l.field_b.field_s, ni.field_l.field_b.field_J, ni.field_l.field_b.field_q, ni.field_l.field_b.field_mb);
         ni.field_l.field_b.a(122, param0);
         gp.a(param0, (byte) -93);
     }
@@ -75,22 +75,22 @@ final class ir extends tm {
 
     final static void a(float param0, int param1, float param2, float param3, float param4, float param5, float param6) {
         if (rq.field_D == null) {
-          vg.field_Bb = new gq();
+          vg.field_Bb = new PcmStreamMixer();
           rq.field_D = new dp(vg.field_Bb);
           pi.field_b.a(rq.field_D);
-          qd.field_c = new tf();
+          qd.field_c = new IntrusiveDeque();
         } else {
           if (null == vg.field_Bb) {
-            vg.field_Bb = new gq();
+            vg.field_Bb = new PcmStreamMixer();
             rq.field_D = new dp(vg.field_Bb);
             pi.field_b.a(rq.field_D);
-            qd.field_c = new tf();
+            qd.field_c = new IntrusiveDeque();
           } else {
             if (null == qd.field_c) {
-              vg.field_Bb = new gq();
+              vg.field_Bb = new PcmStreamMixer();
               rq.field_D = new dp(vg.field_Bb);
               pi.field_b.a(rq.field_D);
-              qd.field_c = new tf();
+              qd.field_c = new IntrusiveDeque();
             }
           }
         }

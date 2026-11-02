@@ -3,12 +3,12 @@
  */
 final class ak extends IntrusiveNode {
     static String field_l;
-    ot field_e;
+    ArgbSprite field_e;
     int field_g;
-    static tf field_i;
+    static IntrusiveDeque field_i;
     int field_k;
     ob field_h;
-    static ut field_f;
+    static Sprite field_f;
     gm field_m;
     boolean field_n;
     private int field_j;
@@ -24,7 +24,7 @@ final class ak extends IntrusiveNode {
         RuntimeException var2 = null;
         try {
           if (param1 != 4) {
-            field_f = (ut) null;
+            field_f = (Sprite) null;
           }
           if (0 != param0.field_c &&
             17 != param0.field_c &&
@@ -155,7 +155,7 @@ final class ak extends IntrusiveNode {
             return;
           }
           if (this.field_j == 3) {
-            ru.a(this.field_n, (byte) -114);
+            MidiPcmStream.a(this.field_n, (byte) -114);
           } else {
             if (1 == this.field_j) {
               this.field_m.d(false);
@@ -187,6 +187,6 @@ final class ak extends IntrusiveNode {
 
     static {
         field_l = "The '<%0>' setting needs to be changed.";
-        field_i = new tf();
+        field_i = new IntrusiveDeque();
     }
 }

@@ -5,13 +5,13 @@ final class w implements hc {
     static String field_d;
     static int[] field_a;
     static String field_h;
-    static ot[] field_f;
+    static ArgbSprite[] field_f;
     static vg field_b;
     static String[] field_g;
     static String field_c;
     static hd field_e;
 
-    final static ag a(vm param0, int param1) {
+    final static ag a(PcmSampleStream param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         ag var3 = null;
@@ -85,11 +85,11 @@ final class w implements hc {
         boolean stackIn_65_1 = false;
         int stackIn_75_0 = 0;
         int stackIn_85_0 = 0;
-        ut[] stackIn_87_0 = null;
+        Sprite[] stackIn_87_0 = null;
         int stackIn_88_1 = 0;
         hd stackIn_90_0 = null;
         boolean stackIn_91_1 = false;
-        ut[] stackIn_98_0 = null;
+        Sprite[] stackIn_98_0 = null;
         int stackIn_99_1 = 0;
         hd stackIn_101_0 = null;
         boolean stackIn_102_1 = false;
@@ -99,7 +99,7 @@ final class w implements hc {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        tf var8 = null;
+        IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
         qb var12 = null;
@@ -133,7 +133,7 @@ final class w implements hc {
         int var39 = 0;
         int var40 = 0;
         int var41 = 0;
-        ut var42 = null;
+        Sprite var42 = null;
         hd var43 = null;
         hd var44 = null;
         hd var45 = null;
@@ -142,14 +142,14 @@ final class w implements hc {
         hd var48 = null;
         hd var49 = null;
         Object var50 = null;
-        ut var50_ref = null;
+        Sprite var50_ref = null;
         Object var51 = null;
-        ut var51_ref = null;
+        Sprite var51_ref = null;
         Object var52 = null;
-        ut var52_ref = null;
+        Sprite var52_ref = null;
         Object var53 = null;
-        ut var53_ref = null;
-        ut var54 = null;
+        Sprite var53_ref = null;
+        Sprite var54 = null;
         String var34Lifetime1;
         String var34Lifetime2;
         int var14Lifetime1;
@@ -236,7 +236,7 @@ final class w implements hc {
               var45.field_p = 1;
               for (var18_int = 0; ss.field_j > var18_int; var18_int++) {
                 var12.field_Sb[var18_int] = new hd(0L, (hd) null);
-                if ((var14 & 1 << var18_int + sj.field_h) != 0) {
+                if ((var14 & 1 << var18_int + ResourceArchive.field_h) != 0) {
                   var12.field_zb.a((byte) -122, var12.field_Sb[var18_int]);
                 }
                 var12.field_Sb[var18_int].field_p = 1;
@@ -353,7 +353,7 @@ final class w implements hc {
                   if (var12.field_yb) {
                     var12.field_Ib.field_E = oj.field_R;
                   } else {
-                    var12.field_Ib.field_E = dh.field_m;
+                    var12.field_Ib.field_E = ImageProducerRasterBuffer.field_m;
                   }
                   decompiledFrameRemainder1 = false;
                 }
@@ -383,7 +383,7 @@ final class w implements hc {
               } else {
                 var12.field_Ib.a(true, 68, 0, var31, sh.field_c);
               }
-              var12.field_Jb.field_E = hu.a(var12.field_Jb.field_X, var32, 78);
+              var12.field_Jb.field_E = BitmapFont.a(var12.field_Jb.field_X, var32, 78);
               stackIn_64_0 = var12.field_Jb;
               stackIn_65_1 = !(param1);
               ((hd) (Object) stackIn_64_0).a(stackIn_65_1, 78, 70, var31, sh.field_c);
@@ -441,7 +441,7 @@ final class w implements hc {
                 var34_int = var34_int + (mj.field_b + var52_ref.field_o);
               }
               if ((1 << mv.field_b & var14Lifetime1) != 0) {
-                stackIn_98_0 = wm.field_m;
+                stackIn_98_0 = CachedArchiveSource.field_m;
                 if (var12.field_Ub) {
                   stackIn_99_1 = 1;
                 } else {
@@ -457,7 +457,7 @@ final class w implements hc {
               if (fh.field_a != null) {
                 for (var36Lifetime1 = 0; ss.field_j > var36Lifetime1; var36Lifetime1++) {
                   if (fh.field_a[var36Lifetime1] != null &&
-                    (1 << var36Lifetime1 + sj.field_h & var14Lifetime1) != 0) {
+                    (1 << var36Lifetime1 + ResourceArchive.field_h & var14Lifetime1) != 0) {
                     var42 = fh.field_a[var36Lifetime1][255 & var12.field_Eb[var36Lifetime1]];
                     var54 = var42;
                     var12.field_Sb[var36Lifetime1].field_N = var42;
@@ -557,7 +557,7 @@ final class w implements hc {
             }
             if (var12.field_Pb.field_gb) {
               if (1 != var12.field_Wb) {
-                var34Lifetime2 = wj.field_w[var12.field_Wb];
+                var34Lifetime2 = WidgetContainer.field_w[var12.field_Wb];
               } else {
                 var34Lifetime2 = vj.field_f;
               }
@@ -586,7 +586,7 @@ final class w implements hc {
             }
             if (var12.field_Gb.field_gb) {
               if (var12.field_Mb == 2) {
-                stackIn_181_0 = ga.field_U;
+                stackIn_181_0 = TextInputWidget.field_U;
               } else {
                 stackIn_181_0 = pq.field_G;
               }
@@ -601,7 +601,7 @@ final class w implements hc {
                 if (var12.field_Cb && (!var12.field_ic ||
                   !var12.field_Xb &&
                   !var12.field_hc)) {
-                  tu.b(15848, param2, var12.h((byte) 92));
+                  GameLoopApplet.b(15848, param2, var12.h((byte) 92));
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -621,7 +621,7 @@ final class w implements hc {
 
     final static lk[] a(String param0, byte param1) {
         int incrementValue$1 = 0;
-        tf var2 = null;
+        IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
         lk[] var3 = null;
         int var4 = 0;
@@ -690,7 +690,7 @@ final class w implements hc {
         jb var3;
         int var4;
         boolean stackIn_22_0 = false;
-        vm var5;
+        PcmSampleStream var5;
         var4 = Kickabout.field_G;
         if (dg.field_e ||
           ds.field_g) {
@@ -722,8 +722,8 @@ final class w implements hc {
           }
         }
         if (param0 != -25) {
-          var5 = (vm) null;
-          w.a((vm) null, -103);
+          var5 = (PcmSampleStream) null;
+          w.a((PcmSampleStream) null, -103);
         }
     }
 
@@ -747,7 +747,7 @@ final class w implements hc {
     static {
         field_d = "scheduled";
         field_h = "Data server full or too many connections from your address. Please try again in a few minutes.";
-        field_f = new ot[6];
+        field_f = new ArgbSprite[6];
         field_g = new String[]{"Attach", "Zoom", "Move"};
         field_c = "This game option is not available in rated games.";
     }

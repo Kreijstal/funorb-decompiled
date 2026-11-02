@@ -147,7 +147,7 @@ final class ue extends IntrusiveNode {
             ue.a((String) null, (byte) -120);
           }
           pt.a(640, -22914, 0, 229 + var2, -var2 + 229);
-          on.a(0, 229 - var2, 640, var2 << 1, 0, 128);
+          SoftwareRasterizer.a(0, 229 - var2, 640, var2 << 1, 0, 128);
           if (var1_int >= 30) {
             var1_int -= 30;
             var3 = 256;
@@ -253,10 +253,10 @@ final class ue extends IntrusiveNode {
         if (param0 < 78) {
           return (String) null;
         }
-        if (ow.field_e == null) {
+        if (ArchiveSource.field_e == null) {
           return "";
         }
-        return ow.field_e;
+        return ArchiveSource.field_e;
     }
 
     final static void a(String param0, byte param1) {

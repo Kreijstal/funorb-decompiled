@@ -51,7 +51,7 @@ final class ic {
           while (var9 <= var12 << 1) {
             var12 = var12 >> 1;
           }
-          on.a(param7, param4, param0, var9, var12, 65793, 140);
+          SoftwareRasterizer.a(param7, param4, param0, var9, var12, 65793, 140);
           pb.field_C.a(param1, var10, var11, var8_int, var9, 16777215, -1, 0, 0, 16);
           if (param3 == null) {
             return;

@@ -49,16 +49,16 @@ final class os {
           boolean decompiledFrameRemainder0 = true;
           if (param12 < param2) {
             if (param2 < param14) {
-              mk.a(param15, param14, param0, param4, param6, param1, false, param12, param7, param8, param3, param11, param5, param9, on.field_a, param2, param10);
+              mk.a(param15, param14, param0, param4, param6, param1, false, param12, param7, param8, param3, param11, param5, param9, SoftwareRasterizer.field_a, param2, param10);
               decompiledFrameRemainder0 = (var17 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (param14 > param12) {
-                mk.a(param15, param2, param10, param4, param1, param6, false, param12, param7, param11, param3, param8, param9, param5, on.field_a, param14, param0);
+                mk.a(param15, param2, param10, param4, param1, param6, false, param12, param7, param11, param3, param8, param9, param5, SoftwareRasterizer.field_a, param14, param0);
                 decompiledFrameRemainder0 = (var17 != 0);
               }
               if (decompiledFrameRemainder0) {
-                mk.a(param0, param2, param10, param5, param1, param3, false, param14, param11, param7, param6, param8, param9, param4, on.field_a, param12, param15);
+                mk.a(param0, param2, param10, param5, param1, param3, false, param14, param11, param7, param6, param8, param9, param4, SoftwareRasterizer.field_a, param12, param15);
               }
             }
           }
@@ -66,23 +66,23 @@ final class os {
             (!(param12 < param2) ||
             var17 != 0)) {
             if (param14 > param12) {
-              mk.a(param10, param14, param0, param9, param6, param3, false, param2, param8, param7, param1, param11, param5, param4, on.field_a, param12, param15);
+              mk.a(param10, param14, param0, param9, param6, param3, false, param2, param8, param7, param1, param11, param5, param4, SoftwareRasterizer.field_a, param12, param15);
               if (var17 != 0) {
                 if (param14 <= param2) {
-                  mk.a(param0, param12, param15, param5, param3, param1, false, param14, param11, param8, param6, param7, param4, param9, on.field_a, param2, param10);
-                  mk.a(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, on.field_a, param14, param0);
+                  mk.a(param0, param12, param15, param5, param3, param1, false, param14, param11, param8, param6, param7, param4, param9, SoftwareRasterizer.field_a, param2, param10);
+                  mk.a(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, SoftwareRasterizer.field_a, param14, param0);
                 } else {
-                  mk.a(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, on.field_a, param14, param0);
+                  mk.a(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, SoftwareRasterizer.field_a, param14, param0);
                 }
               }
             } else {
               boolean decompiledSharedTail0 = !(param14 <= param2);
               if (!decompiledSharedTail0) {
-                mk.a(param0, param12, param15, param5, param3, param1, false, param14, param11, param8, param6, param7, param4, param9, on.field_a, param2, param10);
+                mk.a(param0, param12, param15, param5, param3, param1, false, param14, param11, param8, param6, param7, param4, param9, SoftwareRasterizer.field_a, param2, param10);
                 decompiledSharedTail0 = (var17 != 0);
               }
               if (decompiledSharedTail0) {
-                mk.a(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, on.field_a, param14, param0);
+                mk.a(param10, param12, param15, param9, param3, param6, false, param2, param8, param11, param1, param7, param4, param5, SoftwareRasterizer.field_a, param14, param0);
               }
             }
           }
@@ -101,11 +101,11 @@ final class os {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          wn.field_j = new ut(tn.field_e.field_o, tn.field_e.field_v);
+          wn.field_j = new Sprite(tn.field_e.field_o, tn.field_e.field_v);
           if (param0 > -32) {
             field_I = (ks) null;
           }
-          PacketBuffer.field_g = new ut(wn.field_j.field_o << 1, wn.field_j.field_o << 1);
+          PacketBuffer.field_g = new Sprite(wn.field_j.field_o << 1, wn.field_j.field_o << 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -364,7 +364,7 @@ final class os {
             stackIn_65_0 = -336184828;
             break;
           }
-          wj.a(stackIn_65_0, param0, var7_int, var8, param5);
+          WidgetContainer.a(stackIn_65_0, param0, var7_int, var8, param5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

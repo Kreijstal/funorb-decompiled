@@ -22,10 +22,10 @@ final class ap extends js {
     boolean field_s;
     boolean field_t;
     private boolean field_u;
-    static tf field_j;
+    static IntrusiveDeque field_j;
     static GameAppletShell field_p;
     static String field_x;
-    static ut field_l;
+    static Sprite field_l;
 
     final void f(int param0) {
         if (!this.field_t) {
@@ -43,7 +43,7 @@ final class ap extends js {
         return this.field_r instanceof ol;
     }
 
-    final static void a(byte param0, sj param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         int var3_int = 0;
         vn[] var3 = null;
         int var4 = 0;
@@ -66,9 +66,9 @@ final class ap extends js {
           for (var3_int = 0; var3_int < 5; var3_int++) {
             PacketBuffer.field_m[var3_int] = vn.a(param1, "", "Characters/" + var9[var3_int] + "_body");
             for (var4 = 0; var4 < 5; var4++) {
-              wj.field_v[var3_int][var4] = vn.a(param1, "", "Characters/" + var9[var3_int] + "_head_0" + (var4 + 1));
+              WidgetContainer.field_v[var3_int][var4] = vn.a(param1, "", "Characters/" + var9[var3_int] + "_head_0" + (var4 + 1));
             }
-            kb.field_B[var3_int] = o.a(107, new vn(new vn[]{PacketBuffer.field_m[var3_int], wj.field_v[var3_int][0]}, 2));
+            kb.field_B[var3_int] = DualLinkDeque.a(107, new vn(new vn[]{PacketBuffer.field_m[var3_int], WidgetContainer.field_v[var3_int][0]}, 2));
           }
           sk.a(param0 + 111, 5, 2);
           var3 = new vn[9];
@@ -137,7 +137,7 @@ final class ap extends js {
           us.field_j >= 0 &&
           wt.field_x < 640 &&
           us.field_j < 480 && (((va) (this.field_r)).b((byte) -82) ||
-          !kl.b(640))) {
+          !ArchiveIndex.b(640))) {
           stackIn_16_0 = true;
           decompiledFrameRemainder0 = false;
         }
@@ -373,7 +373,7 @@ final class ap extends js {
         }
     }
 
-    final tf e(byte param0) {
+    final IntrusiveDeque e(byte param0) {
         int var2 = -22 % ((param0 + 66) / 57);
         if (!this.d((byte) -59)) {
           return null;
@@ -542,8 +542,8 @@ final class ap extends js {
 
     public static void a(boolean param0) {
         if (!param0) {
-          sj var2 = (sj) null;
-          ap.a((byte) 13, (sj) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          ap.a((byte) 13, (ResourceArchive) null);
         }
         field_l = null;
         field_j = null;
@@ -581,14 +581,14 @@ final class ap extends js {
         la var5Lifetime1;
         var6 = Kickabout.field_G;
         if (param0 != ~this.field_o.phase) {
-          ru.a(true, (byte) -114);
-          ru.a(false, (byte) -114);
+          MidiPcmStream.a(true, (byte) -114);
+          MidiPcmStream.a(false, (byte) -114);
         }
         if (!this.field_u) {
           var3_ref_uo = pb.field_C;
-          var4 = 90 + ((hu) ((Object) var3_ref_uo)).a(bm.field_K) >> 1;
-          on.a(320 - var4, 223, var4 + var4, 34, 6, 65793, 128);
-          ((hu) ((Object) var3_ref_uo)).d(bm.field_K, 320, 246, 16777215, -1);
+          var4 = 90 + ((BitmapFont) ((Object) var3_ref_uo)).a(bm.field_K) >> 1;
+          SoftwareRasterizer.a(320 - var4, 223, var4 + var4, 34, 6, 65793, 128);
+          ((BitmapFont) ((Object) var3_ref_uo)).d(bm.field_K, 320, 246, 16777215, -1);
           return;
         }
         this.field_r.e(1);
@@ -655,7 +655,7 @@ final class ap extends js {
         }
     }
 
-    final void a(byte param0, tf param1) {
+    final void a(byte param0, IntrusiveDeque param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -755,7 +755,7 @@ final class ap extends js {
 
     private final int g(int param0) {
         if (param0 < 16) {
-          field_l = (ut) null;
+          field_l = (Sprite) null;
         }
         return 5 + this.field_z[this.field_h] / 20;
     }
@@ -867,8 +867,8 @@ final class ap extends js {
 
     final void c(int param0) {
         if (param0 > -10) {
-          tf var3 = (tf) null;
-          this.a((byte) -89, (tf) null);
+          IntrusiveDeque var3 = (IntrusiveDeque) null;
+          this.a((byte) -89, (IntrusiveDeque) null);
         }
         if (!this.field_t) {
           throw new IllegalStateException();
@@ -881,7 +881,7 @@ final class ap extends js {
 
     static {
         field_w = new kj(2);
-        field_j = new tf();
+        field_j = new IntrusiveDeque();
         field_p = null;
         field_x = "OK";
     }

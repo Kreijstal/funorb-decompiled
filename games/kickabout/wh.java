@@ -4,7 +4,7 @@
 final class wh extends IntrusiveNode {
     static String field_e;
     private int field_t;
-    private vm field_m;
+    private PcmSampleStream field_m;
     private int field_n;
     private int field_i;
     private int field_f;
@@ -13,7 +13,7 @@ final class wh extends IntrusiveNode {
     private int field_x;
     private boolean field_j;
     static boolean field_q;
-    static ot field_p;
+    static ArgbSprite field_p;
     static int field_w;
     private int field_s;
     static String field_v;
@@ -72,12 +72,12 @@ final class wh extends IntrusiveNode {
         if (param0 != 99) {
           this.e(81);
         }
-        this.field_m = vm.a(vg.field_Db[this.field_n].field_l, 100, var2, this.field_f);
+        this.field_m = PcmSampleStream.a(vg.field_Db[this.field_n].field_l, 100, var2, this.field_f);
         if (this.field_j) {
           this.field_m.i();
         }
         if (!this.field_r) {
-          ga.a(this.field_m, 114);
+          TextInputWidget.a(this.field_m, 114);
         } else {
           w.a(this.field_m, param0 ^ 14);
         }

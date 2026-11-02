@@ -10804,17 +10804,17 @@
       "inputTreeSha256": "c44c0faf875964bba61a9d788ecb74a4c1fb77caa89e05c82ca42a0a0f05375f",
       "sources": {
         "files": 543,
-        "sha256": "30c213df9a87f65d6c7a58eee49a84c3675b4bb85c9ef62e8a4270ffe1dc0ed6"
+        "sha256": "7042f0f4670d2f407e2d49ed0a6c1e0ede211b24bbc02971a56c5f58b502a7bf"
       },
       "dictionary": {
         "path": "decompilation/kickabout-naming.json",
-        "sha256": "9a1929998edee3d3b43038079d581d58c543795f79ea36a5873a9f8eeeda1831"
+        "sha256": "680ed633a06ec3bafb366aee38996b14606770e444f5683a64aa3ecf89f6c855"
       },
       "readingGuide": {
         "path": "games/kickabout/README.md",
-        "sha256": "8032c5ea3d8a601db88f47679444805a1770be273db9bf41849c58717875ae18"
+        "sha256": "02409d0453ed79d9c1f892e6902a55da5242111002dbeaa484b2b983138dc2ab"
       },
-      "rulesSha256": "99b4a47b778712f38e299a49ad11c013f16e76a145aa16403e02c7e010ec3f33",
+      "rulesSha256": "633d1f02fbe27832b7db5f872c14b8d844477ca4dcbe84180383a0f315ca2684",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -12535,7 +12535,7 @@
         },
         "publishedSources": {
           "files": 543,
-          "sha256": "30c213df9a87f65d6c7a58eee49a84c3675b4bb85c9ef62e8a4270ffe1dc0ed6"
+          "sha256": "7042f0f4670d2f407e2d49ed0a6c1e0ede211b24bbc02971a56c5f58b502a7bf"
         }
       },
       "lexicominos": {

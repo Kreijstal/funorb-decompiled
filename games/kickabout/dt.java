@@ -37,7 +37,7 @@ final class dt {
           this.field_a = -uv.b(-param1 + var6, -param0 + var5, (byte) 2);
           var7 = var5 - param0;
           var8 = -param1 + var6;
-          this.field_g = de.a(var8 * var8 + var7 * var7, (byte) -88) * 100 >> 10;
+          this.field_g = GameKeyHandler.a(var8 * var8 + var7 * var7, (byte) -88) * 100 >> 10;
           if (this.field_g > 100) {
             this.field_g = 100;
           }
@@ -133,7 +133,7 @@ final class dt {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        ut var10 = null;
+        Sprite var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -155,27 +155,27 @@ final class dt {
             t.a(this.field_d, var7 + this.field_d, this.field_d + var5, this.field_b, -var6 + this.field_b, -var4 + this.field_b, 4487082);
             t.a(this.field_d, var9 + this.field_d, this.field_d + var5, this.field_b, this.field_b - var8, -var4 + this.field_b, 85);
           } else {
-            PacketBuffer.a(param0 + 112, fd.field_e);
-            on.b();
+            PacketBuffer.a(param0 + 112, UiWidget.field_e);
+            SoftwareRasterizer.b();
             t.c();
-            t.a(ga.field_P, ga.field_P + (var7 << 1), (var5 << 1) + ga.field_P, ga.field_P, -(var6 << 1) + ga.field_P, ga.field_P - (var4 << 1), -16777216);
-            t.a(ga.field_P, ga.field_P + (var9 << 1), (var5 << 1) + ga.field_P, ga.field_P, ga.field_P - (var8 << 1), -(var4 << 1) + ga.field_P, -16777216);
+            t.a(TextInputWidget.field_P, TextInputWidget.field_P + (var7 << 1), (var5 << 1) + TextInputWidget.field_P, TextInputWidget.field_P, -(var6 << 1) + TextInputWidget.field_P, TextInputWidget.field_P - (var4 << 1), -16777216);
+            t.a(TextInputWidget.field_P, TextInputWidget.field_P + (var9 << 1), (var5 << 1) + TextInputWidget.field_P, TextInputWidget.field_P, TextInputWidget.field_P - (var8 << 1), -(var4 << 1) + TextInputWidget.field_P, -16777216);
             ta.e(param0 + 116);
-            PacketBuffer.a(param0 ^ 68, ga.field_N);
-            on.b();
+            PacketBuffer.a(param0 ^ 68, TextInputWidget.field_N);
+            SoftwareRasterizer.b();
             t.c();
-            t.b(ga.field_P, ga.field_P);
-            t.a(ga.field_P, ga.field_P + (var7 << 1), ga.field_P + (var5 << 1), ga.field_P, ga.field_P - (var6 << 1), -(var4 << 1) + ga.field_P, 153);
-            on.a(-(3 * var4 >> 1) + ga.field_P << 4, ga.field_P + (3 * var5 >> 1) << 4, 544, 29, en.field_n);
-            t.a(ga.field_P, (var9 << 1) + ga.field_P, ga.field_P + (var5 << 1), ga.field_P, -(var8 << 1) + ga.field_P, -(var4 << 1) + ga.field_P, 68);
-            on.a(-(var4 * 3 >> 1) + ga.field_P << 4, ga.field_P + (3 * var5 >> 1) << 4, 544, 18, en.field_n);
-            on.e(0, 0, on.field_g, on.field_f, 16711935);
+            t.b(TextInputWidget.field_P, TextInputWidget.field_P);
+            t.a(TextInputWidget.field_P, TextInputWidget.field_P + (var7 << 1), TextInputWidget.field_P + (var5 << 1), TextInputWidget.field_P, TextInputWidget.field_P - (var6 << 1), -(var4 << 1) + TextInputWidget.field_P, 153);
+            SoftwareRasterizer.a(-(3 * var4 >> 1) + TextInputWidget.field_P << 4, TextInputWidget.field_P + (3 * var5 >> 1) << 4, 544, 29, en.field_n);
+            t.a(TextInputWidget.field_P, (var9 << 1) + TextInputWidget.field_P, TextInputWidget.field_P + (var5 << 1), TextInputWidget.field_P, -(var8 << 1) + TextInputWidget.field_P, -(var4 << 1) + TextInputWidget.field_P, 68);
+            SoftwareRasterizer.a(-(var4 * 3 >> 1) + TextInputWidget.field_P << 4, TextInputWidget.field_P + (3 * var5 >> 1) << 4, 544, 18, en.field_n);
+            SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 16711935);
             ta.e(param0 + 113);
             t.c();
-            for (var10_int = 0; var10_int < ga.field_N.field_y.length; var10_int++) {
-              ga.field_N.field_y[var10_int] = hf.a(ga.field_N.field_y[var10_int], fd.field_e.field_y[var10_int]);
+            for (var10_int = 0; var10_int < TextInputWidget.field_N.field_y.length; var10_int++) {
+              TextInputWidget.field_N.field_y[var10_int] = hf.a(TextInputWidget.field_N.field_y[var10_int], UiWidget.field_e.field_y[var10_int]);
             }
-            ga.field_N.f(this.field_b - (ga.field_N.field_o >> 2), this.field_d - (ga.field_N.field_v >> 2));
+            TextInputWidget.field_N.f(this.field_b - (TextInputWidget.field_N.field_o >> 2), this.field_d - (TextInputWidget.field_N.field_v >> 2));
           }
           if (-1 != this.field_c) {
             var10 = tm.field_n[this.field_c];

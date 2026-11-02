@@ -26,15 +26,15 @@ final class wd extends IntrusiveNode {
 
     final static void a(int param0, int param1, int param2) {
         RuntimeException decompiledCaughtException = null;
-        ut[] var3 = null;
+        Sprite[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ut[] var9 = null;
-        ut var10 = null;
-        ut var11 = null;
+        Sprite[] var9 = null;
+        Sprite var10 = null;
+        Sprite var11 = null;
         var8 = Kickabout.field_G;
         try {
           if (param2 <= 33) {

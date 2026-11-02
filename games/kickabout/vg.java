@@ -10,9 +10,9 @@ final class vg extends hd {
     static int field_Ob;
     private int field_Mb;
     private boolean field_Hb;
-    private wu field_Gb;
+    private PlatformTask field_Gb;
     private int field_Tb;
-    private bu field_Pb;
+    private PlatformTaskDispatcher field_Pb;
     static String field_Cb;
     static boolean field_Wb;
     private long field_Sb;
@@ -21,7 +21,7 @@ final class vg extends hd {
     static nb[] field_Db;
     private hd field_yb;
     static String field_Kb;
-    static gq field_Bb;
+    static PcmStreamMixer field_Bb;
     private int field_Ab;
     private int field_Eb;
     private int field_Fb;
@@ -92,7 +92,7 @@ final class vg extends hd {
           this.field_Lb.field_E = this.field_Ub.toString();
           this.field_yb.field_E = "";
           this.field_yb.field_V = "|";
-          this.field_jb = new tf();
+          this.field_jb = new IntrusiveDeque();
           this.a((byte) -123, this.field_Nb);
           this.a((byte) -113, this.field_Lb);
           this.a((byte) -115, this.field_yb);
@@ -198,10 +198,10 @@ final class vg extends hd {
                 var8[var6] = or.field_d.field_f[var6];
               }
               var6_ref_jm = new jm((long)var4 + var2_long, or.field_d.field_n, var17);
-              am.field_g.a(var6_ref_jm, 3);
+              DualLinkNode.field_g.a(var6_ref_jm, 3);
               or.field_d.field_n = 0;
             }
-            var9 = (jm) (am.field_g.g(24009));
+            var9 = (jm) (DualLinkNode.field_g.g(24009));
             var13 = var9;
             if (var13 != null &&
               var13.field_f < var2_long) {
@@ -227,7 +227,7 @@ final class vg extends hd {
         }
     }
 
-    final void a(bu param0, int param1) {
+    final void a(PlatformTaskDispatcher param0, int param1) {
         if (param1 != -17421) {
           return;
         }

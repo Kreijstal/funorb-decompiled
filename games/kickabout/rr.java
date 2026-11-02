@@ -123,7 +123,7 @@ final class rr {
           if (param1 != -70) {
             rr.a(36, '+');
           }
-          ov.field_b = 2;
+          NodeHashTableIterator.field_b = 2;
           var5 = (CharSequence) ((Object) param0);
           qi.field_o = MatchAgent.a(param1 ^ -70, var5);
           ik.field_A = param2;

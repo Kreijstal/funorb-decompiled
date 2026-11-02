@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jj extends lq {
+final class jj extends PcmStream {
     private int[][] field_j;
-    private qm[] field_p;
+    private MusicTrack[] field_p;
     static String field_m;
-    ru[] field_k;
+    MidiPcmStream[] field_k;
     int[] field_n;
     private int[] field_l;
     int field_o;
@@ -99,7 +99,7 @@ final class jj extends lq {
           if (var5Lifetime1 == 0) {
             return;
           }
-          if (!uh.field_o) {
+          if (!PcmPlayerService.field_o) {
             stackIn_39_0 = param2;
           } else {
             stackIn_39_0 = param2 << 1;
@@ -121,7 +121,7 @@ final class jj extends lq {
               this.field_k[var8Lifetime1].a(this.field_j[var8Lifetime1], param1, param2);
             }
           }
-          if (uh.field_o) {
+          if (PcmPlayerService.field_o) {
             param1 = param1 << 1;
           }
           for (var8Lifetime2 = 0; var8Lifetime2 < var7Lifetime1; var8Lifetime2++) {
@@ -148,11 +148,11 @@ final class jj extends lq {
         }
     }
 
-    final lq b() {
+    final PcmStream b() {
         return null;
     }
 
-    final void a(boolean param0, int param1, qm param2, int param3, int param4, int param5, int param6) {
+    final void a(boolean param0, int param1, MusicTrack param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -298,7 +298,7 @@ final class jj extends lq {
         }
     }
 
-    final lq c() {
+    final PcmStream c() {
         return null;
     }
 
@@ -313,16 +313,16 @@ final class jj extends lq {
         }
         this.field_i = new int[this.field_o];
         this.field_j = new int[this.field_o][];
-        this.field_k = new ru[this.field_o];
+        this.field_k = new MidiPcmStream[this.field_o];
         this.field_n = new int[this.field_o];
-        this.field_p = new qm[this.field_o];
+        this.field_p = new MusicTrack[this.field_o];
         int var4 = 0;
         var2Lifetime1 = var4;
         while (var4 < this.field_k.length) {
           if (var4 == 0) {
-            this.field_k[var4] = new ru();
+            this.field_k[var4] = new MidiPcmStream();
           } else {
-            this.field_k[var4] = new ru(this.field_k[-1 + var4]);
+            this.field_k[var4] = new MidiPcmStream(this.field_k[-1 + var4]);
           }
           this.field_i[var4] = 1048576;
           var4++;

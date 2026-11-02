@@ -51,7 +51,7 @@ final class om extends hd {
         return this.field_Cb.g((byte) -24) - (-param1 - this.field_Db.g((byte) 113));
     }
 
-    om(long param0, ut param1, ut param2, int param3, hd param4, String param5) {
+    om(long param0, Sprite param1, Sprite param2, int param3, hd param4, String param5) {
         this(param0, (hd) null, param4, param5);
         try {
           this.field_Cb.field_N = param2;
