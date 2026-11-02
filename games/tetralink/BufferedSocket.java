@@ -40,7 +40,7 @@ final class BufferedSocket implements Runnable {
         field_n = null;
     }
 
-    final int c(int param0) throws IOException {
+    final int readByte(int param0) throws IOException {
         if (param0 != 3) {
           BufferedSocket.b(95);
         }
@@ -50,7 +50,7 @@ final class BufferedSocket implements Runnable {
         return this.field_j.read();
     }
 
-    final void d(int param0) {
+    final void close(int param0) {
         try {
           int var4 = 0;
           var4 = TetraLink.field_J;
@@ -84,7 +84,7 @@ final class BufferedSocket implements Runnable {
     }
 
     protected final void finalize() {
-        this.d(-15488);
+        this.close(-15488);
     }
 
     BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
@@ -130,7 +130,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final void a(int param0) throws IOException {
+    final void checkWriteError(int param0) throws IOException {
         if (this.field_m) {
           return;
         }
@@ -139,7 +139,7 @@ final class BufferedSocket implements Runnable {
           throw new IOException();
         }
         if (param0 != 100) {
-          this.d(-94);
+          this.close(-94);
         }
     }
 
@@ -192,7 +192,7 @@ final class BufferedSocket implements Runnable {
               var6++;
             }
             if (null == this.field_r) {
-              this.field_r = this.field_d.a((Runnable) (this), 88, 3);
+              this.field_r = this.field_d.startThread((Runnable) (this), 88, 3);
             }
             this.notifyAll();
           }
@@ -333,7 +333,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final int f(int param0) throws IOException {
+    final int available(int param0) throws IOException {
         if (param0 != 0) {
           this.field_i = (OutputStream) null;
         }

@@ -41,7 +41,7 @@ final class UrlFetchTask implements Runnable {
         }
         if (this.field_c == 1) {
           if (this.field_i == null) {
-            this.field_i = this.field_a.a(443, this.field_e.getHost(), (byte) 112);
+            this.field_i = this.field_a.requestSocket(443, this.field_e.getHost(), (byte) 112);
           }
           if (0 == this.field_i.field_d) {
             return false;
@@ -75,7 +75,7 @@ final class UrlFetchTask implements Runnable {
           }
         }
         if (this.field_b == null) {
-          this.field_b = this.field_a.a((Runnable) (this), -106, 5);
+          this.field_b = this.field_a.startThread((Runnable) (this), -106, 5);
         }
         if (this.field_b.field_d == 0) {
           return false;

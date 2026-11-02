@@ -28,7 +28,7 @@ final class tn {
           }
           try {
             if (on.field_b == 0) {
-              hd.field_x = ug.field_ab.a(ud.field_Nb, ji.field_Lb, (byte) 107);
+              hd.field_x = ug.field_ab.requestSocket(ud.field_Nb, ji.field_Lb, (byte) 107);
               on.field_b = on.field_b + 1;
             }
             if (on.field_b == 1) {
@@ -54,8 +54,8 @@ final class tn {
               tn.b(-79);
             }
             if (on.field_b == 3) {
-              if (li.field_g.f(0) > 0) {
-                var1_int = li.field_g.c(3);
+              if (li.field_g.available(0) > 0) {
+                var1_int = li.field_g.readByte(3);
                 if (var1_int != 0) {
                   stackIn_30_0 = qk.a(var1_int, true);
                   return stackIn_30_0;

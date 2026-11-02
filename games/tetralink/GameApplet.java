@@ -328,7 +328,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               dupTemp$0 = new PlatformTaskDispatcher(param4, param2, param3, true);
               nd.field_Pb = dupTemp$0;
               pj.field_b = dupTemp$0;
-              var8 = nd.field_Pb.a((Runnable) (this), -65, 1);
+              var8 = nd.field_Pb.startThread((Runnable) (this), -65, 1);
               while (true) {
                 if (0 == var8.field_d) {
                   tb.a(false, 10L);

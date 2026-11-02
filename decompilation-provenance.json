@@ -10521,17 +10521,17 @@
       "inputTreeSha256": "677647fb04955ef27f8d196cf967163c6383530e901df32ae6b76c80c5fea3e9",
       "sources": {
         "files": 355,
-        "sha256": "b14c57e71ad7a9fae993b1e04ce14ad180673dd5d2be856a599d8e7b43c488db"
+        "sha256": "7a925839565ee2003b8738ca7f3a13f18995aeb4eb02ac863ff525bd74fa654b"
       },
       "dictionary": {
         "path": "decompilation/tetralink-naming.json",
-        "sha256": "85584700feb9b50b77b1fc4cc6db1835f0a6d4dfbd7383f9d2223f79e4b4a001"
+        "sha256": "82b67628bebdfe252cbf07f04980ea833c946a0fe79b1421564e8a7badfbbc8f"
       },
       "readingGuide": {
         "path": "games/tetralink/README.md",
         "sha256": "7b915b60935648ba16438b9806de1b03b834bdab6594e849cc0424e3d48594b0"
       },
-      "rulesSha256": "48f63bb3591d8bce631b55dc0152f7d21e2b7d05fed0df81fb675076e87c7a0d",
+      "rulesSha256": "b8dfdc5f5bfb435b112b4589d0ad89a3554e57f11cdf79283bf090f4ffd4d5bd",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -12271,7 +12271,7 @@
         },
         "publishedSources": {
           "files": 355,
-          "sha256": "b14c57e71ad7a9fae993b1e04ce14ad180673dd5d2be856a599d8e7b43c488db"
+          "sha256": "7a925839565ee2003b8738ca7f3a13f18995aeb4eb02ac863ff525bd74fa654b"
         }
       },
       "tombracer": {

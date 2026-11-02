@@ -29,53 +29,53 @@ final class PlatformTaskDispatcher implements Runnable {
     java.awt.EventQueue field_p;
     private Object field_j;
 
-    private final AsyncRequest a(String param0, int param1, int param2, boolean param3) {
+    private final AsyncRequest requestSocketInternal(String param0, int param1, int param2, boolean param3) {
         if (param1 < 52) {
-          this.a(true);
+          this.requestDisplayModes(true);
         }
-        return this.a(0, param0, !param3 ? 1 : 22, 19696, param2);
+        return this.enqueueTask(0, param0, !param3 ? 1 : 22, 19696, param2);
     }
 
-    final AsyncRequest a(String param0, int param1, Class param2) {
+    final AsyncRequest requestDeclaredField(String param0, int param1, Class param2) {
         if (param1 != 26298) {
-          this.a(false);
+          this.requestDisplayModes(false);
         }
-        return this.a(0, new Object[]{param2, param0}, 9, param1 ^ 10826, 0);
+        return this.enqueueTask(0, new Object[]{param2, param0}, 9, param1 ^ 10826, 0);
     }
 
-    final AsyncRequest a(Runnable param0, int param1, int param2) {
+    final AsyncRequest startThread(Runnable param0, int param1, int param2) {
         int var4 = -62 % ((-2 - param1) / 53);
-        return this.a(0, param0, 2, 19696, param2);
+        return this.enqueueTask(0, param0, 2, 19696, param2);
     }
 
-    final AsyncRequest a(int param0, String param1, byte param2) {
+    final AsyncRequest requestSocket(int param0, String param1, byte param2) {
         if (param2 <= 84) {
           return (AsyncRequest) null;
         }
-        return this.a(param1, 63, param0, false);
+        return this.requestSocketInternal(param1, 63, param0, false);
     }
 
-    final AsyncRequest a(boolean param0) {
+    final AsyncRequest requestDisplayModes(boolean param0) {
         if (param0) {
           Class var3 = (Class) null;
-          this.a((String) null, -86, (Class) null);
+          this.requestDeclaredField((String) null, -86, (Class) null);
         }
-        return this.a(0, (Object) null, 5, 19696, 0);
+        return this.enqueueTask(0, (Object) null, 5, 19696, 0);
     }
 
-    final AsyncRequest a(int param0, int param1, int param2, int param3, int param4) {
+    final AsyncRequest requestEnterFullscreen(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != 0) {
           String var7 = (String) null;
           PlatformTaskDispatcher.a((String) null, (String) null, 18, -31);
         }
-        return this.a(param1 + (param4 << 16), (Object) null, 6, 19696, (param2 << 16) + param3);
+        return this.enqueueTask(param1 + (param4 << 16), (Object) null, 6, 19696, (param2 << 16) + param3);
     }
 
-    final AsyncRequest a(java.awt.Frame param0, int param1) {
+    final AsyncRequest requestExitFullscreen(java.awt.Frame param0, int param1) {
         if (param1 != 0) {
           return (AsyncRequest) null;
         }
-        return this.a(0, param0, 7, 19696, 0);
+        return this.enqueueTask(0, param0, 7, 19696, 0);
     }
 
     final boolean a(byte param0) {
@@ -451,7 +451,7 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    private final AsyncRequest a(int param0, Object param1, int param2, int param3, int param4) {
+    private final AsyncRequest enqueueTask(int param0, Object param1, int param2, int param3, int param4) {
         AsyncRequest var6 = null;
         Throwable decompiledCaughtException = null;
         Object var7 = null;
@@ -481,14 +481,14 @@ final class PlatformTaskDispatcher implements Runnable {
         if (param0) {
           field_h = 53;
         }
-        return this.a(0, param1, 4, 19696, 0);
+        return this.enqueueTask(0, param1, 4, 19696, 0);
     }
 
     final AsyncRequest a(int param0, Class param1, Class[] param2, String param3) {
         if (param0 != 8) {
           field_h = -19;
         }
-        return this.a(0, new Object[]{param1, param3, param2}, 8, 19696, 0);
+        return this.enqueueTask(0, new Object[]{param1, param3, param2}, 8, 19696, 0);
     }
 
     PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {

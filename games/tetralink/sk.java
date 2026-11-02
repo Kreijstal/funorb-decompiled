@@ -439,7 +439,7 @@ final class sk {
           if (param2 != 10) {
             sk.a(78);
           }
-          var11 = param1.a(0, param4, param3, param5, param0);
+          var11 = param1.requestEnterFullscreen(0, param4, param3, param5, param0);
           while (var11.field_d == 0) {
             tb.a(false, 10L);
           }

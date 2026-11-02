@@ -149,7 +149,7 @@ abstract class en extends UiWidget implements nf {
           if (param0 <= 93) {
             return true;
           }
-          int var2_int = wa.field_e.f(0);
+          int var2_int = wa.field_e.available(0);
           if (var2_int > 0) {
             if (var2_int > -kb.field_q.position + param1) {
               var2_int = param1 - kb.field_q.position;

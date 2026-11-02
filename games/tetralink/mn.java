@@ -59,7 +59,7 @@ final class mn {
             stackIn_3_0 = new nl[]{};
             return stackIn_3_0;
           }
-          var8 = param0.a(false);
+          var8 = param0.requestDisplayModes(false);
           while (var8.field_d == 0) {
             tb.a(false, 10L);
           }

@@ -53,7 +53,7 @@ final class mk {
 
     final static void a(boolean param0) {
         if (null != wa.field_e) {
-          wa.field_e.d(-15488);
+          wa.field_e.close(-15488);
           wa.field_e = null;
           if (param0) {
             mk.a(-109);

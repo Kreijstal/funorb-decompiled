@@ -762,7 +762,7 @@ final class om extends hl {
           BitPacketBuffer var4 = null;
           BitPacketBuffer var5 = null;
           if (cf.field_p == null) {
-            cf.field_p = oi.field_l.a(ko.field_t, pd.field_r, (byte) 104);
+            cf.field_p = oi.field_l.requestSocket(ko.field_t, pd.field_r, (byte) 104);
           }
           if (param1 > -37) {
             return true;

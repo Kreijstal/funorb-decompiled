@@ -10,7 +10,7 @@ final class pd extends th {
 
     final void b(int param0) {
         try {
-          this.field_s.d(-15488);
+          this.field_s.close(-15488);
         } catch (Exception exception) {
         }
         this.field_h = this.field_h + 1;
@@ -59,7 +59,7 @@ final class pd extends th {
             this.field_a = this.field_a + var4;
             if (this.field_a > 30000) {
               try {
-                this.field_s.d(-15488);
+                this.field_s.close(-15488);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
@@ -77,7 +77,7 @@ final class pd extends th {
             return false;
           }
           try {
-            this.field_s.a(100);
+            this.field_s.checkWriteError(100);
             var2 = (rh) (this.field_k.a((byte) 90));
             while (var2 != null) {
               this.field_b.position = 0;
@@ -97,7 +97,7 @@ final class pd extends th {
               var2Lifetime1 = (rh) (this.field_o.a(false));
             }
             for (var2_int = 0; var2_int < 100; var2_int++) {
-              var3_int = this.field_s.f(0);
+              var3_int = this.field_s.available(0);
               if (var3_int < 0) {
                 throw new IOException();
               }
@@ -220,7 +220,7 @@ final class pd extends th {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_s.d(-15488);
+              this.field_s.close(-15488);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -258,7 +258,7 @@ final class pd extends th {
           field_r = (String) null;
         }
         if (this.field_s != null) {
-          this.field_s.d(-15488);
+          this.field_s.close(-15488);
         }
     }
 
@@ -279,7 +279,7 @@ final class pd extends th {
           try {
             if (this.field_s != null) {
               try {
-                this.field_s.d(-15488);
+                this.field_s.close(-15488);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
@@ -321,7 +321,7 @@ final class pd extends th {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_s.d(-15488);
+                  this.field_s.close(-15488);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
@@ -387,7 +387,7 @@ final class pd extends th {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_s.d(-15488);
+              this.field_s.close(-15488);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;
@@ -435,7 +435,7 @@ final class pd extends th {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_s.d(-15488);
+              this.field_s.close(-15488);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;

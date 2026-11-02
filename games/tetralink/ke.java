@@ -331,7 +331,7 @@ final class ke implements Runnable {
         this.field_d = 0;
         this.field_a = false;
         try {
-          var2 = param0.a((Runnable) (this), 126, 5);
+          var2 = param0.startThread((Runnable) (this), 126, 5);
           while (var2.field_d == 0) {
             tb.a(false, 10L);
           }

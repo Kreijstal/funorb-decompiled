@@ -119,7 +119,7 @@ final class r extends PcmStream {
         var4 = TetraLink.field_J;
         try {
           while (true) {
-            var3 = param0.a(param1, 0);
+            var3 = param0.requestExitFullscreen(param1, 0);
             while (0 == var3.field_d) {
               tb.a(false, 10L);
             }

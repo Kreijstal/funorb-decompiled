@@ -195,7 +195,7 @@ final class qf {
                   }
                   var18.field_z[var5] = var6_int;
                   var18.field_q[var5] = var9;
-                  var18.field_x[var5] = param3.a(var15, 26298, hh.a(var16, -72));
+                  var18.field_x[var5] = param3.requestDeclaredField(var15, 26298, hh.a(var16, -72));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

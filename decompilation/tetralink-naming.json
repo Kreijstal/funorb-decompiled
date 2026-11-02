@@ -916,6 +916,38 @@
       "renamedSymbol": "M:IterableNodeHashTable.put(JLIntrusiveNode;Z)V"
     },
     {
+      "symbol": "M:fl.a(I)V",
+      "originalName": "a",
+      "to": "checkWriteError",
+      "evidence": "Throws IOException once when the writer recorded a failure.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.checkWriteError(I)V"
+    },
+    {
+      "symbol": "M:fl.c(I)I",
+      "originalName": "c",
+      "to": "readByte",
+      "evidence": "BufferedSocket reads the input stream unless its closed flag is set. Returns InputStream.read.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.readByte(I)I"
+    },
+    {
+      "symbol": "M:fl.d(I)V",
+      "originalName": "d",
+      "to": "close",
+      "evidence": "Synchronized close that sets the closed flag.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.close(I)V"
+    },
+    {
+      "symbol": "M:fl.f(I)I",
+      "originalName": "f",
+      "to": "available",
+      "evidence": "BufferedSocket reads the input stream unless its closed flag is set. Returns InputStream.available.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BufferedSocket.available(I)I"
+    },
+    {
       "symbol": "M:gb.a(I)Z",
       "originalName": "a",
       "to": "isSecondaryLinked",
@@ -930,6 +962,70 @@
       "evidence": "Splices the node out of the secondary link pair.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DualLinkNode.unlinkSecondary(I)V"
+    },
+    {
+      "symbol": "M:ie.a(IIIII)Lvl;",
+      "originalName": "a",
+      "to": "requestEnterFullscreen",
+      "evidence": "PlatformTaskDispatcher wraps every request in enqueueTask with a distinct type code. Type 6 packs width, height, depth and rate.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestEnterFullscreen(IIIII)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:ie.a(ILjava/lang/Object;III)Lvl;",
+      "originalName": "a",
+      "to": "enqueueTask",
+      "evidence": "Common entry that queues a typed request and returns its record.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:ie.a(ILjava/lang/String;B)Lvl;",
+      "originalName": "a",
+      "to": "requestSocket",
+      "evidence": "Delegates to the internal socket request with the host string and port.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestSocket(ILjava/lang/String;B)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:ie.a(Ljava/awt/Frame;I)Lvl;",
+      "originalName": "a",
+      "to": "requestExitFullscreen",
+      "evidence": "PlatformTaskDispatcher wraps every request in enqueueTask with a distinct type code. Type 7 carries the Frame.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestExitFullscreen(Ljava/awt/Frame;I)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:ie.a(Ljava/lang/Runnable;II)Lvl;",
+      "originalName": "a",
+      "to": "startThread",
+      "evidence": "PlatformTaskDispatcher wraps every request in enqueueTask with a distinct type code. Type 2 carries a Runnable.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.startThread(Ljava/lang/Runnable;II)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:ie.a(Ljava/lang/String;IIZ)Lvl;",
+      "originalName": "a",
+      "to": "requestSocketInternal",
+      "evidence": "PlatformTaskDispatcher wraps every request in enqueueTask with a distinct type code. Type 1 or 22 carries the host and port.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestSocketInternal(Ljava/lang/String;IIZ)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:ie.a(Ljava/lang/String;ILjava/lang/Class;)Lvl;",
+      "originalName": "a",
+      "to": "requestDeclaredField",
+      "evidence": "PlatformTaskDispatcher wraps every request in enqueueTask with a distinct type code. Type 9 carries a class and a name.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDeclaredField(Ljava/lang/String;ILjava/lang/Class;)LAsyncRequest;"
+    },
+    {
+      "symbol": "M:ie.a(Z)Lvl;",
+      "originalName": "a",
+      "to": "requestDisplayModes",
+      "evidence": "PlatformTaskDispatcher wraps every request in enqueueTask with a distinct type code. Type 5 carries no payload.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDisplayModes(Z)LAsyncRequest;"
     },
     {
       "symbol": "M:je.a(Lmc;I)V",
@@ -89394,7 +89490,7 @@
     },
     {
       "symbol": "L:fl.d(I)V#0",
-      "renamedSymbol": "L:BufferedSocket.d(I)V#0",
+      "renamedSymbol": "L:BufferedSocket.close(I)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -89405,7 +89501,7 @@
     },
     {
       "symbol": "L:fl.d(I)V#1",
-      "renamedSymbol": "L:BufferedSocket.d(I)V#1",
+      "renamedSymbol": "L:BufferedSocket.close(I)V#1",
       "originalName": "interruptedException",
       "renamedName": "interruptedException",
       "declaration": {
@@ -89416,7 +89512,7 @@
     },
     {
       "symbol": "L:fl.d(I)V#2",
-      "renamedSymbol": "L:BufferedSocket.d(I)V#2",
+      "renamedSymbol": "L:BufferedSocket.close(I)V#2",
       "originalName": "decompiledUncheckedException",
       "renamedName": "decompiledUncheckedException",
       "declaration": {
@@ -89427,7 +89523,7 @@
     },
     {
       "symbol": "L:fl.d(I)V#3",
-      "renamedSymbol": "L:BufferedSocket.d(I)V#3",
+      "renamedSymbol": "L:BufferedSocket.close(I)V#3",
       "originalName": "decompiledCheckedException",
       "renamedName": "decompiledCheckedException",
       "declaration": {
@@ -106686,7 +106782,7 @@
     },
     {
       "symbol": "L:ie.a(IIIII)Lvl;#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(IIIII)LAsyncRequest;#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.requestEnterFullscreen(IIIII)LAsyncRequest;#0",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -106697,7 +106793,7 @@
     },
     {
       "symbol": "L:ie.a(ILjava/lang/Object;III)Lvl;#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LAsyncRequest;#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LAsyncRequest;#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -106708,7 +106804,7 @@
     },
     {
       "symbol": "L:ie.a(ILjava/lang/Object;III)Lvl;#1",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LAsyncRequest;#1",
+      "renamedSymbol": "L:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LAsyncRequest;#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -106719,7 +106815,7 @@
     },
     {
       "symbol": "L:ie.a(ILjava/lang/Object;III)Lvl;#2",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LAsyncRequest;#2",
+      "renamedSymbol": "L:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LAsyncRequest;#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -106730,7 +106826,7 @@
     },
     {
       "symbol": "L:ie.a(Ljava/lang/Runnable;II)Lvl;#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Ljava/lang/Runnable;II)LAsyncRequest;#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.startThread(Ljava/lang/Runnable;II)LAsyncRequest;#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -106862,7 +106958,7 @@
     },
     {
       "symbol": "L:ie.a(Z)Lvl;#0",
-      "renamedSymbol": "L:PlatformTaskDispatcher.a(Z)LAsyncRequest;#0",
+      "renamedSymbol": "L:PlatformTaskDispatcher.requestDisplayModes(Z)LAsyncRequest;#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -207776,9 +207872,9 @@
     },
     {
       "symbol": "M:fl.a(I)V",
-      "renamedSymbol": "M:BufferedSocket.a(I)V",
+      "renamedSymbol": "M:BufferedSocket.checkWriteError(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "checkWriteError",
       "declaration": {
         "file": "fl.java",
         "start": 3861,
@@ -207820,9 +207916,9 @@
     },
     {
       "symbol": "M:fl.c(I)I",
-      "renamedSymbol": "M:BufferedSocket.c(I)I",
+      "renamedSymbol": "M:BufferedSocket.readByte(I)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "readByte",
       "declaration": {
         "file": "fl.java",
         "start": 978,
@@ -207831,9 +207927,9 @@
     },
     {
       "symbol": "M:fl.d(I)V",
-      "renamedSymbol": "M:BufferedSocket.d(I)V",
+      "renamedSymbol": "M:BufferedSocket.close(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "close",
       "declaration": {
         "file": "fl.java",
         "start": 1186,
@@ -207853,9 +207949,9 @@
     },
     {
       "symbol": "M:fl.f(I)I",
-      "renamedSymbol": "M:BufferedSocket.f(I)I",
+      "renamedSymbol": "M:BufferedSocket.available(I)I",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "available",
       "declaration": {
         "file": "fl.java",
         "start": 11531,
@@ -211483,9 +211579,9 @@
     },
     {
       "symbol": "M:ie.a(IIIII)Lvl;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(IIIII)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestEnterFullscreen(IIIII)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestEnterFullscreen",
       "declaration": {
         "file": "ie.java",
         "start": 1754,
@@ -211505,9 +211601,9 @@
     },
     {
       "symbol": "M:ie.a(ILjava/lang/Object;III)Lvl;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "enqueueTask",
       "declaration": {
         "file": "ie.java",
         "start": 19399,
@@ -211516,9 +211612,9 @@
     },
     {
       "symbol": "M:ie.a(ILjava/lang/String;B)Lvl;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(ILjava/lang/String;B)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestSocket(ILjava/lang/String;B)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestSocket",
       "declaration": {
         "file": "ie.java",
         "start": 1359,
@@ -211527,9 +211623,9 @@
     },
     {
       "symbol": "M:ie.a(Ljava/awt/Frame;I)Lvl;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Ljava/awt/Frame;I)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestExitFullscreen(Ljava/awt/Frame;I)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestExitFullscreen",
       "declaration": {
         "file": "ie.java",
         "start": 2067,
@@ -211538,9 +211634,9 @@
     },
     {
       "symbol": "M:ie.a(Ljava/lang/Runnable;II)Lvl;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Ljava/lang/Runnable;II)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.startThread(Ljava/lang/Runnable;II)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "startThread",
       "declaration": {
         "file": "ie.java",
         "start": 1195,
@@ -211549,9 +211645,9 @@
     },
     {
       "symbol": "M:ie.a(Ljava/lang/String;IIZ)Lvl;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Ljava/lang/String;IIZ)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestSocketInternal(Ljava/lang/String;IIZ)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestSocketInternal",
       "declaration": {
         "file": "ie.java",
         "start": 779,
@@ -211560,9 +211656,9 @@
     },
     {
       "symbol": "M:ie.a(Ljava/lang/String;ILjava/lang/Class;)Lvl;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/Class;)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDeclaredField(Ljava/lang/String;ILjava/lang/Class;)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestDeclaredField",
       "declaration": {
         "file": "ie.java",
         "start": 986,
@@ -211582,9 +211678,9 @@
     },
     {
       "symbol": "M:ie.a(Z)Lvl;",
-      "renamedSymbol": "M:PlatformTaskDispatcher.a(Z)LAsyncRequest;",
+      "renamedSymbol": "M:PlatformTaskDispatcher.requestDisplayModes(Z)LAsyncRequest;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestDisplayModes",
       "declaration": {
         "file": "ie.java",
         "start": 1539,
@@ -251886,7 +251982,7 @@
     },
     {
       "symbol": "P:fl.a(I)V#0",
-      "renamedSymbol": "P:BufferedSocket.a(I)V#0",
+      "renamedSymbol": "P:BufferedSocket.checkWriteError(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -251996,7 +252092,7 @@
     },
     {
       "symbol": "P:fl.c(I)I#0",
-      "renamedSymbol": "P:BufferedSocket.c(I)I#0",
+      "renamedSymbol": "P:BufferedSocket.readByte(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -252007,7 +252103,7 @@
     },
     {
       "symbol": "P:fl.d(I)V#0",
-      "renamedSymbol": "P:BufferedSocket.d(I)V#0",
+      "renamedSymbol": "P:BufferedSocket.close(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -252029,7 +252125,7 @@
     },
     {
       "symbol": "P:fl.f(I)I#0",
-      "renamedSymbol": "P:BufferedSocket.f(I)I#0",
+      "renamedSymbol": "P:BufferedSocket.available(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260400,7 +260496,7 @@
     },
     {
       "symbol": "P:ie.a(IIIII)Lvl;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIII)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestEnterFullscreen(IIIII)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260411,7 +260507,7 @@
     },
     {
       "symbol": "P:ie.a(IIIII)Lvl;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIII)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestEnterFullscreen(IIIII)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -260422,7 +260518,7 @@
     },
     {
       "symbol": "P:ie.a(IIIII)Lvl;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIII)LAsyncRequest;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestEnterFullscreen(IIIII)LAsyncRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -260433,7 +260529,7 @@
     },
     {
       "symbol": "P:ie.a(IIIII)Lvl;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIII)LAsyncRequest;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestEnterFullscreen(IIIII)LAsyncRequest;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -260444,7 +260540,7 @@
     },
     {
       "symbol": "P:ie.a(IIIII)Lvl;#4",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(IIIII)LAsyncRequest;#4",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestEnterFullscreen(IIIII)LAsyncRequest;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -260499,7 +260595,7 @@
     },
     {
       "symbol": "P:ie.a(ILjava/lang/Object;III)Lvl;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260510,7 +260606,7 @@
     },
     {
       "symbol": "P:ie.a(ILjava/lang/Object;III)Lvl;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -260521,7 +260617,7 @@
     },
     {
       "symbol": "P:ie.a(ILjava/lang/Object;III)Lvl;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LAsyncRequest;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LAsyncRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -260532,7 +260628,7 @@
     },
     {
       "symbol": "P:ie.a(ILjava/lang/Object;III)Lvl;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LAsyncRequest;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LAsyncRequest;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -260543,7 +260639,7 @@
     },
     {
       "symbol": "P:ie.a(ILjava/lang/Object;III)Lvl;#4",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/Object;III)LAsyncRequest;#4",
+      "renamedSymbol": "P:PlatformTaskDispatcher.enqueueTask(ILjava/lang/Object;III)LAsyncRequest;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -260554,7 +260650,7 @@
     },
     {
       "symbol": "P:ie.a(ILjava/lang/String;B)Lvl;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;B)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocket(ILjava/lang/String;B)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260565,7 +260661,7 @@
     },
     {
       "symbol": "P:ie.a(ILjava/lang/String;B)Lvl;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;B)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocket(ILjava/lang/String;B)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -260576,7 +260672,7 @@
     },
     {
       "symbol": "P:ie.a(ILjava/lang/String;B)Lvl;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(ILjava/lang/String;B)LAsyncRequest;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocket(ILjava/lang/String;B)LAsyncRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -260587,7 +260683,7 @@
     },
     {
       "symbol": "P:ie.a(Ljava/awt/Frame;I)Lvl;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/awt/Frame;I)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestExitFullscreen(Ljava/awt/Frame;I)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260598,7 +260694,7 @@
     },
     {
       "symbol": "P:ie.a(Ljava/awt/Frame;I)Lvl;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/awt/Frame;I)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestExitFullscreen(Ljava/awt/Frame;I)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -260609,7 +260705,7 @@
     },
     {
       "symbol": "P:ie.a(Ljava/lang/Runnable;II)Lvl;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/Runnable;II)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.startThread(Ljava/lang/Runnable;II)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260620,7 +260716,7 @@
     },
     {
       "symbol": "P:ie.a(Ljava/lang/Runnable;II)Lvl;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/Runnable;II)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.startThread(Ljava/lang/Runnable;II)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -260631,7 +260727,7 @@
     },
     {
       "symbol": "P:ie.a(Ljava/lang/Runnable;II)Lvl;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/Runnable;II)LAsyncRequest;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.startThread(Ljava/lang/Runnable;II)LAsyncRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -260642,7 +260738,7 @@
     },
     {
       "symbol": "P:ie.a(Ljava/lang/String;IIZ)Lvl;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;IIZ)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketInternal(Ljava/lang/String;IIZ)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260653,7 +260749,7 @@
     },
     {
       "symbol": "P:ie.a(Ljava/lang/String;IIZ)Lvl;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;IIZ)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketInternal(Ljava/lang/String;IIZ)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -260664,7 +260760,7 @@
     },
     {
       "symbol": "P:ie.a(Ljava/lang/String;IIZ)Lvl;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;IIZ)LAsyncRequest;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketInternal(Ljava/lang/String;IIZ)LAsyncRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -260675,7 +260771,7 @@
     },
     {
       "symbol": "P:ie.a(Ljava/lang/String;IIZ)Lvl;#3",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;IIZ)LAsyncRequest;#3",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestSocketInternal(Ljava/lang/String;IIZ)LAsyncRequest;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -260686,7 +260782,7 @@
     },
     {
       "symbol": "P:ie.a(Ljava/lang/String;ILjava/lang/Class;)Lvl;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/Class;)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredField(Ljava/lang/String;ILjava/lang/Class;)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -260697,7 +260793,7 @@
     },
     {
       "symbol": "P:ie.a(Ljava/lang/String;ILjava/lang/Class;)Lvl;#1",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/Class;)LAsyncRequest;#1",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredField(Ljava/lang/String;ILjava/lang/Class;)LAsyncRequest;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -260708,7 +260804,7 @@
     },
     {
       "symbol": "P:ie.a(Ljava/lang/String;ILjava/lang/Class;)Lvl;#2",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Ljava/lang/String;ILjava/lang/Class;)LAsyncRequest;#2",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDeclaredField(Ljava/lang/String;ILjava/lang/Class;)LAsyncRequest;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -260763,7 +260859,7 @@
     },
     {
       "symbol": "P:ie.a(Z)Lvl;#0",
-      "renamedSymbol": "P:PlatformTaskDispatcher.a(Z)LAsyncRequest;#0",
+      "renamedSymbol": "P:PlatformTaskDispatcher.requestDisplayModes(Z)LAsyncRequest;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -307159,7 +307255,7 @@
       "original": "bg.java",
       "renamed": "GameApplet.java",
       "inputSha256": "932180ad69541f11f0772306f368de1c8b7a6b9fae2d9df975874798c77e364b",
-      "outputSha256": "423e1e3fa2d93fe863b86c32cd9a1d08fbdfd71dac492ccd1c88d2eabec70d78",
+      "outputSha256": "638aca71e13a946a7863b68a1451f1a2dbe6fceeae96d035d481c67f9e41e60b",
       "edits": [
         {
           "start": 60,
@@ -307307,6 +307403,13 @@
           "symbol": "C:ie",
           "original": "ie",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 12253,
+          "end": 12254,
+          "symbol": "M:ie.a(Ljava/lang/Runnable;II)Lvl;",
+          "original": "a",
+          "renamed": "startThread"
         },
         {
           "start": 13947,
@@ -317964,7 +318067,7 @@
       "original": "en.java",
       "renamed": "en.java",
       "inputSha256": "5303b00572e39e9b3370e39e38443e34b03cf6d59d94b65aca2a0c683b4f8762",
-      "outputSha256": "92af33c83902e9a897698022c4f2668745decd70b55c32e46c35d09cd8917521",
+      "outputSha256": "3601bd5afa0f7b1278e255353d8c79051fd2418de77d8c094fb0421fafb35ee4",
       "edits": [
         {
           "start": 103,
@@ -318063,6 +318166,13 @@
           "symbol": "F:bh.field_t:I",
           "original": "field_t",
           "renamed": "position"
+        },
+        {
+          "start": 5898,
+          "end": 5899,
+          "symbol": "M:fl.f(I)I",
+          "original": "f",
+          "renamed": "available"
         },
         {
           "start": 5973,
@@ -319725,7 +319835,7 @@
       "original": "fl.java",
       "renamed": "BufferedSocket.java",
       "inputSha256": "0a64111513e6a0223c2dabd4c806fea32c7714d2829abc11a0a8217d5140ff59",
-      "outputSha256": "313b7b356ba0f9604beb55bacb223bfca67f856e105db5317ce92feeba681a26",
+      "outputSha256": "57a7c7920ef106b4f8066864f632b8cb2cf9fdb97841060684e24723dd244cb5",
       "edits": [
         {
           "start": 69,
@@ -319756,11 +319866,32 @@
           "renamed": "PlatformTaskDispatcher"
         },
         {
+          "start": 978,
+          "end": 979,
+          "symbol": "M:fl.c(I)I",
+          "original": "c",
+          "renamed": "readByte"
+        },
+        {
           "start": 1050,
           "end": 1052,
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 1186,
+          "end": 1187,
+          "symbol": "M:fl.d(I)V",
+          "original": "d",
+          "renamed": "close"
+        },
+        {
+          "start": 2232,
+          "end": 2233,
+          "symbol": "M:fl.d(I)V",
+          "original": "d",
+          "renamed": "close"
         },
         {
           "start": 2254,
@@ -319775,6 +319906,20 @@
           "symbol": "C:ie",
           "original": "ie",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 3861,
+          "end": 3862,
+          "symbol": "M:fl.a(I)V",
+          "original": "a",
+          "renamed": "checkWriteError"
+        },
+        {
+          "start": 4101,
+          "end": 4102,
+          "symbol": "M:fl.d(I)V",
+          "original": "d",
+          "renamed": "close"
         },
         {
           "start": 4184,
@@ -319798,11 +319943,25 @@
           "renamed": "RandomAccessCacheFile"
         },
         {
+          "start": 5782,
+          "end": 5783,
+          "symbol": "M:ie.a(Ljava/lang/Runnable;II)Lvl;",
+          "original": "a",
+          "renamed": "startThread"
+        },
+        {
           "start": 10824,
           "end": 10826,
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 11531,
+          "end": 11532,
+          "symbol": "M:fl.f(I)I",
+          "original": "f",
+          "renamed": "available"
         },
         {
           "start": 11767,
@@ -324778,7 +324937,7 @@
       "original": "ie.java",
       "renamed": "PlatformTaskDispatcher.java",
       "inputSha256": "4f5720ef3c615304f96220e9a968e5014be4bb47f68cb972f04c4ac3f57b4d41",
-      "outputSha256": "1b118b3451080dab9e0dd48921793c8c9f1935ae7b142dd71795587c01539fe0",
+      "outputSha256": "8f995f1a2dae197a5b6b4f367d5313774f419b162544e4010985c2487861c713",
       "edits": [
         {
           "start": 69,
@@ -324844,11 +325003,53 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 779,
+          "end": 780,
+          "symbol": "M:ie.a(Ljava/lang/String;IIZ)Lvl;",
+          "original": "a",
+          "renamed": "requestSocketInternal"
+        },
+        {
+          "start": 880,
+          "end": 881,
+          "symbol": "M:ie.a(Z)Lvl;",
+          "original": "a",
+          "renamed": "requestDisplayModes"
+        },
+        {
+          "start": 919,
+          "end": 920,
+          "symbol": "M:ie.a(ILjava/lang/Object;III)Lvl;",
+          "original": "a",
+          "renamed": "enqueueTask"
+        },
+        {
           "start": 983,
           "end": 985,
           "symbol": "C:vl",
           "original": "vl",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 986,
+          "end": 987,
+          "symbol": "M:ie.a(Ljava/lang/String;ILjava/lang/Class;)Lvl;",
+          "original": "a",
+          "renamed": "requestDeclaredField"
+        },
+        {
+          "start": 1077,
+          "end": 1078,
+          "symbol": "M:ie.a(Z)Lvl;",
+          "original": "a",
+          "renamed": "requestDisplayModes"
+        },
+        {
+          "start": 1117,
+          "end": 1118,
+          "symbol": "M:ie.a(ILjava/lang/Object;III)Lvl;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 1192,
@@ -324858,11 +325059,32 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 1195,
+          "end": 1196,
+          "symbol": "M:ie.a(Ljava/lang/Runnable;II)Lvl;",
+          "original": "a",
+          "renamed": "startThread"
+        },
+        {
+          "start": 1307,
+          "end": 1308,
+          "symbol": "M:ie.a(ILjava/lang/Object;III)Lvl;",
+          "original": "a",
+          "renamed": "enqueueTask"
+        },
+        {
           "start": 1356,
           "end": 1358,
           "symbol": "C:vl",
           "original": "vl",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 1359,
+          "end": 1360,
+          "symbol": "M:ie.a(ILjava/lang/String;B)Lvl;",
+          "original": "a",
+          "renamed": "requestSocket"
         },
         {
           "start": 1449,
@@ -324872,11 +325094,39 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 1489,
+          "end": 1490,
+          "symbol": "M:ie.a(Ljava/lang/String;IIZ)Lvl;",
+          "original": "a",
+          "renamed": "requestSocketInternal"
+        },
+        {
           "start": 1536,
           "end": 1538,
           "symbol": "C:vl",
           "original": "vl",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 1539,
+          "end": 1540,
+          "symbol": "M:ie.a(Z)Lvl;",
+          "original": "a",
+          "renamed": "requestDisplayModes"
+        },
+        {
+          "start": 1633,
+          "end": 1634,
+          "symbol": "M:ie.a(Ljava/lang/String;ILjava/lang/Class;)Lvl;",
+          "original": "a",
+          "renamed": "requestDeclaredField"
+        },
+        {
+          "start": 1700,
+          "end": 1701,
+          "symbol": "M:ie.a(ILjava/lang/Object;III)Lvl;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 1751,
@@ -324886,11 +325136,25 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 1754,
+          "end": 1755,
+          "symbol": "M:ie.a(IIIII)Lvl;",
+          "original": "a",
+          "renamed": "requestEnterFullscreen"
+        },
+        {
           "start": 1894,
           "end": 1896,
           "symbol": "C:ie",
           "original": "ie",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 1969,
+          "end": 1970,
+          "symbol": "M:ie.a(ILjava/lang/Object;III)Lvl;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 2064,
@@ -324900,11 +325164,25 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 2067,
+          "end": 2068,
+          "symbol": "M:ie.a(Ljava/awt/Frame;I)Lvl;",
+          "original": "a",
+          "renamed": "requestExitFullscreen"
+        },
+        {
           "start": 2151,
           "end": 2153,
           "symbol": "C:vl",
           "original": "vl",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 2191,
+          "end": 2192,
+          "symbol": "M:ie.a(ILjava/lang/Object;III)Lvl;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 4846,
@@ -325019,6 +325297,13 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 19399,
+          "end": 19400,
+          "symbol": "M:ie.a(ILjava/lang/Object;III)Lvl;",
+          "original": "a",
+          "renamed": "enqueueTask"
+        },
+        {
           "start": 19474,
           "end": 19476,
           "symbol": "C:vl",
@@ -325047,11 +325332,25 @@
           "renamed": "AsyncRequest"
         },
         {
+          "start": 20241,
+          "end": 20242,
+          "symbol": "M:ie.a(ILjava/lang/Object;III)Lvl;",
+          "original": "a",
+          "renamed": "enqueueTask"
+        },
+        {
           "start": 20285,
           "end": 20287,
           "symbol": "C:vl",
           "original": "vl",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 20431,
+          "end": 20432,
+          "symbol": "M:ie.a(ILjava/lang/Object;III)Lvl;",
+          "original": "a",
+          "renamed": "enqueueTask"
         },
         {
           "start": 20499,
@@ -328642,7 +328941,7 @@
       "original": "ke.java",
       "renamed": "ke.java",
       "inputSha256": "c63e29d6828f0451f4a3de04b2031d870ffd71bbde6e11ccffc08cb3abca79cc",
-      "outputSha256": "e3d55af30d8d8b7c7eb49efc16aa2448b72baaec6732166bda2d9f53478aec48",
+      "outputSha256": "f9b8b6be0a3b0e85cb0a51b30992ca19902f6d48586f20be6f0644690a810c20",
       "edits": [
         {
           "start": 87,
@@ -328741,6 +329040,13 @@
           "symbol": "C:jo",
           "original": "jo",
           "renamed": "DualLinkDeque"
+        },
+        {
+          "start": 11720,
+          "end": 11721,
+          "symbol": "M:ie.a(Ljava/lang/Runnable;II)Lvl;",
+          "original": "a",
+          "renamed": "startThread"
         }
       ]
     },
@@ -332510,8 +332816,15 @@
       "original": "mk.java",
       "renamed": "mk.java",
       "inputSha256": "d42b5e3ac03561e4db8ab55d8bd38090a52163b2d02c5d599dd44fee5c5d5169",
-      "outputSha256": "d9d3c6086b2dba298f64cf1eca9f557e385c759891033906752a96b1469edde0",
+      "outputSha256": "4841ea519ce76f20aaaa47d67230a99cbc09e0ed49a5b3b20492f2ea505d8bcd",
       "edits": [
+        {
+          "start": 1424,
+          "end": 1425,
+          "symbol": "M:fl.d(I)V",
+          "original": "d",
+          "renamed": "close"
+        },
         {
           "start": 1818,
           "end": 1819,
@@ -332730,7 +333043,7 @@
       "original": "mn.java",
       "renamed": "mn.java",
       "inputSha256": "7c5fee8c089d666405af4c0ceb1d305768da7f39f2a917d0e4dbc2f943eb0ebb",
-      "outputSha256": "4e40e3816cf932275fc52969fd27e76d53b6283ed8748f81b1128a9539164be7",
+      "outputSha256": "2c4a4ceca1b554c70f0c8893f5e0d6f21bec183535d5a2ff940baac1eae57976",
       "edits": [
         {
           "start": 1047,
@@ -332745,6 +333058,13 @@
           "symbol": "C:vl",
           "original": "vl",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 1788,
+          "end": 1789,
+          "symbol": "M:ie.a(Z)Lvl;",
+          "original": "a",
+          "renamed": "requestDisplayModes"
         },
         {
           "start": 4192,
@@ -333938,7 +334258,7 @@
       "original": "nk.java",
       "renamed": "nk.java",
       "inputSha256": "0f3c84e8e9e338f87e3ff403e57c715d5687419dc87e6f0c7d2dc15152a06eaf",
-      "outputSha256": "8e932248a9e5f2d11e07a98bf309a5a6b0422b336d8dc2ba178eae19f949cc3b",
+      "outputSha256": "ed7da1474dc8d0dd31ba65725c5761cf8f09822f37c038f2c8462c35b05d1f44",
       "edits": [
         {
           "start": 187,
@@ -334002,6 +334322,13 @@
           "symbol": "C:ie",
           "original": "ie",
           "renamed": "PlatformTaskDispatcher"
+        },
+        {
+          "start": 7558,
+          "end": 7559,
+          "symbol": "M:ie.a(Ljava/lang/Runnable;II)Lvl;",
+          "original": "a",
+          "renamed": "startThread"
         },
         {
           "start": 8788,
@@ -337069,7 +337396,7 @@
       "original": "om.java",
       "renamed": "om.java",
       "inputSha256": "0ad3931699a7e8e7ad8ec3ab532c93737a72e36f712addfe39e12a41fe11d56f",
-      "outputSha256": "0fa031c4acd7a10a5c5725631bc4688e000380661eef330ca2149760d9a8654f",
+      "outputSha256": "b6bab4466ac222c47d9c386ca27ac592e51668f4dfb5e73ba9c21daef7c573bf",
       "edits": [
         {
           "start": 11103,
@@ -337240,6 +337567,13 @@
           "symbol": "C:bc",
           "original": "bc",
           "renamed": "BitPacketBuffer"
+        },
+        {
+          "start": 31611,
+          "end": 31612,
+          "symbol": "M:ie.a(ILjava/lang/String;B)Lvl;",
+          "original": "a",
+          "renamed": "requestSocket"
         },
         {
           "start": 32057,
@@ -337538,7 +337872,7 @@
       "original": "pd.java",
       "renamed": "pd.java",
       "inputSha256": "b6f788141686ffae855e9e54f643a9191dbca71b48fcbec0dd21987087251779",
-      "outputSha256": "fbaf8cfd5bf8bd001f1efcad00ff96c8e5a9c39d4abcf7867db515f4af47ee2c",
+      "outputSha256": "0606f84995e29886939b83ff23c03ba31fda1f2fb378d0fbdd18eb47a01f42de",
       "edits": [
         {
           "start": 97,
@@ -337546,6 +337880,27 @@
           "symbol": "C:fl",
           "original": "fl",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 236,
+          "end": 237,
+          "symbol": "M:fl.d(I)V",
+          "original": "d",
+          "renamed": "close"
+        },
+        {
+          "start": 1689,
+          "end": 1690,
+          "symbol": "M:fl.d(I)V",
+          "original": "d",
+          "renamed": "close"
+        },
+        {
+          "start": 2285,
+          "end": 2286,
+          "symbol": "M:fl.a(I)V",
+          "original": "a",
+          "renamed": "checkWriteError"
         },
         {
           "start": 2408,
@@ -337616,6 +337971,13 @@
           "symbol": "M:jo.a(Lgb;I)V",
           "original": "a",
           "renamed": "addLast"
+        },
+        {
+          "start": 3262,
+          "end": 3263,
+          "symbol": "M:fl.f(I)I",
+          "original": "f",
+          "renamed": "available"
         },
         {
           "start": 3774,
@@ -337856,6 +338218,27 @@
           "renamed": "position"
         },
         {
+          "start": 8952,
+          "end": 8953,
+          "symbol": "M:fl.d(I)V",
+          "original": "d",
+          "renamed": "close"
+        },
+        {
+          "start": 10127,
+          "end": 10128,
+          "symbol": "M:fl.d(I)V",
+          "original": "d",
+          "renamed": "close"
+        },
+        {
+          "start": 10795,
+          "end": 10796,
+          "symbol": "M:fl.d(I)V",
+          "original": "d",
+          "renamed": "close"
+        },
+        {
           "start": 11115,
           "end": 11117,
           "symbol": "C:fl",
@@ -337919,6 +338302,13 @@
           "renamed": "payload"
         },
         {
+          "start": 12476,
+          "end": 12477,
+          "symbol": "M:fl.d(I)V",
+          "original": "d",
+          "renamed": "close"
+        },
+        {
           "start": 14693,
           "end": 14700,
           "symbol": "F:bh.field_t:I",
@@ -337938,6 +338328,13 @@
           "symbol": "F:bh.field_u:[B",
           "original": "field_u",
           "renamed": "payload"
+        },
+        {
+          "start": 15173,
+          "end": 15174,
+          "symbol": "M:fl.d(I)V",
+          "original": "d",
+          "renamed": "close"
         },
         {
           "start": 15914,
@@ -337994,6 +338391,13 @@
           "symbol": "F:bh.field_u:[B",
           "original": "field_u",
           "renamed": "payload"
+        },
+        {
+          "start": 17048,
+          "end": 17049,
+          "symbol": "M:fl.d(I)V",
+          "original": "d",
+          "renamed": "close"
         }
       ]
     },
@@ -339793,7 +340197,7 @@
       "original": "qf.java",
       "renamed": "qf.java",
       "inputSha256": "d8fa6098ac79f469796559d1b3b414ee83ca4c68b53f18ab88e5827c45f803fc",
-      "outputSha256": "cf9d49cb143d73847955dcf03b94517914373d3bac4485faa8113d18fb8350aa",
+      "outputSha256": "231e31b74c7549e96d0bb66a64f62b8d45000286f0839d638f45caad6eb7a23f",
       "edits": [
         {
           "start": 307,
@@ -339990,6 +340394,13 @@
           "symbol": "M:bh.g(B)Ljava/lang/String;",
           "original": "g",
           "renamed": "readString"
+        },
+        {
+          "start": 7177,
+          "end": 7178,
+          "symbol": "M:ie.a(Ljava/lang/String;ILjava/lang/Class;)Lvl;",
+          "original": "a",
+          "renamed": "requestDeclaredField"
         },
         {
           "start": 8635,
@@ -340632,7 +341043,7 @@
       "original": "r.java",
       "renamed": "r.java",
       "inputSha256": "3bd827472b80d2dceea6eddcae4df485301d47d098b942996282ae8e8dd77847",
-      "outputSha256": "29e238b9536e59934920e09da4a4e0f9e80197775fd1d1cc11c741b063a678b2",
+      "outputSha256": "7aa566db5b4a0f7b08dc02c0b8e4ac9984a7df0d03db5803722fcd5c5fa2c253",
       "edits": [
         {
           "start": 60,
@@ -340696,6 +341107,13 @@
           "symbol": "C:vl",
           "original": "vl",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 4004,
+          "end": 4005,
+          "symbol": "M:ie.a(Ljava/awt/Frame;I)Lvl;",
+          "original": "a",
+          "renamed": "requestExitFullscreen"
         },
         {
           "start": 15130,
@@ -343214,7 +343632,7 @@
       "original": "sk.java",
       "renamed": "sk.java",
       "inputSha256": "0d6b50b2732315a5e76e1351336189045360e986c87eaeb62d75a6a241a41537",
-      "outputSha256": "7f5755ea015612be78239723dd31d3ca85601f2ba525ac1f7e9ceaa9d72c1024",
+      "outputSha256": "4db8ed14cfb793405cb4ae12cf4290cab0a0fb5309ba75cbc377f18a3fd0ce25",
       "edits": [
         {
           "start": 179,
@@ -343316,6 +343734,13 @@
           "symbol": "C:vl",
           "original": "vl",
           "renamed": "AsyncRequest"
+        },
+        {
+          "start": 18296,
+          "end": 18297,
+          "symbol": "M:ie.a(IIIII)Lvl;",
+          "original": "a",
+          "renamed": "requestEnterFullscreen"
         },
         {
           "start": 19471,
@@ -345537,7 +345962,7 @@
       "original": "tn.java",
       "renamed": "tn.java",
       "inputSha256": "370fee0f227f12a51b8237fb6490f3cb84663549a8dc0a4934b8ca303c21c033",
-      "outputSha256": "7e9a73e0076b23e94281b7da9ae3fd1a57688b3eee3b6c11dbb37a37f7cf599f",
+      "outputSha256": "2dd4a3ca37cd941b382539f3013b6d5e324eb98fce5e947e3f354848be2cafe7",
       "edits": [
         {
           "start": 427,
@@ -345545,6 +345970,13 @@
           "symbol": "C:bh",
           "original": "bh",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 772,
+          "end": 773,
+          "symbol": "M:ie.a(ILjava/lang/String;B)Lvl;",
+          "original": "a",
+          "renamed": "requestSocket"
         },
         {
           "start": 1236,
@@ -345580,6 +346012,20 @@
           "symbol": "F:bh.field_u:[B",
           "original": "field_u",
           "renamed": "payload"
+        },
+        {
+          "start": 1764,
+          "end": 1765,
+          "symbol": "M:fl.f(I)I",
+          "original": "f",
+          "renamed": "available"
+        },
+        {
+          "start": 1814,
+          "end": 1815,
+          "symbol": "M:fl.c(I)I",
+          "original": "c",
+          "renamed": "readByte"
         }
       ]
     },
@@ -347224,7 +347670,7 @@
       "original": "un.java",
       "renamed": "UrlFetchTask.java",
       "inputSha256": "2778572a0b93c5fe798d08f52c79c1a2f1499d795e3e5d6f233a773ab576e7c7",
-      "outputSha256": "640a740dc82378cec86b4db5e97b1f85d02075adcb4a58c4991ecc2e396aa162",
+      "outputSha256": "07a8dd7202911742503c4d22cfb761eaf7fbe5ac6407e0b9373d8f73dfb8e849",
       "edits": [
         {
           "start": 69,
@@ -347269,11 +347715,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 1238,
+          "end": 1239,
+          "symbol": "M:ie.a(ILjava/lang/String;B)Lvl;",
+          "original": "a",
+          "renamed": "requestSocket"
+        },
+        {
           "start": 2183,
           "end": 2190,
           "symbol": "F:bh.field_t:I",
           "original": "field_t",
           "renamed": "position"
+        },
+        {
+          "start": 2572,
+          "end": 2573,
+          "symbol": "M:ie.a(Ljava/lang/Runnable;II)Lvl;",
+          "original": "a",
+          "renamed": "startThread"
         },
         {
           "start": 3054,
@@ -351501,10 +351961,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/tetralink"
     },
-    "rulesSha256": "48f63bb3591d8bce631b55dc0152f7d21e2b7d05fed0df81fb675076e87c7a0d",
+    "rulesSha256": "b8dfdc5f5bfb435b112b4589d0ad89a3554e57f11cdf79283bf090f4ffd4d5bd",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "677647fb04955ef27f8d196cf967163c6383530e901df32ae6b76c80c5fea3e9",
-    "outputTreeSha256": "b14c57e71ad7a9fae993b1e04ce14ad180673dd5d2be856a599d8e7b43c488db",
+    "outputTreeSha256": "7a925839565ee2003b8738ca7f3a13f18995aeb4eb02ac863ff525bd74fa654b",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

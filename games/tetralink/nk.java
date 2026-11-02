@@ -243,7 +243,7 @@ class nk {
                 field_q == null) {
                 field_q = new pg();
                 field_q.field_j = param0;
-                param0.a((Runnable) ((Object) field_q), 105, field_n);
+                param0.startThread((Runnable) ((Object) field_q), 105, field_n);
               }
               if (field_q != null) {
                 if (field_q.field_l[param2] != null) {
