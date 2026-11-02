@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class so extends am {
-    static ei field_t;
+    static IntrusiveDeque field_t;
     static cd field_s;
     static cd field_u;
 
@@ -141,7 +141,7 @@ final class so extends am {
     }
 
     static {
-        field_t = new ei();
+        field_t = new IntrusiveDeque();
         field_s = new cd();
         field_u = new cd();
     }

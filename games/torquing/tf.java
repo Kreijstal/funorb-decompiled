@@ -47,7 +47,7 @@ final class tf {
           var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.position = -2 + param1.length;
-          ti.field_g = var17.i(7088);
+          ti.field_g = var17.readUnsignedShort(7088);
           fq.field_G = new byte[ti.field_g][];
           PacketBuffer.field_o = new int[ti.field_g];
           ij.field_o = new int[ti.field_g];
@@ -56,23 +56,23 @@ final class tf {
           lp.field_e = new boolean[ti.field_g];
           vo.field_b = new int[ti.field_g];
           var17.position = -(8 * ti.field_g) - 7 + param1.length;
-          fm.field_E = var17.i(7088);
-          rh.field_d = var17.i(7088);
+          fm.field_E = var17.readUnsignedShort(7088);
+          rh.field_d = var17.readUnsignedShort(7088);
           var3 = (255 & var17.i((byte) -101)) + 1;
           if (param0 < 101) {
             return;
           }
           for (var4 = 0; ti.field_g > var4; var4++) {
-            PacketBuffer.field_o[var4] = var16.i(7088);
+            PacketBuffer.field_o[var4] = var16.readUnsignedShort(7088);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < ti.field_g; var4Lifetime1++) {
-            na.field_G[var4Lifetime1] = var17.i(7088);
+            na.field_G[var4Lifetime1] = var17.readUnsignedShort(7088);
           }
           for (var4Lifetime2 = 0; ti.field_g > var4Lifetime2; var4Lifetime2++) {
-            vo.field_b[var4Lifetime2] = var17.i(7088);
+            vo.field_b[var4Lifetime2] = var17.readUnsignedShort(7088);
           }
           for (var4Lifetime3 = 0; ti.field_g > var4Lifetime3; var4Lifetime3++) {
-            ij.field_o[var4Lifetime3] = var17.i(7088);
+            ij.field_o[var4Lifetime3] = var17.readUnsignedShort(7088);
           }
           var17.position = param1.length - (7 + ti.field_g * 8 + 3 * (-1 + var3));
           cq.field_y = new int[var3];

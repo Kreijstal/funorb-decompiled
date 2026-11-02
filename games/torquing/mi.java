@@ -7,9 +7,9 @@ final class mi extends am {
     static int field_s;
     static String field_u;
 
-    final static t[] a(int param0, la param1, int param2, int param3) {
+    final static Sprite[] a(int param0, la param1, int param2, int param3) {
         RuntimeException var4 = null;
-        t[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -89,7 +89,7 @@ final class mi extends am {
               this.field_p = stackIn_9_1;
             }
           } else {
-            this.field_t = param0.i(param1 ^ 7059) << 4;
+            this.field_t = param0.readUnsignedShort(param1 ^ 7059) << 4;
           }
           if (param1 != 35) {
             this.field_t = -72;

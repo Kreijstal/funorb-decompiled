@@ -15,7 +15,7 @@ final class tp {
     static int field_o;
     static long[][] field_e;
     static long[] field_m;
-    private ei field_d;
+    private IntrusiveDeque field_d;
     boolean field_b;
     static kh field_a;
 
@@ -53,7 +53,7 @@ final class tp {
             var4 = (ui) (this.field_d.c(-6938));
             var3 = new ui(param0, var4.field_j);
             this.field_c[var4.field_m] = null;
-            var4.f(0);
+            var4.unlink(0);
           }
           this.field_c[param0] = var3;
         }
@@ -187,7 +187,7 @@ final class tp {
     tp(int param0, int param1, int param2) {
         this.field_l = -1;
         this.field_j = 0;
-        this.field_d = new ei();
+        this.field_d = new IntrusiveDeque();
         this.field_b = false;
         this.field_p = param1;
         this.field_k = param0;

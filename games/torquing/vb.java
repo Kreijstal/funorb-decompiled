@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vb {
-    static ei field_f;
+    static IntrusiveDeque field_f;
     static java.awt.Font field_d;
     static pj[] field_c;
     private int[] field_a;
@@ -58,8 +58,8 @@ final class vb {
                 eh.field_i = tp.a((byte) -51, false, param0, (String) null, qd.field_e);
               }
               wa.field_d.position = 0;
-              wa.field_d.b(90, 14);
-              wa.field_d.b(90, eh.field_i.a(false).field_a);
+              wa.field_d.writeByte(90, 14);
+              wa.field_d.writeByte(90, eh.field_i.a(false).field_a);
               jd.a((byte) -122, -1);
               ef.field_a = en.field_v;
             }
@@ -114,7 +114,7 @@ final class vb {
               qd.field_e = kj.field_d.b(param2 + 44);
               ri.field_E = kj.field_d.i((byte) -101);
               kj.field_d.i((byte) -101);
-              wp.field_w = kj.field_d.i(7088);
+              wp.field_w = kj.field_d.readUnsignedShort(7088);
               var6 = kj.field_d.a(param2 - 8);
               var7 = kj.field_d.i((byte) -101);
               if (0 != (1 & var7)) {
@@ -133,7 +133,7 @@ final class vb {
                 kj.field_d.i((byte) -101);
                 kj.field_d.i((byte) -101);
                 kj.field_d.c((byte) -85);
-                mf.field_w = kj.field_d.i(param2 ^ 7083);
+                mf.field_w = kj.field_d.readUnsignedShort(param2 ^ 7083);
                 uf.field_n = new byte[mf.field_w];
                 var8 = 0;
                 while (!(mf.field_w <= var8)) {
@@ -826,7 +826,7 @@ final class vb {
 
     static {
         field_c = new pj[32];
-        field_f = new ei();
+        field_f = new IntrusiveDeque();
         field_e = "SOUND:";
         field_b = "Click";
     }

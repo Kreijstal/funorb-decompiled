@@ -104,7 +104,7 @@ final class sp extends im {
           super.b(param0, param1, (byte) -75);
           pe.field_E.c(this.field_S, param1 + (this.field_p >> 1), param0 + 103, 16777215, -1);
           if (null != this.field_N) {
-            ph.b(20 + param1, -7 + (param0 + 120), 260, 8421504);
+            SoftwareRasterizer.b(20 + param1, -7 + (param0 + 120), 260, 8421504);
             pe.field_E.a(this.field_N, 20 + param1, 8 + param0 + 120, 260, 100, 16777215, -1, 1, 0, pe.field_E.field_x);
           }
           return;

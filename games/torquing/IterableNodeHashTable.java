@@ -10,23 +10,23 @@ final class IterableNodeHashTable implements Iterable {
     static bm field_c;
     IntrusiveNode[] field_a;
 
-    final void a(long param0, byte param1, IntrusiveNode param2) {
+    final void put(long key, byte obfuscationGuard, IntrusiveNode node) {
         IntrusiveNode var5 = null;
-        if (param2.next != null) {
-          param2.f(0);
+        if (node.next != null) {
+          node.unlink(0);
         }
-        if (param1 < 7) {
+        if (obfuscationGuard < 7) {
           return;
         }
         try {
-          var5 = this.field_a[(int)((long)(this.field_e - 1) & param0)];
-          param2.next = var5.next;
-          param2.previous = var5;
-          param2.next.previous = param2;
-          param2.previous.next = param2;
-          param2.key = param0;
+          var5 = this.field_a[(int)((long)(this.field_e - 1) & key)];
+          node.next = var5.next;
+          node.previous = var5;
+          node.next.previous = node;
+          node.previous.next = node;
+          node.key = key;
         } catch (RuntimeException runtimeException) {
-          throw rb.a((Throwable) ((Object) runtimeException), "vl.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw rb.a((Throwable) ((Object) runtimeException), "vl.C(" + key + ',' + obfuscationGuard + ',' + (node != null ? "{...}" : "null") + ')');
         }
     }
 

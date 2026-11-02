@@ -3,7 +3,7 @@
  */
 final class kc extends am {
     private int[][] field_s;
-    static ei field_z;
+    static IntrusiveDeque field_z;
     private int[] field_y;
     static fn field_x;
     private int[] field_u;
@@ -49,8 +49,8 @@ final class kc extends am {
             this.field_w = param0.i((byte) -101);
             this.field_s = new int[param0.i((byte) -101)][2];
             for (var4_int = 0; var4_int < this.field_s.length; var4_int++) {
-              this.field_s[var4_int][0] = param0.i(7088);
-              this.field_s[var4_int][1] = param0.i(7088);
+              this.field_s[var4_int][0] = param0.readUnsignedShort(7088);
+              this.field_s[var4_int][1] = param0.readUnsignedShort(7088);
             }
             return;
           }
@@ -334,6 +334,6 @@ final class kc extends am {
     }
 
     static {
-        field_z = new ei();
+        field_z = new IntrusiveDeque();
     }
 }

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kk extends lf {
-    static t field_o;
-    uh field_r;
-    static t field_n;
+final class kk extends PcmStream {
+    static Sprite field_o;
+    PcmStreamMixer field_r;
+    static Sprite field_n;
     private int[] field_p;
     static String field_q;
 
@@ -12,7 +12,7 @@ final class kk extends lf {
         return 0;
     }
 
-    final lf b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -25,8 +25,8 @@ final class kk extends lf {
         field_o = null;
     }
 
-    final lf c() {
-        return (lf) ((Object) this.field_r);
+    final PcmStream c() {
+        return (PcmStream) ((Object) this.field_r);
     }
 
     final int d() {
@@ -91,7 +91,7 @@ final class kk extends lf {
     }
 
     kk() {
-        this.field_r = new uh();
+        this.field_r = new PcmStreamMixer();
     }
 
     static {

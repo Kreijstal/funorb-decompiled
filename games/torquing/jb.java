@@ -214,11 +214,11 @@ final class jb {
         }
     }
 
-    final static t[] a(int param0, la param1, String param2, String param3) {
+    final static Sprite[] a(int param0, la param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        t[] stackIn_4_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

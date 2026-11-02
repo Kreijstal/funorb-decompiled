@@ -16,7 +16,7 @@ final class sc extends hn implements fp, ng {
     }
 
     sc(nm param0) {
-        super(0, 0, 288, 0, (el) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         String var7 = null;
         int var3 = 0;
         pc var4 = null;
@@ -25,7 +25,7 @@ final class sc extends hn implements fp, ng {
         try {
           this.field_C = param0;
           this.field_E = new lg(vd.field_d, (ca) null);
-          this.field_E.field_q = (el) ((Object) new rf());
+          this.field_E.field_q = (WidgetRenderer) ((Object) new rf());
           var7 = ff.a(new String[]{this.h(-29996), this.i(119)}, 0, DelegatingCanvas.field_d);
           var3 = 20;
           var4 = new pc(dg.field_e, 0, 0, 0, 0, 16777215, -1, 3, 0, dg.field_e.field_x, -1, 2147483647, true);
@@ -209,7 +209,7 @@ final class sc extends hn implements fp, ng {
         }
     }
 
-    final boolean a(int param0, gm param1, char param2, int param3) {
+    final boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class uj {
-    static ei field_a;
+    static IntrusiveDeque field_a;
     static o[] field_b;
     kp[] field_c;
 
@@ -200,7 +200,7 @@ abstract class uj {
         int var6;
         var7 = Torquing.field_u;
         if (!param0) {
-          field_a = (ei) null;
+          field_a = (IntrusiveDeque) null;
         }
         var2 = -1;
         if (this.field_c != null) {
@@ -264,6 +264,6 @@ abstract class uj {
     }
 
     static {
-        field_a = new ei();
+        field_a = new IntrusiveDeque();
     }
 }

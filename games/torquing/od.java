@@ -105,7 +105,7 @@ final class od extends am {
             this.f((byte) -99);
           }
           if (param2 == 0) {
-            this.field_x = param0.i(7088);
+            this.field_x = param0.readUnsignedShort(7088);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

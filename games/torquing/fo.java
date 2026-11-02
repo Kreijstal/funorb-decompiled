@@ -11,7 +11,7 @@ final class fo extends hn implements ng {
     private String field_B;
 
     fo(mn param0, uc param1, String param2) {
-        super(0, 0, 288, 0, (el) null);
+        super(0, 0, 288, 0, (WidgetRenderer) null);
         int var4_int = 0;
         this.field_J = 0;
         try {
@@ -173,7 +173,7 @@ final class fo extends hn implements ng {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new lg(param1, param2);
-          var4.field_q = (el) ((Object) new rf());
+          var4.field_q = (WidgetRenderer) ((Object) new rf());
           var5 = -2 + this.field_o;
           this.a((byte) 127, param0, 0, 34 + this.field_o, this.field_p);
           var4.a((byte) -42, 7, var5, 30, -14 + this.field_p);

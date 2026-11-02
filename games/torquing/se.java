@@ -43,7 +43,7 @@ final class se extends pc {
         var1.b((byte) -99);
     }
 
-    final void a(int param0, t[] param1) {
+    final void a(int param0, Sprite[] param1) {
         int var4 = 0;
         v[] var3 = null;
         v var5 = null;
@@ -79,7 +79,7 @@ final class se extends pc {
         }
     }
 
-    final void a(t[] param0, int param1, byte param2) {
+    final void a(Sprite[] param0, int param1, byte param2) {
         int var4_int = 0;
         try {
           var4_int = param1;
@@ -87,8 +87,8 @@ final class se extends pc {
             this.field_q[var4_int] = new v();
           }
           if (param2 < 82) {
-            gm var5 = (gm) null;
-            this.a(27, 50, 123, true, (gm) null);
+            UiWidget var5 = (UiWidget) null;
+            this.a(27, 50, 123, true, (UiWidget) null);
           }
           this.field_q[param1].field_g = param0;
         } catch (RuntimeException runtimeException) {
@@ -96,8 +96,8 @@ final class se extends pc {
         }
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, gm param4) {
-        gm stackIn_3_0 = null;
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -105,7 +105,7 @@ final class se extends pc {
         RuntimeException var6 = null;
         v var7 = null;
         v var9 = null;
-        t var10 = null;
+        Sprite var10 = null;
         lg var11 = null;
         v var12 = null;
         v var13 = null;
@@ -115,13 +115,13 @@ final class se extends pc {
           if (!(param4 instanceof lg)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (gm) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           }
           var11 = (lg) (stackIn_3_0);
           ld.a(param4.field_p + (param4.field_w + param2), param4.field_w + param2, param1 - (-param4.field_k - param4.field_o), param4.field_k + param1, (byte) -108);
           if (param0 < 89) {
-            var10 = (t) null;
-            this.a((byte) 52, (t) null);
+            var10 = (Sprite) null;
+            this.a((byte) 52, (Sprite) null);
           }
           if (var11 != null) {
             param3 = param3 & var11.field_x;
@@ -178,7 +178,7 @@ final class se extends pc {
         }
     }
 
-    final void a(byte param0, t param1) {
+    final void a(byte param0, Sprite param1) {
         int var4 = 0;
         v[] var3 = null;
         v var5 = null;

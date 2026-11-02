@@ -10,18 +10,18 @@ class DualLinkNode extends IntrusiveNode {
     DualLinkNode field_p;
     DualLinkNode field_j;
 
-    final void h(int param0) {
+    final void unlinkSecondary(int obfuscationGuard) {
         if (null == this.field_j) {
           return;
         }
         this.field_j.field_p = this.field_p;
         this.field_p.field_j = this.field_j;
         this.field_p = null;
-        if (param0 == 0) {
+        if (obfuscationGuard == 0) {
           this.field_j = null;
           return;
         }
-        this.h(3);
+        this.unlinkSecondary(3);
         this.field_j = null;
     }
 

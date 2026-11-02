@@ -6,7 +6,7 @@ final class pe extends hn implements wm, ng {
     private lg field_B;
     private boolean field_I;
     private lg field_D;
-    static t field_J;
+    static Sprite field_J;
     private String field_N;
     private lg field_K;
     private boolean field_F;
@@ -16,7 +16,7 @@ final class pe extends hn implements wm, ng {
     private boolean field_G;
     static char[] field_H;
 
-    final boolean a(int param0, gm param1, char param2, int param3) {
+    final boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -62,7 +62,7 @@ final class pe extends hn implements wm, ng {
     }
 
     pe(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (el) null);
+        super(0, 0, 310, 190, (WidgetRenderer) null);
         na dupTemp$0 = null;
         na dupTemp$1 = null;
         boolean stackIn_4_1 = false;
@@ -122,15 +122,15 @@ final class pe extends hn implements wm, ng {
             this.field_B = new lg(pf.field_q, (ca) null);
             this.field_C.field_x = false;
           }
-          this.field_C.field_q = (el) ((Object) new ig(10000536));
-          this.field_L.field_q = (el) ((Object) new io(10000536));
+          this.field_C.field_q = (WidgetRenderer) ((Object) new ig(10000536));
+          this.field_L.field_q = (WidgetRenderer) ((Object) new io(10000536));
           var6 = new rf();
-          this.field_K.field_q = (el) ((Object) var6);
+          this.field_K.field_q = (WidgetRenderer) ((Object) var6);
           if (null != this.field_B) {
-            this.field_B.field_q = (el) ((Object) var6);
+            this.field_B.field_q = (WidgetRenderer) ((Object) var6);
           }
           if (this.field_D != null) {
-            this.field_D.field_q = (el) ((Object) var6);
+            this.field_D.field_q = (WidgetRenderer) ((Object) var6);
           }
           this.field_C.field_n = eo.field_e;
           if (this.field_D != null) {
@@ -141,9 +141,9 @@ final class pe extends hn implements wm, ng {
           } else {
             if (this.field_F) {
               this.field_B.field_n = ll.field_m;
-              this.field_B.field_q = (el) ((Object) new je());
+              this.field_B.field_q = (WidgetRenderer) ((Object) new je());
             } else {
-              this.field_B.field_q = (el) ((Object) new je());
+              this.field_B.field_q = (WidgetRenderer) ((Object) new je());
             }
           }
           this.field_k = 15;
@@ -163,12 +163,12 @@ final class pe extends hn implements wm, ng {
           dupTemp$0 = new na(10, this.field_k, this.field_p - 20, 25, this.field_C, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.a(dupTemp$0, -6938);
-          this.field_k = this.field_k + (((gm) ((Object) var12)).field_o + 5);
+          this.field_k = this.field_k + (((UiWidget) ((Object) var12)).field_o + 5);
           dupTemp$1 = new na(10, this.field_k, -20 + this.field_p, 25, this.field_L, false, 80, 3, var7, 16777215, hm.field_v);
           var13 = dupTemp$1;
           this.a(dupTemp$1, -6938);
           this.field_K.field_t = (ca) (this);
-          this.field_k = this.field_k + (5 + ((gm) ((Object) var13)).field_o);
+          this.field_k = this.field_k + (5 + ((UiWidget) ((Object) var13)).field_o);
           if (this.field_D != null) {
             this.field_D.field_t = (ca) (this);
           }
@@ -309,7 +309,7 @@ final class pe extends hn implements wm, ng {
         try {
           var4_int = param3.e(param1, -90);
           if (param0 <= 74) {
-            field_J = (t) null;
+            field_J = (Sprite) null;
           }
           if (var4_int == 0) {
             return null;
@@ -358,7 +358,7 @@ final class pe extends hn implements wm, ng {
           sa.a(this.field_C.field_m, 122, this.field_L.field_m);
         }
         if (param0 < 120) {
-          this.a(99, (gm) null, 'ﾠ', 63);
+          this.a(99, (UiWidget) null, 'ﾠ', 63);
         }
     }
 
@@ -370,7 +370,7 @@ final class pe extends hn implements wm, ng {
           this.field_C = (tk) null;
         }
         if (null != this.field_D) {
-          ph.b(param3 + 10, 134 + param2, -20 + this.field_p, 4210752);
+          SoftwareRasterizer.b(param3 + 10, 134 + param2, -20 + this.field_p, 4210752);
         }
         super.a(param0, (byte) -98, param2, param3);
     }
@@ -444,7 +444,7 @@ final class pe extends hn implements wm, ng {
             this.field_F = false;
           }
           if (this.field_C == param0) {
-            this.field_L.a((gm) (this), false);
+            this.field_L.a((UiWidget) (this), false);
           }
           if (this.field_L == param0) {
             this.a((byte) 124);

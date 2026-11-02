@@ -35,7 +35,7 @@ final class eb {
         IntrusiveNode var5 = null;
         try {
           if (param2.next != null) {
-            param2.f(0);
+            param2.unlink(0);
           }
           var5 = this.field_b[(int)(param1 & (long)(this.field_d - 1))];
           if (param0) {

@@ -8,7 +8,7 @@ abstract class ao {
     int field_e;
     static boolean field_b;
     static int field_d;
-    static t[] field_a;
+    static Sprite[] field_a;
     static int field_f;
 
     final static int b(int param0, int param1) {

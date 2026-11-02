@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wf extends DualLinkNode {
+abstract class SpriteState extends DualLinkNode {
     static String field_q;
     int field_t;
     int field_s;
     int field_u;
     int field_w;
-    static ei field_x;
+    static IntrusiveDeque field_x;
     int field_v;
     int field_r;
 
@@ -50,16 +50,16 @@ abstract class wf extends DualLinkNode {
         this.b(var6, var7, param4, param3, param2, param0);
     }
 
-    final static t[] a(int param0, int param1, int param2, int param3, byte param4) {
-        t[] var6 = new t[9];
-        t[] var5 = var6;
-        t dupTemp$0 = hj.a((byte) -87, param1, param2);
+    final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = hj.a((byte) -87, param1, param2);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        t dupTemp$1 = hj.a((byte) -86, param3, param2);
+        Sprite dupTemp$1 = hj.a((byte) -86, param3, param2);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -67,7 +67,7 @@ abstract class wf extends DualLinkNode {
           var6[4] = hj.a((byte) -88, param0, 64);
         }
         if (param4 != 106) {
-          return (t[]) null;
+          return (Sprite[]) null;
         }
         return var5;
     }
@@ -83,7 +83,7 @@ abstract class wf extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -117) {
-            field_x = (ei) null;
+            field_x = (IntrusiveDeque) null;
           }
           stackIn_3_0 = nn.a(7655, param2, 0, param1);
           return stackIn_3_0;
@@ -102,29 +102,29 @@ abstract class wf extends DualLinkNode {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        ph.b(2 + param3, param0 + 1, 4, param4);
-        ph.a(param3 + 6, 2 + param0, 4, param4);
-        ph.a(5 + param3, 6 + param0, 5, param4);
-        ph.a(param3 + 4, param0 + 11, 4, param4);
-        ph.b(param3 + 2, param0 + 15, 2, param4);
-        ph.a(1 + param3, param0 + 2, 9, param4);
+        SoftwareRasterizer.b(2 + param3, param0 + 1, 4, param4);
+        SoftwareRasterizer.a(param3 + 6, 2 + param0, 4, param4);
+        SoftwareRasterizer.a(5 + param3, 6 + param0, 5, param4);
+        SoftwareRasterizer.a(param3 + 4, param0 + 11, 4, param4);
+        SoftwareRasterizer.b(param3 + 2, param0 + 15, 2, param4);
+        SoftwareRasterizer.a(1 + param3, param0 + 2, 9, param4);
         int var5 = -89 / ((83 - param2) / 42);
-        ph.a(2 + param3, param0 + 11, 4, param4);
-        ph.a(2 + param3, param0 + 2, 9, param1);
-        ph.a(param3 + 3, 2 + param0, 13, param1);
-        ph.a(4 + param3, 2 + param0, 9, param1);
-        ph.a(param3 + 5, param0 + 2, 4, param1);
+        SoftwareRasterizer.a(2 + param3, param0 + 11, 4, param4);
+        SoftwareRasterizer.a(2 + param3, param0 + 2, 9, param1);
+        SoftwareRasterizer.a(param3 + 3, 2 + param0, 13, param1);
+        SoftwareRasterizer.a(4 + param3, 2 + param0, 9, param1);
+        SoftwareRasterizer.a(param3 + 5, param0 + 2, 4, param1);
     }
 
     public static void a(boolean param0) {
         field_x = null;
         field_q = null;
         if (param0) {
-          wf.a(true);
+          SpriteState.a(true);
         }
     }
 
-    wf() {
+    SpriteState() {
     }
 
     static {

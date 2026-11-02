@@ -3,7 +3,7 @@
  */
 final class u extends am {
     static int[] field_v;
-    static vh field_t;
+    static PlatformTaskDispatcher field_t;
     static double field_s;
     static int[] field_w;
     private int field_u;

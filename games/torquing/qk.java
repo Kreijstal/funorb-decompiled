@@ -36,7 +36,7 @@ final class qk extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, t[] param2, byte param3) {
+    final static void a(int param0, int param1, Sprite[] param2, byte param3) {
         try {
           p.field_x = new fn(param2);
           if (param3 != -4) {

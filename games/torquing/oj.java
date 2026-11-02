@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj implements el {
+final class oj implements WidgetRenderer {
     private int field_b;
     private int field_e;
     private int field_n;
@@ -17,8 +17,8 @@ final class oj implements el {
     private int field_j;
     static String field_a;
 
-    public final void a(int param0, int param1, int param2, boolean param3, gm param4) {
-        gm stackIn_3_0 = null;
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -31,7 +31,7 @@ final class oj implements el {
         ok var11 = null;
         try {
           if (param4 instanceof ok) {
-            stackIn_3_0 = (gm) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           } else {
             stackIn_3_0 = null;
           }
@@ -40,20 +40,20 @@ final class oj implements el {
             param3 = param3 & var11.field_x;
           }
           var7 = 5592405;
-          ph.d(param4.field_w + param2, param4.field_k + param1, param4.field_p, param4.field_o, this.field_d);
+          SoftwareRasterizer.d(param4.field_w + param2, param4.field_k + param1, param4.field_p, param4.field_o, this.field_d);
           if (param3) {
             var7 = 16777215;
           }
           var8 = param4.field_w + param2 + this.field_k;
           var9 = this.field_j + param4.field_k + param1;
-          ph.e(var8, var9, this.field_i, this.field_e, 5592405);
+          SoftwareRasterizer.e(var8, var9, this.field_i, this.field_e, 5592405);
           if (param0 <= 89) {
             return;
           }
-          ph.d(var8, var9, this.field_i, this.field_e, var7);
+          SoftwareRasterizer.d(var8, var9, this.field_i, this.field_e, var7);
           if (var11.field_A) {
-            ph.a(var8, var9, var8 + this.field_i, this.field_e + var9, 1);
-            ph.a(this.field_i + var8, var9, var8, this.field_e + var9, 1);
+            SoftwareRasterizer.a(var8, var9, var8 + this.field_i, this.field_e + var9, 1);
+            SoftwareRasterizer.a(this.field_i + var8, var9, var8, this.field_e + var9, 1);
           }
           if (null != this.field_c) {
             var10 = this.field_i + this.field_k + this.field_b;

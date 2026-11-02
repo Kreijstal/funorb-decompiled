@@ -8,17 +8,17 @@ class pi {
     private boolean field_g;
     private static int field_o;
     static int field_c;
-    private lf field_t;
+    private PcmStream field_t;
     private int field_a;
     private int field_b;
     private int field_m;
-    private lf[] field_i;
+    private PcmStream[] field_i;
     private boolean field_h;
     static boolean field_r;
     private int field_q;
     private int field_s;
     private int field_e;
-    private lf[] field_f;
+    private PcmStream[] field_f;
     private long field_d;
     private static sa field_u;
     private int field_p;
@@ -51,20 +51,20 @@ class pi {
         int var7_int;
         Object var7;
         int var8_int;
-        lf[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        lf var11;
+        PcmStream var11;
         fb var12;
         int var13;
-        lf var14;
+        PcmStream var14;
         int var15_int;
-        lf var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        lf var14Lifetime1;
-        lf var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_r) {
           var3 = var3 << 1;
@@ -125,12 +125,12 @@ class pi {
                     var15 = var11.field_l;
                     var11.field_l = null;
                     if (var10 != null) {
-                      ((lf) (var10)).field_l = var15;
+                      ((PcmStream) (var10)).field_l = var15;
                     } else {
                       this.field_i[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_f[var7_int] = (lf) (var10);
+                      this.field_f[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -151,8 +151,8 @@ class pi {
             this.field_f[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((lf) (var7)).field_l;
-              ((lf) (var7)).field_l = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_l;
+              ((PcmStream) (var7)).field_l = null;
               var7 = var10Lifetime1;
             }
           }
@@ -173,7 +173,7 @@ class pi {
     void a(int param0) throws Exception {
     }
 
-    final static pi a(vh param0, java.awt.Component param1, int param2, int param3) {
+    final static pi a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           vj var4 = null;
           Throwable var4_ref = null;
@@ -243,9 +243,9 @@ class pi {
     void g() throws Exception {
     }
 
-    private final void a(lf param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        lf var4 = this.field_f[var3];
+        PcmStream var4 = this.field_f[var3];
         if (var4 == null) {
           this.field_i[var3] = param0;
         } else {
@@ -255,7 +255,7 @@ class pi {
         param0.field_j = param1;
     }
 
-    final synchronized void a(lf param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_t = param0;
     }
 
@@ -273,12 +273,12 @@ class pi {
         field_o = param2;
     }
 
-    private final static void b(lf param0) {
+    private final static void b(PcmStream param0) {
         param0.field_k = false;
         if (param0.field_m != null) {
           param0.field_m.field_j = 0;
         }
-        lf var1 = param0.c();
+        PcmStream var1 = param0.c();
         while (var1 != null) {
           pi.b(var1);
           var1 = param0.b();
@@ -424,12 +424,12 @@ class pi {
         this.field_n = 32;
         this.field_g = false;
         this.field_k = km.b(-1);
-        this.field_i = new lf[8];
+        this.field_i = new PcmStream[8];
         this.field_a = 0;
         this.field_q = 0;
         this.field_h = true;
         this.field_m = 0;
-        this.field_f = new lf[8];
+        this.field_f = new PcmStream[8];
         this.field_p = 0;
         this.field_d = 0L;
         this.field_j = 0L;

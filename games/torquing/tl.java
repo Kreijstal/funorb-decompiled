@@ -7,7 +7,7 @@ final class tl extends eh {
     private int field_o;
     private int field_j;
     private lm field_q;
-    static ei field_p;
+    static IntrusiveDeque field_p;
     tl field_t;
     private int field_k;
     static String field_s;
@@ -162,7 +162,7 @@ final class tl extends eh {
           }
           for (var5 = var9.field_l.field_g - 1; var5 >= 0; var5--) {
             if (var7.field_l.field_m[var5] != 127) {
-              var9.field_l.field_m[var5] = (short)gm.a(ie.a((int) var7.field_l.field_m[var5], var4Lifetime1), var3Lifetime1);
+              var9.field_l.field_m[var5] = (short)UiWidget.a(ie.a((int) var7.field_l.field_m[var5], var4Lifetime1), var3Lifetime1);
             }
           }
           og.field_k.a(false, (long)this.field_k, var9);
@@ -183,7 +183,7 @@ final class tl extends eh {
     }
 
     final void a(bi param0, int param1) {
-        ei stackIn_43_0;
+        IntrusiveDeque stackIn_43_0;
         int stackIn_43_1;
         sb stackIn_43_2;
         sb stackIn_43_3;
@@ -193,7 +193,7 @@ final class tl extends eh {
         sb stackIn_44_2;
         sb stackIn_44_3;
         int stackIn_44_7;
-        ei stackIn_47_0;
+        IntrusiveDeque stackIn_47_0;
         int stackIn_47_1;
         sb stackIn_47_2;
         sb stackIn_47_3;
@@ -259,7 +259,7 @@ final class tl extends eh {
                   stackIn_48_3 = null;
                   stackIn_48_7 = 3;
                 }
-                ((ei) (Object) stackIn_47_0).a((byte) stackIn_47_1, new sb(stackIn_47_4, stackIn_47_5, stackIn_47_6, stackIn_48_7));
+                ((IntrusiveDeque) (Object) stackIn_47_0).a((byte) stackIn_47_1, new sb(stackIn_47_4, stackIn_47_5, stackIn_47_6, stackIn_48_7));
                 th.a(100, th.field_F[7]);
               } else {
                 if (var9 == 4) {
@@ -346,7 +346,7 @@ final class tl extends eh {
                 stackIn_44_3 = null;
                 stackIn_44_7 = 2;
               }
-              ((ei) (Object) stackIn_43_0).a((byte) stackIn_43_1, new sb(stackIn_43_4, stackIn_43_5, stackIn_43_6, stackIn_44_7));
+              ((IntrusiveDeque) (Object) stackIn_43_0).a((byte) stackIn_43_1, new sb(stackIn_43_4, stackIn_43_5, stackIn_43_6, stackIn_44_7));
               th.a(param1 + 81, th.field_F[19]);
               th.a(100, th.field_F[6]);
             }
@@ -457,6 +457,6 @@ final class tl extends eh {
     static {
         field_l = new ui(0, 0);
         field_s = "Orb points: <%0>";
-        field_p = new ei();
+        field_p = new IntrusiveDeque();
     }
 }

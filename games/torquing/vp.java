@@ -40,13 +40,13 @@ final class vp extends hn implements ng {
             }
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_H[var5] = new lg(this.field_J[var5], (ca) (this));
-              this.field_H[var5].field_q = (el) ((Object) var4);
+              this.field_H[var5].field_q = (WidgetRenderer) ((Object) var4);
               this.field_H[var5].field_n = ai.field_l;
               this.field_H[var5].a((byte) 123, 0, 20 + var5 * 16, 15, 80);
               this.a(this.field_H[var5], -6938);
             }
             this.field_H[var3_int] = new lg(jf.field_b, (ca) (this));
-            this.field_H[var3_int].field_q = (el) ((Object) var4);
+            this.field_H[var3_int].field_q = (WidgetRenderer) ((Object) var4);
             this.field_H[var3_int].a((byte) -36, 0, (var3_int + 1) * 16 + 20, 15, 100);
             this.a(this.field_H[var3_int], -6938);
             return;
@@ -68,7 +68,7 @@ final class vp extends hn implements ng {
     }
 
     vp(ba param0) {
-        super(0, 0, 0, 0, (el) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null);
         try {
           this.field_B = param0;
         } catch (RuntimeException runtimeException) {
@@ -156,7 +156,7 @@ final class vp extends hn implements ng {
         }
     }
 
-    final boolean a(int param0, gm param1, char param2, int param3) {
+    final boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;

@@ -93,7 +93,7 @@ final class mf extends am {
           }
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_v = param0.i(7088);
+            this.field_v = param0.readUnsignedShort(7088);
           } else {
             if (1 != var4_int) {
               if (var4_int == 2) {
@@ -101,7 +101,7 @@ final class mf extends am {
                 this.field_p = stackIn_13_1;
               }
             } else {
-              this.field_x = param0.i(7088);
+              this.field_x = param0.readUnsignedShort(7088);
             }
           }
           return;

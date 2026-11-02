@@ -4,7 +4,7 @@
 final class bh {
     static int field_b;
     static gd field_a;
-    static ei field_c;
+    static IntrusiveDeque field_c;
 
     public static void a(int param0) {
         field_a = null;
@@ -28,6 +28,6 @@ final class bh {
     }
 
     static {
-        field_c = new ei();
+        field_c = new IntrusiveDeque();
     }
 }

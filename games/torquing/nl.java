@@ -88,17 +88,17 @@ final class nl extends am {
           }
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_t = param0.i(7088);
+            this.field_t = param0.readUnsignedShort(7088);
             return;
           }
           if (var4_int == 1) {
-            this.field_x = param0.i(param1 + 7053);
+            this.field_x = param0.readUnsignedShort(param1 + 7053);
             return;
           }
           if (var4_int != 2) {
             return;
           }
-          this.field_w = param0.i(7088);
+          this.field_w = param0.readUnsignedShort(7088);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -170,24 +170,24 @@ final class nl extends am {
         this.field_v = new int[3];
     }
 
-    final static t c(int param0) {
+    final static Sprite c(int param0) {
         int var4_int = 0;
-        t var4 = null;
+        Sprite var4 = null;
         int var5 = Torquing.field_u;
         int var1 = ij.field_o[0] * vo.field_b[0];
         byte[] var2 = pn.field_b[0];
         int[] var3 = new int[var1];
-        t var4Lifetime1;
+        Sprite var4Lifetime1;
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = cq.field_y[ie.a(255, (int) var2[var4_int])];
         }
         if (param0 == -8791) {
-          var4 = new t(fm.field_E, rh.field_d, PacketBuffer.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], var3);
+          var4 = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], var3);
           go.b(0);
           return var4;
         }
         field_y = (boolean[]) null;
-        var4Lifetime1 = new t(fm.field_E, rh.field_d, PacketBuffer.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], var3);
+        var4Lifetime1 = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[0], na.field_G[0], vo.field_b[0], ij.field_o[0], var3);
         go.b(0);
         return var4Lifetime1;
     }

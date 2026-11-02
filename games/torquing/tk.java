@@ -52,9 +52,9 @@ class tk extends lg {
           return;
         }
         var9 = (fe) ((Object) this.field_q);
-        var3 = var9.b((byte) 105, (gm) (this));
+        var3 = var9.b((byte) 105, (UiWidget) (this));
         var4 = var3.a(param0);
-        var5 = var9.b((gm) (this), -1);
+        var5 = var9.b((UiWidget) (this), -1);
         var6 = var9.a(false) >> 1;
         if (var4 < -var6 + var5) {
           this.field_v = 0;
@@ -176,7 +176,7 @@ class tk extends lg {
                     return;
                   }
                   var9_int = var9_int + var11;
-                  var16Lifetime2 = var16Lifetime2 + ph.field_j;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_j;
                   var10 = var10 + var12;
                 }
               }
@@ -255,7 +255,7 @@ class tk extends lg {
               }
               var9_int = var9_int + var11;
               var10 = var10 + var12;
-              var15Lifetime1 = var15Lifetime1 + ph.field_j;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_j;
             }
             return;
           }
@@ -327,15 +327,15 @@ class tk extends lg {
         RuntimeException var5 = null;
         var10 = Torquing.field_u;
         try {
-          ph.b(param1, param0, 1 + param3, 10000536);
-          ph.b(param1, param0 + param2, 1 + param3, 12105912);
+          SoftwareRasterizer.b(param1, param0, 1 + param3, 10000536);
+          SoftwareRasterizer.b(param1, param0 + param2, 1 + param3, 12105912);
           var5_int = 1;
           var6 = param2;
-          if (var5_int + param0 < ph.field_c) {
-            var5_int = -param0 + ph.field_c;
+          if (var5_int + param0 < SoftwareRasterizer.field_c) {
+            var5_int = -param0 + SoftwareRasterizer.field_c;
           }
-          if (param0 + var6 > ph.field_h) {
-            var6 = -param0 + ph.field_h;
+          if (param0 + var6 > SoftwareRasterizer.field_h) {
+            var6 = -param0 + SoftwareRasterizer.field_h;
           }
           if (param4) {
             return;
@@ -343,8 +343,8 @@ class tk extends lg {
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = 152 + var7 * 48 / param2;
             var9 = var8 << 8 | var8 << 16 | var8;
-            ph.field_e[param1 + ph.field_j * (param0 + var7)] = var9;
-            ph.field_e[param3 + param1 + (param0 + var7) * ph.field_j] = var9;
+            SoftwareRasterizer.field_e[param1 + SoftwareRasterizer.field_j * (param0 + var7)] = var9;
+            SoftwareRasterizer.field_e[param3 + param1 + (param0 + var7) * SoftwareRasterizer.field_j] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -402,7 +402,7 @@ class tk extends lg {
         return var3;
     }
 
-    void a(int param0, gm param1, int param2, int param3) {
+    void a(int param0, UiWidget param1, int param2, int param3) {
         fe var7 = null;
         int var6 = 0;
         try {
@@ -411,7 +411,7 @@ class tk extends lg {
           if (this.field_l == 1) {
             if (this.field_q instanceof fe) {
               var7 = (fe) ((Object) this.field_q);
-              var6 = var7.a(k.field_e, -1, (gm) (this), n.field_t, param2, param3);
+              var6 = var7.a(k.field_e, -1, (UiWidget) (this), n.field_t, param2, param3);
               if (var6 != -1) {
                 if (this.field_F &&
                   this.field_D > var6 &&
@@ -429,7 +429,7 @@ class tk extends lg {
         }
     }
 
-    final boolean a(int param0, gm param1, char param2, int param3) {
+    final boolean a(int param0, UiWidget param1, char param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_22_1 = 0;
         int stackIn_23_2 = 0;
@@ -593,15 +593,15 @@ class tk extends lg {
         }
         if (null != this.field_q &&
           param0 == 0) {
-          this.field_q.a(114, param2, param3, this.field_x, (gm) (this));
+          this.field_q.a(114, param2, param3, this.field_x, (UiWidget) (this));
           if (this.field_q instanceof fe) {
             var9 = (fe) ((Object) this.field_q);
             if (this.field_G != this.field_C) {
-              var9.a(param3, this.field_G, this.field_C, -1419356520, param2, (gm) (this));
+              var9.a(param3, this.field_G, this.field_C, -1419356520, param2, (UiWidget) (this));
             }
             var6 = km.b(-1);
             if ((-this.field_H + var6) % 1000L < 500L) {
-              var9.a(param3, (gm) (this), this.field_G, false, param2);
+              var9.a(param3, (UiWidget) (this), this.field_G, false, param2);
             }
           }
         }
@@ -617,7 +617,7 @@ class tk extends lg {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, gm param5, byte param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
         boolean stackIn_9_1 = false;
@@ -631,7 +631,7 @@ class tk extends lg {
         try {
           if (super.a(param0, param1, param2, param3, param4, param5, (byte) 70) &&
             this.field_q instanceof fe) {
-            var8_int = ((fe) ((Object) this.field_q)).a(k.field_e, -1, (gm) (this), n.field_t, param2, param1);
+            var8_int = ((fe) ((Object) this.field_q)).a(k.field_e, -1, (UiWidget) (this), n.field_t, param2, param1);
             stackIn_5_1 = -94;
             if (var8_int != -1) {
               stackIn_6_2 = var8_int;

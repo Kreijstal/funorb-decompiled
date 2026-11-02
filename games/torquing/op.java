@@ -94,7 +94,7 @@ final class op extends wk implements ec {
             vg.field_k = new PacketBuffer(100);
           }
           vg.field_k.position = 0;
-          vg.field_k.b(90, 10);
+          vg.field_k.writeByte(90, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (4 > var11) {

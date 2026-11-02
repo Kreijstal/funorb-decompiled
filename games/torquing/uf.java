@@ -15,7 +15,7 @@ final class uf {
     static String field_t;
     uc field_b;
     static int[] field_r;
-    private t[] field_a;
+    private Sprite[] field_a;
     private String[] field_h;
     private String[][] field_i;
     int field_k;
@@ -43,7 +43,7 @@ final class uf {
         String[] var9 = null;
         String var11 = null;
         int var12 = 0;
-        t[] var13 = null;
+        Sprite[] var13 = null;
         String[][] var14 = null;
         String[] var15 = null;
         int[] var16 = null;
@@ -71,7 +71,7 @@ final class uf {
             for (var10 = 0; var9.length > var10; var10++) {
               var11 = var9[var10];
               var12 = (this.a(this.field_u[this.field_f], this.field_b.field_x + 4) - this.field_b.a(var11)) / 2;
-              this.field_a[this.field_f] = new t(var12, 0);
+              this.field_a[this.field_f] = new Sprite(var12, 0);
               if (this.field_h[this.field_f] != param1) {
                 this.field_h[this.field_f] = null;
               }
@@ -79,7 +79,7 @@ final class uf {
               this.field_f = this.field_f + 1;
               this.field_i[fieldTemp$0] = new String[]{var11};
               if (this.field_u.length == this.field_f) {
-                var13 = new t[this.field_f + 4];
+                var13 = new Sprite[this.field_f + 4];
                 dk.a(this.field_a, 0, var13, 0, this.field_f);
                 this.field_a = var13;
                 var14 = new String[this.field_f + 4][];
@@ -130,13 +130,13 @@ final class uf {
         int var14;
         int var15;
         String[] var16;
-        t var17;
-        t var18;
-        t[] var19;
-        t var20;
+        Sprite var17;
+        Sprite var18;
+        Sprite[] var19;
+        Sprite var20;
         int var5Lifetime1;
         int var11Lifetime1;
-        t var17Lifetime1;
+        Sprite var17Lifetime1;
         int var8Lifetime1;
         var15 = Torquing.field_u;
         if (this.field_h == null) {
@@ -197,7 +197,7 @@ final class uf {
             var8Lifetime1 = this.field_f;
             var19 = this.field_a;
             this.field_f = 0;
-            this.field_a = new t[var8Lifetime1];
+            this.field_a = new Sprite[var8Lifetime1];
             var10 = this.field_h;
             this.field_h = new String[var8Lifetime1];
             this.field_u = new int[var8Lifetime1];
@@ -277,7 +277,7 @@ final class uf {
     }
 
     final void a(byte param0, int param1) {
-        this.a(new t(param1, 0), "", 250);
+        this.a(new Sprite(param1, 0), "", 250);
         int var3 = 65 / ((37 - param0) / 44);
     }
 
@@ -292,7 +292,7 @@ final class uf {
           uf.a(45);
         }
         var1.field_j = new int[]{var2.c((byte) -71), var2.c((byte) -36), var2.c((byte) -100), var2.c((byte) -75)};
-        var1.f(0);
+        var1.unlink(0);
     }
 
     private final int a(int param0, int param1) {
@@ -344,7 +344,7 @@ final class uf {
         return this.field_u[this.field_f];
     }
 
-    final boolean a(t param0, String param1, int param2) {
+    final boolean a(Sprite param0, String param1, int param2) {
         int fieldTemp$0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_20_0 = 0;
@@ -362,7 +362,7 @@ final class uf {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        t[] var11 = null;
+        Sprite[] var11 = null;
         String[][] var12 = null;
         String[] var13 = null;
         int[] var14 = null;
@@ -396,7 +396,7 @@ final class uf {
             this.field_f = this.field_f + 1;
             this.field_h[fieldTemp$0] = param1;
             if (this.field_f == this.field_u.length) {
-              var11 = new t[4 + this.field_f];
+              var11 = new Sprite[4 + this.field_f];
               dk.a(this.field_a, 0, var11, 0, this.field_f);
               this.field_a = var11;
               var12 = new String[this.field_f + 4][];
@@ -437,7 +437,7 @@ final class uf {
 
     final void a(int param0, int param1, int param2) {
         int var5 = -56 % ((param2 - 32) / 52);
-        t var4 = new t(param0, 0);
+        Sprite var4 = new Sprite(param0, 0);
         var4.field_u = param1;
         this.a(var4, "", 250);
     }
@@ -445,16 +445,16 @@ final class uf {
     final void b(int param0, int param1, int param2) {
         int var4 = 0;
         int var9 = 0;
-        t var5;
+        Sprite var5;
         int var6;
         int var7;
         String[] var8;
         int var10;
         var10 = Torquing.field_u;
-        if (ph.field_a > param0 &&
-          this.field_m + param0 >= ph.field_k &&
-          ph.field_h > param2 &&
-          ph.field_c <= param2 + this.field_k) {
+        if (SoftwareRasterizer.field_a > param0 &&
+          this.field_m + param0 >= SoftwareRasterizer.field_k &&
+          SoftwareRasterizer.field_h > param2 &&
+          SoftwareRasterizer.field_c <= param2 + this.field_k) {
           if (param1 >= -59) {
             return;
           }
@@ -499,7 +499,7 @@ final class uf {
         try {
           this.field_b = param0;
           this.field_k = param3;
-          this.field_a = new t[8];
+          this.field_a = new Sprite[8];
           this.field_j = param1;
           this.field_e = param4;
           this.field_d = param6;

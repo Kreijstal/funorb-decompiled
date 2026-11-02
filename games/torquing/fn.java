@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fn {
-    private t[] field_d;
+    private Sprite[] field_d;
     static boolean field_b;
     static int field_c;
     static String field_a;
@@ -53,7 +53,7 @@ final class fn {
         }
     }
 
-    fn(t[] param0) {
+    fn(Sprite[] param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {

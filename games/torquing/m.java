@@ -160,9 +160,9 @@ final class m {
           fa.field_c = param0;
           of.field_o = param2;
           ln.field_G = param5;
-          ln.field_H = new t[param3.length];
+          ln.field_H = new Sprite[param3.length];
           for (var7 = param4; var7 < param3.length; var7++) {
-            ln.field_H[var7] = new t(317, 34);
+            ln.field_H[var7] = new Sprite(317, 34);
           }
           ik.field_k = param3;
           return;

@@ -51,11 +51,11 @@ final class mc extends IntrusiveNode {
           }
           var3 = wa.field_d;
           var3.f(-71, param1);
-          var3.b(90, 5);
-          var3.b(90, 0);
+          var3.writeByte(90, 5);
+          var3.writeByte(90, 0);
           var3.a(param2.field_s, 93);
-          var3.b(90, param2.field_q);
-          var3.b(90, param2.field_o);
+          var3.writeByte(90, param2.field_q);
+          var3.writeByte(90, param2.field_o);
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "mc.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

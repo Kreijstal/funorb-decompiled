@@ -10,7 +10,7 @@ final class sg {
     private ti[] field_D;
     private static int[] field_d;
     private static int[] field_t;
-    static t[] field_e;
+    static Sprite[] field_e;
     private int[] field_F;
     int field_y;
     private int[][] field_v;
@@ -34,7 +34,7 @@ final class sg {
     private int[] field_h;
     private static int[] field_n;
     private int[] field_q;
-    static t[] field_a;
+    static Sprite[] field_a;
 
     final static void c() {
         field_b = new kh();
@@ -240,13 +240,13 @@ final class sg {
         int var2;
         int var3;
         int var4;
-        t var5;
+        Sprite var5;
         int var5_int;
         int var6;
         int var7;
-        t var8;
-        t var9;
-        t var10;
+        Sprite var8;
+        Sprite var9;
+        Sprite var10;
         int var11;
         int var12;
         int var7Lifetime1;
@@ -760,35 +760,35 @@ final class sg {
         return false;
     }
 
-    private final static void a(int param0, int param1, int param2, t param3, int param4, t param5, int param6, t param7) {
+    private final static void a(int param0, int param1, int param2, Sprite param3, int param4, Sprite param5, int param6, Sprite param7) {
         int var13 = 0;
         int var8 = 0;
         int var9 = param3.field_t;
         int var10 = param3.field_s;
-        int var11 = ph.field_j - var10;
+        int var11 = SoftwareRasterizer.field_j - var10;
         int var12 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
         int var13Lifetime3;
-        if (param1 < ph.field_c) {
-          var13 = ph.field_c - param1;
+        if (param1 < SoftwareRasterizer.field_c) {
+          var13 = SoftwareRasterizer.field_c - param1;
           var9 = var9 - var13;
-          param1 = ph.field_c;
+          param1 = SoftwareRasterizer.field_c;
           var8 = var8 + var13 * var10;
         }
-        if (param1 + var9 > ph.field_h) {
-          var9 = var9 - (param1 + var9 - ph.field_h);
+        if (param1 + var9 > SoftwareRasterizer.field_h) {
+          var9 = var9 - (param1 + var9 - SoftwareRasterizer.field_h);
         }
-        if (param0 < ph.field_k) {
-          var13Lifetime1 = ph.field_k - param0;
+        if (param0 < SoftwareRasterizer.field_k) {
+          var13Lifetime1 = SoftwareRasterizer.field_k - param0;
           var10 = var10 - var13Lifetime1;
-          param0 = ph.field_k;
+          param0 = SoftwareRasterizer.field_k;
           var8 = var8 + var13Lifetime1;
           var12 = var12 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
         }
-        if (param0 + var10 > ph.field_a) {
-          var13Lifetime2 = param0 + var10 - ph.field_a;
+        if (param0 + var10 > SoftwareRasterizer.field_a) {
+          var13Lifetime2 = param0 + var10 - SoftwareRasterizer.field_a;
           var10 = var10 - var13Lifetime2;
           var12 = var12 + var13Lifetime2;
           var11 = var11 + var13Lifetime2;
@@ -797,8 +797,8 @@ final class sg {
           if (var9 <= 0) {
             return;
           }
-          var13Lifetime3 = param0 + param1 * ph.field_j;
-          sg.a(ph.field_e, param2, param3.field_y, param4, param5.field_y, param6, param7.field_y, var8, var13Lifetime3, var10, var9, var11, var12);
+          var13Lifetime3 = param0 + param1 * SoftwareRasterizer.field_j;
+          sg.a(SoftwareRasterizer.field_e, param2, param3.field_y, param4, param5.field_y, param6, param7.field_y, var8, var13Lifetime3, var10, var9, var11, var12);
           return;
         }
     }

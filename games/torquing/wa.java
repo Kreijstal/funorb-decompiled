@@ -100,7 +100,7 @@ final class wa extends ih {
         return stackIn_12_0;
     }
 
-    final static t[] a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int stackIn_11_0 = 0;
         int stackIn_22_0 = 0;
         int stackIn_24_0 = 0;
@@ -108,11 +108,11 @@ final class wa extends ih {
         int stackIn_34_0 = 0;
         int stackIn_45_0 = 0;
         int var9 = 0;
-        t[] var10 = null;
-        t[] var11_ref_t__ = null;
+        Sprite[] var10 = null;
+        Sprite[] var11_ref_t__ = null;
         int var11 = 0;
         int var12 = 0;
-        t var13 = null;
+        Sprite var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var11Lifetime1;
@@ -122,7 +122,7 @@ final class wa extends ih {
         int var12Lifetime2Lifetime2;
         var15 = Torquing.field_u;
         var9 = param2 - (-param3 - param1);
-        var10 = new t[]{new t(var9, var9), new t(param5, var9), new t(var9, var9), new t(var9, param5), new t(64, 64), new t(var9, param5), new t(var9, var9), new t(param5, var9), new t(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param5, var9), new Sprite(var9, var9), new Sprite(var9, param5), new Sprite(64, 64), new Sprite(var9, param5), new Sprite(var9, var9), new Sprite(param5, var9), new Sprite(var9, var9)};
         var11_ref_t__ = var10;
         var12 = 0;
         scanLoop1: while (true) {
@@ -212,7 +212,7 @@ final class wa extends ih {
             break;
           }
           if (stackIn_45_0 != -63) {
-            return (t[]) null;
+            return (Sprite[]) null;
           }
           scanLoop4: while (param5 >> 1 > var11Lifetime1) {
             var12Lifetime2Lifetime2 = 0;

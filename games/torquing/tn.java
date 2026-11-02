@@ -3,7 +3,7 @@
  */
 final class tn extends gf {
     static String field_m;
-    static uh field_l;
+    static PcmStreamMixer field_l;
 
     final static void a(int param0, int param1) {
         int var2;

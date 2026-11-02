@@ -142,7 +142,7 @@ final class qo extends am {
           var4_int = param2;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_u = param0.i(7088);
+              this.field_u = param0.readUnsignedShort(7088);
             } else {
               if (2 == var4_int) {
                 stackIn_11_1 = (param0.i((byte) -101) == 1);
@@ -150,7 +150,7 @@ final class qo extends am {
               }
             }
           } else {
-            this.field_s = param0.i(param1 + 7053);
+            this.field_s = param0.readUnsignedShort(param1 + 7053);
           }
           if (param1 != 35) {
             this.a((byte) -121, -73);

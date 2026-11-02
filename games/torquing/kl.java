@@ -1,29 +1,29 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kl extends lf {
+final class kl extends PcmStream {
     static int field_r;
     private int field_s;
     static String field_n;
     static uc field_o;
-    static t field_p;
+    static Sprite field_p;
     static String field_t;
     static String field_u;
-    private lf field_q;
+    private PcmStream field_q;
 
     final static void a(byte param0, la param1) {
-        t var2 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new t(param1.a(-116, "", "final_frame.jpg"), (java.awt.Component) ((Object) k.field_d));
+          var2 = new Sprite(param1.a(-116, "", "final_frame.jpg"), (java.awt.Component) ((Object) k.field_d));
           var3 = var2.field_s;
           var4 = var2.field_t;
           bp.a((byte) -56);
-          cl.field_a = new t(var3, var4 * 3 / 4);
+          cl.field_a = new Sprite(var3, var4 * 3 / 4);
           cl.field_a.e();
           var2.b(0, 0);
-          de.field_a = new t(var3, -cl.field_a.field_t + var4);
+          de.field_a = new Sprite(var3, -cl.field_a.field_t + var4);
           de.field_a.e();
           if (param0 != 66) {
             field_o = (uc) null;
@@ -58,11 +58,11 @@ final class kl extends lf {
         }
     }
 
-    final lf c() {
+    final PcmStream c() {
         return null;
     }
 
-    final lf b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -149,7 +149,7 @@ final class kl extends lf {
         }
     }
 
-    kl(lf param0, int param1) {
+    kl(PcmStream param0, int param1) {
         try {
           this.field_q = param0;
           this.field_s = param1;

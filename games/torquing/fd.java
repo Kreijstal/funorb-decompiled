@@ -216,7 +216,7 @@ final class fd {
             if (var4 >= 7) {
               this.field_f = var17.c(0);
             } else {
-              this.field_f = var17.i(7088);
+              this.field_f = var17.readUnsignedShort(7088);
             }
             stackIn_19_0 = ((var5 & 2) == 0) ? 0 : 1;
             var7 = stackIn_19_0;
@@ -225,7 +225,7 @@ final class fd {
             var9 = -1;
             if (7 > var4) {
               for (var10 = 0; this.field_f > var10; var10++) {
-                dupTemp$0 = var8 + var17.i(7088);
+                dupTemp$0 = var8 + var17.readUnsignedShort(7088);
                 var8 = dupTemp$0;
                 this.field_b[var10] = dupTemp$0;
                 if (this.field_b[var10] > var9) {
@@ -276,7 +276,7 @@ final class fd {
             }
             if (var4 < 7) {
               for (var10Lifetime5 = 0; var10Lifetime5 < this.field_f; var10Lifetime5++) {
-                this.field_l[this.field_b[var10Lifetime5]] = var17.i(7088);
+                this.field_l[this.field_b[var10Lifetime5]] = var17.readUnsignedShort(7088);
               }
               for (var10Lifetime5 = 0; this.field_f > var10Lifetime5; var10Lifetime5++) {
                 var11 = this.field_b[var10Lifetime5];
@@ -286,7 +286,7 @@ final class fd {
                 array$2 = new int[var12];
                 this.field_m[var11] = array$2;
                 for (var14 = 0; var14 < var12; var14++) {
-                  dupTemp$3 = var8Lifetime1 + var17.i(7088);
+                  dupTemp$3 = var8Lifetime1 + var17.readUnsignedShort(7088);
                   var8Lifetime1 = dupTemp$3;
                   dupTemp$4 = this.field_m[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -370,7 +370,7 @@ final class fd {
     fd(byte[] param0, int param1, byte[] param2) {
         int var4_int = 0;
         try {
-          this.field_o = wf.a((byte) -117, param0.length, param0);
+          this.field_o = SpriteState.a((byte) -117, param0.length, param0);
           if (param1 != this.field_o) {
             throw new RuntimeException();
           }

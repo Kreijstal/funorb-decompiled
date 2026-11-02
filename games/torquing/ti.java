@@ -12,9 +12,9 @@ final class ti {
     static String field_f;
     int[] field_h;
     private boolean field_i;
-    static uh field_e;
+    static PcmStreamMixer field_e;
     int field_c;
-    private ei field_o;
+    private IntrusiveDeque field_o;
     static int field_g;
     int[] field_a;
 
@@ -68,7 +68,7 @@ final class ti {
           var3 = (ud) (this.field_o.b(param1 ^ param1));
           while (var3 != null) {
             if (param0.a(var3.field_m)) {
-              var3.f(0);
+              var3.unlink(0);
               if (var3.field_o != null) {
                 je.a((byte) -43, var3.field_o);
               }
@@ -154,7 +154,7 @@ final class ti {
                 var2_ref.a(param0 - 4682);
                 if (var2_ref.field_p) {
                   je.a((byte) -43, var2_ref.field_o);
-                  var2_ref.f(param0 ^ 4803);
+                  var2_ref.unlink(param0 ^ 4803);
                   break regionExit1;
                 }
               }
@@ -180,7 +180,7 @@ final class ti {
               var2_ref.a(param0 - 4682);
               if (var2_ref.field_p) {
                 je.a((byte) -43, var2_ref.field_o);
-                var2_ref.f(param0 ^ 4803);
+                var2_ref.unlink(param0 ^ 4803);
                 decompiledFrameRemainder0 = false;
               }
             }
@@ -318,7 +318,7 @@ final class ti {
           this.field_h = param1;
           this.field_a = param2;
           this.field_c = param3;
-          this.field_o = new ei();
+          this.field_o = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "ti.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

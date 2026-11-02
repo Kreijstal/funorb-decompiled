@@ -4,12 +4,12 @@
 final class bj extends rb {
     private int field_H;
     private sk field_I;
-    private t field_G;
+    private Sprite field_G;
     static sm[] field_L;
     private String field_J;
     static String field_K;
 
-    final void a(int param0, gm param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_H = this.field_H + 1;
           int var5_int = 44 / ((-28 - param0) / 43);
@@ -24,26 +24,26 @@ final class bj extends rb {
         int var9;
         int var10;
         int var13;
-        gm var14;
+        UiWidget var14;
         String var18;
         Object var19;
-        t var20;
-        t var21;
+        Sprite var20;
+        Sprite var21;
         Object var26;
         Object var31;
         fe var35;
         int var11;
         int var12;
-        t var17;
-        t var22;
+        Sprite var17;
+        Sprite var22;
         String var25;
-        t var27;
-        t var28;
-        t var29;
+        Sprite var27;
+        Sprite var28;
+        Sprite var29;
         String var30;
-        t var32;
-        t var33;
-        t var34;
+        Sprite var32;
+        Sprite var33;
+        Sprite var34;
         fe var36;
         fe var37;
         int var9Lifetime1;
@@ -55,14 +55,14 @@ final class bj extends rb {
         int var11Lifetime2;
         int var12Lifetime2;
         cd var6Lifetime1;
-        t var17Lifetime1;
+        Sprite var17Lifetime1;
         var19 = null;
         var26 = null;
         var31 = null;
         var13 = Torquing.field_u;
         if (param1 > -7) {
-          var14 = (gm) null;
-          this.a(-111, (gm) null, -90, 97);
+          var14 = (UiWidget) null;
+          this.a(-111, (UiWidget) null, -90, 97);
         }
         var6 = this.field_I.a((byte) -88);
         if (IntrusiveNode.field_a != var6 &&
@@ -78,7 +78,7 @@ final class bj extends rb {
             var6 = this.field_I.a((byte) -84);
             var37 = (fe) ((Object) this.field_q);
             var9 = this.field_w + param3;
-            var10 = var37.a((gm) (this), param2, -101) + (var37.b((byte) 116, (gm) (this)).b(false) >> 1);
+            var10 = var37.a((UiWidget) (this), param2, -101) + (var37.b((byte) 116, (UiWidget) (this)).b(false) >> 1);
             if (var6 != IntrusiveNode.field_a &&
               var6 != gn.field_h) {
               if (var6 == so.field_u) {
@@ -97,19 +97,19 @@ final class bj extends rb {
             var11 = var34.field_w << 1;
             var12 = var34.field_u << 1;
             if (this.field_G == null) {
-              this.field_G = new t(var11, var12);
+              this.field_G = new Sprite(var11, var12);
               tm.a((byte) 97, this.field_G);
             } else {
               if (var11 > this.field_G.field_s) {
-                this.field_G = new t(var11, var12);
+                this.field_G = new Sprite(var11, var12);
                 tm.a((byte) 97, this.field_G);
               } else {
                 if (var12 > this.field_G.field_t) {
-                  this.field_G = new t(var11, var12);
+                  this.field_G = new Sprite(var11, var12);
                   tm.a((byte) 97, this.field_G);
                 } else {
                   tm.a((byte) 31, this.field_G);
-                  ph.b();
+                  SoftwareRasterizer.b();
                 }
               }
             }
@@ -126,7 +126,7 @@ final class bj extends rb {
           var6 = this.field_I.a((byte) -84);
           var36 = (fe) ((Object) this.field_q);
           var9Lifetime2 = this.field_w + param3;
-          var10Lifetime2 = var36.a((gm) (this), param2, -101) + (var36.b((byte) 116, (gm) (this)).b(false) >> 1);
+          var10Lifetime2 = var36.a((UiWidget) (this), param2, -101) + (var36.b((byte) 116, (UiWidget) (this)).b(false) >> 1);
           if (var6 != IntrusiveNode.field_a &&
             var6 != gn.field_h) {
             if (var6 == so.field_u) {
@@ -146,18 +146,18 @@ final class bj extends rb {
           var11Lifetime2 = var29.field_w << 1;
           var12Lifetime2 = var29.field_u << 1;
           if (this.field_G == null) {
-            this.field_G = new t(var11Lifetime2, var12Lifetime2);
+            this.field_G = new Sprite(var11Lifetime2, var12Lifetime2);
             tm.a((byte) 97, this.field_G);
           } else {
             if (var11Lifetime2 > this.field_G.field_s) {
-              this.field_G = new t(var11Lifetime2, var12Lifetime2);
+              this.field_G = new Sprite(var11Lifetime2, var12Lifetime2);
               tm.a((byte) 97, this.field_G);
             } else {
               if (var12Lifetime2 <= this.field_G.field_t) {
                 tm.a((byte) 31, this.field_G);
-                ph.b();
+                SoftwareRasterizer.b();
               } else {
-                this.field_G = new t(var11Lifetime2, var12Lifetime2);
+                this.field_G = new Sprite(var11Lifetime2, var12Lifetime2);
                 tm.a((byte) 97, this.field_G);
               }
             }
@@ -176,7 +176,7 @@ final class bj extends rb {
         var6Lifetime1 = this.field_I.a((byte) -84);
         var35 = (fe) ((Object) this.field_q);
         var9Lifetime1 = this.field_w + param3;
-        var10Lifetime1 = var35.a((gm) (this), param2, -101) + (var35.b((byte) 116, (gm) (this)).b(false) >> 1);
+        var10Lifetime1 = var35.a((UiWidget) (this), param2, -101) + (var35.b((byte) 116, (UiWidget) (this)).b(false) >> 1);
         if (var6Lifetime1 != IntrusiveNode.field_a &&
           var6Lifetime1 != gn.field_h) {
           if (var6Lifetime1 == so.field_u) {
@@ -196,18 +196,18 @@ final class bj extends rb {
         var11Lifetime1 = var22.field_w << 1;
         var12Lifetime1 = var22.field_u << 1;
         if (this.field_G == null) {
-          this.field_G = new t(var11Lifetime1, var12Lifetime1);
+          this.field_G = new Sprite(var11Lifetime1, var12Lifetime1);
           tm.a((byte) 97, this.field_G);
         } else {
           if (var11Lifetime1 > this.field_G.field_s) {
-            this.field_G = new t(var11Lifetime1, var12Lifetime1);
+            this.field_G = new Sprite(var11Lifetime1, var12Lifetime1);
             tm.a((byte) 97, this.field_G);
           } else {
             if (var12Lifetime1 <= this.field_G.field_t) {
               tm.a((byte) 31, this.field_G);
-              ph.b();
+              SoftwareRasterizer.b();
             } else {
-              this.field_G = new t(var11Lifetime1, var12Lifetime1);
+              this.field_G = new Sprite(var11Lifetime1, var12Lifetime1);
               tm.a((byte) 97, this.field_G);
             }
           }
@@ -243,12 +243,12 @@ final class bj extends rb {
         if (param0 == 0) {
           return null;
         }
-        gm var3 = (gm) null;
-        this.a(102, (gm) null, -69, -47);
+        UiWidget var3 = (UiWidget) null;
+        this.a(102, (UiWidget) null, -69, -47);
         return null;
     }
 
-    final boolean a(gm param0, boolean param1) {
+    final boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

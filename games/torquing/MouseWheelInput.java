@@ -4,12 +4,12 @@
 abstract class MouseWheelInput {
     static kh[] field_c;
     static int[] field_a;
-    static t field_b;
+    static Sprite field_b;
     static int field_d;
 
     abstract int b(int param0);
 
-    final static void a(t param0, boolean param1) {
+    final static void a(Sprite param0, boolean param1) {
         try {
           kj.field_b = param0;
           if (param1) {
@@ -49,7 +49,7 @@ abstract class MouseWheelInput {
           if (param2 == 0) {
             return !(param3 >= param1);
           }
-          field_b = (t) null;
+          field_b = (Sprite) null;
           return !(param3 >= param1);
         }
         if (il.field_o[param1] > il.field_o[param3]) {
@@ -75,7 +75,7 @@ abstract class MouseWheelInput {
         if (param2 == 0) {
           return !(param3 >= param1);
         }
-        field_b = (t) null;
+        field_b = (Sprite) null;
         if (param3 >= param1) {
           return false;
         }

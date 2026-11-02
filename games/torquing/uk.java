@@ -67,7 +67,7 @@ final class uk {
             this.a(-67L, 6);
           }
           if (param0.field_j != null) {
-            param0.h(0);
+            param0.unlinkSecondary(0);
           }
           var5 = this.field_c[(int)((long)(-1 + this.field_e) & param1)];
           param0.field_p = var5;

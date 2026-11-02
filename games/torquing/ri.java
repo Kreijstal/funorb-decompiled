@@ -21,7 +21,7 @@ final class ri extends lg {
         return -1;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, gm param5, byte param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         int var12 = 0;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;

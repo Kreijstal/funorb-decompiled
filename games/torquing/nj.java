@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nj extends lf {
+final class nj extends PcmStream {
     private int field_u;
     private int field_o;
     private int field_q;
@@ -249,7 +249,7 @@ final class nj extends lf {
         return param1 < 0 ? -param0 : (int)((double)param0 * Math.sqrt((double)param1 * 0.0001220703125) + 0.5);
     }
 
-    final lf b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -258,7 +258,7 @@ final class nj extends lf {
         int var2Lifetime1;
         if (param0 == 0) {
           this.g(0);
-          this.f(0);
+          this.unlink(0);
           return;
         }
         if (this.field_r != 0) {
@@ -318,7 +318,7 @@ final class nj extends lf {
         this.field_x = 0;
         this.field_p = 0;
         this.field_y = 0;
-        this.f(0);
+        this.unlink(0);
     }
 
     private final static int c(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, nj param11, int param12, int param13) {
@@ -459,7 +459,7 @@ final class nj extends lf {
         this.a(param0, this.j());
     }
 
-    final lf c() {
+    final PcmStream c() {
         return null;
     }
 
@@ -646,7 +646,7 @@ final class nj extends lf {
         if (this.field_o < 0) {
           if (this.field_z <= 0) {
             this.f();
-            this.f(0);
+            this.unlink(0);
             return;
           }
           this.field_o = 0;
@@ -654,7 +654,7 @@ final class nj extends lf {
         if (this.field_o >= var7) {
           if (this.field_z >= 0) {
             this.f();
-            this.f(0);
+            this.unlink(0);
             return;
           }
           this.field_o = var7 - 1;
@@ -781,7 +781,7 @@ final class nj extends lf {
           if (this.field_o >= var7) {
             this.field_o = var7;
             this.f();
-            this.f(0);
+            this.unlink(0);
           }
           return;
         }
@@ -791,7 +791,7 @@ final class nj extends lf {
         }
         this.field_o = -1;
         this.f();
-        this.f(0);
+        this.unlink(0);
         return;
     }
 
@@ -930,7 +930,7 @@ final class nj extends lf {
           this.field_s = 0;
           this.field_r = 0;
           this.field_y = 0;
-          this.f(0);
+          this.unlink(0);
           return true;
         }
         if (this.field_y >= var1) {
@@ -1302,7 +1302,7 @@ final class nj extends lf {
               this.field_s = 0;
               this.field_r = 0;
               this.field_y = 0;
-              this.f(0);
+              this.unlink(0);
               param0 = this.field_x;
             }
             this.field_x = 0;
@@ -1320,7 +1320,7 @@ final class nj extends lf {
         if (this.field_o < 0) {
           if (this.field_z <= 0) {
             this.f();
-            this.f(0);
+            this.unlink(0);
             return;
           }
           this.field_o = 0;
@@ -1328,7 +1328,7 @@ final class nj extends lf {
         if (this.field_o >= var5) {
           if (this.field_z >= 0) {
             this.f();
-            this.f(0);
+            this.unlink(0);
             return;
           }
           this.field_o = var5 - 1;
@@ -1441,7 +1441,7 @@ final class nj extends lf {
           if (this.field_o >= var5) {
             this.field_o = var5;
             this.f();
-            this.f(0);
+            this.unlink(0);
           }
           return;
         }
@@ -1450,7 +1450,7 @@ final class nj extends lf {
         }
         this.field_o = -1;
         this.f();
-        this.f(0);
+        this.unlink(0);
     }
 
     final synchronized void d(int param0) {

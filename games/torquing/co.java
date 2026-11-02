@@ -266,7 +266,7 @@ final class co implements Runnable {
         return true;
     }
 
-    co(vh param0) {
+    co(PlatformTaskDispatcher param0) {
         rc var2 = null;
         this.field_e = new gb();
         this.field_c = false;

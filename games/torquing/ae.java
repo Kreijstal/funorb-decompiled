@@ -6,7 +6,7 @@ final class ae extends w {
     static la field_mb;
     String field_ob;
     String field_jb;
-    static ei field_nb;
+    static IntrusiveDeque field_nb;
     static boolean field_ib;
     static String field_lb;
 
@@ -42,7 +42,7 @@ final class ae extends w {
     }
 
     static {
-        field_nb = new ei();
+        field_nb = new IntrusiveDeque();
         field_lb = "ALL";
     }
 }

@@ -10,7 +10,7 @@ final class bo {
     private java.math.BigInteger field_j;
     static int field_d;
     static uc field_e;
-    static ei field_l;
+    static IntrusiveDeque field_l;
     private PacketBuffer field_h;
     static String field_i;
     static int field_k;
@@ -141,7 +141,7 @@ final class bo {
         }
         var10 = new PacketBuffer(this.field_b.c((byte) 119));
         if (param0 != -74) {
-          field_l = (ei) null;
+          field_l = (IntrusiveDeque) null;
         }
         var10.position = 5;
         var3 = var10.i((byte) -101);
@@ -188,6 +188,6 @@ final class bo {
 
     static {
         field_i = "Waiting for graphics";
-        field_l = new ei();
+        field_l = new IntrusiveDeque();
     }
 }

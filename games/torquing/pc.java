@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class pc implements el, fe {
+class pc implements WidgetRenderer, fe {
     int field_e;
     uc field_m;
     int field_h;
@@ -19,7 +19,7 @@ class pc implements el, fe {
     static String field_i;
     int field_o;
 
-    private final void a(gm param0, int param1, int param2, int param3) {
+    private final void a(UiWidget param0, int param1, int param2, int param3) {
         try {
           this.a(-2, param0, param1, this.field_h, 0, param2, 0, this.field_c);
           if (param3 != -546) {
@@ -131,7 +131,7 @@ class pc implements el, fe {
         }
     }
 
-    private final int c(gm param0, int param1) {
+    private final int c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -160,7 +160,7 @@ class pc implements el, fe {
         }
     }
 
-    public final void a(int param0, gm param1, int param2, boolean param3, int param4) {
+    public final void a(int param0, UiWidget param1, int param2, boolean param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         kp var8 = null;
@@ -219,7 +219,7 @@ class pc implements el, fe {
         }
     }
 
-    public final int a(byte param0, gm param1) {
+    public final int a(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -246,9 +246,9 @@ class pc implements el, fe {
         }
     }
 
-    String c(byte param0, gm param1) {
+    String c(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        gm var4 = null;
+        UiWidget var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -256,8 +256,8 @@ class pc implements el, fe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 65) {
-            var4 = (gm) null;
-            this.a((byte) -109, (gm) null);
+            var4 = (UiWidget) null;
+            this.a((byte) -109, (UiWidget) null);
           }
           stackIn_3_0 = param1.field_m;
           return stackIn_3_0;
@@ -275,7 +275,7 @@ class pc implements el, fe {
         }
     }
 
-    public final int a(gm param0, int param1, int param2) {
+    public final int a(UiWidget param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_1_0 = 0;
@@ -301,7 +301,7 @@ class pc implements el, fe {
         }
     }
 
-    public final uj b(byte param0, gm param1) {
+    public final uj b(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         uj stackIn_2_0 = null;
         uj stackIn_10_0 = null;
@@ -359,7 +359,7 @@ class pc implements el, fe {
         }
     }
 
-    public final int b(gm param0, int param1) {
+    public final int b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -388,7 +388,7 @@ class pc implements el, fe {
         }
     }
 
-    private final void a(int param0, gm param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final void a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -505,7 +505,7 @@ class pc implements el, fe {
         }
     }
 
-    private final int a(int param0, int param1, int param2, gm param3) {
+    private final int a(int param0, int param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -542,7 +542,7 @@ class pc implements el, fe {
         return this.field_m.field_t + this.field_m.field_x;
     }
 
-    public final void a(int param0, int param1, int param2, int param3, int param4, gm param5) {
+    public final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         int var12 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
@@ -620,7 +620,7 @@ class pc implements el, fe {
         }
     }
 
-    public final int a(gm param0, int param1) {
+    public final int a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -648,7 +648,7 @@ class pc implements el, fe {
         }
     }
 
-    public void a(int param0, int param1, int param2, boolean param3, gm param4) {
+    public void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         if (param0 < 89) {
           this.a(false);
         }
@@ -662,7 +662,7 @@ class pc implements el, fe {
         }
     }
 
-    private final int a(byte param0, gm param1, int param2, int param3) {
+    private final int a(byte param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
@@ -688,7 +688,7 @@ class pc implements el, fe {
         }
     }
 
-    public final int a(int param0, int param1, gm param2) {
+    public final int a(int param0, int param1, UiWidget param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -715,7 +715,7 @@ class pc implements el, fe {
         }
     }
 
-    public final int a(int param0, int param1, gm param2, int param3, int param4, int param5) {
+    public final int a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -746,7 +746,7 @@ class pc implements el, fe {
     protected pc() {
     }
 
-    private final void a(boolean param0, gm param1) {
+    private final void a(boolean param0, UiWidget param1) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;

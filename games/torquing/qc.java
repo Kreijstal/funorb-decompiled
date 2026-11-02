@@ -4,12 +4,12 @@
 final class qc extends aa {
     static ia field_cb;
     static int[] field_ab;
-    static ei field_Y;
-    static t field_db;
+    static IntrusiveDeque field_Y;
+    static Sprite field_db;
     static int field_bb;
     static int field_Z;
 
-    final static kl a(int param0, byte param1, lf param2) {
+    final static kl a(int param0, byte param1, PcmStream param2) {
         RuntimeException var3 = null;
         kl stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -36,14 +36,14 @@ final class qc extends aa {
         }
     }
 
-    qc(ln param0, gm param1) {
+    qc(ln param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
-    final void c(gm param0, int param1) {
+    final void c(UiWidget param0, int param1) {
         try {
           if (param1 != 33) {
-            field_db = (t) null;
+            field_db = (Sprite) null;
           }
           super.c(param0, param1 + 0);
         } catch (RuntimeException runtimeException) {
@@ -62,6 +62,6 @@ final class qc extends aa {
     }
 
     static {
-        field_Y = new ei();
+        field_Y = new IntrusiveDeque();
     }
 }

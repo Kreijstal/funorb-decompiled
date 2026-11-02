@@ -15,12 +15,12 @@ final class rj extends am {
     private short[] field_x;
     static int field_w;
 
-    final static void a(int param0, String param1, t param2) {
+    final static void a(int param0, String param1, Sprite param2) {
         try {
           hf.field_a = param1;
           if (param0 >= -43) {
-            t var4 = (t) null;
-            rj.a(87, (String) null, (t) null);
+            Sprite var4 = (Sprite) null;
+            rj.a(87, (String) null, (Sprite) null);
           }
           jd.field_D = param2;
         } catch (RuntimeException runtimeException) {

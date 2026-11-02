@@ -4,10 +4,10 @@
 final class wi {
     static int[] field_a;
 
-    final static t a(int param0, byte param1, la param2, int param3) {
+    final static Sprite a(int param0, byte param1, la param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        t stackIn_4_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

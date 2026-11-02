@@ -252,7 +252,7 @@ final class fi {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.f(0);
+          var9.unlink(0);
           this.field_e.a(false, var6, var8Lifetime1);
           stackIn_17_0 = var8Lifetime1;
           return stackIn_17_0;
@@ -273,7 +273,7 @@ final class fi {
     final static void a(IntrusiveNode param0, IntrusiveNode param1, int param2) {
         try {
           if (null != param0.next) {
-            param0.f(0);
+            param0.unlink(0);
           }
           if (param2 != -1240266932) {
             field_f = (String) null;

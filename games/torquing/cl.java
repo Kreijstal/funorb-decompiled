@@ -6,7 +6,7 @@ final class cl {
     static int[] field_e;
     static String field_d;
     static String field_c;
-    static t field_a;
+    static Sprite field_a;
 
     public static void a(int param0) {
         field_c = null;
@@ -23,7 +23,7 @@ final class cl {
         field_a = null;
     }
 
-    final static void a(int param0, boolean param1, uh param2, la param3) {
+    final static void a(int param0, boolean param1, PcmStreamMixer param2, la param3) {
         try {
           if (param1) {
             field_c = (String) null;

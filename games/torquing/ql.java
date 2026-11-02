@@ -145,7 +145,7 @@ final class ql extends am {
         }
     }
 
-    final static void a(int param0, uh param1, uh param2) {
+    final static void a(int param0, PcmStreamMixer param1, PcmStreamMixer param2) {
         try {
           tb.field_l = param2;
           if (param0 != -1618866100) {
@@ -158,7 +158,7 @@ final class ql extends am {
         }
     }
 
-    final static void a(int param0, int param1, t param2, int param3, int param4, byte param5) {
+    final static void a(int param0, int param1, Sprite param2, int param3, int param4, byte param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
@@ -189,27 +189,27 @@ final class ql extends am {
           var7 = (param4 << 8) + var6_int * param2.field_v;
           param3 = param3 + param2.field_r;
           param1 = param1 + param2.field_v;
-          var8 = param3 * ph.field_j + param1;
+          var8 = param3 * SoftwareRasterizer.field_j + param1;
           var9 = 0;
           var10 = param2.field_t;
           var11 = param2.field_s;
-          var12 = -var11 + ph.field_j;
+          var12 = -var11 + SoftwareRasterizer.field_j;
           var13 = 0;
-          if (ph.field_c > param3) {
-            var14 = -param3 + ph.field_c;
+          if (SoftwareRasterizer.field_c > param3) {
+            var14 = -param3 + SoftwareRasterizer.field_c;
             var10 = var10 - var14;
-            var8 = var8 + var14 * ph.field_j;
+            var8 = var8 + var14 * SoftwareRasterizer.field_j;
             var9 = var9 + var14 * var11;
-            param3 = ph.field_c;
+            param3 = SoftwareRasterizer.field_c;
           }
-          if (param3 + var10 > ph.field_h) {
-            var10 = var10 - (var10 + param3 - ph.field_h);
+          if (param3 + var10 > SoftwareRasterizer.field_h) {
+            var10 = var10 - (var10 + param3 - SoftwareRasterizer.field_h);
           }
-          if (param1 < ph.field_k) {
-            var14Lifetime1 = ph.field_k - param1;
+          if (param1 < SoftwareRasterizer.field_k) {
+            var14Lifetime1 = SoftwareRasterizer.field_k - param1;
             var11 = var11 - var14Lifetime1;
             var13 = var13 + var14Lifetime1;
-            param1 = ph.field_k;
+            param1 = SoftwareRasterizer.field_k;
             var9 = var9 + var14Lifetime1;
             var7 = var7 + var6_int * var14Lifetime1;
             var12 = var12 + var14Lifetime1;
@@ -218,8 +218,8 @@ final class ql extends am {
           if (param5 >= -43) {
             return;
           }
-          if (param1 + var11 > ph.field_a) {
-            var14Lifetime2 = var11 + param1 - ph.field_a;
+          if (param1 + var11 > SoftwareRasterizer.field_a) {
+            var14Lifetime2 = var11 + param1 - SoftwareRasterizer.field_a;
             var12 = var12 + var14Lifetime2;
             var13 = var13 + var14Lifetime2;
             var11 = var11 - var14Lifetime2;
@@ -238,11 +238,11 @@ final class ql extends am {
                   var17 = param2.field_y[incrementValue$0];
                   if (var17 != 0) {
                     if (var15 <= 255) {
-                      var18 = ph.field_e[var8];
+                      var18 = SoftwareRasterizer.field_e[var8];
                       var19 = 16711935 & var16 * (var18 & 16711935) + (var17 & 16711935) * var15 >> 8;
-                      ph.field_e[var8] = var19 + (ie.a(var16 * ie.a(var18, 65280) + ie.a(65280, var17) * var15, 16711913) >> 8);
+                      SoftwareRasterizer.field_e[var8] = var19 + (ie.a(var16 * ie.a(var18, 65280) + ie.a(65280, var17) * var15, 16711913) >> 8);
                     } else {
-                      ph.field_e[var8] = var17;
+                      SoftwareRasterizer.field_e[var8] = var17;
                     }
                   }
                   var8++;

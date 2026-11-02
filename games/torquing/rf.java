@@ -6,10 +6,10 @@ final class rf extends pc {
     private int field_y;
     static boolean[] field_x;
     private int field_v;
-    private t[] field_s;
+    private Sprite[] field_s;
     private int field_w;
     static String field_u;
-    static ei field_t;
+    static IntrusiveDeque field_t;
     static int[] field_r;
 
     final static sm[] a(byte param0) {
@@ -26,7 +26,7 @@ final class rf extends pc {
         return var1;
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, gm param4) {
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -38,7 +38,7 @@ final class rf extends pc {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
-        gm var9 = null;
+        UiWidget var9 = null;
         try {
           if (!param4.field_s) {
             stackIn_6_0 = (param4.g(2)) ? 1 : 0;
@@ -47,8 +47,8 @@ final class rf extends pc {
           }
           var6_int = stackIn_6_0;
           if (param0 <= 89) {
-            var9 = (gm) null;
-            this.a(-79, -81, -76, false, (gm) null);
+            var9 = (UiWidget) null;
+            this.a(-79, -81, -76, false, (UiWidget) null);
           }
           if (param4 instanceof lg) {
             param3 = param3 & ((lg) (param4)).field_x;
@@ -225,6 +225,6 @@ final class rf extends pc {
         field_x[4] = true;
         field_x[11] = true;
         field_x[3] = true;
-        field_t = new ei();
+        field_t = new IntrusiveDeque();
     }
 }

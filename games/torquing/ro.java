@@ -143,7 +143,7 @@ class ro extends am {
             this.field_x = -83;
           }
           if (0 == param2) {
-            this.field_y = param0.i(7088);
+            this.field_y = param0.readUnsignedShort(7088);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

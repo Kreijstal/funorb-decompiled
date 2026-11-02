@@ -3,7 +3,7 @@
  */
 final class of {
     short[] field_F;
-    static t field_l;
+    static Sprite field_l;
     short[] field_a;
     short[] field_z;
     int[] field_L;

@@ -6,7 +6,7 @@ final class jg extends am {
     private int field_s;
     static String field_u;
     static String field_w;
-    static t field_t;
+    static Sprite field_t;
     private int field_x;
 
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
@@ -124,10 +124,10 @@ final class jg extends am {
           var4_int = param2;
           if (0 != var4_int) {
             if (var4_int == 1) {
-              this.field_x = param0.i(7088);
+              this.field_x = param0.readUnsignedShort(7088);
             }
           } else {
-            this.field_s = param0.i(7088);
+            this.field_s = param0.readUnsignedShort(7088);
           }
           if (param1 != 35) {
             jg.a(57, -27, (byte) 70, -55, -8, -83, -31);

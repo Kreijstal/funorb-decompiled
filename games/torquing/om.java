@@ -3,7 +3,7 @@
  */
 final class om {
     static int field_h;
-    private ei field_a;
+    private IntrusiveDeque field_a;
     private int field_i;
     private int[][][] field_d;
     private int field_f;
@@ -47,7 +47,7 @@ final class om {
             var4 = (ka) (this.field_a.c(-6938));
             var3 = new ka(param1, var4.field_k);
             this.field_j[var4.field_m] = null;
-            var4.f(param0 - 15142);
+            var4.unlink(param0 - 15142);
           }
           this.field_j[param1] = var3;
         }
@@ -180,7 +180,7 @@ final class om {
     om(int param0, int param1, int param2) {
         this.field_i = 0;
         this.field_f = -1;
-        this.field_a = new ei();
+        this.field_a = new IntrusiveDeque();
         this.field_b = false;
         this.field_c = param1;
         this.field_g = param0;

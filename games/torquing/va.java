@@ -49,13 +49,13 @@ final class va extends lg {
         try {
           var3 = wa.field_d;
           var3.f(-58, param2);
-          var3.b(90, 2);
+          var3.writeByte(90, 2);
           if (param1 <= 117) {
             Random var4 = (Random) null;
             va.a(82, (byte) 63, (Random) null);
           }
-          var3.b(90, 0);
-          var3.b(90, param0.field_m);
+          var3.writeByte(90, 0);
+          var3.writeByte(90, param0.field_m);
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "va.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -96,7 +96,7 @@ final class va extends lg {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, gm param5, byte param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;

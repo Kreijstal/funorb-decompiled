@@ -57,7 +57,7 @@ class ah extends qf {
           if (!BufferedSocket.a(2, 0)) {
             return false;
           }
-          oo.field_a = kj.field_d.i(7088);
+          oo.field_a = kj.field_d.readUnsignedShort(7088);
           kj.field_d.position = 0;
         }
         if (param0 == 2) {

@@ -113,25 +113,25 @@ final class gq {
               if (var7 < 4 ||
                 var7 > 60) {
                 if (var3_int != 0) {
-                  param0[var6] = gm.a(ie.a(65408, param0[var6]), 64);
+                  param0[var6] = UiWidget.a(ie.a(65408, param0[var6]), 64);
                 } else {
-                  param0[var6] = gm.a(ie.a(65408, param0[var6]), 6);
+                  param0[var6] = UiWidget.a(ie.a(65408, param0[var6]), 6);
                 }
               }
               if (var7 > 4 &&
                 var7 < 12) {
                 if (var5 == 0) {
-                  param0[var6] = gm.a(6, ie.a(param0[var6], 65408));
+                  param0[var6] = UiWidget.a(6, ie.a(param0[var6], 65408));
                 } else {
-                  param0[var6] = gm.a(64, ie.a(param0[var6], 65408));
+                  param0[var6] = UiWidget.a(64, ie.a(param0[var6], 65408));
                 }
               }
               if (var7 > 17 &&
                 var7 < 25) {
                 if (var4 != 0) {
-                  param0[var6] = gm.a(64, ie.a(65408, param0[var6]));
+                  param0[var6] = UiWidget.a(64, ie.a(65408, param0[var6]));
                 } else {
-                  param0[var6] = gm.a(6, ie.a(65408, param0[var6]));
+                  param0[var6] = UiWidget.a(6, ie.a(65408, param0[var6]));
                 }
               }
             }

@@ -15,20 +15,20 @@ final class mh {
     private int field_e;
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        ph.c(param1, param7, param5, param4, 7, param0);
-        ph.e(param1, param7, param5, param4, 7, param6);
+        SoftwareRasterizer.c(param1, param7, param5, param4, 7, param0);
+        SoftwareRasterizer.e(param1, param7, param5, param4, 7, param6);
         int var10 = 121 % ((-55 - param3) / 58);
         int[] var13 = new int[4];
         int[] var12 = var13;
         int[] var11 = var12;
         int[] var9 = var11;
-        ph.b(var13);
-        ph.f(param1, param7, param5 + param1, param7 + 3);
-        ph.e(param1, param7, param5, param4, 7, param2);
-        ph.a(var13);
-        ph.f(param1, param7, param1 + 3, param7 + param4);
-        ph.e(param1, param7, param5, param4, 7, param2);
-        ph.a(var13);
+        SoftwareRasterizer.b(var13);
+        SoftwareRasterizer.f(param1, param7, param5 + param1, param7 + 3);
+        SoftwareRasterizer.e(param1, param7, param5, param4, 7, param2);
+        SoftwareRasterizer.a(var13);
+        SoftwareRasterizer.f(param1, param7, param1 + 3, param7 + param4);
+        SoftwareRasterizer.e(param1, param7, param5, param4, 7, param2);
+        SoftwareRasterizer.a(var13);
     }
 
     final void a(boolean param0, int param1, int param2, int param3) {
@@ -59,7 +59,7 @@ final class mh {
         int stackIn_89_6 = 0;
         int stackIn_97_0 = 0;
         int stackIn_105_0 = 0;
-        t stackIn_130_0 = null;
+        Sprite stackIn_130_0 = null;
         int stackIn_130_1 = 0;
         int stackIn_130_2 = 0;
         int stackIn_131_3 = 0;
@@ -74,11 +74,11 @@ final class mh {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        t var14_ref_t = null;
+        Sprite var14_ref_t = null;
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        t var17_ref_t = null;
+        Sprite var17_ref_t = null;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
@@ -244,11 +244,11 @@ final class mh {
           }
           var14 = stackIn_19_0;
           pp.a(var13 + 3, (byte) -128, 14145495, 5 + param1, 14145495);
-          wf.a(param1 + 5, 14145495, 126, var13 + 3 + var14, 14145495);
+          SpriteState.a(param1 + 5, 14145495, 126, var13 + 3 + var14, 14145495);
           pp.a(var13 + 2, (byte) -126, 8947848, 4 + param1, 8947848);
-          wf.a(param1 + 4, 8947848, 126, var14 + 2 + var13, 8947848);
+          SpriteState.a(param1 + 4, 8947848, 126, var14 + 2 + var13, 8947848);
           pp.a(var13 + 1, (byte) -128, 6710886, 3 + param1, 6710886);
-          wf.a(3 + param1, 6710886, param3 ^ 36, var13 + 1 + var14, 6710886);
+          SpriteState.a(3 + param1, 6710886, param3 ^ 36, var13 + 1 + var14, 6710886);
           if (!param0) {
             stackIn_22_0 = i.field_Q.field_O[1][1];
           } else {
@@ -256,7 +256,7 @@ final class mh {
           }
           var15 = stackIn_22_0;
           pp.a(var13, (byte) -125, var15, param1 + 2, 0);
-          wf.a(2 + param1, var15, 126, var13 + var14, 0);
+          SpriteState.a(2 + param1, var15, 126, var13 + var14, 0);
           decompiledFrameRemainder2 = (var22 != 0);
         }
         if ((decompiledFrameRemainder2) &&
@@ -343,7 +343,7 @@ final class mh {
           } else {
             stackIn_131_3 = i.field_Q.field_O[9][1];
           }
-          ((t) (Object) stackIn_130_0).d(stackIn_130_1, stackIn_130_2, stackIn_131_3);
+          ((Sprite) (Object) stackIn_130_0).d(stackIn_130_1, stackIn_130_2, stackIn_131_3);
           decompiledSharedTail0 = (var22 != 0);
         }
         if (decompiledSharedTail0) {
@@ -375,7 +375,7 @@ final class mh {
         int var11 = 0;
         int var12 = 0;
         int var13_int = 0;
-        t var13 = null;
+        Sprite var13 = null;
         int var14 = 0;
         int var15 = 0;
         String var16 = null;
@@ -727,12 +727,12 @@ final class mh {
         }
     }
 
-    private final t e(int param0, int param1) {
-        t var3 = null;
+    private final Sprite e(int param0, int param1) {
+        Sprite var3 = null;
         int[] var3_array = null;
         int var4 = 0;
         int var5 = 0;
-        t var6 = null;
+        Sprite var6 = null;
         hc var7 = null;
         sg var8 = null;
         kh[] var9_ref_kh__ = null;
@@ -751,26 +751,26 @@ final class mh {
         int[] var21 = null;
         int[] var22 = null;
         var16 = Torquing.field_u;
-        var3 = (t) (wk.field_a.b(0));
+        var3 = (Sprite) (wk.field_a.b(0));
         while (var3 != null) {
           if (~(-var3.field_t + var3.field_u) == ~param1) {
-            var3.f(0);
+            var3.unlink(0);
             wk.field_a.b((byte) 68, var3);
             return var3;
           }
-          var3 = (t) (wk.field_a.f(-24059));
+          var3 = (Sprite) (wk.field_a.f(-24059));
           if (var16 == 0) {
             continue;
           }
           break;
         }
-        var22 = ph.field_e;
+        var22 = SoftwareRasterizer.field_e;
         var21 = var22;
         var17 = var21;
         var3_array = var17;
-        var4 = ph.field_j;
-        var5 = ph.field_d;
-        var6 = new t(160, 120);
+        var4 = SoftwareRasterizer.field_j;
+        var5 = SoftwareRasterizer.field_d;
+        var6 = new Sprite(160, 120);
         var6.e();
         var7 = ol.field_f[param1];
         var8 = im.field_L.a(-58, var7);
@@ -808,11 +808,11 @@ final class mh {
         ne.field_a[11] = ne.field_a[11] << 2;
         ne.field_a[9] = ne.field_a[9] << 2;
         im.field_L.b(1);
-        ph.g(0, 0, 160, 120);
+        SoftwareRasterizer.g(0, 0, 160, 120);
         var12 = wi.field_a[param1];
         if (var7.a(false) != 1 ||
           hi.field_h[var12] == null) {
-          gm.field_r[var12].a(0, 0, 160, 120);
+          UiWidget.field_r[var12].a(0, 0, 160, 120);
           if (var16 != 0) {
             hi.field_h[var12].a(0, 0, 160, 120);
           }
@@ -845,8 +845,8 @@ final class mh {
             }
             var6.field_u = param1 + var6.field_t;
             wk.field_a.b((byte) 68, var6);
-            ph.a(var22, var4, var5);
-            ph.a();
+            SoftwareRasterizer.a(var22, var4, var5);
+            SoftwareRasterizer.a();
             be.a(0, 0, param0, 480);
             break;
           }
@@ -1005,7 +1005,7 @@ final class mh {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        t var6_ref_t = null;
+        Sprite var6_ref_t = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -1293,7 +1293,7 @@ final class mh {
                   n.field_t <= (var3 + 32) &&
                   k.field_e >= var4 &&
                   k.field_e <= 32 + var4) {
-                  ph.e(-2 + var3, var4 - 2, 36, 36, 6, 8421504);
+                  SoftwareRasterizer.e(-2 + var3, var4 - 2, 36, 36, 6, 8421504);
                   var7 = var13;
                 }
                 if (-1 != this.field_j &&
@@ -1309,7 +1309,7 @@ final class mh {
                   }
                 }
                 if (var13 == this.field_e) {
-                  ph.e(-2 + var3, -2 + var4, 36, 36, 6, 1579032);
+                  SoftwareRasterizer.e(-2 + var3, -2 + var4, 36, 36, 6, 1579032);
                 }
                 var6++;
                 if (~var11 != ~var6) {
@@ -2122,7 +2122,7 @@ final class mh {
                 }
                 if (null == dg.field_i) {
                   var7_intLifetime3 = param1 ? 1 : 0;
-                  hm.a(var7_intLifetime3 != 0, um.field_m.field_x, (t[]) null, 0, i.field_Q, 0, (t[]) null, 3, 320, 0, 3 * um.field_m.field_x / 2, 240);
+                  hm.a(var7_intLifetime3 != 0, um.field_m.field_x, (Sprite[]) null, 0, i.field_Q, 0, (Sprite[]) null, 3, 320, 0, 3 * um.field_m.field_x / 2, 240);
                   if (var11 == 0) {
                     break regionExit2;
                   }
@@ -2498,7 +2498,7 @@ final class mh {
         var3 = 0;
         do {
           if (var9.length <= var3) {
-            ph.c(0, 0, 640, 480, 16777215);
+            SoftwareRasterizer.c(0, 0, 640, 480, 16777215);
             break;
           }
           var4_ref_af = var9[var3];
@@ -2561,7 +2561,7 @@ final class mh {
           }
           if (this.field_h == 4) {
             var2 = cm.field_m + 298 * a.field_e;
-            ph.g(47, 120, 583, 418);
+            SoftwareRasterizer.g(47, 120, 583, 418);
             var3 = 120 - var2;
             var4Lifetime2 = 0;
             while (var4Lifetime2 < hg.field_b.length) {
@@ -2576,16 +2576,16 @@ final class mh {
               }
             }
             if (decompiledFrameCompleted0) {
-              ph.a();
+              SoftwareRasterizer.a();
               break regionExit1;
             }
           }
           if (decompiledFrameCompleted0) {
             if (this.field_h == 5) {
               bj.field_L[eq.field_b].a(115, 111);
-              ph.g(0, 150, 640, 480);
+              SoftwareRasterizer.g(0, 150, 640, 480);
               qd.field_c[eq.field_b].a(0, 0);
-              ph.a();
+              SoftwareRasterizer.a();
             } else {
               if (this.field_h == 9) {
                 var14 = ol.field_f[rn.field_j];
@@ -2602,16 +2602,16 @@ final class mh {
                 var10.c(0);
                 ti.field_l[rn.field_j].b(51, -116, 195);
                 this.e(param0 ^ 733, rn.field_j).b(414, 216);
-                ph.c(414, 216, 160, 120, 16777215);
-                ph.c(413, 215, 162, 122, 0);
+                SoftwareRasterizer.c(414, 216, 160, 120, 16777215);
+                SoftwareRasterizer.c(413, 215, 162, 122, 0);
                 var3 = 195;
-                ph.b(37, var3, 554, 3355443);
-                ph.b(35, var3 + 1, 558, 15116313);
-                ph.b(37, 2 + var3, 554, 3355443);
+                SoftwareRasterizer.b(37, var3, 554, 3355443);
+                SoftwareRasterizer.b(35, var3 + 1, 558, 15116313);
+                SoftwareRasterizer.b(37, 2 + var3, 554, 3355443);
                 var4Lifetime3 = 350;
-                ph.b(37, var4Lifetime3, 554, 3355443);
-                ph.b(35, var4Lifetime3 + 1, 558, 15116313);
-                ph.b(37, 2 + var4Lifetime3, 554, 3355443);
+                SoftwareRasterizer.b(37, var4Lifetime3, 554, 3355443);
+                SoftwareRasterizer.b(35, var4Lifetime3 + 1, 558, 15116313);
+                SoftwareRasterizer.b(37, 2 + var4Lifetime3, 554, 3355443);
               } else {
                 if (this.field_h != 6 &&
                   this.field_h != 8) {
@@ -2653,20 +2653,20 @@ final class mh {
                   if (mf.field_t < vi.field_a.length << 2) {
                     vi.a(-(mf.field_t >> 2) + vi.field_a.length, gd.field_a[gf.field_h], 245, 199, vi.field_a);
                   }
-                  ph.c(243, 197, gd.field_a[0].field_j + 4, 4 + gd.field_a[0].field_e, 1);
+                  SoftwareRasterizer.c(243, 197, gd.field_a[0].field_j + 4, 4 + gd.field_a[0].field_e, 1);
                   return;
                 }
                 stackIn_96_0 = (this.field_h == 6) ? 0 : 1;
                 var2Lifetime3 = stackIn_96_0;
                 this.a(var2Lifetime3 != 0, (byte) -128);
                 var3 = 168;
-                ph.b(33, var3, 573, 3355443);
-                ph.b(31, 1 + var3, 577, 15116313);
-                ph.b(33, 2 + var3, 573, 3355443);
+                SoftwareRasterizer.b(33, var3, 573, 3355443);
+                SoftwareRasterizer.b(31, 1 + var3, 577, 15116313);
+                SoftwareRasterizer.b(33, 2 + var3, 573, 3355443);
                 var4Lifetime3 = 373;
-                ph.b(33, var4Lifetime3, 573, 3355443);
-                ph.b(31, 1 + var4Lifetime3, 577, 15116313);
-                ph.b(33, var4Lifetime3 + 2, 573, 3355443);
+                SoftwareRasterizer.b(33, var4Lifetime3, 573, 3355443);
+                SoftwareRasterizer.b(31, 1 + var4Lifetime3, 577, 15116313);
+                SoftwareRasterizer.b(33, var4Lifetime3 + 2, 573, 3355443);
               }
             }
           }

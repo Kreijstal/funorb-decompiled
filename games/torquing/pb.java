@@ -377,11 +377,11 @@ final class pb {
         }
     }
 
-    final static t[] a(String param0, int param1, String param2, la param3) {
+    final static Sprite[] a(String param0, int param1, String param2, la param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        t[] stackIn_1_0 = null;
+        Sprite[] stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

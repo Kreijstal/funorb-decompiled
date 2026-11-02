@@ -21,8 +21,8 @@ final class jo {
           }
           var3 = wa.field_d;
           var3.f(-121, param1);
-          var3.b(90, param2.field_j);
-          var3.b(90, param2.field_l);
+          var3.writeByte(90, param2.field_j);
+          var3.writeByte(90, param2.field_l);
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "jo.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

@@ -3,7 +3,7 @@
  */
 final class gd {
     static sm[] field_a;
-    static t field_b;
+    static Sprite field_b;
     static int field_c;
 
     public static void a(byte param0) {
@@ -120,7 +120,7 @@ final class gd {
     }
 
     static {
-        field_b = new t(640, 480);
+        field_b = new Sprite(640, 480);
         field_c = 0;
     }
 }

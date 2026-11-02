@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jj {
-    final static java.awt.Frame a(vh param0, int param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(PlatformTaskDispatcher param0, int param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_32_0 = null;
@@ -17,7 +17,7 @@ final class jj {
         int var7_int = 0;
         java.awt.Frame var7 = null;
         int var9 = 0;
-        vh var10 = null;
+        PlatformTaskDispatcher var10 = null;
         sf[] var11 = null;
         rc var12 = null;
         var9 = Torquing.field_u;
@@ -52,8 +52,8 @@ final class jj {
             ub.a(1976, 10L);
           }
           if (param3 != 0) {
-            var10 = (vh) null;
-            jj.a((vh) null, 19, 84, -43, 52, 100);
+            var10 = (PlatformTaskDispatcher) null;
+            jj.a((PlatformTaskDispatcher) null, 19, 84, -43, 52, 100);
           }
           var7 = (java.awt.Frame) (var12.field_d);
           if (var7 == null) {

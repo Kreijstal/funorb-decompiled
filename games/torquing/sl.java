@@ -3,11 +3,11 @@
  */
 abstract class sl extends IntrusiveNode {
     int field_k;
-    uh field_j;
+    PcmStreamMixer field_j;
 
     abstract void b();
 
-    abstract int a(uh param0);
+    abstract int a(PcmStreamMixer param0);
 
     abstract void a();
 

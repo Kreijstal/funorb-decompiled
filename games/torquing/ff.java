@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ff {
-    static t field_c;
+    static Sprite field_c;
     static boolean field_a;
     static int field_b;
 
@@ -133,11 +133,11 @@ final class ff {
     public static void a(int param0) {
         field_c = null;
         if (param0 > -44) {
-          field_c = (t) null;
+          field_c = (Sprite) null;
         }
     }
 
     static {
-        field_c = new t(270, 70);
+        field_c = new Sprite(270, 70);
     }
 }

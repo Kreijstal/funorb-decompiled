@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-abstract class jh extends gm implements cj {
-    gm field_C;
+abstract class jh extends UiWidget implements cj {
+    UiWidget field_C;
     static int field_z;
     static dg field_B;
-    static ei field_y;
+    static IntrusiveDeque field_y;
     static int field_A;
     static int[] field_x;
 
@@ -98,7 +98,7 @@ abstract class jh extends gm implements cj {
         }
     }
 
-    void a(int param0, gm param1, int param2, int param3) {
+    void a(int param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -132,11 +132,11 @@ abstract class jh extends gm implements cj {
         int var6 = 2 / ((66 - param0) / 57);
     }
 
-    gm a(boolean param0) {
+    UiWidget a(boolean param0) {
         if (!param0) {
           field_B = (dg) null;
         }
-        gm var2 = this.field_C;
+        UiWidget var2 = this.field_C;
         if (var2 == null) {
           return null;
         }
@@ -146,7 +146,7 @@ abstract class jh extends gm implements cj {
         return null;
     }
 
-    jh(int param0, int param1, int param2, int param3, el param4, ca param5) {
+    jh(int param0, int param1, int param2, int param3, WidgetRenderer param4, ca param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
@@ -154,14 +154,14 @@ abstract class jh extends gm implements cj {
         boolean discarded$0 = false;
         if (param0 == 0 &&
           this.field_q != null) {
-          this.field_q.a(108, param2, param3, true, (gm) (this));
+          this.field_q.a(108, param2, param3, true, (UiWidget) (this));
         }
         if (this.field_C != null) {
           this.field_C.a(param0, (byte) -107, this.field_k + param2, param3 + this.field_w);
         }
         if (param1 > -7) {
-          gm var6 = (gm) null;
-          discarded$0 = this.a(-5, (gm) null);
+          UiWidget var6 = (UiWidget) null;
+          discarded$0 = this.a(-5, (UiWidget) null);
         }
     }
 
@@ -188,7 +188,7 @@ abstract class jh extends gm implements cj {
         return this.a(true) != null ? true : false;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, gm param5, byte param6) {
+    boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -215,7 +215,7 @@ abstract class jh extends gm implements cj {
         }
     }
 
-    private final boolean a(int param0, gm param1) {
+    private final boolean a(int param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
@@ -244,7 +244,7 @@ abstract class jh extends gm implements cj {
     final static void a(wl param0, int param1) {
         try {
           if (param1 != 0) {
-            field_y = (ei) null;
+            field_y = (IntrusiveDeque) null;
           }
           np.a(param0, true, 126);
         } catch (RuntimeException runtimeException) {
@@ -252,7 +252,7 @@ abstract class jh extends gm implements cj {
         }
     }
 
-    void a(int param0, int param1, int param2, byte param3, gm param4, int param5) {
+    void a(int param0, int param1, int param2, byte param3, UiWidget param4, int param5) {
         if (param3 <= 109) {
           return;
         }
@@ -277,7 +277,7 @@ abstract class jh extends gm implements cj {
         return var2;
     }
 
-    final boolean a(int param0, gm param1, char param2, int param3) {
+    final boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
@@ -323,9 +323,9 @@ abstract class jh extends gm implements cj {
         field_x = null;
     }
 
-    final boolean a(int param0, boolean param1, int param2, int param3, gm param4, int param5, int param6) {
+    final boolean a(int param0, boolean param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
-        gm var9 = null;
+        UiWidget var9 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -333,8 +333,8 @@ abstract class jh extends gm implements cj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            var9 = (gm) null;
-            this.a(1, false, 78, 35, (gm) null, 4, 60);
+            var9 = (UiWidget) null;
+            this.a(1, false, 78, 35, (UiWidget) null, 4, 60);
           }
           stackIn_7_0 = (null != this.field_C) && (this.field_C.g(2)) && (this.field_C.a(param0, false, param2, param3, param4, param5, param6));
           return stackIn_7_0;
@@ -352,7 +352,7 @@ abstract class jh extends gm implements cj {
         }
     }
 
-    final boolean a(gm param0, boolean param1) {
+    final boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         wl var4 = null;
         boolean stackIn_6_0 = false;
@@ -381,7 +381,7 @@ abstract class jh extends gm implements cj {
         }
     }
 
-    private final boolean a(byte param0, gm param1) {
+    private final boolean a(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
@@ -412,12 +412,12 @@ abstract class jh extends gm implements cj {
           this.field_C.e((byte) 88);
         }
         if (param0 <= 103) {
-          gm var3 = (gm) null;
-          this.a(-121, (gm) null, 8, -63);
+          UiWidget var3 = (UiWidget) null;
+          this.a(-121, (UiWidget) null, 8, -63);
         }
     }
 
     static {
-        field_y = new ei();
+        field_y = new IntrusiveDeque();
     }
 }

@@ -8,7 +8,7 @@ final class fm extends hn implements ng {
     private lg field_B;
     static la field_F;
 
-    final boolean a(int param0, gm param1, char param2, int param3) {
+    final boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -180,14 +180,14 @@ final class fm extends hn implements ng {
     }
 
     public fm() {
-        super(0, 0, 476, 225, (el) null);
+        super(0, 0, 476, 225, (WidgetRenderer) null);
         this.field_C = new lg(qh.field_e, (ca) null);
         this.field_D = new lg(cm.field_k, (ca) null);
         this.field_B = new lg(ha.field_c, (ca) null);
         rf var1 = new rf();
-        this.field_C.field_q = (el) ((Object) var1);
-        this.field_D.field_q = (el) ((Object) var1);
-        this.field_B.field_q = (el) ((Object) var1);
+        this.field_C.field_q = (WidgetRenderer) ((Object) var1);
+        this.field_D.field_q = (WidgetRenderer) ((Object) var1);
+        this.field_B.field_q = (WidgetRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;

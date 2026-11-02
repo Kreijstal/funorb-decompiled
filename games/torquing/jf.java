@@ -4,7 +4,7 @@
 final class jf {
     static he field_c;
     static String field_b;
-    private static t field_a;
+    private static Sprite field_a;
 
     final static void a(int param0, int param1, int param2) {
         int var6 = 0;
@@ -44,10 +44,10 @@ final class jf {
         }
         tm.a((byte) -106, field_a);
         be.a();
-        ph.b();
+        SoftwareRasterizer.b();
         so.b(122);
         if (var5 < 256) {
-          ph.b(0, 0, ph.field_j, ph.field_d, 0, -var5 + 256);
+          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, -var5 + 256);
         }
         r.a(125);
         if (param0 != 540) {
@@ -236,6 +236,6 @@ final class jf {
     static {
         field_c = new he("");
         field_b = "More suggestions";
-        field_a = new t(540, 140);
+        field_a = new Sprite(540, 140);
     }
 }

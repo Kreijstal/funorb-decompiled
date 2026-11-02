@@ -5,7 +5,7 @@ final class nc {
     static int field_a;
     static String field_c;
     static String field_b;
-    static t[] field_d;
+    static Sprite[] field_d;
 
     final static void a(int param0, boolean param1) {
         ik var2 = null;

@@ -197,23 +197,23 @@ final class te extends am {
         }
         if (param3 < param6) {
           if (param6 < param5) {
-            tk.a(param0, param5, param1, param3, param4, param6, ph.field_e, param7, (byte) 122);
+            tk.a(param0, param5, param1, param3, param4, param6, SoftwareRasterizer.field_e, param7, (byte) 122);
           } else {
             if (param5 > param3) {
-              tk.a(param0, param6, param1, param3, param7, param5, ph.field_e, param4, (byte) 126);
+              tk.a(param0, param6, param1, param3, param7, param5, SoftwareRasterizer.field_e, param4, (byte) 126);
             } else {
-              tk.a(param7, param6, param1, param5, param0, param3, ph.field_e, param4, (byte) 126);
+              tk.a(param7, param6, param1, param5, param0, param3, SoftwareRasterizer.field_e, param4, (byte) 126);
             }
           }
         } else {
           if (param5 <= param3) {
             if (param6 < param5) {
-              tk.a(param4, param3, param1, param6, param7, param5, ph.field_e, param0, (byte) 122);
+              tk.a(param4, param3, param1, param6, param7, param5, SoftwareRasterizer.field_e, param0, (byte) 122);
             } else {
-              tk.a(param7, param3, param1, param5, param4, param6, ph.field_e, param0, (byte) 116);
+              tk.a(param7, param3, param1, param5, param4, param6, SoftwareRasterizer.field_e, param0, (byte) 116);
             }
           } else {
-            tk.a(param4, param5, param1, param6, param0, param3, ph.field_e, param7, (byte) 119);
+            tk.a(param4, param5, param1, param6, param0, param3, SoftwareRasterizer.field_e, param7, (byte) 119);
           }
         }
     }

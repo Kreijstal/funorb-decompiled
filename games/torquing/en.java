@@ -111,10 +111,10 @@ final class en extends d {
               var13++;
               var9Lifetime1++;
             }
-            var3_ref.f(0);
+            var3_ref.unlink(0);
             return;
           }
-          var3_ref.f(0);
+          var3_ref.unlink(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

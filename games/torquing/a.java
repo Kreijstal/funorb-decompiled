@@ -131,7 +131,7 @@ final class a {
           String stackIn_16_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (vh.field_i.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_i.startsWith("win") &&
               fq.a(param1, 0)) {
               return;
             }

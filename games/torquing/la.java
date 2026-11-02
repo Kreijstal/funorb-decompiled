@@ -5,7 +5,7 @@ final class la {
     private Object[] field_f;
     private me field_a;
     private fd field_e;
-    static t field_j;
+    static Sprite field_j;
     static long field_g;
     static int[] field_h;
     private Object[][] field_d;
@@ -244,7 +244,7 @@ final class la {
             stackIn_39_0 = var11_ref_RuntimeException;
             stackIn_39_1 = new StringBuilder();
             stackIn_40_2 = (param3 != null);
-            throw rb.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(wf.a((byte) -117, var9.length, var9)).append(" ").append(wf.a((byte) -117, var9.length - 2, var9)).append(" ").append(this.field_e.field_p[param2]).append(" ").append(this.field_e.field_o).toString());
+            throw rb.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(SpriteState.a((byte) -117, var9.length, var9)).append(" ").append(SpriteState.a((byte) -117, var9.length - 2, var9)).append(" ").append(this.field_e.field_p[param2]).append(" ").append(this.field_e.field_o).toString());
           }
           if (this.field_i) {
             this.field_f[param2] = null;
@@ -495,7 +495,7 @@ final class la {
           return true;
         }
         if (param2 > -70) {
-          field_j = (t) null;
+          field_j = (Sprite) null;
         }
         if (this.field_f[param0] != null) {
           return true;
@@ -718,7 +718,7 @@ final class la {
 
     final byte[] a(int param0, int param1, int param2) {
         if (param1 != 100) {
-          field_j = (t) null;
+          field_j = (Sprite) null;
         }
         return this.a((int[]) null, param0, param2, 30);
     }
@@ -963,7 +963,7 @@ final class la {
                 var16 = 65280 & var14;
                 incrementValue$1 = param7;
                 param7++;
-                param4[incrementValue$1] = gm.a(ie.a(16711855, var13 * var16) >> 8, ie.a(16711935, var13 * var15 >> 8));
+                param4[incrementValue$1] = UiWidget.a(ie.a(16711855, var13 * var16) >> 8, ie.a(16711935, var13 * var15 >> 8));
               } else {
                 param7++;
               }

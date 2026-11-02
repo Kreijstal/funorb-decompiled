@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class jd extends jh {
-    static t field_D;
+    static Sprite field_D;
     static o field_F;
     static boolean field_E;
 
@@ -19,7 +19,7 @@ final class jd extends jh {
               wa.field_d.f(-44, param1);
             }
             if (param0 > -48) {
-              field_D = (t) null;
+              field_D = (Sprite) null;
             }
             if (wa.field_d.position > 0) {
               try {
@@ -104,7 +104,7 @@ final class jd extends jh {
         field_F = null;
     }
 
-    private jd(int param0, int param1, int param2, int param3, el param4, ca param5, gm param6) {
+    private jd(int param0, int param1, int param2, int param3, WidgetRenderer param4, ca param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_C = param6;
@@ -142,7 +142,7 @@ final class jd extends jh {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, gm param4, int param5) {
+    final void a(int param0, int param1, int param2, byte param3, UiWidget param4, int param5) {
         RuntimeException var7 = null;
         aj var8 = null;
         RuntimeException stackIn_13_0 = null;

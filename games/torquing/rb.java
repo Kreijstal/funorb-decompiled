@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class rb extends lg {
-    private ei field_D;
+    private IntrusiveDeque field_D;
     private String[] field_E;
     static long field_C;
     private tb field_F;
 
-    rb(String param0, el param1) {
+    rb(String param0, WidgetRenderer param1) {
         super(param0, (ca) null);
         this.field_F = null;
         try {
@@ -17,7 +17,7 @@ class rb extends lg {
         }
     }
 
-    boolean a(gm param0, boolean param1) {
+    boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -52,7 +52,7 @@ class rb extends lg {
         if (param0 != 46) {
           return;
         }
-        this.a((byte) 124, param1, param3, ((fe) ((Object) this.field_q)).a((gm) (this), 2), param2);
+        this.a((byte) 124, param1, param3, ((fe) ((Object) this.field_q)).a((UiWidget) (this), 2), param2);
     }
 
     final static String a(int param0, java.applet.Applet param1) {
@@ -145,7 +145,7 @@ class rb extends lg {
         return null;
     }
 
-    void a(int param0, gm param1, int param2, int param3) {
+    void a(int param0, UiWidget param1, int param2, int param3) {
         int var6 = 0;
         int var7 = 0;
         try {
@@ -172,16 +172,16 @@ class rb extends lg {
         fe var10 = (fe) ((Object) this.field_q);
         tb var6 = this.field_F;
         if (var6 != null) {
-          var7 = var10.a(2, param3, (gm) (this));
-          var8 = var10.a((gm) (this), param2, -59);
+          var7 = var10.a(2, param3, (UiWidget) (this));
+          var8 = var10.a((UiWidget) (this), param2, -59);
           do {
             he.a(-2 + var7 + var6.field_m, 2 + var6.field_n, -2 + (var6.field_p + var8), 2, var6.field_q + 2);
             var6 = var6.field_k;
           } while (var6 != null);
         }
         if (param1 >= -7) {
-          gm var9 = (gm) null;
-          this.a(107, (gm) null, -97, 84);
+          UiWidget var9 = (UiWidget) null;
+          this.a(107, (UiWidget) null, -97, 84);
         }
     }
 
@@ -189,7 +189,7 @@ class rb extends lg {
         int var5 = 0;
         String[] var4 = null;
         int var6 = 0;
-        gm var7 = null;
+        UiWidget var7 = null;
         String[] var8 = null;
         String[] var9 = null;
         RuntimeException stackIn_15_0 = null;
@@ -213,8 +213,8 @@ class rb extends lg {
           }
           this.field_E[param0] = param2;
           if (param1 >= -73) {
-            var7 = (gm) null;
-            this.a((gm) null, false);
+            var7 = (UiWidget) null;
+            this.a((UiWidget) null, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -268,10 +268,10 @@ class rb extends lg {
         int var17;
         int var8Lifetime1;
         var17 = Torquing.field_u;
-        this.field_D = new ei();
+        this.field_D = new IntrusiveDeque();
         var2 = 0;
         var3 = (fe) ((Object) this.field_q);
-        var4 = var3.b((byte) 110, (gm) (this));
+        var4 = var3.b((byte) 110, (UiWidget) (this));
         var5 = -116 / ((param0 - 76) / 41);
         while (true) {
           var6 = this.field_m.indexOf("<hotspot=", var2);

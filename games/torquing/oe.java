@@ -5,7 +5,7 @@ final class oe {
     static int field_a;
     static int field_b;
 
-    final static void a(vh param0, int param1, Object param2) {
+    final static void a(PlatformTaskDispatcher param0, int param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

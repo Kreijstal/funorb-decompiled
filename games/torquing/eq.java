@@ -60,7 +60,7 @@ abstract class eq implements sk {
         return this.c(0);
     }
 
-    final static void a(t param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -70,24 +70,24 @@ abstract class eq implements sk {
           var9_int = -param1 + (param4 + param0.field_v) + param3;
           var10 = param8 + param3 + (param4 + param0.field_v);
           var11 = (param0.field_t >> 1) + (param0.field_r + param5);
-          ph.f(var9_int, 0, var10, param7 + var11);
+          SoftwareRasterizer.f(var9_int, 0, var10, param7 + var11);
           param0.a(-1 + param4, param5 - 1, param6);
           param0.a(param4 - 1, 1 + param5, param6);
-          ph.a(mo.field_w);
-          ph.f(1 + var9_int, 0, var10 + 1, var11 + param7);
+          SoftwareRasterizer.a(mo.field_w);
+          SoftwareRasterizer.f(1 + var9_int, 0, var10 + 1, var11 + param7);
           param0.a(1 + param4, param5 - 1, param6);
           param0.a(1 + param4, 1 + param5, param6);
-          ph.a(mo.field_w);
+          SoftwareRasterizer.a(mo.field_w);
           var9_intLifetime1 = -param8 + (param0.field_s + param0.field_v) - (-param4 + param3);
           var10Lifetime1 = param0.field_v + (param0.field_s + (param4 - param3) - param1);
-          ph.f(var9_intLifetime1, var11 - param7, var10Lifetime1, 480);
+          SoftwareRasterizer.f(var9_intLifetime1, var11 - param7, var10Lifetime1, 480);
           param0.a(param4 - 1, -1 + param5, param6);
           param0.a(param4 - 1, 1 + param5, param6);
-          ph.a(mo.field_w);
-          ph.f(var9_intLifetime1 + param2, var11 - param7, var10Lifetime1 + 1, 480);
+          SoftwareRasterizer.a(mo.field_w);
+          SoftwareRasterizer.f(var9_intLifetime1 + param2, var11 - param7, var10Lifetime1 + 1, 480);
           param0.a(1 + param4, param5 - 1, param6);
           param0.a(param4 + 1, 1 + param5, param6);
-          ph.a(mo.field_w);
+          SoftwareRasterizer.a(mo.field_w);
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "eq.Q(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

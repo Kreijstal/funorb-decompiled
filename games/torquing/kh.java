@@ -7,7 +7,7 @@ final class kh extends IntrusiveNode {
     static int[] field_m;
     static gd field_o;
     mp field_q;
-    static t field_r;
+    static Sprite field_r;
     static String[] field_n;
     static String field_j;
     rm field_l;

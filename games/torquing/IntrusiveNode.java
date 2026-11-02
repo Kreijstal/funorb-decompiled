@@ -14,11 +14,11 @@ class IntrusiveNode {
 
     final static void a(int param0, int param1, int param2, PacketBuffer param3, int param4) {
         try {
-          param3.b(90, 12);
+          param3.writeByte(90, 12);
           param3.a(17, 124);
           param3.a(param2, 120);
           param3.a(param4, 71);
-          param3.b(90, param0);
+          param3.writeByte(90, param0);
           if (param1 <= 94) {
             PacketBuffer var6 = (PacketBuffer) null;
             IntrusiveNode.a(-127, 58, -29, (PacketBuffer) null, -68);
@@ -28,11 +28,11 @@ class IntrusiveNode {
         }
     }
 
-    final void f(int param0) {
+    final void unlink(int obfuscationGuard) {
         if (null == this.next) {
           return;
         }
-        if (param0 == 0) {
+        if (obfuscationGuard == 0) {
           this.next.previous = this.previous;
           this.previous.next = this.next;
           this.next = null;

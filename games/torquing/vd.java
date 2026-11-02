@@ -151,7 +151,7 @@ final class vd {
             var14.field_r = var3;
             var14.field_n = true;
             var14.field_m = var16[0];
-            var14.f(0);
+            var14.unlink(0);
             return;
           }
           if (var2 != 1) {
@@ -167,7 +167,7 @@ final class vd {
               var15.field_r = kb.a((byte) -91);
               var15.field_m = var15.field_r[0];
               var15.field_n = true;
-              var15.f(0);
+              var15.unlink(0);
             }
           } else {
             var11 = (qp) (tl.field_p.b(0));
@@ -175,7 +175,7 @@ final class vd {
               ih.b(true);
               return;
             }
-            var11.f(0);
+            var11.unlink(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

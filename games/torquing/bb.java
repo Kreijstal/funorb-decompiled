@@ -9,7 +9,7 @@ abstract class bb extends hn {
     abstract void b(int param0, int param1, byte param2);
 
     bb(ln param0, int param1, int param2) {
-        super(qj.field_f - param1 >> 1, -param2 + RasterBuffer.field_h >> 1, param1, param2, (el) null);
+        super(qj.field_f - param1 >> 1, -param2 + RasterBuffer.field_h >> 1, param1, param2, (WidgetRenderer) null);
         try {
           this.field_C = param0;
           this.field_D = false;
@@ -47,12 +47,12 @@ abstract class bb extends hn {
         return false;
     }
 
-    final gm a(int param0) {
-        gm var2 = super.a(param0 ^ param0);
+    final UiWidget a(int param0) {
+        UiWidget var2 = super.a(param0 ^ param0);
         if (var2 != null) {
           return var2;
         }
-        return (gm) (this);
+        return (UiWidget) (this);
     }
 
     private final int i(int param0) {
@@ -122,10 +122,10 @@ abstract class bb extends hn {
           return;
         }
         if (null == ue.field_b) {
-          ue.field_b = new t(this.field_p, this.field_o);
+          ue.field_b = new Sprite(this.field_p, this.field_o);
           if (param1 <= -7) {
             tm.a((byte) -109, ue.field_b);
-            ph.b();
+            SoftwareRasterizer.b();
             this.b(0, 0, (byte) -127);
             super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
             r.a(126);
@@ -134,7 +134,7 @@ abstract class bb extends hn {
           }
           this.a((byte) -26);
           tm.a((byte) -109, ue.field_b);
-          ph.b();
+          SoftwareRasterizer.b();
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
           r.a(126);
@@ -142,10 +142,10 @@ abstract class bb extends hn {
           return;
         }
         if (this.field_p > ue.field_b.field_s) {
-          ue.field_b = new t(this.field_p, this.field_o);
+          ue.field_b = new Sprite(this.field_p, this.field_o);
           if (param1 <= -7) {
             tm.a((byte) -109, ue.field_b);
-            ph.b();
+            SoftwareRasterizer.b();
             this.b(0, 0, (byte) -127);
             super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
             r.a(126);
@@ -154,7 +154,7 @@ abstract class bb extends hn {
           }
           this.a((byte) -26);
           tm.a((byte) -109, ue.field_b);
-          ph.b();
+          SoftwareRasterizer.b();
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
           r.a(126);
@@ -162,10 +162,10 @@ abstract class bb extends hn {
           return;
         }
         if (this.field_o > ue.field_b.field_t) {
-          ue.field_b = new t(this.field_p, this.field_o);
+          ue.field_b = new Sprite(this.field_p, this.field_o);
           if (param1 <= -7) {
             tm.a((byte) -109, ue.field_b);
-            ph.b();
+            SoftwareRasterizer.b();
             this.b(0, 0, (byte) -127);
             super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
             r.a(126);
@@ -174,7 +174,7 @@ abstract class bb extends hn {
           }
           this.a((byte) -26);
           tm.a((byte) -109, ue.field_b);
-          ph.b();
+          SoftwareRasterizer.b();
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
           r.a(126);
@@ -183,7 +183,7 @@ abstract class bb extends hn {
         }
         if (param1 <= -7) {
           tm.a((byte) -109, ue.field_b);
-          ph.b();
+          SoftwareRasterizer.b();
           this.b(0, 0, (byte) -127);
           super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
           r.a(126);
@@ -192,7 +192,7 @@ abstract class bb extends hn {
         }
         this.a((byte) -26);
         tm.a((byte) -109, ue.field_b);
-        ph.b();
+        SoftwareRasterizer.b();
         this.b(0, 0, (byte) -127);
         super.a(param0, (byte) -64, -param2 - this.field_k, -this.field_w - param3);
         r.a(126);

@@ -12,7 +12,7 @@ final class tm {
 
     final static boolean a(boolean param0, String param1, String param2) {
         String var3 = null;
-        t var4 = null;
+        Sprite var4 = null;
         boolean stackIn_14_0 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -24,8 +24,8 @@ final class tm {
         try {
           var3 = db.a(param2, 31108);
           if (!param0) {
-            var4 = (t) null;
-            tm.a((byte) 108, (t) null);
+            var4 = (Sprite) null;
+            tm.a((byte) 108, (Sprite) null);
           }
           if (param1.indexOf(param2) != -1) {
             return true;
@@ -98,10 +98,10 @@ final class tm {
         }
     }
 
-    final static void a(byte param0, t param1) {
+    final static void a(byte param0, Sprite param1) {
         try {
           bp.a((byte) -78);
-          ph.a(param1.field_y, param1.field_w, param1.field_u);
+          SoftwareRasterizer.a(param1.field_y, param1.field_w, param1.field_u);
           int var2_int = 10 % ((param0 + 52) / 47);
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "tm.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

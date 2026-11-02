@@ -223,7 +223,7 @@ final class ij extends gf {
               ih.b(true);
               return;
             }
-            var9.f(0);
+            var9.unlink(0);
           } else {
             if (1 == var2) {
               var3 = var10.c((byte) -59);
@@ -239,7 +239,7 @@ final class ij extends gf {
                 ih.b(true);
                 return;
               }
-              var4_ref_ni.f(0);
+              var4_ref_ni.unlink(0);
             } else {
               nn.a("A1: " + me.a(-1), (Throwable) null, -9958);
               ih.b(true);

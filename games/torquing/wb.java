@@ -72,7 +72,7 @@ final class wb extends am {
             field_u = (MouseWheelInput) null;
           }
           if (param2 == 0) {
-            this.field_s = param0.i(7088);
+            this.field_s = param0.readUnsignedShort(7088);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -98,7 +98,7 @@ final class wb extends am {
     }
 
     final static void b(int param0) {
-        t var1 = null;
+        Sprite var1 = null;
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -109,12 +109,12 @@ final class wb extends am {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        t var9 = null;
+        Sprite var9 = null;
         int var10 = 0;
-        t var11 = null;
-        t var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         String var14 = null;
-        t var16 = null;
+        Sprite var16 = null;
         int[] var27 = null;
         int[] var28 = null;
         int[] var29 = null;
@@ -166,17 +166,17 @@ final class wb extends am {
             qc.field_db = mn.a(qm.field_a, "benefits", "arrow", 110);
             lh.field_O = (uc) ((Object) qg.a(ae.field_mb, qm.field_a, "benefits", "large_font", 255));
             kl.field_o = (uc) ((Object) qg.a(ae.field_mb, qm.field_a, "benefits", "small_font", param0 + 256));
-            var27 = ph.field_e;
-            var2 = ph.field_j;
-            var3 = ph.field_d;
-            ph.b(mo.field_w);
-            var11 = new t(qc.field_db.field_s + 4, 4 + qc.field_db.field_t);
+            var27 = SoftwareRasterizer.field_e;
+            var2 = SoftwareRasterizer.field_j;
+            var3 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.b(mo.field_w);
+            var11 = new Sprite(qc.field_db.field_s + 4, 4 + qc.field_db.field_t);
             var11.e();
             qc.field_db.d(2, 2, fa.field_c);
             hb.a(0, false, var11, var11.field_t, var11.field_s, 1, 0, 2);
             qc.field_db = var11;
             p.field_w = qc.field_db.b();
-            var12 = new t(195, 221);
+            var12 = new Sprite(195, 221);
             var6 = var12.field_s / 2;
             var12.e();
             lh.field_O.c(ff.a(new String[]{hc.field_u}, 0, eo.field_c), var6, 40, 16777215, -1);
@@ -196,9 +196,9 @@ final class wb extends am {
             ik.field_k = null;
             ue.field_f = je.field_e.c();
             ue.field_f.e();
-            kp.a(ph.field_j, 2 * ph.field_d / 3, 0, (byte) 16, 64, 0);
-            ph.a(var27, var2, var3);
-            ph.a(mo.field_w);
+            kp.a(SoftwareRasterizer.field_j, 2 * SoftwareRasterizer.field_d / 3, 0, (byte) 16, 64, 0);
+            SoftwareRasterizer.a(var27, var2, var3);
+            SoftwareRasterizer.a(mo.field_w);
             qm.field_a = null;
             na.field_E = 231 + (vk.field_s.field_s - jg.field_t.field_s) / 2;
             db.field_j = (-jg.field_t.field_s + vk.field_s.field_s) / 2 + 434;
@@ -213,10 +213,10 @@ final class wb extends am {
           }
           if (j.field_F != null &&
             null != lh.field_O) {
-            var28 = ph.field_e;
-            var2Lifetime1 = ph.field_j;
-            var3Lifetime1 = ph.field_d;
-            ph.b(mo.field_w);
+            var28 = SoftwareRasterizer.field_e;
+            var2Lifetime1 = SoftwareRasterizer.field_j;
+            var3Lifetime1 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.b(mo.field_w);
             var14 = ff.a(new String[]{rl.field_b[gj.field_j]}, 0, wc.field_t);
             var5 = lh.field_O.b(var14, hn.field_x);
             var6Lifetime1 = lh.field_O.a(var14, hn.field_x, lh.field_O.field_x + lh.field_O.field_t);
@@ -263,27 +263,27 @@ final class wb extends am {
               Torquing.field_x = Torquing.field_x - var9_intLifetime3;
             }
             j.field_F.a();
-            var9 = new t(j.field_F.field_w, j.field_F.field_u);
+            var9 = new Sprite(j.field_F.field_w, j.field_F.field_u);
             var9.e();
             lh.field_O.a(var14, up.field_d, lb.field_y, hn.field_x, wh.field_w, 16777215, -1, 1, 1, lh.field_O.field_x + lh.field_O.field_t);
             hb.a(0, false, var9, var9.field_u, var9.field_w, 1, 0, 3);
             j.field_F.e();
             var9.d(0, 0);
-            MouseWheelInput.field_b = new t(640, 480);
+            MouseWheelInput.field_b = new Sprite(640, 480);
             MouseWheelInput.field_b.e();
             j.field_F.a((j.field_F.field_w >> 1) + gi.field_d, Torquing.field_x + (j.field_F.field_u >> 1), tl.field_n, 4096);
             j.field_F = null;
             MouseWheelInput.field_b.d();
-            ph.a(var28, var2Lifetime1, var3Lifetime1);
-            ph.a(mo.field_w);
+            SoftwareRasterizer.a(var28, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.a(mo.field_w);
           }
           if (null != hf.field_a &&
             kl.field_o != null) {
-            var29 = ph.field_e;
-            var2Lifetime2 = ph.field_j;
-            var3Lifetime2 = ph.field_d;
-            ph.b(mo.field_w);
-            var16 = new t(412, 43);
+            var29 = SoftwareRasterizer.field_e;
+            var2Lifetime2 = SoftwareRasterizer.field_j;
+            var3Lifetime2 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.b(mo.field_w);
+            var16 = new Sprite(412, 43);
             var5_ref_String = ff.a(new String[]{hf.field_a}, 0, co.field_d);
             hf.field_a = null;
             var16.e();
@@ -291,15 +291,15 @@ final class wb extends am {
             hb.a(0, false, var16, var16.field_t, var16.field_s, 1, 0, 3);
             jd.field_D.e();
             var16.d(199 - jd.field_D.field_v, -jd.field_D.field_r + 83);
-            ph.a(var29, var2Lifetime2, var3Lifetime2);
-            ph.a(mo.field_w);
+            SoftwareRasterizer.a(var29, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.a(mo.field_w);
           }
           if (kj.field_b != null &&
             kl.field_o != null) {
-            var30 = ph.field_e;
-            var2Lifetime3 = ph.field_j;
-            var3Lifetime3 = ph.field_d;
-            ph.b(mo.field_w);
+            var30 = SoftwareRasterizer.field_e;
+            var2Lifetime3 = SoftwareRasterizer.field_j;
+            var3Lifetime3 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.b(mo.field_w);
             var4 = 6 + kl.field_o.b(eh.field_e, 640);
             var5Lifetime1 = var4 - (-kj.field_b.field_w - 20);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
@@ -309,13 +309,13 @@ final class wb extends am {
             hb.a(var7Lifetime2 + (-jd.field_D.field_v - 4), false, jd.field_D, 50, var4, 1, 155 - jd.field_D.field_r, 3);
             var8Lifetime1 = -((-kl.field_o.field_t + (-kl.field_o.field_x + kj.field_b.field_u) - 3) / 2) + (-jd.field_D.field_r + 155);
             kj.field_b.d(var6Lifetime2 - jd.field_D.field_v, var8Lifetime1);
-            ph.a(var30, var2Lifetime3, var3Lifetime3);
-            ph.a(mo.field_w);
+            SoftwareRasterizer.a(var30, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.a(mo.field_w);
             kj.field_b = null;
           }
-          ph.b(mo.field_w);
-          ph.a(16, 16, 608, 112, 15, ln.field_G, of.field_o);
-          ph.a(231, 144, 393, 232, 15, ln.field_G, of.field_o);
+          SoftwareRasterizer.b(mo.field_w);
+          SoftwareRasterizer.a(16, 16, 608, 112, 15, ln.field_G, of.field_o);
+          SoftwareRasterizer.a(231, 144, 393, 232, 15, ln.field_G, of.field_o);
           if (RasterBuffer.field_f != null) {
             RasterBuffer.field_f.d(0, 0);
           }

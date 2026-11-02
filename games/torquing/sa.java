@@ -5,7 +5,7 @@ import java.util.*;
 
 final class sa implements Runnable {
     volatile boolean field_f;
-    vh field_b;
+    PlatformTaskDispatcher field_b;
     volatile pi[] field_c;
     static String field_a;
     static Random field_d;

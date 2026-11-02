@@ -7,8 +7,8 @@ final class fq extends jh {
     static byte[][] field_G;
     static boolean field_E;
 
-    fq(gm param0) {
-        super(param0.field_w, param0.field_k, param0.field_p, param0.field_o, (el) null, (ca) null);
+    fq(UiWidget param0) {
+        super(param0.field_w, param0.field_k, param0.field_p, param0.field_o, (WidgetRenderer) null, (ca) null);
         try {
           param0.a((byte) -83, 0, 0, this.field_o, this.field_p);
           this.field_D = 256;
@@ -19,12 +19,12 @@ final class fq extends jh {
     }
 
     public fq() {
-        super(0, 0, 0, 0, (el) null, (ca) null);
+        super(0, 0, 0, 0, (WidgetRenderer) null, (ca) null);
         this.field_D = 256;
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        t var5 = null;
+        Sprite var5 = null;
         if (0 != param0) {
           return;
         }
@@ -39,7 +39,7 @@ final class fq extends jh {
           return;
         }
         if (param1 <= -7) {
-          var5 = new t(this.field_C.field_p, this.field_C.field_o);
+          var5 = new Sprite(this.field_C.field_p, this.field_C.field_o);
           tm.a((byte) 34, var5);
           this.field_C.a(param0, (byte) -61, 0, 0);
           r.a(122);
@@ -110,7 +110,7 @@ final class fq extends jh {
         var4 = Torquing.field_u;
         try {
           try {
-            if (!vh.field_i.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_i.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

@@ -22,7 +22,7 @@ final class SecondaryNodeDeque implements Iterable {
     final void a(DualLinkNode param0, byte param1) {
         try {
           if (param0.field_j != null) {
-            param0.h(0);
+            param0.unlinkSecondary(0);
           }
           param0.field_p = this.field_a;
           param0.field_j = this.field_a.field_j;
@@ -77,13 +77,13 @@ final class SecondaryNodeDeque implements Iterable {
         if (param0 != 4) {
           this.a(121);
           if (var2 != this.field_a) {
-            var2.h(0);
+            var2.unlinkSecondary(0);
             return var2;
           }
           return null;
         }
         if (var2 != this.field_a) {
-          var2.h(0);
+          var2.unlinkSecondary(0);
           return var2;
         }
         return null;

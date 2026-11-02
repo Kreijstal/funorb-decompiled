@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-class gm extends IntrusiveNode {
+class UiWidget extends IntrusiveNode {
     int field_p;
-    el field_q;
+    WidgetRenderer field_q;
     int field_l;
     int field_w;
     String field_n;
@@ -35,7 +35,7 @@ class gm extends IntrusiveNode {
         }
     }
 
-    boolean a(gm param0, boolean param1) {
+    boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -357,7 +357,7 @@ class gm extends IntrusiveNode {
         }
     }
 
-    void a(int param0, gm param1, int param2, int param3) {
+    void a(int param0, UiWidget param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -426,7 +426,7 @@ class gm extends IntrusiveNode {
           }
           if (null != this.field_q) {
             discarded$4 = param0.append(" renderer=");
-            if (this.field_q instanceof gm) {
+            if (this.field_q instanceof UiWidget) {
               param0 = this.a(param0, (byte) 117, param3, 1 + param1);
               if (var6 != 0) {
                 discarded$5 = param0.append(this.field_q);
@@ -437,7 +437,7 @@ class gm extends IntrusiveNode {
           }
           if (null != this.field_t) {
             discarded$6 = param0.append(" listener=");
-            if (!(this.field_t instanceof gm)) {
+            if (!(this.field_t instanceof UiWidget)) {
               discarded$7 = param0.append(this.field_t);
               if (var6 == 0) {
                 return;
@@ -466,7 +466,7 @@ class gm extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, boolean param1, int param2, int param3, gm param4, int param5, int param6) {
+    boolean a(int param0, boolean param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -502,7 +502,7 @@ class gm extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 117) {
-            gm.a(false, (double[]) null, -107, -0.28975176104484157, (double[]) null, 0.9414541521016125, false, (double[]) null, (double[]) null, true);
+            UiWidget.a(false, (double[]) null, -107, -0.28975176104484157, (double[]) null, 0.9414541521016125, false, (double[]) null, (double[]) null, true);
           }
           if (this.a(-31866, param0, param2, param3)) {
             this.a(param0, param3, true, param2);
@@ -529,7 +529,7 @@ class gm extends IntrusiveNode {
         }
     }
 
-    gm(String param0, ca param1) {
+    UiWidget(String param0, ca param1) {
         this(param0, ah.field_c.field_n, param1);
     }
 
@@ -550,7 +550,7 @@ class gm extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, gm param1, char param2, int param3) {
+    boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_5_0 = null;
@@ -690,7 +690,7 @@ class gm extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param0) {
-            gm.a(true, -41, (String) null);
+            UiWidget.a(true, -41, (String) null);
           }
           var3 = new gj();
           ((ao) ((Object) var3)).field_c = param2;
@@ -727,7 +727,7 @@ class gm extends IntrusiveNode {
             return stackIn_12_0;
           }
           if (param1 != 24454) {
-            this.a(-88, (gm) null, 'ﾨ', -18);
+            this.a(-88, (UiWidget) null, 'ﾨ', -18);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -737,7 +737,7 @@ class gm extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, gm param5, byte param6) {
+    boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -836,7 +836,7 @@ class gm extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, byte param3, gm param4, int param5) {
+    void a(int param0, int param1, int param2, byte param3, UiWidget param4, int param5) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -862,12 +862,12 @@ class gm extends IntrusiveNode {
         }
     }
 
-    protected gm() {
+    protected UiWidget() {
         this.field_j = 0;
         this.field_v = 0;
     }
 
-    gm(String param0, el param1, ca param2) {
+    UiWidget(String param0, WidgetRenderer param1, ca param2) {
         RuntimeException runtimeException = null;
         fe var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -916,7 +916,7 @@ class gm extends IntrusiveNode {
         }
     }
 
-    gm(int param0, int param1, int param2, int param3, el param4, ca param5) {
+    UiWidget(int param0, int param1, int param2, int param3, WidgetRenderer param4, ca param5) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

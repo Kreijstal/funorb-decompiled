@@ -5,10 +5,10 @@ final class bi {
     static pc field_f;
     private boolean field_t;
     static String field_u;
-    ei field_e;
+    IntrusiveDeque field_e;
     static String field_I;
     static int field_p;
-    ei field_B;
+    IntrusiveDeque field_B;
     int field_n;
     private int field_j;
     private int[] field_m;
@@ -906,7 +906,7 @@ final class bi {
         String var3_ref_String = null;
         int var4 = 0;
         int var5_int = 0;
-        t var5 = null;
+        Sprite var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -927,7 +927,7 @@ final class bi {
         try {
           if (this.field_c < 0 &&
             this.field_c != -2147483648) {
-            ph.d(0, 0, ph.field_j, ph.field_d, 16777215);
+            SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 16777215);
             this.field_c = -2147483648;
             return;
           }
@@ -938,10 +938,10 @@ final class bi {
               null != hi.field_h[var2_int]) {
               hi.field_h[var2_int].b(0, 0);
             } else {
-              gm.field_r[var2_int].b(0, 0);
+              UiWidget.field_r[var2_int].b(0, 0);
             }
           } else {
-            gm.field_r[7].b(0, 0);
+            UiWidget.field_r[7].b(0, 0);
           }
           if (this.field_K < 0.0) {
             this.field_P.a(true, gj.field_i);
@@ -1023,7 +1023,7 @@ final class bi {
               boolean decompiledFrameRemainder0 = true;
               if ((dd.field_d >> var4Lifetime2 & 1) == 0 && ((1 & this.field_z >> var4Lifetime2) == 0 ||
                 this.field_k % 1000 >= 500)) {
-                ph.b(var5_intLifetime2, 118, ue.field_c[var4Lifetime2].field_w, ue.field_c[var4Lifetime2].field_u, 16777215, 118);
+                SoftwareRasterizer.b(var5_intLifetime2, 118, ue.field_c[var4Lifetime2].field_w, ue.field_c[var4Lifetime2].field_u, 16777215, 118);
                 ue.field_c[var4Lifetime2 + 8].e(var5_intLifetime2, 118, 81);
                 decompiledFrameRemainder0 = false;
               }
@@ -1629,8 +1629,8 @@ final class bi {
         RuntimeException var3 = null;
         StringBuilder var6 = null;
         this.field_t = false;
-        this.field_e = new ei();
-        this.field_B = new ei();
+        this.field_e = new IntrusiveDeque();
+        this.field_B = new IntrusiveDeque();
         this.field_E = 1365;
         this.field_N = -17;
         this.field_S = -1878996731;

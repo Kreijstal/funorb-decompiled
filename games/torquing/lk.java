@@ -166,13 +166,13 @@ final class lk extends am {
           if (var4_int != 0) {
             if (1 != var4_int) {
               if (var4_int == 2) {
-                this.field_w = param0.i(param1 ^ 7059);
+                this.field_w = param0.readUnsignedShort(param1 ^ 7059);
               }
             } else {
-              this.field_u = param0.i(7088);
+              this.field_u = param0.readUnsignedShort(7088);
             }
           } else {
-            this.field_s = param0.i(7088);
+            this.field_s = param0.readUnsignedShort(7088);
           }
           if (param1 != 35) {
             lk.a('ﾻ', -28);

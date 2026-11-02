@@ -120,7 +120,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               stackIn_95_0 = -1;
               if (var12 == 0) {
                 if (stackIn_95_0 != ~var2.field_t[var5]) {
-                  param0.b(90, var2.field_t[var5]);
+                  param0.writeByte(90, var2.field_t[var5]);
                 } else {
                   try {
                     var6_int = var2.field_q[var5];
@@ -128,18 +128,18 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       case 0:
                         var7 = (java.lang.reflect.Field) (var2.field_u[var5].field_d);
                         var8 = var7.getInt((Object) null);
-                        param0.b(90, 0);
+                        param0.writeByte(90, 0);
                         param0.b((byte) 60, var8);
                         break;
                       case 1:
                         var7 = (java.lang.reflect.Field) (var2.field_u[var5].field_d);
                         var7.setInt((Object) null, var2.field_k[var5]);
-                        param0.b(90, 0);
+                        param0.writeByte(90, 0);
                         break;
                       case 2:
                         var7 = (java.lang.reflect.Field) (var2.field_u[var5].field_d);
                         var8 = var7.getModifiers();
-                        param0.b(90, 0);
+                        param0.writeByte(90, 0);
                         param0.b((byte) 60, var8);
                         break;
                       default:
@@ -170,35 +170,35 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                           if (!(var10 instanceof Number)) {
                             boolean decompiledSharedTail0 = !(var10 instanceof String);
                             if (!decompiledSharedTail0) {
-                              param0.b(90, 2);
+                              param0.writeByte(90, 2);
                               param0.b((byte) 4, (String) (var10));
                               decompiledSharedTail0 = (var12 != 0);
                             }
                             if (decompiledSharedTail0) {
-                              param0.b(90, 4);
+                              param0.writeByte(90, 4);
                               if (var12 != 0) {
-                                param0.b(90, 1);
+                                param0.writeByte(90, 1);
                                 param0.a(102, ((Number) (var10)).longValue());
                                 if (var12 != 0) {
-                                  param0.b(90, 0);
+                                  param0.writeByte(90, 0);
                                 }
                               }
                             }
                           } else {
-                            param0.b(90, 1);
+                            param0.writeByte(90, 1);
                             param0.a(102, ((Number) (var10)).longValue());
                             if (var12 != 0) {
-                              param0.b(90, 0);
+                              param0.writeByte(90, 0);
                             }
                           }
                         } else {
-                          param0.b(90, 0);
+                          param0.writeByte(90, 0);
                         }
                         if ((var12 != 0) &&
                           (var6_int == 4)) {
                           var7_ref = (java.lang.reflect.Method) (var2.field_n[var5].field_d);
                           var8 = var7_ref.getModifiers();
-                          param0.b(90, 0);
+                          param0.writeByte(90, 0);
                           param0.b((byte) 60, var8);
                         }
                       }
@@ -206,58 +206,58 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                       if (var6_int == 4) {
                         var7_ref = (java.lang.reflect.Method) (var2.field_n[var5].field_d);
                         var8 = var7_ref.getModifiers();
-                        param0.b(90, 0);
+                        param0.writeByte(90, 0);
                         param0.b((byte) 60, var8);
                       }
                     }
                   } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                     decompiledCaughtException = decompiledCaughtParameter0;
                     var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                    param0.b(90, -10);
+                    param0.writeByte(90, -10);
                   } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var6_ref = (InvalidClassException) (Object) decompiledCaughtException;
-                    param0.b(90, -11);
+                    param0.writeByte(90, -11);
                   } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
                     decompiledCaughtException = decompiledCaughtParameter2;
                     var6_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
-                    param0.b(90, -12);
+                    param0.writeByte(90, -12);
                   } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
                     decompiledCaughtException = decompiledCaughtParameter3;
                     var6_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
-                    param0.b(90, -13);
+                    param0.writeByte(90, -13);
                   } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                     decompiledCaughtException = decompiledCaughtParameter4;
                     var6_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
-                    param0.b(90, -14);
+                    param0.writeByte(90, -14);
                   } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
                     decompiledCaughtException = decompiledCaughtParameter5;
                     var6_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
-                    param0.b(90, -15);
+                    param0.writeByte(90, -15);
                   } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
                     decompiledCaughtException = decompiledCaughtParameter6;
                     var6_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
-                    param0.b(90, -16);
+                    param0.writeByte(90, -16);
                   } catch (java.lang.SecurityException decompiledCaughtParameter7) {
                     decompiledCaughtException = decompiledCaughtParameter7;
                     var6_ref7 = (SecurityException) (Object) decompiledCaughtException;
-                    param0.b(90, -17);
+                    param0.writeByte(90, -17);
                   } catch (java.io.IOException decompiledCaughtParameter8) {
                     decompiledCaughtException = decompiledCaughtParameter8;
                     var6_ref8 = (IOException) (Object) decompiledCaughtException;
-                    param0.b(90, -18);
+                    param0.writeByte(90, -18);
                   } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
                     decompiledCaughtException = decompiledCaughtParameter9;
                     var6_ref9 = (NullPointerException) (Object) decompiledCaughtException;
-                    param0.b(90, -19);
+                    param0.writeByte(90, -19);
                   } catch (java.lang.Exception decompiledCaughtParameter10) {
                     decompiledCaughtException = decompiledCaughtParameter10;
                     var6_ref10 = (Exception) (Object) decompiledCaughtException;
-                    param0.b(90, -20);
+                    param0.writeByte(90, -20);
                   } catch (java.lang.Throwable decompiledCaughtParameter11) {
                     decompiledCaughtException = decompiledCaughtParameter11;
                     var6_ref11 = decompiledCaughtException;
-                    param0.b(90, -21);
+                    param0.writeByte(90, -21);
                   }
                 }
                 var5++;
@@ -268,7 +268,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             if (decompiledNaturalLoopExit0) {
               stackIn_95_0 = param0.a(var4, true);
             }
-            var2.f(param1 ^ param1);
+            var2.unlink(param1 ^ param1);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -542,11 +542,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (null != vh.field_u) {
-                var1 = vh.field_u.toLowerCase();
+              if (null != PlatformTaskDispatcher.field_u) {
+                var1 = PlatformTaskDispatcher.field_u.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   -1 != ((String) (var1)).indexOf("apple")) {
-                  var2 = vh.field_v;
+                  var2 = PlatformTaskDispatcher.field_v;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -588,8 +588,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (vh.field_v != null))) {
-                stackIn_70_0 = vh.field_v.startsWith("1.");
+                (decompiledFrameRemainder2 = (PlatformTaskDispatcher.field_v != null))) {
+                stackIn_70_0 = PlatformTaskDispatcher.field_v.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -598,8 +598,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (vh.field_v.length() > var1_int) {
-                    var3 = vh.field_v.charAt(var1_int);
+                  if (PlatformTaskDispatcher.field_v.length() > var1_int) {
+                    var3 = PlatformTaskDispatcher.field_v.charAt(var1_int);
                     stackIn_86_0 = -49;
                     stackIn_86_1 = ~var3;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -626,7 +626,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 if (wj.field_g != null) {
                   var1 = wj.field_g;
                 }
-                var2_ref = vh.field_j;
+                var2_ref = PlatformTaskDispatcher.field_j;
                 if (var2_ref != null) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -960,7 +960,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     final void a(int param0, int param1, String param2, int param3, int param4, int param5, int param6) {
         try {
-          vh dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_21_0 = null;
           StringBuilder stackIn_21_1 = null;
           String stackIn_22_2 = null;
@@ -991,7 +991,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               mi.field_s = param3;
               aq.field_d = 0;
               lg.field_B = ip.a(9);
-              dupTemp$0 = new vh(param5, param2, param6, true);
+              dupTemp$0 = new PlatformTaskDispatcher(param5, param2, param6, true);
               nk.field_u = dupTemp$0;
               pp.field_f = dupTemp$0;
               var8_int = 117 % ((param1 - 76) / 34);

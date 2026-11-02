@@ -11,15 +11,15 @@ final class gl extends me {
     private jp field_j;
     private co field_u;
     private int field_c;
-    static ei field_d;
+    static IntrusiveDeque field_d;
     private pb field_h;
     private eb field_t;
     static int field_q;
     private int field_p;
     private int field_n;
-    private ei field_s;
+    private IntrusiveDeque field_s;
     private boolean field_l;
-    private ei field_e;
+    private IntrusiveDeque field_e;
     private boolean field_b;
     private long field_o;
     private boolean field_m;
@@ -39,7 +39,7 @@ final class gl extends me {
           return this.field_v;
         }
         if (param0 != -126) {
-          this.field_s = (ei) null;
+          this.field_s = (IntrusiveDeque) null;
         }
         if (null == this.field_i) {
           if (this.field_j.a(20)) {
@@ -114,7 +114,7 @@ final class gl extends me {
           return;
         }
         if (this.field_e == null) {
-          this.field_e = new ei();
+          this.field_e = new IntrusiveDeque();
         }
     }
 
@@ -127,7 +127,7 @@ final class gl extends me {
           return null;
         }
         byte[] var4 = var3.c((byte) 112);
-        var3.f(0);
+        var3.unlink(0);
         return var4;
     }
 
@@ -165,13 +165,13 @@ final class gl extends me {
         while (var2 != null) {
           var3 = (int)var2.key;
           if (var3 < 0) {
-            var2.f(0);
+            var2.unlink(0);
           } else {
             if (this.field_v.field_c <= var3) {
-              var2.f(0);
+              var2.unlink(0);
             } else {
               if (this.field_v.field_l[var3] == 0) {
-                var2.f(0);
+                var2.unlink(0);
               } else {
                 if (this.field_f[var3] == 0) {
                   discarded$0 = this.a(var3, 121, 1);
@@ -180,7 +180,7 @@ final class gl extends me {
                   discarded$1 = this.a(var3, 104, 2);
                 }
                 if (this.field_f[var3] == 1) {
-                  var2.f(0);
+                  var2.unlink(0);
                 }
               }
             }
@@ -218,7 +218,7 @@ final class gl extends me {
           0 == param2 &&
           !var12.field_w &&
           var12.field_r) {
-          var12.f(0);
+          var12.unlink(0);
           var4 = null;
         }
         if (var4 == null) {
@@ -292,7 +292,7 @@ final class gl extends me {
                 this.field_f[param0] = (byte) 1;
               }
               if (!((nk) (var4)).field_w) {
-                ((nk) (var4)).f(0);
+                ((nk) (var4)).unlink(0);
               }
               stackIn_61_0 = var4;
               return (nk) (stackIn_61_0);
@@ -302,7 +302,7 @@ final class gl extends me {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_f[param0] = (byte)-1;
-            ((nk) (var4)).f(0);
+            ((nk) (var4)).unlink(0);
             if (((nk) (var4)).field_w) {
               if (this.field_j.a(20)) {
                 return null;
@@ -344,7 +344,7 @@ final class gl extends me {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_j.e((byte) -58);
-          ((nk) (var4)).f(0);
+          ((nk) (var4)).unlink(0);
           if (!((nk) (var4)).field_w) {
             return null;
           }
@@ -364,7 +364,7 @@ final class gl extends me {
           }
         }
         if (!((nk) (var4)).field_w) {
-          ((nk) (var4)).f(0);
+          ((nk) (var4)).unlink(0);
         }
         return (nk) (var4);
     }
@@ -404,7 +404,7 @@ final class gl extends me {
               if (this.field_f[var4] == 0) {
                 var2_int = 0;
               } else {
-                var3.f(0);
+                var3.unlink(0);
               }
               var3 = this.field_e.f(-24059);
             }
@@ -446,7 +446,7 @@ final class gl extends me {
                   discarded$3 = this.a(var4Lifetime1, 124, 2);
                 }
                 if (this.field_f[var4Lifetime1] == 1) {
-                  var3Lifetime1.f(~param0);
+                  var3Lifetime1.unlink(~param0);
                 } else {
                   var2_intLifetime1 = 0;
                 }
@@ -493,7 +493,7 @@ final class gl extends me {
                 if (!var2.field_w) {
                   throw new RuntimeException();
                 }
-                var2.f(0);
+                var2.unlink(0);
               } else {
                 var2.field_v = true;
               }
@@ -521,14 +521,14 @@ final class gl extends me {
         RuntimeException var10 = null;
         this.field_t = new eb(16);
         this.field_n = 0;
-        this.field_s = new ei();
+        this.field_s = new IntrusiveDeque();
         this.field_o = 0L;
         try {
           this.field_k = param1;
           this.field_c = param0;
           if (this.field_k != null) {
             this.field_b = true;
-            this.field_e = new ei();
+            this.field_e = new IntrusiveDeque();
           } else {
             this.field_b = false;
           }
@@ -583,7 +583,7 @@ final class gl extends me {
     }
 
     static {
-        field_d = new ei();
+        field_d = new IntrusiveDeque();
         field_q = 0;
     }
 }

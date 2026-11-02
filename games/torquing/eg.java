@@ -20,7 +20,7 @@ final class eg extends am {
         try {
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_s = param0.i(7088);
+            this.field_s = param0.readUnsignedShort(7088);
           }
           if (param1 != 35) {
             field_u = -102L;

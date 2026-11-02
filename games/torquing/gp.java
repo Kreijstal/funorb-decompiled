@@ -22,7 +22,7 @@ final class gp extends tk implements wg {
         super(param0, param1, param2);
     }
 
-    final void a(int param0, gm param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(-73, param1, param2, param3);
           this.field_O = -this.field_w + n.field_t - param3;

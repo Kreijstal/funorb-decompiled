@@ -9,7 +9,7 @@ final class tb extends IntrusiveNode {
     int field_j;
     tb field_k;
     int field_m;
-    static uh field_l;
+    static PcmStreamMixer field_l;
 
     public static void a(byte param0) {
         field_o = null;
@@ -19,10 +19,10 @@ final class tb extends IntrusiveNode {
         }
     }
 
-    final static t[] a(boolean param0) {
+    final static Sprite[] a(boolean param0) {
         int var6_int = 0;
         int var7 = 0;
-        t[] var1;
+        Sprite[] var1;
         int var2;
         int var3;
         int[] var6;
@@ -34,7 +34,7 @@ final class tb extends IntrusiveNode {
         int[] var21;
         byte[] var22;
         var8 = Torquing.field_u;
-        var1 = new t[ti.field_g];
+        var1 = new Sprite[ti.field_g];
         var2 = 0;
         if (!param0) {
           tb.a(-48, -115);
@@ -48,16 +48,16 @@ final class tb extends IntrusiveNode {
             for (var6_int = 0; var6_int < var3; var6_int++) {
               var9[var6_int] = cq.field_y[ie.a((int) var20[var6_int], 255)];
             }
-            var1[var2] = new t(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var21);
+            var1[var2] = new Sprite(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var21);
           } else {
             var22 = fq.field_G[var2];
             var16 = new int[var3];
             var13 = var16;
             var6 = var13;
             for (var7 = 0; var7 < var3; var7++) {
-              var6[var7] = gm.a(ie.a((int) var22[var7], 255) << 24, cq.field_y[ie.a((int) var20[var7], 255)]);
+              var6[var7] = UiWidget.a(ie.a((int) var22[var7], 255) << 24, cq.field_y[ie.a((int) var20[var7], 255)]);
             }
-            var1[var2] = (t) ((Object) new ep(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var16));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(fm.field_E, rh.field_d, PacketBuffer.field_o[var2], na.field_G[var2], vo.field_b[var2], ij.field_o[var2], var16));
           }
           var2++;
         }

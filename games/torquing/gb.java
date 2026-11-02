@@ -8,7 +8,7 @@ final class gb {
 
     final void a(byte param0, DualLinkNode param1) {
         if (null != param1.field_j) {
-          param1.h(0);
+          param1.unlinkSecondary(0);
         }
         param1.field_j = this.field_a.field_j;
         if (param0 <= 116) {
@@ -75,7 +75,7 @@ final class gb {
         int var2 = 25 / ((69 - param0) / 55);
         DualLinkNode var3 = this.field_a.field_p;
         if (var3 != this.field_a) {
-          var3.h(0);
+          var3.unlinkSecondary(0);
           return var3;
         }
         return null;

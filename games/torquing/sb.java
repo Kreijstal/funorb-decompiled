@@ -24,7 +24,7 @@ final class sb extends IntrusiveNode {
           this.field_j = this.field_j - 2;
           this.field_m = this.field_m - this.field_l;
           if (this.field_j < 16) {
-            this.f(0);
+            this.unlink(0);
           }
           return;
         }

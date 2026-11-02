@@ -42,7 +42,7 @@ final class nn {
           hb.field_u[21] = rk.field_e.toUpperCase();
           hb.field_u[22] = te.field_t.toUpperCase();
           hb.field_u[23] = gp.field_M.toUpperCase();
-          po.field_t[2] = wf.field_q;
+          po.field_t[2] = SpriteState.field_q;
           po.field_t[1] = hh.field_c;
           po.field_t[0] = ro.field_t;
           oh.field_a = oh.field_a.toUpperCase();
@@ -84,7 +84,7 @@ final class nn {
         hb.field_u[21] = rk.field_e.toUpperCase();
         hb.field_u[22] = te.field_t.toUpperCase();
         hb.field_u[23] = gp.field_M.toUpperCase();
-        po.field_t[2] = wf.field_q;
+        po.field_t[2] = SpriteState.field_q;
         po.field_t[1] = hh.field_c;
         po.field_t[0] = ro.field_t;
         oh.field_a = oh.field_a.toUpperCase();
@@ -138,7 +138,7 @@ final class nn {
 
     final static void a(String param0, Throwable param1, int param2) {
         try {
-          vh stackIn_13_0;
+          PlatformTaskDispatcher stackIn_13_0;
           int stackIn_13_1;
           java.net.URL stackIn_13_2;
           java.net.URL stackIn_13_3;
@@ -189,7 +189,7 @@ final class nn {
               stackIn_14_3 = null;
               stackIn_14_6 = vd.field_b;
             }
-            var4 = ((vh) (Object) stackIn_13_0).a(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(vh.field_u).append("&v2=").append(vh.field_v).append("&e=").append(var7).toString()));
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(stackIn_13_1, new java.net.URL(stackIn_13_4, ((StringBuilder) (Object) stackIn_13_5).append(stackIn_14_6).append("&v1=").append(PlatformTaskDispatcher.field_u).append("&v2=").append(PlatformTaskDispatcher.field_v).append("&e=").append(var7).toString()));
             while (var4.field_a == 0) {
               ub.a(1976, 1L);
             }

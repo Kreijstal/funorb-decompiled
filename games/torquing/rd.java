@@ -148,14 +148,14 @@ final class rd extends am {
               } else {
                 if (var4_int != 3) {
                   if (var4_int == 4) {
-                    this.field_B = param0.i(param1 + 7053);
+                    this.field_B = param0.readUnsignedShort(param1 + 7053);
                   }
                 } else {
-                  this.field_y = param0.i(7088);
+                  this.field_y = param0.readUnsignedShort(7088);
                 }
               }
             } else {
-              this.field_w = param0.i(7088);
+              this.field_w = param0.readUnsignedShort(7088);
             }
           } else {
             this.field_s = param0.i((byte) -101);

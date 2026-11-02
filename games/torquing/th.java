@@ -10,7 +10,7 @@ final class th extends hn implements ba, ng {
     static int field_G;
     vp field_I;
 
-    private final int a(int param0, int param1, String param2, gm param3, int param4, boolean param5, String param6) {
+    private final int a(int param0, int param1, String param2, UiWidget param3, int param4, boolean param5, String param6) {
         RuntimeException var8 = null;
         bj var9 = null;
         na var10 = null;
@@ -62,15 +62,15 @@ final class th extends hn implements ba, ng {
 
     public final void a(byte param0, lg param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
-        gm var7 = null;
+        UiWidget var7 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -85) {
-            var7 = (gm) null;
-            this.a(-56, (gm) null, 62, 24);
+            var7 = (UiWidget) null;
+            this.a(-56, (UiWidget) null, 62, 24);
           }
           if (this.field_E == param1) {
             og.a(6);
@@ -115,22 +115,22 @@ final class th extends hn implements ba, ng {
         var17 = Torquing.field_u;
         if (param7 >= param13) {
           if (param15 > param7) {
-            kj.a(param3, param2, param11, param9, param0, ph.field_e, param1, param10 + 388870409, param5, param14, param6, param7, param4, param12, param8, param13, param15);
+            kj.a(param3, param2, param11, param9, param0, SoftwareRasterizer.field_e, param1, param10 + 388870409, param5, param14, param6, param7, param4, param12, param8, param13, param15);
           } else {
             if (param15 > param13) {
-              kj.a(param6, param2, param11, param12, param14, ph.field_e, param5, 388870384, param1, param0, param3, param15, param4, param9, param8, param13, param7);
+              kj.a(param6, param2, param11, param12, param14, SoftwareRasterizer.field_e, param5, 388870384, param1, param0, param3, param15, param4, param9, param8, param13, param7);
             } else {
-              kj.a(param8, param12, param14, param2, param11, ph.field_e, param5, 388870384, param4, param0, param3, param13, param1, param9, param6, param15, param7);
+              kj.a(param8, param12, param14, param2, param11, SoftwareRasterizer.field_e, param5, 388870384, param4, param0, param3, param13, param1, param9, param6, param15, param7);
             }
           }
         } else {
           if (param13 < param15) {
-            kj.a(param8, param9, param0, param2, param11, ph.field_e, param1, 388870384, param4, param14, param6, param13, param5, param12, param3, param7, param15);
+            kj.a(param8, param9, param0, param2, param11, SoftwareRasterizer.field_e, param1, 388870384, param4, param14, param6, param13, param5, param12, param3, param7, param15);
           } else {
             if (param15 <= param7) {
-              kj.a(param3, param12, param14, param9, param0, ph.field_e, param4, param10 ^ -388870377, param5, param11, param8, param7, param1, param2, param6, param15, param13);
+              kj.a(param3, param12, param14, param9, param0, SoftwareRasterizer.field_e, param4, param10 ^ -388870377, param5, param11, param8, param7, param1, param2, param6, param15, param13);
             } else {
-              kj.a(param6, param9, param0, param12, param14, ph.field_e, param4, param10 ^ -388870377, param1, param11, param8, param15, param5, param2, param3, param7, param13);
+              kj.a(param6, param9, param0, param12, param14, SoftwareRasterizer.field_e, param4, param10 ^ -388870377, param1, param11, param8, param15, param5, param2, param3, param7, param13);
             }
           }
         }
@@ -207,18 +207,18 @@ final class th extends hn implements ba, ng {
     }
 
     public th() {
-        super(0, 0, 496, 0, (el) null);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_H = new gp("", (ca) null, 12);
         pc var1 = new pc(sp.field_R, 0, 0, 0, 0, 16777215, -1, 3, 0, dg.field_e.field_x, -1, 2147483647, true);
-        gm var2 = new gm(sa.field_a, var1, (ca) null);
+        UiWidget var2 = new UiWidget(sa.field_a, var1, (ca) null);
         this.field_B = new lg(NodeHashTableIterator.field_d, (ca) null);
         this.field_E = new lg(dg.field_j, (ca) null);
         this.field_H.field_n = ag.field_d;
         this.field_H.a(new il(this.field_H), 83);
         this.field_B.field_x = false;
-        this.field_B.field_q = (el) ((Object) new rf());
-        this.field_E.field_q = (el) ((Object) new je());
-        this.field_H.field_q = (el) ((Object) new ig(10000536));
+        this.field_B.field_q = (WidgetRenderer) ((Object) new rf());
+        this.field_E.field_q = (WidgetRenderer) ((Object) new je());
+        this.field_H.field_q = (WidgetRenderer) ((Object) new ig(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
@@ -238,7 +238,7 @@ final class th extends hn implements ba, ng {
         this.a((byte) 127, 0, 0, var3 + 55 + var4, 496);
     }
 
-    private final int a(String param0, int param1, gm param2, String param3, int param4, int param5) {
+    private final int a(String param0, int param1, UiWidget param2, String param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -285,7 +285,7 @@ final class th extends hn implements ba, ng {
 
     private final void g(byte param0) {
         if (param0 <= 119) {
-          this.a(23, (gm) null, 'ﾚ', -1);
+          this.a(23, (UiWidget) null, 'ﾚ', -1);
           if (this.b(true)) {
             cm.a((byte) -21, this.field_H.field_m);
             return;
@@ -298,7 +298,7 @@ final class th extends hn implements ba, ng {
         }
     }
 
-    final boolean a(int param0, gm param1, char param2, int param3) {
+    final boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -335,7 +335,7 @@ final class th extends hn implements ba, ng {
         }
     }
 
-    final void a(int param0, gm param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(-113, param1, param2, param3);
           this.field_B.field_x = this.b(true);

@@ -9,18 +9,18 @@ class PacketBuffer extends IntrusiveNode {
     static int[] field_o;
     static int field_k;
 
-    final void b(int param0, int param1) {
+    final void writeByte(int obfuscationGuard, int value) {
         int fieldTemp$0 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$0] = (byte)param1;
-        if (param0 != 90) {
+        this.payload[fieldTemp$0] = (byte)value;
+        if (obfuscationGuard != 90) {
           String var4 = (String) null;
           this.a((byte) -79, (String) null);
         }
     }
 
-    final int i(int param0) {
-        if (param0 != 7088) {
+    final int readUnsignedShort(int obfuscationGuard) {
+        if (obfuscationGuard != 7088) {
           this.position = 48;
         }
         this.position = this.position + 2;
@@ -92,7 +92,7 @@ class PacketBuffer extends IntrusiveNode {
         if (128 > var2) {
           return this.i((byte) -101);
         }
-        return -32768 + this.i(7088);
+        return -32768 + this.readUnsignedShort(7088);
     }
 
     final String h(byte param0) {
@@ -281,7 +281,7 @@ class PacketBuffer extends IntrusiveNode {
 
     final int c(int param0) {
         if (param0 <= this.payload[this.position]) {
-          return this.i(param0 ^ 7088);
+          return this.readUnsignedShort(param0 ^ 7088);
         }
         return this.c((byte) -116) & 2147483647;
     }
@@ -303,7 +303,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var2 < 128) {
           return -64 + this.i((byte) -101);
         }
-        return -49152 + this.i(7088);
+        return -49152 + this.readUnsignedShort(7088);
     }
 
     final void b(long param0, int param1) {
@@ -655,7 +655,7 @@ class PacketBuffer extends IntrusiveNode {
     final void a(int param0, byte param1) {
         if (param0 < 64 &&
           -64 <= param0) {
-          this.b(90, 64 + param0);
+          this.writeByte(90, 64 + param0);
           return;
         }
         if (param0 < 16384 &&

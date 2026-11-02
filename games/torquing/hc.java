@@ -17,7 +17,7 @@ final class hc {
     private kh field_y;
     private int field_f;
     static String[] field_d;
-    private ei field_a;
+    private IntrusiveDeque field_a;
     private sg field_g;
     uf field_e;
     private int field_r;
@@ -370,7 +370,7 @@ final class hc {
           var4 = (lm) ((Object) this.field_a.b(0));
           while (var4 != null) {
             this.field_g.a(var4);
-            ((IntrusiveNode) ((Object) var4)).f(0);
+            ((IntrusiveNode) ((Object) var4)).unlink(0);
             if (50L >= -var2 + km.b(-1)) {
               var4 = (lm) ((Object) this.field_a.f(-24059));
               continue;
@@ -503,7 +503,7 @@ final class hc {
         }
         if (null != this.field_o) {
           if (this.field_a == null) {
-            this.field_a = new ei();
+            this.field_a = new IntrusiveDeque();
           }
           if (param0 != 0) {
             return true;
@@ -609,7 +609,7 @@ final class hc {
         var2++;
         var3Lifetime3 = lk.a(this.field_i.charAt(incrementValue$9), 97) * 64 + lk.a(this.field_i.charAt(incrementValue$10), 97);
         if (var3Lifetime3 < 4095) {
-          this.field_a = new ei();
+          this.field_a = new IntrusiveDeque();
           for (var4Lifetime3 = 0; var4Lifetime3 < var3Lifetime3; var4Lifetime3++) {
             incrementValue$11 = var2;
             var2++;

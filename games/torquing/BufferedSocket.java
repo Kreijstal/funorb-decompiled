@@ -10,7 +10,7 @@ final class BufferedSocket implements Runnable {
     private rc field_k;
     static bo field_n;
     private int field_l;
-    private vh field_g;
+    private PlatformTaskDispatcher field_g;
     private InputStream field_f;
     private int field_m;
     private int field_a;
@@ -21,8 +21,8 @@ final class BufferedSocket implements Runnable {
 
     final void e(int param0) throws IOException {
         if (param0 != 22685) {
-          vh var3 = (vh) null;
-          BufferedSocket.a((vh) null, -81);
+          PlatformTaskDispatcher var3 = (PlatformTaskDispatcher) null;
+          BufferedSocket.a((PlatformTaskDispatcher) null, -81);
         }
         if (this.field_c) {
           return;
@@ -219,8 +219,8 @@ final class BufferedSocket implements Runnable {
         fq.field_F.field_c = fq.field_F.field_c - of.field_l.field_v;
         hb.field_s = of.field_l.field_v;
         of.field_l.field_r = 0;
-        t var4 = of.field_l;
-        t var5 = var4;
+        Sprite var4 = of.field_l;
+        Sprite var5 = var4;
         of.field_l.field_u = of.field_l.field_t;
         of.field_l.field_w = of.field_l.field_s;
         ub.field_E = -200;
@@ -232,7 +232,7 @@ final class BufferedSocket implements Runnable {
         }
         ll.field_g = 63664;
         je.field_a = la.field_j.field_s / 2 + la.field_j.field_v;
-        t var2 = la.field_j;
+        Sprite var2 = la.field_j;
         la.field_j.field_r = 0;
         la.field_j.field_w = la.field_j.field_s;
         la.field_j.field_u = la.field_j.field_t;
@@ -340,7 +340,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static sf[] a(vh param0, int param1) {
+    final static sf[] a(PlatformTaskDispatcher param0, int param1) {
         int var5 = 0;
         sf[] stackIn_3_0 = null;
         sf[] stackIn_12_0 = null;
@@ -416,7 +416,7 @@ final class BufferedSocket implements Runnable {
         this.a(true);
     }
 
-    BufferedSocket(java.net.Socket param0, vh param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -439,7 +439,7 @@ final class BufferedSocket implements Runnable {
         field_j = null;
     }
 
-    private BufferedSocket(java.net.Socket param0, vh param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_a = 0;
         this.field_m = 0;
         this.field_h = false;

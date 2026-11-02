@@ -16,11 +16,11 @@ final class ak extends kj {
         ak.a(-126, 108, 95, (byte) 69);
     }
 
-    final static t[] a(int param0, int param1, int param2, byte param3) {
+    final static Sprite[] a(int param0, int param1, int param2, byte param3) {
         if (param3 != -124) {
-          return (t[]) null;
+          return (Sprite[]) null;
         }
-        return wf.a(param2, param0, 1, param1, (byte) 106);
+        return SpriteState.a(param2, param0, 1, param1, (byte) 106);
     }
 
     final void a(byte param0, int param1, int param2) {

@@ -101,7 +101,7 @@ public final class Torquing extends tg {
           Torquing.p(29165);
           be.b();
           tj.a(-36);
-          ei.d(79);
+          IntrusiveDeque.d(79);
           cl.a(-11784);
           ol.a((byte) -51);
           GameKeyHandler.a(-51);
@@ -112,7 +112,7 @@ public final class Torquing extends tg {
           ClientException.a(2712);
           MouseInputHandler.a(18133);
           MouseWheelInput.a(0);
-          ph.c();
+          SoftwareRasterizer.c();
           la.d(param0 + 99);
           uc.a();
           l.a((byte) 88);
@@ -149,7 +149,7 @@ public final class Torquing extends tg {
           bo.a(21384);
           o.b(-1);
           BufferedSocket.b(param0 - 4);
-          wf.a(false);
+          SpriteState.a(false);
           DualLinkNode.g(-93);
           IntrusiveNode.b((byte) 92);
           gk.a(-64);
@@ -256,7 +256,7 @@ public final class Torquing extends tg {
           ld.b((byte) -21);
           rn.a((byte) 116);
           uj.a((byte) -54);
-          gm.d(13509);
+          UiWidget.d(13509);
           lg.i(52);
           jh.a((byte) 69);
           im.k(-126);
@@ -454,16 +454,16 @@ public final class Torquing extends tg {
     }
 
     final void c(int param0) {
-        uh var2 = null;
-        uh var3 = null;
+        PcmStreamMixer var2 = null;
+        PcmStreamMixer var3 = null;
         try {
           this.a(11, 11, false, param0 + 477, 9, 15, 10, 0);
           pi.a(22050, true, 10);
           qd.field_b = pi.a(nk.field_u, (java.awt.Component) ((Object) k.field_d), 0, 22050);
           la.field_c = pi.a(nk.field_u, (java.awt.Component) ((Object) k.field_d), 1, 1024);
-          var2 = new uh();
+          var2 = new PcmStreamMixer();
           la.field_c.a(var2);
-          var3 = new uh();
+          var3 = new PcmStreamMixer();
           qd.field_b.a(var3);
           ql.a(param0 ^ 1618865635, var3, var2);
           this.a(true, false, true, true, false);
@@ -503,14 +503,14 @@ public final class Torquing extends tg {
           if (param0 < 30) {
             this.b(61);
           }
-          ph.c(0, 0, 640, 480, 16777215);
+          SoftwareRasterizer.c(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "Torquing.PA(" + param0 + ',' + param1 + ')');
         }
     }
 
     private final boolean b(boolean param0, byte param1) {
-        t dupTemp$0 = null;
+        Sprite dupTemp$0 = null;
         int var19_int = 0;
         int var20 = 0;
         int var18 = 0;
@@ -551,7 +551,7 @@ public final class Torquing extends tg {
         sm var15_ref_sm = null;
         int var15 = 0;
         ia var16_ref_ia = null;
-        t var16_ref_t = null;
+        Sprite var16_ref_t = null;
         int var16 = 0;
         int var17 = 0;
         int[] var19 = null;
@@ -566,22 +566,22 @@ public final class Torquing extends tg {
         int[] var30 = null;
         rm var31 = null;
         short[] var32 = null;
-        t var33 = null;
-        t var34 = null;
+        Sprite var33 = null;
+        Sprite var34 = null;
         sm[] var35 = null;
         sm var36 = null;
-        t var37 = null;
-        t var38 = null;
-        t[] var40 = null;
-        t var41 = null;
+        Sprite var37 = null;
+        Sprite var38 = null;
+        Sprite[] var40 = null;
+        Sprite var41 = null;
         sm[] var42 = null;
         sm var43 = null;
         sm var44 = null;
         sm var45 = null;
-        t var46 = null;
+        Sprite var46 = null;
         int[] var47 = null;
-        t[] var48 = null;
-        t var49 = null;
+        Sprite[] var48 = null;
+        Sprite var49 = null;
         gg var50 = null;
         byte[] var51 = null;
         PacketBuffer var52 = null;
@@ -830,7 +830,7 @@ public final class Torquing extends tg {
             this.q(8);
             if (0 >= wp.field_w) {
               m.a(16750848, (java.applet.Applet) (this), 0, NodeHashTableIterator.field_a, 0, 16777215);
-              var33 = new t(640, 480);
+              var33 = new Sprite(640, 480);
               rj.a(-65, cp.field_i, var33);
               MouseWheelInput.a(mn.a(rg.field_v, "", "mb_logo", 96), false);
               var34 = mn.a(rg.field_v, "", "mb_price_bg", 97);
@@ -843,7 +843,7 @@ public final class Torquing extends tg {
           }
           if (null != rg.field_v) {
             var3_int = dd.field_c.field_t + dd.field_c.field_x;
-            kh.field_r = new t(var3_int, var3_int);
+            kh.field_r = new Sprite(var3_int, var3_int);
             kh.field_r.e();
             dd.field_i.c(0, 0, var3_int, var3_int);
             dd.field_i = null;
@@ -859,11 +859,11 @@ public final class Torquing extends tg {
             pa.field_e = ip.a(rg.field_v, -115, "", "world_text");
             GameKeyHandler.field_a = ip.a(rg.field_v, -109, "", "world_img");
             mh.field_d = ip.a(rg.field_v, param1 - 17, "", "world_img_shadow");
-            rp.field_b = new t[32];
+            rp.field_b = new Sprite[32];
             var9_ref_int__ = new int[]{16777215, 14211288, 15000804, 10526880};
             for (var10 = 0; var10 < 8; var10++) {
               var36 = GameKeyHandler.field_a[var10];
-              var37 = new t(var36.field_c, var36.field_d);
+              var37 = new Sprite(var36.field_c, var36.field_d);
               var37.e();
               var36.a(-var36.field_a, -var36.field_g);
               if (var36.field_d < var36.field_c) {
@@ -874,7 +874,7 @@ public final class Torquing extends tg {
                 var14_int = 48;
               }
               for (var15 = 0; var15 < var9_ref_int__.length; var15++) {
-                dupTemp$0 = new t(var13_int, var14_int);
+                dupTemp$0 = new Sprite(var13_int, var14_int);
                 rp.field_b[var15 * 8 + var10] = dupTemp$0;
                 var38 = dupTemp$0;
                 var16_ref_t = var38;
@@ -882,10 +882,10 @@ public final class Torquing extends tg {
                 var16_ref_t.field_r = -var38.field_t + var38.field_u >> 1;
                 var38.e();
                 var17 = var9_ref_int__[var15];
-                ph.d(0, 0, ph.field_j, ph.field_d, var17);
+                SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, var17);
                 var37.d(0, 0, var13_int, var14_int);
                 if (16777215 == var17) {
-                  ph.e(0, 0, ph.field_j, ph.field_d);
+                  SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
                 }
                 var67 = var38.field_y;
                 for (var19_int = 0; var67.length > var19_int; var19_int++) {
@@ -920,9 +920,9 @@ public final class Torquing extends tg {
             ia.field_f = mn.a(rg.field_v, "", "gyroIcon", 104);
             hq.field_h = pb.a("countdown", -1, "", rg.field_v);
             hi.field_h = new sm[8];
-            gm.field_r = new sm[8];
+            UiWidget.field_r = new sm[8];
             for (var10Lifetime2 = 0; 8 > var10Lifetime2; var10Lifetime2++) {
-              gm.field_r[var10Lifetime2] = DelegatingCanvas.a("mg" + var10Lifetime2, 31094, rg.field_v, "");
+              UiWidget.field_r[var10Lifetime2] = DelegatingCanvas.a("mg" + var10Lifetime2, 31094, rg.field_v, "");
               if (var10Lifetime2 == 1) {
                 hi.field_h[var10Lifetime2] = DelegatingCanvas.a("mg" + var10Lifetime2 + "b", 31094, rg.field_v, "");
               }
@@ -979,7 +979,7 @@ public final class Torquing extends tg {
                 var24 = var62[var20];
                 var25 = var24 & 16711935;
                 var26 = var24 & 65280;
-                var19[var20] = gm.a(ie.a(65280 * var22 + var26 * var23, 16711865) >> 8, ie.a(16711935, var25 * var23 + var22 * 16711935 >> 8));
+                var19[var20] = UiWidget.a(ie.a(65280 * var22 + var26 * var23, 16711865) >> 8, ie.a(16711935, var25 * var23 + var22 * 16711935 >> 8));
               }
             }
             tj.field_n[11].d();
@@ -1723,13 +1723,13 @@ public final class Torquing extends tg {
               return;
             }
             if (on.b(160)) {
-              ph.c(0, 0, ph.field_j, ph.field_d);
+              SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
               qk.a(14, 14, s.field_t, (byte) -4);
             }
             if (pb.field_e != -1) {
               var3 = oo.field_b << 3;
               if (var3 > 0) {
-                ph.b(0, 0, ph.field_j, ph.field_d, 0, var3);
+                SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, var3);
               }
             }
             if (hh.a(64) &&
@@ -1786,7 +1786,7 @@ public final class Torquing extends tg {
           var4.field_e.b(34, -127, 159);
           wj.field_k.a(-(wj.field_k.field_c / 2) + 219, 414);
           qh.field_c.a(kk.field_q, 139, 461, 502, 1000, 0, -1, 0, 0, (dd.field_c.field_x * 3 + 3) / 2);
-          ph.c(0, 0, 640, 480, 16777215);
+          SoftwareRasterizer.c(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "Torquing.DB(" + param0 + ',' + param1 + ')');
         }
@@ -1850,7 +1850,7 @@ public final class Torquing extends tg {
                           ug.a(-114);
                         }
                       } else {
-                        hm.a(true, um.field_m.field_x, (t[]) null, 0, i.field_Q, 0, (t[]) null, 3, 320, 0, um.field_m.field_x * 3 / 2, 240);
+                        hm.a(true, um.field_m.field_x, (Sprite[]) null, 0, i.field_Q, 0, (Sprite[]) null, 3, 320, 0, um.field_m.field_x * 3 / 2, 240);
                       }
                       if (!on.b(160)) {
                         vo.field_f[fn.field_c].a((byte) 82, true);
@@ -1981,7 +1981,7 @@ public final class Torquing extends tg {
                     }
                   }
                   if (var3Lifetime1 == 4) {
-                    hm.a(true, um.field_m.field_x, (t[]) null, 0, i.field_Q, 0, (t[]) null, 3, 320, 0, 3 * um.field_m.field_x / 2, 240);
+                    hm.a(true, um.field_m.field_x, (Sprite[]) null, 0, i.field_Q, 0, (Sprite[]) null, 3, 320, 0, 3 * um.field_m.field_x / 2, 240);
                   }
                   bn.field_h = -1;
                 }
@@ -2030,7 +2030,7 @@ public final class Torquing extends tg {
           mh.field_d[param1].a(0, 0, 76);
           GameKeyHandler.field_a[param1].a(0, 0);
           pa.field_e[param1].a(0, 0);
-          ph.c(0, 0, 640, 480, 16777215);
+          SoftwareRasterizer.c(0, 0, 640, 480, 16777215);
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "Torquing.RA(" + param0 + ',' + param1 + ')');
         }
@@ -2084,7 +2084,7 @@ public final class Torquing extends tg {
             }
             if (var2_int > 0) {
               gd.field_b.e();
-              ph.b();
+              SoftwareRasterizer.b();
             }
           }
           if (var2_int > 0) {
@@ -2187,7 +2187,7 @@ public final class Torquing extends tg {
               param2.a(false, var7);
             }
           } else {
-            param2.a((t) null, var9[0], param0 ^ 250);
+            param2.a((Sprite) null, var9[0], param0 ^ 250);
           }
           for (var5 = 1; var5 < var10.length; var5++) {
             var6 = var10[var5];

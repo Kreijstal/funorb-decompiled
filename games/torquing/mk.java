@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mk {
-    static t field_a;
+    static Sprite field_a;
     static int[] field_c;
     static RasterBuffer field_b;
 

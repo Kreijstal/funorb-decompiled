@@ -482,32 +482,32 @@ final class rg extends am {
           var4_int = param2;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_y = param0.i(param1 + 7053);
+              this.field_y = param0.readUnsignedShort(param1 + 7053);
             } else {
               if (var4_int == 2) {
-                this.field_t = param0.i(7088);
+                this.field_t = param0.readUnsignedShort(7088);
               } else {
                 if (var4_int == 3) {
-                  this.field_A = param0.i(param1 + 7053);
+                  this.field_A = param0.readUnsignedShort(param1 + 7053);
                 } else {
                   if (var4_int != 4) {
                     if (var4_int != 5) {
                       if (var4_int != 6) {
                         if (var4_int == 7) {
-                          this.field_z = param0.i(7088);
+                          this.field_z = param0.readUnsignedShort(7088);
                         } else {
                           if (8 == var4_int) {
-                            this.field_u = param0.i(7088);
+                            this.field_u = param0.readUnsignedShort(7088);
                           }
                         }
                       } else {
                         this.field_x = param0.i((byte) -101);
                       }
                     } else {
-                      this.field_w = param0.i(7088);
+                      this.field_w = param0.readUnsignedShort(7088);
                     }
                   } else {
-                    this.field_D = param0.i(7088);
+                    this.field_D = param0.readUnsignedShort(7088);
                   }
                 }
               }
@@ -530,9 +530,9 @@ final class rg extends am {
         }
     }
 
-    final static uh a(boolean param0) {
+    final static PcmStreamMixer a(boolean param0) {
         if (!param0) {
-          return (uh) null;
+          return (PcmStreamMixer) null;
         }
         return tn.field_l;
     }

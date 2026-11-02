@@ -16,10 +16,10 @@ final class ub extends lg {
         int var9;
         int var10;
         int var11;
-        t var13;
-        t var14;
-        t var15;
-        t var16;
+        Sprite var13;
+        Sprite var14;
+        Sprite var15;
+        Sprite var16;
         int var9Lifetime1;
         int var10Lifetime1;
         var11 = Torquing.field_u;
@@ -38,19 +38,19 @@ final class ub extends lg {
           var9 = var16.field_w << 1;
           var10 = var16.field_u << 1;
           if (dp.field_b == null) {
-            dp.field_b = new t(var9, var10);
+            dp.field_b = new Sprite(var9, var10);
             tm.a((byte) 99, dp.field_b);
           } else {
             if (dp.field_b.field_s < var9) {
-              dp.field_b = new t(var9, var10);
+              dp.field_b = new Sprite(var9, var10);
               tm.a((byte) 99, dp.field_b);
             } else {
               if (var10 > dp.field_b.field_t) {
-                dp.field_b = new t(var9, var10);
+                dp.field_b = new Sprite(var9, var10);
                 tm.a((byte) 99, dp.field_b);
               } else {
                 tm.a((byte) -105, dp.field_b);
-                ph.b();
+                SoftwareRasterizer.b();
               }
             }
           }
@@ -76,19 +76,19 @@ final class ub extends lg {
         var9Lifetime1 = var15.field_w << 1;
         var10Lifetime1 = var15.field_u << 1;
         if (dp.field_b == null) {
-          dp.field_b = new t(var9Lifetime1, var10Lifetime1);
+          dp.field_b = new Sprite(var9Lifetime1, var10Lifetime1);
           tm.a((byte) 99, dp.field_b);
         } else {
           if (dp.field_b.field_s < var9Lifetime1) {
-            dp.field_b = new t(var9Lifetime1, var10Lifetime1);
+            dp.field_b = new Sprite(var9Lifetime1, var10Lifetime1);
             tm.a((byte) 99, dp.field_b);
           } else {
             if (var10Lifetime1 > dp.field_b.field_t) {
-              dp.field_b = new t(var9Lifetime1, var10Lifetime1);
+              dp.field_b = new Sprite(var9Lifetime1, var10Lifetime1);
               tm.a((byte) 99, dp.field_b);
             } else {
               tm.a((byte) -105, dp.field_b);
-              ph.b();
+              SoftwareRasterizer.b();
             }
           }
         }
@@ -130,7 +130,7 @@ final class ub extends lg {
         }
     }
 
-    final boolean a(gm param0, boolean param1) {
+    final boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -155,7 +155,7 @@ final class ub extends lg {
         }
     }
 
-    final void a(int param0, gm param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_H = this.field_H + 1;
           int var5_int = -105 % ((param0 + 28) / 43);

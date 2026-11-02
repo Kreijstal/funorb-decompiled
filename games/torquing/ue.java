@@ -6,10 +6,10 @@ import java.io.*;
 final class ue {
     private long field_e;
     private long field_d;
-    static t[] field_c;
+    static Sprite[] field_c;
     static int field_h;
-    static t field_f;
-    static t field_b;
+    static Sprite field_f;
+    static Sprite field_b;
     private RandomAccessFile field_a;
     static si field_g;
 

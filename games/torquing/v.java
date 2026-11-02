@@ -4,10 +4,10 @@
 final class v {
     static String field_j;
     private int field_i;
-    t field_f;
+    Sprite field_f;
     static int field_b;
     private int field_k;
-    t[] field_g;
+    Sprite[] field_g;
     private int field_h;
     private int field_c;
     private boolean field_e;
@@ -23,7 +23,7 @@ final class v {
         return this;
     }
 
-    final void a(int param0, byte param1, gm param2, v param3, int param4, se param5) {
+    final void a(int param0, byte param1, UiWidget param2, v param3, int param4, se param5) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -136,13 +136,13 @@ final class v {
           this.field_c = param0;
           return this;
         }
-        gm var4 = (gm) null;
-        this.a(-73, (se) null, (gm) null, -90, (byte) 73);
+        UiWidget var4 = (UiWidget) null;
+        this.a(-73, (se) null, (UiWidget) null, -90, (byte) 73);
         this.field_c = param0;
         return this;
     }
 
-    final void a(int param0, se param1, gm param2, int param3, byte param4) {
+    final void a(int param0, se param1, UiWidget param2, int param3, byte param4) {
         uc stackIn_22_0 = null;
         String stackIn_22_1 = null;
         int stackIn_22_2 = 0;
@@ -170,7 +170,7 @@ final class v {
         try {
           rh.a(param3 + param2.field_w, param2.field_o, (byte) 71, param2.field_k + param0, param2.field_p, this.field_g);
           if (param4 < 108) {
-            this.field_f = (t) null;
+            this.field_f = (Sprite) null;
           }
           if (null != this.field_f) {
             var6_int = param3 + (param2.field_w + this.field_h);
@@ -349,7 +349,7 @@ final class v {
         return this;
     }
 
-    final v a(int param0, t[] param1) {
+    final v a(int param0, Sprite[] param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -357,7 +357,7 @@ final class v {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -2) {
-            this.field_f = (t) null;
+            this.field_f = (Sprite) null;
           }
           this.field_g = param1;
           return this;

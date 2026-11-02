@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-class hn extends gm implements cj {
+class hn extends UiWidget implements cj {
     static int field_z;
     static String field_A;
-    ei field_y;
+    IntrusiveDeque field_y;
     static int field_x;
 
     final static void a(String param0, byte param1) {
@@ -23,9 +23,9 @@ class hn extends gm implements cj {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
-        gm var6 = null;
+        UiWidget var6 = null;
         int var8 = 0;
-        gm var9 = null;
+        UiWidget var9 = null;
         re var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -37,18 +37,18 @@ class hn extends gm implements cj {
         var8 = Torquing.field_u;
         try {
           if (param3 <= 55) {
-            var9 = (gm) null;
-            this.a(-19, false, 4, -101, (gm) null, 68, 32);
+            var9 = (UiWidget) null;
+            this.a(-19, false, 4, -101, (UiWidget) null, 68, 32);
           }
           var10 = new re(this.field_y);
-          var6 = (gm) (var10.a((byte) 106));
+          var6 = (UiWidget) (var10.a((byte) 106));
           while (var6 != null) {
             discarded$3 = param0.append('\n');
             for (var7 = 0; var7 <= param1; var7++) {
               discarded$4 = param0.append(' ');
             }
             var6.a(param0, (byte) 117, param2, 1 + param1);
-            var6 = (gm) (var10.b(true));
+            var6 = (UiWidget) (var10.b(true));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -71,10 +71,10 @@ class hn extends gm implements cj {
         }
     }
 
-    final boolean a(int param0, boolean param1, int param2, int param3, gm param4, int param5, int param6) {
+    final boolean a(int param0, boolean param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         re var8 = null;
         RuntimeException var8_ref = null;
-        gm var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -86,14 +86,14 @@ class hn extends gm implements cj {
           if (param1) {
             return true;
           }
-          var9 = (gm) (var8.a((byte) 124));
+          var9 = (UiWidget) (var8.a((byte) 124));
           while (var9 != null) {
             if (var9.e(17)) {
               if (var9.g(2) &&
                 var9.a(param0, false, param2, param3, param4, param5, param6)) {
                 return true;
               }
-              var9 = (gm) (var8.b(true));
+              var9 = (UiWidget) (var8.b(true));
               continue;
             }
             break;
@@ -120,17 +120,17 @@ class hn extends gm implements cj {
         }
         if (0 == param0 &&
           this.field_q != null) {
-          this.field_q.a(127, param2, param3, true, (gm) (this));
+          this.field_q.a(127, param2, param3, true, (UiWidget) (this));
         }
         re var5 = new re(this.field_y);
-        gm var6 = (gm) (var5.a(17514));
+        UiWidget var6 = (UiWidget) (var5.a(17514));
         while (var6 != null) {
           var6.a(param0, (byte) -107, this.field_k + param2, param3 + this.field_w);
-          var6 = (gm) (var5.a(true));
+          var6 = (UiWidget) (var5.a(true));
         }
     }
 
-    final void a(gm param0, int param1) {
+    final void a(UiWidget param0, int param1) {
         try {
           this.field_y.a((byte) 54, param0);
           if (param1 != -6938) {
@@ -147,17 +147,17 @@ class hn extends gm implements cj {
         if (!param0) {
           field_z = 36;
         }
-        gm var3 = (gm) (var2.a((byte) 66));
+        UiWidget var3 = (UiWidget) (var2.a((byte) 66));
         while (var3 != null) {
           var3.e((byte) 88);
-          var3 = (gm) (var2.b(true));
+          var3 = (UiWidget) (var2.b(true));
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, gm param4, int param5) {
+    final void a(int param0, int param1, int param2, byte param3, UiWidget param4, int param5) {
         RuntimeException runtimeException = null;
         re var7 = null;
-        gm var8 = null;
+        UiWidget var8 = null;
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -167,13 +167,13 @@ class hn extends gm implements cj {
         try {
           var7 = new re(this.field_y);
           if (param3 <= 109) {
-            this.field_y = (ei) null;
+            this.field_y = (IntrusiveDeque) null;
           }
-          var8 = (gm) (var7.a((byte) 110));
+          var8 = (UiWidget) (var7.a((byte) 110));
           while (var8 != null) {
             if (var8.e(17)) {
               var8.a(this.field_k + param0, this.field_w + param1, param2, (byte) 116, param4, param5);
-              var8 = (gm) (var7.b(true));
+              var8 = (UiWidget) (var7.b(true));
               continue;
             }
             break;
@@ -195,7 +195,7 @@ class hn extends gm implements cj {
 
     final StringBuilder a(StringBuilder param0, byte param1, Hashtable param2, int param3) {
         RuntimeException var5 = null;
-        gm var6 = null;
+        UiWidget var6 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -205,8 +205,8 @@ class hn extends gm implements cj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 117) {
-            var6 = (gm) null;
-            this.a(-99, -92, -99, -25, -38, (gm) null, (byte) 51);
+            var6 = (UiWidget) null;
+            this.a(-99, -92, -99, -25, -38, (UiWidget) null, (byte) 51);
           }
           if (this.a(-31866, param0, param2, param3)) {
             this.a(param0, param3, true, param2);
@@ -234,11 +234,11 @@ class hn extends gm implements cj {
         }
     }
 
-    final boolean b(gm param0, int param1) {
+    final boolean b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        gm var4 = null;
+        UiWidget var4 = null;
         re var5 = null;
-        gm var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         re var8 = null;
         RuntimeException stackIn_21_0 = null;
@@ -251,7 +251,7 @@ class hn extends gm implements cj {
             return false;
           }
           var8 = new re(this.field_y);
-          var4 = (gm) (var8.a((byte) 84));
+          var4 = (UiWidget) (var8.a((byte) 84));
           if (param1 != -9928) {
             field_z = 67;
           }
@@ -259,15 +259,15 @@ class hn extends gm implements cj {
             if (var4.g(2)) {
               var5 = new re(this.field_y);
               var5.a(param1 + 23699, var4);
-              var6 = (gm) (var5.b(true));
+              var6 = (UiWidget) (var5.b(true));
               while (var6 != null) {
                 if (var6.a(param0, false)) {
                   return true;
                 }
-                var6 = (gm) (var5.b(true));
+                var6 = (UiWidget) (var5.b(true));
               }
             }
-            var4 = (gm) (var8.b(true));
+            var4 = (UiWidget) (var8.b(true));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -286,12 +286,12 @@ class hn extends gm implements cj {
 
     final String b(int param0) {
         re var2;
-        gm var3;
+        UiWidget var3;
         String var4;
         int var5;
         var5 = Torquing.field_u;
         var2 = new re(this.field_y);
-        var3 = (gm) (var2.a((byte) 63));
+        var3 = (UiWidget) (var2.a((byte) 63));
         if (param0 != 0) {
           field_A = (String) null;
         }
@@ -300,17 +300,17 @@ class hn extends gm implements cj {
           if (var4 != null) {
             return var4;
           }
-          var3 = (gm) (var2.b(true));
+          var3 = (UiWidget) (var2.b(true));
         }
         return null;
     }
 
-    final boolean a(byte param0, gm param1) {
+    final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
-        gm var4 = null;
+        UiWidget var4 = null;
         int var5 = 0;
         re var6 = null;
-        gm var7 = null;
+        UiWidget var7 = null;
         int var8 = 0;
         re var9 = null;
         RuntimeException stackIn_20_0 = null;
@@ -324,21 +324,21 @@ class hn extends gm implements cj {
           }
           var9 = new re(this.field_y);
           var5 = -124 / ((param0 + 40) / 51);
-          var4 = (gm) (var9.a(17514));
+          var4 = (UiWidget) (var9.a(17514));
           while (var4 != null) {
             if (var4.g(2)) {
               var6 = new re(this.field_y);
               var6.a(var4, -27392);
-              var7 = (gm) (var6.a(true));
+              var7 = (UiWidget) (var6.a(true));
               while (var7 != null) {
                 if (!var7.a(param1, false)) {
-                  var7 = (gm) (var6.a(true));
+                  var7 = (UiWidget) (var6.a(true));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (gm) (var9.a(true));
+            var4 = (UiWidget) (var9.a(true));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -363,22 +363,22 @@ class hn extends gm implements cj {
         if (param0 != 28) {
           return -77;
         }
-        gm var4 = (gm) (var3.a((byte) 126));
+        UiWidget var4 = (UiWidget) (var3.a((byte) 126));
         while (var4 != null) {
           var5 = var4.d((byte) 28);
           if (var5 > var2) {
             var2 = var5;
           }
-          var4 = (gm) (var3.b(true));
+          var4 = (UiWidget) (var3.b(true));
         }
         return var2;
     }
 
-    void a(int param0, gm param1, int param2, int param3) {
+    void a(int param0, UiWidget param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         re var5 = null;
         int var6 = 0;
-        gm var7 = null;
+        UiWidget var7 = null;
         int var8 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -389,11 +389,11 @@ class hn extends gm implements cj {
           super.a(-123, param1, param2, param3);
           var6 = -74 % ((param0 + 28) / 43);
           var5 = new re(this.field_y);
-          var7 = (gm) (var5.a((byte) 29));
+          var7 = (UiWidget) (var5.a((byte) 29));
           while (var7 != null) {
             if (var7.e(17)) {
               var7.a(113, param1, this.field_k + param2, this.field_w + param3);
-              var7 = (gm) (var5.b(true));
+              var7 = (UiWidget) (var5.b(true));
               continue;
             }
             break;
@@ -417,12 +417,12 @@ class hn extends gm implements cj {
         int var4 = Torquing.field_u;
         re var2 = new re(this.field_y);
         if (param0 < 89) {
-          this.field_y = (ei) null;
+          this.field_y = (IntrusiveDeque) null;
         }
-        gm var3 = (gm) (var2.a((byte) 84));
+        UiWidget var3 = (UiWidget) (var2.a((byte) 84));
         while (var3 != null) {
           var3.c((byte) 92);
-          var3 = (gm) (var2.b(true));
+          var3 = (UiWidget) (var2.b(true));
         }
     }
 
@@ -439,20 +439,20 @@ class hn extends gm implements cj {
         this.a(true);
     }
 
-    hn(int param0, int param1, int param2, int param3, el param4) {
+    hn(int param0, int param1, int param2, int param3, WidgetRenderer param4) {
         super(param0, param1, param2, param3, param4, (ca) null);
-        this.field_y = new ei();
+        this.field_y = new IntrusiveDeque();
     }
 
-    gm a(int param0) {
+    UiWidget a(int param0) {
         int var4 = Torquing.field_u;
         re var2 = new re(this.field_y);
-        gm var3 = (gm) (var2.a((byte) 49));
+        UiWidget var3 = (UiWidget) (var2.a((byte) 49));
         while (var3 != null) {
           if (var3.g(2)) {
             return var3;
           }
-          var3 = (gm) (var2.b(true));
+          var3 = (UiWidget) (var2.b(true));
         }
         if (param0 == 0) {
           return null;
@@ -461,10 +461,10 @@ class hn extends gm implements cj {
         return null;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, gm param5, byte param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         re var8 = null;
         RuntimeException var8_ref = null;
-        gm var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -476,13 +476,13 @@ class hn extends gm implements cj {
           if (param6 <= 5) {
             hn.f((byte) 79);
           }
-          var9 = (gm) (var8.a((byte) 122));
+          var9 = (UiWidget) (var8.a((byte) 122));
           while (var9 != null) {
             if (var9.e(17)) {
               if (var9.a(param0, param1 + this.field_w, this.field_k + param2, param3, param4, param5, (byte) 58)) {
                 return true;
               }
-              var9 = (gm) (var8.b(true));
+              var9 = (UiWidget) (var8.b(true));
               continue;
             }
             break;
@@ -502,10 +502,10 @@ class hn extends gm implements cj {
         }
     }
 
-    final boolean a(gm param0, boolean param1) {
+    final boolean a(UiWidget param0, boolean param1) {
         re var3 = null;
         RuntimeException var3_ref = null;
-        gm var4 = null;
+        UiWidget var4 = null;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -517,13 +517,13 @@ class hn extends gm implements cj {
           if (param1) {
             field_A = (String) null;
           }
-          var4 = (gm) (var3.a((byte) 83));
+          var4 = (UiWidget) (var3.a((byte) 83));
           while (true) {
             if (var4 == null) {
               return false;
             }
             if (!var4.a(param0, false)) {
-              var4 = (gm) (var3.b(true));
+              var4 = (UiWidget) (var3.b(true));
               continue;
             }
             break;
@@ -551,13 +551,13 @@ class hn extends gm implements cj {
         field_A = null;
     }
 
-    boolean a(int param0, gm param1, char param2, int param3) {
+    boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         re var6 = null;
         int var7 = 0;
         int var8 = 0;
-        gm var9 = null;
+        UiWidget var9 = null;
         boolean stackIn_13_0 = false;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -567,14 +567,14 @@ class hn extends gm implements cj {
         try {
           var5_int = -43 % ((param3 + 33) / 57);
           var6 = new re(this.field_y);
-          var9 = (gm) (var6.a((byte) 125));
+          var9 = (UiWidget) (var6.a((byte) 125));
           while (var9 != null) {
             if (var9.e(17)) {
               if (var9.g(2) &&
                 var9.a(param0, param1, param2, 41)) {
                 return true;
               }
-              var9 = (gm) (var6.b(true));
+              var9 = (UiWidget) (var6.b(true));
               continue;
             }
             break;

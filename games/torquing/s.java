@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class s extends am {
-    static t[] field_t;
+    static Sprite[] field_t;
     static sm[] field_s;
     private kj[] field_v;
     static String field_u;

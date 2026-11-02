@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei {
+final class IntrusiveDeque {
     IntrusiveNode field_b;
     static ed field_c;
     private IntrusiveNode field_a;
@@ -34,7 +34,7 @@ final class ei {
             return stackIn_9_0;
           }
           if (param0 > -102) {
-            ei.d(13);
+            IntrusiveDeque.d(13);
           }
           if (param1.equals("J")) {
             stackIn_14_0 = Long.TYPE;
@@ -95,7 +95,7 @@ final class ei {
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != param1.next) {
-            param1.f(0);
+            param1.unlink(0);
           }
           param1.previous = this.field_b;
           param1.next = this.field_b.next;
@@ -137,7 +137,7 @@ final class ei {
         IntrusiveNode var2 = this.field_b.next;
         int var3 = 70 / ((param0 + 20) / 35);
         if (this.field_b != var2) {
-          var2.f(0);
+          var2.unlink(0);
           return var2;
         }
         return null;
@@ -168,7 +168,7 @@ final class ei {
     final IntrusiveNode a(byte param0) {
         IntrusiveNode var2 = this.field_b.previous;
         if (var2 != this.field_b) {
-          var2.f(0);
+          var2.unlink(0);
           int var3 = 93 / ((param0 + 47) / 35);
           return var2;
         }
@@ -206,7 +206,7 @@ final class ei {
             if (this.field_b == var5) {
               break;
             }
-            var5.f(0);
+            var5.unlink(0);
           }
           this.field_a = null;
           return;
@@ -216,7 +216,7 @@ final class ei {
           if (this.field_b == var4) {
             break;
           }
-          var4.f(0);
+          var4.unlink(0);
         }
         this.field_a = null;
     }
@@ -224,7 +224,7 @@ final class ei {
     final void b(byte param0, IntrusiveNode param1) {
         try {
           if (param1.next != null) {
-            param1.f(0);
+            param1.unlink(0);
           }
           param1.previous = this.field_b.previous;
           param1.next = this.field_b;
@@ -240,14 +240,14 @@ final class ei {
 
     public static void d(int param0) {
         if (param0 < 25) {
-          ei.d(19);
+          IntrusiveDeque.d(19);
           field_c = null;
           return;
         }
         field_c = null;
     }
 
-    public ei() {
+    public IntrusiveDeque() {
         this.field_b = new IntrusiveNode();
         this.field_b.next = this.field_b;
         this.field_b.previous = this.field_b;

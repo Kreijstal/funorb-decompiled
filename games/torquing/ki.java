@@ -13,7 +13,7 @@ final class ki extends hn implements fp, ng, ba {
     private ok field_F;
     private gp field_L;
     private gp field_I;
-    static t field_H;
+    static Sprite field_H;
     private lg field_N;
 
     public final void a(byte param0, String param1) {
@@ -77,8 +77,8 @@ final class ki extends hn implements fp, ng, ba {
           ((il) (this.field_E.a(-10116))).e(-40);
           return;
         }
-        gm var3 = (gm) null;
-        this.a(119, (gm) null, '\f', -86);
+        UiWidget var3 = (UiWidget) null;
+        this.a(119, (UiWidget) null, '\f', -86);
         ((il) (this.field_E.a(-10116))).e(-40);
     }
 
@@ -87,7 +87,7 @@ final class ki extends hn implements fp, ng, ba {
           return "<u=2164A2><col=2164A2>";
         }
         String var3 = (String) null;
-        int discarded$0 = this.a((String) null, 86, -114, (gm) null, (String) null, true);
+        int discarded$0 = this.a((String) null, 86, -114, (UiWidget) null, (String) null, true);
         return "<u=2164A2><col=2164A2>";
     }
 
@@ -117,7 +117,7 @@ final class ki extends hn implements fp, ng, ba {
             return;
           }
           var7 = (String) null;
-          discarded$0 = this.a((String) null, -82, -103, (gm) null, (String) null, false);
+          discarded$0 = this.a((String) null, -82, -103, (UiWidget) null, (String) null, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,7 +133,7 @@ final class ki extends hn implements fp, ng, ba {
         }
     }
 
-    private final int a(String param0, int param1, int param2, gm param3, String param4, boolean param5) {
+    private final int a(String param0, int param1, int param2, UiWidget param3, String param4, boolean param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -202,7 +202,7 @@ final class ki extends hn implements fp, ng, ba {
     }
 
     public ki() {
-        super(0, 0, 496, 0, (el) null);
+        super(0, 0, 496, 0, (WidgetRenderer) null);
         this.field_E = new gp("", (ca) null, 12);
         this.field_K = new gp("", (ca) null, 100);
         this.field_G = new gp("", (ca) null, 100);
@@ -227,22 +227,22 @@ final class ki extends hn implements fp, ng, ba {
         this.field_L.a(new um(this.field_L, this.field_B), 86);
         this.field_I.a(new ab(this.field_I), 76);
         this.field_J.field_x = false;
-        this.field_J.field_q = (el) ((Object) new rf());
-        this.field_N.field_q = (el) ((Object) new je());
-        this.field_E.field_q = (el) ((Object) new ig(10000536));
+        this.field_J.field_q = (WidgetRenderer) ((Object) new rf());
+        this.field_N.field_q = (WidgetRenderer) ((Object) new je());
+        this.field_E.field_q = (WidgetRenderer) ((Object) new ig(10000536));
         ig dupTemp$0 = new ig(10000536);
-        this.field_G.field_q = (el) ((Object) dupTemp$0);
-        this.field_K.field_q = (el) ((Object) dupTemp$0);
-        this.field_I.field_q = (el) ((Object) new ig(10000536));
-        this.field_F.field_q = (el) ((Object) new kb());
+        this.field_G.field_q = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_K.field_q = (WidgetRenderer) ((Object) dupTemp$0);
+        this.field_I.field_q = (WidgetRenderer) ((Object) new ig(10000536));
+        this.field_F.field_q = (WidgetRenderer) ((Object) new kb());
         io dupTemp$1 = new io(10000536);
-        this.field_L.field_q = (el) ((Object) dupTemp$1);
-        this.field_B.field_q = (el) ((Object) dupTemp$1);
+        this.field_L.field_q = (WidgetRenderer) ((Object) dupTemp$1);
+        this.field_B.field_q = (WidgetRenderer) ((Object) dupTemp$1);
         String var2 = ff.a(new String[]{this.j(-94), this.k(-128)}, 0, km.field_a);
         int var3 = 20;
-        var3 = var3 + this.a((byte) 106, a.field_b, 170, (gm) (this.field_K), var3);
+        var3 = var3 + this.a((byte) 106, a.field_b, 170, (UiWidget) (this.field_K), var3);
         var3 = var3 + (this.a(this.field_G, var3, (byte) -63, qn.field_E, 170, "", 20) + 5);
-        var3 = var3 + this.a((byte) 115, hm.field_v, 170, (gm) (this.field_B), var3);
+        var3 = var3 + this.a((byte) 115, hm.field_v, 170, (UiWidget) (this.field_B), var3);
         var3 = var3 + (this.a(ug.field_a, var3, 170, this.field_L, bj.field_K, true) + 5);
         var3 = var3 + (5 + this.a(de.field_b, var3, 170, this.field_E, ad.field_l, true));
         var3 = var3 + this.a(170, DualLinkNode.field_m, var3, this.field_I, 3);
@@ -284,7 +284,7 @@ final class ki extends hn implements fp, ng, ba {
         return vf.a(this, this.field_B.field_m, var2, this.field_F.field_A, param0 ^ -7014, this.field_K.field_m, this.field_E.field_m);
     }
 
-    private final int a(int param0, String param1, int param2, gm param3, int param4) {
+    private final int a(int param0, String param1, int param2, UiWidget param3, int param4) {
         RuntimeException var6 = null;
         ub var7 = null;
         int var8 = 0;
@@ -439,7 +439,7 @@ final class ki extends hn implements fp, ng, ba {
         return on.field_b;
     }
 
-    final boolean a(int param0, gm param1, char param2, int param3) {
+    final boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
@@ -476,7 +476,7 @@ final class ki extends hn implements fp, ng, ba {
         }
     }
 
-    final void a(int param0, gm param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           int var5_int = -8 % ((-28 - param0) / 43);
           super.a(-84, param1, param2, param3);
@@ -493,7 +493,7 @@ final class ki extends hn implements fp, ng, ba {
         return "</col></u>";
     }
 
-    private final int a(gm param0, int param1, byte param2, String param3, int param4, String param5, int param6) {
+    private final int a(UiWidget param0, int param1, byte param2, String param3, int param4, String param5, int param6) {
         RuntimeException var8 = null;
         bj var9 = null;
         na var10 = null;
@@ -545,7 +545,7 @@ final class ki extends hn implements fp, ng, ba {
         }
     }
 
-    private final int a(byte param0, String param1, int param2, gm param3, int param4) {
+    private final int a(byte param0, String param1, int param2, UiWidget param3, int param4) {
         na var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
@@ -606,7 +606,7 @@ final class ki extends hn implements fp, ng, ba {
             return;
           }
           var7 = (String) null;
-          discarded$3 = this.a((String) null, 31, 19, (gm) null, (String) null, false);
+          discarded$3 = this.a((String) null, 31, 19, (UiWidget) null, (String) null, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -35,8 +35,8 @@ final class td {
         this.field_h = new int[this.field_b];
         this.field_f = new int[this.field_b];
         for (var2 = 0; var2 < this.field_b; var2++) {
-          this.field_h[var2] = param0.i(7088);
-          this.field_f[var2] = param0.i(7088);
+          this.field_h[var2] = param0.readUnsignedShort(7088);
+          this.field_f[var2] = param0.readUnsignedShort(7088);
         }
     }
 

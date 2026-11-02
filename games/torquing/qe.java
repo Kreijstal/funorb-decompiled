@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qe {
-    static ei field_c;
+    static IntrusiveDeque field_c;
     static char[] field_b;
     static String field_a;
     private static String field_z;
@@ -14,7 +14,7 @@ final class qe {
           field_c = null;
           return;
         }
-        field_c = (ei) null;
+        field_c = (IntrusiveDeque) null;
         field_a = null;
         field_b = null;
         field_c = null;

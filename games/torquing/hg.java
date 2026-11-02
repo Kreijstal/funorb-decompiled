@@ -443,7 +443,7 @@ final class hg {
           }
           var2Lifetime80 = da.a((byte) -84, "graphics_high");
           if (null != var2Lifetime80) {
-            wf.field_q = SecondaryNodeDeque.a(var2Lifetime80, false);
+            SpriteState.field_q = SecondaryNodeDeque.a(var2Lifetime80, false);
           }
           var2Lifetime81 = da.a((byte) 123, "soundcolon");
           if (null != var2Lifetime81) {
@@ -551,7 +551,7 @@ final class hg {
         }
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, t[] param4) {
+    final static void a(boolean param0, int param1, int param2, int param3, Sprite[] param4) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -575,8 +575,8 @@ final class hg {
             var7 = param4[1].field_w;
             param4[0].d(param1, param3);
             param4[2].d(param1 - (-param2 + var6), param3);
-            ph.b(SecondaryNodeDeque.field_c);
-            ph.f(param1 + var5_int, param3, -var6 + param2 + param1, param3 + param4[1].field_u);
+            SoftwareRasterizer.b(SecondaryNodeDeque.field_c);
+            SoftwareRasterizer.f(param1 + var5_int, param3, -var6 + param2 + param1, param3 + param4[1].field_u);
             var8 = var5_int + param1;
             var9 = -var6 + param1 + param2;
             param1 = var8;
@@ -587,7 +587,7 @@ final class hg {
                 return;
               }
             }
-            ph.a(SecondaryNodeDeque.field_c);
+            SoftwareRasterizer.a(SecondaryNodeDeque.field_c);
             return;
           }
           return;

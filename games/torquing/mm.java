@@ -10,7 +10,7 @@ final class mm implements Runnable {
     private rc field_f;
     private DataInputStream field_c;
     private rc field_a;
-    private vh field_j;
+    private PlatformTaskDispatcher field_j;
     private int field_e;
     private rc field_b;
     private java.net.URL field_k;
@@ -242,7 +242,7 @@ final class mm implements Runnable {
         this.field_a = null;
     }
 
-    mm(vh param0, java.net.URL param1, int param2) {
+    mm(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_j = param0;
           this.field_k = param1;

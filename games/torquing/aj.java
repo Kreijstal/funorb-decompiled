@@ -20,7 +20,7 @@ final class aj extends jh {
         od.b(128, 17);
     }
 
-    final void a(int param0, gm param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         int stackIn_9_1 = 0;
         int stackIn_12_2 = 0;
         int stackIn_18_1 = 0;
@@ -96,7 +96,7 @@ final class aj extends jh {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, gm param4, int param5) {
+    final void a(int param0, int param1, int param2, byte param3, UiWidget param4, int param5) {
         super.a(param0, param1, param2, (byte) 124, param4, param5);
         if (param3 < 109) {
           return;
@@ -112,7 +112,7 @@ final class aj extends jh {
         StringBuilder discarded$70 = null;
         StringBuilder discarded$71 = null;
         RuntimeException var5 = null;
-        gm var6 = null;
+        UiWidget var6 = null;
         StringBuilder stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -122,8 +122,8 @@ final class aj extends jh {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 117) {
-            var6 = (gm) null;
-            this.a(68, -37, 53, -107, -120, (gm) null, (byte) 32);
+            var6 = (UiWidget) null;
+            this.a(68, -37, 53, -107, -120, (UiWidget) null, (byte) 32);
           }
           if (this.a(param1 ^ -31757, param0, param2, param3)) {
             this.a(param0, param3, true, param2);
@@ -166,7 +166,7 @@ final class aj extends jh {
         }
     }
 
-    private aj(int param0, int param1, int param2, int param3, el param4, ca param5, gm param6, boolean param7, boolean param8) {
+    private aj(int param0, int param1, int param2, int param3, WidgetRenderer param4, ca param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_I = 2147483647;
         this.field_D = 2147483647;
@@ -224,7 +224,7 @@ final class aj extends jh {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, gm param5, byte param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, UiWidget param5, byte param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_13_0 = 0;

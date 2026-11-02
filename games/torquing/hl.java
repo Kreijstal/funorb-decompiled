@@ -55,7 +55,7 @@ final class hl {
           bd.c(0);
           for (var17 = 0; 4 > var17; var17++) {
             kp.a(param7, 72, param6, mf.field_z, param8);
-            gm.a(param4, param10, -128, param6, param1, param0, param5, mf.field_z, hf.field_b, param2);
+            UiWidget.a(param4, param10, -128, param6, param1, param0, param5, mf.field_z, hf.field_b, param2);
             if (1 != qd.field_d &&
               qd.field_d != 3) {
               ap.a(param0 / (double)var19[var17], hf.field_b, var21);

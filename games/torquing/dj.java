@@ -3,7 +3,7 @@
  */
 final class dj {
     static int[] field_c;
-    static t[] field_a;
+    static Sprite[] field_a;
     static String field_b;
 
     final static int a(int param0, int param1, int param2, rm param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ia extends af {
-    static t field_f;
+    static Sprite field_f;
     private int field_h;
     int field_c;
     static double field_d;
@@ -119,59 +119,59 @@ final class ia extends af {
           var19 = this.field_e * var9 / (var10 + var9) + var5;
         }
         rh.a(var4, this.field_e, (byte) 71, var5, this.field_g, ao.field_a);
-        ph.d(var17, var19, var18 - var17, var20 - var19, bo.field_d);
-        ph.b(tj.field_m);
+        SoftwareRasterizer.d(var17, var19, var18 - var17, var20 - var19, bo.field_d);
+        SoftwareRasterizer.b(tj.field_m);
         if (null != wp.field_v[0]) {
-          ph.f(var4, var5, var17, var19);
+          SoftwareRasterizer.f(var4, var5, var17, var19);
           hm.a((byte) 101, var5, var4, wp.field_v[0]);
-          ph.a(tj.field_m);
+          SoftwareRasterizer.a(tj.field_m);
         }
         if (wp.field_v[2] != null) {
-          ph.f(var18, var5, var11, var19);
+          SoftwareRasterizer.f(var18, var5, var11, var19);
           hm.a((byte) 60, var5, var14, wp.field_v[2]);
-          ph.a(tj.field_m);
+          SoftwareRasterizer.a(tj.field_m);
         }
         if (null != wp.field_v[6]) {
-          ph.f(var4, var20, var17, var12);
+          SoftwareRasterizer.f(var4, var20, var17, var12);
           hm.a((byte) 95, var16, var4, wp.field_v[6]);
-          ph.a(tj.field_m);
+          SoftwareRasterizer.a(tj.field_m);
         }
         if (null != wp.field_v[8]) {
-          ph.f(var18, var20, var11, var12);
+          SoftwareRasterizer.f(var18, var20, var11, var12);
           hm.a((byte) 58, var16, var14, wp.field_v[8]);
-          ph.a(tj.field_m);
+          SoftwareRasterizer.a(tj.field_m);
         }
         if (wp.field_v[1] != null &&
           0 != wp.field_v[1].field_w) {
-          ph.f(var17, var5, var18, var19);
+          SoftwareRasterizer.f(var17, var5, var18, var19);
           for (var21 = var13; var21 < var14; var21 = var21 + wp.field_v[1].field_w) {
             hm.a((byte) 66, var5, var21, wp.field_v[1]);
           }
-          ph.a(tj.field_m);
+          SoftwareRasterizer.a(tj.field_m);
         }
         if (null != wp.field_v[7] &&
           wp.field_v[7].field_w != 0) {
-          ph.f(var17, var20, var18, var12);
+          SoftwareRasterizer.f(var17, var20, var18, var12);
           for (var21Lifetime1 = var13; var21Lifetime1 < var14; var21Lifetime1 = var21Lifetime1 + wp.field_v[7].field_w) {
             hm.a((byte) 70, var16, var21Lifetime1, wp.field_v[7]);
           }
-          ph.a(tj.field_m);
+          SoftwareRasterizer.a(tj.field_m);
         }
         if (wp.field_v[3] != null &&
           wp.field_v[3].field_u != 0) {
-          ph.f(var4, var19, var17, var20);
+          SoftwareRasterizer.f(var4, var19, var17, var20);
           for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + wp.field_v[3].field_u) {
             hm.a((byte) 63, var21Lifetime2, var4, wp.field_v[3]);
           }
-          ph.a(tj.field_m);
+          SoftwareRasterizer.a(tj.field_m);
         }
         if (wp.field_v[5] != null &&
           wp.field_v[5].field_u != 0) {
-          ph.f(var18, var19, var11, var20);
+          SoftwareRasterizer.f(var18, var19, var11, var20);
           for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + wp.field_v[5].field_u) {
             hm.a((byte) 88, var21Lifetime3, var14, wp.field_v[5]);
           }
-          ph.a(tj.field_m);
+          SoftwareRasterizer.a(tj.field_m);
         }
     }
 

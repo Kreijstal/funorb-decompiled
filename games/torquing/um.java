@@ -115,7 +115,7 @@ final class um extends gf {
           sp.field_Q = param2;
           bo.field_e = param0;
           ka.field_j = param1;
-          cl.a(-67, ph.field_j / 2, ph.field_d / 2);
+          cl.a(-67, SoftwareRasterizer.field_j / 2, SoftwareRasterizer.field_d / 2);
           nb.a(param2.field_s, -108, param0.field_s, param0.field_t + param0.field_s, param2.field_t + param2.field_s);
         } catch (RuntimeException runtimeException) {
           throw rb.a((Throwable) ((Object) runtimeException), "um.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

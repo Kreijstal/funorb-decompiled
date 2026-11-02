@@ -7,7 +7,7 @@ final class wp extends am {
     private int field_z;
     private int field_x;
     private int[] field_u;
-    static t[] field_v;
+    static Sprite[] field_v;
     private int[] field_t;
     static int field_y;
 
@@ -33,7 +33,7 @@ final class wp extends am {
                 this.field_z = param0.i((byte) -101);
               }
             } else {
-              this.field_s = param0.i(param1 ^ 7059);
+              this.field_s = param0.readUnsignedShort(param1 ^ 7059);
             }
           }
           return;
@@ -58,7 +58,7 @@ final class wp extends am {
         return new da(of.d((byte) -77), sd.b(2));
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, t[] param5) {
+    final static void a(int param0, int param1, int param2, boolean param3, int param4, Sprite[] param5) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -79,19 +79,19 @@ final class wp extends am {
             var8 = param5[1].field_w;
             param5[0].c(param4, param0, param1);
             param5[2].c(param2 + param4 - var7, param0, param1);
-            ph.b(SecondaryNodeDeque.field_c);
-            ph.f(var6_int + param4, param0, -var7 + param4 + param2, param0 + param5[1].field_u);
+            SoftwareRasterizer.b(SecondaryNodeDeque.field_c);
+            SoftwareRasterizer.f(var6_int + param4, param0, -var7 + param4 + param2, param0 + param5[1].field_u);
             var9 = var6_int + param4;
             var10 = -var7 + (param4 + param2);
             param4 = var9;
             if (param3) {
-              field_v = (t[]) null;
+              field_v = (Sprite[]) null;
             }
             while (var10 > param4) {
               param5[1].c(param4, param0, param1);
               param4 = param4 + var8;
             }
-            ph.a(SecondaryNodeDeque.field_c);
+            SoftwareRasterizer.a(SecondaryNodeDeque.field_c);
             return;
           }
           return;

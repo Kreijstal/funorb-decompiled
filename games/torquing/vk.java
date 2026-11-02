@@ -12,7 +12,7 @@ final class vk extends am {
     private int field_v;
     private int field_w;
     static BufferedSocket field_E;
-    static t field_s;
+    static Sprite field_s;
     private int field_u;
     static int field_A;
 
@@ -226,33 +226,33 @@ final class vk extends am {
           }
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_u = param0.i(7088);
+            this.field_u = param0.readUnsignedShort(7088);
             return;
           }
           if (1 == var4_int) {
-            this.field_y = param0.i(7088);
+            this.field_y = param0.readUnsignedShort(7088);
             return;
           }
           if (var4_int == 2) {
-            this.field_v = param0.i(7088);
+            this.field_v = param0.readUnsignedShort(7088);
             return;
           }
           if (var4_int == 3) {
-            this.field_t = param0.i(7088);
+            this.field_t = param0.readUnsignedShort(7088);
             return;
           }
           if (4 == var4_int) {
-            this.field_G = param0.i(7088);
+            this.field_G = param0.readUnsignedShort(7088);
             return;
           }
           if (var4_int == 5) {
-            this.field_w = param0.i(7088);
+            this.field_w = param0.readUnsignedShort(7088);
             return;
           }
           if (var4_int != 6) {
             return;
           }
-          this.field_D = param0.i(7088);
+          this.field_D = param0.readUnsignedShort(7088);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

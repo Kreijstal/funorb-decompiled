@@ -3,11 +3,11 @@
  */
 final class bd extends am {
     static char[] field_t;
-    static ei field_s;
+    static IntrusiveDeque field_s;
     private int field_v;
     private int field_x;
     private int field_u;
-    static t field_w;
+    static Sprite field_w;
     static double field_y;
 
     public static void a(boolean param0) {
@@ -166,7 +166,7 @@ final class bd extends am {
           if (var4_int != 0) {
             if (var4_int != 1) {
               if (var4_int == 2) {
-                this.field_v = param0.i(param1 + 7053);
+                this.field_v = param0.readUnsignedShort(param1 + 7053);
               }
             } else {
               this.field_x = param0.i((byte) -101);
@@ -207,6 +207,6 @@ final class bd extends am {
 
     static {
         field_t = new char[]{(char)95, (char)97, (char)98, (char)99, (char)100, (char)101, (char)102, (char)103, (char)104, (char)105, (char)106, (char)107, (char)108, (char)109, (char)110, (char)111, (char)112, (char)113, (char)114, (char)115, (char)116, (char)117, (char)118, (char)119, (char)120, (char)121, (char)122, (char)48, (char)49, (char)50, (char)51, (char)52, (char)53, (char)54, (char)55, (char)56, (char)57};
-        field_s = new ei();
+        field_s = new IntrusiveDeque();
     }
 }

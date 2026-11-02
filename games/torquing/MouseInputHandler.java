@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
-    static ei field_e;
+    static IntrusiveDeque field_e;
     static int field_d;
     static int[] field_b;
     static int field_a;
@@ -77,7 +77,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         }
     }
 
-    final static t[] a(int param0, int param1, int param2, int param3, byte param4) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 == 82) {
           return wa.a((byte) -63, 1, 1, 1, param3, 3, param1, param2, param0);
         }
@@ -276,7 +276,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     }
 
     static {
-        field_e = new ei();
+        field_e = new IntrusiveDeque();
         field_d = 0;
         field_c = "Email address is unavailable";
     }

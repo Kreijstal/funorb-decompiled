@@ -11,11 +11,11 @@ class mn extends aa implements ng {
     private boolean field_fb;
     private kf field_db;
 
-    final static t a(la param0, String param1, String param2, int param3) {
+    final static Sprite a(la param0, String param1, String param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        t stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -321,7 +321,7 @@ class mn extends aa implements ng {
 
     public void a(byte param0, lg param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
-        gm var7 = null;
+        UiWidget var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -336,8 +336,8 @@ class mn extends aa implements ng {
           if (param0 < -85) {
             return;
           }
-          var7 = (gm) null;
-          this.a(-44, (gm) null, 'Z', 47);
+          var7 = (UiWidget) null;
+          this.a(-44, (UiWidget) null, 'Z', 47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -353,7 +353,7 @@ class mn extends aa implements ng {
         }
     }
 
-    final boolean a(int param0, gm param1, char param2, int param3) {
+    final boolean a(int param0, UiWidget param1, char param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;

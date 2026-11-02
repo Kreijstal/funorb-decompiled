@@ -78,7 +78,7 @@ final class ip {
           while (var2 != null) {
             var3 = var2.field_j;
             if (var3.e()) {
-              var2.f(0);
+              var2.unlink(0);
             } else {
               if (var3.field_m == param1.field_m &&
                 var3.k() == param1.k() &&

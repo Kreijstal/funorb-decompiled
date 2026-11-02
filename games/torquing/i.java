@@ -28,7 +28,7 @@ final class i extends im implements ng {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gm var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (ab.field_l == param1) {
@@ -48,12 +48,12 @@ final class i extends im implements ng {
               }
             }
           }
-          var4 = new gm((String) (var3), (ca) null);
+          var4 = new UiWidget((String) (var3), (ca) null);
           var4.field_o = 80;
           var4.field_w = 0;
           var4.field_p = this.field_p;
           var4.field_k = 50;
-          var4.field_q = (el) ((Object) new pc(sp.field_R, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_q = (WidgetRenderer) ((Object) new pc(sp.field_R, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(var4, -6938);
           this.field_O = this.a((ca) (this), true, qd.field_i);
           return;
@@ -173,7 +173,7 @@ final class i extends im implements ng {
           if (!param1) {
             field_R = true;
           }
-          var4.field_q = (el) ((Object) new rf());
+          var4.field_q = (WidgetRenderer) ((Object) new rf());
           var5 = -6 + this.field_o;
           this.field_o = this.field_o + 38;
           var4.a((byte) -85, 15, var5, 30, -16 + (-14 + this.field_p));

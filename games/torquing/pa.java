@@ -32,7 +32,7 @@ abstract class pa {
           bg.field_n = 0;
           oh.field_b = 0;
         } else {
-          bg.field_n = var8.i(7088);
+          bg.field_n = var8.readUnsignedShort(7088);
           oh.field_b = var8.e((byte) 62);
         }
         stackIn_9_0 = (var8.i((byte) -101) != 1) ? 0 : 1;
@@ -44,11 +44,11 @@ abstract class pa {
           dg.field_m = var8.h((byte) 119);
         }
         if (n.field_u == 1) {
-          var8.i(7088);
+          var8.readUnsignedShort(7088);
           var8.h((byte) 125);
         } else {
           if (n.field_u == 4) {
-            var8.i(7088);
+            var8.readUnsignedShort(7088);
             var8.h((byte) 125);
           }
         }
@@ -60,7 +60,7 @@ abstract class pa {
           DelegatingCanvas.field_a = null;
           return new hi(param1);
         }
-        var5 = var8.i(param0 ^ -13616);
+        var5 = var8.readUnsignedShort(param0 ^ -13616);
         try {
           var9 = qg.field_C.a(var5, 32767);
           np.field_m = var9.c((byte) -127);

@@ -122,24 +122,24 @@ final class qn extends am {
               this.field_w = param0.i((byte) -101);
             } else {
               if (var4_int == 2) {
-                this.field_C = param0.i(7088);
+                this.field_C = param0.readUnsignedShort(7088);
               } else {
                 if (var4_int == 3) {
-                  this.field_D = param0.i(param1 ^ 7059);
+                  this.field_D = param0.readUnsignedShort(param1 ^ 7059);
                 } else {
                   if (var4_int == 4) {
-                    this.field_u = param0.i(7088);
+                    this.field_u = param0.readUnsignedShort(7088);
                   } else {
                     if (var4_int != 5) {
                       if (6 == var4_int) {
-                        this.field_t = param0.i(7088);
+                        this.field_t = param0.readUnsignedShort(7088);
                       } else {
                         if (var4_int == 7) {
-                          this.field_x = param0.i(7088);
+                          this.field_x = param0.readUnsignedShort(7088);
                         }
                       }
                     } else {
-                      this.field_B = param0.i(7088);
+                      this.field_B = param0.readUnsignedShort(7088);
                     }
                   }
                 }

@@ -12,8 +12,8 @@ final class na extends jh {
     private String field_D;
     static String[] field_I;
 
-    na(int param0, int param1, int param2, int param3, gm param4, boolean param5, int param6, int param7, uc param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (el) null, (ca) null);
+    na(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, uc param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (WidgetRenderer) null, (ca) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -140,9 +140,9 @@ final class na extends jh {
               var17 = (CharSequence) ((Object) param1);
               jb.field_c.a(lp.a(var17, 109), (byte) -72);
               jb.field_c.a(param6, 109);
-              jb.field_c.b(90, param4);
-              jb.field_c.b(90, var9);
-              wa.field_d.b(90, 18);
+              jb.field_c.writeByte(90, param4);
+              jb.field_c.writeByte(90, var9);
+              wa.field_d.writeByte(90, 18);
               wa.field_d.position = wa.field_d.position + 2;
               var10 = wa.field_d.position;
               var11_ref_String = rb.a(-108, ip.a(9));
@@ -170,7 +170,7 @@ final class na extends jh {
                 stackIn_15_1 = "";
               }
               ((PacketBuffer) (Object) stackIn_14_0).a(stackIn_15_1, (byte) -72);
-              wa.field_d.b(90, 16);
+              wa.field_d.writeByte(90, 16);
               wa.field_d.position = wa.field_d.position + 1;
               var9 = wa.field_d.position;
               ok.a(jb.field_c, ua.field_a, wa.field_d, gk.field_b, -4);
@@ -214,7 +214,7 @@ final class na extends jh {
           if (pl.field_s == ef.field_a) {
             var9Lifetime2 = 2;
             if (BufferedSocket.a(var9Lifetime2, 0)) {
-              var10Lifetime1 = kj.field_d.i(7088);
+              var10Lifetime1 = kj.field_d.readUnsignedShort(7088);
               kj.field_d.position = 0;
               if (BufferedSocket.a(var10Lifetime1, 0)) {
                 var11 = kh.field_n.length;

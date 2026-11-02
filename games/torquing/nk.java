@@ -6,7 +6,7 @@ abstract class nk extends DualLinkNode {
     boolean field_w;
     boolean field_v;
     static String field_q;
-    static vh field_u;
+    static PlatformTaskDispatcher field_u;
     static boolean field_t;
     volatile boolean field_r;
     private static String field_z;

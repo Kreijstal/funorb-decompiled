@@ -132,7 +132,7 @@ final class fh extends jp {
               scanLoop1: while (true) {
                 if (null != var2) {
                   this.field_d.position = 0;
-                  this.field_d.b(90, 1);
+                  this.field_d.writeByte(90, 1);
                   this.field_d.b(var2.field_l, -19642);
                   this.field_q.a(0, this.field_d.payload, (byte) 77, this.field_d.payload.length);
                   this.field_h.a((byte) 122, var2);
@@ -149,7 +149,7 @@ final class fh extends jp {
               }
               while (null != var2) {
                 this.field_d.position = 0;
-                this.field_d.b(90, 0);
+                this.field_d.writeByte(90, 0);
                 this.field_d.b(var2.field_l, param0 ^ -19630);
                 this.field_q.a(0, this.field_d.payload, (byte) -101, this.field_d.payload.length);
                 this.field_b.a((byte) 119, var2);
@@ -216,7 +216,7 @@ final class fh extends jp {
                         this.field_j.field_z.position = this.field_j.field_z.position + var6;
                       }
                       if (~var5 == ~this.field_j.field_z.position) {
-                        this.field_j.h(0);
+                        this.field_j.unlinkSecondary(0);
                         this.field_j.field_r = false;
                         this.field_j = null;
                         decompiledFrameRemainder1 = (var16 != 0);
@@ -321,7 +321,7 @@ final class fh extends jp {
                           var15 = stackIn_129_0;
                           this.field_j = var14_ref;
                           this.field_j.field_z = new PacketBuffer(var15 + var9 + this.field_j.field_y);
-                          this.field_j.field_z.b(90, var10);
+                          this.field_j.field_z.writeByte(90, var10);
                           this.field_j.field_z.b((byte) 60, var9);
                           this.field_j.field_x = 10;
                           this.field_c.position = 0;
@@ -472,8 +472,8 @@ final class fh extends jp {
             if (this.field_f != 0) {
               try {
                 this.field_d.position = 0;
-                this.field_d.b(90, 4);
-                this.field_d.b(90, (int) this.field_f);
+                this.field_d.writeByte(90, 4);
+                this.field_d.writeByte(90, (int) this.field_f);
                 this.field_d.b((byte) 60, 0);
                 this.field_q.a(0, this.field_d.payload, (byte) 54, this.field_d.payload.length);
               } catch (java.io.IOException decompiledCaughtParameter1) {
@@ -3605,7 +3605,7 @@ final class fh extends jp {
             }
             try {
               this.field_d.position = 0;
-              this.field_d.b(90, 6);
+              this.field_d.writeByte(90, 6);
               this.field_d.a((byte) -121, 3);
               this.field_d.a(0, 114);
               this.field_q.a(0, this.field_d.payload, (byte) -110, this.field_d.payload.length);
@@ -3660,7 +3660,7 @@ final class fh extends jp {
               } else {
                 stackIn_7_2 = 2;
               }
-              ((PacketBuffer) (Object) stackIn_6_0).b(stackIn_6_1, stackIn_7_2);
+              ((PacketBuffer) (Object) stackIn_6_0).writeByte(stackIn_6_1, stackIn_7_2);
               this.field_d.b(0L, -19642);
               if (param1 < 126) {
                 return;
@@ -3787,7 +3787,7 @@ final class fh extends jp {
             dc.field_a.a(d.field_r, (byte) 97);
           }
           d.field_r.a(param2, 116, param3, param0);
-          ph.b();
+          SoftwareRasterizer.b();
           if (param1 != -98) {
             field_u = 78;
           }

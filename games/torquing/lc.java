@@ -132,14 +132,14 @@ final class lc extends ro {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        t var6 = null;
-        t var7 = null;
-        t var8 = null;
+        Sprite var6 = null;
+        Sprite var7 = null;
+        Sprite var8 = null;
         int var3Lifetime1;
         var4 = Torquing.field_u;
         try {
-          ph.c(243, 197, 369, 143, 16777215);
-          ph.d(244, 198, 367, 141, 0);
+          SoftwareRasterizer.c(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.d(244, 198, 367, 141, 0);
           if (null == nc.field_d) {
             if (null != kl.field_o) {
               kl.field_o.a(vo.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
@@ -201,8 +201,8 @@ final class lc extends ro {
     final static void b(int param0, int param1) {
         df var2 = wa.field_d;
         var2.f(87, param1);
-        var2.b(90, 1);
-        var2.b(90, param0);
+        var2.writeByte(90, 1);
+        var2.writeByte(90, param0);
     }
 
     final static void d(int param0) {
@@ -211,7 +211,7 @@ final class lc extends ro {
         uf[] var1 = null;
         int[] var2 = null;
         short[] var3 = null;
-        t var4 = null;
+        Sprite var4 = null;
         int var6 = 0;
         int var7 = 0;
         int var9 = 0;
@@ -238,8 +238,8 @@ final class lc extends ro {
         RuntimeException var1_ref = null;
         sg var11 = null;
         int var13 = 0;
-        t var15 = null;
-        t var16_ref_t = null;
+        Sprite var15 = null;
+        Sprite var16_ref_t = null;
         kh var17_ref_kh = null;
         sg var18 = null;
         int[] var19 = null;
@@ -248,9 +248,9 @@ final class lc extends ro {
         int var21 = 0;
         int var22 = 0;
         long var24 = 0L;
-        t var35 = null;
-        t var36 = null;
-        t var37 = null;
+        Sprite var35 = null;
+        Sprite var36 = null;
+        Sprite var37 = null;
         uf[] var38 = null;
         uf[] var39 = null;
         kh var40 = null;
@@ -271,10 +271,10 @@ final class lc extends ro {
           var28 = new uf[]{new uf(qh.field_c, 0, 517, 298, (sm) null, 0, 0)};
           var2 = new int[]{0, 1, 2, 4, 6, 5, 9, 18, 7, 8};
           var3 = new short[]{(short)0, (short)2, (short)4, (short)3, (short)1, (short) 5};
-          var4 = new t(8, 1);
-          var45 = ph.field_e;
-          var6 = ph.field_j;
-          var7 = ph.field_d;
+          var4 = new Sprite(8, 1);
+          var45 = SoftwareRasterizer.field_e;
+          var6 = SoftwareRasterizer.field_j;
+          var7 = SoftwareRasterizer.field_d;
           var29 = rh.a((byte) -101, var28, var4, vd.field_a);
           var1 = var29;
           ln.a(1, 0, var29, (byte) -58);
@@ -293,7 +293,7 @@ final class lc extends ro {
           var33 = rh.a((byte) -122, var32, var4, eq.field_c);
           var1Lifetime2 = var33;
           ln.a(0, dd.field_c.field_x, var33, (byte) -58);
-          hh.field_e = new t[m.field_n.length];
+          hh.field_e = new Sprite[m.field_n.length];
           be.field_g = 30;
           var34 = var2;
           for (var9 = 0; var34.length > var9; var9++) {
@@ -317,7 +317,7 @@ final class lc extends ro {
                   var15_int = var17Lifetime2;
                 }
               }
-              var35 = new t(60, -var14 + (1 + var15_int));
+              var35 = new Sprite(60, -var14 + (1 + var15_int));
               var16_ref_t = var35;
               hh.field_e[var10] = var35;
               var35.e();
@@ -345,12 +345,12 @@ final class lc extends ro {
               be.field_b = -var14;
               var18.a(new int[]{0, 0, -1024, 65535, 0, 0, 0, 65535, 0, 0, 0, 65535});
               if (var10 == 0) {
-                var36 = new t(60, var15_int - (var14 + 31));
+                var36 = new Sprite(60, var15_int - (var14 + 31));
                 var21 = (-31 + (var15_int - var14)) / 2;
-                t.a(var35, var36, 0, 0, 0, 0, 60, var21);
+                Sprite.a(var35, var36, 0, 0, 0, 0, 60, var21);
                 var22Lifetime1 = -var21 + var36.field_t;
-                t.a(var35, var36, 0, var35.field_t - var22Lifetime1, 0, var21, 60, var22Lifetime1);
-                var37 = new t(var36.field_s, var36.field_t / 2);
+                Sprite.a(var35, var36, 0, var35.field_t - var22Lifetime1, 0, var21, 60, var22Lifetime1);
+                var37 = new Sprite(var36.field_s, var36.field_t / 2);
                 var16_ref_t = var37;
                 var37.e();
                 var36.c(var36.field_s << 3, var36.field_t << 3, var37.field_s << 3, var37.field_t << 3, 0, 2048);
@@ -395,7 +395,7 @@ final class lc extends ro {
             }
           }
           for (var14Lifetime2 = 0; ClientException.field_d.length > var14Lifetime2; var14Lifetime2++) {
-            var15 = new t(80, var13 + 1 - var12);
+            var15 = new Sprite(80, var13 + 1 - var12);
             var15.e();
             be.a();
             var40.field_l.field_A[0] = var3[var14Lifetime2];
@@ -411,7 +411,7 @@ final class lc extends ro {
           }
           var1Lifetime3[var1Lifetime3.length - 1].c(0);
           hg.field_b = var1Lifetime3;
-          ph.a(var45, var6, var7);
+          SoftwareRasterizer.a(var45, var6, var7);
           be.a();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

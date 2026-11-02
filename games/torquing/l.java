@@ -15,9 +15,9 @@ final class l {
           var5.f(param2 ^ 117, param0);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.b(90, param2);
-          var5.b(90, param1.field_p);
-          var5.b(90, param1.field_m);
+          var5.writeByte(90, param2);
+          var5.writeByte(90, param1.field_p);
+          var5.writeByte(90, param1.field_m);
           var5.b((byte) 60, param1.field_l);
           var5.b((byte) 60, param1.field_k);
           var5.b((byte) 60, param1.field_q);
@@ -127,12 +127,12 @@ final class l {
           var5.f(127, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.b(90, param2);
+          var5.writeByte(90, param2);
           if (param0.field_j != null) {
-            var5.b(90, param0.field_j.length);
+            var5.writeByte(90, param0.field_j.length);
             var5.a(param0.field_j.length, 0, param0.field_j, (byte) -58);
           } else {
-            var5.b(90, 0);
+            var5.writeByte(90, 0);
           }
           var5.a(var4, true);
           var5.position = var5.position - 4;

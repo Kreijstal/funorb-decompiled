@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb implements el {
+final class kb implements WidgetRenderer {
     static h field_f;
     static boolean field_h;
     static int field_b;
     static db field_g;
     static la field_a;
     static String field_c;
-    static uh field_d;
+    static PcmStreamMixer field_d;
     static int[][] field_e;
 
     public static void a(int param0) {
@@ -26,7 +26,7 @@ final class kb implements el {
         field_f = null;
     }
 
-    public final void a(int param0, int param1, int param2, boolean param3, gm param4) {
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -34,7 +34,7 @@ final class kb implements el {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        t var8 = null;
+        Sprite var8 = null;
         try {
           var6_int = param4.field_w + param2;
           var7 = param4.field_k + param1;

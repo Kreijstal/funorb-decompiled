@@ -318,7 +318,7 @@ final class hm extends am {
               up.field_a = new BufferedSocket((java.net.Socket) (rd.field_x.field_d), hq.field_a);
               var2 = new PacketBuffer(13);
               IntrusiveNode.a(um.field_r, 123, qg.field_A, var2, eg.field_x);
-              var2.b(90, 15);
+              var2.writeByte(90, 15);
               var2.b((byte) 60, gf.field_g);
               up.field_a.a(0, var2.payload, (byte) 64, 13);
               pd.field_c = pd.field_c + 1;
@@ -361,7 +361,7 @@ final class hm extends am {
         }
     }
 
-    final static void a(byte param0, int param1, int param2, t param3) {
+    final static void a(byte param0, int param1, int param2, Sprite param3) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -383,29 +383,29 @@ final class hm extends am {
             return;
           }
           var6 = param3.field_s;
-          if (ph.field_c > param1) {
-            var7 = ph.field_c - param1;
-            param1 = ph.field_c;
+          if (SoftwareRasterizer.field_c > param1) {
+            var7 = SoftwareRasterizer.field_c - param1;
+            param1 = SoftwareRasterizer.field_c;
             var4_int = var4_int + var6 * var7;
             var5 = var5 - var7;
           }
-          if (param2 < ph.field_k) {
-            var7Lifetime1 = -param2 + ph.field_k;
-            param2 = ph.field_k;
+          if (param2 < SoftwareRasterizer.field_k) {
+            var7Lifetime1 = -param2 + SoftwareRasterizer.field_k;
+            param2 = SoftwareRasterizer.field_k;
             var6 = var6 - var7Lifetime1;
             var4_int = var4_int + var7Lifetime1;
           }
-          if (ph.field_h < var5 + param1) {
-            var5 = var5 - (-ph.field_h + var5 + param1);
+          if (SoftwareRasterizer.field_h < var5 + param1) {
+            var5 = var5 - (-SoftwareRasterizer.field_h + var5 + param1);
           }
-          if (ph.field_a < var6 + param2) {
-            var7Lifetime2 = -ph.field_a + (var6 + param2);
+          if (SoftwareRasterizer.field_a < var6 + param2) {
+            var7Lifetime2 = -SoftwareRasterizer.field_a + (var6 + param2);
             var6 = var6 - var7Lifetime2;
           }
           if (0 < var6 &&
             var5 > 0) {
-            var7Lifetime3 = param2 + param1 * ph.field_j;
-            la.a(0, var4_int, param3.field_y, -var6 + ph.field_j, ph.field_e, var6, var5, var7Lifetime3, 65280, param3.field_s - var6);
+            var7Lifetime3 = param2 + param1 * SoftwareRasterizer.field_j;
+            la.a(0, var4_int, param3.field_y, -var6 + SoftwareRasterizer.field_j, SoftwareRasterizer.field_e, var6, var5, var7Lifetime3, 65280, param3.field_s - var6);
             return;
           }
           return;
@@ -423,7 +423,7 @@ final class hm extends am {
         }
     }
 
-    final static void a(boolean param0, int param1, t[] param2, int param3, uc param4, int param5, t[] param6, int param7, int param8, int param9, int param10, int param11) {
+    final static void a(boolean param0, int param1, Sprite[] param2, int param3, uc param4, int param5, Sprite[] param6, int param7, int param8, int param9, int param10, int param11) {
         try {
           if (param7 != 3) {
             field_s = (int[]) null;
@@ -484,7 +484,7 @@ final class hm extends am {
             if (var4_int == 0) {
               this.field_w = new int[param0.i((byte) -101)][4];
               for (var5 = 0; this.field_w.length > var5; var5++) {
-                this.field_w[var5][0] = param0.i(7088);
+                this.field_w[var5][0] = param0.readUnsignedShort(7088);
                 this.field_w[var5][1] = param0.i((byte) -101) << 4;
                 this.field_w[var5][2] = param0.i((byte) -101) << 4;
                 this.field_w[var5][3] = param0.i((byte) -101) << 4;
@@ -586,7 +586,7 @@ final class hm extends am {
                 var3 = 255;
               }
             }
-            this.field_x[var6] = gm.a(var4, gm.a(var3 << 8, var2 << 16));
+            this.field_x[var6] = UiWidget.a(var4, UiWidget.a(var3 << 8, var2 << 16));
           }
         }
     }

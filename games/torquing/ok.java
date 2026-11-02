@@ -94,7 +94,7 @@ final class ok extends lg {
         field_D = null;
     }
 
-    private ok(String param0, el param1, ca param2) {
+    private ok(String param0, WidgetRenderer param1, ca param2) {
         super(param0, param1, param2);
         try {
           this.field_q = ah.field_c.field_i;

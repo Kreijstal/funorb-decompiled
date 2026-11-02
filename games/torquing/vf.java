@@ -11,7 +11,7 @@ final class vf {
     String field_h;
     private int field_k;
     static la field_a;
-    static t[] field_i;
+    static Sprite[] field_i;
     static String field_g;
     static int field_d;
     static int[][] field_j;

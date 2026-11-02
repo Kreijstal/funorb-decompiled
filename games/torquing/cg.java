@@ -63,8 +63,8 @@ final class cg {
             this.field_a[var2].a(param0);
           }
         }
-        this.field_b = param0.i(7088);
-        this.field_c = param0.i(7088);
+        this.field_b = param0.readUnsignedShort(7088);
+        this.field_c = param0.readUnsignedShort(7088);
     }
 
     final static cg a(la param0, String param1, String param2) {

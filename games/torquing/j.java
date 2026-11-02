@@ -24,7 +24,7 @@ final class j {
     int field_t;
     int field_g;
     int field_E;
-    static t field_F;
+    static Sprite field_F;
     int[] field_G;
     int field_z;
     byte field_h;

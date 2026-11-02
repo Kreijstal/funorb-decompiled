@@ -49,15 +49,15 @@ final class ji {
             }
           }
           var9Lifetime1 = ro.field_w;
-          if (ph.field_j < 6 + var9Lifetime1 + var6_int) {
-            var9Lifetime1 = ph.field_j - var6_int - 6;
+          if (SoftwareRasterizer.field_j < 6 + var9Lifetime1 + var6_int) {
+            var9Lifetime1 = SoftwareRasterizer.field_j - var6_int - 6;
           }
           var10 = 32 - param1.field_s + ue.field_h;
-          if (var7 + var10 + 6 > ph.field_d) {
+          if (var7 + var10 + 6 > SoftwareRasterizer.field_d) {
             var10 = ue.field_h + (-var7 - 6);
           }
-          ph.c(var9Lifetime1, var10, 6 + var6_int, 6 + var7, param2);
-          ph.d(var9Lifetime1 + 1, 1 + var10, var6_int + 4, var7 + 4, param5);
+          SoftwareRasterizer.c(var9Lifetime1, var10, 6 + var6_int, 6 + var7, param2);
+          SoftwareRasterizer.d(var9Lifetime1 + 1, 1 + var10, var6_int + 4, var7 + 4, param5);
           param1.a(param3, 3 + var9Lifetime1, 3 + var10, var6_int, var7, param2, -1, 0, 0, param1.field_x + param1.field_t);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

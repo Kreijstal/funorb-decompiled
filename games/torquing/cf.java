@@ -52,12 +52,12 @@ final class cf {
             this.field_i = this.field_i - 1;
           } else {
             var5 = this.field_d.a(param2 ^ 7);
-            var5.f(param2 + 0);
-            var5.h(0);
+            var5.unlink(param2 + 0);
+            var5.unlinkSecondary(0);
             if (this.field_b == var5) {
               var5 = this.field_d.a(-45);
-              var5.f(0);
-              var5.h(param2 ^ 0);
+              var5.unlink(0);
+              var5.unlinkSecondary(param2 ^ 0);
             }
           }
           this.field_h.a(false, param0, param1);

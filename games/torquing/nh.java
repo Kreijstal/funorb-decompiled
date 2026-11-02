@@ -12,7 +12,7 @@ final class nh extends IntrusiveNode {
     static String field_o;
     int[] field_r;
 
-    final static void a(vh param0, int param1, PacketBuffer param2, byte param3) {
+    final static void a(PlatformTaskDispatcher param0, int param1, PacketBuffer param2, byte param3) {
         try {
           int var5 = 0;
           int var12_int = 0;
@@ -91,10 +91,10 @@ final class nh extends IntrusiveNode {
                     var18 = 0;
                     var14Lifetime1 = var18;
                     while (var18 < var10) {
-                      var13[var18] = ei.a((byte) -112, var11[var18]);
+                      var13[var18] = IntrusiveDeque.a((byte) -112, var11[var18]);
                       var18++;
                     }
-                    var19.field_n[var5] = param0.a(var13, -30475, var9, ei.a((byte) -117, var21));
+                    var19.field_n[var5] = param0.a(var13, -30475, var9, IntrusiveDeque.a((byte) -117, var21));
                     var19.field_o[var5] = var22;
                   }
                 } else {
@@ -108,7 +108,7 @@ final class nh extends IntrusiveNode {
                   }
                   var19.field_q[var5] = var7_int;
                   var19.field_k[var5] = var10;
-                  var19.field_u[var5] = param0.a(ei.a((byte) -116, var16), true, var17);
+                  var19.field_u[var5] = param0.a(IntrusiveDeque.a((byte) -116, var16), true, var17);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,7 +167,7 @@ final class nh extends IntrusiveNode {
         field_j = null;
         if (param0) {
           PacketBuffer var2 = (PacketBuffer) null;
-          nh.a((vh) null, -6, (PacketBuffer) null, (byte) -36);
+          nh.a((PlatformTaskDispatcher) null, -6, (PacketBuffer) null, (byte) -36);
         }
     }
 

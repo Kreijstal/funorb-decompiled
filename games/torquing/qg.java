@@ -384,7 +384,7 @@ final class qg extends am {
                   this.field_t = param0.i((byte) -101);
                 }
               } else {
-                this.field_s = param0.i(7088);
+                this.field_s = param0.readUnsignedShort(7088);
               }
             } else {
               this.field_x = param0.i((byte) -101);

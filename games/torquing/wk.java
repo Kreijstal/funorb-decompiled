@@ -4,7 +4,7 @@
 class wk implements si {
     static int field_d;
     private cf field_e;
-    static ei field_a;
+    static IntrusiveDeque field_a;
     private la field_f;
     private int field_g;
     private un[] field_b;
@@ -204,9 +204,9 @@ class wk implements si {
         }
     }
 
-    final static void a(int param0, t[] param1, t[] param2, int param3, int param4, int param5, int param6, boolean param7, int param8, int param9, int param10, uc param11, int param12, int param13, uc param14) {
-        t[] var16 = (t[]) null;
-        pl.a(param12, 0, param4, (t[]) null, param13, param1, cc.field_c, qa.field_l, param14, param2, param3, param11, param0, 0, param9, param6, param10, 480, uf.field_c, param5, 127);
+    final static void a(int param0, Sprite[] param1, Sprite[] param2, int param3, int param4, int param5, int param6, boolean param7, int param8, int param9, int param10, uc param11, int param12, int param13, uc param14) {
+        Sprite[] var16 = (Sprite[]) null;
+        pl.a(param12, 0, param4, (Sprite[]) null, param13, param1, cc.field_c, qa.field_l, param14, param2, param3, param11, param0, 0, param9, param6, param10, 480, uf.field_c, param5, 127);
         if (param8 <= 109) {
           return;
         }
@@ -238,7 +238,7 @@ class wk implements si {
     public static void a(byte param0) {
         if (param0 > -63) {
           uc var2 = (uc) null;
-          wk.a(102, (t[]) null, (t[]) null, -29, -22, -52, 122, false, 50, -59, -118, (uc) null, -35, 64, (uc) null);
+          wk.a(102, (Sprite[]) null, (Sprite[]) null, -29, -22, -52, 122, false, 50, -59, -118, (uc) null, -35, 64, (uc) null);
         }
         field_a = null;
     }
@@ -302,7 +302,7 @@ class wk implements si {
           this.field_c = param2;
           this.field_f = param1;
           var7 = new PacketBuffer(param0.a(0, 100, 0));
-          this.field_g = var7.i(7088);
+          this.field_g = var7.readUnsignedShort(7088);
           this.field_b = new un[this.field_g];
           for (var5 = 0; var5 < this.field_g; var5++) {
             if (1 == var7.i((byte) -101)) {
@@ -350,7 +350,7 @@ class wk implements si {
           }
           for (var5Lifetime8 = 0; this.field_g > var5Lifetime8; var5Lifetime8++) {
             if (null != this.field_b[var5Lifetime8]) {
-              this.field_b[var5Lifetime8].field_d = (short)var7.i(7088);
+              this.field_b[var5Lifetime8].field_d = (short)var7.readUnsignedShort(7088);
             }
           }
           for (var5Lifetime9 = 0; var5Lifetime9 < this.field_g; var5Lifetime9++) {
@@ -439,6 +439,6 @@ class wk implements si {
 
     static {
         field_h = -1;
-        field_a = new ei();
+        field_a = new IntrusiveDeque();
     }
 }

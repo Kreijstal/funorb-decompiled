@@ -23,7 +23,7 @@ final class hb extends am {
         return new da(ki.i(20), dc.b(true));
     }
 
-    final static void a(int param0, boolean param1, t param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(int param0, boolean param1, Sprite param2, int param3, int param4, int param5, int param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_43_0 = null;
@@ -38,40 +38,40 @@ final class hb extends am {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        t var21 = null;
+        Sprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;
         int[] var30 = null;
         var19 = Torquing.field_u;
         try {
-          if (ph.field_k > param0) {
-            param4 = param4 - (ph.field_k - param0);
-            param0 = ph.field_k;
+          if (SoftwareRasterizer.field_k > param0) {
+            param4 = param4 - (SoftwareRasterizer.field_k - param0);
+            param0 = SoftwareRasterizer.field_k;
           }
-          if (param0 + param4 > ph.field_a) {
-            param4 = ph.field_a - param0;
+          if (param0 + param4 > SoftwareRasterizer.field_a) {
+            param4 = SoftwareRasterizer.field_a - param0;
           }
-          if (param6 < ph.field_c) {
-            param3 = param3 - (-param6 + ph.field_c);
-            param6 = ph.field_c;
+          if (param6 < SoftwareRasterizer.field_c) {
+            param3 = param3 - (-param6 + SoftwareRasterizer.field_c);
+            param6 = SoftwareRasterizer.field_c;
           }
-          if (ph.field_h < param3 + param6) {
-            param3 = -param6 + ph.field_h;
+          if (SoftwareRasterizer.field_h < param3 + param6) {
+            param3 = -param6 + SoftwareRasterizer.field_h;
           }
           if (param4 > 0 &&
             param3 > 0) {
             var21 = param2.c();
-            var30 = ph.field_e;
-            var10 = ph.field_j;
-            var11 = ph.field_d;
+            var30 = SoftwareRasterizer.field_e;
+            var10 = SoftwareRasterizer.field_j;
+            var11 = SoftwareRasterizer.field_d;
             var29 = new int[4];
-            ph.b(var29);
+            SoftwareRasterizer.b(var29);
             param2.e();
             if (param1) {
               hb.b(-75);
             }
-            ph.f(var29[0], var29[1], var29[2], var29[3]);
+            SoftwareRasterizer.f(var29[0], var29[1], var29[2], var29[3]);
             var13 = param2.field_s * param6 + param0;
             var14 = param2.field_s - param4;
             var25 = var21.field_y;
@@ -88,15 +88,15 @@ final class hb extends am {
                   var15[1 + var13] == 0 ||
                   !(-1 + param2.field_t <= var16) &&
                   0 == var15[var13 + param2.field_s])) {
-                  ph.d(var17, var16, param7, param5);
+                  SoftwareRasterizer.d(var17, var16, param7, param5);
                 }
                 var13++;
               }
               var13 = var13 + var14;
             }
             var21.d(-param2.field_v, -param2.field_r);
-            ph.a(var30, var10, var11);
-            ph.a(var29);
+            SoftwareRasterizer.a(var30, var10, var11);
+            SoftwareRasterizer.a(var29);
             return;
           }
           return;
@@ -231,17 +231,17 @@ final class hb extends am {
           }
           var4_int = param2;
           if (0 == var4_int) {
-            this.field_z = param0.i(7088);
+            this.field_z = param0.readUnsignedShort(7088);
           } else {
             if (var4_int == 1) {
-              this.field_w = param0.i(param1 ^ 7059);
+              this.field_w = param0.readUnsignedShort(param1 ^ 7059);
             } else {
               if (var4_int != 2) {
                 if (var4_int == 3) {
-                  this.field_t = param0.i(7088);
+                  this.field_t = param0.readUnsignedShort(7088);
                 }
               } else {
-                this.field_v = param0.i(7088);
+                this.field_v = param0.readUnsignedShort(7088);
               }
             }
           }

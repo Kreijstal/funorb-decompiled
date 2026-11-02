@@ -30,9 +30,9 @@ final class id {
           param0.a(jb.field_c, (byte) -71);
           wa.field_d.position = 0;
           if (param2) {
-            wa.field_d.b(90, 18);
+            wa.field_d.writeByte(90, 18);
           } else {
-            wa.field_d.b(90, 16);
+            wa.field_d.writeByte(90, 16);
           }
           wa.field_d.position = wa.field_d.position + 2;
           var5_int = wa.field_d.position;
@@ -54,7 +54,7 @@ final class id {
           if (null != wh.field_u) {
             var6 = var6 | 16;
           }
-          wa.field_d.b(90, var6);
+          wa.field_d.writeByte(90, var6);
           var7 = rb.a(-124, ip.a(9));
           if (var7 == null) {
             var7 = "";

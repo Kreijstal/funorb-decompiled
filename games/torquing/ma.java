@@ -91,8 +91,8 @@ final class ma {
         }
         this.field_t = param0.a((byte) -123);
         this.field_o = param0.a((byte) -119);
-        this.field_f = param0.i(7088);
-        this.field_q = param0.i(7088);
+        this.field_f = param0.readUnsignedShort(7088);
+        this.field_q = param0.readUnsignedShort(7088);
         this.field_y = new lo();
         this.field_u = new td();
         this.field_y.a(param0, this.field_u);

@@ -3,7 +3,7 @@
  */
 final class bf {
     static int field_c;
-    static ei field_a;
+    static IntrusiveDeque field_a;
     static int field_d;
     static double[] field_b;
 
@@ -45,7 +45,7 @@ final class bf {
     }
 
     static {
-        field_a = new ei();
+        field_a = new IntrusiveDeque();
         field_b = new double[3];
     }
 }

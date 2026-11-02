@@ -20,15 +20,15 @@ final class hj {
         if (param0) {
           field_c = (sm) null;
         }
-        var2.b(90, 1);
-        var2.b(90, 2);
+        var2.writeByte(90, 1);
+        var2.writeByte(90, 2);
     }
 
-    final static t a(byte param0, int param1, int param2) {
+    final static Sprite a(byte param0, int param1, int param2) {
         int var4 = 0;
         int var5 = Torquing.field_u;
-        t var6 = new t(param2, param2);
-        t var3 = var6;
+        Sprite var6 = new Sprite(param2, param2);
+        Sprite var3 = var6;
         for (var4 = 0; var4 < var3.field_y.length; var4++) {
           var6.field_y[var4] = param1;
         }

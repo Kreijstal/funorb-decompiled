@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ld implements el {
+final class ld implements WidgetRenderer {
     static ce field_e;
     private int field_h;
     private int field_c;
@@ -15,14 +15,14 @@ final class ld implements el {
     private uc field_j;
     static String field_b;
 
-    public final void a(int param0, int param1, int param2, boolean param3, gm param4) {
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         va var6 = null;
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
         int var11 = 0;
         int var12 = 0;
-        gm stackIn_7_0 = null;
+        UiWidget stackIn_7_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -37,28 +37,28 @@ final class ld implements el {
             this.field_a = -98;
           }
           if (param4 instanceof va) {
-            stackIn_7_0 = (gm) (param4);
+            stackIn_7_0 = (UiWidget) (param4);
           } else {
             stackIn_7_0 = null;
           }
           var6 = (va) (stackIn_7_0);
           if (var6 == null) {
           }
-          ph.d(param4.field_w + param2, param4.field_k + param1, param4.field_p, param4.field_o, this.field_h);
+          SoftwareRasterizer.d(param4.field_w + param2, param4.field_k + param1, param4.field_p, param4.field_o, this.field_h);
           var7 = param2 + param4.field_w + var6.field_G;
           var8 = var6.field_F + (param1 + param4.field_k);
-          ph.d(var7, var8, var6.field_C, this.field_a);
+          SoftwareRasterizer.d(var7, var8, var6.field_C, this.field_a);
           if (var6.field_I != -1) {
             var9 = 2.0 * ((double)var6.field_I * 3.141592653589793) / (double)var6.field_E;
             var11 = (int)(-Math.sin(var9) * (double)var6.field_C);
             var12 = (int)(Math.cos(var9) * (double)var6.field_C);
-            ph.d(var11 + var7, var12 + var8, 1, this.field_g);
+            SoftwareRasterizer.d(var11 + var7, var12 + var8, 1, this.field_g);
           }
-          ph.d(var7, var8, 2, 1);
+          SoftwareRasterizer.d(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var6.field_D) / (double)var6.field_E;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var6.field_C);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var6.field_C);
-          ph.a(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.a(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (this.field_j != null) {
             var13 = this.field_c + var6.field_C + var6.field_G;
             this.field_j.a(param4.field_m, var13 + (param2 + param4.field_w), this.field_d + (param1 + param4.field_k), -this.field_c - var13 + param4.field_p, -(this.field_c << 1) + param4.field_o, this.field_i, this.field_f, 1, 1, 0);
@@ -188,18 +188,18 @@ final class ld implements el {
             fieldTemp$1 = mm.field_g;
             mm.field_g = mm.field_g + 1;
             var6_ref.field_kb = fieldTemp$1;
-            wf.field_x.a((byte) 54, var6_ref);
+            SpriteState.field_x.a((byte) 54, var6_ref);
           }
           if (null != var3Lifetime1) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
           }
           var6_ref.field_jb = (String) (var3Lifetime1);
           var6_ref.field_ob = var4_ref_StringLifetime1;
-          var6_ref.f(param0 - 123);
-          var7_ref = (ae) (wf.field_x.b(0));
+          var6_ref.unlink(param0 - 123);
+          var7_ref = (ae) (SpriteState.field_x.b(0));
           while (null != var7_ref) {
             if (ha.a((byte) 75, var6_ref, var7_ref)) {
-              var7_ref = (ae) (wf.field_x.f(-24059));
+              var7_ref = (ae) (SpriteState.field_x.f(-24059));
               if (var8 == 0) {
                 continue;
               }
@@ -212,7 +212,7 @@ final class ld implements el {
               return;
             }
           }
-          wf.field_x.a((byte) 54, var6_ref);
+          SpriteState.field_x.a((byte) 54, var6_ref);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -241,7 +241,7 @@ final class ld implements el {
           if (param4 > -90) {
             ld.b((byte) -123);
           }
-          ph.f(param1, param3, param0, param2);
+          SoftwareRasterizer.f(param1, param3, param0, param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

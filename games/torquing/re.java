@@ -4,7 +4,7 @@
 final class re {
     static int field_c;
     static double[] field_d;
-    private ei field_a;
+    private IntrusiveDeque field_a;
     private IntrusiveNode field_b;
     static String field_e;
 
@@ -132,14 +132,14 @@ final class re {
         int var8 = 0;
         int var9 = 0;
         sm[] var10 = null;
-        t var11 = null;
-        t var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var13 = 0;
         sm[] var14 = null;
-        t var15 = null;
+        Sprite var15 = null;
         int[][] var16 = null;
-        t var17 = null;
-        t var18 = null;
+        Sprite var17 = null;
+        Sprite var18 = null;
         int[][] var19 = null;
         int var8Lifetime1;
         int var9Lifetime1;
@@ -164,7 +164,7 @@ final class re {
           if (!param1) {
             field_c = 47;
           }
-          var17 = new t(param2.a(-126, "", "button.gif"), (java.awt.Component) ((Object) k.field_d));
+          var17 = new Sprite(param2.a(-126, "", "button.gif"), (java.awt.Component) ((Object) k.field_d));
           DelegatingCanvas.a("dropdown", 31094, param3, "commonui");
           var5 = ip.a(param3, -126, "commonui", "screen_options");
           jn.field_c = new sm[4];
@@ -192,19 +192,19 @@ final class re {
           var9Lifetime1 = var17.field_t;
           bp.a((byte) -95);
           var17.e();
-          ph.e(0, 0, ph.field_j, ph.field_d);
-          var15 = new t(var9Lifetime1, var9Lifetime1);
+          SoftwareRasterizer.e(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d);
+          var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
           var18.e();
           var17.b(0, 0);
-          var11 = new t(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.e();
           var17.b(-var17.field_s + var9Lifetime1, 0);
-          var12 = new t(var17.field_s - var9Lifetime1 * 2, var9Lifetime1);
+          var12 = new Sprite(var17.field_s - var9Lifetime1 * 2, var9Lifetime1);
           var12.e();
           var17.b(-var9Lifetime1, 0);
           r.a(125);
-          dg.field_g = new t[]{var15, var12, var11};
+          dg.field_g = new Sprite[]{var15, var12, var11};
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -319,7 +319,7 @@ final class re {
         }
     }
 
-    re(ei param0) {
+    re(IntrusiveDeque param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
@@ -338,9 +338,9 @@ final class re {
 
     final static void a(boolean param0, boolean param1, boolean param2) {
         if (param1) {
-          ph.b(0, 0, ph.field_j, ph.field_d, 0, 192);
+          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_j, SoftwareRasterizer.field_d, 0, 192);
         } else {
-          ph.b();
+          SoftwareRasterizer.b();
         }
         jm.a(param1, -127);
         if (!param0) {

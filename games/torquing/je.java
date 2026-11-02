@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class je implements el {
+final class je implements WidgetRenderer {
     private int field_d;
     private int field_b;
     static la field_f;
     static String field_i;
     static int field_a;
     static th field_g;
-    static t field_e;
+    static Sprite field_e;
     private uc field_h;
     static boolean field_c;
 
-    public final void a(int param0, int param1, int param2, boolean param3, gm param4) {
+    public final void a(int param0, int param1, int param2, boolean param3, UiWidget param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -171,7 +171,7 @@ final class je implements el {
         }
     }
 
-    final static pp a(int param0, int param1, vh param2, int param3, int param4, int param5) {
+    final static pp a(int param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         pp var7 = null;

@@ -4,7 +4,7 @@
 final class dd {
     static int field_d;
     static String field_b;
-    static t field_i;
+    static Sprite field_i;
     static vn field_c;
     int field_f;
     static String[] field_e;
@@ -21,7 +21,7 @@ final class dd {
           field_b = null;
           return;
         }
-        field_i = (t) null;
+        field_i = (Sprite) null;
         field_i = null;
         field_e = null;
         field_b = null;

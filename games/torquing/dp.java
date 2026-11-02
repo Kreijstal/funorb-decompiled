@@ -3,7 +3,7 @@
  */
 abstract class dp {
     static int[] field_a;
-    static t field_b;
+    static Sprite field_b;
 
     abstract byte[] a(int param0);
 
@@ -20,7 +20,7 @@ abstract class dp {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != 4) {
-            field_b = (t) null;
+            field_b = (Sprite) null;
           }
           stackIn_3_0 = bi.a(DelegatingCanvas.a(param0, 31094, param2, param1), param3 ^ -108);
           return stackIn_3_0;

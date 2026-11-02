@@ -217,7 +217,7 @@ final class mg {
         return new byte[param1];
     }
 
-    final static void a(int param0, int param1, int param2, int param3, vh param4, int param5, String param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, PlatformTaskDispatcher param4, int param5, String param6, int param7, int param8) {
         tl.field_u = param7;
         um.field_r = param1;
         if (param0 != -1) {
@@ -243,7 +243,7 @@ final class mg {
         field_a = (double[][]) null;
         if (param0 >= -23) {
           String var2 = (String) null;
-          mg.a(-36, 74, 14, 75, (vh) null, 80, (String) null, -11, -19);
+          mg.a(-36, 74, 14, 75, (PlatformTaskDispatcher) null, 80, (String) null, -11, -19);
         }
     }
 

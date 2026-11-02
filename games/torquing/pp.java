@@ -4,7 +4,7 @@
 final class pp extends java.awt.Canvas implements java.awt.event.FocusListener {
     volatile boolean field_b;
     static String[] field_e;
-    static vh field_f;
+    static PlatformTaskDispatcher field_f;
     java.awt.Frame field_d;
     static int field_a;
     static boolean field_c;
@@ -13,22 +13,22 @@ final class pp extends java.awt.Canvas implements java.awt.event.FocusListener {
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
-        ph.b(5 + param0, 7 + param3, 157, param4);
-        ph.b(162 + param0, 8 + param3, 2, param4);
-        ph.a(param0 + 163, 9 + param3, 2, param4);
-        ph.b(4 + param0, param3 + 11, 159, param4);
-        ph.a(3 + param0, 9 + param3, 2, param4);
-        ph.b(param0 + 4, 8 + param3, 1, param4);
+        SoftwareRasterizer.b(5 + param0, 7 + param3, 157, param4);
+        SoftwareRasterizer.b(162 + param0, 8 + param3, 2, param4);
+        SoftwareRasterizer.a(param0 + 163, 9 + param3, 2, param4);
+        SoftwareRasterizer.b(4 + param0, param3 + 11, 159, param4);
+        SoftwareRasterizer.a(3 + param0, 9 + param3, 2, param4);
+        SoftwareRasterizer.b(param0 + 4, 8 + param3, 1, param4);
         if (param1 <= -124) {
-          ph.b(param0 + 5, param3 + 8, 157, param2);
-          ph.b(param0 + 4, 9 + param3, 159, param2);
-          ph.b(4 + param0, 10 + param3, 159, param2);
+          SoftwareRasterizer.b(param0 + 5, param3 + 8, 157, param2);
+          SoftwareRasterizer.b(param0 + 4, 9 + param3, 159, param2);
+          SoftwareRasterizer.b(4 + param0, 10 + param3, 159, param2);
           return;
         }
-        field_f = (vh) null;
-        ph.b(param0 + 5, param3 + 8, 157, param2);
-        ph.b(param0 + 4, 9 + param3, 159, param2);
-        ph.b(4 + param0, 10 + param3, 159, param2);
+        field_f = (PlatformTaskDispatcher) null;
+        SoftwareRasterizer.b(param0 + 5, param3 + 8, 157, param2);
+        SoftwareRasterizer.b(param0 + 4, 9 + param3, 159, param2);
+        SoftwareRasterizer.b(4 + param0, 10 + param3, 159, param2);
     }
 
     public final void focusLost(java.awt.event.FocusEvent param0) {
@@ -42,7 +42,7 @@ final class pp extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void paint(java.awt.Graphics param0) {
     }
 
-    final void a(vh param0, int param1) {
+    final void a(PlatformTaskDispatcher param0, int param1) {
         try {
           ka.a(-119, this.field_d, param0);
           if (param1 != 159) {

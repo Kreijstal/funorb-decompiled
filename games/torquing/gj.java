@@ -143,12 +143,12 @@ final class gj extends ao {
         field_i = null;
     }
 
-    final static t[] a(boolean param0, int param1) {
+    final static Sprite[] a(boolean param0, int param1) {
         if (!param0) {
-          return (t[]) null;
+          return (Sprite[]) null;
         }
-        t[] var3 = new t[9];
-        t[] var2 = var3;
+        Sprite[] var3 = new Sprite[9];
+        Sprite[] var2 = var3;
         var3[4] = hj.a((byte) -89, param1, 64);
         return var2;
     }

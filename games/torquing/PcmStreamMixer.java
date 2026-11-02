@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uh extends lf {
-    private ei field_n;
-    private ei field_q;
+final class PcmStreamMixer extends PcmStream {
+    private IntrusiveDeque field_n;
+    private IntrusiveDeque field_q;
     private int field_o;
     private int field_p;
 
@@ -53,8 +53,8 @@ final class uh extends lf {
         return 0;
     }
 
-    final synchronized void a(lf param0) {
-        param0.f(0);
+    final synchronized void a(PcmStream param0) {
+        param0.unlink(0);
     }
 
     final synchronized void c(sl param0) {
@@ -106,17 +106,17 @@ final class uh extends lf {
         return;
     }
 
-    final lf c() {
-        return (lf) (this.field_n.b(0));
+    final PcmStream c() {
+        return (PcmStream) (this.field_n.b(0));
     }
 
-    final synchronized void b(lf param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_n.b((byte) 68, param0);
     }
 
-    private final void a(lf param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         if (param1 > 0) {
-          param0 = (lf) ((Object) qc.a(param1, (byte) -112, param0));
+          param0 = (PcmStream) ((Object) qc.a(param1, (byte) -112, param0));
         }
         this.b(param0);
     }
@@ -126,7 +126,7 @@ final class uh extends lf {
     }
 
     private final void b(sl param0) {
-        param0.f(0);
+        param0.unlink(0);
         param0.a();
         param0.field_j = null;
         IntrusiveNode var2 = this.field_q.field_b.previous;
@@ -137,8 +137,8 @@ final class uh extends lf {
         }
     }
 
-    final lf b() {
-        return (lf) (this.field_n.f(-24059));
+    final PcmStream b() {
+        return (PcmStream) (this.field_n.f(-24059));
     }
 
     final void a(gg param0, int param1, int param2) {
@@ -146,10 +146,10 @@ final class uh extends lf {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        lf var4 = (lf) (this.field_n.b(0));
+        PcmStream var4 = (PcmStream) (this.field_n.b(0));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (lf) (this.field_n.f(-24059));
+          var4 = (PcmStream) (this.field_n.f(-24059));
         }
     }
 
@@ -192,16 +192,16 @@ final class uh extends lf {
     }
 
     private final void b(int param0) {
-        lf var2 = (lf) (this.field_n.b(0));
+        PcmStream var2 = (PcmStream) (this.field_n.b(0));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (lf) (this.field_n.f(-24059));
+          var2 = (PcmStream) (this.field_n.f(-24059));
         }
     }
 
-    public uh() {
-        this.field_n = new ei();
-        this.field_q = new ei();
+    public PcmStreamMixer() {
+        this.field_n = new IntrusiveDeque();
+        this.field_q = new IntrusiveDeque();
         this.field_o = -1;
         this.field_p = 0;
     }

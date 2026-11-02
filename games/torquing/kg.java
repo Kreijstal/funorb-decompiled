@@ -35,7 +35,7 @@ final class kg {
             var4_ref_ai = (ai) (qe.field_c.b(param1 - 21));
             if (var4_ref_ai != null &&
               var4_ref_ai.field_n < var2_long) {
-              var4_ref_ai.f(0);
+              var4_ref_ai.unlink(0);
               oo.field_a = var4_ref_ai.field_k.length;
               kj.field_d.position = 0;
               for (var5_int = 0; var5_int < oo.field_a; var5_int++) {
@@ -113,7 +113,7 @@ final class kg {
     }
 
     final static void a(int param0) {
-        MouseInputHandler.field_e = new ei();
+        MouseInputHandler.field_e = new IntrusiveDeque();
         if (param0 < 81) {
           field_c = (nh) null;
         }

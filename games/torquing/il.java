@@ -191,7 +191,7 @@ final class il extends gf {
           var27 = kj.field_d;
           var2 = var27.i((byte) -101);
           if (0 == var2) {
-            var3 = var27.i(7088);
+            var3 = var27.readUnsignedShort(7088);
             var4_ref_bm = (bm) (gl.field_d.b(0));
             while (var4_ref_bm != null) {
               if (var4_ref_bm.field_s != var3) {
@@ -285,11 +285,11 @@ final class il extends gf {
               }
             }
             var4_ref_bm.field_k = true;
-            var4_ref_bm.f(param0 ^ -30593);
+            var4_ref_bm.unlink(param0 ^ -30593);
             return;
           }
           if (1 == var2) {
-            var3Lifetime1 = var27.i(param0 + 37681);
+            var3Lifetime1 = var27.readUnsignedShort(param0 + 37681);
             var4 = var27.b(68);
             var6 = (wc) (so.field_t.b(0));
             while (var6 != null) {
@@ -304,7 +304,7 @@ final class il extends gf {
               return;
             }
             var6.field_l = var4;
-            var6.f(0);
+            var6.unlink(0);
             return;
           }
           nn.a("HS1: " + me.a(-1), (Throwable) null, param0 ^ 20837);

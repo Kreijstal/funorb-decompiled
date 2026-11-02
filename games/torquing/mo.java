@@ -472,7 +472,7 @@ final class mo extends am {
         return;
     }
 
-    final static void a(t param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;

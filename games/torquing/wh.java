@@ -46,7 +46,7 @@ final class wh extends am {
         try {
           var4_int = param2;
           if (var4_int == 0) {
-            this.field_v = param0.i(param1 ^ 7059);
+            this.field_v = param0.readUnsignedShort(param1 ^ 7059);
           } else {
             if (var4_int == 1) {
               stackIn_8_1 = (param0.i((byte) -101) == 1);
@@ -185,7 +185,7 @@ final class wh extends am {
               var6[var7 >> 2] = var6[var7 >> 2] + (var10.i((byte) -101) << ie.a(768, var7 << 8));
             }
             var4_ref_h.field_n = true;
-            var4_ref_h.f(0);
+            var4_ref_h.unlink(0);
             return;
           }
           if (var2 == 1) {
@@ -200,7 +200,7 @@ final class wh extends am {
               break;
             }
             if (var5 != null) {
-              var5.f(0);
+              var5.unlink(0);
               return;
             }
             ih.b(true);

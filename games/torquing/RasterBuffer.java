@@ -6,7 +6,7 @@ abstract class RasterBuffer {
     int field_g;
     static String field_b;
     static int field_h;
-    static t field_f;
+    static Sprite field_f;
     int field_a;
     int[] field_d;
     static int field_e;
@@ -22,7 +22,7 @@ abstract class RasterBuffer {
     }
 
     final void a(int param0) {
-        ph.a(this.field_d, this.field_g, this.field_a);
+        SoftwareRasterizer.a(this.field_d, this.field_g, this.field_a);
         if (param0 > -82) {
           this.field_d = (int[]) null;
         }

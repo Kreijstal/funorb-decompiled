@@ -7,7 +7,7 @@ final class in {
     static int[] field_b;
     static String[] field_a;
 
-    final static void a(int param0, boolean param1, String param2, int param3, int param4, int param5, int param6, vh param7, boolean param8, int param9, int param10, long param11, int param12, int param13) {
+    final static void a(int param0, boolean param1, String param2, int param3, int param4, int param5, int param6, PlatformTaskDispatcher param7, boolean param8, int param9, int param10, long param11, int param12, int param13) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -23,7 +23,7 @@ final class in {
             tp.field_i = param3;
             sf.field_a = param13;
             if (param10 != 0) {
-              in.a(116, false, (String) null, -116, -96, -98, 5, (vh) null, false, -9, 28, 96L, 103, -78);
+              in.a(116, false, (String) null, -116, -96, -98, 5, (PlatformTaskDispatcher) null, false, -9, 28, 96L, 103, -78);
             }
             ao.field_d = param0;
             vg.field_j = param4;

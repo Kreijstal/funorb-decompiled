@@ -21,8 +21,8 @@ final class ii extends IntrusiveNode {
         try {
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.b(90, 1);
-          var5.b(90, param2.field_k);
+          var5.writeByte(90, 1);
+          var5.writeByte(90, param2.field_k);
           var5.a(param2.field_o, (byte) 106);
           var5.b((byte) 60, param2.field_n);
           var5.b((byte) 60, param2.field_m);
@@ -58,7 +58,7 @@ final class ii extends IntrusiveNode {
             return;
           }
           if (!pl.b(-109)) {
-            ph.b();
+            SoftwareRasterizer.b();
             jf.a(param2 ^ -527, 320, 240);
             ni.a(param0, 0, 0, -109);
             return;

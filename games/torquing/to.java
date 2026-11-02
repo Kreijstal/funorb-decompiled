@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class to extends DualLinkNode {
-    static ei field_s;
+    static IntrusiveDeque field_s;
     static String field_r;
-    static ei field_q;
+    static IntrusiveDeque field_q;
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
@@ -62,8 +62,8 @@ class to extends DualLinkNode {
     }
 
     static {
-        field_s = new ei();
+        field_s = new IntrusiveDeque();
         field_r = "Squared Away";
-        field_q = new ei();
+        field_q = new IntrusiveDeque();
     }
 }

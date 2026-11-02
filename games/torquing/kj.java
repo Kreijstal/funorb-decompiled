@@ -6,7 +6,7 @@ abstract class kj {
     int field_a;
     int field_e;
     static df field_d;
-    static t field_b;
+    static Sprite field_b;
     static String field_f;
 
     final static void a(int param0) {
@@ -260,7 +260,7 @@ abstract class kj {
                   }
                   var29 = var29 + var31;
                   var22 = var22 + var24;
-                  var36Lifetime2 = var36Lifetime2 + ph.field_j;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_j;
                   var18 = var18 + var20;
                   var30 = var30 + var32;
                   var26 = var26 + var28;
@@ -347,7 +347,7 @@ abstract class kj {
               }
               var25 = var25 + var27;
               var18 = var18 + var20;
-              var35Lifetime1 = var35Lifetime1 + ph.field_j;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_j;
               var22 = var22 + var24;
               var21 = var21 + var23;
               var30 = var30 + var32;
