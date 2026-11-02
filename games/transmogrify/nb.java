@@ -65,8 +65,8 @@ final class nb {
           if (!param0) {
             field_c = (String) null;
           }
-          var3 = w.a(-1, param1) ? 1 : 0;
-          var4 = w.a(-1, param1) ? 1 : 0;
+          var3 = NodeHashTableIterator.a(-1, param1) ? 1 : 0;
+          var4 = NodeHashTableIterator.a(-1, param1) ? 1 : 0;
           var5 = new e();
           var5.field_M = (short)param1.k(16, 1522829539);
           var5.field_v = lb.a(var5.field_v, 256, 16, param1);
@@ -93,10 +93,10 @@ final class nb {
             var5.field_A = lb.a(var5.field_A, 256, 16, param1);
             var5.field_r = lb.a(var5.field_r, 256, 16, param1);
           }
-          if (w.a(-1, param1)) {
+          if (NodeHashTableIterator.a(-1, param1)) {
             var5.field_f = lb.a(var5.field_f, 256, 16, param1);
           }
-          if (w.a(-1, param1)) {
+          if (NodeHashTableIterator.a(-1, param1)) {
             var5.field_y = dj.a(-39, param1, var5.field_y, 16);
             var6 = 0;
             for (var7 = 0; var7 < var5.field_y.length; var7++) {

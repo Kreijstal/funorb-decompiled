@@ -158,14 +158,14 @@ final class gj implements Runnable {
                   var8 = -var8 + (var8 << 5) + (long)(255 & var15[var10_int]);
                 }
                 var10 = ac.field_n.a(-126, var8);
-                L5: while (true) {
+                scanLoop1: while (true) {
                   if (var10 != null) {
                     if (param1 != var10) {
                       dj.field_b.setLength(0);
                       discarded$0 = dj.field_b.append(param1.substring(var6, var7));
                       if (-1 != ((String) (var10)).indexOf(dj.field_b.toString())) {
                         var3_int = var7 - var6;
-                        break L5;
+                        break scanLoop1;
                       }
                     }
                     var10 = ac.field_n.b(-1);
@@ -254,7 +254,7 @@ final class gj implements Runnable {
     }
 
     final static void a(boolean param0, int param1) {
-        wf.a(-1);
+        IntrusiveNode.a(-1);
         if (!param0) {
           gj.b(-59);
         }
@@ -444,10 +444,10 @@ final class gj implements Runnable {
         if (param0 > -100) {
           gj.a(false, 74);
         }
-        if (w.field_a == null) {
+        if (NodeHashTableIterator.field_a == null) {
           return "";
         }
-        return w.field_a;
+        return NodeHashTableIterator.field_a;
     }
 
     final static boolean a(int[] param0, byte param1) {
@@ -481,8 +481,8 @@ final class gj implements Runnable {
                 nf.field_l.field_g[var5_int] = var4_ref_b.field_h[var5_int];
               }
               bd.field_t = nf.field_k;
-              nf.field_k = dg.field_a;
-              dg.field_a = ca.field_e;
+              nf.field_k = FullscreenFocusCanvas.field_a;
+              FullscreenFocusCanvas.field_a = ca.field_e;
               ca.field_e = var4_ref_b.field_j;
               return true;
             }
@@ -500,13 +500,13 @@ final class gj implements Runnable {
               nf.field_l.field_h = 0;
               tg.field_a = param0[md.field_k];
             }
-            if (!ce.a(0)) {
+            if (!GameKeyHandler.a(0)) {
               return false;
             }
             if (aa.field_a == 0) {
               bd.field_t = nf.field_k;
-              nf.field_k = dg.field_a;
-              dg.field_a = ca.field_e;
+              nf.field_k = FullscreenFocusCanvas.field_a;
+              FullscreenFocusCanvas.field_a = ca.field_e;
               ca.field_e = md.field_k;
               md.field_k = -1;
               return true;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pi extends wf {
+final class pi extends IntrusiveNode {
     static int field_j;
     static ci field_g;
     static int field_k;

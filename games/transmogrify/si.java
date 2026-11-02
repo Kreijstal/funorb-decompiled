@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class si extends wf {
+final class si extends IntrusiveNode {
     private int[] field_o;
     static int field_l;
     byte[] field_p;

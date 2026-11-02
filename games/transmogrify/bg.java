@@ -152,7 +152,7 @@ final class bg extends me {
             return stackIn_10_0;
           }
           if (ve.a(1, var5)) {
-            stackIn_14_0 = ri.field_i;
+            stackIn_14_0 = DualLinkNode.field_i;
             return stackIn_14_0;
           }
           if (this.b(param1, param0 ^ 8632)) {

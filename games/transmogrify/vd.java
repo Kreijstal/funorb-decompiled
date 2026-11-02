@@ -179,7 +179,7 @@ final class vd {
               var32 = var30 & 65280;
               var33 = (16711908 & var32 * var28) >>> 8 | (-16711885 & var28 * var31) >>> 8;
               var33 = var33 + var29 * 65793;
-              ri.a(var22, (var33 & 16711422) >> 1, var26, var27, (byte) -127, var23, var25, var24);
+              DualLinkNode.a(var22, (var33 & 16711422) >> 1, var26, var27, (byte) -127, var23, var25, var24);
             } else {
               var28 = var54[var18];
               var29 = var54[var19];
@@ -201,7 +201,7 @@ final class vd {
               var39 = (16711897 & var30 * var36) >>> 8 | (-16711842 & var30 * var35) >>> 8;
               var37 = var37 + 65793 * var31;
               var39 = var39 + var33 * 65793;
-              kl.a(var38 >> 16, var23, (var39 & 65521) >> 8, var27, var24, var25, var39 & 255, var37 >> 16, (65468 & var37) >> 8, (byte) 44, var26, var38 & 255, 255 & var38 >> 8, var22, var39 >> 16, 255 & var37);
+              ContextualRuntimeException.a(var38 >> 16, var23, (var39 & 65521) >> 8, var27, var24, var25, var39 & 255, var37 >> 16, (65468 & var37) >> 8, (byte) 44, var26, var38 & 255, 255 & var38 >> 8, var22, var39 >> 16, 255 & var37);
             }
           }
           return;
@@ -376,7 +376,7 @@ final class vd {
             if (0 != var5) {
               var6 = var4.field_h;
               od.field_l[0].field_a = null;
-              od.field_l[0].field_e = w.field_a;
+              od.field_l[0].field_e = NodeHashTableIterator.field_a;
               od.field_l[0].field_c = false;
               var7 = var4.field_n;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
@@ -424,7 +424,7 @@ final class vd {
                   }
                   if (var21 != null &&
                     qg.a(var21, (byte) 78)) {
-                    var8[1][var13] = w.field_a;
+                    var8[1][var13] = NodeHashTableIterator.field_a;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;

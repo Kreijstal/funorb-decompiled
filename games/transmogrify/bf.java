@@ -8,7 +8,7 @@ final class bf extends lj {
     private bf(String param0, ui param1, ma param2) {
         super(param0, param1, param2);
         try {
-          this.field_q = vi.field_e.field_b;
+          this.field_q = IterableNodeHashTable.field_e.field_b;
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -69,9 +69,9 @@ final class bf extends lj {
     }
 
     private bf(String param0, ma param1) {
-        this(param0, vi.field_e.field_d, param1);
+        this(param0, IterableNodeHashTable.field_e.field_d, param1);
         try {
-          this.field_q = vi.field_e.field_b;
+          this.field_q = IterableNodeHashTable.field_e.field_b;
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

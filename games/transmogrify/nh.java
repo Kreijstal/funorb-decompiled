@@ -115,18 +115,18 @@ final class nh {
         int var1 = 43 % ((47 - param0) / 61);
     }
 
-    final static rj b(int param0) {
+    final static MouseWheelInput b(int param0) {
         try {
           Throwable var1 = null;
           ti var2 = null;
-          rj stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != 1) {
               var2 = (ti) null;
               nh.a((ti) null, (byte) 65);
             }
-            stackIn_3_0 = (rj) (Class.forName("sk").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

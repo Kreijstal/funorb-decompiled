@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class sj extends wf {
+final class sj extends IntrusiveNode {
     static String[] field_w;
     int field_v;
     int field_l;
@@ -76,7 +76,7 @@ final class sj extends wf {
         if ((param0 & 31) == 31) {
           wl.field_K.b(this.field_j + param3, this.field_q + param1, 10539762);
         } else {
-          rj.field_a[param0 % rj.field_a.length].c(this.field_j + param3, param1 + this.field_q);
+          MouseWheelInput.field_a[param0 % MouseWheelInput.field_a.length].c(this.field_j + param3, param1 + this.field_q);
           var12 = Integer.toString(this.field_v + (this.field_h << 1));
           var6Lifetime1 = this.field_n.field_c.a(this.field_i);
           var7Lifetime1 = hk.field_a.a(var12);
@@ -94,7 +94,7 @@ final class sj extends wf {
           hk.field_a.b(var12, param3 + this.field_j + var8Lifetime1, param1 + 28 + this.field_q, 1, -1);
           return;
         }
-        rj.field_a[param0 % rj.field_a.length].c(this.field_j + param3, param1 + this.field_q);
+        MouseWheelInput.field_a[param0 % MouseWheelInput.field_a.length].c(this.field_j + param3, param1 + this.field_q);
         String var13 = Integer.toString(this.field_v + (this.field_h << 1));
         var6Lifetime2 = this.field_n.field_c.a(this.field_i);
         var7Lifetime2 = hk.field_a.a(var13);
@@ -151,7 +151,7 @@ final class sj extends wf {
     }
 
     final void d(int param0) {
-        ab.field_c.a((wf) (this), -127);
+        ab.field_c.a((IntrusiveNode) (this), -127);
         if (param0 != 1) {
           this.field_n = (nf) null;
         }
@@ -182,7 +182,7 @@ final class sj extends wf {
               return;
             }
             if (this.field_q == this.field_p) {
-              vk.a((byte) 108, dg.field_d[3 + li.a(3, o.field_o, false)]);
+              vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
               return;
             }
             return;
@@ -199,7 +199,7 @@ final class sj extends wf {
               return;
             }
             if (this.field_q == this.field_p) {
-              vk.a((byte) 108, dg.field_d[3 + li.a(3, o.field_o, false)]);
+              vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
               return;
             }
             return;
@@ -210,7 +210,7 @@ final class sj extends wf {
             return;
           }
           if (this.field_q == this.field_p) {
-            vk.a((byte) 108, dg.field_d[3 + li.a(3, o.field_o, false)]);
+            vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
             return;
           }
           return;
@@ -225,7 +225,7 @@ final class sj extends wf {
               return;
             }
             if (this.field_q == this.field_p) {
-              vk.a((byte) 108, dg.field_d[3 + li.a(3, o.field_o, false)]);
+              vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
               return;
             }
             return;
@@ -238,7 +238,7 @@ final class sj extends wf {
           if (this.field_q != this.field_p) {
             return;
           }
-          vk.a((byte) 108, dg.field_d[3 + li.a(3, o.field_o, false)]);
+          vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
           return;
         }
         if (this.field_p == this.field_q) {
@@ -253,7 +253,7 @@ final class sj extends wf {
             return;
           }
           if (this.field_q == this.field_p) {
-            vk.a((byte) 108, dg.field_d[3 + li.a(3, o.field_o, false)]);
+            vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
             return;
           }
           return;
@@ -264,7 +264,7 @@ final class sj extends wf {
           return;
         }
         if (this.field_q == this.field_p) {
-          vk.a((byte) 108, dg.field_d[3 + li.a(3, o.field_o, false)]);
+          vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
           return;
         }
     }

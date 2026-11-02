@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class kb extends ri {
+class kb extends DualLinkNode {
     static java.math.BigInteger field_p;
     static volatile boolean field_l;
     static String field_o;

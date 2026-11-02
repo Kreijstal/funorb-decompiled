@@ -209,7 +209,7 @@ final class ff extends aj implements fb, df {
           var8 = e.field_q;
           var9 = ga.a(125, ha.b(81));
           if (aa.field_d == var9) {
-            var8 = pf.field_c;
+            var8 = SecondaryNodeDeque.field_c;
           } else {
             if (of.field_f == var9) {
               var8 = te.field_b;

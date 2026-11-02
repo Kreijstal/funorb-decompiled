@@ -252,11 +252,11 @@ final class ej extends ag {
           if ((4 & this.field_o.field_v[param3.field_u]) != param2 &&
             param3.field_p < 0) {
             var7_int = this.field_o.field_D[param3.field_u] / qh.field_p;
-            L2: while (true) {
+            scanLoop1: while (true) {
               var8 = (1048575 + var7_int - param3.field_n) / var7_int;
               if (param5 < var8) {
                 if (var12 == 0) {
-                  break L2;
+                  break scanLoop1;
                 }
               } else {
                 param3.field_y.b(param1, param4, var8);

@@ -231,9 +231,9 @@ final class ea {
         return false;
     }
 
-    final dg d(byte param0) {
-        dg var2 = null;
-        dg var2Lifetime1;
+    final FullscreenFocusCanvas d(byte param0) {
+        FullscreenFocusCanvas var2 = null;
+        FullscreenFocusCanvas var2Lifetime1;
         this.field_p = fk.field_E;
         this.field_e = mk.field_x;
         this.field_r.a(this.field_a, this.field_o, -23222);

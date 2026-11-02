@@ -98,7 +98,7 @@ final class be extends ih {
               var4 = this.field_t.a(this.field_r, false, true, (byte) 2, param0);
             }
           }
-          this.field_m.a((long)param0, (byte) -98, (wf) (var4));
+          this.field_m.a((long)param0, (byte) -98, (IntrusiveNode) (var4));
         }
         if (((rh) (var4)).field_m) {
           return null;
@@ -158,7 +158,7 @@ final class be extends ih {
                 return null;
               }
               var4 = this.field_t.a(this.field_r, false, true, (byte) 2, param0);
-              this.field_m.a((long)param0, (byte) 98, (wf) (var4));
+              this.field_m.a((long)param0, (byte) 98, (IntrusiveNode) (var4));
             }
             return null;
           }
@@ -199,7 +199,7 @@ final class be extends ih {
             return null;
           }
           var4 = this.field_t.a(this.field_r, false, true, (byte) 2, param0);
-          this.field_m.a((long)param0, (byte) -102, (wf) (var4));
+          this.field_m.a((long)param0, (byte) -102, (IntrusiveNode) (var4));
           return null;
         }
         var5[-2 + var18.length] = (byte)(this.field_v.field_q[param0] >>> 8);
@@ -306,9 +306,9 @@ final class be extends ih {
         if (null == this.a(-119)) {
           return;
         }
-        wf var2 = this.field_y.a((byte) -95);
+        IntrusiveNode var2 = this.field_y.a((byte) -95);
         while (var2 != null) {
-          var3 = (int)var2.field_c;
+          var3 = (int)var2.key;
           if (var3 < 0) {
             var2.c(5);
           } else {
@@ -344,11 +344,11 @@ final class be extends ih {
         if (bi.field_L < 2) {
           return 0;
         }
-        if (0 == w.field_f) {
-          if (!cj.field_c.a((byte) -126)) {
+        if (0 == NodeHashTableIterator.field_f) {
+          if (!RasterBuffer.field_c.a((byte) -126)) {
             return 20;
           }
-          if (!cj.field_c.a((byte) 120, "commonui")) {
+          if (!RasterBuffer.field_c.a((byte) 120, "commonui")) {
             return 40;
           }
           if (!wi.field_e.a((byte) -127)) {
@@ -375,10 +375,10 @@ final class be extends ih {
               return 29;
             }
           }
-          if (!cj.field_c.a((byte) -125)) {
+          if (!RasterBuffer.field_c.a((byte) -125)) {
             return 43;
           }
-          if (!cj.field_c.a((byte) 120, "commonui")) {
+          if (!RasterBuffer.field_c.a((byte) 120, "commonui")) {
             return 57;
           }
           if (!wi.field_e.a((byte) -118)) {
@@ -465,14 +465,14 @@ final class be extends ih {
         rh discarded$2 = null;
         int var2_int;
         rh var2;
-        wf var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        wf var6;
-        wf var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        wf var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = Transmogrify.field_A ? 1 : 0;
         if (null != this.field_s) {
@@ -483,7 +483,7 @@ final class be extends ih {
             var2_int = 1;
             var3 = this.field_s.a((byte) -95);
             while (var3 != null) {
-              var4 = (int)var3.field_c;
+              var4 = (int)var3.key;
               if (this.field_k[var4] == 0) {
                 discarded$1 = this.a(var4, (byte) 2, 1);
               }
@@ -494,19 +494,19 @@ final class be extends ih {
               }
               var3 = this.field_s.a(true);
             }
-            L3: while (true) {
+            scanLoop1: while (true) {
               if (this.field_e < this.field_v.field_s.length) {
                 if (this.field_v.field_s[this.field_e] != 0) {
                   if (250 <= this.field_g.field_e) {
                     var2_int = 0;
-                    break L3;
+                    break scanLoop1;
                   }
                   if (this.field_k[this.field_e] == 0) {
                     discarded$0 = this.a(this.field_e, (byte) 2, 1);
                   }
                   if (this.field_k[this.field_e] == 0) {
-                    var7 = new wf();
-                    var7.field_c = (long)this.field_e;
+                    var7 = new IntrusiveNode();
+                    var7.key = (long)this.field_e;
                     var2_int = 0;
                     this.field_s.a(var7, -115);
                   }
@@ -527,7 +527,7 @@ final class be extends ih {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_s.a((byte) -95);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_c;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_k[var4Lifetime1] != 1) {
                   discarded$3 = this.a(var4Lifetime1, (byte) 2, 2);
                 }
@@ -548,8 +548,8 @@ final class be extends ih {
                     discarded$2 = this.a(this.field_e, (byte) 2, 2);
                   }
                   if (1 != this.field_k[this.field_e]) {
-                    var6 = new wf();
-                    var6.field_c = (long)this.field_e;
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_e;
                     this.field_s.a(var6, -89);
                     var2_intLifetime1 = 0;
                   }

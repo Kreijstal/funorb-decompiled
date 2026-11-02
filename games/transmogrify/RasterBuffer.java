@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class cj {
+abstract class RasterBuffer {
     static String[] field_e;
     int field_d;
     static ci field_c;
@@ -46,7 +46,7 @@ abstract class cj {
         try {
           if (param1 != 13861) {
             var3 = (java.awt.Canvas) null;
-            cj.a((java.awt.Canvas) null, -52);
+            RasterBuffer.a((java.awt.Canvas) null, -52);
           }
           hj.a((java.awt.Component) ((Object) param0), param1 - 13863);
           jl.a((java.awt.Component) ((Object) param0), 0);

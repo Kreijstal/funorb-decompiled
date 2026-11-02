@@ -3,15 +3,15 @@
  */
 final class wb {
     private int field_b;
-    private ri[] field_c;
+    private DualLinkNode[] field_c;
     static String field_d;
     private long field_a;
-    private ri field_e;
+    private DualLinkNode field_e;
 
-    final ri a(long param0, byte param1) {
-        ri var4;
+    final DualLinkNode a(long param0, byte param1) {
+        DualLinkNode var4;
         int var5;
-        ri var6;
+        DualLinkNode var6;
         int var7;
         var7 = Transmogrify.field_A ? 1 : 0;
         this.field_a = param0;
@@ -80,10 +80,10 @@ final class wb {
         }
     }
 
-    final ri a(int param0) {
-        ri var2;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2;
         int var3_int;
-        ri var3;
+        DualLinkNode var3;
         int var4;
         var4 = Transmogrify.field_A ? 1 : 0;
         if (null == this.field_e) {
@@ -109,12 +109,12 @@ final class wb {
 
     wb(int param0) {
         int var2 = 0;
-        ri dupTemp$0 = null;
-        ri var3 = null;
-        this.field_c = new ri[param0];
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
+        this.field_c = new DualLinkNode[param0];
         this.field_b = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new ri();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_c[var2] = dupTemp$0;
           var3.field_h = var3;
@@ -122,8 +122,8 @@ final class wb {
         }
     }
 
-    final void a(int param0, long param1, ri param2) {
-        ri var5 = null;
+    final void a(int param0, long param1, DualLinkNode param2) {
+        DualLinkNode var5 = null;
         try {
           if (null != param2.field_g) {
             param2.b((byte) -59);

@@ -29,7 +29,7 @@ final class l {
           l.a((byte) 92);
           var2 = 0;
           var3 = si.field_l;
-          sharedTailExit_0: {
+          regionExit1: {
             if (var3 < 5) {
               var2 = var3 * var3 * 8192 / 1100;
             } else {
@@ -60,7 +60,7 @@ final class l {
                     var5 = -1;
                     var4 = -1;
                   }
-                  break sharedTailExit_0;
+                  break regionExit1;
                 }
                 var3 = -var3 + 120;
                 var2 = -(8192 * (var3 * var3) / 3300) + 8192;

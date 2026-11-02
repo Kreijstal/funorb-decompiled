@@ -202,7 +202,7 @@ final class sf extends ik implements df {
     }
 
     sf(da param0, wl param1) {
-        super(param0, rh.field_q, vi.field_i, false, false);
+        super(param0, rh.field_q, IterableNodeHashTable.field_i, false, false);
         try {
           this.field_mb = param1;
         } catch (RuntimeException runtimeException) {

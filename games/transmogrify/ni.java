@@ -33,7 +33,7 @@ class ni extends h {
             stackIn_24_0 = 0;
             return stackIn_24_0;
           }
-          if (!qi.field_c.a(-1, od.field_g.field_e)) {
+          if (!MouseInputHandler.field_c.a(-1, od.field_g.field_e)) {
             stackIn_22_0 = -1;
             return stackIn_22_0;
           }
@@ -61,7 +61,7 @@ class ni extends h {
               stackIn_20_0 = var1_int << 1;
               return stackIn_20_0;
             }
-            if (!var7.equalsIgnoreCase(vi.field_g[var8].toString())) {
+            if (!var7.equalsIgnoreCase(IterableNodeHashTable.field_g[var8].toString())) {
               var8++;
               continue;
             }

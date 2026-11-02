@@ -5,7 +5,7 @@ final class ub {
     static String field_e;
     static String field_b;
     static int field_a;
-    static dg field_c;
+    static FullscreenFocusCanvas field_c;
     static boolean field_d;
 
     public static void a(int param0) {

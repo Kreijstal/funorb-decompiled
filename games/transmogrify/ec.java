@@ -115,8 +115,8 @@ abstract class ec {
 
     final static void a(String param0, int param1, String param2) {
         try {
-          if (null != wg.field_d) {
-            wg.field_d.r(77);
+          if (null != SecondaryNodeDequeIterator.field_d) {
+            SecondaryNodeDequeIterator.field_d.r(77);
           }
           ok.field_a = new ff(param0, param2, false, true, true);
           int var3_int = -114 / ((57 - param1) / 56);

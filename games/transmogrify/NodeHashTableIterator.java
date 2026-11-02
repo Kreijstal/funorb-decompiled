@@ -3,23 +3,23 @@
  */
 import java.util.*;
 
-final class w implements Iterator {
-    private wf field_d;
+final class NodeHashTableIterator implements Iterator {
+    private IntrusiveNode field_d;
     static int field_f;
     static String field_a;
-    private wf field_e;
+    private IntrusiveNode field_e;
     private int field_c;
-    private vi field_b;
+    private IterableNodeHashTable field_b;
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        wf var1;
+        IntrusiveNode var1;
         int var2;
         var2 = Transmogrify.field_A ? 1 : 0;
         if (this.field_b.field_d[this.field_c - 1] != this.field_d) {
           var1 = this.field_d;
           this.field_e = var1;
-          this.field_d = var1.field_b;
+          this.field_d = var1.next;
           return var1;
         }
         do {
@@ -28,9 +28,9 @@ final class w implements Iterator {
           }
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          var1 = this.field_b.field_d[fieldTemp$0].field_b;
+          var1 = this.field_b.field_d[fieldTemp$0].next;
         } while (this.field_b.field_d[-1 + this.field_c] == var1);
-        this.field_d = var1.field_b;
+        this.field_d = var1.next;
         this.field_e = var1;
         return var1;
     }
@@ -45,8 +45,8 @@ final class w implements Iterator {
         while (this.field_b.field_c > this.field_c) {
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          if (this.field_b.field_d[fieldTemp$0].field_b != this.field_b.field_d[-1 + this.field_c]) {
-            this.field_d = this.field_b.field_d[-1 + this.field_c].field_b;
+          if (this.field_b.field_d[fieldTemp$0].next != this.field_b.field_d[-1 + this.field_c]) {
+            this.field_d = this.field_b.field_d[-1 + this.field_c].next;
             return true;
           }
           this.field_d = this.field_b.field_d[this.field_c - 1];
@@ -59,7 +59,7 @@ final class w implements Iterator {
         if (param0 != -75) {
           return;
         }
-        this.field_d = this.field_b.field_d[0].field_b;
+        this.field_d = this.field_b.field_d[0].next;
         this.field_e = null;
     }
 
@@ -78,7 +78,7 @@ final class w implements Iterator {
         try {
           if (param3 <= 24) {
             var7 = (nf) null;
-            w.a((j) null, -111, (nf) null, (byte) -120, '￬');
+            NodeHashTableIterator.a((j) null, -111, (nf) null, (byte) -120, '￬');
           }
           var5 = (sj) (ab.field_c.c(-126));
           if (var5 == null) {
@@ -217,7 +217,7 @@ final class w implements Iterator {
         }
     }
 
-    w(vi param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_e = null;
         try {
           this.field_b = param0;

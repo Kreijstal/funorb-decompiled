@@ -43,7 +43,7 @@ final class ol {
               return;
             }
             try {
-              ah.field_b = new we(l.field_b.field_v, 64, 0);
+              DelegatingCanvas.field_b = new we(l.field_b.field_v, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

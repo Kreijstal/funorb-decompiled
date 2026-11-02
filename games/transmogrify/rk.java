@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class rk extends ri {
+final class rk extends DualLinkNode {
     static int[] field_n;
     static int field_p;
     private String[] field_s;
@@ -25,7 +25,7 @@ final class rk extends ri {
         String var11;
         int var12;
         int var13;
-        kl var14;
+        ContextualRuntimeException var14;
         StringWriter var15;
         String var16;
         String var17;
@@ -53,13 +53,13 @@ final class rk extends ri {
         String var11Lifetime5Lifetime1;
         String var11Lifetime5Lifetime2;
         var13 = Transmogrify.field_A ? 1 : 0;
-        if (!(param0 instanceof kl)) {
+        if (!(param0 instanceof ContextualRuntimeException)) {
           var2 = "";
           var11 = var2;
           var2 = var11;
           var11Lifetime6 = var2;
         } else {
-          var14 = (kl) ((Object) param0);
+          var14 = (ContextualRuntimeException) ((Object) param0);
           var2 = var14.field_a + " | ";
           param0 = var14.field_b;
         }
@@ -220,7 +220,7 @@ final class rk extends ri {
               }
             }
           } else {
-            this.field_s = vi.a('<', param2.g(param0 - 20264), 0);
+            this.field_s = IterableNodeHashTable.a('<', param2.g(param0 - 20264), 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

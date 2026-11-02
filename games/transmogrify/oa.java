@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class oa extends wf {
+class oa extends IntrusiveNode {
     static String field_i;
     int field_h;
     static tf field_l;

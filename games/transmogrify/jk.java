@@ -20,7 +20,7 @@ final class jk extends aj implements df {
           var11 = !param5 ? param3 : param2;
           var13 = !param5 ? param0 : param8;
           field_x.a(var13, -5 + param4, 3, 10 + param1, -5 + param7, var11);
-          wf.field_d.c(param6, (param1 >> 1) + param7, (-wf.field_d.field_t - wf.field_d.field_y + var10_int) / 2 + (wf.field_d.field_y + param4), 0, -1);
+          IntrusiveNode.field_d.c(param6, (param1 >> 1) + param7, (-IntrusiveNode.field_d.field_t - IntrusiveNode.field_d.field_y + var10_int) / 2 + (IntrusiveNode.field_d.field_y + param4), 0, -1);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "jk.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }

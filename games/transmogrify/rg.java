@@ -267,7 +267,7 @@ class rg extends lj {
         this.field_A = false;
         try {
           this.field_E = param2;
-          this.field_q = vi.field_e.field_f;
+          this.field_q = IterableNodeHashTable.field_e.field_f;
           this.a(param0, true, 1);
           this.field_J = true;
           this.field_C = lk.a(0);

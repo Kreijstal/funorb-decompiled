@@ -204,8 +204,8 @@ class bj extends kb {
     }
 
     final static void d(int param0) {
-        if (null != wg.field_d) {
-          wg.field_d.r(77);
+        if (null != SecondaryNodeDequeIterator.field_d) {
+          SecondaryNodeDequeIterator.field_d.r(77);
         }
         ca.field_g = new ck();
         if (param0 != -2147483648) {
@@ -236,7 +236,7 @@ class bj extends kb {
         this.field_A = -1;
         this.field_F = true;
         try {
-          this.field_c = param0;
+          this.key = param0;
           this.a(-10583, param1);
           if (param6 != null) {
             this.field_D = param6;

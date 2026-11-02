@@ -12,10 +12,10 @@ final class rb {
           if (param0 != -114) {
             field_a = 53;
           }
-          if (ah.field_b != null) {
+          if (DelegatingCanvas.field_b != null) {
             try {
-              ah.field_b.a(0L, (byte) -127);
-              ah.field_b.a(nf.field_l.field_g, 24, (byte) 118, nf.field_l.field_h);
+              DelegatingCanvas.field_b.a(0L, (byte) -127);
+              DelegatingCanvas.field_b.a(nf.field_l.field_g, 24, (byte) 118, nf.field_l.field_h);
             } catch (Exception exception) {
             }
           }

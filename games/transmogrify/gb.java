@@ -167,8 +167,8 @@ final class gb {
           wl.field_I = false;
           aa.field_g = false;
           var3_int = -66 % ((-23 - param1) / 41);
-          if (null != wg.field_d &&
-            wg.field_d.field_A) {
+          if (null != SecondaryNodeDequeIterator.field_d &&
+            SecondaryNodeDequeIterator.field_d.field_A) {
             var4 = 1;
             if (param0 == 8) {
               param0 = 2;
@@ -190,7 +190,7 @@ final class gb {
               if (hd.field_b) {
                 param2 = qd.field_c;
               }
-              wg.field_d.a(param2, param0, -4);
+              SecondaryNodeDequeIterator.field_d.a(param2, param0, -4);
             }
             if (param0 != 256 &&
               param0 != 10 &&
@@ -243,10 +243,10 @@ final class gb {
             }
             var6 = new byte[24];
             var2 = var6;
-            if (ah.field_b != null) {
+            if (DelegatingCanvas.field_b != null) {
               try {
-                ah.field_b.a(0L, (byte) -128);
-                ah.field_b.a(var6, 16711708);
+                DelegatingCanvas.field_b.a(0L, (byte) -128);
+                DelegatingCanvas.field_b.a(var6, 16711708);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var6[var3_int] == 0) {
                     continue;

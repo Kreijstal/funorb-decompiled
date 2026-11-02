@@ -111,7 +111,7 @@ class lj extends qg {
     }
 
     lj(String param0, ma param1) {
-        this(param0, vi.field_e.field_d, param1);
+        this(param0, IterableNodeHashTable.field_e.field_d, param1);
     }
 
     boolean a(int param0, qg param1, byte param2, char param3) {
@@ -330,7 +330,7 @@ class lj extends qg {
                 return stackIn_3_0;
               }
               var3 = (String) (kj.a(param2, false, "getcookies"));
-              var4 = vi.a(';', var3, 0);
+              var4 = IterableNodeHashTable.a(';', var3, 0);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -374,7 +374,7 @@ class lj extends qg {
         this.field_t = true;
         this.field_w = false;
         this.field_v = true;
-        this.field_q = vi.field_e.field_o;
+        this.field_q = IterableNodeHashTable.field_e.field_o;
     }
 
     static {

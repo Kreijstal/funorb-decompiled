@@ -67,7 +67,7 @@ final class id {
         try {
           var9 = vl.field_C.b(1, var5);
           l.field_c = var9.d((byte) -127);
-          if (!fd.field_i.equals(w.field_a)) {
+          if (!fd.field_i.equals(NodeHashTableIterator.field_a)) {
             stackIn_25_0 = var9.field_m;
           } else {
             stackIn_25_0 = null;

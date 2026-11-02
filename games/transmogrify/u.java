@@ -47,7 +47,7 @@ final class u {
           var3 = param0.k(12, 1522829539);
           var4 = new oe[var3];
           for (var5 = 0; var5 < var3; var5++) {
-            if (!w.a(-1, param0)) {
+            if (!NodeHashTableIterator.a(-1, param0)) {
               var6 = param0.k(ol.a(-23755, var5 - 1), 1522829539);
               var4[var5] = var4[var6];
             } else {

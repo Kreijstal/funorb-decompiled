@@ -3,36 +3,36 @@
  */
 final class qj {
     static String[] field_a;
-    wf field_d;
+    IntrusiveNode field_d;
     static String field_c;
-    private wf field_b;
+    private IntrusiveNode field_b;
 
-    final wf a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         if (param0 != -95) {
-          return (wf) null;
+          return (IntrusiveNode) null;
         }
-        wf var2 = this.field_d.field_b;
+        IntrusiveNode var2 = this.field_d.next;
         if (this.field_d == var2) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_b;
+        this.field_b = var2.next;
         return var2;
     }
 
-    final wf a(int param0) {
-        wf var2 = null;
-        wf var2Lifetime1;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != -9424) {
           qj.c((byte) 97);
-          var2 = this.field_d.field_f;
+          var2 = this.field_d.previous;
           if (this.field_d != var2) {
             var2.c(5);
             return var2;
           }
           return null;
         }
-        var2Lifetime1 = this.field_d.field_f;
+        var2Lifetime1 = this.field_d.previous;
         if (this.field_d != var2Lifetime1) {
           var2Lifetime1.c(5);
           return var2Lifetime1;
@@ -76,39 +76,39 @@ final class qj {
         return ge.field_x;
     }
 
-    final wf a(boolean param0) {
-        wf var2 = this.field_b;
+    final IntrusiveNode a(boolean param0) {
+        IntrusiveNode var2 = this.field_b;
         if (this.field_d == var2) {
           this.field_b = null;
           return null;
         }
         if (param0) {
-          this.field_b = var2.field_b;
+          this.field_b = var2.next;
           return var2;
         }
         this.a(true);
-        this.field_b = var2.field_b;
+        this.field_b = var2.next;
         return var2;
     }
 
-    final void a(wf param0, int param1) {
+    final void a(IntrusiveNode param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != param0.field_f) {
+          if (null != param0.previous) {
             param0.c(5);
           }
-          param0.field_f = this.field_d.field_f;
-          param0.field_b = this.field_d;
-          param0.field_f.field_b = param0;
-          param0.field_b.field_f = param0;
+          param0.previous = this.field_d.previous;
+          param0.next = this.field_d;
+          param0.previous.next = param0;
+          param0.next.previous = param0;
           if (param1 <= -81) {
             return;
           }
-          this.field_d = (wf) null;
+          this.field_d = (IntrusiveNode) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -124,19 +124,19 @@ final class qj {
         }
     }
 
-    final wf b(int param0) {
-        wf var2 = this.field_d.field_f;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = this.field_d.previous;
         if (param0 != -10231) {
           field_c = (String) null;
           if (this.field_d != var2) {
-            this.field_b = var2.field_f;
+            this.field_b = var2.previous;
             return var2;
           }
           this.field_b = null;
           return null;
         }
         if (this.field_d != var2) {
-          this.field_b = var2.field_f;
+          this.field_b = var2.previous;
           return var2;
         }
         this.field_b = null;
@@ -152,7 +152,7 @@ final class qj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= 36) {
-            stackIn_4_0 = ig.a(10, false, true, param0);
+            stackIn_4_0 = SessionGameApplet.a(10, false, true, param0);
             return stackIn_4_0;
           }
           return true;
@@ -172,12 +172,12 @@ final class qj {
 
     final void g(int param0) {
         int var3;
-        wf var5;
-        wf var4;
+        IntrusiveNode var5;
+        IntrusiveNode var4;
         var3 = Transmogrify.field_A ? 1 : 0;
         if (param0 == -1) {
           while (true) {
-            var4 = this.field_d.field_b;
+            var4 = this.field_d.next;
             if (this.field_d != var4) {
               var4.c(5);
               continue;
@@ -189,7 +189,7 @@ final class qj {
         }
         qj.b((byte) 115);
         while (true) {
-          var5 = this.field_d.field_b;
+          var5 = this.field_d.next;
           if (this.field_d != var5) {
             var5.c(5);
             continue;
@@ -206,33 +206,33 @@ final class qj {
         field_c = null;
     }
 
-    final wf f(int param0) {
-        wf var2 = this.field_b;
+    final IntrusiveNode f(int param0) {
+        IntrusiveNode var2 = this.field_b;
         if (var2 == this.field_d) {
           this.field_b = null;
           return null;
         }
         if (param0 == -33) {
-          this.field_b = var2.field_f;
+          this.field_b = var2.previous;
           return var2;
         }
-        this.field_d = (wf) null;
-        this.field_b = var2.field_f;
+        this.field_d = (IntrusiveNode) null;
+        this.field_b = var2.previous;
         return var2;
     }
 
-    final void a(wf param0, byte param1) {
-        if (param0.field_f != null) {
+    final void a(IntrusiveNode param0, byte param1) {
+        if (param0.previous != null) {
           param0.c(5);
         }
         if (param1 != 33) {
           return;
         }
         try {
-          param0.field_b = this.field_d.field_b;
-          param0.field_f = this.field_d;
-          param0.field_f.field_b = param0;
-          param0.field_b.field_f = param0;
+          param0.next = this.field_d.next;
+          param0.previous = this.field_d;
+          param0.previous.next = param0;
+          param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "qj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -242,11 +242,11 @@ final class qj {
         if (param0 != -1) {
           return true;
         }
-        return this.field_d == this.field_d.field_b ? true : false;
+        return this.field_d == this.field_d.next ? true : false;
     }
 
-    final wf c(int param0) {
-        wf var2 = this.field_d.field_b;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_d.next;
         if (var2 == this.field_d) {
           return null;
         }
@@ -261,9 +261,9 @@ final class qj {
     }
 
     public qj() {
-        this.field_d = new wf();
-        this.field_d.field_f = this.field_d;
-        this.field_d.field_b = this.field_d;
+        this.field_d = new IntrusiveNode();
+        this.field_d.previous = this.field_d;
+        this.field_d.next = this.field_d;
     }
 
     final static void e(int param0) {

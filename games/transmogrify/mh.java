@@ -51,7 +51,7 @@ final class mh {
             stackIn_7_0 = rd.field_d;
             return stackIn_7_0;
           }
-          var3 = vi.a((char)param1, param0, 0);
+          var3 = IterableNodeHashTable.a((char)param1, param0, 0);
           if (var3.length < 2) {
             stackIn_10_0 = ai.field_a;
             return stackIn_10_0;
@@ -164,11 +164,11 @@ final class mh {
           }
           return od.field_h;
         }
-        if (!cj.field_c.a((byte) -124)) {
+        if (!RasterBuffer.field_c.a((byte) -124)) {
           return vg.field_a;
         }
-        if (!cj.field_c.a((byte) 120, "commonui")) {
-          return aa.field_f + " - " + cj.field_c.a(0, "commonui") + "%";
+        if (!RasterBuffer.field_c.a((byte) 120, "commonui")) {
+          return aa.field_f + " - " + RasterBuffer.field_c.a(0, "commonui") + "%";
         }
         if (param0 <= 75) {
           return (String) null;
@@ -200,19 +200,19 @@ final class mh {
           }
           try {
             var6 = null;
-            if (null != qi.field_a.field_b) {
-              kk.field_b = new we(qi.field_a.field_b, 5200, 0);
-              qi.field_a.field_b = null;
-              var6 = new ak(255, kk.field_b, new we(qi.field_a.field_h, 12000, 0), 2097152);
+            if (null != MouseInputHandler.field_a.field_b) {
+              kk.field_b = new we(MouseInputHandler.field_a.field_b, 5200, 0);
+              MouseInputHandler.field_a.field_b = null;
+              var6 = new ak(255, kk.field_b, new we(MouseInputHandler.field_a.field_h, 12000, 0), 2097152);
             }
             var7 = null;
             if (kk.field_b != null) {
               if (null == oa.field_m) {
-                oa.field_m = new we[qi.field_a.field_s.length];
+                oa.field_m = new we[MouseInputHandler.field_a.field_s.length];
               }
               if (oa.field_m[param5] == null) {
-                oa.field_m[param5] = new we(qi.field_a.field_s[param5], 12000, 0);
-                qi.field_a.field_s[param5] = null;
+                oa.field_m[param5] = new we(MouseInputHandler.field_a.field_s[param5], 12000, 0);
+                MouseInputHandler.field_a.field_s[param5] = null;
               }
               var7 = new ak(param5, kk.field_b, oa.field_m[param5], 2097152);
             }

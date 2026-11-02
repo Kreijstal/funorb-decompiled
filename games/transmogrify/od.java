@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class od extends wf {
+final class od extends IntrusiveNode {
     int field_k;
     static String field_h;
-    wf field_i;
+    IntrusiveNode field_i;
     static ta[] field_l;
     bb field_j;
     static j field_g;
 
-    od(bb param0, wf param1) {
+    od(bb param0, IntrusiveNode param1) {
         try {
           this.field_j = param0;
           this.field_k = param0.h();

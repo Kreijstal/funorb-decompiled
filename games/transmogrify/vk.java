@@ -46,11 +46,11 @@ final class vk {
         byte[] var3_ref_byte__Lifetime1;
         if (param0 == 100 &&
           cc.field_a > 0) {
-          fieldTemp$4 = pf.field_a;
+          fieldTemp$4 = SecondaryNodeDeque.field_a;
           fieldTemp$5 = cc.field_a - 1;
           cc.field_a = cc.field_a - 1;
           var2_ref_byte__ = fieldTemp$4[fieldTemp$5];
-          pf.field_a[cc.field_a] = null;
+          SecondaryNodeDeque.field_a[cc.field_a] = null;
           return var2_ref_byte__;
         }
         var2 = 11 % ((param1 + 3) / 47);

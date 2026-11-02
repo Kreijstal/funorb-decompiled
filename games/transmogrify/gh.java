@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gh extends wf {
+final class gh extends IntrusiveNode {
     byte[] field_k;
     int field_j;
     static int field_l;

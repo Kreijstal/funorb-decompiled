@@ -13,7 +13,7 @@ final class wi implements ui {
     private int field_b;
     private int field_g;
     private int field_n;
-    static fa field_f;
+    static GameApplet field_f;
     private int field_j;
     private int field_m;
     static long field_q;
@@ -23,9 +23,9 @@ final class wi implements ui {
     final static int b(int param0) {
         if (param0 >= -5) {
           wi.b(35);
-          return (int)(1000000000L / fg.field_j);
+          return (int)(1000000000L / ImageProducerRasterBuffer.field_j);
         }
-        return (int)(1000000000L / fg.field_j);
+        return (int)(1000000000L / ImageProducerRasterBuffer.field_j);
     }
 
     public static void a(int param0) {

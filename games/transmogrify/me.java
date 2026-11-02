@@ -137,7 +137,7 @@ abstract class me extends ca implements fb {
           ne.field_b = param6;
           c.field_b = param0;
           nf.field_i = param3;
-          qi.field_a = param8;
+          MouseInputHandler.field_a = param8;
           if (param2 <= 37) {
             fe var10 = (fe) null;
             me.a(44, 91, 102, (String) null, 8, 17, 66, 2, (fe) null);

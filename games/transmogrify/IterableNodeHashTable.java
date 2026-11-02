@@ -3,10 +3,10 @@
  */
 import java.util.*;
 
-final class vi implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     int field_c;
-    private wf field_f;
-    wf[] field_d;
+    private IntrusiveNode field_f;
+    IntrusiveNode[] field_d;
     static StringBuilder[] field_g;
     static int[] field_a;
     static String field_i;
@@ -14,39 +14,39 @@ final class vi implements Iterable {
     static boolean field_h;
     static vd field_e;
 
-    final wf a(int param0, long param1) {
-        wf var5 = null;
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var5 = null;
         int var6 = Transmogrify.field_A ? 1 : 0;
-        wf var4 = this.field_d[(int)((long)(param0 + this.field_c) & param1)];
-        this.field_f = var4.field_b;
+        IntrusiveNode var4 = this.field_d[(int)((long)(param0 + this.field_c) & param1)];
+        this.field_f = var4.next;
         while (var4 != this.field_f) {
-          if (this.field_f.field_c == param1) {
+          if (this.field_f.key == param1) {
             var5 = this.field_f;
-            this.field_f = this.field_f.field_b;
+            this.field_f = this.field_f.next;
             return var5;
           }
-          this.field_f = this.field_f.field_b;
+          this.field_f = this.field_f.next;
         }
         this.field_f = null;
         return null;
     }
 
-    final void a(wf param0, byte param1, long param2) {
-        wf var5 = null;
+    final void a(IntrusiveNode param0, byte param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (param0.field_f != null) {
+          if (param0.previous != null) {
             param0.c(5);
           }
           var5 = this.field_d[(int)((long)(-1 + this.field_c) & param2)];
-          param0.field_f = var5.field_f;
-          param0.field_b = var5;
-          param0.field_f.field_b = param0;
+          param0.previous = var5.previous;
+          param0.next = var5;
+          param0.previous.next = param0;
           if (param1 < 60) {
             String var6 = (String) null;
-            vi.a('X', (String) null, -67);
+            IterableNodeHashTable.a('X', (String) null, -67);
           }
-          param0.field_b.field_f = param0;
-          param0.field_c = param2;
+          param0.next.previous = param0;
+          param0.key = param2;
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "vi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -101,10 +101,10 @@ final class vi implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new w(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    private vi() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 
@@ -134,7 +134,7 @@ final class vi implements Iterable {
         field_i = null;
         field_a = null;
         if (param0 < 33) {
-          vi.a(103);
+          IterableNodeHashTable.a(103);
         }
         field_e = null;
     }

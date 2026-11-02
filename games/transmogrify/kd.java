@@ -28,7 +28,7 @@ final class kd implements ui {
           }
           var9 = -113 / ((param3 - 51) / 47);
           if (param4.b((byte) -109)) {
-            ri.a(param4.field_l - 4, var6_int + 2, var7 + 2, (byte) -86, param4.field_h - 4);
+            DualLinkNode.a(param4.field_l - 4, var6_int + 2, var7 + 2, (byte) -86, param4.field_h - 4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -132,7 +132,7 @@ final class kd implements ui {
             var4_int = 10;
             var5_ref = null;
             if (jl.field_j == 0) {
-              var5_ref = sh.field_a + qi.field_c.field_h;
+              var5_ref = sh.field_a + MouseInputHandler.field_c.field_h;
             }
             if (jl.field_j == 1) {
               ob.a(1, 0, sg.field_p, dc.field_a);
@@ -178,7 +178,7 @@ final class kd implements ui {
             discarded$5 = var17.append("****");
           }
           boolean decompiledFrameRemainder0 = true;
-          wf.field_d.a(var17.toString(), 250, 333 + param1, 255, -1);
+          IntrusiveNode.field_d.a(var17.toString(), 250, 333 + param1, 255, -1);
           var7Lifetime1 = ni.a((byte) -111);
           if (n.field_a != 10 && (!mg.field_d ||
             2 != n.field_a)) {
@@ -188,7 +188,7 @@ final class kd implements ui {
                 n.field_a == 0 &&
                 var7Lifetime1 > 0) {
                 var8_int = 128 + (int)(Math.sin(3.141592653589793 * (double)dc.field_a / 50.0) * 64.0);
-                fg.a(param1 + 376, 264, (byte) 98, 164, 13, jk.field_x.a(true) - 10, pj.field_x, var8_int);
+                ImageProducerRasterBuffer.a(param1 + 376, 264, (byte) 98, 164, 13, jk.field_x.a(true) - 10, pj.field_x, var8_int);
               }
               pa.a(param1 + 376, tj.field_z + var7Lifetime1, 39935, 16776867, 164, 16710412, 264, -10, 39935);
             } else {
@@ -264,9 +264,9 @@ final class kd implements ui {
           }
           if (n.field_a > 0) {
             var8_intLifetime1 = eg.field_b % 58;
-            for (var9Lifetime1 = 0; fg.field_i.length > var9Lifetime1; var9Lifetime1++) {
+            for (var9Lifetime1 = 0; ImageProducerRasterBuffer.field_i.length > var9Lifetime1; var9Lifetime1++) {
               var10Lifetime1 = -var9Lifetime1 + var8_intLifetime1 >> 3;
-              var11 = (fg.field_i[var9Lifetime1] + 10 * (eg.field_b / 58)) % 187;
+              var11 = (ImageProducerRasterBuffer.field_i[var9Lifetime1] + 10 * (eg.field_b / 58)) % 187;
               var12 = var11 + 442;
               var13 = (n.field_a - 1) * 12 + vl.field_G[var9Lifetime1];
               if (var10Lifetime1 >= 0 &&
@@ -277,11 +277,11 @@ final class kd implements ui {
           }
           for (var8_intLifetime2 = 0; n.field_a > var8_intLifetime2; var8_intLifetime2++) {
             hk.field_a.a(var8_intLifetime2 + 1 + ". ", 464, 53 + (12 * var8_intLifetime2 + param1), 16711680, -1);
-            hk.field_a.b(vi.field_g[var8_intLifetime2].toString(), 464, param1 + (12 * var8_intLifetime2 + 53), 16711680, -1);
-            hk.field_a.a(Integer.toString(vi.field_a[var8_intLifetime2]), 627, param1 + 12 * var8_intLifetime2 + 53, 16711680, -1);
+            hk.field_a.b(IterableNodeHashTable.field_g[var8_intLifetime2].toString(), 464, param1 + (12 * var8_intLifetime2 + 53), 16711680, -1);
+            hk.field_a.a(Integer.toString(IterableNodeHashTable.field_a[var8_intLifetime2]), 627, param1 + 12 * var8_intLifetime2 + 53, 16711680, -1);
           }
           hk.field_a.b(sg.field_k, 464, param1 + 173, 16711680, -1);
-          hk.field_a.a(Integer.toString(ce.field_c), 627, 173 + param1, 16711680, -1);
+          hk.field_a.a(Integer.toString(GameKeyHandler.field_c), 627, 173 + param1, 16711680, -1);
           if (n.field_a == 10) {
             hk.field_a.b(ub.field_e, 464, 185 + param1, 16711680, -1);
             hk.field_a.a(Integer.toString(wk.field_d), 627, 185 + param1, 16711680, -1);
@@ -290,7 +290,7 @@ final class kd implements ui {
           hk.field_a.a(Integer.toString(eh.field_a), 627, 197 + param1, 16711680, -1);
           if (ad.field_e) {
             dk.a(136, mk.field_B, -28018, 180, param1 + 88, 280);
-            wf.field_d.a(he.field_g, 190, param1 + 93, 260, 80, 0, -1, 1, 0, wf.field_d.field_y + 3);
+            IntrusiveNode.field_d.a(he.field_g, 190, param1 + 93, 260, 80, 0, -1, 1, 0, IntrusiveNode.field_d.field_y + 3);
             stackIn_103_0 = 65280;
             stackIn_103_1 = 80;
             stackIn_103_2 = 16776867;
@@ -307,8 +307,8 @@ final class kd implements ui {
             jk.a(stackIn_106_0, stackIn_106_1, stackIn_106_2, stackIn_106_3, stackIn_106_4, stackIn_107_5, nh.field_h, 336, 16711680, (byte) 111);
           }
           if (ll.field_S) {
-            wf.field_d.a("FPS: " + ub.field_a, 630, 30, 65535, -1);
-            wf.field_d.a("LPS: " + oc.field_y, 630, 60, 65535, -1);
+            IntrusiveNode.field_d.a("FPS: " + ub.field_a, 630, 30, 65535, -1);
+            IntrusiveNode.field_d.a("LPS: " + oc.field_y, 630, 60, 65535, -1);
           }
           var15 = (pi) (oj.field_u.a((byte) -95));
           var8Lifetime2 = var15;
@@ -323,9 +323,9 @@ final class kd implements ui {
                 var9Lifetime2 = 8;
               }
             }
-            jk.field_x.a(16776867, var9Lifetime2 - 5, 3, 56 + wf.field_d.a(qj.field_a[var15.field_i]), 0, 16776867);
+            jk.field_x.a(16776867, var9Lifetime2 - 5, 3, 56 + IntrusiveNode.field_d.a(qj.field_a[var15.field_i]), 0, 16776867);
             fc.field_h[var15.field_i].e(8, var9Lifetime2);
-            wf.field_d.b(qj.field_a[var15.field_i], 48, var9Lifetime2 + wf.field_d.field_y, 0, -1);
+            IntrusiveNode.field_d.b(qj.field_a[var15.field_i], 48, var9Lifetime2 + IntrusiveNode.field_d.field_y, 0, -1);
           }
           var9Lifetime3 = sb.field_h[(2147483647 & nc.field_t) % sb.field_h.length];
           vh.field_n = vh.field_n - var9Lifetime3;

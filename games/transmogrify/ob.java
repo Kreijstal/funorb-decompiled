@@ -41,9 +41,9 @@ final class ob extends le {
         ti var16;
         ti var17;
         rc var6Lifetime1;
-        L0: {
-          L1: {
-            L2: {
+        regionExit1: {
+          regionExit2: {
+            regionExit3: {
               var14 = Transmogrify.field_A ? 1 : 0;
               var6 = this.field_L.a(27835);
               if (var6 != ek.field_a &&
@@ -51,17 +51,17 @@ final class ob extends le {
                 var5 = this.field_L.c(30523);
                 if (var5 == null) {
                   var5 = this.field_J;
-                  break L2;
+                  break regionExit3;
                 }
                 if (!var5.equals(this.field_k)) {
-                  break L1;
+                  break regionExit2;
                 }
-                break L0;
+                break regionExit1;
               }
               var5 = bj.field_X;
             }
             if (var5.equals(this.field_k)) {
-              break L0;
+              break regionExit1;
             }
           }
           this.field_k = var5;
@@ -102,7 +102,7 @@ final class ob extends le {
     }
 
     ob(wa param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, rj.b(true));
+        super(param1, MouseWheelInput.b(true));
         try {
           this.field_J = param1;
           this.field_L = param0;
@@ -161,7 +161,7 @@ final class ob extends le {
             }
             var12.field_i[var6] = (byte)var8;
           }
-          ri.field_k.a(104);
+          DualLinkNode.field_k.a(104);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -267,7 +267,7 @@ final class ob extends le {
 
     final static void l(int param0) {
         int var1 = -55 / ((16 - param0) / 35);
-        wg.field_f = new qj();
+        SecondaryNodeDequeIterator.field_f = new qj();
     }
 
     static {

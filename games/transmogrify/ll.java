@@ -151,7 +151,7 @@ final class ll extends bi implements df {
               }
             } else {
               if (ge.field_A == param1) {
-                var3 = dg.field_e;
+                var3 = FullscreenFocusCanvas.field_e;
                 this.field_h = this.field_h + 30;
               }
             }

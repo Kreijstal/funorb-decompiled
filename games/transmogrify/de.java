@@ -54,7 +54,7 @@ final class de {
         int var2Lifetime4;
         var3 = Transmogrify.field_A ? 1 : 0;
         if (param0 >= 0) {
-          L4: {
+          regionExit1: {
             if ((param1 <= 0 ||
               128 <= param1) &&
               (param1 < 160 ||
@@ -168,7 +168,7 @@ final class de {
                   }
                 }
               }
-              break L4;
+              break regionExit1;
             }
             var2 = (byte)param1;
           }

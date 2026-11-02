@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg extends java.awt.Canvas implements java.awt.event.FocusListener {
+final class FullscreenFocusCanvas extends java.awt.Canvas implements java.awt.event.FocusListener {
     java.awt.Frame field_f;
     static String field_e;
     static hb[] field_d;
@@ -20,7 +20,7 @@ final class dg extends java.awt.Canvas implements java.awt.event.FocusListener {
     final static void c(int param0) {
         tj.field_v = null;
         da.field_y = 0;
-        qi.field_d = -1;
+        MouseInputHandler.field_d = -1;
         og.field_e = param0;
         lk.field_c = false;
     }
@@ -29,7 +29,7 @@ final class dg extends java.awt.Canvas implements java.awt.event.FocusListener {
         field_d = null;
         field_e = null;
         if (param0 != -1) {
-          dg.c(3);
+          FullscreenFocusCanvas.c(3);
         }
     }
 
@@ -39,7 +39,7 @@ final class dg extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void update(java.awt.Graphics param0) {
     }
 
-    dg() {
+    FullscreenFocusCanvas() {
     }
 
     final static void b(int param0) {
@@ -47,7 +47,7 @@ final class dg extends java.awt.Canvas implements java.awt.event.FocusListener {
         if (null == gh.field_m) {
           gh.field_m = new sd(ci.field_f, tg.field_c);
           if (param0 >= -9) {
-            dg.a(54);
+            FullscreenFocusCanvas.a(54);
             ci.field_f.b((qg) (gh.field_m), (byte) -71);
             return;
           }
@@ -58,7 +58,7 @@ final class dg extends java.awt.Canvas implements java.awt.event.FocusListener {
           ci.field_f.b((qg) (gh.field_m), (byte) -71);
           return;
         }
-        dg.a(54);
+        FullscreenFocusCanvas.a(54);
         ci.field_f.b((qg) (gh.field_m), (byte) -71);
     }
 

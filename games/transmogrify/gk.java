@@ -40,7 +40,7 @@ final class gk {
               stackIn_10_0 = (param0) ? -2 : -1;
               bd.field_t = stackIn_10_0;
               nf.field_k = stackIn_10_0;
-              dg.field_a = stackIn_10_0;
+              FullscreenFocusCanvas.field_a = stackIn_10_0;
               lj.field_z = jk.field_y;
               qb.a(124, pi.field_h, ff.field_D, dh.field_x, ua.field_c);
               rb.a(-1, -377);

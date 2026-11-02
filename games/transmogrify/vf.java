@@ -9,7 +9,7 @@ final class vf {
         try {
           ea.field_n = param2;
           int var3_int = -91 / ((param0 + 66) / 55);
-          ah.field_a = param1;
+          DelegatingCanvas.field_a = param1;
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "vf.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -17,7 +17,7 @@ final class vf {
 
     final static void a(pg param0, int param1, int param2, int param3) {
         try {
-          dg.field_b = param2;
+          FullscreenFocusCanvas.field_b = param2;
           if (param3 <= 96) {
             vf.a(false);
           }

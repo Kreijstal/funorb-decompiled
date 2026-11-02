@@ -15,7 +15,7 @@ final class cg extends me {
         RuntimeException decompiledCaughtException = null;
         var3 = Transmogrify.field_A ? 1 : 0;
         try {
-          var4 = (ba) (wg.field_f.a((byte) -95));
+          var4 = (ba) (SecondaryNodeDequeIterator.field_f.a((byte) -95));
           var1 = var4;
           if (var1 == null) {
             return false;

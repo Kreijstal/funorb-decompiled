@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class fa extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static vd field_i;
     boolean field_j;
     static int field_f;
@@ -38,7 +38,7 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
           td.field_a = 1 + td.field_a & 31;
           var7 = this;
           synchronized (var7) {
-            rj.field_b = bi.field_M;
+            MouseWheelInput.field_b = bi.field_M;
           }
           this.b((byte) -111);
           return;
@@ -120,7 +120,7 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 <= 124) {
-            fa.a(-14, (hb) null, (byte) -35, 21);
+            GameApplet.a(-14, (hb) null, (byte) -35, 21);
           }
           stackIn_4_0 = ql.a(123, param3, 96, param1, param0);
           return stackIn_4_0;
@@ -204,7 +204,7 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          gd.field_k = (java.awt.Canvas) ((Object) new ah((java.awt.Component) (this)));
+          gd.field_k = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) gd.field_k));
           gd.field_k.setSize(fk.field_E, mk.field_x);
           gd.field_k.setVisible(true);
@@ -219,7 +219,7 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
           }
           gd.field_k.addFocusListener((java.awt.event.FocusListener) (this));
           gd.field_k.requestFocus();
-          rj.field_b = true;
+          MouseWheelInput.field_b = true;
           bi.field_M = true;
           kb.field_l = true;
           mg.field_c = param0;
@@ -340,7 +340,7 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
             }
           }
           if (param0) {
-            fa.f(-17);
+            GameApplet.f(-17);
           }
           this.c(3);
           if (aj.field_t != null) {
@@ -630,7 +630,7 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
                 }
                 wb.a((byte) -124);
                 this.a(false);
-                ri.field_k = wc.a(4, (java.awt.Component) ((Object) gd.field_k), mk.field_x, fk.field_E);
+                DualLinkNode.field_k = wc.a(4, (java.awt.Component) ((Object) gd.field_k), mk.field_x, fk.field_E);
                 this.a(-9);
                 th.field_c = oc.j(0);
                 do {
@@ -644,7 +644,7 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    ca.field_b = th.field_c.a((byte) -117, fg.field_j);
+                    ca.field_b = th.field_c.a((byte) -117, ImageProducerRasterBuffer.field_j);
                     stackIn_105_0 = 0;
                   }
                   var3 = stackIn_105_0;
@@ -679,7 +679,7 @@ public abstract class fa extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected fa() {
+    protected GameApplet() {
         this.field_j = false;
     }
 

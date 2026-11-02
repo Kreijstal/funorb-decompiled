@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class wg implements Iterator {
+final class SecondaryNodeDequeIterator implements Iterator {
     static qj field_f;
-    private ri field_a;
+    private DualLinkNode field_a;
     static ik field_d;
-    private pf field_c;
+    private SecondaryNodeDeque field_c;
     static String field_e;
-    private ri field_b;
+    private DualLinkNode field_b;
 
     final static void b(int param0) {
         RuntimeException decompiledCaughtException = null;
@@ -90,12 +90,12 @@ final class wg implements Iterator {
     public final Object next() {
         Object var1 = this.field_b;
         if (var1 != this.field_c.field_e) {
-          this.field_b = ((ri) (var1)).field_h;
+          this.field_b = ((DualLinkNode) (var1)).field_h;
         } else {
           this.field_b = null;
           var1 = null;
         }
-        this.field_a = (ri) (var1);
+        this.field_a = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -108,7 +108,7 @@ final class wg implements Iterator {
         }
     }
 
-    wg(pf param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.field_a = null;
         try {
           this.field_c = param0;

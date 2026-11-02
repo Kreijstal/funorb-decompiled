@@ -74,7 +74,7 @@ final class f {
           }
           var7Lifetime1 = 0;
           var8Lifetime1 = pe.a(4096, var6Lifetime1) >> 8;
-          var9Lifetime1 = ri.a(-124, var6Lifetime1) >> 8;
+          var9Lifetime1 = DualLinkNode.a(-124, var6Lifetime1) >> 8;
           if (oa.field_j != -1 &&
             -1 != bk.field_a) {
             var7Lifetime1 = -320 + oa.field_j;

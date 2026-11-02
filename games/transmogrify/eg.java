@@ -49,7 +49,7 @@ final class eg {
     }
 
     final static void a(int param0) {
-        vi.field_e = wh.a((byte) -122);
+        IterableNodeHashTable.field_e = wh.a((byte) -122);
         ci.field_f = new da();
         wl.a(true, true, 170);
         if (param0 >= 54) {
@@ -112,7 +112,7 @@ final class eg {
                 lk.field_c = true;
               }
             }
-            qi.field_d = rd.field_f;
+            MouseInputHandler.field_d = rd.field_f;
             og.field_e = el.field_d;
           }
           tj.field_v = param0;
@@ -123,7 +123,7 @@ final class eg {
             da.field_y < bk.field_d &&
             tl.field_a) {
             og.field_e = el.field_d;
-            qi.field_d = rd.field_f;
+            MouseInputHandler.field_d = rd.field_f;
             da.field_y = 0;
           }
           rd.field_f = -1;

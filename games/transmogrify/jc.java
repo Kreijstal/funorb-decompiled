@@ -10,7 +10,7 @@ final class jc extends ag {
     private final void a(gi param0) {
         param0.c(5);
         param0.a();
-        wf var2 = this.field_m.field_d.field_b;
+        IntrusiveNode var2 = this.field_m.field_d.next;
         if (var2 == this.field_m.field_d) {
           this.field_k = -1;
         } else {
@@ -66,7 +66,7 @@ final class jc extends ag {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_g = var5;
-              this.a(var3.field_b, var3);
+              this.a(var3.next, var3);
             } else {
               var3.field_g = 0;
               this.a(var3);
@@ -76,21 +76,21 @@ final class jc extends ag {
         return;
     }
 
-    private final void a(wf param0, gi param1) {
+    private final void a(IntrusiveNode param0, gi param1) {
         while (true) {
           if (param0 == this.field_m.field_d) {
             td.a(param0, (byte) 125, param1);
-            this.field_k = ((gi) (this.field_m.field_d.field_b)).field_g;
+            this.field_k = ((gi) (this.field_m.field_d.next)).field_g;
             return;
           }
           if (((gi) (param0)).field_g <= param1.field_g) {
-            param0 = param0.field_b;
+            param0 = param0.next;
             continue;
           }
           break;
         }
         td.a(param0, (byte) 125, param1);
-        this.field_k = ((gi) (this.field_m.field_d.field_b)).field_g;
+        this.field_k = ((gi) (this.field_m.field_d.next)).field_g;
         return;
     }
 
@@ -99,7 +99,7 @@ final class jc extends ag {
     }
 
     final synchronized void a(ag param0) {
-        this.field_n.a((wf) (param0), (byte) 33);
+        this.field_n.a((IntrusiveNode) (param0), (byte) 33);
     }
 
     private final void e(int param0) {
@@ -138,7 +138,7 @@ final class jc extends ag {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_g = var7;
-              this.a(var5.field_b, var5);
+              this.a(var5.next, var5);
             } else {
               var5.field_g = 0;
               this.a(var5);

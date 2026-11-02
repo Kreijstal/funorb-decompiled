@@ -19,27 +19,27 @@ final class pg {
             if (gh.field_m != null) {
               gh.field_m.r(-96);
             }
-            dg.c(-1);
+            FullscreenFocusCanvas.c(-1);
             return;
           }
           if (gh.field_m != null) {
             gh.field_m.r(-96);
           }
-          dg.c(-1);
+          FullscreenFocusCanvas.c(-1);
           return;
         }
         if (null == ci.field_f) {
           if (gh.field_m != null) {
             gh.field_m.r(-96);
           }
-          dg.c(-1);
+          FullscreenFocusCanvas.c(-1);
           return;
         }
         ci.field_f.j(param0 + 127);
         if (gh.field_m != null) {
           gh.field_m.r(-96);
         }
-        dg.c(-1);
+        FullscreenFocusCanvas.c(-1);
     }
 
     final static void a(long param0, int param1) {

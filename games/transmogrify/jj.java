@@ -74,8 +74,8 @@ final class jj {
         try {
           hd.field_b = param0;
           aa.field_g = true;
-          wg.field_d = new ik(ci.field_f, rh.field_q, param1, lb.field_d, hd.field_b);
-          ci.field_f.b((qg) (wg.field_d), (byte) -71);
+          SecondaryNodeDequeIterator.field_d = new ik(ci.field_f, rh.field_q, param1, lb.field_d, hd.field_b);
+          ci.field_f.b((qg) (SecondaryNodeDequeIterator.field_d), (byte) -71);
           if (param2 != 1702) {
             field_c = (int[][]) null;
           }

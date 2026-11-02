@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class pf implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static byte[][] field_a;
     static int field_b;
     static ti[] field_h;
     static int field_g;
-    ri field_e;
+    DualLinkNode field_e;
     static String field_c;
     static String field_f;
     static ti field_d;
     static String field_i;
 
-    final ri a(boolean param0) {
-        ri var2 = this.field_e.field_h;
+    final DualLinkNode a(boolean param0) {
+        DualLinkNode var2 = this.field_e.field_h;
         if (this.field_e == var2) {
           return null;
         }
@@ -23,14 +23,14 @@ final class pf implements Iterable {
           var2.b((byte) -74);
           return var2;
         }
-        ri var3 = (ri) null;
-        this.a(true, (ri) null);
+        DualLinkNode var3 = (DualLinkNode) null;
+        this.a(true, (DualLinkNode) null);
         var2.b((byte) -74);
         return var2;
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new wg(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     public static void a(int param0) {
@@ -47,11 +47,11 @@ final class pf implements Iterable {
         field_d = null;
     }
 
-    private pf() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 
-    final void a(boolean param0, ri param1) {
+    final void a(boolean param0, DualLinkNode param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ig extends fa {
+abstract class SessionGameApplet extends GameApplet {
     private long field_v;
     private int field_u;
     private int field_n;
@@ -81,7 +81,7 @@ abstract class ig extends fa {
                       }
                     }
                   } else {
-                    wg.b(4);
+                    SecondaryNodeDequeIterator.b(4);
                   }
                 }
               }
@@ -166,13 +166,13 @@ abstract class ig extends fa {
         var10.pack();
         var10.dispose();
         this.setBackground(java.awt.Color.black);
-        w.field_f = this.field_o;
-        cf.a(1856642, w.field_f);
-        ol.a(this.field_p, 5000, this.field_u, this.field_v, lk.field_b, this.field_w, 5000, this.field_r, param2, this.field_q, param6, 64, w.field_f, this.field_s);
-        me.a(this.field_s, this.field_u, 50, this.field_q, param2, this.field_w, this.field_p, w.field_f, lk.field_b);
+        NodeHashTableIterator.field_f = this.field_o;
+        cf.a(1856642, NodeHashTableIterator.field_f);
+        ol.a(this.field_p, 5000, this.field_u, this.field_v, lk.field_b, this.field_w, 5000, this.field_r, param2, this.field_q, param6, 64, NodeHashTableIterator.field_f, this.field_s);
+        me.a(this.field_s, this.field_u, 50, this.field_q, param2, this.field_w, this.field_p, NodeHashTableIterator.field_f, lk.field_b);
         wh.e((byte) -42);
         ga.field_a = nh.b(1);
-        cj.a(gd.field_k, 13861);
+        RasterBuffer.a(gd.field_k, 13861);
         rd.field_a = param4;
         ic.field_a = param5;
         uh.field_q = param3;
@@ -307,7 +307,7 @@ abstract class ig extends fa {
             tf.a(3, false);
           }
           if (c.field_e[3]) {
-            fg.a((byte) -98, 4);
+            ImageProducerRasterBuffer.a((byte) -98, 4);
           }
           if (c.field_e[4]) {
             eg.a(false, 5);
@@ -415,14 +415,14 @@ abstract class ig extends fa {
         var5 = Transmogrify.field_A ? 1 : 0;
         if (vg.field_b != null) {
           if (null == ub.field_c) {
-            var6 = ah.b(param0 - 28270);
+            var6 = DelegatingCanvas.b(param0 - 28270);
             var4 = var6.getSize();
             vg.field_b.a(var4.height, var4.width, 123);
           }
           vg.field_b.b(0);
         }
         fd.a(true);
-        vi.a((byte) 126);
+        IterableNodeHashTable.a((byte) 126);
         if (param0 != 10017) {
           this.field_p = -31;
         }
@@ -527,13 +527,13 @@ abstract class ig extends fa {
           bi.field_L = 1;
         }
         if (bi.field_L == 1) {
-          if (w.field_f != 0) {
+          if (NodeHashTableIterator.field_f != 0) {
             hg.field_a = cg.a((byte) -82, uh.field_q);
           }
-          cj.field_c = ec.a(true, (byte) 77, 1, ic.field_a, false);
+          RasterBuffer.field_c = ec.a(true, (byte) 77, 1, ic.field_a, false);
           wi.field_e = ec.a(true, (byte) 77, 1, q.field_d, false);
           nd.field_n = ec.a(true, (byte) 77, 1, rd.field_a, false);
-          li.field_k = cj.field_c;
+          li.field_k = RasterBuffer.field_c;
           bi.field_L = 2;
           field_y = wi.field_e;
         }
@@ -542,7 +542,7 @@ abstract class ig extends fa {
             hg.field_a.a((byte) -117)) {
             if (hg.field_a.b((byte) -120, "")) {
               if (hg.field_a.a((byte) 117, "")) {
-                kl.a(7, hg.field_a);
+                ContextualRuntimeException.a(7, hg.field_a);
                 hg.field_a = null;
                 el.b(-6491);
               }
@@ -555,13 +555,13 @@ abstract class ig extends fa {
           }
         }
         if (bi.field_L == 3 &&
-          ud.a(nd.field_n, true, cj.field_c, wi.field_e) &&
+          ud.a(nd.field_n, true, RasterBuffer.field_c, wi.field_e) &&
           qd.a(nd.field_n, (byte) -109)) {
           gj.e(0);
           wl.p(121);
           bg.field_n = false;
           ea.field_n = j.field_a;
-          cf.a(nd.field_n, wi.field_e, cj.field_c, wd.field_g, (byte) 122);
+          cf.a(nd.field_n, wi.field_e, RasterBuffer.field_c, wd.field_g, (byte) 122);
           if (di.field_b ||
             null != lb.field_h) {
             stackIn_103_0 = 5;
@@ -579,14 +579,14 @@ abstract class ig extends fa {
           }
           ad.a(lf.field_d, tj.field_u, 22313, nd.field_n);
           wi.field_e = null;
-          cj.field_c = null;
+          RasterBuffer.field_c = null;
           nd.field_n = null;
           gh.a((java.applet.Applet) (this), (byte) -112);
           el.b(-6491);
           bi.field_L = 10;
         }
         if (10 == bi.field_L) {
-          if (w.field_f != 0) {
+          if (NodeHashTableIterator.field_f != 0) {
             nk.field_d = cg.a((byte) -82, di.field_d);
           }
           bi.field_L = 11;
@@ -600,11 +600,11 @@ abstract class ig extends fa {
           }
           else {
             bi.field_L = 12;
-            wf.field_a = true;
+            IntrusiveNode.field_a = true;
           }
         }
         if (12 == bi.field_L &&
-          !wf.field_a) {
+          !IntrusiveNode.field_a) {
           bi.field_L = 13;
         }
         if (13 == bi.field_L) {
@@ -622,7 +622,7 @@ abstract class ig extends fa {
           mg.field_c) {
           gd.a(gd.field_k, (byte) 111);
           this.a(false);
-          cj.a(gd.field_k, param0 + 3844);
+          RasterBuffer.a(gd.field_k, param0 + 3844);
         }
         if (c.field_e[8]) {
           Transmogrify.m(param0 ^ 10050);
@@ -664,7 +664,7 @@ abstract class ig extends fa {
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = Transmogrify.field_A ? 1 : 0;
-          var4 = mg.a(w.field_f, param1, f.field_a, true);
+          var4 = mg.a(NodeHashTableIterator.field_f, param1, f.field_a, true);
           if (var4 == 0) {
             throw new IllegalStateException();
           }
@@ -804,7 +804,7 @@ abstract class ig extends fa {
         }
     }
 
-    protected ig() {
+    protected SessionGameApplet() {
     }
 
     private final void h(byte param0) {

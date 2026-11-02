@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kl extends RuntimeException {
+final class ContextualRuntimeException extends RuntimeException {
     String field_a;
     static int field_c;
     static String field_e;
@@ -157,7 +157,7 @@ final class kl extends RuntimeException {
                 }
                 var2 = kb.a("ticketing_gotowebsite", (byte) 116);
                 if (null != var2) {
-                  vi.field_b = eg.a(param0 + 79, var2);
+                  IterableNodeHashTable.field_b = eg.a(param0 + 79, var2);
                 }
                 var2 = kb.a("ticketing_waitingformessages", (byte) 108);
                 if (null != var2) {
@@ -1334,7 +1334,7 @@ final class kl extends RuntimeException {
                   mk.field_E = eg.a(89, var2);
                 }
                 if (param0 != 7) {
-                  kl.a(-73, -128, 4, -48, -51, 80, -121, -83, -75, (byte) 70, 69, 52, 57, -118, -119, -35);
+                  ContextualRuntimeException.a(-73, -128, 4, -48, -51, 80, -121, -83, -75, (byte) 70, 69, 52, 57, -118, -119, -35);
                 }
                 var2 = kb.a("create", (byte) 112);
                 if (var2 != null) {
@@ -1354,7 +1354,7 @@ final class kl extends RuntimeException {
                 }
                 var2 = kb.a("creatingyouraccount", (byte) 112);
                 if (var2 != null) {
-                  vi.field_i = eg.a(param0 ^ 118, var2);
+                  IterableNodeHashTable.field_i = eg.a(param0 ^ 118, var2);
                 }
                 var2 = kb.a("create_youmustaccept", (byte) 116);
                 if (null != var2) {
@@ -1462,7 +1462,7 @@ final class kl extends RuntimeException {
                 }
                 var2 = kb.a("create_email_confirm", (byte) 110);
                 if (var2 != null) {
-                  pf.field_i = eg.a(117, var2);
+                  SecondaryNodeDeque.field_i = eg.a(117, var2);
                 }
                 var2 = kb.a("create_age", (byte) 113);
                 if (null != var2) {
@@ -1526,7 +1526,7 @@ final class kl extends RuntimeException {
                 }
                 var2 = kb.a("login_email", (byte) 117);
                 if (var2 != null) {
-                  pf.field_c = eg.a(99, var2);
+                  SecondaryNodeDeque.field_c = eg.a(99, var2);
                 }
                 var2 = kb.a("login_username_tooltip", (byte) 113);
                 if (null != var2) {
@@ -1574,7 +1574,7 @@ final class kl extends RuntimeException {
                 }
                 var2 = kb.a("create_password_tooltip", (byte) 116);
                 if (null != var2) {
-                  fa.field_g = eg.a(param0 + 108, var2);
+                  GameApplet.field_g = eg.a(param0 + 108, var2);
                 }
                 var2 = kb.a("create_password_hint", (byte) 112);
                 if (null != var2) {
@@ -1654,7 +1654,7 @@ final class kl extends RuntimeException {
                 }
                 var2 = kb.a("create_alert_passrepeated", (byte) 112);
                 if (var2 != null) {
-                  ri.field_i = eg.a(119, var2);
+                  DualLinkNode.field_i = eg.a(119, var2);
                 }
                 var2 = kb.a("create_alert_passlength", (byte) 126);
                 if (var2 != null) {
@@ -1938,7 +1938,7 @@ final class kl extends RuntimeException {
                 }
                 var2 = kb.a("sound_colon", (byte) 109);
                 if (var2 != null) {
-                  pf.field_f = eg.a(94, var2);
+                  SecondaryNodeDeque.field_f = eg.a(94, var2);
                 }
                 var2 = kb.a("music_colon", (byte) 109);
                 if (null != var2) {
@@ -2036,7 +2036,7 @@ final class kl extends RuntimeException {
                 }
                 var2 = kb.a("resumegame", (byte) 125);
                 if (var2 != null) {
-                  wf.field_e = eg.a(122, var2);
+                  IntrusiveNode.field_e = eg.a(122, var2);
                 }
                 var2 = kb.a("resumetutorial", (byte) 113);
                 if (null != var2) {
@@ -2628,19 +2628,19 @@ final class kl extends RuntimeException {
                 }
                 var2 = kb.a("reconnect_lost_seq,0", (byte) 123);
                 if (var2 != null) {
-                  cj.field_e[0] = eg.a(116, var2);
+                  RasterBuffer.field_e[0] = eg.a(116, var2);
                 }
                 var2 = kb.a("reconnect_lost_seq,1", (byte) 114);
                 if (var2 != null) {
-                  cj.field_e[1] = eg.a(123, var2);
+                  RasterBuffer.field_e[1] = eg.a(123, var2);
                 }
                 var2 = kb.a("reconnect_lost_seq,2", (byte) 123);
                 if (var2 != null) {
-                  cj.field_e[2] = eg.a(110, var2);
+                  RasterBuffer.field_e[2] = eg.a(110, var2);
                 }
                 var2 = kb.a("reconnect_lost_seq,3", (byte) 111);
                 if (var2 != null) {
-                  cj.field_e[3] = eg.a(122, var2);
+                  RasterBuffer.field_e[3] = eg.a(122, var2);
                 }
                 var2 = kb.a("reconnect_lost", (byte) 117);
                 if (null != var2) {
@@ -2720,7 +2720,7 @@ final class kl extends RuntimeException {
                 }
                 var2 = kb.a("fs_nonmember", (byte) 115);
                 if (null != var2) {
-                  qi.field_b = eg.a(103, var2);
+                  MouseInputHandler.field_b = eg.a(103, var2);
                 }
                 var2 = kb.a("fs_button_close", (byte) 112);
                 if (null != var2) {
@@ -2748,7 +2748,7 @@ final class kl extends RuntimeException {
                 }
                 var2 = kb.a("fs_timeout", (byte) 110);
                 if (var2 != null) {
-                  dg.field_e = eg.a(108, var2);
+                  FullscreenFocusCanvas.field_e = eg.a(108, var2);
                 }
                 var2 = kb.a("fs_button_tryagain", (byte) 108);
                 if (null != var2) {
@@ -2868,7 +2868,7 @@ final class kl extends RuntimeException {
                 }
                 var2 = kb.a("serviceunavailable", (byte) 116);
                 if (var2 != null) {
-                  wg.field_e = eg.a(95, var2);
+                  SecondaryNodeDequeIterator.field_e = eg.a(95, var2);
                 }
                 var2 = kb.a("createtouse", (byte) 121);
                 if (var2 != null) {
@@ -3094,8 +3094,8 @@ final class kl extends RuntimeException {
                   throw ch.a((Throwable) ((Object) stackIn_2625_0), ((StringBuilder) (Object) stackIn_2625_1).append(stackIn_2626_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2634_0 = (!fa.field_b);
-                  fa.field_b = stackIn_2634_0;
+                  stackIn_2634_0 = (!GameApplet.field_b);
+                  GameApplet.field_b = stackIn_2634_0;
                 }
             }
         }
@@ -3106,7 +3106,7 @@ final class kl extends RuntimeException {
     public static void a(int param0) {
         field_e = null;
         if (param0 != 6) {
-          kl.a((ci) null, (byte) -102, (String) null, (String) null);
+          ContextualRuntimeException.a((ci) null, (byte) -102, (String) null, (String) null);
         }
         field_d = null;
     }
@@ -3208,7 +3208,7 @@ final class kl extends RuntimeException {
         }
     }
 
-    kl(Throwable param0, String param1) {
+    ContextualRuntimeException(Throwable param0, String param1) {
         this.field_a = param1;
         this.field_b = param0;
     }
@@ -3281,7 +3281,7 @@ final class kl extends RuntimeException {
         try {
           var2 = new ad[64];
           var3 = new oa(param1.a("", (byte) 92, "index"));
-          L0: while (true) {
+          scanLoop1: while (true) {
             if (var3.field_h < var3.field_g.length) {
               var4 = var3.d((byte) 89);
               var5 = var3.a((byte) -120);
@@ -3290,7 +3290,7 @@ final class kl extends RuntimeException {
               var2[var7.field_d] = var7;
               stackIn_13_0 = 0;
               if (var9 != 0) {
-                break L0;
+                break scanLoop1;
               }
               var8 = stackIn_13_0;
               while (var8 < var7.field_c.length) {
@@ -3299,7 +3299,7 @@ final class kl extends RuntimeException {
                 var8++;
               }
               var7.a(new oa(param1.a((byte) -93, var6, var5)), 1);
-              continue L0;
+              continue scanLoop1;
             }
             stackIn_13_0 = 102 / ((param0 - 30) / 63);
             break;

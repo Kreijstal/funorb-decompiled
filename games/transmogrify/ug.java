@@ -37,7 +37,7 @@ final class ug {
           sh.field_c = null;
           return;
         }
-        rh.field_t = tl.a(bc.field_b, 36, new int[]{(eh.field_a << 6) + qi.field_c.field_o}, 3, qf.field_e, vh.field_n, 65506, 29, hf.field_j);
+        rh.field_t = tl.a(bc.field_b, 36, new int[]{(eh.field_a << 6) + MouseInputHandler.field_c.field_o}, 3, qf.field_e, vh.field_n, 65506, 29, hf.field_j);
         sh.field_c = null;
     }
 

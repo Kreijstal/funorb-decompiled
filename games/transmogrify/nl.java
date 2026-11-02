@@ -309,14 +309,14 @@ final class nl extends ec {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              if (1 == kl.field_c) {
-                kl.field_c = 2;
+              if (1 == ContextualRuntimeException.field_c) {
+                ContextualRuntimeException.field_c = 2;
               }
               return;
             }
             if (3 == var2) {
-              if (kl.field_c == 2) {
-                kl.field_c = 1;
+              if (ContextualRuntimeException.field_c == 2) {
+                ContextualRuntimeException.field_c = 1;
               }
               return;
             }
@@ -325,7 +325,7 @@ final class nl extends ec {
               pc.a(1);
               return;
             }
-            kl.field_c = 1;
+            ContextualRuntimeException.field_c = 1;
             var3 = var1.g(12248);
             bd.field_v = ((String) (var3)).intern();
             var4 = var1.d((byte) 37);
@@ -476,7 +476,7 @@ final class nl extends ec {
             field_g = (String) null;
           }
           var9 = 0;
-          L7: while (true) {
+          scanLoop1: while (true) {
             if (var8.length > var9) {
               var10 = var8[var9];
               var11 = (java.net.Proxy) (var10);
@@ -503,7 +503,7 @@ final class nl extends ec {
                 decompiledRegionSelector0 = 1;
               }
               if (decompiledRegionSelector0 == 0) {
-                break L7;
+                break scanLoop1;
               }
               var9++;
               if (var13 == 0) {

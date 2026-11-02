@@ -31,7 +31,7 @@ final class vh extends me {
             try {
               var2 = "tuhstatbut";
               var3 = (String) (kj.a(param0, false, "getcookies"));
-              var4 = vi.a(';', var3, 0);
+              var4 = IterableNodeHashTable.a(';', var3, 0);
               for (var5 = param1; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&

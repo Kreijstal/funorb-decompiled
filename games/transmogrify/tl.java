@@ -4,16 +4,16 @@
 final class tl {
     static boolean field_a;
     static int field_c;
-    private wf field_b;
+    private IntrusiveNode field_b;
     private qj field_e;
     static int field_d;
 
-    final wf a(wf param0, boolean param1) {
-        wf var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, boolean param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_6_0 = null;
-        wf stackIn_9_0 = null;
-        wf stackIn_11_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
+        IntrusiveNode stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -22,19 +22,19 @@ final class tl {
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_e.field_d.field_f;
+            var3 = this.field_e.field_d.previous;
           }
           if (this.field_e.field_d == var3) {
             this.field_b = null;
             stackIn_6_0 = null;
-            return (wf) (stackIn_6_0);
+            return (IntrusiveNode) (stackIn_6_0);
           }
-          this.field_b = var3.field_f;
+          this.field_b = var3.previous;
           if (param1) {
             stackIn_11_0 = var3;
             return stackIn_11_0;
           }
-          stackIn_9_0 = (wf) null;
+          stackIn_9_0 = (IntrusiveNode) null;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -50,13 +50,13 @@ final class tl {
         }
     }
 
-    final wf a(byte param0) {
-        wf var2 = this.field_e.field_d.field_f;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_e.field_d.previous;
         if (var2 == this.field_e.field_d) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_f;
+        this.field_b = var2.previous;
         if (param0 != 62) {
           field_d = 49;
         }
@@ -82,7 +82,7 @@ final class tl {
             tl.a(-62, -114L);
           }
           while (var3_int < qb.field_f.length) {
-            var5 = ce.field_a[var3_int];
+            var5 = GameKeyHandler.field_a[var3_int];
             if (var5 < 0) {
               var4 = var4 + fi.field_x;
             } else {
@@ -106,8 +106,8 @@ final class tl {
         }
     }
 
-    final wf c(int param0) {
-        wf var2 = this.field_e.field_d.field_b;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_e.field_d.next;
         if (var2 == this.field_e.field_d) {
           this.field_b = null;
           return null;
@@ -115,16 +115,16 @@ final class tl {
         if (param0 >= -86) {
           this.b(116);
         }
-        this.field_b = var2.field_b;
+        this.field_b = var2.next;
         return var2;
     }
 
-    final wf a(wf param0, int param1) {
-        wf var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         Object stackIn_6_0 = null;
-        wf stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -133,14 +133,14 @@ final class tl {
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_e.field_d.field_b;
+            var3 = this.field_e.field_d.next;
           }
           if (var3 == this.field_e.field_d) {
             this.field_b = null;
             stackIn_6_0 = null;
-            return (wf) (stackIn_6_0);
+            return (IntrusiveNode) (stackIn_6_0);
           }
-          this.field_b = var3.field_b;
+          this.field_b = var3.next;
           if (param1 != 95) {
             var4 = (String) null;
             tl.a((String) null, 56);
@@ -241,7 +241,7 @@ final class tl {
             stackIn_15_0 = var5;
             return stackIn_15_0;
           }
-          stackIn_4_0 = cj.field_b;
+          stackIn_4_0 = RasterBuffer.field_b;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -288,8 +288,8 @@ final class tl {
         }
     }
 
-    final wf a(int param0) {
-        wf var2 = this.field_b;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = this.field_b;
         if (this.field_e.field_d == var2) {
           this.field_b = null;
           return null;
@@ -297,20 +297,20 @@ final class tl {
         if (param0 != 405142401) {
           this.field_e = (qj) null;
         }
-        this.field_b = var2.field_b;
+        this.field_b = var2.next;
         return var2;
     }
 
-    final wf b(int param0) {
+    final IntrusiveNode b(int param0) {
         if (param0 != -29339) {
-          return (wf) null;
+          return (IntrusiveNode) null;
         }
-        wf var2 = this.field_b;
+        IntrusiveNode var2 = this.field_b;
         if (var2 == this.field_e.field_d) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_f;
+        this.field_b = var2.previous;
         return var2;
     }
 

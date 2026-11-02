@@ -44,16 +44,16 @@ abstract class td {
         }
     }
 
-    final static void a(wf param0, byte param1, wf param2) {
+    final static void a(IntrusiveNode param0, byte param1, IntrusiveNode param2) {
         try {
-          if (param2.field_f != null) {
+          if (param2.previous != null) {
             param2.c(5);
           }
           int var3_int = 8 % ((param1 - 51) / 40);
-          param2.field_b = param0;
-          param2.field_f = param0.field_f;
-          param2.field_f.field_b = param2;
-          param2.field_b.field_f = param2;
+          param2.next = param0;
+          param2.previous = param0.previous;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "td.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

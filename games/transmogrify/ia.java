@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ia extends wf {
+final class ia extends IntrusiveNode {
     int field_p;
     int field_k;
     int field_m;
@@ -161,7 +161,7 @@ final class ia extends wf {
         try {
           hf.field_j = hf.field_j + 1;
           gh.field_l = gh.field_l + 1;
-          pf.field_g = eh.field_a;
+          SecondaryNodeDeque.field_g = eh.field_a;
           nc.field_t = nc.field_t + jk.field_B;
           vh.field_n = vh.field_n + 1;
           hg.a(95);
@@ -192,7 +192,7 @@ final class ia extends wf {
             dc.field_a = dc.field_a + 1;
           }
           g.field_z = g.field_z - 1;
-          stackIn_23_0 = (!rj.field_b) ? 0 : 1;
+          stackIn_23_0 = (!MouseWheelInput.field_b) ? 0 : 1;
           var1_int = stackIn_23_0;
           if (ub.field_c != null &&
             !ub.field_c.field_c) {
@@ -252,18 +252,18 @@ final class ia extends wf {
               var4 = 1;
               var23 = si.field_i.field_e;
               var6 = 0;
-              L61: while (true) {
+              scanLoop1: while (true) {
                 if (var23.length > var6) {
                   var24 = var23[var6];
                   if (var24 != null) {
                     if (var24.field_q != var24.field_p) {
                       var4 = 0;
-                      break L61;
+                      break scanLoop1;
                     }
                     if (var24.field_p == 247) {
                       var4 = 0;
                       var24.field_p = var24.field_p + wl.field_K.field_m;
-                      break L61;
+                      break scanLoop1;
                     }
                   }
                   var6++;
@@ -281,18 +281,18 @@ final class ia extends wf {
               var4Lifetime2 = 1;
               var14 = wk.field_a.field_e;
               var6Lifetime2 = 0;
-              L92: while (true) {
+              scanLoop2: while (true) {
                 if (var6Lifetime2 < var14.length) {
                   var15 = var14[var6Lifetime2];
                   if (var15 != null) {
                     if (var15.field_p != var15.field_q) {
                       var4Lifetime2 = 0;
-                      break L92;
+                      break scanLoop2;
                     }
                     if (var15.field_p == 190) {
                       var15.field_p = var15.field_p + wl.field_K.field_m;
                       var4Lifetime2 = 0;
-                      break L92;
+                      break scanLoop2;
                     }
                   }
                   var6Lifetime2++;
@@ -321,18 +321,18 @@ final class ia extends wf {
                 var4Lifetime3 = 1;
                 var16 = od.field_g.field_e;
                 var6Lifetime3 = 0;
-                L81: while (true) {
+                scanLoop3: while (true) {
                   if (var6Lifetime3 < var16.length) {
                     var17 = var16[var6Lifetime3];
                     if (var17 != null) {
                       if (var17.field_q != var17.field_p) {
                         var4Lifetime3 = 0;
-                        break L81;
+                        break scanLoop3;
                       }
                       if (var17.field_p == 114) {
                         var4Lifetime3 = 0;
                         var17.field_p = 190;
-                        break L81;
+                        break scanLoop3;
                       }
                     }
                     var6Lifetime3++;
@@ -400,18 +400,18 @@ final class ia extends wf {
                 var4Lifetime4 = 1;
                 var21 = si.field_i.field_e;
                 var6Lifetime4 = 0;
-                L64: while (true) {
+                scanLoop4: while (true) {
                   if (var21.length > var6Lifetime4) {
                     var22 = var21[var6Lifetime4];
                     if (var22 != null) {
                       if (var22.field_p != var22.field_q) {
                         var4Lifetime4 = 0;
-                        break L64;
+                        break scanLoop4;
                       }
                       if (var22.field_p != 247) {
                         var22.field_p = 247;
                         var4Lifetime4 = 0;
-                        break L64;
+                        break scanLoop4;
                       }
                     }
                     var6Lifetime4++;
@@ -467,9 +467,9 @@ final class ia extends wf {
                 var31 = new char[8];
                 if (mg.field_d &&
                   n.field_a == 1 &&
-                  null != qi.field_c.field_n) {
-                  for (var5Lifetime2 = 0; var5Lifetime2 < qi.field_c.field_n.length(); var5Lifetime2++) {
-                    si.field_i.field_e[var5Lifetime2] = w.a(si.field_i, var5Lifetime2, qi.field_c, (byte) 105, qi.field_c.field_n.charAt(var5Lifetime2));
+                  null != MouseInputHandler.field_c.field_n) {
+                  for (var5Lifetime2 = 0; var5Lifetime2 < MouseInputHandler.field_c.field_n.length(); var5Lifetime2++) {
+                    si.field_i.field_e[var5Lifetime2] = NodeHashTableIterator.a(si.field_i, var5Lifetime2, MouseInputHandler.field_c, (byte) 105, MouseInputHandler.field_c.field_n.charAt(var5Lifetime2));
                     stackIn_157_0 = si.field_i.field_e[var5Lifetime2];
                     stackIn_158_1 = (var5Lifetime2 == 1);
                     stackIn_157_0.field_x = stackIn_158_1;
@@ -478,10 +478,10 @@ final class ia extends wf {
                     si.field_i.field_e[var5Lifetime2].field_q = 247 - wl.field_K.field_m;
                   }
                 } else {
-                  qi.field_c.a((byte) 92, var31);
+                  MouseInputHandler.field_c.a((byte) 92, var31);
                   var5Lifetime2 = li.a(8, o.field_o, false);
                   for (var6Lifetime4 = 0; var31.length > var6Lifetime4; var6Lifetime4++) {
-                    si.field_i.field_e[var6Lifetime4] = w.a(si.field_i, var6Lifetime4, qi.field_c, (byte) 30, var31[var6Lifetime4]);
+                    si.field_i.field_e[var6Lifetime4] = NodeHashTableIterator.a(si.field_i, var6Lifetime4, MouseInputHandler.field_c, (byte) 30, var31[var6Lifetime4]);
                     stackIn_151_0 = si.field_i.field_e[var6Lifetime4];
                     stackIn_152_1 = (var5Lifetime2 == var6Lifetime4);
                     stackIn_151_0.field_x = stackIn_152_1;
@@ -500,8 +500,8 @@ final class ia extends wf {
             return;
           }
           if (ve.field_B[11] &&
-            0 == ig.field_l) {
-            ig.field_l = -1;
+            0 == SessionGameApplet.field_l) {
+            SessionGameApplet.field_l = -1;
           }
           if (ve.field_B[1] &&
             va.field_j >= 2) {
@@ -509,9 +509,9 @@ final class ia extends wf {
             ll.field_S = stackIn_205_0;
           }
           if (ve.field_B[12]) {
-            ig.field_l = 0;
+            SessionGameApplet.field_l = 0;
           }
-          L17: while (true) {
+          scanLoop5: while (true) {
             if (!pc.b(-122)) {
               if (ad.field_e) {
                 a.field_S.a(-127, kk.a(336, ol.field_b, nk.field_c), kk.a(336, oa.field_j, bk.field_a));
@@ -543,7 +543,7 @@ final class ia extends wf {
                   oa.field_j < 242 &&
                   bk.field_a >= 376 &&
                   407 > bk.field_a) {
-                  vk.a((byte) 85, dg.field_d[0]);
+                  vk.a((byte) 85, FullscreenFocusCanvas.field_d[0]);
                   wk.field_a.a(-10874);
                   si.field_i.a(-10874);
                   return;
@@ -579,18 +579,18 @@ final class ia extends wf {
                   }
                 }
                 if (va.field_j >= 2 &&
-                  0 < ig.field_l &&
+                  0 < SessionGameApplet.field_l &&
                   sg.field_d != null) {
-                  sg.field_d.field_i = (char)ig.field_l;
+                  sg.field_d.field_i = (char)SessionGameApplet.field_l;
                   if (!dk.field_b) {
                     hf.field_j = hf.field_j + 1;
                     nc.field_t = nc.field_t + 1;
                     dk.field_b = true;
                   }
-                  sg.field_d.field_v = qi.field_c.field_p[255 & sg.field_d.field_i];
+                  sg.field_d.field_v = MouseInputHandler.field_c.field_p[255 & sg.field_d.field_i];
                   var4_ref_sj = sg.field_d;
                   sg.field_d.field_l = 0;
-                  ig.field_l = -1;
+                  SessionGameApplet.field_l = -1;
                   var4_ref_sj.field_h = 0;
                 }
                 if (null == sg.field_d) {
@@ -630,7 +630,7 @@ final class ia extends wf {
                   ua.b((byte) 69);
                   return;
                 }
-                qi.a((byte) 125);
+                MouseInputHandler.a((byte) 125);
                 return;
               }
               return;
@@ -680,7 +680,7 @@ final class ia extends wf {
               continue;
             }
             if (ch.field_d == 83) {
-              vk.a((byte) 78, dg.field_d[0]);
+              vk.a((byte) 78, FullscreenFocusCanvas.field_d[0]);
               wk.field_a.a(-10874);
               si.field_i.a(-10874);
               continue;
@@ -693,20 +693,20 @@ final class ia extends wf {
             if (i.a(sg.field_n, 160) &&
               sg.field_n != 32 &&
               od.field_g.field_e[11] == null) {
-              sg.field_n = qi.field_c.a(0, sg.field_n);
-              if (0 != ig.field_l) {
-                ig.field_l = sg.field_n & 255;
+              sg.field_n = MouseInputHandler.field_c.a(0, sg.field_n);
+              if (0 != SessionGameApplet.field_l) {
+                SessionGameApplet.field_l = sg.field_n & 255;
               }
-              var28 = w.a((byte)sg.field_n, false);
+              var28 = NodeHashTableIterator.a((byte)sg.field_n, false);
               if (var28 == null) {
-                vk.a((byte) 91, dg.field_d[6]);
+                vk.a((byte) 91, FullscreenFocusCanvas.field_d[6]);
                 continue;
               }
               var5Lifetime1 = 0;
               while (var5Lifetime1 < 12) {
                 if (null == od.field_g.field_e[var5Lifetime1]) {
                   var28.a(var5Lifetime1, 28, od.field_g);
-                  continue L17;
+                  continue scanLoop5;
                 }
                 var5Lifetime1++;
               }
@@ -767,7 +767,7 @@ final class ia extends wf {
             if (ch.field_d != 98) {
               continue;
             }
-            var27 = vi.field_g[n.field_a - 1].toString();
+            var27 = IterableNodeHashTable.field_g[n.field_a - 1].toString();
             for (var5Lifetime1Lifetime1 = 0; var27.length() > var5Lifetime1Lifetime1; var5Lifetime1Lifetime1++) {
               var6Lifetime1 = var27.charAt(var5Lifetime1Lifetime1);
               var7Lifetime1 = null;

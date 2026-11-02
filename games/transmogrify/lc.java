@@ -69,7 +69,7 @@ final class lc extends ag {
           }
           var8 = (wd) (param3.field_h.b(1000));
           while (var8 != null) {
-            var9 = (int)var8.field_c;
+            var9 = (int)var8.key;
             var10 = (si) (this.field_Q.a((long)var9, 0));
             if (var10 == null) {
               var10 = ac.a(var9, 270, param4);
@@ -934,7 +934,7 @@ final class lc extends ag {
           var23 = null;
           var13 = Transmogrify.field_A ? 1 : 0;
           try {
-            var14 = (ba) (wg.field_f.a((byte) -95));
+            var14 = (ba) (SecondaryNodeDequeIterator.field_f.a((byte) -95));
             var18 = var14;
             if (var18 == null) {
               return;

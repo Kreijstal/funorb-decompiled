@@ -151,7 +151,7 @@ final class ua {
     }
 
     final static void a(int param0, int param1) {
-        wf var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         int var4 = 0;
         gh var5 = null;
@@ -351,7 +351,7 @@ final class ua {
                 var18.field_k[var5] = -5;
               }
             }
-            wg.field_f.a(var18, param2 ^ 22577);
+            SecondaryNodeDequeIterator.field_f.a(var18, param2 ^ 22577);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

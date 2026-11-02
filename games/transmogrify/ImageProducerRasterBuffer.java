@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class fg extends cj implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ImageConsumer field_k;
     static long field_j;
     private java.awt.image.ColorModel field_h;
@@ -28,7 +28,7 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
         try {
           if (param4 != 32389) {
             var6 = (int[]) null;
-            fg.a(61, 83, (byte) 125, 103, 62, -127, (int[]) null, -45);
+            ImageProducerRasterBuffer.a(61, 83, (byte) 125, 103, 62, -127, (int[]) null, -45);
           }
           if (param1.a((byte) -127)) {
             stackIn_6_0 = param0 + " - " + param1.a(true, param2) + "%";
@@ -596,7 +596,7 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
     }
 
     final static void a(byte param0, int param1) {
-        wf var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         gd var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -639,7 +639,7 @@ final class fg extends cj implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    fg() {
+    ImageProducerRasterBuffer() {
     }
 
     static {

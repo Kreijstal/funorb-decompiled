@@ -102,7 +102,7 @@ final class nf {
           if (param0 != 92) {
             this.field_f = (ad) null;
           }
-          L1: while (true) {
+          scanLoop1: while (true) {
             this.field_f.a(param1, o.field_o, false, 3670);
             var3_int = 0;
             for (var4 = 0; 256 > var4; var4++) {
@@ -118,7 +118,7 @@ final class nf {
               dupTemp$0 = ic.field_c[var5] + 1;
               ic.field_c[var5] = dupTemp$0;
               if (dupTemp$0 == 4) {
-                continue L1;
+                continue scanLoop1;
               }
               var7++;
             }
@@ -286,7 +286,7 @@ final class nf {
           if (var6 != null) {
             stackIn_54_1 = am.a(dj.a((CharSequence) (var6), (byte) -121), param0, (byte) 72, param1, "");
           } else {
-            stackIn_54_1 = wf.field_d;
+            stackIn_54_1 = IntrusiveNode.field_d;
           }
           this.field_c = stackIn_54_1;
           if (var7 != null) {

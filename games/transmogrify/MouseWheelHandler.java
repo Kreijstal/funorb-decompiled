@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sk extends rj implements java.awt.event.MouseWheelListener {
+final class MouseWheelHandler extends MouseWheelInput implements java.awt.event.MouseWheelListener {
     private int field_c;
 
     public final synchronized void mouseWheelMoved(java.awt.event.MouseWheelEvent param0) {
@@ -28,7 +28,7 @@ final class sk extends rj implements java.awt.event.MouseWheelListener {
         return var2;
     }
 
-    sk() {
+    MouseWheelHandler() {
         this.field_c = 0;
     }
 

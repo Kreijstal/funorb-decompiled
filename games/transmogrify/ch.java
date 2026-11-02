@@ -9,12 +9,12 @@ final class ch {
     static Boolean field_f;
     static int field_d;
 
-    final static kl a(Throwable param0, String param1) {
-        kl var2 = null;
-        if (!(param0 instanceof kl)) {
-          var2 = new kl(param0, param1);
+    final static ContextualRuntimeException a(Throwable param0, String param1) {
+        ContextualRuntimeException var2 = null;
+        if (!(param0 instanceof ContextualRuntimeException)) {
+          var2 = new ContextualRuntimeException(param0, param1);
         } else {
-          var2 = (kl) ((Object) param0);
+          var2 = (ContextualRuntimeException) ((Object) param0);
           var2.field_a = var2.field_a + ' ' + param1;
         }
         return var2;

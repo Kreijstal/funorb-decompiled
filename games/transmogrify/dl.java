@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class dl extends ri {
+abstract class dl extends DualLinkNode {
     static long[][] field_n;
     int field_o;
     static long[] field_q;
@@ -416,7 +416,7 @@ abstract class dl extends ri {
         field_n = new long[8][256];
         field_q = new long[11];
         var0 = 0;
-        L0: while (var0 < 256) {
+        scanLoop1: while (var0 < 256) {
           var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
           if ((1 & var0) != 0) {
             stackIn_6_0 = (long)(var1 & 255);

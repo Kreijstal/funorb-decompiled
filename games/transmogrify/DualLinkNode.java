@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ri extends wf {
+class DualLinkNode extends IntrusiveNode {
     long field_j;
-    static cj field_k;
-    ri field_h;
-    ri field_g;
+    static RasterBuffer field_k;
+    DualLinkNode field_h;
+    DualLinkNode field_g;
     static String field_i;
 
     final static int a(int param0, int param1) {
@@ -62,7 +62,7 @@ class ri extends wf {
           ca.a(param7, param5, param0, param1, param2, true, param3, param6, sb.field_h);
           return;
         }
-        ri.a(-105, -75);
+        DualLinkNode.a(-105, -75);
         if (param5 >= param6) {
           if (param3 > param5) {
             ca.a(param2, param5, param0, param1, param7, true, param6, param3, sb.field_h);
@@ -201,7 +201,7 @@ class ri extends wf {
         }
     }
 
-    protected ri() {
+    protected DualLinkNode() {
     }
 
     static {

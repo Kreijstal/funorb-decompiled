@@ -254,7 +254,7 @@ final class jd extends IOException {
             }
           }
           if (gg.field_f == lj.field_z &&
-            ce.a(0)) {
+            GameKeyHandler.a(0)) {
             if (ca.field_e == 255) {
               var9_ref_String = nf.field_l.j(-1640531527);
               if (var9_ref_String != null) {

@@ -5,7 +5,7 @@ final class pc {
     static ci field_a;
     static int field_b;
 
-    final static int a(boolean param0, ig param1, byte param2) {
+    final static int a(boolean param0, SessionGameApplet param1, byte param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

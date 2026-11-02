@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ng extends wf {
+final class ng extends IntrusiveNode {
     static String field_g;
     int field_k;
     int field_m;
@@ -31,8 +31,8 @@ final class ng extends wf {
           if (param0) {
             ng.a((byte) 43);
           }
-          ch.a(58, ea.field_n, g.field_A, ah.field_a);
-          ah.a(0, 0, (byte) 90, param1);
+          ch.a(58, ea.field_n, g.field_A, DelegatingCanvas.field_a);
+          DelegatingCanvas.a(0, 0, (byte) 90, param1);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "ng.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

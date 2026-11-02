@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gd extends wf {
+final class gd extends IntrusiveNode {
     static java.awt.Canvas field_k;
     int field_h;
     int field_g;

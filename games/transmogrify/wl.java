@@ -31,7 +31,7 @@ final class wl extends aj implements hl, df, tc {
         this.field_J.field_j = mf.field_a;
         this.field_y.field_j = aa.field_c;
         this.field_E.field_j = sd.field_V;
-        this.field_F.field_j = fa.field_g;
+        this.field_F.field_j = GameApplet.field_g;
         this.field_x.field_j = gb.field_b;
         this.field_C.field_j = wj.field_l;
         this.field_w.field_j = ia.field_l;
@@ -56,9 +56,9 @@ final class wl extends aj implements hl, df, tc {
         String var2 = ij.a(gk.field_g, new String[]{this.m(-122), this.n(106)}, (byte) -72);
         int var3 = 20;
         var3 = var3 + this.a(170, 74, rg.field_I, this.field_y, var3);
-        var3 = var3 + (this.a(66, this.field_E, 20, "", 170, pf.field_i, var3) + 5);
+        var3 = var3 + (this.a(66, this.field_E, 20, "", 170, SecondaryNodeDeque.field_i, var3) + 5);
         var3 = var3 + this.a(170, 101, ee.field_y, this.field_F, var3);
-        var3 = var3 + (5 + this.a(this.field_x, 170, 35, kl.field_d, var3, di.field_a));
+        var3 = var3 + (5 + this.a(this.field_x, 170, 35, ContextualRuntimeException.field_d, var3, di.field_a));
         var3 = var3 + (5 + this.a(this.field_J, 170, 35, bi.field_O, var3, rd.field_b));
         var3 = var3 + this.a(170, 818340513, qe.field_A, var3, this.field_C);
         oc var4 = new oc(46, var3, -90 + this.field_l, 25, this.field_w, true, -120 + this.field_l, 5, al.field_i, 11579568, uh.field_o);

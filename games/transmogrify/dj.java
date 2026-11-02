@@ -100,7 +100,7 @@ abstract class dj {
             ub.field_c = ql.a(0, 0, lk.field_b, 0, 640, 480);
             if (null != ub.field_c) {
               var2 = 2;
-              cj.a(ub.field_c, 13861);
+              RasterBuffer.a(ub.field_c, 13861);
             } else {
               var2 = 3;
             }
@@ -109,7 +109,7 @@ abstract class dj {
             kc.a(-14226, 2);
             if (null != ub.field_c) {
               var2 = 2;
-              cj.a(ub.field_c, 13861);
+              RasterBuffer.a(ub.field_c, 13861);
             } else {
               var2 = 3;
             }

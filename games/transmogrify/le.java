@@ -278,7 +278,7 @@ class le extends lj {
           var8 = var10.a(9112, (qg) (this), param0);
           var9 = var10.a((qg) (this), 62, param1);
           do {
-            ri.a(2 + var7.field_q, var7.field_i + (var8 - 2), -2 + var9 + var7.field_h, (byte) -120, var7.field_o + 2);
+            DualLinkNode.a(2 + var7.field_q, var7.field_i + (var8 - 2), -2 + var9 + var7.field_h, (byte) -120, var7.field_o + 2);
             var7 = var7.field_s;
           } while (var7 != null);
         }

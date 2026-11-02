@@ -33,11 +33,11 @@ final class da extends fi {
             if (!ki.b(true)) {
               sb.c();
               ub.a(320, 240, (byte) 116);
-              ah.a(0, 0, (byte) 110, param2);
+              DelegatingCanvas.a(0, 0, (byte) 110, param2);
             } else {
               if (gl.field_y == 0) {
                 ec.a(false, param0, -124);
-                ah.a(0, 0, (byte) 104, param2);
+                DelegatingCanvas.a(0, 0, (byte) 104, param2);
               } else {
                 ng.a(false, param2);
               }
@@ -206,7 +206,7 @@ final class da extends fi {
           if (param1 != -71) {
             field_C = 1;
           }
-          this.field_D.a((wf) (var3), (byte) 33);
+          this.field_D.a((IntrusiveNode) (var3), (byte) 33);
           var3.field_A = true;
           var3.a((qg) (this), param1 + 51);
         } catch (RuntimeException runtimeException) {

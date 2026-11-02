@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class qg extends wf {
+class qg extends IntrusiveNode {
     boolean field_g;
     int field_p;
     String field_k;
@@ -19,7 +19,7 @@ class qg extends wf {
     ma field_m;
 
     qg(String param0, ma param1) {
-        this(param0, vi.field_e.field_q, param1);
+        this(param0, IterableNodeHashTable.field_e.field_q, param1);
     }
 
     boolean b(int param0, int param1, qg param2, int param3, int param4, int param5, int param6) {
@@ -534,7 +534,7 @@ class qg extends wf {
         }
         String var5 = ra.a((byte) 113);
         if (var5 != null) {
-          vi.field_e.a(og.field_e, 60, var5, qi.field_d);
+          IterableNodeHashTable.field_e.a(og.field_e, 60, var5, MouseInputHandler.field_d);
         }
     }
 

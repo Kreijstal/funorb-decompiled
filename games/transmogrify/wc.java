@@ -121,7 +121,7 @@ final class wc {
               }
             }
             if (lj.field_z == pj.field_w &&
-              ce.a(0)) {
+              GameKeyHandler.a(0)) {
               ac.field_j = nf.field_l.e((byte) 117);
               va.field_j = nf.field_l.d((byte) 58);
               nf.field_l.d((byte) 93);
@@ -149,8 +149,8 @@ final class wc {
                   td.field_c[var9] = nf.field_l.b(true);
                 }
               }
-              w.field_a = nf.field_l.g(12248);
-              var12 = (CharSequence) ((Object) w.field_a);
+              NodeHashTableIterator.field_a = nf.field_l.g(12248);
+              var12 = (CharSequence) ((Object) NodeHashTableIterator.field_a);
               kf.field_e = hj.a((byte) -128, var12);
               db.field_d = nf.field_l.d((byte) 123);
               lj.field_z = ll.field_Q;
@@ -193,7 +193,7 @@ final class wc {
               return stackIn_73_0;
             }
             if (aa.field_e == lj.field_z &&
-              ce.a(0)) {
+              GameKeyHandler.a(0)) {
               pc.a(1);
               if (ca.field_e == 7 &&
                 !ej.field_k) {
@@ -256,16 +256,16 @@ final class wc {
         throw new Error();
     }
 
-    final static cj a(int param0, java.awt.Component param1, int param2, int param3) {
+    final static RasterBuffer a(int param0, java.awt.Component param1, int param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          cj var5 = null;
-          fg var5_ref = null;
-          cj stackIn_2_0 = null;
-          cj stackIn_4_0 = null;
-          fg stackIn_6_0 = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          RasterBuffer stackIn_2_0 = null;
+          RasterBuffer stackIn_4_0 = null;
+          ImageProducerRasterBuffer stackIn_6_0 = null;
           RuntimeException stackIn_9_0 = null;
           StringBuilder stackIn_9_1 = null;
           String stackIn_10_2 = null;
@@ -274,20 +274,20 @@ final class wc {
             try {
               var4 = Class.forName("dd");
               if (param0 != 4) {
-                stackIn_2_0 = (cj) null;
+                stackIn_2_0 = (RasterBuffer) null;
                 return stackIn_2_0;
               }
-              var5 = (cj) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               var5.a(param3, param2, param1, (byte) -126);
               stackIn_4_0 = var5;
               return stackIn_4_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new fg();
-              ((cj) ((Object) var5_ref)).a(param3, param2, param1, (byte) -6);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).a(param3, param2, param1, (byte) -6);
               stackIn_6_0 = var5_ref;
-              return (cj) ((Object) stackIn_6_0);
+              return (RasterBuffer) ((Object) stackIn_6_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -385,7 +385,7 @@ final class wc {
           var4 = var16.d((byte) 78);
           if (0 != var4) {
             var6 = var3.field_k;
-            kf.field_k[0] = w.field_a;
+            kf.field_k[0] = NodeHashTableIterator.field_a;
             for (var7_int = 1; var4 > var7_int; var7_int++) {
               kf.field_k[var7_int] = var14.g(12248);
             }

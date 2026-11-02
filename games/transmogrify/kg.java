@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kg extends ri {
+abstract class kg extends DualLinkNode {
     private byte[] field_p;
     private int[] field_x;
     private k[] field_A;

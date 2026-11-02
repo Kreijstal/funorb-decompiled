@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ce implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static int field_c;
     static kg field_b;
     static int[] field_a;
@@ -50,7 +50,7 @@ final class ce implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     final static boolean a(int param0) {
         if (param0 != 0) {
-          ce.a((byte) 110);
+          GameKeyHandler.a((byte) 110);
         }
         if (-1 == tg.field_a) {
           if (!ue.a(1, 0)) {

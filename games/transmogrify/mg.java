@@ -107,9 +107,9 @@ final class mg {
     final static int a(int param0, boolean param1, int param2, boolean param3) {
         if (!param3) {
           mg.a(124, true, 121, true);
-          return wf.a(-1);
+          return IntrusiveNode.a(-1);
         }
-        return wf.a(-1);
+        return IntrusiveNode.a(-1);
     }
 
     final int a(boolean param0) {

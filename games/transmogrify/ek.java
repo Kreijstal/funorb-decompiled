@@ -84,16 +84,16 @@ final class ek implements ui {
     }
 
     final static void a(int param0) {
-        ck.field_z = wf.field_d.a(de.field_c[12]);
-        int var1 = wf.field_d.a(de.field_c[13]);
+        ck.field_z = IntrusiveNode.field_d.a(de.field_c[12]);
+        int var1 = IntrusiveNode.field_d.a(de.field_c[13]);
         if (ck.field_z < var1) {
           ck.field_z = var1;
         }
-        int var2 = wf.field_d.field_t + wf.field_d.field_D + 4;
+        int var2 = IntrusiveNode.field_d.field_t + IntrusiveNode.field_d.field_D + 4;
         if (param0 < 88) {
           return;
         }
-        fd.field_a[5] = var2 + (wf.field_d.field_t + 130 + wf.field_d.field_y) + 4;
+        fd.field_a[5] = var2 + (IntrusiveNode.field_d.field_t + 130 + IntrusiveNode.field_d.field_y) + 4;
         fd.field_b[5] = 2 * var2 + jk.field_x.a(true);
     }
 
@@ -219,7 +219,7 @@ final class ek implements ui {
                 var11 = var11 + (-var9 + param4.field_h >> 1);
               }
             }
-            ri.a(var8 + 4, -2 + var10, 2 + var11, (byte) -107, var9);
+            DualLinkNode.a(var8 + 4, -2 + var10, 2 + var11, (byte) -107, var9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ah extends java.awt.Canvas {
+final class DelegatingCanvas extends java.awt.Canvas {
     static we field_b;
     private java.awt.Component field_c;
     static float field_a;
@@ -9,7 +9,7 @@ final class ah extends java.awt.Canvas {
     public static void a(int param0) {
         field_b = null;
         if (param0 != -23431) {
-          ah.b(53);
+          DelegatingCanvas.b(53);
         }
     }
 
@@ -27,7 +27,7 @@ final class ah extends java.awt.Canvas {
               return;
             }
             var4 = param3.getGraphics();
-            ri.field_k.a(-32299, param0, var4, param1);
+            DualLinkNode.field_k.a(-32299, param0, var4, param1);
             var4.dispose();
             return;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -68,7 +68,7 @@ final class ah extends java.awt.Canvas {
         return (java.awt.Container) ((Object) ha.b(109));
     }
 
-    ah(java.awt.Component param0) {
+    DelegatingCanvas(java.awt.Component param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

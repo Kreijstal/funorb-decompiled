@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ag extends wf {
+abstract class ag extends IntrusiveNode {
     int field_j;
     volatile boolean field_h;
     fh field_g;

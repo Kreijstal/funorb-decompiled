@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rj {
+abstract class MouseWheelInput {
     static ti[] field_a;
     static boolean field_b;
 
@@ -66,7 +66,7 @@ abstract class rj {
           eh.field_e = new h(al.field_i, 20, 0, 0, 0, 11579568, -1, 0, 0, al.field_i.field_y, -1, 2147483647, true);
         }
         if (!param0) {
-          rj.b(false);
+          MouseWheelInput.b(false);
         }
         return eh.field_e;
     }

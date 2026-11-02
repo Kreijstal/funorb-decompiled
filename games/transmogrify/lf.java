@@ -3,9 +3,9 @@
  */
 final class lf {
     static int field_c;
-    private pf field_f;
+    private SecondaryNodeDeque field_f;
     private int field_g;
-    private vi field_b;
+    private IterableNodeHashTable field_b;
     private int field_a;
     static String field_e;
     static jc field_d;
@@ -123,7 +123,7 @@ final class lf {
           }
           if (var11.d(8)) {
             var6 = new hc(var12, var11.field_o);
-            this.field_b.a(var6, (byte) 93, var11.field_c);
+            this.field_b.a(var6, (byte) 93, var11.key);
             this.field_f.a(false, var6);
             ((dl) ((Object) var6)).field_j = 0L;
             var11.c(param0 - 17694);
@@ -149,7 +149,7 @@ final class lf {
         }
         if (var9.d(8)) {
           var6Lifetime1 = new hc(var10, var9.field_o);
-          this.field_b.a(var6Lifetime1, (byte) 93, var9.field_c);
+          this.field_b.a(var6Lifetime1, (byte) 93, var9.key);
           this.field_f.a(false, var6Lifetime1);
           ((dl) ((Object) var6Lifetime1)).field_j = 0L;
           var9.c(param0 - 17694);

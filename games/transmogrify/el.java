@@ -4,7 +4,7 @@
 final class el {
     private int field_u;
     int[] field_s;
-    static ce field_n;
+    static GameKeyHandler field_n;
     int field_b;
     static int[] field_m;
     static boolean field_g;
@@ -269,7 +269,7 @@ final class el {
             }
           }
           if (param0 != -9904) {
-            field_n = (ce) null;
+            field_n = (GameKeyHandler) null;
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -391,7 +391,7 @@ final class el {
     static {
         field_m = new int[8192];
         field_a = "Go Back";
-        field_n = new ce();
+        field_n = new GameKeyHandler();
         field_d = -1;
     }
 }

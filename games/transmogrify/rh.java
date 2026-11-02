@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rh extends ri {
+abstract class rh extends DualLinkNode {
     static am field_t;
     volatile boolean field_m;
     static qj field_r;

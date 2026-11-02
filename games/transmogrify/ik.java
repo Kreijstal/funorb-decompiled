@@ -21,7 +21,7 @@ class ik extends a implements df {
         String var7;
         String var8;
         var5 = Transmogrify.field_A ? 1 : 0;
-        var6 = "(" + bd.field_t + " " + nf.field_k + " " + dg.field_a + ") " + ca.field_e;
+        var6 = "(" + bd.field_t + " " + nf.field_k + " " + FullscreenFocusCanvas.field_a + ") " + ca.field_e;
         var1 = var6;
         if (param0 != 48) {
           field_cb = (tf) null;

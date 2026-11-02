@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ml extends wf {
+final class ml extends IntrusiveNode {
     private int field_n;
     private static int[] field_L;
     private static p[] field_t;

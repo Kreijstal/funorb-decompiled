@@ -30,14 +30,14 @@ final class dc {
         var12 = Transmogrify.field_A ? 1 : 0;
         try {
           if (null != sg.field_d) {
-            qi.a((byte) 117);
+            MouseInputHandler.a((byte) 117);
           }
           var2_int = ni.a((byte) -113);
           if (var2_int == 0) {
             stackIn_8_0 = !(ad.field_e);
             ad.field_e = stackIn_8_0;
             if (ad.field_e) {
-              vk.a((byte) 115, dg.field_d[7]);
+              vk.a((byte) 115, FullscreenFocusCanvas.field_d[7]);
               a.field_S.a(kk.a(param0 + 23327, oa.field_j, bk.field_a), 1, (byte) -112, param1);
               return;
             }
@@ -50,17 +50,17 @@ final class dc {
                 }
               }
             }
-            discarded$0 = vi.field_g[n.field_a].append((CharSequence) ((Object) of.field_e));
-            vi.field_a[n.field_a] = var2_int;
+            discarded$0 = IterableNodeHashTable.field_g[n.field_a].append((CharSequence) ((Object) of.field_e));
+            IterableNodeHashTable.field_a[n.field_a] = var2_int;
             hf.field_j = hf.field_j + (var2_int << 6);
             eh.field_a = eh.field_a + var2_int;
-            var16 = dg.field_d[10].field_l;
+            var16 = FullscreenFocusCanvas.field_d[10].field_l;
             var13 = var16;
             var3 = var13;
             var4 = var3[(2147483647 & bc.field_b) % var16.length];
             nc.field_t = nc.field_t + var4 * jk.field_B;
             gh.field_l = gh.field_l + var4;
-            vk.a((byte) 123, dg.field_d[1]);
+            vk.a((byte) 123, FullscreenFocusCanvas.field_d[1]);
             var5 = var2_int;
             if (var2_int > 0) {
               var6 = 0;
@@ -72,15 +72,15 @@ final class dc {
                 break;
               }
               wk.field_d = wk.field_d + var6;
-              var7 = gj.a((byte) -39, vi.field_g[n.field_a].toString(), true);
+              var7 = gj.a((byte) -39, IterableNodeHashTable.field_g[n.field_a].toString(), true);
               if (!(0 >= n.field_a)) {
                 eh.field_a = eh.field_a + var7;
                 var5 = var5 + var7;
-                ce.field_c = ce.field_c + var7;
+                GameKeyHandler.field_c = GameKeyHandler.field_c + var7;
                 hf.field_j = hf.field_j + (var7 << 6);
               }
             }
-            L10: {
+            regionExit1: {
               boolean decompiledFrameCompleted0 = true;
               boolean decompiledFrameRemainder0 = true;
               n.field_a = n.field_a + 1;
@@ -101,7 +101,7 @@ final class dc {
                 }
                 var8 = 0;
                 for (var9 = 0; 10 > var9; var9++) {
-                  if (vi.field_a[var9] > 0) {
+                  if (IterableNodeHashTable.field_a[var9] > 0) {
                     var8++;
                   }
                 }
@@ -129,7 +129,7 @@ final class dc {
                   var11 = od.field_g.field_e[var10];
                   if (var11 != null) {
                     if (var11.field_l == 9 &&
-                      qi.field_c.field_d.indexOf((int) var11.field_i) == -1) {
+                      MouseInputHandler.field_c.field_d.indexOf((int) var11.field_i) == -1) {
                       var9++;
                     }
                     continue;
@@ -206,7 +206,7 @@ final class dc {
                     }
                   }
                   if (decompiledFrameCompleted0) {
-                    break L10;
+                    break regionExit1;
                   }
                 }
               }
@@ -278,7 +278,7 @@ final class dc {
               }
             }
             if (1 < n.field_a) {
-              var10Lifetime1 = vi.field_g[-2 + n.field_a].length();
+              var10Lifetime1 = IterableNodeHashTable.field_g[-2 + n.field_a].length();
               if (var10Lifetime1 == var9) {
                 if (var7 != var10Lifetime1) {
                   if (var7 >= 3 + var10Lifetime1 &&
@@ -301,36 +301,36 @@ final class dc {
             }
             if (var6Lifetime1 != 1) {
               if (var6Lifetime1 == 2) {
-                jj.a((byte) 105, 0, dg.field_d[11]);
-                jj.a((byte) 95, 256, dg.field_d[8]);
-                fa.a(256, dg.field_d[11], (byte) 125, 40);
-                fa.a(0, dg.field_d[8], (byte) 127, 40);
+                jj.a((byte) 105, 0, FullscreenFocusCanvas.field_d[11]);
+                jj.a((byte) 95, 256, FullscreenFocusCanvas.field_d[8]);
+                GameApplet.a(256, FullscreenFocusCanvas.field_d[11], (byte) 125, 40);
+                GameApplet.a(0, FullscreenFocusCanvas.field_d[8], (byte) 127, 40);
               } else {
                 if (3 == var6Lifetime1) {
-                  jj.a((byte) 90, 0, dg.field_d[9]);
-                  fa.a(256, dg.field_d[9], (byte) 125, 40);
+                  jj.a((byte) 90, 0, FullscreenFocusCanvas.field_d[9]);
+                  GameApplet.a(256, FullscreenFocusCanvas.field_d[9], (byte) 125, 40);
                 } else {
                   if (var6Lifetime1 == 4) {
-                    jj.a((byte) 85, 0, dg.field_d[12]);
-                    fa.a(256, dg.field_d[12], (byte) 125, 40);
+                    jj.a((byte) 85, 0, FullscreenFocusCanvas.field_d[12]);
+                    GameApplet.a(256, FullscreenFocusCanvas.field_d[12], (byte) 125, 40);
                   } else {
                     if (var6Lifetime1 == 5) {
-                      jj.a((byte) 105, 0, dg.field_d[10]);
-                      fa.a(256, dg.field_d[10], (byte) 127, 40);
+                      jj.a((byte) 105, 0, FullscreenFocusCanvas.field_d[10]);
+                      GameApplet.a(256, FullscreenFocusCanvas.field_d[10], (byte) 127, 40);
                     } else {
                       if (var6Lifetime1 > 0) {
-                        jj.a((byte) 115, 0, dg.field_d[12]);
-                        jj.a((byte) 119, 256, dg.field_d[10]);
-                        fa.a(256, dg.field_d[12], (byte) 127, 40);
-                        fa.a(0, dg.field_d[10], (byte) 126, 40);
+                        jj.a((byte) 115, 0, FullscreenFocusCanvas.field_d[12]);
+                        jj.a((byte) 119, 256, FullscreenFocusCanvas.field_d[10]);
+                        GameApplet.a(256, FullscreenFocusCanvas.field_d[12], (byte) 127, 40);
+                        GameApplet.a(0, FullscreenFocusCanvas.field_d[10], (byte) 126, 40);
                       }
                     }
                   }
                 }
               }
             } else {
-              jj.a((byte) 78, 0, dg.field_d[11]);
-              fa.a(256, dg.field_d[11], (byte) 127, 40);
+              jj.a((byte) 78, 0, FullscreenFocusCanvas.field_d[11]);
+              GameApplet.a(256, FullscreenFocusCanvas.field_d[11], (byte) 127, 40);
             }
             if (n.field_a > 1 &&
               0 == var6Lifetime1) {
@@ -348,7 +348,7 @@ final class dc {
               hi.field_a = 28;
             }
           } else {
-            vk.a((byte) 98, dg.field_d[2]);
+            vk.a((byte) 98, FullscreenFocusCanvas.field_d[2]);
           }
           if (param0 != -22991) {
             field_a = -122;

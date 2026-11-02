@@ -8,12 +8,12 @@ final class rc {
 
     final static int[] a(int param0, int param1, int param2) {
         int var3 = pe.a(4096, param0);
-        int var4 = ri.a(98, param0);
+        int var4 = DualLinkNode.a(98, param0);
         int var5 = pe.a(4096, param2);
         if (param1 > -44) {
           field_a = (bl) null;
         }
-        int var6 = ri.a(-120, param2);
+        int var6 = DualLinkNode.a(-120, param2);
         int var7 = (int)((long)var5 * (long)var3 >> 16);
         int var8 = (int)((long)var6 * (long)var3 >> 16);
         int var9 = (int)((long)var4 * (long)var5 >> 16);
@@ -77,24 +77,24 @@ final class rc {
           da.field_C = 0;
           vh.field_n = vh.field_n + (eh.field_a << 6);
           eh.field_a = 0;
-          if (null != qi.field_c) {
-            hf.field_j = hf.field_j - qi.field_c.field_o;
+          if (null != MouseInputHandler.field_c) {
+            hf.field_j = hf.field_j - MouseInputHandler.field_c.field_o;
           }
-          qi.field_c = we.field_l[am.field_n];
-          hf.field_j = hf.field_j + qi.field_c.field_o;
+          MouseInputHandler.field_c = we.field_l[am.field_n];
+          hf.field_j = hf.field_j + MouseInputHandler.field_c.field_o;
           if (mg.field_d &&
-            null != qi.field_c.field_b) {
-            for (var2_int = 0; var2_int < qi.field_c.field_b.length(); var2_int++) {
-              si.field_i.field_e[var2_int] = w.a(si.field_i, var2_int, qi.field_c, (byte) 42, qi.field_c.field_b.charAt(var2_int));
+            null != MouseInputHandler.field_c.field_b) {
+            for (var2_int = 0; var2_int < MouseInputHandler.field_c.field_b.length(); var2_int++) {
+              si.field_i.field_e[var2_int] = NodeHashTableIterator.a(si.field_i, var2_int, MouseInputHandler.field_c, (byte) 42, MouseInputHandler.field_c.field_b.charAt(var2_int));
               si.field_i.field_e[var2_int].field_x = false;
             }
           }
           if (mg.field_d &&
-            null != qi.field_c.field_n) {
+            null != MouseInputHandler.field_c.field_n) {
             if (sg.field_p != null) {
               sg.field_p.d(1);
             }
-            sg.field_p = w.a(de.field_d, 1, qi.field_c, (byte) 36, qi.field_c.field_n.charAt(1));
+            sg.field_p = NodeHashTableIterator.a(de.field_d, 1, MouseInputHandler.field_c, (byte) 36, MouseInputHandler.field_c.field_n.charAt(1));
             var2 = sg.field_p;
             sg.field_p.field_g = 1000;
             sg.field_p.field_x = true;
@@ -102,9 +102,9 @@ final class rc {
           }
           var4 = 0;
           var2_intLifetime1 = var4;
-          while (vi.field_g.length > var4) {
-            vi.field_g[var4].setLength(0);
-            vi.field_a[var4] = 0;
+          while (IterableNodeHashTable.field_g.length > var4) {
+            IterableNodeHashTable.field_g[var4].setLength(0);
+            IterableNodeHashTable.field_a[var4] = 0;
             var4++;
           }
           od.field_g.a(true);
@@ -116,7 +116,7 @@ final class rc {
           hi.field_a = 1;
           gk.field_e = 0;
           rb.field_a = 0;
-          ce.field_c = 0;
+          GameKeyHandler.field_c = 0;
           ad.field_e = false;
           wk.field_c = 0;
           bg.field_m = 1500;

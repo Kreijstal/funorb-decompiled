@@ -32,7 +32,7 @@ final class sg {
           if (~this.field_c == ~ua.field_e) {
             return 1;
           }
-          if (kl.field_c != 2) {
+          if (ContextualRuntimeException.field_c != 2) {
             return 0;
           }
           if (b.a(this.field_m, (byte) 24)) {
@@ -52,7 +52,7 @@ final class sg {
         if (~this.field_c == ~ua.field_e) {
           return 1;
         }
-        if (kl.field_c != 2) {
+        if (ContextualRuntimeException.field_c != 2) {
           return 0;
         }
         if (b.a(this.field_m, (byte) 24)) {

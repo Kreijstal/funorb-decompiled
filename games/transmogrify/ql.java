@@ -13,25 +13,25 @@ final class ql {
         }
     }
 
-    final static dg a(int param0, int param1, fe param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas a(int param0, int param1, fe param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        dg var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
         Object stackIn_2_0 = null;
-        dg stackIn_4_0 = null;
+        FullscreenFocusCanvas stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = kl.a(param5, -3, param2, param4, param0, param1);
+          var8 = ContextualRuntimeException.a(param5, -3, param2, param4, param0, param1);
           var6 = var8;
           if (var8 == null) {
             stackIn_2_0 = null;
-            return (dg) (stackIn_2_0);
+            return (FullscreenFocusCanvas) (stackIn_2_0);
           }
-          var7 = new dg();
+          var7 = new FullscreenFocusCanvas();
           var7.field_f = var8;
           var7.field_f.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, param3, param4, param5);

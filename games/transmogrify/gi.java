@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class gi extends wf {
+abstract class gi extends IntrusiveNode {
     int field_g;
 
     private gi() throws Throwable {

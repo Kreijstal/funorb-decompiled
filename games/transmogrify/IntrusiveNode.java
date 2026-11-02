@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wf {
-    wf field_f;
+class IntrusiveNode {
+    IntrusiveNode previous;
     static boolean field_a;
-    long field_c;
-    wf field_b;
+    long key;
+    IntrusiveNode next;
     static mi field_d;
     static String field_e;
 
@@ -18,14 +18,14 @@ class wf {
     }
 
     final void c(int param0) {
-        if (this.field_f == null) {
+        if (this.previous == null) {
           return;
         }
         if (param0 == 5) {
-          this.field_f.field_b = this.field_b;
-          this.field_b.field_f = this.field_f;
-          this.field_f = null;
-          this.field_b = null;
+          this.previous.next = this.next;
+          this.next.previous = this.previous;
+          this.previous = null;
+          this.next = null;
           return;
         }
     }
@@ -239,7 +239,7 @@ class wf {
     }
 
     final boolean b(int param0) {
-        if (null == this.field_f) {
+        if (null == this.previous) {
           return false;
         }
         if (param0 != 8) {

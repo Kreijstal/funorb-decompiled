@@ -121,7 +121,7 @@ class h implements ui, m {
             var11 = this.a(param3, -83, param2) + Math.max(0, var8.field_a);
             var12 = this.a(param3, -102, param2) + Math.min(this.d(param3, 15065), Math.min(var8.field_f, 1 + var7 < var14.field_b.length ? var13.field_b[1 + var7].field_a : var8.field_f));
             c.a(param0 - (-param3.field_p - param3.field_l), param3.field_p + param0, (byte) -50, param3.field_h + param2 + param3.field_n, param2 + param3.field_n);
-            vi.field_e.a(var10, this.field_n, var12, var11, var10, (byte) 119);
+            IterableNodeHashTable.field_e.a(var10, this.field_n, var12, var11, var10, (byte) 119);
             fi.c(param4);
           }
         } catch (RuntimeException runtimeException) {
@@ -187,7 +187,7 @@ class h implements ui, m {
                 }
               }
               var15 = stackIn_21_0;
-              vi.field_e.a(this.field_g >>> 24, this.field_c + (param1 + param0.field_n - (-param0.field_o - var13.field_a)), var15 - var14, this.a(239, param0, param2, var14), this.field_g, var13.field_f, 4);
+              IterableNodeHashTable.field_e.a(this.field_g >>> 24, this.field_c + (param1 + param0.field_n - (-param0.field_o - var13.field_a)), var15 - var14, this.a(239, param0, param2, var14), this.field_g, var13.field_f, 4);
             }
             fi.c(true);
             return;
