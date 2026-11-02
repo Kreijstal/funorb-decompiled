@@ -111,7 +111,7 @@ class id extends WorldObject {
             }
           }
           if (kc.field_Q) {
-            pc.field_k.a(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 12 + var3_int, -5 + var4, 16777215, 0);
+            pc.field_k.drawStringCentered(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 12 + var3_int, -5 + var4, 16777215, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

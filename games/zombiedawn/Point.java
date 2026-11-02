@@ -32,7 +32,7 @@ final class Point extends IntrusiveNode {
         field_k = null;
     }
 
-    final Point c(int param0) {
+    final Point copy(int param0) {
         if (param0 >= 36) {
           return new Point(this.x, this.y);
         }

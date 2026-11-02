@@ -47,7 +47,7 @@ final class ul {
           if (param0) {
             ul.a(-121, (byte) 5);
           }
-          var2.a(param1, var3.field_w / 2, 17, 16777215, -1);
+          var2.drawStringCentered(param1, var3.field_w / 2, 17, 16777215, -1);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

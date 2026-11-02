@@ -303,7 +303,7 @@ final class GameWorld {
         String stackIn_50_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object var3 = null;
-        qh var4_ref_qh = null;
+        Path var4_ref_qh = null;
         int var4 = 0;
         int var5 = 0;
         var5 = ZombieDawn.field_J;
@@ -335,7 +335,7 @@ final class GameWorld {
                 return;
               }
               var3 = this.spawnZombie(30, (byte) 126, 20, 1440, 400);
-              var4_ref_qh = new qh();
+              var4_ref_qh = new Path();
               var4_ref_qh.addFirst(0, new Point(((Zombie) (var3)).getX(true) - 400, ((Zombie) (var3)).getY(237239984)));
               ((Zombie) (var3)).a(var4_ref_qh, true);
               ((Zombie) (var3)).field_fb = 2;
@@ -1390,9 +1390,9 @@ final class GameWorld {
         RuntimeException var3 = null;
         Zombie var4_ref_kd = null;
         int var4 = 0;
-        qh var5 = null;
+        Path var5 = null;
         Zombie var5_ref = null;
-        qh var6 = null;
+        Path var6 = null;
         int var7 = 0;
         int var3_intLifetime1;
         var7 = ZombieDawn.field_J;
@@ -1410,7 +1410,7 @@ final class GameWorld {
             var3_int = 0;
             while (var3_int < 2) {
               var4_ref_kd = this.spawnZombie(20, (byte) 125, 400, 160, 670);
-              var5 = new qh();
+              var5 = new Path();
               var5.addFirst(0, new Point(var4_ref_kd.getX(true), -110 + var4_ref_kd.getY(237239984)));
               var4_ref_kd.a(var5, true);
               var3_int++;
@@ -1443,7 +1443,7 @@ final class GameWorld {
             var5_ref = this.spawnZombie(90, (byte) 125, 90, 915 - (80 - 80 * param0.field_fb), 1600);
             var5_ref.field_fb = param0.field_fb;
             this.field_gb.d((byte) -106);
-            var6 = new qh();
+            var6 = new Path();
             var6.addFirst(0, new Point(960, 1090));
             var5_ref.a(var6, true);
             var4++;
@@ -2414,7 +2414,7 @@ final class GameWorld {
             this.field_N > 0) {
             Rasterizer.setClip(-this.field_N + (vh.field_b + 640), 0, bd.field_e, nh.field_P);
             if (this.field_h == -1) {
-              var5.a(kb.field_g[this.field_q], bd.field_d, 280, 16777215, 0);
+              var5.drawStringCentered(kb.field_g[this.field_q], bd.field_d, 280, 16777215, 0);
             }
             this.field_V.b(-(this.field_V.field_w / 2) + bd.field_d, nh.field_G - this.field_V.field_t);
             so.a(this.field_t, bd.field_d + (-(this.field_V.field_w / 2) - 6), -6 + (-this.field_V.field_t + nh.field_G));
@@ -2437,16 +2437,16 @@ final class GameWorld {
             Rasterizer.a(var8_intLifetime1, var9Lifetime1, var11Lifetime1, 40, 6, 0, 160);
             Rasterizer.e(var8_intLifetime1, var9Lifetime1, var11Lifetime1, 40, 6, 7829367);
             ed.field_a[var10_intLifetime1].g(var8_intLifetime1 + 9, var9Lifetime1 + 5);
-            var5.c(hk.field_J[var10_intLifetime1], var8_intLifetime1 + 50, var9Lifetime1 + 25, 16777215, 3355443);
+            var5.drawString(hk.field_J[var10_intLifetime1], var8_intLifetime1 + 50, var9Lifetime1 + 25, 16777215, 3355443);
           }
           of.a(11690);
           if (al.field_e) {
             Rasterizer.a(0, 22, 80, 105, 0, 128);
-            var6.c(Integer.toString(this.field_c), 5, 40, 16777215, 0);
-            var6.c(Integer.toString(this.field_C), 5, 60, 16777215, 0);
-            var6.c(Integer.toString(this.field_eb), 5, 80, 16777215, 0);
-            var6.c(Integer.toString(this.field_Z), 5, 100, 16777215, 0);
-            var6.c(Integer.toString((this.field_G << 8) + this.f(param0 ^ -9799)), 5, 120, 16777215, 0);
+            var6.drawString(Integer.toString(this.field_c), 5, 40, 16777215, 0);
+            var6.drawString(Integer.toString(this.field_C), 5, 60, 16777215, 0);
+            var6.drawString(Integer.toString(this.field_eb), 5, 80, 16777215, 0);
+            var6.drawString(Integer.toString(this.field_Z), 5, 100, 16777215, 0);
+            var6.drawString(Integer.toString((this.field_G << 8) + this.f(param0 ^ -9799)), 5, 120, 16777215, 0);
           }
           if (jp.field_m ||
             ac.field_r ||
@@ -2454,21 +2454,21 @@ final class GameWorld {
             Rasterizer.a(0, 0, 640, 17, 0, 100);
           }
           if (jp.field_m) {
-            pc.field_k.c("cam=(" + this.camera.x + ", " + this.camera.y + ") bk=" + ci.field_d + " k=" + kc.field_R + " mouse=(" + ha.field_b + "," + ei.field_K + ") trees=" + ap.field_u + " tree tiles=" + wg.field_n, 5, 13, 16777215, 0);
+            pc.field_k.drawString("cam=(" + this.camera.x + ", " + this.camera.y + ") bk=" + ci.field_d + " k=" + kc.field_R + " mouse=(" + ha.field_b + "," + ei.field_K + ") trees=" + ap.field_u + " tree tiles=" + wg.field_n, 5, 13, 16777215, 0);
           }
           if (nk.field_d) {
-            pc.field_k.c("mouseover tile=(" + (-bd.field_d + ha.field_b + this.camera.x) / 24 + ", " + (-nh.field_G + (ei.field_K + this.camera.y)) / 24 + ")  pixel=(" + (ha.field_b + (this.camera.x - bd.field_d)) + "," + (this.camera.y + ei.field_K - nh.field_G) + ")", 5, 13, 16777215, 0);
+            pc.field_k.drawString("mouseover tile=(" + (-bd.field_d + ha.field_b + this.camera.x) / 24 + ", " + (-nh.field_G + (ei.field_K + this.camera.y)) / 24 + ")  pixel=(" + (ha.field_b + (this.camera.x - bd.field_d)) + "," + (this.camera.y + ei.field_K - nh.field_G) + ")", 5, 13, 16777215, 0);
           }
           if (this.field_F) {
-            var5.b("Cheater!", 630, 410, 16776960, 0);
+            var5.drawStringRightAligned("Cheater!", 630, 410, 16776960, 0);
           }
           if (ac.field_r) {
             var8 = Runtime.getRuntime().totalMemory();
             var10 = Runtime.getRuntime().freeMemory();
-            pc.field_k.b((var8 - var10) / 1024L + " kB / " + var8 / 1024L + " kB", 636, 13, 16777215, 0);
+            pc.field_k.drawStringRightAligned((var8 - var10) / 1024L + " kB / " + var8 / 1024L + " kB", 636, 13, 16777215, 0);
           }
           if (a.field_c) {
-            var4_ref.c(Integer.toString(mf.field_d), 10, 40, 2, -1);
+            var4_ref.drawString(Integer.toString(mf.field_d), 10, 40, 2, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2496,7 +2496,7 @@ final class GameWorld {
         DualLinkDeque var5 = null;
         Zombie var6_ref_kd = null;
         int var6 = 0;
-        qh var7_ref_qh = null;
+        Path var7_ref_qh = null;
         int var7 = 0;
         int[][] var8 = null;
         int var9 = 0;
@@ -2533,7 +2533,7 @@ final class GameWorld {
           var5 = new DualLinkDeque();
           var6_ref_kd = (Zombie) (this.field_W.c((byte) 34));
           while (null != var6_ref_kd) {
-            var7_ref_qh = this.navigation.a(true, var6_ref_kd.getX(true), param0, param1, var6_ref_kd.getY(237239984));
+            var7_ref_qh = this.navigation.findPath(true, var6_ref_kd.getX(true), param0, param1, var6_ref_kd.getY(237239984));
             if (var18 != 0) {
               return;
             }
@@ -2645,7 +2645,7 @@ final class GameWorld {
                 }
                 param1 = 24 * var14Lifetime1 + SpatialObject.e(-128);
                 param0 = SpatialObject.e(49) + var15Lifetime1 * 24;
-                var13.a(this.navigation.a(true, var13.getX(true), param0, param1, var13.getY(237239984)), true);
+                var13.a(this.navigation.findPath(true, var13.getX(true), param0, param1, var13.getY(237239984)), true);
                 if (7 == this.field_q &&
                   0 == this.field_h &&
                   !var13.x(52)) {
@@ -2725,8 +2725,8 @@ final class GameWorld {
         RuntimeException decompiledCaughtException = null;
         var11 = ZombieDawn.field_J;
         try {
-          var5_int = this.camera.a(param3, false);
-          var6 = this.camera.b(param0, true);
+          var5_int = this.camera.screenToWorldX(param3, false);
+          var6 = this.camera.screenToWorldY(param0, true);
           var7 = null;
           var8 = -1;
           if (param2 >= -66) {
@@ -2807,7 +2807,7 @@ final class GameWorld {
               var8.r(param2 ^ -31320);
               this.field_W.addLast(var8, (byte) -126);
               if (param4 != null) {
-                var8.a(this.navigation.a(true, var6_int, param4.y, param4.x, var7), true);
+                var8.a(this.navigation.findPath(true, var6_int, param4.y, param4.x, var7), true);
               }
             }
             if (!(param1 instanceof we)) {
@@ -2918,8 +2918,8 @@ final class GameWorld {
               return;
             }
           }
-          var4_int = this.camera.a(param0, false);
-          var5 = this.camera.b(param1, true);
+          var4_int = this.camera.screenToWorldX(param0, false);
+          var5 = this.camera.screenToWorldY(param1, true);
           if (this.navigation.isWalkable(false, var5, var4_int, true)) {
             boolean decompiledFrameRemainder1 = true;
             boolean decompiledFrameCompleted0 = true;
@@ -3271,7 +3271,7 @@ final class GameWorld {
                         var8_ref_kd.field_cb = false;
                         var8_ref_kd.unlinkSecondary((byte) -20);
                         var8_ref_kd.q((byte) -114);
-                        var8_ref_kd.a(this.navigation.a(true, var8_ref_kd.getX(true), 120, this.navigation.width - 1, var8_ref_kd.getY(237239984)), true);
+                        var8_ref_kd.a(this.navigation.findPath(true, var8_ref_kd.getX(true), 120, this.navigation.width - 1, var8_ref_kd.getY(237239984)), true);
                         this.field_gb.a(true);
                         if (60 >= this.field_gb.j(-106)) {
                           this.a(233, 22, (byte) -23);
@@ -3484,7 +3484,7 @@ final class GameWorld {
                 if (this.field_W.a(false) <= 0) {
                   return;
                 }
-                this.b(this.camera.b(param2, true), this.camera.a(param1, false), 122);
+                this.b(this.camera.screenToWorldY(param2, true), this.camera.screenToWorldX(param1, false), 122);
                 if (var5 == 0) {
                   return;
                 }
@@ -3495,7 +3495,7 @@ final class GameWorld {
                 return;
               }
             }
-            this.field_Q.b(this.camera.b(param2, true), this.camera.a(param1, false), false);
+            this.field_Q.b(this.camera.screenToWorldY(param2, true), this.camera.screenToWorldX(param1, false), false);
             return;
           }
           return;
@@ -3637,7 +3637,7 @@ final class GameWorld {
         kc var9_ref_kc = null;
         Zombie var9_ref_kd = null;
         int var10_int = 0;
-        qh var10 = null;
+        Path var10 = null;
         int[] var10_array = null;
         int var11 = 0;
         int var12 = 0;
@@ -3647,7 +3647,7 @@ final class GameWorld {
         int var16 = 0;
         int var17 = 0;
         Zombie var9_ref_kdLifetime1;
-        qh var10Lifetime1;
+        Path var10Lifetime1;
         int stackIn_304_0Lifetime1;
         int stackIn_304_1Lifetime1;
         int stackIn_331_0Lifetime1;
@@ -3856,7 +3856,7 @@ final class GameWorld {
           this.field_t = new Sprite(12 + this.field_V.field_w, 12 + this.field_V.field_t);
           this.field_V.setAsRenderTarget();
           this.field_N = 640;
-          var5.a(var4_ref, this.field_V.field_w / 2, this.field_V.field_t - var5.field_x, 2, -1);
+          var5.drawStringCentered(var4_ref, this.field_V.field_w / 2, this.field_V.field_t - var5.field_x, 2, -1);
           this.field_t.setAsRenderTarget();
           this.field_V.h(6, 6, 16777215);
           Rasterizer.h(4, 4, 0, 0, Rasterizer.width, Rasterizer.height);
@@ -4027,7 +4027,7 @@ final class GameWorld {
                     if (var17 != 0) {
                       if (stackIn_304_0 < stackIn_304_1) {
                         var9_ref_kd = this.spawnZombie(216, (byte) 122, -264 + this.navigation.width, 144, 48 + (this.navigation.height + 30));
-                        var10 = new qh();
+                        var10 = new Path();
                         var10.addFirst(0, new Point(var9_ref_kd.getX(true), this.navigation.height - 168 + so.randomInt(96)));
                         var9_ref_kd.a(var10, true);
                         break regionExit1;
@@ -4055,7 +4055,7 @@ final class GameWorld {
                       break;
                     }
                     var9_ref_kdLifetime1 = this.spawnZombie(216, (byte) 122, -264 + this.navigation.width, 144, 48 + (this.navigation.height + 30));
-                    var10Lifetime1 = new qh();
+                    var10Lifetime1 = new Path();
                     var10Lifetime1.addFirst(0, new Point(var9_ref_kdLifetime1.getX(true), this.navigation.height - 168 + so.randomInt(96)));
                     var9_ref_kdLifetime1.a(var10Lifetime1, true);
                     if (var17 != 0) {
@@ -4439,7 +4439,7 @@ final class GameWorld {
             bo.field_p[83]))) {
             this.field_ib = 0;
             ck.a(-1, 6836);
-            this.camera.c(-106);
+            this.camera.resetPosition(-106);
             this.field_N = 0;
             decompiledFrameRemainder1 = (var6 != 0);
           }
@@ -4501,7 +4501,7 @@ final class GameWorld {
                     !bo.field_p[82]) {
                     this.c((byte) 112);
                   }
-                  this.a(this.camera.b(ei.field_K, true), this.camera.a(this.field_B, false), this.camera.b(this.field_j, true), 47, this.camera.a(ha.field_b, false));
+                  this.a(this.camera.screenToWorldY(ei.field_K, true), this.camera.screenToWorldX(this.field_B, false), this.camera.screenToWorldY(this.field_j, true), 47, this.camera.screenToWorldX(ha.field_b, false));
                   if (this.field_W.a(false) > 0) {
                     ck.a(-3, 6836);
                   }
@@ -4549,7 +4549,7 @@ final class GameWorld {
                       if (stackIn_118_0) {
                         var5 = (Zombie) (var4);
                         if (var5.i((byte) -126)) {
-                          var5.field_qb = var5.a(this.camera.a(this.field_B, false), this.camera.a(ha.field_b, false), this.camera.b(this.field_j, true), this.camera.b(ei.field_K, true), false);
+                          var5.field_qb = var5.a(this.camera.screenToWorldX(this.field_B, false), this.camera.screenToWorldX(ha.field_b, false), this.camera.screenToWorldY(this.field_j, true), this.camera.screenToWorldY(ei.field_K, true), false);
                         }
                       }
                       var4 = (WorldObject) (this.zombies.a(false));

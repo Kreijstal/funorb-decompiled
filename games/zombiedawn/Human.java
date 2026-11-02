@@ -276,7 +276,7 @@ abstract class Human extends Mover {
         Point var7 = null;
         Point var6 = null;
         int var4 = -5 % ((43 - param1) / 57);
-        qh var5 = Js5Archive.field_e.navigation.a(true, this.getX(true), param2, param0, this.getY(237239984));
+        Path var5 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), param2, param0, this.getY(237239984));
         if (var5 != null) {
           var7 = (Point) (var5.b((byte) 26));
           var6 = var7;
@@ -421,7 +421,7 @@ abstract class Human extends Mover {
               }
             }
             if (b.field_h) {
-              bj.field_q.c(this.stateName((byte) -34), var3_int, var4, 16777215, 0);
+              bj.field_q.drawString(this.stateName((byte) -34), var3_int, var4, 16777215, 0);
               this.a(param1, 5060);
             }
             if (var3_int >= -48 &&
@@ -529,7 +529,7 @@ abstract class Human extends Mover {
                 }
               }
               if (kc.field_Q) {
-                pc.field_k.a(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 24 + var3_int, -5 + var4, 16777215, 0);
+                pc.field_k.drawStringCentered(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 24 + var3_int, -5 + var4, 16777215, 0);
               }
               if (this.field_ob) {
                 DualLinkNode.field_k[0].b(var3_int, var4, 128, 16711680);

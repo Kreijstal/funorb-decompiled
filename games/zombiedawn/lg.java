@@ -59,7 +59,7 @@ final class lg {
     final static void a(int param0, byte param1) {
         int var2_int = 0;
         int var3 = 0;
-        qh var5_ref_qh = null;
+        Path var5_ref_qh = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -75,10 +75,10 @@ final class lg {
               var9 = Js5Archive.field_e.spawnZombie(60, (byte) 125, 930, 140, 960);
               var5 = 20 + hp.field_A.getX(true) - so.randomInt(40);
               var6 = hp.field_A.getY(237239984) - so.randomInt(60);
-              var9.a(Js5Archive.field_e.navigation.a(true, var9.getX(true), var6, var5, var9.getY(237239984)), true);
+              var9.a(Js5Archive.field_e.navigation.findPath(true, var9.getX(true), var6, var5, var9.getY(237239984)), true);
             } else {
               var8 = Js5Archive.field_e.spawnZombie(20, (byte) 120, 70, 354, 890);
-              var5_ref_qh = new qh();
+              var5_ref_qh = new Path();
               var5_ref_qh.addFirst(0, new Point(var8.getX(true), 450));
               var5_ref_qh.addFirst(0, new Point(384, 206));
               var8.a(var5_ref_qh, true);

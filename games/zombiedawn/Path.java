@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh extends IntrusiveDeque {
+final class Path extends IntrusiveDeque {
     static long field_e;
     int field_g;
     static int field_f;
@@ -11,7 +11,7 @@ final class qh extends IntrusiveDeque {
         try {
           if (param0 != 10) {
             String var4 = (String) null;
-            qh.a(24, 51, (String) null);
+            Path.a(24, 51, (String) null);
           }
           ce.field_q = false;
           mp.field_e = false;
@@ -57,7 +57,7 @@ final class qh extends IntrusiveDeque {
         }
     }
 
-    qh() {
+    Path() {
     }
 
     final static void a(float param0, String param1, byte param2, boolean param3) {

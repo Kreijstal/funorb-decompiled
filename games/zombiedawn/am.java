@@ -173,7 +173,7 @@ final class am extends PacketBuffer {
           if (11 == fl.field_a) {
             qo.c(29756);
           }
-          qh.a(mm.field_k, ka.field_a, (byte) -92, ma.field_p);
+          Path.a(mm.field_k, ka.field_a, (byte) -92, ma.field_p);
           uh.a(-113, 0, 0, param0);
           if (param1 > -79) {
             var3 = (String) null;

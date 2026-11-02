@@ -313,7 +313,7 @@ class al {
             var13 = stackIn_62_0;
             var14 = 137 + ff.field_b;
             var15 = (var8 - var14 >> 1) + var5;
-            sg.field_jb.c(var7, var15, (var12 >> 1) + (ca.field_b[0].field_q + sg.field_jb.field_I + var4), var10, 0);
+            sg.field_jb.drawString(var7, var15, (var12 >> 1) + (ca.field_b[0].field_q + sg.field_jb.field_I + var4), var10, 0);
             var15 = var15 + (ff.field_b + 8);
             Rasterizer.drawRectOutline(var15, var9 / 2 + var4 - 1, 129, 2, var10);
             if (var6 == 12) {
@@ -356,7 +356,7 @@ class al {
               return;
             }
           }
-          sg.field_jb.a(var7, var5 + (var8 >> 1), var4 + (sg.field_jb.field_I + ca.field_b[0].field_q) + (var12 >> 1), var10, 0);
+          sg.field_jb.drawStringCentered(var7, var5 + (var8 >> 1), var4 + (sg.field_jb.field_I + ca.field_b[0].field_q) + (var12 >> 1), var10, 0);
           return;
         }
     }
@@ -1534,10 +1534,10 @@ class al {
           var2 = 100 + sg.field_jb.field_I;
           var3 = 4 + sg.field_jb.field_x + sg.field_jb.field_w;
           var4 = 16777215;
-          bj.field_q.a(wi.field_d, 320, var2, var4, -1);
-          bj.field_q.a(ma.a(rf.field_d, 98, eh.field_z, false), 320, var3 + var2, var4, -1);
-          bj.field_q.a(fh.a(false, rf.field_d, 0, eh.field_z), 320, 42 + (var3 * 3 + var2), var4, -1);
-          bj.field_q.a(Mover.a(rf.field_d, -121, false, eh.field_z), 320, var2 + var3 * 4 + 84, var4, -1);
+          bj.field_q.drawStringCentered(wi.field_d, 320, var2, var4, -1);
+          bj.field_q.drawStringCentered(ma.a(rf.field_d, 98, eh.field_z, false), 320, var3 + var2, var4, -1);
+          bj.field_q.drawStringCentered(fh.a(false, rf.field_d, 0, eh.field_z), 320, 42 + (var3 * 3 + var2), var4, -1);
+          bj.field_q.drawStringCentered(Mover.a(rf.field_d, -121, false, eh.field_z), 320, var2 + var3 * 4 + 84, var4, -1);
           if (param0 > -35) {
             this.field_j = -46;
           }
@@ -1583,10 +1583,10 @@ class al {
             var2Lifetime1 = 100 + sg.field_jb.field_I;
             var3Lifetime1 = 4 + sg.field_jb.field_x + sg.field_jb.field_w;
             var4Lifetime1 = 16777215;
-            bj.field_q.a(wi.field_d, 320, var2Lifetime1, var4Lifetime1, -1);
-            bj.field_q.a(ma.a(rf.field_d, 98, eh.field_z, false), 320, var3Lifetime1 + var2Lifetime1, var4Lifetime1, -1);
-            bj.field_q.a(fh.a(false, rf.field_d, 0, eh.field_z), 320, 42 + (var3Lifetime1 * 3 + var2Lifetime1), var4Lifetime1, -1);
-            bj.field_q.a(Mover.a(rf.field_d, -121, false, eh.field_z), 320, var2Lifetime1 + var3Lifetime1 * 4 + 84, var4Lifetime1, -1);
+            bj.field_q.drawStringCentered(wi.field_d, 320, var2Lifetime1, var4Lifetime1, -1);
+            bj.field_q.drawStringCentered(ma.a(rf.field_d, 98, eh.field_z, false), 320, var3Lifetime1 + var2Lifetime1, var4Lifetime1, -1);
+            bj.field_q.drawStringCentered(fh.a(false, rf.field_d, 0, eh.field_z), 320, 42 + (var3Lifetime1 * 3 + var2Lifetime1), var4Lifetime1, -1);
+            bj.field_q.drawStringCentered(Mover.a(rf.field_d, -121, false, eh.field_z), 320, var2Lifetime1 + var3Lifetime1 * 4 + 84, var4Lifetime1, -1);
           }
         }
         if (param0 > -35) {

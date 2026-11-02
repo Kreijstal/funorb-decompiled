@@ -119,7 +119,7 @@ final class ip extends PcmStream {
               if (!var11.f()) {
                 continue;
               }
-              this.field_m.b(var11);
+              this.field_m.addSubstream(var11);
             }
           }
           if (param3 != 0) {
@@ -147,7 +147,7 @@ final class ip extends PcmStream {
         }
     }
 
-    final PcmStream d() {
+    final PcmStream nextSubstream() {
         lf var1;
         int var2;
         var2 = ZombieDawn.field_J;
@@ -228,7 +228,7 @@ final class ip extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream firstSubstream() {
         lf var1 = (lf) (this.field_s.b((byte) 26));
         if (var1 == null) {
           return null;
@@ -236,7 +236,7 @@ final class ip extends PcmStream {
         if (null != var1.field_E) {
           return (PcmStream) ((Object) var1.field_E);
         }
-        return this.d();
+        return this.nextSubstream();
     }
 
     final static String a(int param0, boolean param1, CharSequence param2) {

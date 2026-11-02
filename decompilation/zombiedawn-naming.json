@@ -596,6 +596,14 @@
       "renamedSymbol": "C:AsyncRequest"
     },
     {
+      "symbol": "C:qh",
+      "originalName": "qh",
+      "to": "Path",
+      "evidence": "IntrusiveDeque subclass returned by the level navigation search and filled with Point nodes.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:Path"
+    },
+    {
       "symbol": "C:ra",
       "originalName": "ra",
       "to": "DualLinkDeque",
@@ -1084,6 +1092,22 @@
       "renamedSymbol": "F:Camera.x:I"
     },
     {
+      "symbol": "F:wm.field_c:[Lle;",
+      "originalName": "field_c",
+      "to": "buckets",
+      "evidence": "get and put index this array with the key masked by the bucket count minus one.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IterableNodeHashTable.buckets:[LIntrusiveNode;"
+    },
+    {
+      "symbol": "F:wm.field_f:I",
+      "originalName": "field_f",
+      "to": "bucketCount",
+      "evidence": "get and put mask the key with this value minus one.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IterableNodeHashTable.bucketCount:I"
+    },
+    {
       "symbol": "M:ZombieDawn.a(CII)Z",
       "originalName": "a",
       "to": "onKeyTyped",
@@ -1500,6 +1524,14 @@
       "renamedSymbol": "M:PlatformTaskDispatcher.requestFrame(Ljava/awt/Frame;B)LAsyncRequest;"
     },
     {
+      "symbol": "M:ej.a(ZIIII)Lqh;",
+      "originalName": "a",
+      "to": "findPath",
+      "evidence": "Builds start and end Points and returns a Path deque of Points between them.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:LevelNavigation.findPath(ZIIII)LPath;"
+    },
+    {
       "symbol": "M:ej.a(ZIIZ)Z",
       "originalName": "a",
       "to": "isWalkable",
@@ -1540,12 +1572,52 @@
       "renamedSymbol": "M:PcmMixer.skip(I)V"
     },
     {
+      "symbol": "M:fi.a(Lsp;)V",
+      "originalName": "a",
+      "to": "removeSubstream",
+      "evidence": "Unlinks the stream from the mixer substream deque.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmMixer.removeSubstream(LPcmStream;)V"
+    },
+    {
       "symbol": "M:fi.a([III)V",
       "originalName": "a",
       "to": "fill",
       "evidence": "Abstract hook that writes samples into the int buffer; PcmStream.b calls it while the stream is active. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PcmMixer.fill([III)V"
+    },
+    {
+      "symbol": "M:fi.b(Lsp;)V",
+      "originalName": "b",
+      "to": "addSubstream",
+      "evidence": "Appends the stream to the mixer substream deque.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmMixer.addSubstream(LPcmStream;)V"
+    },
+    {
+      "symbol": "M:fi.c()Lsp;",
+      "originalName": "c",
+      "to": "firstSubstream",
+      "evidence": "PcmMixer returns the head of its substream deque from it. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmMixer.firstSubstream()LPcmStream;"
+    },
+    {
+      "symbol": "M:fi.c([III)V",
+      "originalName": "c",
+      "to": "mixSubstreams",
+      "evidence": "Walks the substream deque and calls fillOrSkip on every stream with the shared buffer.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmMixer.mixSubstreams([III)V"
+    },
+    {
+      "symbol": "M:fi.d()Lsp;",
+      "originalName": "d",
+      "to": "nextSubstream",
+      "evidence": "PcmMixer returns the next substream of its deque from it. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmMixer.nextSubstream()LPcmStream;"
     },
     {
       "symbol": "M:fn.a(I)V",
@@ -1562,6 +1634,22 @@
       "evidence": "Abstract hook that writes samples into the int buffer; PcmStream.b calls it while the stream is active. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PcmSampleStream.fill([III)V"
+    },
+    {
+      "symbol": "M:fn.c()Lsp;",
+      "originalName": "c",
+      "to": "firstSubstream",
+      "evidence": "PcmMixer returns the head of its substream deque from it. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.firstSubstream()LPcmStream;"
+    },
+    {
+      "symbol": "M:fn.d()Lsp;",
+      "originalName": "d",
+      "to": "nextSubstream",
+      "evidence": "PcmMixer returns the next substream of its deque from it. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmSampleStream.nextSubstream()LPcmStream;"
     },
     {
       "symbol": "M:g.b(III)I",
@@ -1708,12 +1796,36 @@
       "renamedSymbol": "M:ip.fill([III)V"
     },
     {
+      "symbol": "M:ip.c()Lsp;",
+      "originalName": "c",
+      "to": "firstSubstream",
+      "evidence": "PcmMixer returns the head of its substream deque from it. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ip.firstSubstream()LPcmStream;"
+    },
+    {
+      "symbol": "M:ip.d()Lsp;",
+      "originalName": "d",
+      "to": "nextSubstream",
+      "evidence": "PcmMixer returns the next substream of its deque from it. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ip.nextSubstream()LPcmStream;"
+    },
+    {
       "symbol": "M:kd.e(II)V",
       "originalName": "e",
       "to": "setState",
       "evidence": "Called with 0 for a Human and 4 otherwise, the values the constructor stores in state. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Zombie.setState(II)V"
+    },
+    {
+      "symbol": "M:kk.c(I)Lkk;",
+      "originalName": "c",
+      "to": "copy",
+      "evidence": "Returns a new Point with the same x and y.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Point.copy(I)LPoint;"
     },
     {
       "symbol": "M:le.b(I)V",
@@ -1812,6 +1924,38 @@
       "renamedSymbol": "M:DualLinkDeque.addLast(LDualLinkNode;B)V"
     },
     {
+      "symbol": "M:rb.a(C)I",
+      "originalName": "a",
+      "to": "charWidth",
+      "evidence": "Looks the character up in the glyph width array.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Font.charWidth(C)I"
+    },
+    {
+      "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+      "originalName": "a",
+      "to": "drawStringCentered",
+      "evidence": "ZombieDawn calls it with the half screen width as x to print the loading caption.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Font.drawStringCentered(Ljava/lang/String;IIII)V"
+    },
+    {
+      "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+      "originalName": "b",
+      "to": "drawStringRightAligned",
+      "evidence": "GameWorld calls it with x = 630 near the right edge to print the Cheater banner.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Font.drawStringRightAligned(Ljava/lang/String;IIII)V"
+    },
+    {
+      "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+      "originalName": "c",
+      "to": "drawString",
+      "evidence": "The debug overlays call it with x = 5 to print left-aligned text.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Font.drawString(Ljava/lang/String;IIII)V"
+    },
+    {
       "symbol": "M:rj.a(I)V",
       "originalName": "a",
       "to": "skip",
@@ -1826,6 +1970,22 @@
       "evidence": "Abstract hook that writes samples into the int buffer; PcmStream.b calls it while the stream is active. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:rj.fill([III)V"
+    },
+    {
+      "symbol": "M:rj.c()Lsp;",
+      "originalName": "c",
+      "to": "firstSubstream",
+      "evidence": "PcmMixer returns the head of its substream deque from it. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:rj.firstSubstream()LPcmStream;"
+    },
+    {
+      "symbol": "M:rj.d()Lsp;",
+      "originalName": "d",
+      "to": "nextSubstream",
+      "evidence": "PcmMixer returns the next substream of its deque from it. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:rj.nextSubstream()LPcmStream;"
     },
     {
       "symbol": "M:sh.a(Ljava/lang/Throwable;Ljava/lang/String;)Laj;",
@@ -1868,6 +2028,22 @@
       "renamedSymbol": "M:PcmStream.fillOrSkip([III)V"
     },
     {
+      "symbol": "M:sp.c()Lsp;",
+      "originalName": "c",
+      "to": "firstSubstream",
+      "evidence": "PcmMixer returns the head of its substream deque from it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStream.firstSubstream()LPcmStream;"
+    },
+    {
+      "symbol": "M:sp.d()Lsp;",
+      "originalName": "d",
+      "to": "nextSubstream",
+      "evidence": "PcmMixer returns the next substream of its deque from it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PcmStream.nextSubstream()LPcmStream;"
+    },
+    {
       "symbol": "M:tp.a(I)V",
       "originalName": "a",
       "to": "skip",
@@ -1882,6 +2058,22 @@
       "evidence": "Abstract hook that writes samples into the int buffer; PcmStream.b calls it while the stream is active. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:tp.fill([III)V"
+    },
+    {
+      "symbol": "M:tp.c()Lsp;",
+      "originalName": "c",
+      "to": "firstSubstream",
+      "evidence": "PcmMixer returns the head of its substream deque from it. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tp.firstSubstream()LPcmStream;"
+    },
+    {
+      "symbol": "M:tp.d()Lsp;",
+      "originalName": "d",
+      "to": "nextSubstream",
+      "evidence": "PcmMixer returns the next substream of its deque from it. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:tp.nextSubstream()LPcmStream;"
     },
     {
       "symbol": "M:uc.a(I)I",
@@ -2010,6 +2202,54 @@
       "evidence": "Renderers pass an entity y through it before subtracting the sprite offset.",
       "confidence": "reviewed",
       "renamedSymbol": "M:Camera.worldToScreenY(II)I"
+    },
+    {
+      "symbol": "M:wk.a(IZ)I",
+      "originalName": "a",
+      "to": "screenToWorldX",
+      "evidence": "Adds the camera x and subtracts the screen origin offset from a screen coordinate.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Camera.screenToWorldX(IZ)I"
+    },
+    {
+      "symbol": "M:wk.b(I)V",
+      "originalName": "b",
+      "to": "clampToBounds",
+      "evidence": "Raises x and y to their stored minimum values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Camera.clampToBounds(I)V"
+    },
+    {
+      "symbol": "M:wk.b(IZ)I",
+      "originalName": "b",
+      "to": "screenToWorldY",
+      "evidence": "Adds the camera y and subtracts the screen origin offset from a screen coordinate.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Camera.screenToWorldY(IZ)I"
+    },
+    {
+      "symbol": "M:wk.c(I)V",
+      "originalName": "c",
+      "to": "resetPosition",
+      "evidence": "Clears the follow flag, sets zoom to 1.0 and restores x and y from stored home values.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:Camera.resetPosition(I)V"
+    },
+    {
+      "symbol": "M:wm.a(JZLle;)V",
+      "originalName": "a",
+      "to": "put",
+      "evidence": "Unlinks the node, stores the key and inserts it into the bucket chosen by key masked with size minus one.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IterableNodeHashTable.put(JZLIntrusiveNode;)V"
+    },
+    {
+      "symbol": "M:wm.a(ZJ)Lle;",
+      "originalName": "a",
+      "to": "get",
+      "evidence": "Indexes the bucket array by key masked with size minus one and scans the bucket for a node with that key.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:IterableNodeHashTable.get(ZJ)LIntrusiveNode;"
     }
   ],
   "symbols": [
@@ -5535,9 +5775,9 @@
     },
     {
       "symbol": "C:qh",
-      "renamedSymbol": "C:qh",
+      "renamedSymbol": "C:Path",
       "originalName": "qh",
-      "renamedName": "qh",
+      "renamedName": "Path",
       "declaration": {
         "file": "qh.java",
         "start": 50,
@@ -22706,7 +22946,7 @@
     },
     {
       "symbol": "F:kd.field_yb:Lqh;",
-      "renamedSymbol": "F:Zombie.field_yb:Lqh;",
+      "renamedSymbol": "F:Zombie.field_yb:LPath;",
       "originalName": "field_yb",
       "renamedName": "field_yb",
       "declaration": {
@@ -30879,7 +31119,7 @@
     },
     {
       "symbol": "F:qh.field_e:J",
-      "renamedSymbol": "F:qh.field_e:J",
+      "renamedSymbol": "F:Path.field_e:J",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -30890,7 +31130,7 @@
     },
     {
       "symbol": "F:qh.field_f:I",
-      "renamedSymbol": "F:qh.field_f:I",
+      "renamedSymbol": "F:Path.field_f:I",
       "originalName": "field_f",
       "renamedName": "field_f",
       "declaration": {
@@ -30901,7 +31141,7 @@
     },
     {
       "symbol": "F:qh.field_g:I",
-      "renamedSymbol": "F:qh.field_g:I",
+      "renamedSymbol": "F:Path.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -39008,9 +39248,9 @@
     },
     {
       "symbol": "F:wm.field_c:[Lle;",
-      "renamedSymbol": "F:IterableNodeHashTable.field_c:[LIntrusiveNode;",
+      "renamedSymbol": "F:IterableNodeHashTable.buckets:[LIntrusiveNode;",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "buckets",
       "declaration": {
         "file": "wm.java",
         "start": 105,
@@ -39041,9 +39281,9 @@
     },
     {
       "symbol": "F:wm.field_f:I",
-      "renamedSymbol": "F:IterableNodeHashTable.field_f:I",
+      "renamedSymbol": "F:IterableNodeHashTable.bucketCount:I",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "bucketCount",
       "declaration": {
         "file": "wm.java",
         "start": 194,
@@ -77651,7 +77891,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#0",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#0",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#0",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -77662,7 +77902,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#1",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#1",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#1",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -77673,7 +77913,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#10",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#10",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#10",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -77684,7 +77924,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#11",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#11",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#11",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -77695,7 +77935,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#12",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#12",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#12",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -77706,7 +77946,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#13",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#13",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#13",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -77717,7 +77957,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#14",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#14",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#14",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -77728,7 +77968,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#15",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#15",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#15",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -77739,7 +77979,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#16",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#16",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#16",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -77750,7 +77990,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#17",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#17",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#17",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -77761,7 +78001,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#18",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#18",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#18",
       "originalName": "var12Lifetime2",
       "renamedName": "var12Lifetime2",
       "declaration": {
@@ -77772,7 +78012,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#19",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#19",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#19",
       "originalName": "var13Lifetime1",
       "renamedName": "var13Lifetime1",
       "declaration": {
@@ -77783,7 +78023,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#2",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#2",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#2",
       "originalName": "stackIn_30_0",
       "renamedName": "stackIn_30_0",
       "declaration": {
@@ -77794,7 +78034,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#20",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#20",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#20",
       "originalName": "var13Lifetime2",
       "renamedName": "var13Lifetime2",
       "declaration": {
@@ -77805,7 +78045,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#3",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#3",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#3",
       "originalName": "stackIn_30_1",
       "renamedName": "stackIn_30_1",
       "declaration": {
@@ -77816,7 +78056,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#4",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#4",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#4",
       "originalName": "stackIn_31_2",
       "renamedName": "stackIn_31_2",
       "declaration": {
@@ -77827,7 +78067,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#5",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#5",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#5",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -77838,7 +78078,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#6",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#6",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#6",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -77849,7 +78089,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#7",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#7",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#7",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -77860,7 +78100,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#8",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#8",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#8",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -77871,7 +78111,7 @@
     },
     {
       "symbol": "L:ej.a(ZIIII)Lqh;#9",
-      "renamedSymbol": "L:LevelNavigation.a(ZIIII)Lqh;#9",
+      "renamedSymbol": "L:LevelNavigation.findPath(ZIIII)LPath;#9",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -84284,7 +84524,7 @@
     },
     {
       "symbol": "L:fi.c([III)V#0",
-      "renamedSymbol": "L:PcmMixer.c([III)V#0",
+      "renamedSymbol": "L:PcmMixer.mixSubstreams([III)V#0",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -113269,7 +113509,7 @@
     },
     {
       "symbol": "L:ip.c()Lsp;#0",
-      "renamedSymbol": "L:ip.c()LPcmStream;#0",
+      "renamedSymbol": "L:ip.firstSubstream()LPcmStream;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -113390,7 +113630,7 @@
     },
     {
       "symbol": "L:ip.d()Lsp;#0",
-      "renamedSymbol": "L:ip.d()LPcmStream;#0",
+      "renamedSymbol": "L:ip.nextSubstream()LPcmStream;#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -113401,7 +113641,7 @@
     },
     {
       "symbol": "L:ip.d()Lsp;#1",
-      "renamedSymbol": "L:ip.d()LPcmStream;#1",
+      "renamedSymbol": "L:ip.nextSubstream()LPcmStream;#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -119781,7 +120021,7 @@
     },
     {
       "symbol": "L:kd.a(Lqh;Z)V#0",
-      "renamedSymbol": "L:Zombie.a(Lqh;Z)V#0",
+      "renamedSymbol": "L:Zombie.a(LPath;Z)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -119792,7 +120032,7 @@
     },
     {
       "symbol": "L:kd.a(Lqh;Z)V#1",
-      "renamedSymbol": "L:Zombie.a(Lqh;Z)V#1",
+      "renamedSymbol": "L:Zombie.a(LPath;Z)V#1",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -119803,7 +120043,7 @@
     },
     {
       "symbol": "L:kd.a(Lqh;Z)V#2",
-      "renamedSymbol": "L:Zombie.a(Lqh;Z)V#2",
+      "renamedSymbol": "L:Zombie.a(LPath;Z)V#2",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -119814,7 +120054,7 @@
     },
     {
       "symbol": "L:kd.a(Lqh;Z)V#3",
-      "renamedSymbol": "L:Zombie.a(Lqh;Z)V#3",
+      "renamedSymbol": "L:Zombie.a(LPath;Z)V#3",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -119825,7 +120065,7 @@
     },
     {
       "symbol": "L:kd.a(Lqh;Z)V#4",
-      "renamedSymbol": "L:Zombie.a(Lqh;Z)V#4",
+      "renamedSymbol": "L:Zombie.a(LPath;Z)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -119836,7 +120076,7 @@
     },
     {
       "symbol": "L:kd.a(Lqh;Z)V#5",
-      "renamedSymbol": "L:Zombie.a(Lqh;Z)V#5",
+      "renamedSymbol": "L:Zombie.a(LPath;Z)V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -161812,7 +162052,7 @@
     },
     {
       "symbol": "L:qh.a(FLjava/lang/String;BZ)V#0",
-      "renamedSymbol": "L:qh.a(FLjava/lang/String;BZ)V#0",
+      "renamedSymbol": "L:Path.a(FLjava/lang/String;BZ)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -161823,7 +162063,7 @@
     },
     {
       "symbol": "L:qh.a(IILjava/lang/String;)V#0",
-      "renamedSymbol": "L:qh.a(IILjava/lang/String;)V#0",
+      "renamedSymbol": "L:Path.a(IILjava/lang/String;)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -161834,7 +162074,7 @@
     },
     {
       "symbol": "L:qh.a(IILjava/lang/String;)V#1",
-      "renamedSymbol": "L:qh.a(IILjava/lang/String;)V#1",
+      "renamedSymbol": "L:Path.a(IILjava/lang/String;)V#1",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -161845,7 +162085,7 @@
     },
     {
       "symbol": "L:qh.a(IILjava/lang/String;)V#2",
-      "renamedSymbol": "L:qh.a(IILjava/lang/String;)V#2",
+      "renamedSymbol": "L:Path.a(IILjava/lang/String;)V#2",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -204404,7 +204644,7 @@
     },
     {
       "symbol": "L:wk.c(I)V#0",
-      "renamedSymbol": "L:Camera.c(I)V#0",
+      "renamedSymbol": "L:Camera.resetPosition(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -204514,7 +204754,7 @@
     },
     {
       "symbol": "L:wm.a(JZLle;)V#0",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JZLIntrusiveNode;)V#0",
+      "renamedSymbol": "L:IterableNodeHashTable.put(JZLIntrusiveNode;)V#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -204525,7 +204765,7 @@
     },
     {
       "symbol": "L:wm.a(JZLle;)V#1",
-      "renamedSymbol": "L:IterableNodeHashTable.a(JZLIntrusiveNode;)V#1",
+      "renamedSymbol": "L:IterableNodeHashTable.put(JZLIntrusiveNode;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -204536,7 +204776,7 @@
     },
     {
       "symbol": "L:wm.a(ZJ)Lle;#0",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ZJ)LIntrusiveNode;#0",
+      "renamedSymbol": "L:IterableNodeHashTable.get(ZJ)LIntrusiveNode;#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -204547,7 +204787,7 @@
     },
     {
       "symbol": "L:wm.a(ZJ)Lle;#1",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ZJ)LIntrusiveNode;#1",
+      "renamedSymbol": "L:IterableNodeHashTable.get(ZJ)LIntrusiveNode;#1",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -204558,7 +204798,7 @@
     },
     {
       "symbol": "L:wm.a(ZJ)Lle;#2",
-      "renamedSymbol": "L:IterableNodeHashTable.a(ZJ)LIntrusiveNode;#2",
+      "renamedSymbol": "L:IterableNodeHashTable.get(ZJ)LIntrusiveNode;#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -211994,9 +212234,9 @@
     },
     {
       "symbol": "M:ej.a(ZIIII)Lqh;",
-      "renamedSymbol": "M:LevelNavigation.a(ZIIII)Lqh;",
+      "renamedSymbol": "M:LevelNavigation.findPath(ZIIII)LPath;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "findPath",
       "declaration": {
         "file": "ej.java",
         "start": 30549,
@@ -213435,9 +213675,9 @@
     },
     {
       "symbol": "M:fi.a(Lsp;)V",
-      "renamedSymbol": "M:PcmMixer.a(LPcmStream;)V",
+      "renamedSymbol": "M:PcmMixer.removeSubstream(LPcmStream;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "removeSubstream",
       "declaration": {
         "file": "fi.java",
         "start": 2047,
@@ -213457,9 +213697,9 @@
     },
     {
       "symbol": "M:fi.b(Lsp;)V",
-      "renamedSymbol": "M:PcmMixer.b(LPcmStream;)V",
+      "renamedSymbol": "M:PcmMixer.addSubstream(LPcmStream;)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "addSubstream",
       "declaration": {
         "file": "fi.java",
         "start": 268,
@@ -213468,9 +213708,9 @@
     },
     {
       "symbol": "M:fi.c()Lsp;",
-      "renamedSymbol": "M:PcmMixer.c()LPcmStream;",
+      "renamedSymbol": "M:PcmMixer.firstSubstream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "firstSubstream",
       "declaration": {
         "file": "fi.java",
         "start": 178,
@@ -213490,9 +213730,9 @@
     },
     {
       "symbol": "M:fi.c([III)V",
-      "renamedSymbol": "M:PcmMixer.c([III)V",
+      "renamedSymbol": "M:PcmMixer.mixSubstreams([III)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "mixSubstreams",
       "declaration": {
         "file": "fi.java",
         "start": 2401,
@@ -213501,9 +213741,9 @@
     },
     {
       "symbol": "M:fi.d()Lsp;",
-      "renamedSymbol": "M:PcmMixer.d()LPcmStream;",
+      "renamedSymbol": "M:PcmMixer.nextSubstream()LPcmStream;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "nextSubstream",
       "declaration": {
         "file": "fi.java",
         "start": 2320,
@@ -214194,9 +214434,9 @@
     },
     {
       "symbol": "M:fn.c()Lsp;",
-      "renamedSymbol": "M:PcmSampleStream.c()LPcmStream;",
+      "renamedSymbol": "M:PcmSampleStream.firstSubstream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "firstSubstream",
       "declaration": {
         "file": "fn.java",
         "start": 26449,
@@ -214238,9 +214478,9 @@
     },
     {
       "symbol": "M:fn.d()Lsp;",
-      "renamedSymbol": "M:PcmSampleStream.d()LPcmStream;",
+      "renamedSymbol": "M:PcmSampleStream.nextSubstream()LPcmStream;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "nextSubstream",
       "declaration": {
         "file": "fn.java",
         "start": 5232,
@@ -218825,9 +219065,9 @@
     },
     {
       "symbol": "M:ip.c()Lsp;",
-      "renamedSymbol": "M:ip.c()LPcmStream;",
+      "renamedSymbol": "M:ip.firstSubstream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "firstSubstream",
       "declaration": {
         "file": "ip.java",
         "start": 8453,
@@ -218858,9 +219098,9 @@
     },
     {
       "symbol": "M:ip.d()Lsp;",
-      "renamedSymbol": "M:ip.d()LPcmStream;",
+      "renamedSymbol": "M:ip.nextSubstream()LPcmStream;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "nextSubstream",
       "declaration": {
         "file": "ip.java",
         "start": 5412,
@@ -220431,7 +220671,7 @@
     },
     {
       "symbol": "M:kd.a(Lqh;Z)V",
-      "renamedSymbol": "M:Zombie.a(Lqh;Z)V",
+      "renamedSymbol": "M:Zombie.a(LPath;Z)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -221542,9 +221782,9 @@
     },
     {
       "symbol": "M:kk.c(I)Lkk;",
-      "renamedSymbol": "M:Point.c(I)LPoint;",
+      "renamedSymbol": "M:Point.copy(I)LPoint;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "copy",
       "declaration": {
         "file": "kk.java",
         "start": 762,
@@ -229242,9 +229482,9 @@
     },
     {
       "symbol": "M:qh.<init>()V",
-      "renamedSymbol": "M:qh.<init>()V",
+      "renamedSymbol": "M:Path.<init>()V",
       "originalName": "qh",
-      "renamedName": "qh",
+      "renamedName": "Path",
       "declaration": {
         "file": "qh.java",
         "start": 1700,
@@ -229253,7 +229493,7 @@
     },
     {
       "symbol": "M:qh.a(FLjava/lang/String;BZ)V",
-      "renamedSymbol": "M:qh.a(FLjava/lang/String;BZ)V",
+      "renamedSymbol": "M:Path.a(FLjava/lang/String;BZ)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -229264,7 +229504,7 @@
     },
     {
       "symbol": "M:qh.a(IILjava/lang/String;)V",
-      "renamedSymbol": "M:qh.a(IILjava/lang/String;)V",
+      "renamedSymbol": "M:Path.a(IILjava/lang/String;)V",
       "originalName": "a",
       "renamedName": "a",
       "declaration": {
@@ -230342,9 +230582,9 @@
     },
     {
       "symbol": "M:rb.a(C)I",
-      "renamedSymbol": "M:Font.a(C)I",
+      "renamedSymbol": "M:Font.charWidth(C)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "charWidth",
       "declaration": {
         "file": "rb.java",
         "start": 1335,
@@ -230430,9 +230670,9 @@
     },
     {
       "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
-      "renamedSymbol": "M:Font.a(Ljava/lang/String;IIII)V",
+      "renamedSymbol": "M:Font.drawStringCentered(Ljava/lang/String;IIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawStringCentered",
       "declaration": {
         "file": "rb.java",
         "start": 19983,
@@ -230540,9 +230780,9 @@
     },
     {
       "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
-      "renamedSymbol": "M:Font.b(Ljava/lang/String;IIII)V",
+      "renamedSymbol": "M:Font.drawStringRightAligned(Ljava/lang/String;IIII)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "drawStringRightAligned",
       "declaration": {
         "file": "rb.java",
         "start": 30842,
@@ -230562,9 +230802,9 @@
     },
     {
       "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
-      "renamedSymbol": "M:Font.c(Ljava/lang/String;IIII)V",
+      "renamedSymbol": "M:Font.drawString(Ljava/lang/String;IIII)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "drawString",
       "declaration": {
         "file": "rb.java",
         "start": 26300,
@@ -231233,9 +231473,9 @@
     },
     {
       "symbol": "M:rj.c()Lsp;",
-      "renamedSymbol": "M:rj.c()LPcmStream;",
+      "renamedSymbol": "M:rj.firstSubstream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "firstSubstream",
       "declaration": {
         "file": "rj.java",
         "start": 912,
@@ -231288,9 +231528,9 @@
     },
     {
       "symbol": "M:rj.d()Lsp;",
-      "renamedSymbol": "M:rj.d()LPcmStream;",
+      "renamedSymbol": "M:rj.nextSubstream()LPcmStream;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "nextSubstream",
       "declaration": {
         "file": "rj.java",
         "start": 13662,
@@ -232773,9 +233013,9 @@
     },
     {
       "symbol": "M:sp.c()Lsp;",
-      "renamedSymbol": "M:PcmStream.c()LPcmStream;",
+      "renamedSymbol": "M:PcmStream.firstSubstream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "firstSubstream",
       "declaration": {
         "file": "sp.java",
         "start": 510,
@@ -232784,9 +233024,9 @@
     },
     {
       "symbol": "M:sp.d()Lsp;",
-      "renamedSymbol": "M:PcmStream.d()LPcmStream;",
+      "renamedSymbol": "M:PcmStream.nextSubstream()LPcmStream;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "nextSubstream",
       "declaration": {
         "file": "sp.java",
         "start": 532,
@@ -234170,9 +234410,9 @@
     },
     {
       "symbol": "M:tp.c()Lsp;",
-      "renamedSymbol": "M:tp.c()LPcmStream;",
+      "renamedSymbol": "M:tp.firstSubstream()LPcmStream;",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "firstSubstream",
       "declaration": {
         "file": "tp.java",
         "start": 10478,
@@ -234203,9 +234443,9 @@
     },
     {
       "symbol": "M:tp.d()Lsp;",
-      "renamedSymbol": "M:tp.d()LPcmStream;",
+      "renamedSymbol": "M:tp.nextSubstream()LPcmStream;",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "nextSubstream",
       "declaration": {
         "file": "tp.java",
         "start": 13625,
@@ -238119,9 +238359,9 @@
     },
     {
       "symbol": "M:wk.a(IZ)I",
-      "renamedSymbol": "M:Camera.a(IZ)I",
+      "renamedSymbol": "M:Camera.screenToWorldX(IZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "screenToWorldX",
       "declaration": {
         "file": "wk.java",
         "start": 1913,
@@ -238141,9 +238381,9 @@
     },
     {
       "symbol": "M:wk.b(I)V",
-      "renamedSymbol": "M:Camera.b(I)V",
+      "renamedSymbol": "M:Camera.clampToBounds(I)V",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "clampToBounds",
       "declaration": {
         "file": "wk.java",
         "start": 9353,
@@ -238152,9 +238392,9 @@
     },
     {
       "symbol": "M:wk.b(IZ)I",
-      "renamedSymbol": "M:Camera.b(IZ)I",
+      "renamedSymbol": "M:Camera.screenToWorldY(IZ)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "screenToWorldY",
       "declaration": {
         "file": "wk.java",
         "start": 2299,
@@ -238163,9 +238403,9 @@
     },
     {
       "symbol": "M:wk.c(I)V",
-      "renamedSymbol": "M:Camera.c(I)V",
+      "renamedSymbol": "M:Camera.resetPosition(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "resetPosition",
       "declaration": {
         "file": "wk.java",
         "start": 2082,
@@ -238229,9 +238469,9 @@
     },
     {
       "symbol": "M:wm.a(JZLle;)V",
-      "renamedSymbol": "M:IterableNodeHashTable.a(JZLIntrusiveNode;)V",
+      "renamedSymbol": "M:IterableNodeHashTable.put(JZLIntrusiveNode;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "put",
       "declaration": {
         "file": "wm.java",
         "start": 2818,
@@ -238240,9 +238480,9 @@
     },
     {
       "symbol": "M:wm.a(ZJ)Lle;",
-      "renamedSymbol": "M:IterableNodeHashTable.a(ZJ)LIntrusiveNode;",
+      "renamedSymbol": "M:IterableNodeHashTable.get(ZJ)LIntrusiveNode;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "get",
       "declaration": {
         "file": "wm.java",
         "start": 241,
@@ -255444,7 +255684,7 @@
     },
     {
       "symbol": "P:ej.a(ZIIII)Lqh;#0",
-      "renamedSymbol": "P:LevelNavigation.a(ZIIII)Lqh;#0",
+      "renamedSymbol": "P:LevelNavigation.findPath(ZIIII)LPath;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -255455,7 +255695,7 @@
     },
     {
       "symbol": "P:ej.a(ZIIII)Lqh;#1",
-      "renamedSymbol": "P:LevelNavigation.a(ZIIII)Lqh;#1",
+      "renamedSymbol": "P:LevelNavigation.findPath(ZIIII)LPath;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -255466,7 +255706,7 @@
     },
     {
       "symbol": "P:ej.a(ZIIII)Lqh;#2",
-      "renamedSymbol": "P:LevelNavigation.a(ZIIII)Lqh;#2",
+      "renamedSymbol": "P:LevelNavigation.findPath(ZIIII)LPath;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -255477,7 +255717,7 @@
     },
     {
       "symbol": "P:ej.a(ZIIII)Lqh;#3",
-      "renamedSymbol": "P:LevelNavigation.a(ZIIII)Lqh;#3",
+      "renamedSymbol": "P:LevelNavigation.findPath(ZIIII)LPath;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -255488,7 +255728,7 @@
     },
     {
       "symbol": "P:ej.a(ZIIII)Lqh;#4",
-      "renamedSymbol": "P:LevelNavigation.a(ZIIII)Lqh;#4",
+      "renamedSymbol": "P:LevelNavigation.findPath(ZIIII)LPath;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -258524,7 +258764,7 @@
     },
     {
       "symbol": "P:fi.a(Lsp;)V#0",
-      "renamedSymbol": "P:PcmMixer.a(LPcmStream;)V#0",
+      "renamedSymbol": "P:PcmMixer.removeSubstream(LPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -258568,7 +258808,7 @@
     },
     {
       "symbol": "P:fi.b(Lsp;)V#0",
-      "renamedSymbol": "P:PcmMixer.b(LPcmStream;)V#0",
+      "renamedSymbol": "P:PcmMixer.addSubstream(LPcmStream;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -258590,7 +258830,7 @@
     },
     {
       "symbol": "P:fi.c([III)V#0",
-      "renamedSymbol": "P:PcmMixer.c([III)V#0",
+      "renamedSymbol": "P:PcmMixer.mixSubstreams([III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -258601,7 +258841,7 @@
     },
     {
       "symbol": "P:fi.c([III)V#1",
-      "renamedSymbol": "P:PcmMixer.c([III)V#1",
+      "renamedSymbol": "P:PcmMixer.mixSubstreams([III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -258612,7 +258852,7 @@
     },
     {
       "symbol": "P:fi.c([III)V#2",
-      "renamedSymbol": "P:PcmMixer.c([III)V#2",
+      "renamedSymbol": "P:PcmMixer.mixSubstreams([III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -275640,7 +275880,7 @@
     },
     {
       "symbol": "P:kd.a(Lqh;Z)V#0",
-      "renamedSymbol": "P:Zombie.a(Lqh;Z)V#0",
+      "renamedSymbol": "P:Zombie.a(LPath;Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -275651,7 +275891,7 @@
     },
     {
       "symbol": "P:kd.a(Lqh;Z)V#1",
-      "renamedSymbol": "P:Zombie.a(Lqh;Z)V#1",
+      "renamedSymbol": "P:Zombie.a(LPath;Z)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -277323,7 +277563,7 @@
     },
     {
       "symbol": "P:kk.c(I)Lkk;#0",
-      "renamedSymbol": "P:Point.c(I)LPoint;#0",
+      "renamedSymbol": "P:Point.copy(I)LPoint;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294362,7 +294602,7 @@
     },
     {
       "symbol": "P:qh.a(FLjava/lang/String;BZ)V#0",
-      "renamedSymbol": "P:qh.a(FLjava/lang/String;BZ)V#0",
+      "renamedSymbol": "P:Path.a(FLjava/lang/String;BZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294373,7 +294613,7 @@
     },
     {
       "symbol": "P:qh.a(FLjava/lang/String;BZ)V#1",
-      "renamedSymbol": "P:qh.a(FLjava/lang/String;BZ)V#1",
+      "renamedSymbol": "P:Path.a(FLjava/lang/String;BZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -294384,7 +294624,7 @@
     },
     {
       "symbol": "P:qh.a(FLjava/lang/String;BZ)V#2",
-      "renamedSymbol": "P:qh.a(FLjava/lang/String;BZ)V#2",
+      "renamedSymbol": "P:Path.a(FLjava/lang/String;BZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -294395,7 +294635,7 @@
     },
     {
       "symbol": "P:qh.a(FLjava/lang/String;BZ)V#3",
-      "renamedSymbol": "P:qh.a(FLjava/lang/String;BZ)V#3",
+      "renamedSymbol": "P:Path.a(FLjava/lang/String;BZ)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -294406,7 +294646,7 @@
     },
     {
       "symbol": "P:qh.a(IILjava/lang/String;)V#0",
-      "renamedSymbol": "P:qh.a(IILjava/lang/String;)V#0",
+      "renamedSymbol": "P:Path.a(IILjava/lang/String;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -294417,7 +294657,7 @@
     },
     {
       "symbol": "P:qh.a(IILjava/lang/String;)V#1",
-      "renamedSymbol": "P:qh.a(IILjava/lang/String;)V#1",
+      "renamedSymbol": "P:Path.a(IILjava/lang/String;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -294428,7 +294668,7 @@
     },
     {
       "symbol": "P:qh.a(IILjava/lang/String;)V#2",
-      "renamedSymbol": "P:qh.a(IILjava/lang/String;)V#2",
+      "renamedSymbol": "P:Path.a(IILjava/lang/String;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -297090,7 +297330,7 @@
     },
     {
       "symbol": "P:rb.a(C)I#0",
-      "renamedSymbol": "P:Font.a(C)I#0",
+      "renamedSymbol": "P:Font.charWidth(C)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -297387,7 +297627,7 @@
     },
     {
       "symbol": "P:rb.a(Ljava/lang/String;IIII)V#0",
-      "renamedSymbol": "P:Font.a(Ljava/lang/String;IIII)V#0",
+      "renamedSymbol": "P:Font.drawStringCentered(Ljava/lang/String;IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -297398,7 +297638,7 @@
     },
     {
       "symbol": "P:rb.a(Ljava/lang/String;IIII)V#1",
-      "renamedSymbol": "P:Font.a(Ljava/lang/String;IIII)V#1",
+      "renamedSymbol": "P:Font.drawStringCentered(Ljava/lang/String;IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -297409,7 +297649,7 @@
     },
     {
       "symbol": "P:rb.a(Ljava/lang/String;IIII)V#2",
-      "renamedSymbol": "P:Font.a(Ljava/lang/String;IIII)V#2",
+      "renamedSymbol": "P:Font.drawStringCentered(Ljava/lang/String;IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -297420,7 +297660,7 @@
     },
     {
       "symbol": "P:rb.a(Ljava/lang/String;IIII)V#3",
-      "renamedSymbol": "P:Font.a(Ljava/lang/String;IIII)V#3",
+      "renamedSymbol": "P:Font.drawStringCentered(Ljava/lang/String;IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -297431,7 +297671,7 @@
     },
     {
       "symbol": "P:rb.a(Ljava/lang/String;IIII)V#4",
-      "renamedSymbol": "P:Font.a(Ljava/lang/String;IIII)V#4",
+      "renamedSymbol": "P:Font.drawStringCentered(Ljava/lang/String;IIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -297926,7 +298166,7 @@
     },
     {
       "symbol": "P:rb.b(Ljava/lang/String;IIII)V#0",
-      "renamedSymbol": "P:Font.b(Ljava/lang/String;IIII)V#0",
+      "renamedSymbol": "P:Font.drawStringRightAligned(Ljava/lang/String;IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -297937,7 +298177,7 @@
     },
     {
       "symbol": "P:rb.b(Ljava/lang/String;IIII)V#1",
-      "renamedSymbol": "P:Font.b(Ljava/lang/String;IIII)V#1",
+      "renamedSymbol": "P:Font.drawStringRightAligned(Ljava/lang/String;IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -297948,7 +298188,7 @@
     },
     {
       "symbol": "P:rb.b(Ljava/lang/String;IIII)V#2",
-      "renamedSymbol": "P:Font.b(Ljava/lang/String;IIII)V#2",
+      "renamedSymbol": "P:Font.drawStringRightAligned(Ljava/lang/String;IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -297959,7 +298199,7 @@
     },
     {
       "symbol": "P:rb.b(Ljava/lang/String;IIII)V#3",
-      "renamedSymbol": "P:Font.b(Ljava/lang/String;IIII)V#3",
+      "renamedSymbol": "P:Font.drawStringRightAligned(Ljava/lang/String;IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -297970,7 +298210,7 @@
     },
     {
       "symbol": "P:rb.b(Ljava/lang/String;IIII)V#4",
-      "renamedSymbol": "P:Font.b(Ljava/lang/String;IIII)V#4",
+      "renamedSymbol": "P:Font.drawStringRightAligned(Ljava/lang/String;IIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -298047,7 +298287,7 @@
     },
     {
       "symbol": "P:rb.c(Ljava/lang/String;IIII)V#0",
-      "renamedSymbol": "P:Font.c(Ljava/lang/String;IIII)V#0",
+      "renamedSymbol": "P:Font.drawString(Ljava/lang/String;IIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -298058,7 +298298,7 @@
     },
     {
       "symbol": "P:rb.c(Ljava/lang/String;IIII)V#1",
-      "renamedSymbol": "P:Font.c(Ljava/lang/String;IIII)V#1",
+      "renamedSymbol": "P:Font.drawString(Ljava/lang/String;IIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -298069,7 +298309,7 @@
     },
     {
       "symbol": "P:rb.c(Ljava/lang/String;IIII)V#2",
-      "renamedSymbol": "P:Font.c(Ljava/lang/String;IIII)V#2",
+      "renamedSymbol": "P:Font.drawString(Ljava/lang/String;IIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -298080,7 +298320,7 @@
     },
     {
       "symbol": "P:rb.c(Ljava/lang/String;IIII)V#3",
-      "renamedSymbol": "P:Font.c(Ljava/lang/String;IIII)V#3",
+      "renamedSymbol": "P:Font.drawString(Ljava/lang/String;IIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -298091,7 +298331,7 @@
     },
     {
       "symbol": "P:rb.c(Ljava/lang/String;IIII)V#4",
-      "renamedSymbol": "P:Font.c(Ljava/lang/String;IIII)V#4",
+      "renamedSymbol": "P:Font.drawString(Ljava/lang/String;IIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -316648,7 +316888,7 @@
     },
     {
       "symbol": "P:wk.a(IZ)I#0",
-      "renamedSymbol": "P:Camera.a(IZ)I#0",
+      "renamedSymbol": "P:Camera.screenToWorldX(IZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -316659,7 +316899,7 @@
     },
     {
       "symbol": "P:wk.a(IZ)I#1",
-      "renamedSymbol": "P:Camera.a(IZ)I#1",
+      "renamedSymbol": "P:Camera.screenToWorldX(IZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -316736,7 +316976,7 @@
     },
     {
       "symbol": "P:wk.b(I)V#0",
-      "renamedSymbol": "P:Camera.b(I)V#0",
+      "renamedSymbol": "P:Camera.clampToBounds(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -316747,7 +316987,7 @@
     },
     {
       "symbol": "P:wk.b(IZ)I#0",
-      "renamedSymbol": "P:Camera.b(IZ)I#0",
+      "renamedSymbol": "P:Camera.screenToWorldY(IZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -316758,7 +316998,7 @@
     },
     {
       "symbol": "P:wk.b(IZ)I#1",
-      "renamedSymbol": "P:Camera.b(IZ)I#1",
+      "renamedSymbol": "P:Camera.screenToWorldY(IZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -316769,7 +317009,7 @@
     },
     {
       "symbol": "P:wk.c(I)V#0",
-      "renamedSymbol": "P:Camera.c(I)V#0",
+      "renamedSymbol": "P:Camera.resetPosition(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -316835,7 +317075,7 @@
     },
     {
       "symbol": "P:wm.a(JZLle;)V#0",
-      "renamedSymbol": "P:IterableNodeHashTable.a(JZLIntrusiveNode;)V#0",
+      "renamedSymbol": "P:IterableNodeHashTable.put(JZLIntrusiveNode;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -316846,7 +317086,7 @@
     },
     {
       "symbol": "P:wm.a(JZLle;)V#1",
-      "renamedSymbol": "P:IterableNodeHashTable.a(JZLIntrusiveNode;)V#1",
+      "renamedSymbol": "P:IterableNodeHashTable.put(JZLIntrusiveNode;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -316857,7 +317097,7 @@
     },
     {
       "symbol": "P:wm.a(JZLle;)V#2",
-      "renamedSymbol": "P:IterableNodeHashTable.a(JZLIntrusiveNode;)V#2",
+      "renamedSymbol": "P:IterableNodeHashTable.put(JZLIntrusiveNode;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -316868,7 +317108,7 @@
     },
     {
       "symbol": "P:wm.a(ZJ)Lle;#0",
-      "renamedSymbol": "P:IterableNodeHashTable.a(ZJ)LIntrusiveNode;#0",
+      "renamedSymbol": "P:IterableNodeHashTable.get(ZJ)LIntrusiveNode;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -316879,7 +317119,7 @@
     },
     {
       "symbol": "P:wm.a(ZJ)Lle;#1",
-      "renamedSymbol": "P:IterableNodeHashTable.a(ZJ)LIntrusiveNode;#1",
+      "renamedSymbol": "P:IterableNodeHashTable.get(ZJ)LIntrusiveNode;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -317136,7 +317376,7 @@
       "original": "ZombieDawn.java",
       "renamed": "ZombieDawn.java",
       "inputSha256": "9b5beb42795696757e02a0df2ec07c54b84d8e6f708804ff6bc9bc4d3a7f1418",
-      "outputSha256": "2c40e536a9ad5cf129c68574ebe96eabc9340c04ffa16740e34bbeb786365ae1",
+      "outputSha256": "3b7f469e6ef2b9d861a7b8764500f53490477aaaae5076d69fd98b5dfe410886",
       "edits": [
         {
           "start": 76,
@@ -317356,6 +317596,13 @@
           "renamed": "Font"
         },
         {
+          "start": 4239,
+          "end": 4240,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 4377,
           "end": 4379,
           "symbol": "C:bi",
@@ -317403,6 +317650,20 @@
           "symbol": "M:bi.c(IIIII)V",
           "original": "c",
           "renamed": "drawRectOutline"
+        },
+        {
+          "start": 6131,
+          "end": 6132,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 6200,
+          "end": 6201,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 6429,
@@ -317894,7 +318155,7 @@
       "original": "aa.java",
       "renamed": "aa.java",
       "inputSha256": "09a75729e66cd28651320612e5486b2455254559c03405a81fed954df6eeb2fd",
-      "outputSha256": "1db5190eac078b7725da7fe7c4f4a8f35a10c5aff4775014fd13faa4c1812135",
+      "outputSha256": "98a37dcc230f36eb59e2844f0745f363351bc62c4b81c3d13a76725160f076b3",
       "edits": [
         {
           "start": 166,
@@ -318021,6 +318282,13 @@
           "symbol": "M:vo.a(ILle;)V",
           "original": "a",
           "renamed": "addFirst"
+        },
+        {
+          "start": 2662,
+          "end": 2663,
+          "symbol": "M:fi.b(Lsp;)V",
+          "original": "b",
+          "renamed": "addSubstream"
         },
         {
           "start": 3191,
@@ -319832,7 +320100,7 @@
       "original": "ah.java",
       "renamed": "Human.java",
       "inputSha256": "7a5cca9495992a874d5b406476462d7ff2646059683f2d4eae61aa5aedd81115",
-      "outputSha256": "8f9df50164b14723a7eeb6d2bd91256369e0b71b8e40c1f01899e3c659c30f45",
+      "outputSha256": "f865d2fe4750d80b1fd61e5a5adb38c2a1a7b900b752149b34cbdaa96c3481d5",
       "edits": [
         {
           "start": 74,
@@ -320164,6 +320432,13 @@
           "renamed": "Point"
         },
         {
+          "start": 6799,
+          "end": 6801,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
           "start": 6809,
           "end": 6811,
           "symbol": "C:dj",
@@ -320176,6 +320451,13 @@
           "symbol": "F:hi.field_H:Lej;",
           "original": "field_H",
           "renamed": "navigation"
+        },
+        {
+          "start": 6828,
+          "end": 6829,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
         },
         {
           "start": 6841,
@@ -320519,6 +320801,13 @@
           "renamed": "getY"
         },
         {
+          "start": 11664,
+          "end": 11665,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 11671,
           "end": 11672,
           "symbol": "M:ah.k(B)Ljava/lang/String;",
@@ -320601,6 +320890,13 @@
           "symbol": "M:vn.c(II)V",
           "original": "c",
           "renamed": "drawMirrored"
+        },
+        {
+          "start": 16156,
+          "end": 16157,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 16373,
@@ -321669,7 +321965,7 @@
       "original": "al.java",
       "renamed": "al.java",
       "inputSha256": "fd5bba07d756a5a1ff413088076ab0c34119b6242d8e0cc80a55581333707288",
-      "outputSha256": "4292b82e5a659fcc176a2424b1c3eba4b60533c07e5f244444bfec6606c4b397",
+      "outputSha256": "f8bb0298963252c85844fec2e9425044c3de886794e9838a7db0a3dc4416dcdd",
       "edits": [
         {
           "start": 185,
@@ -322015,6 +322311,13 @@
           "renamed": "Js5Archive"
         },
         {
+          "start": 8825,
+          "end": 8826,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 8978,
           "end": 8980,
           "symbol": "C:bi",
@@ -322104,6 +322407,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Rasterizer"
+        },
+        {
+          "start": 10799,
+          "end": 10800,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 11393,
@@ -322830,11 +323140,67 @@
           "renamed": "draw"
         },
         {
+          "start": 57772,
+          "end": 57773,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 57829,
+          "end": 57830,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 57922,
+          "end": 57923,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 58025,
+          "end": 58026,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 58027,
           "end": 58028,
           "symbol": "C:g",
           "original": "g",
           "renamed": "Mover"
+        },
+        {
+          "start": 59638,
+          "end": 59639,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 59715,
+          "end": 59716,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 59837,
+          "end": 59838,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 59969,
+          "end": 59970,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 59971,
@@ -322933,7 +323299,7 @@
       "original": "am.java",
       "renamed": "am.java",
       "inputSha256": "68051c3fdc01bc71994e6e073c8914f1503abf23fe88f7f80f3a5a40bdc25123",
-      "outputSha256": "71d36cfb2fb0bbc94f2634376e0df324272e66a457301fe9072a8dfd1d4189a9",
+      "outputSha256": "68260ceff2f27081b949f6660a987f8979c9d92b79bcf8a2492b7ccb7dc58670",
       "edits": [
         {
           "start": 61,
@@ -323144,6 +323510,13 @@
           "symbol": "F:de.field_h:[B",
           "original": "field_h",
           "renamed": "payload"
+        },
+        {
+          "start": 5753,
+          "end": 5755,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 6397,
@@ -323664,7 +324037,7 @@
       "original": "ap.java",
       "renamed": "ap.java",
       "inputSha256": "2391600b44d469ca467b9fbfe49a49f51ec2a26e2dbc6da58959b43bcec5af53",
-      "outputSha256": "32a0b74118234422ddb771d40e7108e8e014a87613377415999e2fe2848fed53",
+      "outputSha256": "10be5696eccc4238ff5589dad38b1802c5ea19cbb771dd194d495831a38fd40c",
       "edits": [
         {
           "start": 4632,
@@ -323758,12 +324131,33 @@
           "renamed": "Js5Archive"
         },
         {
+          "start": 34651,
+          "end": 34652,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 35368,
+          "end": 35369,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
           "start": 35783,
           "end": 35799,
           "symbol": "B:ap.a(B)V#0",
           "original": "sharedTailExit_1",
           "renamed": "regionExit1",
           "kind": "label"
+        },
+        {
+          "start": 36607,
+          "end": 36608,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
         },
         {
           "start": 36691,
@@ -323774,11 +324168,102 @@
           "kind": "label"
         },
         {
+          "start": 36846,
+          "end": 36847,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 36945,
+          "end": 36946,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 37132,
+          "end": 37133,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 37221,
+          "end": 37222,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 37334,
+          "end": 37335,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
           "start": 37336,
           "end": 37338,
           "symbol": "C:aj",
           "original": "aj",
           "renamed": "ClientException"
+        },
+        {
+          "start": 37425,
+          "end": 37426,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 38272,
+          "end": 38273,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 38488,
+          "end": 38489,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 38884,
+          "end": 38885,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 38968,
+          "end": 38969,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 39161,
+          "end": 39162,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 39252,
+          "end": 39253,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 39369,
+          "end": 39370,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
         },
         {
           "start": 39371,
@@ -323788,11 +324273,60 @@
           "renamed": "ClientException"
         },
         {
+          "start": 39462,
+          "end": 39463,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 39658,
+          "end": 39659,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 39767,
+          "end": 39768,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 39930,
+          "end": 39931,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 40011,
+          "end": 40012,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 40108,
+          "end": 40109,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
           "start": 40110,
           "end": 40112,
           "symbol": "C:aj",
           "original": "aj",
           "renamed": "ClientException"
+        },
+        {
+          "start": 40191,
+          "end": 40192,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 40348,
@@ -334360,7 +334894,7 @@
       "original": "d.java",
       "renamed": "d.java",
       "inputSha256": "b5102d767d55456efe10b1c66f43c401a92fe0aa1229a0f8a072c3fc16d3a483",
-      "outputSha256": "2bca47f96e9a280fe7d7d53a1fa579526d30bf74140ae04cee5d70aaab06d47e",
+      "outputSha256": "05a80a855fec0d484b95a315237a9d2ec8fbf09ffe6b1e5471a6b4e7debf237a",
       "edits": [
         {
           "start": 1955,
@@ -334410,6 +334944,34 @@
           "symbol": "C:de",
           "original": "de",
           "renamed": "PacketBuffer"
+        },
+        {
+          "start": 4602,
+          "end": 4604,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 4746,
+          "end": 4747,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 4840,
+          "end": 4842,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 4935,
+          "end": 4936,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 5356,
@@ -340716,7 +341278,7 @@
       "original": "eg.java",
       "renamed": "eg.java",
       "inputSha256": "b65a4ce4f12beca603ec4abc68bee90505b95fe32b0e4666a0d4002238e6b92a",
-      "outputSha256": "c5a74b40e721c32cab3b2e9e4f506a83abe5dab02d3f43057653fe30668dd998",
+      "outputSha256": "36d5298a9ed3d934ffae5dbcb8ae4351c7d567a7df6fb395bbcdb7d5557eceda",
       "edits": [
         {
           "start": 61,
@@ -340794,6 +341356,13 @@
           "symbol": "C:vo",
           "original": "vo",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 2623,
+          "end": 2624,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 2686,
@@ -340880,6 +341449,13 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 4146,
+          "end": 4147,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 4227,
           "end": 4229,
           "symbol": "C:bi",
@@ -340962,6 +341538,13 @@
           "symbol": "C:vo",
           "original": "vo",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 5673,
+          "end": 5674,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 5752,
@@ -341713,7 +342296,7 @@
       "original": "ej.java",
       "renamed": "LevelNavigation.java",
       "inputSha256": "37f2c82629652ef8e4e8177e36f19f3c4ce837821e086d1ccc1d275fe3eadaed",
-      "outputSha256": "6fcb75b8b9370afb8e06fef55c8b408a7728c9fdb4b334393dc163f23abb09b6",
+      "outputSha256": "707014dbff5e64c7427b364997b9fce03158e479ea45507d34e9e1bdd78f65ec",
       "edits": [
         {
           "start": 50,
@@ -342206,6 +342789,13 @@
           "renamed": "Js5Archive"
         },
         {
+          "start": 24712,
+          "end": 24713,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
+        },
+        {
           "start": 24796,
           "end": 24798,
           "symbol": "C:wk",
@@ -342500,6 +343090,20 @@
           "renamed": "wrapException"
         },
         {
+          "start": 30546,
+          "end": 30548,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 30549,
+          "end": 30550,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
+        },
+        {
           "start": 30817,
           "end": 30819,
           "symbol": "C:kk",
@@ -342512,6 +343116,13 @@
           "symbol": "C:kk",
           "original": "kk",
           "renamed": "Point"
+        },
+        {
+          "start": 30851,
+          "end": 30853,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 32034,
@@ -342535,6 +343146,13 @@
           "renamed": "Point"
         },
         {
+          "start": 32448,
+          "end": 32450,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
           "start": 32468,
           "end": 32469,
           "symbol": "M:vo.a(ILle;)V",
@@ -342547,6 +343165,13 @@
           "symbol": "M:vo.a(Lle;I)V",
           "original": "a",
           "renamed": "addLast"
+        },
+        {
+          "start": 34594,
+          "end": 34595,
+          "symbol": "M:kk.c(I)Lkk;",
+          "original": "c",
+          "renamed": "copy"
         },
         {
           "start": 35188,
@@ -342652,6 +343277,20 @@
           "symbol": "C:ga",
           "original": "ga",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 42173,
+          "end": 42174,
+          "symbol": "M:wk.a(IZ)I",
+          "original": "a",
+          "renamed": "screenToWorldX"
+        },
+        {
+          "start": 42230,
+          "end": 42231,
+          "symbol": "M:wk.b(IZ)I",
+          "original": "b",
+          "renamed": "screenToWorldY"
         },
         {
           "start": 42380,
@@ -343129,7 +343768,7 @@
       "original": "el.java",
       "renamed": "el.java",
       "inputSha256": "0aca265d15272b2bba48b3ae2ee6ceba29a8b6b57a665215389d2dfec378acdd",
-      "outputSha256": "f70db039869aeb986966e4ee1dc5ad006597d81f3708b115dbaec9a4e5a58c3d",
+      "outputSha256": "eb6ad34f3772a17b90922f3aebfae9f2e3444d3a87e8324a5f0aafee8c1c5c9e",
       "edits": [
         {
           "start": 182,
@@ -343214,6 +343853,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Rasterizer"
+        },
+        {
+          "start": 5045,
+          "end": 5046,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 5681,
@@ -344551,7 +345197,7 @@
       "original": "fc.java",
       "renamed": "fc.java",
       "inputSha256": "5015dc751ce11a453261cdf1860a7203855eb3ac8cc42af2614ccd5bdfcea479",
-      "outputSha256": "c7afe346b7fcc71ffa40e1778525facf01d128d97a9255806396201b1c17d64a",
+      "outputSha256": "d48b287a741949ced25f17090d80d424cda27701eaf9244028e5d14df0ddbf52",
       "edits": [
         {
           "start": 241,
@@ -344671,6 +345317,27 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Rasterizer"
+        },
+        {
+          "start": 2570,
+          "end": 2571,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 2649,
+          "end": 2650,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 2741,
+          "end": 2742,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 2765,
@@ -345017,8 +345684,15 @@
       "original": "fg.java",
       "renamed": "fg.java",
       "inputSha256": "cfe5a37b2fb38e3d068646081d79c5e6d330e97c21f1c46cd93f8fce7773639e",
-      "outputSha256": "a01d10400a3102d3ce66eb9c47b1fae912e99148b3d389cd54ce626ec6be194f",
+      "outputSha256": "a9f9d884c6b969b9b0f2f1f1e9bf9f5b412fbec72a5e863cb95eae131b6789fe",
       "edits": [
+        {
+          "start": 1436,
+          "end": 1437,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
         {
           "start": 1783,
           "end": 1785,
@@ -345186,6 +345860,41 @@
           "symbol": "M:bi.c(IIIII)V",
           "original": "c",
           "renamed": "drawRectOutline"
+        },
+        {
+          "start": 8929,
+          "end": 8930,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 9009,
+          "end": 9010,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 9087,
+          "end": 9088,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 9860,
+          "end": 9861,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 10213,
+          "end": 10214,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
         },
         {
           "start": 10611,
@@ -345488,7 +346197,7 @@
       "original": "fi.java",
       "renamed": "PcmMixer.java",
       "inputSha256": "eb74221fd2e5e64d2b8b2ac4942a6424cd9e26cb33c6a5d366fac6df5d342070",
-      "outputSha256": "6f9b13ac3c301260157d6fecb5814e1c043de741c51ad86d6d818fa073979543",
+      "outputSha256": "401e2bbead39211b907c1db13b8437f793870617d992f6305f76286963bf0466",
       "edits": [
         {
           "start": 50,
@@ -345526,11 +346235,25 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 178,
+          "end": 179,
+          "symbol": "M:fi.c()Lsp;",
+          "original": "c",
+          "renamed": "firstSubstream"
+        },
+        {
           "start": 200,
           "end": 202,
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 268,
+          "end": 269,
+          "symbol": "M:fi.b(Lsp;)V",
+          "original": "b",
+          "renamed": "addSubstream"
         },
         {
           "start": 270,
@@ -345603,11 +346326,39 @@
           "renamed": "fill"
         },
         {
+          "start": 1154,
+          "end": 1155,
+          "symbol": "M:fi.c([III)V",
+          "original": "c",
+          "renamed": "mixSubstreams"
+        },
+        {
+          "start": 1334,
+          "end": 1335,
+          "symbol": "M:fi.c([III)V",
+          "original": "c",
+          "renamed": "mixSubstreams"
+        },
+        {
+          "start": 1454,
+          "end": 1455,
+          "symbol": "M:fi.c([III)V",
+          "original": "c",
+          "renamed": "mixSubstreams"
+        },
+        {
           "start": 1842,
           "end": 1849,
           "symbol": "F:le.field_b:Lle;",
           "original": "field_b",
           "renamed": "previous"
+        },
+        {
+          "start": 2047,
+          "end": 2048,
+          "symbol": "M:fi.a(Lsp;)V",
+          "original": "a",
+          "renamed": "removeSubstream"
         },
         {
           "start": 2049,
@@ -345659,11 +346410,25 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 2320,
+          "end": 2321,
+          "symbol": "M:fi.d()Lsp;",
+          "original": "d",
+          "renamed": "nextSubstream"
+        },
+        {
           "start": 2342,
           "end": 2344,
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 2401,
+          "end": 2402,
+          "symbol": "M:fi.c([III)V",
+          "original": "c",
+          "renamed": "mixSubstreams"
         },
         {
           "start": 2451,
@@ -346340,7 +347105,7 @@
       "original": "fn.java",
       "renamed": "PcmSampleStream.java",
       "inputSha256": "26938129794816f9b3008024b18e056228bb5fb9a1e2a8703cc65c1f46dba8bd",
-      "outputSha256": "4cc23135865e9a9ef74df44985da080f94724d51714d437480512b3937d4ca5b",
+      "outputSha256": "cd162c4a4cc15e4b34a130f21e33c5db878cf6f4925c847ceb571929b2b33d41",
       "edits": [
         {
           "start": 50,
@@ -346376,6 +347141,13 @@
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 5232,
+          "end": 5233,
+          "symbol": "M:fn.d()Lsp;",
+          "original": "d",
+          "renamed": "nextSubstream"
         },
         {
           "start": 5461,
@@ -346467,6 +347239,13 @@
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 26449,
+          "end": 26450,
+          "symbol": "M:fn.c()Lsp;",
+          "original": "c",
+          "renamed": "firstSubstream"
         },
         {
           "start": 26548,
@@ -354148,7 +354927,7 @@
       "original": "hi.java",
       "renamed": "GameWorld.java",
       "inputSha256": "fb4ebb7a77bd46fc056ecb6e01dca2a3f13a54293f84ad8bc3b872fea5129420",
-      "outputSha256": "0d8a9f28a4559484b4b67ce7200ea4cee9fd5cff83612816931e22ef4b129d2e",
+      "outputSha256": "4dc55916af1d3a1927e6ca5084c2c5051998ccb98f42e59a35948358e0e09f00",
       "edits": [
         {
           "start": 71,
@@ -354375,6 +355154,13 @@
           "renamed": "Zombie"
         },
         {
+          "start": 9664,
+          "end": 9666,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
           "start": 10050,
           "end": 10051,
           "symbol": "M:hi.a(IBIII)Lkd;",
@@ -354422,6 +355208,13 @@
           "symbol": "M:hi.a(IBIII)Lkd;",
           "original": "a",
           "renamed": "spawnZombie"
+        },
+        {
+          "start": 10818,
+          "end": 10820,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 10850,
@@ -355418,11 +356211,25 @@
           "renamed": "Zombie"
         },
         {
+          "start": 51995,
+          "end": 51997,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
           "start": 52019,
           "end": 52021,
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "Zombie"
+        },
+        {
+          "start": 52047,
+          "end": 52049,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 52205,
@@ -355451,6 +356258,13 @@
           "symbol": "M:hi.a(IBIII)Lkd;",
           "original": "a",
           "renamed": "spawnZombie"
+        },
+        {
+          "start": 52614,
+          "end": 52616,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 52639,
@@ -355486,6 +356300,13 @@
           "symbol": "M:hi.a(IBIII)Lkd;",
           "original": "a",
           "renamed": "spawnZombie"
+        },
+        {
+          "start": 53651,
+          "end": 53653,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 53674,
@@ -356834,6 +357655,13 @@
           "renamed": "setClip"
         },
         {
+          "start": 88562,
+          "end": 88563,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 88875,
           "end": 88877,
           "symbol": "C:bi",
@@ -356862,6 +357690,13 @@
           "renamed": "Rasterizer"
         },
         {
+          "start": 89747,
+          "end": 89748,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 89920,
           "end": 89922,
           "symbol": "C:bi",
@@ -356869,11 +357704,53 @@
           "renamed": "Rasterizer"
         },
         {
+          "start": 89967,
+          "end": 89968,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 90039,
+          "end": 90040,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 90111,
+          "end": 90112,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 90184,
+          "end": 90185,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 90257,
+          "end": 90258,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 90449,
           "end": 90451,
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Rasterizer"
+        },
+        {
+          "start": 90541,
+          "end": 90542,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 90558,
@@ -356902,6 +357779,13 @@
           "symbol": "F:wk.field_c:I",
           "original": "field_c",
           "renamed": "y"
+        },
+        {
+          "start": 90834,
+          "end": 90835,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 90890,
@@ -356960,6 +357844,27 @@
           "renamed": "y"
         },
         {
+          "start": 91190,
+          "end": 91191,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 91401,
+          "end": 91402,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 91544,
+          "end": 91545,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 91826,
           "end": 91828,
           "symbol": "C:sh",
@@ -356986,6 +357891,13 @@
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "Zombie"
+        },
+        {
+          "start": 92524,
+          "end": 92526,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 92724,
@@ -357035,6 +357947,13 @@
           "symbol": "F:hi.field_H:Lej;",
           "original": "field_H",
           "renamed": "navigation"
+        },
+        {
+          "start": 93650,
+          "end": 93651,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
         },
         {
           "start": 93670,
@@ -357137,6 +358056,13 @@
           "symbol": "F:hi.field_H:Lej;",
           "original": "field_H",
           "renamed": "navigation"
+        },
+        {
+          "start": 97934,
+          "end": 97935,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
         },
         {
           "start": 97948,
@@ -357265,11 +358191,25 @@
           "renamed": "camera"
         },
         {
+          "start": 100957,
+          "end": 100958,
+          "symbol": "M:wk.a(IZ)I",
+          "original": "a",
+          "renamed": "screenToWorldX"
+        },
+        {
           "start": 100997,
           "end": 101004,
           "symbol": "F:hi.field_S:Lwk;",
           "original": "field_S",
           "renamed": "camera"
+        },
+        {
+          "start": 101005,
+          "end": 101006,
+          "symbol": "M:wk.b(IZ)I",
+          "original": "b",
+          "renamed": "screenToWorldY"
         },
         {
           "start": 101170,
@@ -357440,6 +358380,13 @@
           "renamed": "navigation"
         },
         {
+          "start": 103767,
+          "end": 103768,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
+        },
+        {
           "start": 103792,
           "end": 103799,
           "symbol": "F:kk.field_h:I",
@@ -357517,11 +358464,25 @@
           "renamed": "camera"
         },
         {
+          "start": 107679,
+          "end": 107680,
+          "symbol": "M:wk.a(IZ)I",
+          "original": "a",
+          "renamed": "screenToWorldX"
+        },
+        {
           "start": 107719,
           "end": 107726,
           "symbol": "F:hi.field_S:Lwk;",
           "original": "field_S",
           "renamed": "camera"
+        },
+        {
+          "start": 107727,
+          "end": 107728,
+          "symbol": "M:wk.b(IZ)I",
+          "original": "b",
+          "renamed": "screenToWorldY"
         },
         {
           "start": 107763,
@@ -357867,6 +358828,13 @@
           "renamed": "navigation"
         },
         {
+          "start": 120810,
+          "end": 120811,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
+        },
+        {
           "start": 120830,
           "end": 120831,
           "symbol": "M:fb.a(Z)I",
@@ -358091,11 +359059,25 @@
           "renamed": "camera"
         },
         {
+          "start": 129090,
+          "end": 129091,
+          "symbol": "M:wk.b(IZ)I",
+          "original": "b",
+          "renamed": "screenToWorldY"
+        },
+        {
           "start": 129112,
           "end": 129119,
           "symbol": "F:hi.field_S:Lwk;",
           "original": "field_S",
           "renamed": "camera"
+        },
+        {
+          "start": 129120,
+          "end": 129121,
+          "symbol": "M:wk.a(IZ)I",
+          "original": "a",
+          "renamed": "screenToWorldX"
         },
         {
           "start": 129432,
@@ -358105,11 +359087,25 @@
           "renamed": "camera"
         },
         {
+          "start": 129440,
+          "end": 129441,
+          "symbol": "M:wk.b(IZ)I",
+          "original": "b",
+          "renamed": "screenToWorldY"
+        },
+        {
           "start": 129462,
           "end": 129469,
           "symbol": "F:hi.field_S:Lwk;",
           "original": "field_S",
           "renamed": "camera"
+        },
+        {
+          "start": 129470,
+          "end": 129471,
+          "symbol": "M:wk.a(IZ)I",
+          "original": "a",
+          "renamed": "screenToWorldX"
         },
         {
           "start": 129746,
@@ -358364,11 +359360,25 @@
           "renamed": "Zombie"
         },
         {
+          "start": 134767,
+          "end": 134769,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
           "start": 134987,
           "end": 134989,
           "symbol": "C:kd",
           "original": "kd",
           "renamed": "Zombie"
+        },
+        {
+          "start": 135020,
+          "end": 135022,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 136287,
@@ -358777,6 +359787,13 @@
           "renamed": "setAsRenderTarget"
         },
         {
+          "start": 142478,
+          "end": 142479,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 142584,
           "end": 142585,
           "symbol": "M:vn.a()V",
@@ -358960,6 +359977,13 @@
           "renamed": "height"
         },
         {
+          "start": 149737,
+          "end": 149739,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
           "start": 149773,
           "end": 149774,
           "symbol": "M:vo.a(ILle;)V",
@@ -359079,6 +360103,13 @@
           "symbol": "F:ej.field_p:I",
           "original": "field_p",
           "renamed": "height"
+        },
+        {
+          "start": 151337,
+          "end": 151339,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 151378,
@@ -359618,6 +360649,13 @@
           "renamed": "camera"
         },
         {
+          "start": 168115,
+          "end": 168116,
+          "symbol": "M:wk.c(I)V",
+          "original": "c",
+          "renamed": "resetPosition"
+        },
+        {
           "start": 168525,
           "end": 168527,
           "symbol": "C:fb",
@@ -359667,11 +360705,25 @@
           "renamed": "camera"
         },
         {
+          "start": 170603,
+          "end": 170604,
+          "symbol": "M:wk.b(IZ)I",
+          "original": "b",
+          "renamed": "screenToWorldY"
+        },
+        {
           "start": 170629,
           "end": 170636,
           "symbol": "F:hi.field_S:Lwk;",
           "original": "field_S",
           "renamed": "camera"
+        },
+        {
+          "start": 170637,
+          "end": 170638,
+          "symbol": "M:wk.a(IZ)I",
+          "original": "a",
+          "renamed": "screenToWorldX"
         },
         {
           "start": 170666,
@@ -359681,11 +360733,25 @@
           "renamed": "camera"
         },
         {
+          "start": 170674,
+          "end": 170675,
+          "symbol": "M:wk.b(IZ)I",
+          "original": "b",
+          "renamed": "screenToWorldY"
+        },
+        {
           "start": 170706,
           "end": 170713,
           "symbol": "F:hi.field_S:Lwk;",
           "original": "field_S",
           "renamed": "camera"
+        },
+        {
+          "start": 170714,
+          "end": 170715,
+          "symbol": "M:wk.a(IZ)I",
+          "original": "a",
+          "renamed": "screenToWorldX"
         },
         {
           "start": 171664,
@@ -359730,11 +360796,25 @@
           "renamed": "camera"
         },
         {
+          "start": 172759,
+          "end": 172760,
+          "symbol": "M:wk.a(IZ)I",
+          "original": "a",
+          "renamed": "screenToWorldX"
+        },
+        {
           "start": 172788,
           "end": 172795,
           "symbol": "F:hi.field_S:Lwk;",
           "original": "field_S",
           "renamed": "camera"
+        },
+        {
+          "start": 172796,
+          "end": 172797,
+          "symbol": "M:wk.a(IZ)I",
+          "original": "a",
+          "renamed": "screenToWorldX"
         },
         {
           "start": 172823,
@@ -359744,11 +360824,25 @@
           "renamed": "camera"
         },
         {
+          "start": 172831,
+          "end": 172832,
+          "symbol": "M:wk.b(IZ)I",
+          "original": "b",
+          "renamed": "screenToWorldY"
+        },
+        {
           "start": 172859,
           "end": 172866,
           "symbol": "F:hi.field_S:Lwk;",
           "original": "field_S",
           "renamed": "camera"
+        },
+        {
+          "start": 172867,
+          "end": 172868,
+          "symbol": "M:wk.b(IZ)I",
+          "original": "b",
+          "renamed": "screenToWorldY"
         },
         {
           "start": 172976,
@@ -360493,7 +361587,7 @@
       "original": "hl.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "6db7079c5938c35b12824890f91e5fd3b79b107e07869350510211de67cc8f03",
-      "outputSha256": "fc396bf6cecb13b28df1158b36d0e622f539046a0f2cf237bcfb11aced23f781",
+      "outputSha256": "33aadbc5122742dc31978df8de7277e0c3b575046a78aa8921d92dbad6074c9e",
       "edits": [
         {
           "start": 71,
@@ -360538,11 +361632,32 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 672,
+          "end": 679,
+          "symbol": "F:wm.field_c:[Lle;",
+          "original": "field_c",
+          "renamed": "buckets"
+        },
+        {
           "start": 779,
           "end": 786,
           "symbol": "F:le.field_b:Lle;",
           "original": "field_b",
           "renamed": "previous"
+        },
+        {
+          "start": 908,
+          "end": 915,
+          "symbol": "F:wm.field_f:I",
+          "original": "field_f",
+          "renamed": "bucketCount"
+        },
+        {
+          "start": 1067,
+          "end": 1074,
+          "symbol": "F:wm.field_c:[Lle;",
+          "original": "field_c",
+          "renamed": "buckets"
         },
         {
           "start": 1088,
@@ -360552,11 +361667,25 @@
           "renamed": "previous"
         },
         {
+          "start": 1127,
+          "end": 1134,
+          "symbol": "F:wm.field_c:[Lle;",
+          "original": "field_c",
+          "renamed": "buckets"
+        },
+        {
           "start": 1192,
           "end": 1199,
           "symbol": "F:le.field_b:Lle;",
           "original": "field_b",
           "renamed": "previous"
+        },
+        {
+          "start": 1395,
+          "end": 1402,
+          "symbol": "F:wm.field_c:[Lle;",
+          "original": "field_c",
+          "renamed": "buckets"
         },
         {
           "start": 1406,
@@ -360608,11 +361737,53 @@
           "renamed": "wrapException"
         },
         {
+          "start": 6434,
+          "end": 6441,
+          "symbol": "F:wm.field_c:[Lle;",
+          "original": "field_c",
+          "renamed": "buckets"
+        },
+        {
+          "start": 6546,
+          "end": 6553,
+          "symbol": "F:wm.field_f:I",
+          "original": "field_f",
+          "renamed": "bucketCount"
+        },
+        {
+          "start": 6719,
+          "end": 6726,
+          "symbol": "F:wm.field_c:[Lle;",
+          "original": "field_c",
+          "renamed": "buckets"
+        },
+        {
           "start": 6740,
           "end": 6747,
           "symbol": "F:le.field_b:Lle;",
           "original": "field_b",
           "renamed": "previous"
+        },
+        {
+          "start": 6764,
+          "end": 6771,
+          "symbol": "F:wm.field_c:[Lle;",
+          "original": "field_c",
+          "renamed": "buckets"
+        },
+        {
+          "start": 6834,
+          "end": 6841,
+          "symbol": "F:wm.field_c:[Lle;",
+          "original": "field_c",
+          "renamed": "buckets"
+        },
+        {
+          "start": 6958,
+          "end": 6965,
+          "symbol": "F:wm.field_c:[Lle;",
+          "original": "field_c",
+          "renamed": "buckets"
         },
         {
           "start": 6985,
@@ -362147,7 +363318,7 @@
       "original": "id.java",
       "renamed": "id.java",
       "inputSha256": "cc995145ed44ab7d07eee47ab53f58f725721f059c832a4d6e15f076dd593782",
-      "outputSha256": "591b856b48e505fac4c894b82f8df92884d0aabd1794309ba645a5c14005d0a4",
+      "outputSha256": "cafb823b4aef0fba70e16055816cc90000dbb5defc37764d6c1b99a61f52ad44",
       "edits": [
         {
           "start": 76,
@@ -362253,6 +363424,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Rasterizer"
+        },
+        {
+          "start": 3673,
+          "end": 3674,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 4307,
@@ -364403,7 +365581,7 @@
       "original": "ip.java",
       "renamed": "ip.java",
       "inputSha256": "7711d9be39899da23f9d902a5c2cd960139f730f5f607424ede86e07201c045e",
-      "outputSha256": "8564b3b0bb23bea3bdf4cd50a4b747022d703506969e0a206ba0fc31caf9c8ac",
+      "outputSha256": "0c58606e116f3d08c78e5906e895696955cfd3f5c07b643760f1c8a69d7aaab1",
       "edits": [
         {
           "start": 82,
@@ -364504,6 +365682,13 @@
           "renamed": "fill"
         },
         {
+          "start": 4317,
+          "end": 4318,
+          "symbol": "M:fi.b(Lsp;)V",
+          "original": "b",
+          "renamed": "addSubstream"
+        },
+        {
           "start": 4441,
           "end": 4442,
           "symbol": "M:fn.a([III)V",
@@ -364530,6 +365715,13 @@
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 5412,
+          "end": 5413,
+          "symbol": "M:ip.d()Lsp;",
+          "original": "d",
+          "renamed": "nextSubstream"
         },
         {
           "start": 5683,
@@ -364588,11 +365780,25 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 8453,
+          "end": 8454,
+          "symbol": "M:ip.c()Lsp;",
+          "original": "c",
+          "renamed": "firstSubstream"
+        },
+        {
           "start": 8626,
           "end": 8628,
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 8685,
+          "end": 8686,
+          "symbol": "M:ip.d()Lsp;",
+          "original": "d",
+          "renamed": "nextSubstream"
         },
         {
           "start": 10385,
@@ -366278,7 +367484,7 @@
       "original": "jo.java",
       "renamed": "jo.java",
       "inputSha256": "33e5ff0c3108fa0b058904b4e34a10612cd0065a599f3a0c1284d932c96eccfa",
-      "outputSha256": "09f0173440a497fdcfeaf5d5daadfff22e4e598e7074b2bf4d1bc697eeb27331",
+      "outputSha256": "3c37dc5dbbb6dfb7d9083bbe2b89bcf33a458d57d09f5b744b1369d0c683afe5",
       "edits": [
         {
           "start": 255,
@@ -366293,6 +367499,13 @@
           "symbol": "C:kk",
           "original": "kk",
           "renamed": "Point"
+        },
+        {
+          "start": 481,
+          "end": 483,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 543,
@@ -366335,6 +367548,13 @@
           "symbol": "F:hi.field_H:Lej;",
           "original": "field_H",
           "renamed": "navigation"
+        },
+        {
+          "start": 879,
+          "end": 880,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
         },
         {
           "start": 892,
@@ -366848,6 +368068,13 @@
           "renamed": "Rasterizer"
         },
         {
+          "start": 9461,
+          "end": 9462,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 9494,
           "end": 9501,
           "symbol": "F:g.field_F:I",
@@ -366916,6 +368143,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Rasterizer"
+        },
+        {
+          "start": 10062,
+          "end": 10063,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 10560,
@@ -367022,7 +368256,7 @@
       "original": "k.java",
       "renamed": "k.java",
       "inputSha256": "54cd22d5fb1e9edb5cbab20a20ec789f310ea51088b48c2cf7bf1a7e8f3d10bf",
-      "outputSha256": "f1635ef63fcdefa5e6425acba968cba1045c000d64178a6f6a9757c6d7a73ed3",
+      "outputSha256": "072507404c4cb1034669f3d9d3cbdfa98a4c620fed697119f079594c796021f6",
       "edits": [
         {
           "start": 324,
@@ -367044,6 +368278,13 @@
           "symbol": "M:bi.c(IIIII)V",
           "original": "c",
           "renamed": "drawRectOutline"
+        },
+        {
+          "start": 1978,
+          "end": 1979,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 2554,
@@ -368083,7 +369324,7 @@
       "original": "kd.java",
       "renamed": "Zombie.java",
       "inputSha256": "33e85c81918ec8412a43e52a042dab48184f57d264d62a5baea830a50d67021c",
-      "outputSha256": "b7729bca2068bfb839151cfd27ed93979faa83c8873590597d040b0db8649023",
+      "outputSha256": "88f9c754bf97701f1dce28b083e488fea8788d1068a433ea89d833444098df98",
       "edits": [
         {
           "start": 71,
@@ -368098,6 +369339,13 @@
           "symbol": "C:g",
           "original": "g",
           "renamed": "Mover"
+        },
+        {
+          "start": 252,
+          "end": 254,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 478,
@@ -368842,6 +370090,13 @@
           "renamed": "Mover"
         },
         {
+          "start": 11417,
+          "end": 11418,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 11488,
           "end": 11495,
           "symbol": "F:g.field_F:I",
@@ -368898,6 +370153,13 @@
           "renamed": "drawMirrored"
         },
         {
+          "start": 14001,
+          "end": 14002,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 14231,
           "end": 14232,
           "symbol": "M:wk.a(IB)I",
@@ -368931,6 +370193,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Rasterizer"
+        },
+        {
+          "start": 14435,
+          "end": 14436,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 15066,
@@ -369010,6 +370279,13 @@
           "renamed": "state"
         },
         {
+          "start": 16864,
+          "end": 16866,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
           "start": 17193,
           "end": 17194,
           "symbol": "M:vo.a(B)Z",
@@ -369052,6 +370328,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 18461,
+          "end": 18463,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
           "start": 18494,
           "end": 18495,
           "symbol": "M:kd.e(II)V",
@@ -369078,6 +370361,13 @@
           "symbol": "C:ah",
           "original": "ah",
           "renamed": "Human"
+        },
+        {
+          "start": 18833,
+          "end": 18835,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 19008,
@@ -369199,6 +370489,13 @@
           "renamed": "state"
         },
         {
+          "start": 19695,
+          "end": 19696,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
+        },
+        {
           "start": 19708,
           "end": 19709,
           "symbol": "M:fb.a(Z)I",
@@ -369248,11 +370545,25 @@
           "renamed": "previous"
         },
         {
+          "start": 20066,
+          "end": 20068,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
           "start": 20264,
           "end": 20271,
           "symbol": "F:le.field_b:Lle;",
           "original": "field_b",
           "renamed": "previous"
+        },
+        {
+          "start": 20335,
+          "end": 20337,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 21061,
@@ -369708,6 +371019,13 @@
           "symbol": "F:hi.field_H:Lej;",
           "original": "field_H",
           "renamed": "navigation"
+        },
+        {
+          "start": 27907,
+          "end": 27908,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
         },
         {
           "start": 27920,
@@ -370186,6 +371504,13 @@
           "symbol": "F:hi.field_H:Lej;",
           "original": "field_H",
           "renamed": "navigation"
+        },
+        {
+          "start": 37286,
+          "end": 37287,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
         },
         {
           "start": 37299,
@@ -371774,7 +373099,7 @@
       "original": "kk.java",
       "renamed": "Point.java",
       "inputSha256": "0fe4a8541ad9622e2a9eda765d8ea3e62e7c16f3a01fbc1c57e85bb37bccaee6",
-      "outputSha256": "80847309c308d13def49de1af3c9c602381617cbf034d294b0f1d321159601dc",
+      "outputSha256": "e5ca186b9a7a0621705097cb991c50192ae0d38f4a18b7d6db54d24831a93f0c",
       "edits": [
         {
           "start": 50,
@@ -371831,6 +373156,13 @@
           "symbol": "C:kk",
           "original": "kk",
           "renamed": "Point"
+        },
+        {
+          "start": 762,
+          "end": 763,
+          "symbol": "M:kk.c(I)Lkk;",
+          "original": "c",
+          "renamed": "copy"
         },
         {
           "start": 827,
@@ -371929,7 +373261,7 @@
       "original": "kl.java",
       "renamed": "kl.java",
       "inputSha256": "3d3932bd660facab7323b6d290e88efcd1108cf36df4d62f2f36921083c38f8c",
-      "outputSha256": "338e16467464d25f9e32daecb137c723652b720c711447eb2f1226345c47b85e",
+      "outputSha256": "81e9d3e42f741dcb54e5bd3a039e8f3d7723f90d2e1bd84cad4be85e0eca4a53",
       "edits": [
         {
           "start": 587,
@@ -371993,6 +373325,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Rasterizer"
+        },
+        {
+          "start": 2312,
+          "end": 2313,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 2478,
@@ -372938,7 +374277,7 @@
       "original": "lc.java",
       "renamed": "lc.java",
       "inputSha256": "45e49089d360d56277cde0438556ba2cbd51d4184af9a67ac70255fea70ec8d5",
-      "outputSha256": "c9f892ba9adf1de6aa3c244788d51c711e80a7ae103c2b4e4d417f4aecf2988e",
+      "outputSha256": "a749ca3b518ce8cc02f0fdb49acb8dfad00ef8234b23d2fa4a702e725fe90bb2",
       "edits": [
         {
           "start": 117,
@@ -372967,6 +374306,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "Sprite"
+        },
+        {
+          "start": 972,
+          "end": 973,
+          "symbol": "M:wm.a(JZLle;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 1063,
@@ -373030,6 +374376,13 @@
           "symbol": "M:sh.a(Ljava/lang/Throwable;Ljava/lang/String;)Laj;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 3251,
+          "end": 3252,
+          "symbol": "M:wm.a(ZJ)Lle;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 3356,
@@ -373102,6 +374455,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 6898,
+          "end": 6899,
+          "symbol": "M:wm.a(ZJ)Lle;",
+          "original": "a",
+          "renamed": "get"
+        },
+        {
           "start": 7172,
           "end": 7173,
           "symbol": "M:le.b(I)V",
@@ -373114,6 +374474,13 @@
           "symbol": "M:nb.c(B)V",
           "original": "c",
           "renamed": "unlinkSecondary"
+        },
+        {
+          "start": 7410,
+          "end": 7411,
+          "symbol": "M:wm.a(JZLle;)V",
+          "original": "a",
+          "renamed": "put"
         },
         {
           "start": 7417,
@@ -373397,8 +374764,15 @@
       "original": "lg.java",
       "renamed": "lg.java",
       "inputSha256": "4598cc540b563ea4fe1c0caa1b43314f0a3541cd9e7f8b3e81ade5eb9add1200",
-      "outputSha256": "d33b47a4936e078c40d905a5b5c82645f7b0813194e6b33b29505e58185ac346",
+      "outputSha256": "e5bd28c38213ac49940bd3567380931f18698c9de367a2319b12b4044d63a69a",
       "edits": [
+        {
+          "start": 1443,
+          "end": 1445,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
         {
           "start": 1540,
           "end": 1542,
@@ -373477,6 +374851,13 @@
           "renamed": "navigation"
         },
         {
+          "start": 2086,
+          "end": 2087,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
+        },
+        {
           "start": 2099,
           "end": 2100,
           "symbol": "M:fb.a(Z)I",
@@ -373503,6 +374884,13 @@
           "symbol": "M:hi.a(IBIII)Lkd;",
           "original": "a",
           "renamed": "spawnZombie"
+        },
+        {
+          "start": 2265,
+          "end": 2267,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 2297,
@@ -374903,7 +376291,7 @@
       "original": "ll.java",
       "renamed": "ll.java",
       "inputSha256": "22cf915efd9e2c401878cc44e0b8955471035791b7df49840b838a491be90a27",
-      "outputSha256": "02e87f47f86f708ed324fc4502138d7efea3b9a7e7adf5d79892a5049617f393",
+      "outputSha256": "713036ae541ada6262d44bb1a7b9552e240f80937f0120d9af184e6e46cb9c39",
       "edits": [
         {
           "start": 149,
@@ -375240,6 +376628,20 @@
           "symbol": "C:wb",
           "original": "wb",
           "renamed": "FunOrbApplet"
+        },
+        {
+          "start": 7045,
+          "end": 7046,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 7203,
+          "end": 7204,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 7217,
@@ -376148,7 +377550,7 @@
       "original": "ma.java",
       "renamed": "ma.java",
       "inputSha256": "eea2277d386b47a8fa0d7ee642d066fc46397e170e9fdc3e66a25f7f541d1a4a",
-      "outputSha256": "47ec176e04f019a2b67e3c57421667d9ac8f5f2047febdedcc794b89a9e3738e",
+      "outputSha256": "238310e225f10d83aa7825359b180cdec66476914867b5de14b80b19ede0eb58",
       "edits": [
         {
           "start": 61,
@@ -376191,6 +377593,13 @@
           "symbol": "C:rb",
           "original": "rb",
           "renamed": "Font"
+        },
+        {
+          "start": 5035,
+          "end": 5036,
+          "symbol": "M:rb.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
         },
         {
           "start": 6084,
@@ -379948,7 +381357,7 @@
       "original": "nk.java",
       "renamed": "nk.java",
       "inputSha256": "920ce0d00a2382c65e08e2921e97b0fb5917371bad583f54d010c9d115de592b",
-      "outputSha256": "9745b8e392269654399b2a9055cb25455f8ab658056f15803002a616ed1dd779",
+      "outputSha256": "e9716704dc7c6bf4f545ec925382825e80d36e081b57343aeb2808e6b2021645",
       "edits": [
         {
           "start": 335,
@@ -380021,6 +381430,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 1314,
+          "end": 1316,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
           "start": 2589,
           "end": 2591,
           "symbol": "C:sh",
@@ -380040,7 +381456,7 @@
       "original": "nl.java",
       "renamed": "nl.java",
       "inputSha256": "d867a2ccf9ac379bf5297c05ebe43719d6492c178cd8ffd87c4e74421134f590",
-      "outputSha256": "dcf9f30900a77f5b90c8c4095ad38b4515be1e7cfec8f14e532060725c6838b6",
+      "outputSha256": "10bc7e897db34ee2ae3cbb86316b8633cf8ad7212f6aa91545b83eb5b416ce3f",
       "edits": [
         {
           "start": 110,
@@ -380099,6 +381515,13 @@
           "renamed": "HumanFactory"
         },
         {
+          "start": 2416,
+          "end": 2417,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 2804,
           "end": 2806,
           "symbol": "C:bi",
@@ -380134,6 +381557,13 @@
           "renamed": "Rasterizer"
         },
         {
+          "start": 3977,
+          "end": 3978,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 3979,
           "end": 3980,
           "symbol": "C:m",
@@ -380146,6 +381576,20 @@
           "symbol": "C:sh",
           "original": "sh",
           "renamed": "ExceptionWrapper"
+        },
+        {
+          "start": 5276,
+          "end": 5277,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 5380,
+          "end": 5381,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 5715,
@@ -381328,7 +382772,7 @@
       "original": "of.java",
       "renamed": "of.java",
       "inputSha256": "52d1d54e4aa446292f65a4d12440ad7f733fd073d63abd745df0b75482c380db",
-      "outputSha256": "42b6d78991842ce8ba3b2a9ed5ef34b76b798cae4db716506118cef5ccf98f76",
+      "outputSha256": "1d7e6a0e4f7875bb1ade810c4f035667608f20b72cce9e9b9c5ff1c1f0be859b",
       "edits": [
         {
           "start": 287,
@@ -381665,6 +383109,13 @@
           "symbol": "M:bi.b(IIIII)V",
           "original": "b",
           "renamed": "fillRect"
+        },
+        {
+          "start": 7201,
+          "end": 7202,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 7718,
@@ -385720,7 +387171,7 @@
       "original": "pc.java",
       "renamed": "pc.java",
       "inputSha256": "b4dca5092275e5d79c0144bbbf1a9f61ec5fbc5ad5ec566af061dd207c7d370c",
-      "outputSha256": "3981a91317db27842d3c4159b041c17e6830c9c1912970851eb39ad6a0f091c8",
+      "outputSha256": "96646b3a8ed29011a88052769998dd6fa63b11c8aded794991e087532fda0fad",
       "edits": [
         {
           "start": 85,
@@ -385798,6 +387249,13 @@
           "symbol": "C:fn",
           "original": "fn",
           "renamed": "PcmSampleStream"
+        },
+        {
+          "start": 1972,
+          "end": 1973,
+          "symbol": "M:fi.a(Lsp;)V",
+          "original": "a",
+          "renamed": "removeSubstream"
         },
         {
           "start": 2120,
@@ -386574,7 +388032,7 @@
       "original": "pk.java",
       "renamed": "pk.java",
       "inputSha256": "2e6164c2bf5eaef2929d673d09686db40474e884232e5268251d8ce1d1c4c8b0",
-      "outputSha256": "9f9d8bf7b821f0fc3958fb1d6b2a4982ca6684ff69a3d549f52db353a6891564",
+      "outputSha256": "c1c63ff1c291b42f21d7bc25b3f3c22cab256d87272eb8be451d7c97b5d18098",
       "edits": [
         {
           "start": 165,
@@ -386619,6 +388077,13 @@
           "renamed": "Rasterizer"
         },
         {
+          "start": 2501,
+          "end": 2502,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 3955,
           "end": 3957,
           "symbol": "C:rb",
@@ -386652,7 +388117,7 @@
       "original": "pl.java",
       "renamed": "pl.java",
       "inputSha256": "6b9317f68e4eb64c771f7fef7c2b9f306cf82aa53da7109db76eb586304ce14d",
-      "outputSha256": "ff93ba73f027d5643e813950aa0fd8d4de6420e8b805478e86b697e7b2ce6314",
+      "outputSha256": "af4c07251023ae4a52c1df66f559c1cf43b7c49326da6199bc22deb353037caa",
       "edits": [
         {
           "start": 244,
@@ -386998,6 +388463,27 @@
           "renamed": "Rasterizer"
         },
         {
+          "start": 26911,
+          "end": 26912,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 27293,
+          "end": 27294,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 27772,
+          "end": 27773,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 29152,
           "end": 29154,
           "symbol": "C:bi",
@@ -387010,6 +388496,13 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Rasterizer"
+        },
+        {
+          "start": 29472,
+          "end": 29473,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 29789,
@@ -388417,7 +389910,7 @@
       "original": "qf.java",
       "renamed": "qf.java",
       "inputSha256": "2bc39a2c479a7ee55c7532994ddf551496b1b94e78f0de04597d2ce874f609c9",
-      "outputSha256": "e4fe4499bd156d55c46fdd9671688d27a22fcc8f7f16b7d0802dd6f7294ca03f",
+      "outputSha256": "9e82225ed2f3d138db7f9e1b1f61293c2b267a25df29becc778efbba01f1792f",
       "edits": [
         {
           "start": 61,
@@ -388460,6 +389953,20 @@
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 784,
+          "end": 785,
+          "symbol": "M:sp.c()Lsp;",
+          "original": "c",
+          "renamed": "firstSubstream"
+        },
+        {
+          "start": 866,
+          "end": 867,
+          "symbol": "M:sp.d()Lsp;",
+          "original": "d",
+          "renamed": "nextSubstream"
         },
         {
           "start": 4763,
@@ -388569,6 +390076,20 @@
           "kind": "label"
         },
         {
+          "start": 9892,
+          "end": 9893,
+          "symbol": "M:sp.c()Lsp;",
+          "original": "c",
+          "renamed": "firstSubstream"
+        },
+        {
+          "start": 10183,
+          "end": 10184,
+          "symbol": "M:sp.d()Lsp;",
+          "original": "d",
+          "renamed": "nextSubstream"
+        },
+        {
           "start": 10384,
           "end": 10386,
           "symbol": "C:sp",
@@ -388671,16 +390192,30 @@
     },
     {
       "original": "qh.java",
-      "renamed": "qh.java",
+      "renamed": "Path.java",
       "inputSha256": "4dff9e4f6dac8e87a0440ed0c0762490591404535eb7c6bd6923a4b7a607eb5e",
-      "outputSha256": "fccac73370a5f765d2d35e006bb2ad43177d21e39fd394238018551f5b788b35",
+      "outputSha256": "d06b4c32b5cb2e9c5043f21620480f8a07329c123d6b7b8bd2531b0ac5bfdc77",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
         {
           "start": 61,
           "end": 63,
           "symbol": "C:vo",
           "original": "vo",
           "renamed": "IntrusiveDeque"
+        },
+        {
+          "start": 321,
+          "end": 323,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 436,
@@ -388723,6 +390258,13 @@
           "symbol": "M:sh.a(Ljava/lang/Throwable;Ljava/lang/String;)Laj;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 1700,
+          "end": 1702,
+          "symbol": "M:qh.<init>()V",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 2076,
@@ -389012,7 +390554,7 @@
       "original": "qk.java",
       "renamed": "qk.java",
       "inputSha256": "1ad78c3ddb0a50ed451d709f065b8cafd4d4d193eb24fd17015926da97f98d7e",
-      "outputSha256": "4f1090ec8fad608cf3eecdd8e1e4d779cbc9519556117c90c95cb21c1676362d",
+      "outputSha256": "d2241cb46f79d60a8f82392ac41856b03cdd7cd889736af95cb04a7d50c7118c",
       "edits": [
         {
           "start": 76,
@@ -389349,6 +390891,13 @@
           "symbol": "M:fb.f(I)I",
           "original": "f",
           "renamed": "getY"
+        },
+        {
+          "start": 10443,
+          "end": 10444,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 10458,
@@ -390446,7 +391995,7 @@
       "original": "r.java",
       "renamed": "r.java",
       "inputSha256": "2c8923036d431f2ff26285df260b949b55b4a7b02eb7884e9c495a3cff090195",
-      "outputSha256": "c897adc669920e850be93ada8e9dfbc037154b04516fef0b43baf6b73efbd31c",
+      "outputSha256": "7b7b97e7506d5f0b7dd1dba99ce385db9134253d039be5c1c1986d502264897a",
       "edits": [
         {
           "start": 103,
@@ -390482,6 +392031,20 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 1961,
+          "end": 1963,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 2134,
+          "end": 2136,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 2457,
@@ -391162,7 +392725,7 @@
       "original": "rb.java",
       "renamed": "Font.java",
       "inputSha256": "43a3b7d824144f2fcd834c2740ef29831ae53dcd536e001ea08bf7e9c8f4271b",
-      "outputSha256": "ec83babf0625f6ea241fc6091647865534da371ac73751f48428e5aa69c6bf33",
+      "outputSha256": "9401e1ceafc80ebbc9d72b10b2277f8759708c97d1d784ed3891f73ede7662ac",
       "edits": [
         {
           "start": 53,
@@ -391177,6 +392740,13 @@
           "symbol": "C:nb",
           "original": "nb",
           "renamed": "DualLinkNode"
+        },
+        {
+          "start": 1335,
+          "end": 1336,
+          "symbol": "M:rb.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
         },
         {
           "start": 4811,
@@ -391221,11 +392791,74 @@
           "renamed": "DualLinkDeque"
         },
         {
+          "start": 11453,
+          "end": 11454,
+          "symbol": "M:rb.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 11848,
+          "end": 11849,
+          "symbol": "M:rb.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 12227,
+          "end": 12228,
+          "symbol": "M:rb.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 12591,
+          "end": 12592,
+          "symbol": "M:rb.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 12938,
+          "end": 12939,
+          "symbol": "M:rb.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 13269,
+          "end": 13270,
+          "symbol": "M:rb.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 13584,
+          "end": 13585,
+          "symbol": "M:rb.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
+          "start": 13881,
+          "end": 13882,
+          "symbol": "M:rb.a(C)I",
+          "original": "a",
+          "renamed": "charWidth"
+        },
+        {
           "start": 19505,
           "end": 19507,
           "symbol": "C:rb",
           "original": "rb",
           "renamed": "Font"
+        },
+        {
+          "start": 19983,
+          "end": 19984,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 25328,
@@ -391235,11 +392868,25 @@
           "renamed": "DualLinkDeque"
         },
         {
+          "start": 26300,
+          "end": 26301,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 29067,
           "end": 29069,
           "symbol": "C:ra",
           "original": "ra",
           "renamed": "DualLinkDeque"
+        },
+        {
+          "start": 30842,
+          "end": 30843,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
         },
         {
           "start": 31067,
@@ -391644,7 +393291,7 @@
       "original": "rj.java",
       "renamed": "rj.java",
       "inputSha256": "cfaa42eabd61dcd481ba3e02bb1f02e586a2f7dc2d9826769e124fd1ef1c3de7",
-      "outputSha256": "c7bcbcf37a9869465f8fc88f02e9e7f0b8ea72a3f7736752cbd0263995f16a22",
+      "outputSha256": "483512fe3edb2b65e4b5bcfffcf2c67e6809badaa892d92d7ea6947b8458b5b9",
       "edits": [
         {
           "start": 61,
@@ -391659,6 +393306,13 @@
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 912,
+          "end": 913,
+          "symbol": "M:rj.c()Lsp;",
+          "original": "c",
+          "renamed": "firstSubstream"
         },
         {
           "start": 934,
@@ -391708,6 +393362,13 @@
           "symbol": "M:vo.a(ILle;)V",
           "original": "a",
           "renamed": "addFirst"
+        },
+        {
+          "start": 8320,
+          "end": 8321,
+          "symbol": "M:fi.b(Lsp;)V",
+          "original": "b",
+          "renamed": "addSubstream"
         },
         {
           "start": 8531,
@@ -391764,6 +393425,13 @@
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 13662,
+          "end": 13663,
+          "symbol": "M:rj.d()Lsp;",
+          "original": "d",
+          "renamed": "nextSubstream"
         },
         {
           "start": 14844,
@@ -391925,6 +393593,13 @@
           "symbol": "M:fn.a(I)V",
           "original": "a",
           "renamed": "skip"
+        },
+        {
+          "start": 39045,
+          "end": 39046,
+          "symbol": "M:fi.b(Lsp;)V",
+          "original": "b",
+          "renamed": "addSubstream"
         },
         {
           "start": 39164,
@@ -392721,7 +394396,7 @@
       "original": "s.java",
       "renamed": "s.java",
       "inputSha256": "906818ce44c09afb953958ae60532e30fb600c8f898154a971f8e6df37746a36",
-      "outputSha256": "a77fc5afa569353e2bff9f8464882dadd1fe97e1f9b18c74fbc902536a6f5bf3",
+      "outputSha256": "7b5bec95739df60f8826f80702f113b8613b3da5a09603642dab04bff3e21a2d",
       "edits": [
         {
           "start": 79,
@@ -392794,6 +394469,13 @@
           "renamed": "Zombie"
         },
         {
+          "start": 3669,
+          "end": 3671,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
           "start": 4030,
           "end": 4037,
           "symbol": "F:wk.field_c:I",
@@ -392827,6 +394509,13 @@
           "symbol": "M:hi.a(IBIII)Lkd;",
           "original": "a",
           "renamed": "spawnZombie"
+        },
+        {
+          "start": 5459,
+          "end": 5461,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 5492,
@@ -392932,8 +394621,15 @@
       "original": "sa.java",
       "renamed": "sa.java",
       "inputSha256": "eab67f3e38cca326d911bb5fa487a18a5b16f705ebf1203f029aef844f4ea1da",
-      "outputSha256": "d427701b88b9c755a987e84f89c8fb34dcd0be18a3f0855164ebd15847dec07c",
+      "outputSha256": "0ca08bae6d50f262e270fde4091784598ad8ddf8bf43c99cbcbcbce9ac1954e0",
       "edits": [
+        {
+          "start": 497,
+          "end": 498,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
         {
           "start": 622,
           "end": 624,
@@ -392947,6 +394643,13 @@
           "symbol": "M:bi.b(IIII)V",
           "original": "b",
           "renamed": "drawHorizontalLine"
+        },
+        {
+          "start": 924,
+          "end": 925,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 1071,
@@ -393646,7 +395349,7 @@
       "original": "si.java",
       "renamed": "si.java",
       "inputSha256": "31e7e413d8d2943b1de55f2cbde836f1a3b102b8735aae62a5a58c074e705de4",
-      "outputSha256": "6e3102c9a9af9b3dd08a7c1ac54c0e716a588326bf713d9403bdbbd64478b03b",
+      "outputSha256": "f41aca5c357436f7c9d96246080d0b4e1f45b109d70d7968d485b8014b434051",
       "edits": [
         {
           "start": 77,
@@ -393733,6 +395436,27 @@
           "renamed": "Js5Archive"
         },
         {
+          "start": 5641,
+          "end": 5643,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 5659,
+          "end": 5661,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 5677,
+          "end": 5679,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
           "start": 5756,
           "end": 5757,
           "symbol": "M:fb.a(Z)I",
@@ -393794,6 +395518,13 @@
           "symbol": "F:hi.field_H:Lej;",
           "original": "field_H",
           "renamed": "navigation"
+        },
+        {
+          "start": 6383,
+          "end": 6384,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
         },
         {
           "start": 6396,
@@ -393871,6 +395602,13 @@
           "symbol": "F:hi.field_H:Lej;",
           "original": "field_H",
           "renamed": "navigation"
+        },
+        {
+          "start": 7647,
+          "end": 7648,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
         },
         {
           "start": 7660,
@@ -393962,6 +395700,13 @@
           "symbol": "F:hi.field_H:Lej;",
           "original": "field_H",
           "renamed": "navigation"
+        },
+        {
+          "start": 8988,
+          "end": 8989,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
         },
         {
           "start": 9001,
@@ -394160,11 +395905,25 @@
           "renamed": "Rasterizer"
         },
         {
+          "start": 12338,
+          "end": 12339,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 12362,
           "end": 12369,
           "symbol": "F:g.field_F:I",
           "original": "field_F",
           "renamed": "state"
+        },
+        {
+          "start": 12430,
+          "end": 12431,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 12463,
@@ -394441,7 +396200,7 @@
       "original": "sn.java",
       "renamed": "sn.java",
       "inputSha256": "edcb05fef0c068795d0f8794c14dab47558681e07659fe86f948955bcac32b14",
-      "outputSha256": "7985a572d1c222ac4d95bd6922a5bed9f79181a0068880f4a2fb2e1724d4cbac",
+      "outputSha256": "0e90de688b3573634a506a55a5d8c1e9427dcc5e60428f42a5e419f5ae0600ea",
       "edits": [
         {
           "start": 199,
@@ -394519,6 +396278,13 @@
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "Sprite"
+        },
+        {
+          "start": 2582,
+          "end": 2583,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 2656,
@@ -395759,7 +397525,7 @@
       "original": "sp.java",
       "renamed": "PcmStream.java",
       "inputSha256": "8b6bf114243339b5b37b3cd7c5c0bb3024df35f073b17b11db8997f1224104cb",
-      "outputSha256": "ea730a910c24665a56abb8f91cda28a7dff90a9b6f46da31f7e67ae97803e02d",
+      "outputSha256": "cb2039d2dedaba0e81f30e9777946527ee09658de70adbf49ec78783a3c36a2d",
       "edits": [
         {
           "start": 53,
@@ -395846,11 +397612,25 @@
           "renamed": "PcmStream"
         },
         {
+          "start": 510,
+          "end": 511,
+          "symbol": "M:sp.c()Lsp;",
+          "original": "c",
+          "renamed": "firstSubstream"
+        },
+        {
           "start": 529,
           "end": 531,
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 532,
+          "end": 533,
+          "symbol": "M:sp.d()Lsp;",
+          "original": "d",
+          "renamed": "nextSubstream"
         },
         {
           "start": 552,
@@ -397203,7 +398983,7 @@
       "original": "ti.java",
       "renamed": "ti.java",
       "inputSha256": "bc1aec54ad8b684209eb8c4d03e576822aae7254385752b103a27c24a0d11542",
-      "outputSha256": "e9a02459dd2dffdb0edd7cfe0d730c0136f5dca5779503d15b67f40889cc97ab",
+      "outputSha256": "b475054b51f1d00a728bde85c1217ff2e70b8ce7db4c56e18d65f1e390aac71a",
       "edits": [
         {
           "start": 66,
@@ -397423,6 +399203,13 @@
           "renamed": "SpriteState"
         },
         {
+          "start": 11529,
+          "end": 11531,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
           "start": 11632,
           "end": 11634,
           "symbol": "C:wm",
@@ -397442,6 +399229,20 @@
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 12454,
+          "end": 12456,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 12566,
+          "end": 12568,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 13134,
@@ -398552,7 +400353,7 @@
       "original": "tp.java",
       "renamed": "tp.java",
       "inputSha256": "39d69c6c94005ec8a96e25996dd9822084327981d4b27d84fd0bf576c9d1eac0",
-      "outputSha256": "8c0510d607ef1975ebfce264be8a7041feec80aad4a2293803750b79c85557c3",
+      "outputSha256": "23c4c673a040f4c10870c1c8bbd1d5afa27596ad0e4aa76d4c94235a47ba2785",
       "edits": [
         {
           "start": 61,
@@ -398672,6 +400473,13 @@
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 10478,
+          "end": 10479,
+          "symbol": "M:tp.c()Lsp;",
+          "original": "c",
+          "renamed": "firstSubstream"
         },
         {
           "start": 10634,
@@ -398910,6 +400718,13 @@
           "symbol": "C:sp",
           "original": "sp",
           "renamed": "PcmStream"
+        },
+        {
+          "start": 13625,
+          "end": 13626,
+          "symbol": "M:tp.d()Lsp;",
+          "original": "d",
+          "renamed": "nextSubstream"
         },
         {
           "start": 13850,
@@ -399248,7 +401063,7 @@
       "original": "ub.java",
       "renamed": "ub.java",
       "inputSha256": "e27c5fc08b90fef63604a83db189f6c0e5004bef623fcb8767bb08a71b7d2d1c",
-      "outputSha256": "5bb84d07a127ed2e4e2a2ddaac4c0691c61ecde8759dab8e71d423f7a9e1763d",
+      "outputSha256": "e7d567120cb454697b1792884804c0bd0f71554ad334244bb89051c3e3df58a5",
       "edits": [
         {
           "start": 1430,
@@ -399314,6 +401129,13 @@
           "renamed": "clear"
         },
         {
+          "start": 3525,
+          "end": 3526,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
           "start": 3547,
           "end": 3549,
           "symbol": "C:bi",
@@ -399347,6 +401169,13 @@
           "symbol": "M:bi.d()V",
           "original": "d",
           "renamed": "clear"
+        },
+        {
+          "start": 3679,
+          "end": 3680,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
         },
         {
           "start": 3701,
@@ -399496,6 +401325,34 @@
           "renamed": "Js5Archive"
         },
         {
+          "start": 4837,
+          "end": 4838,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 4947,
+          "end": 4948,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 5031,
+          "end": 5032,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 5150,
+          "end": 5151,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 5253,
           "end": 5254,
           "symbol": "M:vn.a()V",
@@ -399536,6 +401393,13 @@
           "symbol": "M:bi.d()V",
           "original": "d",
           "renamed": "clear"
+        },
+        {
+          "start": 5569,
+          "end": 5570,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
         },
         {
           "start": 5605,
@@ -399741,6 +401605,13 @@
           "renamed": "clear"
         },
         {
+          "start": 11534,
+          "end": 11535,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 11542,
           "end": 11544,
           "symbol": "C:bi",
@@ -399760,6 +401631,13 @@
           "symbol": "C:dj",
           "original": "dj",
           "renamed": "Js5Archive"
+        },
+        {
+          "start": 11708,
+          "end": 11709,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 11716,
@@ -399809,6 +401687,13 @@
           "symbol": "M:bi.d()V",
           "original": "d",
           "renamed": "clear"
+        },
+        {
+          "start": 12102,
+          "end": 12103,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
         },
         {
           "start": 12141,
@@ -399887,7 +401772,7 @@
       "original": "ud.java",
       "renamed": "ud.java",
       "inputSha256": "79c90ef0870996862128d129c9ddc71196404affe7f07befc8197276ead574a2",
-      "outputSha256": "5689d506ab4322de8f60605249d01a03b9b4692eabb6ea0169306dc036b8662e",
+      "outputSha256": "313c885fcbcc22c61338bed18fe8a9f2212ee7db24bfc970dbee3c4cf889b144",
       "edits": [
         {
           "start": 1235,
@@ -399930,6 +401815,13 @@
           "symbol": "M:bi.f(IIII)V",
           "original": "f",
           "renamed": "setClip"
+        },
+        {
+          "start": 2510,
+          "end": 2511,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 2805,
@@ -400100,7 +401992,7 @@
       "original": "uh.java",
       "renamed": "uh.java",
       "inputSha256": "5ffea239942140a8ddb48184fbdf5ce72e749e6476f9d9937599fbcb66c90d4e",
-      "outputSha256": "c4e3a3625a727ec85d9a5b1583d39354242122486050a4e87cdfb10ae0bfdf8c",
+      "outputSha256": "383b456fce113ec49a0bf8e99315ad36c8f67c697b90816ba4bf5d1eae4000ad",
       "edits": [
         {
           "start": 587,
@@ -400143,6 +402035,20 @@
           "symbol": "F:hi.field_H:Lej;",
           "original": "field_H",
           "renamed": "navigation"
+        },
+        {
+          "start": 1188,
+          "end": 1189,
+          "symbol": "M:wk.a(IZ)I",
+          "original": "a",
+          "renamed": "screenToWorldX"
+        },
+        {
+          "start": 1278,
+          "end": 1279,
+          "symbol": "M:wk.b(IZ)I",
+          "original": "b",
+          "renamed": "screenToWorldY"
         },
         {
           "start": 1858,
@@ -400255,6 +402161,13 @@
           "symbol": "C:g",
           "original": "g",
           "renamed": "Mover"
+        },
+        {
+          "start": 5886,
+          "end": 5887,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 6626,
@@ -400559,7 +402472,7 @@
       "original": "ul.java",
       "renamed": "ul.java",
       "inputSha256": "5086601cf38a041f5322dfd4b8f3ec03553d286ac9a1f59ceeb9ed730e35bf45",
-      "outputSha256": "ef6084c0f68d66e78eaecbaaaae160e61ad025b4c3cfc370df9480317b364d3e",
+      "outputSha256": "d424a670db8793a7e3dc6b82ce11f32209a7154ad225a620f4ae1c311218d20a",
       "edits": [
         {
           "start": 144,
@@ -400623,6 +402536,13 @@
           "symbol": "M:vn.a()V",
           "original": "a",
           "renamed": "setAsRenderTarget"
+        },
+        {
+          "start": 1436,
+          "end": 1437,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 2001,
@@ -401604,7 +403524,7 @@
       "original": "vf.java",
       "renamed": "vf.java",
       "inputSha256": "c1fc6e051a0b5146a0c23b476dd1de8e73383b67d456a7605e6142e93652ca14",
-      "outputSha256": "4157821f489561818a24eea3aea32969219f8c3f142a8c02b974bb9c22819f82",
+      "outputSha256": "b6d4a01517a706cf2d0b61b4e1addf569a2f5734affaa5be608170c73c62bb90",
       "edits": [
         {
           "start": 235,
@@ -401745,6 +403665,27 @@
           "symbol": "C:ga",
           "original": "ga",
           "renamed": "UiWidget"
+        },
+        {
+          "start": 6088,
+          "end": 6089,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 6336,
+          "end": 6337,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 6621,
+          "end": 6622,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 7635,
@@ -402721,7 +404662,7 @@
       "original": "vj.java",
       "renamed": "vj.java",
       "inputSha256": "e85fce92b0d46134be04631ea13e9309cd9361401272cd3dc64ab4df8f8989c7",
-      "outputSha256": "1789cd49fcb8197e5bbc1b76e8730d5082c7c887ce57af610e290e05f743028a",
+      "outputSha256": "e0b56f4be89c1613db6a2593b565c5bd812c75361714113c8b81683d2f54fb6c",
       "edits": [
         {
           "start": 257,
@@ -402815,11 +404756,88 @@
           "renamed": "clear"
         },
         {
+          "start": 9386,
+          "end": 9387,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
+          "start": 9555,
+          "end": 9556,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 9642,
+          "end": 9643,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 9730,
+          "end": 9731,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 10241,
+          "end": 10242,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 10349,
+          "end": 10350,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 10465,
+          "end": 10466,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 10829,
+          "end": 10830,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 10930,
+          "end": 10931,
+          "symbol": "M:rb.b(Ljava/lang/String;IIII)V",
+          "original": "b",
+          "renamed": "drawStringRightAligned"
+        },
+        {
+          "start": 11256,
+          "end": 11257,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 11358,
           "end": 11360,
           "symbol": "C:vn",
           "original": "vn",
           "renamed": "Sprite"
+        },
+        {
+          "start": 11562,
+          "end": 11563,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
         },
         {
           "start": 12004,
@@ -408166,7 +410184,7 @@
       "original": "w.java",
       "renamed": "w.java",
       "inputSha256": "b49d131767b715978635521fe55233238ef2277b924ef8a5add936d087a73152",
-      "outputSha256": "2589164d4a4f02a14709567724ea6a86d54fff152e5d8a91c3869cbae7b79026",
+      "outputSha256": "0fdac7c56b5e7c4ee4df6c3924be82655295227e4bbcb794a11737a97453ec3b",
       "edits": [
         {
           "start": 258,
@@ -408253,6 +410271,13 @@
           "renamed": "setAsRenderTarget"
         },
         {
+          "start": 1000,
+          "end": 1001,
+          "symbol": "M:rb.a(Ljava/lang/String;IIII)V",
+          "original": "a",
+          "renamed": "drawStringCentered"
+        },
+        {
           "start": 1156,
           "end": 1158,
           "symbol": "C:tg",
@@ -408307,7 +410332,7 @@
       "original": "wb.java",
       "renamed": "FunOrbApplet.java",
       "inputSha256": "6847ca6f04b2dcd8ad92047fc477793e1cab8b191336167e641d6f9f922a49fd",
-      "outputSha256": "5113a7a3c5040816566587f0592c0b53d3fefd4051a7a932227db77018b63dc5",
+      "outputSha256": "524622088774d883865ee7dacb044aa602198c2e37ab9c65768627a9d363062f",
       "edits": [
         {
           "start": 53,
@@ -408541,6 +410566,20 @@
           "renamed": "affiliateId"
         },
         {
+          "start": 6195,
+          "end": 6197,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 6383,
+          "end": 6385,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
           "start": 7079,
           "end": 7081,
           "symbol": "C:mj",
@@ -408574,6 +410613,69 @@
           "symbol": "M:uc.a(I)I",
           "original": "a",
           "renamed": "takeRotation"
+        },
+        {
+          "start": 11199,
+          "end": 11201,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 11291,
+          "end": 11293,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 11784,
+          "end": 11786,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 12058,
+          "end": 12060,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 12165,
+          "end": 12167,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 12278,
+          "end": 12280,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 12397,
+          "end": 12399,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 12473,
+          "end": 12475,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 13308,
+          "end": 13310,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 13824,
@@ -408707,6 +410809,13 @@
           "symbol": "F:wb.field_v:I",
           "original": "field_v",
           "renamed": "affiliateId"
+        },
+        {
+          "start": 19906,
+          "end": 19908,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
         },
         {
           "start": 20416,
@@ -408868,7 +410977,7 @@
       "original": "wc.java",
       "renamed": "wc.java",
       "inputSha256": "327b2f3bac1efad8b23f9f5f00ccf3b6b19235021ddd0a2ffb13d80c7e478256",
-      "outputSha256": "c80c41dacb03ce0d601a743a5b3274fec0e61eae913d715fce2756e5927bc0b1",
+      "outputSha256": "56a41b2ba0b501f6d1228c48e6b6b1641cd7369ac334e62eef705c1395be9aff",
       "edits": [
         {
           "start": 71,
@@ -409058,6 +411167,27 @@
           "symbol": "C:bi",
           "original": "bi",
           "renamed": "Rasterizer"
+        },
+        {
+          "start": 2925,
+          "end": 2926,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 3012,
+          "end": 3013,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
+          "start": 3104,
+          "end": 3105,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 3128,
@@ -409297,7 +411427,7 @@
       "original": "we.java",
       "renamed": "we.java",
       "inputSha256": "2080c4e15d530ef29d1eaccddb7b45e68cf0715a3af6d6e27532d7141a7c5010",
-      "outputSha256": "66a3ab8573e4df72f12b42972a5d050e6a914966536ec38d8f1428f1b30d5854",
+      "outputSha256": "f3fdfd0f57d131cdd7cf100d41214a89f6f374de5397e77a863c2d61d402537f",
       "edits": [
         {
           "start": 208,
@@ -409468,6 +411598,13 @@
           "renamed": "Rasterizer"
         },
         {
+          "start": 1770,
+          "end": 1771,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
+        },
+        {
           "start": 1803,
           "end": 1810,
           "symbol": "F:g.field_F:I",
@@ -409536,6 +411673,13 @@
           "symbol": "F:g.field_F:I",
           "original": "field_F",
           "renamed": "state"
+        },
+        {
+          "start": 2165,
+          "end": 2166,
+          "symbol": "M:rb.c(Ljava/lang/String;IIII)V",
+          "original": "c",
+          "renamed": "drawString"
         },
         {
           "start": 2653,
@@ -409776,6 +411920,27 @@
           "renamed": "Zombie"
         },
         {
+          "start": 8463,
+          "end": 8465,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 8480,
+          "end": 8482,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
+          "start": 8498,
+          "end": 8500,
+          "symbol": "C:qh",
+          "original": "qh",
+          "renamed": "Path"
+        },
+        {
           "start": 8577,
           "end": 8578,
           "symbol": "M:fb.a(Z)I",
@@ -409837,6 +412002,13 @@
           "symbol": "F:hi.field_H:Lej;",
           "original": "field_H",
           "renamed": "navigation"
+        },
+        {
+          "start": 9272,
+          "end": 9273,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
         },
         {
           "start": 9285,
@@ -409923,6 +412095,13 @@
           "renamed": "navigation"
         },
         {
+          "start": 10568,
+          "end": 10569,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
+        },
+        {
           "start": 10581,
           "end": 10582,
           "symbol": "M:fb.a(Z)I",
@@ -409991,6 +412170,13 @@
           "symbol": "F:hi.field_H:Lej;",
           "original": "field_H",
           "renamed": "navigation"
+        },
+        {
+          "start": 11478,
+          "end": 11479,
+          "symbol": "M:ej.a(ZIIII)Lqh;",
+          "original": "a",
+          "renamed": "findPath"
         },
         {
           "start": 11491,
@@ -411809,7 +413995,7 @@
       "original": "wk.java",
       "renamed": "Camera.java",
       "inputSha256": "128aa0da450a278e1d802497d1d8d478f22a4fb2c607f8cdeadeb4d126f398fd",
-      "outputSha256": "e9f3ae38325afd79b1f78375172517a6acfff9b4530374b0a1d0a64946aabc70",
+      "outputSha256": "fba6ad838f1213580dd8bc3f14f096ec986e4b29acffce8f69175c64f9d332b5",
       "edits": [
         {
           "start": 50,
@@ -411854,11 +414040,39 @@
           "renamed": "x"
         },
         {
+          "start": 1107,
+          "end": 1108,
+          "symbol": "M:wk.a(IZ)I",
+          "original": "a",
+          "renamed": "screenToWorldX"
+        },
+        {
+          "start": 1913,
+          "end": 1914,
+          "symbol": "M:wk.a(IZ)I",
+          "original": "a",
+          "renamed": "screenToWorldX"
+        },
+        {
+          "start": 1982,
+          "end": 1983,
+          "symbol": "M:wk.b(IZ)I",
+          "original": "b",
+          "renamed": "screenToWorldY"
+        },
+        {
           "start": 2050,
           "end": 2057,
           "symbol": "F:wk.field_u:I",
           "original": "field_u",
           "renamed": "x"
+        },
+        {
+          "start": 2082,
+          "end": 2083,
+          "symbol": "M:wk.c(I)V",
+          "original": "c",
+          "renamed": "resetPosition"
         },
         {
           "start": 2170,
@@ -411873,6 +414087,13 @@
           "symbol": "F:wk.field_c:I",
           "original": "field_c",
           "renamed": "y"
+        },
+        {
+          "start": 2299,
+          "end": 2300,
+          "symbol": "M:wk.b(IZ)I",
+          "original": "b",
+          "renamed": "screenToWorldY"
         },
         {
           "start": 2407,
@@ -411987,6 +414208,13 @@
           "renamed": "y"
         },
         {
+          "start": 9086,
+          "end": 9087,
+          "symbol": "M:wk.b(I)V",
+          "original": "b",
+          "renamed": "clampToBounds"
+        },
+        {
           "start": 9173,
           "end": 9180,
           "symbol": "F:wk.field_c:I",
@@ -412013,6 +414241,20 @@
           "symbol": "F:wk.field_u:I",
           "original": "field_u",
           "renamed": "x"
+        },
+        {
+          "start": 9312,
+          "end": 9313,
+          "symbol": "M:wk.b(I)V",
+          "original": "b",
+          "renamed": "clampToBounds"
+        },
+        {
+          "start": 9353,
+          "end": 9354,
+          "symbol": "M:wk.b(I)V",
+          "original": "b",
+          "renamed": "clampToBounds"
         },
         {
           "start": 9386,
@@ -412090,7 +414332,7 @@
       "original": "wm.java",
       "renamed": "IterableNodeHashTable.java",
       "inputSha256": "a47528ef5faf3c36fa8154150ef4d1c7d9507ab39a237ce82d0f29bf5662a143",
-      "outputSha256": "082409f40aa732da9b0d5b18f1998152753034610a13e40f17c28c29441a1027",
+      "outputSha256": "1c00b03de7e6f6b8fc9d45618dda7b8ea656b2581c3fdd95ccc310540b133a72",
       "edits": [
         {
           "start": 71,
@@ -412107,6 +414349,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 105,
+          "end": 112,
+          "symbol": "F:wm.field_c:[Lle;",
+          "original": "field_c",
+          "renamed": "buckets"
+        },
+        {
           "start": 126,
           "end": 128,
           "symbol": "C:le",
@@ -412114,11 +414363,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 194,
+          "end": 201,
+          "symbol": "F:wm.field_f:I",
+          "original": "field_f",
+          "renamed": "bucketCount"
+        },
+        {
           "start": 238,
           "end": 240,
           "symbol": "C:le",
           "original": "le",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 241,
+          "end": 242,
+          "symbol": "M:wm.a(ZJ)Lle;",
+          "original": "a",
+          "renamed": "get"
         },
         {
           "start": 282,
@@ -412133,6 +414396,20 @@
           "symbol": "C:le",
           "original": "le",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 360,
+          "end": 367,
+          "symbol": "F:wm.field_c:[Lle;",
+          "original": "field_c",
+          "renamed": "buckets"
+        },
+        {
+          "start": 391,
+          "end": 398,
+          "symbol": "F:wm.field_f:I",
+          "original": "field_f",
+          "renamed": "bucketCount"
         },
         {
           "start": 440,
@@ -412205,6 +414482,13 @@
           "renamed": "NodeHashTableIterator"
         },
         {
+          "start": 2818,
+          "end": 2819,
+          "symbol": "M:wm.a(JZLle;)V",
+          "original": "a",
+          "renamed": "put"
+        },
+        {
           "start": 2849,
           "end": 2851,
           "symbol": "C:le",
@@ -412231,6 +414515,20 @@
           "symbol": "M:le.b(I)V",
           "original": "b",
           "renamed": "unlink"
+        },
+        {
+          "start": 3004,
+          "end": 3011,
+          "symbol": "F:wm.field_c:[Lle;",
+          "original": "field_c",
+          "renamed": "buckets"
+        },
+        {
+          "start": 3030,
+          "end": 3037,
+          "symbol": "F:wm.field_f:I",
+          "original": "field_f",
+          "renamed": "bucketCount"
         },
         {
           "start": 3072,
@@ -412700,10 +414998,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/zombiedawn"
     },
-    "rulesSha256": "0ebedbf11dfca9a3bafe93b5d23537f98e705644c699bb1502a34dd72f3b6689",
+    "rulesSha256": "e90462c2b2c9eabb2eb0eaf54796d8508f148670222571543d9a61b56aca63a0",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "24c601f41499c4927359bf70b61eea85671ac110b52dcf8a31246a7e10338ffc",
-    "outputTreeSha256": "b340a4aff21596da9847082e1877ed2dac9f3b82dd6662accd5564980668b2c0",
+    "outputTreeSha256": "dc45d1e02872d639b2d07c15a284aba945950d0e6c7bd18d43c7ac39a2a542f1",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

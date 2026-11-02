@@ -31,7 +31,7 @@ abstract class w {
           for (var2_int = 0; var2_int < mk.field_a.length; var2_int++) {
             mk.field_a[var2_int] = new Sprite(200, 25);
             mk.field_a[var2_int].setAsRenderTarget();
-            bj.field_q.a(qp.a(var2_int, 90), 100, 17, 16777215, -1);
+            bj.field_q.drawStringCentered(qp.a(var2_int, 90), 100, 17, 16777215, -1);
             qp.field_c[var2_int] = so.a(mk.field_a[var2_int]);
           }
           al.field_f = ul.a(false, GameKeyHandler.field_c);

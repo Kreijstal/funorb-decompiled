@@ -71,7 +71,7 @@ final class sn {
         pa.a(-21189);
         Sprite var6 = new Sprite(640, 90);
         ki.a((byte) -113, var6);
-        b.field_j.a(f.field_j[param0], 320, 65, 13631488, 1);
+        b.field_j.drawStringCentered(f.field_j[param0], 320, 65, 13631488, 1);
         pa.a(-21189);
         Sprite var7 = new Sprite(640, 90);
         ki.a((byte) -123, var7);

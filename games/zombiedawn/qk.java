@@ -346,7 +346,7 @@ class qk extends Human {
           if (this.field_Ab > 100) {
             var3 = "oo";
           }
-          bj.field_q.c(var3, param0.worldToScreenX(this.getX(true), (byte) -128), -48 + param0.worldToScreenY(this.getY(param1 ^ 237235572), 0), 16777215, 0);
+          bj.field_q.drawString(var3, param0.worldToScreenX(this.getX(true), (byte) -128), -48 + param0.worldToScreenY(this.getY(param1 ^ 237235572), 0), 16777215, 0);
           if (null != this.field_yb) {
             Rasterizer.e(param0.worldToScreenX(this.getX(true), (byte) -93), param0.worldToScreenY(this.getY(237239984), 0), param0.worldToScreenX(this.field_yb.getX(true), (byte) -81), param0.worldToScreenY(this.field_yb.getY(param1 + 237234924), 0), 65280);
           }

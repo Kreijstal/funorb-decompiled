@@ -88,9 +88,9 @@ final class fc extends qk {
             Rasterizer.d(var3_int + 12, 24 + var4, 260, 16711680);
             Rasterizer.e(var3_int, var4, 260 + var3_int, 260 + var4, 16711680);
             Rasterizer.e(var3_int, var4, -260 + var3_int, 260 + var4, 16711680);
-            bj.field_q.c(Integer.toString(var5), var3_int, var4, 16777215, 0);
-            bj.field_q.c(Integer.toString(this.field_N), 20 + var3_int, var4, 16777215, 0);
-            bj.field_q.c(Integer.toString(this.state), var3_int, -20 + var4, 16777215, 0);
+            bj.field_q.drawString(Integer.toString(var5), var3_int, var4, 16777215, 0);
+            bj.field_q.drawString(Integer.toString(this.field_N), 20 + var3_int, var4, 16777215, 0);
+            bj.field_q.drawString(Integer.toString(this.state), var3_int, -20 + var4, 16777215, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

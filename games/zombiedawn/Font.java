@@ -44,7 +44,7 @@ abstract class Font extends DualLinkNode {
         field_y = 0;
     }
 
-    final int a(char param0) {
+    final int charWidth(char param0) {
         return this.field_r[tb.a(param0, -8225) & 255];
     }
 
@@ -312,7 +312,7 @@ abstract class Font extends DualLinkNode {
                                   }
                                 }
                               } else {
-                                var4 = var4 + this.a('®');
+                                var4 = var4 + this.charWidth('®');
                                 if (this.field_z != null &&
                                   var10 != 0) {
                                   var4 = var4 + this.field_z[(var10 << 8) + 174];
@@ -320,7 +320,7 @@ abstract class Font extends DualLinkNode {
                                 var10 = 174;
                               }
                             } else {
-                              var4 = var4 + this.a('©');
+                              var4 = var4 + this.charWidth('©');
                               if (this.field_z != null &&
                                 var10 != 0) {
                                 var4 = var4 + this.field_z[(var10 << 8) + 169];
@@ -328,7 +328,7 @@ abstract class Font extends DualLinkNode {
                               var10 = 169;
                             }
                           } else {
-                            var4 = var4 + this.a('€');
+                            var4 = var4 + this.charWidth('€');
                             if (this.field_z != null &&
                               var10 != 0) {
                               var4 = var4 + this.field_z[(var10 << 8) + 128];
@@ -336,7 +336,7 @@ abstract class Font extends DualLinkNode {
                             var10 = 8364;
                           }
                         } else {
-                          var4 = var4 + this.a('×');
+                          var4 = var4 + this.charWidth('×');
                           if (this.field_z != null &&
                             var10 != 0) {
                             var4 = var4 + this.field_z[(var10 << 8) + 215];
@@ -344,7 +344,7 @@ abstract class Font extends DualLinkNode {
                           var10 = 215;
                         }
                       } else {
-                        var4 = var4 + this.a('­');
+                        var4 = var4 + this.charWidth('­');
                         if (this.field_z != null &&
                           var10 != 0) {
                           var4 = var4 + this.field_z[(var10 << 8) + 173];
@@ -352,7 +352,7 @@ abstract class Font extends DualLinkNode {
                         var10 = 173;
                       }
                     } else {
-                      var4 = var4 + this.a(' ');
+                      var4 = var4 + this.charWidth(' ');
                       if (this.field_z != null &&
                         var10 != 0) {
                         var4 = var4 + this.field_z[(var10 << 8) + 160];
@@ -360,7 +360,7 @@ abstract class Font extends DualLinkNode {
                       var10 = 160;
                     }
                   } else {
-                    var4 = var4 + this.a('>');
+                    var4 = var4 + this.charWidth('>');
                     if (this.field_z != null &&
                       var10 != 0) {
                       var4 = var4 + this.field_z[(var10 << 8) + 62];
@@ -368,7 +368,7 @@ abstract class Font extends DualLinkNode {
                     var10 = 62;
                   }
                 } else {
-                  var4 = var4 + this.a('<');
+                  var4 = var4 + this.charWidth('<');
                   if (this.field_z != null &&
                     var10 != 0) {
                     var4 = var4 + this.field_z[(var10 << 8) + 60];
@@ -549,7 +549,7 @@ abstract class Font extends DualLinkNode {
         this.a(param0, param1 - this.b(param0) / 2, param2);
     }
 
-    final void a(String param0, int param1, int param2, int param3, int param4) {
+    final void drawStringCentered(String param0, int param1, int param2, int param3, int param4) {
         if (param0 == null) {
           return;
         }
@@ -717,7 +717,7 @@ abstract class Font extends DualLinkNode {
         field_N = null;
     }
 
-    final void c(String param0, int param1, int param2, int param3, int param4) {
+    final void drawString(String param0, int param1, int param2, int param3, int param4) {
         if (param0 == null) {
           return;
         }
@@ -858,7 +858,7 @@ abstract class Font extends DualLinkNode {
         return var4;
     }
 
-    final void b(String param0, int param1, int param2, int param3, int param4) {
+    final void drawStringRightAligned(String param0, int param1, int param2, int param3, int param4) {
         if (param0 == null) {
           return;
         }

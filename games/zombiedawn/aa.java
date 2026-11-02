@@ -88,7 +88,7 @@ final class aa {
           }
           var2 = new hn(param1, param1);
           fj.field_i.addFirst(0, var2);
-          t.field_i.b(param1);
+          t.field_i.addSubstream(param1);
           stackIn_3_0 = var2;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

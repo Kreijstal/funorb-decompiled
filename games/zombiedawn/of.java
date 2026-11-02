@@ -207,7 +207,7 @@ final class of {
           }
           Rasterizer.drawRectOutline(var7, var8, 6 + var5_int, 6 + var6, this.field_j);
           Rasterizer.fillRect(var7 + 1, var8 + 1, var5_int + 4, var6 + 4, this.field_k);
-          this.field_c.c(param0, var7 + 3, this.field_c.field_w + 3 + var8, this.field_j, -1);
+          this.field_c.drawString(param0, var7 + 3, this.field_c.field_w + 3 + var8, this.field_j, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

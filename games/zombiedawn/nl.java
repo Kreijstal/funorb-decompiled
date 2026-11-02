@@ -84,7 +84,7 @@ final class nl extends al {
         var6 = sg.field_jb;
         var7 = bj.field_q;
         if (this.field_d == 6) {
-          var7.a(me.field_Hb, bd.field_d, id.field_M + 288 - 14, 16777215, 0);
+          var7.drawStringCentered(me.field_Hb, bd.field_d, id.field_M + 288 - 14, 16777215, 0);
         }
         var8 = na.field_f;
         var9 = 288;
@@ -123,7 +123,7 @@ final class nl extends al {
           }
         }
         var9Lifetime2 = 384;
-        var7.a(GameLoopApplet.field_C, bd.field_d, id.field_M + var9Lifetime2 + 32, 16777215, 0);
+        var7.drawStringCentered(GameLoopApplet.field_C, bd.field_d, id.field_M + var9Lifetime2 + 32, 16777215, 0);
         var10Lifetime1 = -1;
         if (param0 >= -35) {
           return;
@@ -154,9 +154,9 @@ final class nl extends al {
             var18 = var16 * var7.a(var24, var12, var13, var14, var15, 16777215, 0, 0, 0, var16);
             var13 = var13 + (6 + (var18 + var16));
             var19 = var5 + 100 * cb.field_N[var10Lifetime1];
-            var7.c(var19, var12, var13, 16777215, 0);
+            var7.drawString(var19, var12, var13, 16777215, 0);
             var12 = var12 + (var7.b(var19) + 12);
-            var7.c(var4, var12, var13, 16777215, 0);
+            var7.drawString(var4, var12, var13, 16777215, 0);
             var12 = var12 + var7.b(var4);
             for (var20 = 0; var20 < cb.field_N[var10Lifetime1]; var20++) {
               hm.field_E.b(var20 * (hm.field_E.field_r >> 1) + var12, var13 - hm.field_E.field_q + 2);

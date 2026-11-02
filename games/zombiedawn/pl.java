@@ -749,7 +749,7 @@ final class pl extends al {
           if (hm.field_J == -2) {
             Rasterizer.e(wl.field_b + param1, 47 + param2, 23, 23, 3, 16764108);
           }
-          bj.field_q.a("X", 11 + (param1 + wl.field_b), param2 + 64, var6, 65793);
+          bj.field_q.drawStringCentered("X", 11 + (param1 + wl.field_b), param2 + 64, var6, 65793);
           if (9 == param3) {
             stackIn_21_0 = sg.field_jb;
             stackIn_21_1 = kf.field_Y;
@@ -759,7 +759,7 @@ final class pl extends al {
             } else {
               stackIn_22_3 = 0;
             }
-            ((tj) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_21_2 - stackIn_22_3, 85 + param2, 2, 65793);
+            ((tj) (Object) stackIn_21_0).drawStringCentered(stackIn_21_1, stackIn_21_2 - stackIn_22_3, 85 + param2, 2, 65793);
             bj.field_q.a(jk.field_h, param1 + 210, 118 + param2, -30 + nc.field_k.field_r, 120, 16777215, 65793, 1, 1, 20);
             return;
           }
@@ -770,7 +770,7 @@ final class pl extends al {
           } else {
             stackIn_28_2 = 5;
           }
-          ((tj) (Object) stackIn_27_0).a(stackIn_27_1, -stackIn_28_2 + (310 + param1), param2 + 85, 2, 65793);
+          ((tj) (Object) stackIn_27_0).drawStringCentered(stackIn_27_1, -stackIn_28_2 + (310 + param1), param2 + 85, 2, 65793);
           var11 = param3 + qd.field_e * 4;
           for (var12 = param0; var12 < 7; var12++) {
             stackIn_34_0 = (hm.field_J == var12) ? 1 : 0;
@@ -812,7 +812,7 @@ final class pl extends al {
             }
             stackIn_65_0 = (var10 != 0) ? 0 : 1;
             var10 = stackIn_65_0;
-            bj.field_q.c((String) (var15), 220 + param1, param2 + (118 + var12 * 29), var16Lifetime1, 65793);
+            bj.field_q.drawString((String) (var15), 220 + param1, param2 + (118 + var12 * 29), var16Lifetime1, 65793);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

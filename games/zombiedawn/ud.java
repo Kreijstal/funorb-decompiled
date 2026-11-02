@@ -62,7 +62,7 @@ final class ud implements io {
           var8 = this.field_b.field_T.g(0);
           if (var8 != null) {
             var9 = var8.toString();
-            this.field_b.field_L.c(var9, 2 + var6_int, (this.field_b.field_L.field_I + param3.field_n >> 1) + (var7 - 1), 10000536, -1);
+            this.field_b.field_L.drawString(var9, 2 + var6_int, (this.field_b.field_L.field_I + param3.field_n >> 1) + (var7 - 1), 10000536, -1);
             if (this.field_b.e(param0 ^ -16759476) &&
               var9.startsWith(this.field_b.field_U)) {
               var10 = this.field_b.field_L.b(this.field_b.field_U);

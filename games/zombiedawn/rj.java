@@ -35,7 +35,7 @@ final class rj extends PcmStream {
     private int field_P;
     private boolean field_C;
 
-    final synchronized PcmStream c() {
+    final synchronized PcmStream firstSubstream() {
         return (PcmStream) ((Object) this.field_J);
     }
 
@@ -237,7 +237,7 @@ final class rj extends PcmStream {
             if (null != var3.field_E) {
               var3.field_E.c(qf.field_p / 100);
               if (var3.field_E.f()) {
-                this.field_J.field_m.b(var3.field_E);
+                this.field_J.field_m.addSubstream(var3.field_E);
               }
               var3.c((byte) 125);
             }
@@ -402,7 +402,7 @@ final class rj extends PcmStream {
         return this.field_w.a();
     }
 
-    final synchronized PcmStream d() {
+    final synchronized PcmStream nextSubstream() {
         return null;
     }
 
@@ -1086,7 +1086,7 @@ final class rj extends PcmStream {
             param2.field_E.skip(param4);
           }
           if (param2.field_E.f()) {
-            this.field_J.field_m.b(param2.field_E);
+            this.field_J.field_m.addSubstream(param2.field_E);
           }
           param2.c((byte) 123);
           if (param2.field_k >= 0) {

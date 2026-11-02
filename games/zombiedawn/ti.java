@@ -287,7 +287,7 @@ final class ti {
             if (SpriteState.field_s[var4Lifetime2] < 0) {
               stackIn_115_1 = vl.field_r;
             } else {
-              stackIn_115_1 = qh.field_f;
+              stackIn_115_1 = Path.field_f;
             }
             p.field_d = stackIn_114_0 + stackIn_115_1;
           }
@@ -305,8 +305,8 @@ final class ti {
               hm.field_F[var4Lifetime3][0] = var8Lifetime1 - lk.field_f;
               hm.field_F[var4Lifetime3][1] = var5Lifetime3;
               hm.field_F[var4Lifetime3][2] = (lk.field_f << 1) + var7Lifetime2;
-              hm.field_F[var4Lifetime3][3] = qh.field_f + (cn.field_h << 1);
-              var5Lifetime3 = var5Lifetime3 + ((cn.field_h << 1) + fe.field_H + qh.field_f);
+              hm.field_F[var4Lifetime3][3] = Path.field_f + (cn.field_h << 1);
+              var5Lifetime3 = var5Lifetime3 + ((cn.field_h << 1) + fe.field_H + Path.field_f);
             } else {
               var5Lifetime3 = var5Lifetime3 + vl.field_r;
             }

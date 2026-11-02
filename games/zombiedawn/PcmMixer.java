@@ -7,11 +7,11 @@ final class PcmMixer extends PcmStream {
     private int field_o;
     private int field_m;
 
-    final PcmStream c() {
+    final PcmStream firstSubstream() {
         return (PcmStream) (this.field_n.b((byte) 26));
     }
 
-    final synchronized void b(PcmStream param0) {
+    final synchronized void addSubstream(PcmStream param0) {
         this.field_n.addLast(param0, 97);
     }
 
@@ -41,16 +41,16 @@ final class PcmMixer extends PcmStream {
         Object var6 = null;
         do {
           if (this.field_m < 0) {
-            this.c(param0, param1, param2);
+            this.mixSubstreams(param0, param1, param2);
             return;
           }
           if (this.field_o + param2 < this.field_m) {
             this.field_o = this.field_o + param2;
-            this.c(param0, param1, param2);
+            this.mixSubstreams(param0, param1, param2);
             return;
           }
           var4 = this.field_m - this.field_o;
-          this.c(param0, param1, var4);
+          this.mixSubstreams(param0, param1, var4);
           param1 = param1 + var4;
           param2 = param2 - var4;
           this.field_o = this.field_o + var4;
@@ -71,7 +71,7 @@ final class PcmMixer extends PcmStream {
         return;
     }
 
-    final synchronized void a(PcmStream param0) {
+    final synchronized void removeSubstream(PcmStream param0) {
         param0.unlink(-27598);
     }
 
@@ -83,11 +83,11 @@ final class PcmMixer extends PcmStream {
         }
     }
 
-    final PcmStream d() {
+    final PcmStream nextSubstream() {
         return (PcmStream) (this.field_n.a(false));
     }
 
-    private final void c(int[] param0, int param1, int param2) {
+    private final void mixSubstreams(int[] param0, int param1, int param2) {
         PcmStream var4 = (PcmStream) (this.field_n.b((byte) 26));
         while (var4 != null) {
           var4.fillOrSkip(param0, param1, param2);

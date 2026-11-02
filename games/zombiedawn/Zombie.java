@@ -10,7 +10,7 @@ final class Zombie extends Mover {
     boolean field_cb;
     private boolean field_ob;
     private nc field_rb;
-    private qh field_yb;
+    private Path field_yb;
     int field_fb;
     int field_sb;
     int field_Bb;
@@ -348,7 +348,7 @@ final class Zombie extends Mover {
             lb.field_eb[7].e(param1.worldToScreenX(this.field_jb, (byte) -72), param1.worldToScreenY(this.field_ib, 0), this.field_ub);
           }
           if (Mover.field_Q) {
-            bj.field_q.c(this.n(-30), var3_int, var4, 16777215, 0);
+            bj.field_q.drawString(this.n(-30), var3_int, var4, 16777215, 0);
             if (5 == this.state ||
               12 == this.state) {
               this.a(param1, -1);
@@ -422,7 +422,7 @@ final class Zombie extends Mover {
               md.field_vb.d(var3_int - 3, -3 + var4, 142);
             }
             if (kc.field_Q) {
-              pc.field_k.a(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 24 + var3_int, var4 - 5, 16777215, 0);
+              pc.field_k.drawStringCentered(s.a(1938762664, "<%0>,<%1>", new String[]{Integer.toString(this.field_B), Integer.toString(this.field_u)}), 24 + var3_int, var4 - 5, 16777215, 0);
             }
             if (nk.field_d) {
               var6Lifetime1 = param1.worldToScreenX(this.getX(true), (byte) -96);
@@ -430,7 +430,7 @@ final class Zombie extends Mover {
               Rasterizer.d(var6Lifetime1, var7, 3, 16711935);
             }
             if (b.field_h) {
-              pc.field_k.a(s.a(1938762664, "<%0>", new String[]{Integer.toString(this.field_gb)}), var3_int + 24, var4 - 5, 16777215, 0);
+              pc.field_k.drawStringCentered(s.a(1938762664, "<%0>", new String[]{Integer.toString(this.field_gb)}), var3_int + 24, var4 - 5, 16777215, 0);
             }
             return;
           }
@@ -516,7 +516,7 @@ final class Zombie extends Mover {
         }
     }
 
-    final void a(qh param0, boolean param1) {
+    final void a(Path param0, boolean param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -559,7 +559,7 @@ final class Zombie extends Mover {
     final void f(byte param0) {
         this.field_J = true;
         if (param0 != -85) {
-          this.field_yb = (qh) null;
+          this.field_yb = (Path) null;
         }
         this.setState(22, -6904);
         if (null != this.field_wb) {
@@ -576,7 +576,7 @@ final class Zombie extends Mover {
         Object var4;
         IntrusiveNode var5;
         Human var6;
-        qh var7;
+        Path var7;
         int var8;
         int stackIn_30_0Lifetime1;
         var8 = ZombieDawn.field_J;
@@ -602,7 +602,7 @@ final class Zombie extends Mover {
               var6 = (Human) (var5);
               if (var6.state != 18 &&
                 var6.state != 20) {
-                var7 = var2.a(true, this.getX(true), var6.getY(237239984), var6.getX(true), this.getY(237239984));
+                var7 = var2.findPath(true, this.getX(true), var6.getY(237239984), var6.getX(true), this.getY(237239984));
                 if (var7 != null) {
                   if (this.state == 4 &&
                     pb.a(so.random, 2, param0 - 17303) != 0) {
@@ -610,7 +610,7 @@ final class Zombie extends Mover {
                     continue;
                   }
                   if (var4 == null ||
-                    !(((qh) (var4)).field_g <= var7.field_g)) {
+                    !(((Path) (var4)).field_g <= var7.field_g)) {
                     var4 = var7;
                     var3 = var6;
                   }
@@ -620,7 +620,7 @@ final class Zombie extends Mover {
             var5 = var5.previous;
           }
           if (var3 != null) {
-            this.a((qh) (var4), true);
+            this.a((Path) (var4), true);
           }
         }
         stackIn_30_0Lifetime1 = param0;
@@ -880,7 +880,7 @@ final class Zombie extends Mover {
         if (null == this.field_lb) {
           return;
         }
-        this.field_yb = Js5Archive.field_e.navigation.a(true, this.getX(true), this.field_lb.y, this.field_lb.x, this.getY(237239984));
+        this.field_yb = Js5Archive.field_e.navigation.findPath(true, this.getX(true), this.field_lb.y, this.field_lb.x, this.getY(237239984));
     }
 
     final boolean o(int param0) {
@@ -1148,7 +1148,7 @@ final class Zombie extends Mover {
                       this.field_wb = null;
                       this.setState(4, -6904);
                       if (null != this.field_lb) {
-                        this.a(Js5Archive.field_e.navigation.a(true, this.getX(true), this.field_lb.y, this.field_lb.x, this.getY(237239984)), true);
+                        this.a(Js5Archive.field_e.navigation.findPath(true, this.getX(true), this.field_lb.y, this.field_lb.x, this.getY(237239984)), true);
                       }
                     } else {
                       if (this.field_zb == 30) {

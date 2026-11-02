@@ -16,7 +16,7 @@ final class sa extends pn {
         if (param2 > -111) {
           this.m(-92);
           super.a(param0, param1, (byte) -121);
-          rk.field_b.a(this.field_W, param0 + (this.field_i >> 1), 103 + param1, 16777215, -1);
+          rk.field_b.drawStringCentered(this.field_W, param0 + (this.field_i >> 1), 103 + param1, 16777215, -1);
           if (this.field_X != null) {
             Rasterizer.drawHorizontalLine(param0 + 20, -7 + (param1 + 120), 260, 8421504);
             rk.field_b.a(this.field_X, 20 + param0, 8 + (120 + param1), 260, 100, 16777215, -1, 1, 0, rk.field_b.field_I);
@@ -25,7 +25,7 @@ final class sa extends pn {
           return;
         }
         super.a(param0, param1, (byte) -121);
-        rk.field_b.a(this.field_W, param0 + (this.field_i >> 1), 103 + param1, 16777215, -1);
+        rk.field_b.drawStringCentered(this.field_W, param0 + (this.field_i >> 1), 103 + param1, 16777215, -1);
         if (this.field_X == null) {
           return;
         }

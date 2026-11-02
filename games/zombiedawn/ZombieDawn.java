@@ -132,7 +132,7 @@ public final class ZombieDawn extends GameLoopApplet {
           Rasterizer.setClip(var8, var7, var11, var12);
           pf.field_f.b(var11 - pf.field_f.field_w, -pf.field_f.field_t + var12);
           Rasterizer.setClip(var10, var9, var11, var12);
-          ((Font) ((Object) var2_ref)).a(var4_ref_String, bd.field_d, nh.field_G, 2, -1);
+          ((Font) ((Object) var2_ref)).drawStringCentered(var4_ref_String, bd.field_d, nh.field_G, 2, -1);
           var13Lifetime1 = (int)(oj.field_d.field_b * (float)var3 / 100.0f);
           Rasterizer.fillRect(var8 - var3 / 2, 10 + var7, var3, 12, 0);
           Rasterizer.setClip(-(var3 / 2) + var8, var7 + 10, var8 + (-(var3 / 2) + var13Lifetime1), var7 + 22);
@@ -172,8 +172,8 @@ public final class ZombieDawn extends GameLoopApplet {
               var4 = var4 / 10;
             }
           }
-          pc.field_k.c(this.field_G.toString(), 5, 20, 16777215, 1);
-          pc.field_k.c(this.field_I.toString(), 5, 35, 16777215, 1);
+          pc.field_k.drawString(this.field_G.toString(), 5, 20, 16777215, 1);
+          pc.field_k.drawString(this.field_I.toString(), 5, 35, 16777215, 1);
         }
         if (param0 != -14964) {
           this.field_G = (StringBuilder) null;

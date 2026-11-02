@@ -27,20 +27,20 @@ final class NodeHashTableIterator implements Iterator {
         IntrusiveNode var1;
         int var2;
         var2 = ZombieDawn.field_J;
-        if (this.field_a.field_c[-1 + this.field_i] != this.field_e) {
+        if (this.field_a.buckets[-1 + this.field_i] != this.field_e) {
           var1 = this.field_e;
           this.field_e = var1.previous;
           this.field_c = var1;
           return var1;
         }
         do {
-          if (this.field_i >= this.field_a.field_f) {
+          if (this.field_i >= this.field_a.bucketCount) {
             return null;
           }
           fieldTemp$0 = this.field_i;
           this.field_i = this.field_i + 1;
-          var1 = this.field_a.field_c[fieldTemp$0].previous;
-        } while (this.field_a.field_c[-1 + this.field_i] == var1);
+          var1 = this.field_a.buckets[fieldTemp$0].previous;
+        } while (this.field_a.buckets[-1 + this.field_i] == var1);
         this.field_e = var1.previous;
         this.field_c = var1;
         return var1;
@@ -49,7 +49,7 @@ final class NodeHashTableIterator implements Iterator {
     private final void a(int param0) {
         this.field_c = null;
         if (param0 == 11936) {
-          this.field_e = this.field_a.field_c[0].previous;
+          this.field_e = this.field_a.buckets[0].previous;
           this.field_i = 1;
           return;
         }
@@ -166,22 +166,22 @@ final class NodeHashTableIterator implements Iterator {
         int fieldTemp$0 = 0;
         int var2;
         var2 = ZombieDawn.field_J;
-        if (this.field_e != this.field_a.field_c[this.field_i - 1]) {
+        if (this.field_e != this.field_a.buckets[this.field_i - 1]) {
           return true;
         }
         while (true) {
-          if (this.field_a.field_f <= this.field_i) {
+          if (this.field_a.bucketCount <= this.field_i) {
             return false;
           }
           fieldTemp$0 = this.field_i;
           this.field_i = this.field_i + 1;
-          if (this.field_a.field_c[fieldTemp$0].previous == this.field_a.field_c[-1 + this.field_i]) {
-            this.field_e = this.field_a.field_c[this.field_i - 1];
+          if (this.field_a.buckets[fieldTemp$0].previous == this.field_a.buckets[-1 + this.field_i]) {
+            this.field_e = this.field_a.buckets[this.field_i - 1];
             continue;
           }
           break;
         }
-        this.field_e = this.field_a.field_c[-1 + this.field_i].previous;
+        this.field_e = this.field_a.buckets[-1 + this.field_i].previous;
         return true;
     }
 

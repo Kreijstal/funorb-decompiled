@@ -67,7 +67,7 @@ final class kl extends al {
         Rasterizer.c(-32 + vh.field_b, 0, vh.field_b + 672, nh.field_P);
         if (this.field_m > 120 &&
           this.field_m < 388) {
-          bj.field_q.a(rg.field_L, bd.field_d, Math.min(510 + id.field_M, nh.field_P - 20), 16777215, 0);
+          bj.field_q.drawStringCentered(rg.field_L, bd.field_d, Math.min(510 + id.field_M, nh.field_P - 20), 16777215, 0);
         }
         if (640 < bd.field_e) {
           var4Lifetime1 = 8;

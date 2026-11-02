@@ -205,9 +205,9 @@ final class si extends qk {
         Zombie var6_ref;
         int var8;
         Js5Archive var9;
-        qh var10;
-        qh var11;
-        qh var18;
+        Path var10;
+        Path var11;
+        Path var18;
         var6 = null;
         var8 = ZombieDawn.field_J;
         this.getX(true);
@@ -230,7 +230,7 @@ final class si extends qk {
           var6_ref = (Zombie) (this.a((byte) -74, this.field_Sb, 2));
           while (var6_ref != null) {
             if (var6_ref.x(33)) {
-              var10 = Js5Archive.field_e.navigation.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+              var10 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
               if (var10 != null) {
                 if (!(var10.field_g <= var4) ||
                   var4 == -1) {
@@ -268,7 +268,7 @@ final class si extends qk {
             var6_ref = (Zombie) (this.a((byte) -74, this.field_Sb, 2));
             while (var6_ref != null) {
               if (var6_ref.x(33)) {
-                var11 = Js5Archive.field_e.navigation.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+                var11 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
                 if (var11 != null) {
                   if (!(var11.field_g <= var4) ||
                     var4 == -1) {
@@ -306,7 +306,7 @@ final class si extends qk {
             var6_ref = (Zombie) (this.a((byte) -74, this.field_Sb, 2));
             while (var6_ref != null) {
               if (var6_ref.x(33)) {
-                var18 = Js5Archive.field_e.navigation.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+                var18 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
                 if (var18 != null) {
                   if (!(var18.field_g <= var4) ||
                     var4 == -1) {
@@ -395,8 +395,8 @@ final class si extends qk {
             var5 = param0.worldToScreenX(this.field_yb.getX(true), (byte) -78);
             var6 = param0.worldToScreenY(this.field_yb.getY(param1 + 237234924), 0);
             Rasterizer.e(var3_int, -48 + var4 + 10, var5, var6 - 38, 16776960);
-            bj.field_q.c(Integer.toString(this.state), var3_int, var4 - 48, 16777215, 0);
-            bj.field_q.c(Integer.toString(this.field_yb.state), var5, var6 - 48, 16777215, 0);
+            bj.field_q.drawString(Integer.toString(this.state), var3_int, var4 - 48, 16777215, 0);
+            bj.field_q.drawString(Integer.toString(this.field_yb.state), var5, var6 - 48, 16777215, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

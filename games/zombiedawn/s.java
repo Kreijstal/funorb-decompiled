@@ -83,7 +83,7 @@ final class s extends IntrusiveNode {
         RuntimeException var3 = null;
         int var4 = 0;
         Zombie var6 = null;
-        qh var7 = null;
+        Path var7 = null;
         int var8 = 0;
         var8 = ZombieDawn.field_J;
         try {
@@ -134,7 +134,7 @@ final class s extends IntrusiveNode {
                     ha.field_d.field_x = -50 + ha.field_d.getY(237239984) << 16;
                     for (var5 = 0; var5 < 5; var5++) {
                       var6 = Js5Archive.field_e.spawnZombie(10, (byte) 124, 90, 340, 380);
-                      var7 = new qh();
+                      var7 = new Path();
                       var7.addFirst(0, new Point(var6.getX(true), var6.getY(237239984) - 100));
                       var6.a(var7, true);
                     }

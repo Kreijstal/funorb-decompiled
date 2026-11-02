@@ -45,7 +45,7 @@ final class Camera {
         this.field_v = this.field_l;
         this.field_g = 1.0f;
         if (param0 >= -33) {
-          this.a(-48, true);
+          this.screenToWorldX(-48, true);
         }
         this.field_e = 0.0f;
         this.field_r = 0.004999999888241291f;
@@ -65,14 +65,14 @@ final class Camera {
         this.field_k = param3;
     }
 
-    final int a(int param0, boolean param1) {
+    final int screenToWorldX(int param0, boolean param1) {
         if (param1) {
-          this.b(64, false);
+          this.screenToWorldY(64, false);
         }
         return -bd.field_d + (param0 + this.x);
     }
 
-    final void c(int param0) {
+    final void resetPosition(int param0) {
         this.field_d = false;
         this.field_e = 1.0f;
         this.x = this.field_j;
@@ -80,7 +80,7 @@ final class Camera {
         int var2 = 73 % ((-42 - param0) / 61);
     }
 
-    final int b(int param0, boolean param1) {
+    final int screenToWorldY(int param0, boolean param1) {
         if (!param1) {
           return -101;
         }
@@ -254,17 +254,17 @@ final class Camera {
             this.field_d = false;
           }
         }
-        this.b(-28216);
+        this.clampToBounds(-28216);
     }
 
     final void a(byte param0, int param1, int param2) {
         this.y = this.y - param2;
         this.x = this.x - param1;
         int var4 = 15 % ((-55 - param0) / 43);
-        this.b(-28216);
+        this.clampToBounds(-28216);
     }
 
-    private final void b(int param0) {
+    private final void clampToBounds(int param0) {
         if (this.x < this.field_s) {
           this.x = this.field_s;
         }

@@ -59,7 +59,7 @@ final class k extends vf {
             k.a(-100, -115);
           }
           var10.a(var11, var12);
-          this.field_m.a(this.b(12307, param3), var13, param2, var9, -1);
+          this.field_m.drawStringCentered(this.b(12307, param3), var13, param2, var9, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

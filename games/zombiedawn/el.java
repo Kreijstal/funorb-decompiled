@@ -147,7 +147,7 @@ final class el implements io {
           if (null == this.field_j) {
             return;
           }
-          this.field_j.a(var12.field_o, var8 + var7 / 2, this.field_j.field_C + (var9 + var12.field_G), this.field_a, this.field_c);
+          this.field_j.drawStringCentered(var12.field_o, var8 + var7 / 2, this.field_j.field_C + (var9 + var12.field_G), this.field_a, this.field_c);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

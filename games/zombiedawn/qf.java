@@ -29,10 +29,10 @@ class qf {
         if (param0.field_h != null) {
           param0.field_h.field_h = 0;
         }
-        PcmStream var1 = param0.c();
+        PcmStream var1 = param0.firstSubstream();
         while (var1 != null) {
           qf.a(var1);
-          var1 = param0.d();
+          var1 = param0.nextSubstream();
         }
     }
 
@@ -305,12 +305,12 @@ class qf {
                     if (var4 >= this.field_b) {
                       break scanLoop1;
                     }
-                    var14Lifetime2 = var11.c();
+                    var14Lifetime2 = var11.firstSubstream();
                     if (var14Lifetime2 != null) {
                       var15_int = var11.field_j;
                       while (var14Lifetime2 != null) {
                         this.a(var14Lifetime2, var15_int * var14Lifetime2.b() >> 8);
-                        var14Lifetime2 = var11.d();
+                        var14Lifetime2 = var11.nextSubstream();
                       }
                     }
                     var15 = var11.field_i;

@@ -52,7 +52,7 @@ final class we extends qk {
             var5_int = param0.worldToScreenX(this.field_yb.getX(true), (byte) -81);
             var6 = param0.worldToScreenY(this.field_yb.getY(param1 + 237234924), param1 ^ 5060);
             Rasterizer.e(var3_int, var4, var5_int, var6, 16776960);
-            bj.field_q.c(Integer.toString(this.field_yb.state), var5_int, var6 - 48, 16777215, 0);
+            bj.field_q.drawString(Integer.toString(this.field_yb.state), var5_int, var6 - 48, 16777215, 0);
           }
           if (param1 != 5060) {
             var7 = (IntrusiveNode) null;
@@ -60,7 +60,7 @@ final class we extends qk {
           }
           Rasterizer.e(var3_int, var4, param0.worldToScreenX(this.targetX, (byte) -94), param0.worldToScreenY(this.targetY, param1 - 5060), 16711935);
           var5 = Integer.toString(this.state);
-          bj.field_q.c(var5, var3_int, var4 - 48, 16777215, 0);
+          bj.field_q.drawString(var5, var3_int, var4 - 48, 16777215, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -275,9 +275,9 @@ final class we extends qk {
         Object var6;
         Zombie var6_ref;
         int var8;
-        qh var9;
-        qh var10;
-        qh var17;
+        Path var9;
+        Path var10;
+        Path var17;
         var6 = null;
         var8 = ZombieDawn.field_J;
         this.getX(true);
@@ -302,7 +302,7 @@ final class we extends qk {
               var6_ref = (Zombie) (this.e((byte) 32));
               continue;
             }
-            var9 = Js5Archive.field_e.navigation.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+            var9 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
             if (var9 != null) {
               if (var6_ref.field_Bb == 0 && (!(var9.field_g <= var5) ||
                 var5 == -1)) {
@@ -341,7 +341,7 @@ final class we extends qk {
                 var6_ref = (Zombie) (this.e((byte) 32));
                 continue;
               }
-              var10 = Js5Archive.field_e.navigation.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+              var10 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
               if (var10 != null) {
                 if (var6_ref.field_Bb == 0 && (!(var10.field_g <= var5) ||
                   var5 == -1)) {
@@ -364,7 +364,7 @@ final class we extends qk {
                 var6_ref = (Zombie) (this.e((byte) 32));
                 continue;
               }
-              var17 = Js5Archive.field_e.navigation.a(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
+              var17 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), var6_ref.getY(237239984), var6_ref.getX(true), this.getY(237239984));
               if (var17 != null) {
                 if (var6_ref.field_Bb == 0 && (!(var17.field_g <= var5) ||
                   var5 == -1)) {

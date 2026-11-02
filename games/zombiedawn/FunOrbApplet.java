@@ -197,13 +197,13 @@ abstract class FunOrbApplet extends GameApplet {
             this.a("reconnect", 50);
           }
           nc.d((byte) 101);
-          qh.a(10, var2, sc.field_d);
+          Path.a(10, var2, sc.field_d);
           ja.field_b = true;
           if (param0) {
             String var3 = (String) null;
             this.a(-31, 70, (String) null);
           }
-          qh.field_e = pd.a(-22826) + 15000L;
+          Path.field_e = pd.a(-22826) + 15000L;
           return var2;
         }
         if (fl.field_a == 11 &&
@@ -369,10 +369,10 @@ abstract class FunOrbApplet extends GameApplet {
             this.field_r = false;
             p.a(1);
             nc.d((byte) -3);
-            qh.a(10, 2, qb.field_f);
+            Path.a(10, 2, qb.field_f);
             rh.a(-110);
             ja.field_b = true;
-            qh.field_e = 15000L + pd.a(-22826);
+            Path.field_e = 15000L + pd.a(-22826);
           }
         }
         if (co.field_b == -1 ||
@@ -388,7 +388,7 @@ abstract class FunOrbApplet extends GameApplet {
           }
           if (co.field_b != -1 &&
             co.field_b != 0) {
-            qh.field_e = 15000L + pd.a(-22826);
+            Path.field_e = 15000L + pd.a(-22826);
           }
         }
         if (co.field_b != -1 &&
@@ -397,18 +397,18 @@ abstract class FunOrbApplet extends GameApplet {
             if (fl.field_a >= 10) {
               nc.d((byte) 118);
               if (co.field_b == 3) {
-                qh.a(10, 256, rf.field_a);
+                Path.a(10, 256, rf.field_a);
               } else {
                 if (co.field_b == 4) {
-                  qh.a(10, 256, ac.field_o);
+                  Path.a(10, 256, ac.field_o);
                 } else {
                   if (co.field_b == 2) {
-                    qh.a(10, 256, oe.field_d);
+                    Path.a(10, 256, oe.field_d);
                   } else {
                     if (5 == co.field_b) {
-                      qh.a(10, 5, ia.field_f);
+                      Path.a(10, 5, ia.field_f);
                     } else {
-                      qh.a(10, 256, ih.field_T);
+                      Path.a(10, 256, ih.field_T);
                     }
                   }
                 }
@@ -438,7 +438,7 @@ abstract class FunOrbApplet extends GameApplet {
         if ((co.field_b != -1 &&
           co.field_b != 0 ||
           dn.i(-19301)) &&
-          pd.a(-22826) >= qh.field_e) {
+          pd.a(-22826) >= Path.field_e) {
           ja.field_b = false;
           if (-1 != co.field_b &&
             0 != co.field_b) {
@@ -643,7 +643,7 @@ abstract class FunOrbApplet extends GameApplet {
                   i.field_Y = false;
                   fl.field_a = 10;
                 } else {
-                  qh.a(10, var5_intLifetime2, sc.field_d);
+                  Path.a(10, var5_intLifetime2, sc.field_d);
                   sc.field_d = null;
                 }
               }

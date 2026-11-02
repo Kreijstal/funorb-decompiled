@@ -150,7 +150,7 @@ final class PcmSampleStream extends PcmStream {
         return this.field_m < 0 ? -this.field_m : this.field_m;
     }
 
-    final PcmStream d() {
+    final PcmStream nextSubstream() {
         return null;
     }
 
@@ -711,7 +711,7 @@ final class PcmSampleStream extends PcmStream {
         return this.field_o == -2147483648 ? 0 : this.field_o;
     }
 
-    final PcmStream c() {
+    final PcmStream firstSubstream() {
         return null;
     }
 

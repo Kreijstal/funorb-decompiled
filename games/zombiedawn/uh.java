@@ -49,8 +49,8 @@ final class uh {
           var3 = Js5Archive.field_e.camera;
           var4 = Js5Archive.field_e.navigation;
           if (this.field_p) {
-            var5 = var3.a(-(int)((float)(24 * this.field_a) / 1.0f) + ha.field_b, false);
-            var6 = var3.b(ei.field_K - (int)((float)(24 * this.field_a) / 1.0f), true);
+            var5 = var3.screenToWorldX(-(int)((float)(24 * this.field_a) / 1.0f) + ha.field_b, false);
+            var6 = var3.screenToWorldY(ei.field_K - (int)((float)(24 * this.field_a) / 1.0f), true);
             var7 = var5 / 24;
             var8 = var6 / 24;
             var9 = var8 + this.field_a * 2;
@@ -192,7 +192,7 @@ final class uh {
             so.a(qp.field_c[this.field_m], -100 + this.field_d, var2);
             mk.field_a[this.field_m].b(this.field_d - 100, var2);
           } else {
-            bj.field_q.a(mc.field_j, bd.field_d, -10 + nh.field_P, 15658734, 1);
+            bj.field_q.drawStringCentered(mc.field_j, bd.field_d, -10 + nh.field_P, 15658734, 1);
           }
         }
         if (!this.field_f) {

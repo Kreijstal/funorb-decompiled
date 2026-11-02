@@ -1070,7 +1070,7 @@ final class ap extends al {
               var7 = kn.field_I;
             }
           }
-          sg.field_jb.b(var7, vh.field_b + 350, var5, this.field_G, var3);
+          sg.field_jb.drawStringRightAligned(var7, vh.field_b + 350, var5, this.field_G, var3);
         } else {
           if (this.field_x == 2) {
             var9 = fm.field_I;
@@ -1092,7 +1092,7 @@ final class ap extends al {
                 var7 = kn.field_I;
               }
             }
-            sg.field_jb.b(var7, vh.field_b + 350, var5, this.field_G, var3);
+            sg.field_jb.drawStringRightAligned(var7, vh.field_b + 350, var5, this.field_G, var3);
           } else {
             if (this.field_x == -1) {
               if (vl.field_b.f(-107) != 27) {
@@ -1124,22 +1124,22 @@ final class ap extends al {
                       var7 = sa.field_bb;
                     } else {
                       if (!this.field_t) {
-                        sg.field_jb.b(var11, vh.field_b + 350, var5, this.field_G, var3);
+                        sg.field_jb.drawStringRightAligned(var11, vh.field_b + 350, var5, this.field_G, var3);
                         break regionExit1;
                       }
                       var7 = kn.field_I;
                     }
                   }
-                  sg.field_jb.b(var7, vh.field_b + 350, var5, this.field_G, var3);
+                  sg.field_jb.drawStringRightAligned(var7, vh.field_b + 350, var5, this.field_G, var3);
                 }
-                sg.field_jb.c(Integer.toString(this.field_D), 370 + vh.field_b, var5, this.field_G, var3);
+                sg.field_jb.drawString(Integer.toString(this.field_D), 370 + vh.field_b, var5, this.field_G, var3);
                 var5 = var5 + (var4 + 5);
                 if (this.field_H) {
-                  sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, this.field_v, var3);
-                  sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, this.field_v, var3);
+                  sg.field_jb.drawStringRightAligned(hp.field_y, 350 + vh.field_b, var5, this.field_v, var3);
+                  sg.field_jb.drawString(this.d((byte) -99), 370 + vh.field_b, var5, this.field_v, var3);
                 }
-                sg.field_jb.b(ClientException.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
-                sg.field_jb.c(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
+                sg.field_jb.drawStringRightAligned(ClientException.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
+                sg.field_jb.drawString(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
                 return;
               }
               var6 = hb.field_D[vl.field_b.field_bb];
@@ -1160,12 +1160,12 @@ final class ap extends al {
               } else {
                 if (this.field_t) {
                   var14 = kn.field_I;
-                  sg.field_jb.b(var14, vh.field_b + 350, var5, this.field_G, var3);
+                  sg.field_jb.drawStringRightAligned(var14, vh.field_b + 350, var5, this.field_G, var3);
                   decompiledFrameRemainder0 = false;
                 }
               }
               if (decompiledFrameRemainder0) {
-                sg.field_jb.b(var7, vh.field_b + 350, var5, this.field_G, var3);
+                sg.field_jb.drawStringRightAligned(var7, vh.field_b + 350, var5, this.field_G, var3);
               }
             } else {
               if (var5 < 205) {
@@ -1177,30 +1177,30 @@ final class ap extends al {
               } else {
                 if (this.field_t) {
                   var15 = kn.field_I;
-                  sg.field_jb.b(var15, vh.field_b + 350, var5, this.field_G, var3);
-                  sg.field_jb.c(Integer.toString(this.field_D), 370 + vh.field_b, var5, this.field_G, var3);
+                  sg.field_jb.drawStringRightAligned(var15, vh.field_b + 350, var5, this.field_G, var3);
+                  sg.field_jb.drawString(Integer.toString(this.field_D), 370 + vh.field_b, var5, this.field_G, var3);
                   var5 = var5 + (var4 + 5);
                   if (this.field_H) {
-                    sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, this.field_v, var3);
-                    sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, this.field_v, var3);
+                    sg.field_jb.drawStringRightAligned(hp.field_y, 350 + vh.field_b, var5, this.field_v, var3);
+                    sg.field_jb.drawString(this.d((byte) -99), 370 + vh.field_b, var5, this.field_v, var3);
                   }
-                  sg.field_jb.b(ClientException.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
-                  sg.field_jb.c(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
+                  sg.field_jb.drawStringRightAligned(ClientException.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
+                  sg.field_jb.drawString(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
                   return;
                 }
               }
-              sg.field_jb.b(var7, vh.field_b + 350, var5, this.field_G, var3);
+              sg.field_jb.drawStringRightAligned(var7, vh.field_b + 350, var5, this.field_G, var3);
             }
           }
         }
-        sg.field_jb.c(Integer.toString(this.field_D), 370 + vh.field_b, var5, this.field_G, var3);
+        sg.field_jb.drawString(Integer.toString(this.field_D), 370 + vh.field_b, var5, this.field_G, var3);
         var5 = var5 + (var4 + 5);
         if (this.field_H) {
-          sg.field_jb.b(hp.field_y, 350 + vh.field_b, var5, this.field_v, var3);
-          sg.field_jb.c(this.d((byte) -99), 370 + vh.field_b, var5, this.field_v, var3);
+          sg.field_jb.drawStringRightAligned(hp.field_y, 350 + vh.field_b, var5, this.field_v, var3);
+          sg.field_jb.drawString(this.d((byte) -99), 370 + vh.field_b, var5, this.field_v, var3);
         }
-        sg.field_jb.b(ClientException.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
-        sg.field_jb.c(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
+        sg.field_jb.drawStringRightAligned(ClientException.field_d, vh.field_b + 350, id.field_M + 340, var2, var3);
+        sg.field_jb.drawString(qi.a(true, 0, jp.field_a, (long)this.field_p, (byte) 113), 370 + vh.field_b, 340 + id.field_M, var2, var3);
     }
 
     final void b(byte param0) {

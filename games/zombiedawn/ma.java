@@ -147,7 +147,7 @@ final class ma extends IntrusiveNode {
               if (var8 == 32) {
                 var5_int = var5_int + param1;
               }
-              param0.field_e[var7] = (var5_int >> 8) + param0.field_e[0] + param3.b(param2.substring(0, 1 + var7)) - param3.a((char) var8);
+              param0.field_e[var7] = (var5_int >> 8) + param0.field_e[0] + param3.b(param2.substring(0, 1 + var7)) - param3.charWidth((char) var8);
             }
             if (62 == var8) {
               var6 = -1;

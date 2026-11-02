@@ -25,9 +25,9 @@ abstract class PcmStream extends IntrusiveNode {
 
     abstract int a();
 
-    abstract PcmStream c();
+    abstract PcmStream firstSubstream();
 
-    abstract PcmStream d();
+    abstract PcmStream nextSubstream();
 
     protected PcmStream() {
         this.active = true;

@@ -4,17 +4,17 @@
 import java.util.*;
 
 final class IterableNodeHashTable implements Iterable {
-    IntrusiveNode[] field_c;
+    IntrusiveNode[] buckets;
     private IntrusiveNode field_a;
     static int field_e;
     static int field_d;
-    int field_f;
+    int bucketCount;
     static int field_b;
 
-    final IntrusiveNode a(boolean param0, long param1) {
+    final IntrusiveNode get(boolean param0, long param1) {
         IntrusiveNode var5 = null;
         int var6 = ZombieDawn.field_J;
-        IntrusiveNode var4 = this.field_c[(int)((long)(-1 + this.field_f) & param1)];
+        IntrusiveNode var4 = this.buckets[(int)((long)(-1 + this.bucketCount) & param1)];
         this.field_a = var4.previous;
         while (var4 != this.field_a) {
           if (this.field_a.key == param1) {
@@ -97,13 +97,13 @@ final class IterableNodeHashTable implements Iterable {
         return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
-    final void a(long param0, boolean param1, IntrusiveNode param2) {
+    final void put(long param0, boolean param1, IntrusiveNode param2) {
         IntrusiveNode var5 = null;
         try {
           if (null != param2.next) {
             param2.unlink(-27598);
           }
-          var5 = this.field_c[(int)((long)(this.field_f - 1) & param0)];
+          var5 = this.buckets[(int)((long)(this.bucketCount - 1) & param0)];
           param2.previous = var5;
           if (!param1) {
             this.iterator();

@@ -54,7 +54,7 @@ final class fg extends al {
         boolean decompiledFrameRemainder0 = true;
         var9 = id.field_M + 135;
         var10 = vh.field_b + 20;
-        sg.field_jb.c(gj.field_k[this.field_n][0], var10, var9, 0, 0);
+        sg.field_jb.drawString(gj.field_k[this.field_n][0], var10, var9, 0, 0);
         var20 = this.field_n;
         if (var20 != 0) {
           if (var20 == 1) {
@@ -181,9 +181,9 @@ final class fg extends al {
               else {
                 si.field_Ub[0].b(vh.field_b + 8, id.field_M + 148);
                 si.field_Ub[1].b(70 + vh.field_b, id.field_M + 230);
-                sg.field_jb.c("1/5", 90 + vh.field_b, 202 + id.field_M, 2, -1);
-                sg.field_jb.c("3", 80 + vh.field_b, 285 + id.field_M, 1, -1);
-                sg.field_jb.c("2:15", vh.field_b + 75, id.field_M + 365, 0, -1);
+                sg.field_jb.drawString("1/5", 90 + vh.field_b, 202 + id.field_M, 2, -1);
+                sg.field_jb.drawString("3", 80 + vh.field_b, 285 + id.field_M, 1, -1);
+                sg.field_jb.drawString("2:15", vh.field_b + 75, id.field_M + 365, 0, -1);
                 var4 = bj.field_q.a(gj.field_g[3][0], 155 + vh.field_b, 170 + id.field_M, var3 - 140, 440, 16777215, 0, 0, 0, var2);
               }
             }
@@ -203,14 +203,14 @@ final class fg extends al {
           if (var7 != 0) {
             var5 -= 20;
           }
-          sg.field_jb.c(gj.field_k[0][1], var10, var5 + (var9 + 75), 0, 0);
+          sg.field_jb.drawString(gj.field_k[0][1], var10, var5 + (var9 + 75), 0, 0);
           bj.field_q.a(gj.field_g[0][1], var10, var5 + var9 + 95, var3, 440, 16777215, 0, 0, 0, var2);
           if (var7 == 0) {
             l.field_b[0].b(530 + vh.field_b, 150 + id.field_M);
             l.field_b[1].b(vh.field_b + 230, id.field_M + 242);
           }
         }
-        bj.field_q.b(uk.a(1 + this.field_n, (byte) 58, 1 + this.a(true)), 634 + vh.field_b, id.field_M + 410, 16777215, 0);
+        bj.field_q.drawStringRightAligned(uk.a(1 + this.field_n, (byte) 58, 1 + this.a(true)), 634 + vh.field_b, id.field_M + 410, 16777215, 0);
     }
 
     final int a(boolean param0, int param1) {

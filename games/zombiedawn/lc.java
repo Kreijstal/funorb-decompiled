@@ -32,7 +32,7 @@ final class lc {
             this.a(var8, 108);
           }
           var6 = new jl(param3, param1);
-          this.field_e.a(param0, true, var6);
+          this.field_e.put(param0, true, var6);
           this.field_g.a(0, var6);
           ((bj) ((Object) var6)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
@@ -91,7 +91,7 @@ final class lc {
     }
 
     private final void a(byte param0, long param1) {
-        bj var4 = (bj) (this.field_e.a(false, param1));
+        bj var4 = (bj) (this.field_e.get(false, param1));
         this.a(var4, param0 + 143);
         if (param0 != -20) {
           field_k = (Sprite[]) null;
@@ -184,7 +184,7 @@ final class lc {
 
     final Object a(long param0, int param1) {
         jl var6 = null;
-        bj var8 = (bj) (this.field_e.a(false, param0));
+        bj var8 = (bj) (this.field_e.get(false, param0));
         if (var8 == null) {
           return null;
         }
@@ -201,7 +201,7 @@ final class lc {
         }
         if (var8.b(true)) {
           var6 = new jl(var5, var8.field_r);
-          this.field_e.a(var8.key, true, var6);
+          this.field_e.put(var8.key, true, var6);
           this.field_g.a(0, var6);
           ((bj) ((Object) var6)).secondaryKey = 0L;
           var8.unlink(-27598);

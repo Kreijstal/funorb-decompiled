@@ -59,11 +59,11 @@ final class r extends eh {
               var6 = tk.a(cj.field_h[var3_int], true, true);
               var7 = mo.field_b - (var6 >> 1);
               var4 = var4 + fe.field_H;
-              if (bf.a(-lk.field_f + var7, param0 ^ 6199969, param2, var4, (lk.field_f << 1) + var6, (cn.field_h << 1) + qh.field_f, param1)) {
+              if (bf.a(-lk.field_f + var7, param0 ^ 6199969, param2, var4, (lk.field_f << 1) + var6, (cn.field_h << 1) + Path.field_f, param1)) {
                 stackIn_9_0 = var5;
                 return stackIn_9_0;
               }
-              var4 = var4 + ((cn.field_h << 1) + fe.field_H + qh.field_f);
+              var4 = var4 + ((cn.field_h << 1) + fe.field_H + Path.field_f);
             }
             var3_int++;
           }

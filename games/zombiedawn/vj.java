@@ -295,11 +295,11 @@ final class vj extends al {
             var18 = var6.field_k[ad.field_e];
             var9 = ph.a(wi.field_b, (byte) -93, ad.field_e, var6);
             var3Lifetime1Lifetime1 = var5.field_I + (89 + id.field_M);
-            var5.a(q.field_G[qm.field_b], bd.field_d, var3Lifetime1Lifetime1, 10, 0);
+            var5.drawStringCentered(q.field_G[qm.field_b], bd.field_d, var3Lifetime1Lifetime1, 10, 0);
             var3Lifetime1Lifetime1 = var3Lifetime1Lifetime1 + (var5.field_I + 10);
-            var5.b(og.field_z, 220 + (vh.field_b - 30), var3Lifetime1Lifetime1, 2, 0);
-            var5.c(lo.field_r, -10 + (220 + vh.field_b), var3Lifetime1Lifetime1, 2, 0);
-            var5.b(ZombieDawn.field_D, 20 + (440 + vh.field_b), var3Lifetime1Lifetime1, 2, 0);
+            var5.drawStringRightAligned(og.field_z, 220 + (vh.field_b - 30), var3Lifetime1Lifetime1, 2, 0);
+            var5.drawString(lo.field_r, -10 + (220 + vh.field_b), var3Lifetime1Lifetime1, 2, 0);
+            var5.drawStringRightAligned(ZombieDawn.field_D, 20 + (440 + vh.field_b), var3Lifetime1Lifetime1, 2, 0);
             var3Lifetime1Lifetime1 += 25;
             for (var10 = 0; 10 > var10; var10++) {
               stackIn_35_0 = (~var9 == ~var10) ? 16776960 : 16777215;
@@ -310,10 +310,10 @@ final class vj extends al {
                 if (var9 == var10) {
                   var11 = 16776960;
                 }
-                bj.field_q.b(var10 + 1 + ". ", -40 + (220 + vh.field_b), var3Lifetime1Lifetime1, var11, 0);
-                bj.field_q.c(var13, vh.field_b + 220, var3Lifetime1Lifetime1, var11, 0);
+                bj.field_q.drawStringRightAligned(var10 + 1 + ". ", -40 + (220 + vh.field_b), var3Lifetime1Lifetime1, var11, 0);
+                bj.field_q.drawString(var13, vh.field_b + 220, var3Lifetime1Lifetime1, var11, 0);
                 var2 = "";
-                bj.field_q.b(qi.a(true, 0, jp.field_a, (long)var12, (byte) 113), vh.field_b + 440, var3Lifetime1Lifetime1, var11, 0);
+                bj.field_q.drawStringRightAligned(qi.a(true, 0, jp.field_a, (long)var12, (byte) 113), vh.field_b + 440, var3Lifetime1Lifetime1, var11, 0);
               }
               var3Lifetime1Lifetime1 += 20;
             }
@@ -321,8 +321,8 @@ final class vj extends al {
               var9 == -1 &&
               qm.field_b == vl.field_b.field_bb) {
               var10Lifetime1 = 16776960;
-              bj.field_q.c(ce.field_r, 220 + vh.field_b, var3Lifetime1Lifetime1, var10Lifetime1, 0);
-              bj.field_q.b(Integer.toString(vl.field_b.field_G), vh.field_b + 440, var3Lifetime1Lifetime1, var10Lifetime1, 0);
+              bj.field_q.drawString(ce.field_r, 220 + vh.field_b, var3Lifetime1Lifetime1, var10Lifetime1, 0);
+              bj.field_q.drawStringRightAligned(Integer.toString(vl.field_b.field_G), vh.field_b + 440, var3Lifetime1Lifetime1, var10Lifetime1, 0);
             }
           } else {
             var2 = oj.field_g;
@@ -331,7 +331,7 @@ final class vj extends al {
           var2 = r.field_I;
         }
         var3Lifetime2 = 6 + id.field_M + 89 + sg.field_jb.field_I + 100;
-        sg.field_jb.a(var2, vh.field_b + 330, var3Lifetime2, 0, 0);
+        sg.field_jb.drawStringCentered(var2, vh.field_b + 330, var3Lifetime2, 0, 0);
         if (param0 > -35) {
           this.field_u = (Sprite) null;
         }
@@ -341,7 +341,7 @@ final class vj extends al {
           stackIn_54_0 = k.field_r;
         }
         var2Lifetime1 = stackIn_54_0;
-        bj.field_q.a(var2Lifetime1, bd.field_d, id.field_M + 412, 14540253, 3355443);
+        bj.field_q.drawStringCentered(var2Lifetime1, bd.field_d, id.field_M + 412, 14540253, 3355443);
     }
 
     final int a(int param0, int param1) {

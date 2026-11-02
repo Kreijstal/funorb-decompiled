@@ -143,15 +143,15 @@ final class d {
               }
               var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.a(var7Lifetime1 + (lk.field_f << 1), var1_int, -lk.field_f + var8Lifetime1, (byte) -127, (cn.field_h << 1) + qh.field_f);
+                var9.a(var7Lifetime1 + (lk.field_f << 1), var1_int, -lk.field_f + var8Lifetime1, (byte) -127, (cn.field_h << 1) + Path.field_f);
               }
               var1_int = var1_int + cn.field_h;
             }
             if (0 <= var4) {
-              q.field_H.c(var6, var8Lifetime1, var1_int + el.field_n, var5, -1);
-              var1_int = var1_int + (qh.field_f + (fe.field_H + cn.field_h));
+              q.field_H.drawString(var6, var8Lifetime1, var1_int + el.field_n, var5, -1);
+              var1_int = var1_int + (Path.field_f + (fe.field_H + cn.field_h));
             } else {
-              ZombieDawn.field_K.c(var6, var8Lifetime1, var1_int + mh.field_F, var5, -1);
+              ZombieDawn.field_K.drawString(var6, var8Lifetime1, var1_int + mh.field_F, var5, -1);
               var1_int = var1_int + vl.field_r;
             }
           }

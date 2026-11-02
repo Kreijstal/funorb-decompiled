@@ -157,16 +157,16 @@ class vf implements io, ak {
             if (var12Lifetime1 != 0 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_m.a(this.b(12307, param6), (var9_int >> 1) + this.a(true, param6, param0, param4), var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
+                this.field_m.drawStringCentered(this.b(12307, param6), (var9_int >> 1) + this.a(true, param6, param0, param4), var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_m.b(this.b(12307, param6), this.a(true, param6, param0, param4) + var9_int, var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
+                  this.field_m.drawStringRightAligned(this.b(12307, param6), this.a(true, param6, param0, param4) + var9_int, var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_m.c(this.b(12307, param6), this.a(true, param6, param0, param4), var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
+              this.field_m.drawString(this.b(12307, param6), this.a(true, param6, param0, param4), var11 + this.a(param6, param1, (byte) 24, param2), param3, param5);
             }
           } else {
             this.field_m.a(this.b(12307, param6), this.a(true, param6, param0, param4), this.a(param6, param1, (byte) 24, param2), var9_int, var10, param3, param5, this.field_h, this.field_i, this.field_n);

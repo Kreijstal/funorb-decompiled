@@ -73,7 +73,7 @@ abstract class pc {
 
     final static void a(byte param0, PcmSampleStream param1) {
         try {
-          t.field_i.a(param1);
+          t.field_i.removeSubstream(param1);
           if (param0 != 13) {
             pc.b(false);
           }

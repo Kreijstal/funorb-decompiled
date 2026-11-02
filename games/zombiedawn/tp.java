@@ -296,7 +296,7 @@ final class tp extends PcmStream {
         }
     }
 
-    final PcmStream c() {
+    final PcmStream firstSubstream() {
         return null;
     }
 
@@ -390,7 +390,7 @@ final class tp extends PcmStream {
         }
     }
 
-    final PcmStream d() {
+    final PcmStream nextSubstream() {
         return null;
     }
 

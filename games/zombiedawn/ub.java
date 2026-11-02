@@ -133,11 +133,11 @@ final class ub {
         if (this.field_p == 1.0f) {
           si.field_Ub[5].setAsRenderTarget();
           Rasterizer.clear();
-          this.field_o.b(this.h(31214), -5 + Rasterizer.width, this.field_o.field_I + 5, 0, var2);
+          this.field_o.drawStringRightAligned(this.h(31214), -5 + Rasterizer.width, this.field_o.field_I + 5, 0, var2);
         } else {
           pl.field_p.setAsRenderTarget();
           Rasterizer.clear();
-          this.field_o.b(this.h(31214), -5 + Rasterizer.width, 5 + this.field_o.field_I, 2, var2);
+          this.field_o.drawStringRightAligned(this.h(31214), -5 + Rasterizer.width, 5 + this.field_o.field_I, 2, var2);
           var3 = (int)(this.field_p * (float)Rasterizer.width);
           var4 = (int)((float)Rasterizer.height * this.field_p);
           si.field_Ub[5].setAsRenderTarget();
@@ -177,13 +177,13 @@ final class ub {
         if (!this.field_l &&
           !this.field_g) {
           if (var3 <= 99) {
-            this.field_o.c(var2 + "/" + var3, 20, 2 * this.field_o.field_I - 3, 2, 65793);
+            this.field_o.drawString(var2 + "/" + var3, 20, 2 * this.field_o.field_I - 3, 2, 65793);
           } else {
-            this.field_o.c("/" + var3, 22, this.field_o.field_I * 2 + 6, 2, 65793);
-            this.field_o.c(Integer.toString(var2), 15, 6 + this.field_o.field_I, 2, 65793);
+            this.field_o.drawString("/" + var3, 22, this.field_o.field_I * 2 + 6, 2, 65793);
+            this.field_o.drawString(Integer.toString(var2), 15, 6 + this.field_o.field_I, 2, 65793);
           }
         } else {
-          this.field_o.c(Integer.toString(var2), 20, this.field_o.field_I * 2 - 3, 2, 65793);
+          this.field_o.drawString(Integer.toString(var2), 20, this.field_o.field_I * 2 - 3, 2, 65793);
         }
         vh.field_e[2].setAsRenderTarget();
         Rasterizer.clear();
@@ -198,7 +198,7 @@ final class ub {
     private final void d(int param0, int param1) {
         si.field_Ub[4].setAsRenderTarget();
         Rasterizer.clear();
-        this.field_o.b(this.b(param0 - 73, param1), -5 + Rasterizer.width, 5 + this.field_o.field_I, param0, -1);
+        this.field_o.drawStringRightAligned(this.b(param0 - 73, param1), -5 + Rasterizer.width, 5 + this.field_o.field_I, param0, -1);
         vh.field_e[4].setAsRenderTarget();
         Rasterizer.clear();
         si.field_Ub[4].h(0, 0, 16777215);
@@ -397,10 +397,10 @@ final class ub {
         String var2 = "";
         if (this.field_e) {
           var2 = s.a(1938762664, li.field_f, new String[]{Integer.toString(this.field_b), Integer.toString(this.field_k + this.field_b)});
-          this.field_o.a(var2, Rasterizer.width / 2, 5 + this.field_o.field_I, 2, 65793);
+          this.field_o.drawStringCentered(var2, Rasterizer.width / 2, 5 + this.field_o.field_I, 2, 65793);
         } else {
           var2 = kn.field_I + " " + Integer.toString(Js5Archive.field_e.field_nb);
-          bj.field_q.a(var2, Rasterizer.width / 2, 5 + this.field_o.field_I, 16777088, 65793);
+          bj.field_q.drawStringCentered(var2, Rasterizer.width / 2, 5 + this.field_o.field_I, 16777088, 65793);
         }
         pa.a(-21189);
         ki.a((byte) -93, vh.field_e[6]);
@@ -414,7 +414,7 @@ final class ub {
     private final void e(int param0) {
         si.field_Ub[3].setAsRenderTarget();
         Rasterizer.clear();
-        this.field_o.b(Integer.toString(this.field_k), -5 + Rasterizer.width, this.field_o.field_I + 5, 1, 65793);
+        this.field_o.drawStringRightAligned(Integer.toString(this.field_k), -5 + Rasterizer.width, this.field_o.field_I + 5, 1, 65793);
         vh.field_e[3].setAsRenderTarget();
         Rasterizer.clear();
         si.field_Ub[3].h(0, 0, 16777215);

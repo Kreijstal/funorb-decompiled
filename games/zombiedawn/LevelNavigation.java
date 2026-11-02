@@ -691,7 +691,7 @@ final class LevelNavigation {
           }
         }
         if (param0) {
-          this.a(true, -110, 79, -29, -111);
+          this.findPath(true, -110, 79, -29, -111);
         }
     }
 
@@ -861,7 +861,7 @@ final class LevelNavigation {
         }
     }
 
-    final qh a(boolean param0, int param1, int param2, int param3, int param4) {
+    final Path findPath(boolean param0, int param1, int param2, int param3, int param4) {
         int var14 = 0;
         boolean stackIn_17_1 = false;
         int[] stackIn_30_0 = null;
@@ -871,7 +871,7 @@ final class LevelNavigation {
         int var7;
         Point var8;
         Point var9;
-        qh var10;
+        Path var10;
         int var11;
         int var12;
         int var13;
@@ -924,7 +924,7 @@ final class LevelNavigation {
         }
         var8 = new Point(param1, param4);
         var9 = new Point(param3, param2);
-        var10 = new qh();
+        var10 = new Path();
         var10.addFirst(0, var9);
         var11 = this.a((byte) -128, var9, var8);
         var10.field_g = var11;
@@ -974,7 +974,7 @@ final class LevelNavigation {
           if (this.field_m[var12Lifetime2] == var12Lifetime2) {
             return null;
           }
-          var10.addLast(this.field_i[var12Lifetime2].c(49), -112);
+          var10.addLast(this.field_i[var12Lifetime2].copy(49), -112);
           var12Lifetime2 = this.field_m[var12Lifetime2];
         }
         return var10;
@@ -1221,8 +1221,8 @@ final class LevelNavigation {
             return;
           }
           if (UiWidget.field_w) {
-            var3_intLifetime1 = param0.a(ha.field_b, false);
-            var4Lifetime1 = param0.b(ei.field_K, true);
+            var3_intLifetime1 = param0.screenToWorldX(ha.field_b, false);
+            var4Lifetime1 = param0.screenToWorldY(ei.field_K, true);
             for (var5Lifetime1 = 0; this.field_i.length > var5Lifetime1; var5Lifetime1++) {
               var6Lifetime1 = param0.worldToScreenX(this.field_i[var5Lifetime1].x, (byte) -104);
               var7Lifetime1 = param0.worldToScreenY(this.field_i[var5Lifetime1].y, 0);

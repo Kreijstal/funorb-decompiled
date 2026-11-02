@@ -96,9 +96,9 @@ class wc extends qk {
             Rasterizer.d(12 + var3_int, var4 + 24, 260, 16711680);
             Rasterizer.e(var3_int, var4, var3_int + 260, var4 + 260, 16711680);
             Rasterizer.e(var3_int, var4, var3_int - 260, 260 + var4, 16711680);
-            bj.field_q.c(Integer.toString(this.field_G), var3_int, var4, 16777215, 0);
-            bj.field_q.c(Integer.toString(this.field_N), 20 + var3_int, var4, 16777215, 0);
-            bj.field_q.c(Integer.toString(this.state), var3_int, var4 - 20, 16777215, 0);
+            bj.field_q.drawString(Integer.toString(this.field_G), var3_int, var4, 16777215, 0);
+            bj.field_q.drawString(Integer.toString(this.field_N), 20 + var3_int, var4, 16777215, 0);
+            bj.field_q.drawString(Integer.toString(this.state), var3_int, var4 - 20, 16777215, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

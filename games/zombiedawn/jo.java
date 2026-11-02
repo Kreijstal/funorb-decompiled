@@ -22,7 +22,7 @@ final class jo extends qk {
         int var7;
         int var8;
         int var9;
-        qh var10;
+        Path var10;
         var9 = ZombieDawn.field_J;
         if (this.state == 23) {
           this.state = 0;
@@ -37,7 +37,7 @@ final class jo extends qk {
         if (this.field_Sb) {
           this.state = 23;
           if (-1 != this.field_Rb) {
-            var10 = Js5Archive.field_e.navigation.a(true, this.getX(true), this.field_Pb, this.field_Rb, this.getY(237239984));
+            var10 = Js5Archive.field_e.navigation.findPath(true, this.getX(true), this.field_Pb, this.field_Rb, this.getY(237239984));
             if (var10 != null) {
               var3_ref_kk = (Point) (var10.b((byte) 26));
               this.field_Pb = var3_ref_kk.y;
@@ -313,7 +313,7 @@ final class jo extends qk {
             var5_int = param0.worldToScreenX(this.field_yb.getX(true), (byte) -59);
             var6 = param0.worldToScreenY(this.field_yb.getY(237239984), 0);
             Rasterizer.e(var3_int, 10 + var4 - 48, var5_int, -48 + (var6 + 10), 16776960);
-            bj.field_q.c(Integer.toString(this.field_yb.state), var5_int, -48 + var6, 16777215, 0);
+            bj.field_q.drawString(Integer.toString(this.field_yb.state), var5_int, -48 + var6, 16777215, 0);
           }
           var5 = Integer.toString(this.state);
           var5Lifetime1 = Integer.toString(this.currentTile(-111) & 127);
@@ -327,7 +327,7 @@ final class jo extends qk {
             var10++;
           }
           Rasterizer.g(var3_int, var4, 3, 16776960);
-          bj.field_q.c(var5Lifetime1, var3_int, -48 + var4, 16777215, 0);
+          bj.field_q.drawString(var5Lifetime1, var3_int, -48 + var4, 16777215, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

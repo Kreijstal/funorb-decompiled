@@ -41,7 +41,7 @@ final class nk {
 
     final static boolean b(int param0) {
         lf.field_n = true;
-        qh.field_e = pd.a(-22826) + (long)param0;
+        Path.field_e = pd.a(-22826) + (long)param0;
         return 11 == fl.field_a ? true : false;
     }
 
