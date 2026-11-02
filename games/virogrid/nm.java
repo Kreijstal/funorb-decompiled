@@ -273,11 +273,11 @@ final class nm {
         int var8Lifetime1Lifetime1;
         var10 = Virogrid.field_F ? 1 : 0;
         try {
-          p.field_d = param1;
+          IntrusiveDeque.field_d = param1;
           var3_int = 120 / ((-14 - param2) / 41);
           la.field_n = true;
-          if (p.field_d == 0) {
-            var4 = sf.a((byte) 124, re.field_n, j.field_h, rf.field_b, fb.field_l);
+          if (IntrusiveDeque.field_d == 0) {
+            var4 = sf.a((byte) 124, re.field_n, j.field_h, rf.field_b, CellFlip.field_l);
             var5 = 3 + var4;
             mn.field_c = new String[var5];
             wg.field_h = new int[var5];
@@ -286,7 +286,7 @@ final class nm {
             }
             rb.field_a = new int[2];
             for (var6 = 0; var4 > var6; var6++) {
-              mn.field_c[var6] = fb.field_l[var6];
+              mn.field_c[var6] = CellFlip.field_l[var6];
             }
             mn.field_c[-3 + var5] = "";
             mn.field_c[-2 + var5] = vi.field_m;
@@ -295,8 +295,8 @@ final class nm {
             mn.field_c[-1 + var5] = je.field_I;
             wg.field_h[var5 - 1] = 1;
             rb.field_a[1] = 5;
-          } else if (1 == p.field_d) {
-            var4 = sf.a((byte) 125, re.field_n, j.field_h, rf.field_b, fb.field_l);
+          } else if (1 == IntrusiveDeque.field_d) {
+            var4 = sf.a((byte) 125, re.field_n, j.field_h, rf.field_b, CellFlip.field_l);
             var5 = var4 + 2;
             wg.field_h = new int[var5];
             mn.field_c = new String[var5];
@@ -305,18 +305,18 @@ final class nm {
             }
             rb.field_a = new int[1];
             for (var6 = 0; var6 < var4; var6++) {
-              mn.field_c[var6] = fb.field_l[var6];
+              mn.field_c[var6] = CellFlip.field_l[var6];
             }
             mn.field_c[-2 + var5] = "";
             mn.field_c[var5 - 1] = je.field_I;
             wg.field_h[-1 + var5] = 0;
             rb.field_a[0] = 5;
-          } else if (2 != p.field_d) {
-            if (p.field_d == 3) {
+          } else if (2 != IntrusiveDeque.field_d) {
+            if (IntrusiveDeque.field_d == 3) {
               if (!ei.field_c.field_a) {
-                var4 = sf.a((byte) 127, fd.field_x, j.field_h, rf.field_b, fb.field_l);
+                var4 = sf.a((byte) 127, fd.field_x, j.field_h, rf.field_b, CellFlip.field_l);
               } else {
-                var4 = sf.a((byte) 120, eh.field_h, j.field_h, rf.field_b, fb.field_l);
+                var4 = sf.a((byte) 120, eh.field_h, j.field_h, rf.field_b, CellFlip.field_l);
               }
               var5 = 2 + var4;
               mn.field_c = new String[var5];
@@ -326,14 +326,14 @@ final class nm {
               }
               rb.field_a = new int[1];
               for (var6 = 0; var4 > var6; var6++) {
-                mn.field_c[var6] = fb.field_l[var6];
+                mn.field_c[var6] = CellFlip.field_l[var6];
               }
               mn.field_c[-2 + var5] = "";
               mn.field_c[var5 - 1] = je.field_I;
               wg.field_h[var5 - 1] = 0;
               rb.field_a[0] = 5;
-            } else if (p.field_d == 4) {
-              var4 = sf.a((byte) 120, tl.field_j, j.field_h, rf.field_b, fb.field_l);
+            } else if (IntrusiveDeque.field_d == 4) {
+              var4 = sf.a((byte) 120, tl.field_j, j.field_h, rf.field_b, CellFlip.field_l);
               var5 = var4 + 2;
               wg.field_h = new int[var5];
               mn.field_c = new String[var5];
@@ -342,17 +342,17 @@ final class nm {
               }
               rb.field_a = new int[1];
               for (var6 = 0; var6 < var4; var6++) {
-                mn.field_c[var6] = fb.field_l[var6];
+                mn.field_c[var6] = CellFlip.field_l[var6];
               }
               mn.field_c[-2 + var5] = "";
               mn.field_c[var5 - 1] = je.field_I;
               wg.field_h[-1 + var5] = 0;
               rb.field_a[0] = 5;
             } else {
-              if (p.field_d != 5) {
+              if (IntrusiveDeque.field_d != 5) {
                 throw new IllegalArgumentException();
               }
-              var4 = sf.a((byte) 123, el.field_i, j.field_h, rf.field_b, fb.field_l);
+              var4 = sf.a((byte) 123, el.field_i, j.field_h, rf.field_b, CellFlip.field_l);
               var5 = var4 + 3;
               mn.field_c = new String[var5];
               wg.field_h = new int[var5];
@@ -361,7 +361,7 @@ final class nm {
               }
               rb.field_a = new int[2];
               for (var6 = 0; var6 < var4; var6++) {
-                mn.field_c[var6] = fb.field_l[var6];
+                mn.field_c[var6] = CellFlip.field_l[var6];
               }
               mn.field_c[-3 + var5] = "";
               mn.field_c[-2 + var5] = vf.field_a;
@@ -372,10 +372,10 @@ final class nm {
               rb.field_a[1] = 5;
             }
           } else {
-            var4 = sf.a((byte) 121, oi.a(new String[]{"<br><%0><br>"}, ji.field_d, 2), j.field_h, rf.field_b, fb.field_l);
+            var4 = sf.a((byte) 121, oi.a(new String[]{"<br><%0><br>"}, ji.field_d, 2), j.field_h, rf.field_b, CellFlip.field_l);
             var5 = -1;
             for (var6 = 0; var6 < var4; var6++) {
-              if (!"<%0>".equals(fb.field_l[var6])) {
+              if (!"<%0>".equals(CellFlip.field_l[var6])) {
                 continue;
               }
               var5 = var6;
@@ -385,13 +385,13 @@ final class nm {
               throw new IllegalStateException();
             }
             rj.field_d = new String[var5];
-            ek.a(fb.field_l, 0, rj.field_d, 0, var5);
+            ek.a(CellFlip.field_l, 0, rj.field_d, 0, var5);
             eh.field_j = new String[-1 + var4 - var5];
-            ek.a(fb.field_l, 1 + var5, eh.field_j, 0, -var5 + var4 - 1);
-            var4 = sf.a((byte) 124, oi.a(new String[]{"<br><%0><br>"}, mh.field_e, 2), j.field_h, rf.field_b, fb.field_l);
+            ek.a(CellFlip.field_l, 1 + var5, eh.field_j, 0, -var5 + var4 - 1);
+            var4 = sf.a((byte) 124, oi.a(new String[]{"<br><%0><br>"}, mh.field_e, 2), j.field_h, rf.field_b, CellFlip.field_l);
             var5 = -1;
             for (var6 = 0; var4 > var6; var6++) {
-              if (!"<%0>".equals(fb.field_l[var6])) {
+              if (!"<%0>".equals(CellFlip.field_l[var6])) {
                 continue;
               }
               var5 = var6;
@@ -401,9 +401,9 @@ final class nm {
               throw new IllegalStateException();
             }
             dh.field_o = new String[var5];
-            ek.a(fb.field_l, 0, dh.field_o, 0, var5);
+            ek.a(CellFlip.field_l, 0, dh.field_o, 0, var5);
             de.field_rb = new String[-var5 + var4 - 1];
-            ek.a(fb.field_l, var5 + 1, de.field_rb, 0, -var5 + (var4 - 1));
+            ek.a(CellFlip.field_l, var5 + 1, de.field_rb, 0, -var5 + (var4 - 1));
             if (dh.field_o.length > rj.field_d.length) {
               stackIn_52_0 = dh.field_o.length;
             } else {
@@ -467,7 +467,7 @@ final class nm {
               var4Lifetime1 = var6Lifetime1;
             }
           }
-          if (p.field_d == 2) {
+          if (IntrusiveDeque.field_d == 2) {
             var11 = rj.field_d;
             var5_ref_String__ = var11;
             for (var6Lifetime2 = 0; var11.length > var6Lifetime2; var6Lifetime2++) {
@@ -519,7 +519,7 @@ final class nm {
             }
             var5Lifetime3++;
           }
-          if (p.field_d != 2) {
+          if (IntrusiveDeque.field_d != 2) {
             co.field_k.a(param0, pn.a(hk.field_Jb, nl.field_u, (byte) 111), -563, 0);
           } else {
             co.field_k.a(param0, -1, -563, -1);

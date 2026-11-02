@@ -29,9 +29,9 @@ final class ib {
     final static void b(int param0) {
         int var1 = ve.field_t * ve.field_t;
         int var2 = var1 - db.field_D * db.field_D;
-        int var3 = vf.field_c + (p.field_h - vf.field_c) * var2 / var1;
+        int var3 = vf.field_c + (IntrusiveDeque.field_h - vf.field_c) * var2 / var1;
         we.field_c.a(oh.field_f, 120, 640, (byte) -85, var3);
-        ql.a((byte) 118, 5, 640, qi.field_d, 0, p.field_h - 24, dl.field_b);
+        ql.a((byte) 118, 5, 640, qi.field_d, 0, IntrusiveDeque.field_h - 24, dl.field_b);
         if (param0 < -3) {
           return;
         }

@@ -8,19 +8,19 @@ class fd extends fi implements ja {
     static km field_y;
     static String[] field_A;
     static int[] field_B;
-    p field_z;
+    IntrusiveDeque field_z;
     static int field_C;
 
     fd(int param0, int param1, int param2, int param3, ol param4) {
         super(param0, param1, param2, param3, param4, (cd) null);
-        this.field_z = new p();
+        this.field_z = new IntrusiveDeque();
     }
 
     final int b(byte param0) {
         int var5 = 0;
         int var6 = Virogrid.field_F ? 1 : 0;
         int var2 = 0;
-        ma var3 = new ma(this.field_z);
+        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_z);
         if (param0 != -39) {
           field_x = (String) null;
         }
@@ -39,7 +39,7 @@ class fd extends fi implements ja {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
-        ma var5 = null;
+        IntrusiveDequeCursor var5 = null;
         fi var6 = null;
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -54,7 +54,7 @@ class fd extends fi implements ja {
           if (param3 < 48) {
             field_C = 97;
           }
-          var5 = new ma(this.field_z);
+          var5 = new IntrusiveDequeCursor(this.field_z);
           var6 = (fi) (var5.c(12677));
           while (var6 != null) {
             discarded$3 = param1.append('\n');
@@ -156,7 +156,7 @@ class fd extends fi implements ja {
     }
 
     final boolean a(int param0, fi param1, int param2, int param3, int param4, int param5, int param6) {
-        ma var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         fi var9 = null;
         int var10 = 0;
@@ -166,7 +166,7 @@ class fd extends fi implements ja {
         RuntimeException decompiledCaughtException = null;
         var10 = Virogrid.field_F ? 1 : 0;
         try {
-          var8 = new ma(this.field_z);
+          var8 = new IntrusiveDequeCursor(this.field_z);
           if (param5 != 0) {
             this.f(false);
           }
@@ -225,10 +225,10 @@ class fd extends fi implements ja {
     final boolean b(int param0, fi param1) {
         RuntimeException var3 = null;
         fi var4 = null;
-        ma var5 = null;
+        IntrusiveDequeCursor var5 = null;
         fi var6 = null;
         int var7 = 0;
-        ma var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -241,11 +241,11 @@ class fd extends fi implements ja {
           if (this.field_z.b((byte) 32)) {
             return false;
           }
-          var8 = new ma(this.field_z);
+          var8 = new IntrusiveDequeCursor(this.field_z);
           var4 = (fi) (var8.a((byte) 48));
           while (var4 != null) {
             if (var4.f(true)) {
-              var5 = new ma(this.field_z);
+              var5 = new IntrusiveDequeCursor(this.field_z);
               var5.b(1, var4);
               var6 = (fi) (var5.a(-1));
               while (var6 != null) {
@@ -275,7 +275,7 @@ class fd extends fi implements ja {
 
     private final void d(byte param0) {
         int var4 = Virogrid.field_F ? 1 : 0;
-        ma var2 = new ma(this.field_z);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_z);
         fi var3 = (fi) (var2.c(12677));
         if (param0 >= -17) {
           field_A = (String[]) null;
@@ -292,7 +292,7 @@ class fd extends fi implements ja {
         int var7 = 0;
         int var8 = 0;
         fi var9 = null;
-        ma var10 = null;
+        IntrusiveDequeCursor var10 = null;
         boolean stackIn_14_0 = false;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -300,7 +300,7 @@ class fd extends fi implements ja {
         RuntimeException decompiledCaughtException = null;
         var8 = Virogrid.field_F ? 1 : 0;
         try {
-          var10 = new ma(this.field_z);
+          var10 = new IntrusiveDequeCursor(this.field_z);
           var9 = (fi) (var10.c(12677));
           while (var9 != null) {
             if (var9.b(false)) {
@@ -339,7 +339,7 @@ class fd extends fi implements ja {
     }
 
     final boolean a(fi param0, int param1) {
-        ma var3 = null;
+        IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         fi var4 = null;
         int var5 = 0;
@@ -349,7 +349,7 @@ class fd extends fi implements ja {
         RuntimeException decompiledCaughtException = null;
         var5 = Virogrid.field_F ? 1 : 0;
         try {
-          var3 = new ma(this.field_z);
+          var3 = new IntrusiveDequeCursor(this.field_z);
           var4 = (fi) (var3.c(12677));
           if (param1 != -8515) {
             this.f(false);
@@ -376,7 +376,7 @@ class fd extends fi implements ja {
     }
 
     final static void a(boolean param0, int param1) {
-        wb.a(true, (byte) 125, param0);
+        DualLinkNode.a(true, (byte) 125, param0);
         if (param1 != -20248) {
           field_C = 51;
         }
@@ -400,7 +400,7 @@ class fd extends fi implements ja {
           this.field_w != null) {
           this.field_w.a(param1, (fi) (this), true, param2, -23294);
         }
-        ma var5 = new ma(this.field_z);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_z);
         fi var6 = (fi) (var5.a((byte) 48));
         while (var6 != null) {
           var6.a((byte) 37, this.field_l + param1, this.field_u + param2, param3);
@@ -410,7 +410,7 @@ class fd extends fi implements ja {
 
     final boolean f(boolean param0) {
         if (!param0) {
-          this.field_z = (p) null;
+          this.field_z = (IntrusiveDeque) null;
         }
         return this.c((byte) -3) != null ? true : false;
     }
@@ -418,10 +418,10 @@ class fd extends fi implements ja {
     final boolean a(int param0, fi param1) {
         RuntimeException var3 = null;
         fi var4 = null;
-        ma var5 = null;
+        IntrusiveDequeCursor var5 = null;
         fi var6 = null;
         int var7 = 0;
-        ma var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -434,11 +434,11 @@ class fd extends fi implements ja {
           if (param0 != -16234) {
             return false;
           }
-          var8 = new ma(this.field_z);
+          var8 = new IntrusiveDequeCursor(this.field_z);
           var4 = (fi) (var8.c(12677));
           while (var4 != null) {
             if (var4.f(true)) {
-              var5 = new ma(this.field_z);
+              var5 = new IntrusiveDequeCursor(this.field_z);
               var5.a(param0 + 16150, var4);
               var6 = (fi) (var5.b(41));
               while (var6 != null) {
@@ -466,7 +466,7 @@ class fd extends fi implements ja {
     }
 
     final boolean a(fi param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
-        ma var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         fi var9 = null;
         int var10 = 0;
@@ -476,7 +476,7 @@ class fd extends fi implements ja {
         RuntimeException decompiledCaughtException = null;
         var10 = Virogrid.field_F ? 1 : 0;
         try {
-          var8 = new ma(this.field_z);
+          var8 = new IntrusiveDequeCursor(this.field_z);
           if (param2) {
             this.d((byte) -71);
           }
@@ -508,7 +508,7 @@ class fd extends fi implements ja {
 
     final void c(int param0) {
         int var4 = Virogrid.field_F ? 1 : 0;
-        ma var2 = new ma(this.field_z);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_z);
         if (param0 != -1) {
           return;
         }
@@ -522,7 +522,7 @@ class fd extends fi implements ja {
     String d(int param0) {
         String var4 = null;
         int var5 = Virogrid.field_F ? 1 : 0;
-        ma var2 = new ma(this.field_z);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_z);
         fi var3 = (fi) (var2.c(12677));
         while (var3 != null) {
           var4 = var3.d(70);
@@ -539,11 +539,11 @@ class fd extends fi implements ja {
     }
 
     fi c(byte param0) {
-        ma var2;
+        IntrusiveDequeCursor var2;
         fi var3;
         int var4;
         var4 = Virogrid.field_F ? 1 : 0;
-        var2 = new ma(this.field_z);
+        var2 = new IntrusiveDequeCursor(this.field_z);
         if (param0 != -3) {
           field_x = (String) null;
         }
@@ -559,7 +559,7 @@ class fd extends fi implements ja {
 
     void a(int param0, int param1, fi param2, int param3) {
         RuntimeException runtimeException = null;
-        ma var5 = null;
+        IntrusiveDequeCursor var5 = null;
         fi var6 = null;
         int var7 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -569,7 +569,7 @@ class fd extends fi implements ja {
         var7 = Virogrid.field_F ? 1 : 0;
         try {
           super.a(param0, 114, param2, param3);
-          var5 = new ma(this.field_z);
+          var5 = new IntrusiveDequeCursor(this.field_z);
           if (param1 < 113) {
             field_C = 3;
           }
@@ -598,7 +598,7 @@ class fd extends fi implements ja {
     }
 
     final void a(int param0, int param1, int param2, fi param3, int param4, int param5) {
-        ma var7 = null;
+        IntrusiveDequeCursor var7 = null;
         fi var8 = null;
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -608,7 +608,7 @@ class fd extends fi implements ja {
         RuntimeException var7_ref = null;
         var9 = Virogrid.field_F ? 1 : 0;
         try {
-          var7 = new ma(this.field_z);
+          var7 = new IntrusiveDequeCursor(this.field_z);
           var8 = (fi) (var7.c(12677));
           while (var8 != null) {
             if (var8.b(false)) {

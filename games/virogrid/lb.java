@@ -50,7 +50,7 @@ final class lb {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        p var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         lk var12 = null;
@@ -151,7 +151,7 @@ final class lb {
           var10 = param2.field_Jb.field_W;
           var11 = null;
           var12 = (lk) (var10.a((byte) -36));
-          L12: while (true) {
+          scanLoop1: while (true) {
             stackIn_73_0 = null;
             if (stackIn_73_0 != var12) {
               var13 = 0;
@@ -199,7 +199,7 @@ final class lb {
               var19 = 0;
               var20 = var12.field_Eb;
               var21 = 72;
-              if (uf.field_j == param2) {
+              if (GameBoard.field_j == param2) {
                 var21 += 42;
               }
               var20 = e.a(var12.field_Lb.field_C, var20, var21);
@@ -322,7 +322,7 @@ final class lb {
                   if (var12.field_Mb.field_nb != 0) {
                     w.a((byte) 74, var12.field_Ob, param1);
                   } else {
-                    p.a(0, ii.field_b, false, a.field_y, 0, var12, param2);
+                    IntrusiveDeque.a(0, ii.field_b, false, a.field_y, 0, var12, param2);
                   }
                   decompiledFrameRemainder0 = false;
                 }
@@ -467,7 +467,7 @@ final class lb {
               }
               var11 = var12;
               var12 = (lk) (var10.a(16213));
-              continue L12;
+              continue scanLoop1;
             }
             break;
           }
@@ -542,7 +542,7 @@ final class lb {
                 this.var4 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                jc.field_k = param1;
+                PacketBuffer.field_k = param1;
                 var2 = rh.a("loginm3", (byte) -114);
                 if (var2 != null) {
                   wa.field_L = i.a(-2022, var2);
@@ -585,7 +585,7 @@ final class lb {
                 }
                 var2 = rh.a("create_ineligible", (byte) -72);
                 if (null != var2) {
-                  ma.field_d = i.a(param0 - 2021, var2);
+                  IntrusiveDequeCursor.field_d = i.a(param0 - 2021, var2);
                 }
                 var2 = rh.a("usernameprompt", (byte) -66);
                 if (var2 != null) {
@@ -765,7 +765,7 @@ final class lb {
                 }
                 var2 = rh.a("mu_gamelist_all_games", (byte) -69);
                 if (null != var2) {
-                  uf.field_o = i.a(-2022, var2);
+                  GameBoard.field_o = i.a(-2022, var2);
                 }
                 var2 = rh.a("mu_gamelist_status", (byte) -111);
                 if (null != var2) {
@@ -993,7 +993,7 @@ final class lb {
                 }
                 var2 = rh.a("searching_for_opponent_singular", (byte) -81);
                 if (var2 != null) {
-                  ma.field_f = i.a(-2022, var2);
+                  IntrusiveDequeCursor.field_f = i.a(-2022, var2);
                 }
                 var2 = rh.a("searching_for_opponents_plural", (byte) -113);
                 if (null != var2) {
@@ -1005,7 +1005,7 @@ final class lb {
                 }
                 var2 = rh.a("find_opponents_plural", (byte) -119);
                 if (var2 != null) {
-                  p.field_g = i.a(-2022, var2);
+                  IntrusiveDeque.field_g = i.a(-2022, var2);
                 }
                 var2 = rh.a("rated_game_tips_setup_singular", (byte) -103);
                 if (null != var2) {
@@ -1033,7 +1033,7 @@ final class lb {
                 }
                 var2 = rh.a("join_requests_many", (byte) -102);
                 if (var2 != null) {
-                  l.field_e = i.a(-2022, var2);
+                  IntrusiveNode.field_e = i.a(-2022, var2);
                 }
                 var2 = rh.a("xs_game", (byte) -99);
                 if (null != var2) {
@@ -1523,11 +1523,11 @@ final class lb {
                 }
                 var2 = rh.a("pleaselogin_member", (byte) -104);
                 if (null != var2) {
-                  jc.field_j = i.a(-2022, var2);
+                  PacketBuffer.field_j = i.a(-2022, var2);
                 }
                 var2 = rh.a("invaliduserorpass", (byte) -126);
                 if (var2 != null) {
-                  wb.field_g = i.a(-2022, var2);
+                  DualLinkNode.field_g = i.a(-2022, var2);
                 }
                 var2 = rh.a("pleasetryagain", (byte) -61);
                 if (null != var2) {
@@ -2135,7 +2135,7 @@ final class lb {
                 }
                 var2 = rh.a("create_alert_invalidemail", (byte) -77);
                 if (var2 != null) {
-                  ma.field_a = i.a(-2022, var2);
+                  IntrusiveDequeCursor.field_a = i.a(-2022, var2);
                 }
                 var2 = rh.a("create_alert_email_unavailable", (byte) -100);
                 if (null != var2) {
@@ -2421,7 +2421,7 @@ final class lb {
                 }
                 var2 = rh.a("achievements", (byte) -117);
                 if (null != var2) {
-                  uf.field_F = i.a(param0 ^ 2021, var2);
+                  GameBoard.field_F = i.a(param0 ^ 2021, var2);
                 }
                 var2 = rh.a("achievementsthisgame", (byte) -77);
                 if (var2 != null) {
@@ -2489,7 +2489,7 @@ final class lb {
                 }
                 var2 = rh.a("newgame", (byte) -82);
                 if (null != var2) {
-                  wb.field_l = i.a(-2022, var2);
+                  DualLinkNode.field_l = i.a(-2022, var2);
                 }
                 var2 = rh.a("resumegame", (byte) -75);
                 if (null != var2) {
@@ -2785,7 +2785,7 @@ final class lb {
                 }
                 var2 = rh.a("orbcoins_colon", (byte) -87);
                 if (null != var2) {
-                  wb.field_i = i.a(-2022, var2);
+                  DualLinkNode.field_i = i.a(-2022, var2);
                 }
                 var2 = rh.a("achieved_colon_description", (byte) -103);
                 if (null != var2) {
@@ -2853,11 +2853,11 @@ final class lb {
                 }
                 var2 = rh.a("mp_cancelrematch", (byte) -84);
                 if (null != var2) {
-                  ic.field_s = i.a(-2022, var2);
+                  GameSession.field_s = i.a(-2022, var2);
                 }
                 var2 = rh.a("mp_cancelrematch_unrated", (byte) -128);
                 if (null != var2) {
-                  ic.field_b = i.a(-2022, var2);
+                  GameSession.field_b = i.a(-2022, var2);
                 }
                 var2 = rh.a("mp_rematchnewgame", (byte) -126);
                 if (var2 != null) {
@@ -2949,7 +2949,7 @@ final class lb {
                 }
                 var2 = rh.a("mp_showchat_nounread", (byte) -73);
                 if (var2 != null) {
-                  wb.field_n = i.a(param0 ^ 2021, var2);
+                  DualLinkNode.field_n = i.a(param0 ^ 2021, var2);
                 }
                 var2 = rh.a("mp_showchat_unread1", (byte) -70);
                 if (var2 != null) {
@@ -3528,7 +3528,7 @@ final class lb {
                 if (var2 != null) {
                   i.a(param0 - 2021, var2);
                 }
-                jc.field_k = null;
+                PacketBuffer.field_k = null;
             }
             void run() {
                 var3 = Virogrid.field_F ? 1 : 0;
@@ -3554,9 +3554,9 @@ final class lb {
                   throw kg.a((Throwable) ((Object) stackIn_2620_0), ((StringBuilder) (Object) stackIn_2620_1).append(stackIn_2621_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  var4 = uk.field_f;
+                  var4 = GameApplet.field_f;
                   var4++;
-                  uk.field_f = var4;
+                  GameApplet.field_f = var4;
                 }
             }
         }

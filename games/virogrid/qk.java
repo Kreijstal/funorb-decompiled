@@ -4,14 +4,14 @@
 final class qk {
     static String[] field_d;
     static int field_b;
-    private wb field_c;
-    private wb field_a;
+    private DualLinkNode field_c;
+    private DualLinkNode field_a;
 
-    final wb d(int param0) {
+    final DualLinkNode d(int param0) {
         if (param0 != -1) {
-          this.field_a = (wb) null;
+          this.field_a = (DualLinkNode) null;
         }
-        wb var2 = this.field_c.field_h;
+        DualLinkNode var2 = this.field_c.field_h;
         if (this.field_c == var2) {
           this.field_a = null;
           return null;
@@ -65,7 +65,7 @@ final class qk {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        p var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         lk var18_ref = null;
@@ -88,7 +88,7 @@ final class qk {
           boolean decompiledFrameCompleted1 = true;
           rf.a(th.field_z, -4);
           if (wl.field_d != null) {
-            fb.field_o.field_Y = true;
+            CellFlip.field_o.field_Y = true;
             var22 = ed.field_c;
             var27 = var22;
             ed.field_c.field_ub = 0;
@@ -117,7 +117,7 @@ final class qk {
               ed.field_c.field_vb = bd.field_b.field_vb;
               if (0 < ea.field_a) {
                 if (1 != ea.field_a) {
-                  var10_ref_String = oi.a(new String[]{Integer.toString(ea.field_a)}, l.field_e, 2);
+                  var10_ref_String = oi.a(new String[]{Integer.toString(ea.field_a)}, IntrusiveNode.field_e, 2);
                   if (var19 != 0) {
                     var10_ref_String = w.field_M;
                   }
@@ -151,12 +151,12 @@ final class qk {
                   hk.field_Lb[var11_int] = false;
                   var11_int++;
                 } while (var19 == 0);
-                L18: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11_int = 0;
                     stackIn_69_0 = 0;
                     if (var19 != 0) {
-                      break L18;
+                      break scanLoop1;
                     }
                     var12 = stackIn_69_0;
                     while (true) {
@@ -169,7 +169,7 @@ final class qk {
                         var13 = var20;
                         stackIn_63_0 = 0;
                         var14_int = stackIn_63_0;
-                        L25: while (true) {
+                        scanLoop2: while (true) {
                           if (var14_int < var26.length) {
                             var15 = var26[var14_int];
                             var16 = var20[var14_int + 1];
@@ -177,7 +177,7 @@ final class qk {
                             stackIn_54_1 = ~var15;
                             if (stackIn_54_0 != stackIn_54_1) {
                               if (~(255 & wl.field_d.field_Pb[var15]) != ~var16) {
-                                break L25;
+                                break scanLoop2;
                               }
                             } else {
                               if (0 != var10) {
@@ -188,7 +188,7 @@ final class qk {
                               var17_int = stackIn_47_0;
                               if (~var17_int != ~var16 &&
                                 var19 == 0) {
-                                break L25;
+                                break scanLoop2;
                               }
                             }
                             var14_int += 2;
@@ -293,14 +293,14 @@ final class qk {
                   var16 = 0;
                   var17 = wm.field_r.field_Jb.field_W;
                   var18_ref = (lk) (var17.a((byte) -72));
-                  L50: while (true) {
+                  scanLoop3: while (true) {
                     boolean decompiledFrameRemainder2 = true;
                     if (var18_ref != null) {
                       stackOut_109_0 = var18_ref.g(0);
                       stackIn_125_0 = stackOut_109_0 ? 1 : 0;
                       stackIn_110_0 = stackOut_109_0;
                       if (var19 != 0) {
-                        break L50;
+                        break scanLoop3;
                       }
                       if (!stackIn_110_0) {
                         if (var11_int != 0 &&
@@ -486,7 +486,7 @@ final class qk {
             stackIn_192_0 = null;
           }
           if (stackIn_192_0 != wl.field_d) {
-            if (fb.field_o.field_nb != 0) {
+            if (CellFlip.field_o.field_nb != 0) {
               nn.a(wl.field_d.e((byte) -124), param1, (byte) -128);
             }
             if (ii.field_d.field_nb != 0) {
@@ -508,15 +508,15 @@ final class qk {
         }
     }
 
-    final void a(wb param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         try {
           if (null != param0.field_k) {
             param0.c(78);
           }
           param0.field_k = this.field_c.field_k;
           if (param1 < 87) {
-            wb var4 = (wb) null;
-            this.a((wb) null, (byte) 78);
+            DualLinkNode var4 = (DualLinkNode) null;
+            this.a((DualLinkNode) null, (byte) 78);
           }
           param0.field_h = this.field_c;
           param0.field_k.field_h = param0;
@@ -548,7 +548,7 @@ final class qk {
 
     final int b(int param0) {
         int var2;
-        wb var3;
+        DualLinkNode var3;
         int var4;
         var4 = Virogrid.field_F ? 1 : 0;
         var2 = param0;
@@ -603,8 +603,8 @@ final class qk {
         }
     }
 
-    final wb a(byte param0) {
-        wb var2 = this.field_c.field_h;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_c.field_h;
         if (param0 != -103) {
           java.applet.Applet var3 = (java.applet.Applet) null;
           qk.a((String) null, (java.applet.Applet) null, -78);
@@ -616,15 +616,15 @@ final class qk {
         return var2;
     }
 
-    final wb a(int param0) {
-        wb var2 = this.field_a;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_a;
         if (this.field_c == var2) {
           this.field_a = null;
           return null;
         }
         this.field_a = var2.field_h;
         if (param0 != 26605) {
-          this.field_a = (wb) null;
+          this.field_a = (DualLinkNode) null;
         }
         return var2;
     }
@@ -658,7 +658,7 @@ final class qk {
     }
 
     public qk() {
-        this.field_c = new wb();
+        this.field_c = new DualLinkNode();
         this.field_c.field_h = this.field_c;
         this.field_c.field_k = this.field_c;
     }

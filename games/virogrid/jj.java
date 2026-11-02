@@ -15,7 +15,7 @@ final class jj {
     static km field_m;
     static String field_i;
     private int field_h;
-    static uk field_n;
+    static GameApplet field_n;
 
     final void a(int param0) {
         this.field_h = 256;
@@ -176,7 +176,7 @@ final class jj {
           var10_int = (var10_int + 7) / 8;
           pm.field_p = new byte[var10_int];
           if (param9.field_W == null) {
-            param9.field_W = new p();
+            param9.field_W = new IntrusiveDeque();
           }
           ci.field_o = param9.field_W;
           ci.field_o.a(false);
@@ -186,13 +186,13 @@ final class jj {
           sb.field_i = -1;
           wl.field_b = 0;
           if (null == param1.field_W) {
-            param1.field_W = new p();
+            param1.field_W = new IntrusiveDeque();
           }
           te.field_f = param1.field_W;
           te.field_f.a(false);
-          ma.field_c = new kf(param5);
+          IntrusiveDequeCursor.field_c = new kf(param5);
           if (null == param4.field_W) {
-            param4.field_W = new p();
+            param4.field_W = new IntrusiveDeque();
           }
           qm.field_Mb = param4.field_W;
           qm.field_Mb.a(false);

@@ -248,8 +248,8 @@ final class jd {
           kh.field_b.field_vb = he.a(ke.a(32, param3, "lobby", "heading"), 0);
           wn.field_m = new km(0L, (km) null);
           wn.field_m.field_vb = lm.a(4210752, 124, 120, 8421504, false, false);
-          p.field_a = new km(0L, (km) null);
-          p.field_a.field_vb = ne.a(114, 3, 1, (byte) 106, 6316128, 6316128);
+          IntrusiveDeque.field_a = new km(0L, (km) null);
+          IntrusiveDeque.field_a.field_vb = ne.a(114, 3, 1, (byte) 106, 6316128, 6316128);
           s.field_f = new km(0L, (km) null);
           s.field_f.field_vb = he.a(ke.a(32, param3, "lobby", "popup"), 0);
           var12 = he.a(ke.a(32, param3, "lobby", "popup_mouseover"), 0);
@@ -279,13 +279,13 @@ final class jd {
           }
           ti.field_h.field_D = 1;
           ti.field_h.field_fb = pg.field_e;
-          ma.field_e = new km(0L, ti.field_h);
-          ma.field_e.field_E = 16764006;
-          ma.field_e.field_db = 8421504;
-          ma.field_e.field_ab = 16777215;
-          ma.field_e.field_bb = 16777215;
-          ma.field_e.field_A = 16777215;
-          var15 = new km(0L, ma.field_e);
+          IntrusiveDequeCursor.field_e = new km(0L, ti.field_h);
+          IntrusiveDequeCursor.field_e.field_E = 16764006;
+          IntrusiveDequeCursor.field_e.field_db = 8421504;
+          IntrusiveDequeCursor.field_e.field_ab = 16777215;
+          IntrusiveDequeCursor.field_e.field_bb = 16777215;
+          IntrusiveDequeCursor.field_e.field_A = 16777215;
+          var15 = new km(0L, IntrusiveDequeCursor.field_e);
           var15.field_E = 16777215;
           var15.field_C = (e) ((Object) var7);
           var15.field_fb = pg.field_e;
@@ -296,12 +296,12 @@ final class jd {
           ke.field_u.field_vb = lm.a(1513239, 99, 16, 1513239, false, false);
           ke.field_u.field_z = 2;
           field_d = new km(0L, da.field_n);
-          field_d.b(18003, ma.field_e);
+          field_d.b(18003, IntrusiveDequeCursor.field_e);
           gg.field_F = new km(0L, ke.field_u);
-          gg.field_F.b(18003, ma.field_e);
+          gg.field_F.b(18003, IntrusiveDequeCursor.field_e);
           var16 = ke.a(32, param3, "lobby", "button_mouseover");
-          sd.field_f = new ga(s.field_f, var12, ti.field_h, ma.field_e, 3, 2, dl.field_b, 3, pg.field_e);
-          od.field_y = new km(0L, ma.field_e);
+          sd.field_f = new ga(s.field_f, var12, ti.field_h, IntrusiveDequeCursor.field_e, 3, 2, dl.field_b, 3, pg.field_e);
+          od.field_y = new km(0L, IntrusiveDequeCursor.field_e);
           od.field_y.field_x = var16;
           od.field_y.field_vb = var13;
           od.field_y.field_O = 1;
@@ -312,7 +312,7 @@ final class jd {
           od.field_y.field_cb = ke.a(32, param3, "lobby", "button_active");
           od.field_y.field_L = ke.a(32, param3, "lobby", "button_disabled");
           od.field_y.field_lb = 1;
-          ve.field_w = new km(0L, ma.field_e);
+          ve.field_w = new km(0L, IntrusiveDequeCursor.field_e);
           ve.field_w.field_lb = 1;
           ve.field_w.field_vb = he.a(ke.a(32, param3, "lobby", "tab_inactive"), 0);
           ve.field_w.field_x = he.a(ke.a(32, param3, "lobby", "tab_mouseover"), 0);
@@ -328,7 +328,7 @@ final class jd {
           bd.field_b.field_hb = 1;
           bd.field_b.field_R = 1;
           fa.field_n = new km(0L, bd.field_b);
-          eb.field_c = new km(0L, ma.field_e);
+          eb.field_c = new km(0L, IntrusiveDequeCursor.field_e);
           eb.field_c.field_lb = 1;
           eb.field_c.field_O = 1;
           eb.field_c.field_hb = 1;
@@ -380,7 +380,7 @@ final class jd {
           nb.field_r.field_cb = dupTemp$3;
           nb.field_r.field_T = dupTemp$3;
           var17 = ke.a(32, param3, "lobby", "checkbox");
-          vd.field_Z = new en(0L, var17[1], var17[0], 1, ma.field_e, (String) null);
+          vd.field_Z = new en(0L, var17[1], var17[0], 1, IntrusiveDequeCursor.field_e, (String) null);
           ld.field_b = new km(0L, (km) null);
           ld.field_b.field_vb = qc.a(109, sn.a(param3, "slideregion", "lobby", false));
           ld.field_b.field_x = qc.a(125, sn.a(param3, "slideregion_mouseover", "lobby", false));
@@ -436,7 +436,7 @@ final class jd {
         }
     }
 
-    final void a(byte param0, byte[] param1, jc param2) {
+    final void a(byte param0, byte[] param1, PacketBuffer param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -450,13 +450,13 @@ final class jd {
             if (param0 != 50) {
               field_a = (String) null;
             }
-            if (param2.field_g[param2.field_l] == 31 &&
-              param2.field_g[1 + param2.field_l] == -117) {
+            if (param2.payload[param2.position] == 31 &&
+              param2.payload[1 + param2.position] == -117) {
               if (this.field_c == null) {
                 this.field_c = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_c.setInput(param2.field_g, 10 + param2.field_l, param2.field_g.length - 10 + (-param2.field_l - 8));
+                this.field_c.setInput(param2.payload, 10 + param2.position, param2.payload.length - 10 + (-param2.position - 8));
                 this.field_c.inflate(param1);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

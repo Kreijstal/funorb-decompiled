@@ -18,7 +18,7 @@ final class vj {
 
     final static void a(eh param0, eh param1, boolean param2, boolean param3) {
         try {
-          kb.a(pl.field_a, ma.field_e, ub.field_z, ti.field_h, ke.field_u, da.field_n, p.field_a, wn.field_m, param2, -112, em.field_d, nb.field_r);
+          kb.a(pl.field_a, IntrusiveDequeCursor.field_e, ub.field_z, ti.field_h, ke.field_u, da.field_n, IntrusiveDeque.field_a, wn.field_m, param2, -112, em.field_d, nb.field_r);
           j.field_k = ke.a(32, param1, "lobby", "chatfilter");
           hn.field_i[1] = ng.field_Y;
           hn.field_i[0] = eh.field_g;
@@ -43,7 +43,7 @@ final class vj {
           return;
         }
         try {
-          ig.field_c.a(uf.field_p, dc.field_P, (byte) -127, true);
+          ig.field_c.a(GameBoard.field_p, dc.field_P, (byte) -127, true);
           ig.field_c.i(16);
           while (nd.b((byte) -98)) {
             ig.field_c.a(um.field_Gb, nm.field_d, -97);

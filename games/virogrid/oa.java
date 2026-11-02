@@ -17,10 +17,10 @@ final class oa extends ba {
     private gl field_t;
     private int field_r;
     private int field_g;
-    private p field_o;
+    private IntrusiveDeque field_o;
     private boolean field_s;
     static kf field_h;
-    private p field_f;
+    private IntrusiveDeque field_f;
     private boolean field_v;
     private boolean field_d;
     private long field_w;
@@ -41,11 +41,11 @@ final class oa extends ba {
             int[] var4 = (int[]) null;
             oa.a(90, (String) null, -60L, 66, (int[]) null);
           }
-          wb.field_m = new km(0L, he.field_Jb, ke.field_s);
-          tf.field_c = new km(0L, ma.field_e);
+          DualLinkNode.field_m = new km(0L, he.field_Jb, ke.field_s);
+          tf.field_c = new km(0L, IntrusiveDequeCursor.field_e);
           dg.field_E.a(0, ee.field_e);
           dg.field_E.a(0, se.field_c);
-          dg.field_E.a(0, wb.field_m);
+          dg.field_E.a(0, DualLinkNode.field_m);
           dg.field_E.a(0, ve.field_q);
           dg.field_E.a(0, tf.field_c);
           ve.field_q.field_Ib.field_Eb.b(18003, ti.field_h);
@@ -234,7 +234,7 @@ final class oa extends ba {
               var4 = this.field_y.a((byte) 2, param2, true, param0 ^ 1150071165, this.field_r);
             }
           }
-          this.field_i.a((l) (var4), (byte) 96, (long)param2);
+          this.field_i.a((IntrusiveNode) (var4), (byte) 96, (long)param2);
         }
         if (param0 != -8035) {
           return (nb) null;
@@ -294,7 +294,7 @@ final class oa extends ba {
             }
             if (!this.field_y.c((byte) 113)) {
               var4 = this.field_y.a((byte) 2, param2, true, param0 - 1150062269, this.field_r);
-              this.field_i.a((l) (var4), (byte) 60, (long)param2);
+              this.field_i.a((IntrusiveNode) (var4), (byte) 60, (long)param2);
             }
             return null;
           }
@@ -331,7 +331,7 @@ final class oa extends ba {
           if (((nb) (var4)).field_w &&
             !this.field_y.c((byte) 113)) {
             var4 = this.field_y.a((byte) 2, param2, true, param0 ^ 1150071165, this.field_r);
-            this.field_i.a((l) (var4), (byte) 14, (long)param2);
+            this.field_i.a((IntrusiveNode) (var4), (byte) 14, (long)param2);
           }
           return null;
         }
@@ -356,14 +356,14 @@ final class oa extends ba {
         nb discarded$0 = null;
         int var2_int;
         nb var2;
-        l var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        l var6;
-        l var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        l var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = Virogrid.field_F ? 1 : 0;
         if (this.field_o != null) {
@@ -374,7 +374,7 @@ final class oa extends ba {
             var2_int = 1;
             var3 = this.field_o.a((byte) -75);
             while (var3 != null) {
-              var4 = (int)var3.field_d;
+              var4 = (int)var3.key;
               if (this.field_n[var4] == 0) {
                 discarded$3 = this.a(param0 - 8007, 1, var4);
               }
@@ -385,19 +385,19 @@ final class oa extends ba {
               }
               var3 = this.field_o.a(16213);
             }
-            L10: while (true) {
+            scanLoop1: while (true) {
               if (this.field_g < this.field_p.field_n.length) {
                 if (this.field_p.field_n[this.field_g] != 0) {
                   if (this.field_e.field_e >= 250) {
                     var2_int = 0;
-                    break L10;
+                    break scanLoop1;
                   }
                   if (this.field_n[this.field_g] == 0) {
                     discarded$2 = this.a(-8035, 1, this.field_g);
                   }
                   if (this.field_n[this.field_g] == 0) {
-                    var6 = new l();
-                    var6.field_d = (long)this.field_g;
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_g;
                     this.field_o.a(var6, (byte) -37);
                     var2_int = 0;
                   }
@@ -418,7 +418,7 @@ final class oa extends ba {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_o.a((byte) -84);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_d;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_n[var4Lifetime1] != 1) {
                   discarded$1 = this.a(-8035, 2, var4Lifetime1);
                 }
@@ -439,8 +439,8 @@ final class oa extends ba {
                     discarded$0 = this.a(-8035, 2, this.field_g);
                   }
                   if (1 != this.field_n[this.field_g]) {
-                    var7 = new l();
-                    var7.field_d = (long)this.field_g;
+                    var7 = new IntrusiveNode();
+                    var7.key = (long)this.field_g;
                     var2_intLifetime1 = 0;
                     this.field_o.a(var7, (byte) -112);
                   }
@@ -498,9 +498,9 @@ final class oa extends ba {
         if (param0 != 0) {
           this.b(-4, -120);
         }
-        l var2 = this.field_f.a((byte) -82);
+        IntrusiveNode var2 = this.field_f.a((byte) -82);
         while (var2 != null) {
-          var3 = (int)var2.field_d;
+          var3 = (int)var2.key;
           if (var3 < 0) {
             var2.a(false);
           } else {
@@ -590,7 +590,7 @@ final class oa extends ba {
         }
         this.field_v = param0 ? true : false;
         if (null == this.field_o) {
-          this.field_o = new p();
+          this.field_o = new IntrusiveDeque();
         }
     }
 
@@ -630,14 +630,14 @@ final class oa extends ba {
         RuntimeException var10 = null;
         this.field_i = new ln(16);
         this.field_g = 0;
-        this.field_f = new p();
+        this.field_f = new IntrusiveDeque();
         this.field_w = 0L;
         try {
           this.field_m = param1;
           this.field_r = param0;
           if (this.field_m != null) {
             this.field_s = true;
-            this.field_o = new p();
+            this.field_o = new IntrusiveDeque();
           } else {
             this.field_s = false;
           }

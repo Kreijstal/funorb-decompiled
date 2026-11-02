@@ -76,7 +76,7 @@ final class sl {
               var7.field_j = 0L;
             } else {
               var6 = new mj(var8, var7.field_p);
-              this.field_d.a(var6, param1 ^ -112, var7.field_d);
+              this.field_d.a(var6, param1 ^ -112, var7.key);
               this.field_b.a(true, var6);
               ((dm) ((Object) var6)).field_j = 0L;
               var7.a(false);
@@ -96,7 +96,7 @@ final class sl {
             var7.field_j = 0L;
           } else {
             var6Lifetime1 = new mj(var9, var7.field_p);
-            this.field_d.a(var6Lifetime1, param1 ^ -112, var7.field_d);
+            this.field_d.a(var6Lifetime1, param1 ^ -112, var7.key);
             this.field_b.a(true, var6Lifetime1);
             ((dm) ((Object) var6Lifetime1)).field_j = 0L;
             var7.a(false);

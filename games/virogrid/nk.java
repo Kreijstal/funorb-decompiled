@@ -6,7 +6,7 @@ class nk extends tg {
     static String field_M;
     static km field_H;
     static km field_I;
-    private p field_G;
+    private IntrusiveDeque field_G;
     static String field_J;
     private pb field_L;
     static double[] field_K;
@@ -102,7 +102,7 @@ class nk extends tg {
         String var17;
         int var7Lifetime1;
         var16 = Virogrid.field_F ? 1 : 0;
-        this.field_G = new p();
+        this.field_G = new IntrusiveDeque();
         if (param0 > -108) {
           var17 = (String) null;
           this.a((String) null, (byte) -61, 38);

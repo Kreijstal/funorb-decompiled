@@ -32,7 +32,7 @@ abstract class hm {
             null != var4.field_Pb) {
             return true;
           }
-          stackIn_11_0 = (wl.field_d != null) && (null != ic.a(param1, (byte) -127));
+          stackIn_11_0 = (wl.field_d != null) && (null != GameSession.a(param1, (byte) -127));
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -117,7 +117,7 @@ abstract class hm {
           ((km) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3 - stackIn_9_4, (byte) -105, 2 + pg.field_e);
           gn.field_F.a(-oc.field_k + (ia.field_d.field_K - 42), 18, 42 + oc.field_k, (byte) -107, 2 + pg.field_e);
           wm.field_r.a(2 + pg.field_e + 20, -114, ia.field_d.field_K, 2, -pg.field_e + (ia.field_d.field_ub - 2 - 20), 0, oc.field_k);
-          fb.field_o.a(0, 40, ao.field_Eb.field_K, (byte) -120, -40 + ao.field_Eb.field_ub);
+          CellFlip.field_o.a(0, 40, ao.field_Eb.field_K, (byte) -120, -40 + ao.field_Eb.field_ub);
           qi.field_e.a(0, 30, dm.field_r.field_K, (byte) -57, 0);
           nn.field_b.a(0, -30 + dm.field_r.field_ub - 42, dm.field_r.field_K, (byte) -118, 30);
           var2_int = vb.field_h + 3;

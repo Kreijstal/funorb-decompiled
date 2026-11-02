@@ -65,7 +65,7 @@ final class kb {
           }
           df.a(var7, var5, var6);
           dc.field_V = wf.a(dh.field_k, sd.field_a, var4, 49, gk.field_e);
-          cm.field_h.field_W = new p();
+          cm.field_h.field_W = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -202,7 +202,7 @@ final class kb {
           wc.field_k = new km(0L, param6);
           we.field_c.a(0, wc.field_k);
           var17 = new km(0L, (km) null);
-          var17.field_W = new p();
+          var17.field_W = new IntrusiveDeque();
           ne.field_c = new um(0L, var17, param4, param2);
           wc.field_k.a(0, ne.field_c);
           qa.field_d = new km(0L, param5);

@@ -6,7 +6,7 @@ import java.io.*;
 final class te extends IOException {
     static String field_g;
     static jd field_b;
-    static p field_f;
+    static IntrusiveDeque field_f;
     static wl field_d;
     static String field_c;
     static String[] field_e;
@@ -37,8 +37,8 @@ final class te extends IOException {
         try {
           var5 = gk.field_g;
           var5.g(param2, 8);
-          var5.field_l = var5.field_l + 1;
-          var4 = var5.field_l;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.a(param0, 98);
           var5.a(param1.field_i, 88);
           var5.a(param1.field_k, param0 - 124);
@@ -47,7 +47,7 @@ final class te extends IOException {
           var5.a(param1.field_g, (byte) -42);
           var5.a(param1.field_n, (byte) -42);
           var5.b((byte) -111, var4);
-          var5.b(-var4 + var5.field_l, -1);
+          var5.b(-var4 + var5.position, -1);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "te.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -60,7 +60,7 @@ final class te extends IOException {
           var3 = km.field_yb.a(2105376, param0);
           if (var3 == -2) {
             if (param1 >= -118) {
-              field_f = (p) null;
+              field_f = (IntrusiveDeque) null;
               return;
             }
             return;
@@ -75,7 +75,7 @@ final class te extends IOException {
         if (param1 < -118) {
           return;
         }
-        field_f = (p) null;
+        field_f = (IntrusiveDeque) null;
     }
 
     static {

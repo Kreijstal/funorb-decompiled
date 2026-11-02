@@ -137,13 +137,13 @@ final class ri {
         var9 = Virogrid.field_F ? 1 : 0;
         try {
           var1 = sh.field_qb;
-          var2 = var1.g(11132);
+          var2 = var1.readUnsignedByte(11132);
           if (var2 == 0) {
             if (null == ie.field_a) {
               ie.field_a = new kf(128);
               mj.field_z = 0;
             }
-            stackIn_11_0 = (1 != var1.g(11132)) ? 0 : 1;
+            stackIn_11_0 = (1 != var1.readUnsignedByte(11132)) ? 0 : 1;
             var3_int = stackIn_11_0;
             var4_ref_String = var1.h(-122);
             if (var3_int != 0) {
@@ -195,7 +195,7 @@ final class ri {
               oa.field_q = 1;
               var3 = var1.h(-122);
               wl.field_a = ((String) (var3)).intern();
-              var4 = var1.g(11132);
+              var4 = var1.readUnsignedByte(11132);
               nn.a(true, var4);
               return;
             }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class od extends uk {
+abstract class od extends GameApplet {
     private int field_r;
     static String[] field_n;
     String field_v;
@@ -61,7 +61,7 @@ abstract class od extends uk {
           int var4 = 0;
           int var5 = 0;
           Exception var6 = null;
-          jc var7 = null;
+          PacketBuffer var7 = null;
           String var8 = null;
           int var9 = 0;
           String var10 = null;
@@ -163,7 +163,7 @@ abstract class od extends uk {
                   var10 = (String) null;
                   kd.a((byte) 92, (String) null);
                 } else {
-                  var8 = nf.a(var7.field_l, (byte) -122, 0, var7.field_g);
+                  var8 = nf.a(var7.position, (byte) -122, 0, var7.payload);
                   kd.a((byte) 78, var8);
                 }
                 nb.field_p = null;
@@ -300,25 +300,25 @@ abstract class od extends uk {
     }
 
     private final void c(byte param0) {
-        jc.field_i[7] = -1;
-        jc.field_i[4] = -1;
-        jc.field_i[16] = -1;
-        jc.field_i[8] = -2;
-        jc.field_i[2] = -2;
-        jc.field_i[12] = -1;
-        jc.field_i[9] = -1;
-        jc.field_i[5] = -1;
-        jc.field_i[13] = -1;
+        PacketBuffer.field_i[7] = -1;
+        PacketBuffer.field_i[4] = -1;
+        PacketBuffer.field_i[16] = -1;
+        PacketBuffer.field_i[8] = -2;
+        PacketBuffer.field_i[2] = -2;
+        PacketBuffer.field_i[12] = -1;
+        PacketBuffer.field_i[9] = -1;
+        PacketBuffer.field_i[5] = -1;
+        PacketBuffer.field_i[13] = -1;
         if (param0 <= 75) {
           this.a(false, -38);
         }
-        jc.field_i[18] = 1;
-        jc.field_i[6] = -2;
-        jc.field_i[3] = -1;
-        jc.field_i[17] = -1;
-        jc.field_i[10] = -1;
-        jc.field_i[11] = -1;
-        jc.field_i[1] = 16;
+        PacketBuffer.field_i[18] = 1;
+        PacketBuffer.field_i[6] = -2;
+        PacketBuffer.field_i[3] = -1;
+        PacketBuffer.field_i[17] = -1;
+        PacketBuffer.field_i[10] = -1;
+        PacketBuffer.field_i[11] = -1;
+        PacketBuffer.field_i[1] = 16;
     }
 
     private final void l(int param0) {
@@ -424,7 +424,7 @@ abstract class od extends uk {
           nh.field_o == 0) {
           stackIn_24_0 = (nh.field_o != -1) ? 0 : 1;
           var3Lifetime1 = stackIn_24_0;
-          nh.field_o = m.b(true);
+          nh.field_o = CellAnimator.b(true);
           if (var3Lifetime1 != 0 &&
             nh.field_o == 0 &&
             j.field_l == 11 &&
@@ -504,7 +504,7 @@ abstract class od extends uk {
         }
         if (dj.field_n == 1) {
           if (0 != ih.field_c) {
-            sj.field_l = p.a(76, ej.field_P);
+            sj.field_l = IntrusiveDeque.a(76, ej.field_P);
           }
           td.field_a = qd.a(false, 1, true, ka.field_j, (byte) 70);
           jf.field_j = qd.a(false, 1, true, te.field_h, (byte) 81);
@@ -562,7 +562,7 @@ abstract class od extends uk {
         }
         if (10 == dj.field_n) {
           if (ih.field_c != 0) {
-            uh.field_e = p.a(34, ck.field_c);
+            uh.field_e = IntrusiveDeque.a(34, ck.field_c);
           }
           dj.field_n = 11;
         }
@@ -722,7 +722,7 @@ abstract class od extends uk {
     }
 
     private final void h(int param0) {
-        int var2 = sh.field_qb.g(11132);
+        int var2 = sh.field_qb.readUnsignedByte(11132);
         int var3 = (1 & var2) != 0 ? 1 : 0;
         if (param0 != -6731) {
           this.field_w = 83;
@@ -760,7 +760,7 @@ abstract class od extends uk {
               } else {
                 if (var2 != 4) {
                   if (var2 == 5) {
-                    fb.a(26360);
+                    CellFlip.a(26360);
                   } else {
                     if (var2 == 6) {
                       pe.a(-1);

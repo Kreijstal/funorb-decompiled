@@ -182,9 +182,9 @@ final class kd extends qe {
               var2_long > var4_ref_bj.field_p) {
               var4_ref_bj.a(false);
               ba.field_a = var4_ref_bj.field_l.length;
-              sh.field_qb.field_l = 0;
+              sh.field_qb.position = 0;
               for (var5_int = 0; ba.field_a > var5_int; var5_int++) {
-                sh.field_qb.field_g[var5_int] = var4_ref_bj.field_l[var5_int];
+                sh.field_qb.payload[var5_int] = var4_ref_bj.field_l[var5_int];
               }
               ah.field_e = pl.field_c;
               pl.field_c = md.field_b;
@@ -209,15 +209,15 @@ final class kd extends qe {
         try {
           while (true) {
             if (stackIn_20_0 < 0) {
-              sh.field_qb.field_l = 0;
+              sh.field_qb.position = 0;
               if (!wg.a(1, 0)) {
                 return false;
               }
               s.field_g = sh.field_qb.e(false);
-              sh.field_qb.field_l = 0;
+              sh.field_qb.position = 0;
               ba.field_a = param1[s.field_g];
             }
-            if (!ic.c((byte) 48)) {
+            if (!GameSession.c((byte) 48)) {
               return false;
             }
             if (kg.field_e == 0) {
@@ -237,7 +237,7 @@ final class kd extends qe {
             }
             var5 = new bj((long)var4 + var2_long, s.field_g, new byte[ba.field_a]);
             for (var6 = 0; ba.field_a > var6; var6++) {
-              var5.field_l[var6] = sh.field_qb.field_g[var6];
+              var5.field_l[var6] = sh.field_qb.payload[var6];
             }
             ac.field_d.a(var5, (byte) -68);
             s.field_g = -1;

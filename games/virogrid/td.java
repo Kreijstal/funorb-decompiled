@@ -13,16 +13,16 @@ final class td {
     static eh field_a;
     static int field_f;
 
-    final static void a(l param0, byte param1, l param2) {
+    final static void a(IntrusiveNode param0, byte param1, IntrusiveNode param2) {
         try {
-          if (param2.field_a != null) {
+          if (param2.next != null) {
             param2.a(false);
           }
           int var3_int = 37 / ((param1 + 12) / 33);
-          param2.field_a = param0.field_a;
-          param2.field_f = param0;
-          param2.field_a.field_f = param2;
-          param2.field_f.field_a = param2;
+          param2.next = param0.next;
+          param2.previous = param0;
+          param2.next.previous = param2;
+          param2.previous.next = param2;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "td.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

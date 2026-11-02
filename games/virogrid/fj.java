@@ -4,7 +4,7 @@
 final class fj {
     static String field_c;
     static String field_a;
-    static p field_b;
+    static IntrusiveDeque field_b;
 
     final static void a(byte param0, int param1, int param2) {
         if (ke.field_r == null ||
@@ -119,6 +119,6 @@ final class fj {
 
     static {
         field_a = "Lobby";
-        field_b = new p();
+        field_b = new IntrusiveDeque();
     }
 }

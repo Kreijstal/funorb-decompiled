@@ -21,12 +21,12 @@ final class jl extends fd implements ta {
         hg var8 = gk.field_g;
         hg var6 = var8;
         var8.g(param3, 8);
-        var8.field_l = var8.field_l + 1;
+        var8.position = var8.position + 1;
         if (param4 != 39) {
           return;
         }
         try {
-          var7 = var8.field_l;
+          var7 = var8.position;
           var8.a(param1, -69);
           if (param1 == 2) {
             var8.a(param2, (byte) -102);
@@ -36,7 +36,7 @@ final class jl extends fd implements ta {
           } else {
             var8.a((byte) -78, param0);
           }
-          var8.b(var8.field_l - var7, -1);
+          var8.b(var8.position - var7, -1);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "jl.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

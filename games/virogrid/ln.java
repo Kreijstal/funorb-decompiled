@@ -2,20 +2,20 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ln {
-    private l field_d;
+    private IntrusiveNode field_d;
     static String field_c;
     static String field_a;
-    private l field_e;
+    private IntrusiveNode field_e;
     static km[] field_i;
-    private l[] field_b;
+    private IntrusiveNode[] field_b;
     private int field_h;
     static int field_g;
     private int field_f;
 
     final static boolean a(int param0, byte param1, int param2, int param3) {
         if (param1 != 104) {
-          jc var5 = (jc) null;
-          ln.a(68, -61, (pd) null, (jc) null);
+          PacketBuffer var5 = (PacketBuffer) null;
+          ln.a(68, -61, (pd) null, (PacketBuffer) null);
         }
         if (null != md.field_e &&
           md.field_e.b(param1 ^ 21)) {
@@ -37,10 +37,10 @@ final class ln {
         return false;
     }
 
-    final l a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         this.field_h = 0;
         if (param0 != 19) {
-          return (l) null;
+          return (IntrusiveNode) null;
         }
         return this.a(110);
     }
@@ -102,24 +102,24 @@ final class ln {
         }
     }
 
-    final l a(long param0, int param1) {
-        l var5 = null;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var5 = null;
         int var6 = Virogrid.field_F ? 1 : 0;
-        l var4 = this.field_b[(int)(param0 & (long)(this.field_f - 1))];
-        this.field_d = var4.field_f;
+        IntrusiveNode var4 = this.field_b[(int)(param0 & (long)(this.field_f - 1))];
+        this.field_d = var4.previous;
         while (var4 != this.field_d) {
-          if (param0 == this.field_d.field_d) {
+          if (param0 == this.field_d.key) {
             var5 = this.field_d;
-            this.field_d = this.field_d.field_f;
+            this.field_d = this.field_d.previous;
             return var5;
           }
-          this.field_d = this.field_d.field_f;
+          this.field_d = this.field_d.previous;
         }
         this.field_d = null;
         if (param1 == -14905) {
           return null;
         }
-        return (l) null;
+        return (IntrusiveNode) null;
     }
 
     final static void a(cj param0, int param1) {
@@ -189,7 +189,7 @@ final class ln {
         }
     }
 
-    final static void a(int param0, int param1, pd param2, jc param3) {
+    final static void a(int param0, int param1, pd param2, PacketBuffer param3) {
         try {
           int var6 = 0;
           int var12_int = 0;
@@ -229,8 +229,8 @@ final class ln {
           var15 = Virogrid.field_F ? 1 : 0;
           try {
             var19 = new bf();
-            var19.field_n = param3.g(11132);
-            var19.field_h = param3.d((byte) 112);
+            var19.field_n = param3.readUnsignedByte(11132);
+            var19.field_h = param3.readInt((byte) 112);
             var19.field_g = new int[var19.field_n];
             var19.field_l = new int[var19.field_n];
             var19.field_j = new byte[var19.field_n][][];
@@ -240,7 +240,7 @@ final class ln {
             var5 = 42 / ((-62 - param0) / 56);
             for (var6 = 0; var6 < var19.field_n; var6++) {
               try {
-                var7_int = param3.g(11132);
+                var7_int = param3.readUnsignedByte(11132);
                 if (0 != var7_int &&
                   var7_int != 1 &&
                   var7_int != 2) {
@@ -248,7 +248,7 @@ final class ln {
                     var7_int == 4) {
                     var21 = param3.h(-117);
                     var22 = param3.h(-117);
-                    var10 = param3.g(11132);
+                    var10 = param3.readUnsignedByte(11132);
                     var11 = new String[var10];
                     for (var12_int = 0; var12_int < var10; var12_int++) {
                       var11[var12_int] = param3.h(-117);
@@ -258,7 +258,7 @@ final class ln {
                     var12 = var20;
                     if (var7_int == 3) {
                       for (var13_int = 0; var10 > var13_int; var13_int++) {
-                        var14 = param3.d((byte) 124);
+                        var14 = param3.readInt((byte) 124);
                         array$0 = new byte[var14];
                         var12[var13_int] = array$0;
                         param3.a(0, var14, true, var23[var13_int]);
@@ -282,7 +282,7 @@ final class ln {
                   var9 = var17;
                   var10 = 0;
                   if (1 == var7_int) {
-                    var10 = param3.d((byte) 95);
+                    var10 = param3.readInt((byte) 95);
                   }
                   var19.field_g[var6] = var7_int;
                   var19.field_u[var6] = var10;
@@ -310,7 +310,7 @@ final class ln {
                 var19.field_l[var6] = -5;
               }
             }
-            l.field_c.a(var19, (byte) -84);
+            IntrusiveNode.field_c.a(var19, (byte) -84);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -337,17 +337,17 @@ final class ln {
         }
     }
 
-    final l a(int param0) {
+    final IntrusiveNode a(int param0) {
         int fieldTemp$0 = 0;
-        l var2_ref_l;
+        IntrusiveNode var2_ref_l;
         int var2;
         int var3;
-        l var4;
+        IntrusiveNode var4;
         var3 = Virogrid.field_F ? 1 : 0;
         if (0 < this.field_h &&
           this.field_e != this.field_b[this.field_h - 1]) {
           var2_ref_l = this.field_e;
-          this.field_e = var2_ref_l.field_f;
+          this.field_e = var2_ref_l.previous;
           return var2_ref_l;
         }
         do {
@@ -357,10 +357,10 @@ final class ln {
           }
           fieldTemp$0 = this.field_h;
           this.field_h = this.field_h + 1;
-          var4 = this.field_b[fieldTemp$0].field_f;
+          var4 = this.field_b[fieldTemp$0].previous;
           var2_ref_l = var4;
         } while (var4 == this.field_b[-1 + this.field_h]);
-        this.field_e = var2_ref_l.field_f;
+        this.field_e = var2_ref_l.previous;
         return var2_ref_l;
     }
 
@@ -373,22 +373,22 @@ final class ln {
         field_c = null;
     }
 
-    final void a(l param0, byte param1, long param2) {
-        l var5 = null;
+    final void a(IntrusiveNode param0, byte param1, long param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (param0.field_a != null) {
+          if (param0.next != null) {
             param0.a(false);
           }
           var5 = this.field_b[(int)((long)(-1 + this.field_f) & param2)];
-          param0.field_f = var5;
-          param0.field_a = var5.field_a;
+          param0.previous = var5;
+          param0.next = var5.next;
           if (param1 < 0) {
-            jc var6 = (jc) null;
-            ln.a(-57, -4, (pd) null, (jc) null);
+            PacketBuffer var6 = (PacketBuffer) null;
+            ln.a(-57, -4, (pd) null, (PacketBuffer) null);
           }
-          param0.field_a.field_f = param0;
-          param0.field_d = param2;
-          param0.field_f.field_a = param0;
+          param0.next.previous = param0;
+          param0.key = param2;
+          param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "ln.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -396,17 +396,17 @@ final class ln {
 
     ln(int param0) {
         int var2 = 0;
-        l dupTemp$0 = null;
-        l var3 = null;
+        IntrusiveNode dupTemp$0 = null;
+        IntrusiveNode var3 = null;
         this.field_h = 0;
-        this.field_b = new l[param0];
+        this.field_b = new IntrusiveNode[param0];
         this.field_f = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new l();
+          dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_b[var2] = dupTemp$0;
-          var3.field_a = var3;
-          var3.field_f = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 

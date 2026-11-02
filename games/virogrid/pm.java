@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pm extends l {
+final class pm extends IntrusiveNode {
     static String field_i;
     static String field_s;
     int field_h;
@@ -94,7 +94,7 @@ final class pm extends l {
         try {
           var8 = new hg(param0.a("logo.fo3d", 100, ""));
           var10 = var8;
-          var3 = var10.g(11132);
+          var3 = var10.readUnsignedByte(11132);
           var10.j(8);
           td.field_e = fj.a(var10, 9);
           ph.field_n = new wm[var3];

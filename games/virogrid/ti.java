@@ -22,7 +22,7 @@ final class ti implements ol {
     }
 
     final static void c(int param0) {
-        l.field_c = new p();
+        IntrusiveNode.field_c = new IntrusiveDeque();
         int var1 = -112 / ((-57 - param0) / 39);
     }
 

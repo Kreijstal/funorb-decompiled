@@ -14,7 +14,7 @@ class mh extends bk {
         if (!param0) {
           mh.b((byte) -16);
         }
-        return p.field_b;
+        return IntrusiveDeque.field_b;
     }
 
     public static void b(byte param0) {
@@ -103,7 +103,7 @@ class mh extends bk {
         }
     }
 
-    final void a(boolean param0, jc param1) {
+    final void a(boolean param0, PacketBuffer param1) {
         try {
           param1.a((byte) 87, this.field_h);
           param1.c(this.field_k, (byte) 60);

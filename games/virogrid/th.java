@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class th extends wb {
+final class th extends DualLinkNode {
     static dl field_t;
     int[] field_u;
     private int[][] field_v;
@@ -28,7 +28,7 @@ final class th extends wb {
         }
     }
 
-    final void a(jc param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -42,7 +42,7 @@ final class th extends wb {
             field_r = (String) null;
           }
           while (true) {
-            var3_int = param0.g(11132);
+            var3_int = param0.readUnsignedByte(11132);
             if (var3_int == 0) {
               return;
             }
@@ -197,7 +197,7 @@ final class th extends wb {
         return false;
     }
 
-    private final void a(int param0, int param1, jc param2) {
+    private final void a(int param0, int param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -216,25 +216,25 @@ final class th extends wb {
             this.field_w = ql.a(param2.h(-122), (byte) -123, '<');
           } else {
             if (param0 == 2) {
-              var4_int = param2.g(11132);
+              var4_int = param2.readUnsignedByte(11132);
               this.field_u = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_u[var5] = param2.c((byte) 110);
+                this.field_u[var5] = param2.readUnsignedShort((byte) 110);
               }
             } else {
               if (param0 == 3) {
-                var4_int = param2.g(11132);
+                var4_int = param2.readUnsignedByte(11132);
                 this.field_x = new int[var4_int];
                 this.field_v = new int[var4_int][];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  var6 = param2.c((byte) 97);
+                  var6 = param2.readUnsignedShort((byte) 97);
                   var7 = vb.a((byte) 0, var6);
                   if (var7 != null) {
                     this.field_x[var5] = var6;
                     array$0 = new int[var7.field_g];
                     this.field_v[var5] = array$0;
                     for (var8 = 0; var7.field_g > var8; var8++) {
-                      this.field_v[var5][var8] = param2.c((byte) 50);
+                      this.field_v[var5][var8] = param2.readUnsignedShort((byte) 50);
                     }
                   }
                 }

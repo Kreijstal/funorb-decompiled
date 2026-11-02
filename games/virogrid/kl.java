@@ -87,7 +87,7 @@ final class kl extends fd implements ta {
         }
     }
 
-    final static void a(jc param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         try {
           int var5 = 0;
           RuntimeException runtimeException = null;

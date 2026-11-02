@@ -23,7 +23,7 @@ final class ne {
     }
 
     final static void a(byte param0, int param1) {
-        l var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         fa var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -40,7 +40,7 @@ final class ne {
             field_f = (String) null;
           }
           while (var2 != null) {
-            wb.a(param1, param0 - 19);
+            DualLinkNode.a(param1, param0 - 19);
             var2 = di.field_v.a(16213);
           }
           return;

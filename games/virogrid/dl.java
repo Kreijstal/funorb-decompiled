@@ -30,10 +30,10 @@ final class dl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0.field_W == null) {
-            param0.field_W = new p();
+            param0.field_W = new IntrusiveDeque();
           }
           if (null == param2.field_W) {
-            param2.field_W = new p();
+            param2.field_W = new IntrusiveDeque();
           }
           if (oa.field_h == null) {
             oa.field_h = new kf(64);

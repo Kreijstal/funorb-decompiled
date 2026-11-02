@@ -11,7 +11,7 @@ class sh extends mb implements ta {
     private boolean field_vb;
     private boolean field_zb;
     static int field_rb;
-    static p field_tb;
+    static IntrusiveDeque field_tb;
     static int[] field_yb;
     private boolean field_wb;
     static hg field_qb;
@@ -153,7 +153,7 @@ class sh extends mb implements ta {
               var4 = (String) (q.b("getcookies", 6168, param1));
               var5 = ql.a(var4, (byte) -123, ';');
               if (param0 >= 0) {
-                field_tb = (p) null;
+                field_tb = (IntrusiveDeque) null;
               }
               for (var6 = 0; var6 < var5.length; var6++) {
                 var7 = var5[var6].indexOf('=');
@@ -688,7 +688,7 @@ class sh extends mb implements ta {
 
     static {
         field_sb = "Name is available";
-        field_tb = new p();
+        field_tb = new IntrusiveDeque();
         field_yb = new int[]{6000, 4500, 3000, 2250, 1500, 1000, 500};
     }
 }

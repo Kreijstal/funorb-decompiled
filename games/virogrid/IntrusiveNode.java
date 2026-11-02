@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class l {
-    l field_a;
-    long field_d;
-    static p field_c;
+class IntrusiveNode {
+    IntrusiveNode next;
+    long key;
+    static IntrusiveDeque field_c;
     static km field_b;
     static String field_e;
-    l field_f;
+    IntrusiveNode previous;
 
     final boolean b(boolean param0) {
-        if (null == this.field_a) {
+        if (null == this.next) {
           return false;
         }
         if (param0) {
@@ -24,13 +24,13 @@ class l {
         if (param0) {
           return;
         }
-        if (this.field_a == null) {
+        if (this.next == null) {
           return;
         }
-        this.field_a.field_f = this.field_f;
-        this.field_f.field_a = this.field_a;
-        this.field_a = null;
-        this.field_f = null;
+        this.next.previous = this.previous;
+        this.previous.next = this.next;
+        this.next = null;
+        this.previous = null;
     }
 
     public static void b(int param0) {
@@ -43,7 +43,7 @@ class l {
     }
 
     static {
-        field_c = new p();
+        field_c = new IntrusiveDeque();
         field_e = "(<%0> players want to join)";
     }
 }

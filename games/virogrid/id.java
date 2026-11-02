@@ -268,7 +268,7 @@ final class id {
             }
           }
           if (null == var2 &&
-            !uf.field_i &&
+            !GameBoard.field_i &&
             null == qc.field_i) {
             var2 = ql.field_i;
           }

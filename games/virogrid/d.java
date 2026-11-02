@@ -120,8 +120,8 @@ final class d extends km {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        jc var16 = null;
-        jc var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -133,10 +133,10 @@ final class d extends km {
         int var4Lifetime5;
         var15 = Virogrid.field_F ? 1 : 0;
         try {
-          var16 = new jc(param1);
+          var16 = new PacketBuffer(param1);
           var17 = var16;
-          var17.field_l = param1.length - 2;
-          rj.field_h = var17.c((byte) -83);
+          var17.position = param1.length - 2;
+          rj.field_h = var17.readUnsignedShort((byte) -83);
           db.field_k = new int[rj.field_h];
           ei.field_d = new boolean[rj.field_h];
           mb.field_bb = new int[rj.field_h];
@@ -144,34 +144,34 @@ final class d extends km {
           gb.field_F = new int[rj.field_h];
           lj.field_j = new byte[rj.field_h][];
           el.field_w = new int[rj.field_h];
-          var17.field_l = -(8 * rj.field_h) + param1.length - 7;
-          oj.field_Kb = var17.c((byte) -108);
-          se.field_d = var17.c((byte) 90);
-          var3 = (var17.g(11132) & 255) + 1;
+          var17.position = -(8 * rj.field_h) + param1.length - 7;
+          oj.field_Kb = var17.readUnsignedShort((byte) -108);
+          se.field_d = var17.readUnsignedShort((byte) 90);
+          var3 = (var17.readUnsignedByte(11132) & 255) + 1;
           if (param0 > 0) {
             return;
           }
           for (var4 = 0; var4 < rj.field_h; var4++) {
-            el.field_w[var4] = var16.c((byte) -112);
+            el.field_w[var4] = var16.readUnsignedShort((byte) -112);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < rj.field_h; var4Lifetime1++) {
-            mb.field_bb[var4Lifetime1] = var17.c((byte) 53);
+            mb.field_bb[var4Lifetime1] = var17.readUnsignedShort((byte) 53);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < rj.field_h; var4Lifetime2++) {
-            db.field_k[var4Lifetime2] = var17.c((byte) 41);
+            db.field_k[var4Lifetime2] = var17.readUnsignedShort((byte) 41);
           }
           for (var4Lifetime3 = 0; rj.field_h > var4Lifetime3; var4Lifetime3++) {
-            gb.field_F[var4Lifetime3] = var17.c((byte) 97);
+            gb.field_F[var4Lifetime3] = var17.readUnsignedShort((byte) 97);
           }
-          var17.field_l = 3 - var3 * 3 + (-7 + (param1.length - 8 * rj.field_h));
+          var17.position = 3 - var3 * 3 + (-7 + (param1.length - 8 * rj.field_h));
           k.field_c = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            k.field_c[var4Lifetime4] = var17.a(-25842);
+            k.field_c[var4Lifetime4] = var17.readMedium(-25842);
             if (k.field_c[var4Lifetime4] == 0) {
               k.field_c[var4Lifetime4] = 1;
             }
           }
-          var17.field_l = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < rj.field_h; var4Lifetime5++) {
             var5 = db.field_k[var4Lifetime5];
             var6 = gb.field_F[var4Lifetime5];
@@ -185,16 +185,16 @@ final class d extends km {
             var9 = var19;
             md.field_g[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.g(11132);
+            var11 = var17.readUnsignedByte(11132);
             stackIn_24_0 = -1;
             stackIn_24_1 = ~(1 & var11);
             if (stackIn_24_0 == stackIn_24_1) {
               for (var12 = 0; var12 < var7; var12++) {
-                var8[var12] = var17.a((byte) 118);
+                var8[var12] = var17.readByte((byte) 118);
               }
               if (0 != (var11 & 2)) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$1 = var17.a((byte) -114);
+                  dupTemp$1 = var17.readByte((byte) -114);
                   var9[var12] = dupTemp$1;
                   var13 = dupTemp$1;
                   stackIn_33_0 = var10;
@@ -209,13 +209,13 @@ final class d extends km {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var13 < var6; var13++) {
-                  var8[var5 * var13 + var12] = var17.a((byte) 78);
+                  var8[var5 * var13 + var12] = var17.readByte((byte) 78);
                 }
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var5 > var12; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$0 = var17.a((byte) -69);
+                    dupTemp$0 = var17.readByte((byte) -69);
                     var9[var12 + var5 * var13] = dupTemp$0;
                     var14 = dupTemp$0;
                     stackIn_48_0 = var10;

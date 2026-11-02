@@ -167,12 +167,12 @@ final class he extends km {
     final static void i(int param0) {
         if (param0 == -532) {
           wg.field_f = false;
-          dh.field_n = 0 == sh.field_qb.g(11132) ? true : false;
+          dh.field_n = 0 == sh.field_qb.readUnsignedByte(11132) ? true : false;
           return;
         }
         field_Jb = (km) null;
         wg.field_f = false;
-        dh.field_n = 0 == sh.field_qb.g(11132) ? true : false;
+        dh.field_n = 0 == sh.field_qb.readUnsignedByte(11132) ? true : false;
     }
 
     he(int param0) {

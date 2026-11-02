@@ -71,7 +71,7 @@ final class hd {
           var22 = null;
           var12 = Virogrid.field_F ? 1 : 0;
           try {
-            var13 = (bf) (l.field_c.a((byte) -104));
+            var13 = (bf) (IntrusiveNode.field_c.a((byte) -104));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -98,7 +98,7 @@ final class hd {
             if (var3 != 0) {
               return;
             }
-            var4 = param1.field_l;
+            var4 = param1.position;
             param1.a(var17.field_h, (byte) -42);
             for (var5 = 0; var5 < var17.field_n; var5++) {
               if (var17.field_l[var5] == 0) {

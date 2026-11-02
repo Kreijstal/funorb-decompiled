@@ -5,9 +5,9 @@ import java.util.*;
 
 final class j implements Iterator {
     static float field_i;
-    private l field_f;
+    private IntrusiveNode field_f;
     static int field_e;
-    private l field_d;
+    private IntrusiveNode field_d;
     static boolean field_g;
     private int field_c;
     static mg[] field_k;
@@ -37,25 +37,25 @@ final class j implements Iterator {
           }
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          if (this.field_j.field_h[fieldTemp$0].field_f == this.field_j.field_h[-1 + this.field_c]) {
+          if (this.field_j.field_h[fieldTemp$0].previous == this.field_j.field_h[-1 + this.field_c]) {
             this.field_d = this.field_j.field_h[-1 + this.field_c];
             continue;
           }
           break;
         }
-        this.field_d = this.field_j.field_h[this.field_c - 1].field_f;
+        this.field_d = this.field_j.field_h[this.field_c - 1].previous;
         return true;
     }
 
     public final Object next() {
         int fieldTemp$0 = 0;
         int var2;
-        l var3;
-        l var4;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
         var2 = Virogrid.field_F ? 1 : 0;
         if (this.field_d != this.field_j.field_h[-1 + this.field_c]) {
           var4 = this.field_d;
-          this.field_d = var4.field_f;
+          this.field_d = var4.previous;
           this.field_f = var4;
           return var4;
         }
@@ -65,9 +65,9 @@ final class j implements Iterator {
           }
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          var3 = this.field_j.field_h[fieldTemp$0].field_f;
+          var3 = this.field_j.field_h[fieldTemp$0].previous;
         } while (var3 == this.field_j.field_h[this.field_c - 1]);
-        this.field_d = var3.field_f;
+        this.field_d = var3.previous;
         this.field_f = var3;
         return var3;
     }
@@ -141,7 +141,7 @@ final class j implements Iterator {
         if (param0) {
           return;
         }
-        this.field_d = this.field_j.field_h[0].field_f;
+        this.field_d = this.field_j.field_h[0].previous;
         this.field_c = 1;
         this.field_f = null;
     }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ci extends qe {
-    static p field_o;
+    static IntrusiveDeque field_o;
     private wa field_p;
     static int field_q;
     static int field_r;

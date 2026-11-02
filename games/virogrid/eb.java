@@ -9,10 +9,10 @@ final class eb implements Iterable {
     static String field_a;
     static int field_d;
     static String field_g;
-    wb field_e;
+    DualLinkNode field_e;
     static km field_c;
 
-    final void a(boolean param0, wb param1) {
+    final void a(boolean param0, DualLinkNode param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -54,12 +54,12 @@ final class eb implements Iterable {
         field_b = null;
     }
 
-    final wb a(int param0) {
+    final DualLinkNode a(int param0) {
         if (param0 != -32314) {
-          wb var3 = (wb) null;
-          this.a(true, (wb) null);
+          DualLinkNode var3 = (DualLinkNode) null;
+          this.a(true, (DualLinkNode) null);
         }
-        wb var2 = this.field_e.field_h;
+        DualLinkNode var2 = this.field_e.field_h;
         if (this.field_e == var2) {
           return null;
         }
@@ -156,12 +156,12 @@ final class eb implements Iterable {
             if (!ld.field_c) {
               stackIn_36_0 = ii.field_d;
               if (var8 != 0) {
-                stackIn_37_1 = p.field_g;
+                stackIn_37_1 = IntrusiveDeque.field_g;
               } else {
                 stackIn_37_1 = gf.field_x;
               }
               stackIn_36_0.field_V = ((String) (Object) stackIn_37_1).toUpperCase();
-              stackIn_39_0 = l.field_b;
+              stackIn_39_0 = IntrusiveNode.field_b;
               stackIn_39_1 = new String[]{ii.field_d.field_V};
               if (var8 != 0) {
                 stackIn_40_2 = ok.field_K;
@@ -171,7 +171,7 @@ final class eb implements Iterable {
               stackIn_39_0.field_V = oi.a(stackIn_39_1, stackIn_40_2, 2);
               jk.field_b.field_V = nl.field_v;
               ud.field_b = true;
-              fb.field_o.field_Y = true;
+              CellFlip.field_o.field_Y = true;
               if (nb.field_q != null) {
                 vi.field_l = false;
                 ud.field_b = false;
@@ -218,10 +218,10 @@ final class eb implements Iterable {
                 }
               }
             } else {
-              fb.field_o.field_Y = false;
-              l.field_b.field_V = bl.field_A;
+              CellFlip.field_o.field_Y = false;
+              IntrusiveNode.field_b.field_V = bl.field_A;
               if (var8 == 0) {
-                stackIn_24_0 = ma.field_f;
+                stackIn_24_0 = IntrusiveDequeCursor.field_f;
               } else {
                 stackIn_24_0 = uh.field_d;
               }
@@ -257,7 +257,7 @@ final class eb implements Iterable {
             field_f = 123;
           }
           if (null != la.field_h) {
-            if (fb.field_o.field_nb != 0) {
+            if (CellFlip.field_o.field_nb != 0) {
               ub.b(param2, -12508);
             }
             if (0 != ii.field_d.field_nb) {
@@ -278,7 +278,7 @@ final class eb implements Iterable {
     }
 
     eb() {
-        this.field_e = new wb();
+        this.field_e = new DualLinkNode();
         this.field_e.field_h = this.field_e;
         this.field_e.field_k = this.field_e;
     }

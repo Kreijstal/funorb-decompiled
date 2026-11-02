@@ -166,7 +166,7 @@ final class qc {
     final static void a(int param0) {
         ph.field_l[me.field_b] = df.field_d;
         pb.field_i[me.field_b] = df.field_i;
-        m.field_i[me.field_b] = df.field_k;
+        CellAnimator.field_i[me.field_b] = df.field_k;
         ng.field_O[me.field_b] = df.field_g;
         qe.field_h[me.field_b] = df.field_h;
         kn.field_K[me.field_b] = df.field_e;

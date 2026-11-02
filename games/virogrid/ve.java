@@ -29,7 +29,7 @@ final class ve extends qe {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.a(param1, true) == ee.field_c) {
-            stackIn_3_0 = ma.field_a;
+            stackIn_3_0 = IntrusiveDequeCursor.field_a;
             return stackIn_3_0;
           }
           if (param0 == -26358) {

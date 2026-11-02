@@ -76,9 +76,9 @@ abstract class dc extends gg {
     }
 
     final static void f(byte param0) {
-        wb var1 = null;
+        DualLinkNode var1 = null;
         int var3 = Virogrid.field_F ? 1 : 0;
-        wb var1Lifetime1;
+        DualLinkNode var1Lifetime1;
         try {
           sg.field_j = 0;
           mj.field_z = 0;

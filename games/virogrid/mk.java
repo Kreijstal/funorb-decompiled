@@ -99,7 +99,7 @@ final class mk extends dc implements ta {
         }
     }
 
-    final static boolean a(jc param0, int param1) {
+    final static boolean a(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -110,7 +110,7 @@ final class mk extends dc implements ta {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param0.g(11132);
+          var2_int = param0.readUnsignedByte(11132);
           if (param1 > -41) {
             mk.k(-49);
           }

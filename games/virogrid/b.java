@@ -28,11 +28,11 @@ final class b extends sh implements ta {
 
     final void l(int param0) {
         if (param0 < -85) {
-          this.a(lc.a(248, ma.field_d, 29493), true, 113);
+          this.a(lc.a(248, IntrusiveDequeCursor.field_d, 29493), true, 113);
           return;
         }
         this.field_Bb = false;
-        this.a(lc.a(248, ma.field_d, 29493), true, 113);
+        this.a(lc.a(248, IntrusiveDequeCursor.field_d, 29493), true, 113);
     }
 
     b(je param0, qh param1) {
@@ -127,7 +127,7 @@ final class b extends sh implements ta {
                   mj.f(0);
                 }
                 this.field_Bb = true;
-                var4 = ma.field_d;
+                var4 = IntrusiveDequeCursor.field_d;
               }
             } else {
               var4 = dm.field_t;

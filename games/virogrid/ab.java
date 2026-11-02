@@ -93,7 +93,7 @@ final class ab extends gf implements ta {
             stackIn_5_0 = jl.field_F;
             return stackIn_5_0;
           }
-          if (jc.a(param1, true)) {
+          if (PacketBuffer.a(param1, true)) {
             stackIn_9_0 = ql.field_k;
             return stackIn_9_0;
           }
@@ -116,11 +116,11 @@ final class ab extends gf implements ta {
           }
           var6 = gk.field_g;
           var6.g(param2, 8);
-          var6.field_l = var6.field_l + 1;
-          var4 = var6.field_l;
+          var6.position = var6.position + 1;
+          var4 = var6.position;
           var6.a(0, param0 ^ -25);
           var6.a(param1, (byte) -112);
-          var6.b(var6.field_l - var4, param0 - 74);
+          var6.b(var6.position - var4, param0 - 74);
           if (param0 == 73) {
             return null;
           }

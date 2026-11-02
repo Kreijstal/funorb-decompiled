@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ac {
-    static p field_d;
+    static IntrusiveDeque field_d;
     static ua field_c;
     static String field_a;
     static String field_b;
@@ -32,9 +32,9 @@ final class ac {
           if (ve.field_t > db.field_D) {
             db.field_D = db.field_D + 1;
           }
-          if (p.field_h != ca.field_M.field_b) {
-            vf.field_c = vf.field_c + (ca.field_M.field_b - p.field_h);
-            p.field_h = ca.field_M.field_b;
+          if (IntrusiveDeque.field_h != ca.field_M.field_b) {
+            vf.field_c = vf.field_c + (ca.field_M.field_b - IntrusiveDeque.field_h);
+            IntrusiveDeque.field_h = ca.field_M.field_b;
           }
           if (0 >= db.field_D) {
             return;
@@ -60,7 +60,7 @@ final class ac {
             }
           }
           if (~af.field_d.field_nb != param1) {
-            km.field_yb = new bg(af.field_d.field_Bb, af.field_d.field_J, af.field_d.field_K, af.field_d.field_ub, param2, fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, ma.field_e, (String) null, 0L);
+            km.field_yb = new bg(af.field_d.field_Bb, af.field_d.field_J, af.field_d.field_K, af.field_d.field_ub, param2, fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, IntrusiveDequeCursor.field_e, (String) null, 0L);
           }
           var9 = da.a(param1 ^ 1402, param0, qi.field_d, pg.field_e);
           if (var9 != null) {

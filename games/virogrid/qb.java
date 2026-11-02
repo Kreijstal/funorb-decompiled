@@ -59,11 +59,11 @@ final class qb extends ll {
     private final void b(byte[] param0) {
         int var2;
         int var3;
-        jc var4;
-        jc var5;
-        jc var6;
-        jc var7;
-        jc var8;
+        PacketBuffer var4;
+        PacketBuffer var5;
+        PacketBuffer var6;
+        PacketBuffer var7;
+        PacketBuffer var8;
         int var9;
         int var10;
         int var11;
@@ -114,24 +114,24 @@ final class qb extends ll {
         int var44Lifetime1;
         var2 = 0;
         var3 = 0;
-        var4 = new jc(param0);
-        var5 = new jc(param0);
-        var6 = new jc(param0);
-        var7 = new jc(param0);
-        var8 = new jc(param0);
-        var4.field_l = param0.length - 18;
-        var9 = var4.c((byte) -96);
-        var10 = var4.c((byte) -60);
-        var11 = var4.g(11132);
-        var12 = var4.g(11132);
-        var13 = var4.g(11132);
-        var14 = var4.g(11132);
-        var15 = var4.g(11132);
-        var16 = var4.g(11132);
-        var17 = var4.c((byte) 123);
-        var18 = var4.c((byte) -60);
-        var19 = var4.c((byte) 115);
-        var20 = var4.c((byte) -68);
+        var4 = new PacketBuffer(param0);
+        var5 = new PacketBuffer(param0);
+        var6 = new PacketBuffer(param0);
+        var7 = new PacketBuffer(param0);
+        var8 = new PacketBuffer(param0);
+        var4.position = param0.length - 18;
+        var9 = var4.readUnsignedShort((byte) -96);
+        var10 = var4.readUnsignedShort((byte) -60);
+        var11 = var4.readUnsignedByte(11132);
+        var12 = var4.readUnsignedByte(11132);
+        var13 = var4.readUnsignedByte(11132);
+        var14 = var4.readUnsignedByte(11132);
+        var15 = var4.readUnsignedByte(11132);
+        var16 = var4.readUnsignedByte(11132);
+        var17 = var4.readUnsignedShort((byte) 123);
+        var18 = var4.readUnsignedShort((byte) -60);
+        var19 = var4.readUnsignedShort((byte) 115);
+        var20 = var4.readUnsignedShort((byte) -68);
         var21 = 0;
         var22 = var21;
         var21 = var21 + var9;
@@ -202,27 +202,27 @@ final class qb extends ll {
           this.field_Q = new int[var10];
         }
         this.field_W = new short[var10];
-        var4.field_l = var22;
-        var5.field_l = var32;
-        var6.field_l = var33;
-        var7.field_l = var34;
-        var8.field_l = var27;
+        var4.position = var22;
+        var5.position = var32;
+        var6.position = var33;
+        var7.position = var34;
+        var8.position = var27;
         var35 = 0;
         var36 = 0;
         var37 = 0;
         for (var38 = 0; var38 < var9; var38++) {
-          var39 = var4.g(11132);
+          var39 = var4.readUnsignedByte(11132);
           var40 = 0;
           if ((var39 & 1) != 0) {
-            var40 = var5.d(103);
+            var40 = var5.readSignedSmart(103);
           }
           var41 = 0;
           if ((var39 & 2) != 0) {
-            var41 = var6.d(56);
+            var41 = var6.readSignedSmart(56);
           }
           var42 = 0;
           if ((var39 & 4) != 0) {
-            var42 = var7.d(61);
+            var42 = var7.readSignedSmart(61);
           }
           this.field_x[var38] = var35 + var40;
           this.field_o[var38] = var36 + var41;
@@ -231,18 +231,18 @@ final class qb extends ll {
           var36 = this.field_o[var38];
           var37 = this.field_l[var38];
           if (var16 == 1) {
-            this.field_C[var38] = var8.g(11132);
+            this.field_C[var38] = var8.readUnsignedByte(11132);
           }
         }
-        var4.field_l = var30;
-        var5.field_l = var26;
-        var6.field_l = var24;
-        var7.field_l = var28;
-        var8.field_l = var25;
+        var4.position = var30;
+        var5.position = var26;
+        var6.position = var24;
+        var7.position = var28;
+        var8.position = var25;
         for (var38Lifetime1 = 0; var38Lifetime1 < var10; var38Lifetime1++) {
-          this.field_W[var38Lifetime1] = (short)var4.c((byte) 55);
+          this.field_W[var38Lifetime1] = (short)var4.readUnsignedShort((byte) 55);
           if (var12 == 1) {
-            var39Lifetime1 = var5.g(11132);
+            var39Lifetime1 = var5.readUnsignedByte(11132);
             if ((var39Lifetime1 & 1) != 1) {
               this.field_s[var38Lifetime1] = (byte) 0;
             } else {
@@ -262,30 +262,30 @@ final class qb extends ll {
             }
           }
           if (var13 == 255) {
-            this.field_O[var38Lifetime1] = var6.a((byte) -88);
+            this.field_O[var38Lifetime1] = var6.readByte((byte) -88);
           }
           if (var14 == 1) {
-            this.field_w[var38Lifetime1] = var7.a((byte) 121);
+            this.field_w[var38Lifetime1] = var7.readByte((byte) 121);
           }
           if (var15 == 1) {
-            this.field_Q[var38Lifetime1] = var8.g(11132);
+            this.field_Q[var38Lifetime1] = var8.readUnsignedByte(11132);
           }
         }
         this.field_z = -1;
-        var4.field_l = var29;
-        var5.field_l = var23;
+        var4.position = var29;
+        var5.position = var23;
         var38Lifetime2 = 0;
         var39Lifetime2 = 0;
         var40Lifetime1 = 0;
         var41Lifetime1 = 0;
         for (var42Lifetime1 = 0; var42Lifetime1 < var10; var42Lifetime1++) {
-          var43 = var5.g(11132);
+          var43 = var5.readUnsignedByte(11132);
           if (var43 == 1) {
-            var38Lifetime2 = var4.d(111) + var41Lifetime1;
+            var38Lifetime2 = var4.readSignedSmart(111) + var41Lifetime1;
             var41Lifetime1 = var38Lifetime2;
-            var39Lifetime2 = var4.d(123) + var41Lifetime1;
+            var39Lifetime2 = var4.readSignedSmart(123) + var41Lifetime1;
             var41Lifetime1 = var39Lifetime2;
-            var40Lifetime1 = var4.d(49) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(49) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_V[var42Lifetime1] = var38Lifetime2;
             this.field_v[var42Lifetime1] = var39Lifetime2;
@@ -302,7 +302,7 @@ final class qb extends ll {
           }
           if (var43 == 2) {
             var39Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.d(52) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(52) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_V[var42Lifetime1] = var38Lifetime2;
             this.field_v[var42Lifetime1] = var39Lifetime2;
@@ -313,7 +313,7 @@ final class qb extends ll {
           }
           if (var43 == 3) {
             var38Lifetime2 = var40Lifetime1;
-            var40Lifetime1 = var4.d(95) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(95) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_V[var42Lifetime1] = var38Lifetime2;
             this.field_v[var42Lifetime1] = var39Lifetime2;
@@ -326,7 +326,7 @@ final class qb extends ll {
             var44 = var38Lifetime2;
             var38Lifetime2 = var39Lifetime2;
             var39Lifetime2 = var44;
-            var40Lifetime1 = var4.d(72) + var41Lifetime1;
+            var40Lifetime1 = var4.readSignedSmart(72) + var41Lifetime1;
             var41Lifetime1 = var40Lifetime1;
             this.field_V[var42Lifetime1] = var38Lifetime2;
             this.field_v[var42Lifetime1] = var39Lifetime2;
@@ -337,12 +337,12 @@ final class qb extends ll {
           }
         }
         this.field_z = this.field_z + 1;
-        var4.field_l = var31;
+        var4.position = var31;
         for (var42Lifetime2 = 0; var42Lifetime2 < var11; var42Lifetime2++) {
           this.field_N[var42Lifetime2] = (byte) 0;
-          this.field_M[var42Lifetime2] = (short)var4.c((byte) -52);
-          this.field_q[var42Lifetime2] = (short)var4.c((byte) -63);
-          this.field_A[var42Lifetime2] = (short)var4.c((byte) -114);
+          this.field_M[var42Lifetime2] = (short)var4.readUnsignedShort((byte) -52);
+          this.field_q[var42Lifetime2] = (short)var4.readUnsignedShort((byte) -63);
+          this.field_A[var42Lifetime2] = (short)var4.readUnsignedShort((byte) -114);
         }
         if (this.field_B != null) {
           var42Lifetime3 = 0;
@@ -567,13 +567,13 @@ final class qb extends ll {
         byte dupTemp$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
-        jc var2;
-        jc var3;
-        jc var4;
-        jc var5;
-        jc var6;
-        jc var7;
-        jc var8;
+        PacketBuffer var2;
+        PacketBuffer var3;
+        PacketBuffer var4;
+        PacketBuffer var5;
+        PacketBuffer var6;
+        PacketBuffer var7;
+        PacketBuffer var8;
         int var9;
         int var10;
         int var11;
@@ -637,40 +637,40 @@ final class qb extends ll {
         int var57Lifetime3;
         int var58Lifetime1;
         int var58Lifetime2;
-        var2 = new jc(param0);
-        var3 = new jc(param0);
-        var4 = new jc(param0);
-        var5 = new jc(param0);
-        var6 = new jc(param0);
-        var7 = new jc(param0);
-        var8 = new jc(param0);
-        var2.field_l = param0.length - 23;
-        var9 = var2.c((byte) -106);
-        var10 = var2.c((byte) -91);
-        var11 = var2.g(11132);
-        var12 = var2.g(11132);
+        var2 = new PacketBuffer(param0);
+        var3 = new PacketBuffer(param0);
+        var4 = new PacketBuffer(param0);
+        var5 = new PacketBuffer(param0);
+        var6 = new PacketBuffer(param0);
+        var7 = new PacketBuffer(param0);
+        var8 = new PacketBuffer(param0);
+        var2.position = param0.length - 23;
+        var9 = var2.readUnsignedShort((byte) -106);
+        var10 = var2.readUnsignedShort((byte) -91);
+        var11 = var2.readUnsignedByte(11132);
+        var12 = var2.readUnsignedByte(11132);
         stackIn_3_0 = ((var12 & 1) != 1) ? 0 : 1;
         var13 = stackIn_3_0;
         stackIn_6_0 = ((var12 & 2) != 2) ? 0 : 1;
         var14 = stackIn_6_0;
-        var15 = var2.g(11132);
-        var16 = var2.g(11132);
-        var17 = var2.g(11132);
-        var18 = var2.g(11132);
-        var19 = var2.g(11132);
-        var20 = var2.c((byte) -104);
-        var21 = var2.c((byte) 110);
-        var22 = var2.c((byte) -98);
-        var23 = var2.c((byte) 83);
-        var24 = var2.c((byte) 108);
+        var15 = var2.readUnsignedByte(11132);
+        var16 = var2.readUnsignedByte(11132);
+        var17 = var2.readUnsignedByte(11132);
+        var18 = var2.readUnsignedByte(11132);
+        var19 = var2.readUnsignedByte(11132);
+        var20 = var2.readUnsignedShort((byte) -104);
+        var21 = var2.readUnsignedShort((byte) 110);
+        var22 = var2.readUnsignedShort((byte) -98);
+        var23 = var2.readUnsignedShort((byte) 83);
+        var24 = var2.readUnsignedShort((byte) 108);
         var25 = 0;
         var26 = 0;
         var27 = 0;
         if (var11 > 0) {
           this.field_N = new byte[var11];
-          var2.field_l = 0;
+          var2.position = 0;
           for (var28 = 0; var28 < var11; var28++) {
-            dupTemp$0 = var2.a((byte) 110);
+            dupTemp$0 = var2.readByte((byte) 110);
             this.field_N[var28] = dupTemp$0;
             var29 = dupTemp$0;
             if (var29 == 0) {
@@ -788,27 +788,27 @@ final class qb extends ll {
             this.field_j = new byte[var27];
           }
         }
-        var2.field_l = var29Lifetime1;
-        var3.field_l = var40;
-        var4.field_l = var41;
-        var5.field_l = var42;
-        var6.field_l = var34;
+        var2.position = var29Lifetime1;
+        var3.position = var40;
+        var4.position = var41;
+        var5.position = var42;
+        var6.position = var34;
         var50 = 0;
         var51 = 0;
         var52 = 0;
         for (var53 = 0; var53 < var9; var53++) {
-          var54 = var2.g(11132);
+          var54 = var2.readUnsignedByte(11132);
           var55 = 0;
           if ((var54 & 1) != 0) {
-            var55 = var3.d(87);
+            var55 = var3.readSignedSmart(87);
           }
           var56 = 0;
           if ((var54 & 2) != 0) {
-            var56 = var4.d(85);
+            var56 = var4.readSignedSmart(85);
           }
           var57 = 0;
           if ((var54 & 4) != 0) {
-            var57 = var5.d(55);
+            var57 = var5.readSignedSmart(55);
           }
           this.field_x[var53] = var50 + var55;
           this.field_o[var53] = var51 + var56;
@@ -817,56 +817,56 @@ final class qb extends ll {
           var51 = this.field_o[var53];
           var52 = this.field_l[var53];
           if (var19 == 1) {
-            this.field_C[var53] = var6.g(11132);
+            this.field_C[var53] = var6.readUnsignedByte(11132);
           }
         }
-        var2.field_l = var39;
-        var3.field_l = var30;
-        var4.field_l = var32;
-        var5.field_l = var35;
-        var6.field_l = var33;
-        var7.field_l = var37;
-        var8.field_l = var38;
+        var2.position = var39;
+        var3.position = var30;
+        var4.position = var32;
+        var5.position = var35;
+        var6.position = var33;
+        var7.position = var37;
+        var8.position = var38;
         for (var53Lifetime1 = 0; var53Lifetime1 < var10; var53Lifetime1++) {
-          this.field_W[var53Lifetime1] = (short)var2.c((byte) 62);
+          this.field_W[var53Lifetime1] = (short)var2.readUnsignedShort((byte) 62);
           if (var13 != 0) {
-            this.field_s[var53Lifetime1] = var3.a((byte) -82);
+            this.field_s[var53Lifetime1] = var3.readByte((byte) -82);
           }
           if (var15 == 255) {
-            this.field_O[var53Lifetime1] = var4.a((byte) 43);
+            this.field_O[var53Lifetime1] = var4.readByte((byte) 43);
           }
           if (var16 == 1) {
-            this.field_w[var53Lifetime1] = var5.a((byte) 64);
+            this.field_w[var53Lifetime1] = var5.readByte((byte) 64);
           }
           if (var17 == 1) {
-            this.field_Q[var53Lifetime1] = var6.g(11132);
+            this.field_Q[var53Lifetime1] = var6.readUnsignedByte(11132);
           }
           if (var18 == 1) {
-            this.field_p[var53Lifetime1] = (short)(var7.c((byte) -93) - 1);
+            this.field_p[var53Lifetime1] = (short)(var7.readUnsignedShort((byte) -93) - 1);
           }
           if (this.field_B != null) {
             if (this.field_p[var53Lifetime1] == -1) {
               this.field_B[var53Lifetime1] = (byte)-1;
             } else {
-              this.field_B[var53Lifetime1] = (byte)(var8.g(11132) - 1);
+              this.field_B[var53Lifetime1] = (byte)(var8.readUnsignedByte(11132) - 1);
             }
           }
         }
         this.field_z = -1;
-        var2.field_l = var36;
-        var3.field_l = var31;
+        var2.position = var36;
+        var3.position = var31;
         var53Lifetime2 = 0;
         var54Lifetime1 = 0;
         var55Lifetime1 = 0;
         var56Lifetime1 = 0;
         for (var57Lifetime1 = 0; var57Lifetime1 < var10; var57Lifetime1++) {
-          var58 = var3.g(11132);
+          var58 = var3.readUnsignedByte(11132);
           if (var58 == 1) {
-            var53Lifetime2 = var2.d(48) + var56Lifetime1;
+            var53Lifetime2 = var2.readSignedSmart(48) + var56Lifetime1;
             var56Lifetime1 = var53Lifetime2;
-            var54Lifetime1 = var2.d(127) + var56Lifetime1;
+            var54Lifetime1 = var2.readSignedSmart(127) + var56Lifetime1;
             var56Lifetime1 = var54Lifetime1;
-            var55Lifetime1 = var2.d(53) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(53) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_V[var57Lifetime1] = var53Lifetime2;
             this.field_v[var57Lifetime1] = var54Lifetime1;
@@ -883,7 +883,7 @@ final class qb extends ll {
           }
           if (var58 == 2) {
             var54Lifetime1 = var55Lifetime1;
-            var55Lifetime1 = var2.d(101) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(101) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_V[var57Lifetime1] = var53Lifetime2;
             this.field_v[var57Lifetime1] = var54Lifetime1;
@@ -894,7 +894,7 @@ final class qb extends ll {
           }
           if (var58 == 3) {
             var53Lifetime2 = var55Lifetime1;
-            var55Lifetime1 = var2.d(125) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(125) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_V[var57Lifetime1] = var53Lifetime2;
             this.field_v[var57Lifetime1] = var54Lifetime1;
@@ -907,7 +907,7 @@ final class qb extends ll {
             var59 = var53Lifetime2;
             var53Lifetime2 = var54Lifetime1;
             var54Lifetime1 = var59;
-            var55Lifetime1 = var2.d(50) + var56Lifetime1;
+            var55Lifetime1 = var2.readSignedSmart(50) + var56Lifetime1;
             var56Lifetime1 = var55Lifetime1;
             this.field_V[var57Lifetime1] = var53Lifetime2;
             this.field_v[var57Lifetime1] = var54Lifetime1;
@@ -918,64 +918,64 @@ final class qb extends ll {
           }
         }
         this.field_z = this.field_z + 1;
-        var2.field_l = var43;
-        var3.field_l = var44;
-        var4.field_l = var45;
-        var5.field_l = var46;
-        var6.field_l = var47;
-        var7.field_l = var48;
+        var2.position = var43;
+        var3.position = var44;
+        var4.position = var45;
+        var5.position = var46;
+        var6.position = var47;
+        var7.position = var48;
         for (var57Lifetime2 = 0; var57Lifetime2 < var11; var57Lifetime2++) {
           var58Lifetime1 = this.field_N[var57Lifetime2] & 255;
           if (var58Lifetime1 == 0) {
-            this.field_M[var57Lifetime2] = (short)var2.c((byte) 34);
-            this.field_q[var57Lifetime2] = (short)var2.c((byte) 78);
-            this.field_A[var57Lifetime2] = (short)var2.c((byte) -81);
+            this.field_M[var57Lifetime2] = (short)var2.readUnsignedShort((byte) 34);
+            this.field_q[var57Lifetime2] = (short)var2.readUnsignedShort((byte) 78);
+            this.field_A[var57Lifetime2] = (short)var2.readUnsignedShort((byte) -81);
           }
           if (var58Lifetime1 == 1) {
-            this.field_M[var57Lifetime2] = (short)var3.c((byte) -103);
-            this.field_q[var57Lifetime2] = (short)var3.c((byte) 97);
-            this.field_A[var57Lifetime2] = (short)var3.c((byte) 112);
-            this.field_E[var57Lifetime2] = (short)var4.c((byte) -70);
-            this.field_P[var57Lifetime2] = (short)var4.c((byte) -89);
-            this.field_i[var57Lifetime2] = (short)var4.c((byte) -58);
-            this.field_D[var57Lifetime2] = var5.a((byte) -124);
-            this.field_r[var57Lifetime2] = var6.a((byte) 50);
-            this.field_m[var57Lifetime2] = var7.a((byte) -114);
+            this.field_M[var57Lifetime2] = (short)var3.readUnsignedShort((byte) -103);
+            this.field_q[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 97);
+            this.field_A[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 112);
+            this.field_E[var57Lifetime2] = (short)var4.readUnsignedShort((byte) -70);
+            this.field_P[var57Lifetime2] = (short)var4.readUnsignedShort((byte) -89);
+            this.field_i[var57Lifetime2] = (short)var4.readUnsignedShort((byte) -58);
+            this.field_D[var57Lifetime2] = var5.readByte((byte) -124);
+            this.field_r[var57Lifetime2] = var6.readByte((byte) 50);
+            this.field_m[var57Lifetime2] = var7.readByte((byte) -114);
           }
           if (var58Lifetime1 == 2) {
-            this.field_M[var57Lifetime2] = (short)var3.c((byte) -91);
-            this.field_q[var57Lifetime2] = (short)var3.c((byte) 96);
-            this.field_A[var57Lifetime2] = (short)var3.c((byte) -69);
-            this.field_E[var57Lifetime2] = (short)var4.c((byte) -100);
-            this.field_P[var57Lifetime2] = (short)var4.c((byte) -87);
-            this.field_i[var57Lifetime2] = (short)var4.c((byte) -82);
-            this.field_D[var57Lifetime2] = var5.a((byte) 67);
-            this.field_r[var57Lifetime2] = var6.a((byte) 88);
-            this.field_m[var57Lifetime2] = var7.a((byte) -73);
-            this.field_I[var57Lifetime2] = var7.a((byte) -79);
-            this.field_j[var57Lifetime2] = var7.a((byte) 84);
+            this.field_M[var57Lifetime2] = (short)var3.readUnsignedShort((byte) -91);
+            this.field_q[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 96);
+            this.field_A[var57Lifetime2] = (short)var3.readUnsignedShort((byte) -69);
+            this.field_E[var57Lifetime2] = (short)var4.readUnsignedShort((byte) -100);
+            this.field_P[var57Lifetime2] = (short)var4.readUnsignedShort((byte) -87);
+            this.field_i[var57Lifetime2] = (short)var4.readUnsignedShort((byte) -82);
+            this.field_D[var57Lifetime2] = var5.readByte((byte) 67);
+            this.field_r[var57Lifetime2] = var6.readByte((byte) 88);
+            this.field_m[var57Lifetime2] = var7.readByte((byte) -73);
+            this.field_I[var57Lifetime2] = var7.readByte((byte) -79);
+            this.field_j[var57Lifetime2] = var7.readByte((byte) 84);
           }
           if (var58Lifetime1 == 3) {
-            this.field_M[var57Lifetime2] = (short)var3.c((byte) -71);
-            this.field_q[var57Lifetime2] = (short)var3.c((byte) -91);
-            this.field_A[var57Lifetime2] = (short)var3.c((byte) 76);
-            this.field_E[var57Lifetime2] = (short)var4.c((byte) -118);
-            this.field_P[var57Lifetime2] = (short)var4.c((byte) -68);
-            this.field_i[var57Lifetime2] = (short)var4.c((byte) 60);
-            this.field_D[var57Lifetime2] = var5.a((byte) -70);
-            this.field_r[var57Lifetime2] = var6.a((byte) 127);
-            this.field_m[var57Lifetime2] = var7.a((byte) -70);
+            this.field_M[var57Lifetime2] = (short)var3.readUnsignedShort((byte) -71);
+            this.field_q[var57Lifetime2] = (short)var3.readUnsignedShort((byte) -91);
+            this.field_A[var57Lifetime2] = (short)var3.readUnsignedShort((byte) 76);
+            this.field_E[var57Lifetime2] = (short)var4.readUnsignedShort((byte) -118);
+            this.field_P[var57Lifetime2] = (short)var4.readUnsignedShort((byte) -68);
+            this.field_i[var57Lifetime2] = (short)var4.readUnsignedShort((byte) 60);
+            this.field_D[var57Lifetime2] = var5.readByte((byte) -70);
+            this.field_r[var57Lifetime2] = var6.readByte((byte) 127);
+            this.field_m[var57Lifetime2] = var7.readByte((byte) -70);
           }
         }
         if (var14 != 0) {
-          var2.field_l = var49;
-          var57Lifetime3 = var2.g(11132);
+          var2.position = var49;
+          var57Lifetime3 = var2.readUnsignedByte(11132);
           if (var57Lifetime3 > 0) {
-            var2.field_l = var2.field_l + 4 * var57Lifetime3;
+            var2.position = var2.position + 4 * var57Lifetime3;
           }
-          var58Lifetime2 = var2.g(11132);
+          var58Lifetime2 = var2.readUnsignedByte(11132);
           if (var58Lifetime2 > 0) {
-            var2.field_l = var2.field_l + 4 * var58Lifetime2;
+            var2.position = var2.position + 4 * var58Lifetime2;
           }
         }
     }

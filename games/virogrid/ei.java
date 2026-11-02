@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ei {
-    static ic field_b;
+    static GameSession field_b;
     static String field_e;
     static volatile int field_f;
     static pd field_c;

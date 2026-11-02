@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class og implements Runnable {
-    private jc field_p;
+    private PacketBuffer field_p;
     private un field_m;
     static int field_s;
     static String field_e;
@@ -105,7 +105,7 @@ final class og implements Runnable {
             var3.write(ak.a(param0 ^ 5700, var5));
             this.field_i = new DataInputStream(var4.getInputStream());
           }
-          this.field_p.field_l = 0;
+          this.field_p.position = 0;
         } catch (java.io.IOException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (IOException) (Object) decompiledCaughtException;
@@ -190,11 +190,11 @@ final class og implements Runnable {
           var6 = 24 % ((param2 + 33) / 45);
           var5 = gk.field_g;
           var5.g(param1, 8);
-          var5.field_l = var5.field_l + 1;
-          var7 = var5.field_l;
+          var5.position = var5.position + 1;
+          var7 = var5.position;
           var5.a(3, 124);
           var5.a(param3, (byte) -96);
-          var5.b(-var7 + var5.field_l, -1);
+          var5.b(-var7 + var5.position, -1);
           stackIn_12_0 = null;
           return (String) (stackIn_12_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -227,16 +227,16 @@ final class og implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = Virogrid.field_F ? 1 : 0;
           try {
-            while (this.field_p.field_g.length > this.field_p.field_l) {
-              var1_int = this.field_i.read(this.field_p.field_g, this.field_p.field_l, -this.field_p.field_l + this.field_p.field_g.length);
+            while (this.field_p.payload.length > this.field_p.position) {
+              var1_int = this.field_i.read(this.field_p.payload, this.field_p.position, -this.field_p.position + this.field_p.payload.length);
               if (var1_int >= 0) {
-                this.field_p.field_l = this.field_p.field_l + var1_int;
+                this.field_p.position = this.field_p.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_p.field_l == this.field_p.field_g.length) {
-              throw og.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_p.field_g.length + " " + this.field_r));
+            if (this.field_p.position == this.field_p.payload.length) {
+              throw og.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_p.payload.length + " " + this.field_r));
             }
             var1 = this;
             synchronized (var1) {
@@ -320,9 +320,9 @@ final class og implements Runnable {
         this.field_m = null;
     }
 
-    final jc d(int param0) {
+    final PacketBuffer d(int param0) {
         if (param0 != 18240) {
-          this.field_p = (jc) null;
+          this.field_p = (PacketBuffer) null;
           if (3 == this.field_h) {
             return this.field_p;
           }
@@ -383,11 +383,11 @@ final class og implements Runnable {
           sg.field_j = sg.field_j - 1;
           var9 = gk.field_g;
           var9.g(param2, 8);
-          var9.field_l = var9.field_l + 1;
-          var5 = var9.field_l;
+          var9.position = var9.position + 1;
+          var5 = var9.position;
           var9.a(1, -98);
           var9.a(param0, (byte) -40);
-          var9.b(-var5 + var9.field_l, -1);
+          var9.b(-var5 + var9.position, -1);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -472,7 +472,7 @@ final class og implements Runnable {
         try {
           this.field_f = param0;
           this.field_r = param1;
-          this.field_p = new jc(param2);
+          this.field_p = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "og.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

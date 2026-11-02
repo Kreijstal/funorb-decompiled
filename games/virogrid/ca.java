@@ -107,12 +107,12 @@ final class ca extends fd implements bo, ta {
             }
           } else {
             if (var2 != 0 &&
-              p.field_d != 2) {
+              IntrusiveDeque.field_d != 2) {
               nm.b(1);
             }
           }
           if (0 == var3 &&
-            2 == p.field_d) {
+            2 == IntrusiveDeque.field_d) {
             var4 = hc.a(-9986) - af.field_e;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {

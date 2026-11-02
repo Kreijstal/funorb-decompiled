@@ -94,7 +94,7 @@ final class we {
             we.a(64);
           }
           if (param1 != null &&
-            param1.length() >= jc.field_m &&
+            param1.length() >= PacketBuffer.field_m &&
             param1.length() <= hh.field_c) {
             return false;
           }

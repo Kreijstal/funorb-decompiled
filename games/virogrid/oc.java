@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oc extends l {
+final class oc extends IntrusiveNode {
     int field_j;
     static boolean field_l;
     int field_g;

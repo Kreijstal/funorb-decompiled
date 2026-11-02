@@ -619,7 +619,7 @@ abstract class gf extends fi implements ja {
           var8 = var41;
           var65 = new int[param4.field_i];
           var63 = u.field_q;
-          var64 = fb.field_p;
+          var64 = CellFlip.field_p;
           var62 = dc.field_Q;
           for (var13 = 0; var13 < param4.field_i; var13++) {
             var14 = param5 * var62[var13] + param1 * var63[var13] + param6 * var64[var13] >> 8;

@@ -4,7 +4,7 @@
 final class qm extends km {
     static String field_Ob;
     static mg[] field_Kb;
-    static p field_Mb;
+    static IntrusiveDeque field_Mb;
     private km field_Fb;
     private km field_Jb;
     static String field_Hb;
@@ -198,7 +198,7 @@ final class qm extends km {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        p var4 = null;
+        IntrusiveDeque var4 = null;
         Object var5 = null;
         gh var6 = null;
         int var7 = 0;

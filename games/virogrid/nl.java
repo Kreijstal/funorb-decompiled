@@ -90,9 +90,9 @@ final class nl extends aj {
         }
     }
 
-    final static void a(java.math.BigInteger param0, jc param1, jc param2, java.math.BigInteger param3, int param4) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, PacketBuffer param2, java.math.BigInteger param3, int param4) {
         try {
-          bl.a(0, param1.field_l, param0, param2, param1.field_g, param3, param4);
+          bl.a(0, param1.position, param0, param2, param1.payload, param3, param4);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "nl.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -113,7 +113,7 @@ final class nl extends aj {
           }
           if (var2 != null) {
             var3 = (CharSequence) ((Object) var2);
-            if (jc.a(var3, (byte) -126) != 0L) {
+            if (PacketBuffer.a(var3, (byte) -126) != 0L) {
               return;
             }
           }
@@ -153,7 +153,7 @@ final class nl extends aj {
             stackIn_3_0 = (fi) (param1);
           }
           var10 = (tg) (stackIn_3_0);
-          uk.a(param1.field_m + param3 + param1.field_u, 6, param0 + param1.field_l, param1.field_g + param0 + param1.field_l, param3 + param1.field_u);
+          GameApplet.a(param1.field_m + param3 + param1.field_u, 6, param0 + param1.field_l, param1.field_g + param0 + param1.field_l, param3 + param1.field_u);
           if (var10 != null) {
             param2 = param2 & var10.field_C;
           }

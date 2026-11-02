@@ -14,7 +14,7 @@ class aj implements ol, gm {
     e field_i;
     int field_k;
     static String field_e;
-    static p field_m;
+    static IntrusiveDeque field_m;
     int field_d;
     int field_j;
     private int field_b;
@@ -94,7 +94,7 @@ class aj implements ol, gm {
           }
           var10 = var18.b(var8, 0);
           var11 = var18.b(var9, 0);
-          uk.a(param3.field_m + (param3.field_u + param5), 6, param2 + param3.field_l, param3.field_g + param3.field_l + param2, param5 + param3.field_u);
+          GameApplet.a(param3.field_m + (param3.field_u + param5), 6, param2 + param3.field_l, param3.field_g + param3.field_l + param2, param5 + param3.field_u);
           for (var12 = var10; var11 >= var12; var12++) {
             var13 = var17.field_d[var12];
             if (var10 != var12) {
@@ -502,7 +502,7 @@ class aj implements ol, gm {
         var14 = Virogrid.field_F ? 1 : 0;
         try {
           boolean decompiledFrameRemainder0 = true;
-          uk.a(param7.field_m + param7.field_u + param0, 6, param2 + param7.field_l, param7.field_g + (param7.field_l + param2), param7.field_u + param0);
+          GameApplet.a(param7.field_m + param7.field_u + param0, 6, param2 + param7.field_l, param7.field_g + (param7.field_l + param2), param7.field_u + param0);
           var9_int = -54 % ((-43 - param5) / 49);
           var10 = this.b(param7, true);
           var11 = this.a(0, param7);
@@ -592,7 +592,7 @@ class aj implements ol, gm {
             stackIn_5_3 = var13.field_d[1 + var7].field_c;
           }
           var12 = stackIn_4_0 + Math.min(stackIn_4_1, Math.min(stackIn_4_2, stackIn_5_3));
-          uk.a(param3.field_m + param3.field_u + param4, 6, param0 + param3.field_l, param3.field_g + (param3.field_l + param0), param3.field_u + param4);
+          GameApplet.a(param3.field_m + param3.field_u + param4, 6, param0 + param3.field_l, param3.field_g + (param3.field_l + param0), param3.field_u + param4);
           vi.field_g.a(var11, -28, this.field_t, var10, var10, var12);
           ai.a(param2);
           return;
@@ -720,6 +720,6 @@ class aj implements ol, gm {
         field_h = "Played";
         field_e = "Creating your account";
         field_g = 131072;
-        field_m = new p();
+        field_m = new IntrusiveDeque();
     }
 }

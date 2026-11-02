@@ -34,7 +34,7 @@ final class pj {
     }
 
     final static void a(int param0, int param1) {
-        l var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         sa var4 = null;
         RuntimeException decompiledCaughtException = null;

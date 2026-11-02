@@ -90,7 +90,7 @@ final class md {
           sb.field_b[1] = mc.field_c.nextInt();
           sb.field_b[2] = (int)(ph.field_i >> 32);
           sb.field_b[3] = (int)ph.field_i;
-          gg.field_D.field_l = 0;
+          gg.field_D.position = 0;
           gg.field_D.a(sb.field_b[0], (byte) -42);
           gg.field_D.a(sb.field_b[1], (byte) -42);
           gg.field_D.a(sb.field_b[2], (byte) -42);
@@ -98,14 +98,14 @@ final class md {
           kl.a(gg.field_D, (byte) 111);
           gg.field_D.a((byte) -126, param3);
           param4.a(false, gg.field_D);
-          gk.field_g.field_l = 0;
+          gk.field_g.position = 0;
           if (param0) {
             gk.field_g.a(18, param1 ^ -122);
           } else {
             gk.field_g.a(16, 61);
           }
-          gk.field_g.field_l = gk.field_g.field_l + 2;
-          var5_int = gk.field_g.field_l;
+          gk.field_g.position = gk.field_g.position + 2;
+          var5_int = gk.field_g.position;
           gk.field_g.a(cj.field_c, (byte) -42);
           gk.field_g.a((byte) -30, vi.field_n);
           var6 = 0;
@@ -131,7 +131,7 @@ final class md {
             gk.field_g.b(mj.field_B, (byte) 127);
           }
           nl.a(on.field_a, gg.field_D, gk.field_g, ch.field_i, param1);
-          gk.field_g.c(-var5_int + gk.field_g.field_l, -3991);
+          gk.field_g.c(-var5_int + gk.field_g.position, -3991);
           al.b(~param1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

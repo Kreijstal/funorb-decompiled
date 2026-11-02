@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tb extends l {
+final class tb extends IntrusiveNode {
     private int[] field_j;
     int[] field_l;
     boolean field_n;
@@ -127,41 +127,41 @@ final class tb extends l {
         this.field_l = null;
     }
 
-    tb(jc param0) {
+    tb(PacketBuffer param0) {
         boolean stackIn_3_1 = false;
         int var2;
         int var3;
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime3;
-        this.field_i = param0.c((byte) 93);
-        stackIn_3_1 = (param0.g(11132) == 1);
+        this.field_i = param0.readUnsignedShort((byte) 93);
+        stackIn_3_1 = (param0.readUnsignedByte(11132) == 1);
         this.field_n = stackIn_3_1;
-        var2 = param0.g(11132);
+        var2 = param0.readUnsignedByte(11132);
         if (var2 >= 1 &&
           var2 <= 4) {
           this.field_j = new int[var2];
           for (var3 = 0; var3 < var2; var3++) {
-            this.field_j[var3] = param0.c((byte) -86);
+            this.field_j[var3] = param0.readUnsignedShort((byte) -86);
           }
           if (var2 > 1) {
             this.field_g = new int[var2 - 1];
             for (var3Lifetime1 = 0; var3Lifetime1 < var2 - 1; var3Lifetime1++) {
-              this.field_g[var3Lifetime1] = param0.g(11132);
+              this.field_g[var3Lifetime1] = param0.readUnsignedByte(11132);
             }
           }
           if (var2 > 1) {
             this.field_m = new int[var2 - 1];
             for (var3Lifetime2 = 0; var3Lifetime2 < var2 - 1; var3Lifetime2++) {
-              this.field_m[var3Lifetime2] = param0.g(11132);
+              this.field_m[var3Lifetime2] = param0.readUnsignedByte(11132);
             }
           }
           this.field_k = new int[var2];
           for (var3Lifetime3 = 0; var3Lifetime3 < var2; var3Lifetime3++) {
-            this.field_k[var3Lifetime3] = param0.d((byte) 117);
+            this.field_k[var3Lifetime3] = param0.readInt((byte) 117);
           }
-          param0.g(11132);
-          param0.g(11132);
+          param0.readUnsignedByte(11132);
+          param0.readUnsignedByte(11132);
           this.field_l = null;
           return;
         }

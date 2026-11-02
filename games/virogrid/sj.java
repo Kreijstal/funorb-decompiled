@@ -56,7 +56,7 @@ final class sj {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        jc var18 = null;
+        PacketBuffer var18 = null;
         byte[] var22 = null;
         int var8Lifetime1;
         int var11Lifetime1;
@@ -73,22 +73,22 @@ final class sj {
         int var14Lifetime1Lifetime1;
         var17 = Virogrid.field_F ? 1 : 0;
         try {
-          var18 = new jc(mc.a(param0, 118));
-          var4 = var18.g(11132);
+          var18 = new PacketBuffer(mc.a(param0, 118));
+          var4 = var18.readUnsignedByte(11132);
           if (var4 >= 5 &&
             var4 <= 7) {
             if (var4 < 6) {
               this.field_a = 0;
             } else {
-              this.field_a = var18.d((byte) 109);
+              this.field_a = var18.readInt((byte) 109);
             }
-            var5 = var18.g(11132);
+            var5 = var18.readUnsignedByte(11132);
             stackIn_11_0 = ((var5 & 1) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             if (7 <= var4) {
               this.field_b = var18.d(true);
             } else {
-              this.field_b = var18.c((byte) 106);
+              this.field_b = var18.readUnsignedShort((byte) 106);
             }
             stackIn_17_0 = ((var5 & 2) == 0) ? 0 : 1;
             var7 = stackIn_17_0;
@@ -98,7 +98,7 @@ final class sj {
             this.field_c = new int[this.field_b];
             if (var4 < 7) {
               for (var11 = 0; this.field_b > var11; var11++) {
-                dupTemp$0 = var8 + var18.c((byte) 66);
+                dupTemp$0 = var8 + var18.readUnsignedShort((byte) 66);
                 var8 = dupTemp$0;
                 this.field_c[var11] = dupTemp$0;
                 if (this.field_c[var11] > var9) {
@@ -130,12 +130,12 @@ final class sj {
                 this.field_t[var11Lifetime1] = -1;
               }
               for (var11Lifetime1Lifetime1 = 0; var11Lifetime1Lifetime1 < this.field_b; var11Lifetime1Lifetime1++) {
-                this.field_t[this.field_c[var11Lifetime1Lifetime1]] = var18.d((byte) 119);
+                this.field_t[this.field_c[var11Lifetime1Lifetime1]] = var18.readInt((byte) 119);
               }
               this.field_h = new md(this.field_t);
             }
             for (var11Lifetime2 = 0; this.field_b > var11Lifetime2; var11Lifetime2++) {
-              this.field_m[this.field_c[var11Lifetime2]] = var18.d((byte) 95);
+              this.field_m[this.field_c[var11Lifetime2]] = var18.readInt((byte) 95);
             }
             if (var7 != 0) {
               for (var11Lifetime3 = 0; var11Lifetime3 < this.field_b; var11Lifetime3++) {
@@ -145,7 +145,7 @@ final class sj {
               }
             }
             for (var11Lifetime4 = 0; var11Lifetime4 < this.field_b; var11Lifetime4++) {
-              this.field_f[this.field_c[var11Lifetime4]] = var18.d((byte) 104);
+              this.field_f[this.field_c[var11Lifetime4]] = var18.readInt((byte) 104);
             }
             if (var4 >= 7) {
               for (var11Lifetime5 = 0; this.field_b > var11Lifetime5; var11Lifetime5++) {
@@ -175,7 +175,7 @@ final class sj {
               }
             } else {
               for (var11Lifetime5 = 0; var11Lifetime5 < this.field_b; var11Lifetime5++) {
-                this.field_n[this.field_c[var11Lifetime5]] = var18.c((byte) 42);
+                this.field_n[this.field_c[var11Lifetime5]] = var18.readUnsignedShort((byte) 42);
               }
               for (var11Lifetime5 = 0; var11Lifetime5 < this.field_b; var11Lifetime5++) {
                 var12 = this.field_c[var11Lifetime5];
@@ -185,7 +185,7 @@ final class sj {
                 this.field_r[var12] = array$5;
                 var14 = -1;
                 for (var15 = 0; var13 > var15; var15++) {
-                  dupTemp$6 = var8Lifetime1 + var18.c((byte) -84);
+                  dupTemp$6 = var8Lifetime1 + var18.readUnsignedShort((byte) -84);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_r[var12];
                   dupTemp$7[var15] = dupTemp$6;
@@ -217,7 +217,7 @@ final class sj {
                   } else {
                     var15Lifetime1 = this.field_r[var12Lifetime1][var14Lifetime1Lifetime1];
                   }
-                  this.field_g[var12Lifetime1][var15Lifetime1] = var18.d((byte) 119);
+                  this.field_g[var12Lifetime1][var15Lifetime1] = var18.readInt((byte) 119);
                 }
                 this.field_u[var12Lifetime1] = new md(this.field_g[var12Lifetime1]);
               }

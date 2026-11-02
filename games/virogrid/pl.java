@@ -81,7 +81,7 @@ final class pl {
           if (param0 >= -44) {
             field_f = (String) null;
           }
-          stackIn_3_0 = p.a(param2, 4330, true, param1);
+          stackIn_3_0 = IntrusiveDeque.a(param2, 4330, true, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

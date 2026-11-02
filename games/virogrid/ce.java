@@ -165,14 +165,14 @@ final class ce extends ec {
               oj.field_Ub = new el((java.net.Socket) (td.field_b.field_f), qc.field_f);
               var5 = sh.field_qb;
               var6 = var5;
-              gk.field_g.field_l = 0;
+              gk.field_g.position = 0;
               stackIn_13_0 = (param1) ? -2 : -1;
               ah.field_e = stackIn_13_0;
               pl.field_c = stackIn_13_0;
               md.field_b = stackIn_13_0;
               ug.field_a = ul.field_c;
-              var6.field_l = 0;
-              hj.a(m.field_m, gk.field_g, wc.field_m, oj.field_Yb, 12);
+              var6.position = 0;
+              hj.a(CellAnimator.field_m, gk.field_g, wc.field_m, oj.field_Yb, 12);
               al.b(-1, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -318,7 +318,7 @@ final class ce extends ec {
         int fieldTemp$0 = 0;
         int var4 = 0;
         int var4Lifetime1;
-        gg.field_D.field_l = 0;
+        gg.field_D.position = 0;
         if (param2 == -2) {
           gg.field_D.a(12, 108);
           gg.field_D.a(mc.field_c.nextInt(), (byte) -42);
@@ -328,11 +328,11 @@ final class ce extends ec {
           gg.field_D.a((byte) 65, param3);
           gg.field_D.a(on.field_a, ch.field_i, (byte) 86);
           gk.field_g.g(18, 8);
-          fieldTemp$0 = gk.field_g.field_l + 1;
-          gk.field_g.field_l = gk.field_g.field_l + 1;
+          fieldTemp$0 = gk.field_g.position + 1;
+          gk.field_g.position = gk.field_g.position + 1;
           var4 = fieldTemp$0;
-          gk.field_g.a(gg.field_D.field_g, gg.field_D.field_l, 0, (byte) -123);
-          gk.field_g.b(-var4 + gk.field_g.field_l, -1);
+          gk.field_g.a(gg.field_D.payload, gg.field_D.position, 0, (byte) -123);
+          gk.field_g.b(-var4 + gk.field_g.position, -1);
           return;
         }
         field_H = (String) null;
@@ -344,11 +344,11 @@ final class ce extends ec {
         gg.field_D.a((byte) 65, param3);
         gg.field_D.a(on.field_a, ch.field_i, (byte) 86);
         gk.field_g.g(18, 8);
-        int fieldTemp$1 = gk.field_g.field_l + 1;
-        gk.field_g.field_l = gk.field_g.field_l + 1;
+        int fieldTemp$1 = gk.field_g.position + 1;
+        gk.field_g.position = gk.field_g.position + 1;
         var4Lifetime1 = fieldTemp$1;
-        gk.field_g.a(gg.field_D.field_g, gg.field_D.field_l, 0, (byte) -123);
-        gk.field_g.b(-var4Lifetime1 + gk.field_g.field_l, -1);
+        gk.field_g.a(gg.field_D.payload, gg.field_D.position, 0, (byte) -123);
+        gk.field_g.b(-var4Lifetime1 + gk.field_g.position, -1);
     }
 
     final void e(int param0) {

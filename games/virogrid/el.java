@@ -81,20 +81,20 @@ final class el implements Runnable {
         th var9 = null;
         var7 = Virogrid.field_F ? 1 : 0;
         var8 = sh.field_qb;
-        var3 = var8.g(11132);
+        var3 = var8.readUnsignedByte(11132);
         td.field_h = 127 & var3;
         stackIn_3_0 = (param1 != (128 & var3));
         ea.field_b = stackIn_3_0;
-        va.field_b = var8.g(11132);
+        va.field_b = var8.readUnsignedByte(11132);
         hk.field_Kb = var8.e((byte) -60);
         if (td.field_h != 2) {
           eb.field_d = 0;
           pl.field_b = 0;
         } else {
-          eb.field_d = var8.c((byte) -54);
-          pl.field_b = var8.a(-25842);
+          eb.field_d = var8.readUnsignedShort((byte) -54);
+          pl.field_b = var8.readMedium(-25842);
         }
-        stackIn_9_0 = (1 != var8.g(11132)) ? 0 : 1;
+        stackIn_9_0 = (1 != var8.readUnsignedByte(11132)) ? 0 : 1;
         var4 = stackIn_9_0;
         vc.field_hb = var8.h(-118);
         if (var4 == 0) {
@@ -107,11 +107,11 @@ final class el implements Runnable {
           pb.field_l = null;
           ef.field_b = 0;
         } else {
-          ef.field_b = var8.c((byte) 49);
+          ef.field_b = var8.readUnsignedShort((byte) 49);
           pb.field_l = var8.h(-127);
         }
         if (param0) {
-          var5 = var8.c((byte) -77);
+          var5 = var8.readUnsignedShort((byte) -77);
           try {
             var9 = cj.field_s.a((byte) 125, var5);
             aa.field_f = var9.d(124);
@@ -201,10 +201,10 @@ final class el implements Runnable {
           return;
         }
         hg var2 = sh.field_qb;
-        var2.d((byte) 118);
-        var2.d((byte) 102);
-        var2.d((byte) 99);
-        var2.d((byte) 102);
+        var2.readInt((byte) 118);
+        var2.readInt((byte) 102);
+        var2.readInt((byte) 99);
+        var2.readInt((byte) 102);
         var1.a(false);
     }
 

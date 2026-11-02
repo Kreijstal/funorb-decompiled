@@ -47,8 +47,8 @@ final class cf {
           var5 = ke.a("screen_options", "commonui", param0, 32370);
           dk.field_q = new rm[4];
           hj.field_g = new rm[4];
-          jc.field_h = new rm[4];
-          var6 = new rm[][]{hj.field_g, jc.field_h, dk.field_q};
+          PacketBuffer.field_h = new rm[4];
+          var6 = new rm[][]{hj.field_g, PacketBuffer.field_h, dk.field_q};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;

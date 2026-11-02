@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class r extends in {
-    private p field_m;
-    private p field_l;
+    private IntrusiveDeque field_m;
+    private IntrusiveDeque field_l;
     private int field_k;
     private int field_n;
 
@@ -42,7 +42,7 @@ final class r extends in {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_g = var5;
-              this.a(var3.field_f, var3);
+              this.a(var3.previous, var3);
             } else {
               var3.field_g = 0;
               this.a(var3);
@@ -88,7 +88,7 @@ final class r extends in {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_g = var7;
-              this.a(var5.field_f, var5);
+              this.a(var5.previous, var5);
             } else {
               var5.field_g = 0;
               this.a(var5);
@@ -101,7 +101,7 @@ final class r extends in {
     private final void a(cl param0) {
         param0.a(false);
         param0.a();
-        l var2 = this.field_l.field_i.field_f;
+        IntrusiveNode var2 = this.field_l.field_i.previous;
         if (var2 == this.field_l.field_i) {
           this.field_k = -1;
         } else {
@@ -109,21 +109,21 @@ final class r extends in {
         }
     }
 
-    private final void a(l param0, cl param1) {
+    private final void a(IntrusiveNode param0, cl param1) {
         while (true) {
           if (param0 == this.field_l.field_i) {
             td.a(param0, (byte) 120, param1);
-            this.field_k = ((cl) (this.field_l.field_i.field_f)).field_g;
+            this.field_k = ((cl) (this.field_l.field_i.previous)).field_g;
             return;
           }
           if (((cl) (param0)).field_g <= param1.field_g) {
-            param0 = param0.field_f;
+            param0 = param0.previous;
             continue;
           }
           break;
         }
         td.a(param0, (byte) 120, param1);
-        this.field_k = ((cl) (this.field_l.field_i.field_f)).field_g;
+        this.field_k = ((cl) (this.field_l.field_i.previous)).field_g;
         return;
     }
 
@@ -157,8 +157,8 @@ final class r extends in {
     }
 
     public r() {
-        this.field_m = new p();
-        this.field_l = new p();
+        this.field_m = new IntrusiveDeque();
+        this.field_l = new IntrusiveDeque();
         this.field_n = 0;
         this.field_k = -1;
     }

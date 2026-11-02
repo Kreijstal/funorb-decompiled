@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ke extends wb {
+class ke extends DualLinkNode {
     static km field_u;
     static boolean[][] field_t;
     static String field_o;

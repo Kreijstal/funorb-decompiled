@@ -91,7 +91,7 @@ final class of {
             vj.field_b[0] != oj.field_Vb) {
             oj.field_Vb = vj.field_b[0];
           }
-          qa.a((byte) 78, 0, p.field_e, param0, true, oj.field_Vb);
+          qa.a((byte) 78, 0, IntrusiveDeque.field_e, param0, true, oj.field_Vb);
         }
         if (nk.field_H.field_nb != 0) {
           ao.field_Gb = false;

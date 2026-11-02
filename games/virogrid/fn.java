@@ -6,7 +6,7 @@ final class fn {
     static String[] field_b;
     static String field_g;
     static String field_f;
-    static p field_a;
+    static IntrusiveDeque field_a;
     static int field_c;
     static km field_e;
 
@@ -50,7 +50,7 @@ final class fn {
         var42 = null;
         var12 = Virogrid.field_F ? 1 : 0;
         var3 = 1;
-        if (!uf.field_i &&
+        if (!GameBoard.field_i &&
           null == qc.field_i) {
           var3 = 0;
         }
@@ -219,7 +219,7 @@ final class fn {
             te.field_f.a(false);
             te.field_f = null;
           }
-          ma.field_c = null;
+          IntrusiveDequeCursor.field_c = null;
           if (qm.field_Mb != null) {
             qm.field_Mb.a(false);
             qm.field_Mb = null;
@@ -234,7 +234,7 @@ final class fn {
             ti.field_i = null;
           }
           if (param0 >= -30) {
-            field_a = (p) null;
+            field_a = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -325,6 +325,6 @@ final class fn {
         field_f = "Play the game without logging in just yet";
         field_g = "2D - Fastest";
         field_b = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
-        field_a = new p();
+        field_a = new IntrusiveDeque();
     }
 }

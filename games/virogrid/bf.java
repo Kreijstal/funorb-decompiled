@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bf extends l {
+final class bf extends IntrusiveNode {
     static String field_k;
     int[] field_u;
     static int[] field_m;
@@ -112,8 +112,8 @@ final class bf extends l {
         try {
           var5 = gk.field_g;
           var5.g(param2, 8);
-          var5.field_l = var5.field_l + 1;
-          var4 = var5.field_l;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.a(1, -109);
           if (param0.field_g == null) {
             var5.a(0, param1 ^ -98);
@@ -122,9 +122,9 @@ final class bf extends l {
             var5.a(param0.field_g, param0.field_g.length, 0, (byte) 94);
           }
           var5.b((byte) -111, var4);
-          var5.field_l = var5.field_l - param1;
-          param0.field_i = var5.d((byte) 127);
-          var5.b(var5.field_l - var4, param1 ^ -5);
+          var5.position = var5.position - param1;
+          param0.field_i = var5.readInt((byte) 127);
+          var5.b(var5.position - var4, param1 ^ -5);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "bf.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

@@ -2,24 +2,24 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kf {
-    private wb field_h;
-    private wb field_i;
+    private DualLinkNode field_h;
+    private DualLinkNode field_i;
     static int field_e;
     static int[] field_j;
     static il field_c;
     private long field_d;
     private int field_b;
     static km field_g;
-    private wb[] field_f;
+    private DualLinkNode[] field_f;
     private int field_a;
 
-    final wb b(int param0) {
+    final DualLinkNode b(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$1 = 0;
-        wb var2;
+        DualLinkNode var2;
         int var3;
-        wb var4;
+        DualLinkNode var4;
         var3 = Virogrid.field_F ? 1 : 0;
         if (param0 == -1) {
           if (0 < this.field_b &&
@@ -79,10 +79,10 @@ final class kf {
         el.field_r = param0;
     }
 
-    final wb a(boolean param0) {
+    final DualLinkNode a(boolean param0) {
         this.field_b = 0;
         if (!param0) {
-          return (wb) null;
+          return (DualLinkNode) null;
         }
         return this.b(-1);
     }
@@ -103,17 +103,17 @@ final class kf {
     final static void a(int param0, int param1, long param2, int param3, String param4, boolean param5) {
         int var7_int = 0;
         gk.field_g.g(param0, 8);
-        gk.field_g.field_l = gk.field_g.field_l + 1;
+        gk.field_g.position = gk.field_g.position + 1;
         if (param3 < 4) {
           return;
         }
         try {
-          var7_int = gk.field_g.field_l;
+          var7_int = gk.field_g.position;
           gk.field_g.a((byte) -66, param2);
           gk.field_g.a(param4, (byte) -119);
           gk.field_g.a(param1, 55);
           gk.field_g.a(!param5 ? 0 : 1, 125);
-          gk.field_g.b(-var7_int + gk.field_g.field_l, -1);
+          gk.field_g.b(-var7_int + gk.field_g.position, -1);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "kf.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
@@ -123,7 +123,7 @@ final class kf {
         try {
           ng.field_P = param1;
           hd.field_e = param3;
-          ma.field_h = param5;
+          IntrusiveDequeCursor.field_h = param5;
           tg.field_D = param4;
           dj.field_e = param2;
           if (param0 != 0) {
@@ -154,13 +154,13 @@ final class kf {
         return false;
     }
 
-    final wb c(int param0) {
-        wb var3 = null;
+    final DualLinkNode c(int param0) {
+        DualLinkNode var3 = null;
         int var4 = Virogrid.field_F ? 1 : 0;
         if (this.field_i == null) {
           return null;
         }
-        wb var2 = this.field_f[(int)(this.field_d & (long)(-1 + this.field_a))];
+        DualLinkNode var2 = this.field_f[(int)(this.field_d & (long)(-1 + this.field_a))];
         while (var2 != this.field_i) {
           if (~this.field_d == ~this.field_i.field_j) {
             var3 = this.field_i;
@@ -173,13 +173,13 @@ final class kf {
           this.field_i = null;
           return null;
         }
-        return (wb) null;
+        return (DualLinkNode) null;
     }
 
-    final wb a(long param0, byte param1) {
-        wb var4;
+    final DualLinkNode a(long param0, byte param1) {
+        DualLinkNode var4;
         int var5_int;
-        wb var5;
+        DualLinkNode var5;
         int var6;
         var6 = Virogrid.field_F ? 1 : 0;
         this.field_d = param0;
@@ -202,11 +202,11 @@ final class kf {
         return var5;
     }
 
-    final void a(long param0, wb param1, int param2) {
+    final void a(long param0, DualLinkNode param1, int param2) {
         if (null != param1.field_k) {
           param1.c(92);
         }
-        wb var5 = this.field_f[(int)((long)(this.field_a - 1) & param0)];
+        DualLinkNode var5 = this.field_f[(int)((long)(this.field_a - 1) & param0)];
         param1.field_h = var5;
         param1.field_k = var5.field_k;
         param1.field_k.field_h = param1;
@@ -230,7 +230,7 @@ final class kf {
         RuntimeException decompiledCaughtException = null;
         var3 = Virogrid.field_F ? 1 : 0;
         try {
-          var4 = (bf) (l.field_c.a((byte) -66));
+          var4 = (bf) (IntrusiveNode.field_c.a((byte) -66));
           var1 = var4;
           if (var1 == null) {
             return false;
@@ -258,13 +258,13 @@ final class kf {
 
     kf(int param0) {
         int var2 = 0;
-        wb dupTemp$1 = null;
-        wb var3;
+        DualLinkNode dupTemp$1 = null;
+        DualLinkNode var3;
         this.field_b = 0;
-        this.field_f = new wb[param0];
+        this.field_f = new DualLinkNode[param0];
         this.field_a = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new wb();
+          dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
           this.field_f[var2] = dupTemp$1;
           var3.field_h = var3;

@@ -49,7 +49,7 @@ final class lj implements ol {
           if (null != vg.field_I) {
             mn.a(false);
             fe.g(1);
-            stackIn_7_0 = (vg.field_I.field_e == 1) ? 0.0 : 3.141592653589793;
+            stackIn_7_0 = (vg.field_I.localPlayer == 1) ? 0.0 : 3.141592653589793;
             sj.field_o = (float)stackIn_7_0;
             if (Virogrid.field_F) {
               sj.field_o = 3.1415927410125732f;
@@ -290,7 +290,7 @@ final class lj implements ol {
         }
     }
 
-    final static void a(boolean param0, jc param1) {
+    final static void a(boolean param0, PacketBuffer param1) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException stackIn_8_0 = null;
@@ -300,22 +300,22 @@ final class lj implements ol {
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          ve.field_s = param1.c((byte) 83) << 5;
-          var2_int = param1.g(11132);
+          ve.field_s = param1.readUnsignedShort((byte) 83) << 5;
+          var2_int = param1.readUnsignedByte(11132);
           ve.field_s = ve.field_s + (var2_int >> 3);
           ng.field_X = (var2_int & 7) << 18;
-          ng.field_X = ng.field_X + (param1.c((byte) -43) << 2);
-          var2_intLifetime1 = param1.g(11132);
+          ng.field_X = ng.field_X + (param1.readUnsignedShort((byte) -43) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte(11132);
           if (!param0) {
             field_r = 0.6400812864303589f;
           }
           ng.field_X = ng.field_X + (var2_intLifetime1 >> 6);
           ug.field_b = (63 & var2_intLifetime1) << 15;
-          ug.field_b = ug.field_b + (param1.g(11132) << 7);
-          var2_intLifetime2 = param1.g(11132);
+          ug.field_b = ug.field_b + (param1.readUnsignedByte(11132) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte(11132);
           lm.field_j = (var2_intLifetime2 & 1) << 16;
           ug.field_b = ug.field_b + (var2_intLifetime2 >> 1);
-          lm.field_j = lm.field_j + param1.c((byte) 70);
+          lm.field_j = lm.field_j + param1.readUnsignedShort((byte) 70);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

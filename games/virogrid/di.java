@@ -6,7 +6,7 @@ final class di extends qe {
     static int field_o;
     static km field_n;
     private boolean field_p;
-    static p field_v;
+    static IntrusiveDeque field_v;
     static String field_q;
     static boolean[] field_r;
     static String field_t;
@@ -181,7 +181,7 @@ final class di extends qe {
     }
 
     static {
-        field_v = new p();
+        field_v = new IntrusiveDeque();
         field_q = "The following settings need to be changed:  ";
         field_r = new boolean[64];
         field_t = "You have <%0> unread messages!";

@@ -9,7 +9,7 @@ final class gd extends wf implements java.awt.image.ImageProducer, java.awt.imag
     static wl field_r;
     static String field_p;
     static String field_q;
-    static p field_n;
+    static IntrusiveDeque field_n;
 
     public final boolean imageUpdate(java.awt.Image param0, int param1, int param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
@@ -148,6 +148,6 @@ final class gd extends wf implements java.awt.image.ImageProducer, java.awt.imag
         field_r = new wl();
         field_p = "Security";
         field_q = "Shortcut Reference";
-        field_n = new p();
+        field_n = new IntrusiveDeque();
     }
 }

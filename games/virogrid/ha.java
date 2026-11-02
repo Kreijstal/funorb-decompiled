@@ -11,7 +11,7 @@ final class ha {
     private java.math.BigInteger field_j;
     private sb field_i;
     private ub field_h;
-    private jc field_c;
+    private PacketBuffer field_c;
 
     public static void a(int param0) {
         if (param0 < 22) {
@@ -62,13 +62,13 @@ final class ha {
         }
         if (ad.field_h &&
           wl.field_d.field_ic >= wl.field_d.field_vc) {
-          uf.field_j.field_Eb.field_V = oc.field_h;
+          GameBoard.field_j.field_Eb.field_V = oc.field_h;
           ij.field_m.field_Y = false;
-          ak.a(16377, uf.field_j.field_Jb);
+          ak.a(16377, GameBoard.field_j.field_Jb);
         } else {
-          uf.field_j.field_Eb.field_V = null;
+          GameBoard.field_j.field_Eb.field_V = null;
           ij.field_m.field_Y = true;
-          lb.a(param6, param0, uf.field_j, param1, 21547);
+          lb.a(param6, param0, GameBoard.field_j, param1, 21547);
         }
         pi.a(param4, param6, param9, (byte) -106, param5, param0, param1);
         lb.a(param6, param0, wm.field_r, param1, 21547);
@@ -100,9 +100,9 @@ final class ha {
               stackIn_9_0 = this.field_b[param1];
               return stackIn_9_0;
             }
-            this.field_c.field_l = param0 * param1 + 6;
-            var6_int = this.field_c.d((byte) 120);
-            var7 = this.field_c.d((byte) 114);
+            this.field_c.position = param0 * param1 + 6;
+            var6_int = this.field_c.readInt((byte) 120);
+            var7 = this.field_c.readInt((byte) 114);
             var13 = new byte[64];
             this.field_c.a(0, 64, true, var13);
             var9 = new oa(param1, param4, param3, this.field_f, this.field_i, var6_int, var13, var7, param2);
@@ -210,11 +210,11 @@ final class ha {
         try {
           var5 = gk.field_g;
           var5.g(param0, 8);
-          var5.field_l = var5.field_l + 1;
-          var4 = var5.field_l;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.a(1, 84);
           var5.a(param1.field_p, 68);
-          var5.c(param1.field_q, (byte) -102);
+          var5.writeSignedSmart(param1.field_q, (byte) -102);
           if (param2 >= -22) {
             field_d = (String) null;
           }
@@ -223,7 +223,7 @@ final class ha {
           var5.a(param1.field_j, (byte) -42);
           var5.a(param1.field_m, (byte) -42);
           var5.b((byte) -111, var4);
-          var5.b(var5.field_l - var4, -1);
+          var5.b(var5.position - var4, -1);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "ha.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -236,7 +236,7 @@ final class ha {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        jc var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -254,14 +254,14 @@ final class ha {
         if (this.field_h.field_t) {
           return false;
         }
-        var10 = new jc(this.field_h.b((byte) 39));
-        var10.field_l = 5;
-        var3 = var10.g(param0 + 11113);
-        var10.field_l = var10.field_l + 72 * var3;
+        var10 = new PacketBuffer(this.field_h.b((byte) 39));
+        var10.position = 5;
+        var3 = var10.readUnsignedByte(param0 + 11113);
+        var10.position = var10.position + 72 * var3;
         if (param0 != 19) {
           this.field_b = (oa[]) null;
         }
-        var13 = new byte[var10.field_g.length - var10.field_l];
+        var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
         var10.a(0, var13.length, true, var13);
@@ -276,7 +276,7 @@ final class ha {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = ug.a(var10.field_g, var10.field_l - (var13.length + 5), 5, false);
+        var15 = ug.a(var10.payload, var10.position - (var13.length + 5), 5, false);
         for (var7 = 0; 64 > var7; var7++) {
           if (var15[var7] != var5[1 + var7]) {
             throw new RuntimeException();

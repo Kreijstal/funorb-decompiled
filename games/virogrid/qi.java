@@ -39,7 +39,7 @@ final class qi {
             qi.a(87);
           }
           var2 = 0;
-          if (2 == p.field_d) {
+          if (2 == IntrusiveDeque.field_d) {
             var3_long = -af.field_e + hc.a(param0 - 4781);
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
@@ -58,7 +58,7 @@ final class qi {
               }
             }
             var6 = mn.field_c[var3];
-            if (2 == p.field_d &&
+            if (2 == IntrusiveDeque.field_d &&
               var2 == 1) {
               if (dh.field_o.length <= rj.field_d.length) {
                 stackIn_18_0 = rj.field_d.length;

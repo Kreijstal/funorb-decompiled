@@ -187,7 +187,7 @@ final class oj extends km {
               }
               var8 = (String) null;
               jl.a(var5, sd.field_e, va.field_d, param1, (byte) 39, (String) null);
-              uk.a(var5, 5, va.field_d, sd.field_e, oc.field_n);
+              GameApplet.a(var5, 5, va.field_d, sd.field_e, oc.field_n);
               f.a((byte) -128);
               gg.a(15810);
             }

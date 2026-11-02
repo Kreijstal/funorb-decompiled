@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tm extends l {
+final class tm extends IntrusiveNode {
     static String field_i;
     static String field_j;
     int field_m;
@@ -286,12 +286,12 @@ final class tm extends l {
           vc.field_fb = param6;
           ch.field_j = param11;
           te.field_e = param14;
-          p.field_e = param7;
-          ic.field_f = param13;
+          IntrusiveDeque.field_e = param7;
+          GameSession.field_f = param13;
           th.field_p = param10;
-          uf.field_d = param8;
+          GameBoard.field_d = param8;
           jb.field_I = ke.a(32, param5, "lobby", "gameprivacy");
-          m.field_f = ke.a(32, param5, "lobby", "ratedgame");
+          CellAnimator.field_f = ke.a(32, param5, "lobby", "ratedgame");
           lc.field_c = ke.a(32, param5, "lobby", "opentome");
           ph.field_m = ke.a(32, param5, "lobby", "allowspectators");
           cj.field_b = new String[5];
@@ -303,15 +303,15 @@ final class tm extends l {
           ij.field_m = new km(0L, (km) null);
           me.field_d = new km(0L, ag.field_d, tl.field_h);
           wm.field_m = new km(0L, he.field_Jb, wl.field_f);
-          uf.field_j = new um(0L, new km(0L, (km) null), gg.field_M, ub.field_z);
+          GameBoard.field_j = new um(0L, new km(0L, (km) null), gg.field_M, ub.field_z);
           ij.field_m.a(0, me.field_d);
           if (ql.field_d) {
             ij.field_m.a(0, wm.field_m);
           }
-          ij.field_m.a(0, uf.field_j);
-          uf.field_j.field_Eb.b(18003, ti.field_h);
-          uf.field_j.field_Eb.field_D = 1;
-          var23 = uf.field_j.field_Eb;
+          ij.field_m.a(0, GameBoard.field_j);
+          GameBoard.field_j.field_Eb.b(18003, ti.field_h);
+          GameBoard.field_j.field_Eb.field_D = 1;
+          var23 = GameBoard.field_j.field_Eb;
           var24 = var23;
           var24.field_lb = 1;
           qd.field_f = new km(0L, ti.field_h);
@@ -320,7 +320,7 @@ final class tm extends l {
           }
           qd.field_f.field_lb = 1;
           s.field_b = new km(0L, mf.field_j, um.field_Ib.toUpperCase());
-          ng.field_Z = new km(0L, kh.field_b, uf.field_o.toUpperCase());
+          ng.field_Z = new km(0L, kh.field_b, GameBoard.field_o.toUpperCase());
           nk.field_I = new km(0L, cc.field_w);
           f.field_c = new km(0L, ag.field_d, pi.field_a);
           qn.field_H = new km(0L, jm.field_b, wf.field_g);
@@ -342,7 +342,7 @@ final class tm extends l {
           } else {
             stackIn_8_0 = null;
             stackIn_8_1 = null;
-            stackIn_8_4 = wb.field_l;
+            stackIn_8_4 = DualLinkNode.field_l;
           }
           dc.field_R = new km(stackIn_7_2, stackIn_7_3, ((String) (Object) stackIn_8_4).toUpperCase());
           hg.field_p = new km(0L, (km) null);
@@ -368,10 +368,10 @@ final class tm extends l {
           jj.field_a = new km(0L, fn.field_e);
           jj.field_a.a(0, pa.field_o);
           jj.field_a.a(0, nk.field_H);
-          l.field_b = new km(0L, gg.field_M);
-          l.field_b.b(18003, ti.field_h);
-          var16 = l.field_b;
-          l.field_b.field_D = 1;
+          IntrusiveNode.field_b = new km(0L, gg.field_M);
+          IntrusiveNode.field_b.b(18003, ti.field_h);
+          var16 = IntrusiveNode.field_b;
+          IntrusiveNode.field_b.field_D = 1;
           var16.field_lb = 1;
           ia.field_d = new km(0L, (km) null);
           qh.field_R = new km(0L, ti.field_h);
@@ -385,7 +385,7 @@ final class tm extends l {
             ia.field_d.a(0, gn.field_F);
           }
           ia.field_d.a(0, wm.field_r);
-          fb.field_o = new km(0L, mf.field_j, mf.field_i.toUpperCase());
+          CellFlip.field_o = new km(0L, mf.field_j, mf.field_i.toUpperCase());
           qi.field_e = new km(0L, kh.field_b);
           nn.field_b = new km(0L, cc.field_w);
           qa.field_c = new km(0L, me.field_c, tk.field_a.toUpperCase());
@@ -394,34 +394,34 @@ final class tm extends l {
           f.field_f[0] = new km(0L, ke.field_u, ul.field_b);
           oe.field_b[0] = new hk[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            oe.field_b[0][var17_int + 1] = new hk(0L, vf.field_e, (km) null, ma.field_e, jb.field_I[var17_int], cj.field_b[var17_int]);
+            oe.field_b[0][var17_int + 1] = new hk(0L, vf.field_e, (km) null, IntrusiveDequeCursor.field_e, jb.field_I[var17_int], cj.field_b[var17_int]);
           }
           if (2 <= vj.field_b.length) {
             f.field_f[1] = new km(0L, ke.field_u, wg.field_d);
             array$0 = new hk[vj.field_b.length + 1];
             oe.field_b[1] = array$0;
-            oe.field_b[1][0] = new hk(0L, vf.field_e, (km) null, ma.field_e, (mg) null, gn.field_I);
+            oe.field_b[1][0] = new hk(0L, vf.field_e, (km) null, IntrusiveDequeCursor.field_e, (mg) null, gn.field_I);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < vj.field_b.length; var17_intLifetime1++) {
-              oe.field_b[1][1 + var17_intLifetime1] = new hk(0L, vf.field_e, (km) null, ma.field_e, (mg) null, Integer.toString(vj.field_b[var17_intLifetime1]));
+              oe.field_b[1][1 + var17_intLifetime1] = new hk(0L, vf.field_e, (km) null, IntrusiveDequeCursor.field_e, (mg) null, Integer.toString(vj.field_b[var17_intLifetime1]));
             }
           }
           f.field_f[2] = new km(0L, ke.field_u, field_i);
-          oe.field_b[2] = new hk[]{new hk(0L, vf.field_e, (km) null, ma.field_e, (mg) null, gn.field_I), new hk(0L, vf.field_e, (km) null, ma.field_e, ph.field_m[0], vi.field_f), new hk(0L, vf.field_e, (km) null, ma.field_e, ph.field_m[1], ej.field_F)};
+          oe.field_b[2] = new hk[]{new hk(0L, vf.field_e, (km) null, IntrusiveDequeCursor.field_e, (mg) null, gn.field_I), new hk(0L, vf.field_e, (km) null, IntrusiveDequeCursor.field_e, ph.field_m[0], vi.field_f), new hk(0L, vf.field_e, (km) null, IntrusiveDequeCursor.field_e, ph.field_m[1], ej.field_F)};
           if (qi.field_f > 1) {
             f.field_f[3] = new km(0L, ke.field_u, sm.field_c);
             array$1 = new hk[1 + qi.field_f];
             oe.field_b[3] = array$1;
-            oe.field_b[3][0] = new hk(0L, vf.field_e, (km) null, ma.field_e, (mg) null, gn.field_I);
+            oe.field_b[3][0] = new hk(0L, vf.field_e, (km) null, IntrusiveDequeCursor.field_e, (mg) null, gn.field_I);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < qi.field_f; var17_intLifetime2++) {
-              oe.field_b[3][var17_intLifetime2 + 1] = new hk(0L, vf.field_e, (km) null, ma.field_e, (mg) null, te.field_e[var17_intLifetime2]);
+              oe.field_b[3][var17_intLifetime2 + 1] = new hk(0L, vf.field_e, (km) null, IntrusiveDequeCursor.field_e, (mg) null, te.field_e[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param9 > var17_intLifetime3; var17_intLifetime3++) {
             f.field_f[var17_intLifetime3 + 4] = new km(0L, ke.field_u, bd.field_a[var17_intLifetime3]);
-            array$2 = new hk[1 + rb.a(255, (int) ic.field_f[var17_intLifetime3])];
+            array$2 = new hk[1 + rb.a(255, (int) GameSession.field_f[var17_intLifetime3])];
             oe.field_b[4 + var17_intLifetime3] = array$2;
-            oe.field_b[var17_intLifetime3 + 4][0] = new hk(0L, vf.field_e, (km) null, ma.field_e, (mg) null, gn.field_I);
-            for (var18 = 0; var18 < (ic.field_f[var17_intLifetime3] & 255); var18++) {
+            oe.field_b[var17_intLifetime3 + 4][0] = new hk(0L, vf.field_e, (km) null, IntrusiveDequeCursor.field_e, (mg) null, gn.field_I);
+            for (var18 = 0; var18 < (GameSession.field_f[var17_intLifetime3] & 255); var18++) {
               if (sf.field_J == null) {
                 var19_ref = null;
               } else {
@@ -431,16 +431,16 @@ final class tm extends l {
                   var19_ref = null;
                 }
               }
-              if (uf.field_d != null) {
-                if (uf.field_d[var17_intLifetime3] == null) {
+              if (GameBoard.field_d != null) {
+                if (GameBoard.field_d[var17_intLifetime3] == null) {
                   var20 = null;
                 } else {
-                  var20 = uf.field_d[var17_intLifetime3][var18];
+                  var20 = GameBoard.field_d[var17_intLifetime3][var18];
                 }
               } else {
                 var20 = null;
               }
-              oe.field_b[4 + var17_intLifetime3][var18 + 1] = new hk(0L, vf.field_e, (km) null, ma.field_e, (mg) (var19_ref), (String) (var20));
+              oe.field_b[4 + var17_intLifetime3][var18 + 1] = new hk(0L, vf.field_e, (km) null, IntrusiveDequeCursor.field_e, (mg) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; var17_intLifetime4 < param9 + 4; var17_intLifetime4++) {

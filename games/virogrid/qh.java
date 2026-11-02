@@ -486,11 +486,11 @@ final class qh extends fd implements im, ta, fc {
     }
 
     final static void a(byte param0, boolean param1) {
-        he.field_pc = param1 ? new jm(gf.field_A, l.field_b) : new jm(mj.field_A, ia.field_d);
+        he.field_pc = param1 ? new jm(gf.field_A, IntrusiveNode.field_b) : new jm(mj.field_A, ia.field_d);
         ao.field_Eb = new km(0L, (km) null);
         ao.field_Eb.a(0, he.field_pc.field_c);
         if (param0 == -68) {
-          ao.field_Eb.a(0, fb.field_o);
+          ao.field_Eb.a(0, CellFlip.field_o);
           pm.field_n = new km(0L, fn.field_e);
           jb.field_J = new km(0L, (km) null);
           pm.field_n.a(0, jj.field_m);

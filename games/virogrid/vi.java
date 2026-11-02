@@ -4,7 +4,7 @@
 final class vi extends bk {
     static String field_m;
     private String field_i;
-    static p field_h;
+    static IntrusiveDeque field_h;
     static float field_k;
     private String field_e;
     static String field_j;
@@ -60,7 +60,7 @@ final class vi extends bk {
         }
     }
 
-    final void a(boolean param0, jc param1) {
+    final void a(boolean param0, PacketBuffer param1) {
         if (param0) {
           return;
         }
@@ -75,7 +75,7 @@ final class vi extends bk {
     static {
         field_m = "Members";
         field_j = "Invite only";
-        field_h = new p();
+        field_h = new IntrusiveDeque();
         field_f = "No";
     }
 }

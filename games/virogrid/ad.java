@@ -35,7 +35,7 @@ final class ad {
           }
           var6 = new th();
           if (var4 != null) {
-            var6.a(new jc(var4), 0);
+            var6.a(new PacketBuffer(var4), 0);
           }
           if (param1 >= 32768) {
             var6.d(false);
@@ -56,7 +56,7 @@ final class ad {
         var5 = new th();
         var3Lifetime2 = var5;
         if (var4Lifetime1 != null) {
-          var5.a(new jc(var4Lifetime1), 0);
+          var5.a(new PacketBuffer(var4Lifetime1), 0);
         }
         if (param1 >= 32768) {
           var5.d(false);

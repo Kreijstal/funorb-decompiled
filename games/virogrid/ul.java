@@ -16,7 +16,7 @@ final class ul {
         df.a(ph.field_l[me.field_b], kn.field_K[me.field_b], se.field_e[me.field_b]);
         if (param0 >= 79) {
           df.field_i = pb.field_i[me.field_b];
-          df.field_k = m.field_i[me.field_b];
+          df.field_k = CellAnimator.field_i[me.field_b];
           df.field_g = ng.field_O[me.field_b];
           df.field_h = qe.field_h[me.field_b];
           return;
@@ -91,10 +91,10 @@ final class ul {
         sa.a((byte) 120, ea.field_e, de.field_sb, true);
         if (param0 != 15429) {
           field_b = (String) null;
-          p.field_f = true;
+          IntrusiveDeque.field_f = true;
           return;
         }
-        p.field_f = true;
+        IntrusiveDeque.field_f = true;
     }
 
     ul(int param0) {

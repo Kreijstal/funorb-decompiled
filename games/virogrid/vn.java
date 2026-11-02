@@ -11,7 +11,7 @@ final class vn {
         if (var3 == null) {
           return null;
         }
-        return new vn(new jc(var3));
+        return new vn(new PacketBuffer(var3));
     }
 
     private final byte[] a() {
@@ -59,19 +59,19 @@ final class vn {
         return new ml(22050, var1, 22050 * this.field_a / 1000, 22050 * this.field_b / 1000);
     }
 
-    private vn(jc param0) {
+    private vn(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_c = new hl[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.g(11132);
+          var3 = param0.readUnsignedByte(11132);
           if (var3 != 0) {
-            param0.field_l = param0.field_l - 1;
+            param0.position = param0.position - 1;
             this.field_c[var2] = new hl();
             this.field_c[var2].a(param0);
           }
         }
-        this.field_a = param0.c((byte) 114);
-        this.field_b = param0.c((byte) 58);
+        this.field_a = param0.readUnsignedShort((byte) 114);
+        this.field_b = param0.readUnsignedShort((byte) 58);
     }
 }

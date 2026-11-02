@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends l {
+final class pe extends IntrusiveNode {
     jh field_g;
-    l field_h;
+    IntrusiveNode field_h;
     static int[] field_j;
     static int field_k;
     int field_i;
@@ -120,7 +120,7 @@ final class pe extends l {
         try {
           var13 = sh.field_qb;
           var15 = var13;
-          var2 = var15.g(11132);
+          var2 = var15.readUnsignedByte(11132);
           var3 = (dh) (bl.field_D.a((byte) -67));
           while (var3 != null) {
             if (var2 != var3.field_i) {
@@ -133,7 +133,7 @@ final class pe extends l {
             tn.a(false);
             return;
           }
-          var4 = var15.g(param0 + 11133);
+          var4 = var15.readUnsignedByte(param0 + 11133);
           if (param0 != ~var4) {
             rc.field_h[0] = mi.field_d;
             var5 = var3.field_g;
@@ -170,7 +170,7 @@ final class pe extends l {
               var7[0][4 * var10 + 1] = vc.field_jb[var11];
               var7[0][2 + 4 * var10] = tg.field_A[var11];
               var7[0][3 + 4 * var10] = kf.field_j[var11];
-              if (jc.a(rc.field_h[var11], true) &&
+              if (PacketBuffer.a(rc.field_h[var11], true) &&
                 0 == vc.field_jb[var11] - (-tg.field_A[var11] - kf.field_j[var11])) {
                 var6[0][var10] = null;
                 var10--;
@@ -188,7 +188,7 @@ final class pe extends l {
               var7[1][1 + 4 * var14] = vc.field_jb[var11Lifetime1];
               var7[1][4 * var14 + 2] = tg.field_A[var11Lifetime1];
               var7[1][var14 * 4 + 3] = kf.field_j[var11Lifetime1];
-              if (jc.a(rc.field_h[var11Lifetime1], true) &&
+              if (PacketBuffer.a(rc.field_h[var11Lifetime1], true) &&
                 vc.field_jb[var11Lifetime1] - (-tg.field_A[var11Lifetime1] - kf.field_j[var11Lifetime1]) == 0) {
                 var6[1][var14] = null;
                 var14--;
@@ -219,7 +219,7 @@ final class pe extends l {
         el.field_w = null;
     }
 
-    pe(jh param0, l param1) {
+    pe(jh param0, IntrusiveNode param1) {
         try {
           this.field_g = param0;
           this.field_i = param0.l();

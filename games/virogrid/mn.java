@@ -19,7 +19,7 @@ final class mn {
 
     final static void a(boolean param0) {
         int var2 = Virogrid.field_F ? 1 : 0;
-        if ((vg.field_I.field_C.field_D & 1 << vg.field_I.field_e) != 0) {
+        if ((vg.field_I.board.field_D & 1 << vg.field_I.localPlayer) != 0) {
           de.field_pb[10] = je.field_E;
           if (param0) {
             field_c = (String[]) null;
@@ -27,7 +27,7 @@ final class mn {
           }
           return;
         }
-        if (vg.field_I.field_C.field_D != 0) {
+        if (vg.field_I.board.field_D != 0) {
           de.field_pb[10] = of.field_c;
           if (param0) {
             field_c = (String[]) null;

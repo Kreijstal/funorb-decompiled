@@ -7,7 +7,7 @@ final class vg extends ec {
     static i field_B;
     static v field_H;
     static String[] field_F;
-    static ic field_I;
+    static GameSession field_I;
 
     public static void f(int param0) {
         field_E = null;

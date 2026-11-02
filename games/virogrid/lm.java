@@ -39,13 +39,13 @@ final class lm implements Runnable {
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4) {
         int var6 = 0;
-        ic stackIn_7_0 = null;
+        GameSession stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        ic stackIn_11_0 = null;
+        GameSession stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
-        ic stackIn_16_0 = null;
+        GameSession stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
-        ic stackIn_20_0 = null;
+        GameSession stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         oi stackIn_25_0 = null;
         int stackIn_25_1 = 0;
@@ -80,22 +80,22 @@ final class lm implements Runnable {
               if (ke.field_p.field_d) {
                 stackIn_20_0 = vg.field_I;
                 stackIn_21_1 = !(!(0.0 > nk.field_K[11]));
-                ((ic) (Object) stackIn_20_0).a(stackIn_21_1, 85, c.field_d);
+                ((GameSession) (Object) stackIn_20_0).a(stackIn_21_1, 85, c.field_d);
               } else {
                 stackIn_16_0 = vg.field_I;
                 stackIn_17_1 = !(!(0.0 > nk.field_K[11]));
-                ((ic) (Object) stackIn_16_0).a(stackIn_17_1, (byte) 101, we.field_e, c.field_d);
+                ((GameSession) (Object) stackIn_16_0).a(stackIn_17_1, (byte) 101, we.field_e, c.field_d);
               }
             } else {
               if (ei.field_b != null) {
                 if (ke.field_p.field_d) {
                   stackIn_11_0 = ei.field_b;
                   stackIn_12_1 = !(!(nk.field_K[11] < 0.0));
-                  ((ic) (Object) stackIn_11_0).a(stackIn_12_1, 99, c.field_d);
+                  ((GameSession) (Object) stackIn_11_0).a(stackIn_12_1, 99, c.field_d);
                 } else {
                   stackIn_7_0 = ei.field_b;
                   stackIn_8_1 = !(!(0.0 > nk.field_K[11]));
-                  ((ic) (Object) stackIn_7_0).a(stackIn_8_1, (byte) 58, we.field_e, c.field_d);
+                  ((GameSession) (Object) stackIn_7_0).a(stackIn_8_1, (byte) 58, we.field_e, c.field_d);
                 }
               }
             }

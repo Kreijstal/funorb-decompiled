@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cm extends l {
+final class cm extends IntrusiveNode {
     static il field_k;
     static String field_i;
     static km field_h;
@@ -147,7 +147,7 @@ final class cm extends l {
           } else {
             if (nm.c(param1 ^ -45)) {
               if (j.field_l == 0) {
-                wb.a(false, (byte) 119, param2);
+                DualLinkNode.a(false, (byte) 119, param2);
                 td.a(-30179, param0, 0, 0);
               } else {
                 uh.a((byte) 114, param0);

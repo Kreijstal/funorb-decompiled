@@ -9,7 +9,7 @@ final class qn extends tg {
     int field_N;
     int field_G;
     int field_Q;
-    static p field_P;
+    static IntrusiveDeque field_P;
     int field_O;
     int field_M;
     static eh field_I;
@@ -172,7 +172,7 @@ final class qn extends tg {
 
     static {
         field_K = 2;
-        field_P = new p();
+        field_P = new IntrusiveDeque();
         field_L = "<%0> has resigned.";
         field_S = new java.util.zip.CRC32();
     }

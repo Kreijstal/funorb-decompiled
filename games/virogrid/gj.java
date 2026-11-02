@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class gj extends l {
+final class gj extends IntrusiveNode {
     private static int field_z;
     private static float[] field_y;
     private int field_l;
@@ -666,16 +666,16 @@ final class gj extends l {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        jc var2 = new jc(param0);
-        this.field_K = var2.d((byte) 102);
-        this.field_J = var2.d((byte) 117);
-        this.field_C = var2.d((byte) 115);
-        this.field_o = var2.d((byte) 104);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_K = var2.readInt((byte) 102);
+        this.field_J = var2.readInt((byte) 117);
+        this.field_C = var2.readInt((byte) 115);
+        this.field_o = var2.readInt((byte) 104);
         if (this.field_o < 0) {
           this.field_o = ~this.field_o;
           this.field_t = true;
         }
-        int var3 = var2.d((byte) 99);
+        int var3 = var2.readInt((byte) 99);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -683,7 +683,7 @@ final class gj extends l {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.g(11132);
+            var6_int = var2.readUnsignedByte(11132);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];

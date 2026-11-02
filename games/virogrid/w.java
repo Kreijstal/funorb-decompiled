@@ -17,20 +17,20 @@ final class w extends tg {
         int var5Lifetime1;
         if (param0 == 74) {
           var4.g(param2, param0 ^ 66);
-          var4.field_l = var4.field_l + 1;
-          var5 = var4.field_l;
+          var4.position = var4.position + 1;
+          var5 = var4.position;
           var4.a(7, -114);
           var4.a((byte) 100, param1);
-          var4.b(-var5 + var4.field_l, -1);
+          var4.b(-var5 + var4.position, -1);
           return;
         }
         w.a((byte) -80, -70L, 4);
         var4.g(param2, param0 ^ 66);
-        var4.field_l = var4.field_l + 1;
-        var5Lifetime1 = var4.field_l;
+        var4.position = var4.position + 1;
+        var5Lifetime1 = var4.position;
         var4.a(7, -114);
         var4.a((byte) 100, param1);
-        var4.b(-var5Lifetime1 + var4.field_l, -1);
+        var4.b(-var5Lifetime1 + var4.position, -1);
     }
 
     final static void a(int param0, int param1) {

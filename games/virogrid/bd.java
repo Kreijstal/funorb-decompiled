@@ -3,7 +3,7 @@
  */
 final class bd {
     static dl field_d;
-    static p field_c;
+    static IntrusiveDeque field_c;
     static int field_e;
     static String[] field_a;
     static km field_b;

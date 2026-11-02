@@ -15,7 +15,7 @@ final class wg {
 
     final static boolean a(int param0, int param1) {
         try {
-          if (sh.field_qb.field_l >= param0) {
+          if (sh.field_qb.position >= param0) {
             return true;
           }
           if (null == oj.field_Ub) {
@@ -23,16 +23,16 @@ final class wg {
           }
           int var2_int = oj.field_Ub.f(31479);
           if (param1 < var2_int) {
-            if (var2_int > -sh.field_qb.field_l + param0) {
-              var2_int = param0 - sh.field_qb.field_l;
+            if (var2_int > -sh.field_qb.position + param0) {
+              var2_int = param0 - sh.field_qb.position;
             }
-            oj.field_Ub.a(var2_int, sh.field_qb.field_g, param1 - 1, sh.field_qb.field_l);
+            oj.field_Ub.a(var2_int, sh.field_qb.payload, param1 - 1, sh.field_qb.position);
             fa.field_l = hc.a(-9986);
-            sh.field_qb.field_l = sh.field_qb.field_l + var2_int;
-            if (!(sh.field_qb.field_l >= param0)) {
+            sh.field_qb.position = sh.field_qb.position + var2_int;
+            if (!(sh.field_qb.position >= param0)) {
               return false;
             }
-            sh.field_qb.field_l = 0;
+            sh.field_qb.position = 0;
             return true;
           }
           try {
@@ -90,7 +90,7 @@ final class wg {
             oj.field_Yb = param10;
             wc.field_m = param0;
             uh.field_b = param12;
-            m.field_m = param9;
+            CellAnimator.field_m = param9;
             fj.field_c = param11;
             qc.field_f = param4;
             field_c = param5;

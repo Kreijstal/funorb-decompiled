@@ -55,7 +55,7 @@ final class fm {
               if (var4 == g.field_b.field_d) {
                 stackIn_16_0 = tg.field_D;
               } else {
-                stackIn_16_0 = ma.field_h;
+                stackIn_16_0 = IntrusiveDequeCursor.field_h;
               }
               var9 = stackIn_16_0;
               if (var9 != null) {
@@ -93,7 +93,7 @@ final class fm {
           if (param1) {
             field_c = (String) null;
           }
-          stackIn_3_0 = p.a(10, 4330, true, param0);
+          stackIn_3_0 = IntrusiveDeque.a(10, 4330, true, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -233,7 +233,7 @@ final class fm {
         he var7 = null;
         hg var4 = null;
         if (wl.field_b != param0) {
-          var6 = (he) (ma.field_c.a((long)wl.field_b, (byte) 77));
+          var6 = (he) (IntrusiveDequeCursor.field_c.a((long)wl.field_b, (byte) 77));
           var7 = var6;
           wl.field_b = param0;
           if (var7 != null) {

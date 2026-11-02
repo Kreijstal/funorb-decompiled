@@ -28,20 +28,20 @@ final class em {
     final static void a(byte param0, int param1) {
         hg var2 = gk.field_g;
         var2.g(param1, 8);
-        var2.field_l = var2.field_l + 1;
-        int var3 = var2.field_l;
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
         var2.a(2, -124);
         var2.a(kn.field_E, kn.field_E.length, 0, (byte) -121);
         var2.a(aa.field_e, -111);
         var2.a(qc.field_c, 77);
         if (param0 == -55) {
           var2.a(pm.field_p, pm.field_p.length, 0, (byte) -105);
-          var2.b(var2.field_l - var3, -1);
+          var2.b(var2.position - var3, -1);
           return;
         }
         field_b = (String[]) null;
         var2.a(pm.field_p, pm.field_p.length, 0, (byte) -105);
-        var2.b(var2.field_l - var3, -1);
+        var2.b(var2.position - var3, -1);
     }
 
     final static void b(int param0) {

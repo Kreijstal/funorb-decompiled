@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class fi extends l {
+class fi extends IntrusiveNode {
     cd field_o;
     int field_k;
     int field_g;
@@ -222,16 +222,16 @@ class fi extends l {
         int var5;
         ce var6;
         int var7;
-        L0: {
+        regionExit1: {
           var7 = Virogrid.field_F ? 1 : 0;
           this.a(param1, 116, this, param0);
           var5 = this.f(true) ? 1 : 0;
           if (!param3) {
             if (var5 == 0) {
-              break L0;
+              break regionExit1;
             }
             if (oi.field_g == 0) {
-              break L0;
+              break regionExit1;
             }
             this.c(-1);
           }

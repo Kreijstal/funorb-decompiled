@@ -3,7 +3,7 @@
  */
 final class tf {
     int field_b;
-    static p field_a;
+    static IntrusiveDeque field_a;
     static km field_c;
     static km field_d;
 
@@ -27,6 +27,6 @@ final class tf {
     }
 
     static {
-        field_a = new p();
+        field_a = new IntrusiveDeque();
     }
 }

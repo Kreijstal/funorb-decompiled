@@ -685,7 +685,7 @@ final class i extends in {
           }
           var8 = (sg) (param3.field_h.a((byte) 19));
           while (var8 != null) {
-            var9 = (int)var8.field_d;
+            var9 = (int)var8.key;
             var12 = (rc) (this.field_o.a((long)var9, param4 ^ -14905));
             if (var12 == null) {
               var13 = vm.a(param0, (byte) 42, var9);

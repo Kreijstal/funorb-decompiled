@@ -5,7 +5,7 @@ final class lc {
     static String field_d;
     static mg[] field_c;
     static String[] field_e;
-    static jc field_b;
+    static PacketBuffer field_b;
     static String field_h;
     int field_g;
     static String field_f;

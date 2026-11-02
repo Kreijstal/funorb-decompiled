@@ -202,18 +202,18 @@ final class dj {
         if (param1 != 17) {
           return false;
         }
-        km.field_yb = new bg(this.field_d.field_Bb, this.field_d.field_J, this.field_d.field_K, this.field_d.field_ub, param0, fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, ma.field_e, this.field_g, this.field_i);
+        km.field_yb = new bg(this.field_d.field_Bb, this.field_d.field_J, this.field_d.field_K, this.field_d.field_ub, param0, fn.field_e, wh.field_a, eb.field_b, ti.field_h, vd.field_Z, IntrusiveDequeCursor.field_e, this.field_g, this.field_i);
         return true;
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4) {
-        ic stackIn_8_0 = null;
+        GameSession stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
-        ic stackIn_15_0 = null;
+        GameSession stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
-        ic stackIn_28_0 = null;
+        GameSession stackIn_28_0 = null;
         boolean stackIn_29_1 = false;
-        ic stackIn_35_0 = null;
+        GameSession stackIn_35_0 = null;
         boolean stackIn_36_1 = false;
         oi stackIn_44_0 = null;
         int stackIn_44_1 = 0;
@@ -242,22 +242,22 @@ final class dj {
             if (!ke.field_p.field_d) {
               stackIn_15_0 = vg.field_I;
               stackIn_16_1 = (!(nk.field_K[11] < 0.0)) ? false : true;
-              ((ic) (Object) stackIn_15_0).a(stackIn_16_1, (byte) 58, we.field_e, c.field_d);
+              ((GameSession) (Object) stackIn_15_0).a(stackIn_16_1, (byte) 58, we.field_e, c.field_d);
             } else {
               stackIn_8_0 = vg.field_I;
               stackIn_9_1 = (!(0.0 > nk.field_K[11])) ? false : true;
-              ((ic) (Object) stackIn_8_0).a(stackIn_9_1, 85, c.field_d);
+              ((GameSession) (Object) stackIn_8_0).a(stackIn_9_1, 85, c.field_d);
             }
           } else {
             if (ei.field_b != null) {
               if (ke.field_p.field_d) {
                 stackIn_35_0 = ei.field_b;
                 stackIn_36_1 = (!(0.0 > nk.field_K[11])) ? false : true;
-                ((ic) (Object) stackIn_35_0).a(stackIn_36_1, param3 ^ 92, c.field_d);
+                ((GameSession) (Object) stackIn_35_0).a(stackIn_36_1, param3 ^ 92, c.field_d);
               } else {
                 stackIn_28_0 = ei.field_b;
                 stackIn_29_1 = (!(0.0 > nk.field_K[11])) ? false : true;
-                ((ic) (Object) stackIn_28_0).a(stackIn_29_1, (byte) 90, we.field_e, c.field_d);
+                ((GameSession) (Object) stackIn_28_0).a(stackIn_29_1, (byte) 90, we.field_e, c.field_d);
               }
             }
           }
@@ -343,7 +343,7 @@ final class dj {
           return;
         }
         lk var7 = db.a(this.field_i, false);
-        lk var4 = ic.a(this.field_i, (byte) -127);
+        lk var4 = GameSession.a(this.field_i, (byte) -127);
         String var5 = this.a(1);
         if (var4 == null) {
           if (var7 == null) {

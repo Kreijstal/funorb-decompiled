@@ -91,7 +91,7 @@ final class pc {
               if (1 != var2.field_g) {
                 var3 = wh.field_b;
               } else {
-                var3 = ic.field_y;
+                var3 = GameSession.field_y;
               }
             }
             var4 = var3[var2.field_o / 3];

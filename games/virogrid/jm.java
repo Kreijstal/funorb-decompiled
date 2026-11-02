@@ -16,7 +16,7 @@ final class jm {
         if (param0 != 36) {
           jm.a((byte) 30);
         }
-        wb.field_m.a(-80 - oc.field_k + (dg.field_E.field_K - 2), 18, oc.field_k + 82, (byte) -45, 2 + pg.field_e);
+        DualLinkNode.field_m.a(-80 - oc.field_k + (dg.field_E.field_K - 2), 18, oc.field_k + 82, (byte) -45, 2 + pg.field_e);
         ve.field_q.a(dg.field_E.field_K, 0, 2, -20 + (-2 - pg.field_e + dg.field_E.field_ub), oc.field_k, 20 + (2 + pg.field_e), 20, 0);
         lg.field_a.a(oc.field_k, 2, 20, 0);
     }
@@ -93,10 +93,10 @@ final class jm {
         if (db.field_D != ve.field_t) {
           var2 = ve.field_t * ve.field_t;
           var3 = -(db.field_D * db.field_D) + var2;
-          param0 = param0 + (-param0 + p.field_h) * var3 / var2;
+          param0 = param0 + (-param0 + IntrusiveDeque.field_h) * var3 / var2;
         }
         we.field_c.a(oh.field_f, 120, 640, (byte) -120, param0);
-        ql.a((byte) 117, 5, 640, qi.field_d, 0, -24 + p.field_h, dl.field_b);
+        ql.a((byte) 117, 5, 640, qi.field_d, 0, -24 + IntrusiveDeque.field_h, dl.field_b);
     }
 
     final static boolean a(int param0, int param1, boolean param2, CharSequence param3) {

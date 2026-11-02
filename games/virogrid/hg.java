@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hg extends jc {
+final class hg extends PacketBuffer {
     static String field_n;
     private int field_r;
     private mm field_s;
@@ -10,9 +10,9 @@ final class hg extends jc {
     static km field_p;
 
     final void g(int param0, int param1) {
-        int fieldTemp$0 = this.field_l;
-        this.field_l = this.field_l + 1;
-        this.field_g[fieldTemp$0] = (byte)(param0 + this.field_s.a(5180));
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param0 + this.field_s.a(5180));
         if (param1 != 8) {
           field_o = (String) null;
           return;
@@ -24,11 +24,11 @@ final class hg extends jc {
     }
 
     final void j(int param0) {
-        this.field_r = param0 * this.field_l;
+        this.field_r = param0 * this.position;
     }
 
     final void k(int param0) {
-        this.field_l = (param0 + this.field_r) / 8;
+        this.position = (param0 + this.field_r) / 8;
     }
 
     final void a(int[] param0, boolean param1) {
@@ -59,28 +59,28 @@ final class hg extends jc {
           while (param1 > var4) {
             incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((lh.field_b[var4] & this.field_g[incrementValue$0]) << -var4 + param1);
+            var5 = var5 + ((lh.field_b[var4] & this.payload[incrementValue$0]) << -var4 + param1);
             param1 = param1 - var4;
             var4 = 8;
           }
           if (param1 != var4) {
-            var5 = var5 + (this.field_g[var3] >> var4 - param1 & lh.field_b[param1]);
+            var5 = var5 + (this.payload[var3] >> var4 - param1 & lh.field_b[param1]);
           } else {
-            var5 = var5 + (this.field_g[var3] & lh.field_b[var4]);
+            var5 = var5 + (this.payload[var3] & lh.field_b[var4]);
           }
           return var5;
         }
         while (param1 > var4) {
           incrementValue$1 = var3;
           var3++;
-          var5 = var5 + ((lh.field_b[var4] & this.field_g[incrementValue$1]) << -var4 + param1);
+          var5 = var5 + ((lh.field_b[var4] & this.payload[incrementValue$1]) << -var4 + param1);
           param1 = param1 - var4;
           var4 = 8;
         }
         if (param1 != var4) {
-          var5 = var5 + (this.field_g[var3] >> var4 - param1 & lh.field_b[param1]);
+          var5 = var5 + (this.payload[var3] >> var4 - param1 & lh.field_b[param1]);
         } else {
-          var5 = var5 + (this.field_g[var3] & lh.field_b[var4]);
+          var5 = var5 + (this.payload[var3] & lh.field_b[var4]);
         }
         return var5;
     }
@@ -107,9 +107,9 @@ final class hg extends jc {
         var6 = Virogrid.field_F ? 1 : 0;
         try {
           for (var5_int = 0; param3 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_l;
-            this.field_l = this.field_l + 1;
-            param2[var5_int + param1] = (byte)(this.field_g[fieldTemp$0] - this.field_s.a(5180));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param2[var5_int + param1] = (byte)(this.payload[fieldTemp$0] - this.field_s.a(5180));
           }
           if (param0 > -103) {
             this.c((byte) 114, 127);
@@ -132,9 +132,9 @@ final class hg extends jc {
     final int e(boolean param0) {
         int fieldTemp$0 = 0;
         if (!param0) {
-          fieldTemp$0 = this.field_l;
-          this.field_l = this.field_l + 1;
-          return this.field_g[fieldTemp$0] - this.field_s.a(5180) & 255;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return this.payload[fieldTemp$0] - this.field_s.a(5180) & 255;
         }
         return -55;
     }

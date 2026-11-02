@@ -196,7 +196,7 @@ final class qd {
 
     final static he a(byte param0, int param1) {
         int var2 = -66 % ((param0 - 65) / 53);
-        return ma.field_c == null ? null : (he) (ma.field_c.a((long)param1, (byte) 93));
+        return IntrusiveDequeCursor.field_c == null ? null : (he) (IntrusiveDequeCursor.field_c.a((long)param1, (byte) 93));
     }
 
     static {

@@ -255,12 +255,12 @@ final class eh {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        jc var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        jc var29 = null;
+        PacketBuffer var29 = null;
         int[] var30 = null;
         byte[][] var31 = null;
-        jc var32 = null;
+        PacketBuffer var32 = null;
         int[] var34 = null;
         byte[] var35 = null;
         byte[] var36 = null;
@@ -326,8 +326,8 @@ final class eh {
             var35 = gi.a(this.field_a[param1], true, (byte) -128);
             var25 = var35;
             var9 = var25;
-            var26 = new jc(var35);
-            var26.a(var26.field_g.length, param3, 9843, 5);
+            var26 = new PacketBuffer(var35);
+            var26.a(var26.payload.length, param3, 9843, 5);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -355,14 +355,14 @@ final class eh {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - 4 * (var5_int * var12);
-              var32 = new jc(var43);
+              var32 = new PacketBuffer(var43);
               var14 = 0;
-              var32.field_l = var11;
+              var32.position = var11;
               var15 = 0;
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var32.d((byte) 123);
+                  var17 = var17 + var32.readInt((byte) 123);
                   if (var6 != null) {
                     var19 = var34[var18];
                   } else {
@@ -379,12 +379,12 @@ final class eh {
               }
               var44 = new byte[var14];
               var14Lifetime1 = 0;
-              var32.field_l = var11;
+              var32.position = var11;
               var17Lifetime4 = 0;
               for (var18Lifetime3 = 0; var18Lifetime3 < var12; var18Lifetime3++) {
                 var19Lifetime2 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
-                  var19Lifetime2 = var19Lifetime2 + var32.d((byte) 96);
+                  var19Lifetime2 = var19Lifetime2 + var32.readInt((byte) 96);
                   if (var6 != null) {
                     var21 = var34[var20];
                   } else {
@@ -404,15 +404,15 @@ final class eh {
             var11--;
             var12Lifetime1 = 255 & var23[var11];
             var11 = var11 - var12Lifetime1 * var5_int * 4;
-            var29 = new jc(var43);
+            var29 = new PacketBuffer(var43);
             var38 = new int[var5_int];
             var30 = var38;
             var14_ref_int__ = var30;
-            var29.field_l = var11;
+            var29.position = var11;
             for (var15Lifetime1 = 0; var12Lifetime1 > var15Lifetime1; var15Lifetime1++) {
               var16Lifetime1 = 0;
               for (var17Lifetime1 = 0; var17Lifetime1 < var5_int; var17Lifetime1++) {
-                var16Lifetime1 = var16Lifetime1 + var29.d((byte) 126);
+                var16Lifetime1 = var16Lifetime1 + var29.readInt((byte) 126);
                 var14_ref_int__[var17Lifetime1] = var14_ref_int__[var17Lifetime1] + var16Lifetime1;
               }
             }
@@ -424,12 +424,12 @@ final class eh {
               var15_ref_byte____[var16Lifetime2] = array$1;
               var38[var16Lifetime2] = 0;
             }
-            var29.field_l = var11;
+            var29.position = var11;
             var16Lifetime3 = 0;
             for (var17Lifetime2 = 0; var17Lifetime2 < var12Lifetime1; var17Lifetime2++) {
               var18Lifetime1 = 0;
               for (var19Lifetime1 = 0; var5_int > var19Lifetime1; var19Lifetime1++) {
-                var18Lifetime1 = var18Lifetime1 + var29.d((byte) 122);
+                var18Lifetime1 = var18Lifetime1 + var29.readInt((byte) 122);
                 ek.a(var43, var16Lifetime3, var39[var19Lifetime1], var38[var19Lifetime1], var18Lifetime1);
                 var14_ref_int__[var19Lifetime1] = var14_ref_int__[var19Lifetime1] + var18Lifetime1;
                 var16Lifetime3 = var16Lifetime3 + var18Lifetime1;

@@ -83,7 +83,7 @@ final class wc {
         }
         var5 = new u();
         if (var4 != null) {
-          var5.a(11693, new jc(var4));
+          var5.a(11693, new PacketBuffer(var4));
         }
         if (32768 <= param0) {
           var5.d(3818);

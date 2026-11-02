@@ -93,7 +93,7 @@ final class fe extends km {
           var21Lifetime2 = fk.field_j;
           var22Lifetime2 = fk.field_k;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var23Lifetime2 < param3.field_h) {
               var24Lifetime1 = param3.field_l[var23Lifetime2];
               var25Lifetime1 = param3.field_b[var23Lifetime2];
@@ -176,7 +176,7 @@ final class fe extends km {
                   stackIn_67_0 = u.field_q.length;
                   stackIn_67_1 = var18;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_67_0 <= stackIn_67_1) {
                     break;
@@ -185,7 +185,7 @@ final class fe extends km {
                   var20 = param3.field_G[var18];
                   var21Lifetime2 = param3.field_D[var18];
                   u.field_q[var18] = var21Lifetime2 * var15 + var20 * var12 + var19 * var9 >> 16;
-                  fb.field_p[var18] = var10 * var19 - (-(var20 * var13) - var16 * var21Lifetime2) >> 16;
+                  CellFlip.field_p[var18] = var10 * var19 - (-(var20 * var13) - var16 * var21Lifetime2) >> 16;
                   dc.field_Q[var18] = var11 * var19 + (var14 * var20 + var17 * var21Lifetime2) >> 16;
                   var18++;
                 }
@@ -309,7 +309,7 @@ final class fe extends km {
           var10 = 5 + (5 + var9_int);
           var11 = 3 + 2 * pg.field_e + 3;
           var12 = sh.b(0, param2, param0, var10);
-          var13 = p.a(-1, var11, param1, param3);
+          var13 = IntrusiveDeque.a(-1, var11, param1, param3);
           this.a(var12, var11, var10, (byte) -55, var13);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -520,25 +520,25 @@ final class fe extends km {
         Throwable caughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        stateLoop: while (true) {
+        scanLoop1: while (true) {
             switch (statePc) {
                 case 0: {
                     var4 = Virogrid.field_F ? 1 : 0;
                     statePc = 1;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 1: {
                     try {
                         this.a(param0, (byte) 118);
                         if (param1 == -28624) {
                             statePc = 4;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 2. */
                             {
                                 field_Lb = (String) null;
                                 statePc = 4;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_1) {
@@ -547,19 +547,19 @@ final class fe extends km {
                             throw fe.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 4: {
                     try {
                         if (param0) {
                             statePc = 7;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 5. */
                             {
                                 statePc = 45;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } catch (Throwable stateCaught_4) {
@@ -568,26 +568,26 @@ final class fe extends km {
                             throw fe.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
                         }
                         caughtException = stateCaught_4;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 7: {
                     try {
                         if (!nd.b((byte) -128)) {
                             statePc = 45;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 8. */
                             {
                                 if (um.field_Gb != 85) {
                                     statePc = 14;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 9. */
                                     {
                                         if (this.field_Eb.length() <= 0) {
                                             statePc = 14;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         } else {
                                             /* Inlined CFG state: 10. */
                                             {
@@ -597,7 +597,7 @@ final class fe extends km {
                                                 {
                                                     gi.a(this.field_Eb, -18340, -1 + this.field_Eb.length(), ' ');
                                                     statePc = 14;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             }
                                         }
@@ -611,20 +611,20 @@ final class fe extends km {
                             throw fe.<RuntimeException>$cfr$sneakyThrow(stateCaught_7);
                         }
                         caughtException = stateCaught_7;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 14: {
                     try {
                         if (mf.a((CharSequence) ((Object) this.field_Eb), nm.field_d, -13)) {
                             statePc = 32;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 15. */
                             {
                                 if (this.field_Eb.length() != 0) {
                                     statePc = 21;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 16. */
                                     {
@@ -634,12 +634,12 @@ final class fe extends km {
                                         {
                                             if (91 == nm.field_d) {
                                                 statePc = 32;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             } else {
                                                 /* Inlined CFG state: 19. */
                                                 {
                                                     statePc = 21;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             }
                                         }
@@ -653,14 +653,14 @@ final class fe extends km {
                             throw fe.<RuntimeException>$cfr$sneakyThrow(stateCaught_14);
                         }
                         caughtException = stateCaught_14;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 21: {
                     try {
                         if (this.field_Eb.length() != 1) {
                             statePc = 27;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 22. */
                             {
@@ -670,12 +670,12 @@ final class fe extends km {
                                 {
                                     if (nm.field_d == 35) {
                                         statePc = 32;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 25. */
                                         {
                                             statePc = 27;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         }
                                     }
                                 }
@@ -687,14 +687,14 @@ final class fe extends km {
                             throw fe.<RuntimeException>$cfr$sneakyThrow(stateCaught_21);
                         }
                         caughtException = stateCaught_21;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 27: {
                     try {
                         if (93 == nm.field_d) {
                             statePc = 32;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 28. */
                             {
@@ -703,7 +703,7 @@ final class fe extends km {
                                 }
                                 {
                                     statePc = 33;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             }
                         }
@@ -713,21 +713,21 @@ final class fe extends km {
                             throw fe.<RuntimeException>$cfr$sneakyThrow(stateCaught_27);
                         }
                         caughtException = stateCaught_27;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 32: {
                     try {
                         discarded$0 = this.field_Eb.append(nm.field_d);
                         statePc = 33;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_32) {
                         statePc = ((Object) stateCaught_32 instanceof RuntimeException ? 58 : -1);
                         if (statePc == -1) {
                             throw fe.<RuntimeException>$cfr$sneakyThrow(stateCaught_32);
                         }
                         caughtException = stateCaught_32;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 33: {
@@ -737,13 +737,13 @@ final class fe extends km {
                             {
                                 if (um.field_Gb != 13) {
                                     statePc = 7;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 42. */
                                     {
                                         stackIn_43_0 = 1;
                                         statePc = 43;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 }
                             }
@@ -755,7 +755,7 @@ final class fe extends km {
                                     {
                                         stackIn_40_0 = 1;
                                         statePc = 40;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     }
                                 } else {
                                     /* Inlined CFG state: 35. */
@@ -767,7 +767,7 @@ final class fe extends km {
                                             this.field_V = this.field_Eb.toString();
                                             stackIn_38_0 = 2;
                                             statePc = 38;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         }
                                     }
                                 }
@@ -779,7 +779,7 @@ final class fe extends km {
                             throw fe.<RuntimeException>$cfr$sneakyThrow(stateCaught_33);
                         }
                         caughtException = stateCaught_33;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 38: {
@@ -793,7 +793,7 @@ final class fe extends km {
                     stackIn_44_0 = stackIn_46_0;
                     if (var4 != 0) {
                         statePc = 46;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } else {
                         /* Inlined CFG state: 44. */
                         {
@@ -806,27 +806,27 @@ final class fe extends km {
                         this.field_Hb.field_V = this.field_Eb.toString();
                         stackIn_46_0 = param0 ? 1 : 0;
                         statePc = 46;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_45) {
                         statePc = ((Object) stateCaught_45 instanceof RuntimeException ? 58 : -1);
                         if (statePc == -1) {
                             throw fe.<RuntimeException>$cfr$sneakyThrow(stateCaught_45);
                         }
                         caughtException = stateCaught_45;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 46: {
                     try {
                         if (stackIn_46_0 == 0) {
                             statePc = 56;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 47. */
                             {
                                 if (0 == oi.field_g) {
                                     statePc = 56;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 48. */
                                     {
@@ -839,7 +839,7 @@ final class fe extends km {
                                                 {
                                                     this.field_Ib = 1;
                                                     statePc = 56;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             } else {
                                                 /* Inlined CFG state: 51. */
@@ -849,7 +849,7 @@ final class fe extends km {
                                                     }
                                                     {
                                                         statePc = 56;
-                                                        continue stateLoop;
+                                                        continue scanLoop1;
                                                     }
                                                 }
                                             }
@@ -864,21 +864,21 @@ final class fe extends km {
                             throw fe.<RuntimeException>$cfr$sneakyThrow(stateCaught_46);
                         }
                         caughtException = stateCaught_46;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 56: {
                     try {
                         stackIn_57_0 = this.field_Ib;
                         statePc = 57;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_56) {
                         statePc = ((Object) stateCaught_56 instanceof RuntimeException ? 58 : -1);
                         if (statePc == -1) {
                             throw fe.<RuntimeException>$cfr$sneakyThrow(stateCaught_56);
                         }
                         caughtException = stateCaught_56;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 57: {
@@ -948,13 +948,13 @@ final class fe extends km {
         try {
           boolean decompiledFrameRemainder0 = true;
           if (!vg.field_I.field_t) {
-            if (0 == (1 << vg.field_I.field_e & vg.field_I.field_C.field_b)) {
-              if (vg.field_I.field_C.field_b != 0) {
+            if (0 == (1 << vg.field_I.localPlayer & vg.field_I.board.field_b)) {
+              if (vg.field_I.board.field_b != 0) {
                 de.field_pb[18] = rf.field_g;
                 decompiledFrameRemainder0 = (var2 != 0);
               }
               if (decompiledFrameRemainder0) {
-                if ((vg.field_I.field_v | 1 << vg.field_I.field_e) != 3) {
+                if ((vg.field_I.field_v | 1 << vg.field_I.localPlayer) != 3) {
                   de.field_pb[18] = eb.field_g;
                   decompiledFrameRemainder0 = (var2 != 0);
                 }
@@ -965,35 +965,35 @@ final class fe extends km {
               }
             }
             if (decompiledFrameRemainder0) {
-              de.field_pb[18] = ic.field_s;
+              de.field_pb[18] = GameSession.field_s;
               decompiledFrameRemainder0 = (var2 != 0);
             }
           }
           if (decompiledFrameRemainder0) {
-            if ((vg.field_I.field_C.field_b & 1 << vg.field_I.field_e) == 0) {
-              if (0 == vg.field_I.field_C.field_b) {
-                if (3 == (1 << vg.field_I.field_e | vg.field_I.field_v)) {
+            if ((vg.field_I.board.field_b & 1 << vg.field_I.localPlayer) == 0) {
+              if (0 == vg.field_I.board.field_b) {
+                if (3 == (1 << vg.field_I.localPlayer | vg.field_I.field_v)) {
                   de.field_pb[18] = nk.field_M;
                   if (var2 != 0) {
                     de.field_pb[18] = ei.field_e;
                     de.field_pb[18] = pb.field_m;
-                    de.field_pb[18] = ic.field_b;
+                    de.field_pb[18] = GameSession.field_b;
                   }
                 } else {
                   de.field_pb[18] = ei.field_e;
                   if (var2 != 0) {
                     de.field_pb[18] = pb.field_m;
-                    de.field_pb[18] = ic.field_b;
+                    de.field_pb[18] = GameSession.field_b;
                   }
                 }
               } else {
                 de.field_pb[18] = pb.field_m;
                 if (var2 != 0) {
-                  de.field_pb[18] = ic.field_b;
+                  de.field_pb[18] = GameSession.field_b;
                 }
               }
             } else {
-              de.field_pb[18] = ic.field_b;
+              de.field_pb[18] = GameSession.field_b;
             }
           }
           if (param0 != 1) {

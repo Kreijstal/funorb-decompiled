@@ -8,7 +8,7 @@ final class oi {
     static boolean field_d;
     static StringBuilder field_h;
     static volatile long field_b;
-    static p field_a;
+    static IntrusiveDeque field_a;
     static sc[] field_c;
 
     private final void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
@@ -214,7 +214,7 @@ final class oi {
           if (param1 != 2) {
             vg.field_H.b(qg.field_m.toUpperCase(), 320, var7Lifetime1 + 158, 8437759, -1);
             vg.field_H.b(Integer.toString(h.field_c[var6Lifetime1]), 420, 158 + var7Lifetime1, 8437759, -1);
-            vg.field_H.b(wb.field_i.toUpperCase(), 320, var7Lifetime1 + 178, 8437759, -1);
+            vg.field_H.b(DualLinkNode.field_i.toUpperCase(), 320, var7Lifetime1 + 178, 8437759, -1);
             vg.field_H.b(Integer.toString(vc.field_eb[var6Lifetime1]), 420, var7Lifetime1 + 178, 8437759, -1);
             stackIn_82_0 = vg.field_H;
             if (var8Lifetime1 == 0) {
@@ -506,7 +506,7 @@ final class oi {
         if (ih.field_c == 3) {
           var4 = var4 + vg.field_H.field_H;
         }
-        L3: {
+        regionExit1: {
           re.field_o.c(qe.field_j.toUpperCase(), 310, var5, var3, -1);
           re.field_o.c(aj.field_h.toUpperCase(), 368, var4, var3, -1);
           re.field_o.c(rl.field_s.toUpperCase(), 420, var5, var3, -1);
@@ -516,13 +516,13 @@ final class oi {
           if (mm.field_j.field_s) {
             if (mm.field_j.field_j != null) {
               var6 = qg.field_s.toUpperCase();
-              var7 = mm.field_j.field_j[uk.field_c];
-              var8 = mm.field_j.field_t[uk.field_c];
+              var7 = mm.field_j.field_j[GameApplet.field_c];
+              var8 = mm.field_j.field_t[GameApplet.field_c];
               var9 = 0;
               for (var10 = 0; var10 < 10; var10++) {
                 if (var7[var10] != null) {
                   var3 = 1141646;
-                  if (jc.a(var7[var10], true)) {
+                  if (PacketBuffer.a(var7[var10], true)) {
                     var3 = 16777215;
                     var9 = 1;
                   }
@@ -546,7 +546,7 @@ final class oi {
                 var3 = 8437759;
                 this.a(param1 - 16112, mm.field_j.field_m, mi.field_d, var4, mm.field_j.field_q, var3, -1, mm.field_j.field_h, mm.field_j.field_u);
               }
-              break L3;
+              break regionExit1;
             }
             var6 = te.field_a.toUpperCase();
           } else {
@@ -628,7 +628,7 @@ final class oi {
           }
         }
         if (param4 != -3666) {
-          field_a = (p) null;
+          field_a = (IntrusiveDeque) null;
         }
     }
 
@@ -658,12 +658,12 @@ final class oi {
             this.field_f.field_d <= 1) {
             this.field_f.a(-75, 2);
           } else {
-            this.field_f.a(param0 ^ -39, uk.field_c);
+            this.field_f.a(param0 ^ -39, GameApplet.field_c);
           }
         }
         if (um.field_Gb == 98) {
           if (this.field_f.field_d == 2) {
-            this.field_f.a(-61, uk.field_c);
+            this.field_f.a(-61, GameApplet.field_c);
           } else {
             this.field_f.a(-76, 2);
           }
@@ -767,49 +767,49 @@ final class oi {
         if (param2 < 81) {
           this.b(-95, 86, -94);
         }
-        L1: {
+        regionExit1: {
           var5 = param1;
           if (var5 != 0) {
-            L2: {
+            regionExit2: {
               if (var5 != 24) {
                 if (var5 == 1) {
-                  break L1;
+                  break regionExit1;
                 }
                 if (2 == var5) {
-                  break L1;
+                  break regionExit1;
                 }
                 if (var5 == 7) {
-                  break L1;
+                  break regionExit1;
                 }
                 if (var5 == 3) {
-                  break L1;
+                  break regionExit1;
                 }
                 if (5 != var5 &&
                   8 != var5 &&
                   var5 != 4 &&
                   var5 != 6) {
                   if (9 == var5) {
-                    break L1;
+                    break regionExit1;
                   }
                   if (var5 == 10) {
-                    break L1;
+                    break regionExit1;
                   }
                   if (var5 != 11) {
                     if (var5 == 18) {
-                      break L1;
+                      break regionExit1;
                     }
                     if (19 != var5 &&
                       12 != var5) {
                       if (var5 == 20) {
-                        break L1;
+                        break regionExit1;
                       }
                       if (var5 != 21) {
                         if (var5 == 22) {
-                          break L1;
+                          break regionExit1;
                         }
                         if (var5 != 13) {
                           if (var5 == 23) {
-                            break L1;
+                            break regionExit1;
                           }
                           if (var5 == 14) {
                             var4 = 0;
@@ -853,7 +853,7 @@ final class oi {
                               vm.$cfr$intArgs$a$45c25716b3df(30, bg.field_Lb);
                               qd.field_c = id.field_r + 20;
                             }
-                            break L1;
+                            break regionExit1;
                           }
                           if (var5 == 15) {
                             if (this.field_f.a((byte) 119)) {
@@ -886,7 +886,7 @@ final class oi {
                             if (var5 == 16) {
                               if (!this.field_f.d(26505) &&
                                 !this.field_f.c(-1)) {
-                                break L2;
+                                break regionExit2;
                               }
                               if (bc.field_c >= 2) {
                                 bc.field_c = 0;
@@ -895,7 +895,7 @@ final class oi {
                                 bc.field_c = co.field_l;
                                 ka.a(true, (byte) 87);
                               }
-                              break L1;
+                              break regionExit1;
                             }
                             if (var5 != 17) {
                               if (var5 == 28) {
@@ -909,25 +909,25 @@ final class oi {
                                   case 26:
                                     if (this.field_f.c(-1)) {
                                       eg.field_y = (eg.field_y + 1) % sh.field_yb.length;
-                                      break L1;
+                                      break regionExit1;
                                     }
                                     if (!this.field_f.d(26505)) {
-                                      break L2;
+                                      break regionExit2;
                                     }
                                     eg.field_y = (-1 - (-sh.field_yb.length - eg.field_y)) % sh.field_yb.length;
-                                    break L1;
+                                    break regionExit1;
                                   default:
-                                    break L1;
+                                    break regionExit1;
                                   case 27:
                                     if (this.field_f.c(-1)) {
                                       ce.field_I = (ce.field_I + 1) % mh.field_i.length;
-                                      break L1;
+                                      break regionExit1;
                                     }
                                     if (!this.field_f.d(26505)) {
-                                      break L2;
+                                      break regionExit2;
                                     }
                                     ce.field_I = (mh.field_i.length - (1 - ce.field_I)) % mh.field_i.length;
-                                    break L1;
+                                    break regionExit1;
                                   case 25:
                                     break;
                                 }
@@ -939,7 +939,7 @@ final class oi {
                                   ll.field_b = (ra.field_a.length - 1 + ll.field_b) % ra.field_a.length;
                                 }
                               }
-                              break L1;
+                              break regionExit1;
                             }
                             if (gb.field_H.field_g) {
                               if (this.field_f.d(26505)) {
@@ -953,7 +953,7 @@ final class oi {
                                   co.field_l = bc.field_c;
                                   ka.a(true, (byte) 87);
                                 }
-                                break L1;
+                                break regionExit1;
                               }
                               if (this.field_f.c(-1)) {
                                 fieldTemp$0 = bc.field_c + 1;
@@ -1261,6 +1261,6 @@ final class oi {
         field_g = 0;
         field_h = new StringBuilder(80);
         field_b = 0L;
-        field_a = new p();
+        field_a = new IntrusiveDeque();
     }
 }

@@ -42,7 +42,7 @@ final class dg extends fi {
           var6 = null;
           if (param0.indexOf('@') == -1) {
             var7 = (CharSequence) ((Object) param0);
-            var4_long = jc.a(var7, (byte) -105);
+            var4_long = PacketBuffer.a(var7, (byte) -105);
           } else {
             var6 = param0;
           }
@@ -108,7 +108,7 @@ final class dg extends fi {
         var8 = Virogrid.field_F ? 1 : 0;
         try {
           var5_int = param2 + this.field_g;
-          uk.a(param0 + this.field_m, 6, param2 + this.field_A.field_w, -this.field_A.field_w + var5_int, param0);
+          GameApplet.a(param0 + this.field_m, 6, param2 + this.field_A.field_w, -this.field_A.field_w + var5_int, param0);
           for (var6 = -this.field_L + param2; var6 < var5_int; var6 = var6 + param1.field_w) {
             param1.d(var6, param0);
           }
@@ -159,7 +159,7 @@ final class dg extends fi {
         int var6 = param2 + this.field_u;
         this.a(var6, this.field_D[0], var5, false);
         if (this.field_C < 65536) {
-          uk.a(var6 + this.field_m, 6, (this.field_C * this.field_g >> 16) + var5, var5 + this.field_g, var6);
+          GameApplet.a(var6 + this.field_m, 6, (this.field_C * this.field_g >> 16) + var5, var5 + this.field_g, var6);
           this.a(var6, this.field_D[1], var5, false);
           ai.a(true);
         }

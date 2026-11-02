@@ -5,7 +5,7 @@ final class ub extends nb {
     static byte[] field_D;
     static volatile boolean field_F;
     byte field_A;
-    jc field_B;
+    PacketBuffer field_B;
     static dl field_E;
     int field_C;
     static qm field_z;
@@ -24,8 +24,8 @@ final class ub extends nb {
         if (this.field_t) {
           throw new RuntimeException();
         }
-        if (this.field_B.field_l >= this.field_B.field_g.length - this.field_A) {
-          return this.field_B.field_g;
+        if (this.field_B.position >= this.field_B.payload.length - this.field_A) {
+          return this.field_B.payload;
         }
         throw new RuntimeException();
     }
@@ -49,12 +49,12 @@ final class ub extends nb {
         if (param0 != 0) {
           ub.g(-41);
           if (this.field_B != null) {
-            return 100 * this.field_B.field_l / (-this.field_A + this.field_B.field_g.length);
+            return 100 * this.field_B.position / (-this.field_A + this.field_B.payload.length);
           }
           return 0;
         }
         if (this.field_B != null) {
-          return 100 * this.field_B.field_l / (-this.field_A + this.field_B.field_g.length);
+          return 100 * this.field_B.position / (-this.field_A + this.field_B.payload.length);
         }
         return 0;
     }

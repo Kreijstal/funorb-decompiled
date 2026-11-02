@@ -31,7 +31,7 @@ class km extends ke {
     private int field_v;
     static int field_pb;
     int field_R;
-    p field_W;
+    IntrusiveDeque field_W;
     static String field_P;
     int field_Cb;
     int field_hb;
@@ -259,7 +259,7 @@ class km extends ke {
         }
         try {
           if (this.field_W == null) {
-            this.field_W = new p();
+            this.field_W = new IntrusiveDeque();
           }
           this.field_W.a(param1, (byte) -36);
         } catch (RuntimeException runtimeException) {
@@ -305,9 +305,9 @@ class km extends ke {
         var26 = Virogrid.field_F ? 1 : 0;
         try {
           var28 = sh.field_qb;
-          var2 = var28.g(11132);
+          var2 = var28.readUnsignedByte(11132);
           if (var2 == 0) {
-            var3 = var28.c((byte) 87);
+            var3 = var28.readUnsignedShort((byte) 87);
             var4 = (oc) (fn.field_a.a((byte) -77));
             while (var4 != null) {
               if (var4.field_j != var3) {
@@ -320,7 +320,7 @@ class km extends ke {
               tn.a(false);
               return;
             }
-            var5 = var28.g(11132);
+            var5 = var28.readUnsignedByte(11132);
             if (var5 != 0) {
               var6 = var4.field_g;
               qd.field_m[0].field_g = mi.field_d;
@@ -330,7 +330,7 @@ class km extends ke {
               for (var8_int = 1; var8_int < var5; var8_int++) {
                 qd.field_m[var8_int].field_g = var28.h(param0 ^ -59);
                 qd.field_m[var8_int].field_e = false;
-                if (var28.g(11132) == 1) {
+                if (var28.readUnsignedByte(11132) == 1) {
                   qd.field_m[var8_int].field_d = var28.h(param0 - 204);
                 } else {
                   qd.field_m[var8_int].field_d = null;
@@ -346,13 +346,13 @@ class km extends ke {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var28.g(11132);
+              var18 = var28.readUnsignedByte(11132);
               if (var18 > 0) {
                 for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var28.g(11132);
+                  var20 = var28.readUnsignedByte(11132);
                   var21 = qd.field_m[var20].field_g;
                   var22 = var28.e((byte) -60);
-                  var24 = var28.field_l;
+                  var24 = var28.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
                     var9[0][var12] = qd.field_m[var20].field_d;
@@ -361,20 +361,20 @@ class km extends ke {
                     for (var25 = 0; var25 < var7; var25++) {
                       incrementValue$0 = var15;
                       var15++;
-                      var36[0][incrementValue$0] = var28.d((byte) 93);
+                      var36[0][incrementValue$0] = var28.readInt((byte) 93);
                     }
                   }
                   if (var21 != null &&
-                    jc.a(var21, true)) {
+                    PacketBuffer.a(var21, true)) {
                     var8[1][var13] = mi.field_d;
                     var9[1][var13] = null;
                     var35[1][var13] = var22;
                     var13++;
-                    var28.field_l = var24;
+                    var28.position = var24;
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$1 = var16;
                       var16++;
-                      var36[1][incrementValue$1] = var28.d((byte) 103);
+                      var36[1][incrementValue$1] = var28.readInt((byte) 103);
                     }
                   }
                   if (var6 > var14 &&
@@ -384,11 +384,11 @@ class km extends ke {
                     var9[2][var14] = qd.field_m[var20].field_d;
                     var35[2][var14] = var22;
                     var14++;
-                    var28.field_l = var24;
+                    var28.position = var24;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$2 = var17;
                       var17++;
-                      var36[2][incrementValue$2] = var28.d((byte) 127);
+                      var36[2][incrementValue$2] = var28.readInt((byte) 127);
                     }
                   }
                 }
@@ -396,7 +396,7 @@ class km extends ke {
             }
             var4.a(false);
           } else if (var2 == 1) {
-            var3 = var28.c((byte) 83);
+            var3 = var28.readUnsignedShort((byte) 83);
             var28.e((byte) -60);
             var4_ref = (hn) (qn.field_P.a((byte) -44));
             while (var4_ref != null) {
@@ -911,7 +911,7 @@ class km extends ke {
           this.field_F = param3;
           this.field_K = param4;
           this.field_tb = param2;
-          this.field_d = param0;
+          this.key = param0;
           this.b(18003, param1);
           if (param6 != null) {
             this.field_V = param6;

@@ -4,12 +4,12 @@
 import java.util.*;
 
 final class f implements Iterator {
-    private wb field_a;
+    private DualLinkNode field_a;
     static km[] field_f;
     static ml field_j;
     private eb field_e;
     static String field_d;
-    private wb field_i;
+    private DualLinkNode field_i;
     static km field_c;
     static String field_g;
     static int field_b;
@@ -182,12 +182,12 @@ final class f implements Iterator {
     public final Object next() {
         Object var1 = this.field_a;
         if (this.field_e.field_e != var1) {
-          this.field_a = ((wb) (var1)).field_h;
+          this.field_a = ((DualLinkNode) (var1)).field_h;
         } else {
           this.field_a = null;
           var1 = null;
         }
-        this.field_i = (wb) (var1);
+        this.field_i = (DualLinkNode) (var1);
         return var1;
     }
 

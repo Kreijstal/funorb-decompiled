@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class in extends l {
+abstract class in extends IntrusiveNode {
     tj field_j;
     int field_i;
     volatile boolean field_g;

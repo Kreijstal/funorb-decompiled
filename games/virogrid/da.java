@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class da extends l {
+final class da extends IntrusiveNode {
     static km field_n;
     int field_q;
     int field_l;
@@ -107,20 +107,20 @@ final class da extends l {
         if (ad.field_l) {
           ne.field_c.field_Jb.field_F = ne.field_c.field_Eb.field_ub - ne.field_c.field_Jb.field_ub;
           ad.field_l = false;
-          uf.field_i = true;
+          GameBoard.field_i = true;
           ne.field_c.field_Jb.field_Cb = 0;
         }
         if (qc.field_h &&
           qc.field_i != null) {
-          uf.field_i = true;
+          GameBoard.field_i = true;
         }
         var9Lifetime1 = -ne.field_c.field_Jb.field_kb - ne.field_c.field_Jb.field_ub + ne.field_c.field_Eb.field_ub;
-        if (uf.field_i) {
+        if (GameBoard.field_i) {
           ne.field_c.field_Jb.field_Cb = var9Lifetime1 - ne.field_c.field_Jb.field_F;
         }
         ne.field_c.a(-1, param3, true, param1 * (2 * param3));
         stackIn_50_0 = (var9Lifetime1 == ne.field_c.field_Jb.field_Cb + ne.field_c.field_Jb.field_F);
-        uf.field_i = stackIn_50_0;
+        GameBoard.field_i = stackIn_50_0;
         return (cj) (var4);
     }
 

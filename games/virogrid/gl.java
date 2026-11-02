@@ -114,7 +114,7 @@ final class gl {
                 this.field_j.a(0, an.field_c, 6, 0);
                 var9 = 0;
                 var10 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (var9 < param1) {
                     boolean decompiledFrameRemainder0 = true;
                     var11 = 0;
@@ -130,7 +130,7 @@ final class gl {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var11 = (65280 & an.field_c[5] << 8) + (((an.field_c[4] & 255) << 16) + (an.field_c[6] & 255));
                         var12 = (255 & an.field_c[1]) + (an.field_c[0] << 8 & 65280);
@@ -146,7 +146,7 @@ final class gl {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var13 = (255 & an.field_c[5]) + ((an.field_c[4] & 255) << 8);
                         var11 = (an.field_c[6] << 16 & 16711680) + (an.field_c[7] << 8 & 65280) + (an.field_c[8] & 255);

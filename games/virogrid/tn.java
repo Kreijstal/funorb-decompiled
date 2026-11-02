@@ -379,9 +379,9 @@ final class tn {
 
     final static void a(int param0) {
         int var1 = -34 % ((param0 + 22) / 38);
-        if (p.field_h != ca.field_M.field_b) {
-          vf.field_c = vf.field_c + (ca.field_M.field_b - p.field_h);
-          p.field_h = ca.field_M.field_b;
+        if (IntrusiveDeque.field_h != ca.field_M.field_b) {
+          vf.field_c = vf.field_c + (ca.field_M.field_b - IntrusiveDeque.field_h);
+          IntrusiveDeque.field_h = ca.field_M.field_b;
           if (!(0 >= db.field_D)) {
             db.field_D = db.field_D - 1;
           }

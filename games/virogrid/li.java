@@ -104,14 +104,14 @@ final class li {
 
     final static void a(boolean param0) {
         int stackIn_44_0 = 0;
-        ic stackIn_62_0 = null;
-        ic stackIn_66_0 = null;
+        GameSession stackIn_62_0 = null;
+        GameSession stackIn_66_0 = null;
         boolean stackIn_67_1 = false;
         double stackIn_69_2 = 0.0;
         boolean stackIn_70_3;
         int var1;
         double var2_double;
-        ic var2;
+        GameSession var2;
         int var3;
         double var4;
         double var6;
@@ -131,7 +131,7 @@ final class li {
             el.a(12229, true);
           }
           if (oi.field_g != 0) {
-            qa.field_e = uk.a(-123, ii.field_b, a.field_y);
+            qa.field_e = GameApplet.a(-123, ii.field_b, a.field_y);
             if (0 == qa.field_e &&
               wn.field_C != 0) {
               if (bc.field_c < 2) {
@@ -147,7 +147,7 @@ final class li {
               }
             }
           }
-          qa.field_e = uk.a(-109, nl.field_u, hk.field_Jb);
+          qa.field_e = GameApplet.a(-109, nl.field_u, hk.field_Jb);
           if (j.field_e != 0 &&
             2 == wn.field_C) {
             if (qa.field_e == 1) {
@@ -217,7 +217,7 @@ final class li {
             stackIn_67_1 = (-1 != i.field_y) ? false : true;
             stackIn_69_2 = fa.field_k;
             stackIn_70_3 = (!(nk.field_K[11] < 0.0)) ? false : true;
-            ((ic) (Object) stackIn_66_0).a(stackIn_67_1, stackIn_69_2, stackIn_70_3, j.field_e, sf.field_M, oi.field_g, var1 != 0, (byte) -64);
+            ((GameSession) (Object) stackIn_66_0).a(stackIn_67_1, stackIn_69_2, stackIn_70_3, j.field_e, sf.field_M, oi.field_g, var1 != 0, (byte) -64);
           }
           if (ab.b(i.field_y, 1)) {
             al.field_j[i.field_y].a(var1 != 0, fa.field_k, sf.field_M, oi.field_g, -3666, oi.field_g);

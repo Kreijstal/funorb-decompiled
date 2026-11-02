@@ -111,7 +111,7 @@ final class ee {
             }
           }
         } else {
-          wl.field_e = m.a((byte) 106, 4);
+          wl.field_e = CellAnimator.a((byte) 106, 4);
           if (!wl.field_e.field_l) {
             if (!param0) {
               if (an.field_b) {

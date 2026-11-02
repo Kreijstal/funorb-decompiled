@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class hn extends l {
+final class hn extends IntrusiveNode {
     static String[] field_i;
     static String field_p;
     int field_j;
@@ -44,7 +44,7 @@ final class hn extends l {
         boolean stackIn_52_1 = false;
         km stackIn_55_0 = null;
         boolean stackIn_56_1 = false;
-        uk.a(df.field_f, 6, -640 + df.field_e >> 1, df.field_e + 640 >> 1, 0);
+        GameApplet.a(df.field_f, 6, -640 + df.field_e >> 1, df.field_e + 640 >> 1, 0);
         if (param0 != -1781) {
           return;
         }

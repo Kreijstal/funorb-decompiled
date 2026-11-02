@@ -32,7 +32,7 @@ final class a extends cc {
           lc.field_e[7] = pi.field_d;
           lc.field_e[11] = cm.field_j;
           lc.field_e[5] = ql.field_j;
-          lc.field_e[8] = uf.field_F;
+          lc.field_e[8] = GameBoard.field_F;
           lc.field_e[6] = j.field_a;
           if (param0 != 69) {
             field_E = (int[]) null;
@@ -52,7 +52,7 @@ final class a extends cc {
           de.field_pb[11] = th.field_s;
           de.field_pb[19] = hk.field_Gb;
           de.field_pb[2] = cj.field_f;
-          de.field_pb[3] = uf.field_F;
+          de.field_pb[3] = GameBoard.field_F;
           de.field_pb[10] = cf.field_a;
           de.field_pb[12] = mf.field_i;
           de.field_pb[8] = ai.field_b;
@@ -202,10 +202,10 @@ final class a extends cc {
               if (kb.field_c) {
                 param0 = dd.field_c;
                 if (Virogrid.field_F) {
-                  param0 = wb.field_g;
+                  param0 = DualLinkNode.field_g;
                 }
               } else {
-                param0 = wb.field_g;
+                param0 = DualLinkNode.field_g;
               }
               aa.field_a.a(-113, pm.field_g);
             }
@@ -218,7 +218,7 @@ final class a extends cc {
               if (co.field_d) {
                 param0 = oi.a(new String[]{param0}, rk.field_h, 2);
               }
-              if (p.field_f) {
+              if (IntrusiveDeque.field_f) {
                 param0 = oh.field_a;
               }
               hf.field_w.a(param1, true, param0);
@@ -462,7 +462,7 @@ final class a extends cc {
           }
           var2Lifetime17 = jl.a("TEXT_COLOUR_BLUE", true);
           if (null != var2Lifetime17) {
-            uk.field_g = i.a(-2022, var2Lifetime17);
+            GameApplet.field_g = i.a(-2022, var2Lifetime17);
           }
           var2Lifetime18 = jl.a("TEXT_DRAWN", true);
           if (var2Lifetime18 != null) {

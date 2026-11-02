@@ -7,7 +7,7 @@ abstract class gg extends fd {
     static km field_F;
     boolean field_G;
     static String[] field_I;
-    static jc field_D;
+    static PacketBuffer field_D;
     static km field_M;
     static String field_N;
     private int field_H;
@@ -184,7 +184,7 @@ abstract class gg extends fd {
     static {
         field_I = new String[16];
         field_N = "You have won!";
-        field_D = new jc(256);
+        field_D = new PacketBuffer(256);
         field_J = "You are on <%0>";
     }
 }

@@ -18,11 +18,11 @@ abstract class dk {
     static String field_u;
     qk field_p;
     qk field_h;
-    jc field_t;
+    PacketBuffer field_t;
     int field_k;
     long field_f;
     volatile int field_b;
-    jc field_n;
+    PacketBuffer field_n;
     volatile int field_l;
     byte field_g;
     ub field_d;
@@ -37,7 +37,7 @@ abstract class dk {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          jc var2 = null;
+          PacketBuffer var2 = null;
           if (ji.field_e.field_l >= 4) {
             if (ji.field_e.field_b == -1) {
               return 3;
@@ -67,11 +67,11 @@ abstract class dk {
             }
             if (2 == ij.field_q) {
               ng.field_N = new el((java.net.Socket) (vm.field_b.field_f), ii.field_a);
-              var2 = new jc(13);
+              var2 = new PacketBuffer(13);
               hj.a(fd.field_C, var2, rj.field_l, ed.field_b, 12);
               var2.a(15, param0 ^ -26);
               var2.a(dl.field_c, (byte) -42);
-              ng.field_N.a(var2.field_g, param0 ^ 108, 0, 13);
+              ng.field_N.a(var2.payload, param0 ^ 108, 0, 13);
               ij.field_q = ij.field_q + 1;
               sg.field_l = hc.a(-9986) + 30000L;
             }
@@ -93,7 +93,7 @@ abstract class dk {
             if (ij.field_q != 4) {
               return -1;
             }
-            ji.field_e.a(param0 ^ -17, fb.field_i, ng.field_N);
+            ji.field_e.a(param0 ^ -17, CellFlip.field_i, ng.field_N);
             ng.field_N = null;
             vm.field_b = null;
             ij.field_q = 0;
@@ -212,11 +212,11 @@ abstract class dk {
         this.field_c = new qk();
         this.field_p = new qk();
         this.field_h = new qk();
-        this.field_t = new jc(6);
+        this.field_t = new PacketBuffer(6);
         this.field_l = 0;
         this.field_b = 0;
         this.field_g = (byte) 0;
-        this.field_n = new jc(10);
+        this.field_n = new PacketBuffer(10);
     }
 
     static {

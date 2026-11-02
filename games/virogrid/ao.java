@@ -33,9 +33,9 @@ final class ao extends km {
     final static km d(boolean param0) {
         if (!param0) {
           ao.d(false);
-          return uf.field_j.field_Jb;
+          return GameBoard.field_j.field_Jb;
         }
-        return uf.field_j.field_Jb;
+        return GameBoard.field_j.field_Jb;
     }
 
     final void a(int param0, int param1, int param2, int param3) {

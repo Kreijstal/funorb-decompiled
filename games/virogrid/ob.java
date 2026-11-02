@@ -53,7 +53,7 @@ final class ob {
             return;
           }
           var13 = sh.field_qb;
-          var2 = var13.g(11132);
+          var2 = var13.readUnsignedByte(11132);
           if (var2 == 0) {
             var11 = cf.b(param0 ^ -30578);
             var17 = var11;
@@ -62,9 +62,9 @@ final class ob {
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((jc) ((Object) var5)).g(param0 + 11035);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(param0 + 11035);
             for (var7 = 0; var6 > var7; var7++) {
-              var10[var7] = ((jc) ((Object) var5)).d((byte) 103);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt((byte) 103);
             }
             var16_ref = (ka) (tf.field_a.a((byte) -24));
             if (var16_ref == null) {
@@ -126,7 +126,7 @@ final class ob {
           }
           var6 = 2 + var4 * pg.field_e;
           var7 = sh.b(0, 12, var2_int, var5);
-          var8 = p.a(-1, var6, var3, 20);
+          var8 = IntrusiveDeque.a(-1, var6, var3, 20);
           df.e(var7, var8, var5, var6, 0);
           df.b(var7 + 1, var8 + 1, var5 - 2, -2 + var6, 16777088);
           ti.field_h.field_C.a(param1, 3 + var7, -ti.field_h.field_C.field_H + var8 - (-1 - rf.field_e), 500, 1000, 0, -1, 0, 0, pg.field_e);

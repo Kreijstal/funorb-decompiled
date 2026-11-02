@@ -73,12 +73,12 @@ final class rj implements ol {
     final static void a(int param0, boolean param1, long param2) {
         hg var4 = gk.field_g;
         var4.g(param0, 8);
-        var4.field_l = var4.field_l + 1;
-        int var5 = var4.field_l;
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
         var4.a(6, -119);
         var4.a((byte) 67, param2);
         if (!param1) {
-          var4.b(-var5 + var4.field_l, -1);
+          var4.b(-var5 + var4.position, -1);
           return;
         }
     }

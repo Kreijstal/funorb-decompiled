@@ -107,11 +107,11 @@ final class kn extends ec {
               var10 = var18;
               var11 = 0;
               var12 = 0;
-              L3: while (true) {
+              scanLoop1: while (true) {
                 if (var12 >= var19.length) {
                   if (var11 == 0 &&
                     vb.field_h != param6) {
-                    break L3;
+                    break scanLoop1;
                   }
                   var8_int = 0;
                   for (var12 = 0; var19.length > var12; var12 += 2) {
@@ -124,13 +124,13 @@ final class kn extends ec {
                       vi.field_l = true;
                     }
                   }
-                  break L3;
+                  break scanLoop1;
                 }
                 var13Lifetime1 = var19[var12];
                 var14 = var10[var12 + 1];
                 if (var13Lifetime1 == -1) {
                   if (var14 != vj.field_b[param2]) {
-                    break L3;
+                    break scanLoop1;
                   }
                 } else {
                   if (param6 == var13Lifetime1 &&
@@ -138,10 +138,10 @@ final class kn extends ec {
                     var11 = 1;
                   } else {
                     if (var13Lifetime1 >= param6) {
-                      break L3;
+                      break scanLoop1;
                     }
                     if (var14 != (ub.field_D[var13Lifetime1] & 255)) {
-                      break L3;
+                      break scanLoop1;
                     }
                   }
                 }

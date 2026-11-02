@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wb extends l {
+class DualLinkNode extends IntrusiveNode {
     static String field_l;
     long field_j;
     static String field_n;
-    wb field_h;
+    DualLinkNode field_h;
     static String field_g;
     static String field_i;
     static km field_m;
-    wb field_k;
+    DualLinkNode field_k;
 
     final void c(int param0) {
         if (this.field_k == null) {
@@ -88,7 +88,7 @@ class wb extends l {
         return this.field_j;
     }
 
-    protected wb() {
+    protected DualLinkNode() {
     }
 
     static {

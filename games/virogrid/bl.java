@@ -4,7 +4,7 @@
 final class bl extends nb {
     int field_E;
     gl field_I;
-    static p field_D;
+    static IntrusiveDeque field_D;
     static String field_G;
     byte[] field_C;
     static int field_z;
@@ -50,7 +50,7 @@ final class bl extends nb {
         return 1;
     }
 
-    final static void a(int param0, int param1, java.math.BigInteger param2, jc param3, byte[] param4, java.math.BigInteger param5, int param6) {
+    final static void a(int param0, int param1, java.math.BigInteger param2, PacketBuffer param3, byte[] param4, java.math.BigInteger param5, int param6) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -83,18 +83,18 @@ final class bl extends nb {
             var8[var9] = dk.field_m.nextInt();
           }
           if (am.field_e == null ||
-            !(am.field_e.field_g.length >= var7_int)) {
-            am.field_e = new jc(var7_int);
+            !(am.field_e.payload.length >= var7_int)) {
+            am.field_e = new PacketBuffer(var7_int);
           }
-          am.field_e.field_l = 0;
+          am.field_e.position = 0;
           am.field_e.a(param4, param1, param6, (byte) 72);
           am.field_e.b(var7_int, (byte) 0);
           am.field_e.a(32768, var13);
           if (lc.field_b == null ||
-            !(lc.field_b.field_g.length >= 100)) {
-            lc.field_b = new jc(100);
+            !(lc.field_b.payload.length >= 100)) {
+            lc.field_b = new PacketBuffer(100);
           }
-          lc.field_b.field_l = param0;
+          lc.field_b.position = param0;
           lc.field_b.a(10, 120);
           var11 = 0;
           var9Lifetime1 = var11;
@@ -104,8 +104,8 @@ final class bl extends nb {
           }
           lc.field_b.a((byte) -68, param1);
           lc.field_b.a(param2, param5, (byte) 122);
-          param3.a(lc.field_b.field_g, lc.field_b.field_l, 0, (byte) 20);
-          param3.a(am.field_e.field_g, am.field_e.field_l, 0, (byte) 9);
+          param3.a(lc.field_b.payload, lc.field_b.position, 0, (byte) 20);
+          param3.a(am.field_e.payload, am.field_e.position, 0, (byte) 9);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -144,7 +144,7 @@ final class bl extends nb {
 
     static {
         field_G = "<%0> has been removed.";
-        field_D = new p();
+        field_D = new IntrusiveDeque();
         field_z = 3;
         field_A = "Please wait while we search.<br>Games usually start within a minute, provided the server is busy enough.<br><br>The longer you are forced to wait, the earlier in the list of players you are likely to appear.<br><br>If the game doesn't start, click 'Cancel' and then try choosing 'Don't mind' for more options or switching to a busier lobby.";
         field_H = "<%0> is offering a rematch.";

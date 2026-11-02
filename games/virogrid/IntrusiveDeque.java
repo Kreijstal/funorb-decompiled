@@ -1,46 +1,46 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class p {
+final class IntrusiveDeque {
     static int field_d;
     static km field_a;
     static int field_h;
     static ul field_b;
     static byte[] field_e;
-    l field_i;
-    private l field_c;
+    IntrusiveNode field_i;
+    private IntrusiveNode field_c;
     static String field_g;
     static boolean field_f;
 
-    final l b(boolean param0) {
-        l var2 = null;
-        l var2Lifetime1;
+    final IntrusiveNode b(boolean param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0) {
           field_a = (km) null;
-          var2 = this.field_i.field_a;
+          var2 = this.field_i.next;
           if (this.field_i == var2) {
             this.field_c = null;
             return null;
           }
-          this.field_c = var2.field_a;
+          this.field_c = var2.next;
           return var2;
         }
-        var2Lifetime1 = this.field_i.field_a;
+        var2Lifetime1 = this.field_i.next;
         if (this.field_i == var2Lifetime1) {
           this.field_c = null;
           return null;
         }
-        this.field_c = var2Lifetime1.field_a;
+        this.field_c = var2Lifetime1.next;
         return var2Lifetime1;
     }
 
     final void a(boolean param0) {
-        l var2;
+        IntrusiveNode var2;
         int var3;
-        l var4;
+        IntrusiveNode var4;
         var3 = Virogrid.field_F ? 1 : 0;
         while (true) {
-          var2 = this.field_i.field_f;
+          var2 = this.field_i.previous;
           if (var2 != this.field_i) {
             var2.a(false);
             continue;
@@ -51,24 +51,24 @@ final class p {
         if (!param0) {
           return;
         }
-        var4 = (l) null;
-        this.a(-4, (l) null);
+        var4 = (IntrusiveNode) null;
+        this.a(-4, (IntrusiveNode) null);
         return;
     }
 
-    final void b(l param0, byte param1) {
+    final void b(IntrusiveNode param0, byte param1) {
         try {
-          if (null != param0.field_a) {
+          if (null != param0.next) {
             param0.a(false);
           }
-          param0.field_a = this.field_i;
-          param0.field_f = this.field_i.field_f;
-          param0.field_a.field_f = param0;
+          param0.next = this.field_i;
+          param0.previous = this.field_i.previous;
+          param0.next.previous = param0;
           if (param1 != -45) {
             CharSequence var4 = (CharSequence) null;
-            p.a(-77, -60, false, (CharSequence) null);
+            IntrusiveDeque.a(-77, -60, false, (CharSequence) null);
           }
-          param0.field_f.field_a = param0;
+          param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "p.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -84,8 +84,8 @@ final class p {
         return -param1 + df.field_f;
     }
 
-    final l d(int param0) {
-        l var2 = this.field_i.field_f;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = this.field_i.previous;
         if (this.field_i == var2) {
           return null;
         }
@@ -93,12 +93,12 @@ final class p {
           var2.a(false);
           return var2;
         }
-        return (l) null;
+        return (IntrusiveNode) null;
     }
 
-    final l b(int param0) {
+    final IntrusiveNode b(int param0) {
         int var2 = -93 / ((-46 - param0) / 34);
-        l var3 = this.field_i.field_a;
+        IntrusiveNode var3 = this.field_i.next;
         if (this.field_i != var3) {
           var3.a(false);
           return var3;
@@ -106,9 +106,9 @@ final class p {
         return null;
     }
 
-    final l e(int param0) {
-        l var2 = null;
-        l var2Lifetime1;
+    final IntrusiveNode e(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 9003) {
           field_d = -121;
           var2 = this.field_c;
@@ -116,7 +116,7 @@ final class p {
             this.field_c = null;
             return null;
           }
-          this.field_c = var2.field_a;
+          this.field_c = var2.next;
           return var2;
         }
         var2Lifetime1 = this.field_c;
@@ -124,7 +124,7 @@ final class p {
           this.field_c = null;
           return null;
         }
-        this.field_c = var2Lifetime1.field_a;
+        this.field_c = var2Lifetime1.next;
         return var2Lifetime1;
     }
 
@@ -153,18 +153,18 @@ final class p {
         }
     }
 
-    final l a(int param0) {
-        l var2 = this.field_c;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = this.field_c;
         if (var2 == this.field_i) {
           this.field_c = null;
           return null;
         }
         if (param0 == 16213) {
-          this.field_c = var2.field_f;
+          this.field_c = var2.previous;
           return var2;
         }
         this.b(true);
-        this.field_c = var2.field_f;
+        this.field_c = var2.previous;
         return var2;
     }
 
@@ -203,11 +203,11 @@ final class p {
         }
     }
 
-    final l a(int param0, l param1) {
-        l var3 = null;
+    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_7_0 = null;
-        l stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -219,16 +219,16 @@ final class p {
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_i.field_f;
+            var3 = this.field_i.previous;
           }
           if (this.field_i != var3) {
-            this.field_c = var3.field_f;
+            this.field_c = var3.previous;
             stackIn_9_0 = var3;
             return stackIn_9_0;
           }
           this.field_c = null;
           stackIn_7_0 = null;
-          return (l) (stackIn_7_0);
+          return (IntrusiveNode) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -243,17 +243,17 @@ final class p {
         }
     }
 
-    final l a(byte param0) {
-        l var2 = this.field_i.field_f;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_i.previous;
         if (var2 == this.field_i) {
           this.field_c = null;
           return null;
         }
-        this.field_c = var2.field_f;
+        this.field_c = var2.previous;
         if (param0 < -20) {
           return var2;
         }
-        p.a(-111, 78, -112);
+        IntrusiveDeque.a(-111, 78, -112);
         return var2;
     }
 
@@ -266,26 +266,26 @@ final class p {
           return;
         }
         CharSequence var2 = (CharSequence) null;
-        p.a(-2, 62, false, (CharSequence) null);
+        IntrusiveDeque.a(-2, 62, false, (CharSequence) null);
         field_g = null;
         field_b = null;
         field_a = null;
         field_e = null;
     }
 
-    final void a(l param0, byte param1) {
+    final void a(IntrusiveNode param0, byte param1) {
         try {
-          if (param0.field_a != null) {
+          if (param0.next != null) {
             param0.a(false);
           }
-          param0.field_a = this.field_i.field_a;
-          param0.field_f = this.field_i;
+          param0.next = this.field_i.next;
+          param0.previous = this.field_i;
           if (param1 > -30) {
-            l var4 = (l) null;
-            this.b((l) null, (byte) 27);
+            IntrusiveNode var4 = (IntrusiveNode) null;
+            this.b((IntrusiveNode) null, (byte) 27);
           }
-          param0.field_a.field_f = param0;
-          param0.field_f.field_a = param0;
+          param0.next.previous = param0;
+          param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "p.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -301,11 +301,11 @@ final class p {
 
     final boolean b(byte param0) {
         if (param0 > 7) {
-          return this.field_i.field_f == this.field_i ? true : false;
+          return this.field_i.previous == this.field_i ? true : false;
         }
-        l var3 = (l) null;
-        this.a(-30, (l) null);
-        return this.field_i.field_f == this.field_i ? true : false;
+        IntrusiveNode var3 = (IntrusiveNode) null;
+        this.a(-30, (IntrusiveNode) null);
+        return this.field_i.previous == this.field_i ? true : false;
     }
 
     final static int a(int param0, int param1, boolean param2, CharSequence param3) {
@@ -391,10 +391,10 @@ final class p {
         }
     }
 
-    public p() {
-        this.field_i = new l();
-        this.field_i.field_f = this.field_i;
-        this.field_i.field_a = this.field_i;
+    public IntrusiveDeque() {
+        this.field_i = new IntrusiveNode();
+        this.field_i.previous = this.field_i;
+        this.field_i.next = this.field_i;
     }
 
     static {

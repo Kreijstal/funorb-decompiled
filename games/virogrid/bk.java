@@ -7,7 +7,7 @@ abstract class bk {
     static boolean field_a;
     static String field_d;
 
-    abstract void a(boolean param0, jc param1);
+    abstract void a(boolean param0, PacketBuffer param1);
 
     abstract ul a(boolean param0);
 

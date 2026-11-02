@@ -70,7 +70,7 @@ final class pi {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        p var8 = null;
+        IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
         he var12 = null;
@@ -235,9 +235,9 @@ final class pi {
               var12.field_Kb.field_lb = 2;
               var12.field_uc = new km(0L, gg.field_F);
               var12.a(0, var12.field_uc);
-              var12.field_bc = new km(0L, ma.field_e);
+              var12.field_bc = new km(0L, IntrusiveDequeCursor.field_e);
               var12.a(0, var12.field_bc);
-              var12.field_Ob = new km(0L, ma.field_e);
+              var12.field_Ob = new km(0L, IntrusiveDequeCursor.field_e);
               var12.a(0, var12.field_Ob);
               var12.field_Tb = new km(0L, ti.field_h);
               var12.a(0, var12.field_Tb);
@@ -413,7 +413,7 @@ final class pi {
                 var34_int = var34_int + (dl.field_b + var53_ref.field_u);
               }
               if ((1 << bl.field_z & var14Lifetime1) != 0) {
-                stackIn_92_0 = m.field_f;
+                stackIn_92_0 = CellAnimator.field_f;
                 if (var12.field_Ub) {
                   stackIn_93_1 = 1;
                 } else {

@@ -16,7 +16,7 @@ final class rh {
           if (param1 >= -59) {
             field_a = (String) null;
           }
-          stackIn_3_0 = jc.field_k.a("", 100, param0);
+          stackIn_3_0 = PacketBuffer.field_k.a("", 100, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

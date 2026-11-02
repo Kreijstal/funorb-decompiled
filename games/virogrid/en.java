@@ -50,7 +50,7 @@ final class en extends km {
           try {
             var3 = "";
             if (param1 != null) {
-              var3 = ma.a(40, param1);
+              var3 = IntrusiveDequeCursor.a(40, param1);
             }
             if (param0 != null) {
               if (param1 != null) {
@@ -114,11 +114,11 @@ final class en extends km {
         }
     }
 
-    final static int a(boolean param0, String param1, jc param2) {
+    final static int a(boolean param0, String param1, PacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
-        jc var5 = null;
+        PacketBuffer var5 = null;
         CharSequence var6 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -128,16 +128,16 @@ final class en extends km {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param2.field_l;
+          var3_int = param2.position;
           var6 = (CharSequence) ((Object) param1);
           var4 = ak.a(1514, var6);
           if (!param0) {
-            var5 = (jc) null;
-            en.a(true, (String) null, (jc) null);
+            var5 = (PacketBuffer) null;
+            en.a(true, (String) null, (PacketBuffer) null);
           }
-          param2.f(var4.length, 30408);
-          param2.field_l = param2.field_l + ph.field_k.a(var4.length, param2.field_l, -7089, 0, var4, param2.field_g);
-          stackIn_3_0 = -var3_int + param2.field_l;
+          param2.writeSmart(var4.length, 30408);
+          param2.position = param2.position + ph.field_k.a(var4.length, param2.position, -7089, 0, var4, param2.payload);
+          stackIn_3_0 = -var3_int + param2.position;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

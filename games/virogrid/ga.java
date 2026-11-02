@@ -160,7 +160,7 @@ final class ga extends km {
         var6 = var6 + 2 * this.field_Fb;
         var7Lifetime1 = this.field_Mb * this.field_Qb + this.field_Pb + this.field_Pb;
         var8Lifetime1 = sh.b(0, param2, param3, var6);
-        var9 = p.a(-1, var7Lifetime1, param4, param0);
+        var9 = IntrusiveDeque.a(-1, var7Lifetime1, param4, param0);
         this.a(var8Lifetime1, var7Lifetime1, var6, (byte) -87, var9);
         for (var10 = 0; var10 < this.field_Qb; var10++) {
           this.field_Gb[var10].a(-(2 * this.field_Fb) + var6, this.field_Fb, 2, var10 * this.field_Mb + this.field_Pb, this.field_Lb, this.field_Mb, this.field_Ib);

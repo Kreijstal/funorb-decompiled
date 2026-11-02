@@ -48,8 +48,8 @@ final class ra {
           var7 = gk.field_g;
           var8 = var7;
           var8.g(param0, param1 + 7);
-          var8.field_l = var8.field_l + 1;
-          var4 = var8.field_l;
+          var8.position = var8.position + 1;
+          var4 = var8.position;
           var8.a(param1, -113);
           var8.a((byte) -111, param2.field_j);
           var8.a((byte) 122, param2.field_g);
@@ -63,7 +63,7 @@ final class ra {
             var7.a(param2.field_o[var5], (byte) -42);
           }
           var8.b((byte) -111, var4);
-          var8.b(var8.field_l - var4, -1);
+          var8.b(var8.position - var4, -1);
         } catch (RuntimeException runtimeException) {
           throw kg.a((Throwable) ((Object) runtimeException), "ra.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

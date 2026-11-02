@@ -6,7 +6,7 @@ final class am {
     static String field_a;
     static String field_d;
     static String field_b;
-    static jc field_e;
+    static PacketBuffer field_e;
 
     final static boolean a(byte param0, int param1) {
         if (param0 == -56) {

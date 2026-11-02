@@ -279,7 +279,7 @@ final class il extends cn {
           field_o = 0;
         }
         for (var8Lifetime1 = 0; var8Lifetime1 < this.field_F; var8Lifetime1++) {
-          L45: {
+          regionExit1: {
             if (this.field_R[var8Lifetime1] != -2) {
               var9 = this.field_C[var8Lifetime1];
               var10 = this.field_n[var8Lifetime1];
@@ -326,7 +326,7 @@ final class il extends cn {
                       var28 = field_v[var27];
                       if (var28 == 64) {
                         if (field_o == 512) {
-                          break L45;
+                          break regionExit1;
                         }
                         fieldTemp$7 = field_o;
                         field_o = field_o + 1;
@@ -341,7 +341,7 @@ final class il extends cn {
                     }
                   }
                 }
-                break L45;
+                break regionExit1;
               }
               if (param1 &&
                 this.a(eh.field_n + fk.field_j, wm.field_F + fk.field_k, field_O[var9], field_O[var10], field_O[var11], var12, var13, var14_int)) {
@@ -368,7 +368,7 @@ final class il extends cn {
                     var16Lifetime2 = field_v[var15_intLifetime2];
                     if (var16Lifetime2 == 64) {
                       if (field_o == 512) {
-                        break L45;
+                        break regionExit1;
                       }
                       fieldTemp$14 = field_o;
                       field_o = field_o + 1;

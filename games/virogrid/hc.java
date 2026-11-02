@@ -14,7 +14,7 @@ final class hc {
         field_b = null;
     }
 
-    final static String a(int param0, int param1, jc param2) {
+    final static String a(int param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -36,7 +36,7 @@ final class hc {
               field_b = (String) null;
             }
             var4 = new byte[var3_int];
-            param2.field_l = param2.field_l + ph.field_k.a(var4, param2.field_l, 0, var3_int, param2.field_g, true);
+            param2.position = param2.position + ph.field_k.a(var4, param2.position, 0, var3_int, param2.payload, true);
             var5 = nf.a(var3_int, (byte) -128, 0, var4);
             stackIn_6_0 = var5;
             return stackIn_6_0;

@@ -6,10 +6,10 @@ final class co {
     private String field_c;
     static int field_j;
     static int field_h;
-    static p field_a;
+    static IntrusiveDeque field_a;
     static long[] field_b;
     static long[][] field_e;
-    static p field_f;
+    static IntrusiveDeque field_f;
     static int field_i;
     static tn field_k;
     static int field_l;
@@ -432,11 +432,11 @@ final class co {
               }
               if (0 <= var9 &&
                 var17.field_G) {
-                if (null == uf.field_d) {
+                if (null == GameBoard.field_d) {
                   var18_ref = null;
                 } else {
-                  if (uf.field_d[var7] != null) {
-                    var18_ref = uf.field_d[var7][var9];
+                  if (GameBoard.field_d[var7] != null) {
+                    var18_ref = GameBoard.field_d[var7][var9];
                   } else {
                     var18_ref = null;
                   }
@@ -757,11 +757,11 @@ final class co {
         long var12;
         int var15;
         field_h = 256;
-        field_a = new p();
+        field_a = new IntrusiveDeque();
         field_e = new long[8][256];
         field_b = new long[11];
         var0 = 0;
-        L0: while (var0 < 256) {
+        scanLoop1: while (var0 < 256) {
           var1 = "ᠣ웨螸ŏ㚦틵祯酒悼鮎ꌌ笵ᷠퟂ⹋﹗ᕷ㟥鿰䫚壉⤊놠殅뵝ჴ쬾է䆋Ᵹ闘ﯮ籦\udd17䞞쨭뼇굚茳挂ꩱ젙䧙守騦㊰햀뻍㑈ｺ遟⁨᪮둔錢擱猒䀈쏬\udba1贽需켫皂혛떯橐䗳ワ㽕ꋪ斺⿀\ude1c﵍鉵ڊ닦ฟ拔ꢖ暈╙葲㥌幸㢌톥댡鰞䏇ﰄ写洍﫟縤㮫츑轎럫㲁铷뤓ⳓ쐃噄義⪻셓\udc0b鵬ㅴ겉ᓡᘺ椉炶탭챂颤⡜".charAt(var0 / 2);
           if ((var0 & 1) == 0) {
             stackIn_5_0 = (long)(var1 >>> 8);
@@ -792,7 +792,7 @@ final class co {
         field_b[0] = 0L;
         var15 = 1;
         var0 = var15;
-        L1: while (var15 <= 10) {
+        scanLoop2: while (var15 <= 10) {
           var1 = -8 + var15 * 8;
           field_b[var15] = uh.a(uh.a(uh.a(uh.a(uh.a(uh.a(lm.a(field_e[2][2 + var1], 280375465082880L), uh.a(lm.a(-72057594037927936L, field_e[0][var1]), lm.a(field_e[1][var1 + 1], 71776119061217280L))), lm.a(1095216660480L, field_e[3][var1 + 3])), lm.a(4278190080L, field_e[4][4 + var1])), lm.a(16711680L, field_e[5][var1 + 5])), lm.a(field_e[6][6 + var1], 65280L)), lm.a(field_e[7][7 + var1], 255L));
           var15++;

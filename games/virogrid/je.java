@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class je extends ec {
-    private p field_F;
+    private IntrusiveDeque field_F;
     static boolean[] field_J;
     static String field_E;
     static String field_G;
@@ -24,7 +24,7 @@ final class je extends ec {
 
     public je() {
         super(0, 0, mm.field_i, mn.field_a, (ol) null, (cd) null);
-        this.field_F = new p();
+        this.field_F = new IntrusiveDeque();
     }
 
     public static void h(int param0) {
@@ -94,7 +94,7 @@ final class je extends ec {
 
     final void i(int param0) {
         int var5 = Virogrid.field_F ? 1 : 0;
-        ma var2 = new ma(this.field_F);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_F);
         gg var3 = (gg) (var2.c(12677));
         while (var3 != null) {
           if (var3.f(3)) {
@@ -107,14 +107,14 @@ final class je extends ec {
     }
 
     final gg c(byte param0) {
-        ma var2;
+        IntrusiveDequeCursor var2;
         gg var3;
         int var4;
         var4 = Virogrid.field_F ? 1 : 0;
         if (param0 != 51) {
           field_H = (String) null;
         }
-        var2 = new ma(this.field_F);
+        var2 = new IntrusiveDequeCursor(this.field_F);
         var3 = (gg) (var2.c(12677));
         while (var3 != null) {
           if (var3.field_G) {
@@ -128,7 +128,7 @@ final class je extends ec {
     final void g(int param0) {
         int var5 = Virogrid.field_F ? 1 : 0;
         int var2 = -32 % ((param0 + 40) / 48);
-        ma var3 = new ma(this.field_F);
+        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_F);
         gg var4 = (gg) (var3.c(12677));
         while (var4 != null) {
           if (var4.a((byte) -75)) {
@@ -158,7 +158,7 @@ final class je extends ec {
 
     final void a(byte param0) {
         int var4 = Virogrid.field_F ? 1 : 0;
-        ma var2 = new ma(this.field_F);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_F);
         gg var3 = (gg) (var2.c(12677));
         if (param0 != 76) {
           this.g(true);
@@ -171,11 +171,11 @@ final class je extends ec {
     }
 
     final fi g(boolean param0) {
-        ma var2;
+        IntrusiveDequeCursor var2;
         gg var3;
         int var4;
         var4 = Virogrid.field_F ? 1 : 0;
-        var2 = new ma(this.field_F);
+        var2 = new IntrusiveDequeCursor(this.field_F);
         var3 = (gg) (var2.c(12677));
         if (param0) {
           this.a((byte) -34);
@@ -197,7 +197,7 @@ final class je extends ec {
         if (param0 != 37) {
           return;
         }
-        ma var5 = new ma(this.field_F);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_F);
         fi var6 = (fi) (var5.a((byte) 48));
         while (var6 != null) {
           var6.a((byte) 37, this.field_l + param1, param2 + this.field_u, param3);

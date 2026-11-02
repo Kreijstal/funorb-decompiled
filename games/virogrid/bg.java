@@ -159,7 +159,7 @@ final class bg extends km {
             this.field_Kb.field_eb = "|";
             if (!(og.field_s < 5) ||
               !(hd.field_d < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_6_0 = this;
                 stackIn_6_1 = null;
                 stackIn_6_2 = null;
@@ -173,7 +173,7 @@ final class bg extends km {
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
                     stackIn_8_5 = ai.field_i;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_8_0Lifetime1 = this;
@@ -296,7 +296,7 @@ final class bg extends km {
             var23 = var19 + 26;
             var24 = var22 + 24 + var17Lifetime5 + 10;
             var25 = sh.b(0, param2, param0, var23);
-            var26 = p.a(-1, var24, param1, param3);
+            var26 = IntrusiveDeque.a(-1, var24, param1, param3);
             this.a(var25, var24, var23, (byte) -124, var26);
             return;
           }
@@ -314,7 +314,7 @@ final class bg extends km {
           var18Lifetime1 = var15_int + 26;
           var19Lifetime1 = var16Lifetime1 + 34;
           var20Lifetime1 = sh.b(0, param2, param0, var18Lifetime1);
-          var21Lifetime1 = p.a(-1, var19Lifetime1, param1, param3);
+          var21Lifetime1 = IntrusiveDeque.a(-1, var19Lifetime1, param1, param3);
           this.a(var20Lifetime1, var19Lifetime1, var18Lifetime1, (byte) -104, var21Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

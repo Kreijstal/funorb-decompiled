@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class uk extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String field_g;
     static int field_c;
     boolean field_i;
@@ -287,7 +287,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
           var6 = param1 + (int)kd.field_t - 644;
           var7 = var5 / 20;
           if (param0 >= -103) {
-            uk.a(-101, 19, -78, 79, -92);
+            GameApplet.a(-101, 19, -78, 79, -92);
           }
           if (var5 < 0 ||
             var6 < 0 ||
@@ -869,7 +869,7 @@ public abstract class uk extends java.applet.Applet implements Runnable, java.aw
     public final void windowDeactivated(java.awt.event.WindowEvent param0) {
     }
 
-    protected uk() {
+    protected GameApplet() {
         this.field_i = false;
     }
 
