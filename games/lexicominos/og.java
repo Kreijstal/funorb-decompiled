@@ -5,7 +5,7 @@ final class og implements rd {
     private int field_d;
     static String field_c;
     static String field_b;
-    private le field_i;
+    private BitmapFont field_i;
     private int field_a;
     private int field_e;
     private int field_g;
@@ -45,16 +45,16 @@ final class og implements rd {
           var12 = (wi) (stackIn_4_0);
           if (var12 != null) {
           }
-          lf.a(param3.field_t + param1, param3.field_o + param0, param3.field_j, param3.field_v, this.field_d);
+          SoftwareRasterizer.a(param3.field_t + param1, param3.field_o + param0, param3.field_j, param3.field_v, this.field_d);
           var7 = -(var12.field_G * 2) + param3.field_j;
           var8 = var12.field_G + param3.field_t + param1;
           var9 = param0 - (-param3.field_o - var12.field_H);
           if (param4 != -3284) {
             this.field_g = 108;
           }
-          lf.b(var8, var9, var7 + var8, var9, this.field_h);
+          SoftwareRasterizer.b(var8, var9, var7 + var8, var9, this.field_h);
           for (var10 = -1 + var12.e(false); var10 >= 0; var10--) {
-            lf.c(var12.a(var10, (byte) -37) * var7 / var12.i(-1) + var8, var9, this.field_a, this.field_k);
+            SoftwareRasterizer.c(var12.a(var10, (byte) -37) * var7 / var12.i(-1) + var8, var9, this.field_a, this.field_k);
           }
           if (this.field_i == null) {
             return;
@@ -82,7 +82,7 @@ final class og implements rd {
         return 250 < mc.field_k ? true : false;
     }
 
-    og(le param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    og(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_d = param4;
           this.field_e = param1;

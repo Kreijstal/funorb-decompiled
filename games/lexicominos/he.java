@@ -48,7 +48,7 @@ final class he {
         }
     }
 
-    final static void a(int param0, pk param1, int param2, int param3, boolean param4) {
+    final static void a(int param0, TriangleMesh param1, int param2, int param3, boolean param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_12_0 = false;
         int stackIn_29_0 = 0;
@@ -246,7 +246,7 @@ final class he {
         RuntimeException var1 = null;
         try {
           if (param0 != -1) {
-            he.a(52, (pk) null, -70, 88, false);
+            he.a(52, (TriangleMesh) null, -70, 88, false);
           }
           field_i = null;
           field_c = null;

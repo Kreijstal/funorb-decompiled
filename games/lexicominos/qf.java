@@ -429,7 +429,7 @@ final class qf extends wb {
             qf.e((byte) 68);
           }
           if (0 < jd.field_c &&
-            pk.a(jh.field_a, -104)) {
+            TriangleMesh.a(jh.field_a, -104)) {
             qc.field_a[2] = new int[]{6, 4, 7, 10, 8, 11};
             qc.field_c[2] = -(43 * qc.field_a[2].length / 2) + 225;
             vg.field_d[2] = new sg(param0, 2);

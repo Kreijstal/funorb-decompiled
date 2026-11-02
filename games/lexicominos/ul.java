@@ -59,15 +59,15 @@ final class ul extends kd {
         var42 = Lexicominos.field_L ? 1 : 0;
         try {
           if (param1 >= 0 &&
-            k.field_d > param3) {
+            MeshRasterState.field_d > param3) {
             if (0 > param13 &&
               param9 < 0 &&
               0 > param16) {
               return;
             }
-            if (k.field_f <= param13 &&
-              k.field_f <= param9 &&
-              param16 >= k.field_f) {
+            if (MeshRasterState.field_f <= param13 &&
+              MeshRasterState.field_f <= param9 &&
+              param16 >= MeshRasterState.field_f) {
               return;
             }
             if (param12 != -1464114640) {
@@ -204,22 +204,22 @@ final class ul extends kd {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var36Lifetime2 = k.field_e[param3];
+                var36Lifetime2 = MeshRasterState.field_e[param3];
                 while (param6 > param3) {
                   var37 = var17_int >> 16;
-                  if (var37 < k.field_f) {
+                  if (var37 < MeshRasterState.field_f) {
                     var38 = -(var17_int >> 16) + (var18 >> 16);
                     if (var38 == 0) {
                       if (0 <= var37 &&
-                        k.field_f > var37) {
+                        MeshRasterState.field_f > var37) {
                         vb.a(0, var25, var38, 0, var21, (byte) -95, param4, 0, var37 + var36Lifetime2, var29);
                       }
                     } else {
                       var39 = (var22 - var21) / var38;
                       var40 = (var26 - var25) / var38;
                       var41 = (-var29 + var30) / var38;
-                      if (var37 + var38 >= k.field_f) {
-                        var38 = k.field_f - var37 - 1;
+                      if (var37 + var38 >= MeshRasterState.field_f) {
+                        var38 = MeshRasterState.field_f - var37 - 1;
                       }
                       if (var37 < 0) {
                         vb.a(var39, -(var40 * var37) + var25, var38 + var37, var41, var21 - var37 * var39, (byte) -95, param4, var40, var36Lifetime2, var29 - var41 * var37);
@@ -229,7 +229,7 @@ final class ul extends kd {
                     }
                   }
                   param3++;
-                  if (param3 >= k.field_d) {
+                  if (param3 >= MeshRasterState.field_d) {
                     return;
                   }
                   var21 = var21 + var23;
@@ -238,7 +238,7 @@ final class ul extends kd {
                   var30 = var30 + var32;
                   var29 = var29 + var31;
                   var17_int = var17_int + var19;
-                  var36Lifetime2 = var36Lifetime2 + lf.field_f;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_f;
                   var18 = var18 + var20;
                   var25 = var25 + var27;
                 }
@@ -291,17 +291,17 @@ final class ul extends kd {
               var22 = var22 + var24 * param3;
               param3 = 0;
             }
-            var35Lifetime1 = k.field_e[param3];
+            var35Lifetime1 = MeshRasterState.field_e[param3];
             while (param1 > param3) {
               var36Lifetime1 = var17_int >> 16;
-              if (k.field_f > var36Lifetime1) {
+              if (MeshRasterState.field_f > var36Lifetime1) {
                 var37Lifetime1 = (var18 >> 16) - (var17_int >> 16);
                 if (var37Lifetime1 != 0) {
                   var38Lifetime1 = (var22 - var21) / var37Lifetime1;
                   var39Lifetime1 = (-var25 + var26) / var37Lifetime1;
                   var40Lifetime1 = (var30 - var29) / var37Lifetime1;
-                  if (var37Lifetime1 + var36Lifetime1 >= k.field_f) {
-                    var37Lifetime1 = k.field_f - var36Lifetime1 - 1;
+                  if (var37Lifetime1 + var36Lifetime1 >= MeshRasterState.field_f) {
+                    var37Lifetime1 = MeshRasterState.field_f - var36Lifetime1 - 1;
                   }
                   if (var36Lifetime1 < 0) {
                     vb.a(var38Lifetime1, -(var39Lifetime1 * var36Lifetime1) + var25, var36Lifetime1 + var37Lifetime1, var40Lifetime1, var21 - var36Lifetime1 * var38Lifetime1, (byte) -95, param4, var39Lifetime1, var35Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29);
@@ -310,13 +310,13 @@ final class ul extends kd {
                   }
                 } else {
                   if (var36Lifetime1 >= 0 &&
-                    var36Lifetime1 < k.field_f) {
+                    var36Lifetime1 < MeshRasterState.field_f) {
                     vb.a(0, var25, var37Lifetime1, 0, var21, (byte) -95, param4, 0, var36Lifetime1 + var35Lifetime1, var29);
                   }
                 }
               }
               param3++;
-              if (k.field_d <= param3) {
+              if (MeshRasterState.field_d <= param3) {
                 return;
               }
               var25 = var25 + var27;
@@ -325,7 +325,7 @@ final class ul extends kd {
               var22 = var22 + var24;
               var18 = var18 + var20;
               var30 = var30 + var32;
-              var35Lifetime1 = var35Lifetime1 + lf.field_f;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_f;
               var26 = var26 + var28;
               var21 = var21 + var23;
             }
@@ -433,12 +433,12 @@ final class ul extends kd {
 
     final static void a(sh param0, sh param1, sh param2, byte param3) {
         db var18 = null;
-        jb[] var5 = null;
-        jb[][] var6 = null;
+        IndexedSprite[] var5 = null;
+        IndexedSprite[][] var6 = null;
         int[][] var20 = null;
         int[][] var17 = null;
         int[][] var7 = null;
-        jb[] var15 = null;
+        IndexedSprite[] var15 = null;
         int var11_int = 0;
         db var16 = null;
         db var19 = null;
@@ -455,16 +455,16 @@ final class ul extends kd {
           Lexicominos.field_I = df.a("commonui", "jagex_logo_grey", param0, (byte) -123);
           uc.field_hb = td.a("commonui", "button", param0, 22306);
           be.field_b = uk.a("validation", "commonui", -909811167, param0);
-          cl.field_T = (le) ((Object) ee.a("commonui", "arezzo12", false, param1, param0));
-          ql.field_Q = (le) ((Object) ee.a("commonui", "arezzo14", false, param1, param0));
-          ra.field_c = (le) ((Object) ee.a("commonui", "arezzo14bold", false, param1, param0));
+          cl.field_T = (BitmapFont) ((Object) ee.a("commonui", "arezzo12", false, param1, param0));
+          ql.field_Q = (BitmapFont) ((Object) ee.a("commonui", "arezzo14", false, param1, param0));
+          ra.field_c = (BitmapFont) ((Object) ee.a("commonui", "arezzo14bold", false, param1, param0));
           var18 = new db(param2.a((byte) 127, "", "button.gif"), (java.awt.Component) ((Object) ug.field_y));
           nh.a("commonui", param0, false, "dropdown");
           var5 = wf.a(param0, "commonui", true, "screen_options");
-          si.field_u = new jb[4];
-          oc.field_d = new jb[4];
-          uj.field_a = new jb[4];
-          var6 = new jb[][]{uj.field_a, si.field_u, oc.field_d};
+          si.field_u = new IndexedSprite[4];
+          oc.field_d = new IndexedSprite[4];
+          uj.field_a = new IndexedSprite[4];
+          var6 = new IndexedSprite[][]{uj.field_a, si.field_u, oc.field_d};
           var20 = new int[4][];
           var17 = var20;
           var7 = var17;
@@ -478,7 +478,7 @@ final class ul extends kd {
           var20[3][var8Lifetime1] = 4767999;
           for (var9 = 0; 3 > var9; var9++) {
             var15 = var6[var9];
-            jb[] var10 = var15;
+            IndexedSprite[] var10 = var15;
             for (var11_int = 0; var11_int < var15.length; var11_int++) {
               var15[var11_int] = bf.a(var20[var11_int], var5[var9], 0);
             }
@@ -486,7 +486,7 @@ final class ul extends kd {
           var9Lifetime1 = var18.field_u;
           ja.b((byte) -116);
           var18.b();
-          lf.b(0, 0, lf.field_f, lf.field_a);
+          SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a);
           var16 = new db(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.b();

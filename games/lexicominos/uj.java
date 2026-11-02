@@ -4,11 +4,11 @@
 import java.io.*;
 
 final class uj implements rd {
-    static jb[] field_a;
+    static IndexedSprite[] field_a;
     private int field_b;
     static int[][] field_f;
     static aj field_c;
-    private le field_d;
+    private BitmapFont field_d;
     private int field_e;
 
     public static void a(boolean param0) {
@@ -79,7 +79,7 @@ final class uj implements rd {
             if (null == tg.field_i) {
               return;
             }
-            stackIn_12_0 = pk.field_n;
+            stackIn_12_0 = TriangleMesh.field_n;
             stackIn_12_1 = param2 ^ -23815;
             stackIn_12_2 = null;
             stackIn_12_3 = null;
@@ -161,7 +161,7 @@ final class uj implements rd {
           } else {
             var10 = var10 + (param3.field_v - var8);
           }
-          pk.a(var8, 2 + var10, -2 + var9, 1, var7 + 4);
+          TriangleMesh.a(var8, 2 + var10, -2 + var9, 1, var7 + 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -183,7 +183,7 @@ final class uj implements rd {
         this.field_e = 1;
     }
 
-    uj(le param0, int param1, int param2) {
+    uj(BitmapFont param0, int param1, int param2) {
         try {
           this.field_b = param1;
           this.field_e = param2;

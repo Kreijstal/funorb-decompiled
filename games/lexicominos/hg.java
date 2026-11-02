@@ -10,5 +10,5 @@ abstract class hg extends kd {
         throw new Error();
     }
 
-    abstract int a(hk param0);
+    abstract int a(PcmStreamMixer param0);
 }

@@ -8,7 +8,7 @@ final class th extends wf {
     static long field_k;
     private int field_q;
     static int field_r;
-    static cc[] field_o;
+    static PcmSampleStream[] field_o;
     private pe field_n;
     static int field_t;
     static db[] field_l;
@@ -211,6 +211,6 @@ final class th extends wf {
     }
 
     static {
-        field_o = new cc[10];
+        field_o = new PcmSampleStream[10];
     }
 }

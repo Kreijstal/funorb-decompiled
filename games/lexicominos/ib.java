@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ib implements rd {
-    static jb[] field_a;
+    static IndexedSprite[] field_a;
     static String field_i;
     private int field_k;
     private int field_j;
     private int field_f;
     private int field_h;
     private int field_l;
-    private le field_c;
+    private BitmapFont field_c;
     static String field_b;
     private int field_e;
     static int[] field_g;
@@ -32,21 +32,21 @@ final class ib implements rd {
           return;
         }
         try {
-          lf.a(param1 + param3.field_t, param3.field_o + param0, param3.field_j, param3.field_v, this.field_j);
+          SoftwareRasterizer.a(param1 + param3.field_t, param3.field_o + param0, param3.field_j, param3.field_v, this.field_j);
           var7 = var14.field_L + (param1 + param3.field_t);
           var8 = var14.field_F + (param3.field_o + param0);
-          lf.c(var7, var8, var14.field_I, this.field_k);
+          SoftwareRasterizer.c(var7, var8, var14.field_I, this.field_k);
           if (var14.field_H != -1) {
             var9 = 3.141592653589793 * (double)var14.field_H * 2.0 / (double)var14.field_K;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_I);
             var12 = (int)(Math.cos(var9) * (double)var14.field_I);
-            lf.c(var11 + var7, var8 + var12, 1, this.field_h);
+            SoftwareRasterizer.c(var11 + var7, var8 + var12, 1, this.field_h);
           }
-          lf.c(var7, var8, 2, 1);
+          SoftwareRasterizer.c(var7, var8, 2, 1);
           var9Lifetime1 = (double)var14.field_G * 3.141592653589793 * 2.0 / (double)var14.field_K;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_I);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_I);
-          lf.b(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.b(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (null != this.field_c) {
             var13 = var14.field_L - (-var14.field_I - this.field_d);
             this.field_c.a(param3.field_u, var13 + (param1 + param3.field_t), param3.field_o + param0 + this.field_f, param3.field_j - this.field_d - var13, param3.field_v - (this.field_d << 1), this.field_e, this.field_l, 1, 1, 0);
@@ -107,7 +107,7 @@ final class ib implements rd {
         }
     }
 
-    ib(le param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    ib(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_h = param6;
           this.field_k = param5;

@@ -30,7 +30,7 @@ final class pe {
         return this.field_g[fieldTemp$0];
     }
 
-    final static void a(int param0, int param1, int param2, le param3, int param4, db[] param5, db[] param6, int param7, le param8, int param9, int param10, int param11, int param12, int param13, boolean param14) {
+    final static void a(int param0, int param1, int param2, BitmapFont param3, int param4, db[] param5, db[] param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12, int param13, boolean param14) {
         try {
           db[] var16 = (db[]) null;
           aj.a(0, param9, 0, ea.field_b, param3, g.field_n, 480, param7, ec.field_c, param8, param13, param0, param5, (db[]) null, param4, true, param12, param6, param2, param10, param1);

@@ -10,8 +10,8 @@ final class na {
     private kd field_e;
 
     final static void a(int param0, boolean param1) {
-        cc var2;
-        cc stackIn_4_0 = null;
+        PcmSampleStream var2;
+        PcmSampleStream stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         var2 = th.field_o[param0];
         if (!param1) {
@@ -19,7 +19,7 @@ final class na {
         }
         stackIn_4_0 = var2;
         stackIn_5_1 = (param1) ? false : true;
-        if (((cc) (Object) stackIn_4_0).a(stackIn_5_1)) {
+        if (((PcmSampleStream) (Object) stackIn_4_0).a(stackIn_5_1)) {
           return;
         }
         var2.e(-1);

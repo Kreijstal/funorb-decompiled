@@ -12,7 +12,7 @@ final class fa {
         field_b = null;
     }
 
-    final static void a(rj param0, le param1, int param2, String param3, byte param4) {
+    final static void a(rj param0, BitmapFont param1, int param2, String param3, byte param4) {
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;

@@ -43,12 +43,12 @@ final class rb {
         var10 = new db[]{new db(var9, var9), new db(param7, var9), new db(var9, var9), new db(var9, param7), new db(64, 64), new db(var9, param7), new db(var9, var9), new db(param7, var9), new db(var9, var9)};
         var11_ref_db__ = var10;
         var12 = 0;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var12 < var11_ref_db__.length) {
             var13 = var11_ref_db__[var12];
             stackIn_11_0 = 0;
             if (var15 != 0) {
-              break L0;
+              break scanLoop1;
             }
             var14 = stackIn_11_0;
             while (var14 < var13.field_y.length) {
@@ -56,17 +56,17 @@ final class rb {
               var14++;
             }
             var12++;
-            continue L0;
+            continue scanLoop1;
           }
           stackIn_11_0 = 0;
           break;
         }
         var11 = stackIn_11_0;
-        L6: while (true) {
+        scanLoop2: while (true) {
           if (param0 > var11) {
             stackIn_22_0 = 0;
             if (var15 != 0) {
-              break L6;
+              break scanLoop2;
             }
             var12Lifetime1 = stackIn_22_0;
             while (var9 > var12Lifetime1) {
@@ -77,7 +77,7 @@ final class rb {
               var12Lifetime1++;
             }
             var11++;
-            continue L6;
+            continue scanLoop2;
           }
           stackIn_22_0 = 0;
           break;
@@ -108,11 +108,11 @@ final class rb {
             stackIn_34_0 = 0;
           }
           var11Lifetime1 = stackIn_34_0;
-          L19: while (true) {
+          scanLoop3: while (true) {
             if (param7 > var11Lifetime1) {
               stackIn_45_0 = 0;
               if (var15 != 0) {
-                break L19;
+                break scanLoop3;
               }
               var12Lifetime2Lifetime1 = stackIn_45_0;
               while (param0 > var12Lifetime2Lifetime1) {
@@ -123,7 +123,7 @@ final class rb {
                 var12Lifetime2Lifetime1++;
               }
               var11Lifetime1++;
-              continue L19;
+              continue scanLoop3;
             }
             stackIn_45_0 = param5;
             break;
@@ -132,7 +132,7 @@ final class rb {
             return (db[]) null;
           }
           var11Lifetime1 = 0;
-          L25: while (param7 >> 1 > var11Lifetime1) {
+          scanLoop4: while (param7 >> 1 > var11Lifetime1) {
             var12Lifetime2Lifetime2 = 0;
             while (true) {
               if (param1 > var12Lifetime2Lifetime2) {
@@ -150,7 +150,7 @@ final class rb {
               break;
             }
             if (var15 == 0) {
-              continue L25;
+              continue scanLoop4;
             }
             break;
           }

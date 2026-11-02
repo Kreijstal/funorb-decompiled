@@ -4,7 +4,7 @@
 final class cl extends rl implements nd {
     static String field_Q;
     private int field_R;
-    static le field_T;
+    static BitmapFont field_T;
     static int[] field_U;
     static db field_S;
     private ma field_V;

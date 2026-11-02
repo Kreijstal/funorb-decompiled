@@ -28,14 +28,14 @@ final class ac {
             var7 = param2[1].field_r;
             param2[0].d(param3, param1);
             param2[2].d(-var6 + param3 + param4, param1);
-            lf.b(uh.field_C);
-            lf.f(var5_int + param3, param1, param4 + (param3 - var6), param1 + param2[1].field_x);
+            SoftwareRasterizer.b(uh.field_C);
+            SoftwareRasterizer.f(var5_int + param3, param1, param4 + (param3 - var6), param1 + param2[1].field_x);
             var8 = var5_int + param3;
             var9 = param4 + (param3 - var6);
             for (param3 = var8; param3 < var9; param3 = param3 + var7) {
               param2[1].d(param3, param1);
             }
-            lf.a(uh.field_C);
+            SoftwareRasterizer.a(uh.field_C);
             return;
           }
           return;

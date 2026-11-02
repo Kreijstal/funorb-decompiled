@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListener {
-    static cd field_a;
+    static BinaryBitmapFont field_a;
 
     final static boolean a(byte param0, String param1, String param2) {
         String var3 = null;
@@ -130,7 +130,7 @@ final class bi implements java.awt.event.KeyListener, java.awt.event.FocusListen
         try {
           param1.addMouseListener(hh.field_M);
           if (param0 != 104) {
-            field_a = (cd) null;
+            field_a = (BinaryBitmapFont) null;
           }
           param1.addMouseMotionListener(hh.field_M);
           param1.addFocusListener(hh.field_M);

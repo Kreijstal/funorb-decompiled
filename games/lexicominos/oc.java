@@ -6,12 +6,12 @@ final class oc {
     static int[] field_a;
     static int field_e;
     static int field_c;
-    static jb[] field_d;
+    static IndexedSprite[] field_d;
 
-    final static jb[] a(sh param0, int param1, int param2, int param3) {
+    final static IndexedSprite[] a(sh param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
-        jb[] stackIn_6_0 = null;
+        IndexedSprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -25,7 +25,7 @@ final class oc {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (jb[]) (stackIn_4_0);
+          return (IndexedSprite[]) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

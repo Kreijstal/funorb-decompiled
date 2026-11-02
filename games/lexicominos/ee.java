@@ -10,12 +10,12 @@ abstract class ee {
     static int field_a;
     static int[] field_f;
 
-    final static vj a(String param0, String param1, boolean param2, sh param3, sh param4) {
+    final static CoverageBitmapFont a(String param0, String param1, boolean param2, sh param3, sh param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        vj stackIn_2_0 = null;
-        vj stackIn_4_0 = null;
+        CoverageBitmapFont stackIn_2_0 = null;
+        CoverageBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -28,7 +28,7 @@ abstract class ee {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2) {
-            stackIn_2_0 = (vj) null;
+            stackIn_2_0 = (CoverageBitmapFont) null;
             return stackIn_2_0;
           }
           var5_int = param4.c(param0, (byte) -89);

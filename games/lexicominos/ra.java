@@ -3,7 +3,7 @@
  */
 final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
     volatile boolean field_d;
-    static le field_c;
+    static BitmapFont field_c;
     static byte[] field_a;
     java.awt.Frame field_b;
 
@@ -44,11 +44,11 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
           var5 = (250 - mc.field_k << 8) / 50;
         }
         de.a(be.field_d, param1 ^ 144);
-        k.b();
-        lf.a();
+        MeshRasterState.b();
+        SoftwareRasterizer.a();
         rg.b(0);
         if (var5 < 256) {
-          lf.c(0, 0, lf.field_f, lf.field_a, 0, -var5 + 256);
+          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_a, 0, -var5 + 256);
           pd.a(param1 ^ -22835);
           if (param1 <= mc.field_k) {
             nc.field_n.b(var3 + 15, var4 + 10, var5);
@@ -267,7 +267,7 @@ final class ra extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static boolean a(int param0) {
         if (param0 != -17977) {
-          field_c = (le) null;
+          field_c = (BitmapFont) null;
           return sc.field_e;
         }
         return sc.field_e;

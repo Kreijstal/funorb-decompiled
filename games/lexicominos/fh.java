@@ -3,7 +3,7 @@
  */
 final class fh {
     static boolean field_i;
-    le field_p;
+    BitmapFont field_p;
     static long field_g;
     int field_n;
     private int field_o;
@@ -20,7 +20,7 @@ final class fh {
     int field_k;
     rd field_m;
 
-    final void a(le param0, int param1) {
+    final void a(BitmapFont param0, int param1) {
         ik var18 = null;
         lh var4 = null;
         db[] var5 = null;
@@ -118,7 +118,7 @@ final class fh {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        lf.c(param4, param2, param1, param3, param6, param0);
+        SoftwareRasterizer.c(param4, param2, param1, param3, param6, param0);
         if (param5 != 5092) {
           this.a(73, -8, 37, -27, 112, 75, -68);
         }
@@ -152,7 +152,7 @@ final class fh {
           if (var7 == -1) {
             var7 = this.field_p.field_G + this.field_p.field_E;
           }
-          var8 = lf.field_f >> 2;
+          var8 = SoftwareRasterizer.field_f >> 2;
           var9 = this.field_p.b(param3);
           var10 = this.field_p.field_E + this.field_p.field_G;
           var11 = 1;
@@ -178,15 +178,15 @@ final class fh {
             }
           }
           var12 = param1;
-          if (lf.field_f < var5_int + var12 + var9) {
-            var12 = -var5_int + lf.field_f - var9;
+          if (SoftwareRasterizer.field_f < var5_int + var12 + var9) {
+            var12 = -var5_int + SoftwareRasterizer.field_f - var9;
           }
           var13Lifetime1 = param2 + (-this.field_p.field_t + 32);
-          if (lf.field_a < var10 + var13Lifetime1 + var6) {
+          if (SoftwareRasterizer.field_a < var10 + var13Lifetime1 + var6) {
             var13Lifetime1 = param2 - var10 - var6;
           }
-          lf.c(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_c);
-          lf.a(1 + var12, 1 + var13Lifetime1, var5_int + var9 - 2, var6 + (var10 - 2), this.field_h);
+          SoftwareRasterizer.c(var12, var13Lifetime1, var5_int + var9, var10 + var6, this.field_c);
+          SoftwareRasterizer.a(1 + var12, 1 + var13Lifetime1, var5_int + var9 - 2, var6 + (var10 - 2), this.field_h);
           if (param0 != -37) {
             this.field_e = 36;
           }
@@ -211,7 +211,7 @@ final class fh {
           String var8 = (String) null;
           this.a(-18, 5, -60, (String) null);
         }
-        lf.b(param4, param5, param3, param1, param2);
+        SoftwareRasterizer.b(param4, param5, param3, param1, param2);
     }
 
     private final void a(int param0, int param1, int param2, String param3) {
@@ -229,15 +229,15 @@ final class fh {
           var5_int = this.field_p.b(param3);
           var6 = this.field_p.field_G + this.field_p.field_t;
           var7 = param2;
-          if (6 + var7 + var5_int > lf.field_f) {
-            var7 = -var5_int + (lf.field_f - 6);
+          if (6 + var7 + var5_int > SoftwareRasterizer.field_f) {
+            var7 = -var5_int + (SoftwareRasterizer.field_f - 6);
           }
           var8 = -this.field_p.field_t + param1 + 32;
-          if (lf.field_a < 6 + (var8 + var6)) {
-            var8 = -6 + (lf.field_a - var6);
+          if (SoftwareRasterizer.field_a < 6 + (var8 + var6)) {
+            var8 = -6 + (SoftwareRasterizer.field_a - var6);
           }
-          lf.c(var7, var8, var5_int + 6, 6 + var6, this.field_o);
-          lf.a(1 + var7, var8 + 1, var5_int + 4, 4 + var6, this.field_h);
+          SoftwareRasterizer.c(var7, var8, var5_int + 6, 6 + var6, this.field_o);
+          SoftwareRasterizer.a(1 + var7, var8 + 1, var5_int + 4, 4 + var6, this.field_h);
           this.field_p.b(param3, var7 + 3, this.field_p.field_t + var8 + 3, this.field_o, -1);
           if (param0 > -8) {
             var9 = (String) null;

@@ -7,7 +7,7 @@ class id extends ik {
     static String field_u;
     static String field_t;
 
-    id(le param0, int param1) {
+    id(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_E, -1, 2147483647, false);
     }
 
@@ -111,7 +111,7 @@ class id extends ik {
           } else if (sh.field_a != 2) {
             if (sh.field_a == 3) {
               if (jh.field_a.field_e) {
-                var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, qb.field_m, nb.field_x);
+                var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, GameAppletShell.field_m, nb.field_x);
               } else {
                 var3_int = cg.a(ug.field_r, pb.field_i, (byte) 91, lb.field_a, nb.field_x);
               }

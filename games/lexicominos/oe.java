@@ -95,15 +95,15 @@ final class oe {
         var19 = Lexicominos.field_L ? 1 : 0;
         try {
           if (param6 >= 0 &&
-            param5 < k.field_d) {
+            param5 < MeshRasterState.field_d) {
             if (0 > param7 &&
               param4 < 0 &&
               0 > param1) {
               return;
             }
-            if (param7 >= k.field_f &&
-              k.field_f <= param4 &&
-              k.field_f <= param1) {
+            if (param7 >= MeshRasterState.field_f &&
+              MeshRasterState.field_f <= param4 &&
+              MeshRasterState.field_f <= param1) {
               return;
             }
             if (param0 < 58) {
@@ -142,14 +142,14 @@ final class oe {
                 }
               }
               if (decompiledFrameRemainder0) {
-                var16Lifetime2 = k.field_e[param5];
+                var16Lifetime2 = MeshRasterState.field_e[param5];
                 while (param8 > param5) {
                   var17 = var9_int >> 16;
-                  if (var17 < k.field_f) {
+                  if (var17 < MeshRasterState.field_f) {
                     var18 = -(var9_int >> 16) + (var10 >> 16);
                     if (var18 != 0) {
-                      if (k.field_f <= var18 + var17) {
-                        var18 = -var17 + (k.field_f - 1);
+                      if (MeshRasterState.field_f <= var18 + var17) {
+                        var18 = -var17 + (MeshRasterState.field_f - 1);
                       }
                       if (var17 >= 0) {
                         ib.a(var17 + var16Lifetime2, param2, var18, param3, -109);
@@ -158,18 +158,18 @@ final class oe {
                       }
                     } else {
                       if (var17 >= 0 &&
-                        var17 < k.field_f) {
+                        var17 < MeshRasterState.field_f) {
                         ib.a(var17 + var16Lifetime2, param2, var18, param3, -74);
                       }
                     }
                   }
                   param5++;
-                  if (param5 >= k.field_d) {
+                  if (param5 >= MeshRasterState.field_d) {
                     return;
                   }
                   var9_int = var9_int + var11;
                   var10 = var10 + var12;
-                  var16Lifetime2 = var16Lifetime2 + lf.field_f;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_f;
                 }
               }
               var16Lifetime3 = -param8 + param6;
@@ -220,14 +220,14 @@ final class oe {
               var9_int = var9_int + param5 * var11;
               param5 = 0;
             }
-            var15Lifetime1 = k.field_e[param5];
+            var15Lifetime1 = MeshRasterState.field_e[param5];
             while (param6 > param5) {
               var16Lifetime1 = var9_int >> 16;
-              if (k.field_f > var16Lifetime1) {
+              if (MeshRasterState.field_f > var16Lifetime1) {
                 var17Lifetime1 = -(var9_int >> 16) + (var10 >> 16);
                 if (0 != var17Lifetime1) {
-                  if (var17Lifetime1 + var16Lifetime1 >= k.field_f) {
-                    var17Lifetime1 = -1 + (-var16Lifetime1 + k.field_f);
+                  if (var17Lifetime1 + var16Lifetime1 >= MeshRasterState.field_f) {
+                    var17Lifetime1 = -1 + (-var16Lifetime1 + MeshRasterState.field_f);
                   }
                   if (var16Lifetime1 >= 0) {
                     ib.a(var15Lifetime1 + var16Lifetime1, param2, var17Lifetime1, param3, -94);
@@ -236,16 +236,16 @@ final class oe {
                   }
                 } else {
                   if (var16Lifetime1 >= 0 &&
-                    var16Lifetime1 < k.field_f) {
+                    var16Lifetime1 < MeshRasterState.field_f) {
                     ib.a(var15Lifetime1 + var16Lifetime1, param2, var17Lifetime1, param3, -49);
                   }
                 }
               }
               param5++;
-              if (k.field_d <= param5) {
+              if (MeshRasterState.field_d <= param5) {
                 return;
               }
-              var15Lifetime1 = var15Lifetime1 + lf.field_f;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_f;
               var9_int = var9_int + var11;
               var10 = var10 + var12;
             }

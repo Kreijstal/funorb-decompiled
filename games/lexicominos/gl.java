@@ -60,7 +60,7 @@ final class gl {
         this.field_f = this.field_f - 1;
     }
 
-    final static void a(le param0, int param1, int param2, int param3, int param4, int param5, wh param6, int param7, le param8, wh param9, int param10, int param11, int param12, int param13, int param14, int param15, wh param16, int param17, int param18, int param19, int param20) {
+    final static void a(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, wh param6, int param7, BitmapFont param8, wh param9, int param10, int param11, int param12, int param13, int param14, int param15, wh param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

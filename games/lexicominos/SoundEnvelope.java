@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class se {
+final class SoundEnvelope {
     int field_e;
     private int field_h;
     private int field_g;
@@ -59,7 +59,7 @@ final class se {
         }
     }
 
-    se() {
+    SoundEnvelope() {
         this.field_b = 2;
         this.field_f = new int[2];
         this.field_j = new int[2];

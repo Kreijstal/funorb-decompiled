@@ -32,7 +32,7 @@ class ui extends cf {
     private boolean field_s;
     private int field_L;
     private boolean field_P;
-    private le field_K;
+    private BitmapFont field_K;
     private int field_S;
     private int field_v;
     private db field_t;

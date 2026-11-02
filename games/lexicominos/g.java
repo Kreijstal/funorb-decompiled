@@ -113,15 +113,15 @@ final class g extends tj {
 
     final static void a(int param0, int param1) {
         int var3 = 0;
-        cc[] var2 = null;
-        cc var2_ref = null;
-        cc var4 = null;
+        PcmSampleStream[] var2 = null;
+        PcmSampleStream var2_ref = null;
+        PcmSampleStream var4 = null;
         int var5 = 0;
-        cc[] var6 = null;
+        PcmSampleStream[] var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref2 = null;
-        cc var2_refLifetime1;
-        cc var2_refLifetime2;
+        PcmSampleStream var2_refLifetime1;
+        PcmSampleStream var2_refLifetime2;
         var5 = Lexicominos.field_L ? 1 : 0;
         try {
           oc.field_e = param0;

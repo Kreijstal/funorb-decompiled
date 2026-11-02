@@ -11,12 +11,12 @@ final class hb {
         field_a = null;
     }
 
-    final static cd a(sh param0, int param1, String param2, String param3, sh param4) {
+    final static BinaryBitmapFont a(sh param0, int param1, String param2, String param3, sh param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        cd stackIn_2_0 = null;
-        cd stackIn_4_0 = null;
+        BinaryBitmapFont stackIn_2_0 = null;
+        BinaryBitmapFont stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -30,7 +30,7 @@ final class hb {
         try {
           var5_int = param4.c(param2, (byte) -89);
           if (param1 != 246) {
-            stackIn_2_0 = (cd) null;
+            stackIn_2_0 = (BinaryBitmapFont) null;
             return stackIn_2_0;
           }
           var6 = param4.a(param3, -27964, var5_int);

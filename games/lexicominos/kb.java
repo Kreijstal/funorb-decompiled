@@ -1667,7 +1667,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "create_passwordvalid");
                 if (null != var2) {
-                  qb.field_a = ni.a((byte) -55, var2);
+                  GameAppletShell.field_a = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "create_emailvalid");
                 if (var2 != null) {
@@ -2697,7 +2697,7 @@ abstract class kb {
                 }
                 var2 = qj.a(33, "fs_unavailable");
                 if (null != var2) {
-                  qb.field_m = ni.a((byte) -55, var2);
+                  GameAppletShell.field_m = ni.a((byte) -55, var2);
                 }
                 var2 = qj.a(33, "fs_unavailable_try_signed_applet");
                 if (var2 != null) {
@@ -3059,8 +3059,8 @@ abstract class kb {
                   throw ld.a((Throwable) ((Object) stackIn_2609_0), ((StringBuilder) (Object) stackIn_2609_1).append(stackIn_2610_2).append(')').toString());
                 }
                 if (var4 != 0) {
-                  stackIn_2618_0 = (!qb.field_k);
-                  qb.field_k = stackIn_2618_0;
+                  stackIn_2618_0 = (!GameAppletShell.field_k);
+                  GameAppletShell.field_k = stackIn_2618_0;
                 }
             }
         }

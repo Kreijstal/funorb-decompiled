@@ -540,7 +540,7 @@ final class ih extends kd {
     final void b() {
         int[] var1;
         int[] var2;
-        ek var4;
+        MidiTrackReader var4;
         int var5;
         int var6;
         int var7;
@@ -575,7 +575,7 @@ final class ih extends kd {
         var22 = var1;
         var18[9] = 128;
         var22[9] = 128;
-        var4 = new ek(this.field_h);
+        var4 = new MidiTrackReader(this.field_h);
         var5 = var4.e();
         for (var6 = 0; var6 < var5; var6++) {
           var4.c(var6);

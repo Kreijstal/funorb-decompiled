@@ -132,7 +132,7 @@ abstract class ri implements ma {
           if (hl.field_F) {
             var6 = var6 | 1;
           }
-          if (qb.field_c) {
+          if (GameAppletShell.field_c) {
             var6 = var6 | 4;
           }
           if (param0) {

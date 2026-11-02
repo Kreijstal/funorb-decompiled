@@ -4,7 +4,7 @@
 final class jh {
     static int field_c;
     static db[] field_b;
-    static cd field_d;
+    static BinaryBitmapFont field_d;
     static ab field_a;
     static int field_e;
 

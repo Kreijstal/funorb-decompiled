@@ -149,7 +149,7 @@ final class ld extends kf {
           }
           if (dd.field_f.field_u >= var10) {
             de.a(dd.field_f, 6);
-            lf.a();
+            SoftwareRasterizer.a();
             var15.a(112, 144, var15.field_r << 4, var15.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
             dd.field_f.d(-var15.field_r + var5, -var15.field_x + var6, 256);
@@ -184,7 +184,7 @@ final class ld extends kf {
           }
           if (dd.field_f.field_u >= var10Lifetime1) {
             de.a(dd.field_f, 6);
-            lf.a();
+            SoftwareRasterizer.a();
             var16.a(112, 144, var16.field_r << 4, var16.field_x << 4, -this.field_F << 10, 4096);
             pd.a(-22949);
             dd.field_f.d(-var16.field_r + var5, -var16.field_x + var6, 256);

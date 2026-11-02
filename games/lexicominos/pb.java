@@ -5,7 +5,7 @@ final class pb extends kd {
     static ng field_k;
     static int[] field_h;
     static String field_j;
-    static le field_i;
+    static BitmapFont field_i;
 
     final static boolean c(boolean param0) {
         nl.field_c = param0 ? true : false;

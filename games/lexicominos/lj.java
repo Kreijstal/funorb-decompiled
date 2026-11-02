@@ -54,11 +54,11 @@ final class lj {
         }
     }
 
-    final static vj a(int param0, byte[] param1) {
-        vj var2 = null;
+    final static CoverageBitmapFont a(int param0, byte[] param1) {
+        CoverageBitmapFont var2 = null;
         RuntimeException var2_ref = null;
-        vj stackIn_5_0 = null;
-        vj stackIn_7_0 = null;
+        CoverageBitmapFont stackIn_5_0 = null;
+        CoverageBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -67,13 +67,13 @@ final class lj {
           if (param1 == null) {
             return null;
           }
-          var2 = new vj(param1, mg.field_x, rg.field_c, pb.field_h, bd.field_m, ci.field_b, be.field_f);
+          var2 = new CoverageBitmapFont(param1, mg.field_x, rg.field_c, pb.field_h, bd.field_m, ci.field_b, be.field_f);
           gk.a(12428);
           if (param0 == 22076) {
             stackIn_7_0 = var2;
             return stackIn_7_0;
           }
-          stackIn_5_0 = (vj) null;
+          stackIn_5_0 = (CoverageBitmapFont) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

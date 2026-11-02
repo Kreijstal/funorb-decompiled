@@ -665,12 +665,12 @@ class wf extends kd {
         return dc.a(var3, this.field_j, (byte) 16, var2);
     }
 
-    final static jb[] a(sh param0, String param1, boolean param2, String param3) {
+    final static IndexedSprite[] a(sh param0, String param1, boolean param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        jb[] stackIn_2_0 = null;
-        jb[] stackIn_4_0 = null;
+        IndexedSprite[] stackIn_2_0 = null;
+        IndexedSprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -681,7 +681,7 @@ class wf extends kd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param2) {
-            stackIn_2_0 = (jb[]) null;
+            stackIn_2_0 = (IndexedSprite[]) null;
             return stackIn_2_0;
           }
           var4_int = param0.c(param1, (byte) -89);

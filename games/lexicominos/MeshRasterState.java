@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class k {
+final class MeshRasterState {
     private static int[] field_h;
     static int field_g;
     static int field_f;
@@ -16,14 +16,14 @@ final class k {
         int var5 = 0;
         field_f = param2 - param0;
         field_d = param3 - param1;
-        k.c();
+        MeshRasterState.c();
         if (field_e.length < field_d) {
           field_e = new int[fa.a(-102, field_d)];
         }
-        int var4 = param1 * lf.field_f + param0;
+        int var4 = param1 * SoftwareRasterizer.field_f + param0;
         for (var5 = 0; var5 < field_d; var5++) {
           field_e[var5] = var4;
-          var4 = var4 + lf.field_f;
+          var4 = var4 + SoftwareRasterizer.field_f;
         }
     }
 
@@ -36,7 +36,7 @@ final class k {
     }
 
     final static void b() {
-        k.a(lf.field_g, lf.field_c, lf.field_e, lf.field_h);
+        MeshRasterState.a(SoftwareRasterizer.field_g, SoftwareRasterizer.field_c, SoftwareRasterizer.field_e, SoftwareRasterizer.field_h);
     }
 
     private final static void c() {

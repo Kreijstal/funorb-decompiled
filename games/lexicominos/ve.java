@@ -186,7 +186,7 @@ abstract class ve {
                 if (ul.field_k) {
                 }
               }
-              if (qb.field_c) {
+              if (GameAppletShell.field_c) {
                 ig.field_a.d(true);
                 ig.field_a.d(true);
                 ig.field_a.d((byte) 19);

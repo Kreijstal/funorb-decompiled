@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cd extends le {
+final class BinaryBitmapFont extends BitmapFont {
     private byte[][] field_N;
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
@@ -12,47 +12,47 @@ final class cd extends le {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * lf.field_f;
-        var9 = lf.field_f - param3;
+        var8 = param1 + param2 * SoftwareRasterizer.field_f;
+        var9 = SoftwareRasterizer.field_f - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < lf.field_c) {
-          var12 = lf.field_c - param2;
+        if (param2 < SoftwareRasterizer.field_c) {
+          var12 = SoftwareRasterizer.field_c - param2;
           param4 = param4 - var12;
-          param2 = lf.field_c;
+          param2 = SoftwareRasterizer.field_c;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * lf.field_f;
+          var8 = var8 + var12 * SoftwareRasterizer.field_f;
         }
-        if (param2 + param4 > lf.field_h) {
-          param4 = param4 - (param2 + param4 - lf.field_h);
+        if (param2 + param4 > SoftwareRasterizer.field_h) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_h);
         }
-        if (param1 < lf.field_g) {
-          var12Lifetime1 = lf.field_g - param1;
+        if (param1 < SoftwareRasterizer.field_g) {
+          var12Lifetime1 = SoftwareRasterizer.field_g - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = lf.field_g;
+          param1 = SoftwareRasterizer.field_g;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > lf.field_e) {
-          var12Lifetime2 = param1 + param3 - lf.field_e;
+        if (param1 + param3 > SoftwareRasterizer.field_e) {
+          var12Lifetime2 = param1 + param3 - SoftwareRasterizer.field_e;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
         }
         if (param3 > 0 &&
           param4 > 0) {
-          if (lf.field_k == null) {
-            cd.a(lf.field_b, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
+          if (SoftwareRasterizer.field_k == null) {
+            BinaryBitmapFont.a(SoftwareRasterizer.field_b, this.field_N[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            cd.a(lf.field_b, this.field_N[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, lf.field_k, lf.field_d);
+            BinaryBitmapFont.a(SoftwareRasterizer.field_b, this.field_N[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer.field_k, SoftwareRasterizer.field_d);
           }
           return;
         }
     }
 
-    cd(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
+    BinaryBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
         super(param0, param1, param2, param3, param4);
         this.field_N = new byte[256][];
         this.field_N = param5;
@@ -125,33 +125,33 @@ final class cd extends le {
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var13 = 0;
-        int var9 = param1 + param2 * lf.field_f;
-        int var10 = lf.field_f - param3;
+        int var9 = param1 + param2 * SoftwareRasterizer.field_f;
+        int var10 = SoftwareRasterizer.field_f - param3;
         int var11 = 0;
         int var12 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
-        if (param2 < lf.field_c) {
-          var13 = lf.field_c - param2;
+        if (param2 < SoftwareRasterizer.field_c) {
+          var13 = SoftwareRasterizer.field_c - param2;
           param4 = param4 - var13;
-          param2 = lf.field_c;
+          param2 = SoftwareRasterizer.field_c;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * lf.field_f;
+          var9 = var9 + var13 * SoftwareRasterizer.field_f;
         }
-        if (param2 + param4 > lf.field_h) {
-          param4 = param4 - (param2 + param4 - lf.field_h);
+        if (param2 + param4 > SoftwareRasterizer.field_h) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer.field_h);
         }
-        if (param1 < lf.field_g) {
-          var13Lifetime1 = lf.field_g - param1;
+        if (param1 < SoftwareRasterizer.field_g) {
+          var13Lifetime1 = SoftwareRasterizer.field_g - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = lf.field_g;
+          param1 = SoftwareRasterizer.field_g;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > lf.field_e) {
-          var13Lifetime2 = param1 + param3 - lf.field_e;
+        if (param1 + param3 > SoftwareRasterizer.field_e) {
+          var13Lifetime2 = param1 + param3 - SoftwareRasterizer.field_e;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -160,7 +160,7 @@ final class cd extends le {
           param4 <= 0) {
           return;
         }
-        cd.a(lf.field_b, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        BinaryBitmapFont.a(SoftwareRasterizer.field_b, this.field_N[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
     private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
@@ -174,8 +174,8 @@ final class cd extends le {
         int var18;
         int var19;
         int var19Lifetime1;
-        var13 = param2 - lf.field_g;
-        var14 = param3 - lf.field_c;
+        var13 = param2 - SoftwareRasterizer.field_g;
+        var14 = param3 - SoftwareRasterizer.field_c;
         for (var15 = var14; var15 < var14 + param5; var15++) {
           boolean decompiledFrameRemainder0 = true;
           var16 = param11[var15];
@@ -217,7 +217,7 @@ final class cd extends le {
               } else {
                 incrementValue$1 = param8;
                 param8++;
-                lf.field_b[incrementValue$1] = param6;
+                SoftwareRasterizer.field_b[incrementValue$1] = param6;
               }
             }
             param7 = param7 + (var19Lifetime1 + param10);

@@ -58,7 +58,7 @@ final class qk {
               var12 = var14;
               var7 = var12;
               if (var3 == 1) {
-                ic.a(var14, var6, param1, var4, 9);
+                Bzip2Decoder.a(var14, var6, param1, var4, 9);
               } else {
                 var8 = al.field_F;
                 synchronized (var8) {

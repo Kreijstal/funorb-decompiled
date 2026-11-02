@@ -3,25 +3,25 @@
  */
 import java.util.*;
 
-final class ak {
+final class SynthInstrument {
     private static int[] field_g;
     private int[] field_n;
-    private se field_d;
-    private se field_j;
+    private SoundEnvelope field_d;
+    private SoundEnvelope field_j;
     private int field_f;
-    private se field_a;
-    private se field_l;
+    private SoundEnvelope field_a;
+    private SoundEnvelope field_l;
     private static int[] field_m;
     private int[] field_h;
-    private se field_u;
+    private SoundEnvelope field_u;
     int field_o;
-    private se field_c;
-    private gi field_y;
+    private SoundEnvelope field_c;
+    private AudioFilter field_y;
     private static int[] field_i;
-    private se field_q;
+    private SoundEnvelope field_q;
     int field_r;
-    private se field_t;
-    private se field_x;
+    private SoundEnvelope field_t;
+    private SoundEnvelope field_x;
     private int[] field_w;
     private static int[] field_b;
     private static int[] field_v;
@@ -197,12 +197,12 @@ final class ak {
               var15Lifetime2 = param0 - var12Lifetime3;
             }
             while (var14Lifetime2 < var15Lifetime2) {
-              var16Lifetime1 = (int)((long)field_g[var14Lifetime2 + var12Lifetime3] * (long)gi.field_a >> 16);
+              var16Lifetime1 = (int)((long)field_g[var14Lifetime2 + var12Lifetime3] * (long)AudioFilter.field_a >> 16);
               for (var17 = 0; var17 < var12Lifetime3; var17++) {
-                var16Lifetime1 = var16Lifetime1 + (int)((long)field_g[var14Lifetime2 + var12Lifetime3 - 1 - var17] * (long)gi.field_g[0][var17] >> 16);
+                var16Lifetime1 = var16Lifetime1 + (int)((long)field_g[var14Lifetime2 + var12Lifetime3 - 1 - var17] * (long)AudioFilter.field_g[0][var17] >> 16);
               }
               for (var17Lifetime3 = 0; var17Lifetime3 < var14Lifetime2; var17Lifetime3++) {
-                var16Lifetime1 = var16Lifetime1 - (int)((long)field_g[var14Lifetime2 - 1 - var17Lifetime3] * (long)gi.field_g[1][var17Lifetime3] >> 16);
+                var16Lifetime1 = var16Lifetime1 - (int)((long)field_g[var14Lifetime2 - 1 - var17Lifetime3] * (long)AudioFilter.field_g[1][var17Lifetime3] >> 16);
               }
               field_g[var14Lifetime2] = var16Lifetime1;
               var11Lifetime4 = this.field_q.a(param0 + 1);
@@ -214,12 +214,12 @@ final class ak {
                 var15Lifetime2Lifetime1 = param0 - var12Lifetime3;
               }
               while (var14Lifetime2 < var15Lifetime2Lifetime1) {
-                var16Lifetime1Lifetime1 = (int)((long)field_g[var14Lifetime2 + var12Lifetime3] * (long)gi.field_a >> 16);
+                var16Lifetime1Lifetime1 = (int)((long)field_g[var14Lifetime2 + var12Lifetime3] * (long)AudioFilter.field_a >> 16);
                 for (var17Lifetime1 = 0; var17Lifetime1 < var12Lifetime3; var17Lifetime1++) {
-                  var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 + (int)((long)field_g[var14Lifetime2 + var12Lifetime3 - 1 - var17Lifetime1] * (long)gi.field_g[0][var17Lifetime1] >> 16);
+                  var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 + (int)((long)field_g[var14Lifetime2 + var12Lifetime3 - 1 - var17Lifetime1] * (long)AudioFilter.field_g[0][var17Lifetime1] >> 16);
                 }
                 for (var17Lifetime1Lifetime1 = 0; var17Lifetime1Lifetime1 < var13Lifetime2; var17Lifetime1Lifetime1++) {
-                  var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 - (int)((long)field_g[var14Lifetime2 - 1 - var17Lifetime1Lifetime1] * (long)gi.field_g[1][var17Lifetime1Lifetime1] >> 16);
+                  var16Lifetime1Lifetime1 = var16Lifetime1Lifetime1 - (int)((long)field_g[var14Lifetime2 - 1 - var17Lifetime1Lifetime1] * (long)AudioFilter.field_g[1][var17Lifetime1Lifetime1] >> 16);
                 }
                 field_g[var14Lifetime2] = var16Lifetime1Lifetime1;
                 var11Lifetime4 = this.field_q.a(param0 + 1);
@@ -236,10 +236,10 @@ final class ak {
             while (var14Lifetime2 < param0) {
               var16Lifetime1Lifetime2 = 0;
               for (var17Lifetime2 = var14Lifetime2 + var12Lifetime3 - param0; var17Lifetime2 < var12Lifetime3; var17Lifetime2++) {
-                var16Lifetime1Lifetime2 = var16Lifetime1Lifetime2 + (int)((long)field_g[var14Lifetime2 + var12Lifetime3 - 1 - var17Lifetime2] * (long)gi.field_g[0][var17Lifetime2] >> 16);
+                var16Lifetime1Lifetime2 = var16Lifetime1Lifetime2 + (int)((long)field_g[var14Lifetime2 + var12Lifetime3 - 1 - var17Lifetime2] * (long)AudioFilter.field_g[0][var17Lifetime2] >> 16);
               }
               for (var17Lifetime2Lifetime1 = 0; var17Lifetime2Lifetime1 < var13Lifetime2; var17Lifetime2Lifetime1++) {
-                var16Lifetime1Lifetime2 = var16Lifetime1Lifetime2 - (int)((long)field_g[var14Lifetime2 - 1 - var17Lifetime2Lifetime1] * (long)gi.field_g[1][var17Lifetime2Lifetime1] >> 16);
+                var16Lifetime1Lifetime2 = var16Lifetime1Lifetime2 - (int)((long)field_g[var14Lifetime2 - 1 - var17Lifetime2Lifetime1] * (long)AudioFilter.field_g[1][var17Lifetime2Lifetime1] >> 16);
               }
               field_g[var14Lifetime2] = var16Lifetime1Lifetime2;
               var11Lifetime4 = this.field_q.a(param0 + 1);
@@ -261,32 +261,32 @@ final class ak {
     final void a(wf param0) {
         int var3 = 0;
         int var4 = 0;
-        this.field_l = new se();
+        this.field_l = new SoundEnvelope();
         this.field_l.b(param0);
-        this.field_x = new se();
+        this.field_x = new SoundEnvelope();
         this.field_x.b(param0);
         int var2 = param0.d(true);
         if (var2 != 0) {
           param0.field_h = param0.field_h - 1;
-          this.field_c = new se();
+          this.field_c = new SoundEnvelope();
           this.field_c.b(param0);
-          this.field_t = new se();
+          this.field_t = new SoundEnvelope();
           this.field_t.b(param0);
         }
         var2 = param0.d(true);
         if (var2 != 0) {
           param0.field_h = param0.field_h - 1;
-          this.field_a = new se();
+          this.field_a = new SoundEnvelope();
           this.field_a.b(param0);
-          this.field_u = new se();
+          this.field_u = new SoundEnvelope();
           this.field_u.b(param0);
         }
         var2 = param0.d(true);
         if (var2 != 0) {
           param0.field_h = param0.field_h - 1;
-          this.field_j = new se();
+          this.field_j = new SoundEnvelope();
           this.field_j.b(param0);
-          this.field_d = new se();
+          this.field_d = new SoundEnvelope();
           this.field_d.b(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
@@ -302,8 +302,8 @@ final class ak {
         this.field_f = param0.h((byte) -127);
         this.field_r = param0.b(-1698573656);
         this.field_o = param0.b(-1698573656);
-        this.field_y = new gi();
-        this.field_q = new se();
+        this.field_y = new AudioFilter();
+        this.field_q = new SoundEnvelope();
         this.field_y.a(param0, this.field_q);
     }
 
@@ -318,7 +318,7 @@ final class ak {
         field_b = null;
     }
 
-    ak() {
+    SynthInstrument() {
         this.field_f = 100;
         this.field_h = new int[]{0, 0, 0, 0, 0};
         this.field_r = 500;

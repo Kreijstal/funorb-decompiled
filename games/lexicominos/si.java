@@ -3,7 +3,7 @@
  */
 abstract class si extends ca {
     boolean field_p;
-    static jb[] field_u;
+    static IndexedSprite[] field_u;
     static int field_s;
     static String field_q;
     static hh field_t;

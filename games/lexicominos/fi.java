@@ -80,7 +80,7 @@ final class fi {
         int var29 = 0;
         var29 = Lexicominos.field_L ? 1 : 0;
         try {
-          o.a(qb.field_b, 0, 307200, -1);
+          o.a(GameAppletShell.field_b, 0, 307200, -1);
           for (var1_int = 0; 41 > var1_int; var1_int += 40) {
             var2 = og.field_f[var1_int][0];
             var3 = we.field_b[var1_int][0];
@@ -119,14 +119,14 @@ final class fi {
                 var21 = 1 + (var16 >> 20) - var20;
                 var22 = 471859200 / var21;
                 var23 = (471859200 - var21 * var22) / 2;
-                var24 = lf.field_f * var20 + var12 - var11;
+                var24 = SoftwareRasterizer.field_f * var20 + var12 - var11;
                 if (var21 + var20 > 480) {
                   var21 = 480 - var20;
                 }
                 if (var20 < 0) {
                   var21 = var21 + var20;
                   var23 = var23 - var20 * var22;
-                  var24 = var24 - var20 * lf.field_f;
+                  var24 = var24 - var20 * SoftwareRasterizer.field_f;
                 }
                 var25 = var19 / 2 + var13;
                 if (325058560 >= var25) {
@@ -135,9 +135,9 @@ final class fi {
                   for (var27 = -var21; var27 < 0; var27++) {
                     var28 = var22 / 2 + var23;
                     if (var28 <= 470810624) {
-                      qb.field_b[var24] = tb.a(var26, var28 >> 18);
+                      GameAppletShell.field_b[var24] = tb.a(var26, var28 >> 18);
                       var23 = var23 + var22;
-                      var24 = var24 + lf.field_f;
+                      var24 = var24 + SoftwareRasterizer.field_f;
                     }
                   }
                   var16 = var16 + var17;

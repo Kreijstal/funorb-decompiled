@@ -5,13 +5,13 @@ final class ng {
     kd field_b;
     private kd field_a;
 
-    final static void a(int param0, le param1, byte param2, le param3) {
+    final static void a(int param0, BitmapFont param1, byte param2, BitmapFont param3) {
         try {
           int var4_int = 88 % ((35 - param2) / 55);
           nb.field_x = param0;
           fb.field_m = param1;
           pb.field_i = param3;
-          Lexicominos.a(lf.field_f / 2, 67, lf.field_a / 2);
+          Lexicominos.a(SoftwareRasterizer.field_f / 2, 67, SoftwareRasterizer.field_a / 2);
           vc.a(-5094, param1.field_t, param1.field_t + param1.field_G, param3.field_t, param3.field_G + param3.field_t);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "ng.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
@@ -79,7 +79,7 @@ final class ng {
         int stackIn_14_0 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        le var5 = null;
+        BitmapFont var5 = null;
         var4 = Lexicominos.field_L ? 1 : 0;
         try {
           var3_int = 1;
@@ -91,8 +91,8 @@ final class ng {
             param1 = param1 >> 1;
           }
           if (param0 != -11) {
-            var5 = (le) null;
-            ng.a(56, (le) null, (byte) 99, (le) null);
+            var5 = (BitmapFont) null;
+            ng.a(56, (BitmapFont) null, (byte) 99, (BitmapFont) null);
           }
           if (param1 != 1) {
             stackIn_14_0 = var3_int;

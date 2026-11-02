@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hl extends lk {
+final class hl extends PcmStream {
     private int[] field_E;
-    private ek field_n;
+    private MidiTrackReader field_n;
     int[] field_O;
     private int field_H;
     int[] field_u;
@@ -148,7 +148,7 @@ final class hl extends lk {
             if (param1 < 0 ||
               var3.field_z == param1) {
               if (null != var3.field_C) {
-                var3.field_C.h(b.field_r / 100);
+                var3.field_C.h(AudioOutput.field_r / 100);
                 if (var3.field_C.h()) {
                   this.field_y.field_m.a(var3.field_C);
                 }
@@ -195,7 +195,7 @@ final class hl extends lk {
             var7 = new int[]{param0};
           }
           var8 = (cj) (param1.field_i.c((byte) -111));
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var8 != null) {
               var9 = (int)var8.field_d;
               var10 = (wj) (this.field_A.a((long)var9, (byte) 120));
@@ -220,7 +220,7 @@ final class hl extends lk {
               }
             } else {
               if (var6_int == 0) {
-                break L2;
+                break scanLoop1;
               }
             }
             param1.a();
@@ -347,7 +347,7 @@ final class hl extends lk {
           this.a(var6, var5, var4, 0);
           return;
         }
-        L0: {
+        regionExit1: {
           if (var3 == 144) {
             var4Lifetime1 = param1 & 15;
             var5Lifetime1 = (32699 & param1) >> 8;
@@ -355,7 +355,7 @@ final class hl extends lk {
             if (var6Lifetime1 <= 0) {
               this.a(64, var5Lifetime1, var4Lifetime1, 0);
               if (var8 == 0) {
-                break L0;
+                break regionExit1;
               }
             }
             this.a(var4Lifetime1, var6Lifetime1, (byte) -111, var5Lifetime1);
@@ -369,7 +369,7 @@ final class hl extends lk {
             return;
           }
           if (param0 > -21) {
-            this.field_n = (ek) null;
+            this.field_n = (MidiTrackReader) null;
           }
           if (var3 != 176) {
             if (var3 == 192) {
@@ -521,7 +521,7 @@ final class hl extends lk {
         }
     }
 
-    final synchronized lk b() {
+    final synchronized PcmStream b() {
         return null;
     }
 
@@ -814,11 +814,11 @@ final class hl extends lk {
           }
           var3Lifetime1 = var28.b(param0 - 1698573656);
           var4 = (sj) (il.field_b.a(true));
-          L7: while (true) {
+          scanLoop1: while (true) {
             if (var4 != null) {
               stackIn_27_0 = ~var3Lifetime1;
               if (var26 != 0) {
-                break L7;
+                break scanLoop1;
               }
               if (stackIn_27_0 != ~var4.field_h ||
                 var26 != 0) {
@@ -1037,7 +1037,7 @@ final class hl extends lk {
         int var11 = 0;
         var11 = Lexicominos.field_L ? 1 : 0;
         try {
-          param2.field_m = b.field_r / 100;
+          param2.field_m = AudioOutput.field_r / 100;
           if (param2.field_h >= 0 && (param2.field_C == null ||
             param2.field_C.f())) {
             param2.c(0);
@@ -1312,8 +1312,8 @@ final class hl extends lk {
         }
     }
 
-    final synchronized lk d() {
-        return (lk) ((Object) this.field_y);
+    final synchronized PcmStream d() {
+        return (PcmStream) ((Object) this.field_y);
     }
 
     final synchronized void b(int[] param0, int param1, int param2) {
@@ -1329,7 +1329,7 @@ final class hl extends lk {
         var8 = Lexicominos.field_L ? 1 : 0;
         try {
           if (this.field_n.d()) {
-            var4_int = this.field_n.field_e * this.field_K / b.field_r;
+            var4_int = this.field_n.field_e * this.field_K / AudioOutput.field_r;
             while (true) {
               var5 = this.field_P + (long)param2 * (long)var4_int;
               if (this.field_U - var5 >= 0L) {
@@ -1390,7 +1390,7 @@ final class hl extends lk {
         boolean decompiledFrameCompleted0 = true;
         var6 = Lexicominos.field_L ? 1 : 0;
         if (this.field_n.d()) {
-          var2 = this.field_n.field_e * this.field_K / b.field_r;
+          var2 = this.field_n.field_e * this.field_K / AudioOutput.field_r;
           while (true) {
             var3 = this.field_P + (long)param0 * (long)var2;
             if (this.field_U - var3 >= 0L) {
@@ -1470,13 +1470,13 @@ final class hl extends lk {
         cb stackOut_3_0;
         cb var5;
         int var6_int;
-        ke var6;
+        PcmSample var6;
         cb var7;
         cb var8;
         int var9;
         wj var10;
         wj var11;
-        L0: {
+        regionExit1: {
           var9 = Lexicominos.field_L ? 1 : 0;
           this.a(64, param3, param0, 0);
           if ((this.field_q[param0] & 2) != 0) {
@@ -1486,7 +1486,7 @@ final class hl extends lk {
               stackIn_9_0 = stackOut_3_0;
               stackIn_4_0 = stackOut_3_0;
               if (var9 != 0) {
-                break L0;
+                break regionExit1;
               }
               if (stackIn_4_0.field_z == param0 &&
                 var5.field_h < 0) {
@@ -1532,16 +1532,16 @@ final class hl extends lk {
         var7.field_F = 0;
         var7.field_B = 0;
         if (0 != this.field_u[param0]) {
-          var7.field_C = cc.a(var6, this.a((byte) -121, var7), 0, this.a(var7, 74));
+          var7.field_C = PcmSampleStream.a(var6, this.a((byte) -121, var7), 0, this.a(var7, 74));
           stackIn_20_1 = 92;
           stackIn_20_2 = var7;
           stackIn_21_3 = !(0 <= var10.field_k[param3]);
           this.a((byte) stackIn_20_1, stackIn_20_2, stackIn_21_3);
           if (var9 != 0) {
-            var7.field_C = cc.a(var6, this.a((byte) -112, var7), this.c(var7, 1554), this.a(var7, -67));
+            var7.field_C = PcmSampleStream.a(var6, this.a((byte) -112, var7), this.c(var7, 1554), this.a(var7, -67));
           }
         } else {
-          var7.field_C = cc.a(var6, this.a((byte) -112, var7), this.c(var7, 1554), this.a(var7, -67));
+          var7.field_C = PcmSampleStream.a(var6, this.a((byte) -112, var7), this.c(var7, 1554), this.a(var7, -67));
         }
         if (0 > var10.field_k[param3]) {
           var7.field_C.e(-1);
@@ -1637,7 +1637,7 @@ final class hl extends lk {
             var7 = Math.sin((double)(511 & param1.field_i) * 0.01227184630308513);
             var3_int = var3_int + (int)(var7 * (double)var5);
           }
-          var5Lifetime1 = (int)((double)(param1.field_w.field_m * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)b.field_r + 0.5);
+          var5Lifetime1 = (int)((double)(param1.field_w.field_m * 256) * Math.pow(2.0, 0.0003255208333333333 * (double)var3_int) / (double)AudioOutput.field_r + 0.5);
           stackIn_12_0 = (var5Lifetime1 >= 1) ? var5Lifetime1 : 1;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1768,7 +1768,7 @@ final class hl extends lk {
         this.field_t = new int[16];
         this.field_R = new cb[16][128];
         this.field_K = 1000000;
-        this.field_n = new ek();
+        this.field_n = new MidiTrackReader();
         this.field_y = new kj(this);
         this.field_A = new na(128);
         this.a(-1, 256, false);
@@ -1796,7 +1796,7 @@ final class hl extends lk {
         this.field_t = new int[16];
         this.field_R = new cb[16][128];
         this.field_K = 1000000;
-        this.field_n = new ek();
+        this.field_n = new MidiTrackReader();
         this.field_y = new kj(this);
         try {
           this.field_A = param0.field_A;

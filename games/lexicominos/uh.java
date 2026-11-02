@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class uh extends lk {
+final class uh extends PcmStream {
     hl field_s;
     int field_u;
     private ih field_t;
@@ -432,7 +432,7 @@ final class uh extends lk {
         }
     }
 
-    final lk b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -452,7 +452,7 @@ final class uh extends lk {
         field_v = null;
     }
 
-    final lk d() {
+    final PcmStream d() {
         return null;
     }
 
@@ -571,7 +571,7 @@ final class uh extends lk {
               }
             }
           }
-          if (!b.field_j) {
+          if (!AudioOutput.field_j) {
             stackIn_31_0 = param2;
           } else {
             stackIn_31_0 = param2 << 1;
@@ -591,7 +591,7 @@ final class uh extends lk {
                 }
                 this.field_A.b(this.field_y, 0, param2);
                 this.field_s.b(this.field_r, 0, param2);
-                if (!b.field_j) {
+                if (!AudioOutput.field_j) {
                   stackIn_47_0 = param1;
                 } else {
                   localTemp$0 = param1 << 1;
@@ -619,7 +619,7 @@ final class uh extends lk {
               this.field_y = new int[var6];
             }
             this.field_z.b(this.field_y, 0, param2);
-            if (b.field_j) {
+            if (AudioOutput.field_j) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
               stackIn_59_0 = localTemp$1;

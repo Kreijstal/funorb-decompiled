@@ -136,12 +136,12 @@ class ca extends kd {
     final static void a(int param0, int param1, int param2, int param3, boolean param4) {
         if (!param4) {
           ja.b((byte) -128);
-          lf.f(param2, param1, param0, param3);
+          SoftwareRasterizer.f(param2, param1, param0, param3);
           return;
         }
         field_o = (String) null;
         ja.b((byte) -128);
-        lf.f(param2, param1, param0, param3);
+        SoftwareRasterizer.f(param2, param1, param0, param3);
     }
 
     final void b(int param0) {

@@ -4,15 +4,15 @@
 final class de extends RuntimeException {
     String field_a;
     Throwable field_c;
-    static hk field_b;
+    static PcmStreamMixer field_b;
 
     final static void a(db param0, int param1) {
         try {
           if (param1 != 6) {
-            field_b = (hk) null;
+            field_b = (PcmStreamMixer) null;
           }
           ja.b((byte) -111);
-          lf.a(param0.field_y, param0.field_r, param0.field_x);
+          SoftwareRasterizer.a(param0.field_y, param0.field_r, param0.field_x);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "de.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -21,7 +21,7 @@ final class de extends RuntimeException {
     final static void a(int param0, sh param1) {
         int var3 = 0;
         int var4 = 0;
-        pk var5 = null;
+        TriangleMesh var5 = null;
         int[] var6 = null;
         int var7 = 0;
         th var8 = null;
@@ -41,7 +41,7 @@ final class de extends RuntimeException {
           var10.e(10);
           sh.field_d = cl.a(var10, -121);
           uj.field_f = new int[var3][];
-          ae.field_J = new pk[var3];
+          ae.field_J = new TriangleMesh[var3];
           for (var4 = 0; var4 < var3; var4++) {
             ae.field_J[var4] = tb.a(var8, dg.a(param0, -114));
           }
@@ -79,7 +79,7 @@ final class de extends RuntimeException {
             ug.field_A.a(-14579, qj.field_fb);
           }
           qj.field_fb.a(param0, param2, 125, param1);
-          lf.a();
+          SoftwareRasterizer.a();
           we.a((byte) -65, param3);
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "de.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

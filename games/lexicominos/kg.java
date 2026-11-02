@@ -4,7 +4,7 @@
 final class kg extends nb implements ue, jk {
     private u field_F;
     private bc field_B;
-    static hk field_G;
+    static PcmStreamMixer field_G;
     private kf field_E;
     static int field_C;
 

@@ -15,8 +15,8 @@ class ik implements rd, ub {
     static int[] field_b;
     private int field_q;
     static int[] field_s;
-    static b field_h;
-    le field_f;
+    static AudioOutput field_h;
+    BitmapFont field_f;
     int field_n;
     static String field_k;
     int field_d;
@@ -204,7 +204,7 @@ class ik implements rd, ub {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 8089) {
-            field_h = (b) null;
+            field_h = (AudioOutput) null;
           }
           this.a(param1, (byte) -109);
           stackIn_3_0 = param1.field_w.a((byte) 94) + this.field_a + this.field_r;
@@ -779,14 +779,14 @@ class ik implements rd, ub {
         }
     }
 
-    ik(le param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    ik(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
     protected ik() {
     }
 
-    ik(le param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    ik(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_a = param1;
           this.field_q = param6;

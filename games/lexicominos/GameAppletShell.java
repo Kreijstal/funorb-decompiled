@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class qb extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static String field_m;
     static aj field_d;
     boolean field_g;
@@ -95,7 +95,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
               tg.field_i = kk.c(-14047);
               dupTemp$0 = new ab(param5, param6, param1, true);
               jh.field_a = dupTemp$0;
-              pk.field_n = dupTemp$0;
+              TriangleMesh.field_n = dupTemp$0;
               var8 = jh.field_a.a((Runnable) (this), false, 1);
               while (true) {
                 if (var8.field_b == 0) {
@@ -447,7 +447,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
             !ee.field_d) {
             rf.field_a = rf.c(0);
             ge.a(0, 5000L);
-            pk.field_n = null;
+            TriangleMesh.field_n = null;
             this.a(false, -23646);
             return;
           }
@@ -843,7 +843,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
           field_m = null;
           field_l = (int[][]) null;
           if (param0 != 439) {
-            qb.provideLoaderApplet((java.applet.Applet) null);
+            GameAppletShell.provideLoaderApplet((java.applet.Applet) null);
           }
         } catch (RuntimeException runtimeException) {
           throw ld.a((Throwable) ((Object) runtimeException), "qb.H(" + param0 + ')');
@@ -873,7 +873,7 @@ public abstract class qb extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected qb() {
+    protected GameAppletShell() {
         this.field_g = false;
     }
 

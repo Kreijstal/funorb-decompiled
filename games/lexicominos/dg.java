@@ -54,14 +54,14 @@ final class dg {
         int var4 = Lexicominos.field_L ? 1 : 0;
         db var1 = new db(540, 140);
         de.a(var1, 6);
-        k.b();
-        lf.a();
+        MeshRasterState.b();
+        SoftwareRasterizer.a();
         mc.field_k = 0;
         rg.b(0);
         db var2 = var1.c();
         for (var3 = 0; var3 < 15; var3++) {
           var2.c(-2, -2, 16777215);
-          lf.d(4, 4, 0, 0, 540, 140);
+          SoftwareRasterizer.d(4, 4, 0, 0, 540, 140);
         }
         t.field_a.b();
         var1.f(0, 0);

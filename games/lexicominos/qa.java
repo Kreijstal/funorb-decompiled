@@ -69,7 +69,7 @@ final class qa {
           var7_int = 0;
           param0 = param0 + param3;
           var8 = param4;
-          L2: while (true) {
+          scanLoop1: while (true) {
             var9 = param2[var8];
             if (var9 < 0) {
               var7_int = this.field_a[var7_int];
@@ -83,7 +83,7 @@ final class qa {
               param3++;
               param5[incrementValue$1] = (byte)(~var10);
               if (param3 >= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -99,7 +99,7 @@ final class qa {
               param3++;
               param5[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param0 <= param3) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -115,7 +115,7 @@ final class qa {
               param3++;
               param5[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param3 >= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -131,7 +131,7 @@ final class qa {
               param3++;
               param5[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param3 >= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -147,7 +147,7 @@ final class qa {
               param3++;
               param5[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param0 <= param3) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -163,7 +163,7 @@ final class qa {
               param3++;
               param5[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param0 <= param3) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -195,7 +195,7 @@ final class qa {
               param3++;
               param5[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param3 >= param0) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }

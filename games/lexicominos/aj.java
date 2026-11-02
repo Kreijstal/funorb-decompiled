@@ -16,7 +16,7 @@ final class aj {
         nl.field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, le param4, int param5, int param6, int param7, int param8, le param9, int param10, int param11, db[] param12, db[] param13, int param14, boolean param15, int param16, db[] param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, db[] param12, db[] param13, int param14, boolean param15, int param16, db[] param17, int param18, int param19, int param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -75,7 +75,7 @@ final class aj {
         throw new IllegalStateException();
     }
 
-    final static ke a(byte param0, ke param1, ke param2) {
+    final static PcmSample a(byte param0, PcmSample param1, PcmSample param2) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -83,8 +83,8 @@ final class aj {
         int var6 = 0;
         byte[] var7 = null;
         byte[] var8 = null;
-        ke stackIn_6_0 = null;
-        ke stackIn_8_0 = null;
+        PcmSample stackIn_6_0 = null;
+        PcmSample stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -103,10 +103,10 @@ final class aj {
             var4[var5] = (byte)(var4[var5] * 2);
           }
           if (param0 == -42) {
-            stackIn_8_0 = new ke(param2.field_m, var8, 0, var3_int);
+            stackIn_8_0 = new PcmSample(param2.field_m, var8, 0, var3_int);
             return stackIn_8_0;
           }
-          stackIn_6_0 = (ke) null;
+          stackIn_6_0 = (PcmSample) null;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

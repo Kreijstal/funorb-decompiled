@@ -12,7 +12,7 @@ final class oj {
     static boolean field_g;
     int field_i;
     int field_b;
-    cd field_f;
+    BinaryBitmapFont field_f;
     static String[] field_c;
     String field_k;
     static int[] field_j;
@@ -240,7 +240,7 @@ final class oj {
     oj(sh param0, sh param1, eb param2) {
         int stackIn_11_0 = 0;
         boolean stackIn_18_1 = false;
-        cd stackIn_21_1 = null;
+        BinaryBitmapFont stackIn_21_1 = null;
         int stackIn_31_1 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;

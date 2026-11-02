@@ -156,7 +156,7 @@ final class li extends bc {
                 de.a(this.field_Q, 6);
               } else {
                 de.a(this.field_Q, 6);
-                lf.a();
+                SoftwareRasterizer.a();
               }
             }
           }
@@ -193,7 +193,7 @@ final class li extends bc {
               de.a(this.field_Q, 6);
             } else {
               de.a(this.field_Q, 6);
-              lf.a();
+              SoftwareRasterizer.a();
             }
           }
         }

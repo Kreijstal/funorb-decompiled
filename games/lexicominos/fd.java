@@ -8,7 +8,7 @@ final class fd implements Runnable {
     volatile boolean field_c;
     ab field_b;
     static String field_a;
-    volatile b[] field_f;
+    volatile AudioOutput[] field_f;
 
     final static boolean a(String param0, int param1, int param2, String param3, pj param4, String param5, boolean param6) {
         RuntimeException var7 = null;
@@ -140,7 +140,7 @@ final class fd implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        b var2 = null;
+        AudioOutput var2 = null;
         int var4 = Lexicominos.field_L ? 1 : 0;
         this.field_c = true;
         try {
@@ -172,7 +172,7 @@ final class fd implements Runnable {
     }
 
     fd() {
-        this.field_f = new b[2];
+        this.field_f = new AudioOutput[2];
         this.field_d = false;
         this.field_c = false;
     }

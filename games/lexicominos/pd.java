@@ -105,8 +105,8 @@ final class pd extends kd {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        lf.a(var1.field_h, var1.field_j, var1.field_n);
-        lf.g(var1.field_l, var1.field_i, var1.field_p, var1.field_m);
+        SoftwareRasterizer.a(var1.field_h, var1.field_j, var1.field_n);
+        SoftwareRasterizer.g(var1.field_l, var1.field_i, var1.field_p, var1.field_m);
         var1.field_h = null;
         pb.field_k.b(125, var1);
         if (param0 == -22949) {

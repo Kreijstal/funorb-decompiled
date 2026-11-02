@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class i {
+final class VorbisResidue {
     private int field_e;
     private int[] field_d;
     private int field_f;
@@ -24,7 +24,7 @@ final class i {
         int var11;
         int var12;
         int var13;
-        h var14;
+        VorbisCodebook var14;
         int var15;
         int[] var19;
         int[] var22;
@@ -40,7 +40,7 @@ final class i {
         if (param2) {
           return;
         }
-        var4Lifetime1 = sd.field_p[this.field_a].field_e;
+        var4Lifetime1 = VorbisSample.field_p[this.field_a].field_e;
         var5 = this.field_b - this.field_g;
         var6 = var5 / this.field_c;
         var22 = new int[var6];
@@ -50,7 +50,7 @@ final class i {
           var9 = 0;
           while (var9 < var6) {
             if (var8 == 0) {
-              var10 = sd.field_p[this.field_a].a();
+              var10 = VorbisSample.field_p[this.field_a].a();
               for (var11 = var4Lifetime1 - 1; var11 >= 0; var11--) {
                 if (var9 + var11 < var6) {
                   var7[var9 + var11] = var10 % this.field_f;
@@ -65,7 +65,7 @@ final class i {
               var12 = this.field_d[var11Lifetime1 * 8 + var8];
               if (var12 >= 0) {
                 var13 = this.field_g + var9 * this.field_c;
-                var14 = sd.field_p[var12];
+                var14 = VorbisSample.field_p[var12];
                 if (this.field_e != 0) {
                   var15 = 0;
                   while (var15 < this.field_c) {
@@ -96,25 +96,25 @@ final class i {
         return;
     }
 
-    i() {
+    VorbisResidue() {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        this.field_e = sd.a(16);
-        this.field_g = sd.a(24);
-        this.field_b = sd.a(24);
-        this.field_c = sd.a(24) + 1;
-        this.field_f = sd.a(6) + 1;
-        this.field_a = sd.a(8);
+        this.field_e = VorbisSample.a(16);
+        this.field_g = VorbisSample.a(24);
+        this.field_b = VorbisSample.a(24);
+        this.field_c = VorbisSample.a(24) + 1;
+        this.field_f = VorbisSample.a(6) + 1;
+        this.field_a = VorbisSample.a(8);
         int[] var1 = new int[this.field_f];
         for (var2 = 0; var2 < this.field_f; var2++) {
           var3 = 0;
-          var4 = sd.a(3);
-          var5 = sd.a() != 0 ? 1 : 0;
+          var4 = VorbisSample.a(3);
+          var5 = VorbisSample.a() != 0 ? 1 : 0;
           if (var5 != 0) {
-            var3 = sd.a(5);
+            var3 = VorbisSample.a(5);
           }
           var1[var2] = var3 << 3 | var4;
         }
@@ -122,7 +122,7 @@ final class i {
         int var6 = 0;
         var2Lifetime1 = var6;
         while (var6 < this.field_f * 8) {
-          this.field_d[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? sd.a(8) : -1;
+          this.field_d[var6] = (var1[var6 >> 3] & 1 << (var6 & 7)) != 0 ? VorbisSample.a(8) : -1;
           var6++;
         }
     }

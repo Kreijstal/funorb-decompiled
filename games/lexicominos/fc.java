@@ -62,7 +62,7 @@ final class fc {
         if (!param0) {
           this.b((byte) 119);
         }
-        L1: {
+        regionExit1: {
           var2 = oe.field_a;
           if (0 != var2) {
             switch (var2) {
@@ -106,7 +106,7 @@ final class fc {
                     break;
                   default:
                     oe.field_a = oe.field_a + 1;
-                    break L1;
+                    break regionExit1;
                   case 25:
                     this.a(new String[]{"    KSK", " KSKUN SXXX", "S UNKSU   X", "XX USK NKSX", "XSK NKSK  X", "XX SKUN S X"}, (byte) -115, 0, "SKUN");
                     break;
@@ -638,7 +638,7 @@ final class fc {
                     }
                     var6Lifetime3 = 1;
                     var7Lifetime1Lifetime1 = 12;
-                    L35: while (true) {
+                    scanLoop1: while (true) {
                       stackIn_128_0 = -16;
                       while (true) {
                         if (stackIn_128_0 < ~var7Lifetime1Lifetime1) {
@@ -646,7 +646,7 @@ final class fc {
                           while (true) {
                             if (var8Lifetime2 >= 12) {
                               var7Lifetime1Lifetime1++;
-                              continue L35;
+                              continue scanLoop1;
                             }
                             stackOut_131_0 = this.field_w[var7Lifetime1Lifetime1][var8Lifetime2];
                             stackIn_128_0 = stackOut_131_0;
@@ -660,10 +660,10 @@ final class fc {
                           var6Lifetime3 = 0;
                         }
                         if (var6Lifetime3 == 0) {
-                          break L35;
+                          break scanLoop1;
                         }
                         this.a((byte) -107, 240, 15);
-                        break L35;
+                        break scanLoop1;
                       }
                     }
                   }
@@ -1052,7 +1052,7 @@ final class fc {
           var5 = 64;
           var6 = (-var4 + 311) / 2;
           var7 = (450 - var5) / 2;
-          lf.a(var6, var7, var4, var5, 0);
+          SoftwareRasterizer.a(var6, var7, var4, var5, 0);
           eh.a(0, lg.field_c, 8 + var6 + 48, 0, var13, var7 + 8);
           eh.a(0, lg.field_c, var6 + 8, 0, var3_ref_String, 24 + (8 + var7));
           return;
@@ -1066,7 +1066,7 @@ final class fc {
         var2 = var14;
         var3 = 416;
         var4Lifetime1 = 0;
-        L1: while (true) {
+        scanLoop1: while (true) {
           stackIn_7_0 = ~var4Lifetime1;
           if (stackIn_7_0 > -19) {
             var5Lifetime1 = 10;
@@ -1102,7 +1102,7 @@ final class fc {
             }
             var3 -= 24;
             var4Lifetime1++;
-            continue L1;
+            continue scanLoop1;
           }
           break;
         }
@@ -1154,7 +1154,7 @@ final class fc {
           var10.a(17517, this.field_m, 0);
           var10 = (vf) (this.field_B.f(2));
         }
-        lf.g(0, 8, 311, 450);
+        SoftwareRasterizer.g(0, 8, 311, 450);
         if (param0 < 46) {
           return;
         }
@@ -1163,7 +1163,7 @@ final class fc {
           var12.a((byte) -34);
           var12 = (gd) (this.field_j.f(2));
         }
-        lf.b();
+        SoftwareRasterizer.b();
         if (this.field_D) {
           bi.field_a.b("FPS: " + tj.field_i, 10, 3 * pa.field_d + 20, 0, -1);
           bi.field_a.b("LPS: " + ij.field_j, 10, pa.field_d * 4 + 25, 0, -1);
@@ -1282,16 +1282,16 @@ final class fc {
           var9Lifetime2 = var7;
           var7.d(0, 0);
         }
-        lf.g(125, 54, 221, 102);
+        SoftwareRasterizer.g(125, 54, 221, 102);
         if (this.field_L > 0 &&
           this.field_L < 30 &&
           this.field_L % 10 < 5) {
-          lf.a(0, 0, 640, 480, 16777215);
+          SoftwareRasterizer.a(0, 0, 640, 480, 16777215);
         }
         this.field_Q.a(false, 13551);
-        lf.b();
+        SoftwareRasterizer.b();
         this.c((byte) 72);
-        lf.g(60, 266 + this.field_M + 120, 252, 450);
+        SoftwareRasterizer.g(60, 266 + this.field_M + 120, 252, 450);
         va.field_m.d(0, 0);
         if (param0 <= 54) {
           this.field_r = -50;
@@ -1301,12 +1301,12 @@ final class fc {
           var9Lifetime1 = var8[var3Lifetime1];
           var9Lifetime1.d(0, 0);
         }
-        lf.b();
+        SoftwareRasterizer.b();
         oh.a(183, lg.field_c, false, Integer.toString(Math.abs(this.field_r)), 0, 230);
         if (this.field_s > 0 &&
           this.field_s < 30 &&
           5 > this.field_s % 10) {
-          lf.a(53, 183, 48, 24, 16777215);
+          SoftwareRasterizer.a(53, 183, 48, 24, 16777215);
         }
         oh.a(183, lg.field_c, false, Integer.toString(this.field_d), 0, 77);
         var10 = (bd) (this.field_G.a(true));

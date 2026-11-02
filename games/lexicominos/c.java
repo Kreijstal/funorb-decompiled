@@ -4,7 +4,7 @@
 final class c extends kd {
     static ki field_m;
     int field_k;
-    static qb field_j;
+    static GameAppletShell field_j;
     byte[] field_h;
     long field_l;
     static ki field_o;

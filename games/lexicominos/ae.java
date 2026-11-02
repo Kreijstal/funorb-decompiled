@@ -10,7 +10,7 @@ final class ae extends kf {
     int field_K;
     int field_G;
     int field_F;
-    static pk[] field_J;
+    static TriangleMesh[] field_J;
 
     final static void a(boolean param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
@@ -23,26 +23,26 @@ final class ae extends kf {
         RuntimeException decompiledCaughtException = null;
         var10 = Lexicominos.field_L ? 1 : 0;
         try {
-          lf.a(param4, param2, param1 + 1, 10000536);
-          lf.a(param4, param2 + param3, param1 + 1, 12105912);
+          SoftwareRasterizer.a(param4, param2, param1 + 1, 10000536);
+          SoftwareRasterizer.a(param4, param2 + param3, param1 + 1, 12105912);
           var5_int = 1;
-          if (lf.field_c > var5_int + param2) {
-            var5_int = lf.field_c - param2;
+          if (SoftwareRasterizer.field_c > var5_int + param2) {
+            var5_int = SoftwareRasterizer.field_c - param2;
           }
           var6 = param3;
-          if (param2 + var6 > lf.field_h) {
-            var6 = lf.field_h - param2;
+          if (param2 + var6 > SoftwareRasterizer.field_h) {
+            var6 = SoftwareRasterizer.field_h - param2;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = 48 * var7 / param3 + 152;
             var9 = var8 | (var8 << 16 | var8 << 8);
-            lf.field_b[param4 + lf.field_f * (var7 + param2)] = var9;
-            lf.field_b[param4 + lf.field_f * (param2 + var7) + param1] = var9;
+            SoftwareRasterizer.field_b[param4 + SoftwareRasterizer.field_f * (var7 + param2)] = var9;
+            SoftwareRasterizer.field_b[param4 + SoftwareRasterizer.field_f * (param2 + var7) + param1] = var9;
           }
           if (param0) {
             return;
           }
-          field_J = (pk[]) null;
+          field_J = (TriangleMesh[]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class b {
+class AudioOutput {
     int[] field_s;
     static boolean field_j;
     private int field_u;
@@ -10,11 +10,11 @@ class b {
     private boolean field_c;
     private static fd field_t;
     static int field_r;
-    private lk field_q;
+    private PcmStream field_q;
     private int field_m;
     private int field_p;
-    private lk[] field_g;
-    private lk[] field_e;
+    private PcmStream[] field_g;
+    private PcmStream[] field_e;
     private int field_d;
     private boolean field_n;
     private long field_o;
@@ -24,7 +24,7 @@ class b {
     private int field_b;
     private long field_k;
 
-    final synchronized void b(lk param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_q = param0;
     }
 
@@ -146,7 +146,7 @@ class b {
         return this.field_f;
     }
 
-    final static b a(ab param0, java.awt.Component param1, int param2, int param3) {
+    final static AudioOutput a(ab param0, java.awt.Component param1, int param2, int param3) {
         try {
           sl var4 = null;
           Throwable var4_ref = null;
@@ -174,14 +174,14 @@ class b {
               } else {
                 stackIn_11_2 = 2;
               }
-              ((b) ((Object) stackIn_10_0)).field_s = new int[stackIn_10_1 * stackIn_11_2];
-              ((b) ((Object) var4)).field_m = param3;
-              ((b) ((Object) var4)).a(param1);
-              ((b) ((Object) var4)).field_f = (param3 & -1024) + 1024;
-              if (((b) ((Object) var4)).field_f > 16384) {
-                ((b) ((Object) var4)).field_f = 16384;
+              ((AudioOutput) ((Object) stackIn_10_0)).field_s = new int[stackIn_10_1 * stackIn_11_2];
+              ((AudioOutput) ((Object) var4)).field_m = param3;
+              ((AudioOutput) ((Object) var4)).a(param1);
+              ((AudioOutput) ((Object) var4)).field_f = (param3 & -1024) + 1024;
+              if (((AudioOutput) ((Object) var4)).field_f > 16384) {
+                ((AudioOutput) ((Object) var4)).field_f = 16384;
               }
-              ((b) ((Object) var4)).a(((b) ((Object) var4)).field_f);
+              ((AudioOutput) ((Object) var4)).a(((AudioOutput) ((Object) var4)).field_f);
               if (field_l > 0 &&
                 field_t == null) {
                 field_t = new fd();
@@ -192,14 +192,14 @@ class b {
                 if (field_t.field_f[param2] != null) {
                   throw new IllegalArgumentException();
                 }
-                field_t.field_f[param2] = (b) ((Object) var5);
+                field_t.field_f[param2] = (AudioOutput) ((Object) var5);
               }
               stackIn_21_0 = var4;
-              return (b) ((Object) stackIn_21_0);
+              return (AudioOutput) ((Object) stackIn_21_0);
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              return new b();
+              return new AudioOutput();
             }
           }
           throw new IllegalArgumentException();
@@ -232,20 +232,20 @@ class b {
         int var7_int;
         Object var7;
         int var8_int;
-        lk[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        lk var11;
+        PcmStream var11;
         kh var12;
         int var13;
-        lk var14;
+        PcmStream var14;
         int var15_int;
-        lk var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        lk var14Lifetime1;
-        lk var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_j) {
           var3 = var3 << 1;
@@ -255,12 +255,12 @@ class b {
         if (this.field_q != null &&
           this.field_h <= 0) {
           this.field_h = this.field_h + (field_r >> 4);
-          b.a(this.field_q);
+          AudioOutput.a(this.field_q);
           this.a(this.field_q, this.field_q.c());
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -293,7 +293,7 @@ class b {
                       var12.field_h = var12.field_h + var13;
                     }
                     if (var4 >= this.field_u) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.d();
                     if (var14Lifetime2 != null) {
@@ -306,12 +306,12 @@ class b {
                     var15 = var11.field_i;
                     var11.field_i = null;
                     if (var10 != null) {
-                      ((lk) (var10)).field_i = var15;
+                      ((PcmStream) (var10)).field_i = var15;
                     } else {
                       this.field_g[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_e[var7_int] = (lk) (var10);
+                      this.field_e[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -332,8 +332,8 @@ class b {
             this.field_e[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((lk) (var7)).field_i;
-              ((lk) (var7)).field_i = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_i;
+              ((PcmStream) (var7)).field_i = null;
               var7 = var10Lifetime1;
             }
           }
@@ -347,9 +347,9 @@ class b {
         this.field_i = rf.c(0);
     }
 
-    private final void a(lk param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        lk var4 = this.field_e[var3];
+        PcmStream var4 = this.field_e[var3];
         if (var4 == null) {
           this.field_g[var3] = param0;
         } else {
@@ -359,14 +359,14 @@ class b {
         param0.field_h = param1;
     }
 
-    private final static void a(lk param0) {
+    private final static void a(PcmStream param0) {
         param0.field_j = false;
         if (param0.field_k != null) {
           param0.field_k.field_h = 0;
         }
-        lk var1 = param0.d();
+        PcmStream var1 = param0.d();
         while (var1 != null) {
-          b.a(var1);
+          AudioOutput.a(var1);
           var1 = param0.b();
         }
     }
@@ -401,7 +401,7 @@ class b {
         this.field_c = true;
     }
 
-    b() {
+    AudioOutput() {
         this.field_u = 32;
         this.field_c = false;
         this.field_i = rf.c(0);
@@ -409,8 +409,8 @@ class b {
         this.field_d = 0;
         this.field_o = 0L;
         this.field_h = 0;
-        this.field_e = new lk[8];
-        this.field_g = new lk[8];
+        this.field_e = new PcmStream[8];
+        this.field_g = new PcmStream[8];
         this.field_n = true;
         this.field_k = 0L;
         this.field_a = 0;
