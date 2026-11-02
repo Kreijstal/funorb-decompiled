@@ -84,19 +84,19 @@ final class kd {
             }
           }
           if (null != ra.field_p) {
-            var3 = 357 - ra.field_p.field_s / 2;
+            var3 = 357 - ra.field_p.fullHeight / 2;
             var4 = 0;
             if (w.field_c != 0 &&
               dh.field_b > var3 &&
-              var3 + ra.field_p.field_p > dh.field_b) {
-              if (MouseInputHandler.field_e > -ra.field_p.field_z + 269 &&
+              var3 + ra.field_p.height > dh.field_b) {
+              if (MouseInputHandler.field_e > -ra.field_p.width + 269 &&
                 MouseInputHandler.field_e < 269) {
                 od.field_j = fl.field_u;
                 var4 = 1;
                 ei.field_j = false;
               }
               if (MouseInputHandler.field_e > 586 &&
-                586 + ra.field_p.field_z > MouseInputHandler.field_e) {
+                586 + ra.field_p.width > MouseInputHandler.field_e) {
                 ei.field_j = true;
                 var4 = 1;
                 od.field_j = fl.field_u;
@@ -105,13 +105,13 @@ final class kd {
             if (var4 == 0 &&
               fl.field_M < od.field_j &&
               fi.field_B > var3 &&
-              ra.field_p.field_p + var3 > fi.field_B) {
-              if (pg.field_n > -ra.field_p.field_z + 269 &&
+              ra.field_p.height + var3 > fi.field_B) {
+              if (pg.field_n > -ra.field_p.width + 269 &&
                 pg.field_n < 269) {
                 od.field_j = fl.field_M;
               }
               if (586 < pg.field_n &&
-                ra.field_p.field_z + 586 > pg.field_n) {
+                ra.field_p.width + 586 > pg.field_n) {
                 od.field_j = fl.field_M;
               }
             }

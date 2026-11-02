@@ -110,16 +110,16 @@ final class ab {
         try {
           int var3 = -63 % ((param1 + 44) / 42);
           var2 = new Sprite(param0.a(104, "", "final_frame.jpg"), (java.awt.Component) ((Object) wizardrun.field_G));
-          var4 = var2.field_z;
-          var5 = var2.field_p;
+          var4 = var2.width;
+          var5 = var2.height;
           ph.d(-31782);
           af.field_a = new Sprite(var4, var5 * 3 / 4);
-          af.field_a.b();
+          af.field_a.bindAsRasterTarget();
           var2.c(0, 0);
-          ee.field_q = new Sprite(var4, -af.field_a.field_p + var5);
-          ee.field_q.b();
-          var2.c(0, -af.field_a.field_p);
-          ee.field_q.field_v = af.field_a.field_p;
+          ee.field_q = new Sprite(var4, -af.field_a.height + var5);
+          ee.field_q.bindAsRasterTarget();
+          var2.c(0, -af.field_a.height);
+          ee.field_q.offsetY = af.field_a.height;
           bb.b(4);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "ab.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

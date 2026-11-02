@@ -47,13 +47,13 @@ final class e {
             if (param3 <= 27) {
               e.a(59);
             }
-            var6_int = param0[0].field_x;
-            var7 = param0[2].field_x;
-            var8 = param0[1].field_x;
+            var6_int = param0[0].fullWidth;
+            var7 = param0[2].fullWidth;
+            var8 = param0[1].fullWidth;
             param0[0].d(param4, param1, param2);
             param0[2].d(param4 + param5 - var7, param1, param2);
             SoftwareRasterizer.saveClip(ac.field_q);
-            SoftwareRasterizer.intersectClip(var6_int + param4, param1, param4 + param5 - var7, param1 + param0[1].field_s);
+            SoftwareRasterizer.intersectClip(var6_int + param4, param1, param4 + param5 - var7, param1 + param0[1].fullHeight);
             var9 = param4 + var6_int;
             var10 = -var7 + param5 + param4;
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {

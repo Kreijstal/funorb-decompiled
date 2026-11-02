@@ -166,15 +166,15 @@ final class SecondaryNodeDeque implements Iterable {
         if (!param1) {
           return;
         }
-        var4 = hj.field_c % ef.field_H.field_z * 2;
-        if (ef.field_H.field_z <= var4) {
-          var4 = ef.field_H.field_z - (var4 - ef.field_H.field_z);
+        var4 = hj.field_c % ef.field_H.width * 2;
+        if (ef.field_H.width <= var4) {
+          var4 = ef.field_H.width - (var4 - ef.field_H.width);
         }
         if (var4 < 10) {
           var4 = 10;
         } else {
-          if (ef.field_H.field_z - 40 < var4) {
-            var4 = -40 + ef.field_H.field_z;
+          if (ef.field_H.width - 40 < var4) {
+            var4 = -40 + ef.field_H.width;
           }
         }
         RasterBuffer.a(30, 0, ef.field_H, 0, 80, param3, param2, var4, 0);

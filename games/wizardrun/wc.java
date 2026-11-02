@@ -22,12 +22,12 @@ final class wc {
         if (ef.field_H == null) {
           return -1;
         }
-        if (param2 >= wk.field_c && ef.field_H.field_z + wk.field_c > param2 && qc.field_L <= param1 &&
-          !(qc.field_L + ef.field_H.field_p <= param1)) {
+        if (param2 >= wk.field_c && ef.field_H.width + wk.field_c > param2 && qc.field_L <= param1 &&
+          !(qc.field_L + ef.field_H.height <= param1)) {
           return 0;
         }
-        if (param2 >= hj.field_f && param2 < hj.field_f + ef.field_H.field_z && param1 >= hf.field_b &&
-          !(ef.field_H.field_p + hf.field_b <= param1)) {
+        if (param2 >= hj.field_f && param2 < hj.field_f + ef.field_H.width && param1 >= hf.field_b &&
+          !(ef.field_H.height + hf.field_b <= param1)) {
           return 1;
         }
         return -1;

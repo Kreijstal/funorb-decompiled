@@ -426,7 +426,7 @@ final class eg extends qh {
                       case 11:
                         if (this.field_h != -1) {
                           oc.field_b[3][29].d(var2, var3);
-                          this.field_q = oc.field_b[3][29].c();
+                          this.field_q = oc.field_b[3][29].flipHorizontal();
                           this.field_A = var3;
                           this.field_y = var2;
                           break;
@@ -470,7 +470,7 @@ final class eg extends qh {
                           break;
                         }
                         oc.field_b[2][this.field_n].d(var2 - 24, var3);
-                        this.field_q = oc.field_b[2][this.field_n].c();
+                        this.field_q = oc.field_b[2][this.field_n].flipHorizontal();
                         this.field_y = -24 + var2;
                         this.field_A = var3;
                         break;
@@ -480,7 +480,7 @@ final class eg extends qh {
                         }
                         if (this.field_h != 1) {
                           oc.field_b[3][this.field_n].d(var2, var3);
-                          this.field_q = oc.field_b[3][this.field_n].c();
+                          this.field_q = oc.field_b[3][this.field_n].flipHorizontal();
                           this.field_y = var2;
                           this.field_A = var3;
                           break;
@@ -496,7 +496,7 @@ final class eg extends qh {
                         }
                         if (this.field_h != -1) {
                           oc.field_b[4][this.field_n].d(var2, var3);
-                          this.field_q = oc.field_b[4][this.field_n].c();
+                          this.field_q = oc.field_b[4][this.field_n].flipHorizontal();
                           this.field_A = var3;
                           this.field_y = var2;
                           break;
@@ -571,7 +571,7 @@ final class eg extends qh {
                           case 34:
                             if (-1 != this.field_h) {
                               oc.field_b[0][37].d(var2, var3);
-                              this.field_q = oc.field_b[0][37].c();
+                              this.field_q = oc.field_b[0][37].flipHorizontal();
                               this.field_y = var2;
                               this.field_A = var3;
                               break regionExit1;
@@ -610,7 +610,7 @@ final class eg extends qh {
                                     break regionExit1;
                                   }
                                   oc.field_b[4][var9].d(var2, var3);
-                                  this.field_q = oc.field_b[4][var9].c();
+                                  this.field_q = oc.field_b[4][var9].flipHorizontal();
                                   this.field_y = var2;
                                   this.field_A = var3;
                                   break regionExit1;
@@ -638,7 +638,7 @@ final class eg extends qh {
                                     break regionExit1;
                                   }
                                   h.field_j[this.field_n].d(var2, var3);
-                                  this.field_q = h.field_j[this.field_n].c();
+                                  this.field_q = h.field_j[this.field_n].flipHorizontal();
                                   this.field_A = var3;
                                   this.field_y = var2;
                                   break regionExit1;
@@ -696,7 +696,7 @@ final class eg extends qh {
                               break regionExit1;
                             }
                             oc.field_b[1][var9].d(var2, var3);
-                            this.field_q = oc.field_b[1][var9].c();
+                            this.field_q = oc.field_b[1][var9].flipHorizontal();
                             this.field_A = var3;
                             this.field_y = var2;
                             break regionExit1;
@@ -727,7 +727,7 @@ final class eg extends qh {
                 this.field_A = var3;
               } else {
                 ve.wizardSprites[this.field_n].d(var2, var3);
-                this.field_q = ra.wizardNoHatSprites[this.field_n].c();
+                this.field_q = ra.wizardNoHatSprites[this.field_n].flipHorizontal();
                 this.field_A = var3;
                 this.field_y = var2;
               }
@@ -747,12 +747,12 @@ final class eg extends qh {
                   } else {
                     stackIn_90_1 = 16776960;
                   }
-                  this.a(stackIn_90_1, ve.wizardSprites[this.field_n].field_x + var2, true, ")", 32 + var3);
+                  this.a(stackIn_90_1, ve.wizardSprites[this.field_n].fullWidth + var2, true, ")", 32 + var3);
                 }
                 if (nk.field_T >= 50 &&
                   nk.field_T < 100) {
                   var11 = GameGraphicsResources.wizardFont2.stringWidth(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, ka.field_g));
-                  var12 = var2 + ve.wizardSprites[this.field_n].field_x / 2;
+                  var12 = var2 + ve.wizardSprites[this.field_n].fullWidth / 2;
                   if (var12 < var11 / 2) {
                     var12 = var11 / 2;
                   }
@@ -769,7 +769,7 @@ final class eg extends qh {
                 if (nk.field_T >= 100 &&
                   nk.field_T < 150) {
                   var11 = GameGraphicsResources.wizardFont2.stringWidth(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 59, wb.field_a));
-                  var12 = var2 + ve.wizardSprites[this.field_n].field_x / 2;
+                  var12 = var2 + ve.wizardSprites[this.field_n].fullWidth / 2;
                   if (var11 / 2 > var12) {
                     var12 = var11 / 2;
                   }
@@ -786,7 +786,7 @@ final class eg extends qh {
                 if (nk.field_T >= 150 &&
                   nk.field_T < 200) {
                   var11 = GameGraphicsResources.wizardFont2.stringWidth(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 66, ei.field_m));
-                  var12 = var2 + ve.wizardSprites[this.field_n].field_x / 2;
+                  var12 = var2 + ve.wizardSprites[this.field_n].fullWidth / 2;
                   if (var11 / 2 > var12) {
                     var12 = var11 / 2;
                   }
@@ -805,7 +805,7 @@ final class eg extends qh {
                 7 > cd.field_e % 10 &&
                 1 < cd.field_e % 10) {
                 if (this.field_h != -1) {
-                  ve.wizardSprites[this.field_n].c().b(var2, var3, 16777215);
+                  ve.wizardSprites[this.field_n].flipHorizontal().b(var2, var3, 16777215);
                 } else {
                   ve.wizardSprites[this.field_n].b(var2, var3, 16777215);
                 }
@@ -3767,19 +3767,19 @@ final class eg extends qh {
               var10_ref_db__[var11_int] = ClientException.a(var5[var9], (byte) -105, var17[var11_int]);
             }
           }
-          var9Lifetime1 = var16.field_p;
+          var9Lifetime1 = var16.height;
           ph.d(-31782);
           int var10 = -88 / ((15 - param1) / 44);
-          var16.b();
+          var16.bindAsRasterTarget();
           SoftwareRasterizer.desaturateRect(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.b();
+          var11.bindAsRasterTarget();
           var16.c(0, 0);
           var12 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var12.b();
-          var16.c(-var16.field_z + var9Lifetime1, 0);
-          var13 = new Sprite(var16.field_z - var9Lifetime1 * 2, var9Lifetime1);
-          var13.b();
+          var12.bindAsRasterTarget();
+          var16.c(-var16.width + var9Lifetime1, 0);
+          var13 = new Sprite(var16.width - var9Lifetime1 * 2, var9Lifetime1);
+          var13.bindAsRasterTarget();
           var16.c(-var9Lifetime1, 0);
           bb.b(4);
           vf.field_j = new Sprite[]{var11, var13, var12};
@@ -3823,7 +3823,7 @@ final class eg extends qh {
             var7 = this.field_i.field_b * 240 + this.field_f.field_b;
             var8 = this.field_d / 2;
             var6[this.field_n].a(var8 + var4, var8 + var5, -112, 128, var7);
-            this.field_q = var6[this.field_n].c();
+            this.field_q = var6[this.field_n].flipHorizontal();
             this.field_A = var5;
             this.field_y = var4;
             for (var11 = 0; -(var8 * this.field_w / 1000) + var8 > var11; var11 += 2) {
@@ -3839,7 +3839,7 @@ final class eg extends qh {
               this.field_y = var4;
             } else {
               var6[this.field_n].d(var4, var5);
-              this.field_q = var6[this.field_n].c();
+              this.field_q = var6[this.field_n].flipHorizontal();
               this.field_y = var4;
               this.field_A = var5;
             }
@@ -3851,7 +3851,7 @@ final class eg extends qh {
               } else {
                 stackIn_21_1 = 16711680;
               }
-              this.a(stackIn_21_1, var6[this.field_n].field_x / 2 + var4, true, "*", -4 + var5);
+              this.a(stackIn_21_1, var6[this.field_n].fullWidth / 2 + var4, true, "*", -4 + var5);
             }
           }
         }

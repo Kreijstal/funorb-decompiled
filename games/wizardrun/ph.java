@@ -40,7 +40,7 @@ final class ph extends ge {
             var6 = vk.field_o;
             if (param1) {
               var7 = GameGraphicsResources.wizardFont2.stringWidth(var6);
-              ok.selectStarSprites[2].e(268 - (var7 / 2 + ok.selectStarSprites[2].field_z), param0);
+              ok.selectStarSprites[2].e(268 - (var7 / 2 + ok.selectStarSprites[2].width), param0);
               ok.selectStarSprites[2].e(var7 / 2 + 268, param0);
             }
             if (param3 > -98) {
@@ -122,7 +122,7 @@ final class ph extends ge {
                 if (param2 != 4) {
                   if (param1) {
                     var7Lifetime2Lifetime2 = GameGraphicsResources.wizardFont2.stringWidth(var6);
-                    ok.selectStarSprites[2].e(268 - (var7Lifetime2Lifetime2 / 2 + ok.selectStarSprites[2].field_z), param0);
+                    ok.selectStarSprites[2].e(268 - (var7Lifetime2Lifetime2 / 2 + ok.selectStarSprites[2].width), param0);
                     ok.selectStarSprites[2].e(var7Lifetime2Lifetime2 / 2 + 268, param0);
                   }
                   if (param3 > -98) {
@@ -148,7 +148,7 @@ final class ph extends ge {
                 else {
                   if (param1) {
                     var7Lifetime2Lifetime3 = GameGraphicsResources.wizardFont2.stringWidth(var6);
-                    ok.selectStarSprites[2].e(268 - (var7Lifetime2Lifetime3 / 2 + ok.selectStarSprites[2].field_z), param0);
+                    ok.selectStarSprites[2].e(268 - (var7Lifetime2Lifetime3 / 2 + ok.selectStarSprites[2].width), param0);
                     ok.selectStarSprites[2].e(var7Lifetime2Lifetime3 / 2 + 268, param0);
                   }
                   if (param3 > -98) {
@@ -173,7 +173,7 @@ final class ph extends ge {
             var6 = od.field_o;
             if (param1) {
               var7Lifetime3 = GameGraphicsResources.wizardFont2.stringWidth(var6);
-              ok.selectStarSprites[2].e(268 - (var7Lifetime3 / 2 + ok.selectStarSprites[2].field_z), param0);
+              ok.selectStarSprites[2].e(268 - (var7Lifetime3 / 2 + ok.selectStarSprites[2].width), param0);
               ok.selectStarSprites[2].e(var7Lifetime3 / 2 + 268, param0);
             }
             if (param3 > -98) {
@@ -199,7 +199,7 @@ final class ph extends ge {
         }
         if (param1) {
           var7Lifetime1 = GameGraphicsResources.wizardFont2.stringWidth(var6);
-          ok.selectStarSprites[2].e(268 - (var7Lifetime1 / 2 + ok.selectStarSprites[2].field_z), param0);
+          ok.selectStarSprites[2].e(268 - (var7Lifetime1 / 2 + ok.selectStarSprites[2].width), param0);
           ok.selectStarSprites[2].e(var7Lifetime1 / 2 + 268, param0);
         }
         if (param3 > -98) {

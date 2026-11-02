@@ -54,8 +54,8 @@ final class id {
         if (param0 <= 51) {
           id.a((byte) -66, -95, 21);
         }
-        for (var4 = 0; var4 < var3.field_B.length; var4++) {
-          var6.field_B[var4] = param1;
+        for (var4 = 0; var4 < var3.pixels.length; var4++) {
+          var6.pixels[var4] = param1;
         }
         return var3;
     }

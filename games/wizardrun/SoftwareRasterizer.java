@@ -639,7 +639,7 @@ final class SoftwareRasterizer {
         return;
     }
 
-    final static void a(int[] param0, int param1, int param2) {
+    final static void setTarget(int[] param0, int param1, int param2) {
         pixels = param0;
         width = param1;
         height = param2;

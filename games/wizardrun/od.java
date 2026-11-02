@@ -70,8 +70,8 @@ final class od {
         Sprite[] var5 = new Sprite[9];
         ArgbSprite var16 = new ArgbSprite(32, 32);
         ArgbSprite var18 = var16;
-        for (var7_int = 0; var7_int < var18.field_B.length; var7_int++) {
-          var16.field_B[var7_int] = 1077952576;
+        for (var7_int = 0; var7_int < var18.pixels.length; var7_int++) {
+          var16.pixels[var7_int] = 1077952576;
         }
         var5[4] = (Sprite) ((Object) var18);
         var4.a(0, 4).a(124, true).a(124, var5);
@@ -100,22 +100,22 @@ final class od {
           var10 = new Sprite[9];
           var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
-          dupTemp$2.field_B = new int[]{6710886, 7829367};
-          var10[4].field_B = new int[]{6710886, 7829367};
+          dupTemp$2.pixels = new int[]{6710886, 7829367};
+          var10[4].pixels = new int[]{6710886, 7829367};
           var11 = new qa();
           var12 = new qa();
           var11.a(0, var9, (byte) 95);
           var12.a(0, var10, (byte) -103);
           var13 = new Sprite(7, 4);
-          var13.field_B = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new qa(var4, true);
-          var14.a((byte) 59, var13.e());
+          var14.a((byte) 59, var13.copy());
           var13.f();
           var14Lifetime1 = new qa(var4, true);
-          var14Lifetime1.a((byte) 71, var13.e());
+          var14Lifetime1.a((byte) 71, var13.copy());
           var13.f();
           var14Lifetime2 = new qa(var4, true);
-          var14Lifetime2.a((byte) 110, var13.e());
+          var14Lifetime2.a((byte) 110, var13.copy());
           var13.f();
           var19 = new qa(var4, true);
           var19.a((byte) 106, var13);

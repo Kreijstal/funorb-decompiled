@@ -48,17 +48,17 @@ abstract class ig extends DualLinkNode {
             if (null == param0[3]) {
               stackIn_10_0 = 0;
             } else {
-              stackIn_10_0 = param0[3].field_x;
+              stackIn_10_0 = param0[3].fullWidth;
             }
             var6_int = stackIn_10_0;
             if (param0[5] != null) {
-              stackIn_13_0 = param0[5].field_x;
+              stackIn_13_0 = param0[5].fullWidth;
             } else {
               stackIn_13_0 = 0;
             }
             var7 = stackIn_13_0;
             if (null != param0[1]) {
-              stackIn_16_0 = param0[1].field_s;
+              stackIn_16_0 = param0[1].fullHeight;
             } else {
               stackIn_16_0 = 0;
             }
@@ -66,7 +66,7 @@ abstract class ig extends DualLinkNode {
             if (null == param0[7]) {
               stackIn_19_0 = 0;
             } else {
-              stackIn_19_0 = param0[7].field_s;
+              stackIn_19_0 = param0[7].fullHeight;
             }
             var9 = stackIn_19_0;
             var10 = param1 + param4;
@@ -112,43 +112,43 @@ abstract class ig extends DualLinkNode {
               SoftwareRasterizer.restoreClip(td.field_a);
             }
             if (param0[1] != null &&
-              param0[1].field_x != 0) {
+              param0[1].fullWidth != 0) {
               SoftwareRasterizer.intersectClip(var16, param5, var17, var18);
-              for (var20 = var12; var20 < var13; var20 = var20 + param0[1].field_x) {
+              for (var20 = var12; var20 < var13; var20 = var20 + param0[1].fullWidth) {
                 param0[1].e(var20, param5);
               }
               SoftwareRasterizer.restoreClip(td.field_a);
             }
             if (param0[7] != null &&
-              param0[7].field_x != 0) {
+              param0[7].fullWidth != 0) {
               SoftwareRasterizer.intersectClip(var16, var19, var17, var11);
-              for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param0[7].field_x) {
+              for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param0[7].fullWidth) {
                 param0[7].e(var20Lifetime1, var15);
               }
               SoftwareRasterizer.restoreClip(td.field_a);
             }
             if (param0[3] != null &&
-              0 != param0[3].field_s) {
+              0 != param0[3].fullHeight) {
               SoftwareRasterizer.intersectClip(param1, var18, var16, var19);
-              for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param0[3].field_s) {
+              for (var20Lifetime2 = var14; var20Lifetime2 < var15; var20Lifetime2 = var20Lifetime2 + param0[3].fullHeight) {
                 param0[3].e(param1, var20Lifetime2);
               }
               SoftwareRasterizer.restoreClip(td.field_a);
             }
             if (null != param0[5] &&
-              param0[5].field_s != 0) {
+              param0[5].fullHeight != 0) {
               SoftwareRasterizer.intersectClip(var17, var18, var10, var19);
-              for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param0[5].field_s) {
+              for (var20Lifetime3 = var14; var20Lifetime3 < var15; var20Lifetime3 = var20Lifetime3 + param0[5].fullHeight) {
                 param0[5].e(var13, var20Lifetime3);
               }
               SoftwareRasterizer.restoreClip(td.field_a);
             }
             if (param0[4] != null &&
-              0 != param0[4].field_x &&
-              0 != param0[4].field_s) {
+              0 != param0[4].fullWidth &&
+              0 != param0[4].fullHeight) {
               SoftwareRasterizer.intersectClip(var16, var18, var17, var19);
-              for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param0[4].field_s) {
-                for (var21 = var12; var21 < var13; var21 = var21 + param0[4].field_x) {
+              for (var20Lifetime4 = var14; var15 > var20Lifetime4; var20Lifetime4 = var20Lifetime4 + param0[4].fullHeight) {
+                for (var21 = var12; var21 < var13; var21 = var21 + param0[4].fullWidth) {
                   param0[4].e(var21, var20Lifetime4);
                 }
               }

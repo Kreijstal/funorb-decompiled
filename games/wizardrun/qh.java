@@ -573,12 +573,12 @@ class qh {
           if (fl.field_M > od.field_j) {
             var7Lifetime2 = f.field_d[ra.field_o];
             if (var7Lifetime2 != null) {
-              var2_int = (60 + var7Lifetime2.field_x) * od.field_j / fl.field_M;
+              var2_int = (60 + var7Lifetime2.fullWidth) * od.field_j / fl.field_M;
               var3 = var2_int - 30;
               if (!ei.field_j) {
-                lb.a((-var3 + var7Lifetime2.field_x) * 256 / 30, -256 * var3 / 30, 245, var7Lifetime2, 199, -107);
+                lb.a((-var3 + var7Lifetime2.fullWidth) * 256 / 30, -256 * var3 / 30, 245, var7Lifetime2, 199, -107);
               } else {
-                lb.a(-256 * var3 / 30, 256 * (-var3 + var7Lifetime2.field_x) / 30, 245, var7Lifetime2, 199, -83);
+                lb.a(-256 * var3 / 30, 256 * (-var3 + var7Lifetime2.fullWidth) / 30, 245, var7Lifetime2, 199, -83);
               }
             }
           }
@@ -591,8 +591,8 @@ class qh {
             var3Lifetime1 = var5;
             while (f.field_d.length > var5) {
               var8 = f.field_d[var5];
-              if (var8 != null && (var8.field_x != 365 ||
-                var8.field_s != 139)) {
+              if (var8 != null && (var8.fullWidth != 365 ||
+                var8.fullHeight != 139)) {
                 if (var2 == null) {
                   var2 = Integer.toString(var5);
                 } else {

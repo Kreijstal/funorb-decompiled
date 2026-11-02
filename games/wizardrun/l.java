@@ -179,27 +179,27 @@ final class l extends ff {
           field_S != var6Lifetime1) {
           if (var6Lifetime1 == hg.field_c) {
             var14 = te.field_k[2];
-            var14.a(var9, var10 - (var14.field_p >> 1), 256);
+            var14.a(var9, var10 - (var14.height >> 1), 256);
           } else if (gf.field_V == var6Lifetime1) {
             var15 = te.field_k[1];
-            var15.a(var9, -(var15.field_p >> 1) + var10, 256);
+            var15.a(var9, -(var15.height >> 1) + var10, 256);
           }
         } else {
           var16 = te.field_k[0];
-          var11 = var16.field_x << 1;
-          var12 = var16.field_s << 1;
+          var11 = var16.fullWidth << 1;
+          var12 = var16.fullHeight << 1;
           if (this.field_R != null &&
-            this.field_R.field_z >= var11 &&
-            var12 <= this.field_R.field_p) {
+            this.field_R.width >= var11 &&
+            var12 <= this.field_R.height) {
             ud.a(this.field_R, false);
             SoftwareRasterizer.d();
           } else {
             this.field_R = new Sprite(var11, var12);
             ud.a(this.field_R, false);
           }
-          var16.b(112, 144, var16.field_x << 4, var16.field_s << 4, -this.field_U << 10, 4096);
+          var16.b(112, 144, var16.fullWidth << 4, var16.fullHeight << 4, -this.field_U << 10, 4096);
           bb.b(4);
-          this.field_R.a(-(var16.field_x >> 1) + var9, -var16.field_s + var10, 256);
+          this.field_R.a(-(var16.fullWidth >> 1) + var9, -var16.fullHeight + var10, 256);
         }
     }
 

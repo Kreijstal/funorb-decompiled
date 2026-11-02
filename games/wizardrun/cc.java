@@ -26,7 +26,7 @@ final class cc implements bf {
           var8 = te.field_k[1];
           if (param2 instanceof pl &&
             ((pl) (param2)).field_z) {
-            var8.a(1 + var6_int + (param2.field_r - var8.field_x >> 1), (param2.field_n - var8.field_s >> 1) + (var7 + 1), 256);
+            var8.a(1 + var6_int + (param2.field_r - var8.fullWidth >> 1), (param2.field_n - var8.fullHeight >> 1) + (var7 + 1), 256);
           }
           if (!param2.d((byte) 53)) {
             return;

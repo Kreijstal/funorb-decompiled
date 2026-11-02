@@ -172,7 +172,7 @@ final class jl extends ll {
           var7 = stackIn_15_0;
           stackIn_18_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_18_0;
-          e.a(this.field_x, (param2.field_n - this.field_x[0].field_s >> 1) + (param2.field_l + param1), var7, (byte) 118, param0 + param2.field_o, param2.field_r);
+          e.a(this.field_x, (param2.field_n - this.field_x[0].fullHeight >> 1) + (param2.field_l + param1), var7, (byte) 118, param0 + param2.field_o, param2.field_r);
           this.field_k.a(param2.field_k, param0 + param2.field_o, -2 + param2.field_l + param1, param2.field_r, param2.field_n, var8, -1, 1, 1, this.field_k.field_M);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

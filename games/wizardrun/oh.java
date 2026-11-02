@@ -54,17 +54,17 @@ final class oh {
             if (param5 < 11) {
               field_b = (kl) null;
             }
-            var21 = param1.e();
+            var21 = param1.copy();
             var30 = SoftwareRasterizer.pixels;
             var10 = SoftwareRasterizer.width;
             var11 = SoftwareRasterizer.height;
             var29 = new int[4];
             SoftwareRasterizer.saveClip(var29);
-            param1.b();
+            param1.bindAsRasterTarget();
             SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
-            var13 = param2 + param6 * param1.field_z;
-            var14 = param1.field_z - param3;
-            var25 = var21.field_B;
+            var13 = param2 + param6 * param1.width;
+            var14 = param1.width - param3;
+            var25 = var21.pixels;
             var22 = var25;
             var15 = var22;
             for (var16 = param6; var16 < param0 + param6; var16++) {
@@ -76,15 +76,15 @@ final class oh {
                     SoftwareRasterizer.a(var17, var16, param4, param7);
                   } else {
                     if (var16 > 0 &&
-                      var15[-param1.field_z + var13] == 0) {
+                      var15[-param1.width + var13] == 0) {
                       SoftwareRasterizer.a(var17, var16, param4, param7);
                     } else {
-                      if (var17 < param1.field_z - 1 &&
+                      if (var17 < param1.width - 1 &&
                         var15[var13 + 1] == 0) {
                         SoftwareRasterizer.a(var17, var16, param4, param7);
                       } else {
-                        if (var16 < param1.field_p - 1 &&
-                          var15[param1.field_z + var13] == 0) {
+                        if (var16 < param1.height - 1 &&
+                          var15[param1.width + var13] == 0) {
                           SoftwareRasterizer.a(var17, var16, param4, param7);
                         }
                       }
@@ -95,8 +95,8 @@ final class oh {
               }
               var13 = var13 + var14;
             }
-            var21.e(-param1.field_u, -param1.field_v);
-            SoftwareRasterizer.a(var30, var10, var11);
+            var21.e(-param1.offsetX, -param1.offsetY);
+            SoftwareRasterizer.setTarget(var30, var10, var11);
             SoftwareRasterizer.restoreClip(var29);
             return;
           }

@@ -137,17 +137,17 @@ final class la {
           if (this.field_i != null) {
             var6_int = this.field_h + (param4 + param0.field_o);
             if (param3.field_l == 1) {
-              var6_int = var6_int + (-this.field_i.field_x + param0.field_r) / 2;
+              var6_int = var6_int + (-this.field_i.fullWidth + param0.field_r) / 2;
             }
             var7 = param2 + (param0.field_l + this.field_e);
             if (param3.field_l == 2) {
-              var6_int = var6_int + (-this.field_i.field_x + param0.field_r);
+              var6_int = var6_int + (-this.field_i.fullWidth + param0.field_r);
             }
             if (param3.field_a == 1) {
-              var7 = var7 + (-this.field_i.field_s + param0.field_n) / 2;
+              var7 = var7 + (-this.field_i.fullHeight + param0.field_n) / 2;
             }
             if (param3.field_a == 2) {
-              var7 = var7 + (-this.field_i.field_s + param0.field_n);
+              var7 = var7 + (-this.field_i.fullHeight + param0.field_n);
             }
             this.field_i.e(var6_int, var7);
           }

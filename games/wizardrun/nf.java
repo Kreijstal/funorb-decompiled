@@ -50,16 +50,16 @@ final class nf {
         try {
           if (param4 != null &&
             param2 > 0) {
-            var5_int = param4[0].field_x;
-            var6 = param4[2].field_x;
+            var5_int = param4[0].fullWidth;
+            var6 = param4[2].fullWidth;
             if (param3 > -31) {
               nf.b(38);
             }
-            var7 = param4[1].field_x;
+            var7 = param4[1].fullWidth;
             param4[0].e(param0, param1);
             param4[2].e(param2 + param0 - var6, param1);
             SoftwareRasterizer.saveClip(ac.field_q);
-            SoftwareRasterizer.intersectClip(var5_int + param0, param1, param0 + param2 - var6, param4[1].field_s + param1);
+            SoftwareRasterizer.intersectClip(var5_int + param0, param1, param0 + param2 - var6, param4[1].fullHeight + param1);
             var8 = var5_int + param0;
             var9 = -var6 + param0 + param2;
             for (param0 = var8; param0 < var9; param0 = param0 + var7) {

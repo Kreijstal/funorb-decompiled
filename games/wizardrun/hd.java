@@ -20,7 +20,7 @@ final class hd extends UiWidget {
     private final void a(int param0) {
         this.field_G = new Sprite[]{this.a(this.field_B, this.field_H, (byte) -11), this.a(this.field_L, this.field_F, (byte) -11)};
         this.field_D = this.d(10706);
-        this.field_y = this.field_D.c();
+        this.field_y = this.field_D.flipHorizontal();
         if (param0 != -24060) {
           this.field_G = (Sprite[]) null;
         }
@@ -88,12 +88,12 @@ final class hd extends UiWidget {
         var8 = wizardrun.field_H;
         try {
           var5_int = param2 + this.field_r;
-          ClientException.a(param3, param1 + this.field_n, param2 + this.field_D.field_z, param1, var5_int - this.field_D.field_z);
-          for (var6 = param2 - this.field_A; var5_int > var6; var6 = var6 + param0.field_z) {
+          ClientException.a(param3, param1 + this.field_n, param2 + this.field_D.width, param1, var5_int - this.field_D.width);
+          for (var6 = param2 - this.field_A; var5_int > var6; var6 = var6 + param0.width) {
             param0.e(var6, param1);
           }
           bb.b(4);
-          if (SoftwareRasterizer.clipLeft <= param2 + this.field_D.field_z) {
+          if (SoftwareRasterizer.clipLeft <= param2 + this.field_D.width) {
             ud.a(this.field_K, false);
             param0.e(-this.field_A, 0);
             param0.e(this.field_J * 2 - this.field_A, 0);
@@ -101,15 +101,15 @@ final class hd extends UiWidget {
             bb.b(4);
             this.field_K.e(param2, param1);
           }
-          if (var5_int - this.field_D.field_z <= SoftwareRasterizer.clipRight) {
+          if (var5_int - this.field_D.width <= SoftwareRasterizer.clipRight) {
             ud.a(this.field_K, false);
-            for (var7 = this.field_r - this.field_D.field_z + this.field_A; this.field_J * 2 < var7; var7 = var7 - this.field_J * 2) {
+            for (var7 = this.field_r - this.field_D.width + this.field_A; this.field_J * 2 < var7; var7 = var7 - this.field_J * 2) {
             }
             param0.e(-var7, 0);
             param0.e(-var7 + 2 * this.field_J, 0);
             this.field_D.f(0, 0);
             bb.b(4);
-            this.field_K.e(var5_int - this.field_D.field_z, param1);
+            this.field_K.e(var5_int - this.field_D.width, param1);
             return;
           }
           return;

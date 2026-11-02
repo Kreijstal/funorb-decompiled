@@ -3,15 +3,15 @@
  */
 abstract class SpriteState extends DualLinkNode {
     static int field_r;
-    int field_v;
+    int offsetY;
     static String[] field_w;
-    int field_x;
-    int field_p;
-    int field_z;
+    int fullWidth;
+    int height;
+    int width;
     static int[] field_A;
     static int field_y;
-    int field_u;
-    int field_s;
+    int offsetX;
+    int fullHeight;
     static String[] field_t;
     static je[] secondarySoundEffects;
 
@@ -33,8 +33,8 @@ abstract class SpriteState extends DualLinkNode {
     }
 
     private final void a(int param0, int param1, int param2, byte param3, int param4) {
-        int var6 = this.field_x << 3;
-        int var7 = this.field_s << 3;
+        int var6 = this.fullWidth << 3;
+        int var7 = this.fullHeight << 3;
         param2 = (var6 & 15) + (param2 << 4);
         param1 = (15 & var7) + (param1 << 4);
         int var8 = -23 % ((param3 + 55) / 40);

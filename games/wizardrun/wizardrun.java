@@ -85,7 +85,7 @@ public final class wizardrun extends GameShell {
                         var4 = vg.loadSprite(15, "mbstar", mi.field_E, "");
                         uc.a(-1, vk.field_u, sh.field_b);
                         pk.a(var12, false);
-                        tk.a(0, var4, var4.field_x, 0, 2500, 0, 2, var4.field_s, 0);
+                        tk.a(0, var4, var4.fullWidth, 0, 2500, 0, 2, var4.fullHeight, 0);
                         ui.a(true, fa.field_b);
                         ck.a((java.applet.Applet) (this), l.field_O, 0, 34, 16777215, 255);
                         md.field_c = null;
@@ -111,11 +111,11 @@ public final class wizardrun extends GameShell {
                         pd.frameSprites = pe.loadSpriteStrip("", mi.field_E, "frame", 91);
                         qc.field_E = pe.loadSpriteStrip("", mi.field_E, "buttonframe", 119);
                         ob.field_c = new Sprite(32, 32);
-                        ob.field_c.b();
+                        ob.field_c.bindAsRasterTarget();
                         ve.wizardSprites[6].c(-18, -18);
                         hl.field_b.b(68);
                         ec.field_b = new Sprite(64, 64);
-                        ec.field_b.b();
+                        ec.field_b.bindAsRasterTarget();
                         SoftwareRasterizer.a(32, 32, 30, 16777215);
                         hl.field_b.b(param1 + 17);
                         gf.field_bb = ve.wizardSprites[1];
@@ -125,7 +125,7 @@ public final class wizardrun extends GameShell {
                         NodeHashTableIterator.field_d = vg.loadSprite(15, "highscorescreen", mi.field_E, "");
                         l.field_M = vg.loadSprite(param1 ^ 33, "achievementscreen", mi.field_E, "");
                         bk.field_b = vg.loadSprite(param1 ^ 33, "controlscreen", mi.field_E, "");
-                        bk.field_b.b();
+                        bk.field_b.bindAsRasterTarget();
                         var5_int = param1;
                         var13 = di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 112, og.field_P);
                         this.drawBorderedText(param1 ^ -12884, var13, 15583488, GameGraphicsResources.wizardFont2.stringWidth(var13) / 2 + 165, 180 + var5_int);
@@ -915,23 +915,23 @@ public final class wizardrun extends GameShell {
                 var6 = 64;
               }
               if (qh.field_l == 2) {
-                var6 = -GameShell.field_x.field_s + 384;
+                var6 = -GameShell.field_x.fullHeight + 384;
               }
               if (3 == qh.field_l) {
                 var6 = 64;
               }
               if (4 == qh.field_l) {
-                var6 = 384 - GameShell.field_x.field_s;
+                var6 = 384 - GameShell.field_x.fullHeight;
               }
               if (qh.field_l == 5) {
                 var6 = 64;
               }
-              mg.field_s.e(320 - GameShell.field_x.field_x / 2, var6);
+              mg.field_s.e(320 - GameShell.field_x.fullWidth / 2, var6);
               if (var4_int == 0) {
                 break;
               }
-              SoftwareRasterizer.setClip(1 + (320 - GameShell.field_x.field_x / 2), 0, 320 - GameShell.field_x.field_x / 2 + (-2 + GameShell.field_x.field_x) * ii.field_e[var4_int].field_p / var5, 480);
-              GameShell.field_x.e(320 - GameShell.field_x.field_x / 2, var6);
+              SoftwareRasterizer.setClip(1 + (320 - GameShell.field_x.fullWidth / 2), 0, 320 - GameShell.field_x.fullWidth / 2 + (-2 + GameShell.field_x.fullWidth) * ii.field_e[var4_int].field_p / var5, 480);
+              GameShell.field_x.e(320 - GameShell.field_x.fullWidth / 2, var6);
               SoftwareRasterizer.resetClip();
               break;
             }

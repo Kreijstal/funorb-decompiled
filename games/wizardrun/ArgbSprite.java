@@ -6,12 +6,12 @@ final class ArgbSprite extends Sprite {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_u;
-        param1 = param1 + this.field_v;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
         int var4 = param0 + param1 * SoftwareRasterizer.width;
         int var5 = 0;
-        int var6 = this.field_p;
-        int var7 = this.field_z;
+        int var6 = this.height;
+        int var7 = this.width;
         int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -43,7 +43,7 @@ final class ArgbSprite extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          ArgbSprite.c(SoftwareRasterizer.pixels, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.c(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -84,12 +84,12 @@ final class ArgbSprite extends Sprite {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_u;
-        param1 = param1 + this.field_v;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
         int var3 = param0 + param1 * SoftwareRasterizer.width;
         int var4 = 0;
-        int var5 = this.field_p;
-        int var6 = this.field_z;
+        int var5 = this.height;
+        int var6 = this.width;
         int var7 = SoftwareRasterizer.width - var6;
         int var8 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -121,7 +121,7 @@ final class ArgbSprite extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          ArgbSprite.d(SoftwareRasterizer.pixels, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -267,19 +267,19 @@ final class ArgbSprite extends Sprite {
         if (param5 == 0) {
           return;
         }
-        param0 = param0 - (this.field_u << 4);
-        param1 = param1 - (this.field_v << 4);
+        param0 = param0 - (this.offsetX << 4);
+        param1 = param1 - (this.offsetY << 4);
         var7 = (double)(param4 & 65535) * 0.00009587379924285257;
         var9 = (int)Math.floor(Math.sin(var7) * (double)param5 + 0.5);
         var10 = (int)Math.floor(Math.cos(var7) * (double)param5 + 0.5);
         var11 = -param0 * var10 + -param1 * var9;
         var12 = -(-param0) * var9 + -param1 * var10;
-        var13 = ((this.field_z << 4) - param0) * var10 + -param1 * var9;
-        var14 = -((this.field_z << 4) - param0) * var9 + -param1 * var10;
-        var15 = -param0 * var10 + ((this.field_p << 4) - param1) * var9;
-        var16 = -(-param0) * var9 + ((this.field_p << 4) - param1) * var10;
-        var17 = ((this.field_z << 4) - param0) * var10 + ((this.field_p << 4) - param1) * var9;
-        var18 = -((this.field_z << 4) - param0) * var9 + ((this.field_p << 4) - param1) * var10;
+        var13 = ((this.width << 4) - param0) * var10 + -param1 * var9;
+        var14 = -((this.width << 4) - param0) * var9 + -param1 * var10;
+        var15 = -param0 * var10 + ((this.height << 4) - param1) * var9;
+        var16 = -(-param0) * var9 + ((this.height << 4) - param1) * var10;
+        var17 = ((this.width << 4) - param0) * var10 + ((this.height << 4) - param1) * var9;
+        var18 = -((this.width << 4) - param0) * var9 + ((this.height << 4) - param1) * var10;
         if (var11 >= var13) {
           var19 = var13;
           var20 = var11;
@@ -368,10 +368,10 @@ final class ArgbSprite extends Sprite {
               var37 = var20;
               if (var35 >= 0 &&
                 var36 >= 0 &&
-                var35 - (this.field_z << 12) < 0 &&
-                var36 - (this.field_p << 12) < 0) {
+                var35 - (this.width << 12) < 0 &&
+                var36 - (this.height << 12) < 0) {
                 while (var37 < 0) {
-                  var38 = this.field_B[(var36 >> 12) * this.field_z + (var35 >> 12)];
+                  var38 = this.pixels[(var36 >> 12) * this.width + (var35 >> 12)];
                   var39 = SoftwareRasterizer.pixels[var34];
                   var40 = var38 >>> 24;
                   var41 = 256 - var40;
@@ -394,19 +394,19 @@ final class ArgbSprite extends Sprite {
               var36Lifetime5 = var31 + (var28 * var26 >> 4);
               var37Lifetime5 = var20;
               if (var35Lifetime5 >= 0 &&
-                var35Lifetime5 - (this.field_z << 12) < 0) {
+                var35Lifetime5 - (this.width << 12) < 0) {
                 if (var36Lifetime5 < 0) {
                   var32 = (var26 - 1 - var36Lifetime5) / var26;
                   var37Lifetime5 = var37Lifetime5 + var32;
                   var36Lifetime5 = var36Lifetime5 + var26 * var32;
                   var34Lifetime5 = var34Lifetime5 + var32;
                 }
-                var32Lifetime6 = (1 + var36Lifetime5 - (this.field_p << 12) - var26) / var26;
-                if ((1 + var36Lifetime5 - (this.field_p << 12) - var26) / var26 > var37Lifetime5) {
+                var32Lifetime6 = (1 + var36Lifetime5 - (this.height << 12) - var26) / var26;
+                if ((1 + var36Lifetime5 - (this.height << 12) - var26) / var26 > var37Lifetime5) {
                   var37Lifetime5 = var32Lifetime6;
                 }
                 while (var37Lifetime5 < 0) {
-                  var38Lifetime5 = this.field_B[(var36Lifetime5 >> 12) * this.field_z + (var35Lifetime5 >> 12)];
+                  var38Lifetime5 = this.pixels[(var36Lifetime5 >> 12) * this.width + (var35Lifetime5 >> 12)];
                   var39Lifetime5 = SoftwareRasterizer.pixels[var34Lifetime5];
                   var40Lifetime5 = var38Lifetime5 >>> 24;
                   var41Lifetime5 = 256 - var40Lifetime5;
@@ -430,9 +430,9 @@ final class ArgbSprite extends Sprite {
             var36Lifetime6 = var31 + (var28 * var26 >> 4);
             var37Lifetime6 = var20;
             if (var35Lifetime6 >= 0 &&
-              var35Lifetime6 - (this.field_z << 12) < 0) {
-              var32Lifetime5 = var36Lifetime6 - (this.field_p << 12);
-              if (var36Lifetime6 - (this.field_p << 12) >= 0) {
+              var35Lifetime6 - (this.width << 12) < 0) {
+              var32Lifetime5 = var36Lifetime6 - (this.height << 12);
+              if (var36Lifetime6 - (this.height << 12) >= 0) {
                 var32Lifetime5 = (var26 - var32Lifetime5) / var26;
                 var37Lifetime6 = var37Lifetime6 + var32Lifetime5;
                 var36Lifetime6 = var36Lifetime6 + var26 * var32Lifetime5;
@@ -443,7 +443,7 @@ final class ArgbSprite extends Sprite {
                 var37Lifetime6 = var32Lifetime5Lifetime1;
               }
               while (var37Lifetime6 < 0) {
-                var38Lifetime6 = this.field_B[(var36Lifetime6 >> 12) * this.field_z + (var35Lifetime6 >> 12)];
+                var38Lifetime6 = this.pixels[(var36Lifetime6 >> 12) * this.width + (var35Lifetime6 >> 12)];
                 var39Lifetime6 = SoftwareRasterizer.pixels[var34Lifetime6];
                 var40Lifetime6 = var38Lifetime6 >>> 24;
                 var41Lifetime6 = 256 - var40Lifetime6;
@@ -469,19 +469,19 @@ final class ArgbSprite extends Sprite {
               var36Lifetime1 = var31;
               var37Lifetime1 = var20;
               if (var36Lifetime1 >= 0 &&
-                var36Lifetime1 - (this.field_p << 12) < 0) {
+                var36Lifetime1 - (this.height << 12) < 0) {
                 if (var35Lifetime1 < 0) {
                   var32Lifetime1 = (var27 - 1 - var35Lifetime1) / var27;
                   var37Lifetime1 = var37Lifetime1 + var32Lifetime1;
                   var35Lifetime1 = var35Lifetime1 + var27 * var32Lifetime1;
                   var34Lifetime1 = var34Lifetime1 + var32Lifetime1;
                 }
-                var32Lifetime1Lifetime3 = (1 + var35Lifetime1 - (this.field_z << 12) - var27) / var27;
-                if ((1 + var35Lifetime1 - (this.field_z << 12) - var27) / var27 > var37Lifetime1) {
+                var32Lifetime1Lifetime3 = (1 + var35Lifetime1 - (this.width << 12) - var27) / var27;
+                if ((1 + var35Lifetime1 - (this.width << 12) - var27) / var27 > var37Lifetime1) {
                   var37Lifetime1 = var32Lifetime1Lifetime3;
                 }
                 while (var37Lifetime1 < 0) {
-                  var38Lifetime1 = this.field_B[(var36Lifetime1 >> 12) * this.field_z + (var35Lifetime1 >> 12)];
+                  var38Lifetime1 = this.pixels[(var36Lifetime1 >> 12) * this.width + (var35Lifetime1 >> 12)];
                   var39Lifetime1 = SoftwareRasterizer.pixels[var34Lifetime1];
                   var40Lifetime1 = var38Lifetime1 >>> 24;
                   var41Lifetime1 = 256 - var40Lifetime1;
@@ -512,8 +512,8 @@ final class ArgbSprite extends Sprite {
                 var36Lifetime1Lifetime1 = var36Lifetime1Lifetime1 + var26 * var32Lifetime1Lifetime1;
                 var34Lifetime1Lifetime1 = var34Lifetime1Lifetime1 + var32Lifetime1Lifetime1;
               }
-              var32Lifetime1Lifetime1Lifetime1 = (1 + var35Lifetime1Lifetime1 - (this.field_z << 12) - var27) / var27;
-              if ((1 + var35Lifetime1Lifetime1 - (this.field_z << 12) - var27) / var27 > var37Lifetime1Lifetime1) {
+              var32Lifetime1Lifetime1Lifetime1 = (1 + var35Lifetime1Lifetime1 - (this.width << 12) - var27) / var27;
+              if ((1 + var35Lifetime1Lifetime1 - (this.width << 12) - var27) / var27 > var37Lifetime1Lifetime1) {
                 var37Lifetime1Lifetime1 = var32Lifetime1Lifetime1Lifetime1;
               }
               if (var36Lifetime1Lifetime1 < 0) {
@@ -523,12 +523,12 @@ final class ArgbSprite extends Sprite {
                 var36Lifetime1Lifetime1 = var36Lifetime1Lifetime1 + var26 * var32Lifetime1Lifetime1Lifetime2;
                 var34Lifetime1Lifetime1 = var34Lifetime1Lifetime1 + var32Lifetime1Lifetime1Lifetime2;
               }
-              var32Lifetime1Lifetime1Lifetime3 = (1 + var36Lifetime1Lifetime1 - (this.field_p << 12) - var26) / var26;
-              if ((1 + var36Lifetime1Lifetime1 - (this.field_p << 12) - var26) / var26 > var37Lifetime1Lifetime1) {
+              var32Lifetime1Lifetime1Lifetime3 = (1 + var36Lifetime1Lifetime1 - (this.height << 12) - var26) / var26;
+              if ((1 + var36Lifetime1Lifetime1 - (this.height << 12) - var26) / var26 > var37Lifetime1Lifetime1) {
                 var37Lifetime1Lifetime1 = var32Lifetime1Lifetime1Lifetime3;
               }
               while (var37Lifetime1Lifetime1 < 0) {
-                var38Lifetime1Lifetime1 = this.field_B[(var36Lifetime1Lifetime1 >> 12) * this.field_z + (var35Lifetime1Lifetime1 >> 12)];
+                var38Lifetime1Lifetime1 = this.pixels[(var36Lifetime1Lifetime1 >> 12) * this.width + (var35Lifetime1Lifetime1 >> 12)];
                 var39Lifetime1Lifetime1 = SoftwareRasterizer.pixels[var34Lifetime1Lifetime1];
                 var40Lifetime1Lifetime1 = var38Lifetime1Lifetime1 >>> 24;
                 var41Lifetime1Lifetime1 = 256 - var40Lifetime1Lifetime1;
@@ -559,12 +559,12 @@ final class ArgbSprite extends Sprite {
               var36Lifetime1Lifetime2 = var36Lifetime1Lifetime2 + var26 * var32Lifetime1Lifetime2;
               var34Lifetime1Lifetime2 = var34Lifetime1Lifetime2 + var32Lifetime1Lifetime2;
             }
-            var32Lifetime1Lifetime2Lifetime1 = (1 + var35Lifetime1Lifetime2 - (this.field_z << 12) - var27) / var27;
-            if ((1 + var35Lifetime1Lifetime2 - (this.field_z << 12) - var27) / var27 > var37Lifetime1Lifetime2) {
+            var32Lifetime1Lifetime2Lifetime1 = (1 + var35Lifetime1Lifetime2 - (this.width << 12) - var27) / var27;
+            if ((1 + var35Lifetime1Lifetime2 - (this.width << 12) - var27) / var27 > var37Lifetime1Lifetime2) {
               var37Lifetime1Lifetime2 = var32Lifetime1Lifetime2Lifetime1;
             }
-            var32Lifetime1Lifetime2Lifetime2 = var36Lifetime1Lifetime2 - (this.field_p << 12);
-            if (var36Lifetime1Lifetime2 - (this.field_p << 12) >= 0) {
+            var32Lifetime1Lifetime2Lifetime2 = var36Lifetime1Lifetime2 - (this.height << 12);
+            if (var36Lifetime1Lifetime2 - (this.height << 12) >= 0) {
               var32Lifetime1Lifetime2Lifetime2 = (var26 - var32Lifetime1Lifetime2Lifetime2) / var26;
               var37Lifetime1Lifetime2 = var37Lifetime1Lifetime2 + var32Lifetime1Lifetime2Lifetime2;
               var35Lifetime1Lifetime2 = var35Lifetime1Lifetime2 + var27 * var32Lifetime1Lifetime2Lifetime2;
@@ -576,7 +576,7 @@ final class ArgbSprite extends Sprite {
               var37Lifetime1Lifetime2 = var32Lifetime1Lifetime2Lifetime3;
             }
             while (var37Lifetime1Lifetime2 < 0) {
-              var38Lifetime1Lifetime2 = this.field_B[(var36Lifetime1Lifetime2 >> 12) * this.field_z + (var35Lifetime1Lifetime2 >> 12)];
+              var38Lifetime1Lifetime2 = this.pixels[(var36Lifetime1Lifetime2 >> 12) * this.width + (var35Lifetime1Lifetime2 >> 12)];
               var39Lifetime1Lifetime2 = SoftwareRasterizer.pixels[var34Lifetime1Lifetime2];
               var40Lifetime1Lifetime2 = var38Lifetime1Lifetime2 >>> 24;
               var41Lifetime1Lifetime2 = 256 - var40Lifetime1Lifetime2;
@@ -602,9 +602,9 @@ final class ArgbSprite extends Sprite {
             var36Lifetime2 = var31;
             var37Lifetime2 = var20;
             if (var36Lifetime2 >= 0 &&
-              var36Lifetime2 - (this.field_p << 12) < 0) {
-              var32Lifetime2 = var35Lifetime2 - (this.field_z << 12);
-              if (var35Lifetime2 - (this.field_z << 12) >= 0) {
+              var36Lifetime2 - (this.height << 12) < 0) {
+              var32Lifetime2 = var35Lifetime2 - (this.width << 12);
+              if (var35Lifetime2 - (this.width << 12) >= 0) {
                 var32Lifetime2 = (var27 - var32Lifetime2) / var27;
                 var37Lifetime2 = var37Lifetime2 + var32Lifetime2;
                 var35Lifetime2 = var35Lifetime2 + var27 * var32Lifetime2;
@@ -615,7 +615,7 @@ final class ArgbSprite extends Sprite {
                 var37Lifetime2 = var32Lifetime2Lifetime1;
               }
               while (var37Lifetime2 < 0) {
-                var38Lifetime2 = this.field_B[(var36Lifetime2 >> 12) * this.field_z + (var35Lifetime2 >> 12)];
+                var38Lifetime2 = this.pixels[(var36Lifetime2 >> 12) * this.width + (var35Lifetime2 >> 12)];
                 var39Lifetime2 = SoftwareRasterizer.pixels[var34Lifetime2];
                 var40Lifetime2 = var38Lifetime2 >>> 24;
                 var41Lifetime2 = 256 - var40Lifetime2;
@@ -639,8 +639,8 @@ final class ArgbSprite extends Sprite {
             var35Lifetime3 = var30 + (var28 * var27 >> 4);
             var36Lifetime3 = var31 + (var28 * var26 >> 4);
             var37Lifetime3 = var20;
-            var32Lifetime3 = var35Lifetime3 - (this.field_z << 12);
-            if (var35Lifetime3 - (this.field_z << 12) >= 0) {
+            var32Lifetime3 = var35Lifetime3 - (this.width << 12);
+            if (var35Lifetime3 - (this.width << 12) >= 0) {
               var32Lifetime3 = (var27 - var32Lifetime3) / var27;
               var37Lifetime3 = var37Lifetime3 + var32Lifetime3;
               var35Lifetime3 = var35Lifetime3 + var27 * var32Lifetime3;
@@ -658,12 +658,12 @@ final class ArgbSprite extends Sprite {
               var36Lifetime3 = var36Lifetime3 + var26 * var32Lifetime3Lifetime2;
               var34Lifetime3 = var34Lifetime3 + var32Lifetime3Lifetime2;
             }
-            var32Lifetime3Lifetime3 = (1 + var36Lifetime3 - (this.field_p << 12) - var26) / var26;
-            if ((1 + var36Lifetime3 - (this.field_p << 12) - var26) / var26 > var37Lifetime3) {
+            var32Lifetime3Lifetime3 = (1 + var36Lifetime3 - (this.height << 12) - var26) / var26;
+            if ((1 + var36Lifetime3 - (this.height << 12) - var26) / var26 > var37Lifetime3) {
               var37Lifetime3 = var32Lifetime3Lifetime3;
             }
             while (var37Lifetime3 < 0) {
-              var38Lifetime3 = this.field_B[(var36Lifetime3 >> 12) * this.field_z + (var35Lifetime3 >> 12)];
+              var38Lifetime3 = this.pixels[(var36Lifetime3 >> 12) * this.width + (var35Lifetime3 >> 12)];
               var39Lifetime3 = SoftwareRasterizer.pixels[var34Lifetime3];
               var40Lifetime3 = var38Lifetime3 >>> 24;
               var41Lifetime3 = 256 - var40Lifetime3;
@@ -687,8 +687,8 @@ final class ArgbSprite extends Sprite {
           var35Lifetime4 = var30 + (var28 * var27 >> 4);
           var36Lifetime4 = var31 + (var28 * var26 >> 4);
           var37Lifetime4 = var20;
-          var32Lifetime4 = var35Lifetime4 - (this.field_z << 12);
-          if (var35Lifetime4 - (this.field_z << 12) >= 0) {
+          var32Lifetime4 = var35Lifetime4 - (this.width << 12);
+          if (var35Lifetime4 - (this.width << 12) >= 0) {
             var32Lifetime4 = (var27 - var32Lifetime4) / var27;
             var37Lifetime4 = var37Lifetime4 + var32Lifetime4;
             var35Lifetime4 = var35Lifetime4 + var27 * var32Lifetime4;
@@ -699,8 +699,8 @@ final class ArgbSprite extends Sprite {
           if ((var35Lifetime4 - var27) / var27 > var37Lifetime4) {
             var37Lifetime4 = var32Lifetime4Lifetime1;
           }
-          var32Lifetime4Lifetime2 = var36Lifetime4 - (this.field_p << 12);
-          if (var36Lifetime4 - (this.field_p << 12) >= 0) {
+          var32Lifetime4Lifetime2 = var36Lifetime4 - (this.height << 12);
+          if (var36Lifetime4 - (this.height << 12) >= 0) {
             var32Lifetime4Lifetime2 = (var26 - var32Lifetime4Lifetime2) / var26;
             var37Lifetime4 = var37Lifetime4 + var32Lifetime4Lifetime2;
             var35Lifetime4 = var35Lifetime4 + var27 * var32Lifetime4Lifetime2;
@@ -712,7 +712,7 @@ final class ArgbSprite extends Sprite {
             var37Lifetime4 = var32Lifetime4Lifetime3;
           }
           while (var37Lifetime4 < 0) {
-            var38Lifetime4 = this.field_B[(var36Lifetime4 >> 12) * this.field_z + (var35Lifetime4 >> 12)];
+            var38Lifetime4 = this.pixels[(var36Lifetime4 >> 12) * this.width + (var35Lifetime4 >> 12)];
             var39Lifetime4 = SoftwareRasterizer.pixels[var34Lifetime4];
             var40Lifetime4 = var38Lifetime4 >>> 24;
             var41Lifetime4 = 256 - var40Lifetime4;
@@ -751,23 +751,23 @@ final class ArgbSprite extends Sprite {
           if (param3 <= 0) {
             return;
           }
-          var5 = this.field_z;
-          var6 = this.field_p;
+          var5 = this.width;
+          var6 = this.height;
           var7 = 0;
           var8 = 0;
-          var9 = this.field_x;
-          var10 = this.field_s;
+          var9 = this.fullWidth;
+          var10 = this.fullHeight;
           var11 = (var9 << 16) / param2;
           var12 = (var10 << 16) / param3;
-          if (this.field_u > 0) {
-            var13 = ((this.field_u << 16) + var11 - 1) / var11;
+          if (this.offsetX > 0) {
+            var13 = ((this.offsetX << 16) + var11 - 1) / var11;
             param0 = param0 + var13;
-            var7 = var7 + (var13 * var11 - (this.field_u << 16));
+            var7 = var7 + (var13 * var11 - (this.offsetX << 16));
           }
-          if (this.field_v > 0) {
-            var13Lifetime1 = ((this.field_v << 16) + var12 - 1) / var12;
+          if (this.offsetY > 0) {
+            var13Lifetime1 = ((this.offsetY << 16) + var12 - 1) / var12;
             param1 = param1 + var13Lifetime1;
-            var8 = var8 + (var13Lifetime1 * var12 - (this.field_v << 16));
+            var8 = var8 + (var13Lifetime1 * var12 - (this.offsetY << 16));
           }
           if (var5 < var9) {
             param2 = ((var5 << 16) - var7 + var11 - 1) / var11;
@@ -798,7 +798,7 @@ final class ArgbSprite extends Sprite {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          ArgbSprite.d(SoftwareRasterizer.pixels, this.field_B, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -807,12 +807,12 @@ final class ArgbSprite extends Sprite {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + (this.field_x - this.field_z - this.field_u);
-        param1 = param1 + this.field_v;
+        param0 = param0 + (this.fullWidth - this.width - this.offsetX);
+        param1 = param1 + this.offsetY;
         int var3 = param0 + param1 * SoftwareRasterizer.width;
-        int var4 = this.field_z - 1;
-        int var5 = this.field_p;
-        int var6 = this.field_z;
+        int var4 = this.width - 1;
+        int var5 = this.height;
+        int var6 = this.width;
         int var7 = SoftwareRasterizer.width - var6;
         int var8 = var6 + var6;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -844,7 +844,7 @@ final class ArgbSprite extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          ArgbSprite.e(SoftwareRasterizer.pixels, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.e(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -876,12 +876,12 @@ final class ArgbSprite extends Sprite {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_u;
-        param1 = param1 + this.field_v;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
         int var4 = param0 + param1 * SoftwareRasterizer.width;
         int var5 = 0;
-        int var6 = this.field_p;
-        int var7 = this.field_z;
+        int var6 = this.height;
+        int var7 = this.width;
         int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -913,7 +913,7 @@ final class ArgbSprite extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          ArgbSprite.d(SoftwareRasterizer.pixels, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -996,23 +996,23 @@ final class ArgbSprite extends Sprite {
           if (param3 <= 0) {
             return;
           }
-          var6 = this.field_z;
-          var7 = this.field_p;
+          var6 = this.width;
+          var7 = this.height;
           var8 = 0;
           var9 = 0;
-          var10 = this.field_x;
-          var11 = this.field_s;
+          var10 = this.fullWidth;
+          var11 = this.fullHeight;
           var12 = (var10 << 16) / param2;
           var13 = (var11 << 16) / param3;
-          if (this.field_u > 0) {
-            var14 = ((this.field_u << 16) + var12 - 1) / var12;
+          if (this.offsetX > 0) {
+            var14 = ((this.offsetX << 16) + var12 - 1) / var12;
             param0 = param0 + var14;
-            var8 = var8 + (var14 * var12 - (this.field_u << 16));
+            var8 = var8 + (var14 * var12 - (this.offsetX << 16));
           }
-          if (this.field_v > 0) {
-            var14Lifetime1 = ((this.field_v << 16) + var13 - 1) / var13;
+          if (this.offsetY > 0) {
+            var14Lifetime1 = ((this.offsetY << 16) + var13 - 1) / var13;
             param1 = param1 + var14Lifetime1;
-            var9 = var9 + (var14Lifetime1 * var13 - (this.field_v << 16));
+            var9 = var9 + (var14Lifetime1 * var13 - (this.offsetY << 16));
           }
           if (var6 < var10) {
             param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
@@ -1043,7 +1043,7 @@ final class ArgbSprite extends Sprite {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          ArgbSprite.c(SoftwareRasterizer.pixels, this.field_B, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          ArgbSprite.c(SoftwareRasterizer.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -1094,23 +1094,23 @@ final class ArgbSprite extends Sprite {
           if (param3 <= 0) {
             return;
           }
-          var6 = this.field_z;
-          var7 = this.field_p;
+          var6 = this.width;
+          var7 = this.height;
           var8 = 0;
           var9 = 0;
-          var10 = this.field_x;
-          var11 = this.field_s;
+          var10 = this.fullWidth;
+          var11 = this.fullHeight;
           var12 = (var10 << 16) / param2;
           var13 = (var11 << 16) / param3;
-          if (this.field_u > 0) {
-            var14 = ((this.field_u << 16) + var12 - 1) / var12;
+          if (this.offsetX > 0) {
+            var14 = ((this.offsetX << 16) + var12 - 1) / var12;
             param0 = param0 + var14;
-            var8 = var8 + (var14 * var12 - (this.field_u << 16));
+            var8 = var8 + (var14 * var12 - (this.offsetX << 16));
           }
-          if (this.field_v > 0) {
-            var14Lifetime1 = ((this.field_v << 16) + var13 - 1) / var13;
+          if (this.offsetY > 0) {
+            var14Lifetime1 = ((this.offsetY << 16) + var13 - 1) / var13;
             param1 = param1 + var14Lifetime1;
-            var9 = var9 + (var14Lifetime1 * var13 - (this.field_v << 16));
+            var9 = var9 + (var14Lifetime1 * var13 - (this.offsetY << 16));
           }
           if (var6 < var10) {
             param2 = ((var6 << 16) - var8 + var12 - 1) / var12;
@@ -1141,7 +1141,7 @@ final class ArgbSprite extends Sprite {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          ArgbSprite.d(SoftwareRasterizer.pixels, this.field_B, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -1176,10 +1176,10 @@ final class ArgbSprite extends Sprite {
         int var13Lifetime1;
         int var14Lifetime1;
         int var19Lifetime1;
-        var3 = this.field_z >> 1;
-        var4 = this.field_p >> 1;
-        param0 = param0 + this.field_u / 2;
-        param1 = param1 + this.field_v / 2;
+        var3 = this.width >> 1;
+        var4 = this.height >> 1;
+        param0 = param0 + this.offsetX / 2;
+        param1 = param1 + this.offsetY / 2;
         if (param0 >= SoftwareRasterizer.clipLeft) {
           stackIn_3_0 = 0;
         } else {
@@ -1187,7 +1187,7 @@ final class ArgbSprite extends Sprite {
         }
         var5 = stackIn_3_0;
         if (param0 + var3 <= SoftwareRasterizer.clipRight) {
-          stackIn_6_0 = this.field_z - 2;
+          stackIn_6_0 = this.width - 2;
         } else {
           stackIn_6_0 = (SoftwareRasterizer.clipRight - param0 << 1) - 2;
         }
@@ -1199,13 +1199,13 @@ final class ArgbSprite extends Sprite {
         }
         var7 = stackIn_9_0;
         if (param1 + var4 <= SoftwareRasterizer.clipBottom) {
-          stackIn_12_0 = this.field_p - 2;
+          stackIn_12_0 = this.height - 2;
         } else {
           stackIn_12_0 = (SoftwareRasterizer.clipBottom - param1 << 1) - 2;
         }
         var8 = stackIn_12_0;
         for (var9 = var7; var9 <= var8; var9 += 2) {
-          var10 = var9 * this.field_z + var5;
+          var10 = var9 * this.width + var5;
           var11 = (param1 + (var9 >> 1)) * SoftwareRasterizer.width + (param0 + (var5 >> 1));
           var12 = var5;
           while (var12 <= var6) {
@@ -1216,12 +1216,12 @@ final class ArgbSprite extends Sprite {
             var17 = 0;
             var18 = 0;
             for (var19 = 0; var19 < 4; var19++) {
-              stackIn_20_0 = this.field_B;
+              stackIn_20_0 = this.pixels;
               stackIn_20_1 = var10 + (var19 & 1);
               if ((var19 & 2) != 0) {
                 stackIn_21_2 = 0;
               } else {
-                stackIn_21_2 = this.field_z;
+                stackIn_21_2 = this.width;
               }
               var13Lifetime1 = stackIn_20_0[stackIn_20_1 + stackIn_21_2];
               var14Lifetime1 = var13Lifetime1 >>> 24;
@@ -1249,12 +1249,12 @@ final class ArgbSprite extends Sprite {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_u;
-        param1 = param1 + this.field_v;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
         int var4 = param0 + param1 * SoftwareRasterizer.width;
         int var5 = 0;
-        int var6 = this.field_p;
-        int var7 = this.field_z;
+        int var6 = this.height;
+        int var7 = this.width;
         int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -1286,7 +1286,7 @@ final class ArgbSprite extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          ArgbSprite.c(SoftwareRasterizer.pixels, this.field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.c(SoftwareRasterizer.pixels, this.pixels, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1295,12 +1295,12 @@ final class ArgbSprite extends Sprite {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_u;
-        param1 = param1 + this.field_v;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
         int var3 = param0 + param1 * SoftwareRasterizer.width;
         int var4 = 0;
-        int var5 = this.field_p;
-        int var6 = this.field_z;
+        int var5 = this.height;
+        int var6 = this.width;
         int var7 = SoftwareRasterizer.width - var6;
         int var8 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -1332,7 +1332,7 @@ final class ArgbSprite extends Sprite {
           if (var5 <= 0) {
             return;
           }
-          ArgbSprite.d(SoftwareRasterizer.pixels, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.d(SoftwareRasterizer.pixels, this.pixels, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1432,12 +1432,12 @@ final class ArgbSprite extends Sprite {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_u;
-        param1 = param1 + this.field_v;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
         int var4 = param0 + param1 * SoftwareRasterizer.width;
         int var5 = 0;
-        int var6 = this.field_p;
-        int var7 = this.field_z;
+        int var6 = this.height;
+        int var7 = this.width;
         int var8 = SoftwareRasterizer.width - var7;
         int var9 = 0;
         if (param1 < SoftwareRasterizer.clipTop) {
@@ -1469,7 +1469,7 @@ final class ArgbSprite extends Sprite {
           if (var6 <= 0) {
             return;
           }
-          ArgbSprite.b(0, 0, 0, SoftwareRasterizer.pixels, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.b(0, 0, 0, SoftwareRasterizer.pixels, this.pixels, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1543,10 +1543,10 @@ final class ArgbSprite extends Sprite {
         int var15Lifetime1;
         int var19Lifetime1;
         int[] var23Lifetime1;
-        var3 = this.field_z >> 2;
-        var4 = this.field_p >> 2;
-        param0 = param0 + this.field_u / 4;
-        param1 = param1 + this.field_v / 4;
+        var3 = this.width >> 2;
+        var4 = this.height >> 2;
+        param0 = param0 + this.offsetX / 4;
+        param1 = param1 + this.offsetY / 4;
         if (param0 >= SoftwareRasterizer.clipLeft) {
           stackIn_3_0 = 0;
         } else {
@@ -1554,7 +1554,7 @@ final class ArgbSprite extends Sprite {
         }
         var5 = stackIn_3_0;
         if (param0 + var3 <= SoftwareRasterizer.clipRight) {
-          stackIn_6_0 = this.field_z - 4;
+          stackIn_6_0 = this.width - 4;
         } else {
           stackIn_6_0 = (SoftwareRasterizer.clipRight - param0 << 2) - 4;
         }
@@ -1566,7 +1566,7 @@ final class ArgbSprite extends Sprite {
         }
         var7 = stackIn_9_0;
         if (param1 + var4 <= SoftwareRasterizer.clipBottom) {
-          stackIn_12_0 = this.field_p - 4;
+          stackIn_12_0 = this.height - 4;
         } else {
           stackIn_12_0 = (SoftwareRasterizer.clipBottom - param1 << 2) - 4;
         }
@@ -1576,11 +1576,11 @@ final class ArgbSprite extends Sprite {
         var9 = var22;
         for (var10 = var7; var10 <= var8; var10 += 4) {
           for (var11 = var5; var11 <= var6; var11 += 4) {
-            var12 = var10 * this.field_z + var11;
+            var12 = var10 * this.width + var11;
             var13 = (param1 + (var10 >> 2)) * SoftwareRasterizer.width + (param0 + (var11 >> 2));
             for (var14 = 0; var14 < 4; var14++) {
               for (var15 = 0; var15 < 4; var15++) {
-                var9[(var14 << 2) + var15] = this.field_B[var12 + var14 * this.field_z + var15];
+                var9[(var14 << 2) + var15] = this.pixels[var12 + var14 * this.width + var15];
               }
             }
             var23Lifetime1 = var22;

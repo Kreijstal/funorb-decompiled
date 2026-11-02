@@ -134,7 +134,7 @@ abstract class tj extends pe {
           ei.field_n.c(this.field_o + param0, param3 + this.field_l, this.field_K);
           return;
         }
-        if (this.field_r > ei.field_n.field_z) {
+        if (this.field_r > ei.field_n.width) {
           ei.field_n = new Sprite(this.field_r, this.field_n);
           ud.a(ei.field_n, false);
           SoftwareRasterizer.d();
@@ -144,7 +144,7 @@ abstract class tj extends pe {
           ei.field_n.c(this.field_o + param0, param3 + this.field_l, this.field_K);
           return;
         }
-        if (this.field_n > ei.field_n.field_p) {
+        if (this.field_n > ei.field_n.height) {
           ei.field_n = new Sprite(this.field_r, this.field_n);
           ud.a(ei.field_n, false);
           SoftwareRasterizer.d();

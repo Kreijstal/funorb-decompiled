@@ -72,12 +72,12 @@ abstract class r implements dk {
           SoftwareRasterizer.d();
           jd.field_f = 0;
           gf.k(param0 ^ -301);
-          var2 = var1.e();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
             var2.b(-2, -2, 16777215);
             SoftwareRasterizer.c(4, 4, 0, 0, 540, 140);
           }
-          ag.field_t.b();
+          ag.field_t.bindAsRasterTarget();
           var1.a(0, 0);
           if (param0 != 350) {
             field_a = 72;

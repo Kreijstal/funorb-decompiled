@@ -44,17 +44,17 @@ final class lb {
         int var14Lifetime3;
         var20 = wizardrun.field_H;
         try {
-          var6_int = (param0 - param1 << 8) / param3.field_x;
-          param4 = param4 + param3.field_v;
-          var7 = param3.field_u * var6_int + (param1 << 8);
-          param2 = param2 + param3.field_u;
+          var6_int = (param0 - param1 << 8) / param3.fullWidth;
+          param4 = param4 + param3.offsetY;
+          var7 = param3.offsetX * var6_int + (param1 << 8);
+          param2 = param2 + param3.offsetX;
           var8 = param2 + SoftwareRasterizer.width * param4;
           var9 = 0;
           if (param5 >= -80) {
             field_f = (String[]) null;
           }
-          var10 = param3.field_p;
-          var11 = param3.field_z;
+          var10 = param3.height;
+          var11 = param3.width;
           var12 = SoftwareRasterizer.width - var11;
           var13 = 0;
           if (SoftwareRasterizer.clipTop > param4) {
@@ -94,7 +94,7 @@ final class lb {
                 if (var15 >= 0) {
                   incrementValue$0 = var9;
                   var9++;
-                  var17 = param3.field_B[incrementValue$0];
+                  var17 = param3.pixels[incrementValue$0];
                   if (var17 != 0) {
                     if (var15 <= 255) {
                       var18 = SoftwareRasterizer.pixels[var8];

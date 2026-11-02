@@ -296,7 +296,7 @@ final class ud implements Runnable {
         }
         try {
           ph.d(-31782);
-          SoftwareRasterizer.a(param0.field_B, param0.field_x, param0.field_s);
+          SoftwareRasterizer.setTarget(param0.pixels, param0.fullWidth, param0.fullHeight);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "ud.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
