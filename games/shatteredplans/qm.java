@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qm extends df {
+final class qm extends DualLinkNode {
     ln field_r;
     ln field_q;
     int field_o;

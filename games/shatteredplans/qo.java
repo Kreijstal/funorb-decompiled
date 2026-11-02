@@ -34,7 +34,7 @@ abstract class qo {
           field_b = 102;
         }
         am.field_xb.a(199, gf.field_k - 120 - 94, (byte) 109, 90, var2 - 199 * var4 / var3);
-        pf.field_g.a(438, -124 + gf.field_k, (byte) 77, 0, 438 * var4 / var3 + var2 + 202);
+        IntrusiveDeque.field_g.a(438, -124 + gf.field_k, (byte) 77, 0, 438 * var4 / var3 + var2 + 202);
     }
 
     public static void a(int param0) {

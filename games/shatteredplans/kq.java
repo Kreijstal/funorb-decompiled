@@ -21,7 +21,7 @@ final class kq {
     private int field_u;
     private os field_M;
     private int[][] field_q;
-    static bi field_R;
+    static Sprite field_R;
     private boolean field_Y;
     private os field_V;
     private boolean field_I;
@@ -31,7 +31,7 @@ final class kq {
     private jh field_a;
     private int field_w;
     private qh field_cb;
-    private bi field_T;
+    private Sprite field_T;
     private boolean field_v;
     private qh field_e;
     private String[][] field_l;
@@ -45,14 +45,14 @@ final class kq {
     private int field_jb;
     private int[] field_p;
     private int[][] field_Z;
-    private pf field_B;
+    private IntrusiveDeque field_B;
     private int[] field_ob;
     private boolean field_ib;
     jh field_X;
     jh field_d;
     private jh field_mb;
     private os field_K;
-    private bi field_eb;
+    private Sprite field_eb;
     private boolean[] field_z;
     private jh field_f;
     private int field_H;
@@ -63,11 +63,11 @@ final class kq {
     private jh field_n;
     static String field_i;
     static jo field_A;
-    private pf field_y;
+    private IntrusiveDeque field_y;
     private jh field_W;
     private int field_Q;
     private jh field_hb;
-    private om field_t;
+    private ArgbSprite field_t;
     static int[] field_c;
 
     final void a(int param0, int param1) {
@@ -141,7 +141,7 @@ final class kq {
             var3_int++;
           } while (var9 == 0);
           var3_ref = (ad) (this.field_k.field_v);
-          var3_ref.field_e.a(-2948, (bi) null);
+          var3_ref.field_e.a(-2948, (Sprite) null);
           if (this.field_s.field_z.field_T == -1 &&
             !this.field_s.field_L) {
             boolean decompiledFrameRemainder2 = true;
@@ -224,7 +224,7 @@ final class kq {
             if ((decompiledFrameRemainder7) &&
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              this.a(10, 0, li.field_e);
+              this.a(10, 0, SocketConnector.field_e);
               if (var9 == 0) {
                 return;
               }
@@ -467,7 +467,7 @@ final class kq {
           if (param0.equalsIgnoreCase("capture1")) {
             var2_intLifetime1 = ma.a((CharSequence) ((Object) param0.substring(9)), 2);
             id.field_d = oq.field_a.field_P.field_g.field_e[var2_intLifetime1];
-            uq.field_m.a(pa.a(id.field_d, param1 ^ -9), 27275, "capture1");
+            uq.field_m.a(ProxySocketConnector.a(id.field_d, param1 ^ -9), 27275, "capture1");
             return;
           }
           if (param0.equalsIgnoreCase("showtabs")) {
@@ -856,7 +856,7 @@ final class kq {
         int stackIn_29_0 = 0;
         int stackIn_36_0 = 0;
         int stackIn_43_0 = 0;
-        bi stackIn_48_0 = null;
+        Sprite stackIn_48_0 = null;
         int stackIn_81_0 = 0;
         int stackIn_81_1 = 0;
         int stackIn_102_0 = 0;
@@ -877,14 +877,14 @@ final class kq {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        bi var8 = null;
+        Sprite var8 = null;
         int[] var8_array = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        bi var14 = null;
+        Sprite var14 = null;
         int var15 = 0;
         int[][] var16 = null;
         int var17 = 0;
@@ -963,7 +963,7 @@ final class kq {
           var7 = 360;
           if (fj.field_t.field_h == 2) {
             sn.a(var4, -104, var7, (32 - var3_int << 7) / 32 + 128, var5, var6);
-            var8 = qh.a((bi) null, var6, var4, var5, -1, var7);
+            var8 = qh.a((Sprite) null, var6, var4, var5, -1, var7);
             bs.a(var8, 93);
             gf.b(3, 3, 0, 0, var4, var7);
             cg.i(0);
@@ -1151,7 +1151,7 @@ final class kq {
           var23 = 4 * this.field_D;
           var17Lifetime2 = -40 + var4;
           var24_int = 0;
-          L33: while (true) {
+          scanLoop1: while (true) {
             if (var24_int < 4) {
               this.b(var24_int, var22Lifetime2, var21Lifetime2, 85, var23);
               var23++;
@@ -1162,13 +1162,13 @@ final class kq {
               }
             } else {
               if (var17Lifetime2 <= 320) {
-                break L33;
+                break scanLoop1;
               }
             }
             var17Lifetime2 = 320;
             break;
           }
-          L36: {
+          regionExit2: {
             gf.d(20 + var5, var6 + 20, var17Lifetime2 + (var5 + 20), var6 + 20 + 240);
             if (this.field_Q != 0 &&
               var16 != null) {
@@ -1298,7 +1298,7 @@ final class kq {
                   stackIn_206_0 = 0;
                   stackIn_206_1 = var31Lifetime1 % var30;
                   if (var40 != 0) {
-                    break L36;
+                    break regionExit2;
                   }
                   if (stackIn_206_0 == stackIn_206_1) {
                     var33 = Integer.toString(var31Lifetime1);
@@ -1396,7 +1396,7 @@ final class kq {
               return;
             }
           }
-          var15 = kf.a(this.field_G[param4], 117);
+          var15 = GameApplet.a(this.field_G[param4], 117);
           var16 = 0;
           while (var6_int > var16) {
             var17 = (var6_int * var14 - (var15[var16] * var14 >> 1)) / var6_int;
@@ -1439,7 +1439,7 @@ final class kq {
           this.field_J.field_s = false;
           this.field_cb.field_s = false;
           if (param0 != -4956) {
-            this.field_B = (pf) null;
+            this.field_B = (IntrusiveDeque) null;
           }
           if (null != this.field_nb) {
             this.field_nb.field_s = false;
@@ -1502,13 +1502,13 @@ final class kq {
           var7 = -10 + (320 + var5 + 40);
           var8 = var6 + 51;
           var9 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (4 > var9) {
               var10 = this.field_ob[var9];
               stackIn_40_0 = ~var7;
               stackIn_40_1 = ~pd.field_k;
               if (var13 != 0) {
-                break L2;
+                break scanLoop1;
               }
               if (stackIn_40_0 < stackIn_40_1 ||
                 !(var8 <= bb.field_b) ||
@@ -1678,30 +1678,30 @@ final class kq {
         try {
           var5 = cl.field_m.toUpperCase() + ": " + tc.field_E[2];
           rs.field_Cb.a(var5, param3 + 5, param1 + 5, param0 - 10, 480, 16777215, -1, 0, 0, rs.field_Cb.field_J);
-          var6 = vg.field_t.field_z * 2 + rs.field_Cb.c("= " + vs.field_a);
-          gf.a((param0 - var6) / 2 + (param3 - 10), 15 + (param1 + rs.field_Cb.field_J), var6 + 20, 10 + vg.field_t.field_w * 3, 5, 0, 128);
+          var6 = UiWidget.field_t.field_z * 2 + rs.field_Cb.c("= " + vs.field_a);
+          gf.a((param0 - var6) / 2 + (param3 - 10), 15 + (param1 + rs.field_Cb.field_J), var6 + 20, 10 + UiWidget.field_t.field_w * 3, 5, 0, 128);
           var7 = 29 + (rs.field_Cb.field_J + param1);
-          var8 = vg.field_t.field_z + rs.field_Cb.c("= " + re.a(hg.field_s, 4371, new String[]{Integer.toString(3)}));
-          ek.field_z.f((-ek.field_z.field_z + vg.field_t.field_z) / 2 + (param0 - var8) / 2 + param3, var7);
-          vg.field_t.f((-var8 + param0) / 2 + param3, var7 - 9);
-          gf.b(em.field_c[0] + (param3 + (vg.field_t.field_z + (param0 - var8)) / 2 << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, h.field_s);
-          gf.b((param3 + (vg.field_t.field_z + param0 - var8) / 2 << 4) + em.field_c[2], (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[2], 50, 7, h.field_s);
-          gf.b(em.field_c[3] + ((vg.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[3], 50, 7, h.field_s);
-          rs.field_Cb.d("= " + re.a(hg.field_s, 4371, new String[]{Integer.toString(3)}), vg.field_t.field_z + param3 + ((-var8 + param0) / 2 + 5), vg.field_t.field_w / 2 + var7 - 4, 16777215, -1);
-          var7 = var7 + vg.field_t.field_w;
-          ek.field_z.f(param3 + ((-var8 + param0) / 2 + (-ek.field_z.field_z + vg.field_t.field_z) / 2), var7);
-          vg.field_t.f((param0 - var8) / 2 + param3, var7 - 9);
+          var8 = UiWidget.field_t.field_z + rs.field_Cb.c("= " + re.a(hg.field_s, 4371, new String[]{Integer.toString(3)}));
+          ek.field_z.f((-ek.field_z.field_z + UiWidget.field_t.field_z) / 2 + (param0 - var8) / 2 + param3, var7);
+          UiWidget.field_t.f((-var8 + param0) / 2 + param3, var7 - 9);
+          gf.b(em.field_c[0] + (param3 + (UiWidget.field_t.field_z + (param0 - var8)) / 2 << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, h.field_s);
+          gf.b((param3 + (UiWidget.field_t.field_z + param0 - var8) / 2 << 4) + em.field_c[2], (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[2], 50, 7, h.field_s);
+          gf.b(em.field_c[3] + ((UiWidget.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[3], 50, 7, h.field_s);
+          rs.field_Cb.d("= " + re.a(hg.field_s, 4371, new String[]{Integer.toString(3)}), UiWidget.field_t.field_z + param3 + ((-var8 + param0) / 2 + 5), UiWidget.field_t.field_w / 2 + var7 - 4, 16777215, -1);
+          var7 = var7 + UiWidget.field_t.field_w;
+          ek.field_z.f(param3 + ((-var8 + param0) / 2 + (-ek.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
+          UiWidget.field_t.f((param0 - var8) / 2 + param3, var7 - 9);
           int var9 = 87 % ((-25 - param2) / 51);
-          gf.b((param3 + (vg.field_t.field_z + (-var8 + param0)) / 2 << 4) + em.field_c[0], ul.field_Db[0] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, h.field_s);
-          gf.b(((vg.field_t.field_z - var8 + param0) / 2 + param3 << 4) + em.field_c[1], ul.field_Db[1] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, h.field_s);
-          rs.field_Cb.d("= " + re.a(hg.field_s, 4371, new String[]{Integer.toString(2)}), 5 + vg.field_t.field_z + ((param0 - var8) / 2 + param3), -4 + (var7 + vg.field_t.field_w / 2), 16777215, -1);
-          var7 = var7 + vg.field_t.field_w;
-          ek.field_z.f(-5 + (param3 + (-var6 + param0) / 2 + (-ek.field_z.field_z + vg.field_t.field_z) / 2), var7);
-          vg.field_t.f((-var6 + param0) / 2 + param3 - 5, var7 - 9);
-          gf.b(em.field_c[0] + (-5 + ((vg.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, h.field_s);
-          ek.field_z.f(-5 + (vg.field_t.field_z + (-var6 + param0) / 2 + param3) + (-ek.field_z.field_z + vg.field_t.field_z) / 2, var7);
-          vg.field_t.f(param3 + (-var6 + param0) / 2 + (vg.field_t.field_z - 5), var7 - 9);
-          rs.field_Cb.d("= " + vs.field_a, 2 * vg.field_t.field_z + (-var6 + param0) / 2 + param3, vg.field_t.field_w / 2 + (-4 + var7), 16777215, -1);
+          gf.b((param3 + (UiWidget.field_t.field_z + (-var8 + param0)) / 2 << 4) + em.field_c[0], ul.field_Db[0] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, h.field_s);
+          gf.b(((UiWidget.field_t.field_z - var8 + param0) / 2 + param3 << 4) + em.field_c[1], ul.field_Db[1] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, h.field_s);
+          rs.field_Cb.d("= " + re.a(hg.field_s, 4371, new String[]{Integer.toString(2)}), 5 + UiWidget.field_t.field_z + ((param0 - var8) / 2 + param3), -4 + (var7 + UiWidget.field_t.field_w / 2), 16777215, -1);
+          var7 = var7 + UiWidget.field_t.field_w;
+          ek.field_z.f(-5 + (param3 + (-var6 + param0) / 2 + (-ek.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
+          UiWidget.field_t.f((-var6 + param0) / 2 + param3 - 5, var7 - 9);
+          gf.b(em.field_c[0] + (-5 + ((UiWidget.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, h.field_s);
+          ek.field_z.f(-5 + (UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3) + (-ek.field_z.field_z + UiWidget.field_t.field_z) / 2, var7);
+          UiWidget.field_t.f(param3 + (-var6 + param0) / 2 + (UiWidget.field_t.field_z - 5), var7 - 9);
+          rs.field_Cb.d("= " + vs.field_a, 2 * UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3, UiWidget.field_t.field_w / 2 + (-4 + var7), 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "kq.NA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -1871,7 +1871,7 @@ final class kq {
         try {
           var3 = (rh) (this.field_j.field_x);
           if (var3.field_b[param0] != null) {
-            var3.field_b[param0].a((byte) -126, ii.field_s);
+            var3.field_b[param0].a((byte) -126, SpriteState.field_s);
           }
           var4 = var3.field_c[param0];
           if (param1 != 2) {
@@ -2316,7 +2316,7 @@ final class kq {
           }
           if (this.field_J.field_A &&
             this.field_n.field_s) {
-            fl.field_b.b(this.field_n.field_k, this.field_n.field_t, var5Lifetime1);
+            NodeHashTableIterator.field_b.b(this.field_n.field_k, this.field_n.field_t, var5Lifetime1);
           }
           if (null != this.field_nb &&
             this.field_nb.field_A &&
@@ -2379,7 +2379,7 @@ final class kq {
             var11 = rs.field_Cb.field_J + 245;
             if (var8 == m.field_v) {
               if (this.field_s.field_P.field_w != 0) {
-                stackIn_163_0 = oh.field_g;
+                stackIn_163_0 = IntrusiveNode.field_g;
               } else {
                 stackIn_163_0 = ad.field_b;
               }
@@ -2627,12 +2627,12 @@ final class kq {
             this.field_s.field_Q != null) {
             this.field_s.field_z.a(0, this.field_s.field_Q.field_a, false);
             this.field_X.g(114);
-            this.field_X.field_o = ip.field_h;
+            this.field_X.field_o = SecondaryNodeDequeIterator.field_h;
             if (!ShatteredPlansClient.field_F) {
               return;
             }
           }
-          this.field_s.field_z.a(-1, new pf(), false);
+          this.field_s.field_z.a(-1, new IntrusiveDeque(), false);
           this.field_s.a(2);
           this.field_X.d(false);
           this.field_X.field_o = da.field_f;
@@ -2695,14 +2695,14 @@ final class kq {
             var3 = new int[16][var2_int];
             var4_ref_fs__ = this.field_s.field_P.field_v;
             var5 = 0;
-            L6: while (true) {
+            scanLoop1: while (true) {
               if (var5 < var4_ref_fs__.length) {
                 var6_ref_fs = var4_ref_fs__[var5];
                 var7_ref_int__ = var6_ref_fs.field_q.b((byte) -111);
                 var8 = var6_ref_fs.field_q.a(121);
                 stackIn_37_0 = 0;
                 if (var10 != 0) {
-                  break L6;
+                  break scanLoop1;
                 }
                 var9 = stackIn_37_0;
                 while (var9 < 16) {
@@ -2711,7 +2711,7 @@ final class kq {
                   var9++;
                 }
                 var5++;
-                continue L6;
+                continue scanLoop1;
               }
               this.field_q = new int[16][var2_int];
               stackIn_37_0 = 0;
@@ -2730,7 +2730,7 @@ final class kq {
                 break;
               }
               var5Lifetime1 = stackIn_55_0;
-              L14: while (true) {
+              scanLoop2: while (true) {
                 stackIn_43_0 = var2_int;
                 stackIn_43_1 = var5Lifetime1;
                 if (stackIn_43_0 > stackIn_43_1) {
@@ -2747,7 +2747,7 @@ final class kq {
                   }
                   this.field_q[var4][var5Lifetime1] = var2_int - var6;
                   var5Lifetime1++;
-                  continue L14;
+                  continue scanLoop2;
                 }
                 break;
               }
@@ -2833,8 +2833,8 @@ final class kq {
         String var8 = null;
         me var9 = null;
         int var10 = 0;
-        bi var11 = null;
-        om var12 = null;
+        Sprite var11 = null;
+        ArgbSprite var12 = null;
         int var13_int = 0;
         String var13 = null;
         int var14 = 0;
@@ -2905,14 +2905,14 @@ final class kq {
           if (null != this.field_s.field_n) {
             var10 = this.field_s.field_n.field_x;
           }
-          var11 = new bi(hb.field_b[0].field_w, -rs.field_Cb.field_J + 450 - (10 + hb.field_b[0].field_z / 2));
+          var11 = new Sprite(hb.field_b[0].field_w, -rs.field_Cb.field_J + 450 - (10 + hb.field_b[0].field_z / 2));
           ra.a(param0 ^ -5630);
           var11.e();
           gf.i(0, 0, var11.field_z, var11.field_w, this.field_s.field_P.field_v[var10].field_k, 0);
           cg.i(param0 ^ param0);
           var11.f();
           var11.a(5 + (rs.field_Cb.field_J / 2 + var4), rs.field_Cb.field_J + var5 + 10, 64);
-          var12 = new om(hb.field_b[0].field_z, hb.field_b[0].field_w);
+          var12 = new ArgbSprite(hb.field_b[0].field_z, hb.field_b[0].field_w);
           var13_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(hb.field_b[var10].field_B.length > var13_int)))) {
@@ -3019,12 +3019,12 @@ final class kq {
           var3 = this.field_C[0].length;
           var4 = new int[var2_int][];
           var5 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var2_int > var5) {
               var6 = this.field_Z[var5];
               stackIn_38_0 = this.field_C;
               if (var10 != 0) {
-                break L3;
+                break scanLoop1;
               }
               var7 = stackIn_38_0[var5];
               var8 = new int[var3];
@@ -3035,7 +3035,7 @@ final class kq {
               }
               var4[var5] = var8;
               var5++;
-              continue L3;
+              continue scanLoop1;
             }
             stackIn_38_0 = var4;
             break;
@@ -3092,7 +3092,7 @@ final class kq {
     final static java.applet.Applet f(byte param0) {
         RuntimeException var1 = null;
         java.applet.Applet stackIn_2_0 = null;
-        kf stackIn_7_0 = null;
+        GameApplet stackIn_7_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (hb.field_a != null) {
@@ -3195,17 +3195,17 @@ final class kq {
         int stackIn_161_0 = 0;
         tr stackIn_174_0 = null;
         int stackIn_174_1 = 0;
-        pf stackIn_175_2 = null;
+        IntrusiveDeque stackIn_175_2 = null;
         tr stackIn_187_0 = null;
         int stackIn_187_1 = 0;
-        pf stackIn_188_2 = null;
+        IntrusiveDeque stackIn_188_2 = null;
         int stackIn_190_0 = 0;
         tr stackIn_203_0 = null;
         int stackIn_203_1 = 0;
-        pf stackIn_204_2 = null;
+        IntrusiveDeque stackIn_204_2 = null;
         tr stackIn_210_0 = null;
         int stackIn_210_1 = 0;
-        pf stackIn_211_2 = null;
+        IntrusiveDeque stackIn_211_2 = null;
         int stackIn_213_0 = 0;
         int stackIn_224_0 = 0;
         boolean stackIn_232_0 = false;
@@ -3461,13 +3461,13 @@ final class kq {
                   decompiledFrameRemainder0 = !(this.field_X.f(244874369));
                   if (decompiledFrameRemainder0) {
                     this.field_X.e((byte) 8);
-                    this.field_X.field_o = ip.field_h;
+                    this.field_X.field_o = SecondaryNodeDequeIterator.field_h;
                     decompiledFrameRemainder0 = (var9 != 0);
                   }
                 }
               }
               if (decompiledFrameRemainder0) {
-                this.field_N.field_o = fl.field_e;
+                this.field_N.field_o = NodeHashTableIterator.field_e;
                 if (this.field_X.f(244874369)) {
                   this.field_X.e((byte) 88);
                   this.field_X.field_o = da.field_f;
@@ -3492,7 +3492,7 @@ final class kq {
               }
               boolean decompiledSharedTail0 = !(this.field_X.f(244874369));
               if (!decompiledSharedTail0) {
-                this.field_X.field_o = ip.field_h;
+                this.field_X.field_o = SecondaryNodeDequeIterator.field_h;
                 stackIn_203_0 = this.field_s.field_z;
                 stackIn_203_1 = 0;
                 if (null != this.field_s.field_Q) {
@@ -3612,7 +3612,7 @@ final class kq {
           }
           if ((decompiledFrameCompleted0) &&
             (stackIn_289_0 < 43)) {
-            this.field_y = (pf) null;
+            this.field_y = (IntrusiveDeque) null;
           }
           stackIn_296_0 = (var3_int != 0) ? 0 : 1;
           if (stackIn_296_0 == 1 &&
@@ -3759,7 +3759,7 @@ final class kq {
           if (this.field_s.field_L ||
             this.field_bb == null) {
             var2 = (ad) (this.field_k.field_v);
-            var2.field_e.a(-2948, (bi) null);
+            var2.field_e.a(-2948, (Sprite) null);
             boolean decompiledSharedTail1 = (this.field_s.field_N != 1);
             if (!decompiledSharedTail1) {
               this.a(10, 0, il.field_Y);
@@ -3795,31 +3795,31 @@ final class kq {
           var3 = this.field_s.field_P;
           var4 = 0;
           var5 = 0;
-          L10: while (true) {
+          scanLoop1: while (true) {
             if (var3.field_r > var5) {
               stackIn_125_0 = ~var5;
               stackIn_125_1 = ~this.field_s.field_h;
               if (var7 == 0) {
-                L13: {
+                regionExit2: {
                   if (stackIn_125_0 != stackIn_125_1) {
                     var6_ref = var3.field_I[var5];
                     if ((1 << var5 & this.field_s.field_i) == 0) {
                       if (0 == (var3.field_e & 1 << var5)) {
                         if ((var3.field_f & 1 << var5) != 0) {
                           var6_ref = re.a(ek.field_y, 4371, new String[]{(String) (var6_ref)});
-                          break L13;
+                          break regionExit2;
                         }
                         if ((this.field_s.field_P.field_w & 1 << var5) != 0) {
                           var6_ref = null;
-                          break L13;
+                          break regionExit2;
                         }
                         if (!var3.field_z &&
                           (var3.field_y & 1 << var5) != 0) {
-                          var6_ref = re.a(ob.field_i, 4371, new String[]{(String) (var6_ref)});
-                          break L13;
+                          var6_ref = re.a(PacketBuffer.field_i, 4371, new String[]{(String) (var6_ref)});
+                          break regionExit2;
                         } else {
                           var6_ref = null;
-                          break L13;
+                          break regionExit2;
                         }
                       }
                       if (!this.field_s.field_M) {
@@ -3834,7 +3834,7 @@ final class kq {
                         var6_ref = re.a(bj.field_M, 4371, new String[]{(String) (var6_ref)});
                       }
                     }
-                    break L13;
+                    break regionExit2;
                   }
                   if ((1 << var5 & var3.field_e) != 0) {
                     if (!this.field_s.field_M) {
@@ -3842,7 +3842,7 @@ final class kq {
                     } else {
                       var6_ref = ae.field_d;
                     }
-                    break L13;
+                    break regionExit2;
                   }
                   if (0 != (var3.field_f & 1 << var5)) {
                     var6_ref = uh.field_e;
@@ -3914,7 +3914,7 @@ final class kq {
                   this.field_ib = this.field_z[this.field_U];
                   this.field_z[this.field_U] = false;
                   var6 = rs.field_Cb.c(this.field_o);
-                  this.field_T = new bi(var6, rs.field_Cb.field_q + rs.field_Cb.field_J);
+                  this.field_T = new Sprite(var6, rs.field_Cb.field_q + rs.field_Cb.field_J);
                   bs.a(this.field_T, 92);
                   gf.b();
                   rs.field_Cb.b(this.field_o, this.field_T.field_z, rs.field_Cb.field_J, 16777215, -1);
@@ -3932,7 +3932,7 @@ final class kq {
                 this.field_U = -1;
               }
               if (this.field_u == 0) {
-                break L10;
+                break scanLoop1;
               }
               fieldTemp$2 = this.field_u + 1;
               this.field_u = this.field_u + 1;
@@ -4223,7 +4223,7 @@ final class kq {
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var2_int = ed.field_f * ed.field_f;
-          var3 = var2_int - fl.field_h * fl.field_h;
+          var3 = var2_int - NodeHashTableIterator.field_h * NodeHashTableIterator.field_h;
           var4 = 360 + 120 * var3 / var2_int;
           this.field_O.a(640, 120, (byte) 112, var4, 0);
           this.field_E.field_xb.field_M.a(0);
@@ -4414,7 +4414,7 @@ final class kq {
     }
 
     final bh b(byte param0) {
-        pf stackIn_8_0;
+        IntrusiveDeque stackIn_8_0;
         int stackIn_8_1;
         bh stackIn_8_2;
         bh stackIn_8_3;
@@ -4423,14 +4423,14 @@ final class kq {
         bh stackIn_9_2;
         bh stackIn_9_3;
         int stackIn_9_6;
-        pf stackIn_16_0;
+        IntrusiveDeque stackIn_16_0;
         int stackIn_16_1;
         bh stackIn_16_2;
         bh stackIn_16_3;
         bh stackIn_17_2;
         bh stackIn_17_3;
         int stackIn_17_4;
-        pf stackIn_24_0;
+        IntrusiveDeque stackIn_24_0;
         int stackIn_24_1;
         bh stackIn_24_2;
         bh stackIn_24_3;
@@ -4440,7 +4440,7 @@ final class kq {
         bh stackIn_25_2;
         bh stackIn_25_3;
         int stackIn_25_7;
-        pf stackIn_32_0;
+        IntrusiveDeque stackIn_32_0;
         int stackIn_32_1;
         bh stackIn_32_2;
         bh stackIn_32_3;
@@ -4460,7 +4460,7 @@ final class kq {
         RuntimeException var2_ref = null;
         int var3 = 0;
         bh var4 = null;
-        pf var5 = null;
+        IntrusiveDeque var5 = null;
         int var6 = 0;
         Object var7 = null;
         bh var8 = null;
@@ -4477,7 +4477,7 @@ final class kq {
             return stackIn_47_0;
           }
           var4 = new bh(e.field_f, fk.field_k, ei.field_e, kl.field_o);
-          var5 = new pf();
+          var5 = new IntrusiveDeque();
           if (var2.field_l < var4.field_l) {
             stackIn_8_0 = var5;
             stackIn_8_1 = -113;
@@ -4494,7 +4494,7 @@ final class kq {
               stackIn_9_3 = null;
               stackIn_9_6 = var4.field_l;
             }
-            ((pf) (Object) stackIn_8_0).a((byte) stackIn_8_1, new bh(stackIn_8_4, stackIn_8_5, stackIn_9_6, var2.field_i));
+            ((IntrusiveDeque) (Object) stackIn_8_0).a((byte) stackIn_8_1, new bh(stackIn_8_4, stackIn_8_5, stackIn_9_6, var2.field_i));
           }
           if (var4.field_o < var2.field_o) {
             stackIn_16_0 = var5;
@@ -4510,7 +4510,7 @@ final class kq {
               stackIn_17_3 = null;
               stackIn_17_4 = var2.field_l;
             }
-            ((pf) (Object) stackIn_16_0).a((byte) stackIn_16_1, new bh(stackIn_17_4, var2.field_q, var2.field_o, var2.field_i));
+            ((IntrusiveDeque) (Object) stackIn_16_0).a((byte) stackIn_16_1, new bh(stackIn_17_4, var2.field_q, var2.field_o, var2.field_i));
           }
           if (var4.field_q > var2.field_q) {
             stackIn_24_0 = var5;
@@ -4529,7 +4529,7 @@ final class kq {
               stackIn_25_3 = null;
               stackIn_25_7 = var4.field_q;
             }
-            ((pf) (Object) stackIn_24_0).a((byte) stackIn_24_1, new bh(stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_25_7));
+            ((IntrusiveDeque) (Object) stackIn_24_0).a((byte) stackIn_24_1, new bh(stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_25_7));
           }
           if (var2.field_i > var4.field_i) {
             stackIn_32_0 = var5;
@@ -4546,7 +4546,7 @@ final class kq {
               stackIn_33_3 = null;
               stackIn_33_5 = var2.field_q;
             }
-            ((pf) (Object) stackIn_32_0).a((byte) stackIn_32_1, new bh(stackIn_32_4, stackIn_33_5, var2.field_o, var2.field_i));
+            ((IntrusiveDeque) (Object) stackIn_32_0).a((byte) stackIn_32_1, new bh(stackIn_32_4, stackIn_33_5, var2.field_o, var2.field_i));
           }
           var6 = 0;
           var7 = null;
@@ -4794,7 +4794,7 @@ final class kq {
           if (decompiledFrameCompleted0) {
             this.field_s.m(124);
             this.field_bb.g(81);
-            var2.field_e.a(-2948, (bi) null);
+            var2.field_e.a(-2948, (Sprite) null);
             stackIn_28_0 = this.field_s.field_N;
             stackIn_28_1 = 1;
           }
@@ -4872,7 +4872,7 @@ final class kq {
           var10.a((byte) 61, var9.field_k, var9.field_y + var9.field_t);
           var9.a(var10, 8);
           var11 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (param1.length > var11) {
               var12 = fb.a(param7, param0, 28, param3[var11], param1[var11], param2[var11], param4, this.field_s.field_P);
               var12.a((byte) 38, var9.field_k, var9.field_t + var9.field_y);
@@ -4884,7 +4884,7 @@ final class kq {
             } else {
               if (param7 > 0 &&
                 3 >= param7) {
-                break L2;
+                break scanLoop1;
               }
               this.field_nb.field_A = false;
               this.field_g.d(false);
@@ -5017,7 +5017,7 @@ final class kq {
             var5.field_e.a(-2948, this.field_t);
             var5.field_f.a((byte) 122, 55, var5.field_f.field_t);
             if (this.field_s.field_W) {
-              fl.a(0, "unplaced");
+              NodeHashTableIterator.a(0, "unplaced");
             }
           }
           var5_ref = param1.j(18229);
@@ -5063,11 +5063,11 @@ final class kq {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         this.field_v = true;
         try {
-          fj.field_r = new bi(20 + aq.field_i.field_o, aq.field_i.field_p + 20);
-          kb.field_w = new om(rk.field_j.field_o + 20, rk.field_j.field_p + 20);
+          fj.field_r = new Sprite(20 + aq.field_i.field_o, aq.field_i.field_p + 20);
+          kb.field_w = new ArgbSprite(rk.field_j.field_o + 20, rk.field_j.field_p + 20);
           this.field_I = true;
           this.field_s = param0;
-          this.field_y = new pf();
+          this.field_y = new IntrusiveDeque();
           this.field_e = ch.a((byte) 112);
           this.field_y.a((byte) -113, this.field_e);
           if (this.field_s.field_n != null) {
@@ -5117,10 +5117,10 @@ final class kq {
             this.field_N.e((byte) 9);
             this.field_N.field_o = fi.field_i;
             if (var6 != 0) {
-              this.field_N.field_o = fl.field_e;
+              this.field_N.field_o = NodeHashTableIterator.field_e;
             }
           } else {
-            this.field_N.field_o = fl.field_e;
+            this.field_N.field_o = NodeHashTableIterator.field_e;
           }
           this.field_X = new jh(610, -nr.field_r[1].field_w + 480, nr.field_r[1].field_z, nr.field_r[1].field_w, -1, nr.field_r[1], (String) null, 0, -1, nr.field_r[4], (String) null, 0);
           this.field_X.field_o = da.field_f;
@@ -5139,15 +5139,15 @@ final class kq {
           this.field_K.a(this.field_X, 8);
           this.field_K.a(this.field_d, 8);
           this.field_V = new os(3, 480, 10 + rs.field_Cb.c(fk.field_l), 2 * rs.field_Cb.field_J);
-          this.field_f = new jh(3, 480, this.field_V.field_m, rs.field_Cb.field_J - 4, -1, (bi) null, fk.field_l, 16777215, -1, (bi) null, db.field_d, 16777215);
+          this.field_f = new jh(3, 480, this.field_V.field_m, rs.field_Cb.field_J - 4, -1, (Sprite) null, fk.field_l, 16777215, -1, (Sprite) null, db.field_d, 16777215);
           this.field_V.a(this.field_f, 8);
           this.field_y.a(this.field_V, 0);
-          this.field_t = new om(go.field_L.field_o, go.field_L.field_p);
+          this.field_t = new ArgbSprite(go.field_L.field_o, go.field_L.field_p);
           ra.a(-128);
           this.field_t.e();
           go.field_L.d(0, 0, 16711680);
           var3 = 0;
-          L11: while (true) {
+          scanLoop1: while (true) {
             if (this.field_t.field_B.length > var3) {
               stackIn_45_0 = 0;
               stackIn_45_1 = this.field_t.field_B[var3];
@@ -5160,7 +5160,7 @@ final class kq {
                   var3++;
                   return;
                 }
-                break L11;
+                break scanLoop1;
               }
               if (stackIn_45_0 != stackIn_45_1) {
                 gf.c(var3 % this.field_t.field_z, var3 / this.field_t.field_z, 16711680, 128);
@@ -5174,10 +5174,10 @@ final class kq {
               !this.field_s.field_W) {
               qn.b(116);
               var3_ref_qr = new qr(0L, (qr) null);
-              var3_ref_qr.field_M = new pf();
+              var3_ref_qr.field_M = new IntrusiveDeque();
               this.field_E = new ub(0L, var3_ref_qr, dm.field_h, se.field_m);
               var4_ref = new qr(0L, l.field_a);
-              this.field_O = new qr(0L, oh.field_a);
+              this.field_O = new qr(0L, IntrusiveNode.field_a);
               this.field_O.a(640, 120, (byte) 116, 480, 0);
               var4_ref.a(634, this.field_O.field_mb - 6, (byte) 84, 3, 3);
               this.field_O.a(4, var4_ref);
@@ -5193,7 +5193,7 @@ final class kq {
             this.field_U = -1;
             this.field_p = new int[]{32, 0, 0, 0};
             this.field_z = new boolean[this.field_s.field_P.field_r + 1];
-            this.field_B = new pf();
+            this.field_B = new IntrusiveDeque();
             this.field_F = new os(0, 410, 128, 21);
             this.field_lb = new os(0, 410, 128, 21);
             this.field_m = new os(0, 410, 128, 21);
@@ -5202,13 +5202,13 @@ final class kq {
             this.field_B.a((byte) -113, this.field_lb);
             this.field_B.a((byte) -113, this.field_m);
             this.field_B.a((byte) -113, this.field_M);
-            this.field_hb = new jh(0, 410, 128, 21, -1, (bi) null, ja.field_n.toUpperCase(), 16777215, -1, (bi) null, ja.field_n.toUpperCase(), 2805974);
+            this.field_hb = new jh(0, 410, 128, 21, -1, (Sprite) null, ja.field_n.toUpperCase(), 16777215, -1, (Sprite) null, ja.field_n.toUpperCase(), 2805974);
             this.field_F.a(this.field_hb, 8);
-            this.field_gb = new jh(0, 410, 128, 21, -1, (bi) null, na.field_s.toUpperCase(), 16777215, -1, (bi) null, na.field_s.toUpperCase(), 2805974);
+            this.field_gb = new jh(0, 410, 128, 21, -1, (Sprite) null, na.field_s.toUpperCase(), 16777215, -1, (Sprite) null, na.field_s.toUpperCase(), 2805974);
             this.field_lb.a(this.field_gb, 8);
-            this.field_db = new jh(0, 410, 128, 21, -1, (bi) null, po.field_a.toUpperCase(), 16777215, -1, (bi) null, po.field_a.toUpperCase(), 2805974);
+            this.field_db = new jh(0, 410, 128, 21, -1, (Sprite) null, po.field_a.toUpperCase(), 16777215, -1, (Sprite) null, po.field_a.toUpperCase(), 2805974);
             this.field_m.a(this.field_db, 8);
-            this.field_a = new jh(0, 410, 128, 21, -1, (bi) null, ph.field_a.toUpperCase(), 16777215, -1, (bi) null, ph.field_a.toUpperCase(), 2805974);
+            this.field_a = new jh(0, 410, 128, 21, -1, (Sprite) null, ph.field_a.toUpperCase(), 16777215, -1, (Sprite) null, ph.field_a.toUpperCase(), 2805974);
             this.field_M.a(this.field_a, 8);
             this.field_hb.field_h = new Integer(0);
             this.field_gb.field_h = new Integer(1);

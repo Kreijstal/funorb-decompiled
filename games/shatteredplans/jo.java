@@ -24,7 +24,7 @@ final class jo {
         field_a = null;
     }
 
-    final static void a(int param0, ob param1) {
+    final static void a(int param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -158,7 +158,7 @@ final class jo {
         }
         si var6 = new si();
         if (var4 != null) {
-          var6.a(new ob(var4), -1);
+          var6.a(new PacketBuffer(var4), -1);
         }
         if (param0 >= 32768) {
           var6.e(-81);

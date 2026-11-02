@@ -109,7 +109,7 @@ final class og implements iq {
         le.field_e.a(0, param0, (byte) -66);
     }
 
-    public final void a(vg param0, int param1, boolean param2, int param3, byte param4) {
+    public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -117,14 +117,14 @@ final class og implements iq {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        bi var8 = null;
+        Sprite var8 = null;
         try {
           var6_int = param0.field_m + param1;
           if (param4 != 12) {
             return;
           }
           var7 = param3 + param0.field_q;
-          rg.a((byte) -73, var7, param0.field_n, var6_int, param0.field_x);
+          ClientException.a((byte) -73, var7, param0.field_n, var6_int, param0.field_x);
           var8 = lp.field_w[1];
           if (param0 instanceof kg &&
             ((kg) (param0)).field_z) {

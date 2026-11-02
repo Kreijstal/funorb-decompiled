@@ -49,7 +49,7 @@ final class el {
         return null;
     }
 
-    final static void a(df param0, int param1, df param2) {
+    final static void a(DualLinkNode param0, int param1, DualLinkNode param2) {
         try {
           if (param0.field_j != null) {
             param0.a(16);
@@ -57,8 +57,8 @@ final class el {
           param0.field_j = param2.field_j;
           param0.field_h = param2;
           if (param1 != 0) {
-            df var4 = (df) null;
-            el.a((df) null, 13, (df) null);
+            DualLinkNode var4 = (DualLinkNode) null;
+            el.a((DualLinkNode) null, 13, (DualLinkNode) null);
           }
           param0.field_j.field_h = param0;
           param0.field_h.field_j = param0;

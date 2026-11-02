@@ -120,7 +120,7 @@ final class hp extends me {
         }
     }
 
-    final void a(int param0, ob param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -217,7 +217,7 @@ final class hp extends me {
         int var1 = 29 / ((param0 - 12) / 51);
     }
 
-    final void a(ob param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         String var5 = null;

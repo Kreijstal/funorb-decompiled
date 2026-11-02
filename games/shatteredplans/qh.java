@@ -13,10 +13,10 @@ final class qh extends vd {
     static String field_C;
     static boolean field_v;
 
-    final static bi a(bi param0, int param1, int param2, int param3, int param4, int param5) {
+    final static Sprite a(Sprite param0, int param1, int param2, int param3, int param4, int param5) {
         int var12 = 0;
         int var13 = 0;
-        bi stackIn_30_0 = null;
+        Sprite stackIn_30_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -58,7 +58,7 @@ final class qh extends vd {
           if (param0 == null ||
             !(param0.field_z >= param2) ||
             !(param5 <= param0.field_w)) {
-            param0 = new bi(param2, param5);
+            param0 = new Sprite(param2, param5);
           }
           var8 = gf.field_b - param2;
           var9 = param0.field_z - param2;
@@ -75,7 +75,7 @@ final class qh extends vd {
           }
           param0.field_x = var7;
           param0.field_t = var6_int;
-          stackIn_30_0 = (bi) (param0);
+          stackIn_30_0 = (Sprite) (param0);
           return stackIn_30_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -220,7 +220,7 @@ final class qh extends vd {
           pg.field_J = pg.field_J - 1;
         }
         if (pc.field_m != so.field_q.field_d) {
-          fl.field_f = fl.field_f + (-pc.field_m + so.field_q.field_d);
+          NodeHashTableIterator.field_f = NodeHashTableIterator.field_f + (-pc.field_m + so.field_q.field_d);
           pc.field_m = so.field_q.field_d;
         }
         if (!(pg.field_J <= 0)) {
@@ -276,7 +276,7 @@ final class qh extends vd {
         try {
           this.field_y = param4;
           this.a(true, param3, param2);
-          this.field_l = new pf();
+          this.field_l = new IntrusiveDeque();
           this.field_p = true;
           this.field_s = false;
           this.field_A = false;

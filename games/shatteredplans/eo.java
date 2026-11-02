@@ -12,8 +12,8 @@ final class eo extends jl {
     private md field_bb;
     static String field_hb;
     static String field_kb;
-    static ob field_cb;
-    static pf field_ab;
+    static PacketBuffer field_cb;
+    static IntrusiveDeque field_ab;
     static int field_Y;
     static int[] field_fb;
 
@@ -481,8 +481,8 @@ final class eo extends jl {
         field_ib = "Please try again in a few minutes.";
         field_kb = "Pending fleet order";
         field_Z = new ih();
-        field_cb = new ob(256);
-        field_ab = new pf();
+        field_cb = new PacketBuffer(256);
+        field_ab = new IntrusiveDeque();
         field_Y = 4;
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gh extends oh {
+final class gh extends IntrusiveNode {
     byte[] field_h;
     ti field_i;
 
@@ -10,7 +10,7 @@ final class gh extends oh {
         if (var3 == null) {
           return null;
         }
-        return new gh(new ob(var3));
+        return new gh(new PacketBuffer(var3));
     }
 
     final void a() {
@@ -116,7 +116,7 @@ final class gh extends oh {
         this.field_i = null;
     }
 
-    private gh(ob param0) {
+    private gh(PacketBuffer param0) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
@@ -145,7 +145,7 @@ final class gh extends oh {
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
         int incrementValue$20 = 0;
-        ob stackIn_84_0 = null;
+        PacketBuffer stackIn_84_0 = null;
         int stackIn_85_1 = 0;
         int stackIn_91_0 = 0;
         int var2;
@@ -197,7 +197,7 @@ final class gh extends oh {
         int var48;
         int var49;
         int var50;
-        ob var51;
+        PacketBuffer var51;
         int var52;
         int var53;
         int var54;
@@ -219,11 +219,11 @@ final class gh extends oh {
         int var15Lifetime2;
         int var28Lifetime1;
         int var29Lifetime1;
-        param0.field_j = param0.field_h.length - 3;
+        param0.position = param0.payload.length - 3;
         var2 = param0.j(-70);
         var3 = param0.f(-20976);
         var4 = 14 + var2 * 10;
-        param0.field_j = 0;
+        param0.position = 0;
         var5 = 0;
         var6 = 0;
         var7 = 0;
@@ -282,13 +282,13 @@ final class gh extends oh {
         var4 = var4 + 5 * var5;
         var4 = var4 + 2 * (var7 + var8 + var6 + var9 + var11);
         var4 = var4 + (var10 + var12);
-        var13Lifetime1 = param0.field_j;
+        var13Lifetime1 = param0.position;
         var14Lifetime1 = var2 + var5 + var6 + var7 + var8 + var9 + var10 + var11 + var12;
         for (var15Lifetime1 = 0; var15Lifetime1 < var14Lifetime1; var15Lifetime1++) {
           param0.c(false);
         }
-        var4 = var4 + (param0.field_j - var13Lifetime1);
-        var15Lifetime2 = param0.field_j;
+        var4 = var4 + (param0.position - var13Lifetime1);
+        var15Lifetime2 = param0.position;
         var16 = 0;
         var17 = 0;
         var18 = 0;
@@ -375,50 +375,50 @@ final class gh extends oh {
           }
         }
         var29Lifetime1 = 0;
-        var30 = param0.field_j;
-        param0.field_j = param0.field_j + var26;
-        var31 = param0.field_j;
-        param0.field_j = param0.field_j + var11;
-        var32 = param0.field_j;
-        param0.field_j = param0.field_j + var10;
-        var33 = param0.field_j;
-        param0.field_j = param0.field_j + var9;
-        var34 = param0.field_j;
-        param0.field_j = param0.field_j + var16;
-        var35 = param0.field_j;
-        param0.field_j = param0.field_j + var18;
-        var36 = param0.field_j;
-        param0.field_j = param0.field_j + var20;
-        var37 = param0.field_j;
-        param0.field_j = param0.field_j + (var7 + var8 + var11);
-        var38 = param0.field_j;
-        param0.field_j = param0.field_j + var7;
-        var39 = param0.field_j;
-        param0.field_j = param0.field_j + var27;
-        var40 = param0.field_j;
-        param0.field_j = param0.field_j + var8;
-        var41 = param0.field_j;
-        param0.field_j = param0.field_j + var17;
-        var42 = param0.field_j;
-        param0.field_j = param0.field_j + var19;
-        var43 = param0.field_j;
-        param0.field_j = param0.field_j + var21;
-        var44 = param0.field_j;
-        param0.field_j = param0.field_j + var12;
-        var45 = param0.field_j;
-        param0.field_j = param0.field_j + var9;
-        var46 = param0.field_j;
-        param0.field_j = param0.field_j + var22;
-        var47 = param0.field_j;
-        param0.field_j = param0.field_j + var23;
-        var48 = param0.field_j;
-        param0.field_j = param0.field_j + var24;
-        var49 = param0.field_j;
-        param0.field_j = param0.field_j + var25;
-        var50 = param0.field_j;
-        param0.field_j = param0.field_j + var5 * 3;
+        var30 = param0.position;
+        param0.position = param0.position + var26;
+        var31 = param0.position;
+        param0.position = param0.position + var11;
+        var32 = param0.position;
+        param0.position = param0.position + var10;
+        var33 = param0.position;
+        param0.position = param0.position + var9;
+        var34 = param0.position;
+        param0.position = param0.position + var16;
+        var35 = param0.position;
+        param0.position = param0.position + var18;
+        var36 = param0.position;
+        param0.position = param0.position + var20;
+        var37 = param0.position;
+        param0.position = param0.position + (var7 + var8 + var11);
+        var38 = param0.position;
+        param0.position = param0.position + var7;
+        var39 = param0.position;
+        param0.position = param0.position + var27;
+        var40 = param0.position;
+        param0.position = param0.position + var8;
+        var41 = param0.position;
+        param0.position = param0.position + var17;
+        var42 = param0.position;
+        param0.position = param0.position + var19;
+        var43 = param0.position;
+        param0.position = param0.position + var21;
+        var44 = param0.position;
+        param0.position = param0.position + var12;
+        var45 = param0.position;
+        param0.position = param0.position + var9;
+        var46 = param0.position;
+        param0.position = param0.position + var22;
+        var47 = param0.position;
+        param0.position = param0.position + var23;
+        var48 = param0.position;
+        param0.position = param0.position + var24;
+        var49 = param0.position;
+        param0.position = param0.position + var25;
+        var50 = param0.position;
+        param0.position = param0.position + var5 * 3;
         this.field_h = new byte[var4];
-        var51 = new ob(this.field_h);
+        var51 = new PacketBuffer(this.field_h);
         var51.e(11135, 1297377380);
         var51.e(11135, 6);
         stackIn_84_0 = var51;
@@ -427,10 +427,10 @@ final class gh extends oh {
         } else {
           stackIn_85_1 = 1;
         }
-        ((ob) (Object) stackIn_84_0).d(stackIn_85_1, 255);
+        ((PacketBuffer) (Object) stackIn_84_0).d(stackIn_85_1, 255);
         var51.d(var2, 255);
         var51.d(var3, 255);
-        param0.field_j = var13Lifetime1;
+        param0.position = var13Lifetime1;
         var52 = 0;
         var53 = 0;
         var54 = 0;
@@ -446,15 +446,15 @@ final class gh extends oh {
             return;
           }
           var51.e(11135, 1297379947);
-          var51.field_j = var51.field_j + 4;
-          var61 = var51.field_j;
+          var51.position = var51.position + 4;
+          var61 = var51.position;
           var62 = -1;
           while (true) {
             var63 = param0.c(false);
             var51.a((byte) 108, var63);
             incrementValue$0 = var29Lifetime1;
             var29Lifetime1++;
-            var64 = param0.field_h[incrementValue$0] & 255;
+            var64 = param0.payload[incrementValue$0] & 255;
             stackIn_91_0 = (var64 == var62) ? 0 : 1;
             var65 = stackIn_91_0;
             var62 = var64 & 15;
@@ -464,7 +464,7 @@ final class gh extends oh {
               }
               var51.c(47, (byte) -55);
               var51.c(0, (byte) -108);
-              var51.c(var51.field_j - var61, -3);
+              var51.c(var51.position - var61, -3);
               var60++;
               break;
             }
@@ -476,13 +476,13 @@ final class gh extends oh {
               var51.c(3, (byte) -68);
               incrementValue$25 = var50;
               var50++;
-              var51.c((int) param0.field_h[incrementValue$25], (byte) -78);
+              var51.c((int) param0.payload[incrementValue$25], (byte) -78);
               incrementValue$26 = var50;
               var50++;
-              var51.c((int) param0.field_h[incrementValue$26], (byte) -101);
+              var51.c((int) param0.payload[incrementValue$26], (byte) -101);
               incrementValue$27 = var50;
               var50++;
-              var51.c((int) param0.field_h[incrementValue$27], (byte) -92);
+              var51.c((int) param0.payload[incrementValue$27], (byte) -92);
               continue;
             }
             var52 = var52 ^ var64 >> 4;
@@ -492,10 +492,10 @@ final class gh extends oh {
               }
               incrementValue$23 = var37;
               var37++;
-              var53 = var53 + param0.field_h[incrementValue$23];
+              var53 = var53 + param0.payload[incrementValue$23];
               incrementValue$24 = var38;
               var38++;
-              var54 = var54 + param0.field_h[incrementValue$24];
+              var54 = var54 + param0.payload[incrementValue$24];
               var51.c(var53 & 127, (byte) -98);
               var51.c(var54 & 127, (byte) -85);
               continue;
@@ -506,10 +506,10 @@ final class gh extends oh {
               }
               incrementValue$21 = var37;
               var37++;
-              var53 = var53 + param0.field_h[incrementValue$21];
+              var53 = var53 + param0.payload[incrementValue$21];
               incrementValue$22 = var40;
               var40++;
-              var55 = var55 + param0.field_h[incrementValue$22];
+              var55 = var55 + param0.payload[incrementValue$22];
               var51.c(var53 & 127, (byte) -103);
               var51.c(var55 & 127, (byte) -75);
               continue;
@@ -521,10 +521,10 @@ final class gh extends oh {
                 }
                 incrementValue$5 = var45;
                 var45++;
-                var56 = var56 + param0.field_h[incrementValue$5];
+                var56 = var56 + param0.payload[incrementValue$5];
                 incrementValue$6 = var33;
                 var33++;
-                var56 = var56 + (param0.field_h[incrementValue$6] << 7);
+                var56 = var56 + (param0.payload[incrementValue$6] << 7);
                 var51.c(var56 & 127, (byte) -72);
                 var51.c(var56 >> 7 & 127, (byte) -101);
                 continue;
@@ -535,7 +535,7 @@ final class gh extends oh {
                 }
                 incrementValue$4 = var32;
                 var32++;
-                var57 = var57 + param0.field_h[incrementValue$4];
+                var57 = var57 + param0.payload[incrementValue$4];
                 var51.c(var57 & 127, (byte) -128);
                 continue;
               }
@@ -548,7 +548,7 @@ final class gh extends oh {
                 }
                 incrementValue$1 = var44;
                 var44++;
-                var51.c((int) param0.field_h[incrementValue$1], (byte) -71);
+                var51.c((int) param0.payload[incrementValue$1], (byte) -71);
                 continue;
               }
               if (var65 != 0) {
@@ -556,10 +556,10 @@ final class gh extends oh {
               }
               incrementValue$2 = var37;
               var37++;
-              var53 = var53 + param0.field_h[incrementValue$2];
+              var53 = var53 + param0.payload[incrementValue$2];
               incrementValue$3 = var31;
               var31++;
-              var58 = var58 + param0.field_h[incrementValue$3];
+              var58 = var58 + param0.payload[incrementValue$3];
               var51.c(var53 & 127, (byte) -75);
               var51.c(var58 & 127, (byte) -59);
               continue;
@@ -569,50 +569,50 @@ final class gh extends oh {
             }
             incrementValue$7 = var15Lifetime2;
             var15Lifetime2++;
-            var28Lifetime1 = var28Lifetime1 + param0.field_h[incrementValue$7] & 127;
+            var28Lifetime1 = var28Lifetime1 + param0.payload[incrementValue$7] & 127;
             var51.c(var28Lifetime1, (byte) -94);
             if (var28Lifetime1 != 0 &&
               var28Lifetime1 != 32) {
               if (var28Lifetime1 == 1) {
                 incrementValue$19 = var34;
                 var34++;
-                var66 = param0.field_h[incrementValue$19];
+                var66 = param0.payload[incrementValue$19];
               } else if (var28Lifetime1 == 33) {
                 incrementValue$18 = var41;
                 var41++;
-                var66 = param0.field_h[incrementValue$18];
+                var66 = param0.payload[incrementValue$18];
               } else if (var28Lifetime1 == 7) {
                 incrementValue$17 = var35;
                 var35++;
-                var66 = param0.field_h[incrementValue$17];
+                var66 = param0.payload[incrementValue$17];
               } else if (var28Lifetime1 == 39) {
                 incrementValue$16 = var42;
                 var42++;
-                var66 = param0.field_h[incrementValue$16];
+                var66 = param0.payload[incrementValue$16];
               } else if (var28Lifetime1 == 10) {
                 incrementValue$15 = var36;
                 var36++;
-                var66 = param0.field_h[incrementValue$15];
+                var66 = param0.payload[incrementValue$15];
               } else if (var28Lifetime1 == 42) {
                 incrementValue$14 = var43;
                 var43++;
-                var66 = param0.field_h[incrementValue$14];
+                var66 = param0.payload[incrementValue$14];
               } else if (var28Lifetime1 == 99) {
                 incrementValue$13 = var46;
                 var46++;
-                var66 = param0.field_h[incrementValue$13];
+                var66 = param0.payload[incrementValue$13];
               } else if (var28Lifetime1 == 98) {
                 incrementValue$12 = var47;
                 var47++;
-                var66 = param0.field_h[incrementValue$12];
+                var66 = param0.payload[incrementValue$12];
               } else if (var28Lifetime1 == 101) {
                 incrementValue$11 = var48;
                 var48++;
-                var66 = param0.field_h[incrementValue$11];
+                var66 = param0.payload[incrementValue$11];
               } else if (var28Lifetime1 == 100) {
                 incrementValue$10 = var49;
                 var49++;
-                var66 = param0.field_h[incrementValue$10];
+                var66 = param0.payload[incrementValue$10];
               } else if (var28Lifetime1 != 64 &&
                 var28Lifetime1 != 65 &&
                 var28Lifetime1 != 120 &&
@@ -620,16 +620,16 @@ final class gh extends oh {
                 var28Lifetime1 != 123) {
                 incrementValue$8 = var39;
                 var39++;
-                var66 = param0.field_h[incrementValue$8];
+                var66 = param0.payload[incrementValue$8];
               } else {
                 incrementValue$9 = var30;
                 var30++;
-                var66 = param0.field_h[incrementValue$9];
+                var66 = param0.payload[incrementValue$9];
               }
             } else {
               incrementValue$20 = var44;
               var44++;
-              var66 = param0.field_h[incrementValue$20];
+              var66 = param0.payload[incrementValue$20];
             }
             var66 = var66 + var70[var28Lifetime1];
             var70[var28Lifetime1] = var66;

@@ -38,7 +38,7 @@ final class ec extends ml {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = (CharSequence) ((Object) param1);
-          if (!vg.a(var5, (byte) -89)) {
+          if (!UiWidget.a(var5, (byte) -89)) {
             stackIn_3_0 = tj.field_b;
             return stackIn_3_0;
           }
@@ -126,7 +126,7 @@ final class ec extends ml {
         field_r = null;
     }
 
-    final static bi a(int param0, int param1, boolean param2) {
+    final static Sprite a(int param0, int param1, boolean param2) {
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         int var3 = (-(3 * d.field_b[param0].field_z / 4) + 130) * param1 / 5;
@@ -135,7 +135,7 @@ final class ec extends ml {
         if (var3 <= 0) {
           var3 = 1;
         }
-        bi var4 = new bi(var3, -6 + d.field_b[param0].field_w);
+        Sprite var4 = new Sprite(var3, -6 + d.field_b[param0].field_w);
         ra.a(-104);
         var4.e();
         for (var5 = 0; var4.field_z > var5; var5++) {
@@ -294,7 +294,7 @@ final class ec extends ml {
             var5.field_b = tm.a((byte) 39, param0, 16, var5.field_b);
           }
           if (ng.a(param0, (byte) -95)) {
-            var5.field_p = df.a(16, false, param0, var5.field_p);
+            var5.field_p = DualLinkNode.a(16, false, param0, var5.field_p);
             var7 = 0;
             for (var8 = 0; var5.field_p.length > var8; var8++) {
               if ((255 & var5.field_p[var8]) > var7) {

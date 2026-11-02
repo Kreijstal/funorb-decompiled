@@ -7,11 +7,11 @@ final class ks {
     static gq field_a;
     static String[] field_b;
     static String field_c;
-    static bi field_j;
+    static Sprite field_j;
     static byte[] field_e;
     private String field_f;
     private boolean field_g;
-    static bi field_h;
+    static Sprite field_h;
 
     final static boolean a(boolean param0, boolean param1) {
         if (!param1) {
@@ -39,12 +39,12 @@ final class ks {
             if (ol.field_g != hm.field_q) {
               js.a((byte) -10);
               if (vn.a(0)) {
-                fl.a(0, "enter");
+                NodeHashTableIterator.a(0, "enter");
               }
               return true;
             }
             if (vn.a(0)) {
-              fl.a(0, "enter");
+              NodeHashTableIterator.a(0, "enter");
               return true;
             }
             return true;
@@ -69,13 +69,13 @@ final class ks {
               if (ol.field_g != hm.field_q) {
                 js.a((byte) -10);
                 if (vn.a(0)) {
-                  fl.a(0, "enter");
+                  NodeHashTableIterator.a(0, "enter");
                   return true;
                 }
                 return true;
               }
               if (vn.a(0)) {
-                fl.a(0, "enter");
+                NodeHashTableIterator.a(0, "enter");
                 return true;
               }
             }
@@ -102,13 +102,13 @@ final class ks {
               if (ol.field_g != hm.field_q) {
                 js.a((byte) -10);
                 if (vn.a(0)) {
-                  fl.a(0, "enter");
+                  NodeHashTableIterator.a(0, "enter");
                   return true;
                 }
                 return true;
               }
               if (vn.a(0)) {
-                fl.a(0, "enter");
+                NodeHashTableIterator.a(0, "enter");
                 return true;
               }
             }
@@ -129,13 +129,13 @@ final class ks {
             if (ol.field_g != hm.field_q) {
               js.a((byte) -10);
               if (vn.a(0)) {
-                fl.a(0, "enter");
+                NodeHashTableIterator.a(0, "enter");
                 return true;
               }
               return true;
             }
             if (vn.a(0)) {
-              fl.a(0, "enter");
+              NodeHashTableIterator.a(0, "enter");
               return true;
             }
           }

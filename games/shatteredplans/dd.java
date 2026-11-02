@@ -176,9 +176,9 @@ final class dd {
         fb var4 = null;
         sl var5 = null;
         int var3 = -27 % ((12 - param2) / 47);
-        if (param0 != kf.field_g) {
-          var4 = (fb) (ea.field_b.a(65280, (long)kf.field_g));
-          kf.field_g = param0;
+        if (param0 != GameApplet.field_g) {
+          var4 = (fb) (ea.field_b.a(65280, (long)GameApplet.field_g));
+          GameApplet.field_g = param0;
           if (var4 != null) {
             var4.field_jc = null;
           }

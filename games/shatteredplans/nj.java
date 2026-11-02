@@ -67,11 +67,11 @@ final class nj {
           }
           var6 = js.field_f;
           var6.h(param1, 255);
-          var6.field_j = var6.field_j + 1;
-          var4 = var6.field_j;
+          var6.position = var6.position + 1;
+          var4 = var6.position;
           var6.c(0, (byte) -58);
           var6.a(param0, (byte) 0);
-          var6.b(-var4 + var6.field_j, (byte) 118);
+          var6.b(-var4 + var6.position, (byte) 118);
           stackIn_28_0 = null;
           return (String) (stackIn_28_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -8,7 +8,7 @@ final class hn {
     static String field_a;
     private boolean field_h;
     private int field_g;
-    static bi field_c;
+    static Sprite field_c;
     private int[] field_e;
     static int[] field_j;
     static String field_d;
@@ -28,7 +28,7 @@ final class hn {
 
     final int a(byte param0) {
         if (param0 != 56) {
-          field_c = (bi) null;
+          field_c = (Sprite) null;
           return this.field_b + 1;
         }
         return this.field_b + 1;

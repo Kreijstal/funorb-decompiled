@@ -17,9 +17,9 @@ final class mq {
 
     final static int[] a(int param0, byte param1, int param2) {
         int var3 = je.a(param0, (byte) -104);
-        int var4 = oh.b(param0, param1 ^ 96);
+        int var4 = IntrusiveNode.b(param0, param1 ^ 96);
         int var5 = je.a(param2, (byte) -104);
-        int var6 = oh.b(param2, param1 - 207);
+        int var6 = IntrusiveNode.b(param2, param1 - 207);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         int var8 = (int)((long)var3 * (long)var6 >> 16);
         int var9 = (int)((long)var4 * (long)var5 >> 16);
@@ -38,9 +38,9 @@ final class mq {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        bi[] var5 = null;
+        Sprite[] var5 = null;
         int var6 = 0;
-        bi[] var7 = null;
+        Sprite[] var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -77,7 +77,7 @@ final class mq {
             if (oi.field_i != null) {
               for (var4Lifetime1 = 0; oi.field_i.length > var4Lifetime1; var4Lifetime1++) {
                 var5 = oi.field_i[var4Lifetime1];
-                var6 = rg.field_f[var4Lifetime1];
+                var6 = ClientException.field_f[var4Lifetime1];
                 if (var6 <= 0) {
                   for (var7_int = 0; var7_int < var5.length; var7_int++) {
                     var3 = var3 - ol.field_g.field_j;

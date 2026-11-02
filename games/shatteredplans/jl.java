@@ -14,7 +14,7 @@ abstract class jl extends w {
     static String field_O;
     static int[] field_M;
     static int field_U;
-    static bi field_W;
+    static Sprite field_W;
 
     jl(tc param0, int param1, int param2) {
         super(param0, param1, param2);
@@ -134,7 +134,7 @@ abstract class jl extends w {
         }
         kb.field_v.f(this.field_x + param0 - 90, 10 + param2);
         wh.a(os.field_u, param2 + 35, this.field_x - 10, (byte) -114, 5 + param0);
-        wh.a(oh.field_d, -22 + (this.field_n + param2), this.field_x, (byte) -99, param0);
+        wh.a(IntrusiveNode.field_d, -22 + (this.field_n + param2), this.field_x, (byte) -99, param0);
         var5Lifetime2 = 169;
         var4Lifetime2 = -79 + this.field_n;
         var6Lifetime2 = 127;

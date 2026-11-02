@@ -75,7 +75,7 @@ final class jj extends me {
         }
     }
 
-    final void a(int param0, ob param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           int var3_int = -114 / ((-72 - param0) / 45);
         } catch (RuntimeException runtimeException) {
@@ -113,14 +113,14 @@ final class jj extends me {
 
     final fs[] b(int param0) {
         if (param0 != 0) {
-          ob var3 = (ob) null;
-          this.a((ob) null, (byte) -82);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a((PacketBuffer) null, (byte) -82);
           return new fs[]{};
         }
         return new fs[]{};
     }
 
-    final void a(ob param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           if (param1 != -109) {
             field_o = (String) null;

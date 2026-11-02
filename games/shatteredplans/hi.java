@@ -9,13 +9,13 @@ final class hi implements uj {
     static qr field_o;
     private int field_x;
     private int field_j;
-    private pf field_l;
+    private IntrusiveDeque field_l;
     private dc field_m;
     private int field_t;
     private mn field_c;
     static vr field_a;
-    private pf field_u;
-    private pf field_k;
+    private IntrusiveDeque field_u;
+    private IntrusiveDeque field_k;
     private int field_r;
     private int[] field_f;
     private wf[] field_e;
@@ -244,7 +244,7 @@ final class hi implements uj {
         }
         var4 = this.field_e;
         for (var5 = 0; var5 < var4.length; var5++) {
-          L3: {
+          regionExit1: {
             var6 = var4[var5];
             if (var6 instanceof ac) {
               var3 = 0;
@@ -259,7 +259,7 @@ final class hi implements uj {
                       this.a(kq.field_c[var2Lifetime1], (byte) 102, var6.field_n, var8);
                       q.field_Ab[var8.field_p] = q.field_Ab[var8.field_p] - kq.field_c[var2Lifetime1];
                       kq.field_c[var2Lifetime1] = 0;
-                      break L3;
+                      break regionExit1;
                     }
                     this.a(q.field_Ab[var8.field_p], (byte) 114, var6.field_n, var8);
                     kq.field_c[var2Lifetime1] = kq.field_c[var2Lifetime1] - q.field_Ab[var8.field_p];
@@ -872,7 +872,7 @@ final class hi implements uj {
           }
           ei.a(param3, qk.field_x, mk.field_d, true, false, 0);
         }
-        if (li.field_d.field_rb != 0) {
+        if (SocketConnector.field_d.field_rb != 0) {
           on.field_b = false;
         }
     }
@@ -1072,7 +1072,7 @@ final class hi implements uj {
         try {
           var6_int = 0;
           var11 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var11 < param1.length) {
               stackIn_4_0 = param1[var11].field_y;
               stackIn_4_1 = this.field_w;
@@ -1145,7 +1145,7 @@ final class hi implements uj {
                   var6_int = var6_int + var8;
                   this.field_n[var9] = this.field_n[var9] - var8;
                   if (var6_int == param4) {
-                    break L1;
+                    break scanLoop1;
                   }
                 }
               }
@@ -1622,7 +1622,7 @@ final class hi implements uj {
             }
             if (var6 != -1) {
               this.field_c.a(0, (byte) -109, var5, this.field_w, var6);
-              this.field_f[this.field_r] = rg.a(6, 3, (byte) 104);
+              this.field_f[this.field_r] = ClientException.a(6, 3, (byte) 104);
             }
           }
           this.field_c.a((byte) -63, this.field_w, var5);
@@ -2077,7 +2077,7 @@ final class hi implements uj {
         var9 = oe.field_g[this.field_w.field_x];
         var3 = 0;
         for (var4 = 0; var4 < this.field_m.field_g.field_e.length; var4++) {
-          L6: {
+          regionExit1: {
             if (this.field_m.field_g.field_e[var4].field_y != this.field_w) {
               var5 = 1;
               var6 = 0;
@@ -2096,7 +2096,7 @@ final class hi implements uj {
               if ((var5 != 0)) {
                 var3++;
               }
-              break L6;
+              break regionExit1;
             }
             jf.field_e[var4] = false;
           }
@@ -2112,11 +2112,11 @@ final class hi implements uj {
         }
     }
 
-    final static bi[] a(int param0, byte param1) {
-        bi[] var3 = new bi[9];
-        bi[] var2 = var3;
+    final static Sprite[] a(int param0, byte param1) {
+        Sprite[] var3 = new Sprite[9];
+        Sprite[] var2 = var3;
         if (param1 != -16) {
-          return (bi[]) null;
+          return (Sprite[]) null;
         }
         var3[4] = gr.a((byte) -52, param0, 64);
         return var2;
@@ -2200,7 +2200,7 @@ final class hi implements uj {
           var2Lifetime1 = var3Lifetime1.field_n.field_p;
           var4Lifetime1 = 0;
           var5 = 0;
-          L5: while (true) {
+          scanLoop1: while (true) {
             if (var5 < 2) {
               var6 = var3Lifetime1.field_n.field_R.j(18229);
               while (var6 != null) {
@@ -2215,7 +2215,7 @@ final class hi implements uj {
                     this.a(kq.field_c[var2Lifetime1], (byte) 102, var3Lifetime1.field_n, var6);
                     q.field_Ab[var6.field_p] = q.field_Ab[var6.field_p] - kq.field_c[var2Lifetime1];
                     kq.field_c[var2Lifetime1] = 0;
-                    break L5;
+                    break scanLoop1;
                   }
                   this.a(q.field_Ab[var6.field_p], (byte) 103, var3Lifetime1.field_n, var6);
                   kq.field_c[var2Lifetime1] = kq.field_c[var2Lifetime1] - q.field_Ab[var6.field_p];
@@ -2782,7 +2782,7 @@ final class hi implements uj {
                   if (this.field_i[var33[var16]] != 0) {
                     var17 = var23;
                     var18 = 0;
-                    L38: while (true) {
+                    scanLoop1: while (true) {
                       if (var18 < var17.length) {
                         var19Lifetime1Lifetime1 = var17[var18];
                         if (this.field_w == var19Lifetime1Lifetime1.field_y) {
@@ -2805,13 +2805,13 @@ final class hi implements uj {
                               this.a(this.field_i[var20], (byte) 100, param1.field_n, var19Lifetime1Lifetime1);
                               var10Lifetime2 = var10Lifetime2 - this.field_i[var20];
                               this.field_i[var20] = 0;
-                              break L38;
+                              break scanLoop1;
                             }
                             this.a(-1, var19Lifetime1Lifetime1, var10Lifetime2);
                             this.a(var10Lifetime2, (byte) 116, param1.field_n, var19Lifetime1Lifetime1);
                             this.field_i[var20] = this.field_i[var20] - var10Lifetime2;
                             var10Lifetime2 = 0;
-                            break L38;
+                            break scanLoop1;
                           }
                         }
                         var18++;
@@ -2857,9 +2857,9 @@ final class hi implements uj {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        this.field_l = new pf();
-        this.field_u = new pf();
-        this.field_k = new pf();
+        this.field_l = new IntrusiveDeque();
+        this.field_u = new IntrusiveDeque();
+        this.field_k = new IntrusiveDeque();
         this.field_h = false;
         this.field_b = false;
         try {

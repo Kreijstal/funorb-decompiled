@@ -8,10 +8,10 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
     static int field_i;
     static String field_m;
     static boolean field_n;
-    static bi[] field_l;
+    static Sprite[] field_l;
     private java.awt.image.ImageConsumer field_o;
     private java.awt.image.ColorModel field_j;
-    static bi[] field_k;
+    static Sprite[] field_k;
 
     public final void requestTopDownLeftRightResend(java.awt.image.ImageConsumer param0) {
     }
@@ -44,10 +44,10 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
               param4 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (rm.field_a == null) {
-                rm.field_a = tm.field_i.createImage(304, 34);
+              if (IterableNodeHashTable.field_a == null) {
+                IterableNodeHashTable.field_a = tm.field_i.createImage(304, 34);
               }
-              var10 = rm.field_a.getGraphics();
+              var10 = IterableNodeHashTable.field_a.getGraphics();
               var10.setColor(param4);
               var10.drawRect(0, param3, 303, 33);
               var10.fillRect(2, 2, 3 * param1, 30);
@@ -57,7 +57,7 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
               var10.setFont(ha.field_a);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param0, (-(6 * param0.length()) + 304) / 2, 22);
-              var9.drawImage(rm.field_a, me.field_e / 2 - 152, -18 + nn.field_b / 2, (java.awt.image.ImageObserver) null);
+              var9.drawImage(IterableNodeHashTable.field_a, me.field_e / 2 - 152, -18 + nn.field_b / 2, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;

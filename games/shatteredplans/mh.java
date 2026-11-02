@@ -4,14 +4,14 @@
 import java.io.*;
 
 final class mh {
-    static bi[] field_b;
+    static Sprite[] field_b;
     private int field_i;
     private int[] field_e;
     private int field_g;
     static String field_a;
     private int field_c;
     private int field_f;
-    static pf field_d;
+    static IntrusiveDeque field_d;
     private int[] field_j;
     static String[] field_h;
 
@@ -24,7 +24,7 @@ final class mh {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          ob var2 = null;
+          PacketBuffer var2 = null;
           if (param0 < 15) {
             field_a = (String) null;
           }
@@ -53,11 +53,11 @@ final class mh {
             }
             if (gb.field_i == 2) {
               js.field_a = new ke((java.net.Socket) (oj.field_Gb.field_e), dh.field_a);
-              var2 = new ob(13);
+              var2 = new PacketBuffer(13);
               hq.a(ae.field_h, si.field_u, var2, (byte) 20, sr.field_q);
               var2.c(15, (byte) -69);
               var2.e(11135, sg.field_Cb);
-              js.field_a.a(13, 0, var2.field_h, -13976);
+              js.field_a.a(13, 0, var2.payload, -13976);
               gb.field_i = gb.field_i + 1;
               am.field_Cb = 30000L + pr.a(14274);
             }
@@ -103,7 +103,7 @@ final class mh {
           this.field_c = 256;
         }
         if (param0 != 13) {
-          field_b = (bi[]) null;
+          field_b = (Sprite[]) null;
         }
         int fieldTemp$0 = this.field_c - 1;
         this.field_c = this.field_c - 1;
@@ -259,7 +259,7 @@ final class mh {
             }
             var6 = param1 + gf.field_b * param2;
             if (param4) {
-              field_b = (bi[]) null;
+              field_b = (Sprite[]) null;
             }
             while (param0 > 0) {
               param1 = gf.field_h[var6];
@@ -355,6 +355,6 @@ final class mh {
 
     static {
         field_a = "This entry doesn't match";
-        field_d = new pf();
+        field_d = new IntrusiveDeque();
     }
 }

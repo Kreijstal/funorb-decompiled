@@ -3,7 +3,7 @@
  */
 final class wl {
     static String field_e;
-    static bi field_d;
+    static Sprite field_d;
     static String field_b;
     static String field_c;
     static vi field_a;
@@ -22,7 +22,7 @@ final class wl {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param1 <= 22) {
-            field_d = (bi) null;
+            field_d = (Sprite) null;
           }
           var6 = param2[param0];
           var3 = var6;

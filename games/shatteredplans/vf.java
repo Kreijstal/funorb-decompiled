@@ -25,7 +25,7 @@ final class vf extends hb {
         int[] var8 = null;
         int var9 = 0;
         int var10 = 0;
-        pf var10_ref_pf = null;
+        IntrusiveDeque var10_ref_pf = null;
         int var11 = 0;
         ln[] var11_ref_ln__ = null;
         int var12 = 0;
@@ -62,7 +62,7 @@ final class vf extends hb {
             return;
           }
           for (var9 = 0; var9 < param1; var9++) {
-            var10_ref_pf = new pf();
+            var10_ref_pf = new IntrusiveDeque();
             var11_ref_ln__ = param4;
             for (var12 = 0; var11_ref_ln__.length > var12; var12++) {
               var22 = var11_ref_ln__[var12];
@@ -87,7 +87,7 @@ final class vf extends hb {
               }
               var11 = qf.a((byte) 76, var27[var9Lifetime1], param5);
               var12Lifetime1 = 0;
-              L4: while (true) {
+              scanLoop1: while (true) {
                 if (var27[var9Lifetime1] > var12Lifetime1) {
                   var26 = var25[var9Lifetime1][(var12Lifetime1 + var11) % var27[var9Lifetime1]];
                   if (~var26.field_x == ~var9Lifetime1) {
@@ -149,7 +149,7 @@ final class vf extends hb {
                           if (decompiledFrameCompleted0) {
                             var26.a((byte) -113, var16.field_k);
                             var16.field_k.a((byte) -111, var26);
-                            break L4;
+                            break scanLoop1;
                           }
                         }
                       }
@@ -246,7 +246,7 @@ final class vf extends hb {
             } else {
               var5 = null;
             }
-            var8.field_j = var8.field_j + 4;
+            var8.position = var8.position + 4;
             if (!var8.f((byte) 104)) {
               q.g(param0 + 17);
               return;
@@ -263,11 +263,11 @@ final class vf extends hb {
         }
     }
 
-    final oh a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         if (param0) {
           vf.d((byte) 82);
         }
-        return (oh) ((Object) this.field_g.d(-115));
+        return (IntrusiveNode) ((Object) this.field_g.d(-115));
     }
 
     final static void a(int param0, sd param1) {
@@ -314,11 +314,11 @@ final class vf extends hb {
         }
     }
 
-    final oh a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         if (param0 < 99) {
-          return (oh) null;
+          return (IntrusiveNode) null;
         }
-        return (oh) ((Object) this.field_g.e(-31364));
+        return (IntrusiveNode) ((Object) this.field_g.e(-31364));
     }
 
     final int b(byte param0) {
@@ -329,7 +329,7 @@ final class vf extends hb {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        eo.field_cb.field_j = 0;
+        eo.field_cb.position = 0;
         eo.field_cb.c(12, (byte) -128);
         eo.field_cb.e(11135, na.field_u.nextInt());
         eo.field_cb.e(11135, na.field_u.nextInt());
@@ -338,14 +338,14 @@ final class vf extends hb {
         eo.field_cb.d(param0, 255);
         eo.field_cb.a(jl.field_V, hr.field_a, (byte) -56);
         js.field_f.h(18, param2 + 251);
-        int fieldTemp$0 = js.field_f.field_j + 1;
-        js.field_f.field_j = js.field_f.field_j + 1;
+        int fieldTemp$0 = js.field_f.position + 1;
+        js.field_f.position = js.field_f.position + 1;
         int var4 = fieldTemp$0;
-        js.field_f.a(0, eo.field_cb.field_j, eo.field_cb.field_h, 22186);
+        js.field_f.a(0, eo.field_cb.position, eo.field_cb.payload, 22186);
         if (param2 != 4) {
           return;
         }
-        js.field_f.b(-var4 + js.field_f.field_j, (byte) 118);
+        js.field_f.b(-var4 + js.field_f.position, (byte) 118);
     }
 
     public static void a(int param0) {

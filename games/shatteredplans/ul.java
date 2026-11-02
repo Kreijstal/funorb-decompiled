@@ -8,7 +8,7 @@ final class ul extends qr {
     private int field_yb;
     static String field_Ob;
     private qr field_Nb;
-    private bi[] field_Lb;
+    private Sprite[] field_Lb;
     static hh field_xb;
     private qr field_Mb;
     private int field_Eb;
@@ -45,7 +45,7 @@ final class ul extends qr {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         re.field_d[wm.field_c] = param4;
         lg.field_d[wm.field_c] = wm.field_c;
-        kf.field_f[wm.field_c] = param1;
+        GameApplet.field_f[wm.field_c] = param1;
         if (!(us.field_b >= param1)) {
           s.field_e = param1;
         }
@@ -72,7 +72,7 @@ final class ul extends qr {
         }
     }
 
-    final void a(boolean param0, bi param1, String param2, int param3) {
+    final void a(boolean param0, Sprite param1, String param2, int param3) {
         try {
           this.field_Gb[this.field_Pb] = new sg(0L, (qr) null, (qr) null, this.field_Mb, param1, param2);
           if (param0) {
@@ -106,7 +106,7 @@ final class ul extends qr {
 
     final void a(int param0, int param1, String param2) {
         try {
-          this.field_Gb[this.field_Pb] = new sg(0L, (qr) null, (qr) null, this.field_Mb, (bi) null, param2);
+          this.field_Gb[this.field_Pb] = new sg(0L, (qr) null, (qr) null, this.field_Mb, (Sprite) null, param2);
           this.field_Gb[this.field_Pb].field_lb = this.field_Lb;
           this.field_Gb[this.field_Pb].field_r = true;
           this.field_Gb[this.field_Pb].field_G = param0;
@@ -177,7 +177,7 @@ final class ul extends qr {
           }
           return;
         }
-        this.field_Gb[this.field_Pb] = new sg(0L, (qr) null, (qr) null, this.field_Nb, (bi) null, we.field_a);
+        this.field_Gb[this.field_Pb] = new sg(0L, (qr) null, (qr) null, this.field_Nb, (Sprite) null, we.field_a);
         this.field_Gb[this.field_Pb].field_G = 1;
         this.a(param2 + 4, this.field_Gb[this.field_Pb]);
         this.field_Ib[this.field_Pb] = -1;
@@ -223,7 +223,7 @@ final class ul extends qr {
         return this.field_Bb;
     }
 
-    ul(qr param0, bi[] param1, qr param2, qr param3, int param4, int param5, int param6, int param7, int param8) {
+    ul(qr param0, Sprite[] param1, qr param2, qr param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Ib = new int[256];
         this.field_Gb = new sg[256];

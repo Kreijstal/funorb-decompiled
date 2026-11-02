@@ -5,11 +5,11 @@ final class kl extends wf {
     static int field_t;
     static int field_o;
     static bc field_s;
-    static bi[] field_q;
+    static Sprite[] field_q;
     boolean field_p;
     static String field_r;
 
-    kl(ln param0, pf param1, int[][] param2, fs param3, me param4, int param5, dc param6) {
+    kl(ln param0, IntrusiveDeque param1, int[][] param2, fs param3, me param4, int param5, dc param6) {
         super(param0);
         int var19 = 0;
         RuntimeException stackIn_73_0 = null;

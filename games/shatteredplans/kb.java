@@ -5,13 +5,13 @@ final class kb extends vd {
     private int field_D;
     private boolean field_B;
     private int field_u;
-    static bi field_v;
-    private bi field_C;
+    static Sprite field_v;
+    private Sprite field_C;
     private String field_z;
     static int field_x;
     static int field_A;
-    static bi field_y;
-    static om field_w;
+    static Sprite field_y;
+    static ArgbSprite field_w;
 
     final static void f(int param0) {
         ln.field_o = sa.field_a.e(-1);
@@ -33,7 +33,7 @@ final class kb extends vd {
           this.field_D = param3;
           this.field_u = param5;
           this.field_z = param4;
-          this.field_C = new bi(this.field_m, this.field_i);
+          this.field_C = new Sprite(this.field_m, this.field_i);
           ra.a(-111);
           this.field_C.e();
           for (var8_int = 0; this.field_C.field_w > var8_int; var8_int++) {

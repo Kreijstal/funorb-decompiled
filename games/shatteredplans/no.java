@@ -158,11 +158,11 @@ final class no {
               var26Lifetime1 = var22Lifetime1;
               var29 = var26Lifetime1;
               var26Lifetime1Lifetime1 = var22Lifetime1;
-              uq.field_m.a(pa.a(var22Lifetime1, -31), 27275, "star" + var22Lifetime1.field_p);
+              uq.field_m.a(ProxySocketConnector.a(var22Lifetime1, -31), 27275, "star" + var22Lifetime1.field_p);
             }
             var5 = null;
             if (kb.field_x == 5) {
-              var23 = new fs(1, hn.field_f[1], or.field_b[1], df.field_k[1], ho.field_e[1]);
+              var23 = new fs(1, hn.field_f[1], or.field_b[1], DualLinkNode.field_k[1], ho.field_e[1]);
               var5 = var23;
               var3.field_e[6].field_t = var23;
               var3.field_e[6].field_y = var23;
@@ -180,7 +180,7 @@ final class no {
               var23.field_q = new um(var3.field_e[7].field_x + var3.field_e[6].field_x);
             }
             if (6 == kb.field_x) {
-              var25 = new fs(2, hn.field_f[2], or.field_b[2], df.field_k[2], ho.field_e[2]);
+              var25 = new fs(2, hn.field_f[2], or.field_b[2], DualLinkNode.field_k[2], ho.field_e[2]);
               var5 = var25;
               var26Lifetime2 = var3.field_e[17];
               var29Lifetime1 = var26Lifetime2;
@@ -196,7 +196,7 @@ final class no {
               var25.field_q = new um(var26Lifetime2.field_x);
             }
             if (kb.field_x == 7) {
-              var28 = new fs(3, hn.field_f[3], or.field_b[3], df.field_k[3], ho.field_e[3]);
+              var28 = new fs(3, hn.field_f[3], or.field_b[3], DualLinkNode.field_k[3], ho.field_e[3]);
               var5 = var28;
               var29Lifetime2 = var3.field_e[37];
               var30 = var3.field_e[36];
@@ -280,7 +280,7 @@ final class no {
                 gr.a(false, param0, param1 ^ 10);
                 mc.a(64, 0, param2, 0);
               } else {
-                pa.a(param1 ^ 9232, param2);
+                ProxySocketConnector.a(param1 ^ 9232, param2);
               }
             }
           }

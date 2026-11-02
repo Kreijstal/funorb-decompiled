@@ -3,7 +3,7 @@
  */
 final class us {
     static boolean field_c;
-    static bi field_a;
+    static Sprite field_a;
     static qf field_d;
     static String field_e;
     static int field_b;
@@ -49,7 +49,7 @@ final class us {
         us.a(false, true);
     }
 
-    final static fs a(ob param0, fs[] param1, int param2) {
+    final static fs a(PacketBuffer param0, fs[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         fs stackIn_7_0 = null;

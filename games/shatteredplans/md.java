@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class md extends vg {
+final class md extends UiWidget {
     static String field_I;
     static boolean field_B;
     private int field_E;
-    private bi field_S;
-    private bi field_R;
+    private Sprite field_S;
+    private Sprite field_R;
     boolean field_L;
     private int field_P;
     static String field_G;
     static String field_D;
     private int field_O;
-    private bi field_N;
+    private Sprite field_N;
     static int field_M;
     static String field_K;
-    private bi[] field_z;
+    private Sprite[] field_z;
     private int field_A;
     static boolean field_Q;
     static int[] field_J;
@@ -23,7 +23,7 @@ final class md extends vg {
     private int field_H;
     private int field_F;
 
-    private final bi a(int param0, byte param1, int param2) {
+    private final Sprite a(int param0, byte param1, int param2) {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -32,7 +32,7 @@ final class md extends vg {
         int var12 = 0;
         int var13 = 0;
         int var14 = ShatteredPlansClient.field_F ? 1 : 0;
-        bi var15 = new bi(2 * this.field_H, this.field_n);
+        Sprite var15 = new Sprite(2 * this.field_H, this.field_n);
         int var5 = -87 % ((param1 - 33) / 61);
         int var9Lifetime1;
         int var10Lifetime1;
@@ -59,13 +59,13 @@ final class md extends vg {
     }
 
     private final void a(int param0) {
-        this.field_z = new bi[]{this.a(this.field_E, (byte) 98, this.field_F), this.a(this.field_A, (byte) 124, this.field_O)};
+        this.field_z = new Sprite[]{this.a(this.field_E, (byte) 98, this.field_F), this.a(this.field_A, (byte) 124, this.field_O)};
         if (param0 != -907398527) {
           md.a((byte) 86, -76, 69);
         }
         this.field_R = this.h(61);
         this.field_N = this.field_R.c();
-        this.field_S = new bi(this.field_n >> 1, this.field_n);
+        this.field_S = new Sprite(this.field_n >> 1, this.field_n);
     }
 
     final static void a(int param0, String param1, int param2, String param3, String param4, int param5) {
@@ -124,7 +124,7 @@ final class md extends vg {
         this(param0, param1, param2, param3, param4, param5, param6, param5 >> 1 & 8355711, 8355711 & param6 >> 1);
     }
 
-    private final void a(bi param0, int param1, int param2, int param3) {
+    private final void a(Sprite param0, int param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -137,7 +137,7 @@ final class md extends vg {
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param3 != -1) {
-            this.field_S = (bi) null;
+            this.field_S = (Sprite) null;
           }
           var5_int = param2 + this.field_x;
           ke.a(-6187, var5_int - this.field_R.field_z, this.field_n + param1, param1, param2 + this.field_R.field_z);
@@ -179,7 +179,7 @@ final class md extends vg {
         }
     }
 
-    final void a(int param0, int param1, vg param2, byte param3) {
+    final void a(int param0, int param1, UiWidget param2, byte param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -215,8 +215,8 @@ final class md extends vg {
           return;
         }
         if (param1 != -11857) {
-          vg var7 = (vg) null;
-          this.a(-111, -4, (vg) null, (byte) -84);
+          UiWidget var7 = (UiWidget) null;
+          this.a(-111, -4, (UiWidget) null, (byte) -84);
         }
         int var5 = param3 + this.field_m;
         int var6 = this.field_q + param2;
@@ -228,12 +228,12 @@ final class md extends vg {
         }
     }
 
-    final static bi i(int param0) {
+    final static Sprite i(int param0) {
         int var2 = 0;
         int var1 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         int var1Lifetime1;
-        ln.field_F = new bi(182 - pf.field_a[0].field_z * 3 / 4, rs.field_Cb.field_J);
+        ln.field_F = new Sprite(182 - IntrusiveDeque.field_a[0].field_z * 3 / 4, rs.field_Cb.field_J);
         ra.a(param0 - 106);
         ln.field_F.e();
         for (var1 = 1; -1 + ln.field_F.field_w > var1; var1++) {
@@ -255,14 +255,14 @@ final class md extends vg {
         return ln.field_F;
     }
 
-    private final bi h(int param0) {
+    private final Sprite h(int param0) {
         int var5 = 0;
         int var6 = 0;
         double var7 = 0.0;
         int var9 = 0;
         int var10 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = this.field_n >> 1;
-        bi var3 = new bi(var2, this.field_n);
+        Sprite var3 = new Sprite(var2, this.field_n);
         int var4 = 44 / ((param0 + 16) / 62);
         aq.a((byte) -50, var3);
         for (var5 = 0; this.field_n > var5; var5++) {

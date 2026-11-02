@@ -4,28 +4,28 @@
 final class un extends hb {
     private static int[] field_f;
     private static int[] field_k;
-    private pf field_h;
+    private IntrusiveDeque field_h;
     static qr field_g;
     static u field_i;
     static String field_j;
 
     final int b(byte param0) {
         if (param0 != -61) {
-          this.field_h = (pf) null;
+          this.field_h = (IntrusiveDeque) null;
         }
         return this.field_h.e(0);
     }
 
-    final oh a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         if (param0 <= 99) {
           field_j = (String) null;
         }
         return this.field_h.d(0);
     }
 
-    final oh a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         if (param0) {
-          return (oh) null;
+          return (IntrusiveNode) null;
         }
         return this.field_h.a((byte) -71);
     }
@@ -45,7 +45,7 @@ final class un extends hb {
         }
     }
 
-    un(pf param0) {
+    un(IntrusiveDeque param0) {
         try {
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {

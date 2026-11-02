@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gm extends oh {
+final class gm extends IntrusiveNode {
     static String[] field_l;
     static qr field_m;
     int field_h;
@@ -10,7 +10,7 @@ final class gm extends oh {
     static int[] field_k;
     static int field_i;
     static String field_j;
-    oh field_n;
+    IntrusiveNode field_n;
 
     final static void a(boolean param0, int param1, int param2) {
         int stackIn_37_0 = 0;
@@ -211,7 +211,7 @@ final class gm extends oh {
             ShatteredPlansClient.field_E = new int[2];
             kr.field_f[0] = wp.field_b;
             ss.field_a[1] = 0;
-            kr.field_f[1] = pa.field_h;
+            kr.field_f[1] = ProxySocketConnector.field_h;
             kr.field_f[2] = ld.field_i;
             ss.field_a[3] = 1;
             kr.field_f[5] = "";
@@ -351,7 +351,7 @@ final class gm extends oh {
         int var3 = 85 % ((param0 - 59) / 59);
     }
 
-    gm(al param0, oh param1) {
+    gm(al param0, IntrusiveNode param1) {
         try {
           this.field_p = param0;
           this.field_h = param0.i();

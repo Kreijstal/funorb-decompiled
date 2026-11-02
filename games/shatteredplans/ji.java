@@ -6,7 +6,7 @@ abstract class ji extends f implements ki {
     static ub field_I;
     static String field_F;
     private ja field_H;
-    static bi[] field_E;
+    static Sprite[] field_E;
     static int[][] field_D;
 
     abstract int d(boolean param0);

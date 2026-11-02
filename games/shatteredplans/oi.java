@@ -8,9 +8,9 @@ final class oi {
     static String field_g;
     static int field_e;
     static ds field_b;
-    static bi[][] field_i;
+    static Sprite[][] field_i;
     static boolean field_f;
-    static bi field_d;
+    static Sprite field_d;
 
     final static void a(boolean param0) {
         k.field_b = false;
@@ -31,7 +31,7 @@ final class oi {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           ln.field_K = mf.a(param1, "", "starfield", false);
-          mp.field_e = new bi[6];
+          mp.field_e = new Sprite[6];
           for (var2_int = 0; var2_int < 6; var2_int++) {
             mp.field_e[var2_int] = vr.a(param1, var2_int + 1, 1);
           }
@@ -63,17 +63,17 @@ final class oi {
           oi.a(52);
         }
         field_d = null;
-        field_i = (bi[][]) null;
+        field_i = (Sprite[][]) null;
         field_g = null;
         field_c = null;
     }
 
-    final static bi a(int param0, byte param1) {
-        bi dupTemp$0 = null;
-        bi var3 = null;
-        bi var2 = bd.field_C[param0];
+    final static Sprite a(int param0, byte param1) {
+        Sprite dupTemp$0 = null;
+        Sprite var3 = null;
+        Sprite var2 = bd.field_C[param0];
         if (var2 == null) {
-          dupTemp$0 = new bi(32, 32);
+          dupTemp$0 = new Sprite(32, 32);
           var3 = dupTemp$0;
           var2 = var3;
           bd.field_C[param0] = dupTemp$0;

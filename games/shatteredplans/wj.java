@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wj extends oh {
+final class wj extends IntrusiveNode {
     int field_p;
     static String field_n;
     int field_q;
@@ -13,7 +13,7 @@ final class wj extends oh {
     int field_m;
     int field_j;
 
-    final static boolean a(pf param0, byte param1) {
+    final static boolean a(IntrusiveDeque param0, byte param1) {
         boolean stackIn_26_0 = false;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -80,7 +80,7 @@ final class wj extends oh {
     }
 
     final static void a(int param0) {
-        bi stackIn_13_0 = null;
+        Sprite stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         int stackIn_13_2 = 0;
         int stackIn_13_3 = 0;
@@ -152,7 +152,7 @@ final class wj extends oh {
           } else {
             stackIn_16_4 = 0;
           }
-          ((bi) (Object) stackIn_13_0).c(stackIn_13_1, stackIn_13_2, stackIn_13_3 * stackIn_16_4 >> 8);
+          ((Sprite) (Object) stackIn_13_0).c(stackIn_13_1, stackIn_13_2, stackIn_13_3 * stackIn_16_4 >> 8);
           mc.field_u.c(0, var4, var6);
           var11 = fe.field_C;
           var7 = var11;
@@ -204,8 +204,8 @@ final class wj extends oh {
         try {
           var5 = js.field_f;
           var5.h(param1, param0 - 65);
-          var5.field_j = var5.field_j + 1;
-          var4 = var5.field_j;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.c(1, (byte) -59);
           var5.c(param2.field_j, (byte) -104);
           var5.c(param2.field_l, (byte) -75);
@@ -217,7 +217,7 @@ final class wj extends oh {
           var5.e(param0 ^ 10815, param2.field_m);
           var5.e(param0 + 10815, param2.field_h);
           var5.a(var4, param0 - 446);
-          var5.b(-var4 + var5.field_j, (byte) 127);
+          var5.b(-var4 + var5.position, (byte) 127);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "wj.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

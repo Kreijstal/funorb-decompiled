@@ -13,10 +13,10 @@ abstract class ar {
     db field_m;
     db field_f;
     int field_n;
-    ob field_c;
+    PacketBuffer field_c;
     long field_k;
     volatile int field_a;
-    ob field_q;
+    PacketBuffer field_q;
     byte field_d;
     volatile int field_p;
     tk field_l;
@@ -122,11 +122,11 @@ abstract class ar {
         this.field_j = new db();
         this.field_m = new db();
         this.field_f = new db();
-        this.field_c = new ob(6);
+        this.field_c = new PacketBuffer(6);
         this.field_a = 0;
         this.field_d = (byte) 0;
         this.field_p = 0;
-        this.field_q = new ob(10);
+        this.field_q = new PacketBuffer(10);
     }
 
     static {

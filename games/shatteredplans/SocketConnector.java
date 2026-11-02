@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-abstract class li {
-    int field_a;
+abstract class SocketConnector {
+    int port;
     static String field_e;
     static ln field_b;
     static String field_c;
-    String field_f;
+    String host;
     static qr field_d;
 
     public static void a(byte param0) {
@@ -16,7 +16,7 @@ abstract class li {
         field_d = null;
         field_e = null;
         if (param0 != 23) {
-          li.a((byte) 79);
+          SocketConnector.a((byte) 79);
           field_c = null;
           return;
         }
@@ -25,10 +25,10 @@ abstract class li {
 
     final java.net.Socket a(int param0) throws IOException {
         if (param0 > 108) {
-          return new java.net.Socket(this.field_f, this.field_a);
+          return new java.net.Socket(this.host, this.port);
         }
         field_c = (String) null;
-        return new java.net.Socket(this.field_f, this.field_a);
+        return new java.net.Socket(this.host, this.port);
     }
 
     abstract java.net.Socket b(int param0) throws IOException;

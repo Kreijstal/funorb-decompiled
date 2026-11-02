@@ -3,18 +3,18 @@
  */
 import java.util.*;
 
-class f extends vg implements ni {
+class f extends UiWidget implements ni {
     static String field_z;
     static boolean field_C;
     static int[] field_y;
     static String field_B;
-    pf field_A;
+    IntrusiveDeque field_A;
 
-    final boolean a(int param0, int param1, int param2, vg param3, int param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
-        vg var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
-        vg var11 = null;
+        UiWidget var11 = null;
         on var12 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -23,18 +23,18 @@ class f extends vg implements ni {
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 != 0) {
-            var11 = (vg) null;
-            this.a(118, -43, -76, (vg) null, 87, 88, 5);
+            var11 = (UiWidget) null;
+            this.a(118, -43, -76, (UiWidget) null, 87, 88, 5);
           }
           var12 = new on(this.field_A);
-          var9 = (vg) (var12.a(2));
+          var9 = (UiWidget) (var12.a(2));
           while (var9 != null) {
             if (var9.c(param0 + 2048)) {
               if (var9.f(1) &&
                 var9.a(0, param1, param2, param3, param4, param5, param6)) {
                 return true;
               }
-              var9 = (vg) (var12.a((byte) 58));
+              var9 = (UiWidget) (var12.a((byte) 58));
               continue;
             }
             break;
@@ -54,11 +54,11 @@ class f extends vg implements ni {
         }
     }
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, vg param6) {
+    final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
-        vg var9 = null;
+        UiWidget var9 = null;
         int var10 = 0;
-        vg var11 = null;
+        UiWidget var11 = null;
         on var12 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -68,14 +68,14 @@ class f extends vg implements ni {
         try {
           var12 = new on(this.field_A);
           if (param2 < 95) {
-            var11 = (vg) null;
-            this.a((vg) null, -47);
+            var11 = (UiWidget) null;
+            this.a((UiWidget) null, -47);
           }
-          var9 = (vg) (var12.a(2));
+          var9 = (UiWidget) (var12.a(2));
           while (var9 != null) {
             if (var9.c(2048)) {
               if (!var9.a(param0, param1, (byte) 109, param3, param4 + this.field_m, param5 + this.field_q, param6)) {
-                var9 = (vg) (var12.a((byte) 87));
+                var9 = (UiWidget) (var12.a((byte) 87));
                 continue;
               }
               return true;
@@ -97,9 +97,9 @@ class f extends vg implements ni {
         }
     }
 
-    boolean a(int param0, char param1, int param2, vg param3) {
+    boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
-        vg var6_ref_vg = null;
+        UiWidget var6_ref_vg = null;
         int var6 = 0;
         int var7 = 0;
         on var8 = null;
@@ -111,14 +111,14 @@ class f extends vg implements ni {
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var8 = new on(this.field_A);
-          var6_ref_vg = (vg) (var8.a(param2 ^ 15));
+          var6_ref_vg = (UiWidget) (var8.a(param2 ^ 15));
           while (var6_ref_vg != null) {
             if (var6_ref_vg.c(param2 ^ 2061)) {
               if (var6_ref_vg.f(1) &&
                 var6_ref_vg.a(param0, param1, 13, param3)) {
                 return true;
               }
-              var6_ref_vg = (vg) (var8.a((byte) 84));
+              var6_ref_vg = (UiWidget) (var8.a((byte) 84));
               continue;
             }
             break;
@@ -150,21 +150,21 @@ class f extends vg implements ni {
         }
     }
 
-    vg i(int param0) {
+    UiWidget i(int param0) {
         on var2;
-        vg var3;
+        UiWidget var3;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = new on(this.field_A);
         if (param0 != 1) {
           field_C = true;
         }
-        var3 = (vg) (var2.a(param0 ^ 3));
+        var3 = (UiWidget) (var2.a(param0 ^ 3));
         while (var3 != null) {
           if (var3.f(1)) {
             return var3;
           }
-          var3 = (vg) (var2.a((byte) 121));
+          var3 = (UiWidget) (var2.a((byte) 121));
         }
         return null;
     }
@@ -182,7 +182,7 @@ class f extends vg implements ni {
         int var7 = 0;
         StringBuilder discarded$4 = null;
         on var5 = null;
-        vg var6 = null;
+        UiWidget var6 = null;
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -197,14 +197,14 @@ class f extends vg implements ni {
           if (param2 >= -21) {
             field_B = (String) null;
           }
-          var6 = (vg) (var5.a(2));
+          var6 = (UiWidget) (var5.a(2));
           while (var6 != null) {
             discarded$3 = param0.append('\n');
             for (var7 = 0; var7 <= param3; var7++) {
               discarded$4 = param0.append(' ');
             }
             var6.a((byte) 125, param1, param3 + 1, param0);
-            var6 = (vg) (var5.a((byte) 89));
+            var6 = (UiWidget) (var5.a((byte) 89));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -232,13 +232,13 @@ class f extends vg implements ni {
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = 0;
         on var3 = new on(this.field_A);
-        vg var4 = (vg) (var3.a(2));
+        UiWidget var4 = (UiWidget) (var3.a(2));
         while (var4 != null) {
           var5 = var4.e(param0 ^ 0);
           if (var5 > var2) {
             var2 = var5;
           }
-          var4 = (vg) (var3.a((byte) 51));
+          var4 = (UiWidget) (var3.a((byte) 51));
         }
         if (param0 != -600269855) {
           field_B = (String) null;
@@ -246,12 +246,12 @@ class f extends vg implements ni {
         return var2;
     }
 
-    final boolean a(byte param0, vg param1) {
+    final boolean a(byte param0, UiWidget param1) {
         on var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
-        vg var6 = null;
+        UiWidget var6 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -259,14 +259,14 @@ class f extends vg implements ni {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var3 = new on(this.field_A);
-          var6 = (vg) (var3.a(2));
+          var6 = (UiWidget) (var3.a(2));
           while (true) {
             if (var6 == null) {
               var4 = -111 / ((param0 - 61) / 59);
               return false;
             }
             if (!var6.a((byte) 125, param1)) {
-              var6 = (vg) (var3.a((byte) 100));
+              var6 = (UiWidget) (var3.a((byte) 100));
               continue;
             }
             break;
@@ -286,11 +286,11 @@ class f extends vg implements ni {
         }
     }
 
-    final boolean a(vg param0, boolean param1) {
+    final boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
-        vg var4 = null;
+        UiWidget var4 = null;
         on var5 = null;
-        vg var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         on var8 = null;
         RuntimeException stackIn_21_0 = null;
@@ -306,21 +306,21 @@ class f extends vg implements ni {
           if (!param1) {
             field_B = (String) null;
           }
-          var4 = (vg) (var8.c(-30));
+          var4 = (UiWidget) (var8.c(-30));
           while (var4 != null) {
             if (var4.f(1)) {
               var5 = new on(this.field_A);
               var5.a((byte) 109, var4);
-              var6 = (vg) (var5.b((byte) -124));
+              var6 = (UiWidget) (var5.b((byte) -124));
               while (var6 != null) {
                 if (!var6.a((byte) 124, param0)) {
-                  var6 = (vg) (var5.b((byte) -124));
+                  var6 = (UiWidget) (var5.b((byte) -124));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (vg) (var8.b((byte) -124));
+            var4 = (UiWidget) (var8.b((byte) -124));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -337,12 +337,12 @@ class f extends vg implements ni {
         }
     }
 
-    final boolean a(vg param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int var4 = 0;
-        vg var5 = null;
+        UiWidget var5 = null;
         on var6 = null;
-        vg var7 = null;
+        UiWidget var7 = null;
         int var8 = 0;
         on var9 = null;
         RuntimeException stackIn_21_0 = null;
@@ -356,20 +356,20 @@ class f extends vg implements ni {
           }
           var4 = 70 % ((5 - param1) / 50);
           var9 = new on(this.field_A);
-          var5 = (vg) (var9.a(2));
+          var5 = (UiWidget) (var9.a(2));
           while (var5 != null) {
             if (var5.f(1)) {
               var6 = new on(this.field_A);
               var6.a(false, var5);
-              var7 = (vg) (var6.a((byte) 54));
+              var7 = (UiWidget) (var6.a((byte) 54));
               while (var7 != null) {
                 if (var7.a((byte) 123, param0)) {
                   return true;
                 }
-                var7 = (vg) (var6.a((byte) 68));
+                var7 = (UiWidget) (var6.a((byte) 68));
               }
             }
-            var5 = (vg) (var9.a((byte) 111));
+            var5 = (UiWidget) (var9.a((byte) 111));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -390,16 +390,16 @@ class f extends vg implements ni {
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 == 0 &&
           null != this.field_p) {
-          this.field_p.a((vg) (this), param3, true, param2, (byte) 12);
+          this.field_p.a((UiWidget) (this), param3, true, param2, (byte) 12);
         }
         on var5 = new on(this.field_A);
         if (param1 != -11857) {
           return;
         }
-        vg var6 = (vg) (var5.c(param1 ^ -11803));
+        UiWidget var6 = (UiWidget) (var5.c(param1 ^ -11803));
         while (var6 != null) {
           var6.a(param0, -11857, this.field_q + param2, this.field_m + param3);
-          var6 = (vg) (var5.b((byte) -124));
+          var6 = (UiWidget) (var5.b((byte) -124));
         }
     }
 
@@ -495,18 +495,18 @@ class f extends vg implements ni {
     private final void h(int param0) {
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 >= -58) {
-          vg var5 = (vg) null;
-          this.a((byte) -71, (vg) null);
+          UiWidget var5 = (UiWidget) null;
+          this.a((byte) -71, (UiWidget) null);
         }
         on var2 = new on(this.field_A);
-        vg var3 = (vg) (var2.a(2));
+        UiWidget var3 = (UiWidget) (var2.a(2));
         while (var3 != null) {
           var3.d((byte) 90);
-          var3 = (vg) (var2.a((byte) 63));
+          var3 = (UiWidget) (var2.a((byte) 63));
         }
     }
 
-    final void b(byte param0, vg param1) {
+    final void b(byte param0, UiWidget param1) {
         try {
           if (param0 >= -41) {
             field_z = (String) null;
@@ -517,10 +517,10 @@ class f extends vg implements ni {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, vg param5) {
+    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         RuntimeException runtimeException = null;
         on var7 = null;
-        vg var8 = null;
+        UiWidget var8 = null;
         int var9 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -529,14 +529,14 @@ class f extends vg implements ni {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var7 = new on(this.field_A);
-          var8 = (vg) (var7.a(param4 + 600269857));
+          var8 = (UiWidget) (var7.a(param4 + 600269857));
           if (param4 != -600269855) {
             return;
           }
           while (var8 != null) {
             if (var8.c(2048)) {
               var8.a(param0, this.field_q + param1, param2 + this.field_m, param3, -600269855, param5);
-              var8 = (vg) (var7.a((byte) 60));
+              var8 = (UiWidget) (var7.a((byte) 60));
               continue;
             }
             break;
@@ -560,16 +560,16 @@ class f extends vg implements ni {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = -104 / ((param0 + 84) / 33);
         on var3 = new on(this.field_A);
-        vg var4 = (vg) (var3.a(2));
+        UiWidget var4 = (UiWidget) (var3.a(2));
         while (var4 != null) {
           var4.e((byte) -121);
-          var4 = (vg) (var3.a((byte) 88));
+          var4 = (UiWidget) (var3.a((byte) 88));
         }
     }
 
     String c(boolean param0) {
         on var2;
-        vg var3;
+        UiWidget var3;
         String var4;
         int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -577,26 +577,26 @@ class f extends vg implements ni {
         if (!param0) {
           return (String) null;
         }
-        var3 = (vg) (var2.a(2));
+        var3 = (UiWidget) (var2.a(2));
         while (var3 != null) {
           var4 = var3.c(true);
           if (var4 != null) {
             return var4;
           }
-          var3 = (vg) (var2.a((byte) 104));
+          var3 = (UiWidget) (var2.a((byte) 104));
         }
         return null;
     }
 
     f(int param0, int param1, int param2, int param3, iq param4) {
         super(param0, param1, param2, param3, param4, (ko) null);
-        this.field_A = new pf();
+        this.field_A = new IntrusiveDeque();
     }
 
-    void a(int param0, int param1, vg param2, byte param3) {
+    void a(int param0, int param1, UiWidget param2, byte param3) {
         RuntimeException runtimeException = null;
         on var5 = null;
-        vg var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -606,11 +606,11 @@ class f extends vg implements ni {
         try {
           super.a(param0, param1, param2, param3);
           var5 = new on(this.field_A);
-          var6 = (vg) (var5.a(2));
+          var6 = (UiWidget) (var5.a(2));
           while (var6 != null) {
             if (var6.c(2048)) {
               var6.a(this.field_m + param0, this.field_q + param1, param2, (byte) 91);
-              var6 = (vg) (var5.a((byte) 94));
+              var6 = (UiWidget) (var5.a((byte) 94));
               continue;
             }
             break;

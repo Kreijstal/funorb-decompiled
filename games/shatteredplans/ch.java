@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ch implements wr {
-    static bi field_c;
+    static Sprite field_c;
     static String field_a;
     static String field_b;
 
@@ -99,10 +99,10 @@ final class ch implements wr {
         }
     }
 
-    final static bi a(bc param0, int param1, int param2, int param3) {
+    final static Sprite a(bc param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        bi stackIn_5_0 = null;
-        bi stackIn_7_0 = null;
+        Sprite stackIn_5_0 = null;
+        Sprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -115,7 +115,7 @@ final class ch implements wr {
             stackIn_7_0 = ed.a(true);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (bi) null;
+          stackIn_5_0 = (Sprite) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,7 +133,7 @@ final class ch implements wr {
 
     final static qh a(byte param0) {
         ne.field_l = new qh(0, 60, 238, 300, ShatteredPlansClient.field_L.toUpperCase());
-        fe var1 = new fe(-16 + ne.field_l.field_k + ne.field_l.field_m, 2 + ne.field_l.field_t, 11, 11, -1, (bi) null, "X", 16711680);
+        fe var1 = new fe(-16 + ne.field_l.field_k + ne.field_l.field_m, 2 + ne.field_l.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
         var1.field_h = ne.field_l;
         lh var2 = new lh(-20 + ne.field_l.field_m, ne.field_l.field_t + 20, -28 + ne.field_l.field_i, 3974311);
         int var3 = -24 / ((param0 - 57) / 47);
@@ -149,11 +149,11 @@ final class ch implements wr {
         return ne.field_l;
     }
 
-    final static bi[] a(int param0, byte param1, bc param2, int param3) {
+    final static Sprite[] a(int param0, byte param1, bc param2, int param3) {
         RuntimeException var4 = null;
         bc var5 = null;
         Object stackIn_4_0 = null;
-        bi[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -168,7 +168,7 @@ final class ch implements wr {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (bi[]) (stackIn_4_0);
+          return (Sprite[]) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

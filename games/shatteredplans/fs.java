@@ -3,28 +3,28 @@
  */
 final class fs {
     int field_x;
-    bi field_c;
+    Sprite field_c;
     int field_A;
     int field_s;
-    bi field_e;
-    bi field_b;
-    pf field_i;
+    Sprite field_e;
+    Sprite field_b;
+    IntrusiveDeque field_i;
     lo field_m;
     int field_g;
-    bi field_r;
-    bi field_p;
-    bi field_v;
-    static bi[] field_a;
-    bi field_o;
+    Sprite field_r;
+    Sprite field_p;
+    Sprite field_v;
+    static Sprite[] field_a;
+    Sprite field_o;
     int field_w;
     int[] field_u;
     static int field_z;
     int[] field_f;
     boolean[] field_h;
-    bi field_n;
+    Sprite field_n;
     int field_k;
     static fg field_l;
-    bi field_d;
+    Sprite field_d;
     um field_q;
     String field_t;
     static String field_j;
@@ -103,7 +103,7 @@ final class fs {
           this.field_x = param0;
           this.field_g = param2;
           this.field_t = param1;
-          this.field_i = new pf();
+          this.field_i = new IntrusiveDeque();
           this.field_w = 0;
           this.field_f = null;
           this.field_u = new int[4];

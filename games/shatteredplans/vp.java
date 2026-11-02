@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vp extends df {
+class vp extends DualLinkNode {
     static int[] field_s;
     static String field_t;
     static int field_r;
@@ -118,7 +118,7 @@ class vp extends df {
 
     final static eg a(byte param0, ln param1) {
         int var5 = 0;
-        oh var2 = null;
+        IntrusiveNode var2 = null;
         eg var3 = null;
         fs[] var4 = null;
         fs var6 = null;

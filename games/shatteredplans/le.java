@@ -6,7 +6,7 @@ abstract class le {
     static String field_a;
     static String field_c;
     static int field_b;
-    static bi field_d;
+    static Sprite field_d;
 
     abstract void a(byte[] param0, byte param1);
 

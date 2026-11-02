@@ -22,7 +22,7 @@ final class pg extends qs {
         return var3;
     }
 
-    pg(int param0, int param1, int param2, int param3, vg param4, boolean param5, int param6, int param7, nq param8, int param9, String param10) {
+    pg(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, nq param8, int param9, String param10) {
         super(param0, param1, param2, param3, (iq) null, (ko) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -98,14 +98,14 @@ final class pg extends qs {
         field_E = null;
     }
 
-    final static bi[] a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        bi[] var10;
-        bi[] var11_ref_bi__;
+        Sprite[] var10;
+        Sprite[] var11_ref_bi__;
         int var11;
         int var12;
-        bi var13;
+        Sprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -116,7 +116,7 @@ final class pg extends qs {
         int var12Lifetime4;
         var15 = ShatteredPlansClient.field_F ? 1 : 0;
         var9 = param1 + param2 + param7;
-        var10 = new bi[]{new bi(var9, var9), new bi(param6, var9), new bi(var9, var9), new bi(var9, param6), new bi(64, 64), new bi(var9, param6), new bi(var9, var9), new bi(param6, var9), new bi(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9), new Sprite(var9, param6), new Sprite(64, 64), new Sprite(var9, param6), new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9)};
         var11_ref_bi__ = var10;
         for (var12 = 0; var11_ref_bi__.length > var12; var12++) {
           var13 = var11_ref_bi__[var12];

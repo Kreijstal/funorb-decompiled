@@ -125,7 +125,7 @@ final class ui extends me {
         return cg.field_F;
     }
 
-    final void a(int param0, ob param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -195,7 +195,7 @@ final class ui extends me {
         return var4;
     }
 
-    final void a(ob param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -395,7 +395,7 @@ final class ui extends me {
                 var10 = (String) null;
                 mq.field_c = dd.a(false, param3, (String) null, 4684, pd.field_l);
               }
-              js.field_f.field_j = 0;
+              js.field_f.position = 0;
               js.field_f.c(14, (byte) -80);
               js.field_f.c(mq.field_c.a((byte) -73).field_d, (byte) -68);
               d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
@@ -404,7 +404,7 @@ final class ui extends me {
             if (ti.field_i == cs.field_j &&
               es.a(-90, 1)) {
               var6_int = sa.field_a.j(-92);
-              sa.field_a.field_j = 0;
+              sa.field_a.position = 0;
               if (var6_int != 0) {
                 ej.field_e = var6_int;
                 cs.field_j = fs.field_l;
@@ -416,7 +416,7 @@ final class ui extends me {
             if (qq.field_m == cs.field_j &&
               es.a(-91, 8)) {
               w.field_I = sa.field_a.d(110);
-              sa.field_a.field_j = 0;
+              sa.field_a.position = 0;
               gi.a(param0, param2, param4, -84, mq.field_c);
               cs.field_j = ti.field_d;
             }
@@ -425,7 +425,7 @@ final class ui extends me {
               es.a(119, 1)) {
               var6_intLifetime1 = sa.field_a.j(-63);
               fr.field_H = null;
-              sa.field_a.field_j = 0;
+              sa.field_a.position = 0;
               ej.field_e = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {

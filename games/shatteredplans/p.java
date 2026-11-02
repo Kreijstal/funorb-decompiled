@@ -19,9 +19,9 @@ final class p extends lc {
     static String field_y;
     private jc field_l;
     private int field_q;
-    private pf field_h;
+    private IntrusiveDeque field_h;
     private boolean field_x;
-    private pf field_i;
+    private IntrusiveDeque field_i;
     private boolean field_m;
     private long field_e;
     private boolean field_s;
@@ -36,7 +36,7 @@ final class p extends lc {
           discarded$0 = this.a(21, -34, 75);
         }
         if (null == this.field_h) {
-          this.field_h = new pf();
+          this.field_h = new IntrusiveDeque();
         }
     }
 
@@ -47,15 +47,15 @@ final class p extends lc {
         jc discarded$0 = null;
         int var2_int;
         jc var2;
-        oh var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        oh var6;
-        oh var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
         jc var2Lifetime1;
-        oh var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0) {
           this.field_l = (jc) null;
@@ -71,7 +71,7 @@ final class p extends lc {
             var2_int = 1;
             var3 = this.field_h.d(0);
             while (var3 != null) {
-              var4 = (int)var3.field_b;
+              var4 = (int)var3.key;
               if (0 == this.field_u[var4]) {
                 discarded$3 = this.a(1, 0, var4);
               }
@@ -92,8 +92,8 @@ final class p extends lc {
                   discarded$2 = this.a(1, 0, this.field_q);
                 }
                 if (this.field_u[this.field_q] == 0) {
-                  var6 = new oh();
-                  var6.field_b = (long)this.field_q;
+                  var6 = new IntrusiveNode();
+                  var6.key = (long)this.field_q;
                   var2_int = 0;
                   this.field_h.a((byte) -113, var6);
                 }
@@ -137,7 +137,7 @@ final class p extends lc {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_h.d(0);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_b;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_u[var4Lifetime1] != 1) {
                   discarded$1 = this.a(2, 0, var4Lifetime1);
                 }
@@ -148,19 +148,19 @@ final class p extends lc {
                 }
                 var3Lifetime1 = this.field_h.a((byte) -71);
               }
-              L6: while (true) {
+              scanLoop1: while (true) {
                 if (this.field_q < this.field_p.field_n.length) {
                   if (this.field_p.field_n[this.field_q] != 0) {
                     if (this.field_w.c((byte) -98)) {
                       var2_intLifetime1 = 0;
-                      break L6;
+                      break scanLoop1;
                     }
                     if (this.field_u[this.field_q] != 1) {
                       discarded$0 = this.a(2, 0, this.field_q);
                     }
                     if (this.field_u[this.field_q] != 1) {
-                      var7 = new oh();
-                      var7.field_b = (long)this.field_q;
+                      var7 = new IntrusiveNode();
+                      var7.key = (long)this.field_q;
                       this.field_h.a((byte) -113, var7);
                       var2_intLifetime1 = 0;
                     }
@@ -208,7 +208,7 @@ final class p extends lc {
     final void a(byte param0) {
         jc discarded$0 = null;
         jc discarded$1 = null;
-        oh var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -220,7 +220,7 @@ final class p extends lc {
         }
         var2 = this.field_i.d(0);
         while (var2 != null) {
-          var3 = (int)var2.field_b;
+          var3 = (int)var2.key;
           if (var3 >= 0) {
             if (this.field_p.field_a > var3) {
               if (this.field_p.field_n[var3] == 0) {
@@ -432,7 +432,7 @@ final class p extends lc {
               var4 = this.field_w.a(true, this.field_j, (byte) 2, -2057056416, param2);
             }
           }
-          this.field_f.a((oh) (var4), -120, (long)param2);
+          this.field_f.a((IntrusiveNode) (var4), -120, (long)param2);
         }
         if (((jc) (var4)).field_u) {
           return null;
@@ -489,7 +489,7 @@ final class p extends lc {
                 return null;
               }
               var4 = this.field_w.a(true, this.field_j, (byte) 2, -2057056416, param2);
-              this.field_f.a((oh) (var4), 81, (long)param2);
+              this.field_f.a((IntrusiveNode) (var4), 81, (long)param2);
             }
             return null;
           }
@@ -526,7 +526,7 @@ final class p extends lc {
           if (((jc) (var4)).field_q &&
             !this.field_w.c(27356)) {
             var4 = this.field_w.a(true, this.field_j, (byte) 2, -2057056416, param2);
-            this.field_f.a((oh) (var4), 64, (long)param2);
+            this.field_f.a((IntrusiveNode) (var4), 64, (long)param2);
           }
           return null;
         }
@@ -563,14 +563,14 @@ final class p extends lc {
         RuntimeException var10 = null;
         this.field_f = new ti(16);
         this.field_q = 0;
-        this.field_i = new pf();
+        this.field_i = new IntrusiveDeque();
         this.field_e = 0L;
         try {
           this.field_j = param0;
           this.field_r = param1;
           if (this.field_r != null) {
             this.field_x = true;
-            this.field_h = new pf();
+            this.field_h = new IntrusiveDeque();
           } else {
             this.field_x = false;
           }

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eg extends oh {
+final class eg extends IntrusiveNode {
     static String field_s;
     int field_l;
     fs field_w;
     ln field_p;
-    pf field_v;
+    IntrusiveDeque field_v;
     fs field_i;
     static qr field_u;
     int field_n;
@@ -58,8 +58,8 @@ final class eg extends oh {
         sl var7 = js.field_f;
         sl var8 = var7;
         var8.h(param0, 255);
-        var8.field_j = var8.field_j + 1;
-        int var4 = var8.field_j;
+        var8.position = var8.position + 1;
+        int var4 = var8.position;
         var8.c(1, (byte) -86);
         var8.d(param1.field_h, 255);
         var8.d(param1.field_m, 255);
@@ -77,7 +77,7 @@ final class eg extends oh {
             var7.e(11135, param1.field_i[var5]);
           }
           var8.a(var4, -24);
-          var8.b(-var4 + var8.field_j, (byte) 127);
+          var8.b(-var4 + var8.position, (byte) 127);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "eg.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -127,7 +127,7 @@ final class eg extends oh {
           this.field_p = param0;
           this.field_j = (int[]) ((Object) param2.clone());
           this.field_w = this.field_p.field_y;
-          this.field_v = new pf();
+          this.field_v = new IntrusiveDeque();
           this.field_n = 0;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "eg.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vj extends qs {
-    static pf field_E;
+    static IntrusiveDeque field_E;
     private static int[] field_G;
     static int[] field_F;
     private static int[] field_A;
@@ -116,7 +116,7 @@ final class vj extends qs {
           return fa.field_J;
         }
         if (!rq.field_g.a("commonui", 77)) {
-          return ii.field_r + " - " + rq.field_g.a("commonui", (byte) 65) + "%";
+          return SpriteState.field_r + " - " + rq.field_g.a("commonui", (byte) 65) + "%";
         }
         if (!tq.field_f.b((byte) -69)) {
           return rq.field_h;
@@ -152,7 +152,7 @@ final class vj extends qs {
         field_H = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, vg param5) {
+    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         super.a(param0, param1, param2, param3, param4 + 0, param5);
         fr var8 = oa.field_b;
         if (param4 != -600269855) {
@@ -177,7 +177,7 @@ final class vj extends qs {
         }
     }
 
-    private vj(int param0, int param1, int param2, int param3, iq param4, ko param5, vg param6) {
+    private vj(int param0, int param1, int param2, int param3, iq param4, ko param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_z = param6;
@@ -202,7 +202,7 @@ final class vj extends qs {
 
     static {
         int var0 = 0;
-        field_E = new pf();
+        field_E = new IntrusiveDeque();
         field_F = new int[256];
         field_G = new int[256];
         field_I = new int[256];

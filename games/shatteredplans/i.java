@@ -7,7 +7,7 @@ final class i implements iq {
     private int field_j;
     private int field_h;
     private int field_m;
-    static pf field_n;
+    static IntrusiveDeque field_n;
     private nq field_d;
     private int field_i;
     private int field_k;
@@ -111,7 +111,7 @@ final class i implements iq {
         field_e = null;
     }
 
-    public final void a(vg param0, int param1, boolean param2, int param3, byte param4) {
+    public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         int var7 = 0;
         int var8 = 0;
         double var9 = 0.0;
@@ -119,7 +119,7 @@ final class i implements iq {
         int var12 = 0;
         int var13 = 0;
         rp var14 = null;
-        vg stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -130,7 +130,7 @@ final class i implements iq {
         int var12Lifetime1;
         try {
           if (param0 instanceof rp) {
-            stackIn_3_0 = (vg) (param0);
+            stackIn_3_0 = (UiWidget) (param0);
           } else {
             stackIn_3_0 = null;
           }
@@ -190,7 +190,7 @@ final class i implements iq {
     }
 
     static {
-        field_n = new pf();
+        field_n = new IntrusiveDeque();
         field_c = false;
         field_f = "Select a friendly system to anchor one end of the Tannhäuser wormhole, or right click to cancel this project.";
         field_e = Calendar.getInstance(TimeZone.getTimeZone("GMT"));

@@ -45,7 +45,7 @@ final class fb extends qr {
     int field_Lb;
     qr field_Ob;
     qr field_ac;
-    static bi field_Vb;
+    static Sprite field_Vb;
 
     fb(int param0) {
         super(0L, (qr) null);
@@ -60,7 +60,7 @@ final class fb extends qr {
         field_yb = null;
         field_zb = null;
         if (param0 != 32) {
-          field_Vb = (bi) null;
+          field_Vb = (Sprite) null;
         }
         field_gc = null;
     }
@@ -108,22 +108,22 @@ final class fb extends qr {
           }
           stackIn_9_0 = (var10 != 0) ? 8421504 : 2105376;
           var11 = stackIn_9_0;
-          var12 = new b(pf.field_a[param4.field_x].field_z / 2, -(rs.field_Cb.field_J / 2) + (var17.field_i / 2 - 4), -(pf.field_a[param4.field_x].field_z / 2) + var17.field_m, rs.field_Cb.field_J + 8, 2, var11);
+          var12 = new b(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -(rs.field_Cb.field_J / 2) + (var17.field_i / 2 - 4), -(IntrusiveDeque.field_a[param4.field_x].field_z / 2) + var17.field_m, rs.field_Cb.field_J + 8, 2, var11);
           var17.a(var12, 8);
           if ((param7.field_w & 1 << param4.field_x) == 0) {
-            var13_ref = new ff(pf.field_a[param4.field_x].field_z / 2, -1 + (var17.field_i / 2 - rs.field_Cb.field_J / 2), er.a(param5, (byte) -127, param1, param4, param3));
+            var13_ref = new ff(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -1 + (var17.field_i / 2 - rs.field_Cb.field_J / 2), er.a(param5, (byte) -127, param1, param4, param3));
             var17.a(var13_ref, 8);
           } else {
-            var13_ref2 = new qk(pf.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, var17.field_m - pf.field_a[param4.field_x].field_z, rs.field_Cb.field_J, of.field_d.toUpperCase());
+            var13_ref2 = new qk(IntrusiveDeque.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, var17.field_m - IntrusiveDeque.field_a[param4.field_x].field_z, rs.field_Cb.field_J, of.field_d.toUpperCase());
             var17.a(var13_ref2, 8);
           }
           if (var10 != 0 &&
             param0 <= 3 &&
             0 < param0) {
-            var13_ref2Lifetime1 = new qk(pf.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, -pf.field_a[param4.field_x].field_z + var17.field_m, rs.field_Cb.field_J, re.a(ka.field_m, 4371, new String[]{Integer.toString(param0)}));
+            var13_ref2Lifetime1 = new qk(IntrusiveDeque.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, -IntrusiveDeque.field_a[param4.field_x].field_z + var17.field_m, rs.field_Cb.field_J, re.a(ka.field_m, 4371, new String[]{Integer.toString(param0)}));
             var17.a(var13_ref2Lifetime1, 8);
           }
-          var13_refLifetime1 = new ff(0, (-pf.field_a[param4.field_x].field_w + var17.field_i) / 2, pf.field_a[param4.field_x]);
+          var13_refLifetime1 = new ff(0, (-IntrusiveDeque.field_a[param4.field_x].field_w + var17.field_i) / 2, IntrusiveDeque.field_a[param4.field_x]);
           var17.a(var13_refLifetime1, 8);
           if ((param7.field_w & 1 << param4.field_x) == 0) {
             if (1 != param3) {

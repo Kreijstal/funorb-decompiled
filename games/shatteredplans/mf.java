@@ -355,17 +355,17 @@ final class mf extends ml {
         }
     }
 
-    final static bi a(bc param0, String param1, String param2, boolean param3) {
+    final static Sprite a(bc param0, String param1, String param2, boolean param3) {
         byte[] var4 = null;
         byte[] var5 = null;
         Object stackIn_3_0 = null;
-        bi stackIn_9_0 = null;
-        bi stackIn_9_1 = null;
+        Sprite stackIn_9_0 = null;
+        Sprite stackIn_9_1 = null;
         byte[] stackIn_9_2 = null;
-        bi stackIn_10_0;
-        bi stackIn_10_1;
+        Sprite stackIn_10_0;
+        Sprite stackIn_10_1;
         Object stackIn_10_3;
-        bi stackIn_11_0 = null;
+        Sprite stackIn_11_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -384,7 +384,7 @@ final class mf extends ml {
             param2 = param2 + ".jpg";
             if (!param0.a((byte) 127, param2, param1)) {
               stackIn_3_0 = null;
-              return (bi) (stackIn_3_0);
+              return (Sprite) (stackIn_3_0);
             }
           }
           var5 = param0.a(true, param2, param1);
@@ -404,7 +404,7 @@ final class mf extends ml {
             stackIn_10_1 = null;
             stackIn_10_3 = bj.field_K;
           }
-          stackIn_11_0 = new bi(stackIn_9_2, (java.awt.Component) (stackIn_10_3));
+          stackIn_11_0 = new Sprite(stackIn_9_2, (java.awt.Component) (stackIn_10_3));
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

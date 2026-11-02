@@ -51,14 +51,14 @@ final class dq {
         return new kk(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
     }
 
-    private dq(ob param0) {
+    private dq(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new pk[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.j(-68);
           if (var3 != 0) {
-            param0.field_j = param0.field_j - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new pk();
             this.field_b[var2].a(param0);
           }
@@ -72,6 +72,6 @@ final class dq {
         if (var3 == null) {
           return null;
         }
-        return new dq(new ob(var3));
+        return new dq(new PacketBuffer(var3));
     }
 }

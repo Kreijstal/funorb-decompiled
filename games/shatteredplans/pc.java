@@ -8,7 +8,7 @@ final class pc extends hs {
     static String field_p;
     static int field_q;
     static String field_r;
-    static bi field_n;
+    static Sprite field_n;
     static int field_m;
 
     final static void c(int param0) {
@@ -267,19 +267,19 @@ final class pc extends hs {
           if (this.field_c * this.field_b % 2 == 0) {
             var3_int = var3_int - this.field_c / 2;
           }
-          this.field_f[var3_int] = li.field_b;
-          this.field_f[var3_int - 1] = li.field_b;
-          this.field_f[1 + var3_int] = li.field_b;
-          this.field_f[this.field_c + var3_int] = li.field_b;
-          this.field_f[var3_int - this.field_c] = li.field_b;
+          this.field_f[var3_int] = SocketConnector.field_b;
+          this.field_f[var3_int - 1] = SocketConnector.field_b;
+          this.field_f[1 + var3_int] = SocketConnector.field_b;
+          this.field_f[this.field_c + var3_int] = SocketConnector.field_b;
+          this.field_f[var3_int - this.field_c] = SocketConnector.field_b;
           stackIn_5_0 = (var3_int / this.field_c % 2 != 0) ? 0 : 1;
           var4 = stackIn_5_0;
           if (var4 != 0) {
-            this.field_f[-1 + (-this.field_c + var3_int)] = li.field_b;
-            this.field_f[-1 + (this.field_c + var3_int)] = li.field_b;
+            this.field_f[-1 + (-this.field_c + var3_int)] = SocketConnector.field_b;
+            this.field_f[-1 + (this.field_c + var3_int)] = SocketConnector.field_b;
           } else {
-            this.field_f[1 + (-this.field_c + var3_int)] = li.field_b;
-            this.field_f[var3_int + this.field_c + 1] = li.field_b;
+            this.field_f[1 + (-this.field_c + var3_int)] = SocketConnector.field_b;
+            this.field_f[var3_int + this.field_c + 1] = SocketConnector.field_b;
           }
           super.a(param0, param1);
           return;

@@ -170,7 +170,7 @@ final class pe extends f implements op, bp {
         }
     }
 
-    final static String a(ob param0, int param1, int param2) {
+    final static String a(PacketBuffer param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -189,7 +189,7 @@ final class pe extends f implements op, bp {
               var3_int = param2;
             }
             var4 = new byte[var3_int];
-            param0.field_j = param0.field_j + ak.field_v.a(var4, param0.field_h, var3_int, 7, param0.field_j, param1);
+            param0.position = param0.position + ak.field_v.a(var4, param0.payload, var3_int, 7, param0.position, param1);
             var5 = qi.a(var4, var3_int, 0, param1 ^ -127);
             stackIn_3_0 = var5;
             return stackIn_3_0;
@@ -213,7 +213,7 @@ final class pe extends f implements op, bp {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, vg param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_10_0 = false;
@@ -264,7 +264,7 @@ final class pe extends f implements op, bp {
           if (param0 <= 95) {
             field_K = 59;
           }
-          fl.a(0, "endturn");
+          NodeHashTableIterator.a(0, "endturn");
           if (2 == oq.field_a.field_P.field_g.field_e.length) {
             if (ho.field_d == oq.field_a.field_P.field_g.field_e[1].field_y) {
               if (qc.a("combatSuccess", -116)) {
@@ -400,7 +400,7 @@ final class pe extends f implements op, bp {
           var21Lifetime2 = wn.field_i;
           var22Lifetime2 = wn.field_a;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (param6.field_x > var23Lifetime2) {
               var24Lifetime1 = param6.field_w[var23Lifetime2];
               var25Lifetime1 = param6.field_z[var23Lifetime2];
@@ -483,7 +483,7 @@ final class pe extends f implements op, bp {
                   stackIn_65_0 = fm.field_c.length;
                   stackIn_65_1 = var18;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_65_0 <= stackIn_65_1) {
                     break;
@@ -558,7 +558,7 @@ final class pe extends f implements op, bp {
             return;
           }
           if (param0 == this.field_H) {
-            rm.b(param1 - 55);
+            IterableNodeHashTable.b(param1 - 55);
             this.field_I.i((byte) -104);
           }
           return;

@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class fl implements Iterator {
-    static bi field_b;
+final class NodeHashTableIterator implements Iterator {
+    static Sprite field_b;
     static int field_f;
-    private oh field_c;
-    private oh field_a;
-    private rm field_g;
+    private IntrusiveNode field_c;
+    private IntrusiveNode field_a;
+    private IterableNodeHashTable field_g;
     static String field_e;
     private int field_d;
     static int field_h;
@@ -18,7 +18,7 @@ final class fl implements Iterator {
         field_b = null;
         if (param0 != -1) {
           ln var2 = (ln) null;
-          fl.a((ln) null, (byte) -77);
+          NodeHashTableIterator.a((ln) null, (byte) -77);
         }
     }
 
@@ -58,7 +58,7 @@ final class fl implements Iterator {
           }
           if (param1 < 35) {
             var10 = (ln) null;
-            fl.a((ln) null, (byte) -17);
+            NodeHashTableIterator.a((ln) null, (byte) -17);
           }
           var11 = new db();
           var11.a(param0.field_s.a(-123), 32);
@@ -115,13 +115,13 @@ final class fl implements Iterator {
           }
           fieldTemp$0 = this.field_d;
           this.field_d = this.field_d + 1;
-          if (this.field_g.field_f[fieldTemp$0].field_f == this.field_g.field_f[this.field_d - 1]) {
+          if (this.field_g.field_f[fieldTemp$0].next == this.field_g.field_f[this.field_d - 1]) {
             this.field_a = this.field_g.field_f[-1 + this.field_d];
             continue;
           }
           break;
         }
-        this.field_a = this.field_g.field_f[this.field_d - 1].field_f;
+        this.field_a = this.field_g.field_f[this.field_d - 1].next;
         return true;
     }
 
@@ -130,7 +130,7 @@ final class fl implements Iterator {
           aj.field_a.a((byte) -113, new de(param1));
           if (param0 != 0) {
             ln var3 = (ln) null;
-            fl.a((ln) null, (byte) 103);
+            NodeHashTableIterator.a((ln) null, (byte) 103);
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "fl.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -139,12 +139,12 @@ final class fl implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        oh var1;
+        IntrusiveNode var1;
         int var2;
         var2 = ShatteredPlansClient.field_F ? 1 : 0;
         if (this.field_g.field_f[-1 + this.field_d] != this.field_a) {
           var1 = this.field_a;
-          this.field_a = var1.field_f;
+          this.field_a = var1.next;
           this.field_c = var1;
           return var1;
         }
@@ -154,14 +154,14 @@ final class fl implements Iterator {
           }
           fieldTemp$0 = this.field_d;
           this.field_d = this.field_d + 1;
-          var1 = this.field_g.field_f[fieldTemp$0].field_f;
+          var1 = this.field_g.field_f[fieldTemp$0].next;
         } while (this.field_g.field_f[-1 + this.field_d] == var1);
         this.field_c = var1;
-        this.field_a = var1.field_f;
+        this.field_a = var1.next;
         return var1;
     }
 
-    fl(rm param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_c = null;
         try {
           this.field_g = param0;
@@ -177,7 +177,7 @@ final class fl implements Iterator {
           this.next();
         }
         this.field_d = 1;
-        this.field_a = this.field_g.field_f[0].field_f;
+        this.field_a = this.field_g.field_f[0].next;
     }
 
     static {

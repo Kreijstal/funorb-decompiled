@@ -67,11 +67,11 @@ final class id {
         return ln.field_o;
     }
 
-    final static bi a(int param0, bc param1, String param2, String param3) {
+    final static Sprite a(int param0, bc param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        bi stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

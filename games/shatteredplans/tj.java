@@ -3,7 +3,7 @@
  */
 final class tj {
     private p[] field_a;
-    private ob field_i;
+    private PacketBuffer field_i;
     private ar field_e;
     static u field_b;
     private rn field_d;
@@ -43,7 +43,7 @@ final class tj {
               stackIn_9_0 = this.field_a[param1];
               return stackIn_9_0;
             }
-            this.field_i.field_j = 72 * param1 + 6;
+            this.field_i.position = 72 * param1 + 6;
             var6_int = this.field_i.a(16711680);
             if (param0) {
               this.field_j = (java.math.BigInteger) null;
@@ -77,16 +77,16 @@ final class tj {
         }
     }
 
-    final static bi[] a(boolean param0, int param1, boolean param2, int param3, int param4, byte param5) {
-        bi var13 = null;
-        bi var14 = null;
+    final static Sprite[] a(boolean param0, int param1, boolean param2, int param3, int param4, byte param5) {
+        Sprite var13 = null;
+        Sprite var14 = null;
         int[] var16 = gf.field_h;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
         int var7 = gf.field_b;
         int var8 = gf.field_k;
-        bi var9 = new bi(16, param3);
+        Sprite var9 = new Sprite(16, param3);
         var9.e();
         gf.i(0, 0, 16, param3, param4, param1);
         Object var10 = null;
@@ -115,14 +115,14 @@ final class tj {
           gf.f(15, 4, 1, 0);
         }
         gf.a(var16, var7, var8);
-        return new bi[]{null, null, null, (bi) (var10), var9, (bi) (var11), null, null, null};
+        return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
     }
 
     final static int a(int param0) {
         if (param0 != 0) {
           field_f = (qr) null;
         }
-        return (int)(1000000000L / vg.field_i);
+        return (int)(1000000000L / UiWidget.field_i);
     }
 
     tj(ar param0, rn param1) {
@@ -132,12 +132,12 @@ final class tj {
     final static void a(byte param0, int param1, long param2) {
         sl var4 = js.field_f;
         var4.h(param1, 255);
-        var4.field_j = var4.field_j + 1;
-        int var5 = var4.field_j;
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
         int var6 = 1 % ((30 - param0) / 59);
         var4.c(6, (byte) -72);
         var4.b(-16426, param2);
-        var4.b(-var5 + var4.field_j, (byte) 118);
+        var4.b(-var5 + var4.position, (byte) 118);
     }
 
     final void c(int param0) {
@@ -169,7 +169,7 @@ final class tj {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        ob var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -187,11 +187,11 @@ final class tj {
         if (this.field_c.field_u) {
           return false;
         }
-        var10 = new ob(this.field_c.e((byte) 91));
-        var10.field_j = 5;
+        var10 = new PacketBuffer(this.field_c.e((byte) 91));
+        var10.position = 5;
         var3 = var10.j(-120);
-        var10.field_j = var10.field_j + 72 * var3;
-        var13 = new byte[-var10.field_j + var10.field_h.length];
+        var10.position = var10.position + 72 * var3;
+        var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
         var10.a(var13.length, 0, 17469032, var13);
@@ -206,7 +206,7 @@ final class tj {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = dp.a(var10.field_h, -5 - var13.length + var10.field_j, -26131, 5);
+        var15 = dp.a(var10.payload, -5 - var13.length + var10.position, -26131, 5);
         for (var7 = 0; var7 < 64; var7++) {
           if (~var5[var7 + 1] != ~var15[var7]) {
             throw new RuntimeException();

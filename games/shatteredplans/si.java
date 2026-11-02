@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class si extends df {
+final class si extends DualLinkNode {
     static String field_w;
     static boolean field_v;
     boolean field_y;
@@ -31,10 +31,10 @@ final class si extends df {
         int var12 = 0;
         int stackIn_3_0 = 0;
         int stackIn_8_0 = 0;
-        ob stackIn_21_0 = null;
+        PacketBuffer stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         String stackIn_22_2 = null;
-        ob stackIn_24_0 = null;
+        PacketBuffer stackIn_24_0 = null;
         int stackIn_24_1 = 0;
         String stackIn_25_2 = null;
         int stackIn_34_0 = 0;
@@ -78,10 +78,10 @@ final class si extends df {
             return stackIn_8_0;
           }
           if (cs.field_j == j.field_r) {
-            js.field_f.field_j = 0;
+            js.field_f.position = 0;
             sa.field_d = null;
             if (param5 == null) {
-              eo.field_cb.field_j = 0;
+              eo.field_cb.position = 0;
               eo.field_cb.e(11135, na.field_u.nextInt());
               eo.field_cb.e(11135, na.field_u.nextInt());
               stackIn_21_0 = eo.field_cb;
@@ -91,7 +91,7 @@ final class si extends df {
               } else {
                 stackIn_22_2 = var14;
               }
-              ((ob) (Object) stackIn_21_0).a((byte) stackIn_21_1, stackIn_22_2);
+              ((PacketBuffer) (Object) stackIn_21_0).a((byte) stackIn_21_1, stackIn_22_2);
               stackIn_24_0 = eo.field_cb;
               stackIn_24_1 = 95;
               if (!param2.a(2)) {
@@ -99,15 +99,15 @@ final class si extends df {
               } else {
                 stackIn_25_2 = var8;
               }
-              ((ob) (Object) stackIn_24_0).a((byte) stackIn_24_1, stackIn_25_2);
+              ((PacketBuffer) (Object) stackIn_24_0).a((byte) stackIn_24_1, stackIn_25_2);
               js.field_f.c(16, (byte) -69);
-              js.field_f.field_j = js.field_f.field_j + 1;
-              var9 = js.field_f.field_j;
+              js.field_f.position = js.field_f.position + 1;
+              var9 = js.field_f.position;
               co.a(25050, js.field_f, hr.field_a, eo.field_cb, jl.field_V);
-              js.field_f.b(js.field_f.field_j - var9, (byte) 119);
+              js.field_f.b(js.field_f.position - var9, (byte) 119);
             } else {
               var9 = 0;
-              eo.field_cb.field_j = 0;
+              eo.field_cb.position = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
@@ -121,15 +121,15 @@ final class si extends df {
               eo.field_cb.c(param1, (byte) -108);
               eo.field_cb.c(var9, (byte) -60);
               js.field_f.c(18, (byte) -76);
-              js.field_f.field_j = js.field_f.field_j + 2;
-              var10 = js.field_f.field_j;
+              js.field_f.position = js.field_f.position + 2;
+              var10 = js.field_f.position;
               var11_ref_String = ck.a((byte) -128, kq.f((byte) 124));
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               js.field_f.a(var11_ref_String, (byte) 0);
               co.a(25050, js.field_f, hr.field_a, eo.field_cb, jl.field_V);
-              js.field_f.f(-549342136, -var10 + js.field_f.field_j);
+              js.field_f.f(-549342136, -var10 + js.field_f.position);
             }
             d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
             cs.field_j = qe.field_k;
@@ -137,7 +137,7 @@ final class si extends df {
           if (cs.field_j == qe.field_k &&
             es.a(110, 1)) {
             var9Lifetime1 = sa.field_a.j(-83);
-            sa.field_a.field_j = 0;
+            sa.field_a.position = 0;
             if (100 <= var9Lifetime1 &&
               105 >= var9Lifetime1) {
               cs.field_j = k.field_h;
@@ -158,7 +158,7 @@ final class si extends df {
               } else {
                 es.a(119, nc.a(-85));
                 sa.field_d = new Boolean(ro.a((byte) -24, sa.field_a));
-                sa.field_a.field_j = 0;
+                sa.field_a.position = 0;
               }
             }
           }
@@ -166,7 +166,7 @@ final class si extends df {
             var9Lifetime2 = 2;
             if (es.a(-87, var9Lifetime2)) {
               var10Lifetime1 = sa.field_a.f(-20976);
-              sa.field_a.field_j = 0;
+              sa.field_a.position = 0;
               if (es.a(126, var10Lifetime1)) {
                 var11 = ae.field_e.length;
                 for (var12 = 0; var11 > var12; var12++) {
@@ -265,7 +265,7 @@ final class si extends df {
         }
     }
 
-    private final void a(ob param0, byte param1, int param2) {
+    private final void a(PacketBuffer param0, byte param1, int param2) {
         char[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
@@ -384,7 +384,7 @@ final class si extends df {
         }
     }
 
-    final void a(ob param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;

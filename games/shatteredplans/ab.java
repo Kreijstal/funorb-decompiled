@@ -3,7 +3,7 @@
  */
 final class ab {
     static String field_b;
-    static bi field_e;
+    static Sprite field_e;
     static String field_d;
     static String field_a;
     static int[] field_c;

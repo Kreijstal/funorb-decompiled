@@ -9,7 +9,7 @@ class kp extends ms {
     static int field_i;
     private long field_p;
     static int[] field_k;
-    static bi field_m;
+    static Sprite field_m;
 
     public static void b(byte param0) {
         field_o = null;
@@ -101,7 +101,7 @@ class kp extends ms {
         return oi.field_b;
     }
 
-    final void a(ob param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           param0.b(-16426, this.field_p);
           param0.b((byte) -120, this.field_l);

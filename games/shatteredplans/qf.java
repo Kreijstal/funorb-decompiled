@@ -84,7 +84,7 @@ final class qf {
         int var1 = 125 / ((param0 + 68) / 50);
         u.field_a = vc.a((byte) -39, 50);
         tk.field_C = (nq) ((Object) rs.field_Cb);
-        rp.field_K = new pf();
+        rp.field_K = new IntrusiveDeque();
         ui.field_m = 0;
         kc.field_i = 0;
         di.field_m = 0;
@@ -132,7 +132,7 @@ final class qf {
     }
 
     final static void b(byte param0) {
-        jh.a(ii.field_u, ho.field_j, un.field_g, me.field_d, 0);
+        jh.a(SpriteState.field_u, ho.field_j, un.field_g, me.field_d, 0);
         int var1 = -114 / ((param0 - 34) / 56);
     }
 

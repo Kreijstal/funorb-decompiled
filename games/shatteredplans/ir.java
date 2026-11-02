@@ -9,7 +9,7 @@ final class ir extends f implements dl, bp {
     bj field_F;
     private kg field_I;
 
-    private final int a(int param0, int param1, int param2, vg param3, String param4, String param5, boolean param6) {
+    private final int a(int param0, int param1, int param2, UiWidget param3, String param4, String param5, boolean param6) {
         RuntimeException var8 = null;
         ah var9 = null;
         pg var10 = null;
@@ -59,7 +59,7 @@ final class ir extends f implements dl, bp {
         }
     }
 
-    final void a(int param0, int param1, vg param2, byte param3) {
+    final void a(int param0, int param1, UiWidget param2, byte param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_I.field_y = this.k(-60);
@@ -74,7 +74,7 @@ final class ir extends f implements dl, bp {
           return;
         }
         String var3 = (String) null;
-        int discarded$0 = this.a(-61, -100, -33, (vg) null, (String) null, (String) null, true);
+        int discarded$0 = this.a(-61, -100, -33, (UiWidget) null, (String) null, (String) null, true);
         ((ec) (this.field_H.a((byte) 63))).d(0);
     }
 
@@ -164,7 +164,7 @@ final class ir extends f implements dl, bp {
         }
     }
 
-    private final int a(byte param0, int param1, int param2, vg param3, String param4, String param5) {
+    private final int a(byte param0, int param1, int param2, UiWidget param3, String param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -223,9 +223,9 @@ final class ir extends f implements dl, bp {
         return false;
     }
 
-    final boolean a(int param0, char param1, int param2, vg param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
-        vg var6 = null;
+        UiWidget var6 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_15_0 = null;
@@ -241,8 +241,8 @@ final class ir extends f implements dl, bp {
             return stackIn_5_0;
           }
           if (param2 != 13) {
-            var6 = (vg) null;
-            this.a(59, 66, (vg) null, (byte) 56);
+            var6 = (UiWidget) null;
+            this.a(59, 66, (UiWidget) null, (byte) 56);
           }
           if (99 != param0) {
             return false;
@@ -301,7 +301,7 @@ final class ir extends f implements dl, bp {
         super(0, 0, 496, 0, (iq) null);
         this.field_H = new fa("", (ko) null, 12);
         o var1 = new o(mf.field_x, 0, 0, 0, 0, 16777215, -1, 3, 0, gn.field_u.field_J, -1, 2147483647, true);
-        vg var2 = new vg(rm.field_i, var1, (ko) null);
+        UiWidget var2 = new UiWidget(IterableNodeHashTable.field_i, var1, (ko) null);
         this.field_I = new kg(ck.field_c, (ko) null);
         this.field_G = new kg(fb.field_bc, (ko) null);
         this.field_H.field_v = ol.field_i;

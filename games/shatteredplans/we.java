@@ -7,7 +7,7 @@ final class we {
     static int field_c;
     static int field_e;
     static String field_b;
-    static bi field_f;
+    static Sprite field_f;
 
     static int a(int param0, int param1) {
         return param0 & param1;

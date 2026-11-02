@@ -26,7 +26,7 @@ final class ro {
         throw new IllegalStateException();
     }
 
-    final static boolean a(byte param0, ob param1) {
+    final static boolean a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class v {
-    private bi[] field_c;
+    private Sprite[] field_c;
     static int field_e;
     static String field_a;
     static volatile int field_d;
@@ -67,7 +67,7 @@ final class v {
         int var1 = -68 % ((param0 + 66) / 40);
     }
 
-    v(bi[] param0) {
+    v(Sprite[] param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

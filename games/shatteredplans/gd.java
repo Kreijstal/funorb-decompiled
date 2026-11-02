@@ -16,7 +16,7 @@ final class gd {
     final static void a(int param0) {
         int var2 = 0;
         if (null == va.field_d) {
-          va.field_d = new bi[]{lg.a(0, qq.field_w[0]), lg.a(0, qq.field_w[1])};
+          va.field_d = new Sprite[]{lg.a(0, qq.field_w[0]), lg.a(0, qq.field_w[1])};
         }
         gf.b();
         int var1 = 240;

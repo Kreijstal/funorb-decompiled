@@ -5,14 +5,14 @@ final class jh extends vd implements ok {
     private boolean field_y;
     static String field_v;
     private int field_x;
-    private bi field_E;
+    private Sprite field_E;
     private int field_u;
     private String field_G;
     private int field_z;
     static boolean field_D;
     private String field_C;
     static ga field_B;
-    private bi field_F;
+    private Sprite field_F;
     private int field_w;
 
     final void g(int param0) {
@@ -179,7 +179,7 @@ final class jh extends vd implements ok {
         }
     }
 
-    jh(int param0, int param1, int param2, int param3, int param4, bi param5, String param6, int param7, int param8, bi param9, String param10, int param11) {
+    jh(int param0, int param1, int param2, int param3, int param4, Sprite param5, String param6, int param7, int param8, Sprite param9, String param10, int param11) {
         super(param0, param1, param2, param3);
         try {
           this.field_y = false;

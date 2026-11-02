@@ -7,7 +7,7 @@ final class wa {
     int field_g;
     static String[][] field_d;
     int field_e;
-    static bi field_b;
+    static Sprite field_b;
     wa field_c;
     int field_h;
     int field_f;

@@ -3,14 +3,14 @@
  */
 final class os extends vd {
     jk field_v;
-    static bi[] field_u;
+    static Sprite[] field_u;
 
     final static char a(char param0, int param1) {
         int var2;
         int var3;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 != -31024) {
-          field_u = (bi[]) null;
+          field_u = (Sprite[]) null;
         }
         var2 = param0;
         if (var2 != 32 &&
@@ -100,7 +100,7 @@ final class os extends vd {
         var3.c(3, (byte) -68);
         var3.c(10, (byte) -98);
         if (!param2) {
-          field_u = (bi[]) null;
+          field_u = (Sprite[]) null;
         }
         var3.d(param0, 255);
     }
@@ -178,14 +178,14 @@ final class os extends vd {
           oi.field_e = oi.field_e - 1;
           var5 = js.field_f;
           var5.h(param1, 255);
-          var5.field_j = var5.field_j + 1;
-          var6 = var5.field_j;
+          var5.position = var5.position + 1;
+          var6 = var5.position;
           if (param0 != 117) {
-            field_u = (bi[]) null;
+            field_u = (Sprite[]) null;
           }
           var5.c(3, (byte) -57);
           var5.a(param3, (byte) 0);
-          var5.b(var5.field_j - var6, (byte) 127);
+          var5.b(var5.position - var6, (byte) 127);
           stackIn_14_0 = null;
           return (String) (stackIn_14_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -286,7 +286,7 @@ final class os extends vd {
     public static void d(boolean param0) {
         field_u = null;
         if (!param0) {
-          field_u = (bi[]) null;
+          field_u = (Sprite[]) null;
         }
     }
 

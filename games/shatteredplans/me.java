@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class me {
-    static bi field_h;
+    static Sprite field_h;
     static boolean field_a;
     static String field_c;
     fs[] field_i;
@@ -15,7 +15,7 @@ abstract class me {
 
     abstract int b(boolean param0);
 
-    abstract void a(ob param0, byte param1);
+    abstract void a(PacketBuffer param0, byte param1);
 
     final static boolean a(int param0) {
         boolean stackIn_6_0 = false;
@@ -32,7 +32,7 @@ abstract class me {
         field_d = null;
         field_f = null;
         if (!param0) {
-          field_h = (bi) null;
+          field_h = (Sprite) null;
         }
         field_h = null;
         field_c = null;
@@ -161,7 +161,7 @@ abstract class me {
         }
     }
 
-    abstract void a(int param0, ob param1);
+    abstract void a(int param0, PacketBuffer param1);
 
     final fs[] a(byte param0) {
         if (param0 != -23) {

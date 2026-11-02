@@ -30,11 +30,11 @@ final class mg extends cn {
     }
 
     final static qh d(int param0, int param1) {
-        gb.field_n = new qh(420, 60, 200, param0 + rg.field_a * param1, vj.field_B.toUpperCase());
-        fe var2 = new fe(-16 + (gb.field_n.field_k + 200), 2 + gb.field_n.field_t, 11, 11, -1, (bi) null, "X", 16711680);
+        gb.field_n = new qh(420, 60, 200, param0 + ClientException.field_a * param1, vj.field_B.toUpperCase());
+        fe var2 = new fe(-16 + (gb.field_n.field_k + 200), 2 + gb.field_n.field_t, 11, 11, -1, (Sprite) null, "X", 16711680);
         var2.field_h = gb.field_n;
         gb.field_n.a(var2, param0 ^ 20);
-        lp var3 = new lp(gb.field_n.field_k + 9, gb.field_n.field_t + 20, 182, param1 * rg.field_a);
+        lp var3 = new lp(gb.field_n.field_k + 9, gb.field_n.field_t + 20, 182, param1 * ClientException.field_a);
         gb.field_n.a(var3, param0 ^ 20);
         gb.field_n.field_z = var3;
         ph var4 = new ph(param1);
@@ -64,7 +64,7 @@ final class mg extends cn {
         }
     }
 
-    final static ln a(dc param0, ob param1, int param2) {
+    final static ln a(dc param0, PacketBuffer param1, int param2) {
         RuntimeException var3 = null;
         ln stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

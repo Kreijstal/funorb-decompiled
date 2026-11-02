@@ -35,12 +35,12 @@ final class nh extends me {
             go.a(0, (CharSequence) ((Object) var6))) {
             ma.a((CharSequence) ((Object) var6), param3 + 5);
           }
-          ge.field_l = new bi[param4.length];
+          ge.field_l = new Sprite[param4.length];
           if (param3 != -3) {
             nh.b((byte) -94);
           }
           for (var7 = 0; var7 < param4.length; var7++) {
-            ge.field_l[var7] = new bi(317, 34);
+            ge.field_l[var7] = new Sprite(317, 34);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -120,7 +120,7 @@ final class nh extends me {
         return var5;
     }
 
-    final void a(ob param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -153,7 +153,7 @@ final class nh extends me {
     }
 
     final static void a(int param0, nq param1, int param2, int param3, int param4, int param5, String param6, boolean param7, int param8, int param9, int param10, int param11) {
-        bi var13 = null;
+        Sprite var13 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -165,7 +165,7 @@ final class nh extends me {
           cl.a(param5, param8, -22466, param0, param9, param4, param2, param3, param11);
           param1.c(param6, param5 + (param0 >> 1), param3 + (param1.field_J + param9 >> 1), 16777215, param10);
           if (param7) {
-            var13 = new bi(param0, param9);
+            var13 = new Sprite(param0, param9);
             bs.a(var13, 98);
             param1.c(param6, (param0 >> 1) + 1, param9 + param1.field_J >> 1, 16777215, -1);
             param1.c(param6, (param0 >> 1) - 1, param1.field_J + param9 >> 1, 16777215, -1);
@@ -284,17 +284,17 @@ final class nh extends me {
             while (var10 != null) {
               var5_ref_ln = var10.j(18229);
               while (var5_ref_ln != null) {
-                L13: {
+                regionExit1: {
                   var6 = var5_ref_ln.field_L;
                   if (var6 != 0 &&
                     1 != var6) {
                     if (2 == var6) {
                       this.field_n[var3_intLifetime1] = this.field_n[var3_intLifetime1] + 2;
-                      break L13;
+                      break regionExit1;
                     }
                     if (var6 == 3) {
                       this.field_n[var3_intLifetime1] = this.field_n[var3_intLifetime1] + 3;
-                      break L13;
+                      break regionExit1;
                     }
                     var5_ref_ln = var10.h(-23410);
                     continue;
@@ -492,7 +492,7 @@ final class nh extends me {
         }
     }
 
-    final void a(int param0, ob param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = ShatteredPlansClient.field_F ? 1 : 0;
         int var3_intLifetime1;

@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class k {
-    static bi field_d;
+    static Sprite field_d;
     static String field_e;
-    pf field_a;
+    IntrusiveDeque field_a;
     static boolean field_b;
     static fg field_h;
     static byte[] field_c;
@@ -37,7 +37,7 @@ final class k {
         try {
           this.field_a.a((byte) -113, new rf(param1, param2));
           if (param0 != 255) {
-            field_d = (bi) null;
+            field_d = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "k.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -141,7 +141,7 @@ final class k {
         try {
           this.field_a.a((byte) -113, new nr(param1, param0));
           if (!param2) {
-            this.field_a = (pf) null;
+            this.field_a = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "k.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -157,7 +157,7 @@ final class k {
     }
 
     public k() {
-        this.field_a = new pf();
+        this.field_a = new IntrusiveDeque();
     }
 
     final void a(int param0, ln param1, fs param2, int param3) {
@@ -256,8 +256,8 @@ final class k {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        ob var16 = null;
-        ob var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -270,9 +270,9 @@ final class k {
         int var5Lifetime1;
         var15 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var16 = new ob(param0);
+          var16 = new PacketBuffer(param0);
           var17 = var16;
-          var17.field_j = param0.length - 2;
+          var17.position = param0.length - 2;
           en.field_c = var17.f(-20976);
           cm.field_g = new int[en.field_c];
           kc.field_l = new byte[en.field_c][];
@@ -281,7 +281,7 @@ final class k {
           mc.field_s = new int[en.field_c];
           cf.field_H = new int[en.field_c];
           sj.field_a = new int[en.field_c];
-          var17.field_j = param0.length + (-7 - en.field_c * 8);
+          var17.position = param0.length + (-7 - en.field_c * 8);
           tk.field_y = var17.f(-20976);
           eg.field_t = var17.f(-20976);
           var3 = (var17.j(-70) & 255) + 1;
@@ -298,7 +298,7 @@ final class k {
           for (var4Lifetime3 = 0; en.field_c > var4Lifetime3; var4Lifetime3++) {
             cm.field_g[var4Lifetime3] = var17.f(-20976);
           }
-          var17.field_j = -(3 * (var3 - 1)) - en.field_c * 8 + (param0.length - 7);
+          var17.position = -(3 * (var3 - 1)) - en.field_c * 8 + (param0.length - 7);
           eo.field_fb = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
             eo.field_fb[var4Lifetime4] = var17.k(255);
@@ -306,7 +306,7 @@ final class k {
               eo.field_fb[var4Lifetime4] = 1;
             }
           }
-          var17.field_j = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < en.field_c; var4Lifetime5++) {
             var5Lifetime1 = mc.field_s[var4Lifetime5];
             var6 = cm.field_g[var4Lifetime5];
@@ -393,7 +393,7 @@ final class k {
     final void a(int param0, ln param1, int param2) {
         try {
           if (param2 != -4900) {
-            this.field_a = (pf) null;
+            this.field_a = (IntrusiveDeque) null;
           }
           this.field_a.a((byte) -113, new hj(param1.field_y, param1, param0));
         } catch (RuntimeException runtimeException) {

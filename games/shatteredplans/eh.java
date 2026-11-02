@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eh extends ek implements bp {
-    static bi[] field_L;
+    static Sprite[] field_L;
     static int field_C;
     private wd field_J;
     static String field_N;
@@ -11,7 +11,7 @@ final class eh extends ek implements bp {
     static boolean field_P;
     static int field_Q;
 
-    final void a(int param0, int param1, vg param2, byte param3) {
+    final void a(int param0, int param1, UiWidget param2, byte param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_M.field_y = this.field_J.a((byte) 127).c(100) == p.field_g ? true : false;
@@ -85,7 +85,7 @@ final class eh extends ek implements bp {
         this.field_J = new wd(new rr(10000536), va.field_j, 0, 0, 140, 25);
         this.field_J.a(new ja(), -70);
         this.field_M = new kg(gq.field_b, (ko) (this));
-        this.field_B = new vg[]{(vg) ((Object) this.field_J), (vg) ((Object) this.field_M)};
+        this.field_B = new UiWidget[]{(UiWidget) ((Object) this.field_J), (UiWidget) ((Object) this.field_M)};
         this.field_M.field_p = (iq) ((Object) new qp());
         this.d((byte) -118);
     }

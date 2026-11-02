@@ -35,7 +35,7 @@ final class km implements mn {
     private int field_k;
     private int field_F;
     private sd[] field_l;
-    private pf field_H;
+    private IntrusiveDeque field_H;
     kq field_Y;
     private int[] field_C;
     private int field_x;
@@ -144,7 +144,7 @@ final class km implements mn {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var3 = (sd) (param1.field_i.d(0));
-          L0: while (var3 != null) {
+          scanLoop1: while (var3 != null) {
             var4_ref_ln = var3.j(18229);
             while (true) {
               if (var4_ref_ln != null) {
@@ -162,7 +162,7 @@ final class km implements mn {
               break;
             }
             if (var5 == 0) {
-              continue L0;
+              continue scanLoop1;
             }
             break;
           }
@@ -182,7 +182,7 @@ final class km implements mn {
         }
     }
 
-    private final void a(int param0, ob param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -294,7 +294,7 @@ final class km implements mn {
           }
           var4_ref_ln__ = var3;
           var5_int = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameCompleted3 = true;
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameCompleted1 = true;
@@ -318,7 +318,7 @@ final class km implements mn {
               if (decompiledFrameCompleted3) {
                 stackIn_9_0 = stackIn_76_0.field_y;
                 stackIn_9_1 = (fs) (param0);
-                L10: while (true) {
+                scanLoop2: while (true) {
                   boolean decompiledSharedTail0 = (stackIn_9_0 == stackIn_9_1);
                   if (!decompiledSharedTail0) {
                     this.field_w[var6_ref_ln.field_p] = false;
@@ -338,7 +338,7 @@ final class km implements mn {
                     stackIn_9_0 = (fs) (param0);
                     stackIn_9_1 = var7.field_G;
                     if (var13 != 0) {
-                      continue L10;
+                      continue scanLoop2;
                     }
                     if (stackIn_9_0 == stackIn_9_1) {
                       this.field_p[var6_ref_ln.field_p] = this.field_p[var6_ref_ln.field_p] + var7.field_z;
@@ -359,7 +359,7 @@ final class km implements mn {
                       stackIn_9_0 = (fs) (param0);
                       stackIn_9_1 = var10.field_y;
                       if (var13 != 0) {
-                        continue L10;
+                        continue scanLoop2;
                       }
                       if (stackIn_9_0 != stackIn_9_1 &&
                         null != var10.field_y && (!var10.field_y.field_h[param0.field_x] ||
@@ -467,13 +467,13 @@ final class km implements mn {
             if ((decompiledFrameCompleted3) &&
               (decompiledFrameCompleted0) &&
               (stackIn_81_0 != 0)) {
-              break L3;
+              break scanLoop1;
             }
             var4 = 1;
             while (true) {
               stackIn_85_0 = var4;
               if (stackIn_85_0 == 0) {
-                break L3;
+                break scanLoop1;
               }
               var4 = 0;
               var5 = var3;
@@ -561,7 +561,7 @@ final class km implements mn {
         }
     }
 
-    private final void b(int param0, ob param1, int param2) {
+    private final void b(int param0, PacketBuffer param1, int param2) {
         dc stackIn_14_0 = null;
         dc stackIn_19_0 = null;
         RuntimeException stackIn_30_0 = null;
@@ -617,7 +617,7 @@ final class km implements mn {
           var8 = -104 % ((param2 + 36) / 56);
           while (var7 < var6.length) {
             var9 = var6[var7];
-            fl.a(var9, (byte) 49);
+            NodeHashTableIterator.a(var9, (byte) 49);
             kr.a((byte) -127, var9);
             var7++;
             if (var10 != 0) {
@@ -680,8 +680,8 @@ final class km implements mn {
         RuntimeException runtimeException = null;
         int var3_int = 0;
         tr stackIn_6_0 = null;
-        pf stackIn_6_1 = null;
-        pf stackIn_6_2 = null;
+        IntrusiveDeque stackIn_6_1 = null;
+        IntrusiveDeque stackIn_6_2 = null;
         boolean stackIn_7_3;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -870,12 +870,12 @@ final class km implements mn {
               if (~var5 != ~this.field_P.f(-28824)) {
                 var9 = js.field_f;
                 var9.h(66, param0 ^ 14680);
-                var9.field_j = var9.field_j + 2;
-                var10 = var9.field_j;
+                var9.position = var9.position + 2;
+                var10 = var9.position;
                 if (this.field_h >= 0) {
                   this.field_P.a(var9, (byte) 68, this.field_n);
                 }
-                var9.f(param0 - 549356895, var9.field_j - var10);
+                var9.f(param0 - 549356895, var9.position - var10);
                 if (!se.field_g) {
                   d.$cfr$intArgs$a$a6964d7afeb1(0, 82);
                   q.g(-112);
@@ -1041,12 +1041,12 @@ final class km implements mn {
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var5 = (qm) (this.field_P.field_i.d(0));
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var5 != null) {
               stackIn_16_0 = ~param3;
               stackIn_16_1 = ~var5.field_o;
               if (var7 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_16_0 == stackIn_16_1) {
                 var5.field_r = param1;
@@ -1135,7 +1135,7 @@ final class km implements mn {
           var4 = this.field_Q.field_a.d(0);
           var5 = 0;
           var6 = new StringBuilder();
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (null != var4) {
               stackOut_3_0 = var4 instanceof mg;
               stackIn_94_0 = stackOut_3_0 ? 1 : 0;
@@ -1222,7 +1222,7 @@ final class km implements mn {
                 stackIn_94_0 = stackOut_77_0 ? 1 : 0;
                 stackIn_78_0 = stackOut_77_0;
                 if (var11 != 0) {
-                  break L2;
+                  break scanLoop1;
                 }
                 if (stackIn_78_0) {
                   var7_ref_hj = (hj) (var4);
@@ -1256,13 +1256,13 @@ final class km implements mn {
           var7 = stackIn_98_0Lifetime1 % stackIn_98_1Lifetime1;
           if (this.field_W &&
             (this.field_P.field_w & 1) != 0) {
-            fl.a(0, "losegame");
+            NodeHashTableIterator.a(0, "losegame");
           }
           if (this.field_W) {
             var8_array = this.field_P.field_x.a((byte) -23);
             if (var8_array != null &&
               this.field_n == var8_array[0]) {
-              fl.a(0, "wingame");
+              NodeHashTableIterator.a(0, "wingame");
             }
           }
           return;
@@ -1506,12 +1506,12 @@ final class km implements mn {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var5 = (mg) (param3.field_T.d(0));
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (null != var5) {
               stackIn_18_0 = (ln) (param2);
               stackIn_18_1 = var5.field_B;
               if (var6 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_18_0 != stackIn_18_1 ||
                 var5.field_G != this.field_n) {
@@ -1540,7 +1540,7 @@ final class km implements mn {
           stackIn_18_0.field_J = stackIn_18_1.field_J - param1;
           this.field_C[param3.field_p] = this.field_C[param3.field_p] - param1;
           kr.a((byte) 83, param3);
-          fl.a(param2, (byte) 75);
+          NodeHashTableIterator.a(param2, (byte) 75);
           this.a(this.field_n, -95);
           if (this.field_f) {
             this.field_v.a((byte) 9, var5);
@@ -1578,14 +1578,14 @@ final class km implements mn {
           if (param0 >= -75) {
             return;
           }
-          var2.field_j = var2.field_j + 2;
-          var3 = var2.field_j;
+          var2.position = var2.position + 2;
+          var3 = var2.position;
           var2.c(this.field_P.field_O, (byte) -109);
           se.a(tr.a((byte) 81, this.field_o), -256, tr.a((byte) 93, this.field_ab), rp.a(-125, this.field_v), var2);
           this.field_ab.b((byte) 35);
           this.field_o.b((byte) 87);
           this.field_v.a((byte) 112);
-          var2.f(-549342136, -var3 + var2.field_j);
+          var2.f(-549342136, -var3 + var2.position);
           this.field_g = -1;
           this.field_k = -1;
           if (sm.field_e) {
@@ -2077,7 +2077,7 @@ final class km implements mn {
             var2_int = var2_int + (var5.field_u.field_p * (var5.field_v ^ 11) << 11);
             stackIn_13_0 = this.field_P;
             if (var7 == 0) {
-              var5 = (qa) (((pf) (Object) stackIn_13_0.field_q).a((byte) -71));
+              var5 = (qa) (((IntrusiveDeque) (Object) stackIn_13_0.field_q).a((byte) -71));
               continue;
             }
             break;
@@ -2107,7 +2107,7 @@ final class km implements mn {
         }
     }
 
-    private final void a(ob param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         int stackIn_3_0 = 0;
         int stackIn_3_1 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -2126,7 +2126,7 @@ final class km implements mn {
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var4_int = 30 % ((-1 - param2) / 62);
-          L0: while (true) {
+          scanLoop1: while (true) {
             stackIn_3_0 = -1;
             stackIn_3_1 = ~param1;
             if (stackIn_3_0 > stackIn_3_1) {
@@ -2169,7 +2169,7 @@ final class km implements mn {
                   }
                 }
               }
-              continue L0;
+              continue scanLoop1;
             }
             break;
           }
@@ -2200,11 +2200,11 @@ final class km implements mn {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var4 = (qm) (this.field_P.field_i.d(param2 + param2));
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (null != var4) {
               stackIn_14_0 = param0;
               if (var5 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_14_0 == var4.field_o) {
                 var4.field_q = param1;
@@ -2266,7 +2266,7 @@ final class km implements mn {
         int[] var10 = null;
         ln[] var11_ref_ln__ = null;
         fs[] var11_ref_fs__ = null;
-        oh var11_ref_oh = null;
+        IntrusiveNode var11_ref_oh = null;
         int var11 = 0;
         int var12 = 0;
         hj var12_ref_hj = null;
@@ -2304,7 +2304,7 @@ final class km implements mn {
           var10 = new int[this.field_P.field_r];
           var11_ref_ln__ = this.field_P.field_g.field_e;
           var12 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var12 < var11_ref_ln__.length) {
               var13 = var11_ref_ln__[var12];
               if (var16 == 0) {
@@ -2333,7 +2333,7 @@ final class km implements mn {
                 stackIn_128_0 = stackOut_26_0 ? 1 : 0;
                 stackIn_27_0 = stackOut_26_0;
                 if (var16 != 0) {
-                  break L2;
+                  break scanLoop1;
                 }
                 if (!stackIn_27_0) {
                   var15 = (sd) (var13_ref.field_i.d(0));
@@ -2359,7 +2359,7 @@ final class km implements mn {
                   stackIn_128_0 = stackOut_50_0 ? 1 : 0;
                   stackIn_51_0 = stackOut_50_0;
                   if (var16 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_51_0) {
                     var12_ref_hj = (hj) (var11_ref_oh);
@@ -2787,7 +2787,7 @@ final class km implements mn {
                 break;
               }
               var7 = var5[var6];
-              fl.a(var7, (byte) 96);
+              NodeHashTableIterator.a(var7, (byte) 96);
               kr.a((byte) -99, var7);
               var6++;
             } while (var8 == 0);
@@ -3283,7 +3283,7 @@ final class km implements mn {
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         tr stackIn_13_0 = null;
-        pf stackIn_14_1 = null;
+        IntrusiveDeque stackIn_14_1 = null;
         int stackIn_24_0 = 0;
         int stackIn_24_1 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -3309,12 +3309,12 @@ final class km implements mn {
             stackIn_14_1 = this.field_Q.field_a;
           }
           ((tr) (Object) stackIn_13_0).a(stackIn_14_1, 66);
-          L4: while (true) {
+          scanLoop1: while (true) {
             if (null != this.field_E) {
               stackIn_24_0 = cl.field_n - this.field_E.field_c;
               stackIn_24_1 = 50;
               if (var4 != 0) {
-                break L4;
+                break scanLoop1;
               }
               if (stackIn_24_0 >= stackIn_24_1) {
                 this.field_x = this.field_x - 1;
@@ -3413,7 +3413,7 @@ final class km implements mn {
             }
           }
           if (this.field_W) {
-            fl.a(0, "signtreaty");
+            NodeHashTableIterator.a(0, "signtreaty");
           }
           this.a(this.field_n, param1 + 27510);
           if (null != this.field_s[param0.field_x]) {
@@ -3482,27 +3482,27 @@ final class km implements mn {
               if (var5 != 0) {
                 return;
               }
-              L7: {
-                L8: {
+              regionExit1: {
+                regionExit2: {
                   switch (var4) {
                     case 2:
-                      fl.a(0, "stellarbomb");
+                      NodeHashTableIterator.a(0, "stellarbomb");
                       break;
                     default:
                       break;
                     case 3:
-                      break L8;
+                      break regionExit2;
                     case 0:
-                      fl.a(0, "defensivenet");
+                      NodeHashTableIterator.a(0, "defensivenet");
                       break;
                     case 1:
-                      fl.a(0, "terraforming");
+                      NodeHashTableIterator.a(0, "terraforming");
                       break;
                   }
 
-                  break L7;
+                  break regionExit1;
                 }
-                fl.a(0, "tannhauser");
+                NodeHashTableIterator.a(0, "tannhauser");
               }
               var3 = (qm) (this.field_P.field_i.a((byte) -71));
             }
@@ -3538,17 +3538,17 @@ final class km implements mn {
           this.field_P.field_x.a((byte) -70, this.field_P, this.field_Y);
           var2 = this.field_P.field_g.field_e;
           var3_int = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var3_int < var2.length) {
               var4 = var2[var3_int];
               var4.field_J = var4.field_x;
               stackIn_46_0 = var4;
               if (var6 != 0) {
                 while (true) {
-                  fl.a(stackIn_46_0, (byte) 73);
+                  NodeHashTableIterator.a(stackIn_46_0, (byte) 73);
                   kr.a((byte) 65, var4);
                   var3_int++;
-                  break L1;
+                  break scanLoop1;
                 }
               }
               boolean decompiledSharedTail0 = (stackIn_46_0.field_y != this.field_n);
@@ -3616,11 +3616,11 @@ final class km implements mn {
               while (var3_int < var2.length) {
                 var4 = var2[var3_int];
                 stackIn_46_0Lifetime1 = var4;
-                fl.a(stackIn_46_0Lifetime1, (byte) 73);
+                NodeHashTableIterator.a(stackIn_46_0Lifetime1, (byte) 73);
                 kr.a((byte) 65, var4);
                 var3_int++;
                 if (var6 != 0) {
-                  break L1;
+                  break scanLoop1;
                 }
               }
               var2_ref2 = (mg) (this.field_P.field_p.a(true));
@@ -3628,7 +3628,7 @@ final class km implements mn {
                 this.field_v.a((byte) 9, var2_ref2);
                 var2_ref2 = (mg) (this.field_P.field_p.a((byte) -68));
                 if (var6 != 0) {
-                  break L1;
+                  break scanLoop1;
                 }
               }
               var3 = (qa) (this.field_P.field_q.d(0));
@@ -3636,7 +3636,7 @@ final class km implements mn {
                 this.field_o.a(var3, 32);
                 var3 = (qa) (this.field_P.field_q.a((byte) -71));
                 if (var6 != 0) {
-                  break L1;
+                  break scanLoop1;
                 }
               }
               var4_ref = (qm) (this.field_P.field_i.d(0));
@@ -3644,7 +3644,7 @@ final class km implements mn {
                 this.field_ab.a(var4_ref, 32);
                 var4_ref = (qm) (this.field_P.field_i.a((byte) -71));
                 if (var6 != 0) {
-                  break L1;
+                  break scanLoop1;
                 }
               }
               this.e(0);
@@ -3878,8 +3878,8 @@ final class km implements mn {
         try {
           var2 = js.field_f;
           var2.h(60, 255);
-          var2.field_j = var2.field_j + 2;
-          var3 = var2.field_j;
+          var2.position = var2.position + 2;
+          var3 = var2.position;
           var2.c(this.field_P.field_O, (byte) -73);
           if (param0 >= -114) {
             this.field_Q = (k) null;
@@ -3888,7 +3888,7 @@ final class km implements mn {
           this.field_ab.b((byte) 108);
           this.field_o.b((byte) 127);
           this.field_v.a((byte) 112);
-          var2.f(-549342136, -var3 + var2.field_j);
+          var2.f(-549342136, -var3 + var2.position);
           this.field_k = -1;
           this.field_g = -1;
           if (this.field_L) {
@@ -3942,7 +3942,7 @@ final class km implements mn {
           this.field_p[param0.field_p] = this.field_p[param0.field_p] + var3_int;
           this.field_J[param0.field_p] = this.field_J[param0.field_p] + var3_int;
           var5 = (qa) (this.field_P.field_q.d(0));
-          L5: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder1 = true;
             if (null != var5) {
               stackIn_65_0 = (ln) (param0);
@@ -3970,11 +3970,11 @@ final class km implements mn {
                   this.field_P.field_o.field_i) {
                   this.field_Y.a(param1 - 4, 0);
                   if (var8 == 0) {
-                    break L5;
+                    break scanLoop1;
                   }
                 }
                 var6 = (sd) (this.field_n.field_i.d(param1 + 83));
-                L14: while (true) {
+                scanLoop2: while (true) {
                   boolean decompiledFrameRemainder0 = true;
                   if (var6 != null) {
                     stackIn_58_0 = -1;
@@ -3994,23 +3994,23 @@ final class km implements mn {
                         this.field_z.field_z[var7.field_p] = 2;
                         var7 = var6.h(param1 - 23327);
                         if (var8 != 0) {
-                          break L14;
+                          break scanLoop2;
                         }
                       }
                       if (var8 == 0) {
-                        break L14;
+                        break scanLoop2;
                       }
                     }
                     stackIn_58_0 = this.field_W ? 1 : 0;
                   }
                   if (stackIn_58_0 != 0) {
-                    fl.a(0, "buildships");
+                    NodeHashTableIterator.a(0, "buildships");
                   }
                   this.field_Y.a(-86, 0);
                   break;
                 }
                 if (var8 == 0) {
-                  break L5;
+                  break scanLoop1;
                 }
               }
               this.field_Y.a(-73, 2);
@@ -4081,10 +4081,10 @@ final class km implements mn {
           }
           var3_array = this.field_P.field_v;
           var4Lifetime1 = 0;
-          L4: while (true) {
+          scanLoop1: while (true) {
             stackIn_16_0 = ~var3_array.length;
             stackIn_16_1 = ~var4Lifetime1;
-            L5: while (stackIn_16_0 < stackIn_16_1) {
+            scanLoop2: while (stackIn_16_0 < stackIn_16_1) {
               var5_ref = var3_array[var4Lifetime1];
               var6 = var5_ref.field_x;
               boolean decompiledSharedTail0 = !(!this.field_P.field_o.field_i);
@@ -4094,7 +4094,7 @@ final class km implements mn {
                   stackIn_16_0 = 0;
                   stackIn_16_1 = var7.field_r;
                   if (var8 != 0) {
-                    continue L5;
+                    continue scanLoop2;
                   }
                   if (stackIn_16_0 < stackIn_16_1) {
                     var2[var6] = var2[var6] + var7.field_r;
@@ -4109,7 +4109,7 @@ final class km implements mn {
               }
               var4Lifetime1++;
               if (var8 == 0) {
-                continue L4;
+                continue scanLoop1;
               }
               break;
             }
@@ -4139,7 +4139,7 @@ final class km implements mn {
             return;
           }
           if (param1 <= 44) {
-            this.a((ob) null, -6, 94);
+            this.a((PacketBuffer) null, -6, 94);
           }
           if (param0 == this.field_n) {
             return;
@@ -4152,13 +4152,13 @@ final class km implements mn {
           if (this.field_f) {
             var3 = js.field_f;
             var3.h(59, 255);
-            var3.field_j = var3.field_j + 2;
-            var4 = var3.field_j;
+            var3.position = var3.position + 2;
+            var4 = var3.position;
             var3.c(this.field_P.field_O, (byte) -106);
             var3.c(255, (byte) -78);
             var3.c(this.field_n.field_x, (byte) -126);
             var3.c(param0.field_x, (byte) -104);
-            var3.f(-549342136, -var4 + var3.field_j);
+            var3.f(-549342136, -var4 + var3.position);
             if ((this.field_n.field_A & 1 << param0.field_x) == 0) {
               this.a(this.field_n, param0, true);
             }
@@ -4182,7 +4182,7 @@ final class km implements mn {
           param0.field_w = param0.field_w & ~(1 << this.field_n.field_x);
           this.a(param0, -27584, this.field_n);
           if (this.field_W) {
-            fl.a(0, "signtreaty");
+            NodeHashTableIterator.a(0, "signtreaty");
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4237,7 +4237,7 @@ final class km implements mn {
           if (!this.field_f) {
             if (this.field_W) {
               this.field_P = jg.a(param3, param5, param2, -22379, 4);
-              ob.a(-126, this);
+              PacketBuffer.a(-126, this);
               if (var13 != 0) {
                 this.field_P = qr.a(param2, 50, param5, param3, param4, 2);
                 this.field_P = uq.a(param4, param2, -27579, param5, param3);
@@ -4307,7 +4307,7 @@ final class km implements mn {
           this.field_s = (uj[]) ((Object) new hi[this.field_P.field_v.length]);
           var10 = this.field_P.field_v;
           var11 = 0;
-          L16: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameCompleted0 = true;
             boolean decompiledFrameRemainder1 = true;
             if (var10.length > var11) {
@@ -4324,7 +4324,7 @@ final class km implements mn {
                   while (var10_intLifetime1 < this.field_P.field_r) {
                     stackIn_80_0 = ~this.field_h;
                     if (var13 != 0) {
-                      break L16;
+                      break scanLoop1;
                     }
                     if (stackIn_80_0 != ~var10_intLifetime1 ||
                       var13 != 0) {
@@ -4354,7 +4354,7 @@ final class km implements mn {
                 param8.a((byte) -33, this);
                 this.field_Y = param8;
               }
-              this.field_H = new pf();
+              this.field_H = new IntrusiveDeque();
             }
             stackIn_80_0 = this.field_f ? 1 : 0;
             break;

@@ -3,7 +3,7 @@
  */
 final class gg {
     static String field_b;
-    static bi field_e;
+    static Sprite field_e;
     static qr field_d;
     static String field_c;
     static int field_a;
@@ -43,7 +43,7 @@ final class gg {
         field_d = null;
         field_e = null;
         if (param0 != 0) {
-          field_e = (bi) null;
+          field_e = (Sprite) null;
         }
     }
 

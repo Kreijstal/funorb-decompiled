@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sl extends ob {
+final class sl extends PacketBuffer {
     static String field_q;
     static nq field_p;
     static int field_r;
@@ -27,14 +27,14 @@ final class sl extends ob {
           while (var4 < param1) {
             incrementValue$0 = var3;
             var3++;
-            var5 = var5 + ((this.field_h[incrementValue$0] & rq.field_j[var4]) << -var4 + param1);
+            var5 = var5 + ((this.payload[incrementValue$0] & rq.field_j[var4]) << -var4 + param1);
             param1 = param1 - var4;
             var4 = 8;
           }
           if (var4 != param1) {
-            var5 = var5 + (this.field_h[var3] >> var4 - param1 & rq.field_j[param1]);
+            var5 = var5 + (this.payload[var3] >> var4 - param1 & rq.field_j[param1]);
           } else {
-            var5 = var5 + (rq.field_j[var4] & this.field_h[var3]);
+            var5 = var5 + (rq.field_j[var4] & this.payload[var3]);
           }
           return var5;
         }
@@ -44,22 +44,22 @@ final class sl extends ob {
         while (var4Lifetime1 < param1) {
           incrementValue$1 = var3;
           var3++;
-          var5Lifetime1 = var5Lifetime1 + ((this.field_h[incrementValue$1] & rq.field_j[var4Lifetime1]) << -var4Lifetime1 + param1);
+          var5Lifetime1 = var5Lifetime1 + ((this.payload[incrementValue$1] & rq.field_j[var4Lifetime1]) << -var4Lifetime1 + param1);
           param1 = param1 - var4Lifetime1;
           var4Lifetime1 = 8;
         }
         if (var4Lifetime1 != param1) {
-          var5Lifetime1 = var5Lifetime1 + (this.field_h[var3] >> var4Lifetime1 - param1 & rq.field_j[param1]);
+          var5Lifetime1 = var5Lifetime1 + (this.payload[var3] >> var4Lifetime1 - param1 & rq.field_j[param1]);
         } else {
-          var5Lifetime1 = var5Lifetime1 + (rq.field_j[var4Lifetime1] & this.field_h[var3]);
+          var5Lifetime1 = var5Lifetime1 + (rq.field_j[var4Lifetime1] & this.payload[var3]);
         }
         return var5Lifetime1;
     }
 
     final void h(int param0, int param1) {
-        int fieldTemp$0 = this.field_j;
-        this.field_j = this.field_j + 1;
-        this.field_h[fieldTemp$0] = (byte)(this.field_o.d(13) + param0);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(this.field_o.d(13) + param0);
         if (param1 != 255) {
           field_r = -37;
         }
@@ -81,9 +81,9 @@ final class sl extends ob {
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           for (var5_int = param1; param0 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_j;
-            this.field_j = this.field_j + 1;
-            param3[param2 + var5_int] = (byte)(this.field_h[fieldTemp$0] - this.field_o.d(13));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param3[param2 + var5_int] = (byte)(this.payload[fieldTemp$0] - this.field_o.d(13));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -224,20 +224,20 @@ final class sl extends ob {
     final int h(byte param0) {
         int fieldTemp$0 = 0;
         if (param0 == 126) {
-          fieldTemp$0 = this.field_j;
-          this.field_j = this.field_j + 1;
-          return this.field_h[fieldTemp$0] - this.field_o.d(13) & 255;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return this.payload[fieldTemp$0] - this.field_o.d(13) & 255;
         }
         return -76;
     }
 
     final void m(int param0) {
         if (param0 <= -16) {
-          this.field_n = this.field_j * 8;
+          this.field_n = this.position * 8;
           return;
         }
         this.h(53, 123);
-        this.field_n = this.field_j * 8;
+        this.field_n = this.position * 8;
     }
 
     final static void a(int param0, vm param1) {
@@ -255,7 +255,7 @@ final class sl extends ob {
     }
 
     final void i(byte param0) {
-        this.field_j = (7 + this.field_n) / 8;
+        this.position = (7 + this.field_n) / 8;
         int var2 = 126 / ((param0 - 50) / 63);
     }
 

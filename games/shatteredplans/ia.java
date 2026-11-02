@@ -26,7 +26,7 @@ abstract class ia {
     static int field_b;
     boolean field_x;
     ln field_p;
-    bi field_gb;
+    Sprite field_gb;
     mg field_S;
     int[][] field_bb;
     private fs[] field_q;
@@ -35,7 +35,7 @@ abstract class ia {
     int field_t;
     int[] field_z;
     int[] field_i;
-    pf field_m;
+    IntrusiveDeque field_m;
     private int[][] field_R;
     int[] field_eb;
     private sd[] field_r;
@@ -48,15 +48,15 @@ abstract class ia {
     boolean field_X;
     private int[] field_jb;
     int field_u;
-    pf field_c;
-    pf field_hb;
+    IntrusiveDeque field_c;
+    IntrusiveDeque field_hb;
     bh[] field_h;
-    pf field_Y;
+    IntrusiveDeque field_Y;
     int[][] field_D;
-    pf field_ab;
+    IntrusiveDeque field_ab;
     fs[] field_Z;
-    pf field_s;
-    pf field_v;
+    IntrusiveDeque field_s;
+    IntrusiveDeque field_v;
     boolean[] field_kb;
     int[] field_J;
     fs[] field_Q;
@@ -66,8 +66,8 @@ abstract class ia {
     int field_W;
     int field_d;
     boolean[] field_P;
-    pf field_V;
-    pf field_mb;
+    IntrusiveDeque field_V;
+    IntrusiveDeque field_mb;
 
     final void a(ln param0, int param1, int param2, fs param3) {
         int var5_int = 0;
@@ -431,8 +431,8 @@ abstract class ia {
     }
 
     final void a(int param0, ln param1) {
-        bi var4 = null;
-        bi var5 = null;
+        Sprite var4 = null;
+        Sprite var5 = null;
         try {
           if (param0 > -21) {
             this.field_X = false;
@@ -638,17 +638,17 @@ abstract class ia {
         }
     }
 
-    final void a(int param0, pf param1, boolean param2) {
+    final void a(int param0, IntrusiveDeque param1, boolean param2) {
         RuntimeException stackIn_68_0 = null;
         StringBuilder stackIn_68_1 = null;
         String stackIn_69_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var4_int = 0;
-        oh var4 = null;
+        IntrusiveNode var4 = null;
         vn var4_ref = null;
         RuntimeException var4_ref2 = null;
         int var5_int = 0;
-        oh var5 = null;
+        IntrusiveNode var5 = null;
         int var6 = 0;
         ne var7 = null;
         int var8 = 0;

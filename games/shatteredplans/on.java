@@ -3,23 +3,23 @@
  */
 final class on {
     static String field_i;
-    private pf field_d;
+    private IntrusiveDeque field_d;
     static boolean field_b;
     static gq field_g;
-    private oh field_e;
+    private IntrusiveNode field_e;
     static int field_c;
     static String field_f;
     static String field_a;
     static String field_h;
 
-    final oh c(int param0) {
-        oh var2 = this.field_d.field_h.field_e;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_d.field_h.previous;
         int var3 = -32 % ((25 - param0) / 37);
         if (this.field_d.field_h == var2) {
           this.field_e = null;
           return null;
         }
-        this.field_e = var2.field_e;
+        this.field_e = var2.previous;
         return var2;
     }
 
@@ -49,41 +49,41 @@ final class on {
         return null;
     }
 
-    final oh b(byte param0) {
-        oh var2 = this.field_e;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = this.field_e;
         if (param0 != -124) {
           field_i = (String) null;
           if (this.field_d.field_h == var2) {
             this.field_e = null;
             return null;
           }
-          this.field_e = var2.field_e;
+          this.field_e = var2.previous;
           return var2;
         }
         if (this.field_d.field_h == var2) {
           this.field_e = null;
           return null;
         }
-        this.field_e = var2.field_e;
+        this.field_e = var2.previous;
         return var2;
     }
 
-    final oh a(int param0) {
-        oh var2 = this.field_d.field_h.field_f;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = this.field_d.field_h.next;
         if (param0 != 2) {
           field_b = false;
           if (this.field_d.field_h == var2) {
             this.field_e = null;
             return null;
           }
-          this.field_e = var2.field_f;
+          this.field_e = var2.next;
           return var2;
         }
         if (this.field_d.field_h == var2) {
           this.field_e = null;
           return null;
         }
-        this.field_e = var2.field_f;
+        this.field_e = var2.next;
         return var2;
     }
 
@@ -100,11 +100,11 @@ final class on {
         field_f = null;
     }
 
-    final oh a(boolean param0, oh param1) {
-        oh var3 = null;
+    final IntrusiveNode a(boolean param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_6_0 = null;
-        oh stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -113,17 +113,17 @@ final class on {
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_d.field_h.field_f;
+            var3 = this.field_d.field_h.next;
           }
           if (var3 == this.field_d.field_h) {
             this.field_e = null;
             stackIn_6_0 = null;
-            return (oh) (stackIn_6_0);
+            return (IntrusiveNode) (stackIn_6_0);
           }
           if (param0) {
             field_c = 27;
           }
-          this.field_e = var3.field_f;
+          this.field_e = var3.next;
           stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -140,7 +140,7 @@ final class on {
         }
     }
 
-    on(pf param0) {
+    on(IntrusiveDeque param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
@@ -148,12 +148,12 @@ final class on {
         }
     }
 
-    final oh a(byte param0, oh param1) {
-        oh var3 = null;
+    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         Object stackIn_6_0 = null;
-        oh stackIn_8_0 = null;
+        IntrusiveNode stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -161,16 +161,16 @@ final class on {
         try {
           var4 = -19 / ((param0 - 20) / 59);
           if (param1 == null) {
-            var3 = this.field_d.field_h.field_e;
+            var3 = this.field_d.field_h.previous;
           } else {
             var3 = param1;
           }
           if (this.field_d.field_h == var3) {
             this.field_e = null;
             stackIn_6_0 = null;
-            return (oh) (stackIn_6_0);
+            return (IntrusiveNode) (stackIn_6_0);
           }
-          this.field_e = var3.field_e;
+          this.field_e = var3.previous;
           stackIn_8_0 = var3;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -187,13 +187,13 @@ final class on {
         }
     }
 
-    final oh a(byte param0) {
-        oh var2 = this.field_e;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_e;
         if (this.field_d.field_h == var2) {
           this.field_e = null;
           return null;
         }
-        this.field_e = var2.field_f;
+        this.field_e = var2.next;
         if (param0 < 44) {
           on.a(-53, false);
           return var2;

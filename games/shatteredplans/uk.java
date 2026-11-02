@@ -3,23 +3,23 @@
  */
 final class uk {
     static int field_a;
-    static bi[] field_b;
+    static Sprite[] field_b;
 
     public static void a(byte param0) {
         field_b = null;
         int var1 = 36 / ((-14 - param0) / 59);
     }
 
-    final static bi a(boolean param0, ln param1) {
+    final static Sprite a(boolean param0, ln param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        bi stackIn_6_0 = null;
-        bi stackIn_22_0 = null;
-        bi stackIn_24_0 = null;
-        bi stackIn_26_0 = null;
-        bi stackIn_28_0 = null;
-        bi stackIn_30_0 = null;
+        Sprite stackIn_6_0 = null;
+        Sprite stackIn_22_0 = null;
+        Sprite stackIn_24_0 = null;
+        Sprite stackIn_26_0 = null;
+        Sprite stackIn_28_0 = null;
+        Sprite stackIn_30_0 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -27,7 +27,7 @@ final class uk {
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0) {
-            field_b = (bi[]) null;
+            field_b = (Sprite[]) null;
           }
           if (param1.field_I.equalsIgnoreCase("Sol")) {
             stackIn_6_0 = qe.field_j;
@@ -81,7 +81,7 @@ final class uk {
         }
     }
 
-    final static l a(int param0, dc param1, ob param2, pf param3, fs[] param4, fs param5, byte param6, vr param7) throws jn, kr {
+    final static l a(int param0, dc param1, PacketBuffer param2, IntrusiveDeque param3, fs[] param4, fs param5, byte param6, vr param7) throws jn, kr {
         int var17_int = 0;
         l stackIn_81_0 = null;
         RuntimeException stackIn_84_0 = null;

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class sd extends df {
+class sd extends DualLinkNode {
     int field_x;
-    private pf field_s;
+    private IntrusiveDeque field_s;
     static int field_p;
     fs field_o;
     int[] field_w;
@@ -56,7 +56,7 @@ class sd extends df {
         return this.field_s.g(27);
     }
 
-    void a(pf param0, int param1) {
+    void a(IntrusiveDeque param0, int param1) {
         try {
           this.field_s = param0;
           if (param1 != -9332) {
@@ -84,7 +84,7 @@ class sd extends df {
         try {
           this.field_q = param1;
           this.field_o = param0;
-          this.field_s = new pf();
+          this.field_s = new IntrusiveDeque();
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

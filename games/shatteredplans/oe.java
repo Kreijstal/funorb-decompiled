@@ -3,10 +3,10 @@
  */
 final class oe {
     static boolean field_f;
-    static bi field_c;
+    static Sprite field_c;
     static int[][] field_g;
     static String field_b;
-    static pf field_h;
+    static IntrusiveDeque field_h;
     static int[] field_i;
     static boolean field_e;
     static long field_a;

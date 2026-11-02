@@ -54,7 +54,7 @@ final class nd {
               var6 = null;
             } else {
               var5 = sd.field_t.substring(1, var4);
-              var6 = kf.a(sd.field_t.substring(var4), (byte) 125, ',');
+              var6 = GameApplet.a(sd.field_t.substring(var4), (byte) 125, ',');
             }
             if (!var5.equalsIgnoreCase("topleft")) {
               var8 = var1;
@@ -94,7 +94,7 @@ final class nd {
                                 var8.field_r = true;
                               }
                             } else {
-                              pa.a((String[]) (var6), var8, (byte) -127);
+                              ProxySocketConnector.a((String[]) (var6), var8, (byte) -127);
                             }
                           }
                         }

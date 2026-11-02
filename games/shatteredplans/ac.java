@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ac extends wf {
-    static bi field_s;
+    static Sprite field_s;
     static String field_v;
     static int field_w;
     static String field_r;

@@ -1376,7 +1376,7 @@ class ka implements uj {
         try {
           var6_int = 0;
           var7 = param4 + this.field_o;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var7 >= 0) {
               var8 = param3[var7];
               var9 = this.field_g.field_g.field_e[var8];
@@ -1389,7 +1389,7 @@ class ka implements uj {
               if (var10 != param2.length) {
                 this.c(param0 + param1, cq.field_E, -1);
                 if (0 == u.field_d[var8]) {
-                  break L1;
+                  break scanLoop1;
                 }
                 if (ei.field_d[var8] <= param1) {
                   var11 = this.a(var9, param1, (byte) 30);
@@ -1397,7 +1397,7 @@ class ka implements uj {
                   var6_int = var6_int + var11;
                   this.c(param0 + param1, cq.field_E, -1);
                   if (param1 == 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                 }
               }
@@ -1460,7 +1460,7 @@ class ka implements uj {
           var5 = 0;
           var6 = var4.field_D;
           var7 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var6.length > var7) {
               var8 = var6[var7];
               if (null != var8.field_y) {
@@ -1469,7 +1469,7 @@ class ka implements uj {
                 if (stackIn_10_0 != stackIn_10_1 &&
                   !this.field_n.field_h[var8.field_y.field_x]) {
                   var5 = 1;
-                  break L3;
+                  break scanLoop1;
                 }
               }
               var7++;
@@ -2153,7 +2153,7 @@ class ka implements uj {
               }
               if (var5 != -1) {
                 this.field_j.a(0, (byte) 93, var4, this.field_n, var5);
-                this.field_c[this.field_k] = rg.a(6, 3, (byte) 121);
+                this.field_c[this.field_k] = ClientException.a(6, 3, (byte) 121);
               }
             }
             this.field_j.a((byte) -63, this.field_n, var4);
@@ -2261,7 +2261,7 @@ class ka implements uj {
         var3 = ff.field_x[this.field_n.field_x];
         var4 = 0;
         for (var5 = 0; var5 < this.field_o; var5++) {
-          L6: {
+          regionExit1: {
             if (this.field_g.field_g.field_e[var5].field_y != this.field_n) {
               var6 = 1;
               var7 = 0;
@@ -2280,7 +2280,7 @@ class ka implements uj {
                 var4++;
               }
               ac.field_q[var5] = var6 != 0;
-              break L6;
+              break regionExit1;
             }
             ac.field_q[var5] = false;
           }

@@ -3,7 +3,7 @@
  */
 final class rl {
     static String field_e;
-    static bi field_c;
+    static Sprite field_c;
     static boolean[] field_b;
     static String field_d;
     private oq field_a;

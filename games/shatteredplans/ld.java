@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ld extends oh {
+final class ld extends IntrusiveNode {
     byte[] field_o;
     static String field_i;
     static gq field_h;
     boolean field_l;
-    static pf field_p;
+    static IntrusiveDeque field_p;
     static String field_n;
     static String field_k;
     static String field_q;
@@ -33,7 +33,7 @@ final class ld extends oh {
         field_p = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, bi param7) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, Sprite param7) {
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
         int var8_int = 0;

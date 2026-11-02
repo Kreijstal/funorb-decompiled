@@ -27,7 +27,7 @@ final class t {
         jd stackIn_63_3;
         ln stackIn_63_6;
         ln var5;
-        pf var6;
+        IntrusiveDeque var6;
         int var7;
         int var8;
         ln[] var9_ref_ln__;
@@ -51,7 +51,7 @@ final class t {
         ln[] var22;
         ln var23;
         nc[] var24;
-        pf var25;
+        IntrusiveDeque var25;
         nc[] var26;
         int var7Lifetime1;
         int var8Lifetime1;
@@ -71,7 +71,7 @@ final class t {
         }
         for (var4 = 0; var22.length > var4; var4++) {
           var5 = var22[var4];
-          var6 = new pf();
+          var6 = new IntrusiveDeque();
           var9_ref_ln__ = this.field_d;
           for (var10_int = 0; var9_ref_ln__.length > var10_int; var10_int++) {
             var23 = var9_ref_ln__[var10_int];
@@ -91,7 +91,7 @@ final class t {
           }
           ad.a(var6, param1 ^ -24926);
           var9Lifetime1 = var6.e(0);
-          var25 = new pf();
+          var25 = new IntrusiveDeque();
           var12 = (nc) (var6.d(0));
           while (null != var12) {
             if (((nc) (var12)).field_u != null) {

@@ -16,18 +16,18 @@ final class vr {
     static int field_g;
     int field_b;
 
-    final static bi a(bc param0, int param1, int param2) {
+    final static Sprite a(bc param0, int param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        bi stackIn_2_0 = null;
-        bi stackIn_4_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 1) {
-            stackIn_2_0 = (bi) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           var3 = "turn0" + param1;

@@ -3,8 +3,8 @@
  */
 final class ta {
     static qr field_d;
-    static pf field_b;
-    static bi field_a;
+    static IntrusiveDeque field_b;
+    static Sprite field_a;
     static String field_c;
     static String field_e;
 
@@ -207,7 +207,7 @@ final class ta {
     }
 
     static {
-        field_b = new pf();
+        field_b = new IntrusiveDeque();
         field_e = "Percentage of battles won in friendly space.";
         field_c = "Join <%0>'s game";
     }

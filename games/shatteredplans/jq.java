@@ -4,11 +4,11 @@
 import java.io.*;
 
 final class jq implements java.awt.event.KeyListener, java.awt.event.FocusListener {
-    static bi field_b;
-    static bi field_c;
-    static pf field_a;
+    static Sprite field_b;
+    static Sprite field_c;
+    static IntrusiveDeque field_a;
     static String field_d;
-    static bi field_e;
+    static Sprite field_e;
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
         RuntimeException runtimeException = null;
@@ -293,7 +293,7 @@ final class jq implements java.awt.event.KeyListener, java.awt.event.FocusListen
             gf.f(stackIn_12_0 + param4 + var9, param5 + 1, var8_int, param7, param0 * (param2 - var9 * var9 / param2) / param2);
           }
           if (param1 < 74) {
-            field_c = (bi) null;
+            field_c = (Sprite) null;
           }
           for (var9Lifetime1 = 4; var9Lifetime1 < param2; var9Lifetime1 += 16) {
             gf.g(param4 + var9Lifetime1, param5 + 6, param4 + var9Lifetime1 + 3, param5 + 1, param7, param0 * (param2 - var9Lifetime1 * var9Lifetime1 / param2) / param2);
@@ -387,6 +387,6 @@ final class jq implements java.awt.event.KeyListener, java.awt.event.FocusListen
 
     static {
         field_d = null;
-        field_a = new pf();
+        field_a = new IntrusiveDeque();
     }
 }

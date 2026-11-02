@@ -3,7 +3,7 @@
  */
 final class oo {
     static qr field_c;
-    static bi field_a;
+    static Sprite field_a;
     static String field_f;
     static int field_e;
     static int[] field_b;

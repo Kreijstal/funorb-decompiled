@@ -585,7 +585,7 @@ final class ej {
             q.g(-108);
             return;
           }
-          var5 = rr.field_t - var1.field_j;
+          var5 = rr.field_t - var1.position;
           var6 = var4.field_i;
           if (var5 > var6.length << 2) {
             var5 = var6.length << 2;

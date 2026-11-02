@@ -6,7 +6,7 @@ final class hk extends il {
     static gh field_nb;
     static String field_pb;
 
-    final void b(vg param0, int param1) {
+    final void b(UiWidget param0, int param1) {
         try {
           int var3_int = 113 / ((51 - param1) / 57);
           super.b(param0, 125);
@@ -24,7 +24,7 @@ final class hk extends il {
         field_pb = null;
     }
 
-    hk(tc param0, vg param1) {
+    hk(tc param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -32,7 +32,7 @@ final class hk extends il {
         if (param1 < 33) {
           return;
         }
-        vg.field_i = 1000000000L / (long)param0;
+        UiWidget.field_i = 1000000000L / (long)param0;
     }
 
     static {

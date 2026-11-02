@@ -13,7 +13,7 @@ final class so extends qe {
     static int field_o;
     int field_n;
 
-    final static void a(int param0, int param1, int param2, bi param3) {
+    final static void a(int param0, int param1, int param2, Sprite param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -85,7 +85,7 @@ final class so extends qe {
         wf.a(-15887);
         param13 = ak.a(true, param7, param5, param13, param8, param10, param9);
         fb.a(param13, param11, param10, param2, param12, param6, param4, param3, param1, param0 + param0);
-        pf.a(param12, param11, -1043);
+        IntrusiveDeque.a(param12, param11, -1043);
         cc.a(-115, param7, param12, param13);
     }
 

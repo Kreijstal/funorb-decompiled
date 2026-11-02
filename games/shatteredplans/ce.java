@@ -3,7 +3,7 @@
  */
 final class ce extends rr {
     static String field_u;
-    static bi field_v;
+    static Sprite field_v;
     static String field_w;
     static km field_x;
 
@@ -52,7 +52,7 @@ final class ce extends rr {
         }
     }
 
-    final String b(boolean param0, vg param1) {
+    final String b(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -105,7 +105,7 @@ final class ce extends rr {
         field_u = null;
         field_v = null;
         if (!param0) {
-          field_v = (bi) null;
+          field_v = (Sprite) null;
         }
     }
 

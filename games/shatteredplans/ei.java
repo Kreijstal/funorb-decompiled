@@ -8,7 +8,7 @@ final class ei {
     static int field_e;
     static String[][] field_f;
     static java.applet.Applet field_c;
-    static bi field_a;
+    static Sprite field_a;
 
     final static void a(int param0, fb param1) {
         fb var2 = null;
@@ -127,8 +127,8 @@ final class ei {
         try {
           var10 = js.field_f;
           var10.h(param0, 255);
-          var10.field_j = var10.field_j + 1;
-          var7 = var10.field_j;
+          var10.position = var10.position + 1;
+          var7 = var10.position;
           var10.c(4, (byte) -106);
           if (param4) {
             fb var9 = (fb) null;
@@ -141,7 +141,7 @@ final class ei {
           }
           var10.c(var8, (byte) -56);
           var10.a(0, param2.length, param2, 22186);
-          var10.b(-var7 + var10.field_j, (byte) 127);
+          var10.b(-var7 + var10.position, (byte) 127);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ei.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

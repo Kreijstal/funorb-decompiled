@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nc extends oh {
+final class nc extends IntrusiveNode {
     nc field_k;
     float field_h;
     ln field_q;
     nc field_r;
     static int field_t;
-    static pf field_v;
+    static IntrusiveDeque field_v;
     static int[] field_p;
     float field_o;
     ln field_u;

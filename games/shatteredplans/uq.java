@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uq extends oh {
+final class uq extends IntrusiveNode {
     static int field_k;
     static qr field_j;
     static String field_n;

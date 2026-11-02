@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class n extends oh {
+final class n extends IntrusiveNode {
     int field_i;
     static wh field_h;
     static double field_p;
     static String field_q;
     static String field_m;
     static String field_l;
-    static bi field_k;
+    static Sprite field_k;
     static qr field_o;
     static String field_j;
     static qr[] field_n;

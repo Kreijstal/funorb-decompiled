@@ -13,7 +13,7 @@ final class qg extends me {
     static int[] field_m;
     private int[] field_n;
 
-    final void a(ob param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           if (param1 != -109) {
             this.b(true);
@@ -23,7 +23,7 @@ final class qg extends me {
         }
     }
 
-    final static void a(ob param0, boolean param1) {
+    final static void a(PacketBuffer param0, boolean param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
@@ -274,7 +274,7 @@ final class qg extends me {
         field_l = null;
     }
 
-    final void a(int param0, ob param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           int var3_int = 1 / ((-72 - param0) / 45);
         } catch (RuntimeException runtimeException) {

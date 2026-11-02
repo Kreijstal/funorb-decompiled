@@ -37,7 +37,7 @@ final class na {
     static gq field_I;
     byte[] field_E;
     int field_h;
-    static pf field_J;
+    static IntrusiveDeque field_J;
     static int field_L;
     static String field_s;
     static int field_r;
@@ -130,7 +130,7 @@ final class na {
           oq.field_i[24] = lq.field_p;
           oq.field_i[26] = ee.field_n;
           oq.field_i[31] = ep.field_d;
-          oq.field_i[25] = ii.field_v;
+          oq.field_i[25] = SpriteState.field_v;
           oq.field_i[23] = ur.field_Db;
           oq.field_i[16] = bf.field_a[1];
           oq.field_i[18] = ul.field_Fb[0];
@@ -141,7 +141,7 @@ final class na {
           jo.field_g[11] = qe.field_l;
           jo.field_g[3] = tc.field_D;
           jo.field_g[14] = ss.field_d;
-          jo.field_g[5] = rg.field_g;
+          jo.field_g[5] = ClientException.field_g;
           jo.field_g[8] = ck.field_d;
           jo.field_g[4] = lk.field_D;
           jo.field_g[6] = ms.field_f;
@@ -204,7 +204,7 @@ final class na {
         field_u = new Random();
         field_I = new gq(9, 0, 4, 1);
         field_s = "Production";
-        field_J = new pf();
+        field_J = new IntrusiveDeque();
         field_F = 0;
     }
 }

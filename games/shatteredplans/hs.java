@@ -265,7 +265,7 @@ class hs implements fo {
             if (var3 != 0) {
               return;
             }
-            var4 = param0.field_j;
+            var4 = param0.position;
             param0.e(11135, var17.field_j);
             for (var5 = 0; var17.field_l > var5; var5++) {
               if (var17.field_p[var5] == 0) {
@@ -517,7 +517,7 @@ class hs implements fo {
             for (var7_intLifetime1 = 0; var7_intLifetime1 < var13.length; var7_intLifetime1++) {
               var8 = var13[var7_intLifetime1];
               if (var8 != null) {
-                if (var8 != li.field_b) {
+                if (var8 != SocketConnector.field_b) {
                   var5Lifetime1++;
                 } else {
                   var4Lifetime1--;
@@ -544,7 +544,7 @@ class hs implements fo {
                 continue;
               }
               var4Lifetime1--;
-              this.field_f[var6_intLifetime1] = li.field_b;
+              this.field_f[var6_intLifetime1] = SocketConnector.field_b;
             }
             var6_intLifetime1 = 0;
             for (var7_intLifetime2 = 0; this.field_f.length > var7_intLifetime2; var7_intLifetime2++) {
@@ -561,7 +561,7 @@ class hs implements fo {
           for (var7_intLifetime3 = 0; var7_intLifetime3 < this.field_f.length; var7_intLifetime3++) {
             stackIn_39_0 = this.field_f[var7_intLifetime3];
             if (stackIn_39_0 != null) {
-              if (this.field_f[var7_intLifetime3] != li.field_b) {
+              if (this.field_f[var7_intLifetime3] != SocketConnector.field_b) {
                 this.field_f[var7_intLifetime3].field_I = mh.field_h[((int[]) (var3))[this.field_f[var7_intLifetime3].field_p]];
                 var6Lifetime1[this.field_f[var7_intLifetime3].field_p] = this.field_f[var7_intLifetime3];
               } else {
@@ -771,7 +771,7 @@ class hs implements fo {
               while (!(param6 <= var12)) {
                 var13 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
-                L12: while (!(decompiledNaturalLoopExit0 = (4 <= var13))) {
+                scanLoop1: while (!(decompiledNaturalLoopExit0 = (4 <= var13))) {
                   if (param3.field_e[var20[var12]].field_G[var13] <= 0) {
                     var13++;
                     continue;

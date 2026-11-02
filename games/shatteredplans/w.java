@@ -6,7 +6,7 @@ abstract class w extends f {
     boolean field_E;
     static String[][] field_J;
     private tc field_F;
-    static bi field_D;
+    static Sprite field_D;
     private int field_G;
     static String field_H;
 
@@ -32,7 +32,7 @@ abstract class w extends f {
         int var4 = 0;
         String var8 = null;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        String var6 = "(" + rm.field_e + " " + tp.field_g + " " + kp.field_n + ") " + ej.field_e;
+        String var6 = "(" + IterableNodeHashTable.field_e + " " + tp.field_g + " " + kp.field_n + ") " + ej.field_e;
         String var1 = var6;
         if (param0 != 16738) {
           return (String) null;
@@ -42,7 +42,7 @@ abstract class w extends f {
           var1 = var6 + ":";
           for (var2 = 0; rr.field_t > var2; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & sa.field_a.field_h[var2];
+            var3 = 255 & sa.field_a.payload[var2];
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (10 <= var4) {
@@ -77,7 +77,7 @@ abstract class w extends f {
         if (ci.field_r == null ||
           !(ci.field_r.field_z >= this.field_x) ||
           !(ci.field_r.field_w >= this.field_n)) {
-          ci.field_r = new bi(this.field_x, this.field_n);
+          ci.field_r = new Sprite(this.field_x, this.field_n);
         }
         aq.a((byte) 110, ci.field_r);
         gf.b();
@@ -90,19 +90,19 @@ abstract class w extends f {
     boolean k(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 0) {
-          field_D = (bi) null;
+          field_D = (Sprite) null;
         }
         this.field_G = this.e(false);
         stackIn_6_0 = (this.field_G == 0) && (!this.field_E);
         return stackIn_6_0;
     }
 
-    final vg i(int param0) {
-        vg var2 = super.i(param0);
+    final UiWidget i(int param0) {
+        UiWidget var2 = super.i(param0);
         if (var2 != null) {
           return var2;
         }
-        return (vg) (this);
+        return (UiWidget) (this);
     }
 
     boolean a(byte param0) {
@@ -206,7 +206,7 @@ abstract class w extends f {
         rs.g(-96);
         og.a(false);
         oa.a(0);
-        if (oh.b(true)) {
+        if (IntrusiveNode.b(true)) {
           js.field_f.h(1, 255);
           d.$cfr$intArgs$a$a6964d7afeb1(0, 82);
         }

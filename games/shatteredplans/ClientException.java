@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class rg extends RuntimeException {
+final class ClientException extends RuntimeException {
     String field_b;
     Throwable field_e;
     static String field_c;
@@ -17,7 +17,7 @@ final class rg extends RuntimeException {
         bo.r(0);
         if (!param0) {
           int[] var2 = (int[]) null;
-          rg.a(-36, -67, -120, (int[]) null, (int[]) null);
+          ClientException.a(-36, -67, -120, (int[]) null, (int[]) null);
         }
     }
 
@@ -181,8 +181,8 @@ final class rg extends RuntimeException {
             param4[var6] = var7;
             param3[param2] = param3[var6];
             param3[var6] = var8;
-            rg.a(param0, -2147483648, -1 + var6, param3, param4);
-            rg.a(1 + var6, -2147483648, param2, param3, param4);
+            ClientException.a(param0, -2147483648, -1 + var6, param3, param4);
+            ClientException.a(1 + var6, -2147483648, param2, param3, param4);
             return;
           }
           return;
@@ -227,7 +227,7 @@ final class rg extends RuntimeException {
         field_f = null;
     }
 
-    rg(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_e = param0;
         this.field_b = param1;
     }

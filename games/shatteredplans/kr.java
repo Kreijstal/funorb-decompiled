@@ -3,7 +3,7 @@
  */
 final class kr extends Exception {
     static boolean field_b;
-    static bi field_d;
+    static Sprite field_d;
     static int[] field_e;
     static String field_c;
     static v field_a;
@@ -34,13 +34,13 @@ final class kr extends Exception {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        pf var11 = null;
+        IntrusiveDeque var11 = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param1.field_T.g(112)) {
             return;
           }
-          var11 = new pf();
+          var11 = new IntrusiveDeque();
           param1.field_T.a((byte) -90, var11);
           var4 = 65 / ((param0 + 1) / 60);
           param1.field_T.a((byte) -113, var11.h(88));

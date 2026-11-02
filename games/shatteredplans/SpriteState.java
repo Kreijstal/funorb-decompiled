@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ii extends df {
+abstract class SpriteState extends DualLinkNode {
     static String field_r;
     int field_t;
     static String field_v;
@@ -9,9 +9,9 @@ abstract class ii extends df {
     int field_z;
     static String field_s;
     static qr field_u;
-    static bi field_q;
+    static Sprite field_q;
     int field_w;
-    static bi field_y;
+    static Sprite field_y;
     int field_o;
     int field_p;
 
@@ -55,7 +55,7 @@ abstract class ii extends df {
           return;
         }
         bc var2 = (bc) null;
-        ii.a((bc) null, (bc) null, 124);
+        SpriteState.a((bc) null, (bc) null, 124);
         field_y = null;
         field_r = null;
         field_q = null;
@@ -65,7 +65,7 @@ abstract class ii extends df {
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    ii() {
+    SpriteState() {
     }
 
     static {

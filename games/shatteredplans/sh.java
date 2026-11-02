@@ -3,7 +3,7 @@
  */
 final class sh implements fo {
     static fg field_c;
-    private ob field_a;
+    private PacketBuffer field_a;
     static int field_b;
     private int field_d;
 
@@ -161,7 +161,7 @@ final class sh implements fo {
         field_c = null;
     }
 
-    sh(ob param0, int param1) {
+    sh(PacketBuffer param0, int param1) {
         try {
           this.field_d = param1;
           this.field_a = param0;

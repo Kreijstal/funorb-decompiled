@@ -4,7 +4,7 @@
 final class dm {
     static qr field_h;
     static bg field_f;
-    static bi[] field_d;
+    static Sprite[] field_d;
     Object[] field_b;
     int field_g;
     static String field_c;
@@ -50,7 +50,7 @@ final class dm {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        pf var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         mj var12 = null;
@@ -157,7 +157,7 @@ final class dm {
                 var12.a(param1 ^ 4, var12.field_Ob);
               }
               var12.field_Ob.field_y = 2;
-              var12.field_xb = new qr(0L, ii.field_u);
+              var12.field_xb = new qr(0L, SpriteState.field_u);
               var12.a(4, var12.field_xb);
               var12.e((byte) -128);
               var12.field_Jb = new qr(0L, kq.field_h);
@@ -206,7 +206,7 @@ final class dm {
                 var20 = "<img=" + (var12.field_Lb - 1) + ">" + var33;
               }
             } else {
-              var20 = "<img=" + (rg.field_d + (var12.field_Lb - 4)) + ">" + var33;
+              var20 = "<img=" + (ClientException.field_d + (var12.field_Lb - 4)) + ">" + var33;
             }
             var12.field_Ab.field_z = var20;
             if (!var12.h(-89)) {
@@ -252,7 +252,7 @@ final class dm {
               }
               var25_int = 0;
               if (np.field_a != null &&
-                ip.a((byte) -97) &&
+                SecondaryNodeDequeIterator.a((byte) -97) &&
                 ~ec.field_p != ~var12.field_Ib) {
                 if (null != var12.field_Jb.field_z) {
                   var26 = var12.field_Jb.e(false) + 2 * tg.field_a;
@@ -369,7 +369,7 @@ final class dm {
               } else {
                 if (var5_int != 0 &&
                   !var12.field_Ub) {
-                  var24Lifetime2 = vg.field_r;
+                  var24Lifetime2 = UiWidget.field_r;
                 } else {
                   if (var7 > var12.field_Fb) {
                     var25_int = var7 - var12.field_Fb;
@@ -458,7 +458,7 @@ final class dm {
                   }
                 }
                 if (ro.field_a == param2 &&
-                  ip.a((byte) -124)) {
+                  SecondaryNodeDequeIterator.a((byte) -124)) {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + eg.field_s + (String) (var25);
                   } else {
@@ -472,7 +472,7 @@ final class dm {
                   }
                 }
                 if (ro.field_a == param2 &&
-                  !ip.a((byte) -126)) {
+                  !SecondaryNodeDequeIterator.a((byte) -126)) {
                   var27 = np.field_a.field_Xb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + re.a(ve.field_Gb, 4371, new String[]{var27});
                 }

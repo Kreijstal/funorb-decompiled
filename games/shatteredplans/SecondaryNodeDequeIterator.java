@@ -3,15 +3,15 @@
  */
 import java.util.*;
 
-final class ip implements Iterator {
+final class SecondaryNodeDequeIterator implements Iterator {
     static String field_h;
     static String field_f;
-    private up field_a;
+    private SecondaryNodeDeque field_a;
     static String field_g;
     static String field_d;
     static long field_b;
-    private df field_c;
-    private df field_e;
+    private DualLinkNode field_c;
+    private DualLinkNode field_e;
 
     public final boolean hasNext() {
         return this.field_e != this.field_a.field_a;
@@ -20,12 +20,12 @@ final class ip implements Iterator {
     public final Object next() {
         Object var1 = this.field_e;
         if (this.field_a.field_a != var1) {
-          this.field_e = ((df) (var1)).field_h;
+          this.field_e = ((DualLinkNode) (var1)).field_h;
         } else {
           this.field_e = null;
           var1 = null;
         }
-        this.field_c = (df) (var1);
+        this.field_c = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -102,7 +102,7 @@ final class ip implements Iterator {
           return;
         }
         sl var2 = (sl) null;
-        ip.a(-22, (sl) null);
+        SecondaryNodeDequeIterator.a(-22, (sl) null);
         field_d = null;
         field_h = null;
         field_g = null;
@@ -117,7 +117,7 @@ final class ip implements Iterator {
         this.field_c = null;
     }
 
-    ip(up param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.field_c = null;
         try {
           this.field_a = param0;

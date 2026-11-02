@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fi extends oh implements ag {
+final class fi extends IntrusiveNode implements ag {
     ln field_k;
     static String field_i;
     static String field_j;

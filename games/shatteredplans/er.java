@@ -121,7 +121,7 @@ final class er {
           if (hi.field_o.field_rb != 0 &&
             !bg.field_g) {
             if (ae.field_b) {
-              rg.a(true);
+              ClientException.a(true);
             } else {
               sr.field_h = true;
             }
@@ -450,9 +450,9 @@ final class er {
         }
     }
 
-    final static bi a(int param0, byte param1, int param2, fs param3, int param4) {
-        bi stackIn_3_0 = null;
-        bi stackIn_29_0 = null;
+    final static Sprite a(int param0, byte param1, int param2, fs param3, int param4) {
+        Sprite stackIn_3_0 = null;
+        Sprite stackIn_29_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -461,7 +461,7 @@ final class er {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        bi var8 = null;
+        Sprite var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -470,7 +470,7 @@ final class er {
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 + param4 == 0) {
-            stackIn_3_0 = new bi(1, 1);
+            stackIn_3_0 = new Sprite(1, 1);
             return stackIn_3_0;
           }
           var5_int = -77 / ((-61 - param1) / 34);
@@ -481,19 +481,19 @@ final class er {
           if (param4 + param0 > param2) {
             param0 = param2 - param4;
           }
-          var6 = param4 * (182 - pf.field_a[param3.field_x].field_z) / param2;
-          var7 = (-pf.field_a[param3.field_x].field_z + 182) * param0 / param2;
-          var8 = new bi(var6 + var7 + pf.field_a[param3.field_x].field_z / 2, 2 + rs.field_Cb.field_J);
+          var6 = param4 * (182 - IntrusiveDeque.field_a[param3.field_x].field_z) / param2;
+          var7 = (-IntrusiveDeque.field_a[param3.field_x].field_z + 182) * param0 / param2;
+          var8 = new Sprite(var6 + var7 + IntrusiveDeque.field_a[param3.field_x].field_z / 2, 2 + rs.field_Cb.field_J);
           ra.a(-128);
           var8.e();
           if (param4 <= 0) {
-            var7 = var7 + pf.field_a[param3.field_x].field_z / 2;
+            var7 = var7 + IntrusiveDeque.field_a[param3.field_x].field_z / 2;
             var9 = ui.a(2105376, param3.field_k, -90, 128);
             for (var10 = 0; var7 > var10; var10++) {
               gf.j(var10, 0, var8.field_w, var9);
             }
           } else {
-            var6 = var6 + pf.field_a[param3.field_x].field_z / 2;
+            var6 = var6 + IntrusiveDeque.field_a[param3.field_x].field_z / 2;
             for (var9 = 0; var9 < var6; var9++) {
               gf.j(var9, 0, var8.field_w, ui.a(0, param3.field_k, -81, 128 + var9 * 128 / var6));
             }

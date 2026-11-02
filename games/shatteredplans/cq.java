@@ -89,7 +89,7 @@ final class cq extends f implements bp {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, vg param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -171,7 +171,7 @@ final class cq extends f implements bp {
             cq.a(-64, -115, (String) null, (String) null, 39);
           }
           hs.field_j = rp.i(0);
-          ld.field_p = new pf();
+          ld.field_p = new IntrusiveDeque();
           hj.field_l = new tm[7];
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "cq.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

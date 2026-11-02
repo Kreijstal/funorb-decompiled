@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class he extends oh {
+final class he extends IntrusiveNode {
     static String field_l;
-    static bi field_h;
+    static Sprite field_h;
     static String field_q;
     static String field_m;
     static String field_n;
@@ -16,7 +16,7 @@ final class he extends oh {
     final static void a(int param0, String param1) {
         try {
           oo.a(param1, (byte) -70);
-          fk.a(rg.field_c, 72, false);
+          fk.a(ClientException.field_c, 72, false);
           if (param0 != 8192) {
             String var3 = (String) null;
             he.a(62, (String) null);

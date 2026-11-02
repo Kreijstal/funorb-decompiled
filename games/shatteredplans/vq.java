@@ -4,7 +4,7 @@
 final class vq {
     static int field_a;
 
-    final static void a(ob param0, qb param1, int param2, int param3) {
+    final static void a(PacketBuffer param0, qb param1, int param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -196,11 +196,11 @@ final class vq {
           }
           var5 = js.field_f;
           var5.h(param2, param0 ^ 253);
-          var5.field_j = var5.field_j + 1;
-          var4 = var5.field_j;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.c(param0, (byte) -97);
           var5.a(param1, (byte) 0);
-          var5.b(var5.field_j - var4, (byte) 119);
+          var5.b(var5.position - var4, (byte) 119);
           stackIn_23_0 = null;
           return (String) (stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

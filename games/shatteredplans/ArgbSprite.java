@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class om extends bi {
+final class ArgbSprite extends Sprite {
     final void c(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
@@ -43,7 +43,7 @@ final class om extends bi {
           if (var6 <= 0) {
             return;
           }
-          om.b(0, 0, 0, gf.field_h, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.b(0, 0, 0, gf.field_h, this.field_B, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -115,7 +115,7 @@ final class om extends bi {
           if (var6 <= 0) {
             return;
           }
-          om.d(gf.field_h, this.field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.d(gf.field_h, this.field_B, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -161,7 +161,7 @@ final class om extends bi {
           if (var5 <= 0) {
             return;
           }
-          om.c(gf.field_h, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.c(gf.field_h, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -233,7 +233,7 @@ final class om extends bi {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          om.c(gf.field_h, this.field_B, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          ArgbSprite.c(gf.field_h, this.field_B, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -279,7 +279,7 @@ final class om extends bi {
           if (var6 <= 0) {
             return;
           }
-          om.c(gf.field_h, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.c(gf.field_h, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -351,7 +351,7 @@ final class om extends bi {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          om.b(gf.field_h, this.field_B, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          ArgbSprite.b(gf.field_h, this.field_B, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -448,12 +448,12 @@ final class om extends bi {
           if (var5 <= 0) {
             return;
           }
-          om.d(gf.field_h, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.d(gf.field_h, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    om(int param0, int param1) {
+    ArgbSprite(int param0, int param1) {
         super(param0, param1);
     }
 
@@ -690,7 +690,7 @@ final class om extends bi {
         }
     }
 
-    om(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    ArgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
@@ -1396,14 +1396,14 @@ final class om extends bi {
           if (var5 <= 0) {
             return;
           }
-          om.c(gf.field_h, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.c(gf.field_h, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
 
-    final om h() {
+    final ArgbSprite h() {
         int var3 = 0;
-        om var1 = new om(this.field_z, this.field_w);
+        ArgbSprite var1 = new ArgbSprite(this.field_z, this.field_w);
         var1.field_o = this.field_o;
         var1.field_p = this.field_p;
         var1.field_t = this.field_t;
@@ -1487,7 +1487,7 @@ final class om extends bi {
           if (var5 <= 0) {
             return;
           }
-          om.d(gf.field_h, this.field_B, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.d(gf.field_h, this.field_B, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1587,7 +1587,7 @@ final class om extends bi {
           if (var6 <= 0) {
             return;
           }
-          om.d(gf.field_h, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.d(gf.field_h, this.field_B, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }

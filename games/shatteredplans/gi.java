@@ -17,7 +17,7 @@ final class gi {
           if (hb.a(param0, -31654)) {
             return false;
           }
-          if (pf.a(param0, (byte) 24)) {
+          if (IntrusiveDeque.a(param0, (byte) 24)) {
             return false;
           }
           if (cg.a(-92, param0)) {
@@ -84,9 +84,9 @@ final class gi {
               var1 = var5;
               if (var1 != null) {
                 for (var2_int = 0; var5.length > var2_int; var2_int++) {
-                  if (0 == rg.field_f[var2_int] &&
+                  if (0 == ClientException.field_f[var2_int] &&
                     sp.a(var5[var2_int].field_c, (byte) -125)) {
-                    rg.field_f[var2_int] = 1;
+                    ClientException.field_f[var2_int] = 1;
                     vn.a(0);
                   }
                 }
@@ -129,11 +129,11 @@ final class gi {
             var1_int = 1;
             var6 = 0;
             var2_intLifetime1 = var6;
-            while (var6 < rg.field_f.length) {
-              if (rg.field_f[var6] > 0) {
-                rg.field_f[var6] = rg.field_f[var6] + 1;
+            while (var6 < ClientException.field_f.length) {
+              if (ClientException.field_f[var6] > 0) {
+                ClientException.field_f[var6] = ClientException.field_f[var6] + 1;
               }
-              if (rg.field_f[var6] < 48) {
+              if (ClientException.field_f[var6] < 48) {
                 var1_int = 0;
               }
               var6++;
@@ -181,7 +181,7 @@ final class gi {
         try {
           qn.field_b[0] = na.field_u.nextInt();
           qn.field_b[1] = na.field_u.nextInt();
-          eo.field_cb.field_j = 0;
+          eo.field_cb.position = 0;
           qn.field_b[3] = (int)w.field_I;
           qn.field_b[2] = (int)(w.field_I >> 32);
           eo.field_cb.e(11135, qn.field_b[0]);
@@ -194,14 +194,14 @@ final class gi {
           }
           eo.field_cb.d(param0, 255);
           param4.a(eo.field_cb, (byte) 118);
-          js.field_f.field_j = 0;
+          js.field_f.position = 0;
           if (param1) {
             js.field_f.c(18, (byte) -106);
           } else {
             js.field_f.c(16, (byte) -89);
           }
-          js.field_f.field_j = js.field_f.field_j + 2;
-          var5_int = js.field_f.field_j;
+          js.field_f.position = js.field_f.position + 2;
+          var5_int = js.field_f.position;
           js.field_f.e(11135, e.field_b);
           js.field_f.b(-16426, be.field_l);
           var6 = 0;
@@ -227,7 +227,7 @@ final class gi {
             js.field_f.a((byte) 95, fr.field_H);
           }
           co.a(25050, js.field_f, hr.field_a, eo.field_cb, jl.field_V);
-          js.field_f.f(-549342136, js.field_f.field_j - var5_int);
+          js.field_f.f(-549342136, js.field_f.position - var5_int);
           d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

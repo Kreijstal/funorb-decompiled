@@ -3,30 +3,30 @@
  */
 import java.util.*;
 
-abstract class ek extends vg implements ni {
+abstract class ek extends UiWidget implements ni {
     static String field_H;
     static String field_y;
-    static bi field_z;
-    vg[] field_B;
+    static Sprite field_z;
+    UiWidget[] field_B;
     static String field_G;
     static int field_A;
     static qr field_E;
     static bc field_D;
     static boolean[] field_F;
 
-    private final boolean a(int param0, int param1, vg param2) {
+    private final boolean a(int param0, int param1, UiWidget param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        vg var6 = null;
-        vg var7 = null;
+        UiWidget var6 = null;
+        UiWidget var7 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        vg var7Lifetime1;
-        vg var7Lifetime2;
+        UiWidget var7Lifetime1;
+        UiWidget var7Lifetime2;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var4_int = 24 / ((param1 + 58) / 41);
@@ -65,13 +65,13 @@ abstract class ek extends vg implements ni {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, vg param3, int param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         int var9 = 0;
-        vg[] var8 = null;
+        UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
-        vg var10 = null;
+        UiWidget var10 = null;
         int var11 = 0;
-        vg[] var12 = null;
+        UiWidget[] var12 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -110,14 +110,14 @@ abstract class ek extends vg implements ni {
         super(param0, param1, param2, param3, param4, (ko) null);
     }
 
-    final boolean a(int param0, char param1, int param2, vg param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         int var6 = 0;
-        vg[] var5 = null;
+        UiWidget[] var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
-        vg var7 = null;
+        UiWidget var7 = null;
         int var8 = 0;
-        vg[] var9 = null;
+        UiWidget[] var9 = null;
         boolean stackIn_19_0 = false;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -165,7 +165,7 @@ abstract class ek extends vg implements ni {
         }
     }
 
-    private final boolean a(vg param0, int param1) {
+    private final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -198,9 +198,9 @@ abstract class ek extends vg implements ni {
         int var8 = 0;
         StringBuilder discarded$6 = null;
         StringBuilder discarded$5 = null;
-        vg var7 = null;
+        UiWidget var7 = null;
         int var9 = 0;
-        vg[] var10 = null;
+        UiWidget[] var10 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -248,7 +248,7 @@ abstract class ek extends vg implements ni {
     }
 
     final void a(int param0, int param1, byte param2, int param3, int param4) {
-        vg discarded$0 = null;
+        UiWidget discarded$0 = null;
         if (param2 <= 99) {
           discarded$0 = this.a((byte) 48);
         }
@@ -256,7 +256,7 @@ abstract class ek extends vg implements ni {
         this.h(116);
     }
 
-    final static bi[] a(int param0, int param1, int param2, int param3, byte param4) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 != -92) {
           field_E = (qr) null;
         }
@@ -274,11 +274,11 @@ abstract class ek extends vg implements ni {
 
     final void e(byte param0) {
         int var4 = 0;
-        vg[] var2;
+        UiWidget[] var2;
         int var3;
-        vg var5;
+        UiWidget var5;
         int var6;
-        vg[] var7;
+        UiWidget[] var7;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         var7 = this.field_B;
         var2 = var7;
@@ -306,12 +306,12 @@ abstract class ek extends vg implements ni {
 
     void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        vg var6;
+        UiWidget var6;
         int var7;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param0 == 0 &&
           null != this.field_p) {
-          this.field_p.a((vg) (this), param3, true, param2, (byte) 12);
+          this.field_p.a((UiWidget) (this), param3, true, param2, (byte) 12);
         }
         if (param1 != -11857) {
           this.a(-17, 93, (byte) 121, 115, -79);
@@ -326,13 +326,13 @@ abstract class ek extends vg implements ni {
         }
     }
 
-    final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, vg param6) {
+    final boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         int var9 = 0;
-        vg[] var8 = null;
+        UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
-        vg var10 = null;
+        UiWidget var10 = null;
         int var11 = 0;
-        vg[] var12 = null;
+        UiWidget[] var12 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -369,12 +369,12 @@ abstract class ek extends vg implements ni {
         }
     }
 
-    private final vg a(byte param0) {
+    private final UiWidget a(byte param0) {
         int var3 = 0;
-        vg[] var2;
-        vg var4;
+        UiWidget[] var2;
+        UiWidget var4;
         int var5;
-        vg[] var6;
+        UiWidget[] var6;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (null == this.field_B) {
           return null;
@@ -391,7 +391,7 @@ abstract class ek extends vg implements ni {
         if (param0 == -96) {
           return null;
         }
-        field_z = (bi) null;
+        field_z = (Sprite) null;
         return null;
     }
 
@@ -402,17 +402,17 @@ abstract class ek extends vg implements ni {
         return null != this.a((byte) -96) ? true : false;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, vg param5) {
-        vg[] var11 = null;
+    final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
+        UiWidget[] var11 = null;
         int var8 = 0;
-        vg var9 = null;
+        UiWidget var9 = null;
         int var10 = ShatteredPlansClient.field_F ? 1 : 0;
         if (this.field_B == null) {
           return;
         }
         try {
           var11 = this.field_B;
-          vg[] var7 = var11;
+          UiWidget[] var7 = var11;
           for (var8 = 0; var8 < var11.length; var8++) {
             var9 = var11[var8];
             if (var9 != null) {
@@ -429,14 +429,14 @@ abstract class ek extends vg implements ni {
 
     abstract void h(int param0);
 
-    final boolean a(byte param0, vg param1) {
+    final boolean a(byte param0, UiWidget param1) {
         int var5 = 0;
-        vg[] var3 = null;
+        UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        vg var6 = null;
+        UiWidget var6 = null;
         int var7 = 0;
-        vg[] var8 = null;
+        UiWidget[] var8 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -468,18 +468,18 @@ abstract class ek extends vg implements ni {
         }
     }
 
-    private final boolean a(vg param0, byte param1, int param2) {
+    private final boolean a(UiWidget param0, byte param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        vg var5 = null;
-        vg var6 = null;
+        UiWidget var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        vg var6Lifetime1;
-        vg var6Lifetime2;
+        UiWidget var6Lifetime1;
+        UiWidget var6Lifetime2;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (this.field_B == null) {
@@ -520,12 +520,12 @@ abstract class ek extends vg implements ni {
         }
     }
 
-    void a(int param0, int param1, vg param2, byte param3) {
+    void a(int param0, int param1, UiWidget param2, byte param3) {
         int var6 = 0;
-        vg[] var5 = null;
-        vg var7 = null;
+        UiWidget[] var5 = null;
+        UiWidget var7 = null;
         int var8 = 0;
-        vg[] var9 = null;
+        UiWidget[] var9 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -563,8 +563,8 @@ abstract class ek extends vg implements ni {
     final int e(int param0) {
         int var4 = 0;
         int var2;
-        vg[] var3;
-        vg var5;
+        UiWidget[] var3;
+        UiWidget var5;
         int var7;
         int var6;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -585,7 +585,7 @@ abstract class ek extends vg implements ni {
         return var2;
     }
 
-    private final boolean a(int param0, vg param1) {
+    private final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -652,11 +652,11 @@ abstract class ek extends vg implements ni {
 
     final String c(boolean param0) {
         int var3 = 0;
-        vg[] var2;
-        vg var4;
+        UiWidget[] var2;
+        UiWidget var4;
         int var6;
         String var5;
-        vg var7;
+        UiWidget var7;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         if (null == this.field_B) {
           return null;
@@ -674,8 +674,8 @@ abstract class ek extends vg implements ni {
         if (param0) {
           return null;
         }
-        var7 = (vg) null;
-        this.a(115, -37, -38, (vg) null, 68, 55, -109);
+        var7 = (UiWidget) null;
+        this.a(115, -37, -38, (UiWidget) null, 68, 55, -109);
         return null;
     }
 

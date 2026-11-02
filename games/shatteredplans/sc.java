@@ -293,7 +293,7 @@ final class sc extends ka {
         var27 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (!param1) {
-            if (ip.a((byte) -92)) {
+            if (SecondaryNodeDequeIterator.a((byte) -92)) {
               stackIn_12_0 = (!param2.field_Ab) ? 1 : 0;
             } else {
               stackIn_12_0 = 0;
@@ -325,7 +325,7 @@ final class sc extends ka {
               stackIn_30_0.field_bb = stackIn_31_1;
             }
             if (fk.field_p[0][2].field_v) {
-              if (!ip.a((byte) -126)) {
+              if (!SecondaryNodeDequeIterator.a((byte) -126)) {
                 dn.field_k = re.a(ef.field_b, 4371, new String[]{np.field_a.field_Xb});
               } else {
                 dn.field_k = po.field_c;
@@ -353,7 +353,7 @@ final class sc extends ka {
               } else {
                 stackIn_60_0 = 0;
               }
-              L16: {
+              regionExit1: {
                 boolean decompiledFrameCompleted0 = true;
                 var9_intLifetime1 = stackIn_60_0;
                 if (var4_int != 0 &&
@@ -365,7 +365,7 @@ final class sc extends ka {
                         stackIn_70_0 = fk.field_p[1][var8 + 1];
                         stackIn_71_1 = (var10 == param2.field_Eb);
                         stackIn_70_0.field_bb = stackIn_71_1;
-                        break L16;
+                        break regionExit1;
                       }
                       if (-1 != var8) {
                         stackIn_75_0 = fk.field_p[1][var8 + 1];
@@ -373,12 +373,12 @@ final class sc extends ka {
                         stackIn_75_2 = ~(id.field_c[var8 / 8] & 1 << (var8 & 7));
                         stackIn_78_1 = (stackIn_75_1 != stackIn_75_2);
                         stackIn_75_0.field_bb = stackIn_78_1;
-                        break L16;
+                        break regionExit1;
                       }
                       fk.field_p[1][1 + var8].field_bb = true;
                       var10 = 0;
                       if (var10 >= nl.field_a.length) {
-                        break L16;
+                        break regionExit1;
                       }
                       dupTemp$0 = fk.field_p[1][1 + var8];
                       stackIn_103_0 = dupTemp$0;
@@ -390,7 +390,7 @@ final class sc extends ka {
                             stackIn_103_0.field_bb = stackIn_103_1 & stackIn_104_2;
                             var10++;
                             if (var10 >= nl.field_a.length) {
-                              break L16;
+                              break regionExit1;
                             }
                             dupTemp$1 = fk.field_p[1][1 + var8];
                             stackIn_103_0 = dupTemp$1;
@@ -712,7 +712,7 @@ final class sc extends ka {
                       if (var23_int != 1) {
                         var22 = re.a(nc.field_n, 4371, new String[]{Integer.toString(var23_int)});
                       } else {
-                        var22 = ip.field_g;
+                        var22 = SecondaryNodeDequeIterator.field_g;
                       }
                     }
                     if (var13 != 0) {

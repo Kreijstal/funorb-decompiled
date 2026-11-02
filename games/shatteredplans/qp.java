@@ -5,7 +5,7 @@ final class qp extends o {
     static String field_v;
     private int field_y;
     private int field_u;
-    private bi[] field_t;
+    private Sprite[] field_t;
     static in field_w;
     private int field_x;
 
@@ -318,7 +318,7 @@ final class qp extends o {
         this(2188450, 2591221, 9543);
     }
 
-    public final void a(vg param0, int param1, boolean param2, int param3, byte param4) {
+    public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         int stackIn_8_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_19_0 = 0;
@@ -372,7 +372,7 @@ final class qp extends o {
         }
     }
 
-    final static bi[] a(int param0, int param1, int param2) {
+    final static Sprite[] a(int param0, int param1, int param2) {
         int var3 = 124 % ((-27 - param1) / 41);
         return cr.a(param0, 1, -10, param2);
     }

@@ -51,7 +51,7 @@ final class ri extends f implements od, bp {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, vg param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -180,7 +180,7 @@ final class ri extends f implements od, bp {
         RuntimeException var3 = null;
         try {
           if (param1 == this.field_H) {
-            this.field_R.a((byte) -21, (vg) (this));
+            this.field_R.a((byte) -21, (UiWidget) (this));
           }
           if (this.field_R == param1) {
             this.a(param0 - 4468);
@@ -306,11 +306,11 @@ final class ri extends f implements od, bp {
           dupTemp$0 = new pg(10, this.field_q, -20 + this.field_x, 25, this.field_H, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.b((byte) -65, dupTemp$0);
-          this.field_q = this.field_q + (((vg) ((Object) var12)).field_n + 5);
+          this.field_q = this.field_q + (((UiWidget) ((Object) var12)).field_n + 5);
           dupTemp$1 = new pg(10, this.field_q, this.field_x - 20, 25, this.field_R, false, 80, 3, var7, 16777215, co.field_t);
           var13 = dupTemp$1;
           this.b((byte) -66, dupTemp$1);
-          this.field_q = this.field_q + (((vg) ((Object) var13)).field_n + 5);
+          this.field_q = this.field_q + (((UiWidget) ((Object) var13)).field_n + 5);
           this.field_K.field_u = (ko) (this);
           if (null != this.field_Q) {
             this.field_Q.field_u = (ko) (this);

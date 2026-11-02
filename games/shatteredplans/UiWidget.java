@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class vg extends oh {
+class UiWidget extends IntrusiveNode {
     qo field_j;
     ko field_u;
     String field_v;
@@ -20,7 +20,7 @@ class vg extends oh {
     int field_h;
     boolean field_k;
     static String field_r;
-    static bi field_t;
+    static Sprite field_t;
 
     final void d(byte param0) {
         int var2 = 10 / ((-44 - param0) / 63);
@@ -61,7 +61,7 @@ class vg extends oh {
           }
           if (this.field_p != null) {
             discarded$4 = param3.append(" renderer=");
-            if (!(this.field_p instanceof vg)) {
+            if (!(this.field_p instanceof UiWidget)) {
               discarded$5 = param3.append(this.field_p);
             } else {
               param3 = this.a((byte) 125, param0, param1 + 1, param3);
@@ -69,7 +69,7 @@ class vg extends oh {
           }
           if (null != this.field_u) {
             discarded$6 = param3.append(" listener=");
-            if (!(this.field_u instanceof vg)) {
+            if (!(this.field_u instanceof UiWidget)) {
               discarded$7 = param3.append(this.field_u);
             } else {
               param3 = this.a((byte) 125, param0, param1 + 1, param3);
@@ -142,7 +142,7 @@ class vg extends oh {
         return param1;
     }
 
-    boolean a(byte param0, vg param1) {
+    boolean a(byte param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -166,7 +166,7 @@ class vg extends oh {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4, vg param5) {
+    void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         try {
           this.field_o = 0;
           if (param4 != -600269855) {
@@ -246,7 +246,7 @@ class vg extends oh {
         }
     }
 
-    boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, vg param6) {
+    boolean a(int param0, int param1, byte param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -275,7 +275,7 @@ class vg extends oh {
         }
     }
 
-    void a(int param0, int param1, vg param2, byte param3) {
+    void a(int param0, int param1, UiWidget param2, byte param3) {
         int var5_int = 0;
         int stackIn_3_0 = 0;
         boolean stackIn_7_1 = false;
@@ -331,7 +331,7 @@ class vg extends oh {
         field_t = null;
         field_w = null;
         if (param0 != 0) {
-          vg.d(-30);
+          UiWidget.d(-30);
         }
     }
 
@@ -345,7 +345,7 @@ class vg extends oh {
         }
     }
 
-    boolean a(int param0, int param1, int param2, vg param3, int param4, int param5, int param6) {
+    boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -479,7 +479,7 @@ class vg extends oh {
         return false;
     }
 
-    boolean a(int param0, char param1, int param2, vg param3) {
+    boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -504,16 +504,16 @@ class vg extends oh {
         }
     }
 
-    protected vg() {
+    protected UiWidget() {
         this.field_h = 0;
         this.field_l = 0;
     }
 
-    vg(String param0, ko param1) {
+    UiWidget(String param0, ko param1) {
         this(param0, qq.field_I.field_s, param1);
     }
 
-    vg(String param0, iq param1, ko param2) {
+    UiWidget(String param0, iq param1, ko param2) {
         pj var4 = null;
         this.field_h = 0;
         this.field_l = 0;
@@ -531,7 +531,7 @@ class vg extends oh {
         }
     }
 
-    vg(int param0, int param1, int param2, int param3, iq param4, ko param5) {
+    UiWidget(int param0, int param1, int param2, int param3, iq param4, ko param5) {
         this.field_h = 0;
         this.field_l = 0;
         try {

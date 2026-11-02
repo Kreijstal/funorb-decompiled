@@ -6,7 +6,7 @@ import java.util.*;
 final class vc {
     static ej field_a;
     static String field_e;
-    static bi field_b;
+    static Sprite field_b;
     static String[] field_c;
     static sr[] field_d;
 

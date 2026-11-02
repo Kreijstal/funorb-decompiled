@@ -6,13 +6,13 @@ final class wd extends ji {
     private go field_O;
     private boolean field_J;
     private go field_M;
-    static pf field_P;
+    static IntrusiveDeque field_P;
     static char[] field_L;
     static String field_Q;
     static long field_N;
     static String field_K;
 
-    private final void a(int param0, boolean param1, vg param2, String param3, int param4) {
+    private final void a(int param0, boolean param1, UiWidget param2, String param3, int param4) {
         try {
           if (param1) {
             ja var7 = (ja) null;
@@ -249,7 +249,7 @@ final class wd extends ji {
 
     static {
         field_L = new char[]{(char)91, (char)93, (char)35};
-        field_P = new pf();
+        field_P = new IntrusiveDeque();
         field_Q = "Sound: ";
         field_K = "No spectators";
     }

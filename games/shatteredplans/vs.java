@@ -29,7 +29,7 @@ final class vs {
     }
 
     final static void a(int param0, byte param1) {
-        oh var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         lq var4 = null;
         RuntimeException decompiledCaughtException = null;

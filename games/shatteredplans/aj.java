@@ -6,7 +6,7 @@ final class aj {
     static ap field_e;
     static int field_c;
     static volatile int field_f;
-    static pf field_a;
+    static IntrusiveDeque field_a;
     static int[] field_d;
 
     final static StringBuilder a(StringBuilder param0, int param1, int param2, char param3) {
@@ -71,7 +71,7 @@ final class aj {
           }
           hp.field_m.a(false);
           if (param0) {
-            if (kf.field_g == hp.field_m.field_f) {
+            if (GameApplet.field_g == hp.field_m.field_f) {
               var11 = hp.field_m;
               var12 = re.a(id.field_e, 4371, new String[]{param3});
               var11.field_j.a(1, 16, var12);

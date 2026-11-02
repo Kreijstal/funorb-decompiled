@@ -42,7 +42,7 @@ final class fc {
           this.field_b = 56L;
           return;
         }
-        if (!ip.a((byte) -123)) {
+        if (!SecondaryNodeDequeIterator.a((byte) -123)) {
           if (param1 == -16661) {
             return;
           }
@@ -134,7 +134,7 @@ final class fc {
         if (param1 != 17) {
           return false;
         }
-        tc.field_G = new kh(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, ho.field_j, un.field_g, po.field_d, ii.field_u, fk.field_i, gn.field_w, this.field_k, this.field_b);
+        tc.field_G = new kh(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, ho.field_j, un.field_g, po.field_d, SpriteState.field_u, fk.field_i, gn.field_w, this.field_k, this.field_b);
         return true;
     }
 
@@ -160,7 +160,7 @@ final class fc {
                     po.a(54);
                   } else {
                     if (20 == param0) {
-                      rg.a(true);
+                      ClientException.a(true);
                     } else {
                       if (param0 != 19) {
                         return false;
@@ -454,7 +454,7 @@ final class fc {
             if (0 == ul.field_Hb) {
               this.field_j.a(1, 12, hj.field_m);
             }
-            this.field_j.a(1, 13, up.field_c);
+            this.field_j.a(1, 13, SecondaryNodeDeque.field_c);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -4,14 +4,14 @@
 final class ol {
     static String field_i;
     private int field_k;
-    private rm field_h;
+    private IterableNodeHashTable field_h;
     static String field_j;
     static String field_f;
     static int field_e;
     static int[] field_a;
     static sq field_g;
     static String field_l;
-    private up field_c;
+    private SecondaryNodeDeque field_c;
     private int field_b;
     static String field_d;
 
@@ -62,7 +62,7 @@ final class ol {
             return var8;
           }
           var6 = new m(var8, var7.field_p);
-          this.field_h.a(var6, true, var7.field_b);
+          this.field_h.a(var6, true, var7.key);
           this.field_c.a(var6, 6);
           ((mc) ((Object) var6)).field_l = 0L;
           var7.b((byte) -96);
@@ -85,7 +85,7 @@ final class ol {
           return var9;
         }
         var6Lifetime1 = new m(var9, var7.field_p);
-        this.field_h.a(var6Lifetime1, true, var7.field_b);
+        this.field_h.a(var6Lifetime1, true, var7.key);
         this.field_c.a(var6Lifetime1, 6);
         ((mc) ((Object) var6Lifetime1)).field_l = 0L;
         var7.b((byte) -96);
@@ -140,7 +140,7 @@ final class ol {
         ad var1 = new ad();
         go.field_E.field_v = (jk) ((Object) var1);
         if (param0 == 69) {
-          var2 = new ff(15, 10, 36, 36, (bi) null);
+          var2 = new ff(15, 10, 36, 36, (Sprite) null);
           go.field_E.a(var2, 8);
           var1.field_e = var2;
           var3 = new bd(15, 5 - (-(go.field_E.field_i / 2) + rs.field_Cb.field_J / 2), 450, rs.field_Cb.field_J, (String) null, 0);
@@ -227,13 +227,13 @@ final class ol {
 
     private ol(int param0, int param1) {
         int var3;
-        this.field_c = new up();
+        this.field_c = new SecondaryNodeDeque();
         this.field_k = param0;
         this.field_b = param0;
         var3 = 1;
         while (true) {
           if (param0 <= var3 + var3) {
-            this.field_h = new rm(var3);
+            this.field_h = new IterableNodeHashTable(var3);
             return;
           }
           if (param1 > var3) {
@@ -242,7 +242,7 @@ final class ol {
           }
           break;
         }
-        this.field_h = new rm(var3);
+        this.field_h = new IterableNodeHashTable(var3);
         return;
     }
 

@@ -90,7 +90,7 @@ final class lo extends sd {
         return this.field_z.c((byte) 67);
     }
 
-    final void a(pf param0, int param1) {
+    final void a(IntrusiveDeque param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;

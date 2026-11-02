@@ -6,7 +6,7 @@ final class mi {
     static String field_b;
     static String field_c;
 
-    final static void a(byte param0, fb param1, ob param2, boolean param3) {
+    final static void a(byte param0, fb param1, PacketBuffer param2, boolean param3) {
         int var8 = 0;
         fb stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
@@ -80,13 +80,13 @@ final class mi {
             param1.field_lc = param2.a(16711680);
           }
           param1.field_fc = param2.d(127);
-          var7 = param2.field_j;
+          var7 = param2.position;
           param1.field_Xb = param2.e(-1);
           if (var6 == 0) {
             param1.field_jc = null;
             return;
           }
-          param2.field_j = var7;
+          param2.position = var7;
           param1.field_jc = new String[param1.field_Lb];
           for (var8 = 0; param1.field_Lb > var8; var8++) {
             param1.field_jc[var8] = param2.e(-1);

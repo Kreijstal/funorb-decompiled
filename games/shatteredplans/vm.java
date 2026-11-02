@@ -23,7 +23,7 @@ final class vm extends qr {
     private vm[] field_yb;
     private int field_Gb;
     static qr field_Ab;
-    static bi field_Jb;
+    static Sprite field_Jb;
 
     final void h(int param0) {
         int var3 = 0;
@@ -317,7 +317,7 @@ final class vm extends qr {
               this.field_Hb[var13] == -1) {
               var14 = jq.field_c;
             }
-            this.field_Kb[var13] = new sg(0L, param2, (qr) null, param3, (bi) (var14), param6[var13]);
+            this.field_Kb[var13] = new sg(0L, param2, (qr) null, param3, (Sprite) (var14), param6[var13]);
             this.a(4, this.field_Kb[var13]);
             var15 = var17.c(param6[var13]);
             if (this.field_Ib < var15) {

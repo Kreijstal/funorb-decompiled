@@ -3,7 +3,7 @@
  */
 class j extends ka {
     static String[] field_q;
-    static bi[] field_s;
+    static Sprite[] field_s;
     static fg field_r;
     static String field_p;
 
@@ -48,7 +48,7 @@ class j extends ka {
         var5 = var3[this.field_n.field_x];
         var6 = 0;
         for (var7 = 0; var7 < this.field_o; var7++) {
-          L12: {
+          regionExit1: {
             if (this.field_g.field_g.field_e[var7].field_y != this.field_n) {
               var8 = 1;
               var9 = 0;
@@ -67,7 +67,7 @@ class j extends ka {
               if ((var8 != 0)) {
                 var6++;
               }
-              break L12;
+              break regionExit1;
             }
             var4[var7] = false;
           }
@@ -205,7 +205,7 @@ class j extends ka {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 2) {
-            field_s = (bi[]) null;
+            field_s = (Sprite[]) null;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null && (param3 != 2 ||

@@ -6,7 +6,7 @@ final class q extends qr {
     static int[] field_Ab;
     private qr[] field_Db;
     private qr field_yb;
-    static bi field_Cb;
+    static Sprite field_Cb;
     int field_zb;
     static int field_Bb;
 
@@ -196,7 +196,7 @@ final class q extends qr {
 
     final static void g(int param0) {
         if (param0 > -95) {
-          field_Cb = (bi) null;
+          field_Cb = (Sprite) null;
         }
         if (wg.field_f != null) {
           wg.field_f.b(111);

@@ -20,8 +20,8 @@ final class l {
     final void b(byte param0) {
         this.field_h = wb.a(this.field_e, 0);
         if (param0 != 80) {
-          ob var3 = (ob) null;
-          this.a((byte) 42, (fs[]) null, (ob) null);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a((byte) 42, (fs[]) null, (PacketBuffer) null);
         }
     }
 
@@ -64,7 +64,7 @@ final class l {
         }
     }
 
-    final void a(ob param0, fs[] param1, int param2) {
+    final void a(PacketBuffer param0, fs[] param1, int param2) {
         int var6 = 0;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
@@ -190,14 +190,14 @@ final class l {
           var4_int = 0;
           var5 = this.field_e;
           var6 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (var5.length > var6) {
               var7 = var5[var6];
               if (var7.field_L == 3) {
                 this.a(param0[var4_int], param1, param2 ^ 32443, var7);
                 var4_int++;
                 if (var4_int == param0.length) {
-                  break L1;
+                  break scanLoop1;
                 }
               }
               var6++;
@@ -232,7 +232,7 @@ final class l {
         }
     }
 
-    final void a(byte param0, fs[] param1, ob param2) {
+    final void a(byte param0, fs[] param1, PacketBuffer param2) {
         int var6 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -317,7 +317,7 @@ final class l {
         }
     }
 
-    final void a(int param0, ob param1, fs[] param2) {
+    final void a(int param0, PacketBuffer param1, fs[] param2) {
         int var5 = 0;
         ln[] var4 = null;
         ln var6 = null;

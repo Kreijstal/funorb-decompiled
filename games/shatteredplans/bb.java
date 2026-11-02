@@ -50,8 +50,8 @@ final class bb {
         int var7_int = 0;
         try {
           js.field_f.h(param2, 255);
-          js.field_f.field_j = js.field_f.field_j + 1;
-          var7_int = js.field_f.field_j;
+          js.field_f.position = js.field_f.position + 1;
+          var7_int = js.field_f.position;
           if (param0 < 18) {
             bb.a(false, true, (byte) -52, -121);
           }
@@ -59,7 +59,7 @@ final class bb {
           js.field_f.a(param4, (byte) 0);
           js.field_f.c(param5, (byte) -127);
           js.field_f.c(param3 ? 1 : 0, (byte) -96);
-          js.field_f.b(js.field_f.field_j - var7_int, (byte) 118);
+          js.field_f.b(js.field_f.position - var7_int, (byte) 118);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "bb.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
@@ -125,9 +125,9 @@ final class bb {
             dn.field_f.field_mb = 0;
             var6.field_K = 0;
             tj.field_f.field_z = le.field_c.toUpperCase();
-            var7 = (2 + pf.field_g.field_K) / 2;
-            dn.field_f.a(-2 + var7, 40, (byte) 108, pf.field_g.field_mb - 40, 0);
-            aq.field_j.a(-var7 + pf.field_g.field_K, 40, (byte) 73, pf.field_g.field_mb - 40, var7);
+            var7 = (2 + IntrusiveDeque.field_g.field_K) / 2;
+            dn.field_f.a(-2 + var7, 40, (byte) 108, IntrusiveDeque.field_g.field_mb - 40, 0);
+            aq.field_j.a(-var7 + IntrusiveDeque.field_g.field_K, 40, (byte) 73, IntrusiveDeque.field_g.field_mb - 40, var7);
             if (nl.field_a.length == 1 &&
               2 == nl.field_a[0]) {
               var8 = 0;
@@ -160,7 +160,7 @@ final class bb {
             aq.field_j.field_s = true;
             if (k.field_i) {
               i.field_g.field_s = false;
-              oh.field_c.field_z = nb.field_c;
+              IntrusiveNode.field_c.field_z = nb.field_c;
               if (var8 == 0) {
                 stackIn_57_0 = cm.field_c;
               } else {
@@ -192,9 +192,9 @@ final class bb {
                 stackIn_26_1 = dk.field_a;
               }
               stackIn_25_0.field_z = ((String) (Object) stackIn_26_1).toUpperCase();
-              stackIn_28_0 = oh.field_c;
+              stackIn_28_0 = IntrusiveNode.field_c;
               if (var8 != 0) {
-                stackIn_29_1 = df.field_i;
+                stackIn_29_1 = DualLinkNode.field_i;
               } else {
                 stackIn_29_1 = qp.field_v;
               }
@@ -252,7 +252,7 @@ final class bb {
           stackIn_70_0 = am.field_xb;
           stackIn_71_1 = (param1) && (!param0) && (!ti.field_e);
           ((qr) (Object) stackIn_70_0).a(stackIn_71_1, -20429);
-          stackIn_75_0 = pf.field_g;
+          stackIn_75_0 = IntrusiveDeque.field_g;
           stackIn_76_1 = (param1) && (!param0) && (!ti.field_e);
           ((qr) (Object) stackIn_75_0).a(stackIn_76_1, -20429);
           stackIn_80_0 = ed.field_d;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bm extends oh {
+abstract class bm extends IntrusiveNode {
     int field_h;
 
     private bm() throws Throwable {

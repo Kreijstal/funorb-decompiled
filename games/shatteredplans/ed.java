@@ -4,11 +4,11 @@
 final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static eo field_h;
     static qr field_d;
-    static pf field_g;
+    static IntrusiveDeque field_g;
     static String field_e;
-    static pf field_c;
+    static IntrusiveDeque field_c;
     static int field_f;
-    static bi field_b;
+    static Sprite field_b;
     static String field_a;
 
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
@@ -95,7 +95,7 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static bi a(boolean param0) {
+    final static Sprite a(boolean param0) {
         byte[] var20 = null;
         byte[] var21 = null;
         byte[] var19 = null;
@@ -125,16 +125,16 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             for (var6 = 0; var1 > var6; var6++) {
               var5_ref_int__[var6] = ee.a(eo.field_fb[we.a((int) var20[var6], 255)], we.a(-16777216, var21[var6] << 24));
             }
-            var3 = new om(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var13);
+            var3 = new ArgbSprite(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var13);
           } else {
             var9 = new int[var1];
             for (var5 = 0; var1 > var5; var5++) {
               var9[var5] = eo.field_fb[we.a(255, (int) var20[var5])];
             }
-            var3 = new bi(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var9);
+            var3 = new Sprite(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var9);
           }
           pd.a(0);
-          return (bi) (var3);
+          return (Sprite) (var3);
         }
         ed.a(79);
         byte[] var18 = hd.field_q[0];
@@ -146,16 +146,16 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           for (var6Lifetime1 = 0; var1 > var6Lifetime1; var6Lifetime1++) {
             var5_ref_int__Lifetime1[var6Lifetime1] = ee.a(eo.field_fb[we.a((int) var18[var6Lifetime1], 255)], we.a(-16777216, var19[var6Lifetime1] << 24));
           }
-          var3Lifetime1 = new om(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var13Lifetime1);
+          var3Lifetime1 = new ArgbSprite(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var13Lifetime1);
         } else {
           var9Lifetime1 = new int[var1];
           for (var5Lifetime1 = 0; var1 > var5Lifetime1; var5Lifetime1++) {
             var9Lifetime1[var5Lifetime1] = eo.field_fb[we.a(255, (int) var18[var5Lifetime1])];
           }
-          var3Lifetime1 = new bi(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var9Lifetime1);
+          var3Lifetime1 = new Sprite(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var9Lifetime1);
         }
         pd.a(0);
-        return (bi) (var3Lifetime1);
+        return (Sprite) (var3Lifetime1);
     }
 
     final static boolean a(int param0, int param1, int param2) {
@@ -168,7 +168,7 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             if (var3 != 0) {
               return false;
             }
-            rg.a(true);
+            ClientException.a(true);
             return true;
           }
           if (11 != oq.field_j) {
@@ -210,7 +210,7 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             if (var3 != 0) {
               return false;
             }
-            rg.a(true);
+            ClientException.a(true);
             return true;
           }
           if (11 == oq.field_j) {
@@ -408,8 +408,8 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
 
     static {
         field_e = "Waiting for extra data";
-        field_g = new pf();
-        field_c = new pf();
+        field_g = new IntrusiveDeque();
+        field_c = new IntrusiveDeque();
         field_f = 20;
         field_a = "Warning: if you quit, you will lose any game you are in the middle of!";
     }

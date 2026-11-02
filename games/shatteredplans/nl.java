@@ -39,7 +39,7 @@ final class nl {
         int var5Lifetime1;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var11 = new lp(0, 0, 182, rg.field_a);
+          var11 = new lp(0, 0, 182, ClientException.field_a);
           var11.field_h = param3;
           var5 = 0;
           for (var5Lifetime1 = 0; param0.field_h.length > var5Lifetime1; var5Lifetime1++) {
@@ -49,18 +49,18 @@ final class nl {
             param0.field_h[var5Lifetime1] = var11;
             break;
           }
-          var6 = new kb(3 * pf.field_a[param3.field_x].field_z / 4, -(rs.field_Cb.field_J / 2) + var11.field_i / 2, -(3 * pf.field_a[param3.field_x].field_z / 4) + 182, param3.field_k, param3.field_t, 16777215, true);
+          var6 = new kb(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, -(rs.field_Cb.field_J / 2) + var11.field_i / 2, -(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4) + 182, param3.field_k, param3.field_t, 16777215, true);
           var11.a(var6, param2 ^ 10);
           bg.a(-2612, param1.length);
-          var7 = new ff(3 * pf.field_a[param3.field_x].field_z / 4, var11.field_i / 2 + rs.field_Cb.field_J / 2 + 3, ne.a(-1, false));
+          var7 = new ff(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, var11.field_i / 2 + rs.field_Cb.field_J / 2 + 3, ne.a(-1, false));
           var11.a(var7, 8);
           param0.field_f[var5Lifetime1][0] = var7;
           for (var8_int = 1; param1.length - 1 > var8_int; var8_int++) {
-            var9 = new ff(pf.field_a[param3.field_x].field_z + var8_int * (2 + dc.field_F.field_z), 3 + rs.field_Cb.field_J / 2 + var11.field_i / 2, wm.a(-1, 0));
+            var9 = new ff(IntrusiveDeque.field_a[param3.field_x].field_z + var8_int * (2 + dc.field_F.field_z), 3 + rs.field_Cb.field_J / 2 + var11.field_i / 2, wm.a(-1, 0));
             var11.a(var9, 8);
             param0.field_f[var5Lifetime1][var8_int] = var9;
           }
-          var8 = new ff(0, (-pf.field_a[param3.field_x].field_w + var11.field_i) / param2, pf.field_a[param3.field_x]);
+          var8 = new ff(0, (-IntrusiveDeque.field_a[param3.field_x].field_w + var11.field_i) / param2, IntrusiveDeque.field_a[param3.field_x]);
           var11.a(var8, 8);
           stackIn_10_0 = var11;
           return stackIn_10_0;

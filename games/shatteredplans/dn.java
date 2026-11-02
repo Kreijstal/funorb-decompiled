@@ -57,8 +57,8 @@ final class dn extends hb {
           var5 = js.field_f;
           sl var3 = var5;
           var5.h(param0, 255);
-          var5.field_j = var5.field_j + 1;
-          var4 = var5.field_j;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.c(1, (byte) -60);
           if (param1.field_n != null) {
             var5.c(param1.field_n.length, (byte) -66);
@@ -67,9 +67,9 @@ final class dn extends hb {
             var5.c(0, (byte) -76);
           }
           var5.a(var4, param2 ^ -40);
-          var5.field_j = var5.field_j - 4;
+          var5.position = var5.position - 4;
           param1.field_j = var5.a(16711680);
-          var5.b(var5.field_j - var4, (byte) 119);
+          var5.b(var5.position - var4, (byte) 119);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "dn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -77,7 +77,7 @@ final class dn extends hb {
 
     final static gq[] a(int param0) {
         if (param0 == 4) {
-          return new gq[]{on.field_g, nd.field_c, td.field_O, ss.field_c, cl.field_p, kf.field_c, tf.field_j, na.field_I, ld.field_h, lc.field_b, m.field_A, mc.field_r, ks.field_a, ro.field_c};
+          return new gq[]{on.field_g, nd.field_c, td.field_O, ss.field_c, cl.field_p, GameApplet.field_c, tf.field_j, na.field_I, ld.field_h, lc.field_b, m.field_A, mc.field_r, ks.field_a, ro.field_c};
         }
         return (gq[]) null;
     }
@@ -97,20 +97,20 @@ final class dn extends hb {
         field_h = null;
     }
 
-    final oh a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         if (param0) {
           this.a((byte) -124);
-          return (oh) ((Object) this.field_i.b(32));
+          return (IntrusiveNode) ((Object) this.field_i.b(32));
         }
-        return (oh) ((Object) this.field_i.b(32));
+        return (IntrusiveNode) ((Object) this.field_i.b(32));
     }
 
-    final oh a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         if (param0 < 99) {
           field_k = (String) null;
-          return (oh) ((Object) this.field_i.c(-127));
+          return (IntrusiveNode) ((Object) this.field_i.c(-127));
         }
-        return (oh) ((Object) this.field_i.c(-127));
+        return (IntrusiveNode) ((Object) this.field_i.c(-127));
     }
 
     final int b(byte param0) {

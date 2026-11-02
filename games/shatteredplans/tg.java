@@ -11,8 +11,8 @@ final class tg {
 
     final static boolean a(int param0, int param1, byte param2, int param3) {
         if (param2 >= -91) {
-          bi var5 = (bi) null;
-          tg.a(-57, (bi) null, (byte) 36, -126);
+          Sprite var5 = (Sprite) null;
+          tg.a(-57, (Sprite) null, (byte) 36, -126);
           if (param1 < 0) {
             return false;
           }
@@ -49,7 +49,7 @@ final class tg {
         int var1 = 95 % ((param0 + 56) / 38);
     }
 
-    final static void a(int param0, bi param1, byte param2, int param3) {
+    final static void a(int param0, Sprite param1, byte param2, int param3) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         RuntimeException stackIn_27_0 = null;

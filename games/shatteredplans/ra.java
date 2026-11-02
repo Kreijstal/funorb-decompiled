@@ -93,7 +93,7 @@ final class ra {
         }
     }
 
-    final static void a(java.math.BigInteger param0, ob param1, int param2, int param3, java.math.BigInteger param4, byte[] param5, int param6) {
+    final static void a(java.math.BigInteger param0, PacketBuffer param1, int param2, int param3, java.math.BigInteger param4, byte[] param5, int param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -126,18 +126,18 @@ final class ra {
             var8[var9] = ro.field_b.nextInt();
           }
           if (null == ih.field_c ||
-            !(ih.field_c.field_h.length >= var7_int)) {
-            ih.field_c = new ob(var7_int);
+            !(ih.field_c.payload.length >= var7_int)) {
+            ih.field_c = new PacketBuffer(var7_int);
           }
-          ih.field_c.field_j = 0;
+          ih.field_c.position = 0;
           ih.field_c.a(param2, param6, param5, 22186);
           ih.field_c.a(var7_int, (byte) -103);
           ih.field_c.a(var13, param3 ^ 107);
           if (il.field_kb == null ||
-            !(il.field_kb.field_h.length >= 100)) {
-            il.field_kb = new ob(100);
+            !(il.field_kb.payload.length >= 100)) {
+            il.field_kb = new PacketBuffer(100);
           }
-          il.field_kb.field_j = 0;
+          il.field_kb.position = 0;
           il.field_kb.c(10, (byte) -81);
           var11 = 0;
           var9Lifetime1 = var11;
@@ -147,8 +147,8 @@ final class ra {
           }
           il.field_kb.d(param6, 255);
           il.field_kb.a(param4, param0, (byte) -86);
-          param1.a(0, il.field_kb.field_j, il.field_kb.field_h, 22186);
-          param1.a(0, ih.field_c.field_j, ih.field_c.field_h, param3 ^ 22186);
+          param1.a(0, il.field_kb.position, il.field_kb.payload, 22186);
+          param1.a(0, ih.field_c.position, ih.field_c.payload, param3 ^ 22186);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

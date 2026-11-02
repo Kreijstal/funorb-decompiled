@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class ln extends df {
+final class ln extends DualLinkNode {
     int field_C;
     int field_Q;
     sd field_R;
-    static bi[][] field_O;
+    static Sprite[][] field_O;
     int field_z;
     String field_I;
     int field_S;
@@ -17,20 +17,20 @@ final class ln extends df {
     static int field_w;
     ln[] field_D;
     int field_x;
-    static bi field_F;
+    static Sprite field_F;
     int field_B;
     jd[] field_r;
     int field_p;
     static int[] field_H;
     static String field_o;
     fi[] field_v;
-    pf field_T;
+    IntrusiveDeque field_T;
     int field_N;
     boolean field_u;
     fs field_t;
     fs field_y;
     int field_L;
-    static bi field_K;
+    static Sprite field_K;
     int field_A;
     int field_J;
     db field_s;
@@ -78,7 +78,7 @@ final class ln extends df {
         field_U = null;
         field_q = null;
         field_F = null;
-        field_O = (bi[][]) null;
+        field_O = (Sprite[][]) null;
     }
 
     final void a(ln param0, byte param1) {
@@ -304,7 +304,7 @@ final class ln extends df {
         this.field_p = param0;
         this.field_S = param2;
         this.field_A = param1;
-        this.field_T = new pf();
+        this.field_T = new IntrusiveDeque();
         this.field_s = new db();
     }
 

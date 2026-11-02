@@ -10,10 +10,10 @@ final class sj {
     final static void a(byte param0, qr param1, qr param2) {
         try {
           if (null == param1.field_M) {
-            param1.field_M = new pf();
+            param1.field_M = new IntrusiveDeque();
           }
           if (null == param2.field_M) {
-            param2.field_M = new pf();
+            param2.field_M = new IntrusiveDeque();
           }
           if (eg.field_q == null) {
             eg.field_q = new in(64);

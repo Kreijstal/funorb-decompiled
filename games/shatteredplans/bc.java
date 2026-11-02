@@ -391,11 +391,11 @@ final class bc {
         if (param1 != 2) {
           return;
         }
-        var4.field_j = var4.field_j + 1;
-        int var5 = var4.field_j;
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
         var4.c(7, (byte) -82);
         var4.b(-16426, param2);
-        var4.b(-var5 + var4.field_j, (byte) 127);
+        var4.b(-var5 + var4.position, (byte) 127);
     }
 
     private final synchronized byte[] a(int[] param0, int param1, int param2, int param3) {
@@ -689,7 +689,7 @@ final class bc {
         RuntimeException var11_ref_RuntimeException = null;
         int var11 = 0;
         int var12 = 0;
-        ob var13 = null;
+        PacketBuffer var13 = null;
         int[] var14 = null;
         int var14_int = 0;
         int var15_int = 0;
@@ -703,7 +703,7 @@ final class bc {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        ob var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
         int[] var30 = null;
         byte[][] var31 = null;
@@ -714,7 +714,7 @@ final class bc {
         byte[][] var38 = null;
         byte[] var41 = null;
         byte[] var42 = null;
-        ob var13Lifetime1;
+        PacketBuffer var13Lifetime1;
         int var12Lifetime1;
         int var15_intLifetime1;
         int var17Lifetime1;
@@ -776,15 +776,15 @@ final class bc {
             var33 = sq.a(-1, this.field_m[param2], true);
             var25 = var33;
             var9 = var25;
-            var26 = new ob(var33);
-            var26.a(5, param1, (byte) -82, var26.field_h.length);
+            var26 = new PacketBuffer(var33);
+            var26.a(5, param1, (byte) -82, var26.payload.length);
             decompiledFrameRemainder0 = false;
           }
           else {
             var9 = sq.a(-1, this.field_m[param2], false);
           }
           try {
-            var34 = pa.a(var9, 200);
+            var34 = ProxySocketConnector.a(var9, 200);
             var27 = var34;
             var23 = var27;
             var41 = var23;
@@ -805,9 +805,9 @@ final class bc {
               var11--;
               var12 = 255 & var23[var11];
               var11 = var11 - 4 * (var5_int * var12);
-              var13 = new ob(var41);
+              var13 = new PacketBuffer(var41);
               var14_int = 0;
-              var13.field_j = var11;
+              var13.position = var11;
               var15_int = 0;
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
@@ -829,7 +829,7 @@ final class bc {
               }
               var42 = new byte[var14_int];
               var14_intLifetime1 = 0;
-              var13.field_j = var11;
+              var13.position = var11;
               var17Lifetime4 = 0;
               for (var18Lifetime3 = 0; var12 > var18Lifetime3; var18Lifetime3++) {
                 var19Lifetime2 = 0;
@@ -854,8 +854,8 @@ final class bc {
             var11--;
             var12Lifetime1 = 255 & var23[var11];
             var11 = var11 - 4 * (var12Lifetime1 * var5_int);
-            var13Lifetime1 = new ob(var41);
-            var13Lifetime1.field_j = var11;
+            var13Lifetime1 = new PacketBuffer(var41);
+            var13Lifetime1.position = var11;
             var37 = new int[var5_int];
             var30 = var37;
             var14 = var30;
@@ -874,7 +874,7 @@ final class bc {
               var15[var16Lifetime2] = array$1;
               var37[var16Lifetime2] = 0;
             }
-            var13Lifetime1.field_j = var11;
+            var13Lifetime1.position = var11;
             var16Lifetime3 = 0;
             for (var17Lifetime2 = 0; var12Lifetime1 > var17Lifetime2; var17Lifetime2++) {
               var18Lifetime1 = 0;

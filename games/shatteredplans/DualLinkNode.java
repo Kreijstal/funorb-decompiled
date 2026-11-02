@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class df extends oh {
+class DualLinkNode extends IntrusiveNode {
     static int[] field_k;
     long field_l;
-    df field_j;
+    DualLinkNode field_j;
     static bc field_n;
     static String field_m;
-    df field_h;
+    DualLinkNode field_h;
     static String field_i;
 
     final static void c(boolean param0) {
@@ -22,7 +22,7 @@ class df extends oh {
           js.a(0, 197126152);
         }
         if (!param0) {
-          df.d(101);
+          DualLinkNode.d(101);
         }
     }
 
@@ -110,20 +110,20 @@ class df extends oh {
         this.field_j.field_h = this.field_h;
         this.field_h.field_j = this.field_j;
         if (param0 != 16) {
-          this.field_j = (df) null;
+          this.field_j = (DualLinkNode) null;
         }
         this.field_j = null;
         this.field_h = null;
     }
 
-    final static bi a(int param0, int param1) {
-        bi dupTemp$0 = null;
+    final static Sprite a(int param0, int param1) {
+        Sprite dupTemp$0 = null;
         if (param1 != 32) {
           field_k = (int[]) null;
         }
-        bi var2 = vh.field_a[param0];
+        Sprite var2 = vh.field_a[param0];
         if (var2 == null) {
-          dupTemp$0 = new bi(64, 64);
+          dupTemp$0 = new Sprite(64, 64);
           var2 = dupTemp$0;
           vh.field_a[param0] = dupTemp$0;
           bs.a(var2, param1 ^ 93);
@@ -154,7 +154,7 @@ class df extends oh {
         field_m = null;
     }
 
-    protected df() {
+    protected DualLinkNode() {
     }
 
     static {

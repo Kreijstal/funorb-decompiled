@@ -8,11 +8,11 @@ final class cr {
     static v field_e;
     static String field_a;
 
-    final static bi[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        bi[] var7 = new bi[9];
-        bi[] var4 = var7;
+        Sprite[] var7 = new Sprite[9];
+        Sprite[] var4 = var7;
         var7[0] = gr.a((byte) -57, param3, param1);
         for (var5 = 1; var5 < 9; var5++) {
           var7[var5] = var7[0];

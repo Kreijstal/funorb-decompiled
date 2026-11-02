@@ -3,12 +3,12 @@
  */
 abstract class fp {
     static int field_c;
-    static pf field_b;
+    static IntrusiveDeque field_b;
     static String field_a;
 
     abstract long a(int param0);
 
-    final static hb a(pf param0, int param1) {
+    final static hb a(IntrusiveDeque param0, int param1) {
         RuntimeException var2 = null;
         int[] var3 = null;
         un stackIn_3_0 = null;
@@ -77,7 +77,7 @@ abstract class fp {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        pf var20 = null;
+        IntrusiveDeque var20 = null;
         int var15Lifetime1;
         int var16Lifetime1;
         int var17Lifetime1;
@@ -99,8 +99,8 @@ abstract class fp {
               return;
             }
             if (param2 >= -90) {
-              var20 = (pf) null;
-              fp.a((pf) null, 68);
+              var20 = (IntrusiveDeque) null;
+              fp.a((IntrusiveDeque) null, 68);
             }
             var14 = -param7 + param8;
             if (param5 == param7) {

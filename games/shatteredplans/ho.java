@@ -29,10 +29,10 @@ final class ho {
         ho.a(-86);
     }
 
-    final static li a(int param0, int param1, String param2) {
-        pa var3 = null;
+    final static SocketConnector a(int param0, int param1, String param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        pa stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -41,11 +41,11 @@ final class ho {
           if (param1 != -4276) {
             field_h = 'ￊ';
           }
-          var3 = new pa();
-          ((li) ((Object) var3)).field_a = param0;
-          ((li) ((Object) var3)).field_f = param2;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).port = param0;
+          ((SocketConnector) ((Object) var3)).host = param2;
           stackIn_3_0 = var3;
-          return (li) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

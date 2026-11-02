@@ -4,7 +4,7 @@
 final class jf {
     static byte[][] field_c;
     static boolean[] field_e;
-    static bi field_a;
+    static Sprite field_a;
     static qr field_b;
     static String[] field_d;
 

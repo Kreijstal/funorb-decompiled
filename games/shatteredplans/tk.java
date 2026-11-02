@@ -3,8 +3,8 @@
  */
 final class tk extends jc {
     int field_A;
-    ob field_D;
-    static bi field_x;
+    PacketBuffer field_D;
+    static Sprite field_x;
     static String field_B;
     static long field_z;
     byte field_w;
@@ -17,7 +17,7 @@ final class tk extends jc {
           return 0;
         }
         if (param0 == 0) {
-          return 100 * this.field_D.field_j / (-this.field_w + this.field_D.field_h.length);
+          return 100 * this.field_D.position / (-this.field_w + this.field_D.payload.length);
         }
         return 19;
     }
@@ -26,14 +26,14 @@ final class tk extends jc {
         if (this.field_u) {
           throw new RuntimeException();
         }
-        if (-this.field_w + this.field_D.field_h.length > this.field_D.field_j) {
+        if (-this.field_w + this.field_D.payload.length > this.field_D.position) {
           throw new RuntimeException();
         }
         if (param0 > 48) {
-          return this.field_D.field_h;
+          return this.field_D.payload;
         }
         this.e(92);
-        return this.field_D.field_h;
+        return this.field_D.payload;
     }
 
     public static void d(boolean param0) {

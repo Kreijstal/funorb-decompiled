@@ -108,7 +108,7 @@ final class gq {
         }
     }
 
-    final static ln a(ln[] param0, int param1, ob param2) {
+    final static ln a(ln[] param0, int param1, PacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         ln stackIn_2_0 = null;
@@ -212,7 +212,7 @@ final class gq {
           var6Lifetime1 = js.field_j << 4;
           var7Lifetime1 = 0;
           var8Lifetime1 = je.a(var6Lifetime1, (byte) -104) >> 8;
-          var9Lifetime1 = oh.b(var6Lifetime1, -123) >> 8;
+          var9Lifetime1 = IntrusiveNode.b(var6Lifetime1, -123) >> 8;
           if (-1 != pd.field_k &&
             bb.field_b != -1) {
             var7Lifetime1 = pd.field_k - 320;
@@ -256,7 +256,7 @@ final class gq {
         throw new IllegalStateException();
     }
 
-    final static bi d(int param0) {
+    final static Sprite d(int param0) {
         int var4_int = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var1 = cm.field_g[0] * mc.field_s[0];
@@ -265,7 +265,7 @@ final class gq {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = eo.field_fb[we.a((int) var2[var4_int], 255)];
         }
-        bi var4 = new bi(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[param0], var3);
+        Sprite var4 = new Sprite(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[param0], var3);
         pd.a(0);
         return var4;
     }

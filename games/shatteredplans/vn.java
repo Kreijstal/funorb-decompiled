@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class vn extends oh {
+final class vn extends IntrusiveNode {
     int field_z;
     fs field_k;
     int field_x;

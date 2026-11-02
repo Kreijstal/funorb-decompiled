@@ -5,7 +5,7 @@ final class cf extends f implements bp {
     static String field_M;
     private ns field_K;
     static int field_D;
-    static bi field_F;
+    static Sprite field_F;
     private nq field_J;
     private String field_L;
     private int[] field_N;
@@ -56,7 +56,7 @@ final class cf extends f implements bp {
         }
     }
 
-    final static void a(pf param0, byte param1) {
+    final static void a(IntrusiveDeque param0, byte param1) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -161,7 +161,7 @@ final class cf extends f implements bp {
           ac.field_u = false;
         }
         if (param0 != 2) {
-          field_F = (bi) null;
+          field_F = (Sprite) null;
         }
         if (s.field_d) {
           js.field_f.h(10, param0 + 253);

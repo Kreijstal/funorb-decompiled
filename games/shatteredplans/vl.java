@@ -4,10 +4,10 @@
 import java.util.*;
 
 final class vl extends hs {
-    static bi field_q;
+    static Sprite field_q;
     static String field_p;
     static String field_m;
-    static pf field_o;
+    static IntrusiveDeque field_o;
     static String field_n;
     static String field_r;
 
@@ -135,24 +135,24 @@ final class vl extends hs {
     final static void a(byte param0, bc param1, bc param2, bc param3) {
         nk[] var14 = null;
         int var11_int = 0;
-        bi var15 = null;
-        bi var18 = null;
-        bi var11 = null;
-        bi var12 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var13 = ShatteredPlansClient.field_F ? 1 : 0;
         int var8Lifetime1;
         os.field_u = ae.a(-115, "commonui", param1, "frame_top");
-        oh.field_d = ae.a(-125, "commonui", param1, "frame_bottom");
+        IntrusiveNode.field_d = ae.a(-125, "commonui", param1, "frame_bottom");
         kb.field_v = id.a(2, param1, "commonui", "jagex_logo_grey");
         kl.field_q = ae.a(-80, "commonui", param1, "button");
         lp.field_w = va.a("validation", 0, "commonui", param1);
         mf.field_x = (nq) ((Object) ri.a("arezzo12", "commonui", param1, param2, (byte) -17));
         gn.field_u = (nq) ((Object) ri.a("arezzo14", "commonui", param1, param2, (byte) 90));
         sl.field_p = (nq) ((Object) ri.a("arezzo14bold", "commonui", param1, param2, (byte) 111));
-        bi var17 = new bi(param3.a(true, "", "button.gif"), (java.awt.Component) ((Object) tm.field_i));
-        kf.a("commonui", -108, param1, "dropdown");
+        Sprite var17 = new Sprite(param3.a(true, "", "button.gif"), (java.awt.Component) ((Object) tm.field_i));
+        GameApplet.a("commonui", -108, param1, "dropdown");
         nk[] var5 = tp.a("commonui", param1, "screen_options", (byte) -118);
         hl.field_E = new nk[4];
         mf.field_o = new nk[4];
@@ -184,18 +184,18 @@ final class vl extends hs {
           wh.a(false);
           var17.e();
           gf.e(0, 0, gf.field_b, gf.field_k);
-          var15 = new bi(var9, var9);
+          var15 = new Sprite(var9, var9);
           var18 = var15;
           var18.e();
           var17.c(0, 0);
-          var11 = new bi(var9, var9);
+          var11 = new Sprite(var9, var9);
           var11.e();
           var17.c(-var17.field_z + var9, 0);
-          var12 = new bi(var17.field_z - 2 * var9, var9);
+          var12 = new Sprite(var17.field_z - 2 * var9, var9);
           var12.e();
           var17.c(-var9, 0);
           ln.f((byte) 67);
-          kl.field_q = new bi[]{var15, var12, var11};
+          kl.field_q = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "vl.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -294,7 +294,7 @@ final class vl extends hs {
         field_p = "More suggestions";
         field_m = "Age:";
         field_n = "Mute this player for 48 hours";
-        field_o = new pf();
+        field_o = new IntrusiveDeque();
         field_r = "Who can join";
     }
 }

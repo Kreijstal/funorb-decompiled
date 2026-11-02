@@ -4,7 +4,7 @@
 final class ma extends ka {
     static String field_q;
     static String[][] field_s;
-    static bi field_r;
+    static Sprite field_r;
     static int field_p;
 
     final int c(ln param0, int param1) {
@@ -53,7 +53,7 @@ final class ma extends ka {
           return;
         }
         if (oq.field_j == 84) {
-          fl.a(0, "enter");
+          NodeHashTableIterator.a(0, "enter");
           return;
         }
     }
@@ -127,7 +127,7 @@ final class ma extends ka {
         field_q = null;
         field_s = (String[][]) null;
         if (param0 <= 3) {
-          field_r = (bi) null;
+          field_r = (Sprite) null;
         }
     }
 

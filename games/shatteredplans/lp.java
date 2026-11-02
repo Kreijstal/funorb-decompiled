@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lp extends vd implements gj {
-    static bi[] field_w;
+    static Sprite[] field_w;
     static qr field_v;
     static String field_A;
     static String field_u;
@@ -82,7 +82,7 @@ final class lp extends vd implements gj {
         lm[] var8 = null;
         lm var10 = null;
         int var11 = 0;
-        ob var12 = null;
+        PacketBuffer var12 = null;
         sq var13 = null;
         String var6Lifetime1;
         int var7Lifetime1;
@@ -107,14 +107,14 @@ final class lp extends vd implements gj {
           var4 = param1.field_j;
           var5 = param1.field_q;
           if (param0 != 1546006977) {
-            var12 = (ob) null;
-            lp.a((mg) null, (byte) -74, (ob) null);
+            var12 = (PacketBuffer) null;
+            lp.a((mg) null, (byte) -74, (PacketBuffer) null);
           }
           if (param1.field_q == -1) {
             var6 = uq.field_m.a(5607, param1.field_c);
             var7 = wk.a(-9615, var6, rs.field_Cb, new int[]{-6 + var4 - 20});
             var5 = 34 + (rs.field_Cb.field_q + var7 * 13);
-            eh.field_L = new bi[var7];
+            eh.field_L = new Sprite[var7];
             if (param1.field_f != null) {
               var8 = param1.field_f;
               for (var9 = 0; var8.length > var9; var9++) {
@@ -171,7 +171,7 @@ final class lp extends vd implements gj {
         }
     }
 
-    final static void a(mg param0, byte param1, ob param2) {
+    final static void a(mg param0, byte param1, PacketBuffer param2) {
         try {
           di.a(param0.field_y, false, param2);
           di.a(param0.field_B, false, param2);

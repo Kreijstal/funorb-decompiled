@@ -10,7 +10,7 @@ final class bj extends f implements bp {
     static int field_L;
     private kg[] field_I;
     static eb field_K;
-    static bi field_H;
+    static Sprite field_H;
     private String[] field_G;
 
     public static void a(int param0) {
@@ -34,7 +34,7 @@ final class bj extends f implements bp {
         try {
           nm.field_a = -1 + gf.field_k;
           if (param0 != 26987) {
-            field_H = (bi) null;
+            field_H = (Sprite) null;
           }
           er.field_i = 0;
           if (field_J != null &&
@@ -135,7 +135,7 @@ final class bj extends f implements bp {
             for (var5 = 0; var3_int > var5; var5++) {
               this.field_I[var5] = new kg(this.field_G[var5], (ko) (this));
               this.field_I[var5].field_p = (iq) ((Object) var4);
-              this.field_I[var5].field_v = ip.field_f;
+              this.field_I[var5].field_v = SecondaryNodeDequeIterator.field_f;
               this.field_I[var5].a(20 + var5 * 16, 15, (byte) 112, 0, 80);
               this.b((byte) -107, this.field_I[var5]);
             }
@@ -161,7 +161,7 @@ final class bj extends f implements bp {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, vg param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_13_0 = false;

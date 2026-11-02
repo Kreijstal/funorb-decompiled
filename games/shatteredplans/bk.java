@@ -4,7 +4,7 @@
 final class bk {
     static String field_d;
     static String field_c;
-    static pf field_a;
+    static IntrusiveDeque field_a;
     static String[] field_b;
 
     final static boolean a(byte param0) {
@@ -257,7 +257,7 @@ final class bk {
                 if (uq.field_j.field_rb != 0 &&
                   uq.field_j.field_Q < var10 &&
                   !bg.field_g) {
-                  rg.a(true);
+                  ClientException.a(true);
                 }
               }
             }
@@ -282,6 +282,6 @@ final class bk {
         field_c = "Open in popup window";
         field_d = "you lost 1 fleet in the attack";
         field_b = new String[16];
-        field_a = new pf();
+        field_a = new IntrusiveDeque();
     }
 }

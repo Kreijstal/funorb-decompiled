@@ -251,7 +251,7 @@ final class kd {
                 var5 = ah.field_P;
               }
             } else {
-              var5 = rm.field_b;
+              var5 = IterableNodeHashTable.field_b;
             }
             var6 = kr.field_f[var3];
             if (eh.field_C == 2 &&

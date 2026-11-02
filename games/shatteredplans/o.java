@@ -14,7 +14,7 @@ class o implements iq, pj {
     private boolean field_d;
     static int field_s;
     static String field_a;
-    static bi field_k;
+    static Sprite field_k;
     static String field_m;
     static int field_n;
     int field_f;
@@ -22,7 +22,7 @@ class o implements iq, pj {
     nq field_c;
     int field_l;
 
-    public final int a(byte param0, vg param1) {
+    public final int a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -55,7 +55,7 @@ class o implements iq, pj {
         tr.a(param3, param0, param2, param1);
     }
 
-    public final void a(int param0, int param1, int param2, int param3, vg param4) {
+    public final void a(int param0, int param1, int param2, int param3, UiWidget param4) {
         qo var13 = null;
         qo var14 = null;
         int var7 = 0;
@@ -86,7 +86,7 @@ class o implements iq, pj {
         }
     }
 
-    public final qo a(vg param0, boolean param1) {
+    public final qo a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         qo stackIn_2_0 = null;
         qo stackIn_10_0 = null;
@@ -123,9 +123,9 @@ class o implements iq, pj {
         }
     }
 
-    public final int a(int param0, int param1, int param2, vg param3, boolean param4, int param5) {
+    public final int a(int param0, int param1, int param2, UiWidget param3, boolean param4, int param5) {
         RuntimeException var7 = null;
-        vg var8 = null;
+        UiWidget var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -134,8 +134,8 @@ class o implements iq, pj {
         try {
           this.a(param3, param4);
           if (!param4) {
-            var8 = (vg) null;
-            this.a(67, 67, -1, 15, (vg) null);
+            var8 = (UiWidget) null;
+            this.a(67, 67, -1, 15, (UiWidget) null);
           }
           stackIn_3_0 = param3.field_j.a(-this.b(0, param3, param0) + param1, 3357, param5 - this.a(param2, param3, -78));
           return stackIn_3_0;
@@ -153,7 +153,7 @@ class o implements iq, pj {
         }
     }
 
-    private final int a(byte param0, vg param1, int param2, int param3) {
+    private final int a(byte param0, UiWidget param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int stackIn_1_0 = 0;
@@ -179,7 +179,7 @@ class o implements iq, pj {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, int param4, vg param5) {
+    public final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         int var12 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -259,7 +259,7 @@ class o implements iq, pj {
         }
     }
 
-    private final void a(int param0, vg param1, int param2, int param3) {
+    private final void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           this.a(param2, param3, this.field_p, 2, param1, this.field_h, 0, 0);
           int var5_int = 20 / ((param0 - 54) / 41);
@@ -268,7 +268,7 @@ class o implements iq, pj {
         }
     }
 
-    public final int a(int param0, vg param1, int param2) {
+    public final int a(int param0, UiWidget param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int stackIn_1_0 = 0;
@@ -303,9 +303,9 @@ class o implements iq, pj {
         qj.a((byte) -127, 17);
     }
 
-    public final int b(int param0, vg param1, int param2) {
+    public final int b(int param0, UiWidget param1, int param2) {
         RuntimeException var4 = null;
-        vg var5 = null;
+        UiWidget var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -313,8 +313,8 @@ class o implements iq, pj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            var5 = (vg) null;
-            this.a(123, 88, -66, 47, (vg) null);
+            var5 = (UiWidget) null;
+            this.a(123, 88, -66, 47, (UiWidget) null);
           }
           stackIn_3_0 = this.b((byte) -14, param1, 0, param2);
           return stackIn_3_0;
@@ -332,7 +332,7 @@ class o implements iq, pj {
         }
     }
 
-    String b(boolean param0, vg param1) {
+    String b(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -361,7 +361,7 @@ class o implements iq, pj {
         }
     }
 
-    public final int a(int param0, vg param1) {
+    public final int a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -436,14 +436,14 @@ class o implements iq, pj {
           r.field_c = r.field_c - 1;
           var9 = js.field_f;
           var9.h(param1, 255);
-          var9.field_j = var9.field_j + 1;
+          var9.position = var9.position + 1;
           if (param0 > -71) {
             o.a((byte) 60);
           }
-          var5 = var9.field_j;
+          var5 = var9.position;
           var9.c(1, (byte) -91);
           var9.a(param2, (byte) 0);
-          var9.b(var9.field_j - var5, (byte) 122);
+          var9.b(var9.position - var5, (byte) 122);
           stackIn_16_0 = null;
           return (String) (stackIn_16_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -464,7 +464,7 @@ class o implements iq, pj {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final int a(boolean param0, vg param1) {
+    public final int a(boolean param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
         RuntimeException stackIn_4_0 = null;
@@ -489,7 +489,7 @@ class o implements iq, pj {
         }
     }
 
-    private final void b(byte param0, vg param1) {
+    private final void b(byte param0, UiWidget param1) {
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -562,7 +562,7 @@ class o implements iq, pj {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, vg param4, int param5, int param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6, int param7) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -631,7 +631,7 @@ class o implements iq, pj {
         }
     }
 
-    private final int b(byte param0, vg param1, int param2, int param3) {
+    private final int b(byte param0, UiWidget param1, int param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -664,8 +664,8 @@ class o implements iq, pj {
         if (!param0) {
           return this.field_c.field_q + this.field_c.field_J;
         }
-        vg var3 = (vg) null;
-        this.a(6, 90, 120, (vg) null, false, -78);
+        UiWidget var3 = (UiWidget) null;
+        this.a(6, 90, 120, (UiWidget) null, false, -78);
         return this.field_c.field_q + this.field_c.field_J;
     }
 
@@ -679,9 +679,9 @@ class o implements iq, pj {
         field_m = null;
     }
 
-    private final int a(vg param0, int param1) {
+    private final int a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        vg var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -689,8 +689,8 @@ class o implements iq, pj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            var4 = (vg) null;
-            this.a(-5, (vg) null);
+            var4 = (UiWidget) null;
+            this.a(-5, (UiWidget) null);
           }
           stackIn_3_0 = -this.field_f + param0.field_n - this.field_b;
           return stackIn_3_0;
@@ -708,7 +708,7 @@ class o implements iq, pj {
         }
     }
 
-    public void a(vg param0, int param1, boolean param2, int param3, byte param4) {
+    public void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
         if (null == this.field_c) {
           return;
         }
@@ -738,8 +738,8 @@ class o implements iq, pj {
           param0.field_i = this.field_i;
           param0.field_p = this.field_p;
           if (param1 != 42) {
-            vg var4 = (vg) null;
-            this.a(107, -23, -128, -77, 34, (vg) null);
+            UiWidget var4 = (UiWidget) null;
+            this.a(107, -23, -128, -77, 34, (UiWidget) null);
           }
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "o.LA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

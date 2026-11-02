@@ -20,7 +20,7 @@ final class h extends tn {
     private int field_B;
     private ga field_m;
     static int[] field_s;
-    static bi field_F;
+    static Sprite field_F;
     private boolean field_A;
     private boolean field_C;
 

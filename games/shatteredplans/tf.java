@@ -12,13 +12,13 @@ final class tf implements iq {
     private int field_r;
     static int field_p;
     private int field_o;
-    static bi field_b;
+    static Sprite field_b;
     private int field_d;
     static gq field_j;
     private int field_h;
     private int field_s;
     private int field_k;
-    static bi[] field_l;
+    static Sprite[] field_l;
     static int[] field_a;
     private int field_q;
 
@@ -73,7 +73,7 @@ final class tf implements iq {
           field_j = null;
           field_a = null;
           if (param0) {
-            field_l = (bi[]) null;
+            field_l = (Sprite[]) null;
           }
           field_l = null;
           return;
@@ -141,12 +141,12 @@ final class tf implements iq {
         wa var1Lifetime1;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          L1: while (true) {
+          scanLoop1: while (true) {
             if (rd.field_g == null) {
               stackIn_13_0 = er.field_i;
               stackIn_13_1 = ui.field_p;
               if (var4 != 0) {
-                break L1;
+                break scanLoop1;
               }
               if (stackIn_13_0 > stackIn_13_1) {
                 fieldTemp$0 = ui.field_p;
@@ -233,8 +233,8 @@ final class tf implements iq {
         }
     }
 
-    public final void a(vg param0, int param1, boolean param2, int param3, byte param4) {
-        vg stackIn_4_0 = null;
+    public final void a(UiWidget param0, int param1, boolean param2, int param3, byte param4) {
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -249,7 +249,7 @@ final class tf implements iq {
           if (!(param0 instanceof lk)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (vg) (param0);
+            stackIn_4_0 = (UiWidget) (param0);
           }
           var6 = (lk) (stackIn_4_0);
           if (var6 != null) {

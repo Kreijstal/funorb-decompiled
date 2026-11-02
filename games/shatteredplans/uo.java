@@ -7,7 +7,7 @@ final class uo {
     static int[] field_h;
     static String field_d;
     static String field_c;
-    static pf field_a;
+    static IntrusiveDeque field_a;
     static int field_g;
     static boolean field_e;
 
@@ -80,7 +80,7 @@ final class uo {
         }
     }
 
-    final static void a(byte param0, bi param1, int param2) {
+    final static void a(byte param0, Sprite param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         RuntimeException stackIn_18_0 = null;
@@ -161,7 +161,7 @@ final class uo {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        pf var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         mj var18_ref = null;
         int var18_int = 0;
@@ -199,16 +199,16 @@ final class uo {
             dn.field_f.field_mb = 0;
             var7 = dn.field_f;
             var7.field_K = 0;
-            if (!ip.a((byte) -94)) {
+            if (!SecondaryNodeDequeIterator.a((byte) -94)) {
               var9_ref_String = np.field_a.field_Xb;
               tj.field_f.field_z = re.a(he.field_q, 4371, new String[]{var9_ref_String}).toUpperCase();
-              dn.field_f.a(pf.field_g.field_K, 40, (byte) 56, pf.field_g.field_mb - 40, 0);
+              dn.field_f.a(IntrusiveDeque.field_g.field_K, 40, (byte) 56, IntrusiveDeque.field_g.field_mb - 40, 0);
               dn.field_f.field_z = re.a(gq.field_a, 4371, new String[]{var9_ref_String});
               var8 = dn.field_f;
             } else {
               tj.field_f.field_z = n.field_m.toUpperCase();
-              var9 = (pf.field_g.field_K + 2) / 2;
-              go.field_I.a(-2 + var9, 40, (byte) 124, pf.field_g.field_mb - 40, 0);
+              var9 = (IntrusiveDeque.field_g.field_K + 2) / 2;
+              go.field_I.a(-2 + var9, 40, (byte) 124, IntrusiveDeque.field_g.field_mb - 40, 0);
               if (np.field_a.field_Lb >= np.field_a.field_Eb) {
                 go.field_I.field_z = gm.field_j.toUpperCase();
                 go.field_I.field_s = false;
@@ -229,7 +229,7 @@ final class uo {
                 }
                 go.field_I.field_z = go.field_I.field_z + "<br>" + var10_ref_String;
               }
-              aq.field_j.a(-var9 + pf.field_g.field_K, 40, (byte) 82, pf.field_g.field_mb - 40, var9);
+              aq.field_j.a(-var9 + IntrusiveDeque.field_g.field_K, 40, (byte) 82, IntrusiveDeque.field_g.field_mb - 40, var9);
               aq.field_j.field_z = lp.field_u.toUpperCase();
               stackIn_20_0 = aq.field_j;
               stackIn_21_1 = (param3) && (sf.field_e == 0L);
@@ -245,23 +245,23 @@ final class uo {
                   ek.field_F[var11_int] = false;
                 }
                 var10 = 0;
-                L11: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11_intLifetime2 = 0;
                     var12 = 0;
                     while (true) {
                       if (pe.field_D.length <= var12) {
                         if (var11_intLifetime2 != 0) {
-                          break L11;
+                          break scanLoop1;
                         }
                         var10++;
-                        continue L11;
+                        continue scanLoop1;
                       }
                       var24 = pe.field_D[var12];
                       var22 = var24;
                       var13 = var22;
                       var14_int = 0;
-                      L15: while (true) {
+                      scanLoop2: while (true) {
                         if (var14_int >= var24.length) {
                           var11_intLifetime2 = 1;
                           var14_int = -1;
@@ -277,7 +277,7 @@ final class uo {
                           var16 = var13[var14_int + 1];
                           if (var15 != -1) {
                             if ((255 & np.field_a.field_dc[var15]) != var16) {
-                              break L15;
+                              break scanLoop2;
                             }
                           } else {
                             if (var10 == 0) {
@@ -287,7 +287,7 @@ final class uo {
                             }
                             var17_int = stackIn_40_0;
                             if (var16 != var17_int) {
-                              break L15;
+                              break scanLoop2;
                             }
                           }
                           var14_int += 2;
@@ -352,29 +352,29 @@ final class uo {
                   var16Lifetime1Lifetime1 = 0;
                   var17 = ro.field_a.field_xb.field_M;
                   var18_ref = (mj) (var17.d(0));
-                  L26: while (true) {
+                  scanLoop3: while (true) {
                     if (var18_ref != null) {
                       if (!var18_ref.h(-80)) {
                         if (var11_intLifetime1 != 0 &&
                           !var18_ref.field_Ub) {
                           var16Lifetime1Lifetime1 = 1;
-                          break L26;
+                          break scanLoop3;
                         }
                         if (var18_ref.field_Qb < var13_int) {
                           var16Lifetime1Lifetime1 = 1;
-                          break L26;
+                          break scanLoop3;
                         }
                         if (var14_intLifetime1 > var18_ref.field_Fb) {
                           var16Lifetime1Lifetime1 = 1;
-                          break L26;
+                          break scanLoop3;
                         }
                         if ((var15Lifetime1 & ~var18_ref.field_Wb) > 0) {
                           var16Lifetime1Lifetime1 = 1;
-                          break L26;
+                          break scanLoop3;
                         }
                         if (var12Lifetime1 != 0) {
                           var16Lifetime1Lifetime1 = 1;
-                          break L26;
+                          break scanLoop3;
                         }
                       }
                       var18_ref = (mj) (var17.a((byte) -71));
@@ -423,7 +423,7 @@ final class uo {
                       var14 = mi.field_b + (String) (var11);
                     }
                   } else {
-                    var13_ref = up.field_e;
+                    var13_ref = SecondaryNodeDeque.field_e;
                     if (var12Lifetime2 != 0) {
                       var14 = br.field_l + (String) (var11);
                     } else {
@@ -447,7 +447,7 @@ final class uo {
           stackIn_159_0 = am.field_xb;
           stackIn_160_1 = (param1) && (!param4) && (!ti.field_e);
           ((qr) (Object) stackIn_159_0).a(stackIn_160_1, -20429);
-          stackIn_164_0 = pf.field_g;
+          stackIn_164_0 = IntrusiveDeque.field_g;
           stackIn_165_1 = (param1) && (!param4) && (!ti.field_e);
           ((qr) (Object) stackIn_164_0).a(stackIn_165_1, -20429);
           stackIn_169_0 = ed.field_d;

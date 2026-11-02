@@ -4,7 +4,7 @@
 final class jd {
     int field_g;
     static String field_e;
-    static bi[] field_j;
+    static Sprite[] field_j;
     int field_f;
     int field_b;
     int field_c;

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class oh {
+class IntrusiveNode {
     static qr field_c;
     static qr field_a;
-    oh field_f;
+    IntrusiveNode next;
     static String field_g;
-    long field_b;
-    static bi[] field_d;
-    oh field_e;
+    long key;
+    static Sprite[] field_d;
+    IntrusiveNode previous;
 
     final static int b(int param0, int param1) {
         int var2 = 94 % ((-61 - param1) / 58);
@@ -39,25 +39,25 @@ class oh {
         if (param0 == -90) {
           return new bg[]{og.field_b, dm.field_f, mj.field_Rb};
         }
-        oh.a(false);
+        IntrusiveNode.a(false);
         return new bg[]{og.field_b, dm.field_f, mj.field_Rb};
     }
 
     final void b(byte param0) {
-        if (this.field_e == null) {
+        if (this.previous == null) {
           return;
         }
-        this.field_e.field_f = this.field_f;
+        this.previous.next = this.next;
         if (param0 < -57) {
-          this.field_f.field_e = this.field_e;
-          this.field_e = null;
-          this.field_f = null;
+          this.next.previous = this.previous;
+          this.previous = null;
+          this.next = null;
           return;
         }
         this.c(32);
-        this.field_f.field_e = this.field_e;
-        this.field_e = null;
-        this.field_f = null;
+        this.next.previous = this.previous;
+        this.previous = null;
+        this.next = null;
     }
 
     public static void a(boolean param0) {
@@ -68,7 +68,7 @@ class oh {
           field_a = null;
           return;
         }
-        oh.b(true);
+        IntrusiveNode.b(true);
         field_g = null;
         field_d = null;
         field_c = null;
@@ -77,7 +77,7 @@ class oh {
 
     final static boolean b(boolean param0) {
         if (!param0) {
-          field_d = (bi[]) null;
+          field_d = (Sprite[]) null;
           if (wg.field_f == null) {
             return false;
           }
@@ -96,11 +96,11 @@ class oh {
     }
 
     final boolean c(int param0) {
-        if (this.field_e == null) {
+        if (this.previous == null) {
           return false;
         }
         if (param0 != 2048) {
-          oh.b(12);
+          IntrusiveNode.b(12);
           return true;
         }
         return true;

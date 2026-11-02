@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rs extends qr {
-    static pf field_Bb;
+    static IntrusiveDeque field_Bb;
     private qr field_Ab;
     private qr field_xb;
     static int field_Fb;
@@ -53,7 +53,7 @@ final class rs extends qr {
         field_Db = null;
     }
 
-    rs(long param0, bi param1, bi param2, int param3, qr param4, String param5) {
+    rs(long param0, Sprite param1, Sprite param2, int param3, qr param4, String param5) {
         this(param0, (qr) null, param4, param5);
         try {
           this.field_xb.field_pb = param2;
@@ -100,7 +100,7 @@ final class rs extends qr {
 
     static {
         field_Fb = -1;
-        field_Bb = new pf();
+        field_Bb = new IntrusiveDeque();
         field_yb = "To server list";
         field_zb = "Music: ";
     }

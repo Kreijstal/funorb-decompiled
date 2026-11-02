@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class kf extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     boolean field_e;
     static gq field_c;
     static int field_i;
@@ -225,7 +225,7 @@ public abstract class kf extends java.applet.Applet implements Runnable, java.aw
         }
     }
 
-    protected kf() {
+    protected GameApplet() {
         this.field_e = false;
     }
 
@@ -360,7 +360,7 @@ public abstract class kf extends java.applet.Applet implements Runnable, java.aw
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    hp.field_p = oe.field_d.a(vg.field_i, -1);
+                    hp.field_p = oe.field_d.a(UiWidget.field_i, -1);
                     stackIn_97_0 = 0;
                   }
                   var3 = stackIn_97_0;
@@ -402,7 +402,7 @@ public abstract class kf extends java.applet.Applet implements Runnable, java.aw
           field_f = null;
           field_a = null;
           if (param0 <= 113) {
-            kf.a((String) null, 22, (bc) null, (String) null);
+            GameApplet.a((String) null, 22, (bc) null, (String) null);
           }
           field_h = null;
           field_c = null;
@@ -658,7 +658,7 @@ public abstract class kf extends java.applet.Applet implements Runnable, java.aw
                   return;
                 }
               }
-              pf.field_c = true;
+              IntrusiveDeque.field_c = true;
             }
             return;
           }
@@ -902,7 +902,7 @@ public abstract class kf extends java.applet.Applet implements Runnable, java.aw
             stackIn_12_1 = 29;
           }
           if (stackIn_12_0 < stackIn_12_1) {
-            kf.a((String) null, -57, (bc) null, (String) null);
+            GameApplet.a((String) null, -57, (bc) null, (String) null);
           }
           stackIn_16_0 = var4;
           return stackIn_16_0;
@@ -1092,7 +1092,7 @@ public abstract class kf extends java.applet.Applet implements Runnable, java.aw
           br.field_i = true;
           lq.field_q = true;
           oq.field_e = true;
-          pf.field_c = false;
+          IntrusiveDeque.field_c = false;
           nh.field_m = pr.a(14274);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

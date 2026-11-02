@@ -8,9 +8,9 @@ final class an {
     static String field_a;
 
     final static void a(boolean param0) {
-        df var1 = null;
+        DualLinkNode var1 = null;
         int var2 = ShatteredPlansClient.field_F ? 1 : 0;
-        df var1Lifetime1;
+        DualLinkNode var1Lifetime1;
         jo.field_d = null;
         r.field_c = 0;
         oi.field_e = 0;

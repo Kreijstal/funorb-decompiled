@@ -48,7 +48,7 @@ final class hc {
     final static lp a(int param0, int param1, int param2) {
         lp var9 = new lp(param0, param2, 209, rs.field_Cb.field_J);
         int var4 = (-rs.field_Cb.c(ho.field_g) + 209 - 20) / 2;
-        vc.field_b = new bi(var4, 2);
+        vc.field_b = new Sprite(var4, 2);
         int var5 = 112 / ((param1 - 89) / 37);
         ra.a(-107);
         vc.field_b.e();

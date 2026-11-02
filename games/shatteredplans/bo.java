@@ -15,7 +15,7 @@ final class bo extends jl implements bp {
     bo(tc param0, ih param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        vg var4 = null;
+        UiWidget var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -35,13 +35,13 @@ final class bo extends jl implements bp {
               this.field_n = this.field_n + 10;
               if (cb.c((byte) 58)) {
                 this.field_n = this.field_n + 20;
-                var3 = rm.field_c;
+                var3 = IterableNodeHashTable.field_c;
               }
             }
           } else {
             var3 = ne.field_n;
           }
-          var4 = new vg((String) (var3), (ko) null);
+          var4 = new UiWidget((String) (var3), (ko) null);
           var4.field_q = 50;
           var4.field_x = this.field_x;
           var4.field_m = 0;

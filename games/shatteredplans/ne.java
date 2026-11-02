@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ne extends oh {
+final class ne extends IntrusiveNode {
     int field_r;
     static boolean field_s;
     ln field_k;
@@ -90,14 +90,14 @@ final class ne extends oh {
         }
     }
 
-    final static bi a(int param0, boolean param1) {
+    final static Sprite a(int param0, boolean param1) {
         if (param1) {
-          return (bi) null;
+          return (Sprite) null;
         }
-        bi var2 = new bi(pf.field_d.field_z, pf.field_d.field_w);
+        Sprite var2 = new Sprite(IntrusiveDeque.field_d.field_z, IntrusiveDeque.field_d.field_w);
         ra.a(-127);
         var2.e();
-        pf.field_d.b(0, 0, param0 >= 0 ? param0 : 2105376);
+        IntrusiveDeque.field_d.b(0, 0, param0 >= 0 ? param0 : 2105376);
         cg.i(0);
         return var2;
     }
@@ -172,14 +172,14 @@ final class ne extends oh {
           var5 = gf.field_b;
           var6 = gf.field_k;
           var14 = gf.field_h;
-          jq.field_c = new bi(10, 14);
+          jq.field_c = new Sprite(10, 14);
           jq.field_c.e();
           for (var8 = 2; 7 > var8; var8++) {
             gf.j(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }
           gf.a(var14, var5, var6);
           of.field_b = gn.a(0, var4, hl.field_I, nl.field_d, kh.field_Nb);
-          ua.field_f.field_M = new pf();
+          ua.field_f.field_M = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -250,7 +250,7 @@ final class pk {
         return field_u;
     }
 
-    final void a(ob param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_m = new pn();
@@ -259,7 +259,7 @@ final class pk {
         this.field_i.b(param0);
         int var2 = param0.j(-127);
         if (var2 != 0) {
-          param0.field_j = param0.field_j - 1;
+          param0.position = param0.position - 1;
           this.field_l = new pn();
           this.field_l.b(param0);
           this.field_d = new pn();
@@ -267,7 +267,7 @@ final class pk {
         }
         var2 = param0.j(-79);
         if (var2 != 0) {
-          param0.field_j = param0.field_j - 1;
+          param0.position = param0.position - 1;
           this.field_g = new pn();
           this.field_g.b(param0);
           this.field_o = new pn();
@@ -275,7 +275,7 @@ final class pk {
         }
         var2 = param0.j(-60);
         if (var2 != 0) {
-          param0.field_j = param0.field_j - 1;
+          param0.position = param0.position - 1;
           this.field_e = new pn();
           this.field_e.b(param0);
           this.field_r = new pn();

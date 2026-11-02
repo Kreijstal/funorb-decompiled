@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sk extends oh {
+final class sk extends IntrusiveNode {
     int field_j;
     long field_l;
     static qr field_k;
@@ -33,10 +33,10 @@ final class sk extends oh {
         var3 = var8.j(param1 ^ 113);
         stackIn_3_0 = (param1 != ~(128 & var3));
         kr.field_b = stackIn_3_0;
-        ob.field_k = var3 & 127;
+        PacketBuffer.field_k = var3 & 127;
         nj.field_a = var8.j(-77);
         sp.field_j = var8.d(param1 ^ -31);
-        if (ob.field_k != 2) {
+        if (PacketBuffer.field_k != 2) {
           el.field_f = 0;
           va.field_b = 0;
         } else {
@@ -51,8 +51,8 @@ final class sk extends oh {
         } else {
           em.field_a = var8.e(-1);
         }
-        if (ob.field_k != 1 &&
-          ob.field_k != 4) {
+        if (PacketBuffer.field_k != 1 &&
+          PacketBuffer.field_k != 4) {
           fm.field_f = 0;
           mc.field_q = null;
         } else {

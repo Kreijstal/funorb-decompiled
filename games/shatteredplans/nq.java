@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class nq extends df {
+abstract class nq extends DualLinkNode {
     private int[] field_E;
     int field_L;
     private int[] field_I;

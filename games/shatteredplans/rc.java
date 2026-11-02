@@ -3,7 +3,7 @@
  */
 final class rc extends tn {
     static int field_l;
-    pf field_n;
+    IntrusiveDeque field_n;
     private ga field_m;
     vk field_o;
 
@@ -407,7 +407,7 @@ final class rc extends tn {
     }
 
     rc(ga param0) {
-        this.field_n = new pf();
+        this.field_n = new IntrusiveDeque();
         this.field_o = new vk();
         try {
           this.field_m = param0;

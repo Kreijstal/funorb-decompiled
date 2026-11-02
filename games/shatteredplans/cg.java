@@ -48,7 +48,7 @@ final class cg extends qs {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        bi var6 = null;
+        Sprite var6 = null;
         if (0 != param0) {
           return;
         }
@@ -59,7 +59,7 @@ final class cg extends qs {
           return;
         }
         if (this.field_J != 256) {
-          var6 = new bi(this.field_z.field_x, this.field_z.field_n);
+          var6 = new Sprite(this.field_z.field_x, this.field_z.field_n);
           aq.a((byte) 114, var6);
           this.field_z.a(param0, param1, 0, 0);
           ln.f((byte) -78);
@@ -69,12 +69,12 @@ final class cg extends qs {
         this.field_z.a(param0, -11857, param2 + this.field_q, param3 + this.field_m);
     }
 
-    final static bi[] a(int param0, bi param1) {
-        bi[] var2 = null;
+    final static Sprite[] a(int param0, Sprite param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
         aa var3 = null;
-        bi[] var4 = null;
-        bi[] stackIn_3_0 = null;
+        Sprite[] var4 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -84,7 +84,7 @@ final class cg extends qs {
             var3 = (aa) null;
             cg.a((String) null, false, (String) null, -21, (String) null, (aa) null, -88);
           }
-          var4 = new bi[9];
+          var4 = new Sprite[9];
           var2 = var4;
           var4[4] = param1;
           stackIn_3_0 = var2;
@@ -225,7 +225,7 @@ final class cg extends qs {
         field_G = null;
     }
 
-    cg(vg param0) {
+    cg(UiWidget param0) {
         super(param0.field_m, param0.field_q, param0.field_x, param0.field_n, (iq) null, (ko) null);
         try {
           param0.a(0, this.field_n, (byte) 120, 0, this.field_x);

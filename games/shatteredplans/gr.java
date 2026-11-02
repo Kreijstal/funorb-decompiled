@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gr extends oh {
+final class gr extends IntrusiveNode {
     int[][] field_m;
     String[][] field_n;
     int field_r;
@@ -9,7 +9,7 @@ final class gr extends oh {
     static int field_o;
     boolean field_q;
     int field_k;
-    static pf field_p;
+    static IntrusiveDeque field_p;
     int field_i;
     int field_j;
     int field_l;
@@ -82,12 +82,12 @@ final class gr extends oh {
         field_p = null;
     }
 
-    final static bi a(byte param0, int param1, int param2) {
+    final static Sprite a(byte param0, int param1, int param2) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        bi var3 = new bi(param2, param2);
+        Sprite var3 = new Sprite(param2, param2);
         int var4 = 0;
         if (param0 > -38) {
-          field_p = (pf) null;
+          field_p = (IntrusiveDeque) null;
           while (var3.field_B.length > var4) {
             var3.field_B[var4] = param1;
             var4++;

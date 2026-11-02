@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class br extends oh {
+final class br extends IntrusiveNode {
     kk[] field_h;
     static boolean field_i;
     kc[] field_j;
@@ -175,7 +175,7 @@ final class br extends oh {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        ob var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         kc var40 = null;
         byte[] var41 = null;
@@ -256,8 +256,8 @@ final class br extends oh {
           this.field_t = new byte[128];
           this.field_n = new int[128];
           this.field_k = new short[128];
-          var38 = new ob(param0);
-          for (var3 = 0; var38.field_h[var3 + var38.field_j] != 0; var3++) {
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; var38.payload[var3 + var38.position] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
@@ -266,10 +266,10 @@ final class br extends oh {
             var4[var5] = var38.g(-2852);
           }
           var3++;
-          var38.field_j = var38.field_j + 1;
-          var5Lifetime1 = var38.field_j;
-          var38.field_j = var38.field_j + var3;
-          for (var6 = 0; var38.field_h[var6 + var38.field_j] != 0; var6++) {
+          var38.position = var38.position + 1;
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; var38.payload[var6 + var38.position] != 0; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
@@ -277,11 +277,11 @@ final class br extends oh {
           for (var8 = 0; var8 < var6; var8++) {
             var7[var8] = var38.g(-2852);
           }
-          var38.field_j = var38.field_j + 1;
+          var38.position = var38.position + 1;
           var6++;
-          var8Lifetime1 = var38.field_j;
-          var38.field_j = var38.field_j + var6;
-          for (var9 = 0; var38.field_h[var9 + var38.field_j] != 0; var9++) {
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; var38.payload[var9 + var38.position] != 0; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
@@ -290,7 +290,7 @@ final class br extends oh {
             var10[var11_int] = var38.g(-2852);
           }
           var9++;
-          var38.field_j = var38.field_j + 1;
+          var38.position = var38.position + 1;
           var53 = new byte[var9];
           var39 = var53;
           var11 = var39;
@@ -348,7 +348,7 @@ final class br extends oh {
           var58 = stackIn_42_0;
           var47 = var58;
           var16 = var47;
-          for (var17 = 0; var38.field_h[var38.field_j + var17] != 0; var17++) {
+          for (var17 = 0; var38.payload[var38.position + var17] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
@@ -357,7 +357,7 @@ final class br extends oh {
             var18[var19] = var38.g(-2852);
           }
           var17++;
-          var38.field_j = var38.field_j + 1;
+          var38.position = var38.position + 1;
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
             var19Lifetime1 = var19Lifetime1 + var38.j(-106);
@@ -397,7 +397,7 @@ final class br extends oh {
                 }
                 incrementValue$6 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = -1 + var38.field_h[incrementValue$6];
+                var23Lifetime1 = -1 + var38.payload[incrementValue$6];
               }
               var20Lifetime3--;
               this.field_r[var24] = (byte)var23Lifetime1;
@@ -416,7 +416,7 @@ final class br extends oh {
                 }
                 incrementValue$4 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = 16 + var38.field_h[incrementValue$4] << 2;
+                var24Lifetime1 = 16 + var38.payload[incrementValue$4] << 2;
               }
               var20Lifetime4--;
               this.field_t[var25_int] = (byte)var24Lifetime1;

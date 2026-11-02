@@ -3,7 +3,7 @@
  */
 final class mm extends ml {
     static String field_p;
-    static bi field_o;
+    static Sprite field_o;
     static boolean field_n;
     static String field_q;
 
@@ -63,17 +63,17 @@ final class mm extends ml {
           ae.field_f.b(sj.field_b, -54);
           return;
         }
-        field_o = (bi) null;
+        field_o = (Sprite) null;
         ae.field_f.b(sj.field_b, -54);
     }
 
     final static void d(int param0) {
         if (param0 == -16705) {
-          bq.field_h = new dg(ho.field_j, un.field_g, po.field_d, ii.field_u, fk.field_i, gn.field_w);
+          bq.field_h = new dg(ho.field_j, un.field_g, po.field_d, SpriteState.field_u, fk.field_i, gn.field_w);
           return;
         }
         field_n = false;
-        bq.field_h = new dg(ho.field_j, un.field_g, po.field_d, ii.field_u, fk.field_i, gn.field_w);
+        bq.field_h = new dg(ho.field_j, un.field_g, po.field_d, SpriteState.field_u, fk.field_i, gn.field_w);
     }
 
     final u b(int param0, String param1) {

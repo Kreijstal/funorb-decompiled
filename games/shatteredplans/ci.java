@@ -9,12 +9,12 @@ final class ci {
     private byte[] field_u;
     int[][] field_k;
     int[] field_m;
-    static bi field_p;
+    static Sprite field_p;
     int field_c;
     static String field_d;
     private int[][] field_t;
     static String field_g;
-    static bi field_r;
+    static Sprite field_r;
     private int[] field_s;
     cm field_b;
     byte[][] field_j;
@@ -66,7 +66,7 @@ final class ci {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        ob var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -82,7 +82,7 @@ final class ci {
         int var13Lifetime1Lifetime1;
         var16 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var17 = new ob(pa.a(param0, 200));
+          var17 = new PacketBuffer(ProxySocketConnector.a(param0, 200));
           var4 = var17.j(-89);
           if (var4 >= 5 &&
             var4 <= 7) {

@@ -3,7 +3,7 @@
  */
 final class rd implements fo {
     private int field_a;
-    private ob field_e;
+    private PacketBuffer field_e;
     private int field_b;
     static qr field_h;
     static String field_d;
@@ -74,7 +74,7 @@ final class rd implements fo {
         field_h = null;
     }
 
-    rd(ob param0, int param1, int param2, int param3, int param4) {
+    rd(PacketBuffer param0, int param1, int param2, int param3, int param4) {
         try {
           this.field_e = param0;
           this.field_a = param1;

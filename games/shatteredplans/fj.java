@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fj extends ml {
-    static bi field_p;
-    static bi field_r;
+    static Sprite field_p;
+    static Sprite field_r;
     static String field_q;
     private go field_n;
     static mp field_s;
@@ -113,7 +113,7 @@ final class fj extends ml {
             }
           }
           if (param0 != -11196) {
-            field_r = (bi) null;
+            field_r = (Sprite) null;
           }
           if (!param1.equals(this.field_n.field_s)) {
             stackIn_11_0 = tj.field_b;

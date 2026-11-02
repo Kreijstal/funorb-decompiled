@@ -8,29 +8,29 @@ class qr extends hm {
     boolean field_s;
     private int field_X;
     int field_N;
-    bi field_Z;
+    Sprite field_Z;
     private int field_D;
     int field_x;
     int field_V;
-    bi field_ob;
+    Sprite field_ob;
     int field_w;
     int field_kb;
     int field_t;
     int field_hb;
     int field_y;
-    bi field_pb;
+    Sprite field_pb;
     int field_ub;
     int field_Y;
     private int field_tb;
     boolean field_r;
     int field_G;
-    bi field_U;
+    Sprite field_U;
     nq field_nb;
     int field_T;
-    bi[] field_lb;
-    bi field_fb;
-    pf field_M;
-    bi[] field_vb;
+    Sprite[] field_lb;
+    Sprite field_fb;
+    IntrusiveDeque field_M;
+    Sprite[] field_vb;
     int field_J;
     int field_W;
     String field_u;
@@ -42,12 +42,12 @@ class qr extends hm {
     private boolean field_H;
     private int field_cb;
     private int field_S;
-    bi[] field_wb;
+    Sprite[] field_wb;
     int field_qb;
     int field_K;
-    bi[] field_F;
+    Sprite[] field_F;
     boolean field_P;
-    bi[] field_sb;
+    Sprite[] field_sb;
     int field_B;
     int field_Q;
     static String field_R;
@@ -277,7 +277,7 @@ class qr extends hm {
 
     final void a(int param0, qr param1) {
         if (null == this.field_M) {
-          this.field_M = new pf();
+          this.field_M = new IntrusiveDeque();
         }
         if (param0 != 4) {
           return;
@@ -398,7 +398,7 @@ class qr extends hm {
           }
         }
         if (param0 >= -122) {
-          this.field_pb = (bi) null;
+          this.field_pb = (Sprite) null;
         }
     }
 
@@ -477,7 +477,7 @@ class qr extends hm {
         if (rf.field_n == 0) {
           this.field_ub = 0;
         }
-        stackIn_34_1 = (!pa.field_j) && (gf.field_i <= pd.field_k) && (gf.field_l > pd.field_k) && (gf.field_a <= bb.field_b) && (gf.field_f > bb.field_b);
+        stackIn_34_1 = (!ProxySocketConnector.field_j) && (gf.field_i <= pd.field_k) && (gf.field_l > pd.field_k) && (gf.field_a <= bb.field_b) && (gf.field_f > bb.field_b);
         this.field_v = stackIn_34_1;
         stackIn_39_1 = (this.field_v) && (this.field_ub == rf.field_n) && (param3);
         this.field_L = stackIn_39_1;
@@ -489,7 +489,7 @@ class qr extends hm {
           }
         }
         if (this.field_v) {
-          pa.field_j = true;
+          ProxySocketConnector.field_j = true;
         }
         if (var13 != 0) {
           us.field_c = true;
@@ -523,7 +523,7 @@ class qr extends hm {
         if (param0 > -40) {
           field_R = (String) null;
         }
-        rm.field_a = null;
+        IterableNodeHashTable.field_a = null;
     }
 
     final void a(qr param0, boolean param1) {
@@ -671,7 +671,7 @@ class qr extends hm {
         this.field_db = param3;
         this.field_hb = param4;
         if (param2 <= 38) {
-          this.field_F = (bi[]) null;
+          this.field_F = (Sprite[]) null;
         }
         this.field_gb = 0;
         this.field_cb = 0;
@@ -681,7 +681,7 @@ class qr extends hm {
         this.field_S = 0;
     }
 
-    final static void a(int[] param0, byte[] param1, byte[] param2, String[][] param3, String[] param4, int param5, String[][] param6, bc param7, bc param8, int param9, bc param10, bi[][] param11, int param12, boolean param13, bi[][] param14) {
+    final static void a(int[] param0, byte[] param1, byte[] param2, String[][] param3, String[] param4, int param5, String[][] param6, bc param7, bc param8, int param9, bc param10, Sprite[][] param11, int param12, boolean param13, Sprite[][] param14) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -803,7 +803,7 @@ class qr extends hm {
 
     final void a(boolean param0, int param1) {
         us.field_c = !param0 ? true : false;
-        pa.field_j = !param0 ? true : false;
+        ProxySocketConnector.field_j = !param0 ? true : false;
         if (param1 != -20429) {
           this.field_z = (String) null;
         }
@@ -816,8 +816,8 @@ class qr extends hm {
         int var13;
         int var14;
         int var15;
-        bi[] var16;
-        bi var17;
+        Sprite[] var16;
+        Sprite var17;
         int var18;
         int var19;
         int var20;
@@ -841,7 +841,7 @@ class qr extends hm {
         gf.i(this.field_B, this.field_N, this.field_B + this.field_K, this.field_mb + this.field_N);
         param1 = param1 & this.field_s;
         if (param5 != -2147483648) {
-          qr.a((int[]) null, (byte[]) null, (byte[]) null, (String[][]) null, (String[]) null, 117, (String[][]) null, (bc) null, (bc) null, 119, (bc) null, (bi[][]) null, 82, false, (bi[][]) null);
+          qr.a((int[]) null, (byte[]) null, (byte[]) null, (String[][]) null, (String[]) null, 117, (String[][]) null, (bc) null, (bc) null, 119, (bc) null, (Sprite[][]) null, 82, false, (Sprite[][]) null);
         }
         if (!this.field_H) {
           param6 = this.field_bb;
@@ -994,11 +994,11 @@ class qr extends hm {
     }
 
     final static void a(bc param0, byte param1) {
-        bi var6 = null;
+        Sprite var6 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var6 = new bi(param0.a(true, "", "final_frame.jpg"), (java.awt.Component) ((Object) tm.field_i));
+          var6 = new Sprite(param0.a(true, "", "final_frame.jpg"), (java.awt.Component) ((Object) tm.field_i));
           var3 = var6.field_z;
           var4 = var6.field_w;
           wh.a(false);
@@ -1006,10 +1006,10 @@ class qr extends hm {
             vr var5 = (vr) null;
             qr.a(-15, 122, (String[]) null, (vr) null, -98, -12);
           }
-          qa.field_q = new bi(var3, 3 * var4 / 4);
+          qa.field_q = new Sprite(var3, 3 * var4 / 4);
           qa.field_q.e();
           var6.c(0, 0);
-          ak.field_z = new bi(var3, -qa.field_q.field_w + var4);
+          ak.field_z = new Sprite(var3, -qa.field_q.field_w + var4);
           ak.field_z.e();
           var6.c(0, -qa.field_q.field_w);
           ak.field_z.field_x = qa.field_q.field_w;
@@ -1076,7 +1076,7 @@ class qr extends hm {
           this.field_K = param4;
           this.field_hb = param2;
           this.field_mb = param5;
-          this.field_b = param0;
+          this.key = param0;
           this.field_db = param3;
           this.a(param1, false);
           if (param6 != null) {

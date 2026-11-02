@@ -215,11 +215,11 @@ final class js {
               var10 = var18;
               var11 = 0;
               var12 = 0;
-              L5: while (true) {
+              scanLoop1: while (true) {
                 if (var12 >= var19.length) {
                   if (var11 == 0 &&
                     em.field_k != param0) {
-                    break L5;
+                    break scanLoop1;
                   }
                   for (var12 = 0; var19.length > var12; var12 += 2) {
                     var13 = var19[var12];
@@ -232,7 +232,7 @@ final class js {
                     }
                   }
                   var8_int = 0;
-                  break L5;
+                  break scanLoop1;
                 }
                 var13Lifetime1 = var19[var12];
                 var14 = var10[1 + var12];
@@ -242,15 +242,15 @@ final class js {
                     var11 = 1;
                   } else {
                     if (param0 <= var13Lifetime1) {
-                      break L5;
+                      break scanLoop1;
                     }
                     if ((lr.field_c[var13Lifetime1] & 255) != var14) {
-                      break L5;
+                      break scanLoop1;
                     }
                   }
                 } else {
                   if (nl.field_a[param7] != var14) {
-                    break L5;
+                    break scanLoop1;
                   }
                 }
                 var12 += 2;

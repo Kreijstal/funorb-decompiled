@@ -3,15 +3,15 @@
  */
 import java.util.*;
 
-final class up implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static int[] field_b;
     static int field_d;
     static String field_c;
-    df field_a;
+    DualLinkNode field_a;
     static String field_e;
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ip(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     public static void a(int param0) {
@@ -21,7 +21,7 @@ final class up implements Iterable {
         field_e = null;
     }
 
-    final void a(df param0, int param1) {
+    final void a(DualLinkNode param0, int param1) {
         try {
           if (null != param0.field_j) {
             param0.a(param1 ^ 22);
@@ -38,11 +38,11 @@ final class up implements Iterable {
         }
     }
 
-    final df a(byte param0) {
-        df var2 = this.field_a.field_h;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_a.field_h;
         if (param0 != -20) {
-          df var3 = (df) null;
-          this.a((df) null, 90);
+          DualLinkNode var3 = (DualLinkNode) null;
+          this.a((DualLinkNode) null, 90);
           if (this.field_a != var2) {
             var2.a(16);
             return var2;
@@ -56,8 +56,8 @@ final class up implements Iterable {
         return null;
     }
 
-    up() {
-        this.field_a = new df();
+    SecondaryNodeDeque() {
+        this.field_a = new DualLinkNode();
         this.field_a.field_j = this.field_a;
         this.field_a.field_h = this.field_a;
     }

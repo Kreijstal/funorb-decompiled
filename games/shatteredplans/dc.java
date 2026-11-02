@@ -19,7 +19,7 @@ final class dc {
     String[] field_I;
     int field_y;
     private int[] field_B;
-    static pf field_E;
+    static IntrusiveDeque field_E;
     private int[] field_j;
     private int field_b;
     int field_O;
@@ -29,17 +29,17 @@ final class dc {
     private int field_n;
     el field_p;
     private int[][] field_t;
-    pf field_i;
-    pf field_A;
+    IntrusiveDeque field_i;
+    IntrusiveDeque field_A;
     int field_r;
     int[] field_D;
     private int[] field_d;
-    static bi field_F;
+    static Sprite field_F;
     private int[] field_K;
     private int field_G;
     private Random field_L;
     static int[] field_c;
-    pf field_q;
+    IntrusiveDeque field_q;
     static int[] field_s;
     private int[] field_h;
     static np field_l;
@@ -230,7 +230,7 @@ final class dc {
             if (var18Lifetime1.length > var9Lifetime1) {
               var10Lifetime1 = var18Lifetime1[var9Lifetime1];
               if ((1 << var10Lifetime1.field_x & this.field_w) != 0) {
-                L33: while (true) {
+                scanLoop1: while (true) {
                   var9Lifetime1++;
                   if (var18Lifetime1.length <= var9Lifetime1) {
                     return;
@@ -275,7 +275,7 @@ final class dc {
                   var12Lifetime1 = 0;
                   while (true) {
                     if (4 <= var12Lifetime1) {
-                      continue L33;
+                      continue scanLoop1;
                     }
                     if (var21Lifetime1[var12Lifetime1] <= var11Lifetime1) {
                       var11Lifetime1 = var11Lifetime1 - var21Lifetime1[var12Lifetime1];
@@ -286,10 +286,10 @@ final class dc {
                   }
                   if (var10Lifetime1.field_u[var12Lifetime1] < 5) {
                     var10Lifetime1.field_u[var12Lifetime1] = var10Lifetime1.field_u[var12Lifetime1] + 1;
-                    continue L33;
+                    continue scanLoop1;
                   }
                   if (var10Lifetime1.field_q == null) {
-                    continue L33;
+                    continue scanLoop1;
                   }
                   var10Lifetime1.field_q.field_d = var10Lifetime1.field_q.field_d + 1;
                 }
@@ -572,7 +572,7 @@ final class dc {
         return;
     }
 
-    final void a(ob param0, fs param1, boolean param2) throws jn, kr {
+    final void a(PacketBuffer param0, fs param1, boolean param2) throws jn, kr {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -1484,7 +1484,7 @@ final class dc {
         }
     }
 
-    final void a(int param0, byte param1, ob param2) {
+    final void a(int param0, byte param1, PacketBuffer param2) {
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -1570,7 +1570,7 @@ final class dc {
         try {
           if (param1 <= 100) {
             fs var6 = (fs) null;
-            this.a((ob) null, (byte) -70, (fs) null);
+            this.a((PacketBuffer) null, (byte) -70, (fs) null);
           }
           for (var4_int = 0; var4_int < 4; var4_int++) {
             param0.field_G[var4_int] = 1;
@@ -1723,7 +1723,7 @@ final class dc {
           if (var9 != null) {
             ((eg) (var9)).a((byte) 74, var22);
           }
-          L17: {
+          regionExit1: {
             if (param2 != null) {
               for (var11Lifetime2 = 0; this.field_r > var11Lifetime2; var11Lifetime2++) {
                 param2.field_b[var11Lifetime2] = param2.field_b[var11Lifetime2] + var20[var11Lifetime2];
@@ -1767,7 +1767,7 @@ final class dc {
                   }
                   var12_ref_mg = (mg) (param1.field_s.b(32));
                 }
-                break L17;
+                break regionExit1;
               }
             } else {
               if (param1.field_u) {
@@ -1809,7 +1809,7 @@ final class dc {
                   }
                   var12_ref_mg = (mg) (param1.field_s.b(32));
                 }
-                break L17;
+                break regionExit1;
               }
             }
             for (var11Lifetime2 = 0; var11Lifetime2 < this.field_r + 1; var11Lifetime2++) {
@@ -1891,9 +1891,9 @@ final class dc {
         int var3 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         int var3Lifetime1;
-        this.field_q = new pf();
+        this.field_q = new IntrusiveDeque();
         this.field_p = new el();
-        this.field_i = new pf();
+        this.field_i = new IntrusiveDeque();
         ln[] var7 = this.field_g.field_e;
         ln[] var2 = var7;
         for (var3 = 0; var7.length > var3; var3++) {
@@ -1902,7 +1902,7 @@ final class dc {
           var4.field_s.b((byte) 117);
         }
         if (param0 != -7954) {
-          field_E = (pf) null;
+          field_E = (IntrusiveDeque) null;
         }
         fs[] var8 = this.field_v;
         fs[] var2_array = var8;
@@ -1934,7 +1934,7 @@ final class dc {
             return;
           }
           if (param2 != 7377) {
-            field_E = (pf) null;
+            field_E = (IntrusiveDeque) null;
           }
           var5 = (qm) (this.field_i.d(0));
           while (var5 != null) {
@@ -2196,21 +2196,21 @@ final class dc {
           stackIn_15_0 = var6;
         }
         var12 = stackIn_15_0;
-        L4: while (true) {
+        scanLoop1: while (true) {
           var7 = vc.a((byte) -39, var2);
           var13 = 0;
           while (var11 > var13) {
             if (this.field_N[var13] == var7) {
-              continue L4;
+              continue scanLoop1;
             }
             var13++;
           }
-          L6: while (true) {
+          scanLoop2: while (true) {
             var8 = vc.a((byte) -39, var3);
             var13Lifetime2 = 0;
             while (var12 > var13Lifetime2) {
               if (this.field_j[var13Lifetime2] == var8) {
-                continue L6;
+                continue scanLoop2;
               }
               var13Lifetime2++;
             }
@@ -2220,7 +2220,7 @@ final class dc {
           var13Lifetime3 = 0;
           while (var13Lifetime3 < var10) {
             if (~this.field_d[var13Lifetime3] == ~var9) {
-              continue L4;
+              continue scanLoop1;
             }
             var13Lifetime3++;
           }
@@ -2236,7 +2236,7 @@ final class dc {
         return;
     }
 
-    final void a(pf param0, int param1, pf param2, pf param3) {
+    final void a(IntrusiveDeque param0, int param1, IntrusiveDeque param2, IntrusiveDeque param3) {
         mg var5 = null;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -2269,7 +2269,7 @@ final class dc {
         }
     }
 
-    final void a(ob param0, byte param1, fs param2) {
+    final void a(PacketBuffer param0, byte param1, fs param2) {
         if (param1 <= 49) {
           return;
         }
@@ -2351,8 +2351,8 @@ final class dc {
           }
         }
         if (param0 <= 57) {
-          pf var5 = (pf) null;
-          this.a((pf) null, (fs) null, -20, (pf) null, (pf) null);
+          IntrusiveDeque var5 = (IntrusiveDeque) null;
+          this.a((IntrusiveDeque) null, (fs) null, -20, (IntrusiveDeque) null, (IntrusiveDeque) null);
         }
         throw new RuntimeException();
     }
@@ -2677,7 +2677,7 @@ final class dc {
         return var2;
     }
 
-    final boolean a(pf param0, fs param1, int param2, pf param3, pf param4) {
+    final boolean a(IntrusiveDeque param0, fs param1, int param2, IntrusiveDeque param3, IntrusiveDeque param4) {
         int var8_int = 0;
         int var14 = 0;
         int stackIn_33_0 = 0;
@@ -2953,7 +2953,7 @@ final class dc {
         String stackIn_41_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
-        pf var4 = null;
+        IntrusiveDeque var4 = null;
         ln var5 = null;
         ln var6 = null;
         ln[] var6_array = null;
@@ -2962,7 +2962,7 @@ final class dc {
         int var11 = 0;
         ln[] var12 = null;
         ln[] var13 = null;
-        pf var14 = null;
+        IntrusiveDeque var14 = null;
         ln var15 = null;
         ln var16 = null;
         ln var17 = null;
@@ -2974,8 +2974,8 @@ final class dc {
         ln var18Lifetime2;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var14 = new pf();
-          var4 = new pf();
+          var14 = new IntrusiveDeque();
+          var4 = new IntrusiveDeque();
           var4.a((byte) -113, param1.field_q);
           param1.field_q.field_R = null;
           if (param0 <= 45) {
@@ -3355,7 +3355,7 @@ final class dc {
           this.field_D = new int[this.field_r];
           this.field_I = param3;
           for (var5_int = 0; this.field_r > var5_int; var5_int++) {
-            this.field_v[var5_int] = new fs(var5_int, this.field_I[var5_int], or.field_b[var5_int], df.field_k[var5_int], ho.field_e[var5_int]);
+            this.field_v[var5_int] = new fs(var5_int, this.field_I[var5_int], or.field_b[var5_int], DualLinkNode.field_k[var5_int], ho.field_e[var5_int]);
             this.field_v[var5_int].field_f = new int[this.field_r];
             this.field_v[var5_int].field_h = new boolean[this.field_r];
           }
@@ -3381,14 +3381,14 @@ final class dc {
             }
           }
           this.field_p = new el();
-          this.field_q = new pf();
-          this.field_i = new pf();
+          this.field_q = new IntrusiveDeque();
+          this.field_i = new IntrusiveDeque();
           this.field_B = new int[this.field_r + 1];
           this.field_H = new int[this.field_r + 1];
           this.field_h = new int[this.field_r];
           this.field_K = new int[1 + this.field_r];
           this.field_u = new int[1 + this.field_r];
-          this.field_A = new pf();
+          this.field_A = new IntrusiveDeque();
           this.field_L = (Random) ((Object) new ea());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3492,7 +3492,7 @@ final class dc {
     }
 
     static {
-        field_E = new pf();
+        field_E = new IntrusiveDeque();
         field_s = new int[8192];
         field_a = "This game has started.";
         field_l = new np(1);
