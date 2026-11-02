@@ -5,7 +5,7 @@ final class pe extends fd {
     String field_nb;
     static int field_pb;
     static int field_sb;
-    static ta field_qb;
+    static IntrusiveDeque field_qb;
     static volatile boolean field_rb;
     int field_tb;
     String field_ob;
@@ -17,14 +17,14 @@ final class pe extends fd {
         field_qb = null;
     }
 
-    final static l a(byte param0, int param1, int param2, int param3, int param4, vf param5) {
+    final static FullscreenFocusCanvas a(byte param0, int param1, int param2, int param3, int param4, vf param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        l var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
-        l stackIn_2_0 = null;
+        FullscreenFocusCanvas stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        l stackIn_7_0 = null;
+        FullscreenFocusCanvas stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -33,14 +33,14 @@ final class pe extends fd {
           var8 = pk.a((byte) 72, param4, param1, param3, param5, param2);
           var6 = var8;
           if (param0 >= -70) {
-            stackIn_2_0 = (l) null;
+            stackIn_2_0 = (FullscreenFocusCanvas) null;
             return stackIn_2_0;
           }
           if (var8 == null) {
             stackIn_5_0 = null;
-            return (l) (stackIn_5_0);
+            return (FullscreenFocusCanvas) (stackIn_5_0);
           }
-          var7 = new l();
+          var7 = new FullscreenFocusCanvas();
           var7.field_d = var8;
           var7.field_d.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, 0, param1, param3);

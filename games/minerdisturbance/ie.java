@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class ie {
-    private ta field_c;
+    private IntrusiveDeque field_c;
     static String field_a;
     private Random field_d;
     private int field_b;
@@ -162,7 +162,7 @@ final class ie {
     }
 
     ie() {
-        this.field_c = new ta();
+        this.field_c = new IntrusiveDeque();
         this.field_d = new Random();
     }
 

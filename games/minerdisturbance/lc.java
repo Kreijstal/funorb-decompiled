@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lc extends pi {
+final class lc extends IntrusiveNode {
     int field_q;
     int[][] field_n;
     boolean field_t;
-    static ea field_u;
+    static Sprite field_u;
     static String field_o;
     static int field_s;
     int field_r;
     int field_v;
     String[][] field_p;
 
-    final static ea[] a(int param0, int param1, int param2, int param3, byte param4) {
-        ea[] var7 = new ea[9];
-        ea[] var5 = var7;
-        ea dupTemp$0 = hb.a(param1, 32768, param2);
+    final static Sprite[] a(int param0, int param1, int param2, int param3, byte param4) {
+        Sprite[] var7 = new Sprite[9];
+        Sprite[] var5 = var7;
+        Sprite dupTemp$0 = hb.a(param1, 32768, param2);
         var7[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        ea dupTemp$1 = hb.a(param1, 32768, param3);
+        Sprite dupTemp$1 = hb.a(param1, 32768, param3);
         var7[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -44,7 +44,7 @@ final class lc extends pi {
     }
 
     final static void a(byte param0, int param1, lc param2) {
-        ld var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = sn.field_c;
           var3.d((byte) -111, param1);
@@ -62,7 +62,7 @@ final class lc extends pi {
     }
 
     static {
-        field_u = new ea(270, 70);
+        field_u = new Sprite(270, 70);
         field_o = "The Super Volcano Expansion";
         field_s = -1;
     }

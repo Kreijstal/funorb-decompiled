@@ -11,16 +11,16 @@ final class fg {
     static int field_b;
     String field_a;
     boolean field_g;
-    static ea[] field_c;
+    static Sprite[] field_c;
 
     final static boolean a(int param0, char param1) {
         boolean stackIn_28_0 = false;
         boolean stackIn_50_0 = false;
         boolean stackIn_64_0 = false;
-        sb var3;
+        PacketBuffer var3;
         if (param0 != -1975005818) {
-          var3 = (sb) null;
-          fg.a((byte) -41, (sb) null);
+          var3 = (PacketBuffer) null;
+          fg.a((byte) -41, (PacketBuffer) null);
           if (param1 < 48) {
             if (param1 >= 65 &&
               90 >= param1) {
@@ -89,7 +89,7 @@ final class fg {
 
     final static void a(byte param0, sl param1, int param2) {
         int var4 = 0;
-        ld var5 = sn.field_c;
+        CipherPacketBuffer var5 = sn.field_c;
         if (param0 != 5) {
           return;
         }
@@ -111,9 +111,9 @@ final class fg {
         }
     }
 
-    final static String[][] a(int param0, sb param1) {
+    final static String[][] a(int param0, PacketBuffer param1) {
         int var4 = 0;
-        ta var2 = null;
+        IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
         String[][] var3 = null;
         int var5 = 0;
@@ -127,7 +127,7 @@ final class fg {
           if (param0 != 65) {
             fg.a(-58);
           }
-          var2 = new ta();
+          var2 = new IntrusiveDeque();
           while (param1.field_u.length > param1.field_o) {
             var2.a((byte) -124, new fn(lm.a(param1, (byte) -101)));
           }
@@ -151,19 +151,19 @@ final class fg {
         }
     }
 
-    final static void a(byte param0, sb param1) {
+    final static void a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
           ah.field_b = param1.e(-25) << 5;
           var2_int = param1.d((byte) -54);
-          vb.field_b = (var2_int & 7) << 18;
+          ArchiveProvider.field_b = (var2_int & 7) << 18;
           ah.field_b = ah.field_b + (var2_int >> 3);
-          vb.field_b = vb.field_b + (param1.e(param0 ^ 41) << 2);
+          ArchiveProvider.field_b = ArchiveProvider.field_b + (param1.e(param0 ^ 41) << 2);
           var2_intLifetime1 = param1.d((byte) -54);
           tk.field_h = var2_intLifetime1 << 15 & 2064384;
-          vb.field_b = vb.field_b + (var2_intLifetime1 >> 6);
+          ArchiveProvider.field_b = ArchiveProvider.field_b + (var2_intLifetime1 >> 6);
           tk.field_h = tk.field_h + (param1.d((byte) -54) << 7);
           if (param0 != -86) {
             field_e = (String) null;

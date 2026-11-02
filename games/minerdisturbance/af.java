@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class af extends pi {
+final class af extends IntrusiveNode {
     static String field_s;
     byte[] field_t;
     static int field_u;
@@ -27,7 +27,7 @@ final class af extends pi {
         field_s = null;
     }
 
-    final static int a(sb param0, ta param1, int param2) {
+    final static int a(PacketBuffer param0, IntrusiveDeque param1, int param2) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;

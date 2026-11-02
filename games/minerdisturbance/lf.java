@@ -13,7 +13,7 @@ final class lf implements Runnable {
     private ia field_e;
     private int field_c;
     private DataInputStream field_a;
-    private sb field_g;
+    private PacketBuffer field_g;
 
     public final void run() {
         try {
@@ -164,7 +164,7 @@ final class lf implements Runnable {
         return false;
     }
 
-    final sb a(int param0) {
+    final PacketBuffer a(int param0) {
         if (param0 != 0) {
           this.a(23);
           if (this.field_c == 3) {
@@ -201,7 +201,7 @@ final class lf implements Runnable {
         try {
           this.field_h = param1;
           this.field_f = param0;
-          this.field_g = new sb(param2);
+          this.field_g = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "lf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

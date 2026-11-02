@@ -169,7 +169,7 @@ final class ba extends kn implements be, sh {
         }
     }
 
-    final static void a(bj param0, bj param1, bj param2, boolean param3, bj param4) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, boolean param3, ResourceArchive param4) {
         di stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_9_0 = null;
@@ -190,7 +190,7 @@ final class ba extends kn implements be, sh {
           df.field_b = wh.a(param4, "", "md_volcano_music");
           eg.field_p = wh.a(param4, "", "md_ice_music");
           hl.field_a = wh.a(param4, "", "md_ice_panic_music");
-          al.field_s = wh.a(param4, "", "md_win");
+          DualLinkNode.field_s = wh.a(param4, "", "md_win");
           aa.field_e = wh.a(param4, "", "md_lose");
           var6 = new ri(param0, param1);
           km.field_a.a(false, ph.field_a, var6, 0, param2);
@@ -203,7 +203,7 @@ final class ba extends kn implements be, sh {
           ((di) (Object) stackIn_4_0).a(stackIn_5_1, df.field_b, var6, 0, param2);
           km.field_a.a(false, eg.field_p, var6, 0, param2);
           km.field_a.a(false, hl.field_a, var6, 0, param2);
-          km.field_a.a(false, al.field_s, var6, 0, param2);
+          km.field_a.a(false, DualLinkNode.field_s, var6, 0, param2);
           km.field_a.a(false, aa.field_e, var6, 0, param2);
           km.field_a.e(100);
           return;

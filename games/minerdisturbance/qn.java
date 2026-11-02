@@ -5,7 +5,7 @@ final class qn extends hc {
     private jm field_I;
     private int field_L;
     static int field_K;
-    static ea field_J;
+    static Sprite field_J;
 
     final static int a(int param0, int param1, int param2, byte[] param3) {
         int var5 = 0;
@@ -77,9 +77,9 @@ final class qn extends hc {
     }
 
     final void a(byte param0, int param1, int param2, int param3) {
-        ea var15 = null;
-        ea var16 = null;
-        ea var13 = null;
+        Sprite var15 = null;
+        Sprite var16 = null;
+        Sprite var13 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = MinerDisturbance.field_ab;
@@ -97,31 +97,31 @@ final class qn extends hc {
           var9 = var15.field_x << 1;
           var10 = var15.field_A << 1;
           if (ha.field_d == null) {
-            ha.field_d = new ea(var9, var10);
-            vb.a(ha.field_d, 127);
+            ha.field_d = new Sprite(var9, var10);
+            ArchiveProvider.a(ha.field_d, 127);
             var15.b(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
             ha.field_d.g(var5 - var15.field_x, var6 - var15.field_A, 256);
             return;
           }
           if (ha.field_d.field_y < var9) {
-            ha.field_d = new ea(var9, var10);
-            vb.a(ha.field_d, 127);
+            ha.field_d = new Sprite(var9, var10);
+            ArchiveProvider.a(ha.field_d, 127);
             var15.b(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
             ha.field_d.g(var5 - var15.field_x, var6 - var15.field_A, 256);
             return;
           }
           if (ha.field_d.field_C >= var10) {
-            vb.a(ha.field_d, 125);
-            eh.d();
+            ArchiveProvider.a(ha.field_d, 125);
+            SoftwareRasterizer.d();
             var15.b(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
             ha.field_d.g(var5 - var15.field_x, var6 - var15.field_A, 256);
             return;
           }
-          ha.field_d = new ea(var9, var10);
-          vb.a(ha.field_d, 127);
+          ha.field_d = new Sprite(var9, var10);
+          ArchiveProvider.a(ha.field_d, 127);
           var15.b(112, 144, var15.field_x << 4, var15.field_A << 4, -this.field_L << 10, 4096);
           tk.b(true);
           ha.field_d.g(var5 - var15.field_x, var6 - var15.field_A, 256);
@@ -132,31 +132,31 @@ final class qn extends hc {
           var9Lifetime1 = var16.field_x << 1;
           var10Lifetime1 = var16.field_A << 1;
           if (ha.field_d == null) {
-            ha.field_d = new ea(var9Lifetime1, var10Lifetime1);
-            vb.a(ha.field_d, 127);
+            ha.field_d = new Sprite(var9Lifetime1, var10Lifetime1);
+            ArchiveProvider.a(ha.field_d, 127);
             var16.b(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
             ha.field_d.g(var5 - var16.field_x, var6 - var16.field_A, 256);
             return;
           }
           if (ha.field_d.field_y < var9Lifetime1) {
-            ha.field_d = new ea(var9Lifetime1, var10Lifetime1);
-            vb.a(ha.field_d, 127);
+            ha.field_d = new Sprite(var9Lifetime1, var10Lifetime1);
+            ArchiveProvider.a(ha.field_d, 127);
             var16.b(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
             ha.field_d.g(var5 - var16.field_x, var6 - var16.field_A, 256);
             return;
           }
           if (ha.field_d.field_C >= var10Lifetime1) {
-            vb.a(ha.field_d, 125);
-            eh.d();
+            ArchiveProvider.a(ha.field_d, 125);
+            SoftwareRasterizer.d();
             var16.b(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
             tk.b(true);
             ha.field_d.g(var5 - var16.field_x, var6 - var16.field_A, 256);
             return;
           }
-          ha.field_d = new ea(var9Lifetime1, var10Lifetime1);
-          vb.a(ha.field_d, 127);
+          ha.field_d = new Sprite(var9Lifetime1, var10Lifetime1);
+          ArchiveProvider.a(ha.field_d, 127);
           var16.b(112, 144, var16.field_x << 4, var16.field_A << 4, -this.field_L << 10, 4096);
           tk.b(true);
           ha.field_d.g(var5 - var16.field_x, var6 - var16.field_A, 256);
@@ -170,7 +170,7 @@ final class qn extends hc {
         if (var8 != sc.field_a) {
           return;
         }
-        ea var12 = ed.field_g[1];
+        Sprite var12 = ed.field_g[1];
         var12.g(-(var12.field_y >> 1) + var5, var6 - (var12.field_C >> 1), 256);
     }
 
@@ -210,7 +210,7 @@ final class qn extends hc {
         }
     }
 
-    final static String a(String param0, String param1, boolean param2, bj param3) {
+    final static String a(String param0, String param1, boolean param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         String stackIn_4_0 = null;
         String stackIn_6_0 = null;

@@ -3,7 +3,7 @@
  */
 final class s extends hc {
     int field_R;
-    static ea[] field_L;
+    static Sprite[] field_L;
     int field_M;
     int field_S;
     static String field_T;
@@ -13,7 +13,7 @@ final class s extends hc {
     static int field_Q;
     int field_N;
     static int[] field_I;
-    static bj field_P;
+    static ResourceArchive field_P;
 
     final static int a(int param0) {
         int var1_int = 0;
@@ -185,7 +185,7 @@ final class s extends hc {
             var1 = 255;
           }
           field_I[var0] = c.a(var1 << 16, 16754509);
-          field_I[var0] = hi.a(field_I[var0], c.a(var0 * var0 >> 5 << 8, 65366));
+          field_I[var0] = SpriteState.a(field_I[var0], c.a(var0 * var0 >> 5 << 8, 65366));
         }
     }
 }

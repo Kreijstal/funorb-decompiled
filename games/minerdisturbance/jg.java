@@ -10,7 +10,7 @@ final class jg extends cb {
     final ag a(String param0, int param1) {
         jm var3 = null;
         RuntimeException var3_ref = null;
-        sb var4 = null;
+        PacketBuffer var4 = null;
         ag stackIn_4_0 = null;
         ag stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
@@ -27,8 +27,8 @@ final class jg extends cb {
             }
           }
           if (param1 != 5) {
-            var4 = (sb) null;
-            jg.a((java.math.BigInteger) null, 33, (sb) null, (java.math.BigInteger) null, (sb) null);
+            var4 = (PacketBuffer) null;
+            jg.a((java.math.BigInteger) null, 33, (PacketBuffer) null, (java.math.BigInteger) null, (PacketBuffer) null);
           }
           if (!param0.equals(this.field_i.field_s)) {
             stackIn_10_0 = fg.field_d;
@@ -99,7 +99,7 @@ final class jg extends cb {
             if (var3 != null) {
               if (var3.b(24595) == sc.field_a &&
                 !param1.equals(this.field_i.field_s)) {
-                stackIn_7_0 = sb.field_q;
+                stackIn_7_0 = PacketBuffer.field_q;
                 return stackIn_7_0;
               }
               stackIn_9_0 = var3.a(7320);
@@ -107,7 +107,7 @@ final class jg extends cb {
             }
           }
           if (!param1.equals(this.field_i.field_s)) {
-            stackIn_13_0 = sb.field_q;
+            stackIn_13_0 = PacketBuffer.field_q;
             return stackIn_13_0;
           }
           var3_int = -95 / ((param0 - 49) / 56);
@@ -127,7 +127,7 @@ final class jg extends cb {
         }
     }
 
-    final static void a(java.math.BigInteger param0, int param1, sb param2, java.math.BigInteger param3, sb param4) {
+    final static void a(java.math.BigInteger param0, int param1, PacketBuffer param2, java.math.BigInteger param3, PacketBuffer param4) {
         try {
           eg.a(0, (byte) 90, param2.field_u, param2.field_o, param3, param4, param0);
           if (param1 >= -94) {

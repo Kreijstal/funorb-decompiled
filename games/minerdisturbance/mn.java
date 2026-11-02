@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mn extends gk {
-    static ea field_t;
+    static Sprite field_t;
     static int field_x;
     static String[] field_w;
     static String[] field_u;
@@ -54,7 +54,7 @@ final class mn extends gk {
             mb.field_b.b(1, bd.field_e);
           }
           bd.field_e.a(param0 ^ 68, param3, param1, param2);
-          eh.d();
+          SoftwareRasterizer.d();
           pf.a(0, true);
           if (param0 == -63) {
             return;

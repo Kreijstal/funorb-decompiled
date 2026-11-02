@@ -97,7 +97,7 @@ final class jl extends wf {
         super.b(param0, param1, param2);
         cn.field_g.b(this.field_db, (this.field_v >> 1) + param2, 103 + param1, 16777215, -1);
         if (this.field_ab != null) {
-          eh.e(20 + param2, 120 + param1 - 7, 260, 8421504);
+          SoftwareRasterizer.e(20 + param2, 120 + param1 - 7, 260, 8421504);
           cn.field_g.a(this.field_ab, param2 + 20, 120 + (param1 + 8), 260, 100, 16777215, -1, 1, 0, cn.field_g.field_I);
         }
     }

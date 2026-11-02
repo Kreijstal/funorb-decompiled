@@ -40,7 +40,7 @@ final class ml {
         }
         var3 = this.field_r[param1];
         var4 = -2;
-        var5 = (lj.field_t + rg.field_sb + (nk.field_w + m.field_e)) % 8;
+        var5 = (lj.field_t + rg.field_sb + (nk.field_w + GameAppletShell.field_e)) % 8;
         if (var5 != 0) {
           if (var5 == 1) {
             di.field_X = di.field_X + ac.field_b;
@@ -80,7 +80,7 @@ final class ml {
           di.field_X = di.field_X + qd.field_M;
           ac.field_b = ac.field_b - 1;
         }
-        var5 = (lj.field_t + (rg.field_sb + (nk.field_w + m.field_e))) % 4;
+        var5 = (lj.field_t + (rg.field_sb + (nk.field_w + GameAppletShell.field_e))) % 4;
         if (var5 != 0) {
           if (1 == var5) {
             pn.field_b = pn.field_b - aa.field_b;
@@ -439,7 +439,7 @@ final class ml {
         return true;
     }
 
-    final static void a(sb param0, byte param1, sb param2) {
+    final static void a(PacketBuffer param0, byte param1, PacketBuffer param2) {
         ql[] array$0 = null;
         ql dupTemp$3 = null;
         ql[] array$1 = null;
@@ -822,9 +822,9 @@ final class ml {
                     this.b(param2, (byte) -125);
                   } else {
                     if (var5 == 11) {
-                      eh.a(-param2, 0, 640, 480);
+                      SoftwareRasterizer.a(-param2, 0, 640, 480);
                       wk.field_a.d(117);
-                      eh.a();
+                      SoftwareRasterizer.a();
                     } else {
                       if (var5 != 4) {
                         if ((var5 == 9)) {
@@ -832,9 +832,9 @@ final class ml {
                           jc.field_G.f(320 + var4 - (jc.field_G.field_x >> 1), 15);
                         }
                       } else {
-                        m.field_m.f(param2, 0);
+                        GameAppletShell.field_m.f(param2, 0);
                         if (!eg.b(112)) {
-                          l.field_c.f(640 - (l.field_c.field_x + param2), -l.field_c.field_A + 480);
+                          FullscreenFocusCanvas.field_c.f(640 - (FullscreenFocusCanvas.field_c.field_x + param2), -FullscreenFocusCanvas.field_c.field_A + 480);
                         } else {
                           if (!fa.field_e) {
                             ak.field_c.f(-param2 + 640 - ak.field_c.field_x, -ak.field_c.field_A + 480);
@@ -863,7 +863,7 @@ final class ml {
               if (this.field_n != 8) {
                 ce.field_d.a(kc.field_c, 170 - param2, 230, 300, 60, 1, -1, 1, 0, 0);
               } else {
-                ce.field_d.a(vb.field_d, 220 - param2, 320, 200, 60, 1, -1, 1, 0, 0);
+                ce.field_d.a(ArchiveProvider.field_d, 220 - param2, 320, 200, 60, 1, -1, 1, 0, 0);
               }
             }
           }
@@ -946,12 +946,12 @@ final class ml {
         } else {
           var10 = var10 - 5 * var8;
         }
-        g.a(90, var10 + 50, var6 - 30, 450, (byte) 53, hd.field_d);
+        ArchiveIndex.a(90, var10 + 50, var6 - 30, 450, (byte) 53, hd.field_d);
         if (3 == param0) {
           var7Lifetime1 -= 32;
           var6 += 32;
         }
-        L6: {
+        regionExit1: {
           var11Lifetime1 = 130;
           mm.field_a.a(pf.field_f[param0], var6, var11Lifetime1, 1, -1);
           var11Lifetime1 = var11Lifetime1 + var9;
@@ -1058,7 +1058,7 @@ final class ml {
               var14 = 345 + var6;
               var15 = var25.field_E + var25.field_I + 90;
               var25.a(var26, var14, var25.field_N + var15, 1, -1);
-              break L6;
+              break regionExit1;
             }
             var12 = 0;
             var11Lifetime1 = var11Lifetime1 + ce.field_d.a(var19[var12], var6, var11Lifetime1 - ce.field_d.field_I, var7Lifetime1, 480, 1, -1, 0, 0, var8) * var8;
@@ -1286,7 +1286,7 @@ final class ml {
           return 33;
         }
         for (var4 = 0; var4 < this.field_r.length; var4++) {
-          var5 = pk.field_b.c(m.field_g[var4], 640);
+          var5 = pk.field_b.c(GameAppletShell.field_g[var4], 640);
           if (this.field_m - var5 / 2 <= param2 &&
             var5 / 2 + this.field_m > param2 &&
             param1 >= var4 * this.field_l + this.field_q &&
@@ -1324,7 +1324,7 @@ final class ml {
         int var13;
         int var14;
         int var15;
-        ea var16_ref_ea;
+        Sprite var16_ref_ea;
         int var16;
         int var17;
         int var18;
@@ -1371,7 +1371,7 @@ final class ml {
           }
         }
         var8 = pk.field_b;
-        var20 = m.field_g[var6];
+        var20 = GameAppletShell.field_g[var6];
         var9 = var20;
         var9Lifetime1 = var20;
         var9Lifetime2 = var20;
@@ -1446,24 +1446,24 @@ final class ml {
           } else {
             stackIn_68_0 = 0;
           }
-          L17: {
+          regionExit1: {
             var18 = stackIn_68_0;
             if ((!param1 ||
               var17 == 0) && (!param1 ||
               var18 != 0)) {
               var16_ref_ea = bl.field_w;
-              break L17;
+              break regionExit1;
             }
             var16_ref_ea = h.field_c;
           }
-          L21: {
+          regionExit2: {
             var16_ref_ea.g(var10, 83);
             var10 = var15Lifetime1 + (-param0 + 468);
             if ((!param1 ||
               var18 == 0) && (!param1 ||
               var17 != 0)) {
               var16_ref_ea = bl.field_w;
-              break L21;
+              break regionExit2;
             }
             var16_ref_ea = h.field_c;
           }
@@ -1475,7 +1475,7 @@ final class ml {
         if (var6 == 20 &&
           !qd.field_S) {
           var13 = 11184810;
-          var9Lifetime2 = dc.field_c;
+          var9Lifetime2 = GameCanvas.field_c;
           var14 = 14235957;
         }
         if (var6 == 21 &&
@@ -1485,7 +1485,7 @@ final class ml {
           var9Lifetime2 = jk.field_lb;
         }
         if (var6 == 18 &&
-          g.a(-36)) {
+          ArchiveIndex.a(-36)) {
           var15Lifetime2 = 3355443;
           this.a(var11, var10, -22542, var8, 6776679, 14013909, var9Lifetime2, var15Lifetime2, param1);
         } else if (this.field_b &&
@@ -1501,19 +1501,19 @@ final class ml {
             var16 = 20;
           }
           var17Lifetime1 = 134 + var16;
-          eh.c(2 + var10 + var17Lifetime1, 28 + var11, 4, var12);
-          eh.c(2 + (144 + var17Lifetime1) + var10, 28 + var11, 4, var12);
-          eh.c(-1 + (var10 + var17Lifetime1), var11 + 26, 3, var15Lifetime3);
-          eh.d(var17Lifetime1 + var10 - 1, 26 + var11, 4, 1);
-          eh.c(-1 + (var10 + var17Lifetime1 + 144), var11 + 26, 3, var15Lifetime3);
-          eh.d(143 + var10 + var17Lifetime1, var11 + 26, 4, 1);
-          eh.e(var17Lifetime1 + var10, 23 + var11, 144, 10, var12);
-          eh.e(var10 + var17Lifetime1, var11 + 30, 144, 1);
-          eh.e(var17Lifetime1 + var10, 23 + var11, 144, 7, var15Lifetime3);
-          eh.e(var17Lifetime1 + var10, 22 + var11, 144, 1);
+          SoftwareRasterizer.c(2 + var10 + var17Lifetime1, 28 + var11, 4, var12);
+          SoftwareRasterizer.c(2 + (144 + var17Lifetime1) + var10, 28 + var11, 4, var12);
+          SoftwareRasterizer.c(-1 + (var10 + var17Lifetime1), var11 + 26, 3, var15Lifetime3);
+          SoftwareRasterizer.d(var17Lifetime1 + var10 - 1, 26 + var11, 4, 1);
+          SoftwareRasterizer.c(-1 + (var10 + var17Lifetime1 + 144), var11 + 26, 3, var15Lifetime3);
+          SoftwareRasterizer.d(143 + var10 + var17Lifetime1, var11 + 26, 4, 1);
+          SoftwareRasterizer.e(var17Lifetime1 + var10, 23 + var11, 144, 10, var12);
+          SoftwareRasterizer.e(var10 + var17Lifetime1, var11 + 30, 144, 1);
+          SoftwareRasterizer.e(var17Lifetime1 + var10, 23 + var11, 144, 7, var15Lifetime3);
+          SoftwareRasterizer.e(var17Lifetime1 + var10, 22 + var11, 144, 1);
           var18Lifetime1 = -2 + var17Lifetime1 + (var10 + ee.field_J * 144 / 256);
-          eh.a(var18Lifetime1 - 1, 18 + var11, 6, 18, 1);
-          eh.e(var18Lifetime1, var11 + 19, 4, 16, var15Lifetime3);
+          SoftwareRasterizer.a(var18Lifetime1 - 1, 18 + var11, 6, 18, 1);
+          SoftwareRasterizer.e(var18Lifetime1, var11 + 19, 4, 16, var15Lifetime3);
         }
         if (var6 == 5) {
           var15Lifetime4 = var13;
@@ -1522,19 +1522,19 @@ final class ml {
             var16Lifetime1 = 20;
           }
           var17Lifetime2 = 134 + var16Lifetime1;
-          eh.c(var17Lifetime2 + var10 + 2, 28 + var11, 4, var12);
-          eh.c(144 + var10 + var17Lifetime2 + 2, 28 + var11, 4, var12);
-          eh.c(-1 + var10 + var17Lifetime2, 26 + var11, 3, var15Lifetime4);
-          eh.d(var17Lifetime2 + var10 - 1, 26 + var11, 4, 1);
-          eh.c(var10 + var17Lifetime2 + 143, 26 + var11, 3, var15Lifetime4);
-          eh.d(144 + (var10 + var17Lifetime2 - 1), 26 + var11, 4, 1);
-          eh.e(var10 + var17Lifetime2, 23 + var11, 144, 10, var12);
-          eh.e(var17Lifetime2 + var10, 30 + var11, 144, 1);
-          eh.e(var17Lifetime2 + var10, 23 + var11, 144, 7, var15Lifetime4);
-          eh.e(var10 + var17Lifetime2, var11 + 22, 144, 1);
+          SoftwareRasterizer.c(var17Lifetime2 + var10 + 2, 28 + var11, 4, var12);
+          SoftwareRasterizer.c(144 + var10 + var17Lifetime2 + 2, 28 + var11, 4, var12);
+          SoftwareRasterizer.c(-1 + var10 + var17Lifetime2, 26 + var11, 3, var15Lifetime4);
+          SoftwareRasterizer.d(var17Lifetime2 + var10 - 1, 26 + var11, 4, 1);
+          SoftwareRasterizer.c(var10 + var17Lifetime2 + 143, 26 + var11, 3, var15Lifetime4);
+          SoftwareRasterizer.d(144 + (var10 + var17Lifetime2 - 1), 26 + var11, 4, 1);
+          SoftwareRasterizer.e(var10 + var17Lifetime2, 23 + var11, 144, 10, var12);
+          SoftwareRasterizer.e(var17Lifetime2 + var10, 30 + var11, 144, 1);
+          SoftwareRasterizer.e(var17Lifetime2 + var10, 23 + var11, 144, 7, var15Lifetime4);
+          SoftwareRasterizer.e(var10 + var17Lifetime2, var11 + 22, 144, 1);
           var18Lifetime2 = -2 + (144 * oc.field_f / 256 + var17Lifetime2) + var10;
-          eh.a(-1 + var18Lifetime2, 18 + var11, 6, 18, 1);
-          eh.e(var18Lifetime2, var11 + 19, 4, 16, var15Lifetime4);
+          SoftwareRasterizer.a(-1 + var18Lifetime2, 18 + var11, 6, 18, 1);
+          SoftwareRasterizer.e(var18Lifetime2, var11 + 19, 4, 16, var15Lifetime4);
         }
         return;
     }
@@ -1553,7 +1553,7 @@ final class ml {
         return dj.field_g[param0 & 2047];
     }
 
-    final static void a(byte param0, int param1, ea param2, ea param3) {
+    final static void a(byte param0, int param1, Sprite param2, Sprite param3) {
         int var9 = 0;
         int var10 = 0;
         RuntimeException stackIn_30_0 = null;
@@ -1710,7 +1710,7 @@ final class ml {
           }
           if (this.field_n == 1 &&
             this.field_q > param2) {
-            var7 = pk.field_b.c(m.field_g[18], 640);
+            var7 = pk.field_b.c(GameAppletShell.field_g[18], 640);
             if (-(var7 / 2) + this.field_m < param1 &&
               param1 < this.field_m + var7 / 2) {
               return 3;
@@ -1719,7 +1719,7 @@ final class ml {
           if (var4 != 0 &&
             param2 <= this.field_q + (pk.field_b.field_E + pk.field_b.field_I) * 3 &&
             param2 > pk.field_b.field_E + (pk.field_b.field_I + this.field_q)) {
-            var7Lifetime1 = pk.field_b.c(m.field_g[0], 640);
+            var7Lifetime1 = pk.field_b.c(GameAppletShell.field_g[0], 640);
             if (param1 > -(var7Lifetime1 / 2) + this.field_m &&
               this.field_m + var7Lifetime1 / 2 > param1) {
               return 3;
@@ -1732,7 +1732,7 @@ final class ml {
             return -122;
           }
           while (var5 > var8) {
-            var9 = pk.field_b.c(m.field_g[this.field_r[var8]], 640);
+            var9 = pk.field_b.c(GameAppletShell.field_g[this.field_r[var8]], 640);
             if (var7Lifetime2 - var9 / 2 < param1 &&
               param1 < var7Lifetime2 + var9 / 2) {
               return var8;
@@ -1795,7 +1795,7 @@ final class ml {
             sk.field_e.f(var7 + 640 + (-(sk.field_e.field_x >> 1) - param0 - 320), 6);
           } else {
             if (param2 == 1) {
-              ld.field_x.f(var7 - (ld.field_x.field_x >> 1) + (320 - param0) + 0, 6);
+              CipherPacketBuffer.field_x.f(var7 - (CipherPacketBuffer.field_x.field_x >> 1) + (320 - param0) + 0, 6);
             }
           }
         }
@@ -1818,7 +1818,7 @@ final class ml {
         if (285 > var11) {
           var11 = var11 + ak.field_a[1].field_A;
         }
-        g.a(80, var11, var9 + (var8 - var10) / 2, var10, (byte) 113, ak.field_a);
+        ArchiveIndex.a(80, var11, var9 + (var8 - var10) / 2, var10, (byte) 113, ak.field_a);
         ff.field_f.f(var9 + (var8 - ff.field_f.field_x) / 2, 85);
         if (0 != var5) {
           stackIn_46_0 = rj.field_a;
@@ -1853,7 +1853,7 @@ final class ml {
         int var15 = 0;
         String var16 = null;
         int var17 = 0;
-        sb var18 = null;
+        PacketBuffer var18 = null;
         int[] var22 = null;
         var17 = MinerDisturbance.field_ab;
         try {
@@ -1914,8 +1914,8 @@ final class ml {
             }
           }
           if (param0 != 23) {
-            var18 = (sb) null;
-            ml.a((sb) null, (byte) 74, (sb) null);
+            var18 = (PacketBuffer) null;
+            ml.a((PacketBuffer) null, (byte) 74, (PacketBuffer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1972,7 +1972,7 @@ final class ml {
           if (this.field_n != 6) {
             this.field_o.a(this.field_q, this.field_m, 140, this.field_l, this.field_h + this.field_m);
           } else {
-            var2Lifetime1 = this.c(-21377, m.field_e, wi.field_w);
+            var2Lifetime1 = this.c(-21377, GameAppletShell.field_e, wi.field_w);
             var3 = this.c(-21377, gb.field_e, nk.field_w);
             this.field_o.a(var3, var2Lifetime1, -1);
           }
@@ -1980,7 +1980,7 @@ final class ml {
           var2Lifetime1 = -1;
           var3 = -1;
           if (this.field_n != 11) {
-            var2Lifetime1 = this.a(640, wi.field_w, m.field_e);
+            var2Lifetime1 = this.a(640, wi.field_w, GameAppletShell.field_e);
             var3 = this.a(param0 - 8139, nk.field_w, gb.field_e);
             this.field_o.a(var3, var2Lifetime1, param0 ^ -8780);
           } else {
@@ -2073,13 +2073,13 @@ final class ml {
         if (param1 >= -79) {
           return;
         }
-        g.a(var4, var6 + 30, var3 - 20, 40 + var5, (byte) 80, hd.field_d);
+        ArchiveIndex.a(var4, var6 + 30, var3 - 20, 40 + var5, (byte) 80, hd.field_d);
         int var7 = ce.field_d.field_I + ce.field_d.field_E;
         var4 += 50;
         pk.field_b.b(si.field_e, 320 + param0, var4, 0, -1);
         var4 = var4 + var7;
         ce.field_d.a(ci.field_j, var3 + 10, var4, -20 + var5, 300, 0, -1, 1, 0, 14);
-        g.a(285, 90, var3 - 20, var5 + 40, (byte) 47, hd.field_d);
+        ArchiveIndex.a(285, 90, var3 - 20, var5 + 40, (byte) 47, hd.field_d);
         ce.field_d.a(bf.field_a, var3 + 10, 310, var5 - 20, 300, 0, -1, 1, 0, 14);
     }
 
@@ -2087,11 +2087,11 @@ final class ml {
         int var3 = this.field_e;
         int var4 = var3 + (-param1 + 755);
         on.field_x.f(var3 + (-param1 + 640 + (320 - (on.field_x.field_x >> 1))), 15);
-        g.a(param0, 235, var4, 410, (byte) 113, hd.field_d);
+        ArchiveIndex.a(param0, 235, var4, 410, (byte) 113, hd.field_d);
         String var5 = ae.field_b;
         int var6 = 176 + pk.field_b.field_I;
         pk.field_b.b(var5, var3 + (-param1 + 640) + 320, var6, 16689702, -1);
-        ce.field_d.a(vb.field_d, var3 + (130 - param1) + 640, 260, 380, 30, 1, -1, 1, 1, 0);
+        ce.field_d.a(ArchiveProvider.field_d, var3 + (130 - param1) + 640, 260, 380, 30, 1, -1, 1, 1, 0);
     }
 
     private final void a(int param0, int param1, int param2, vm param3, int param4, int param5, String param6, int param7, boolean param8) {

@@ -113,7 +113,7 @@ final class uh {
                   uh.a((byte) -43);
                 }
                 var9 = 0;
-                L4: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param0) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -129,7 +129,7 @@ final class uh {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var13 = ri.field_c[7] & 255;
                         var12 = (65280 & ri.field_c[2] << 8) + (255 & ri.field_c[3]);
@@ -145,7 +145,7 @@ final class uh {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var11 = (ri.field_c[3] & 255) + ((ri.field_c[0] & 255) << 24) + ((ri.field_c[1] << 16 & 16711680) + ((255 & ri.field_c[2]) << 8));
                         var12 = ((ri.field_c[4] & 255) << 8) + (255 & ri.field_c[5]);

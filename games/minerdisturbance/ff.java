@@ -3,8 +3,8 @@
  */
 final class ff {
     static bg field_a;
-    static ea[] field_c;
-    static ea field_f;
+    static Sprite[] field_c;
+    static Sprite field_f;
     static int field_b;
     static String field_d;
     static String field_e;
@@ -47,14 +47,14 @@ final class ff {
         }
     }
 
-    final static void a(vf param0, sb param1, int param2, boolean param3) {
+    final static void a(vf param0, PacketBuffer param1, int param2, boolean param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
           int var12_int = 0;
           byte[] array$0 = null;
           String dupTemp$1 = null;
-          sb stackIn_13_0 = null;
+          PacketBuffer stackIn_13_0 = null;
           boolean stackIn_14_1 = false;
           RuntimeException stackIn_42_0 = null;
           StringBuilder stackIn_42_1 = null;
@@ -103,9 +103,9 @@ final class ff {
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    stackIn_13_0 = (sb) (param1);
+                    stackIn_13_0 = (PacketBuffer) (param1);
                     stackIn_14_1 = !(param3);
-                    var20 = ((sb) (Object) stackIn_13_0).a(stackIn_14_1);
+                    var20 = ((PacketBuffer) (Object) stackIn_13_0).a(stackIn_14_1);
                     var8 = param1.a(false);
                     var9 = param1.d((byte) -54);
                     var10 = new String[var9];
@@ -170,7 +170,7 @@ final class ff {
               }
             }
             if (!param3) {
-              field_f = (ea) null;
+              field_f = (Sprite) null;
             }
             on.field_t.a((byte) 69, var18);
             return;

@@ -3,7 +3,7 @@
  */
 final class mb {
     static ll field_c;
-    static ea[] field_d;
+    static Sprite[] field_d;
     static hm field_b;
     static String field_a;
 
@@ -66,7 +66,7 @@ final class mb {
           Long var3 = null;
           Object[] var4 = null;
           if (param0 != -71) {
-            field_d = (ea[]) null;
+            field_d = (Sprite[]) null;
           }
           try {
             var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
@@ -101,7 +101,7 @@ final class mb {
         field_d = null;
         field_a = null;
         if (param0 != 30520) {
-          field_d = (ea[]) null;
+          field_d = (Sprite[]) null;
           field_b = null;
           return;
         }

@@ -6,7 +6,7 @@ final class hm extends jc {
     static String field_M;
     static String field_L;
     static String field_N;
-    private ta field_K;
+    private IntrusiveDeque field_K;
 
     final static void d(byte param0) {
         int var2 = 0;
@@ -74,7 +74,7 @@ final class hm extends jc {
 
     public hm() {
         super(0, 0, od.field_n, ae.field_c, (ad) null, (rm) null);
-        this.field_K = new ta();
+        this.field_K = new IntrusiveDeque();
     }
 
     public static void c(byte param0) {

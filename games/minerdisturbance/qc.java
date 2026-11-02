@@ -4,14 +4,14 @@
 import java.util.*;
 
 final class qc implements Iterable {
-    static ea field_d;
+    static Sprite field_d;
     static int field_f;
     static bg field_a;
-    al field_e;
+    DualLinkNode field_e;
     static boolean field_b;
     static int field_c;
 
-    final static ea c(int param0) {
+    final static Sprite c(int param0) {
         int var5_int = 0;
         int var6 = 0;
         int var1;
@@ -25,7 +25,7 @@ final class qc implements Iterable {
         byte[] var17;
         var7 = MinerDisturbance.field_ab;
         var1 = qk.field_b[0] * ng.field_e[0];
-        var16 = db.field_b[0];
+        var16 = ClientException.field_b[0];
         if (param0 != 255) {
           field_c = 101;
         }
@@ -34,26 +34,26 @@ final class qc implements Iterable {
           for (var5_int = 0; var1 > var5_int; var5_int++) {
             var8[var5_int] = af.field_p[c.a(255, (int) var16[var5_int])];
           }
-          var3 = new ea(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var8);
+          var3 = new Sprite(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var8);
         } else {
           var17 = ci.field_a[0];
           var13 = new int[var1];
           var11 = var13;
           var5 = var11;
           for (var6 = 0; var6 < var1; var6++) {
-            var5[var6] = hi.a(c.a(255, (int) var17[var6]) << 24, af.field_p[c.a((int) var16[var6], 255)]);
+            var5[var6] = SpriteState.a(c.a(255, (int) var17[var6]) << 24, af.field_p[c.a((int) var16[var6], 255)]);
           }
-          var3 = new og(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var13);
+          var3 = new ArgbSprite(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], var13);
         }
         ec.a((byte) 40);
-        return (ea) (var3);
+        return (Sprite) (var3);
     }
 
-    final al a(int param0) {
+    final DualLinkNode a(int param0) {
         if (param0 != 609) {
-          return (al) null;
+          return (DualLinkNode) null;
         }
-        al var2 = this.field_e.field_t;
+        DualLinkNode var2 = this.field_e.field_t;
         if (var2 == this.field_e) {
           return null;
         }
@@ -61,7 +61,7 @@ final class qc implements Iterable {
         return var2;
     }
 
-    final void a(byte param0, al param1) {
+    final void a(byte param0, DualLinkNode param1) {
         try {
           if (null != param1.field_q) {
             param1.a((byte) -120);

@@ -4,10 +4,10 @@
 final class ha {
     static String field_f;
     static int field_e;
-    static ea field_a;
-    static ea field_c;
+    static Sprite field_a;
+    static Sprite field_c;
     static int field_b;
-    static ea field_d;
+    static Sprite field_d;
     static int field_g;
 
     final static gj a(int param0, String param1) {
@@ -86,7 +86,7 @@ final class ha {
               }
             }
             if (decompiledFrameRemainder0) {
-              if (al.field_o.indexOf(var5Lifetime1) == -1) {
+              if (DualLinkNode.field_o.indexOf(var5Lifetime1) == -1) {
                 stackIn_46_0 = vh.field_f;
                 return stackIn_46_0;
               }

@@ -5,11 +5,11 @@ final class ah {
     static gh field_a;
     static int field_h;
     static int field_e;
-    static ta field_g;
+    static IntrusiveDeque field_g;
     static int field_b;
     static int field_f;
-    static ea[] field_c;
-    static ea field_d;
+    static Sprite[] field_c;
+    static Sprite field_d;
     static boolean field_i;
 
     public static void a(boolean param0) {
@@ -92,6 +92,6 @@ final class ah {
         field_h = 20;
         field_a = new gh();
         field_e = -1;
-        field_g = new ta();
+        field_g = new IntrusiveDeque();
     }
 }

@@ -4,7 +4,7 @@
 final class aa {
     static ae field_l;
     static th field_j;
-    static ea field_i;
+    static Sprite field_i;
     private int field_a;
     private boolean field_k;
     private int field_g;
@@ -19,13 +19,13 @@ final class aa {
         try {
           s.field_O = param1;
           sn.field_d = param5;
-          mf.field_j = param4;
+          IsaacRandom.field_j = param4;
           if (param2 != -1) {
             ac var7 = (ac) null;
             aa.a(-42, (ac) null, -120, -123, (ac) null, -33);
           }
           ka.field_a = param3;
-          hi.field_z = param0;
+          SpriteState.field_z = param0;
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "aa.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
@@ -61,7 +61,7 @@ final class aa {
           return (ln[]) null;
         }
         for (var2 = 0; var2 < sc.field_d; var2++) {
-          var1[var2] = new ln(pf.field_c, wd.field_a, bg.field_d[var2], oc.field_e[var2], qk.field_b[var2], ng.field_e[var2], db.field_b[var2], af.field_p);
+          var1[var2] = new ln(pf.field_c, wd.field_a, bg.field_d[var2], oc.field_e[var2], qk.field_b[var2], ng.field_e[var2], ClientException.field_b[var2], af.field_p);
         }
         ec.a((byte) -76);
         return var1;

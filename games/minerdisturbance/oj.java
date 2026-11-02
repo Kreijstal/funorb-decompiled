@@ -135,7 +135,7 @@ final class oj extends jc {
         }
     }
 
-    final static void a(pi param0, pi param1, byte param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, byte param2) {
         try {
           if (param2 != -117) {
             field_K = -82;
@@ -185,8 +185,8 @@ final class oj extends jc {
           this.field_I.a((byte) 4, param1 + this.field_u, this.field_t + param2, param3);
           return;
         }
-        ea var6 = new ea(this.field_I.field_v, this.field_I.field_q);
-        vb.a(var6, 125);
+        Sprite var6 = new Sprite(this.field_I.field_v, this.field_I.field_q);
+        ArchiveProvider.a(var6, 125);
         this.field_I.a(param0, 0, 0, param3);
         tk.b(true);
         var6.f(param1 + this.field_u, param2 + this.field_t, this.field_L);
@@ -198,7 +198,7 @@ final class oj extends jc {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$c5042ffd0615(pi param0, pi param1, int param2) {
+    final static void $cfr$intArgs$a$c5042ffd0615(IntrusiveNode param0, IntrusiveNode param1, int param2) {
         try {
           if (param2 != -117) {
             field_K = -82;

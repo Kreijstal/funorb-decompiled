@@ -5,7 +5,7 @@ import java.util.*;
 
 abstract class jc extends fe implements rk {
     static int field_E;
-    static ea field_G;
+    static Sprite field_G;
     fe field_I;
     static int[] field_F;
     static int field_H;
@@ -287,7 +287,7 @@ abstract class jc extends fe implements rk {
         if (param0 == -21923) {
           return null;
         }
-        field_G = (ea) null;
+        field_G = (Sprite) null;
         return null;
     }
 
@@ -506,7 +506,7 @@ abstract class jc extends fe implements rk {
               if (!param4) {
                 stackIn_24_0 = cc.field_L[var13];
               } else {
-                stackIn_24_0 = pi.field_h[var13];
+                stackIn_24_0 = IntrusiveNode.field_h[var13];
               }
               var14 = stackIn_24_0;
               if (var14 <= var7_int) {

@@ -10,10 +10,10 @@ abstract class ch {
     wa field_l;
     wa field_m;
     int field_d;
-    sb field_k;
+    PacketBuffer field_k;
     long field_e;
     volatile int field_o;
-    sb field_a;
+    PacketBuffer field_a;
     byte field_b;
     volatile int field_j;
     ee field_c;
@@ -107,11 +107,11 @@ abstract class ch {
         this.field_i = new wa();
         this.field_l = new wa();
         this.field_m = new wa();
-        this.field_k = new sb(6);
+        this.field_k = new PacketBuffer(6);
         this.field_o = 0;
         this.field_j = 0;
         this.field_b = (byte) 0;
-        this.field_a = new sb(10);
+        this.field_a = new PacketBuffer(10);
     }
 
     static {

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class fe extends pi {
+class fe extends IntrusiveNode {
     static me field_z;
     static String field_C;
     rm field_y;
@@ -318,12 +318,12 @@ class fe extends pi {
                 this.a(param1, ki.field_n, gb.field_e, nk.field_w, (byte) -123, this, param2);
               }
               if (jk.field_ab != 0) {
-                if (this.a(wi.field_w, param1, param3 + 0, m.field_e, jk.field_ab, this, param2)) {
+                if (this.a(wi.field_w, param1, param3 + 0, GameAppletShell.field_e, jk.field_ab, this, param2)) {
                   param0 = false;
                 }
                 this.g(4966);
               }
-              if (ld.field_B == 0 &&
+              if (CipherPacketBuffer.field_B == 0 &&
                 nb.field_f != 0) {
                 this.a(param2, gb.field_e, nk.field_w, param1, this, 0);
                 var8 = j.field_d;
@@ -340,13 +340,13 @@ class fe extends pi {
           if (0 != ki.field_n) {
             if (var5 == 0) {
               if (jk.field_ab != 0 &&
-                this.a(wi.field_w, param1, param3 + 0, m.field_e, jk.field_ab, this, param2)) {
+                this.a(wi.field_w, param1, param3 + 0, GameAppletShell.field_e, jk.field_ab, this, param2)) {
                 param0 = false;
                 if (var7 == 0) {
                 }
               }
-              if (ld.field_B != 0) {
-                nb.field_f = ld.field_B;
+              if (CipherPacketBuffer.field_B != 0) {
+                nb.field_f = CipherPacketBuffer.field_B;
                 if (param3 != 0) {
                   return true;
                 }
@@ -354,7 +354,7 @@ class fe extends pi {
                 return param0;
               }
               if (nb.field_f == 0) {
-                nb.field_f = ld.field_B;
+                nb.field_f = CipherPacketBuffer.field_B;
                 if (param3 != 0) {
                   return true;
                 }
@@ -369,7 +369,7 @@ class fe extends pi {
                 }
                 j.field_d = null;
               }
-              nb.field_f = ld.field_B;
+              nb.field_f = CipherPacketBuffer.field_B;
               if (param3 != 0) {
                 return true;
               }
@@ -378,22 +378,22 @@ class fe extends pi {
             }
             this.a(param1, ki.field_n, gb.field_e, nk.field_w, (byte) -123, this, param2);
           }
-          L3: {
+          regionExit1: {
             if (jk.field_ab != 0) {
-              if (this.a(wi.field_w, param1, param3 + 0, m.field_e, jk.field_ab, this, param2)) {
+              if (this.a(wi.field_w, param1, param3 + 0, GameAppletShell.field_e, jk.field_ab, this, param2)) {
                 param0 = false;
                 if (var7 == 0) {
-                  break L3;
+                  break regionExit1;
                 }
               }
               if (var5 != 0) {
                 this.g(4966);
-                if (ld.field_B == 0 &&
+                if (CipherPacketBuffer.field_B == 0 &&
                   nb.field_f != 0) {
                   this.a(param2, gb.field_e, nk.field_w, param1, this, 0);
                   var10 = j.field_d;
                   if (var10 == null) {
-                    nb.field_f = ld.field_B;
+                    nb.field_f = CipherPacketBuffer.field_B;
                     if (param3 != 0) {
                       return true;
                     }
@@ -402,7 +402,7 @@ class fe extends pi {
                   }
                   if (!(var10.field_y instanceof cd)) {
                     j.field_d = null;
-                    nb.field_f = ld.field_B;
+                    nb.field_f = CipherPacketBuffer.field_B;
                     if (param3 != 0) {
                       return true;
                     }
@@ -411,14 +411,14 @@ class fe extends pi {
                   }
                   ((cd) (var10.field_y)).a(27055, (se) null, var10);
                   j.field_d = null;
-                  nb.field_f = ld.field_B;
+                  nb.field_f = CipherPacketBuffer.field_B;
                   if (param3 != 0) {
                     return true;
                   }
                   tg.a(-95, this.h(-27867));
                   return param0;
                 }
-                nb.field_f = ld.field_B;
+                nb.field_f = CipherPacketBuffer.field_B;
                 if (param3 != 0) {
                   return true;
                 }
@@ -427,7 +427,7 @@ class fe extends pi {
               }
             }
           }
-          if (ld.field_B == 0 &&
+          if (CipherPacketBuffer.field_B == 0 &&
             nb.field_f != 0) {
             this.a(param2, gb.field_e, nk.field_w, param1, this, 0);
             var11 = j.field_d;
@@ -437,7 +437,7 @@ class fe extends pi {
               }
               j.field_d = null;
             }
-            nb.field_f = ld.field_B;
+            nb.field_f = CipherPacketBuffer.field_B;
             if (param3 != 0) {
               return true;
             }
@@ -445,7 +445,7 @@ class fe extends pi {
             return param0;
           }
         }
-        nb.field_f = ld.field_B;
+        nb.field_f = CipherPacketBuffer.field_B;
         if (param3 != 0) {
           return true;
         }

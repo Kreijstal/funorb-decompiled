@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wj extends cb {
-    static ea field_l;
-    static ea[] field_k;
+    static Sprite field_l;
+    static Sprite[] field_k;
     static int field_j;
     static String field_i;
 
@@ -40,7 +40,7 @@ final class wj extends cb {
           if (fg.a(-1975005818, param0)) {
             return true;
           }
-          var8 = mf.field_f;
+          var8 = IsaacRandom.field_f;
           var7 = var8;
           var6 = var7;
           var2 = var6;
@@ -166,7 +166,7 @@ final class wj extends cb {
     }
 
     static {
-        field_k = new ea[4];
+        field_k = new Sprite[4];
         field_i = "Suggested names: ";
     }
 }

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lb extends pi {
-    static ea[] field_x;
+final class lb extends IntrusiveNode {
+    static Sprite[] field_x;
     static String field_t;
     int field_n;
     int field_s;
@@ -15,9 +15,9 @@ final class lb extends pi {
     static int field_w;
     int field_u;
 
-    final static bj a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         if (param0 != 1) {
-          return (bj) null;
+          return (ResourceArchive) null;
         }
         return eg.a(74, param1, false, false, true, 1);
     }

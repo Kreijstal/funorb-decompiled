@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cm extends pi {
+final class cm extends IntrusiveNode {
     static ae field_p;
     int field_s;
     static int field_r;
@@ -40,7 +40,7 @@ final class cm extends pi {
           sn.field_c.field_o = sn.field_c.field_o + 2;
           var5_int = sn.field_c.field_o;
           sn.field_c.a((byte) 106, mh.field_c);
-          sn.field_c.b(-1, bj.field_a);
+          sn.field_c.b(-1, ResourceArchive.field_a);
           var6 = 0;
           if (v.field_e) {
             var6 = var6 | 1;
@@ -99,7 +99,7 @@ final class cm extends pi {
     final static void e(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ld var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;

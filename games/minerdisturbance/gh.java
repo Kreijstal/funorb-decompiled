@@ -3,7 +3,7 @@
  */
 final class gh {
     static we field_b;
-    static ea field_a;
+    static Sprite field_a;
 
     public final String toString() {
         throw new IllegalStateException();
@@ -17,10 +17,10 @@ final class gh {
         RuntimeException decompiledCaughtException = null;
         var3 = MinerDisturbance.field_ab;
         try {
-          var4 = (il) (mf.field_h.b(67));
+          var4 = (il) (IsaacRandom.field_h.b(67));
           while (var4 != null) {
             ig.a(param0, 1, var4);
-            var4 = (il) (mf.field_h.b((byte) 56));
+            var4 = (il) (IsaacRandom.field_h.b((byte) 56));
           }
           var5 = (jb) (sd.field_a.b(96));
           while (var5 != null) {

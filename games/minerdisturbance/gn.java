@@ -33,7 +33,7 @@ final class gn {
         }
     }
 
-    final static ea[] a(int param0, int param1, int param2, boolean param3) {
+    final static Sprite[] a(int param0, int param1, int param2, boolean param3) {
         if (param3) {
           byte[] var5 = (byte[]) null;
           gn.a(-10, (byte[]) null, false);
@@ -108,12 +108,12 @@ final class gn {
         field_c = null;
         field_a = null;
         if (param0 != 28808) {
-          bj var2 = (bj) null;
-          gn.a((bj) null, (byte) 33);
+          ResourceArchive var2 = (ResourceArchive) null;
+          gn.a((ResourceArchive) null, (byte) 33);
         }
     }
 
-    final static void a(bj param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         b var3 = null;
         try {
           int var2_int = 86 % ((param1 + 42) / 57);

@@ -8,7 +8,7 @@ final class wi extends eg {
     static String[][] field_u;
     static int field_w;
     static String[][] field_x;
-    private ea[] field_E;
+    private Sprite[] field_E;
     private int field_D;
     static ae field_s;
     static int field_t;

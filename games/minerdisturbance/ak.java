@@ -3,15 +3,15 @@
  */
 final class ak {
     static sj field_b;
-    static ea[] field_a;
-    static ea field_c;
+    static Sprite[] field_a;
+    static Sprite field_c;
 
     public static void a(boolean param0) {
         field_a = null;
         field_b = null;
         field_c = null;
         if (param0) {
-          field_a = (ea[]) null;
+          field_a = (Sprite[]) null;
         }
     }
 

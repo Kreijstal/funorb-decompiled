@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fh {
-    static ea field_a;
-    static bj field_c;
-    static ea field_e;
+    static Sprite field_a;
+    static ResourceArchive field_c;
+    static Sprite field_e;
     static boolean field_d;
     static int field_b;
     private static String field_z;

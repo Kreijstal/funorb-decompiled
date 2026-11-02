@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rf {
-    static sb field_c;
-    static ea field_d;
+    static PacketBuffer field_c;
+    static Sprite field_d;
     static int field_b;
     static String field_a;
 
@@ -77,7 +77,7 @@ final class rf {
     }
 
     static {
-        field_c = new sb(256);
+        field_c = new PacketBuffer(256);
         field_a = "Logging in...";
     }
 }

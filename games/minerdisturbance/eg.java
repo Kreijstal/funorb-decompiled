@@ -6,7 +6,7 @@ import java.io.*;
 class eg implements ad, cf {
     int field_r;
     int field_c;
-    static ea field_b;
+    static Sprite field_b;
     static String field_g;
     int field_i;
     private int field_o;
@@ -20,7 +20,7 @@ class eg implements ad, cf {
     int field_e;
     we field_k;
     int field_n;
-    static ea[] field_m;
+    static Sprite[] field_m;
     static int field_h;
 
     private final void a(int param0, byte param1, int param2, fe param3) {
@@ -115,13 +115,13 @@ class eg implements ad, cf {
         }
     }
 
-    final static bj a(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5) {
+    final static ResourceArchive a(int param0, int param1, boolean param2, boolean param3, boolean param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           int var8 = 0;
           ij var9 = null;
-          bj stackIn_12_0 = null;
+          ResourceArchive stackIn_12_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -146,7 +146,7 @@ class eg implements ad, cf {
             if (param3) {
               var9.b(-37);
             }
-            stackIn_12_0 = new bj(var9, param4, param5);
+            stackIn_12_0 = new ResourceArchive(var9, param4, param5);
             return stackIn_12_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -427,7 +427,7 @@ class eg implements ad, cf {
         }
     }
 
-    final static boolean a(bj param0, int param1, bj param2, bj param3) {
+    final static boolean a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -638,7 +638,7 @@ class eg implements ad, cf {
           }
           if (param0 < 41) {
             var8 = (java.math.BigInteger) null;
-            eg.a(93, (byte) 88, (byte[]) null, -74, (java.math.BigInteger) null, (sb) null, (java.math.BigInteger) null);
+            eg.a(93, (byte) 88, (byte[]) null, -74, (java.math.BigInteger) null, (PacketBuffer) null, (java.math.BigInteger) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -859,7 +859,7 @@ class eg implements ad, cf {
     protected eg() {
     }
 
-    final static void a(int param0, byte param1, byte[] param2, int param3, java.math.BigInteger param4, sb param5, java.math.BigInteger param6) {
+    final static void a(int param0, byte param1, byte[] param2, int param3, java.math.BigInteger param4, PacketBuffer param5, java.math.BigInteger param6) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -893,7 +893,7 @@ class eg implements ad, cf {
           }
           if (null == bd.field_f ||
             !(var7_int <= bd.field_f.field_u.length)) {
-            bd.field_f = new sb(var7_int);
+            bd.field_f = new PacketBuffer(var7_int);
           }
           bd.field_f.field_o = 0;
           bd.field_f.a(param0, param3, true, param2);
@@ -901,7 +901,7 @@ class eg implements ad, cf {
           bd.field_f.a(var13, 31747);
           if (null == c.field_a ||
             !(c.field_a.field_u.length >= 100)) {
-            c.field_a = new sb(100);
+            c.field_a = new PacketBuffer(100);
           }
           c.field_a.field_o = 0;
           c.field_a.c(10, 25564);

@@ -5,7 +5,7 @@ final class mh implements uj {
     static double field_a;
     static rc[] field_b;
     static boolean field_f;
-    static ea field_d;
+    static Sprite field_d;
     static int field_c;
     static je[][] field_e;
 

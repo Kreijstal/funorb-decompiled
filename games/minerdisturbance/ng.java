@@ -53,22 +53,22 @@ final class ng {
         RuntimeException var5 = null;
         var11 = MinerDisturbance.field_ab;
         try {
-          eh.e(param3, param4, 1 + param1, 10000536);
-          eh.e(param3, param0 + param4, param1 + 1, 12105912);
+          SoftwareRasterizer.e(param3, param4, 1 + param1, 10000536);
+          SoftwareRasterizer.e(param3, param0 + param4, param1 + 1, 12105912);
           var5_int = 1;
-          if (var5_int + param4 < eh.field_d) {
-            var5_int = -param4 + eh.field_d;
+          if (var5_int + param4 < SoftwareRasterizer.field_d) {
+            var5_int = -param4 + SoftwareRasterizer.field_d;
           }
           var6 = param0;
-          if (eh.field_e < var6 + param4) {
-            var6 = -param4 + eh.field_e;
+          if (SoftwareRasterizer.field_e < var6 + param4) {
+            var6 = -param4 + SoftwareRasterizer.field_e;
           }
           var7 = 122 / ((80 - param2) / 46);
           for (var8 = var5_int; var6 > var8; var8++) {
             var9 = 152 + var8 * 48 / param0;
             var10 = var9 | (var9 << 8 | var9 << 16);
-            eh.field_f[param3 + eh.field_g * (var8 + param4)] = var10;
-            eh.field_f[param1 + param3 + (param4 + var8) * eh.field_g] = var10;
+            SoftwareRasterizer.field_f[param3 + SoftwareRasterizer.field_g * (var8 + param4)] = var10;
+            SoftwareRasterizer.field_f[param1 + param3 + (param4 + var8) * SoftwareRasterizer.field_g] = var10;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

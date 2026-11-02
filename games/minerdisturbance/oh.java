@@ -5,7 +5,7 @@ final class oh extends bl {
     static int field_E;
     static String field_A;
     private Object field_B;
-    static bj field_C;
+    static ResourceArchive field_C;
     static boolean field_F;
 
     final boolean h(int param0) {
@@ -80,10 +80,10 @@ final class oh extends bl {
         return this.field_B;
     }
 
-    final static vc a(int param0, int param1, bj param2) {
+    final static vc a(int param0, int param1, ResourceArchive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        bj var4 = null;
+        ResourceArchive var4 = null;
         byte[] var5 = null;
         vc stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -92,8 +92,8 @@ final class oh extends bl {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -86) {
-            var4 = (bj) null;
-            oh.a(-87, 94, (bj) null);
+            var4 = (ResourceArchive) null;
+            oh.a(-87, 94, (ResourceArchive) null);
           }
           var5 = param2.e(param1, 1);
           var3 = var5;

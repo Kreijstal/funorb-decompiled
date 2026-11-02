@@ -25,7 +25,7 @@ final class ql {
         }
     }
 
-    final static boolean a(ld param0, byte param1) {
+    final static boolean a(CipherPacketBuffer param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -58,8 +58,8 @@ final class ql {
           aj.field_c.field_j = 0;
           return;
         }
-        ld var2 = (ld) null;
-        ql.a((ld) null, (byte) 45);
+        CipherPacketBuffer var2 = (CipherPacketBuffer) null;
+        ql.a((CipherPacketBuffer) null, (byte) 45);
         aj.field_c.field_o = 0;
         aj.field_c.field_j = 0;
     }

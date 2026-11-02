@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jn extends pi {
+final class jn extends IntrusiveNode {
     byte[] field_s;
     long field_o;
     static ae field_r;
@@ -37,7 +37,7 @@ final class jn extends pi {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        ld var14 = null;
+        CipherPacketBuffer var14 = null;
         int[][] var18 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
@@ -71,11 +71,11 @@ final class jn extends pi {
             }
             pn.a(var4, 11760, var5);
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
-              fg.a((byte) -86, (sb) (var14));
+              fg.a((byte) -86, (PacketBuffer) (var14));
               if (var6_intLifetime1 != 0) {
-                qm.a(fl.field_c, tk.field_h, var6_intLifetime1, true, ah.field_b, vb.field_b);
+                qm.a(fl.field_c, tk.field_h, var6_intLifetime1, true, ah.field_b, ArchiveProvider.field_b);
               } else {
-                qm.a(fl.field_c, tk.field_h, var6_intLifetime1, true, ah.field_b, vb.field_b);
+                qm.a(fl.field_c, tk.field_h, var6_intLifetime1, true, ah.field_b, ArchiveProvider.field_b);
               }
             }
             si.a(var5, -14391);
@@ -87,7 +87,7 @@ final class jn extends pi {
             while (var9 < var8) {
               var11 = an.field_a[var9];
               var6[0][var10] = fl.field_b[var11];
-              var18[0][var10 * 4] = pi.field_h[var11];
+              var18[0][var10 * 4] = IntrusiveNode.field_h[var11];
               var18[0][4 * var10 + 1] = jk.field_db[var11];
               var18[0][2 + 4 * var10] = qa.field_c[var11];
               var18[0][var10 * 4 + 3] = li.field_a[var11];
@@ -105,7 +105,7 @@ final class jn extends pi {
             while (var9Lifetime1 < var8) {
               var11Lifetime1 = an.field_a[var9Lifetime1 + var5];
               var6[1][var13] = fl.field_b[var11Lifetime1];
-              var18[1][4 * var13] = pi.field_h[var11Lifetime1];
+              var18[1][4 * var13] = IntrusiveNode.field_h[var11Lifetime1];
               var18[1][4 * var13 + 1] = jk.field_db[var11Lifetime1];
               var18[1][var13 * 4 + 2] = qa.field_c[var11Lifetime1];
               var18[1][3 + var13 * 4] = li.field_a[var11Lifetime1];
@@ -129,12 +129,12 @@ final class jn extends pi {
         }
     }
 
-    final static ea a(String param0, int param1, String param2, bj param3) {
+    final static Sprite a(String param0, int param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        bj var6 = null;
-        ea stackIn_3_0 = null;
+        ResourceArchive var6 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -145,8 +145,8 @@ final class jn extends pi {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -29553) {
-            var6 = (bj) null;
-            jn.a((String) null, -42, (String) null, (bj) null);
+            var6 = (ResourceArchive) null;
+            jn.a((String) null, -42, (String) null, (ResourceArchive) null);
           }
           var4_int = param3.a(-118, param2);
           var5 = param3.a(param0, var4_int, param1 ^ 29451);

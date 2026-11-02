@@ -8,7 +8,7 @@ final class jf {
     private boolean field_d;
     private String field_c;
 
-    final static void a(bj param0, bj param1, byte param2, bj param3) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, byte param2, ResourceArchive param3) {
         ln[] var14 = null;
         int var11_int = 0;
         int var8 = 0;
@@ -24,7 +24,7 @@ final class jf {
         sl.field_q = (we) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo12", param0));
         bn.field_d = (we) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo14", param0));
         cn.field_g = (we) ((Object) oc.a(param3, (byte) 125, "commonui", "arezzo14bold", param0));
-        ea var17 = new ea(param1.a("", param2 ^ 18, "button.gif"), (java.awt.Component) ((Object) ef.field_c));
+        Sprite var17 = new Sprite(param1.a("", param2 ^ 18, "button.gif"), (java.awt.Component) ((Object) ef.field_c));
         pb.a("commonui", param0, "dropdown", (byte) -77);
         ln[] var5 = tb.a("screen_options", "commonui", param0, 1);
         kn.field_F = new ln[4];
@@ -52,15 +52,15 @@ final class jf {
         var9Lifetime1 = var17.field_C;
         ti.a((byte) -15);
         var17.g();
-        eh.b(0, 0, eh.field_g, eh.field_c);
-        ea var15 = new ea(var9Lifetime1, var9Lifetime1);
-        ea var18 = var15;
+        SoftwareRasterizer.b(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_c);
+        Sprite var15 = new Sprite(var9Lifetime1, var9Lifetime1);
+        Sprite var18 = var15;
         var18.g();
         var17.g(0, 0);
-        ea var11 = new ea(var9Lifetime1, var9Lifetime1);
+        Sprite var11 = new Sprite(var9Lifetime1, var9Lifetime1);
         var11.g();
         var17.g(-var17.field_y + var9Lifetime1, 0);
-        ea var12 = new ea(-(var9Lifetime1 * 2) + var17.field_y, var9Lifetime1);
+        Sprite var12 = new Sprite(-(var9Lifetime1 * 2) + var17.field_y, var9Lifetime1);
         var12.g();
         var17.g(-var9Lifetime1, 0);
         tk.b(true);
@@ -68,7 +68,7 @@ final class jf {
           return;
         }
         try {
-          r.field_a = new ea[]{var15, var12, var11};
+          r.field_a = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "jf.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

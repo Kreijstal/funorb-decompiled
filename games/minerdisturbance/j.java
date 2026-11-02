@@ -4,7 +4,7 @@
 final class j implements Runnable {
     volatile fj[] field_g;
     vf field_c;
-    static m field_h;
+    static GameAppletShell field_h;
     static long field_f;
     static String field_e;
     volatile boolean field_b;
@@ -15,10 +15,10 @@ final class j implements Runnable {
     final static int a(int param0, int param1, boolean param2, int param3, pf param4, String param5, pf param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
-        sb stackIn_12_0 = null;
+        PacketBuffer stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         String stackIn_13_2 = null;
-        sb stackIn_15_0 = null;
+        PacketBuffer stackIn_15_0 = null;
         int stackIn_15_1 = 0;
         String stackIn_16_2 = null;
         int stackIn_35_0 = 0;
@@ -61,7 +61,7 @@ final class j implements Runnable {
             return stackIn_6_0;
           }
           if (qd.field_Q == cm.field_p) {
-            mf.field_a = null;
+            IsaacRandom.field_a = null;
             sn.field_c.field_o = 0;
             if (param5 != null) {
               var9 = 0;
@@ -99,7 +99,7 @@ final class j implements Runnable {
               } else {
                 stackIn_13_2 = var14;
               }
-              ((sb) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2);
+              ((PacketBuffer) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2);
               stackIn_15_0 = rf.field_c;
               stackIn_15_1 = 8;
               if (param4.b((byte) 88)) {
@@ -107,7 +107,7 @@ final class j implements Runnable {
               } else {
                 stackIn_16_2 = "";
               }
-              ((sb) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_16_2);
+              ((PacketBuffer) (Object) stackIn_15_0).a(stackIn_15_1, stackIn_16_2);
               sn.field_c.c(16, 25564);
               sn.field_c.field_o = sn.field_c.field_o + 1;
               var9 = sn.field_c.field_o;
@@ -118,7 +118,7 @@ final class j implements Runnable {
             qd.field_Q = jn.field_r;
           }
           if (qd.field_Q == jn.field_r &&
-            ta.a(0, 1)) {
+            IntrusiveDeque.a(0, 1)) {
             var9Lifetime1 = kj.field_a.d((byte) -54);
             kj.field_a.field_o = 0;
             if (var9Lifetime1 >= 100 &&
@@ -139,18 +139,18 @@ final class j implements Runnable {
                 oj.field_K = var9Lifetime1;
                 qd.field_Q = aa.field_l;
               } else {
-                ta.a(0, hl.a(-92));
-                mf.field_a = new Boolean(bh.a(kj.field_a, -29320));
+                IntrusiveDeque.a(0, hl.a(-92));
+                IsaacRandom.field_a = new Boolean(bh.a(kj.field_a, -29320));
                 kj.field_a.field_o = 0;
               }
             }
           }
           if (lm.field_M == qd.field_Q) {
             var9Lifetime2 = 2;
-            if (ta.a(0, var9Lifetime2)) {
+            if (IntrusiveDeque.a(0, var9Lifetime2)) {
               var10Lifetime1 = kj.field_a.e(-25);
               kj.field_a.field_o = 0;
-              if (ta.a(0, var10Lifetime1)) {
+              if (IntrusiveDeque.a(0, var10Lifetime1)) {
                 var11 = vh.field_i.length;
                 for (var12 = 0; var12 < var11; var12++) {
                   vh.field_i[var12] = kj.field_a.g(-1);
@@ -182,7 +182,7 @@ final class j implements Runnable {
               if (qa.a(-112) > 30000L) {
                 nf.field_g = oi.field_K;
               } else {
-                nf.field_g = l.field_a;
+                nf.field_g = FullscreenFocusCanvas.field_a;
               }
               ek.field_c = false;
               stackIn_61_0 = 249;
@@ -259,9 +259,9 @@ final class j implements Runnable {
         int var2 = -13 % ((param1 - 7) / 38);
         param0 = param0 & 8191;
         if (param0 < 4096) {
-          return 2048 > param0 ? ta.field_g[2048 - param0] : -ta.field_g[-2048 + param0];
+          return 2048 > param0 ? IntrusiveDeque.field_g[2048 - param0] : -IntrusiveDeque.field_g[-2048 + param0];
         }
-        return param0 >= 6144 ? ta.field_g[param0 - 6144] : -ta.field_g[6144 - param0];
+        return param0 >= 6144 ? IntrusiveDeque.field_g[param0 - 6144] : -IntrusiveDeque.field_g[6144 - param0];
     }
 
     final static boolean a(byte param0) {

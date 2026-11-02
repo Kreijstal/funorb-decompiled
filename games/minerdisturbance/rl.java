@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rl extends pi {
+abstract class rl extends IntrusiveNode {
     int field_n;
 
     abstract int a(hg param0);

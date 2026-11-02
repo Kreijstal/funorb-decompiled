@@ -145,9 +145,9 @@ final class nm implements Runnable {
         int var2 = 40 / ((-81 - param1) / 45);
         param0 = param0 & 8191;
         if (param0 >= 4096) {
-          return param0 >= 6144 ? -ta.field_g[8192 - param0] : -ta.field_g[param0 - 4096];
+          return param0 >= 6144 ? -IntrusiveDeque.field_g[8192 - param0] : -IntrusiveDeque.field_g[param0 - 4096];
         }
-        return 2048 <= param0 ? ta.field_g[-param0 + 4096] : ta.field_g[param0];
+        return 2048 <= param0 ? IntrusiveDeque.field_g[-param0 + 4096] : IntrusiveDeque.field_g[param0];
     }
 
     final vl a(int param0, boolean param1, uh param2) {

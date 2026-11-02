@@ -5,7 +5,7 @@ final class v implements uj {
     static String field_a;
     static int[] field_b;
     static boolean field_e;
-    static ea[] field_d;
+    static Sprite[] field_d;
     static int field_c;
 
     public final void a(boolean param0) {

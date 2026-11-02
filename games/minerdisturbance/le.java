@@ -38,7 +38,7 @@ final class le implements uj {
         }
     }
 
-    final static void a(int param0, sb param1, int param2, int param3, int param4) {
+    final static void a(int param0, PacketBuffer param1, int param2, int param3, int param4) {
         param1.c(12, 25564);
         param1.b((byte) 121, 17);
         param1.b((byte) 122, param0);

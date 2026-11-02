@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vd extends um {
+final class vd extends PcmStream {
     private di field_A;
     private int field_C;
     private wh field_F;
@@ -299,7 +299,7 @@ final class vd extends um {
         return 2;
     }
 
-    final um c() {
+    final PcmStream c() {
         return null;
     }
 
@@ -310,7 +310,7 @@ final class vd extends um {
         field_r = null;
     }
 
-    final um b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -465,7 +465,7 @@ final class vd extends um {
     }
 
     final static void a(int param0, int param1, mj param2) {
-        ld var3 = null;
+        CipherPacketBuffer var3 = null;
         try {
           var3 = sn.field_c;
           if (param1 != -3450) {

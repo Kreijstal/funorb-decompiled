@@ -61,7 +61,7 @@ final class qh implements ad {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        ea var8 = null;
+        Sprite var8 = null;
         try {
           var6_int = param1 + param2.field_u;
           var7 = param2.field_t + param3;

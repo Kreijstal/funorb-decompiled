@@ -181,12 +181,12 @@ final class qd extends kn implements sh {
           ti.field_M = param2;
           cg.field_C = true;
           if (0 == ti.field_M) {
-            var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ta.field_a);
+            var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, IntrusiveDeque.field_a);
             var4 = 3 + var3_int;
-            mf.field_m = new int[var4];
+            IsaacRandom.field_m = new int[var4];
             ne.field_K = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
-              mf.field_m[var5] = -1;
+              IsaacRandom.field_m[var5] = -1;
             }
             wf.field_P = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -194,18 +194,18 @@ final class qd extends kn implements sh {
             }
             ne.field_K[-3 + var4] = "";
             ne.field_K[var4 - 2] = ud.field_b;
-            mf.field_m[-2 + var4] = 0;
+            IsaacRandom.field_m[-2 + var4] = 0;
             wf.field_P[0] = 4;
             ne.field_K[-1 + var4] = ed.field_f;
-            mf.field_m[-1 + var4] = 1;
+            IsaacRandom.field_m[-1 + var4] = 1;
             wf.field_P[1] = 5;
           } else if (ti.field_M == 1) {
-            var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ta.field_a);
+            var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, IntrusiveDeque.field_a);
             var4 = var3_int + 2;
             ne.field_K = new String[var4];
-            mf.field_m = new int[var4];
+            IsaacRandom.field_m = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
-              mf.field_m[var5] = -1;
+              IsaacRandom.field_m[var5] = -1;
             }
             wf.field_P = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -213,7 +213,7 @@ final class qd extends kn implements sh {
             }
             ne.field_K[var4 - 2] = "";
             ne.field_K[var4 - 1] = ed.field_f;
-            mf.field_m[var4 - 1] = 0;
+            IsaacRandom.field_m[var4 - 1] = 0;
             wf.field_P[0] = 5;
           } else if (ti.field_M != 2) {
             if (ti.field_M == 3) {
@@ -223,10 +223,10 @@ final class qd extends kn implements sh {
                 var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, pn.field_d);
               }
               var4 = 2 + var3_int;
-              mf.field_m = new int[var4];
+              IsaacRandom.field_m = new int[var4];
               ne.field_K = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                mf.field_m[var5] = -1;
+                IsaacRandom.field_m[var5] = -1;
               }
               wf.field_P = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -234,15 +234,15 @@ final class qd extends kn implements sh {
               }
               ne.field_K[-2 + var4] = "";
               ne.field_K[var4 - 1] = ed.field_f;
-              mf.field_m[-1 + var4] = 0;
+              IsaacRandom.field_m[-1 + var4] = 0;
               wf.field_P[0] = 5;
             } else if (ti.field_M == 4) {
               var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, ri.field_f);
               var4 = var3_int + 2;
-              mf.field_m = new int[var4];
+              IsaacRandom.field_m = new int[var4];
               ne.field_K = new String[var4];
               for (var5 = 0; var5 < var4; var5++) {
-                mf.field_m[var5] = -1;
+                IsaacRandom.field_m[var5] = -1;
               }
               wf.field_P = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
@@ -250,7 +250,7 @@ final class qd extends kn implements sh {
               }
               ne.field_K[-2 + var4] = "";
               ne.field_K[var4 - 1] = ed.field_f;
-              mf.field_m[var4 - 1] = 0;
+              IsaacRandom.field_m[var4 - 1] = 0;
               wf.field_P[0] = 5;
             } else {
               if (ti.field_M != 5) {
@@ -259,9 +259,9 @@ final class qd extends kn implements sh {
               var3_int = jc.a((byte) 106, gh.field_b, fd.field_J, w.field_S, cn.field_F);
               var4 = 3 + var3_int;
               ne.field_K = new String[var4];
-              mf.field_m = new int[var4];
+              IsaacRandom.field_m = new int[var4];
               for (var5 = 0; var4 > var5; var5++) {
-                mf.field_m[var5] = -1;
+                IsaacRandom.field_m[var5] = -1;
               }
               wf.field_P = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
@@ -269,10 +269,10 @@ final class qd extends kn implements sh {
               }
               ne.field_K[-3 + var4] = "";
               ne.field_K[-2 + var4] = li.field_b;
-              mf.field_m[-2 + var4] = 0;
+              IsaacRandom.field_m[-2 + var4] = 0;
               wf.field_P[0] = 3;
               ne.field_K[-1 + var4] = ed.field_f;
-              mf.field_m[var4 - 1] = 1;
+              IsaacRandom.field_m[var4 - 1] = 1;
               wf.field_P[1] = 5;
             }
           } else {
@@ -322,15 +322,15 @@ final class qd extends kn implements sh {
             var6 = stackIn_26_0;
             var7 = var6 + (var5 + 7);
             ne.field_K = new String[var7];
-            mf.field_m = new int[var7];
+            IsaacRandom.field_m = new int[var7];
             for (var8 = 0; var7 > var8; var8++) {
-              mf.field_m[var8] = -1;
+              IsaacRandom.field_m[var8] = -1;
             }
-            mf.field_m[1] = 0;
+            IsaacRandom.field_m[1] = 0;
             ne.field_K[0] = ca.field_f;
             ne.field_K[1] = tb.field_b;
             wf.field_P = new int[2];
-            mf.field_m[3] = 1;
+            IsaacRandom.field_m[3] = 1;
             wf.field_P[1] = 2;
             ne.field_K[5] = "";
             ne.field_K[4] = bb.field_b;
@@ -348,7 +348,7 @@ final class qd extends kn implements sh {
               stackIn_33_0[stackIn_33_1] = stackIn_34_2;
             }
             ne.field_K[6 + var5] = null;
-            mf.field_m[var5 + 6] = -2;
+            IsaacRandom.field_m[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
               stackIn_38_0 = ne.field_K;
               stackIn_38_1 = 7 + (var5 + var8Lifetime3);
@@ -367,7 +367,7 @@ final class qd extends kn implements sh {
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; ne.field_K.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_89_0 = ne.field_K[var4Lifetime1];
-            stackIn_90_1 = !(mf.field_m[var4Lifetime1] < 0);
+            stackIn_90_1 = !(IsaacRandom.field_m[var4Lifetime1] < 0);
             var5Lifetime1 = hl.a(stackIn_89_0, stackIn_90_1, -15388);
             if (var5Lifetime1 > var3_intLifetime1) {
               var3_intLifetime1 = var5Lifetime1;
@@ -393,11 +393,11 @@ final class qd extends kn implements sh {
             }
           }
           si.field_d = -(var3_intLifetime1 >> 1) + (rj.field_e + var3_intLifetime1);
-          hn.field_b = pn.field_a.field_i * (sn.field_d + hi.field_z << 1);
+          hn.field_b = pn.field_a.field_i * (sn.field_d + SpriteState.field_z << 1);
           cg.field_o = -(var3_intLifetime1 >> 1) + rj.field_e;
           for (var4Lifetime2 = 0; var4Lifetime2 < ne.field_K.length; var4Lifetime2++) {
             stackIn_115_0 = hn.field_b;
-            if (0 <= mf.field_m[var4Lifetime2]) {
+            if (0 <= IsaacRandom.field_m[var4Lifetime2]) {
               stackIn_116_1 = nk.field_u;
             } else {
               stackIn_116_1 = vd.field_z;
@@ -410,18 +410,18 @@ final class qd extends kn implements sh {
           var5Lifetime3 = 0;
           var6Lifetime1 = lj.field_p;
           while (ne.field_K.length > var5Lifetime3) {
-            var7Lifetime2 = mf.field_m[var5Lifetime3];
+            var7Lifetime2 = IsaacRandom.field_m[var5Lifetime3];
             if (0 > var7Lifetime2) {
               var6Lifetime1 = var6Lifetime1 + vd.field_z;
             } else {
               var8Lifetime1 = hl.a(ne.field_K[var5Lifetime3], true, -15388);
               var9 = -(var8Lifetime1 >> 1) + rj.field_e;
-              var6Lifetime1 = var6Lifetime1 + hi.field_z;
+              var6Lifetime1 = var6Lifetime1 + SpriteState.field_z;
               ed.field_a[var5Lifetime3] = new int[4];
               ed.field_a[var5Lifetime3][0] = -ka.field_a + var9;
               ed.field_a[var5Lifetime3][1] = var6Lifetime1;
               ed.field_a[var5Lifetime3][2] = (ka.field_a << 1) + var8Lifetime1;
-              var6Lifetime1 = var6Lifetime1 + (nk.field_u + hi.field_z + (sn.field_d << 1));
+              var6Lifetime1 = var6Lifetime1 + (nk.field_u + SpriteState.field_z + (sn.field_d << 1));
               ed.field_a[var5Lifetime3][3] = (sn.field_d << 1) + nk.field_u;
             }
             var5Lifetime3++;
@@ -452,7 +452,7 @@ final class qd extends kn implements sh {
     }
 
     final static void a(int param0, byte param1) {
-        pi var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         sl var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -491,32 +491,32 @@ final class qd extends kn implements sh {
     final static void n(int param0) {
         ff.field_e = oa.a((byte) -81, ff.field_e, new String[]{"<br><shad=000001><%0></shad><br>"});
         fb.field_h = oa.a((byte) -72, fb.field_h, new String[]{"<br><shad=000001><%0></shad><br>"});
-        m.field_g[0] = mn.field_v;
-        m.field_g[3] = em.field_u;
-        m.field_g[1] = vc.field_w;
-        m.field_g[6] = cc.field_M;
-        m.field_g[2] = ka.field_c;
-        m.field_g[4] = qe.field_e;
-        m.field_g[5] = ng.field_i;
-        m.field_g[21] = md.field_a;
-        m.field_g[19] = gd.field_t;
-        m.field_g[18] = ee.field_H;
-        m.field_g[20] = ri.field_b;
-        m.field_g[16] = dn.field_n;
-        m.field_g[13] = te.field_a;
-        m.field_g[17] = de.field_c;
-        m.field_g[10] = jh.field_b;
-        m.field_g[8] = ck.field_c[1];
-        m.field_g[23] = pm.field_d;
-        m.field_g[14] = sd.field_e;
-        m.field_g[15] = ee.field_E;
-        m.field_g[22] = jc.field_D;
-        m.field_g[24] = sd.field_e;
+        GameAppletShell.field_g[0] = mn.field_v;
+        GameAppletShell.field_g[3] = em.field_u;
+        GameAppletShell.field_g[1] = vc.field_w;
+        GameAppletShell.field_g[6] = cc.field_M;
+        GameAppletShell.field_g[2] = ka.field_c;
+        GameAppletShell.field_g[4] = qe.field_e;
+        GameAppletShell.field_g[5] = ng.field_i;
+        GameAppletShell.field_g[21] = md.field_a;
+        GameAppletShell.field_g[19] = gd.field_t;
+        GameAppletShell.field_g[18] = ee.field_H;
+        GameAppletShell.field_g[20] = ri.field_b;
+        GameAppletShell.field_g[16] = dn.field_n;
+        GameAppletShell.field_g[13] = te.field_a;
+        GameAppletShell.field_g[17] = de.field_c;
+        GameAppletShell.field_g[10] = jh.field_b;
+        GameAppletShell.field_g[8] = ck.field_c[1];
+        GameAppletShell.field_g[23] = pm.field_d;
+        GameAppletShell.field_g[14] = sd.field_e;
+        GameAppletShell.field_g[15] = ee.field_E;
+        GameAppletShell.field_g[22] = jc.field_D;
+        GameAppletShell.field_g[24] = sd.field_e;
         e.field_i = new String[35][][];
-        m.field_g[7] = ck.field_c[0];
-        m.field_g[9] = ck.field_c[2];
-        m.field_g[11] = jf.field_e;
-        m.field_g[12] = tl.field_p + ":";
+        GameAppletShell.field_g[7] = ck.field_c[0];
+        GameAppletShell.field_g[9] = ck.field_c[2];
+        GameAppletShell.field_g[11] = jf.field_e;
+        GameAppletShell.field_g[12] = tl.field_p + ":";
         e.field_i[11] = ci.field_h;
         e.field_i[10] = pb.field_R;
         e.field_i[0] = nk.field_v;
@@ -552,7 +552,7 @@ final class qd extends kn implements sh {
         e.field_i[33] = i.field_b;
         e.field_i[32] = ob.field_n;
         e.field_i[30] = vh.field_b;
-        e.field_i[31] = sb.field_s;
+        e.field_i[31] = PacketBuffer.field_s;
     }
 
     static {

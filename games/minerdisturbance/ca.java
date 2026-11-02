@@ -14,7 +14,7 @@ final class ca extends ek {
     private long field_e;
 
     final static void a(int param0, int param1) {
-        ld var2 = sn.field_c;
+        CipherPacketBuffer var2 = sn.field_c;
         var2.d((byte) -112, param0);
         var2.c(param1, 25564);
         var2.c(0, 25564);

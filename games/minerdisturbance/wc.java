@@ -3,7 +3,7 @@
  */
 final class wc implements uj {
     static boolean field_b;
-    static ea[][] field_c;
+    static Sprite[][] field_c;
     static int[] field_a;
     static String field_d;
 
@@ -20,22 +20,22 @@ final class wc implements uj {
         ha.field_e = 0;
     }
 
-    final static ea[] a(int param0) {
+    final static Sprite[] a(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = MinerDisturbance.field_ab;
-        ea[] var1 = new ea[sc.field_d];
+        Sprite[] var1 = new Sprite[sc.field_d];
         for (var2 = 0; sc.field_d > var2; var2++) {
           var3 = ng.field_e[var2] * qk.field_b[var2];
-          var4 = db.field_b[var2];
+          var4 = ClientException.field_b[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = af.field_p[c.a((int) var4[var6], 255)];
           }
-          var1[var2] = new ea(pf.field_c, wd.field_a, bg.field_d[var2], oc.field_e[var2], qk.field_b[var2], ng.field_e[var2], var5);
+          var1[var2] = new Sprite(pf.field_c, wd.field_a, bg.field_d[var2], oc.field_e[var2], qk.field_b[var2], ng.field_e[var2], var5);
         }
         if (param0 > -27) {
           wc.a(-122);
@@ -57,13 +57,13 @@ final class wc implements uj {
           if (af.field_u >= 10) {
             if (fe.j(-63)) {
               if (fh.field_b != 0) {
-                mf.a(-752960408, param1);
+                IsaacRandom.a(-752960408, param1);
               } else {
-                g.a(false, -47, param2);
+                ArchiveIndex.a(false, -47, param2);
                 cl.a(param1, 0, 0, 310);
               }
             } else {
-              eh.d();
+              SoftwareRasterizer.d();
               pd.a(10853, 320, 240);
               cl.a(param1, 0, 0, 310);
             }
@@ -110,7 +110,7 @@ final class wc implements uj {
           var1_int = mg.field_e[0];
           for (var2 = 1; var2 < mg.field_e.length; var2++) {
             var3 = mg.field_e[var2];
-            ai.a(ta.field_d, var2 << 4, ta.field_d, var1_int, var3);
+            ai.a(IntrusiveDeque.field_d, var2 << 4, IntrusiveDeque.field_d, var1_int, var3);
             var1_int = var1_int + var3;
           }
           if (param0 != -29) {
@@ -126,7 +126,7 @@ final class wc implements uj {
 
     public static void b(int param0) {
         field_d = null;
-        field_c = (ea[][]) null;
+        field_c = (Sprite[][]) null;
         if (param0 != 0) {
           wc.b(false);
         }
@@ -142,7 +142,7 @@ final class wc implements uj {
 
     static {
         field_a = new int[8192];
-        field_c = new ea[2][];
+        field_c = new Sprite[2][];
         field_b = false;
         field_d = "This pre-dug shaft is a must-have for the lazy miner. Simply take the shortest route to the bottom of the volcano and beat your friends to the loot.";
     }

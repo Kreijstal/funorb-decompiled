@@ -9,7 +9,7 @@ final class tl extends pc {
     static long field_o;
     static int field_m;
 
-    final static p a(String param0, bj param1, int param2, String param3, bj param4) {
+    final static p a(String param0, ResourceArchive param1, int param2, String param3, ResourceArchive param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

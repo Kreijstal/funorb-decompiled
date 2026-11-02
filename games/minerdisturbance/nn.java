@@ -12,13 +12,13 @@ final class nn {
     private int field_b;
     static char field_l;
     static int field_k;
-    static ea field_c;
+    static Sprite field_c;
     private int field_g;
     static boolean field_n;
     static r field_r;
     static ae field_m;
     static boolean field_q;
-    static ea[] field_h;
+    static Sprite[] field_h;
     static String field_a;
 
     final boolean b(int param0) {
@@ -79,7 +79,7 @@ final class nn {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         int var6 = this.a(param0, param3, gb.field_e, param4, param1, 113, nk.field_w);
-        int var7 = this.a(param0, param3, m.field_e, param4, param1, 50, wi.field_w);
+        int var7 = this.a(param0, param3, GameAppletShell.field_e, param4, param1, 50, wi.field_w);
         this.a(var6, var7, -1);
         if (param2 == 140) {
           return;
@@ -401,7 +401,7 @@ final class nn {
         if (this.field_p == 0) {
           boolean decompiledFrameRemainder0 = true;
           if (0 == jk.field_ab) {
-            if (ld.field_B != 0) {
+            if (CipherPacketBuffer.field_B != 0) {
               if (param2 != ~this.field_p) {
                 return;
               }
@@ -438,9 +438,9 @@ final class nn {
             }
           }
         } else {
-          if (ld.field_B == 0) {
+          if (CipherPacketBuffer.field_B == 0) {
             if (0 == jk.field_ab &&
-              ld.field_B == 0) {
+              CipherPacketBuffer.field_B == 0) {
               this.field_p = 0;
             }
             if (param2 != ~this.field_p) {
@@ -468,7 +468,7 @@ final class nn {
             this.field_b = bi.field_q;
             this.field_b = this.field_b - 1;
             if (0 == jk.field_ab &&
-              ld.field_B == 0) {
+              CipherPacketBuffer.field_B == 0) {
               this.field_p = 0;
             }
             if (param2 != ~this.field_p) {
@@ -493,7 +493,7 @@ final class nn {
           }
           this.field_b = this.field_b - 1;
           if (0 == jk.field_ab &&
-            ld.field_B == 0) {
+            CipherPacketBuffer.field_B == 0) {
             this.field_p = 0;
           }
           if (param2 != ~this.field_p) {
@@ -520,10 +520,10 @@ final class nn {
         field_f = new ag();
         field_l = ',';
         field_k = 5;
-        field_c = new ea(540, 140);
+        field_c = new Sprite(540, 140);
         field_r = new r();
         field_m = new ae();
-        field_h = new ea[2];
+        field_h = new Sprite[2];
         field_a = "<%0> <times> 1,000 = <%1>";
     }
 }

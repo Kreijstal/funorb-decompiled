@@ -3,9 +3,9 @@
  */
 final class ri {
     static byte[] field_c;
-    private bj field_d;
+    private ResourceArchive field_d;
     static String field_f;
-    private bj field_a;
+    private ResourceArchive field_a;
     static String field_b;
     private tg field_e;
     private tg field_g;
@@ -200,7 +200,7 @@ final class ri {
                         stackIn_38_0Lifetime1 = var17;
                         stackIn_38_1Lifetime1 = var16 << 4;
                         var18 = stackIn_38_0Lifetime1 + stackIn_38_1Lifetime1;
-                        ta.field_d[var18] = var8;
+                        IntrusiveDeque.field_d[var18] = var8;
                         mg.field_e[var16] = 1 + var17;
                         if (0 < param3.field_E &&
                           param3.field_x != null) {
@@ -341,7 +341,7 @@ final class ri {
             return stackIn_5_0;
           }
           if (param2 < 57) {
-            this.field_d = (bj) null;
+            this.field_d = (ResourceArchive) null;
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -383,10 +383,10 @@ final class ri {
         int var5 = 0;
         try {
           if (param1) {
-            if (pi.field_h[param2] < pi.field_h[param3]) {
+            if (IntrusiveNode.field_h[param2] < IntrusiveNode.field_h[param3]) {
               return true;
             }
-            if (pi.field_h[param2] > pi.field_h[param3]) {
+            if (IntrusiveNode.field_h[param2] > IntrusiveNode.field_h[param3]) {
               return false;
             }
             if (cc.field_L[param3] > cc.field_L[param2]) {
@@ -402,10 +402,10 @@ final class ri {
             if (cc.field_L[param3] < cc.field_L[param2]) {
               return false;
             }
-            if (pi.field_h[param2] < pi.field_h[param3]) {
+            if (IntrusiveNode.field_h[param2] < IntrusiveNode.field_h[param3]) {
               return true;
             }
-            if (pi.field_h[param2] > pi.field_h[param3]) {
+            if (IntrusiveNode.field_h[param2] > IntrusiveNode.field_h[param3]) {
               return false;
             }
           }
@@ -495,7 +495,7 @@ final class ri {
         }
     }
 
-    ri(bj param0, bj param1) {
+    ri(ResourceArchive param0, ResourceArchive param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

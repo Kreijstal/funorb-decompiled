@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class a {
-    static ea[] field_a;
+    static Sprite[] field_a;
     static String field_b;
     static int field_c;
     static int field_d;
@@ -73,7 +73,7 @@ final class a {
         field_a = null;
         field_b = null;
         if (param0 != 0) {
-          field_a = (ea[]) null;
+          field_a = (Sprite[]) null;
         }
     }
 

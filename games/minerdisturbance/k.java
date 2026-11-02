@@ -45,15 +45,15 @@ final class k extends cb {
         Object var1_ref = null;
         var1_ref = lb.field_y;
         synchronized (var1_ref) {
-          ld.field_B = qd.field_J;
+          CipherPacketBuffer.field_B = qd.field_J;
           t.field_c = t.field_c + 1;
           nk.field_w = sa.field_o;
           gb.field_e = nm.field_a;
           field_i = kk.field_d;
           kk.field_d = false;
           jk.field_ab = ic.field_n;
-          wi.field_w = al.field_n;
-          m.field_e = vl.field_G;
+          wi.field_w = DualLinkNode.field_n;
+          GameAppletShell.field_e = vl.field_G;
           if (param0 != 10525) {
             return;
           }
@@ -65,8 +65,8 @@ final class k extends cb {
         if (af.field_u < 2) {
           return aa.field_f;
         }
-        if (null != sb.field_r) {
-          if (!sb.field_r.a((byte) 107)) {
+        if (null != PacketBuffer.field_r) {
+          if (!PacketBuffer.field_r.a((byte) 107)) {
             return ge.field_d;
           }
           return ic.field_g;
@@ -78,13 +78,13 @@ final class k extends cb {
           return ub.field_c + " - " + hj.field_i.a("commonui", param0 + 22834) + "%";
         }
         if (!pb.field_r.a((byte) 99)) {
-          return dc.field_a;
+          return GameCanvas.field_a;
         }
         if (!pb.field_r.a(false, "commonui")) {
           return mb.field_a + " - " + pb.field_r.a("commonui", -121) + "%";
         }
         if (!oh.field_C.a((byte) 85)) {
-          return l.field_e;
+          return FullscreenFocusCanvas.field_e;
         }
         if (!oh.field_C.b(-1)) {
           return ec.field_f + " - " + oh.field_C.c(-14858) + "%";

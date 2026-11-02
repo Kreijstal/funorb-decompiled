@@ -40,7 +40,7 @@ final class cn {
     byte field_d;
     int field_i;
 
-    final static boolean a(int param0, int param1, int param2, bj param3) {
+    final static boolean a(int param0, int param1, int param2, ResourceArchive param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         String var5 = null;
@@ -146,50 +146,50 @@ final class cn {
         if (param1 == 0) {
           if (param3 > param5) {
             if (param0 > param3) {
-              h.a(param3, param5, eh.field_f, param6, param0, param4, -13612, param7, param2);
+              h.a(param3, param5, SoftwareRasterizer.field_f, param6, param0, param4, -13612, param7, param2);
               return;
             }
             if (param5 >= param0) {
-              h.a(param5, param0, eh.field_f, param2, param3, param6, param1 - 13612, param7, param4);
+              h.a(param5, param0, SoftwareRasterizer.field_f, param2, param3, param6, param1 - 13612, param7, param4);
               return;
             }
-            h.a(param0, param5, eh.field_f, param4, param3, param6, -13612, param7, param2);
+            h.a(param0, param5, SoftwareRasterizer.field_f, param4, param3, param6, -13612, param7, param2);
             return;
           }
           if (param5 < param0) {
-            h.a(param5, param3, eh.field_f, param2, param0, param4, -13612, param7, param6);
+            h.a(param5, param3, SoftwareRasterizer.field_f, param2, param0, param4, -13612, param7, param6);
             return;
           }
           if (param3 < param0) {
-            h.a(param0, param3, eh.field_f, param4, param5, param2, param1 ^ -13612, param7, param6);
+            h.a(param0, param3, SoftwareRasterizer.field_f, param4, param5, param2, param1 ^ -13612, param7, param6);
             return;
           }
-          h.a(param3, param0, eh.field_f, param6, param5, param2, -13612, param7, param4);
+          h.a(param3, param0, SoftwareRasterizer.field_f, param6, param5, param2, -13612, param7, param4);
           return;
         }
-        bj var10 = (bj) null;
-        cn.a(-102, -75, -127, (bj) null);
+        ResourceArchive var10 = (ResourceArchive) null;
+        cn.a(-102, -75, -127, (ResourceArchive) null);
         if (param3 > param5) {
           if (param0 > param3) {
-            h.a(param3, param5, eh.field_f, param6, param0, param4, -13612, param7, param2);
+            h.a(param3, param5, SoftwareRasterizer.field_f, param6, param0, param4, -13612, param7, param2);
             return;
           }
           if (param5 >= param0) {
-            h.a(param5, param0, eh.field_f, param2, param3, param6, param1 - 13612, param7, param4);
+            h.a(param5, param0, SoftwareRasterizer.field_f, param2, param3, param6, param1 - 13612, param7, param4);
             return;
           }
-          h.a(param0, param5, eh.field_f, param4, param3, param6, -13612, param7, param2);
+          h.a(param0, param5, SoftwareRasterizer.field_f, param4, param3, param6, -13612, param7, param2);
           return;
         }
         if (param5 < param0) {
-          h.a(param5, param3, eh.field_f, param2, param0, param4, -13612, param7, param6);
+          h.a(param5, param3, SoftwareRasterizer.field_f, param2, param0, param4, -13612, param7, param6);
           return;
         }
         if (param3 < param0) {
-          h.a(param0, param3, eh.field_f, param4, param5, param2, param1 ^ -13612, param7, param6);
+          h.a(param0, param3, SoftwareRasterizer.field_f, param4, param5, param2, param1 ^ -13612, param7, param6);
           return;
         }
-        h.a(param3, param0, eh.field_f, param6, param5, param2, -13612, param7, param4);
+        h.a(param3, param0, SoftwareRasterizer.field_f, param6, param5, param2, -13612, param7, param4);
     }
 
     cn() {

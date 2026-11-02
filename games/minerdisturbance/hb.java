@@ -3,9 +3,9 @@
  */
 final class hb {
     static volatile int field_b;
-    private bj field_d;
-    static bj field_e;
-    private bj field_a;
+    private ResourceArchive field_d;
+    static ResourceArchive field_e;
+    private ResourceArchive field_a;
     private hk field_c;
 
     final fc a(int param0, int param1) {
@@ -21,7 +21,7 @@ final class hb {
         }
         var3 = new fc();
         if (var4 != null) {
-          var3.a(param0 + 7307, new sb(var4));
+          var3.a(param0 + 7307, new PacketBuffer(var4));
         }
         if (32768 <= param1) {
           var3.g(60);
@@ -38,20 +38,20 @@ final class hb {
         int var1 = 97 / ((-10 - param0) / 39);
     }
 
-    final static ea a(int param0, int param1, int param2) {
-        ea var6 = null;
-        ea var3 = null;
+    final static Sprite a(int param0, int param1, int param2) {
+        Sprite var6 = null;
+        Sprite var3 = null;
         int var4 = 0;
         int var5 = MinerDisturbance.field_ab;
         if (param1 == 32768) {
-          var6 = new ea(param0, param0);
+          var6 = new Sprite(param0, param0);
           var3 = var6;
           for (var4 = 0; var3.field_D.length > var4; var4++) {
             var6.field_D[var4] = param2;
           }
           return var3;
         }
-        return (ea) null;
+        return (Sprite) null;
     }
 
     private hb() throws Throwable {

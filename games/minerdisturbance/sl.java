@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sl extends pi {
+final class sl extends IntrusiveNode {
     int field_p;
     static we field_q;
     int field_o;
@@ -119,7 +119,7 @@ final class sl extends pi {
             var64[var13] = var15Lifetime2;
           }
           for (var13Lifetime1 = 0; ik.field_T > var13Lifetime1; var13Lifetime1++) {
-            var14Lifetime1 = ta.field_d[var13Lifetime1];
+            var14Lifetime1 = IntrusiveDeque.field_d[var13Lifetime1];
             var15Lifetime1 = param4.field_e[var14Lifetime1];
             var16 = param4.field_O[var14Lifetime1];
             var17 = param4.field_F[var14Lifetime1];

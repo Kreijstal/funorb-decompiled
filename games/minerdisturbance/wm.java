@@ -5,7 +5,7 @@ final class wm {
     static String field_c;
     static jf field_f;
     static boolean field_e;
-    static ea[] field_g;
+    static Sprite[] field_g;
     private int field_h;
     private int field_b;
     private int[][] field_a;

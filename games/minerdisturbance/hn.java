@@ -41,7 +41,7 @@ abstract class hn {
         }
     }
 
-    abstract void a(sb param0, byte param1);
+    abstract void a(PacketBuffer param0, byte param1);
 
     final static ed a(boolean param0, byte param1) {
         ed var2 = null;

@@ -3,16 +3,16 @@
  */
 final class pk {
     static vm field_b;
-    static ea field_d;
+    static Sprite field_d;
     static java.awt.Image field_a;
     static int field_i;
     static int[] field_f;
-    static ea field_c;
-    static ea[] field_h;
-    static bj field_g;
+    static Sprite field_c;
+    static Sprite[] field_h;
+    static ResourceArchive field_g;
     static volatile long field_e;
 
-    final static void a(int param0, ea[] param1, int param2, boolean param3, int param4, int param5) {
+    final static void a(int param0, Sprite[] param1, int param2, boolean param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -36,14 +36,14 @@ final class pk {
             var8 = param1[1].field_x;
             param1[0].b(param0, param4, param2);
             param1[2].b(-var7 + (param5 + param0), param4, param2);
-            eh.b(en.field_b);
-            eh.f(var6_int + param0, param4, param0 + (param5 - var7), param1[1].field_A + param4);
+            SoftwareRasterizer.b(en.field_b);
+            SoftwareRasterizer.f(var6_int + param0, param4, param0 + (param5 - var7), param1[1].field_A + param4);
             var9 = var6_int + param0;
             var10 = -var7 + (param5 + param0);
             for (param0 = var9; var10 > param0; param0 = param0 + var8) {
               param1[1].b(param0, param4, param2);
             }
-            eh.a(en.field_b);
+            SoftwareRasterizer.a(en.field_b);
             return;
           }
           return;
@@ -74,7 +74,7 @@ final class pk {
         }
     }
 
-    final static ih a(int param0, bj param1, byte param2, int param3, bj param4) {
+    final static ih a(int param0, ResourceArchive param1, byte param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         ih stackIn_6_0 = null;
@@ -90,7 +90,7 @@ final class pk {
             return (ih) (stackIn_2_0);
           }
           if (param2 < 30) {
-            field_g = (bj) null;
+            field_g = (ResourceArchive) null;
           }
           stackIn_6_0 = ge.a(param4.a(false, param3, param0), -569);
           return stackIn_6_0;
@@ -190,7 +190,7 @@ final class pk {
 
     final static void b(int param0) {
         if (param0 < 102) {
-          field_c = (ea) null;
+          field_c = (Sprite) null;
         }
     }
 

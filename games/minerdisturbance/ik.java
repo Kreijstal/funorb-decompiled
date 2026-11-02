@@ -400,7 +400,7 @@ final class ik extends kn implements be, sh, f {
         var3 = var3 + (5 + this.a(20, di.field_cb, "", this.field_M, var3, (byte) -116, 170));
         var3 = var3 + this.a(170, var3, tk.field_c, this.field_J, -2791);
         var3 = var3 + (5 + this.a(170, di.field_E, var3, this.field_O, -100, t.field_d));
-        var3 = var3 + (5 + this.a(170, hi.field_w, var3, this.field_I, -100, wm.field_c));
+        var3 = var3 + (5 + this.a(170, SpriteState.field_w, var3, this.field_I, -100, wm.field_c));
         var3 = var3 + this.a(oc.field_j, this.field_Q, 170, var3, 105);
         am var4 = new am(46, var3, this.field_v - 90, 25, this.field_V, true, -120 + this.field_v, 5, sl.field_q, 11579568, mc.field_x);
         this.a(-1, var4);
@@ -492,7 +492,7 @@ final class ik extends kn implements be, sh, f {
             }
           }
           for (var3 = 0; var3 < ne.field_K.length; var3++) {
-            var4 = mf.field_m[var3];
+            var4 = IsaacRandom.field_m[var3];
             if (0 <= var4) {
               if (var4 == pn.field_a.field_e) {
                 var5 = fg.field_b;
@@ -544,9 +544,9 @@ final class ik extends kn implements be, sh, f {
             var7Lifetime1 = hl.a(stackIn_40_0, stackIn_41_1, -15388);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + rj.field_e;
             if (0 <= var4) {
-              var1_int = var1_int + hi.field_z;
+              var1_int = var1_int + SpriteState.field_z;
               if (var4 != pn.field_a.field_e) {
-                stackIn_45_0 = mf.field_j;
+                stackIn_45_0 = IsaacRandom.field_j;
               } else {
                 stackIn_45_0 = s.field_O;
               }
@@ -557,8 +557,8 @@ final class ik extends kn implements be, sh, f {
               var1_int = var1_int + sn.field_d;
             }
             if (var4 >= 0) {
-              ta.field_b.a(var6, var8Lifetime1, nm.field_e + var1_int, var5, -1);
-              var1_int = var1_int + (hi.field_z + (sn.field_d + nk.field_u));
+              IntrusiveDeque.field_b.a(var6, var8Lifetime1, nm.field_e + var1_int, var5, -1);
+              var1_int = var1_int + (SpriteState.field_z + (sn.field_d + nk.field_u));
             } else {
               gh.field_b.a(var6, var8Lifetime1, var1_int + he.field_a, var5, -1);
               var1_int = var1_int + vd.field_z;

@@ -7,7 +7,7 @@ final class bk {
     static String field_b;
     private ij[] field_a;
     private nm field_e;
-    private sb field_d;
+    private PacketBuffer field_d;
     private java.math.BigInteger field_f;
     private ee field_h;
     private java.math.BigInteger field_g;
@@ -79,7 +79,7 @@ final class bk {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        sb var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -97,7 +97,7 @@ final class bk {
         if (this.field_h.field_C) {
           return false;
         }
-        var10 = new sb(this.field_h.c((byte) -115));
+        var10 = new PacketBuffer(this.field_h.c((byte) -115));
         var10.field_o = 5;
         var3 = var10.d((byte) -54);
         var10.field_o = var10.field_o + var3 * 72;

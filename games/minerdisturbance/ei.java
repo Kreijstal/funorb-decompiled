@@ -8,9 +8,9 @@ final class ei extends kn implements sh {
     private String[] field_O;
     static String field_P;
     static boolean field_L;
-    static bj field_Q;
+    static ResourceArchive field_Q;
     static String field_K;
-    static ea field_M;
+    static Sprite field_M;
 
     public static void o(int param0) {
         field_J = null;

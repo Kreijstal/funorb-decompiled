@@ -46,7 +46,7 @@ final class pb {
     short[] field_i;
     static int field_K;
     static String[][] field_R;
-    static bj field_r;
+    static ResourceArchive field_r;
 
     private final void b(int param0) {
         if (param0 != 0) {
@@ -63,8 +63,8 @@ final class pb {
 
     final static int b(boolean param0) {
         if (!fh.field_d &&
-          ld.field_w <= hk.field_e &&
-          qn.field_K + ld.field_w > hk.field_e) {
+          CipherPacketBuffer.field_w <= hk.field_e &&
+          qn.field_K + CipherPacketBuffer.field_w > hk.field_e) {
           return se.field_K;
         }
         if (param0) {
@@ -73,7 +73,7 @@ final class pb {
         return -1;
     }
 
-    final static ln a(String param0, bj param1, String param2, byte param3) {
+    final static ln a(String param0, ResourceArchive param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

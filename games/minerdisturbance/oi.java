@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oi extends fe {
-    private ea field_F;
+    private Sprite field_F;
     private int field_Q;
     private int field_H;
     static String field_K;
@@ -10,12 +10,12 @@ final class oi extends fe {
     private int field_P;
     boolean field_O;
     private int field_D;
-    private ea[] field_E;
+    private Sprite[] field_E;
     static String[] field_J;
-    private ea field_M;
+    private Sprite field_M;
     private int field_L;
     int field_R;
-    private ea field_I;
+    private Sprite field_I;
 
     final void a(int param0, int param1, byte param2) {
         if (param2 > -103) {
@@ -29,7 +29,7 @@ final class oi extends fe {
         this.a(-1262785631);
     }
 
-    private final ea a(int param0, int param1, boolean param2) {
+    private final Sprite a(int param0, int param1, boolean param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -44,8 +44,8 @@ final class oi extends fe {
         if (param2) {
           this.field_Q = 49;
         }
-        ea var14 = new ea(2 * this.field_N, this.field_q);
-        vb.a(var14, 125);
+        Sprite var14 = new Sprite(2 * this.field_N, this.field_q);
+        ArchiveProvider.a(var14, 125);
         int var5 = this.field_q >> 1;
         for (var6 = 0; this.field_q > var6; var6++) {
           var7 = (var6 >> 1) * (this.field_N * 2 - 1) % (2 * this.field_N);
@@ -54,13 +54,13 @@ final class oi extends fe {
           var10 = var6 - var5;
           var11 = (int)(128.0 * (Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5)) + 128;
           var12 = var11 >= 256 ? var8 | var9 : (-16711936 & var8 * var11 | 16711680 & var9 * var11) >>> 8;
-          eh.e(var7, var6, this.field_N, var12);
+          SoftwareRasterizer.e(var7, var6, this.field_N, var12);
           var9Lifetime1 = 65280 & param1;
           var8Lifetime1 = param1 & 16711935;
-          eh.e(-(this.field_N * 2) + var7, var6, this.field_N, var12);
+          SoftwareRasterizer.e(-(this.field_N * 2) + var7, var6, this.field_N, var12);
           var12Lifetime1 = var11 < 256 ? (-16711936 & var11 * var8Lifetime1 | 16711680 & var11 * var9Lifetime1) >>> 8 : var9Lifetime1 | var8Lifetime1;
-          eh.e(var7 + this.field_N, var6, this.field_N, var12Lifetime1);
-          eh.e(-this.field_N + var7, var6, this.field_N, var12Lifetime1);
+          SoftwareRasterizer.e(var7 + this.field_N, var6, this.field_N, var12Lifetime1);
+          SoftwareRasterizer.e(-this.field_N + var7, var6, this.field_N, var12Lifetime1);
         }
         tk.b(true);
         return var14;
@@ -82,21 +82,21 @@ final class oi extends fe {
         if (param0 != -1262785631) {
           return;
         }
-        this.field_E = new ea[]{this.a(this.field_P, this.field_H, false), this.a(this.field_L, this.field_Q, false)};
+        this.field_E = new Sprite[]{this.a(this.field_P, this.field_H, false), this.a(this.field_L, this.field_Q, false)};
         this.field_F = this.c((byte) -125);
         this.field_I = this.field_F.e();
-        this.field_M = new ea(this.field_q >> 1, this.field_q);
+        this.field_M = new Sprite(this.field_q >> 1, this.field_q);
     }
 
-    private final ea c(byte param0) {
+    private final Sprite c(byte param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = MinerDisturbance.field_ab;
         int var2 = this.field_q >> 1;
-        ea var3 = new ea(var2, this.field_q);
-        vb.a(var3, 125);
+        Sprite var3 = new Sprite(var2, this.field_q);
+        ArchiveProvider.a(var3, 125);
         for (var4 = 0; var4 < this.field_q; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
             var6 = (double)var5 * (double)var5 / (double)(var4 * (-var4 + this.field_q));
@@ -105,7 +105,7 @@ final class oi extends fe {
               var6 = Math.sqrt(1.0 - var6);
               var8 = !(var6 >= 1.0) ? (int)(var6 * 255.0) : 255;
             }
-            eh.b(var5, var4, var8 << 16 | (var8 | var8 << 8));
+            SoftwareRasterizer.b(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
         tk.b(true);
@@ -118,13 +118,13 @@ final class oi extends fe {
     final static void a(we param0, we param1, int param2, int param3) {
         try {
           w.field_S = param3;
-          ta.field_b = param0;
+          IntrusiveDeque.field_b = param0;
           if (param2 < 86) {
             we var5 = (we) null;
             oi.a((we) null, (we) null, -28, -53);
           }
           gh.field_b = param1;
-          ti.a((byte) 88, eh.field_c / 2, eh.field_g / 2);
+          ti.a((byte) 88, SoftwareRasterizer.field_c / 2, SoftwareRasterizer.field_g / 2);
           vl.a(param1.field_E + param1.field_N, param1.field_N, false, param0.field_N + param0.field_E, param0.field_N);
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "oi.H(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -158,7 +158,7 @@ final class oi extends fe {
         }
     }
 
-    private final void a(int param0, int param1, int param2, ea param3) {
+    private final void a(int param0, int param1, int param2, Sprite param3) {
         int var6 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -181,16 +181,16 @@ final class oi extends fe {
             param3.f(var6, param1);
           }
           tk.b(true);
-          if (eh.field_a <= this.field_F.field_y + param2) {
-            vb.a(this.field_M, 126);
+          if (SoftwareRasterizer.field_a <= this.field_F.field_y + param2) {
+            ArchiveProvider.a(this.field_M, 126);
             param3.f(-this.field_D, 0);
             param3.f(-this.field_D + this.field_N * 2, 0);
             this.field_I.e(0, 0);
             tk.b(true);
             this.field_M.f(param2, param1);
           }
-          if (var5_int - this.field_F.field_y <= eh.field_k) {
-            vb.a(this.field_M, 127);
+          if (var5_int - this.field_F.field_y <= SoftwareRasterizer.field_k) {
+            ArchiveProvider.a(this.field_M, 127);
             for (var7 = this.field_v - (this.field_F.field_y - this.field_D); var7 > this.field_N * 2; var7 = var7 - 2 * this.field_N) {
             }
             param3.f(-var7, 0);
@@ -235,7 +235,7 @@ final class oi extends fe {
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         if (param1 > -33) {
-          this.field_F = (ea) null;
+          this.field_F = (Sprite) null;
         }
         super.a(param0, -67, param2, param3, param4);
         this.a(-1262785631);

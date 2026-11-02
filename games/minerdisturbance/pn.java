@@ -19,8 +19,8 @@ final class pn implements uj {
           !(ti.field_I.length >= param0)) {
           ti.field_I = new int[param0 * 2];
         }
-        if (null == pi.field_h) {
-          pi.field_h = new int[2 * param0];
+        if (null == IntrusiveNode.field_h) {
+          IntrusiveNode.field_h = new int[2 * param0];
           if (jk.field_db == null ||
             !(jk.field_db.length >= param0)) {
             jk.field_db = new int[2 * param0];
@@ -97,8 +97,8 @@ final class pn implements uj {
             }
           }
         } else {
-          if (param0 > pi.field_h.length) {
-            pi.field_h = new int[2 * param0];
+          if (param0 > IntrusiveNode.field_h.length) {
+            IntrusiveNode.field_h = new int[2 * param0];
             if (jk.field_db == null ||
               !(jk.field_db.length >= param0)) {
               jk.field_db = new int[2 * param0];
@@ -294,8 +294,8 @@ final class pn implements uj {
           if (param0 != -17) {
             field_d = (String) null;
           }
-          eh.b(40, 40, 560, 400, 1, 164);
-          eh.a(40, 40, 560, 400, 16777215);
+          SoftwareRasterizer.b(40, 40, 560, 400, 1, 164);
+          SoftwareRasterizer.a(40, 40, 560, 400, 16777215);
           var1_int = 16;
           var2 = 60;
           var3 = 60;
@@ -322,7 +322,7 @@ final class pn implements uj {
                 }
               }
             }
-            eh.b(-10 + var3, -10 + var2, 50, 20 + var1_int, 65330, 120);
+            SoftwareRasterizer.b(-10 + var3, -10 + var2, 50, 20 + var1_int, 65330, 120);
             wi.field_A.a((String) (var6), -10 + var3, var2 - 10, 50, var1_int + 20, 16777215, 5592405, 1, 1, 0);
             wi.field_A.a(var5.field_n, var3 - 10 + 60, var2 - 10, 140, var1_int + 20, 16777215, -1, 0, 1, 0);
             var2 = var2 + (var1_int + 24);

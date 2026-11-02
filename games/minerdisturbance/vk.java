@@ -5,7 +5,7 @@ final class vk {
     int field_c;
     static int field_a;
     int field_b;
-    static ea[] field_e;
+    static Sprite[] field_e;
     static ed field_g;
     static String field_d;
     int field_h;

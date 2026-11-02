@@ -7,7 +7,7 @@ final class hk {
     private int field_b;
     private sd field_g;
     private qc field_h;
-    static ea[] field_a;
+    static Sprite[] field_a;
     static String field_d;
     static int field_e;
     static String field_c;

@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public abstract class m extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
+public abstract class GameAppletShell extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     static int[] field_j;
-    static ta field_c;
+    static IntrusiveDeque field_c;
     static int field_e;
     boolean field_i;
-    static ea field_m;
+    static Sprite field_m;
     static String[] field_g;
     public static boolean field_h;
     public static boolean field_b;
@@ -74,7 +74,7 @@ public abstract class m extends java.applet.Applet implements Runnable, java.awt
         try {
           if (j.field_h == this &&
             !tn.field_J) {
-            mf.field_k = sf.a((byte) 124);
+            IsaacRandom.field_k = sf.a((byte) 124);
             gf.a(5000L, -10309);
             hd.field_g = null;
             this.a(true, false);
@@ -137,7 +137,7 @@ public abstract class m extends java.applet.Applet implements Runnable, java.awt
         try {
           field_m = null;
           if (param0 != -1) {
-            m.provideLoaderApplet((java.applet.Applet) null);
+            GameAppletShell.provideLoaderApplet((java.applet.Applet) null);
           }
           field_j = null;
           field_c = null;
@@ -211,7 +211,7 @@ public abstract class m extends java.applet.Applet implements Runnable, java.awt
           return;
         }
         try {
-          mf.field_k = 0L;
+          IsaacRandom.field_k = 0L;
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "m.start()");
         }
@@ -287,7 +287,7 @@ public abstract class m extends java.applet.Applet implements Runnable, java.awt
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var2.length() > var3) {
-                      stackIn_68_0 = g.a(var2.charAt(var3), (byte) -68);
+                      stackIn_68_0 = ArchiveIndex.a(var2.charAt(var3), (byte) -68);
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
@@ -359,13 +359,13 @@ public abstract class m extends java.applet.Applet implements Runnable, java.awt
                 }
                 mb.a((byte) -71);
                 this.c(-10);
-                bj.field_e = ab.a((byte) -98, nk.field_x, (java.awt.Component) ((Object) ef.field_c), ml.field_a);
+                ResourceArchive.field_e = ab.a((byte) -98, nk.field_x, (java.awt.Component) ((Object) ef.field_c), ml.field_a);
                 this.a(47);
                 eb.field_d = ik.f((byte) -2);
                 do {
                   boolean decompiledFrameRemainder0 = true;
-                  if (mf.field_k != 0L) {
-                    stackIn_101_0 = $cfr$lcmp(mf.field_k, sf.a((byte) -74));
+                  if (IsaacRandom.field_k != 0L) {
+                    stackIn_101_0 = $cfr$lcmp(IsaacRandom.field_k, sf.a((byte) -74));
                     decompiledFrameRemainder0 = (var5 == 0);
                     if ((decompiledFrameRemainder0) &&
                       (stackIn_101_0 <= 0)) {
@@ -651,7 +651,7 @@ public abstract class m extends java.applet.Applet implements Runnable, java.awt
             }
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          ef.field_c = (java.awt.Canvas) ((Object) new dc((java.awt.Component) (this)));
+          ef.field_c = (java.awt.Canvas) ((Object) new GameCanvas((java.awt.Component) (this)));
           ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) ef.field_c));
           ef.field_c.setSize(nk.field_x, ml.field_a);
           var3 = 9 / ((53 - param0) / 42);
@@ -698,7 +698,7 @@ public abstract class m extends java.applet.Applet implements Runnable, java.awt
           return;
         }
         try {
-          mf.field_k = sf.a((byte) -2) + 4000L;
+          IsaacRandom.field_k = sf.a((byte) -2) + 4000L;
         } catch (RuntimeException runtimeException) {
           throw lj.a((Throwable) ((Object) runtimeException), "m.stop()");
         }
@@ -729,7 +729,7 @@ public abstract class m extends java.applet.Applet implements Runnable, java.awt
 
     abstract void b(int param0);
 
-    protected m() {
+    protected GameAppletShell() {
         this.field_i = false;
     }
 
@@ -823,7 +823,7 @@ public abstract class m extends java.applet.Applet implements Runnable, java.awt
               tg.field_f = 0;
               qi.field_j = 0;
               if (param3 != 3) {
-                field_m = (ea) null;
+                field_m = (Sprite) null;
               }
               j.field_h = this;
               aj.field_d = bm.c(-108);

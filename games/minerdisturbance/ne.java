@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ne extends hc {
-    static ea[] field_O;
+    static Sprite[] field_O;
     private aa field_I;
     private int field_N;
     static String[] field_K;
     static String[] field_R;
-    static bj field_L;
+    static ResourceArchive field_L;
     int field_J;
     static long field_Q;
     static String field_M;
@@ -188,7 +188,7 @@ final class ne extends hc {
         }
     }
 
-    final static boolean a(int param0, char[] param1, sb param2, byte param3) {
+    final static boolean a(int param0, char[] param1, PacketBuffer param2, byte param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -208,14 +208,14 @@ final class ne extends hc {
           }
           var4_int = param2.field_o;
           var5 = 1;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (param1.length > var5) {
               stackIn_9_0 = param2.field_o;
               stackIn_9_1 = param2.field_u.length;
               if (var6 != 0) {
                 if (stackIn_9_0 < stackIn_9_1) {
-                  break L1;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -232,7 +232,7 @@ final class ne extends hc {
             }
             if ((decompiledFrameRemainder0) &&
               (param3 < -3)) {
-              break L1;
+              break scanLoop1;
             }
             ne.a(false);
             break;
@@ -287,7 +287,7 @@ final class ne extends hc {
     }
 
     static {
-        field_O = new ea[4];
+        field_O = new Sprite[4];
         field_R = new String[]{"Welcome to the Miner Market - the last stop before the volcano. You have 500 gold to spend and you'll have to spend it all before we let you go any further. Less experienced miners should opt to buy the basic kit by clicking the above button. Once you're done, click Start Game to get on with it. We hope you fare better than the last lot.", "Welcome to the Miner Market - the last stop before the Super Volcano. You have 600 gold to spend and you'll have to spend it all before we let you go any further. Less experienced miners should opt to buy the basic kit by clicking the above button. Once you're done, click Start Game to get on with it. We hope you fare better than the last lot."};
         field_M = "Gold: <%0>";
     }

@@ -25,18 +25,18 @@ final class aj implements uj {
     public final void a(boolean param0) {
         if (param0) {
           aj.b(-107);
-          db.field_d = 0;
+          ClientException.field_d = 0;
           kd.field_i = true;
           return;
         }
-        db.field_d = 0;
+        ClientException.field_d = 0;
         kd.field_i = true;
     }
 
     final static Boolean a(int param0) {
         int var2 = 10 % ((param0 - 16) / 60);
-        Boolean var1 = mf.field_a;
-        mf.field_a = null;
+        Boolean var1 = IsaacRandom.field_a;
+        IsaacRandom.field_a = null;
         return var1;
     }
 

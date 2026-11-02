@@ -57,7 +57,7 @@ final class dk {
           si.a(param0 ^ -22307);
           return;
         }
-        ld var2 = kj.field_a;
+        CipherPacketBuffer var2 = kj.field_a;
         var2.b((byte) 46);
         var2.b((byte) 19);
         var2.b((byte) 117);

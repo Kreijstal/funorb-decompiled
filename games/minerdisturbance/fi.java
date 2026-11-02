@@ -3,7 +3,7 @@
  */
 final class fi {
     static boolean[] field_a;
-    static ea[] field_b;
+    static Sprite[] field_b;
 
     public static void a(byte param0) {
         if (param0 < 35) {
@@ -13,7 +13,7 @@ final class fi {
         field_a = null;
     }
 
-    final static void a(byte param0, bj param1, hg param2, int param3) {
+    final static void a(byte param0, ResourceArchive param1, hg param2, int param3) {
         try {
           kc.field_d = param3 * pl.b((byte) -116) / 1000;
           gn.a(param1, (byte) -101);

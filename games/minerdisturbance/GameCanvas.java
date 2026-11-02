@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dc extends java.awt.Canvas {
+final class GameCanvas extends java.awt.Canvas {
     static String field_c;
     static String field_a;
     private java.awt.Component field_b;
@@ -30,7 +30,7 @@ final class dc extends java.awt.Canvas {
         }
     }
 
-    dc(java.awt.Component param0) {
+    GameCanvas(java.awt.Component param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {

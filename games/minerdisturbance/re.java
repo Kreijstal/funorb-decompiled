@@ -40,11 +40,11 @@ final class re implements uj {
               }
               incrementValue$1 = var6;
               var6++;
-              param3 = ta.field_d[incrementValue$1];
+              param3 = IntrusiveDeque.field_d[incrementValue$1];
               dupTemp$2 = param1[param3];
               dupTemp$3 = param2[dupTemp$2];
               param2[dupTemp$2] = dupTemp$3 + 1;
-              ta.field_d[dupTemp$3] = param3;
+              IntrusiveDeque.field_d[dupTemp$3] = param3;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -161,7 +161,7 @@ final class re implements uj {
               qd.field_Q = ra.field_c;
             }
             if (qd.field_Q == ra.field_c &&
-              ta.a(0, 1)) {
+              IntrusiveDeque.a(0, 1)) {
               var6_int = kj.field_a.d((byte) -54);
               kj.field_a.field_o = 0;
               if (var6_int == 0) {
@@ -173,7 +173,7 @@ final class re implements uj {
               }
             }
             if (qd.field_Q == ka.field_d &&
-              ta.a(0, 8)) {
+              IntrusiveDeque.a(0, 8)) {
               gd.field_s = kj.field_a.h(81);
               kj.field_a.field_o = 0;
               cm.a((byte) 6, param4, param0, tb.field_d, param2);
@@ -181,7 +181,7 @@ final class re implements uj {
             }
             boolean decompiledFrameRemainder0 = true;
             if (qd.field_Q == nn.field_m &&
-              ta.a(0, 1)) {
+              IntrusiveDeque.a(0, 1)) {
               var6_intLifetime1 = kj.field_a.d((byte) -54);
               ag.field_d = null;
               oj.field_K = var6_intLifetime1;
@@ -228,9 +228,9 @@ final class re implements uj {
                 kj.field_a.d((byte) -54);
                 kj.field_a.d((byte) -54);
                 kj.field_a.b((byte) 33);
-                g.field_k = kj.field_a.e(-47);
-                ja.field_v = new byte[g.field_k];
-                for (var8 = 0; g.field_k > var8; var8++) {
+                ArchiveIndex.field_k = kj.field_a.e(-47);
+                ja.field_v = new byte[ArchiveIndex.field_k];
+                for (var8 = 0; ArchiveIndex.field_k > var8; var8++) {
                   ja.field_v[var8] = kj.field_a.m(4);
                 }
               }
@@ -303,7 +303,7 @@ final class re implements uj {
                 if (qa.a(-125) > 30000L) {
                   nf.field_g = oi.field_K;
                 } else {
-                  nf.field_g = l.field_a;
+                  nf.field_g = FullscreenFocusCanvas.field_a;
                 }
                 ek.field_c = false;
                 stackIn_94_0 = 3;
@@ -364,7 +364,7 @@ final class re implements uj {
             field_c[var0] = 20 * var0 + 20 << 16;
           }
           if (2 < var0) {
-            field_c[var0] = hi.a(field_c[var0], (-2 + var0) * 22 << 8);
+            field_c[var0] = SpriteState.a(field_c[var0], (-2 + var0) * 22 << 8);
           }
         }
         field_d = 0;

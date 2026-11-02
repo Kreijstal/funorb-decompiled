@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jb extends pi {
+final class jb extends IntrusiveNode {
     int[] field_r;
     static boolean field_q;
     int field_n;
@@ -59,7 +59,7 @@ final class jb extends pi {
           var33 = var27;
           var7 = 420;
           if (var27 == null) {
-            g.a(80, 326, param3 + (640 - var7) / 2, var7, (byte) 121, hd.field_d);
+            ArchiveIndex.a(80, 326, param3 + (640 - var7) / 2, var7, (byte) 121, hd.field_d);
             return false;
           }
           var8 = 0;
@@ -68,8 +68,8 @@ final class jb extends pi {
             var10 = stackIn_12_0;
             if (var10 != 0 ||
               !param0 &&
-              !pi.field_k[var9] &&
-              (!pi.field_e[var9] ||
+              !IntrusiveNode.field_k[var9] &&
+              (!IntrusiveNode.field_e[var9] ||
               !(pj.field_a <= 0))) {
               var8++;
             }
@@ -84,7 +84,7 @@ final class jb extends pi {
           if (kb.field_c == 3) {
             var7 = 480;
           }
-          g.a(80, 262 + 32 * var9Lifetime1, param3 + (640 - var7) / 2, var7, (byte) 16, hd.field_d);
+          ArchiveIndex.a(80, 262 + 32 * var9Lifetime1, param3 + (640 - var7) / 2, var7, (byte) 16, hd.field_d);
           if (param0 &&
             !mh.a(var30, -1)) {
             pk.field_b.a(cn.field_K, 110 + param3 + 60, 166, 16610816, -1);
@@ -93,16 +93,16 @@ final class jb extends pi {
           stackIn_33_0 = (cm.field_o != 1) ? 0 : 1;
           var16 = stackIn_33_0;
           var17 = 0;
-          for (var18 = 0; ld.field_A.length > var18; var18++) {
+          for (var18 = 0; CipherPacketBuffer.field_A.length > var18; var18++) {
             boolean decompiledFrameRemainder0 = true;
             if (nm.a(var18, var33, -827843803)) {
               nj.field_c[var18].c(var12, var13);
             } else {
               decompiledFrameRemainder0 = !(param0);
               if ((decompiledFrameRemainder0) &&
-                (decompiledFrameRemainder0 = !(pi.field_k[var18]))) {
+                (decompiledFrameRemainder0 = !(IntrusiveNode.field_k[var18]))) {
                 if (pj.field_a <= 0) {
-                  decompiledFrameRemainder0 = !(pi.field_e[var18]);
+                  decompiledFrameRemainder0 = !(IntrusiveNode.field_e[var18]);
                   if (decompiledFrameRemainder0) {
                     ha.field_c.c(var12, var13);
                   }
@@ -159,7 +159,7 @@ final class jb extends pi {
           }
           var19 = 105 + param3;
           if (var15 != -1) {
-            ce.field_d.b(ld.field_A[var15], param3 + 320, var18Lifetime1, 0, -1);
+            ce.field_d.b(CipherPacketBuffer.field_A[var15], param3 + 320, var18Lifetime1, 0, -1);
             var20 = ce.field_d.field_G + 3;
             var21 = 30 + (278 - var11);
             var22 = nm.a(var15, var33, -827843803) ? 1 : 0;
@@ -175,7 +175,7 @@ final class jb extends pi {
             var21 += 23;
             var23 = 440 - var11;
             var24 = 30 - var11 + 380;
-            if (pi.field_j[var15] &&
+            if (IntrusiveNode.field_j[var15] &&
               var22 == 0) {
               ce.field_d.a(ge.field_b, 290 + param3, var21 - var20, 215, 480, 1, -1, 0, 0, var20);
             } else {
@@ -252,7 +252,7 @@ final class jb extends pi {
                 }
                 if (var16 != 0 &&
                   var15 == 26) {
-                  var25_ref = oa.a((byte) -83, en.field_a[var15], new String[]{"" + pi.field_a * 100 / 2800});
+                  var25_ref = oa.a((byte) -83, en.field_a[var15], new String[]{"" + IntrusiveNode.field_a * 100 / 2800});
                 }
                 if (33 == var15) {
                   var25_ref = oa.a((byte) -121, en.field_a[var15], new String[]{ri.a((byte) 115)});
@@ -262,11 +262,11 @@ final class jb extends pi {
                 }
               }
             }
-            for (var25 = 0; pi.field_m[var15] > var25; var25++) {
+            for (var25 = 0; IntrusiveNode.field_m[var15] > var25; var25++) {
               cb.field_e.c(var25 * 10 + 165 + var19, var24);
             }
             ce.field_d.c(fn.field_q, -130 + (var19 + 505), var23 + (-ce.field_d.field_I - ce.field_d.field_E), 1, -1);
-            ce.field_d.b(Integer.toString(pi.field_i[var15]), -31 + (-130 + var19) + 505, var23, 1, -1);
+            ce.field_d.b(Integer.toString(IntrusiveNode.field_i[var15]), -31 + (-130 + var19) + 505, var23, 1, -1);
           } else {
             ce.field_d.b(i.field_d, param3 + 320, var18Lifetime1, 0, -1);
           }
@@ -346,7 +346,7 @@ final class jb extends pi {
           var33 = var27;
           var7 = 420;
           if (var27 == null) {
-            g.a(80, 326, param3 + (640 - var7) / 2, var7, (byte) 121, hd.field_d);
+            ArchiveIndex.a(80, 326, param3 + (640 - var7) / 2, var7, (byte) 121, hd.field_d);
             return false;
           }
           var8 = 0;
@@ -355,8 +355,8 @@ final class jb extends pi {
             var10 = stackIn_12_0;
             if (var10 != 0 ||
               !param0 &&
-              !pi.field_k[var9] &&
-              (!pi.field_e[var9] ||
+              !IntrusiveNode.field_k[var9] &&
+              (!IntrusiveNode.field_e[var9] ||
               !(pj.field_a <= 0))) {
               var8++;
             }
@@ -371,7 +371,7 @@ final class jb extends pi {
           if (kb.field_c == 3) {
             var7 = 480;
           }
-          g.a(80, 262 + 32 * var9Lifetime1, param3 + (640 - var7) / 2, var7, (byte) 16, hd.field_d);
+          ArchiveIndex.a(80, 262 + 32 * var9Lifetime1, param3 + (640 - var7) / 2, var7, (byte) 16, hd.field_d);
           if (param0 &&
             !mh.a(var30, -1)) {
             pk.field_b.a(cn.field_K, 110 + param3 + 60, 166, 16610816, -1);
@@ -380,16 +380,16 @@ final class jb extends pi {
           stackIn_33_0 = (cm.field_o != 1) ? 0 : 1;
           var16 = stackIn_33_0;
           var17 = 0;
-          for (var18 = 0; ld.field_A.length > var18; var18++) {
+          for (var18 = 0; CipherPacketBuffer.field_A.length > var18; var18++) {
             boolean decompiledFrameRemainder0 = true;
             if (nm.a(var18, var33, -827843803)) {
               nj.field_c[var18].c(var12, var13);
             } else {
               decompiledFrameRemainder0 = !(param0);
               if ((decompiledFrameRemainder0) &&
-                (decompiledFrameRemainder0 = !(pi.field_k[var18]))) {
+                (decompiledFrameRemainder0 = !(IntrusiveNode.field_k[var18]))) {
                 if (pj.field_a <= 0) {
-                  decompiledFrameRemainder0 = !(pi.field_e[var18]);
+                  decompiledFrameRemainder0 = !(IntrusiveNode.field_e[var18]);
                   if (decompiledFrameRemainder0) {
                     ha.field_c.c(var12, var13);
                   }
@@ -446,7 +446,7 @@ final class jb extends pi {
           }
           var19 = 105 + param3;
           if (var15 != -1) {
-            ce.field_d.b(ld.field_A[var15], param3 + 320, var18Lifetime1, 0, -1);
+            ce.field_d.b(CipherPacketBuffer.field_A[var15], param3 + 320, var18Lifetime1, 0, -1);
             var20 = ce.field_d.field_G + 3;
             var21 = 30 + (278 - var11);
             var22 = nm.a(var15, var33, -827843803) ? 1 : 0;
@@ -462,7 +462,7 @@ final class jb extends pi {
             var21 += 23;
             var23 = 440 - var11;
             var24 = 30 - var11 + 380;
-            if (pi.field_j[var15] &&
+            if (IntrusiveNode.field_j[var15] &&
               var22 == 0) {
               ce.field_d.a(ge.field_b, 290 + param3, var21 - var20, 215, 480, 1, -1, 0, 0, var20);
             } else {
@@ -539,7 +539,7 @@ final class jb extends pi {
                 }
                 if (var16 != 0 &&
                   var15 == 26) {
-                  var25_ref = oa.a((byte) -83, en.field_a[var15], new String[]{"" + pi.field_a * 100 / 2800});
+                  var25_ref = oa.a((byte) -83, en.field_a[var15], new String[]{"" + IntrusiveNode.field_a * 100 / 2800});
                 }
                 if (33 == var15) {
                   var25_ref = oa.a((byte) -121, en.field_a[var15], new String[]{ri.a((byte) 115)});
@@ -549,11 +549,11 @@ final class jb extends pi {
                 }
               }
             }
-            for (var25 = 0; pi.field_m[var15] > var25; var25++) {
+            for (var25 = 0; IntrusiveNode.field_m[var15] > var25; var25++) {
               cb.field_e.c(var25 * 10 + 165 + var19, var24);
             }
             ce.field_d.c(fn.field_q, -130 + (var19 + 505), var23 + (-ce.field_d.field_I - ce.field_d.field_E), 1, -1);
-            ce.field_d.b(Integer.toString(pi.field_i[var15]), -31 + (-130 + var19) + 505, var23, 1, -1);
+            ce.field_d.b(Integer.toString(IntrusiveNode.field_i[var15]), -31 + (-130 + var19) + 505, var23, 1, -1);
           } else {
             ce.field_d.b(i.field_d, param3 + 320, var18Lifetime1, 0, -1);
           }

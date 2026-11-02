@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class em extends al {
+abstract class em extends DualLinkNode {
     static boolean field_w;
     static ia field_B;
     boolean field_z;
@@ -9,7 +9,7 @@ abstract class em extends al {
     static String field_u;
     static boolean field_x;
     volatile boolean field_C;
-    static ea field_y;
+    static Sprite field_y;
     static long field_A;
 
     abstract int f(int param0);
@@ -51,7 +51,7 @@ abstract class em extends al {
         il var5_ref_il = null;
         int[] var6 = null;
         int var8 = 0;
-        ld var9 = null;
+        CipherPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = MinerDisturbance.field_ab;
@@ -80,11 +80,11 @@ abstract class em extends al {
           } else {
             if (var2 == 1) {
               var4_int = var9.c((byte) 127);
-              var5_ref_il = (il) (mf.field_h.b(119));
+              var5_ref_il = (il) (IsaacRandom.field_h.b(119));
               while (var5_ref_il != null) {
                 if (~var3 != ~var5_ref_il.field_r ||
                   var4_int != var5_ref_il.field_p) {
-                  var5_ref_il = (il) (mf.field_h.b((byte) 56));
+                  var5_ref_il = (il) (IsaacRandom.field_h.b((byte) 56));
                   continue;
                 }
                 break;

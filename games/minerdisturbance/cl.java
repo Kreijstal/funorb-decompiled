@@ -29,7 +29,7 @@ final class cl extends kn implements wg, sh {
               field_M = (String) null;
             }
             var4 = param0.getGraphics();
-            bj.field_e.a(param1, param3 - 197, var4, param2);
+            ResourceArchive.field_e.a(param1, param3 - 197, var4, param2);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -425,7 +425,7 @@ final class cl extends kn implements wg, sh {
             } else {
               if (param2 == this.field_Q) {
                 if (this.field_N) {
-                  ta.f((byte) 67);
+                  IntrusiveDeque.f((byte) 67);
                 } else {
                   if (!this.field_O) {
                     nm.a(-6145);
@@ -461,7 +461,7 @@ final class cl extends kn implements wg, sh {
           bn.field_d.a(this.field_R, 20 + param1 + this.field_u, 15 + this.field_t + param2, this.field_v - 40, this.field_q, 16777215, -1, 1, 0, bn.field_d.field_I);
         }
         if (null != this.field_J) {
-          eh.e(10 + param1, 134 + param2, -20 + this.field_v, 4210752);
+          SoftwareRasterizer.e(10 + param1, 134 + param2, -20 + this.field_v, 4210752);
         }
         if (param0 != 4) {
           String var6 = (String) null;

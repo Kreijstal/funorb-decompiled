@@ -64,14 +64,14 @@ final class sc {
         }
     }
 
-    final static ea[] a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        ea[] var10;
-        ea[] var11_ref_ea__;
+        Sprite[] var10;
+        Sprite[] var11_ref_ea__;
         int var11;
         int var12;
-        ea var13;
+        Sprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -82,7 +82,7 @@ final class sc {
         int var12Lifetime4;
         var15 = MinerDisturbance.field_ab;
         var9 = param2 + param8 + param5;
-        var10 = new ea[]{new ea(var9, var9), new ea(param0, var9), new ea(var9, var9), new ea(var9, param0), new ea(64, 64), new ea(var9, param0), new ea(var9, var9), new ea(param0, var9), new ea(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param0, var9), new Sprite(var9, var9), new Sprite(var9, param0), new Sprite(64, 64), new Sprite(var9, param0), new Sprite(var9, var9), new Sprite(param0, var9), new Sprite(var9, var9)};
         var11_ref_ea__ = var10;
         for (var12 = 0; var12 < var11_ref_ea__.length; var12++) {
           var13 = var11_ref_ea__[var12];
@@ -91,7 +91,7 @@ final class sc {
           }
         }
         if (param6 != -81) {
-          return (ea[]) null;
+          return (Sprite[]) null;
         }
         for (var11 = 0; param8 > var11; var11++) {
           for (var12Lifetime1 = 0; var9 > var12Lifetime1; var12Lifetime1++) {

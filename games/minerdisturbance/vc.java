@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vc extends pi {
+final class vc extends IntrusiveNode {
     byte[] field_r;
     byte[] field_x;
     private int[] field_n;
@@ -11,9 +11,9 @@ final class vc extends pi {
     int field_q;
     static String field_u;
     ji[] field_v;
-    static ea[] field_p;
+    static Sprite[] field_p;
     short[] field_t;
-    static ea[] field_o;
+    static Sprite[] field_o;
 
     final static boolean a(boolean param0) {
         boolean stackIn_7_0 = false;
@@ -185,7 +185,7 @@ final class vc extends pi {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        sb var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         ng var40 = null;
         byte[] var41 = null;
@@ -269,7 +269,7 @@ final class vc extends pi {
           this.field_x = new byte[128];
           this.field_n = new int[128];
           this.field_t = new short[128];
-          var38 = new sb(param0);
+          var38 = new PacketBuffer(param0);
           for (var3 = 0; var38.field_u[var3 + var38.field_o] != 0; var3++) {
           }
           var55 = new byte[var3];

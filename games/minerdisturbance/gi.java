@@ -4,7 +4,7 @@
 final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static String field_b;
     static int field_c;
-    static ea field_a;
+    static Sprite field_a;
 
     public final synchronized void keyReleased(java.awt.event.KeyEvent param0) {
         int var2_int = 0;
@@ -49,7 +49,7 @@ final class gi implements java.awt.event.KeyListener, java.awt.event.FocusListen
     }
 
     final static void a(int param0, int param1) {
-        pi var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         hf var4 = null;
         RuntimeException decompiledCaughtException = null;

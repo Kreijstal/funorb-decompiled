@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nh {
-    static ta field_a;
+    static IntrusiveDeque field_a;
     private static String field_z;
 
     public static void a(byte param0) {
@@ -12,6 +12,6 @@ final class nh {
 
     static {
         field_z = "nh.A(";
-        field_a = new ta();
+        field_a = new IntrusiveDeque();
     }
 }

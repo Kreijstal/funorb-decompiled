@@ -3,7 +3,7 @@
  */
 final class ee extends em {
     static String field_K;
-    sb field_G;
+    PacketBuffer field_G;
     static int field_J;
     static String field_E;
     static String field_H;

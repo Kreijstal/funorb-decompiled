@@ -8,7 +8,7 @@ class kn extends fe implements rk {
     static int field_E;
     static ln[] field_F;
     static ql[][] field_H;
-    ta field_G;
+    IntrusiveDeque field_G;
 
     boolean a(char param0, fe param1, byte param2, int param3) {
         RuntimeException var5 = null;
@@ -37,7 +37,7 @@ class kn extends fe implements rk {
             break;
           }
           if (param2 != -79) {
-            this.field_G = (ta) null;
+            this.field_G = (IntrusiveDeque) null;
           }
           var6 = param3;
           if (var6 != 80) {
@@ -348,7 +348,7 @@ class kn extends fe implements rk {
           }
           if (param0.field_f != 0 ||
             param0.field_d != 0) {
-            for (var2_int = 0; var2_int < sb.field_p; var2_int++) {
+            for (var2_int = 0; var2_int < PacketBuffer.field_p; var2_int++) {
               var3 = im.field_a[var2_int];
               if (var3.field_g == 2 &&
                 param0.field_f == var3.field_f &&
@@ -422,7 +422,7 @@ class kn extends fe implements rk {
           if (param4 <= -53) {
             return false;
           }
-          this.field_G = (ta) null;
+          this.field_G = (IntrusiveDeque) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -454,7 +454,7 @@ class kn extends fe implements rk {
 
     kn(int param0, int param1, int param2, int param3, ad param4) {
         super(param0, param1, param2, param3, param4, (rm) null);
-        this.field_G = new ta();
+        this.field_G = new IntrusiveDeque();
     }
 
     final static void a(int param0, java.applet.Applet param1) {

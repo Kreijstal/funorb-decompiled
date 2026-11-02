@@ -25,7 +25,7 @@ final class mk implements ad {
     final static ln a(int param0) {
         ln var1 = null;
         if (param0 > 76) {
-          var1 = new ln(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], db.field_b[0], af.field_p);
+          var1 = new ln(pf.field_c, wd.field_a, bg.field_d[0], oc.field_e[0], qk.field_b[0], ng.field_e[0], ClientException.field_b[0], af.field_p);
           ec.a((byte) 24);
           return var1;
         }
@@ -58,17 +58,17 @@ final class mk implements ad {
             param4 = param4 & var11.field_E;
           }
           var7 = 5592405;
-          eh.e(param2.field_u + param1, param3 + param2.field_t, param2.field_v, param2.field_q, this.field_d);
+          SoftwareRasterizer.e(param2.field_u + param1, param3 + param2.field_t, param2.field_v, param2.field_q, this.field_d);
           if (param4) {
             var7 = 16777215;
           }
           var8 = this.field_c + (param1 + param2.field_u);
           var9 = param2.field_t + param3 + this.field_f;
-          eh.b(var8, var9, this.field_i, this.field_j, 5592405);
-          eh.e(var8, var9, this.field_i, this.field_j, var7);
+          SoftwareRasterizer.b(var8, var9, this.field_i, this.field_j, 5592405);
+          SoftwareRasterizer.e(var8, var9, this.field_i, this.field_j, var7);
           if (var11.field_H) {
-            eh.d(var8, var9, this.field_i + var8, var9 + this.field_j, 1);
-            eh.d(this.field_i + var8, var9, var8, var9 + this.field_j, 1);
+            SoftwareRasterizer.d(var8, var9, this.field_i + var8, var9 + this.field_j, 1);
+            SoftwareRasterizer.d(this.field_i + var8, var9, var8, var9 + this.field_j, 1);
           }
           if (null != this.field_n) {
             var10 = this.field_l + this.field_i + this.field_c;

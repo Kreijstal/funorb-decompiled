@@ -3,16 +3,16 @@
  */
 final class om {
     private int field_e;
-    static ta field_c;
-    private al field_b;
+    static IntrusiveDeque field_c;
+    private DualLinkNode field_b;
     static String[] field_f;
-    private al[] field_a;
+    private DualLinkNode[] field_a;
     static String field_d;
     static int field_g;
     private long field_h;
 
-    final void a(long param0, boolean param1, al param2) {
-        al var5 = null;
+    final void a(long param0, boolean param1, DualLinkNode param2) {
+        DualLinkNode var5 = null;
         try {
           if (null != param2.field_q) {
             param2.a((byte) -105);
@@ -20,8 +20,8 @@ final class om {
           var5 = this.field_a[(int)(param0 & (long)(-1 + this.field_e))];
           param2.field_t = var5;
           if (!param1) {
-            al var6 = (al) null;
-            this.a(23L, true, (al) null);
+            DualLinkNode var6 = (DualLinkNode) null;
+            this.a(23L, true, (DualLinkNode) null);
           }
           param2.field_q = var5.field_q;
           param2.field_q.field_t = param2;
@@ -46,16 +46,16 @@ final class om {
         field_f = null;
     }
 
-    final al a(int param0, long param1) {
-        al var4;
-        al var5;
+    final DualLinkNode a(int param0, long param1) {
+        DualLinkNode var4;
+        DualLinkNode var5;
         int var6;
         var6 = MinerDisturbance.field_ab;
         this.field_h = param1;
         var4 = this.field_a[(int)((long)(this.field_e - 1) & param1)];
         this.field_b = var4.field_t;
         if (param0 != -7895) {
-          return (al) null;
+          return (DualLinkNode) null;
         }
         while (true) {
           if (var4 == this.field_b) {
@@ -100,9 +100,9 @@ final class om {
         }
     }
 
-    final al c(int param0) {
-        al var2;
-        al var3;
+    final DualLinkNode c(int param0) {
+        DualLinkNode var2;
+        DualLinkNode var3;
         int var4;
         var4 = MinerDisturbance.field_ab;
         if (this.field_b == null) {
@@ -137,12 +137,12 @@ final class om {
 
     om(int param0) {
         int var2 = 0;
-        al dupTemp$1 = null;
-        al var3;
-        this.field_a = new al[param0];
+        DualLinkNode dupTemp$1 = null;
+        DualLinkNode var3;
+        this.field_a = new DualLinkNode[param0];
         this.field_e = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new al();
+          dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
           this.field_a[var2] = dupTemp$1;
           var3.field_t = var3;

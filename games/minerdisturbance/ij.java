@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ij extends vb {
+final class ij extends ArchiveProvider {
     private uh field_k;
     private int field_q;
     private tg field_i;
@@ -14,17 +14,17 @@ final class ij extends vb {
     private int field_n;
     private byte[] field_h;
     private uh field_e;
-    static ea field_t;
-    private g field_w;
+    static Sprite field_t;
+    private ArchiveIndex field_w;
     private ch field_j;
     private int field_u;
     static pl field_o;
     private em field_z;
     private boolean field_g;
-    private ta field_x;
+    private IntrusiveDeque field_x;
     private boolean field_m;
     private int field_l;
-    private ta field_r;
+    private IntrusiveDeque field_r;
     private long field_s;
     private boolean field_f;
 
@@ -72,7 +72,7 @@ final class ij extends vb {
         return var4;
     }
 
-    final g a(byte param0) {
+    final ArchiveIndex a(byte param0) {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var3 = null;
@@ -96,7 +96,7 @@ final class ij extends vb {
           return null;
         }
         if (param0 != 53) {
-          return (g) null;
+          return (ArchiveIndex) null;
         }
         var8 = this.field_z.c((byte) -115);
         var6 = var8;
@@ -109,7 +109,7 @@ final class ij extends vb {
             if (var2 == null) {
               throw new RuntimeException();
             }
-            this.field_w = new g(var9, this.field_q, this.field_h);
+            this.field_w = new ArchiveIndex(var9, this.field_q, this.field_h);
             if (this.field_n != this.field_w.field_r) {
               throw new RuntimeException();
             }
@@ -129,7 +129,7 @@ final class ij extends vb {
             if (var5 == null) {
               throw new RuntimeException();
             }
-            this.field_w = new g(var8, this.field_q, this.field_h);
+            this.field_w = new ArchiveIndex(var8, this.field_q, this.field_h);
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
@@ -160,14 +160,14 @@ final class ij extends vb {
         em discarded$2 = null;
         int var2_int;
         em var2;
-        pi var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        pi var6;
-        pi var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        pi var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = MinerDisturbance.field_ab;
         if (null != this.field_x) {
@@ -199,7 +199,7 @@ final class ij extends vb {
                   discarded$0 = this.a(param0 + 112, 1, this.field_l);
                 }
                 if (this.field_A[this.field_l] == 0) {
-                  var7 = new pi();
+                  var7 = new IntrusiveNode();
                   var7.field_d = (long)this.field_l;
                   var2_int = 0;
                   this.field_x.a((byte) -114, var7);
@@ -242,7 +242,7 @@ final class ij extends vb {
                     discarded$2 = this.a(param0 ^ 124, 2, this.field_l);
                   }
                   if (1 != this.field_A[this.field_l]) {
-                    var6 = new pi();
+                    var6 = new IntrusiveNode();
                     var6.field_d = (long)this.field_l;
                     var2_intLifetime1 = 0;
                     this.field_x.a((byte) -116, var6);
@@ -287,7 +287,7 @@ final class ij extends vb {
         }
     }
 
-    final static void a(boolean param0, sb param1) {
+    final static void a(boolean param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -351,7 +351,7 @@ final class ij extends vb {
     final void b(byte param0) {
         em discarded$0 = null;
         em discarded$1 = null;
-        pi var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         var4 = MinerDisturbance.field_ab;
@@ -388,7 +388,7 @@ final class ij extends vb {
           var2 = this.field_r.b((byte) 56);
         }
         if (param0 < 1) {
-          this.field_w = (g) null;
+          this.field_w = (ArchiveIndex) null;
         }
     }
 
@@ -399,7 +399,7 @@ final class ij extends vb {
         }
         this.field_m = true;
         if (null == this.field_x) {
-          this.field_x = new ta();
+          this.field_x = new IntrusiveDeque();
         }
     }
 
@@ -468,7 +468,7 @@ final class ij extends vb {
               var4 = this.field_j.a((byte) 2, -21, true, param2, this.field_u);
             }
           }
-          this.field_i.a(0, (long)param2, (pi) (var4));
+          this.field_i.a(0, (long)param2, (IntrusiveNode) (var4));
         }
         if (((em) (var4)).field_C) {
           return null;
@@ -522,7 +522,7 @@ final class ij extends vb {
                 return null;
               }
               var4 = this.field_j.a((byte) 2, -21, true, param2, this.field_u);
-              this.field_i.a(0, (long)param2, (pi) (var4));
+              this.field_i.a(0, (long)param2, (IntrusiveNode) (var4));
             }
             return null;
           }
@@ -566,7 +566,7 @@ final class ij extends vb {
             return null;
           }
           var4 = this.field_j.a((byte) 2, -21, true, param2, this.field_u);
-          this.field_i.a(0, (long)param2, (pi) (var4));
+          this.field_i.a(0, (long)param2, (IntrusiveNode) (var4));
           return null;
         }
         var5[-2 + var18.length] = (byte)(this.field_w.field_q[param2] >>> 8);
@@ -587,7 +587,7 @@ final class ij extends vb {
         field_o = null;
         field_t = null;
         if (!param0) {
-          field_t = (ea) null;
+          field_t = (Sprite) null;
         }
     }
 
@@ -619,14 +619,14 @@ final class ij extends vb {
         RuntimeException var10 = null;
         this.field_i = new tg(16);
         this.field_l = 0;
-        this.field_r = new ta();
+        this.field_r = new IntrusiveDeque();
         this.field_s = 0L;
         try {
           this.field_u = param0;
           this.field_k = param1;
           if (this.field_k != null) {
             this.field_g = true;
-            this.field_x = new ta();
+            this.field_x = new IntrusiveDeque();
           } else {
             this.field_g = false;
           }

@@ -4,7 +4,7 @@
 final class ge {
     static r field_a;
     static String field_h;
-    static bj field_e;
+    static ResourceArchive field_e;
     static int[] field_g;
     static boolean field_c;
     static String field_b;
@@ -80,7 +80,7 @@ final class ge {
           if (param1 != -569) {
             field_d = (String) null;
           }
-          var2 = new ih(param0, bg.field_d, oc.field_e, qk.field_b, ng.field_e, af.field_p, db.field_b);
+          var2 = new ih(param0, bg.field_d, oc.field_e, qk.field_b, ng.field_e, af.field_p, ClientException.field_b);
           ec.a((byte) -111);
           stackIn_6_0 = var2;
           return stackIn_6_0;

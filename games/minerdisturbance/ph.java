@@ -5,7 +5,7 @@ final class ph {
     static wh field_a;
     static java.math.BigInteger field_g;
     static int field_f;
-    static ea[] field_e;
+    static Sprite[] field_e;
     static int field_d;
     static int field_c;
     static int field_b;
@@ -42,7 +42,7 @@ final class ph {
         var9 = MinerDisturbance.field_ab;
         try {
           if (param0 <= 13) {
-            field_e = (ea[]) null;
+            field_e = (Sprite[]) null;
           }
           var12 = new char[param1];
           var11 = var12;

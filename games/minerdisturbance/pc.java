@@ -5,7 +5,7 @@ class pc extends hn {
     static String[][] field_e;
     static String field_i;
     private long field_j;
-    static ea[] field_f;
+    static Sprite[] field_f;
     static int[] field_g;
     static int field_k;
     private String field_h;
@@ -29,13 +29,13 @@ class pc extends hn {
     }
 
     final static void b(boolean param0, byte param1) {
-        g.a(true, 98, param0);
+        ArchiveIndex.a(true, 98, param0);
         if (param1 <= 102) {
           pc.b(true, (byte) 28);
         }
     }
 
-    final void a(sb param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         try {
           param0.b(-1, this.field_j);
           param0.a((byte) 97, this.field_h);

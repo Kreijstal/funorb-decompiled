@@ -68,7 +68,7 @@ abstract class ci {
     abstract void a(int param0, int param1, java.awt.Graphics param2, int param3);
 
     final void a(byte param0) {
-        eh.a(this.field_f, this.field_c, this.field_d);
+        SoftwareRasterizer.a(this.field_f, this.field_c, this.field_d);
         if (param0 != -45) {
           java.awt.Component var3 = (java.awt.Component) null;
           this.a((java.awt.Component) null, -30, 28, 18);

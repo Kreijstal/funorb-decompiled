@@ -3,26 +3,26 @@
  */
 final class ac {
     static int field_b;
-    private ea[] field_a;
+    private Sprite[] field_a;
 
     final static void a(byte param0) {
         if (param0 != -116) {
           ac.a((byte) 39);
-          mk.a(false, al.field_s, 0);
+          mk.a(false, DualLinkNode.field_s, 0);
           return;
         }
-        mk.a(false, al.field_s, 0);
+        mk.a(false, DualLinkNode.field_s, 0);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
-        g.a(param1, param0, param4, param2, (byte) 36, this.field_a);
+        ArchiveIndex.a(param1, param0, param4, param2, (byte) 36, this.field_a);
         if (param3 != 26202) {
-          bj var7 = (bj) null;
-          ac.a(-113, (bj) null, 32, -45);
+          ResourceArchive var7 = (ResourceArchive) null;
+          ac.a(-113, (ResourceArchive) null, 32, -45);
         }
     }
 
-    final static ln a(int param0, bj param1, int param2, int param3) {
+    final static ln a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         ln stackIn_5_0 = null;
         ln stackIn_7_0 = null;
@@ -54,7 +54,7 @@ final class ac {
         }
     }
 
-    ac(ea[] param0) {
+    ac(Sprite[] param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {

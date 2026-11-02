@@ -129,9 +129,9 @@ final class lm extends kn implements f, sh {
         field_I = null;
     }
 
-    final static String[] a(sb param0, byte param1) {
+    final static String[] a(PacketBuffer param0, byte param1) {
         int var4 = 0;
-        ta var2 = null;
+        IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
         int var3_int = 0;
         String[] var3 = null;
@@ -143,7 +143,7 @@ final class lm extends kn implements f, sh {
         RuntimeException decompiledCaughtException = null;
         var5 = MinerDisturbance.field_ab;
         try {
-          var2 = new ta();
+          var2 = new IntrusiveDeque();
           while (param0.field_u.length > param0.field_o) {
             var3_int = af.a(param0, var2, -113);
             if (!ne.a(var3_int, uf.field_q, param0, (byte) -87)) {
@@ -229,7 +229,7 @@ final class lm extends kn implements f, sh {
         var2.a(50, -73, 20, 270, var3);
         var3 += 50;
         this.a(-1, var2);
-        var3 = var3 + (5 + this.a(false, wm.field_c, var3, hi.field_w, 170, this.field_N));
+        var3 = var3 + (5 + this.a(false, wm.field_c, var3, SpriteState.field_w, 170, this.field_N));
         this.field_P.a(40, -39, 496 - var5 >> 1, var5, var3);
         this.field_J.a(40, -54, var4 + 3, 60, var3 + 15);
         this.field_J.field_y = (rm) (this);
@@ -344,8 +344,8 @@ final class lm extends kn implements f, sh {
 
     private final boolean e(byte param0) {
         if (param0 >= -13) {
-          sb var3 = (sb) null;
-          lm.a((sb) null, (byte) 25);
+          PacketBuffer var3 = (PacketBuffer) null;
+          lm.a((PacketBuffer) null, (byte) 25);
           if (this.a(124, (sg) (this.field_N))) {
             return true;
           }
@@ -417,7 +417,7 @@ final class lm extends kn implements f, sh {
         if (se.field_K == param0) {
           se.field_K = param0;
           if (!fh.field_d &&
-            ld.field_w > hk.field_e &&
+            CipherPacketBuffer.field_w > hk.field_e &&
             k.field_i) {
             hk.field_e = 0;
             im.field_c = nk.field_w;
@@ -441,7 +441,7 @@ final class lm extends kn implements f, sh {
               var2 == 0) {
               hk.field_e = 0;
             } else {
-              hk.field_e = ld.field_w;
+              hk.field_e = CipherPacketBuffer.field_w;
             }
           }
           im.field_c = nk.field_w;
@@ -455,7 +455,7 @@ final class lm extends kn implements f, sh {
           }
           se.field_K = param0;
           if (!fh.field_d &&
-            ld.field_w > hk.field_e &&
+            CipherPacketBuffer.field_w > hk.field_e &&
             k.field_i) {
             hk.field_e = 0;
             im.field_c = nk.field_w;
@@ -468,7 +468,7 @@ final class lm extends kn implements f, sh {
           }
           return;
         }
-        if (hk.field_e < ld.field_w) {
+        if (hk.field_e < CipherPacketBuffer.field_w) {
           var2Lifetime1 = 0;
           if (-1 == param0) {
             hk.field_e = 0;
@@ -477,7 +477,7 @@ final class lm extends kn implements f, sh {
               var2Lifetime1 == 0) {
               hk.field_e = 0;
             } else {
-              hk.field_e = ld.field_w;
+              hk.field_e = CipherPacketBuffer.field_w;
             }
           }
           im.field_c = nk.field_w;
@@ -491,7 +491,7 @@ final class lm extends kn implements f, sh {
           }
           se.field_K = param0;
           if (!fh.field_d &&
-            ld.field_w > hk.field_e &&
+            CipherPacketBuffer.field_w > hk.field_e &&
             k.field_i) {
             hk.field_e = 0;
             im.field_c = nk.field_w;
@@ -504,7 +504,7 @@ final class lm extends kn implements f, sh {
           }
           return;
         }
-        stackIn_110_0 = (ld.field_w + qn.field_K <= hk.field_e) ? 0 : 1;
+        stackIn_110_0 = (CipherPacketBuffer.field_w + qn.field_K <= hk.field_e) ? 0 : 1;
         var2Lifetime2 = stackIn_110_0;
         if (-1 == param0) {
           hk.field_e = 0;
@@ -520,7 +520,7 @@ final class lm extends kn implements f, sh {
             }
             se.field_K = param0;
             if (!fh.field_d &&
-              ld.field_w > hk.field_e &&
+              CipherPacketBuffer.field_w > hk.field_e &&
               k.field_i) {
               hk.field_e = 0;
               im.field_c = nk.field_w;
@@ -533,7 +533,7 @@ final class lm extends kn implements f, sh {
             }
             return;
           }
-          hk.field_e = ld.field_w;
+          hk.field_e = CipherPacketBuffer.field_w;
         }
         im.field_c = nk.field_w;
         qd.field_P = gb.field_e;
@@ -546,7 +546,7 @@ final class lm extends kn implements f, sh {
         }
         se.field_K = param0;
         if (!fh.field_d &&
-          ld.field_w > hk.field_e &&
+          CipherPacketBuffer.field_w > hk.field_e &&
           k.field_i) {
           hk.field_e = 0;
           im.field_c = nk.field_w;

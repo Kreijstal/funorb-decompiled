@@ -9,7 +9,7 @@ abstract class hd {
     int field_j;
     int field_b;
     static int field_l;
-    static ea[] field_d;
+    static Sprite[] field_d;
     static String field_c;
     static java.awt.Frame field_h;
     static vf field_g;
@@ -18,7 +18,7 @@ abstract class hd {
     abstract void a(int param0, int param1);
 
     final static void a(int param0) {
-        on.field_t = new ta();
+        on.field_t = new IntrusiveDeque();
         if (param0 >= -35) {
           field_l = -104;
         }

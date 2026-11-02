@@ -3,15 +3,15 @@
  */
 class fd extends ja {
     private int field_A;
-    private ea[] field_gb;
+    private Sprite[] field_gb;
     private boolean field_G;
-    private ea field_S;
-    private ea field_V;
-    private ea[] field_M;
-    private ea[] field_ib;
+    private Sprite field_S;
+    private Sprite field_V;
+    private Sprite[] field_M;
+    private Sprite[] field_ib;
     private int field_R;
     private int field_w;
-    private ea[] field_T;
+    private Sprite[] field_T;
     private int field_N;
     private boolean field_D;
     private int field_jb;
@@ -20,7 +20,7 @@ class fd extends ja {
     private we field_U;
     private int field_bb;
     private int field_db;
-    private ea[] field_E;
+    private Sprite[] field_E;
     private int field_ab;
     private int field_eb;
     private String field_C;
@@ -29,16 +29,16 @@ class fd extends ja {
     private boolean field_hb;
     private int field_y;
     private String field_L;
-    private ea field_P;
+    private Sprite field_P;
     private int field_cb;
     private boolean field_lb;
-    private ea field_I;
+    private Sprite field_I;
     private int field_x;
     private int field_z;
     private int field_X;
     private boolean field_fb;
     private boolean field_B;
-    private ea field_Q;
+    private Sprite field_Q;
     static ec field_H;
     static String field_W;
     static String[] field_J;

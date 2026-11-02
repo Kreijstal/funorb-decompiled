@@ -3,11 +3,11 @@
  */
 import java.io.*;
 
-abstract class bl extends al {
+abstract class bl extends DualLinkNode {
     static String field_u;
     int field_y;
-    static ea field_x;
-    static ea field_w;
+    static Sprite field_x;
+    static Sprite field_w;
     static int[] field_z;
     static ud[] field_v;
 
@@ -68,7 +68,7 @@ abstract class bl extends al {
     abstract Object f(int param0);
 
     final static boolean g(int param0) {
-        if (mf.field_i < param0) {
+        if (IsaacRandom.field_i < param0) {
           if (bd.field_k < 0) {
             return false;
           }
@@ -195,11 +195,11 @@ abstract class bl extends al {
         return false;
     }
 
-    final static ea a(int param0, bj param1, byte param2, int param3) {
+    final static Sprite a(int param0, ResourceArchive param1, byte param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        ea stackIn_4_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -211,7 +211,7 @@ abstract class bl extends al {
             return stackIn_4_0;
           }
           stackIn_2_0 = null;
-          return (ea) (stackIn_2_0);
+          return (Sprite) (stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

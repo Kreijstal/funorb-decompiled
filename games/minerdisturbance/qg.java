@@ -58,26 +58,26 @@ final class qg implements ad {
         int var12Lifetime1;
         try {
           var14 = !(param2 instanceof s) ? null : (s) (param2);
-          eh.e(param1 + param2.field_u, param3 + param2.field_t, param2.field_v, param2.field_q, this.field_m);
+          SoftwareRasterizer.e(param1 + param2.field_u, param3 + param2.field_t, param2.field_v, param2.field_q, this.field_m);
           if (var14 != null) {
           }
           var7 = param1 - (-param2.field_u - var14.field_M);
           var8 = var14.field_R + param2.field_t + param3;
-          eh.c(var7, var8, var14.field_J, this.field_l);
+          SoftwareRasterizer.c(var7, var8, var14.field_J, this.field_l);
           if (var14.field_K != -1) {
             var9 = 2.0 * (3.141592653589793 * (double)var14.field_K) / (double)var14.field_N;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_J);
             var12 = (int)(Math.cos(var9) * (double)var14.field_J);
-            eh.c(var11 + var7, var12 + var8, 1, this.field_a);
+            SoftwareRasterizer.c(var11 + var7, var12 + var8, 1, this.field_a);
           }
-          eh.c(var7, var8, 2, 1);
+          SoftwareRasterizer.c(var7, var8, 2, 1);
           var9Lifetime1 = (double)var14.field_S * 3.141592653589793 * 2.0 / (double)var14.field_N;
           if (param0 != 12088) {
             qg.a(-31);
           }
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_J);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_J);
-          eh.d(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.d(var7, var8, var7 + var11Lifetime1, var12Lifetime1 + var8, 1);
           if (null != this.field_c) {
             var13 = var14.field_M + var14.field_J + this.field_i;
             this.field_c.a(param2.field_s, param2.field_u + param1 + var13, this.field_h + param3 + param2.field_t, param2.field_v - this.field_i - var13, param2.field_q - (this.field_i << 1), this.field_j, this.field_k, 1, 1, 0);
@@ -144,8 +144,8 @@ final class qg implements ad {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            kj.field_a = new ld(param9);
-            sn.field_c = new ld(param12);
+            kj.field_a = new CipherPacketBuffer(param9);
+            sn.field_c = new CipherPacketBuffer(param12);
             ic.field_h = param6;
             cm.field_q = param3;
             ei.field_L = param11;
@@ -157,7 +157,7 @@ final class qg implements ad {
             if (!param10) {
               return;
             }
-            bj.field_a = param5;
+            ResourceArchive.field_a = param5;
             jc.field_E = param4;
             mh.field_c = param2;
             if (mm.field_b.field_i == null) {

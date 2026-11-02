@@ -21,7 +21,7 @@ final class qm {
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         ti.field_I[fb.field_c] = param2;
         an.field_a[fb.field_c] = fb.field_c;
-        pi.field_h[fb.field_c] = param0;
+        IntrusiveNode.field_h[fb.field_c] = param0;
         if (!(he.field_e <= param0)) {
           bc.field_d = param0;
         }
@@ -60,7 +60,7 @@ final class qm {
         int var8 = 0;
         var8 = MinerDisturbance.field_ab;
         try {
-          this.field_k[this.field_o] = (byte)hi.a((int) this.field_k[this.field_o], 128 >>> c.a(7, this.field_i));
+          this.field_k[this.field_o] = (byte)SpriteState.a((int) this.field_k[this.field_o], 128 >>> c.a(7, this.field_i));
           this.field_o = this.field_o + 1;
           if (param2 != 8) {
             return;
@@ -248,7 +248,7 @@ final class qm {
             var8 = param0[var5_int] << var6 & 255 | (param0[1 + var5_int] & 255) >>> -var6 + 8;
             if (var8 >= 0 &&
               var8 < 256) {
-              this.field_k[this.field_o] = (byte)hi.a((int) this.field_k[this.field_o], var8 >>> var7);
+              this.field_k[this.field_o] = (byte)SpriteState.a((int) this.field_k[this.field_o], var8 >>> var7);
               this.field_o = this.field_o + 1;
               this.field_i = this.field_i + (8 - var7);
               if (512 == this.field_i) {
@@ -268,7 +268,7 @@ final class qm {
             var8Lifetime1 = 0;
           } else {
             var8Lifetime1 = param0[var5_int] << var6 & 255;
-            this.field_k[this.field_o] = (byte)hi.a((int) this.field_k[this.field_o], var8Lifetime1 >>> var7);
+            this.field_k[this.field_o] = (byte)SpriteState.a((int) this.field_k[this.field_o], var8Lifetime1 >>> var7);
           }
           if (param2 + (long)var7 < 8L) {
             this.field_i = (int)((long)this.field_i + param2);

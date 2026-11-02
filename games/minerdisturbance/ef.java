@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ef {
-    static ea[] field_b;
+    static Sprite[] field_b;
     static java.awt.Canvas field_c;
     static String field_d;
     static int field_a;

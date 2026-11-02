@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class pi {
+class IntrusiveNode {
     static int[] field_h;
-    pi field_c;
+    IntrusiveNode field_c;
     static pd field_g;
     long field_d;
     static int field_a;
-    pi field_f;
+    IntrusiveNode field_f;
     static int[] field_i;
     static boolean[] field_j;
     static boolean[] field_e;
-    static ea field_b;
+    static Sprite field_b;
     static int[] field_l;
     static int[] field_m;
     static boolean[] field_k;

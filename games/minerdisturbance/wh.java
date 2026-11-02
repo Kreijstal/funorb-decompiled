@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wh extends pi {
+final class wh extends IntrusiveNode {
     byte[] field_o;
     tg field_n;
 
@@ -9,12 +9,12 @@ final class wh extends pi {
         this.field_n = null;
     }
 
-    final static wh a(bj param0, String param1, String param2) {
+    final static wh a(ResourceArchive param0, String param1, String param2) {
         byte[] var3 = param0.a(param2, 0, param1);
         if (var3 == null) {
           return null;
         }
-        return new wh(new sb(var3));
+        return new wh(new PacketBuffer(var3));
     }
 
     final void a() {
@@ -118,7 +118,7 @@ final class wh extends pi {
         }
     }
 
-    private wh(sb param0) {
+    private wh(PacketBuffer param0) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
@@ -147,7 +147,7 @@ final class wh extends pi {
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
         int incrementValue$20 = 0;
-        sb stackIn_84_0 = null;
+        PacketBuffer stackIn_84_0 = null;
         int stackIn_84_1 = 0;
         int stackIn_85_2 = 0;
         int stackIn_91_0 = 0;
@@ -200,7 +200,7 @@ final class wh extends pi {
         int var48;
         int var49;
         int var50;
-        sb var51;
+        PacketBuffer var51;
         int var52;
         int var53;
         int var54;
@@ -421,7 +421,7 @@ final class wh extends pi {
         var50 = param0.field_o;
         param0.field_o = param0.field_o + var5 * 3;
         this.field_o = new byte[var4];
-        var51 = new sb(this.field_o);
+        var51 = new PacketBuffer(this.field_o);
         var51.a((byte) 95, 1297377380);
         var51.a((byte) 109, 6);
         stackIn_84_0 = var51;
@@ -431,7 +431,7 @@ final class wh extends pi {
         } else {
           stackIn_85_2 = 1;
         }
-        ((sb) (Object) stackIn_84_0).b((byte) stackIn_84_1, stackIn_85_2);
+        ((PacketBuffer) (Object) stackIn_84_0).b((byte) stackIn_84_1, stackIn_85_2);
         var51.b((byte) 126, var2);
         var51.b((byte) 122, var3);
         param0.field_o = var13Lifetime1;

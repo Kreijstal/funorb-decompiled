@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bj {
+final class ResourceArchive {
     static gj field_h;
-    private vb field_g;
+    private ArchiveProvider field_g;
     private int field_j;
-    private g field_f;
+    private ArchiveIndex field_f;
     static long field_a;
     static ci field_e;
     private Object[][] field_b;
@@ -209,10 +209,10 @@ final class bj {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        sb var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        sb var29 = null;
-        sb var31 = null;
+        PacketBuffer var29 = null;
+        PacketBuffer var31 = null;
         int[] var32 = null;
         byte[][] var33 = null;
         int[] var34 = null;
@@ -281,7 +281,7 @@ final class bj {
             var35 = sc.a(true, true, this.field_i[param0]);
             var25 = var35;
             var9 = var25;
-            var26 = new sb(var35);
+            var26 = new PacketBuffer(var35);
             var26.a(5, var26.field_u.length, param3, true);
             decompiledFrameRemainder0 = false;
           }
@@ -310,7 +310,7 @@ final class bj {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * var5_int * var12;
-              var29 = new sb(var43);
+              var29 = new PacketBuffer(var43);
               var14_int = 0;
               var29.field_o = var11;
               var15_int = 0;
@@ -359,7 +359,7 @@ final class bj {
             var11--;
             var12Lifetime1 = var23[var11] & 255;
             var11 = var11 - 4 * (var12Lifetime1 * var5_int);
-            var31 = new sb(var43);
+            var31 = new PacketBuffer(var43);
             var39 = new int[var5_int];
             var32 = var39;
             var14 = var32;
@@ -610,7 +610,7 @@ final class bj {
           return -1;
         }
         if (param0 != -71) {
-          bj.a(111);
+          ResourceArchive.a(111);
         }
         return this.field_f.field_f.length;
     }
@@ -675,7 +675,7 @@ final class bj {
           param1 = param1.toLowerCase();
           if (param0) {
             var4 = (wh) null;
-            bj.a(22, (wh) null);
+            ResourceArchive.a(22, (wh) null);
           }
           var5 = (CharSequence) ((Object) param1);
           var3_int = this.field_f.field_s.a((byte) -71, jh.a(var5, 0));
@@ -782,7 +782,7 @@ final class bj {
         }
     }
 
-    bj(vb param0, boolean param1, int param2) {
+    ResourceArchive(ArchiveProvider param0, boolean param1, int param2) {
         this.field_f = null;
         try {
           if (param2 < 0 ||
@@ -865,7 +865,7 @@ final class bj {
           }
         }
         if (param0 != -14858) {
-          this.field_f = (g) null;
+          this.field_f = (ArchiveIndex) null;
         }
         if (var2 == 0) {
           return 100;

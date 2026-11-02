@@ -4,7 +4,7 @@
 final class kd {
     private int field_d;
     private int field_n;
-    static ea field_r;
+    static Sprite field_r;
     static String[][] field_b;
     static String field_e;
     private String field_h;
@@ -14,10 +14,10 @@ final class kd {
     static bd field_p;
     private int field_f;
     private int field_m;
-    private ea field_q;
+    private Sprite field_q;
     private String[] field_j;
-    private ea field_g;
-    private ea field_a;
+    private Sprite field_g;
+    private Sprite field_a;
     private nn field_c;
     private boolean field_o;
     static String[] field_k;
@@ -47,7 +47,7 @@ final class kd {
         this.field_c.b((byte) -34);
         if (param0 != 1) {
           String var3 = (String) null;
-          this.a((byte) -68, -0.07744473218917847f, (ea) null, (int[]) null, (we) null, -71, 72, (String) null, -74, -38);
+          this.a((byte) -68, -0.07744473218917847f, (Sprite) null, (int[]) null, (we) null, -71, 72, (String) null, -74, -38);
         }
         if (this.field_c.b(true)) {
           if (this.field_c.field_e == 0) {
@@ -71,41 +71,41 @@ final class kd {
         int[] var13 = null;
         int[] var11 = null;
         int[] var9 = null;
-        ea var5 = null;
+        Sprite var5 = null;
         String var6 = null;
         String var7 = null;
         if (null == this.field_q) {
-          if (null == al.field_r) {
+          if (null == DualLinkNode.field_r) {
             return;
           }
-          this.field_q = new ea(622, 47);
-          vb.a(this.field_q, 125);
-          eh.c(0, 0, 622, 47, 4540749, 65793);
+          this.field_q = new Sprite(622, 47);
+          ArchiveProvider.a(this.field_q, 125);
+          SoftwareRasterizer.c(0, 0, 622, 47, 4540749, 65793);
           if (param0 > -69) {
             kd.a(28, (byte) 95);
           }
           var2 = 16448250;
           var3 = 10068666;
           var15 = vk.a(var3, var2, (byte) 105);
-          this.a(622, this.field_h, al.field_r, (byte) 120, var15, 0, 47, 0);
+          this.a(622, this.field_h, DualLinkNode.field_r, (byte) 120, var15, 0, 47, 0);
           tk.b(true);
-          this.field_a = new ea(475, 24);
-          this.a((byte) 99, 0.75f, this.field_a, var15, al.field_r, -4, 475, on.field_z, 24, 0);
+          this.field_a = new Sprite(475, 24);
+          this.a((byte) 99, 0.75f, this.field_a, var15, DualLinkNode.field_r, -4, 475, on.field_z, 24, 0);
           var13 = vk.a(526344, 526344, (byte) 105);
           var11 = var13;
           var9 = var11;
-          var5 = new ea(121, 122);
-          vb.a(var5, 127);
-          eh.c(0, 0, var5.field_y, var5.field_C / 2, 16180917, 16306250);
-          eh.c(0, var5.field_C / 2, var5.field_y, var5.field_C, 16306250, 15568919);
+          var5 = new Sprite(121, 122);
+          ArchiveProvider.a(var5, 127);
+          SoftwareRasterizer.c(0, 0, var5.field_y, var5.field_C / 2, 16180917, 16306250);
+          SoftwareRasterizer.c(0, var5.field_C / 2, var5.field_y, var5.field_C, 16306250, 15568919);
           var6 = dn.field_s;
           var7 = sn.field_e;
-          this.a((byte) 116, 0.5f, var5, var13, al.field_r, -16, var5.field_y, var6, var5.field_C, 0);
-          this.a((byte) 113, 0.5f, var5, var13, al.field_r, 20, var5.field_y, var7, var5.field_C, 0);
-          this.a((byte) 100, 0.699999988079071f, var5, var9, al.field_r, 12 + (-al.field_r.field_I + var5.field_C / 2), var5.field_y, ub.field_a[this.field_m], var5.field_C / 3, 0);
+          this.a((byte) 116, 0.5f, var5, var13, DualLinkNode.field_r, -16, var5.field_y, var6, var5.field_C, 0);
+          this.a((byte) 113, 0.5f, var5, var13, DualLinkNode.field_r, 20, var5.field_y, var7, var5.field_C, 0);
+          this.a((byte) 100, 0.699999988079071f, var5, var9, DualLinkNode.field_r, 12 + (-DualLinkNode.field_r.field_I + var5.field_C / 2), var5.field_y, ub.field_a[this.field_m], var5.field_C / 3, 0);
           tk.b(true);
-          this.field_g = new ea(121, 122);
-          vb.a(this.field_g, 127);
+          this.field_g = new Sprite(121, 122);
+          ArchiveProvider.a(this.field_g, 127);
           var5.a(this.field_g.field_y / 2, this.field_g.field_C / 2, -2048, 4096);
           tk.b(true);
           return;
@@ -169,12 +169,12 @@ final class kd {
 
     private final void c(byte param0) {
         try {
-          g.a(bm.c(-119), 88);
+          ArchiveIndex.a(bm.c(-119), 88);
         } catch (Exception exception) {
           exception.printStackTrace();
         }
         if (param0 >= -27) {
-          this.field_q = (ea) null;
+          this.field_q = (Sprite) null;
         }
     }
 
@@ -208,7 +208,7 @@ final class kd {
           this.field_j = param5;
           if (null != this.field_l &&
             this.field_l.length >= 3) {
-            db.field_e = param0;
+            ClientException.field_e = param0;
             return;
           }
           throw new IllegalArgumentException("");
@@ -252,21 +252,21 @@ final class kd {
         int var2Lifetime2;
         int var3Lifetime1;
         var4 = MinerDisturbance.field_ab;
-        eh.c(9, 9, 622, 47, 4540749, 65793);
-        eh.e(9, 257, 622, 33, 2585);
-        eh.c(9, 265, 622, 11, 2585, 1515566);
+        SoftwareRasterizer.c(9, 9, 622, 47, 4540749, 65793);
+        SoftwareRasterizer.e(9, 257, 622, 33, 2585);
+        SoftwareRasterizer.c(9, 265, 622, 11, 2585, 1515566);
         var2 = 0;
         var3 = 14;
         while (var2 < 4) {
-          eh.c(var3, 331, 117, 90, 460551, 3881787);
+          SoftwareRasterizer.c(var3, 331, 117, 90, 460551, 3881787);
           var3 += 121;
           var2++;
         }
         var2Lifetime1 = 0;
         var3Lifetime1 = 299;
         while (var2Lifetime1 < 2) {
-          eh.c(508, var3Lifetime1, 127, 42, 1130115, 3365268);
-          eh.e(508, 42 + var3Lifetime1, 127, 42, 12410);
+          SoftwareRasterizer.c(508, var3Lifetime1, 127, 42, 1130115, 3365268);
+          SoftwareRasterizer.e(508, 42 + var3Lifetime1, 127, 42, 12410);
           var2Lifetime1++;
           var3Lifetime1 += 91;
         }
@@ -283,9 +283,9 @@ final class kd {
           ba.field_K = pb.a("members_expansion_screen", wk.field_c, "frame", (byte) -77);
           ah.field_d = jn.a("arrow", -29553, "members_expansion_screen", wk.field_c);
           ql.field_m = rd.a("arialish12", -102, uk.field_xb, wk.field_c, "");
-          al.field_r = oc.a(uk.field_xb, (byte) 125, "pump32", "", wk.field_c);
+          DualLinkNode.field_r = oc.a(uk.field_xb, (byte) 125, "pump32", "", wk.field_c);
           pk.field_c = bb.a("benefit_orbs", wk.field_c, -115, "members_expansion_screen");
-          db.field_f = bb.a("button_text", wk.field_c, param0 - 235, "members_expansion_screen");
+          ClientException.field_f = bb.a("button_text", wk.field_c, param0 - 235, "members_expansion_screen");
           wm.field_g = md.a("button_highlights", wk.field_c, 10, "members_expansion_screen");
           wk.field_c = null;
           uk.field_xb = null;
@@ -330,7 +330,7 @@ final class kd {
         ql.field_m.a(af.field_o[0], 17, 428, 111, 35, 16754688, -1, 1, 1, 0);
         ql.field_m.a(af.field_o[1], 138, 428, 111, 35, 16754688, -1, 1, 1, 0);
         ql.field_m.a(af.field_o[2], 259, 428, 111, 35, 16754688, -1, 1, 1, 0);
-        db.field_f.f(508 + (127 - db.field_f.field_x) / 2, 315);
+        ClientException.field_f.f(508 + (127 - ClientException.field_f.field_x) / 2, 315);
         if (0 == this.field_c.field_e) {
           wm.field_g[0].f(508, 299);
         } else {
@@ -380,7 +380,7 @@ final class kd {
         try {
           ti.a((byte) 127);
           for (var9_int = param5; param6 > var9_int; var9_int++) {
-            eh.a(param7, var9_int, param0, 1 + var9_int);
+            SoftwareRasterizer.a(param7, var9_int, param0, 1 + var9_int);
             var10 = param4.length * var9_int / param6;
             var11 = param4[-1 + param4.length - var10];
             param2.a(param1, param7, param5, param0, param6, var11, -1, 1, 1, 0);
@@ -424,7 +424,7 @@ final class kd {
         }
     }
 
-    private final void a(byte param0, float param1, ea param2, int[] param3, we param4, int param5, int param6, String param7, int param8, int param9) {
+    private final void a(byte param0, float param1, Sprite param2, int[] param3, we param4, int param5, int param6, String param7, int param8, int param9) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -438,18 +438,18 @@ final class kd {
         int var11_int = 0;
         RuntimeException var11 = null;
         int var12 = 0;
-        ea var13 = null;
+        Sprite var13 = null;
         int var14 = 0;
         try {
           var11_int = (int)((float)param6 / param1);
           var12 = (int)((float)param8 / param1);
           var14 = 84 % ((42 - param0) / 57);
-          var13 = new ea(var11_int, var12);
-          vb.a(var13, 126);
+          var13 = new Sprite(var11_int, var12);
+          ArchiveProvider.a(var13, 126);
           param2.c((int)((float)(-param9) / param1), (int)((float)(-param5) / param1), (int)((float)param2.field_y / param1), (int)((float)param2.field_C / param1));
           this.a(var11_int, param7, param4, (byte) 116, param3, 0, var12, 0);
           tk.b(true);
-          vb.a(param2, 127);
+          ArchiveProvider.a(param2, 127);
           var13.b(param9, param5, param6, param8);
           tk.b(true);
           return;
@@ -554,8 +554,8 @@ final class kd {
         if (ah.field_d != null) {
           var4 = 0;
           if (jk.field_ab != 0 &&
-            257 < m.field_e &&
-            m.field_e < 290) {
+            257 < GameAppletShell.field_e &&
+            GameAppletShell.field_e < 290) {
             if (wi.field_w > 9 &&
               82 > wi.field_w) {
               var4 = 1;
@@ -571,8 +571,8 @@ final class kd {
           }
           if (var4 == 0 &&
             tg.field_g < this.field_n &&
-            m.field_e > 257 &&
-            290 > m.field_e) {
+            GameAppletShell.field_e > 257 &&
+            290 > GameAppletShell.field_e) {
             if (nk.field_w > 9 &&
               82 > nk.field_w) {
               this.field_n = tg.field_g;
@@ -586,7 +586,7 @@ final class kd {
         if (!param0) {
           return 0;
         }
-        this.field_c.a(this.a(nk.field_w, 11852, gb.field_e), this.a(wi.field_w, 11852, m.field_e), param1 ^ -2);
+        this.field_c.a(this.a(nk.field_w, 11852, gb.field_e), this.a(wi.field_w, 11852, GameAppletShell.field_e), param1 ^ -2);
         var4Lifetime1 = 0;
         if (this.field_c.b(true)) {
           if (this.field_c.field_e == 0) {
@@ -596,7 +596,7 @@ final class kd {
             return 2;
           }
         }
-        if (db.field_e) {
+        if (ClientException.field_e) {
           while (mm.b((byte) 38)) {
             var5 = this.b(param1 + 0);
             if (var5 == 0) {
