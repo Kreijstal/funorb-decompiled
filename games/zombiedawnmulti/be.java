@@ -52,7 +52,7 @@ final class be {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        k var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -68,7 +68,7 @@ final class be {
         int var13Lifetime1Lifetime1;
         var16 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var17 = new k(hb.a(param1, param0));
+          var17 = new PacketBuffer(hb.a(param1, param0));
           var4 = var17.g(31365);
           if (5 <= var4 &&
             7 >= var4) {

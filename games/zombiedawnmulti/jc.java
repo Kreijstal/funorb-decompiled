@@ -11,7 +11,7 @@ final class jc {
         if (var3 == null) {
           return null;
         }
-        return new jc(new k(var3));
+        return new jc(new PacketBuffer(var3));
     }
 
     final static jc a(ul param0, int param1, int param2) {
@@ -19,7 +19,7 @@ final class jc {
         if (var3 == null) {
           return null;
         }
-        return new jc(new k(var3));
+        return new jc(new PacketBuffer(var3));
     }
 
     final jd a() {
@@ -67,14 +67,14 @@ final class jc {
         return var3;
     }
 
-    private jc(k param0) {
+    private jc(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_a = new rh[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.g(31365);
           if (var3 != 0) {
-            param0.field_j = param0.field_j - 1;
+            param0.position = param0.position - 1;
             this.field_a[var2] = new rh();
             this.field_a[var2].a(param0);
           }

@@ -5,7 +5,7 @@ final class wq {
     static String field_e;
     static String field_f;
     static int field_a;
-    static ja[][] field_c;
+    static Sprite[][] field_c;
     static String field_d;
     static String[][] field_g;
     static String field_b;
@@ -67,7 +67,7 @@ final class wq {
         if (param0 > 108) {
           field_b = null;
           field_d = null;
-          field_c = (ja[][]) null;
+          field_c = (Sprite[][]) null;
           field_g = (String[][]) null;
           field_f = null;
           field_e = null;
@@ -76,7 +76,7 @@ final class wq {
         wq.a((byte) 91);
         field_b = null;
         field_d = null;
-        field_c = (ja[][]) null;
+        field_c = (Sprite[][]) null;
         field_g = (String[][]) null;
         field_f = null;
         field_e = null;
@@ -124,7 +124,7 @@ final class wq {
 
     final static void a(int param0, pd param1, int param2, pd param3, int param4, boolean param5) {
         try {
-          wb.field_db = param4;
+          GameCharacter.field_db = param4;
           pb.field_b = param0;
           li.field_E = param3;
           vk.field_I = param1;
@@ -139,7 +139,7 @@ final class wq {
 
     static {
         field_e = "Powerups with this modifier will not immobilise your zombies. Try it on Screech for some on-the-go karaoke.";
-        field_c = new ja[23][];
+        field_c = new Sprite[23][];
         field_f = "Please select an option in the '<%0>' row.";
         field_d = "Powerups recharge between uses. Drag BROWN (circle) research here to equip it.";
         field_b = "IO error - unable to communicate reliably with the data server. Please check any firewall/antivirus/filtering software.";

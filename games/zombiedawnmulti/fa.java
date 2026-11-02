@@ -7,11 +7,11 @@ final class fa extends cj {
     private mi field_Hb;
     static String field_Ib;
     private cj[] field_Jb;
-    static ja[][] field_Qb;
+    static Sprite[][] field_Qb;
     private cj field_Rb;
     static String field_Ob;
     private cj field_Pb;
-    static ja field_Tb;
+    static Sprite field_Tb;
     private cj field_Sb;
     private cj field_Kb;
     long field_Fb;
@@ -153,20 +153,20 @@ final class fa extends cj {
         }
     }
 
-    final static fn a(Throwable param0, String param1) {
-        fn var2 = null;
-        if (param0 instanceof fn) {
-          var2 = (fn) ((Object) param0);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
           var2.field_k = var2.field_k + ' ' + param1;
         } else {
-          var2 = new fn(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }
 
     final static boolean b(int param0, int param1) {
         try {
-          if (param1 <= s.field_e.field_j) {
+          if (param1 <= s.field_e.position) {
             return true;
           }
           if (null == ki.field_h) {
@@ -174,16 +174,16 @@ final class fa extends cj {
           }
           int var2_int = ki.field_h.a(124);
           if (0 < var2_int) {
-            if (!(var2_int <= -s.field_e.field_j + param1)) {
-              var2_int = param1 - s.field_e.field_j;
+            if (!(var2_int <= -s.field_e.position + param1)) {
+              var2_int = param1 - s.field_e.position;
             }
-            ki.field_h.a(var2_int, s.field_e.field_j, s.field_e.field_m, 120);
+            ki.field_h.a(var2_int, s.field_e.position, s.field_e.payload, 120);
             mo.field_Gb = bl.a((byte) 80);
-            s.field_e.field_j = s.field_e.field_j + var2_int;
-            if (s.field_e.field_j < param1) {
+            s.field_e.position = s.field_e.position + var2_int;
+            if (s.field_e.position < param1) {
               return false;
             }
-            s.field_e.field_j = 0;
+            s.field_e.position = 0;
             return true;
           }
           try {
@@ -208,7 +208,7 @@ final class fa extends cj {
     }
 
     public static void j(int param0) {
-        field_Qb = (ja[][]) null;
+        field_Qb = (Sprite[][]) null;
         field_Gb = null;
         int var1 = -52 % ((-4 - param0) / 45);
         field_Tb = null;
@@ -314,7 +314,7 @@ final class fa extends cj {
             this.field_Sb.field_vb = "|";
             if (!(5 > am.field_b) ||
               !(kj.field_q < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_7_0 = this;
                 stackIn_7_1 = null;
                 stackIn_7_2 = null;
@@ -328,7 +328,7 @@ final class fa extends cj {
                     stackIn_9_1 = null;
                     stackIn_9_2 = null;
                     stackIn_9_5 = dk.field_Kb;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_9_0Lifetime1 = this;
@@ -451,7 +451,7 @@ final class fa extends cj {
             var23 = 13 + (13 + var19);
             var24 = var22 + 24 + var17Lifetime5 + 10;
             var25 = qp.a(param0, (byte) 109, var23, param2);
-            var26 = br.a(true, param1, param3, var24);
+            var26 = IntrusiveNode.a(true, param1, param3, var24);
             this.a(var24, var26, var23, var25, -3344);
             return;
           }
@@ -469,7 +469,7 @@ final class fa extends cj {
           var18Lifetime1 = 13 - (-var15_int - 13);
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = qp.a(param0, (byte) 25, var18Lifetime1, param2);
-          var21Lifetime1 = br.a(true, param1, param3, var19Lifetime1);
+          var21Lifetime1 = IntrusiveNode.a(true, param1, param3, var19Lifetime1);
           this.a(var19Lifetime1, var21Lifetime1, var18Lifetime1, var20Lifetime1, -3344);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -567,7 +567,7 @@ final class fa extends cj {
     }
 
     static {
-        field_Qb = new ja[5][];
+        field_Qb = new Sprite[5][];
         field_Ob = "Stunning is not enough.";
         field_Gb = "Email: ";
         field_Ub = "This game option is only available to members.";

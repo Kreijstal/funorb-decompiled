@@ -15,7 +15,7 @@ final class ve {
     private int field_i;
     private double field_g;
     private double field_j;
-    static ja field_b;
+    static Sprite field_b;
 
     final static void a(long param0, int param1, String param2, tq param3, String param4, cj param5, int param6, int[] param7, int param8) {
         try {

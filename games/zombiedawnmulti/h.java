@@ -242,7 +242,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-127, "mouseoverathing");
                 if (var2 != null) {
-                  kb.field_E = qe.a(-2739, var2);
+                  GameWorld.field_E = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "achievementsthisgame");
                 if (null != var2) {
@@ -298,7 +298,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-125, "lobby_hint_1");
                 if (var2 != null) {
-                  nq.field_A = qe.a(-2739, var2);
+                  SpriteState.field_A = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "lobby_hint_2");
                 if (null != var2) {
@@ -1086,7 +1086,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-127, "MENU_TEXT_GRAPHICS_FASTEST");
                 if (null != var2) {
-                  da.field_f = qe.a(-2739, var2);
+                  InflaterDecompressor.field_f = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "MENU_TEXT_GRAPHICS_MEDIUM");
                 if (null != var2) {
@@ -1128,15 +1128,15 @@ final class h extends id {
             void runChunk1() throws java.lang.RuntimeException {
                 var2 = qe.a(-122, "backtolab");
                 if (null != var2) {
-                  se.field_D = qe.a(-2739, var2);
+                  WidgetContainer.field_D = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "keycode_left");
                 if (var2 != null) {
-                  qd.field_e = 255 & var2[0];
+                  GameScreen.field_e = 255 & var2[0];
                 }
                 var2 = qe.a(-123, "keycode_right");
                 if (null != var2) {
-                  bd.field_d = 255 & var2[0];
+                  MouseInputHandler.field_d = 255 & var2[0];
                 }
                 var2 = qe.a(-126, "keycode_up");
                 if (null != var2) {
@@ -1204,7 +1204,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-128, "name_POWERUP_BARRIER");
                 if (var2 != null) {
-                  wh.field_b = qe.a(-2739, var2);
+                  IterableNodeHashTable.field_b = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "name_POWERUP_BREACH");
                 if (null != var2) {
@@ -1212,7 +1212,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-126, "name_POWERUP_HAZE");
                 if (null != var2) {
-                  ed.field_e = qe.a(-2739, var2);
+                  LevelFileCatalog.field_e = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-123, "name_POWERUP_QUAKE");
                 if (var2 != null) {
@@ -1236,7 +1236,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-122, "name_POWERUP_COUNTER");
                 if (null != var2) {
-                  k.field_h = qe.a(-2739, var2);
+                  PacketBuffer.field_h = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "name_POWERUP_TELEPORT");
                 if (var2 != null) {
@@ -1387,7 +1387,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-127, "teaser_POWERUP_BREACH");
                 if (var2 != null) {
-                  fn.field_j = qe.a(-2739, var2);
+                  ClientException.field_j = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "teaser_POWERUP_HAZE");
                 if (null != var2) {
@@ -1399,7 +1399,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-126, "teaser_POWERUP_FIREBALL");
                 if (var2 != null) {
-                  e.field_f = qe.a(-2739, var2);
+                  SecondaryNodeDeque.field_f = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-124, "teaser_POWERUP_FEAR");
                 if (null != var2) {
@@ -1467,7 +1467,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-128, "teaser_TRAIT_READY");
                 if (null != var2) {
-                  dl.field_d = qe.a(-2739, var2);
+                  SocketConnector.field_d = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "teaser_TRAIT_DETERMINED");
                 if (null != var2) {
@@ -1519,7 +1519,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-128, "teaser_MODIFIER_REALISTIC");
                 if (var2 != null) {
-                  da.field_g = qe.a(-2739, var2);
+                  InflaterDecompressor.field_g = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-122, "tip_POWERUP_SPEED");
                 if (var2 != null) {
@@ -1531,7 +1531,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-127, "tip_POWERUP_PHANTOM");
                 if (var2 != null) {
-                  cf.field_t = qe.a(-2739, var2);
+                  UiWidget.field_t = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "tip_POWERUP_DISGUISE");
                 if (var2 != null) {
@@ -1671,7 +1671,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-126, "tip_MODIFIER_ANNOYING");
                 if (var2 != null) {
-                  cf.field_o = qe.a(-2739, var2);
+                  UiWidget.field_o = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "tip_MODIFIER_IMPOSED");
                 if (null != var2) {
@@ -1723,7 +1723,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-126, "gameover_return_to_lobby");
                 if (var2 != null) {
-                  cf.field_m = qe.a(-2739, var2);
+                  UiWidget.field_m = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "zombiecolours");
                 if (var2 != null) {
@@ -1799,7 +1799,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-124, "summary_new");
                 if (var2 != null) {
-                  th.field_d = qe.a(-2739, var2);
+                  IntrusiveDeque.field_d = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-128, "summary_rating");
                 if (var2 != null) {
@@ -1815,7 +1815,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-126, "selectahuman");
                 if (null != var2) {
-                  ej.field_k = qe.a(-2739, var2);
+                  BufferedSocket.field_k = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-126, "selectanyenemy");
                 if (var2 != null) {
@@ -2325,7 +2325,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-126, "go");
                 if (var2 != null) {
-                  up.field_c = qe.a(-2739, var2);
+                  NodeHashTableIterator.field_c = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-125, "preparetorun");
                 if (null != var2) {
@@ -2349,7 +2349,7 @@ final class h extends id {
                 }
                 var2 = qe.a(-127, "mp_showchat_nounread");
                 if (null != var2) {
-                  ll.field_d = qe.a(-2739, var2);
+                  FullscreenFocusCanvas.field_d = qe.a(-2739, var2);
                 }
                 var2 = qe.a(-127, "members_only_research");
                 if (null != var2) {
@@ -2379,8 +2379,8 @@ final class h extends id {
                   throw fa.a((Throwable) ((Object) stackIn_1861_0), ((StringBuilder) (Object) stackIn_1861_1).append(stackIn_1862_2).append(',').append(param1).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_1870_0 = (!ag.field_d);
-                  ag.field_d = stackIn_1870_0;
+                  stackIn_1870_0 = (!GameApplet.field_d);
+                  GameApplet.field_d = stackIn_1870_0;
                 }
             }
         }
@@ -2469,24 +2469,24 @@ final class h extends id {
         }
     }
 
-    final static ja[] a(byte param0, int param1, int param2, int param3) {
-        ja[] var4 = null;
+    final static Sprite[] a(byte param0, int param1, int param2, int param3) {
+        Sprite[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
-        ja[] stackIn_12_0 = null;
+        Sprite[] stackIn_12_0 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          var4 = new ja[9];
-          var4[0] = k.a(-123, param2, param3);
+          var4 = new Sprite[9];
+          var4[0] = PacketBuffer.a(-123, param2, param3);
           var5 = 1;
           do {
             if (var5 >= 9) {
               if (param0 > -85) {
                 h.a((Object) null, 65, true);
               }
-              var4[4] = k.a(-128, 64, param1);
+              var4[4] = PacketBuffer.a(-128, 64, param1);
               break;
             }
             var4[var5] = var4[0];
@@ -2585,14 +2585,14 @@ final class h extends id {
           oo.b();
           boolean decompiledSharedTail0 = (this.field_J == 1);
           if (!decompiledSharedTail0) {
-            na.field_H[this.field_C][var5].c((vn.field_h.field_x - this.field_Q) / 2, (-this.field_M + vn.field_h.field_w) / 2, this.field_Q, this.field_M);
+            na.field_H[this.field_C][var5].c((vn.field_h.width - this.field_Q) / 2, (-this.field_M + vn.field_h.height) / 2, this.field_Q, this.field_M);
             decompiledSharedTail0 = (var12 != 0);
           }
           if (decompiledSharedTail0) {
-            na.field_H[this.field_C][var5].a((-this.field_Q + vn.field_h.field_x) / 2, (vn.field_h.field_w - this.field_M) / 2);
+            na.field_H[this.field_C][var5].a((-this.field_Q + vn.field_h.width) / 2, (vn.field_h.height - this.field_M) / 2);
           }
           g.d();
-          var8 = vn.field_h.field_B;
+          var8 = vn.field_h.pixels;
           var9 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var9 >= var8.length))) {
@@ -2617,13 +2617,13 @@ final class h extends id {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            vn.field_h.g(var3_int - vn.field_h.field_x / 2, var4 - vn.field_h.field_w / 2);
+            vn.field_h.g(var3_int - vn.field_h.width / 2, var4 - vn.field_h.height / 2);
             if (vo.field_r == null) {
-              vo.field_r = new ja(ud.field_Q.field_e, 2 * ud.field_Q.field_b);
+              vo.field_r = new Sprite(ud.field_Q.field_e, 2 * ud.field_Q.field_b);
             }
             g.c(vo.field_r);
             stackIn_67_0 = -2;
-            stackIn_67_1 = ~ll.field_k.field_k;
+            stackIn_67_1 = ~FullscreenFocusCanvas.field_k.field_k;
           }
           if (stackIn_67_0 == stackIn_67_1) {
             ud.field_Q.a(0, 0, 128, var7);
@@ -2636,9 +2636,9 @@ final class h extends id {
             this.field_O = new ea();
           }
           this.field_P = nk.a(var7, 455739624, 1);
-          if (ll.field_k.field_k != 1) {
+          if (FullscreenFocusCanvas.field_k.field_k != 1) {
             stackIn_83_0 = this.field_O;
-            if (ll.field_k.field_k != 2) {
+            if (FullscreenFocusCanvas.field_k.field_k != 2) {
               stackIn_84_1 = 1;
             } else {
               stackIn_84_1 = 4;
@@ -2646,15 +2646,15 @@ final class h extends id {
             ((ea) (Object) stackIn_83_0).a(stackIn_84_1, -((double)wf.field_m / 5.0) + 2000000000.0, this.field_P);
           }
           g.d();
-          if (ll.field_k.field_k == 1) {
-            vo.field_r.a(var3_int + 14 - vn.field_h.field_x / 2, var4 - 33 - vn.field_h.field_w / 2, 64, 400);
-            vo.field_r.e(14 + (var3_int - vn.field_h.field_x / 2), var4 + (-33 - vn.field_h.field_w / 2), 192);
+          if (FullscreenFocusCanvas.field_k.field_k == 1) {
+            vo.field_r.a(var3_int + 14 - vn.field_h.width / 2, var4 - 33 - vn.field_h.height / 2, 64, 400);
+            vo.field_r.e(14 + (var3_int - vn.field_h.width / 2), var4 + (-33 - vn.field_h.height / 2), 192);
             if (var12 == 0) {
               return;
             }
           }
-          vo.field_r.a(-(vn.field_h.field_x / 2) + (14 + var3_int), -(vn.field_h.field_w / 2) + var4 - 33, 64, 400);
-          vo.field_r.e(14 + (var3_int - vn.field_h.field_x / 2), -(vn.field_h.field_w / 2) + var4 - 33, 32);
+          vo.field_r.a(-(vn.field_h.width / 2) + (14 + var3_int), -(vn.field_h.height / 2) + var4 - 33, 64, 400);
+          vo.field_r.e(14 + (var3_int - vn.field_h.width / 2), -(vn.field_h.height / 2) + var4 - 33, 32);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

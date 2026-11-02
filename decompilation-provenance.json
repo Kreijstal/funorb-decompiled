@@ -10511,6 +10511,30 @@
         "deterministic": true,
         "idempotent": true
       }
+    },
+    "zombiedawnmulti": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/zombiedawnmulti"
+      },
+      "inputTreeSha256": "854791338433f981516fd30d1a51754afb38d4c6601cefbf0b63c6c391ee05db",
+      "sources": {
+        "files": 417,
+        "sha256": "8f9d311d1669bb431d030bf0db87551e1f63a8295425d2c3c202b1fbf609eec0"
+      },
+      "dictionary": {
+        "path": "decompilation/zombiedawnmulti-naming.json",
+        "sha256": "43b8543aac88e16a4c9e7d0061b13638002d0f2bdaa0566527244ee4dfc7673a"
+      },
+      "readingGuide": {
+        "path": "games/zombiedawnmulti/README.md",
+        "sha256": "55e50eea57b838de8a92085b3244189a4b4f7e70ba20fdc98d1f892b05328e03"
+      },
+      "rulesSha256": "7c2f3bf720580953f348f021566e9a14e3aa7f5075159c101805b2f75bef5ff0",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -12750,6 +12774,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 417,
+          "sha256": "8f9d311d1669bb431d030bf0db87551e1f63a8295425d2c3c202b1fbf609eec0"
         }
       }
     }

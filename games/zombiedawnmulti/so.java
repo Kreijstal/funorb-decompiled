@@ -9,10 +9,10 @@ final class so extends ae {
     private int field_p;
     private int field_u;
     static int field_r;
-    static ja field_l;
-    static th field_j;
+    static Sprite field_l;
+    static IntrusiveDeque field_j;
     static ma field_t;
-    static k field_k;
+    static PacketBuffer field_k;
     private int field_v;
     static ao field_o;
     static long field_s;
@@ -22,7 +22,7 @@ final class so extends ae {
         if (param0 >= -47) {
           so.a(true, -39, (CharSequence) null);
         }
-        fk.field_n.a((br) (this), false);
+        fk.field_n.a((IntrusiveNode) (this), false);
     }
 
     final static boolean a(int param0, String param1) {
@@ -114,7 +114,7 @@ final class so extends ae {
         we.field_g[40] = eh.field_c;
         we.field_g[46] = lj.field_m;
         we.field_g[41] = ic.field_l;
-        we.field_g[38] = cf.field_m;
+        we.field_g[38] = UiWidget.field_m;
         we.field_g[42] = u.field_j;
         we.field_g[47] = vn.field_d[0];
         we.field_g[37] = ce.field_g[0];
@@ -130,7 +130,7 @@ final class so extends ae {
         gh.field_f[52] = lc.field_i;
         gh.field_f[0] = ek.field_F;
         wq.field_g = new String[63][2];
-        gh.field_f[11] = ed.field_e;
+        gh.field_f[11] = LevelFileCatalog.field_e;
         gh.field_f[45] = db.field_d;
         gh.field_f[3] = lf.field_b;
         gh.field_f[55] = wn.field_s;
@@ -150,7 +150,7 @@ final class so extends ae {
         gh.field_f[49] = dg.field_O;
         gh.field_f[2] = hd.field_t;
         gh.field_f[4] = ul.field_d;
-        gh.field_f[9] = wh.field_b;
+        gh.field_f[9] = IterableNodeHashTable.field_b;
         gh.field_f[32] = ZombieDawnMulti.field_M;
         gh.field_f[58] = me.field_j;
         gh.field_f[8] = cj.field_B;
@@ -158,7 +158,7 @@ final class so extends ae {
         gh.field_f[56] = rn.field_c;
         gh.field_f[10] = od.field_Eb;
         gh.field_f[61] = qc.field_w;
-        gh.field_f[17] = k.field_h;
+        gh.field_f[17] = PacketBuffer.field_h;
         gh.field_f[37] = df.field_G;
         gh.field_f[36] = fk.field_l;
         gh.field_f[13] = hf.field_a;
@@ -177,10 +177,10 @@ final class so extends ae {
         wq.field_g[7][0] = s.field_d;
         wq.field_g[8][0] = sh.field_P;
         wq.field_g[9][0] = me.field_c;
-        wq.field_g[10][0] = fn.field_j;
+        wq.field_g[10][0] = ClientException.field_j;
         wq.field_g[11][0] = wp.field_a;
         wq.field_g[12][0] = no.field_Kb;
-        wq.field_g[13][0] = e.field_f;
+        wq.field_g[13][0] = SecondaryNodeDeque.field_f;
         wq.field_g[14][0] = un.field_n;
         wq.field_g[15][0] = he.field_c;
         wq.field_g[16][0] = ha.field_h;
@@ -197,7 +197,7 @@ final class so extends ae {
         wq.field_g[53][0] = ia.field_u;
         wq.field_g[52][0] = bb.field_m;
         wq.field_g[51][0] = nk.field_f;
-        wq.field_g[50][0] = dl.field_d;
+        wq.field_g[50][0] = SocketConnector.field_d;
         wq.field_g[49][0] = sn.field_Sb;
         wq.field_g[48][0] = uf.field_d;
         wq.field_g[47][0] = cn.field_u;
@@ -210,10 +210,10 @@ final class so extends ae {
         wq.field_g[35][0] = dd.field_c;
         wq.field_g[36][0] = mn.field_s;
         wq.field_g[37][0] = uf.field_c;
-        wq.field_g[38][0] = da.field_g;
+        wq.field_g[38][0] = InflaterDecompressor.field_g;
         wq.field_g[0][1] = cj.field_db;
         wq.field_g[1][1] = op.field_j;
-        wq.field_g[2][1] = cf.field_t;
+        wq.field_g[2][1] = UiWidget.field_t;
         wq.field_g[3][1] = hi.field_Nb;
         wq.field_g[4][1] = ha.field_n;
         wq.field_g[5][1] = bl.field_d;
@@ -251,7 +251,7 @@ final class so extends ae {
         wq.field_g[46][1] = fe.field_X;
         wq.field_g[45][1] = ip.field_d;
         wq.field_g[44][1] = ff.field_q;
-        wq.field_g[32][1] = cf.field_o;
+        wq.field_g[32][1] = UiWidget.field_o;
         wq.field_g[33][1] = wl.field_g;
         wq.field_g[34][1] = vg.field_q;
         wq.field_g[35][1] = wq.field_e;
@@ -311,14 +311,14 @@ final class so extends ae {
     final static void a(int param0, long param1, int param2) {
         ga var4 = ma.field_a;
         var4.b((byte) -35, param2);
-        var4.field_j = var4.field_j + 1;
-        int var5 = var4.field_j;
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
         if (param0 != -21148) {
           return;
         }
         var4.a(param0 + 21034, 6);
         var4.a(param1, true);
-        var4.e(44, var4.field_j - var5);
+        var4.e(44, var4.position - var5);
     }
 
     final static void a(int param0, boolean param1, boolean param2, boolean param3, int param4) {
@@ -367,7 +367,7 @@ final class so extends ae {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        th var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         int var18_int = 0;
         dm var18_ref = null;
@@ -387,21 +387,21 @@ final class so extends ae {
         var19 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           boolean decompiledFrameCompleted0 = true;
-          mf.a(da.field_a, false);
+          MouseWheelInput.a(InflaterDecompressor.field_a, false);
           if (null != mh.field_c) {
             jp.field_b.field_Z = true;
             en.field_b.field_z = 0;
             var22 = en.field_b;
             var26 = var22;
             var26.field_zb = 0;
-            var6 = gb.field_a;
-            gb.field_a.field_z = 0;
+            var6 = GameKeyHandler.field_a;
+            GameKeyHandler.field_a.field_z = 0;
             var6.field_zb = 0;
             eb.field_B.field_z = 0;
             var7 = eb.field_B;
             var7.field_zb = 0;
             if (hl.b(0)) {
-              gg.field_m.field_wb = fn.field_l.toUpperCase();
+              gg.field_m.field_wb = ClientException.field_l.toUpperCase();
               var9 = (2 + fc.field_a.field_zb) / 2;
               en.field_b.a(40, fc.field_a.field_z - 40, var9 - 2, 0, -3344);
               if (mh.field_c.field_mc > mh.field_c.field_cc) {
@@ -431,17 +431,17 @@ final class so extends ae {
                   en.field_b.field_ab = he.field_i.field_X;
                 }
               }
-              gb.field_a.a(40, -40 + fc.field_a.field_z, fc.field_a.field_zb - var9, var9, -3344);
-              gb.field_a.field_wb = qk.field_f.toUpperCase();
-              var8 = gb.field_a;
-              stackIn_20_0 = gb.field_a;
+              GameKeyHandler.field_a.a(40, -40 + fc.field_a.field_z, fc.field_a.field_zb - var9, var9, -3344);
+              GameKeyHandler.field_a.field_wb = qk.field_f.toUpperCase();
+              var8 = GameKeyHandler.field_a;
+              stackIn_20_0 = GameKeyHandler.field_a;
               stackIn_21_1 = (param3) && (0L == qi.field_c);
               stackIn_20_0.field_Z = stackIn_21_1;
               var10 = 2;
               if (iq.field_b != null) {
-                if (null == rl.field_v) {
-                  rl.field_v = new byte[kj.field_h];
-                  ll.field_c = new boolean[kj.field_h];
+                if (null == GameSimulation.field_v) {
+                  GameSimulation.field_v = new byte[kj.field_h];
+                  FullscreenFocusCanvas.field_c = new boolean[kj.field_h];
                 }
                 var11 = 0;
                 do {
@@ -449,15 +449,15 @@ final class so extends ae {
                     var10 = 0;
                     break;
                   }
-                  ll.field_c[var11] = false;
+                  FullscreenFocusCanvas.field_c[var11] = false;
                   var11++;
                 } while (var19 == 0);
-                L17: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11 = 0;
                     stackIn_71_0 = 0;
                     if (var19 != 0) {
-                      break L17;
+                      break scanLoop1;
                     }
                     var12 = stackIn_71_0;
                     while (true) {
@@ -470,7 +470,7 @@ final class so extends ae {
                         var13_ref_int__ = var20;
                         stackIn_65_0 = 0;
                         var14 = stackIn_65_0;
-                        L24: while (true) {
+                        scanLoop2: while (true) {
                           if (var14 < var25.length) {
                             var15 = var25[var14];
                             var16 = var20[var14 + 1];
@@ -485,12 +485,12 @@ final class so extends ae {
                               var17_int = stackIn_44_0;
                               if (var17_int != var16 &&
                                 var19 == 0) {
-                                break L24;
+                                break scanLoop2;
                               }
                             } else {
                               if (~(mh.field_c.field_Zb[var15] & 255) != ~var16 &&
                                 var19 == 0) {
-                                break L24;
+                                break scanLoop2;
                               }
                             }
                             var14 += 2;
@@ -513,7 +513,7 @@ final class so extends ae {
                             }
                             var15 += 2;
                           }
-                          ll.field_c[var14] = true;
+                          FullscreenFocusCanvas.field_c[var14] = true;
                           break;
                         }
                         var12++;
@@ -538,20 +538,20 @@ final class so extends ae {
               }
               boolean decompiledFrameRemainder0 = true;
               if (var10 < 2) {
-                gb.field_a.field_Z = false;
-                decompiledFrameRemainder0 = !(!gb.field_a.field_pb);
+                GameKeyHandler.field_a.field_Z = false;
+                decompiledFrameRemainder0 = !(!GameKeyHandler.field_a.field_pb);
                 if (decompiledFrameRemainder0) {
                   var11_ref = null;
                   var12 = 0;
                   var13 = 0;
                   while (true) {
                     if (kj.field_h > var13) {
-                      stackOut_80_0 = ll.field_c[var13];
+                      stackOut_80_0 = FullscreenFocusCanvas.field_c[var13];
                       stackIn_88_0 = stackOut_80_0 ? 1 : 0;
                       stackIn_81_0 = stackOut_80_0;
                       if (var19 == 0) {
                         if (stackIn_81_0) {
-                          var24 = "<col=A00000>" + cf.field_f[var13] + "</col>";
+                          var24 = "<col=A00000>" + UiWidget.field_f[var13] + "</col>";
                           if (var11_ref != null) {
                             var12 = 1;
                             var11_ref = (String) (var11_ref) + ", " + var24;
@@ -591,7 +591,7 @@ final class so extends ae {
                   ui.field_j = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
                 }
               }
-              if ((decompiledFrameRemainder0) && (!(var10 < 2) || var19 != 0) && (null != ch.field_g ||
+              if ((decompiledFrameRemainder0) && (!(var10 < 2) || var19 != 0) && (null != IntrusiveDequeCursor.field_g ||
                 sd.field_G != null ||
                 r.field_c != null ||
                 na.field_J != null)) {
@@ -608,9 +608,9 @@ final class so extends ae {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  if (stackIn_188_0 != ch.field_g &&
-                    ch.field_g[var16] != null &&
-                    ch.field_g[var16][var17_int]) {
+                  if (stackIn_188_0 != IntrusiveDequeCursor.field_g &&
+                    IntrusiveDequeCursor.field_g[var16] != null &&
+                    IntrusiveDequeCursor.field_g[var16][var17_int]) {
                     var11 = 1;
                   }
                   if (null != sd.field_G &&
@@ -701,12 +701,12 @@ final class so extends ae {
                     if (var16 == 0) {
                       break;
                     }
-                    gb.field_a.field_Z = false;
-                    if (!gb.field_a.field_pb) {
+                    GameKeyHandler.field_a.field_Z = false;
+                    if (!GameKeyHandler.field_a.field_pb) {
                       break;
                     }
                     if (em.field_U.field_c.field_Kb != 0) {
-                      ui.field_j = vl.a(rn.field_b, new String[]{l.field_d}, 2);
+                      ui.field_j = vl.a(rn.field_b, new String[]{RasterBuffer.field_d}, 2);
                       if (var19 == 0) {
                         break;
                       }
@@ -740,7 +740,7 @@ final class so extends ae {
                 }
                 var8.field_wb = vl.a(ge.field_pb, new String[]{Integer.toString(var9)}, param0 ^ 48);
               }
-              fn.field_h.field_wb = vl.a(pb.field_g, new String[]{Integer.toString(mh.field_c.field_cc), Integer.toString(mh.field_c.field_mc)}, 2);
+              ClientException.field_h.field_wb = vl.a(pb.field_g, new String[]{Integer.toString(mh.field_c.field_cc), Integer.toString(mh.field_c.field_mc)}, 2);
             }
           }
           if (decompiledFrameCompleted0) {
@@ -769,8 +769,8 @@ final class so extends ae {
             if (0 != en.field_b.field_T) {
               io.field_b = true;
             }
-            if (0 != gb.field_a.field_T) {
-              cf.field_r = true;
+            if (0 != GameKeyHandler.field_a.field_T) {
+              UiWidget.field_r = true;
             }
             if (pg.field_a.field_T != 0) {
               io.field_b = false;
@@ -818,7 +818,7 @@ final class so extends ae {
           }
           if ((decompiledNaturalLoopExit0) &&
             (param0 != 1)) {
-            field_k = (k) null;
+            field_k = (PacketBuffer) null;
             return true;
           }
           return true;
@@ -836,7 +836,7 @@ final class so extends ae {
         pb.field_e.c(Integer.toString(this.field_f - param3), this.field_q >> -param2 + 16, this.field_u >> 16 - param0, 4, -1);
         pb.field_e.c(Integer.toString(-param3 + this.field_f), -param2 + this.field_i, -param0 + this.field_m, 0, -1);
         if (!param1) {
-          field_k = (k) null;
+          field_k = (PacketBuffer) null;
         }
         oo.d(this.field_q >> 16 - param2, this.field_u >> 16 - param0, this.field_i - param2, -param0 + this.field_m, 16711680, 10);
     }
@@ -871,7 +871,7 @@ final class so extends ae {
             break;
           }
           if (!param1) {
-            field_k = (k) null;
+            field_k = (PacketBuffer) null;
             return;
           }
           return;
@@ -889,7 +889,7 @@ final class so extends ae {
         }
     }
 
-    final void a(int param0, qd param1) {
+    final void a(int param0, GameScreen param1) {
         try {
           param1.a(this.field_v, this.field_q, false, this.field_m, this.field_n, this.field_u, this.field_p, this.field_i);
           if (param0 != 0) {
@@ -918,7 +918,7 @@ final class so extends ae {
     }
 
     static {
-        field_j = new th();
+        field_j = new IntrusiveDeque();
         field_t = new ma();
         field_o = new ao(2, 4, 4, 0);
     }

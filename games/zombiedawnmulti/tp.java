@@ -39,7 +39,7 @@ final class tp extends un {
             return stackIn_2_0;
           }
           if (!param1.equals(this.field_r)) {
-            var3 = ed.a((byte) 127, param1);
+            var3 = LevelFileCatalog.a((byte) 127, param1);
             if (var3 != null &&
               null == var3.field_h) {
               this.field_r = param1;
@@ -97,7 +97,7 @@ final class tp extends un {
             this.a(true, (String) null);
           }
           if (!param0.equals(this.field_r)) {
-            var4 = ed.a((byte) 127, param0);
+            var4 = LevelFileCatalog.a((byte) 127, param0);
             if (var4 == null) {
               return null;
             }

@@ -125,7 +125,7 @@ final class ka {
         this.field_o = ti.field_W;
         this.field_d = pg.field_b;
         this.field_i = tk.field_m;
-        this.field_e = ch.field_h;
+        this.field_e = IntrusiveDequeCursor.field_h;
         this.field_j = ce.field_r;
         if (!param0) {
           this.field_r = null;

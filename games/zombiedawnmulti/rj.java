@@ -6,7 +6,7 @@ import java.util.*;
 final class rj extends id {
     private boolean field_H;
     static int field_J;
-    static ja[] field_I;
+    static Sprite[] field_I;
     static int field_F;
     private boolean field_G;
 
@@ -153,7 +153,7 @@ final class rj extends id {
             }
             var5 = var28.g(param0 ^ 31366);
             if (var5 == 0) {
-              var4.a(true);
+              var4.unlink(true);
               return;
             }
             var6 = var4.field_k;
@@ -182,14 +182,14 @@ final class rj extends id {
             var17 = 0;
             var18 = var28.g(31365);
             if (var18 <= 0) {
-              var4.a(true);
+              var4.unlink(true);
               return;
             }
             for (var19 = 0; var18 > var19; var19++) {
               var20 = var28.g(31365);
               var21 = ha.field_j[var20].field_d;
               var22 = var28.a((byte) -30);
-              var24 = var28.field_j;
+              var24 = var28.position;
               if (var6 > var19) {
                 var8[0][var12] = var21;
                 var9[0][var12] = ha.field_j[var20].field_c;
@@ -207,7 +207,7 @@ final class rj extends id {
                 var9[1][var13] = null;
                 var35[1][var13] = var22;
                 var13++;
-                var28.field_j = var24;
+                var28.position = var24;
                 for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                   incrementValue$1 = var16;
                   var16++;
@@ -221,7 +221,7 @@ final class rj extends id {
                 var9[2][var14] = ha.field_j[var20].field_c;
                 var35[2][var14] = var22;
                 var14++;
-                var28.field_j = var24;
+                var28.position = var24;
                 for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                   incrementValue$2 = var17;
                   var17++;
@@ -229,7 +229,7 @@ final class rj extends id {
                 }
               }
             }
-            var4.a(true);
+            var4.unlink(true);
             return;
           }
           if (var2 == 1) {
@@ -247,10 +247,10 @@ final class rj extends id {
               ak.a((byte) -115);
               return;
             }
-            var4_ref.a(true);
+            var4_ref.unlink(true);
             return;
           }
-          bd.a("HS1: " + ci.a(param0 ^ 3), (Throwable) null, false);
+          MouseInputHandler.a("HS1: " + ci.a(param0 ^ 3), (Throwable) null, false);
           ak.a((byte) -123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

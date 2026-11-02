@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vl extends br {
+final class vl extends IntrusiveNode {
     int field_g;
-    static ja field_k;
+    static Sprite field_k;
     int field_i;
     static String[] field_j;
     static int field_h;
@@ -127,7 +127,7 @@ final class vl extends br {
           wk.field_G = param4;
           no.field_Gb = param3;
           al.field_bb = param5;
-          mc.field_a = param0;
+          RandomAccessCacheFile.field_a = param0;
           en.field_d = param1;
           if (param2 <= 43) {
             pd var7 = (pd) null;

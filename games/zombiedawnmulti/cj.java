@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class cj extends qo {
-    ja field_O;
+    Sprite field_O;
     int field_Y;
     private int field_hb;
     int field_U;
@@ -17,7 +17,7 @@ class cj extends qo {
     private int field_E;
     int field_x;
     int field_qb;
-    ja field_rb;
+    Sprite field_rb;
     boolean field_ib;
     int field_J;
     int field_z;
@@ -29,14 +29,14 @@ class cj extends qo {
     private int field_A;
     int field_Db;
     String field_wb;
-    ja[] field_gb;
+    Sprite[] field_gb;
     int field_mb;
-    fm field_yb;
+    BitmapFont field_yb;
     static String field_B;
     static String field_db;
-    ja[] field_ab;
-    ja[] field_Bb;
-    ja field_nb;
+    Sprite[] field_ab;
+    Sprite[] field_Bb;
+    Sprite field_nb;
     private int field_v;
     int field_M;
     static volatile boolean field_ub;
@@ -46,7 +46,7 @@ class cj extends qo {
     int field_P;
     int field_jb;
     String field_vb;
-    ja field_cb;
+    Sprite field_cb;
     int field_w;
     int field_ob;
     int field_sb;
@@ -54,13 +54,13 @@ class cj extends qo {
     private int field_D;
     private boolean field_kb;
     private boolean field_W;
-    ja[] field_S;
-    ja[] field_X;
-    ja field_K;
+    Sprite[] field_S;
+    Sprite[] field_X;
+    Sprite field_K;
     boolean field_L;
     private int field_tb;
     boolean field_Ab;
-    th field_Cb;
+    IntrusiveDeque field_Cb;
     int field_eb;
     int field_I;
     int field_xb;
@@ -73,7 +73,7 @@ class cj extends qo {
         RuntimeException var3 = null;
         try {
           if (null == this.field_Cb) {
-            this.field_Cb = new th();
+            this.field_Cb = new IntrusiveDeque();
           }
           this.field_Cb.a(param1, false);
           if (param0 != 50) {
@@ -340,8 +340,8 @@ class cj extends qo {
         int var13;
         int var14;
         int var15;
-        ja[] var16;
-        ja var17;
+        Sprite[] var16;
+        Sprite var17;
         int var18;
         int var19;
         int var20;
@@ -451,13 +451,13 @@ class cj extends qo {
           var23_int = var21 + this.field_w;
           var24 = this.field_qb + var22;
           if (this.field_R == 1) {
-            var23_int = var23_int + (this.field_zb - var17.field_z) / 2;
+            var23_int = var23_int + (this.field_zb - var17.fullWidth) / 2;
           }
           if (1 == this.field_lb) {
             var24 = var24 + (this.field_z - var17.field_u) / 2;
           }
           if (this.field_R == 2) {
-            var23_int = var23_int + (this.field_zb - var17.field_z);
+            var23_int = var23_int + (this.field_zb - var17.fullWidth);
           }
           if (2 == this.field_lb) {
             var24 = var24 + (this.field_z - var17.field_u);
@@ -639,7 +639,7 @@ class cj extends qo {
         if (pq.field_f == 0) {
           this.field_jb = 0;
         }
-        stackIn_34_1 = (!me.field_g) && (oo.field_f <= bd.field_g) && (bd.field_g < oo.field_g) && (oo.field_e <= bo.field_d) && (oo.field_d > bo.field_d);
+        stackIn_34_1 = (!me.field_g) && (oo.field_f <= MouseInputHandler.field_g) && (MouseInputHandler.field_g < oo.field_g) && (oo.field_e <= bo.field_d) && (oo.field_d > bo.field_d);
         this.field_pb = stackIn_34_1;
         stackIn_39_1 = (this.field_pb) && (this.field_jb == pq.field_f) && (param1);
         this.field_L = stackIn_39_1;
@@ -662,7 +662,7 @@ class cj extends qo {
         oo.h(var8, var9, var10, var11);
         if (0 != this.field_jb &&
           this.field_fb) {
-          this.field_x = -param3 - this.field_U + bd.field_g;
+          this.field_x = -param3 - this.field_U + MouseInputHandler.field_g;
           this.field_Q = -this.field_G + (bo.field_d - param4);
           if (this.field_x < 0) {
             this.field_x = 0;
@@ -695,7 +695,7 @@ class cj extends qo {
     }
 
     final static String g(int param0) {
-        if (2 > fn.field_i) {
+        if (2 > ClientException.field_i) {
           return lo.field_f;
         }
         if (null != cp.field_P) {
@@ -801,7 +801,7 @@ class cj extends qo {
           }
         }
         if (this.field_rb != null) {
-          var4_intLifetime1 = this.field_rb.field_z;
+          var4_intLifetime1 = this.field_rb.fullWidth;
           if (var3 < var4_intLifetime1) {
             var3 = var4_intLifetime1;
           }
@@ -866,7 +866,7 @@ class cj extends qo {
         this.field_xb = -1;
         try {
           this.field_zb = param4;
-          this.field_e = param0;
+          this.key = param0;
           this.field_z = param5;
           this.field_Q = param3;
           this.field_x = param2;

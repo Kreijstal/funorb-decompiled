@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class qn extends l {
+final class qn extends RasterBuffer {
     private java.awt.Component field_i;
 
     public qn() {

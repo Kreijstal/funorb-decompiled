@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class po extends br {
+final class po extends IntrusiveNode {
     private int[] field_r;
     jd[] field_s;
     static int field_n;
@@ -50,7 +50,7 @@ final class po extends br {
         nk.field_n[16] = mn.field_n;
         nk.field_n[19] = sd.field_E;
         nk.field_n[13] = vn.field_a;
-        nk.field_n[20] = rl.field_c;
+        nk.field_n[20] = GameSimulation.field_c;
         if (param0 != 2) {
           po.d(2);
         }
@@ -126,7 +126,7 @@ final class po extends br {
         int var34 = 0;
         int var35 = 0;
         int var37 = 0;
-        k var38 = null;
+        PacketBuffer var38 = null;
         byte[] var39 = null;
         nj var40 = null;
         byte[] var41 = null;
@@ -211,8 +211,8 @@ final class po extends br {
           this.field_r = new int[128];
           this.field_g = new short[128];
           this.field_j = new byte[128];
-          var38 = new k(param0);
-          for (var3 = 0; var38.field_m[var3 + var38.field_j] != 0; var3++) {
+          var38 = new PacketBuffer(param0);
+          for (var3 = 0; var38.payload[var3 + var38.position] != 0; var3++) {
           }
           var55 = new byte[var3];
           var42 = var55;
@@ -221,10 +221,10 @@ final class po extends br {
             var4[var5] = var38.d(-249699580);
           }
           var3++;
-          var38.field_j = var38.field_j + 1;
-          var5Lifetime1 = var38.field_j;
-          var38.field_j = var38.field_j + var3;
-          for (var6 = 0; var38.field_m[var6 + var38.field_j] != 0; var6++) {
+          var38.position = var38.position + 1;
+          var5Lifetime1 = var38.position;
+          var38.position = var38.position + var3;
+          for (var6 = 0; var38.payload[var6 + var38.position] != 0; var6++) {
           }
           var56 = new byte[var6];
           var43 = var56;
@@ -232,11 +232,11 @@ final class po extends br {
           for (var8 = 0; var8 < var6; var8++) {
             var7[var8] = var38.d(-249699580);
           }
-          var38.field_j = var38.field_j + 1;
+          var38.position = var38.position + 1;
           var6++;
-          var8Lifetime1 = var38.field_j;
-          var38.field_j = var38.field_j + var6;
-          for (var9 = 0; 0 != var38.field_m[var9 + var38.field_j]; var9++) {
+          var8Lifetime1 = var38.position;
+          var38.position = var38.position + var6;
+          for (var9 = 0; 0 != var38.payload[var9 + var38.position]; var9++) {
           }
           var57 = new byte[var9];
           var44 = var57;
@@ -244,7 +244,7 @@ final class po extends br {
           for (var11_int = 0; var9 > var11_int; var11_int++) {
             var10[var11_int] = var38.d(-249699580);
           }
-          var38.field_j = var38.field_j + 1;
+          var38.position = var38.position + 1;
           var9++;
           var53 = new byte[var9];
           var39 = var53;
@@ -303,7 +303,7 @@ final class po extends br {
           }
           var47 = stackIn_42_0;
           var16 = var47;
-          for (var17 = 0; var38.field_m[var17 + var38.field_j] != 0; var17++) {
+          for (var17 = 0; var38.payload[var17 + var38.position] != 0; var17++) {
           }
           var54 = new byte[var17];
           var41 = var54;
@@ -311,7 +311,7 @@ final class po extends br {
           for (var19 = 0; var19 < var17; var19++) {
             var18[var19] = var38.d(-249699580);
           }
-          var38.field_j = var38.field_j + 1;
+          var38.position = var38.position + 1;
           var17++;
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
@@ -352,7 +352,7 @@ final class po extends br {
                 }
                 incrementValue$6 = var5Lifetime1;
                 var5Lifetime1++;
-                var23Lifetime1 = -1 + var38.field_m[incrementValue$6];
+                var23Lifetime1 = -1 + var38.payload[incrementValue$6];
               }
               this.field_m[var24] = (byte)var23Lifetime1;
               var20Lifetime3--;
@@ -366,7 +366,7 @@ final class po extends br {
               if (var20Lifetime4 == 0) {
                 incrementValue$3 = var8Lifetime1;
                 var8Lifetime1++;
-                var24Lifetime1 = 16 + var38.field_m[incrementValue$3] << 2;
+                var24Lifetime1 = 16 + var38.payload[incrementValue$3] << 2;
                 if (var56.length > var21Lifetime2) {
                   var20Lifetime4 = var7[var21Lifetime2++];
                 } else {

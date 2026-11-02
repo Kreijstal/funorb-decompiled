@@ -10,13 +10,13 @@ final class r {
     static String field_g;
     static int field_f;
 
-    final static void a(int param0, ja param1) {
+    final static void a(int param0, Sprite param1) {
         m.c(540);
         if (param0 != 0) {
           return;
         }
         try {
-          oo.a(param1.field_B, param1.field_z, param1.field_u);
+          oo.a(param1.pixels, param1.fullWidth, param1.field_u);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "r.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -30,15 +30,15 @@ final class r {
         field_e = null;
         field_b = null;
         if (!param0) {
-          ja var2 = (ja) null;
-          r.a(3, (ja) null);
+          Sprite var2 = (Sprite) null;
+          r.a(3, (Sprite) null);
         }
     }
 
     final static po a(ul param0, int param1, byte param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        ja var4 = null;
+        Sprite var4 = null;
         byte[] var5 = null;
         Object stackIn_2_0 = null;
         po stackIn_6_0 = null;
@@ -54,8 +54,8 @@ final class r {
             return (po) (stackIn_2_0);
           }
           if (param2 != 15) {
-            var4 = (ja) null;
-            r.a(-29, (ja) null);
+            var4 = (Sprite) null;
+            r.a(-29, (Sprite) null);
           }
           stackIn_6_0 = new po(var5);
           return stackIn_6_0;

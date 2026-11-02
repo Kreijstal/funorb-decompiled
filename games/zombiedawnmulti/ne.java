@@ -4,11 +4,11 @@
 class ne extends ie implements in {
     private boolean field_wb;
     private boolean field_xb;
-    static ja[] field_Ab;
+    static Sprite[] field_Ab;
     private boolean field_ub;
     private boolean field_yb;
     private le field_Bb;
-    private fm field_zb;
+    private BitmapFont field_zb;
     static String field_vb;
     static int field_tb;
 
@@ -57,7 +57,7 @@ class ne extends ie implements in {
             } else {
               if (6 != param2) {
                 if (param2 != 9) {
-                  this.a((cf) (var7), (byte) 119);
+                  this.a((UiWidget) (var7), (byte) 119);
                   var5 = -3 % ((-15 - param1) / 46);
                   return;
                 }
@@ -69,7 +69,7 @@ class ne extends ie implements in {
           } else {
             var7.a(od.field_zb, 7, true);
           }
-          this.a((cf) (var7), (byte) 119);
+          this.a((UiWidget) (var7), (byte) 119);
           var5Lifetime1 = -3 % ((-15 - param1) / 46);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -107,14 +107,14 @@ class ne extends ie implements in {
     final static void c(int param0, int param1, int param2, int param3, int param4) {
         if (param1 == 20341) {
           mg.field_H = param0;
-          dq.field_l = param2;
+          ImageProducerRasterBuffer.field_l = param2;
           tk.field_n = param4;
           po.field_n = param3;
           return;
         }
-        field_Ab = (ja[]) null;
+        field_Ab = (Sprite[]) null;
         mg.field_H = param0;
-        dq.field_l = param2;
+        ImageProducerRasterBuffer.field_l = param2;
         tk.field_n = param4;
         po.field_n = param3;
     }
@@ -132,7 +132,7 @@ class ne extends ie implements in {
         wd var2 = new wd(this, this.field_zb, lq.field_c);
         if (!param0) {
           var2.a(og.field_T, 15, true);
-          this.a((cf) (var2), (byte) -18);
+          this.a((UiWidget) (var2), (byte) -18);
           return;
         }
     }
@@ -169,7 +169,7 @@ class ne extends ie implements in {
         }
     }
 
-    ne(vk param0, fm param1, String param2, boolean param3, boolean param4) {
+    ne(vk param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new wd((ne) null, param1, param2), 77, 10, 10);
         try {
           this.field_yb = false;
@@ -185,7 +185,7 @@ class ne extends ie implements in {
         }
     }
 
-    final boolean a(int param0, char param1, cf param2, int param3) {
+    final boolean a(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         gn var6 = null;
         boolean stackIn_7_0 = false;

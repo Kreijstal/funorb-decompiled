@@ -61,7 +61,7 @@ final class sd extends rg {
         field_G = (int[][]) null;
     }
 
-    final void a(int param0, cf param1, int param2, int param3, boolean param4, int param5) {
+    final void a(int param0, UiWidget param1, int param2, int param3, boolean param4, int param5) {
         ua var7 = null;
         try {
           super.a(param0, param1, param2, param3, param4, param5);
@@ -84,7 +84,7 @@ final class sd extends rg {
         }
     }
 
-    private sd(int param0, int param1, int param2, int param3, nl param4, bj param5, cf param6) {
+    private sd(int param0, int param1, int param2, int param3, nl param4, bj param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_B = param6;

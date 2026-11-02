@@ -16,7 +16,7 @@ final class bk extends t {
         return var3;
     }
 
-    final static ja[] a(int param0, int param1, byte param2) {
+    final static Sprite[] a(int param0, int param1, byte param2) {
         if (param2 != 28) {
           field_i = (fa) null;
           return h.a((byte) -112, param0, 1, param1);

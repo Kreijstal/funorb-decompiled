@@ -4,7 +4,7 @@
 final class vm extends al implements in {
     static int field_hb;
     static String[] field_gb;
-    static ja field_lb;
+    static Sprite field_lb;
     private gn field_kb;
     static int field_ib;
     static String field_jb;
@@ -34,7 +34,7 @@ final class vm extends al implements in {
     vm(vk param0, db param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        cf var4 = null;
+        UiWidget var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -43,7 +43,7 @@ final class vm extends al implements in {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = null;
-          if (param1 != gb.field_c) {
+          if (param1 != GameKeyHandler.field_c) {
             if (hl.field_b == param1) {
               this.field_w = this.field_w + 10;
               var3 = on.field_cb;
@@ -60,7 +60,7 @@ final class vm extends al implements in {
           } else {
             var3 = aa.field_j;
           }
-          var4 = new cf((String) (var3), (bj) null);
+          var4 = new UiWidget((String) (var3), (bj) null);
           var4.field_n = this.field_n;
           var4.field_i = 50;
           var4.field_w = 80;
@@ -92,7 +92,7 @@ final class vm extends al implements in {
     public static void k(byte param0) {
         field_lb = null;
         if (param0 != -29) {
-          field_lb = (ja) null;
+          field_lb = (Sprite) null;
           field_jb = null;
           field_gb = null;
           return;

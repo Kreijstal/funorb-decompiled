@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uj extends gq {
+final class uj extends PcmStream {
     private int field_r;
     private int field_n;
     private int field_o;
@@ -112,7 +112,7 @@ final class uj extends gq {
         return 1;
     }
 
-    final gq b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -176,7 +176,7 @@ final class uj extends gq {
           return null;
         }
         if (param0.field_h.length != 0) {
-          return new uj(param0, (int)((long)param0.field_g * 256L * (long)param1 / (long)(100 * gp.field_p)), param2 << 6);
+          return new uj(param0, (int)((long)param0.field_g * 256L * (long)param1 / (long)(100 * PcmPlayerService.field_p)), param2 << 6);
         }
         return null;
     }
@@ -314,7 +314,7 @@ final class uj extends gq {
               this.field_n = 0;
               this.field_s = 0;
               this.field_l = 0;
-              this.a(true);
+              this.unlink(true);
               param0 = this.field_x;
             }
             this.field_x = 0;
@@ -332,7 +332,7 @@ final class uj extends gq {
         if (this.field_t < 0) {
           if (this.field_k <= 0) {
             this.e();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_t = 0;
@@ -340,7 +340,7 @@ final class uj extends gq {
         if (this.field_t >= var5) {
           if (this.field_k >= 0) {
             this.e();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_t = var5 - 1;
@@ -453,7 +453,7 @@ final class uj extends gq {
           if (this.field_t >= var5) {
             this.field_t = var5;
             this.e();
-            this.a(true);
+            this.unlink(true);
           }
           return;
         }
@@ -462,7 +462,7 @@ final class uj extends gq {
         }
         this.field_t = -1;
         this.e();
-        this.a(true);
+        this.unlink(true);
     }
 
     private final static int d(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, uj param11, int param12, int param13) {
@@ -666,7 +666,7 @@ final class uj extends gq {
         if (this.field_t < 0) {
           if (this.field_k <= 0) {
             this.e();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_t = 0;
@@ -674,7 +674,7 @@ final class uj extends gq {
         if (this.field_t >= var7) {
           if (this.field_k >= 0) {
             this.e();
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_t = var7 - 1;
@@ -801,7 +801,7 @@ final class uj extends gq {
           if (this.field_t >= var7) {
             this.field_t = var7;
             this.e();
-            this.a(true);
+            this.unlink(true);
           }
           return;
         }
@@ -811,7 +811,7 @@ final class uj extends gq {
         }
         this.field_t = -1;
         this.e();
-        this.a(true);
+        this.unlink(true);
         return;
     }
 
@@ -1149,12 +1149,12 @@ final class uj extends gq {
           if (this.field_x <= 0) {
             if (this.field_k == -256 &&
               (this.field_t & 255) == 0) {
-              if (gp.field_j) {
+              if (PcmPlayerService.field_j) {
                 return uj.b(0, ((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_s, this.field_n, 0, param3, param2, this);
               }
               return uj.b(((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_l, 0, param3, param2, this);
             }
-            if (gp.field_j) {
+            if (PcmPlayerService.field_j) {
               return uj.d(0, 0, ((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_s, this.field_n, 0, param3, param2, this, this.field_k, param4);
             }
             return uj.b(0, 0, ((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_l, 0, param3, param2, this, this.field_k, param4);
@@ -1166,13 +1166,13 @@ final class uj extends gq {
           this.field_x = this.field_x + param1;
           if (this.field_k == -256 &&
             (this.field_t & 255) == 0) {
-            if (!gp.field_j) {
+            if (!PcmPlayerService.field_j) {
               param1 = uj.a(((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_l, this.field_r, 0, var6, param2, this);
             } else {
               param1 = uj.a(0, ((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_s, this.field_n, this.field_j, this.field_q, 0, var6, param2, this);
             }
           } else {
-            if (!gp.field_j) {
+            if (!PcmPlayerService.field_j) {
               param1 = uj.b(0, 0, ((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_l, this.field_r, 0, var6, param2, this, this.field_k, param4);
             } else {
               param1 = uj.a(0, 0, ((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_s, this.field_n, this.field_j, this.field_q, 0, var6, param2, this, this.field_k, param4);
@@ -1210,7 +1210,7 @@ final class uj extends gq {
           this.field_n = 0;
           this.field_s = 0;
           this.field_l = 0;
-          this.a(true);
+          this.unlink(true);
           return true;
         }
         if (this.field_l >= var1) {
@@ -1262,7 +1262,7 @@ final class uj extends gq {
         return false;
     }
 
-    final gq d() {
+    final PcmStream d() {
         return null;
     }
 
@@ -1272,12 +1272,12 @@ final class uj extends gq {
           if (this.field_x <= 0) {
             if (this.field_k == 256 &&
               (this.field_t & 255) == 0) {
-              if (gp.field_j) {
+              if (PcmPlayerService.field_j) {
                 return uj.a(0, ((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_s, this.field_n, 0, param3, param2, this);
               }
               return uj.a(((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_l, 0, param3, param2, this);
             }
-            if (gp.field_j) {
+            if (PcmPlayerService.field_j) {
               return uj.a(0, 0, ((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_s, this.field_n, 0, param3, param2, this, this.field_k, param4);
             }
             return uj.a(0, 0, ((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_l, 0, param3, param2, this, this.field_k, param4);
@@ -1289,13 +1289,13 @@ final class uj extends gq {
           this.field_x = this.field_x + param1;
           if (this.field_k == 256 &&
             (this.field_t & 255) == 0) {
-            if (!gp.field_j) {
+            if (!PcmPlayerService.field_j) {
               param1 = uj.b(((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_l, this.field_r, 0, var6, param2, this);
             } else {
               param1 = uj.b(0, ((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_s, this.field_n, this.field_j, this.field_q, 0, var6, param2, this);
             }
           } else {
-            if (!gp.field_j) {
+            if (!PcmPlayerService.field_j) {
               param1 = uj.c(0, 0, ((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_l, this.field_r, 0, var6, param2, this, this.field_k, param4);
             } else {
               param1 = uj.b(0, 0, ((jd) (this.field_i)).field_h, param0, this.field_t, param1, this.field_s, this.field_n, this.field_j, this.field_q, 0, var6, param2, this, this.field_k, param4);
@@ -1320,7 +1320,7 @@ final class uj extends gq {
         int var2Lifetime1;
         if (param0 == 0) {
           this.d(0);
-          this.a(true);
+          this.unlink(true);
           return;
         }
         if (this.field_s != 0) {
@@ -1380,7 +1380,7 @@ final class uj extends gq {
         this.field_x = 0;
         this.field_v = 0;
         this.field_l = 0;
-        this.a(true);
+        this.unlink(true);
     }
 
     private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, uj param12) {

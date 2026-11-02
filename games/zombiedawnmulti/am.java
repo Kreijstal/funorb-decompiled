@@ -72,7 +72,7 @@ final class am {
         return stackIn_8_0;
     }
 
-    final static ja a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 != 1) {
           am.a('ﾘ', (byte) -57);
         }

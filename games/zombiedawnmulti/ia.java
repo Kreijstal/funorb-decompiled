@@ -3,7 +3,7 @@
  */
 final class ia extends un {
     static cj field_t;
-    static ja field_y;
+    static Sprite field_y;
     private pm field_q;
     static String field_u;
     static String field_w;
@@ -54,7 +54,7 @@ final class ia extends un {
             stackIn_9_0 = bi.field_c;
             return stackIn_9_0;
           }
-          if (qa.a((byte) -125, var5)) {
+          if (DualLinkNode.a((byte) -125, var5)) {
             stackIn_12_0 = gi.field_g;
             return stackIn_12_0;
           }

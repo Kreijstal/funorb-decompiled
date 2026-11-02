@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lj extends br {
+final class lj extends IntrusiveNode {
     static int field_n;
     private int field_w;
     static String[] field_t;
@@ -44,7 +44,7 @@ final class lj extends br {
             fb.field_e.field_u.field_i.a((byte) 127);
             fb.field_e.field_u.a(48);
           }
-          this.a(true);
+          this.unlink(true);
         }
     }
 
@@ -143,7 +143,7 @@ final class lj extends br {
         field_v = null;
     }
 
-    final static void a(fm param0, int param1, fm param2, int param3) {
+    final static void a(BitmapFont param0, int param1, BitmapFont param2, int param3) {
         try {
           m.field_C = param0;
           int var4_int = 43 / ((12 - param3) / 47);
@@ -176,7 +176,7 @@ final class lj extends br {
         for (var4Lifetime1 = this.field_u.length / 2; this.field_u.length > var4Lifetime1; var4Lifetime1++) {
           this.field_u[var4Lifetime1] = new um(jm.field_n[var4Lifetime1 % jm.field_n.length] * 6.0f / 2.0f, jm.field_k[var4Lifetime1 % jm.field_k.length] * 6.0f / 2.0f);
         }
-        th discarded$0 = new th();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
         if (!param2) {
           stackIn_11_1 = 180;
         } else {

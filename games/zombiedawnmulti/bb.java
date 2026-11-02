@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bb extends br {
+final class bb extends IntrusiveNode {
     long field_j;
     static String field_h;
     static cj field_k;
     static String field_o;
-    static ja field_n;
+    static Sprite field_n;
     int field_l;
     static String field_m;
     static ug field_g;

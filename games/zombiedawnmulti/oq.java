@@ -5,15 +5,15 @@ final class oq extends hq {
     static String field_v;
     static int[] field_w;
     private int field_s;
-    static ja field_t;
-    private ja[] field_A;
+    static Sprite field_t;
+    private Sprite[] field_A;
     static int[][] field_u;
     static int[] field_x;
     static String field_z;
     private int field_C;
     private int field_y;
 
-    public final void a(boolean param0, int param1, int param2, int param3, cf param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
         int stackIn_8_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -69,7 +69,7 @@ final class oq extends hq {
 
     final static void c(byte param0) {
         if (qj.field_p) {
-          se.field_E = 0;
+          WidgetContainer.field_E = 0;
           qj.field_p = false;
           io.field_g = false;
         } else {

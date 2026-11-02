@@ -3,7 +3,7 @@
  */
 abstract class ie extends al {
     private int field_mb;
-    private cf field_kb;
+    private UiWidget field_kb;
     private int field_rb;
     private int field_lb;
     static int field_nb;
@@ -41,7 +41,7 @@ abstract class ie extends al {
               }
               return super.i(-27388);
             }
-            this.field_pb = ll.field_j;
+            this.field_pb = FullscreenFocusCanvas.field_j;
             this.a(this.field_mb, (byte) -112, this.field_rb + (12 + this.field_kb.field_w), 12 + this.field_kb.field_n);
             this.field_lb = 0;
             this.field_hb.field_E = 0;
@@ -83,7 +83,7 @@ abstract class ie extends al {
         return super.i(-27388);
     }
 
-    boolean a(int param0, char param1, cf param2, int param3) {
+    boolean a(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -164,7 +164,7 @@ abstract class ie extends al {
         return super.h(-6134);
     }
 
-    ie(vk param0, cf param1, int param2, int param3, int param4) {
+    ie(vk param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_n, 12 + (param2 + param1.field_w));
         try {
           this.field_gb = param3;
@@ -208,7 +208,7 @@ abstract class ie extends al {
         this.h(-78);
     }
 
-    void a(cf param0, byte param1) {
+    void a(UiWidget param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
@@ -218,7 +218,7 @@ abstract class ie extends al {
         try {
           this.field_kb = param0;
           var3_int = -11 % ((param1 - 61) / 56);
-          if (this.field_pb == ll.field_j) {
+          if (this.field_pb == FullscreenFocusCanvas.field_j) {
             this.a(this.field_mb, (byte) -112, 12 + this.field_rb + this.field_kb.field_w, this.field_kb.field_n + 12);
             this.field_lb = 0;
             return;
@@ -243,13 +243,13 @@ abstract class ie extends al {
         }
     }
 
-    private final void a(cf param0, boolean param1) {
+    private final void a(UiWidget param0, boolean param1) {
         try {
           if (param1) {
             this.field_lb = -61;
           }
           if (null != this.field_hb) {
-            this.field_hb.a(true);
+            this.field_hb.unlink(true);
           }
           if (param0 != null) {
             param0.b(6, 6 + this.field_rb, 28972, param0.field_n, param0.field_w);

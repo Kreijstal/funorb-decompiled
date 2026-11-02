@@ -67,7 +67,7 @@ abstract class ti extends id {
         if (this.field_N != 0) {
           return;
         }
-        this.a(true);
+        this.unlink(true);
         this.a(-4564);
     }
 
@@ -771,7 +771,7 @@ abstract class ti extends id {
           }
           return false;
         }
-        sharedTailExit_0: {
+        regionExit1: {
           if (this.field_S < 0 &&
             var3Lifetime1 > this.field_E) {
             var5Lifetime6 = 1;
@@ -787,7 +787,7 @@ abstract class ti extends id {
                 return false;
               }
               if (var4Lifetime4 != 0) {
-                break sharedTailExit_0;
+                break regionExit1;
               }
             } else {
               if (var5Lifetime6 != 0) {

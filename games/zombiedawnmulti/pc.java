@@ -6,7 +6,7 @@ final class pc extends ae {
     private int field_i;
 
     final void a(int param0, boolean param1, int param2, int param3) {
-        wb var5 = null;
+        GameCharacter var5 = null;
         gm var5_ref = null;
         try {
           var5 = op.field_m.a(this.field_i, false);
@@ -61,7 +61,7 @@ final class pc extends ae {
         this.field_i = param0;
     }
 
-    final void a(int param0, qd param1) {
+    final void a(int param0, GameScreen param1) {
         try {
           param1.c((byte) 118, this.field_j, this.field_i);
           if (param0 != 0) {
@@ -75,12 +75,12 @@ final class pc extends ae {
     final void a(byte param0) {
         if (param0 < -47) {
           super.a((byte) -86);
-          a.field_c.a((br) (this), false);
+          a.field_c.a((IntrusiveNode) (this), false);
           return;
         }
         this.field_j = -37;
         super.a((byte) -86);
-        a.field_c.a((br) (this), false);
+        a.field_c.a((IntrusiveNode) (this), false);
     }
 
     pc() {

@@ -141,12 +141,12 @@ final class hl {
         try {
           ie.field_sb = -1L;
           od.field_Gb = param0;
-          qa.field_h = param5;
+          DualLinkNode.field_h = param5;
           kj.field_h = param0.length;
           la.field_k = false;
-          fg.field_k = new byte[(qa.field_h + 7) / 8];
+          fg.field_k = new byte[(DualLinkNode.field_h + 7) / 8];
           mh.field_c = null;
-          ej.field_n = null;
+          BufferedSocket.field_n = null;
           var10_int = 0;
           for (var11 = 0; var11 < od.field_Gb.length; var11++) {
             var10_int = var10_int + (255 & od.field_Gb[var11]);
@@ -154,7 +154,7 @@ final class hl {
           var10_int = (7 + var10_int) / 8;
           tg.field_a = new byte[var10_int];
           if (null == param2.field_Cb) {
-            param2.field_Cb = new th();
+            param2.field_Cb = new IntrusiveDeque();
           }
           cg.field_i = param2.field_Cb;
           cg.field_i.e(-30986);
@@ -167,13 +167,13 @@ final class hl {
           cb.field_i = 0;
           bc.field_e = -1;
           if (null == param7.field_Cb) {
-            param7.field_Cb = new th();
+            param7.field_Cb = new IntrusiveDeque();
           }
           tn.field_C = param7.field_Cb;
           tn.field_C.e(-30986);
           af.field_h = new sc(param9);
           if (param4.field_Cb == null) {
-            param4.field_Cb = new th();
+            param4.field_Cb = new IntrusiveDeque();
           }
           nh.field_g = param4.field_Cb;
           nh.field_g.e(param1 - 31061);

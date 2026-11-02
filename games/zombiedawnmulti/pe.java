@@ -14,7 +14,7 @@ final class pe {
     int field_e;
     private int field_k;
 
-    final void b(k param0) {
+    final void b(PacketBuffer param0) {
         this.field_e = param0.g(31365);
         this.field_h = param0.i(-1478490344);
         this.field_g = param0.i(-1478490344);
@@ -40,7 +40,7 @@ final class pe {
         return this.field_i - this.field_k >> 15;
     }
 
-    final void a(k param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
         this.field_b = param0.g(31365);
         this.field_a = new int[this.field_b];

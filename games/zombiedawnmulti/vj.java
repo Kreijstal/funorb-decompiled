@@ -23,13 +23,13 @@ final class vj extends nc {
     }
 
     final void b(byte param0) {
-        rp var3 = ll.field_k;
+        rp var3 = FullscreenFocusCanvas.field_k;
         rp var2 = var3;
         var3.field_c[0] = this.field_o;
         var3.field_p[0] = this.field_n;
         var3.field_c[1] = this.field_l;
         var3.field_p[1] = this.field_s;
-        th.b((byte) -61);
+        IntrusiveDeque.b((byte) -61);
         super.b(param0);
     }
 
@@ -57,45 +57,45 @@ final class vj extends nc {
 
     final void a(boolean param0) {
         ef var20 = null;
-        ja var21 = null;
-        ja var22 = null;
-        ja var23 = null;
-        ja var24 = null;
+        Sprite var21 = null;
+        Sprite var22 = null;
+        Sprite var23 = null;
+        Sprite var24 = null;
         ef var25 = null;
-        ja var26 = null;
-        ja var27 = null;
-        ja var28 = null;
-        ja var29 = null;
+        Sprite var26 = null;
+        Sprite var27 = null;
+        Sprite var28 = null;
+        Sprite var29 = null;
         ef var30 = null;
-        ja var31 = null;
-        ja var32 = null;
-        ja var33 = null;
-        ja var34 = null;
+        Sprite var31 = null;
+        Sprite var32 = null;
+        Sprite var33 = null;
+        Sprite var34 = null;
         ef var35 = null;
-        ja var36 = null;
-        ja var37 = null;
-        ja var38 = null;
-        ja var39 = null;
+        Sprite var36 = null;
+        Sprite var37 = null;
+        Sprite var38 = null;
+        Sprite var39 = null;
         ef var40 = null;
-        ja var41 = null;
-        ja var42 = null;
-        ja var43 = null;
-        ja var44 = null;
+        Sprite var41 = null;
+        Sprite var42 = null;
+        Sprite var43 = null;
+        Sprite var44 = null;
         ef var45 = null;
-        ja var46 = null;
-        ja var47 = null;
-        ja var48 = null;
-        ja var49 = null;
+        Sprite var46 = null;
+        Sprite var47 = null;
+        Sprite var48 = null;
+        Sprite var49 = null;
         ef var50 = null;
-        ja var51 = null;
-        ja var52 = null;
-        ja var53 = null;
-        ja var54 = null;
+        Sprite var51 = null;
+        Sprite var52 = null;
+        Sprite var53 = null;
+        Sprite var54 = null;
         ef var55 = null;
-        ja var56 = null;
-        ja var57 = null;
-        ja var58 = null;
-        ja var59 = null;
+        Sprite var56 = null;
+        Sprite var57 = null;
+        Sprite var58 = null;
+        Sprite var59 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
@@ -595,16 +595,16 @@ final class vj extends nc {
         var12Lifetime8 = gg.field_l[var10Lifetime8];
         var13Lifetime8 = gg.field_j[var10Lifetime8];
         var14Lifetime8 = var12Lifetime8 + wf.field_m / var11Lifetime8 % var13Lifetime8;
-        ja var61 = am.a(var14Lifetime8, this.field_o, var9Lifetime8, 1, this.field_n);
+        Sprite var61 = am.a(var14Lifetime8, this.field_o, var9Lifetime8, 1, this.field_n);
         og.h((byte) 110);
         var61.g(47, 57);
-        ja var62 = am.a(var14Lifetime8, this.field_o, 1, 1, this.field_n);
+        Sprite var62 = am.a(var14Lifetime8, this.field_o, 1, 1, this.field_n);
         og.h((byte) 117);
         var62.g(17, 57);
-        ja var63 = am.a(var14Lifetime8, this.field_l, var9Lifetime8, 1, this.field_s);
+        Sprite var63 = am.a(var14Lifetime8, this.field_l, var9Lifetime8, 1, this.field_s);
         og.h((byte) 118);
         var63.g(47, 139);
-        ja var64 = am.a(var14Lifetime8, this.field_l, 1, 1, this.field_s);
+        Sprite var64 = am.a(var14Lifetime8, this.field_l, 1, 1, this.field_s);
         og.h((byte) 113);
         var64.g(17, 139);
         this.field_r.i(-31);
@@ -612,7 +612,7 @@ final class vj extends nc {
 
     final void a(int param0, boolean param1, int param2) {
         super.a(0, param1, param2);
-        rp var5 = ll.field_k;
+        rp var5 = FullscreenFocusCanvas.field_k;
         rp var4 = var5;
         this.field_n = var5.field_p[param0];
         this.field_s = var5.field_p[1];
@@ -680,9 +680,9 @@ final class vj extends nc {
         if (kd.field_b != 1) {
           stackIn_4_0 = (this.field_q != param1) ? 6710886 : 14540253;
           var9 = stackIn_4_0;
-          if (bd.field_g > param6 &&
+          if (MouseInputHandler.field_g > param6 &&
             param7 < bo.field_d &&
-            bd.field_g < param0 + param6 &&
+            MouseInputHandler.field_g < param0 + param6 &&
             param7 + param5 > bo.field_d) {
             stackIn_11_0 = ((1 & jf.field_e) > 0) ? 16777215 : 14540219;
             var9 = stackIn_11_0;
@@ -691,9 +691,9 @@ final class vj extends nc {
           if (vb.field_f <= param6) {
             stackIn_20_0 = (this.field_q != param1) ? 6710886 : 14540253;
             var9 = stackIn_20_0;
-            if (bd.field_g > param6 &&
+            if (MouseInputHandler.field_g > param6 &&
               param7 < bo.field_d &&
-              bd.field_g < param0 + param6 &&
+              MouseInputHandler.field_g < param0 + param6 &&
               param7 + param5 > bo.field_d) {
               stackIn_31_0 = ((1 & jf.field_e) > 0) ? 16777215 : 14540219;
               var9 = stackIn_31_0;
@@ -706,9 +706,9 @@ final class vj extends nc {
               this.field_q = param1;
               stackIn_42_0 = (this.field_q != param1) ? 6710886 : 14540253;
               var9 = stackIn_42_0;
-              if (bd.field_g > param6 &&
+              if (MouseInputHandler.field_g > param6 &&
                 param7 < bo.field_d &&
-                bd.field_g < param0 + param6 &&
+                MouseInputHandler.field_g < param0 + param6 &&
                 param7 + param5 > bo.field_d) {
                 stackIn_49_0 = ((1 & jf.field_e) > 0) ? 16777215 : 14540219;
                 var9 = stackIn_49_0;
@@ -723,9 +723,9 @@ final class vj extends nc {
             }
             stackIn_57_0 = (this.field_q != param1) ? 6710886 : 14540253;
             var9 = stackIn_57_0;
-            if (bd.field_g > param6 &&
+            if (MouseInputHandler.field_g > param6 &&
               param7 < bo.field_d &&
-              bd.field_g < param0 + param6 &&
+              MouseInputHandler.field_g < param0 + param6 &&
               param7 + param5 > bo.field_d) {
               stackIn_64_0 = ((1 & jf.field_e) > 0) ? 16777215 : 14540219;
               var9 = stackIn_64_0;

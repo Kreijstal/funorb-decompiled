@@ -25,11 +25,11 @@ final class ib implements nl {
         return false;
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, cf param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        ja var8 = null;
+        Sprite var8 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -44,7 +44,7 @@ final class ib implements nl {
           var8 = rj.field_I[1];
           if (param4 instanceof gn &&
             ((gn) (param4)).field_G) {
-            var8.e(var6_int + 1 + (-var8.field_z + param4.field_n >> 1), (param4.field_w - var8.field_u >> 1) + var7 + 1, 256);
+            var8.e(var6_int + 1 + (-var8.fullWidth + param4.field_n >> 1), (param4.field_w - var8.field_u >> 1) + var7 + 1, 256);
           }
           if (!param4.c(124)) {
             return;

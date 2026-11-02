@@ -28,7 +28,7 @@ final class ko {
         }
     }
 
-    private final void a(ja param0, byte param1, ja param2) {
+    private final void a(Sprite param0, byte param1, Sprite param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -39,11 +39,11 @@ final class ko {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0.g(-(param0.field_x / 2) + 320, 400);
+          param0.g(-(param0.width / 2) + 320, 400);
           if (param1 != 59) {
             return;
           }
-          g.a(param2, 320 - param2.field_x / 2, 400);
+          g.a(param2, 320 - param2.width / 2, 400);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,7 +77,7 @@ final class ko {
           }
           this.field_m = this.field_m + 1;
           if (param1 != 255 &&
-            param1 < 19 && (!ll.field_k.a(45, -128) ||
+            param1 < 19 && (!FullscreenFocusCanvas.field_k.a(45, -128) ||
             param1 == 17)) {
             if (h.i(51603) && (jk.a((byte) -73, param1) ||
               jk.a((byte) -122, param2))) {
@@ -87,7 +87,7 @@ final class ko {
               return false;
             }
             this.field_b[-1 + this.field_m] = new fb(190 + (this.field_m * 40 - 40), param1, this.field_m - 1);
-            this.field_b[-1 + this.field_m].field_l = -op.field_m.field_H + tg.field_e.field_b[this.field_m - 1];
+            this.field_b[-1 + this.field_m].field_l = -op.field_m.currentTick + tg.field_e.powerupReadyTick[this.field_m - 1];
             this.field_b[this.field_m - 1].a(0);
             return true;
           }
@@ -202,11 +202,11 @@ final class ko {
           }
           stackIn_14_0 = qe.field_k;
           stackIn_14_1 = -11838;
-          stackIn_15_2 = (param0) && (!param3) && (!ee.field_a) && (null == mh.field_c) && (ej.field_n == null);
+          stackIn_15_2 = (param0) && (!param3) && (!ee.field_a) && (null == mh.field_c) && (BufferedSocket.field_n == null);
           ((cj) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2);
           stackIn_22_0 = cm.field_a;
           stackIn_22_1 = -11838;
-          stackIn_23_2 = (param0) && (!param3) && (!ee.field_a) && (mh.field_c == null) && (ej.field_n == null);
+          stackIn_23_2 = (param0) && (!param3) && (!ee.field_a) && (mh.field_c == null) && (BufferedSocket.field_n == null);
           ((cj) (Object) stackIn_22_0).a(stackIn_22_1, stackIn_23_2);
           stackIn_28_0 = lm.field_gb;
           stackIn_28_1 = -11838;
@@ -233,7 +233,7 @@ final class ko {
               i.field_e != qo.field_r[0]) {
               i.field_e = qo.field_r[0];
             }
-            cm.a(123, 0, i.field_e, ch.field_c, true, param1);
+            cm.a(123, 0, i.field_e, IntrusiveDequeCursor.field_c, true, param1);
           }
           if (0 != kn.field_a.field_T) {
             ee.field_a = false;
@@ -290,8 +290,8 @@ final class ko {
             }
           }
           if (this.field_a != -1 &&
-            this.field_a < tg.field_e.field_d.length) {
-            var2_int = tg.field_e.field_d[this.field_a];
+            this.field_a < tg.field_e.powerupTypes.length) {
+            var2_int = tg.field_e.powerupTypes[this.field_a];
             var3Lifetime1 = tg.field_e.field_f[this.field_a];
             if (255 != var2_int) {
               g.a(fe.field_W[var2_int], this.field_f - 100, 453);
@@ -312,7 +312,7 @@ final class ko {
             } else {
               if (this.field_d &&
                 this.field_g) {
-                this.a(up.field_f, (byte) 59, oq.field_t);
+                this.a(NodeHashTableIterator.field_f, (byte) 59, oq.field_t);
               } else {
                 if (!this.field_g) {
                   if (this.field_c &&
@@ -328,18 +328,18 @@ final class ko {
                     }
                   }
                 } else {
-                  this.a(dl.field_c, (byte) 59, bf.field_f);
+                  this.a(SocketConnector.field_c, (byte) 59, bf.field_f);
                 }
               }
             }
           }
           var2_intLifetime1 = this.e(-1);
           if (255 != var2_intLifetime1 &&
-            0 < bd.field_g) {
+            0 < MouseInputHandler.field_g) {
             if (bo.field_d <= 0) {
               return;
             }
-            var3Lifetime2 = 4 + bd.field_g;
+            var3Lifetime2 = 4 + MouseInputHandler.field_g;
             var4 = 15 + bo.field_d;
             wa.field_b[var2_intLifetime1].c(var3Lifetime2, var4, 255);
             if (bk.field_g) {
@@ -469,7 +469,7 @@ final class ko {
                 var5_ref_fb.c((byte) 18);
               }
             }
-            L3: {
+            regionExit1: {
               this.field_l = param1;
               this.field_b[param1].b(2);
               var3_int = this.field_b[param1].a((byte) 114);
@@ -477,7 +477,7 @@ final class ko {
               this.field_g = false;
               this.field_c = false;
               this.field_d = false;
-              var4 = ll.field_k.field_g[param1];
+              var4 = FullscreenFocusCanvas.field_k.field_g[param1];
               var5 = var3_int;
               if (7 == var5) {
                 this.field_c = true;
@@ -509,19 +509,19 @@ final class ko {
                             case 8:
                               this.field_c = true;
                               this.field_d = true;
-                              break L3;
+                              break regionExit1;
                             default:
                               this.field_g = true;
-                              break L3;
+                              break regionExit1;
                             case 15:
                               this.field_e = true;
-                              break L3;
+                              break regionExit1;
                             case 0:
                               stackIn_76_2 = (var4 == 32);
                               this.field_d = stackIn_76_2;
                               this.field_c = stackIn_76_2;
                               this.field_g = true;
-                              break L3;
+                              break regionExit1;
                           }
                         }
                         this.field_g = true;
@@ -534,7 +534,7 @@ final class ko {
                       this.field_d = stackIn_59_1;
                     }
                   }
-                  break L3;
+                  break regionExit1;
                 }
                 this.field_e = true;
               }
@@ -615,22 +615,22 @@ final class ko {
         RuntimeException var5 = null;
         Object var6 = null;
         ti var6_ref = null;
-        wb var7 = null;
+        GameCharacter var7 = null;
         int var8 = 0;
         int var9 = 0;
         var6 = null;
         var9 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          L0: {
+          regionExit1: {
             var5_int = this.e(-1);
             if (!(param1 instanceof jj)) {
               var6_ref = (ti) (param1);
-              if (var6_ref instanceof wb) {
+              if (var6_ref instanceof GameCharacter) {
                 stackIn_8_0 = var6_ref;
               } else {
                 stackIn_8_0 = null;
               }
-              var7 = (wb) (stackIn_8_0);
+              var7 = (GameCharacter) (stackIn_8_0);
               var8 = var5_int;
               if (var8 == 255) {
                 return;
@@ -646,15 +646,15 @@ final class ko {
                       param0 = -1;
                       param2 = var6_ref.field_y;
                     }
-                    ok.a(-101, param0, ma.field_a, op.field_m.field_H, param2, this.field_l);
-                    break L0;
+                    ok.a(-101, param0, ma.field_a, op.field_m.currentTick, param2, this.field_l);
+                    break regionExit1;
                   }
                   if (3 == var8) {
                     if (var7 != null &&
                       var7.q(-14945) &&
                       !var7.o(127)) {
-                      wd.a(var6_ref.field_y, -1, this.field_l, op.field_m.field_H, ma.field_a);
-                      break L0;
+                      wd.a(var6_ref.field_y, -1, this.field_l, op.field_m.currentTick, ma.field_a);
+                      break regionExit1;
                     }
                     return;
                   }
@@ -668,25 +668,25 @@ final class ko {
                     if (var8 != 7 &&
                       var8 == 0) {
                     }
-                    wd.a(var6_ref.field_y, -1, this.field_l, op.field_m.field_H, ma.field_a);
-                    break L0;
+                    wd.a(var6_ref.field_y, -1, this.field_l, op.field_m.currentTick, ma.field_a);
+                    break regionExit1;
                   }
                   if (var7 != null &&
                     !var7.o(88)) {
-                    wd.a(var6_ref.field_y, -1, this.field_l, op.field_m.field_H, ma.field_a);
-                    break L0;
+                    wd.a(var6_ref.field_y, -1, this.field_l, op.field_m.currentTick, ma.field_a);
+                    break regionExit1;
                   }
                   return;
                 }
-                ok.a(-117, param0, ma.field_a, op.field_m.field_H, param2, this.field_l);
-                break L0;
+                ok.a(-117, param0, ma.field_a, op.field_m.currentTick, param2, this.field_l);
+                break regionExit1;
               }
-              nn.a(ma.field_a, op.field_m.field_H, this.field_l, (byte) 102);
+              nn.a(ma.field_a, op.field_m.currentTick, this.field_l, (byte) 102);
             } else {
-              wd.a(param1.field_y, -1, this.field_l, op.field_m.field_H, ma.field_a);
+              wd.a(param1.field_y, -1, this.field_l, op.field_m.currentTick, ma.field_a);
             }
           }
-          tg.field_e.field_b[this.field_l] = op.field_m.field_H + op.field_m.a(ll.field_k.field_g[this.field_l], var5_int, fb.field_e.field_M, false);
+          tg.field_e.powerupReadyTick[this.field_l] = op.field_m.currentTick + op.field_m.a(FullscreenFocusCanvas.field_k.field_g[this.field_l], var5_int, fb.field_e.field_M, false);
           this.field_b[this.field_l].a(0);
           this.field_c = false;
           this.field_g = false;

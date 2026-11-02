@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qm extends se implements fi, in {
+final class qm extends WidgetContainer implements fi, in {
     static String field_I;
     private pm field_M;
     private boolean field_L;
@@ -57,7 +57,7 @@ final class qm extends se implements fi, in {
           if (param1) {
             if (ao.field_e == pk.field_b.field_b) {
               var11 = pk.field_b;
-              var12 = vl.a(ag.field_g, new String[]{param2}, 2);
+              var12 = vl.a(GameApplet.field_g, new String[]{param2}, 2);
               var11.field_j.a((byte) -118, var12, 16);
             } else {
               var9 = pk.field_b;
@@ -116,7 +116,7 @@ final class qm extends se implements fi, in {
                   if (!this.field_L) {
                     qi.a(false);
                   } else {
-                    dq.c(-118);
+                    ImageProducerRasterBuffer.c(-118);
                   }
                 } else {
                   oi.a(-124);
@@ -162,8 +162,8 @@ final class qm extends se implements fi, in {
     final void g(byte param0) {
         this.field_H.b(true);
         if (param0 < 101) {
-          cf var3 = (cf) null;
-          this.a(39, '￟', (cf) null, 8);
+          UiWidget var3 = (UiWidget) null;
+          this.a(39, '￟', (UiWidget) null, 8);
         }
         this.field_M.b(true);
     }
@@ -188,7 +188,7 @@ final class qm extends se implements fi, in {
         RuntimeException decompiledCaughtException = null;
         oq var6 = null;
         RuntimeException var6_ref = null;
-        fm var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         bo var9 = null;
         el var12 = null;
@@ -261,7 +261,7 @@ final class qm extends se implements fi, in {
           var8 = sh.field_M;
           var9 = me.a(-57, jl.b(0));
           if (wp.field_b != var9) {
-            if (l.field_c == var9) {
+            if (RasterBuffer.field_c == var9) {
               var8 = lj.field_f;
             }
           } else {
@@ -270,11 +270,11 @@ final class qm extends se implements fi, in {
           dupTemp$0 = new el(10, this.field_i, -20 + this.field_n, 25, this.field_H, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.b((byte) 112, dupTemp$0);
-          this.field_i = this.field_i + (((cf) ((Object) var12)).field_w + 5);
+          this.field_i = this.field_i + (((UiWidget) ((Object) var12)).field_w + 5);
           dupTemp$1 = new el(10, this.field_i, -20 + this.field_n, 25, this.field_M, false, 80, 3, var7, 16777215, gn.field_D);
           var13 = dupTemp$1;
           this.b((byte) 108, dupTemp$1);
-          this.field_i = this.field_i + (5 + ((cf) ((Object) var13)).field_w);
+          this.field_i = this.field_i + (5 + ((UiWidget) ((Object) var13)).field_w);
           this.field_G.field_A = (bj) (this);
           if (null != this.field_P) {
             this.field_P.field_A = (bj) (this);
@@ -338,7 +338,7 @@ final class qm extends se implements fi, in {
         field_I = null;
     }
 
-    final boolean a(int param0, char param1, cf param2, int param3) {
+    final boolean a(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -394,7 +394,7 @@ final class qm extends se implements fi, in {
             qm.a(16);
           }
           var6 = param0.d((byte) 69);
-          stackIn_3_0 = fn.a(var6, var4, var3, (byte) 104, var2_int, var5);
+          stackIn_3_0 = ClientException.a(var6, var4, var3, (byte) 104, var2_int, var5);
           return (ae) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -429,7 +429,7 @@ final class qm extends se implements fi, in {
         RuntimeException var3 = null;
         try {
           if (this.field_H == param0) {
-            this.field_M.a((cf) (this), 0);
+            this.field_M.a((UiWidget) (this), 0);
           }
           if (this.field_M == param0) {
             this.a((byte) -99);
@@ -457,12 +457,12 @@ final class qm extends se implements fi, in {
         int var5;
         vg var4Lifetime1;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        var4 = (vg) (ag.field_i.c(78));
+        var4 = (vg) (GameApplet.field_i.c(78));
         while (var4 != null) {
           if (param2 == var4.field_i) {
             return var4;
           }
-          var4 = (vg) (ag.field_i.b(6));
+          var4 = (vg) (GameApplet.field_i.b(6));
         }
         if (param0 <= 97) {
           field_I = (String) null;
@@ -470,7 +470,7 @@ final class qm extends se implements fi, in {
         var4Lifetime1 = new vg();
         var4Lifetime1.field_p = param3;
         var4Lifetime1.field_i = param2;
-        ag.field_i.a(var4Lifetime1, false);
+        GameApplet.field_i.a(var4Lifetime1, false);
         vi.a(param1, var4Lifetime1, (byte) -126);
         return var4Lifetime1;
     }

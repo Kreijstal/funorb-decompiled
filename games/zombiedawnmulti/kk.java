@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class kk extends qa {
+abstract class kk extends DualLinkNode {
     int field_t;
     static boolean field_u;
-    static ja field_r;
+    static Sprite field_r;
     static int field_x;
     static String[] field_v;
     static h field_w;
     static int field_q;
-    static go field_y;
+    static PlatformTaskDispatcher field_y;
     static String field_s;
 
-    final static void a(int param0, boolean param1, int param2, byte param3, java.awt.Component param4, go param5, int param6, gd param7) {
+    final static void a(int param0, boolean param1, int param2, byte param3, java.awt.Component param4, PlatformTaskDispatcher param5, int param6, gd param7) {
         try {
-          gp.a(param0, param1, 10);
-          rm.field_b = gp.a(param5, param4, 0, param2);
-          ga.field_u = gp.a(param5, param4, 1, param6);
+          PcmPlayerService.a(param0, param1, 10);
+          rm.field_b = PcmPlayerService.a(param5, param4, 0, param2);
+          ga.field_u = PcmPlayerService.a(param5, param4, 1, param6);
           bh.field_a = new vp();
           lq.field_d = param6 * 1000 / param0;
           ga.field_u.a(bh.field_a);
@@ -59,7 +59,7 @@ abstract class kk extends qa {
 
     static {
         field_u = false;
-        field_r = new ja(270, 70);
+        field_r = new Sprite(270, 70);
         field_v = new String[255];
     }
 }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vb {
-    static ja field_b;
+    static Sprite field_b;
     static String field_e;
     static int field_f;
     static String field_g;
@@ -11,11 +11,11 @@ final class vb {
     static String field_d;
 
     final static cj a(int param0) {
-        if (da.field_a > 0) {
-          return dl.field_a;
+        if (InflaterDecompressor.field_a > 0) {
+          return SocketConnector.field_a;
         }
         if (sq.field_Q > 0) {
-          return dl.field_a;
+          return SocketConnector.field_a;
         }
         if (param0 != 21262) {
           field_f = -119;
@@ -38,14 +38,14 @@ final class vb {
         field_b = null;
     }
 
-    final static void a(int param0, String[][] param1, String[] param2, String[] param3, boolean param4, String[][] param5, int[] param6, String[] param7, byte[] param8, ul param9, int[] param10, int param11, ja[][] param12, int param13, ul param14, boolean param15, ja[][] param16, ul param17, byte[] param18, ri[] param19) {
+    final static void a(int param0, String[][] param1, String[] param2, String[] param3, boolean param4, String[][] param5, int[] param6, String[] param7, byte[] param8, ul param9, int[] param10, int param11, Sprite[][] param12, int param13, ul param14, boolean param15, Sprite[][] param16, ul param17, byte[] param18, ri[] param19) {
         String[] stackIn_4_0;
         int stackIn_4_1;
         int[] stackIn_4_2;
         ul stackIn_4_3;
         String[] stackIn_4_4;
-        ja[][] stackIn_4_5;
-        ja[][] stackIn_4_6;
+        Sprite[][] stackIn_4_5;
+        Sprite[][] stackIn_4_6;
         String[][] stackIn_4_7;
         byte[] stackIn_4_8;
         int stackIn_4_9;
@@ -94,8 +94,8 @@ final class vb {
           stackIn_4_2 = (int[]) (param6);
           stackIn_4_3 = (ul) (param14);
           stackIn_4_4 = (String[]) (param2);
-          stackIn_4_5 = (ja[][]) (param12);
-          stackIn_4_6 = (ja[][]) (param16);
+          stackIn_4_5 = (Sprite[][]) (param12);
+          stackIn_4_6 = (Sprite[][]) (param16);
           stackIn_4_7 = (String[][]) (param1);
           stackIn_4_8 = (byte[]) (param8);
           stackIn_4_9 = param0;
@@ -205,7 +205,7 @@ final class vb {
     }
 
     static {
-        field_b = new ja(54, 54);
+        field_b = new Sprite(54, 54);
         field_f = 0;
         field_e = "You do not have a suitable number of players for the current options.";
         field_g = "Invite only";

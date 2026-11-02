@@ -5,7 +5,7 @@ final class fk extends nc {
     static String field_l;
     static int[] field_m;
     static String field_o;
-    static th field_n;
+    static IntrusiveDeque field_n;
 
     public static void e(int param0) {
         field_o = null;
@@ -17,7 +17,7 @@ final class fk extends nc {
         }
     }
 
-    private final void a(int param0, int param1, fm param2, int param3, String param4, int param5, int param6, int param7, boolean param8, int param9, int param10) {
+    private final void a(int param0, int param1, BitmapFont param2, int param3, String param4, int param5, int param6, int param7, boolean param8, int param9, int param10) {
         String stackIn_10_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -47,10 +47,10 @@ final class fk extends nc {
           if ((param1 & 1) == 0) {
             oo.f(30, 3 + param9, 580, 1 + (param2.field_r + param2.field_C), 0, 64);
           }
-          var14 = fm.a(param2, param4, 200);
+          var14 = BitmapFont.a(param2, param4, 200);
           param2.c(var14, 60, param9, param5, param3);
           var15 = Integer.toString(param0);
-          param2.b(var15, nq.field_q[1], param9, param5, param3);
+          param2.b(var15, SpriteState.field_q[1], param9, param5, param3);
           if (var12_int >= 500) {
             stackIn_10_0 = "500+";
           } else {
@@ -58,16 +58,16 @@ final class fk extends nc {
           }
           var16 = stackIn_10_0;
           var13 = var16;
-          param2.b(var16, nq.field_q[2], param9, param5, param3);
+          param2.b(var16, SpriteState.field_q[2], param9, param5, param3);
           var17 = param10 + "%";
           if (param8) {
             fk.e(53);
           }
-          param2.b(var17, nq.field_q[3], param9, param5, param3);
+          param2.b(var17, SpriteState.field_q[3], param9, param5, param3);
           var18 = param7 + "%";
-          param2.b(var18, nq.field_q[4], param9, param5, param3);
+          param2.b(var18, SpriteState.field_q[4], param9, param5, param3);
           var19 = param6 + "%";
-          param2.b(var19, nq.field_q[5], param9, param5, param3);
+          param2.b(var19, SpriteState.field_q[5], param9, param5, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,37 +146,37 @@ final class fk extends nc {
         var16 = ZombieDawnMulti.field_E ? 1 : 0;
         super.a(param0);
         var2 = ah.field_e;
-        var3 = ((fm) ((Object) var2)).field_C + ((fm) ((Object) var2)).field_r;
-        if (mc.field_i != null) {
-          L9: {
+        var3 = ((BitmapFont) ((Object) var2)).field_C + ((BitmapFont) ((Object) var2)).field_r;
+        if (RandomAccessCacheFile.field_i != null) {
+          regionExit1: {
             if (wc.j(111)) {
               var4 = fq.field_j;
             } else {
-              if (!mc.field_i.field_j) {
+              if (!RandomAccessCacheFile.field_i.field_j) {
                 var4 = op.field_l;
               } else {
-                if (mc.field_i.field_t != null) {
+                if (RandomAccessCacheFile.field_i.field_t != null) {
                   var5 = pb.field_e;
-                  var6 = ((fm) ((Object) var5)).field_r + ((fm) ((Object) var5)).field_C + 1;
+                  var6 = ((BitmapFont) ((Object) var5)).field_r + ((BitmapFont) ((Object) var5)).field_C + 1;
                   var7 = var6 + 150;
                   var8 = 16777215;
                   var9 = 0;
-                  oo.f(30, var7 - 35, 580, ((fm) ((Object) var2)).field_C + (((fm) ((Object) var2)).field_r + 1), 0, 64);
+                  oo.f(30, var7 - 35, 580, ((BitmapFont) ((Object) var2)).field_C + (((BitmapFont) ((Object) var2)).field_r + 1), 0, 64);
                   var10 = 11;
                   oo.f(30, -35 + var7, 186, 225, 0, 64);
-                  oo.f(nq.field_q[2] - 58, -35 + var7, 111, 225, 0, 64);
-                  oo.f(-32 + nq.field_q[4], var7 - 35, 65, 225, 0, 64);
-                  ah.field_e.b(gn.field_C, nq.field_q[0], var7, var10, 1);
-                  ah.field_e.b(ub.field_tb, nq.field_q[1], var7, var10, 1);
-                  ah.field_e.b(ke.field_e, nq.field_q[2], var7, var10, 1);
-                  ah.field_e.b("%W", nq.field_q[3], var7, var10, 1);
-                  ah.field_e.b("%L", nq.field_q[4], var7, var10, 1);
-                  ah.field_e.b("%D", nq.field_q[5], var7, var10, 1);
+                  oo.f(SpriteState.field_q[2] - 58, -35 + var7, 111, 225, 0, 64);
+                  oo.f(-32 + SpriteState.field_q[4], var7 - 35, 65, 225, 0, 64);
+                  ah.field_e.b(gn.field_C, SpriteState.field_q[0], var7, var10, 1);
+                  ah.field_e.b(ub.field_tb, SpriteState.field_q[1], var7, var10, 1);
+                  ah.field_e.b(ke.field_e, SpriteState.field_q[2], var7, var10, 1);
+                  ah.field_e.b("%W", SpriteState.field_q[3], var7, var10, 1);
+                  ah.field_e.b("%L", SpriteState.field_q[4], var7, var10, 1);
+                  ah.field_e.b("%D", SpriteState.field_q[5], var7, var10, 1);
                   ak.a(586, 231, -5, 27, var7 - 38);
                   var7 = var7 + (4 + var6);
-                  var4 = gb.field_d;
-                  var17 = mc.field_i.field_t[sd.field_F];
-                  var12 = mc.field_i.field_k[sd.field_F];
+                  var4 = GameKeyHandler.field_d;
+                  var17 = RandomAccessCacheFile.field_i.field_t[sd.field_F];
+                  var12 = RandomAccessCacheFile.field_i.field_k[sd.field_F];
                   var13 = 0;
                   for (var14 = 0; var14 < 10; var14++) {
                     var18 = var17[var14];
@@ -196,48 +196,48 @@ final class fk extends nc {
                   if ((var13 == 0)) {
                     var8Lifetime6 = 16777215;
                     var7 += 4;
-                    this.a(mc.field_i.field_l, -1, var5, var9, ta.field_lb, var8Lifetime6, mc.field_i.field_o, mc.field_i.field_g, false, var7, mc.field_i.field_m);
+                    this.a(RandomAccessCacheFile.field_i.field_l, -1, var5, var9, ta.field_lb, var8Lifetime6, RandomAccessCacheFile.field_i.field_o, RandomAccessCacheFile.field_i.field_g, false, var7, RandomAccessCacheFile.field_i.field_m);
                   }
-                  break L9;
+                  break regionExit1;
                 }
-                var4 = hk.field_g;
+                var4 = PlayerLoadout.field_g;
               }
             }
           }
-          ((fm) ((Object) var2)).a(var4, 40, 150, 560, 200, 0, -1, 1, 1, var3);
+          ((BitmapFont) ((Object) var2)).a(var4, 40, 150, 560, 200, 0, -1, 1, 1, var3);
           return;
         }
         if (wc.j(114)) {
-          L4: {
+          regionExit2: {
             if (wc.j(111)) {
               var4Lifetime1 = fq.field_j;
             } else {
-              if (!mc.field_i.field_j) {
+              if (!RandomAccessCacheFile.field_i.field_j) {
                 var4Lifetime1 = op.field_l;
               } else {
-                if (mc.field_i.field_t != null) {
+                if (RandomAccessCacheFile.field_i.field_t != null) {
                   var5Lifetime1 = pb.field_e;
-                  var6Lifetime1 = ((fm) ((Object) var5Lifetime1)).field_r + ((fm) ((Object) var5Lifetime1)).field_C + 1;
+                  var6Lifetime1 = ((BitmapFont) ((Object) var5Lifetime1)).field_r + ((BitmapFont) ((Object) var5Lifetime1)).field_C + 1;
                   var7Lifetime1 = var6Lifetime1 + 150;
                   var8Lifetime1 = 16777215;
                   var9Lifetime1 = 0;
-                  oo.f(30, var7Lifetime1 - 35, 580, ((fm) ((Object) var2)).field_C + (((fm) ((Object) var2)).field_r + 1), 0, 64);
+                  oo.f(30, var7Lifetime1 - 35, 580, ((BitmapFont) ((Object) var2)).field_C + (((BitmapFont) ((Object) var2)).field_r + 1), 0, 64);
                   var10Lifetime1 = 11;
                   oo.f(30, -35 + var7Lifetime1, 186, 225, 0, 64);
-                  oo.f(nq.field_q[2] - 58, -35 + var7Lifetime1, 111, 225, 0, 64);
-                  oo.f(-32 + nq.field_q[4], var7Lifetime1 - 35, 65, 225, 0, 64);
-                  ah.field_e.b(gn.field_C, nq.field_q[0], var7Lifetime1, var10Lifetime1, 1);
-                  ah.field_e.b(ub.field_tb, nq.field_q[1], var7Lifetime1, var10Lifetime1, 1);
-                  ah.field_e.b(ke.field_e, nq.field_q[2], var7Lifetime1, var10Lifetime1, 1);
-                  ah.field_e.b("%W", nq.field_q[3], var7Lifetime1, var10Lifetime1, 1);
-                  ah.field_e.b("%L", nq.field_q[4], var7Lifetime1, var10Lifetime1, 1);
-                  ah.field_e.b("%D", nq.field_q[5], var7Lifetime1, var10Lifetime1, 1);
+                  oo.f(SpriteState.field_q[2] - 58, -35 + var7Lifetime1, 111, 225, 0, 64);
+                  oo.f(-32 + SpriteState.field_q[4], var7Lifetime1 - 35, 65, 225, 0, 64);
+                  ah.field_e.b(gn.field_C, SpriteState.field_q[0], var7Lifetime1, var10Lifetime1, 1);
+                  ah.field_e.b(ub.field_tb, SpriteState.field_q[1], var7Lifetime1, var10Lifetime1, 1);
+                  ah.field_e.b(ke.field_e, SpriteState.field_q[2], var7Lifetime1, var10Lifetime1, 1);
+                  ah.field_e.b("%W", SpriteState.field_q[3], var7Lifetime1, var10Lifetime1, 1);
+                  ah.field_e.b("%L", SpriteState.field_q[4], var7Lifetime1, var10Lifetime1, 1);
+                  ah.field_e.b("%D", SpriteState.field_q[5], var7Lifetime1, var10Lifetime1, 1);
                   ak.a(586, 231, -5, 27, var7Lifetime1 - 38);
                   var7Lifetime1 = var7Lifetime1 + (4 + var6Lifetime1);
-                  var4Lifetime1 = gb.field_d;
-                  var19 = mc.field_i.field_t[sd.field_F];
+                  var4Lifetime1 = GameKeyHandler.field_d;
+                  var19 = RandomAccessCacheFile.field_i.field_t[sd.field_F];
                   var11 = var19;
-                  var12Lifetime1 = mc.field_i.field_k[sd.field_F];
+                  var12Lifetime1 = RandomAccessCacheFile.field_i.field_k[sd.field_F];
                   var13Lifetime1 = 0;
                   for (var14Lifetime1 = 0; var14Lifetime1 < 10; var14Lifetime1++) {
                     var20 = var19[var14Lifetime1];
@@ -257,55 +257,55 @@ final class fk extends nc {
                   if ((var13Lifetime1 == 0)) {
                     var8Lifetime1Lifetime2 = 16777215;
                     var7Lifetime1 += 4;
-                    this.a(mc.field_i.field_l, -1, var5Lifetime1, var9Lifetime1, ta.field_lb, var8Lifetime1Lifetime2, mc.field_i.field_o, mc.field_i.field_g, false, var7Lifetime1, mc.field_i.field_m);
+                    this.a(RandomAccessCacheFile.field_i.field_l, -1, var5Lifetime1, var9Lifetime1, ta.field_lb, var8Lifetime1Lifetime2, RandomAccessCacheFile.field_i.field_o, RandomAccessCacheFile.field_i.field_g, false, var7Lifetime1, RandomAccessCacheFile.field_i.field_m);
                   }
-                  break L4;
+                  break regionExit2;
                 }
-                var4Lifetime1 = hk.field_g;
+                var4Lifetime1 = PlayerLoadout.field_g;
               }
             }
           }
-          ((fm) ((Object) var2)).a(var4Lifetime1, 40, 150, 560, 200, 0, -1, 1, 1, var3);
+          ((BitmapFont) ((Object) var2)).a(var4Lifetime1, 40, 150, 560, 200, 0, -1, 1, 1, var3);
           return;
         }
-        mc.field_i = qm.b(117, 7, 0, 10);
+        RandomAccessCacheFile.field_i = qm.b(117, 7, 0, 10);
         if (wc.j(111)) {
           var4Lifetime2 = fq.field_j;
-          ((fm) ((Object) var2)).a(var4Lifetime2, 40, 150, 560, 200, 0, -1, 1, 1, var3);
+          ((BitmapFont) ((Object) var2)).a(var4Lifetime2, 40, 150, 560, 200, 0, -1, 1, 1, var3);
           return;
         }
-        if (!mc.field_i.field_j) {
+        if (!RandomAccessCacheFile.field_i.field_j) {
           var25 = op.field_l;
-          ((fm) ((Object) var2)).a(var25, 40, 150, 560, 200, 0, -1, 1, 1, var3);
+          ((BitmapFont) ((Object) var2)).a(var25, 40, 150, 560, 200, 0, -1, 1, 1, var3);
           return;
         }
-        if (mc.field_i.field_t == null) {
-          var21 = hk.field_g;
-          ((fm) ((Object) var2)).a(var21, 40, 150, 560, 200, 0, -1, 1, 1, var3);
+        if (RandomAccessCacheFile.field_i.field_t == null) {
+          var21 = PlayerLoadout.field_g;
+          ((BitmapFont) ((Object) var2)).a(var21, 40, 150, 560, 200, 0, -1, 1, 1, var3);
           return;
         }
         var5Lifetime2 = pb.field_e;
-        var6Lifetime2 = ((fm) ((Object) var5Lifetime2)).field_r + ((fm) ((Object) var5Lifetime2)).field_C + 1;
+        var6Lifetime2 = ((BitmapFont) ((Object) var5Lifetime2)).field_r + ((BitmapFont) ((Object) var5Lifetime2)).field_C + 1;
         var7Lifetime2 = var6Lifetime2 + 150;
         var8Lifetime2 = 16777215;
         var9Lifetime2 = 0;
-        oo.f(30, var7Lifetime2 - 35, 580, ((fm) ((Object) var2)).field_C + (((fm) ((Object) var2)).field_r + 1), 0, 64);
+        oo.f(30, var7Lifetime2 - 35, 580, ((BitmapFont) ((Object) var2)).field_C + (((BitmapFont) ((Object) var2)).field_r + 1), 0, 64);
         var10Lifetime2 = 11;
         oo.f(30, -35 + var7Lifetime2, 186, 225, 0, 64);
-        oo.f(nq.field_q[2] - 58, -35 + var7Lifetime2, 111, 225, 0, 64);
-        oo.f(-32 + nq.field_q[4], var7Lifetime2 - 35, 65, 225, 0, 64);
-        ah.field_e.b(gn.field_C, nq.field_q[0], var7Lifetime2, var10Lifetime2, 1);
-        ah.field_e.b(ub.field_tb, nq.field_q[1], var7Lifetime2, var10Lifetime2, 1);
-        ah.field_e.b(ke.field_e, nq.field_q[2], var7Lifetime2, var10Lifetime2, 1);
-        ah.field_e.b("%W", nq.field_q[3], var7Lifetime2, var10Lifetime2, 1);
-        ah.field_e.b("%L", nq.field_q[4], var7Lifetime2, var10Lifetime2, 1);
-        ah.field_e.b("%D", nq.field_q[5], var7Lifetime2, var10Lifetime2, 1);
+        oo.f(SpriteState.field_q[2] - 58, -35 + var7Lifetime2, 111, 225, 0, 64);
+        oo.f(-32 + SpriteState.field_q[4], var7Lifetime2 - 35, 65, 225, 0, 64);
+        ah.field_e.b(gn.field_C, SpriteState.field_q[0], var7Lifetime2, var10Lifetime2, 1);
+        ah.field_e.b(ub.field_tb, SpriteState.field_q[1], var7Lifetime2, var10Lifetime2, 1);
+        ah.field_e.b(ke.field_e, SpriteState.field_q[2], var7Lifetime2, var10Lifetime2, 1);
+        ah.field_e.b("%W", SpriteState.field_q[3], var7Lifetime2, var10Lifetime2, 1);
+        ah.field_e.b("%L", SpriteState.field_q[4], var7Lifetime2, var10Lifetime2, 1);
+        ah.field_e.b("%D", SpriteState.field_q[5], var7Lifetime2, var10Lifetime2, 1);
         ak.a(586, 231, -5, 27, var7Lifetime2 - 38);
         var7Lifetime2 = var7Lifetime2 + (4 + var6Lifetime2);
-        var4Lifetime3 = gb.field_d;
-        var23 = mc.field_i.field_t[sd.field_F];
+        var4Lifetime3 = GameKeyHandler.field_d;
+        var23 = RandomAccessCacheFile.field_i.field_t[sd.field_F];
         var11Lifetime1 = var23;
-        var12Lifetime2 = mc.field_i.field_k[sd.field_F];
+        var12Lifetime2 = RandomAccessCacheFile.field_i.field_k[sd.field_F];
         var13Lifetime2 = 0;
         for (var14Lifetime2 = 0; var14Lifetime2 < 10; var14Lifetime2++) {
           var24 = var23[var14Lifetime2];
@@ -325,9 +325,9 @@ final class fk extends nc {
         if (var13Lifetime2 == 0) {
           var8Lifetime4 = 16777215;
           var7Lifetime2 += 4;
-          this.a(mc.field_i.field_l, -1, var5Lifetime2, var9Lifetime2, ta.field_lb, var8Lifetime4, mc.field_i.field_o, mc.field_i.field_g, false, var7Lifetime2, mc.field_i.field_m);
+          this.a(RandomAccessCacheFile.field_i.field_l, -1, var5Lifetime2, var9Lifetime2, ta.field_lb, var8Lifetime4, RandomAccessCacheFile.field_i.field_o, RandomAccessCacheFile.field_i.field_g, false, var7Lifetime2, RandomAccessCacheFile.field_i.field_m);
         }
-        ((fm) ((Object) var2)).a(var4Lifetime3, 40, 150, 560, 200, 0, -1, 1, 1, var3);
+        ((BitmapFont) ((Object) var2)).a(var4Lifetime3, 40, 150, 560, 200, 0, -1, 1, 1, var3);
         return;
     }
 
@@ -366,7 +366,7 @@ final class fk extends nc {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
-    final static void a(int param0, int param1, boolean param2, ja[] param3, int param4) {
+    final static void a(int param0, int param1, boolean param2, Sprite[] param3, int param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -383,9 +383,9 @@ final class fk extends nc {
         try {
           if (param3 != null &&
             param1 > 0) {
-            var5_int = param3[0].field_z;
-            var6 = param3[2].field_z;
-            var7 = param3[1].field_z;
+            var5_int = param3[0].fullWidth;
+            var6 = param3[2].fullWidth;
+            var7 = param3[1].fullWidth;
             param3[0].g(param0, param4);
             param3[2].g(-var6 + (param1 + param0), param4);
             oo.a(ki.field_d);
@@ -447,16 +447,16 @@ final class fk extends nc {
     final void b(byte param0) {
         if (param0 != 69) {
           field_l = (String) null;
-          mc.field_i = null;
+          RandomAccessCacheFile.field_i = null;
           return;
         }
-        mc.field_i = null;
+        RandomAccessCacheFile.field_i = null;
     }
 
     static {
         field_m = new int[8192];
         field_o = "Starve them.";
         field_l = "Deadly";
-        field_n = new th();
+        field_n = new IntrusiveDeque();
     }
 }

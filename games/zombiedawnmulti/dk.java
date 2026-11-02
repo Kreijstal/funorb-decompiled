@@ -70,7 +70,7 @@ final class dk extends cj {
               stackIn_11_1 = (param0) && (!ee.field_a);
               ((cj) (Object) stackIn_10_0).c(stackIn_11_1, -1);
               if (!(sq.field_Q <= 0) ||
-                !(da.field_a <= 0)) {
+                !(InflaterDecompressor.field_a <= 0)) {
                 if (vm.field_lb != null) {
                   vm.field_lb.c(mh.field_i.field_x, 0);
                 }
@@ -103,7 +103,7 @@ final class dk extends cj {
             stackIn_62_1 = (param0) && (!io.field_b);
             ((cj) (Object) stackIn_61_0).c(stackIn_62_1, param1 + 7578);
           } else {
-            if (da.field_a > 0) {
+            if (InflaterDecompressor.field_a > 0) {
               if (vm.field_lb != null) {
                 vm.field_lb.c(mh.field_i.field_x, 0);
               }
@@ -128,7 +128,7 @@ final class dk extends cj {
               stackIn_115_1 = (param0) && (!io.field_b);
               ((cj) (Object) stackIn_114_0).c(stackIn_115_1, param1 + 7578);
             } else {
-              if (da.field_a > 0) {
+              if (InflaterDecompressor.field_a > 0) {
                 if (vm.field_lb != null) {
                   vm.field_lb.c(mh.field_i.field_x, 0);
                 }
@@ -161,7 +161,7 @@ final class dk extends cj {
               stackIn_87_1 = (param0) && (!io.field_b);
               ((cj) (Object) stackIn_86_0).c(stackIn_87_1, param1 + 7578);
             } else {
-              if (da.field_a > 0) {
+              if (InflaterDecompressor.field_a > 0) {
                 if (vm.field_lb != null) {
                   vm.field_lb.c(mh.field_i.field_x, 0);
                 }
@@ -549,7 +549,7 @@ final class dk extends cj {
           var10 = var9_int + 5 + 5;
           var11 = 3 + jk.field_f * 2 + 3;
           var12 = qp.a(param0, (byte) 116, var10, param2);
-          var13 = br.a(true, param1, param3, var11);
+          var13 = IntrusiveNode.a(true, param1, param3, var11);
           this.a(var11, var13, var10, var12, -3344);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

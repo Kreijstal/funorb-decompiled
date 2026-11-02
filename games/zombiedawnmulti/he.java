@@ -8,13 +8,13 @@ final class he implements nl {
     private int field_h;
     static cj field_i;
     static boolean field_a;
-    static th field_k;
-    private fm field_g;
+    static IntrusiveDeque field_k;
+    private BitmapFont field_g;
     static ul field_f;
     static long field_e;
     static String[][] field_d;
 
-    public final void a(boolean param0, int param1, int param2, int param3, cf param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -30,7 +30,7 @@ final class he implements nl {
         var11 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param2 != -15112) {
-            field_k = (th) null;
+            field_k = (IntrusiveDeque) null;
           }
           if (!param4.field_l &&
             !param4.c(param2 ^ -15226)) {
@@ -113,21 +113,21 @@ final class he implements nl {
             } else {
               var5 = null;
             }
-            var10.field_j = var10.field_j + 4;
+            var10.position = var10.position + 4;
             if (!var10.c(false)) {
               ak.a((byte) -113);
               return;
             }
             var9.field_f = (byte[]) (var5);
             var9.field_h = true;
-            var9.a(true);
+            var9.unlink(true);
           } else {
             if (var2 == 1) {
               var3 = var10.i(-1478490344);
-              var4_ref_n = (n) (nq.field_s.c(param0 ^ -9398));
+              var4_ref_n = (n) (SpriteState.field_s.c(param0 ^ -9398));
               while (var4_ref_n != null) {
                 if (var4_ref_n.field_h != var3) {
-                  var4_ref_n = (n) (nq.field_s.b(param0 + 9361));
+                  var4_ref_n = (n) (SpriteState.field_s.b(param0 + 9361));
                   continue;
                 }
                 break;
@@ -136,10 +136,10 @@ final class he implements nl {
                 ak.a((byte) -114);
                 return;
               }
-              var4_ref_n.a(true);
+              var4_ref_n.unlink(true);
               return;
             }
-            bd.a("A1: " + ci.a(0), (Throwable) null, false);
+            MouseInputHandler.a("A1: " + ci.a(0), (Throwable) null, false);
             ak.a((byte) -111);
           }
           return;
@@ -168,7 +168,7 @@ final class he implements nl {
         this.field_h = 1;
     }
 
-    he(fm param0, int param1, int param2) {
+    he(BitmapFont param0, int param1, int param2) {
         try {
           this.field_g = param0;
           this.field_h = param2;

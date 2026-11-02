@@ -4,11 +4,11 @@
 final class ci {
     static String[] field_c;
     static String field_f;
-    static fm field_d;
+    static BitmapFont field_d;
     static int field_a;
     private int field_e;
     static String field_h;
-    private th field_b;
+    private IntrusiveDeque field_b;
     static String field_g;
 
     final void a(byte param0, byte[] param1) {
@@ -49,14 +49,14 @@ final class ci {
         int var4 = 0;
         String var8 = null;
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        String var6 = "(" + k.field_k + " " + jp.field_e + " " + ij.field_d + ") " + op.field_i;
+        String var6 = "(" + PacketBuffer.field_k + " " + jp.field_e + " " + ij.field_d + ") " + op.field_i;
         String var1 = var6;
         if (param0 >= hd.field_q) {
         } else {
           var1 = var6 + ":";
           for (var2 = 0; var2 < hd.field_q; var2++) {
             var7 = var1 + ' ';
-            var3 = 255 & s.field_e.field_m[var2];
+            var3 = 255 & s.field_e.payload[var2];
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (10 > var4) {
@@ -78,7 +78,7 @@ final class ci {
 
     final byte[] a(byte param0, int param1) {
         int var5 = ZombieDawnMulti.field_E ? 1 : 0;
-        th var3 = this.field_b;
+        IntrusiveDeque var3 = this.field_b;
         Object var4 = null;
         if (param0 != -85) {
           return (byte[]) null;
@@ -131,25 +131,25 @@ final class ci {
           if (param0) {
             stackIn_4_0 = sq.field_Q;
           } else {
-            stackIn_4_0 = da.field_a;
+            stackIn_4_0 = InflaterDecompressor.field_a;
           }
-          mf.a(stackIn_4_0, false);
+          MouseWheelInput.a(stackIn_4_0, false);
           em.field_U.a(0, mh.field_i.field_zb, 0, (byte) -74, -2 + (-40 + mh.field_i.field_z));
-          fn.field_h.a(jk.field_f, 0, ga.field_r.field_zb, 0, -3344);
+          ClientException.field_h.a(jk.field_f, 0, ga.field_r.field_zb, 0, -3344);
           stackIn_6_0 = ie.field_jb;
           stackIn_6_1 = 18;
           stackIn_6_2 = 2 + jk.field_f;
           if (tb.field_u) {
-            stackIn_7_3 = 2 + (40 + qa.field_o) + 2;
+            stackIn_7_3 = 2 + (40 + DualLinkNode.field_o) + 2;
           } else {
             stackIn_7_3 = 0;
           }
           ((cj) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, -stackIn_7_3 + ga.field_r.field_zb, 0, -3344);
-          bf.field_h.a(18, 2 + jk.field_f, 42 + qa.field_o, -42 - qa.field_o + ga.field_r.field_zb, -3344);
-          bf.field_n.a(qa.field_o, 2, ga.field_r.field_zb, 0, -2 - jk.field_f + (ga.field_r.field_z - 20), -31465, 20 + (2 + jk.field_f));
+          bf.field_h.a(18, 2 + jk.field_f, 42 + DualLinkNode.field_o, -42 - DualLinkNode.field_o + ga.field_r.field_zb, -3344);
+          bf.field_n.a(DualLinkNode.field_o, 2, ga.field_r.field_zb, 0, -2 - jk.field_f + (ga.field_r.field_z - 20), -31465, 20 + (2 + jk.field_f));
           jp.field_b.a(40, mh.field_i.field_z - 40, mh.field_i.field_zb, 0, -3344);
           gg.field_m.a(30, 0, fc.field_a.field_zb, 0, -3344);
-          dl.field_a.a(-2 + fc.field_a.field_z - 70, 30, fc.field_a.field_zb, 0, -3344);
+          SocketConnector.field_a.a(-2 + fc.field_a.field_z - 70, 30, fc.field_a.field_zb, 0, -3344);
           var2_int = 3 + kj.field_h;
           if (2 > qo.field_r.length) {
             var2_int--;
@@ -157,15 +157,15 @@ final class ci {
           if (param0) {
             var2_int--;
           }
-          var3 = -2 + (-10 + dl.field_a.field_z - (8 - (var2_int + 1) / 2)) / (var2_int + 1);
+          var3 = -2 + (-10 + SocketConnector.field_a.field_z - (8 - (var2_int + 1) / 2)) / (var2_int + 1);
           if (var3 > 30) {
             var3 = 30;
           }
-          var4 = -(var2_int * (var3 + 2)) - 5 + (dl.field_a.field_z - 5);
+          var4 = -(var2_int * (var3 + 2)) - 5 + (SocketConnector.field_a.field_z - 5);
           if (var4 > 40) {
             var4 = 40;
           }
-          ik.field_d.a(var4, 5, -5 + (dl.field_a.field_zb - 5), 5, -3344);
+          ik.field_d.a(var4, 5, -5 + (SocketConnector.field_a.field_zb - 5), 5, -3344);
           var5 = var4 + 7;
           for (var6 = 0; 4 + kj.field_h > var6; var6++) {
             if ((var6 != 1 ||
@@ -233,14 +233,14 @@ final class ci {
                       var9.field_zb = 0;
                     }
                   } else {
-                    ma.field_b[var6][0].a(ed.field_c, 2, var3, 38, var8, var5, 2);
+                    ma.field_b[var6][0].a(LevelFileCatalog.field_c, 2, var3, 38, var8, var5, 2);
                     var8 += 40;
                   }
                   var9_int = 2 + (-var8 + (-5 + fc.field_a.field_zb));
                   var10 = ma.field_b[var6].length - 1;
                   for (var11 = 0; var10 > var11; var11++) {
                     var12 = var11 * var9_int / var10;
-                    ma.field_b[var6][var11 + 1].a(ed.field_c, 2, var3, -var12 + var9_int * (var11 + 1) / var10 - 2, var8 + var12, var5, 2);
+                    ma.field_b[var6][var11 + 1].a(LevelFileCatalog.field_c, 2, var3, -var12 + var9_int * (var11 + 1) / var10 - 2, var8 + var12, var5, 2);
                   }
                   var5 = var5 + (2 + var3);
                 }
@@ -256,7 +256,7 @@ final class ci {
           if (param1 > -6) {
             return;
           }
-          up.a(false);
+          NodeHashTableIterator.a(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -267,7 +267,7 @@ final class ci {
 
     ci() {
         this.field_e = 0;
-        this.field_b = new th();
+        this.field_b = new IntrusiveDeque();
     }
 
     static {

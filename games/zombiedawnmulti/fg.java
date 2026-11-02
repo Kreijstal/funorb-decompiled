@@ -5,7 +5,7 @@ final class fg extends ae {
     static String field_l;
     static byte[] field_k;
     static int field_j;
-    static ja field_m;
+    static Sprite field_m;
     private int[] field_i;
 
     public static void c(int param0) {
@@ -36,7 +36,7 @@ final class fg extends ae {
         }
     }
 
-    final void a(int param0, qd param1) {
+    final void a(int param0, GameScreen param1) {
         try {
           param1.a(this.field_i, false);
           if (param0 != 0) {

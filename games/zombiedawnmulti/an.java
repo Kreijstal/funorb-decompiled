@@ -34,7 +34,7 @@ final class an {
         }
         tl var5 = new tl();
         if (var4 != null) {
-          var5.a(new k(var4), (byte) 118);
+          var5.a(new PacketBuffer(var4), (byte) 118);
           if (param0 >= 32768) {
             var5.c((byte) 100);
             this.field_a.a(var5, (long)param0, 1);
@@ -54,11 +54,11 @@ final class an {
 
     final static void a(int param0, boolean param1) {
         oj var2 = null;
-        dq.field_k.c(param1, -1);
+        ImageProducerRasterBuffer.field_k.c(param1, -1);
         if (param0 == 1) {
           var2 = ra.field_f;
           if (var2 != null) {
-            var2.a(param0 ^ -112, dq.field_k.field_qb, dq.field_k.field_w);
+            var2.a(param0 ^ -112, ImageProducerRasterBuffer.field_k.field_qb, ImageProducerRasterBuffer.field_k.field_w);
           }
           return;
         }

@@ -5,7 +5,7 @@ abstract class gf implements j {
     static int field_f;
     static int field_g;
     static String field_c;
-    static fm field_e;
+    static BitmapFont field_e;
     static String field_d;
     static String field_b;
     private long field_i;
@@ -82,7 +82,7 @@ abstract class gf implements j {
           return (re) null;
         }
         if (this.b(-3)) {
-          return se.field_F;
+          return WidgetContainer.field_F;
         }
         if (bl.a((byte) 40) >= 350L + this.field_i) {
           return this.f(-3);
@@ -122,7 +122,7 @@ abstract class gf implements j {
             !un.field_p.equals(param0.getParameter("session"))) {
             var4 = un.field_p;
           }
-          stackIn_9_0 = kf.a((String) (var4), -1, (byte) 126, (String) (var3), param2);
+          stackIn_9_0 = ProxySocketConnector.a((String) (var4), -1, (byte) 126, (String) (var3), param2);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

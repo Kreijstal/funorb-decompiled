@@ -22,7 +22,7 @@ final class jl extends hq {
         mk var5 = null;
         mk var6 = null;
         int var7 = 0;
-        ja var8 = null;
+        Sprite var8 = null;
         mk var6Lifetime1;
         mk var6Lifetime2;
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -55,8 +55,8 @@ final class jl extends hq {
           if (param2 < -107) {
             return;
           }
-          var8 = (ja) null;
-          this.a((ja) null, (byte) -75);
+          var8 = (Sprite) null;
+          this.a((Sprite) null, (byte) -75);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,7 +72,7 @@ final class jl extends hq {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, fm param6, pd param7, pd param8, int param9, int param10, int param11, int param12, int param13, int param14, fm param15, int param16, int param17, pd param18, int param19, boolean param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, BitmapFont param6, pd param7, pd param8, int param9, int param10, int param11, int param12, int param13, int param14, BitmapFont param15, int param16, int param17, pd param18, int param19, boolean param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -149,7 +149,7 @@ final class jl extends hq {
         return dupTemp$1;
     }
 
-    final void a(ja[] param0, int param1, boolean param2) {
+    final void a(Sprite[] param0, int param1, boolean param2) {
         int var4_int = 0;
         if (param2) {
           return;
@@ -185,8 +185,8 @@ final class jl extends hq {
         return (java.applet.Applet) ((Object) tg.field_i);
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, cf param4) {
-        cf stackIn_3_0 = null;
+    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -202,7 +202,7 @@ final class jl extends hq {
         mk var15 = null;
         try {
           if (param4 instanceof gn) {
-            stackIn_3_0 = (cf) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           } else {
             stackIn_3_0 = null;
           }
@@ -268,7 +268,7 @@ final class jl extends hq {
         }
     }
 
-    final void a(ja param0, byte param1) {
+    final void a(Sprite param0, byte param1) {
         int var4 = 0;
         mk[] var3 = null;
         mk var5_ref_mk = null;
@@ -318,10 +318,10 @@ final class jl extends hq {
           return;
         }
         pd var8 = (pd) null;
-        jl.a(-33, 72, 86, 111, -101, -58, (fm) null, (pd) null, (pd) null, -42, -100, -45, 56, 89, -124, (fm) null, -98, -113, (pd) null, -13, true);
+        jl.a(-33, 72, 86, 111, -101, -58, (BitmapFont) null, (pd) null, (pd) null, -42, -100, -45, 56, 89, -124, (BitmapFont) null, -98, -113, (pd) null, -13, true);
     }
 
-    final void a(ja[] param0, boolean param1) {
+    final void a(Sprite[] param0, boolean param1) {
         int var4 = 0;
         mk[] var3 = null;
         mk var5 = null;

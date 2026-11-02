@@ -16,36 +16,36 @@ abstract class id extends ff {
     abstract void a(int param0, nm param1);
 
     final static void d(byte param0) {
-        br var1 = null;
-        br var2 = null;
+        IntrusiveNode var1 = null;
+        IntrusiveNode var2 = null;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
-        br var2Lifetime1;
-        br var2Lifetime2;
+        IntrusiveNode var2Lifetime1;
+        IntrusiveNode var2Lifetime2;
         try {
           if (param0 != 20) {
             field_D = -84;
           }
           var1 = fd.field_M.c(49);
           while (var1 instanceof wj) {
-            var2 = var1.field_d;
+            var2 = var1.previous;
             if (((wj) (var1)).field_m.k()) {
-              var1.a(true);
+              var1.unlink(true);
             }
             var1 = var2;
           }
           var1 = qo.field_q.c(param0 ^ 68);
           while (var1 instanceof wj) {
-            var2Lifetime1 = var1.field_d;
+            var2Lifetime1 = var1.previous;
             if (((wj) (var1)).field_m.k()) {
-              var1.a(true);
+              var1.unlink(true);
             }
             var1 = var2Lifetime1;
           }
           var1 = jp.field_c.c(80);
           while (var1 instanceof wj) {
-            var2Lifetime2 = var1.field_d;
+            var2Lifetime2 = var1.previous;
             if (((wj) (var1)).field_m.k()) {
-              var1.a(true);
+              var1.unlink(true);
             }
             var1 = var2Lifetime2;
           }
@@ -114,7 +114,7 @@ abstract class id extends ff {
           var9 = 49;
           try {
             for (var10_int = 0; var5_int > var10_int; var10_int++) {
-              var11 = bd.field_c.a(param3[var10_int], -11452);
+              var11 = MouseInputHandler.field_c.a(param3[var10_int], -11452);
               var6[var10_int] = var11.e(-18572);
               var9 = (char)(var9 + 1);
               var7[var10_int] = (char)var9;

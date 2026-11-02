@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ic {
-    static th field_c;
+    static IntrusiveDeque field_c;
     static String field_l;
     static String field_b;
     static String[] field_k;
@@ -15,7 +15,7 @@ abstract class ic {
     static String field_j;
     static int field_g;
 
-    abstract void a(k param0, int param1);
+    abstract void a(PacketBuffer param0, int param1);
 
     abstract pi b(int param0);
 
@@ -85,7 +85,7 @@ abstract class ic {
     }
 
     static {
-        field_c = new th();
+        field_c = new IntrusiveDeque();
         field_l = "Zombie Colours";
         field_i = "Lethal";
         field_f = "Close";

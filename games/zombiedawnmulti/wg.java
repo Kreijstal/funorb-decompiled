@@ -87,7 +87,7 @@ final class wg {
             }
             var1_int = 1;
           }
-          mo.field_Jb.a(aj.a(bo.field_d, false, bd.field_g), 56, aj.a(ka.field_t, false, vb.field_f));
+          mo.field_Jb.a(aj.a(bo.field_d, false, MouseInputHandler.field_g), 56, aj.a(ka.field_t, false, vb.field_f));
           if (param0 >= -26) {
             stackIn_7_0 = 112;
             return stackIn_7_0;

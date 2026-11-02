@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends gq {
+final class ba extends PcmStream {
     private gd field_n;
     static String field_j;
-    th field_k;
+    IntrusiveDeque field_k;
     static String field_p;
     static int field_q;
     static String field_l;
@@ -86,7 +86,7 @@ final class ba extends gq {
           }
           if ((4 & this.field_n.field_H[param3.field_o]) != 0 &&
             param3.field_l < 0) {
-            var7_int = this.field_n.field_n[param3.field_o] / gp.field_p;
+            var7_int = this.field_n.field_n[param3.field_o] / PcmPlayerService.field_p;
             while (true) {
               var8 = (var7_int + 1048575 - param3.field_w) / var7_int;
               if (param2 < var8) {
@@ -97,7 +97,7 @@ final class ba extends gq {
               param3.field_w = param3.field_w + (-1048576 + var7_int * var8);
               param0 = param0 + var8;
               param2 = param2 - var8;
-              var9 = gp.field_p / 100;
+              var9 = PcmPlayerService.field_p / 100;
               var10 = 262144 / var7_int;
               if (var10 < var9) {
                 var9 = var10;
@@ -145,13 +145,13 @@ final class ba extends gq {
         }
     }
 
-    final gq b() {
+    final PcmStream b() {
         mb var1 = (mb) (this.field_k.c(76));
         if (var1 == null) {
           return null;
         }
         if (null != var1.field_C) {
-          return (gq) ((Object) var1.field_C);
+          return (PcmStream) ((Object) var1.field_C);
         }
         return this.d();
     }
@@ -169,7 +169,7 @@ final class ba extends gq {
         try {
           if ((4 & this.field_n.field_H[param0.field_o]) != 0 &&
             param0.field_l < 0) {
-            var4_int = this.field_n.field_n[param0.field_o] / gp.field_p;
+            var4_int = this.field_n.field_n[param0.field_o] / PcmPlayerService.field_p;
             var5 = (-param0.field_w + (1048575 + var4_int)) / var4_int;
             param0.field_w = param0.field_w + var4_int * param1 & 1048575;
             if (param1 >= var5) {
@@ -246,7 +246,7 @@ final class ba extends gq {
         return 0;
     }
 
-    final gq d() {
+    final PcmStream d() {
         mb var1;
         while (true) {
           var1 = (mb) (this.field_k.b(6));
@@ -254,7 +254,7 @@ final class ba extends gq {
             return null;
           }
           if (var1.field_C != null) {
-            return (gq) ((Object) var1.field_C);
+            return (PcmStream) ((Object) var1.field_C);
           }
         }
     }
@@ -282,7 +282,7 @@ final class ba extends gq {
     }
 
     ba(gd param0) {
-        this.field_k = new th();
+        this.field_k = new IntrusiveDeque();
         this.field_o = new vp();
         try {
           this.field_n = param0;

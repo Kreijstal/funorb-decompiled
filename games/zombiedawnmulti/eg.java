@@ -6,7 +6,7 @@ final class eg extends kk {
     static cd field_B;
     static byte[] field_E;
     static String field_z;
-    static ja field_D;
+    static Sprite field_D;
     static int field_C;
 
     final boolean f(int param0) {

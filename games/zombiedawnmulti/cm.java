@@ -29,8 +29,8 @@ final class cm {
         try {
           var6 = ma.field_a;
           var6.b((byte) -35, param5);
-          var6.field_j = var6.field_j + 1;
-          var7 = var6.field_j;
+          var6.position = var6.position + 1;
+          var7 = var6.position;
           var6.a(-55, 4);
           var6.a(123, param2);
           var8 = param1;
@@ -39,7 +39,7 @@ final class cm {
           }
           var6.a(109, var8);
           var6.a(param3, param3.length, 0, 115);
-          var6.e(33, -var7 + var6.field_j);
+          var6.e(33, -var7 + var6.position);
           if (param0 > 28) {
             return;
           }
@@ -61,43 +61,43 @@ final class cm {
 
     final static void a(int param0, int param1, cj param2) {
         jb var13 = null;
-        ja var14 = null;
+        Sprite var14 = null;
         String var15 = null;
         jb var16 = null;
-        ja var17 = null;
+        Sprite var17 = null;
         String var18 = null;
         jb var19 = null;
-        ja var20 = null;
+        Sprite var20 = null;
         String var21 = null;
         jb var22 = null;
-        ja var23 = null;
+        Sprite var23 = null;
         String var24 = null;
         jb var25 = null;
-        ja var26 = null;
+        Sprite var26 = null;
         String var27 = null;
         jb var28 = null;
-        ja var29 = null;
+        Sprite var29 = null;
         String var30 = null;
         jb var31 = null;
         String var33 = null;
         jb var34 = null;
-        ja var35 = null;
+        Sprite var35 = null;
         String var36 = null;
         jb var37 = null;
-        ja var38 = null;
+        Sprite var38 = null;
         String var39 = null;
         jb var40 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ja var32 = null;
-        ja var32Lifetime1;
-        ja var32Lifetime2;
-        ja var32Lifetime3;
-        ja var32Lifetime4;
-        ja var32Lifetime5;
-        ja var32Lifetime6;
+        Sprite var32 = null;
+        Sprite var32Lifetime1;
+        Sprite var32Lifetime2;
+        Sprite var32Lifetime3;
+        Sprite var32Lifetime4;
+        Sprite var32Lifetime5;
+        Sprite var32Lifetime6;
         try {
           ve.a(0L, 196, (String) null, (tq) null, (String) null, param2, param1, (int[]) null, -1);
           if (param1 == 0) {

@@ -53,14 +53,14 @@ final class eb {
         return stackIn_7_0;
     }
 
-    final static ja[] a(int param0) {
+    final static Sprite[] a(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = ZombieDawnMulti.field_E ? 1 : 0;
-        ja[] var1 = new ja[qc.field_v];
+        Sprite[] var1 = new Sprite[qc.field_v];
         for (var2 = 0; var2 < qc.field_v; var2++) {
           var3 = vj.field_p[var2] * oq.field_w[var2];
           var4 = qp.field_t[var2];
@@ -68,7 +68,7 @@ final class eb {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = tp.field_t[tq.b((int) var4[var6], 255)];
           }
-          var1[var2] = new ja(ie.field_nb, hj.field_a, k.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var5);
+          var1[var2] = new Sprite(ie.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], var5);
         }
         if (param0 <= 2) {
           eb.a(true, false, -9);
@@ -358,7 +358,7 @@ final class eb {
             if (wd.field_Q[var4Lifetime2] >= 0) {
               stackIn_112_1 = me.field_h;
             } else {
-              stackIn_112_1 = se.field_C;
+              stackIn_112_1 = WidgetContainer.field_C;
             }
             qk.field_j = stackIn_111_0 + stackIn_112_1;
           }
@@ -372,7 +372,7 @@ final class eb {
           while (var4Lifetime3 < hq.field_m.length) {
             var6Lifetime1 = wd.field_Q[var4Lifetime3];
             if (var6Lifetime1 < 0) {
-              var5Lifetime3 = var5Lifetime3 + se.field_C;
+              var5Lifetime3 = var5Lifetime3 + WidgetContainer.field_C;
             } else {
               var7Lifetime2 = hn.a(0, hq.field_m[var4Lifetime3], true);
               var8Lifetime1 = am.field_c - (var7Lifetime2 >> 1);
@@ -387,7 +387,7 @@ final class eb {
             var4Lifetime3++;
           }
           if (ho.field_q != 2) {
-            aq.field_B.a(0, param1, -31458, iq.a(bo.field_d, -1, bd.field_g));
+            aq.field_B.a(0, param1, -31458, iq.a(bo.field_d, -1, MouseInputHandler.field_g));
           } else {
             aq.field_B.a(-1, param1, -31458, -1);
           }

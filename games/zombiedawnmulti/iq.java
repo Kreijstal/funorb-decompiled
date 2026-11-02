@@ -123,7 +123,7 @@ final class iq {
                 io.field_g = false;
                 ml.field_Jb = -1;
                 hg.field_rb = -1;
-                se.field_E = 0;
+                WidgetContainer.field_E = 0;
                 ma.field_d = -1;
                 return;
               }
@@ -162,7 +162,7 @@ final class iq {
             }
             if (pp.field_n) {
               pp.field_n = false;
-              we.field_g[7] = se.field_D;
+              we.field_g[7] = WidgetContainer.field_D;
             }
             io.field_g = false;
             return;
@@ -276,12 +276,12 @@ final class iq {
           while (var3_int < hq.field_m.length) {
             var5 = wd.field_Q[var3_int];
             if (var5 < 0) {
-              var4 = var4 + se.field_C;
+              var4 = var4 + WidgetContainer.field_C;
             } else {
               var6 = hn.a(0, hq.field_m[var3_int], true);
               var7 = am.field_c - (var6 >> 1);
               var4 = var4 + al.field_bb;
-              if (th.a(param0, var7 - no.field_Gb, param2, var6 + (no.field_Gb << 1), var4, (wk.field_G << 1) + me.field_h, -18)) {
+              if (IntrusiveDeque.a(param0, var7 - no.field_Gb, param2, var6 + (no.field_Gb << 1), var4, (wk.field_G << 1) + me.field_h, -18)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }

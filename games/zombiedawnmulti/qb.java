@@ -10,10 +10,10 @@ abstract class qb {
     static ri field_h;
     lq field_c;
     lq field_l;
-    k field_b;
+    PacketBuffer field_b;
     long field_f;
     int field_d;
-    k field_k;
+    PacketBuffer field_k;
     volatile int field_p;
     byte field_i;
     volatile int field_n;
@@ -77,7 +77,7 @@ abstract class qb {
         long var6 = ((long)param3 << 32) + (long)param1;
         tn var8 = new tn();
         var8.field_B = param4;
-        var8.field_l = var6;
+        var8.secondaryKey = var6;
         var8.field_r = param2 ? true : false;
         if (param2) {
           if (20 <= this.a(0)) {
@@ -114,7 +114,7 @@ abstract class qb {
         if (param0 <= -32) {
           return this.d(20) >= 20 ? true : false;
         }
-        this.field_b = (k) null;
+        this.field_b = (PacketBuffer) null;
         return this.d(20) >= 20 ? true : false;
     }
 
@@ -132,11 +132,11 @@ abstract class qb {
         this.field_j = new lq();
         this.field_c = new lq();
         this.field_l = new lq();
-        this.field_b = new k(6);
+        this.field_b = new PacketBuffer(6);
         this.field_i = (byte) 0;
         this.field_n = 0;
         this.field_p = 0;
-        this.field_k = new k(10);
+        this.field_k = new PacketBuffer(10);
     }
 
     static {

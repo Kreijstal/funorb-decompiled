@@ -63,9 +63,9 @@ final class nj {
         var4 = stackIn_11_0;
         kk.field_s = var8.f((byte) -71);
         if (var4 != 0) {
-          ch.field_h = var8.f((byte) -121);
+          IntrusiveDequeCursor.field_h = var8.f((byte) -121);
         } else {
-          ch.field_h = kk.field_s;
+          IntrusiveDequeCursor.field_h = kk.field_s;
         }
         if (wc.field_N == 1) {
           ce.field_r = var8.d((byte) 69);
@@ -86,9 +86,9 @@ final class nj {
         }
         var5 = var8.d((byte) 69);
         try {
-          var9 = bd.field_c.a(var5, -11452);
+          var9 = MouseInputHandler.field_c.a(var5, -11452);
           pg.field_b = var9.e(-18572);
-          if (!ch.field_h.equals(ta.field_lb)) {
+          if (!IntrusiveDequeCursor.field_h.equals(ta.field_lb)) {
             stackIn_25_0 = var9.field_r;
           } else {
             stackIn_25_0 = null;
@@ -97,7 +97,7 @@ final class nj {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          bd.a("CC1", (Throwable) ((Object) var6), false);
+          MouseInputHandler.a("CC1", (Throwable) ((Object) var6), false);
           pg.field_b = null;
           af.field_g = null;
           return new ka(param0);

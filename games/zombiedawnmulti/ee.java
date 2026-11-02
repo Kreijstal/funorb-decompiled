@@ -136,7 +136,7 @@ final class ee {
           return false;
         }
         dupTemp$2 = bl.a((byte) 90);
-        cf.field_g = dupTemp$2;
+        UiWidget.field_g = dupTemp$2;
         mo.field_Gb = dupTemp$2;
         if (param1) {
           return false;

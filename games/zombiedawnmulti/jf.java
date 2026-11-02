@@ -5,7 +5,7 @@ final class jf {
     static cj field_a;
     static String field_b;
     static String field_c;
-    static th field_d;
+    static IntrusiveDeque field_d;
     static int field_e;
     private static String field_z;
 

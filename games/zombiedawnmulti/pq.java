@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pq extends br {
+final class pq extends IntrusiveNode {
     private int field_n;
     private int field_k;
     private int field_h;

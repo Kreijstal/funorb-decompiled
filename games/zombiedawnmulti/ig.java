@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ig {
-    static th field_a;
+    static IntrusiveDeque field_a;
     private io field_c;
     private ul field_h;
     private ul field_f;
-    static ja field_b;
-    static ja[] field_d;
+    static Sprite field_b;
+    static Sprite[] field_d;
     static String field_g;
-    static ja field_e;
+    static Sprite field_e;
 
     final ob a(int param0, int param1) {
         byte[] var4 = null;
@@ -24,7 +24,7 @@ final class ig {
         }
         var3 = new ob();
         if (var4 != null) {
-          var3.a(64, new k(var4));
+          var3.a(64, new PacketBuffer(var4));
         }
         if (param0 >= 32768) {
           var3.e((byte) -72);
@@ -101,18 +101,18 @@ final class ig {
           if (t.field_e < b.field_d) {
             t.field_e = t.field_e + 1;
           }
-          if (km.field_cb != dl.field_h.field_f) {
-            vj.field_t = vj.field_t + (dl.field_h.field_f - km.field_cb);
-            km.field_cb = dl.field_h.field_f;
+          if (km.field_cb != SocketConnector.field_h.field_f) {
+            vj.field_t = vj.field_t + (SocketConnector.field_h.field_f - km.field_cb);
+            km.field_cb = SocketConnector.field_h.field_f;
           }
           if (0 >= t.field_e) {
             return;
           }
           lk.g((byte) 93);
-          dq.field_k.a(-11838, param2);
+          ImageProducerRasterBuffer.field_k.a(-11838, param2);
           if (ra.field_f != null) {
             if (nh.field_m) {
-              ra.field_f.a(dq.field_k.field_w, (byte) -27, dq.field_k.field_qb, param2);
+              ra.field_f.a(ImageProducerRasterBuffer.field_k.field_w, (byte) -27, ImageProducerRasterBuffer.field_k.field_qb, param2);
             } else {
               ra.field_f = null;
             }
@@ -149,7 +149,7 @@ final class ig {
     }
 
     static {
-        field_a = new th();
+        field_a = new IntrusiveDeque();
         field_g = "Research Points: <%0>";
     }
 }

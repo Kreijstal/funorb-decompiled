@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pj extends se implements co, in {
+final class pj extends WidgetContainer implements co, in {
     private tf field_H;
     static long[] field_K;
     private sq field_L;
@@ -102,8 +102,8 @@ final class pj extends se implements co, in {
 
     private final String h(int param0) {
         if (param0 != -1) {
-          cf var3 = (cf) null;
-          this.a(-29, '.', (cf) null, 60);
+          UiWidget var3 = (UiWidget) null;
+          this.a(-29, '.', (UiWidget) null, 60);
           return "<u=2164A2><col=2164A2>";
         }
         return "<u=2164A2><col=2164A2>";
@@ -164,7 +164,7 @@ final class pj extends se implements co, in {
         }
     }
 
-    final boolean a(int param0, char param1, cf param2, int param3) {
+    final boolean a(int param0, char param1, UiWidget param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jp {
-    static th field_c;
+    static IntrusiveDeque field_c;
     static String field_a;
     static int field_d;
     static int field_e;
@@ -32,7 +32,7 @@ final class jp {
           var1 = null;
           var2 = null;
           if (va.field_a == 0 &&
-            ej.field_n != null) {
+            BufferedSocket.field_n != null) {
             var2 = bc.field_d;
           }
           if (va.field_a == 2 &&
@@ -53,11 +53,11 @@ final class jp {
           if (var2 == null &&
             !sp.field_h &&
             null == lj.field_v) {
-            var2 = ch.field_a;
+            var2 = IntrusiveDequeCursor.field_a;
           }
           boolean decompiledFrameRemainder0 = true;
           if (var2 != null) {
-            wh.a(6, wj.field_g, 0, (String) (var2), (String) null);
+            IterableNodeHashTable.a(6, wj.field_g, 0, (String) (var2), (String) null);
             decompiledFrameRemainder0 = (var10 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -110,17 +110,17 @@ final class jp {
               }
               if ((decompiledSharedTail0) &&
                 (sh.field_L)) {
-                var4 = "<col=999999>" + var4 + cf.field_v + "</col>";
+                var4 = "<col=999999>" + var4 + UiWidget.field_v + "</col>";
                 var5 = "";
               }
               var9 = w.field_A.a(var4);
               if (!lq.b(0)) {
                 if (ec.field_b.field_L &&
-                  var9 > (-ec.field_b.field_w + bd.field_g)) {
+                  var9 > (-ec.field_b.field_w + MouseInputHandler.field_g)) {
                   if (nh.field_m) {
                     var1 = "Broken!";
                   } else {
-                    var1 = cf.field_v;
+                    var1 = UiWidget.field_v;
                   }
                 }
                 if (ec.field_b.field_T != 0 &&
@@ -130,7 +130,7 @@ final class jp {
                 }
               }
             }
-            wh.a(6, pq.field_m[var6], var7, var4 + fm.c(rm.field_a.toString()), var5);
+            IterableNodeHashTable.a(6, pq.field_m[var6], var7, var4 + BitmapFont.c(rm.field_a.toString()), var5);
             if (!sq.field_N) {
               ua.field_E.field_L = false;
             }
@@ -159,7 +159,7 @@ final class jp {
     }
 
     static {
-        field_c = new th();
+        field_c = new IntrusiveDeque();
         field_a = "Best";
         field_e = -1;
     }

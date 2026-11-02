@@ -13,10 +13,10 @@ final class mg extends id {
     final static int a(boolean param0, hf param1, int param2, hf param3, String param4, int param5, byte param6) {
         int var12 = 0;
         int stackIn_5_0 = 0;
-        k stackIn_15_0 = null;
+        PacketBuffer stackIn_15_0 = null;
         int stackIn_15_1 = 0;
         String stackIn_16_2 = null;
-        k stackIn_18_0 = null;
+        PacketBuffer stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         String stackIn_19_2 = null;
         int stackIn_31_0 = 0;
@@ -64,10 +64,10 @@ final class mg extends id {
             return stackIn_5_0;
           }
           if (vo.field_l == ud.field_cb) {
-            ma.field_a.field_j = 0;
+            ma.field_a.position = 0;
             dd.field_d = null;
             if (param4 == null) {
-              pm.field_R.field_j = 0;
+              pm.field_R.position = 0;
               pm.field_R.b(125, c.field_c.nextInt());
               pm.field_R.b(-114, c.field_c.nextInt());
               stackIn_15_0 = pm.field_R;
@@ -77,7 +77,7 @@ final class mg extends id {
               } else {
                 stackIn_16_2 = "";
               }
-              ((k) (Object) stackIn_15_0).b(stackIn_15_1, stackIn_16_2);
+              ((PacketBuffer) (Object) stackIn_15_0).b(stackIn_15_1, stackIn_16_2);
               stackIn_18_0 = pm.field_R;
               stackIn_18_1 = -16171;
               if (param3.a((byte) 57)) {
@@ -85,15 +85,15 @@ final class mg extends id {
               } else {
                 stackIn_19_2 = "";
               }
-              ((k) (Object) stackIn_18_0).b(stackIn_18_1, stackIn_19_2);
+              ((PacketBuffer) (Object) stackIn_18_0).b(stackIn_18_1, stackIn_19_2);
               ma.field_a.a(-99, 16);
-              ma.field_a.field_j = ma.field_a.field_j + 1;
-              var9 = ma.field_a.field_j;
+              ma.field_a.position = ma.field_a.position + 1;
+              var9 = ma.field_a.position;
               hd.a(gn.field_L, (byte) 110, tp.field_v, pm.field_R, ma.field_a);
-              ma.field_a.e(param6 + 173, -var9 + ma.field_a.field_j);
+              ma.field_a.e(param6 + 173, -var9 + ma.field_a.position);
             } else {
               var9 = 0;
-              pm.field_R.field_j = 0;
+              pm.field_R.position = 0;
               if (param0) {
                 var9 = var9 | 1;
               }
@@ -102,28 +102,28 @@ final class mg extends id {
               pm.field_R.b(-16171, var14);
               pm.field_R.b(-16171, var8);
               var15 = (CharSequence) ((Object) param4);
-              pm.field_R.b(-16171, nq.a(-50, var15));
+              pm.field_R.b(-16171, SpriteState.a(-50, var15));
               pm.field_R.a(param5, (byte) -91);
               pm.field_R.a(param6 ^ 37, param2);
               pm.field_R.a(param6 ^ 19, var9);
               ma.field_a.a(120, 18);
-              ma.field_a.field_j = ma.field_a.field_j + 2;
-              var10 = ma.field_a.field_j;
+              ma.field_a.position = ma.field_a.position + 2;
+              var10 = ma.field_a.position;
               var11_ref_StringLifetime4 = wg.a(0, jl.b(param6 + 92));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
               ma.field_a.a(var11_ref_StringLifetime4, (byte) 105);
               hd.a(gn.field_L, (byte) -123, tp.field_v, pm.field_R, ma.field_a);
-              ma.field_a.b(false, ma.field_a.field_j - var10);
+              ma.field_a.b(false, ma.field_a.position - var10);
             }
             cb.a(-1, false);
-            vo.field_l = mf.field_c;
+            vo.field_l = MouseWheelInput.field_c;
           }
-          if (mf.field_c == vo.field_l &&
+          if (MouseWheelInput.field_c == vo.field_l &&
             fa.b(10, 1)) {
             var9Lifetime1 = s.field_e.g(31365);
-            s.field_e.field_j = 0;
+            s.field_e.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               hb.field_b = new String[var9Lifetime1 - 100];
@@ -140,7 +140,7 @@ final class mg extends id {
               if (var9Lifetime1 == 99) {
                 fa.b(10, wm.f(1));
                 dd.field_d = new Boolean(fq.a(s.field_e, (byte) -114));
-                s.field_e.field_j = 0;
+                s.field_e.position = 0;
               } else {
                 vo.field_l = pq.field_p;
                 op.field_i = var9Lifetime1;
@@ -152,7 +152,7 @@ final class mg extends id {
             var9Lifetime2 = 2;
             if (fa.b(param6 ^ -82, var9Lifetime2)) {
               var10Lifetime1 = s.field_e.d((byte) 69);
-              s.field_e.field_j = 0;
+              s.field_e.position = 0;
               if (fa.b(10, var10Lifetime1)) {
                 var11 = hb.field_b.length;
                 for (var12 = 0; var12 < var11; var12++) {
@@ -235,9 +235,9 @@ final class mg extends id {
 
     final void f(byte param0) {
         int fieldTemp$0 = 0;
-        br var2_ref_br;
+        IntrusiveNode var2_ref_br;
         double var2;
-        wb var3;
+        GameCharacter var3;
         int var4;
         int var5;
         int var6;
@@ -255,19 +255,19 @@ final class mg extends id {
           this.field_I = 0;
           var2_ref_br = fb.field_e.field_H.c(109);
           while (var2_ref_br instanceof id) {
-            if (var2_ref_br instanceof wb) {
-              var3 = (wb) (var2_ref_br);
+            if (var2_ref_br instanceof GameCharacter) {
+              var3 = (GameCharacter) (var2_ref_br);
               var4 = var3.g(-116) - this.g(-34) - 12;
               var5 = var3.h(122) - this.h(-70);
               if (var4 * var4 + var5 * var5 < 576 &&
                 fb.field_e.field_I.a(69, this.field_C, 255)) {
                 nm.b(-127, 9);
                 iq.a(this.field_C, (byte) 99);
-                this.a(true);
+                this.unlink(true);
                 return;
               }
             }
-            var2_ref_br = var2_ref_br.field_d;
+            var2_ref_br = var2_ref_br.previous;
           }
         }
         hp.field_l = new int[120];
@@ -305,9 +305,9 @@ final class mg extends id {
           jq.a(cr.a(param0, -83), 33 + param3, (byte) 2, param4.field_t[param0], param5, -16 + param6);
           if (param1 != 255) {
             jq.a(cr.a(param1, -100), param3 + 21, (byte) 2, param4.field_t[param1], param5, param6 - 39);
-            ((fm) ((Object) var8)).a(gh.field_f[param1], param6 + 29, 48 + param3, 16777215, 1, param5);
+            ((BitmapFont) ((Object) var8)).a(gh.field_f[param1], param6 + 29, 48 + param3, 16777215, 1, param5);
           }
-          ((fm) ((Object) var8)).a(gh.field_f[param0], param6 + 29, 58 + param3, 16777215, 1, param5);
+          ((BitmapFont) ((Object) var8)).a(gh.field_f[param0], param6 + 29, 58 + param3, 16777215, 1, param5);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "mg.K(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }

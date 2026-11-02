@@ -5,12 +5,12 @@ final class na extends rg {
     static ri field_I;
     static String field_F;
     int field_E;
-    static ja[] field_G;
+    static Sprite[] field_G;
     static int[][] field_J;
     static int[] field_K;
     static ri[][] field_H;
 
-    na(cf param0) {
+    na(UiWidget param0) {
         super(param0.field_y, param0.field_i, param0.field_n, param0.field_w, (nl) null, (bj) null);
         try {
           param0.b(0, 0, 28972, this.field_n, this.field_w);
@@ -47,10 +47,10 @@ final class na extends rg {
           this.field_B.a(-2, param1 + this.field_i, param2, param3 + this.field_y);
           return;
         }
-        ja var6 = new ja(this.field_B.field_n, this.field_B.field_w);
+        Sprite var6 = new Sprite(this.field_B.field_n, this.field_B.field_w);
         r.a(0, var6);
         if (param0 != -2) {
-          field_G = (ja[]) null;
+          field_G = (Sprite[]) null;
         }
         this.field_B.a(param0 + 0, 0, param2, 0);
         ql.a(true);
@@ -68,9 +68,9 @@ final class na extends rg {
         int var5;
         if (qj.field_p &&
           io.field_g &&
-          se.field_E > 0) {
-          var3 = (400 - se.field_E >> 1) + 10;
-          var4 = 20 + se.field_E + param1;
+          WidgetContainer.field_E > 0) {
+          var3 = (400 - WidgetContainer.field_E >> 1) + 10;
+          var4 = 20 + WidgetContainer.field_E + param1;
           var5 = 40;
           if (param0 > var3 &&
             var5 < param2 &&
@@ -102,14 +102,14 @@ final class na extends rg {
         try {
           var6 = param1.field_i.field_k;
           var2 = var6;
-          dq.field_j = new int[var6.length][var6[0].length];
+          ImageProducerRasterBuffer.field_j = new int[var6.length][var6[0].length];
           var3 = 0;
           if (param0 <= 124) {
             field_J = (int[][]) null;
           }
           while (var3 < var2.length) {
             for (var4 = 0; var4 < var2[0].length; var4++) {
-              stackIn_8_0 = dq.field_j[var3];
+              stackIn_8_0 = ImageProducerRasterBuffer.field_j[var3];
               stackIn_8_1 = var4;
               if (0 != tq.b(1, var2[var3][var4])) {
                 stackIn_9_2 = 0;
@@ -160,7 +160,7 @@ final class na extends rg {
           var7 = (CharSequence) ((Object) param2);
           ql.field_a = tg.a(var7, false);
           jj.field_M = param3;
-          var6 = id.a(kb.field_x, bb.field_k, (byte) -65, param0, tg.field_d);
+          var6 = id.a(GameWorld.field_x, bb.field_k, (byte) -65, param0, tg.field_d);
           wi.a((byte) 4, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

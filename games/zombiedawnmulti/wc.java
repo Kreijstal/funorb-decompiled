@@ -4,13 +4,13 @@
 final class wc extends id {
     static int field_N;
     static int field_O;
-    static ja[] field_M;
+    static Sprite[] field_M;
     private uj field_R;
     static String field_G;
     static boolean field_J;
     private String field_P;
     private int field_F;
-    static th field_K;
+    static IntrusiveDeque field_K;
     static char field_I;
     private uj field_L;
     static cj field_H;
@@ -29,7 +29,7 @@ final class wc extends id {
         RuntimeException var1_ref = null;
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
-          ej.field_n = null;
+          BufferedSocket.field_n = null;
           mh.field_c = null;
           la.field_k = false;
           if (cg.field_i != null) {
@@ -56,7 +56,7 @@ final class wc extends id {
             hq.field_c = null;
           }
           if (param0 != -28264) {
-            field_M = (ja[]) null;
+            field_M = (Sprite[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -155,9 +155,9 @@ final class wc extends id {
                 df.a(stackIn_151_0 != 0, stackIn_154_1, stackIn_155_2, -93, param0, 0, var2 != 0, 11, 13, t.field_d, 14, param1);
               }
             }
-            if (cf.field_r) {
+            if (UiWidget.field_r) {
               ma.field_a.b((byte) -35, 57);
-              cf.field_r = false;
+              UiWidget.field_r = false;
             }
             if (uk.field_N) {
               ma.field_a.b((byte) -35, 10);
@@ -209,9 +209,9 @@ final class wc extends id {
             }
           }
         }
-        if (cf.field_r) {
+        if (UiWidget.field_r) {
           ma.field_a.b((byte) -35, 57);
-          cf.field_r = false;
+          UiWidget.field_r = false;
         }
         if (uk.field_N) {
           ma.field_a.b((byte) -35, 10);
@@ -227,7 +227,7 @@ final class wc extends id {
         if (param0 >= -79) {
           wc.a(8, false);
           if (0 >= this.field_F) {
-            this.a(true);
+            this.unlink(true);
             return;
           }
           this.field_F = this.field_F - 7;
@@ -239,7 +239,7 @@ final class wc extends id {
           return;
         }
         if (0 >= this.field_F) {
-          this.a(true);
+          this.unlink(true);
           return;
         }
         this.field_F = this.field_F - 7;

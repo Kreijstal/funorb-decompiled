@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ga extends k {
+final class ga extends PacketBuffer {
     static cj field_r;
     static String field_t;
-    static gp field_u;
+    static PcmPlayerService field_u;
     static String field_w;
     static int[] field_s;
-    private o field_p;
+    private IsaacRandom field_p;
     static String field_q;
     static int[] field_v;
     private int field_o;
@@ -15,7 +15,7 @@ final class ga extends k {
     final void a(byte param0, int[] param1) {
         try {
           int var3_int = -83 / ((26 - param0) / 43);
-          this.field_p = new o(param1);
+          this.field_p = new IsaacRandom(param1);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "ga.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -23,9 +23,9 @@ final class ga extends k {
 
     final void l(int param0) {
         if (param0 != -3093) {
-          field_u = (gp) null;
+          field_u = (PcmPlayerService) null;
         }
-        this.field_j = (7 + this.field_o) / 8;
+        this.position = (7 + this.field_o) / 8;
     }
 
     final static void i(byte param0) {
@@ -60,10 +60,10 @@ final class ga extends k {
           var13 = s.field_e;
           var15 = var13;
           var2 = var15.g(31365);
-          var3 = (vg) (ag.field_i.c(116));
+          var3 = (vg) (GameApplet.field_i.c(116));
           while (var3 != null) {
             if (var2 != var3.field_i) {
-              var3 = (vg) (ag.field_i.b(6));
+              var3 = (vg) (GameApplet.field_i.b(6));
               continue;
             }
             break;
@@ -83,13 +83,13 @@ final class ga extends k {
             for (var6_intLifetime1 = 0; var6_intLifetime1 < var4; var6_intLifetime1++) {
               sn.a(4050, var15);
               if (var6_intLifetime1 != 0) {
-                k.a(1000, ao.field_c, vn.field_e, qc.field_q, var6_intLifetime1, jq.field_a);
+                PacketBuffer.a(1000, ao.field_c, vn.field_e, qc.field_q, var6_intLifetime1, jq.field_a);
               } else {
                 var3.field_m = vn.field_e;
                 var3.field_g = jq.field_a;
                 var3.field_o = ao.field_c;
                 var3.field_l = qc.field_q;
-                k.a(1000, ao.field_c, vn.field_e, qc.field_q, var6_intLifetime1, jq.field_a);
+                PacketBuffer.a(1000, ao.field_c, vn.field_e, qc.field_q, var6_intLifetime1, jq.field_a);
               }
             }
             md.a(var5, -109);
@@ -137,7 +137,7 @@ final class ga extends k {
             }
           }
           var3.field_j = true;
-          var3.a(true);
+          var3.unlink(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -150,9 +150,9 @@ final class ga extends k {
         if (param0 != -35) {
           return;
         }
-        int fieldTemp$0 = this.field_j;
-        this.field_j = this.field_j + 1;
-        this.field_m[fieldTemp$0] = (byte)(param1 + this.field_p.a(-48));
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 + this.field_p.a(-48));
     }
 
     final void b(int param0, int param1, int param2, byte[] param3) {
@@ -167,9 +167,9 @@ final class ga extends k {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           for (var5_int = param1; param0 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_j;
-            this.field_j = this.field_j + 1;
-            param3[var5_int + param2] = (byte)(this.field_m[fieldTemp$0] - this.field_p.a(-90));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param3[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_p.a(-90));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -236,14 +236,14 @@ final class ga extends k {
         while (var4 < param0) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((mb.field_n[var4] & this.field_m[incrementValue$0]) << param0 - var4);
+          var5 = var5 + ((mb.field_n[var4] & this.payload[incrementValue$0]) << param0 - var4);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (param0 != var4) {
-          var5 = var5 + (this.field_m[var3] >> var4 - param0 & mb.field_n[param0]);
+          var5 = var5 + (this.payload[var3] >> var4 - param0 & mb.field_n[param0]);
         } else {
-          var5 = var5 + (mb.field_n[var4] & this.field_m[var3]);
+          var5 = var5 + (mb.field_n[var4] & this.payload[var3]);
         }
         return var5;
     }
@@ -267,15 +267,15 @@ final class ga extends k {
 
     final int m(int param0) {
         int var2 = 114 % ((param0 + 34) / 50);
-        int fieldTemp$0 = this.field_j;
-        this.field_j = this.field_j + 1;
-        return this.field_m[fieldTemp$0] - this.field_p.a(-25) & 255;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$0] - this.field_p.a(-25) & 255;
     }
 
     final void k(int param0) {
-        this.field_o = this.field_j * 8;
+        this.field_o = this.position * 8;
         if (param0 != -1136) {
-          field_u = (gp) null;
+          field_u = (PcmPlayerService) null;
         }
     }
 

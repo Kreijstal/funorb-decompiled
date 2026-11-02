@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tl extends qa {
+final class tl extends DualLinkNode {
     static ld field_t;
     static int field_v;
     private int[][] field_s;
@@ -16,7 +16,7 @@ final class tl extends qa {
         return pd.a(jj.field_M, ql.field_a, param0 + 22);
     }
 
-    final void a(k param0, byte param1) {
+    final void a(PacketBuffer param0, byte param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -86,7 +86,7 @@ final class tl extends qa {
         return var2.toString();
     }
 
-    private final void a(int param0, k param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var9 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -154,7 +154,7 @@ final class tl extends qa {
           return;
         }
         if (df.field_I) {
-          cf.field_s.a(param4, param0, 0, param3, 3, param5);
+          UiWidget.field_s.a(param4, param0, 0, param3, 3, param5);
           return;
         }
         try {

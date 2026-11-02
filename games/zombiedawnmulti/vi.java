@@ -39,7 +39,7 @@ final class vi {
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        th var10 = null;
+        IntrusiveDeque var10 = null;
         int var11_int = 0;
         Object var11 = null;
         dm var12 = null;
@@ -89,15 +89,15 @@ final class vi {
           var6 = 0;
           var7 = 0;
           var8 = 0;
-          if (null != mh.field_c && (null != ch.field_g ||
+          if (null != mh.field_c && (null != IntrusiveDequeCursor.field_g ||
             sd.field_G != null ||
             r.field_c != null ||
             null != na.field_J)) {
             for (var9 = 0; var9 < kj.field_h; var9++) {
               var10_int = mh.field_c.field_Zb[var9] & 255;
-              if (null != ch.field_g &&
-                ch.field_g[var9] != null &&
-                ch.field_g[var9][var10_int]) {
+              if (null != IntrusiveDequeCursor.field_g &&
+                IntrusiveDequeCursor.field_g[var9] != null &&
+                IntrusiveDequeCursor.field_g[var9][var10_int]) {
                 var5_int = 1;
               }
               if (sd.field_G != null &&
@@ -195,7 +195,7 @@ final class vi {
             if (param3 == hf.field_e) {
               var21 += 42;
             }
-            var34 = fm.a(var12.field_Ub.field_yb, var33, var21);
+            var34 = BitmapFont.a(var12.field_Ub.field_yb, var33, var21);
             var20 = var34;
             var20 = var34;
             var20 = var34;
@@ -285,15 +285,15 @@ final class vi {
               if (var12.field_Ub.field_L &&
                 var22 != 0) {
                 ui.field_j = var12.field_Lb;
-                if (null != rl.field_h &&
-                  null != rl.field_h[var12.field_Yb]) {
-                  ui.field_j = ui.field_j + " - " + rl.field_h[var12.field_Yb];
+                if (null != GameSimulation.field_h &&
+                  null != GameSimulation.field_h[var12.field_Yb]) {
+                  ui.field_j = ui.field_j + " - " + GameSimulation.field_h[var12.field_Yb];
                 }
               } else {
                 if (var12.field_Ub.field_L &&
-                  rl.field_h != null &&
-                  null != rl.field_h[var12.field_Yb]) {
-                  ui.field_j = rl.field_h[var12.field_Yb];
+                  GameSimulation.field_h != null &&
+                  null != GameSimulation.field_h[var12.field_Yb]) {
+                  ui.field_j = GameSimulation.field_h[var12.field_Yb];
                 }
               }
               var19 = var19 + jk.field_f;
@@ -405,9 +405,9 @@ final class vi {
                 for (var27_int = 0; var27_int < kj.field_h; var27_int++) {
                   var28 = mh.field_c.field_Zb[var27_int] & 255;
                   var29 = 0;
-                  if (ch.field_g != null &&
-                    ch.field_g[var27_int] != null &&
-                    ch.field_g[var27_int][var28] &&
+                  if (IntrusiveDequeCursor.field_g != null &&
+                    IntrusiveDequeCursor.field_g[var27_int] != null &&
+                    IntrusiveDequeCursor.field_g[var27_int][var28] &&
                     !var12.field_Nb) {
                     var29 = 1;
                   }
@@ -441,7 +441,7 @@ final class vi {
                     var29 = 1;
                   }
                   if (var29 != 0) {
-                    var30_refLifetime2 = "<col=A00000>" + cf.field_f[var27_int] + "</col>";
+                    var30_refLifetime2 = "<col=A00000>" + UiWidget.field_f[var27_int] + "</col>";
                     var25 = var30_refLifetime2;
                     var24Lifetime2 = var25;
                     var25 = var30_refLifetime2;
@@ -458,7 +458,7 @@ final class vi {
                 if (bf.field_n == param3 &&
                   hl.b(0)) {
                   if (var26Lifetime1 != 0) {
-                    var24Lifetime2 = var35 + "<br>" + mc.field_b + (String) (var25);
+                    var24Lifetime2 = var35 + "<br>" + RandomAccessCacheFile.field_b + (String) (var25);
                   } else {
                     var24Lifetime2 = var35 + "<br>" + vl.a(od.field_Cb, new String[]{(String) (var25)}, 2);
                   }

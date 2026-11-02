@@ -3,13 +3,13 @@
  */
 class tb extends hq {
     static boolean field_u;
-    static ja field_v;
+    static Sprite field_v;
     static int[] field_t;
-    static ja field_s;
+    static Sprite field_s;
 
-    public final void a(boolean param0, int param1, int param2, int param3, cf param4) {
+    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
         RuntimeException var6 = null;
-        cf var7 = null;
+        UiWidget var7 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -22,8 +22,8 @@ class tb extends hq {
           if (param2 == -15112) {
             return;
           }
-          var7 = (cf) null;
-          this.a(true, 39, -62, 86, (cf) null);
+          var7 = (UiWidget) null;
+          this.a(true, 39, -62, 86, (UiWidget) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,7 +54,7 @@ class tb extends hq {
         field_s = null;
     }
 
-    tb(fm param0, int param1) {
+    tb(BitmapFont param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_C, -1, 2147483647, false);
     }
 
@@ -69,7 +69,7 @@ class tb extends hq {
           }
         }
         if (param0 != 4862) {
-          field_s = (ja) null;
+          field_s = (Sprite) null;
         }
     }
 

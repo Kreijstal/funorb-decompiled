@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ae extends br {
+abstract class ae extends IntrusiveNode {
     int field_f;
     static ao field_h;
     static String field_g;
 
-    abstract void a(int param0, qd param1);
+    abstract void a(int param0, GameScreen param1);
 
-    final static int a(k param0, String param1, int param2) {
+    final static int a(PacketBuffer param0, String param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -22,7 +22,7 @@ abstract class ae extends br {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = param0.field_j;
+          var3_int = param0.position;
           var5 = (CharSequence) ((Object) param1);
           var4 = qo.a(var5, (byte) -116);
           if (param2 != -31746) {
@@ -30,8 +30,8 @@ abstract class ae extends br {
             return stackIn_2_0;
           }
           param0.c(var4.length, (byte) 78);
-          param0.field_j = param0.field_j + r.field_a.a(var4.length, (byte) -62, 0, param0.field_m, param0.field_j, var4);
-          stackIn_4_0 = -var3_int + param0.field_j;
+          param0.position = param0.position + r.field_a.a(var4.length, (byte) -62, 0, param0.payload, param0.position, var4);
+          stackIn_4_0 = -var3_int + param0.position;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -65,17 +65,17 @@ abstract class ae extends br {
     ae() {
     }
 
-    final static ja[] a(ja param0, int param1) {
-        ja[] var2 = null;
+    final static Sprite[] a(Sprite param0, int param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        ja[] var3 = null;
-        ja[] stackIn_3_0 = null;
+        Sprite[] var3 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new ja[9];
+          var3 = new Sprite[9];
           var2 = var3;
           var3[4] = param0;
           if (param1 != 27117) {
@@ -104,19 +104,19 @@ abstract class ae extends br {
           return;
         }
         String var2 = (String) null;
-        ae.a((k) null, (String) null, -18);
+        ae.a((PacketBuffer) null, (String) null, -18);
         field_g = null;
         field_h = null;
     }
 
     void a(byte param0) {
         if (param0 >= -47) {
-          qd var3 = (qd) null;
-          this.a(-7, (qd) null);
-          this.a(true);
+          GameScreen var3 = (GameScreen) null;
+          this.a(-7, (GameScreen) null);
+          this.unlink(true);
           return;
         }
-        this.a(true);
+        this.unlink(true);
     }
 
     ae(int param0) {

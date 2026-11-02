@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kj extends br {
+final class kj extends IntrusiveNode {
     static String field_g;
     static String field_f;
     int field_x;
     int field_w;
-    static ja field_o;
+    static Sprite field_o;
     static ri field_m;
     int field_t;
     static int field_q;
@@ -113,7 +113,7 @@ final class kj extends br {
           if (param1.field_l == 0 &&
             !um.b(-127) &&
             mh.field_c == null &&
-            ej.field_n == null) {
+            BufferedSocket.field_n == null) {
             if (!sh.field_L) {
               var5 = pk.field_b;
               var6 = ki.field_j;

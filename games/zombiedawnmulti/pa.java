@@ -11,7 +11,7 @@ abstract class pa extends ek {
     int field_cb;
     static String field_bb;
     int field_Q;
-    static ja field_T;
+    static Sprite field_T;
     static String field_Y;
     int field_ab;
     int field_db;
@@ -30,7 +30,7 @@ abstract class pa extends ek {
         this.field_M = 1;
         if (param1 > -14) {
           pa.i((byte) -35);
-          this.field_P = this.field_A.field_m.a((byte) 32, param0, 600);
+          this.field_P = this.field_A.world.a((byte) 32, param0, 600);
           if (!(this instanceof lm)) {
             if (this.field_Q != 5) {
               if (this.field_Q != 7) {
@@ -58,7 +58,7 @@ abstract class pa extends ek {
             }
           }
         } else {
-          this.field_P = this.field_A.field_m.a((byte) 32, param0, 600);
+          this.field_P = this.field_A.world.a((byte) 32, param0, 600);
           if (this instanceof lm) {
             this.field_P = this.field_P * 2;
           }
@@ -83,7 +83,7 @@ abstract class pa extends ek {
         this.field_M = 4;
         if (param0 != -68) {
           this.k(106);
-          this.field_P = this.field_A.field_m.a((byte) 32, param1, 600);
+          this.field_P = this.field_A.world.a((byte) 32, param1, 600);
           if (5 == this.field_Q) {
             this.c(93, 28672 * this.field_M);
             this.field_S = true;
@@ -102,7 +102,7 @@ abstract class pa extends ek {
           this.field_S = true;
           return true;
         }
-        this.field_P = this.field_A.field_m.a((byte) 32, param1, 600);
+        this.field_P = this.field_A.world.a((byte) 32, param1, 600);
         if (5 == this.field_Q) {
           this.c(93, 28672 * this.field_M);
           this.field_S = true;
@@ -847,7 +847,7 @@ abstract class pa extends ek {
 
     void j(int param0) {
         this.field_Z = true;
-        this.a(true);
+        this.unlink(true);
         if (param0 == 18) {
           this.a(param0 - 4582);
           return;
@@ -994,7 +994,7 @@ abstract class pa extends ek {
           if (this.field_U != 0) {
             return;
           }
-          this.a(true);
+          this.unlink(true);
           this.a(-4564);
           this.field_E = 262144000;
           this.field_G = 262144000;

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class qo extends qa {
+class qo extends DualLinkNode {
     static String field_s;
     static int[] field_r;
-    static th field_q;
+    static IntrusiveDeque field_q;
     static int field_u;
     static String field_t;
 
@@ -25,7 +25,7 @@ class qo extends qa {
           var2_int = param0.length();
           var3 = new byte[var2_int];
           if (param1 != -116) {
-            field_q = (th) null;
+            field_q = (IntrusiveDeque) null;
           }
           for (var4 = 0; var2_int > var4; var4++) {
             {
@@ -167,7 +167,7 @@ class qo extends qa {
     static {
         field_s = "Log in";
         field_u = 0;
-        field_q = new th();
+        field_q = new IntrusiveDeque();
         field_t = "Menu";
     }
 }

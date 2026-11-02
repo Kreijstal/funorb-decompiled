@@ -10,11 +10,11 @@ final class op extends ae {
     static String field_k;
     static String field_j;
     static int field_i;
-    static kb field_m;
+    static GameWorld field_m;
 
     final void a(byte param0) {
         super.a((byte) -54);
-        mi.field_Kb.a((br) (this), false);
+        mi.field_Kb.a((IntrusiveNode) (this), false);
         if (param0 > -47) {
           field_l = (String) null;
         }
@@ -69,8 +69,8 @@ final class op extends ae {
 
     final void a(int param0, boolean param1, int param2, int param3) {
         if (!param1) {
-          qd var6 = (qd) null;
-          this.a(-70, (qd) null);
+          GameScreen var6 = (GameScreen) null;
+          this.a(-70, (GameScreen) null);
         }
     }
 
@@ -98,7 +98,7 @@ final class op extends ae {
         return false;
     }
 
-    final void a(int param0, qd param1) {
+    final void a(int param0, GameScreen param1) {
         try {
           param1.b(this.field_p, (byte) 127, this.field_q);
           if (param0 != 0) {

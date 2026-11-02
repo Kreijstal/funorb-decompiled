@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ro extends kb {
-    static th field_M;
+final class ro extends GameWorld {
+    static IntrusiveDeque field_M;
     static cj field_O;
     static boolean field_L;
     static String field_N;
@@ -63,8 +63,8 @@ final class ro extends kb {
         }
     }
 
-    final void a(k param0, byte param1) {
-        k stackIn_3_0 = null;
+    final void a(PacketBuffer param0, byte param1) {
+        PacketBuffer stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         int stackIn_4_2 = 0;
         RuntimeException stackIn_39_0 = null;
@@ -86,15 +86,15 @@ final class ro extends kb {
         var6 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           param0.a(-110, this.field_r);
-          param0.a(this.field_H, (byte) -96);
-          stackIn_3_0 = (k) (param0);
+          param0.a(this.currentTick, (byte) -96);
+          stackIn_3_0 = (PacketBuffer) (param0);
           stackIn_3_1 = 109;
           if (this.field_i) {
             stackIn_4_2 = 1;
           } else {
             stackIn_4_2 = 0;
           }
-          ((k) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2);
+          ((PacketBuffer) (Object) stackIn_3_0).a(stackIn_3_1, stackIn_4_2);
           param0.a(this.field_C, (byte) -121);
           param0.a(this.field_I, (byte) -55);
           param0.a(this.field_g, (byte) -54);
@@ -108,7 +108,7 @@ final class ro extends kb {
             param0.a(this.field_a[var3_int], (byte) -85);
             param0.a(this.field_z[var3_int], (byte) -78);
           }
-          var3 = (ek) (this.field_K.c(40));
+          var3 = (ek) (this.characters.c(40));
           while (var3 != null) {
             boolean decompiledFrameRemainder0 = true;
             if (var3 instanceof pa) {
@@ -138,7 +138,7 @@ final class ro extends kb {
               var4_int = var4_int & 255 | (-16777216 & var4_int) >> 16;
               param0.a(var4_int, (byte) -104);
             }
-            var3 = (ek) (this.field_K.b(6));
+            var3 = (ek) (this.characters.b(6));
           }
           var3_ref = (ce) (this.field_s.c(102));
           while (var3_ref != null) {
@@ -149,7 +149,7 @@ final class ro extends kb {
             param0.a(var3_ref.field_s, (byte) -103);
             var3_ref = (ce) (this.field_s.b(6));
           }
-          var3_intLifetime1 = 11 + 16 * this.field_t + (this.field_K.a(0) + this.field_s.a(0) + this.field_A.a(0)) * 8;
+          var3_intLifetime1 = 11 + 16 * this.field_t + (this.characters.a(0) + this.field_s.a(0) + this.field_A.a(0)) * 8;
           if (57 + var3_intLifetime1 > 2000) {
             param0.a(117, 0);
             return;
@@ -186,7 +186,7 @@ final class ro extends kb {
 
     private final int a(ek param0, byte param1) {
         RuntimeException var3 = null;
-        k var4 = null;
+        PacketBuffer var4 = null;
         int stackIn_5_0 = 0;
         int stackIn_8_0 = 0;
         int stackIn_10_0 = 0;
@@ -197,8 +197,8 @@ final class ro extends kb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= -80) {
-            var4 = (k) null;
-            this.a((k) null, (byte) 11);
+            var4 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, (byte) 11);
           }
           if (param0 instanceof ge) {
             stackIn_12_0 = 1;

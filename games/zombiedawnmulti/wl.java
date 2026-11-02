@@ -310,7 +310,7 @@ final class wl {
           var3 = 0;
         }
         if (va.field_a == 0 &&
-          ej.field_n != null) {
+          BufferedSocket.field_n != null) {
           var3 = 0;
         }
         if (va.field_a == 2 &&
@@ -330,14 +330,14 @@ final class wl {
                 if (ga.a(var5, true) == 2) {
                   kp.a(var5, param2, 1, true);
                 }
-                kb.a(-1, qf.field_g, param0, var4_ref_String, va.field_a, 29602);
+                GameWorld.a(-1, qf.field_g, param0, var4_ref_String, va.field_a, 29602);
               } else {
                 var13 = (String) null;
                 var12 = (String) null;
                 vm.a((String) null, 0, (String) null, iq.field_d, 2, 0);
                 var15 = (String) null;
                 var14 = (String) null;
-                vm.a((String) null, 0, (String) null, o.field_l, 2, 0);
+                vm.a((String) null, 0, (String) null, IsaacRandom.field_l, 2, 0);
               }
             }
             pf.a(64);

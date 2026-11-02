@@ -50,7 +50,7 @@ final class ub extends ie {
         }
     }
 
-    final static void a(String[][] param0, ul param1, boolean param2, String[][] param3, String[] param4, ul param5, int param6, byte[] param7, ul param8, int param9, int[] param10, byte[] param11, boolean param12, ja[][] param13, ja[][] param14) {
+    final static void a(String[][] param0, ul param1, boolean param2, String[][] param3, String[] param4, ul param5, int param6, byte[] param7, ul param8, int param9, int[] param10, byte[] param11, boolean param12, Sprite[][] param13, Sprite[][] param14) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -160,7 +160,7 @@ final class ub extends ie {
         }
     }
 
-    ub(vk param0, cf param1) {
+    ub(vk param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -185,7 +185,7 @@ final class ub extends ie {
 
     final static void m(int param0) {
         int var1 = -122 / ((param0 + 60) / 48);
-        rl.b((byte) -128);
+        GameSimulation.b((byte) -128);
     }
 
     final static void a(int param0, int param1, int param2, byte param3, int[] param4, int param5, int param6, int param7, int param8, int param9) {
@@ -222,7 +222,7 @@ final class ub extends ie {
         }
     }
 
-    final void a(cf param0, byte param1) {
+    final void a(UiWidget param0, byte param1) {
         try {
           super.a(param0, (byte) -32);
           int var3_int = -36 / ((param1 - 61) / 56);

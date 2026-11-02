@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class n extends br {
+final class n extends IntrusiveNode {
     int field_h;
     static int field_i;
     byte[] field_f;
@@ -10,14 +10,14 @@ final class n extends br {
     final static void b(boolean param0) {
         rn.a(-54);
         if (dk.field_Ib != null) {
-          nq.a(95, dk.field_Ib);
+          SpriteState.a(95, dk.field_Ib);
         }
         tb.b(4862);
         if (param0) {
           return;
         }
         qb.b(31);
-        da.b(-8);
+        InflaterDecompressor.b(-8);
         if (!ib.b(23517)) {
           ak.a((byte) -111);
           return;
@@ -33,13 +33,13 @@ final class n extends br {
           if (!ia.field_r) {
             return wc.j(98) ? true : false;
           }
-          if (!qd.field_bb) {
+          if (!GameScreen.field_bb) {
             return wc.j(98) ? true : false;
           }
           return true;
         }
         if (ia.field_r) {
-          if (qd.field_bb) {
+          if (GameScreen.field_bb) {
             return true;
           }
           return wc.j(98) ? true : false;

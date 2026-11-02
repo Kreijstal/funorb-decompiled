@@ -6,18 +6,18 @@ final class lq {
     static int field_d;
     static int field_b;
     static String field_a;
-    private qa field_e;
-    private qa field_f;
+    private DualLinkNode field_e;
+    private DualLinkNode field_f;
 
     final int a(byte param0) {
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         int var2 = 0;
-        qa var3 = this.field_e.field_k;
+        DualLinkNode var3 = this.field_e.secondaryPrevious;
         if (param0 != 98) {
           return -26;
         }
         while (var3 != this.field_e) {
-          var3 = var3.field_k;
+          var3 = var3.secondaryPrevious;
           var2++;
         }
         return var2;
@@ -32,14 +32,14 @@ final class lq {
         lq.b(1);
     }
 
-    final qa b(byte param0) {
-        qa var2 = null;
-        qa var2Lifetime1;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 < 82) {
           field_d = 18;
           var2 = this.field_f;
           if (var2 != this.field_e) {
-            this.field_f = var2.field_k;
+            this.field_f = var2.secondaryPrevious;
             return var2;
           }
           this.field_f = null;
@@ -47,7 +47,7 @@ final class lq {
         }
         var2Lifetime1 = this.field_f;
         if (var2Lifetime1 != this.field_e) {
-          this.field_f = var2Lifetime1.field_k;
+          this.field_f = var2Lifetime1.secondaryPrevious;
           return var2Lifetime1;
         }
         this.field_f = null;
@@ -113,13 +113,13 @@ final class lq {
     }
 
     final void d(int param0) {
-        qa var5 = null;
-        qa var4 = null;
+        DualLinkNode var5 = null;
+        DualLinkNode var4 = null;
         int var3 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 != -1) {
           lq.c(-67);
           while (true) {
-            var5 = this.field_e.field_k;
+            var5 = this.field_e.secondaryPrevious;
             if (this.field_e == var5) {
               break;
             }
@@ -129,7 +129,7 @@ final class lq {
           return;
         }
         while (true) {
-          var4 = this.field_e.field_k;
+          var4 = this.field_e.secondaryPrevious;
           if (this.field_e == var4) {
             break;
           }
@@ -138,25 +138,25 @@ final class lq {
         this.field_f = null;
     }
 
-    final qa c(byte param0) {
-        qa var2 = null;
-        qa var2Lifetime1;
+    final DualLinkNode c(byte param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 <= 84) {
-          this.field_f = (qa) null;
-          var2 = this.field_e.field_k;
+          this.field_f = (DualLinkNode) null;
+          var2 = this.field_e.secondaryPrevious;
           if (this.field_e == var2) {
             this.field_f = null;
             return null;
           }
-          this.field_f = var2.field_k;
+          this.field_f = var2.secondaryPrevious;
           return var2;
         }
-        var2Lifetime1 = this.field_e.field_k;
+        var2Lifetime1 = this.field_e.secondaryPrevious;
         if (this.field_e == var2Lifetime1) {
           this.field_f = null;
           return null;
         }
-        this.field_f = var2Lifetime1.field_k;
+        this.field_f = var2Lifetime1.secondaryPrevious;
         return var2Lifetime1;
     }
 
@@ -168,19 +168,19 @@ final class lq {
         return fh.field_m != null ? true : false;
     }
 
-    final qa a(int param0) {
-        qa var2 = null;
-        qa var2Lifetime1;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 != 11356) {
           lq.b(-38);
-          var2 = this.field_e.field_k;
+          var2 = this.field_e.secondaryPrevious;
           if (var2 != this.field_e) {
             var2.a(-4564);
             return var2;
           }
           return null;
         }
-        var2Lifetime1 = this.field_e.field_k;
+        var2Lifetime1 = this.field_e.secondaryPrevious;
         if (var2Lifetime1 != this.field_e) {
           var2Lifetime1.a(-4564);
           return var2Lifetime1;
@@ -188,28 +188,28 @@ final class lq {
         return null;
     }
 
-    final void a(int param0, qa param1) {
+    final void a(int param0, DualLinkNode param1) {
         try {
-          if (param1.field_p != null) {
+          if (param1.secondaryNext != null) {
             param1.a(param0 - 34228);
           }
-          param1.field_k = this.field_e;
-          param1.field_p = this.field_e.field_p;
+          param1.secondaryPrevious = this.field_e;
+          param1.secondaryNext = this.field_e.secondaryNext;
           if (param0 != 29664) {
             String var4 = (String) null;
             lq.a((byte) 122, (String) null);
           }
-          param1.field_p.field_k = param1;
-          param1.field_k.field_p = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
+          param1.secondaryPrevious.secondaryNext = param1;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "lq.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     public lq() {
-        this.field_e = new qa();
-        this.field_e.field_k = this.field_e;
-        this.field_e.field_p = this.field_e;
+        this.field_e = new DualLinkNode();
+        this.field_e.secondaryPrevious = this.field_e;
+        this.field_e.secondaryNext = this.field_e;
     }
 
     static {

@@ -4,7 +4,7 @@
 final class bp extends un {
     static cj field_u;
     static int field_r;
-    static ja field_s;
+    static Sprite field_s;
     static String[] field_v;
     static cj field_w;
     static String field_t;
@@ -66,8 +66,8 @@ final class bp extends un {
           var7 = ma.field_a;
           var8 = var7;
           var8.b((byte) -35, param2);
-          var8.field_j = var8.field_j + 1;
-          var4 = var8.field_j;
+          var8.position = var8.position + 1;
+          var4 = var8.position;
           var8.a(108, 1);
           var8.a(param0.field_i, (byte) -95);
           var8.a(param0.field_v, (byte) -76);
@@ -84,7 +84,7 @@ final class bp extends un {
             field_u = (cj) null;
           }
           var8.f(var4, 118);
-          var8.e(77, var8.field_j - var4);
+          var8.e(77, var8.position - var4);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "bp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -105,7 +105,7 @@ final class bp extends un {
         field_u = null;
     }
 
-    final static void a(int param0, k param1, go param2, int param3) {
+    final static void a(int param0, PacketBuffer param1, PlatformTaskDispatcher param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -132,7 +132,7 @@ final class bp extends un {
           Class[] var12 = null;
           int var13 = 0;
           int var14 = 0;
-          go var15 = null;
+          PlatformTaskDispatcher var15 = null;
           String var16 = null;
           String var17 = null;
           int var18 = 0;
@@ -227,8 +227,8 @@ final class bp extends un {
             }
             we.field_k.a(var19, false);
             if (param3 != -4) {
-              var15 = (go) null;
-              bp.a(-51, (k) null, (go) null, 59);
+              var15 = (PlatformTaskDispatcher) null;
+              bp.a(-51, (PacketBuffer) null, (PlatformTaskDispatcher) null, 59);
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {

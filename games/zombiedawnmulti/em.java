@@ -49,7 +49,7 @@ final class em extends wk {
         }
     }
 
-    private final void a(String param0, int param1, int param2, cf param3, boolean param4) {
+    private final void a(String param0, int param1, int param2, UiWidget param3, boolean param4) {
         if (!param4) {
           return;
         }
@@ -88,7 +88,7 @@ final class em extends wk {
         this.field_Q.b(var6 + 90, 0, param2, 40, param4);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, ja[] param5, int param6, int param7, fm param8, int param9, int param10, int param11, int param12, ja[] param13, int param14, fm param15, ja[] param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite[] param5, int param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12, Sprite[] param13, int param14, BitmapFont param15, Sprite[] param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

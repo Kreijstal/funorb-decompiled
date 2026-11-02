@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ac extends br {
+final class ac extends IntrusiveNode {
     private int field_h;
     private boolean field_K;
     private int field_N;
@@ -79,7 +79,7 @@ final class ac extends br {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        k var2 = new k(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_h = var2.i(-1478490344);
         this.field_j = var2.i(-1478490344);
         this.field_z = var2.i(-1478490344);

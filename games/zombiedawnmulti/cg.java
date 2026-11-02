@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cg extends br {
-    static th field_i;
+final class cg extends IntrusiveNode {
+    static IntrusiveDeque field_i;
     static java.awt.Frame field_m;
     static cj field_f;
-    private th field_k;
+    private IntrusiveDeque field_k;
     private int field_g;
     static ul field_n;
     static String field_j;
@@ -16,7 +16,7 @@ final class cg extends br {
         if (param0 != -1) {
           field_f = (cj) null;
         }
-        this.a(true);
+        this.unlink(true);
     }
 
     final void b(boolean param0) {
@@ -52,11 +52,11 @@ final class cg extends br {
         if (param1 != -27404) {
           cg.a(-60, -93, 81L);
         }
-        var4.field_j = var4.field_j + 1;
-        int var5 = var4.field_j;
+        var4.position = var4.position + 1;
+        int var5 = var4.position;
         var4.a(-59, 7);
         var4.a(param2, true);
-        var4.e(29, -var5 + var4.field_j);
+        var4.e(29, -var5 + var4.position);
     }
 
     cg(int param0, int param1, int param2) {
@@ -218,7 +218,7 @@ final class cg extends br {
           var4 = var6;
           var6 = var10_ref_boolean____;
         }
-        this.field_k = new th();
+        this.field_k = new IntrusiveDeque();
         for (var9Lifetime1 = 0; var9Lifetime1 < var4.length; var9Lifetime1++) {
           var16 = 0;
           var10Lifetime1 = var16;

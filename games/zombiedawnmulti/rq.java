@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class rq extends br {
+final class rq extends IntrusiveNode {
     private int field_h;
     static String field_n;
     private int field_t;
@@ -13,7 +13,7 @@ final class rq extends br {
     private int field_w;
     private int field_k;
     private int field_s;
-    static ja field_v;
+    static Sprite field_v;
     static int[] field_u;
     private int field_i;
     private int field_m;
@@ -156,14 +156,14 @@ final class rq extends br {
         if (param0 != 9) {
           return;
         }
-        if (se.field_E > 0) {
-          var1Lifetime1 = (400 - se.field_E >> 1) + 10;
-          var2Lifetime1 = 20 + se.field_E + 20;
+        if (WidgetContainer.field_E > 0) {
+          var1Lifetime1 = (400 - WidgetContainer.field_E >> 1) + 10;
+          var2Lifetime1 = 20 + WidgetContainer.field_E + 20;
           g.c();
           var3Lifetime1 = 45;
           oo.h(var1Lifetime1, var3Lifetime1, var2Lifetime1 + var1Lifetime1, var3Lifetime1 + hj.field_g);
           oo.f(var1Lifetime1, var3Lifetime1, var2Lifetime1, hj.field_g, 2560, 160);
-          g.a(o.field_h, 10, var3Lifetime1, 192);
+          g.a(IsaacRandom.field_h, 10, var3Lifetime1, 192);
           sj.field_j.g(10, var3Lifetime1);
           sj.field_j.a(10, -5 + (hj.field_g + var3Lifetime1));
           lm.field_fb.g(var1Lifetime1, var3Lifetime1);
@@ -174,7 +174,7 @@ final class rq extends br {
           rp.field_r[3].g(-5 + var1Lifetime1 + var2Lifetime1, var3Lifetime1 + hj.field_g - 5);
           var4 = ei.field_g[ma.field_d][ml.field_Jb];
           if (ma.field_d == 21 &&
-            1 == ll.field_k.b((byte) -1) &&
+            1 == FullscreenFocusCanvas.field_k.b((byte) -1) &&
             ml.field_Jb < ci.field_c.length &&
             null != ci.field_c[ml.field_Jb]) {
             var4 = ci.field_c[ml.field_Jb];
@@ -208,42 +208,42 @@ final class rq extends br {
         }
     }
 
-    final static void a(ja[] param0, int param1) {
+    final static void a(Sprite[] param0, int param1) {
         int var2_int = 0;
         String var3 = null;
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           g.c();
           el.field_H = param0;
-          ve.field_b = new ja(55, 130);
+          ve.field_b = new Sprite(55, 130);
           ve.field_b.a();
           el.field_H[2].f(5, -5, param1);
           el.field_H[3].f(5, -5, 16777215);
           oo.i(4, 4, 0, 0, oo.field_b, oo.field_l);
           el.field_H[2].f(5, -5, 0);
           el.field_H[3].f(5, -5, 0);
-          oj.field_M = new ja[39];
-          fe.field_W = new ja[oj.field_M.length];
+          oj.field_M = new Sprite[39];
+          fe.field_W = new Sprite[oj.field_M.length];
           for (var2_int = 0; var2_int < oj.field_M.length; var2_int++) {
-            oj.field_M[var2_int] = new ja(200, 25);
+            oj.field_M[var2_int] = new Sprite(200, 25);
             oj.field_M[var2_int].a();
             var3 = lh.a((byte) -12, var2_int);
             pb.field_e.b(var3, 100, 17, 16777215, -1);
             fe.field_W[var2_int] = g.b(oj.field_M[var2_int]);
           }
-          dl.field_c = da.a(9, np.field_l);
-          fe.field_U = da.a(param1 ^ -16777125, mj.field_Sb);
-          mi.field_Mb = da.a(104, mq.field_o);
-          up.field_f = da.a(4, wm.field_U);
-          la.field_j = da.a(70, vc.field_a);
-          bq.field_a = da.a(-113, ej.field_k);
-          wp.field_e = da.a(100, bg.field_p);
-          bf.field_f = g.b(dl.field_c);
+          SocketConnector.field_c = InflaterDecompressor.a(9, np.field_l);
+          fe.field_U = InflaterDecompressor.a(param1 ^ -16777125, mj.field_Sb);
+          mi.field_Mb = InflaterDecompressor.a(104, mq.field_o);
+          NodeHashTableIterator.field_f = InflaterDecompressor.a(4, wm.field_U);
+          la.field_j = InflaterDecompressor.a(70, vc.field_a);
+          bq.field_a = InflaterDecompressor.a(-113, BufferedSocket.field_k);
+          wp.field_e = InflaterDecompressor.a(100, bg.field_p);
+          bf.field_f = g.b(SocketConnector.field_c);
           ap.field_t = g.b(fe.field_U);
           ii.field_c = g.b(bq.field_a);
           aq.field_u = g.b(mi.field_Mb);
           kj.field_o = g.b(la.field_j);
-          oq.field_t = g.b(up.field_f);
+          oq.field_t = g.b(NodeHashTableIterator.field_f);
           vl.field_k = g.b(wp.field_e);
           g.b();
         } catch (RuntimeException runtimeException) {

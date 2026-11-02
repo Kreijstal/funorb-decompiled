@@ -4,7 +4,7 @@
 import java.util.*;
 
 abstract class lm extends pa {
-    static ja field_fb;
+    static Sprite field_fb;
     private int[] field_ub;
     private int field_kb;
     private int field_ib;
@@ -18,7 +18,7 @@ abstract class lm extends pa {
     static cj field_gb;
     private int field_rb;
     boolean field_hb;
-    static ja field_eb;
+    static Sprite field_eb;
     private int[][] field_sb;
     private int[] field_qb;
     private int field_xb;
@@ -105,7 +105,7 @@ abstract class lm extends pa {
     }
 
     final ge a(boolean param0, int param1, int param2) {
-        br var4;
+        IntrusiveNode var4;
         int var8;
         ge var5;
         int var6;
@@ -117,7 +117,7 @@ abstract class lm extends pa {
         var4 = this.field_A.field_u.c(57);
         while (var4 instanceof ek) {
           if (!(var4 instanceof ge)) {
-            var4 = var4.field_d;
+            var4 = var4.previous;
             continue;
           }
           var5 = (ge) (var4);
@@ -130,7 +130,7 @@ abstract class lm extends pa {
               return var5;
             }
           }
-          var4 = var4.field_d;
+          var4 = var4.previous;
         }
         return null;
     }
@@ -297,12 +297,12 @@ abstract class lm extends pa {
         }
         var2 = stackIn_3_0;
         for (var3 = 0; this.field_lb > var3; var3++) {
-          L6: {
-            fn.field_a[var3] = 0;
+          regionExit1: {
+            ClientException.field_a[var3] = 0;
             if (~(-1 + this.field_lb) != ~var3 && (!this.a((byte) 108, this.field_qb[var3], this.field_ub[var3]) ||
               -1 == this.field_A.field_b.a(this.field_qb[var3], 95, this.field_ub[var3], this.g(1829947600), this.e((byte) -112)))) {
-              fn.field_a[var3] = -1;
-              break L6;
+              ClientException.field_a[var3] = -1;
+              break regionExit1;
             }
             for (var4 = this.field_C - 1; 1 + this.field_C >= var4; var4++) {
               for (var5 = this.field_B - 1; 1 + this.field_B >= var5; var5++) {
@@ -326,8 +326,8 @@ abstract class lm extends pa {
         var9 = 0;
         var4Lifetime1 = var9;
         while (this.field_lb > var9) {
-          if (fn.field_a[var9] != -1 && (var3Lifetime1 == -1 ||
-            !(fn.field_a[var3Lifetime1] > fn.field_a[var9]))) {
+          if (ClientException.field_a[var9] != -1 && (var3Lifetime1 == -1 ||
+            !(ClientException.field_a[var3Lifetime1] > ClientException.field_a[var9]))) {
             var3Lifetime1 = var9;
           }
           var9++;
@@ -340,7 +340,7 @@ abstract class lm extends pa {
 
     final void j(int param0) {
         this.a(param0, (byte) -89);
-        this.field_A.field_m.c(-112);
+        this.field_A.world.c(-112);
         super.j(18);
     }
 
@@ -357,13 +357,13 @@ abstract class lm extends pa {
         boolean stackIn_61_1 = false;
         int stackIn_65_1 = 0;
         int var2;
-        br var3;
+        IntrusiveNode var3;
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 < 30) {
           this.p(110);
         }
-        L1: {
+        regionExit1: {
           super.h(38);
           this.b((byte) 120, this.field_Q);
           if (this.field_Q == 0) {
@@ -421,7 +421,7 @@ abstract class lm extends pa {
                 this.field_R = 0;
                 this.field_W = 0;
               }
-              break L1;
+              break regionExit1;
             }
             if (this.field_Q == 1) {
               fieldTemp$2 = this.field_kb;
@@ -429,10 +429,10 @@ abstract class lm extends pa {
               if (fieldTemp$2 >= 20) {
                 this.field_kb = 0;
                 var2 = 0;
-                var3 = this.field_A.field_m.field_A.c(106);
+                var3 = this.field_A.world.field_A.c(106);
                 while (var3 instanceof bf) {
                   var2 = var2 != 0 | ((bf) (var3)).a(this, 0) ? 1 : 0;
-                  var3 = var3.field_d;
+                  var3 = var3.previous;
                 }
                 if (!this.field_wb &&
                   var2 != 0) {
@@ -451,7 +451,7 @@ abstract class lm extends pa {
                 this.a(0, (byte) -89);
                 this.l((byte) 111);
               }
-              break L1;
+              break regionExit1;
             }
             if (this.field_Q == 3) {
               fieldTemp$3 = this.field_kb;
@@ -460,7 +460,7 @@ abstract class lm extends pa {
                 this.field_kb = 0;
                 this.l((byte) 111);
               }
-              break L1;
+              break regionExit1;
             }
             if (this.field_Q == 16) {
               fieldTemp$4 = this.field_kb;
@@ -473,7 +473,7 @@ abstract class lm extends pa {
                   this.field_S = true;
                 }
               }
-              break L1;
+              break regionExit1;
             }
             if (this.field_Q != 20) {
               if (this.field_Q == 25) {
@@ -484,7 +484,7 @@ abstract class lm extends pa {
                   this.field_S = true;
                   this.field_kb = 0;
                 }
-                break L1;
+                break regionExit1;
               }
               if (this.field_Q == 30) {
                 this.h((byte) 42);
@@ -520,11 +520,11 @@ abstract class lm extends pa {
               var5_int = this.field_ub[param2] - param1.e((byte) -112);
               var6 = this.field_qb[param2] - param1.g(param3 ^ 1829947602);
               var7 = var5_int * var5_int + var6 * var6;
-              if (fn.field_a[param2] != 0 &&
-                var7 >= fn.field_a[param2]) {
+              if (ClientException.field_a[param2] != 0 &&
+                var7 >= ClientException.field_a[param2]) {
                 return;
               }
-              fn.field_a[param2] = var7;
+              ClientException.field_a[param2] = var7;
             }
           } else {
             var9 = (ge) (param1);
@@ -536,11 +536,11 @@ abstract class lm extends pa {
               var6 = this.field_ub[param2] - param1.e((byte) -112);
               var7 = this.field_qb[param2] - param1.g(1829947600);
               var8 = var6 * var6 + var7 * var7;
-              if (fn.field_a[param2] != 0 &&
-                var8 >= fn.field_a[param2]) {
+              if (ClientException.field_a[param2] != 0 &&
+                var8 >= ClientException.field_a[param2]) {
                 return;
               }
-              fn.field_a[param2] = var8;
+              ClientException.field_a[param2] = var8;
             }
           }
           return;
@@ -646,7 +646,7 @@ abstract class lm extends pa {
                     return true;
                   }
                 }
-                var13 = ((br) (var13)).field_d;
+                var13 = ((IntrusiveNode) (var13)).previous;
               }
             }
           }
@@ -674,7 +674,7 @@ abstract class lm extends pa {
         }
     }
 
-    final void a(int param0, rl param1) {
+    final void a(int param0, GameSimulation param1) {
         try {
           super.a(param0, param1);
           this.field_sb = this.field_A.field_b.field_p;

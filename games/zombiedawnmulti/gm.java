@@ -112,7 +112,7 @@ abstract class gm extends ti {
     }
 
     final void a(int param0, nm param1) {
-        ja stackIn_27_0 = null;
+        Sprite stackIn_27_0 = null;
         int stackIn_27_1 = 0;
         int stackIn_28_2 = 0;
         int stackIn_60_0 = 0;
@@ -125,7 +125,7 @@ abstract class gm extends ti {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        ja[] var7 = null;
+        Sprite[] var7 = null;
         int var8 = 0;
         int var9 = 0;
         Object var10 = null;
@@ -315,7 +315,7 @@ abstract class gm extends ti {
         boolean stackIn_50_1 = false;
         int stackIn_54_1 = 0;
         int var2;
-        br var3;
+        IntrusiveNode var3;
         int var4;
         int var2Lifetime1;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -386,7 +386,7 @@ abstract class gm extends ti {
               var3 = op.field_m.field_A.c(103);
               while (var3 instanceof cg) {
                 var2Lifetime1 = var2Lifetime1 != 0 | ((cg) (var3)).a(this, false) ? 1 : 0;
-                var3 = var3.field_d;
+                var3 = var3.previous;
               }
               if (!this.field_db &&
                 var2Lifetime1 != 0) {

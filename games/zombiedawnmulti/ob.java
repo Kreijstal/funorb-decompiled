@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends qa {
+final class ob extends DualLinkNode {
     char[] field_D;
     int[] field_x;
     boolean field_y;
@@ -34,7 +34,7 @@ final class ob extends qa {
         return var1;
     }
 
-    private final void a(int param0, k param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         char[] stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_15_2 = 0;
@@ -215,7 +215,7 @@ final class ob extends qa {
         return true;
     }
 
-    final void a(int param0, k param1) {
+    final void a(int param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = ZombieDawnMulti.field_E ? 1 : 0;
         int var3_intLifetime1;

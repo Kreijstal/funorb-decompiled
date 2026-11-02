@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qc extends qa {
+abstract class qc extends DualLinkNode {
     static ul field_s;
     boolean field_x;
     boolean field_r;
@@ -11,7 +11,7 @@ abstract class qc extends qa {
     static String field_w;
     volatile boolean field_t;
 
-    final static void a(int param0, byte param1, ja[] param2, int param3, int param4) {
+    final static void a(int param0, byte param1, Sprite[] param2, int param3, int param4) {
         RuntimeException stackIn_40_0 = null;
         StringBuilder stackIn_40_1 = null;
         String stackIn_41_2 = null;
@@ -116,18 +116,18 @@ abstract class qc extends qa {
 
     abstract byte[] e(int param0);
 
-    final static void a(br param0, br param1, int param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, int param2) {
         if (param2 != 0) {
           return;
         }
         try {
-          if (param0.field_b != null) {
-            param0.a(true);
+          if (param0.next != null) {
+            param0.unlink(true);
           }
-          param0.field_b = param1;
-          param0.field_d = param1.field_d;
-          param0.field_b.field_d = param0;
-          param0.field_d.field_b = param0;
+          param0.next = param1;
+          param0.previous = param1.previous;
+          param0.next.previous = param0;
+          param0.previous.next = param0;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "qc.O(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

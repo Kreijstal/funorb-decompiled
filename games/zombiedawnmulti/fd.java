@@ -7,7 +7,7 @@ final class fd extends id {
     static cj field_O;
     static ef field_G;
     boolean field_H;
-    static th field_M;
+    static IntrusiveDeque field_M;
     private boolean field_J;
     private int field_P;
     static java.applet.Applet field_L;
@@ -70,7 +70,7 @@ final class fd extends id {
         var7 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
           if (param0 != -10136) {
-            field_M = (th) null;
+            field_M = (IntrusiveDeque) null;
           }
           var3_int = param1.c(this.g(param0 ^ 10195), -20126);
           var4 = -24 + param1.d(this.h(param0 ^ -10230), 127);
@@ -142,7 +142,7 @@ final class fd extends id {
         qp.field_t = (byte[][]) null;
         qj.field_o = null;
         vj.field_p = null;
-        k.field_i = null;
+        PacketBuffer.field_i = null;
         if (param0 <= 124) {
           field_G = (ef) null;
         }
@@ -196,7 +196,7 @@ final class fd extends id {
                 var10 = (String) null;
                 ki.field_a = eg.a(64, ii.field_d, (String) null, false, param3);
               }
-              ma.field_a.field_j = 0;
+              ma.field_a.position = 0;
               ma.field_a.a(-94, 14);
               ma.field_a.a(126, ki.field_a.b(param0 - 7).field_d);
               cb.a(-1, false);
@@ -209,7 +209,7 @@ final class fd extends id {
             if (de.field_h == vo.field_l &&
               fa.b(10, 1)) {
               var6_int = s.field_e.g(param0 ^ 31371);
-              s.field_e.field_j = 0;
+              s.field_e.position = 0;
               if (var6_int == 0) {
                 vo.field_l = ul.field_n;
               } else {
@@ -221,7 +221,7 @@ final class fd extends id {
             if (ul.field_n == vo.field_l &&
               fa.b(10, 8)) {
               nm.field_c = s.field_e.a((byte) -30);
-              s.field_e.field_j = 0;
+              s.field_e.position = 0;
               pi.a((byte) -59, param2, param1, ki.field_a, param5);
               vo.field_l = lc.field_l;
             }
@@ -229,7 +229,7 @@ final class fd extends id {
             if (vo.field_l == lc.field_l &&
               fa.b(10, 1)) {
               var6_intLifetime1 = s.field_e.g(31365);
-              s.field_e.field_j = 0;
+              s.field_e.position = 0;
               oe.field_f = null;
               op.field_i = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
@@ -280,9 +280,9 @@ final class fd extends id {
                   s.field_e.g(param0 + 31351);
                   s.field_e.i(-1478490344);
                   vn.field_f = s.field_e.d((byte) 69);
-                  kq.field_b = new byte[vn.field_f];
+                  DelegatingCanvas.field_b = new byte[vn.field_f];
                   for (var8 = 0; var8 < vn.field_f; var8++) {
-                    kq.field_b[var8] = s.field_e.d(vg.a(param0, -249699574));
+                    DelegatingCanvas.field_b[var8] = s.field_e.d(vg.a(param0, -249699574));
                   }
                 }
               } else {
@@ -293,20 +293,20 @@ final class fd extends id {
                   s.field_e.g(param0 + 31351);
                   s.field_e.i(-1478490344);
                   vn.field_f = s.field_e.d((byte) 69);
-                  kq.field_b = new byte[vn.field_f];
+                  DelegatingCanvas.field_b = new byte[vn.field_f];
                   for (var8 = 0; var8 < vn.field_f; var8++) {
-                    kq.field_b[var8] = s.field_e.d(vg.a(param0, -249699574));
+                    DelegatingCanvas.field_b[var8] = s.field_e.d(vg.a(param0, -249699574));
                   }
                 }
               }
               ta.field_lb = s.field_e.f((byte) -48);
               var12 = (CharSequence) ((Object) ta.field_lb);
-              kf.field_k = tg.a(var12, false);
+              ProxySocketConnector.field_k = tg.a(var12, false);
               qq.field_a = s.field_e.g(31365);
               vo.field_l = pi.field_a;
               if (ki.field_a.b(7) != uq.field_b) {
                 if (ki.field_a.b(7) == pl.field_G) {
-                  l.field_c.a(-100, jl.b(0));
+                  RasterBuffer.field_c.a(-100, jl.b(0));
                 }
               } else {
                 wp.field_b.a(-108, jl.b(0));
@@ -325,7 +325,7 @@ final class fd extends id {
                 }
               } else {
                 try {
-                  fo.a(jl.b(0), "zap", (byte) 23, new Object[]{mc.a(ii.field_d, (byte) 26)});
+                  fo.a(jl.b(0), "zap", (byte) 23, new Object[]{RandomAccessCacheFile.a(ii.field_d, (byte) 26)});
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
@@ -404,7 +404,7 @@ final class fd extends id {
 
     static {
         field_F = -1;
-        field_M = new th();
+        field_M = new IntrusiveDeque();
         field_I = "You have declined the invitation.";
         field_N = "Elapsed time";
     }

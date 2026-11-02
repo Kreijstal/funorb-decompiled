@@ -8,7 +8,7 @@ final class eq {
     private qb field_i;
     static int field_g;
     private tn field_h;
-    private k field_b;
+    private PacketBuffer field_b;
     private cn[] field_f;
     private java.math.BigInteger field_a;
 
@@ -56,7 +56,7 @@ final class eq {
               stackIn_11_0 = this.field_f[param0];
               return stackIn_11_0;
             }
-            this.field_b.field_j = 6 + 72 * param0;
+            this.field_b.position = 6 + 72 * param0;
             var6_int = this.field_b.i(-1478490344);
             var7 = this.field_b.i(param2 - 1478474451);
             var14 = new byte[64];
@@ -233,7 +233,7 @@ final class eq {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        k var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -251,11 +251,11 @@ final class eq {
         if (this.field_h.field_t) {
           return false;
         }
-        var10 = new k(this.field_h.e(0));
-        var10.field_j = 5;
+        var10 = new PacketBuffer(this.field_h.e(0));
+        var10.position = 5;
         var3 = var10.g(31365);
-        var10.field_j = var10.field_j + var3 * 72;
-        var13 = new byte[var10.field_m.length - var10.field_j];
+        var10.position = var10.position + var3 * 72;
+        var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
         var10.a(0, -6351, var13.length, var13);
@@ -270,7 +270,7 @@ final class eq {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = ho.a(4246, 5, var10.field_m, -var13.length + (var10.field_j - 5));
+        var15 = ho.a(4246, 5, var10.payload, -var13.length + (var10.position - 5));
         for (var7 = 0; 64 > var7; var7++) {
           if (var15[var7] != var5[var7 + 1]) {
             throw new RuntimeException();

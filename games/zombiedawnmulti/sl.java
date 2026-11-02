@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sl extends fm {
+final class sl extends BitmapFont {
     private byte[][] field_O;
     int[][] field_P;
 

@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class on extends pm implements kh {
-    static bd field_Z;
+    static MouseInputHandler field_Z;
     private j field_ab;
     static ki[] field_bb;
     private int field_Y;
     static String field_cb;
 
-    final void a(int param0, cf param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           super.a(param0 + 0, param1, param2, param3);
           if (param0 != -5407) {
             field_cb = (String) null;
           }
-          this.field_Y = -this.field_y + bd.field_g - param2;
+          this.field_Y = -this.field_y + MouseInputHandler.field_g - param2;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "on.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -128,7 +128,7 @@ final class on extends pm implements kh {
           return null;
         }
         if (this.field_x != null) {
-          aj.a(bo.field_d, bd.field_g - this.field_Y + this.field_n, (byte) -76);
+          aj.a(bo.field_d, MouseInputHandler.field_g - this.field_Y + this.field_n, (byte) -76);
           int var2 = 30 % ((param0 - 53) / 57);
           return this.field_x;
         }
@@ -138,19 +138,19 @@ final class on extends pm implements kh {
     final static void j(byte param0) {
         ai.field_b = -1;
         if (param0 > 43) {
-          se.field_E = 0;
+          WidgetContainer.field_E = 0;
           io.field_g = false;
           w.field_m = 0;
           return;
         }
         on.a(true, true, false, true);
-        se.field_E = 0;
+        WidgetContainer.field_E = 0;
         io.field_g = false;
         w.field_m = 0;
     }
 
     static {
-        field_Z = new bd();
+        field_Z = new MouseInputHandler();
         field_cb = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
     }
 }

@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class we extends br {
-    static th field_k;
+final class we extends IntrusiveNode {
+    static IntrusiveDeque field_k;
     int field_m;
     static String[] field_n;
     static String[] field_g;
     static String field_l;
-    static ja[] field_j;
+    static Sprite[] field_j;
     static String field_i;
-    br field_h;
+    IntrusiveNode field_h;
     uj field_f;
 
     public static void a(byte param0) {
@@ -35,7 +35,7 @@ final class we extends br {
         return param2;
     }
 
-    we(uj param0, br param1) {
+    we(uj param0, IntrusiveNode param1) {
         try {
           this.field_f = param0;
           this.field_m = param0.h();
@@ -47,7 +47,7 @@ final class we extends br {
     }
 
     static {
-        field_k = new th();
+        field_k = new IntrusiveDeque();
         field_n = new String[]{null, "Or click", "Or click", "Or click", "Or click", "Or click", "Or click", "Or click"};
         field_i = "Resilient";
         field_l = "Remove <%0> from ignore list";

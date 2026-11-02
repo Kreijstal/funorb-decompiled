@@ -4,13 +4,13 @@
 import java.io.*;
 
 final class mh implements Runnable {
-    private k field_g;
+    private PacketBuffer field_g;
     private di field_b;
     private DataInputStream field_f;
     private int field_k;
     private di field_e;
-    private go field_j;
-    static th field_l;
+    private PlatformTaskDispatcher field_j;
+    static IntrusiveDeque field_l;
     private di field_d;
     static jh field_c;
     static cj field_i;
@@ -111,7 +111,7 @@ final class mh implements Runnable {
             var3.write(qo.a(var5, (byte) -116));
             this.field_f = new DataInputStream(var4.getInputStream());
           }
-          this.field_g.field_j = 0;
+          this.field_g.position = 0;
         } catch (java.io.IOException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (IOException) (Object) decompiledCaughtException;
@@ -152,16 +152,16 @@ final class mh implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = ZombieDawnMulti.field_E ? 1 : 0;
           try {
-            while (this.field_g.field_j < this.field_g.field_m.length) {
-              var1_int = this.field_f.read(this.field_g.field_m, this.field_g.field_j, this.field_g.field_m.length - this.field_g.field_j);
+            while (this.field_g.position < this.field_g.payload.length) {
+              var1_int = this.field_f.read(this.field_g.payload, this.field_g.position, this.field_g.payload.length - this.field_g.position);
               if (var1_int >= 0) {
-                this.field_g.field_j = this.field_g.field_j + var1_int;
+                this.field_g.position = this.field_g.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_g.field_j == this.field_g.field_m.length) {
-              throw mh.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.field_m.length + " " + this.field_a));
+            if (this.field_g.position == this.field_g.payload.length) {
+              throw mh.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_g.payload.length + " " + this.field_a));
             }
             var1 = this;
             synchronized (var1) {
@@ -192,7 +192,7 @@ final class mh implements Runnable {
         vl var1Lifetime1;
         ga var2Lifetime1;
         if (param0 != 0) {
-          field_l = (th) null;
+          field_l = (IntrusiveDeque) null;
           var1 = (vl) (lf.field_e.c(param0 + 69));
           if (var1 == null) {
             ak.a((byte) -112);
@@ -203,7 +203,7 @@ final class mh implements Runnable {
           var2.i(-1478490344);
           var2.i(-1478490344);
           var2.i(-1478490344);
-          var1.a(true);
+          var1.unlink(true);
           return;
         }
         var1Lifetime1 = (vl) (lf.field_e.c(param0 + 69));
@@ -216,10 +216,10 @@ final class mh implements Runnable {
         var2Lifetime1.i(-1478490344);
         var2Lifetime1.i(-1478490344);
         var2Lifetime1.i(-1478490344);
-        var1Lifetime1.a(true);
+        var1Lifetime1.unlink(true);
     }
 
-    final k a(byte param0) {
+    final PacketBuffer a(byte param0) {
         if (param0 != 21) {
           field_i = (cj) null;
           if (3 == this.field_k) {
@@ -245,18 +245,18 @@ final class mh implements Runnable {
         field_i = null;
     }
 
-    mh(go param0, java.net.URL param1, int param2) {
+    mh(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_a = param1;
           this.field_j = param0;
-          this.field_g = new k(param2);
+          this.field_g = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     static {
-        field_l = new th();
+        field_l = new IntrusiveDeque();
     }
 
     @SuppressWarnings("unchecked")

@@ -4,7 +4,7 @@
 class pm extends gn {
     private long field_T;
     static String field_P;
-    static k field_R;
+    static PacketBuffer field_R;
     private int field_O;
     static int field_Q;
     private boolean field_U;
@@ -15,7 +15,7 @@ class pm extends gn {
     private int field_S;
     static ri field_N;
 
-    final boolean a(int param0, char param1, cf param2, int param3) {
+    final boolean a(int param0, char param1, UiWidget param2, int param3) {
         int dupTemp$0 = 0;
         boolean stackIn_26_1 = false;
         int stackIn_27_2 = 0;
@@ -164,7 +164,7 @@ class pm extends gn {
 
     private final void i(byte param0) {
         if (param0 != -60) {
-          field_R = (k) null;
+          field_R = (PacketBuffer) null;
         }
         String var2 = this.k(-112);
         if (var2.length() > 0) {
@@ -172,7 +172,7 @@ class pm extends gn {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, cf param3, int param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         boolean stackIn_4_1 = false;
         int stackIn_5_2 = 0;
         boolean stackIn_8_1 = false;
@@ -186,7 +186,7 @@ class pm extends gn {
         try {
           if (super.a(param0, param1, param2, param3, param4, param5, param6) &&
             this.field_h instanceof rk) {
-            var8_int = ((rk) ((Object) this.field_h)).b(param5, param6, bd.field_g, bo.field_d, 98, (cf) (this));
+            var8_int = ((rk) ((Object) this.field_h)).b(param5, param6, MouseInputHandler.field_g, bo.field_d, 98, (UiWidget) (this));
             stackIn_4_1 = false;
             if (-1 == var8_int) {
               stackIn_5_2 = 0;
@@ -263,15 +263,15 @@ class pm extends gn {
         }
         if (null != this.field_h &&
           0 == param2) {
-          this.field_h.a(this.field_F, param1, -15112, param3, (cf) (this));
+          this.field_h.a(this.field_F, param1, -15112, param3, (UiWidget) (this));
           if (this.field_h instanceof rk) {
             var8 = (rk) ((Object) this.field_h);
             if (this.field_S != this.field_O) {
-              var8.a(this.field_S, param1, this.field_O, param3, param0 ^ -93, (cf) (this));
+              var8.a(this.field_S, param1, this.field_O, param3, param0 ^ -93, (UiWidget) (this));
             }
             var6 = bl.a((byte) 56);
             if (500L > (-this.field_T + var6) % 1000L) {
-              var8.a((cf) (this), (byte) 2, param3, this.field_O, param1);
+              var8.a((UiWidget) (this), (byte) 2, param3, this.field_O, param1);
             }
           }
         }
@@ -311,12 +311,12 @@ class pm extends gn {
           return;
         }
         var9 = (rk) ((Object) this.field_h);
-        var3 = var9.a((cf) (this), -112);
+        var3 = var9.a((UiWidget) (this), -112);
         if (param0 >= -60) {
           this.field_W = -107;
         }
         var4 = var3.b(101);
-        var5 = var9.a((cf) (this), true);
+        var5 = var9.a((UiWidget) (this), true);
         var6 = var9.a(0) >> 1;
         if (var4 < var5 - var6) {
           this.field_z = 0;
@@ -390,7 +390,7 @@ class pm extends gn {
         }
     }
 
-    void a(int param0, cf param1, int param2, int param3) {
+    void a(int param0, UiWidget param1, int param2, int param3) {
         rk var5 = null;
         int var6 = 0;
         try {
@@ -399,7 +399,7 @@ class pm extends gn {
           if (1 == this.field_u) {
             if (this.field_h instanceof rk) {
               var5 = (rk) ((Object) this.field_h);
-              var6 = var5.b(param2, param3, bd.field_g, bo.field_d, 98, (cf) (this));
+              var6 = var5.b(param2, param3, MouseInputHandler.field_g, bo.field_d, 98, (UiWidget) (this));
               if (var6 != -1) {
                 if (this.field_M &&
                   var6 < this.field_V &&
@@ -521,7 +521,7 @@ class pm extends gn {
             return null;
           }
           if (param4 != -29435) {
-            field_R = (k) null;
+            field_R = (PacketBuffer) null;
           }
           stackIn_6_0 = me.a(param0.a(param2, true, param1), true);
           return stackIn_6_0;
@@ -598,6 +598,6 @@ class pm extends gn {
 
     static {
         field_P = null;
-        field_R = new k(256);
+        field_R = new PacketBuffer(256);
     }
 }

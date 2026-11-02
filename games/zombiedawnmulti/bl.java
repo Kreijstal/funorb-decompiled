@@ -26,14 +26,14 @@ final class bl {
         if (param0 >= -38) {
           return -76;
         }
-        return mc.field_e - ch.field_i;
+        return RandomAccessCacheFile.field_e - IntrusiveDequeCursor.field_i;
     }
 
-    final static ja a(byte param0, int param1, ul param2, int param3) {
+    final static Sprite a(byte param0, int param1, ul param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        ja stackIn_5_0 = null;
-        ja stackIn_7_0 = null;
+        Sprite stackIn_5_0 = null;
+        Sprite stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -41,13 +41,13 @@ final class bl {
         try {
           if (!ud.a(param1, param2, param3, (byte) -42)) {
             stackIn_2_0 = null;
-            return (ja) (stackIn_2_0);
+            return (Sprite) (stackIn_2_0);
           }
           if (param0 == 50) {
             stackIn_7_0 = gl.a(15);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (ja) null;
+          stackIn_5_0 = (Sprite) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -114,7 +114,7 @@ final class bl {
             pp.field_n = false;
           }
           if (cg.field_l) {
-            var9 = k.field_n;
+            var9 = PacketBuffer.field_n;
             var7 = var9;
             var4 = var7;
             var1 = var4;
@@ -133,11 +133,11 @@ final class bl {
             }
             cg.field_l = false;
           }
-          if (ch.field_k) {
+          if (IntrusiveDequeCursor.field_k) {
             ld.j(param0 + 1481707577);
             wc.i(-28264);
-            cf.d(-8328);
-            ch.field_k = false;
+            UiWidget.d(-8328);
+            IntrusiveDequeCursor.field_k = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -3,7 +3,7 @@
  */
 final class rm {
     static StringBuilder field_a;
-    static gp field_b;
+    static PcmPlayerService field_b;
 
     public static void a(int param0) {
         field_a = null;

@@ -3,7 +3,7 @@
  */
 final class q {
     static String[] field_a;
-    static ja field_c;
+    static Sprite field_c;
     static boolean field_b;
     static boolean field_e;
     static int field_d;

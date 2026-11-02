@@ -5,16 +5,16 @@ final class m extends tb {
     static cj field_B;
     static cj field_x;
     static String field_A;
-    static fm field_C;
+    static BitmapFont field_C;
     static int field_z;
     static int field_y;
-    static ja field_w;
+    static Sprite field_w;
 
     final static void a(boolean param0, int param1, int param2) {
         int var3;
         Object var4;
         Object var5;
-        go var6;
+        PlatformTaskDispatcher var6;
         String var7;
         CharSequence var8;
         CharSequence var9;
@@ -79,8 +79,8 @@ final class m extends tb {
           ic.field_e = -1;
           return;
         }
-        var6 = (go) null;
-        m.a(-30, (go) null, 112, 17, -89, 48);
+        var6 = (PlatformTaskDispatcher) null;
+        m.a(-30, (PlatformTaskDispatcher) null, 112, 17, -89, 48);
         if (gi.field_i == null) {
           return;
         }
@@ -126,13 +126,13 @@ final class m extends tb {
         return;
     }
 
-    private m(fm param0, int param1) {
+    private m(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
-    final String d(cf param0, int param1) {
+    final String d(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        go var4 = null;
+        PlatformTaskDispatcher var4 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -140,8 +140,8 @@ final class m extends tb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -9327) {
-            var4 = (go) null;
-            m.a(-33, (go) null, 73, 31, -76, 61);
+            var4 = (PlatformTaskDispatcher) null;
+            m.a(-33, (PlatformTaskDispatcher) null, 73, 31, -76, 61);
           }
           stackIn_3_0 = hg.a(40, '*', param0.field_j.length());
           return stackIn_3_0;
@@ -185,7 +185,7 @@ final class m extends tb {
         }
     }
 
-    final static java.awt.Frame a(int param0, go param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_25_0 = null;
         Object stackIn_33_0 = null;
@@ -268,6 +268,6 @@ final class m extends tb {
 
     static {
         field_A = "Waiting for music";
-        field_w = new ja(540, 140);
+        field_w = new Sprite(540, 140);
     }
 }

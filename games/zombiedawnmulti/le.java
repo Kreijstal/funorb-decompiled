@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class le extends cf {
+final class le extends UiWidget {
     static String field_I;
     int field_B;
     private int field_N;
     private int field_D;
     private int field_J;
     private int field_H;
-    private ja field_C;
+    private Sprite field_C;
     private int field_K;
     private int field_E;
-    private ja field_O;
+    private Sprite field_O;
     boolean field_L;
     static String[] field_P;
     static String field_G;
-    private ja field_M;
-    private ja[] field_F;
+    private Sprite field_M;
+    private Sprite[] field_F;
 
     final static int a(int param0, byte param1) {
         int var2;
@@ -85,7 +85,7 @@ final class le extends cf {
         return (1 << param0 & pb.field_d) != 0 ? true : false;
     }
 
-    private final ja b(int param0, int param1, int param2) {
+    private final Sprite b(int param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -94,12 +94,12 @@ final class le extends cf {
         int var11 = 0;
         int var12 = 0;
         int var13 = ZombieDawnMulti.field_E ? 1 : 0;
-        ja var14 = new ja(2 * this.field_D, this.field_w);
+        Sprite var14 = new Sprite(2 * this.field_D, this.field_w);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         if (param0 != -16711936) {
-          return (ja) null;
+          return (Sprite) null;
         }
         r.a(0, var14);
         int var5 = this.field_w >> 1;
@@ -122,14 +122,14 @@ final class le extends cf {
         return var14;
     }
 
-    private final ja g(int param0) {
+    private final Sprite g(int param0) {
         int var4 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var5 = 0;
         int var9 = ZombieDawnMulti.field_E ? 1 : 0;
         int var2 = this.field_w >> 1;
-        ja var3 = new ja(var2, this.field_w);
+        Sprite var3 = new Sprite(var2, this.field_w);
         int var5Lifetime1;
         r.a(0, var3);
         for (var4 = 0; var4 < this.field_w; var4++) {
@@ -162,7 +162,7 @@ final class le extends cf {
         this.f(-506198655);
     }
 
-    final void a(int param0, cf param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -223,7 +223,7 @@ final class le extends cf {
         this.f(-506198655);
     }
 
-    private final void a(byte param0, ja param1, int param2, int param3) {
+    private final void a(byte param0, Sprite param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -239,12 +239,12 @@ final class le extends cf {
           if (param0 != 116) {
             this.field_N = -99;
           }
-          nm.a(param2 + this.field_M.field_x, this.field_w + param3, (byte) 105, -this.field_M.field_x + var5_int, param3);
-          for (var6 = param2 - this.field_J; var6 < var5_int; var6 = var6 + param1.field_x) {
+          nm.a(param2 + this.field_M.width, this.field_w + param3, (byte) 105, -this.field_M.width + var5_int, param3);
+          for (var6 = param2 - this.field_J; var6 < var5_int; var6 = var6 + param1.width) {
             param1.g(var6, param3);
           }
           ql.a(true);
-          if (oo.field_f <= this.field_M.field_x + param2) {
+          if (oo.field_f <= this.field_M.width + param2) {
             r.a(0, this.field_C);
             param1.g(-this.field_J, 0);
             param1.g(this.field_D * 2 - this.field_J, 0);
@@ -252,15 +252,15 @@ final class le extends cf {
             ql.a(true);
             this.field_C.g(param2, param3);
           }
-          if (oo.field_g >= -this.field_M.field_x + var5_int) {
+          if (oo.field_g >= -this.field_M.width + var5_int) {
             r.a(0, this.field_C);
-            for (var7 = -this.field_M.field_x + this.field_n + this.field_J; this.field_D * 2 < var7; var7 = var7 - 2 * this.field_D) {
+            for (var7 = -this.field_M.width + this.field_n + this.field_J; this.field_D * 2 < var7; var7 = var7 - 2 * this.field_D) {
             }
             param1.g(-var7, 0);
             param1.g(2 * this.field_D - var7, 0);
             this.field_M.e(0, 0);
             ql.a(true);
-            this.field_C.g(var5_int - this.field_M.field_x, param3);
+            this.field_C.g(var5_int - this.field_M.width, param3);
             return;
           }
           return;
@@ -288,10 +288,10 @@ final class le extends cf {
     }
 
     private final void f(int param0) {
-        this.field_F = new ja[]{this.b(param0 + 489486719, this.field_N, this.field_E), this.b(-16711936, this.field_K, this.field_H)};
+        this.field_F = new Sprite[]{this.b(param0 + 489486719, this.field_N, this.field_E), this.b(-16711936, this.field_K, this.field_H)};
         this.field_M = this.g(param0 ^ -506198544);
         this.field_O = this.field_M.f();
-        this.field_C = new ja(this.field_w >> 1, this.field_w);
+        this.field_C = new Sprite(this.field_w >> 1, this.field_w);
         if (param0 != -506198655) {
           this.b(-93, 112, 105, 48, -63);
         }

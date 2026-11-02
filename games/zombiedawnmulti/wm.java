@@ -70,14 +70,14 @@ final class wm extends gn {
             }
             var8 = null;
             if (hc.field_b != null) {
-              if (rl.field_r == null) {
-                rl.field_r = new of[p.field_a.field_t.length];
+              if (GameSimulation.field_r == null) {
+                GameSimulation.field_r = new of[p.field_a.field_t.length];
               }
-              if (rl.field_r[param0] == null) {
-                rl.field_r[param0] = new of(p.field_a.field_t[param0], 12000, 0);
+              if (GameSimulation.field_r[param0] == null) {
+                GameSimulation.field_r[param0] = new of(p.field_a.field_t[param0], 12000, 0);
                 p.field_a.field_t[param0] = null;
               }
-              var8 = new bq(param0, hc.field_b, rl.field_r[param0], 2097152);
+              var8 = new bq(param0, hc.field_b, GameSimulation.field_r[param0], 2097152);
             }
             var9 = tj.field_a.a(param0, (bq) (var7), -15893, (bq) (var8), param3);
             if (param5) {
@@ -135,7 +135,7 @@ final class wm extends gn {
         return this.field_R.a((byte) 105, param0);
     }
 
-    final boolean a(int param0, int param1, int param2, cf param3, int param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, UiWidget param3, int param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;

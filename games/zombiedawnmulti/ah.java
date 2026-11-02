@@ -87,7 +87,7 @@ final class ah {
                 }
                 var2 = pc.a("login_gameupdated", (byte) 83);
                 if (var2 != null) {
-                  bd.field_a = qe.a(-2739, var2);
+                  MouseInputHandler.field_a = qe.a(-2739, var2);
                 }
                 var2 = pc.a("create_unable", (byte) 83);
                 if (null != var2) {
@@ -163,7 +163,7 @@ final class ah {
                 }
                 var2 = pc.a("mu_chat_game", (byte) 83);
                 if (null != var2) {
-                  l.field_d = qe.a(-2739, var2);
+                  RasterBuffer.field_d = qe.a(-2739, var2);
                 }
                 var2 = pc.a("mu_chat_private", (byte) 83);
                 if (var2 != null) {
@@ -226,7 +226,7 @@ final class ah {
                   finished = true; return;
                 }
                 if (null != var2) {
-                  kb.field_w = qe.a(-2739, var2);
+                  GameWorld.field_w = qe.a(-2739, var2);
                 }
                 var2 = pc.a("mu_you_declined_invite", (byte) 83);
                 if (null != var2) {
@@ -250,7 +250,7 @@ final class ah {
                 }
                 var2 = pc.a("mu_lobby_name", (byte) 83);
                 if (null != var2) {
-                  qd.field_r = qe.a(-2739, var2);
+                  GameScreen.field_r = qe.a(-2739, var2);
                 }
                 var2 = pc.a("mu_lobby_rating", (byte) 83);
                 if (var2 != null) {
@@ -286,7 +286,7 @@ final class ah {
                 }
                 var2 = pc.a("mu_gamelist_owner", (byte) 83);
                 if (null != var2) {
-                  kb.field_p = qe.a(-2739, var2);
+                  GameWorld.field_p = qe.a(-2739, var2);
                 }
                 var2 = pc.a("mu_gamelist_players", (byte) 83);
                 if (null != var2) {
@@ -354,7 +354,7 @@ final class ah {
                 }
                 var2 = pc.a("add_x_to_friends", (byte) 83);
                 if (var2 != null) {
-                  th.field_e = qe.a(-2739, var2);
+                  IntrusiveDeque.field_e = qe.a(-2739, var2);
                 }
                 var2 = pc.a("add_x_to_ignore", (byte) 83);
                 if (null != var2) {
@@ -430,7 +430,7 @@ final class ah {
                 }
                 var2 = pc.a("unable_to_send_message_password_b", (byte) 83);
                 if (var2 != null) {
-                  o.field_l = qe.a(-2739, var2);
+                  IsaacRandom.field_l = qe.a(-2739, var2);
                 }
                 var2 = pc.a("mu_chat_lobby_show_all", (byte) 83);
                 if (null != var2) {
@@ -502,7 +502,7 @@ final class ah {
                 }
                 var2 = pc.a("rated_game_tips", (byte) 83);
                 if (var2 != null) {
-                  qd.field_K = qe.a(-2739, var2);
+                  GameScreen.field_K = qe.a(-2739, var2);
                 }
                 var2 = pc.a("searching_for_opponent_singular", (byte) 83);
                 if (null != var2) {
@@ -514,7 +514,7 @@ final class ah {
                 }
                 var2 = pc.a("find_opponent_singular", (byte) 83);
                 if (var2 != null) {
-                  qa.field_n = qe.a(-2739, var2);
+                  DualLinkNode.field_n = qe.a(-2739, var2);
                 }
                 var2 = pc.a("find_opponents_plural", (byte) 83);
                 if (null != var2) {
@@ -522,7 +522,7 @@ final class ah {
                 }
                 var2 = pc.a("rated_game_tips_setup_singular", (byte) 83);
                 if (var2 != null) {
-                  dq.field_i = qe.a(-2739, var2);
+                  ImageProducerRasterBuffer.field_i = qe.a(-2739, var2);
                 }
                 var2 = pc.a("rated_game_tips_setup_plural", (byte) 83);
                 if (null != var2) {
@@ -534,7 +534,7 @@ final class ah {
                 }
                 var2 = pc.a("your_game", (byte) 83);
                 if (null != var2) {
-                  fn.field_l = qe.a(-2739, var2);
+                  ClientException.field_l = qe.a(-2739, var2);
                 }
                 var2 = pc.a("game_full", (byte) 83);
                 if (null != var2) {
@@ -666,7 +666,7 @@ final class ah {
                 }
                 var2 = pc.a("you_can_not_spectate", (byte) 83);
                 if (null != var2) {
-                  qd.field_E = qe.a(-2739, var2);
+                  GameScreen.field_E = qe.a(-2739, var2);
                 }
                 var2 = pc.a("spectate_xs_game", (byte) 83);
                 if (var2 != null) {
@@ -674,7 +674,7 @@ final class ah {
                 }
                 var2 = pc.a("hide_players_in_xs_game", (byte) 83);
                 if (null != var2) {
-                  ag.field_g = qe.a(-2739, var2);
+                  GameApplet.field_g = qe.a(-2739, var2);
                 }
                 var2 = pc.a("show_players_in_xs_game", (byte) 83);
                 if (var2 != null) {
@@ -718,7 +718,7 @@ final class ah {
                 }
                 var2 = pc.a("reportabuse", (byte) 83);
                 if (null != var2) {
-                  ln.field_c = qe.a(-2739, var2);
+                  SecondaryNodeDequeIterator.field_c = qe.a(-2739, var2);
                 }
                 var2 = pc.a("presstabtochat", (byte) 83);
                 if (null != var2) {
@@ -726,7 +726,7 @@ final class ah {
                 }
                 var2 = pc.a("pressf10toquickchat", (byte) 83);
                 if (null != var2) {
-                  qd.field_v = qe.a(-2739, var2);
+                  GameScreen.field_v = qe.a(-2739, var2);
                 }
                 var2 = pc.a("dob_chatdisabled", (byte) 83);
                 if (null != var2) {
@@ -734,7 +734,7 @@ final class ah {
                 }
                 var2 = pc.a("dob_enterforchat", (byte) 83);
                 if (var2 != null) {
-                  qa.field_m = qe.a(-2739, var2);
+                  DualLinkNode.field_m = qe.a(-2739, var2);
                 }
                 var2 = pc.a("tab_hidechattemporarily", (byte) 83);
                 if (null != var2) {
@@ -774,7 +774,7 @@ final class ah {
                 }
                 var2 = pc.a("chatviewscrolledup", (byte) 83);
                 if (null != var2) {
-                  ch.field_a = qe.a(-2739, var2);
+                  IntrusiveDequeCursor.field_a = qe.a(-2739, var2);
                 }
                 var2 = pc.a("thisisrunescapeclan", (byte) 83);
                 if (null != var2) {
@@ -822,7 +822,7 @@ final class ah {
                 }
                 var2 = pc.a("gameopt_cannotbecombined2", (byte) 83);
                 if (var2 != null) {
-                  kb.field_q = qe.a(-2739, var2);
+                  GameWorld.field_q = qe.a(-2739, var2);
                 }
                 var2 = pc.a("gameopt_playernotmember", (byte) 83);
                 if (null != var2) {
@@ -870,7 +870,7 @@ final class ah {
                 }
                 var2 = pc.a("gameopt_trychanging2", (byte) 83);
                 if (var2 != null) {
-                  mc.field_b = qe.a(-2739, var2);
+                  RandomAccessCacheFile.field_b = qe.a(-2739, var2);
                 }
                 var2 = pc.a("gameopt_needchanging1", (byte) 83);
                 if (null != var2) {
@@ -924,7 +924,7 @@ final class ah {
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  fn.field_g = qe.a(-2739, var2);
+                  ClientException.field_g = qe.a(-2739, var2);
                 }
                 var2 = pc.a("ra_title", (byte) 83);
                 if (null != var2) {
@@ -1000,7 +1000,7 @@ final class ah {
                 }
                 var2 = pc.a("rule_1_4", (byte) 83);
                 if (var2 != null) {
-                  rl.field_c = qe.a(-2739, var2);
+                  GameSimulation.field_c = qe.a(-2739, var2);
                 }
                 var2 = pc.a("rule_pillar_2", (byte) 83);
                 if (var2 != null) {
@@ -1036,7 +1036,7 @@ final class ah {
                 }
                 var2 = pc.a("pleaselogin_member", (byte) 83);
                 if (null != var2) {
-                  ej.field_o = qe.a(-2739, var2);
+                  BufferedSocket.field_o = qe.a(-2739, var2);
                 }
                 var2 = pc.a("invaliduserorpass", (byte) 83);
                 if (var2 != null) {
@@ -1424,11 +1424,11 @@ final class ah {
                 }
                 var2 = pc.a("create_password_confirm", (byte) 83);
                 if (var2 != null) {
-                  bd.field_b = qe.a(-2739, var2);
+                  MouseInputHandler.field_b = qe.a(-2739, var2);
                 }
                 var2 = pc.a("create_email", (byte) 83);
                 if (var2 != null) {
-                  da.field_i = qe.a(-2739, var2);
+                  InflaterDecompressor.field_i = qe.a(-2739, var2);
                 }
                 var2 = pc.a("create_email_confirm", (byte) 83);
                 if (var2 != null) {
@@ -1560,11 +1560,11 @@ final class ah {
                 }
                 var2 = pc.a("create_email_confirm_tooltip", (byte) 83);
                 if (var2 != null) {
-                  o.field_d = qe.a(-2739, var2);
+                  IsaacRandom.field_d = qe.a(-2739, var2);
                 }
                 var2 = pc.a("create_age_tooltip", (byte) 83);
                 if (null != var2) {
-                  dl.field_g = qe.a(-2739, var2);
+                  SocketConnector.field_g = qe.a(-2739, var2);
                 }
                 var2 = pc.a("create_optin_news_tooltip", (byte) 83);
                 if (var2 != null) {
@@ -1612,7 +1612,7 @@ final class ah {
                 }
                 var2 = pc.a("create_alert_nameleadingspace", (byte) 83);
                 if (null != var2) {
-                  th.field_a = qe.a(-2739, var2);
+                  IntrusiveDeque.field_a = qe.a(-2739, var2);
                 }
                 var2 = pc.a("create_alert_doublespace", (byte) 83);
                 if (null != var2) {
@@ -1680,7 +1680,7 @@ final class ah {
                 }
                 var2 = pc.a("create_account_success", (byte) 83);
                 if (null != var2) {
-                  qa.field_g = qe.a(-2739, var2);
+                  DualLinkNode.field_g = qe.a(-2739, var2);
                 }
                 var2 = pc.a("invalid_name", (byte) 83);
                 if (var2 != null) {
@@ -1700,7 +1700,7 @@ final class ah {
                 }
                 var2 = pc.a("unable_to_delete_friend", (byte) 83);
                 if (null != var2) {
-                  cf.field_p = qe.a(-2739, var2);
+                  UiWidget.field_p = qe.a(-2739, var2);
                 }
                 var2 = pc.a("unable_to_delete_ignore", (byte) 83);
                 if (null != var2) {
@@ -1720,7 +1720,7 @@ final class ah {
                 }
                 var2 = pc.a("ignorelistfull", (byte) 83);
                 if (var2 != null) {
-                  th.field_c = qe.a(-2739, var2);
+                  IntrusiveDeque.field_c = qe.a(-2739, var2);
                 }
                 var2 = pc.a("ignorelistdupe", (byte) 83);
                 if (var2 != null) {
@@ -1728,7 +1728,7 @@ final class ah {
                 }
                 var2 = pc.a("ignorenotfound", (byte) 83);
                 if (var2 != null) {
-                  mf.field_a = qe.a(-2739, var2);
+                  MouseWheelInput.field_a = qe.a(-2739, var2);
                 }
                 var2 = pc.a("removeignorefirst", (byte) 83);
                 if (null != var2) {
@@ -1756,7 +1756,7 @@ final class ah {
                 }
                 var2 = pc.a("text_removed_from_game", (byte) 83);
                 if (var2 != null) {
-                  qd.field_V = qe.a(-2739, var2);
+                  GameScreen.field_V = qe.a(-2739, var2);
                 }
                 var2 = pc.a("text_lobby_pleaselogin_free", (byte) 83);
                 if (var2 != null) {
@@ -1962,7 +1962,7 @@ final class ah {
                 }
                 var2 = pc.a("returntomainmenu", (byte) 83);
                 if (null != var2) {
-                  e.field_b = qe.a(-2739, var2);
+                  SecondaryNodeDeque.field_b = qe.a(-2739, var2);
                 }
                 var2 = pc.a("returntopausemenu", (byte) 83);
                 if (var2 != null) {
@@ -2102,7 +2102,7 @@ final class ah {
                 }
                 var2 = pc.a("resign", (byte) 83);
                 if (var2 != null) {
-                  kb.field_B = qe.a(-2739, var2);
+                  GameWorld.field_B = qe.a(-2739, var2);
                 }
                 var2 = pc.a("returntolobby", (byte) 83);
                 if (var2 != null) {
@@ -2474,7 +2474,7 @@ final class ah {
                 }
                 var2 = pc.a("click_to_quickchat", (byte) 83);
                 if (null != var2) {
-                  cf.field_v = qe.a(-2739, var2);
+                  UiWidget.field_v = qe.a(-2739, var2);
                 }
                 var2 = pc.a("autorespond", (byte) 83);
                 if (var2 != null) {
@@ -2486,7 +2486,7 @@ final class ah {
                 }
                 var2 = pc.a("quickchat_help_title", (byte) 83);
                 if (null != var2) {
-                  qa.field_j = qe.a(-2739, var2);
+                  DualLinkNode.field_j = qe.a(-2739, var2);
                 }
                 var2 = pc.a("quickchat_shortcut_help,0", (byte) 83);
                 if (null != var2) {
@@ -2542,7 +2542,7 @@ final class ah {
                 }
                 var2 = pc.a("rating_noratings", (byte) 83);
                 if (var2 != null) {
-                  gb.field_d = qe.a(-2739, var2);
+                  GameKeyHandler.field_d = qe.a(-2739, var2);
                 }
                 var2 = pc.a("rating_rating", (byte) 83);
                 if (null != var2) {
@@ -2840,7 +2840,7 @@ final class ah {
                 }
                 var2 = pc.a("serviceunavailable", (byte) 83);
                 if (var2 != null) {
-                  hk.field_g = qe.a(-2739, var2);
+                  PlayerLoadout.field_g = qe.a(-2739, var2);
                 }
                 var2 = pc.a("createtouse", (byte) 83);
                 if (var2 != null) {
@@ -3129,7 +3129,7 @@ final class ah {
                 if (var4 == 0) {
                   if (stackIn_24_0) {
                     var2_intLifetime1++;
-                    if (ll.field_k.c(param0 + 213, var3)) {
+                    if (FullscreenFocusCanvas.field_k.c(param0 + 213, var3)) {
                       fieldTemp$1 = lm.field_pb;
                       lm.field_pb = lm.field_pb + 1;
                       gn.field_I[fieldTemp$1] = var2_intLifetime1;

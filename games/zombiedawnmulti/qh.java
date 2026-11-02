@@ -18,10 +18,10 @@ final class qh {
           var7 = 5;
           this.field_c.a(9736, param0, param1, var7, var6, param4, param2);
           dp.field_b.a(jk.field_f, 0, pa.field_O.field_zb, 0, -3344);
-          bi.field_f.a(18, 2 + jk.field_f, -80 + pa.field_O.field_zb - qa.field_o - 4, 0, -3344);
-          jb.field_c.a(18, jk.field_f + 2, qa.field_o + 82, -80 + (pa.field_O.field_zb - (qa.field_o + 2)), param3 ^ 3398);
-          eg.field_B.a(param3 + 74, qa.field_o, pa.field_O.field_z + (-jk.field_f - 22), pa.field_O.field_zb, 2, 0, 2 + (jk.field_f + 20), 20);
-          gl.field_L.a(2, (byte) 123, qa.field_o, 20);
+          bi.field_f.a(18, 2 + jk.field_f, -80 + pa.field_O.field_zb - DualLinkNode.field_o - 4, 0, -3344);
+          jb.field_c.a(18, jk.field_f + 2, DualLinkNode.field_o + 82, -80 + (pa.field_O.field_zb - (DualLinkNode.field_o + 2)), param3 ^ 3398);
+          eg.field_B.a(param3 + 74, DualLinkNode.field_o, pa.field_O.field_z + (-jk.field_f - 22), pa.field_O.field_zb, 2, 0, 2 + (jk.field_f + 20), 20);
+          gl.field_L.a(2, (byte) 123, DualLinkNode.field_o, 20);
           return;
         }
     }
@@ -49,7 +49,7 @@ final class qh {
             em.field_X.a(param4 + 22, param3 + 77, 150 + (on.a(wf.field_m * 128, -18924) >> 11), 65535);
           }
           if (hh.field_h == null) {
-            hh.field_h = new ja(12, 32);
+            hh.field_h = new Sprite(12, 32);
             g.c(hh.field_h);
             oo.a(0, 0, 12, 16, 65280, 16776960);
             oo.a(0, 16, 12, 17, 16776960, 16711680);
@@ -62,7 +62,7 @@ final class qh {
           var9 = var7 * 31 / var8;
           oo.f(param4 + 80, param3 + 36, 12, 31 - var9, 1, param5);
           wa.field_b[-44 + param0 + 26].c(18 + param4, param3 + 44, param5);
-          ((fm) ((Object) var6)).a(gh.field_f[param0], param4 + 4, -7 + param3, 54, 90, 16777215, 1, param5, 1, 1, ((fm) ((Object) var6)).field_C + ((fm) ((Object) var6)).field_r);
+          ((BitmapFont) ((Object) var6)).a(gh.field_f[param0], param4 + 4, -7 + param3, 54, 90, 16777215, 1, param5, 1, 1, ((BitmapFont) ((Object) var6)).field_C + ((BitmapFont) ((Object) var6)).field_r);
           var10 = new Random();
           if (var7 >= var8) {
             if (hp.a((byte) -98, var10, 7) != 0) {
@@ -102,7 +102,7 @@ final class qh {
         try {
           var3 = new String[]{param0, of.field_p, tm.field_e};
           var4 = new cj[]{param1, pa.field_O, (cj) ((Object) gl.field_L)};
-          this.field_c = new dc(0L, kf.field_i, var3, aa.field_l, var4, 0);
+          this.field_c = new dc(0L, ProxySocketConnector.field_i, var3, aa.field_l, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

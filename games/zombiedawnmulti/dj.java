@@ -65,7 +65,7 @@ final class dj extends gf implements fi, qg {
             stackIn_6_0 = jq.field_b;
             return stackIn_6_0;
           }
-          if (!dq.a((byte) -82, var3, var2_int, var4)) {
+          if (!ImageProducerRasterBuffer.a((byte) -82, var3, var2_int, var4)) {
             stackIn_10_0 = jq.field_b;
             return stackIn_10_0;
           }
@@ -107,7 +107,7 @@ final class dj extends gf implements fi, qg {
           var5 = oa.b((byte) -44);
           if (var4 >= 1890 &&
             var4 <= var5 - 3) {
-            if (dq.a((byte) -65, var3, var2_int, var4)) {
+            if (ImageProducerRasterBuffer.a((byte) -65, var3, var2_int, var4)) {
               stackIn_9_0 = null;
               return (String) (stackIn_9_0);
             }

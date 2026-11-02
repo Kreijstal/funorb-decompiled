@@ -26,10 +26,10 @@ final class uk extends gn {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        ja var15 = null;
-        ja var18 = null;
-        ja var12 = null;
-        ja var21 = null;
+        Sprite var15 = null;
+        Sprite var18 = null;
+        Sprite var12 = null;
+        Sprite var21 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -44,82 +44,82 @@ final class uk extends gn {
         re var8 = this.field_P.d(80);
         if (var8 == h.field_H) {
           var15 = rj.field_I[0];
-          var9 = var15.field_z << 1;
+          var9 = var15.fullWidth << 1;
           var10 = var15.field_u << 1;
           if (null == bp.field_s) {
-            bp.field_s = new ja(var9, var10);
+            bp.field_s = new Sprite(var9, var10);
             r.a(0, bp.field_s);
-            var15.a(112, 144, var15.field_z << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
+            var15.a(112, 144, var15.fullWidth << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
             ql.a(true);
-            bp.field_s.e(var5 - var15.field_z, var6 - var15.field_u, 256);
+            bp.field_s.e(var5 - var15.fullWidth, var6 - var15.field_u, 256);
             return;
           }
-          if (var9 > bp.field_s.field_x) {
-            bp.field_s = new ja(var9, var10);
+          if (var9 > bp.field_s.width) {
+            bp.field_s = new Sprite(var9, var10);
             r.a(0, bp.field_s);
-            var15.a(112, 144, var15.field_z << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
+            var15.a(112, 144, var15.fullWidth << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
             ql.a(true);
-            bp.field_s.e(var5 - var15.field_z, var6 - var15.field_u, 256);
+            bp.field_s.e(var5 - var15.fullWidth, var6 - var15.field_u, 256);
             return;
           }
-          if (bp.field_s.field_w < var10) {
-            bp.field_s = new ja(var9, var10);
+          if (bp.field_s.height < var10) {
+            bp.field_s = new Sprite(var9, var10);
             r.a(0, bp.field_s);
-            var15.a(112, 144, var15.field_z << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
+            var15.a(112, 144, var15.fullWidth << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
             ql.a(true);
-            bp.field_s.e(var5 - var15.field_z, var6 - var15.field_u, 256);
+            bp.field_s.e(var5 - var15.fullWidth, var6 - var15.field_u, 256);
             return;
           }
           r.a(0, bp.field_s);
           oo.b();
-          var15.a(112, 144, var15.field_z << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
+          var15.a(112, 144, var15.fullWidth << 4, var15.field_u << 4, -this.field_Q << 10, 4096);
           ql.a(true);
-          bp.field_s.e(var5 - var15.field_z, var6 - var15.field_u, 256);
+          bp.field_s.e(var5 - var15.fullWidth, var6 - var15.field_u, 256);
           return;
         }
         if (ua.field_I == var8) {
           var18 = rj.field_I[0];
-          var9Lifetime1 = var18.field_z << 1;
+          var9Lifetime1 = var18.fullWidth << 1;
           var10Lifetime1 = var18.field_u << 1;
           if (null == bp.field_s) {
-            bp.field_s = new ja(var9Lifetime1, var10Lifetime1);
+            bp.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
             r.a(0, bp.field_s);
-            var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
+            var18.a(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
             ql.a(true);
-            bp.field_s.e(var5 - var18.field_z, var6 - var18.field_u, 256);
+            bp.field_s.e(var5 - var18.fullWidth, var6 - var18.field_u, 256);
             return;
           }
-          if (var9Lifetime1 > bp.field_s.field_x) {
-            bp.field_s = new ja(var9Lifetime1, var10Lifetime1);
+          if (var9Lifetime1 > bp.field_s.width) {
+            bp.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
             r.a(0, bp.field_s);
-            var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
+            var18.a(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
             ql.a(true);
-            bp.field_s.e(var5 - var18.field_z, var6 - var18.field_u, 256);
+            bp.field_s.e(var5 - var18.fullWidth, var6 - var18.field_u, 256);
             return;
           }
-          if (bp.field_s.field_w < var10Lifetime1) {
-            bp.field_s = new ja(var9Lifetime1, var10Lifetime1);
+          if (bp.field_s.height < var10Lifetime1) {
+            bp.field_s = new Sprite(var9Lifetime1, var10Lifetime1);
             r.a(0, bp.field_s);
-            var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
+            var18.a(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
             ql.a(true);
-            bp.field_s.e(var5 - var18.field_z, var6 - var18.field_u, 256);
+            bp.field_s.e(var5 - var18.fullWidth, var6 - var18.field_u, 256);
             return;
           }
           r.a(0, bp.field_s);
           oo.b();
-          var18.a(112, 144, var18.field_z << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
+          var18.a(112, 144, var18.fullWidth << 4, var18.field_u << 4, -this.field_Q << 10, 4096);
           ql.a(true);
-          bp.field_s.e(var5 - var18.field_z, var6 - var18.field_u, 256);
+          bp.field_s.e(var5 - var18.fullWidth, var6 - var18.field_u, 256);
           return;
         }
         if (var8 == jq.field_b) {
           var12 = rj.field_I[2];
-          var12.e(var5 - (var12.field_x >> 1), -(var12.field_w >> 1) + var6, 256);
+          var12.e(var5 - (var12.width >> 1), -(var12.height >> 1) + var6, 256);
           return;
         }
         if (db.field_b == var8) {
           var21 = rj.field_I[1];
-          var21.e(var5 - (var21.field_x >> 1), -(var21.field_w >> 1) + var6, 256);
+          var21.e(var5 - (var21.width >> 1), -(var21.height >> 1) + var6, 256);
           return;
         }
     }
@@ -132,7 +132,7 @@ final class uk extends gn {
         return null;
     }
 
-    final void a(int param0, cf param1, int param2, int param3) {
+    final void a(int param0, UiWidget param1, int param2, int param3) {
         try {
           this.field_Q = this.field_Q + 1;
           super.a(param0, param1, param2, param3);
@@ -149,7 +149,7 @@ final class uk extends gn {
         }
     }
 
-    final boolean a(cf param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

@@ -7,7 +7,7 @@ final class nm {
     private int field_r;
     static long field_c;
     private int field_n;
-    static ja field_w;
+    static Sprite field_w;
     private int field_a;
     int field_k;
     static String field_b;
@@ -197,7 +197,7 @@ final class nm {
         if (param0 == 0) {
           return ah.field_d[65535 & (int)(32768.0 * param1 / 3.141592653589793)];
         }
-        field_w = (ja) null;
+        field_w = (Sprite) null;
         return ah.field_d[65535 & (int)(32768.0 * param1 / 3.141592653589793)];
     }
 

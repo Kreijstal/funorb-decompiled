@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class wk extends se implements kh {
+abstract class wk extends WidgetContainer implements kh {
     static String field_K;
     static ri field_J;
     static mh field_I;

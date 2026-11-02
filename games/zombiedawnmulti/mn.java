@@ -12,8 +12,8 @@ final class mn extends ic {
 
     final pi b(int param0) {
         if (param0 != 7) {
-          k var3 = (k) null;
-          this.a((k) null, -78);
+          PacketBuffer var3 = (PacketBuffer) null;
+          this.a((PacketBuffer) null, -78);
           return uq.field_b;
         }
         return uq.field_b;
@@ -28,7 +28,7 @@ final class mn extends ic {
         }
     }
 
-    final void a(k param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           if (param1 != -1) {
             field_q = (String) null;

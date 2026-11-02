@@ -7,7 +7,7 @@ final class hb {
 
     final static void b(int param0) {
         lk.g((byte) 89);
-        kf.a(2, wp.field_j[0].field_z, nj.field_h, qa.field_o, jo.field_f, jk.field_f);
+        ProxySocketConnector.a(2, wp.field_j[0].fullWidth, nj.field_h, DualLinkNode.field_o, jo.field_f, jk.field_f);
         if (param0 <= 31) {
           field_a = (String) null;
         }
@@ -27,13 +27,13 @@ final class hb {
         int var5_int = 0;
         byte[] var6 = null;
         Object var7 = null;
-        k var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new k(param0);
+          var9 = new PacketBuffer(param0);
           var3 = var9.g(31365);
           var4 = var9.i(param1 ^ -1478490344);
           if (var4 >= 0 && (qo.field_u == 0 ||
@@ -93,7 +93,7 @@ final class hb {
 
     final static void a(int param0) {
         hd.field_s = new fe();
-        wj.field_i.a((cf) (hd.field_s), (byte) 121);
+        wj.field_i.a((UiWidget) (hd.field_s), (byte) 121);
         if (param0 != 0) {
           field_a = (String) null;
         }

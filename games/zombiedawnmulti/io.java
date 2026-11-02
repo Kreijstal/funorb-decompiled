@@ -4,11 +4,11 @@
 final class io {
     static boolean field_b;
     private int field_f;
-    private wh field_j;
+    private IterableNodeHashTable field_j;
     static String field_e;
     static boolean field_g;
     private int field_i;
-    private e field_c;
+    private SecondaryNodeDeque field_c;
     static String field_d;
     static String field_a;
     static String field_h;
@@ -31,7 +31,7 @@ final class io {
           this.field_j.a(param2, (byte) -19, var6);
           this.field_c.a(var6, (byte) 94);
           int var7 = 91 / ((param3 - 82) / 44);
-          ((kk) ((Object) var6)).field_l = 0L;
+          ((kk) ((Object) var6)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw fa.a((Throwable) ((Object) runtimeException), "io.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -66,32 +66,32 @@ final class io {
             var5 = t.field_a;
           } else {
             if (sh.field_L) {
-              var5 = qd.field_v;
+              var5 = GameScreen.field_v;
             } else {
               var5 = pd.field_e;
             }
           }
           var7 = (String) null;
-          wh.a(6, wj.field_g, 0, var5, (String) null);
+          IterableNodeHashTable.a(6, wj.field_g, 0, var5, (String) null);
           ke.field_j = ua.field_E;
           fh.field_m = ec.field_b;
           ec.field_b.field_xb = (8355711 & qq.field_f.field_xb >> 1) + wj.field_g - (8355711 & wj.field_g >> 1);
           ec.field_b.field_Db = (8355711 & qq.field_f.field_Db >> 1) + (wj.field_g - (8355711 & wj.field_g >> 1));
           ec.field_b.field_ob = wj.field_g - (8355711 & wj.field_g >> 1) + (qq.field_f.field_ob >> 1 & param0);
           lj.field_v = new cj(0L, param3);
-          nq.field_t = new cj(0L, param2);
+          SpriteState.field_t = new cj(0L, param2);
           re.field_a = new cj(0L, (cj) null);
-          br.field_c = new cj(0L, param1);
+          IntrusiveNode.field_c = new cj(0L, param1);
           ec.field_b = new cj(0L, param4);
           ec.field_b.field_yb = w.field_A;
-          br.field_c.a((byte) 50, ec.field_b);
+          IntrusiveNode.field_c.a((byte) 50, ec.field_b);
           ua.field_E = new cj(0L, ke.field_j);
-          br.field_c.a((byte) 50, ua.field_E);
+          IntrusiveNode.field_c.a((byte) 50, ua.field_E);
           dp.field_c = new cj(0L, qq.field_f, bg.field_o);
           jk.field_d = new cj(0L, qq.field_f);
-          lj.field_v.a((byte) 50, nq.field_t);
+          lj.field_v.a((byte) 50, SpriteState.field_t);
           lj.field_v.a((byte) 50, re.field_a);
-          re.field_a.a((byte) 50, br.field_c);
+          re.field_a.a((byte) 50, IntrusiveNode.field_c);
           re.field_a.a((byte) 50, dp.field_c);
           re.field_a.a((byte) 50, jk.field_d);
           return;
@@ -202,7 +202,7 @@ final class io {
           if (param1 == null) {
             return;
           }
-          param1.a(true);
+          param1.unlink(true);
           param1.a(param0 ^ -4563);
           this.field_f = this.field_f + param1.field_t;
           return;
@@ -222,7 +222,7 @@ final class io {
 
     final static bo[] a(boolean param0) {
         if (param0) {
-          return new bo[]{wp.field_b, l.field_c, wi.field_h};
+          return new bo[]{wp.field_b, RasterBuffer.field_c, wi.field_h};
         }
         return (bo[]) null;
     }
@@ -237,13 +237,13 @@ final class io {
 
     private io(int param0, int param1) {
         int var3;
-        this.field_c = new e();
+        this.field_c = new SecondaryNodeDeque();
         this.field_f = param0;
         this.field_i = param0;
         var3 = 1;
         while (true) {
           if (var3 + var3 >= param0) {
-            this.field_j = new wh(var3);
+            this.field_j = new IterableNodeHashTable(var3);
             return;
           }
           if (var3 < param1) {
@@ -252,7 +252,7 @@ final class io {
           }
           break;
         }
-        this.field_j = new wh(var3);
+        this.field_j = new IterableNodeHashTable(var3);
         return;
     }
 
@@ -269,18 +269,18 @@ final class io {
         if (var5 != null) {
           if (!var7.f(1000)) {
             this.field_c.a(var7, (byte) 106);
-            var7.field_l = 0L;
+            var7.secondaryKey = 0L;
           } else {
             var6 = new eg(var5, var7.field_t);
-            this.field_j.a(var7.field_e, (byte) -86, var6);
+            this.field_j.a(var7.key, (byte) -86, var6);
             this.field_c.a(var6, (byte) 109);
-            ((kk) ((Object) var6)).field_l = 0L;
-            var7.a(true);
+            ((kk) ((Object) var6)).secondaryKey = 0L;
+            var7.unlink(true);
             var7.a(-4564);
           }
           return var5;
         }
-        var7.a(true);
+        var7.unlink(true);
         var7.a(-4564);
         this.field_f = this.field_f + var7.field_t;
         return null;

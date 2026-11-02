@@ -11,7 +11,7 @@ final class cq {
 
     final static boolean a(int param0) {
         q.field_e = true;
-        dl.field_e = bl.a((byte) 115) + (long)param0;
+        SocketConnector.field_e = bl.a((byte) 115) + (long)param0;
         return a.field_b == 11 ? true : false;
     }
 
@@ -170,7 +170,7 @@ final class cq {
 
     static {
         field_b = "Imposed";
-        ja discarded$0 = new ja(48, 48);
+        Sprite discarded$0 = new Sprite(48, 48);
         field_d = "Confirm Email:";
         field_e = new String[16];
         field_f = 2;

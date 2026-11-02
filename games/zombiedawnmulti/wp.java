@@ -6,9 +6,9 @@ final class wp {
     static String field_d;
     static int[] field_f;
     static String field_a;
-    static qd field_h;
-    static ja field_e;
-    static ja[] field_j;
+    static GameScreen field_h;
+    static Sprite field_e;
+    static Sprite[] field_j;
     static int[] field_i;
     static int[] field_c;
     static di field_g;
@@ -28,11 +28,11 @@ final class wp {
           var1 = ma.field_a;
           while (so.c(1)) {
             var1.b((byte) -35, 8);
-            fieldTemp$0 = var1.field_j + 1;
-            var1.field_j = var1.field_j + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             hd.a(var1, param0 + 10995);
-            ma.field_a.e(param0 + 11021, var1.field_j - var2);
+            ma.field_a.e(param0 + 11021, var1.position - var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -62,7 +62,7 @@ final class wp {
           field_c = null;
           return;
         }
-        field_j = (ja[]) null;
+        field_j = (Sprite[]) null;
         field_g = null;
         field_d = null;
         field_i = null;
@@ -91,18 +91,18 @@ final class wp {
           mn.field_p = mn.field_p - 1;
           if (mn.field_p == 0) {
             mn.field_p = 200;
-            var1 = (we) (gb.field_e.c(75));
+            var1 = (we) (GameKeyHandler.field_e.c(75));
             while (var1 != null) {
               if (!var1.field_h.b(4)) {
-                var1.a(true);
+                var1.unlink(true);
               }
-              var1 = (we) (gb.field_e.b(6));
+              var1 = (we) (GameKeyHandler.field_e.b(6));
             }
             if (wc.field_K != null) {
               var1Lifetime1 = (we) (wc.field_K.c(51));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_h.b(4)) {
-                  var1Lifetime1.a(true);
+                  var1Lifetime1.unlink(true);
                 }
                 var1Lifetime1 = (we) (wc.field_K.b(6));
               }

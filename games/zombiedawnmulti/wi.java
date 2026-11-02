@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wi extends br {
+final class wi extends IntrusiveNode {
     int field_k;
     int field_f;
     static String field_o;
     int field_n;
     int field_l;
     static bo field_h;
-    static ja[] field_g;
+    static Sprite[] field_g;
     wi field_i;
     static String field_p;
     int field_j;

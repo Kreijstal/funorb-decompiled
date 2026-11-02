@@ -18,8 +18,8 @@ final class cn extends ng {
     private int field_w;
     private int field_o;
     private boolean field_m;
-    private th field_q;
-    private th field_v;
+    private IntrusiveDeque field_q;
+    private IntrusiveDeque field_v;
     private int field_i;
     private boolean field_y;
     private boolean field_n;
@@ -79,7 +79,7 @@ final class cn extends ng {
         }
         this.field_m = true;
         if (null == this.field_v) {
-          this.field_v = new th();
+          this.field_v = new IntrusiveDeque();
         }
         if (param0) {
           this.field_i = -112;
@@ -89,7 +89,7 @@ final class cn extends ng {
     final void c(int param0) {
         qc discarded$0 = null;
         qc discarded$1 = null;
-        br var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
@@ -101,11 +101,11 @@ final class cn extends ng {
         }
         var2 = this.field_q.c(65);
         while (var2 != null) {
-          var3 = (int)var2.field_e;
+          var3 = (int)var2.key;
           if (var3 >= 0) {
             if (var3 < this.field_s.field_e) {
               if (this.field_s.field_s[var3] == 0) {
-                var2.a(true);
+                var2.unlink(true);
               } else {
                 if (this.field_A[var3] == 0) {
                   discarded$0 = this.b(1, 0, var3);
@@ -114,19 +114,19 @@ final class cn extends ng {
                   discarded$1 = this.b(2, 0, var3);
                 }
                 if (this.field_A[var3] == 1) {
-                  var2.a(true);
+                  var2.unlink(true);
                 }
               }
             } else {
-              var2.a(true);
+              var2.unlink(true);
             }
           } else {
-            var2.a(true);
+            var2.unlink(true);
           }
           var2 = this.field_q.b(6);
         }
         if (param0 <= 64) {
-          cn.a((ul) null, -84, (byte[]) null, (int[]) null, (byte[]) null, -44, (String[]) null, (ul) null, (ri[]) null, (ul) null, 116, (ja[][]) null, true, (String[][]) null, (int[]) null, (ja[][]) null, (String[][]) null);
+          cn.a((ul) null, -84, (byte[]) null, (int[]) null, (byte[]) null, -44, (String[]) null, (ul) null, (ri[]) null, (ul) null, 116, (Sprite[][]) null, true, (String[][]) null, (int[]) null, (Sprite[][]) null, (String[][]) null);
         }
         return;
     }
@@ -208,12 +208,12 @@ final class cn extends ng {
         return this.field_s;
     }
 
-    final static ja[] a(boolean param0, String param1, ul param2, String param3) {
+    final static Sprite[] a(boolean param0, String param1, ul param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ja[] stackIn_2_0 = null;
-        ja[] stackIn_4_0 = null;
+        Sprite[] stackIn_2_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -225,7 +225,7 @@ final class cn extends ng {
         try {
           var4_int = param2.a(param3, (byte) 112);
           if (!param0) {
-            stackIn_2_0 = (ja[]) null;
+            stackIn_2_0 = (Sprite[]) null;
             return stackIn_2_0;
           }
           var5 = param2.a(param1, var4_int, -1);
@@ -280,14 +280,14 @@ final class cn extends ng {
         qc discarded$0 = null;
         int var2_int;
         qc var2;
-        br var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        br var6;
-        br var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        br var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         var5 = ZombieDawnMulti.field_E ? 1 : 0;
         if (param0 != -2) {
           this.field_t = (bq) null;
@@ -301,30 +301,30 @@ final class cn extends ng {
             var2_int = 1;
             var3 = this.field_v.c(46);
             while (var3 != null) {
-              var4 = (int)var3.field_e;
+              var4 = (int)var3.key;
               if (this.field_A[var4] == 0) {
                 discarded$3 = this.b(1, 0, var4);
               }
               if (this.field_A[var4] == 0) {
                 var2_int = 0;
               } else {
-                var3.a(true);
+                var3.unlink(true);
               }
               var3 = this.field_v.b(6);
             }
-            L11: while (true) {
+            scanLoop1: while (true) {
               if (this.field_i < this.field_s.field_s.length) {
                 if (this.field_s.field_s[this.field_i] != 0) {
                   if (250 <= this.field_z.field_h) {
                     var2_int = 0;
-                    break L11;
+                    break scanLoop1;
                   }
                   if (this.field_A[this.field_i] == 0) {
                     discarded$2 = this.b(1, 0, this.field_i);
                   }
                   if (this.field_A[this.field_i] == 0) {
-                    var6 = new br();
-                    var6.field_e = (long)this.field_i;
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_i;
                     this.field_v.a(var6, false);
                     var2_int = 0;
                   }
@@ -345,30 +345,30 @@ final class cn extends ng {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_v.c(105);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_e;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (1 != this.field_A[var4Lifetime1]) {
                   discarded$1 = this.b(2, param0 ^ -2, var4Lifetime1);
                 }
                 if (this.field_A[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.a(true);
+                  var3Lifetime1.unlink(true);
                 }
                 var3Lifetime1 = this.field_v.b(6);
               }
-              L4: while (true) {
+              scanLoop2: while (true) {
                 if (this.field_i < this.field_s.field_s.length) {
                   if (this.field_s.field_s[this.field_i] != 0) {
                     if (this.field_h.c(param0 - 89)) {
                       var2_intLifetime1 = 0;
-                      break L4;
+                      break scanLoop2;
                     }
                     if (this.field_A[this.field_i] != 1) {
                       discarded$0 = this.b(2, 0, this.field_i);
                     }
                     if (this.field_A[this.field_i] != 1) {
-                      var7 = new br();
-                      var7.field_e = (long)this.field_i;
+                      var7 = new IntrusiveNode();
+                      var7.key = (long)this.field_i;
                       var2_intLifetime1 = 0;
                       this.field_v.a(var7, false);
                     }
@@ -398,7 +398,7 @@ final class cn extends ng {
                 if (!var2.field_r) {
                   throw new RuntimeException();
                 }
-                var2.a(true);
+                var2.unlink(true);
               } else {
                 var2.field_x = true;
               }
@@ -435,7 +435,7 @@ final class cn extends ng {
           param0 == 0 &&
           !var12.field_r &&
           var12.field_t) {
-          var12.a(true);
+          var12.unlink(true);
           var4 = null;
         }
         if (var4 == null) {
@@ -471,7 +471,7 @@ final class cn extends ng {
               var4 = this.field_h.a(487989472, param2, true, this.field_B, (byte) 2);
             }
           }
-          this.field_p.a(true, (long)param2, (br) (var4));
+          this.field_p.a(true, (long)param2, (IntrusiveNode) (var4));
         }
         if (((qc) (var4)).field_t) {
           return null;
@@ -509,7 +509,7 @@ final class cn extends ng {
                 this.field_A[param2] = (byte) 1;
               }
               if (!((qc) (var4)).field_r) {
-                ((qc) (var4)).a(true);
+                ((qc) (var4)).unlink(true);
               }
               stackIn_58_0 = var4;
               return (qc) (stackIn_58_0);
@@ -519,7 +519,7 @@ final class cn extends ng {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_A[param2] = (byte)-1;
-            ((qc) (var4)).a(true);
+            ((qc) (var4)).unlink(true);
             if (!((qc) (var4)).field_r) {
               return null;
             }
@@ -527,7 +527,7 @@ final class cn extends ng {
               return null;
             }
             var4 = this.field_h.a(487989472, param2, true, this.field_B, (byte) 2);
-            this.field_p.a(true, (long)param2, (br) (var4));
+            this.field_p.a(true, (long)param2, (IntrusiveNode) (var4));
             return null;
           }
         }
@@ -562,13 +562,13 @@ final class cn extends ng {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_h.a((byte) 95);
-          ((qc) (var4)).a(true);
+          ((qc) (var4)).unlink(true);
           if (!((qc) (var4)).field_r) {
             return null;
           }
           if (!this.field_h.e(110)) {
             var4 = this.field_h.a(487989472, param2, true, this.field_B, (byte) 2);
-            this.field_p.a(true, (long)param2, (br) (var4));
+            this.field_p.a(true, (long)param2, (IntrusiveNode) (var4));
           }
           return null;
         }
@@ -581,7 +581,7 @@ final class cn extends ng {
           }
         }
         if (!((qc) (var4)).field_r) {
-          ((qc) (var4)).a(true);
+          ((qc) (var4)).unlink(true);
         }
         return (qc) (var4);
     }
@@ -594,7 +594,7 @@ final class cn extends ng {
         return -var3 + (var3 + param2) / param0;
     }
 
-    final static void a(ul param0, int param1, byte[] param2, int[] param3, byte[] param4, int param5, String[] param6, ul param7, ri[] param8, ul param9, int param10, ja[][] param11, boolean param12, String[][] param13, int[] param14, ja[][] param15, String[][] param16) {
+    final static void a(ul param0, int param1, byte[] param2, int[] param3, byte[] param4, int param5, String[] param6, ul param7, ri[] param8, ul param9, int param10, Sprite[][] param11, boolean param12, String[][] param13, int[] param14, Sprite[][] param15, String[][] param16) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -632,7 +632,7 @@ final class cn extends ng {
             cn.a(true, (String) null, (ul) null, (String) null);
           }
           var19 = (String[]) null;
-          e.a(param7, param4, 1, (String[]) null, param14, param5, param11, param6, true, param16, param10, param13, param0, param2, param3, param8, param15, param9, param12);
+          SecondaryNodeDeque.a(param7, param4, 1, (String[]) null, param14, param5, param11, param6, true, param16, param10, param13, param0, param2, param3, param8, param15, param9, param12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -729,7 +729,7 @@ final class cn extends ng {
           return (byte[]) null;
         }
         byte[] var4 = var3.e(0);
-        var3.a(true);
+        var3.unlink(true);
         return var4;
     }
 
@@ -759,14 +759,14 @@ final class cn extends ng {
         RuntimeException var10 = null;
         this.field_p = new f(16);
         this.field_i = 0;
-        this.field_q = new th();
+        this.field_q = new IntrusiveDeque();
         this.field_r = 0L;
         try {
           this.field_x = param1;
           this.field_B = param0;
           if (null != this.field_x) {
             this.field_y = true;
-            this.field_v = new th();
+            this.field_v = new IntrusiveDeque();
           } else {
             this.field_y = false;
           }

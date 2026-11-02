@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cr extends br {
+final class cr extends IntrusiveNode {
     byte[] field_f;
     static cj field_i;
     boolean field_h;

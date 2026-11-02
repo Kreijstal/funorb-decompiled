@@ -32,15 +32,15 @@ final class bc {
         }
         er.field_j.g(param0, param1);
         if (param3) {
-          var4 = fn.field_c % er.field_j.field_x * 2;
-          if (var4 >= er.field_j.field_x) {
-            var4 = er.field_j.field_x - var4 + er.field_j.field_x;
+          var4 = ClientException.field_c % er.field_j.width * 2;
+          if (var4 >= er.field_j.width) {
+            var4 = er.field_j.width - var4 + er.field_j.width;
           }
           if (var4 < 10) {
             var4 = 10;
           } else {
-            if (-40 + er.field_j.field_x < var4) {
-              var4 = -40 + er.field_j.field_x;
+            if (-40 + er.field_j.width < var4) {
+              var4 = -40 + er.field_j.width;
             }
           }
           ij.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);
@@ -68,7 +68,7 @@ final class bc {
           return (ri[]) null;
         }
         while (var2 < qc.field_v) {
-          var1[var2] = new ri(ie.field_nb, hj.field_a, k.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], qp.field_t[var2], tp.field_t);
+          var1[var2] = new ri(ie.field_nb, hj.field_a, PacketBuffer.field_i[var2], qj.field_o[var2], oq.field_w[var2], vj.field_p[var2], qp.field_t[var2], tp.field_t);
           var2++;
         }
         fd.h((byte) 125);
@@ -90,15 +90,15 @@ final class bc {
         }
         er.field_j.g(param0, param1);
         if (param3) {
-          var4 = fn.field_c % er.field_j.field_x * 2;
-          if (var4 >= er.field_j.field_x) {
-            var4 = er.field_j.field_x - var4 + er.field_j.field_x;
+          var4 = ClientException.field_c % er.field_j.width * 2;
+          if (var4 >= er.field_j.width) {
+            var4 = er.field_j.width - var4 + er.field_j.width;
           }
           if (var4 < 10) {
             var4 = 10;
           } else {
-            if (-40 + er.field_j.field_x < var4) {
-              var4 = -40 + er.field_j.field_x;
+            if (-40 + er.field_j.width < var4) {
+              var4 = -40 + er.field_j.width;
             }
           }
           ij.a(param1, 30, 0, param0, false, var4, 0, er.field_j, 80);

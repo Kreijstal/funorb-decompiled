@@ -30,7 +30,7 @@ final class ai implements Runnable {
           var4.field_B = param1;
           var4.field_r = false;
           var4.field_y = 3;
-          var4.field_l = (long)param0;
+          var4.secondaryKey = (long)param0;
           this.a(false, var4);
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -93,7 +93,7 @@ final class ai implements Runnable {
             try {
               boolean decompiledFrameRemainder0 = true;
               if (var7.field_y == 2) {
-                var7.field_B.a((byte) 118, var7.field_D, var7.field_D.length, (int)var7.field_l);
+                var7.field_B.a((byte) 118, var7.field_D, var7.field_D.length, (int)var7.secondaryKey);
                 var7.field_t = false;
               } else {
                 if (var7.field_y != 3) {
@@ -101,7 +101,7 @@ final class ai implements Runnable {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  var7.field_D = var7.field_B.a(1, (int)var7.field_l);
+                  var7.field_D = var7.field_B.a(1, (int)var7.secondaryKey);
                   var7.field_t = false;
                 }
               }
@@ -112,7 +112,7 @@ final class ai implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              bd.a((String) null, (Throwable) ((Object) var2_ref), false);
+              MouseInputHandler.a((String) null, (Throwable) ((Object) var2_ref), false);
               decompiledRegionSelector1 = 0;
             }
             if (decompiledRegionSelector1 != 0) {
@@ -141,7 +141,7 @@ final class ai implements Runnable {
         try {
           var5 = new li();
           var5.field_r = false;
-          var5.field_l = (long)param0;
+          var5.secondaryKey = (long)param0;
           var5.field_D = param2;
           var5.field_y = 2;
           var5.field_B = param1;
@@ -192,7 +192,7 @@ final class ai implements Runnable {
             field_d = (String) null;
           }
           while (65536 <= sd.a((byte) 120, lq.field_b, nf.field_b)) {
-            fn.field_c = fn.field_c + 1;
+            ClientException.field_c = ClientException.field_c + 1;
             lq.field_b = lq.field_b - nf.field_b;
           }
           var2_int = -1;
@@ -243,15 +243,15 @@ final class ai implements Runnable {
             var4 = 0;
             if (kd.field_b != 0 &&
               ka.field_t > var3 &&
-              fa.field_Tb.field_w + var3 > ka.field_t) {
-              if (269 - fa.field_Tb.field_x < vb.field_f &&
+              fa.field_Tb.height + var3 > ka.field_t) {
+              if (269 - fa.field_Tb.width < vb.field_f &&
                 vb.field_f < 269) {
                 var4 = 1;
                 lb.field_a = nf.field_c;
                 qh.field_a = false;
               }
               if (vb.field_f > 586 &&
-                vb.field_f < fa.field_Tb.field_x + 586) {
+                vb.field_f < fa.field_Tb.width + 586) {
                 var4 = 1;
                 qh.field_a = true;
                 lb.field_a = nf.field_c;
@@ -260,13 +260,13 @@ final class ai implements Runnable {
             if (var4 == 0 &&
               nf.field_a < lb.field_a &&
               bo.field_d > var3 &&
-              fa.field_Tb.field_w + var3 > bo.field_d) {
-              if (-fa.field_Tb.field_x + 269 < bd.field_g &&
-                269 > bd.field_g) {
+              fa.field_Tb.height + var3 > bo.field_d) {
+              if (-fa.field_Tb.width + 269 < MouseInputHandler.field_g &&
+                269 > MouseInputHandler.field_g) {
                 lb.field_a = nf.field_a;
               }
-              if (bd.field_g > 586 &&
-                bd.field_g < 586 + fa.field_Tb.field_x) {
+              if (MouseInputHandler.field_g > 586 &&
+                MouseInputHandler.field_g < 586 + fa.field_Tb.width) {
                 lb.field_a = nf.field_a;
               }
             }
@@ -274,7 +274,7 @@ final class ai implements Runnable {
           if (!param0) {
             return 0;
           }
-          gl.field_H.a(al.c(bo.field_d, -1, bd.field_g), 104, al.c(ka.field_t, param1 - 111, vb.field_f));
+          gl.field_H.a(al.c(bo.field_d, -1, MouseInputHandler.field_g), 104, al.c(ka.field_t, param1 - 111, vb.field_f));
           if (gl.field_H.c(-85)) {
             if (gl.field_H.field_d == 0) {
               stackIn_63_0 = 3;
@@ -352,7 +352,7 @@ final class ai implements Runnable {
           synchronized (var5) {
             var6 = (li) (this.field_e.c((byte) 85));
             while (var6 != null) {
-              if (var6.field_l == (long)param0 &&
+              if (var6.secondaryKey == (long)param0 &&
                 param1 == var6.field_B &&
                 var6.field_y == 2) {
                 var4.field_t = false;
@@ -484,7 +484,7 @@ final class ai implements Runnable {
         return false;
     }
 
-    ai(go param0) {
+    ai(PlatformTaskDispatcher param0) {
         di var2 = null;
         this.field_e = new lq();
         this.field_f = false;

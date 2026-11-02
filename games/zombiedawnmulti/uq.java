@@ -7,7 +7,7 @@ final class uq {
     static String field_c;
     static String field_e;
     static int field_g;
-    static fm field_f;
+    static BitmapFont field_f;
     static String field_a;
 
     final static void a(int param0, int param1) {
@@ -28,7 +28,7 @@ final class uq {
           }
           var5 = (nh) (pn.field_f.c(83));
           while (var5 != null) {
-            ag.a((byte) 73, var5, param0);
+            GameApplet.a((byte) 73, var5, param0);
             var5 = (nh) (pn.field_f.b(6));
           }
           return;

@@ -14,7 +14,7 @@ final class ij implements nl {
     private int field_j;
     static String field_a;
     private int field_m;
-    private fm field_n;
+    private BitmapFont field_n;
     private int field_g;
     static cj[] field_k;
     private int field_b;
@@ -29,14 +29,14 @@ final class ij implements nl {
         }
     }
 
-    final static bm a(byte[] param0, int param1) {
+    final static LevelActorSpawner a(byte[] param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         byte[] var4 = null;
         int var5 = 0;
         int var6 = 0;
-        bm stackIn_8_0 = null;
+        LevelActorSpawner stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -48,12 +48,12 @@ final class ij implements nl {
           var3 = 100;
           var4 = new byte[param0.length + 8];
           for (var5 = 0; var5 < 6; var5++) {
-            br.a(var5, var4, -117, re.a(param0, var5, (byte) 110));
+            IntrusiveNode.a(var5, var4, -117, re.a(param0, var5, (byte) 110));
           }
-          br.a(6, var4, -93, var2_int);
-          br.a(param1, var4, -123, var3);
+          IntrusiveNode.a(6, var4, -93, var2_int);
+          IntrusiveNode.a(param1, var4, -123, var3);
           for (var5Lifetime1 = 6; param0.length / 4 > var5Lifetime1; var5Lifetime1++) {
-            br.a(2 + var5Lifetime1, var4, -72, re.a(param0, var5Lifetime1, (byte) 51));
+            IntrusiveNode.a(2 + var5Lifetime1, var4, -72, re.a(param0, var5Lifetime1, (byte) 51));
           }
           stackIn_8_0 = bo.a(var4, param1 + 17);
           return stackIn_8_0;
@@ -71,16 +71,16 @@ final class ij implements nl {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, ja param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, Sprite param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
         int var9_intLifetime1;
         int var10Lifetime1;
         try {
-          var9_int = -param2 + param5 + (param7.field_r + param3);
-          var10 = param1 + (param5 + (param3 + param7.field_r));
-          var11 = (param7.field_w >> 1) + (param7.field_y + param0);
+          var9_int = -param2 + param5 + (param7.offsetX + param3);
+          var10 = param1 + (param5 + (param3 + param7.offsetX));
+          var11 = (param7.height >> 1) + (param7.field_y + param0);
           oo.e(var9_int, 0, var10, var11 + param6);
           param7.e(param3 - 1, -1 + param0, param8);
           param7.e(-1 + param3, 1 + param0, param8);
@@ -89,8 +89,8 @@ final class ij implements nl {
           param7.e(1 + param3, param0 - 1, param8);
           param7.e(1 + param3, param0 + 1, param8);
           oo.b(b.field_f);
-          var10Lifetime1 = param7.field_x + (param7.field_r + (param3 - param5)) - param2;
-          var9_intLifetime1 = param7.field_r + param7.field_x - (-param3 - (-param5 - param1));
+          var10Lifetime1 = param7.width + (param7.offsetX + (param3 - param5)) - param2;
+          var9_intLifetime1 = param7.offsetX + param7.width - (-param3 - (-param5 - param1));
           oo.e(var9_intLifetime1, -param6 + var11, var10Lifetime1, 480);
           param7.e(-1 + param3, param0 - 1, param8);
           param7.e(param3 - 1, 1 + param0, param8);
@@ -117,8 +117,8 @@ final class ij implements nl {
         return var2;
     }
 
-    public final void a(boolean param0, int param1, int param2, int param3, cf param4) {
-        cf stackIn_3_0 = null;
+    public final void a(boolean param0, int param1, int param2, int param3, UiWidget param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -128,11 +128,11 @@ final class ij implements nl {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        ja var11 = null;
+        Sprite var11 = null;
         fj var12 = null;
         try {
           if (param4 instanceof fj) {
-            stackIn_3_0 = (cf) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           } else {
             stackIn_3_0 = null;
           }
@@ -150,8 +150,8 @@ final class ij implements nl {
           oo.f(var8, var9, this.field_l, this.field_i, 5592405);
           oo.e(var8, var9, this.field_l, this.field_i, var7);
           if (param2 != -15112) {
-            var11 = (ja) null;
-            ij.a(100, -43, 108, -70, true, -27, -48, (ja) null, -23);
+            var11 = (Sprite) null;
+            ij.a(100, -43, 108, -70, true, -27, -48, (Sprite) null, -23);
           }
           if (var12.field_G) {
             oo.g(var8, var9, this.field_l + var8, var9 + this.field_i, 1);
@@ -176,7 +176,7 @@ final class ij implements nl {
         }
     }
 
-    ij(fm param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    ij(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_c = 1;
         this.field_h = 1;
         try {

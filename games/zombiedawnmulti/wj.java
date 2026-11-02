@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wj extends br {
+final class wj extends IntrusiveNode {
     static ub field_i;
     static String field_h;
     static boolean field_n;
@@ -12,10 +12,10 @@ final class wj extends br {
     static int field_g;
     static String field_f;
 
-    final static dl a(byte param0, int param1, String param2) {
-        kf var3 = null;
+    final static SocketConnector a(byte param0, int param1, String param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        kf stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -24,11 +24,11 @@ final class wj extends br {
           if (param0 != 3) {
             field_f = (String) null;
           }
-          var3 = new kf();
-          ((dl) ((Object) var3)).field_f = param1;
-          ((dl) ((Object) var3)).field_b = param2;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).port = param1;
+          ((SocketConnector) ((Object) var3)).host = param2;
           stackIn_3_0 = var3;
-          return (dl) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

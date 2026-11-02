@@ -490,7 +490,7 @@ final class hi extends cj {
               if (0 == var1.field_bc) {
                 var1.field_Fb = 0;
                 if (var1.c((byte) 15)) {
-                  var1.a(true);
+                  var1.unlink(true);
                 }
               }
             }
@@ -506,7 +506,7 @@ final class hi extends cj {
               }
               var1_ref.field_Vb = 0;
               if (var1_ref.j(2)) {
-                var1_ref.a(true);
+                var1_ref.unlink(true);
               }
             }
             var1_ref = (jh) (tn.field_C.b(6));
@@ -521,7 +521,7 @@ final class hi extends cj {
               if (var1Lifetime1.field_bc == 0) {
                 var1Lifetime1.field_Fb = 0;
                 if (var1Lifetime1.c((byte) 15)) {
-                  var1Lifetime1.a(true);
+                  var1Lifetime1.unlink(true);
                 }
               }
             }

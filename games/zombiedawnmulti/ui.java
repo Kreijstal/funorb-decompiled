@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ui extends br {
+final class ui extends IntrusiveNode {
     private int field_m;
     static int[] field_i;
-    static ja[] field_k;
+    static Sprite[] field_k;
     private int field_l;
     static String field_j;
     private int field_h;
@@ -21,7 +21,7 @@ final class ui extends br {
         try {
           ac.b(param1.a("headers.packvorbis", "", false));
           if (param0 != 7478) {
-            field_k = (ja[]) null;
+            field_k = (Sprite[]) null;
           }
           var2 = ac.a(param1, "jagex logo2.packvorbis", "");
           var2.c();
@@ -88,7 +88,7 @@ final class ui extends br {
         int stackIn_8_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_26_0 = 0;
-        ja[] stackIn_30_0 = null;
+        Sprite[] stackIn_30_0 = null;
         ef stackIn_33_0;
         String stackIn_33_1;
         int stackIn_33_2;
@@ -102,14 +102,14 @@ final class ui extends br {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        ja[] var5 = null;
+        Sprite[] var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var9 = 0;
         int[] var13 = null;
         try {
           if (param1) {
-            field_k = (ja[]) null;
+            field_k = (Sprite[]) null;
           }
           if (null != op.field_m &&
             1 < op.field_m.field_t) {
@@ -134,21 +134,21 @@ final class ui extends br {
             }
             var4 = stackIn_26_0;
             if (var4 != 0) {
-              stackIn_30_0 = rl.field_a;
+              stackIn_30_0 = GameSimulation.field_a;
             } else {
               stackIn_30_0 = oi.field_h;
             }
             var5 = stackIn_30_0;
-            var6 = var5[0].field_x + nf.field_d + var5[2].field_x;
-            var7 = qp.field_w.field_C + var5[6].field_w + var5[0].field_w;
-            s.a(-var7 + dq.field_k.field_qb - 5, 0, var5, -5 - var6 + 640, var7, var6);
+            var6 = var5[0].width + nf.field_d + var5[2].width;
+            var7 = qp.field_w.field_C + var5[6].height + var5[0].height;
+            s.a(-var7 + ImageProducerRasterBuffer.field_k.field_qb - 5, 0, var5, -5 - var6 + 640, var7, var6);
             var13 = new int[4];
             oo.a(var13);
-            oo.e(-5 - nf.field_d + 640 - var5[0].field_x, dq.field_k.field_qb - var7 + var5[0].field_w - 5, 635 - var5[2].field_x, dq.field_k.field_qb - var5[6].field_w);
+            oo.e(-5 - nf.field_d + 640 - var5[0].width, ImageProducerRasterBuffer.field_k.field_qb - var7 + var5[0].height - 5, 635 - var5[2].width, ImageProducerRasterBuffer.field_k.field_qb - var5[6].height);
             stackIn_33_0 = qp.field_w;
             stackIn_33_1 = pb.field_i;
-            stackIn_33_2 = -var5[2].field_x + 635;
-            stackIn_33_3 = dq.field_k.field_qb - (var5[6].field_w + 5);
+            stackIn_33_2 = -var5[2].width + 635;
+            stackIn_33_3 = ImageProducerRasterBuffer.field_k.field_qb - (var5[6].height + 5);
             if (var4 == 0) {
               stackIn_34_4 = 16777215;
             } else {
@@ -235,23 +235,23 @@ final class ui extends br {
                 if (sq.field_Q > 0) {
                   sq.field_Q = sq.field_Q - 1;
                 } else {
-                  if (da.field_a >= b.field_d) {
+                  if (InflaterDecompressor.field_a >= b.field_d) {
                     var2_int = -72 / ((-39 - param0) / 44);
                     return;
                   }
-                  if (da.field_a == 0) {
+                  if (InflaterDecompressor.field_a == 0) {
                     jq.a(false, (byte) -20);
                   }
-                  da.field_a = da.field_a + 1;
+                  InflaterDecompressor.field_a = InflaterDecompressor.field_a + 1;
                 }
               }
             } else {
-              if (ej.field_n == null) {
+              if (BufferedSocket.field_n == null) {
                 io.field_b = false;
                 if (sq.field_Q > 0) {
                   sq.field_Q = sq.field_Q - 1;
                 } else {
-                  if (da.field_a <= 0) {
+                  if (InflaterDecompressor.field_a <= 0) {
                     if (mh.field_h < b.field_d) {
                       if (0 == mh.field_h) {
                         wf.a(6835);
@@ -259,14 +259,14 @@ final class ui extends br {
                       mh.field_h = mh.field_h + 1;
                     }
                   } else {
-                    da.field_a = da.field_a - 1;
+                    InflaterDecompressor.field_a = InflaterDecompressor.field_a - 1;
                   }
                 }
               } else {
                 if (0 < mh.field_h) {
                   mh.field_h = mh.field_h - 1;
                 } else {
-                  if (da.field_a <= 0) {
+                  if (InflaterDecompressor.field_a <= 0) {
                     if (sq.field_Q < b.field_d) {
                       if (0 == sq.field_Q) {
                         jq.a(true, (byte) 126);
@@ -274,7 +274,7 @@ final class ui extends br {
                       sq.field_Q = sq.field_Q + 1;
                     }
                   } else {
-                    da.field_a = da.field_a - 1;
+                    InflaterDecompressor.field_a = InflaterDecompressor.field_a - 1;
                   }
                 }
               }
@@ -284,8 +284,8 @@ final class ui extends br {
               mh.field_h = mh.field_h - 1;
             } else {
               if (0 >= sq.field_Q) {
-                if (da.field_a > 0) {
-                  da.field_a = da.field_a - 1;
+                if (InflaterDecompressor.field_a > 0) {
+                  InflaterDecompressor.field_a = InflaterDecompressor.field_a - 1;
                 }
               } else {
                 sq.field_Q = sq.field_Q - 1;

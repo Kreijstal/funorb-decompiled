@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class df extends se {
+abstract class df extends WidgetContainer {
     static ul field_M;
     static volatile boolean field_P;
     private int field_K;
@@ -12,7 +12,7 @@ abstract class df extends se {
     static String field_J;
     static boolean field_H;
     static String field_L;
-    static ja[] field_Q;
+    static Sprite[] field_Q;
     static String field_O;
 
     boolean h(int param0) {
@@ -149,54 +149,54 @@ abstract class df extends se {
           }
           return;
         }
-        if (null == ej.field_g) {
-          ej.field_g = new ja(this.field_n, this.field_w);
-          r.a(0, ej.field_g);
+        if (null == BufferedSocket.field_g) {
+          BufferedSocket.field_g = new Sprite(this.field_n, this.field_w);
+          r.a(0, BufferedSocket.field_g);
           oo.b();
           this.a(true, 0, 0);
           super.a(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
           ql.a(true);
-          ej.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
+          BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
           if (param0 == -2) {
             return;
           }
           this.g(76);
           return;
         }
-        if (ej.field_g.field_x < this.field_n) {
-          ej.field_g = new ja(this.field_n, this.field_w);
-          r.a(0, ej.field_g);
+        if (BufferedSocket.field_g.width < this.field_n) {
+          BufferedSocket.field_g = new Sprite(this.field_n, this.field_w);
+          r.a(0, BufferedSocket.field_g);
           oo.b();
           this.a(true, 0, 0);
           super.a(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
           ql.a(true);
-          ej.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
+          BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
           if (param0 == -2) {
             return;
           }
           this.g(76);
           return;
         }
-        if (ej.field_g.field_w < this.field_w) {
-          ej.field_g = new ja(this.field_n, this.field_w);
-          r.a(0, ej.field_g);
+        if (BufferedSocket.field_g.height < this.field_w) {
+          BufferedSocket.field_g = new Sprite(this.field_n, this.field_w);
+          r.a(0, BufferedSocket.field_g);
           oo.b();
           this.a(true, 0, 0);
           super.a(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
           ql.a(true);
-          ej.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
+          BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
           if (param0 == -2) {
             return;
           }
           this.g(76);
           return;
         }
-        r.a(0, ej.field_g);
+        r.a(0, BufferedSocket.field_g);
         oo.b();
         this.a(true, 0, 0);
         super.a(param0 ^ 0, -this.field_i - param1, param2, -param3 - this.field_y);
         ql.a(true);
-        ej.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
+        BufferedSocket.field_g.c(param3 + this.field_y, param1 + this.field_i, this.field_K);
         if (param0 == -2) {
           return;
         }
@@ -208,15 +208,15 @@ abstract class df extends se {
         return this.field_R ? this.field_N.j((byte) -121) != this ? 0 : 256 : 0;
     }
 
-    final cf g(int param0) {
-        cf var2 = super.g(110);
+    final UiWidget g(int param0) {
+        UiWidget var2 = super.g(110);
         if (var2 != null) {
           return var2;
         }
         if (param0 < 88) {
-          return (cf) null;
+          return (UiWidget) null;
         }
-        return (cf) (this);
+        return (UiWidget) (this);
     }
 
     static {

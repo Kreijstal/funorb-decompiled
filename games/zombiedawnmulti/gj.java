@@ -30,7 +30,7 @@ final class gj {
     }
 
     final static void a(int param0) {
-        br var1 = null;
+        IntrusiveNode var1 = null;
         int var2 = ZombieDawnMulti.field_E ? 1 : 0;
         if (!df.field_H) {
           return;
@@ -39,12 +39,12 @@ final class gj {
           var1 = fd.field_M.c(54);
           while (var1 instanceof wj) {
             aa.a(true, ((wj) (var1)).field_m);
-            var1 = var1.field_d;
+            var1 = var1.previous;
           }
           var1 = qo.field_q.c(53);
           while (var1 instanceof wj) {
             aa.a(true, ((wj) (var1)).field_m);
-            var1 = var1.field_d;
+            var1 = var1.previous;
           }
           if (param0 != 6962) {
             gj.a((byte) 105);
@@ -52,7 +52,7 @@ final class gj {
           var1 = jp.field_c.c(83);
           while (var1 instanceof wj) {
             aa.a(true, ((wj) (var1)).field_m);
-            var1 = var1.field_d;
+            var1 = var1.previous;
           }
           fd.field_M.e(-30986);
           qo.field_q.e(-30986);

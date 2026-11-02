@@ -30,7 +30,7 @@ final class rh {
     private static int[] field_p;
     private static int[] field_n;
 
-    final void a(k param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_d = new pe();
@@ -39,7 +39,7 @@ final class rh {
         this.field_f.b(param0);
         int var2 = param0.g(31365);
         if (var2 != 0) {
-          param0.field_j = param0.field_j - 1;
+          param0.position = param0.position - 1;
           this.field_r = new pe();
           this.field_r.b(param0);
           this.field_l = new pe();
@@ -47,7 +47,7 @@ final class rh {
         }
         var2 = param0.g(31365);
         if (var2 != 0) {
-          param0.field_j = param0.field_j - 1;
+          param0.position = param0.position - 1;
           this.field_e = new pe();
           this.field_e.b(param0);
           this.field_s = new pe();
@@ -55,7 +55,7 @@ final class rh {
         }
         var2 = param0.g(31365);
         if (var2 != 0) {
-          param0.field_j = param0.field_j - 1;
+          param0.position = param0.position - 1;
           this.field_a = new pe();
           this.field_a.b(param0);
           this.field_x = new pe();

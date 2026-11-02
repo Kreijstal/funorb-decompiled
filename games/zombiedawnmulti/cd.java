@@ -66,9 +66,9 @@ final class cd extends cj {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ja var6 = null;
-        ja var7 = null;
-        ja var8 = null;
+        Sprite var6 = null;
+        Sprite var7 = null;
+        Sprite var8 = null;
         int var3Lifetime1;
         var4 = ZombieDawnMulti.field_E ? 1 : 0;
         try {
@@ -94,12 +94,12 @@ final class cd extends cj {
           if (nf.field_a > lb.field_a) {
             var7 = ld.field_Ub[gf.field_j];
             if (var7 != null) {
-              var2_int = lb.field_a * (var7.field_z + 60) / nf.field_a;
+              var2_int = lb.field_a * (var7.fullWidth + 60) / nf.field_a;
               var3 = var2_int - 30;
               if (qh.field_a) {
-                cb.a(199, false, var3 * -256 / 30, 245, var7, 256 * (-var3 + var7.field_z) / 30);
+                cb.a(199, false, var3 * -256 / 30, 245, var7, 256 * (-var3 + var7.fullWidth) / 30);
               } else {
-                cb.a(199, false, 256 * (var7.field_z - var3) / 30, 245, var7, -256 * var3 / 30);
+                cb.a(199, false, 256 * (var7.fullWidth - var3) / 30, 245, var7, -256 * var3 / 30);
               }
             }
           }
@@ -109,7 +109,7 @@ final class cd extends cj {
             var3Lifetime1 = var5;
             while (var5 < ld.field_Ub.length) {
               var8 = ld.field_Ub[var5];
-              if (var8 != null && (var8.field_z != 365 ||
+              if (var8 != null && (var8.fullWidth != 365 ||
                 139 != var8.field_u)) {
                 if (var2 != null) {
                   var2 = (String) (var2) + ", " + var5;

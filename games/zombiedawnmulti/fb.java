@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fb {
-    static qd field_e;
+    static GameScreen field_e;
     int field_m;
     private int field_n;
     static String field_g;
@@ -181,11 +181,11 @@ final class fb {
         }
         el.field_H[this.field_a].c(this.field_m, -this.field_h + 480, var3);
         if (this.field_a != 2) {
-          var4 = wa.field_b[this.field_n].field_w - wa.field_b[this.field_n].field_w * (-this.field_c + this.field_l) / this.field_l;
+          var4 = wa.field_b[this.field_n].height - wa.field_b[this.field_n].height * (-this.field_c + this.field_l) / this.field_l;
           wa.field_b[this.field_n].c(this.field_m + 8, -this.field_h + 504, var3);
           var9 = new int[4];
           oo.a(var9);
-          oo.h(8 + this.field_m, -var4 + (wa.field_b[this.field_n].field_w + 24) + (480 - this.field_h), wa.field_b[this.field_n].field_x + 8 + this.field_m, wa.field_b[this.field_n].field_w + (24 - this.field_h + 480));
+          oo.h(8 + this.field_m, -var4 + (wa.field_b[this.field_n].height + 24) + (480 - this.field_h), wa.field_b[this.field_n].width + 8 + this.field_m, wa.field_b[this.field_n].height + (24 - this.field_h + 480));
           wa.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 504);
           oo.b(var9);
           return;
@@ -203,8 +203,8 @@ final class fb {
         }
         var4Lifetime1 = (this.field_i + this.field_m / 3) % 50;
         if (25 < var4Lifetime1) {
-          oo.d(wa.field_b[this.field_n].field_x / 2 + 8 + this.field_m, 504 - (this.field_h - wa.field_b[this.field_n].field_w / 2), lh.field_b[var4Lifetime1] * 5 / 8, 13421772, 68 - var4Lifetime1);
-          oo.d(wa.field_b[this.field_n].field_x / 2 + (this.field_m + 8), -this.field_h + 480 + (24 + wa.field_b[this.field_n].field_w / 2), 4 * lh.field_b[var4Lifetime1] / 8, 11206570, 118 - var4Lifetime1);
+          oo.d(wa.field_b[this.field_n].width / 2 + 8 + this.field_m, 504 - (this.field_h - wa.field_b[this.field_n].height / 2), lh.field_b[var4Lifetime1] * 5 / 8, 13421772, 68 - var4Lifetime1);
+          oo.d(wa.field_b[this.field_n].width / 2 + (this.field_m + 8), -this.field_h + 480 + (24 + wa.field_b[this.field_n].height / 2), 4 * lh.field_b[var4Lifetime1] / 8, 11206570, 118 - var4Lifetime1);
           if (this.field_k) {
             el.field_H[this.field_a].e(this.field_m, -this.field_h + 480, lh.field_b[this.field_i] + 96);
             wa.field_b[this.field_n].g(this.field_m + 8, -this.field_h + 480 + 24);
@@ -300,7 +300,7 @@ final class fb {
               this.field_a = 1;
               this.field_h = 65;
               this.field_c = this.field_c + 1;
-              this.field_c = op.field_m.field_H - (tg.field_e.field_b[this.field_j] - field_e.a(this.field_j, (byte) 109));
+              this.field_c = op.field_m.currentTick - (tg.field_e.powerupReadyTick[this.field_j] - field_e.a(this.field_j, (byte) 109));
               this.field_l = field_e.a(this.field_j, (byte) 108);
               if (this.field_l > this.field_c) {
                 return;
@@ -410,7 +410,7 @@ final class fb {
           this.field_a = 1;
           this.field_h = 65;
           this.field_c = this.field_c + 1;
-          this.field_c = op.field_m.field_H - (tg.field_e.field_b[this.field_j] - field_e.a(this.field_j, (byte) 109));
+          this.field_c = op.field_m.currentTick - (tg.field_e.powerupReadyTick[this.field_j] - field_e.a(this.field_j, (byte) 109));
           this.field_l = field_e.a(this.field_j, (byte) 108);
           if (this.field_l > this.field_c) {
             return;

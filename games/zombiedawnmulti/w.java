@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class w extends gq {
+final class w extends PcmStream {
     private int field_s;
     private int[] field_r;
     private int[] field_w;
@@ -12,7 +12,7 @@ final class w extends gq {
     private int field_k;
     private ug field_o;
     private boolean field_y;
-    static fm field_A;
+    static BitmapFont field_A;
     private boolean field_l;
     private gd field_t;
     private ug field_x;
@@ -138,7 +138,7 @@ final class w extends gq {
         }
     }
 
-    final gq d() {
+    final PcmStream d() {
         return null;
     }
 
@@ -501,7 +501,7 @@ final class w extends gq {
         }
     }
 
-    final gq b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -586,7 +586,7 @@ final class w extends gq {
               }
             }
           }
-          if (gp.field_j) {
+          if (PcmPlayerService.field_j) {
             stackIn_32_0 = param2 << 1;
           } else {
             stackIn_32_0 = param2;
@@ -608,7 +608,7 @@ final class w extends gq {
                 }
                 this.field_j.b(this.field_w, 0, param2);
                 this.field_v.b(this.field_r, 0, param2);
-                if (!gp.field_j) {
+                if (!PcmPlayerService.field_j) {
                   stackIn_46_0 = param1;
                 } else {
                   localTemp$0 = param1 << 1;
@@ -636,7 +636,7 @@ final class w extends gq {
               this.field_w = new int[var6];
             }
             this.field_t.b(this.field_w, 0, param2);
-            if (!gp.field_j) {
+            if (!PcmPlayerService.field_j) {
               stackIn_62_0 = param1;
             } else {
               localTemp$1 = param1 << 1;

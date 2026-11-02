@@ -9,9 +9,9 @@ final class mk {
     private int field_f;
     static String[] field_c;
     private int field_a;
-    ja field_k;
+    Sprite field_k;
     private int field_j;
-    ja[] field_e;
+    Sprite[] field_e;
     static String field_n;
     static int field_d;
     static ul field_b;
@@ -43,7 +43,7 @@ final class mk {
         int var1 = 9 % ((param0 + 74) / 48);
     }
 
-    final mk a(ja[] param0, int param1) {
+    final mk a(Sprite[] param0, int param1) {
         RuntimeException var3 = null;
         mk stackIn_2_0 = null;
         RuntimeException stackIn_7_0 = null;
@@ -133,8 +133,8 @@ final class mk {
           this.field_h = -1;
           return;
         }
-        cf var3 = (cf) null;
-        this.a(14, true, (jl) null, (cf) null, -114);
+        UiWidget var3 = (UiWidget) null;
+        this.a(14, true, (jl) null, (UiWidget) null, -114);
         this.field_f = 0;
         this.field_j = 0;
         this.field_m = 0;
@@ -150,8 +150,8 @@ final class mk {
         return this;
     }
 
-    final void a(int param0, boolean param1, jl param2, cf param3, int param4) {
-        fm stackIn_22_0;
+    final void a(int param0, boolean param1, jl param2, UiWidget param3, int param4) {
+        BitmapFont stackIn_22_0;
         String stackIn_22_1;
         int stackIn_22_2;
         int stackIn_22_3;
@@ -182,14 +182,14 @@ final class mk {
           if (this.field_k != null) {
             var6_int = param3.field_y + (param0 + this.field_f);
             if (param2.field_d == 1) {
-              var6_int = var6_int + (-this.field_k.field_z + param3.field_n) / 2;
+              var6_int = var6_int + (-this.field_k.fullWidth + param3.field_n) / 2;
             }
             var7 = this.field_j + (param3.field_i + param4);
             if (param2.field_a == 1) {
               var7 = var7 + (param3.field_w - this.field_k.field_u) / 2;
             }
             if (param2.field_d == 2) {
-              var6_int = var6_int + (param3.field_n - this.field_k.field_z);
+              var6_int = var6_int + (param3.field_n - this.field_k.fullWidth);
             }
             if (param2.field_a == 2) {
               var7 = var7 + (-this.field_k.field_u + param3.field_w);
@@ -227,7 +227,7 @@ final class mk {
             } else {
               stackIn_29_8 = 256;
             }
-            ((fm) (Object) stackIn_22_0).a(stackIn_22_1, stackIn_25_2, stackIn_28_3, stackIn_28_4, stackIn_28_5, stackIn_28_6, stackIn_28_7, stackIn_29_8, param2.field_d, param2.field_a, param2.field_f);
+            ((BitmapFont) (Object) stackIn_22_0).a(stackIn_22_1, stackIn_25_2, stackIn_28_3, stackIn_28_4, stackIn_28_5, stackIn_28_6, stackIn_28_7, stackIn_29_8, param2.field_d, param2.field_a, param2.field_f);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -250,7 +250,7 @@ final class mk {
         }
     }
 
-    final void a(int param0, int param1, int param2, jl param3, cf param4, mk param5) {
+    final void a(int param0, int param1, int param2, jl param3, UiWidget param4, mk param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;

@@ -3,7 +3,7 @@
  */
 final class a {
     static ri[][] field_a;
-    static th field_c;
+    static IntrusiveDeque field_c;
     static int field_b;
 
     public static void a(boolean param0) {
@@ -26,7 +26,7 @@ final class a {
         var2 = ZombieDawnMulti.field_E ? 1 : 0;
         pm.field_P = null;
         nj.field_f = false;
-        if (ch.field_e) {
+        if (IntrusiveDequeCursor.field_e) {
           h.field_L.c(false);
           if (param0 == -1) {
             return;
@@ -55,16 +55,16 @@ final class a {
 
     final static boolean a(int param0) {
         if (param0 >= -38) {
-          field_c = (th) null;
+          field_c = (IntrusiveDeque) null;
           return rn.field_f == null ? ro.field_L : true;
         }
         return rn.field_f == null ? ro.field_L : true;
     }
 
-    final static ja[] a(int param0, byte param1, ul param2, int param3) {
+    final static Sprite[] a(int param0, byte param1, ul param2, int param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        ja[] stackIn_4_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -103,7 +103,7 @@ final class a {
         try {
           param1 = ee.a('_', "", param1, -121);
           if (param2 > -71) {
-            field_c = (th) null;
+            field_c = (IntrusiveDeque) null;
           }
           var3 = qc.b((byte) -32, param0);
           stackIn_7_0 = (param1.indexOf(param0) != -1) || (param1.indexOf(var3) != -1);
@@ -129,6 +129,6 @@ final class a {
     }
 
     static {
-        field_c = new th();
+        field_c = new IntrusiveDeque();
     }
 }

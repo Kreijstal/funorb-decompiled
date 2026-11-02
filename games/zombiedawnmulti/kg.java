@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kg extends br {
+final class kg extends IntrusiveNode {
     static String field_i;
     static String field_f;
     static String field_m;
-    static ja field_j;
+    static Sprite field_j;
     static String field_l;
     byte[] field_h;
     static int field_g;
@@ -30,7 +30,7 @@ final class kg extends br {
     }
 
     final static void a(boolean param0, byte param1) {
-        k.a((byte) 122, param0);
+        PacketBuffer.a((byte) 122, param0);
         if (param1 < 97) {
           field_l = (String) null;
         }

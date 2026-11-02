@@ -36,7 +36,7 @@ final class ho extends nc {
         RuntimeException decompiledCaughtException = null;
         try {
           oq.field_u = param1.field_i.field_k;
-          dl.a(-91);
+          SocketConnector.a(-91);
           if (param0 >= -121) {
             ho.e(-95);
           }
@@ -101,7 +101,7 @@ final class ho extends nc {
           }
           if (param0.field_m > 0 &&
             param0.field_z != null) {
-            kq.a(0);
+            DelegatingCanvas.a(0);
           }
           tf.field_Eb = 0;
           var8 = 0;
@@ -265,7 +265,7 @@ final class ho extends nc {
           Throwable var2_ref2 = null;
           var7 = ZombieDawnMulti.field_E ? 1 : 0;
           try {
-            if (hk.field_a) {
+            if (PlayerLoadout.field_a) {
               return true;
             }
             try {
@@ -387,7 +387,7 @@ final class ho extends nc {
           var2_int = (wn.a(-125, wf.field_m << 3) * 24 >> 16) + (175 + (4 * on.a(wf.field_m << 7, -18924) >> 16));
           oo.f(0, 0, 640, 480, 0, var2_int);
           oo.h(5, 5, 635, 475);
-          gb.a(6, 3 + this.field_n, 469, 640 + (-this.field_n - this.field_n), (byte) 122);
+          GameKeyHandler.a(6, 3 + this.field_n, 469, 640 + (-this.field_n - this.field_n), (byte) 122);
           oo.c();
           vh.field_Lb.a(this.field_n, 136);
           vh.field_Lb.a(this.field_n, 6);
@@ -428,7 +428,7 @@ final class ho extends nc {
             stackIn_29_1 = 50;
             if (var9 == 0) {
               if (stackIn_29_0 == stackIn_29_1) {
-                var5 = ah.field_e.a(da.field_f);
+                var5 = ah.field_e.a(InflaterDecompressor.field_f);
                 var6 = ah.field_e.a(jm.field_l);
                 var7 = ah.field_e.a(jp.field_a);
                 stackIn_12_0 = (var5 > var6) ? var5 : var6;
@@ -503,7 +503,7 @@ final class ho extends nc {
         RuntimeException decompiledCaughtException = null;
         try {
           oq.field_u = param1.field_i.field_k;
-          dl.a(-91);
+          SocketConnector.a(-91);
           if (param0 >= -121) {
             ho.e(-95);
           }
