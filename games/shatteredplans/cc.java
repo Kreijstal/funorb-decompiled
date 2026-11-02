@@ -109,7 +109,7 @@ final class cc extends ml {
             }
           }
           if (pr.field_c.field_rb != 0) {
-            tc.field_G = new kh(pr.field_c.field_B, pr.field_c.field_N, pr.field_c.field_K, pr.field_c.field_mb, param1, ho.field_j, un.field_g, po.field_d, SpriteState.field_u, fk.field_i, gn.field_w, (String) null, 0L);
+            tc.field_G = new kh(pr.field_c.field_B, pr.field_c.field_N, pr.field_c.field_K, pr.field_c.field_mb, param1, ho.field_j, un.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w, (String) null, 0L);
           }
           var9 = sh.a(false, param2, tg.field_a, cr.field_c);
           if (var9 != null) {
@@ -131,12 +131,12 @@ final class cc extends ml {
         }
     }
 
-    final static bc a(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
+    final static Archive a(int param0, boolean param1, int param2, int param3, boolean param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
-          p var8 = null;
-          bc stackIn_15_0 = null;
+          CachedArchiveSource var8 = null;
+          Archive stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param3 != 12000) {
@@ -145,25 +145,25 @@ final class cc extends ml {
             var6 = null;
             var7 = null;
             if (null != dh.field_a.field_k) {
-              oq.field_g = new ej(dh.field_a.field_k, 5200, 0);
+              oq.field_g = new BufferedCacheFile(dh.field_a.field_k, 5200, 0);
               dh.field_a.field_k = null;
-              var6 = new ua(255, oq.field_g, new ej(dh.field_a.field_n, 12000, 0), 2097152);
+              var6 = new SectorCacheStore(255, oq.field_g, new BufferedCacheFile(dh.field_a.field_n, 12000, 0), 2097152);
             }
             if (oq.field_g != null) {
               if (tr.field_Eb == null) {
-                tr.field_Eb = new ej[dh.field_a.field_p.length];
+                tr.field_Eb = new BufferedCacheFile[dh.field_a.field_p.length];
               }
               if (tr.field_Eb[param2] == null) {
-                tr.field_Eb[param2] = new ej(dh.field_a.field_p[param2], 12000, 0);
+                tr.field_Eb[param2] = new BufferedCacheFile(dh.field_a.field_p[param2], 12000, 0);
                 dh.field_a.field_p[param2] = null;
               }
-              var7 = new ua(param2, oq.field_g, tr.field_Eb[param2], 2097152);
+              var7 = new SectorCacheStore(param2, oq.field_g, tr.field_Eb[param2], 2097152);
             }
-            var8 = lg.field_c.a(false, param2, (ua) (var6), (ua) (var7), param1);
+            var8 = lg.field_c.a(false, param2, (SectorCacheStore) (var6), (SectorCacheStore) (var7), param1);
             if (param5) {
               var8.c(255);
             }
-            stackIn_15_0 = new bc(var8, param4, param0);
+            stackIn_15_0 = new Archive(var8, param4, param0);
             return stackIn_15_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -197,17 +197,17 @@ final class cc extends ml {
           var3 = this.field_q.field_s.toLowerCase();
           var4 = param1.toLowerCase();
           if (var4.length() == 0) {
-            stackIn_6_0 = tj.field_b;
+            stackIn_6_0 = ArchiveSourceManager.field_b;
             return stackIn_6_0;
           }
           if (!gi.a(var4, -12076, var3)) {
-            stackIn_10_0 = tj.field_b;
+            stackIn_10_0 = ArchiveSourceManager.field_b;
             return stackIn_10_0;
           }
           if (!this.b(true, param1)) {
-            return p.field_g;
+            return CachedArchiveSource.field_g;
           }
-          stackIn_14_0 = tj.field_b;
+          stackIn_14_0 = ArchiveSourceManager.field_b;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -293,7 +293,7 @@ final class cc extends ml {
             return stackIn_6_0;
           }
           if (hb.a(var5, -31654)) {
-            stackIn_10_0 = ol.field_d;
+            stackIn_10_0 = WeightedLruCache.field_d;
             return stackIn_10_0;
           }
           if (IntrusiveDeque.a(var5, (byte) 24)) {
@@ -309,7 +309,7 @@ final class cc extends ml {
             return stackIn_22_0;
           }
           if (var6.length() <= 0) {
-            stackIn_37_0 = bc.field_l;
+            stackIn_37_0 = Archive.field_l;
             return stackIn_37_0;
           }
           if (va.a(var6, -1, var5)) {

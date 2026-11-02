@@ -5,9 +5,9 @@ import java.io.*;
 
 final class jo {
     static String field_e;
-    private bc field_f;
-    private bc field_h;
-    private ol field_b;
+    private Archive field_f;
+    private Archive field_h;
+    private WeightedLruCache field_b;
     static qr field_a;
     static String field_d;
     static String field_c;
@@ -90,11 +90,11 @@ final class jo {
         }
     }
 
-    final static void a(int param0, gh param1, boolean param2, int param3) {
+    final static void a(int param0, MusicTrack param1, boolean param2, int param3) {
         try {
           if (param0 != 32767) {
-            gh var5 = (gh) null;
-            jo.a(6, (gh) null, false, -66);
+            MusicTrack var5 = (MusicTrack) null;
+            jo.a(6, (MusicTrack) null, false, -66);
           }
           u.field_b.a(1000000, 256, (byte) -121, !param2 ? true : false, param3, param1);
         } catch (RuntimeException runtimeException) {
@@ -102,7 +102,7 @@ final class jo {
         }
     }
 
-    jo(int param0, bc param1, bc param2) {
+    jo(int param0, Archive param1, Archive param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -110,7 +110,7 @@ final class jo {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_b = new ol(64);
+        this.field_b = new WeightedLruCache(64);
         try {
           this.field_h = param2;
           this.field_f = param1;
@@ -144,8 +144,8 @@ final class jo {
     final si a(int param0, byte param1) {
         byte[] var4 = null;
         if (param1 != 100) {
-          gh var5 = (gh) null;
-          jo.a(71, (gh) null, true, -32);
+          MusicTrack var5 = (MusicTrack) null;
+          jo.a(71, (MusicTrack) null, true, -32);
         }
         si var3 = (si) (this.field_b.a((long)param0, param1 - 100));
         if (var3 != null) {

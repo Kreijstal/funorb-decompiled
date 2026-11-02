@@ -181,14 +181,14 @@ abstract class qs extends UiWidget implements ni {
           return;
         }
         if (wm.field_b <= 32) {
-          ak.c(-127, 0);
+          DiskArchiveRequest.c(-127, 0);
           return;
         }
         int var1 = wm.field_b % 32;
         if (var1 == 0) {
           var1 = 32;
         }
-        ak.c(126, -var1 + wm.field_b);
+        DiskArchiveRequest.c(126, -var1 + wm.field_b);
     }
 
     private final boolean a(int param0, UiWidget param1) {

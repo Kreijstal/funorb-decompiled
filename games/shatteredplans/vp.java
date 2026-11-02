@@ -5,7 +5,7 @@ class vp extends DualLinkNode {
     static int[] field_s;
     static String field_t;
     static int field_r;
-    static ar field_o;
+    static ArchiveNetworkClient field_o;
     vp field_p;
     vp field_q;
 
@@ -191,7 +191,7 @@ class vp extends DualLinkNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 511) {
-            stackIn_4_0 = bc.field_d.a(true, param0, "");
+            stackIn_4_0 = Archive.field_d.a(true, param0, "");
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;

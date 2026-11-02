@@ -19,16 +19,16 @@ final class an {
         }
         try {
           vd.field_j.a(0);
-          fp.field_b.a(0);
+          FrameTimer.field_b.a(0);
           var1 = eg.field_q.c((byte) -86);
           while (var1 != null) {
             var1.a(16);
             var1 = eg.field_q.b((byte) -107);
           }
-          var1Lifetime1 = sl.field_m.c((byte) -70);
+          var1Lifetime1 = CipherPacketBuffer.field_m.c((byte) -70);
           while (var1Lifetime1 != null) {
             var1Lifetime1.a(16);
-            var1Lifetime1 = sl.field_m.b((byte) -107);
+            var1Lifetime1 = CipherPacketBuffer.field_m.b((byte) -107);
           }
           po.field_b = 0;
         } catch (RuntimeException runtimeException) {

@@ -185,7 +185,7 @@ final class ProxySocketConnector extends SocketConnector {
         }
         try {
           jp.a(pc.field_r, il.field_cb, (byte) 121, oi.field_f);
-          mc.a(47, 0, param1, 0);
+          WeightedCacheEntry.a(47, 0, param1, 0);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "pa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -672,9 +672,9 @@ class PacketBuffer extends IntrusiveNode {
           hm.field_q = null;
           oq.field_a = param1;
           ei.field_e = -1;
-          ol.field_g = null;
+          WeightedLruCache.field_g = null;
           e.field_f = -1;
-          fk.field_k = -1;
+          ByteArrayNode.field_k = -1;
           kl.field_o = -1;
           md.a((byte) 73, 16777215, 8);
           md.a((byte) 112, 16777215, 11);
@@ -685,7 +685,7 @@ class PacketBuffer extends IntrusiveNode {
           tl.field_u = false;
           td.field_L = false;
           ImageProducerRasterBuffer.field_i = 0;
-          er.field_g = false;
+          WhirlpoolHasher.field_g = false;
           ph.field_g = false;
           VictoryChecker.field_j = false;
           se.field_k = false;

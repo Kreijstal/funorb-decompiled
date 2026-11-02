@@ -7,7 +7,7 @@ final class rl {
     static boolean[] field_b;
     static String field_d;
     private oq field_a;
-    static bc field_f;
+    static Archive field_f;
     private rl field_g;
 
     final void a(String param0, int param1, String param2) {
@@ -137,9 +137,9 @@ final class rl {
         field_e = null;
     }
 
-    final static bc a(int param0, boolean param1, int param2, int param3, boolean param4) {
+    final static Archive a(int param0, boolean param1, int param2, int param3, boolean param4) {
         if (param0 != -1) {
-          return (bc) null;
+          return (Archive) null;
         }
         return cc.a(param2, false, param3, param0 + 12001, param1, param4);
     }

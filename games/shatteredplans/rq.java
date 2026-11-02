@@ -8,7 +8,7 @@ final class rq implements iq {
     static int field_e;
     static qr field_b;
     private nq field_f;
-    static bc field_g;
+    static Archive field_g;
     static String field_h;
     private int field_a;
     private int field_d;
@@ -113,7 +113,7 @@ final class rq implements iq {
           var2 = 0;
           scanLoop1: while (true) {
             if (var2 < en.field_c) {
-              var3 = mc.field_s[var2] * cm.field_g[var2];
+              var3 = WeightedCacheEntry.field_s[var2] * cm.field_g[var2];
               var4 = hd.field_q[var2];
               var5 = new int[var3];
               stackIn_13_0 = 0;
@@ -125,7 +125,7 @@ final class rq implements iq {
                 var5[var6] = eo.field_fb[we.a(255, (int) var4[var6])];
                 var6++;
               }
-              var1[var2] = new Sprite(tk.field_y, eg.field_t, cf.field_H[var2], sj.field_a[var2], mc.field_s[var2], cm.field_g[var2], var5);
+              var1[var2] = new Sprite(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], cm.field_g[var2], var5);
               var2++;
               continue scanLoop1;
             }
@@ -189,7 +189,7 @@ final class rq implements iq {
           var5 = null;
           if (2 != po.field_b) {
             cg.field_A.field_s = false;
-            rj.field_p.field_z = ea.field_d;
+            rj.field_p.field_z = IsaacBackedRandom.field_d;
             if (po.field_b == 1) {
               d.field_a.field_Db.field_zb.field_z = km.field_X;
               if (var19 != 0) {
@@ -291,7 +291,7 @@ final class rq implements iq {
                         !bg.field_g) {
                         if (!ae.field_b) {
                           var17 = hp.field_m;
-                          var18 = re.a(tk.field_B, 4371, new String[]{var16});
+                          var18 = re.a(NetworkArchiveRequest.field_B, 4371, new String[]{var16});
                           var17.field_j.a(1, 8, var18);
                         }
                         var17Lifetime1 = hp.field_m;
@@ -312,14 +312,14 @@ final class rq implements iq {
                 }
               } else {
                 if (d.field_a.field_Fb.field_rb != 0) {
-                  lg.field_e = new jp(d.field_a.field_Fb.field_B, d.field_a.field_Fb.field_N, d.field_a.field_Fb.field_K, d.field_a.field_Fb.field_mb, km.field_A, h.field_v, SpriteState.field_u, SpriteState.field_u);
+                  lg.field_e = new jp(d.field_a.field_Fb.field_B, d.field_a.field_Fb.field_N, d.field_a.field_Fb.field_K, d.field_a.field_Fb.field_mb, km.field_A, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
                   ia.field_b = 0;
                 }
               }
               if (0 == d.field_a.field_yb.field_rb) {
                 break;
               }
-              lg.field_e = new jp(d.field_a.field_yb.field_B, d.field_a.field_yb.field_N, d.field_a.field_yb.field_K, d.field_a.field_yb.field_mb, IntrusiveDequeCursor.field_f, h.field_v, SpriteState.field_u, SpriteState.field_u);
+              lg.field_e = new jp(d.field_a.field_yb.field_B, d.field_a.field_yb.field_N, d.field_a.field_yb.field_K, d.field_a.field_yb.field_mb, IntrusiveDequeCursor.field_f, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
               ia.field_b = 1;
               break;
             }

@@ -66,11 +66,11 @@ abstract class le {
             if (em.field_h == 0) {
               return true;
             }
-            qq.c(false);
+            MusicVoice.c(false);
             return true;
           }
           if (cg.field_E.length() <= 0) {
-            qq.c(param2);
+            MusicVoice.c(param2);
           } else {
             var4_ref_String = cg.field_E.toString();
             if (DelegatingCanvas.a(var4_ref_String, 0)) {
@@ -80,7 +80,7 @@ abstract class le {
               var15 = (String) null;
               var14 = (String) null;
               md.a(2, go.field_K, 0, (String) null, (String) null, -16169);
-              qq.c(param2);
+              MusicVoice.c(param2);
               return true;
             }
             var5 = em.field_h;
@@ -91,11 +91,11 @@ abstract class le {
             if (id.a(-7019, var5) == 2) {
               gb.a((byte) 91, param0, 1, var5);
               ih.a(gi.field_a, 2, -1, em.field_h, var4_ref_String, param1);
-              qq.c(param2);
+              MusicVoice.c(param2);
               return true;
             }
             ih.a(gi.field_a, 2, -1, em.field_h, var4_ref_String, param1);
-            qq.c(param2);
+            MusicVoice.c(param2);
           }
           return true;
         }

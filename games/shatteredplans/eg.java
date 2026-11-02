@@ -12,7 +12,7 @@ final class eg extends IntrusiveNode {
     int field_n;
     static String[] field_x;
     int[] field_j;
-    static in field_q;
+    static SecondaryNodeHashTable field_q;
     int[] field_k;
     static int field_o;
     Territory field_m;
@@ -24,7 +24,7 @@ final class eg extends IntrusiveNode {
         if (param1 != 30888) {
           return (fb) null;
         }
-        return ea.field_b == null ? null : (fb) (ea.field_b.a(65280, (long)param0));
+        return IsaacBackedRandom.field_b == null ? null : (fb) (IsaacBackedRandom.field_b.a(65280, (long)param0));
     }
 
     public static void a(int param0) {
@@ -55,8 +55,8 @@ final class eg extends IntrusiveNode {
     final static void a(int param0, wj param1, boolean param2) {
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
-        sl var7 = js.field_f;
-        sl var8 = var7;
+        CipherPacketBuffer var7 = js.field_f;
+        CipherPacketBuffer var8 = var7;
         var8.h(param0, 255);
         var8.position = var8.position + 1;
         int var4 = var8.position;

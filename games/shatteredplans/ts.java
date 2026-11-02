@@ -133,8 +133,8 @@ class ts extends kg {
         try {
           long dupTemp$1 = 0L;
           IOException var2 = null;
-          sl var4 = null;
-          sl var5 = null;
+          CipherPacketBuffer var4 = null;
+          CipherPacketBuffer var5 = null;
           int stackIn_9_0 = 0;
           Throwable decompiledCaughtException = null;
           if (da.field_e == null) {
@@ -193,7 +193,7 @@ class ts extends kg {
             try {
               var2 = new java.net.URL(param0.getCodeBase(), "subscribe.ws");
               var3 = 96 / ((param1 + 19) / 53);
-              param0.getAppletContext().showDocument(jg.a(param0, false, var2), "_top");
+              param0.getAppletContext().showDocument(AudioService.a(param0, false, var2), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -244,7 +244,7 @@ class ts extends kg {
                 ProxySocketConnector.c(8421504);
               } else {
                 if (4 == ui.field_m) {
-                  eb.a(param0 - 6173);
+                  FullscreenFocusCanvas.a(param0 - 6173);
                 } else {
                   if (ui.field_m == 5) {
                     vi.c(param0 ^ 6333);
@@ -261,11 +261,11 @@ class ts extends kg {
           us.a(0, bj.field_L);
         }
         qn.a((byte) -120);
-        var1 = tk.field_C.c(np.field_d) + 20;
+        var1 = NetworkArchiveRequest.field_C.c(np.field_d) + 20;
         if (var1 < 80) {
           var1 = 80;
         }
-        nh.a(var1, tk.field_C, 8421504, 440, 10526880, -20 - var1 + 640, np.field_d, ci.field_o, 4210752, 20, -1, 5);
+        nh.a(var1, NetworkArchiveRequest.field_C, 8421504, 440, 10526880, -20 - var1 + 640, np.field_d, ArchiveIndex.field_o, 4210752, 20, -1, 5);
     }
 
     final void e(boolean param0) {
@@ -407,7 +407,7 @@ class ts extends kg {
         param0 += 30;
         if (param1 == -1) {
           param2 += 30;
-          ga.a(param2, -param2 + 480 >> 1, -param0 + 640 >> 1, (byte) -70, param0);
+          MidiPcmStream.a(param2, -param2 + 480 >> 1, -param0 + 640 >> 1, (byte) -70, param0);
           return;
         }
     }

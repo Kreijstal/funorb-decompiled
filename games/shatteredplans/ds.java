@@ -18,7 +18,7 @@ final class ds {
         field_a = null;
     }
 
-    final static Sprite a(boolean param0, bc param1, String param2, String param3) {
+    final static Sprite a(boolean param0, Archive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

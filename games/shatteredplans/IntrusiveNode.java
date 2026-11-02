@@ -14,9 +14,9 @@ class IntrusiveNode {
         int var2 = 94 % ((-61 - param1) / 58);
         param0 = param0 & 8191;
         if (param0 < 4096) {
-          return param0 >= 2048 ? -br.field_o[param0 - 2048] : br.field_o[2048 - param0];
+          return param0 >= 2048 ? -MusicPatch.field_o[param0 - 2048] : MusicPatch.field_o[2048 - param0];
         }
-        return 6144 <= param0 ? br.field_o[-6144 + param0] : -br.field_o[-param0 + 6144];
+        return 6144 <= param0 ? MusicPatch.field_o[-6144 + param0] : -MusicPatch.field_o[-param0 + 6144];
     }
 
     final static void b(int param0) {

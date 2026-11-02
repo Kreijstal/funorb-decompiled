@@ -90,14 +90,14 @@ final class pd extends hb {
         cm.field_g = null;
         if (param0 == 0) {
           cf.field_H = null;
-          mc.field_s = null;
+          WeightedCacheEntry.field_s = null;
           sj.field_a = null;
           eo.field_fb = null;
           return;
         }
         pd.b(-53);
         cf.field_H = null;
-        mc.field_s = null;
+        WeightedCacheEntry.field_s = null;
         sj.field_a = null;
         eo.field_fb = null;
     }

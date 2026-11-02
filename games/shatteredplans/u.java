@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class u {
-    static h field_b;
+    static MusicCrossfadeStream field_b;
     static int[] field_d;
     static int[] field_c;
     static int field_a;
@@ -27,7 +27,7 @@ final class u {
               IntrusiveDequeCursor.a(1, param0);
               return;
             }
-            if (null == in.field_g) {
+            if (null == SecondaryNodeHashTable.field_g) {
               fr.f((byte) -99);
               return;
             }
@@ -43,7 +43,7 @@ final class u {
             IntrusiveDequeCursor.a(1, param0);
             return;
           }
-          if (null == in.field_g) {
+          if (null == SecondaryNodeHashTable.field_g) {
             fr.f((byte) -99);
             return;
           }
@@ -123,7 +123,7 @@ final class u {
     final static int a(int param0) {
         lg.field_c.c(123);
         if (!vp.field_o.d(0)) {
-          return mh.b((byte) 115);
+          return IsaacRandom.b((byte) 115);
         }
         if (param0 < -28) {
           return 0;

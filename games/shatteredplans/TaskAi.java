@@ -776,7 +776,7 @@ final class TaskAi implements uj {
           var2Lifetime1++;
           var4_ref = (kl) (this.field_k.a((byte) -71));
         }
-        ak.a(var10, -43, this.field_e);
+        DiskArchiveRequest.a(var10, -43, this.field_e);
         return;
     }
 
@@ -849,9 +849,9 @@ final class TaskAi implements uj {
         stackIn_23_0 = so.field_v;
         stackIn_24_1 = (param0) && (!param2) && (IntrusiveDequeCursor.field_b);
         ((qr) (Object) stackIn_23_0).a(stackIn_24_1, param1 ^ 10210);
-        bc.field_g.field_d.f(false);
+        Archive.field_g.field_d.f(false);
         if (0 != vm.field_Ab.field_rb) {
-          s.field_d = true;
+          GzipInflater.field_d = true;
         }
         boolean decompiledFrameRemainder0 = true;
         if (gb.field_m.field_rb != 0) {

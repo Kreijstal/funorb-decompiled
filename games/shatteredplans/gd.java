@@ -16,7 +16,7 @@ final class gd {
     final static void a(int param0) {
         int var2 = 0;
         if (null == va.field_d) {
-          va.field_d = new Sprite[]{lg.a(0, qq.field_w[0]), lg.a(0, qq.field_w[1])};
+          va.field_d = new Sprite[]{lg.a(0, MusicVoice.field_w[0]), lg.a(0, MusicVoice.field_w[1])};
         }
         gf.b();
         int var1 = 240;
@@ -33,7 +33,7 @@ final class gd {
     }
 
     final static void a(int param0, int param1) {
-        sl var2 = js.field_f;
+        CipherPacketBuffer var2 = js.field_f;
         var2.h(param0, 255);
         var2.c(param1, (byte) -123);
         var2.c(0, (byte) -78);

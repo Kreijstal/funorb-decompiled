@@ -84,14 +84,14 @@ final class lh extends vd {
           field_E = (String) null;
           return;
         }
-        if (p.field_n) {
+        if (CachedArchiveSource.field_n) {
           if (param0 == 44) {
             return;
           }
           field_E = (String) null;
           return;
         }
-        jc.a(1, (byte) 127);
+        ArchiveRequest.a(1, (byte) 127);
         if (param0 == 44) {
           return;
         }

@@ -25,7 +25,7 @@ final class bs {
 
     final static void a(Sprite param0, int param1) {
         try {
-          ra.a(-127);
+          RandomAccessCacheFile.a(-127);
           param0.e();
           if (param1 < 74) {
             field_b = -100;

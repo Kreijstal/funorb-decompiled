@@ -149,7 +149,7 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final static bc a(int param0, boolean param1, boolean param2, boolean param3, boolean param4) {
+    final static Archive a(int param0, boolean param1, boolean param2, boolean param3, boolean param4) {
         if (!param3) {
           field_c = (String) null;
           return cc.a(!param2 ? 0 : 1, false, param0, 12000, param1, param4);

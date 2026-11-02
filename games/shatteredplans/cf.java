@@ -14,7 +14,7 @@ final class cf extends WidgetContainer implements bp {
     private kg[] field_E;
     static String field_I;
 
-    final static hh a(bc param0, int param1, bc param2, int param3, int param4) {
+    final static hh a(Archive param0, int param1, Archive param2, int param3, int param4) {
         RuntimeException var5 = null;
         Object stackIn_2_0 = null;
         hh stackIn_5_0 = null;
@@ -150,7 +150,7 @@ final class cf extends WidgetContainer implements bp {
         stackIn_12_8 = true;
         stackIn_12_9 = var2;
         stackIn_12_10 = 11;
-        stackIn_14_11 = (v.field_b) || (kc.field_d);
+        stackIn_14_11 = (v.field_b) || (MusicEnvelope.field_d);
         hg.a(stackIn_8_0, stackIn_9_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_12_5, stackIn_12_6, stackIn_12_7, stackIn_12_8, stackIn_12_9 != 0, stackIn_12_10, stackIn_14_11);
         if (sm.field_e &&
           cl.field_n % 50 == 0) {
@@ -163,9 +163,9 @@ final class cf extends WidgetContainer implements bp {
         if (param0 != 2) {
           field_F = (Sprite) null;
         }
-        if (s.field_d) {
+        if (GzipInflater.field_d) {
           js.field_f.h(10, param0 + 253);
-          s.field_d = false;
+          GzipInflater.field_d = false;
         }
         if (uc.field_B) {
           uc.a(320, mp.field_b.field_K, mp.field_b.field_q + mp.field_b.field_K, 240, 8, nd.field_i, true, mr.field_i, (byte) -87, 2, mr.field_i, mp.field_b, false, 8, 1);
@@ -229,10 +229,10 @@ final class cf extends WidgetContainer implements bp {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3) {
-        gs.a(param0, param3, param2, -77, cr.field_c, rc.field_l, tg.field_a);
+        NanoFrameTimer.a(param0, param3, param2, -77, cr.field_c, MusicVoiceMixer.field_l, tg.field_a);
         if (param1 != 8) {
-          bc var5 = (bc) null;
-          cf.a((bc) null, -64, (bc) null, 13, 77);
+          Archive var5 = (Archive) null;
+          cf.a((Archive) null, -64, (Archive) null, 13, 77);
         }
     }
 

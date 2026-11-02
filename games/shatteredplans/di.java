@@ -32,8 +32,8 @@ final class di extends IntrusiveNode {
             return false;
           }
           var2_long = pr.a(14274);
-          if (0 != jc.field_o &&
-            ar.field_b < 0) {
+          if (0 != ArchiveRequest.field_o &&
+            ArchiveNetworkClient.field_b < 0) {
             var4_ref_sk = (sk) (oe.field_h.d(0));
             if (var4_ref_sk != null &&
               var4_ref_sk.field_l < var2_long) {
@@ -45,8 +45,8 @@ final class di extends IntrusiveNode {
               }
               IterableNodeHashTable.field_e = tp.field_g;
               tp.field_g = kp.field_n;
-              kp.field_n = ej.field_e;
-              ej.field_e = var4_ref_sk.field_j;
+              kp.field_n = BufferedCacheFile.field_e;
+              BufferedCacheFile.field_e = var4_ref_sk.field_j;
               return true;
             }
           }
@@ -54,39 +54,39 @@ final class di extends IntrusiveNode {
             field_i = (Sprite[]) null;
           }
           while (true) {
-            if (ar.field_b < 0) {
+            if (ArchiveNetworkClient.field_b < 0) {
               sa.field_a.position = 0;
               if (!es.a(param1 ^ -73, 1)) {
                 return false;
               }
-              ar.field_b = sa.field_a.h((byte) 126);
+              ArchiveNetworkClient.field_b = sa.field_a.h((byte) 126);
               sa.field_a.position = 0;
-              rr.field_t = param0[ar.field_b];
+              rr.field_t = param0[ArchiveNetworkClient.field_b];
             }
             if (!uc.d((byte) -50)) {
               return false;
             }
-            if (jc.field_o == 0) {
+            if (ArchiveRequest.field_o == 0) {
               IterableNodeHashTable.field_e = tp.field_g;
               tp.field_g = kp.field_n;
-              kp.field_n = ej.field_e;
-              ej.field_e = ar.field_b;
-              ar.field_b = -1;
+              kp.field_n = BufferedCacheFile.field_e;
+              BufferedCacheFile.field_e = ArchiveNetworkClient.field_b;
+              ArchiveNetworkClient.field_b = -1;
               return true;
             }
-            var4 = jc.field_o;
+            var4 = ArchiveRequest.field_o;
             if (0.0 != aq.field_h) {
               var4 = (int)((double)var4 + na.field_u.nextGaussian() * aq.field_h);
               if (var4 < 0) {
                 var4 = 0;
               }
             }
-            var5 = new sk(var2_long + (long)var4, ar.field_b, new byte[rr.field_t]);
+            var5 = new sk(var2_long + (long)var4, ArchiveNetworkClient.field_b, new byte[rr.field_t]);
             for (var6 = 0; var6 < rr.field_t; var6++) {
               var5.field_h[var6] = sa.field_a.payload[var6];
             }
             oe.field_h.a((byte) -113, var5);
-            ar.field_b = -1;
+            ArchiveNetworkClient.field_b = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -117,7 +117,7 @@ final class di extends IntrusiveNode {
         RuntimeException var2_ref = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (sl.field_m == null) {
+          if (CipherPacketBuffer.field_m == null) {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
@@ -128,7 +128,7 @@ final class di extends IntrusiveNode {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (ve) (sl.field_m.a(65280, (long)var2.hashCode()));
+          var3 = (ve) (CipherPacketBuffer.field_m.a(65280, (long)var2.hashCode()));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Ab);
             var4 = ji.a(var7, true);
@@ -139,7 +139,7 @@ final class di extends IntrusiveNode {
               stackIn_18_0 = var3;
               return stackIn_18_0;
             }
-            var3 = (ve) (sl.field_m.d((byte) -116));
+            var3 = (ve) (CipherPacketBuffer.field_m.d((byte) -116));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -233,16 +233,16 @@ final class di extends IntrusiveNode {
         if (param0) {
           field_p = (boolean[]) null;
         }
-        if (!(bc.field_b <= 0) ||
+        if (!(Archive.field_b <= 0) ||
           !(ee.field_k <= 0)) {
           if (null != gn.field_y) {
             gn.field_y.c(am.field_xb.field_hb, 0);
           }
           stackIn_24_0 = am.field_xb;
-          stackIn_25_1 = (param1) && (!ti.field_e);
+          stackIn_25_1 = (param1) && (!IntrusiveNodeHashTable.field_e);
           ((qr) (Object) stackIn_24_0).b(stackIn_25_1, 123);
           stackIn_28_0 = IntrusiveDeque.field_g;
-          stackIn_29_1 = (param1) && (!ti.field_e);
+          stackIn_29_1 = (param1) && (!IntrusiveNodeHashTable.field_e);
           ((qr) (Object) stackIn_28_0).b(stackIn_29_1, 115);
         }
         Star.f((byte) 123);
@@ -363,13 +363,13 @@ final class di extends IntrusiveNode {
             var6 = (ve) (var4.a((byte) -71));
           }
           if (wg.field_a.field_Fb.field_rb != 0) {
-            lg.field_e = new jp(wg.field_a.field_Fb.field_B, wg.field_a.field_Fb.field_N, wg.field_a.field_Fb.field_K, wg.field_a.field_Fb.field_mb, PacketBuffer.field_l, h.field_v, SpriteState.field_u, SpriteState.field_u);
+            lg.field_e = new jp(wg.field_a.field_Fb.field_B, wg.field_a.field_Fb.field_N, wg.field_a.field_Fb.field_K, wg.field_a.field_Fb.field_mb, PacketBuffer.field_l, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
             ia.field_b = 2;
           }
           if (wg.field_a.field_yb.field_rb == 0) {
             return;
           }
-          lg.field_e = new jp(wg.field_a.field_yb.field_B, wg.field_a.field_yb.field_N, wg.field_a.field_yb.field_K, wg.field_a.field_yb.field_mb, Star.field_E, h.field_v, SpriteState.field_u, SpriteState.field_u);
+          lg.field_e = new jp(wg.field_a.field_yb.field_B, wg.field_a.field_yb.field_N, wg.field_a.field_yb.field_K, wg.field_a.field_yb.field_mb, Star.field_E, MusicCrossfadeStream.field_v, SpriteState.field_u, SpriteState.field_u);
           ia.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

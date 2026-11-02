@@ -22,9 +22,9 @@ final class lk extends kg {
     }
 
     private lk(String param0, ko param1) {
-        this(param0, qq.field_I.field_q, param1);
+        this(param0, MusicVoice.field_I.field_q, param1);
         try {
-          this.field_p = qq.field_I.field_a;
+          this.field_p = MusicVoice.field_I.field_a;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -33,7 +33,7 @@ final class lk extends kg {
     private lk(String param0, iq param1, ko param2) {
         super(param0, param1, param2);
         try {
-          this.field_p = qq.field_I.field_a;
+          this.field_p = MusicVoice.field_I.field_a;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "lk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

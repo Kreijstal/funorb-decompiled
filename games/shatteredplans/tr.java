@@ -27,7 +27,7 @@ final class tr extends ia {
     static IntrusiveDeque field_vb;
     private ArgbSprite field_Ib;
     int[] field_nb;
-    static ej[] field_Eb;
+    static BufferedCacheFile[] field_Eb;
     private Sprite[] field_xb;
     private ArgbSprite field_Ob;
     private int[] field_ub;
@@ -733,7 +733,7 @@ final class tr extends ia {
         if (!dp.field_t) {
           return;
         }
-        ua.field_f.a(param1, -20429);
+        SectorCacheStore.field_f.a(param1, -20429);
         var4 = mr.field_h.f(param2) ? 1 : 0;
         if (je.field_d != 0 &&
           var4 == 0) {
@@ -744,7 +744,7 @@ final class tr extends ia {
           mr.field_h.a(param0, param3, (byte) -108);
         }
         if (var4 != 0) {
-          ua.field_f.a(param1, -20429);
+          SectorCacheStore.field_f.a(param1, -20429);
         }
         var5 = mr.field_h.g(false) + mr.field_h.field_B;
         if (var5 > 640) {
@@ -821,7 +821,7 @@ final class tr extends ia {
             } else {
               stackIn_15_0 = this.field_Z[var6.field_p].field_g;
             }
-            qc.a(stackIn_15_0, 18117, this.field_D[var6.field_p], 160);
+            SocketArchiveNetworkClient.a(stackIn_15_0, 18117, this.field_D[var6.field_p], 160);
             var12 = new Player[var4.field_q.length];
             var27 = new int[var4.field_q.length];
             for (var14_int = 0; var14_int < var12.length; var14_int++) {
@@ -835,7 +835,7 @@ final class tr extends ia {
               stackIn_19_0[stackIn_19_1] = stackIn_20_2;
               var12[var14_int] = var4.field_q[var14_int];
             }
-            ak.a(var27, -65, var12);
+            DiskArchiveRequest.a(var27, -65, var12);
             var14 = new Player[var12.length];
             var15 = (-1 + var14.length) / 2;
             var14[var15] = var12[0];
@@ -1312,7 +1312,7 @@ final class tr extends ia {
           }
           var5 = stackIn_3_0;
           var5 = ui.a(var5, 0, -80, -(this.field_eb[param1.field_p] * 160 / param2) + 160);
-          qc.a(var5, 18117, this.field_D[param1.field_p], 160);
+          SocketArchiveNetworkClient.a(var5, 18117, this.field_D[param1.field_p], 160);
           if (this.field_T == -1) {
             this.a(param1, false);
           }
@@ -1499,7 +1499,7 @@ final class tr extends ia {
         int var4Lifetime2;
         int var4Lifetime3;
         int var4Lifetime4;
-        ra.a(-120);
+        RandomAccessCacheFile.a(-120);
         for (var2 = param0; this.field_ib.length > var2; var2++) {
           var3 = this.field_ib[var2].field_k;
           this.field_ib[var2].field_v = (Sprite) ((Object) new ArgbSprite(cf.field_F.field_o, cf.field_F.field_p));
@@ -2038,7 +2038,7 @@ final class tr extends ia {
         int[] var6 = null;
         int var7 = 0;
         int var8 = 0;
-        db var9 = null;
+        DualLinkDeque var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -2077,8 +2077,8 @@ final class tr extends ia {
           }
           var5 = stackIn_21_0;
           if (param1) {
-            var9 = (db) null;
-            tr.a((byte) 73, (db) null);
+            var9 = (DualLinkDeque) null;
+            tr.a((byte) 73, (DualLinkDeque) null);
           }
           stackIn_26_0 = !param1;
           var11 = qp.a(stackIn_26_0, this.field_Qb[param0.field_p]);
@@ -2086,12 +2086,12 @@ final class tr extends ia {
           var6 = var10;
           if (var6 != null) {
             if (this.field_z[var3_int] == 1) {
-              qc.a(((16711422 & var5) >> 1) + 16384 + ((var5 & 16579836) >> 2), 18117, var11, 192);
+              SocketArchiveNetworkClient.a(((16711422 & var5) >> 1) + 16384 + ((var5 & 16579836) >> 2), 18117, var11, 192);
             } else {
               if (this.field_z[var3_int] == 2) {
-                qc.a((var5 >> 1 & 8355711) + 4210752 + ((var5 & 16579836) >> 2), 18117, var11, 192);
+                SocketArchiveNetworkClient.a((var5 >> 1 & 8355711) + 4210752 + ((var5 & 16579836) >> 2), 18117, var11, 192);
               } else {
-                qc.a((9408399 & var5) << 1, 18117, var11, 128);
+                SocketArchiveNetworkClient.a((9408399 & var5) << 1, 18117, var11, 128);
               }
             }
             if (var4 == this.field_B &&
@@ -2160,13 +2160,13 @@ final class tr extends ia {
             rs.field_Cb.c(Integer.toString(this.field_eb[var3_int]), this.field_i[var3_int], this.field_J[var3_int] + 4, 16777215, -1);
             if (param0.field_L > 0 &&
               6 > param0.field_B) {
-              gf.b((this.field_i[var3_int] << 4) + em.field_c[0], (this.field_J[var3_int] << 4) + ul.field_Db[0], 50, 7, h.field_s);
+              gf.b((this.field_i[var3_int] << 4) + em.field_c[0], (this.field_J[var3_int] << 4) + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
               if (param0.field_L == 2) {
-                gf.b((this.field_i[var3_int] << 4) + em.field_c[1], ul.field_Db[1] + (this.field_J[var3_int] << 4), 50, 7, h.field_s);
+                gf.b((this.field_i[var3_int] << 4) + em.field_c[1], ul.field_Db[1] + (this.field_J[var3_int] << 4), 50, 7, MusicCrossfadeStream.field_s);
               }
               if (param0.field_L == 3) {
-                gf.b(em.field_c[2] + (this.field_i[var3_int] << 4), ul.field_Db[2] + (this.field_J[var3_int] << 4), 50, 7, h.field_s);
-                gf.b((this.field_i[var3_int] << 4) + em.field_c[3], (this.field_J[var3_int] << 4) + ul.field_Db[3], 50, 7, h.field_s);
+                gf.b(em.field_c[2] + (this.field_i[var3_int] << 4), ul.field_Db[2] + (this.field_J[var3_int] << 4), 50, 7, MusicCrossfadeStream.field_s);
+                gf.b((this.field_i[var3_int] << 4) + em.field_c[3], (this.field_J[var3_int] << 4) + ul.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
                 return;
               }
             }
@@ -2181,15 +2181,15 @@ final class tr extends ia {
             rs.field_Cb.c(param0.name, this.field_i[var3_int], this.field_J[var3_int] - 7 * this.field_n / 10 - 11, 16777215, -1);
             if (param0.field_L > 0 &&
               param0.field_B < 6) {
-              gf.b(em.field_c[0] + (this.field_i[var3_int] << 4), (this.field_J[var3_int] - (7 * this.field_n / 10 + 45) << 4) + ul.field_Db[0], 50, 7, h.field_s);
+              gf.b(em.field_c[0] + (this.field_i[var3_int] << 4), (this.field_J[var3_int] - (7 * this.field_n / 10 + 45) << 4) + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
               if (2 == param0.field_L) {
-                gf.b(em.field_c[1] + (this.field_i[var3_int] << 4), ul.field_Db[1] + (-45 + this.field_J[var3_int] - this.field_n * 7 / 10 << 4), 50, 7, h.field_s);
+                gf.b(em.field_c[1] + (this.field_i[var3_int] << 4), ul.field_Db[1] + (-45 + this.field_J[var3_int] - this.field_n * 7 / 10 << 4), 50, 7, MusicCrossfadeStream.field_s);
               }
               if (param0.field_L != 3) {
                 return;
               }
-              gf.b(em.field_c[2] + (this.field_i[var3_int] << 4), ul.field_Db[2] + (this.field_J[var3_int] + (-(this.field_n * 7 / 10) - 45) << 4), 50, 7, h.field_s);
-              gf.b((this.field_i[var3_int] << 4) + em.field_c[3], ul.field_Db[3] + (this.field_J[var3_int] - 7 * this.field_n / 10 - 45 << 4), 50, 7, h.field_s);
+              gf.b(em.field_c[2] + (this.field_i[var3_int] << 4), ul.field_Db[2] + (this.field_J[var3_int] + (-(this.field_n * 7 / 10) - 45) << 4), 50, 7, MusicCrossfadeStream.field_s);
+              gf.b((this.field_i[var3_int] << 4) + em.field_c[3], ul.field_Db[3] + (this.field_J[var3_int] - 7 * this.field_n / 10 - 45 << 4), 50, 7, MusicCrossfadeStream.field_s);
               return;
             }
           }
@@ -2568,7 +2568,7 @@ final class tr extends ia {
         try {
           if (this.field_Nb != this.field_wb) {
             this.field_Nb = this.field_wb;
-            ra.a(-122);
+            RandomAccessCacheFile.a(-122);
             var15 = new ArgbSprite(10, (int)(this.field_wb * 200.0));
             var15.e();
             for (var9 = 0; var9 < 10; var9++) {
@@ -2608,7 +2608,7 @@ final class tr extends ia {
             this.field_Cb = new ArgbSprite(var11Lifetime1 + 4, var11Lifetime1 / 10 + 8);
             this.field_K = new ArgbSprite((int)(4.0 + (double)var11Lifetime1 * 0.5), (int)(4.0 + rh.field_e * (double)var11Lifetime1));
             this.field_Ob = new ArgbSprite((int)(4.0 + (double)var11Lifetime1 * 0.5), (int)(4.0 + rh.field_e * (double)var11Lifetime1));
-            ra.a(-113);
+            RandomAccessCacheFile.a(-113);
             this.field_Cb.e();
             eo.a(true, 4, 4, (byte) 115, 200, var11Lifetime1, 0);
             this.field_K.e();
@@ -2621,7 +2621,7 @@ final class tr extends ia {
               this.field_Mb = new Sprite[13];
               this.field_Kb = new Sprite[13];
             }
-            ra.a(-125);
+            RandomAccessCacheFile.a(-125);
             for (var12 = 0; var12 < this.field_xb.length; var12++) {
               var13 = (int)(this.field_Jb * (double)ImageProducerRasterBuffer.field_k[var12].field_o);
               if (!(var13 >= 20 + UiWidget.field_t.field_w)) {
@@ -2831,7 +2831,7 @@ final class tr extends ia {
               }
               var8 = re.a(var8 / 2, 25, var6, var8, 0);
             }
-            qc.a(0, 18117, this.field_D[var7], 64);
+            SocketArchiveNetworkClient.a(0, 18117, this.field_D[var7], 64);
           }
           var4 = (es) (this.field_ab.a((byte) -71));
         }
@@ -3041,7 +3041,7 @@ final class tr extends ia {
                   var20 = var20 / var21;
                   var22 = 128;
                   if (!this.field_X ||
-                    !er.field_g) {
+                    !WhirlpoolHasher.field_g) {
                     stackIn_18_0 = this.field_p;
                     stackIn_18_1 = var8;
                     if (stackIn_18_0 == stackIn_18_1 ||
@@ -3334,13 +3334,13 @@ final class tr extends ia {
             var7++;
           }
           if (di.field_m == 0) {
-            sg.a(true, false, 0, kl.field_r, tk.field_C);
-            sg.a(true, true, 400, rk.field_h, tk.field_C);
+            sg.a(true, false, 0, kl.field_r, NetworkArchiveRequest.field_C);
+            sg.a(true, true, 400, rk.field_h, NetworkArchiveRequest.field_C);
           }
           fieldTemp$0 = di.field_m + 1;
           di.field_m = di.field_m + 1;
           if (500 == fieldTemp$0) {
-            jc.a(2, (byte) -61);
+            ArchiveRequest.a(2, (byte) -61);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3599,7 +3599,7 @@ final class tr extends ia {
         }
     }
 
-    final static hb a(byte param0, db param1) {
+    final static hb a(byte param0, DualLinkDeque param1) {
         RuntimeException var2 = null;
         hb stackIn_2_0 = null;
         dn stackIn_4_0 = null;

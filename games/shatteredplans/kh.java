@@ -159,8 +159,8 @@ final class kh extends qr {
             this.field_Cb.a(4, var28[2]);
             this.field_Hb = new qr[cb.field_j];
             for (var16 = 0; var16 < cb.field_j; var16++) {
-              if (null != eb.field_f[var16]) {
-                this.field_Hb[var16] = new qr(0L, param10, eb.field_f[var16]);
+              if (null != FullscreenFocusCanvas.field_f[var16]) {
+                this.field_Hb[var16] = new qr(0L, param10, FullscreenFocusCanvas.field_f[var16]);
                 this.field_Hb[var16].field_y = 0;
                 stackIn_14_0 = this.field_Hb[var16];
                 stackIn_15_1 = (param11 != null);
@@ -181,7 +181,7 @@ final class kh extends qr {
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_nb.c(s.field_a);
+            var17Lifetime3 = param6.field_nb.c(GzipInflater.field_a);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -220,7 +220,7 @@ final class kh extends qr {
               var17Lifetime5 = var18Lifetime4;
             }
             var18Lifetime5 = 0;
-            var18Lifetime5 = this.a(param6, var28[2], s.field_a, var16Lifetime2, 114, var18Lifetime5);
+            var18Lifetime5 = this.a(param6, var28[2], GzipInflater.field_a, var16Lifetime2, 114, var18Lifetime5);
             var18Lifetime5 = this.a((byte) -125, var28[2], this.field_Hb[13], var18Lifetime5, var16Lifetime2);
             var18Lifetime5 = this.a((byte) -126, var28[2], this.field_Hb[21], var18Lifetime5, var16Lifetime2);
             var18Lifetime5 = this.a((byte) -123, var28[2], this.field_Hb[11], var18Lifetime5, var16Lifetime2);

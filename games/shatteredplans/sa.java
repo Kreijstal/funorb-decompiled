@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sa {
-    static sl field_a;
+    static CipherPacketBuffer field_a;
     static String field_e;
     static String field_b;
     static String field_c;
@@ -75,9 +75,9 @@ final class sa {
 
     final static int a(int param0) {
         if (param0 != -27572) {
-          field_a = (sl) null;
+          field_a = (CipherPacketBuffer) null;
         }
-        return ho.field_a - db.field_f;
+        return ho.field_a - DualLinkDeque.field_f;
     }
 
     public static void b(int param0) {
@@ -93,7 +93,7 @@ final class sa {
 
     final static int a(int param0, int param1) {
         if (param1 >= -102) {
-          field_a = (sl) null;
+          field_a = (CipherPacketBuffer) null;
         }
         return 1 + (int)(((double)param0 - 50.0 * rh.field_d) / (rh.field_d * 150.0));
     }

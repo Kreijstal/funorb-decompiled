@@ -79,7 +79,7 @@ final class ch implements wr {
             if (0 <= var5) {
               var6 = or.a(true, t.field_c[var3_int], true);
               var4 = var4 + js.field_e;
-              var7 = -(var6 >> 1) + ol.field_e;
+              var7 = -(var6 >> 1) + WeightedLruCache.field_e;
               if (ek.a((uo.field_g << 1) + vh.field_b, param2, var7 - js.field_g, (byte) -100, var4, (js.field_g << 1) + var6, param1)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
@@ -99,7 +99,7 @@ final class ch implements wr {
         }
     }
 
-    final static Sprite a(bc param0, int param1, int param2, int param3) {
+    final static Sprite a(Archive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite stackIn_5_0 = null;
         Sprite stackIn_7_0 = null;
@@ -149,9 +149,9 @@ final class ch implements wr {
         return ne.field_l;
     }
 
-    final static Sprite[] a(int param0, byte param1, bc param2, int param3) {
+    final static Sprite[] a(int param0, byte param1, Archive param2, int param3) {
         RuntimeException var4 = null;
-        bc var5 = null;
+        Archive var5 = null;
         Object stackIn_4_0 = null;
         Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -160,8 +160,8 @@ final class ch implements wr {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 87) {
-            var5 = (bc) null;
-            ch.a((bc) null, 22, -122, 78);
+            var5 = (Archive) null;
+            ch.a((Archive) null, 22, -122, 78);
           }
           if (vd.a(param3, param2, param0, 2)) {
             stackIn_6_0 = rq.a(0);

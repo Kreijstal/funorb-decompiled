@@ -89,7 +89,7 @@ final class Player {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        ol.field_e = param0;
+        WeightedLruCache.field_e = param0;
         ri.field_O = param1;
         if (param2) {
           field_z = -11;

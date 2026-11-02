@@ -13,7 +13,7 @@ final class ve extends qr {
     qr field_Cb;
     static String field_yb;
 
-    final static String a(bc param0, int param1, String param2, String param3, int param4) {
+    final static String a(Archive param0, int param1, String param2, String param3, int param4) {
         RuntimeException var5 = null;
         String var6 = null;
         String stackIn_3_0 = null;
@@ -33,7 +33,7 @@ final class ve extends qr {
           }
           if (param4 != -14930) {
             var6 = (String) null;
-            ve.a((bc) null, -19, (String) null, (String) null, -86);
+            ve.a((Archive) null, -19, (String) null, (String) null, -86);
           }
           stackIn_7_0 = param3 + " - " + param0.c((byte) 36, param1) + "%";
           return stackIn_7_0;

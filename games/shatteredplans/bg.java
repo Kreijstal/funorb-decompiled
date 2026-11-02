@@ -82,7 +82,7 @@ final class bg {
         int var2 = (182 - IntrusiveDeque.field_a[0].field_z) / (param1 - 1);
         GameState.field_F = new Sprite(var2, 2);
         IntrusiveDeque.field_d = new Sprite(var2 + IntrusiveDeque.field_a[0].field_z / 4, 2);
-        ra.a(param0 + 2499);
+        RandomAccessCacheFile.a(param0 + 2499);
         GameState.field_F.e();
         gf.f(0, 0, GameState.field_F.field_z, 10790052);
         gf.f(0, 1, GameState.field_F.field_z, 16777215);

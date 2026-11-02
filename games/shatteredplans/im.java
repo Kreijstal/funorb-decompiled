@@ -17,7 +17,7 @@ final class im {
 
     final static void a(boolean param0, boolean param1) {
         if (param0) {
-          if (ol.a(-128)) {
+          if (WeightedLruCache.a(-128)) {
             param1 = false;
           }
           kq.a((byte) -57, param1);
@@ -25,7 +25,7 @@ final class im {
           return;
         }
         field_a = (String) null;
-        if (ol.a(-128)) {
+        if (WeightedLruCache.a(-128)) {
           param1 = false;
         }
         kq.a((byte) -57, param1);

@@ -45,8 +45,8 @@ final class vq {
             var18.field_l = param0.j(param3 ^ 120);
             var18.field_j = param0.a(16711680);
             var18.field_h = new byte[var18.field_l][][];
-            var18.field_n = new pb[var18.field_l];
-            var18.field_q = new pb[var18.field_l];
+            var18.field_n = new PlatformTask[var18.field_l];
+            var18.field_q = new PlatformTask[var18.field_l];
             var18.field_p = new int[var18.field_l];
             var18.field_m = new int[var18.field_l];
             var18.field_r = new int[var18.field_l];
@@ -125,7 +125,7 @@ final class vq {
             if (param3 != -3) {
               return;
             }
-            kc.field_b.a((byte) -113, var18);
+            MusicEnvelope.field_b.a((byte) -113, var18);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -155,7 +155,7 @@ final class vq {
     final static String a(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
-        sl var5 = null;
+        CipherPacketBuffer var5 = null;
         CharSequence var6 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
@@ -182,7 +182,7 @@ final class vq {
             stackIn_10_0 = tp.field_d;
             return stackIn_10_0;
           }
-          if (ti.a(param1, true)) {
+          if (IntrusiveNodeHashTable.a(param1, true)) {
             stackIn_13_0 = re.a(or.field_c, 4371, new String[]{param1});
             return stackIn_13_0;
           }
@@ -191,7 +191,7 @@ final class vq {
             return stackIn_17_0;
           }
           if (da.a(param0 - 30108, param1)) {
-            stackIn_21_0 = re.a(qq.field_N, 4371, new String[]{param1});
+            stackIn_21_0 = re.a(MusicVoice.field_N, 4371, new String[]{param1});
             return stackIn_21_0;
           }
           var5 = js.field_f;

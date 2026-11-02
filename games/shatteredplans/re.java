@@ -3,11 +3,11 @@
  */
 final class re {
     static int[] field_d;
-    private bc field_c;
-    private bc field_e;
+    private Archive field_c;
+    private Archive field_e;
     static qr[] field_g;
     static int field_b;
-    private ol field_f;
+    private WeightedLruCache field_f;
     static qr field_h;
     static int field_a;
 
@@ -179,7 +179,7 @@ final class re {
         field_h = null;
     }
 
-    re(int param0, bc param1, bc param2, wr param3) {
+    re(int param0, Archive param1, Archive param2, wr param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -189,7 +189,7 @@ final class re {
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_f = new ol(64);
+        this.field_f = new WeightedLruCache(64);
         try {
           this.field_e = param1;
           this.field_c = param2;

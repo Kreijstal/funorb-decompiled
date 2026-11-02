@@ -99,14 +99,14 @@ final class na {
           return;
         }
         try {
-          ga.field_L = rs.field_zb + uq.field_h;
+          MidiPcmStream.field_L = rs.field_zb + uq.field_h;
           rj.field_r = rs.field_zb + an.field_a;
           oq.field_i = new String[33];
           oq.field_i[14] = tm.field_o;
           oq.field_i[0] = wm.field_f;
           oq.field_i[7] = sn.field_b;
           oq.field_i[4] = lr.field_e;
-          oq.field_i[12] = ar.field_g;
+          oq.field_i[12] = ArchiveNetworkClient.field_g;
           oq.field_i[1] = km.field_a;
           oq.field_i[8] = cj.field_v;
           oq.field_i[5] = ro.field_e;
@@ -120,7 +120,7 @@ final class na {
           oq.field_i[15] = bf.field_a[0];
           oq.field_i[27] = fe.field_z;
           oq.field_i[21] = wd.field_Q;
-          oq.field_i[32] = ga.field_L;
+          oq.field_i[32] = MidiPcmStream.field_L;
           oq.field_i[19] = ul.field_Fb[1];
           oq.field_i[17] = bf.field_a[2];
           oq.field_i[28] = lm.field_a;
@@ -136,7 +136,7 @@ final class na {
           oq.field_i[18] = ul.field_Fb[0];
           oq.field_i[22] = rs.field_zb;
           jo.field_g[0] = ih.field_e;
-          jo.field_g[9] = in.field_a;
+          jo.field_g[9] = SecondaryNodeHashTable.field_a;
           jo.field_g[7] = rp.field_J;
           jo.field_g[11] = qe.field_l;
           jo.field_g[3] = tc.field_D;
@@ -174,7 +174,7 @@ final class na {
             w.field_J[0][var1_int] = Integer.toString(var1_int);
             ub.field_Db[0][var1_int] = be.field_i;
           }
-          ub.field_Db[4] = ua.field_c;
+          ub.field_Db[4] = SectorCacheStore.field_c;
           ub.field_Db[2] = tc.field_E;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "na.B(" + param0 + ')');

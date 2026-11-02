@@ -156,7 +156,7 @@ final class hl extends kg {
         int var13 = 0;
         int var14 = 0;
         int var15 = ShatteredPlansClient.field_F ? 1 : 0;
-        ra.a(-107);
+        RandomAccessCacheFile.a(-107);
         Sprite[] var16 = new Sprite[param1];
         Sprite[] var2 = var16;
         Sprite var3 = new Sprite(240, 120);
@@ -208,12 +208,12 @@ final class hl extends kg {
         var8 = this.field_G.c(param1 + 11730);
         if (pd.field_h != var8 &&
           lm.field_d != var8) {
-          if (tj.field_b == var8) {
+          if (ArchiveSourceManager.field_b == var8) {
             var13 = lp.field_w[2];
             var13.c(-(var13.field_z >> 1) + var5, var6 - (var13.field_w >> 1), 256);
             return;
           }
-          if (p.field_g != var8) {
+          if (CachedArchiveSource.field_g != var8) {
             return;
           }
           var12 = lp.field_w[1];

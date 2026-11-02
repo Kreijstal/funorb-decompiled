@@ -142,7 +142,7 @@ final class rp extends kg {
         mj stackIn_66_0 = null;
         boolean stackIn_67_1 = false;
         RuntimeException decompiledCaughtException = null;
-        sl var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         long var3_long = 0L;
@@ -274,10 +274,10 @@ final class rp extends kg {
             }
             if (8 == var2) {
               var3 = ((PacketBuffer) ((Object) var1)).f(-20976);
-              var4 = (fb) (ea.field_b.a(65280, (long)var3));
+              var4 = (fb) (IsaacBackedRandom.field_b.a(65280, (long)var3));
               if (var4 == null) {
                 var4 = new fb(em.field_k);
-                ea.field_b.a((long)var3, var4, true);
+                IsaacBackedRandom.field_b.a((long)var3, var4, true);
               }
               mi.a((byte) -89, var4, var1, true);
               ei.a(0, var4);
@@ -286,7 +286,7 @@ final class rp extends kg {
             if (9 == var2) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).f(-20976);
               var4_int = ((PacketBuffer) ((Object) var1)).j(-98);
-              var32 = (fb) (ea.field_b.a(65280, (long)var3Lifetime4));
+              var32 = (fb) (IsaacBackedRandom.field_b.a(65280, (long)var3Lifetime4));
               if (var32 == null) {
                 return;
               }
@@ -313,7 +313,7 @@ final class rp extends kg {
               if (var2 == 13) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).f(-20976);
                 var4_intLifetime1 = ((PacketBuffer) ((Object) var1)).j(-60);
-                var30_ref = (fb) (ea.field_b.a(65280, (long)var3Lifetime5));
+                var30_ref = (fb) (IsaacBackedRandom.field_b.a(65280, (long)var3Lifetime5));
                 if (var30_ref == null) {
                   return;
                 }
@@ -433,7 +433,7 @@ final class rp extends kg {
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).f(-20976);
-            var18_ref = (fb) (ea.field_b.a(65280, (long)var3Lifetime6));
+            var18_ref = (fb) (IsaacBackedRandom.field_b.a(65280, (long)var3Lifetime6));
             var24 = var18_ref;
             if (var24 == null) {
               return;

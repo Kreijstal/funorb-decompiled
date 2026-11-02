@@ -186,7 +186,7 @@ class hs implements fo {
         }
     }
 
-    final static void a(sl param0, byte param1) {
+    final static void a(CipherPacketBuffer param0, byte param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -235,7 +235,7 @@ class hs implements fo {
           var22 = null;
           var12 = ShatteredPlansClient.field_F ? 1 : 0;
           try {
-            var13 = (eq) (kc.field_b.d(0));
+            var13 = (eq) (MusicEnvelope.field_b.d(0));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -491,8 +491,8 @@ class hs implements fo {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var3 = null;
-          if (mh.field_h != null) {
-            var4 = mh.field_h.length;
+          if (IsaacRandom.field_h != null) {
+            var4 = IsaacRandom.field_h.length;
             var14 = new int[var4];
             var11 = var14;
             var10 = var11;
@@ -562,7 +562,7 @@ class hs implements fo {
             stackIn_39_0 = this.field_f[var7_intLifetime3];
             if (stackIn_39_0 != null) {
               if (this.field_f[var7_intLifetime3] != SocketConnector.field_b) {
-                this.field_f[var7_intLifetime3].name = mh.field_h[((int[]) (var3))[this.field_f[var7_intLifetime3].field_p]];
+                this.field_f[var7_intLifetime3].name = IsaacRandom.field_h[((int[]) (var3))[this.field_f[var7_intLifetime3].field_p]];
                 var6Lifetime1[this.field_f[var7_intLifetime3].field_p] = this.field_f[var7_intLifetime3];
               } else {
                 this.field_f[var7_intLifetime3] = null;
@@ -1188,8 +1188,8 @@ class hs implements fo {
 
     public static void b(int param0) {
         if (param0 != 0) {
-          sl var2 = (sl) null;
-          hs.a((sl) null, (byte) 120);
+          CipherPacketBuffer var2 = (CipherPacketBuffer) null;
+          hs.a((CipherPacketBuffer) null, (byte) 120);
         }
         field_i = null;
         field_j = null;

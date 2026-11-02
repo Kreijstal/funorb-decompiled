@@ -145,7 +145,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
           if (param0) {
             field_P = (String) null;
           }
-          if (tj.field_b == var4) {
+          if (ArchiveSourceManager.field_b == var4) {
             return false;
           }
           if (var4 == pd.field_h) {
@@ -262,8 +262,8 @@ final class aa extends WidgetContainer implements op, bp, dl {
         int var1 = 1;
         this.field_K = new lk("", (ko) null, var1 != 0);
         this.field_E = new kg(qn.field_e, (ko) null);
-        this.field_O = new kg(rn.field_a, (ko) null);
-        this.field_Q.field_v = ol.field_i;
+        this.field_O = new kg(DiskCacheWorker.field_a, (ko) null);
+        this.field_Q.field_v = WeightedLruCache.field_i;
         this.field_F.field_v = j.field_p;
         this.field_M.field_v = sf.field_h;
         this.field_J.field_v = wf.field_k;
@@ -293,7 +293,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
         var3 = var3 + this.a(IntrusiveDequeCursor.field_i, 21760, this.field_F, var3, 170);
         var3 = var3 + (5 + this.a(127, 170, var3, this.field_M, "", ec.field_u, 20));
         var3 = var3 + this.a(co.field_t, 21760, this.field_J, var3, 170);
-        var3 = var3 + (5 + this.a(170, ab.field_a, var3, (byte) -127, this.field_H, qq.field_l));
+        var3 = var3 + (5 + this.a(170, ab.field_a, var3, (byte) -127, this.field_H, MusicVoice.field_l));
         var3 = var3 + (this.a(170, rf.field_m, var3, (byte) -128, this.field_Q, tr.field_zb) + 5);
         var3 = var3 + this.a(vl.field_m, this.field_L, var3, (byte) -123, 170);
         pg var4 = new pg(46, var3, -90 + this.field_x, 25, this.field_K, true, -120 + this.field_x, 5, mf.field_x, 11579568, fe.field_E);
@@ -479,7 +479,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
           return 294;
         }
         if (param0 == 5) {
-          var8 = er.field_n;
+          var8 = WhirlpoolHasher.field_n;
           var6Lifetime3 = wk.a(-9615, wg.field_e.a(5607, var8), rs.field_Cb, new int[]{var4 - 80});
           var5 = var5 + (var3 * (3 + 4 * var6Lifetime3) >> 2);
           var9 = ri.field_N;
@@ -497,7 +497,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
         if (param0 == 6) {
           var16 = da.field_a;
           var6Lifetime4 = wk.a(-9615, wg.field_e.a(5607, var16), rs.field_Cb, new int[]{-80 + var4});
-          var17 = er.field_l;
+          var17 = WhirlpoolHasher.field_l;
           var5 = var5 + (var3 * (3 + 4 * var6Lifetime4) >> 2);
           var6Lifetime4Lifetime1 = wk.a(param1 ^ 9672, wg.field_e.a(param1 ^ -5538, var17), rs.field_Cb, new int[]{var4 - 80});
           var18 = fr.field_F;
@@ -533,7 +533,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
           var5 = var5 + ((4 * var6Lifetime6Lifetime1 + 3) * var3 >> 2);
           var13 = jb.field_f;
           var6Lifetime6Lifetime2 = wk.a(-9615, wg.field_e.a(5607, var13), rs.field_Cb, new int[]{var4 - 40});
-          var14 = ar.field_o;
+          var14 = ArchiveNetworkClient.field_o;
           var5 = var5 + ((4 * var6Lifetime6Lifetime2 + 3) * var3 >> 2);
           var6Lifetime6Lifetime3 = wk.a(param1 ^ 9672, wg.field_e.a(5607, var14), rs.field_Cb, new int[]{-40 + var4});
           var5 = var5 + var6Lifetime6Lifetime3 * var3;
@@ -681,7 +681,7 @@ final class aa extends WidgetContainer implements op, bp, dl {
         RuntimeException var6 = null;
         try {
           if (this.field_O == param0) {
-            ol.b((byte) -120);
+            WeightedLruCache.b((byte) -120);
           } else {
             if (param0 == this.field_E) {
               discarded$1 = this.d(false);

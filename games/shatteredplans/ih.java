@@ -11,11 +11,11 @@ final class ih {
     static String field_e;
 
     final static void a(String param0, int param1, int param2, int param3, String param4, int param5) {
-        sl var8 = null;
+        CipherPacketBuffer var8 = null;
         int var7 = 0;
         try {
           var8 = js.field_f;
-          sl var6 = var8;
+          CipherPacketBuffer var6 = var8;
           var8.h(param5, 255);
           var8.position = var8.position + 1;
           var7 = var8.position;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lo extends Territory {
-    private db field_z;
+    private DualLinkDeque field_z;
     static String field_A;
     static int field_B;
 
@@ -14,13 +14,13 @@ final class lo extends Territory {
         this.field_w = new int[4];
     }
 
-    final static br a(bc param0, byte param1, int param2) {
+    final static MusicPatch a(Archive param0, byte param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         byte[] var5 = null;
         Object stackIn_2_0 = null;
-        br stackIn_4_0 = null;
+        MusicPatch stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -30,11 +30,11 @@ final class lo extends Territory {
           var5 = param0.a(false, param2);
           var3 = var5;
           if (var5 != null) {
-            stackIn_4_0 = new br(var5);
+            stackIn_4_0 = new MusicPatch(var5);
             return stackIn_4_0;
           }
           stackIn_2_0 = null;
-          return (br) (stackIn_2_0);
+          return (MusicPatch) (stackIn_2_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -53,8 +53,8 @@ final class lo extends Territory {
         if (param0 == 18229) {
           return (Star) (this.field_z.c(-127));
         }
-        bc var3 = (bc) null;
-        lo.a((bc) null, (byte) -92, -64);
+        Archive var3 = (Archive) null;
+        lo.a((Archive) null, (byte) -92, -64);
         return (Star) (this.field_z.c(-127));
     }
 
@@ -79,7 +79,7 @@ final class lo extends Territory {
     lo(Player param0, Star param1) {
         super(param0, param1);
         try {
-          this.field_z = new db();
+          this.field_z = new DualLinkDeque();
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "lo.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -119,7 +119,7 @@ final class lo extends Territory {
         if (param0 == -23410) {
           return (Star) (this.field_z.b(32));
         }
-        this.field_z = (db) null;
+        this.field_z = (DualLinkDeque) null;
         return (Star) (this.field_z.b(32));
     }
 

@@ -76,11 +76,11 @@ final class fa extends go implements ki {
         }
         tg.field_c.a(640, 120, (byte) 66, param0, tm.field_h);
         if (param1 <= -35) {
-          qc.a(pc.field_m - 24, 0, tg.field_a, 3, 640, 5, qo.field_b);
+          SocketArchiveNetworkClient.a(pc.field_m - 24, 0, tg.field_a, 3, 640, 5, qo.field_b);
           return;
         }
         fa.a(-2, (byte) -122);
-        qc.a(pc.field_m - 24, 0, tg.field_a, 3, 640, 5, qo.field_b);
+        SocketArchiveNetworkClient.a(pc.field_m - 24, 0, tg.field_a, 3, 640, 5, qo.field_b);
     }
 
     public static void l(int param0) {

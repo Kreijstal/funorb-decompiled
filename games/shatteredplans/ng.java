@@ -5,7 +5,7 @@ final class ng {
     static String field_b;
     static int[] field_a;
 
-    final static boolean a(sl param0, byte param1) {
+    final static boolean a(CipherPacketBuffer param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;

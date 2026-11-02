@@ -7,7 +7,7 @@ final class hg extends ka {
     static char field_p;
     static ds field_u;
     static String field_s;
-    static ap field_q;
+    static PcmPlayerService field_q;
 
     hg(GameState param0, Player param1, mn param2) {
         super(param0, param1, param2, 6);
@@ -84,7 +84,7 @@ final class hg extends ka {
               stackIn_33_0 = -1;
               return stackIn_33_0;
             }
-            var8 = lc.a(param1 + 12330, (1 << this.field_g.field_r) - 1 ^ this.field_g.field_w);
+            var8 = ArchiveSource.a(param1 + 12330, (1 << this.field_g.field_r) - 1 ^ this.field_g.field_w);
             if (var8 * var6 < var7 &&
               this.field_g.field_D[this.field_n.field_x] > this.field_g.field_D[var4_int] * var8) {
               stackIn_38_0 = 4;
@@ -232,7 +232,7 @@ final class hg extends ka {
         }
         var2 = this.field_g.field_m[this.field_g.field_r - 1];
         if (param0 != -63) {
-          field_q = (ap) null;
+          field_q = (PcmPlayerService) null;
         }
         var3 = this.field_g.field_D[var2];
         for (var4 = 0; var4 < this.field_g.field_r; var4++) {

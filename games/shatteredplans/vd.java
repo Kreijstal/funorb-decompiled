@@ -108,7 +108,7 @@ class vd extends IntrusiveNode {
         return stackIn_18_0;
     }
 
-    final static boolean a(int param0, bc param1, int param2, int param3) {
+    final static boolean a(int param0, Archive param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -315,7 +315,7 @@ class vd extends IntrusiveNode {
           vd.a((byte) 6);
         }
         ff.field_u = 2147483647;
-        s.field_e = -2147483648;
+        GzipInflater.field_e = -2147483648;
         us.field_b = -2147483648;
         ef.field_a = 2147483647;
     }
@@ -365,8 +365,8 @@ class vd extends IntrusiveNode {
           field_r = null;
           return;
         }
-        bc var2 = (bc) null;
-        vd.a(40, (bc) null, 88, 85);
+        Archive var2 = (Archive) null;
+        vd.a(40, (Archive) null, 88, 85);
         field_q = null;
         field_j = null;
         field_r = null;
@@ -385,11 +385,11 @@ class vd extends IntrusiveNode {
     final static void d(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        sl var1 = null;
+        CipherPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
-        bc var4 = null;
+        Archive var4 = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var1 = js.field_f;
@@ -402,8 +402,8 @@ class vd extends IntrusiveNode {
             js.field_f.b(-var2 + var1.position, (byte) 118);
           }
           if (param0 != 2147483647) {
-            var4 = (bc) null;
-            vd.a(0, (bc) null, -70, 78);
+            var4 = (Archive) null;
+            vd.a(0, (Archive) null, -70, 78);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

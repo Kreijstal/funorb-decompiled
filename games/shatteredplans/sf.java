@@ -9,7 +9,7 @@ final class sf {
     sf field_b;
     static String field_h;
     static String field_a;
-    static gh field_d;
+    static MusicTrack field_d;
 
     public static void a(byte param0) {
         field_f = null;

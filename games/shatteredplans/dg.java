@@ -63,7 +63,7 @@ final class dg extends qr {
           var17.field_y = 1;
           this.field_xb = new qr(0L, param2);
           var8 = new qr(0L, param3);
-          var9 = new qr(0L, param3, rn.field_g);
+          var9 = new qr(0L, param3, DiskCacheWorker.field_g);
           var9.field_y = 1;
           var10 = 50;
           var11 = 0;

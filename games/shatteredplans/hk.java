@@ -3,7 +3,7 @@
  */
 final class hk extends il {
     static int[] field_ob;
-    static gh field_nb;
+    static MusicTrack field_nb;
     static String field_pb;
 
     final void b(UiWidget param0, int param1) {

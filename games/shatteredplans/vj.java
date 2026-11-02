@@ -22,9 +22,9 @@ final class vj extends qs {
         int var3 = 0;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (s.field_c == -1 &&
+          if (GzipInflater.field_c == -1 &&
             cb.field_n == -1) {
-            s.field_c = pd.field_k;
+            GzipInflater.field_c = pd.field_k;
             cb.field_n = bb.field_b;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -66,7 +66,7 @@ final class vj extends qs {
               }
             }
             rs.field_Fb = cb.field_n;
-            ra.field_g = s.field_c;
+            RandomAccessCacheFile.field_g = GzipInflater.field_c;
           }
           GameKeyHandler.field_d = param0;
           if (!sc.field_q &&
@@ -74,9 +74,9 @@ final class vj extends qs {
             r.field_d) {
             rq.field_e = 0;
             rs.field_Fb = cb.field_n;
-            ra.field_g = s.field_c;
+            RandomAccessCacheFile.field_g = GzipInflater.field_c;
           }
-          s.field_c = -1;
+          GzipInflater.field_c = -1;
           if (param1 != 0) {
             field_F = (int[]) null;
           }
@@ -131,7 +131,7 @@ final class vj extends qs {
         if (!l.field_g.a(-1)) {
           return jh.field_v + " - " + l.field_g.d(100) + "%";
         }
-        return ea.field_d;
+        return IsaacBackedRandom.field_d;
     }
 
     public static void f(byte param0) {

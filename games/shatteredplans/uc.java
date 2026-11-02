@@ -123,7 +123,7 @@ final class uc extends vd {
             stackIn_2_0 = null;
             return (hh) (stackIn_2_0);
           }
-          var2 = new hh(param0, cf.field_H, sj.field_a, mc.field_s, cm.field_g, hd.field_q);
+          var2 = new hh(param0, cf.field_H, sj.field_a, WeightedCacheEntry.field_s, cm.field_g, hd.field_q);
           pd.a(param1 ^ param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;

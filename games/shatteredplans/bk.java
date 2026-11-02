@@ -18,7 +18,7 @@ final class bk {
           if (param0 != -50) {
             bk.a((byte) -35);
           }
-          var1 = (eq) (kc.field_b.d(0));
+          var1 = (eq) (MusicEnvelope.field_b.d(0));
           if (null == var1) {
             return false;
           }
@@ -79,13 +79,13 @@ final class bk {
                 nm.field_a = stackIn_11_0;
               }
               var5_int++;
-              if (er.field_i < var5_int) {
+              if (WhirlpoolHasher.field_i < var5_int) {
                 if (gf.field_k <= var5_int) {
                   stackIn_19_0 = -1 + gf.field_k;
                 } else {
                   stackIn_19_0 = var5_int;
                 }
-                er.field_i = stackIn_19_0;
+                WhirlpoolHasher.field_i = stackIn_19_0;
               }
               var3_int++;
               continue;

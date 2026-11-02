@@ -132,7 +132,7 @@ final class vl extends hs {
         }
     }
 
-    final static void a(byte param0, bc param1, bc param2, bc param3) {
+    final static void a(byte param0, Archive param1, Archive param2, Archive param3) {
         nk[] var14 = null;
         int var11_int = 0;
         Sprite var15 = null;
@@ -150,7 +150,7 @@ final class vl extends hs {
         lp.field_w = va.a("validation", 0, "commonui", param1);
         mf.field_x = (nq) ((Object) ri.a("arezzo12", "commonui", param1, param2, (byte) -17));
         gn.field_u = (nq) ((Object) ri.a("arezzo14", "commonui", param1, param2, (byte) 90));
-        sl.field_p = (nq) ((Object) ri.a("arezzo14bold", "commonui", param1, param2, (byte) 111));
+        CipherPacketBuffer.field_p = (nq) ((Object) ri.a("arezzo14bold", "commonui", param1, param2, (byte) 111));
         Sprite var17 = new Sprite(param3.a(true, "", "button.gif"), (java.awt.Component) ((Object) tm.field_i));
         GameApplet.a("commonui", -108, param1, "dropdown");
         nk[] var5 = tp.a("commonui", param1, "screen_options", (byte) -118);
@@ -214,7 +214,7 @@ final class vl extends hs {
         t var6 = null;
         int var7 = 0;
         int var8 = 0;
-        bc var9 = null;
+        Archive var9 = null;
         int[] var10 = null;
         int var11 = 0;
         int[] var12 = null;
@@ -227,12 +227,12 @@ final class vl extends hs {
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0) {
-            var9 = (bc) null;
-            vl.a((byte) 49, (bc) null, (bc) null, (bc) null);
+            var9 = (Archive) null;
+            vl.a((byte) 49, (Archive) null, (Archive) null, (Archive) null);
           }
           var3 = null;
-          if (null != mh.field_h) {
-            var4_int = mh.field_h.length;
+          if (null != IsaacRandom.field_h) {
+            var4_int = IsaacRandom.field_h.length;
             var14 = new int[var4_int];
             var12 = var14;
             var10 = var12;
@@ -257,7 +257,7 @@ final class vl extends hs {
           while (this.field_f.length > var11) {
             if (ac.field_t[var11]) {
               var4[var5Lifetime1] = this.a(var11, this.field_c, this.field_b, -8, var5Lifetime1);
-              var4[var5Lifetime1].name = mh.field_h[((int[]) (var3))[var5Lifetime1]];
+              var4[var5Lifetime1].name = IsaacRandom.field_h[((int[]) (var3))[var5Lifetime1]];
               if (var5Lifetime1 == 36) {
                 var4[var5Lifetime1].name = "SOL";
               }

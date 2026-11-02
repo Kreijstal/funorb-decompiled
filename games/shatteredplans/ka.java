@@ -6,7 +6,7 @@ class ka implements uj {
     static String field_m;
     int field_k;
     Player field_n;
-    static bc field_e;
+    static Archive field_e;
     static boolean field_a;
     static String field_f;
     int[] field_b;
@@ -55,8 +55,8 @@ class ka implements uj {
             if (param2 != 0) {
               var9_int = param3[var8];
               if (0 != u.field_d[var9_int]) {
-                if (0 != ol.field_a[var9_int]) {
-                  var10_int = ol.field_a[var9_int] * var6 / param1;
+                if (0 != WeightedLruCache.field_a[var9_int]) {
+                  var10_int = WeightedLruCache.field_a[var9_int] * var6 / param1;
                   if (0 != var10_int) {
                     if (var10_int > param2) {
                       var10_int = param2;
@@ -1012,7 +1012,7 @@ class ka implements uj {
 
     final static void a(int param0, int param1) {
         if (param0 != 7321) {
-          field_e = (bc) null;
+          field_e = (Archive) null;
         }
     }
 
@@ -1020,7 +1020,7 @@ class ka implements uj {
         int var2 = 0;
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         for (var2 = 0; var2 < this.field_o; var2++) {
-          ol.field_a[var2] = 0;
+          WeightedLruCache.field_a[var2] = 0;
           ue.field_e[var2] = 0;
           wb.field_b[var2] = 0;
           ja.field_i[var2] = 0;
@@ -1992,7 +1992,7 @@ class ka implements uj {
             var5 = param1;
           }
           if (this.a(param0, param2 ^ -5932) >= ei.field_d[var4_int]) {
-            ol.field_a[var4_int] = var5;
+            WeightedLruCache.field_a[var4_int] = var5;
             var6 = this.a(0, false, var5, param0);
             if (var5 < var6) {
               throw new RuntimeException();
@@ -2081,7 +2081,7 @@ class ka implements uj {
     public final void a(boolean param0, int param1) {
         this.field_l = param0 ? true : false;
         if (param1 != -6861) {
-          field_e = (bc) null;
+          field_e = (Archive) null;
         }
     }
 
@@ -2211,7 +2211,7 @@ class ka implements uj {
             var8 != 0) {
             if (cq.field_E >= var8 &&
               var8 <= param0 &&
-              ol.field_a[var7] != 0) {
+              WeightedLruCache.field_a[var7] != 0) {
               var9 = this.field_g.field_g.field_e[var7];
               var10 = (mg) (var9.field_s.c(-128));
               while (var10 != null) {

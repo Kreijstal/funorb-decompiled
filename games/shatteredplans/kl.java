@@ -4,7 +4,7 @@
 final class kl extends wf {
     static int field_t;
     static int field_o;
-    static bc field_s;
+    static Archive field_s;
     static Sprite[] field_q;
     boolean field_p;
     static String field_r;

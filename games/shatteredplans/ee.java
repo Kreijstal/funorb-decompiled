@@ -47,7 +47,7 @@ final class ee extends ms {
           if (!param1) {
             field_l = (mp) null;
           }
-          ua.field_f.a(4, param0);
+          SectorCacheStore.field_f.a(4, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -81,7 +81,7 @@ final class ee extends ms {
           if (param1 >= -36) {
             ee.a(true);
           }
-          param0.position = param0.position + ak.field_v.a(var4, param0.position, -6309, param0.payload, 0, var4.length);
+          param0.position = param0.position + DiskArchiveRequest.field_v.a(var4, param0.position, -6309, param0.payload, 0, var4.length);
           stackIn_4_0 = -var3_int + param0.position;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -118,7 +118,7 @@ final class ee extends ms {
         }
     }
 
-    final static void a(int param0, bc param1) {
+    final static void a(int param0, Archive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_1731_0;
             StringBuilder stackIn_1731_1;
@@ -130,9 +130,9 @@ final class ee extends ms {
             int var4;
             int var5;
             int param0;
-            bc param1;
+            Archive param1;
             boolean finished;
-            $CfrPartitionedBody(int initialParam0, bc initialParam1) {
+            $CfrPartitionedBody(int initialParam0, Archive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_1731_0 = null;
@@ -485,11 +485,11 @@ final class ee extends ms {
                 }
                 var2 = nb.a("rulesetTooltips,0", 127);
                 if (null != var2) {
-                  ua.field_c[0] = IterableNodeHashTable.a(var2, 17746);
+                  SectorCacheStore.field_c[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("rulesetTooltips,1", 122);
                 if (null != var2) {
-                  ua.field_c[1] = IterableNodeHashTable.a(var2, 17746);
+                  SectorCacheStore.field_c[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("empire_names,0", 112);
                 if (null != var2) {
@@ -517,19 +517,19 @@ final class ee extends ms {
                 }
                 var2 = nb.a("resource_names,0", 121);
                 if (var2 != null) {
-                  h.field_x[0] = IterableNodeHashTable.a(var2, 17746);
+                  MusicCrossfadeStream.field_x[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("resource_names,1", 117);
                 if (null != var2) {
-                  h.field_x[1] = IterableNodeHashTable.a(var2, 17746);
+                  MusicCrossfadeStream.field_x[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("resource_names,2", 124);
                 if (null != var2) {
-                  h.field_x[2] = IterableNodeHashTable.a(var2, 17746);
+                  MusicCrossfadeStream.field_x[2] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("resource_names,3", 117);
                 if (var2 != null) {
-                  h.field_x[3] = IterableNodeHashTable.a(var2, 17746);
+                  MusicCrossfadeStream.field_x[3] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("project_names,0", 123);
                 if (var2 != null) {
@@ -593,11 +593,11 @@ final class ee extends ms {
                 }
                 var2 = nb.a("TEXT_INTRO0,0", 95);
                 if (null != var2) {
-                  qq.field_w[0] = IterableNodeHashTable.a(var2, 17746);
+                  MusicVoice.field_w[0] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("TEXT_INTRO0,1", 118);
                 if (null != var2) {
-                  qq.field_w[1] = IterableNodeHashTable.a(var2, 17746);
+                  MusicVoice.field_w[1] = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("TEXT_INTRO1_START", 111);
                 if (null != var2) {
@@ -609,7 +609,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("TEXT_INTRO2_START", 117);
                 if (var2 != null) {
-                  ra.field_c = IterableNodeHashTable.a(var2, 17746);
+                  RandomAccessCacheFile.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("TEXT_INTRO2_END", 111);
                 if (var2 != null) {
@@ -661,7 +661,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("pact_offer", 118);
                 if (null != var2) {
-                  eb.field_e = IterableNodeHashTable.a(var2, 17746);
+                  FullscreenFocusCanvas.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("pact_accept", 114);
                 if (var2 != null) {
@@ -701,7 +701,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("hint_defensegrid", 115);
                 if (var2 != null) {
-                  ol.field_l = IterableNodeHashTable.a(var2, 17746);
+                  WeightedLruCache.field_l = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("hint_terraform", 106);
                 if (null != var2) {
@@ -729,7 +729,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_waitingforplayers", 126);
                 if (null != var2) {
-                  gs.field_m = IterableNodeHashTable.a(var2, 17746);
+                  NanoFrameTimer.field_m = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_youhavebeendefeated", 102);
                 if (null != var2) {
@@ -749,7 +749,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_peace", 120);
                 if (null != var2) {
-                  m.field_v = IterableNodeHashTable.a(var2, 17746);
+                  StrongCacheEntry.field_v = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_peace2", 105);
                 if (null != var2) {
@@ -765,7 +765,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_togglestats", 99);
                 if (var2 != null) {
-                  er.field_p = IterableNodeHashTable.a(var2, 17746);
+                  WhirlpoolHasher.field_p = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_togglestats2", 123);
                 if (null != var2) {
@@ -793,7 +793,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_decimal", 117);
                 if (null != var2) {
-                  ej.field_j = IterableNodeHashTable.a(var2, 17746);
+                  BufferedCacheFile.field_j = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("turn_ordinal", 104);
                 if (null != var2) {
@@ -1075,7 +1075,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_instructions_placement", 97);
                 if (null != var2) {
-                  er.field_n = IterableNodeHashTable.a(var2, 17746);
+                  WhirlpoolHasher.field_n = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_movement", 112);
                 if (null != var2) {
@@ -1091,7 +1091,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_instructions_endturn", 125);
                 if (null != var2) {
-                  er.field_l = IterableNodeHashTable.a(var2, 17746);
+                  WhirlpoolHasher.field_l = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_hotkeys", 104);
                 if (var2 != null) {
@@ -1115,7 +1115,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_instructions_project_exotics", 125);
                 if (null != var2) {
-                  ar.field_o = IterableNodeHashTable.a(var2, 17746);
+                  ArchiveNetworkClient.field_o = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_instructions_animation", 120);
                 if (var2 != null) {
@@ -1447,7 +1447,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tutorial_capture_all", 110);
                 if (null != var2) {
-                  in.field_e = IterableNodeHashTable.a(var2, 17746);
+                  SecondaryNodeHashTable.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tutorial_exit", 99);
                 if (var2 != null) {
@@ -1571,7 +1571,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_notavailable", 114);
                 if (var2 != null) {
-                  qc.field_t = IterableNodeHashTable.a(var2, 17746);
+                  SocketArchiveNetworkClient.field_t = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_percentage", 122);
                 if (null != var2) {
@@ -1644,7 +1644,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_stat_attacks_failed", 114);
                 if (null != var2) {
-                  in.field_a = IterableNodeHashTable.a(var2, 17746);
+                  SecondaryNodeHashTable.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_defences_successful", 117);
                 if (var2 != null) {
@@ -1788,11 +1788,11 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_showChat", 101);
                 if (null != var2) {
-                  fk.field_l = IterableNodeHashTable.a(var2, 17746);
+                  ByteArrayNode.field_l = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_hideChat", 115);
                 if (var2 != null) {
-                  db.field_d = IterableNodeHashTable.a(var2, 17746);
+                  DualLinkDeque.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("aichat,0,0", 107);
                 if (null != var2) {
@@ -1998,7 +1998,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tooltipOfferTreaty", 110);
                 if (null != var2) {
-                  jg.field_f = IterableNodeHashTable.a(var2, 17746);
+                  AudioService.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipAcceptTreaty", 113);
                 if (null != var2) {
@@ -2054,7 +2054,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tooltipFleetInfoButtonHide", 104);
                 if (var2 != null) {
-                  lc.field_d = IterableNodeHashTable.a(var2, 17746);
+                  ArchiveSource.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipVictoryButtonHide", 105);
                 if (null != var2) {
@@ -2070,7 +2070,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tooltipVictoryPaneOneOne", 101);
                 if (var2 != null) {
-                  bc.field_a = IterableNodeHashTable.a(var2, 17746);
+                  Archive.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tooltipVictoryPaneOneMany", 105);
                 if (null != var2) {

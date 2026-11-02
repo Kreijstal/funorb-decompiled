@@ -66,9 +66,9 @@ final class fj extends ml {
           if (this.field_n instanceof ki) {
             var3 = ((ki) ((Object) this.field_n)).a((byte) 73);
             if (var3 != null) {
-              if (var3.c(-126) == p.field_g &&
+              if (var3.c(-126) == CachedArchiveSource.field_g &&
                 !param1.equals(this.field_n.field_s)) {
-                stackIn_8_0 = mh.field_a;
+                stackIn_8_0 = IsaacRandom.field_a;
                 return stackIn_8_0;
               }
               stackIn_10_0 = var3.a((byte) -63);
@@ -78,7 +78,7 @@ final class fj extends ml {
           if (param1.equals(this.field_n.field_s)) {
             return null;
           }
-          stackIn_14_0 = mh.field_a;
+          stackIn_14_0 = IsaacRandom.field_a;
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,8 +107,8 @@ final class fj extends ml {
           if (this.field_n instanceof ki) {
             var3 = ((ki) ((Object) this.field_n)).a((byte) 120);
             if (var3 != null &&
-              var3.c(param0 + 11321) != p.field_g) {
-              stackIn_5_0 = tj.field_b;
+              var3.c(param0 + 11321) != CachedArchiveSource.field_g) {
+              stackIn_5_0 = ArchiveSourceManager.field_b;
               return stackIn_5_0;
             }
           }
@@ -116,9 +116,9 @@ final class fj extends ml {
             field_r = (Sprite) null;
           }
           if (!param1.equals(this.field_n.field_s)) {
-            stackIn_11_0 = tj.field_b;
+            stackIn_11_0 = ArchiveSourceManager.field_b;
           } else {
-            stackIn_11_0 = p.field_g;
+            stackIn_11_0 = CachedArchiveSource.field_g;
           }
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

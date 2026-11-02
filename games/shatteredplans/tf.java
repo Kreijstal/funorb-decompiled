@@ -98,7 +98,7 @@ final class tf implements iq {
           }
           ql.field_n = param1;
           um.field_c = param3;
-          fp.field_c = param2;
+          FrameTimer.field_c = param2;
           eg.b(gf.field_b / 2, gf.field_k / 2, 0);
           id.a(param3.field_K + param3.field_q, param3.field_K, 26883, param1.field_K, param1.field_q + param1.field_K);
           return;
@@ -143,7 +143,7 @@ final class tf implements iq {
         try {
           scanLoop1: while (true) {
             if (rd.field_g == null) {
-              stackIn_13_0 = er.field_i;
+              stackIn_13_0 = WhirlpoolHasher.field_i;
               stackIn_13_1 = ui.field_p;
               if (var4 != 0) {
                 break scanLoop1;
@@ -175,7 +175,7 @@ final class tf implements iq {
                 stackIn_48_1 = ~var2;
                 if (var4 == 0) {
                   if (stackIn_48_0 > stackIn_48_1) {
-                    ak.a(var1.field_h, 0, rd.field_g);
+                    DiskArchiveRequest.a(var1.field_h, 0, rd.field_g);
                   } else {
                     if (var2 < 0) {
                       throw new RuntimeException();
@@ -217,7 +217,7 @@ final class tf implements iq {
               if (stackIn_48_0 >= stackIn_48_1) {
                 break;
               }
-              ak.a(-rd.field_g.field_g + var1.field_g, 0, rd.field_g);
+              DiskArchiveRequest.a(-rd.field_g.field_g + var1.field_g, 0, rd.field_g);
               break;
             }
           }

@@ -124,7 +124,7 @@ final class sh implements fo {
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         var1 = 52 / ((param0 + 16) / 49);
         var2 = pr.a(14274);
-        var4 = var2 - tk.field_z;
+        var4 = var2 - NetworkArchiveRequest.field_z;
         if (var4 > 30000L) {
           vj.field_C = 0;
         } else {
@@ -145,7 +145,7 @@ final class sh implements fo {
           }
           vj.field_C = vj.field_C + 1;
         }
-        tk.field_z = var2;
+        NetworkArchiveRequest.field_z = var2;
         return true;
     }
 
@@ -203,7 +203,7 @@ final class sh implements fo {
             kp.field_i > var5) {
             var10_int = id.a(-7019, var8_ref_nf.field_n);
             if (var10_int <= var8_ref_nf.a((byte) 116) && (var8_ref_nf.field_h ||
-              !ti.a(var8_ref_nf.field_b, true))) {
+              !IntrusiveNodeHashTable.a(var8_ref_nf.field_b, true))) {
               var9 = 1;
             }
           }

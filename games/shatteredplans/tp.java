@@ -78,7 +78,7 @@ final class tp implements iq {
         }
     }
 
-    final static nk[] a(String param0, bc param1, String param2, byte param3) {
+    final static nk[] a(String param0, Archive param1, String param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

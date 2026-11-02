@@ -18,7 +18,7 @@ final class us {
     }
 
     final static void a(int param0, int param1) {
-        if (~ui.field_m == ~(!p.field_n ? 3 : 2)) {
+        if (~ui.field_m == ~(!CachedArchiveSource.field_n ? 3 : 2)) {
           i.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
           if (param0 == 0) {
             return;
@@ -26,8 +26,8 @@ final class us {
           us.a(false, true);
           return;
         }
-        if (p.field_n) {
-          if (kc.field_i == -1) {
+        if (CachedArchiveSource.field_n) {
+          if (MusicEnvelope.field_i == -1) {
             i.a(640, 480, 0, -(5 * param1) + 255, -123, 0);
             if (param0 == 0) {
               return;

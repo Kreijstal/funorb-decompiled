@@ -121,7 +121,7 @@ final class ql extends IntrusiveNode {
     }
 
     final static void a(java.awt.Frame param0, int param1, PlatformTaskDispatcher param2) {
-        pb var3 = null;
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

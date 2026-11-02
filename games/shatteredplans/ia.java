@@ -712,7 +712,7 @@ abstract class ia {
                   var4 = param1.a((byte) -71);
                 }
               }
-              this.field_l = (Random) ((Object) new ea((long)this.field_d));
+              this.field_l = (Random) ((Object) new IsaacBackedRandom((long)this.field_d));
               var4_ref = (vn) (this.field_m.d(0));
               while (var4_ref != null) {
                 var4_ref.c(true);

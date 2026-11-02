@@ -5,7 +5,7 @@ final class hp extends VictoryChecker {
     static int[] field_k;
     static ub field_l;
     static fc field_m;
-    static bc field_n;
+    static Archive field_n;
     private int[] field_q;
     private int[] field_o;
     static int field_p;
@@ -196,9 +196,9 @@ final class hp extends VictoryChecker {
             }
             ll.a(param1, "document.cookie=\"" + var5 + "\"", (byte) 123);
             if (param0 <= 7) {
-              field_n = (bc) null;
+              field_n = (Archive) null;
             }
-            h.a(-1, param1);
+            MusicCrossfadeStream.a(-1, param1);
           } catch (RuntimeException runtimeException) {
             throw r.a((Throwable) ((Object) runtimeException), "hp.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }

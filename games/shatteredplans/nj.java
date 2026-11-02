@@ -28,7 +28,7 @@ final class nj {
         RuntimeException var3 = null;
         int var4 = 0;
         String var5 = null;
-        sl var6 = null;
+        CipherPacketBuffer var6 = null;
         CharSequence var7 = null;
         try {
           var7 = (CharSequence) ((Object) param0);
@@ -61,7 +61,7 @@ final class nj {
             stackIn_22_0 = hd.field_p;
             return stackIn_22_0;
           }
-          if (ti.a(param0, true)) {
+          if (IntrusiveNodeHashTable.a(param0, true)) {
             stackIn_26_0 = re.a(go.field_G, 4371, new String[]{param0});
             return stackIn_26_0;
           }
@@ -111,10 +111,10 @@ final class nj {
           sr.field_h = true;
           return;
         }
-        cg.field_C = er.field_j;
+        cg.field_C = WhirlpoolHasher.field_j;
         uq.field_j = ck.field_a;
         uq.field_j.field_jb = -1;
-        er.field_j = null;
+        WhirlpoolHasher.field_j = null;
         uq.field_j.field_qb = -1;
         ck.field_a = null;
         sg.field_Ab = null;

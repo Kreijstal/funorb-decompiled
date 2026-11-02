@@ -275,14 +275,14 @@ final class k {
           var17.position = param0.length - 2;
           en.field_c = var17.f(-20976);
           cm.field_g = new int[en.field_c];
-          kc.field_l = new byte[en.field_c][];
-          ua.field_h = new boolean[en.field_c];
+          MusicEnvelope.field_l = new byte[en.field_c][];
+          SectorCacheStore.field_h = new boolean[en.field_c];
           hd.field_q = new byte[en.field_c][];
-          mc.field_s = new int[en.field_c];
+          WeightedCacheEntry.field_s = new int[en.field_c];
           cf.field_H = new int[en.field_c];
           sj.field_a = new int[en.field_c];
           var17.position = param0.length + (-7 - en.field_c * 8);
-          tk.field_y = var17.f(-20976);
+          NetworkArchiveRequest.field_y = var17.f(-20976);
           eg.field_t = var17.f(-20976);
           var3 = (var17.j(-70) & 255) + 1;
           for (var4 = 0; en.field_c > var4; var4++) {
@@ -292,7 +292,7 @@ final class k {
             sj.field_a[var4Lifetime1] = var17.f(-20976);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < en.field_c; var4Lifetime2++) {
-            mc.field_s[var4Lifetime2] = var17.f(-20976);
+            WeightedCacheEntry.field_s[var4Lifetime2] = var17.f(-20976);
           }
           var5 = -25 % ((-23 - param1) / 52);
           for (var4Lifetime3 = 0; en.field_c > var4Lifetime3; var4Lifetime3++) {
@@ -308,7 +308,7 @@ final class k {
           }
           var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < en.field_c; var4Lifetime5++) {
-            var5Lifetime1 = mc.field_s[var4Lifetime5];
+            var5Lifetime1 = WeightedCacheEntry.field_s[var4Lifetime5];
             var6 = cm.field_g[var4Lifetime5];
             var7 = var6 * var5Lifetime1;
             var20 = new byte[var7];
@@ -318,7 +318,7 @@ final class k {
             var21 = new byte[var7];
             var19 = var21;
             var9 = var19;
-            kc.field_l[var4Lifetime5] = var21;
+            MusicEnvelope.field_l[var4Lifetime5] = var21;
             var10 = 0;
             var11 = var17.j(-74);
             stackIn_23_0 = -1;
@@ -364,7 +364,7 @@ final class k {
                 }
               }
             }
-            ua.field_h[var4Lifetime5] = var10 != 0;
+            SectorCacheStore.field_h[var4Lifetime5] = var10 != 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

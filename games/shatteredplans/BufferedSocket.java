@@ -5,7 +5,7 @@ import java.io.*;
 
 final class BufferedSocket implements Runnable {
     private int field_a;
-    private pb field_p;
+    private PlatformTask field_p;
     private PlatformTaskDispatcher field_m;
     static int[] field_q;
     private java.net.Socket field_o;

@@ -77,10 +77,10 @@ final class gi {
         int var2_intLifetime1;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (hm.field_q == ol.field_g) {
-            if (null != ol.field_g) {
+          if (hm.field_q == WeightedLruCache.field_g) {
+            if (null != WeightedLruCache.field_g) {
               te.field_c = te.field_c + 16;
-              var5 = ol.field_g.field_f;
+              var5 = WeightedLruCache.field_g.field_f;
               var1 = var5;
               if (var1 != null) {
                 for (var2_int = 0; var5.length > var2_int; var2_int++) {
@@ -93,8 +93,8 @@ final class gi {
               }
             }
           } else {
-            fieldTemp$0 = ej.field_m + 1;
-            ej.field_m = ej.field_m + 1;
+            fieldTemp$0 = BufferedCacheFile.field_m + 1;
+            BufferedCacheFile.field_m = BufferedCacheFile.field_m + 1;
             if (fieldTemp$0 >= 32) {
               js.a((byte) -10);
             }
@@ -103,7 +103,7 @@ final class gi {
             return;
           }
           if (sr.a(0, "unplaced")) {
-            if (qc.a("unplaced", -126)) {
+            if (SocketArchiveNetworkClient.a("unplaced", -126)) {
               ac.a(1, n.a("unplaced", -21502));
             }
           } else {
@@ -112,18 +112,18 @@ final class gi {
             }
           }
           aj.field_a.a(0);
-          if (ol.field_g == hm.field_q) {
+          if (WeightedLruCache.field_g == hm.field_q) {
             ei.field_e = kp.field_j;
-            e.field_f = jc.field_r;
-            fk.field_k = be.field_h;
+            e.field_f = ArchiveRequest.field_r;
+            ByteArrayNode.field_k = be.field_h;
             kl.field_o = pc.field_q;
           } else {
-            e.field_f = re.a(jc.field_r, 32, ej.field_m, fe.field_B, 0);
-            fk.field_k = re.a(be.field_h, 32, ej.field_m, oi.field_a, 0);
-            ei.field_e = re.a(kp.field_j, 32, ej.field_m, jb.field_d, 0);
+            e.field_f = re.a(ArchiveRequest.field_r, 32, BufferedCacheFile.field_m, fe.field_B, 0);
+            ByteArrayNode.field_k = re.a(be.field_h, 32, BufferedCacheFile.field_m, oi.field_a, 0);
+            ei.field_e = re.a(kp.field_j, 32, BufferedCacheFile.field_m, jb.field_d, 0);
             stackIn_28_0 = pc.field_q;
             stackIn_28_1 = 32;
-            kl.field_o = re.a(stackIn_28_0, stackIn_28_1, ej.field_m, tp.field_b, 0);
+            kl.field_o = re.a(stackIn_28_0, stackIn_28_1, BufferedCacheFile.field_m, tp.field_b, 0);
           }
           if (null != oi.field_i) {
             var1_int = 1;
@@ -139,7 +139,7 @@ final class gi {
               var6++;
             }
             if (var1_int != 0) {
-              var2 = ol.field_g.field_l;
+              var2 = WeightedLruCache.field_g.field_l;
               if (var2 == null &&
                 ImageProducerRasterBuffer.field_i > 0) {
                 fieldTemp$1 = ImageProducerRasterBuffer.field_i - 1;
@@ -153,7 +153,7 @@ final class gi {
               is.field_b = false;
               var3 = js.field_b[ImageProducerRasterBuffer.field_i];
               if (var3 != null &&
-                var3 != ol.field_g) {
+                var3 != WeightedLruCache.field_g) {
                 lp.a(1546006977, var3);
                 return;
               }
@@ -205,7 +205,7 @@ final class gi {
           js.field_f.e(11135, e.field_b);
           js.field_f.b(-16426, be.field_l);
           var6 = 0;
-          if (db.field_b) {
+          if (DualLinkDeque.field_b) {
             var6 = var6 | 1;
           }
           if (ka.field_a) {

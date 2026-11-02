@@ -113,16 +113,16 @@ final class wj extends IntrusiveNode {
           va.field_e.f(var1_int, var2);
           var4 = -(di.field_m * 120 / 1000) + 176;
           var5 = 540 - var4;
-          ra.a(-111);
+          RandomAccessCacheFile.a(-111);
           if (var5 < 256) {
             var4 = 284;
             var5 = 256;
           }
-          if (null == mc.field_u) {
-            mc.field_u = ds.field_b.g();
-            mc.field_u.e();
+          if (null == WeightedCacheEntry.field_u) {
+            WeightedCacheEntry.field_u = ds.field_b.g();
+            WeightedCacheEntry.field_u.e();
           } else {
-            mc.field_u.e();
+            WeightedCacheEntry.field_u.e();
             ds.field_b.c(0, 0);
           }
           var1_intLifetime1 = -5;
@@ -139,7 +139,7 @@ final class wj extends IntrusiveNode {
           }
           ac.field_s.f(var1_intLifetime1, var2Lifetime1);
           tg.a(var2Lifetime1, oe.field_c, (byte) 15, var1_intLifetime1);
-          stackIn_13_0 = mc.field_u;
+          stackIn_13_0 = WeightedCacheEntry.field_u;
           stackIn_13_1 = 0;
           stackIn_13_2 = var4;
           stackIn_13_3 = var6;
@@ -153,7 +153,7 @@ final class wj extends IntrusiveNode {
             stackIn_16_4 = 0;
           }
           ((Sprite) (Object) stackIn_13_0).c(stackIn_13_1, stackIn_13_2, stackIn_13_3 * stackIn_16_4 >> 8);
-          mc.field_u.c(0, var4, var6);
+          WeightedCacheEntry.field_u.c(0, var4, var6);
           var11 = fe.field_C;
           var7 = var11;
           for (var8 = 0; var11.length > var8; var8++) {
@@ -199,7 +199,7 @@ final class wj extends IntrusiveNode {
     }
 
     final static void a(int param0, int param1, lq param2) {
-        sl var5 = null;
+        CipherPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = js.field_f;

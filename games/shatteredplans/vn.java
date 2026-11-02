@@ -20,7 +20,7 @@ final class vn extends IntrusiveNode {
     Player field_l;
     static String field_A;
     static String field_i;
-    static rn field_w;
+    static DiskCacheWorker field_w;
     static a field_s;
     static qr field_t;
     static qr field_y;
@@ -86,7 +86,7 @@ final class vn extends IntrusiveNode {
           if (param0 != 0) {
             return false;
           }
-          var2Lifetime1 = var1_int * ol.field_g.field_j;
+          var2Lifetime1 = var1_int * WeightedLruCache.field_g.field_j;
           if (var2Lifetime1 <= te.field_c) {
             return true;
           }

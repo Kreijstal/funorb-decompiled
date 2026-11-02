@@ -4,7 +4,7 @@
 abstract class ms {
     static String field_g;
     static int[][] field_c;
-    static bc field_d;
+    static Archive field_d;
     static String field_f;
     static int field_a;
     static String field_b;
@@ -72,7 +72,7 @@ abstract class ms {
         if (param0 == 20975) {
           if (dp.field_t) {
             gf.h(gf.field_i, gf.field_a, -gf.field_i + gf.field_l, -gf.field_a + gf.field_f);
-            ua.field_f.b(false, -104);
+            SectorCacheStore.field_f.b(false, -104);
           }
           return;
         }
@@ -80,7 +80,7 @@ abstract class ms {
         ms.a((String) null, (byte) -111, (String) null);
         if (dp.field_t) {
           gf.h(gf.field_i, gf.field_a, -gf.field_i + gf.field_l, -gf.field_a + gf.field_f);
-          ua.field_f.b(false, -104);
+          SectorCacheStore.field_f.b(false, -104);
         }
     }
 

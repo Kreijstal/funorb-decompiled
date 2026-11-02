@@ -111,7 +111,7 @@ final class fb extends qr {
           var12 = new b(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -(rs.field_Cb.field_J / 2) + (var17.field_i / 2 - 4), -(IntrusiveDeque.field_a[param4.field_x].field_z / 2) + var17.field_m, rs.field_Cb.field_J + 8, 2, var11);
           var17.a(var12, 8);
           if ((param7.field_w & 1 << param4.field_x) == 0) {
-            var13_ref = new ff(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -1 + (var17.field_i / 2 - rs.field_Cb.field_J / 2), er.a(param5, (byte) -127, param1, param4, param3));
+            var13_ref = new ff(IntrusiveDeque.field_a[param4.field_x].field_z / 2, -1 + (var17.field_i / 2 - rs.field_Cb.field_J / 2), WhirlpoolHasher.a(param5, (byte) -127, param1, param4, param3));
             var17.a(var13_ref, 8);
           } else {
             var13_ref2 = new qk(IntrusiveDeque.field_a[param4.field_x].field_z, -(rs.field_Cb.field_J / 2) + var17.field_i / 2, var17.field_m - IntrusiveDeque.field_a[param4.field_x].field_z, rs.field_Cb.field_J, of.field_d.toUpperCase());
@@ -136,7 +136,7 @@ final class fb extends qr {
               if (param5 != 1) {
                 var14 = re.a(ms.field_b, 4371, new String[]{Integer.toString(param5)});
               } else {
-                var14 = bc.field_a;
+                var14 = Archive.field_a;
               }
             }
             if (var10 != 0 &&
@@ -212,13 +212,13 @@ final class fb extends qr {
         }
         dn.field_f.field_y = 1;
         dn.field_f.field_kb = fg.field_b.field_kb;
-        if (bc.field_b > 0) {
+        if (Archive.field_b > 0) {
           bb.a(param5, param0, (byte) -2, param2);
         }
         if (ee.field_k > 0) {
           uo.a((byte) 23, param0, param2, param7, param5);
         }
-        if (ti.field_e &&
+        if (IntrusiveNodeHashTable.field_e &&
           np.field_a.field_Eb <= np.field_a.field_Lb) {
           ls.field_a.field_zb.field_z = gm.field_j;
           lp.field_v.field_s = false;
@@ -228,7 +228,7 @@ final class fb extends qr {
           ls.field_a.field_zb.field_z = null;
           dm.a(param4, 0, ls.field_a, param1, param2);
         }
-        ga.a(param1, (byte) 116, param3, param6, param2, param4, param8);
+        MidiPcmStream.a(param1, (byte) 116, param3, param6, param2, param4, param8);
         dm.a(param4, 0, ro.field_a, param1, param2);
         Star.field_w = Star.field_w + 1;
     }

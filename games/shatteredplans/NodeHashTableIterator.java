@@ -49,7 +49,7 @@ final class NodeHashTableIterator implements Iterator {
         int var8 = 0;
         int var9 = 0;
         Star var10 = null;
-        db var11 = null;
+        DualLinkDeque var11 = null;
         mg var3Lifetime1;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
@@ -60,7 +60,7 @@ final class NodeHashTableIterator implements Iterator {
             var10 = (Star) null;
             NodeHashTableIterator.a((Star) null, (byte) -17);
           }
-          var11 = new db();
+          var11 = new DualLinkDeque();
           var11.a(param0.field_s.a(-123), 32);
           var3 = (mg) (param0.field_s.c(-128));
           while (var3 != null) {

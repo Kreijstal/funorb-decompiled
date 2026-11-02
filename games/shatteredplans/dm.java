@@ -100,7 +100,7 @@ final class dm {
           var7 = 0;
           var8 = 0;
           if (null != np.field_a && (null != td.field_E ||
-            ci.field_h != null ||
+            ArchiveIndex.field_h != null ||
             null != pg.field_A ||
             null != ji.field_D)) {
             for (var9 = 0; var9 < em.field_k; var9++) {
@@ -110,9 +110,9 @@ final class dm {
                 td.field_E[var9][var10_int]) {
                 var5_int = 1;
               }
-              if (ci.field_h != null &&
-                null != ci.field_h[var9]) {
-                var11_int = ci.field_h[var9][var10_int];
+              if (ArchiveIndex.field_h != null &&
+                null != ArchiveIndex.field_h[var9]) {
+                var11_int = ArchiveIndex.field_h[var9][var10_int];
                 if (var11_int > var6) {
                   var6 = var11_int;
                 }
@@ -247,7 +247,7 @@ final class dm {
                 }
               } else {
                 if (!np.field_a.field_Ab) {
-                  var12.field_Mb.field_z = lc.field_a;
+                  var12.field_Mb.field_z = ArchiveSource.field_a;
                 }
               }
               var25_int = 0;
@@ -283,20 +283,20 @@ final class dm {
               if (var12.field_Ab.field_L &&
                 var22 != 0) {
                 dn.field_k = var12.field_Cb;
-                if (tk.field_v != null &&
-                  null != tk.field_v[var12.field_Lb]) {
-                  dn.field_k = dn.field_k + " - " + tk.field_v[var12.field_Lb];
+                if (NetworkArchiveRequest.field_v != null &&
+                  null != NetworkArchiveRequest.field_v[var12.field_Lb]) {
+                  dn.field_k = dn.field_k + " - " + NetworkArchiveRequest.field_v[var12.field_Lb];
                 }
               } else {
                 if (var12.field_Ab.field_L &&
-                  tk.field_v != null &&
-                  tk.field_v[var12.field_Lb] != null) {
-                  dn.field_k = tk.field_v[var12.field_Lb];
+                  NetworkArchiveRequest.field_v != null &&
+                  NetworkArchiveRequest.field_v[var12.field_Lb] != null) {
+                  dn.field_k = NetworkArchiveRequest.field_v[var12.field_Lb];
                 }
               }
               var19 = var19 + cr.field_c;
             }
-            var23 = lc.a(var12.field_Eb, (byte) -87, var20);
+            var23 = ArchiveSource.a(var12.field_Eb, (byte) -87, var20);
             var24 = var23;
             var30 = var24;
             var25 = var30;
@@ -317,12 +317,12 @@ final class dm {
             if (var12.field_rb != 0 &&
               !var12.h(-72)) {
               if (0 != var12.field_Jb.field_rb) {
-                tj.a((byte) -79, param4, var12.field_Ib);
+                ArchiveSourceManager.a((byte) -79, param4, var12.field_Ib);
               } else {
                 if (0 == var12.field_Mb.field_rb) {
                   qg.a(nh.field_p, var12, td.field_P, param2, 0, 0, (byte) 110);
                 } else {
-                  bc.a(param4, (byte) 2, var12.field_Ib);
+                  Archive.a(param4, (byte) 2, var12.field_Ib);
                 }
               }
             }
@@ -346,8 +346,8 @@ final class dm {
                   if (var12.field_Fb >= var7) {
                     if (var6 <= var12.field_Qb) {
                       if ((var8 & ~var12.field_Wb) != 0) {
-                        var25_int = db.a(param1 + 38, var8 & ~var12.field_Wb);
-                        var24Lifetime2 = re.a(ra.field_j, 4371, new String[]{var20});
+                        var25_int = DualLinkDeque.a(param1 + 38, var8 & ~var12.field_Wb);
+                        var24Lifetime2 = re.a(RandomAccessCacheFile.field_j, 4371, new String[]{var20});
                         if (0 < var25_int &&
                           null != qa.field_s &&
                           var25_int <= qa.field_s.length &&
@@ -361,7 +361,7 @@ final class dm {
                   } else {
                     var25_int = -var12.field_Fb + var7;
                     if (var25_int == 1) {
-                      var24Lifetime2 = re.a(gs.field_i, 4371, new String[]{var20});
+                      var24Lifetime2 = re.a(NanoFrameTimer.field_i, 4371, new String[]{var20});
                     }
                     var24Lifetime2 = re.a(em.field_b, 4371, new String[]{var20, Integer.toString(var25_int)});
                   }
@@ -380,7 +380,7 @@ final class dm {
                   } else {
                     if (var6 <= var12.field_Qb) {
                       if ((var8 & ~var12.field_Wb) != 0) {
-                        var25_int = db.a(param1 + 31, var8 & ~var12.field_Wb);
+                        var25_int = DualLinkDeque.a(param1 + 31, var8 & ~var12.field_Wb);
                         var24Lifetime2 = ub.field_Eb;
                         if (0 < var25_int &&
                           null != qa.field_s &&
@@ -413,9 +413,9 @@ final class dm {
                     !var12.field_Ub) {
                     var29 = 1;
                   }
-                  if (null != ci.field_h &&
-                    ci.field_h[var27_int] != null) {
-                    var30_int = ci.field_h[var27_int][var28];
+                  if (null != ArchiveIndex.field_h &&
+                    ArchiveIndex.field_h[var27_int] != null) {
+                    var30_int = ArchiveIndex.field_h[var27_int][var28];
                     if (var30_int != 0 &&
                       !hm.field_o &&
                       !var12.field_Ub) {
@@ -499,7 +499,7 @@ final class dm {
 
     final static void a(int param0, int param1) {
         de.field_h = ff.field_v[param1];
-        i.field_a = h.field_w[param1];
+        i.field_a = MusicCrossfadeStream.field_w[param1];
         if (param0 != 0) {
           ub var3 = (ub) null;
           dm.a(-32, 115, (ub) null, false, 125);

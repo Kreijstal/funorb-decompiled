@@ -56,7 +56,7 @@ final class gn extends o {
           sr.field_h = false;
         }
         if (oq.field_j == 13) {
-          qq.c(false);
+          MusicVoice.c(false);
           var4 = 1;
           sr.field_h = false;
         }

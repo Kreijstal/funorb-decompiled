@@ -4,7 +4,7 @@
 final class uf {
     static java.awt.Frame field_b;
     String field_f;
-    bc field_a;
+    Archive field_a;
     String field_c;
     String field_d;
     int field_e;
@@ -29,7 +29,7 @@ final class uf {
     }
 
     final static void a(gr param0, int param1, boolean param2) {
-        sl var3 = null;
+        CipherPacketBuffer var3 = null;
         if (param2) {
           return;
         }

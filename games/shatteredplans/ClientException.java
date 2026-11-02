@@ -82,8 +82,8 @@ final class ClientException extends RuntimeException {
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var1_int = ah.field_R - ld.field_j;
-          ld.field_j = -(var1_int >> 1) + ol.field_e;
-          vo.field_b = -(rn.field_b >> 1) + ri.field_O;
+          ld.field_j = -(var1_int >> 1) + WeightedLruCache.field_e;
+          vo.field_b = -(DiskCacheWorker.field_b >> 1) + ri.field_O;
           ah.field_R = ld.field_j + var1_int;
           var2 = vo.field_b;
           if (param0 <= 32) {
@@ -103,7 +103,7 @@ final class ClientException extends RuntimeException {
             var6 = t.field_c[var3];
             stackIn_13_0 = !(var4 < 0);
             var7 = or.a(stackIn_13_0, var6, true);
-            var8 = ol.field_e - (var7 >> 1);
+            var8 = WeightedLruCache.field_e - (var7 >> 1);
             if (var4 >= 0) {
               var2 = var2 + js.field_e;
               if (ns.field_nb.field_c != var4) {
@@ -118,7 +118,7 @@ final class ClientException extends RuntimeException {
               var2 = var2 + uo.field_g;
             }
             if (var4 >= 0) {
-              kc.field_g.d(var6, var8, var2 + we.field_c, var5, -1);
+              MusicEnvelope.field_g.d(var6, var8, var2 + we.field_c, var5, -1);
               var2 = var2 + (vh.field_b + js.field_e + uo.field_g);
             } else {
               lq.field_k.d(var6, var8, var2 + sp.field_r, var5, -1);

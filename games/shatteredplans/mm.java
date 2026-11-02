@@ -17,7 +17,7 @@ final class mm extends ml {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.b(-11196, param1) == tj.field_b) {
+          if (this.b(-11196, param1) == ArchiveSourceManager.field_b) {
             stackIn_2_0 = ig.field_b;
             return stackIn_2_0;
           }
@@ -69,11 +69,11 @@ final class mm extends ml {
 
     final static void d(int param0) {
         if (param0 == -16705) {
-          bq.field_h = new dg(ho.field_j, un.field_g, po.field_d, SpriteState.field_u, fk.field_i, gn.field_w);
+          bq.field_h = new dg(ho.field_j, un.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w);
           return;
         }
         field_n = false;
-        bq.field_h = new dg(ho.field_j, un.field_g, po.field_d, SpriteState.field_u, fk.field_i, gn.field_w);
+        bq.field_h = new dg(ho.field_j, un.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w);
     }
 
     final u b(int param0, String param1) {
@@ -94,9 +94,9 @@ final class mm extends ml {
             return stackIn_5_0;
           }
           if (var3_int != 0) {
-            return p.field_g;
+            return CachedArchiveSource.field_g;
           }
-          stackIn_9_0 = tj.field_b;
+          stackIn_9_0 = ArchiveSourceManager.field_b;
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -37,7 +37,7 @@ final class hd extends IntrusiveNode {
           gf.b();
           var2 = 300 - di.field_m;
           var1_int = -25 + var2 / 8;
-          db.field_a.b(var1_int, 0, 33023);
+          DualLinkDeque.field_a.b(var1_int, 0, 33023);
           var1_intLifetime1 = var2 / 6 - 100;
           w.field_D.b(var1_intLifetime1, 0, 4227327);
           oi.field_d.a(var1_intLifetime1, 0, dp.field_r / 8);
@@ -109,7 +109,7 @@ final class hd extends IntrusiveNode {
           }
           this.field_i = new Sprite(var4_int, var5);
           this.field_o = new Sprite(var4_int + 6, 6 + var5);
-          ra.a(-127);
+          RandomAccessCacheFile.a(-127);
           this.field_i.e();
           if (var6 == 0) {
             param1.d(param0, 0, param1.field_J, 16777215, -1);
@@ -152,7 +152,7 @@ final class hd extends IntrusiveNode {
           field_k = -43L;
         }
         ld var2 = new ld();
-        ua.field_d.a((byte) -113, var2);
+        SectorCacheStore.field_d.a((byte) -113, var2);
         cp.a(param0, 1);
         return var2;
     }

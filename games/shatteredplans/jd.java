@@ -67,7 +67,7 @@ final class jd {
 
     final static void a(int param0, fm param1) {
         try {
-          ak.field_v = param1;
+          DiskArchiveRequest.field_v = param1;
           if (param0 != 1) {
             fm var3 = (fm) null;
             jd.a(-29, (fm) null);

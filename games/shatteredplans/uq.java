@@ -28,7 +28,7 @@ final class uq extends IntrusiveNode {
         throw new Error();
     }
 
-    final static boolean a(bc param0, int param1) {
+    final static boolean a(Archive param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;

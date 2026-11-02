@@ -50,7 +50,7 @@ final class ca extends IntrusiveNode {
     ca(Player param0) {
     }
 
-    final static void a(java.applet.Applet param0, bc param1, bc param2, bc param3, boolean param4, bc param5) {
+    final static void a(java.applet.Applet param0, Archive param1, Archive param2, Archive param3, boolean param4, Archive param5) {
         int var7 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -78,11 +78,11 @@ final class ca extends IntrusiveNode {
             }
           }
           wl.field_b = ah.field_Q;
-          qr.a(hn.field_j, pg.field_C, ga.field_w, ub.field_Db, jd.field_d, 5, w.field_J, param1, param3, 6, param2, var10, -117, param4, var10);
+          qr.a(hn.field_j, pg.field_C, MidiPcmStream.field_w, ub.field_Db, jd.field_d, 5, w.field_J, param1, param3, 6, param2, var10, -117, param4, var10);
           gn.field_y = id.a(2, param5, "", "lobbyicon");
           hm.field_o = false;
           pe.field_D = ms.field_c;
-          ra.a(115, 200);
+          RandomAccessCacheFile.a(115, 200);
           rj.a(-94, param2, param1);
           nh.a(param0, 0, 0, (byte) -3, cg.field_B, 16777215);
           return;

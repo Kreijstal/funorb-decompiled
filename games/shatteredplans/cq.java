@@ -60,7 +60,7 @@ final class cq extends WidgetContainer implements bp {
           }
           if (var3 == 0 &&
             eh.field_C == 2) {
-            var4 = pr.a(14274) - br.field_p;
+            var4 = pr.a(14274) - MusicPatch.field_p;
             var6 = (int)((10999L - var4) / 1000L);
             if (var6 <= 0) {
               var3 = 2;
@@ -84,7 +84,7 @@ final class cq extends WidgetContainer implements bp {
           if (MouseInputHandler.field_h != null) {
             MouseInputHandler.field_h.p(8305);
           }
-          ga.g(param0 + 14795);
+          MidiPcmStream.g(param0 + 14795);
           return;
         }
     }
@@ -205,7 +205,7 @@ final class cq extends WidgetContainer implements bp {
     public cq() {
         super(0, 0, 476, 225, (iq) null);
         this.field_H = new kg(oj.field_Ab, (ko) null);
-        this.field_J = new kg(rn.field_a, (ko) null);
+        this.field_J = new kg(DiskCacheWorker.field_a, (ko) null);
         this.field_G = new kg(tr.field_Pb, (ko) null);
         qp var1 = new qp();
         this.field_H.field_p = (iq) ((Object) var1);

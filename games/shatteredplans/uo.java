@@ -201,12 +201,12 @@ final class uo {
             var7.field_K = 0;
             if (!SecondaryNodeDequeIterator.a((byte) -94)) {
               var9_ref_String = np.field_a.field_Xb;
-              tj.field_f.field_z = re.a(he.field_q, 4371, new String[]{var9_ref_String}).toUpperCase();
+              ArchiveSourceManager.field_f.field_z = re.a(he.field_q, 4371, new String[]{var9_ref_String}).toUpperCase();
               dn.field_f.a(IntrusiveDeque.field_g.field_K, 40, (byte) 56, IntrusiveDeque.field_g.field_mb - 40, 0);
               dn.field_f.field_z = re.a(gq.field_a, 4371, new String[]{var9_ref_String});
               var8 = dn.field_f;
             } else {
-              tj.field_f.field_z = n.field_m.toUpperCase();
+              ArchiveSourceManager.field_f.field_z = n.field_m.toUpperCase();
               var9 = (IntrusiveDeque.field_g.field_K + 2) / 2;
               go.field_I.a(-2 + var9, 40, (byte) 124, IntrusiveDeque.field_g.field_mb - 40, 0);
               if (np.field_a.field_Lb >= np.field_a.field_Eb) {
@@ -216,16 +216,16 @@ final class uo {
                 go.field_I.field_z = ph.field_c.toUpperCase();
                 go.field_I.field_s = true;
               }
-              go.field_I.field_F = ea.field_a.field_F;
+              go.field_I.field_F = IsaacBackedRandom.field_a.field_F;
               if (0 < ah.field_X) {
                 if (ah.field_X != 1) {
-                  var10_ref_String = re.a(jg.field_e, 4371, new String[]{Integer.toString(ah.field_X)});
+                  var10_ref_String = re.a(AudioService.field_e, 4371, new String[]{Integer.toString(ah.field_X)});
                 } else {
                   var10_ref_String = ui.field_k;
                 }
                 if ((16 & Star.field_w) == 0 &&
-                  !ti.field_e) {
-                  go.field_I.field_F = ea.field_a.field_lb;
+                  !IntrusiveNodeHashTable.field_e) {
+                  go.field_I.field_F = IsaacBackedRandom.field_a.field_lb;
                 }
                 go.field_I.field_z = go.field_I.field_z + "<br>" + var10_ref_String;
               }
@@ -307,7 +307,7 @@ final class uo {
               }
               if (var10 >= 2) {
                 if ((null != td.field_E ||
-                  null != ci.field_h ||
+                  null != ArchiveIndex.field_h ||
                   null != pg.field_A ||
                   null != ji.field_D)) {
                   var11_intLifetime1 = 0;
@@ -322,9 +322,9 @@ final class uo {
                       td.field_E[var16Lifetime1][var17_intLifetime1]) {
                       var11_intLifetime1 = 1;
                     }
-                    if (null != ci.field_h &&
-                      ci.field_h[var16Lifetime1] != null) {
-                      var18_int = ci.field_h[var16Lifetime1][var17_intLifetime1];
+                    if (null != ArchiveIndex.field_h &&
+                      ArchiveIndex.field_h[var16Lifetime1] != null) {
+                      var18_int = ArchiveIndex.field_h[var16Lifetime1][var17_intLifetime1];
                       if (var18_int != 0 &&
                         !hm.field_o) {
                         var11_intLifetime1 = 1;
@@ -425,7 +425,7 @@ final class uo {
                   } else {
                     var13_ref = SecondaryNodeDeque.field_e;
                     if (var12Lifetime2 != 0) {
-                      var14 = br.field_l + (String) (var11);
+                      var14 = MusicPatch.field_l + (String) (var11);
                     } else {
                       var14 = re.a(js.field_h, 4371, new String[]{(String) (var11)});
                     }
@@ -445,13 +445,13 @@ final class uo {
             ac.field_x.field_z = re.a(eg.field_r, 4371, new String[]{Integer.toString(np.field_a.field_Lb), Integer.toString(np.field_a.field_Eb)});
           }
           stackIn_159_0 = am.field_xb;
-          stackIn_160_1 = (param1) && (!param4) && (!ti.field_e);
+          stackIn_160_1 = (param1) && (!param4) && (!IntrusiveNodeHashTable.field_e);
           ((qr) (Object) stackIn_159_0).a(stackIn_160_1, -20429);
           stackIn_164_0 = IntrusiveDeque.field_g;
-          stackIn_165_1 = (param1) && (!param4) && (!ti.field_e);
+          stackIn_165_1 = (param1) && (!param4) && (!IntrusiveNodeHashTable.field_e);
           ((qr) (Object) stackIn_164_0).a(stackIn_165_1, -20429);
           stackIn_169_0 = MouseInputHandler.field_d;
-          stackIn_170_1 = (param1) && (!param4) && (ti.field_e);
+          stackIn_170_1 = (param1) && (!param4) && (IntrusiveNodeHashTable.field_e);
           ((qr) (Object) stackIn_169_0).a(stackIn_170_1, -20429);
           n.field_h.field_d.f(false);
           if (param0 != 23) {
@@ -460,16 +460,16 @@ final class uo {
           }
           if (np.field_a != null) {
             if (0 != i.field_g.field_rb) {
-              tk.a(param2, np.field_a.g(-92), (byte) -2);
+              NetworkArchiveRequest.a(param2, np.field_a.g(-92), (byte) -2);
             }
             if (0 != aq.field_j.field_rb) {
               ac.field_u = true;
             }
             if (0 != go.field_I.field_rb) {
-              ti.field_e = true;
+              IntrusiveNodeHashTable.field_e = true;
             }
             if (oo.field_c.field_rb != 0) {
-              ti.field_e = false;
+              IntrusiveNodeHashTable.field_e = false;
             }
             sc.a(63, false, np.field_a, param2);
           }

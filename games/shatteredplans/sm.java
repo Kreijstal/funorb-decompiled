@@ -29,7 +29,7 @@ final class sm {
           return;
         }
         if (null != ce.field_x ||
-          null != in.field_g) {
+          null != SecondaryNodeHashTable.field_g) {
           sn.a(640, -46, 480, 192 + (param1 >> 1), 0, 0);
         }
         var4 = (640 - var3) / 2;
@@ -58,11 +58,11 @@ final class sm {
             gf.c(var7, var9, var8, var10, 855316, -param1 + 128 << 1);
           }
         }
-        ga.a(var10, var9, var7, (byte) -102, var8);
-        gf.a(s.field_f);
+        MidiPcmStream.a(var10, var9, var7, (byte) -102, var8);
+        gf.a(GzipInflater.field_f);
         gf.d(var7, var9, var7 + var8, var9 + var10);
         this.e(var5, 7903);
-        gf.b(s.field_f);
+        gf.b(GzipInflater.field_f);
         return;
     }
 
@@ -300,10 +300,10 @@ final class sm {
           var9Lifetime1 = var9Lifetime1 - var13;
           var13 += 21;
           for (var14_int = 0; var14_int <= 16; var14_int++) {
-            mh.a(var13, var6 - var14_int, param1 + var14_int, 65793, false);
+            IsaacRandom.a(var13, var6 - var14_int, param1 + var14_int, 65793, false);
           }
           ks.a(-18166, 16, 2458760, -1, var6, param1);
-          mh.a(var13, -16 + var6, 16 + param1, 2458760, false);
+          IsaacRandom.a(var13, -16 + var6, 16 + param1, 2458760, false);
           var14_intLifetime1 = -12 + Star.field_H[var11];
           if (var14_intLifetime1 > 0) {
             var15_ref_String = pe.field_J[var11];
@@ -321,10 +321,10 @@ final class sm {
         }
         var11Lifetime1 = var9Lifetime1 + 16;
         for (var12Lifetime1 = 0; var12Lifetime1 <= 16; var12Lifetime1++) {
-          mh.a(-(var12Lifetime1 * 2) + 32 + var11Lifetime1, -var12Lifetime1 + var6, param1 + var12Lifetime1, 65793, false);
+          IsaacRandom.a(-(var12Lifetime1 * 2) + 32 + var11Lifetime1, -var12Lifetime1 + var6, param1 + var12Lifetime1, 65793, false);
         }
         ks.a(-18166, 16, 2458760, -1, var6, param1);
-        mh.a(var11Lifetime1, var6 - 16, param1 + 16, 2458760, false);
+        IsaacRandom.a(var11Lifetime1, var6 - 16, param1 + 16, 2458760, false);
         stackIn_48_0 = (this.field_a != 7) ? 16 : 8;
         var12Lifetime2 = stackIn_48_0;
         ks.a(-18166, var12Lifetime2, 2458760, 1, var6 - 16, var11Lifetime1 + 15 + param1);
@@ -440,17 +440,17 @@ final class sm {
         }
         if (oo.field_b == null) {
           oo.field_b = new int[5];
-          er.field_q = new int[5];
+          WhirlpoolHasher.field_q = new int[5];
           fg.field_c = new int[5];
           for (var4Lifetime2 = 0; var4Lifetime2 < 5; var4Lifetime2++) {
-            er.field_q[var4Lifetime2] = vc.a((byte) -39, 35);
+            WhirlpoolHasher.field_q[var4Lifetime2] = vc.a((byte) -39, 35);
             fg.field_c[var4Lifetime2] = vc.a((byte) -39, 35);
           }
         }
         var6Lifetime1 = cl.field_n % 50;
         if (var6Lifetime1 == 0) {
           for (var4Lifetime3 = 0; 5 > var4Lifetime3; var4Lifetime3++) {
-            er.field_q[var4Lifetime3] = fg.field_c[var4Lifetime3];
+            WhirlpoolHasher.field_q[var4Lifetime3] = fg.field_c[var4Lifetime3];
             fg.field_c[var4Lifetime3] = vc.a((byte) -39, 35);
           }
         }
@@ -536,7 +536,7 @@ final class sm {
     }
 
     private final void e(byte param0) {
-        gf.a(kc.field_m);
+        gf.a(MusicEnvelope.field_m);
         gf.a();
         int var2 = re.a(0, 32, IntrusiveDequeCursor.field_c, 320, 0);
         int var3 = 200;
@@ -546,14 +546,14 @@ final class sm {
           return;
         }
         if (var2 > 20) {
-          ga.a(var3, var5, var4, (byte) -112, var2);
+          MidiPcmStream.a(var3, var5, var4, (byte) -112, var2);
         }
         if (IntrusiveDequeCursor.field_c == 32) {
           gf.d(var4 + 8, 8 + var5, var2 + (var4 - 8), var3 + (var5 - 8));
           mp.field_b.c(wc.field_b, (var2 >> 1) + var4, mp.field_b.field_J + 10 + var5, 2805974, -1);
           rs.field_Cb.a(oi.field_c, 10 + var4, mp.field_b.field_J + (var5 + 10), -20 + var2, -mp.field_b.field_J + (-30 + var3), 2805974, -1, 1, 1, rs.field_Cb.field_J);
         }
-        gf.b(kc.field_m);
+        gf.b(MusicEnvelope.field_m);
     }
 
     private final void a(int param0, boolean param1, int param2, boolean param3) {
@@ -717,7 +717,7 @@ final class sm {
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
         if (ce.field_x != null ||
-          null != in.field_g) {
+          null != SecondaryNodeHashTable.field_g) {
           oa.a(480, 0, 640, (byte) -126, 0);
         }
         var4 = this.c(32);
@@ -733,8 +733,8 @@ final class sm {
         var12 = 20 + var4;
         var13 = var5 - 10;
         var14 = var6 + 10;
-        ga.a(var14, var13, var11, (byte) -73, var12);
-        gf.a(s.field_f);
+        MidiPcmStream.a(var14, var13, var11, (byte) -73, var12);
+        gf.a(GzipInflater.field_f);
         var15 = var10 + (var9 - 20);
         var16 = var12 + var11;
         stackIn_8_0 = var11;
@@ -744,7 +744,7 @@ final class sm {
         this.e(var5, param1 + 14372);
         gf.d(var11, var13, var11 + var12, var14 + var13);
         mj.field_Hb[param0].e(var5, 7903);
-        gf.b(s.field_f);
+        gf.b(GzipInflater.field_f);
     }
 
     private final void c(byte param0) {
@@ -766,7 +766,7 @@ final class sm {
         int var6Lifetime1;
         int var6Lifetime1Lifetime1;
         var14 = ShatteredPlansClient.field_F ? 1 : 0;
-        gf.a(kc.field_m);
+        gf.a(MusicEnvelope.field_m);
         gf.a();
         if (param0 != -23) {
           discarded$0 = this.c(72, -48);
@@ -783,7 +783,7 @@ final class sm {
         var4 = this.b(false) - (-this.c(32) + var2 >> 1);
         var5 = this.h(param0 - 71) - var3 - 24;
         if (var2 > 20) {
-          ga.a(var3, var5, var4, (byte) -109, var2);
+          MidiPcmStream.a(var3, var5, var4, (byte) -109, var2);
         }
         regionExit1: {
           gf.d(var4 + 8, 8 + var5, var2 + (var4 - 8), -8 + (var3 + var5));
@@ -796,7 +796,7 @@ final class sm {
           rs.field_Cb.c(eo.field_X, vn.field_r[5] + var4, var7, var6, -1);
           var7 += 24;
           if (!ri.field_I.field_q) {
-            var8 = ea.field_d;
+            var8 = IsaacBackedRandom.field_d;
           } else {
             if (null != ri.field_I.field_n) {
               var8 = ne.field_q;
@@ -828,7 +828,7 @@ final class sm {
         }
         var7Lifetime1 = (rs.field_Cb.field_J + var3 >> 1) + var5;
         rs.field_Cb.c(var8, var4 + (var2 >> 1), var7Lifetime1, 2805974, -1);
-        gf.b(kc.field_m);
+        gf.b(MusicEnvelope.field_m);
         return;
     }
 
@@ -842,11 +842,11 @@ final class sm {
         int var5 = this.b(false) - (var3 - this.c(32) >> 1);
         int var6 = -60 + this.h(-122) - var4 - 48;
         if (var3 > 20) {
-          ga.a(var4, var6, var5, (byte) -124, var3);
+          MidiPcmStream.a(var4, var6, var5, (byte) -124, var3);
         }
         gf.d(8 + var5, 8 + var6, var5 + var3 - 8, -8 + var6 + var4);
         rs.field_Cb.c(fr.field_D, 320, (rs.field_Cb.field_J + var4 >> 1) + var6, 16777215, -1);
-        gf.b(kc.field_m);
+        gf.b(MusicEnvelope.field_m);
     }
 
     final void a(int param0, byte param1, boolean param2) {
@@ -1153,16 +1153,16 @@ final class sm {
                   var12 = 390;
                 }
                 ai.a(true);
-                gf.b(16 * var12 + em.field_c[0], ul.field_Db[0] + param0 * 16, 50, 7, h.field_s);
+                gf.b(16 * var12 + em.field_c[0], ul.field_Db[0] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
                 rs.field_Cb.d(sk.field_i, var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
                 param0 += 40;
-                gf.b(16 * var12 + em.field_c[0], ul.field_Db[0] + 16 * param0, 50, 7, h.field_s);
-                gf.b(em.field_c[1] + 16 * var12, 16 * param0 + ul.field_Db[1], 50, 7, h.field_s);
+                gf.b(16 * var12 + em.field_c[0], ul.field_Db[0] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
+                gf.b(em.field_c[1] + 16 * var12, 16 * param0 + ul.field_Db[1], 50, 7, MusicCrossfadeStream.field_s);
                 rs.field_Cb.d(pg.field_F, var12 + 22, rs.field_Cb.field_J / 4 + param0, 16777215, -1);
                 param0 += 40;
-                gf.b(16 * var12 + em.field_c[0], param0 * 16 + ul.field_Db[0], 50, 7, h.field_s);
-                gf.b(em.field_c[2] + var12 * 16, ul.field_Db[2] + 16 * param0, 50, 7, h.field_s);
-                gf.b(em.field_c[3] + var12 * 16, ul.field_Db[3] + param0 * 16, 50, 7, h.field_s);
+                gf.b(16 * var12 + em.field_c[0], param0 * 16 + ul.field_Db[0], 50, 7, MusicCrossfadeStream.field_s);
+                gf.b(em.field_c[2] + var12 * 16, ul.field_Db[2] + 16 * param0, 50, 7, MusicCrossfadeStream.field_s);
+                gf.b(em.field_c[3] + var12 * 16, ul.field_Db[3] + param0 * 16, 50, 7, MusicCrossfadeStream.field_s);
                 rs.field_Cb.d(vd.field_n, var12 + 22, param0 + rs.field_Cb.field_J / 4, 16777215, -1);
                 param0 += 40;
                 qk.field_y[0].b(var12 - 15, param0 - 15, 30, 30);
@@ -1182,7 +1182,7 @@ final class sm {
                 bd.field_G.a(40, 40, cl.field_n % 25 * 200, 16384);
                 cg.i(0);
                 var9_ref_bi.d(param3 + 15, 8 + param0);
-                var42 = er.field_n;
+                var42 = WhirlpoolHasher.field_n;
                 var10Lifetime2 = rs.field_Cb.a(wg.field_e.a(5607, var42), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + ((3 + var10Lifetime2 * 4) * var8 >> 2);
                 var11Lifetime1 = cl.field_n % 200;
@@ -1264,7 +1264,7 @@ final class sm {
                 for (var16_intLifetime1 = 0; var16_intLifetime1 < 10; var16_intLifetime1++) {
                   gf.f(-(var16_intLifetime1 >> 1) + (param3 + 36), var16_intLifetime1 + param0 + 30, -2 & var16_intLifetime1, 16777215);
                 }
-                var33 = er.field_l;
+                var33 = WhirlpoolHasher.field_l;
                 var14 = rs.field_Cb.a(wg.field_e.a(5607, var33), param3 + 80, param0, -80 + var6, var7, 16777215, -1, 3, 0, var8);
                 param0 = param0 + (var8 * (3 + var14 * 4) >> 2);
                 var16_intLifetime2 = cl.field_n / 100 % 3;
@@ -1328,7 +1328,7 @@ final class sm {
                 if (null != oo.field_b) {
                   var19Lifetime2 = cl.field_n % 50;
                   for (var20Lifetime2 = 0; 5 > var20Lifetime2; var20Lifetime2++) {
-                    oo.field_b[var20Lifetime2] = re.a(er.field_q[var20Lifetime2], 50, var19Lifetime2, fg.field_c[var20Lifetime2], 0);
+                    oo.field_b[var20Lifetime2] = re.a(WhirlpoolHasher.field_q[var20Lifetime2], 50, var19Lifetime2, fg.field_c[var20Lifetime2], 0);
                   }
                   var20Lifetime2Lifetime1 = param3 + 10;
                   var21Lifetime2 = oo.field_b[0] + (10 + param0);
@@ -1439,7 +1439,7 @@ final class sm {
                 var5 = var40;
                 var9Lifetime3Lifetime2 = rs.field_Cb.a(wg.field_e.a(5607, var40), param3 + 40, param0, var6 - 40, var7, 16777215, -1, 3, 0, var8);
                 this.a(15 + param3, 20, 2, (rs.field_Cb.field_J * (2 * var9Lifetime3Lifetime2 + 1) >> 2) + param0, (byte) -82, (170 + cl.field_n) % 200);
-                var41 = ar.field_o;
+                var41 = ArchiveNetworkClient.field_o;
                 var5 = var41;
                 var5 = var41;
                 param0 = param0 + (var8 * (4 * var9Lifetime3Lifetime2 + 3) >> 2);
@@ -1613,7 +1613,7 @@ final class sm {
               if (vr.field_c == 9) {
                 continue;
               }
-              var2 = br.field_m;
+              var2 = MusicPatch.field_m;
               ta.a(0, var2, (byte) 96, false);
               continue;
             }
@@ -1722,7 +1722,7 @@ final class sm {
 
     final void g(int param0) {
         if (null != ce.field_x ||
-          in.field_g != null) {
+          SecondaryNodeHashTable.field_g != null) {
           oa.a(480, 0, 640, (byte) -116, 0);
         }
         int var2 = this.c(32);
@@ -1734,7 +1734,7 @@ final class sm {
         int var8 = var4 - 10;
         int var9 = var3 + 10;
         int var10 = 127 / ((param0 - 15) / 60);
-        ga.a(var9, var8, var6, (byte) -72, var7);
+        MidiPcmStream.a(var9, var8, var6, (byte) -72, var7);
         this.e(var4, 7903);
     }
 
@@ -1814,7 +1814,7 @@ final class sm {
             }
             if (((var5 != 0)) && ((!(this.field_d.b((byte) -114)) ||
               !(cl.field_n <= qg.field_q)))) {
-              qk.a(qc.field_w, 89);
+              qk.a(SocketArchiveNetworkClient.field_w, 89);
               qg.field_q = 25 + cl.field_n;
             }
             decompiledFrameRemainder0 = false;
@@ -1822,10 +1822,10 @@ final class sm {
           else {
             if (var6 == 22) {
               if (this.field_d.a(-1)) {
-                ak.c(-68, 0);
+                DiskArchiveRequest.c(-68, 0);
               }
               if (this.field_d.a(true)) {
-                ak.c(-61, 256);
+                DiskArchiveRequest.c(-61, 256);
               }
               if (this.field_d.b((byte) -73)) {
                 stackIn_92_0 = -120;
@@ -1835,12 +1835,12 @@ final class sm {
                 var7Lifetime1 = pd.field_k - var6;
                 var8Lifetime1 = 256 * var7Lifetime1 / 120;
                 if (var8Lifetime1 <= 0) {
-                  ak.c(127, 0);
+                  DiskArchiveRequest.c(127, 0);
                 } else {
                   if (256 > var8Lifetime1) {
-                    ak.c(-66, var8Lifetime1);
+                    DiskArchiveRequest.c(-66, var8Lifetime1);
                   } else {
-                    ak.c(127, 256);
+                    DiskArchiveRequest.c(127, 256);
                   }
                 }
               }
@@ -1911,7 +1911,7 @@ final class sm {
         var27 = ShatteredPlansClient.field_F ? 1 : 0;
         var2 = 52;
         var3 = 140;
-        gf.a(kc.field_m);
+        gf.a(MusicEnvelope.field_m);
         var4 = var2;
         gf.a();
         for (var6 = 0; var6 < 25; var6++) {
@@ -2008,7 +2008,7 @@ final class sm {
           var7 = jd.field_j[var6];
           var8Lifetime1 = mr.a(var6, -94);
         }
-        ra.a(-106);
+        RandomAccessCacheFile.a(-106);
         gl.field_h.e();
         gf.b();
         var7.b(0, 0, 256, 256);
@@ -2021,7 +2021,7 @@ final class sm {
         var12 = (640 - var10) / 2;
         var13 = 220;
         if (20 < var10) {
-          ga.a(var11, var13, var12, (byte) -124, var10);
+          MidiPcmStream.a(var11, var13, var12, (byte) -124, var10);
         }
         gf.d(10 + var12, var13, var12 + var10 - 10, var11 + var13);
         var14 = 98;
@@ -2063,7 +2063,7 @@ final class sm {
               mp.field_b.d(VictoryChecker.field_c.toUpperCase(), var2Lifetime1 + 10, mp.field_b.field_J + (6 + var20), 2805974, -1);
               rs.field_Cb.a(rk.field_l, 10 + var2Lifetime1, var20 + 14 + rs.field_Cb.field_J, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
             } else {
-              mp.field_b.d(ol.field_j.toUpperCase(), 10 + var2Lifetime1, var20 + 6 + mp.field_b.field_J, 2805974, -1);
+              mp.field_b.d(WeightedLruCache.field_j.toUpperCase(), 10 + var2Lifetime1, var20 + 6 + mp.field_b.field_J, 2805974, -1);
               rs.field_Cb.a(SocketConnector.field_c, 10 + var2Lifetime1, rs.field_Cb.field_J + var20 + 14, -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
             }
           }
@@ -2099,7 +2099,7 @@ final class sm {
             }
           }
         }
-        gf.b(kc.field_m);
+        gf.b(MusicEnvelope.field_m);
     }
 
     private final int b(int param0, boolean param1) {
@@ -2302,7 +2302,7 @@ final class sm {
                             if (6 != var5) {
                               if (var5 == 9) {
                                 this.field_g = param0;
-                                var5 = br.field_m;
+                                var5 = MusicPatch.field_m;
                                 var6 = param1 ? 1 : 0;
                                 ta.a(gr.field_o, var5, (byte) 96, var6 != 0);
                               } else {
@@ -2315,11 +2315,11 @@ final class sm {
                                     var5 != 22) {
                                     if (var5 == 7) {
                                       if (null != bj.field_K) {
-                                        ej.c(param3 ^ -32580);
+                                        BufferedCacheFile.c(param3 ^ -32580);
                                       } else {
                                         var5 = param1 ? 1 : 0;
                                         ne.field_s = false;
-                                        m.a(8, 13421772, IterableNodeHashTable.field_b, 8, mp.field_b.field_K, mr.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, mr.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (Sprite[]) null, es.field_n);
+                                        StrongCacheEntry.a(8, 13421772, IterableNodeHashTable.field_b, 8, mp.field_b.field_K, mr.field_i, 240, mp.field_b.field_K + mp.field_b.field_q, mr.field_i, 320, mp.field_b, mp.field_b, 0, mp.field_b.field_K, ah.field_P, mp.field_b.field_q + mp.field_b.field_K, 0, 2, 480, (Sprite[]) null, es.field_n);
                                         fm.a(var5 != 0, -1);
                                       }
                                       break regionExit1;
@@ -2419,12 +2419,12 @@ final class sm {
                                                             break regionExit1;
                                                           }
                                                           if (32 == var5) {
-                                                            if (oq.field_i[32] == ga.field_L) {
+                                                            if (oq.field_i[32] == MidiPcmStream.field_L) {
                                                               hk.field_nb = js.field_i;
                                                               oq.field_i[32] = rj.field_r;
                                                               jo.a(32767, hk.field_nb, true, 50);
                                                             } else {
-                                                              oq.field_i[32] = ga.field_L;
+                                                              oq.field_i[32] = MidiPcmStream.field_L;
                                                               hk.field_nb = wp.field_a;
                                                               jo.a(32767, hk.field_nb, true, 50);
                                                             }
@@ -2441,7 +2441,7 @@ final class sm {
                                                 var5 = param1 ? 1 : 0;
                                                 ta.a(gr.field_o, -7, (byte) 96, var5 != 0);
                                               }
-                                              if (kc.field_d) {
+                                              if (MusicEnvelope.field_d) {
                                                 os.a(0, 11, true);
                                               }
                                             }
@@ -2535,19 +2535,19 @@ final class sm {
         }
         boolean decompiledFrameRemainder0 = true;
         if (param1 == 9) {
-          if (br.field_m != 0 &&
+          if (MusicPatch.field_m != 0 &&
             gr.field_o != 0 &&
-            br.field_m != 11 &&
+            MusicPatch.field_m != 11 &&
             gr.field_o != 11 &&
-            br.field_m != 13 &&
+            MusicPatch.field_m != 13 &&
             gr.field_o != 13) {
-            if (1 != br.field_m &&
+            if (1 != MusicPatch.field_m &&
               gr.field_o != 1) {
-              if ((2 == br.field_m ||
+              if ((2 == MusicPatch.field_m ||
                 gr.field_o == 2 ||
-                br.field_m == 3 ||
+                MusicPatch.field_m == 3 ||
                 gr.field_o == 3 ||
-                br.field_m == 4 ||
+                MusicPatch.field_m == 4 ||
                 4 == gr.field_o)) {
                 var3Lifetime2 = ep.field_d;
               }
@@ -2563,7 +2563,7 @@ final class sm {
         if (param1 == 10 &&
           null != ce.field_x &&
           ce.field_x.field_W) {
-          var3Lifetime2 = ua.field_g;
+          var3Lifetime2 = SectorCacheStore.field_g;
         }
         if (param0 != -22609) {
           return (String) null;

@@ -95,7 +95,7 @@ final class jj extends VictoryChecker {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         nk[] var1 = new nk[en.field_c];
         for (var2 = 0; en.field_c > var2; var2++) {
-          var1[var2] = new nk(tk.field_y, eg.field_t, cf.field_H[var2], sj.field_a[var2], mc.field_s[var2], cm.field_g[var2], hd.field_q[var2], eo.field_fb);
+          var1[var2] = new nk(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[var2], sj.field_a[var2], WeightedCacheEntry.field_s[var2], cm.field_g[var2], hd.field_q[var2], eo.field_fb);
         }
         if (param0) {
           pd.a(0);

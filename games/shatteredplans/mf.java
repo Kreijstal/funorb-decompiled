@@ -14,7 +14,7 @@ final class mf extends ml {
     private String field_t;
     static boolean field_p;
 
-    final static th a(int param0, int param1, bc param2, bc param3, int param4) {
+    final static th a(int param0, int param1, Archive param2, Archive param3, int param4) {
         RuntimeException var5 = null;
         th stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
@@ -32,7 +32,7 @@ final class mf extends ml {
           if (param4 > -83) {
             mf.e(87);
           }
-          stackIn_7_0 = in.a(15, param3.a(param1, -1, param0));
+          stackIn_7_0 = SecondaryNodeHashTable.a(15, param3.a(param1, -1, param0));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -108,7 +108,7 @@ final class mf extends ml {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (this.field_s.b(-11196, param1) == tj.field_b) {
+          if (this.field_s.b(-11196, param1) == ArchiveSourceManager.field_b) {
             stackIn_4_0 = this.field_s.a(false, param1);
             return stackIn_4_0;
           }
@@ -116,7 +116,7 @@ final class mf extends ml {
             stackIn_7_0 = (String) null;
             return stackIn_7_0;
           }
-          if (this.b(-11196, param1) == tj.field_b) {
+          if (this.b(-11196, param1) == ArchiveSourceManager.field_b) {
             stackIn_12_0 = ab.field_d;
             return stackIn_12_0;
           }
@@ -147,8 +147,8 @@ final class mf extends ml {
         ks var3 = null;
         RuntimeException var3_ref = null;
         try {
-          if (this.field_s.b(param0, param1) == tj.field_b) {
-            stackIn_2_0 = tj.field_b;
+          if (this.field_s.b(param0, param1) == ArchiveSourceManager.field_b) {
+            stackIn_2_0 = ArchiveSourceManager.field_b;
             return stackIn_2_0;
           }
           if (!param1.equals(this.field_t)) {
@@ -161,9 +161,9 @@ final class mf extends ml {
             this.field_n = var3.a(true);
           }
           if (!this.field_n) {
-            stackIn_14_0 = tj.field_b;
+            stackIn_14_0 = ArchiveSourceManager.field_b;
           } else {
-            stackIn_14_0 = p.field_g;
+            stackIn_14_0 = CachedArchiveSource.field_g;
           }
           return stackIn_14_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -188,29 +188,29 @@ final class mf extends ml {
         try {
           if (param1 ||
             np.field_a == null) {
-            ti.field_e = false;
+            IntrusiveNodeHashTable.field_e = false;
           }
           if (param1) {
             if (0 < qa.field_t) {
               qa.field_t = qa.field_t - 1;
             } else {
-              if (bc.field_b <= 0) {
+              if (Archive.field_b <= 0) {
                 if (0 < ee.field_k) {
                   ee.field_k = ee.field_k - 1;
                 }
               } else {
-                bc.field_b = bc.field_b - 1;
+                Archive.field_b = Archive.field_b - 1;
               }
             }
           } else {
             if (np.field_a == null) {
               if (null == he.field_p) {
-                ti.field_e = false;
-                if (bc.field_b <= 0) {
+                IntrusiveNodeHashTable.field_e = false;
+                if (Archive.field_b <= 0) {
                   if (0 >= ee.field_k) {
                     if (MouseInputHandler.field_f > qa.field_t) {
                       if (qa.field_t == 0) {
-                        in.a((byte) -83);
+                        SecondaryNodeHashTable.a((byte) -83);
                       }
                       qa.field_t = qa.field_t + 1;
                     }
@@ -218,16 +218,16 @@ final class mf extends ml {
                     ee.field_k = ee.field_k - 1;
                   }
                 } else {
-                  bc.field_b = bc.field_b - 1;
+                  Archive.field_b = Archive.field_b - 1;
                 }
               } else {
                 if (qa.field_t <= 0) {
                   if (ee.field_k <= 0) {
-                    if (MouseInputHandler.field_f > bc.field_b) {
-                      if (0 == bc.field_b) {
+                    if (MouseInputHandler.field_f > Archive.field_b) {
+                      if (0 == Archive.field_b) {
                         tc.a(true, true);
                       }
-                      bc.field_b = bc.field_b + 1;
+                      Archive.field_b = Archive.field_b + 1;
                     }
                   } else {
                     ee.field_k = ee.field_k - 1;
@@ -240,8 +240,8 @@ final class mf extends ml {
               if (0 < qa.field_t) {
                 qa.field_t = qa.field_t - 1;
               } else {
-                if (bc.field_b > 0) {
-                  bc.field_b = bc.field_b - 1;
+                if (Archive.field_b > 0) {
+                  Archive.field_b = Archive.field_b - 1;
                 } else {
                   if (ee.field_k < MouseInputHandler.field_f) {
                     if (0 == ee.field_k) {
@@ -355,7 +355,7 @@ final class mf extends ml {
         }
     }
 
-    final static Sprite a(bc param0, String param1, String param2, boolean param3) {
+    final static Sprite a(Archive param0, String param1, String param2, boolean param3) {
         byte[] var4 = null;
         byte[] var5 = null;
         Object stackIn_3_0 = null;

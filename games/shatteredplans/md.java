@@ -234,7 +234,7 @@ final class md extends UiWidget {
         int var3 = ShatteredPlansClient.field_F ? 1 : 0;
         int var1Lifetime1;
         Star.field_F = new Sprite(182 - IntrusiveDeque.field_a[0].field_z * 3 / 4, rs.field_Cb.field_J);
-        ra.a(param0 - 106);
+        RandomAccessCacheFile.a(param0 - 106);
         Star.field_F.e();
         for (var1 = 1; -1 + Star.field_F.field_w > var1; var1++) {
           var2 = (-var1 + Star.field_F.field_w / 2) * (Star.field_F.field_w / 2 - var1);

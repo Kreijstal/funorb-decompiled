@@ -39,7 +39,7 @@ final class ec extends ml {
         try {
           var5 = (CharSequence) ((Object) param1);
           if (!UiWidget.a(var5, (byte) -89)) {
-            stackIn_3_0 = tj.field_b;
+            stackIn_3_0 = ArchiveSourceManager.field_b;
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_n)) {
@@ -58,9 +58,9 @@ final class ec extends ml {
             ec.a(30, (int[]) null, 29);
           }
           if (!this.field_o) {
-            stackIn_16_0 = tj.field_b;
+            stackIn_16_0 = ArchiveSourceManager.field_b;
           } else {
-            stackIn_16_0 = p.field_g;
+            stackIn_16_0 = CachedArchiveSource.field_g;
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -96,7 +96,7 @@ final class ec extends ml {
             kj.field_a.a(param0 + 66);
             kj.field_a = null;
           }
-          ea.field_b = null;
+          IsaacBackedRandom.field_b = null;
           if (uo.field_a != null) {
             uo.field_a.a(0);
             uo.field_a = null;
@@ -136,7 +136,7 @@ final class ec extends ml {
           var3 = 1;
         }
         Sprite var4 = new Sprite(var3, -6 + d.field_b[param0].field_w);
-        ra.a(-104);
+        RandomAccessCacheFile.a(-104);
         var4.e();
         for (var5 = 0; var4.field_z > var5; var5++) {
           gf.j(var5, 0, var4.field_w, ui.a(0, gm.field_k[param0], -81, 128 + 128 * var5 / var4.field_z));
@@ -240,7 +240,7 @@ final class ec extends ml {
         }
     }
 
-    final static sr a(sl param0, byte param1) {
+    final static sr a(CipherPacketBuffer param0, byte param1) {
         int var8 = 0;
         sr stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;

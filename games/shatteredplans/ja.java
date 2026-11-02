@@ -169,23 +169,23 @@ final class ja extends da implements od, g {
           var4 = this.field_m.l(66);
           var5 = vn.e(-13299);
           if (1890 > var4) {
-            stackIn_3_0 = tj.field_b;
+            stackIn_3_0 = ArchiveSourceManager.field_b;
             return stackIn_3_0;
           }
           if (-3 + var5 < var4) {
-            stackIn_7_0 = tj.field_b;
+            stackIn_7_0 = ArchiveSourceManager.field_b;
             return stackIn_7_0;
           }
           if (!tg.a(var2_int, var3, (byte) -127, var4)) {
-            stackIn_10_0 = tj.field_b;
+            stackIn_10_0 = ArchiveSourceManager.field_b;
             return stackIn_10_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
-          return tj.field_b;
+          return ArchiveSourceManager.field_b;
         }
-        return p.field_g;
+        return CachedArchiveSource.field_g;
     }
 
     public final void a(int param0, go param1) {

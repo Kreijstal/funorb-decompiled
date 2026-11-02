@@ -121,7 +121,7 @@ final class ei {
     }
 
     final static void a(int param0, int param1, byte[] param2, boolean param3, boolean param4, int param5) {
-        sl var10 = null;
+        CipherPacketBuffer var10 = null;
         int var7 = 0;
         int var8 = 0;
         try {

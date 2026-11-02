@@ -19,16 +19,16 @@ final class je {
           param0 = param0 & 8191;
           if (param0 >= 4096) {
             if (param0 < 6144) {
-              stackIn_19_0 = -br.field_o[param0 - 4096];
+              stackIn_19_0 = -MusicPatch.field_o[param0 - 4096];
             } else {
-              stackIn_19_0 = -br.field_o[-param0 + 8192];
+              stackIn_19_0 = -MusicPatch.field_o[-param0 + 8192];
             }
             return stackIn_19_0;
           }
           if (2048 <= param0) {
-            stackIn_15_0 = br.field_o[4096 - param0];
+            stackIn_15_0 = MusicPatch.field_o[4096 - param0];
           } else {
-            stackIn_15_0 = br.field_o[param0];
+            stackIn_15_0 = MusicPatch.field_o[param0];
           }
           return stackIn_15_0;
         }
@@ -36,22 +36,22 @@ final class je {
         param0 = param0 & 8191;
         if (param0 >= 4096) {
           if (param0 < 6144) {
-            stackIn_9_0 = -br.field_o[param0 - 4096];
+            stackIn_9_0 = -MusicPatch.field_o[param0 - 4096];
           } else {
-            stackIn_9_0 = -br.field_o[-param0 + 8192];
+            stackIn_9_0 = -MusicPatch.field_o[-param0 + 8192];
           }
           return stackIn_9_0;
         }
         if (2048 <= param0) {
-          stackIn_5_0 = br.field_o[4096 - param0];
+          stackIn_5_0 = MusicPatch.field_o[4096 - param0];
         } else {
-          stackIn_5_0 = br.field_o[param0];
+          stackIn_5_0 = MusicPatch.field_o[param0];
         }
         return stackIn_5_0;
     }
 
     final static void a(byte param0, int param1) {
-        sl var2 = js.field_f;
+        CipherPacketBuffer var2 = js.field_f;
         var2.h(param1, 255);
         if (param0 > 32) {
           var2.c(1, (byte) -104);

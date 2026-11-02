@@ -3,7 +3,7 @@
  */
 final class aj {
     static MouseWheelInput field_b;
-    static ap field_e;
+    static PcmPlayerService field_e;
     static int field_c;
     static volatile int field_f;
     static IntrusiveDeque field_a;
@@ -66,7 +66,7 @@ final class aj {
           if (param2.field_Ab && (param2.field_Fb == 2 ||
             !(bs.field_b < 2))) {
             var7 = hp.field_m;
-            var8 = re.a(fk.field_o, 4371, new String[]{param3});
+            var8 = re.a(ByteArrayNode.field_o, 4371, new String[]{param3});
             var7.field_j.a(1, 10, var8);
           }
           hp.field_m.a(false);

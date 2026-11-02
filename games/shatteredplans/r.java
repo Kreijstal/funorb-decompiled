@@ -8,14 +8,14 @@ final class r implements Runnable {
     private PlatformTaskDispatcher field_l;
     static String field_f;
     static int field_c;
-    private pb field_b;
+    private PlatformTask field_b;
     static int[] field_j;
     private DataInputStream field_g;
     private int field_h;
     private java.net.URL field_e;
-    private pb field_a;
+    private PlatformTask field_a;
     static boolean field_d;
-    private pb field_i;
+    private PlatformTask field_i;
 
     final static void a(byte param0) {
         String[][] dupTemp$0 = null;
@@ -36,7 +36,7 @@ final class r implements Runnable {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        sl var15 = null;
+        CipherPacketBuffer var15 = null;
         int var7_intLifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
@@ -202,10 +202,10 @@ final class r implements Runnable {
         field_j = (int[]) null;
     }
 
-    final static fk a(byte[] param0, byte param1, int param2) {
-        fk var3 = null;
+    final static ByteArrayNode a(byte[] param0, byte param1, int param2) {
+        ByteArrayNode var3 = null;
         RuntimeException var3_ref = null;
-        fk stackIn_3_0 = null;
+        ByteArrayNode stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -214,7 +214,7 @@ final class r implements Runnable {
           if (param1 > -9) {
             r.a((byte) 30, false);
           }
-          var3 = new fk(param0);
+          var3 = new ByteArrayNode(param0);
           tr.field_vb.a((byte) -113, var3);
           dn.a(param2, var3, (byte) 13);
           stackIn_3_0 = var3;

@@ -65,13 +65,13 @@ final class fc {
               this.field_j.a(1, 1, re.a(field_c, 4371, new String[]{var5}));
             } else {
               if (!param0) {
-                this.field_j.a(1, 0, re.a(ol.field_f, 4371, new String[]{var5}));
+                this.field_j.a(1, 0, re.a(WeightedLruCache.field_f, 4371, new String[]{var5}));
               } else {
                 if (!var7.field_Vb) {
-                  this.field_j.a(1, 0, re.a(ol.field_f, 4371, new String[]{var5}));
+                  this.field_j.a(1, 0, re.a(WeightedLruCache.field_f, 4371, new String[]{var5}));
                 } else {
                   this.field_j.a(param1 ^ -16662, 0, re.a(ad.field_g, 4371, new String[]{var5}));
-                  this.field_j.a(1, 1, re.a(ej.field_f, 4371, new String[]{var5}));
+                  this.field_j.a(1, 1, re.a(BufferedCacheFile.field_f, 4371, new String[]{var5}));
                 }
               }
             }
@@ -134,7 +134,7 @@ final class fc {
         if (param1 != 17) {
           return false;
         }
-        tc.field_G = new kh(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, ho.field_j, un.field_g, po.field_d, SpriteState.field_u, fk.field_i, gn.field_w, this.field_k, this.field_b);
+        tc.field_G = new kh(this.field_e.field_B, this.field_e.field_N, this.field_e.field_K, this.field_e.field_mb, param0, ho.field_j, un.field_g, po.field_d, SpriteState.field_u, ByteArrayNode.field_i, gn.field_w, this.field_k, this.field_b);
         return true;
     }
 
@@ -165,7 +165,7 @@ final class fc {
                       if (param0 != 19) {
                         return false;
                       }
-                      tk.a(this.field_b, this.field_k, false, this.field_i, this.field_l);
+                      NetworkArchiveRequest.a(this.field_b, this.field_k, false, this.field_i, this.field_l);
                     }
                   }
                 }
@@ -245,10 +245,10 @@ final class fc {
             var7 = this.a(-121);
             var4 = var7;
             var5 = hb.a((byte) -90, this.field_k);
-            var6 = ti.a(this.field_k, true) ? 1 : 0;
+            var6 = IntrusiveNodeHashTable.a(this.field_k, true) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_j.a(1, 4, re.a(ti.field_j, 4371, new String[]{var7}));
+              this.field_j.a(1, 4, re.a(IntrusiveNodeHashTable.field_j, 4371, new String[]{var7}));
               this.field_j.a(1, 6, re.a(ts.field_F, 4371, new String[]{var7}));
               if (param0 != null &&
                 param1 != 2 &&
@@ -261,7 +261,7 @@ final class fc {
               if (!Player.a(-68, this.field_k) &&
                 !bg.field_g) {
                 if (!ae.field_b) {
-                  this.field_j.a(1, 8, re.a(tk.field_B, 4371, new String[]{var7}));
+                  this.field_j.a(1, 8, re.a(NetworkArchiveRequest.field_B, 4371, new String[]{var7}));
                 }
                 this.field_j.a(1, 18, re.a(se.field_e, 4371, new String[]{var7}));
                 if (param0 != null) {
@@ -272,7 +272,7 @@ final class fc {
               this.field_j.a(1, 5, re.a(kg.field_C, 4371, new String[]{var7}));
             }
             if (var6 != 0) {
-              this.field_j.a(1, 7, re.a(fk.field_m, 4371, new String[]{var7}));
+              this.field_j.a(1, 7, re.a(ByteArrayNode.field_m, 4371, new String[]{var7}));
             }
           }
           if (param2 >= -13) {
@@ -487,7 +487,7 @@ final class fc {
           }
           var3 = var6.field_Xb;
           if (var6.field_Jb) {
-            this.field_j.a(1, 2, re.a(bc.field_i, 4371, new String[]{var3}));
+            this.field_j.a(1, 2, re.a(Archive.field_i, 4371, new String[]{var3}));
             this.field_j.a(1, 3, re.a(sq.field_i, 4371, new String[]{var3}));
             return;
           }
@@ -529,7 +529,7 @@ final class fc {
           }
           var3 = var7.field_Xb;
           if (var7.field_Jb) {
-            this.field_j.a(1, 2, re.a(bc.field_i, 4371, new String[]{var3}));
+            this.field_j.a(1, 2, re.a(Archive.field_i, 4371, new String[]{var3}));
             this.field_j.a(1, 3, re.a(sq.field_i, 4371, new String[]{var3}));
             return;
           }
@@ -560,11 +560,11 @@ final class fc {
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         if (param1 == 4) {
           if (0 == param2) {
-            tj.a((byte) 92, param0, this.field_b);
+            ArchiveSourceManager.a((byte) 92, param0, this.field_b);
             return true;
           }
           if (param2 == 1) {
-            bc.a(param0, (byte) 2, this.field_b);
+            Archive.a(param0, (byte) 2, this.field_b);
             return true;
           }
           if (param2 == 2) {
@@ -572,7 +572,7 @@ final class fc {
             return true;
           }
           if (param2 == 3) {
-            tk.a(param0, this.field_f, (byte) -2);
+            NetworkArchiveRequest.a(param0, this.field_f, (byte) -2);
             return true;
           }
           if (param2 == 10) {
@@ -592,11 +592,11 @@ final class fc {
         var6 = (CharSequence) null;
         fc.a(-97, (CharSequence) null, (byte) 99, true);
         if (0 == param2) {
-          tj.a((byte) 92, param0, this.field_b);
+          ArchiveSourceManager.a((byte) 92, param0, this.field_b);
           return true;
         }
         if (param2 == 1) {
-          bc.a(param0, (byte) 2, this.field_b);
+          Archive.a(param0, (byte) 2, this.field_b);
           return true;
         }
         if (param2 == 2) {
@@ -604,7 +604,7 @@ final class fc {
           return true;
         }
         if (param2 == 3) {
-          tk.a(param0, this.field_f, (byte) -2);
+          NetworkArchiveRequest.a(param0, this.field_f, (byte) -2);
           return true;
         }
         if (param2 == 10) {

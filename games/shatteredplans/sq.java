@@ -166,7 +166,7 @@ final class sq {
     }
 
     final static void a(int param0, int param1, int param2) {
-        sl var3 = js.field_f;
+        CipherPacketBuffer var3 = js.field_f;
         var3.h(param1, 255);
         var3.c(3, (byte) -70);
         var3.c(8, (byte) -58);

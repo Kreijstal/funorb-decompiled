@@ -10,7 +10,7 @@ final class oe {
     static int[] field_i;
     static boolean field_e;
     static long field_a;
-    static fp field_d;
+    static FrameTimer field_d;
     private static String field_z;
 
     public static void a(int param0) {

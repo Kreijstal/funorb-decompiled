@@ -16,7 +16,7 @@ final class ah extends ts {
     static int field_U;
 
     ah(gk param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, ea.b(114));
+        super(param1, IsaacBackedRandom.b(114));
         try {
           this.field_M = param0;
           this.field_W = param1;
@@ -29,9 +29,9 @@ final class ah extends ts {
     final static int h(int param0) {
         if (param0 <= 92) {
           field_S = (String) null;
-          return rn.field_b;
+          return DiskCacheWorker.field_b;
         }
-        return rn.field_b;
+        return DiskCacheWorker.field_b;
     }
 
     final void a(int param0, int param1, UiWidget param2, byte param3) {
@@ -142,12 +142,12 @@ final class ah extends ts {
             return;
           }
           if (var6 != lm.field_d) {
-            if (var6 == tj.field_b) {
+            if (var6 == ArchiveSourceManager.field_b) {
               var22 = lp.field_w[2];
               var22.c(var9, var10 - (var22.field_w >> 1), 256);
               return;
             }
-            if (p.field_g != var6) {
+            if (CachedArchiveSource.field_g != var6) {
               return;
             }
             var21 = lp.field_w[1];
@@ -209,12 +209,12 @@ final class ah extends ts {
             return;
           }
           if (var6 != lm.field_d) {
-            if (var6 == tj.field_b) {
+            if (var6 == ArchiveSourceManager.field_b) {
               var28 = lp.field_w[2];
               var28.c(var9Lifetime1, var10Lifetime1 - (var28.field_w >> 1), 256);
               return;
             }
-            if (p.field_g != var6) {
+            if (CachedArchiveSource.field_g != var6) {
               return;
             }
             var27 = lp.field_w[1];
@@ -253,12 +253,12 @@ final class ah extends ts {
           var10Lifetime2 = var45.a(param2, (UiWidget) (this), 66) + (var45.a((UiWidget) (this), true).b(438) >> 1);
           if (pd.field_h != var6Lifetime1 &&
             var6Lifetime1 != lm.field_d) {
-            if (var6Lifetime1 == tj.field_b) {
+            if (var6Lifetime1 == ArchiveSourceManager.field_b) {
               var37 = lp.field_w[2];
               var37.c(var9Lifetime2, var10Lifetime2 - (var37.field_w >> 1), 256);
               return;
             }
-            if (p.field_g != var6Lifetime1) {
+            if (CachedArchiveSource.field_g != var6Lifetime1) {
               return;
             }
             var35 = lp.field_w[1];
@@ -319,11 +319,11 @@ final class ah extends ts {
           return;
         }
         if (var6Lifetime2 != lm.field_d) {
-          if (var6Lifetime2 == tj.field_b) {
+          if (var6Lifetime2 == ArchiveSourceManager.field_b) {
             var42 = lp.field_w[2];
             var42.c(var9Lifetime3, var10Lifetime3 - (var42.field_w >> 1), 256);
           } else {
-            if (p.field_g == var6Lifetime2) {
+            if (CachedArchiveSource.field_g == var6Lifetime2) {
               var41 = lp.field_w[1];
               var41.c(var9Lifetime3, -(var41.field_w >> 1) + var10Lifetime3, 256);
               return;

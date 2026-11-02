@@ -17,14 +17,14 @@ final class ks {
         if (!param1) {
           nf var3 = (nf) null;
           ks.a((nf) null, -105);
-          if (ol.field_g != null) {
+          if (WeightedLruCache.field_g != null) {
             if (pd.field_k < e.field_f) {
               return false;
             }
             if (pd.field_k >= ei.field_e) {
               return false;
             }
-            if (fk.field_k > bb.field_b) {
+            if (ByteArrayNode.field_k > bb.field_b) {
               return false;
             }
             if (kl.field_o <= bb.field_b) {
@@ -36,7 +36,7 @@ final class ks {
             if (!param0) {
               return true;
             }
-            if (ol.field_g != hm.field_q) {
+            if (WeightedLruCache.field_g != hm.field_q) {
               js.a((byte) -10);
               if (vn.a(0)) {
                 NodeHashTableIterator.a(0, "enter");
@@ -58,7 +58,7 @@ final class ks {
           if (pd.field_k >= ei.field_e) {
             return false;
           }
-          if (fk.field_k <= bb.field_b) {
+          if (ByteArrayNode.field_k <= bb.field_b) {
             if (kl.field_o <= bb.field_b) {
               return false;
             }
@@ -66,7 +66,7 @@ final class ks {
               if (!param0) {
                 return true;
               }
-              if (ol.field_g != hm.field_q) {
+              if (WeightedLruCache.field_g != hm.field_q) {
                 js.a((byte) -10);
                 if (vn.a(0)) {
                   NodeHashTableIterator.a(0, "enter");
@@ -83,7 +83,7 @@ final class ks {
           }
           return false;
         }
-        if (ol.field_g == null) {
+        if (WeightedLruCache.field_g == null) {
           if (null == hm.field_q) {
             return false;
           }
@@ -91,7 +91,7 @@ final class ks {
             return false;
           }
           if (pd.field_k < ei.field_e &&
-            fk.field_k <= bb.field_b) {
+            ByteArrayNode.field_k <= bb.field_b) {
             if (kl.field_o <= bb.field_b) {
               return false;
             }
@@ -99,7 +99,7 @@ final class ks {
               if (!param0) {
                 return true;
               }
-              if (ol.field_g != hm.field_q) {
+              if (WeightedLruCache.field_g != hm.field_q) {
                 js.a((byte) -10);
                 if (vn.a(0)) {
                   NodeHashTableIterator.a(0, "enter");
@@ -118,7 +118,7 @@ final class ks {
         }
         if (pd.field_k >= e.field_f &&
           pd.field_k < ei.field_e &&
-          fk.field_k <= bb.field_b) {
+          ByteArrayNode.field_k <= bb.field_b) {
           if (kl.field_o <= bb.field_b) {
             return false;
           }
@@ -126,7 +126,7 @@ final class ks {
             if (!param0) {
               return true;
             }
-            if (ol.field_g != hm.field_q) {
+            if (WeightedLruCache.field_g != hm.field_q) {
               js.a((byte) -10);
               if (vn.a(0)) {
                 NodeHashTableIterator.a(0, "enter");
@@ -166,7 +166,7 @@ final class ks {
             field_c = (String) null;
           }
           if (RasterBuffer.field_a >= 18) {
-            gs.a(var3, true);
+            NanoFrameTimer.a(var3, true);
           } else {
             ld.field_p.a((byte) -113, var3);
           }
@@ -321,7 +321,7 @@ final class ks {
             he.field_p == null) {
             if (!ae.field_b) {
               var5 = hp.field_m;
-              var6 = s.field_h;
+              var6 = GzipInflater.field_h;
               var5.field_j.a(param1 + 1, 14, var6);
             }
             var7 = hp.field_m;

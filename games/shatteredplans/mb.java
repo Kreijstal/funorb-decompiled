@@ -17,7 +17,7 @@ final class mb extends ml {
           if (param0) {
             field_o = (int[]) null;
           }
-          if (this.b(-11196, param1) != tj.field_b) {
+          if (this.b(-11196, param1) != ArchiveSourceManager.field_b) {
             return null;
           }
           stackIn_5_0 = hr.field_f;
@@ -202,7 +202,7 @@ final class mb extends ml {
         try {
           var4 = (CharSequence) ((Object) param1);
           if (!go.a(0, var4)) {
-            stackIn_2_0 = tj.field_b;
+            stackIn_2_0 = ArchiveSourceManager.field_b;
             return stackIn_2_0;
           }
           if (param0 != -11196) {
@@ -213,10 +213,10 @@ final class mb extends ml {
           var3_int = ma.a(var5, param0 + 11198);
           if (0 < var3_int &&
             130 >= var3_int) {
-            stackIn_12_0 = p.field_g;
+            stackIn_12_0 = CachedArchiveSource.field_g;
             return stackIn_12_0;
           }
-          stackIn_10_0 = tj.field_b;
+          stackIn_10_0 = ArchiveSourceManager.field_b;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

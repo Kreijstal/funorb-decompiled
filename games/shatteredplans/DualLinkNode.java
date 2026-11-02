@@ -5,7 +5,7 @@ class DualLinkNode extends IntrusiveNode {
     static int[] field_k;
     long field_l;
     DualLinkNode field_j;
-    static bc field_n;
+    static Archive field_n;
     static String field_m;
     DualLinkNode field_h;
     static String field_i;
@@ -26,7 +26,7 @@ class DualLinkNode extends IntrusiveNode {
         }
     }
 
-    final static byte[] a(int param0, boolean param1, sl param2, byte[] param3) {
+    final static byte[] a(int param0, boolean param1, CipherPacketBuffer param2, byte[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -90,7 +90,7 @@ class DualLinkNode extends IntrusiveNode {
 
     final boolean a(byte param0) {
         if (param0 < 94) {
-          field_n = (bc) null;
+          field_n = (Archive) null;
         }
         if (null == this.field_j) {
           return false;

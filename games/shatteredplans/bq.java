@@ -12,13 +12,13 @@ abstract class bq {
     static dg field_h;
     static long field_e;
 
-    final static void a(int param0, bc param1) {
+    final static void a(int param0, Archive param1) {
         qr var5 = null;
         qr var6 = null;
         qr var3 = null;
         try {
           BufferedSocket.field_i = id.a(2, param1, "basic", "display_name_changed");
-          d.field_a = new am(0L, ih.field_g, ld.field_k, qc.field_u);
+          d.field_a = new am(0L, ih.field_g, ld.field_k, SocketArchiveNetworkClient.field_u);
           wg.field_a = new am(0L, ih.field_g, vf.field_f, qg.field_o);
           cg.field_A = new qr(0L, (qr) null);
           rj.field_p = new qr(0L, SpriteState.field_u);
@@ -54,14 +54,14 @@ abstract class bq {
         int var2 = var1 - pg.field_J * pg.field_J;
         int var4 = NodeHashTableIterator.field_f + var2 * (-NodeHashTableIterator.field_f + pc.field_m) / var1;
         tg.field_c.a(640, 120, (byte) 121, var4, tm.field_h);
-        qc.a(-24 + pc.field_m, 0, tg.field_a, 3, 640, 5, qo.field_b);
+        SocketArchiveNetworkClient.a(-24 + pc.field_m, 0, tg.field_a, 3, 640, 5, qo.field_b);
     }
 
     public static void b(int param0) {
         field_f = null;
         if (param0 != 1) {
-          bc var2 = (bc) null;
-          bq.a(30, (bc) null);
+          Archive var2 = (Archive) null;
+          bq.a(30, (Archive) null);
           field_h = null;
           return;
         }

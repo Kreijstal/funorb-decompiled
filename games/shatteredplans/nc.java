@@ -77,7 +77,7 @@ final class nc extends IntrusiveNode {
         }
     }
 
-    final static String a(String param0, bc param1, int param2, String param3) {
+    final static String a(String param0, Archive param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_2_0 = null;

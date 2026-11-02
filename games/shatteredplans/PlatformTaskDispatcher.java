@@ -4,62 +4,62 @@
 import java.io.*;
 
 final class PlatformTaskDispatcher implements Runnable {
-    ra[] field_p;
+    RandomAccessCacheFile[] field_p;
     private static int field_h;
     java.awt.EventQueue field_q;
     private Object field_t;
     static String field_r;
-    ra field_a;
+    RandomAccessCacheFile field_a;
     static String field_b;
     boolean field_w;
-    ra field_n;
+    RandomAccessCacheFile field_n;
     private Object field_o;
-    ra field_k;
+    RandomAccessCacheFile field_k;
     private static String field_x;
-    private fn field_c;
+    private MicrosoftDisplayController field_c;
     private static volatile long field_u;
     private Thread field_j;
     static java.lang.reflect.Method field_v;
-    private pb field_l;
+    private PlatformTask field_l;
     static String field_i;
     private boolean field_g;
     private static String field_s;
     private boolean field_e;
-    private pb field_f;
-    private pp field_m;
+    private PlatformTask field_f;
+    private MicrosoftCursorController field_m;
     private static String field_d;
 
-    private final pb a(int param0, boolean param1, String param2, int param3) {
+    private final PlatformTask a(int param0, boolean param1, String param2, int param3) {
         if (param3 > -96) {
-          return (pb) null;
+          return (PlatformTask) null;
         }
         return this.a(param0, !param1 ? 1 : 22, param2, (byte) -120, 0);
     }
 
-    final pb a(Class[] param0, String param1, int param2, Class param3) {
+    final PlatformTask a(Class[] param0, String param1, int param2, Class param3) {
         if (param2 < 72) {
           field_d = (String) null;
         }
         return this.a(0, 8, new Object[]{param3, param1, param0}, (byte) -122, 0);
     }
 
-    final pb a(boolean param0, int param1, Runnable param2) {
+    final PlatformTask a(boolean param0, int param1, Runnable param2) {
         if (!param0) {
-          return (pb) null;
+          return (PlatformTask) null;
         }
         return this.a(param1, 2, param2, (byte) -100, 0);
     }
 
-    final pb a(int param0, int param1, String param2) {
+    final PlatformTask a(int param0, int param1, String param2) {
         if (param0 != 65535) {
           this.field_e = true;
         }
         return this.a(param1, false, param2, param0 ^ -65434);
     }
 
-    final pb a(int param0, int param1, int param2, int param3, int param4) {
+    final PlatformTask a(int param0, int param1, int param2, int param3, int param4) {
         if (param4 != -1194) {
-          this.field_k = (ra) null;
+          this.field_k = (RandomAccessCacheFile) null;
         }
         return this.a(param1 + (param2 << 16), 6, (Object) null, (byte) 47, (param3 << 16) + param0);
     }
@@ -78,8 +78,8 @@ final class PlatformTaskDispatcher implements Runnable {
         return null != this.field_t ? true : false;
     }
 
-    final pb a(java.net.URL param0, boolean param1) {
-        pb discarded$0 = null;
+    final PlatformTask a(java.net.URL param0, boolean param1) {
+        PlatformTask discarded$0 = null;
         if (param1) {
           String var4 = (String) null;
           discarded$0 = this.a(-90, true, (String) null, -75);
@@ -87,12 +87,12 @@ final class PlatformTaskDispatcher implements Runnable {
         return this.a(0, 4, param0, (byte) 92, 0);
     }
 
-    private final pb a(int param0, int param1, Object param2, byte param3, int param4) {
-        pb var6 = null;
+    private final PlatformTask a(int param0, int param1, Object param2, byte param3, int param4) {
+        PlatformTask var6 = null;
         int var8 = 0;
         Throwable decompiledCaughtException = null;
         Object var7 = null;
-        var6 = new pb();
+        var6 = new PlatformTask();
         var6.field_a = param4;
         var6.field_b = param2;
         var6.field_c = param1;
@@ -112,15 +112,15 @@ final class PlatformTaskDispatcher implements Runnable {
         return var6;
     }
 
-    private final static ra a(String param0, int param1, String param2, boolean param3) {
+    private final static RandomAccessCacheFile a(String param0, int param1, String param2, boolean param3) {
         try {
           int var6 = 0;
-          ra stackIn_15_0 = null;
+          RandomAccessCacheFile stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
           String var7 = null;
-          ra var8 = null;
+          RandomAccessCacheFile var8 = null;
           Exception var8_ref = null;
           if (param1 != 33) {
             if (param1 != 34) {
@@ -140,7 +140,7 @@ final class PlatformTaskDispatcher implements Runnable {
             if (!(var7.length() > 0) ||
               new File(var7).exists()) {
               try {
-                var8 = new ra(new File(var7, var4), "rw", 10000L);
+                var8 = new RandomAccessCacheFile(new File(var7, var4), "rw", 10000L);
                 stackIn_15_0 = var8;
                 return stackIn_15_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -170,11 +170,11 @@ final class PlatformTaskDispatcher implements Runnable {
           lg var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
-          ra var3_ref3 = null;
+          RandomAccessCacheFile var3_ref3 = null;
           int var4 = 0;
           String var4_ref_String = null;
           java.awt.datatransfer.Transferable var7 = null;
-          pb var8 = null;
+          PlatformTask var8 = null;
           Thread var9 = null;
           Object[] var10 = null;
           String var11 = null;
@@ -260,7 +260,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         break;
                       case 5:
                         if (!this.field_g) {
-                          var8.field_e = Class.forName("ic").getMethod("listmodes", new Class[]{}).invoke(this.field_t, new Object[]{});
+                          var8.field_e = Class.forName("AwtFullscreenController").getMethod("listmodes", new Class[]{}).invoke(this.field_t, new Object[]{});
                         } else {
                           var8.field_e = this.field_c.a(-19750);
                         }
@@ -270,7 +270,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         var8.field_e = var14;
                         var14.setResizable(false);
                         if (!this.field_g) {
-                          Class.forName("ic").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_t, new Object[]{var14, new Integer(var8.field_g >>> 16), new Integer(65535 & var8.field_g), new Integer(var8.field_a >> 16), new Integer(var8.field_a & 65535)});
+                          Class.forName("AwtFullscreenController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.field_t, new Object[]{var14, new Integer(var8.field_g >>> 16), new Integer(65535 & var8.field_g), new Integer(var8.field_a >> 16), new Integer(var8.field_a & 65535)});
                         } else {
                           this.field_c.a(var14, 65535 & var8.field_a, var8.field_g >>> 16, 65535 & var8.field_g, var8.field_a >> 16, 0);
                         }
@@ -279,7 +279,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (this.field_g) {
                           this.field_c.a(0, (java.awt.Frame) (var8.field_b));
                         } else {
-                          Class.forName("ic").getMethod("exit", new Class[]{}).invoke(this.field_t, new Object[]{});
+                          Class.forName("AwtFullscreenController").getMethod("exit", new Class[]{}).invoke(this.field_t, new Object[]{});
                         }
                         break;
                       case 16:
@@ -291,7 +291,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           if (this.field_g) {
                             this.field_m.a(var3_int, -4, var4);
                           } else {
-                            Class.forName("lj").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_o, new Object[]{new Integer(var3_int), new Integer(var4)});
+                            Class.forName("AwtCursorBridge").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.field_o, new Object[]{new Integer(var3_int), new Integer(var4)});
                           }
                           break;
                         }
@@ -301,7 +301,7 @@ final class PlatformTaskDispatcher implements Runnable {
                           var3_int = stackIn_83_0;
                           var13 = (java.awt.Component) (var8.field_b);
                           if (!this.field_g) {
-                            Class.forName("lj").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_o, new Object[]{var13, new Boolean(var3_int != 0)});
+                            Class.forName("AwtCursorBridge").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.field_o, new Object[]{var13, new Boolean(var3_int != 0)});
                           } else {
                             this.field_m.a(var3_int != 0, var13, 0);
                           }
@@ -310,7 +310,7 @@ final class PlatformTaskDispatcher implements Runnable {
                         if (!this.field_g &&
                           var2_int == 17) {
                           var12 = (Object[]) (var8.field_b);
-                          Class.forName("lj").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_o, new Object[]{var12[0], var12[1], new Integer(var8.field_g), new Integer(var8.field_a), var12[2]});
+                          Class.forName("AwtCursorBridge").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_o, new Object[]{var12[0], var12[1], new Integer(var8.field_g), new Integer(var8.field_a), var12[2]});
                         } else {
                           if (var2_int != 16) {
                             throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
@@ -472,21 +472,21 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final pb a(java.awt.Frame param0, byte param1) {
+    final PlatformTask a(java.awt.Frame param0, byte param1) {
         if (param1 <= 119) {
-          this.field_k = (ra) null;
+          this.field_k = (RandomAccessCacheFile) null;
         }
         return this.a(0, 7, param0, (byte) 55, 0);
     }
 
-    final pb a(int param0) {
+    final PlatformTask a(int param0) {
         if (param0 != 12) {
-          return (pb) null;
+          return (PlatformTask) null;
         }
         return this.a(0, 5, (Object) null, (byte) -110, 0);
     }
 
-    final pb a(Class param0, byte param1, String param2) {
+    final PlatformTask a(Class param0, byte param1, String param2) {
         if (param1 <= 24) {
           this.a(false);
         }
@@ -499,7 +499,7 @@ final class PlatformTaskDispatcher implements Runnable {
         Throwable throwable = null;
         boolean stackIn_3_1 = false;
         Throwable decompiledCaughtException = null;
-        fn var7 = null;
+        MicrosoftDisplayController var7 = null;
         this.field_w = false;
         this.field_n = null;
         this.field_k = null;
@@ -578,16 +578,16 @@ final class PlatformTaskDispatcher implements Runnable {
         }
         ug.a(field_h, field_s, (byte) 116);
         if (this.field_w) {
-          this.field_a = new ra(ug.a("random.dat", field_h, -18261, (String) null), "rw", 25L);
-          this.field_k = new ra(ug.a("main_file_cache.dat2", false), "rw", 314572800L);
-          this.field_n = new ra(ug.a("main_file_cache.idx255", false), "rw", 1048576L);
-          this.field_p = new ra[param2];
+          this.field_a = new RandomAccessCacheFile(ug.a("random.dat", field_h, -18261, (String) null), "rw", 25L);
+          this.field_k = new RandomAccessCacheFile(ug.a("main_file_cache.dat2", false), "rw", 314572800L);
+          this.field_n = new RandomAccessCacheFile(ug.a("main_file_cache.idx255", false), "rw", 1048576L);
+          this.field_p = new RandomAccessCacheFile[param2];
           for (var5_int = 0; param2 > var5_int; var5_int++) {
-            this.field_p[var5_int] = new ra(ug.a("main_file_cache.idx" + var5_int, false), "rw", 1048576L);
+            this.field_p[var5_int] = new RandomAccessCacheFile(ug.a("main_file_cache.idx" + var5_int, false), "rw", 1048576L);
           }
           if (this.field_g) {
             try {
-              Class.forName("mo").newInstance();
+              Class.forName("MicrosoftDirectSoundInitializer").newInstance();
             } catch (java.lang.Throwable decompiledCaughtParameter8) {
               decompiledCaughtException = decompiledCaughtParameter8;
               throwable = decompiledCaughtException;
@@ -595,10 +595,10 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (this.field_g) {
-              var7 = new fn();
+              var7 = new MicrosoftDisplayController();
               this.field_c = var7;
             } else {
-              this.field_t = Class.forName("ic").newInstance();
+              this.field_t = Class.forName("AwtFullscreenController").newInstance();
             }
           } catch (java.lang.Throwable decompiledCaughtParameter9) {
             decompiledCaughtException = decompiledCaughtParameter9;
@@ -606,9 +606,9 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           try {
             if (!this.field_g) {
-              this.field_o = Class.forName("lj").newInstance();
+              this.field_o = Class.forName("AwtCursorBridge").newInstance();
             } else {
-              this.field_m = new pp();
+              this.field_m = new MicrosoftCursorController();
             }
           } catch (java.lang.Throwable decompiledCaughtParameter10) {
             decompiledCaughtException = decompiledCaughtParameter10;

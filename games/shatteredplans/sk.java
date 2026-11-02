@@ -26,7 +26,7 @@ final class sk extends IntrusiveNode {
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        sl var8 = null;
+        CipherPacketBuffer var8 = null;
         dp var9 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         var8 = sa.field_a;
@@ -45,19 +45,19 @@ final class sk extends IntrusiveNode {
         }
         stackIn_9_0 = (1 != var8.j(param1 - 66)) ? 0 : 1;
         var4 = stackIn_9_0;
-        jc.field_s = var8.e(param1 ^ 0);
+        ArchiveRequest.field_s = var8.e(param1 ^ 0);
         if (var4 == 0) {
-          em.field_a = jc.field_s;
+          em.field_a = ArchiveRequest.field_s;
         } else {
           em.field_a = var8.e(-1);
         }
         if (PacketBuffer.field_k != 1 &&
           PacketBuffer.field_k != 4) {
           fm.field_f = 0;
-          mc.field_q = null;
+          WeightedCacheEntry.field_q = null;
         } else {
           fm.field_f = var8.f(param1 - 20975);
-          mc.field_q = var8.e(param1 + 0);
+          WeightedCacheEntry.field_q = var8.e(param1 + 0);
         }
         if (!param0) {
           BufferedSocket.field_h = pe.a(var8, param1 + 1, 80);

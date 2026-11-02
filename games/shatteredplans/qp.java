@@ -6,7 +6,7 @@ final class qp extends o {
     private int field_y;
     private int field_u;
     private Sprite[] field_t;
-    static in field_w;
+    static SecondaryNodeHashTable field_w;
     private int field_x;
 
     final static int[] a(boolean param0, int[] param1) {
@@ -97,7 +97,7 @@ final class qp extends o {
             ai.field_b = new int[2 * var2_int];
             en.field_b = new int[var2_int * 2];
           }
-          sl.field_r = 0;
+          CipherPacketBuffer.field_r = 0;
           var5 = param1[var2_int - 2];
           var6 = param1[-1 + var2_int];
           for (var7_int = 0; var7_int < var2_int; var7_int += 2) {
@@ -111,18 +111,18 @@ final class qp extends o {
                 var9 = var6;
                 var10 = var3;
                 var11 = var4;
-                fieldTemp$18 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$18 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$18] = gf.field_i;
-                fieldTemp$19 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$19 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$19] = var9 + (-var8_int + gf.field_i) * (-var9 + var11) / (var10 - var8_int);
               }
-              fieldTemp$20 = sl.field_r;
-              sl.field_r = sl.field_r + 1;
+              fieldTemp$20 = CipherPacketBuffer.field_r;
+              CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
               ai.field_b[fieldTemp$20] = var5;
-              fieldTemp$21 = sl.field_r;
-              sl.field_r = sl.field_r + 1;
+              fieldTemp$21 = CipherPacketBuffer.field_r;
+              CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
               ai.field_b[fieldTemp$21] = var6;
             } else {
               if (gf.field_i <= var3) {
@@ -130,24 +130,24 @@ final class qp extends o {
                 var9 = var4;
                 var10 = var5;
                 var11 = var6;
-                fieldTemp$22 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$22 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$22] = gf.field_i;
-                fieldTemp$23 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$23 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$23] = var9 + (var11 - var9) * (gf.field_i - var8_int) / (-var8_int + var10);
               }
             }
           }
-          if (sl.field_r == 0) {
+          if (CipherPacketBuffer.field_r == 0) {
             stackIn_19_0 = null;
             return (int[]) (stackIn_19_0);
           }
           var7 = en.field_b;
           en.field_b = ai.field_b;
           ai.field_b = var7;
-          var2_intLifetime1 = sl.field_r;
-          sl.field_r = 0;
+          var2_intLifetime1 = CipherPacketBuffer.field_r;
+          CipherPacketBuffer.field_r = 0;
           var5Lifetime1 = en.field_b[var2_intLifetime1 - 2];
           var6Lifetime1 = en.field_b[-1 + var2_intLifetime1];
           for (var8_intLifetime1 = 0; var2_intLifetime1 > var8_intLifetime1; var8_intLifetime1 += 2) {
@@ -161,18 +161,18 @@ final class qp extends o {
                 var10Lifetime1 = var6Lifetime1;
                 var11Lifetime1 = var3Lifetime1;
                 var12 = var4Lifetime1;
-                fieldTemp$12 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$12 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$12] = gf.field_l;
-                fieldTemp$13 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$13 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$13] = (var12 - var10Lifetime1) * (-var9Lifetime1 + gf.field_l) / (var11Lifetime1 - var9Lifetime1) + var10Lifetime1;
               }
-              fieldTemp$14 = sl.field_r;
-              sl.field_r = sl.field_r + 1;
+              fieldTemp$14 = CipherPacketBuffer.field_r;
+              CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
               ai.field_b[fieldTemp$14] = var5Lifetime1;
-              fieldTemp$15 = sl.field_r;
-              sl.field_r = sl.field_r + 1;
+              fieldTemp$15 = CipherPacketBuffer.field_r;
+              CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
               ai.field_b[fieldTemp$15] = var6Lifetime1;
             } else {
               if (var3Lifetime1 < gf.field_l) {
@@ -180,26 +180,26 @@ final class qp extends o {
                 var10Lifetime1 = var4Lifetime1;
                 var11Lifetime1 = var5Lifetime1;
                 var12 = var6Lifetime1;
-                fieldTemp$16 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$16 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$16] = gf.field_l;
-                fieldTemp$17 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$17 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$17] = var10Lifetime1 + (-var10Lifetime1 + var12) * (gf.field_l - var9Lifetime1) / (-var9Lifetime1 + var11Lifetime1);
               }
             }
           }
           if (!param0) {
-            field_w = (in) null;
+            field_w = (SecondaryNodeHashTable) null;
           }
-          if (sl.field_r == 0) {
+          if (CipherPacketBuffer.field_r == 0) {
             return null;
           }
           var7Lifetime1 = en.field_b;
           en.field_b = ai.field_b;
           ai.field_b = var7Lifetime1;
-          var2_intLifetime2 = sl.field_r;
-          sl.field_r = 0;
+          var2_intLifetime2 = CipherPacketBuffer.field_r;
+          CipherPacketBuffer.field_r = 0;
           var5Lifetime2 = en.field_b[var2_intLifetime2 - 2];
           var6Lifetime2 = en.field_b[var2_intLifetime2 - 1];
           for (var8_intLifetime2 = 0; var2_intLifetime2 > var8_intLifetime2; var8_intLifetime2 += 2) {
@@ -213,18 +213,18 @@ final class qp extends o {
                 var10Lifetime2 = var6Lifetime2;
                 var11Lifetime2 = var3Lifetime2;
                 var12Lifetime1 = var4Lifetime2;
-                fieldTemp$6 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$6 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$6] = var9Lifetime2 + (-var9Lifetime2 + var11Lifetime2) * (-var10Lifetime2 + gf.field_a) / (var12Lifetime1 - var10Lifetime2);
-                fieldTemp$7 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$7 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$7] = gf.field_a;
               }
-              fieldTemp$8 = sl.field_r;
-              sl.field_r = sl.field_r + 1;
+              fieldTemp$8 = CipherPacketBuffer.field_r;
+              CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
               ai.field_b[fieldTemp$8] = var5Lifetime2;
-              fieldTemp$9 = sl.field_r;
-              sl.field_r = sl.field_r + 1;
+              fieldTemp$9 = CipherPacketBuffer.field_r;
+              CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
               ai.field_b[fieldTemp$9] = var6Lifetime2;
             } else {
               if (var4Lifetime2 >= gf.field_a) {
@@ -232,23 +232,23 @@ final class qp extends o {
                 var10Lifetime2 = var4Lifetime2;
                 var11Lifetime2 = var5Lifetime2;
                 var12Lifetime1 = var6Lifetime2;
-                fieldTemp$10 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$10 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$10] = var9Lifetime2 + (gf.field_a - var10Lifetime2) * (-var9Lifetime2 + var11Lifetime2) / (-var10Lifetime2 + var12Lifetime1);
-                fieldTemp$11 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$11 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$11] = gf.field_a;
               }
             }
           }
-          if (0 == sl.field_r) {
+          if (0 == CipherPacketBuffer.field_r) {
             return null;
           }
           var7Lifetime2 = en.field_b;
           en.field_b = ai.field_b;
-          var2_intLifetime3 = sl.field_r;
+          var2_intLifetime3 = CipherPacketBuffer.field_r;
           ai.field_b = var7Lifetime2;
-          sl.field_r = 0;
+          CipherPacketBuffer.field_r = 0;
           var6Lifetime3 = en.field_b[-1 + var2_intLifetime3];
           var5Lifetime3 = en.field_b[var2_intLifetime3 - 2];
           for (var8_intLifetime3 = 0; var8_intLifetime3 < var2_intLifetime3; var8_intLifetime3 += 2) {
@@ -262,11 +262,11 @@ final class qp extends o {
                 var10Lifetime3 = var4Lifetime3;
                 var11Lifetime3 = var5Lifetime3;
                 var12Lifetime2 = var6Lifetime3;
-                fieldTemp$0 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$0 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$0] = (gf.field_f - var10Lifetime3) * (var11Lifetime3 - var9Lifetime3) / (var12Lifetime2 - var10Lifetime3) + var9Lifetime3;
-                fieldTemp$1 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$1 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$1] = gf.field_f;
               }
             } else {
@@ -275,29 +275,29 @@ final class qp extends o {
                 var10Lifetime3 = var6Lifetime3;
                 var11Lifetime3 = var3Lifetime3;
                 var12Lifetime2 = var4Lifetime3;
-                fieldTemp$2 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$2 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$2] = (-var9Lifetime3 + var11Lifetime3) * (gf.field_f - var10Lifetime3) / (var12Lifetime2 - var10Lifetime3) + var9Lifetime3;
-                fieldTemp$3 = sl.field_r;
-                sl.field_r = sl.field_r + 1;
+                fieldTemp$3 = CipherPacketBuffer.field_r;
+                CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
                 ai.field_b[fieldTemp$3] = gf.field_f;
               }
-              fieldTemp$4 = sl.field_r;
-              sl.field_r = sl.field_r + 1;
+              fieldTemp$4 = CipherPacketBuffer.field_r;
+              CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
               ai.field_b[fieldTemp$4] = var5Lifetime3;
-              fieldTemp$5 = sl.field_r;
-              sl.field_r = sl.field_r + 1;
+              fieldTemp$5 = CipherPacketBuffer.field_r;
+              CipherPacketBuffer.field_r = CipherPacketBuffer.field_r + 1;
               ai.field_b[fieldTemp$5] = var6Lifetime3;
             }
           }
-          if (sl.field_r == 0) {
+          if (CipherPacketBuffer.field_r == 0) {
             stackIn_63_0 = null;
             return (int[]) (stackIn_63_0);
           }
-          var15 = new int[sl.field_r];
+          var15 = new int[CipherPacketBuffer.field_r];
           var14 = var15;
           var8 = var14;
-          ps.a(ai.field_b, 0, var15, 0, sl.field_r);
+          ps.a(ai.field_b, 0, var15, 0, CipherPacketBuffer.field_r);
           stackIn_65_0 = var8;
           return stackIn_65_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -388,7 +388,7 @@ final class qp extends o {
     private qp(int param0, int param1, int param2) {
         this.field_t = kl.field_q;
         this.field_y = param0;
-        this.field_c = sl.field_p;
+        this.field_c = CipherPacketBuffer.field_p;
         this.field_x = param1;
         this.field_u = param2;
     }

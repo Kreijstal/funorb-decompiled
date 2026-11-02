@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wh {
-    static gh field_b;
+    static MusicTrack field_b;
     q field_d;
     static ks field_a;
     static kj field_c;

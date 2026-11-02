@@ -236,7 +236,7 @@ final class kd {
           var1_int = uq.field_k;
           var2 = 0;
           if (2 == eh.field_C) {
-            var3_long = pr.a(14274) - br.field_p;
+            var3_long = pr.a(14274) - MusicPatch.field_p;
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -304,13 +304,13 @@ final class kd {
               }
               var9 = stackIn_45_0;
               if (var9 != null) {
-                var9.a((ar.field_i << 1) + id.field_b, -tr.field_Lb + var8Lifetime1, var1_int, (tr.field_Lb << 1) + var7Lifetime1, -106);
+                var9.a((ArchiveNetworkClient.field_i << 1) + id.field_b, -tr.field_Lb + var8Lifetime1, var1_int, (tr.field_Lb << 1) + var7Lifetime1, -106);
               }
-              var1_int = var1_int + ar.field_i;
+              var1_int = var1_int + ArchiveNetworkClient.field_i;
             }
             if (0 <= var4) {
               ql.field_n.d(var6, var8Lifetime1, var1_int + je.field_g, var5, -1);
-              var1_int = var1_int + (id.field_b + (sm.field_b + ar.field_i));
+              var1_int = var1_int + (id.field_b + (sm.field_b + ArchiveNetworkClient.field_i));
             } else {
               um.field_c.d(var6, var8Lifetime1, dp.field_v + var1_int, var5, -1);
               var1_int = var1_int + e.field_d;
@@ -344,7 +344,7 @@ final class kd {
         ah.field_U = param1;
         wb.field_b = new int[param1];
         rl.field_b = new boolean[param1];
-        ol.field_a = new int[param1];
+        WeightedLruCache.field_a = new int[param1];
         hs.field_i = new int[param1];
         oe.field_i = new int[param1];
         u.field_d = new int[param1];

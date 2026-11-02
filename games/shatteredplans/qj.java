@@ -47,7 +47,7 @@ final class qj {
           var4 = uq.field_m.a(5607, param0.field_c);
           var12 = vi.a(rs.field_Cb, (byte) 109, var4, new int[]{var3});
           var6 = var12.length;
-          ra.a(-106);
+          RandomAccessCacheFile.a(-106);
           if (0 < var6) {
             eh.field_L = new Sprite[var6];
             eh.field_L[0] = new Sprite(var3, var2_int);

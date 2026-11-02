@@ -6,7 +6,7 @@ import java.io.*;
 final class es extends IntrusiveNode {
     static qr field_l;
     static int field_n;
-    static bc field_j;
+    static Archive field_j;
     static int field_m;
     int field_k;
     int field_h;

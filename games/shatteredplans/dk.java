@@ -38,7 +38,7 @@ final class dk {
           var9 = uq.a(20, 0, var7, var3);
           gf.b(var8, var9, var6, var7, 0);
           gf.d(1 + var8, 1 + var9, -2 + var6, var7 - 2, 16777088);
-          SpriteState.field_u.field_nb.a(param1, var8 + 3, s.field_i + (1 + var9 - SpriteState.field_u.field_nb.field_J), 500, 1000, 0, -1, 0, 0, cr.field_c);
+          SpriteState.field_u.field_nb.a(param1, var8 + 3, GzipInflater.field_i + (1 + var9 - SpriteState.field_u.field_nb.field_J), 500, 1000, 0, -1, 0, 0, cr.field_c);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "dk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

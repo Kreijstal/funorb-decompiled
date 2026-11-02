@@ -6,7 +6,7 @@ final class tb {
     static String field_c;
     static qr[] field_a;
 
-    final static void a(int param0, int[] param1, String[][] param2, String[][] param3, bc param4, String[] param5, String[] param6, Sprite[][] param7, int param8, Sprite[][] param9, int param10, String[] param11, byte[] param12, int param13, byte[] param14) {
+    final static void a(int param0, int[] param1, String[][] param2, String[][] param3, Archive param4, String[] param5, String[] param6, Sprite[][] param7, int param8, Sprite[][] param9, int param10, String[] param11, byte[] param12, int param13, byte[] param14) {
         sg[] array$0 = null;
         sg[] array$1 = null;
         sg[] array$2 = null;
@@ -103,17 +103,17 @@ final class tb {
           qf.field_e = new qr(0L, rs.field_Eb);
           vn.field_y = new qr(0L, td.field_N, sm.field_c);
           km.field_e = new qr(0L, jr.field_h, di.field_j);
-          mc.field_t = new qr(0L, jr.field_h, vm.field_Lb);
+          WeightedCacheEntry.field_t = new qr(0L, jr.field_h, vm.field_Lb);
           ta.field_d = new qr(0L, jr.field_h, fa.field_T);
-          ea.field_c = new qr(0L, jr.field_h, WidgetContainer.field_z);
+          IsaacBackedRandom.field_c = new qr(0L, jr.field_h, WidgetContainer.field_z);
           hq.field_b = new qr(0L, vm.field_Cb, pc.field_o);
           qs.field_y = new ub(0L, new qr(0L, (qr) null), VictoryChecker.field_d, se.field_m);
-          gb.field_m = new qr(0L, ea.field_a, GameApplet.field_a.toUpperCase());
+          gb.field_m = new qr(0L, IsaacBackedRandom.field_a, GameApplet.field_a.toUpperCase());
           gb.field_m.field_s = ns.field_pb;
           stackIn_6_0 = null;
           stackIn_6_1 = null;
           stackIn_6_2 = 0L;
-          stackIn_6_3 = ea.field_a;
+          stackIn_6_3 = IsaacBackedRandom.field_a;
           if (ns.field_pb) {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
@@ -129,23 +129,23 @@ final class tb {
           se.field_i.a(4, qf.field_e);
           qf.field_e.a(4, vn.field_y);
           qf.field_e.a(4, km.field_e);
-          qf.field_e.a(param13 ^ -7962, mc.field_t);
+          qf.field_e.a(param13 ^ -7962, WeightedCacheEntry.field_t);
           if (ns.field_pb) {
             qf.field_e.a(4, ta.field_d);
           }
-          qf.field_e.a(4, ea.field_c);
+          qf.field_e.a(4, IsaacBackedRandom.field_c);
           qf.field_e.a(4, hq.field_b);
           qf.field_e.a(4, qs.field_y);
           if (ns.field_pb) {
             se.field_i.a(4, gb.field_m);
           }
           se.field_i.a(4, rq.field_b);
-          io.field_c = new qr(0L, SpriteState.field_u);
-          io.field_c.field_G = 0;
-          io.field_c.field_y = 1;
+          SoundCache.field_c = new qr(0L, SpriteState.field_u);
+          SoundCache.field_c.field_G = 0;
+          SoundCache.field_c.field_y = 1;
           SocketConnector.field_d = new qr(0L, DelegatingCanvas.field_f, ck.field_c.toUpperCase());
           so.field_v = new qr(0L, ho.field_j);
-          so.field_v.a(4, io.field_c);
+          so.field_v.a(4, SoundCache.field_c);
           so.field_v.a(4, SocketConnector.field_d);
           IntrusiveNode.field_c = new qr(0L, VictoryChecker.field_d);
           IntrusiveNode.field_c.a(SpriteState.field_u, false);
@@ -165,15 +165,15 @@ final class tb {
           }
           so.field_t.a(param13 + 7970, ro.field_a);
           i.field_g = new qr(0L, bd.field_E, tm.field_o.toUpperCase());
-          tj.field_f = new qr(0L, gg.field_d);
+          ArchiveSourceManager.field_f = new qr(0L, gg.field_d);
           bj.field_D = new qr(0L, rs.field_Eb);
           es.field_l = new qr(0L, nl.field_b, ds.field_e.toUpperCase());
           re.field_g = new qr[4 + param0];
-          fk.field_p = new sg[4 + param0][];
+          ByteArrayNode.field_p = new sg[4 + param0][];
           re.field_g[0] = new qr(0L, dm.field_h, am.field_Ab);
-          fk.field_p[0] = new sg[6];
+          ByteArrayNode.field_p[0] = new sg[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            fk.field_p[0][1 + var17_int] = new sg(0L, an.field_d, (qr) null, gn.field_w, uk.field_b[var17_int], mk.field_e[var17_int]);
+            ByteArrayNode.field_p[0][1 + var17_int] = new sg(0L, an.field_d, (qr) null, gn.field_w, uk.field_b[var17_int], mk.field_e[var17_int]);
           }
           if (param13 != -7966) {
             tb.a(-52);
@@ -181,28 +181,28 @@ final class tb {
           if (nl.field_a.length >= 2) {
             re.field_g[1] = new qr(0L, dm.field_h, wl.field_b);
             array$0 = new sg[1 + nl.field_a.length];
-            fk.field_p[1] = array$0;
-            fk.field_p[1][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, ac.field_r);
+            ByteArrayNode.field_p[1] = array$0;
+            ByteArrayNode.field_p[1][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, ac.field_r);
             for (var17_intLifetime1 = 0; nl.field_a.length > var17_intLifetime1; var17_intLifetime1++) {
-              fk.field_p[1][1 + var17_intLifetime1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, Integer.toString(nl.field_a[var17_intLifetime1]));
+              ByteArrayNode.field_p[1][1 + var17_intLifetime1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, Integer.toString(nl.field_a[var17_intLifetime1]));
             }
           }
           re.field_g[2] = new qr(0L, dm.field_h, sq.field_s);
-          fk.field_p[2] = new sg[]{new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, ac.field_r), new sg(0L, an.field_d, (qr) null, gn.field_w, j.field_s[0], mi.field_c), new sg(0L, an.field_d, (qr) null, gn.field_w, j.field_s[1], he.field_j)};
+          ByteArrayNode.field_p[2] = new sg[]{new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, ac.field_r), new sg(0L, an.field_d, (qr) null, gn.field_w, j.field_s[0], mi.field_c), new sg(0L, an.field_d, (qr) null, gn.field_w, j.field_s[1], he.field_j)};
           if (mg.field_A > 1) {
             re.field_g[3] = new qr(0L, dm.field_h, jo.field_e);
             array$1 = new sg[1 + mg.field_A];
-            fk.field_p[3] = array$1;
-            fk.field_p[3][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, ac.field_r);
+            ByteArrayNode.field_p[3] = array$1;
+            ByteArrayNode.field_p[3][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, ac.field_r);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < mg.field_A; var17_intLifetime2++) {
-              fk.field_p[3][var17_intLifetime2 + 1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, si.field_o[var17_intLifetime2]);
+              ByteArrayNode.field_p[3][var17_intLifetime2 + 1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, si.field_o[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param0 > var17_intLifetime3; var17_intLifetime3++) {
             re.field_g[4 + var17_intLifetime3] = new qr(0L, dm.field_h, gm.field_l[var17_intLifetime3]);
             array$2 = new sg[1 + we.a(255, (int) so.field_r[var17_intLifetime3])];
-            fk.field_p[var17_intLifetime3 + 4] = array$2;
-            fk.field_p[4 + var17_intLifetime3][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, ac.field_r);
+            ByteArrayNode.field_p[var17_intLifetime3 + 4] = array$2;
+            ByteArrayNode.field_p[4 + var17_intLifetime3][0] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) null, ac.field_r);
             for (var18 = 0; var18 < (255 & so.field_r[var17_intLifetime3]); var18++) {
               if (null == nb.field_d) {
                 var19_ref = null;
@@ -222,31 +222,31 @@ final class tb {
               } else {
                 var20 = null;
               }
-              fk.field_p[4 + var17_intLifetime3][var18 + 1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) (var19_ref), (String) (var20));
+              ByteArrayNode.field_p[4 + var17_intLifetime3][var18 + 1] = new sg(0L, an.field_d, (qr) null, gn.field_w, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; var17_intLifetime4 < 4 + param0; var17_intLifetime4++) {
             if (re.field_g[var17_intLifetime4] != null) {
               re.field_g[var17_intLifetime4].field_Y = 11;
             }
-            if (null != fk.field_p[var17_intLifetime4]) {
-              for (var18Lifetime1 = 0; var18Lifetime1 < fk.field_p[var17_intLifetime4].length; var18Lifetime1++) {
-                if (fk.field_p[var17_intLifetime4][var18Lifetime1] != null &&
-                  null != fk.field_p[var17_intLifetime4][var18Lifetime1].field_Bb) {
-                  fk.field_p[var17_intLifetime4][var18Lifetime1].field_Bb.field_Y = 11;
+            if (null != ByteArrayNode.field_p[var17_intLifetime4]) {
+              for (var18Lifetime1 = 0; var18Lifetime1 < ByteArrayNode.field_p[var17_intLifetime4].length; var18Lifetime1++) {
+                if (ByteArrayNode.field_p[var17_intLifetime4][var18Lifetime1] != null &&
+                  null != ByteArrayNode.field_p[var17_intLifetime4][var18Lifetime1].field_Bb) {
+                  ByteArrayNode.field_p[var17_intLifetime4][var18Lifetime1].field_Bb.field_Y = 11;
                 }
               }
             }
           }
-          go.field_I = new qr(0L, ea.field_a);
-          aq.field_j = new qr(0L, ea.field_a);
+          go.field_I = new qr(0L, IsaacBackedRandom.field_a);
+          aq.field_j = new qr(0L, IsaacBackedRandom.field_a);
           dn.field_f = new qr(0L, fg.field_b);
           dn.field_f.a(SpriteState.field_u, false);
           var17 = dn.field_f;
           dn.field_f.field_G = 1;
           var17.field_y = 1;
           IntrusiveDeque.field_g = new qr(0L, (qr) null);
-          IntrusiveDeque.field_g.a(param13 + 7970, tj.field_f);
+          IntrusiveDeque.field_g.a(param13 + 7970, ArchiveSourceManager.field_f);
           IntrusiveDeque.field_g.a(4, bj.field_D);
           bj.field_D.a(4, es.field_l);
           for (var18Lifetime2 = 0; 4 + param0 > var18Lifetime2; var18Lifetime2++) {
@@ -254,9 +254,9 @@ final class tb {
               !(nl.field_a.length < 2)) && (var18Lifetime2 != 3 ||
               !(mg.field_A <= 1))) {
               bj.field_D.a(4, re.field_g[var18Lifetime2]);
-              for (var19 = 0; var19 < fk.field_p[var18Lifetime2].length; var19++) {
-                if (null != fk.field_p[var18Lifetime2][var19]) {
-                  bj.field_D.a(4, fk.field_p[var18Lifetime2][var19]);
+              for (var19 = 0; var19 < ByteArrayNode.field_p[var18Lifetime2].length; var19++) {
+                if (null != ByteArrayNode.field_p[var18Lifetime2][var19]) {
+                  bj.field_D.a(4, ByteArrayNode.field_p[var18Lifetime2][var19]);
                 }
               }
             }

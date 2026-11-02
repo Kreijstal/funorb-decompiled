@@ -55,8 +55,8 @@ final class wa {
     }
 
     final void b(int param0) {
-        this.field_c = qq.field_D;
-        qq.field_D = this;
+        this.field_c = MusicVoice.field_D;
+        MusicVoice.field_D = this;
         int var2 = 111 % ((param0 + 71) / 45);
     }
 

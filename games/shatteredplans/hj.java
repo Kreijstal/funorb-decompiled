@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hj extends IntrusiveNode {
-    static gh field_n;
+    static MusicTrack field_n;
     Player field_j;
     Star field_i;
     static String field_m;
@@ -15,7 +15,7 @@ final class hj extends IntrusiveNode {
         field_m = null;
         field_n = null;
         if (param0 != 12) {
-          field_n = (gh) null;
+          field_n = (MusicTrack) null;
         }
     }
 

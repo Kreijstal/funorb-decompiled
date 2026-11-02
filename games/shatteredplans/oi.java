@@ -4,7 +4,7 @@
 final class oi {
     static int field_a;
     static String field_c;
-    static bc field_h;
+    static Archive field_h;
     static String field_g;
     static int field_e;
     static ds field_b;
@@ -19,10 +19,10 @@ final class oi {
         }
     }
 
-    final static void a(byte param0, bc param1) {
+    final static void a(byte param0, Archive param1) {
         int var2_int = 0;
         int var3 = 0;
-        bc var4 = null;
+        Archive var4 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -38,8 +38,8 @@ final class oi {
           ce.field_v = mf.a(param1, "", "win", false);
           dp.field_s = mf.a(param1, "", "lose", false);
           if (param0 != -126) {
-            var4 = (bc) null;
-            oi.a((byte) -117, (bc) null);
+            var4 = (Archive) null;
+            oi.a((byte) -117, (Archive) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

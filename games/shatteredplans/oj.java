@@ -5,7 +5,7 @@ final class oj extends ns implements bp {
     private boolean field_Eb;
     static String field_Bb;
     static String field_Ib;
-    static pb field_Gb;
+    static PlatformTask field_Gb;
     static int[] field_Cb;
     static qr field_zb;
     static mp field_Fb;
@@ -13,15 +13,15 @@ final class oj extends ns implements bp {
     private boolean field_Hb;
     static String field_Ab;
 
-    final static void a(int param0, bc param1) {
+    final static void a(int param0, Archive param1) {
         int var3 = 0;
         int var4 = 0;
         sr var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        sl var8 = null;
+        CipherPacketBuffer var8 = null;
         int var9 = 0;
-        sl var10 = null;
+        CipherPacketBuffer var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -30,7 +30,7 @@ final class oj extends ns implements bp {
         int var4Lifetime1;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var8 = new sl(param1.a(true, "", "logo.fo3d"));
+          var8 = new CipherPacketBuffer(param1.a(true, "", "logo.fo3d"));
           var10 = var8;
           var3 = var10.j(-108);
           var10.m(-84);
@@ -124,7 +124,7 @@ final class oj extends ns implements bp {
           var2Lifetime1 = -50 / ((param0 + 23) / 52);
           return super.a((byte) 30);
         }
-        kj var2_ref_kj = br.a(65536);
+        kj var2_ref_kj = MusicPatch.a(65536);
         if (var2_ref_kj != null) {
           this.a(17, false, var2_ref_kj);
           var2Lifetime2 = -50 / ((param0 + 23) / 52);
@@ -135,7 +135,7 @@ final class oj extends ns implements bp {
     }
 
     oj(tc param0, aa param1) {
-        super(param0, sl.field_p, mp.field_a, false, false);
+        super(param0, CipherPacketBuffer.field_p, mp.field_a, false, false);
         try {
           this.field_Db = param1;
         } catch (RuntimeException runtimeException) {
@@ -177,7 +177,7 @@ final class oj extends ns implements bp {
           if (param0 != 17) {
             return;
           }
-          var5 = new cf((ns) (this), sl.field_p, var4);
+          var5 = new cf((ns) (this), CipherPacketBuffer.field_p, var4);
           if (!param2.field_h) {
             if (!this.field_Eb) {
               if (param2.field_c == 5) {

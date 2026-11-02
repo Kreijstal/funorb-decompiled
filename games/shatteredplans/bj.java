@@ -9,7 +9,7 @@ final class bj extends WidgetContainer implements bp {
     static String field_M;
     static int field_L;
     private kg[] field_I;
-    static eb field_K;
+    static FullscreenFocusCanvas field_K;
     static Sprite field_H;
     private String[] field_G;
 
@@ -36,7 +36,7 @@ final class bj extends WidgetContainer implements bp {
           if (param0 != 26987) {
             field_H = (Sprite) null;
           }
-          er.field_i = 0;
+          WhirlpoolHasher.field_i = 0;
           if (field_J != null &&
             gf.field_k <= field_J.length) {
             for (var1_int = 0; var1_int < gf.field_k; var1_int++) {

@@ -103,7 +103,7 @@ final class t {
             var13_intLifetime1 = var25.e(0);
             var5.field_v = new fi[var13_intLifetime1];
             var25.a((byte) -105, var5.field_v);
-            ra.a(false, var13_intLifetime1, var5.field_v);
+            RandomAccessCacheFile.a(false, var13_intLifetime1, var5.field_v);
           }
           if (!param0) {
             var7 = var5.field_A + (int)(Math.cos(-0.2617993877991494) * 200.0);

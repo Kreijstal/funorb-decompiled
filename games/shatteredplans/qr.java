@@ -681,7 +681,7 @@ class qr extends hm {
         this.field_S = 0;
     }
 
-    final static void a(int[] param0, byte[] param1, byte[] param2, String[][] param3, String[] param4, int param5, String[][] param6, bc param7, bc param8, int param9, bc param10, Sprite[][] param11, int param12, boolean param13, Sprite[][] param14) {
+    final static void a(int[] param0, byte[] param1, byte[] param2, String[][] param3, String[] param4, int param5, String[][] param6, Archive param7, Archive param8, int param9, Archive param10, Sprite[][] param11, int param12, boolean param13, Sprite[][] param14) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -714,7 +714,7 @@ class qr extends hm {
           var15_int = 87 / ((40 - param12) / 61);
           var17 = (nk[]) null;
           var16 = (int[]) null;
-          ga.a((nk[]) null, param5, param10, (int[]) null, param11, param4, param9, param7, param1, param3, param8, param2, param13, param6, 16384, param0, param14);
+          MidiPcmStream.a((nk[]) null, param5, param10, (int[]) null, param11, param4, param9, param7, param1, param3, param8, param2, param13, param6, 16384, param0, param14);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -841,7 +841,7 @@ class qr extends hm {
         gf.i(this.field_B, this.field_N, this.field_B + this.field_K, this.field_mb + this.field_N);
         param1 = param1 & this.field_s;
         if (param5 != -2147483648) {
-          qr.a((int[]) null, (byte[]) null, (byte[]) null, (String[][]) null, (String[]) null, 117, (String[][]) null, (bc) null, (bc) null, 119, (bc) null, (Sprite[][]) null, 82, false, (Sprite[][]) null);
+          qr.a((int[]) null, (byte[]) null, (byte[]) null, (String[][]) null, (String[]) null, 117, (String[][]) null, (Archive) null, (Archive) null, 119, (Archive) null, (Sprite[][]) null, 82, false, (Sprite[][]) null);
         }
         if (!this.field_H) {
           param6 = this.field_bb;
@@ -993,7 +993,7 @@ class qr extends hm {
         gf.d(var12, var13, var14, var15);
     }
 
-    final static void a(bc param0, byte param1) {
+    final static void a(Archive param0, byte param1) {
         Sprite var6 = null;
         int var3 = 0;
         int var4 = 0;
@@ -1009,10 +1009,10 @@ class qr extends hm {
           qa.field_q = new Sprite(var3, 3 * var4 / 4);
           qa.field_q.e();
           var6.c(0, 0);
-          ak.field_z = new Sprite(var3, -qa.field_q.field_w + var4);
-          ak.field_z.e();
+          DiskArchiveRequest.field_z = new Sprite(var3, -qa.field_q.field_w + var4);
+          DiskArchiveRequest.field_z.e();
           var6.c(0, -qa.field_q.field_w);
-          ak.field_z.field_x = qa.field_q.field_w;
+          DiskArchiveRequest.field_z.field_x = qa.field_q.field_w;
           Star.f((byte) 85);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "qr.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

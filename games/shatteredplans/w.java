@@ -32,7 +32,7 @@ abstract class w extends WidgetContainer {
         int var4 = 0;
         String var8 = null;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        String var6 = "(" + IterableNodeHashTable.field_e + " " + tp.field_g + " " + kp.field_n + ") " + ej.field_e;
+        String var6 = "(" + IterableNodeHashTable.field_e + " " + tp.field_g + " " + kp.field_n + ") " + BufferedCacheFile.field_e;
         String var1 = var6;
         if (param0 != 16738) {
           return (String) null;
@@ -74,17 +74,17 @@ abstract class w extends WidgetContainer {
           super.a(param0, -11857, param2, param3);
           return;
         }
-        if (ci.field_r == null ||
-          !(ci.field_r.field_z >= this.field_x) ||
-          !(ci.field_r.field_w >= this.field_n)) {
-          ci.field_r = new Sprite(this.field_x, this.field_n);
+        if (ArchiveIndex.field_r == null ||
+          !(ArchiveIndex.field_r.field_z >= this.field_x) ||
+          !(ArchiveIndex.field_r.field_w >= this.field_n)) {
+          ArchiveIndex.field_r = new Sprite(this.field_x, this.field_n);
         }
-        aq.a((byte) 110, ci.field_r);
+        aq.a((byte) 110, ArchiveIndex.field_r);
         gf.b();
         this.a(0, 103, 0);
         super.a(param0, param1, -param2 - this.field_q, -param3 - this.field_m);
         Star.f((byte) -50);
-        ci.field_r.a(this.field_m + param3, this.field_q + param2, this.field_G);
+        ArchiveIndex.field_r.a(this.field_m + param3, this.field_q + param2, this.field_G);
     }
 
     boolean k(int param0) {
@@ -199,7 +199,7 @@ abstract class w extends WidgetContainer {
     }
 
     final static void f(byte param0) {
-        ej.c(0);
+        BufferedCacheFile.c(0);
         if (tm.field_i != null) {
           hs.a(tm.field_i, (byte) -101);
         }

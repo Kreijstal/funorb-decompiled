@@ -8,9 +8,9 @@ final class eq extends IntrusiveNode {
     int[] field_p;
     byte[][][] field_h;
     int[] field_m;
-    pb[] field_q;
+    PlatformTask[] field_q;
     int field_j;
-    pb[] field_n;
+    PlatformTask[] field_n;
     static qh field_k;
     int field_l;
 

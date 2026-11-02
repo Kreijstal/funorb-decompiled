@@ -346,7 +346,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 GameState.d(22943);
                 this.f(0);
-                so.field_q = in.a((java.awt.Component) ((Object) tm.field_i), 16, VictoryChecker.field_e, nn.field_b);
+                so.field_q = SecondaryNodeHashTable.a((java.awt.Component) ((Object) tm.field_i), 16, VictoryChecker.field_e, nn.field_b);
                 this.c(-1);
                 oe.field_d = ij.b(115);
                 do {
@@ -402,7 +402,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           field_f = null;
           field_a = null;
           if (param0 <= 113) {
-            GameApplet.a((String) null, 22, (bc) null, (String) null);
+            GameApplet.a((String) null, 22, (Archive) null, (String) null);
           }
           field_h = null;
           field_c = null;
@@ -569,7 +569,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           StringBuilder stackIn_24_1 = null;
           String stackIn_25_2 = null;
           Throwable decompiledCaughtException = null;
-          pb var8 = null;
+          PlatformTask var8 = null;
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
@@ -593,9 +593,9 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               gn.field_B = 0;
               ts.field_G = this;
               VictoryChecker.field_e = param6;
-              tj.field_h = param6;
+              ArchiveSourceManager.field_h = param6;
               td.field_G = param5;
-              gs.field_k = 0;
+              NanoFrameTimer.field_k = 0;
               ei.field_c = kq.f((byte) 126);
               dupTemp$0 = new PlatformTaskDispatcher(param3, param4, param1, true);
               fa.field_W = dupTemp$0;
@@ -651,7 +651,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               pr.a(14274) - nh.field_m > 1000L) {
               var2 = param0.getClipBounds();
               if (null != var2) {
-                if (var2.width < tj.field_h) {
+                if (var2.width < ArchiveSourceManager.field_h) {
                   return;
                 }
                 if (var2.height < b.field_u) {
@@ -700,7 +700,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         }
     }
 
-    final static nk a(String param0, int param1, bc param2, String param3) {
+    final static nk a(String param0, int param1, Archive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -834,12 +834,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             if (uf.field_b != null &&
               null == cg.field_K) {
               var6 = uf.field_b.getInsets();
-              tm.field_i.setLocation(var6.left + gs.field_k, var6.top + gn.field_B);
+              tm.field_i.setLocation(var6.left + NanoFrameTimer.field_k, var6.top + gn.field_B);
               if (ShatteredPlansClient.field_F) {
-                tm.field_i.setLocation(gs.field_k, gn.field_B);
+                tm.field_i.setLocation(NanoFrameTimer.field_k, gn.field_B);
               }
             } else {
-              tm.field_i.setLocation(gs.field_k, gn.field_B);
+              tm.field_i.setLocation(NanoFrameTimer.field_k, gn.field_B);
             }
           }
           this.d(1);
@@ -902,7 +902,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             stackIn_12_1 = 29;
           }
           if (stackIn_12_0 < stackIn_12_1) {
-            GameApplet.a((String) null, -57, (bc) null, (String) null);
+            GameApplet.a((String) null, -57, (Archive) null, (String) null);
           }
           stackIn_16_0 = var4;
           return stackIn_16_0;
@@ -929,7 +929,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           ca.field_j = ca.field_j + 1 & 31;
           var6 = this;
           synchronized (var6) {
-            br.field_i = lq.field_q;
+            MusicPatch.field_i = lq.field_q;
             if (param0 >= -20) {
               field_i = -95;
             }
@@ -1080,16 +1080,16 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           tm.field_i.setVisible(true);
           if (uf.field_b == var2) {
             var3 = uf.field_b.getInsets();
-            tm.field_i.setLocation(gs.field_k + var3.left, var3.top + gn.field_B);
+            tm.field_i.setLocation(NanoFrameTimer.field_k + var3.left, var3.top + gn.field_B);
             if (var4 != 0) {
-              tm.field_i.setLocation(gs.field_k, gn.field_B);
+              tm.field_i.setLocation(NanoFrameTimer.field_k, gn.field_B);
             }
           } else {
-            tm.field_i.setLocation(gs.field_k, gn.field_B);
+            tm.field_i.setLocation(NanoFrameTimer.field_k, gn.field_B);
           }
           tm.field_i.addFocusListener((java.awt.event.FocusListener) (this));
           tm.field_i.requestFocus();
-          br.field_i = true;
+          MusicPatch.field_i = true;
           lq.field_q = true;
           oq.field_e = true;
           IntrusiveDeque.field_c = false;

@@ -13,7 +13,7 @@ class ns extends il implements bp {
     private nq field_ub;
     static String field_xb;
     private boolean field_wb;
-    static vk field_rb;
+    static PcmStreamMixer field_rb;
 
     final void p(int param0) {
         cf var2 = null;
@@ -80,7 +80,7 @@ class ns extends il implements bp {
             this.field_sb = false;
           }
           if (!this.field_sb) {
-            sl.a("tochangedisplayname.ws", kq.f((byte) 126), (byte) 63);
+            CipherPacketBuffer.a("tochangedisplayname.ws", kq.f((byte) 126), (byte) 63);
             return;
           }
           qj.a((byte) -127, 3);

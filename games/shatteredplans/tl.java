@@ -64,7 +64,7 @@ abstract class tl extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == param1) {
-            var5_int = wi.a(sl.j((byte) 64), of.a(64), 0);
+            var5_int = wi.a(CipherPacketBuffer.j((byte) 64), of.a(64), 0);
             if (var5_int != -1) {
               wo.a(var5_int, (byte) -88, ae.field_e, nl.field_c);
               ae.field_e = null;
@@ -87,7 +87,7 @@ abstract class tl extends GameApplet {
             if (qj.field_g != -1 &&
               qj.field_g != 0) {
               qj.field_g = -1;
-              ea.a(116);
+              IsaacBackedRandom.a(116);
             }
             if (param0) {
               md.field_B = false;
@@ -107,7 +107,7 @@ abstract class tl extends GameApplet {
             }
           }
           if (var4 == 4) {
-            if (!db.field_b) {
+            if (!DualLinkDeque.field_b) {
               gm.field_i = 10;
               eh.field_P = true;
             } else {
@@ -137,7 +137,7 @@ abstract class tl extends GameApplet {
             hr.a(kq.f((byte) 126), (byte) -105);
           }
           if (var4 == 12) {
-            sl.a(ui.c(false), kq.f((byte) 126), (byte) 88);
+            CipherPacketBuffer.a(ui.c(false), kq.f((byte) 126), (byte) 88);
           }
           if (var4 == 13) {
             try {
@@ -192,13 +192,13 @@ abstract class tl extends GameApplet {
         ai.field_e = this.field_v;
         dm.a(0, ai.field_e);
         GameKeyHandler.a(0, fa.field_W, 5000, this.field_q, 5000, this.field_x, param4, param3, this.field_w, ai.field_e, this.field_r, this.field_A, this.field_s, this.field_t);
-        ti.a(param3, this.field_q, this.field_r, this.field_A, ai.field_e, 1491341222, fa.field_W, this.field_s, this.field_x);
+        IntrusiveNodeHashTable.a(param3, this.field_q, this.field_r, this.field_A, ai.field_e, 1491341222, fa.field_W, this.field_s, this.field_x);
         lm.a((byte) 100);
         aj.field_b = cg.e(true);
         re.a(tm.field_i, false);
         jj.field_k = param2;
         ai.field_a = param5;
-        jc.field_p = param1;
+        ArchiveRequest.field_p = param1;
         tp.field_j = param6;
         lo.field_B = param7;
         this.l((byte) 64);
@@ -218,7 +218,7 @@ abstract class tl extends GameApplet {
         nf var3;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        var2 = ej.field_e;
+        var2 = BufferedCacheFile.field_e;
         if (param0 > -55) {
           this.b(-69, true);
         }
@@ -233,7 +233,7 @@ abstract class tl extends GameApplet {
                 lr.a(105);
               } else {
                 if (4 == var2) {
-                  ej.d(-523);
+                  BufferedCacheFile.d(-523);
                 } else {
                   if (var2 != 5) {
                     if (var2 == 6) {
@@ -249,7 +249,7 @@ abstract class tl extends GameApplet {
                             if (var2 != 11 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                s.a(true);
+                                GzipInflater.a(true);
                                 return;
                               }
                               if (var2 == 17) {
@@ -347,12 +347,12 @@ abstract class tl extends GameApplet {
     }
 
     private final static void f(byte param0) {
-        uq var1 = (uq) (mh.field_d.d(0));
+        uq var1 = (uq) (IsaacRandom.field_d.d(0));
         if (var1 == null) {
           q.g(-110);
           return;
         }
-        sl var2 = sa.field_a;
+        CipherPacketBuffer var2 = sa.field_a;
         var2.a(16711680);
         var2.a(16711680);
         if (param0 != 24) {
@@ -389,13 +389,13 @@ abstract class tl extends GameApplet {
         ae.b((byte) 62);
         if (!uf.a(false) &&
           gm.field_i != 11) {
-          bc.c(-78);
+          Archive.c(-78);
         }
         if (aj.field_b != null) {
           so.field_o = aj.field_b.b(86);
         }
         if (cb.b((byte) -117)) {
-          var3 = tj.a(0) * 1200;
+          var3 = ArchiveSourceManager.a(0) * 1200;
           if (this.field_y ||
             !(var3 >= ik.a(-26918)) &&
             !(po.b(123) <= var3)) {
@@ -416,7 +416,7 @@ abstract class tl extends GameApplet {
           if (var3Lifetime1 != 0 &&
             qj.field_g == 0 &&
             gm.field_i == 11 &&
-            !jc.f(-11)) {
+            !ArchiveRequest.f(-11)) {
             rq.c(86);
           }
           if (qj.field_g != -1 &&
@@ -434,7 +434,7 @@ abstract class tl extends GameApplet {
                   bf.a((byte) -124, 256, sa.field_e);
                 } else {
                   if (qj.field_g == 2) {
-                    bf.a((byte) -125, 256, ar.field_r);
+                    bf.a((byte) -125, 256, ArchiveNetworkClient.field_r);
                   } else {
                     if (qj.field_g != 5) {
                       bf.a((byte) -127, 256, nr.field_n);
@@ -470,17 +470,17 @@ abstract class tl extends GameApplet {
         }
         if ((qj.field_g != -1 &&
           qj.field_g != 0 ||
-          jc.f(-11)) &&
+          ArchiveRequest.f(-11)) &&
           SecondaryNodeDequeIterator.field_b <= pr.a(14274)) {
           md.field_B = false;
           if (-1 != qj.field_g &&
             qj.field_g != 0) {
             qj.field_g = -1;
-            ea.a(112);
+            IsaacBackedRandom.a(112);
           }
         }
         if (qj.field_g == 0 &&
-          !jc.f(-11)) {
+          !ArchiveRequest.f(-11)) {
           oi.field_f = false;
         }
         if (ma.field_p == 0 &&
@@ -492,9 +492,9 @@ abstract class tl extends GameApplet {
         }
         if (1 == ma.field_p) {
           if (ai.field_e != 0) {
-            es.field_j = io.a(ai.field_a, 124);
+            es.field_j = SoundCache.a(ai.field_a, 124);
           }
-          rq.field_g = rl.a(-1, true, 1, jc.field_p, false);
+          rq.field_g = rl.a(-1, true, 1, ArchiveRequest.field_p, false);
           tq.field_f = rl.a(-1, true, 1, tp.field_j, false);
           l.field_g = rl.a(-1, true, 1, jj.field_k, false);
           ma.field_p = 2;
@@ -525,7 +525,7 @@ abstract class tl extends GameApplet {
           kq.c(28164);
           pc.field_r = tb.field_c;
           or.field_a = false;
-          rn.a(624, rq.field_g, db.field_b, l.field_g, tq.field_f);
+          DiskCacheWorker.a(624, rq.field_g, DualLinkDeque.field_b, l.field_g, tq.field_f);
           if (go.field_D ||
             null != hr.field_b) {
             stackIn_106_0 = hr.field_b;
@@ -541,7 +541,7 @@ abstract class tl extends GameApplet {
             ns.field_rb = ae.c(3);
             md.field_M = ji.a(-123);
           }
-          rn.a(ns.field_rb, md.field_M, 1000, l.field_g);
+          DiskCacheWorker.a(ns.field_rb, md.field_M, 1000, l.field_g);
           tq.field_f = null;
           rq.field_g = null;
           l.field_g = null;
@@ -551,7 +551,7 @@ abstract class tl extends GameApplet {
         }
         if (ma.field_p == 10) {
           if (ai.field_e != 0) {
-            ka.field_e = io.a(lo.field_B, 101);
+            ka.field_e = SoundCache.a(lo.field_B, 101);
           }
           ma.field_p = 11;
         }
@@ -647,7 +647,7 @@ abstract class tl extends GameApplet {
                 te.a(0, so.field_o);
               }
             } else {
-              lc.b(-82);
+              ArchiveSource.b(-82);
             }
           }
         }
@@ -668,7 +668,7 @@ abstract class tl extends GameApplet {
         if (param0 != 16) {
           return -22;
         }
-        if (!jc.f(-11)) {
+        if (!ArchiveRequest.f(-11)) {
           return -1;
         }
         if (md.field_B) {
@@ -798,7 +798,7 @@ abstract class tl extends GameApplet {
         java.awt.Frame var7 = null;
         int var9 = 0;
         gl[] var10 = null;
-        pb var11 = null;
+        PlatformTask var11 = null;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (!param1.a(false)) {

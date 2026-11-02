@@ -33,7 +33,7 @@ final class Star extends DualLinkNode {
     static Sprite field_K;
     int field_A;
     int field_J;
-    db field_s;
+    DualLinkDeque field_s;
     int[] field_G;
     static String field_E;
 
@@ -109,7 +109,7 @@ final class Star extends DualLinkNode {
             }
           }
           if (param1 >= -122) {
-            this.field_s = (db) null;
+            this.field_s = (DualLinkDeque) null;
           }
           this.field_D = var8;
           param0.a(this, (byte) -123);
@@ -305,7 +305,7 @@ final class Star extends DualLinkNode {
         this.field_S = param2;
         this.field_A = param1;
         this.field_T = new IntrusiveDeque();
-        this.field_s = new db();
+        this.field_s = new DualLinkDeque();
     }
 
     static {

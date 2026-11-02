@@ -11,7 +11,7 @@ final class jh extends vd implements ok {
     private int field_z;
     static boolean field_D;
     private String field_C;
-    static ga field_B;
+    static MidiPcmStream field_B;
     private Sprite field_F;
     private int field_w;
 
@@ -120,7 +120,7 @@ final class jh extends vd implements ok {
             if (ae.field_b) {
               var5 = pg.field_E;
             } else {
-              var5 = sl.field_q;
+              var5 = CipherPacketBuffer.field_q;
             }
           }
           var7 = (String) null;
@@ -128,7 +128,7 @@ final class jh extends vd implements ok {
           ck.field_a = uq.field_j;
           uq.field_j.field_ab = -(8355711 & ho.field_c >> 1) + (ho.field_c + ((16711422 & bh.field_k.field_ab) >> 1));
           uq.field_j.field_jb = -(8355711 & ho.field_c >> 1) + ho.field_c + ((bh.field_k.field_jb & 16711422) >> 1);
-          er.field_j = cg.field_C;
+          WhirlpoolHasher.field_j = cg.field_C;
           uq.field_j.field_qb = -(ho.field_c >> 1 & 8355711) + ho.field_c + (bh.field_k.field_qb >> 1 & 8355711);
           fa.field_X = new qr(0L, param1);
           mb.field_n = new qr(0L, param2);
@@ -137,7 +137,7 @@ final class jh extends vd implements ok {
           uq.field_j = new qr((long)param4, param0);
           uq.field_j.field_nb = ho.field_f;
           sg.field_Ab.a(4, uq.field_j);
-          cg.field_C = new qr(0L, er.field_j);
+          cg.field_C = new qr(0L, WhirlpoolHasher.field_j);
           sg.field_Ab.a(4, cg.field_C);
           hd.field_m = new qr(0L, bh.field_k, ld.field_n);
           cb.field_l = new qr(0L, bh.field_k);
@@ -199,7 +199,7 @@ final class jh extends vd implements ok {
     final void e(byte param0) {
         this.field_y = !this.field_y ? true : false;
         if (param0 <= 1) {
-          field_B = (ga) null;
+          field_B = (MidiPcmStream) null;
           return;
         }
     }

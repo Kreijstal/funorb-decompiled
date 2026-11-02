@@ -68,7 +68,7 @@ final class IntrusiveDeque {
         if (var3 != null) {
           hp.field_m.a(false, param2 - 15618);
           var4 = hp.field_m;
-          var5_ref_String = qc.field_u;
+          var5_ref_String = SocketArchiveNetworkClient.field_u;
           var4.field_j.a(param2 ^ -1044, 5, var5_ref_String);
           var4Lifetime1 = hp.field_m;
           var5 = nh.field_p;

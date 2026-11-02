@@ -64,7 +64,7 @@ final class qn {
             return;
           }
           var1 = (hd) (cb.field_h.d(0));
-          var2 = (int)ra.field_e + 20;
+          var2 = (int)RandomAccessCacheFile.field_e + 20;
           var3 = 20;
           var4 = 63 % ((param0 + 56) / 39);
           while (var1 != null) {

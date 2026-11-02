@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class da implements gk {
-    static pb field_e;
+    static PlatformTask field_e;
     static String field_a;
     private long field_b;
     private static long[] field_h;
@@ -42,8 +42,8 @@ abstract class da implements gk {
 
     public final String a(byte param0) {
         if (param0 != -63) {
-          h var3 = (h) null;
-          da.a((java.awt.Component) null, (PlatformTaskDispatcher) null, (h) null, -88, true, -43, 7, true);
+          MusicCrossfadeStream var3 = (MusicCrossfadeStream) null;
+          da.a((java.awt.Component) null, (PlatformTaskDispatcher) null, (MusicCrossfadeStream) null, -88, true, -43, 7, true);
         }
         if (this.a(16647)) {
           return null;
@@ -54,7 +54,7 @@ abstract class da implements gk {
         return this.c((byte) 125);
     }
 
-    final static gm a(int param0, al param1) {
+    final static gm a(int param0, PcmSampleStream param1) {
         gm var2 = null;
         RuntimeException var2_ref = null;
         gm stackIn_2_0 = null;
@@ -127,7 +127,7 @@ abstract class da implements gk {
           try {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "quit.ws");
-              param1.getAppletContext().showDocument(jg.a(param1, false, var2), "_top");
+              param1.getAppletContext().showDocument(AudioService.a(param1, false, var2), "_top");
               if (param0 != 1) {
                 field_a = (String) null;
               }
@@ -156,16 +156,16 @@ abstract class da implements gk {
         }
     }
 
-    final static void a(java.awt.Component param0, PlatformTaskDispatcher param1, h param2, int param3, boolean param4, int param5, int param6, boolean param7) {
+    final static void a(java.awt.Component param0, PlatformTaskDispatcher param1, MusicCrossfadeStream param2, int param3, boolean param4, int param5, int param6, boolean param7) {
         try {
-          ap.a(param5, param7, 10);
-          aj.field_e = ap.a(param1, param0, 0, param6);
+          PcmPlayerService.a(param5, param7, 10);
+          aj.field_e = PcmPlayerService.a(param1, param0, 0, param6);
           if (param4) {
             java.applet.Applet var9 = (java.applet.Applet) null;
             da.a(-84, (java.applet.Applet) null);
           }
-          hg.field_q = ap.a(param1, param0, 1, param3);
-          jp.field_Bb = new vk();
+          hg.field_q = PcmPlayerService.a(param1, param0, 1, param3);
+          jp.field_Bb = new PcmStreamMixer();
           kl.field_t = param3;
           hg.field_q.a(jp.field_Bb);
           u.field_b = param2;

@@ -109,7 +109,7 @@ final class bb {
         int var10Lifetime1;
         var12 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          qo.a(22353, bc.field_b);
+          qo.a(22353, Archive.field_b);
           if (param2 != -2) {
             field_d = (String) null;
           }
@@ -124,7 +124,7 @@ final class bb {
             var6 = dn.field_f;
             dn.field_f.field_mb = 0;
             var6.field_K = 0;
-            tj.field_f.field_z = le.field_c.toUpperCase();
+            ArchiveSourceManager.field_f.field_z = le.field_c.toUpperCase();
             var7 = (2 + IntrusiveDeque.field_g.field_K) / 2;
             dn.field_f.a(-2 + var7, 40, (byte) 108, IntrusiveDeque.field_g.field_mb - 40, 0);
             aq.field_j.a(-var7 + IntrusiveDeque.field_g.field_K, 40, (byte) 73, IntrusiveDeque.field_g.field_mb - 40, var7);
@@ -250,13 +250,13 @@ final class bb {
             }
           }
           stackIn_70_0 = am.field_xb;
-          stackIn_71_1 = (param1) && (!param0) && (!ti.field_e);
+          stackIn_71_1 = (param1) && (!param0) && (!IntrusiveNodeHashTable.field_e);
           ((qr) (Object) stackIn_70_0).a(stackIn_71_1, -20429);
           stackIn_75_0 = IntrusiveDeque.field_g;
-          stackIn_76_1 = (param1) && (!param0) && (!ti.field_e);
+          stackIn_76_1 = (param1) && (!param0) && (!IntrusiveNodeHashTable.field_e);
           ((qr) (Object) stackIn_75_0).a(stackIn_76_1, -20429);
           stackIn_80_0 = MouseInputHandler.field_d;
-          stackIn_81_1 = (param1) && (!param0) && (ti.field_e);
+          stackIn_81_1 = (param1) && (!param0) && (IntrusiveNodeHashTable.field_e);
           ((qr) (Object) stackIn_80_0).a(stackIn_81_1, -20429);
           n.field_h.field_d.f(false);
           if (he.field_p != null) {

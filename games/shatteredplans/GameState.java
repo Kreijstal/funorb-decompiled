@@ -1122,7 +1122,7 @@ final class GameState {
         gl[] var4 = null;
         gl var6 = null;
         int var7 = 0;
-        pb var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -1195,7 +1195,7 @@ final class GameState {
     }
 
     final static void a(int param0) {
-        tk.field_z = pr.a(14274);
+        NetworkArchiveRequest.field_z = pr.a(14274);
         vj.field_C = 0;
         if (param0 != -5883) {
           GameState.e((byte) 95);
@@ -1537,7 +1537,7 @@ final class GameState {
             }
             var5Lifetime2 = 1 + var4_int;
             for (var6Lifetime1 = 0; var6Lifetime1 < var5Lifetime2; var6Lifetime1++) {
-              var11 = qq.a(this, 65, param2);
+              var11 = MusicVoice.a(this, 65, param2);
               this.field_p.a((byte) 48, var11);
               var11.field_y.field_T.a((byte) -113, var11);
               var11.field_B.field_s.a(var11, 32);
@@ -2274,7 +2274,7 @@ final class GameState {
           return;
         }
         try {
-          m.a((byte) -80, this.field_v, param0, this.field_n, this.field_A, this.field_G, this.field_x, param2, this.field_g, false);
+          StrongCacheEntry.a((byte) -80, this.field_v, param0, this.field_n, this.field_A, this.field_G, this.field_x, param2, this.field_g, false);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "dc.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -3389,7 +3389,7 @@ final class GameState {
           this.field_K = new int[1 + this.field_r];
           this.field_u = new int[1 + this.field_r];
           this.field_A = new IntrusiveDeque();
-          this.field_L = (Random) ((Object) new ea());
+          this.field_L = (Random) ((Object) new IsaacBackedRandom());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

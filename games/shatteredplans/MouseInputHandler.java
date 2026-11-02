@@ -107,7 +107,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         int[] var9 = null;
         int var5 = 0;
         int var7 = ShatteredPlansClient.field_F ? 1 : 0;
-        int var1 = cm.field_g[0] * mc.field_s[0];
+        int var1 = cm.field_g[0] * WeightedCacheEntry.field_s[0];
         int[] var13Lifetime1;
         int[] var11Lifetime1;
         int[] var5_ref_int__Lifetime1;
@@ -117,42 +117,42 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         int var5Lifetime1;
         if (param0) {
           var20 = hd.field_q[0];
-          if (ua.field_h[0]) {
-            var21 = kc.field_l[0];
+          if (SectorCacheStore.field_h[0]) {
+            var21 = MusicEnvelope.field_l[0];
             var13 = new int[var1];
             var11 = var13;
             var5_ref_int__ = var11;
             for (var6 = 0; var1 > var6; var6++) {
               var5_ref_int__[var6] = ee.a(eo.field_fb[we.a((int) var20[var6], 255)], we.a(-16777216, var21[var6] << 24));
             }
-            var3 = new ArgbSprite(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var13);
+            var3 = new ArgbSprite(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], var13);
           } else {
             var9 = new int[var1];
             for (var5 = 0; var1 > var5; var5++) {
               var9[var5] = eo.field_fb[we.a(255, (int) var20[var5])];
             }
-            var3 = new Sprite(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var9);
+            var3 = new Sprite(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], var9);
           }
           pd.a(0);
           return (Sprite) (var3);
         }
         MouseInputHandler.a(79);
         byte[] var18 = hd.field_q[0];
-        if (ua.field_h[0]) {
-          var19 = kc.field_l[0];
+        if (SectorCacheStore.field_h[0]) {
+          var19 = MusicEnvelope.field_l[0];
           var13Lifetime1 = new int[var1];
           var11Lifetime1 = var13Lifetime1;
           var5_ref_int__Lifetime1 = var11Lifetime1;
           for (var6Lifetime1 = 0; var1 > var6Lifetime1; var6Lifetime1++) {
             var5_ref_int__Lifetime1[var6Lifetime1] = ee.a(eo.field_fb[we.a((int) var18[var6Lifetime1], 255)], we.a(-16777216, var19[var6Lifetime1] << 24));
           }
-          var3Lifetime1 = new ArgbSprite(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var13Lifetime1);
+          var3Lifetime1 = new ArgbSprite(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], var13Lifetime1);
         } else {
           var9Lifetime1 = new int[var1];
           for (var5Lifetime1 = 0; var1 > var5Lifetime1; var5Lifetime1++) {
             var9Lifetime1[var5Lifetime1] = eo.field_fb[we.a(255, (int) var18[var5Lifetime1])];
           }
-          var3Lifetime1 = new Sprite(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], var9Lifetime1);
+          var3Lifetime1 = new Sprite(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], var9Lifetime1);
         }
         pd.a(0);
         return (Sprite) (var3Lifetime1);
@@ -245,7 +245,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           var3 != 0) {
           return false;
         }
-        return tk.a(bq.field_e, jj.field_o, false, uo.field_f, tl.field_D);
+        return NetworkArchiveRequest.a(bq.field_e, jj.field_o, false, uo.field_f, tl.field_D);
     }
 
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
@@ -326,7 +326,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         try {
           if (null != pd.field_j) {
             ql.field_q = 0;
-            lc.field_c = param0.getX();
+            ArchiveSource.field_c = param0.getX();
             el.field_e = param0.getY();
             pr.a(14274);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {

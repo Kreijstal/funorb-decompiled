@@ -15,7 +15,7 @@ final class te {
 
     final static void a(boolean param0) {
         bq.a(127);
-        hr.a(bh.field_m[0].field_o, cr.field_c, tg.field_a, 113, pe.field_K, rc.field_l);
+        hr.a(bh.field_m[0].field_o, cr.field_c, tg.field_a, 113, pe.field_K, MusicVoiceMixer.field_l);
         if (!param0) {
           v var2 = (v) null;
           te.a(-28, (v) null, 8, (v) null, 98, -88);
@@ -34,7 +34,7 @@ final class te {
         try {
           cs.field_l = param3;
           sm.field_b = param5;
-          ar.field_i = param2;
+          ArchiveNetworkClient.field_i = param2;
           if (param0 != -4440) {
             field_b = (String) null;
           }

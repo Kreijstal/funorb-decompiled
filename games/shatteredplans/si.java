@@ -153,7 +153,7 @@ final class si extends DualLinkNode {
               }
               if (99 != var9Lifetime1) {
                 cs.field_j = nr.field_m;
-                ej.field_e = var9Lifetime1;
+                BufferedCacheFile.field_e = var9Lifetime1;
                 rr.field_t = -1;
               } else {
                 es.a(119, nc.a(-85));
@@ -181,7 +181,7 @@ final class si extends DualLinkNode {
           }
           if (nr.field_m == cs.field_j &&
             uc.d((byte) -28)) {
-            if (ej.field_e == 255) {
+            if (BufferedCacheFile.field_e == 255) {
               var9_ref_String = sa.field_a.i(1910283844);
               if (var9_ref_String != null) {
                 jf.a(-25602, var9_ref_String, kq.f((byte) 125));
@@ -191,7 +191,7 @@ final class si extends DualLinkNode {
             }
             q.g(-99);
             BufferedSocket.field_j = false;
-            stackIn_56_0 = ej.field_e;
+            stackIn_56_0 = BufferedCacheFile.field_e;
             return stackIn_56_0;
           }
           if (null == wg.field_f) {
@@ -344,13 +344,13 @@ final class si extends DualLinkNode {
         }
     }
 
-    final static eb a(int param0, PlatformTaskDispatcher param1, int param2, byte param3, int param4, int param5) {
+    final static FullscreenFocusCanvas a(int param0, PlatformTaskDispatcher param1, int param2, byte param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        eb var7 = null;
+        FullscreenFocusCanvas var7 = null;
         int var8 = 0;
         java.awt.Frame var9 = null;
-        eb stackIn_4_0 = null;
+        FullscreenFocusCanvas stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -361,7 +361,7 @@ final class si extends DualLinkNode {
           if (var9 == null) {
             return null;
           }
-          var7 = new eb();
+          var7 = new FullscreenFocusCanvas();
           var8 = -69 % ((44 - param3) / 49);
           var7.field_d = var9;
           var7.field_d.add((java.awt.Component) ((Object) var7));

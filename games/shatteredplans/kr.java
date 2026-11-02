@@ -147,7 +147,7 @@ final class kr extends Exception {
             param2 = param2 - (int)(var10Lifetime1 * (long)var7 >> 16);
             param3 = param3 + (int)((long)var6 * var10Lifetime1 >> 16);
             param1 = param1 + (int)(var12Lifetime1 * (long)var6 >> 16);
-            ar.$cfr$intArgs$a$c3a94e747ff6(param2, param3, param5, -1, param1, param4);
+            ArchiveNetworkClient.$cfr$intArgs$a$c3a94e747ff6(param2, param3, param5, -1, param1, param4);
             return;
           }
           return;

@@ -17,7 +17,7 @@ final class e {
         ff var7 = null;
         ff var8 = null;
         qk var9 = null;
-        kk var10 = null;
+        PcmSample var10 = null;
         lp var11 = null;
         lp var12 = null;
         lp stackIn_6_0 = null;
@@ -29,8 +29,8 @@ final class e {
           var11 = new lp(0, 0, 132, 40);
           var12 = var11;
           if (param1 > -22) {
-            var10 = (kk) null;
-            e.a(-126, -120, (kk) null);
+            var10 = (PcmSample) null;
+            e.a(-126, -120, (PcmSample) null);
           }
           param3.field_c[param2] = var11;
           var5 = new qk(132 - rs.field_Cb.c(or.field_d[param2]), 0, or.field_d[param2]);
@@ -88,7 +88,7 @@ final class e {
         return this.field_a;
     }
 
-    final static gm a(int param0, int param1, kk param2) {
+    final static gm a(int param0, int param1, PcmSample param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         gm stackIn_1_0 = null;
@@ -98,7 +98,7 @@ final class e {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 13 / ((-40 - param1) / 39);
-          stackIn_1_0 = da.a(-128, al.a(param2, 100, param0));
+          stackIn_1_0 = da.a(-128, PcmSampleStream.a(param2, 100, param0));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

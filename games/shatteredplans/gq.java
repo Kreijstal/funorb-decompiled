@@ -244,7 +244,7 @@ final class gq {
               MouseWheelInput.field_a[var18] = MouseWheelInput.field_a[var18] + fa.field_Z[var15][var18];
             }
             pe.a(true, nc.field_p, false, 80, MouseWheelInput.field_a, false, var17);
-            er.a(var7Lifetime1, var13Lifetime1, false, var8Lifetime1, var14, var17, var12Lifetime1, var9Lifetime1);
+            WhirlpoolHasher.a(var7Lifetime1, var13Lifetime1, false, var8Lifetime1, var14, var17, var12Lifetime1, var9Lifetime1);
           }
           var16Lifetime1 = -47 / ((47 - param0) / 46);
         } catch (RuntimeException runtimeException) {
@@ -259,13 +259,13 @@ final class gq {
     final static Sprite d(int param0) {
         int var4_int = 0;
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        int var1 = cm.field_g[0] * mc.field_s[0];
+        int var1 = cm.field_g[0] * WeightedCacheEntry.field_s[0];
         byte[] var2 = hd.field_q[0];
         int[] var3 = new int[var1];
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = eo.field_fb[we.a((int) var2[var4_int], 255)];
         }
-        Sprite var4 = new Sprite(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[param0], var3);
+        Sprite var4 = new Sprite(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[param0], var3);
         pd.a(0);
         return var4;
     }

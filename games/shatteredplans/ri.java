@@ -86,7 +86,7 @@ final class ri extends WidgetContainer implements od, bp {
         }
     }
 
-    final static th a(String param0, String param1, bc param2, bc param3, byte param4) {
+    final static th a(String param0, String param1, Archive param2, Archive param3, byte param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -172,7 +172,7 @@ final class ri extends WidgetContainer implements od, bp {
     }
 
     public final void a(int param0, go param1) {
-        bc var4 = null;
+        Archive var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -186,8 +186,8 @@ final class ri extends WidgetContainer implements od, bp {
             this.a(param0 - 4468);
           }
           if (param0 != 4340) {
-            var4 = (bc) null;
-            ri.a((String) null, (String) null, (bc) null, (bc) null, (byte) -106);
+            var4 = (Archive) null;
+            ri.a((String) null, (String) null, (Archive) null, (Archive) null, (byte) -106);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -295,7 +295,7 @@ final class ri extends WidgetContainer implements od, bp {
             this.field_q = this.field_q + (var7.c(this.field_J, this.field_x - 40, var7.field_J) + 5);
           }
           var8 = ph.field_e;
-          var9 = jc.a(kq.f((byte) 124), true);
+          var9 = ArchiveRequest.a(kq.f((byte) 124), true);
           if (var9 == og.field_b) {
             var8 = cn.field_v;
           } else {
@@ -386,9 +386,9 @@ final class ri extends WidgetContainer implements od, bp {
                   o.a(0);
                 } else {
                   if (this.field_D) {
-                    ol.b((byte) -125);
+                    WeightedLruCache.b((byte) -125);
                   } else {
-                    qc.h(30252);
+                    SocketArchiveNetworkClient.h(30252);
                   }
                 }
               }

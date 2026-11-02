@@ -34,9 +34,9 @@ final class ij {
         }
     }
 
-    final static fp b(int param0) {
+    final static FrameTimer b(int param0) {
         int var1 = 55 / ((param0 - 37) / 59);
-        return (fp) ((Object) new gs());
+        return (FrameTimer) ((Object) new NanoFrameTimer());
     }
 
     final static qh b(byte param0) {

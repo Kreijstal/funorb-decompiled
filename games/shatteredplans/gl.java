@@ -39,7 +39,7 @@ final class gl {
         int fieldTemp$0 = di.field_m + 1;
         di.field_m = di.field_m + 1;
         if (fieldTemp$0 == 350) {
-          jc.a(-1, (byte) -114);
+          ArchiveRequest.a(-1, (byte) -114);
         }
         if (param0 > -29) {
           gl.a(66);

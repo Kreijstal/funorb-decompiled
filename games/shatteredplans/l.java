@@ -12,7 +12,7 @@ final class l {
     Star[] field_e;
     int[][] field_h;
     int field_b;
-    static bc field_g;
+    static Archive field_g;
     int[][] field_c;
     Random field_j;
     static int field_f;
@@ -206,7 +206,7 @@ final class l {
             break;
           }
           if (param2 != 4) {
-            field_g = (bc) null;
+            field_g = (Archive) null;
             this.b((byte) 80);
           } else {
             this.b((byte) 80);
@@ -366,7 +366,7 @@ final class l {
         this.field_k = param0;
         this.field_l = param2;
         this.field_b = param1;
-        this.field_j = (Random) ((Object) new ea((long)this.field_l));
+        this.field_j = (Random) ((Object) new IsaacBackedRandom((long)this.field_l));
         this.field_e = new Star[param3];
     }
 

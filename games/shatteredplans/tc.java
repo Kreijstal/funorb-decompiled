@@ -69,7 +69,7 @@ final class tc extends qs {
         if (param0 <= 118) {
           field_G = (kh) null;
         }
-        if (!h.field_q) {
+        if (!MusicCrossfadeStream.field_q) {
           if (js.field_c == null) {
             js.field_c = hd.a(6, 109);
           }
@@ -81,7 +81,7 @@ final class tc extends qs {
             if (de.field_j == -1) {
               de.field_j = uc.field_A;
             }
-            h.field_q = true;
+            MusicCrossfadeStream.field_q = true;
           }
         }
     }
@@ -508,20 +508,20 @@ final class tc extends qs {
         el.field_c = gf.field_k;
         kh.field_Mb = gf.field_b;
         nj.a(438);
-        bc.field_g.a(0, ia.field_j.field_mb - 42, (byte) 95, ia.field_j.field_K, 0);
+        Archive.field_g.a(0, ia.field_j.field_mb - 42, (byte) 95, ia.field_j.field_K, 0);
         nm.field_c.a(cp.field_a.field_K, cr.field_c, (byte) 76, 0, 0);
         int var1 = cr.field_c + 2;
         lp.field_v.a(cp.field_a.field_K, cp.field_a.field_mb - (!ns.field_pb ? 0 : var1), (byte) 105, !ns.field_pb ? 0 : var1, 0);
-        p.d(18);
+        CachedArchiveSource.d(18);
         vm.field_Ab.a(ia.field_j.field_K, 40, (byte) 41, -40 + ia.field_j.field_mb, 0);
         sg.field_zb.a(se.field_i.field_K, 30, (byte) 72, 0, 0);
         qf.field_e.a(se.field_i.field_K, -40 + se.field_i.field_mb - 32, (byte) 48, 30, 0);
         vn.field_y.a(68, 30, (byte) 64, 5, 5);
         km.field_e.a(78, 30, (byte) 42, 5, 75);
-        mc.field_t.a(48, 30, (byte) 61, 5, 155);
+        WeightedCacheEntry.field_t.a(48, 30, (byte) 61, 5, 155);
         ta.field_d.a(48, 30, (byte) 39, 5, 205);
         int var2 = !ns.field_pb ? 200 : 250;
-        ea.field_c.a(363 - var2, 30, (byte) 95, 5, var2 + 5);
+        IsaacBackedRandom.field_c.a(363 - var2, 30, (byte) 95, 5, var2 + 5);
         hq.field_b.a(-5 + se.field_i.field_K - 370, 30, (byte) 53, 5, 370);
         qs.field_y.a(-5 + qf.field_e.field_K - 5, 37, 5, 2, -125, -5 + (qf.field_e.field_mb - 32) - 5, pe.field_K);
         if (param0 < 93) {

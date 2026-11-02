@@ -143,7 +143,7 @@ class kg extends UiWidget {
     }
 
     kg(String param0, ko param1) {
-        this(param0, qq.field_I.field_q, param1);
+        this(param0, MusicVoice.field_I.field_q, param1);
     }
 
     final void e(byte param0) {
@@ -250,7 +250,7 @@ class kg extends UiWidget {
         this.field_B = true;
         this.field_A = false;
         this.field_y = true;
-        this.field_p = qq.field_I.field_o;
+        this.field_p = MusicVoice.field_I.field_o;
     }
 
     void a(int param0, int param1, int param2, byte param3) {

@@ -37,7 +37,7 @@ final class fi extends IntrusiveNode implements ag {
             return stackIn_11_0;
           }
           if (8 == param0) {
-            stackIn_14_0 = jg.field_g;
+            stackIn_14_0 = AudioService.field_g;
             return stackIn_14_0;
           }
           if (9 == param0) {

@@ -49,7 +49,7 @@ final class rj extends ka {
         return param1 + var2;
     }
 
-    final static void a(int param0, bc param1, bc param2) {
+    final static void a(int param0, Archive param1, Archive param2) {
         try {
           if (param0 > -25) {
             rj.c(122, 49);

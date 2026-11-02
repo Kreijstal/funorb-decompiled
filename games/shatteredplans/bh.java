@@ -17,7 +17,7 @@ final class bh extends IntrusiveNode {
     final boolean a(int param0, int param1, int param2) {
         if (param0 != 16548) {
           String var5 = (String) null;
-          bh.a((String) null, (bc) null, (byte) 81, (String) null, (String) null);
+          bh.a((String) null, (Archive) null, (byte) 81, (String) null, (String) null);
           if (param2 < this.field_l) {
             return false;
           }
@@ -61,7 +61,7 @@ final class bh extends IntrusiveNode {
         field_k = null;
     }
 
-    final static String a(String param0, bc param1, byte param2, String param3, String param4) {
+    final static String a(String param0, Archive param1, byte param2, String param3, String param4) {
         RuntimeException var5 = null;
         String var6 = null;
         String stackIn_5_0 = null;
@@ -79,7 +79,7 @@ final class bh extends IntrusiveNode {
         try {
           if (param2 <= 7) {
             var6 = (String) null;
-            bh.a((String) null, (bc) null, (byte) -117, (String) null, (String) null);
+            bh.a((String) null, (Archive) null, (byte) -117, (String) null, (String) null);
           }
           if (!param1.b((byte) -109)) {
             stackIn_5_0 = (String) (param3);
@@ -133,7 +133,7 @@ final class bh extends IntrusiveNode {
           return qh.field_B;
         }
         String var2 = (String) null;
-        bh.a((String) null, (bc) null, (byte) 30, (String) null, (String) null);
+        bh.a((String) null, (Archive) null, (byte) 30, (String) null, (String) null);
         return qh.field_B;
     }
 
@@ -147,13 +147,13 @@ final class bh extends IntrusiveNode {
         try {
           if (param1 >= -36) {
             var4 = (String) null;
-            bh.a((String) null, (bc) null, (byte) -45, (String) null, (String) null);
+            bh.a((String) null, (Archive) null, (byte) -45, (String) null, (String) null);
           }
           ai.a(param0, true, 0, wm.field_c, (byte) -60, ef.field_a, us.field_b);
           for (var2_int = 0; wm.field_c > var2_int; var2_int++) {
             lg.field_d[var2_int + param0] = var2_int;
           }
-          ai.a(param0 + param0, false, param0, wm.field_c + param0, (byte) -60, ff.field_u, s.field_e);
+          ai.a(param0 + param0, false, param0, wm.field_c + param0, (byte) -60, ff.field_u, GzipInflater.field_e);
           if (wm.field_c <= param0) {
             return;
           }

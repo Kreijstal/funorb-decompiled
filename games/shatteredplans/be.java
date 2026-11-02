@@ -147,7 +147,7 @@ final class be extends IntrusiveNode {
           }
           gr.field_p = param7.field_M;
           gr.field_p.a(0);
-          ShatteredPlansClient.field_H = new in(param1);
+          ShatteredPlansClient.field_H = new SecondaryNodeHashTable(param1);
           a.field_j = -1;
           bh.field_h = -1;
           ah.field_X = 0;
@@ -157,13 +157,13 @@ final class be extends IntrusiveNode {
           }
           kj.field_a = param0.field_M;
           kj.field_a.a(0);
-          ea.field_b = new in(param3);
+          IsaacBackedRandom.field_b = new SecondaryNodeHashTable(param3);
           if (param2.field_M == null) {
             param2.field_M = new IntrusiveDeque();
           }
           uo.field_a = param2.field_M;
           uo.field_a.a(0);
-          qp.field_w = new in(param4);
+          qp.field_w = new SecondaryNodeHashTable(param4);
           sf.field_e = 0L;
           ks.field_i = param9;
           return;

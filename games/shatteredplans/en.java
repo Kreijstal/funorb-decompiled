@@ -43,7 +43,7 @@ final class en {
           if (!param1) {
             stackIn_4_1 = ee.field_k;
           } else {
-            stackIn_4_1 = bc.field_b;
+            stackIn_4_1 = Archive.field_b;
           }
           qo.a(stackIn_3_0, stackIn_4_1);
           n.field_h.a(0, -42 + am.field_xb.field_mb, (byte) 95, am.field_xb.field_K, 0);
@@ -62,7 +62,7 @@ final class en {
           vd.field_q.a(42 + pe.field_K, 18, (byte) 84, cr.field_c + 2, -40 + (so.field_t.field_K - pe.field_K) - 2);
           ro.field_a.a(so.field_t.field_K, 22 + cr.field_c, 0, 2, -128, -cr.field_c + (so.field_t.field_mb - 2) - 20, pe.field_K);
           i.field_g.a(am.field_xb.field_K, 40, (byte) 107, -40 + am.field_xb.field_mb, 0);
-          tj.field_f.a(IntrusiveDeque.field_g.field_K, 30, (byte) 44, 0, 0);
+          ArchiveSourceManager.field_f.a(IntrusiveDeque.field_g.field_K, 30, (byte) 44, 0, 0);
           bj.field_D.a(IntrusiveDeque.field_g.field_K, -42 + (IntrusiveDeque.field_g.field_mb - 30), (byte) 125, 30, 0);
           var2_int = 3 + em.field_k;
           if (nl.field_a.length < 2) {
@@ -90,10 +90,10 @@ final class en {
                 var7_ref_qr = re.field_g[var6];
                 re.field_g[var6].field_mb = 0;
                 var7_ref_qr.field_K = 0;
-                for (var8 = 0; var8 < fk.field_p[var6].length; var8++) {
-                  if (fk.field_p[var6][var8] != null) {
-                    var9_ref_sg = fk.field_p[var6][var8];
-                    fk.field_p[var6][var8].field_mb = 0;
+                for (var8 = 0; var8 < ByteArrayNode.field_p[var6].length; var8++) {
+                  if (ByteArrayNode.field_p[var6][var8] != null) {
+                    var9_ref_sg = ByteArrayNode.field_p[var6][var8];
+                    ByteArrayNode.field_p[var6][var8].field_mb = 0;
                     var9_ref_sg.field_K = 0;
                   }
                 }
@@ -104,18 +104,18 @@ final class en {
                 var7_ref_qr = dupTemp$0;
                 re.field_g[var6].field_mb = 0;
                 var14.field_K = 0;
-                for (var8 = 0; fk.field_p[var6].length > var8; var8++) {
-                  if (null != fk.field_p[var6][var8]) {
-                    var9_ref_sg = fk.field_p[var6][var8];
-                    fk.field_p[var6][var8].field_mb = 0;
+                for (var8 = 0; ByteArrayNode.field_p[var6].length > var8; var8++) {
+                  if (null != ByteArrayNode.field_p[var6][var8]) {
+                    var9_ref_sg = ByteArrayNode.field_p[var6][var8];
+                    ByteArrayNode.field_p[var6][var8].field_mb = 0;
                     var9_ref_sg.field_K = 0;
                   }
                 }
               } else {
                 if (param1) {
                   if (var6 >= 4) {
-                    if (ra.field_i != null) {
-                      stackIn_59_0 = (ra.field_i[-4 + var6]) ? 1 : 0;
+                    if (RandomAccessCacheFile.field_i != null) {
+                      stackIn_59_0 = (RandomAccessCacheFile.field_i[-4 + var6]) ? 1 : 0;
                     } else {
                       stackIn_59_0 = 0;
                     }
@@ -130,10 +130,10 @@ final class en {
                   var8_ref_qr = re.field_g[var6];
                   re.field_g[var6].field_mb = 0;
                   var8_ref_qr.field_K = 0;
-                  for (var9 = 0; var9 < fk.field_p[var6].length; var9++) {
-                    if (null != fk.field_p[var6][var9]) {
-                      var10_ref_sg = fk.field_p[var6][var9];
-                      fk.field_p[var6][var9].field_mb = 0;
+                  for (var9 = 0; var9 < ByteArrayNode.field_p[var6].length; var9++) {
+                    if (null != ByteArrayNode.field_p[var6][var9]) {
+                      var10_ref_sg = ByteArrayNode.field_p[var6][var9];
+                      ByteArrayNode.field_p[var6][var9].field_mb = 0;
                       var10_ref_sg.field_K = 0;
                     }
                   }
@@ -141,20 +141,20 @@ final class en {
                   re.field_g[var6].a(103, var3, (byte) 74, var5, 5);
                   var8 = 110;
                   if (param1) {
-                    fk.field_p[var6][0].a(50, var3, var5, 2, qo.field_b, 38, var8);
+                    ByteArrayNode.field_p[var6][0].a(50, var3, var5, 2, qo.field_b, 38, var8);
                     var8 += 40;
                   } else {
-                    if (fk.field_p[var6][0] != null) {
-                      var9_ref_sg = fk.field_p[var6][0];
-                      fk.field_p[var6][0].field_mb = 0;
+                    if (ByteArrayNode.field_p[var6][0] != null) {
+                      var9_ref_sg = ByteArrayNode.field_p[var6][0];
+                      ByteArrayNode.field_p[var6][0].field_mb = 0;
                       var9_ref_sg.field_K = 0;
                     }
                   }
                   var9 = 2 + (-5 + (IntrusiveDeque.field_g.field_K - var8));
-                  var10 = fk.field_p[var6].length - 1;
+                  var10 = ByteArrayNode.field_p[var6].length - 1;
                   for (var11 = 0; var11 < var10; var11++) {
                     var12 = var11 * var9 / var10;
-                    fk.field_p[var6][1 + var11].a(50, var3, var5, 2, qo.field_b, -var12 + (-2 + (1 + var11) * var9 / var10), var12 + var8);
+                    ByteArrayNode.field_p[var6][1 + var11].a(50, var3, var5, 2, qo.field_b, -var12 + (-2 + (1 + var11) * var9 / var10), var12 + var8);
                   }
                   var5 = var5 + (var3 + 2);
                 }
@@ -167,7 +167,7 @@ final class en {
           jo.field_a.field_F = cs.a(16, 3, jo.field_a.field_mb, 11579568, 8421504, 1);
           lp.field_v.a(jo.field_a.field_K - 10, -2 + jo.field_a.field_mb - 10 - 24, (byte) 115, 5, 5);
           oo.field_c.a(80, 24, (byte) 108, -5 + jo.field_a.field_mb - 24, (jo.field_a.field_K - 80) / 2);
-          p.d(18);
+          CachedArchiveSource.d(18);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

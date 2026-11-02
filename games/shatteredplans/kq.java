@@ -207,7 +207,7 @@ final class kq {
               (decompiledFrameRemainder5) &&
               (decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
-              this.a(10, 0, ol.field_l);
+              this.a(10, 0, WeightedLruCache.field_l);
               if (var9 == 0) {
                 return;
               }
@@ -515,7 +515,7 @@ final class kq {
           if (qj.a(true, (CharSequence) ((Object) "highlight"), (CharSequence) ((Object) param0))) {
             var2_refLifetime4 = param0.substring(10).trim();
             if (var2_refLifetime4.equalsIgnoreCase("wormholes")) {
-              er.field_g = true;
+              WhirlpoolHasher.field_g = true;
               return;
             }
             if (var2_refLifetime4.equalsIgnoreCase("borders")) {
@@ -632,11 +632,11 @@ final class kq {
                 boolean decompiledFrameCompleted3 = true;
                 if ((1 << this.field_s.field_n.field_x & param1.field_A) == 0) {
                   if (0 == (1 << param1.field_x & this.field_s.field_n.field_A)) {
-                    var5.a((byte) 2, 3375155, eb.field_e);
-                    var7.field_o = re.a(jg.field_f, 4371, new String[]{param1.name});
+                    var5.a((byte) 2, 3375155, FullscreenFocusCanvas.field_e);
+                    var7.field_o = re.a(AudioService.field_f, 4371, new String[]{param1.name});
                     var9 = (vd) (var7.field_l.d(0));
                     while (null != var9) {
-                      var9.field_o = re.a(jg.field_f, 4371, new String[]{param1.name});
+                      var9.field_o = re.a(AudioService.field_f, 4371, new String[]{param1.name});
                       var9 = (vd) (var7.field_l.a((byte) -71));
                       if (var11 != 0) {
                         decompiledFrameCompleted4 = false;
@@ -990,7 +990,7 @@ final class kq {
               sn.a(var4, -117, var7, 128 + (-var3_int + 32 << 7) / 32, var5, var6);
             }
           }
-          ga.a(var7, var6, var5, (byte) -60, var4);
+          MidiPcmStream.a(var7, var6, var5, (byte) -60, var4);
           var8_array = new int[4];
           gf.a(var8_array);
           gf.d(var5, var6, var5 + var4, var6 + var7);
@@ -1382,7 +1382,7 @@ final class kq {
           if (param3 < 43) {
             this.b(-128);
           }
-          ga.a(var9, param1, param2, (byte) -63, 190);
+          MidiPcmStream.a(var9, param1, param2, (byte) -63, 190);
           rs.field_Cb.d(jo.field_g[param4], 10 + param2, param1 + rs.field_Cb.field_J, 16777215, -1);
           var10 = 210;
           var11 = var10 / (6 + var6_int);
@@ -1684,21 +1684,21 @@ final class kq {
           var8 = UiWidget.field_t.field_z + rs.field_Cb.c("= " + re.a(hg.field_s, 4371, new String[]{Integer.toString(3)}));
           ek.field_z.f((-ek.field_z.field_z + UiWidget.field_t.field_z) / 2 + (param0 - var8) / 2 + param3, var7);
           UiWidget.field_t.f((-var8 + param0) / 2 + param3, var7 - 9);
-          gf.b(em.field_c[0] + (param3 + (UiWidget.field_t.field_z + (param0 - var8)) / 2 << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, h.field_s);
-          gf.b((param3 + (UiWidget.field_t.field_z + param0 - var8) / 2 << 4) + em.field_c[2], (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[2], 50, 7, h.field_s);
-          gf.b(em.field_c[3] + ((UiWidget.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[3], 50, 7, h.field_s);
+          gf.b(em.field_c[0] + (param3 + (UiWidget.field_t.field_z + (param0 - var8)) / 2 << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          gf.b((param3 + (UiWidget.field_t.field_z + param0 - var8) / 2 << 4) + em.field_c[2], (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[2], 50, 7, MusicCrossfadeStream.field_s);
+          gf.b(em.field_c[3] + ((UiWidget.field_t.field_z + (-var8 + param0)) / 2 + param3 << 4), (ek.field_z.field_w / 2 + var7 << 4) + ul.field_Db[3], 50, 7, MusicCrossfadeStream.field_s);
           rs.field_Cb.d("= " + re.a(hg.field_s, 4371, new String[]{Integer.toString(3)}), UiWidget.field_t.field_z + param3 + ((-var8 + param0) / 2 + 5), UiWidget.field_t.field_w / 2 + var7 - 4, 16777215, -1);
           var7 = var7 + UiWidget.field_t.field_w;
           ek.field_z.f(param3 + ((-var8 + param0) / 2 + (-ek.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
           UiWidget.field_t.f((param0 - var8) / 2 + param3, var7 - 9);
           int var9 = 87 % ((-25 - param2) / 51);
-          gf.b((param3 + (UiWidget.field_t.field_z + (-var8 + param0)) / 2 << 4) + em.field_c[0], ul.field_Db[0] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, h.field_s);
-          gf.b(((UiWidget.field_t.field_z - var8 + param0) / 2 + param3 << 4) + em.field_c[1], ul.field_Db[1] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, h.field_s);
+          gf.b((param3 + (UiWidget.field_t.field_z + (-var8 + param0)) / 2 << 4) + em.field_c[0], ul.field_Db[0] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
+          gf.b(((UiWidget.field_t.field_z - var8 + param0) / 2 + param3 << 4) + em.field_c[1], ul.field_Db[1] + (ek.field_z.field_w / 2 + var7 << 4), 50, 7, MusicCrossfadeStream.field_s);
           rs.field_Cb.d("= " + re.a(hg.field_s, 4371, new String[]{Integer.toString(2)}), 5 + UiWidget.field_t.field_z + ((param0 - var8) / 2 + param3), -4 + (var7 + UiWidget.field_t.field_w / 2), 16777215, -1);
           var7 = var7 + UiWidget.field_t.field_w;
           ek.field_z.f(-5 + (param3 + (-var6 + param0) / 2 + (-ek.field_z.field_z + UiWidget.field_t.field_z) / 2), var7);
           UiWidget.field_t.f((-var6 + param0) / 2 + param3 - 5, var7 - 9);
-          gf.b(em.field_c[0] + (-5 + ((UiWidget.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, h.field_s);
+          gf.b(em.field_c[0] + (-5 + ((UiWidget.field_t.field_z + (param0 - var6)) / 2 + param3) << 4), ul.field_Db[0] + (var7 + ek.field_z.field_w / 2 << 4), 50, 7, MusicCrossfadeStream.field_s);
           ek.field_z.f(-5 + (UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3) + (-ek.field_z.field_z + UiWidget.field_t.field_z) / 2, var7);
           UiWidget.field_t.f(param3 + (-var6 + param0) / 2 + (UiWidget.field_t.field_z - 5), var7 - 9);
           rs.field_Cb.d("= " + vs.field_a, 2 * UiWidget.field_t.field_z + (-var6 + param0) / 2 + param3, UiWidget.field_t.field_w / 2 + (-4 + var7), 16777215, -1);
@@ -2013,7 +2013,7 @@ final class kq {
               var6_ref = var4_array[var5Lifetime1];
               var7 = var2[var6_ref.field_x];
               var8 = var6_ref.field_v.field_o / 2 + (-var6_ref.field_v.field_o + 182) * var7 / var3;
-              var9 = sl.a(var7, -30577, var6_ref, var8);
+              var9 = CipherPacketBuffer.a(var7, -30577, var6_ref, var8);
               var9.a((byte) 39, this.field_cb.field_z.field_k, this.field_cb.field_z.field_y + this.field_cb.field_z.field_t);
               this.field_cb.field_z.a(var9, 8);
               var5Lifetime1++;
@@ -2225,13 +2225,13 @@ final class kq {
           boolean decompiledFrameRemainder0 = true;
           if (this.field_s.field_f &&
             !this.field_s.field_P.field_z) {
-            gf.a(h.field_F.field_z * 3 + 521, 4, rk.field_j.field_z, -2 + rs.field_Cb.field_J, 2, 0, 128);
+            gf.a(MusicCrossfadeStream.field_F.field_z * 3 + 521, 4, rk.field_j.field_z, -2 + rs.field_Cb.field_J, 2, 0, 128);
             var2_int = (this.field_s.field_S + 49) / 50;
             if (this.field_s.field_S < 0) {
-              rs.field_Cb.c(this.a(false, Math.abs(var2_int)), 521 + h.field_F.field_z * 3 + rk.field_j.field_z / 2, rs.field_Cb.field_J * 3 / 4 + 3, 16711680, -1);
+              rs.field_Cb.c(this.a(false, Math.abs(var2_int)), 521 + MusicCrossfadeStream.field_F.field_z * 3 + rk.field_j.field_z / 2, rs.field_Cb.field_J * 3 / 4 + 3, 16711680, -1);
             }
             if (mb.field_o[this.field_s.field_P.field_J] <= (3 * this.field_s.field_S)) {
-              rs.field_Cb.c(this.a(false, Math.abs(var2_int)), rk.field_j.field_z / 2 + 3 * h.field_F.field_z + 521, rs.field_Cb.field_J * 3 / 4 + 3, 16777215, -1);
+              rs.field_Cb.c(this.a(false, Math.abs(var2_int)), rk.field_j.field_z / 2 + 3 * MusicCrossfadeStream.field_F.field_z + 521, rs.field_Cb.field_J * 3 / 4 + 3, 16777215, -1);
               decompiledFrameRemainder0 = (var12 != 0);
             }
             if (decompiledFrameRemainder0) {
@@ -2239,10 +2239,10 @@ final class kq {
               if (30 > var3_int) {
                 if ((!(var3_int >= 20)) &&
                   (!(var3_int < 10))) {
-                  rs.field_Cb.c(this.a(false, Math.abs(var2_int)), h.field_F.field_z * 3 + 521 + rk.field_j.field_z / 2, 3 * rs.field_Cb.field_J / 4 + 3, 3974311, -1);
+                  rs.field_Cb.c(this.a(false, Math.abs(var2_int)), MusicCrossfadeStream.field_F.field_z * 3 + 521 + rk.field_j.field_z / 2, 3 * rs.field_Cb.field_J / 4 + 3, 3974311, -1);
                 }
               } else {
-                rs.field_Cb.c(this.a(false, Math.abs(var2_int)), h.field_F.field_z * 3 + 521 + rk.field_j.field_z / 2, 3 * rs.field_Cb.field_J / 4 + 3, 3974311, -1);
+                rs.field_Cb.c(this.a(false, Math.abs(var2_int)), MusicCrossfadeStream.field_F.field_z * 3 + 521 + rk.field_j.field_z / 2, 3 * rs.field_Cb.field_J / 4 + 3, 3974311, -1);
               }
             }
           }
@@ -2308,7 +2308,7 @@ final class kq {
           if (null != this.field_j &&
             this.field_j.field_A &&
             this.field_S.field_s) {
-            ci.field_p.b(this.field_S.field_k, this.field_S.field_t, var5Lifetime1);
+            ArchiveIndex.field_p.b(this.field_S.field_k, this.field_S.field_t, var5Lifetime1);
           }
           if (this.field_cb.field_A &&
             this.field_W.field_s) {
@@ -2357,7 +2357,7 @@ final class kq {
               stackIn_140_0 = (String) (field_L);
             } else {
               if (var6Lifetime2 != 0) {
-                stackIn_140_0 = m.field_v;
+                stackIn_140_0 = StrongCacheEntry.field_v;
               } else {
                 stackIn_140_0 = fj.field_o;
               }
@@ -2377,7 +2377,7 @@ final class kq {
           if (null != var8) {
             mp.field_b.a((String) (var8), 320, 240, var10, -1, RasterBuffer.field_f);
             var11 = rs.field_Cb.field_J + 245;
-            if (var8 == m.field_v) {
+            if (var8 == StrongCacheEntry.field_v) {
               if (this.field_s.field_P.field_w != 0) {
                 stackIn_163_0 = IntrusiveNode.field_g;
               } else {
@@ -2387,7 +2387,7 @@ final class kq {
               rs.field_Cb.a((String) (var8), 320, var11, var10, -1, RasterBuffer.field_f);
               var11 = var11 + (3 + rs.field_Cb.field_J);
             }
-            rs.field_Cb.a(er.field_p, 320, var11, var10, -1, RasterBuffer.field_f);
+            rs.field_Cb.a(WhirlpoolHasher.field_p, 320, var11, var10, -1, RasterBuffer.field_f);
             if (var9 != 0) {
               var11 = var11 + (rs.field_Cb.field_J + 3);
               rs.field_Cb.a(vn.field_i, 320, var11, var10, -1, RasterBuffer.field_f);
@@ -2423,11 +2423,11 @@ final class kq {
           if (param0 != -57) {
             return;
           }
-          if (0 >= bc.field_b &&
+          if (0 >= Archive.field_b &&
             ee.field_k <= 0) {
             return;
           }
-          if (ti.field_e) {
+          if (IntrusiveNodeHashTable.field_e) {
             gf.h(0, 0, gf.field_b, tg.field_c.field_N);
             MouseInputHandler.field_d.b(param1, -83);
           }
@@ -2906,7 +2906,7 @@ final class kq {
             var10 = this.field_s.field_n.field_x;
           }
           var11 = new Sprite(hb.field_b[0].field_w, -rs.field_Cb.field_J + 450 - (10 + hb.field_b[0].field_z / 2));
-          ra.a(param0 ^ -5630);
+          RandomAccessCacheFile.a(param0 ^ -5630);
           var11.e();
           gf.i(0, 0, var11.field_z, var11.field_w, this.field_s.field_P.field_v[var10].field_k, 0);
           cg.i(param0 ^ param0);
@@ -3398,7 +3398,7 @@ final class kq {
             if (this.field_W == dn.field_h) {
               if (!this.field_cb.field_s) {
                 this.a(-113, this.field_cb);
-                this.field_W.field_o = lc.field_d;
+                this.field_W.field_o = ArchiveSource.field_d;
                 this.field_cb.field_s = true;
                 if (var9 != 0) {
                   this.field_cb.field_s = false;
@@ -3766,7 +3766,7 @@ final class kq {
               decompiledSharedTail1 = (var7 != 0);
             }
             if (decompiledSharedTail1) {
-              this.a(10, 0, re.a(gs.field_m, 4371, new String[]{Integer.toString(this.field_s.field_N)}));
+              this.a(10, 0, re.a(NanoFrameTimer.field_m, 4371, new String[]{Integer.toString(this.field_s.field_N)}));
             }
             if (var7 != 0) {
               this.field_bb.d(false);
@@ -3965,7 +3965,7 @@ final class kq {
           }
           if (this.field_s.field_W) {
             gi.a(false);
-            ra.a(-127);
+            RandomAccessCacheFile.a(-127);
             fj.field_r.e();
             gf.d(0, 0, fj.field_r.field_z, fj.field_r.field_w, 0);
             if (se.field_k) {
@@ -4325,11 +4325,11 @@ final class kq {
                 var6 = vm.a(kr.field_f[var3_int], 0, true);
                 var7 = cn.field_w - (var6 >> 1);
                 var4 = var4 + sm.field_b;
-                if (ek.a(id.field_b + (ar.field_i << 1), param0, var7 - tr.field_Lb, (byte) -99, var4, (tr.field_Lb << 1) + var6, param1)) {
+                if (ek.a(id.field_b + (ArchiveNetworkClient.field_i << 1), param0, var7 - tr.field_Lb, (byte) -99, var4, (tr.field_Lb << 1) + var6, param1)) {
                   stackIn_11_0 = var5;
                   return stackIn_11_0;
                 }
-                var4 = var4 + (id.field_b + (ar.field_i << 1) + sm.field_b);
+                var4 = var4 + (id.field_b + (ArchiveNetworkClient.field_i << 1) + sm.field_b);
               } else {
                 var4 = var4 + e.field_d;
               }
@@ -4476,7 +4476,7 @@ final class kq {
             stackIn_47_0 = new bh(0, 50, 640, 430);
             return stackIn_47_0;
           }
-          var4 = new bh(e.field_f, fk.field_k, ei.field_e, kl.field_o);
+          var4 = new bh(e.field_f, ByteArrayNode.field_k, ei.field_e, kl.field_o);
           var5 = new IntrusiveDeque();
           if (var2.field_l < var4.field_l) {
             stackIn_8_0 = var5;
@@ -4618,7 +4618,7 @@ final class kq {
               var2.field_d = new jh[1];
               var2.field_f = new lp[1];
               var2.field_i = new qk[1];
-              var3_ref_lp = rc.a((byte) 119, this.field_s.field_n.field_m, var2, true);
+              var3_ref_lp = MusicVoiceMixer.a((byte) 119, this.field_s.field_n.field_m, var2, true);
               var3_ref_lp.a((byte) 108, this.field_e.field_z.field_k, this.field_e.field_z.field_y + this.field_e.field_z.field_t);
               this.field_e.field_z.a(var3_ref_lp, 8);
               if (this.field_s.field_n.field_m.field_x <= 0) {
@@ -4642,7 +4642,7 @@ final class kq {
               this.field_mb.d(false);
               var3_ref_sd = (Territory) (this.field_s.field_n.field_i.d(0));
               if (var3_ref_sd != null) {
-                var4_ref_lp = rc.a((byte) 120, var3_ref_sd, var2, true);
+                var4_ref_lp = MusicVoiceMixer.a((byte) 120, var3_ref_sd, var2, true);
                 var4_ref_lp.a((byte) 52, this.field_e.field_z.field_k, this.field_e.field_z.field_t + this.field_e.field_z.field_y);
                 this.field_e.field_z.a(var4_ref_lp, 8);
                 if (var3_ref_sd.field_x > 0) {
@@ -4651,7 +4651,7 @@ final class kq {
                 }
                 var3_ref_sd = (Territory) (this.field_s.field_n.field_i.a((byte) -71));
                 while (var3_ref_sd != null) {
-                  var5 = rc.a((byte) 123, var3_ref_sd, var2, false);
+                  var5 = MusicVoiceMixer.a((byte) 123, var3_ref_sd, var2, false);
                   var5.a((byte) 126, this.field_e.field_z.field_k, this.field_e.field_z.field_t + this.field_e.field_z.field_y);
                   this.field_e.field_z.a(var5, param0 + 15915);
                   stackIn_40_0 = ~var3_ref_sd.field_x;
@@ -4799,7 +4799,7 @@ final class kq {
             stackIn_28_1 = 1;
           }
           if (stackIn_28_0 != stackIn_28_1) {
-            this.a(10, 0, re.a(gs.field_m, 4371, new String[]{Integer.toString(this.field_s.field_N)}));
+            this.a(10, 0, re.a(NanoFrameTimer.field_m, 4371, new String[]{Integer.toString(this.field_s.field_N)}));
             if (var4 == 0) {
               return;
             }
@@ -4827,7 +4827,7 @@ final class kq {
           rs.field_Cb.d("=", param0 + (param1 - var7) / 2 + 64, 13 + var6, 16777215, -1);
           rs.field_Cb.d(re.a(sq.field_p, 4371, new String[]{Integer.toString(2)}), 75 + ((param1 - var7) / 2 + param0), 19 + var6, 16777215, -1);
           var6 += 44;
-          ti.field_h.b((-var7 + param1) / 2 + param0, var6 - 24, 64, 64);
+          IntrusiveNodeHashTable.field_h.b((-var7 + param1) / 2 + param0, var6 - 24, 64, 64);
           rs.field_Cb.d(re.a(hg.field_s, 4371, new String[]{Integer.toString(2)}), 75 + ((-var7 + param1) / 2 + param0), 7 + var6, 16777215, -1);
           int var8 = 27 / ((param2 + 51) / 59);
           rs.field_Cb.d("=", (-var7 + param1) / 2 + (param0 + 64), 13 + var6, 16777215, -1);
@@ -5081,32 +5081,32 @@ final class kq {
           this.field_y.a((byte) -113, this.field_cb);
           var2_int = this.field_s.field_P.field_x.b(false);
           if (var2_int > 0) {
-            this.field_nb = in.a(var2_int, true);
+            this.field_nb = SecondaryNodeHashTable.a(var2_int, true);
             this.field_y.a((byte) -113, this.field_nb);
           }
-          this.field_k = ol.a((byte) 69);
+          this.field_k = WeightedLruCache.a((byte) 69);
           this.field_y.a((byte) -113, this.field_k);
           if (null != this.field_s.field_n) {
-            this.field_S = new jh(511, 25, h.field_F.field_z, h.field_F.field_w, -1, h.field_F, (String) null, 0, -1, ak.field_x, (String) null, 0);
+            this.field_S = new jh(511, 25, MusicCrossfadeStream.field_F.field_z, MusicCrossfadeStream.field_F.field_w, -1, MusicCrossfadeStream.field_F, (String) null, 0, -1, DiskArchiveRequest.field_x, (String) null, 0);
             this.field_S.field_o = n.field_j;
             this.field_y.a((byte) -113, this.field_S);
           }
-          this.field_n = new jh(h.field_F.field_z / 2 + 512, 5, fm.field_e.field_z, fm.field_e.field_w, -1, fm.field_e, (String) null, 0, -1, bd.field_D, (String) null, 0);
+          this.field_n = new jh(MusicCrossfadeStream.field_F.field_z / 2 + 512, 5, fm.field_e.field_z, fm.field_e.field_w, -1, fm.field_e, (String) null, 0, -1, bd.field_D, (String) null, 0);
           this.field_n.field_o = rk.field_o;
           this.field_y.a((byte) -113, this.field_n);
-          this.field_W = new jh(513 + h.field_F.field_z, 25, k.field_d.field_z, k.field_d.field_w, -1, k.field_d, (String) null, 0, -1, cs.field_h, (String) null, 0);
+          this.field_W = new jh(513 + MusicCrossfadeStream.field_F.field_z, 25, k.field_d.field_z, k.field_d.field_w, -1, k.field_d, (String) null, 0, -1, cs.field_h, (String) null, 0);
           this.field_W.field_o = wm.field_a;
           this.field_y.a((byte) -113, this.field_W);
-          this.field_mb = new jh(fm.field_e.field_z + 514 + h.field_F.field_z / 2, 5, tm.field_r.field_z, tm.field_r.field_w, -1, tm.field_r, (String) null, 0, -1, je.field_b, (String) null, 0);
+          this.field_mb = new jh(fm.field_e.field_z + 514 + MusicCrossfadeStream.field_F.field_z / 2, 5, tm.field_r.field_z, tm.field_r.field_w, -1, tm.field_r, (String) null, 0, -1, je.field_b, (String) null, 0);
           this.field_mb.field_o = t.field_b;
           this.field_y.a((byte) -113, this.field_mb);
           if (this.field_nb != null) {
-            this.field_g = new jh(k.field_d.field_z + h.field_F.field_z + 515, 25, wl.field_d.field_z, wl.field_d.field_w, -1, wl.field_d, (String) null, 0, -1, nr.field_k, (String) null, 0);
+            this.field_g = new jh(k.field_d.field_z + MusicCrossfadeStream.field_F.field_z + 515, 25, wl.field_d.field_z, wl.field_d.field_w, -1, wl.field_d, (String) null, 0, -1, nr.field_k, (String) null, 0);
             this.field_g.field_o = TaskAi.field_d;
             this.field_y.a((byte) -113, this.field_g);
           }
           if (this.field_s.field_n != null) {
-            this.field_bb = new jh(521 + h.field_F.field_z * 3, 20, rk.field_j.field_z, rk.field_j.field_w, -1, rk.field_j, (String) null, 0, -1, ei.field_a, (String) null, 0);
+            this.field_bb = new jh(521 + MusicCrossfadeStream.field_F.field_z * 3, 20, rk.field_j.field_z, rk.field_j.field_w, -1, rk.field_j, (String) null, 0, -1, ei.field_a, (String) null, 0);
             this.field_bb.field_o = oj.field_Bb;
             this.field_y.a((byte) -113, this.field_bb);
           }
@@ -5138,12 +5138,12 @@ final class kq {
           this.field_K.a(this.field_N, 8);
           this.field_K.a(this.field_X, 8);
           this.field_K.a(this.field_d, 8);
-          this.field_V = new os(3, 480, 10 + rs.field_Cb.c(fk.field_l), 2 * rs.field_Cb.field_J);
-          this.field_f = new jh(3, 480, this.field_V.field_m, rs.field_Cb.field_J - 4, -1, (Sprite) null, fk.field_l, 16777215, -1, (Sprite) null, db.field_d, 16777215);
+          this.field_V = new os(3, 480, 10 + rs.field_Cb.c(ByteArrayNode.field_l), 2 * rs.field_Cb.field_J);
+          this.field_f = new jh(3, 480, this.field_V.field_m, rs.field_Cb.field_J - 4, -1, (Sprite) null, ByteArrayNode.field_l, 16777215, -1, (Sprite) null, DualLinkDeque.field_d, 16777215);
           this.field_V.a(this.field_f, 8);
           this.field_y.a(this.field_V, 0);
           this.field_t = new ArgbSprite(go.field_L.field_o, go.field_L.field_p);
-          ra.a(-128);
+          RandomAccessCacheFile.a(-128);
           this.field_t.e();
           go.field_L.d(0, 0, 16711680);
           var3 = 0;
@@ -5230,7 +5230,7 @@ final class kq {
             jr.a("continue2", 1904, aq.field_k);
             jr.a("continue3", 1904, gn.field_v);
             jr.a("continuekey", 1904, ul.field_Ob);
-            jr.a("captureAll", 1904, in.field_e);
+            jr.a("captureAll", 1904, SecondaryNodeHashTable.field_e);
             jr.a("exit", 1904, sa.field_b);
             ho.field_d = this.field_s.field_n;
             var3 = 0;

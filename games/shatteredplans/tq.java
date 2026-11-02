@@ -3,7 +3,7 @@
  */
 final class tq {
     private int field_e;
-    static bc field_f;
+    static Archive field_f;
     private boolean field_c;
     static String field_a;
     private int field_h;

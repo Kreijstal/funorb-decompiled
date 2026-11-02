@@ -382,7 +382,7 @@ class UiWidget extends IntrusiveNode {
         }
         String var5 = IntrusiveDequeCursor.a(false);
         if (var5 != null) {
-          qq.field_I.a(rs.field_Fb, ra.field_g, 106, var5);
+          MusicVoice.field_I.a(rs.field_Fb, RandomAccessCacheFile.field_g, 106, var5);
         }
     }
 
@@ -510,7 +510,7 @@ class UiWidget extends IntrusiveNode {
     }
 
     UiWidget(String param0, ko param1) {
-        this(param0, qq.field_I.field_s, param1);
+        this(param0, MusicVoice.field_I.field_s, param1);
     }
 
     UiWidget(String param0, iq param1, ko param2) {

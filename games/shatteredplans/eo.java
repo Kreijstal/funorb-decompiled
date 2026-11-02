@@ -31,7 +31,7 @@ final class eo extends jl {
         try {
           this.field_gb = param1;
           if (this.field_gb != null) {
-            var3_int = sl.field_p.c(this.field_gb, 260, sl.field_p.field_J);
+            var3_int = CipherPacketBuffer.field_p.c(this.field_gb, 260, CipherPacketBuffer.field_p.field_J);
             this.b(150 + var3_int, 300, (byte) -122);
           }
           this.field_bb = new md(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -222,10 +222,10 @@ final class eo extends jl {
 
     final void a(int param0, int param1, int param2) {
         super.a(param0, param1 + 0, param2);
-        sl.field_p.c(this.field_eb, (this.field_x >> 1) + param0, param1 + param2, 16777215, -1);
+        CipherPacketBuffer.field_p.c(this.field_eb, (this.field_x >> 1) + param0, param1 + param2, 16777215, -1);
         if (null != this.field_gb) {
           gf.f(20 + param0, param2 + 113, 260, 8421504);
-          sl.field_p.a(this.field_gb, param0 + 20, 8 + (param2 + 120), 260, 100, 16777215, -1, 1, 0, sl.field_p.field_J);
+          CipherPacketBuffer.field_p.a(this.field_gb, param0 + 20, 8 + (param2 + 120), 260, 100, 16777215, -1, 1, 0, CipherPacketBuffer.field_p.field_J);
         }
     }
 

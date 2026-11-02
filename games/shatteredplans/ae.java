@@ -11,9 +11,9 @@ final class ae {
     static boolean field_b;
     static int field_h;
 
-    final static vk c(int param0) {
+    final static PcmStreamMixer c(int param0) {
         if (param0 != 3) {
-          return (vk) null;
+          return (PcmStreamMixer) null;
         }
         return jp.field_Bb;
     }
@@ -48,7 +48,7 @@ final class ae {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        sl var27 = null;
+        CipherPacketBuffer var27 = null;
         long[][] var34 = null;
         int[][] var35 = null;
         int var25Lifetime1;
@@ -215,7 +215,7 @@ final class ae {
           r.field_d = kh.field_Lb;
           kh.field_Lb = false;
           je.field_d = vh.field_c;
-          nh.field_p = lc.field_c;
+          nh.field_p = ArchiveSource.field_c;
           td.field_P = el.field_e;
           vh.field_c = 0;
         }
@@ -234,7 +234,7 @@ final class ae {
         }
     }
 
-    final static Sprite[] a(int param0, String param1, bc param2, String param3) {
+    final static Sprite[] a(int param0, String param1, Archive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

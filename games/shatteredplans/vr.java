@@ -16,7 +16,7 @@ final class vr {
     static int field_g;
     int field_b;
 
-    final static Sprite a(bc param0, int param1, int param2) {
+    final static Sprite a(Archive param0, int param1, int param2) {
         String var3 = null;
         RuntimeException var3_ref = null;
         Sprite stackIn_2_0 = null;
@@ -135,8 +135,8 @@ final class vr {
         field_a = null;
         field_d = null;
         if (!param0) {
-          bc var2 = (bc) null;
-          vr.a((bc) null, -126, 48);
+          Archive var2 = (Archive) null;
+          vr.a((Archive) null, -126, 48);
         }
     }
 
@@ -149,8 +149,8 @@ final class vr {
           if (param0 == -15469) {
             return;
           }
-          bc var3 = (bc) null;
-          vr.a((bc) null, -29, -123);
+          Archive var3 = (Archive) null;
+          vr.a((Archive) null, -29, -123);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

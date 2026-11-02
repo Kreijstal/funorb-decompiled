@@ -5,7 +5,7 @@ final class gm extends IntrusiveNode {
     static String[] field_l;
     static qr field_m;
     int field_h;
-    al field_p;
+    PcmSampleStream field_p;
     static String field_o;
     static int[] field_k;
     static int field_i;
@@ -63,7 +63,7 @@ final class gm extends IntrusiveNode {
           eh.field_C = param2;
           bh.field_j = true;
           if (eh.field_C == 0) {
-            var3_int = db.a(fp.field_c, um.field_c, hl.field_D, ts.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, hl.field_D, ts.field_K, 3);
             var4 = 3 + var3_int;
             kr.field_f = new String[var4];
             ss.field_a = new int[var4];
@@ -82,7 +82,7 @@ final class gm extends IntrusiveNode {
             ss.field_a[var4 - 1] = 1;
             ShatteredPlansClient.field_E[1] = 5;
           } else if (eh.field_C == 1) {
-            var3_int = db.a(fp.field_c, um.field_c, hl.field_D, ts.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, hl.field_D, ts.field_K, 3);
             var4 = 2 + var3_int;
             kr.field_f = new String[var4];
             ss.field_a = new int[var4];
@@ -100,9 +100,9 @@ final class gm extends IntrusiveNode {
           } else if (eh.field_C != 2) {
             if (eh.field_C == 3) {
               if (fa.field_W.field_w) {
-                var3_int = db.a(fp.field_c, um.field_c, ja.field_k, ts.field_K, 3);
+                var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, ja.field_k, ts.field_K, 3);
               } else {
-                var3_int = db.a(fp.field_c, um.field_c, ne.field_n, ts.field_K, 3);
+                var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, ne.field_n, ts.field_K, 3);
               }
               var4 = 2 + var3_int;
               kr.field_f = new String[var4];
@@ -119,7 +119,7 @@ final class gm extends IntrusiveNode {
               ss.field_a[-1 + var4] = 0;
               ShatteredPlansClient.field_E[0] = 5;
             } else if (4 == eh.field_C) {
-              var3_int = db.a(fp.field_c, um.field_c, lp.field_z, ts.field_K, 3);
+              var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, lp.field_z, ts.field_K, 3);
               var4 = var3_int + 2;
               kr.field_f = new String[var4];
               ss.field_a = new int[var4];
@@ -138,7 +138,7 @@ final class gm extends IntrusiveNode {
               if (eh.field_C != 5) {
                 throw new IllegalArgumentException();
               }
-              var3_int = db.a(fp.field_c, um.field_c, sc.field_p, ts.field_K, 3);
+              var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, sc.field_p, ts.field_K, 3);
               var4 = 3 + var3_int;
               kr.field_f = new String[var4];
               ss.field_a = new int[var4];
@@ -150,7 +150,7 @@ final class gm extends IntrusiveNode {
                 kr.field_f[var5] = ts.field_K[var5];
               }
               kr.field_f[-3 + var4] = "";
-              kr.field_f[-2 + var4] = qq.field_t;
+              kr.field_f[-2 + var4] = MusicVoice.field_t;
               ss.field_a[var4 - 2] = 0;
               ShatteredPlansClient.field_E[0] = 3;
               kr.field_f[-1 + var4] = nf.field_i;
@@ -158,7 +158,7 @@ final class gm extends IntrusiveNode {
               ShatteredPlansClient.field_E[1] = 5;
             }
           } else {
-            var3_int = db.a(fp.field_c, um.field_c, re.a(vs.field_f, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, re.a(vs.field_f, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(ts.field_K[var5])) {
@@ -175,7 +175,7 @@ final class gm extends IntrusiveNode {
             kd.field_b = new String[-1 + (var3_int - var4)];
             ps.a(ts.field_K, var4 + 1, kd.field_b, 0, var3_int + (-var4 - 1));
             var4 = -1;
-            var3_int = db.a(fp.field_c, um.field_c, re.a(Star.field_U, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
+            var3_int = DualLinkDeque.a(FrameTimer.field_c, um.field_c, re.a(Star.field_U, 4371, new String[]{"<br><%0><br>"}), ts.field_K, 3);
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(ts.field_K[var5])) {
                 continue;
@@ -243,7 +243,7 @@ final class gm extends IntrusiveNode {
               }
               stackIn_52_0[stackIn_52_1] = stackIn_55_2;
             }
-            br.field_p = pr.a(14274);
+            MusicPatch.field_p = pr.a(14274);
           }
           GameState.field_l.field_b = ShatteredPlansClient.field_E.length;
           var3_intLifetime1 = 0;
@@ -275,8 +275,8 @@ final class gm extends IntrusiveNode {
               }
             }
           }
-          mr.field_a = (sm.field_b + ar.field_i << 1) * GameState.field_l.field_b;
-          db.field_f = cn.field_w - (var3_intLifetime1 >> 1);
+          mr.field_a = (sm.field_b + ArchiveNetworkClient.field_i << 1) * GameState.field_l.field_b;
+          DualLinkDeque.field_f = cn.field_w - (var3_intLifetime1 >> 1);
           ho.field_a = -(var3_intLifetime1 >> 1) + (var3_intLifetime1 + cn.field_w);
           for (var4Lifetime2 = 0; var4Lifetime2 < kr.field_f.length; var4Lifetime2++) {
             stackIn_115_0 = mr.field_a;
@@ -288,7 +288,7 @@ final class gm extends IntrusiveNode {
             mr.field_a = stackIn_115_0 + stackIn_116_1;
           }
           uq.field_k = dm.field_i - (mr.field_a >> 1);
-          m.field_w = new int[kr.field_f.length][];
+          StrongCacheEntry.field_w = new int[kr.field_f.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = -123 / ((-15 - param1) / 55);
           var6Lifetime1 = uq.field_k;
@@ -298,12 +298,12 @@ final class gm extends IntrusiveNode {
               var8Lifetime1 = vm.a(kr.field_f[var4Lifetime3], 0, true);
               var9 = cn.field_w - (var8Lifetime1 >> 1);
               var6Lifetime1 = var6Lifetime1 + sm.field_b;
-              m.field_w[var4Lifetime3] = new int[4];
-              m.field_w[var4Lifetime3][0] = var9 - tr.field_Lb;
-              m.field_w[var4Lifetime3][1] = var6Lifetime1;
-              m.field_w[var4Lifetime3][2] = var8Lifetime1 + (tr.field_Lb << 1);
-              var6Lifetime1 = var6Lifetime1 + (id.field_b + ((ar.field_i << 1) + sm.field_b));
-              m.field_w[var4Lifetime3][3] = (ar.field_i << 1) + id.field_b;
+              StrongCacheEntry.field_w[var4Lifetime3] = new int[4];
+              StrongCacheEntry.field_w[var4Lifetime3][0] = var9 - tr.field_Lb;
+              StrongCacheEntry.field_w[var4Lifetime3][1] = var6Lifetime1;
+              StrongCacheEntry.field_w[var4Lifetime3][2] = var8Lifetime1 + (tr.field_Lb << 1);
+              var6Lifetime1 = var6Lifetime1 + (id.field_b + ((ArchiveNetworkClient.field_i << 1) + sm.field_b));
+              StrongCacheEntry.field_w[var4Lifetime3][3] = (ArchiveNetworkClient.field_i << 1) + id.field_b;
             } else {
               var6Lifetime1 = var6Lifetime1 + e.field_d;
             }
@@ -351,7 +351,7 @@ final class gm extends IntrusiveNode {
         int var3 = 85 % ((param0 - 59) / 59);
     }
 
-    gm(al param0, IntrusiveNode param1) {
+    gm(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_p = param0;
           this.field_h = param0.i();

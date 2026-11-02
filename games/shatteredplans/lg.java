@@ -5,13 +5,13 @@ import java.io.*;
 
 final class lg extends IOException {
     static jp field_e;
-    static tj field_c;
+    static ArchiveSourceManager field_c;
     static String field_f;
     static boolean field_b;
     static int[] field_d;
     static int[] field_a;
 
-    final static nk[] a(int param0, bc param1, int param2, int param3) {
+    final static nk[] a(int param0, Archive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         nk[] stackIn_5_0 = null;
@@ -45,7 +45,7 @@ final class lg extends IOException {
         }
     }
 
-    final static nk a(int param0, int param1, int param2, bc param3) {
+    final static nk a(int param0, int param1, int param2, Archive param3) {
         RuntimeException var4 = null;
         nk stackIn_5_0 = null;
         nk stackIn_7_0 = null;

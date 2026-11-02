@@ -10,7 +10,7 @@ final class ld extends IntrusiveNode {
     static String field_n;
     static String field_k;
     static String field_q;
-    static bc field_m;
+    static Archive field_m;
     static int field_j;
 
     public static void a(int param0) {
@@ -101,25 +101,25 @@ final class ld extends IntrusiveNode {
         int fieldTemp$0 = 0;
         if (param0 == 0) {
           if (di.field_m == 0) {
-            sg.a(true, false, 0, aa.field_P, tk.field_C);
-            sg.a(true, false, 700, qf.field_c, tk.field_C);
+            sg.a(true, false, 0, aa.field_P, NetworkArchiveRequest.field_C);
+            sg.a(true, false, 700, qf.field_c, NetworkArchiveRequest.field_C);
           }
           fieldTemp$1 = di.field_m + 1;
           di.field_m = di.field_m + 1;
           if (fieldTemp$1 == 950) {
-            jc.a(5, (byte) -67);
+            ArchiveRequest.a(5, (byte) -67);
           }
           return;
         }
-        field_m = (bc) null;
+        field_m = (Archive) null;
         if (di.field_m == 0) {
-          sg.a(true, false, 0, aa.field_P, tk.field_C);
-          sg.a(true, false, 700, qf.field_c, tk.field_C);
+          sg.a(true, false, 0, aa.field_P, NetworkArchiveRequest.field_C);
+          sg.a(true, false, 700, qf.field_c, NetworkArchiveRequest.field_C);
         }
         fieldTemp$0 = di.field_m + 1;
         di.field_m = di.field_m + 1;
         if (fieldTemp$0 == 950) {
-          jc.a(5, (byte) -67);
+          ArchiveRequest.a(5, (byte) -67);
         }
         return;
     }

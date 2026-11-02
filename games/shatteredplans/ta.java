@@ -75,7 +75,7 @@ final class ta {
     }
 
     final static void a(boolean param0, int param1) {
-        if (ol.a(-104)) {
+        if (WeightedLruCache.a(-104)) {
           param0 = false;
         }
         di.a(false, param0);
@@ -97,7 +97,7 @@ final class ta {
     }
 
     final static nk c(byte param0) {
-        nk var1 = new nk(tk.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], mc.field_s[0], cm.field_g[0], hd.field_q[0], eo.field_fb);
+        nk var1 = new nk(NetworkArchiveRequest.field_y, eg.field_t, cf.field_H[0], sj.field_a[0], WeightedCacheEntry.field_s[0], cm.field_g[0], hd.field_q[0], eo.field_fb);
         pd.a(0);
         if (param0 > 82) {
           return var1;
@@ -175,7 +175,7 @@ final class ta {
           return;
         }
         gr.field_o = param1;
-        br.field_m = param0;
+        MusicPatch.field_m = param0;
         if (nh.a((byte) -94, vr.field_c)) {
           mj.field_Hb[vr.field_c].a(-30492, gr.field_o);
           if (nh.a((byte) -73, gr.field_o)) {

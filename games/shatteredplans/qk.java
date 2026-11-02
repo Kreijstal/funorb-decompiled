@@ -140,7 +140,7 @@ class qk extends vd {
         if (param0 > -12) {
           return;
         }
-        fk.a(we.field_b, -78, false);
+        ByteArrayNode.a(we.field_b, -78, false);
     }
 
     public static void f(int param0) {

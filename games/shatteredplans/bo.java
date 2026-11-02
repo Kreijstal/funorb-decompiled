@@ -71,7 +71,7 @@ final class bo extends jl implements bp {
     }
 
     final static void r(int param0) {
-        sl.a(param0 ^ param0, of.field_b);
+        CipherPacketBuffer.a(param0 ^ param0, of.field_b);
     }
 
     final static boolean q(int param0) {
@@ -134,7 +134,7 @@ final class bo extends jl implements bp {
     }
 
     final static void a(int param0, int param1) {
-        sl var2 = js.field_f;
+        CipherPacketBuffer var2 = js.field_f;
         var2.h(param0, 255);
         var2.c(1, (byte) -76);
         var2.c(param1, (byte) -97);

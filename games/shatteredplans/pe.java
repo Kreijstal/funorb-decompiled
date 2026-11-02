@@ -56,7 +56,7 @@ final class pe extends WidgetContainer implements op, bp {
           this.field_I = param0;
           this.field_H = new kg(gq.field_b, (ko) null);
           this.field_H.field_p = (iq) ((Object) new qp());
-          var2 = re.a(rn.field_e, 4371, new String[]{this.l(98), this.a(56)});
+          var2 = re.a(DiskCacheWorker.field_e, 4371, new String[]{this.l(98), this.a(56)});
           var3 = 20;
           var4 = new o(gn.field_u, 0, 0, 0, 0, 16777215, -1, 3, 0, gn.field_u.field_J, -1, 2147483647, true);
           this.field_G = new ts(var2, var4);
@@ -189,7 +189,7 @@ final class pe extends WidgetContainer implements op, bp {
               var3_int = param2;
             }
             var4 = new byte[var3_int];
-            param0.position = param0.position + ak.field_v.a(var4, param0.payload, var3_int, 7, param0.position, param1);
+            param0.position = param0.position + DiskArchiveRequest.field_v.a(var4, param0.payload, var3_int, 7, param0.position, param1);
             var5 = qi.a(var4, var3_int, 0, param1 ^ -127);
             stackIn_3_0 = var5;
             return stackIn_3_0;
@@ -267,12 +267,12 @@ final class pe extends WidgetContainer implements op, bp {
           NodeHashTableIterator.a(0, "endturn");
           if (2 == oq.field_a.field_P.field_g.field_e.length) {
             if (ho.field_d == oq.field_a.field_P.field_g.field_e[1].field_y) {
-              if (qc.a("combatSuccess", -116)) {
+              if (SocketArchiveNetworkClient.a("combatSuccess", -116)) {
                 ac.a(1, n.a("combatSuccess", -21502));
                 if (var5 != 0) {
                   var1 = vp.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
                   if (null != var1 &&
-                    qc.a("combatFailed", -116)) {
+                    SocketArchiveNetworkClient.a("combatFailed", -116)) {
                     ac.a(1, n.a("combatFailed", -21502));
                   }
                 }
@@ -280,7 +280,7 @@ final class pe extends WidgetContainer implements op, bp {
             } else {
               var1 = vp.a((byte) -69, oq.field_a.field_P.field_g.field_e[1]);
               if (null != var1 &&
-                qc.a("combatFailed", -116)) {
+                SocketArchiveNetworkClient.a("combatFailed", -116)) {
                 ac.a(1, n.a("combatFailed", -21502));
               }
             }
@@ -454,13 +454,13 @@ final class pe extends WidgetContainer implements op, bp {
                   var25Lifetime1 = param6.field_c[var23Lifetime2];
                   var26Lifetime1 = param6.field_l[var23Lifetime2];
                   k.field_g[var23Lifetime2] = (var12 * var24Lifetime1 + (var15 * var25Lifetime1 + var18 * var26Lifetime1) >> 16) + var9;
-                  h.field_t[var23Lifetime2] = (var13 * var24Lifetime1 + var25Lifetime1 * var16 + var26Lifetime1 * var19 >> 16) + var10;
+                  MusicCrossfadeStream.field_t[var23Lifetime2] = (var13 * var24Lifetime1 + var25Lifetime1 * var16 + var26Lifetime1 * var19 >> 16) + var10;
                   nb.field_b[var23Lifetime2] = (var17 * var25Lifetime1 + (var24Lifetime1 * var14 + var20 * var26Lifetime1) >> 16) + var11;
                   var24Lifetime1 = param6.field_A[var23Lifetime2];
                   var25Lifetime1 = param6.field_m[var23Lifetime2];
                   var26Lifetime1 = param6.field_Q[var23Lifetime2];
                   aq.field_o[var23Lifetime2] = var9 + (var18 * var26Lifetime1 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16);
-                  fk.field_h[var23Lifetime2] = var10 + (var24Lifetime1 * var13 + var16 * var25Lifetime1 + var19 * var26Lifetime1 >> 16);
+                  ByteArrayNode.field_h[var23Lifetime2] = var10 + (var24Lifetime1 * var13 + var16 * var25Lifetime1 + var19 * var26Lifetime1 >> 16);
                   qo.field_c[var23Lifetime2] = var11 + (var17 * var25Lifetime1 + (var24Lifetime1 * var14 + var26Lifetime1 * var20) >> 16);
                   var23Lifetime2++;
                   if (var30 != 0) {
@@ -492,7 +492,7 @@ final class pe extends WidgetContainer implements op, bp {
                   var20 = param6.field_y[var18];
                   var21Lifetime2 = param6.field_v[var18];
                   fm.field_c[var18] = var21Lifetime2 * var15 + (var20 * var12 + var9 * var19) >> 16;
-                  ra.field_f[var18] = var21Lifetime2 * var16 + (var19 * var10 + var13 * var20) >> 16;
+                  RandomAccessCacheFile.field_f[var18] = var21Lifetime2 * var16 + (var19 * var10 + var13 * var20) >> 16;
                   hk.field_ob[var18] = var11 * var19 - (-(var14 * var20) - var21Lifetime2 * var17) >> 16;
                   var18++;
                 }
@@ -502,7 +502,7 @@ final class pe extends WidgetContainer implements op, bp {
             }
             break;
           }
-          ej.$cfr$intArgs$a$c7cf2d00b385(stackIn_65_0, stackIn_65_1 != 0, param6, var7_int, var8);
+          BufferedCacheFile.$cfr$intArgs$a$c7cf2d00b385(stackIn_65_0, stackIn_65_1 != 0, param6, var7_int, var8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

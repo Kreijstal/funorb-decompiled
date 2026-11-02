@@ -10,7 +10,7 @@ final class ck {
     static String field_f;
     static String field_c;
 
-    final static void a(bc param0, java.applet.Applet param1, bc param2, bc param3, bc param4, bc param5, byte param6) {
+    final static void a(Archive param0, java.applet.Applet param1, Archive param2, Archive param3, Archive param4, Archive param5, byte param6) {
         int var7_int = 0;
         int var8 = 0;
         int var9_int = 0;
@@ -52,20 +52,20 @@ final class ck {
         try {
           mp.field_b = ri.a("font", "", param0, param4, (byte) 89);
           rs.field_Cb = ri.a("smallfont", "", param0, param4, (byte) 111);
-          in.field_f = ds.a(true, param0, "", "logo");
-          var7_int = 3 * in.field_f.field_o / 4;
-          var8 = in.field_f.field_p * 3 / 4;
-          ra.a(-110);
+          SecondaryNodeHashTable.field_f = ds.a(true, param0, "", "logo");
+          var7_int = 3 * SecondaryNodeHashTable.field_f.field_o / 4;
+          var8 = SecondaryNodeHashTable.field_f.field_p * 3 / 4;
+          RandomAccessCacheFile.a(-110);
           jf.field_a = new Sprite(var7_int, var8);
           jf.field_a.e();
           gf.d(0, 0, var7_int, var8, 16777215);
-          in.field_f.e(0, 0, 0);
+          SecondaryNodeHashTable.field_f.e(0, 0, 0);
           gf.b(3, 3, 0, 0, var7_int, var8);
-          in.field_f.e(0, 0, 255);
+          SecondaryNodeHashTable.field_f.e(0, 0, 255);
           cg.i(param6 + 8);
           fm.field_d = ae.a(101, "", param0, "edge_orbs");
-          mh.field_b = new Sprite[4];
-          ra.a(param6 ^ 108);
+          IsaacRandom.field_b = new Sprite[4];
+          RandomAccessCacheFile.a(param6 ^ 108);
           for (var9_int = 0; 4 > var9_int; var9_int++) {
             var19 = fm.field_d[var9_int];
             var20 = new Sprite(var19.field_z + 32, 32 + var19.field_w);
@@ -73,7 +73,7 @@ final class ck {
             var19.e(16 - var19.field_t, 16 - var19.field_x, 16777215);
             gf.b(8, 8, 0, 0, var20.field_z, var20.field_w);
             var19.e(16 - var19.field_t, 16 - var19.field_x, 0);
-            mh.field_b[var9_int] = var20;
+            IsaacRandom.field_b[var9_int] = var20;
           }
           cg.i(0);
           hn.field_c = ds.a(true, param0, "", "menu_hex");
@@ -82,14 +82,14 @@ final class ck {
           ae.a(-100, "", param0, "zoomicons");
           var9 = va.a("hud_icons", 0, "", param0);
           k.field_d = var9[3];
-          h.field_F = var9[2];
+          MusicCrossfadeStream.field_F = var9[2];
           fm.field_e = var9[0];
           wl.field_d = var9[4];
           tm.field_r = var9[1];
           var21 = va.a("hud_icons_red", param6 + 8, "", param0);
           bd.field_D = var21[0];
           cs.field_h = var21[3];
-          ak.field_x = var21[2];
+          DiskArchiveRequest.field_x = var21[2];
           je.field_b = var21[1];
           nr.field_k = var21[4];
           var22 = va.a("hud_icons_nobase", 0, "", param0);
@@ -97,7 +97,7 @@ final class ck {
           je.field_f = var22[4];
           us.field_a = var22[3];
           GameKeyHandler.field_b = var22[1];
-          ci.field_p = var22[2];
+          ArchiveIndex.field_p = var22[2];
           Player.field_a = va.a("icon_circles", param6 + 8, "", param0);
           dm.field_d = va.a("production_icons", 0, "", param0);
           aq.field_i = ds.a(true, param0, "", "production_button");
@@ -123,19 +123,19 @@ final class ck {
           mr.field_g = ds.a(true, param0, "", "shine_right");
           VictoryChecker.field_h = ds.a(true, param0, "", "shine_mid");
           SpriteState.field_q = ds.a(true, param0, "", "combat_hex_white");
-          ra.a(-116);
+          RandomAccessCacheFile.a(-116);
           SpriteState.field_q.e();
           SpriteState.field_q.b(0, 0, 2105376);
           cg.i(0);
           bj.field_H = ds.a(true, param0, "", "planet_burnt");
           qe.field_j = ds.a(true, param0, "", "planet_scorchedearth");
-          tk.field_x = ds.a(true, param0, "", "planet_earthlike");
+          NetworkArchiveRequest.field_x = ds.a(true, param0, "", "planet_earthlike");
           ta.field_a = ds.a(true, param0, "", "planet_exotic");
           be.field_k = ds.a(true, param0, "", "planet_gas");
           rl.field_c = ds.a(true, param0, "", "planet_ringed");
           kr.field_d = ds.a(true, param0, "", "planet_rock");
           rk.field_k = ds.a(true, param0, "", "alien_miner");
-          ti.field_h = ds.a(true, param0, "", "alien_ship");
+          IntrusiveNodeHashTable.field_h = ds.a(true, param0, "", "alien_ship");
           cp.field_t = ds.a(true, param0, "", "alien_base");
           kb.field_y = id.a(2, param0, "", "ship");
           wo.field_b = id.a(2, param0, "", "shield");
@@ -277,10 +277,10 @@ final class ck {
           fb.field_Vb.f(16777215);
           kj.field_f = hl.a((byte) 111, 80);
           hp.field_n = param0;
-          mr.field_i = ea.a(5592405, (byte) 41, 13882323, 10);
+          mr.field_i = IsaacBackedRandom.a(5592405, (byte) 41, 13882323, 10);
           cm.field_b = id.a(param6 + 10, param2, "basic", "orbcoin");
           var13 = es.field_m > 0 ? "unachieved" : "locked";
-          jc.a(14, id.a(param6 ^ -6, param2, "basic", var13));
+          ArchiveRequest.a(14, id.a(param6 ^ -6, param2, "basic", var13));
           jd.field_j = ae.a(param6 + 70, "", param0, "achievements");
           var14 = jd.field_j.length;
           ql.field_o = new Sprite[var14];
@@ -419,7 +419,7 @@ final class ck {
         int var2_int = 0;
         RuntimeException var2 = null;
         byte[] var3 = null;
-        bc var4 = null;
+        Archive var4 = null;
         byte[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -430,8 +430,8 @@ final class ck {
           var3 = new byte[var2_int];
           ps.a(param0, 0, var3, 0, var2_int);
           if (param1) {
-            var4 = (bc) null;
-            ck.a((bc) null, (java.applet.Applet) null, (bc) null, (bc) null, (bc) null, (bc) null, (byte) 57);
+            var4 = (Archive) null;
+            ck.a((Archive) null, (java.applet.Applet) null, (Archive) null, (Archive) null, (Archive) null, (Archive) null, (byte) 57);
           }
           stackIn_3_0 = var3;
           return stackIn_3_0;

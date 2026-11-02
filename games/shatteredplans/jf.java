@@ -55,7 +55,7 @@ final class jf {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3 = decompiledCaughtException;
             }
-            h.a(-1, param2);
+            MusicCrossfadeStream.a(-1, param2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

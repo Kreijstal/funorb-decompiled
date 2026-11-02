@@ -19,7 +19,7 @@ final class kb extends vd {
           return;
         }
         CharSequence var2 = (CharSequence) ((Object) Star.field_o);
-        ci.field_d = ji.a(var2, true);
+        ArchiveIndex.field_d = ji.a(var2, true);
     }
 
     kb(int param0, int param1, int param2, int param3, String param4, int param5, boolean param6) {
@@ -34,7 +34,7 @@ final class kb extends vd {
           this.field_u = param5;
           this.field_z = param4;
           this.field_C = new Sprite(this.field_m, this.field_i);
-          ra.a(-111);
+          RandomAccessCacheFile.a(-111);
           this.field_C.e();
           for (var8_int = 0; this.field_C.field_w > var8_int; var8_int++) {
             var9 = (this.field_C.field_w / 2 - var8_int) * (this.field_C.field_w / 2 - var8_int);
@@ -97,7 +97,7 @@ final class kb extends vd {
           }
           var6 = stackIn_7_0;
           if (na.field_r == 0) {
-            var7 = db.a(480, lq.field_k, var11, ks.field_b, 3);
+            var7 = DualLinkDeque.a(480, lq.field_k, var11, ks.field_b, 3);
             var8 = 3 + var7;
             t.field_c = new String[var8];
             pr.field_d = new int[var8];
@@ -119,7 +119,7 @@ final class kb extends vd {
             if (1 != na.field_r) {
               throw new IllegalArgumentException();
             }
-            var7 = db.a(480, lq.field_k, var11, ks.field_b, 3);
+            var7 = DualLinkDeque.a(480, lq.field_k, var11, ks.field_b, 3);
             var8 = var7 + 2;
             t.field_c = new String[var8];
             pr.field_d = new int[var8];
@@ -147,19 +147,19 @@ final class kb extends vd {
               var7Lifetime1 = var9Lifetime1;
             }
           }
-          ah.field_R = -(var7Lifetime1 >> 1) + var7Lifetime1 + ol.field_e;
-          ld.field_j = -(var7Lifetime1 >> 1) + ol.field_e;
-          rn.field_b = (js.field_e + uo.field_g << 1) * ns.field_nb.field_b;
+          ah.field_R = -(var7Lifetime1 >> 1) + var7Lifetime1 + WeightedLruCache.field_e;
+          ld.field_j = -(var7Lifetime1 >> 1) + WeightedLruCache.field_e;
+          DiskCacheWorker.field_b = (js.field_e + uo.field_g << 1) * ns.field_nb.field_b;
           for (var8Lifetime2 = 0; var8Lifetime2 < t.field_c.length; var8Lifetime2++) {
-            stackIn_40_0 = rn.field_b;
+            stackIn_40_0 = DiskCacheWorker.field_b;
             if (pr.field_d[var8Lifetime2] >= 0) {
               stackIn_41_1 = vh.field_b;
             } else {
               stackIn_41_1 = fe.field_A;
             }
-            rn.field_b = stackIn_40_0 + stackIn_41_1;
+            DiskCacheWorker.field_b = stackIn_40_0 + stackIn_41_1;
           }
-          vo.field_b = ri.field_O - (rn.field_b >> 1);
+          vo.field_b = ri.field_O - (DiskCacheWorker.field_b >> 1);
           ns.field_nb.a(ch.a(-15073, bb.field_b, pd.field_k), 0, param0, 123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -186,7 +186,7 @@ final class kb extends vd {
     }
 
     final static void a(int param0, int param1) {
-        sl var2 = js.field_f;
+        CipherPacketBuffer var2 = js.field_f;
         if (param0 <= 54) {
           kb.f(112);
         }

@@ -32,7 +32,7 @@ final class rh implements jk {
             RasterBuffer.field_a = 18;
             var2_ref_tm = (tm) (ld.field_p.h(35));
             if (var2_ref_tm != null) {
-              gs.a(var2_ref_tm, true);
+              NanoFrameTimer.a(var2_ref_tm, true);
             }
           }
           if (param0 > -126) {

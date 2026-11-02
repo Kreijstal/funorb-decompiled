@@ -170,19 +170,19 @@ final class cg extends qs {
     }
 
     final static void i(int param0) {
-        ra.field_k = ra.field_k - 1;
-        gf.a(bc.field_c[ra.field_k], oj.field_Cb[ra.field_k], vp.field_s[ra.field_k]);
-        gf.field_i = cb.field_f[ra.field_k];
+        RandomAccessCacheFile.field_k = RandomAccessCacheFile.field_k - 1;
+        gf.a(Archive.field_c[RandomAccessCacheFile.field_k], oj.field_Cb[RandomAccessCacheFile.field_k], vp.field_s[RandomAccessCacheFile.field_k]);
+        gf.field_i = cb.field_f[RandomAccessCacheFile.field_k];
         if (param0 == 0) {
-          gf.field_l = dk.field_b[ra.field_k];
-          gf.field_a = bf.field_c[ra.field_k];
-          gf.field_f = da.field_d[ra.field_k];
+          gf.field_l = dk.field_b[RandomAccessCacheFile.field_k];
+          gf.field_a = bf.field_c[RandomAccessCacheFile.field_k];
+          gf.field_f = da.field_d[RandomAccessCacheFile.field_k];
           return;
         }
         field_A = (qr) null;
-        gf.field_l = dk.field_b[ra.field_k];
-        gf.field_a = bf.field_c[ra.field_k];
-        gf.field_f = da.field_d[ra.field_k];
+        gf.field_l = dk.field_b[RandomAccessCacheFile.field_k];
+        gf.field_a = bf.field_c[RandomAccessCacheFile.field_k];
+        gf.field_f = da.field_d[RandomAccessCacheFile.field_k];
     }
 
     final static MouseWheelInput e(boolean param0) {

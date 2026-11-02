@@ -6,7 +6,7 @@ final class jp extends qr {
     private qr field_yb;
     private qr field_zb;
     static String field_xb;
-    static vk field_Bb;
+    static PcmStreamMixer field_Bb;
     private StringBuilder field_Db;
     private int field_Ab;
 
@@ -341,7 +341,7 @@ final class jp extends qr {
             field_Cb = (v) null;
           }
           var3 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = ci.field_d.equals(ji.a(var3, true));
+          stackIn_3_0 = ArchiveIndex.field_d.equals(ji.a(var3, true));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -535,7 +535,7 @@ final class jp extends qr {
         if (mr.field_h != null) {
           mr.field_h.h(0);
           if (0 != em.field_h) {
-            qq.c(false);
+            MusicVoice.c(false);
           }
           jj.field_m = 0;
           if (param0 < 83) {
@@ -546,7 +546,7 @@ final class jp extends qr {
           return;
         }
         if (0 != em.field_h) {
-          qq.c(false);
+          MusicVoice.c(false);
         }
         jj.field_m = 0;
         if (param0 < 83) {

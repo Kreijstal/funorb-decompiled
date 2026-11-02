@@ -94,8 +94,8 @@ final class lp extends vd implements gj {
           hm.field_q = param1;
           if (param1 == null) {
             tp.field_b = pc.field_q;
-            jb.field_d = kp.field_j + jc.field_r >> 1;
-            fe.field_B = kp.field_j + jc.field_r >> 1;
+            jb.field_d = kp.field_j + ArchiveRequest.field_r >> 1;
+            fe.field_B = kp.field_j + ArchiveRequest.field_r >> 1;
             oi.field_a = be.field_h;
             var13 = (sq) null;
             qj.a((sq) null, -1);
@@ -149,13 +149,13 @@ final class lp extends vd implements gj {
           if (param1.field_c.indexOf("<%tabresizehint>") != -1) {
             uq.field_m.a("", 27275, "tabresizehint");
           }
-          if (ol.field_g != null) {
+          if (WeightedLruCache.field_g != null) {
             return;
           }
           pc.field_q = tp.field_b;
           be.field_h = oi.field_a;
           kp.field_j = jb.field_d + fe.field_B >> 1;
-          jc.field_r = jb.field_d + fe.field_B >> 1;
+          ArchiveRequest.field_r = jb.field_d + fe.field_B >> 1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

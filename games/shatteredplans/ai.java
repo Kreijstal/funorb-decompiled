@@ -3,7 +3,7 @@
  */
 final class ai {
     static int[] field_b;
-    static bc field_c;
+    static Archive field_c;
     static String[] field_d;
     static int field_a;
     static int field_e;
@@ -117,7 +117,7 @@ final class ai {
           }
           oj.field_Ib = param3;
           qh.field_B = param2;
-          fk.a(ClientException.field_c, param1 ^ -80, param0);
+          ByteArrayNode.a(ClientException.field_c, param1 ^ -80, param0);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ai.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

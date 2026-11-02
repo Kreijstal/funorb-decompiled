@@ -55,7 +55,7 @@ final class lr {
           stackIn_3_0[stackIn_4_1] = var12;
           var6 = new kb(IntrusiveDeque.field_a[param3.field_x].field_z * 3 / 4, -1 + (var13.field_i / 2 - rs.field_Cb.field_J), 182 - IntrusiveDeque.field_a[param3.field_x].field_z * 3 / 4, param3.field_k, param3.name, 16777215, true);
           var13.a(var6, 8);
-          var7 = new fe(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, var13.field_i / 2 + 1, 182 - 3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, rs.field_Cb.field_J, 8421504, md.i(0), eb.field_e, 3375155);
+          var7 = new fe(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, var13.field_i / 2 + 1, 182 - 3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, rs.field_Cb.field_J, 8421504, md.i(0), FullscreenFocusCanvas.field_e, 3375155);
           var13.a(var7, param2 - 13);
           stackIn_6_0 = param0.field_i;
           if (param3.field_x >= param1.field_x) {
@@ -64,7 +64,7 @@ final class lr {
             stackIn_7_1 = param3.field_x;
           }
           stackIn_6_0[stackIn_7_1] = var7;
-          dupTemp$1 = re.a(jg.field_f, 4371, new String[]{param3.name});
+          dupTemp$1 = re.a(AudioService.field_f, 4371, new String[]{param3.name});
           var7.field_o = dupTemp$1;
           var6.field_o = dupTemp$1;
           var13.field_o = dupTemp$1;
@@ -75,7 +75,7 @@ final class lr {
           bg.a(-2612, param4.length);
           var8 = new ff(3 * IntrusiveDeque.field_a[param3.field_x].field_z / 4, 3 + var13.field_i / 2 + rs.field_Cb.field_J, ne.a(-1, false));
           var13.a(var8, 8);
-          var8.field_o = re.a(jg.field_f, 4371, new String[]{param3.name});
+          var8.field_o = re.a(AudioService.field_f, 4371, new String[]{param3.name});
           stackIn_12_0 = param0.field_f;
           if (param1.field_x < param3.field_x) {
             stackIn_13_1 = param3.field_x;
@@ -86,7 +86,7 @@ final class lr {
           for (var9_int = 1; param4.length - 1 > var9_int; var9_int++) {
             var10 = new ff(IntrusiveDeque.field_a[param3.field_x].field_z + (2 + GameState.field_F.field_z) * var9_int, var13.field_i / 2 + rs.field_Cb.field_J + 3, wm.a(-1, param2 - 21));
             var13.a(var10, 8);
-            var10.field_o = re.a(jg.field_f, 4371, new String[]{param3.name});
+            var10.field_o = re.a(AudioService.field_f, 4371, new String[]{param3.name});
             stackIn_17_0 = param0.field_f;
             if (param3.field_x <= param1.field_x) {
               stackIn_18_1 = 1 + param3.field_x;
@@ -97,7 +97,7 @@ final class lr {
           }
           var9 = new ff(0, (var12.field_i - IntrusiveDeque.field_a[param3.field_x].field_w) / 2, IntrusiveDeque.field_a[param3.field_x]);
           var13.a(var9, param2 ^ 29);
-          var9.field_o = re.a(jg.field_f, 4371, new String[]{param3.name});
+          var9.field_o = re.a(AudioService.field_f, 4371, new String[]{param3.name});
           stackIn_20_0 = var13;
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -318,14 +318,14 @@ final class lr {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        sl var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         Object[] var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         lq var12 = null;
-        sl var13 = null;
+        CipherPacketBuffer var13 = null;
         int[] var14 = null;
         gb var15 = null;
         Object var16 = null;
@@ -596,7 +596,7 @@ final class lr {
                     if (var38 == 0) {
                       if (var37 >= 0 &&
                         var37 < wn.field_c) {
-                        jg.a(var38, var29, var37 + var36Lifetime2, 0, var25, false, var21, 0, param5, 0);
+                        AudioService.a(var38, var29, var37 + var36Lifetime2, 0, var25, false, var21, 0, param5, 0);
                       }
                     } else {
                       var39 = (var22 - var21) / var38;
@@ -606,9 +606,9 @@ final class lr {
                         var38 = -1 + wn.field_c - var37;
                       }
                       if (0 > var37) {
-                        jg.a(var38 + var37, var29 - var37 * var41, var36Lifetime2, var40, -(var40 * var37) + var25, false, -(var37 * var39) + var21, var41, param5, var39);
+                        AudioService.a(var38 + var37, var29 - var37 * var41, var36Lifetime2, var40, -(var40 * var37) + var25, false, -(var37 * var39) + var21, var41, param5, var39);
                       } else {
-                        jg.a(var38, var29, var37 + var36Lifetime2, var40, var25, false, var21, var41, param5, var39);
+                        AudioService.a(var38, var29, var37 + var36Lifetime2, var40, var25, false, var21, var41, param5, var39);
                       }
                     }
                   }
@@ -683,7 +683,7 @@ final class lr {
                 if (var37Lifetime1 == 0) {
                   if (var36Lifetime1 >= 0 &&
                     wn.field_c > var36Lifetime1) {
-                    jg.a(var37Lifetime1, var29, var36Lifetime1 + var35Lifetime1, 0, var25, false, var21, 0, param5, 0);
+                    AudioService.a(var37Lifetime1, var29, var36Lifetime1 + var35Lifetime1, 0, var25, false, var21, 0, param5, 0);
                   }
                 } else {
                   var38Lifetime1 = (-var21 + var22) / var37Lifetime1;
@@ -693,9 +693,9 @@ final class lr {
                     var37Lifetime1 = -var36Lifetime1 + (wn.field_c - 1);
                   }
                   if (var36Lifetime1 >= 0) {
-                    jg.a(var37Lifetime1, var29, var36Lifetime1 + var35Lifetime1, var39Lifetime1, var25, false, var21, var40Lifetime1, param5, var38Lifetime1);
+                    AudioService.a(var37Lifetime1, var29, var36Lifetime1 + var35Lifetime1, var39Lifetime1, var25, false, var21, var40Lifetime1, param5, var38Lifetime1);
                   } else {
-                    jg.a(var37Lifetime1 + var36Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, var35Lifetime1, var39Lifetime1, var25 - var36Lifetime1 * var39Lifetime1, false, var21 - var36Lifetime1 * var38Lifetime1, var40Lifetime1, param5, var38Lifetime1);
+                    AudioService.a(var37Lifetime1 + var36Lifetime1, -(var36Lifetime1 * var40Lifetime1) + var29, var35Lifetime1, var39Lifetime1, var25 - var36Lifetime1 * var39Lifetime1, false, var21 - var36Lifetime1 * var38Lifetime1, var40Lifetime1, param5, var38Lifetime1);
                   }
                 }
               }

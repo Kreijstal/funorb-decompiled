@@ -399,34 +399,34 @@ final class ui extends VictoryChecker {
               js.field_f.c(14, (byte) -80);
               js.field_f.c(mq.field_c.a((byte) -73).field_d, (byte) -68);
               d.$cfr$intArgs$a$a6964d7afeb1(-1, 82);
-              cs.field_j = ti.field_i;
+              cs.field_j = IntrusiveNodeHashTable.field_i;
             }
-            if (ti.field_i == cs.field_j &&
+            if (IntrusiveNodeHashTable.field_i == cs.field_j &&
               es.a(-90, 1)) {
               var6_int = sa.field_a.j(-92);
               sa.field_a.position = 0;
               if (var6_int != 0) {
-                ej.field_e = var6_int;
+                BufferedCacheFile.field_e = var6_int;
                 cs.field_j = Player.field_l;
                 rr.field_t = -1;
               } else {
-                cs.field_j = qq.field_m;
+                cs.field_j = MusicVoice.field_m;
               }
             }
-            if (qq.field_m == cs.field_j &&
+            if (MusicVoice.field_m == cs.field_j &&
               es.a(-91, 8)) {
               w.field_I = sa.field_a.d(110);
               sa.field_a.position = 0;
               gi.a(param0, param2, param4, -84, mq.field_c);
-              cs.field_j = ti.field_d;
+              cs.field_j = IntrusiveNodeHashTable.field_d;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (ti.field_d == cs.field_j &&
+            if (IntrusiveNodeHashTable.field_d == cs.field_j &&
               es.a(119, 1)) {
               var6_intLifetime1 = sa.field_a.j(-63);
               fr.field_H = null;
               sa.field_a.position = 0;
-              ej.field_e = var6_intLifetime1;
+              BufferedCacheFile.field_e = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
@@ -483,7 +483,7 @@ final class ui extends VictoryChecker {
               }
               Star.field_o = sa.field_a.e(-1);
               var11 = (CharSequence) ((Object) Star.field_o);
-              ci.field_d = ji.a(var11, true);
+              ArchiveIndex.field_d = ji.a(var11, true);
               tf.field_n = sa.field_a.j(-112);
               cs.field_j = ih.field_f;
               if (mq.field_c.a((byte) 115) != hg.field_u) {
@@ -514,31 +514,31 @@ final class ui extends VictoryChecker {
                 }
               }
               if (es.field_m > 0) {
-                db.field_b = true;
+                DualLinkDeque.field_b = true;
               }
               js.field_f.a(qn.field_b, (byte) -77);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 qn.field_b[var8Lifetime1] = qn.field_b[var8Lifetime1] + 50;
               }
               sa.field_a.a(qn.field_b, (byte) 107);
-              stackIn_81_0 = ej.field_e;
+              stackIn_81_0 = BufferedCacheFile.field_e;
               return stackIn_81_0;
             }
             if (cs.field_j == Player.field_l &&
               uc.d((byte) -33)) {
               q.g(-114);
-              if (ej.field_e == 7 &&
+              if (BufferedCacheFile.field_e == 7 &&
                 !BufferedSocket.field_j) {
                 BufferedSocket.field_j = true;
                 stackIn_87_0 = -1;
                 return stackIn_87_0;
               }
-              if (ej.field_e == 7) {
-                ej.field_e = 3;
+              if (BufferedCacheFile.field_e == 7) {
+                BufferedCacheFile.field_e = 3;
               }
               nl.field_c = sa.field_a.e(-1);
               BufferedSocket.field_j = false;
-              stackIn_92_0 = ej.field_e;
+              stackIn_92_0 = BufferedCacheFile.field_e;
               return stackIn_92_0;
             }
             if (param1 > -48) {

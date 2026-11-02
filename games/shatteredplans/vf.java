@@ -195,12 +195,12 @@ final class vf extends hb {
         int var2 = 0;
         int var3 = 0;
         ld var3_ref_ld = null;
-        fk var4 = null;
+        ByteArrayNode var4 = null;
         int var4_int = 0;
         Object var5 = null;
         int var6 = 0;
         byte[] var7 = null;
-        sl var8 = null;
+        CipherPacketBuffer var8 = null;
         byte[] var9 = null;
         byte[] var10 = null;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
@@ -213,10 +213,10 @@ final class vf extends hb {
           if (0 != var2) {
             if (1 == var2) {
               var3 = var8.a(16711680);
-              var4 = (fk) (tr.field_vb.d(param0 + 117));
+              var4 = (ByteArrayNode) (tr.field_vb.d(param0 + 117));
               while (var4 != null) {
                 if (var4.field_j != var3) {
-                  var4 = (fk) (tr.field_vb.a((byte) -71));
+                  var4 = (ByteArrayNode) (tr.field_vb.a((byte) -71));
                   continue;
                 }
                 break;
@@ -231,7 +231,7 @@ final class vf extends hb {
             GameKeyHandler.a(-29901, (Throwable) null, "A1: " + w.a(16738));
             q.g(-108);
           } else {
-            var3_ref_ld = (ld) (ua.field_d.d(0));
+            var3_ref_ld = (ld) (SectorCacheStore.field_d.d(0));
             if (var3_ref_ld == null) {
               q.g(-96);
               return;

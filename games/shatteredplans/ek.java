@@ -11,7 +11,7 @@ abstract class ek extends UiWidget implements ni {
     static String field_G;
     static int field_A;
     static qr field_E;
-    static bc field_D;
+    static Archive field_D;
     static boolean[] field_F;
 
     private final boolean a(int param0, int param1, UiWidget param2) {

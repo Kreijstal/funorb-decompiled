@@ -39,7 +39,7 @@ final class uk {
             return stackIn_22_0;
           }
           if (1 == var2_int) {
-            stackIn_24_0 = tk.field_x;
+            stackIn_24_0 = NetworkArchiveRequest.field_x;
             return stackIn_24_0;
           }
           if (var2_int == 2) {
@@ -60,7 +60,7 @@ final class uk {
             return rk.field_k;
           }
           if (var2_int == 7) {
-            return ti.field_h;
+            return IntrusiveNodeHashTable.field_h;
           }
           if (var2_int != 8) {
             throw new RuntimeException("No image for this type of system: " + param1.field_B);

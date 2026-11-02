@@ -26,7 +26,7 @@ final class dp extends DualLinkNode {
         int var5_int = 0;
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        er var5 = null;
+        WhirlpoolHasher var5 = null;
         byte[] var6 = null;
         int var7 = 0;
         byte[] var8 = null;
@@ -49,7 +49,7 @@ final class dp extends DualLinkNode {
           } else {
             var4 = param0;
           }
-          var5 = new er();
+          var5 = new WhirlpoolHasher();
           var5.b(param2 ^ 169946828);
           var5.a((byte) 36, (long)(param1 * 8), var4);
           var6 = new byte[64];

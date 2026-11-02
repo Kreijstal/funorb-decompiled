@@ -68,7 +68,7 @@ final class fe extends vd {
         }
     }
 
-    final static void a(boolean param0, byte[] param1, byte[] param2, int param3, int[] param4, String[] param5, int param6, bc param7, bc param8, String[][] param9, bc param10, Sprite[][] param11, String[] param12, Sprite[][] param13, String[][] param14, nk[] param15, int param16, int[] param17, String[] param18, int param19) {
+    final static void a(boolean param0, byte[] param1, byte[] param2, int param3, int[] param4, String[] param5, int param6, Archive param7, Archive param8, String[][] param9, Archive param10, Sprite[][] param11, String[] param12, Sprite[][] param13, String[][] param14, nk[] param15, int param16, int[] param17, String[] param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -103,15 +103,15 @@ final class fe extends vd {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          m.a((byte) -52, param17, param10, param15, param8);
+          StrongCacheEntry.a((byte) -52, param17, param10, param15, param8);
           bq.a(27770, param8);
           if (param16 > -113) {
             fe.g(125);
           }
           tb.a(param6, param4, param9, param14, param8, param18, param12, param11, param19, param13, param3, param5, param1, -7966, param2);
-          ak.a(param7, (byte) -81, param0, param8);
+          DiskArchiveRequest.a(param7, (byte) -81, param0, param8);
           ir.l(1062);
-          in.a((byte) -83);
+          SecondaryNodeHashTable.a((byte) -83);
           te.a(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

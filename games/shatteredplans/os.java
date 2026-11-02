@@ -95,7 +95,7 @@ final class os extends vd {
     }
 
     final static void a(int param0, int param1, boolean param2) {
-        sl var3 = js.field_f;
+        CipherPacketBuffer var3 = js.field_f;
         var3.h(param1, 255);
         var3.c(3, (byte) -68);
         var3.c(10, (byte) -98);
@@ -144,7 +144,7 @@ final class os extends vd {
 
     final static String a(byte param0, int param1, String param2, String param3) {
         RuntimeException var4 = null;
-        sl var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         ve var7 = null;
         CharSequence var8 = null;
@@ -239,7 +239,7 @@ final class os extends vd {
         int[] var2 = var7;
         gf.a(var10);
         gf.a(this.field_k, this.field_t, this.field_m, this.field_i, 10, 0, 200);
-        er.a(-119, this.field_k, this.field_i, -10 + this.field_m, this.field_t);
+        WhirlpoolHasher.a(-119, this.field_k, this.field_i, -10 + this.field_m, this.field_t);
         gf.f(10 + this.field_k, this.field_t, -20 + this.field_m, 2052949);
         gf.f(this.field_k + 10, this.field_t + this.field_i, -20 + this.field_m, 0);
         gf.i(this.field_k, this.field_t, this.field_k + 10, this.field_t + 10);

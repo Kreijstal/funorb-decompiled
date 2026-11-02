@@ -225,7 +225,7 @@ final class IntrusiveDequeCursor {
           if (param0 != 1) {
             return;
           }
-          if (in.field_g == null) {
+          if (SecondaryNodeHashTable.field_g == null) {
             if (cj.field_x &&
               cs.field_i) {
               if (v.field_b &&
@@ -247,7 +247,7 @@ final class IntrusiveDequeCursor {
             }
             return;
           }
-          in.field_g.a(param1, param0 ^ -74);
+          SecondaryNodeHashTable.field_g.a(param1, param0 ^ -74);
           if (cj.field_x &&
             cs.field_i) {
             if (v.field_b &&
@@ -273,7 +273,7 @@ final class IntrusiveDequeCursor {
         if (param0 != 1) {
           return;
         }
-        if (in.field_g == null) {
+        if (SecondaryNodeHashTable.field_g == null) {
           if (!cj.field_x) {
             return;
           }
@@ -298,7 +298,7 @@ final class IntrusiveDequeCursor {
           }
           return;
         }
-        in.field_g.a(param1, param0 ^ -74);
+        SecondaryNodeHashTable.field_g.a(param1, param0 ^ -74);
         if (!cj.field_x) {
           return;
         }

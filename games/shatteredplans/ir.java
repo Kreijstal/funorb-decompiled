@@ -104,31 +104,31 @@ final class ir extends WidgetContainer implements dl, bp {
     }
 
     final static void l(int param0) {
-        eb.field_f = new String[cb.field_j];
-        eb.field_f[11] = wg.field_g;
-        eb.field_f[21] = Player.field_j;
-        eb.field_f[7] = ls.field_c;
-        eb.field_f[16] = ga.field_o;
-        eb.field_f[18] = no.field_a;
-        eb.field_f[4] = la.field_o;
-        eb.field_f[9] = qj.field_a;
-        eb.field_f[15] = bc.field_h;
+        FullscreenFocusCanvas.field_f = new String[cb.field_j];
+        FullscreenFocusCanvas.field_f[11] = wg.field_g;
+        FullscreenFocusCanvas.field_f[21] = Player.field_j;
+        FullscreenFocusCanvas.field_f[7] = ls.field_c;
+        FullscreenFocusCanvas.field_f[16] = MidiPcmStream.field_o;
+        FullscreenFocusCanvas.field_f[18] = no.field_a;
+        FullscreenFocusCanvas.field_f[4] = la.field_o;
+        FullscreenFocusCanvas.field_f[9] = qj.field_a;
+        FullscreenFocusCanvas.field_f[15] = Archive.field_h;
         if (param0 == 1062) {
-          eb.field_f[20] = qh.field_w;
-          eb.field_f[19] = pl.field_a;
-          eb.field_f[5] = qf.field_b;
-          eb.field_f[13] = cg.field_G;
-          eb.field_f[17] = ci.field_g;
-          eb.field_f[6] = qq.field_x;
+          FullscreenFocusCanvas.field_f[20] = qh.field_w;
+          FullscreenFocusCanvas.field_f[19] = pl.field_a;
+          FullscreenFocusCanvas.field_f[5] = qf.field_b;
+          FullscreenFocusCanvas.field_f[13] = cg.field_G;
+          FullscreenFocusCanvas.field_f[17] = ArchiveIndex.field_g;
+          FullscreenFocusCanvas.field_f[6] = MusicVoice.field_x;
           return;
         }
         ir.l(-42);
-        eb.field_f[20] = qh.field_w;
-        eb.field_f[19] = pl.field_a;
-        eb.field_f[5] = qf.field_b;
-        eb.field_f[13] = cg.field_G;
-        eb.field_f[17] = ci.field_g;
-        eb.field_f[6] = qq.field_x;
+        FullscreenFocusCanvas.field_f[20] = qh.field_w;
+        FullscreenFocusCanvas.field_f[19] = pl.field_a;
+        FullscreenFocusCanvas.field_f[5] = qf.field_b;
+        FullscreenFocusCanvas.field_f[13] = cg.field_G;
+        FullscreenFocusCanvas.field_f[17] = ArchiveIndex.field_g;
+        FullscreenFocusCanvas.field_f[6] = MusicVoice.field_x;
     }
 
     public final void a(kg param0, int param1, int param2, int param3, int param4) {
@@ -281,7 +281,7 @@ final class ir extends WidgetContainer implements dl, bp {
             return true;
           }
           var4 = var3.c(param1 ^ 26);
-          stackIn_9_0 = (var4 == p.field_g);
+          stackIn_9_0 = (var4 == CachedArchiveSource.field_g);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -304,7 +304,7 @@ final class ir extends WidgetContainer implements dl, bp {
         UiWidget var2 = new UiWidget(IterableNodeHashTable.field_i, var1, (ko) null);
         this.field_I = new kg(ck.field_c, (ko) null);
         this.field_G = new kg(fb.field_bc, (ko) null);
-        this.field_H.field_v = ol.field_i;
+        this.field_H.field_v = WeightedLruCache.field_i;
         this.field_H.a(new ec(this.field_H), 8945);
         this.field_I.field_y = false;
         this.field_I.field_p = (iq) ((Object) new qp());

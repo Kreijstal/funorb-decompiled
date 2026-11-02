@@ -212,7 +212,7 @@ final class qh extends vd {
         if (param0 != 29443) {
           field_B = (String) null;
         }
-        return null != bj.field_K ? true : br.field_i;
+        return null != bj.field_K ? true : MusicPatch.field_i;
     }
 
     final static void g(int param0) {

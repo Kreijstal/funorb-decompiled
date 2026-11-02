@@ -137,15 +137,15 @@ final class um {
             var4_ref = (sb) (rp.field_K.a((byte) -71));
           }
           if (di.field_m == 0) {
-            sg.a(true, false, 100, ra.field_c, tk.field_C);
-            sg.a(true, true, 800, n.field_l, tk.field_C);
+            sg.a(true, false, 100, RandomAccessCacheFile.field_c, NetworkArchiveRequest.field_C);
+            sg.a(true, true, 800, n.field_l, NetworkArchiveRequest.field_C);
           }
           fieldTemp$0 = di.field_m + 1;
           di.field_m = di.field_m + 1;
           if (fieldTemp$0 != 950) {
             return;
           }
-          jc.a(3, (byte) -113);
+          ArchiveRequest.a(3, (byte) -113);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -163,10 +163,10 @@ final class um {
         var5[1] = Integer.toString(this.field_v);
         var5[2] = Integer.toString(this.field_r);
         if (this.field_t == 0) {
-          var5[3] = qc.field_t;
+          var5[3] = SocketArchiveNetworkClient.field_t;
         } else {
           var3 = (this.field_i * 20 + this.field_t) / (this.field_t * 2);
-          var2[3] = var3 / 10 + ej.field_j + var3 % 10;
+          var2[3] = var3 / 10 + BufferedCacheFile.field_j + var3 % 10;
         }
         var2[4] = Integer.toString(this.field_x);
         var2[5] = Integer.toString(this.field_o);
@@ -180,9 +180,9 @@ final class um {
         var2[10] = Integer.toString(this.field_y);
         var2[11] = Integer.toString(this.field_a);
         if (this.field_l == 0) {
-          var2[14] = qc.field_t;
-          var2[12] = qc.field_t;
-          var2[13] = qc.field_t;
+          var2[14] = SocketArchiveNetworkClient.field_t;
+          var2[12] = SocketArchiveNetworkClient.field_t;
+          var2[13] = SocketArchiveNetworkClient.field_t;
           var2[15] = re.a(jl.field_O, 4371, new String[]{Integer.toString(this.field_a == 0 ? 100 : (this.field_y * 201 + this.field_a) / (2 * (this.field_a + this.field_y)))});
           return var2;
         }
@@ -193,7 +193,7 @@ final class um {
         return var2;
     }
 
-    final static Sprite[] a(int param0, bc param1, int param2, int param3) {
+    final static Sprite[] a(int param0, Archive param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite[] stackIn_6_0 = null;
@@ -209,7 +209,7 @@ final class um {
           if (param3 > -70) {
             field_p = (String) null;
           }
-          stackIn_6_0 = ti.a(-126);
+          stackIn_6_0 = IntrusiveNodeHashTable.a(-126);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

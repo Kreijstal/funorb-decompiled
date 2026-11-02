@@ -27,7 +27,7 @@ final class mj extends qr {
     static byte[][] field_Bb;
     long field_Ib;
     static Territory field_yb;
-    static io field_Sb;
+    static SoundCache field_Sb;
 
     final static void a(int param0, boolean param1) {
         if (dn.field_k != null) {

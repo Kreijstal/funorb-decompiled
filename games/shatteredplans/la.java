@@ -8,7 +8,7 @@ final class la extends qo {
     private boolean field_f;
     static String field_o;
     private int field_p;
-    static bc field_k;
+    static Archive field_k;
     static String field_n;
     private String field_g;
     private nq field_j;

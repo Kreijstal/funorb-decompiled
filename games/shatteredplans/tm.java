@@ -20,7 +20,7 @@ final class tm extends IntrusiveNode {
         field_j = null;
         if (param0 != -30032) {
           short[] var2 = (short[]) null;
-          tm.a((byte) -113, (sl) null, 17, (short[]) null);
+          tm.a((byte) -113, (CipherPacketBuffer) null, 17, (short[]) null);
         }
         field_k = null;
         field_t = null;
@@ -84,7 +84,7 @@ final class tm extends IntrusiveNode {
         }
     }
 
-    final static short[] a(byte param0, sl param1, int param2, short[] param3) {
+    final static short[] a(byte param0, CipherPacketBuffer param1, int param2, short[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -103,7 +103,7 @@ final class tm extends IntrusiveNode {
         try {
           if (param0 != 39) {
             var9 = (short[]) null;
-            tm.a((byte) -7, (sl) null, 123, (short[]) null);
+            tm.a((byte) -7, (CipherPacketBuffer) null, 123, (short[]) null);
           }
           var4_int = param1.b((byte) 101, param2);
           if (var4_int == 0) {

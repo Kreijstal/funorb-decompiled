@@ -78,7 +78,7 @@ class o implements iq, pj {
             var11 = this.a(param3, param4, 68) + Math.max(0, var8.field_e);
             var12 = this.a(param3, param4, -122) + Math.min(this.a(param4, 0), Math.min(var8.field_c, var14.field_d.length > 1 + var7 ? var13.field_d[1 + var7].field_e : var8.field_c));
             BufferedSocket.a(-6187, param4.field_x + (param1 + param4.field_m), param4.field_n + (param4.field_q + param3), param4.field_q + param3, param1 + param4.field_m);
-            qq.field_I.a(var10, -110, var10, this.field_i, var11, var12);
+            MusicVoice.field_I.a(var10, -110, var10, this.field_i, var11, var12);
             Star.f((byte) -122);
           }
         } catch (RuntimeException runtimeException) {
@@ -235,7 +235,7 @@ class o implements iq, pj {
                 }
               }
               var15 = stackIn_19_0;
-              qq.field_I.a(var15 - var14, this.field_e >>> 24, this.field_e, this.b((byte) -14, param5, var14, param2), var13.field_c, param4 ^ -107, var13.field_e + (param1 + param5.field_q) + (this.field_b + param5.field_l));
+              MusicVoice.field_I.a(var15 - var14, this.field_e >>> 24, this.field_e, this.b((byte) -14, param5, var14, param2), var13.field_c, param4 ^ -107, var13.field_e + (param1 + param5.field_q) + (this.field_b + param5.field_l));
             }
             Star.f((byte) -49);
           }
@@ -404,7 +404,7 @@ class o implements iq, pj {
         int var6 = 0;
         ve var7 = null;
         ve var8 = null;
-        sl var9 = null;
+        CipherPacketBuffer var9 = null;
         CharSequence var10 = null;
         var6 = ShatteredPlansClient.field_F ? 1 : 0;
         try {

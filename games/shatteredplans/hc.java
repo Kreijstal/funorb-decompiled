@@ -50,7 +50,7 @@ final class hc {
         int var4 = (-rs.field_Cb.c(ho.field_g) + 209 - 20) / 2;
         vc.field_b = new Sprite(var4, 2);
         int var5 = 112 / ((param1 - 89) / 37);
-        ra.a(-107);
+        RandomAccessCacheFile.a(-107);
         vc.field_b.e();
         gf.d(0, 0, var4, 2, 16777215);
         cg.i(0);

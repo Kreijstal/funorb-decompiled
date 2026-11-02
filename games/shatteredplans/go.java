@@ -401,7 +401,7 @@ class go extends kg {
         this.field_R = -1;
         this.field_P = false;
         try {
-          this.field_p = qq.field_I.field_f;
+          this.field_p = MusicVoice.field_I.field_f;
           this.field_O = param2;
           this.a(67, param0, true);
           this.field_M = true;
@@ -551,7 +551,7 @@ class go extends kg {
         }
     }
 
-    final static hh a(int param0, String param1, bc param2, bc param3, String param4) {
+    final static hh a(int param0, String param1, Archive param2, Archive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;

@@ -10,7 +10,7 @@ final class km implements mn {
     k field_Q;
     private int field_g;
     private int field_Z;
-    private db field_ab;
+    private DualLinkDeque field_ab;
     private int[] field_U;
     int field_N;
     boolean[] field_V;
@@ -19,7 +19,7 @@ final class km implements mn {
     int field_i;
     private boolean[] field_w;
     int field_q;
-    private db field_o;
+    private DualLinkDeque field_o;
     GameState field_P;
     static String field_a;
     private int field_I;
@@ -839,7 +839,7 @@ final class km implements mn {
         int var7_int = 0;
         String var7 = null;
         int var8 = 0;
-        sl var9 = null;
+        CipherPacketBuffer var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var2_intLifetime1;
@@ -854,7 +854,7 @@ final class km implements mn {
         int var6Lifetime1;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (66 == ej.field_e) {
+          if (66 == BufferedCacheFile.field_e) {
             var2_int = sa.field_a.j(-108);
             var3 = sa.field_a.f(param0 - 35735);
             var4 = sa.field_a.a(16711680);
@@ -902,37 +902,37 @@ final class km implements mn {
             this.field_S = var8;
             return true;
           }
-          if (ej.field_e == 69) {
+          if (BufferedCacheFile.field_e == 69) {
             this.field_N = sa.field_a.j(-78);
             return true;
           }
-          if (ej.field_e == 67) {
+          if (BufferedCacheFile.field_e == 67) {
             this.a(1, sa.field_a, rr.field_t);
             return true;
           }
-          if (70 == ej.field_e) {
+          if (70 == BufferedCacheFile.field_e) {
             this.b(rr.field_t, sa.field_a, -123);
             return true;
           }
-          if (68 == ej.field_e) {
+          if (68 == BufferedCacheFile.field_e) {
             this.a(sa.field_a, rr.field_t, -80);
             return true;
           }
-          if (ej.field_e == 62) {
+          if (BufferedCacheFile.field_e == 62) {
             this.field_P.field_y = sa.field_a.j(param0 ^ -14832);
             if (this == ce.field_x) {
               ri.k(8);
             }
             return true;
           }
-          if (ej.field_e == 64) {
+          if (BufferedCacheFile.field_e == 64) {
             this.field_P.field_e = sa.field_a.j(param0 ^ -14814);
             if (this == ce.field_x) {
               wp.a(-2);
             }
             return true;
           }
-          if (ej.field_e == 63) {
+          if (BufferedCacheFile.field_e == 63) {
             this.field_P.field_f = sa.field_a.j(-119);
             this.field_P.field_w = this.field_P.field_w | this.field_P.field_f;
             var2_intLifetime1 = 0;
@@ -953,11 +953,11 @@ final class km implements mn {
             }
             return stackIn_77_0 != 0;
           }
-          if (ej.field_e == 65) {
+          if (BufferedCacheFile.field_e == 65) {
             this.field_i = sa.field_a.j(-57);
             return true;
           }
-          if (61 == ej.field_e) {
+          if (61 == BufferedCacheFile.field_e) {
             var2_intLifetime2 = sa.field_a.g(-2852);
             this.field_P.a(var2_intLifetime2, 3);
             ta.a(0, -1, (byte) 96, false);
@@ -983,18 +983,18 @@ final class km implements mn {
           if (param0 != 14759) {
             return true;
           }
-          if (ej.field_e == 72) {
+          if (BufferedCacheFile.field_e == 72) {
             this.i(-126);
             return true;
           }
-          if (ej.field_e == 73) {
+          if (BufferedCacheFile.field_e == 73) {
             var2_intLifetime3 = sa.field_a.j(-95);
             var3Lifetime1 = sa.field_a.j(-112);
             var4Lifetime1 = sa.field_a.j(param0 ^ -14805);
             this.a(var4Lifetime1, (byte) 4, this.field_n, this.field_P.field_v[var2_intLifetime3], var3Lifetime1);
             return true;
           }
-          if (ej.field_e == 74 &&
+          if (BufferedCacheFile.field_e == 74 &&
             se.field_g) {
             var2_intLifetime4 = rr.field_t / 4;
             var3Lifetime2 = 0;
@@ -1569,7 +1569,7 @@ final class km implements mn {
 
     private final void l(int param0) {
         RuntimeException runtimeException = null;
-        sl var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -1895,7 +1895,7 @@ final class km implements mn {
     }
 
     final void m(int param0) {
-        sl var2 = null;
+        CipherPacketBuffer var2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         try {
@@ -1928,7 +1928,7 @@ final class km implements mn {
     }
 
     private final void k(int param0) {
-        sl var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
@@ -3089,12 +3089,12 @@ final class km implements mn {
               if (var6 < 24) {
                 var6 = 24;
               }
-              var4_ref2 = rp.a(96, qc.field_w, var6);
+              var4_ref2 = rp.a(96, SocketArchiveNetworkClient.field_w, var6);
               if (var8 != 0) {
-                var4_ref2 = qk.a(qc.field_w, 78);
+                var4_ref2 = qk.a(SocketArchiveNetworkClient.field_w, 78);
               }
             } else {
-              var4_ref2 = qk.a(qc.field_w, 78);
+              var4_ref2 = qk.a(SocketArchiveNetworkClient.field_w, 78);
             }
             if (null != this.field_E) {
               var5_ref2 = this.field_E;
@@ -3287,13 +3287,13 @@ final class km implements mn {
         int stackIn_24_0 = 0;
         int stackIn_24_1 = 0;
         RuntimeException decompiledCaughtException = null;
-        sl var3 = null;
+        CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           if (param0 &&
-            !ol.a(-114)) {
+            !WeightedLruCache.a(-114)) {
             this.j(50);
             if (var4 != 0) {
               this.field_Y.a(false, (byte) 110);
@@ -3872,7 +3872,7 @@ final class km implements mn {
 
     private final void i(int param0) {
         RuntimeException runtimeException = null;
-        sl var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
@@ -3884,7 +3884,7 @@ final class km implements mn {
           if (param0 >= -114) {
             this.field_Q = (k) null;
           }
-          se.a(fp.a(this.field_P.field_q, -71), -256, fp.a(this.field_P.field_i, -88), eh.a(25, this.field_P.field_p), var2);
+          se.a(FrameTimer.a(this.field_P.field_q, -71), -256, FrameTimer.a(this.field_P.field_i, -88), eh.a(25, this.field_P.field_p), var2);
           this.field_ab.b((byte) 108);
           this.field_o.b((byte) 127);
           this.field_v.a((byte) 112);
@@ -4129,7 +4129,7 @@ final class km implements mn {
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
         RuntimeException decompiledCaughtException = null;
-        sl var3 = null;
+        CipherPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
@@ -4236,7 +4236,7 @@ final class km implements mn {
           this.field_M = param7;
           if (!this.field_f) {
             if (this.field_W) {
-              this.field_P = jg.a(param3, param5, param2, -22379, 4);
+              this.field_P = AudioService.a(param3, param5, param2, -22379, 4);
               PacketBuffer.a(-126, this);
               if (var13 != 0) {
                 this.field_P = qr.a(param2, 50, param5, param3, param4, 2);
@@ -4360,8 +4360,8 @@ final class km implements mn {
             break;
           }
           if (stackIn_80_0 != 0) {
-            this.field_ab = new db();
-            this.field_o = new db();
+            this.field_ab = new DualLinkDeque();
+            this.field_o = new DualLinkDeque();
             this.field_v = new wb();
             this.field_k = -1;
             this.field_g = -1;

@@ -22,7 +22,7 @@ final class nn {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = ti.a((byte) 83, param0);
+            stackIn_4_0 = IntrusiveNodeHashTable.a((byte) 83, param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = -87;

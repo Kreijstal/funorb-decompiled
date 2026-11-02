@@ -5,7 +5,7 @@ import java.util.*;
 
 final class qf {
     int field_a;
-    kk field_f;
+    PcmSample field_f;
     static byte[][] field_d;
     static String field_c;
     static String field_b;
@@ -83,15 +83,15 @@ final class qf {
     final static void a(byte param0) {
         int var1 = 125 / ((param0 + 68) / 50);
         u.field_a = vc.a((byte) -39, 50);
-        tk.field_C = (nq) ((Object) rs.field_Cb);
+        NetworkArchiveRequest.field_C = (nq) ((Object) rs.field_Cb);
         rp.field_K = new IntrusiveDeque();
         ui.field_m = 0;
-        kc.field_i = 0;
+        MusicEnvelope.field_i = 0;
         di.field_m = 0;
-        p.field_n = false;
+        CachedArchiveSource.field_n = false;
         bj.field_L = 0;
-        gh var2 = (gh) null;
-        jo.a(32767, (gh) null, true, 50);
+        MusicTrack var2 = (MusicTrack) null;
+        jo.a(32767, (MusicTrack) null, true, 50);
         kg.f((byte) -123);
     }
 
@@ -122,7 +122,7 @@ final class qf {
         }
     }
 
-    qf(kk param0, int param1) {
+    qf(PcmSample param0, int param1) {
         try {
           this.field_a = param1;
           this.field_f = param0;

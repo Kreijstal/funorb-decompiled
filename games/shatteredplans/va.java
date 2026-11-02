@@ -79,7 +79,7 @@ final class va {
     final static void a(String[] args, byte param1, int param2, String param3) {
         RuntimeException var4 = null;
         int var5 = 0;
-        bc var6 = null;
+        Archive var6 = null;
         int stackIn_12_0 = 0;
         boolean stackIn_13_1 = false;
         RuntimeException stackIn_17_0 = null;
@@ -92,8 +92,8 @@ final class va {
         try {
           ee.field_l = rh.field_g;
           if (param1 != -113) {
-            var6 = (bc) null;
-            va.a((String) null, -24, (String) null, (bc) null);
+            var6 = (Archive) null;
+            va.a((String) null, -24, (String) null, (Archive) null);
           }
           if (param2 != 255) {
             if (100 > param2) {
@@ -131,7 +131,7 @@ final class va {
         }
     }
 
-    final static Sprite[] a(String param0, int param1, String param2, bc param3) {
+    final static Sprite[] a(String param0, int param1, String param2, Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

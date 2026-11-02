@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nh extends VictoryChecker {
-    static bc field_l;
+    static Archive field_l;
     private int field_k;
     private int[] field_n;
     static volatile long field_m;

@@ -134,7 +134,7 @@ final class ub extends qr {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          kc.field_g = param1;
+          MusicEnvelope.field_g = param1;
           lq.field_k = param6;
           nh.a(param10, param3, param0, param12, 2);
           as.a(param17, param9 + 20, param18, param2);
@@ -239,7 +239,7 @@ final class ub extends qr {
             }
           } else {
             if (!jn.field_a) {
-              rn.b((byte) 50);
+              DiskCacheWorker.b((byte) 50);
             }
           }
           if (param0 != 93) {
@@ -247,13 +247,13 @@ final class ub extends qr {
           }
           while (cc.$cfr$intArgs$e$296a4c2b494e(55)) {
             if (oq.field_j == 13) {
-              jc.a(-1, (byte) 125);
+              ArchiveRequest.a(-1, (byte) 125);
               continue;
             }
             if (oq.field_j != 83) {
               continue;
             }
-            if (p.field_n) {
+            if (CachedArchiveSource.field_n) {
               continue;
             }
             if (!jn.field_a) {
@@ -268,7 +268,7 @@ final class ub extends qr {
             } else {
               stackIn_21_0 = ui.field_m + 1;
             }
-            jc.a(stackIn_21_0, (byte) 125);
+            ArchiveRequest.a(stackIn_21_0, (byte) 125);
           }
           if (50 + u.field_a < cl.field_n) {
             u.field_a = cl.field_n + vc.a((byte) -39, 50);
@@ -303,7 +303,7 @@ final class ub extends qr {
               }
             }
           }
-          if (!p.field_n) {
+          if (!CachedArchiveSource.field_n) {
             if (bj.field_L < 50) {
               bj.field_L = bj.field_L + 1;
             }
@@ -311,13 +311,13 @@ final class ub extends qr {
             fieldTemp$0 = bj.field_L - 1;
             bj.field_L = bj.field_L - 1;
             if (fieldTemp$0 <= 0) {
-              p.field_n = false;
-              ui.field_m = kc.field_i;
+              CachedArchiveSource.field_n = false;
+              ui.field_m = MusicEnvelope.field_i;
               bj.field_L = 0;
               if (ui.field_m == -1) {
                 uc.field_v = 50;
                 ta.a(0, 0, (byte) 96, false);
-                rn.a(param0 + 1048483);
+                DiskCacheWorker.a(param0 + 1048483);
                 ne.d(true);
               }
               if (ui.field_m == 2) {
@@ -326,19 +326,19 @@ final class ub extends qr {
               if (ui.field_m != 4) {
                 di.field_m = 0;
               } else {
-                mh.b(param0 + 1674225223);
+                IsaacRandom.b(param0 + 1674225223);
                 di.field_m = 0;
               }
             }
           }
-          ej.b(-128);
+          BufferedCacheFile.b(-128);
           if (ui.field_m != 0) {
             if (1 == ui.field_m) {
               tr.a((byte) 119);
             } else {
               if (2 != ui.field_m) {
                 if (ui.field_m == 3) {
-                  ak.f((byte) 118);
+                  DiskArchiveRequest.f((byte) 118);
                 } else {
                   if (ui.field_m == 4) {
                     ld.d(0);
@@ -356,18 +356,18 @@ final class ub extends qr {
             lh.d((byte) 44);
           }
           if (pd.field_k < 540) {
-            ci.field_o = false;
+            ArchiveIndex.field_o = false;
           } else {
             if (pd.field_k >= 620) {
-              ci.field_o = false;
+              ArchiveIndex.field_o = false;
             } else {
               if (440 > bb.field_b) {
-                ci.field_o = false;
+                ArchiveIndex.field_o = false;
               } else {
                 if (bb.field_b >= 460) {
-                  ci.field_o = false;
+                  ArchiveIndex.field_o = false;
                 } else {
-                  ci.field_o = true;
+                  ArchiveIndex.field_o = true;
                 }
               }
             }
@@ -377,10 +377,10 @@ final class ub extends qr {
               nh.field_p < 620 &&
               440 <= td.field_P &&
               td.field_P < 460) {
-              jc.a(-1, (byte) 122);
+              ArchiveRequest.a(-1, (byte) 122);
               return;
             }
-            if (!p.field_n &&
+            if (!CachedArchiveSource.field_n &&
               jn.field_a) {
               if (bj.field_L <= 0) {
                 return;
@@ -391,7 +391,7 @@ final class ub extends qr {
               } else {
                 stackIn_88_0 = -1;
               }
-              jc.a(stackIn_88_0, (byte) -55);
+              ArchiveRequest.a(stackIn_88_0, (byte) -55);
               return;
             }
           }

@@ -308,23 +308,23 @@ final class sc extends ka {
           if (!param1) {
             for (var7 = 0; var7 < 5; var7++) {
               if (var4_int != 0 &&
-                fk.field_p[0][1 + var7].field_rb != 0 &&
+                ByteArrayNode.field_p[0][1 + var7].field_rb != 0 &&
                 param2.field_nc != var7) {
                 param2.field_nc = var7;
                 var6 = 1;
               }
-              stackIn_23_0 = fk.field_p[0][1 + var7];
+              stackIn_23_0 = ByteArrayNode.field_p[0][1 + var7];
               stackIn_24_1 = (var4_int != 0);
               stackIn_23_0.field_s = stackIn_24_1;
               if (!ns.field_pb &&
                 var7 == 3) {
-                fk.field_p[0][var7 + 1].field_s = false;
+                ByteArrayNode.field_p[0][var7 + 1].field_s = false;
               }
-              stackIn_30_0 = fk.field_p[0][1 + var7];
+              stackIn_30_0 = ByteArrayNode.field_p[0][1 + var7];
               stackIn_31_1 = (param2.field_nc == var7);
               stackIn_30_0.field_bb = stackIn_31_1;
             }
-            if (fk.field_p[0][2].field_v) {
+            if (ByteArrayNode.field_p[0][2].field_v) {
               if (!SecondaryNodeDequeIterator.a((byte) -126)) {
                 dn.field_k = re.a(ef.field_b, 4371, new String[]{np.field_a.field_Xb});
               } else {
@@ -357,30 +357,30 @@ final class sc extends ka {
                 boolean decompiledFrameCompleted0 = true;
                 var9_intLifetime1 = stackIn_60_0;
                 if (var4_int != 0 &&
-                  0 != fk.field_p[1][1 + var8].field_rb) {
+                  0 != ByteArrayNode.field_p[1][1 + var8].field_rb) {
                   if (param1) {
                     if (var7Lifetime1 != 0) {
                       if (!param1) {
                         var10 = nl.field_a[var8];
-                        stackIn_70_0 = fk.field_p[1][var8 + 1];
+                        stackIn_70_0 = ByteArrayNode.field_p[1][var8 + 1];
                         stackIn_71_1 = (var10 == param2.field_Eb);
                         stackIn_70_0.field_bb = stackIn_71_1;
                         break regionExit1;
                       }
                       if (-1 != var8) {
-                        stackIn_75_0 = fk.field_p[1][var8 + 1];
+                        stackIn_75_0 = ByteArrayNode.field_p[1][var8 + 1];
                         stackIn_75_1 = -1;
                         stackIn_75_2 = ~(id.field_c[var8 / 8] & 1 << (var8 & 7));
                         stackIn_78_1 = (stackIn_75_1 != stackIn_75_2);
                         stackIn_75_0.field_bb = stackIn_78_1;
                         break regionExit1;
                       }
-                      fk.field_p[1][1 + var8].field_bb = true;
+                      ByteArrayNode.field_p[1][1 + var8].field_bb = true;
                       var10 = 0;
                       if (var10 >= nl.field_a.length) {
                         break regionExit1;
                       }
-                      dupTemp$0 = fk.field_p[1][1 + var8];
+                      dupTemp$0 = ByteArrayNode.field_p[1][1 + var8];
                       stackIn_103_0 = dupTemp$0;
                       stackIn_103_1 = dupTemp$0.field_bb;
                       if ((id.field_c[var10 / 8] & 1 << (var10 & 7)) != 0) {
@@ -392,7 +392,7 @@ final class sc extends ka {
                             if (var10 >= nl.field_a.length) {
                               break regionExit1;
                             }
-                            dupTemp$1 = fk.field_p[1][1 + var8];
+                            dupTemp$1 = ByteArrayNode.field_p[1][1 + var8];
                             stackIn_103_0 = dupTemp$1;
                             stackIn_103_1 = dupTemp$1.field_bb;
                             if ((id.field_c[var10 / 8] & 1 << (var10 & 7)) != 0) {
@@ -410,7 +410,7 @@ final class sc extends ka {
                           decompiledFrameCompleted0 = false;
                           break;
                         }
-                        dupTemp$1Lifetime2 = fk.field_p[1][1 + var8];
+                        dupTemp$1Lifetime2 = ByteArrayNode.field_p[1][1 + var8];
                         stackIn_103_0 = dupTemp$1Lifetime2;
                         stackIn_103_1 = dupTemp$1Lifetime2.field_bb;
                         if ((id.field_c[var10 / 8] & 1 << (var10 & 7)) != 0) {
@@ -440,16 +440,16 @@ final class sc extends ka {
                 if (decompiledFrameCompleted0) {
                   if (param1) {
                     if (-1 == var8) {
-                      fk.field_p[1][1 + var8].field_bb = true;
+                      ByteArrayNode.field_p[1][1 + var8].field_bb = true;
                       for (var10 = 0; var10 < nl.field_a.length; var10++) {
-                        dupTemp$1Lifetime1 = fk.field_p[1][1 + var8];
+                        dupTemp$1Lifetime1 = ByteArrayNode.field_p[1][1 + var8];
                         stackIn_103_0Lifetime1 = dupTemp$1Lifetime1;
                         stackIn_103_1Lifetime1 = dupTemp$1Lifetime1.field_bb;
                         stackIn_104_2Lifetime1 = ((id.field_c[var10 / 8] & 1 << (var10 & 7)) == 0);
                         stackIn_103_0Lifetime1.field_bb = stackIn_103_1Lifetime1 & stackIn_104_2Lifetime1;
                       }
                     } else {
-                      stackIn_95_0 = fk.field_p[1][var8 + 1];
+                      stackIn_95_0 = ByteArrayNode.field_p[1][var8 + 1];
                       stackIn_95_1 = -1;
                       stackIn_95_2 = ~(id.field_c[var8 / 8] & 1 << (var8 & 7));
                       stackIn_98_1 = (stackIn_95_1 != stackIn_95_2);
@@ -457,20 +457,20 @@ final class sc extends ka {
                     }
                   } else {
                     var10 = nl.field_a[var8];
-                    stackIn_90_0 = fk.field_p[1][var8 + 1];
+                    stackIn_90_0 = ByteArrayNode.field_p[1][var8 + 1];
                     stackIn_91_1 = (var10 == param2.field_Eb);
                     stackIn_90_0.field_bb = stackIn_91_1;
                   }
                 }
               }
-              stackIn_108_0 = fk.field_p[1][var8 + 1];
+              stackIn_108_0 = ByteArrayNode.field_p[1][var8 + 1];
               stackIn_109_1 = (var4_int != 0) && (var9_intLifetime1 == 0);
               stackIn_108_0.field_s = stackIn_109_1;
             }
           }
           stackIn_113_0 = (!param1) ? 1 : 0;
           for (var7Lifetime2 = stackIn_113_0; 3 > var7Lifetime2; var7Lifetime2++) {
-            var29 = fk.field_p[2][var7Lifetime2];
+            var29 = ByteArrayNode.field_p[2][var7Lifetime2];
             if (var4_int != 0 &&
               var29.field_rb != 0) {
               if (!param1) {
@@ -508,7 +508,7 @@ final class sc extends ka {
           if (param1 &&
             mg.field_A > 1) {
             for (var7Lifetime3 = 0; var7Lifetime3 < 1 + mg.field_A; var7Lifetime3++) {
-              var30 = fk.field_p[3][var7Lifetime3];
+              var30 = ByteArrayNode.field_p[3][var7Lifetime3];
               if (var4_int != 0 &&
                 var30.field_rb != 0) {
                 qj.field_b = var7Lifetime3;
@@ -535,7 +535,7 @@ final class sc extends ka {
           }
           var7Lifetime4 = 0;
           for (var8 = 0; em.field_k > var8; var8++) {
-            var31 = fk.field_p[var8 + 4];
+            var31 = ByteArrayNode.field_p[var8 + 4];
             var9_array = var31;
             stackIn_170_0 = (!param1) ? 0 : -1;
             for (var10 = stackIn_170_0; -1 + var31.length > var10; var10++) {
@@ -551,7 +551,7 @@ final class sc extends ka {
                   null != ji.field_D[var8] &&
                   (~vr.field_m & ji.field_D[var8][var10]) > 0) {
                   var15 = 1;
-                  var16 = db.a(107, ji.field_D[var8][var10] & ~vr.field_m);
+                  var16 = DualLinkDeque.a(107, ji.field_D[var8][var10] & ~vr.field_m);
                 }
                 if (td.field_E != null &&
                   td.field_E[var8] != null &&
@@ -559,9 +559,9 @@ final class sc extends ka {
                   td.field_E[var8][var10]) {
                   var11 = 1;
                 }
-                if (null != ci.field_h &&
-                  null != ci.field_h[var8]) {
-                  var17 = ci.field_h[var8][var10];
+                if (null != ArchiveIndex.field_h &&
+                  null != ArchiveIndex.field_h[var8]) {
+                  var17 = ArchiveIndex.field_h[var8][var10];
                   if (var17 != 0 &&
                     !hm.field_o &&
                     es.field_m <= 0) {
@@ -716,7 +716,7 @@ final class sc extends ka {
                       }
                     }
                     if (var13 != 0) {
-                      var32 = re.a(dh.field_d, 4371, new String[]{Integer.toString(a.field_j), Integer.toString(ci.field_h[var8][var10])});
+                      var32 = re.a(dh.field_d, 4371, new String[]{Integer.toString(a.field_j), Integer.toString(ArchiveIndex.field_h[var8][var10])});
                       var23 = var32;
                       var26 = var23;
                       var23 = var26;
@@ -730,7 +730,7 @@ final class sc extends ka {
                       }
                     }
                     if (var15 != 0) {
-                      var23 = ar.field_e;
+                      var23 = ArchiveNetworkClient.field_e;
                       if (0 < var16 &&
                         null != qa.field_s &&
                         var16 <= qa.field_s.length &&
@@ -829,7 +829,7 @@ final class sc extends ka {
             if (param1) {
               return;
             }
-            ti.a(param3, 0);
+            IntrusiveNodeHashTable.a(param3, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

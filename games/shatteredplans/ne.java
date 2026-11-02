@@ -95,7 +95,7 @@ final class ne extends IntrusiveNode {
           return (Sprite) null;
         }
         Sprite var2 = new Sprite(IntrusiveDeque.field_d.field_z, IntrusiveDeque.field_d.field_w);
-        ra.a(-127);
+        RandomAccessCacheFile.a(-127);
         var2.e();
         IntrusiveDeque.field_d.b(0, 0, param0 >= 0 ? param0 : 2105376);
         cg.i(0);
@@ -107,8 +107,8 @@ final class ne extends IntrusiveNode {
         jn.field_a = false;
         oi.field_d = null;
         we.field_f = null;
-        db.field_a = null;
-        qq.field_n = null;
+        DualLinkDeque.field_a = null;
+        MusicVoice.field_n = null;
         w.field_D = null;
         va.field_e = null;
         ks.field_j = null;
@@ -128,7 +128,7 @@ final class ne extends IntrusiveNode {
         vm.field_Jb = null;
     }
 
-    final static void a(bc param0, byte param1, nq param2) {
+    final static void a(Archive param0, byte param1, nq param2) {
         int var8 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -147,7 +147,7 @@ final class ne extends IntrusiveNode {
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           var3_int = ai.field_e;
-          ua.field_f = new qr(0L, (qr) null);
+          SectorCacheStore.field_f = new qr(0L, (qr) null);
           if (param0 == null) {
             var10 = (Throwable) null;
             GameKeyHandler.a(-29901, (Throwable) null, "QC1");
@@ -179,7 +179,7 @@ final class ne extends IntrusiveNode {
           }
           gf.a(var14, var5, var6);
           of.field_b = gn.a(0, var4, hl.field_I, nl.field_d, kh.field_Nb);
-          ua.field_f.field_M = new IntrusiveDeque();
+          SectorCacheStore.field_f.field_M = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
