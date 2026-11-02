@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ve {
-    static char[] field_a;
+    static char[] typedCharQueue;
     static String field_b;
-    static volatile int field_d;
-    static o[] field_c;
+    static volatile int pressedButton;
+    static Sprite[] wizardSprites;
 
     final static void a(String param0, String[] param1, byte param2, int param3) {
         RuntimeException var4 = null;
@@ -22,7 +22,7 @@ final class ve {
         try {
           fi.field_y = mi.field_z;
           if (param2 >= -96) {
-            field_d = -13;
+            pressedButton = -13;
           }
           if (255 != param3) {
             if (param3 < 100) {
@@ -63,20 +63,20 @@ final class ve {
     final static void a(int param0, String param1) {
         System.out.println("Error: " + md.a("%0a", param1, 28834, "\n"));
         if (param0 < 74) {
-          field_c = (o[]) null;
+          wizardSprites = (Sprite[]) null;
         }
     }
 
     public static void a(boolean param0) {
         field_b = null;
         if (!param0) {
-          field_d = -120;
-          field_a = null;
-          field_c = null;
+          pressedButton = -120;
+          typedCharQueue = null;
+          wizardSprites = null;
           return;
         }
-        field_a = null;
-        field_c = null;
+        typedCharQueue = null;
+        wizardSprites = null;
     }
 
     final static boolean a(byte param0, int param1) {
@@ -94,8 +94,8 @@ final class ve {
     }
 
     static {
-        field_a = new char[128];
-        field_d = 0;
+        typedCharQueue = new char[128];
+        pressedButton = 0;
         field_b = "Confirm Email:";
     }
 }

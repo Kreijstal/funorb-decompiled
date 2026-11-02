@@ -5,7 +5,7 @@ final class sk extends ml {
     static String field_C;
     int field_x;
     static int field_v;
-    static o field_z;
+    static Sprite field_z;
     static String[] field_y;
     sg field_w;
     byte[] field_A;

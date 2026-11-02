@@ -14,9 +14,9 @@ final class si {
     static String field_g;
     static int field_f;
     private long field_d;
-    static hi field_q;
+    static BufferedSocket field_q;
     private int field_l;
-    static je[] field_j;
+    static je[] soundEffects;
     private int field_i;
     private long field_c;
     private ri field_o;
@@ -31,7 +31,7 @@ final class si {
         try {
           this.a(0, param0, param0.length, (byte) 47);
           if (param1 != 9350) {
-            field_j = (je[]) null;
+            soundEffects = (je[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -59,7 +59,7 @@ final class si {
     public static void a(byte param0) {
         field_g = null;
         field_b = null;
-        field_j = null;
+        soundEffects = null;
         if (param0 != -92) {
           si.a(-38, 97);
         }
@@ -437,6 +437,6 @@ final class si {
         field_h = 0;
         field_g = "Level not yet reached";
         field_b = "From only <%0>/month";
-        field_j = new je[31];
+        soundEffects = new je[31];
     }
 }

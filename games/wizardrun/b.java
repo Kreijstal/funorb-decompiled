@@ -11,7 +11,7 @@ final class b {
         if (var3 == null) {
           return null;
         }
-        return new b(new va(var3));
+        return new b(new PacketBuffer(var3));
     }
 
     private final byte[] a() {
@@ -59,7 +59,7 @@ final class b {
         if (var3 == null) {
           return null;
         }
-        return new b(new va(var3));
+        return new b(new PacketBuffer(var3));
     }
 
     final je b() {
@@ -67,14 +67,14 @@ final class b {
         return new je(22050, var1, 22050 * this.field_c / 1000, 22050 * this.field_a / 1000);
     }
 
-    private b(va param0) {
+    private b(PacketBuffer param0) {
         int var2 = 0;
         int var3;
         this.field_b = new aj[10];
         for (var2 = 0; var2 < 10; var2++) {
           var3 = param0.f(255);
           if (var3 != 0) {
-            param0.field_m = param0.field_m - 1;
+            param0.position = param0.position - 1;
             this.field_b[var2] = new aj();
             this.field_b[var2].a(param0);
           }

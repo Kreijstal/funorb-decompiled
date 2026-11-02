@@ -5,34 +5,34 @@ import java.io.*;
 
 final class mj {
     static String field_d;
-    static o field_b;
+    static Sprite field_b;
     static boolean field_c;
     static int[] field_a;
 
     final static int a(byte param0) {
         int var1 = 36 / ((param0 + 19) / 45);
-        return oc.field_a;
+        return oc.mouseIdleTime;
     }
 
-    final static ib a(String param0, int param1, int param2) {
-        ea var3 = null;
+    final static SocketConnector a(String param0, int param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        ib stackIn_2_0 = null;
-        ea stackIn_4_0 = null;
+        SocketConnector stackIn_2_0 = null;
+        ProxySocketConnector stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -1) {
-            stackIn_2_0 = (ib) null;
+            stackIn_2_0 = (SocketConnector) null;
             return stackIn_2_0;
           }
-          var3 = new ea();
-          ((ib) ((Object) var3)).field_a = param0;
-          ((ib) ((Object) var3)).field_c = param1;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_a = param0;
+          ((SocketConnector) ((Object) var3)).field_c = param1;
           stackIn_4_0 = var3;
-          return (ib) ((Object) stackIn_4_0);
+          return (SocketConnector) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -49,12 +49,12 @@ final class mj {
 
     final static void a(java.awt.Component param0, byte param1) {
         try {
-          param0.removeKeyListener(ff.field_H);
+          param0.removeKeyListener(ff.keyHandler);
           if (param1 <= 91) {
             field_c = true;
           }
-          param0.removeFocusListener(ff.field_H);
-          wk.field_b = -1;
+          param0.removeFocusListener(ff.keyHandler);
+          wk.keyEventWriteIndex = -1;
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "mj.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -68,7 +68,7 @@ final class mj {
         String var11;
         int var13;
         java.awt.Component var14;
-        eb var15;
+        ClientException var15;
         StringWriter var16;
         String var21;
         BufferedReader var22;
@@ -126,13 +126,13 @@ final class mj {
         String var11Lifetime8Lifetime2;
         String var11Lifetime8Lifetime3;
         var13 = wizardrun.field_H;
-        if (!(param0 instanceof eb)) {
+        if (!(param0 instanceof ClientException)) {
           var2 = "";
           var11 = var2;
           var2 = var11;
           var11Lifetime9 = var2;
         } else {
-          var15 = (eb) ((Object) param0);
+          var15 = (ClientException) ((Object) param0);
           param0 = var15.field_c;
           var2 = var15.field_b + " | ";
         }
@@ -266,7 +266,7 @@ final class mj {
         field_a = null;
         field_d = null;
         if (param0 != 13214) {
-          field_b = (o) null;
+          field_b = (Sprite) null;
         }
     }
 

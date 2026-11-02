@@ -3,13 +3,13 @@
  */
 final class la {
     private int field_e;
-    o[] field_j;
+    Sprite[] field_j;
     static long field_g;
     private int field_a;
     private int field_c;
     static boolean field_d;
     private boolean field_b;
-    o field_i;
+    Sprite field_i;
     private int field_h;
     private int field_f;
 
@@ -50,7 +50,7 @@ final class la {
         return this;
     }
 
-    final la a(int param0, o[] param1) {
+    final la a(int param0, Sprite[] param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -93,8 +93,8 @@ final class la {
           param0.field_a = this.field_a;
           param0.field_h = this.field_h;
           if (param1 >= -2) {
-            o[] var4 = (o[]) null;
-            this.a(-37, (o[]) null);
+            Sprite[] var4 = (Sprite[]) null;
+            this.a(-37, (Sprite[]) null);
           }
           param0.field_i = this.field_i;
           param0.field_b = this.field_b;
@@ -105,8 +105,8 @@ final class la {
         }
     }
 
-    final void a(ub param0, boolean param1, int param2, qa param3, int param4) {
-        vd stackIn_20_0 = null;
+    final void a(UiWidget param0, boolean param1, int param2, qa param3, int param4) {
+        BitmapFont stackIn_20_0 = null;
         String stackIn_20_1 = null;
         int stackIn_21_2 = 0;
         int stackIn_23_2 = 0;
@@ -131,23 +131,23 @@ final class la {
         try {
           if (param1) {
             var8 = (qa) null;
-            this.a(41, 36, -40, (ub) null, (la) null, (qa) null);
+            this.a(41, 36, -40, (UiWidget) null, (la) null, (qa) null);
           }
           ig.a(this.field_j, param4 + param0.field_o, (byte) -110, param0.field_n, param0.field_r, param2 + param0.field_l);
           if (this.field_i != null) {
             var6_int = this.field_h + (param4 + param0.field_o);
             if (param3.field_l == 1) {
-              var6_int = var6_int + (-this.field_i.field_x + param0.field_r) / 2;
+              var6_int = var6_int + (-this.field_i.fullWidth + param0.field_r) / 2;
             }
             var7 = param2 + (param0.field_l + this.field_e);
             if (param3.field_l == 2) {
-              var6_int = var6_int + (-this.field_i.field_x + param0.field_r);
+              var6_int = var6_int + (-this.field_i.fullWidth + param0.field_r);
             }
             if (param3.field_a == 1) {
-              var7 = var7 + (-this.field_i.field_s + param0.field_n) / 2;
+              var7 = var7 + (-this.field_i.fullHeight + param0.field_n) / 2;
             }
             if (param3.field_a == 2) {
-              var7 = var7 + (-this.field_i.field_s + param0.field_n);
+              var7 = var7 + (-this.field_i.fullHeight + param0.field_n);
             }
             this.field_i.e(var6_int, var7);
           }
@@ -178,7 +178,7 @@ final class la {
             } else {
               stackIn_27_8 = 256;
             }
-            ((vd) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param3.field_l, param3.field_a, param3.field_d);
+            ((BitmapFont) (Object) stackIn_20_0).a(stackIn_20_1, stackIn_23_2, stackIn_26_3, stackIn_26_4, stackIn_26_5, stackIn_26_6, stackIn_26_7, stackIn_27_8, param3.field_l, param3.field_a, param3.field_d);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -201,7 +201,7 @@ final class la {
         }
     }
 
-    final void a(int param0, int param1, int param2, ub param3, la param4, qa param5) {
+    final void a(int param0, int param1, int param2, UiWidget param3, la param4, qa param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eh implements bf {
-    private vd field_b;
+    private BitmapFont field_b;
     static String field_i;
     private int field_f;
     static String field_h;
@@ -13,9 +13,9 @@ final class eh implements bf {
     private int field_c;
     private int field_g;
 
-    public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
+    public final void a(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
         int var10 = 0;
-        ub stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -31,10 +31,10 @@ final class eh implements bf {
           if (!(param2 instanceof vb)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (ub) (param2);
+            stackIn_4_0 = (UiWidget) (param2);
           }
           var12 = (vb) (stackIn_4_0);
-          ed.c(param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, this.field_a);
+          SoftwareRasterizer.fillRect(param2.field_o + param0, param1 + param2.field_l, param2.field_r, param2.field_n, this.field_a);
           if (var12 != null) {
           }
           var7 = -(2 * var12.field_G) + param2.field_r;
@@ -43,14 +43,14 @@ final class eh implements bf {
             return;
           }
           var9 = param2.field_l + param1 + var12.field_J;
-          ed.e(var8, var9, var8 + var7, var9, this.field_j);
+          SoftwareRasterizer.e(var8, var9, var8 + var7, var9, this.field_j);
           for (var10 = -1 + var12.d(0); var10 >= 0; var10--) {
-            ed.a(var12.b(-10455, var10) * var7 / var12.e(1) + var8, var9, this.field_d, this.field_f);
+            SoftwareRasterizer.a(var12.b(-10455, var10) * var7 / var12.e(1) + var8, var9, this.field_d, this.field_f);
           }
           if (this.field_b == null) {
             return;
           }
-          this.field_b.b(var12.field_k, var8 + var7 / 2, var12.field_J + var9 + this.field_b.field_E, this.field_c, this.field_g);
+          this.field_b.drawStringCentered(var12.field_k, var8 + var7 / 2, var12.field_J + var9 + this.field_b.field_E, this.field_c, this.field_g);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,7 +78,7 @@ final class eh implements bf {
         field_i = null;
     }
 
-    eh(vd param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    eh(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_d = param5;
           this.field_g = param2;

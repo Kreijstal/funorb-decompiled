@@ -3,7 +3,7 @@
  */
 class hh extends ee {
     static int field_S;
-    private o[] field_F;
+    private Sprite[] field_F;
     private int field_T;
     private String field_y;
     private int field_Q;
@@ -13,7 +13,7 @@ class hh extends ee {
     private int field_ab;
     private int field_L;
     private int field_K;
-    private o[] field_db;
+    private Sprite[] field_db;
     private String field_N;
     private int field_D;
     static String field_J;
@@ -21,26 +21,26 @@ class hh extends ee {
     private boolean field_v;
     private int field_t;
     private boolean field_I;
-    private o field_Y;
+    private Sprite field_Y;
     private int field_P;
-    private o[] field_bb;
+    private Sprite[] field_bb;
     private int field_s;
     private boolean field_A;
-    static o[] field_eb;
-    private o[] field_U;
+    static Sprite[] field_eb;
+    private Sprite[] field_U;
     private boolean field_fb;
-    private o field_G;
+    private Sprite field_G;
     private boolean field_R;
-    private vd field_W;
-    private o[] field_E;
+    private BitmapFont field_W;
+    private Sprite[] field_E;
     private int field_C;
     private int field_X;
-    private o field_M;
+    private Sprite field_M;
     private int field_O;
     private int field_B;
-    private o field_z;
+    private Sprite field_z;
     private boolean field_Z;
-    private o field_H;
+    private Sprite field_H;
     private int field_x;
 
     hh(long param0, hh param1) {
@@ -219,7 +219,7 @@ class hh extends ee {
         this.field_ab = -1;
         this.field_x = -2147483648;
         try {
-          this.field_e = param0;
+          this.key = param0;
           this.a(-2147483648, param1);
           if (param6 != null) {
             this.field_y = param6;

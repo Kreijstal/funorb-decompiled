@@ -90,7 +90,7 @@ final class il {
         }
     }
 
-    final static void a(int param0, vd param1, o[] param2, byte param3, o[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, o[] param12, int param13, int param14) {
+    final static void a(int param0, BitmapFont param1, Sprite[] param2, byte param3, Sprite[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, Sprite[] param12, int param13, int param14) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -147,8 +147,8 @@ final class il {
         field_d = null;
         field_b = null;
         if (!param0) {
-          o[] var2 = (o[]) null;
-          il.a(38, (vd) null, (o[]) null, (byte) 32, (o[]) null, 126, -35, -34, -69, 83, 52, -119, (o[]) null, -69, -124);
+          Sprite[] var2 = (Sprite[]) null;
+          il.a(38, (BitmapFont) null, (Sprite[]) null, (byte) 32, (Sprite[]) null, 126, -35, -34, -69, 83, 52, -119, (Sprite[]) null, -69, -124);
         }
     }
 

@@ -6,7 +6,7 @@ final class ca {
     static int field_e;
     int field_b;
     static String field_d;
-    static da field_c;
+    static GameApplet field_c;
     static String field_g;
     static String field_a;
     private static String field_z;

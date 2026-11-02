@@ -11346,6 +11346,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "wizardrun": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/wizardrun"
+      },
+      "inputTreeSha256": "afac4540005f24ce5d2bf2eb36ddf3038dab1c3099a63da88e9df330365ae2e3",
+      "sources": {
+        "files": 298,
+        "sha256": "e3dabd6bc373e0368aa8ddf0482412b8a3909ee0631bf740ed7043b2ac176eb5"
+      },
+      "dictionary": {
+        "path": "decompilation/wizardrun-naming.json",
+        "sha256": "fdeff20881c75507d84d5a4d59d1cc0e82bee95c60047a0cafda5682d2fadd35"
+      },
+      "readingGuide": {
+        "path": "games/wizardrun/README.md",
+        "sha256": "1e1953f2fa63839f315025ed2ede1c161440404113d969b20fad2062919fad13"
+      },
+      "rulesSha256": "9e5713206a82f951d339f76e6b26c4ced368c328192bc55f7e3acda833636aed",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -13625,6 +13649,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 298,
+          "sha256": "e3dabd6bc373e0368aa8ddf0482412b8a3909ee0631bf740ed7043b2ac176eb5"
         }
       },
       "zombiedawn": {

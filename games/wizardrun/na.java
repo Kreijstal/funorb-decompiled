@@ -8,11 +8,11 @@ abstract class na {
     th field_a;
     th field_j;
     th field_m;
-    va field_i;
+    PacketBuffer field_i;
     long field_d;
     int field_f;
     volatile int field_n;
-    va field_g;
+    PacketBuffer field_g;
     byte field_h;
     volatile int field_k;
     fi field_c;
@@ -68,7 +68,7 @@ abstract class na {
         long var6 = ((long)param0 << 32) + (long)param1;
         fi var8 = new fi();
         var8.field_r = param4 ? true : false;
-        var8.field_o = var6;
+        var8.secondaryKey = var6;
         var8.field_D = param3;
         if (param4) {
           if (this.d(-14289) >= 20) {
@@ -92,11 +92,11 @@ abstract class na {
         this.field_a = new th();
         this.field_j = new th();
         this.field_m = new th();
-        this.field_i = new va(6);
+        this.field_i = new PacketBuffer(6);
         this.field_h = (byte) 0;
         this.field_k = 0;
         this.field_n = 0;
-        this.field_g = new va(10);
+        this.field_g = new PacketBuffer(10);
     }
 
     static {

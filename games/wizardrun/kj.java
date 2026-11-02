@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class kj {
-    static oi field_d;
+    static IntrusiveDeque field_d;
     static ae field_c;
     static String field_e;
     static wi field_b;
@@ -74,7 +74,7 @@ final class kj {
     }
 
     static {
-        field_d = new oi();
+        field_d = new IntrusiveDeque();
         field_c = new ae();
         field_e = "Fire stars";
     }

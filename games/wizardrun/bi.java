@@ -4,7 +4,7 @@
 final class bi {
     static int field_a;
 
-    final static void a(vh param0, byte param1, Object param2) {
+    final static void a(PlatformTaskDispatcher param0, byte param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;

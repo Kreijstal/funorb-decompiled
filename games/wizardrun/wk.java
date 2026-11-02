@@ -6,7 +6,7 @@ import java.util.*;
 final class wk {
     static int field_c;
     private java.util.zip.Inflater field_a;
-    static int field_b;
+    static int keyEventWriteIndex;
 
     public wk() {
         this(-1, 1000000, 1000000);
@@ -15,7 +15,7 @@ final class wk {
     private wk(int param0, int param1, int param2) {
     }
 
-    final void a(byte[] param0, va param1, int param2) {
+    final void a(byte[] param0, PacketBuffer param1, int param2) {
         try {
           RuntimeException stackIn_15_0 = null;
           StringBuilder stackIn_15_1 = null;
@@ -26,13 +26,13 @@ final class wk {
           Exception var4 = null;
           RuntimeException var4_ref = null;
           try {
-            if (param1.field_k[param1.field_m] == 31 &&
-              param1.field_k[1 + param1.field_m] == -117) {
+            if (param1.payload[param1.position] == 31 &&
+              param1.payload[1 + param1.position] == -117) {
               if (this.field_a == null) {
                 this.field_a = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_a.setInput(param1.field_k, 10 + param1.field_m, -8 - param1.field_m - 10 + param1.field_k.length);
+                this.field_a.setInput(param1.payload, 10 + param1.position, -8 - param1.position - 10 + param1.payload.length);
                 if (param2 != 6912) {
                   return;
                 }
@@ -73,6 +73,6 @@ final class wk {
     }
 
     static {
-        field_b = 0;
+        keyEventWriteIndex = 0;
     }
 }

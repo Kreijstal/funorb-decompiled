@@ -4,7 +4,7 @@
 final class ec {
     static ji field_d;
     static String field_e;
-    static o field_b;
+    static Sprite field_b;
     static String[] field_a;
     static int[] field_g;
     static byte[][] field_f;

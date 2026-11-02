@@ -9,7 +9,7 @@ final class sg {
     static int field_f;
     private si field_c;
     private int field_e;
-    static o[][] field_b;
+    static Sprite[][] field_b;
 
     final byte[] a(boolean param0, int param1) {
         try {
@@ -206,14 +206,14 @@ final class sg {
         f.field_b = null;
         ke.field_t = null;
         lb.field_f = null;
-        eb.field_a = false;
+        ClientException.field_a = false;
     }
 
     public static void b(byte param0) {
         if (param0 != 111) {
-          field_b = (o[][]) null;
+          field_b = (Sprite[][]) null;
         }
-        field_b = (o[][]) null;
+        field_b = (Sprite[][]) null;
     }
 
     private final boolean a(int param0, byte[] param1, int param2, boolean param3, boolean param4) {
@@ -273,7 +273,7 @@ final class sg {
                 this.field_d.a(18729, wizardrun.field_O, 6, 0);
                 var8 = 0;
                 var9 = 0;
-                L4: while (true) {
+                scanLoop1: while (true) {
                   if (param2 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -289,7 +289,7 @@ final class sg {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var13 = wizardrun.field_O[9] & 255;
                         var10 = (wizardrun.field_O[6] << 16 & 16711680) + ((wizardrun.field_O[7] << 8 & 65280) + (wizardrun.field_O[8] & 255));
@@ -305,7 +305,7 @@ final class sg {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L4;
+                          break scanLoop1;
                         }
                         var10 = (255 & wizardrun.field_O[6]) + (65280 & wizardrun.field_O[5] << 8) + (16711680 & wizardrun.field_O[4] << 16);
                         var11 = (65280 & wizardrun.field_O[0] << 8) + (wizardrun.field_O[1] & 255);

@@ -4,12 +4,12 @@
 import java.io.*;
 
 final class bk implements Runnable {
-    static oi field_d;
-    vh field_c;
-    static vd field_a;
+    static IntrusiveDeque field_d;
+    PlatformTaskDispatcher field_c;
+    static BitmapFont field_a;
     volatile boolean field_e;
     volatile boolean field_g;
-    static o field_b;
+    static Sprite field_b;
     volatile c[] field_f;
 
     public final void run() {
@@ -51,7 +51,7 @@ final class bk implements Runnable {
           var4.write(param0, 0, param1);
           var4.close();
           if (!param2) {
-            field_d = (oi) null;
+            field_d = (IntrusiveDeque) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -105,6 +105,6 @@ final class bk implements Runnable {
     }
 
     static {
-        field_d = new oi();
+        field_d = new IntrusiveDeque();
     }
 }

@@ -42,7 +42,7 @@ final class rd {
               gf.field_W = param4;
             }
             sk.field_B[lg.field_d] = param1;
-            tf.field_c[lg.field_d] = param2;
+            MouseInputHandler.field_c[lg.field_d] = param2;
             mk.field_c[lg.field_d] = param5;
             var6 = param2 + param1 + param5;
             if (var6 == 0) {
@@ -57,7 +57,7 @@ final class rd {
               gf.field_W = param4;
             }
             sk.field_B[lg.field_d] = param1;
-            tf.field_c[lg.field_d] = param2;
+            MouseInputHandler.field_c[lg.field_d] = param2;
             mk.field_c[lg.field_d] = param5;
             var6 = param2 + param1 + param5;
             if (var6 == 0) {
@@ -83,7 +83,7 @@ final class rd {
             gf.field_W = param4;
           }
           sk.field_B[lg.field_d] = param1;
-          tf.field_c[lg.field_d] = param2;
+          MouseInputHandler.field_c[lg.field_d] = param2;
           mk.field_c[lg.field_d] = param5;
           var6Lifetime1 = param2 + param1 + param5;
           if (var6Lifetime1 == 0) {
@@ -107,7 +107,7 @@ final class rd {
           gf.field_W = param4;
         }
         sk.field_B[lg.field_d] = param1;
-        tf.field_c[lg.field_d] = param2;
+        MouseInputHandler.field_c[lg.field_d] = param2;
         mk.field_c[lg.field_d] = param5;
         var6Lifetime2 = param2 + param1 + param5;
         if (var6Lifetime2 == 0) {

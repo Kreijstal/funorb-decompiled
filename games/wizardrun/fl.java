@@ -126,7 +126,7 @@ final class fl extends k {
           var8 = (pb) (param3.field_i.b((byte) 61));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var8 == null))) {
-            var9 = (int)var8.field_e;
+            var9 = (int)var8.key;
             var10 = (h) (this.field_G.a(1, (long)var9));
             if (var11 == 0) {
               boolean decompiledFrameRemainder0 = true;

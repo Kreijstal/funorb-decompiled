@@ -83,7 +83,7 @@ final class wj extends pe implements qd {
         }
     }
 
-    final boolean a(char param0, int param1, byte param2, ub param3) {
+    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -132,11 +132,11 @@ final class wj extends pe implements qd {
           }
           return td.field_e;
         }
-        if (!ub.field_x.b(17820)) {
+        if (!UiWidget.field_x.b(17820)) {
           return qb.field_q;
         }
-        if (!ub.field_x.a((byte) 29, "commonui")) {
-          return tk.field_e + " - " + ub.field_x.a(0, "commonui") + "%";
+        if (!UiWidget.field_x.a((byte) 29, "commonui")) {
+          return tk.field_e + " - " + UiWidget.field_x.a(0, "commonui") + "%";
         }
         if (!vj.field_b.b(param0 ^ 1585)) {
           return hj.field_d;
@@ -153,7 +153,7 @@ final class wj extends pe implements qd {
         if (!cc.field_a.d(-97)) {
           return od.field_s + " - " + cc.field_a.a((byte) 75) + "%";
         }
-        return u.field_u;
+        return GameShell.field_u;
     }
 
     final static boolean a(int param0) {
@@ -163,13 +163,13 @@ final class wj extends pe implements qd {
           var2 = (CharSequence) null;
           wj.a((CharSequence) null, -18);
         }
-        stackIn_6_0 = (null != jc.field_H) && (wh.field_j == hi.field_l);
+        stackIn_6_0 = (null != jc.field_H) && (NodeHashTableIterator.field_j == BufferedSocket.field_l);
         return stackIn_6_0;
     }
 
-    final static o[] b(int param0, int param1, int param2, int param3) {
+    final static Sprite[] b(int param0, int param1, int param2, int param3) {
         if (param3 != 1) {
-          return (o[]) null;
+          return (Sprite[]) null;
         }
         return ei.a(param2, param0, param1, 1, 20230);
     }
@@ -202,7 +202,7 @@ final class wj extends pe implements qd {
         if (param2 != 0) {
           return;
         }
-        vd var5 = gh.field_b;
+        BitmapFont var5 = gh.field_b;
         if (null != this.field_F) {
           var5.a(ml.field_p, param0 + this.field_o, param3 + this.field_l, this.field_r, 20, 16777215, -1, 0, 0, var5.field_B + var5.field_M);
         }
@@ -239,12 +239,12 @@ final class wj extends pe implements qd {
               this.field_I[var5].field_w = (bf) ((Object) var4);
               this.field_I[var5].field_p = ni.field_a;
               this.field_I[var5].a(109, 20 + var5 * 16, 15, 80, 0);
-              this.a((ub) (this.field_I[var5]), (byte) 64);
+              this.a((UiWidget) (this.field_I[var5]), (byte) 64);
             }
             this.field_I[var3_int] = new pl(eg.field_t, (ce) (this));
             this.field_I[var3_int].field_w = (bf) ((Object) var4);
             this.field_I[var3_int].a(param0 ^ 44, 16 * var3_int + 36, 15, 100, 0);
-            this.a((ub) (this.field_I[var3_int]), (byte) 71);
+            this.a((UiWidget) (this.field_I[var3_int]), (byte) 71);
             return;
           }
           this.field_F = null;

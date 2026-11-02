@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class oc {
-    static o[][] field_b;
-    static volatile int field_a;
-    static o[] field_c;
+    static Sprite[][] field_b;
+    static volatile int mouseIdleTime;
+    static Sprite[] field_c;
     static int field_d;
 
     public static void a(byte param0) {
-        field_b = (o[][]) null;
+        field_b = (Sprite[][]) null;
         field_c = null;
         int var1 = 76 % ((param0 - 36) / 48);
     }
@@ -69,6 +69,6 @@ final class oc {
     }
 
     static {
-        field_a = 0;
+        mouseIdleTime = 0;
     }
 }

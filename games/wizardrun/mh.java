@@ -6,10 +6,10 @@ class mh extends gf implements qd {
     static String[] field_sb;
     static java.awt.Font field_ob;
     private boolean field_rb;
-    static volatile int field_pb;
+    static volatile int clickX;
     static kl field_jb;
     static String field_lb;
-    private vd field_qb;
+    private BitmapFont field_qb;
     static int field_tb;
     private hd field_ub;
     private boolean field_kb;
@@ -25,7 +25,7 @@ class mh extends gf implements qd {
         this.c(var2, param0 - 119);
     }
 
-    final boolean a(char param0, int param1, byte param2, ub param3) {
+    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -253,14 +253,14 @@ class mh extends gf implements qd {
               if (this.field_rb) {
                 stackIn_13_2 = me.field_a;
               } else {
-                stackIn_13_2 = ti.field_h;
+                stackIn_13_2 = IsaacRandom.field_h;
               }
               ((vc) (Object) stackIn_12_0).a((byte) stackIn_12_1, stackIn_13_2, -1);
             } else {
               var6.a(0, me.field_a, (ce) (this));
             }
           } else {
-            var6.a((byte) -31, da.field_j, 11);
+            var6.a((byte) -31, GameApplet.field_j, 11);
             var6.a((byte) -31, pk.field_q, 17);
           }
           if (param1 <= 12) {
@@ -270,13 +270,13 @@ class mh extends gf implements qd {
             var6.a((byte) -31, vl.field_g, 7);
           } else {
             if (param2 == 4) {
-              var6.a((byte) -31, wh.field_b, 8);
+              var6.a((byte) -31, NodeHashTableIterator.field_b, 8);
             } else {
               if (param2 == 6) {
                 var6.a((byte) -31, ka.field_h, 9);
               } else {
                 if (param2 == 9) {
-                  var6.a(0, de.field_a, (ce) (this));
+                  var6.a(0, SecondaryNodeDeque.field_a, (ce) (this));
                 }
               }
             }
@@ -314,7 +314,7 @@ class mh extends gf implements qd {
         }
     }
 
-    mh(wi param0, vd param1, String param2, boolean param3, boolean param4) {
+    mh(wi param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new vc((mh) null, param1, param2), 77, 10, 10);
         try {
           this.field_qb = param1;
@@ -324,7 +324,7 @@ class mh extends gf implements qd {
           this.field_nb = param4 ? true : false;
           this.field_ub = new hd(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_ub.field_I = true;
-          this.a((ub) (this.field_ub), (byte) 127);
+          this.a((UiWidget) (this.field_ub), (byte) 127);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "mh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -332,7 +332,7 @@ class mh extends gf implements qd {
 
     static {
         field_sb = new String[]{"Complete the game", "Capture and pop all creatures in world 1", "Complete world 1", "Reach world 4 from world 1 without losing a life", "Reach world 6 from world 1 without losing a life", "Kill the Giant Spider on world 1, losing no lives", "Kill the Pygmy Boss on world 2, losing no lives", "Kill the Pirate Captain on world 3, losing no lives", "Kill the Troll Ancient on world 4, losing no lives", "Kill the Ice Dragon on world 5, losing no lives", "Kill the Harpy King on world 6, losing no lives", "Collect 100 pumpkins in world 6 during halloween"};
-        field_pb = 0;
+        clickX = 0;
         field_lb = "Fullscreen";
     }
 }

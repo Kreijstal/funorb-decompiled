@@ -4,7 +4,7 @@
 final class ae {
     static String field_b;
     static char field_a;
-    static o field_c;
+    static Sprite field_c;
 
     final static void a(boolean param0, byte param1, le param2, boolean param3, int[] param4, boolean param5, int[] param6) {
         int stackIn_63_0 = 0;
@@ -94,7 +94,7 @@ final class ae {
           var21Lifetime2 = cj.field_c;
           var22Lifetime2 = cj.field_f;
           var23Lifetime2 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var23Lifetime2 < param2.field_L) {
               var24Lifetime1 = param2.field_P[var23Lifetime2];
@@ -109,13 +109,13 @@ final class ae {
                 if (stackIn_63_0 > stackIn_63_1) {
                   stackIn_72_0 = ~gk.field_g.length;
                   stackIn_72_1 = ~var18;
-                  break L1;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (stackIn_63_0 >= stackIn_63_1) {
-                  nl.field_A[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
+                  SpriteState.field_A[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
                   d.field_c[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
                   if (var29Lifetime1 > var8) {
                     var8 = var29Lifetime1;
@@ -160,12 +160,12 @@ final class ae {
                   var26Lifetime1Lifetime1 = param2.field_s[var23Lifetime2];
                   od.field_m[var23Lifetime2] = var9 + (var12 * var24Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var15 + var18 * var26Lifetime1Lifetime1) >> 16);
                   mf.field_h[var23Lifetime2] = var10 + (var24Lifetime1Lifetime1 * var13 + var16 * var25Lifetime1Lifetime1 + var26Lifetime1Lifetime1 * var19 >> 16);
-                  cg.field_n[var23Lifetime2] = var11 + (var20 * var26Lifetime1Lifetime1 + (var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17) >> 16);
+                  ImageProducerRasterBuffer.field_n[var23Lifetime2] = var11 + (var20 * var26Lifetime1Lifetime1 + (var14 * var24Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var17) >> 16);
                   var24Lifetime1Lifetime1 = param2.field_t[var23Lifetime2];
                   var25Lifetime1Lifetime1 = param2.field_u[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param2.field_q[var23Lifetime2];
                   ci.field_b[var23Lifetime2] = var9 + (var26Lifetime1Lifetime1 * var18 + (var15 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var12) >> 16);
-                  oi.field_f[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var16 + var13 * var24Lifetime1Lifetime1) >> 16) + var10;
+                  IntrusiveDeque.field_f[var23Lifetime2] = (var19 * var26Lifetime1Lifetime1 + (var25Lifetime1Lifetime1 * var16 + var13 * var24Lifetime1Lifetime1) >> 16) + var10;
                   sd.field_f[var23Lifetime2] = (var26Lifetime1Lifetime1 * var20 + var17 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var14 >> 16) + var11;
                   var23Lifetime2++;
                   if (var31 != 0) {
@@ -197,7 +197,7 @@ final class ae {
                   stackIn_72_0 = ~gk.field_g.length;
                   stackIn_72_1 = ~var18;
                   if (var31 != 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                   if (stackIn_72_0 >= stackIn_72_1) {
                     break;
@@ -254,14 +254,14 @@ final class ae {
         Throwable decompiledCaughtException = null;
         try {
           var1_int = 108 % ((param0 + 6) / 55);
-          var2_ref = ff.field_H;
+          var2_ref = ff.keyHandler;
           synchronized (var2_ref) {
-            if (tg.field_i == ph.field_r) {
+            if (tg.keyQueueReadIndex == ph.field_r) {
               return false;
             }
-            vk.field_r = ge.field_n[tg.field_i];
-            field_a = ve.field_a[tg.field_i];
-            tg.field_i = 1 + tg.field_i & 127;
+            vk.field_r = ge.keyCodeQueue[tg.keyQueueReadIndex];
+            field_a = ve.typedCharQueue[tg.keyQueueReadIndex];
+            tg.keyQueueReadIndex = 1 + tg.keyQueueReadIndex & 127;
             stackIn_5_0 = true;
           }
           return stackIn_5_0;

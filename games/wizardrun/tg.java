@@ -8,11 +8,11 @@ final class tg implements Serializable {
     boolean[] field_d;
     int[] field_f;
     static pj field_h;
-    static oi field_c;
+    static IntrusiveDeque field_c;
     int[] field_a;
     static long field_g;
     static long field_e;
-    static int field_i;
+    static int keyQueueReadIndex;
     static String field_b;
 
     final static ae a(int param0, String param1) {
@@ -100,7 +100,7 @@ final class tg implements Serializable {
     }
 
     static {
-        field_c = new oi();
-        field_i = 0;
+        field_c = new IntrusiveDeque();
+        keyQueueReadIndex = 0;
     }
 }

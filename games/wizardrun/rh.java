@@ -141,7 +141,7 @@ final class rh extends mf {
             this.a(126, (String) null);
           }
           var5 = var4;
-          if (ub.a(var5, param1 ^ -125)) {
+          if (UiWidget.a(var5, param1 ^ -125)) {
             stackIn_7_0 = bh.field_d;
             return stackIn_7_0;
           }
@@ -154,7 +154,7 @@ final class rh extends mf {
             return stackIn_15_0;
           }
           if (this.a((byte) 38, param0)) {
-            stackIn_18_0 = wh.field_c;
+            stackIn_18_0 = NodeHashTableIterator.field_c;
             return stackIn_18_0;
           }
           if (0 >= var7.length()) {

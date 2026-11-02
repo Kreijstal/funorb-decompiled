@@ -4,7 +4,7 @@
 final class f {
     static wg[] field_a;
     static String[] field_b;
-    static o[] field_d;
+    static Sprite[] field_d;
     static boolean field_c;
     static String field_f;
     static boolean field_e;
@@ -79,8 +79,8 @@ final class f {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (rk.field_k != null) {
-            rk.field_k.field_J.a((byte) 87, param1);
+          if (DualLinkNode.field_k != null) {
+            DualLinkNode.field_k.field_J.a((byte) 87, param1);
           }
           if (null != ik.field_G) {
             ik.field_G.field_H.a((byte) 87, param1);

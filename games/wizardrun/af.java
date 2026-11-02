@@ -4,7 +4,7 @@
 abstract class af {
     static String[] field_c;
     static String field_b;
-    static o field_a;
+    static Sprite field_a;
     fg[] field_d;
     static int field_e;
 

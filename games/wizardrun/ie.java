@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ie extends wl {
+final class ie extends IntrusiveNode {
     int field_k;
-    static oi field_l;
+    static IntrusiveDeque field_l;
     byte[] field_i;
     static int field_j;
 
@@ -57,7 +57,7 @@ final class ie extends wl {
           td.field_f.c(ik.field_G, -128);
           return;
         }
-        field_l = (oi) null;
+        field_l = (IntrusiveDeque) null;
         if (aa.field_lb != null) {
           aa.field_lb.l(-27697);
         }
@@ -101,7 +101,7 @@ final class ie extends wl {
           var4 = new ca[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!oe.a((byte) -55, param1)) {
-              var6 = param1.g(da.a(var5 - 1, true), -11719);
+              var6 = param1.g(GameApplet.a(var5 - 1, true), -11719);
               var4[var5] = var4[var6];
             } else {
               var6_ref_ca = new ca();
@@ -136,6 +136,6 @@ final class ie extends wl {
     }
 
     static {
-        field_l = new oi();
+        field_l = new IntrusiveDeque();
     }
 }

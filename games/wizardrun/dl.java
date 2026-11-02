@@ -17,10 +17,10 @@ final class dl {
         }
         if (param0) {
           if (mh.field_tb == 0) {
-            if (!ub.field_x.b(17820)) {
+            if (!UiWidget.field_x.b(17820)) {
               return 20;
             }
-            if (!ub.field_x.a((byte) 29, "commonui")) {
+            if (!UiWidget.field_x.a((byte) 29, "commonui")) {
               return 40;
             }
             if (!vj.field_b.b(17820)) {
@@ -40,10 +40,10 @@ final class dl {
         } else {
           field_a = (int[]) null;
           if (mh.field_tb == 0) {
-            if (!ub.field_x.b(17820)) {
+            if (!UiWidget.field_x.b(17820)) {
               return 20;
             }
-            if (!ub.field_x.a((byte) 29, "commonui")) {
+            if (!UiWidget.field_x.a((byte) 29, "commonui")) {
               return 40;
             }
             if (!vj.field_b.b(17820)) {
@@ -72,10 +72,10 @@ final class dl {
             return 29;
           }
         }
-        if (!ub.field_x.b(17820)) {
+        if (!UiWidget.field_x.b(17820)) {
           return 43;
         }
-        if (!ub.field_x.a((byte) 29, "commonui")) {
+        if (!UiWidget.field_x.a((byte) 29, "commonui")) {
           return 57;
         }
         if (!vj.field_b.b(17820)) {

@@ -5,7 +5,7 @@ final class sf {
     private String field_c;
     private boolean field_e;
     static String field_a;
-    static oi field_j;
+    static IntrusiveDeque field_j;
     static rc field_i;
     private boolean field_f;
     static int field_g;
@@ -28,10 +28,10 @@ final class sf {
             sf.a(false, 17, (String) null);
           }
           if (!param0) {
-            stackIn_6_0 = le.field_j.b(param2);
+            stackIn_6_0 = le.field_j.stringWidth(param2);
             return stackIn_6_0;
           }
-          stackIn_4_0 = uf.field_c.b(param2);
+          stackIn_4_0 = uf.field_c.stringWidth(param2);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -333,7 +333,7 @@ final class sf {
     final static void a(byte param0) {
         jc.a((byte) 43, 4);
         if (param0 != -89) {
-          field_j = (oi) null;
+          field_j = (IntrusiveDeque) null;
         }
     }
 
@@ -346,7 +346,7 @@ final class sf {
     }
 
     static {
-        field_j = new oi();
+        field_j = new IntrusiveDeque();
         field_i = new rc();
     }
 }

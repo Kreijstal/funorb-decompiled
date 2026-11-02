@@ -11,14 +11,14 @@ abstract class gf extends rg {
     private int field_fb;
     private int field_hb;
     private int field_U;
-    private ub field_cb;
+    private UiWidget field_cb;
     private int field_gb;
     static rc field_ib;
     static String field_Y;
-    static o field_bb;
+    static Sprite field_bb;
     static ok field_V;
 
-    boolean a(char param0, int param1, byte param2, ub param3) {
+    boolean a(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -70,8 +70,8 @@ abstract class gf extends rg {
     final boolean a(int param0) {
         this.g((byte) -3);
         if (param0 != 16) {
-          ub var3 = (ub) null;
-          this.c((ub) null, -46);
+          UiWidget var3 = (UiWidget) null;
+          this.c((UiWidget) null, -46);
         }
         return super.a(16);
     }
@@ -84,8 +84,8 @@ abstract class gf extends rg {
         this.field_db = lj.field_c;
         this.a(this.field_cb, true);
         if (param0 != -8144) {
-          ub var3 = (ub) null;
-          this.a('ﾭ', 97, (byte) -70, (ub) null);
+          UiWidget var3 = (UiWidget) null;
+          this.a('ﾭ', 97, (byte) -70, (UiWidget) null);
         }
         this.field_ab.field_G = 0;
         this.field_cb = null;
@@ -107,7 +107,7 @@ abstract class gf extends rg {
         super.g(param0);
     }
 
-    private final void a(ub param0, boolean param1) {
+    private final void a(UiWidget param0, boolean param1) {
         try {
           if (this.field_ab != null) {
             this.field_ab.a(false);
@@ -118,7 +118,7 @@ abstract class gf extends rg {
           } else {
             this.field_ab = new jc();
           }
-          this.a((ub) (this.field_ab), (byte) 109);
+          this.a((UiWidget) (this.field_ab), (byte) 109);
           if (!param1) {
             gf.k(74);
           }
@@ -140,7 +140,7 @@ abstract class gf extends rg {
         ml.field_t = 0;
     }
 
-    gf(wi param0, ub param1, int param2, int param3, int param4) {
+    gf(wi param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, param1.field_r + 12, param1.field_n + 12 + param2);
         try {
           this.field_U = param3;
@@ -199,16 +199,16 @@ abstract class gf extends rg {
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_le = ia.field_f[var3];
             var4_ref_le.b(-119);
-            gj.a((byte) 115, var3);
+            IterableNodeHashTable.a((byte) 115, var3);
             var5 = var4_ref_le.field_r + var4_ref_le.field_g >> 1;
             var6 = var4_ref_le.field_D + var4_ref_le.field_K >> 1;
             var7 = var4_ref_le.field_E + var4_ref_le.field_M >> 1;
             var8 = ci.field_a[9] >> 2;
             var9 = ci.field_a[10] >> 2;
             var10_int = ci.field_a[11] >> 2;
-            var11 = var10_int * cg.field_m[5] + (var9 * cg.field_m[4] + var8 * cg.field_m[3]) >> 14;
-            var12 = var9 * cg.field_m[7] + (var8 * cg.field_m[6] + var10_int * cg.field_m[8]) >> 14;
-            var13 = var10_int * cg.field_m[11] + cg.field_m[9] * var8 + var9 * cg.field_m[10] >> 14;
+            var11 = var10_int * ImageProducerRasterBuffer.field_m[5] + (var9 * ImageProducerRasterBuffer.field_m[4] + var8 * ImageProducerRasterBuffer.field_m[3]) >> 14;
+            var12 = var9 * ImageProducerRasterBuffer.field_m[7] + (var8 * ImageProducerRasterBuffer.field_m[6] + var10_int * ImageProducerRasterBuffer.field_m[8]) >> 14;
+            var13 = var10_int * ImageProducerRasterBuffer.field_m[11] + ImageProducerRasterBuffer.field_m[9] * var8 + var9 * ImageProducerRasterBuffer.field_m[10] >> 14;
             var2[var3] = var7 * var13 + var11 * var5 + var12 * var6 >> 16;
           }
           var3Lifetime1 = ci.field_a[9] >> 8;
@@ -247,11 +247,11 @@ abstract class gf extends rg {
             }
             var2[var16] = -2147483648;
             var17 = ia.field_f[var16];
-            gj.a((byte) 115, var16);
+            IterableNodeHashTable.a((byte) 115, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              cg.field_m[var18] = cg.field_m[var18] + cb.field_d[var15][var18];
+              ImageProducerRasterBuffer.field_m[var18] = ImageProducerRasterBuffer.field_m[var18] + cb.field_d[var15][var18];
             }
-            ae.a(false, (byte) 106, var17, true, cg.field_m, false, ci.field_a);
+            ae.a(false, (byte) 106, var17, true, ImageProducerRasterBuffer.field_m, false, ci.field_a);
             pi.a(var14, var12Lifetime1, var8Lifetime1, false, var9Lifetime1, var17, var7Lifetime1, var13Lifetime1);
           }
           return;
@@ -272,7 +272,7 @@ abstract class gf extends rg {
         }
     }
 
-    void c(ub param0, int param1) {
+    void c(UiWidget param0, int param1) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -338,7 +338,7 @@ abstract class gf extends rg {
           }
         }
         if (param0 != 1) {
-          field_bb = (o) null;
+          field_bb = (Sprite) null;
         }
         return super.g(param0 ^ 0);
     }

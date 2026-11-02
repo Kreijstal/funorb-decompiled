@@ -4,7 +4,7 @@
 final class bh {
     int field_h;
     int field_f;
-    static oi field_b;
+    static IntrusiveDeque field_b;
     static String field_a;
     static String field_c;
     static String field_g;
@@ -64,16 +64,16 @@ final class bh {
         throw new IllegalStateException();
     }
 
-    final static df a(java.awt.Component param0, byte param1, int param2, int param3) {
+    final static RasterBuffer a(java.awt.Component param0, byte param1, int param2, int param3) {
         try {
           int var4_int = 0;
           RuntimeException var4 = null;
           Class var5 = null;
           Throwable var5_ref = null;
-          df var6 = null;
-          cg var6_ref = null;
-          df stackIn_2_0 = null;
-          cg stackIn_4_0 = null;
+          RasterBuffer var6 = null;
+          ImageProducerRasterBuffer var6_ref = null;
+          RasterBuffer stackIn_2_0 = null;
+          ImageProducerRasterBuffer stackIn_4_0 = null;
           RuntimeException stackIn_7_0 = null;
           StringBuilder stackIn_7_1 = null;
           String stackIn_8_2 = null;
@@ -82,17 +82,17 @@ final class bh {
             var4_int = 63 / ((param1 - 14) / 40);
             try {
               var5 = Class.forName("fk");
-              var6 = (df) (var5.newInstance());
+              var6 = (RasterBuffer) (var5.newInstance());
               var6.a((byte) 54, param3, param0, param2);
               stackIn_2_0 = var6;
               return stackIn_2_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5_ref = decompiledCaughtException;
-              var6_ref = new cg();
-              ((df) ((Object) var6_ref)).a((byte) -9, param3, param0, param2);
+              var6_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var6_ref)).a((byte) -9, param3, param0, param2);
               stackIn_4_0 = var6_ref;
-              return (df) ((Object) stackIn_4_0);
+              return (RasterBuffer) ((Object) stackIn_4_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -129,7 +129,7 @@ final class bh {
     }
 
     static {
-        field_b = new oi();
+        field_b = new IntrusiveDeque();
         field_c = "Click";
         field_a = null;
         field_d = "Passwords must be between 5 and 20 characters long";

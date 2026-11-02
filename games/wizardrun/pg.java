@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pg extends wl {
+final class pg extends IntrusiveNode {
     static int[] field_r;
     private int field_l;
     private int field_m;
@@ -38,7 +38,7 @@ final class pg extends wl {
             }
             var2 = 1;
           }
-          ga.field_d.a(rb.a(-578629823, field_n, fi.field_B), 83, rb.a(-578629823, tf.field_e, dh.field_b));
+          ga.field_d.a(rb.a(-578629823, field_n, fi.field_B), 83, rb.a(-578629823, MouseInputHandler.field_e, dh.field_b));
           if (ga.field_d.b(param0 + 47)) {
             var1_int = 1;
           }
@@ -260,8 +260,8 @@ final class pg extends wl {
           }
           var5 = n.field_b;
           var5.c((byte) 92, param0);
-          var5.field_m = var5.field_m + 1;
-          var4 = var5.field_m;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.b((byte) 11, 1);
           var5.b((byte) 11, param2.field_o);
           var5.b((byte) 11, param2.field_m);
@@ -270,7 +270,7 @@ final class pg extends wl {
           var5.f(param2.field_p, 613003928);
           var5.f(param2.field_k, 613003928);
           var5.e(var4, -1182887024);
-          var5.a(-var4 + var5.field_m, -117);
+          var5.a(-var4 + var5.position, -117);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "pg.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

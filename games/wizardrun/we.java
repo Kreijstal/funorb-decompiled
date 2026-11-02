@@ -5,7 +5,7 @@ final class we {
     static ll field_d;
     static String field_a;
     static sf field_c;
-    static o field_b;
+    static Sprite field_b;
     static String field_e;
 
     public static void a(int param0) {
@@ -25,7 +25,7 @@ final class we {
         field_c = null;
     }
 
-    final static void a(int param0, int param1, vd param2, int param3, o[] param4, int param5, int param6, int param7, vd param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, o[] param17, int param18, o[] param19, int param20) {
+    final static void a(int param0, int param1, BitmapFont param2, int param3, Sprite[] param4, int param5, int param6, int param7, BitmapFont param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, Sprite[] param17, int param18, Sprite[] param19, int param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;

@@ -4,7 +4,7 @@
 final class pd extends mi {
     static String field_G;
     static String[] field_I;
-    static o[] field_H;
+    static Sprite[] frameSprites;
 
     final static boolean a(String param0, byte param1, String param2) {
         String var3 = null;
@@ -111,9 +111,9 @@ final class pd extends mi {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((va) ((Object) var5)).f(255);
+            var6 = ((PacketBuffer) ((Object) var5)).f(255);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((va) ((Object) var5)).i(255);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).i(255);
             }
             var14 = (te) (bk.field_d.b((byte) 97));
             if (var14 == null) {
@@ -157,7 +157,7 @@ final class pd extends mi {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, ub param4, int param5) {
+    final void a(int param0, int param1, int param2, int param3, UiWidget param4, int param5) {
         pj var7 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -195,7 +195,7 @@ final class pd extends mi {
         }
     }
 
-    private pd(int param0, int param1, int param2, int param3, bf param4, ce param5, ub param6) {
+    private pd(int param0, int param1, int param2, int param3, bf param4, ce param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_F = param6;
@@ -210,7 +210,7 @@ final class pd extends mi {
         if (param0 != -27864) {
           return;
         }
-        field_H = null;
+        frameSprites = null;
     }
 
     static {

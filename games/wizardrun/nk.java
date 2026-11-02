@@ -92,7 +92,7 @@ final class nk extends pe implements ng, qd, ha {
         return "<u=2164A2><col=2164A2>";
     }
 
-    private final int a(byte param0, ub param1, String param2, int param3, int param4, String param5) {
+    private final int a(byte param0, UiWidget param1, String param2, int param3, int param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -135,7 +135,7 @@ final class nk extends pe implements ng, qd, ha {
         }
     }
 
-    private final int a(int param0, ub param1, boolean param2, String param3, int param4) {
+    private final int a(int param0, UiWidget param1, boolean param2, String param3, int param4) {
         RuntimeException var6 = null;
         kc var7 = null;
         ik var8 = null;
@@ -151,9 +151,9 @@ final class nk extends pe implements ng, qd, ha {
             field_U = (bh) null;
           }
           var8 = new ik(20, param4, 120 + param0, 25, param1, false, 120, 3, gh.field_b, 16777215, param3);
-          this.a((ub) (var8), (byte) 39);
+          this.a((UiWidget) (var8), (byte) 39);
           var7 = new kc(((wa) ((Object) param1)).a((byte) 120));
-          this.a((ub) (var7), (byte) 28);
+          this.a((UiWidget) (var7), (byte) 28);
           var7.a(119, var8.field_l + (var8.field_n - 15 >> 1), 15, 15, 3 + var8.field_o + var8.field_r);
           stackIn_3_0 = var8.field_n;
           return stackIn_3_0;
@@ -211,7 +211,7 @@ final class nk extends pe implements ng, qd, ha {
         }
     }
 
-    private final int a(int param0, String param1, ub param2, int param3, int param4, int param5, String param6) {
+    private final int a(int param0, String param1, UiWidget param2, int param3, int param4, int param5, String param6) {
         RuntimeException var8 = null;
         l var9 = null;
         ik var10 = null;
@@ -226,13 +226,13 @@ final class nk extends pe implements ng, qd, ha {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new ik(20, param5, 120 + param4, 25, param2, false, 120, 3, gh.field_b, 16777215, param1);
-          this.a((ub) (var10), (byte) 39);
+          this.a((UiWidget) (var10), (byte) 39);
           var9 = new l(((wa) ((Object) param2)).a((byte) 109), param6, 126, param5 + var10.field_n, param4 + 50, param0);
           if (param3 != 7501) {
             this.field_P = (p) null;
           }
           var9.field_s = (ce) (this);
-          this.a((ub) (var9), (byte) 39);
+          this.a((UiWidget) (var9), (byte) 39);
           stackIn_3_0 = var9.field_n + var10.field_n;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -261,7 +261,7 @@ final class nk extends pe implements ng, qd, ha {
         }
     }
 
-    private final int a(int param0, boolean param1, int param2, ub param3, String param4) {
+    private final int a(int param0, boolean param1, int param2, UiWidget param3, String param4) {
         ik var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
@@ -278,7 +278,7 @@ final class nk extends pe implements ng, qd, ha {
             return stackIn_2_0;
           }
           var6 = new ik(20, param0, param2 + 120, 25, param3, false, 120, 3, gh.field_b, 16777215, param4);
-          this.a((ub) (var6), (byte) 62);
+          this.a((UiWidget) (var6), (byte) 62);
           stackIn_4_0 = var6.field_n;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -328,9 +328,9 @@ final class nk extends pe implements ng, qd, ha {
         this.field_G.field_p = cd.field_a;
         this.field_F.field_p = fb.field_c;
         this.field_H.field_p = ec.field_e;
-        this.field_S.field_p = u.field_v;
+        this.field_S.field_p = GameShell.field_v;
         this.field_O.field_p = ph.field_s;
-        this.field_P.field_p = jj.field_c;
+        this.field_P.field_p = GameGraphicsResources.field_c;
         this.field_E.field_p = pc.field_o;
         this.field_G.a(0, new jg(this.field_G));
         this.field_F.a(0, new sj(this.field_F));
@@ -355,11 +355,11 @@ final class nk extends pe implements ng, qd, ha {
         var3 = var3 + this.a(var3, true, 170, this.field_F, ii.field_d);
         var3 = var3 + (5 + this.a(20, ve.field_b, this.field_H, 7501, 170, var3, ""));
         var3 = var3 + this.a(var3, true, 170, this.field_S, qk.field_d);
-        var3 = var3 + (this.a((byte) 4, this.field_O, df.field_i, 170, var3, ik.field_H) + 5);
+        var3 = var3 + (this.a((byte) 4, this.field_O, RasterBuffer.field_i, 170, var3, ik.field_H) + 5);
         var3 = var3 + (5 + this.a((byte) 4, this.field_G, re.field_E, 170, var3, d.field_b));
         var3 = var3 + this.a(170, this.field_P, true, sb.field_a, var3);
         ik var4 = new ik(46, var3, -90 + this.field_r, 25, this.field_E, true, -120 + this.field_r, 5, e.field_b, 11579568, fb.field_e);
-        this.a((ub) (var4), (byte) 58);
+        this.a((UiWidget) (var4), (byte) 58);
         var3 = var3 + var4.field_n;
         ll var5 = new ll(gh.field_b, 0, 0, 0, 0, 16777215, -1, 0, 0, gh.field_b.field_M, -1, 2147483647, true);
         this.field_L = new ff(var2, var5);
@@ -369,18 +369,18 @@ final class nk extends pe implements ng, qd, ha {
         this.field_L.field_s = (ce) (this);
         this.field_L.a(var3, (byte) 61, this.field_r - 90, 46);
         var3 = var3 + (this.field_L.field_n + 15);
-        this.a((ub) (this.field_L), (byte) 98);
+        this.a((UiWidget) (this.field_L), (byte) 98);
         int var6 = 4;
         int var7 = 200;
         this.field_V.a(110, var3, 40, var7, 496 - var7 >> 1);
         this.field_I.a(125, 15 + var3, 40, 60, 3 + var6);
         this.field_I.field_s = (ce) (this);
         this.field_V.field_s = (ce) (this);
-        this.a((ub) (this.field_V), (byte) 108);
-        this.a((ub) (this.field_I), (byte) 121);
+        this.a((UiWidget) (this.field_V), (byte) 108);
+        this.a((UiWidget) (this.field_I), (byte) 121);
         this.field_J = new wj((ha) (this));
         this.field_J.a(118, 20 + this.field_G.field_l, 150, -this.field_G.field_r + (-this.field_G.field_o + this.field_r - 60), this.field_G.field_r + this.field_G.field_o + 60);
-        this.a((ub) (this.field_J), (byte) 34);
+        this.a((UiWidget) (this.field_J), (byte) 34);
         this.a(115, 0, 55 + (var3 + var6), 496, 0);
     }
 
@@ -409,7 +409,7 @@ final class nk extends pe implements ng, qd, ha {
             var5 = (String) null;
             this.a((String) null, (byte) -6);
           }
-          if (va.field_o != var4) {
+          if (PacketBuffer.field_o != var4) {
             return true;
           }
           return false;
@@ -471,7 +471,7 @@ final class nk extends pe implements ng, qd, ha {
         return "</col></u>";
     }
 
-    final boolean a(char param0, int param1, byte param2, ub param3) {
+    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_8_0 = false;
@@ -510,7 +510,7 @@ final class nk extends pe implements ng, qd, ha {
         }
     }
 
-    final void a(int param0, int param1, int param2, ub param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_V.field_B = this.g(param0 - 10000586);

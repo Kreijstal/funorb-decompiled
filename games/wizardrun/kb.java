@@ -4,16 +4,16 @@
 import java.io.*;
 
 final class kb extends gf {
-    static o field_jb;
+    static Sprite field_jb;
 
     final static void j(byte param0) {
         if (param0 != 63) {
-          field_jb = (o) null;
+          field_jb = (Sprite) null;
         }
         tj.a(param0 + 3025, jg.f(1));
     }
 
-    kb(wi param0, ub param1) {
+    kb(wi param0, UiWidget param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -95,7 +95,7 @@ final class kb extends gf {
             if (var3 != 0) {
               return;
             }
-            var4 = param1.field_m;
+            var4 = param1.position;
             param1.f(var17.field_i, 613003928);
             var5 = 0;
             if (param0 < 17) {
@@ -229,11 +229,11 @@ final class kb extends gf {
         }
     }
 
-    final void c(ub param0, int param1) {
+    final void c(UiWidget param0, int param1) {
         try {
           super.c(param0, -119);
           if (param1 > -109) {
-            field_jb = (o) null;
+            field_jb = (Sprite) null;
           }
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "kb.VB(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -242,7 +242,7 @@ final class kb extends gf {
 
     public static void l(int param0) {
         if (param0 != 1) {
-          field_jb = (o) null;
+          field_jb = (Sprite) null;
         }
         field_jb = null;
     }

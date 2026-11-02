@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei extends wl {
+final class ei extends IntrusiveNode {
     static int field_t;
     int field_u;
     static String field_m;
     static String field_i;
-    static o field_l;
+    static Sprite field_l;
     int field_p;
     int field_v;
     int field_s;
     static int field_k;
     int field_r;
-    static o field_n;
+    static Sprite field_n;
     static boolean field_j;
     int[] field_q;
     int field_o;
@@ -45,11 +45,11 @@ final class ei extends wl {
         }
     }
 
-    final static o[] a(int param0, int param1, int param2, int param3, int param4) {
-        o dupTemp$1 = null;
-        o[] var6 = new o[9];
-        o[] var5 = var6;
-        o dupTemp$0 = id.a((byte) 107, param1, param3);
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        Sprite dupTemp$1 = null;
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = id.a((byte) 107, param1, param3);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
@@ -67,7 +67,7 @@ final class ei extends wl {
           }
           return var5;
         }
-        o dupTemp$2 = id.a((byte) 76, param0, param3);
+        Sprite dupTemp$2 = id.a((byte) 76, param0, param3);
         var6[8] = dupTemp$2;
         var5[7] = dupTemp$2;
         var5[5] = dupTemp$2;
@@ -79,7 +79,7 @@ final class ei extends wl {
     }
 
     final static void a(byte param0, int param1) {
-        wl var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         pg var4 = null;

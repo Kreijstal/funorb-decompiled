@@ -27,7 +27,7 @@ final class aa extends hh {
           if (param1 > -47) {
             field_ib = (ob) null;
           }
-          stackIn_5_0 = (gj.a((byte) -116, param0) != null);
+          stackIn_5_0 = (IterableNodeHashTable.a((byte) -116, param0) != null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

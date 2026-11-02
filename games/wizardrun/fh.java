@@ -14,11 +14,11 @@ final class fh extends hl {
     private na field_i;
     private int field_k;
     private byte[] field_x;
-    static oi field_t;
-    private oi field_p;
+    static IntrusiveDeque field_t;
+    private IntrusiveDeque field_p;
     private int field_o;
     static int field_f;
-    private oi field_u;
+    private IntrusiveDeque field_u;
     private boolean field_j;
     private boolean field_r;
     private boolean field_e;
@@ -38,9 +38,9 @@ final class fh extends hl {
         if (param0 != -3) {
           fh.c(16, 122);
         }
-        wl var2 = this.field_u.b((byte) 72);
+        IntrusiveNode var2 = this.field_u.b((byte) 72);
         while (var2 != null) {
-          var3 = (int)var2.field_e;
+          var3 = (int)var2.key;
           if (var3 < 0) {
             var2.a(false);
           } else {
@@ -73,14 +73,14 @@ final class fh extends hl {
         ml discarded$0 = null;
         int var2_int;
         ml var2;
-        wl var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        wl var6;
-        wl var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        wl var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         var5 = wizardrun.field_H;
         if (param0 != 25) {
           this.field_o = -118;
@@ -94,7 +94,7 @@ final class fh extends hl {
             var2_int = 1;
             var3 = this.field_p.b((byte) 83);
             while (var3 != null) {
-              var4 = (int)var3.field_e;
+              var4 = (int)var3.key;
               if (0 == this.field_w[var4]) {
                 discarded$3 = this.a(-23529, 1, var4);
               }
@@ -105,19 +105,19 @@ final class fh extends hl {
               }
               var3 = this.field_p.d(8192);
             }
-            L11: while (true) {
+            scanLoop1: while (true) {
               if (this.field_s.field_p.length > this.field_o) {
                 if (this.field_s.field_p[this.field_o] != 0) {
                   if (this.field_q.field_b >= 250) {
                     var2_int = 0;
-                    break L11;
+                    break scanLoop1;
                   }
                   if (0 == this.field_w[this.field_o]) {
                     discarded$2 = this.a(-23529, 1, this.field_o);
                   }
                   if (0 == this.field_w[this.field_o]) {
-                    var6 = new wl();
-                    var6.field_e = (long)this.field_o;
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_o;
                     var2_int = 0;
                     this.field_p.a(var6, false);
                   }
@@ -138,7 +138,7 @@ final class fh extends hl {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_p.b((byte) 73);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_e;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_w[var4Lifetime1] != 1) {
                   discarded$1 = this.a(-23529, 2, var4Lifetime1);
                 }
@@ -159,8 +159,8 @@ final class fh extends hl {
                     discarded$0 = this.a(-23529, 2, this.field_o);
                   }
                   if (this.field_w[this.field_o] != 1) {
-                    var7 = new wl();
-                    var7.field_e = (long)this.field_o;
+                    var7 = new IntrusiveNode();
+                    var7.key = (long)this.field_o;
                     this.field_p.a(var7, false);
                     var2_intLifetime1 = 0;
                   }
@@ -270,7 +270,7 @@ final class fh extends hl {
               var4 = this.field_q.a((byte) -46, param2, this.field_g);
             }
           }
-          this.field_n.a((wl) (var4), param0 + 23462, (long)param2);
+          this.field_n.a((IntrusiveNode) (var4), param0 + 23462, (long)param2);
         }
         if (((ml) (var4)).field_s) {
           return null;
@@ -282,9 +282,9 @@ final class fh extends hl {
           try {
             if (var5 != null &&
               var18.length > 2) {
-              rk.field_j.reset();
-              rk.field_j.update(var5, 0, -2 + var18.length);
-              var6_int = (int)rk.field_j.getValue();
+              DualLinkNode.field_j.reset();
+              DualLinkNode.field_j.update(var5, 0, -2 + var18.length);
+              var6_int = (int)DualLinkNode.field_j.getValue();
               if (this.field_s.field_q[param2] != var6_int) {
                 throw new RuntimeException();
               }
@@ -311,7 +311,7 @@ final class fh extends hl {
             if (((ml) (var4)).field_r &&
               !this.field_i.a(3473)) {
               var4 = this.field_i.a(this.field_d, param2, (byte) -125, (byte) 2, true);
-              this.field_n.a((wl) (var4), -115, (long)param2);
+              this.field_n.a((IntrusiveNode) (var4), -115, (long)param2);
             }
             return null;
           }
@@ -331,9 +331,9 @@ final class fh extends hl {
         try {
           if (var5 != null &&
             var18.length > 2) {
-            rk.field_j.reset();
-            rk.field_j.update(var5, 0, -2 + var18.length);
-            var6_int = (int)rk.field_j.getValue();
+            DualLinkNode.field_j.reset();
+            DualLinkNode.field_j.update(var5, 0, -2 + var18.length);
+            var6_int = (int)DualLinkNode.field_j.getValue();
             if (this.field_s.field_q[param2] != var6_int) {
               throw new RuntimeException();
             }
@@ -378,7 +378,7 @@ final class fh extends hl {
             return null;
           }
           var4 = this.field_i.a(this.field_d, param2, (byte) -123, (byte) 2, true);
-          this.field_n.a((wl) (var4), -103, (long)param2);
+          this.field_n.a((IntrusiveNode) (var4), -103, (long)param2);
           return null;
         }
     }
@@ -386,7 +386,7 @@ final class fh extends hl {
     public static void b(byte param0) {
         field_t = null;
         if (param0 != -8) {
-          field_t = (oi) null;
+          field_t = (IntrusiveDeque) null;
         }
     }
 
@@ -473,7 +473,7 @@ final class fh extends hl {
           int var2 = -38 / ((-32 - param0) / 59);
           this.field_j = true;
           if (null == this.field_p) {
-            this.field_p = new oi();
+            this.field_p = new IntrusiveDeque();
           }
           return;
         }
@@ -589,14 +589,14 @@ final class fh extends hl {
         RuntimeException var10 = null;
         this.field_n = new ab(16);
         this.field_o = 0;
-        this.field_u = new oi();
+        this.field_u = new IntrusiveDeque();
         this.field_h = 0L;
         try {
           this.field_d = param0;
           this.field_g = param1;
           if (null != this.field_g) {
             this.field_r = true;
-            this.field_p = new oi();
+            this.field_p = new IntrusiveDeque();
           } else {
             this.field_r = false;
           }
@@ -651,6 +651,6 @@ final class fh extends hl {
     }
 
     static {
-        field_t = new oi();
+        field_t = new IntrusiveDeque();
     }
 }

@@ -13,7 +13,7 @@ final class oh {
         field_b = null;
     }
 
-    final static void a(int param0, o param1, int param2, int param3, int param4, byte param5, int param6, int param7) {
+    final static void a(int param0, Sprite param1, int param2, int param3, int param4, byte param5, int param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -28,43 +28,43 @@ final class oh {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        o var21 = null;
+        Sprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;
         int[] var30 = null;
         var19 = wizardrun.field_H;
         try {
-          if (param2 < ed.field_c) {
-            param3 = param3 - (-param2 + ed.field_c);
-            param2 = ed.field_c;
+          if (param2 < SoftwareRasterizer.clipLeft) {
+            param3 = param3 - (-param2 + SoftwareRasterizer.clipLeft);
+            param2 = SoftwareRasterizer.clipLeft;
           }
-          if (ed.field_i > param6) {
-            param0 = param0 - (ed.field_i - param6);
-            param6 = ed.field_i;
+          if (SoftwareRasterizer.clipTop > param6) {
+            param0 = param0 - (SoftwareRasterizer.clipTop - param6);
+            param6 = SoftwareRasterizer.clipTop;
           }
-          if (ed.field_l < param3 + param2) {
-            param3 = ed.field_l - param2;
+          if (SoftwareRasterizer.clipRight < param3 + param2) {
+            param3 = SoftwareRasterizer.clipRight - param2;
           }
-          if (param0 + param6 > ed.field_b) {
-            param0 = -param6 + ed.field_b;
+          if (param0 + param6 > SoftwareRasterizer.clipBottom) {
+            param0 = -param6 + SoftwareRasterizer.clipBottom;
           }
           if (param3 > 0 &&
             0 < param0) {
             if (param5 < 11) {
               field_b = (kl) null;
             }
-            var21 = param1.e();
-            var30 = ed.field_k;
-            var10 = ed.field_h;
-            var11 = ed.field_d;
+            var21 = param1.copy();
+            var30 = SoftwareRasterizer.pixels;
+            var10 = SoftwareRasterizer.width;
+            var11 = SoftwareRasterizer.height;
             var29 = new int[4];
-            ed.b(var29);
-            param1.b();
-            ed.b(var29[0], var29[1], var29[2], var29[3]);
-            var13 = param2 + param6 * param1.field_z;
-            var14 = param1.field_z - param3;
-            var25 = var21.field_B;
+            SoftwareRasterizer.saveClip(var29);
+            param1.bindAsRasterTarget();
+            SoftwareRasterizer.intersectClip(var29[0], var29[1], var29[2], var29[3]);
+            var13 = param2 + param6 * param1.width;
+            var14 = param1.width - param3;
+            var25 = var21.pixels;
             var22 = var25;
             var15 = var22;
             for (var16 = param6; var16 < param0 + param6; var16++) {
@@ -73,19 +73,19 @@ final class oh {
                 if (0 != var18) {
                   if (var17 > 0 &&
                     var15[var13 - 1] == 0) {
-                    ed.a(var17, var16, param4, param7);
+                    SoftwareRasterizer.a(var17, var16, param4, param7);
                   } else {
                     if (var16 > 0 &&
-                      var15[-param1.field_z + var13] == 0) {
-                      ed.a(var17, var16, param4, param7);
+                      var15[-param1.width + var13] == 0) {
+                      SoftwareRasterizer.a(var17, var16, param4, param7);
                     } else {
-                      if (var17 < param1.field_z - 1 &&
+                      if (var17 < param1.width - 1 &&
                         var15[var13 + 1] == 0) {
-                        ed.a(var17, var16, param4, param7);
+                        SoftwareRasterizer.a(var17, var16, param4, param7);
                       } else {
-                        if (var16 < param1.field_p - 1 &&
-                          var15[param1.field_z + var13] == 0) {
-                          ed.a(var17, var16, param4, param7);
+                        if (var16 < param1.height - 1 &&
+                          var15[param1.width + var13] == 0) {
+                          SoftwareRasterizer.a(var17, var16, param4, param7);
                         }
                       }
                     }
@@ -95,9 +95,9 @@ final class oh {
               }
               var13 = var13 + var14;
             }
-            var21.e(-param1.field_u, -param1.field_v);
-            ed.a(var30, var10, var11);
-            ed.a(var29);
+            var21.e(-param1.offsetX, -param1.offsetY);
+            SoftwareRasterizer.setTarget(var30, var10, var11);
+            SoftwareRasterizer.restoreClip(var29);
             return;
           }
           return;

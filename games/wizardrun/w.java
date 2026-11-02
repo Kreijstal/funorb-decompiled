@@ -22,10 +22,10 @@ final class w {
 
     final static boolean c(int param0) {
         int var1 = -99 % ((-61 - param0) / 59);
-        return ub.field_m;
+        return UiWidget.field_m;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, vd param4, int param5, int param6, int param7, int param8, int param9, vd param10, qj param11, int param12, byte param13, qj param14, int param15, int param16, qj param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7, int param8, int param9, BitmapFont param10, qj param11, int param12, byte param13, qj param14, int param15, int param16, qj param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -91,15 +91,15 @@ final class w {
     final static void a(String param0, String param1, int param2) {
         try {
           int var3_int = -81 / ((35 - param2) / 44);
-          de.a((byte) -52, param1, param0, false);
+          SecondaryNodeDeque.a((byte) -52, param1, param0, false);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "w.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void b(int param0) {
-        rk.field_k = new nk();
-        td.field_f.c(rk.field_k, -125);
+        DualLinkNode.field_k = new nk();
+        td.field_f.c(DualLinkNode.field_k, -125);
         if (param0 != -1) {
           field_a = -36;
         }

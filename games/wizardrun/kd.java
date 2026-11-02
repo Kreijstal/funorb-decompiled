@@ -84,19 +84,19 @@ final class kd {
             }
           }
           if (null != ra.field_p) {
-            var3 = 357 - ra.field_p.field_s / 2;
+            var3 = 357 - ra.field_p.fullHeight / 2;
             var4 = 0;
             if (w.field_c != 0 &&
               dh.field_b > var3 &&
-              var3 + ra.field_p.field_p > dh.field_b) {
-              if (tf.field_e > -ra.field_p.field_z + 269 &&
-                tf.field_e < 269) {
+              var3 + ra.field_p.height > dh.field_b) {
+              if (MouseInputHandler.field_e > -ra.field_p.width + 269 &&
+                MouseInputHandler.field_e < 269) {
                 od.field_j = fl.field_u;
                 var4 = 1;
                 ei.field_j = false;
               }
-              if (tf.field_e > 586 &&
-                586 + ra.field_p.field_z > tf.field_e) {
+              if (MouseInputHandler.field_e > 586 &&
+                586 + ra.field_p.width > MouseInputHandler.field_e) {
                 ei.field_j = true;
                 var4 = 1;
                 od.field_j = fl.field_u;
@@ -105,37 +105,37 @@ final class kd {
             if (var4 == 0 &&
               fl.field_M < od.field_j &&
               fi.field_B > var3 &&
-              ra.field_p.field_p + var3 > fi.field_B) {
-              if (pg.field_n > -ra.field_p.field_z + 269 &&
+              ra.field_p.height + var3 > fi.field_B) {
+              if (pg.field_n > -ra.field_p.width + 269 &&
                 pg.field_n < 269) {
                 od.field_j = fl.field_M;
               }
               if (586 < pg.field_n &&
-                ra.field_p.field_z + 586 > pg.field_n) {
+                ra.field_p.width + 586 > pg.field_n) {
                 od.field_j = fl.field_M;
               }
             }
           }
           if (param1) {
-            jj.field_d.a(wc.a(29292, fi.field_B, pg.field_n), param0 - 668, wc.a(29292, dh.field_b, tf.field_e));
-            if (jj.field_d.b(param0 ^ -587)) {
-              if (jj.field_d.field_g == 0) {
+            GameGraphicsResources.field_d.a(wc.a(29292, fi.field_B, pg.field_n), param0 - 668, wc.a(29292, dh.field_b, MouseInputHandler.field_e));
+            if (GameGraphicsResources.field_d.b(param0 ^ -587)) {
+              if (GameGraphicsResources.field_d.field_g == 0) {
                 stackIn_66_0 = 3;
                 return stackIn_66_0;
               }
-              if (jj.field_d.field_g == 1) {
+              if (GameGraphicsResources.field_d.field_g == 1) {
                 stackIn_69_0 = 2;
                 return stackIn_69_0;
               }
             }
             while (ae.a(103)) {
-              jj.field_d.a((byte) 11, 0);
-              if (jj.field_d.b(-1)) {
-                if (jj.field_d.field_g == 0) {
+              GameGraphicsResources.field_d.a((byte) 11, 0);
+              if (GameGraphicsResources.field_d.b(-1)) {
+                if (GameGraphicsResources.field_d.field_g == 0) {
                   stackIn_76_0 = 3;
                   return stackIn_76_0;
                 }
-                if (1 == jj.field_d.field_g) {
+                if (1 == GameGraphicsResources.field_d.field_g) {
                   stackIn_80_0 = 1;
                   return stackIn_80_0;
                 }

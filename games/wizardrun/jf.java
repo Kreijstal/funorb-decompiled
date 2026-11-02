@@ -135,7 +135,7 @@ abstract class jf {
         }
         try {
           kl.a(0, (java.awt.Component) ((Object) param1));
-          gj.a((java.awt.Component) ((Object) param1), 98);
+          IterableNodeHashTable.a((java.awt.Component) ((Object) param1), 98);
           if (vc.field_K != null) {
             vc.field_K.b((java.awt.Component) ((Object) param1), -1);
           }

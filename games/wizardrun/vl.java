@@ -12,7 +12,7 @@ final class vl implements bf {
     private int field_k;
     private int field_r;
     static String field_a;
-    private vd field_j;
+    private BitmapFont field_j;
     static int field_h;
     static String field_g;
     private int field_q;
@@ -28,8 +28,8 @@ final class vl implements bf {
         return nk.field_N.d(0);
     }
 
-    public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
-        ub stackIn_3_0 = null;
+    public final void a(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -42,7 +42,7 @@ final class vl implements bf {
         ef var11 = null;
         try {
           if (param2 instanceof ef) {
-            stackIn_3_0 = (ub) (param2);
+            stackIn_3_0 = (UiWidget) (param2);
           } else {
             stackIn_3_0 = null;
           }
@@ -54,17 +54,17 @@ final class vl implements bf {
           if (param4) {
             var7 = 16777215;
           }
-          ed.c(param0 + param2.field_o, param2.field_l + param1, param2.field_r, param2.field_n, this.field_c);
+          SoftwareRasterizer.fillRect(param0 + param2.field_o, param2.field_l + param1, param2.field_r, param2.field_n, this.field_c);
           var8 = param0 + param2.field_o + this.field_m;
           var9 = param1 + param2.field_l + this.field_b;
-          ed.b(var8, var9, this.field_l, this.field_p, 5592405);
-          ed.c(var8, var9, this.field_l, this.field_p, var7);
+          SoftwareRasterizer.b(var8, var9, this.field_l, this.field_p, 5592405);
+          SoftwareRasterizer.fillRect(var8, var9, this.field_l, this.field_p, var7);
           if (!param3) {
             this.field_p = 11;
           }
           if (var11.field_z) {
-            ed.e(var8, var9, var8 + this.field_l, var9 + this.field_p, 1);
-            ed.e(var8 + this.field_l, var9, var8, this.field_p + var9, 1);
+            SoftwareRasterizer.e(var8, var9, var8 + this.field_l, var9 + this.field_p, 1);
+            SoftwareRasterizer.e(var8 + this.field_l, var9, var8, this.field_p + var9, 1);
           }
           if (null == this.field_j) {
             return;
@@ -121,7 +121,7 @@ final class vl implements bf {
         return false;
     }
 
-    vl(vd param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    vl(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_k = 1;
         this.field_q = 1;
         try {

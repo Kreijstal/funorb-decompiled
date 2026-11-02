@@ -7,7 +7,7 @@ abstract class ge {
     static int field_j;
     int field_a;
     private int field_c;
-    static int[] field_n;
+    static int[] keyCodeQueue;
     static int field_f;
     static int field_b;
     private int field_h;
@@ -161,11 +161,11 @@ abstract class ge {
           this.a(pg.field_n, var2Lifetime3, -this.field_d + (fi.field_B - this.field_c * var2Lifetime3), sh.field_c, true, false);
           return;
         }
-        var2Lifetime1 = this.a(tf.field_e, param0 - 57, dh.field_b);
+        var2Lifetime1 = this.a(MouseInputHandler.field_e, param0 - 57, dh.field_b);
         this.field_a = var2Lifetime1;
         if (var2Lifetime1 != -1) {
           this.field_m = true;
-          this.a(tf.field_e, var2Lifetime1, -(this.field_c * var2Lifetime1) + dh.field_b - this.field_d, w.field_c, false, false);
+          this.a(MouseInputHandler.field_e, var2Lifetime1, -(this.field_c * var2Lifetime1) + dh.field_b - this.field_d, w.field_c, false, false);
           return;
         }
         this.field_m = false;
@@ -203,7 +203,7 @@ abstract class ge {
     public static void a(boolean param0) {
         field_i = null;
         field_k = null;
-        field_n = null;
+        keyCodeQueue = null;
         if (!param0) {
           ge.a(false);
         }
@@ -236,13 +236,13 @@ abstract class ge {
         if (param1 <= -52) {
           return var4;
         }
-        field_n = (int[]) null;
+        keyCodeQueue = (int[]) null;
         return var4;
     }
 
     static {
         field_j = 0;
-        field_n = new int[128];
+        keyCodeQueue = new int[128];
         field_i = "Loading sound effects";
         field_k = "If you do nothing the game will revert to normal view in <%0> seconds.";
     }

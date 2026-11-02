@@ -4,11 +4,11 @@
 final class l extends ff {
     static java.security.SecureRandom field_N;
     static String field_Q;
-    private o field_R;
+    private Sprite field_R;
     static ok field_S;
     private int field_U;
     private String field_L;
-    static o field_M;
+    static Sprite field_M;
     static String field_K;
     static String[] field_O;
     private dk field_T;
@@ -33,7 +33,7 @@ final class l extends ff {
 
     final static kl a(int param0, int param1, boolean param2, int param3, boolean param4) {
         if (param1 != -1784753947) {
-          field_M = (o) null;
+          field_M = (Sprite) null;
         }
         return sc.a(param0, 12000, param3, false, param2, param4);
     }
@@ -73,30 +73,30 @@ final class l extends ff {
         int var12 = 0;
         var12 = wizardrun.field_H;
         try {
-          if (ed.field_c > param3) {
-            param4 = param4 - (-param3 + ed.field_c);
-            param3 = ed.field_c;
+          if (SoftwareRasterizer.clipLeft > param3) {
+            param4 = param4 - (-param3 + SoftwareRasterizer.clipLeft);
+            param3 = SoftwareRasterizer.clipLeft;
           }
-          if (param3 + param4 > ed.field_l) {
-            param4 = -param3 + ed.field_l;
+          if (param3 + param4 > SoftwareRasterizer.clipRight) {
+            param4 = -param3 + SoftwareRasterizer.clipRight;
           }
-          if (ed.field_i > param2) {
-            param0 = param0 - (ed.field_i - param2);
-            param2 = ed.field_i;
+          if (SoftwareRasterizer.clipTop > param2) {
+            param0 = param0 - (SoftwareRasterizer.clipTop - param2);
+            param2 = SoftwareRasterizer.clipTop;
           }
           if (param1 != -105) {
             l.a((byte) -126);
           }
-          if (ed.field_b < param2 + param0) {
-            param0 = -param2 + ed.field_b;
+          if (SoftwareRasterizer.clipBottom < param2 + param0) {
+            param0 = -param2 + SoftwareRasterizer.clipBottom;
           }
           if (0 < param4 &&
             param0 > 0) {
-            var6_int = param3 + ed.field_h * param2;
-            var7 = -param4 + ed.field_h;
+            var6_int = param3 + SoftwareRasterizer.width * param2;
+            var7 = -param4 + SoftwareRasterizer.width;
             for (param2 = -param0; 0 > param2; param2++) {
               for (param3 = -param4; param3 < 0; param3++) {
-                var8 = ed.field_k[var6_int];
+                var8 = SoftwareRasterizer.pixels[var6_int];
                 if (((var8 & 65280) >> 8) > param5 &&
                   (255 & var8 >> 8) >= (16711680 & var8) >> 16) {
                   var9 = -60 + (510 & var8 >> 15);
@@ -106,7 +106,7 @@ final class l extends ff {
                   var10 = var8 & 65280;
                   var10 = (var10 >> 1) - (var10 >> 5) & 65280;
                   var11 = 31 & var8 >> 3;
-                  ed.field_k[var6_int] = sd.a(var11, sd.a(var10, var9 << 16));
+                  SoftwareRasterizer.pixels[var6_int] = sd.a(var11, sd.a(var10, var9 << 16));
                 }
                 var6_int++;
               }
@@ -130,7 +130,7 @@ final class l extends ff {
         return null;
     }
 
-    final void a(int param0, int param1, int param2, ub param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           this.field_U = this.field_U + 1;
           if (param0 != 10000536) {
@@ -151,9 +151,9 @@ final class l extends ff {
         int var11;
         int var12;
         int var13;
-        o var14;
-        o var15;
-        o var16;
+        Sprite var14;
+        Sprite var15;
+        Sprite var16;
         ok var6Lifetime1;
         var13 = wizardrun.field_H;
         var6 = this.field_T.a(true);
@@ -174,36 +174,36 @@ final class l extends ff {
         var6Lifetime1 = this.field_T.a(true);
         var8 = (qe) ((Object) this.field_w);
         var9 = param0 + this.field_o;
-        var10 = var8.a(true, param3, (ub) (this)) + (var8.a((ub) (this), (byte) 96).b(126) >> 1);
+        var10 = var8.a(true, param3, (UiWidget) (this)) + (var8.a((UiWidget) (this), (byte) 96).b(126) >> 1);
         if (var6Lifetime1 != nf.field_c &&
           field_S != var6Lifetime1) {
           if (var6Lifetime1 == hg.field_c) {
             var14 = te.field_k[2];
-            var14.a(var9, var10 - (var14.field_p >> 1), 256);
+            var14.a(var9, var10 - (var14.height >> 1), 256);
           } else if (gf.field_V == var6Lifetime1) {
             var15 = te.field_k[1];
-            var15.a(var9, -(var15.field_p >> 1) + var10, 256);
+            var15.a(var9, -(var15.height >> 1) + var10, 256);
           }
         } else {
           var16 = te.field_k[0];
-          var11 = var16.field_x << 1;
-          var12 = var16.field_s << 1;
+          var11 = var16.fullWidth << 1;
+          var12 = var16.fullHeight << 1;
           if (this.field_R != null &&
-            this.field_R.field_z >= var11 &&
-            var12 <= this.field_R.field_p) {
+            this.field_R.width >= var11 &&
+            var12 <= this.field_R.height) {
             ud.a(this.field_R, false);
-            ed.d();
+            SoftwareRasterizer.d();
           } else {
-            this.field_R = new o(var11, var12);
+            this.field_R = new Sprite(var11, var12);
             ud.a(this.field_R, false);
           }
-          var16.b(112, 144, var16.field_x << 4, var16.field_s << 4, -this.field_U << 10, 4096);
+          var16.b(112, 144, var16.fullWidth << 4, var16.fullHeight << 4, -this.field_U << 10, 4096);
           bb.b(4);
-          this.field_R.a(-(var16.field_x >> 1) + var9, -var16.field_s + var10, 256);
+          this.field_R.a(-(var16.fullWidth >> 1) + var9, -var16.fullHeight + var10, 256);
         }
     }
 
-    final boolean a(ub param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

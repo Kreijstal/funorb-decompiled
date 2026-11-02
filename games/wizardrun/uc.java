@@ -9,12 +9,12 @@ final class uc {
     private int field_c;
     String field_i;
     private int field_f;
-    static oi field_b;
+    static IntrusiveDeque field_b;
     static int field_a;
     static int field_g;
     static String[] field_d;
 
-    final static void a(int param0, String param1, o param2) {
+    final static void a(int param0, String param1, Sprite param2) {
         try {
           od.field_f = param2;
           pc.field_r = param1;
@@ -63,16 +63,16 @@ final class uc {
         return true;
     }
 
-    final static void a(boolean param0, java.awt.Canvas param1) {
+    final static void drawLoadingScreen(boolean param0, java.awt.Canvas param1) {
         try {
           if (param0) {
             java.awt.Canvas var3 = (java.awt.Canvas) null;
-            uc.a(true, (java.awt.Canvas) null);
+            uc.drawLoadingScreen(true, (java.awt.Canvas) null);
           }
           if (11 == ml.field_t) {
             hh.a((byte) 124);
           }
-          p.a((byte) 67, dg.field_a, cb.field_c, ok.field_b);
+          p.drawProgressBar((byte) 67, dg.loadingMessage, cb.field_c, ok.loadingProgress);
           fc.a((byte) 80, 0, param1, 0);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "uc.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -111,7 +111,7 @@ final class uc {
 
     static {
         field_e = "That name is not available";
-        field_b = new oi();
+        field_b = new IntrusiveDeque();
         field_d = new String[]{"£3.20", "€4.25", "US$ 5.00", "Can$ 4.95", "Aus$ 6.50", "Krn 29.95", "", "Rp 160", "Rng 17.95", "NZ$ 7.95", "SG$ 6.95", "Krn 44.95", "R$ 7,00"};
         field_a = -1;
     }

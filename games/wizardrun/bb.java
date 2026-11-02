@@ -73,7 +73,7 @@ class bb extends uh {
             if (param0.length() <= var4) {
               return null;
             }
-            if (df.a(param0.charAt(var4), true)) {
+            if (RasterBuffer.a(param0.charAt(var4), true)) {
               var4++;
               continue;
             }
@@ -100,8 +100,8 @@ class bb extends uh {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        ed.a(var1.field_q, var1.field_v, var1.field_o);
-        ed.c(var1.field_r, var1.field_u, var1.field_s, var1.field_p);
+        SoftwareRasterizer.setTarget(var1.field_q, var1.field_v, var1.field_o);
+        SoftwareRasterizer.setClip(var1.field_r, var1.field_u, var1.field_s, var1.field_p);
         var1.field_q = null;
         qa.field_q.a(var1, false);
         if (param0 == 4) {
@@ -110,13 +110,13 @@ class bb extends uh {
         bb.b((byte) -18);
     }
 
-    final void a(int param0, va param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           param1.b(param0 + 1290648724, this.field_m);
           param1.a(this.field_i, -66);
           if (param0 != 4) {
-            va var4 = (va) null;
-            this.a(-43, (va) null);
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.a(-43, (PacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "bb.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

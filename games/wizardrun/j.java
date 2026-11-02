@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class j {
-    final static boolean a(o param0, int param1, int param2, o param3, int param4, int param5) {
+    final static boolean a(Sprite param0, int param1, int param2, Sprite param3, int param4, int param5) {
         int var22 = 0;
         int var23 = 0;
         int stackIn_9_0 = 0;
@@ -23,20 +23,20 @@ final class j {
         int var19;
         int[] var30;
         int[] var31;
-        param1 = param1 + param0.field_u;
-        param4 = param4 + param3.field_u;
+        param1 = param1 + param0.offsetX;
+        param4 = param4 + param3.offsetX;
         var6 = param4 - param1;
-        var7 = param0.field_z;
-        if (var6 < param0.field_z) {
-          var8 = param3.field_z;
-          if (var6 > -param3.field_z) {
-            param2 = param2 + param0.field_v;
-            param5 = param5 + param3.field_v;
+        var7 = param0.width;
+        if (var6 < param0.width) {
+          var8 = param3.width;
+          if (var6 > -param3.width) {
+            param2 = param2 + param0.offsetY;
+            param5 = param5 + param3.offsetY;
             var9 = param5 - param2;
-            var10 = param0.field_p;
-            if (var9 < param0.field_p) {
-              var11 = param3.field_p;
-              if (var9 > -param3.field_p) {
+            var10 = param0.height;
+            if (var9 < param0.height) {
+              var11 = param3.height;
+              if (var9 > -param3.height) {
                 stackIn_9_0 = (var6 > 0) ? var6 : 0;
                 var12 = stackIn_9_0;
                 var13 = var6 + var8;
@@ -55,8 +55,8 @@ final class j {
                 var17 = var7 - var13;
                 var18 = (var14 - var9) * var8 + (var12 - var6);
                 var19 = var8 - var13;
-                var30 = param0.field_B;
-                var31 = param3.field_B;
+                var30 = param0.pixels;
+                var31 = param3.pixels;
                 for (var22 = var15; var22 > 0; var22--) {
                   for (var23 = var13; var23 > 0; var23--) {
                     if (var30[var16] != 0 &&

@@ -34,7 +34,7 @@ final class rc {
         if (this == fc.field_b) {
           return true;
         }
-        if (hi.field_l != this) {
+        if (BufferedSocket.field_l != this) {
           return false;
         }
         return true;
@@ -78,6 +78,6 @@ final class rc {
 
     static {
         field_a = 0;
-        oi discarded$0 = new oi();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
     }
 }

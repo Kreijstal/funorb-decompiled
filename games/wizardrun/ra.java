@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ra extends wl {
+final class ra extends IntrusiveNode {
     static uf field_j;
     int field_n;
-    static o field_p;
+    static Sprite field_p;
     static String field_i;
     static int field_k;
     static String field_l;
     static int field_o;
-    static o[] field_m;
+    static Sprite[] wizardNoHatSprites;
 
     public static void c(int param0) {
         field_j = null;
         int var1 = 7 / ((param0 - 64) / 46);
         field_i = null;
         field_p = null;
-        field_m = null;
+        wizardNoHatSprites = null;
         field_l = null;
     }
 

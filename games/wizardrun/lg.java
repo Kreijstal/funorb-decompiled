@@ -4,7 +4,7 @@
 final class lg {
     static int field_d;
     static String field_c;
-    static o[] field_a;
+    static Sprite[] field_a;
     static String field_b;
 
     public static void a(byte param0) {
@@ -14,7 +14,7 @@ final class lg {
           field_c = null;
           return;
         }
-        field_a = (o[]) null;
+        field_a = (Sprite[]) null;
         field_a = null;
         field_b = null;
         field_c = null;

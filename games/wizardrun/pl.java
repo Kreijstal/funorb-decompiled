@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class pl extends ub {
+class pl extends UiWidget {
     private boolean field_y;
     static ga field_E;
     static int field_A;
@@ -58,7 +58,7 @@ class pl extends ub {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, ub param4, int param5) {
+    final void a(int param0, int param1, int param2, int param3, UiWidget param4, int param5) {
         try {
           if (this.field_s != null &&
             this.field_s instanceof ja) {
@@ -138,7 +138,7 @@ class pl extends ub {
         }
     }
 
-    boolean a(ub param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -155,7 +155,7 @@ class pl extends ub {
           this.field_C = true;
           if (this.field_s != null &&
             this.field_s instanceof ma) {
-            ((ma) (this.field_s)).a((ub) (this), param1 ^ -19983, this.field_C);
+            ((ma) (this.field_s)).a((UiWidget) (this), param1 ^ -19983, this.field_C);
           }
           if (param1 != 8) {
             pl.a(92);
@@ -175,7 +175,7 @@ class pl extends ub {
         }
     }
 
-    boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, ub param6) {
+    boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         RuntimeException stackIn_12_0 = null;
@@ -211,7 +211,7 @@ class pl extends ub {
         }
     }
 
-    void a(int param0, int param1, int param2, ub param3) {
+    void a(int param0, int param1, int param2, UiWidget param3) {
         try {
           super.a(param0, param1, param2, param3);
           if (this.field_q != 0) {
@@ -237,7 +237,7 @@ class pl extends ub {
         return this.field_C;
     }
 
-    boolean a(char param0, int param1, byte param2, ub param3) {
+    boolean a(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -292,7 +292,7 @@ class pl extends ub {
           return;
         }
         if (this.field_s instanceof ma) {
-          ((ma) (this.field_s)).a((ub) (this), -19975, this.field_C);
+          ((ma) (this.field_s)).a((UiWidget) (this), -19975, this.field_C);
           return;
         }
     }

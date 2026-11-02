@@ -14,7 +14,7 @@ final class cd implements Runnable {
     private boolean field_g;
     int field_b;
 
-    final static void a(int param0, va param1, int param2, int param3, int param4) {
+    final static void a(int param0, PacketBuffer param1, int param2, int param3, int param4) {
         param1.b((byte) 11, 12);
         if (param2 != 20443) {
           return;
@@ -31,11 +31,11 @@ final class cd implements Runnable {
 
     final static void a(java.applet.Applet param0, byte param1) {
         try {
-          wl.a("", param0, (byte) -98);
+          IntrusiveNode.a("", param0, (byte) -98);
           ga.a(param0, (byte) -72);
           if (param1 != -113) {
-            va var3 = (va) null;
-            cd.a(-24, (va) null, 100, -92, -33);
+            PacketBuffer var3 = (PacketBuffer) null;
+            cd.a(-24, (PacketBuffer) null, 100, -92, -33);
           }
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "cd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -72,11 +72,11 @@ final class cd implements Runnable {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          vh var2 = null;
-          va var3 = null;
+          PlatformTaskDispatcher var2 = null;
+          PacketBuffer var3 = null;
           if (param0 != -18067) {
-            var2 = (vh) null;
-            cd.a(true, (vh) null);
+            var2 = (PlatformTaskDispatcher) null;
+            cd.a(true, (PlatformTaskDispatcher) null);
           }
           if (ii.field_f.field_k >= 4) {
             if (-1 == ii.field_f.field_n) {
@@ -102,12 +102,12 @@ final class cd implements Runnable {
               }
             }
             if (wc.field_k == 2) {
-              si.field_q = new hi((java.net.Socket) (hb.field_k.field_e), vk.field_p);
-              var3 = new va(13);
+              si.field_q = new BufferedSocket((java.net.Socket) (hb.field_k.field_e), vk.field_p);
+              var3 = new PacketBuffer(13);
               cd.a(ej.field_d, var3, 20443, fg.field_c, he.field_q);
               var3.b((byte) 11, 15);
               var3.f(pg.field_j, 613003928);
-              si.field_q.a(13, var3.field_k, 1, 0);
+              si.field_q.a(13, var3.payload, 1, 0);
               wc.field_k = wc.field_k + 1;
               la.field_g = d.a((byte) 109) + 30000L;
             }
@@ -147,7 +147,7 @@ final class cd implements Runnable {
         }
     }
 
-    final static rb[] a(boolean param0, vh param1) {
+    final static rb[] a(boolean param0, PlatformTaskDispatcher param1) {
         int var5 = 0;
         rb[] stackIn_4_0 = null;
         long stackIn_9_0 = 0L;
@@ -229,7 +229,7 @@ final class cd implements Runnable {
           }
           var4 = new sk();
           var4.field_w = param2;
-          var4.field_o = (long)param1;
+          var4.secondaryKey = (long)param1;
           var4.field_x = 3;
           var4.field_r = false;
           this.a(var4, -1);
@@ -262,7 +262,7 @@ final class cd implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = new sk();
-          var5.field_o = (long)param3;
+          var5.secondaryKey = (long)param3;
           var5.field_x = 2;
           var5.field_w = param1;
           var5.field_A = param2;
@@ -311,7 +311,7 @@ final class cd implements Runnable {
           synchronized (var5) {
             var6 = (sk) (this.field_f.a(param1 ^ param1));
             while (var6 != null) {
-              if (~var6.field_o == ~(long)param0 &&
+              if (~var6.secondaryKey == ~(long)param0 &&
                 var6.field_w == param2 &&
                 2 == var6.field_x) {
                 var4.field_s = false;
@@ -399,11 +399,11 @@ final class cd implements Runnable {
             }
             try {
               if (var7.field_x == 2) {
-                var7.field_w.a(var7.field_A, (int)var7.field_o, 0, var7.field_A.length);
+                var7.field_w.a(var7.field_A, (int)var7.secondaryKey, 0, var7.field_A.length);
                 var7.field_s = false;
               } else {
                 if (3 == var7.field_x) {
-                  var7.field_A = var7.field_w.a(true, (int)var7.field_o);
+                  var7.field_A = var7.field_w.a(true, (int)var7.secondaryKey);
                   var7.field_s = false;
                 } else {
                   var7.field_s = false;
@@ -424,7 +424,7 @@ final class cd implements Runnable {
         }
     }
 
-    cd(vh param0) {
+    cd(PlatformTaskDispatcher param0) {
         jh var2 = null;
         this.field_f = new th();
         this.field_g = false;

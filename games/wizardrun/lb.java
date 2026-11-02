@@ -17,7 +17,7 @@ final class lb {
         return fh.field_f;
     }
 
-    final static void a(int param0, int param1, int param2, o param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, Sprite param3, int param4, int param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
@@ -44,41 +44,41 @@ final class lb {
         int var14Lifetime3;
         var20 = wizardrun.field_H;
         try {
-          var6_int = (param0 - param1 << 8) / param3.field_x;
-          param4 = param4 + param3.field_v;
-          var7 = param3.field_u * var6_int + (param1 << 8);
-          param2 = param2 + param3.field_u;
-          var8 = param2 + ed.field_h * param4;
+          var6_int = (param0 - param1 << 8) / param3.fullWidth;
+          param4 = param4 + param3.offsetY;
+          var7 = param3.offsetX * var6_int + (param1 << 8);
+          param2 = param2 + param3.offsetX;
+          var8 = param2 + SoftwareRasterizer.width * param4;
           var9 = 0;
           if (param5 >= -80) {
             field_f = (String[]) null;
           }
-          var10 = param3.field_p;
-          var11 = param3.field_z;
-          var12 = ed.field_h - var11;
+          var10 = param3.height;
+          var11 = param3.width;
+          var12 = SoftwareRasterizer.width - var11;
           var13 = 0;
-          if (ed.field_i > param4) {
-            var14 = -param4 + ed.field_i;
+          if (SoftwareRasterizer.clipTop > param4) {
+            var14 = -param4 + SoftwareRasterizer.clipTop;
             var9 = var9 + var14 * var11;
-            param4 = ed.field_i;
+            param4 = SoftwareRasterizer.clipTop;
             var10 = var10 - var14;
-            var8 = var8 + var14 * ed.field_h;
+            var8 = var8 + var14 * SoftwareRasterizer.width;
           }
-          if (ed.field_c > param2) {
-            var14Lifetime1 = ed.field_c - param2;
+          if (SoftwareRasterizer.clipLeft > param2) {
+            var14Lifetime1 = SoftwareRasterizer.clipLeft - param2;
             var7 = var7 + var6_int * var14Lifetime1;
             var8 = var8 + var14Lifetime1;
             var9 = var9 + var14Lifetime1;
             var11 = var11 - var14Lifetime1;
             var12 = var12 + var14Lifetime1;
-            param2 = ed.field_c;
+            param2 = SoftwareRasterizer.clipLeft;
             var13 = var13 + var14Lifetime1;
           }
-          if (ed.field_b < var10 + param4) {
-            var10 = var10 - (param4 + var10 - ed.field_b);
+          if (SoftwareRasterizer.clipBottom < var10 + param4) {
+            var10 = var10 - (param4 + var10 - SoftwareRasterizer.clipBottom);
           }
-          if (ed.field_l < param2 + var11) {
-            var14Lifetime2 = -ed.field_l + var11 + param2;
+          if (SoftwareRasterizer.clipRight < param2 + var11) {
+            var14Lifetime2 = -SoftwareRasterizer.clipRight + var11 + param2;
             var11 = var11 - var14Lifetime2;
             var13 = var13 + var14Lifetime2;
             var12 = var12 + var14Lifetime2;
@@ -94,14 +94,14 @@ final class lb {
                 if (var15 >= 0) {
                   incrementValue$0 = var9;
                   var9++;
-                  var17 = param3.field_B[incrementValue$0];
+                  var17 = param3.pixels[incrementValue$0];
                   if (var17 != 0) {
                     if (var15 <= 255) {
-                      var18 = ed.field_k[var8];
+                      var18 = SoftwareRasterizer.pixels[var8];
                       var19 = 16711935 & (16711935 & var17) * var15 + (16711935 & var18) * var16 >> 8;
-                      ed.field_k[var8] = (kl.b(16711838, kl.b(65280, var18) * var16 + var15 * kl.b(var17, 65280)) >> 8) + var19;
+                      SoftwareRasterizer.pixels[var8] = (kl.b(16711838, kl.b(65280, var18) * var16 + var15 * kl.b(var17, 65280)) >> 8) + var19;
                     } else {
-                      ed.field_k[var8] = var17;
+                      SoftwareRasterizer.pixels[var8] = var17;
                     }
                   }
                   var8++;

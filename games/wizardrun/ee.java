@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ee extends rk {
+class ee extends DualLinkNode {
     static int field_p;
     static int field_r;
-    static o field_q;
+    static Sprite field_q;
 
     final static void a(java.awt.Component param0, int param1) {
         try {
-          param0.removeMouseListener(tc.field_m);
-          param0.removeMouseMotionListener(tc.field_m);
-          param0.removeFocusListener(tc.field_m);
-          ve.field_d = 0;
+          param0.removeMouseListener(tc.mouseHandler);
+          param0.removeMouseMotionListener(tc.mouseHandler);
+          param0.removeFocusListener(tc.mouseHandler);
+          ve.pressedButton = 0;
           if (param1 != 6769) {
             java.awt.Component var3 = (java.awt.Component) null;
             ee.a((java.awt.Component) null, -20);

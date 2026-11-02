@@ -1,0 +1,87 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ClientException extends RuntimeException {
+    String field_b;
+    Throwable field_c;
+    static boolean field_a;
+
+    final static void a(int param0, int param1, int param2, int param3, int param4) {
+        ph.d(-31782);
+        if (param0 != 0) {
+          return;
+        }
+        SoftwareRasterizer.intersectClip(param2, param3, param4, param1);
+    }
+
+    final static void a(int param0) {
+        ic.field_b = null;
+        MouseInputHandler.field_b = null;
+        mf.field_j = (byte[][]) null;
+        ImageProducerRasterBuffer.field_k = null;
+        if (param0 == 0) {
+          ne.field_h = null;
+          ph.field_q = null;
+          return;
+        }
+        field_a = false;
+        ne.field_h = null;
+        ph.field_q = null;
+    }
+
+    ClientException(Throwable param0, String param1) {
+        this.field_c = param0;
+        this.field_b = param1;
+    }
+
+    final static db a(db param0, byte param1, int[] param2) {
+        db var3 = null;
+        RuntimeException var3_ref = null;
+        db stackIn_2_0 = null;
+        db stackIn_4_0 = null;
+        RuntimeException stackIn_7_0 = null;
+        StringBuilder stackIn_7_1 = null;
+        String stackIn_8_2 = null;
+        StringBuilder stackIn_10_1 = null;
+        String stackIn_11_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          var3 = new db(0, 0, 0);
+          var3.field_k = param2;
+          var3.field_d = param0.field_d;
+          var3.field_a = param0.field_a;
+          var3.field_h = param0.field_h;
+          var3.field_j = param0.field_j;
+          if (param1 > -7) {
+            stackIn_2_0 = (db) null;
+            return stackIn_2_0;
+          }
+          var3.field_l = param0.field_l;
+          var3.field_c = param0.field_c;
+          var3.field_b = param0.field_b;
+          stackIn_4_0 = var3;
+          return stackIn_4_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3_ref = decompiledCaughtException;
+          stackIn_7_0 = var3_ref;
+          stackIn_7_1 = new StringBuilder().append("eb.C(");
+          if (param0 == null) {
+            stackIn_8_2 = "null";
+          } else {
+            stackIn_8_2 = "{...}";
+          }
+          stackIn_10_1 = ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',');
+          if (param2 == null) {
+            stackIn_11_2 = "null";
+          } else {
+            stackIn_11_2 = "{...}";
+          }
+          throw bd.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+        }
+    }
+
+    static {
+        field_a = false;
+    }
+}

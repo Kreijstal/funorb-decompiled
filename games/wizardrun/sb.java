@@ -6,7 +6,7 @@ final class sb {
     static long field_c;
     static int[] field_b;
     static int field_d;
-    static vh field_e;
+    static PlatformTaskDispatcher field_e;
 
     final static long a(byte param0, CharSequence param1) {
         long var2_long = 0L;

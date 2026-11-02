@@ -120,12 +120,12 @@ final class fc {
     final static void a(String param0, boolean param1, int param2) {
         ga.field_a = param1;
         cf.field_i = true;
-        aa.field_lb = new mh(u.field_A, va.field_i, param0, wi.field_J, ga.field_a);
+        aa.field_lb = new mh(GameShell.field_A, PacketBuffer.field_i, param0, wi.field_J, ga.field_a);
         if (param2 > -119) {
           return;
         }
         try {
-          u.field_A.b((ub) (aa.field_lb), (byte) 55);
+          GameShell.field_A.b((UiWidget) (aa.field_lb), (byte) 55);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "fc.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

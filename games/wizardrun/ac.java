@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ac extends rk {
+final class ac extends DualLinkNode {
     static int field_r;
     private String[] field_v;
     static int[] field_q;
-    static o field_s;
+    static Sprite field_s;
     private int[] field_w;
     static int field_t;
     int[] field_p;
@@ -41,8 +41,8 @@ final class ac extends rk {
           }
         }
         if (param0 >= -118) {
-          va var4 = (va) null;
-          this.a(92, (va) null, 16);
+          PacketBuffer var4 = (PacketBuffer) null;
+          this.a(92, (PacketBuffer) null, 16);
         }
     }
 
@@ -86,10 +86,10 @@ final class ac extends rk {
         if (param0 != 0) {
           return;
         }
-        tf.a(-20232);
+        MouseInputHandler.a(-20232);
     }
 
-    private final void a(int param0, va param1, int param2) {
+    private final void a(int param0, PacketBuffer param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -155,7 +155,7 @@ final class ac extends rk {
 
     public static void e(int param0) {
         if (param0 != 0) {
-          field_s = (o) null;
+          field_s = (Sprite) null;
         }
         field_s = null;
         field_q = null;
@@ -164,7 +164,7 @@ final class ac extends rk {
     ac() {
     }
 
-    final void a(va param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = wizardrun.field_H;
         int var3_intLifetime1;

@@ -34,7 +34,7 @@ final class nf {
         }
     }
 
-    final static void a(int param0, int param1, int param2, byte param3, o[] param4) {
+    final static void a(int param0, int param1, int param2, byte param3, Sprite[] param4) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -50,22 +50,22 @@ final class nf {
         try {
           if (param4 != null &&
             param2 > 0) {
-            var5_int = param4[0].field_x;
-            var6 = param4[2].field_x;
+            var5_int = param4[0].fullWidth;
+            var6 = param4[2].fullWidth;
             if (param3 > -31) {
               nf.b(38);
             }
-            var7 = param4[1].field_x;
+            var7 = param4[1].fullWidth;
             param4[0].e(param0, param1);
             param4[2].e(param2 + param0 - var6, param1);
-            ed.b(ac.field_q);
-            ed.b(var5_int + param0, param1, param0 + param2 - var6, param4[1].field_s + param1);
+            SoftwareRasterizer.saveClip(ac.field_q);
+            SoftwareRasterizer.intersectClip(var5_int + param0, param1, param0 + param2 - var6, param4[1].fullHeight + param1);
             var8 = var5_int + param0;
             var9 = -var6 + param0 + param2;
             for (param0 = var8; param0 < var9; param0 = param0 + var7) {
               param4[1].e(param0, param1);
             }
-            ed.a(ac.field_q);
+            SoftwareRasterizer.restoreClip(ac.field_q);
             return;
           }
           return;
@@ -533,7 +533,7 @@ final class nf {
         int var8Lifetime1;
         var10 = wizardrun.field_H;
         try {
-          var1_int = pf.field_f;
+          var1_int = IntrusiveDequeCursor.field_f;
           var2 = 0;
           if (oc.field_d == 2) {
             var3_long = -kh.field_g + d.a((byte) 63);
@@ -610,10 +610,10 @@ final class nf {
               var1_int = var1_int + e.field_d;
             }
             if (0 > var4) {
-              le.field_j.c(var6, var8Lifetime1, var1_int + lc.field_a, var5, -1);
+              le.field_j.drawString(var6, var8Lifetime1, var1_int + lc.field_a, var5, -1);
               var1_int = var1_int + si.field_f;
             } else {
-              uf.field_c.c(var6, var8Lifetime1, var1_int + ki.field_I, var5, -1);
+              uf.field_c.drawString(var6, var8Lifetime1, var1_int + ki.field_I, var5, -1);
               var1_int = var1_int + (ec.field_c + na.field_e + e.field_d);
             }
             var3++;

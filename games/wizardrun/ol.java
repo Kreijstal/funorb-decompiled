@@ -53,7 +53,7 @@ final class ol {
         }
     }
 
-    final static String a(int param0, va param1, byte param2) {
+    final static String a(int param0, PacketBuffer param1, byte param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -75,7 +75,7 @@ final class ol {
             if (param2 < 35) {
               field_d = (String) null;
             }
-            param1.field_m = param1.field_m + fb.field_d.a(false, 0, var4, var3_int, param1.field_m, param1.field_k);
+            param1.position = param1.position + fb.field_d.a(false, 0, var4, var3_int, param1.position, param1.payload);
             var5 = bi.a(0, var3_int, var4, false);
             stackIn_5_0 = var5;
             return stackIn_5_0;
@@ -115,32 +115,32 @@ final class ol {
             return false;
           }
           dupTemp$1 = d.a((byte) 119);
-          hi.field_k = dupTemp$1;
+          BufferedSocket.field_k = dupTemp$1;
           eg.field_C = dupTemp$1;
           if (param0 < 118) {
             var3 = (kl) null;
             ol.a((kl) null, (kl) null, (byte) -16);
           }
           if (ab.field_h.field_a != 1) {
-            wh.field_j = sf.field_i;
+            NodeHashTableIterator.field_j = sf.field_i;
           } else {
             try {
-              jc.field_H = new hi((java.net.Socket) (ab.field_h.field_e), sb.field_e);
-              n.field_b.field_m = 0;
+              jc.field_H = new BufferedSocket((java.net.Socket) (ab.field_h.field_e), sb.field_e);
+              n.field_b.position = 0;
               var5 = nk.field_N;
               var6 = var5;
-              var6.field_m = 0;
-              wh.field_j = tj.field_G;
+              var6.position = 0;
+              NodeHashTableIterator.field_j = tj.field_G;
               stackIn_12_0 = (param1) ? -2 : -1;
               l.field_P = stackIn_12_0;
               wizardrun.field_E = stackIn_12_0;
               me.field_c = stackIn_12_0;
-              cd.a(bl.field_a, n.field_b, 20443, vk.field_l, df.field_a);
+              cd.a(bl.field_a, n.field_b, 20443, vk.field_l, RasterBuffer.field_a);
               id.a((byte) -67, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              wh.field_j = sf.field_i;
+              NodeHashTableIterator.field_j = sf.field_i;
               ab.field_h = null;
               return true;
             }

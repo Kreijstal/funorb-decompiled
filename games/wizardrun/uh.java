@@ -29,9 +29,9 @@ abstract class uh {
           if (ug.field_I[param0] < ug.field_I[param1]) {
             return false;
           }
-          var4 = sk.field_B[param1] + tf.field_c[param1] + mk.field_c[param1];
+          var4 = sk.field_B[param1] + MouseInputHandler.field_c[param1] + mk.field_c[param1];
           if (param3 == -54) {
-            var5 = tf.field_c[param0] + (sk.field_B[param0] + mk.field_c[param0]);
+            var5 = MouseInputHandler.field_c[param0] + (sk.field_B[param0] + mk.field_c[param0]);
             if (var5 > var4) {
               return true;
             }
@@ -41,7 +41,7 @@ abstract class uh {
             return !(param0 <= param1);
           }
           uh.a(-121);
-          var5Lifetime3 = tf.field_c[param0] + (sk.field_B[param0] + mk.field_c[param0]);
+          var5Lifetime3 = MouseInputHandler.field_c[param0] + (sk.field_B[param0] + mk.field_c[param0]);
           if (var5Lifetime3 > var4) {
             return true;
           }
@@ -62,10 +62,10 @@ abstract class uh {
         if (td.field_c[param0] < td.field_c[param1]) {
           return false;
         }
-        var4Lifetime1 = sk.field_B[param1] + tf.field_c[param1] + mk.field_c[param1];
+        var4Lifetime1 = sk.field_B[param1] + MouseInputHandler.field_c[param1] + mk.field_c[param1];
         if (param3 != -54) {
           uh.a(-121);
-          var5Lifetime1 = tf.field_c[param0] + (sk.field_B[param0] + mk.field_c[param0]);
+          var5Lifetime1 = MouseInputHandler.field_c[param0] + (sk.field_B[param0] + mk.field_c[param0]);
           if (var5Lifetime1 > var4Lifetime1) {
             return true;
           }
@@ -74,7 +74,7 @@ abstract class uh {
           }
           return !(param0 <= param1);
         }
-        var5Lifetime2 = tf.field_c[param0] + (sk.field_B[param0] + mk.field_c[param0]);
+        var5Lifetime2 = MouseInputHandler.field_c[param0] + (sk.field_B[param0] + mk.field_c[param0]);
         if (var5Lifetime2 > var4Lifetime1) {
           return true;
         }
@@ -90,15 +90,15 @@ abstract class uh {
     abstract sd a(boolean param0);
 
     final static void a(byte param0) {
-        u.field_A.d(false);
-        if (ea.field_e == null) {
-          ea.field_e = new hk(u.field_A, bh.field_a);
+        GameShell.field_A.d(false);
+        if (ProxySocketConnector.field_e == null) {
+          ProxySocketConnector.field_e = new hk(GameShell.field_A, bh.field_a);
         }
-        u.field_A.b((ub) (ea.field_e), (byte) 73);
+        GameShell.field_A.b((UiWidget) (ProxySocketConnector.field_e), (byte) 73);
         int var1 = -118 % ((76 - param0) / 49);
     }
 
-    abstract void a(int param0, va param1);
+    abstract void a(int param0, PacketBuffer param1);
 
     public static void a(int param0) {
         field_d = null;

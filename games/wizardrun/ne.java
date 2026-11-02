@@ -14,9 +14,9 @@ final class ne {
     final static int a(byte param0) {
         if (param0 != 28) {
           field_b = (ji) null;
-          return h.field_p;
+          return h.keyIdleTime;
         }
-        return h.field_p;
+        return h.keyIdleTime;
     }
 
     final static boolean b(int param0) {
@@ -26,7 +26,7 @@ final class ne {
         if (jc.field_H == null) {
           return false;
         }
-        if (!wh.field_j.a(0)) {
+        if (!NodeHashTableIterator.field_j.a(0)) {
           return false;
         }
         return true;
@@ -60,10 +60,10 @@ final class ne {
         if (ol.field_b) {
           return null;
         }
-        if (jc.field_I > gj.field_b) {
+        if (jc.field_I > IterableNodeHashTable.field_b) {
           return null;
         }
-        if (jc.field_I + ll.field_o > gj.field_b) {
+        if (jc.field_I + ll.field_o > IterableNodeHashTable.field_b) {
           return vb.field_I;
         }
         return null;

@@ -6,7 +6,7 @@ final class qc extends pe implements fj, qd {
     private boolean field_P;
     private og field_Q;
     private pl field_M;
-    static o[] field_E;
+    static Sprite[] field_E;
     private String field_F;
     private pl field_G;
     private boolean field_J;
@@ -22,7 +22,7 @@ final class qc extends pe implements fj, qd {
         try {
           var3 = this.field_K;
           if (param0 != 5990) {
-            field_E = (o[]) null;
+            field_E = (Sprite[]) null;
           }
           var4 = param1;
           var3.a(-1, false, var4);
@@ -59,7 +59,7 @@ final class qc extends pe implements fj, qd {
           gh.field_b.a(this.field_F, 20 + (param0 + this.field_o), 15 + (this.field_l + param3), this.field_r - 40, this.field_n, 16777215, -1, 1, 0, gh.field_b.field_M);
         }
         if (null != this.field_M) {
-          ed.f(10 + param0, 134 + param3, this.field_r - 20, 4210752);
+          SoftwareRasterizer.drawHorizontalLine(10 + param0, 134 + param3, this.field_r - 20, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }
@@ -131,7 +131,7 @@ final class qc extends pe implements fj, qd {
         }
     }
 
-    final boolean a(char param0, int param1, byte param2, ub param3) {
+    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_12_0 = false;
@@ -177,7 +177,7 @@ final class qc extends pe implements fj, qd {
         RuntimeException var3 = null;
         try {
           if (this.field_K == param1) {
-            this.field_Q.a((ub) (this), 8);
+            this.field_Q.a((UiWidget) (this), 8);
           }
           if (this.field_Q == param1) {
             this.a(4210752);
@@ -210,7 +210,7 @@ final class qc extends pe implements fj, qd {
         var7 = wizardrun.field_H;
         try {
           if (param0 != -18905) {
-            field_E = (o[]) null;
+            field_E = (Sprite[]) null;
           }
           if (this.field_H == param1) {
             this.a(4210752);
@@ -218,7 +218,7 @@ final class qc extends pe implements fj, qd {
             if (this.field_M != param1) {
               if (this.field_G == param1) {
                 if (this.field_J) {
-                  ea.c(param0 ^ 12849);
+                  ProxySocketConnector.c(param0 ^ 12849);
                 } else {
                   if (!this.field_O) {
                     sf.a((byte) -89);
@@ -272,7 +272,7 @@ final class qc extends pe implements fj, qd {
         RuntimeException decompiledCaughtException = null;
         jl var6 = null;
         RuntimeException var6_ref = null;
-        vd var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         uf var9 = null;
         ik var12 = null;
@@ -298,7 +298,7 @@ final class qc extends pe implements fj, qd {
             if (!this.field_O) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = ti.field_h;
+              stackIn_19_3 = IsaacRandom.field_h;
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
@@ -323,7 +323,7 @@ final class qc extends pe implements fj, qd {
           if (this.field_M != null) {
             this.field_M.field_w = (bf) ((Object) var6);
           }
-          this.field_K.field_p = tf.field_a;
+          this.field_K.field_p = MouseInputHandler.field_a;
           if (this.field_M != null) {
             this.field_M.field_p = hb.field_i;
           }
@@ -353,12 +353,12 @@ final class qc extends pe implements fj, qd {
           }
           dupTemp$0 = new ik(10, this.field_l, -20 + this.field_r, 25, this.field_K, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
-          this.a((ub) (dupTemp$0), (byte) 57);
-          this.field_l = this.field_l + (5 + ((ub) ((Object) var12)).field_n);
+          this.a((UiWidget) (dupTemp$0), (byte) 57);
+          this.field_l = this.field_l + (5 + ((UiWidget) ((Object) var12)).field_n);
           dupTemp$1 = new ik(10, this.field_l, -20 + this.field_r, 25, this.field_Q, false, 80, 3, var7, 16777215, qk.field_d);
           var13 = dupTemp$1;
-          this.a((ub) (dupTemp$1), (byte) 85);
-          this.field_l = this.field_l + (5 + ((ub) ((Object) var13)).field_n);
+          this.a((UiWidget) (dupTemp$1), (byte) 85);
+          this.field_l = this.field_l + (5 + ((UiWidget) ((Object) var13)).field_n);
           this.field_H.field_s = (ce) (this);
           if (this.field_M != null) {
             this.field_M.field_s = (ce) (this);
@@ -388,12 +388,12 @@ final class qc extends pe implements fj, qd {
             }
           }
           this.a(110, 0, this.field_l + 3, this.field_r, 0);
-          this.a((ub) (this.field_H), (byte) 84);
+          this.a((UiWidget) (this.field_H), (byte) 84);
           if (null != this.field_M) {
-            this.a((ub) (this.field_M), (byte) 126);
+            this.a((UiWidget) (this.field_M), (byte) 126);
           }
           if (this.field_G != null) {
-            this.a((ub) (this.field_G), (byte) 58);
+            this.a((UiWidget) (this.field_G), (byte) 58);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -416,7 +416,7 @@ final class qc extends pe implements fj, qd {
         }
     }
 
-    final static void a(int param0, int param1, int param2, vh param3, int param4, String param5, boolean param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, String param5, boolean param6, int param7, int param8) {
         he.field_q = param1;
         ej.field_d = param8;
         fg.field_c = param4;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class sc extends wl {
+final class sc extends IntrusiveNode {
     int field_k;
     static String field_i;
     boolean field_j;

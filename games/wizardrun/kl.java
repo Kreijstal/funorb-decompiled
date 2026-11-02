@@ -164,10 +164,10 @@ final class kl {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        va var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        va var29 = null;
-        va var31 = null;
+        PacketBuffer var29 = null;
+        PacketBuffer var31 = null;
         int[] var32 = null;
         byte[][] var33 = null;
         int[] var34 = null;
@@ -236,8 +236,8 @@ final class kl {
             var35 = bh.a((byte) 104, this.field_b[param2], true);
             var25 = var35;
             var9 = var25;
-            var26 = new va(var35);
-            var26.a(param0, param1, 5, var26.field_k.length);
+            var26 = new PacketBuffer(var35);
+            var26.a(param0, param1, 5, var26.payload.length);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -265,10 +265,10 @@ final class kl {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * var12 * var5_int;
-              var29 = new va(var43);
+              var29 = new PacketBuffer(var43);
               var14_int = 0;
               var15_int = 0;
-              var29.field_m = var11;
+              var29.position = var11;
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
@@ -288,7 +288,7 @@ final class kl {
                 return true;
               }
               var44 = new byte[var14_int];
-              var29.field_m = var11;
+              var29.position = var11;
               var14_intLifetime1 = 0;
               var17Lifetime4 = 0;
               for (var18Lifetime3 = 0; var18Lifetime3 < var12; var18Lifetime3++) {
@@ -314,11 +314,11 @@ final class kl {
             var11--;
             var12Lifetime1 = 255 & var23[var11];
             var11 = var11 - var5_int * var12Lifetime1 * 4;
-            var31 = new va(var43);
+            var31 = new PacketBuffer(var43);
             var39 = new int[var5_int];
             var32 = var39;
             var14 = var32;
-            var31.field_m = var11;
+            var31.position = var11;
             for (var15_intLifetime1 = 0; var12Lifetime1 > var15_intLifetime1; var15_intLifetime1++) {
               var16Lifetime1 = 0;
               for (var17Lifetime1 = 0; var17Lifetime1 < var5_int; var17Lifetime1++) {
@@ -334,7 +334,7 @@ final class kl {
               var15[var16Lifetime2] = array$1;
               var39[var16Lifetime2] = 0;
             }
-            var31.field_m = var11;
+            var31.position = var11;
             var16Lifetime3 = 0;
             for (var17Lifetime2 = 0; var17Lifetime2 < var12Lifetime1; var17Lifetime2++) {
               var18Lifetime1 = 0;
@@ -386,12 +386,12 @@ final class kl {
 
     final static void a(int param0, java.awt.Component param1) {
         param1.setFocusTraversalKeysEnabled(false);
-        param1.addKeyListener(ff.field_H);
+        param1.addKeyListener(ff.keyHandler);
         if (param0 != 0) {
           return;
         }
         try {
-          param1.addFocusListener(ff.field_H);
+          param1.addFocusListener(ff.keyHandler);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "kl.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

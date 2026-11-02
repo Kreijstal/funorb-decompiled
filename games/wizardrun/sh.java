@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sh {
-    static o field_b;
+    static Sprite field_b;
     static String field_a;
     static String field_d;
     static int field_c;
@@ -30,7 +30,7 @@ final class sh {
           String stackIn_14_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (vh.field_k.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_k.startsWith("win") &&
               tj.a(99, param2)) {
               return;
             }

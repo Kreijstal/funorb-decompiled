@@ -3,7 +3,7 @@
  */
 final class ia extends md {
     static le[] field_f;
-    static o[] field_i;
+    static Sprite[] field_i;
     private long field_h;
     static String[] field_p;
     static int field_n;

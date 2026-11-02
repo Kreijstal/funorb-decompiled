@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ok {
-    static o[] field_d;
+    static Sprite[] selectStarSprites;
     static ae field_f;
-    static o[][][] field_e;
+    static Sprite[][][] field_e;
     static te field_c;
-    static float field_b;
-    static o[] field_a;
+    static float loadingProgress;
+    static Sprite[] field_a;
 
     public final String toString() {
         throw new IllegalStateException();
@@ -15,16 +15,16 @@ final class ok {
 
     public static void a(int param0) {
         field_a = null;
-        field_d = null;
-        field_e = (o[][][]) null;
+        selectStarSprites = null;
+        field_e = (Sprite[][][]) null;
         field_f = null;
         if (param0 != 0) {
-          field_d = (o[]) null;
+          selectStarSprites = (Sprite[]) null;
         }
         field_c = null;
     }
 
-    final static int a(char param0, CharSequence param1, byte param2) {
+    final static int countCharacter(char param0, CharSequence param1, byte param2) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -65,20 +65,20 @@ final class ok {
         }
     }
 
-    final static void a(String param0, float param1, int param2) {
+    final static void showLoadingProgress(String param0, float param1, int param2) {
         try {
-          dg.field_a = param0;
+          dg.loadingMessage = param0;
           if (param2 != 0) {
-            field_a = (o[]) null;
+            field_a = (Sprite[]) null;
           }
-          field_b = param1;
+          loadingProgress = param1;
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "ok.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
     static {
-        field_d = new o[3];
+        selectStarSprites = new Sprite[3];
         field_f = new ae();
     }
 }

@@ -21,7 +21,7 @@ final class tb extends pe implements ha, qd {
         return false;
     }
 
-    private final int a(int param0, String param1, String param2, int param3, int param4, ub param5) {
+    private final int a(int param0, String param1, String param2, int param3, int param4, UiWidget param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -64,13 +64,13 @@ final class tb extends pe implements ha, qd {
         }
     }
 
-    final void a(int param0, int param1, int param2, ub param3) {
+    final void a(int param0, int param1, int param2, UiWidget param3) {
         int discarded$0 = 0;
         try {
           super.a(param0 ^ 0, param1, param2, param3);
           if (param0 != 10000536) {
-            ub var6 = (ub) null;
-            discarded$0 = this.a(-69, (String) null, (String) null, -121, -105, (ub) null);
+            UiWidget var6 = (UiWidget) null;
+            discarded$0 = this.a(-69, (String) null, (String) null, -121, -105, (UiWidget) null);
           }
           this.field_F.field_B = this.d(false);
         } catch (RuntimeException runtimeException) {
@@ -82,7 +82,7 @@ final class tb extends pe implements ha, qd {
         super(0, 0, 496, 0, (bf) null);
         this.field_E = new p("", (ce) null, 12);
         ll var1 = new ll(e.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, gh.field_b.field_M, -1, 2147483647, true);
-        ub var2 = new ub(ta.field_d, var1, (ce) null);
+        UiWidget var2 = new UiWidget(MouseWheelInput.field_d, var1, (ce) null);
         this.field_F = new pl(td.field_b, (ce) null);
         this.field_G = new pl(oa.field_a, (ce) null);
         this.field_E.field_p = cd.field_a;
@@ -102,19 +102,19 @@ final class tb extends pe implements ha, qd {
         this.field_G.a(118, 15 + var3, 40, 60, var4 + 3);
         this.field_G.field_s = (ce) (this);
         this.field_F.field_s = (ce) (this);
-        this.a((ub) (this.field_F), (byte) 105);
-        this.a((ub) (this.field_G), (byte) 83);
+        this.a((UiWidget) (this.field_F), (byte) 105);
+        this.a((UiWidget) (this.field_G), (byte) 83);
         this.field_H = new wj((ha) (this));
         this.field_H.a(125, 20, 150, this.field_r - (this.field_E.field_o - (-this.field_E.field_r - 60)), this.field_E.field_o + (this.field_E.field_r + 60));
-        this.a((ub) (this.field_H), (byte) 47);
+        this.a((UiWidget) (this.field_H), (byte) 47);
         this.a(113, 0, 55 + var3 + var4, 496, 0);
     }
 
     final static void a(int param0, int param1, ie param2) {
         mg var5 = n.field_b;
         var5.c((byte) 77, param0);
-        var5.field_m = var5.field_m + 1;
-        int var4 = var5.field_m;
+        var5.position = var5.position + 1;
+        int var4 = var5.position;
         if (param1 != -17932) {
           return;
         }
@@ -127,9 +127,9 @@ final class tb extends pe implements ha, qd {
             var5.a(param2.field_i, 0, param2.field_i.length, param1 ^ -17983);
           }
           var5.e(var4, param1 - 1182869092);
-          var5.field_m = var5.field_m - 4;
+          var5.position = var5.position - 4;
           param2.field_k = var5.i(255);
-          var5.a(var5.field_m - var4, -88);
+          var5.a(var5.position - var4, -88);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "tb.CA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -140,8 +140,8 @@ final class tb extends pe implements ha, qd {
         od.field_j = fl.field_M;
         hj.field_c = 0;
         ej.field_c = 0;
-        jj.field_d = new rj(2);
-        jj.field_d.a(param0 ^ -12785, wc.a(29292, fi.field_B, pg.field_n), param1, -1);
+        GameGraphicsResources.field_d = new rj(2);
+        GameGraphicsResources.field_d.a(param0 ^ -12785, wc.a(29292, fi.field_B, pg.field_n), param1, -1);
     }
 
     public final void a(int param0, pl param1, int param2, int param3, int param4) {
@@ -226,12 +226,12 @@ final class tb extends pe implements ha, qd {
           ((jg) (this.field_E.a((byte) 0))).g(105);
           return;
         }
-        ub var3 = (ub) null;
-        int discarded$0 = this.a(4, (String) null, (String) null, 24, -50, (ub) null);
+        UiWidget var3 = (UiWidget) null;
+        int discarded$0 = this.a(4, (String) null, (String) null, 24, -50, (UiWidget) null);
         ((jg) (this.field_E.a((byte) 0))).g(105);
     }
 
-    private final int a(int param0, int param1, int param2, String param3, ub param4, int param5, String param6) {
+    private final int a(int param0, int param1, int param2, String param3, UiWidget param4, int param5, String param6) {
         RuntimeException var8 = null;
         l var9 = null;
         pl var10 = null;
@@ -251,10 +251,10 @@ final class tb extends pe implements ha, qd {
             var10 = (pl) null;
             this.a(19, (pl) null, -126, -50, 59);
           }
-          this.a((ub) (var11), (byte) 44);
+          this.a((UiWidget) (var11), (byte) 44);
           var9 = new l(((wa) ((Object) param4)).a((byte) 117), param3, 126, param1 + var11.field_n, 25 + param5, param2);
           var9.field_s = (ce) (this);
-          this.a((ub) (var9), (byte) 95);
+          this.a((UiWidget) (var9), (byte) 95);
           stackIn_3_0 = var9.field_n + var11.field_n;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -283,7 +283,7 @@ final class tb extends pe implements ha, qd {
         }
     }
 
-    final boolean a(char param0, int param1, byte param2, ub param3) {
+    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_13_0 = false;

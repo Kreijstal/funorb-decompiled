@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lk {
-    static int field_a;
-    static o[] field_b;
+    static int keyEventReadIndex;
+    static Sprite[] field_b;
 
     public static void a(int param0) {
         field_b = null;
         if (param0 != -1) {
           String var2 = (String) null;
-          lk.a(47, (vd) null, 92, (fg) null, (String) null);
+          lk.a(47, (BitmapFont) null, 92, (fg) null, (String) null);
         }
     }
 
-    final static void a(int param0, vd param1, int param2, fg param3, String param4) {
+    final static void a(int param0, BitmapFont param1, int param2, fg param3, String param4) {
         int var8 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -37,7 +37,7 @@ final class lk {
           for (var8 = 1; var8 < param4.length(); var8++) {
             var9 = param4.charAt(var8);
             if (var9 == 60) {
-              var6 = param3.field_e[0] + (var5_int >> 8) + param1.b(param4.substring(0, var8));
+              var6 = param3.field_e[0] + (var5_int >> 8) + param1.stringWidth(param4.substring(0, var8));
             }
             if (-1 != var6) {
               param3.field_e[var8] = var6;
@@ -45,7 +45,7 @@ final class lk {
               if (var9 == 32) {
                 var5_int = var5_int + param2;
               }
-              param3.field_e[var8] = param3.field_e[0] + (var5_int >> 8) + (param1.b(param4.substring(0, 1 + var8)) - param1.a((char) var9));
+              param3.field_e[var8] = param3.field_e[0] + (var5_int >> 8) + (param1.stringWidth(param4.substring(0, 1 + var8)) - param1.charWidth((char) var9));
             }
             if (var9 == 62) {
               var6 = -1;
@@ -79,6 +79,6 @@ final class lk {
     }
 
     static {
-        field_a = 0;
+        keyEventReadIndex = 0;
     }
 }

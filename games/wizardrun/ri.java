@@ -190,7 +190,7 @@ final class ri {
         if (param0 < 18) {
           return false;
         }
-        return ib.a((byte) 46, jg.f(1));
+        return SocketConnector.a((byte) 46, jg.f(1));
     }
 
     static {

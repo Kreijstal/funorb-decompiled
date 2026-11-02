@@ -269,7 +269,7 @@ final class aj {
         field_e = null;
     }
 
-    final void a(va param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_n = new ek();
@@ -278,7 +278,7 @@ final class aj {
         this.field_l.b(param0);
         int var2 = param0.f(255);
         if (var2 != 0) {
-          param0.field_m = param0.field_m - 1;
+          param0.position = param0.position - 1;
           this.field_g = new ek();
           this.field_g.b(param0);
           this.field_y = new ek();
@@ -286,7 +286,7 @@ final class aj {
         }
         var2 = param0.f(255);
         if (var2 != 0) {
-          param0.field_m = param0.field_m - 1;
+          param0.position = param0.position - 1;
           this.field_c = new ek();
           this.field_c.b(param0);
           this.field_r = new ek();
@@ -294,7 +294,7 @@ final class aj {
         }
         var2 = param0.f(255);
         if (var2 != 0) {
-          param0.field_m = param0.field_m - 1;
+          param0.position = param0.position - 1;
           this.field_f = new ek();
           this.field_f.b(param0);
           this.field_a = new ek();

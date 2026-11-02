@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gh {
-    static vd field_b;
+    static BitmapFont field_b;
     static Boolean field_c;
     static String[] field_a;
 
@@ -16,7 +16,7 @@ final class gh {
     }
 
     final static void a(byte param0) {
-        kj.field_d = new oi();
+        kj.field_d = new IntrusiveDeque();
         if (param0 <= 93) {
           byte[] var2 = (byte[]) null;
           gh.a((byte[]) null, 57, -42, 25);

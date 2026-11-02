@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hg {
-    static o field_d;
+    static Sprite field_d;
     static ok field_c;
     static java.awt.Image field_b;
     static int field_a;
@@ -34,7 +34,7 @@ final class hg {
           var3_int = param0.length();
           if (1 <= var3_int &&
             var3_int <= 12) {
-            var4 = ta.a(-76, param0);
+            var4 = MouseWheelInput.a(-76, param0);
             if (param1 > -33) {
               hg.a(123, (byte) 15);
             }

@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vi extends k {
-    private oi field_n;
-    private oi field_p;
+    private IntrusiveDeque field_n;
+    private IntrusiveDeque field_p;
     private int field_o;
     private int field_m;
 
@@ -35,7 +35,7 @@ final class vi extends k {
     private final void a(nb param0) {
         param0.a(false);
         param0.a();
-        wl var2 = this.field_p.field_a.field_b;
+        IntrusiveNode var2 = this.field_p.field_a.next;
         if (var2 == this.field_p.field_a) {
           this.field_o = -1;
         } else {
@@ -74,7 +74,7 @@ final class vi extends k {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_i = var5;
-              this.a(var3.field_b, var3);
+              this.a(var3.next, var3);
             } else {
               var3.field_i = 0;
               this.a(var3);
@@ -84,21 +84,21 @@ final class vi extends k {
         return;
     }
 
-    private final void a(wl param0, nb param1) {
+    private final void a(IntrusiveNode param0, nb param1) {
         while (true) {
           if (param0 == this.field_p.field_a) {
-            u.$cfr$intArgs$a$894bb1585d61(74, param0, param1);
-            this.field_o = ((nb) (this.field_p.field_a.field_b)).field_i;
+            GameShell.$cfr$intArgs$a$894bb1585d61(74, param0, param1);
+            this.field_o = ((nb) (this.field_p.field_a.next)).field_i;
             return;
           }
           if (((nb) (param0)).field_i <= param1.field_i) {
-            param0 = param0.field_b;
+            param0 = param0.next;
             continue;
           }
           break;
         }
-        u.$cfr$intArgs$a$894bb1585d61(74, param0, param1);
-        this.field_o = ((nb) (this.field_p.field_a.field_b)).field_i;
+        GameShell.$cfr$intArgs$a$894bb1585d61(74, param0, param1);
+        this.field_o = ((nb) (this.field_p.field_a.next)).field_i;
         return;
     }
 
@@ -150,7 +150,7 @@ final class vi extends k {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_i = var7;
-              this.a(var5.field_b, var5);
+              this.a(var5.next, var5);
             } else {
               var5.field_i = 0;
               this.a(var5);
@@ -161,8 +161,8 @@ final class vi extends k {
     }
 
     public vi() {
-        this.field_n = new oi();
-        this.field_p = new oi();
+        this.field_n = new IntrusiveDeque();
+        this.field_p = new IntrusiveDeque();
         this.field_o = -1;
         this.field_m = 0;
     }

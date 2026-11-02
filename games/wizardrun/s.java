@@ -4,7 +4,7 @@
 final class s {
     static db[] field_c;
     static od field_b;
-    static o field_a;
+    static Sprite field_a;
 
     final static String a(int param0, CharSequence[] param1, int param2, int param3) {
         int var6_int = 0;
@@ -92,6 +92,6 @@ final class s {
     }
 
     static {
-        field_a = new o(540, 140);
+        field_a = new Sprite(540, 140);
     }
 }

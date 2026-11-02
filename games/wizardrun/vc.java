@@ -7,8 +7,8 @@ final class vc extends pe implements qd {
     static boolean field_M;
     private mh field_L;
     private int[] field_E;
-    static ta field_K;
-    private vd field_J;
+    static MouseWheelInput field_K;
+    private BitmapFont field_J;
     private int field_H;
     private pl[] field_F;
 
@@ -29,7 +29,7 @@ final class vc extends pe implements qd {
           var5 = -2 + this.field_n;
           this.a(param0 ^ 111, 0, this.field_n + 34, this.field_r, param0);
           var4.a(110, var5, 30, this.field_r - 14, 7);
-          this.a((ub) (var4), (byte) 98);
+          this.a((UiWidget) (var4), (byte) 98);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -75,11 +75,11 @@ final class vc extends pe implements qd {
     public static void d(boolean param0) {
         field_K = null;
         if (param0) {
-          field_K = (ta) null;
+          field_K = (MouseWheelInput) null;
         }
     }
 
-    vc(mh param0, vd param1, String param2) {
+    vc(mh param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (bf) null);
         int var4_int = 0;
         this.field_H = 0;
@@ -149,11 +149,11 @@ final class vc extends pe implements qd {
           var1 = ei.field_t;
           if (var1 > 0) {
             if (var1 == 1) {
-              bh.field_a = ib.field_d;
+              bh.field_a = SocketConnector.field_d;
             } else {
               bh.field_a = di.a(new String[]{Integer.toString(var1)}, (byte) 46, of.field_m);
             }
-            bh.field_a = ol.a(new CharSequence[]{(CharSequence) ((Object) bh.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) pf.field_c)}, 550);
+            bh.field_a = ol.a(new CharSequence[]{(CharSequence) ((Object) bh.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) IntrusiveDequeCursor.field_c)}, 550);
           }
           aa.field_lb.l(-27697);
           uh.a((byte) 125);
@@ -181,7 +181,7 @@ final class vc extends pe implements qd {
 
     final static void a(int param0, String param1) {
         try {
-          va.a(-2, param1);
+          PacketBuffer.a(-2, param1);
           if (param0 >= -67) {
             field_G = -79;
           }

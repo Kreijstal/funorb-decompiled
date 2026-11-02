@@ -4,11 +4,11 @@
 import java.io.*;
 
 final class jl extends ll {
-    static kl field_u;
+    static kl bossSoundArchive;
     static int field_r;
     static int field_s;
-    private o[] field_x;
-    static o field_w;
+    private Sprite[] field_x;
+    static Sprite field_w;
     private int field_p;
     private int field_t;
     private int field_q;
@@ -95,7 +95,7 @@ final class jl extends ll {
           if (param0 > -60) {
             jl.d(-41);
           }
-          stackIn_11_0 = da.a(121, -1, (String) (var4), param1, (String) (var3));
+          stackIn_11_0 = GameApplet.a(121, -1, (String) (var4), param1, (String) (var3));
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,7 +133,7 @@ final class jl extends ll {
         }
     }
 
-    public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
+    public final void a(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_18_0 = 0;
@@ -172,7 +172,7 @@ final class jl extends ll {
           var7 = stackIn_15_0;
           stackIn_18_0 = (param4) ? 16777215 : 7105644;
           var8 = stackIn_18_0;
-          e.a(this.field_x, (param2.field_n - this.field_x[0].field_s >> 1) + (param2.field_l + param1), var7, (byte) 118, param0 + param2.field_o, param2.field_r);
+          e.a(this.field_x, (param2.field_n - this.field_x[0].fullHeight >> 1) + (param2.field_l + param1), var7, (byte) 118, param0 + param2.field_o, param2.field_r);
           this.field_k.a(param2.field_k, param0 + param2.field_o, -2 + param2.field_l + param1, param2.field_r, param2.field_n, var8, -1, 1, 1, this.field_k.field_M);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -203,22 +203,22 @@ final class jl extends ll {
           s.field_b.field_r = 0;
         }
         if (param0 != 4) {
-          field_w = (o) null;
+          field_w = (Sprite) null;
         }
         return s.field_b;
     }
 
     public static void d(int param0) {
         if (param0 != 2763306) {
-          field_w = (o) null;
+          field_w = (Sprite) null;
         }
         field_w = null;
-        field_u = null;
+        bossSoundArchive = null;
         field_v = null;
     }
 
     private jl(int param0, int param1, int param2) {
-        this.field_k = va.field_i;
+        this.field_k = PacketBuffer.field_i;
         this.field_t = param2;
         this.field_p = param0;
         this.field_q = param1;

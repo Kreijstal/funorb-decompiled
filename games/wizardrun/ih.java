@@ -34,8 +34,8 @@ final class ih {
           if (fi.field_y != ej.field_b) {
             return false;
           }
-          var8 = new kk(u.field_A, param2);
-          u.field_A.b((ub) (var8), (byte) 94);
+          var8 = new kk(GameShell.field_A, param2);
+          GameShell.field_A.b((UiWidget) (var8), (byte) 94);
           if (ri.c(42)) {
             var8.p(param3 ^ -20371);
             return true;
@@ -46,7 +46,7 @@ final class ih {
           ac.field_t = param4;
           sf.field_a = param5;
           we.field_a = param6;
-          ub.field_m = param1;
+          UiWidget.field_m = param1;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -9,9 +9,9 @@ final class oa {
     final static boolean a(int param0) {
         if (param0 != -25231) {
           field_a = (String) null;
-          return eb.field_a;
+          return ClientException.field_a;
         }
-        return eb.field_a;
+        return ClientException.field_a;
     }
 
     public static void a(boolean param0) {

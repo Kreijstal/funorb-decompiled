@@ -8,7 +8,7 @@ final class qj {
     static String field_f;
     static String field_a;
     static int field_d;
-    private o[] field_g;
+    private Sprite[] field_g;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 != 1) {
@@ -28,7 +28,7 @@ final class qj {
         field_f = null;
     }
 
-    final static boolean a(byte param0, va param1) {
+    final static boolean a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -76,7 +76,7 @@ final class qj {
             qj.a((String) null, -48);
           }
           var4 = (CharSequence) ((Object) param0);
-          stackIn_3_0 = wl.field_a.equals(ta.a(-63, var4));
+          stackIn_3_0 = IntrusiveNode.field_a.equals(MouseWheelInput.a(-63, var4));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -132,16 +132,16 @@ final class qj {
         return stackIn_5_0;
     }
 
-    final static ta a(boolean param0) {
+    final static MouseWheelInput a(boolean param0) {
         try {
           Throwable var1 = null;
-          ta stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0) {
               qj.a(true);
             }
-            stackIn_3_0 = (ta) (Class.forName("nd").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -155,7 +155,7 @@ final class qj {
         }
     }
 
-    qj(o[] param0) {
+    qj(Sprite[] param0) {
         try {
           this.field_g = param0;
         } catch (RuntimeException runtimeException) {

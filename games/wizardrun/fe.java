@@ -130,7 +130,7 @@ final class fe extends mf {
               }
               if (tc.field_l.field_d[var3.a((byte) -68)] &&
                 ke.field_w) {
-                ed.d(32 * var4.field_b, -32 + (480 - var4.field_a * 32), 32, 32, 16777215, 128);
+                SoftwareRasterizer.d(32 * var4.field_b, -32 + (480 - var4.field_a * 32), 32, 32, 16777215, 128);
               }
               var4.field_a = var4.field_a + 1;
             }

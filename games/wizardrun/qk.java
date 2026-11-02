@@ -4,7 +4,7 @@
 final class qk {
     static String field_e;
     private long[] field_b;
-    static oi field_g;
+    static IntrusiveDeque field_g;
     private long[] field_c;
     static kl field_j;
     private int field_p;
@@ -163,7 +163,7 @@ final class qk {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_b[var2] = da.a(gf.a(255L, (long)this.field_o[var3 + 7]), da.a(gf.a((long)this.field_o[var3 + 6] << 8, 65280L), da.a(da.a(gf.a((long)this.field_o[4 + var3] << 24, 4278190080L), da.a(da.a(da.a(gf.a((long)this.field_o[var3 + 1] << 48, 71776119061217280L), (long)this.field_o[var3] << 56), gf.a(280375465082880L, (long)this.field_o[2 + var3] << 40)), gf.a(255L, (long)this.field_o[var3 + 3]) << 32)), gf.a(16711680L, (long)this.field_o[var3 + 5] << 16))));
+          this.field_b[var2] = GameApplet.a(gf.a(255L, (long)this.field_o[var3 + 7]), GameApplet.a(gf.a((long)this.field_o[var3 + 6] << 8, 65280L), GameApplet.a(GameApplet.a(gf.a((long)this.field_o[4 + var3] << 24, 4278190080L), GameApplet.a(GameApplet.a(GameApplet.a(gf.a((long)this.field_o[var3 + 1] << 48, 71776119061217280L), (long)this.field_o[var3] << 56), gf.a(280375465082880L, (long)this.field_o[2 + var3] << 40)), gf.a(255L, (long)this.field_o[var3 + 3]) << 32)), gf.a(16711680L, (long)this.field_o[var3 + 5] << 16))));
           var3 += 8;
           var2++;
         }
@@ -171,7 +171,7 @@ final class qk {
           dupTemp$0 = this.field_l[var2Lifetime1];
           arrayValue$1 = this.field_b[var2Lifetime1];
           this.field_n[var2Lifetime1] = dupTemp$0;
-          this.field_k[var2Lifetime1] = da.a(arrayValue$1, dupTemp$0);
+          this.field_k[var2Lifetime1] = GameApplet.a(arrayValue$1, dupTemp$0);
         }
         var3Lifetime1 = 107 % ((param0 - 19) / 44);
         for (var2Lifetime2 = 1; var2Lifetime2 <= 10; var2Lifetime2++) {
@@ -180,7 +180,7 @@ final class qk {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_c[var3Lifetime2] = da.a(this.field_c[var3Lifetime2], le.field_A[var4][kl.b((int)(this.field_n[kl.b(7, var3Lifetime2 - var4)] >>> var5), 255)]);
+              this.field_c[var3Lifetime2] = GameApplet.a(this.field_c[var3Lifetime2], le.field_A[var4][kl.b((int)(this.field_n[kl.b(7, var3Lifetime2 - var4)] >>> var5), 255)]);
               var4++;
               var5 -= 8;
             }
@@ -188,14 +188,14 @@ final class qk {
           for (var3Lifetime2Lifetime1 = 0; 8 > var3Lifetime2Lifetime1; var3Lifetime2Lifetime1++) {
             this.field_n[var3Lifetime2Lifetime1] = this.field_c[var3Lifetime2Lifetime1];
           }
-          this.field_n[0] = da.a(this.field_n[0], le.field_f[var2Lifetime2]);
+          this.field_n[0] = GameApplet.a(this.field_n[0], le.field_f[var2Lifetime2]);
           for (var3Lifetime2Lifetime2 = 0; var3Lifetime2Lifetime2 < 8; var3Lifetime2Lifetime2++) {
             this.field_c[var3Lifetime2Lifetime2] = this.field_n[var3Lifetime2Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_c[var3Lifetime2Lifetime2] = da.a(this.field_c[var3Lifetime2Lifetime2], le.field_A[var7][kl.b(255, (int)(this.field_k[kl.b(7, -var7 + var3Lifetime2Lifetime2)] >>> var5Lifetime1))]);
+              this.field_c[var3Lifetime2Lifetime2] = GameApplet.a(this.field_c[var3Lifetime2Lifetime2], le.field_A[var7][kl.b(255, (int)(this.field_k[kl.b(7, -var7 + var3Lifetime2Lifetime2)] >>> var5Lifetime1))]);
               var5Lifetime1 -= 8;
               var7++;
             }
@@ -205,7 +205,7 @@ final class qk {
           }
         }
         for (var2Lifetime3 = 0; 8 > var2Lifetime3; var2Lifetime3++) {
-          this.field_l[var2Lifetime3] = da.a(this.field_l[var2Lifetime3], da.a(this.field_b[var2Lifetime3], this.field_k[var2Lifetime3]));
+          this.field_l[var2Lifetime3] = GameApplet.a(this.field_l[var2Lifetime3], GameApplet.a(this.field_b[var2Lifetime3], this.field_k[var2Lifetime3]));
         }
     }
 

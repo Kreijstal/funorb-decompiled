@@ -13,10 +13,10 @@ final class hk extends rg {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, -1, param2);
-        va.field_i.b(this.field_X, (this.field_r >> 1) + param0, 103 + param2, 16777215, param1);
+        PacketBuffer.field_i.drawStringCentered(this.field_X, (this.field_r >> 1) + param0, 103 + param2, 16777215, param1);
         if (null != this.field_cb) {
-          ed.f(20 + param0, -7 + param2 + 120, 260, 8421504);
-          va.field_i.a(this.field_cb, 20 + param0, param2 + 128, 260, 100, 16777215, -1, 1, 0, va.field_i.field_M);
+          SoftwareRasterizer.drawHorizontalLine(20 + param0, -7 + param2 + 120, 260, 8421504);
+          PacketBuffer.field_i.a(this.field_cb, 20 + param0, param2 + 128, 260, 100, 16777215, -1, 1, 0, PacketBuffer.field_i.field_M);
         }
     }
 
@@ -65,14 +65,14 @@ final class hk extends rg {
         try {
           this.field_cb = param1;
           if (null != this.field_cb) {
-            var3_int = va.field_i.a(this.field_cb, 260, va.field_i.field_M);
+            var3_int = PacketBuffer.field_i.a(this.field_cb, 260, PacketBuffer.field_i.field_M);
             this.a(6154, 150 + var3_int, 300);
           }
           this.field_Z = new hd(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_Z.field_I = true;
           this.field_ab = false;
           this.field_U = false;
-          this.a((ub) (this.field_Z), (byte) 27);
+          this.a((UiWidget) (this.field_Z), (byte) 27);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "hk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

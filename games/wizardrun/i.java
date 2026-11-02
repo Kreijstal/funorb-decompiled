@@ -22,7 +22,7 @@ final class i {
         return param1;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, long param5, int param6, String param7, int param8, int param9, boolean param10, int param11, int param12, vh param13) {
+    final static void a(int param0, int param1, int param2, boolean param3, int param4, long param5, int param6, String param7, int param8, int param9, boolean param10, int param11, int param12, PlatformTaskDispatcher param13) {
         try {
           RuntimeException stackIn_13_0 = null;
           StringBuilder stackIn_13_1 = null;
@@ -36,7 +36,7 @@ final class i {
             nk.field_N = new mg(param8);
             n.field_b = new mg(param9);
             bl.field_a = param0;
-            df.field_a = param2;
+            RasterBuffer.field_a = param2;
             bl.field_d = param5;
             sb.field_e = param13;
             cb.field_g = param3;
@@ -46,12 +46,12 @@ final class i {
             if (param12 != 64) {
               field_d = (String) null;
             }
-            pf.field_g = param10;
+            IntrusiveDequeCursor.field_g = param10;
             tj.field_J = param6;
             aa.field_nb = param7;
             if (null != sb.field_e.field_c) {
               try {
-                ub.field_t = new si(sb.field_e.field_c, 64, 0);
+                UiWidget.field_t = new si(sb.field_e.field_c, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;
@@ -87,8 +87,8 @@ final class i {
     public static void a(byte param0) {
         field_f = null;
         if (param0 != 43) {
-          vh var2 = (vh) null;
-          i.a(-34, -29, -66, true, -96, -49L, 126, (String) null, -127, 99, false, 19, 4, (vh) null);
+          PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+          i.a(-34, -29, -66, true, -96, -49L, 126, (String) null, -127, 99, false, 19, 4, (PlatformTaskDispatcher) null);
         }
         field_d = null;
         field_c = null;

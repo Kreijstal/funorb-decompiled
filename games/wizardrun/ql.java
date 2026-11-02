@@ -9,18 +9,18 @@ final class ql {
 
     final static void a(int param0, int param1, int param2) {
         int var3 = param0 << param2;
-        if (0 != (ti.field_a & var3)) {
+        if (0 != (IsaacRandom.field_a & var3)) {
           return;
         }
         qf.field_l = qf.field_l | var3;
-        ti.field_a = ti.field_a | var3;
+        IsaacRandom.field_a = IsaacRandom.field_a | var3;
         uc.field_b.a(new ra(param2), false);
         if (!tc.field_j) {
-          ie.field_l.a(new pg(param2, param1, hi.field_c + qh.field_g, -(64 * sg.field_f) + wg.field_b, field_c + me.field_f, ic.field_a + 6 * qh.field_l), false);
+          ie.field_l.a(new pg(param2, param1, BufferedSocket.field_c + qh.field_g, -(64 * sg.field_f) + wg.field_b, field_c + me.field_f, ic.field_a + 6 * qh.field_l), false);
           return;
         }
         if (dd.field_m >= 2) {
-          ie.field_l.a(new pg(param2, param1, hi.field_c + qh.field_g, -(64 * sg.field_f) + wg.field_b, field_c + me.field_f, ic.field_a + 6 * qh.field_l), false);
+          ie.field_l.a(new pg(param2, param1, BufferedSocket.field_c + qh.field_g, -(64 * sg.field_f) + wg.field_b, field_c + me.field_f, ic.field_a + 6 * qh.field_l), false);
           return;
         }
     }
@@ -140,7 +140,7 @@ final class ql {
           }
           param3 = param3 + param1;
           var8 = param4;
-          L2: while (true) {
+          scanLoop1: while (true) {
             var9 = param5[var8];
             if (var9 >= 0) {
               var7_int++;
@@ -154,7 +154,7 @@ final class ql {
               param1++;
               param2[incrementValue$1] = (byte)(~var10);
               if (param3 <= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -170,7 +170,7 @@ final class ql {
               param1++;
               param2[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param1 >= param3) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -186,7 +186,7 @@ final class ql {
               param1++;
               param2[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param3 <= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -202,7 +202,7 @@ final class ql {
               param1++;
               param2[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param1 >= param3) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -218,7 +218,7 @@ final class ql {
               param1++;
               param2[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param3 <= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -234,7 +234,7 @@ final class ql {
               param1++;
               param2[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param1 >= param3) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -266,7 +266,7 @@ final class ql {
               param1++;
               param2[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param3 <= param1) {
-                break L2;
+                break scanLoop1;
               }
               var7_int = 0;
             }

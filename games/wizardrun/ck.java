@@ -36,14 +36,14 @@ final class ck {
           nh.field_n = param2;
           wd.field_g = param5;
           ug.field_H = param4;
-          dc.field_s = new o[param1.length];
+          dc.field_s = new Sprite[param1.length];
           if (param3 != 34) {
             ck.a(-99, 41, 24);
           }
           for (var7 = 0; param1.length > var7; var7++) {
-            dc.field_s[var7] = new o(317, 34);
+            dc.field_s[var7] = new Sprite(317, 34);
           }
-          nl.field_w = param1;
+          SpriteState.field_w = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,7 +72,7 @@ final class ck {
         }
         if (wizardrun.field_G == null) {
           td.b(4);
-          wh.b((byte) -104);
+          NodeHashTableIterator.b((byte) -104);
           jl.b(1);
           if (ne.b(22845)) {
             n.field_b.c((byte) 88, 1);
@@ -83,7 +83,7 @@ final class ck {
         }
         ka.a(wizardrun.field_G, 8053);
         td.b(4);
-        wh.b((byte) -104);
+        NodeHashTableIterator.b((byte) -104);
         jl.b(1);
         if (ne.b(22845)) {
           n.field_b.c((byte) 88, 1);

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ld {
-    static o field_d;
+    static Sprite field_d;
     static String[] field_c;
     static String field_f;
     static String field_a;
     static si field_e;
     static int[] field_b;
-    static vh field_g;
+    static PlatformTaskDispatcher field_g;
 
     public static void a(byte param0) {
         field_g = null;

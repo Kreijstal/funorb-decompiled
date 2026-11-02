@@ -4,14 +4,14 @@
 final class pa {
     static String field_d;
     private static long[] field_b;
-    static oi field_e;
-    static o field_a;
+    static IntrusiveDeque field_e;
+    static Sprite field_a;
     static String field_f;
     static int field_c;
 
-    final static void a(java.math.BigInteger param0, int param1, java.math.BigInteger param2, va param3, va param4) {
+    final static void a(java.math.BigInteger param0, int param1, java.math.BigInteger param2, PacketBuffer param3, PacketBuffer param4) {
         try {
-          vk.a(param3.field_k, param4, param2, true, param3.field_m, param0, param1);
+          vk.a(param3.payload, param4, param2, true, param3.position, param0, param1);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "pa.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
@@ -19,14 +19,14 @@ final class pa {
 
     final static boolean a(byte param0) {
         if (param0 != -106) {
-          field_a = (o) null;
+          field_a = (Sprite) null;
         }
         return pl.field_E == wc.field_j ? true : false;
     }
 
     final static boolean a(int param0, String param1, String param2) {
         String var3 = null;
-        va var4 = null;
+        PacketBuffer var4 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -37,8 +37,8 @@ final class pa {
         RuntimeException var3_ref = null;
         try {
           if (param0 != 0) {
-            var4 = (va) null;
-            pa.a((java.math.BigInteger) null, -113, (java.math.BigInteger) null, (va) null, (va) null);
+            var4 = (PacketBuffer) null;
+            pa.a((java.math.BigInteger) null, -113, (java.math.BigInteger) null, (PacketBuffer) null, (PacketBuffer) null);
           }
           param1 = fa.a((byte) 122, "", param1, '_');
           var3 = ag.a(param2, 1);
@@ -92,6 +92,6 @@ final class pa {
           }
           field_b[var2] = var0;
         }
-        field_e = new oi();
+        field_e = new IntrusiveDeque();
     }
 }

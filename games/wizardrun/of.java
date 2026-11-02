@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class of extends wl {
+final class of extends IntrusiveNode {
     int field_i;
     static String field_m;
     int field_j;
@@ -128,9 +128,9 @@ final class of extends wl {
         int var1 = 0;
         int var2 = 0;
         if (param0 == 72) {
-          var1 = pf.c((byte) -89);
+          var1 = IntrusiveDequeCursor.c((byte) -89);
           var2 = lb.a((byte) 47);
-          tl.field_c.a(pf.field_f - ic.field_c, var2 + (ic.field_c << 1), var1 + (ii.field_c << 1), 1, fe.field_l - ii.field_c);
+          tl.field_c.a(IntrusiveDequeCursor.field_f - ic.field_c, var2 + (ic.field_c << 1), var1 + (ii.field_c << 1), 1, fe.field_l - ii.field_c);
           nf.a(99);
           return;
         }

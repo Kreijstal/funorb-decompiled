@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class di {
-    private gj field_b;
+    private IterableNodeHashTable field_b;
     private int field_f;
-    private de field_d;
+    private SecondaryNodeDeque field_d;
     static String field_a;
     private int field_c;
     static boolean[] field_g;
@@ -22,20 +22,20 @@ final class di {
         }
         if (var5 == null) {
           var7.a(false);
-          var7.b(false);
+          var7.unlink(false);
           this.field_c = this.field_c + var7.field_p;
           return null;
         }
         if (var7.d(-9861)) {
           var6 = new ag(var5, var7.field_p);
-          this.field_b.a(var7.field_e, var6, (byte) -106);
+          this.field_b.a(var7.key, var6, (byte) -106);
           this.field_d.a(var6, 10);
-          ((ig) ((Object) var6)).field_o = 0L;
+          ((ig) ((Object) var6)).secondaryKey = 0L;
           var7.a(false);
-          var7.b(false);
+          var7.unlink(false);
         } else {
           this.field_d.a(var7, 10);
-          var7.field_o = 0L;
+          var7.secondaryKey = 0L;
         }
         return var5;
     }
@@ -231,11 +231,11 @@ final class di {
           }
           while (ac.a((byte) 125)) {
             var1.c((byte) 49, 8);
-            fieldTemp$0 = var1.field_m + 1;
-            var1.field_m = var1.field_m + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             kb.a(39, var1);
-            n.field_b.a(-var2 + var1.field_m, -57);
+            n.field_b.a(-var2 + var1.position, -57);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -263,7 +263,7 @@ final class di {
         try {
           if (param0 != null) {
             param0.a(false);
-            param0.b(false);
+            param0.unlink(false);
             this.field_c = this.field_c + param0.field_p;
           }
           if (param1 >= -16) {
@@ -340,7 +340,7 @@ final class di {
           var6_ref = new ag(param3, param1);
           this.field_b.a(param2, var6_ref, (byte) -117);
           this.field_d.a(var6_ref, 10);
-          ((ig) ((Object) var6_ref)).field_o = 0L;
+          ((ig) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "di.L(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

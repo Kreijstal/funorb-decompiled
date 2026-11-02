@@ -22,15 +22,15 @@ class og extends pl {
         long var6 = 0L;
         if (null != this.field_w &&
           param2 == 0) {
-          this.field_w.a(param0, param3, (ub) (this), true, this.field_B);
+          this.field_w.a(param0, param3, (UiWidget) (this), true, this.field_B);
           if (this.field_w instanceof qe) {
             var8 = (qe) ((Object) this.field_w);
             if (this.field_J != this.field_L) {
-              var8.a(this.field_L, true, this.field_J, param3, param0, (ub) (this));
+              var8.a(this.field_L, true, this.field_J, param3, param0, (UiWidget) (this));
             }
             var6 = d.a((byte) 54);
             if ((-this.field_I + var6) % 1000L < 500L) {
-              var8.a(param3, param0, (ub) (this), 0, this.field_L);
+              var8.a(param3, param0, (UiWidget) (this), 0, this.field_L);
             }
           }
         }
@@ -84,7 +84,7 @@ class og extends pl {
         }
     }
 
-    final boolean a(char param0, int param1, byte param2, ub param3) {
+    final boolean a(char param0, int param1, byte param2, UiWidget param3) {
         int dupTemp$0 = 0;
         int stackIn_41_1 = 0;
         int stackIn_42_2 = 0;
@@ -133,7 +133,7 @@ class og extends pl {
                 if (96 == param1) {
                   if (0 < this.field_L) {
                     stackIn_70_1 = 27;
-                    if (hi.field_p[82]) {
+                    if (BufferedSocket.field_p[82]) {
                       stackIn_71_2 = this.d(31823);
                     } else {
                       stackIn_71_2 = -1 + this.field_L;
@@ -155,17 +155,17 @@ class og extends pl {
                       this.h(0);
                       return true;
                     }
-                    if (hi.field_p[82] &&
+                    if (BufferedSocket.field_p[82] &&
                       param1 == 65) {
                       this.j((byte) 75);
                       return true;
                     }
-                    if (hi.field_p[82] &&
+                    if (BufferedSocket.field_p[82] &&
                       param1 == 66) {
                       this.f(false);
                       return true;
                     }
-                    if (hi.field_p[82] &&
+                    if (BufferedSocket.field_p[82] &&
                       param1 == 67) {
                       this.h((byte) 126);
                       return true;
@@ -173,7 +173,7 @@ class og extends pl {
                   } else {
                     if (this.field_L < this.field_k.length()) {
                       stackIn_41_1 = -127;
-                      if (!hi.field_p[82]) {
+                      if (!BufferedSocket.field_p[82]) {
                         stackIn_42_2 = 1 + this.field_L;
                       } else {
                         stackIn_42_2 = this.g((byte) 24);
@@ -282,8 +282,8 @@ class og extends pl {
           var8 = n.field_b;
           var9 = var8;
           var9.c((byte) -105, param1);
-          var9.field_m = var9.field_m + 1;
-          var4 = var9.field_m;
+          var9.position = var9.position + 1;
+          var4 = var9.position;
           var9.b((byte) 11, 1);
           var9.b(-1947079288, param0.field_i);
           var9.b(-1947079288, param0.field_t);
@@ -300,13 +300,13 @@ class og extends pl {
             var5++;
           }
           var9.e(var4, -1182887024);
-          var9.a(-var4 + var9.field_m, -87);
+          var9.a(-var4 + var9.position, -87);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "og.UA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, ub param6) {
+    final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         int stackIn_5_1 = 0;
         int stackIn_6_2 = 0;
         boolean stackIn_9_1 = false;
@@ -321,7 +321,7 @@ class og extends pl {
         try {
           if (super.a(param0, (byte) -83, param2, param3, param4, param5, param6) &&
             this.field_w instanceof qe) {
-            var8_int = ((qe) ((Object) this.field_w)).a(9397, pg.field_n, param0, (ub) (this), param3, fi.field_B);
+            var8_int = ((qe) ((Object) this.field_w)).a(9397, pg.field_n, param0, (UiWidget) (this), param3, fi.field_B);
             stackIn_5_1 = -118;
             if (-1 == var8_int) {
               stackIn_6_2 = 0;
@@ -370,7 +370,7 @@ class og extends pl {
         this.i((byte) -81);
     }
 
-    void a(int param0, int param1, int param2, ub param3) {
+    void a(int param0, int param1, int param2, UiWidget param3) {
         qe var7 = null;
         int var6 = 0;
         try {
@@ -379,7 +379,7 @@ class og extends pl {
           if (this.field_q == 1) {
             if (this.field_w instanceof qe) {
               var7 = (qe) ((Object) this.field_w);
-              var6 = var7.a(9397, pg.field_n, param2, (ub) (this), param1, fi.field_B);
+              var6 = var7.a(9397, pg.field_n, param2, (UiWidget) (this), param1, fi.field_B);
               if (var6 != -1) {
                 if (this.field_Q && var6 < this.field_M &&
                   var6 > this.field_J) {
@@ -438,7 +438,7 @@ class og extends pl {
     private final void a(byte param0, int param1) {
         int var3 = 10 % ((-48 - param0) / 44);
         this.field_L = param1;
-        if (!hi.field_p[81]) {
+        if (!BufferedSocket.field_p[81]) {
           this.field_J = this.field_L;
         }
     }
@@ -473,9 +473,9 @@ class og extends pl {
           return;
         }
         var9 = (qe) ((Object) this.field_w);
-        var3 = var9.a((ub) (this), (byte) 78);
+        var3 = var9.a((UiWidget) (this), (byte) 78);
         var4 = var3.a(-127);
-        var5 = var9.a((ub) (this), param0 - 106);
+        var5 = var9.a((UiWidget) (this), param0 - 106);
         var6 = var9.a((byte) 62) >> 1;
         if (var4 < var5 - var6) {
           this.field_i = 0;

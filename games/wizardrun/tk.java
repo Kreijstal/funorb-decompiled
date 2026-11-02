@@ -6,13 +6,13 @@ final class tk implements bf {
     private int field_c;
     static String field_f;
     private int field_b;
-    private vd field_d;
+    private BitmapFont field_d;
     static int field_a;
 
-    final static void a(int param0, o param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, Sprite param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           r.field_a = param7;
-          ta.field_a = param2;
+          MouseWheelInput.field_a = param2;
           ka.field_i = param3;
           cb.field_a = param8;
           uk.field_b = param1;
@@ -33,7 +33,7 @@ final class tk implements bf {
         field_e = null;
     }
 
-    public final void a(int param0, int param1, ub param2, boolean param3, boolean param4) {
+    public final void a(int param0, int param1, UiWidget param2, boolean param3, boolean param4) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -62,7 +62,7 @@ final class tk implements bf {
           if (!param2.d((byte) 53)) {
             return;
           }
-          var7 = this.field_d.b(param2.field_k);
+          var7 = this.field_d.stringWidth(param2.field_k);
           var8 = this.field_d.field_M + this.field_d.field_B;
           var9 = param2.field_o + param0;
           var10 = param2.field_l + param1;
@@ -102,7 +102,7 @@ final class tk implements bf {
         this.field_c = 1;
     }
 
-    tk(vd param0, int param1, int param2) {
+    tk(BitmapFont param0, int param1, int param2) {
         try {
           this.field_b = param2;
           this.field_d = param0;

@@ -4,7 +4,7 @@
 final class he extends k {
     private fl field_t;
     static java.awt.Frame field_u;
-    oi field_p;
+    IntrusiveDeque field_p;
     static int field_q;
     static int[] field_n;
     static int[] field_m;
@@ -287,7 +287,7 @@ final class he extends k {
     }
 
     he(fl param0) {
-        this.field_p = new oi();
+        this.field_p = new IntrusiveDeque();
         this.field_o = new vi();
         try {
           this.field_t = param0;

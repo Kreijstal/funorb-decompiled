@@ -19,54 +19,54 @@ final class ug extends pl {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          sg.field_b = new o[6][];
-          ok.field_e = new o[6][5][];
-          bd.field_c = new o[6];
-          ok.field_e[0][0] = pe.a("", mi.field_E, "monster00", 110);
-          ok.field_e[0][1] = pe.a("", mi.field_E, "monster01", 125);
-          ok.field_e[0][2] = pe.a("", mi.field_E, "monster02", 121);
-          ok.field_e[0][4] = pe.a("", mi.field_E, "monster04", 94);
-          sg.field_b[0] = pe.a("", mi.field_E, "level1blocks", 110);
-          bd.field_c[0] = vg.a(15, "level1background", mi.field_E, "");
-          bd.field_c[1] = vg.a(15, "level2background", mi.field_E, "");
-          sg.field_b[1] = pe.a("", mi.field_E, "level2blocks", 122);
-          ok.field_e[1][0] = pe.a("", mi.field_E, "monster10", 97);
-          ok.field_e[1][1] = pe.a("", mi.field_E, "monster11", 121);
-          ok.field_e[1][2] = pe.a("", mi.field_E, "monster12", 96);
-          ok.field_e[1][3] = pe.a("", mi.field_E, "monster13", 115);
-          ok.field_e[1][4] = pe.a("", mi.field_E, "monster14", 112);
-          bd.field_c[2] = vg.a(15, "level3background", mi.field_E, "");
-          sg.field_b[2] = pe.a("", mi.field_E, "level3blocks", 102);
-          ok.field_e[2][0] = pe.a("", mi.field_E, "monster20", 89);
-          ok.field_e[2][1] = pe.a("", mi.field_E, "monster21", 124);
-          ok.field_e[2][2] = pe.a("", mi.field_E, "monster22", 118);
-          ok.field_e[2][3] = pe.a("", mi.field_E, "monster23", 97);
-          ok.field_e[2][4] = pe.a("", mi.field_E, "monster24", 119);
-          bd.field_c[3] = vg.a(15, "level4background", mi.field_E, "");
-          sg.field_b[3] = pe.a("", mi.field_E, "level4blocks", 90);
-          ok.field_e[3][0] = pe.a("", mi.field_E, "monster30", 111);
-          ok.field_e[3][1] = pe.a("", mi.field_E, "monster31", 104);
-          ok.field_e[3][2] = pe.a("", mi.field_E, "monster32", 118);
-          ok.field_e[3][4] = pe.a("", mi.field_E, "monster34", 105);
-          bd.field_c[4] = vg.a(15, "level5background", mi.field_E, "");
-          sg.field_b[4] = pe.a("", mi.field_E, "level5blocks", 92);
-          ok.field_e[4][0] = pe.a("", mi.field_E, "monster40", 125);
+          sg.field_b = new Sprite[6][];
+          ok.field_e = new Sprite[6][5][];
+          bd.field_c = new Sprite[6];
+          ok.field_e[0][0] = pe.loadSpriteStrip("", mi.field_E, "monster00", 110);
+          ok.field_e[0][1] = pe.loadSpriteStrip("", mi.field_E, "monster01", 125);
+          ok.field_e[0][2] = pe.loadSpriteStrip("", mi.field_E, "monster02", 121);
+          ok.field_e[0][4] = pe.loadSpriteStrip("", mi.field_E, "monster04", 94);
+          sg.field_b[0] = pe.loadSpriteStrip("", mi.field_E, "level1blocks", 110);
+          bd.field_c[0] = vg.loadSprite(15, "level1background", mi.field_E, "");
+          bd.field_c[1] = vg.loadSprite(15, "level2background", mi.field_E, "");
+          sg.field_b[1] = pe.loadSpriteStrip("", mi.field_E, "level2blocks", 122);
+          ok.field_e[1][0] = pe.loadSpriteStrip("", mi.field_E, "monster10", 97);
+          ok.field_e[1][1] = pe.loadSpriteStrip("", mi.field_E, "monster11", 121);
+          ok.field_e[1][2] = pe.loadSpriteStrip("", mi.field_E, "monster12", 96);
+          ok.field_e[1][3] = pe.loadSpriteStrip("", mi.field_E, "monster13", 115);
+          ok.field_e[1][4] = pe.loadSpriteStrip("", mi.field_E, "monster14", 112);
+          bd.field_c[2] = vg.loadSprite(15, "level3background", mi.field_E, "");
+          sg.field_b[2] = pe.loadSpriteStrip("", mi.field_E, "level3blocks", 102);
+          ok.field_e[2][0] = pe.loadSpriteStrip("", mi.field_E, "monster20", 89);
+          ok.field_e[2][1] = pe.loadSpriteStrip("", mi.field_E, "monster21", 124);
+          ok.field_e[2][2] = pe.loadSpriteStrip("", mi.field_E, "monster22", 118);
+          ok.field_e[2][3] = pe.loadSpriteStrip("", mi.field_E, "monster23", 97);
+          ok.field_e[2][4] = pe.loadSpriteStrip("", mi.field_E, "monster24", 119);
+          bd.field_c[3] = vg.loadSprite(15, "level4background", mi.field_E, "");
+          sg.field_b[3] = pe.loadSpriteStrip("", mi.field_E, "level4blocks", 90);
+          ok.field_e[3][0] = pe.loadSpriteStrip("", mi.field_E, "monster30", 111);
+          ok.field_e[3][1] = pe.loadSpriteStrip("", mi.field_E, "monster31", 104);
+          ok.field_e[3][2] = pe.loadSpriteStrip("", mi.field_E, "monster32", 118);
+          ok.field_e[3][4] = pe.loadSpriteStrip("", mi.field_E, "monster34", 105);
+          bd.field_c[4] = vg.loadSprite(15, "level5background", mi.field_E, "");
+          sg.field_b[4] = pe.loadSpriteStrip("", mi.field_E, "level5blocks", 92);
+          ok.field_e[4][0] = pe.loadSpriteStrip("", mi.field_E, "monster40", 125);
           if (param0 > -27) {
             ug.$cfr$intArgs$a$c8d31f67c1d5(false, -19, 6, -5, (le) null);
           }
-          ok.field_e[4][1] = pe.a("", mi.field_E, "monster41", 91);
-          ok.field_e[4][2] = pe.a("", mi.field_E, "monster42", 119);
-          ok.field_e[4][3] = pe.a("", mi.field_E, "monster43", 121);
-          ok.field_e[4][4] = pe.a("", mi.field_E, "monster44", 114);
-          bd.field_c[5] = vg.a(15, "level6background", mi.field_E, "");
-          sg.field_b[5] = pe.a("", mi.field_E, "level6blocks", 93);
-          ok.field_e[5][0] = pe.a("", mi.field_E, "monster50", 107);
-          ok.field_e[5][1] = pe.a("", mi.field_E, "monster52", 115);
-          ok.field_e[5][2] = pe.a("", mi.field_E, "monster51", 90);
-          ok.field_e[5][3] = pe.a("", mi.field_E, "monster53", 98);
-          ok.field_e[5][4] = pe.a("", mi.field_E, "monster54", 107);
-          hh.field_eb = pe.a("", mi.field_E, "monster55", 110);
-          h.field_j = pe.a("", mi.field_E, "monster56", 125);
+          ok.field_e[4][1] = pe.loadSpriteStrip("", mi.field_E, "monster41", 91);
+          ok.field_e[4][2] = pe.loadSpriteStrip("", mi.field_E, "monster42", 119);
+          ok.field_e[4][3] = pe.loadSpriteStrip("", mi.field_E, "monster43", 121);
+          ok.field_e[4][4] = pe.loadSpriteStrip("", mi.field_E, "monster44", 114);
+          bd.field_c[5] = vg.loadSprite(15, "level6background", mi.field_E, "");
+          sg.field_b[5] = pe.loadSpriteStrip("", mi.field_E, "level6blocks", 93);
+          ok.field_e[5][0] = pe.loadSpriteStrip("", mi.field_E, "monster50", 107);
+          ok.field_e[5][1] = pe.loadSpriteStrip("", mi.field_E, "monster52", 115);
+          ok.field_e[5][2] = pe.loadSpriteStrip("", mi.field_E, "monster51", 90);
+          ok.field_e[5][3] = pe.loadSpriteStrip("", mi.field_E, "monster53", 98);
+          ok.field_e[5][4] = pe.loadSpriteStrip("", mi.field_E, "monster54", 107);
+          hh.field_eb = pe.loadSpriteStrip("", mi.field_E, "monster55", 110);
+          h.field_j = pe.loadSpriteStrip("", mi.field_E, "monster56", 125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -75,7 +75,7 @@ final class ug extends pl {
         }
     }
 
-    final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, ub param6) {
+    final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, UiWidget param6) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -189,7 +189,7 @@ final class ug extends pl {
             null != param4.field_x) {
             of.c(45);
           }
-          kg.field_c = 0;
+          SecondaryNodeDequeIterator.field_c = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param4.field_N > var8)))) {
@@ -201,10 +201,10 @@ final class ug extends pl {
             stackIn_10_0 = stackOut_9_0;
             if (var19 == 0) {
               if (stackIn_10_0) {
-                var12 = nl.field_A[var9];
+                var12 = SpriteState.field_A[var9];
                 var13 = d.field_c[var9];
-                var14 = -var12 + nl.field_A[var10];
-                var15 = -var12 + nl.field_A[var11];
+                var14 = -var12 + SpriteState.field_A[var10];
+                var15 = -var12 + SpriteState.field_A[var11];
                 var16 = -var13 + d.field_c[var10];
                 var17 = d.field_c[var11] - var13;
               }
@@ -246,7 +246,7 @@ final class ug extends pl {
                           dupTemp$0 = param4.field_x[var8];
                           t.field_a[dupTemp$0] = t.field_a[dupTemp$0] + 1;
                         }
-                        kg.field_c = kg.field_c + 1;
+                        SecondaryNodeDequeIterator.field_c = SecondaryNodeDequeIterator.field_c + 1;
                         break;
                       }
                     }
@@ -466,7 +466,7 @@ final class ug extends pl {
             null != param4.field_x) {
             of.c(45);
           }
-          kg.field_c = 0;
+          SecondaryNodeDequeIterator.field_c = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param4.field_N > var8)))) {
@@ -478,10 +478,10 @@ final class ug extends pl {
             stackIn_10_0 = stackOut_9_0;
             if (var19 == 0) {
               if (stackIn_10_0) {
-                var12 = nl.field_A[var9];
+                var12 = SpriteState.field_A[var9];
                 var13 = d.field_c[var9];
-                var14 = -var12 + nl.field_A[var10];
-                var15 = -var12 + nl.field_A[var11];
+                var14 = -var12 + SpriteState.field_A[var10];
+                var15 = -var12 + SpriteState.field_A[var11];
                 var16 = -var13 + d.field_c[var10];
                 var17 = d.field_c[var11] - var13;
               }
@@ -523,7 +523,7 @@ final class ug extends pl {
                           dupTemp$0 = param4.field_x[var8];
                           t.field_a[dupTemp$0] = t.field_a[dupTemp$0] + 1;
                         }
-                        kg.field_c = kg.field_c + 1;
+                        SecondaryNodeDequeIterator.field_c = SecondaryNodeDequeIterator.field_c + 1;
                         break;
                       }
                     }

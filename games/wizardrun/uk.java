@@ -4,7 +4,7 @@
 final class uk {
     private kl field_a;
     private di field_d;
-    static o field_b;
+    static Sprite field_b;
     private kl field_c;
 
     final ac b(byte param0, int param1) {
@@ -23,7 +23,7 @@ final class uk {
         }
         var3 = new ac();
         if (var4 != null) {
-          var3.a(new va(var4), 72);
+          var3.a(new PacketBuffer(var4), 72);
         }
         if (param1 >= 32768) {
           var3.d((byte) -127);
@@ -86,7 +86,7 @@ final class uk {
     final static void a(byte param0, int param1) {
         wj.field_E = 1000000000L / (long)param1;
         if (param0 != 91) {
-          field_b = (o) null;
+          field_b = (Sprite) null;
         }
     }
 
@@ -95,14 +95,14 @@ final class uk {
           throw new IllegalStateException();
         }
         if (param0 != 19702) {
-          field_b = (o) null;
+          field_b = (Sprite) null;
         }
         if (aa.field_lb != null) {
           aa.field_lb.l(-27697);
         }
         String var1 = qf.c((byte) 77);
         r.field_b = new qc(var1, (String) null, true, false, false);
-        u.field_A.b((ub) (td.field_f), (byte) 62);
+        GameShell.field_A.b((UiWidget) (td.field_f), (byte) 62);
         td.field_f.c(r.field_b, -114);
         td.field_f.g((byte) -3);
     }
@@ -129,7 +129,7 @@ final class uk {
             return (uh) ((Object) stackIn_5_0);
           }
           if (param1 != 8355711) {
-            field_b = (o) null;
+            field_b = (Sprite) null;
           }
           stackIn_11_0 = new bb(param2, param4);
           return (uh) ((Object) stackIn_11_0);
@@ -155,13 +155,13 @@ final class uk {
 
     final static void a(byte param0, boolean param1, boolean param2) {
         if (param2) {
-          ed.d(0, 0, ed.field_h, ed.field_d, 0, 192);
+          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0, 192);
         } else {
-          ed.d();
+          SoftwareRasterizer.d();
         }
         od.a(param0 ^ 4, param2);
         if (param0 != -123) {
-          field_b = (o) null;
+          field_b = (Sprite) null;
         }
     }
 

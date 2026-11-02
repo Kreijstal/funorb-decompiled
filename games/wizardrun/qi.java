@@ -104,10 +104,10 @@ final class qi {
     final static int a(ne param0, ne param1, String param2, int param3, int param4, boolean param5, int param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
-        va stackIn_11_0 = null;
+        PacketBuffer stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         String stackIn_12_2 = null;
-        va stackIn_14_0 = null;
+        PacketBuffer stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         String stackIn_15_2 = null;
         int stackIn_32_0 = 0;
@@ -148,17 +148,17 @@ final class qi {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
-          if (tj.field_G == wh.field_j) {
+          if (tj.field_G == NodeHashTableIterator.field_j) {
             gh.field_c = null;
-            n.field_b.field_m = 0;
+            n.field_b.position = 0;
             if (param2 != null) {
               var9 = 0;
-              re.field_G.field_m = 0;
+              re.field_G.position = 0;
               if (param5) {
                 var9 = var9 | 1;
               }
-              re.field_G.f(oi.field_c.nextInt(), param6 + 612976077);
-              re.field_G.f(oi.field_c.nextInt(), 613003928);
+              re.field_G.f(IntrusiveDeque.field_c.nextInt(), param6 + 612976077);
+              re.field_G.f(IntrusiveDeque.field_c.nextInt(), 613003928);
               re.field_G.b(param6 - 27851, var14);
               re.field_G.b(param6 ^ 27851, var8);
               var15 = (CharSequence) ((Object) param2);
@@ -167,19 +167,19 @@ final class qi {
               re.field_G.b((byte) 11, param3);
               re.field_G.b((byte) 11, var9);
               n.field_b.b((byte) 11, 18);
-              n.field_b.field_m = n.field_b.field_m + 2;
-              var10 = n.field_b.field_m;
+              n.field_b.position = n.field_b.position + 2;
+              var10 = n.field_b.position;
               var11_ref_StringLifetime1 = fb.a(jg.f(1), (byte) 102);
               if (var11_ref_StringLifetime1 == null) {
                 var11_ref_StringLifetime1 = "";
               }
               n.field_b.a(var11_ref_StringLifetime1, false);
               pa.a(ag.field_s, 0, ad.field_d, re.field_G, n.field_b);
-              n.field_b.a(n.field_b.field_m - var10, (byte) -67);
+              n.field_b.a(n.field_b.position - var10, (byte) -67);
             } else {
-              re.field_G.field_m = 0;
-              re.field_G.f(oi.field_c.nextInt(), 613003928);
-              re.field_G.f(oi.field_c.nextInt(), 613003928);
+              re.field_G.position = 0;
+              re.field_G.f(IntrusiveDeque.field_c.nextInt(), 613003928);
+              re.field_G.f(IntrusiveDeque.field_c.nextInt(), 613003928);
               stackIn_11_0 = re.field_G;
               stackIn_11_1 = 0;
               if (!param0.c((byte) 127)) {
@@ -187,7 +187,7 @@ final class qi {
               } else {
                 stackIn_12_2 = var14;
               }
-              ((va) (Object) stackIn_11_0).b(stackIn_11_1, stackIn_12_2);
+              ((PacketBuffer) (Object) stackIn_11_0).b(stackIn_11_1, stackIn_12_2);
               stackIn_14_0 = re.field_G;
               stackIn_14_1 = 0;
               if (!param1.c((byte) 125)) {
@@ -195,27 +195,27 @@ final class qi {
               } else {
                 stackIn_15_2 = var8;
               }
-              ((va) (Object) stackIn_14_0).b(stackIn_14_1, stackIn_15_2);
+              ((PacketBuffer) (Object) stackIn_14_0).b(stackIn_14_1, stackIn_15_2);
               n.field_b.b((byte) 11, 16);
-              n.field_b.field_m = n.field_b.field_m + 1;
-              var9 = n.field_b.field_m;
+              n.field_b.position = n.field_b.position + 1;
+              var9 = n.field_b.position;
               pa.a(ag.field_s, 0, ad.field_d, re.field_G, n.field_b);
-              n.field_b.a(n.field_b.field_m - var9, -115);
+              n.field_b.a(n.field_b.position - var9, -115);
             }
             id.a((byte) -67, -1);
-            wh.field_j = va.field_l;
+            NodeHashTableIterator.field_j = PacketBuffer.field_l;
           }
           if (param6 != 27851) {
             field_b = (String) null;
           }
-          if (wh.field_j == va.field_l &&
+          if (NodeHashTableIterator.field_j == PacketBuffer.field_l &&
             hc.a(1, -28266)) {
             var9Lifetime1 = nk.field_N.f(255);
-            nk.field_N.field_m = 0;
+            nk.field_N.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               pd.field_I = new String[-100 + var9Lifetime1];
-              wh.field_j = vj.field_a;
+              NodeHashTableIterator.field_j = vj.field_a;
             } else {
               if (var9Lifetime1 == 248) {
                 tj.a(3088, jg.f(param6 ^ 27850));
@@ -228,19 +228,19 @@ final class qi {
               if (var9Lifetime1 == 99) {
                 hc.a(uf.a(true), param6 ^ -675);
                 gh.field_c = new Boolean(qj.a((byte) -100, nk.field_N));
-                nk.field_N.field_m = 0;
+                nk.field_N.position = 0;
               } else {
-                wh.field_j = gf.field_ib;
+                NodeHashTableIterator.field_j = gf.field_ib;
                 ra.field_k = var9Lifetime1;
-                gd.field_c = -1;
+                DelegatingCanvas.field_c = -1;
               }
             }
           }
-          if (wh.field_j == vj.field_a) {
+          if (NodeHashTableIterator.field_j == vj.field_a) {
             var9Lifetime2 = 2;
             if (hc.a(var9Lifetime2, -28266)) {
               var10Lifetime1 = nk.field_N.j(param6 - 42328);
-              nk.field_N.field_m = 0;
+              nk.field_N.position = 0;
               if (hc.a(var10Lifetime1, -28266)) {
                 var11 = pd.field_I.length;
                 for (var12 = 0; var11 > var12; var12++) {
@@ -253,7 +253,7 @@ final class qi {
               }
             }
           }
-          if (gf.field_ib == wh.field_j &&
+          if (gf.field_ib == NodeHashTableIterator.field_j &&
             bd.b(92)) {
             if (ra.field_k != 255) {
               bh.field_g = nk.field_N.d(0);
@@ -315,7 +315,7 @@ final class qi {
     final static void e(int param0) {
         d.field_a = nk.field_N.d(param0 ^ param0);
         CharSequence var2 = (CharSequence) ((Object) d.field_a);
-        wl.field_a = ta.a(-49, var2);
+        IntrusiveNode.field_a = MouseWheelInput.a(-49, var2);
     }
 
     final boolean b(int param0) {

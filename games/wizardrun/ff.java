@@ -3,8 +3,8 @@
  */
 class ff extends pl {
     private String[] field_I;
-    static oj field_H;
-    private oi field_G;
+    static GameKeyHandler keyHandler;
+    private IntrusiveDeque field_G;
     private dd field_F;
     static int field_J;
 
@@ -34,7 +34,7 @@ class ff extends pl {
 
     public static void d(int param0) {
         int var1 = 65 % ((param0 - 84) / 40);
-        field_H = null;
+        keyHandler = null;
     }
 
     String c(boolean param0) {
@@ -62,7 +62,7 @@ class ff extends pl {
         return var4;
     }
 
-    void a(int param0, int param1, int param2, ub param3) {
+    void a(int param0, int param1, int param2, UiWidget param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -73,7 +73,7 @@ class ff extends pl {
         try {
           super.a(param0 ^ 0, param1, param2, param3);
           if (param0 != 10000536) {
-            this.field_G = (oi) null;
+            this.field_G = (IntrusiveDeque) null;
           }
           this.field_F = null;
           if (this.field_v) {
@@ -97,9 +97,9 @@ class ff extends pl {
     }
 
     final void a(int param0, byte param1, int param2, int param3) {
-        this.a(127, param0, ((qe) ((Object) this.field_w)).a((byte) 89, (ub) (this)), param2, param3);
+        this.a(127, param0, ((qe) ((Object) this.field_w)).a((byte) 89, (UiWidget) (this)), param2, param3);
         if (param1 != 61) {
-          field_H = (oj) null;
+          keyHandler = (GameKeyHandler) null;
         }
     }
 
@@ -113,8 +113,8 @@ class ff extends pl {
         qe var5 = (qe) ((Object) this.field_w);
         dd var6 = this.field_F;
         if (var6 != null) {
-          var7 = var5.a((ub) (this), param1 + 0, param0);
-          var8 = var5.a(true, param3, (ub) (this));
+          var7 = var5.a((UiWidget) (this), param1 + 0, param0);
+          var8 = var5.a(true, param3, (UiWidget) (this));
           do {
             nh.a((byte) 69, 2 + var6.field_o, var6.field_j + (var8 - 2), 2 + var6.field_n, var7 + (var6.field_i - 2));
             var6 = var6.field_l;
@@ -166,10 +166,10 @@ class ff extends pl {
         int var16;
         int var7Lifetime1;
         var16 = wizardrun.field_H;
-        this.field_G = new oi();
+        this.field_G = new IntrusiveDeque();
         var2 = param0;
         var3 = (qe) ((Object) this.field_w);
-        var4 = var3.a((ub) (this), (byte) 116);
+        var4 = var3.a((UiWidget) (this), (byte) 116);
         while (true) {
           var5 = this.field_k.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -237,7 +237,7 @@ class ff extends pl {
         }
     }
 
-    boolean a(ub param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -296,6 +296,6 @@ class ff extends pl {
     }
 
     static {
-        field_H = new oj();
+        keyHandler = new GameKeyHandler();
     }
 }

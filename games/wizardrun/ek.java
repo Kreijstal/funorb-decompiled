@@ -22,14 +22,14 @@ final class ek {
         this.field_h = 0;
     }
 
-    final void b(va param0) {
+    final void b(PacketBuffer param0) {
         this.field_f = param0.f(255);
         this.field_b = param0.i(255);
         this.field_k = param0.i(255);
         this.a(param0);
     }
 
-    final void a(va param0) {
+    final void a(PacketBuffer param0) {
         int var2 = 0;
         this.field_d = param0.f(255);
         this.field_j = new int[this.field_d];

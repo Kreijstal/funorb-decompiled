@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ke extends qb {
-    static oi field_u;
+    static IntrusiveDeque field_u;
     static boolean field_w;
     static String field_v;
     static String[] field_t;
@@ -11,7 +11,7 @@ final class ke extends qb {
         this(gh.field_b, param0);
     }
 
-    private ke(vd param0, int param1) {
+    private ke(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 
@@ -24,7 +24,7 @@ final class ke extends qb {
         field_v = null;
     }
 
-    final String b(ub param0, byte param1) {
+    final String b(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -33,7 +33,7 @@ final class ke extends qb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -57) {
-            field_u = (oi) null;
+            field_u = (IntrusiveDeque) null;
           }
           stackIn_3_0 = oa.a((byte) -95, '*', param0.field_k.length());
           return stackIn_3_0;
@@ -53,6 +53,6 @@ final class ke extends qb {
 
     static {
         field_v = "Checking";
-        field_u = new oi();
+        field_u = new IntrusiveDeque();
     }
 }

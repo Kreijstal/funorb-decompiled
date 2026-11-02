@@ -40,11 +40,11 @@ final class me {
         jf.field_f = mf.field_g[param0];
         bl.field_c = af.field_c[param0];
         if (param1) {
-          td.field_e = wh.field_e[param0];
+          td.field_e = NodeHashTableIterator.field_e[param0];
           return;
         }
         me.a((byte) -45);
-        td.field_e = wh.field_e[param0];
+        td.field_e = NodeHashTableIterator.field_e[param0];
     }
 
     static {

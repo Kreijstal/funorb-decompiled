@@ -22,7 +22,7 @@ abstract class rg extends tj {
 
     final static void a(Throwable param0, String param1, int param2) {
         try {
-          vh stackIn_16_0;
+          PlatformTaskDispatcher stackIn_16_0;
           java.net.URL stackIn_16_1;
           java.net.URL stackIn_16_2;
           java.net.URL stackIn_16_3;
@@ -77,7 +77,7 @@ abstract class rg extends tj {
               stackIn_17_2 = null;
               stackIn_17_5 = "" + h.field_m;
             }
-            var4 = ((vh) (Object) stackIn_16_0).a(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(vh.field_p).append("&v2=").append(vh.field_b).append("&e=").append(var10).toString()), 123);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_16_0).a(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(PlatformTaskDispatcher.field_p).append("&v2=").append(PlatformTaskDispatcher.field_b).append("&e=").append(var10).toString()), 123);
             while (var4.field_a == 0) {
               tg.a(1L, false);
             }
@@ -152,15 +152,15 @@ abstract class rg extends tj {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = wizardrun.field_H;
-        ed.e(param0 + 6, param2 + 35, this.field_r - 12, this.field_n - 40, 2105376, 0);
+        SoftwareRasterizer.e(param0 + 6, param2 + 35, this.field_r - 12, this.field_n - 40, 2105376, 0);
         var5 = 211;
         var4 = 35;
         var6 = 194;
         var7 = 0;
         var8 = param2;
         while (var4 > var7) {
-          if (var8 >= ed.field_i &&
-            ed.field_b > var8) {
+          if (var8 >= SoftwareRasterizer.clipTop &&
+            SoftwareRasterizer.clipBottom > var8) {
             var9 = var7 * (var6 - var5) / var4 + var5;
             var10 = 0;
             var11 = this.field_r;
@@ -173,7 +173,7 @@ abstract class rg extends tj {
                   }
                   var13 = (462 - var12) * var9 / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  ed.field_k[var8 * ed.field_h + param0 + var10] = var13;
+                  SoftwareRasterizer.pixels[var8 * SoftwareRasterizer.width + param0 + var10] = var13;
                 }
                 var10++;
               }
@@ -190,7 +190,7 @@ abstract class rg extends tj {
                   } else {
                     var15 = (462 - var14) * var9 / 42;
                     var15 = var15 | (var15 << 16 | var15 << 8);
-                    ed.field_k[var11 + ed.field_h * var8 + param0] = var15;
+                    SoftwareRasterizer.pixels[var11 + SoftwareRasterizer.width * var8 + param0] = var15;
                   }
                   var13Lifetime1++;
                   var11++;
@@ -201,7 +201,7 @@ abstract class rg extends tj {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 8 | var9 << 16);
-            ed.f(var10 + param0, var8, -var10 + var11, var9);
+            SoftwareRasterizer.drawHorizontalLine(var10 + param0, var8, -var10 + var11, var9);
           }
           var7++;
           var8++;
@@ -214,8 +214,8 @@ abstract class rg extends tj {
         while (var4Lifetime1 > var7Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + (-var5Lifetime1 + var6Lifetime1) * var7Lifetime1 / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 8 | var9Lifetime1 << 16);
-          ed.f(param0, var8Lifetime1, 6, var9Lifetime1);
-          ed.f(this.field_r + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer.drawHorizontalLine(this.field_r + (param0 - 6), var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
@@ -233,8 +233,8 @@ abstract class rg extends tj {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = var7Lifetime2 * (var6Lifetime2 - var5Lifetime2) / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          ed.f(param0, var8Lifetime2, 6, var9Lifetime2);
-          ed.f(-6 + (param0 + this.field_r), var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(param0, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer.drawHorizontalLine(-6 + (param0 + this.field_r), var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }

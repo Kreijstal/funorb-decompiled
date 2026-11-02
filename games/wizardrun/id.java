@@ -46,16 +46,16 @@ final class id {
         }
     }
 
-    final static o a(byte param0, int param1, int param2) {
+    final static Sprite a(byte param0, int param1, int param2) {
         int var4 = 0;
         int var5 = wizardrun.field_H;
-        o var6 = new o(param2, param2);
-        o var3 = var6;
+        Sprite var6 = new Sprite(param2, param2);
+        Sprite var3 = var6;
         if (param0 <= 51) {
           id.a((byte) -66, -95, 21);
         }
-        for (var4 = 0; var4 < var3.field_B.length; var4++) {
-          var6.field_B[var4] = param1;
+        for (var4 = 0; var4 < var3.pixels.length; var4++) {
+          var6.pixels[var4] = param1;
         }
         return var3;
     }
@@ -119,21 +119,21 @@ final class id {
           String var3 = null;
           Throwable decompiledCaughtException = null;
           if (jc.field_H != null && (0 > param1 ||
-            wh.field_j == hi.field_l)) {
-            if (n.field_b.field_m == 0 &&
-              hi.field_k + 10000L < d.a((byte) 44)) {
+            NodeHashTableIterator.field_j == BufferedSocket.field_l)) {
+            if (n.field_b.position == 0 &&
+              BufferedSocket.field_k + 10000L < d.a((byte) 44)) {
               n.field_b.c((byte) 65, param1);
             }
-            if (n.field_b.field_m > 0) {
+            if (n.field_b.position > 0) {
               try {
-                jc.field_H.a(n.field_b.field_m, n.field_b.field_k, 1, 0);
-                hi.field_k = d.a((byte) 29);
+                jc.field_H.a(n.field_b.position, n.field_b.payload, 1, 0);
+                BufferedSocket.field_k = d.a((byte) 29);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 ql.a(param0 ^ 17);
               }
-              n.field_b.field_m = 0;
+              n.field_b.position = 0;
             }
             if (param0 != -67) {
               var3 = (String) null;
@@ -141,7 +141,7 @@ final class id {
             }
             return;
           }
-          n.field_b.field_m = 0;
+          n.field_b.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
