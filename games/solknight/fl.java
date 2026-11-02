@@ -5,7 +5,7 @@ final class fl {
     private static int[] field_a;
     static int[] field_b;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, o param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite param5) {
         int incrementValue$0 = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -124,7 +124,7 @@ final class fl {
         byte[][] arrayValue$4 = null;
         byte[] var2_ref_byte__;
         byte[] var3;
-        o var4;
+        Sprite var4;
         byte[] var2_ref_byte__Lifetime1;
         byte[] var2_ref_byte__Lifetime2;
         if (param0 == 100 &&
@@ -144,8 +144,8 @@ final class fl {
           return var2_ref_byte__Lifetime1;
         }
         if (param1 != -1) {
-          var4 = (o) null;
-          fl.a(40, -45, 42, 86, 61, (o) null);
+          var4 = (Sprite) null;
+          fl.a(40, -45, 42, 86, 61, (Sprite) null);
         }
         if (30000 == param0 &&
           sf.field_c > 0) {
@@ -185,8 +185,8 @@ final class fl {
 
     public static void a(byte param0) {
         if (param0 != -108) {
-          o var2 = (o) null;
-          fl.a(88, 111, 27, -112, 11, (o) null);
+          Sprite var2 = (Sprite) null;
+          fl.a(88, 111, 27, -112, 11, (Sprite) null);
         }
         field_a = null;
         field_b = null;

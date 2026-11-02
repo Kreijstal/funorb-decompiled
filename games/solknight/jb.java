@@ -5,7 +5,7 @@ import java.util.*;
 
 final class jb extends aa {
     static int field_f;
-    static o[] field_d;
+    static Sprite[] field_d;
     static Random field_g;
     private String field_b;
     private String field_c;
@@ -36,7 +36,7 @@ final class jb extends aa {
         field_g = null;
         field_d = null;
         if (param0 != 22174) {
-          field_d = (o[]) null;
+          field_d = (Sprite[]) null;
         }
     }
 

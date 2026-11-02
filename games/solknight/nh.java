@@ -26,11 +26,11 @@ final class nh {
         uf.a(false, param1);
     }
 
-    final static o[] a(da param0, String param1, int param2, String param3) {
+    final static Sprite[] a(da param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        o[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

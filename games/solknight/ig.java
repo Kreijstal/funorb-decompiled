@@ -21,8 +21,8 @@ final class ig extends WidgetContainer implements ka {
           field_D = null;
           return;
         }
-        o var2 = (o) null;
-        ig.a((o) null, 0, 30, 35, 43, 70);
+        Sprite var2 = (Sprite) null;
+        ig.a((Sprite) null, 0, 30, 35, 43, 70);
         field_D = null;
     }
 
@@ -94,22 +94,22 @@ final class ig extends WidgetContainer implements ka {
         }
     }
 
-    final static o a(o param0, int param1, int param2, int param3, int param4, int param5) {
-        o var6 = null;
+    final static Sprite a(Sprite param0, int param1, int param2, int param3, int param4, int param5) {
+        Sprite var6 = null;
         RuntimeException var6_ref = null;
-        o stackIn_2_0 = null;
-        o stackIn_4_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 30) {
-            stackIn_2_0 = (o) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
-          var6 = new o(param4, param5);
-          o.a(param0, var6, param3, param2, 0, 0, param4, param5);
+          var6 = new Sprite(param4, param5);
+          Sprite.a(param0, var6, param3, param2, 0, 0, param4, param5);
           stackIn_4_0 = var6;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -176,8 +176,8 @@ final class ig extends WidgetContainer implements ka {
     final static void a(byte param0) {
         gf.field_cb.c(-3399, new ig());
         if (param0 > -31) {
-          o var2 = (o) null;
-          ig.a((o) null, 122, 9, -53, 119, 102);
+          Sprite var2 = (Sprite) null;
+          ig.a((Sprite) null, 122, 9, -53, 119, 102);
         }
     }
 

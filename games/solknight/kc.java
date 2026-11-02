@@ -56,10 +56,10 @@ final class kc extends pj {
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        o var15 = null;
-        o var16 = null;
-        o var13 = null;
-        o var12 = null;
+        Sprite var15 = null;
+        Sprite var16 = null;
+        Sprite var13 = null;
+        Sprite var12 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = SolKnight.field_L ? 1 : 0;
@@ -77,7 +77,7 @@ final class kc extends pj {
           var9 = var15.field_q << 1;
           var10 = var15.field_r << 1;
           if (null == pk.field_Y) {
-            pk.field_Y = new o(var9, var10);
+            pk.field_Y = new Sprite(var9, var10);
             cl.a(-116, pk.field_Y);
             var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
             mf.e(param3 + 4096);
@@ -85,7 +85,7 @@ final class kc extends pj {
             return;
           }
           if (var9 > pk.field_Y.field_p) {
-            pk.field_Y = new o(var9, var10);
+            pk.field_Y = new Sprite(var9, var10);
             cl.a(-116, pk.field_Y);
             var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
             mf.e(param3 + 4096);
@@ -100,19 +100,19 @@ final class kc extends pj {
             pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
             return;
           }
-          pk.field_Y = new o(var9, var10);
+          pk.field_Y = new Sprite(var9, var10);
           cl.a(-116, pk.field_Y);
           var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
           mf.e(param3 + 4096);
           pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
           return;
         }
-        if (db.field_u == var8) {
+        if (SpriteState.field_u == var8) {
           var16 = PacketBuffer.field_k[0];
           var9Lifetime1 = var16.field_q << 1;
           var10Lifetime1 = var16.field_r << 1;
           if (null == pk.field_Y) {
-            pk.field_Y = new o(var9Lifetime1, var10Lifetime1);
+            pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
             cl.a(-116, pk.field_Y);
             var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
             mf.e(param3 + 4096);
@@ -120,7 +120,7 @@ final class kc extends pj {
             return;
           }
           if (var9Lifetime1 > pk.field_Y.field_p) {
-            pk.field_Y = new o(var9Lifetime1, var10Lifetime1);
+            pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
             cl.a(-116, pk.field_Y);
             var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
             mf.e(param3 + 4096);
@@ -135,7 +135,7 @@ final class kc extends pj {
             pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);
             return;
           }
-          pk.field_Y = new o(var9Lifetime1, var10Lifetime1);
+          pk.field_Y = new Sprite(var9Lifetime1, var10Lifetime1);
           cl.a(-116, pk.field_Y);
           var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
           mf.e(param3 + 4096);

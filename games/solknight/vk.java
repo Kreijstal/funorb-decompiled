@@ -3,7 +3,7 @@
  */
 final class vk extends jf {
     private int field_d;
-    static o[] field_i;
+    static Sprite[] field_i;
     static char[] field_e;
     private int field_h;
     private String field_k;
@@ -14,9 +14,9 @@ final class vk extends jf {
     private int field_o;
     private int field_f;
     private boolean field_j;
-    private mg field_l;
+    private BitmapFont field_l;
 
-    final void a(mg param0, byte param1, int param2, int param3, String param4) {
+    final void a(BitmapFont param0, byte param1, int param2, int param3, String param4) {
         le var7 = null;
         if (param4 == null) {
           this.field_c = null;
@@ -44,7 +44,7 @@ final class vk extends jf {
         }
     }
 
-    final void a(int param0, int param1, int param2, mg param3, String param4) {
+    final void a(int param0, int param1, int param2, BitmapFont param3, String param4) {
         le var8 = null;
         int var7 = 0;
         if (param4 == null) {
@@ -69,7 +69,7 @@ final class vk extends jf {
         }
     }
 
-    final void a(int param0, mg param1, int param2, String param3, int param4) {
+    final void a(int param0, BitmapFont param1, int param2, String param3, int param4) {
         le var8 = null;
         le var9 = null;
         if (param3 == null) {
@@ -101,7 +101,7 @@ final class vk extends jf {
         }
     }
 
-    private final le a(mg param0, String param1, int param2, byte param3) {
+    private final le a(BitmapFont param0, String param1, int param2, byte param3) {
         le var5 = null;
         RuntimeException var5_ref = null;
         le var6 = null;
@@ -149,7 +149,7 @@ final class vk extends jf {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        rb var4_ref_rb = null;
+        Asteroid var4_ref_rb = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -262,7 +262,7 @@ final class vk extends jf {
         }
     }
 
-    final void a(String param0, int param1, int param2, int param3, mg param4, int param5, int param6, int param7) {
+    final void a(String param0, int param1, int param2, int param3, BitmapFont param4, int param5, int param6, int param7) {
         le stackIn_38_0;
         le stackIn_38_1;
         int stackIn_38_2;
@@ -314,7 +314,7 @@ final class vk extends jf {
           this.field_n = param6;
           this.field_l = param4;
           if (param3 <= 36) {
-            this.field_l = (mg) null;
+            this.field_l = (BitmapFont) null;
           }
           this.field_f = param7;
           this.field_j = false;

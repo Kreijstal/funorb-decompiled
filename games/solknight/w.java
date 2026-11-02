@@ -4,7 +4,7 @@
 final class w {
     static nc field_a;
     static String[] field_c;
-    static o[] field_b;
+    static Sprite[] field_b;
     static String field_d;
 
     final static Object a(byte[] param0, byte param1, boolean param2) {

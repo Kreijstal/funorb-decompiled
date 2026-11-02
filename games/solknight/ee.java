@@ -34,7 +34,7 @@ final class ee extends IntrusiveNode {
             } else {
               v.field_a = bf.field_m;
             }
-            v.field_a = ci.a(new CharSequence[]{(CharSequence) ((Object) v.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) pd.field_b)}, (byte) -93);
+            v.field_a = ci.a(new CharSequence[]{(CharSequence) ((Object) v.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) RasterBuffer.field_b)}, (byte) -93);
           }
           ah.field_e.f(true);
           ql.d(18962);

@@ -3,7 +3,7 @@
  */
 final class aj {
     j field_h;
-    mg field_k;
+    BitmapFont field_k;
     static int[] field_o;
     int field_e;
     static byte[] field_t;
@@ -189,24 +189,24 @@ final class aj {
         mi.e(param3, param1, param5, param2, param4);
     }
 
-    final void a(int param0, mg param1) {
+    final void a(int param0, BitmapFont param1) {
         af var18 = null;
         ql var4 = null;
-        o[] var5 = null;
-        ui var17 = null;
-        ui var19 = null;
+        Sprite[] var5 = null;
+        ArgbSprite var17 = null;
+        ArgbSprite var19 = null;
         int var7_int = 0;
         ql var6 = null;
         ql var7 = null;
         we discarded$0 = null;
         sj discarded$1 = null;
         ql var8 = null;
-        o[] var9 = null;
-        o[] var10 = null;
-        o dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         ql var11 = null;
         ql var12 = null;
-        o var13 = null;
+        Sprite var13 = null;
         ql var14 = null;
         ql var20 = null;
         int var15 = SolKnight.field_L ? 1 : 0;
@@ -236,13 +236,13 @@ final class aj {
           var4.a((byte) -80, 0).d(-126, 15658734).a(mb.a(8947848, 10066329, 120, 7829367), (byte) 119);
           var4.a((byte) -68, 1).a(mb.a(11184810, 10066329, 114, 13421772), (byte) 119);
           var4.a((byte) -39, 3).a(mb.a(8947848, 7829367, 93, 10066329), (byte) 119).b(1, -119).a(1, (byte) 85);
-          var5 = new o[9];
-          var17 = new ui(32, 32);
+          var5 = new Sprite[9];
+          var17 = new ArgbSprite(32, 32);
           var19 = var17;
           for (var7_int = 0; var7_int < var19.field_v.length; var7_int++) {
             var17.field_v[var7_int] = 1077952576;
           }
-          var5[4] = (o) ((Object) var19);
+          var5[4] = (Sprite) ((Object) var19);
           var4.a((byte) -85, 4).a(0, true).a(var5, (byte) 119);
           var4.a((byte) -38, 5).a(je.a(0, (byte) -124, 65793, 0, 0), (byte) 119).a(0, true).d(-123, -1);
           this.field_i = (j) ((Object) var4);
@@ -260,10 +260,10 @@ final class aj {
           var8.a((byte) -56, 0).a(mb.a(15658734, 7829367, 126, 10066329), (byte) 119).d(-120, 1118481).a(-1, 256);
           var8.a((byte) -85, 4).a(0, true).a(var5, (byte) 119);
           this.field_h = (j) ((Object) var8);
-          var9 = new o[9];
-          var9[4] = new o(2, 1);
-          var10 = new o[9];
-          var10[4] = new o(1, 2);
+          var9 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10 = new Sprite[9];
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_v = new int[]{6710886, 7829367};
           var10[4].field_v = new int[]{6710886, 7829367};
@@ -271,7 +271,7 @@ final class aj {
           var12 = new ql();
           var11.a((byte) -60, 0, var9);
           var12.a((byte) -60, 0, var10);
-          var13 = new o(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_v = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new ql(var4, true);
           var14.a((byte) 103, var13.c());

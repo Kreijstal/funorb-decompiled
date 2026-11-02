@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class uh {
-    static o[] field_l;
+    static Sprite[] field_l;
     int field_E;
     short field_F;
     int[] field_M;

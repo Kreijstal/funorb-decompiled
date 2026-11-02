@@ -248,11 +248,11 @@ final class vb extends il {
         super(param0, param1);
     }
 
-    final static o[] e(int param0) {
+    final static Sprite[] e(int param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
-        o[] var1;
+        Sprite[] var1;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
@@ -266,7 +266,7 @@ final class vb extends il {
         byte[] var21;
         int[] var22;
         var8 = SolKnight.field_L ? 1 : 0;
-        var1 = new o[nb.field_c];
+        var1 = new Sprite[nb.field_c];
         if (param0 != 255) {
           vb.e(64);
         }
@@ -279,7 +279,7 @@ final class vb extends il {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = ig.field_H[fi.a((int) var21[var6], 255)];
             }
-            var1[var2] = new o(MouseInputHandler.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var22);
+            var1[var2] = new Sprite(MouseInputHandler.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var22);
           } else {
             var16 = uf.field_s[var2];
             var12 = var16;
@@ -291,7 +291,7 @@ final class vb extends il {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = ProxySocketConnector.a(ig.field_H[fi.a((int) var21[var7], 255)], fi.a((int) var16[var7], 255) << 24);
             }
-            var1[var2] = (o) ((Object) new ui(MouseInputHandler.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(MouseInputHandler.field_a, we.field_e, ph.field_h[var2], qf.field_d[var2], sa.field_l[var2], uj.field_b[var2], var17));
           }
         }
         og.a((byte) -97);

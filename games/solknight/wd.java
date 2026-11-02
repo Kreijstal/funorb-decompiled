@@ -25,7 +25,7 @@ abstract class wd {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            db.a(var1, (byte) -115);
+            SpriteState.a(var1, (byte) -115);
             id.field_c.b(1, -var2 + var1.position);
           }
           return;

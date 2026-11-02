@@ -12,7 +12,7 @@ class af implements j, eg {
     int field_e;
     int field_m;
     int field_a;
-    mg field_l;
+    BitmapFont field_l;
     private int field_k;
     static int[] field_h;
     int field_d;
@@ -153,7 +153,7 @@ class af implements j, eg {
         return stackIn_6_0;
     }
 
-    af(mg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    af(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
@@ -812,7 +812,7 @@ class af implements j, eg {
     protected af() {
     }
 
-    af(mg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    af(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
           this.field_j = param4;
           this.field_g = param7;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fh {
-    static o field_f;
+    static Sprite field_f;
     static int field_a;
     static boolean[] field_d;
     static boolean field_g;

@@ -227,9 +227,9 @@ abstract class ld extends kf {
           !(l.field_a.length >= param1)) {
           l.field_a = new int[param1 * 2];
         }
-        if (null == pd.field_e ||
-          !(param0 + param1 <= pd.field_e.length)) {
-          pd.field_e = new int[(param0 + param1) * 2];
+        if (null == RasterBuffer.field_e ||
+          !(param0 + param1 <= RasterBuffer.field_e.length)) {
+          RasterBuffer.field_e = new int[(param0 + param1) * 2];
         }
         if (null == vc.field_a ||
           !(param1 <= vc.field_a.length)) {

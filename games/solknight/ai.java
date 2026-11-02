@@ -9,7 +9,7 @@ final class ai {
     static da field_b;
     static String field_c;
 
-    final static void a(int param0, mg param1, int param2, int param3, int param4, int param5, int param6, int param7, o param8, int param9, int param10) {
+    final static void a(int param0, BitmapFont param1, int param2, int param3, int param4, int param5, int param6, int param7, Sprite param8, int param9, int param10) {
         try {
           jj.field_db = param4;
           gf.field_T = param2;
@@ -98,7 +98,7 @@ final class ai {
         return BufferedSocket.field_c[var4];
     }
 
-    final static void a(o[] param0, byte param1, int param2, int param3) {
+    final static void a(Sprite[] param0, byte param1, int param2, int param3) {
         try {
           int var4_int = 86 % ((param1 + 27) / 54);
           he.field_c = new hi(param0);

@@ -4,7 +4,7 @@
 abstract class kf extends WidgetContainer {
     private int field_I;
     static String field_D;
-    static rb[] field_G;
+    static Asteroid[] field_G;
     private i field_E;
     static String field_F;
     boolean field_J;
@@ -49,7 +49,7 @@ abstract class kf extends WidgetContainer {
           mi.d(param1, param2, param3, param4);
           return;
         }
-        field_G = (rb[]) null;
+        field_G = (Asteroid[]) null;
         mi.d(param1, param2, param3, param4);
     }
 
@@ -171,7 +171,7 @@ abstract class kf extends WidgetContainer {
           return;
         }
         if (jj.field_x == null) {
-          jj.field_x = new o(this.field_t, this.field_x);
+          jj.field_x = new Sprite(this.field_t, this.field_x);
           cl.a(-100, jj.field_x);
           mi.a();
           this.a(param3, (byte) 94, 0);
@@ -181,7 +181,7 @@ abstract class kf extends WidgetContainer {
           return;
         }
         if (jj.field_x.field_p < this.field_t) {
-          jj.field_x = new o(this.field_t, this.field_x);
+          jj.field_x = new Sprite(this.field_t, this.field_x);
           cl.a(-100, jj.field_x);
           mi.a();
           this.a(param3, (byte) 94, 0);
@@ -191,7 +191,7 @@ abstract class kf extends WidgetContainer {
           return;
         }
         if (jj.field_x.field_t < this.field_x) {
-          jj.field_x = new o(this.field_t, this.field_x);
+          jj.field_x = new Sprite(this.field_t, this.field_x);
           cl.a(-100, jj.field_x);
           mi.a();
           this.a(param3, (byte) 94, 0);

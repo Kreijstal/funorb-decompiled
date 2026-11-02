@@ -8,7 +8,7 @@ class ci extends gf implements ka {
     static String[] field_gb;
     private boolean field_lb;
     static int field_ib;
-    private mg field_nb;
+    private BitmapFont field_nb;
     private boolean field_rb;
     static int[] field_pb;
     private c field_kb;
@@ -135,7 +135,7 @@ class ci extends gf implements ka {
         this.field_kb.a((byte) -128, 4210752, 2121792);
         lj var2 = new lj(this, this.field_nb, pc.field_a);
         if (param0 <= 118) {
-          this.field_nb = (mg) null;
+          this.field_nb = (BitmapFont) null;
         }
         var2.a(15, kf.field_F, 1);
         this.c(-3399, var2);
@@ -159,7 +159,7 @@ class ci extends gf implements ka {
           fj.a((byte) 85);
         } else {
           if (this.field_rb) {
-            ie.b(-102);
+            MenuScreen.b(-102);
           }
         }
         if (!param0) {
@@ -168,7 +168,7 @@ class ci extends gf implements ka {
         }
     }
 
-    ci(i param0, mg param1, String param2, boolean param3, boolean param4) {
+    ci(i param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
         super(param0, new lj((ci) null, param1, param2), 77, 10, 10);
         try {
           this.field_lb = false;
@@ -327,15 +327,15 @@ class ci extends gf implements ka {
         int var8 = 0;
         int var9 = 0;
         od[] var10 = null;
-        o var11 = null;
-        o var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var13 = 0;
         da var14 = null;
         od[] var15 = null;
-        o var16 = null;
+        Sprite var16 = null;
         int[][] var17 = null;
-        o var18 = null;
-        o var19 = null;
+        Sprite var18 = null;
+        Sprite var19 = null;
         int[][] var20 = null;
         int var8Lifetime1;
         int var9Lifetime1;
@@ -343,19 +343,19 @@ class ci extends gf implements ka {
         try {
           fi.field_a = SecondaryNodeDeque.a(param3, -18362, "frame_top", "commonui");
           ProxySocketConnector.field_l = SecondaryNodeDeque.a(param3, -18362, "frame_bottom", "commonui");
-          fa.field_b = rb.a("jagex_logo_grey", "commonui", param3, (byte) -125);
+          fa.field_b = Asteroid.a("jagex_logo_grey", "commonui", param3, (byte) -125);
           vk.field_i = SecondaryNodeDeque.a(param3, -18362, "button", "commonui");
           PacketBuffer.field_k = nh.a(param3, "validation", 0, "commonui");
           stackIn_3_0 = (da) (param0);
           stackIn_3_1 = "commonui";
           stackIn_4_2 = !(param1);
-          jh.field_g = (mg) ((Object) si.a(stackIn_3_0, stackIn_3_1, stackIn_4_2, "arezzo12", param3));
+          jh.field_g = (BitmapFont) ((Object) si.a(stackIn_3_0, stackIn_3_1, stackIn_4_2, "arezzo12", param3));
           stackIn_6_0 = (da) (param0);
           stackIn_6_1 = "commonui";
           stackIn_7_2 = !(param1);
-          ua.field_G = (mg) ((Object) si.a(stackIn_6_0, stackIn_6_1, stackIn_7_2, "arezzo14", param3));
-          uc.field_g = (mg) ((Object) si.a(param0, "commonui", true, "arezzo14bold", param3));
-          var18 = new o(param2.a(4, "button.gif", ""), (java.awt.Component) ((Object) dc.field_q));
+          ua.field_G = (BitmapFont) ((Object) si.a(stackIn_6_0, stackIn_6_1, stackIn_7_2, "arezzo14", param3));
+          uc.field_g = (BitmapFont) ((Object) si.a(param0, "commonui", true, "arezzo14bold", param3));
+          var18 = new Sprite(param2.a(4, "button.gif", ""), (java.awt.Component) ((Object) dc.field_q));
           ClientException.a(param3, -97, "dropdown", "commonui");
           var5 = dj.a(8108, "screen_options", param3, "commonui");
           md.field_s = new od[4];
@@ -388,18 +388,18 @@ class ci extends gf implements ka {
           fl.b((byte) 91);
           var18.a();
           mi.c(0, 0, mi.field_a, mi.field_d);
-          var16 = new o(var9Lifetime1, var9Lifetime1);
+          var16 = new Sprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.a();
           var18.c(0, 0);
-          var11 = new o(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.a();
           var18.c(var9Lifetime1 - var18.field_p, 0);
-          var12 = new o(-(var9Lifetime1 * 2) + var18.field_p, var9Lifetime1);
+          var12 = new Sprite(-(var9Lifetime1 * 2) + var18.field_p, var9Lifetime1);
           var12.a();
           var18.c(-var9Lifetime1, 0);
           mf.e(4096);
-          vk.field_i = new o[]{var16, var12, var11};
+          vk.field_i = new Sprite[]{var16, var12, var11};
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

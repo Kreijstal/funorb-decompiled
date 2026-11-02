@@ -54,7 +54,7 @@ final class ah {
         }
     }
 
-    final static void a(o param0, boolean param1) {
+    final static void a(Sprite param0, boolean param1) {
         try {
           if (param1) {
             field_i = (int[]) null;
@@ -75,8 +75,8 @@ final class ah {
         field_h = null;
         field_j = null;
         if (!param0) {
-          o var2 = (o) null;
-          ah.a((o) null, false);
+          Sprite var2 = (Sprite) null;
+          ah.a((Sprite) null, false);
         }
     }
 

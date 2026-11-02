@@ -5,7 +5,7 @@ abstract class sk extends DualLinkNode {
     boolean field_r;
     boolean field_q;
     static int field_o;
-    static mg field_n;
+    static BitmapFont field_n;
     volatile boolean field_m;
     static fg field_p;
 

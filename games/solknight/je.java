@@ -15,7 +15,7 @@ final class je {
         }
     }
 
-    final static void a(o[] param0, int param1, int param2, int param3, byte param4) {
+    final static void a(Sprite[] param0, int param1, int param2, int param3, byte param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -63,7 +63,7 @@ final class je {
         }
     }
 
-    final static o[] a(int param0, byte param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
         int var5 = -125 % ((param1 - 30) / 35);
         return md.a(param2, param3, param0, param4, 1, -1, 1, 3, 1);
     }

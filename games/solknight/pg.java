@@ -6,7 +6,7 @@ import java.io.*;
 final class pg {
     static int field_b;
     static long[] field_d;
-    static o field_a;
+    static Sprite field_a;
     static String field_c;
     static boolean field_e;
 

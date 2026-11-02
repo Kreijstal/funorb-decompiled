@@ -55,16 +55,16 @@ final class m extends IntrusiveNode {
         throw new Error();
     }
 
-    final static rb a(int param0, int param1, int param2, byte param3, int param4, int param5) {
-        rb var6 = null;
-        rb var6Lifetime1;
+    final static Asteroid a(int param0, int param1, int param2, byte param3, int param4, int param5) {
+        Asteroid var6 = null;
+        Asteroid var6Lifetime1;
         if (param3 == -6) {
-          var6 = new rb(param0, param2, param1, param5, param4);
+          var6 = new Asteroid(param0, param2, param1, param5, param4);
           pk.a((byte) 32, var6);
           return var6;
         }
         field_h = (nc) null;
-        var6Lifetime1 = new rb(param0, param2, param1, param5, param4);
+        var6Lifetime1 = new Asteroid(param0, param2, param1, param5, param4);
         pk.a((byte) 32, var6Lifetime1);
         return var6Lifetime1;
     }

@@ -14,7 +14,7 @@ abstract class gf extends ld {
     static String[] field_X;
     private int field_bb;
     static long field_Y;
-    static o[] field_fb;
+    static Sprite[] field_fb;
     static s field_cb;
 
     final boolean e(byte param0) {

@@ -8,7 +8,7 @@ final class le {
     static volatile int field_f;
     int[] field_c;
     int field_e;
-    static o[] field_d;
+    static Sprite[] field_d;
 
     final static void a(int param0, String param1, String param2) {
         RuntimeException var3 = null;
@@ -86,7 +86,7 @@ final class le {
         if (!param1) {
           return this.field_c.length - 1;
         }
-        field_d = (o[]) null;
+        field_d = (Sprite[]) null;
         return this.field_c.length - 1;
     }
 

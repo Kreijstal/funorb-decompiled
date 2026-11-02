@@ -4,7 +4,7 @@
 final class nb {
     static String field_b;
     static int field_c;
-    static o field_a;
+    static Sprite field_a;
     static String field_d;
     private static String field_z;
 

@@ -6,11 +6,11 @@ final class of {
     private int field_c;
     private boolean field_i;
     private int field_h;
-    static o[] field_b;
+    static Sprite[] field_b;
     static int field_g;
-    static o field_d;
+    static Sprite field_d;
     static long field_e;
-    static o field_f;
+    static Sprite field_f;
 
     public static void a(int param0) {
         if (param0 == 1) {
@@ -80,7 +80,7 @@ final class of {
         if (this.field_a.length <= param0) {
           this.b(param0, 0);
           if (param1 != 61) {
-            field_f = (o) null;
+            field_f = (Sprite) null;
             this.field_a[param0] = param2;
             return;
           }
@@ -91,7 +91,7 @@ final class of {
           this.field_a[param0] = param2;
           return;
         }
-        field_f = (o) null;
+        field_f = (Sprite) null;
         this.field_a[param0] = param2;
     }
 

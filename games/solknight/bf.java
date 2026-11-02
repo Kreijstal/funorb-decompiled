@@ -8,12 +8,12 @@ final class bf {
     static String field_m;
     static String field_i;
     static int field_a;
-    o field_k;
+    Sprite field_k;
     private int field_g;
     private boolean field_c;
     private int field_l;
     private int field_d;
-    o[] field_j;
+    Sprite[] field_j;
     static sh[] field_b;
     private int field_h;
     private int field_n;
@@ -187,7 +187,7 @@ final class bf {
     }
 
     final void a(int param0, int param1, int param2, ql param3, UiWidget param4) {
-        mg stackIn_18_0 = null;
+        BitmapFont stackIn_18_0 = null;
         String stackIn_18_1 = null;
         int stackIn_19_2 = 0;
         int stackIn_21_2;
@@ -258,7 +258,7 @@ final class bf {
             } else {
               stackIn_25_8 = 256;
             }
-            ((mg) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param3.field_g, param3.field_b, param3.field_f);
+            ((BitmapFont) (Object) stackIn_18_0).a(stackIn_18_1, stackIn_21_2, stackIn_24_3, stackIn_24_4, stackIn_24_5, stackIn_24_6, stackIn_24_7, stackIn_25_8, param3.field_g, param3.field_b, param3.field_f);
           }
           if (param0 > 45) {
             return;
@@ -285,7 +285,7 @@ final class bf {
         }
     }
 
-    final bf a(o[] param0, byte param1) {
+    final bf a(Sprite[] param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

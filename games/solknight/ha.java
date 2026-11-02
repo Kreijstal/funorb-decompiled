@@ -263,10 +263,10 @@ final class ha {
         }
     }
 
-    final static o[] a(int param0, int param1) {
+    final static Sprite[] a(int param0, int param1) {
         int var3 = 115 / ((param1 - 7) / 63);
-        o[] var4 = new o[9];
-        o[] var2 = var4;
+        Sprite[] var4 = new Sprite[9];
+        Sprite[] var2 = var4;
         var4[4] = ib.a(64, true, param0);
         return var2;
     }

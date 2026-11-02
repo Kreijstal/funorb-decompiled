@@ -3,9 +3,9 @@
  */
 final class qd {
     static String field_a;
-    static o[] field_e;
+    static Sprite[] field_e;
     private int field_c;
-    static o[] field_f;
+    static Sprite[] field_f;
     private IntrusiveNode field_h;
     private IntrusiveNode[] field_g;
     static int field_d;

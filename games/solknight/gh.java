@@ -5,7 +5,7 @@ final class gh extends af {
     static String field_r;
     private int field_q;
     private int field_s;
-    private o[] field_t;
+    private Sprite[] field_t;
     private int field_p;
 
     public static void d(int param0) {

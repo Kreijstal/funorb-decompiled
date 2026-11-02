@@ -4,7 +4,7 @@
 final class dd {
     static String[] field_d;
     static int field_b;
-    static o[] field_c;
+    static Sprite[] field_c;
     static String field_a;
 
     public static void b(boolean param0) {

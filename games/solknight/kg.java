@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class kg {
-    static mg field_a;
+    static BitmapFont field_a;
     static ff field_f;
     private java.util.zip.Inflater field_d;
     static String field_b;

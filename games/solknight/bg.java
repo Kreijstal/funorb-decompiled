@@ -46,7 +46,7 @@ final class bg extends uf {
         }
     }
 
-    private bg(mg param0, int param1) {
+    private bg(BitmapFont param0, int param1) {
         super(param0, param1);
     }
 

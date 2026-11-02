@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ui extends o {
-    ui(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+final class ArgbSprite extends Sprite {
+    ArgbSprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         super(param0, param1, param2, param3, param4, param5, param6);
     }
 
@@ -73,7 +73,7 @@ final class ui extends o {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          ui.d(mi.field_f, this.field_v, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          ArgbSprite.d(mi.field_f, this.field_v, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }
@@ -177,7 +177,7 @@ final class ui extends o {
         }
     }
 
-    ui(int param0, int param1) {
+    ArgbSprite(int param0, int param1) {
         super(param0, param1);
     }
 
@@ -248,7 +248,7 @@ final class ui extends o {
           if (var6 <= 0) {
             return;
           }
-          ui.c(mi.field_f, this.field_v, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.c(mi.field_f, this.field_v, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -294,7 +294,7 @@ final class ui extends o {
           if (var5 <= 0) {
             return;
           }
-          ui.c(mi.field_f, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.c(mi.field_f, this.field_v, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -971,7 +971,7 @@ final class ui extends o {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          ui.b(mi.field_f, this.field_v, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          ArgbSprite.b(mi.field_f, this.field_v, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -1210,7 +1210,7 @@ final class ui extends o {
           if (var6 <= 0) {
             return;
           }
-          ui.d(mi.field_f, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.d(mi.field_f, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1279,7 +1279,7 @@ final class ui extends o {
           if (var6 <= 0) {
             return;
           }
-          ui.c(mi.field_f, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          ArgbSprite.c(mi.field_f, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1325,7 +1325,7 @@ final class ui extends o {
           if (var5 <= 0) {
             return;
           }
-          ui.c(mi.field_f, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          ArgbSprite.c(mi.field_f, this.field_v, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1425,7 +1425,7 @@ final class ui extends o {
           if (var6 <= 0) {
             return;
           }
-          ui.b(0, 0, 0, mi.field_f, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+          ArgbSprite.b(0, 0, 0, mi.field_f, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           return;
         }
     }

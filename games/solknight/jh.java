@@ -5,9 +5,9 @@ final class jh {
     private DualLinkNode[] field_d;
     private long field_e;
     private int field_a;
-    static mg field_g;
+    static BitmapFont field_g;
     private DualLinkNode field_c;
-    static o field_b;
+    static Sprite field_b;
     static int field_f;
 
     final static void a(int param0) {
@@ -36,7 +36,7 @@ final class jh {
             IntrusiveNode.field_f[var2_int] = false;
           }
           if (param0 != -1) {
-            field_b = (o) null;
+            field_b = (Sprite) null;
           }
           IntrusiveNode.field_f[1] = true;
           var2 = IntrusiveNode.field_f;
@@ -71,7 +71,7 @@ final class jh {
         try {
           var9 = new PacketBuffer(param0);
           if (param1 != 6) {
-            field_b = (o) null;
+            field_b = (Sprite) null;
           }
           var3 = var9.readUnsignedByte(param1 + 249);
           var4 = var9.readInt(true);
@@ -148,7 +148,7 @@ final class jh {
           } catch (Throwable throwable) {
           }
           if (param1 <= 44) {
-            field_g = (mg) null;
+            field_g = (BitmapFont) null;
             return;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -247,7 +247,7 @@ final class jh {
         synchronized (var1) {
           wb.field_c = u.field_d;
           if (param0 != 406) {
-            field_g = (mg) null;
+            field_g = (BitmapFont) null;
           }
           cf.field_e = cf.field_e + 1;
           PacketBuffer.field_j = le.field_f;
@@ -255,7 +255,7 @@ final class jh {
           ne.field_d = pe.field_n;
           pe.field_n = false;
           hg.field_F = SolKnight.field_G;
-          db.field_o = SocketConnector.field_a;
+          SpriteState.field_o = SocketConnector.field_a;
           s.field_gb = wd.field_d;
           SolKnight.field_G = 0;
         }

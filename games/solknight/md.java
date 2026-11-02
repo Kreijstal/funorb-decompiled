@@ -54,14 +54,14 @@ final class md extends sk {
         field_t = null;
     }
 
-    final static o[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        o[] var10;
-        o[] var11_ref_o__;
+        Sprite[] var10;
+        Sprite[] var11_ref_o__;
         int var11;
         int var12;
-        o var13;
+        Sprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -72,7 +72,7 @@ final class md extends sk {
         int var12Lifetime4;
         var15 = SolKnight.field_L ? 1 : 0;
         var9 = param4 + (param6 + param8);
-        var10 = new o[]{new o(var9, var9), new o(param7, var9), new o(var9, var9), new o(var9, param7), new o(64, 64), new o(var9, param7), new o(var9, var9), new o(param7, var9), new o(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param7, var9), new Sprite(var9, var9), new Sprite(var9, param7), new Sprite(64, 64), new Sprite(var9, param7), new Sprite(var9, var9), new Sprite(param7, var9), new Sprite(var9, var9)};
         var11_ref_o__ = var10;
         for (var12 = 0; var11_ref_o__.length > var12; var12++) {
           var13 = var11_ref_o__[var12];
@@ -82,7 +82,7 @@ final class md extends sk {
         }
         var11 = 0;
         if (param5 != -1) {
-          return (o[]) null;
+          return (Sprite[]) null;
         }
         while (var11 < param8) {
           for (var12Lifetime1 = 0; var9 > var12Lifetime1; var12Lifetime1++) {

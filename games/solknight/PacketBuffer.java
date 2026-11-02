@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class PacketBuffer extends IntrusiveNode {
-    static o[] field_k;
+    static Sprite[] field_k;
     static ef field_i;
     int position;
     static pc field_h;
@@ -464,7 +464,7 @@ class PacketBuffer extends IntrusiveNode {
           field_h = (pc) null;
         }
         if (ri.field_f >= 0) {
-          vd.field_d[ri.field_f].b(param0, 3367);
+          vd.screens[ri.field_f].b(param0, 3367);
         }
     }
 

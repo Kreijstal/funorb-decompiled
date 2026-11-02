@@ -15,7 +15,7 @@ abstract class aa {
 
     abstract wb a(int param0);
 
-    final static void a(int param0, byte param1, mg param2, int param3, int param4, o[] param5, int param6, int param7, int param8, mg param9, o[] param10, int param11, int param12, int param13) {
+    final static void a(int param0, byte param1, BitmapFont param2, int param3, int param4, Sprite[] param5, int param6, int param7, int param8, BitmapFont param9, Sprite[] param10, int param11, int param12, int param13) {
         if (param1 != -93) {
           return;
         }

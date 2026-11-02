@@ -23,7 +23,7 @@ final class gd {
         field_b = null;
     }
 
-    final static void a(int param0, o param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, Sprite param1, int param2, byte param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = param0 + (param1.field_s + param6 - param4);
         int var10 = param1.field_s + param0 + param6 + param2;
         int var11 = param1.field_n + param5 + (param1.field_t >> 1);

@@ -6,10 +6,10 @@ import java.util.*;
 final class IterableNodeHashTable implements Iterable {
     static String field_a;
     static String field_c;
-    static o[] field_g;
+    static Sprite[] field_g;
     private IntrusiveNode field_d;
     IntrusiveNode[] buckets;
-    static o[] field_f;
+    static Sprite[] field_f;
     static int field_h;
     int field_e;
     static String field_i;
@@ -51,7 +51,7 @@ final class IterableNodeHashTable implements Iterable {
 
     final static int a(int param0, int param1) {
         if (param1 <= 125) {
-          field_f = (o[]) null;
+          field_f = (Sprite[]) null;
         }
         param0 = (param0 & 1431655765) + ((-1431655766 & param0) >>> 1);
         param0 = (858993459 & param0) + ((-858993458 & param0) >>> 2);
@@ -138,7 +138,7 @@ final class IterableNodeHashTable implements Iterable {
           node.next.previous = node;
           node.key = key;
           if (obfuscationGuard != -858993458) {
-            field_g = (o[]) null;
+            field_g = (Sprite[]) null;
           }
           node.previous.next = node;
         } catch (RuntimeException runtimeException) {

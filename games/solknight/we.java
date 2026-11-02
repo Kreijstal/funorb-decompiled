@@ -10,7 +10,7 @@ final class we implements j {
     static int field_h;
     private int field_f;
     static int field_c;
-    private mg field_k;
+    private BitmapFont field_k;
     private int field_b;
     static int field_e;
 
@@ -163,7 +163,7 @@ final class we implements j {
         int stackIn_72_1 = 0;
         boolean stackIn_73_2 = false;
         RuntimeException decompiledCaughtException = null;
-        o var1 = null;
+        Sprite var1 = null;
         int var1_int = 0;
         RuntimeException var1_ref = null;
         int var2 = 0;
@@ -174,12 +174,12 @@ final class we implements j {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        o var9 = null;
+        Sprite var9 = null;
         int var10 = 0;
-        o var11 = null;
-        o var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         String var14 = null;
-        o var16 = null;
+        Sprite var16 = null;
         String var17 = null;
         int[] var28 = null;
         int[] var29 = null;
@@ -210,26 +210,26 @@ final class we implements j {
             eb.field_b != null &&
             eb.field_b.c((byte) -121) &&
             eb.field_b.a(2, "benefits")) {
-            of.field_f = rb.a("headline", "benefits", kc.field_Q, (byte) -120);
-            pf.field_b = rb.a("blurbpane", "benefits", kc.field_Q, (byte) -126);
-            IsaacRandom.field_d = rb.a("button", "benefits", kc.field_Q, (byte) -117);
-            a.field_e = rb.a("signup_text", "benefits", kc.field_Q, (byte) -119);
-            jh.field_b = rb.a("menu_text", "benefits", kc.field_Q, (byte) -114);
-            GameApplet.field_j = rb.a("button_frame", "benefits", kc.field_Q, (byte) -121);
-            kj.field_S = rb.a("arrow", "benefits", kc.field_Q, (byte) -111);
-            kg.field_a = (mg) ((Object) lc.a(kc.field_Q, 1, "large_font", "benefits", eb.field_b));
-            sk.field_n = (mg) ((Object) lc.a(kc.field_Q, 1, "small_font", "benefits", eb.field_b));
+            of.field_f = Asteroid.a("headline", "benefits", kc.field_Q, (byte) -120);
+            pf.field_b = Asteroid.a("blurbpane", "benefits", kc.field_Q, (byte) -126);
+            IsaacRandom.field_d = Asteroid.a("button", "benefits", kc.field_Q, (byte) -117);
+            a.field_e = Asteroid.a("signup_text", "benefits", kc.field_Q, (byte) -119);
+            jh.field_b = Asteroid.a("menu_text", "benefits", kc.field_Q, (byte) -114);
+            GameApplet.field_j = Asteroid.a("button_frame", "benefits", kc.field_Q, (byte) -121);
+            kj.field_S = Asteroid.a("arrow", "benefits", kc.field_Q, (byte) -111);
+            kg.field_a = (BitmapFont) ((Object) lc.a(kc.field_Q, 1, "large_font", "benefits", eb.field_b));
+            sk.field_n = (BitmapFont) ((Object) lc.a(kc.field_Q, 1, "small_font", "benefits", eb.field_b));
             var28 = mi.field_f;
             var2 = mi.field_a;
             var3 = mi.field_d;
             mi.b(lj.field_D);
-            var11 = new o(kj.field_S.field_p + 4, 4 + kj.field_S.field_t);
+            var11 = new Sprite(kj.field_S.field_p + 4, 4 + kj.field_S.field_t);
             var11.a();
             kj.field_S.e(2, 2, ea.field_o);
             UiWidget.a(var11.field_p, 0, var11.field_t, 2, var11, 0, 1, (byte) 21);
             kj.field_S = var11;
             fh.field_f = kj.field_S.b();
-            var12 = new o(195, 221);
+            var12 = new Sprite(195, 221);
             var6 = var12.field_p / 2;
             var12.a();
             kg.field_a.a(bb.a(og.field_e, new String[]{NodeHashTableIterator.field_c}, -63), var6, 40, 16777215, -1);
@@ -316,13 +316,13 @@ final class we implements j {
               var6Lifetime1 = var6Lifetime1 + var9_intLifetime3 * 2;
             }
             ja.field_a.d();
-            var9 = new o(ja.field_a.field_q, ja.field_a.field_r);
+            var9 = new Sprite(ja.field_a.field_q, ja.field_a.field_r);
             var9.a();
             kg.field_a.a(var14, ji.field_a, cl.field_o, jj.field_db, IterableNodeHashTable.field_h, 16777215, -1, 1, 1, kg.field_a.field_F + kg.field_a.field_s);
             UiWidget.a(var9.field_q, 0, var9.field_r, 3, var9, 0, 1, (byte) 21);
             ja.field_a.a();
             var9.d(0, 0);
-            rh.field_g = new o(640, 480);
+            rh.field_g = new Sprite(640, 480);
             rh.field_g.a();
             ja.field_a.b((ja.field_a.field_q >> 1) + gf.field_T, ke.field_N + (ja.field_a.field_r >> 1), aj.field_p, 4096);
             ja.field_a = null;
@@ -336,7 +336,7 @@ final class we implements j {
             var2Lifetime2 = mi.field_a;
             var3Lifetime2 = mi.field_d;
             mi.b(lj.field_D);
-            var16 = new o(412, 43);
+            var16 = new Sprite(412, 43);
             var17 = bb.a(wb.field_d, new String[]{ProxySocketConnector.field_n}, -63);
             ProxySocketConnector.field_n = null;
             var16.a();
@@ -367,8 +367,8 @@ final class we implements j {
             dc.field_j = null;
           }
           mi.b(lj.field_D);
-          mi.a(16, 16, 608, 112, 15, rb.field_f, id.field_a);
-          mi.a(231, 144, 393, 232, 15, rb.field_f, id.field_a);
+          mi.a(16, 16, 608, 112, 15, Asteroid.field_f, id.field_a);
+          mi.a(231, 144, 393, 232, 15, Asteroid.field_f, id.field_a);
           if (of.field_f != null) {
             of.field_f.d(0, 0);
           }
@@ -569,7 +569,7 @@ final class we implements j {
         }
     }
 
-    we(mg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    we(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_g = param6;
           this.field_k = param0;

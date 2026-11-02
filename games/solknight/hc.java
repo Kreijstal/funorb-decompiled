@@ -340,17 +340,17 @@ final class hc {
     }
 
     final static String a(long param0, int param1) {
-        pd.field_f.setTime(new Date(param0));
-        int var3 = pd.field_f.get(7);
-        int var4 = pd.field_f.get(5);
+        RasterBuffer.field_f.setTime(new Date(param0));
+        int var3 = RasterBuffer.field_f.get(7);
+        int var4 = RasterBuffer.field_f.get(5);
         if (param1 != -31289) {
           hc.a(85L, -27);
         }
-        int var5 = pd.field_f.get(2);
-        int var6 = pd.field_f.get(1);
-        int var7 = pd.field_f.get(11);
-        int var8 = pd.field_f.get(12);
-        int var9 = pd.field_f.get(13);
+        int var5 = RasterBuffer.field_f.get(2);
+        int var6 = RasterBuffer.field_f.get(1);
+        int var7 = RasterBuffer.field_f.get(11);
+        int var8 = RasterBuffer.field_f.get(12);
+        int var9 = RasterBuffer.field_f.get(13);
         return na.field_j[var3 - 1] + ", " + var4 / 10 + var4 % 10 + "-" + li.field_h[var5] + "-" + var6 + " " + var7 / 10 + var7 % 10 + ":" + var8 / 10 + var8 % 10 + ":" + var9 / 10 + var9 % 10 + " GMT";
     }
 

@@ -4,7 +4,7 @@
 final class jc {
     static String field_a;
     static byte[][] field_c;
-    static o field_b;
+    static Sprite field_b;
     private static String field_z;
 
     public static void a(int param0) {

@@ -113,16 +113,16 @@ final class lb extends ld {
         }
     }
 
-    final static o a(int param0, o param1, int param2, int param3, int param4, int param5) {
-        o var6 = null;
+    final static Sprite a(int param0, Sprite param1, int param2, int param3, int param4, int param5) {
+        Sprite var6 = null;
         RuntimeException var6_ref = null;
-        o stackIn_1_0 = null;
+        Sprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new o(0, param4);
+          var6 = new Sprite(0, param4);
           var6.field_t = param1.field_t;
           var6.field_p = param1.field_p;
           var6.field_r = param1.field_r - (-param5 - param0);

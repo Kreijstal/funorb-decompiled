@@ -5,7 +5,7 @@ final class th extends si {
     static int field_I;
     static int field_J;
     static int field_K;
-    static o field_H;
+    static Sprite field_H;
     static String field_L;
 
     final static void a(byte param0, java.awt.Canvas param1) {

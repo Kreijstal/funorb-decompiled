@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class c extends UiWidget {
-    private o field_A;
-    private o[] field_S;
+    private Sprite field_A;
+    private Sprite[] field_S;
     private int field_O;
     static rl[] field_M;
     int field_R;
@@ -11,16 +11,16 @@ final class c extends UiWidget {
     private int field_F;
     private int field_K;
     static String field_E;
-    private o field_G;
+    private Sprite field_G;
     private int field_N;
-    private o field_P;
+    private Sprite field_P;
     static volatile int field_J;
     boolean field_B;
     static int field_H;
     private int field_D;
     static String field_L;
 
-    private final o b(int param0, int param1, int param2) {
+    private final Sprite b(int param0, int param1, int param2) {
         int var6 = 0;
         int var5;
         int var7;
@@ -30,14 +30,14 @@ final class c extends UiWidget {
         int var11;
         int var12;
         int var13;
-        o var14;
+        Sprite var14;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         var13 = SolKnight.field_L ? 1 : 0;
-        var14 = new o(2 * this.field_N, this.field_x);
+        var14 = new Sprite(2 * this.field_N, this.field_x);
         cl.a(-112, var14);
         var5 = this.field_x >> 1;
         for (var6 = 0; this.field_x > var6; var6++) {
@@ -85,10 +85,10 @@ final class c extends UiWidget {
         if (param0 != -277997311) {
           field_H = -117;
         }
-        this.field_S = new o[]{this.b(this.field_O, param0 + 294709246, this.field_K), this.b(this.field_I, param0 ^ -275703298, this.field_F)};
+        this.field_S = new Sprite[]{this.b(this.field_O, param0 + 294709246, this.field_K), this.b(this.field_I, param0 ^ -275703298, this.field_F)};
         this.field_P = this.a((byte) -119);
         this.field_A = this.field_P.b();
-        this.field_G = new o(this.field_x >> 1, this.field_x);
+        this.field_G = new Sprite(this.field_x >> 1, this.field_x);
     }
 
     final void a(int param0, int param1, int param2, UiWidget param3) {
@@ -137,9 +137,9 @@ final class c extends UiWidget {
         }
     }
 
-    private final void a(int param0, int param1, o param2, int param3) {
+    private final void a(int param0, int param1, Sprite param2, int param3) {
         int var6 = 0;
-        o discarded$0 = null;
+        Sprite discarded$0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -260,7 +260,7 @@ final class c extends UiWidget {
         this.b(param3, param2, param0, 0, param1);
     }
 
-    private final o a(byte param0) {
+    private final Sprite a(byte param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
@@ -268,9 +268,9 @@ final class c extends UiWidget {
         int var9 = SolKnight.field_L ? 1 : 0;
         int var2 = this.field_x >> 1;
         if (param0 != -119) {
-          return (o) null;
+          return (Sprite) null;
         }
-        o var3 = new o(var2, this.field_x);
+        Sprite var3 = new Sprite(var2, this.field_x);
         cl.a(-98, var3);
         for (var4 = 0; this.field_x > var4; var4++) {
           for (var5 = 0; var5 < var2; var5++) {

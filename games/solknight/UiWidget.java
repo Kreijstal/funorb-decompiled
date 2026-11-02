@@ -104,7 +104,7 @@ class UiWidget extends IntrusiveNode {
           field_o = null;
           return;
         }
-        UiWidget.a(32, 42, -124, -105, (o) null, -64, 78, (byte) 43);
+        UiWidget.a(32, 42, -124, -105, (Sprite) null, -64, 78, (byte) 43);
         field_p = null;
         field_s = null;
         field_o = null;
@@ -323,18 +323,18 @@ class UiWidget extends IntrusiveNode {
           if (!param2) {
             if (var5 == 0) {
               ne.field_j = wb.field_c;
-              pd.a(125, this.c((byte) 78));
+              RasterBuffer.a(125, this.c((byte) 78));
               return param2;
             }
             if (0 == hg.field_F) {
               ne.field_j = wb.field_c;
-              pd.a(125, this.c((byte) 78));
+              RasterBuffer.a(125, this.c((byte) 78));
               return param2;
             }
             this.g(0);
             if (var7 == 0) {
               ne.field_j = wb.field_c;
-              pd.a(125, this.c((byte) 78));
+              RasterBuffer.a(125, this.c((byte) 78));
               return param2;
             }
           }
@@ -342,7 +342,7 @@ class UiWidget extends IntrusiveNode {
             var5 != 0) {
             this.a(param3, this, param1, PacketBuffer.field_j, cl.field_n, BufferedSocket.field_m, (byte) 96);
             if (hg.field_F != 0) {
-              if (this.a(hg.field_F, param3, false, db.field_o, s.field_gb, param1, this)) {
+              if (this.a(hg.field_F, param3, false, SpriteState.field_o, s.field_gb, param1, this)) {
                 param2 = false;
                 if (var7 != 0) {
                   this.g(0);
@@ -353,12 +353,12 @@ class UiWidget extends IntrusiveNode {
             }
             if (wb.field_c != 0) {
               ne.field_j = wb.field_c;
-              pd.a(125, this.c((byte) 78));
+              RasterBuffer.a(125, this.c((byte) 78));
               return param2;
             }
             if (ne.field_j == 0) {
               ne.field_j = wb.field_c;
-              pd.a(125, this.c((byte) 78));
+              RasterBuffer.a(125, this.c((byte) 78));
               return param2;
             }
             this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
@@ -370,12 +370,12 @@ class UiWidget extends IntrusiveNode {
               jf.field_a = null;
             }
             ne.field_j = wb.field_c;
-            pd.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.c((byte) 78));
             return param2;
           }
           regionExit1: {
             if (hg.field_F != 0) {
-              if (this.a(hg.field_F, param3, false, db.field_o, s.field_gb, param1, this)) {
+              if (this.a(hg.field_F, param3, false, SpriteState.field_o, s.field_gb, param1, this)) {
                 param2 = false;
                 if (var7 == 0) {
                   break regionExit1;
@@ -386,12 +386,12 @@ class UiWidget extends IntrusiveNode {
               }
               if (wb.field_c != 0) {
                 ne.field_j = wb.field_c;
-                pd.a(125, this.c((byte) 78));
+                RasterBuffer.a(125, this.c((byte) 78));
                 return param2;
               }
               if (ne.field_j == 0) {
                 ne.field_j = wb.field_c;
-                pd.a(125, this.c((byte) 78));
+                RasterBuffer.a(125, this.c((byte) 78));
                 return param2;
               }
               this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
@@ -405,18 +405,18 @@ class UiWidget extends IntrusiveNode {
                 }
               }
               ne.field_j = wb.field_c;
-              pd.a(125, this.c((byte) 78));
+              RasterBuffer.a(125, this.c((byte) 78));
               return param2;
             }
           }
           if (wb.field_c != 0) {
             ne.field_j = wb.field_c;
-            pd.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.c((byte) 78));
             return param2;
           }
           if (ne.field_j == 0) {
             ne.field_j = wb.field_c;
-            pd.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.c((byte) 78));
             return param2;
           }
           this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
@@ -428,7 +428,7 @@ class UiWidget extends IntrusiveNode {
             jf.field_a = null;
           }
           ne.field_j = wb.field_c;
-          pd.a(125, this.c((byte) 78));
+          RasterBuffer.a(125, this.c((byte) 78));
           return param2;
         }
         this.a(118, 41, -10, 127, -68);
@@ -437,25 +437,25 @@ class UiWidget extends IntrusiveNode {
         if (!param2) {
           if (var5Lifetime1 == 0) {
             ne.field_j = wb.field_c;
-            pd.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.c((byte) 78));
             return param2;
           }
           if (0 == hg.field_F) {
             ne.field_j = wb.field_c;
-            pd.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.c((byte) 78));
             return param2;
           }
           this.g(0);
           if (var7 == 0) {
             ne.field_j = wb.field_c;
-            pd.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.c((byte) 78));
             return param2;
           }
         }
         if (0 == cl.field_n) {
           regionExit2: {
             if (hg.field_F != 0) {
-              if (this.a(hg.field_F, param3, false, db.field_o, s.field_gb, param1, this)) {
+              if (this.a(hg.field_F, param3, false, SpriteState.field_o, s.field_gb, param1, this)) {
                 param2 = false;
                 if (var7 == 0) {
                   break regionExit2;
@@ -465,43 +465,43 @@ class UiWidget extends IntrusiveNode {
                 this.g(0);
                 if (wb.field_c != 0) {
                   ne.field_j = wb.field_c;
-                  pd.a(125, this.c((byte) 78));
+                  RasterBuffer.a(125, this.c((byte) 78));
                   return param2;
                 }
                 if (ne.field_j == 0) {
                   ne.field_j = wb.field_c;
-                  pd.a(125, this.c((byte) 78));
+                  RasterBuffer.a(125, this.c((byte) 78));
                   return param2;
                 }
                 this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
                 var11 = jf.field_a;
                 if (var11 == null) {
                   ne.field_j = wb.field_c;
-                  pd.a(125, this.c((byte) 78));
+                  RasterBuffer.a(125, this.c((byte) 78));
                   return param2;
                 }
                 if (!(var11.field_n instanceof gk)) {
                   jf.field_a = null;
                   ne.field_j = wb.field_c;
-                  pd.a(125, this.c((byte) 78));
+                  RasterBuffer.a(125, this.c((byte) 78));
                   return param2;
                 }
                 ((gk) (var11.field_n)).a((th) null, -7935, var11);
                 jf.field_a = null;
                 ne.field_j = wb.field_c;
-                pd.a(125, this.c((byte) 78));
+                RasterBuffer.a(125, this.c((byte) 78));
                 return param2;
               }
             }
           }
           if (wb.field_c != 0) {
             ne.field_j = wb.field_c;
-            pd.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.c((byte) 78));
             return param2;
           }
           if (ne.field_j == 0) {
             ne.field_j = wb.field_c;
-            pd.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.c((byte) 78));
             return param2;
           }
           this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
@@ -513,13 +513,13 @@ class UiWidget extends IntrusiveNode {
             jf.field_a = null;
           }
           ne.field_j = wb.field_c;
-          pd.a(125, this.c((byte) 78));
+          RasterBuffer.a(125, this.c((byte) 78));
           return param2;
         }
         if (var5Lifetime1 != 0) {
           this.a(param3, this, param1, PacketBuffer.field_j, cl.field_n, BufferedSocket.field_m, (byte) 96);
           if (hg.field_F != 0) {
-            if (this.a(hg.field_F, param3, false, db.field_o, s.field_gb, param1, this)) {
+            if (this.a(hg.field_F, param3, false, SpriteState.field_o, s.field_gb, param1, this)) {
               param2 = false;
               if (var7 != 0) {
                 this.g(0);
@@ -530,12 +530,12 @@ class UiWidget extends IntrusiveNode {
           }
           if (wb.field_c != 0) {
             ne.field_j = wb.field_c;
-            pd.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.c((byte) 78));
             return param2;
           }
           if (ne.field_j == 0) {
             ne.field_j = wb.field_c;
-            pd.a(125, this.c((byte) 78));
+            RasterBuffer.a(125, this.c((byte) 78));
             return param2;
           }
           this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
@@ -548,23 +548,23 @@ class UiWidget extends IntrusiveNode {
             jf.field_a = null;
           }
           ne.field_j = wb.field_c;
-          pd.a(125, this.c((byte) 78));
+          RasterBuffer.a(125, this.c((byte) 78));
           return param2;
         }
         if (hg.field_F != 0 &&
-          this.a(hg.field_F, param3, false, db.field_o, s.field_gb, param1, this)) {
+          this.a(hg.field_F, param3, false, SpriteState.field_o, s.field_gb, param1, this)) {
           param2 = false;
           if (var7 == 0) {
           }
         }
         if (wb.field_c != 0) {
           ne.field_j = wb.field_c;
-          pd.a(125, this.c((byte) 78));
+          RasterBuffer.a(125, this.c((byte) 78));
           return param2;
         }
         if (ne.field_j == 0) {
           ne.field_j = wb.field_c;
-          pd.a(125, this.c((byte) 78));
+          RasterBuffer.a(125, this.c((byte) 78));
           return param2;
         }
         this.a(BufferedSocket.field_m, 0, this, param1, PacketBuffer.field_j, param3);
@@ -576,7 +576,7 @@ class UiWidget extends IntrusiveNode {
           jf.field_a = null;
         }
         ne.field_j = wb.field_c;
-        pd.a(125, this.c((byte) 78));
+        RasterBuffer.a(125, this.c((byte) 78));
         return param2;
     }
 
@@ -738,7 +738,7 @@ class UiWidget extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, o param4, int param5, int param6, byte param7) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite param4, int param5, int param6, byte param7) {
         int stackIn_38_0 = 0;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
@@ -754,7 +754,7 @@ class UiWidget extends IntrusiveNode {
         int var17 = 0;
         int var18 = 0;
         int var19 = 0;
-        o var21 = null;
+        Sprite var21 = null;
         int[] var23 = null;
         int[] var24 = null;
         int stackIn_38_0Lifetime1;

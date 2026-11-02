@@ -3,7 +3,7 @@
  */
 final class u {
     static ff field_a;
-    static o field_c;
+    static Sprite field_c;
     static i field_b;
     static volatile int field_d;
     static String field_e;

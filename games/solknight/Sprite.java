@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class o extends db {
+class Sprite extends SpriteState {
     int[] field_v;
 
     private final static void b(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
@@ -92,7 +92,7 @@ class o extends db {
           if (var6 <= 0) {
             return;
           }
-          o.b(mi.field_f, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.b(mi.field_f, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -209,7 +209,7 @@ class o extends db {
           if (var6 <= 0) {
             return;
           }
-          o.b(mi.field_f, this.field_v, param2, var5, var4, var7, var6, var8, var9);
+          Sprite.b(mi.field_f, this.field_v, param2, var5, var4, var7, var6, var8, var9);
           return;
         }
     }
@@ -670,7 +670,7 @@ class o extends db {
           if (var6 <= 0) {
             return;
           }
-          o.b(mi.field_f, this.field_v, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
+          Sprite.b(mi.field_f, this.field_v, 0, var5, var4, 0, 0, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1022,7 +1022,7 @@ class o extends db {
           if (var5 <= 0) {
             return;
           }
-          o.a(mi.field_f, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(mi.field_f, this.field_v, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1209,9 +1209,9 @@ class o extends db {
             var15 = var15 + var16Lifetime2;
           }
           if (param4 == 256) {
-            o.a(0, 0, 0, var8, this.field_v, mi.field_f, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
+            Sprite.a(0, 0, 0, var8, this.field_v, mi.field_f, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6);
           } else {
-            o.a(0, 0, 0, var8, this.field_v, mi.field_f, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
+            Sprite.a(0, 0, 0, var8, this.field_v, mi.field_f, 0, 0, -param3, var9, var14Lifetime2, var15, param2, var12, var13, var6, param4);
           }
           return;
         }
@@ -1258,7 +1258,7 @@ class o extends db {
           if (var6 <= 0) {
             return;
           }
-          o.a(mi.field_f, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
+          Sprite.a(mi.field_f, this.field_v, 0, var5, var4, var7, var6, var8, var9, param2);
           return;
         }
     }
@@ -1357,7 +1357,7 @@ class o extends db {
         }
     }
 
-    final static void a(o param0, o param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void a(Sprite param0, Sprite param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param0 == param1) {
           throw new RuntimeException();
         }
@@ -1403,13 +1403,13 @@ class o extends db {
         if (param7 <= 0) {
           return;
         }
-        o.a(param1.field_v, param0.field_v, 0, param3 * param0.field_p + param2, param5 * param1.field_p + param4, param6, param7, param1.field_p - param6, param0.field_p - param6);
+        Sprite.a(param1.field_v, param0.field_v, 0, param3 * param0.field_p + param2, param5 * param1.field_p + param4, param6, param7, param1.field_p - param6, param0.field_p - param6);
     }
 
-    final o b() {
+    final Sprite b() {
         int var2 = 0;
         int var3 = 0;
-        o var1 = new o(this.field_p, this.field_t);
+        Sprite var1 = new Sprite(this.field_p, this.field_t);
         var1.field_q = this.field_q;
         var1.field_r = this.field_r;
         var1.field_s = this.field_q - this.field_p - this.field_s;
@@ -1429,7 +1429,7 @@ class o extends db {
         int var4 = param0 + (this.field_p >> 1) > mi.field_k ? mi.field_k - param0 << 1 : this.field_p;
         int var5 = param1 < mi.field_l ? mi.field_l - param1 << 1 : 0;
         int var6 = param1 + (this.field_t >> 1) > mi.field_e ? mi.field_e - param1 << 1 : this.field_t;
-        o.a(this.field_v, var5 * this.field_p + var3, (param1 + (var5 >> 1)) * mi.field_a + (param0 + (var3 >> 1)), (this.field_p << 1) - (var4 - var3) + (this.field_p & 1), mi.field_a - (var4 - var3 >> 1), this.field_p, var4 - var3 >> 1, var6 - var5 >> 1);
+        Sprite.a(this.field_v, var5 * this.field_p + var3, (param1 + (var5 >> 1)) * mi.field_a + (param0 + (var3 >> 1)), (this.field_p << 1) - (var4 - var3) + (this.field_p & 1), mi.field_a - (var4 - var3 >> 1), this.field_p, var4 - var3 >> 1, var6 - var5 >> 1);
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
@@ -1460,9 +1460,9 @@ class o extends db {
         }
     }
 
-    final o c() {
+    final Sprite c() {
         int var3 = 0;
-        o var1 = new o(this.field_p, this.field_t);
+        Sprite var1 = new Sprite(this.field_p, this.field_t);
         var1.field_q = this.field_q;
         var1.field_r = this.field_r;
         var1.field_s = this.field_s;
@@ -1474,7 +1474,7 @@ class o extends db {
         return var1;
     }
 
-    o(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
+    Sprite(int param0, int param1, int param2, int param3, int param4, int param5, int[] param6) {
         this.field_q = param0;
         this.field_r = param1;
         this.field_s = param2;
@@ -1551,7 +1551,7 @@ class o extends db {
             var8 = var8 + var12 * var16Lifetime2;
             var15 = var15 + var16Lifetime2;
           }
-          o.a(mi.field_f, this.field_v, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
+          Sprite.a(mi.field_f, this.field_v, 0, var8, var9, var14Lifetime2, var15, param2, param3, var12, var13, var6, param4);
           return;
         }
     }
@@ -1636,7 +1636,7 @@ class o extends db {
           if (var5 <= 0) {
             return;
           }
-          o.a(0, mi.field_f, this.field_v, 0, var4, var3, var6, var5, var7, var8);
+          Sprite.a(0, mi.field_f, this.field_v, 0, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -1820,7 +1820,7 @@ class o extends db {
           if (var5 <= 0) {
             return;
           }
-          o.a(mi.field_f, this.field_v, var4, var3, var6, var5, var7, var8);
+          Sprite.a(mi.field_f, this.field_v, var4, var3, var6, var5, var7, var8);
           return;
         }
     }
@@ -2492,9 +2492,9 @@ class o extends db {
             return;
           }
           if (param2 == 256) {
-            o.a(0, 0, 0, mi.field_f, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9);
+            Sprite.a(0, 0, 0, mi.field_f, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9);
           } else {
-            o.a(0, 0, 0, mi.field_f, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
+            Sprite.a(0, 0, 0, mi.field_f, this.field_v, var5, 0, var4, 0, var7, var6, var8, var9, param2);
           }
           return;
         }
@@ -2575,7 +2575,7 @@ class o extends db {
         }
     }
 
-    o(int param0, int param1) {
+    Sprite(int param0, int param1) {
         this.field_v = new int[param0 * param1];
         this.field_q = param0;
         this.field_p = param0;
@@ -2585,7 +2585,7 @@ class o extends db {
         this.field_s = 0;
     }
 
-    o(byte[] param0, java.awt.Component param1) {
+    Sprite(byte[] param0, java.awt.Component param1) {
         Throwable decompiledCaughtException = null;
         java.awt.Image var3 = null;
         InterruptedException var3_ref = null;
@@ -2682,7 +2682,7 @@ class o extends db {
             var7 = var7 + var11 * var15Lifetime2;
             var14 = var14 + var15Lifetime2;
           }
-          o.a(mi.field_f, this.field_v, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
+          Sprite.a(mi.field_f, this.field_v, 0, var7, var8, var13Lifetime2, var14, param2, param3, var11, var12, var5);
           return;
         }
     }

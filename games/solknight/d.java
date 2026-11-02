@@ -11,7 +11,7 @@ final class d {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
-        o var4 = null;
+        Sprite var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -25,12 +25,12 @@ final class d {
           je.a(-76, BufferedSocket.field_m, PacketBuffer.field_j);
           if (!pg.field_e &&
             PacketBuffer.field_j != -1) {
-            ie.a(PacketBuffer.field_j, BufferedSocket.field_m, 57);
+            MenuScreen.a(PacketBuffer.field_j, BufferedSocket.field_m, 57);
           }
           if (ProxyAuthenticationRequiredException.field_a > 0 &&
             ob.field_j > 1) {
             if (dc.field_n == null) {
-              dc.field_n = new o(256, 1 + (BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s));
+              dc.field_n = new Sprite(256, 1 + (BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s));
             }
             dc.field_n.a();
             mi.a();
@@ -41,7 +41,7 @@ final class d {
           if (ci.field_ib > 0 &&
             lk.field_e > 0) {
             if (dc.field_n == null) {
-              dc.field_n = new o(256, 1 + BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
+              dc.field_n = new Sprite(256, 1 + BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
             }
             dc.field_n.a();
             mi.a();

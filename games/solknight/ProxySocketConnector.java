@@ -12,7 +12,7 @@ final class ProxySocketConnector extends SocketConnector {
     static String field_o;
     static String field_n;
     private java.net.ProxySelector field_i;
-    static o[] field_l;
+    static Sprite[] field_l;
 
     final java.net.Socket a(byte param0) throws IOException {
         int var9 = 0;

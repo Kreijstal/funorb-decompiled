@@ -4,7 +4,7 @@
 abstract class a extends wf implements pi {
     private vg field_f;
     static wg field_h;
-    static o field_e;
+    static Sprite field_e;
     static String field_g;
     static int[] field_d;
     static int field_i;
@@ -45,7 +45,7 @@ abstract class a extends wf implements pi {
 
     public final boolean a(int param0) {
         if (param0 < 82) {
-          field_e = (o) null;
+          field_e = (Sprite) null;
           if (this.field_f.field_i != null) {
             return this.field_f.field_i.length() == 0 ? true : false;
           }

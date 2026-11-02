@@ -301,9 +301,9 @@ final class mb {
         }
     }
 
-    final static o[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
-        o[] stackIn_4_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 < 4) {

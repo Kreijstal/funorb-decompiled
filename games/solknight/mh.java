@@ -66,10 +66,10 @@ final class mh {
         field_a = null;
     }
 
-    final static o a(boolean param0, da param1, int param2, int param3) {
+    final static Sprite a(boolean param0, da param1, int param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
-        o stackIn_6_0 = null;
+        Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -83,7 +83,7 @@ final class mh {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (o) (stackIn_4_0);
+          return (Sprite) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

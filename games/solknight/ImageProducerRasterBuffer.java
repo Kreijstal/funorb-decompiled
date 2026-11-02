@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ImageProducerRasterBuffer extends pd implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     private java.awt.image.ColorModel field_o;
     static String field_i;
     static wh field_j;

@@ -5,13 +5,13 @@ final class ql extends af {
     static String[] field_s;
     private bf field_w;
     static int[] field_q;
-    static o field_p;
+    static Sprite field_p;
     private bf[] field_t;
     static gj field_r;
     static String field_u;
     static int field_v;
 
-    final void a(byte param0, o param1) {
+    final void a(byte param0, Sprite param1) {
         int var5 = 0;
         bf[] var3 = null;
         int var4 = 0;
@@ -151,7 +151,7 @@ final class ql extends af {
         bf var5 = null;
         bf var6 = null;
         int var7 = 0;
-        o[] var8 = null;
+        Sprite[] var8 = null;
         var7 = SolKnight.field_L ? 1 : 0;
         try {
           super.a(param0, 6935);
@@ -177,8 +177,8 @@ final class ql extends af {
             fk.a(this.field_t, 0, param0.field_t, 0, 6);
           }
           if (param2 != 30089) {
-            var8 = (o[]) null;
-            this.a((byte) 62, (o[]) null);
+            var8 = (Sprite[]) null;
+            this.a((byte) 62, (Sprite[]) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -195,7 +195,7 @@ final class ql extends af {
         }
     }
 
-    final void a(byte param0, o[] param1) {
+    final void a(byte param0, Sprite[] param1) {
         int var5 = 0;
         bf[] var3 = null;
         int var4 = 0;
@@ -260,11 +260,11 @@ final class ql extends af {
         }
         u.field_b.b(pc.field_b, -120);
         if (param0 != 18962) {
-          field_p = (o) null;
+          field_p = (Sprite) null;
         }
     }
 
-    final void a(byte param0, int param1, o[] param2) {
+    final void a(byte param0, int param1, Sprite[] param2) {
         int var4_int = 0;
         if (param0 != -60) {
           return;

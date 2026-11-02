@@ -342,18 +342,18 @@ class pj extends UiWidget {
     }
 
     final static void a(int param0, da param1) {
-        o var2 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
-          var2 = new o(param1.a(4, "final_frame.jpg", ""), (java.awt.Component) ((Object) dc.field_q));
+          var2 = new Sprite(param1.a(4, "final_frame.jpg", ""), (java.awt.Component) ((Object) dc.field_q));
           var3 = var2.field_p;
           var4 = var2.field_t;
           fl.b((byte) 91);
-          IntrusiveNode.field_e = new o(var3, var4 * param0 / 4);
+          IntrusiveNode.field_e = new Sprite(var3, var4 * param0 / 4);
           IntrusiveNode.field_e.a();
           var2.c(0, 0);
-          ql.field_p = new o(var3, -IntrusiveNode.field_e.field_t + var4);
+          ql.field_p = new Sprite(var3, -IntrusiveNode.field_e.field_t + var4);
           ql.field_p.a();
           var2.c(0, -IntrusiveNode.field_e.field_t);
           ql.field_p.field_n = IntrusiveNode.field_e.field_t;

@@ -129,7 +129,7 @@ final class lc extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, int param1, String param2, le param3, mg param4) {
+    final static void a(int param0, int param1, String param2, le param3, BitmapFont param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -217,8 +217,8 @@ final class lc extends IntrusiveNode {
           if (param0 == 2767) {
             return;
           }
-          mg var4 = (mg) null;
-          lc.a(14, 1, (String) null, (le) null, (mg) null);
+          BitmapFont var4 = (BitmapFont) null;
+          lc.a(14, 1, (String) null, (le) null, (BitmapFont) null);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

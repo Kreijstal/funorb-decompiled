@@ -103,7 +103,7 @@ final class rg {
         }
     }
 
-    final static void a(o[] param0, int param1) {
+    final static void a(Sprite[] param0, int param1) {
         try {
           int var2_int = 39 / ((param1 - 51) / 37);
           jb.field_d = param0;

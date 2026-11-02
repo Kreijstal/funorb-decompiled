@@ -6,7 +6,7 @@ class IntrusiveNode {
     long key;
     IntrusiveNode next;
     IntrusiveNode previous;
-    static o field_e;
+    static Sprite field_e;
     static boolean[] field_f;
     static String field_c;
 
@@ -53,7 +53,7 @@ class IntrusiveNode {
           return false;
         }
         if (obfuscationGuard) {
-          field_e = (o) null;
+          field_e = (Sprite) null;
           return true;
         }
         return true;

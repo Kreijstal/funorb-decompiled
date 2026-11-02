@@ -112,7 +112,7 @@ final class df extends a {
               this.field_j = param0;
               this.field_k = var3.field_c;
             } else {
-              stackIn_8_0 = db.field_u;
+              stackIn_8_0 = SpriteState.field_u;
               return stackIn_8_0;
             }
           }

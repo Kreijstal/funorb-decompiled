@@ -20,9 +20,9 @@ final class ib extends IntrusiveNode {
         }
     }
 
-    final static o a(int param0, boolean param1, int param2) {
+    final static Sprite a(int param0, boolean param1, int param2) {
         int var5 = SolKnight.field_L ? 1 : 0;
-        o var3 = new o(param0, param0);
+        Sprite var3 = new Sprite(param0, param0);
         int var4 = 0;
         if (!param1) {
           field_j = -85;

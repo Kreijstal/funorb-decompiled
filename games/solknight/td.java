@@ -15,9 +15,9 @@ final class td implements j {
     private int field_a;
     private int field_c;
     private int field_d;
-    private mg field_g;
+    private BitmapFont field_g;
     private int field_k;
-    static o[] field_e;
+    static Sprite[] field_e;
     private int field_b;
 
     final static void a(int param0) {
@@ -83,7 +83,7 @@ final class td implements j {
             var9 = 0;
             var10 = 0;
             while (var8 > var9) {
-              var11 = pd.field_e[var9];
+              var11 = RasterBuffer.field_e[var9];
               var6[0][var10] = cg.field_a[var11];
               var20[0][var10 * 4] = qg.field_c[var11];
               var20[0][var10 * 4 + 1] = eh.field_a[var11];
@@ -101,7 +101,7 @@ final class td implements j {
             var15 = 0;
             var10Lifetime1 = var15;
             while (var9Lifetime1 < var8) {
-              var11Lifetime1 = pd.field_e[var9Lifetime1 + var5];
+              var11Lifetime1 = RasterBuffer.field_e[var9Lifetime1 + var5];
               var6[1][var15] = cg.field_a[var11Lifetime1];
               var20[1][4 * var15] = qg.field_c[var11Lifetime1];
               var20[1][1 + 4 * var15] = eh.field_a[var11Lifetime1];
@@ -167,7 +167,7 @@ final class td implements j {
           mi.d(var8, var9, this.field_k, this.field_j, 5592405);
           mi.b(var8, var9, this.field_k, this.field_j, var7);
           if (param0 <= 113) {
-            field_e = (o[]) null;
+            field_e = (Sprite[]) null;
           }
           if (var11.field_F) {
             mi.e(var8, var9, this.field_k + var8, var9 + this.field_j, 1);
@@ -229,7 +229,7 @@ final class td implements j {
         field_e = null;
     }
 
-    td(mg param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    td(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.field_d = 1;
         this.field_b = 1;
         try {

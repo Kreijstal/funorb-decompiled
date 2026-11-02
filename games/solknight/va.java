@@ -3,7 +3,7 @@
  */
 abstract class va {
     static nc field_f;
-    static o field_g;
+    static Sprite field_g;
     hl field_m;
     hl field_i;
     hl field_d;
@@ -30,7 +30,7 @@ abstract class va {
 
     final static String a(boolean param0) {
         if (!param0) {
-          field_g = (o) null;
+          field_g = (Sprite) null;
           if (ab.field_u) {
             return null;
           }
@@ -88,7 +88,7 @@ abstract class va {
     public static void b(byte param0) {
         field_g = null;
         if (param0 != 0) {
-          field_g = (o) null;
+          field_g = (Sprite) null;
           field_f = null;
           return;
         }

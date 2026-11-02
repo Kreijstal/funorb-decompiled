@@ -42,7 +42,7 @@ abstract class ab extends GameApplet {
         if (!bb.h(42)) {
           if (kj.field_R >= 10) {
             if (!uk.h(250)) {
-              rb.c(-27347);
+              Asteroid.c(-27347);
             } else {
               if (0 == fj.field_i) {
                 discarded$6 = this.a(false, false, 121);
@@ -198,7 +198,7 @@ abstract class ab extends GameApplet {
             ci.a((byte) -77, 6);
           }
           if (ef.field_c[6]) {
-            db.b(36951, 7);
+            SpriteState.b(36951, 7);
           }
           if (ef.field_c[8]) {
             ff.a((byte) -89);
@@ -223,7 +223,7 @@ abstract class ab extends GameApplet {
           regionExit1: {
             switch (var2) {
               case 3:
-                db.f(0);
+                SpriteState.f(0);
                 break;
               case 4:
                 ImageProducerRasterBuffer.c(1811357826);
@@ -808,12 +808,12 @@ abstract class ab extends GameApplet {
             decompiledFrameRemainder0 = false;
           }
           else {
-            pd.field_c = true;
+            RasterBuffer.field_c = true;
             kj.field_R = 12;
           }
         }
         if (12 == kj.field_R &&
-          !pd.field_c) {
+          !RasterBuffer.field_c) {
           kj.field_R = 13;
         }
         if (kj.field_R == 13) {

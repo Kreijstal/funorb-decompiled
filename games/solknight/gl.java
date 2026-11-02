@@ -216,12 +216,12 @@ final class gl {
     }
 
     final static void a(byte param0) {
-        o var1 = null;
-        o var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = SolKnight.field_L ? 1 : 0;
         try {
-          var1 = new o(540, 140);
+          var1 = new Sprite(540, 140);
           cl.a(-104, var1);
           hk.a();
           mi.a();

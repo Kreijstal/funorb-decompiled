@@ -4,7 +4,7 @@
 final class lj extends WidgetContainer implements ka {
     private int field_K;
     private int[] field_L;
-    private mg field_J;
+    private BitmapFont field_J;
     static int[] field_D;
     private ci field_H;
     private String field_I;
@@ -90,7 +90,7 @@ final class lj extends WidgetContainer implements ka {
         }
     }
 
-    lj(ci param0, mg param1, String param2) {
+    lj(ci param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (j) null);
         RuntimeException runtimeException = null;
         int var4_int = 0;
@@ -243,7 +243,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("ticketing_gotowebsite", param0 ^ 26704);
                 if (null != var2) {
-                  pd.field_b = da.a(true, var2);
+                  RasterBuffer.field_b = da.a(true, var2);
                 }
                 var2 = vd.a("ticketing_waitingformessages", 4);
                 if (null != var2) {
@@ -2654,7 +2654,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("keychar_the_character_under_questionmark", param0 ^ 26704);
                 if (var2 != null) {
-                  db.a(var2[0], false);
+                  SpriteState.a(var2[0], false);
                 }
                 var2 = vd.a("rating_noratings", 4);
                 if (var2 != null) {
@@ -3229,7 +3229,7 @@ final class lj extends WidgetContainer implements ka {
         }
     }
 
-    final static void a(int param0, byte param1, mg param2, mg param3) {
+    final static void a(int param0, byte param1, BitmapFont param2, BitmapFont param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -3244,7 +3244,7 @@ final class lj extends WidgetContainer implements ka {
           ProxySocketConnector.a(mi.field_a / 2, mi.field_d / 2, -120);
           rj.a(param3.field_s + param3.field_m, param3.field_m, (byte) 81, param2.field_s + param2.field_m, param2.field_m);
           if (param1 < 124) {
-            lj.a(40, (byte) -107, (mg) null, (mg) null);
+            lj.a(40, (byte) -107, (BitmapFont) null, (BitmapFont) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

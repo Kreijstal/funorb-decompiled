@@ -70,7 +70,7 @@ final class pb implements j {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        o var8 = null;
+        Sprite var8 = null;
         try {
           var6_int = param3 + param4.field_m;
           if (param0 <= 113) {

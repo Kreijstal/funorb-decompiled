@@ -4,8 +4,8 @@
 public abstract class GameApplet extends java.applet.Applet implements Runnable, java.awt.event.FocusListener, java.awt.event.WindowListener {
     boolean field_c;
     static int field_h;
-    static o field_j;
-    static o[] field_f;
+    static Sprite field_j;
+    static Sprite[] field_f;
     static int field_i;
     public static boolean field_l;
     public static boolean field_g;
@@ -94,7 +94,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               exception = (Exception) (Object) decompiledCaughtException;
             }
             if (param1 != -1) {
-              field_f = (o[]) null;
+              field_f = (Sprite[]) null;
             }
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -271,7 +271,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -1) {
-            field_f = (o[]) null;
+            field_f = (Sprite[]) null;
           }
           stackIn_4_0 = -md.field_y + je.a(param0 ^ -2);
           return stackIn_4_0;
@@ -861,7 +861,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 return;
               }
               if (param0 <= 62) {
-                field_j = (o) null;
+                field_j = (Sprite) null;
               }
               DualLinkNode.field_h = param2;
               UiWidget.field_l = param2;

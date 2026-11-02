@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class eh {
-    static o[] field_b;
+    static Sprite[] field_b;
     static int[] field_a;
 
     final static void a(byte param0, PacketBuffer param1) {

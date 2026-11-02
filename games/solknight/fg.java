@@ -59,7 +59,7 @@ final class fg {
         throw new IllegalStateException();
     }
 
-    final static void a(int param0, int param1, int param2, int param3, o[] param4, byte param5) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, byte param5) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;

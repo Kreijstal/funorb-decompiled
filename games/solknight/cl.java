@@ -62,8 +62,8 @@ final class cl extends a {
           field_l = null;
           return;
         }
-        o var2 = (o) null;
-        cl.a(16, (o) null);
+        Sprite var2 = (Sprite) null;
+        cl.a(16, (Sprite) null);
         field_j = null;
         field_k = null;
         field_l = null;
@@ -112,7 +112,7 @@ final class cl extends a {
         return (fg[]) null;
     }
 
-    final static void a(int param0, o param1) {
+    final static void a(int param0, Sprite param1) {
         try {
           fl.b((byte) 91);
           if (param0 > -91) {

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class rb {
+final class Asteroid {
     int field_d;
     static int field_f;
     int field_j;
@@ -19,7 +19,7 @@ final class rb {
     private int field_e;
     private int field_l;
 
-    final rb b(int param0) {
+    final Asteroid b(int param0) {
         boolean stackIn_228_0 = false;
         int stackIn_228_1 = 0;
         int stackIn_229_2 = 0;
@@ -46,26 +46,26 @@ final class rb {
         int var7;
         int var8;
         int var9;
-        rb var10;
-        rb var11;
-        rb var12;
-        rb var13;
-        rb var14;
-        rb var15;
-        rb var16;
-        rb var17;
-        rb var18;
-        rb var19;
-        rb var20;
-        rb var21;
-        rb var22;
-        rb var23;
-        rb var24;
-        rb var25;
-        rb var26;
+        Asteroid var10;
+        Asteroid var11;
+        Asteroid var12;
+        Asteroid var13;
+        Asteroid var14;
+        Asteroid var15;
+        Asteroid var16;
+        Asteroid var17;
+        Asteroid var18;
+        Asteroid var19;
+        Asteroid var20;
+        Asteroid var21;
+        Asteroid var22;
+        Asteroid var23;
+        Asteroid var24;
+        Asteroid var25;
+        Asteroid var26;
         var9 = SolKnight.field_L ? 1 : 0;
         if (param0 <= 2) {
-          return (rb) null;
+          return (Asteroid) null;
         }
         while (true) {
           this.field_a = this.field_a + this.field_c;
@@ -127,7 +127,7 @@ final class rb {
                     this.a(9, -19, 16);
                     break regionExit1;
                   }
-                  pk.a((byte) 32, new rb(12, this));
+                  pk.a((byte) 32, new Asteroid(12, this));
                 }
                 this.a(9, -19, 16);
               } else {
@@ -139,9 +139,9 @@ final class rb {
                   this.field_g = 5;
                   this.field_e = this.field_e + 1;
                   if (0 == this.field_e % 10) {
-                    pk.a((byte) 32, new rb(8, this));
+                    pk.a((byte) 32, new Asteroid(8, this));
                     if (this.field_e % 2 == 0) {
-                      pk.a((byte) 32, new rb(12, this));
+                      pk.a((byte) 32, new Asteroid(12, this));
                     }
                   }
                   this.field_g = 32;
@@ -154,40 +154,40 @@ final class rb {
                       mb.a(true, 7, 128);
                     }
                     this.field_j = 0;
-                    var10 = new rb(0, this);
+                    var10 = new Asteroid(0, this);
                     var10.field_c = this.field_c / 3 + this.field_d / 4;
                     var10.field_d = -(this.field_c / 4) + this.field_d / 3;
                     pk.a((byte) 32, var10);
-                    var11 = new rb(0, this);
+                    var11 = new Asteroid(0, this);
                     var11.field_c = this.field_d / 5 + this.field_c / 2;
                     var11.field_d = -(this.field_c / 5) + this.field_d / 2;
                     pk.a((byte) 32, var11);
-                    var12 = new rb(0, this);
+                    var12 = new Asteroid(0, this);
                     var12.field_c = this.field_c / 3 - this.field_d / 4;
                     var12.field_d = this.field_d / 3 + this.field_c / 4;
                     pk.a((byte) 32, var12);
-                    var13 = new rb(0, this);
+                    var13 = new Asteroid(0, this);
                     var13.field_c = -(this.field_d / 5) + this.field_c / 2;
                     var13.field_d = this.field_c / 5 + this.field_d / 2;
                     pk.a((byte) 32, var13);
                     if (bi.field_h == 2) {
-                      var14 = new rb(0, this);
+                      var14 = new Asteroid(0, this);
                       var14.field_d = this.field_d / 3;
                       var14.field_c = this.field_c / 3;
                       pk.a((byte) 32, var14);
-                      var15 = new rb(0, this);
+                      var15 = new Asteroid(0, this);
                       var15.field_c = this.field_c / 5 + this.field_d / 2;
                       var15.field_d = -(this.field_c / 2) + this.field_d / 5;
                       pk.a((byte) 32, var15);
-                      var16 = new rb(0, this);
+                      var16 = new Asteroid(0, this);
                       var16.field_c = this.field_d / 4 + this.field_c / 4;
                       var16.field_d = this.field_d / 4 - this.field_c / 4;
                       pk.a((byte) 32, var16);
-                      var17 = new rb(0, this);
+                      var17 = new Asteroid(0, this);
                       var17.field_c = -(this.field_d / 2) + this.field_c / 5;
                       var17.field_d = this.field_c / 2 + this.field_d / 5;
                       pk.a((byte) 32, var17);
-                      var18 = new rb(0, this);
+                      var18 = new Asteroid(0, this);
                       var18.field_c = this.field_c / 4 - this.field_d / 4;
                       var18.field_d = this.field_d / 4 + this.field_c / 4;
                       pk.a((byte) 32, var18);
@@ -200,14 +200,14 @@ final class rb {
                     this.field_e = this.field_e + 1;
                     this.field_g = 6;
                     if (0 == this.field_e % 4) {
-                      pk.a((byte) 32, new rb(8, this));
+                      pk.a((byte) 32, new Asteroid(8, this));
                     }
                     if (this.field_e % 2 == 0) {
                       var4 = 15 & this.field_e >> 1;
                       if (var4 > 8) {
                         var4 = -var4 + 16;
                       }
-                      var19 = new rb(12, this);
+                      var19 = new Asteroid(12, this);
                       var4 -= 4;
                       var19.field_a = var19.field_a - this.field_d * var4 / 4;
                       var19.field_b = var19.field_b + var4 * this.field_c / 4;
@@ -240,19 +240,19 @@ final class rb {
                           10 < this.field_e ||
                           2 == bi.field_h &&
                           this.field_e > 20) {
-                          var3 = new rb(14, this);
+                          var3 = new Asteroid(14, this);
                         }
                         if (bi.field_h == 1 ||
                           bi.field_h == 2 &&
                           this.field_e > 10) {
-                          var3 = new rb(15, this);
+                          var3 = new Asteroid(15, this);
                         }
                         if (2 == bi.field_h) {
-                          var3 = new rb(16, this);
+                          var3 = new Asteroid(16, this);
                         }
-                        ((rb) (var3)).field_d = this.field_d;
-                        ((rb) (var3)).field_c = this.field_c;
-                        pk.a((byte) 32, (rb) (var3));
+                        ((Asteroid) (var3)).field_d = this.field_d;
+                        ((Asteroid) (var3)).field_c = this.field_c;
+                        pk.a((byte) 32, (Asteroid) (var3));
                         if (bi.field_h == 0) {
                           this.a(13, -19, 1);
                         }
@@ -265,7 +265,7 @@ final class rb {
                         if (this.field_j == 13 &&
                           this.field_e < 10 + 10 * bi.field_h) {
                           this.field_e = this.field_e + 1;
-                          var20 = new rb(13, this);
+                          var20 = new Asteroid(13, this);
                           pk.a((byte) 32, var20);
                           this.field_j = 5;
                         }
@@ -316,7 +316,7 @@ final class rb {
                               } else {
                                 if (var4 == 10) {
                                   if (!pg.field_e ||
-                                    kd.field_a != -1) {
+                                    kd.currentScreenIndex != -1) {
                                     this.field_e = this.field_e + 3;
                                   }
                                   this.field_e = this.field_e + 1;
@@ -326,7 +326,7 @@ final class rb {
                                 } else {
                                   if (var4 == 11) {
                                     if (!pg.field_e ||
-                                      kd.field_a != -1) {
+                                      kd.currentScreenIndex != -1) {
                                       this.field_e = this.field_e + 3;
                                     }
                                     this.field_e = this.field_e + 1;
@@ -367,7 +367,7 @@ final class rb {
                                             this.field_m = this.field_m - 36;
                                           }
                                           if (!pg.field_e ||
-                                            kd.field_a != -1) {
+                                            kd.currentScreenIndex != -1) {
                                             var4 = this.field_a >> 4;
                                             var5 = ea.field_p[kb.field_b] + ((this.field_b >> 4) - 720);
                                             var6 = (int)Math.sqrt((double)(var5 * var5 + var4 * var4));
@@ -419,7 +419,7 @@ final class rb {
                                               this.field_m = this.field_m - 36;
                                             }
                                             if (!pg.field_e ||
-                                              kd.field_a != -1) {
+                                              kd.currentScreenIndex != -1) {
                                               var4 = this.field_a >> 4;
                                               var5 = -720 + ((this.field_b >> 4) + ea.field_p[kb.field_b]);
                                               var6 = (int)Math.sqrt((double)(var5 * var5 + var4 * var4));
@@ -448,7 +448,7 @@ final class rb {
                                             if (!(this.field_e <= 12)) {
                                               vk.field_p = vk.field_p + 1;
                                               for (var4 = 0; var4 < 8; var4++) {
-                                                var22 = new rb(31, this);
+                                                var22 = new Asteroid(31, this);
                                                 pk.a((byte) 32, var22);
                                               }
                                               mb.a(true, 29, 256);
@@ -475,7 +475,7 @@ final class rb {
                                                 this.field_m = this.field_m - 36;
                                               }
                                               if (!pg.field_e ||
-                                                kd.field_a != -1) {
+                                                kd.currentScreenIndex != -1) {
                                                 var4 = this.field_a >> 4;
                                                 var5 = -720 + (this.field_b >> 4) + ea.field_p[kb.field_b];
                                                 var6 = (int)Math.sqrt((double)(var4 * var4 + var5 * var5));
@@ -504,7 +504,7 @@ final class rb {
                                               if (!(this.field_e <= 36)) {
                                                 vk.field_p = vk.field_p + 1;
                                                 for (var4 = 0; var4 < 12; var4++) {
-                                                  var23 = new rb(31, this);
+                                                  var23 = new Asteroid(31, this);
                                                   pk.a((byte) 32, var23);
                                                 }
                                                 mb.a(true, 28, 256);
@@ -531,7 +531,7 @@ final class rb {
                                                 }
                                                 this.field_g = 32;
                                                 if (!pg.field_e ||
-                                                  kd.field_a != -1) {
+                                                  kd.currentScreenIndex != -1) {
                                                   var4 = this.field_a >> 4;
                                                   var5 = ea.field_p[kb.field_b] + ((this.field_b >> 4) - 720);
                                                   var6 = (int)Math.sqrt((double)(var4 * var4 + var5 * var5));
@@ -560,7 +560,7 @@ final class rb {
                                                 if (!(this.field_e <= 72)) {
                                                   vk.field_p = vk.field_p + 1;
                                                   for (var4 = 0; 16 > var4; var4++) {
-                                                    var24 = new rb(31, this);
+                                                    var24 = new Asteroid(31, this);
                                                     pk.a((byte) 32, var24);
                                                   }
                                                   mb.a(true, 27, 256);
@@ -587,7 +587,7 @@ final class rb {
                                                   }
                                                   this.field_g = 48;
                                                   if (!pg.field_e ||
-                                                    -1 != kd.field_a) {
+                                                    -1 != kd.currentScreenIndex) {
                                                     var4 = this.field_a >> 4;
                                                     var5 = (this.field_b >> 4) - 720 + ea.field_p[kb.field_b];
                                                     var6 = (int)Math.sqrt((double)(var5 * var5 + var4 * var4));
@@ -616,7 +616,7 @@ final class rb {
                                                   if (!(this.field_e <= 128)) {
                                                     vk.field_p = vk.field_p + 1;
                                                     for (var4 = 0; 32 > var4; var4++) {
-                                                      var25 = new rb(31, this);
+                                                      var25 = new Asteroid(31, this);
                                                       pk.a((byte) 32, var25);
                                                     }
                                                     mb.a(true, 26, 256);
@@ -665,7 +665,7 @@ final class rb {
                                                   }
                                                   this.field_g = 64;
                                                   if (!pg.field_e ||
-                                                    kd.field_a != -1) {
+                                                    kd.currentScreenIndex != -1) {
                                                     var4 = this.field_a >> 4;
                                                     var5 = (this.field_b >> 4) - (720 - ea.field_p[kb.field_b]);
                                                     var6 = (int)Math.sqrt((double)(var4 * var4 + var5 * var5));
@@ -694,7 +694,7 @@ final class rb {
                                                   if (!(this.field_e <= 256)) {
                                                     vk.field_p = vk.field_p + 1;
                                                     for (var4 = 0; var4 < 32; var4++) {
-                                                      var26 = new rb(31, this);
+                                                      var26 = new Asteroid(31, this);
                                                       pk.a((byte) 32, var26);
                                                     }
                                                     mb.a(true, 26, 256);
@@ -740,7 +740,7 @@ final class rb {
                             if (bi.field_h == 2) {
                               this.field_g = 32;
                             }
-                            var21 = new rb(19, this);
+                            var21 = new Asteroid(19, this);
                             var21.field_d = this.field_d;
                             var21.field_g = this.field_g;
                             var21.field_c = this.field_c;
@@ -774,10 +774,10 @@ final class rb {
                   bi.field_h == 2 &&
                   this.field_e % 5 == 0) {
                   if (this.field_e < 100) {
-                    pk.a((byte) 32, new rb(8, this));
+                    pk.a((byte) 32, new Asteroid(8, this));
                   }
                   if (this.field_e < 100) {
-                    pk.a((byte) 32, new rb(12, this));
+                    pk.a((byte) 32, new Asteroid(12, this));
                   }
                 }
                 if (this.field_e < 100) {
@@ -825,7 +825,7 @@ final class rb {
         }
         BufferedSocket.field_h = BufferedSocket.field_h + 1;
         if (param0 != -27347) {
-          rb.a(78);
+          Asteroid.a(78);
         }
     }
 
@@ -843,11 +843,11 @@ final class rb {
         int var7;
         int var9;
         int var11;
-        rb var12;
-        rb var13;
-        rb var14;
-        rb var15;
-        rb var16;
+        Asteroid var12;
+        Asteroid var13;
+        Asteroid var14;
+        Asteroid var15;
+        Asteroid var16;
         int var9Lifetime1;
         int var9Lifetime2;
         int var9Lifetime3;
@@ -902,7 +902,7 @@ final class rb {
                   if (param0 != 13) {
                     if (9 == this.field_j) {
                       for (var9 = 0; var9 < 2; var9++) {
-                        var13 = new rb(31, this);
+                        var13 = new Asteroid(31, this);
                         pk.a((byte) 32, var13);
                         var13.field_c = bk.a(32, jb.field_g, (byte) 59) - 16;
                         var13.field_d = -16 + bk.a(32, jb.field_g, (byte) 84);
@@ -910,7 +910,7 @@ final class rb {
                     }
                     if (this.field_j == 12) {
                       for (var9Lifetime1 = 0; var9Lifetime1 < 1; var9Lifetime1++) {
-                        var14 = new rb(31, this);
+                        var14 = new Asteroid(31, this);
                         pk.a((byte) 32, var14);
                         var14.field_c = -16 + bk.a(32, jb.field_g, (byte) 65);
                         var14.field_d = bk.a(32, jb.field_g, (byte) 123) - 16;
@@ -918,7 +918,7 @@ final class rb {
                     }
                     if (this.field_j == 17) {
                       for (var9Lifetime2 = 0; var9Lifetime2 < 2; var9Lifetime2++) {
-                        var15 = new rb(31, this);
+                        var15 = new Asteroid(31, this);
                         pk.a((byte) 32, var15);
                         var15.field_c = bk.a(32, jb.field_g, (byte) 74) - 16;
                         var15.field_d = bk.a(32, jb.field_g, (byte) 79) - 16;
@@ -926,7 +926,7 @@ final class rb {
                     }
                     if (this.field_j == 18) {
                       for (var9Lifetime3 = 0; 4 > var9Lifetime3; var9Lifetime3++) {
-                        var16 = new rb(31, this);
+                        var16 = new Asteroid(31, this);
                         pk.a((byte) 32, var16);
                         var16.field_c = bk.a(32, jb.field_g, (byte) 111) - 16;
                         var16.field_d = -16 + bk.a(32, jb.field_g, (byte) -127);
@@ -1080,7 +1080,7 @@ final class rb {
                                     break;
                                   }
                                 }
-                                if (kd.field_a != -1) {
+                                if (kd.currentScreenIndex != -1) {
                                   break;
                                 }
                                 mi.b(var4 - this.field_g / 2, -2 + var5, this.field_g - this.field_e * this.field_g / 4, 4, 16744576);
@@ -1102,7 +1102,7 @@ final class rb {
                                     break;
                                   }
                                 }
-                                if (kd.field_a != -1) {
+                                if (kd.currentScreenIndex != -1) {
                                   break;
                                 }
                                 mi.b(var4 - this.field_g / 2, var5 - 2, -(this.field_e * this.field_g / 72) + this.field_g, 4, 16744576);
@@ -1124,7 +1124,7 @@ final class rb {
                                     break;
                                   }
                                 }
-                                if (-1 == kd.field_a) {
+                                if (-1 == kd.currentScreenIndex) {
                                   mi.b(-(this.field_g / 2) + var4, var5 - 2, this.field_g - this.field_e * this.field_g / 128, 4, 16744576);
                                   mi.g(var4 - this.field_g / 2, var5 - 2, this.field_g, 4, 16711680);
                                 }
@@ -1145,7 +1145,7 @@ final class rb {
                                     break;
                                   }
                                 }
-                                if (kd.field_a != -1) {
+                                if (kd.currentScreenIndex != -1) {
                                   break;
                                 }
                                 mi.b(-(this.field_g / 2) + var4, var5 - 2, this.field_g - this.field_g * this.field_e / 256, 4, 16744576);
@@ -1193,7 +1193,7 @@ final class rb {
                                     break;
                                   }
                                 }
-                                if (kd.field_a == -1) {
+                                if (kd.currentScreenIndex == -1) {
                                   mi.b(-(this.field_g / 2) + var4, var5 - 2, this.field_g - this.field_e * this.field_g / 36, 4, 16744576);
                                   mi.g(-(this.field_g / 2) + var4, -2 + var5, this.field_g, 4, 16711680);
                                 }
@@ -1214,7 +1214,7 @@ final class rb {
                                     break;
                                   }
                                 }
-                                if (kd.field_a == -1) {
+                                if (kd.currentScreenIndex == -1) {
                                   mi.b(var4 - this.field_g / 2, -2 + var5, -(this.field_g * this.field_e / 12) + this.field_g, 4, 16744576);
                                   mi.g(var4 - this.field_g / 2, -2 + var5, this.field_g, 4, 16711680);
                                 }
@@ -1299,11 +1299,11 @@ final class rb {
         }
     }
 
-    final static o a(String param0, String param1, da param2, byte param3) {
+    final static Sprite a(String param0, String param1, da param2, byte param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        o stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -1360,7 +1360,7 @@ final class rb {
         }
     }
 
-    rb(int param0, int param1, int param2, int param3, int param4) {
+    Asteroid(int param0, int param1, int param2, int param3, int param4) {
         this.field_j = param0;
         this.field_b = param2;
         this.field_d = param4;
@@ -1370,7 +1370,7 @@ final class rb {
         this.field_h = false;
     }
 
-    private rb(int param0, rb param1) {
+    private Asteroid(int param0, Asteroid param1) {
         double var3_double = 0.0;
         double var5 = 0.0;
         int var7 = 0;

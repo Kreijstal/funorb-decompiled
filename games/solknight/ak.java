@@ -3,7 +3,7 @@
  */
 final class ak {
     static String field_c;
-    static o[] field_e;
+    static Sprite[] field_e;
     static String[] field_b;
     static String[] field_d;
     static int field_a;
@@ -39,15 +39,15 @@ final class ak {
               uf.field_q = il.a((CharSequence) ((Object) var6), 6054);
             }
           }
-          rb.field_f = param1;
+          Asteroid.field_f = param1;
           id.field_a = param0;
           ea.field_o = param4;
-          qd.field_e = new o[param2.length];
+          qd.field_e = new Sprite[param2.length];
           if (!param3) {
             field_d = (String[]) null;
           }
           for (var7 = 0; param2.length > var7; var7++) {
-            qd.field_e[var7] = new o(317, 34);
+            qd.field_e[var7] = new Sprite(317, 34);
           }
           ba.field_s = param2;
           return;

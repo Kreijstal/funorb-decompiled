@@ -7,7 +7,7 @@ final class sj implements j {
     private int field_c;
     private int field_b;
     private int field_g;
-    private mg field_e;
+    private BitmapFont field_e;
     private int field_f;
     private int field_h;
 
@@ -37,7 +37,7 @@ final class sj implements j {
           mi.b(param3 + param4.field_m, param4.field_j + param1, param4.field_t, param4.field_x, this.field_c);
           var7 = -(var12.field_I * 2) + param4.field_t;
           if (param0 < 113) {
-            this.field_e = (mg) null;
+            this.field_e = (BitmapFont) null;
           }
           var8 = param3 + param4.field_m + var12.field_I;
           var9 = param1 + param4.field_j + var12.field_L;
@@ -175,7 +175,7 @@ final class sj implements j {
         }
     }
 
-    sj(mg param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    sj(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_a = param2;
           this.field_f = param6;

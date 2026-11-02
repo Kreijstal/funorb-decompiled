@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ja {
-    static o field_a;
+    static Sprite field_a;
 
     final static void b(int param0) {
         ud var1 = null;

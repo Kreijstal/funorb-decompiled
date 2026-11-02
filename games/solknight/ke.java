@@ -5,11 +5,11 @@ final class ke extends si {
     static int field_I;
     private int field_P;
     static int field_J;
-    static o field_K;
-    private mg field_M;
+    static Sprite field_K;
+    private BitmapFont field_M;
     static String[] field_O;
     static int field_N;
-    static mg field_H;
+    static BitmapFont field_H;
     private int field_S;
     private String field_Q;
     private boolean field_L;
@@ -167,14 +167,14 @@ final class ke extends si {
             if (hg.field_F != 0 &&
               s.field_gb > var3 &&
               s.field_gb < kj.field_S.field_t + var3) {
-              if (db.field_o > 269 - kj.field_S.field_p &&
-                db.field_o < 269) {
+              if (SpriteState.field_o > 269 - kj.field_S.field_p &&
+                SpriteState.field_o < 269) {
                 var4 = 1;
                 ti.field_e = uc.field_c;
                 fh.field_g = false;
               }
-              if (db.field_o > 586 &&
-                kj.field_S.field_p + 586 > db.field_o) {
+              if (SpriteState.field_o > 586 &&
+                kj.field_S.field_p + 586 > SpriteState.field_o) {
                 var4 = 1;
                 ti.field_e = uc.field_c;
                 fh.field_g = true;
@@ -197,7 +197,7 @@ final class ke extends si {
           if (!param0) {
             return 0;
           }
-          GameKeyHandler.field_b.a(-117, BufferedSocket.a(BufferedSocket.field_m, PacketBuffer.field_j, 0), BufferedSocket.a(s.field_gb, db.field_o, 0));
+          GameKeyHandler.field_b.a(-117, BufferedSocket.a(BufferedSocket.field_m, PacketBuffer.field_j, 0), BufferedSocket.a(s.field_gb, SpriteState.field_o, 0));
           if (GameKeyHandler.field_b.d((byte) -8)) {
             if (GameKeyHandler.field_b.field_f == 0) {
               stackIn_62_0 = 3;
@@ -269,7 +269,7 @@ final class ke extends si {
         return -var3 + (param0 + var3) / param2;
     }
 
-    ke(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, mg param8, int param9, String param10) {
+    ke(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
         super(param0, param1, param2, param3, (j) null, (dg) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;

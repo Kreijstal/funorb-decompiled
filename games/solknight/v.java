@@ -217,7 +217,7 @@ final class v {
         return var5;
     }
 
-    final static void a(int param0, String param1, o param2) {
+    final static void a(int param0, String param1, Sprite param2) {
         try {
           ProxySocketConnector.field_n = param1;
           va.field_g = param2;
@@ -232,8 +232,8 @@ final class v {
     final void a(int param0, Object param1, long param2) {
         try {
           if (param0 < 67) {
-            o var6 = (o) null;
-            v.a(-25, (String) null, (o) null);
+            Sprite var6 = (Sprite) null;
+            v.a(-25, (String) null, (Sprite) null);
           }
           this.a(1, param1, 127, param2);
         } catch (RuntimeException runtimeException) {

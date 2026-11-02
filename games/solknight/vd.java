@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vd {
-    static ie[] field_d;
+    static MenuScreen[] screens;
     private static String field_e;
     static String field_a;
     static int field_b;
@@ -169,11 +169,11 @@ final class vd {
         if (param0 <= 9) {
           field_e = (String) null;
         }
-        field_d = null;
+        screens = null;
         field_a = null;
     }
 
     static {
-        field_d = new ie[10];
+        screens = new MenuScreen[10];
     }
 }

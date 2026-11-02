@@ -177,7 +177,7 @@ final class bb extends WidgetContainer implements pi, ka {
         RuntimeException decompiledCaughtException = null;
         gh var6 = null;
         RuntimeException var6_ref = null;
-        mg var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         fg var9 = null;
         ke var12 = null;

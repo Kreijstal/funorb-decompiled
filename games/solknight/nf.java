@@ -135,7 +135,7 @@ final class nf extends ld implements ka {
           var8 = new jk(u.field_b, param4);
           var7 = var8;
           u.field_b.b(var8, -113);
-          if (rb.a(-1)) {
+          if (Asteroid.a(-1)) {
             var8.h((byte) -63);
             return true;
           }

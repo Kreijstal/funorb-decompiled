@@ -198,14 +198,14 @@ final class nc {
         return var2Lifetime1;
     }
 
-    final static pd a(int param0, int param1, byte param2, java.awt.Component param3) {
+    final static RasterBuffer a(int param0, int param1, byte param2, java.awt.Component param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          pd var5 = null;
+          RasterBuffer var5 = null;
           ImageProducerRasterBuffer var5_ref = null;
-          pd stackIn_3_0 = null;
+          RasterBuffer stackIn_3_0 = null;
           ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
@@ -214,7 +214,7 @@ final class nc {
           try {
             try {
               var4 = Class.forName("vf");
-              var5 = (pd) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               if (param2 != -35) {
                 field_b = (String) null;
               }
@@ -225,9 +225,9 @@ final class nc {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((pd) ((Object) var5_ref)).a(param3, 9387, param1, param0);
+              ((RasterBuffer) ((Object) var5_ref)).a(param3, 9387, param1, param0);
               stackIn_5_0 = var5_ref;
-              return (pd) ((Object) stackIn_5_0);
+              return (RasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

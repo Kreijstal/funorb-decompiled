@@ -101,7 +101,7 @@ final class qa extends a {
           if (!param0.equals(this.field_j)) {
             var3 = tg.a(param0, -44);
             if (!var3.a(false)) {
-              stackIn_9_0 = db.field_u;
+              stackIn_9_0 = SpriteState.field_u;
               return stackIn_9_0;
             }
             this.field_j = param0;

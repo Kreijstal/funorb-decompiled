@@ -8,7 +8,7 @@ final class uc {
     static int field_e;
     static nc field_j;
     static String field_d;
-    static mg field_g;
+    static BitmapFont field_g;
     static nc field_a;
     static int field_i;
     static String[] field_h;

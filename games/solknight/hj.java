@@ -15,16 +15,16 @@ final class hj {
     boolean[] field_J;
     int[][] field_y;
     int[][] field_b;
-    static o field_n;
+    static Sprite field_n;
     byte[][] field_D;
-    static o field_p;
+    static Sprite field_p;
     byte[] field_v;
     byte[] field_z;
     int field_C;
     int field_t;
     int field_w;
     byte[] field_A;
-    static pd field_e;
+    static RasterBuffer field_e;
     int field_g;
     int field_K;
     int field_H;
@@ -90,7 +90,7 @@ final class hj {
         if (null == la.field_i) {
           la.field_i = new af(jh.field_g, 20, 0, 0, 0, 11579568, -1, 0, 0, jh.field_g.field_F, -1, 2147483647, true);
           if (param0 >= -58) {
-            field_e = (pd) null;
+            field_e = (RasterBuffer) null;
             return la.field_i;
           }
           return la.field_i;
@@ -98,7 +98,7 @@ final class hj {
         if (param0 < -58) {
           return la.field_i;
         }
-        field_e = (pd) null;
+        field_e = (RasterBuffer) null;
         return la.field_i;
     }
 

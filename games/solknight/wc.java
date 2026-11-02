@@ -18,20 +18,20 @@ final class wc {
         }
     }
 
-    final static o a(o param0, int param1) {
+    final static Sprite a(Sprite param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         RuntimeException var2 = null;
         int var5 = 0;
-        o var6 = null;
-        o stackIn_8_0 = null;
+        Sprite var6 = null;
+        Sprite stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         var5 = SolKnight.field_L ? 1 : 0;
         try {
-          var6 = new o(param0.field_t, param0.field_p);
+          var6 = new Sprite(param0.field_t, param0.field_p);
           var6.field_q = param0.field_r;
           var6.field_s = param0.field_q - param0.field_p - param0.field_n;
           var6.field_r = param0.field_q;

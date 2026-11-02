@@ -4,11 +4,11 @@
 final class pk extends kj {
     static int field_ab;
     private String field_V;
-    private o field_W;
+    private Sprite field_W;
     static String field_T;
     static String field_X;
     private int field_Z;
-    static o field_Y;
+    static Sprite field_Y;
     private oe field_U;
 
     final static void i(int param0) {
@@ -28,7 +28,7 @@ final class pk extends kj {
           if (param0 == -1463) {
             return false;
           }
-          field_Y = (o) null;
+          field_Y = (Sprite) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -62,7 +62,7 @@ final class pk extends kj {
           var10 = (int)((long)var4 * (long)var6 >> 16);
           return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
         }
-        field_Y = (o) null;
+        field_Y = (Sprite) null;
         var5 = uk.a((byte) -64, param2);
         var6 = rd.a((byte) -30, param2);
         var7 = (int)((long)var3 * (long)var5 >> 16);
@@ -81,28 +81,28 @@ final class pk extends kj {
         int var13;
         String var17;
         Object var18;
-        o var19;
-        o var20;
-        o var21;
+        Sprite var19;
+        Sprite var20;
+        Sprite var21;
         String var22;
         Object var23;
-        o var24;
-        o var25;
-        o var26;
+        Sprite var24;
+        Sprite var25;
+        Sprite var26;
         String var27;
         Object var28;
-        o var29;
-        o var30;
+        Sprite var29;
+        Sprite var30;
         Object var33;
         eg var37;
         eg var38;
         eg var39;
-        o var16;
-        o var31;
+        Sprite var16;
+        Sprite var31;
         String var32;
-        o var34;
-        o var35;
-        o var36;
+        Sprite var34;
+        Sprite var35;
+        Sprite var36;
         eg var40;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -136,7 +136,7 @@ final class pk extends kj {
           var9 = param2 + this.field_m;
           var10 = var37.a((UiWidget) (this), false, param0) + (var37.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
           if (var6 != hg.field_E &&
-            db.field_u != var6) {
+            SpriteState.field_u != var6) {
             if (rg.field_f == var6) {
               var20 = PacketBuffer.field_k[2];
               var20.a(var9, -(var20.field_t >> 1) + var10, 256);
@@ -153,18 +153,18 @@ final class pk extends kj {
           var11 = var21.field_q << 1;
           var12 = var21.field_r << 1;
           if (null == this.field_W) {
-            this.field_W = new o(var11, var12);
+            this.field_W = new Sprite(var11, var12);
             cl.a(-94, this.field_W);
           } else {
             if (var11 > this.field_W.field_p) {
-              this.field_W = new o(var11, var12);
+              this.field_W = new Sprite(var11, var12);
               cl.a(-94, this.field_W);
             } else {
               if (var12 <= this.field_W.field_t) {
                 cl.a(-125, this.field_W);
                 mi.a();
               } else {
-                this.field_W = new o(var11, var12);
+                this.field_W = new Sprite(var11, var12);
                 cl.a(-94, this.field_W);
               }
             }
@@ -174,7 +174,7 @@ final class pk extends kj {
           this.field_W.a(-(var21.field_q >> 1) + var9, var10 - var21.field_r, 256);
           return;
         }
-        if (db.field_u == var6) {
+        if (SpriteState.field_u == var6) {
           var22 = g.field_e;
           if (!var22.equals(this.field_i)) {
             this.field_i = var22;
@@ -186,7 +186,7 @@ final class pk extends kj {
           var9Lifetime1 = param2 + this.field_m;
           var10Lifetime1 = var38.a((UiWidget) (this), false, param0) + (var38.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
           if (var6 != hg.field_E &&
-            db.field_u != var6) {
+            SpriteState.field_u != var6) {
             if (rg.field_f == var6) {
               var25 = PacketBuffer.field_k[2];
               var25.a(var9Lifetime1, -(var25.field_t >> 1) + var10Lifetime1, 256);
@@ -203,15 +203,15 @@ final class pk extends kj {
           var11Lifetime1 = var26.field_q << 1;
           var12Lifetime1 = var26.field_r << 1;
           if (null == this.field_W) {
-            this.field_W = new o(var11Lifetime1, var12Lifetime1);
+            this.field_W = new Sprite(var11Lifetime1, var12Lifetime1);
             cl.a(-94, this.field_W);
           } else {
             if (var11Lifetime1 > this.field_W.field_p) {
-              this.field_W = new o(var11Lifetime1, var12Lifetime1);
+              this.field_W = new Sprite(var11Lifetime1, var12Lifetime1);
               cl.a(-94, this.field_W);
             } else {
               if (var12Lifetime1 > this.field_W.field_t) {
-                this.field_W = new o(var11Lifetime1, var12Lifetime1);
+                this.field_W = new Sprite(var11Lifetime1, var12Lifetime1);
                 cl.a(-94, this.field_W);
               } else {
                 cl.a(-125, this.field_W);
@@ -236,7 +236,7 @@ final class pk extends kj {
           var9Lifetime2 = param2 + this.field_m;
           var10Lifetime2 = var39.a((UiWidget) (this), false, param0) + (var39.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
           if (var6Lifetime1 != hg.field_E &&
-            db.field_u != var6Lifetime1) {
+            SpriteState.field_u != var6Lifetime1) {
             if (rg.field_f == var6Lifetime1) {
               var30 = PacketBuffer.field_k[2];
               var30.a(var9Lifetime2, -(var30.field_t >> 1) + var10Lifetime2, 256);
@@ -254,18 +254,18 @@ final class pk extends kj {
           var11Lifetime2 = var31.field_q << 1;
           var12Lifetime2 = var31.field_r << 1;
           if (null == this.field_W) {
-            this.field_W = new o(var11Lifetime2, var12Lifetime2);
+            this.field_W = new Sprite(var11Lifetime2, var12Lifetime2);
             cl.a(-94, this.field_W);
           } else {
             if (var11Lifetime2 > this.field_W.field_p) {
-              this.field_W = new o(var11Lifetime2, var12Lifetime2);
+              this.field_W = new Sprite(var11Lifetime2, var12Lifetime2);
               cl.a(-94, this.field_W);
             } else {
               if (var12Lifetime2 <= this.field_W.field_t) {
                 cl.a(-125, this.field_W);
                 mi.a();
               } else {
-                this.field_W = new o(var11Lifetime2, var12Lifetime2);
+                this.field_W = new Sprite(var11Lifetime2, var12Lifetime2);
                 cl.a(-94, this.field_W);
               }
             }
@@ -286,7 +286,7 @@ final class pk extends kj {
         var9Lifetime3 = param2 + this.field_m;
         var10Lifetime3 = var40.a((UiWidget) (this), false, param0) + (var40.a(-21480, (UiWidget) (this)).a((byte) 126) >> 1);
         if (var6Lifetime2 != hg.field_E &&
-          db.field_u != var6Lifetime2) {
+          SpriteState.field_u != var6Lifetime2) {
           if (rg.field_f == var6Lifetime2) {
             var35 = PacketBuffer.field_k[2];
             var35.a(var9Lifetime3, -(var35.field_t >> 1) + var10Lifetime3, 256);
@@ -303,18 +303,18 @@ final class pk extends kj {
         var11Lifetime3 = var36.field_q << 1;
         var12Lifetime3 = var36.field_r << 1;
         if (null == this.field_W) {
-          this.field_W = new o(var11Lifetime3, var12Lifetime3);
+          this.field_W = new Sprite(var11Lifetime3, var12Lifetime3);
           cl.a(-94, this.field_W);
         } else {
           if (var11Lifetime3 > this.field_W.field_p) {
-            this.field_W = new o(var11Lifetime3, var12Lifetime3);
+            this.field_W = new Sprite(var11Lifetime3, var12Lifetime3);
             cl.a(-94, this.field_W);
           } else {
             if (var12Lifetime3 <= this.field_W.field_t) {
               cl.a(-125, this.field_W);
               mi.a();
             } else {
-              this.field_W = new o(var11Lifetime3, var12Lifetime3);
+              this.field_W = new Sprite(var11Lifetime3, var12Lifetime3);
               cl.a(-94, this.field_W);
             }
           }
@@ -355,16 +355,16 @@ final class pk extends kj {
         return null;
     }
 
-    final static void a(byte param0, rb param1) {
+    final static void a(byte param0, Asteroid param1) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
-        rb[] var2 = null;
+        Asteroid[] var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        rb[] var4 = null;
+        Asteroid[] var4 = null;
         var3 = SolKnight.field_L ? 1 : 0;
         try {
           if (0 < (param1.field_b << 17) + lc.field_h) {
@@ -390,7 +390,7 @@ final class pk extends kj {
             if (decompiledNaturalLoopExit0) {
               var4 = kf.field_G;
               var2 = var4;
-              kf.field_G = new rb[kf.field_G.length << 1];
+              kf.field_G = new Asteroid[kf.field_G.length << 1];
               fk.a(var2, 0, kf.field_G, 0, var4.length);
               kf.field_G[var4.length] = param1;
               decompiledFrameCompleted0 = false;
@@ -401,7 +401,7 @@ final class pk extends kj {
             }
           }
           if (decompiledFrameCompleted0) {
-            kf.field_G = new rb[8];
+            kf.field_G = new Asteroid[8];
             kf.field_G[0] = param1;
           }
           if (param0 != 32) {
@@ -422,7 +422,7 @@ final class pk extends kj {
         }
     }
 
-    final static void a(int param0, int param1, int param2, mg param3, int param4, int param5, int param6, int param7, int param8, o[] param9, int param10, byte param11, o[] param12, int param13, int param14, int param15, int param16, mg param17, int param18, int param19, o[] param20) {
+    final static void a(int param0, int param1, int param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, Sprite[] param9, int param10, byte param11, Sprite[] param12, int param13, int param14, int param15, int param16, BitmapFont param17, int param18, int param19, Sprite[] param20) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;

@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class hi {
-    private o[] field_a;
+    private Sprite[] field_a;
 
     final static boolean a(char param0, byte param1) {
         char[] var2 = null;
@@ -157,7 +157,7 @@ final class hi {
         uj.a(param1, param3, param4, this.field_a, param2, 2);
     }
 
-    hi(o[] param0) {
+    hi(Sprite[] param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {

@@ -87,7 +87,7 @@ final class bk {
         field_a = null;
     }
 
-    final static int a(byte param0, String param1, mg param2, int param3, String[] param4) {
+    final static int a(byte param0, String param1, BitmapFont param2, int param3, String[] param4) {
         int var9 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;

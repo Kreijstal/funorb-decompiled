@@ -25,7 +25,7 @@ final class uj {
         }
     }
 
-    final static void a(int param0, int param1, int param2, o[] param3, int param4, int param5) {
+    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4, int param5) {
         int var21 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;

@@ -4,7 +4,7 @@
 final class kb {
     static String[] field_c;
     static String field_e;
-    static mg field_f;
+    static BitmapFont field_f;
     static hi field_d;
     static String[] field_a;
     static int field_b;

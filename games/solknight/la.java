@@ -288,7 +288,7 @@ final class la extends IntrusiveNode {
         this.field_h = param0;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, mg param4, hi param5, int param6, int param7, int param8, int param9, int param10, int param11, mg param12, int param13, int param14, int param15, hi param16, int param17, hi param18, int param19, int param20) {
+    final static void a(int param0, int param1, int param2, int param3, BitmapFont param4, hi param5, int param6, int param7, int param8, int param9, int param10, int param11, BitmapFont param12, int param13, int param14, int param15, hi param16, int param17, hi param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-abstract class pd {
+abstract class RasterBuffer {
     java.awt.Image field_g;
     int field_a;
     static String field_b;
@@ -100,7 +100,7 @@ abstract class pd {
           }
           if (param0 < 122) {
             var4 = (String) null;
-            pd.a(95, (String) null);
+            RasterBuffer.a(95, (String) null);
           }
           s.field_ib = param1;
           if (ab.field_u &&

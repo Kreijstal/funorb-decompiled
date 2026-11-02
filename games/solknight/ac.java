@@ -19,11 +19,11 @@ final class ac {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        o var6 = null;
-        o var7 = null;
-        o var8 = null;
-        o var7Lifetime1;
-        o var7Lifetime2;
+        Sprite var6 = null;
+        Sprite var7 = null;
+        Sprite var8 = null;
+        Sprite var7Lifetime1;
+        Sprite var7Lifetime2;
         int var3Lifetime1;
         var4 = SolKnight.field_L ? 1 : 0;
         try {

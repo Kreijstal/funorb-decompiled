@@ -46,21 +46,21 @@ abstract class SocketConnector {
         }
     }
 
-    final static o[] a(int param0, int param1, int param2, int param3, int param4) {
-        o[] var6 = new o[9];
-        o[] var5 = var6;
-        o dupTemp$0 = ib.a(param2, true, param4);
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = ib.a(param2, true, param4);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        o dupTemp$1 = ib.a(param2, true, param3);
+        Sprite dupTemp$1 = ib.a(param2, true, param3);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (param1 != -8591) {
-          return (o[]) null;
+          return (Sprite[]) null;
         }
         if (param0 == 0) {
           return var5;

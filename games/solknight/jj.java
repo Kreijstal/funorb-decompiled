@@ -4,7 +4,7 @@
 class jj extends ma {
     private int field_E;
     private int field_K;
-    private o[] field_fb;
+    private Sprite[] field_fb;
     private int field_p;
     private int field_q;
     private int field_G;
@@ -17,21 +17,21 @@ class jj extends ma {
     private int field_y;
     private int field_r;
     private boolean field_M;
-    private o field_H;
+    private Sprite field_H;
     static kb field_Y;
     private String field_O;
-    private o[] field_eb;
-    private mg field_P;
-    private o field_N;
-    private o field_z;
-    private o field_D;
+    private Sprite[] field_eb;
+    private BitmapFont field_P;
+    private Sprite field_N;
+    private Sprite field_z;
+    private Sprite field_D;
     private boolean field_Z;
     private int field_C;
     private boolean field_S;
-    private o[] field_T;
+    private Sprite[] field_T;
     private boolean field_A;
-    static o field_x;
-    private o[] field_X;
+    static Sprite field_x;
+    private Sprite[] field_X;
     private int field_cb;
     private int field_w;
     private boolean field_ab;
@@ -40,10 +40,10 @@ class jj extends ma {
     private String field_L;
     private int field_B;
     private int field_J;
-    private o[] field_u;
+    private Sprite[] field_u;
     private int field_U;
     static int field_db;
-    private o field_W;
+    private Sprite field_W;
     static int field_t;
 
     private final void a(int param0, jj param1) {

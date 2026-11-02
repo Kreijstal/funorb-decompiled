@@ -96,7 +96,7 @@ final class ef {
         }
     }
 
-    final static void a(int param0, o param1) {
+    final static void a(int param0, Sprite param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;

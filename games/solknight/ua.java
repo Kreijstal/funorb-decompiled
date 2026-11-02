@@ -5,12 +5,12 @@ final class ua extends WidgetContainer implements ka {
     static String[] field_M;
     private ge field_K;
     static String field_E;
-    static o[] field_F;
+    static Sprite[] field_F;
     private pj[] field_J;
     static mf field_I;
     static int field_L;
     static int field_N;
-    static mg field_G;
+    static BitmapFont field_G;
     static int field_H;
     private String[] field_D;
 
@@ -108,7 +108,7 @@ final class ua extends WidgetContainer implements ka {
         if (param1 != 0) {
           return;
         }
-        mg var5 = field_G;
+        BitmapFont var5 = field_G;
         if (this.field_D != null) {
           var5.a(nb.field_d, param2 + this.field_m, this.field_j + param0, this.field_t, 20, 16777215, -1, 0, 0, var5.field_s + var5.field_F);
         }
@@ -331,7 +331,7 @@ final class ua extends WidgetContainer implements ka {
 
     final static mb h(int param0) {
         if (param0 != 0) {
-          field_F = (o[]) null;
+          field_F = (Sprite[]) null;
         }
         return new mb(sg.b(-1), he.a(71));
     }

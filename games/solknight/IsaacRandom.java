@@ -10,7 +10,7 @@ final class IsaacRandom {
     private int field_j;
     static od[] field_i;
     static nc field_b;
-    static o field_d;
+    static Sprite field_d;
     static char[] field_g;
     static String field_e;
 

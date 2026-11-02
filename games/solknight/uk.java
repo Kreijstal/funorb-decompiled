@@ -4,7 +4,7 @@
 final class uk extends a {
     private vg field_j;
     private vg field_l;
-    static o field_k;
+    static Sprite field_k;
 
     final String a(String param0, boolean param1) {
         RuntimeException var3 = null;
@@ -154,9 +154,9 @@ final class uk extends a {
           return 94;
         }
         if (param1 >= 4096) {
-          return 6144 <= param1 ? -db.field_m[8192 - param1] : -db.field_m[param1 - 4096];
+          return 6144 <= param1 ? -SpriteState.field_m[8192 - param1] : -SpriteState.field_m[param1 - 4096];
         }
-        return 2048 <= param1 ? db.field_m[4096 - param1] : db.field_m[param1];
+        return 2048 <= param1 ? SpriteState.field_m[4096 - param1] : SpriteState.field_m[param1];
     }
 
     private final boolean a(byte param0, String param1) {
@@ -174,7 +174,7 @@ final class uk extends a {
           var8 = this.field_l.field_i.toLowerCase();
           var4 = param1.toLowerCase();
           if (param0 < 3) {
-            field_k = (o) null;
+            field_k = (Sprite) null;
           }
           if (var8.length() > 0 &&
             var4.length() > 0) {

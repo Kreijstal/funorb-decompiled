@@ -222,7 +222,7 @@ final class hb {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
-        rb var3_ref_rb = null;
+        Asteroid var3_ref_rb = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
@@ -294,7 +294,7 @@ final class hb {
           if (!pg.field_e &&
             lk.field_b >= GameKeyHandler.field_a[kb.field_b] &&
             var1_intLifetime2 == 0 &&
-            kd.field_a == -1 &&
+            kd.currentScreenIndex == -1 &&
             uf.field_p >= 0) {
             FullscreenFocusCanvas.field_b = FullscreenFocusCanvas.field_b + 1;
             if (!(FullscreenFocusCanvas.field_b <= 50) ||
@@ -330,7 +330,7 @@ final class hb {
           }
           ProxyAuthenticationRequiredException.field_a = 15 * ProxyAuthenticationRequiredException.field_a / 16 - 1;
           if (0 < ia.field_hb &&
-            kd.field_a == -1) {
+            kd.currentScreenIndex == -1) {
             ia.field_hb = ia.field_hb + 1;
             if (50 < ia.field_hb &&
               7 > kb.field_b ||
@@ -391,11 +391,11 @@ final class hb {
             vk.field_p = 0;
           }
           if (pg.field_e &&
-            kd.field_a != -1 ||
+            kd.currentScreenIndex != -1 ||
             !(0 > ClientException.field_b)) {
             lk.field_b = 0;
           }
-          if (GameKeyHandler.field_a[kb.field_b] > lk.field_b && (kd.field_a == -1 ||
+          if (GameKeyHandler.field_a[kb.field_b] > lk.field_b && (kd.currentScreenIndex == -1 ||
             pg.field_e)) {
             mf.field_A = mf.field_A + 1;
           }
@@ -404,7 +404,7 @@ final class hb {
             wc.field_c = wc.field_c + 1;
           }
           if (pg.field_e &&
-            -1 == kd.field_a) {
+            -1 == kd.currentScreenIndex) {
             if (ClientException.field_b < 0 &&
               of.field_g > 50) {
               k.field_c = k.field_c + 1;
@@ -450,11 +450,11 @@ final class hb {
           if (!pg.field_e) {
             of.field_g = 0;
           }
-          if (kd.field_a == -1 ||
+          if (kd.currentScreenIndex == -1 ||
             pg.field_e ||
             !(ClientException.field_b < 0)) {
             if (100 < mf.field_A && (!pg.field_e ||
-              -1 != kd.field_a &&
+              -1 != kd.currentScreenIndex &&
               pg.field_e ||
               !(ClientException.field_b < 0))) {
               var2Lifetime2 = bk.a(5, jb.field_g, (byte) -52);
@@ -566,12 +566,12 @@ final class hb {
             }
           }
           if (pg.field_e ||
-            -1 != kd.field_a) {
+            -1 != kd.currentScreenIndex) {
             si.field_E = (si.field_E * 9 + 240) / 10;
             wd.field_c = 9 * wd.field_c / 10;
           }
           if (!pg.field_e &&
-            kd.field_a == -1 ||
+            kd.currentScreenIndex == -1 ||
             !(ClientException.field_b < 0)) {
             var2Lifetime3 = PacketBuffer.field_j;
             if (var2Lifetime3 < 0) {
@@ -587,14 +587,14 @@ final class hb {
             if (var3Lifetime1 >= 480) {
               var3Lifetime1 = 479;
             }
-            if (kd.field_a == -1 && (!(PacketBuffer.field_j <= -1) ||
+            if (kd.currentScreenIndex == -1 && (!(PacketBuffer.field_j <= -1) ||
               0 != wb.field_c)) {
               si.field_E = (var3Lifetime1 / 2 + 9 * si.field_E) / 10;
               wd.field_c = (9 * wd.field_c + (var2Lifetime3 - 320)) / 10;
             }
             be.c(false);
           }
-          if (kd.field_a == -1) {
+          if (kd.currentScreenIndex == -1) {
             while (DelegatingCanvas.a((byte) -56)) {
               if (13 != el.field_n) {
                 continue;
@@ -610,7 +610,7 @@ final class hb {
           if (fh.field_d[82] &&
             el.field_n == 80 &&
             !pg.field_e &&
-            -1 == kd.field_a &&
+            -1 == kd.currentScreenIndex &&
             lh.field_s >= 2) {
             kh.field_d = 255;
             PacketBuffer.a(false, 5, -127);

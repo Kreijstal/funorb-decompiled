@@ -474,7 +474,7 @@ final class BufferedSocket implements Runnable {
             }
             var2 = 1;
           }
-          bc.field_K.a(-121, uc.a(PacketBuffer.field_j, 1691746689, field_m), uc.a(db.field_o, 1691746689, s.field_gb));
+          bc.field_K.a(-121, uc.a(PacketBuffer.field_j, 1691746689, field_m), uc.a(SpriteState.field_o, 1691746689, s.field_gb));
           if (bc.field_K.d((byte) -36)) {
             var1_int = 1;
           }

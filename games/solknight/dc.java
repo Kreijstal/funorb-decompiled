@@ -3,12 +3,12 @@
  */
 final class dc extends a {
     static wb field_k;
-    static o field_n;
+    static Sprite field_n;
     static String field_l;
     static String field_m;
     static int field_o;
     static String field_p;
-    static o field_j;
+    static Sprite field_j;
     static java.awt.Canvas field_q;
 
     final static void d(byte param0) {

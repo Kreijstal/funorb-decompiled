@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class db extends DualLinkNode {
+abstract class SpriteState extends DualLinkNode {
     int field_n;
     static int[] field_m;
     int field_p;
@@ -93,7 +93,7 @@ abstract class db extends DualLinkNode {
             var4 = param0.position;
             param0.b(var17.field_o, false);
             if (param1 >= -25) {
-              db.c(false);
+              SpriteState.c(false);
             }
             for (var5 = 0; var17.field_h > var5; var5++) {
               if (var17.field_p[var5] != 0) {
@@ -368,11 +368,11 @@ abstract class db extends DualLinkNode {
     final void a(int param0, int param1, int param2, int param3, int param4) {
         this.a(param0 << 5, param4, param3 << 8, true, param1);
         if (param2 <= 84) {
-          db.f(-74);
+          SpriteState.f(-74);
         }
     }
 
-    db() {
+    SpriteState() {
     }
 
     static {

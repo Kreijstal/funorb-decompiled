@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ie {
+final class MenuScreen {
     static long[] field_g;
     private sf field_f;
     private int field_e;
@@ -106,7 +106,7 @@ final class ie {
                           FullscreenFocusCanvas.field_b = 10;
                           mf.field_A = 0;
                           ib.field_h = 0;
-                          kf.field_G = new rb[10];
+                          kf.field_G = new Asteroid[10];
                           fg.field_a = 0;
                           pg.field_e = false;
                           lk.field_f = 0;
@@ -427,7 +427,7 @@ final class ie {
           return;
         }
         if (param0 != -257) {
-          ie.a(49, -110, -117);
+          MenuScreen.a(49, -110, -117);
         }
         if (9 == this.field_d) {
           this.field_f.a(0, false);
@@ -592,13 +592,13 @@ final class ie {
           }
           this.a(false, 2647, this.field_f.field_f);
         }
-        this.field_f.a(param0 - 125, this.a(PacketBuffer.field_j, (byte) 111, BufferedSocket.field_m), this.a(db.field_o, (byte) 111, s.field_gb));
+        this.field_f.a(param0 - 125, this.a(PacketBuffer.field_j, (byte) 111, BufferedSocket.field_m), this.a(SpriteState.field_o, (byte) 111, s.field_gb));
         if (-1 != this.field_f.field_f) {
           this.a(true, 2647, this.field_f.field_f);
         }
         if (param0 != hg.field_F) {
           this.field_b = s.field_gb;
-          this.field_a = db.field_o;
+          this.field_a = SpriteState.field_o;
         }
     }
 
@@ -715,7 +715,7 @@ final class ie {
         }
         if (this.field_d == 1 &&
           -1 != this.field_f.field_f &&
-          -1 != kd.field_a) {
+          -1 != kd.currentScreenIndex) {
           var3Lifetime1 = this.field_f.field_f;
         }
         this.field_f.a(param0, var3Lifetime1, this.a(PacketBuffer.field_j, (byte) 111, BufferedSocket.field_m), 127);
@@ -785,7 +785,7 @@ final class ie {
         }
         if (!pg.field_e &&
           PacketBuffer.field_j != -1) {
-          ie.a(PacketBuffer.field_j, BufferedSocket.field_m, param0 ^ 520);
+          MenuScreen.a(PacketBuffer.field_j, BufferedSocket.field_m, param0 ^ 520);
         }
         if (400 <= ClientException.field_b) {
           var2 = (-ClientException.field_b + 500) * 96 / 100;
@@ -892,7 +892,7 @@ final class ie {
                       }
                     } else {
                       var8 = kb.field_b;
-                      if (kd.field_a == this.field_d &&
+                      if (kd.currentScreenIndex == this.field_d &&
                         this.field_d != ri.field_f) {
                         var8--;
                       }
@@ -1212,7 +1212,7 @@ final class ie {
         }
     }
 
-    ie(int param0) {
+    MenuScreen(int param0) {
         this.field_e = -1;
         this.field_a = -1;
         this.field_d = param0;
@@ -1223,7 +1223,7 @@ final class ie {
         String var2 = (String) null;
         le.a(-88, SocketConnector.field_d, (String) null);
         if (param0 > -98) {
-          ie.a(-121, 32, 65);
+          MenuScreen.a(-121, 32, 65);
         }
     }
 

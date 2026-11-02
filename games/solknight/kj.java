@@ -10,7 +10,7 @@ class kj extends pj {
     private nc field_L;
     private li field_Q;
     static String field_K;
-    static o field_S;
+    static Sprite field_S;
     static int field_R;
     private String[] field_M;
     static String field_N;
