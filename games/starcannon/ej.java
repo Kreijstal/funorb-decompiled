@@ -44,14 +44,14 @@ final class ej extends mi {
         int var3;
         var3 = StarCannon.field_A;
         bj.field_d = null;
-        bg.field_a = 0;
+        KeyboardInput.field_a = 0;
         ok.field_sb = null;
         var2 = va.field_s;
-        va.field_s = ob.field_b;
+        va.field_s = SecondaryNodeDequeIterator.field_b;
         if (param1 == 51) {
           jh.field_b.field_d = 2;
           jh.field_b.field_p = jh.field_b.field_p + 1;
-          ob.field_b = var2;
+          SecondaryNodeDequeIterator.field_b = var2;
           if (param0 <= jh.field_b.field_p &&
             param1 == 51) {
             return 2;
@@ -64,7 +64,7 @@ final class ej extends mi {
           if (50 != param1) {
             jh.field_b.field_d = 1;
             jh.field_b.field_p = jh.field_b.field_p + 1;
-            ob.field_b = var2;
+            SecondaryNodeDequeIterator.field_b = var2;
             if (param0 <= jh.field_b.field_p &&
               param1 == 51) {
               return 2;
@@ -80,7 +80,7 @@ final class ej extends mi {
           }
           jh.field_b.field_d = 5;
           jh.field_b.field_p = jh.field_b.field_p + 1;
-          ob.field_b = var2;
+          SecondaryNodeDequeIterator.field_b = var2;
           if (param0 <= jh.field_b.field_p) {
             if (param1 == 51) {
               return 2;

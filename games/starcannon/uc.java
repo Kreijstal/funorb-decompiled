@@ -4,7 +4,7 @@
 abstract class uc implements he {
     private long field_c;
     static ge field_a;
-    static rk field_b;
+    static IntrusiveDeque field_b;
     static kl[] field_d;
 
     public final String a(int param0) {
@@ -27,7 +27,7 @@ abstract class uc implements he {
 
     public final p b(byte param0) {
         if (this.a(true)) {
-          return uh.field_g;
+          return DualLinkNode.field_g;
         }
         int var2 = -87 / ((param0 + 85) / 36);
         if (!((this.field_c + 350L) <= dd.b(61))) {
@@ -94,6 +94,6 @@ abstract class uc implements he {
 
     static {
         field_a = new ge();
-        field_b = new rk();
+        field_b = new IntrusiveDeque();
     }
 }

@@ -11,7 +11,7 @@ final class ah {
     static boolean field_i;
     ue field_b;
     String field_g;
-    static fj field_a;
+    static PcmSampleStream field_a;
     String field_h;
 
     public static void a(int param0) {

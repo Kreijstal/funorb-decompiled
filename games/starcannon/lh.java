@@ -10,10 +10,10 @@ final class lh {
     int[][] field_f;
     int[] field_b;
     int[] field_a;
-    ud[] field_L;
+    PcmSample[] field_L;
     int[] field_e;
     int field_w;
-    static hl field_N;
+    static Sprite field_N;
     static String field_D;
     int field_p;
     int[] field_A;
@@ -127,7 +127,7 @@ final class lh {
         int var2;
         int var4;
         int var6;
-        ud var5;
+        PcmSample var5;
         var6 = StarCannon.field_A;
         if (this.field_y == null) {
           return;
@@ -193,7 +193,7 @@ final class lh {
         }
     }
 
-    lh(rb param0, ja param1) {
+    lh(PacketBuffer param0, ja param1) {
         int var3_int = 0;
         int var4 = 0;
         int dupTemp$0 = 0;
@@ -287,7 +287,7 @@ final class lh {
           this.field_d = new int[var5Lifetime3];
           this.field_q = new int[var5Lifetime3];
           this.field_t = new int[var5Lifetime3];
-          this.field_L = new ud[var5Lifetime3];
+          this.field_L = new PcmSample[var5Lifetime3];
           this.field_B = new int[var5Lifetime3];
           this.field_o = new int[var5Lifetime3];
           this.field_x = new int[var5Lifetime3];

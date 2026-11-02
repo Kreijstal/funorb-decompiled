@@ -11,8 +11,8 @@ abstract class oe {
 
     abstract java.net.Socket a(byte param0) throws IOException;
 
-    final static void a(int param0, int param1, rb param2, int param3, int param4) {
-        rb var6 = null;
+    final static void a(int param0, int param1, PacketBuffer param2, int param3, int param4) {
+        PacketBuffer var6 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -24,8 +24,8 @@ abstract class oe {
           param2.c(param3, -306);
           param2.c(param0, -306);
           if (param1 != 32) {
-            var6 = (rb) null;
-            oe.a(-101, 110, (rb) null, -119, 60);
+            var6 = (PacketBuffer) null;
+            oe.a(-101, 110, (PacketBuffer) null, -119, 60);
             param2.a(param4, -61);
           } else {
             param2.a(param4, -61);
@@ -58,7 +58,7 @@ abstract class oe {
         int var2Lifetime2;
         String var1Lifetime1;
         var5 = StarCannon.field_A;
-        var6 = "(" + wc.field_i + " " + hh.field_a + " " + bh.field_d + ") " + vh.field_t;
+        var6 = "(" + wc.field_i + " " + hh.field_a + " " + SecondaryNodeDeque.field_d + ") " + vh.field_t;
         var1 = var6;
         if (il.field_g <= 0) {
           var2 = 37 % ((param0 - 3) / 43);
@@ -68,7 +68,7 @@ abstract class oe {
         for (var2Lifetime1 = 0; il.field_g > var2Lifetime1; var2Lifetime1++) {
           var7 = var1Lifetime1 + ' ';
           var1Lifetime1 = var7;
-          var3 = 255 & se.field_p.field_f[var2Lifetime1];
+          var3 = 255 & se.field_p.payload[var2Lifetime1];
           var4 = var3 >> 4;
           var3 = var3 & 15;
           if (var4 >= 10) {

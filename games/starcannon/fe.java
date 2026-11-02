@@ -5,7 +5,7 @@ class fe extends dk {
     private int field_B;
     private boolean field_I;
     private int field_D;
-    static hl field_H;
+    static Sprite field_H;
     private long field_E;
     private long field_F;
     private int field_A;
@@ -14,13 +14,13 @@ class fe extends dk {
     static td[] field_J;
 
     private final void h(boolean param0) {
-        uj var3 = null;
-        uj var3Lifetime1;
+        UiWidget var3 = null;
+        UiWidget var3Lifetime1;
         if (this.field_g instanceof si) {
           ((si) (this.field_g)).a(false, this);
           if (param0) {
-            var3 = (uj) null;
-            this.a((uj) null, 'z', (byte) -18, -33);
+            var3 = (UiWidget) null;
+            this.a((UiWidget) null, 'z', (byte) -18, -33);
             return;
           }
           return;
@@ -28,8 +28,8 @@ class fe extends dk {
         if (!param0) {
           return;
         }
-        var3Lifetime1 = (uj) null;
-        this.a((uj) null, 'z', (byte) -18, -33);
+        var3Lifetime1 = (UiWidget) null;
+        this.a((UiWidget) null, 'z', (byte) -18, -33);
     }
 
     private final void e(boolean param0) {
@@ -61,9 +61,9 @@ class fe extends dk {
           return;
         }
         var9 = (lg) ((Object) this.field_o);
-        var3 = var9.a((uj) (this), (byte) -106);
+        var3 = var9.a((UiWidget) (this), (byte) -106);
         var4 = var3.c(param0 + 101);
-        var5 = var9.b(91, (uj) (this));
+        var5 = var9.b(91, (UiWidget) (this));
         var6 = var9.a(param0 + param0) >> 1;
         if (var5 - var6 > var4) {
           this.field_n = 0;
@@ -116,7 +116,7 @@ class fe extends dk {
 
     final void a(int param0, int param1, byte param2, int param3) {
         long var6;
-        uj var8;
+        UiWidget var8;
         lg var9;
         lg var11;
         lg var12;
@@ -130,7 +130,7 @@ class fe extends dk {
           if (0 != param0) {
             return;
           }
-          this.field_o.a(param1, this.field_u, param2 ^ -102, param3, (uj) (this));
+          this.field_o.a(param1, this.field_u, param2 ^ -102, param3, (UiWidget) (this));
           if (!(this.field_o instanceof lg)) {
             return;
           }
@@ -140,25 +140,25 @@ class fe extends dk {
             if (500L <= (-this.field_F + var6) % 1000L) {
               return;
             }
-            var12.a(-3, (uj) (this), param1, param3, this.field_B);
+            var12.a(-3, (UiWidget) (this), param1, param3, this.field_B);
             return;
           }
-          var12.a(param3, param1, this.field_B, (uj) (this), (byte) 104, this.field_D);
+          var12.a(param3, param1, this.field_B, (UiWidget) (this), (byte) 104, this.field_D);
           var6Lifetime3 = dd.b(74);
           if (500L > (-this.field_F + var6Lifetime3) % 1000L) {
-            var12.a(-3, (uj) (this), param1, param3, this.field_B);
+            var12.a(-3, (UiWidget) (this), param1, param3, this.field_B);
           }
           return;
         }
-        var8 = (uj) null;
-        this.a((uj) null, '￑', (byte) 109, -100);
+        var8 = (UiWidget) null;
+        this.a((UiWidget) null, '￑', (byte) 109, -100);
         if (null == this.field_o) {
           return;
         }
         if (0 != param0) {
           return;
         }
-        this.field_o.a(param1, this.field_u, param2 ^ -102, param3, (uj) (this));
+        this.field_o.a(param1, this.field_u, param2 ^ -102, param3, (UiWidget) (this));
         if (!(this.field_o instanceof lg)) {
           return;
         }
@@ -169,18 +169,18 @@ class fe extends dk {
           if (500L <= (-this.field_F + var6Lifetime1) % 1000L) {
             return;
           }
-          var11.a(-3, (uj) (this), param1, param3, this.field_B);
+          var11.a(-3, (UiWidget) (this), param1, param3, this.field_B);
           return;
         }
-        var11.a(param3, param1, this.field_B, (uj) (this), (byte) 104, this.field_D);
+        var11.a(param3, param1, this.field_B, (UiWidget) (this), (byte) 104, this.field_D);
         var6Lifetime2 = dd.b(74);
         if (500L > (-this.field_F + var6Lifetime2) % 1000L) {
-          var11.a(-3, (uj) (this), param1, param3, this.field_B);
+          var11.a(-3, (UiWidget) (this), param1, param3, this.field_B);
         }
         return;
     }
 
-    final boolean a(uj param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_25_1 = 0;
         int stackIn_53_1 = 0;
@@ -322,7 +322,7 @@ class fe extends dk {
         if (param0) {
           return;
         }
-        field_H = (hl) null;
+        field_H = (Sprite) null;
     }
 
     private final void e(byte param0) {
@@ -352,18 +352,18 @@ class fe extends dk {
         }
     }
 
-    final static void a(rf param0, rf param1, boolean param2) {
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, boolean param2) {
         try {
-          if (param1.field_d != null) {
-            param1.b(4);
+          if (param1.previous != null) {
+            param1.unlink(4);
           }
-          param1.field_d = param0.field_d;
-          param1.field_a = param0;
+          param1.previous = param0.previous;
+          param1.next = param0;
           if (param2) {
             field_J = (td[]) null;
           }
-          param1.field_d.field_a = param1;
-          param1.field_a.field_d = param1;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "fe.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -520,7 +520,7 @@ class fe extends dk {
         }
     }
 
-    void a(int param0, int param1, uj param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         lg var7 = null;
         int var6 = 0;
         super.a(60, param1, param2, param3);
@@ -532,7 +532,7 @@ class fe extends dk {
           if (this.field_l == 1) {
             if (this.field_o instanceof lg) {
               var7 = (lg) ((Object) this.field_o);
-              var6 = var7.a(pe.field_d, la.field_c, (uj) (this), param1, param3, true);
+              var6 = var7.a(pe.field_d, la.field_c, (UiWidget) (this), param1, param3, true);
               if (var6 != -1) {
                 if (this.field_G && var6 < this.field_C &&
                   this.field_D < var6) {
@@ -548,7 +548,7 @@ class fe extends dk {
         }
     }
 
-    final boolean a(uj param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         int stackIn_7_1 = 0;
         boolean stackIn_10_1 = false;
         RuntimeException stackIn_21_0 = null;
@@ -565,7 +565,7 @@ class fe extends dk {
           if (!(this.field_o instanceof lg)) {
             return false;
           }
-          var8_int = ((lg) ((Object) this.field_o)).a(pe.field_d, la.field_c, (uj) (this), param2, param3, true);
+          var8_int = ((lg) ((Object) this.field_o)).a(pe.field_d, la.field_c, (UiWidget) (this), param2, param3, true);
           if (var8_int == -1) {
             stackIn_7_1 = 0;
           } else {
@@ -648,7 +648,7 @@ class fe extends dk {
     public static void f(byte param0) {
         field_H = null;
         if (param0 != 73) {
-          field_H = (hl) null;
+          field_H = (Sprite) null;
           field_J = null;
           return;
         }

@@ -13,10 +13,10 @@ final class di extends qf {
         super(param0);
     }
 
-    final static hl a(int param0, int param1, ue param2, int param3) {
+    final static Sprite a(int param0, int param1, ue param2, int param3) {
         RuntimeException var4 = null;
         String var5 = null;
-        hl stackIn_6_0 = null;
+        Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -29,7 +29,7 @@ final class di extends qf {
             var5 = (String) null;
             di.a((byte) 118, (String) null);
           }
-          stackIn_6_0 = uh.c((byte) 34);
+          stackIn_6_0 = DualLinkNode.c((byte) 34);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,7 +56,7 @@ final class di extends qf {
           if (param1) {
             di.f(-21);
           }
-          if (this.a(param0, -26188) != sb.field_n) {
+          if (this.a(param0, -26188) != BufferedSocket.field_n) {
             return null;
           }
           stackIn_5_0 = pe.field_f;
@@ -89,7 +89,7 @@ final class di extends qf {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!ba.a(6, var4)) {
-            stackIn_3_0 = sb.field_n;
+            stackIn_3_0 = BufferedSocket.field_n;
             return stackIn_3_0;
           }
           if (param1 != -26188) {
@@ -101,7 +101,7 @@ final class di extends qf {
             var3_int <= 130) {
             return bf.field_x;
           }
-          stackIn_10_0 = sb.field_n;
+          stackIn_10_0 = BufferedSocket.field_n;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

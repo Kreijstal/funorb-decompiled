@@ -94,19 +94,19 @@ final class td {
     }
 
     final static int a(int param0, int param1, boolean param2) {
-        if (null == bg.field_c) {
+        if (null == KeyboardInput.field_c) {
           return -1;
         }
         if (param0 >= nh.field_f &&
-          bg.field_c.field_u + nh.field_f > param0 &&
+          KeyboardInput.field_c.field_u + nh.field_f > param0 &&
           param1 >= lf.field_Z &&
-          param1 < lf.field_Z + bg.field_c.field_v) {
+          param1 < lf.field_Z + KeyboardInput.field_c.field_v) {
           return 0;
         }
         if (param0 >= qf.field_e &&
-          qf.field_e + bg.field_c.field_u > param0 &&
+          qf.field_e + KeyboardInput.field_c.field_u > param0 &&
           mf.field_d <= param1 &&
-          mf.field_d + bg.field_c.field_v > param1) {
+          mf.field_d + KeyboardInput.field_c.field_v > param1) {
           return 1;
         }
         if (param2) {

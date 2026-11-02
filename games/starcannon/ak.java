@@ -15,7 +15,7 @@ final class ak {
     byte[][] field_p;
     int[] field_d;
     private int[] field_r;
-    static hl field_f;
+    static Sprite field_f;
     static int field_e;
     int field_m;
     static int field_h;
@@ -57,7 +57,7 @@ final class ak {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        rb var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -74,7 +74,7 @@ final class ak {
         int var13Lifetime1Lifetime1;
         var16 = StarCannon.field_A;
         try {
-          var17 = new rb(hc.a((byte) 51, param0));
+          var17 = new PacketBuffer(hc.a((byte) 51, param0));
           var4 = var17.j(7909);
           if (var4 >= 5 &&
             var4 <= 7) {
@@ -341,7 +341,7 @@ final class ak {
                   var21 = var2.j(7909);
                   var22 = ok.field_rb[var21].field_a;
                   var23 = var2.c((byte) 5);
-                  var25 = var2.field_g;
+                  var25 = var2.position;
                   if (var7 > var20) {
                     var9[0][var13] = var22;
                     var10[0][var13] = ok.field_rb[var21].field_f;
@@ -358,7 +358,7 @@ final class ak {
                     var9[1][var14] = we.field_i;
                     var10[1][var14] = null;
                     var11[1][var14] = var23;
-                    var2.field_g = var25;
+                    var2.position = var25;
                     var14++;
                     for (var26Lifetime1 = 0; var8 > var26Lifetime1; var26Lifetime1++) {
                       incrementValue$4 = var17;
@@ -373,7 +373,7 @@ final class ak {
                     var10[2][var15] = ok.field_rb[var21].field_f;
                     var11[2][var15] = var23;
                     var15++;
-                    var2.field_g = var25;
+                    var2.position = var25;
                     for (var26Lifetime2 = 0; var26Lifetime2 < var8; var26Lifetime2++) {
                       incrementValue$5 = var18;
                       var18++;
@@ -384,7 +384,7 @@ final class ak {
               }
             }
             var5.field_j = true;
-            var5.b(4);
+            var5.unlink(4);
             return;
           }
           if (var3 == 1) {
@@ -403,7 +403,7 @@ final class ak {
               return;
             }
             var7_ref_re.field_k = var5_long;
-            var7_ref_re.b(4);
+            var7_ref_re.unlink(4);
             return;
           }
           hc.a((Throwable) null, "HS1: " + oe.a(-109), (byte) 70);
@@ -774,7 +774,7 @@ final class ak {
     }
 
     static {
-        field_f = new hl(270, 70);
+        field_f = new Sprite(270, 70);
         field_h = 480;
     }
 }

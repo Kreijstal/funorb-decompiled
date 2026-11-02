@@ -8,7 +8,7 @@ abstract class ne {
     static td field_l;
     int field_h;
     static String field_i;
-    static rk field_c;
+    static IntrusiveDeque field_c;
     int field_b;
     int field_k;
     int field_e;
@@ -111,6 +111,6 @@ abstract class ne {
     static {
         field_i = "Game over";
         field_a = "The account name you use to access RuneScape and other Jagex.com games";
-        field_c = new rk();
+        field_c = new IntrusiveDeque();
     }
 }

@@ -22,10 +22,10 @@ final class tg extends ik {
 
     final static ma d(byte param0) {
         if (param0 == 10) {
-          return new ma(we.a(29084), ek.a(-86));
+          return new ma(we.a(29084), IterableNodeHashTable.a(-86));
         }
         field_x = (sk) null;
-        return new ma(we.a(29084), ek.a(-86));
+        return new ma(we.a(29084), IterableNodeHashTable.a(-86));
     }
 
     public static void h(int param0) {

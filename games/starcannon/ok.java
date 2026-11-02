@@ -3,7 +3,7 @@
  */
 final class ok extends ph implements ga {
     private kh field_pb;
-    static sb field_sb;
+    static BufferedSocket field_sb;
     static String field_qb;
     static hj[] field_rb;
     static ed field_tb;
@@ -120,7 +120,7 @@ final class ok extends ph implements ga {
                   u.a(true);
                 }
                 this.field_ub = true;
-                var4 = bg.field_d;
+                var4 = KeyboardInput.field_d;
               }
             }
           }
@@ -130,17 +130,17 @@ final class ok extends ph implements ga {
               this.c(20317, new jj(this));
               return;
             }
-            var5.a((byte) 110, (qg) (this), ui.field_s);
+            var5.a((byte) 110, (qg) (this), SpriteState.field_s);
           } else {
             if (!this.field_ub) {
               if (param1.field_e == 5) {
                 var5.a(hd.field_i, 13759, 11);
-                var5.a(bg.field_b, 13759, 17);
+                var5.a(KeyboardInput.field_b, 13759, 17);
               } else {
                 var5.a(dk.field_t, 13759, -1);
               }
             } else {
-              var5.a((byte) 110, (qg) (this), ui.field_s);
+              var5.a((byte) 110, (qg) (this), SpriteState.field_s);
             }
             if (param1.field_e == 3) {
               var5.a(kf.field_u, param2 ^ 7507, 7);
@@ -179,14 +179,14 @@ final class ok extends ph implements ga {
         if (param0 != 10341) {
           field_tb = (ed) null;
         }
-        this.a(true, fb.a(bg.field_d, 248, 0), 10476);
+        this.a(true, fb.a(KeyboardInput.field_d, 248, 0), 10476);
     }
 
     final boolean g(byte param0) {
         ig var2 = null;
         if (this.field_G &&
           !this.field_ob) {
-          var2 = ii.a((byte) -92);
+          var2 = ClientException.a((byte) -92);
           if (var2 != null) {
             this.a(false, var2, 10476);
           }

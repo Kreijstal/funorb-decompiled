@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class uj extends rf {
+class UiWidget extends IntrusiveNode {
     int field_i;
     qg field_g;
     String field_p;
@@ -25,7 +25,7 @@ class uj extends rf {
         }
     }
 
-    uj(String param0, qg param1) {
+    UiWidget(String param0, qg param1) {
         this(param0, eh.field_j.field_j, param1);
     }
 
@@ -46,7 +46,7 @@ class uj extends rf {
         return 0;
     }
 
-    boolean a(uj param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -75,7 +75,7 @@ class uj extends rf {
         }
     }
 
-    void a(int param0, int param1, int param2, uj param3, byte param4, int param5) {
+    void a(int param0, int param1, int param2, UiWidget param3, byte param4, int param5) {
         try {
           this.field_l = 0;
           if (param4 != -22) {
@@ -135,7 +135,7 @@ class uj extends rf {
     public static void c(byte param0) {
         field_r = null;
         if (param0 >= -35) {
-          uj.a(125, ':', (String) null);
+          UiWidget.a(125, ':', (String) null);
         }
     }
 
@@ -156,7 +156,7 @@ class uj extends rf {
         return false;
     }
 
-    void a(int param0, int param1, uj param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         int var5_int = 0;
         int stackIn_5_0 = 0;
         boolean stackIn_10_1 = false;
@@ -228,7 +228,7 @@ class uj extends rf {
           }
           if (null != this.field_o) {
             discarded$4 = param1.append(" renderer=");
-            if (this.field_o instanceof uj) {
+            if (this.field_o instanceof UiWidget) {
               param1 = this.a(param0, param1, (byte) 39, 1 + param2);
             } else {
               discarded$5 = param1.append(this.field_o);
@@ -236,7 +236,7 @@ class uj extends rf {
           }
           if (this.field_g != null) {
             discarded$6 = param1.append(" listener=");
-            if (this.field_g instanceof uj) {
+            if (this.field_g instanceof UiWidget) {
               param1 = this.a(param0, param1, (byte) 39, param2 + 1);
               return;
             }
@@ -331,7 +331,7 @@ class uj extends rf {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, uj param4, int param5, int param6) {
+    boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -415,11 +415,11 @@ class uj extends rf {
             try {
               var8 = param0.getParameter("cookieprefix");
               if (param1 != 61) {
-                uj.a((java.applet.Applet) null, -85);
+                UiWidget.a((java.applet.Applet) null, -85);
               }
               var3 = var8 + "settings";
               var4 = (String) (mb.a(param0, "getcookies", true));
-              var5 = uj.a(param1 - 176, ';', var4);
+              var5 = UiWidget.a(param1 - 176, ';', var4);
               for (var6 = 0; var5.length > var6; var6++) {
                 var7 = var5[var6].indexOf('=');
                 if (0 <= var7 &&
@@ -507,7 +507,7 @@ class uj extends rf {
         return param1;
     }
 
-    boolean a(uj param0, char param1, byte param2, int param3) {
+    boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -556,7 +556,7 @@ class uj extends rf {
         }
     }
 
-    boolean a(int param0, uj param1) {
+    boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -581,12 +581,12 @@ class uj extends rf {
         }
     }
 
-    protected uj() {
+    protected UiWidget() {
         this.field_n = 0;
         this.field_q = 0;
     }
 
-    uj(String param0, de param1, qg param2) {
+    UiWidget(String param0, de param1, qg param2) {
         RuntimeException runtimeException = null;
         lg var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -635,7 +635,7 @@ class uj extends rf {
         }
     }
 
-    uj(int param0, int param1, int param2, int param3, de param4, qg param5) {
+    UiWidget(int param0, int param1, int param2, int param3, de param4, qg param5) {
         this.field_n = 0;
         this.field_q = 0;
         try {

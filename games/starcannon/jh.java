@@ -7,11 +7,11 @@ final class jh {
     static boolean field_d;
     static String field_f;
     static hh field_h;
-    static hl field_a;
+    static Sprite field_a;
     static int[][] field_c;
-    private uh field_i;
+    private DualLinkNode field_i;
     static eh field_b;
-    private uh field_g;
+    private DualLinkNode field_g;
     static String field_e;
 
     public static void b(int param0) {
@@ -39,18 +39,18 @@ final class jh {
         b.field_e = qa.field_d[param0];
     }
 
-    final void a(int param0, uh param1) {
+    final void a(int param0, DualLinkNode param1) {
         try {
           if (param0 != 22197) {
             this.b((byte) 89);
           }
-          if (null != param1.field_f) {
+          if (null != param1.secondaryPrevious) {
             param1.a(-6242);
           }
-          param1.field_m = this.field_i;
-          param1.field_f = this.field_i.field_f;
-          param1.field_f.field_m = param1;
-          param1.field_m.field_f = param1;
+          param1.secondaryNext = this.field_i;
+          param1.secondaryPrevious = this.field_i.secondaryPrevious;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "jh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -77,25 +77,25 @@ final class jh {
           ca.field_Y = dupTemp$1;
           ik.field_p = dupTemp$1;
           if (ah.field_e.field_b != 1) {
-            r.field_c = rb.field_h;
+            r.field_c = PacketBuffer.field_h;
           } else {
             try {
-              m.field_b = new sb((java.net.Socket) (ah.field_e.field_f), og.field_a);
-              d.field_b.field_g = 0;
+              m.field_b = new BufferedSocket((java.net.Socket) (ah.field_e.field_f), og.field_a);
+              d.field_b.position = 0;
               var4 = se.field_p;
               var5 = var4;
               stackIn_11_0 = (!param1) ? -1 : -2;
               wc.field_i = stackIn_11_0;
               hh.field_a = stackIn_11_0;
-              bh.field_d = stackIn_11_0;
-              var5.field_g = 0;
+              SecondaryNodeDeque.field_d = stackIn_11_0;
+              var5.position = 0;
               r.field_c = ua.field_b;
               oe.a(r.field_d, 32, d.field_b, bf.field_s, jg.field_A);
               nf.a(-1, (byte) 95);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2 = (IOException) (Object) decompiledCaughtException;
-              r.field_c = rb.field_h;
+              r.field_c = PacketBuffer.field_h;
               ah.field_e = null;
               return true;
             }
@@ -111,9 +111,9 @@ final class jh {
 
     final int b(byte param0) {
         int var2 = 0;
-        uh var3 = this.field_i.field_m;
+        DualLinkNode var3 = this.field_i.secondaryNext;
         while (this.field_i != var3) {
-          var3 = var3.field_m;
+          var3 = var3.secondaryNext;
           var2++;
         }
         if (param0 >= 109) {
@@ -122,36 +122,36 @@ final class jh {
         return -57;
     }
 
-    final uh a(byte param0) {
-        uh var2 = null;
-        uh var2Lifetime1;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 < 119) {
           field_c = (int[][]) null;
-          var2 = this.field_i.field_m;
+          var2 = this.field_i.secondaryNext;
           if (this.field_i != var2) {
-            this.field_g = var2.field_m;
+            this.field_g = var2.secondaryNext;
             return var2;
           }
           this.field_g = null;
           return null;
         }
-        var2Lifetime1 = this.field_i.field_m;
+        var2Lifetime1 = this.field_i.secondaryNext;
         if (this.field_i != var2Lifetime1) {
-          this.field_g = var2Lifetime1.field_m;
+          this.field_g = var2Lifetime1.secondaryNext;
           return var2Lifetime1;
         }
         this.field_g = null;
         return null;
     }
 
-    final uh a(int param0) {
-        uh var2 = null;
-        uh var2Lifetime1;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 >= -10) {
           this.b((byte) -41);
           var2 = this.field_g;
           if (this.field_i != var2) {
-            this.field_g = var2.field_m;
+            this.field_g = var2.secondaryNext;
             return var2;
           }
           this.field_g = null;
@@ -159,15 +159,15 @@ final class jh {
         }
         var2Lifetime1 = this.field_g;
         if (this.field_i != var2Lifetime1) {
-          this.field_g = var2Lifetime1.field_m;
+          this.field_g = var2Lifetime1.secondaryNext;
           return var2Lifetime1;
         }
         this.field_g = null;
         return null;
     }
 
-    final uh c(int param0) {
-        uh var2 = this.field_i.field_m;
+    final DualLinkNode c(int param0) {
+        DualLinkNode var2 = this.field_i.secondaryNext;
         if (param0 != 8) {
           this.c(-118);
           if (var2 != this.field_i) {
@@ -184,9 +184,9 @@ final class jh {
     }
 
     public jh() {
-        this.field_i = new uh();
-        this.field_i.field_f = this.field_i;
-        this.field_i.field_m = this.field_i;
+        this.field_i = new DualLinkNode();
+        this.field_i.secondaryPrevious = this.field_i;
+        this.field_i.secondaryNext = this.field_i;
     }
 
     static {

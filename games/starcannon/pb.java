@@ -6,8 +6,8 @@ final class pb {
 
     final static void b(int param0) {
         int var1 = -66 % ((param0 + 11) / 59);
-        sb.field_g = new kh();
-        t.field_h.c(20317, sb.field_g);
+        BufferedSocket.field_g = new kh();
+        t.field_h.c(20317, BufferedSocket.field_g);
     }
 
     final static fb a(int param0, boolean param1) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bi {
-    static hl field_a;
+    static Sprite field_a;
     static boolean field_b;
     static int[] field_c;
 
@@ -55,7 +55,7 @@ final class bi {
     }
 
     static {
-        field_a = new hl(640, 480);
+        field_a = new Sprite(640, 480);
         field_c = new int[8];
     }
 }

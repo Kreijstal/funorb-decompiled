@@ -16,7 +16,7 @@ final class rg extends vk implements si, ga {
     private dk field_y;
     private boolean field_z;
 
-    final static hl[] i(int param0) {
+    final static Sprite[] i(int param0) {
         int var3 = 0;
         byte[] var10 = null;
         int[] var11 = null;
@@ -25,7 +25,7 @@ final class rg extends vk implements si, ga {
         int var6 = 0;
         int var2 = 0;
         int var7 = StarCannon.field_A;
-        hl[] var1 = new hl[bj.field_b];
+        Sprite[] var1 = new Sprite[bj.field_b];
         int var2Lifetime1;
         for (var2 = 0; bj.field_b > var2; var2++) {
           var3 = gh.field_C[var2] * gg.field_d[var2];
@@ -36,7 +36,7 @@ final class rg extends vk implements si, ga {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = of.field_g[w.a(255, (int) var10[var6])];
           }
-          var1[var2] = new hl(td.field_m, gb.field_w, fc.field_d[var2], qd.field_H[var2], gg.field_d[var2], gh.field_C[var2], var11);
+          var1[var2] = new Sprite(td.field_m, gb.field_w, fc.field_d[var2], qd.field_H[var2], gg.field_d[var2], gh.field_C[var2], var11);
         }
         var2Lifetime1 = 57 / ((47 - param0) / 46);
         rc.b((byte) -82);
@@ -74,8 +74,8 @@ final class rg extends vk implements si, ga {
     public final void a(int param0, fe param1) {
         try {
           if (param0 != -4312) {
-            uj var4 = (uj) null;
-            this.a((uj) null, 'ﾠ', (byte) 81, -62);
+            UiWidget var4 = (UiWidget) null;
+            this.a((UiWidget) null, 'ﾠ', (byte) 81, -62);
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "rg.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -123,7 +123,7 @@ final class rg extends vk implements si, ga {
           this.field_G = (fe) ((Object) new ng("", (qg) (this), 20));
           if (this.field_z) {
             this.field_C = new dk(ma.field_g, (qg) null);
-            this.field_F = new dk(bg.field_b, (qg) null);
+            this.field_F = new dk(KeyboardInput.field_b, (qg) null);
             this.field_I.field_u = false;
           } else {
             this.field_C = new dk(s.field_l, (qg) null);
@@ -175,7 +175,7 @@ final class rg extends vk implements si, ga {
           var8 = pf.field_b;
           var9 = kl.a(ll.b(95), (byte) 84);
           if (var9 != p.field_a) {
-            if (bh.field_b == var9) {
+            if (SecondaryNodeDeque.field_b == var9) {
               var8 = rc.field_c;
             }
           } else {
@@ -184,12 +184,12 @@ final class rg extends vk implements si, ga {
           dupTemp$0 = new ad(10, this.field_j, -20 + this.field_i, 25, this.field_I, false, 80, 3, var7, 16777215, var8);
           var11 = dupTemp$0;
           this.a(true, dupTemp$0);
-          this.field_j = this.field_j + (((uj) ((Object) var11)).field_f + 5);
+          this.field_j = this.field_j + (((UiWidget) ((Object) var11)).field_f + 5);
           dupTemp$1 = new ad(10, this.field_j, -20 + this.field_i, 25, this.field_G, false, 80, 3, var7, 16777215, tj.field_y);
           var12 = dupTemp$1;
           this.a(true, dupTemp$1);
           this.field_C.field_g = (qg) (this);
-          this.field_j = this.field_j + (5 + ((uj) ((Object) var12)).field_f);
+          this.field_j = this.field_j + (5 + ((UiWidget) ((Object) var12)).field_f);
           if (null != this.field_y) {
             this.field_y.field_g = (qg) (this);
           }
@@ -255,7 +255,7 @@ final class rg extends vk implements si, ga {
         }
     }
 
-    final boolean a(uj param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -299,7 +299,7 @@ final class rg extends vk implements si, ga {
         RuntimeException var3 = null;
         try {
           if (param1 == this.field_I) {
-            this.field_G.a(0, (uj) (this));
+            this.field_G.a(0, (UiWidget) (this));
           }
           if (this.field_G == param1) {
             this.a(-100);
@@ -383,7 +383,7 @@ final class rg extends vk implements si, ga {
               if (this.field_F == param0) {
                 if (!this.field_z) {
                   if (this.field_A) {
-                    ob.b(11);
+                    SecondaryNodeDequeIterator.b(11);
                   } else {
                     vk.e(-59);
                   }

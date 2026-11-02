@@ -6,23 +6,23 @@ abstract class fi {
     static int field_d;
     static bf field_e;
     static boolean field_b;
-    static rk field_c;
-    static hl[] field_g;
+    static IntrusiveDeque field_c;
+    static Sprite[] field_g;
     static boolean field_h;
     static ue field_f;
 
     abstract int a(byte param0, long param1);
 
     final static void c(byte param0) {
-        hl var1 = null;
-        hl var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = StarCannon.field_A;
         try {
           if (param0 != -96) {
-            field_g = (hl[]) null;
+            field_g = (Sprite[]) null;
           }
-          var1 = new hl(540, 140);
+          var1 = new Sprite(540, 140);
           bc.a(var1, 26095);
           gl.b();
           ki.b();
@@ -118,6 +118,6 @@ abstract class fi {
         field_d = 0;
         field_a = "Collect power orbs to upgrade the Nova Ray's systems.";
         field_b = false;
-        field_c = new rk();
+        field_c = new IntrusiveDeque();
     }
 }

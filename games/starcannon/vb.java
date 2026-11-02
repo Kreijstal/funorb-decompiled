@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vb extends qf {
-    static hl field_l;
+    static Sprite field_l;
     private fe field_n;
-    static rk field_k;
+    static IntrusiveDeque field_k;
     static int field_m;
     static String field_j;
 
@@ -204,418 +204,418 @@ final class vb extends qf {
           ri.field_c = param0;
           var2 = cb.a("gamename", (byte) -124);
           if (null != var2) {
-            wc.field_g = uh.a(121, var2);
+            wc.field_g = DualLinkNode.a(121, var2);
           }
           var2Lifetime1 = cb.a("achievement_names,0", (byte) -124);
           if (null != var2Lifetime1) {
-            di.field_j[0] = uh.a(127, var2Lifetime1);
+            di.field_j[0] = DualLinkNode.a(127, var2Lifetime1);
           }
           var2Lifetime2 = cb.a("achievement_names,1", (byte) -124);
           if (var2Lifetime2 != null) {
-            di.field_j[1] = uh.a(dg.a(param1, 30856), var2Lifetime2);
+            di.field_j[1] = DualLinkNode.a(dg.a(param1, 30856), var2Lifetime2);
           }
           var2Lifetime3 = cb.a("achievement_names,2", (byte) -124);
           if (null != var2Lifetime3) {
-            di.field_j[2] = uh.a(126, var2Lifetime3);
+            di.field_j[2] = DualLinkNode.a(126, var2Lifetime3);
           }
           var2Lifetime4 = cb.a("achievement_names,3", (byte) -124);
           if (var2Lifetime4 != null) {
-            di.field_j[3] = uh.a(dg.a(param1, 30858), var2Lifetime4);
+            di.field_j[3] = DualLinkNode.a(dg.a(param1, 30858), var2Lifetime4);
           }
           var2Lifetime5 = cb.a("achievement_names,4", (byte) -124);
           if (var2Lifetime5 != null) {
-            di.field_j[4] = uh.a(120, var2Lifetime5);
+            di.field_j[4] = DualLinkNode.a(120, var2Lifetime5);
           }
           var2Lifetime6 = cb.a("achievement_names,5", (byte) -124);
           if (null != var2Lifetime6) {
-            di.field_j[5] = uh.a(115, var2Lifetime6);
+            di.field_j[5] = DualLinkNode.a(115, var2Lifetime6);
           }
           var2Lifetime7 = cb.a("achievement_names,6", (byte) -124);
           if (var2Lifetime7 != null) {
-            di.field_j[6] = uh.a(param1 - 30835, var2Lifetime7);
+            di.field_j[6] = DualLinkNode.a(param1 - 30835, var2Lifetime7);
           }
           var2Lifetime8 = cb.a("achievement_names,7", (byte) -124);
           if (var2Lifetime8 != null) {
-            di.field_j[7] = uh.a(param1 - 30850, var2Lifetime8);
+            di.field_j[7] = DualLinkNode.a(param1 - 30850, var2Lifetime8);
           }
           var2Lifetime9 = cb.a("achievement_names,8", (byte) -124);
           if (var2Lifetime9 != null) {
-            di.field_j[8] = uh.a(113, var2Lifetime9);
+            di.field_j[8] = DualLinkNode.a(113, var2Lifetime9);
           }
           var2Lifetime10 = cb.a("achievement_names,9", (byte) -124);
           if (var2Lifetime10 != null) {
-            di.field_j[9] = uh.a(121, var2Lifetime10);
+            di.field_j[9] = DualLinkNode.a(121, var2Lifetime10);
           }
           var2Lifetime11 = cb.a("achievement_names,10", (byte) -124);
           if (var2Lifetime11 != null) {
-            di.field_j[10] = uh.a(122, var2Lifetime11);
+            di.field_j[10] = DualLinkNode.a(122, var2Lifetime11);
           }
           var2Lifetime12 = cb.a("achievement_names,11", (byte) -124);
           if (var2Lifetime12 != null) {
-            di.field_j[11] = uh.a(126, var2Lifetime12);
+            di.field_j[11] = DualLinkNode.a(126, var2Lifetime12);
           }
           var2Lifetime13 = cb.a("achievement_names,12", (byte) -124);
           if (null != var2Lifetime13) {
-            di.field_j[12] = uh.a(123, var2Lifetime13);
+            di.field_j[12] = DualLinkNode.a(123, var2Lifetime13);
           }
           var2Lifetime14 = cb.a("achievement_names,13", (byte) -124);
           if (var2Lifetime14 != null) {
-            di.field_j[13] = uh.a(120, var2Lifetime14);
+            di.field_j[13] = DualLinkNode.a(120, var2Lifetime14);
           }
           var2Lifetime15 = cb.a("achievement_names,14", (byte) -124);
           if (var2Lifetime15 != null) {
-            di.field_j[14] = uh.a(120, var2Lifetime15);
+            di.field_j[14] = DualLinkNode.a(120, var2Lifetime15);
           }
           var2Lifetime16 = cb.a("achievement_criteria,0", (byte) -124);
           if (null != var2Lifetime16) {
-            vd.field_h[0] = uh.a(116, var2Lifetime16);
+            vd.field_h[0] = DualLinkNode.a(116, var2Lifetime16);
           }
           var2Lifetime17 = cb.a("achievement_criteria,1", (byte) -124);
           if (null != var2Lifetime17) {
-            vd.field_h[1] = uh.a(dg.a(param1, 30850), var2Lifetime17);
+            vd.field_h[1] = DualLinkNode.a(dg.a(param1, 30850), var2Lifetime17);
           }
           var2Lifetime18 = cb.a("achievement_criteria,2", (byte) -124);
           if (null != var2Lifetime18) {
-            vd.field_h[2] = uh.a(123, var2Lifetime18);
+            vd.field_h[2] = DualLinkNode.a(123, var2Lifetime18);
           }
           var2Lifetime19 = cb.a("achievement_criteria,3", (byte) -124);
           if (var2Lifetime19 != null) {
-            vd.field_h[3] = uh.a(dg.a(param1, 30850), var2Lifetime19);
+            vd.field_h[3] = DualLinkNode.a(dg.a(param1, 30850), var2Lifetime19);
           }
           var2Lifetime20 = cb.a("achievement_criteria,4", (byte) -124);
           if (var2Lifetime20 != null) {
-            vd.field_h[4] = uh.a(120, var2Lifetime20);
+            vd.field_h[4] = DualLinkNode.a(120, var2Lifetime20);
           }
           var2Lifetime21 = cb.a("achievement_criteria,5", (byte) -124);
           if (var2Lifetime21 != null) {
-            vd.field_h[5] = uh.a(120, var2Lifetime21);
+            vd.field_h[5] = DualLinkNode.a(120, var2Lifetime21);
           }
           var2Lifetime22 = cb.a("achievement_criteria,6", (byte) -124);
           if (var2Lifetime22 != null) {
-            vd.field_h[6] = uh.a(param1 - 30843, var2Lifetime22);
+            vd.field_h[6] = DualLinkNode.a(param1 - 30843, var2Lifetime22);
           }
           var2Lifetime23 = cb.a("achievement_criteria,7", (byte) -124);
           if (null != var2Lifetime23) {
-            vd.field_h[7] = uh.a(116, var2Lifetime23);
+            vd.field_h[7] = DualLinkNode.a(116, var2Lifetime23);
           }
           var2Lifetime24 = cb.a("achievement_criteria,8", (byte) -124);
           if (var2Lifetime24 != null) {
-            vd.field_h[8] = uh.a(117, var2Lifetime24);
+            vd.field_h[8] = DualLinkNode.a(117, var2Lifetime24);
           }
           var2Lifetime25 = cb.a("achievement_criteria,9", (byte) -124);
           if (null != var2Lifetime25) {
-            vd.field_h[9] = uh.a(127, var2Lifetime25);
+            vd.field_h[9] = DualLinkNode.a(127, var2Lifetime25);
           }
           var2Lifetime26 = cb.a("achievement_criteria,10", (byte) -124);
           if (var2Lifetime26 != null) {
-            vd.field_h[10] = uh.a(param1 - 30840, var2Lifetime26);
+            vd.field_h[10] = DualLinkNode.a(param1 - 30840, var2Lifetime26);
           }
           var2Lifetime27 = cb.a("achievement_criteria,11", (byte) -124);
           if (null != var2Lifetime27) {
-            vd.field_h[11] = uh.a(120, var2Lifetime27);
+            vd.field_h[11] = DualLinkNode.a(120, var2Lifetime27);
           }
           var2Lifetime28 = cb.a("achievement_criteria,12", (byte) -124);
           if (var2Lifetime28 != null) {
-            vd.field_h[12] = uh.a(117, var2Lifetime28);
+            vd.field_h[12] = DualLinkNode.a(117, var2Lifetime28);
           }
           var2Lifetime29 = cb.a("achievement_criteria,13", (byte) -124);
           if (var2Lifetime29 != null) {
-            vd.field_h[13] = uh.a(123, var2Lifetime29);
+            vd.field_h[13] = DualLinkNode.a(123, var2Lifetime29);
           }
           var2Lifetime30 = cb.a("achievement_criteria,14", (byte) -124);
           if (var2Lifetime30 != null) {
-            vd.field_h[14] = uh.a(121, var2Lifetime30);
+            vd.field_h[14] = DualLinkNode.a(121, var2Lifetime30);
           }
           var2Lifetime31 = cb.a("optionscaps", (byte) -124);
           if (null != var2Lifetime31) {
-            uh.a(param1 ^ 30861, var2Lifetime31);
+            DualLinkNode.a(param1 ^ 30861, var2Lifetime31);
           }
           var2Lifetime32 = cb.a("bosshealthcaps", (byte) -124);
           if (var2Lifetime32 != null) {
-            s.field_h = uh.a(112, var2Lifetime32);
+            s.field_h = DualLinkNode.a(112, var2Lifetime32);
           }
           var2Lifetime33 = cb.a("lev7a", (byte) -124);
           if (var2Lifetime33 != null) {
-            jg.field_I = uh.a(127, var2Lifetime33);
+            jg.field_I = DualLinkNode.a(127, var2Lifetime33);
           }
           var2Lifetime34 = cb.a("lev6c", (byte) -124);
           if (var2Lifetime34 != null) {
-            eh.field_c = uh.a(117, var2Lifetime34);
+            eh.field_c = DualLinkNode.a(117, var2Lifetime34);
           }
           var2Lifetime35 = cb.a("lev6b", (byte) -124);
           if (var2Lifetime35 != null) {
-            jf.field_b = uh.a(122, var2Lifetime35);
+            jf.field_b = DualLinkNode.a(122, var2Lifetime35);
           }
           var2Lifetime36 = cb.a("lev6a", (byte) -124);
           if (var2Lifetime36 != null) {
-            d.field_n = uh.a(126, var2Lifetime36);
+            d.field_n = DualLinkNode.a(126, var2Lifetime36);
           }
           var2Lifetime37 = cb.a("lev5b", (byte) -124);
           if (var2Lifetime37 != null) {
-            sb.field_o = uh.a(112, var2Lifetime37);
+            BufferedSocket.field_o = DualLinkNode.a(112, var2Lifetime37);
           }
           var2Lifetime38 = cb.a("lev5a", (byte) -124);
           if (var2Lifetime38 != null) {
-            bc.field_l = uh.a(126, var2Lifetime38);
+            bc.field_l = DualLinkNode.a(126, var2Lifetime38);
           }
           var2Lifetime39 = cb.a("lev4a", (byte) -124);
           if (null != var2Lifetime39) {
-            vf.field_a = uh.a(param1 ^ 30860, var2Lifetime39);
+            vf.field_a = DualLinkNode.a(param1 ^ 30860, var2Lifetime39);
           }
           var2Lifetime40 = cb.a("lev3a", (byte) -124);
           if (null != var2Lifetime40) {
-            qc.field_a = uh.a(121, var2Lifetime40);
+            qc.field_a = DualLinkNode.a(121, var2Lifetime40);
           }
           var2Lifetime41 = cb.a("lev2a", (byte) -124);
           if (null != var2Lifetime41) {
-            ig.field_c = uh.a(123, var2Lifetime41);
+            ig.field_c = DualLinkNode.a(123, var2Lifetime41);
           }
           var2Lifetime42 = cb.a("lev1", (byte) -124);
           if (null != var2Lifetime42) {
-            eg.field_i = uh.a(114, var2Lifetime42);
+            eg.field_i = DualLinkNode.a(114, var2Lifetime42);
           }
           var2Lifetime43 = cb.a("spacetofire", (byte) -124);
           if (null != var2Lifetime43) {
-            uh.a(120, var2Lifetime43);
+            DualLinkNode.a(120, var2Lifetime43);
           }
           var2Lifetime44 = cb.a("escforopts", (byte) -124);
           if (null != var2Lifetime44) {
-            uh.a(112, var2Lifetime44);
+            DualLinkNode.a(112, var2Lifetime44);
           }
           var2Lifetime45 = cb.a("scorecapscolon", (byte) -124);
           if (null != var2Lifetime45) {
-            rd.field_o = uh.a(112, var2Lifetime45);
+            rd.field_o = DualLinkNode.a(112, var2Lifetime45);
           }
           var2Lifetime46 = cb.a("collecttopowerup", (byte) -124);
           if (null != var2Lifetime46) {
-            p.field_e = uh.a(param1 - 30845, var2Lifetime46);
+            p.field_e = DualLinkNode.a(param1 - 30845, var2Lifetime46);
           }
           var2Lifetime47 = cb.a("lancepower", (byte) -124);
           if (var2Lifetime47 != null) {
-            ve.field_g = uh.a(114, var2Lifetime47);
+            ve.field_g = DualLinkNode.a(114, var2Lifetime47);
           }
           var2Lifetime48 = cb.a("helixpower", (byte) -124);
           if (null != var2Lifetime48) {
-            b.field_d = uh.a(param1 - 30838, var2Lifetime48);
+            b.field_d = DualLinkNode.a(param1 - 30838, var2Lifetime48);
           }
           var2Lifetime49 = cb.a("pulsepower", (byte) -124);
           if (null != var2Lifetime49) {
-            be.field_b = uh.a(119, var2Lifetime49);
+            be.field_b = DualLinkNode.a(119, var2Lifetime49);
           }
           var2Lifetime50 = cb.a("livescapscolon", (byte) -124);
           if (var2Lifetime50 != null) {
-            vk.field_w = uh.a(param1 - 30842, var2Lifetime50);
+            vk.field_w = DualLinkNode.a(param1 - 30842, var2Lifetime50);
           }
           var2Lifetime51 = cb.a("atgcaps", (byte) -124);
           if (null != var2Lifetime51) {
-            uh.a(115, var2Lifetime51);
+            DualLinkNode.a(115, var2Lifetime51);
           }
           var2Lifetime52 = cb.a("levhard", (byte) -124);
           if (null != var2Lifetime52) {
-            hg.field_D = uh.a(127, var2Lifetime52);
+            hg.field_D = DualLinkNode.a(127, var2Lifetime52);
           }
           var2Lifetime53 = cb.a("levmedium", (byte) -124);
           if (var2Lifetime53 != null) {
-            fl.field_g = uh.a(120, var2Lifetime53);
+            fl.field_g = DualLinkNode.a(120, var2Lifetime53);
           }
           var2Lifetime54 = cb.a("leveasy", (byte) -124);
           if (null != var2Lifetime54) {
-            cf.field_k = uh.a(param1 - 30847, var2Lifetime54);
+            cf.field_k = DualLinkNode.a(param1 - 30847, var2Lifetime54);
           }
           var2Lifetime55 = cb.a("fsoff", (byte) -124);
           if (var2Lifetime55 != null) {
-            uh.a(126, var2Lifetime55);
+            DualLinkNode.a(126, var2Lifetime55);
           }
           var2Lifetime56 = cb.a("fson", (byte) -124);
           if (var2Lifetime56 != null) {
-            uh.a(114, var2Lifetime56);
+            DualLinkNode.a(114, var2Lifetime56);
           }
           var2Lifetime57 = cb.a("gfxhigh", (byte) -124);
           if (null != var2Lifetime57) {
-            gh.field_A = uh.a(120, var2Lifetime57);
+            gh.field_A = DualLinkNode.a(120, var2Lifetime57);
           }
           var2Lifetime58 = cb.a("gfxmed", (byte) -124);
           if (var2Lifetime58 != null) {
-            fd.field_d = uh.a(param1 - 30850, var2Lifetime58);
+            fd.field_d = DualLinkNode.a(param1 - 30850, var2Lifetime58);
           }
           var2Lifetime59 = cb.a("gfxlow", (byte) -124);
           if (var2Lifetime59 != null) {
-            ec.field_d = uh.a(121, var2Lifetime59);
+            ec.field_d = DualLinkNode.a(121, var2Lifetime59);
           }
           var2Lifetime60 = cb.a("maxpowtext", (byte) -124);
           if (var2Lifetime60 != null) {
-            ab.field_B = uh.a(param1 ^ 30855, var2Lifetime60);
+            ab.field_B = DualLinkNode.a(param1 ^ 30855, var2Lifetime60);
           }
           var2Lifetime61 = cb.a("sideguntext", (byte) -124);
           if (null != var2Lifetime61) {
-            ra.field_y = uh.a(124, var2Lifetime61);
+            ra.field_y = DualLinkNode.a(124, var2Lifetime61);
           }
           var2Lifetime62 = cb.a("backguntext", (byte) -124);
           if (null != var2Lifetime62) {
-            oi.field_i = uh.a(119, var2Lifetime62);
+            oi.field_i = DualLinkNode.a(119, var2Lifetime62);
           }
           var2Lifetime63 = cb.a("shieldtext", (byte) -124);
           if (null != var2Lifetime63) {
-            t.field_x = uh.a(113, var2Lifetime63);
+            t.field_x = DualLinkNode.a(113, var2Lifetime63);
           }
           var2Lifetime64 = cb.a("enginetext", (byte) -124);
           if (var2Lifetime64 != null) {
-            hb.field_g = uh.a(126, var2Lifetime64);
+            hb.field_g = DualLinkNode.a(126, var2Lifetime64);
           }
           var2Lifetime65 = cb.a("powerup2of2", (byte) -124);
           if (var2Lifetime65 != null) {
-            di.field_k = uh.a(120, var2Lifetime65);
+            di.field_k = DualLinkNode.a(120, var2Lifetime65);
           }
           var2Lifetime66 = cb.a("collecttext", (byte) -124);
           if (var2Lifetime66 != null) {
-            la.field_a = uh.a(117, var2Lifetime66);
+            la.field_a = DualLinkNode.a(117, var2Lifetime66);
           }
           var2Lifetime67 = cb.a("lifetext", (byte) -124);
           if (null != var2Lifetime67) {
-            a.field_c = uh.a(126, var2Lifetime67);
+            a.field_c = DualLinkNode.a(126, var2Lifetime67);
           }
           var2Lifetime68 = cb.a("lancetext", (byte) -124);
           if (var2Lifetime68 != null) {
-            mg.field_k = uh.a(118, var2Lifetime68);
+            mg.field_k = DualLinkNode.a(118, var2Lifetime68);
           }
           var2Lifetime69 = cb.a("helixtext", (byte) -124);
           if (null != var2Lifetime69) {
-            mc.field_i = uh.a(120, var2Lifetime69);
+            mc.field_i = DualLinkNode.a(120, var2Lifetime69);
           }
           var2Lifetime70 = cb.a("pulsetext", (byte) -124);
           if (var2Lifetime70 != null) {
-            gf.field_e = uh.a(123, var2Lifetime70);
+            gf.field_e = DualLinkNode.a(123, var2Lifetime70);
           }
           var2Lifetime71 = cb.a("powerup1of2", (byte) -124);
           if (null != var2Lifetime71) {
-            vc.field_k = uh.a(127, var2Lifetime71);
+            vc.field_k = DualLinkNode.a(127, var2Lifetime71);
           }
           var2Lifetime72 = cb.a("con7", (byte) -124);
           if (null != var2Lifetime72) {
-            eb.field_e = uh.a(127, var2Lifetime72);
+            eb.field_e = DualLinkNode.a(127, var2Lifetime72);
           }
           var2Lifetime73 = cb.a("con6", (byte) -124);
           if (var2Lifetime73 != null) {
-            p.field_b = uh.a(114, var2Lifetime73);
+            p.field_b = DualLinkNode.a(114, var2Lifetime73);
           }
           var2Lifetime74 = cb.a("con5", (byte) -124);
           if (var2Lifetime74 != null) {
-            cc.field_k = uh.a(119, var2Lifetime74);
+            cc.field_k = DualLinkNode.a(119, var2Lifetime74);
           }
           var2Lifetime75 = cb.a("con4", (byte) -124);
           if (null != var2Lifetime75) {
-            qd.field_y = uh.a(param1 - 30843, var2Lifetime75);
+            qd.field_y = DualLinkNode.a(param1 - 30843, var2Lifetime75);
           }
           var2Lifetime76 = cb.a("con3", (byte) -124);
           if (null != var2Lifetime76) {
-            ac.field_c = uh.a(120, var2Lifetime76);
+            ac.field_c = DualLinkNode.a(120, var2Lifetime76);
           }
           var2Lifetime77 = cb.a("con2", (byte) -124);
           if (null != var2Lifetime77) {
-            fi.field_a = uh.a(112, var2Lifetime77);
+            fi.field_a = DualLinkNode.a(112, var2Lifetime77);
           }
           var2Lifetime78 = cb.a("con1", (byte) -124);
           if (null != var2Lifetime78) {
-            s.field_a = uh.a(param1 - 30840, var2Lifetime78);
+            s.field_a = DualLinkNode.a(param1 - 30840, var2Lifetime78);
           }
           var2Lifetime79 = cb.a("controlcaps", (byte) -124);
           if (null != var2Lifetime79) {
-            tc.field_y = uh.a(param1 ^ 30860, var2Lifetime79);
+            tc.field_y = DualLinkNode.a(param1 ^ 30860, var2Lifetime79);
           }
           var2Lifetime80 = cb.a("storytext", (byte) -124);
           if (var2Lifetime80 != null) {
-            ff.field_p = uh.a(123, var2Lifetime80);
+            ff.field_p = DualLinkNode.a(123, var2Lifetime80);
           }
           var2Lifetime81 = cb.a("storycaps", (byte) -124);
           if (null != var2Lifetime81) {
-            sb.field_p = uh.a(117, var2Lifetime81);
+            BufferedSocket.field_p = DualLinkNode.a(117, var2Lifetime81);
           }
           var2Lifetime82 = cb.a("nextcaps", (byte) -124);
           if (null != var2Lifetime82) {
-            uh.a(127, var2Lifetime82);
+            DualLinkNode.a(127, var2Lifetime82);
           }
           var2Lifetime83 = cb.a("prevcaps", (byte) -124);
           if (null != var2Lifetime83) {
-            uh.a(param1 ^ 30853, var2Lifetime83);
+            DualLinkNode.a(param1 ^ 30853, var2Lifetime83);
           }
           var2Lifetime84 = cb.a("pageno", (byte) -124);
           if (null != var2Lifetime84) {
-            ui.field_t = uh.a(120, var2Lifetime84);
+            SpriteState.field_t = DualLinkNode.a(120, var2Lifetime84);
           }
           var2Lifetime85 = cb.a("instrcaps", (byte) -124);
           if (null != var2Lifetime85) {
-            uh.a(114, var2Lifetime85);
+            DualLinkNode.a(114, var2Lifetime85);
           }
           var2Lifetime86 = cb.a("hsunavail", (byte) -124);
           if (null != var2Lifetime86) {
-            uh.a(115, var2Lifetime86);
+            DualLinkNode.a(115, var2Lifetime86);
           }
           var2Lifetime87 = cb.a("waitforhs", (byte) -124);
           if (null != var2Lifetime87) {
-            uh.a(127, var2Lifetime87);
+            DualLinkNode.a(127, var2Lifetime87);
           }
           var2Lifetime88 = cb.a("hardcaps", (byte) -124);
           if (var2Lifetime88 != null) {
-            td.field_j = uh.a(118, var2Lifetime88);
+            td.field_j = DualLinkNode.a(118, var2Lifetime88);
           }
           var2Lifetime89 = cb.a("mediumcaps", (byte) -124);
           if (var2Lifetime89 != null) {
-            lb.field_l = uh.a(116, var2Lifetime89);
+            lb.field_l = DualLinkNode.a(116, var2Lifetime89);
           }
           var2Lifetime90 = cb.a("easycaps", (byte) -124);
           if (null != var2Lifetime90) {
-            ta.field_a = uh.a(param1 ^ 30862, var2Lifetime90);
+            ta.field_a = DualLinkNode.a(param1 ^ 30862, var2Lifetime90);
           }
           var2Lifetime91 = cb.a("lastscorestring", (byte) -124);
           if (null != var2Lifetime91) {
-            uh.a(120, var2Lifetime91);
+            DualLinkNode.a(120, var2Lifetime91);
           }
           var2Lifetime92 = cb.a("logincaps", (byte) -124);
           if (null != var2Lifetime92) {
-            uh.a(param1 - 30840, var2Lifetime92);
+            DualLinkNode.a(param1 - 30840, var2Lifetime92);
           }
           var2Lifetime93 = cb.a("highscorescaps", (byte) -124);
           if (null != var2Lifetime93) {
-            uh.a(113, var2Lifetime93);
+            DualLinkNode.a(113, var2Lifetime93);
           }
           var2Lifetime94 = cb.a("menucaps", (byte) -124);
           if (null != var2Lifetime94) {
-            uh.a(123, var2Lifetime94);
+            DualLinkNode.a(123, var2Lifetime94);
           }
           var2Lifetime95 = cb.a("hiddenachievement", (byte) -124);
           if (null != var2Lifetime95) {
-            uh.a(127, var2Lifetime95);
+            DualLinkNode.a(127, var2Lifetime95);
           }
           var2Lifetime96 = cb.a("achievementscaps", (byte) -124);
           if (var2Lifetime96 != null) {
-            uh.a(param1 - 30850, var2Lifetime96);
+            DualLinkNode.a(param1 - 30850, var2Lifetime96);
           }
           var2Lifetime97 = cb.a("mainmenucaps", (byte) -124);
           if (null != var2Lifetime97) {
-            uh.a(param1 - 30842, var2Lifetime97);
+            DualLinkNode.a(param1 - 30842, var2Lifetime97);
           }
           var2Lifetime98 = cb.a("warninghardmode", (byte) -124);
           if (var2Lifetime98 != null) {
-            uh.a(param1 - 30836, var2Lifetime98);
+            DualLinkNode.a(param1 - 30836, var2Lifetime98);
           }
           var2Lifetime99 = cb.a("gameover", (byte) -124);
           if (var2Lifetime99 != null) {
-            ne.field_i = uh.a(127, var2Lifetime99);
+            ne.field_i = DualLinkNode.a(127, var2Lifetime99);
           }
           var2Lifetime100 = cb.a("benefits,0", (byte) -124);
           if (param1 != 30962) {
             field_j = (String) null;
           }
           if (null != var2Lifetime100) {
-            rj.field_l[0] = uh.a(114, var2Lifetime100);
+            rj.field_l[0] = DualLinkNode.a(114, var2Lifetime100);
           }
           var2Lifetime101 = cb.a("benefits,1", (byte) -124);
           if (null != var2Lifetime101) {
-            rj.field_l[1] = uh.a(121, var2Lifetime101);
+            rj.field_l[1] = DualLinkNode.a(121, var2Lifetime101);
           }
           var2Lifetime102 = cb.a("benefits,2", (byte) -124);
           if (null != var2Lifetime102) {
-            rj.field_l[2] = uh.a(125, var2Lifetime102);
+            rj.field_l[2] = DualLinkNode.a(125, var2Lifetime102);
           }
           ri.field_c = null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -630,7 +630,7 @@ final class vb extends qf {
           }
           throw sd.a((Throwable) ((Object) stackIn_373_0), ((StringBuilder) (Object) stackIn_373_1).append(stackIn_374_2).append(',').append(param1).append(')').toString());
         }
-        if (th.field_i) {
+        if (GameApplet.field_i) {
           var3++;
           StarCannon.field_A = var3;
         }
@@ -643,7 +643,7 @@ final class vb extends qf {
           field_j = null;
           field_k = null;
           if (param0 < 108) {
-            field_k = (rk) null;
+            field_k = (IntrusiveDeque) null;
           }
           field_l = null;
           return;
@@ -668,7 +668,7 @@ final class vb extends qf {
             var3_ref = ((ub) ((Object) this.field_n)).a(false);
             if (var3_ref != null &&
               var3_ref.b((byte) -8) != bf.field_x) {
-              stackIn_8_0 = sb.field_n;
+              stackIn_8_0 = BufferedSocket.field_n;
               return stackIn_8_0;
             }
           }
@@ -676,7 +676,7 @@ final class vb extends qf {
             vb.e((byte) 95);
           }
           if (!param0.equals(this.field_n.field_k)) {
-            stackIn_16_0 = sb.field_n;
+            stackIn_16_0 = BufferedSocket.field_n;
           } else {
             stackIn_16_0 = bf.field_x;
           }
@@ -696,7 +696,7 @@ final class vb extends qf {
     }
 
     static {
-        field_k = new rk();
+        field_k = new IntrusiveDeque();
         field_j = "Prev";
     }
 }

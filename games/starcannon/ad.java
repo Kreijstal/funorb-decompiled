@@ -8,12 +8,12 @@ final class ad extends kf {
     private qe field_F;
     private boolean field_E;
     private int field_B;
-    static hl[] field_z;
+    static Sprite[] field_z;
     static ta field_C;
     private int field_w;
     private int field_x;
 
-    ad(int param0, int param1, int param2, int param3, uj param4, boolean param5, int param6, int param7, qe param8, int param9, String param10) {
+    ad(int param0, int param1, int param2, int param3, UiWidget param4, boolean param5, int param6, int param7, qe param8, int param9, String param10) {
         super(param0, param1, param2, param3, (de) null, (qg) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
@@ -225,7 +225,7 @@ final class ad extends kf {
             qi.field_a[param0] = 400;
           }
           if (param0 == 2) {
-            if (wk.a(54)) {
+            if (MouseInput.a(54)) {
               qi.field_a[param0] = 360 + b.field_c[param0];
               bj.field_c[param0] = 120;
               return;

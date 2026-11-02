@@ -57,7 +57,7 @@ final class jl {
         int stackIn_146_1 = 0;
         boolean stackOut_132_0;
         int var3_int = 0;
-        hl var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -75,7 +75,7 @@ final class jl {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        hl var22 = null;
+        Sprite var22 = null;
         int stackIn_22_0Lifetime1;
         int stackIn_22_1Lifetime1;
         int stackIn_140_0Lifetime1;
@@ -224,7 +224,7 @@ final class jl {
           if (var6 > 115) {
             var6 = 115;
           }
-          if (wk.a(108)) {
+          if (MouseInput.a(108)) {
             var8Lifetime1 = af.field_y.a(n.field_g);
             if (-5 - (var8Lifetime1 >> 1) + 320 < var4Lifetime1) {
               var4Lifetime1 = -(var8Lifetime1 >> 1) + 320 - 5;
@@ -248,8 +248,8 @@ final class jl {
         ki.c(var4Lifetime1, var6, var8Lifetime2 + var4Lifetime1, var10Lifetime1 + var6);
         ki.b(19 + var4Lifetime1, var6 + 14, -38 + var8Lifetime2, var10Lifetime1 - 28, 0, 128);
         ba.a(var10Lifetime1, rd.field_p, (byte) 28, var4Lifetime1, var8Lifetime2, var6);
-        sb.a(true, var8Lifetime2, 10596798, 0, var6, 16711680, var4Lifetime1, var10Lifetime1 >> 1);
-        sb.a(true, var8Lifetime2, 0, 10596798, (var10Lifetime1 >> 1) + var6, 16711680, var4Lifetime1, var10Lifetime1 - (var10Lifetime1 >> 1));
+        BufferedSocket.a(true, var8Lifetime2, 10596798, 0, var6, 16711680, var4Lifetime1, var10Lifetime1 >> 1);
+        BufferedSocket.a(true, var8Lifetime2, 0, 10596798, (var10Lifetime1 >> 1) + var6, 16711680, var4Lifetime1, var10Lifetime1 - (var10Lifetime1 >> 1));
         ki.c(var4Lifetime1 + 19, var6 + 14, var8Lifetime2 + var4Lifetime1 - 19, var6 + var10Lifetime1 - 14);
         if (this.field_f != 2) {
           if (this.field_f != 3) {
@@ -368,13 +368,13 @@ final class jl {
         var8 = StarCannon.field_A;
         param1 -= 30;
         var3 = 130;
-        af.field_y.c(ui.field_t + (1 + we.field_k) + " / " + 4, param0 + param1, var3, 33023, 255);
+        af.field_y.c(SpriteState.field_t + (1 + we.field_k) + " / " + 4, param0 + param1, var3, 33023, 255);
         var4 = 320 - param1;
         var5 = param1 << 1;
         var6 = 1024;
         var7 = we.field_k;
         if (var7 == 0) {
-          af.field_y.a(sb.field_p, -param1 + 320, var3, 16777215, -1);
+          af.field_y.a(BufferedSocket.field_p, -param1 + 320, var3, 16777215, -1);
           var3 += 30;
           af.field_y.a(ff.field_p, var4, var3, var5, var6, 49407, -1, 0, 0, 14);
         } else {
@@ -432,7 +432,7 @@ final class jl {
         int var4;
         var4 = StarCannon.field_A;
         if (this.field_f == 2 &&
-          !wk.a(47)) {
+          !MouseInput.a(47)) {
           if (lb.field_B == 96) {
             if (this.field_e.field_k > 0) {
               if (3 != this.field_e.field_k) {
@@ -508,7 +508,7 @@ final class jl {
     private final int c(byte param0, int param1) {
         int var3;
         if (this.field_f == 2 &&
-          !wk.a(108)) {
+          !MouseInput.a(108)) {
           return this.a(true, param1) - (-bi.field_c[this.field_f] + bj.field_c[this.field_f]);
         }
         if (this.field_f == 3) {
@@ -646,7 +646,7 @@ final class jl {
           var10 = (ue) null;
           jl.a(37, (ue) null, (byte) 99, -66);
         }
-        L1: {
+        regionExit1: {
           var4 = jh.field_c[this.field_f][param0];
           var5 = var4;
           if (var5 != 0) {
@@ -664,7 +664,7 @@ final class jl {
                       lf.field_cb = this.field_f;
                       mj.a(255, 12, 0, 12, 50);
                     }
-                    break L1;
+                    break regionExit1;
                   }
                   if (var5 == 3) {
                     if (!(!this.field_e.h(-84))) {
@@ -673,7 +673,7 @@ final class jl {
                       lf.field_cb = this.field_f;
                       mj.a(255, 12, 0, 12, 50);
                     }
-                    break L1;
+                    break regionExit1;
                   }
                   if (var5 == 6) {
                     if (this.field_e.h(-84)) {
@@ -713,7 +713,7 @@ final class jl {
                             }
                             mj.a(255, 12, 0, 12, 50);
                           }
-                          break L1;
+                          break regionExit1;
                         }
                         if (var5 == 12) {
                           var5 = nb.field_g;
@@ -790,7 +790,7 @@ final class jl {
                             if ((var5 != mc.field_b)) {
                               kc.field_P.a(mc.field_b);
                             }
-                            break L1;
+                            break regionExit1;
                           }
                           if (var5 == 4) {
                             if (this.field_e.h(-84)) {
@@ -911,7 +911,7 @@ final class jl {
                     ij.a(0, true);
                     jg.field_H = 0;
                     eb.field_c = 0;
-                    bh.field_e.b(23505);
+                    SecondaryNodeDeque.field_e.b(23505);
                     pk.field_a.b(23505);
                     mj.a(255, 12, 0, 12, 50);
                   }
@@ -971,7 +971,7 @@ final class jl {
               fi.field_e.field_f = 320;
               eg.field_l = 128;
               fi.field_e.field_z = 0;
-              ui.field_p = 0;
+              SpriteState.field_p = 0;
               stackIn_51_0 = (rj.field_h == 0);
               q.field_j = stackIn_51_0;
               fi.field_e.field_k = 1;
@@ -983,7 +983,7 @@ final class jl {
               var5_ref_bf = (bf) (kh.field_y.c(-3905));
               while (var5_ref_bf != null) {
                 if (var5_ref_bf != fi.field_e) {
-                  var5_ref_bf.b(4);
+                  var5_ref_bf.unlink(4);
                 }
                 var5_ref_bf = (bf) (kh.field_y.a(-16913));
               }
@@ -1155,7 +1155,7 @@ final class jl {
           }
           return;
         }
-        if (!wk.a(33)) {
+        if (!MouseInput.a(33)) {
           af.field_y.b(jk.field_a, 320, 247 + af.field_y.field_p * 5, 65535, -1);
         } else {
           af.field_y.b(jk.field_a, 320, af.field_y.field_p * 4 + 247, 65535, -1);
@@ -1191,7 +1191,7 @@ final class jl {
         int var3;
         int var3Lifetime1;
         if (this.field_f == 2 &&
-          !wk.a(104)) {
+          !MouseInput.a(104)) {
           if (param1 == 3) {
             param1 = 2;
           }
@@ -1212,7 +1212,7 @@ final class jl {
           this.b(14);
         }
         if (this.field_f == 4 &&
-          wk.a(40) &&
+          MouseInput.a(40) &&
           param1 == 0) {
           return -10 + bj.field_c[this.field_f];
         }
@@ -1288,7 +1288,7 @@ final class jl {
 
     private final int a(byte param0, int param1) {
         if (this.field_f == 2 &&
-          !wk.a(60)) {
+          !MouseInput.a(60)) {
           if (param1 < 3) {
             return qi.field_a[this.field_f];
           }
@@ -1365,8 +1365,8 @@ final class jl {
         if (param0 != -24071) {
           return;
         }
-        L0: {
-          if (!wk.a(73)) {
+        regionExit1: {
+          if (!MouseInput.a(73)) {
             if (j.field_a == null) {
               j.field_a = hg.b(3, 1, 1, -84, 10);
             }
@@ -1426,7 +1426,7 @@ final class jl {
                   var16.b(var10, 355, var8, 65535, -1);
                   var16.c(Integer.toString(kd.field_C / 3), 480, var8, 65535, -1);
                 }
-                break L0;
+                break regionExit1;
               }
               var3 = w.field_q;
             }
@@ -1436,7 +1436,7 @@ final class jl {
         }
         var4 = 120 - (-var16.field_p - 100);
         var16.b(var3, 330, var4, 33023, -1);
-        if (wk.a(89)) {
+        if (MouseInput.a(89)) {
           var16.b(n.field_g, 320, 140 + var16.field_p + 120, 33023, -1);
         } else {
           var16.a(va.field_u, this.a(true, 0), qi.field_a[this.field_f] + b.field_c[this.field_f], -bj.field_c[this.field_f] + (620 - bi.field_c[this.field_f]), 1000, 16777215, -1, 1, 0, var16.field_p + var16.field_q);

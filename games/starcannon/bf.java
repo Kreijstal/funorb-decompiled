@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bf extends rf {
+final class bf extends IntrusiveNode {
     int field_j;
     bf field_h;
     int field_k;
@@ -209,13 +209,13 @@ final class bf extends rf {
     }
 
     private final void d(int param0) {
-        if (param0 == ui.field_p &&
+        if (param0 == SpriteState.field_p &&
           ha.field_d > 0) {
           fi.field_e.field_k = fi.field_e.field_k - 1;
         } else {
           ha.field_d = 512;
-          if (0 == ui.field_p) {
-            ui.field_p = 16;
+          if (0 == SpriteState.field_p) {
+            SpriteState.field_p = 16;
           }
           mj.a(96, 12, 0, 27, 100);
         }
@@ -232,7 +232,7 @@ final class bf extends rf {
         return 0;
     }
 
-    private final void a(vi param0, d[] param1, boolean param2, StarCannon param3) {
+    private final void a(PcmStreamMixer param0, d[] param1, boolean param2, StarCannon param3) {
         int stackIn_28_0 = 0;
         int stackIn_30_1 = 0;
         RuntimeException stackIn_63_0 = null;
@@ -278,11 +278,11 @@ final class bf extends rf {
                 param1[var6].field_h = 0;
                 param1[var6].field_p = 256;
                 if (ha.field_d > 0 &&
-                  ui.field_p == 0) {
+                  SpriteState.field_p == 0) {
                   this.field_k = this.field_k - param1[var6].field_i;
                 } else {
                   param1[var6].field_p = 16;
-                  ui.field_p = 16;
+                  SpriteState.field_p = 16;
                   ha.field_d = 512;
                   mj.a(96, 12, 0, 27, 100);
                 }
@@ -333,7 +333,7 @@ final class bf extends rf {
                   jl.field_j = 5;
                   vb.field_m = 2;
                   this.field_r = 256;
-                  if (!wk.a(119)) {
+                  if (!MouseInput.a(119)) {
                     pg.a(true, (byte) -98);
                     sa.a(nf.field_l + 3 * na.field_a, 23820);
                     fc.field_e = fc.field_e - (ia.field_k << 1);
@@ -358,7 +358,7 @@ final class bf extends rf {
                   this.field_u = 580;
                   ha.field_d = 512;
                   this.field_k = 1;
-                  ui.field_p = 16;
+                  SpriteState.field_p = 16;
                 }
               }
             }
@@ -421,13 +421,13 @@ final class bf extends rf {
         RuntimeException var4 = null;
         int var9 = 0;
         int var14 = 0;
-        vi var16 = null;
-        stateLoop: while (true) {
+        PcmStreamMixer var16 = null;
+        scanLoop1: while (true) {
             switch (statePc) {
                 case 0: {
                     var14 = StarCannon.field_A;
                     statePc = 1;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 1: {
                     try {
@@ -437,28 +437,28 @@ final class bf extends rf {
                         } else {
                             statePc = 2;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_1) {
                         statePc = ((Object) stateCaught_1 instanceof RuntimeException ? 14 : -1);
                         if (statePc == -1) {
                             throw bf.<RuntimeException>$cfr$sneakyThrow(stateCaught_1);
                         }
                         caughtException = stateCaught_1;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 2: {
                     try {
                         this.b((byte) 102);
                         statePc = 3;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_2) {
                         statePc = ((Object) stateCaught_2 instanceof RuntimeException ? 14 : -1);
                         if (statePc == -1) {
                             throw bf.<RuntimeException>$cfr$sneakyThrow(stateCaught_2);
                         }
                         caughtException = stateCaught_2;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 3: {
@@ -469,14 +469,14 @@ final class bf extends rf {
                         } else {
                             statePc = 4;
                         }
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_3) {
                         statePc = ((Object) stateCaught_3 instanceof RuntimeException ? 14 : -1);
                         if (statePc == -1) {
                             throw bf.<RuntimeException>$cfr$sneakyThrow(stateCaught_3);
                         }
                         caughtException = stateCaught_3;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 4: {
@@ -488,7 +488,7 @@ final class bf extends rf {
                             throw bf.<RuntimeException>$cfr$sneakyThrow(stateCaught_4);
                         }
                         caughtException = stateCaught_4;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 5: {
@@ -498,13 +498,13 @@ final class bf extends rf {
                             {
                                 if (var9 == 17) {
                                     statePc = -1;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 8. */
                                     {
                                         if (var9 == 18) {
                                             statePc = -1;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         } else {
                                             /* Inlined CFG state: 9. */
                                             {
@@ -531,7 +531,7 @@ final class bf extends rf {
                                                             case 16: statePc = -1; break;
                                                             default: statePc = 12; break;
                                                         }
-                                                        continue stateLoop;
+                                                        continue scanLoop1;
                                                     }
                                                 } else {
                                                     /* Inlined CFG state: 10. */
@@ -556,21 +556,21 @@ final class bf extends rf {
                             throw bf.<RuntimeException>$cfr$sneakyThrow(stateCaught_5);
                         }
                         caughtException = stateCaught_5;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 12: {
                     try {
                         stackIn_13_0 = 1;
                         statePc = 13;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } catch (Throwable stateCaught_12) {
                         statePc = ((Object) stateCaught_12 instanceof RuntimeException ? 14 : -1);
                         if (statePc == -1) {
                             throw bf.<RuntimeException>$cfr$sneakyThrow(stateCaught_12);
                         }
                         caughtException = stateCaught_12;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 13: {
@@ -587,21 +587,21 @@ final class bf extends rf {
                     } else {
                         statePc = 15;
                     }
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 15: {
                     stackIn_17_0 = stackIn_15_0;
                     stackIn_17_1 = stackIn_15_1;
                     stackIn_17_2 = "{...}";
                     statePc = 17;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 16: {
                     stackIn_17_0 = stackIn_16_0;
                     stackIn_17_1 = stackIn_16_1;
                     stackIn_17_2 = "null";
                     statePc = 17;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 17: {
                     stackIn_19_0 = stackIn_17_0;
@@ -615,7 +615,7 @@ final class bf extends rf {
                             stackIn_20_1 = stackIn_19_1;
                             stackIn_20_2 = "null";
                             statePc = 20;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         /* Inlined CFG state: 18. */
@@ -624,7 +624,7 @@ final class bf extends rf {
                             stackIn_20_1 = stackIn_18_1;
                             stackIn_20_2 = "{...}";
                             statePc = 20;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     }
                 }
@@ -636,7 +636,7 @@ final class bf extends rf {
         }
     }
 
-    private final void a(StarCannon param0, int param1, d[] param2, byte param3, vi param4) {
+    private final void a(StarCannon param0, int param1, d[] param2, byte param3, PcmStreamMixer param4) {
         RuntimeException stackIn_108_0 = null;
         StringBuilder stackIn_108_1 = null;
         String stackIn_109_2 = null;
@@ -648,7 +648,7 @@ final class bf extends rf {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        vi var8 = null;
+        PcmStreamMixer var8 = null;
         var7 = StarCannon.field_A;
         try {
           var6_int = sd.field_c;
@@ -928,8 +928,8 @@ final class bf extends rf {
             }
           }
           if (param3 != -52) {
-            var8 = (vi) null;
-            this.a((d[]) null, -4, (StarCannon) null, -30, (vi) null);
+            var8 = (PcmStreamMixer) null;
+            this.a((d[]) null, -4, (StarCannon) null, -30, (PcmStreamMixer) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1030,7 +1030,7 @@ final class bf extends rf {
         }
     }
 
-    private final void a(int param0, d[] param1, vi param2, StarCannon param3) {
+    private final void a(int param0, d[] param1, PcmStreamMixer param2, StarCannon param3) {
         RuntimeException stackIn_176_0 = null;
         StringBuilder stackIn_176_1 = null;
         String stackIn_177_2 = null;
@@ -1380,10 +1380,10 @@ final class bf extends rf {
     final static int a(int param0, boolean param1, String param2, byte param3, ma param4, ma param5, int param6) {
         int var12 = 0;
         int stackIn_4_0 = 0;
-        rb stackIn_9_0 = null;
+        PacketBuffer stackIn_9_0 = null;
         boolean stackIn_9_1 = false;
         String stackIn_10_2 = null;
-        rb stackIn_12_0 = null;
+        PacketBuffer stackIn_12_0 = null;
         boolean stackIn_12_1 = false;
         String stackIn_13_2 = null;
         int stackIn_31_0 = 0;
@@ -1421,14 +1421,14 @@ final class bf extends rf {
             return stackIn_4_0;
           }
           if (r.field_c == ua.field_b) {
-            d.field_b.field_g = 0;
+            d.field_b.position = 0;
             oj.field_g = null;
             if (param2 != null) {
               var9 = 0;
               if (param1) {
                 var9 = var9 | 1;
               }
-              ck.field_g.field_g = 0;
+              ck.field_g.position = 0;
               ck.field_g.c((byte) -113, di.field_l.nextInt());
               ck.field_g.c((byte) -125, di.field_l.nextInt());
               ck.field_g.a(false, var13);
@@ -1439,17 +1439,17 @@ final class bf extends rf {
               ck.field_g.a(param0, param3 - 133);
               ck.field_g.a(var9, -107);
               d.field_b.a(18, -116);
-              d.field_b.field_g = d.field_b.field_g + 2;
-              var10 = d.field_b.field_g;
-              var11_ref_String = uj.a(ll.b(112), 61);
+              d.field_b.position = d.field_b.position + 2;
+              var10 = d.field_b.position;
+              var11_ref_String = UiWidget.a(ll.b(112), 61);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               d.field_b.b(false, var11_ref_String);
               fc.a(ck.field_g, d.field_b, ed.field_j, gg.field_e, 0);
-              d.field_b.a((byte) 88, -var10 + d.field_b.field_g);
+              d.field_b.a((byte) 88, -var10 + d.field_b.position);
             } else {
-              ck.field_g.field_g = 0;
+              ck.field_g.position = 0;
               ck.field_g.c((byte) -86, di.field_l.nextInt());
               ck.field_g.c((byte) -95, di.field_l.nextInt());
               stackIn_9_0 = ck.field_g;
@@ -1459,7 +1459,7 @@ final class bf extends rf {
               } else {
                 stackIn_10_2 = "";
               }
-              ((rb) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
+              ((PacketBuffer) (Object) stackIn_9_0).a(stackIn_9_1, stackIn_10_2);
               stackIn_12_0 = ck.field_g;
               stackIn_12_1 = false;
               if (param4.c(0)) {
@@ -1467,12 +1467,12 @@ final class bf extends rf {
               } else {
                 stackIn_13_2 = "";
               }
-              ((rb) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2);
+              ((PacketBuffer) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_13_2);
               d.field_b.a(16, param3 ^ -64);
-              d.field_b.field_g = d.field_b.field_g + 1;
-              var9 = d.field_b.field_g;
+              d.field_b.position = d.field_b.position + 1;
+              var9 = d.field_b.position;
               fc.a(ck.field_g, d.field_b, ed.field_j, gg.field_e, 0);
-              d.field_b.b(d.field_b.field_g - var9, 31700);
+              d.field_b.b(d.field_b.position - var9, 31700);
             }
             nf.a(-1, (byte) 95);
             r.field_c = eb.field_a;
@@ -1480,7 +1480,7 @@ final class bf extends rf {
           if (eb.field_a == r.field_c &&
             ag.a(param3 ^ 122, 1)) {
             var9Lifetime1 = se.field_p.j(param3 ^ 7907);
-            se.field_p.field_g = 0;
+            se.field_p.position = 0;
             if (var9Lifetime1 >= 100 &&
               var9Lifetime1 <= 105) {
               r.field_c = dh.field_a;
@@ -1488,7 +1488,7 @@ final class bf extends rf {
             } else {
               if (var9Lifetime1 == 248) {
                 mi.a(param3 ^ 1048582, ll.b(param3 ^ 109));
-                uj.field_r = vk.field_x;
+                UiWidget.field_r = vk.field_x;
                 ec.a((byte) 27);
                 eb.field_f = false;
                 stackIn_31_0 = var9Lifetime1;
@@ -1501,7 +1501,7 @@ final class bf extends rf {
               } else {
                 ag.a(124, gd.a(true));
                 oj.field_g = new Boolean(vf.a(se.field_p, param3 - 6));
-                se.field_p.field_g = 0;
+                se.field_p.position = 0;
               }
             }
           }
@@ -1509,7 +1509,7 @@ final class bf extends rf {
             var9Lifetime2 = 2;
             if (ag.a(125, var9Lifetime2)) {
               var10Lifetime1 = se.field_p.i(param3 ^ -1174051986);
-              se.field_p.field_g = 0;
+              se.field_p.position = 0;
               if (ag.a(126, var10Lifetime1)) {
                 var11 = ph.field_nb.length;
                 for (var12 = 0; var12 < var11; var12++) {
@@ -1533,7 +1533,7 @@ final class bf extends rf {
                 lj.a(var9_ref_String, param3 ^ 121, ll.b(111));
               }
             } else {
-              uj.field_r = se.field_p.a(-125);
+              UiWidget.field_r = se.field_p.a(-125);
             }
             ec.a((byte) 27);
             eb.field_f = false;
@@ -1543,9 +1543,9 @@ final class bf extends rf {
           if (null == m.field_b) {
             if (eb.field_f) {
               if (30000L >= kg.b((byte) -71)) {
-                uj.field_r = va.field_o;
+                UiWidget.field_r = va.field_o;
               } else {
-                uj.field_r = ti.field_g;
+                UiWidget.field_r = ti.field_g;
               }
               eb.field_f = false;
               stackIn_61_0 = 249;
@@ -1668,7 +1668,7 @@ final class bf extends rf {
         }
     }
 
-    private final void a(d[] param0, int param1, StarCannon param2, int param3, vi param4) {
+    private final void a(d[] param0, int param1, StarCannon param2, int param3, PcmStreamMixer param4) {
         RuntimeException stackIn_374_0 = null;
         StringBuilder stackIn_374_1 = null;
         String stackIn_375_2 = null;
@@ -2233,7 +2233,7 @@ final class bf extends rf {
         if (param0 != 65535) {
           this.field_l = 44;
         }
-        L1: {
+        regionExit1: {
           if (0 < this.field_k) {
             var4 = (param1 >> 4) + this.field_f;
             var9 = this.field_q;
@@ -2284,48 +2284,48 @@ final class bf extends rf {
                                   }
                                   af.field_w[this.field_v * 8 + this.field_l].c(var4 - 16, -16 + this.field_u);
                                 }
-                                break L1;
+                                break regionExit1;
                               }
                               switch (var9) {
                                 case 11:
                                   sj.field_E[this.field_v].d(-64 + var4, this.field_u - 64, 256);
-                                  break L1;
+                                  break regionExit1;
                                 case 12:
                                   nd.field_j[this.field_v].d(var4 - 16, -16 + (this.field_u - 32), var3);
-                                  break L1;
+                                  break regionExit1;
                                 case 21:
                                   qc.field_e[this.field_v].d(-48 + var4, -32 + this.field_u, 256);
-                                  break L1;
+                                  break regionExit1;
                                 case 13:
                                   if (0 >= fi.field_e.field_k) {
-                                    break L1;
+                                    break regionExit1;
                                   }
                                   vc.field_m[2].e(var4 - 16, -16 + this.field_u);
                                   ie.field_A[this.field_o % 14].f(-8 + var4, this.field_u - 16, 3 * this.field_o);
                                   if (StarCannon.field_z != -1) {
-                                    break L1;
+                                    break regionExit1;
                                   }
                                   if (-1 != pa.field_L) {
-                                    break L1;
+                                    break regionExit1;
                                   }
                                   ie.field_A[this.field_o % 14].f(-12 + var4 + sh.b(-128, 8), this.field_u - (20 - sh.b(-2, 8)), 2 * this.field_o);
                                   ie.field_A[this.field_o % 14].f(-14 + (var4 + sh.b(param0 - 65437, 12)), -22 + (this.field_u + sh.b(34, 12)), this.field_o);
-                                  break L1;
+                                  break regionExit1;
                                 case 15:
                                   if (this.field_v > 4) {
                                     this.field_v = 4;
                                   }
                                   fg.field_c[this.field_v].d(var4 - 128, -128 + this.field_u, 256);
-                                  break L1;
+                                  break regionExit1;
                                 case 16:
                                   if (this.field_v > 4) {
                                     this.field_v = 4;
                                   }
                                   v.field_d[this.field_v].d(var4 - 128, -128 + this.field_u, 256);
-                                  break L1;
+                                  break regionExit1;
                                 case 17:
                                   el.field_H[this.field_v].d(-16 + var4, this.field_u - 16, var3);
-                                  break L1;
+                                  break regionExit1;
                                 case 18:
                                   var7 = (int)(16.0 * Math.sin(0.1 * (double)this.field_u));
                                   var8 = (int)(Math.cos(0.1 * (double)this.field_u) * 16.0);
@@ -2333,22 +2333,22 @@ final class bf extends rf {
                                   gg.field_f[25 + this.field_v].d(var7 + (var4 - 16), var8 - 16 + this.field_u, var3);
                                   gg.field_f[25 + this.field_v].d(-16 + (var4 - var8), -16 + this.field_u + var7, var3);
                                   gg.field_f[this.field_v + 25].d(var8 + (-16 + var4), this.field_u - 16 - var7, var3);
-                                  break L1;
+                                  break regionExit1;
                                 case 19:
                                   gg.field_f[this.field_v + 25].d(-16 + var4, -16 + this.field_u, var3);
-                                  break L1;
+                                  break regionExit1;
                                 default:
-                                  break L1;
+                                  break regionExit1;
                                 case 22:
                                   fl.field_f[this.field_l].e(-64 + var4, -64 + this.field_u);
-                                  break L1;
+                                  break regionExit1;
                               }
                             }
                             if (!(0 >= fi.field_e.field_k)) {
                               vc.field_m[3 + this.field_v].e(-16 + var4, this.field_u - 16);
                             }
                           }
-                          break L1;
+                          break regionExit1;
                         }
                         if (fi.field_e.field_k > 0) {
                           vc.field_m[0].e(var4 - 16, -16 + this.field_u);
@@ -2375,9 +2375,9 @@ final class bf extends rf {
               if (0 > this.field_z) {
                 var5 += 2;
               }
-              if (0 < ui.field_p &&
+              if (0 < SpriteState.field_p &&
                 !ti.field_d) {
-                ki.c(var4, this.field_u, ui.field_p, 65535, -(ui.field_p * 255 / eg.field_l) + 256);
+                ki.c(var4, this.field_u, SpriteState.field_p, 65535, -(SpriteState.field_p * 255 / eg.field_l) + 256);
               } else if (0 < ha.field_d &&
                 !ti.field_d) {
                 for (var9 = 0; 314 > var9; var9 += 16) {

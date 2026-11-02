@@ -7,7 +7,7 @@ final class wa implements de {
     static long field_a;
     private int field_c;
 
-    public final void a(int param0, boolean param1, int param2, int param3, uj param4) {
+    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -101,9 +101,9 @@ final class wa implements de {
           if (t.field_q == null) {
             t.field_q = "0";
           }
-          ii.field_c = param5.getParameter("overxachievements");
-          if (ii.field_c == null) {
-            ii.field_c = "0";
+          ClientException.field_c = param5.getParameter("overxachievements");
+          if (ClientException.field_c == null) {
+            ClientException.field_c = "0";
           }
           var7 = param5.getParameter("currency");
           if (var7 == null) {
@@ -118,9 +118,9 @@ final class wa implements de {
           jk.field_l = param3;
           mc.field_c = param2;
           nh.field_i = param0;
-          pa.field_I = new hl[param4.length];
+          pa.field_I = new Sprite[param4.length];
           for (var8 = 0; param4.length > var8; var8++) {
-            pa.field_I[var8] = new hl(317, 34);
+            pa.field_I[var8] = new Sprite(317, 34);
           }
           va.field_t = param4;
           return;
@@ -171,7 +171,7 @@ final class wa implements de {
               ec.a((byte) 27);
               return;
             }
-            var5_int = -var9.field_g + il.field_g;
+            var5_int = -var9.position + il.field_g;
             var11 = var4_ref_we.field_j;
             var10 = var11;
             var6 = var10;
@@ -181,7 +181,7 @@ final class wa implements de {
             for (var7 = 0; var5_int > var7; var7++) {
               var6[var7 >> 2] = var6[var7 >> 2] + (var9.j(7909) << (w.a(var7, 3) << 8));
             }
-            var4_ref_we.b(4);
+            var4_ref_we.unlink(4);
           } else {
             if (var2 == 1) {
               var4 = var9.d((byte) 43);
@@ -198,7 +198,7 @@ final class wa implements de {
                 ec.a((byte) 27);
                 return;
               }
-              var5.b(4);
+              var5.unlink(4);
               decompiledFrameRemainder0 = false;
             }
             else {

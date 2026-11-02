@@ -4,11 +4,11 @@
 import java.io.*;
 
 final class le extends IOException {
-    static hl field_c;
+    static Sprite field_c;
     static String[] field_b;
     static int field_a;
     static boolean[] field_d;
-    static rk field_e;
+    static IntrusiveDeque field_e;
 
     public static void a(int param0) {
         field_e = null;
@@ -16,7 +16,7 @@ final class le extends IOException {
         field_c = null;
         field_d = null;
         if (param0 != -11434) {
-          field_e = (rk) null;
+          field_e = (IntrusiveDeque) null;
         }
     }
 
@@ -94,7 +94,7 @@ final class le extends IOException {
     final static boolean c(int param0) {
         if (param0 != 4) {
           field_a = -36;
-          if (rk.field_d < 20) {
+          if (IntrusiveDeque.field_d < 20) {
             return true;
           }
           if (!ai.a((byte) -76)) {
@@ -103,12 +103,12 @@ final class le extends IOException {
           if (jj.field_F <= 0) {
             return false;
           }
-          if (!rb.e((byte) -72)) {
+          if (!PacketBuffer.e((byte) -72)) {
             return true;
           }
           return false;
         }
-        if (rk.field_d < 20) {
+        if (IntrusiveDeque.field_d < 20) {
           return true;
         }
         if (!ai.a((byte) -76)) {
@@ -117,7 +117,7 @@ final class le extends IOException {
         if (jj.field_F <= 0) {
           return false;
         }
-        if (!rb.e((byte) -72)) {
+        if (!PacketBuffer.e((byte) -72)) {
           return true;
         }
         return false;
@@ -137,10 +137,10 @@ final class le extends IOException {
         kf.field_v = param2;
     }
 
-    final static hl[] a(int param0, int param1, byte param2, ue param3) {
+    final static Sprite[] a(int param0, int param1, byte param2, ue param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        hl[] stackIn_4_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

@@ -8,7 +8,7 @@ final class sj extends dk {
     private int field_H;
     private ve field_F;
     static String field_D;
-    static hl[] field_E;
+    static Sprite[] field_E;
     int field_G;
     static int field_I;
 
@@ -99,7 +99,7 @@ final class sj extends dk {
         return this.field_F.a(true);
     }
 
-    final boolean a(uj param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         int var12 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;

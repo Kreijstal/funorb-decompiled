@@ -22,14 +22,14 @@ final class ce {
             if (n.field_a != null &&
               n.field_a.field_b) {
               re.a(0);
-              ed.field_q.a((byte) 85, (uj) (new vj(ed.field_q, cb.field_d)));
+              ed.field_q.a((byte) 85, (UiWidget) (new vj(ed.field_q, cb.field_d)));
             }
             return;
           }
           if (param0 >= -92) {
             field_a = (o) null;
           }
-          ed.field_q.a((byte) -127, true, bg.field_e, ie.field_z);
+          ed.field_q.a((byte) -127, true, KeyboardInput.field_e, ie.field_z);
           ed.field_q.h(-10597);
           while (ad.e((byte) -123)) {
             ed.field_q.a(lb.field_B, -125, StarCannon.field_E);

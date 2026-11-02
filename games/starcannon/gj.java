@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class gj {
-    static hl field_e;
+    static Sprite field_e;
     static int[] field_f;
     static char[] field_d;
     static String field_b;

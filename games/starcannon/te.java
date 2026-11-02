@@ -30,14 +30,14 @@ final class te {
         field_c = null;
         field_a = null;
         if (param0 != -1) {
-          hl[] var2 = (hl[]) null;
-          te.a(-118, (hl[]) null);
+          Sprite[] var2 = (Sprite[]) null;
+          te.a(-118, (Sprite[]) null);
         }
     }
 
-    final static void a(int param0, hl[] param1) {
+    final static void a(int param0, Sprite[] param1) {
         RuntimeException var2 = null;
-        hl[] var3 = null;
+        Sprite[] var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -51,8 +51,8 @@ final class te {
           if (param0 >= 123) {
             return;
           }
-          var3 = (hl[]) null;
-          te.a(117, (hl[]) null);
+          var3 = (Sprite[]) null;
+          te.a(117, (Sprite[]) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

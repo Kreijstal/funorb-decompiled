@@ -3,13 +3,13 @@
  */
 abstract class hh {
     static int field_a;
-    static vi field_d;
-    static hl[] field_b;
+    static PcmStreamMixer field_d;
+    static Sprite[] field_b;
     static int field_c;
 
     abstract s b(byte param0);
 
-    abstract void a(byte param0, rb param1);
+    abstract void a(byte param0, PacketBuffer param1);
 
     final static oe a(int param0, int param1, String param2) {
         fl var3 = null;
@@ -42,7 +42,7 @@ abstract class hh {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, hl param6, int param7) {
+    final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, Sprite param6, int param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_44_0 = null;
@@ -57,7 +57,7 @@ abstract class hh {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        hl var21 = null;
+        Sprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;
@@ -148,8 +148,8 @@ abstract class hh {
         field_b = null;
         field_d = null;
         if (param0 != -22) {
-          hl var2 = (hl) null;
-          hh.a(-84, 78, -115, 23, true, 78, (hl) null, -53);
+          Sprite var2 = (Sprite) null;
+          hh.a(-84, 78, -115, 23, true, 78, (Sprite) null, -53);
         }
     }
 

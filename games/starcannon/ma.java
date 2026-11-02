@@ -4,13 +4,13 @@
 final class ma {
     private boolean field_d;
     private String field_i;
-    static rk field_h;
-    static hl[] field_e;
+    static IntrusiveDeque field_h;
+    static Sprite[] field_e;
     static String field_g;
-    static rk field_c;
-    static hl field_b;
+    static IntrusiveDeque field_c;
+    static Sprite field_b;
     static String field_f;
-    static hl[] field_a;
+    static Sprite[] field_a;
 
     final static boolean a(int param0) {
         int var2 = 0;
@@ -195,7 +195,7 @@ final class ma {
     }
 
     static {
-        field_h = new rk();
+        field_h = new IntrusiveDeque();
         field_g = "Retry";
         field_f = "Orb points: <%0>";
     }

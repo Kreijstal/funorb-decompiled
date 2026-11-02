@@ -27,7 +27,7 @@ final class hg extends vk implements qk, ga {
         bf.a((byte) 79, this.field_A.field_k);
     }
 
-    final void a(int param0, int param1, uj param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         boolean discarded$0 = false;
         try {
           super.a(116, param1, param2, param3);
@@ -40,7 +40,7 @@ final class hg extends vk implements qk, ga {
         }
     }
 
-    private final int a(int param0, int param1, int param2, int param3, uj param4, String param5, String param6) {
+    private final int a(int param0, int param1, int param2, int param3, UiWidget param4, String param5, String param6) {
         boolean discarded$1 = false;
         RuntimeException var8 = null;
         pa var9 = null;
@@ -238,7 +238,7 @@ final class hg extends vk implements qk, ga {
         super(0, 0, 496, 0, (de) null);
         this.field_A = new ng("", (qg) null, 12);
         hd var1 = new hd(nb.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, nb.field_c.field_p, -1, 2147483647, true);
-        uj var2 = new uj(ih.field_f, var1, (qg) null);
+        UiWidget var2 = new UiWidget(ih.field_f, var1, (qg) null);
         this.field_E = new dk(rc.field_b, (qg) null);
         this.field_C = new dk(ta.field_d, (qg) null);
         this.field_A.field_p = ld.field_jb;
@@ -272,11 +272,11 @@ final class hg extends vk implements qk, ga {
           return;
         }
         String var3 = (String) null;
-        int discarded$0 = this.a(-86, (byte) 31, (uj) null, (String) null, 79, (String) null);
+        int discarded$0 = this.a(-86, (byte) 31, (UiWidget) null, (String) null, 79, (String) null);
         ((nd) (this.field_A.a(false))).f(param0 ^ 31293);
     }
 
-    final boolean a(uj param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -311,7 +311,7 @@ final class hg extends vk implements qk, ga {
         }
     }
 
-    private final int a(int param0, byte param1, uj param2, String param3, int param4, String param5) {
+    private final int a(int param0, byte param1, UiWidget param2, String param3, int param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

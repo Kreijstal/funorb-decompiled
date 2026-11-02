@@ -10938,6 +10938,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "starcannon": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/starcannon"
+      },
+      "inputTreeSha256": "62d58dee4b5bd30b4448218ec4c4d9343522e4b4bdf5dd76d9dedff97892ea7c",
+      "sources": {
+        "files": 287,
+        "sha256": "ecbf1bffa618a89eac20142ce5758bd2bb5a8f5c57090d9bc166771ad768e6a0"
+      },
+      "dictionary": {
+        "path": "decompilation/starcannon-naming.json",
+        "sha256": "a5b7347e8665ae370e511921504977a7912a6cbba02f0daf9171152beb3ef95c"
+      },
+      "readingGuide": {
+        "path": "games/starcannon/README.md",
+        "sha256": "9571d81709ddf574df3729a31370c624f02cbc8fc373cedd2ccf02e065b53163"
+      },
+      "rulesSha256": "539d7793573fa21d906f643ff1c6faec21c93a1741473324a649a4e44917091c",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -12486,6 +12510,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 287,
+          "sha256": "ecbf1bffa618a89eac20142ce5758bd2bb5a8f5c57090d9bc166771ad768e6a0"
         }
       },
       "steelsentinels": {

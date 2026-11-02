@@ -186,7 +186,7 @@ final class sg {
     final void a(byte param0, qe param1) {
         hd var18 = null;
         w var4 = null;
-        hl[] var5 = null;
+        Sprite[] var5 = null;
         pj var17 = null;
         pj var19 = null;
         int var7_int = 0;
@@ -195,12 +195,12 @@ final class sg {
         eg discarded$0 = null;
         ci discarded$1 = null;
         w var8 = null;
-        hl[] var9 = null;
-        hl[] var10 = null;
-        hl dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         w var11 = null;
         w var12 = null;
-        hl var13 = null;
+        Sprite var13 = null;
         w var14 = null;
         w var20 = null;
         int var15 = StarCannon.field_A;
@@ -230,13 +230,13 @@ final class sg {
           var4.a(0, (byte) -76).c(15658734, 2).a(el.b(10066329, 22396, 7829367, 8947848), (byte) -74);
           var4.a(1, (byte) -76).a(el.b(10066329, 22396, 13421772, 11184810), (byte) -74);
           var4.a(3, (byte) -76).a(el.b(7829367, 22396, 10066329, 8947848), (byte) -74).b(1, -86).a(256, 1);
-          var5 = new hl[9];
+          var5 = new Sprite[9];
           var17 = new pj(32, 32);
           var19 = var17;
           for (var7_int = 0; var7_int < var19.field_B.length; var7_int++) {
             var17.field_B[var7_int] = 1077952576;
           }
-          var5[4] = (hl) ((Object) var19);
+          var5[4] = (Sprite) ((Object) var19);
           var4.a(4, (byte) -76).a(-38, true).a(var5, (byte) -74);
           var4.a(5, (byte) -76).a(ab.b(0, -25343, 0, 0, 65793), (byte) -74).a(-52, true).c(-1, 2);
           this.field_d = (de) ((Object) var4);
@@ -254,10 +254,10 @@ final class sg {
           var8.a(0, (byte) -76).a(el.b(7829367, 22396, 10066329, 15658734), (byte) -74).c(1118481, 2).a((byte) -104, -1);
           var8.a(4, (byte) -76).a(-120, true).a(var5, (byte) -74);
           this.field_c = (de) ((Object) var8);
-          var9 = new hl[9];
-          var10 = new hl[9];
-          var9[4] = new hl(2, 1);
-          var10[4] = new hl(1, 2);
+          var9 = new Sprite[9];
+          var10 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_B = new int[]{6710886, 7829367};
           var10[4].field_B = new int[]{6710886, 7829367};
@@ -265,7 +265,7 @@ final class sg {
           var12 = new w();
           var11.a(4, 0, var9);
           var12.a(4, 0, var10);
-          var13 = new hl(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_B = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new w(var4, true);
           var14.a(-127, var13.c());

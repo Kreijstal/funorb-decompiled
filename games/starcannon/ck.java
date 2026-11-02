@@ -9,7 +9,7 @@ final class ck implements Runnable {
     static int[][] field_h;
     volatile boolean field_a;
     volatile boolean field_c;
-    static rb field_g;
+    static PacketBuffer field_g;
     static String field_b;
     static int field_f;
 
@@ -47,7 +47,7 @@ final class ck implements Runnable {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          rb var2 = null;
+          PacketBuffer var2 = null;
           if (jh.field_b.field_p >= 4) {
             if (-1 == jh.field_b.field_d) {
               return 3;
@@ -58,33 +58,33 @@ final class ck implements Runnable {
             return 4;
           }
           try {
-            if (0 == bg.field_a) {
+            if (0 == KeyboardInput.field_a) {
               bj.field_d = ij.field_f.a(va.field_s, 90, md.field_b);
-              bg.field_a = bg.field_a + 1;
+              KeyboardInput.field_a = KeyboardInput.field_a + 1;
             }
             if (param0 < 124) {
               field_h = (int[][]) null;
             }
-            if (bg.field_a == 1) {
+            if (KeyboardInput.field_a == 1) {
               if (2 == bj.field_d.field_b) {
                 stackIn_16_0 = ej.a(2, -1);
                 return stackIn_16_0;
               }
               if (bj.field_d.field_b == 1) {
-                bg.field_a = bg.field_a + 1;
+                KeyboardInput.field_a = KeyboardInput.field_a + 1;
               }
             }
-            if (bg.field_a == 2) {
-              ok.field_sb = new sb((java.net.Socket) (bj.field_d.field_f), ij.field_f);
-              var2 = new rb(13);
+            if (KeyboardInput.field_a == 2) {
+              ok.field_sb = new BufferedSocket((java.net.Socket) (bj.field_d.field_f), ij.field_f);
+              var2 = new PacketBuffer(13);
               oe.a(wj.field_b, 32, var2, kc.field_M, ld.field_fb);
               var2.a(15, -122);
               var2.c((byte) -113, ac.field_e);
-              ok.field_sb.a(0, var2.field_f, (byte) 87, 13);
-              bg.field_a = bg.field_a + 1;
+              ok.field_sb.a(0, var2.payload, (byte) 87, 13);
+              KeyboardInput.field_a = KeyboardInput.field_a + 1;
               wf.field_f = dd.b(69) + 30000L;
             }
-            if (bg.field_a == 3) {
+            if (KeyboardInput.field_a == 3) {
               if (0 >= ok.field_sb.c(122)) {
                 if (wf.field_f < dd.b(63)) {
                   stackIn_33_0 = ej.a(2, -2);
@@ -96,15 +96,15 @@ final class ck implements Runnable {
                   stackIn_28_0 = ej.a(2, var1_int);
                   return stackIn_28_0;
                 }
-                bg.field_a = bg.field_a + 1;
+                KeyboardInput.field_a = KeyboardInput.field_a + 1;
               }
             }
-            if (bg.field_a != 4) {
+            if (KeyboardInput.field_a != 4) {
               stackIn_38_0 = -1;
               return stackIn_38_0;
             }
-            jh.field_b.a(ok.field_sb, 65, bh.field_g);
-            bg.field_a = 0;
+            jh.field_b.a(ok.field_sb, 65, SecondaryNodeDeque.field_g);
+            KeyboardInput.field_a = 0;
             bj.field_d = null;
             ok.field_sb = null;
             stackIn_36_0 = 0;
@@ -142,7 +142,7 @@ final class ck implements Runnable {
     }
 
     static {
-        field_g = new rb(256);
+        field_g = new PacketBuffer(256);
         field_b = "Next";
         field_f = 0;
     }

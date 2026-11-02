@@ -10,7 +10,7 @@ final class w extends hd {
     static og field_w;
     static int field_v;
 
-    final void a(int param0, int param1, hl[] param2) {
+    final void a(int param0, int param1, Sprite[] param2) {
         int var4_int = 0;
         try {
           var4_int = param1;
@@ -26,8 +26,8 @@ final class w extends hd {
         }
     }
 
-    public final void a(int param0, boolean param1, int param2, int param3, uj param4) {
-        uj stackIn_3_0 = null;
+    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -45,7 +45,7 @@ final class w extends hd {
           if (!(param4 instanceof dk)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (uj) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           }
           var11 = (dk) (stackIn_3_0);
           cl.a(true, param4.field_f + param4.field_j + param3, param0 + param4.field_s, param3 + param4.field_j, param4.field_i + (param4.field_s + param0));
@@ -127,13 +127,13 @@ final class w extends hd {
         il var5 = null;
         il var6 = null;
         int var7 = 0;
-        hl var8 = null;
+        Sprite var8 = null;
         var7 = StarCannon.field_A;
         try {
           super.a(-71, param1);
           if (param0 != 6) {
-            var8 = (hl) null;
-            this.a(77, (hl) null);
+            var8 = (Sprite) null;
+            this.a(77, (Sprite) null);
           }
           if (param2) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
@@ -205,7 +205,7 @@ final class w extends hd {
             } else {
               sg.field_n = fb.a(dk.field_x, 127, new String[]{Integer.toString(var1)});
             }
-            sg.field_n = rg.a(true, new CharSequence[]{(CharSequence) ((Object) sg.field_n), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) sb.field_f)});
+            sg.field_n = rg.a(true, new CharSequence[]{(CharSequence) ((Object) sg.field_n), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) BufferedSocket.field_f)});
           }
           fa.field_G.n(3);
           ea.a(-101);
@@ -230,7 +230,7 @@ final class w extends hd {
         try {
           if (ve.field_f == null) {
             ve.field_f = new lf(ti.field_b, sg.field_n);
-            ti.field_b.a((byte) 93, (uj) (ve.field_f));
+            ti.field_b.a((byte) 93, (UiWidget) (ve.field_f));
           }
           ve.field_f.a(param0, param2, param3, true);
           ki.b();
@@ -240,7 +240,7 @@ final class w extends hd {
         }
     }
 
-    final void a(byte param0, hl[] param1) {
+    final void a(byte param0, Sprite[] param1) {
         il[] var3 = null;
         int var4 = 0;
         il var5 = null;
@@ -279,7 +279,7 @@ final class w extends hd {
         }
     }
 
-    final void a(int param0, hl param1) {
+    final void a(int param0, Sprite param1) {
         il[] var3 = null;
         int var4 = 0;
         il var5 = null;
@@ -324,7 +324,7 @@ final class w extends hd {
 
     static {
         field_q = "Service unavailable";
-        rk discarded$0 = new rk();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
         field_w = new og();
     }
 }

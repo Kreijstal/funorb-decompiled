@@ -5,7 +5,7 @@ import java.util.*;
 
 final class ge {
     static int[] field_c;
-    static hl field_b;
+    static Sprite field_b;
     static String field_a;
 
     public static void a(int param0) {
@@ -41,11 +41,11 @@ final class ge {
         cg.field_j[59] = 57;
     }
 
-    final static hl[] a(int param0, int param1, ue param2, int param3) {
+    final static Sprite[] a(int param0, int param1, ue param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        hl[] stackIn_5_0 = null;
-        hl[] stackIn_7_0 = null;
+        Sprite[] stackIn_5_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -53,13 +53,13 @@ final class ge {
         try {
           if (!qb.a((byte) -111, param1, param3, param2)) {
             stackIn_2_0 = null;
-            return (hl[]) (stackIn_2_0);
+            return (Sprite[]) (stackIn_2_0);
           }
           if (param0 > 7) {
             stackIn_7_0 = pf.a(255);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (hl[]) null;
+          stackIn_5_0 = (Sprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,7 +100,7 @@ final class ge {
 
     final static mj[] b(byte param0) {
         if (param0 == 35) {
-          return new mj[]{p.field_a, bh.field_b, ih.field_c};
+          return new mj[]{p.field_a, SecondaryNodeDeque.field_b, ih.field_c};
         }
         return (mj[]) null;
     }

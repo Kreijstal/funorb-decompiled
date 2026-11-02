@@ -12,8 +12,8 @@ final class il {
     private int field_h;
     static int field_g;
     private int field_a;
-    hl field_d;
-    hl[] field_c;
+    Sprite field_d;
+    Sprite[] field_c;
     static tj field_k;
 
     final void a(il param0, int param1) {
@@ -36,7 +36,7 @@ final class il {
 
     final il a(int param0, int param1) {
         if (param0 != 256) {
-          this.field_d = (hl) null;
+          this.field_d = (Sprite) null;
           this.field_j = param1;
           return this;
         }
@@ -44,7 +44,7 @@ final class il {
         return this;
     }
 
-    final void a(il param0, int param1, int param2, uj param3, int param4, w param5) {
+    final void a(il param0, int param1, int param2, UiWidget param3, int param4, w param5) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -114,8 +114,8 @@ final class il {
     final il a(byte param0, int param1) {
         this.field_l = param1;
         if (param0 > -77) {
-          hl[] var4 = (hl[]) null;
-          this.a((hl[]) null, (byte) -15);
+          Sprite[] var4 = (Sprite[]) null;
+          this.a((Sprite[]) null, (byte) -15);
           return this;
         }
         return this;
@@ -139,7 +139,7 @@ final class il {
         return this;
     }
 
-    final void a(int param0, int param1, int param2, w param3, uj param4) {
+    final void a(int param0, int param1, int param2, w param3, UiWidget param4) {
         qe stackIn_18_0 = null;
         String stackIn_18_1 = null;
         int stackIn_19_2 = 0;
@@ -233,7 +233,7 @@ final class il {
         }
     }
 
-    final il a(hl[] param0, byte param1) {
+    final il a(Sprite[] param0, byte param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

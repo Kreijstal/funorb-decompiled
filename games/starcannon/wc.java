@@ -66,7 +66,7 @@ final class wc {
             if (param0 != 5220) {
               wc.a(14, '￉');
             }
-            stackIn_3_0 = (gj) (Class.forName("me").newInstance());
+            stackIn_3_0 = (gj) (Class.forName("MouseWheelInput").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

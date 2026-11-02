@@ -9,7 +9,7 @@ final class fc {
     static int field_e;
 
     final static void a(int param0, byte param1, int param2) {
-        th.field_c = param2;
+        GameApplet.field_c = param2;
         int var3 = -34 % ((-3 - param1) / 60);
         ee.field_b = param0;
     }
@@ -34,7 +34,7 @@ final class fc {
     }
 
     final static void a(ue param0, ue param1, byte param2, ue param3) {
-        hl var18 = null;
+        Sprite var18 = null;
         id[] var5 = null;
         id[][] var6 = null;
         int[][] var20 = null;
@@ -42,25 +42,25 @@ final class fc {
         int[][] var7 = null;
         id[] var15 = null;
         int var11_int = 0;
-        hl var16 = null;
-        hl var19 = null;
-        hl var11 = null;
-        hl var12 = null;
+        Sprite var16 = null;
+        Sprite var19 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         int var8 = 0;
         int var9 = 0;
         int var14 = StarCannon.field_A;
         int var8Lifetime1;
         int var9Lifetime1;
         try {
-          ed.field_o = ob.a("frame_top", 112, "commonui", param3);
-          ti.field_e = ob.a("frame_bottom", 122, "commonui", param3);
+          ed.field_o = SecondaryNodeDequeIterator.a("frame_top", 112, "commonui", param3);
+          ti.field_e = SecondaryNodeDequeIterator.a("frame_bottom", 122, "commonui", param3);
           jk.field_g = vk.a("commonui", 63, "jagex_logo_grey", param3);
-          t.field_r = ob.a("button", 94, "commonui", param3);
+          t.field_r = SecondaryNodeDequeIterator.a("button", 94, "commonui", param3);
           fi.field_g = hb.a(-990, "commonui", param3, "validation");
           nb.field_b = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo12", param1));
           nb.field_c = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo14", param1));
           tk.field_a = (qe) ((Object) ai.a(param3, "commonui", true, "arezzo14bold", param1));
-          var18 = new hl(param0.a("button.gif", (byte) -95, ""), (java.awt.Component) ((Object) kj.field_E));
+          var18 = new Sprite(param0.a("button.gif", (byte) -95, ""), (java.awt.Component) ((Object) kj.field_E));
           o.a(param3, "commonui", "dropdown", false);
           var5 = fg.a(param3, "screen_options", "commonui", false);
           il.field_e = new id[4];
@@ -89,27 +89,27 @@ final class fc {
           wj.b(true);
           var18.e();
           ki.a(0, 0, ki.field_j, ki.field_f);
-          var16 = new hl(var9Lifetime1, var9Lifetime1);
+          var16 = new Sprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.e();
           var18.d(0, 0);
-          var11 = new hl(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.e();
           var18.d(-var18.field_u + var9Lifetime1, 0);
           int var13 = 50 % ((15 - param2) / 52);
-          var12 = new hl(var18.field_u - var9Lifetime1 * 2, var9Lifetime1);
+          var12 = new Sprite(var18.field_u - var9Lifetime1 * 2, var9Lifetime1);
           var12.e();
           var18.d(-var9Lifetime1, 0);
           wf.a(-80);
-          t.field_r = new hl[]{var16, var12, var11};
+          t.field_r = new Sprite[]{var16, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "fc.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(rb param0, rb param1, java.math.BigInteger param2, java.math.BigInteger param3, int param4) {
+    final static void a(PacketBuffer param0, PacketBuffer param1, java.math.BigInteger param2, java.math.BigInteger param3, int param4) {
         try {
-          vj.a(param0.field_f, param4, param2, param1, param0.field_g, (byte) 99, param3);
+          vj.a(param0.payload, param4, param2, param1, param0.position, (byte) 99, param3);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "fc.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

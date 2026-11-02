@@ -100,11 +100,11 @@ final class fb {
           }
           while (ma.a(0)) {
             var1.d((byte) 84, 8);
-            fieldTemp$0 = var1.field_g + 1;
-            var1.field_g = var1.field_g + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             rh.a(var1, (byte) -68);
-            d.field_b.b(var1.field_g - var2, 31700);
+            d.field_b.b(var1.position - var2, 31700);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

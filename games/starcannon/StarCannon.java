@@ -70,13 +70,13 @@ public final class StarCannon extends ag {
         String var16 = null;
         String var17 = null;
         int[] var21 = null;
-        stateLoop: while (true) {
+        scanLoop1: while (true) {
             switch (statePc) {
                 case 0: {
                     var13 = field_A;
                     var3 = 0;
                     statePc = 1;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 1: {
                     if (var3 >= 4000) {
@@ -88,7 +88,7 @@ public final class StarCannon extends ag {
                                 {
                                     var3 = 0;
                                     statePc = 12;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             } else {
                                 /* Inlined CFG state: 9. */
@@ -96,7 +96,7 @@ public final class StarCannon extends ag {
                                     fh.field_q.d(0, vd.field_j, 640, 480, 128);
                                     fh.field_q.d(0, -480 + vd.field_j, 640, 480, 128);
                                     statePc = 19;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             }
                         }
@@ -107,13 +107,13 @@ public final class StarCannon extends ag {
                             stackIn_3_0 = stackIn_147_0;
                             if (false) {
                                 statePc = 147;
-                                continue stateLoop;
+                                continue scanLoop1;
                             } else {
                                 /* Inlined CFG state: 3. */
                                 {
                                     if (stackIn_3_0 == null) {
                                         statePc = 7;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 4. */
                                         {
@@ -122,11 +122,11 @@ public final class StarCannon extends ag {
                                                 {
                                                     qc.field_c[var3].a(320 - fi.field_e.field_f, 123);
                                                     statePc = 7;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             } else {
                                                 statePc = 7;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         }
                                     }
@@ -138,12 +138,12 @@ public final class StarCannon extends ag {
                 case 7: {
                     var3++;
                     statePc = 1;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 12: {
                     if (var3 >= 4000) {
                         statePc = 19;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } else {
                         /* Inlined CFG state: 13. */
                         {
@@ -151,13 +151,13 @@ public final class StarCannon extends ag {
                             stackIn_14_0 = stackIn_147_0;
                             if (false) {
                                 statePc = 147;
-                                continue stateLoop;
+                                continue scanLoop1;
                             } else {
                                 /* Inlined CFG state: 14. */
                                 {
                                     if (stackIn_14_0 == null) {
                                         statePc = 18;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 15. */
                                         {
@@ -166,11 +166,11 @@ public final class StarCannon extends ag {
                                                 {
                                                     qc.field_c[var3].a(320 - fi.field_e.field_f, -91);
                                                     statePc = 18;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             } else {
                                                 statePc = 18;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         }
                                     }
@@ -182,7 +182,7 @@ public final class StarCannon extends ag {
                 case 18: {
                     var3++;
                     statePc = 12;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 19: {
                     if (param1 == 7306) {
@@ -190,7 +190,7 @@ public final class StarCannon extends ag {
                         {
                             var15 = (bf) (kh.field_y.c(-3905));
                             statePc = 22;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         /* Inlined CFG state: 20. */
@@ -205,7 +205,7 @@ public final class StarCannon extends ag {
                         {
                             var3 = 0;
                             statePc = 25;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         /* Inlined CFG state: 23. */
@@ -213,7 +213,7 @@ public final class StarCannon extends ag {
                             var15.a(65535, 320 - fi.field_e.field_f);
                             var15 = (bf) (kh.field_y.a(-16913));
                             statePc = 22;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     }
                 }
@@ -223,7 +223,7 @@ public final class StarCannon extends ag {
                         {
                             var3 = 0;
                             statePc = 35;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         /* Inlined CFG state: 26. */
@@ -234,19 +234,19 @@ public final class StarCannon extends ag {
                             stackIn_27_1 = stackIn_163_1;
                             if (false) {
                                 statePc = 163;
-                                continue stateLoop;
+                                continue scanLoop1;
                             } else {
                                 /* Inlined CFG state: 27. */
                                 {
                                     if (stackIn_27_0 == stackIn_27_1) {
                                         statePc = 33;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 28. */
                                         {
                                             if (qc.field_c[var3].field_h == 2) {
                                                 statePc = 33;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             } else {
                                                 /* Inlined CFG state: 29. */
                                                 {
@@ -255,7 +255,7 @@ public final class StarCannon extends ag {
                                                     } else {
                                                         statePc = 30;
                                                     }
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             }
                                         }
@@ -271,17 +271,17 @@ public final class StarCannon extends ag {
                         {
                             qc.field_c[var3].a(-fi.field_e.field_f + 320, 54);
                             statePc = 33;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         statePc = 33;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 33: {
                     var3++;
                     statePc = 25;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 35: {
                     if (var3 >= 4000) {
@@ -292,11 +292,11 @@ public final class StarCannon extends ag {
                                 {
                                     gi.a(param1 - 7302);
                                     statePc = 45;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             } else {
                                 statePc = 45;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } else {
@@ -306,13 +306,13 @@ public final class StarCannon extends ag {
                             stackIn_37_0 = stackIn_147_0;
                             if (false) {
                                 statePc = 147;
-                                continue stateLoop;
+                                continue scanLoop1;
                             } else {
                                 /* Inlined CFG state: 37. */
                                 {
                                     if (stackIn_37_0 == null) {
                                         statePc = 41;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 38. */
                                         {
@@ -322,11 +322,11 @@ public final class StarCannon extends ag {
                                                     qc.field_c[var3].b(-fi.field_e.field_f + 320, 128);
                                                     qc.field_c[var3].a(-fi.field_e.field_f + 320, param1 ^ 7322);
                                                     statePc = 41;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             } else {
                                                 statePc = 41;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         }
                                     }
@@ -338,17 +338,17 @@ public final class StarCannon extends ag {
                 case 41: {
                     var3++;
                     statePc = 35;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 45: {
                     var3 = 0;
                     statePc = 46;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 46: {
                     if (var3 >= 4000) {
                         statePc = 53;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } else {
                         /* Inlined CFG state: 47. */
                         {
@@ -360,7 +360,7 @@ public final class StarCannon extends ag {
                             {
                                 if (stackIn_48_0 == stackIn_48_1) {
                                     statePc = 52;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 } else {
                                     /* Inlined CFG state: 49. */
                                     {
@@ -370,11 +370,11 @@ public final class StarCannon extends ag {
                                                 qc.field_c[var3].b(-fi.field_e.field_f + 320, param1 ^ 7178);
                                                 qc.field_c[var3].a(320 - fi.field_e.field_f, -56);
                                                 statePc = 52;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             }
                                         } else {
                                             statePc = 52;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         }
                                     }
                                 }
@@ -385,7 +385,7 @@ public final class StarCannon extends ag {
                 case 52: {
                     var3++;
                     statePc = 46;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 53: {
                     if (gj.field_c > -1) {
@@ -404,7 +404,7 @@ public final class StarCannon extends ag {
                             var6 = 32896;
                             if (qb.field_e != 1) {
                                 statePc = 57;
-                                continue stateLoop;
+                                continue scanLoop1;
                             } else {
                                 /* Inlined CFG state: 56. */
                                 {
@@ -412,13 +412,13 @@ public final class StarCannon extends ag {
                                     var6 = 32768;
                                     var4_ref_String = b.field_d;
                                     statePc = 57;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             }
                         }
                     } else {
                         statePc = 116;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 57: {
@@ -429,24 +429,24 @@ public final class StarCannon extends ag {
                             var5 = 16776960;
                             var6 = 16711680;
                             statePc = 60;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         statePc = 60;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 60: {
                     var7 = 6;
                     if (rj.field_h != 1) {
                         statePc = 62;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } else {
                         /* Inlined CFG state: 61. */
                         {
                             var7 = 10;
                             statePc = 62;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     }
                 }
@@ -456,11 +456,11 @@ public final class StarCannon extends ag {
                         {
                             var7 = 16;
                             statePc = 65;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         statePc = 65;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 65: {
@@ -469,11 +469,11 @@ public final class StarCannon extends ag {
                         {
                             var7 = 17;
                             statePc = 68;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         statePc = 68;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 68: {
@@ -486,7 +486,7 @@ public final class StarCannon extends ag {
                     nb.a(param0 + 455, (byte) 122, 10 + var7 * 5, ha.field_a, var8 - 5, 128, 24);
                     var9 = 0;
                     statePc = 69;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 69: {
                     if (var7 <= var9) {
@@ -495,7 +495,7 @@ public final class StarCannon extends ag {
                             stackIn_77_0 = ~ie.field_C;
                             stackIn_77_1 = -1;
                             statePc = 77;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         /* Inlined CFG state: 70. */
@@ -506,7 +506,7 @@ public final class StarCannon extends ag {
                             stackIn_71_1 = stackIn_77_1;
                             if (false) {
                                 statePc = 77;
-                                continue stateLoop;
+                                continue scanLoop1;
                             } else {
                                 /* Inlined CFG state: 71. */
                                 {
@@ -515,14 +515,14 @@ public final class StarCannon extends ag {
                                         {
                                             ki.d(var8, 465 + param0, 4, 4, var5);
                                             statePc = 75;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         }
                                     } else {
                                         /* Inlined CFG state: 72. */
                                         {
                                             ki.d(var8, 460 + param0, 4, 14, var5);
                                             statePc = 75;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         }
                                     }
                                 }
@@ -534,12 +534,12 @@ public final class StarCannon extends ag {
                     var8 += 5;
                     var9++;
                     statePc = 69;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 77: {
                     if (stackIn_77_0 >= stackIn_77_1) {
                         statePc = 79;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } else {
                         /* Inlined CFG state: 78. */
                         {
@@ -559,7 +559,7 @@ public final class StarCannon extends ag {
                             dupTemp$3 = af.field_w[qb.field_e + 16];
                             dupTemp$3.field_f = dupTemp$3.field_f - var9;
                             statePc = 79;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     }
                 }
@@ -570,11 +570,11 @@ public final class StarCannon extends ag {
                         {
                             var9 = var9 >> 2;
                             statePc = 82;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         statePc = 82;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 82: {
@@ -583,11 +583,11 @@ public final class StarCannon extends ag {
                         {
                             var9 = var9 << 1;
                             statePc = 85;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         statePc = 85;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 85: {
@@ -606,16 +606,16 @@ public final class StarCannon extends ag {
                                 {
                                     var3 = var3 + var11;
                                     statePc = 90;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             } else {
                                 statePc = 90;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     } else {
                         statePc = 91;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 90: {
@@ -623,18 +623,18 @@ public final class StarCannon extends ag {
                     nb.a(-param0 + 1, (byte) 122, var3, ha.field_a, 328, 128, 24);
                     af.field_y.a(var17, 333, -param0 + 18, 16777215, -1);
                     statePc = 91;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 91: {
                     if (ua.field_c >= -2) {
                         statePc = 116;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } else {
                         /* Inlined CFG state: 92. */
                         {
                             if (gj.field_c != 0) {
                                 statePc = 95;
-                                continue stateLoop;
+                                continue scanLoop1;
                             } else {
                                 /* Inlined CFG state: 93. */
                                 {
@@ -643,7 +643,7 @@ public final class StarCannon extends ag {
                                     } else {
                                         statePc = 116;
                                     }
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             }
                         }
@@ -656,11 +656,11 @@ public final class StarCannon extends ag {
                         {
                             var10_ref_String = eg.field_i;
                             statePc = 98;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         statePc = 98;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 98: {
@@ -669,11 +669,11 @@ public final class StarCannon extends ag {
                         {
                             var10_ref_String = ig.field_c;
                             statePc = 101;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         statePc = 101;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 101: {
@@ -682,29 +682,29 @@ public final class StarCannon extends ag {
                         {
                             var10_ref_String = qc.field_a;
                             statePc = 104;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         statePc = 104;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 104: {
                     if (3 != rj.field_h) {
                         statePc = 107;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } else {
                         /* Inlined CFG state: 105. */
                         {
                             if (nf.field_l != 2) {
                                 statePc = 107;
-                                continue stateLoop;
+                                continue scanLoop1;
                             } else {
                                 /* Inlined CFG state: 106. */
                                 {
                                     var10_ref_String = vf.field_a;
                                     statePc = 107;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             }
                         }
@@ -713,16 +713,16 @@ public final class StarCannon extends ag {
                 case 107: {
                     if (rj.field_h != 4) {
                         statePc = 115;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } else {
                         /* Inlined CFG state: 108. */
                         {
                             if (u.field_d <= 0) {
                                 /* Inlined CFG state: 114. */
                                 {
-                                    var10_ref_String = bc.field_l + var9 + sb.field_o;
+                                    var10_ref_String = bc.field_l + var9 + BufferedSocket.field_o;
                                     statePc = 115;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             } else {
                                 /* Inlined CFG state: 109. */
@@ -732,7 +732,7 @@ public final class StarCannon extends ag {
                                         {
                                             var10_ref_String = d.field_n + var9 + jf.field_b;
                                             statePc = 115;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         }
                                     } else {
                                         /* Inlined CFG state: 110. */
@@ -742,14 +742,14 @@ public final class StarCannon extends ag {
                                                 {
                                                     var10_ref_String = d.field_n + var9 + eh.field_c;
                                                     statePc = 115;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             } else {
                                                 /* Inlined CFG state: 111. */
                                                 {
                                                     var10_ref_String = jg.field_I + var9;
                                                     statePc = 115;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             }
                                         }
@@ -762,7 +762,7 @@ public final class StarCannon extends ag {
                 case 115: {
                     af.field_y.a(var10_ref_String, 0, 0, 640, 480, 16777215, -1, -(10 * param0) + 256, 1, 1, af.field_y.field_p);
                     statePc = 116;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 116: {
                     if (tj.field_C > 0) {
@@ -778,7 +778,7 @@ public final class StarCannon extends ag {
                                     var5 = 255;
                                     var4 = -(var3 * 2) + 256 + 255;
                                     statePc = 121;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             } else {
                                 /* Inlined CFG state: 119. */
@@ -786,20 +786,20 @@ public final class StarCannon extends ag {
                                     var4 = 255;
                                     var5 = var3 * 2;
                                     statePc = 121;
-                                    continue stateLoop;
+                                    continue scanLoop1;
                                 }
                             }
                         }
                     } else {
                         statePc = 132;
-                        continue stateLoop;
+                        continue scanLoop1;
                     }
                 }
                 case 121: {
                     var6 = (var4 << 16) + (var5 << 8);
                     var7 = 0;
                     statePc = 122;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 122: {
                     if (var7 >= var3) {
@@ -811,7 +811,7 @@ public final class StarCannon extends ag {
                             af.field_y.a(s.field_h, 320, 39, 0, -1, var3);
                             af.field_y.a(s.field_h, 320, 38, 16777215, -1, var3);
                             statePc = 132;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     } else {
                         /* Inlined CFG state: 123. */
@@ -822,19 +822,19 @@ public final class StarCannon extends ag {
                             stackIn_124_1 = stackIn_133_1;
                             if (false) {
                                 statePc = 133;
-                                continue stateLoop;
+                                continue scanLoop1;
                             } else {
                                 /* Inlined CFG state: 124. */
                                 {
                                     if (stackIn_124_0 > stackIn_124_1) {
                                         statePc = 129;
-                                        continue stateLoop;
+                                        continue scanLoop1;
                                     } else {
                                         /* Inlined CFG state: 125. */
                                         {
                                             if (var7 > -10 + var3) {
                                                 statePc = 129;
-                                                continue stateLoop;
+                                                continue scanLoop1;
                                             } else {
                                                 /* Inlined CFG state: 126. */
                                                 {
@@ -843,7 +843,7 @@ public final class StarCannon extends ag {
                                                     } else {
                                                         statePc = 127;
                                                     }
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             }
                                         }
@@ -856,34 +856,34 @@ public final class StarCannon extends ag {
                 case 127: {
                     ki.d(-(var3 >> 1) + (320 + var7) - 5, 27, 10 + (var3 - 20), 11, var6);
                     statePc = 130;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 129: {
                     ki.c(320 + (var7 - (var3 >> 1)), 32, 5, var6, 255 - Math.abs(var7 - (var3 >> 1)));
                     statePc = 130;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 130: {
                     var7++;
                     statePc = 122;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 132: {
                     stackIn_133_0 = 0;
                     stackIn_133_1 = fi.field_e.field_k;
                     statePc = 133;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 133: {
                     if (stackIn_133_0 != stackIn_133_1) {
                         statePc = 144;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } else {
                         /* Inlined CFG state: 134. */
                         {
                             if (gj.field_c != 0) {
                                 statePc = 144;
-                                continue stateLoop;
+                                continue scanLoop1;
                             } else {
                                 /* Inlined CFG state: 135. */
                                 {
@@ -895,14 +895,14 @@ public final class StarCannon extends ag {
                                                 {
                                                     var3 = 100;
                                                     statePc = 140;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             } else {
                                                 /* Inlined CFG state: 138. */
                                                 {
                                                     var3 = 190 - fi.field_e.field_r << 2;
                                                     statePc = 140;
-                                                    continue stateLoop;
+                                                    continue scanLoop1;
                                                 }
                                             }
                                         }
@@ -911,7 +911,7 @@ public final class StarCannon extends ag {
                                         {
                                             var3 = fi.field_e.field_r << 2;
                                             statePc = 140;
-                                            continue stateLoop;
+                                            continue scanLoop1;
                                         }
                                     }
                                 }
@@ -932,7 +932,7 @@ public final class StarCannon extends ag {
                     var11 = var9 + (-var8 + 5);
                     if (var11 <= 0) {
                         statePc = 144;
-                        continue stateLoop;
+                        continue scanLoop1;
                     } else {
                         /* Inlined CFG state: 141. */
                         {
@@ -941,13 +941,13 @@ public final class StarCannon extends ag {
                             ki.c(var5, var8, var5 + var7, var8 + var11);
                             ki.b(var5 + 19, 14 + var8, var7 - 38, -28 + var11, 0, 128);
                             ba.a(var11, rd.field_p, (byte) 115, var5, var7, var8);
-                            sb.a(true, var7, 10596798, 0, var8, 16711680, var5, var11 >> 1);
-                            sb.a(true, var7, 0, 10596798, (var11 >> 1) + var8, 16711680, var5, -(var11 >> 1) + var11);
+                            BufferedSocket.a(true, var7, 10596798, 0, var8, 16711680, var5, var11 >> 1);
+                            BufferedSocket.a(true, var7, 0, 10596798, (var11 >> 1) + var8, 16711680, var5, -(var11 >> 1) + var11);
                             ki.c(var5 + 19, var8 + 14, var7 + (var5 - 19), -14 + (var11 + var8));
                             a.field_b.b(ne.field_i, 320, (a.field_b.field_p - a.field_b.field_q >> 1) + 240, 16777215, -1);
                             ki.b(var21);
                             statePc = 144;
-                            continue stateLoop;
+                            continue scanLoop1;
                         }
                     }
                 }
@@ -957,13 +957,13 @@ public final class StarCannon extends ag {
                 case 147: {
                     ((d) (Object) stackIn_147_0).a(320 - fi.field_e.field_f, -56);
                     statePc = 151;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 148: {
                     qc.field_c[var3].b(-fi.field_e.field_f + 320, param1 ^ 7178);
                     stackIn_147_0 = qc.field_c[var3];
                     statePc = 147;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 149: {
                     if (2 == qc.field_c[var3].field_h) {
@@ -971,7 +971,7 @@ public final class StarCannon extends ag {
                     } else {
                         statePc = 151;
                     }
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 151: {
                     /* Sequential CFG blocks: 151, 155. */
@@ -981,14 +981,14 @@ public final class StarCannon extends ag {
                     {
                         if (var3 >= 4000) {
                             statePc = 53;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 154. */
                             {
                                 stackIn_152_0 = null;
                                 stackIn_152_1 = qc.field_c[var3];
                                 statePc = 152;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     }
@@ -999,18 +999,18 @@ public final class StarCannon extends ag {
                     } else {
                         statePc = 149;
                     }
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 158: {
                     ((d) (Object) stackIn_158_0).a(320 - fi.field_e.field_f, -56);
                     statePc = 162;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 159: {
                     qc.field_c[var3].b(-fi.field_e.field_f + 320, param1 ^ 7178);
                     stackIn_158_0 = qc.field_c[var3];
                     statePc = 158;
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 160: {
                     if (2 == qc.field_c[var3].field_h) {
@@ -1018,7 +1018,7 @@ public final class StarCannon extends ag {
                     } else {
                         statePc = 162;
                     }
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 case 162: {
                     /* Sequential CFG blocks: 162, 166. */
@@ -1028,14 +1028,14 @@ public final class StarCannon extends ag {
                     {
                         if (var3 >= 4000) {
                             statePc = 53;
-                            continue stateLoop;
+                            continue scanLoop1;
                         } else {
                             /* Inlined CFG state: 165. */
                             {
                                 stackIn_163_0 = null;
                                 stackIn_163_1 = qc.field_c[var3];
                                 statePc = 163;
-                                continue stateLoop;
+                                continue scanLoop1;
                             }
                         }
                     }
@@ -1046,7 +1046,7 @@ public final class StarCannon extends ag {
                     } else {
                         statePc = 160;
                     }
-                    continue stateLoop;
+                    continue scanLoop1;
                 }
                 default: throw new IllegalStateException("invalid CFG state " + statePc);
             }
@@ -1194,7 +1194,7 @@ public final class StarCannon extends ag {
           ue.field_c[rj.field_h] >= ua.field_c) {
           var2 = 5 + ue.field_c[rj.field_h];
         }
-        L1: {
+        regionExit1: {
           var3 = sh.b(-126, 640);
           var4 = -64 + fi.field_e.field_f + sh.b(38, 128);
           var5 = null;
@@ -1234,7 +1234,7 @@ public final class StarCannon extends ag {
                   kc.field_P = fl.field_h;
                   ti.field_f.b(kc.field_P);
                   kc.field_P.a(mc.field_b);
-                  break L1;
+                  break regionExit1;
                 }
                 if (var7 == 10) {
                   nf.field_e = nf.field_e + 250;
@@ -1248,7 +1248,7 @@ public final class StarCannon extends ag {
                   kc.field_P = fl.field_h;
                   ti.field_f.b(kc.field_P);
                   kc.field_P.a(mc.field_b);
-                  break L1;
+                  break regionExit1;
                 }
                 if (7 == var7) {
                   nf.field_e = 0;
@@ -1259,7 +1259,7 @@ public final class StarCannon extends ag {
                     stackIn_63_0.field_p = stackIn_64_1;
                     kh.field_y.b(101, var8);
                   }
-                  break L1;
+                  break regionExit1;
                 }
                 if (var7 != 8 &&
                   var7 != 13) {
@@ -1283,7 +1283,7 @@ public final class StarCannon extends ag {
                     nf.field_e = 175;
                     kh.field_y.b(82, new bf(var3, -64, var4, 4));
                   }
-                  break L1;
+                  break regionExit1;
                 }
                 nf.field_e = 0;
                 var4 = sh.b(-128, 128) + (var3 - 64);
@@ -1307,10 +1307,10 @@ public final class StarCannon extends ag {
                   stackIn_53_0.field_p = stackIn_54_1;
                   kh.field_y.b(123, var8);
                 }
-                break L1;
+                break regionExit1;
               }
             }
-            break L1;
+            break regionExit1;
           }
           nf.field_e = var2 * 25 + 75;
           kh.field_y.b(122, new bf(var3, -64, var4, 4));
@@ -1616,13 +1616,13 @@ public final class StarCannon extends ag {
             }
           }
         }
-        if (!wk.a(34)) {
+        if (!MouseInput.a(34)) {
           while (true) {
-            var5_ref = (hb) (bh.field_e.a((byte) 39));
+            var5_ref = (hb) (SecondaryNodeDeque.field_e.a((byte) 39));
             if (var5_ref == null) {
               break;
             }
-            sb.a(4, (byte) -41, var5_ref);
+            BufferedSocket.a(4, (byte) -41, var5_ref);
           }
         }
         nf.a(0, (byte) 95);
@@ -1637,40 +1637,40 @@ public final class StarCannon extends ag {
           }
         }
         if (var2Lifetime1 != 0) {
-          ai.a(10, (hl[]) null, 240, af.field_y.field_r, (hl[]) null, a.field_b.field_q + a.field_b.field_r, a.field_b, 10, af.field_y, 320, 10, af.field_y.field_q + af.field_y.field_r, 25574, a.field_b.field_r);
+          ai.a(10, (Sprite[]) null, 240, af.field_y.field_r, (Sprite[]) null, a.field_b.field_q + a.field_b.field_r, a.field_b, 10, af.field_y, 320, 10, af.field_y.field_q + af.field_y.field_r, 25574, a.field_b.field_r);
         }
     }
 
     private final void c(boolean param0, int param1) {
-        hl dupTemp$0 = null;
+        Sprite dupTemp$0 = null;
         int var8 = 0;
         int var7 = 0;
         Object var3;
         ja var3_ref;
         int var4_int;
-        hl[] var4;
+        Sprite[] var4;
         id[] var4_array;
         int var5_int;
-        hl var5;
+        Sprite var5;
         Object var5_ref;
-        hl var6_ref_hl;
+        Sprite var6_ref_hl;
         int var6;
-        hl var7_ref_hl;
-        hl var8_ref_hl;
+        Sprite var7_ref_hl;
+        Sprite var8_ref_hl;
         int[] var10;
         int var11;
         int var12;
         int var13;
         int var14;
-        hl[] var15;
-        hl[] var16;
-        hl var17;
-        hl[] var18;
+        Sprite[] var15;
+        Sprite[] var16;
+        Sprite var17;
+        Sprite[] var18;
         int[] var19;
-        hl[] var20;
-        hl var21;
-        hl[] var22;
-        hl var23;
+        Sprite[] var20;
+        Sprite var21;
+        Sprite[] var22;
+        Sprite var23;
         int[] var24;
         int var4_intLifetime1;
         int var4_intLifetime2;
@@ -1703,7 +1703,7 @@ public final class StarCannon extends ag {
                         return;
                       }
                       jj.i(param1 ^ -1478);
-                      gf.field_c = new ud[48];
+                      gf.field_c = new PcmSample[48];
                       gf.field_c[0] = aj.a(lj.field_h, "", "SC_bossdamage").a();
                       gf.field_c[1] = aj.a(lj.field_h, "", "SC_bossdestroy").a();
                       gf.field_c[2] = aj.a(lj.field_h, "", "SC_collect1").a();
@@ -1761,22 +1761,22 @@ public final class StarCannon extends ag {
                       tc.j(param1 ^ -1412);
                       return;
                     }
-                    ma.a(bh.a(n.field_f, fi.field_f, (byte) -38, ae.field_a, "basic"), -13923, 60.0f);
+                    ma.a(SecondaryNodeDeque.a(n.field_f, fi.field_f, (byte) -38, ae.field_a, "basic"), -13923, 60.0f);
                     return;
                   }
-                  ma.a(bh.a(s.field_g, cb.field_c, (byte) -38, sj.field_D, ""), -13923, 50.0f);
+                  ma.a(SecondaryNodeDeque.a(s.field_g, cb.field_c, (byte) -38, sj.field_D, ""), -13923, 50.0f);
                   return;
                 }
-                ma.a(bh.a(n.field_f, jg.field_F, (byte) -38, ae.field_a, ""), param1 - 12479, 40.0f);
+                ma.a(SecondaryNodeDeque.a(n.field_f, jg.field_F, (byte) -38, ae.field_a, ""), param1 - 12479, 40.0f);
                 return;
               }
-              ma.a(bh.a(kc.field_U, se.field_l, (byte) -38, ia.field_l, ""), -13923, 30.0f);
+              ma.a(SecondaryNodeDeque.a(kc.field_U, se.field_l, (byte) -38, ia.field_l, ""), -13923, 30.0f);
               return;
             }
-            ma.a(bh.a(lc.field_ib, nd.field_p, (byte) -38, bd.field_g, ""), -13923, 20.0f);
+            ma.a(SecondaryNodeDeque.a(lc.field_ib, nd.field_p, (byte) -38, bd.field_g, ""), -13923, 20.0f);
             return;
           }
-          ma.a(bh.a(lc.field_ib, lj.field_h, (byte) -38, bd.field_g, ""), param1 ^ 13249, 10.0f);
+          ma.a(SecondaryNodeDeque.a(lc.field_ib, lj.field_h, (byte) -38, bd.field_g, ""), param1 ^ 13249, 10.0f);
           return;
         }
         if (null != se.field_l) {
@@ -1795,32 +1795,32 @@ public final class StarCannon extends ag {
         if (fl.field_f == null) {
           ma.a(sj.field_C, -13923, 80.0f);
           this.d((byte) 22);
-          gg.field_f = ob.a("smlships", 126, "", jg.field_F);
-          nd.field_j = ob.a("destroyer", -121, "", jg.field_F);
-          qc.field_e = ob.a("cruiser", param1 ^ -1484, "", jg.field_F);
-          gf.field_a = ob.a("cannoneer", 116, "", jg.field_F);
-          dl.field_c = ob.a("playership", param1 + 1407, "", jg.field_F);
-          vc.field_m = ob.a("addons", 126, "", jg.field_F);
-          ob.a("glows", 118, "", jg.field_F);
-          sj.field_E = ob.a("boss", -36, "", jg.field_F);
-          fg.field_c = ob.a("boss2", param1 ^ 1474, "", jg.field_F);
-          v.field_d = ob.a("boss3", 95, "", jg.field_F);
+          gg.field_f = SecondaryNodeDequeIterator.a("smlships", 126, "", jg.field_F);
+          nd.field_j = SecondaryNodeDequeIterator.a("destroyer", -121, "", jg.field_F);
+          qc.field_e = SecondaryNodeDequeIterator.a("cruiser", param1 ^ -1484, "", jg.field_F);
+          gf.field_a = SecondaryNodeDequeIterator.a("cannoneer", 116, "", jg.field_F);
+          dl.field_c = SecondaryNodeDequeIterator.a("playership", param1 + 1407, "", jg.field_F);
+          vc.field_m = SecondaryNodeDequeIterator.a("addons", 126, "", jg.field_F);
+          SecondaryNodeDequeIterator.a("glows", 118, "", jg.field_F);
+          sj.field_E = SecondaryNodeDequeIterator.a("boss", -36, "", jg.field_F);
+          fg.field_c = SecondaryNodeDequeIterator.a("boss2", param1 ^ 1474, "", jg.field_F);
+          v.field_d = SecondaryNodeDequeIterator.a("boss3", 95, "", jg.field_F);
           af.field_w = fg.a(jg.field_F, "powerorbs", "", false);
-          var15 = ob.a("shots", -75, "", jg.field_F);
+          var15 = SecondaryNodeDequeIterator.a("shots", -75, "", jg.field_F);
           for (var4_int = 0; 5 > var4_int; var4_int++) {
             jg.field_C[var4_int] = var15[var4_int];
           }
-          var16 = ob.a("shots2", -120, "", jg.field_F);
+          var16 = SecondaryNodeDequeIterator.a("shots2", -120, "", jg.field_F);
           for (var4_intLifetime1 = 0; var4_intLifetime1 < 5; var4_intLifetime1++) {
             jg.field_C[var4_intLifetime1 + 5] = var16[var4_intLifetime1];
           }
           var3 = null;
-          ie.field_B = ob.a("explosion", 120, "", jg.field_F);
-          ad.field_z = ob.a("explosionb", -63, "", jg.field_F);
-          oh.field_d = ob.a("explosionc", -105, "", jg.field_F);
-          el.field_H = new hl[5];
+          ie.field_B = SecondaryNodeDequeIterator.a("explosion", 120, "", jg.field_F);
+          ad.field_z = SecondaryNodeDequeIterator.a("explosionb", -63, "", jg.field_F);
+          oh.field_d = SecondaryNodeDequeIterator.a("explosionc", -105, "", jg.field_F);
+          el.field_H = new Sprite[5];
           for (var4_intLifetime2 = 0; var4_intLifetime2 < 5; var4_intLifetime2++) {
-            dupTemp$0 = new hl(32, 32);
+            dupTemp$0 = new Sprite(32, 32);
             el.field_H[var4_intLifetime2] = dupTemp$0;
             var17 = dupTemp$0;
             var17.e();
@@ -1828,8 +1828,8 @@ public final class StarCannon extends ag {
             var17.d();
           }
           hg.field_y.b(param1 + 1333);
-          fl.field_f = ob.a("debris", 96, "", jg.field_F);
-          var4 = new hl[40];
+          fl.field_f = SecondaryNodeDequeIterator.a("debris", 96, "", jg.field_F);
+          var4 = new Sprite[40];
           for (var5_int = 0; var5_int < 4; var5_int++) {
             var4[36 + var5_int] = fl.field_f[var5_int + 12];
           }
@@ -1844,10 +1844,10 @@ public final class StarCannon extends ag {
             var13++;
           }
           fl.field_f = var4;
-          ma.field_e = ob.a("fr_thin_sqr_in", -49, "", jg.field_F);
-          gb.field_v = ob.a("fr_thin_sqr_ex", 119, "", jg.field_F);
-          ha.field_a = ob.a("fr_grid_sql_in", 119, "", jg.field_F);
-          ma.field_a = ob.a("fr_grid_sql_ex", 119, "", jg.field_F);
+          ma.field_e = SecondaryNodeDequeIterator.a("fr_thin_sqr_in", -49, "", jg.field_F);
+          gb.field_v = SecondaryNodeDequeIterator.a("fr_thin_sqr_ex", 119, "", jg.field_F);
+          ha.field_a = SecondaryNodeDequeIterator.a("fr_grid_sql_in", 119, "", jg.field_F);
+          ma.field_a = SecondaryNodeDequeIterator.a("fr_grid_sql_ex", 119, "", jg.field_F);
           var5 = ma.field_a[6];
           var6_ref_hl = ma.field_a[7];
           ma.field_a[8].field_q = 4;
@@ -1861,9 +1861,9 @@ public final class StarCannon extends ag {
           vb.field_l = vk.a("", param1 ^ -1534, "life_icon", jg.field_F);
           pk.field_e = vk.a("", 41, "main_border", jg.field_F);
           hf.field_i = vk.a("", 45, "main_inner", jg.field_F);
-          rd.field_p = ob.a("menu_border", param1 ^ -1532, "", jg.field_F);
-          jk.field_f = ob.a("menu_innerborder", 98, "", jg.field_F);
-          var18 = ob.a("headers", 117, "", jg.field_F);
+          rd.field_p = SecondaryNodeDequeIterator.a("menu_border", param1 ^ -1532, "", jg.field_F);
+          jk.field_f = SecondaryNodeDequeIterator.a("menu_innerborder", 98, "", jg.field_F);
+          var18 = SecondaryNodeDequeIterator.a("headers", 117, "", jg.field_F);
           fh.field_r[0] = var18[0];
           fh.field_r[3] = var18[3];
           fh.field_r[4] = var18[4];
@@ -1891,7 +1891,7 @@ public final class StarCannon extends ag {
           ma.a(sj.field_C, -13923, 90.0f);
           this.d((byte) 22);
           vk.a("", 93, "mainmenubar", jg.field_F);
-          ie.field_A = ob.a("zenon", 102, "", jg.field_F);
+          ie.field_A = SecondaryNodeDequeIterator.a("zenon", 102, "", jg.field_F);
           vk.a("", 120, "moon", jg.field_F);
           vk.a("", param1 ^ -1487, "stars", jg.field_F);
           fh.field_q = vk.a("", param1 + 1531, "nebula", jg.field_F);
@@ -1931,7 +1931,7 @@ public final class StarCannon extends ag {
         this.d((byte) 22);
         af.field_y = od.a("", jg.field_F, "b12", param1 + 1443, cb.field_c);
         a.field_b = od.a("", jg.field_F, "font", -1, cb.field_c);
-        var20 = ob.a("screenshots", -105, "", jg.field_F);
+        var20 = SecondaryNodeDequeIterator.a("screenshots", -105, "", jg.field_F);
         kk.a(vk.a("", 59, "mbfg", jg.field_F), -60, wc.field_g);
         ta.a(vk.a("", param1 ^ -1510, "mb_logo", jg.field_F), param1 + 1319);
         ed.a(0, 125, 123, a.field_b, 1500, -52, 9, 9, 16777215, 0, vk.a("", 60, "mbpb", jg.field_F));
@@ -1946,10 +1946,10 @@ public final class StarCannon extends ag {
         li.a(sc.field_a, (byte) -100);
         var21 = vk.a("basic", 104, "orbcoin", fi.field_f);
         var6 = a.field_b.field_p + a.field_b.field_q;
-        el.field_J = new hl(var6, var6);
+        el.field_J = new Sprite(var6, var6);
         el.field_J.e();
         var21.d(0, 0, var6, var6);
-        j.field_c = ob.a("achievements_lrg", param1 + 1366, "", jg.field_F);
+        j.field_c = SecondaryNodeDequeIterator.a("achievements_lrg", param1 + 1366, "", jg.field_F);
         var5_ref = null;
         var22 = j.field_c;
         for (var8 = 0; var8 < var22.length; var8++) {
@@ -1973,7 +1973,7 @@ public final class StarCannon extends ag {
         ha.field_d = 0;
         vb.field_m = 1;
         cg.field_e = 0;
-        ui.field_p = 0;
+        SpriteState.field_p = 0;
         kd.field_C = -1;
         fi.field_e = new bf(256, 256, 256, 0);
         fi.field_e.field_r = 256;
@@ -1997,7 +1997,7 @@ public final class StarCannon extends ag {
         for (var7 = 0; var7 < 8; var7++) {
           fg.field_a[var7] = new jl(var7);
         }
-        if (!wk.a(45)) {
+        if (!MouseInput.a(45)) {
           oh.field_a = og.a(4, (byte) 113);
         }
         ld.field_ib = true;
@@ -2006,7 +2006,7 @@ public final class StarCannon extends ag {
     }
 
     private final void m(byte param0) {
-        fj dupTemp$0 = null;
+        PcmSampleStream dupTemp$0 = null;
         int stackIn_103_0 = 0;
         int stackIn_103_1 = 0;
         bf stackIn_106_0 = null;
@@ -2038,8 +2038,8 @@ public final class StarCannon extends ag {
         int var8;
         bf var9;
         bf var10;
-        ud var11;
-        fj var12;
+        PcmSample var11;
+        PcmSampleStream var12;
         bf var13;
         bf var35;
         int[] var78;
@@ -2112,7 +2112,7 @@ public final class StarCannon extends ag {
           if (0 == ia.field_k &&
             0 != jg.field_H) {
           }
-          if (!wk.a(86)) {
+          if (!MouseInput.a(86)) {
             if (0 >= jg.field_H) {
               if (0 < kd.field_C) {
                 var2_int = 2;
@@ -2131,10 +2131,10 @@ public final class StarCannon extends ag {
         if (tj.field_G > 0) {
           fi.field_e.field_k = 1;
           ha.field_d = 0;
-          ui.field_p = eg.field_l - 32;
+          SpriteState.field_p = eg.field_l - 32;
           tj.field_G = tj.field_G - 1;
           if (0 >= tj.field_G) {
-            ui.field_p = 0;
+            SpriteState.field_p = 0;
             mj.a(255, 12, 0, 43, 100);
           }
         }
@@ -2148,7 +2148,7 @@ public final class StarCannon extends ag {
               stackIn_106_0 = fi.field_e;
               stackIn_106_1 = var2_ref;
               if (stackIn_106_0 != stackIn_106_1) {
-                var2_ref.b(4);
+                var2_ref.unlink(4);
               }
               var2_ref = (bf) (kh.field_y.a(-16913));
             }
@@ -2160,11 +2160,11 @@ public final class StarCannon extends ag {
             ia.field_k = ia.field_k + 1;
             fc.field_e = fc.field_e + 2;
           }
-          if (ui.field_p > 0) {
-            ui.field_p = ui.field_p + 8;
-            if (ui.field_p > eg.field_l) {
+          if (SpriteState.field_p > 0) {
+            SpriteState.field_p = SpriteState.field_p + 8;
+            if (SpriteState.field_p > eg.field_l) {
               dg.field_l = 0;
-              ui.field_p = 0;
+              SpriteState.field_p = 0;
               mj.a(96, 12, 0, 25, 100);
               mj.a(255, 12, 0, 33, 100);
             }
@@ -2174,7 +2174,7 @@ public final class StarCannon extends ag {
                 var3 = qc.field_c[var2_intLifetime1].field_d - fi.field_e.field_f;
                 var4 = qc.field_c[var2_intLifetime1].field_q - fi.field_e.field_u;
                 var5_int = (int)Math.sqrt((double)(var4 * var4 + var3 * var3));
-                if (var5_int < ui.field_p) {
+                if (var5_int < SpriteState.field_p) {
                   qc.field_c[var2_intLifetime1].field_h = 0;
                   qc.field_c[var2_intLifetime1].field_p = 64;
                 }
@@ -2188,7 +2188,7 @@ public final class StarCannon extends ag {
                 var3 = var2_ref.field_f - fi.field_e.field_f;
                 var4Lifetime3 = -fi.field_e.field_u + var2_ref.field_u;
                 var5_intLifetime2 = (int)Math.sqrt((double)(var4Lifetime3 * var4Lifetime3 + var3 * var3));
-                for (var6_int = 0; ui.field_p > var6_int; var6_int++) {
+                for (var6_int = 0; SpriteState.field_p > var6_int; var6_int++) {
                   stackIn_103_0 = var6_int;
                   stackIn_103_1 = var5_intLifetime2;
                   if (stackIn_103_0 > stackIn_103_1 &&
@@ -2232,7 +2232,7 @@ public final class StarCannon extends ag {
                   var3 = 42997;
                 }
                 var11 = gf.field_c[39];
-                dupTemp$0 = fj.a(var11, 100, 255 * nb.field_g / 100);
+                dupTemp$0 = PcmSampleStream.a(var11, 100, 255 * nb.field_g / 100);
                 var12 = dupTemp$0;
                 ah.field_a = dupTemp$0;
                 var12.d(var3);
@@ -2625,7 +2625,7 @@ public final class StarCannon extends ag {
           stackIn_353_0 = stackOut_347_0 ? 1 : 0;
           stackIn_348_0 = stackOut_347_0;
           if (!stackIn_348_0) {
-            var9.b(4);
+            var9.unlink(4);
           }
           var9 = (bf) (kh.field_y.a(-16913));
         }
@@ -2727,7 +2727,7 @@ public final class StarCannon extends ag {
                 var10 = (bf) (kh.field_y.c(-3905));
                 while (var10 != null) {
                   if (fi.field_e != var10) {
-                    var10.b(4);
+                    var10.unlink(4);
                   }
                   var10 = (bf) (kh.field_y.a(-16913));
                 }
@@ -2740,7 +2740,7 @@ public final class StarCannon extends ag {
                 jl.field_j = 5;
                 vb.field_m = 2;
                 var3Lifetime5Lifetime1 = 0;
-                if (wk.a(108)) {
+                if (MouseInput.a(108)) {
                   if (!(kd.field_C <= 0) ||
                     !(0 >= jg.field_H)) {
                     var3Lifetime5Lifetime1 = 6;
@@ -2993,7 +2993,7 @@ public final class StarCannon extends ag {
         if (param0 != 91) {
           this.l((byte) 51);
         }
-        L2: {
+        regionExit1: {
           var3 = sh.b(35, 640);
           var4 = -64 + fi.field_e.field_f + sh.b(param0 ^ -39, 128);
           var5 = null;
@@ -3054,7 +3054,7 @@ public final class StarCannon extends ag {
                                 stackIn_107_1 = 5;
                               }
                               if (stackIn_106_0 >= stackIn_107_1) {
-                                break L2;
+                                break regionExit1;
                               }
                               kh.field_y.b(70, new bf(var3, -64 + -var10 * 64, var4, 4));
                               var10++;
@@ -3064,14 +3064,14 @@ public final class StarCannon extends ag {
                             case 12:
                               nf.field_e = -50;
                               kh.field_y.b(78, new bf(var3, -64, var3, 12));
-                              break L2;
+                              break regionExit1;
                             case 17:
                               nf.field_e = -50;
                               kh.field_y.b(61, new bf(32, -64, 32, 12));
                               kh.field_y.b(84, new bf(608, -64, 608, 12));
-                              break L2;
+                              break regionExit1;
                             default:
-                              break L2;
+                              break regionExit1;
                             case 20:
                               var9 = new bf(320, -256, var4, 15);
                               kh.field_y.b(param0 - 7, var9);
@@ -3085,7 +3085,7 @@ public final class StarCannon extends ag {
                               kc.field_P = fl.field_h;
                               ti.field_f.b(kc.field_P);
                               kc.field_P.a(mc.field_b);
-                              break L2;
+                              break regionExit1;
                           }
                         }
                         nf.field_e = 0;
@@ -3099,7 +3099,7 @@ public final class StarCannon extends ag {
                       }
                     }
                   }
-                  break L2;
+                  break regionExit1;
                 }
                 nf.field_e = 100;
                 var10 = 0;
@@ -3152,7 +3152,7 @@ public final class StarCannon extends ag {
                 }
               }
             }
-            break L2;
+            break regionExit1;
           }
           if (ua.field_c >= 4) {
             nf.field_e = 0;
@@ -3188,21 +3188,21 @@ public final class StarCannon extends ag {
         eb.a(true);
         pb.a(91);
         rd.e(-29826);
-        bg.a(-115);
+        KeyboardInput.a(-115);
         lj.b(87);
         pc.b(-76);
         ag.j((byte) 39);
-        ii.b((byte) 70);
-        th.c(1719);
+        ClientException.b((byte) 70);
+        GameApplet.c(1719);
         gg.b((byte) 121);
-        wk.a(true);
+        MouseInput.a(true);
         gj.a(15686);
         ki.a();
         ue.b(0);
         qe.a();
         oh.a(-1);
         ec.a(82);
-        rb.g((byte) -59);
+        PacketBuffer.g((byte) -59);
         dd.a(-121);
         qa.a(-5504);
         mf.a(23675);
@@ -3231,11 +3231,11 @@ public final class StarCannon extends ag {
         eh.g((byte) 101);
         ef.a((byte) 27);
         td.c(-12539);
-        sb.b(105);
+        BufferedSocket.b(105);
         ed.b((byte) -61);
-        rf.b(false);
-        ui.d((byte) -80);
-        uh.b((byte) -115);
+        IntrusiveNode.b(false);
+        SpriteState.d((byte) -80);
+        DualLinkNode.b((byte) -115);
         md.a(-27240);
         int var2 = 82 / ((param0 + 63) / 62);
         n.f(0);
@@ -3319,7 +3319,7 @@ public final class StarCannon extends ag {
         eg.a((byte) -118);
         ci.a(-124);
         bd.a((byte) -74);
-        uj.c((byte) -44);
+        UiWidget.c((byte) -44);
         dk.a(-115);
         kf.a(0);
         kc.a(false);
@@ -3364,14 +3364,14 @@ public final class StarCannon extends ag {
         tj.g(-123);
         af.g(9392);
         o.a(4432);
-        ek.a(false);
-        bh.a(-110);
+        IterableNodeHashTable.a(false);
+        SecondaryNodeDeque.a(-110);
         mi.d(1);
         ej.f(99);
         fl.e(115);
         cd.a(8192);
-        wh.a(true);
-        ob.d(-18147);
+        NodeHashTableIterator.a(true);
+        SecondaryNodeDequeIterator.d(-18147);
         rh.a(false);
         gb.b(122);
         fh.b((byte) -46);
@@ -3572,7 +3572,7 @@ public final class StarCannon extends ag {
         }
         if (gh.f(-23093)) {
           ki.b(0, 0, 640, 480, 0, 128);
-          ki.d(-12 + (-(ii.a(6940) / 2) + 320), -12 - wc.d(20) / 2 + 240, 24 + ii.a(6940), 24 + wc.d(20), 0);
+          ki.d(-12 + (-(ClientException.a(6940) / 2) + 320), -12 - wc.d(20) / 2 + 240, 24 + ClientException.a(6940), 24 + wc.d(20), 0);
           fg.a(32513, jk.field_f, 12, 12);
         }
         if (cb.a(false) &&
@@ -3590,21 +3590,21 @@ public final class StarCannon extends ag {
         int var2Lifetime1;
         var3 = field_A;
         this.a(9, 9, 0, 8, true, 6, false, 7);
-        hh.field_b = new hl[9];
+        hh.field_b = new Sprite[9];
         for (var2 = 0; var2 < 9; var2++) {
-          hh.field_b[var2] = new hl(1, 1);
+          hh.field_b[var2] = new Sprite(1, 1);
           hh.field_b[var2].field_B[0] = 65535;
         }
         var2Lifetime1 = 60 % ((param0 + 23) / 47);
-        sb.field_m = 33023;
+        BufferedSocket.field_m = 33023;
         hh.field_b[4] = null;
         ig.field_b = 16777215;
         sd.field_a = 33023;
         df.a(22050, false, 10);
         nb.field_f = df.a(nb.field_e, (java.awt.Component) ((Object) kj.field_E), 0, 512);
         ea.field_d = df.a(nb.field_e, (java.awt.Component) ((Object) kj.field_E), 1, 22050);
-        jk.field_k = new vi();
-        ti.field_f = new vi();
+        jk.field_k = new PcmStreamMixer();
+        ti.field_f = new PcmStreamMixer();
         nb.field_f.a(jk.field_k);
         ea.field_d.a(ti.field_f);
         se.field_m = 0;
@@ -3712,7 +3712,7 @@ public final class StarCannon extends ag {
                 nh.field_e = 0;
               }
             } else {
-              if (wk.a(77)) {
+              if (MouseInput.a(77)) {
                 field_z = vj.field_ab;
               } else {
                 oh.field_a = og.a(4, (byte) 113);
@@ -3764,7 +3764,7 @@ public final class StarCannon extends ag {
           fc.a(param0, param4, (byte) 95, param3);
           td.b(30000);
           ie.field_x = cl.field_k;
-          uh.field_k = cl.field_k;
+          DualLinkNode.field_k = cl.field_k;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "StarCannon.V(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

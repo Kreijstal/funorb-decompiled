@@ -55,7 +55,7 @@ abstract class kk {
         }
     }
 
-    final static void a(hl param0, int param1, String param2) {
+    final static void a(Sprite param0, int param1, String param2) {
         ba.field_c = param0;
         if (param1 > -54) {
           return;

@@ -31,7 +31,7 @@ final class nb {
           var10 = var8;
           var3 = var10.j(7909);
           var10.c(true);
-          uc.field_d = sb.a(var10, (byte) 107);
+          uc.field_d = BufferedSocket.a(var10, (byte) 107);
           ci.field_g = new lb[var3];
           ck.field_h = new int[var3][];
           for (var4 = 0; var3 > var4; var4++) {
@@ -132,7 +132,7 @@ final class nb {
         try {
           if (w.field_r == null ||
             !(param9 <= w.field_r.length)) {
-            ui.field_r = new int[param9];
+            SpriteState.field_r = new int[param9];
             w.field_r = new int[param9];
             mc.field_j = new int[param9];
           }
@@ -142,7 +142,7 @@ final class nb {
           var34 = var26;
           var30 = var34;
           var10 = var30;
-          var32 = ui.field_r;
+          var32 = SpriteState.field_r;
           var28 = var32;
           var11 = var28;
           var33 = mc.field_j;
@@ -346,7 +346,7 @@ final class nb {
 
     final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15) {
         int var17;
-        hl[] var18;
+        Sprite[] var18;
         var17 = StarCannon.field_A;
         if (param4 >= param11) {
           if (param4 < param5) {
@@ -370,12 +370,12 @@ final class nb {
           }
         }
         if (param0 <= 5) {
-          var18 = (hl[]) null;
-          nb.a(91, (byte) 22, 82, (hl[]) null, 63, -26, -49);
+          var18 = (Sprite[]) null;
+          nb.a(91, (byte) 22, 82, (Sprite[]) null, 63, -26, -49);
         }
     }
 
-    final static void a(int param0, byte param1, int param2, hl[] param3, int param4, int param5, int param6) {
+    final static void a(int param0, byte param1, int param2, Sprite[] param3, int param4, int param5, int param6) {
         int var22 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;

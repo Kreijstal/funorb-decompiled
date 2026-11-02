@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wf extends rf {
+final class wf extends IntrusiveNode {
     static long field_f;
     int field_g;
 
@@ -13,7 +13,7 @@ final class wf extends rf {
         RuntimeException decompiledCaughtException = null;
         try {
           jk.a(param1, (java.awt.Component) ((Object) param0));
-          wk.a((java.awt.Component) ((Object) param0), (byte) -64);
+          MouseInput.a((java.awt.Component) ((Object) param0), (byte) -64);
           if (param1) {
             wf.a(1);
           }

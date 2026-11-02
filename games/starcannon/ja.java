@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ja {
-    static hl field_e;
+    static Sprite field_e;
     static int field_d;
     private ue field_h;
     private ue field_b;
@@ -29,12 +29,12 @@ final class ja {
             stackIn_2_0 = 72;
             return stackIn_2_0;
           }
-          while (var3_int < uh.field_h.length) {
+          while (var3_int < DualLinkNode.field_h.length) {
             var5 = eg.field_a[var3_int];
             if (0 > var5) {
               var4 = var4 + sg.field_e;
             } else {
-              var6 = fb.$cfr$intArgs$a$1694234bddb3(uh.field_h[var3_int], 26, true);
+              var6 = fb.$cfr$intArgs$a$1694234bddb3(DualLinkNode.field_h[var3_int], 26, true);
               var4 = var4 + mc.field_h;
               var7 = ee.field_b - (var6 >> 1);
               if (rh.a(pk.field_c + (kc.field_S << 1), param1, (rh.field_i << 1) + var6, -rh.field_i + var7, var4, param0, -89)) {
@@ -54,26 +54,26 @@ final class ja {
         }
     }
 
-    private final ud a(int[] param0, int param1, int param2, int param3) {
+    private final PcmSample a(int[] param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        ud var8 = null;
+        PcmSample var8 = null;
         aj var9 = null;
-        ud var10 = null;
-        ud stackIn_4_0 = null;
+        PcmSample var10 = null;
+        PcmSample stackIn_4_0 = null;
         Object stackIn_8_0 = null;
-        ud stackIn_15_0 = null;
+        PcmSample stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ud var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param3 >>> 12 | (param3 & -805302273) << 4) ^ param1;
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int;
-          var8 = (ud) (this.field_a.a(var6, (byte) 111));
+          var8 = (PcmSample) (this.field_a.a(var6, (byte) 111));
           if (param2 != 0) {
             this.field_h = (ue) null;
           }
@@ -84,7 +84,7 @@ final class ja {
           if (param0 != null &&
             param0[0] <= 0) {
             stackIn_8_0 = null;
-            return (ud) (stackIn_8_0);
+            return (PcmSample) (stackIn_8_0);
           }
           var9 = aj.a(this.field_h, param3, param1);
           if (var9 == null) {
@@ -112,9 +112,9 @@ final class ja {
         }
     }
 
-    final ud a(int param0, int param1, byte param2) {
+    final PcmSample a(int param0, int param1, byte param2) {
         if (param2 != 41) {
-          return (ud) null;
+          return (PcmSample) null;
         }
         return this.a(param1, (byte) 127, param0, (int[]) null);
     }
@@ -128,25 +128,25 @@ final class ja {
         field_g = null;
     }
 
-    private final ud a(int param0, byte param1, int param2, int[] param3) {
+    private final PcmSample a(int param0, byte param1, int param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        ud var8 = null;
+        PcmSample var8 = null;
         nj var9 = null;
-        ud stackIn_2_0 = null;
-        ud stackIn_15_0 = null;
-        ud stackIn_20_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_15_0 = null;
+        PcmSample stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ud var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = param0 ^ (param2 >>> 12 | 65521 & param2 << 4);
           var5_int = var5_int | param2 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (ud) (this.field_a.a(var6, (byte) 60));
+          var8 = (PcmSample) (this.field_a.a(var6, (byte) 60));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -164,14 +164,14 @@ final class ja {
             this.field_f.a(var6, (byte) -100, var9);
           }
           if (param1 <= 120) {
-            stackIn_15_0 = (ud) null;
+            stackIn_15_0 = (PcmSample) null;
             return stackIn_15_0;
           }
           var8Lifetime1 = var9.a(param3);
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.b(4);
+          var9.unlink(4);
           this.field_a.a(var6, (byte) -100, var8Lifetime1);
           stackIn_20_0 = var8Lifetime1;
           return stackIn_20_0;
@@ -189,7 +189,7 @@ final class ja {
         }
     }
 
-    final ud b(int param0, int param1, int param2) {
+    final PcmSample b(int param0, int param1, int param2) {
         if (param2 < 87) {
           field_g = (String) null;
         }

@@ -3,17 +3,17 @@
  */
 import java.util.*;
 
-final class bh implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static mj field_b;
-    uh field_f;
-    static rk field_e;
+    DualLinkNode field_f;
+    static IntrusiveDeque field_e;
     static int field_d;
     static int[] field_c;
     static int field_a;
     static boolean field_g;
 
-    final uh b(int param0) {
-        uh var2 = this.field_f.field_m;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2 = this.field_f.secondaryNext;
         int var3 = -14 % ((param0 - 15) / 50);
         if (this.field_f != var2) {
           var2.a(-6242);
@@ -30,7 +30,7 @@ final class bh implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new ob(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
     final static String a(String param0, ue param1, byte param2, String param3, String param4) {
@@ -89,22 +89,22 @@ final class bh implements Iterable {
         }
     }
 
-    private bh() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 
-    final void a(uh param0, int param1) {
+    final void a(DualLinkNode param0, int param1) {
         try {
           if (param1 != 25184) {
             this.b(-80);
           }
-          if (null != param0.field_f) {
+          if (null != param0.secondaryPrevious) {
             param0.a(param1 - 31426);
           }
-          param0.field_m = this.field_f;
-          param0.field_f = this.field_f.field_f;
-          param0.field_f.field_m = param0;
-          param0.field_m.field_f = param0;
+          param0.secondaryNext = this.field_f;
+          param0.secondaryPrevious = this.field_f.secondaryPrevious;
+          param0.secondaryPrevious.secondaryNext = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "bh.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -114,6 +114,6 @@ final class bh implements Iterable {
         field_b = new mj("usename");
         field_d = -1;
         field_c = new int[8192];
-        field_e = new rk();
+        field_e = new IntrusiveDeque();
     }
 }

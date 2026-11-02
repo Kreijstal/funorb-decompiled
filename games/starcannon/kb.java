@@ -220,11 +220,11 @@ final class kb {
               stackIn_40_0 = null;
             }
             var21 = stackIn_40_0;
-            var22 = bh.field_c[var15Lifetime1];
+            var22 = SecondaryNodeDeque.field_c[var15Lifetime1];
             var23 = ri.field_a[var15Lifetime1];
-            var24 = bh.field_c[var16];
+            var24 = SecondaryNodeDeque.field_c[var16];
             var25 = ri.field_a[var16];
-            var26 = bh.field_c[var17];
+            var26 = SecondaryNodeDeque.field_c[var17];
             var27 = ri.field_a[var17];
             if (var18 == var19 &&
               var19 == var20) {

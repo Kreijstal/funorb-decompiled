@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class uh extends rf {
+class DualLinkNode extends IntrusiveNode {
     static p field_g;
-    uh field_m;
+    DualLinkNode secondaryNext;
     long field_j;
-    uh field_f;
+    DualLinkNode secondaryPrevious;
     static volatile int field_i;
     static pf field_k;
     static String[] field_h;
-    static vi field_l;
+    static PcmStreamMixer field_l;
 
     final static String a(int param0, int param1, char param2) {
         int var4 = 0;
@@ -57,7 +57,7 @@ class uh extends rf {
         field_h = null;
     }
 
-    final static hl c(byte param0) {
+    final static Sprite c(byte param0) {
         int var4_int = 0;
         int var5 = StarCannon.field_A;
         int var1 = gg.field_d[0] * gh.field_C[0];
@@ -66,7 +66,7 @@ class uh extends rf {
         for (var4_int = 0; var1 > var4_int; var4_int++) {
           var3[var4_int] = of.field_g[w.a(255, (int) var2[var4_int])];
         }
-        hl var4 = new hl(td.field_m, gb.field_w, fc.field_d[0], qd.field_H[0], gg.field_d[0], gh.field_C[0], var3);
+        Sprite var4 = new Sprite(td.field_m, gb.field_w, fc.field_d[0], qd.field_H[0], gg.field_d[0], gh.field_C[0], var3);
         if (param0 >= 2) {
           rc.b((byte) -121);
           return var4;
@@ -76,17 +76,17 @@ class uh extends rf {
         return var4;
     }
 
-    protected uh() {
+    protected DualLinkNode() {
     }
 
     final void a(int param0) {
-        if (this.field_f == null) {
+        if (this.secondaryPrevious == null) {
           return;
         }
-        this.field_f.field_m = this.field_m;
-        this.field_m.field_f = this.field_f;
-        this.field_f = null;
-        this.field_m = null;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryPrevious = null;
+        this.secondaryNext = null;
         if (param0 != -6242) {
           field_h = (String[]) null;
         }

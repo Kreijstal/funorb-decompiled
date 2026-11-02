@@ -6,7 +6,7 @@ final class af extends kf {
     static long field_x;
     static lk field_y;
 
-    final void a(int param0, int param1, int param2, uj param3, byte param4, int param5) {
+    final void a(int param0, int param1, int param2, UiWidget param3, byte param4, int param5) {
         RuntimeException runtimeException = null;
         tj var7 = null;
         RuntimeException stackIn_10_0 = null;
@@ -46,7 +46,7 @@ final class af extends kf {
         }
     }
 
-    private af(int param0, int param1, int param2, int param3, de param4, qg param5, uj param6) {
+    private af(int param0, int param1, int param2, int param3, de param4, qg param5, UiWidget param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.field_t = param6;

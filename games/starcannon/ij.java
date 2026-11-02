@@ -6,7 +6,7 @@ final class ij extends kk {
     private java.nio.ByteBuffer field_g;
 
     final static void a(int param0, boolean param1) {
-        rk.field_a = kk.field_a;
+        IntrusiveDeque.field_a = kk.field_a;
         ag.field_o = 0;
         ck.field_f = 0;
         fk.field_a = param0;

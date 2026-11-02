@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nd extends qf {
-    static hl[] field_j;
+    static Sprite[] field_j;
     static String field_l;
     static ue field_p;
     static int field_k;
@@ -39,7 +39,7 @@ final class nd extends qf {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!jj.a(200, var4)) {
-            stackIn_2_0 = sb.field_n;
+            stackIn_2_0 = BufferedSocket.field_n;
             return stackIn_2_0;
           }
           if (param1 != -26188) {
@@ -59,7 +59,7 @@ final class nd extends qf {
           if (this.field_o) {
             stackIn_16_0 = bf.field_x;
           } else {
-            stackIn_16_0 = sb.field_n;
+            stackIn_16_0 = BufferedSocket.field_n;
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -77,8 +77,8 @@ final class nd extends qf {
     }
 
     final static void a(int param0, int param1, int param2, int param3) {
-        ud var10 = gf.field_c[param3];
-        ud var11 = var10;
+        PcmSample var10 = gf.field_c[param3];
+        PcmSample var11 = var10;
         int var5 = var11.field_j * param0 / 1000;
         int var6 = var11.field_j * param2 / 1000;
         if (!(var11.field_i.length >= var5 + var6)) {
@@ -101,11 +101,11 @@ final class nd extends qf {
           var9 = var6;
         }
         if (param1 == -3763) {
-          gf.field_c[param3] = new ud(var11.field_j, var15, var8, var9, var10.field_k);
+          gf.field_c[param3] = new PcmSample(var11.field_j, var15, var8, var9, var10.field_k);
           return;
         }
         nd.a(false, -9, -79);
-        gf.field_c[param3] = new ud(var11.field_j, var15, var8, var9, var10.field_k);
+        gf.field_c[param3] = new PcmSample(var11.field_j, var15, var8, var9, var10.field_k);
     }
 
     final void f(int param0) {
@@ -187,7 +187,7 @@ final class nd extends qf {
         var4 = StarCannon.field_A;
         try {
           if (!param0) {
-            field_j = (hl[]) null;
+            field_j = (Sprite[]) null;
           }
           var3_int = 0;
           while (0 < param2) {
@@ -205,7 +205,7 @@ final class nd extends qf {
     }
 
     final static void b(int param0, byte param1) {
-        rf var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         of var4 = null;
         RuntimeException decompiledCaughtException = null;

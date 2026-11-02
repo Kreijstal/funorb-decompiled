@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInput implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static ae field_b;
     static String field_a;
 
@@ -10,7 +10,7 @@ final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           param0.removeMouseListener(rc.field_d);
           param0.removeMouseMotionListener(rc.field_d);
           param0.removeFocusListener(rc.field_d);
-          uh.field_i = 0;
+          DualLinkNode.field_i = 0;
           if (param1 != -64) {
             field_a = (String) null;
           }
@@ -62,10 +62,10 @@ final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
             dd.b(68);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
               na.field_c = 2;
-              uh.field_i = 2;
+              DualLinkNode.field_i = 2;
             } else {
               na.field_c = 1;
-              uh.field_i = 1;
+              DualLinkNode.field_i = 1;
             }
             var2_int = param0.getModifiers();
             if ((var2_int & 16) == 0) {
@@ -112,7 +112,7 @@ final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         try {
           if (null != rc.field_d) {
             pg.field_g = 0;
-            uh.field_i = 0;
+            DualLinkNode.field_i = 0;
             vj.field_Y = true;
             var2_int = param0.getModifiers();
             if ((16 & var2_int) != 0) {
@@ -140,7 +140,7 @@ final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
         }
     }
 
-    final static void a(int param0, rb param1, ka param2, boolean param3) {
+    final static void a(int param0, PacketBuffer param1, ka param2, boolean param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -418,7 +418,7 @@ final class wk implements java.awt.event.MouseListener, java.awt.event.MouseMoti
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (rc.field_d != null) {
-            uh.field_i = 0;
+            DualLinkNode.field_i = 0;
           }
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "wk.focusLost(" + (param0 != null ? "{...}" : "null") + ')');

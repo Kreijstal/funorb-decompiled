@@ -16,7 +16,7 @@ final class cl extends od {
     final s b(byte param0) {
         if (param0 != 1) {
           int[] var3 = (int[]) null;
-          cl.a(-8, (hl) null, false, true, (int[]) null, -126);
+          cl.a(-8, (Sprite) null, false, true, (int[]) null, -126);
         }
         return ef.field_e;
     }
@@ -26,12 +26,12 @@ final class cl extends od {
         ki.c(param2, param3, param4, param1);
     }
 
-    final static hl a(int param0, hl param1, boolean param2, boolean param3, int[] param4, int param5) {
+    final static Sprite a(int param0, Sprite param1, boolean param2, boolean param3, int[] param4, int param5) {
         int var13 = 0;
         int var17 = 0;
         int var18 = 0;
-        hl stackIn_3_0 = null;
-        hl stackIn_34_0 = null;
+        Sprite stackIn_3_0 = null;
+        Sprite stackIn_34_0 = null;
         RuntimeException stackIn_37_0 = null;
         StringBuilder stackIn_37_1 = null;
         String stackIn_38_2 = null;
@@ -49,7 +49,7 @@ final class cl extends od {
         int var16 = 0;
         int var19 = 0;
         int var20 = 0;
-        hl var21 = null;
+        Sprite var21 = null;
         int[] var23 = null;
         int[] var25 = null;
         int[] var27 = null;
@@ -58,10 +58,10 @@ final class cl extends od {
         var19 = StarCannon.field_A;
         try {
           if (param3) {
-            stackIn_3_0 = (hl) null;
+            stackIn_3_0 = (Sprite) null;
             return stackIn_3_0;
           }
-          var21 = new hl(param0 + (param0 + param1.field_u), param0 + param1.field_v + param0);
+          var21 = new Sprite(param0 + (param0 + param1.field_u), param0 + param1.field_v + param0);
           var21.field_x = param0 + (param1.field_x + param0);
           var21.field_q = param0 + (param0 + param1.field_q);
           var21.field_y = -param0 + param1.field_y;

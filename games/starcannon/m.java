@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class m {
-    static sb field_b;
+    static BufferedSocket field_b;
     static boolean field_c;
     static int field_e;
     static ai field_d;
-    static hl field_a;
+    static Sprite field_a;
     static re field_f;
 
     public static void b(int param0) {
@@ -63,22 +63,22 @@ final class m {
         if (param0 != 112) {
           return;
         }
-        bg.field_c.e(param2, param3);
+        KeyboardInput.field_c.e(param2, param3);
         if (!param1) {
           return;
         }
-        var4 = fk.field_a % bg.field_c.field_u * 2;
-        if (var4 >= bg.field_c.field_u) {
-          var4 = -var4 + (bg.field_c.field_u + bg.field_c.field_u);
+        var4 = fk.field_a % KeyboardInput.field_c.field_u * 2;
+        if (var4 >= KeyboardInput.field_c.field_u) {
+          var4 = -var4 + (KeyboardInput.field_c.field_u + KeyboardInput.field_c.field_u);
         }
         if (var4 < 10) {
           var4 = 10;
         } else {
-          if (-40 + bg.field_c.field_u < var4) {
-            var4 = bg.field_c.field_u - 40;
+          if (-40 + KeyboardInput.field_c.field_u < var4) {
+            var4 = KeyboardInput.field_c.field_u - 40;
           }
         }
-        sc.a(bg.field_c, param0 ^ 14352, 80, param2, 30, var4, 0, param3, 0);
+        sc.a(KeyboardInput.field_c, param0 ^ 14352, 80, param2, 30, var4, 0, param3, 0);
         return;
     }
 
@@ -93,22 +93,22 @@ final class m {
         if (param0 != 112) {
           return;
         }
-        bg.field_c.e(param2, param3);
+        KeyboardInput.field_c.e(param2, param3);
         if (!param1) {
           return;
         }
-        var4 = fk.field_a % bg.field_c.field_u * 2;
-        if (var4 >= bg.field_c.field_u) {
-          var4 = -var4 + (bg.field_c.field_u + bg.field_c.field_u);
+        var4 = fk.field_a % KeyboardInput.field_c.field_u * 2;
+        if (var4 >= KeyboardInput.field_c.field_u) {
+          var4 = -var4 + (KeyboardInput.field_c.field_u + KeyboardInput.field_c.field_u);
         }
         if (var4 < 10) {
           var4 = 10;
         } else {
-          if (-40 + bg.field_c.field_u < var4) {
-            var4 = bg.field_c.field_u - 40;
+          if (-40 + KeyboardInput.field_c.field_u < var4) {
+            var4 = KeyboardInput.field_c.field_u - 40;
           }
         }
-        sc.a(bg.field_c, param0 ^ 14352, 80, param2, 30, var4, 0, param3, 0);
+        sc.a(KeyboardInput.field_c, param0 ^ 14352, 80, param2, 30, var4, 0, param3, 0);
         return;
     }
 }

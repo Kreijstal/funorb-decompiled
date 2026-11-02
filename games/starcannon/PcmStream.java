@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class c extends rf {
+abstract class PcmStream extends IntrusiveNode {
     volatile boolean field_i;
     int field_g;
-    c field_h;
-    gk field_f;
+    PcmStream field_h;
+    AbstractAudioSample field_f;
 
     abstract int b();
 
@@ -19,13 +19,13 @@ abstract class c extends rf {
 
     abstract void a(int[] param0, int param1, int param2);
 
-    abstract c c();
+    abstract PcmStream c();
 
     abstract void a(int param0);
 
-    abstract c a();
+    abstract PcmStream a();
 
-    c() {
+    PcmStream() {
         this.field_i = true;
     }
 

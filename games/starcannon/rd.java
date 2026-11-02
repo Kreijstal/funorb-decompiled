@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class rd extends uh {
+class rd extends DualLinkNode {
     static String field_n;
-    static hl[] field_p;
+    static Sprite[] field_p;
     static String field_o;
     static String[] field_q;
 
@@ -17,7 +17,7 @@ class rd extends uh {
         field_p = null;
     }
 
-    final static vi d(int param0) {
+    final static PcmStreamMixer d(int param0) {
         if (param0 >= -8) {
           field_q = (String[]) null;
           return hh.field_d;

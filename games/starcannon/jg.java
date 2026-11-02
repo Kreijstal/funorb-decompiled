@@ -8,7 +8,7 @@ final class jg extends dk {
     static int field_H;
     static ue field_F;
     private he field_D;
-    static hl[] field_C;
+    static Sprite[] field_C;
 
     final String d(int param0) {
         if (this.field_h) {
@@ -21,11 +21,11 @@ final class jg extends dk {
         return null;
     }
 
-    final void a(int param0, int param1, uj param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           if (param0 < 27) {
-            uj var6 = (uj) null;
-            this.a(64, (uj) null);
+            UiWidget var6 = (UiWidget) null;
+            this.a(64, (UiWidget) null);
           }
           this.field_G = this.field_G + 1;
           super.a(40, param1, param2, param3);
@@ -41,10 +41,10 @@ final class jg extends dk {
         int var9;
         int var10;
         int var11;
-        hl var13;
-        hl var14;
-        hl var15;
-        hl var16;
+        Sprite var13;
+        Sprite var14;
+        Sprite var15;
+        Sprite var16;
         int var9Lifetime1;
         int var10Lifetime1;
         var11 = StarCannon.field_A;
@@ -60,18 +60,18 @@ final class jg extends dk {
           var9 = var16.field_x << 1;
           var10 = var16.field_q << 1;
           if (fe.field_H == null) {
-            fe.field_H = new hl(var9, var10);
+            fe.field_H = new Sprite(var9, var10);
             bc.a(fe.field_H, 26095);
           } else {
             if (fe.field_H.field_u < var9) {
-              fe.field_H = new hl(var9, var10);
+              fe.field_H = new Sprite(var9, var10);
               bc.a(fe.field_H, 26095);
             } else {
               if (fe.field_H.field_v >= var10) {
                 bc.a(fe.field_H, 26095);
                 ki.b();
               } else {
-                fe.field_H = new hl(var9, var10);
+                fe.field_H = new Sprite(var9, var10);
                 bc.a(fe.field_H, 26095);
               }
             }
@@ -82,7 +82,7 @@ final class jg extends dk {
           return;
         }
         if (var8 != cd.field_a) {
-          if (var8 == sb.field_n) {
+          if (var8 == BufferedSocket.field_n) {
             var14 = fi.field_g[2];
             var14.f(var5 - (var14.field_u >> 1), var6 - (var14.field_v >> 1), 256);
             return;
@@ -98,18 +98,18 @@ final class jg extends dk {
         var9Lifetime1 = var15.field_x << 1;
         var10Lifetime1 = var15.field_q << 1;
         if (fe.field_H == null) {
-          fe.field_H = new hl(var9Lifetime1, var10Lifetime1);
+          fe.field_H = new Sprite(var9Lifetime1, var10Lifetime1);
           bc.a(fe.field_H, 26095);
         } else {
           if (fe.field_H.field_u < var9Lifetime1) {
-            fe.field_H = new hl(var9Lifetime1, var10Lifetime1);
+            fe.field_H = new Sprite(var9Lifetime1, var10Lifetime1);
             bc.a(fe.field_H, 26095);
           } else {
             if (fe.field_H.field_v >= var10Lifetime1) {
               bc.a(fe.field_H, 26095);
               ki.b();
             } else {
-              fe.field_H = new hl(var9Lifetime1, var10Lifetime1);
+              fe.field_H = new Sprite(var9Lifetime1, var10Lifetime1);
               bc.a(fe.field_H, 26095);
             }
           }
@@ -119,7 +119,7 @@ final class jg extends dk {
         fe.field_H.f(var5 - var15.field_x, -var15.field_q + var6, 256);
     }
 
-    final boolean a(int param0, uj param1) {
+    final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -171,7 +171,7 @@ final class jg extends dk {
     }
 
     static {
-        field_C = new hl[10];
+        field_C = new Sprite[10];
         field_I = "Revenge fleet destroyed<br><br>CONGRATULATIONS<br><br>Final score: ";
     }
 }

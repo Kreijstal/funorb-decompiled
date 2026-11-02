@@ -92,7 +92,7 @@ final class ef implements Runnable {
         var2.f((byte) -104);
         if (param0 == -57) {
           var2.f((byte) -110);
-          var1.b(4);
+          var1.unlink(4);
           return;
         }
     }
@@ -281,7 +281,7 @@ final class ef implements Runnable {
             try {
               var3_int = -20 / ((param2 - 8) / 58);
               var4 = new java.net.URL(param1.getCodeBase(), param0);
-              var4 = wh.a(127, var4, param1);
+              var4 = NodeHashTableIterator.a(127, var4, param1);
               ag.a(true, var4.toString(), 64, param1);
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {

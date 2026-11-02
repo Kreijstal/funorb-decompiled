@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vc extends rf {
+final class vc extends IntrusiveNode {
     static String field_k;
     boolean field_j;
     static String field_f;
     int[][] field_o;
     int field_l;
-    static hl[] field_m;
+    static Sprite[] field_m;
     long[][] field_g;
     String[][] field_n;
     int field_i;

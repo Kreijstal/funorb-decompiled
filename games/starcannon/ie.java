@@ -4,12 +4,12 @@
 final class ie extends kf {
     static int field_z;
     static gi field_y;
-    static hl[] field_B;
+    static Sprite[] field_B;
     static int field_C;
     static volatile int field_D;
     int field_w;
     static pf field_x;
-    static hl[] field_A;
+    static Sprite[] field_A;
 
     static long a(long param0, long param1) {
         return param0 | param1;
@@ -29,7 +29,7 @@ final class ie extends kf {
           this.field_t.a(param0, param1 + this.field_s, (byte) 49, param3 + this.field_j);
           return;
         }
-        hl var6 = new hl(this.field_t.field_i, this.field_t.field_f);
+        Sprite var6 = new Sprite(this.field_t.field_i, this.field_t.field_f);
         bc.a(var6, 26095);
         this.field_t.a(param0, 0, param2, 0);
         wf.a(-110);
@@ -50,7 +50,7 @@ final class ie extends kf {
         field_B = null;
     }
 
-    ie(uj param0) {
+    ie(UiWidget param0) {
         super(param0.field_s, param0.field_j, param0.field_i, param0.field_f, (de) null, (qg) null);
         try {
           param0.a(0, this.field_i, (byte) 117, this.field_f, 0);

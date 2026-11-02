@@ -6,7 +6,7 @@ import java.util.*;
 
 final class fl extends oe {
     static String field_g;
-    static hl[] field_f;
+    static Sprite[] field_f;
     static String field_i;
     private java.net.ProxySelector field_j;
     static wd field_h;

@@ -109,7 +109,7 @@ final class mc {
         return new byte[param1];
     }
 
-    final static void a(int param0, hl[] param1, int param2, int param3, int param4, int param5) {
+    final static void a(int param0, Sprite[] param1, int param2, int param3, int param4, int param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;

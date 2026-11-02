@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ff extends uh {
+final class ff extends DualLinkNode {
     private String[] field_t;
     static int field_o;
     static String field_p;
@@ -12,7 +12,7 @@ final class ff extends uh {
 
     final static String g(int param0) {
         int var1 = 31 % ((param0 - 57) / 43);
-        if (jl.field_a == uh.field_k) {
+        if (jl.field_a == DualLinkNode.field_k) {
           return jl.field_c;
         }
         if (jl.field_a == ie.field_x) {
@@ -75,7 +75,7 @@ final class ff extends uh {
         }
     }
 
-    private final void a(rb param0, int param1, byte param2) {
+    private final void a(PacketBuffer param0, int param1, byte param2) {
         int[] array$0 = null;
         int var9 = 0;
         RuntimeException stackIn_20_0 = null;
@@ -121,7 +121,7 @@ final class ff extends uh {
               }
             }
           } else {
-            this.field_t = uj.a(-46, '<', param0.a(-50));
+            this.field_t = UiWidget.a(-46, '<', param0.a(-50));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -138,7 +138,7 @@ final class ff extends uh {
         }
     }
 
-    final void a(rb param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_9_0 = null;

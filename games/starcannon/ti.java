@@ -5,16 +5,16 @@ abstract class ti {
     static String field_g;
     static boolean field_d;
     static tc field_b;
-    static rk field_a;
-    static hl[] field_e;
-    static vi field_f;
+    static IntrusiveDeque field_a;
+    static Sprite[] field_e;
+    static PcmStreamMixer field_f;
     static int field_c;
 
     abstract byte[] b(int param0, boolean param1);
 
     final static int b(int param0, int param1) {
         if (param1 != 2047) {
-          field_f = (vi) null;
+          field_f = (PcmStreamMixer) null;
           return gl.field_b[param0 & 2047];
         }
         return gl.field_b[param0 & 2047];

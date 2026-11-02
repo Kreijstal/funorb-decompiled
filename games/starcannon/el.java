@@ -8,9 +8,9 @@ final class el extends dk {
     static boolean[] field_D;
     int field_E;
     static String[] field_A;
-    static hl[] field_H;
+    static Sprite[] field_H;
     int field_I;
-    static hl field_J;
+    static Sprite field_J;
     int field_B;
 
     public static void e(byte param0) {
@@ -29,7 +29,7 @@ final class el extends dk {
           qc.field_g = param1;
           u.field_c = param0;
           if (!param3) {
-            field_J = (hl) null;
+            field_J = (Sprite) null;
           }
           qf.field_g = param2;
         } catch (RuntimeException runtimeException) {
@@ -99,14 +99,14 @@ final class el extends dk {
         }
     }
 
-    final static hl[] b(int param0, int param1, int param2, int param3) {
+    final static Sprite[] b(int param0, int param1, int param2, int param3) {
         if (param1 != 22396) {
-          return (hl[]) null;
+          return (Sprite[]) null;
         }
         return oj.a(-1, param0, 1, param2, param3);
     }
 
-    final boolean a(uj param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;

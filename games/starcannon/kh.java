@@ -11,7 +11,7 @@ final class kh extends vk implements dc, ga, qk {
     private gh field_D;
     private dk field_M;
     kd field_H;
-    static rk field_y;
+    static IntrusiveDeque field_y;
     private ng field_J;
     private ng field_L;
 
@@ -64,14 +64,14 @@ final class kh extends vk implements dc, ga, qk {
         this.field_K = new ng("", (qg) null, 3);
         int var1 = 1;
         this.field_D = new gh("", (qg) null, var1 != 0);
-        this.field_M = new dk(wk.field_a, (qg) null);
+        this.field_M = new dk(MouseInput.field_a, (qg) null);
         this.field_I = new dk(fk.field_v, (qg) null);
         this.field_J.field_p = ld.field_jb;
         this.field_z.field_p = q.field_h;
         this.field_E.field_p = ca.field_M;
         this.field_L.field_p = mf.field_e;
         this.field_G.field_p = lh.field_n;
-        this.field_K.field_p = ob.field_a;
+        this.field_K.field_p = SecondaryNodeDequeIterator.field_a;
         this.field_D.field_p = ej.field_q;
         this.field_J.a(new nd(this.field_J), 0);
         this.field_z.a(new mh(this.field_z), 0);
@@ -125,7 +125,7 @@ final class kh extends vk implements dc, ga, qk {
         this.a(0, 496, (byte) 121, var3 + (55 + var6), 0);
     }
 
-    private final int a(int param0, String param1, boolean param2, int param3, uj param4) {
+    private final int a(int param0, String param1, boolean param2, int param3, UiWidget param4) {
         ad var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_1_0 = 0;
@@ -177,13 +177,13 @@ final class kh extends vk implements dc, ga, qk {
             return true;
           }
           var4 = var3.b((byte) -128);
-          if (var4 == sb.field_n) {
+          if (var4 == BufferedSocket.field_n) {
             return false;
           }
           if (cg.field_g == var4) {
             return false;
           }
-          if (uh.field_g != var4) {
+          if (DualLinkNode.field_g != var4) {
             return true;
           }
           return false;
@@ -233,10 +233,10 @@ final class kh extends vk implements dc, ga, qk {
         RuntimeException var6 = null;
         try {
           if (param2) {
-            field_y = (rk) null;
+            field_y = (IntrusiveDeque) null;
           }
           if (this.field_I == param0) {
-            ob.b(11);
+            SecondaryNodeDequeIterator.b(11);
           } else {
             if (param0 == this.field_M) {
               discarded$1 = this.i(-1);
@@ -265,7 +265,7 @@ final class kh extends vk implements dc, ga, qk {
         }
     }
 
-    private final int a(int param0, uj param1, String param2, int param3, int param4) {
+    private final int a(int param0, UiWidget param1, String param2, int param3, int param4) {
         RuntimeException var6 = null;
         jg var7 = null;
         int var8 = 0;
@@ -306,7 +306,7 @@ final class kh extends vk implements dc, ga, qk {
         }
     }
 
-    private final int a(byte param0, int param1, String param2, String param3, int param4, int param5, uj param6) {
+    private final int a(byte param0, int param1, String param2, String param3, int param4, int param5, UiWidget param6) {
         RuntimeException var8 = null;
         pa var9 = null;
         ad var10 = null;
@@ -358,7 +358,7 @@ final class kh extends vk implements dc, ga, qk {
         }
     }
 
-    final void a(int param0, int param1, uj param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         try {
           super.a(31, param1, param2, param3);
           this.field_M.field_u = this.k(-1);
@@ -393,7 +393,7 @@ final class kh extends vk implements dc, ga, qk {
         return "</col></u>";
     }
 
-    private final int a(uj param0, int param1, String param2, int param3, String param4, int param5) {
+    private final int a(UiWidget param0, int param1, String param2, int param3, String param4, int param5) {
         int var7_int = 0;
         RuntimeException var7 = null;
         int stackIn_1_0 = 0;
@@ -702,7 +702,7 @@ final class kh extends vk implements dc, ga, qk {
         }
     }
 
-    final boolean a(uj param0, char param1, byte param2, int param3) {
+    final boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -739,12 +739,12 @@ final class kh extends vk implements dc, ga, qk {
 
     public static void h(byte param0) {
         if (param0 != 126) {
-          field_y = (rk) null;
+          field_y = (IntrusiveDeque) null;
         }
         field_y = null;
     }
 
     static {
-        field_y = new rk();
+        field_y = new IntrusiveDeque();
     }
 }

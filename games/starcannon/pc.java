@@ -3,7 +3,7 @@
  */
 final class pc {
     static String field_c;
-    static hl field_a;
+    static Sprite field_a;
     static String field_b;
 
     final static void a(int param0) {

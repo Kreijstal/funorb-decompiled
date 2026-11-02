@@ -55,102 +55,102 @@ final class ig {
         int var7Lifetime1Lifetime1;
         try {
           m.field_c = true;
-          bh.field_a = param1;
+          SecondaryNodeDeque.field_a = param1;
           if (param0 < 59) {
             field_b = 5;
           }
-          if (0 == bh.field_a) {
+          if (0 == SecondaryNodeDeque.field_a) {
             var3_int = lb.a(qa.field_c, gi.field_f, mg.field_m, rh.field_h, -80);
             var4 = 3 + var3_int;
             eg.field_a = new int[var4];
-            uh.field_h = new String[var4];
+            DualLinkNode.field_h = new String[var4];
             for (var5 = 0; var4 > var5; var5++) {
               eg.field_a[var5] = -1;
             }
             od.field_h = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
-              uh.field_h[var5] = gi.field_f[var5];
+              DualLinkNode.field_h[var5] = gi.field_f[var5];
             }
-            uh.field_h[var4 - 3] = "";
-            uh.field_h[-2 + var4] = oi.field_j;
+            DualLinkNode.field_h[var4 - 3] = "";
+            DualLinkNode.field_h[-2 + var4] = oi.field_j;
             eg.field_a[-2 + var4] = 0;
             od.field_h[0] = 4;
-            uh.field_h[-1 + var4] = mc.field_e;
+            DualLinkNode.field_h[-1 + var4] = mc.field_e;
             eg.field_a[var4 - 1] = 1;
             od.field_h[1] = 5;
-          } else if (1 == bh.field_a) {
+          } else if (1 == SecondaryNodeDeque.field_a) {
             var3_int = lb.a(qa.field_c, gi.field_f, mg.field_m, rh.field_h, -128);
             var4 = var3_int + 2;
-            uh.field_h = new String[var4];
+            DualLinkNode.field_h = new String[var4];
             eg.field_a = new int[var4];
             for (var5 = 0; var5 < var4; var5++) {
               eg.field_a[var5] = -1;
             }
             od.field_h = new int[1];
             for (var5 = 0; var5 < var3_int; var5++) {
-              uh.field_h[var5] = gi.field_f[var5];
+              DualLinkNode.field_h[var5] = gi.field_f[var5];
             }
-            uh.field_h[-2 + var4] = "";
-            uh.field_h[var4 - 1] = mc.field_e;
+            DualLinkNode.field_h[-2 + var4] = "";
+            DualLinkNode.field_h[var4 - 1] = mc.field_e;
             eg.field_a[var4 - 1] = 0;
             od.field_h[0] = 5;
-          } else if (bh.field_a != 2) {
-            if (bh.field_a == 3) {
+          } else if (SecondaryNodeDeque.field_a != 2) {
+            if (SecondaryNodeDeque.field_a == 3) {
               if (!nb.field_e.field_n) {
                 var3_int = lb.a(qa.field_c, gi.field_f, wc.field_h, rh.field_h, -110);
               } else {
                 var3_int = lb.a(qa.field_c, gi.field_f, lc.field_fb, rh.field_h, -101);
               }
               var4 = 2 + var3_int;
-              uh.field_h = new String[var4];
+              DualLinkNode.field_h = new String[var4];
               eg.field_a = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 eg.field_a[var5] = -1;
               }
               od.field_h = new int[1];
               for (var5 = 0; var5 < var3_int; var5++) {
-                uh.field_h[var5] = gi.field_f[var5];
+                DualLinkNode.field_h[var5] = gi.field_f[var5];
               }
-              uh.field_h[var4 - 2] = "";
-              uh.field_h[-1 + var4] = mc.field_e;
+              DualLinkNode.field_h[var4 - 2] = "";
+              DualLinkNode.field_h[-1 + var4] = mc.field_e;
               eg.field_a[-1 + var4] = 0;
               od.field_h[0] = 5;
-            } else if (bh.field_a == 4) {
+            } else if (SecondaryNodeDeque.field_a == 4) {
               var3_int = lb.a(qa.field_c, gi.field_f, kd.field_D, rh.field_h, -62);
               var4 = 2 + var3_int;
               eg.field_a = new int[var4];
-              uh.field_h = new String[var4];
+              DualLinkNode.field_h = new String[var4];
               for (var5 = 0; var4 > var5; var5++) {
                 eg.field_a[var5] = -1;
               }
               od.field_h = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                uh.field_h[var5] = gi.field_f[var5];
+                DualLinkNode.field_h[var5] = gi.field_f[var5];
               }
-              uh.field_h[-2 + var4] = "";
-              uh.field_h[var4 - 1] = mc.field_e;
+              DualLinkNode.field_h[-2 + var4] = "";
+              DualLinkNode.field_h[var4 - 1] = mc.field_e;
               eg.field_a[var4 - 1] = 0;
               od.field_h[0] = 5;
             } else {
-              if (bh.field_a != 5) {
+              if (SecondaryNodeDeque.field_a != 5) {
                 throw new IllegalArgumentException();
               }
               var3_int = lb.a(qa.field_c, gi.field_f, mc.field_a, rh.field_h, -105);
               var4 = var3_int + 3;
-              uh.field_h = new String[var4];
+              DualLinkNode.field_h = new String[var4];
               eg.field_a = new int[var4];
               for (var5 = 0; var5 < var4; var5++) {
                 eg.field_a[var5] = -1;
               }
               od.field_h = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
-                uh.field_h[var5] = gi.field_f[var5];
+                DualLinkNode.field_h[var5] = gi.field_f[var5];
               }
-              uh.field_h[-3 + var4] = "";
-              uh.field_h[var4 - 2] = o.field_c;
+              DualLinkNode.field_h[-3 + var4] = "";
+              DualLinkNode.field_h[var4 - 2] = o.field_c;
               eg.field_a[-2 + var4] = 0;
               od.field_h[0] = 3;
-              uh.field_h[var4 - 1] = mc.field_e;
+              DualLinkNode.field_h[var4 - 1] = mc.field_e;
               eg.field_a[-1 + var4] = 1;
               od.field_h[1] = 5;
             }
@@ -200,24 +200,24 @@ final class ig {
             }
             var6 = stackIn_33_0;
             var7 = var6 + (var5 + 7);
-            uh.field_h = new String[var7];
+            DualLinkNode.field_h = new String[var7];
             eg.field_a = new int[var7];
             for (var8 = 0; var8 < var7; var8++) {
               eg.field_a[var8] = -1;
             }
-            uh.field_h[0] = fb.field_f;
-            uh.field_h[1] = ac.field_g;
+            DualLinkNode.field_h[0] = fb.field_f;
+            DualLinkNode.field_h[1] = ac.field_g;
             od.field_h = new int[2];
             eg.field_a[1] = 0;
-            uh.field_h[4] = sh.field_s;
+            DualLinkNode.field_h[4] = sh.field_s;
             od.field_h[0] = 5;
-            uh.field_h[5] = "";
-            uh.field_h[2] = og.field_e;
-            uh.field_h[3] = rj.field_m;
+            DualLinkNode.field_h[5] = "";
+            DualLinkNode.field_h[2] = og.field_e;
+            DualLinkNode.field_h[3] = rj.field_m;
             od.field_h[1] = 2;
             eg.field_a[3] = 1;
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
-              stackIn_40_0 = uh.field_h;
+              stackIn_40_0 = DualLinkNode.field_h;
               stackIn_40_1 = var8Lifetime2 + 6;
               if (var8Lifetime2 + ri.field_b.length - var5 < 0) {
                 stackIn_41_2 = "";
@@ -226,10 +226,10 @@ final class ig {
               }
               stackIn_40_0[stackIn_40_1] = stackIn_41_2;
             }
-            uh.field_h[var5 + 6] = null;
+            DualLinkNode.field_h[var5 + 6] = null;
             eg.field_a[var5 + 6] = -2;
             for (var8Lifetime3 = 0; var6 > var8Lifetime3; var8Lifetime3++) {
-              stackIn_46_0 = uh.field_h;
+              stackIn_46_0 = DualLinkNode.field_h;
               stackIn_46_1 = 7 + var5 + var8Lifetime3;
               if (var8Lifetime3 >= rd.field_q.length) {
                 stackIn_47_2 = "";
@@ -242,8 +242,8 @@ final class ig {
           }
           ja.field_c.field_b = od.field_h.length;
           var3_intLifetime1 = 0;
-          for (var4Lifetime1 = 0; uh.field_h.length > var4Lifetime1; var4Lifetime1++) {
-            stackIn_88_0 = uh.field_h[var4Lifetime1];
+          for (var4Lifetime1 = 0; DualLinkNode.field_h.length > var4Lifetime1; var4Lifetime1++) {
+            stackIn_88_0 = DualLinkNode.field_h[var4Lifetime1];
             stackIn_88_1 = 26;
             stackIn_89_2 = !(eg.field_a[var4Lifetime1] < 0);
             var5Lifetime1 = fb.$cfr$intArgs$a$1694234bddb3(stackIn_88_0, stackIn_88_1, stackIn_89_2);
@@ -251,7 +251,7 @@ final class ig {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (bh.field_a == 2) {
+          if (SecondaryNodeDeque.field_a == 2) {
             var9 = se.field_n;
             for (var5Lifetime2 = 0; var9.length > var5Lifetime2; var5Lifetime2++) {
               var11 = var9[var5Lifetime2];
@@ -272,7 +272,7 @@ final class ig {
           kl.field_d = ee.field_b + var3_intLifetime1 - (var3_intLifetime1 >> 1);
           ef.field_b = ja.field_c.field_b * (mc.field_h + kc.field_S << 1);
           p.field_g = -(var3_intLifetime1 >> 1) + ee.field_b;
-          for (var4Lifetime2 = 0; var4Lifetime2 < uh.field_h.length; var4Lifetime2++) {
+          for (var4Lifetime2 = 0; var4Lifetime2 < DualLinkNode.field_h.length; var4Lifetime2++) {
             stackIn_113_0 = ef.field_b;
             if (eg.field_a[var4Lifetime2] >= 0) {
               stackIn_114_1 = pk.field_c;
@@ -281,14 +281,14 @@ final class ig {
             }
             ef.field_b = stackIn_113_0 + stackIn_114_1;
           }
-          nd.field_m = th.field_c - (ef.field_b >> 1);
-          oh.field_e = new int[uh.field_h.length][];
+          nd.field_m = GameApplet.field_c - (ef.field_b >> 1);
+          oh.field_e = new int[DualLinkNode.field_h.length][];
           var4Lifetime3 = 0;
           var5Lifetime3 = nd.field_m;
-          while (uh.field_h.length > var4Lifetime3) {
+          while (DualLinkNode.field_h.length > var4Lifetime3) {
             var6Lifetime1 = eg.field_a[var4Lifetime3];
             if (0 <= var6Lifetime1) {
-              var7Lifetime2 = fb.$cfr$intArgs$a$1694234bddb3(uh.field_h[var4Lifetime3], 26, true);
+              var7Lifetime2 = fb.$cfr$intArgs$a$1694234bddb3(DualLinkNode.field_h[var4Lifetime3], 26, true);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + ee.field_b;
               var5Lifetime3 = var5Lifetime3 + mc.field_h;
               oh.field_e[var4Lifetime3] = new int[4];
@@ -302,7 +302,7 @@ final class ig {
             }
             var4Lifetime3++;
           }
-          if (bh.field_a != 2) {
+          if (SecondaryNodeDeque.field_a != 2) {
             ja.field_c.a(false, param2, 0, ja.a(la.field_c, pe.field_d, 95));
           } else {
             ja.field_c.a(false, param2, -1, -1);

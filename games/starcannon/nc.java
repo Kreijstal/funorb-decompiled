@@ -168,7 +168,7 @@ final class nc {
         }
     }
 
-    final void a(rb param0, boolean param1, byte[] param2) {
+    final void a(PacketBuffer param0, boolean param1, byte[] param2) {
         try {
           Exception exception = null;
           RuntimeException runtimeException = null;
@@ -179,13 +179,13 @@ final class nc {
           String stackIn_19_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (param0.field_f[param0.field_g] == 31 &&
-              -117 == param0.field_f[1 + param0.field_g]) {
+            if (param0.payload[param0.position] == 31 &&
+              -117 == param0.payload[1 + param0.position]) {
               if (null == this.field_b) {
                 this.field_b = new java.util.zip.Inflater(true);
               }
               try {
-                this.field_b.setInput(param0.field_f, 10 + param0.field_g, -10 + (-param0.field_g - (8 - param0.field_f.length)));
+                this.field_b.setInput(param0.payload, 10 + param0.position, -10 + (-param0.position - (8 - param0.payload.length)));
                 this.field_b.inflate(param2);
                 if (!param1) {
                   field_a = (String) null;
@@ -255,23 +255,23 @@ final class nc {
           }
           if (param1 != ~var2_int) {
             boolean decompiledFrameRemainder0 = true;
-            if (rk.field_a < kk.field_c) {
-              rk.field_a = rk.field_a + 1;
-              if (kk.field_a < rk.field_a && (null == og.field_d ||
+            if (IntrusiveDeque.field_a < kk.field_c) {
+              IntrusiveDeque.field_a = IntrusiveDeque.field_a + 1;
+              if (kk.field_a < IntrusiveDeque.field_a && (null == og.field_d ||
                 null == og.field_d[ag.field_o])) {
-                rk.field_a = rk.field_a - 1;
+                IntrusiveDeque.field_a = IntrusiveDeque.field_a - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                if (kk.field_c <= rk.field_a &&
+                if (kk.field_c <= IntrusiveDeque.field_a &&
                   null == og.field_d[(ag.field_o + 1) % var2_int]) {
-                  rk.field_a = rk.field_a - 1;
+                  IntrusiveDeque.field_a = IntrusiveDeque.field_a - 1;
                 }
               }
             }
-            if (rk.field_a >= kk.field_c) {
+            if (IntrusiveDeque.field_a >= kk.field_c) {
               od.field_i = ag.field_o;
-              rk.field_a = rk.field_a - kk.field_c;
+              IntrusiveDeque.field_a = IntrusiveDeque.field_a - kk.field_c;
               if (cc.field_j) {
                 ag.field_o = ag.field_o + 1;
                 if (var2_int <= ag.field_o) {
@@ -284,7 +284,7 @@ final class nc {
                 }
               }
             }
-            if (rk.field_a > kk.field_a) {
+            if (IntrusiveDeque.field_a > kk.field_a) {
               cc.field_j = true;
             }
           }
@@ -298,26 +298,26 @@ final class nc {
                 rg.field_B < 269) {
                 cc.field_j = false;
                 var4 = 1;
-                rk.field_a = kk.field_c;
+                IntrusiveDeque.field_a = kk.field_c;
               }
               if (rg.field_B > 586 &&
                 rg.field_B < 586 + ge.field_b.field_u) {
                 cc.field_j = true;
-                rk.field_a = kk.field_c;
+                IntrusiveDeque.field_a = kk.field_c;
                 var4 = 1;
               }
             }
             if (var4 == 0 &&
-              kk.field_a < rk.field_a &&
+              kk.field_a < IntrusiveDeque.field_a &&
               var3 < la.field_c &&
               la.field_c < var3 + ge.field_b.field_v) {
               if (269 - ge.field_b.field_u < pe.field_d &&
                 269 > pe.field_d) {
-                rk.field_a = kk.field_a;
+                IntrusiveDeque.field_a = kk.field_a;
               }
               if (pe.field_d > 586 &&
                 586 + ge.field_b.field_u > pe.field_d) {
-                rk.field_a = kk.field_a;
+                IntrusiveDeque.field_a = kk.field_a;
               }
             }
           }
@@ -407,10 +407,10 @@ final class nc {
         if (param0 < 45) {
           return;
         }
-        int var1 = ii.a(6940);
+        int var1 = ClientException.a(6940);
         int var2 = wc.d(20);
         u.field_c.a(-qf.field_g + p.field_g, (qf.field_g << 1) + var1, 122, nd.field_m - qc.field_g, var2 + (qc.field_g << 1));
-        bg.b(1000);
+        KeyboardInput.b(1000);
     }
 
     private nc(int param0, int param1, int param2) {

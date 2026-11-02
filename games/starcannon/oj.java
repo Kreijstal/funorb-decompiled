@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends rf {
+final class oj extends IntrusiveNode {
     static ae field_j;
     int field_h;
     int field_i;
@@ -17,11 +17,11 @@ final class oj extends rf {
         return pg.field_g;
     }
 
-    final static hl a(int param0, int param1, int param2) {
+    final static Sprite a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = StarCannon.field_A;
-        hl var6 = new hl(param2, param2);
-        hl var3 = var6;
+        Sprite var6 = new Sprite(param2, param2);
+        Sprite var3 = var6;
         for (var4 = param0; var3.field_B.length > var4; var4++) {
           var6.field_B[var4] = param1;
         }
@@ -38,16 +38,16 @@ final class oj extends rf {
         }
     }
 
-    final static hl[] a(int param0, int param1, int param2, int param3, int param4) {
-        hl[] var6 = new hl[9];
-        hl[] var5 = var6;
-        hl dupTemp$0 = oj.a(0, param1, param2);
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = oj.a(0, param1, param2);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        hl dupTemp$1 = oj.a(0, param3, param2);
+        Sprite dupTemp$1 = oj.a(0, param3, param2);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;

@@ -5,7 +5,7 @@ class df {
     private static ck field_q;
     private int field_b;
     static int field_n;
-    private c field_i;
+    private PcmStream field_i;
     private long field_h;
     private static int field_d;
     static boolean field_l;
@@ -16,8 +16,8 @@ class df {
     private int field_g;
     private boolean field_t;
     private int field_j;
-    private c[] field_p;
-    private c[] field_a;
+    private PcmStream[] field_p;
+    private PcmStream[] field_a;
     private int field_m;
     private int field_r;
     private int field_e;
@@ -40,7 +40,7 @@ class df {
     void a(int param0) throws Exception {
     }
 
-    final synchronized void a(c param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_i = param0;
     }
 
@@ -59,9 +59,9 @@ class df {
         }
     }
 
-    private final void a(c param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        c var4 = this.field_a[var3];
+        PcmStream var4 = this.field_a[var3];
         if (var4 == null) {
           this.field_p[var3] = param0;
         } else {
@@ -108,20 +108,20 @@ class df {
         int var7_int;
         Object var7;
         int var8_int;
-        c[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        c var11;
-        gk var12;
+        PcmStream var11;
+        AbstractAudioSample var12;
         int var13;
-        c var14;
+        PcmStream var14;
         int var15_int;
-        c var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        c var14Lifetime1;
-        c var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_l) {
           var3 = var3 << 1;
@@ -136,7 +136,7 @@ class df {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -169,7 +169,7 @@ class df {
                       var12.field_f = var12.field_f + var13;
                     }
                     if (var4 >= this.field_b) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.c();
                     if (var14Lifetime2 != null) {
@@ -182,12 +182,12 @@ class df {
                     var15 = var11.field_h;
                     var11.field_h = null;
                     if (var10 != null) {
-                      ((c) (var10)).field_h = var15;
+                      ((PcmStream) (var10)).field_h = var15;
                     } else {
                       this.field_p[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_a[var7_int] = (c) (var10);
+                      this.field_a[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -208,8 +208,8 @@ class df {
             this.field_a[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((c) (var7)).field_h;
-              ((c) (var7)).field_h = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_h;
+              ((PcmStream) (var7)).field_h = null;
               var7 = var10Lifetime1;
             }
           }
@@ -389,12 +389,12 @@ class df {
     void f() {
     }
 
-    private final static void b(c param0) {
+    private final static void b(PcmStream param0) {
         param0.field_i = false;
         if (param0.field_f != null) {
           param0.field_f.field_f = 0;
         }
-        c var1 = param0.c();
+        PcmStream var1 = param0.c();
         while (var1 != null) {
           df.b(var1);
           var1 = param0.a();
@@ -408,11 +408,11 @@ class df {
         this.field_c = 0;
         this.field_k = 0L;
         this.field_j = 0;
-        this.field_a = new c[8];
+        this.field_a = new PcmStream[8];
         this.field_u = 0L;
         this.field_e = 0;
         this.field_f = 0;
         this.field_t = true;
-        this.field_p = new c[8];
+        this.field_p = new PcmStream[8];
     }
 }

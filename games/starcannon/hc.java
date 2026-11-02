@@ -39,7 +39,7 @@ final class hc {
         int var5_int = 0;
         byte[] var6 = null;
         Object var7 = null;
-        rb var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -49,7 +49,7 @@ final class hc {
             stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;
           }
-          var9 = new rb(param1);
+          var9 = new PacketBuffer(param1);
           var3 = var9.j(7909);
           var4 = var9.f((byte) -97);
           if (var4 >= 0 && (qi.field_c == 0 ||
@@ -135,14 +135,14 @@ final class hc {
             var7 = ed.a(-1, var6, "%40", "@");
             var8 = ed.a(-1, var7, "%26", "&");
             var9 = ed.a(-1, var8, "%23", "#");
-            if (null == ek.field_b) {
+            if (null == IterableNodeHashTable.field_b) {
               return;
             }
             stackIn_14_0 = kg.field_d;
             stackIn_14_1 = -10;
             stackIn_14_2 = null;
             stackIn_14_3 = null;
-            stackIn_14_4 = ek.field_b.getCodeBase();
+            stackIn_14_4 = IterableNodeHashTable.field_b.getCodeBase();
             stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(ac.field_f).append("&u=");
             if (null == re.field_q) {
               stackIn_15_2 = null;
@@ -218,7 +218,7 @@ final class hc {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var21 = null;
         try {
-          ui.a(640, param17, param1, param3);
+          SpriteState.a(640, param17, param1, param3);
           le.a(-4797, param16, param19, param8, param15);
           if (param13 != -11) {
             field_e = (String) null;
@@ -267,7 +267,7 @@ final class hc {
     }
 
     final static String a(byte param0) {
-        if (uh.field_k == jl.field_a) {
+        if (DualLinkNode.field_k == jl.field_a) {
           return lh.field_D;
         }
         if (param0 < 93) {

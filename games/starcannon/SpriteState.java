@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ui extends uh {
+abstract class SpriteState extends DualLinkNode {
     static int field_p;
     static String field_t;
-    static hl field_z;
+    static Sprite field_z;
     static String field_s;
     int field_q;
     static String field_n;
@@ -26,7 +26,7 @@ abstract class ui extends uh {
           return;
         }
         qe var2 = (qe) null;
-        ui.a(17, -126, (qe) null, (qe) null);
+        SpriteState.a(17, -126, (qe) null, (qe) null);
         field_n = null;
     }
 
@@ -53,7 +53,7 @@ abstract class ui extends uh {
 
     final static int a(boolean param0) {
         if (!param0) {
-          field_z = (hl) null;
+          field_z = (Sprite) null;
           return wg.field_c;
         }
         return wg.field_c;
@@ -70,7 +70,7 @@ abstract class ui extends uh {
 
     abstract void a(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    ui() {
+    SpriteState() {
     }
 
     final static void a(int param0, int param1, qe param2, qe param3) {

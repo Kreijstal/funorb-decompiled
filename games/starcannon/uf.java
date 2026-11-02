@@ -62,7 +62,7 @@ final class uf {
                 this.field_e.a(0, 6, false, cb.field_b);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param1) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -78,7 +78,7 @@ final class uf {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var11 = (255 & cb.field_b[3]) + ((cb.field_b[2] & 255) << 8) + (((255 & cb.field_b[0]) << 24) + (cb.field_b[1] << 16 & 16711680));
                         var13 = cb.field_b[9] & 255;
@@ -94,7 +94,7 @@ final class uf {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var12 = (cb.field_b[3] & 255) + (cb.field_b[2] << 8 & 65280);
                         var10 = ((255 & cb.field_b[5]) << 8) + (((255 & cb.field_b[4]) << 16) + (cb.field_b[6] & 255));
@@ -405,7 +405,7 @@ final class uf {
         int var10;
         String var11;
         int var12;
-        ii var13;
+        ClientException var13;
         StringWriter var14;
         String var15;
         String var16;
@@ -430,8 +430,8 @@ final class uf {
         String var2Lifetime3Lifetime11;
         String var2Lifetime3Lifetime12;
         String var11Lifetime3Lifetime1;
-        if (param0 instanceof ii) {
-          var13 = (ii) ((Object) param0);
+        if (param0 instanceof ClientException) {
+          var13 = (ClientException) ((Object) param0);
           param0 = var13.field_a;
           var2 = var13.field_b + " | ";
           var11 = var2;

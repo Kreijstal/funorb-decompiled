@@ -36,17 +36,17 @@ final class cc extends qf {
           var3 = this.field_m.field_k.toLowerCase();
           var4 = param0.toLowerCase();
           if (var4.length() == 0) {
-            stackIn_4_0 = sb.field_n;
+            stackIn_4_0 = BufferedSocket.field_n;
             return stackIn_4_0;
           }
           if (!kb.a(var3, var4, -28169)) {
-            stackIn_8_0 = sb.field_n;
+            stackIn_8_0 = BufferedSocket.field_n;
             return stackIn_8_0;
           }
           if (!this.a(5, param0)) {
             return bf.field_x;
           }
-          stackIn_12_0 = sb.field_n;
+          stackIn_12_0 = BufferedSocket.field_n;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -336,14 +336,14 @@ final class cc extends qf {
         }
     }
 
-    final static hl[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        hl[] var10;
-        hl[] var11_ref_hl__;
+        Sprite[] var10;
+        Sprite[] var11_ref_hl__;
         int var11;
         int var12;
-        hl var13;
+        Sprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -352,10 +352,10 @@ final class cc extends qf {
         int var12Lifetime2;
         int var12Lifetime3;
         int var12Lifetime4;
-        hl[] var10Lifetime1;
+        Sprite[] var10Lifetime1;
         var15 = StarCannon.field_A;
         var9 = param7 + (param0 + param2);
-        var10 = new hl[]{new hl(var9, var9), new hl(param6, var9), new hl(var9, var9), new hl(var9, param6), new hl(64, 64), new hl(var9, param6), new hl(var9, var9), new hl(param6, var9), new hl(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9), new Sprite(var9, param6), new Sprite(64, 64), new Sprite(var9, param6), new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9)};
         var11_ref_hl__ = var10;
         for (var12 = 0; var12 < var11_ref_hl__.length; var12++) {
           var13 = var11_ref_hl__[var12];
@@ -373,7 +373,7 @@ final class cc extends qf {
           }
         }
         if (param4 != 3) {
-          return (hl[]) null;
+          return (Sprite[]) null;
         }
         for (var11Lifetime1 = 0; param0 > var11Lifetime1; var11Lifetime1++) {
           for (var12Lifetime2 = 0; var12Lifetime2 < var9; var12Lifetime2++) {

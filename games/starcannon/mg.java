@@ -208,7 +208,7 @@ final class mg extends tk implements java.awt.image.ImageProducer, java.awt.imag
         int stackIn_22_0 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          ti.field_b.a((byte) -117, true, ob.field_h, cl.field_j);
+          ti.field_b.a((byte) -117, true, SecondaryNodeDequeIterator.field_h, cl.field_j);
           ti.field_b.h(-10597);
           while (ad.e((byte) 107)) {
             ti.field_b.a(lb.field_B, -119, StarCannon.field_E);
@@ -234,7 +234,7 @@ final class mg extends tk implements java.awt.image.ImageProducer, java.awt.imag
             stackIn_18_0 = 1;
             return stackIn_18_0;
           }
-          if (uh.field_k != jl.field_a) {
+          if (DualLinkNode.field_k != jl.field_a) {
             return -1;
           }
           stackIn_22_0 = 2;

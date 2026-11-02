@@ -4,7 +4,7 @@
 final class oh {
     static int[][] field_e;
     static int[] field_c;
-    static hl[] field_d;
+    static Sprite[] field_d;
     static rj field_a;
     static String field_b;
 

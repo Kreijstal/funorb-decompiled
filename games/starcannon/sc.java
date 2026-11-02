@@ -3,12 +3,12 @@
  */
 final class sc {
     static String field_e;
-    static hl field_a;
+    static Sprite field_a;
     static int[] field_d;
     static String field_c;
     static int field_b;
 
-    final static void a(hl param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = 0;
         int var10 = 0;
         int var11 = 0;
@@ -18,7 +18,7 @@ final class sc {
           var9_int = -param6 + param3 + (param0.field_w + param5);
           var10 = param4 + (param0.field_w + param3 + param5);
           if (param1 != 14432) {
-            sc.a((hl) null, -46, 99, -84, -72, -58, -75, 1, -19);
+            sc.a((Sprite) null, -46, 99, -84, -72, -58, -75, 1, -19);
           }
           var11 = (param0.field_v >> 1) + param0.field_y + param7;
           ki.c(var9_int, 0, var10, var11 + param8);
@@ -52,7 +52,7 @@ final class sc {
           s.field_c = true;
           vj.field_V = param0 ? true : false;
           fa.field_G = new ph(ti.field_b, tk.field_a, param2, tc.field_x, vj.field_V);
-          ti.field_b.a((byte) 85, (uj) (fa.field_G));
+          ti.field_b.a((byte) 85, (UiWidget) (fa.field_G));
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "sc.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -112,7 +112,7 @@ final class sc {
             try {
               var2 = "tuhstatbut";
               var3 = (String) (mb.a(param0, "getcookies", param1));
-              var4 = uj.a(-57, ';', var3);
+              var4 = UiWidget.a(-57, ';', var3);
               for (var5 = 0; var5 < var4.length; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&

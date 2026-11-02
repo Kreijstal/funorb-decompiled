@@ -49,7 +49,7 @@ final class ng extends fe implements ub {
         }
     }
 
-    final void a(int param0, int param1, uj param2, int param3) {
+    final void a(int param0, int param1, UiWidget param2, int param3) {
         if (param0 < 27) {
           return;
         }

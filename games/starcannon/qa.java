@@ -18,7 +18,7 @@ final class qa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         try {
-          uh.field_k = s.field_f;
+          DualLinkNode.field_k = s.field_f;
           if (param0 == 255) {
             stackIn_9_0 = !(qb.field_a >= 13);
             gj.field_a = cf.a(stackIn_9_0, false);

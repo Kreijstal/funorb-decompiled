@@ -4,7 +4,7 @@
 final class j {
     static s field_d;
     static int[] field_b;
-    static hl[] field_c;
+    static Sprite[] field_c;
     static vc field_a;
     static int field_e;
 
@@ -19,7 +19,7 @@ final class j {
     }
 
     final static String b(int param0) {
-        if (rk.field_d < 2) {
+        if (IntrusiveDeque.field_d < 2) {
           return pf.field_c;
         }
         if (null != kl.field_b) {

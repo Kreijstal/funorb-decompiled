@@ -41,7 +41,7 @@ final class je {
         field_k = null;
     }
 
-    final void a(rb param0) {
+    final void a(PacketBuffer param0) {
         int var3 = 0;
         int var4 = 0;
         this.field_b = new mk();
@@ -50,7 +50,7 @@ final class je {
         this.field_e.a(param0);
         int var2 = param0.j(7909);
         if (var2 != 0) {
-          param0.field_g = param0.field_g - 1;
+          param0.position = param0.position - 1;
           this.field_l = new mk();
           this.field_l.a(param0);
           this.field_h = new mk();
@@ -58,7 +58,7 @@ final class je {
         }
         var2 = param0.j(7909);
         if (var2 != 0) {
-          param0.field_g = param0.field_g - 1;
+          param0.position = param0.position - 1;
           this.field_y = new mk();
           this.field_y.a(param0);
           this.field_v = new mk();
@@ -66,7 +66,7 @@ final class je {
         }
         var2 = param0.j(7909);
         if (var2 != 0) {
-          param0.field_g = param0.field_g - 1;
+          param0.position = param0.position - 1;
           this.field_n = new mk();
           this.field_n.a(param0);
           this.field_x = new mk();

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class dk extends uj {
+class dk extends UiWidget {
     static String field_x;
     boolean field_u;
     private boolean field_y;
@@ -12,8 +12,8 @@ class dk extends uj {
     boolean field_z;
     static String field_w;
 
-    void a(int param0, int param1, uj param2, int param3) {
-        uj var6 = null;
+    void a(int param0, int param1, UiWidget param2, int param3) {
+        UiWidget var6 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -30,8 +30,8 @@ class dk extends uj {
             this.a(la.field_c, param3, param1, param2, (byte) -22, pe.field_d);
           }
           if (param0 <= 27) {
-            var6 = (uj) null;
-            this.a(-120, (uj) null);
+            var6 = (UiWidget) null;
+            this.a(-120, (UiWidget) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -54,8 +54,8 @@ class dk extends uj {
           ((ga) (this.field_g)).a(this, param2, false, param3, param0);
         }
         if (param1 <= 59) {
-          uj var6 = (uj) null;
-          this.a(86, 45, (uj) null, -120);
+          UiWidget var6 = (UiWidget) null;
+          this.a(86, 45, (UiWidget) null, -120);
         }
     }
 
@@ -64,7 +64,7 @@ class dk extends uj {
           this.field_v = false;
           if (null != this.field_g &&
             this.field_g instanceof ei) {
-            ((ei) (this.field_g)).a((byte) -119, (uj) (this), this.field_v);
+            ((ei) (this.field_g)).a((byte) -119, (UiWidget) (this), this.field_v);
           }
         }
         if (param0 > -72) {
@@ -86,7 +86,7 @@ class dk extends uj {
         this(param0, eh.field_j.field_d, param1);
     }
 
-    boolean a(int param0, uj param1) {
+    boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -99,7 +99,7 @@ class dk extends uj {
             this.field_v = true;
             if (null != this.field_g &&
               this.field_g instanceof ei) {
-              ((ei) (this.field_g)).a((byte) -119, (uj) (this), this.field_v);
+              ((ei) (this.field_g)).a((byte) -119, (UiWidget) (this), this.field_v);
             }
             if (param0 == 0) {
               return true;
@@ -195,7 +195,7 @@ class dk extends uj {
         }
     }
 
-    boolean a(uj param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
+    boolean a(UiWidget param0, int param1, int param2, int param3, byte param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -324,7 +324,7 @@ class dk extends uj {
         }
     }
 
-    boolean a(uj param0, char param1, byte param2, int param3) {
+    boolean a(UiWidget param0, char param1, byte param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -362,7 +362,7 @@ class dk extends uj {
         return this.field_v;
     }
 
-    final void a(int param0, int param1, int param2, uj param3, byte param4, int param5) {
+    final void a(int param0, int param1, int param2, UiWidget param3, byte param4, int param5) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

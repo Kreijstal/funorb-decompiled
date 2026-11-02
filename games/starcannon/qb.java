@@ -67,7 +67,7 @@ final class qb {
         s.field_c = false;
         fd.a(param0, 0);
         ie.field_x = cl.field_k;
-        uh.field_k = cl.field_k;
+        DualLinkNode.field_k = cl.field_k;
     }
 
     public static void a(int param0) {

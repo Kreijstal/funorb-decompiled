@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ed extends c {
+final class ed extends PcmStream {
     private int field_l;
-    private c field_m;
+    private PcmStream field_m;
     static java.math.BigInteger field_j;
-    static hl field_k;
+    static Sprite field_k;
     static tc field_q;
     static int field_p;
     static int field_n;
-    static hl[] field_o;
+    static Sprite[] field_o;
 
     public static void b(byte param0) {
         field_k = null;
@@ -34,7 +34,7 @@ final class ed extends c {
         return (String) null;
     }
 
-    final static void a(int param0, int param1, int param2, qe param3, int param4, int param5, int param6, int param7, int param8, int param9, hl param10) {
+    final static void a(int param0, int param1, int param2, qe param3, int param4, int param5, int param6, int param7, int param8, int param9, Sprite param10) {
         try {
           int var11_int = -45 / ((param5 - 9) / 47);
           ue.field_e = param0;
@@ -50,7 +50,7 @@ final class ed extends c {
         }
     }
 
-    final c a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -67,13 +67,13 @@ final class ed extends c {
           }
           param2 = param2 - this.field_l;
           param1 = param1 + this.field_l;
-          this.field_m.field_d = this.field_d;
+          this.field_m.previous = this.previous;
           this.field_l = 0;
-          this.field_m.field_a = this.field_a;
-          this.field_d.field_a = (rf) ((Object) this.field_m);
-          this.field_a.field_d = (rf) ((Object) this.field_m);
-          this.field_a = null;
-          this.field_d = null;
+          this.field_m.next = this.next;
+          this.previous.next = (IntrusiveNode) ((Object) this.field_m);
+          this.next.previous = (IntrusiveNode) ((Object) this.field_m);
+          this.next = null;
+          this.previous = null;
           if (param2 <= 0) {
             return;
           }
@@ -112,7 +112,7 @@ final class ed extends c {
           var2 = 0;
           var3 = var5.length;
           if (param0 > -120) {
-            field_k = (hl) null;
+            field_k = (Sprite) null;
           }
           while (var3 > var2) {
             var1[var2++] = 0;
@@ -132,7 +132,7 @@ final class ed extends c {
         }
     }
 
-    ed(c param0, int param1) {
+    ed(PcmStream param0, int param1) {
         try {
           this.field_m = param0;
           this.field_f = this.field_m.field_f;
@@ -142,7 +142,7 @@ final class ed extends c {
         }
     }
 
-    final c c() {
+    final PcmStream c() {
         return null;
     }
 
@@ -152,13 +152,13 @@ final class ed extends c {
           return;
         }
         param0 = param0 - this.field_l;
-        this.field_m.field_d = this.field_d;
+        this.field_m.previous = this.previous;
         this.field_l = 0;
-        this.field_m.field_a = this.field_a;
-        this.field_d.field_a = (rf) ((Object) this.field_m);
-        this.field_a.field_d = (rf) ((Object) this.field_m);
-        this.field_d = null;
-        this.field_a = null;
+        this.field_m.next = this.next;
+        this.previous.next = (IntrusiveNode) ((Object) this.field_m);
+        this.next.previous = (IntrusiveNode) ((Object) this.field_m);
+        this.previous = null;
+        this.next = null;
         if (param0 > 0) {
           this.field_m.a(param0);
         }

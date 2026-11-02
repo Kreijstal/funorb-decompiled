@@ -13,7 +13,7 @@ final class lf extends kc {
     static String[] field_gb;
     static fb[] field_bb;
     static int field_Z;
-    static hl field_V;
+    static Sprite field_V;
 
     final void a(String param0, boolean param1, float param2, boolean param3) {
         try {
@@ -45,7 +45,7 @@ final class lf extends kc {
           this.field_W.field_D = false;
           return;
         }
-        field_V = (hl) null;
+        field_V = (Sprite) null;
         this.field_W.field_D = false;
     }
 

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static int field_e;
     static o field_f;
     static String field_b;
     static int field_a;
     static String field_d;
-    static hl field_c;
+    static Sprite field_c;
 
     public final void keyTyped(java.awt.event.KeyEvent param0) {
         int var2_int = 0;
@@ -190,14 +190,14 @@ final class bg implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           var1_int = nd.field_m;
           var2 = 0;
-          if (bh.field_a == 2) {
+          if (SecondaryNodeDeque.field_a == 2) {
             var3_long = dd.b(57) - af.field_x;
             var2 = (int)((-var3_long + 10999L) / 1000L);
             if (var2 < 0) {
               var2 = 0;
             }
           }
-          for (var3 = 0; uh.field_h.length > var3; var3++) {
+          for (var3 = 0; DualLinkNode.field_h.length > var3; var3++) {
             var4 = eg.field_a[var3];
             if (var4 >= 0) {
               if (ja.field_c.field_k == var4) {
@@ -206,10 +206,10 @@ final class bg implements java.awt.event.KeyListener, java.awt.event.FocusListen
                 var5 = sd.field_a;
               }
             } else {
-              var5 = sb.field_m;
+              var5 = BufferedSocket.field_m;
             }
-            var6 = uh.field_h[var3];
-            if (bh.field_a == 2 &&
+            var6 = DualLinkNode.field_h[var3];
+            if (SecondaryNodeDeque.field_a == 2 &&
               1 == var2) {
               if (se.field_n.length >= ri.field_b.length) {
                 stackIn_20_0 = se.field_n.length;

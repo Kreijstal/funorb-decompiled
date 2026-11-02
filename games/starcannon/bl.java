@@ -33,7 +33,7 @@ final class bl {
               if (param0) {
                 field_a = 90;
               }
-              param1.getAppletContext().showDocument(wh.a(127, var2, param1), "_top");
+              param1.getAppletContext().showDocument(NodeHashTableIterator.a(127, var2, param1), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

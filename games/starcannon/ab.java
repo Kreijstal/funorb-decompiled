@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class ab extends dk {
-    static rk field_H;
+    static IntrusiveDeque field_H;
     private String[] field_D;
     static ge field_F;
-    private rk field_C;
+    private IntrusiveDeque field_C;
     static String field_B;
     static int[] field_G;
     static int[] field_A;
@@ -29,8 +29,8 @@ class ab extends dk {
         lg var5 = (lg) ((Object) this.field_o);
         oi var6 = this.field_E;
         if (var6 != null) {
-          var7 = var5.a((uj) (this), (byte) 12, param1);
-          var8 = var5.a((byte) -69, (uj) (this), param3);
+          var7 = var5.a((UiWidget) (this), (byte) 12, param1);
+          var8 = var5.a((byte) -69, (UiWidget) (this), param3);
           do {
             ji.a(2 + var6.field_k, 2 + var6.field_l, -140110815, -2 + (var8 + var6.field_h), -2 + var6.field_g + var7);
             var6 = var6.field_o;
@@ -38,9 +38,9 @@ class ab extends dk {
         }
     }
 
-    final static hl[] b(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] b(int param0, int param1, int param2, int param3, int param4) {
         if (param1 != -25343) {
-          return (hl[]) null;
+          return (Sprite[]) null;
         }
         return cc.a(1, param4, 1, param3, 3, param0, 3, 1, param2);
     }
@@ -60,11 +60,11 @@ class ab extends dk {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        hl var7 = null;
-        hl var8 = null;
-        hl var9 = null;
-        hl var8Lifetime1;
-        hl var8Lifetime2;
+        Sprite var7 = null;
+        Sprite var8 = null;
+        Sprite var9 = null;
+        Sprite var8Lifetime1;
+        Sprite var8Lifetime2;
         int var4Lifetime1;
         var5 = StarCannon.field_A;
         try {
@@ -87,10 +87,10 @@ class ab extends dk {
           } else {
             var7.e(245, 199);
           }
-          if (rk.field_a < kk.field_a) {
+          if (IntrusiveDeque.field_a < kk.field_a) {
             var8Lifetime2 = og.field_d[od.field_i];
             if (var8Lifetime2 != null) {
-              var3_int = (var8Lifetime2.field_x + 60) * rk.field_a / kk.field_a;
+              var3_int = (var8Lifetime2.field_x + 60) * IntrusiveDeque.field_a / kk.field_a;
               var4 = var3_int - 30;
               if (cc.field_j) {
                 n.a(var4 * -256 / 30, 199, 245, 256 * (var8Lifetime2.field_x - var4) / 30, var8Lifetime2, (byte) -2);
@@ -158,7 +158,7 @@ class ab extends dk {
         }
     }
 
-    void a(int param0, int param1, uj param2, int param3) {
+    void a(int param0, int param1, UiWidget param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         if (param0 <= 27) {
@@ -177,7 +177,7 @@ class ab extends dk {
         }
     }
 
-    boolean a(int param0, uj param1) {
+    boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -206,11 +206,11 @@ class ab extends dk {
         oi var4;
         oi var5;
         int var6;
-        uj var7;
+        UiWidget var7;
         var6 = StarCannon.field_A;
         if (param1 != -256) {
-          var7 = (uj) null;
-          this.a(-66, 48, (uj) null, -8);
+          var7 = (UiWidget) null;
+          this.a(-66, 48, (UiWidget) null, -8);
         }
         var4 = (oi) (this.field_C.c(-3905));
         while (var4 != null) {
@@ -230,7 +230,7 @@ class ab extends dk {
     }
 
     final void b(int param0, int param1, int param2, int param3) {
-        this.a(param0, param3, (byte) 116, ((lg) ((Object) this.field_o)).a(16293784, (uj) (this)), param2);
+        this.a(param0, param3, (byte) 116, ((lg) ((Object) this.field_o)).a(16293784, (UiWidget) (this)), param2);
         if (param1 <= 64) {
           this.field_D = (String[]) null;
         }
@@ -254,13 +254,13 @@ class ab extends dk {
         int var14;
         oi var15;
         int var7Lifetime1;
-        this.field_C = new rk();
+        this.field_C = new IntrusiveDeque();
         if (param0 < 66) {
           this.field_D = (String[]) null;
         }
         var2 = 0;
         var3 = (lg) ((Object) this.field_o);
-        var4 = var3.a((uj) (this), (byte) -93);
+        var4 = var3.a((UiWidget) (this), (byte) -93);
         while (true) {
           var5 = this.field_k.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -344,7 +344,7 @@ class ab extends dk {
     }
 
     static {
-        field_H = new rk();
+        field_H = new IntrusiveDeque();
         field_B = "Once these are at maximum power new powerups will only upgrade your lasers.";
         field_A = new int[128];
         field_F = new ge();

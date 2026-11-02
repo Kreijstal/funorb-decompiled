@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qe extends uh {
+abstract class qe extends DualLinkNode {
     private byte[] field_H;
     private static StringBuilder field_w;
     private int[] field_v;

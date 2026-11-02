@@ -15,7 +15,7 @@ final class mh extends qf {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param0, -26188) == sb.field_n) {
+          if (this.a(param0, -26188) == BufferedSocket.field_n) {
             stackIn_3_0 = il.field_f;
             return stackIn_3_0;
           }
@@ -61,7 +61,7 @@ final class mh extends qf {
             stackIn_9_0 = bf.field_x;
             return stackIn_9_0;
           }
-          stackIn_7_0 = sb.field_n;
+          stackIn_7_0 = BufferedSocket.field_n;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

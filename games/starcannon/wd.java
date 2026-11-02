@@ -28,7 +28,7 @@ final class wd extends oa {
     private int[] field_h;
     private int field_D;
     private int[] field_w;
-    private fj[] field_o;
+    private PcmSampleStream[] field_o;
     private int field_q;
     private int field_M;
     private int field_G;
@@ -194,10 +194,10 @@ final class wd extends oa {
           this.field_G = this.field_G + 1;
         }
         for (var15 = 0; var15 < this.field_ab.field_p; var15++) {
-          L55: {
+          regionExit1: {
             if (this.field_P != 0) {
               if (this.field_F[var15] < 0) {
-                break L55;
+                break regionExit1;
               }
               var16 = this.field_F[var15];
             } else {
@@ -895,7 +895,7 @@ final class wd extends oa {
         this.field_C = new int[this.field_ab.field_p];
         this.field_h = new int[this.field_ab.field_p];
         this.field_p = new boolean[this.field_ab.field_p];
-        this.field_o = new fj[this.field_ab.field_p];
+        this.field_o = new PcmSampleStream[this.field_ab.field_p];
         this.d();
     }
 
@@ -1006,15 +1006,15 @@ final class wd extends oa {
     }
 
     private final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        ud stackIn_14_0 = null;
+        PcmSample stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         int stackIn_15_2 = 0;
-        fj stackIn_17_0 = null;
+        PcmSampleStream stackIn_17_0 = null;
         int stackIn_18_1 = 0;
-        fj stackIn_20_0 = null;
+        PcmSampleStream stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         Throwable decompiledCaughtException = null;
-        fj var7 = null;
+        PcmSampleStream var7 = null;
         Object var8 = null;
         this.d(param0);
         if (param3 > field_jb[7999] &&
@@ -1040,14 +1040,14 @@ final class wd extends oa {
           } else {
             stackIn_15_2 = 0;
           }
-          var7 = fj.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, param5);
+          var7 = PcmSampleStream.a(stackIn_14_0, stackIn_14_1, stackIn_15_2, param5);
           var7.b(this.field_ab.field_e[param1], this.field_ab.field_A[param1]);
           stackIn_17_0 = var7;
           stackIn_18_1 = (this.field_ab.field_B[param1] == 0) ? 0 : -1;
-          ((fj) (Object) stackIn_17_0).g(stackIn_18_1);
+          ((PcmSampleStream) (Object) stackIn_17_0).g(stackIn_18_1);
           stackIn_20_0 = var7;
           stackIn_21_1 = (this.field_ab.field_B[param1] != 2) ? false : true;
-          ((fj) (Object) stackIn_20_0).a(stackIn_21_1);
+          ((PcmSampleStream) (Object) stackIn_20_0).a(stackIn_21_1);
           if (param2 != 0) {
             var7.d(param2);
             var7.b(df.field_n >> 7, param4 * this.field_D * this.field_cb >> 12, param5);
@@ -1063,7 +1063,7 @@ final class wd extends oa {
         }
     }
 
-    final int a(vi param0) {
+    final int a(PcmStreamMixer param0) {
         if (this.e() &&
           !this.field_W) {
           return -1;

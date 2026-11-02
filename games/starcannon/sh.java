@@ -119,7 +119,7 @@ final class sh extends fh {
           var21Lifetime2 = gl.field_e;
           var22Lifetime2 = gl.field_i;
           var23Lifetime2 = 0;
-          L1: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var23Lifetime2 < param4.field_R) {
               var24Lifetime1 = param4.field_J[var23Lifetime2];
@@ -134,13 +134,13 @@ final class sh extends fh {
                 if (stackIn_60_0 < stackIn_60_1) {
                   stackIn_69_0 = var18;
                   stackIn_69_1 = rc.field_a.length;
-                  break L1;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (stackIn_60_0 >= stackIn_60_1) {
-                  bh.field_c[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
+                  SecondaryNodeDeque.field_c[var23Lifetime2] = var27Lifetime1 / var29Lifetime1 + var21Lifetime2;
                   ri.field_a[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
                   sc.field_d[var23Lifetime2] = var29Lifetime1;
                   if (var29Lifetime1 < var7_int) {
@@ -190,7 +190,7 @@ final class sh extends fh {
                   var25Lifetime1Lifetime1 = param4.field_g[var23Lifetime2];
                   var26Lifetime1Lifetime1 = param4.field_r[var23Lifetime2];
                   pd.field_d[var23Lifetime2] = (var18 * var26Lifetime1Lifetime1 + var25Lifetime1Lifetime1 * var15 + var12 * var24Lifetime1Lifetime1 >> 16) + var9;
-                  ob.field_c[var23Lifetime2] = var10 + (var25Lifetime1Lifetime1 * var16 + (var13 * var24Lifetime1Lifetime1 + var19 * var26Lifetime1Lifetime1) >> 16);
+                  SecondaryNodeDequeIterator.field_c[var23Lifetime2] = var10 + (var25Lifetime1Lifetime1 * var16 + (var13 * var24Lifetime1Lifetime1 + var19 * var26Lifetime1Lifetime1) >> 16);
                   ih.field_g[var23Lifetime2] = var11 + (var26Lifetime1Lifetime1 * var20 + (var14 * var24Lifetime1Lifetime1 + var17 * var25Lifetime1Lifetime1) >> 16);
                   var23Lifetime2++;
                   if (var31 != 0) {
@@ -222,7 +222,7 @@ final class sh extends fh {
                   stackIn_69_0 = var18;
                   stackIn_69_1 = rc.field_a.length;
                   if (var31 != 0) {
-                    break L1;
+                    break scanLoop1;
                   }
                   if (stackIn_69_0 >= stackIn_69_1) {
                     break;
@@ -269,7 +269,7 @@ final class sh extends fh {
         }
     }
 
-    final String a(uj param0, boolean param1) {
+    final String a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         String stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
@@ -280,7 +280,7 @@ final class sh extends fh {
           if (param1) {
             sh.b(-96);
           }
-          stackIn_4_0 = uh.a(param0.field_k.length(), 0, '*');
+          stackIn_4_0 = DualLinkNode.a(param0.field_k.length(), 0, '*');
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

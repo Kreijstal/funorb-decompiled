@@ -16,7 +16,7 @@ final class gh extends dk {
     }
 
     final static void a(byte param0, int param1) {
-        rf var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         hb var4 = null;
         RuntimeException decompiledCaughtException = null;

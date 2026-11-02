@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class nj extends rf {
+final class nj extends IntrusiveNode {
     private int field_w;
     private static int[] field_f;
     private int field_s;
@@ -57,7 +57,7 @@ final class nj extends rf {
         return true;
     }
 
-    final ud c() {
+    final PcmSample c() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -89,7 +89,7 @@ final class nj extends rf {
           }
         }
         this.field_J = null;
-        return new ud(this.field_l, var1, this.field_x, this.field_s, this.field_r);
+        return new PcmSample(this.field_l, var1, this.field_x, this.field_s, this.field_r);
     }
 
     final static int b() {
@@ -500,7 +500,7 @@ final class nj extends rf {
         }
     }
 
-    final ud a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -550,7 +550,7 @@ final class nj extends rf {
         this.field_J = null;
         var12 = this.field_D;
         this.field_D = null;
-        return new ud(this.field_l, var12, this.field_x, this.field_s, this.field_r);
+        return new PcmSample(this.field_l, var12, this.field_x, this.field_s, this.field_r);
     }
 
     private final void a(byte[] param0) throws IOException {
@@ -558,7 +558,7 @@ final class nj extends rf {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        rb var2 = new rb(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_l = var2.f((byte) -85);
         this.field_C = var2.f((byte) -115);
         this.field_x = var2.f((byte) -120);

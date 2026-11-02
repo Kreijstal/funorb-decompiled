@@ -340,7 +340,7 @@ final class d {
         int var5;
         int var6;
         int var7;
-        L0: {
+        regionExit1: {
           var7 = StarCannon.field_A;
           var3 = 32 % ((87 - param1) / 32);
           var6 = this.field_h;
@@ -377,32 +377,32 @@ final class d {
                           ki.a(var4, this.field_q, -(this.field_j / 32) + var4, this.field_q - this.field_e / 32, this.field_o);
                         }
                         jg.field_C[4 + (-5 + 5 * this.field_i)].a(var4 - 3, this.field_q - 3, this.field_o);
-                        break L0;
+                        break regionExit1;
                       case 3:
                         var4 = 0;
                         if (3 == this.field_h) {
                           var4 = param0 / 20 + this.field_d;
                         }
                         jg.field_C[4].a(-3 + var4, -3 + this.field_q, this.field_o);
-                        break L0;
+                        break regionExit1;
                       case 0:
                         var4 = (param0 >> 4) + this.field_d;
                         if (this.field_p >= 16) {
                           ki.c(var4, this.field_q, this.field_p >> 2, this.field_o, 128);
-                          break L0;
+                          break regionExit1;
                         }
                         ki.c(var4, this.field_q, this.field_p >> 2, this.field_o, this.field_p << 3);
-                        break L0;
+                        break regionExit1;
                       case 4:
                         var4 = this.field_d + (param0 >> 5);
                         if (gd.field_d <= 8) {
                           ea.field_b[gd.field_d].a(this.field_q, 0, -125, var4, 128);
                         }
                         if (gd.field_d < 9) {
-                          break L0;
+                          break regionExit1;
                         }
                         kj.field_y[-9 + gd.field_d].a(this.field_q, 0, -122, var4, 128);
-                        break L0;
+                        break regionExit1;
                       case 5:
                         var4 = (param0 >> 4) + this.field_d;
                         if (14 > this.field_o) {
@@ -412,10 +412,10 @@ final class d {
                       case 6:
                         var4 = (param0 >> 4) + this.field_d;
                         if (this.field_o >= 14) {
-                          break L0;
+                          break regionExit1;
                         }
                         ad.field_z[this.field_o].f(var4 - 16, this.field_q - 16, 64);
-                        break L0;
+                        break regionExit1;
                       case 7:
                         var4 = (param0 >> 4) + this.field_d;
                         if (this.field_o < 24) {
@@ -425,10 +425,10 @@ final class d {
                       case 8:
                         var4 = this.field_d + (param0 >> 4);
                         if (24 <= this.field_o) {
-                          break L0;
+                          break regionExit1;
                         }
                         oh.field_d[this.field_o].b(var4 - 96, -96 + this.field_q, 192, 192, 255);
-                        break L0;
+                        break regionExit1;
                       default:
                         return;
                       case 9:

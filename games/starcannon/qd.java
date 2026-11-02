@@ -14,7 +14,7 @@ abstract class qd extends vk {
     static String field_B;
 
     qd(tc param0, int param1, int param2) {
-        super(-param1 + ui.field_o >> 1, ak.field_h - param2 >> 1, param1, param2, (de) null);
+        super(-param1 + SpriteState.field_o >> 1, ak.field_h - param2 >> 1, param1, param2, (de) null);
         try {
           this.field_A = 0;
           this.field_G = false;
@@ -37,7 +37,7 @@ abstract class qd extends vk {
           return;
         }
         if (le.field_c == null) {
-          le.field_c = new hl(this.field_i, this.field_f);
+          le.field_c = new Sprite(this.field_i, this.field_f);
           bc.a(le.field_c, 26095);
           ki.b();
           this.c(0, (byte) 73, 0);
@@ -47,7 +47,7 @@ abstract class qd extends vk {
           return;
         }
         if (le.field_c.field_u < this.field_i) {
-          le.field_c = new hl(this.field_i, this.field_f);
+          le.field_c = new Sprite(this.field_i, this.field_f);
           bc.a(le.field_c, 26095);
           ki.b();
           this.c(0, (byte) 73, 0);
@@ -65,7 +65,7 @@ abstract class qd extends vk {
           le.field_c.e(param1 + this.field_s, param3 + this.field_j, this.field_A);
           return;
         }
-        le.field_c = new hl(this.field_i, this.field_f);
+        le.field_c = new Sprite(this.field_i, this.field_f);
         bc.a(le.field_c, 26095);
         ki.b();
         this.c(0, (byte) 73, 0);
@@ -106,12 +106,12 @@ abstract class qd extends vk {
         return false;
     }
 
-    final uj h(int param0) {
-        uj var2 = super.h(param0);
+    final UiWidget h(int param0) {
+        UiWidget var2 = super.h(param0);
         if (var2 != null) {
           return var2;
         }
-        return (uj) (this);
+        return (UiWidget) (this);
     }
 
     public static void h(byte param0) {
@@ -178,11 +178,11 @@ abstract class qd extends vk {
 
     final void b(int param0, byte param1, int param2) {
         if (param1 == 57) {
-          this.a(ui.field_o - param0 >> 1, param0, (byte) 120, param2, -param2 + ak.field_h >> 1);
+          this.a(SpriteState.field_o - param0 >> 1, param0, (byte) 120, param2, -param2 + ak.field_h >> 1);
           return;
         }
         this.field_A = -103;
-        this.a(ui.field_o - param0 >> 1, param0, (byte) 120, param2, -param2 + ak.field_h >> 1);
+        this.a(SpriteState.field_o - param0 >> 1, param0, (byte) 120, param2, -param2 + ak.field_h >> 1);
     }
 
     boolean g(byte param0) {
@@ -264,7 +264,7 @@ abstract class qd extends vk {
           var6 = param4.a(param0, true, param1);
           var5 = var6;
           if (var6 != null) {
-            stackIn_7_0 = new lh(new rb(var6), param2);
+            stackIn_7_0 = new lh(new PacketBuffer(var6), param2);
             return stackIn_7_0;
           }
           stackIn_5_0 = null;

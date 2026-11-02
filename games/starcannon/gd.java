@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class gd {
-    private bh field_e;
+    private SecondaryNodeDeque field_e;
     static boolean field_g;
     private int field_f;
     private int field_c;
     static wd field_a;
-    private ek field_b;
+    private IterableNodeHashTable field_b;
     static int field_d;
 
     final static int a(boolean param0) {
@@ -39,15 +39,15 @@ final class gd {
             var8.field_j = 0L;
           } else {
             var7 = new ej(var6, var8.field_p);
-            this.field_b.a(var8.field_b, -1, var7);
+            this.field_b.a(var8.key, -1, var7);
             this.field_e.a(var7, 25184);
             ((mi) ((Object) var7)).field_j = 0L;
-            var8.b(4);
+            var8.unlink(4);
             var8.a(-6242);
           }
           return var6;
         }
-        var8.b(4);
+        var8.unlink(4);
         var8.a(-6242);
         this.field_f = this.field_f + var8.field_p;
         return null;
@@ -60,15 +60,15 @@ final class gd {
           if (null != mf.field_c) {
             try {
               mf.field_c.a(0L, 0);
-              mf.field_c.a(se.field_p.field_g, 24, false, se.field_p.field_f);
+              mf.field_c.a(se.field_p.position, 24, false, se.field_p.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
-              se.field_p.field_g = se.field_p.field_g + param0;
+              se.field_p.position = se.field_p.position + param0;
               return;
             }
           }
-          se.field_p.field_g = se.field_p.field_g + param0;
+          se.field_p.position = se.field_p.position + param0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -129,7 +129,7 @@ final class gd {
           if (param1 == null) {
             return;
           }
-          param1.b(param0 - 19);
+          param1.unlink(param0 - 19);
           param1.a(-6242);
           this.field_f = this.field_f + param1.field_p;
           return;

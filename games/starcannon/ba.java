@@ -3,39 +3,39 @@
  */
 final class ba {
     static String field_a;
-    static hl field_c;
-    private rk field_d;
-    private rf field_b;
+    static Sprite field_c;
+    private IntrusiveDeque field_d;
+    private IntrusiveNode field_b;
     static String field_e;
 
-    final rf a(rf param0, int param1) {
-        rf var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
-        rf var4 = null;
+        IntrusiveNode var4 = null;
         Object stackIn_7_0 = null;
-        rf stackIn_9_0 = null;
+        IntrusiveNode stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            var4 = (rf) null;
-            this.a(-43, (rf) null);
+            var4 = (IntrusiveNode) null;
+            this.a(-43, (IntrusiveNode) null);
           }
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_d.field_c.field_a;
+            var3 = this.field_d.field_c.next;
           }
           if (var3 != this.field_d.field_c) {
-            this.field_b = var3.field_a;
+            this.field_b = var3.next;
             stackIn_9_0 = var3;
             return stackIn_9_0;
           }
           this.field_b = null;
           stackIn_7_0 = null;
-          return (rf) (stackIn_7_0);
+          return (IntrusiveNode) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -50,8 +50,8 @@ final class ba {
         }
     }
 
-    final rf a(boolean param0) {
-        rf var2 = this.field_d.field_c.field_d;
+    final IntrusiveNode a(boolean param0) {
+        IntrusiveNode var2 = this.field_d.field_c.previous;
         if (param0) {
           ba.a(true, false, 62);
         }
@@ -59,17 +59,17 @@ final class ba {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_d;
+        this.field_b = var2.previous;
         return var2;
     }
 
-    final rf a(int param0) {
+    final IntrusiveNode a(int param0) {
         if (param0 != 0) {
-          return (rf) null;
+          return (IntrusiveNode) null;
         }
-        rf var2 = this.field_d.field_c.field_a;
+        IntrusiveNode var2 = this.field_d.field_c.next;
         if (var2 != this.field_d.field_c) {
-          this.field_b = var2.field_a;
+          this.field_b = var2.next;
           return var2;
         }
         this.field_b = null;
@@ -111,8 +111,8 @@ final class ba {
         }
     }
 
-    final rf a(byte param0) {
-        rf var2 = this.field_b;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_b;
         if (param0 != -34) {
           field_a = (String) null;
         }
@@ -120,7 +120,7 @@ final class ba {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_d;
+        this.field_b = var2.previous;
         return var2;
     }
 
@@ -137,30 +137,30 @@ final class ba {
         field_c = null;
     }
 
-    final rf a(int param0, rf param1) {
-        rf var3 = null;
+    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        rf stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == null) {
-            var3 = this.field_d.field_c.field_d;
+            var3 = this.field_d.field_c.previous;
           } else {
             var3 = param1;
           }
           if (param0 != 0) {
-            this.field_b = (rf) null;
+            this.field_b = (IntrusiveNode) null;
           }
           if (var3 == this.field_d.field_c) {
             this.field_b = null;
             stackIn_8_0 = null;
-            return (rf) (stackIn_8_0);
+            return (IntrusiveNode) (stackIn_8_0);
           }
-          this.field_b = var3.field_d;
+          this.field_b = var3.previous;
           stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -177,7 +177,7 @@ final class ba {
         }
     }
 
-    ba(rk param0) {
+    ba(IntrusiveDeque param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
@@ -185,7 +185,7 @@ final class ba {
         }
     }
 
-    final static void a(int param0, hl[] param1, byte param2, int param3, int param4, int param5) {
+    final static void a(int param0, Sprite[] param1, byte param2, int param3, int param4, int param5) {
         int var22 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -350,16 +350,16 @@ final class ba {
         }
     }
 
-    final rf b(int param0) {
+    final IntrusiveNode b(int param0) {
         if (param0 <= 64) {
           this.a(56);
         }
-        rf var2 = this.field_b;
+        IntrusiveNode var2 = this.field_b;
         if (this.field_d.field_c == var2) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_a;
+        this.field_b = var2.next;
         return var2;
     }
 

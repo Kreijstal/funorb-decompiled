@@ -37,7 +37,7 @@ final class vd extends hh {
         }
     }
 
-    final void a(byte param0, rb param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           param1.a(false, this.field_k);
           param1.a((byte) -86, this.field_i);

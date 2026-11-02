@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
-    static hl[] field_e;
+    static Sprite[] field_e;
     static d[] field_c;
     static String field_a;
     java.awt.Frame field_f;
@@ -10,11 +10,11 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
     static int field_g;
     static int field_d;
 
-    final static void a(hl[] param0, int param1, int param2, hl[] param3, int param4, int param5, int param6, int param7, boolean param8, int param9, int param10, qe param11, int param12, int param13, qe param14) {
+    final static void a(Sprite[] param0, int param1, int param2, Sprite[] param3, int param4, int param5, int param6, int param7, boolean param8, int param9, int param10, qe param11, int param12, int param13, qe param14) {
         try {
           int var15_int = -85 / ((param5 + 30) / 62);
-          hl[] var16 = (hl[]) null;
-          rc.a(0, param2, 0, 31944, sd.field_a, param12, 480, param7, sb.field_m, param1, ig.field_b, param14, param6, param0, param9, param13, (hl[]) null, param3, param11, param10, param4);
+          Sprite[] var16 = (Sprite[]) null;
+          rc.a(0, param2, 0, 31944, sd.field_a, param12, 480, param7, BufferedSocket.field_m, param1, ig.field_b, param14, param6, param0, param9, param13, (Sprite[]) null, param3, param11, param10, param4);
           se.a(param8, 480);
         } catch (RuntimeException runtimeException) {
           throw sd.a((Throwable) ((Object) runtimeException), "qc.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + (param11 != null ? "{...}" : "null") + ',' + param12 + ',' + param13 + ',' + (param14 != null ? "{...}" : "null") + ')');
@@ -162,7 +162,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
                 var10 = (String) null;
                 jh.field_h = ik.a(param0, -66, cb.field_a, (String) null, false);
               }
-              d.field_b.field_g = 0;
+              d.field_b.position = 0;
               d.field_b.a(14, -51);
               d.field_b.a(jh.field_h.b((byte) 1).field_j, -92);
               nf.a(-1, (byte) 95);
@@ -170,12 +170,12 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
             }
             if (param4 != -1) {
               var9 = (qe) null;
-              qc.a((hl[]) null, -12, 123, (hl[]) null, 4, 6, -76, 11, true, -78, -110, (qe) null, 9, 62, (qe) null);
+              qc.a((Sprite[]) null, -12, 123, (Sprite[]) null, 4, 6, -76, 11, true, -78, -110, (qe) null, 9, 62, (qe) null);
             }
             if (wc.field_d == r.field_c &&
               ag.a(127, 1)) {
               var6_int = se.field_p.j(7909);
-              se.field_p.field_g = 0;
+              se.field_p.position = 0;
               if (var6_int == 0) {
                 r.field_c = od.field_f;
               } else {
@@ -187,7 +187,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
             if (r.field_c == od.field_f &&
               ag.a(127, 8)) {
               mi.field_o = se.field_p.c((byte) 5);
-              se.field_p.field_g = 0;
+              se.field_p.position = 0;
               se.a(param3, jh.field_h, 0, param2, param1);
               r.field_c = uc.field_a;
             }
@@ -197,7 +197,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
               var6_intLifetime1 = se.field_p.j(7909);
               lj.field_c = null;
               vh.field_t = var6_intLifetime1;
-              se.field_p.field_g = 0;
+              se.field_p.position = 0;
               if (var6_intLifetime1 != 0 &&
                 1 != var6_intLifetime1) {
                 if (8 != var6_intLifetime1) {
@@ -253,7 +253,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
               r.field_c = pb.field_a;
               if (jh.field_h.b((byte) 1) != j.field_d) {
                 if (jh.field_h.b((byte) 1) == na.field_b) {
-                  bh.field_b.a(ll.b(119), true);
+                  SecondaryNodeDeque.field_b.a(ll.b(119), true);
                 }
               } else {
                 p.field_a.a(ll.b(100), true);
@@ -301,7 +301,7 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
               if (vh.field_t == 7) {
                 vh.field_t = 3;
               }
-              uj.field_r = se.field_p.a(-94);
+              UiWidget.field_r = se.field_p.a(-94);
               eb.field_f = false;
               stackIn_82_0 = vh.field_t;
               return stackIn_82_0;
@@ -309,9 +309,9 @@ final class qc extends java.awt.Canvas implements java.awt.event.FocusListener {
             if (m.field_b == null) {
               if (eb.field_f) {
                 if (kg.b((byte) -71) > 30000L) {
-                  uj.field_r = ti.field_g;
+                  UiWidget.field_r = ti.field_g;
                 } else {
-                  uj.field_r = va.field_o;
+                  UiWidget.field_r = va.field_o;
                 }
                 eb.field_f = false;
                 stackIn_92_0 = 3;

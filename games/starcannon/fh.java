@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class fh extends hd {
-    static hl[] field_r;
-    static hl field_q;
+    static Sprite[] field_r;
+    static Sprite field_q;
 
     fh(qe param0, int param1) {
         super(param0, 4, 2, 2, 2, param1, -1, 0, 1, param0.field_p, -1, 2147483647, false);
@@ -28,7 +28,7 @@ class fh extends hd {
           try {
             try {
               var3 = (String) (mb.a(param1, "getcookies", true));
-              var4 = uj.a(-89, ';', var3);
+              var4 = UiWidget.a(-89, ';', var3);
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -44,7 +44,7 @@ class fh extends hd {
             if (param2 >= 77) {
               return null;
             }
-            field_r = (hl[]) null;
+            field_r = (Sprite[]) null;
             stackIn_13_0 = null;
             return (String) (stackIn_13_0);
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -109,7 +109,7 @@ class fh extends hd {
         field_r = null;
     }
 
-    public final void a(int param0, boolean param1, int param2, int param3, uj param4) {
+    public final void a(int param0, boolean param1, int param2, int param3, UiWidget param4) {
         try {
           if (param1) {
             sk.a(param0 + param4.field_s, param4.field_i, param4.field_f, true, param4.field_j + param3);
@@ -126,6 +126,6 @@ class fh extends hd {
     }
 
     static {
-        field_r = new hl[8];
+        field_r = new Sprite[8];
     }
 }
