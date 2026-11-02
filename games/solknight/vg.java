@@ -43,10 +43,10 @@ class vg extends pj {
         }
         cl.a(-118, tg.field_J);
         hk.a();
-        mi.a();
+        SoftwareRasterizer.a();
         ee.g(95);
         if (256 > var5) {
-          mi.a(0, 0, mi.field_a, mi.field_d, 0, -var5 + 256);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, 0, -var5 + 256);
         }
         mf.e(4096);
         if (BufferedSocket.field_h < 150) {
@@ -279,7 +279,7 @@ class vg extends pj {
     }
 
     final static void a(byte param0) {
-        if (!sg.b((byte) -107)) {
+        if (!RandomAccessCacheFile.b((byte) -107)) {
           return;
         }
         if (param0 <= 1) {

@@ -78,7 +78,7 @@ final class ff {
 
     final static void a(byte param0) {
         int var1 = 107 / ((param0 - 10) / 41);
-        ga.field_E = new nc();
+        ga.field_E = new IntrusiveDeque();
     }
 
     public final String toString() {
@@ -121,7 +121,7 @@ final class ff {
               return;
             }
             try {
-              pj.field_D = new hb(qa.field_n.field_b, 64, 0);
+              pj.field_D = new BufferedCacheFile(qa.field_n.field_b, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

@@ -130,67 +130,67 @@ final class ue {
           }
           var2Lifetime4 = hj.a((byte) -2, "achievement_names,0");
           if (var2Lifetime4 != null) {
-            hb.field_m[0] = Archive.a(true, var2Lifetime4);
+            BufferedCacheFile.field_m[0] = Archive.a(true, var2Lifetime4);
           }
           var2Lifetime5 = hj.a((byte) -2, "achievement_names,1");
           if (null != var2Lifetime5) {
-            hb.field_m[1] = Archive.a(true, var2Lifetime5);
+            BufferedCacheFile.field_m[1] = Archive.a(true, var2Lifetime5);
           }
           var2Lifetime6 = hj.a((byte) -2, "achievement_names,2");
           if (var2Lifetime6 != null) {
-            hb.field_m[2] = Archive.a(true, var2Lifetime6);
+            BufferedCacheFile.field_m[2] = Archive.a(true, var2Lifetime6);
           }
           var2Lifetime7 = hj.a((byte) -2, "achievement_names,3");
           if (var2Lifetime7 != null) {
-            hb.field_m[3] = Archive.a(true, var2Lifetime7);
+            BufferedCacheFile.field_m[3] = Archive.a(true, var2Lifetime7);
           }
           var2Lifetime8 = hj.a((byte) -2, "achievement_names,4");
           if (var2Lifetime8 != null) {
-            hb.field_m[4] = Archive.a(true, var2Lifetime8);
+            BufferedCacheFile.field_m[4] = Archive.a(true, var2Lifetime8);
           }
           var2Lifetime9 = hj.a((byte) -2, "achievement_names,5");
           if (null != var2Lifetime9) {
-            hb.field_m[5] = Archive.a(true, var2Lifetime9);
+            BufferedCacheFile.field_m[5] = Archive.a(true, var2Lifetime9);
           }
           var2Lifetime10 = hj.a((byte) -2, "achievement_names,6");
           if (null != var2Lifetime10) {
-            hb.field_m[6] = Archive.a(true, var2Lifetime10);
+            BufferedCacheFile.field_m[6] = Archive.a(true, var2Lifetime10);
           }
           var2Lifetime11 = hj.a((byte) -2, "achievement_names,7");
           if (var2Lifetime11 != null) {
-            hb.field_m[7] = Archive.a(true, var2Lifetime11);
+            BufferedCacheFile.field_m[7] = Archive.a(true, var2Lifetime11);
           }
           var2Lifetime12 = hj.a((byte) -2, "achievement_names,8");
           if (null != var2Lifetime12) {
-            hb.field_m[8] = Archive.a(true, var2Lifetime12);
+            BufferedCacheFile.field_m[8] = Archive.a(true, var2Lifetime12);
           }
           var2Lifetime13 = hj.a((byte) -2, "achievement_names,9");
           if (var2Lifetime13 != null) {
-            hb.field_m[9] = Archive.a(true, var2Lifetime13);
+            BufferedCacheFile.field_m[9] = Archive.a(true, var2Lifetime13);
           }
           var2Lifetime14 = hj.a((byte) -2, "achievement_names,10");
           if (null != var2Lifetime14) {
-            hb.field_m[10] = Archive.a(true, var2Lifetime14);
+            BufferedCacheFile.field_m[10] = Archive.a(true, var2Lifetime14);
           }
           var2Lifetime15 = hj.a((byte) -2, "achievement_names,11");
           if (null != var2Lifetime15) {
-            hb.field_m[11] = Archive.a(true, var2Lifetime15);
+            BufferedCacheFile.field_m[11] = Archive.a(true, var2Lifetime15);
           }
           var2Lifetime16 = hj.a((byte) -2, "achievement_names,12");
           if (var2Lifetime16 != null) {
-            hb.field_m[12] = Archive.a(true, var2Lifetime16);
+            BufferedCacheFile.field_m[12] = Archive.a(true, var2Lifetime16);
           }
           var2Lifetime17 = hj.a((byte) -2, "achievement_names,13");
           if (var2Lifetime17 != null) {
-            hb.field_m[13] = Archive.a(true, var2Lifetime17);
+            BufferedCacheFile.field_m[13] = Archive.a(true, var2Lifetime17);
           }
           var2Lifetime18 = hj.a((byte) -2, "achievement_names,14");
           if (null != var2Lifetime18) {
-            hb.field_m[14] = Archive.a(true, var2Lifetime18);
+            BufferedCacheFile.field_m[14] = Archive.a(true, var2Lifetime18);
           }
           var2Lifetime19 = hj.a((byte) -2, "achievement_names,15");
           if (null != var2Lifetime19) {
-            hb.field_m[15] = Archive.a(true, var2Lifetime19);
+            BufferedCacheFile.field_m[15] = Archive.a(true, var2Lifetime19);
           }
           var2Lifetime20 = hj.a((byte) -2, "achievement_criteria,0");
           if (var2Lifetime20 != null) {

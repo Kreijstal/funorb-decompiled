@@ -760,30 +760,30 @@ class UiWidget extends IntrusiveNode {
         int stackIn_38_0Lifetime1;
         var19 = SolKnight.field_L ? 1 : 0;
         try {
-          if (mi.field_b > param1) {
-            param0 = param0 - (mi.field_b - param1);
-            param1 = mi.field_b;
+          if (SoftwareRasterizer.field_b > param1) {
+            param0 = param0 - (SoftwareRasterizer.field_b - param1);
+            param1 = SoftwareRasterizer.field_b;
           }
-          if (param5 < mi.field_l) {
-            param2 = param2 - (-param5 + mi.field_l);
-            param5 = mi.field_l;
+          if (param5 < SoftwareRasterizer.field_l) {
+            param2 = param2 - (-param5 + SoftwareRasterizer.field_l);
+            param5 = SoftwareRasterizer.field_l;
           }
-          if (mi.field_k < param1 + param0) {
-            param0 = -param1 + mi.field_k;
+          if (SoftwareRasterizer.field_k < param1 + param0) {
+            param0 = -param1 + SoftwareRasterizer.field_k;
           }
-          if (param2 + param5 > mi.field_e) {
-            param2 = -param5 + mi.field_e;
+          if (param2 + param5 > SoftwareRasterizer.field_e) {
+            param2 = -param5 + SoftwareRasterizer.field_e;
           }
           if (param0 > 0 &&
             0 < param2) {
             var21 = param4.c();
-            var24 = mi.field_f;
-            var10 = mi.field_a;
-            var11 = mi.field_d;
+            var24 = SoftwareRasterizer.field_f;
+            var10 = SoftwareRasterizer.field_a;
+            var11 = SoftwareRasterizer.field_d;
             var23 = new int[4];
-            mi.b(var23);
+            SoftwareRasterizer.b(var23);
             param4.a();
-            mi.d(var23[0], var23[1], var23[2], var23[3]);
+            SoftwareRasterizer.d(var23[0], var23[1], var23[2], var23[3]);
             var13 = param4.field_p * param5 + param1;
             var14 = -param0 + param4.field_p;
             var15 = var21.field_v;
@@ -807,7 +807,7 @@ class UiWidget extends IntrusiveNode {
                   var15[1 + var13] == 0 ||
                   !(var16 >= param4.field_t - 1) &&
                   var15[param4.field_p + var13] == 0)) {
-                  mi.e(var17, var16, param3, param6);
+                  SoftwareRasterizer.e(var17, var16, param3, param6);
                 }
                 var13++;
                 var17++;
@@ -817,8 +817,8 @@ class UiWidget extends IntrusiveNode {
               var16++;
             }
             var21.d(-param4.field_s, -param4.field_n);
-            mi.a(var24, var10, var11);
-            mi.a(var23);
+            SoftwareRasterizer.a(var24, var10, var11);
+            SoftwareRasterizer.a(var23);
             return;
           }
           return;

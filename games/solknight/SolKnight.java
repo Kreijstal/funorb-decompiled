@@ -106,7 +106,7 @@ public final class SolKnight extends ab {
                 }
               }
             } else {
-              if (!sg.b((byte) -104)) {
+              if (!RandomAccessCacheFile.b((byte) -104)) {
                 if (IntrusiveNode.b((byte) 89)) {
                   stackIn_55_0 = (dj.field_k != null);
                   var2_int = rk.a(stackIn_55_0, (byte) 20, (ab) (this));
@@ -143,7 +143,7 @@ public final class SolKnight extends ab {
                     }
                   }
                 }
-                if (!sg.b((byte) -106)) {
+                if (!RandomAccessCacheFile.b((byte) -106)) {
                   vd.screens[kd.currentScreenIndex].b(true, 3367);
                 }
               }
@@ -208,7 +208,7 @@ public final class SolKnight extends ab {
           GameApplet.d((byte) -41);
           na.a(-13357);
           lf.b(18609);
-          mi.c();
+          SoftwareRasterizer.c();
           Archive.b(-127);
           BitmapFont.a();
           bk.a((byte) 84);
@@ -231,11 +231,11 @@ public final class SolKnight extends ab {
           me.a((byte) 56);
           MenuScreen.a((byte) 101);
           ek.a(117);
-          nc.d((byte) -128);
+          IntrusiveDeque.d((byte) -128);
           va.b((byte) 0);
           ae.b(3);
           ne.b(30731);
-          hb.b(true);
+          BufferedCacheFile.b(true);
           BufferedSocket.a((byte) 84);
           PcmPlayerService.e();
           mf.g(103);
@@ -295,7 +295,7 @@ public final class SolKnight extends ab {
           bi.a((byte) 102);
           md.i(80);
           CachedArchiveSource.b((byte) 0);
-          sg.c(119);
+          RandomAccessCacheFile.c(119);
           qj.a(-126);
           sk.h(-106);
           pf.a((byte) -104);
@@ -704,7 +704,7 @@ public final class SolKnight extends ab {
             eh.field_b[var14].a();
             var15.d(-var15.field_s, -var15.field_n, 65793);
             var15.c(-var15.field_s, -var15.field_n, 64);
-            mi.c(0, 0, mi.field_a, mi.field_d);
+            SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);
           }
           hj.field_e.a(true);
           fh.field_c = null;
@@ -806,10 +806,10 @@ public final class SolKnight extends ab {
               if (kd.currentScreenIndex != -1) {
                 vd.screens[kd.currentScreenIndex].c(0);
                 if (kd.currentScreenIndex == 0) {
-                  hb.a(true);
+                  BufferedCacheFile.a(true);
                 }
               } else {
-                hb.a(true);
+                BufferedCacheFile.a(true);
               }
             }
             if (!(0 > ClientException.field_b) ||
@@ -840,7 +840,7 @@ public final class SolKnight extends ab {
               if (ua.field_H != 32) {
                 return;
               }
-              if (!sg.b((byte) -104)) {
+              if (!RandomAccessCacheFile.b((byte) -104)) {
                 nh.a((byte) 3);
               } else {
                 Archive.a(true);
@@ -916,7 +916,7 @@ public final class SolKnight extends ab {
             } else {
               stackIn_10_2 = wh.field_b;
             }
-            nc.a((java.awt.Canvas) (stackIn_9_0), stackIn_9_1, stackIn_10_2);
+            IntrusiveDeque.a((java.awt.Canvas) (stackIn_9_0), stackIn_9_1, stackIn_10_2);
             return;
           }
           if (!na.field_b) {
@@ -928,7 +928,7 @@ public final class SolKnight extends ab {
             ih.a(20753, (java.awt.Canvas) (var2));
             return;
           }
-          mi.e(-320 - ArchiveSource.field_c, -si.field_E, 1280, 720, 0, il.field_e[kb.field_b]);
+          SoftwareRasterizer.e(-320 - ArchiveSource.field_c, -si.field_E, 1280, 720, 0, il.field_e[kb.field_b]);
           kc.field_O = kc.field_O + 1;
           var3 = 0;
           if (nf.field_W.length < kc.field_O) {
@@ -975,7 +975,7 @@ public final class SolKnight extends ab {
                 vd.screens[kd.currentScreenIndex].d(582);
               }
               ll.a(1 + ua.field_H, 256, false, false);
-              mi.a(0, 0, 640, 480, 16769381, ua.field_H << 4);
+              SoftwareRasterizer.a(0, 0, 640, 480, 16769381, ua.field_H << 4);
             } else {
               if (ri.field_f != -1) {
                 vd.screens[ri.field_f].d(582);
@@ -983,7 +983,7 @@ public final class SolKnight extends ab {
                 d.a(false, (byte) -48);
               }
               ll.a(1 - ua.field_H + 32, 256, false, false);
-              mi.a(0, 0, 640, 480, 16769381, 32 - ua.field_H << 4);
+              SoftwareRasterizer.a(0, 0, 640, 480, 16769381, 32 - ua.field_H << 4);
             }
           }
           var4 = (la) (lc.field_t.a((byte) 51));
@@ -998,23 +998,23 @@ public final class SolKnight extends ab {
             } else {
               var5Lifetime1 = 480 - var6Lifetime1;
             }
-            var7Lifetime1 = SocketConnector.field_g.b(hb.field_m[var4.field_h]);
+            var7Lifetime1 = SocketConnector.field_g.b(BufferedCacheFile.field_m[var4.field_h]);
             uj.a(60 + var7Lifetime1, 70, -60 - var7Lifetime1 + 640 >> 1, gf.field_fb, var5Lifetime1, 2);
             IterableNodeHashTable.field_f[var4.field_h].e(304, 10 + SocketConnector.field_g.field_s + (SocketConnector.field_g.field_F + var5Lifetime1));
-            SocketConnector.field_g.a(hb.field_m[var4.field_h], 320, var5Lifetime1 + SocketConnector.field_g.field_F + 8, 16776960, 1);
+            SocketConnector.field_g.a(BufferedCacheFile.field_m[var4.field_h], 320, var5Lifetime1 + SocketConnector.field_g.field_F + 8, 16776960, 1);
           }
-          if (sg.b((byte) -115)) {
-            mi.a(0, 0, mi.field_a, mi.field_d);
+          if (RandomAccessCacheFile.b((byte) -115)) {
+            SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);
             ai.a(h.field_d, (byte) -83, h.field_d[0].field_t, h.field_d[0].field_p);
           }
           if (je.field_d != 0) {
             var5Lifetime2 = ua.field_H * 256 / 32;
             if (0 < var5Lifetime2) {
-              mi.a(0, 0, mi.field_a, mi.field_d, 0, var5Lifetime2);
+              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d, 0, var5Lifetime2);
             }
           }
           if (lb.g((byte) -94) &&
-            !sg.b((byte) -104)) {
+            !RandomAccessCacheFile.b((byte) -104)) {
             stackIn_79_0 = 25899;
             if (null != dj.field_k) {
               stackIn_80_1 = true;

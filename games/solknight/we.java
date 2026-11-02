@@ -219,10 +219,10 @@ final class we implements j {
             kj.field_S = Asteroid.a("arrow", "benefits", kc.field_Q, (byte) -111);
             kg.field_a = (BitmapFont) ((Object) lc.a(kc.field_Q, 1, "large_font", "benefits", eb.field_b));
             sk.field_n = (BitmapFont) ((Object) lc.a(kc.field_Q, 1, "small_font", "benefits", eb.field_b));
-            var28 = mi.field_f;
-            var2 = mi.field_a;
-            var3 = mi.field_d;
-            mi.b(lj.field_D);
+            var28 = SoftwareRasterizer.field_f;
+            var2 = SoftwareRasterizer.field_a;
+            var3 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.b(lj.field_D);
             var11 = new Sprite(kj.field_S.field_p + 4, 4 + kj.field_S.field_t);
             var11.a();
             kj.field_S.e(2, 2, ea.field_o);
@@ -235,7 +235,7 @@ final class we implements j {
             kg.field_a.a(bb.a(og.field_e, new String[]{NodeHashTableIterator.field_c}, -63), var6, 40, 16777215, -1);
             sk.field_n.a(bb.a(b.field_a, new String[]{NodeHashTableIterator.field_c}, -63), var6, 60, 16777215, -1);
             kg.field_a.a(bb.a(l.field_d, new String[]{sf.field_b}, -63), var6, 110, 16777215, -1);
-            sk.field_n.a(bb.a(hb.field_l, new String[]{sf.field_b}, -63), var6, 130, 16777215, -1);
+            sk.field_n.a(bb.a(BufferedCacheFile.field_l, new String[]{sf.field_b}, -63), var6, 130, 16777215, -1);
             kg.field_a.a(le.field_b, var6, 180, 16777215, -1);
             sk.field_n.a(WidgetContainer.field_A, var6, 200, 16777215, -1);
             UiWidget.a(var12.field_p, 0, var12.field_t, 3, var12, 0, 1, (byte) 21);
@@ -249,9 +249,9 @@ final class we implements j {
             ba.field_s = null;
             ke.field_K = a.field_e.c();
             ke.field_K.a();
-            IterableNodeHashTable.a(mi.field_d * 2 / 3, 0, 0, 64, mi.field_a, true);
-            mi.a(var28, var2, var3);
-            mi.a(lj.field_D);
+            IterableNodeHashTable.a(SoftwareRasterizer.field_d * 2 / 3, 0, 0, 64, SoftwareRasterizer.field_a, true);
+            SoftwareRasterizer.a(var28, var2, var3);
+            SoftwareRasterizer.a(lj.field_D);
             sa.field_m = 231 + (-GameApplet.field_j.field_p + IsaacRandom.field_d.field_p) / 2;
             kc.field_Q = null;
             lk.field_c = (IsaacRandom.field_d.field_t - GameApplet.field_j.field_t) / 2 + 390;
@@ -266,10 +266,10 @@ final class we implements j {
           }
           if (ja.field_a != null &&
             kg.field_a != null) {
-            var29 = mi.field_f;
-            var2Lifetime1 = mi.field_a;
-            var3Lifetime1 = mi.field_d;
-            mi.b(lj.field_D);
+            var29 = SoftwareRasterizer.field_f;
+            var2Lifetime1 = SoftwareRasterizer.field_a;
+            var3Lifetime1 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.b(lj.field_D);
             var14 = bb.a(tk.field_q, new String[]{eb.field_d[uf.field_q]}, -63);
             var5 = kg.field_a.c(var14, jj.field_db);
             var6Lifetime1 = kg.field_a.b(var14, jj.field_db, kg.field_a.field_F + kg.field_a.field_s);
@@ -327,15 +327,15 @@ final class we implements j {
             ja.field_a.b((ja.field_a.field_q >> 1) + gf.field_T, ke.field_N + (ja.field_a.field_r >> 1), aj.field_p, 4096);
             ja.field_a = null;
             rh.field_g.f();
-            mi.a(var29, var2Lifetime1, var3Lifetime1);
-            mi.a(lj.field_D);
+            SoftwareRasterizer.a(var29, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.a(lj.field_D);
           }
           if (null != ProxySocketConnector.field_n &&
             null != sk.field_n) {
-            var30 = mi.field_f;
-            var2Lifetime2 = mi.field_a;
-            var3Lifetime2 = mi.field_d;
-            mi.b(lj.field_D);
+            var30 = SoftwareRasterizer.field_f;
+            var2Lifetime2 = SoftwareRasterizer.field_a;
+            var3Lifetime2 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.b(lj.field_D);
             var16 = new Sprite(412, 43);
             var17 = bb.a(wb.field_d, new String[]{ProxySocketConnector.field_n}, -63);
             ProxySocketConnector.field_n = null;
@@ -344,15 +344,15 @@ final class we implements j {
             UiWidget.a(var16.field_p, 0, var16.field_t, 3, var16, 0, 1, (byte) 21);
             va.field_g.a();
             var16.d(199 - va.field_g.field_s, -va.field_g.field_n + 83);
-            mi.a(var30, var2Lifetime2, var3Lifetime2);
-            mi.a(lj.field_D);
+            SoftwareRasterizer.a(var30, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.a(lj.field_D);
           }
           if (dc.field_j != null &&
             null != sk.field_n) {
-            var31 = mi.field_f;
-            var2Lifetime3 = mi.field_a;
-            var3Lifetime3 = mi.field_d;
-            mi.b(lj.field_D);
+            var31 = SoftwareRasterizer.field_f;
+            var2Lifetime3 = SoftwareRasterizer.field_a;
+            var3Lifetime3 = SoftwareRasterizer.field_d;
+            SoftwareRasterizer.b(lj.field_D);
             var4 = sk.field_n.c(dc.field_p, 640) + 6;
             var5Lifetime1 = dc.field_j.field_q + var4 + 20;
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
@@ -362,13 +362,13 @@ final class we implements j {
             UiWidget.a(var4, var7Lifetime2 - va.field_g.field_s - 4, 50, 3, va.field_g, 155 - va.field_g.field_n, 1, (byte) 21);
             var8Lifetime1 = -va.field_g.field_n + 155 - (-sk.field_n.field_F - 3 + dc.field_j.field_r - sk.field_n.field_s) / 2;
             dc.field_j.d(var6Lifetime2 - va.field_g.field_s, var8Lifetime1);
-            mi.a(var31, var2Lifetime3, var3Lifetime3);
-            mi.a(lj.field_D);
+            SoftwareRasterizer.a(var31, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.a(lj.field_D);
             dc.field_j = null;
           }
-          mi.b(lj.field_D);
-          mi.a(16, 16, 608, 112, 15, Asteroid.field_f, id.field_a);
-          mi.a(231, 144, 393, 232, 15, Asteroid.field_f, id.field_a);
+          SoftwareRasterizer.b(lj.field_D);
+          SoftwareRasterizer.a(16, 16, 608, 112, 15, Asteroid.field_f, id.field_a);
+          SoftwareRasterizer.a(231, 144, 393, 232, 15, Asteroid.field_f, id.field_a);
           if (of.field_f != null) {
             of.field_f.d(0, 0);
           }
@@ -530,7 +530,7 @@ final class we implements j {
             stackIn_3_0 = null;
           }
           var14 = (be) (stackIn_3_0);
-          mi.b(param4.field_m + param3, param1 + param4.field_j, param4.field_t, param4.field_x, this.field_f);
+          SoftwareRasterizer.b(param4.field_m + param3, param1 + param4.field_j, param4.field_t, param4.field_x, this.field_f);
           if (param0 <= 113) {
             we.a(-104, 'P');
           }
@@ -538,18 +538,18 @@ final class we implements j {
           }
           var7 = var14.field_N + param3 + param4.field_m;
           var8 = var14.field_P + param1 + param4.field_j;
-          mi.e(var7, var8, var14.field_O, this.field_a);
+          SoftwareRasterizer.e(var7, var8, var14.field_O, this.field_a);
           if (var14.field_M != -1) {
             var9 = 2.0 * ((double)var14.field_M * 3.141592653589793) / (double)var14.field_L;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_O);
             var12 = (int)(Math.cos(var9) * (double)var14.field_O);
-            mi.e(var11 + var7, var8 + var12, 1, this.field_g);
+            SoftwareRasterizer.e(var11 + var7, var8 + var12, 1, this.field_g);
           }
-          mi.e(var7, var8, 2, 1);
+          SoftwareRasterizer.e(var7, var8, 2, 1);
           var9Lifetime1 = 3.141592653589793 * (double)var14.field_Q * 2.0 / (double)var14.field_L;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_O);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_O);
-          mi.e(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
+          SoftwareRasterizer.e(var7, var8, var11Lifetime1 + var7, var12Lifetime1 + var8, 1);
           if (this.field_k != null) {
             var13 = var14.field_O + var14.field_N + this.field_j;
             this.field_k.a(param4.field_i, var13 + (param4.field_m + param3), this.field_d + (param4.field_j + param1), -var13 - (this.field_j - param4.field_t), -(this.field_j << 1) + param4.field_x, this.field_i, this.field_b, 1, 1, 0);

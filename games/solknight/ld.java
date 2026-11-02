@@ -89,7 +89,7 @@ abstract class ld extends kf {
         int var13Lifetime1;
         int var14Lifetime1;
         var17 = SolKnight.field_L ? 1 : 0;
-        mi.e(param0 + 6, 35 + param2, -12 + this.field_t, this.field_x - 40, 2105376, 0);
+        SoftwareRasterizer.e(param0 + 6, 35 + param2, -12 + this.field_t, this.field_x - 40, 2105376, 0);
         var5 = 211;
         var6 = -45 % ((param1 + 55) / 39);
         var4 = 35;
@@ -97,8 +97,8 @@ abstract class ld extends kf {
         var8 = 0;
         var9 = param2;
         while (var8 < var4) {
-          if (mi.field_l <= var9 &&
-            var9 < mi.field_e) {
+          if (SoftwareRasterizer.field_l <= var9 &&
+            var9 < SoftwareRasterizer.field_e) {
             var10 = (-var5 + var7) * var8 / var4 + var5;
             var11 = 0;
             var12 = this.field_t;
@@ -111,7 +111,7 @@ abstract class ld extends kf {
                   }
                   var14 = (462 - var13) * var10 / 42;
                   var14 = var14 | (var14 << 8 | var14 << 16);
-                  mi.field_f[var11 + (param0 + var9 * mi.field_a)] = var14;
+                  SoftwareRasterizer.field_f[var11 + (param0 + var9 * SoftwareRasterizer.field_a)] = var14;
                 }
                 var11++;
               }
@@ -125,7 +125,7 @@ abstract class ld extends kf {
                   if (var15 >= 420) {
                     var16 = var10 * (-var15 + 462) / 42;
                     var16 = var16 | (var16 << 16 | var16 << 8);
-                    mi.field_f[var12 + var9 * mi.field_a + param0] = var16;
+                    SoftwareRasterizer.field_f[var12 + var9 * SoftwareRasterizer.field_a + param0] = var16;
                   } else {
                     var13Lifetime1 = 1 + var12;
                   }
@@ -137,7 +137,7 @@ abstract class ld extends kf {
               var12 = var13Lifetime1;
             }
             var10 = var10 | (var10 << 16 | var10 << 8);
-            mi.b(var11 + param0, var9, -var11 + var12, var10);
+            SoftwareRasterizer.b(var11 + param0, var9, -var11 + var12, var10);
           }
           var9++;
           var8++;
@@ -150,8 +150,8 @@ abstract class ld extends kf {
         while (var4Lifetime1 > var8Lifetime1) {
           var10Lifetime1 = var5Lifetime1 + (-var5Lifetime1 + var7Lifetime1) * var8Lifetime1 / var4Lifetime1;
           var10Lifetime1 = var10Lifetime1 | (var10Lifetime1 << 8 | var10Lifetime1 << 16);
-          mi.b(param0, var9Lifetime1, 6, var10Lifetime1);
-          mi.b(-6 + (this.field_t + param0), var9Lifetime1, 6, var10Lifetime1);
+          SoftwareRasterizer.b(param0, var9Lifetime1, 6, var10Lifetime1);
+          SoftwareRasterizer.b(-6 + (this.field_t + param0), var9Lifetime1, 6, var10Lifetime1);
           var9Lifetime1++;
           var8Lifetime1++;
         }
@@ -166,8 +166,8 @@ abstract class ld extends kf {
         while (var4Lifetime2 > var8Lifetime2) {
           var10Lifetime2 = var5Lifetime2 + var8Lifetime2 * (-var5Lifetime2 + var7Lifetime2) / var4Lifetime2;
           var10Lifetime2 = var10Lifetime2 | (var10Lifetime2 << 8 | var10Lifetime2 << 16);
-          mi.b(param0, var9Lifetime2, 6, var10Lifetime2);
-          mi.b(-6 + (this.field_t + param0), var9Lifetime2, 6, var10Lifetime2);
+          SoftwareRasterizer.b(param0, var9Lifetime2, 6, var10Lifetime2);
+          SoftwareRasterizer.b(-6 + (this.field_t + param0), var9Lifetime2, 6, var10Lifetime2);
           var8Lifetime2++;
           var9Lifetime2++;
         }

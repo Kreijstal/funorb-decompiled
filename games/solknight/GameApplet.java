@@ -457,7 +457,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 be.i(4);
                 this.a(true);
-                hj.field_e = nc.a(DualLinkNode.field_h, cf.field_d, (byte) -35, (java.awt.Component) ((Object) dc.field_q));
+                hj.field_e = IntrusiveDeque.a(DualLinkNode.field_h, cf.field_d, (byte) -35, (java.awt.Component) ((Object) dc.field_q));
                 this.d(-31680);
                 fh.field_e = ee.e(-1);
                 do {
@@ -669,12 +669,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           dc.field_q.setVisible(true);
           boolean decompiledSharedTail0 = (oc.field_a == var2);
           if (!decompiledSharedTail0) {
-            dc.field_q.setLocation(ib.field_j, nc.field_g);
+            dc.field_q.setLocation(ib.field_j, IntrusiveDeque.field_g);
             decompiledSharedTail0 = (var4 != 0);
           }
           if (decompiledSharedTail0) {
             var3 = oc.field_a.getInsets();
-            dc.field_q.setLocation(var3.left + ib.field_j, nc.field_g + var3.top);
+            dc.field_q.setLocation(var3.left + ib.field_j, IntrusiveDeque.field_g + var3.top);
           }
           dc.field_q.addFocusListener((java.awt.event.FocusListener) (this));
           dc.field_q.requestFocus();
@@ -719,12 +719,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             boolean decompiledSharedTail0 = (null != oc.field_a &&
               null == bg.field_w);
             if (!decompiledSharedTail0) {
-              dc.field_q.setLocation(ib.field_j, nc.field_g);
+              dc.field_q.setLocation(ib.field_j, IntrusiveDeque.field_g);
               decompiledSharedTail0 = (SolKnight.field_L);
             }
             if (decompiledSharedTail0) {
               var6 = oc.field_a.getInsets();
-              dc.field_q.setLocation(var6.left + ib.field_j, nc.field_g + var6.top);
+              dc.field_q.setLocation(var6.left + ib.field_j, IntrusiveDeque.field_g + var6.top);
             }
           }
           this.a(param0 ^ 11538);
@@ -844,7 +844,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           StringBuilder stackIn_26_1 = null;
           String stackIn_27_2 = null;
           Throwable decompiledCaughtException = null;
-          nj var8 = null;
+          PlatformTask var8 = null;
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
@@ -870,7 +870,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               cf.field_d = param5;
               ph.field_c = param5;
               ke.field_J = param6;
-              nc.field_g = 0;
+              IntrusiveDeque.field_g = 0;
               SecondaryNodeDeque.field_c = ia.g(-33);
               dupTemp$0 = new PlatformTaskDispatcher(param3, param1, param4, true);
               wh.field_c = dupTemp$0;

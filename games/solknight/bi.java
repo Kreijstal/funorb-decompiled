@@ -4,14 +4,14 @@
 import java.io.*;
 
 final class bi {
-    private hb field_g;
+    private BufferedCacheFile field_g;
     private int field_j;
     static qc field_b;
     private int field_c;
     static int field_d;
     static int field_a;
     static int field_e;
-    private hb field_f;
+    private BufferedCacheFile field_f;
     static int field_i;
     static int field_h;
 
@@ -582,7 +582,7 @@ final class bi {
         }
     }
 
-    bi(int param0, hb param1, hb param2, int param3) {
+    bi(int param0, BufferedCacheFile param1, BufferedCacheFile param2, int param3) {
         this.field_g = null;
         this.field_c = 65000;
         this.field_f = null;

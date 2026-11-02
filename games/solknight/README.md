@@ -1,5 +1,5 @@
 # Reading Sol Knight
 
-This pass names 37 reviewed classes in 294 source files. Unresolved roles keep their original names.
+This pass names 42 reviewed classes in 294 source files. Unresolved roles keep their original names.
 
 Start at `SolKnight`; the shared engine (nodes, packet buffer, sockets, applet shell) uses the same role names as other FunOrb games.

@@ -223,7 +223,7 @@ final class pg {
               var2 = new PacketBuffer(13);
               si.a(hj.field_x, (byte) 22, sa.field_o, q.field_a, var2);
               var2.c(param0 + 35, 15);
-              var2.b(nc.field_a, false);
+              var2.b(IntrusiveDeque.field_a, false);
               qf.field_a.a(-28748, 0, 13, var2.payload);
               SocketConnector.field_f = SocketConnector.field_f + 1;
               cj.field_c = 30000L + je.a(1);

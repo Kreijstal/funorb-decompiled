@@ -4,7 +4,7 @@
 final class ti {
     static int field_e;
     static String field_a;
-    static nc field_b;
+    static IntrusiveDeque field_b;
     static String field_d;
     static ff field_c;
     static String[] field_g;
@@ -156,7 +156,7 @@ final class ti {
     static {
         field_a = "CONGRATULATIONS!";
         field_d = "Highscores";
-        field_b = new nc();
+        field_b = new IntrusiveDeque();
         field_c = new ff(4, 1, 1, 1);
         field_g = new String[]{"By rating", "By win percentage"};
     }

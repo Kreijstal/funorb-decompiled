@@ -3,7 +3,7 @@
  */
 final class he {
     static int field_b;
-    static nc field_d;
+    static IntrusiveDeque field_d;
     static int[] field_a;
     static String field_e;
     static hi field_c;
@@ -78,7 +78,7 @@ final class he {
         field_b = -1;
         field_e = "LEVEL <%0><br>COMPLETE";
         field_a = new int[16384];
-        field_d = new nc();
+        field_d = new IntrusiveDeque();
         field_f = "Use this alternative as your account name";
     }
 }

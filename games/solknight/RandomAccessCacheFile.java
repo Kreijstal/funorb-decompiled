@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class sg {
+final class RandomAccessCacheFile {
     private long field_c;
     private long field_e;
     private RandomAccessFile field_a;
@@ -75,7 +75,7 @@ final class sg {
 
     final long a(int param0) throws IOException {
         if (param0 != -1) {
-          sg.c(114);
+          RandomAccessCacheFile.c(114);
           return this.field_a.length();
         }
         return this.field_a.length();
@@ -122,7 +122,7 @@ final class sg {
         var2Lifetime1 = -25 / ((-85 - param0) / 36);
     }
 
-    sg(File param0, String param1, long param2) throws IOException {
+    RandomAccessCacheFile(File param0, String param1, long param2) throws IOException {
         int var5_int = 0;
         try {
           if (param2 == -1L) {

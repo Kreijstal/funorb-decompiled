@@ -158,20 +158,20 @@ final class td implements j {
             param2 = param2 & var11.field_B;
           }
           var7 = 5592405;
-          mi.b(param4.field_m + param3, param4.field_j + param1, param4.field_t, param4.field_x, this.field_f);
+          SoftwareRasterizer.b(param4.field_m + param3, param4.field_j + param1, param4.field_t, param4.field_x, this.field_f);
           if (param2) {
             var7 = 16777215;
           }
           var8 = this.field_c + (param3 + param4.field_m);
           var9 = param1 - (-param4.field_j - this.field_o);
-          mi.d(var8, var9, this.field_k, this.field_j, 5592405);
-          mi.b(var8, var9, this.field_k, this.field_j, var7);
+          SoftwareRasterizer.d(var8, var9, this.field_k, this.field_j, 5592405);
+          SoftwareRasterizer.b(var8, var9, this.field_k, this.field_j, var7);
           if (param0 <= 113) {
             field_e = (Sprite[]) null;
           }
           if (var11.field_F) {
-            mi.e(var8, var9, this.field_k + var8, var9 + this.field_j, 1);
-            mi.e(this.field_k + var8, var9, var8, this.field_j + var9, 1);
+            SoftwareRasterizer.e(var8, var9, this.field_k + var8, var9 + this.field_j, 1);
+            SoftwareRasterizer.e(this.field_k + var8, var9, var8, this.field_j + var9, 1);
           }
           if (null != this.field_g) {
             var10 = this.field_k + this.field_c + this.field_p;

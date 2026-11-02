@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class va {
-    static nc field_f;
+    static IntrusiveDeque field_f;
     static Sprite field_g;
     hl field_m;
     hl field_i;

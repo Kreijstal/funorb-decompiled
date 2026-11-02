@@ -4,7 +4,7 @@
 final class kh {
     static sd field_c;
     static String field_e;
-    static nc field_a;
+    static IntrusiveDeque field_a;
     static String field_b;
     static int field_d;
 
@@ -33,6 +33,6 @@ final class kh {
         field_c = null;
         field_e = "EARTH<br>SAVED";
         field_b = "Connection lost - attempting to reconnect";
-        field_a = new nc();
+        field_a = new IntrusiveDeque();
     }
 }

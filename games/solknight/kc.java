@@ -94,7 +94,7 @@ final class kc extends pj {
           }
           if (pk.field_Y.field_t >= var10) {
             cl.a(-97, pk.field_Y);
-            mi.a();
+            SoftwareRasterizer.a();
             var15.b(112, 144, var15.field_q << 4, var15.field_r << 4, -this.field_N << 10, 4096);
             mf.e(param3 + 4096);
             pk.field_Y.a(-var15.field_q + var5, -var15.field_r + var6, 256);
@@ -129,7 +129,7 @@ final class kc extends pj {
           }
           if (pk.field_Y.field_t >= var10Lifetime1) {
             cl.a(-97, pk.field_Y);
-            mi.a();
+            SoftwareRasterizer.a();
             var16.b(112, 144, var16.field_q << 4, var16.field_r << 4, -this.field_N << 10, 4096);
             mf.e(param3 + 4096);
             pk.field_Y.a(-var16.field_q + var5, -var16.field_r + var6, 256);

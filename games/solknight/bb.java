@@ -233,7 +233,7 @@ final class bb extends WidgetContainer implements pi, ka {
             this.field_M.field_z = id.field_b;
           }
           if (this.field_E) {
-            this.field_D.field_z = hb.field_j;
+            this.field_D.field_z = BufferedCacheFile.field_j;
           } else {
             if (!this.field_H) {
               this.field_D.field_w = (j) ((Object) new ri());
@@ -418,7 +418,7 @@ final class bb extends WidgetContainer implements pi, ka {
           ua.field_G.a(this.field_K, this.field_m + (param2 + 20), 15 + (this.field_j + param0), -40 + this.field_t, this.field_x, 16777215, -1, 1, 0, ua.field_G.field_F);
         }
         if (null != this.field_M) {
-          mi.b(10 + param2, param0 + 134, this.field_t - 20, 4210752);
+          SoftwareRasterizer.b(10 + param2, param0 + 134, this.field_t - 20, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }

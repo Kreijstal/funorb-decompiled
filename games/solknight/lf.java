@@ -88,8 +88,8 @@ abstract class lf {
               return true;
             }
             var4 = rh.field_i;
-            if (hb.field_n != 0.0) {
-              var4 = (int)((double)var4 + ib.field_i.nextGaussian() * hb.field_n);
+            if (BufferedCacheFile.field_n != 0.0) {
+              var4 = (int)((double)var4 + ib.field_i.nextGaussian() * BufferedCacheFile.field_n);
               if (0 > var4) {
                 var4 = 0;
               }

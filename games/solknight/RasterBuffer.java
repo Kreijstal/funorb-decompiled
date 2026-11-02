@@ -28,7 +28,7 @@ abstract class RasterBuffer {
         if (!param0) {
           return;
         }
-        mi.a(this.field_h, this.field_a, this.field_d);
+        SoftwareRasterizer.a(this.field_h, this.field_a, this.field_d);
     }
 
     abstract void a(int param0, int param1, int param2, java.awt.Graphics param3);

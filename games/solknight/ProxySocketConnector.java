@@ -162,7 +162,7 @@ final class ProxySocketConnector extends SocketConnector {
         if (dj.field_k == null) {
           return;
         }
-        nc.a((byte) 86, dj.field_k);
+        IntrusiveDeque.a((byte) 86, dj.field_k);
         dj.field_k.a(-3680, wh.field_c);
         dj.field_k = null;
         if (fc.field_l != null) {

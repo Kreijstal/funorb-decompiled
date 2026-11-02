@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class i extends si {
-    private nc field_L;
+    private IntrusiveDeque field_L;
     static long field_H;
     static GameKeyHandler field_J;
     static int field_K;
@@ -127,13 +127,13 @@ final class i extends si {
           var3 = (kf) (var2.c(119));
         }
         if (!param0) {
-          this.field_L = (nc) null;
+          this.field_L = (IntrusiveDeque) null;
         }
     }
 
     public i() {
         super(0, 0, og.field_f, wc.field_e, (j) null, (dg) null);
-        this.field_L = new nc();
+        this.field_L = new IntrusiveDeque();
     }
 
     final static void a(byte param0, long param1) {

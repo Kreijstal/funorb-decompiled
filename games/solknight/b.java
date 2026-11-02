@@ -24,7 +24,7 @@ final class b {
           }
           if (param0 != null &&
             param0.length() >= sa.field_i &&
-            param0.length() <= sg.field_d) {
+            param0.length() <= RandomAccessCacheFile.field_d) {
             return false;
           }
           return true;

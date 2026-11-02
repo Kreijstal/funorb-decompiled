@@ -279,7 +279,7 @@ final class ae implements Runnable {
     }
 
     ae(PlatformTaskDispatcher param0) {
-        nj var2 = null;
+        PlatformTask var2 = null;
         this.field_d = new hl();
         this.field_b = false;
         this.field_a = 0;

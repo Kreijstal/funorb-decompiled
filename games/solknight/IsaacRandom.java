@@ -9,7 +9,7 @@ final class IsaacRandom {
     private int field_c;
     private int field_j;
     static od[] field_i;
-    static nc field_b;
+    static IntrusiveDeque field_b;
     static Sprite field_d;
     static char[] field_g;
     static String field_e;
@@ -256,7 +256,7 @@ final class IsaacRandom {
     }
 
     static {
-        field_b = new nc();
+        field_b = new IntrusiveDeque();
         field_e = "Waiting for graphics";
         field_g = new char[128];
     }

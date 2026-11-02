@@ -58,7 +58,7 @@ abstract class sk extends DualLinkNode {
             field_o = 5;
           }
           q.field_a = param6;
-          nc.field_a = param1;
+          IntrusiveDeque.field_a = param1;
           il.field_c = (va) ((Object) new ea());
           pf.field_d = new ae(param3);
           d.field_b = new ne(il.field_c, pf.field_d);

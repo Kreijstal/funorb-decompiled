@@ -234,7 +234,7 @@ final class hf {
                   var22 = var22 + var24;
                   var30 = var30 + var32;
                   var25 = var25 + var27;
-                  var36Lifetime2 = var36Lifetime2 + mi.field_a;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_a;
                   var21 = var21 + var23;
                   var17_int = var17_int + var19;
                   var26 = var26 + var28;
@@ -326,7 +326,7 @@ final class hf {
               var18 = var18 + var20;
               var17_int = var17_int + var19;
               var26 = var26 + var28;
-              var35Lifetime1 = var35Lifetime1 + mi.field_a;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_a;
               var22 = var22 + var24;
               var25 = var25 + var27;
               var30 = var30 + var32;
@@ -359,7 +359,7 @@ final class hf {
     final int a(int param0) {
         if (!this.field_k && (this.field_i != 2 ||
           this.field_d <= 0)) {
-          if (~this.field_f == ~nc.field_f) {
+          if (~this.field_f == ~IntrusiveDeque.field_f) {
             return 1;
           }
           if (lh.field_p == 2 &&

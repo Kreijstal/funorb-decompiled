@@ -8,7 +8,7 @@ final class bc extends si {
     private int field_L;
     private int field_N;
     private boolean field_I;
-    static nc field_J;
+    static IntrusiveDeque field_J;
     private int field_M;
     private int field_H;
     static sf field_K;
@@ -220,7 +220,7 @@ final class bc extends si {
     }
 
     static {
-        field_J = new nc();
+        field_J = new IntrusiveDeque();
         field_K = new sf(1);
     }
 }

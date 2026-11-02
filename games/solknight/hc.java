@@ -5,11 +5,11 @@ import java.util.*;
 
 final class hc {
     static int field_b;
-    static nc field_a;
+    static IntrusiveDeque field_a;
     static byte[][] field_e;
     static String field_f;
     static int field_d;
-    static hb field_c;
+    static BufferedCacheFile field_c;
 
     final static void a(String param0, boolean param1, String param2, boolean param3) {
         try {
@@ -28,7 +28,7 @@ final class hc {
         field_c = null;
         field_a = null;
         if (param0 != 25850) {
-          field_c = (hb) null;
+          field_c = (BufferedCacheFile) null;
         }
         field_e = (byte[][]) null;
         field_f = null;
@@ -306,7 +306,7 @@ final class hc {
           og.field_j = new int[vc.field_d.length][];
           var4Lifetime3 = 0;
           if (!param1) {
-            field_c = (hb) null;
+            field_c = (BufferedCacheFile) null;
           }
           var5Lifetime3 = th.field_J;
           while (var4Lifetime3 < vc.field_d.length) {
@@ -355,7 +355,7 @@ final class hc {
     }
 
     static {
-        field_a = new nc();
+        field_a = new IntrusiveDeque();
         field_e = new byte[250][];
         field_f = "Achieved";
     }

@@ -81,15 +81,15 @@ final class fg {
             var8 = param4[1].field_q;
             param4[0].b(param1, param0, param3);
             param4[2].b(-var7 + (param1 + param2), param0, param3);
-            mi.b(ql.field_q);
+            SoftwareRasterizer.b(ql.field_q);
             var9 = -50 / ((-22 - param5) / 56);
-            mi.d(var6_int + param1, param0, -var7 + param1 + param2, param0 + param4[1].field_r);
+            SoftwareRasterizer.d(var6_int + param1, param0, -var7 + param1 + param2, param0 + param4[1].field_r);
             var10 = var6_int + param1;
             var11 = param2 + param1 - var7;
             for (param1 = var10; var11 > param1; param1 = param1 + var8) {
               param4[1].b(param1, param0, param3);
             }
-            mi.a(ql.field_q);
+            SoftwareRasterizer.a(ql.field_q);
             return;
           }
           return;

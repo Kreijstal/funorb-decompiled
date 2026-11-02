@@ -5,13 +5,13 @@ import java.io.*;
 
 final class na implements Runnable {
     private PacketBuffer field_g;
-    private nj field_a;
+    private PlatformTask field_a;
     private PlatformTaskDispatcher field_h;
-    private nj field_f;
+    private PlatformTask field_f;
     private int field_c;
     static boolean field_b;
     private java.net.URL field_e;
-    private nj field_i;
+    private PlatformTask field_i;
     private DataInputStream field_d;
     static String[] field_j;
 

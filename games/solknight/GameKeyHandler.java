@@ -54,8 +54,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             lf.field_c = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              var2_int < sg.field_b.length) {
-              var2_int = -129 & sg.field_b[var2_int];
+              var2_int < RandomAccessCacheFile.field_b.length) {
+              var2_int = -129 & RandomAccessCacheFile.field_b[var2_int];
             } else {
               var2_int = -1;
             }
@@ -98,8 +98,8 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             lf.field_c = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
-              sg.field_b.length > var2_int) {
-              var2_int = sg.field_b[var2_int];
+              RandomAccessCacheFile.field_b.length > var2_int) {
+              var2_int = RandomAccessCacheFile.field_b[var2_int];
               if ((128 & var2_int) != 0) {
                 var2_int = -1;
               }

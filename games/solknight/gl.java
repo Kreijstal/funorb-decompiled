@@ -224,7 +224,7 @@ final class gl {
           var1 = new Sprite(540, 140);
           cl.a(-104, var1);
           hk.a();
-          mi.a();
+          SoftwareRasterizer.a();
           BufferedSocket.field_h = 0;
           ee.g(101);
           var2 = var1.c();
@@ -235,7 +235,7 @@ final class gl {
           }
           while (var3 < 15) {
             var2.d(-2, -2, 16777215);
-            mi.d(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.d(4, 4, 0, 0, 540, 140);
             var3++;
           }
           tg.field_I.a();

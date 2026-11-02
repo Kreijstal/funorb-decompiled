@@ -980,12 +980,12 @@ final class Asteroid {
           }
           if (kb.field_b != 0) {
             hf.field_c[2].a(64, var5, 110, var6, var4);
-            mi.a(-var8 + var4, -var9 + var5, this.field_i / 40 + 1, 16776960, 128);
-            mi.e(-var8 + var4, -var9 + var5, 1 + this.field_n / 60, 16777215);
+            SoftwareRasterizer.a(-var8 + var4, -var9 + var5, this.field_i / 40 + 1, 16776960, 128);
+            SoftwareRasterizer.e(-var8 + var4, -var9 + var5, 1 + this.field_n / 60, 16777215);
           } else {
             hf.field_c[0].a(128, var5, 125, var6, var4);
-            mi.a(var4 - var8, -var9 + var5, 1 + this.field_i / 30, 16776960, 128);
-            mi.e(var4 - var8, var5 - var9, this.field_n / 40 + 1, 16777215);
+            SoftwareRasterizer.a(var4 - var8, -var9 + var5, 1 + this.field_i / 30, 16776960, 128);
+            SoftwareRasterizer.e(var4 - var8, var5 - var9, this.field_n / 40 + 1, 16777215);
           }
         } else {
           if (1 != var10) {
@@ -994,11 +994,11 @@ final class Asteroid {
                 if (var10 != 4) {
                   if (var10 != 5) {
                     if (var10 == 6) {
-                      mi.e(var4, var5, 4, 65280);
-                      mi.e(var4 - this.field_c / 32, -(this.field_d / 32) + var5, 3, 65280);
-                      mi.e(-(this.field_c / 16) + var4, var5 - this.field_d / 16, 2, 65280);
-                      mi.e(var4, var5, 3, 16776960);
-                      mi.e(var4, var5, 2, 16777215);
+                      SoftwareRasterizer.e(var4, var5, 4, 65280);
+                      SoftwareRasterizer.e(var4 - this.field_c / 32, -(this.field_d / 32) + var5, 3, 65280);
+                      SoftwareRasterizer.e(-(this.field_c / 16) + var4, var5 - this.field_d / 16, 2, 65280);
+                      SoftwareRasterizer.e(var4, var5, 3, 16776960);
+                      SoftwareRasterizer.e(var4, var5, 2, 16777215);
                     } else {
                       if (var10 != 7) {
                         if (var10 != 8) {
@@ -1035,34 +1035,34 @@ final class Asteroid {
                                 IterableNodeHashTable.field_g[var7].c(var4 - 16, -16 + var5, 32, 32, 256 - this.field_e * 16);
                                 break;
                               case 14:
-                                mi.e(-(this.field_c / 16) + var4, var5 - this.field_d / 16, var4, var5, 16711680);
+                                SoftwareRasterizer.e(-(this.field_c / 16) + var4, var5 - this.field_d / 16, var4, var5, 16711680);
                                 break;
                               case 15:
-                                mi.e(1 + var4 - this.field_c / 16, var5 - this.field_d / 16, 1 + var4, var5, 16711680);
-                                mi.e(-(this.field_c / 16) + var4 - 1, -(this.field_d / 16) + var5, var4 - 1, var5, 16711680);
-                                mi.e(var4 - this.field_c / 16, 1 + var5 - this.field_d / 16, var4, 1 + var5, 16711680);
-                                mi.e(-(this.field_c / 16) + var4, -1 - this.field_d / 16 + var5, var4, -1 + var5, 16711680);
-                                mi.e(-(this.field_c / 16) + var4, var5 - this.field_d / 16, var4, var5, 16776960);
+                                SoftwareRasterizer.e(1 + var4 - this.field_c / 16, var5 - this.field_d / 16, 1 + var4, var5, 16711680);
+                                SoftwareRasterizer.e(-(this.field_c / 16) + var4 - 1, -(this.field_d / 16) + var5, var4 - 1, var5, 16711680);
+                                SoftwareRasterizer.e(var4 - this.field_c / 16, 1 + var5 - this.field_d / 16, var4, 1 + var5, 16711680);
+                                SoftwareRasterizer.e(-(this.field_c / 16) + var4, -1 - this.field_d / 16 + var5, var4, -1 + var5, 16711680);
+                                SoftwareRasterizer.e(-(this.field_c / 16) + var4, var5 - this.field_d / 16, var4, var5, 16776960);
                                 break;
                               case 16:
-                                mi.e(1 + (-(this.field_c / 16) + var4), var5 - this.field_d / 16, 1 + var4, var5, 16776960);
-                                mi.e(-1 + (-(this.field_c / 16) + var4), -(this.field_d / 16) + var5, var4 - 1, var5, 16776960);
-                                mi.e(var4 - this.field_c / 16, -(this.field_d / 16) + (var5 + 1), var4, 1 + var5, 16776960);
-                                mi.e(-(this.field_c / 16) + var4, -(this.field_d / 16) + (var5 - 1), var4, -1 + var5, 16776960);
-                                mi.e(-(this.field_c / 16) + var4, var5 - this.field_d / 16, var4, var5, 16777215);
+                                SoftwareRasterizer.e(1 + (-(this.field_c / 16) + var4), var5 - this.field_d / 16, 1 + var4, var5, 16776960);
+                                SoftwareRasterizer.e(-1 + (-(this.field_c / 16) + var4), -(this.field_d / 16) + var5, var4 - 1, var5, 16776960);
+                                SoftwareRasterizer.e(var4 - this.field_c / 16, -(this.field_d / 16) + (var5 + 1), var4, 1 + var5, 16776960);
+                                SoftwareRasterizer.e(-(this.field_c / 16) + var4, -(this.field_d / 16) + (var5 - 1), var4, -1 + var5, 16776960);
+                                SoftwareRasterizer.e(-(this.field_c / 16) + var4, var5 - this.field_d / 16, var4, var5, 16777215);
                                 break;
                               case 18:
                                 if (this.field_e * 8 < 255) {
-                                  mi.a(var4, var5, 2 * this.field_e, 65280, -(this.field_e * 8) + 255);
+                                  SoftwareRasterizer.a(var4, var5, 2 * this.field_e, 65280, -(this.field_e * 8) + 255);
                                 }
                                 if (this.field_e * 16 >= 255) {
                                   break;
                                 }
-                                mi.a(var4, var5, this.field_e, 16776960, -(this.field_e * 16) + 255);
+                                SoftwareRasterizer.a(var4, var5, this.field_e, 16776960, -(this.field_e * 16) + 255);
                                 break;
                               case 19:
-                                mi.a((this.field_c >> 4) + var4, (this.field_d >> 4) + var5, this.field_g + 4, 16711680, 32);
-                                mi.e(var4, var5, this.field_g, 16777215);
+                                SoftwareRasterizer.a((this.field_c >> 4) + var4, (this.field_d >> 4) + var5, this.field_g + 4, 16711680, 32);
+                                SoftwareRasterizer.e(var4, var5, this.field_g, 16777215);
                                 break;
                               case 25:
                                 wi.field_i[this.field_m].a(21, var5, 110, 0, var4);
@@ -1083,8 +1083,8 @@ final class Asteroid {
                                 if (kd.currentScreenIndex != -1) {
                                   break;
                                 }
-                                mi.b(var4 - this.field_g / 2, -2 + var5, this.field_g - this.field_e * this.field_g / 4, 4, 16744576);
-                                mi.g(var4 - this.field_g / 2, -2 + var5, this.field_g, 4, 16711680);
+                                SoftwareRasterizer.b(var4 - this.field_g / 2, -2 + var5, this.field_g - this.field_e * this.field_g / 4, 4, 16744576);
+                                SoftwareRasterizer.g(var4 - this.field_g / 2, -2 + var5, this.field_g, 4, 16711680);
                                 break;
                               case 28:
                                 wi.field_i[this.field_m].a(96, var5, 116, 0, var4);
@@ -1105,8 +1105,8 @@ final class Asteroid {
                                 if (kd.currentScreenIndex != -1) {
                                   break;
                                 }
-                                mi.b(var4 - this.field_g / 2, var5 - 2, -(this.field_e * this.field_g / 72) + this.field_g, 4, 16744576);
-                                mi.g(-(this.field_g / 2) + var4, var5 - 2, this.field_g, 4, 16711680);
+                                SoftwareRasterizer.b(var4 - this.field_g / 2, var5 - 2, -(this.field_e * this.field_g / 72) + this.field_g, 4, 16744576);
+                                SoftwareRasterizer.g(-(this.field_g / 2) + var4, var5 - 2, this.field_g, 4, 16711680);
                                 break;
                               case 29:
                                 wi.field_i[this.field_m].a(128, var5, 92, 0, var4);
@@ -1125,8 +1125,8 @@ final class Asteroid {
                                   }
                                 }
                                 if (-1 == kd.currentScreenIndex) {
-                                  mi.b(-(this.field_g / 2) + var4, var5 - 2, this.field_g - this.field_e * this.field_g / 128, 4, 16744576);
-                                  mi.g(var4 - this.field_g / 2, var5 - 2, this.field_g, 4, 16711680);
+                                  SoftwareRasterizer.b(-(this.field_g / 2) + var4, var5 - 2, this.field_g - this.field_e * this.field_g / 128, 4, 16744576);
+                                  SoftwareRasterizer.g(var4 - this.field_g / 2, var5 - 2, this.field_g, 4, 16711680);
                                 }
                                 break;
                               case 30:
@@ -1148,8 +1148,8 @@ final class Asteroid {
                                 if (kd.currentScreenIndex != -1) {
                                   break;
                                 }
-                                mi.b(-(this.field_g / 2) + var4, var5 - 2, this.field_g - this.field_g * this.field_e / 256, 4, 16744576);
-                                mi.g(var4 - this.field_g / 2, -2 + var5, this.field_g, 4, 16711680);
+                                SoftwareRasterizer.b(-(this.field_g / 2) + var4, var5 - 2, this.field_g - this.field_g * this.field_e / 256, 4, 16744576);
+                                SoftwareRasterizer.g(var4 - this.field_g / 2, -2 + var5, this.field_g, 4, 16711680);
                                 break;
                               case 31:
                               default:
@@ -1159,7 +1159,7 @@ final class Asteroid {
                                   var10 != 23 &&
                                   var10 != 24) {
                                   if (var10 != 31) {
-                                    mi.e(var4, var5, 4, 16777215);
+                                    SoftwareRasterizer.e(var4, var5, 4, 16777215);
                                     break;
                                   }
                                   if (this.field_e >= 128) {
@@ -1194,8 +1194,8 @@ final class Asteroid {
                                   }
                                 }
                                 if (kd.currentScreenIndex == -1) {
-                                  mi.b(-(this.field_g / 2) + var4, var5 - 2, this.field_g - this.field_e * this.field_g / 36, 4, 16744576);
-                                  mi.g(-(this.field_g / 2) + var4, -2 + var5, this.field_g, 4, 16711680);
+                                  SoftwareRasterizer.b(-(this.field_g / 2) + var4, var5 - 2, this.field_g - this.field_e * this.field_g / 36, 4, 16744576);
+                                  SoftwareRasterizer.g(-(this.field_g / 2) + var4, -2 + var5, this.field_g, 4, 16711680);
                                 }
                                 break;
                               case 26:
@@ -1215,13 +1215,13 @@ final class Asteroid {
                                   }
                                 }
                                 if (kd.currentScreenIndex == -1) {
-                                  mi.b(var4 - this.field_g / 2, -2 + var5, -(this.field_g * this.field_e / 12) + this.field_g, 4, 16744576);
-                                  mi.g(var4 - this.field_g / 2, -2 + var5, this.field_g, 4, 16711680);
+                                  SoftwareRasterizer.b(var4 - this.field_g / 2, -2 + var5, -(this.field_g * this.field_e / 12) + this.field_g, 4, 16744576);
+                                  SoftwareRasterizer.g(var4 - this.field_g / 2, -2 + var5, this.field_g, 4, 16711680);
                                 }
                                 break;
                               case 17:
                                 if (255 > this.field_e * 16) {
-                                  mi.a(var4, var5, this.field_e * 4, 65280, 255 - 16 * this.field_e);
+                                  SoftwareRasterizer.a(var4, var5, this.field_e * 4, 65280, 255 - 16 * this.field_e);
                                 }
                                 break;
                               case 11:
@@ -1259,20 +1259,20 @@ final class Asteroid {
                       }
                     }
                   } else {
-                    mi.e(var4, var5, 1, 16711680);
+                    SoftwareRasterizer.e(var4, var5, 1, 16711680);
                   }
                 } else {
-                  mi.e(var4, var5, -(this.field_c / 16) + var4, -(this.field_d / 16) + var5, 16777215);
-                  mi.e(var4 - (this.field_c + this.field_d / 10) / 16, var5 - (this.field_d - this.field_c / 10) / 16, var4, var5, 16777215);
-                  mi.e(var4 - (-(this.field_d / 10) + this.field_c) / 16, var5 - (this.field_d + this.field_c / 10) / 16, var4, var5, 16777215);
-                  mi.e(var4 - (this.field_c + this.field_d / 20) / 16, var5 - (-(this.field_c / 20) + this.field_d) / 16, var4, var5, 16777215);
-                  mi.e(-((this.field_c - this.field_d / 20) / 16) + var4, -((this.field_d + this.field_c / 20) / 16) + var5, var4, var5, 16777215);
+                  SoftwareRasterizer.e(var4, var5, -(this.field_c / 16) + var4, -(this.field_d / 16) + var5, 16777215);
+                  SoftwareRasterizer.e(var4 - (this.field_c + this.field_d / 10) / 16, var5 - (this.field_d - this.field_c / 10) / 16, var4, var5, 16777215);
+                  SoftwareRasterizer.e(var4 - (-(this.field_d / 10) + this.field_c) / 16, var5 - (this.field_d + this.field_c / 10) / 16, var4, var5, 16777215);
+                  SoftwareRasterizer.e(var4 - (this.field_c + this.field_d / 20) / 16, var5 - (-(this.field_c / 20) + this.field_d) / 16, var4, var5, 16777215);
+                  SoftwareRasterizer.e(-((this.field_c - this.field_d / 20) / 16) + var4, -((this.field_d + this.field_c / 20) / 16) + var5, var4, var5, 16777215);
                 }
               } else {
                 var6 = (int)(128.0 * Math.atan2((double)(-this.field_c), (double)(-this.field_d)) / 3.141592653589793);
                 hf.field_c[3].a(128, var5, 89, var6, var4);
-                mi.a(-var8 + var4, -var9 + var5, 1 + this.field_i / 20, 16776960, 128);
-                mi.e(var4 - var8, -var9 + var5, 1 + this.field_n / 24, 16777215);
+                SoftwareRasterizer.a(-var8 + var4, -var9 + var5, 1 + this.field_i / 20, 16776960, 128);
+                SoftwareRasterizer.e(var4 - var8, -var9 + var5, 1 + this.field_n / 24, 16777215);
               }
             } else {
               var6 = (int)(Math.atan2((double)(-this.field_c), (double)(-this.field_d)) * 128.0 / 3.141592653589793);
@@ -1282,8 +1282,8 @@ final class Asteroid {
                 var9 = this.field_d * 12 / var10;
                 var8 = this.field_c * 12 / var10;
               }
-              mi.a(var4 - var8, -var9 + var5, this.field_i / 24 + 1, 16776960, 128);
-              mi.e(var4 - var8, var5 - var9, 1 + this.field_n / 30, 16777215);
+              SoftwareRasterizer.a(var4 - var8, -var9 + var5, this.field_i / 24 + 1, 16776960, 128);
+              SoftwareRasterizer.e(var4 - var8, var5 - var9, 1 + this.field_n / 30, 16777215);
             }
           } else {
             var6 = (int)(128.0 * Math.atan2((double)(-this.field_c), (double)(-this.field_d)) / 3.141592653589793);
@@ -1293,8 +1293,8 @@ final class Asteroid {
               var9 = 12 * this.field_d / var10;
               var8 = 12 * this.field_c / var10;
             }
-            mi.a(-var8 + var4, var5 - var9, 1 + this.field_i / 30, 16776960, 128);
-            mi.e(-var8 + var4, -var9 + var5, this.field_n / 40 + 1, 16777215);
+            SoftwareRasterizer.a(-var8 + var4, var5 - var9, 1 + this.field_i / 30, 16776960, 128);
+            SoftwareRasterizer.e(-var8 + var4, -var9 + var5, this.field_n / 40 + 1, 16777215);
           }
         }
     }

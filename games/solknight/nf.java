@@ -28,7 +28,7 @@ final class nf extends ld implements ka {
               var3 = ak.field_c;
               this.field_x = this.field_x + 10;
               if (pe.a((byte) -108)) {
-                var3 = nc.field_b;
+                var3 = IntrusiveDeque.field_b;
                 this.field_x = this.field_x + 20;
               }
             } else {

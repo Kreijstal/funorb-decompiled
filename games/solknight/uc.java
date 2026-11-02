@@ -6,10 +6,10 @@ final class uc {
     static int field_f;
     static int field_c;
     static int field_e;
-    static nc field_j;
+    static IntrusiveDeque field_j;
     static String field_d;
     static BitmapFont field_g;
-    static nc field_a;
+    static IntrusiveDeque field_a;
     static int field_i;
     static String[] field_h;
     static String field_k;
@@ -157,9 +157,9 @@ final class uc {
 
     static {
         pg.a(50, 1);
-        field_j = new nc();
+        field_j = new IntrusiveDeque();
         field_d = "Passwords must be between 5 and 20 letters and numbers";
-        field_a = new nc();
+        field_a = new IntrusiveDeque();
         field_k = "Player names can be up to 12 letters, numbers and underscores";
         field_h = new String[]{"Defender of Humanity", "Warrior of the Void", "Heavenly Guardian", "Astral Avenger", "Rock Crusher", "Lord of the System", "Earth's Last Hope", "Revenge of the Rock Scum"};
     }

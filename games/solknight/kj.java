@@ -7,7 +7,7 @@ class kj extends pj {
     static PcmPlayerService field_P;
     static ff field_J;
     static long field_I;
-    private nc field_L;
+    private IntrusiveDeque field_L;
     private li field_Q;
     static String field_K;
     static Sprite field_S;
@@ -341,7 +341,7 @@ class kj extends pj {
         int var16;
         int var7Lifetime1;
         var16 = SolKnight.field_L ? 1 : 0;
-        this.field_L = new nc();
+        this.field_L = new IntrusiveDeque();
         var2 = 0;
         var3 = (eg) ((Object) this.field_w);
         var4 = var3.a(-21480, (UiWidget) (this));

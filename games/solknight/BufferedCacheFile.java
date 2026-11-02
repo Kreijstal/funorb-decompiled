@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class hb {
+final class BufferedCacheFile {
     private long field_i;
     private long field_e;
     private byte[] field_k;
@@ -14,7 +14,7 @@ final class hb {
     private byte[] field_g;
     private long field_a;
     static String[] field_m;
-    private sg field_o;
+    private RandomAccessCacheFile field_o;
     private int field_h;
     private long field_f;
     private int field_c;
@@ -844,7 +844,7 @@ final class hb {
         }
     }
 
-    hb(sg param0, int param1, int param2) throws IOException {
+    BufferedCacheFile(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_d = -1L;
         this.field_f = -1L;

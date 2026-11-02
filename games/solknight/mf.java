@@ -447,8 +447,8 @@ final class mf extends PcmStream {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        mi.a(var1.field_h, var1.field_k, var1.field_o);
-        mi.f(var1.field_l, var1.field_j, var1.field_i, var1.field_m);
+        SoftwareRasterizer.a(var1.field_h, var1.field_k, var1.field_o);
+        SoftwareRasterizer.f(var1.field_l, var1.field_j, var1.field_i, var1.field_m);
         var1.field_h = null;
         uc.field_a.a(var1, -7044);
     }

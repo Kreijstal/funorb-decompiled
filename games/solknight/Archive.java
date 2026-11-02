@@ -577,21 +577,21 @@ final class Archive {
     }
 
     final static void a(int param0) {
-        sg.field_b[192] = 28;
-        sg.field_b[222] = 58;
-        sg.field_b[520] = 59;
+        RandomAccessCacheFile.field_b[192] = 28;
+        RandomAccessCacheFile.field_b[222] = 58;
+        RandomAccessCacheFile.field_b[520] = 59;
         if (param0 != 0) {
           Archive.a(-106);
         }
-        sg.field_b[92] = 74;
-        sg.field_b[47] = 73;
-        sg.field_b[91] = 42;
-        sg.field_b[44] = 71;
-        sg.field_b[93] = 43;
-        sg.field_b[59] = 57;
-        sg.field_b[46] = 72;
-        sg.field_b[45] = 26;
-        sg.field_b[61] = 27;
+        RandomAccessCacheFile.field_b[92] = 74;
+        RandomAccessCacheFile.field_b[47] = 73;
+        RandomAccessCacheFile.field_b[91] = 42;
+        RandomAccessCacheFile.field_b[44] = 71;
+        RandomAccessCacheFile.field_b[93] = 43;
+        RandomAccessCacheFile.field_b[59] = 57;
+        RandomAccessCacheFile.field_b[46] = 72;
+        RandomAccessCacheFile.field_b[45] = 26;
+        RandomAccessCacheFile.field_b[61] = 27;
     }
 
     final boolean b(int param0, String param1) {

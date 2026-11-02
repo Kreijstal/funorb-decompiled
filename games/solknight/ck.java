@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ck {
-    private nc field_b;
+    private IntrusiveDeque field_b;
     private IntrusiveNode field_a;
 
     final static void a(boolean param0, byte param1) {
@@ -165,7 +165,7 @@ final class ck {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != -25119) {
-          this.field_b = (nc) null;
+          this.field_b = (IntrusiveDeque) null;
           var2 = this.field_b.field_e.next;
           if (this.field_b.field_e == var2) {
             this.field_a = null;
@@ -215,7 +215,7 @@ final class ck {
         return true;
     }
 
-    ck(nc param0) {
+    ck(IntrusiveDeque param0) {
         try {
           this.field_b = param0;
         } catch (RuntimeException runtimeException) {

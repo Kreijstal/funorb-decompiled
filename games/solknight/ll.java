@@ -30,29 +30,29 @@ final class ll {
         if (!param3) {
           var6 = 0;
         } else {
-          var6 = (mi.field_a - 1) % param0;
+          var6 = (SoftwareRasterizer.field_a - 1) % param0;
           var8 = var8 + (param0 - 1);
         }
         if (!param4) {
           var7 = 0;
         } else {
-          var7 = (mi.field_d - 1) % param0;
-          var8 = var8 + (param0 - 1) * mi.field_a;
+          var7 = (SoftwareRasterizer.field_d - 1) % param0;
+          var8 = var8 + (param0 - 1) * SoftwareRasterizer.field_a;
         }
-        var9 = var7 * mi.field_a + var6;
-        var10 = mi.field_a * param0 - (mi.field_a + param0 - 1) / param0 * param0;
-        for (var11 = var7; var11 < mi.field_d; var11 = var11 + param0) {
-          for (var12 = var6; var12 < mi.field_a; var12 = var12 + param0) {
-            var13 = mi.field_f[var9];
+        var9 = var7 * SoftwareRasterizer.field_a + var6;
+        var10 = SoftwareRasterizer.field_a * param0 - (SoftwareRasterizer.field_a + param0 - 1) / param0 * param0;
+        for (var11 = var7; var11 < SoftwareRasterizer.field_d; var11 = var11 + param0) {
+          for (var12 = var6; var12 < SoftwareRasterizer.field_a; var12 = var12 + param0) {
+            var13 = SoftwareRasterizer.field_f[var9];
             var14 = (var13 & 16711935) * param1 >>> 8 & 16711935;
             var13 = (var14 | (var13 & 65280) * param1 >>> 8 & 65280) + param2;
             var15 = param0;
             var16 = param0;
             var17 = var9 - var8;
-            var18 = mi.field_a;
+            var18 = SoftwareRasterizer.field_a;
             if (!param3) {
-              if (var15 > mi.field_a - var12) {
-                var15 = mi.field_a - var12;
+              if (var15 > SoftwareRasterizer.field_a - var12) {
+                var15 = SoftwareRasterizer.field_a - var12;
               }
             } else {
               if (var15 > var12 + 1) {
@@ -61,8 +61,8 @@ final class ll {
               }
             }
             if (!param4) {
-              if (var16 > mi.field_d - var11) {
-                var16 = mi.field_d - var11;
+              if (var16 > SoftwareRasterizer.field_d - var11) {
+                var16 = SoftwareRasterizer.field_d - var11;
               }
             } else {
               if (var16 > var11 + 1) {
@@ -77,7 +77,7 @@ final class ll {
               for (var20 = var15; var20 < 0; var20++) {
                 incrementValue$0 = var17;
                 var17++;
-                mi.field_f[incrementValue$0] = var13;
+                SoftwareRasterizer.field_f[incrementValue$0] = var13;
               }
               var17 = var17 + var18;
             }

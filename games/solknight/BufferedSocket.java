@@ -8,7 +8,7 @@ final class BufferedSocket implements Runnable {
     private boolean field_p;
     private boolean field_n;
     private byte[] field_a;
-    private nj field_d;
+    private PlatformTask field_d;
     static int field_h;
     static String field_o;
     static hd field_b;

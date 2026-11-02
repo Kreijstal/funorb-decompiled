@@ -333,7 +333,7 @@ final class ua extends WidgetContainer implements ka {
         if (param0 != 0) {
           field_F = (Sprite[]) null;
         }
-        return new mb(sg.b(-1), he.a(71));
+        return new mb(RandomAccessCacheFile.b(-1), he.a(71));
     }
 
     ua(ge param0) {

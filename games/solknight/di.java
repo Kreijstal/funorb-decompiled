@@ -8,10 +8,10 @@ final class di extends IntrusiveNode {
     int[] field_p;
     int[] field_r;
     int field_h;
-    nj[] field_k;
+    PlatformTask[] field_k;
     int[] field_m;
     byte[][][] field_q;
-    nj[] field_s;
+    PlatformTask[] field_s;
     static ff field_i;
     private static long[] field_n;
 

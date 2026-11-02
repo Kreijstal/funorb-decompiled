@@ -140,16 +140,16 @@ abstract class ab extends GameApplet {
             var6 = null;
             var7 = null;
             if (null != NodeHashTableIterator.field_a.field_c) {
-              hc.field_c = new hb(NodeHashTableIterator.field_a.field_c, 5200, 0);
+              hc.field_c = new BufferedCacheFile(NodeHashTableIterator.field_a.field_c, 5200, 0);
               NodeHashTableIterator.field_a.field_c = null;
-              var6 = new bi(255, hc.field_c, new hb(NodeHashTableIterator.field_a.field_s, 12000, 0), 2097152);
+              var6 = new bi(255, hc.field_c, new BufferedCacheFile(NodeHashTableIterator.field_a.field_s, 12000, 0), 2097152);
             }
             if (hc.field_c != null) {
               if (null == tk.field_p) {
-                tk.field_p = new hb[NodeHashTableIterator.field_a.field_v.length];
+                tk.field_p = new BufferedCacheFile[NodeHashTableIterator.field_a.field_v.length];
               }
               if (tk.field_p[param1] == null) {
-                tk.field_p[param1] = new hb(NodeHashTableIterator.field_a.field_v[param1], 12000, 0);
+                tk.field_p[param1] = new BufferedCacheFile(NodeHashTableIterator.field_a.field_v[param1], 12000, 0);
                 NodeHashTableIterator.field_a.field_v[param1] = null;
               }
               var7 = new bi(param1, hc.field_c, tk.field_p[param1], 2097152);
@@ -374,7 +374,7 @@ abstract class ab extends GameApplet {
             }
           }
           if (2 == var4) {
-            var5_intLifetime1 = gl.a(fi.a((byte) 84), 140, rg.a(0), ta.a((byte) -23), this.field_r, sg.b(-1), lc.b(false));
+            var5_intLifetime1 = gl.a(fi.a((byte) 84), 140, rg.a(0), ta.a((byte) -23), this.field_r, RandomAccessCacheFile.b(-1), lc.b(false));
             if (-1 != var5_intLifetime1) {
               ff.a(var5_intLifetime1, -114, ke.field_O, md.field_v);
               ke.field_O = null;
@@ -829,7 +829,7 @@ abstract class ab extends GameApplet {
         }
         if (!param1 &&
           jd.field_p) {
-          nc.a((byte) 86, dc.field_q);
+          IntrusiveDeque.a((byte) 86, dc.field_q);
           this.a(true);
           th.a((byte) -69, dc.field_q);
         }

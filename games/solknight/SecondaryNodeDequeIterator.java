@@ -6,7 +6,7 @@ import java.util.*;
 final class SecondaryNodeDequeIterator implements Iterator {
     static float field_e;
     static String field_c;
-    static nc field_h;
+    static IntrusiveDeque field_h;
     static int field_d;
     static int field_f;
     static od[] field_g;

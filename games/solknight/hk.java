@@ -13,7 +13,7 @@ final class hk {
     static int field_a;
 
     final static void a() {
-        hk.a(mi.field_b, mi.field_l, mi.field_k, mi.field_e);
+        hk.a(SoftwareRasterizer.field_b, SoftwareRasterizer.field_l, SoftwareRasterizer.field_k, SoftwareRasterizer.field_e);
     }
 
     private final static void a(int param0, int param1, int param2, int param3) {
@@ -24,10 +24,10 @@ final class hk {
         if (field_d.length < field_a) {
           field_d = new int[ac.a(field_a, true)];
         }
-        int var4 = param1 * mi.field_a + param0;
+        int var4 = param1 * SoftwareRasterizer.field_a + param0;
         for (var5 = 0; var5 < field_a; var5++) {
           field_d[var5] = var4;
-          var4 = var4 + mi.field_a;
+          var4 = var4 + SoftwareRasterizer.field_a;
         }
     }
 

@@ -45,81 +45,81 @@ class ci extends gf implements ka {
           }
           var5_int = param3 + param0;
           var6 = param1 + param2;
-          if (mi.field_b < param3) {
+          if (SoftwareRasterizer.field_b < param3) {
             stackIn_6_0 = param3;
           } else {
-            stackIn_6_0 = mi.field_b;
+            stackIn_6_0 = SoftwareRasterizer.field_b;
           }
           var7 = stackIn_6_0;
-          if (param1 <= mi.field_l) {
-            stackIn_9_0 = mi.field_l;
+          if (param1 <= SoftwareRasterizer.field_l) {
+            stackIn_9_0 = SoftwareRasterizer.field_l;
           } else {
             stackIn_9_0 = param1;
           }
           var8 = stackIn_9_0;
-          if (var5_int >= mi.field_k) {
-            stackIn_12_0 = mi.field_k;
+          if (var5_int >= SoftwareRasterizer.field_k) {
+            stackIn_12_0 = SoftwareRasterizer.field_k;
           } else {
             stackIn_12_0 = var5_int;
           }
           var9 = stackIn_12_0;
-          if (var6 < mi.field_e) {
+          if (var6 < SoftwareRasterizer.field_e) {
             stackIn_15_0 = var6;
           } else {
-            stackIn_15_0 = mi.field_e;
+            stackIn_15_0 = SoftwareRasterizer.field_e;
           }
           var10 = stackIn_15_0;
-          if (param3 >= mi.field_b &&
-            mi.field_k > param3) {
-            var11 = param3 + mi.field_a * var8;
+          if (param3 >= SoftwareRasterizer.field_b &&
+            SoftwareRasterizer.field_k > param3) {
+            var11 = param3 + SoftwareRasterizer.field_a * var8;
             var12 = -var8 + var10 + 1 >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              mi.field_f[var11] = 16777215;
-              var11 = var11 + mi.field_a * 2;
+              SoftwareRasterizer.field_f[var11] = 16777215;
+              var11 = var11 + SoftwareRasterizer.field_a * 2;
             }
           }
-          if (mi.field_l <= param1 &&
-            var6 < mi.field_e) {
-            var11Lifetime1 = var7 + mi.field_a * param1;
+          if (SoftwareRasterizer.field_l <= param1 &&
+            var6 < SoftwareRasterizer.field_e) {
+            var11Lifetime1 = var7 + SoftwareRasterizer.field_a * param1;
             var12Lifetime1 = 1 + var9 - var7 >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              mi.field_f[var11Lifetime1] = 16777215;
+              SoftwareRasterizer.field_f[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
-          if (var5_int >= mi.field_b &&
-            var5_int < mi.field_k) {
-            var11Lifetime2 = var5_int + mi.field_a * (var8 + (1 & -param3 + var5_int));
+          if (var5_int >= SoftwareRasterizer.field_b &&
+            var5_int < SoftwareRasterizer.field_k) {
+            var11Lifetime2 = var5_int + SoftwareRasterizer.field_a * (var8 + (1 & -param3 + var5_int));
             var12Lifetime2 = 1 - (-var10 + var8) >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              mi.field_f[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + 2 * mi.field_a;
+              SoftwareRasterizer.field_f[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + 2 * SoftwareRasterizer.field_a;
             }
           }
-          if (mi.field_l <= param1) {
-            if (mi.field_e <= var6) {
+          if (SoftwareRasterizer.field_l <= param1) {
+            if (SoftwareRasterizer.field_e <= var6) {
               return;
             }
-            var11Lifetime3 = (1 & var6 - param1) + (var7 + var6 * mi.field_a);
+            var11Lifetime3 = (1 & var6 - param1) + (var7 + var6 * SoftwareRasterizer.field_a);
             var12Lifetime3 = var9 + (1 - var7) >> 1;
             while (true) {
               var12Lifetime3--;
               if (var12Lifetime3 < 0) {
                 break;
               }
-              mi.field_f[var11Lifetime3] = 16777215;
+              SoftwareRasterizer.field_f[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }
@@ -387,7 +387,7 @@ class ci extends gf implements ka {
           var9Lifetime1 = var18.field_t;
           fl.b((byte) 91);
           var18.a();
-          mi.c(0, 0, mi.field_a, mi.field_d);
+          SoftwareRasterizer.c(0, 0, SoftwareRasterizer.field_a, SoftwareRasterizer.field_d);
           var16 = new Sprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.a();
@@ -572,7 +572,7 @@ class ci extends gf implements ka {
           if (null != ri.field_a) {
             id.field_c.b(param0 ^ 1955918408, ri.field_a);
           }
-          al.a(ic.field_z, id.field_c, (byte) 110, nc.field_d, qa.field_p);
+          al.a(ic.field_z, id.field_c, (byte) 110, IntrusiveDeque.field_d, qa.field_p);
           id.field_c.a(id.field_c.position - var5_int, true);
           qf.a(0, -1);
           return;

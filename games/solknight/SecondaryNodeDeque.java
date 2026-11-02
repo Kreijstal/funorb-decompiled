@@ -8,7 +8,7 @@ final class SecondaryNodeDeque implements Iterable {
     static kb field_e;
     static String field_d;
     static java.applet.Applet field_c;
-    static nj field_b;
+    static PlatformTask field_b;
     static String field_a;
 
     public static void b(byte param0) {

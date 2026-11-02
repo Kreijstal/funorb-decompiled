@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class IntrusiveNode {
-    static nc field_b;
+    static IntrusiveDeque field_b;
     long key;
     IntrusiveNode next;
     IntrusiveNode previous;
@@ -70,6 +70,6 @@ class IntrusiveNode {
     static {
         field_f = new boolean[10];
         field_c = "Retry";
-        field_b = new nc();
+        field_b = new IntrusiveDeque();
     }
 }

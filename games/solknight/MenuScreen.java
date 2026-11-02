@@ -526,10 +526,10 @@ final class MenuScreen {
           stackIn_24_0 = td.field_l;
         }
         var16 = stackIn_24_0;
-        mi.b(var15 + 1, var4 + (var11 >> 1), 65, 4, var9);
-        mi.b(var15 + (var16 >> 2), 2 + ((var11 - 20 >> 1) + var4), 3, 20, var9);
-        mi.b(var15, -1 + var4 + (var11 >> 1), 65, 4, var8);
-        mi.b(var15 + (var16 >> 2) - 1, 1 + (-20 + var11 >> 1) + var4, 3, 20, var8);
+        SoftwareRasterizer.b(var15 + 1, var4 + (var11 >> 1), 65, 4, var9);
+        SoftwareRasterizer.b(var15 + (var16 >> 2), 2 + ((var11 - 20 >> 1) + var4), 3, 20, var9);
+        SoftwareRasterizer.b(var15, -1 + var4 + (var11 >> 1), 65, 4, var8);
+        SoftwareRasterizer.b(var15 + (var16 >> 2) - 1, 1 + (-20 + var11 >> 1) + var4, 3, 20, var8);
         return;
     }
 
@@ -537,11 +537,11 @@ final class MenuScreen {
         if (param2 < 20) {
           field_c = (long[][]) null;
         }
-        mi.g(param0, param1, 8, 16711680);
-        mi.b(param0 - 8, param1, 4, 16711680);
-        mi.b(param0 + 8 - 4, param1, 4, 16711680);
-        mi.h(param0, -8 + param1, 4, 16711680);
-        mi.h(param0, -4 + param1 + 8, 4, 16711680);
+        SoftwareRasterizer.g(param0, param1, 8, 16711680);
+        SoftwareRasterizer.b(param0 - 8, param1, 4, 16711680);
+        SoftwareRasterizer.b(param0 + 8 - 4, param1, 4, 16711680);
+        SoftwareRasterizer.h(param0, -8 + param1, 4, 16711680);
+        SoftwareRasterizer.h(param0, -4 + param1 + 8, 4, 16711680);
     }
 
     final void c(int param0) {
@@ -789,33 +789,33 @@ final class MenuScreen {
         }
         if (400 <= ClientException.field_b) {
           var2 = (-ClientException.field_b + 500) * 96 / 100;
-          mi.a(320, 240, var2, 16711680, 128);
-          mi.a(320, 240, var2 * 62 / 64, 16776960, 128);
-          mi.a(320, 240, 60 * var2 / 64, 16776960, 128);
-          mi.a(320, 240, var2 * 58 / 64, 16777215, 128);
-          mi.a(320, 240, var2 * 57 / 64, 16777215, 128);
-          mi.a(320, 240, 56 * var2 / 64, 16777215, 128);
-          mi.a(320, 240, 55 * var2 / 64, 16777215, 128);
-          mi.a(320, 240, var2 * 54 / 64, 16777215, 128);
+          SoftwareRasterizer.a(320, 240, var2, 16711680, 128);
+          SoftwareRasterizer.a(320, 240, var2 * 62 / 64, 16776960, 128);
+          SoftwareRasterizer.a(320, 240, 60 * var2 / 64, 16776960, 128);
+          SoftwareRasterizer.a(320, 240, var2 * 58 / 64, 16777215, 128);
+          SoftwareRasterizer.a(320, 240, var2 * 57 / 64, 16777215, 128);
+          SoftwareRasterizer.a(320, 240, 56 * var2 / 64, 16777215, 128);
+          SoftwareRasterizer.a(320, 240, 55 * var2 / 64, 16777215, 128);
+          SoftwareRasterizer.a(320, 240, var2 * 54 / 64, 16777215, 128);
         } else {
           if (ClientException.field_b >= 350) {
             var2 = 96;
             var3 = -(440 * (ClientException.field_b - 350) / 50) + 440;
-            mi.a(320, 240, var2, 16711680, 128);
-            mi.a(320, 240, 62 * var2 / 64, 16776960, 128);
-            mi.a(320, 240, 60 * var2 / 64, 16776960, 128);
-            mi.a(320, 240, 58 * var2 / 64, 16777215, 128);
-            mi.a(320, 240, 57 * var2 / 64, 16777215, 128);
-            mi.a(320, 240, var2 * 56 / 64, 16777215, 128);
-            mi.a(320, 240, 55 * var2 / 64, 16777215, 128);
-            mi.a(320, 240, 54 * var2 / 64, 16777215, 128);
+            SoftwareRasterizer.a(320, 240, var2, 16711680, 128);
+            SoftwareRasterizer.a(320, 240, 62 * var2 / 64, 16776960, 128);
+            SoftwareRasterizer.a(320, 240, 60 * var2 / 64, 16776960, 128);
+            SoftwareRasterizer.a(320, 240, 58 * var2 / 64, 16777215, 128);
+            SoftwareRasterizer.a(320, 240, 57 * var2 / 64, 16777215, 128);
+            SoftwareRasterizer.a(320, 240, var2 * 56 / 64, 16777215, 128);
+            SoftwareRasterizer.a(320, 240, 55 * var2 / 64, 16777215, 128);
+            SoftwareRasterizer.a(320, 240, 54 * var2 / 64, 16777215, 128);
             hj.field_n.c(320 - hj.field_n.field_q * 200 / hj.field_n.field_r, -440 + var3, hj.field_n.field_q * 400 / hj.field_n.field_r, 400);
           } else {
             if (ClientException.field_b >= 250) {
               hj.field_n.c(320 - 250 * hj.field_n.field_q / hj.field_n.field_r, -10, 500 * hj.field_n.field_q / hj.field_n.field_r, 500);
               hj.field_p.d(320 - hj.field_p.field_q / 2, 3 * (480 - hj.field_p.field_r) / 5);
               if (330 <= ClientException.field_b) {
-                mi.a(0, 0, 640, 480, 16777215, -3944 + 12 * ClientException.field_b);
+                SoftwareRasterizer.a(0, 0, 640, 480, 16777215, -3944 + 12 * ClientException.field_b);
               }
             }
           }
@@ -1109,7 +1109,7 @@ final class MenuScreen {
         var5 = stackIn_5_0;
         var6 = 0;
         var7 = -1;
-        for (var8 = 0; var8 < hb.field_m.length; var8++) {
+        for (var8 = 0; var8 < BufferedCacheFile.field_m.length; var8++) {
           regionExit1: {
             if ((var5 & 1 << var8) != 0) {
               IterableNodeHashTable.field_f[var8].e(var3, var4);
@@ -1132,7 +1132,7 @@ final class MenuScreen {
               var4 <= BufferedSocket.field_m &&
               BufferedSocket.field_m <= 32 + var4) {
               var7 = var8;
-              mi.b(-2 + var3, var4 - 2, 36, 36, 6, 1134591);
+              SoftwareRasterizer.b(-2 + var3, var4 - 2, 36, 36, 6, 1134591);
             }
             if (this.field_a >= var3 &&
               var3 + 32 >= this.field_a &&
@@ -1146,7 +1146,7 @@ final class MenuScreen {
               this.field_a = -1;
             }
             if (var8 == this.field_e) {
-              mi.b(var3 - 2, var4 - 2, 36, 36, 6, 16776960);
+              SoftwareRasterizer.b(var3 - 2, var4 - 2, 36, 36, 6, 16776960);
             }
             incrementValue$0 = var6;
             var6++;
@@ -1162,7 +1162,7 @@ final class MenuScreen {
         }
         if (var7 != -1) {
           var8Lifetime1 = BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_m;
-          BufferedSocket.field_b.a(hb.field_m[var7], 320, 226, 16776960, -1);
+          BufferedSocket.field_b.a(BufferedCacheFile.field_m[var7], 320, 226, 16776960, -1);
           var9 = var8Lifetime1;
           var10 = 226 + BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s;
           stackIn_46_0 = ((var5 & 1 << var7) == 0) ? 0 : 1;

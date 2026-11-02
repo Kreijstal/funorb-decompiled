@@ -5,10 +5,10 @@ import java.io.*;
 
 final class PlatformTaskDispatcher implements Runnable {
     static String field_a;
-    sg field_b;
-    sg field_c;
+    RandomAccessCacheFile field_b;
+    RandomAccessCacheFile field_c;
     private vj field_u;
-    private nj field_m;
+    private PlatformTask field_m;
     private static String field_i;
     private boolean field_l;
     private static int field_o;
@@ -17,16 +17,16 @@ final class PlatformTaskDispatcher implements Runnable {
     java.awt.EventQueue field_d;
     boolean field_h;
     private static volatile long field_p;
-    sg[] field_v;
+    RandomAccessCacheFile[] field_v;
     private static String field_f;
     private Object field_r;
     static String field_x;
     private boolean field_k;
-    private nj field_w;
+    private PlatformTask field_w;
     private tb field_g;
     static java.lang.reflect.Method field_e;
     private Object field_j;
-    sg field_s;
+    RandomAccessCacheFile field_s;
     private Thread field_q;
 
     final void a(byte param0) {
@@ -94,49 +94,49 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    private final nj a(int param0, boolean param1, String param2, int param3) {
+    private final PlatformTask a(int param0, boolean param1, String param2, int param3) {
         int var5 = 22 % ((0 - param0) / 52);
         return this.a(0, param2, param3, !param1 ? 1 : 22, -19);
     }
 
-    final nj a(int param0, int param1, int param2, byte param3, int param4) {
+    final PlatformTask a(int param0, int param1, int param2, byte param3, int param4) {
         if (param3 >= 0) {
           field_o = -61;
         }
         return this.a((param2 << 16) + param4, (Object) null, param1 + (param0 << 16), 6, -19);
     }
 
-    final nj a(java.net.URL param0, byte param1) {
+    final PlatformTask a(java.net.URL param0, byte param1) {
         if (param1 != 68) {
-          return (nj) null;
+          return (PlatformTask) null;
         }
         return this.a(0, param0, 0, 4, -19);
     }
 
-    final nj a(byte param0, String param1, Class[] param2, Class param3) {
+    final PlatformTask a(byte param0, String param1, Class[] param2, Class param3) {
         if (param0 <= 93) {
-          return (nj) null;
+          return (PlatformTask) null;
         }
         return this.a(0, new Object[]{param3, param1, param2}, 0, 8, -19);
     }
 
-    final nj a(int param0) {
+    final PlatformTask a(int param0) {
         if (param0 != 7721) {
           this.a(65);
         }
         return this.a(0, (Object) null, 0, 5, param0 - 7740);
     }
 
-    private final nj a(int param0, Object param1, int param2, int param3, int param4) {
-        nj var6 = null;
+    private final PlatformTask a(int param0, Object param1, int param2, int param3, int param4) {
+        PlatformTask var6 = null;
         Throwable decompiledCaughtException = null;
         Object var7 = null;
-        var6 = new nj();
+        var6 = new PlatformTask();
         var6.field_a = param3;
         var6.field_d = param2;
         var6.field_f = param1;
         if (param4 != -19) {
-          return (nj) null;
+          return (PlatformTask) null;
         }
         var6.field_b = param0;
         var7 = this;
@@ -153,29 +153,29 @@ final class PlatformTaskDispatcher implements Runnable {
         return var6;
     }
 
-    final nj a(String param0, int param1, int param2) {
+    final PlatformTask a(String param0, int param1, int param2) {
         if (param2 != -28148) {
-          return (nj) null;
+          return (PlatformTask) null;
         }
         return this.a(109, false, param0, param1);
     }
 
-    final nj a(int param0, java.awt.Frame param1) {
+    final PlatformTask a(int param0, java.awt.Frame param1) {
         if (param0 <= 12) {
-          return (nj) null;
+          return (PlatformTask) null;
         }
         return this.a(0, param1, 0, 7, -19);
     }
 
-    private final static sg a(int param0, String param1, int param2, String param3) {
+    private final static RandomAccessCacheFile a(int param0, String param1, int param2, String param3) {
         try {
           int var6 = 0;
-          sg stackIn_15_0 = null;
+          RandomAccessCacheFile stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
           String var7 = null;
-          sg var8 = null;
+          RandomAccessCacheFile var8 = null;
           Exception var8_ref = null;
           if (param2 != 33) {
             if (34 != param2) {
@@ -188,14 +188,14 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           var5 = new String[]{"c:/rscache/", "/rscache/", field_n, "c:/windows/", "c:/winnt/", "c:/", "/tmp/", ""};
           if (param0 <= 34) {
-            return (sg) null;
+            return (RandomAccessCacheFile) null;
           }
           for (var6 = 0; var6 < var5.length; var6++) {
             var7 = var5[var6];
             if (!(0 < var7.length()) ||
               new File(var7).exists()) {
               try {
-                var8 = new sg(new File(var7, var4), "rw", 10000L);
+                var8 = new RandomAccessCacheFile(new File(var7, var4), "rw", 10000L);
                 stackIn_15_0 = var8;
                 return stackIn_15_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -212,14 +212,14 @@ final class PlatformTaskDispatcher implements Runnable {
         }
     }
 
-    final nj a(int param0, int param1, Runnable param2) {
+    final PlatformTask a(int param0, int param1, Runnable param2) {
         if (param1 > -2) {
-          return (nj) null;
+          return (PlatformTask) null;
         }
         return this.a(0, param2, param0, 2, -19);
     }
 
-    final nj a(int param0, Class param1, String param2) {
+    final PlatformTask a(int param0, Class param1, String param2) {
         if (param0 != 0) {
           this.b((byte) -96);
         }
@@ -236,14 +236,14 @@ final class PlatformTaskDispatcher implements Runnable {
           ThreadDeath var2_ref = null;
           Throwable var2_ref2 = null;
           InterruptedException var3 = null;
-          sg var3_ref = null;
+          RandomAccessCacheFile var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
           ProxyAuthenticationRequiredException var3_ref3 = null;
           int var4_int = 0;
           String var4 = null;
           java.awt.datatransfer.Transferable var7 = null;
-          nj var8 = null;
+          PlatformTask var8 = null;
           Thread var9 = null;
           Object[] var10 = null;
           Object[] var11 = null;
@@ -574,12 +574,12 @@ final class PlatformTaskDispatcher implements Runnable {
         }
         nd.a(field_i, field_o, (byte) -115);
         if (this.field_h) {
-          this.field_b = new sg(nd.a((String) null, "random.dat", field_o, (byte) -75), "rw", 25L);
-          this.field_c = new sg(nd.a("main_file_cache.dat2", -19154), "rw", 314572800L);
-          this.field_s = new sg(nd.a("main_file_cache.idx255", -19154), "rw", 1048576L);
-          this.field_v = new sg[param2];
+          this.field_b = new RandomAccessCacheFile(nd.a((String) null, "random.dat", field_o, (byte) -75), "rw", 25L);
+          this.field_c = new RandomAccessCacheFile(nd.a("main_file_cache.dat2", -19154), "rw", 314572800L);
+          this.field_s = new RandomAccessCacheFile(nd.a("main_file_cache.idx255", -19154), "rw", 1048576L);
+          this.field_v = new RandomAccessCacheFile[param2];
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            this.field_v[var5_int] = new sg(nd.a("main_file_cache.idx" + var5_int, -19154), "rw", 1048576L);
+            this.field_v[var5_int] = new RandomAccessCacheFile(nd.a("main_file_cache.idx" + var5_int, -19154), "rw", 1048576L);
           }
           if (this.field_k) {
             try {

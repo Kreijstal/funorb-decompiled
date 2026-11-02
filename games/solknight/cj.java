@@ -4,7 +4,7 @@
 final class cj {
     static long field_c;
     static String field_b;
-    static nc field_a;
+    static IntrusiveDeque field_a;
 
     public static void b(int param0) {
         field_a = null;
@@ -67,6 +67,6 @@ final class cj {
 
     static {
         field_b = "Accept";
-        field_a = new nc();
+        field_a = new IntrusiveDeque();
     }
 }

@@ -35,22 +35,22 @@ class uf extends af {
         var9 = SolKnight.field_L ? 1 : 0;
         if (param6 >= param7) {
           if (param0 > param6) {
-            qb.a(param7, param0, param5, param2, param1, param3, 48, mi.field_f, param6);
+            qb.a(param7, param0, param5, param2, param1, param3, 48, SoftwareRasterizer.field_f, param6);
           } else {
             if (param7 >= param0) {
-              qb.a(param0, param6, param3, param2, param5, param1, 95, mi.field_f, param7);
+              qb.a(param0, param6, param3, param2, param5, param1, 95, SoftwareRasterizer.field_f, param7);
             } else {
-              qb.a(param7, param6, param1, param2, param5, param3, 75, mi.field_f, param0);
+              qb.a(param7, param6, param1, param2, param5, param3, 75, SoftwareRasterizer.field_f, param0);
             }
           }
         } else {
           if (param0 > param7) {
-            qb.a(param6, param0, param3, param2, param1, param5, 98, mi.field_f, param7);
+            qb.a(param6, param0, param3, param2, param1, param5, 98, SoftwareRasterizer.field_f, param7);
           } else {
             if (param0 > param6) {
-              qb.a(param6, param7, param1, param2, param3, param5, 38, mi.field_f, param0);
+              qb.a(param6, param7, param1, param2, param3, param5, 38, SoftwareRasterizer.field_f, param0);
             } else {
-              qb.a(param0, param7, param5, param2, param3, param1, 73, mi.field_f, param6);
+              qb.a(param0, param7, param5, param2, param3, param1, 73, SoftwareRasterizer.field_f, param6);
             }
           }
         }

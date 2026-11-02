@@ -7,7 +7,7 @@ final class ga extends WidgetContainer implements ge, ka {
     private pj field_J;
     private pj field_I;
     ua field_F;
-    static nc field_E;
+    static IntrusiveDeque field_E;
     private qb field_K;
 
     public static void h(int param0) {
@@ -217,7 +217,7 @@ final class ga extends WidgetContainer implements ge, ka {
           rj.field_c = param3;
           return;
         }
-        field_E = (nc) null;
+        field_E = (IntrusiveDeque) null;
         pb.field_b = param0;
         hc.field_d = param1;
         rj.field_c = param3;
@@ -320,6 +320,6 @@ final class ga extends WidgetContainer implements ge, ka {
     static {
         field_H = "Log in";
         field_G = false;
-        field_E = new nc();
+        field_E = new IntrusiveDeque();
     }
 }

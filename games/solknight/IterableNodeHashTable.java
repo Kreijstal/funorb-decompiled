@@ -73,30 +73,30 @@ final class IterableNodeHashTable implements Iterable {
         int var12 = 0;
         var12 = SolKnight.field_L ? 1 : 0;
         try {
-          if (param1 < mi.field_b) {
-            param4 = param4 - (mi.field_b - param1);
-            param1 = mi.field_b;
+          if (param1 < SoftwareRasterizer.field_b) {
+            param4 = param4 - (SoftwareRasterizer.field_b - param1);
+            param1 = SoftwareRasterizer.field_b;
           }
-          if (mi.field_k < param4 + param1) {
-            param4 = mi.field_k - param1;
+          if (SoftwareRasterizer.field_k < param4 + param1) {
+            param4 = SoftwareRasterizer.field_k - param1;
           }
-          if (mi.field_l > param2) {
-            param0 = param0 - (-param2 + mi.field_l);
-            param2 = mi.field_l;
+          if (SoftwareRasterizer.field_l > param2) {
+            param0 = param0 - (-param2 + SoftwareRasterizer.field_l);
+            param2 = SoftwareRasterizer.field_l;
           }
-          if (mi.field_e < param2 + param0) {
-            param0 = -param2 + mi.field_e;
+          if (SoftwareRasterizer.field_e < param2 + param0) {
+            param0 = -param2 + SoftwareRasterizer.field_e;
           }
           if (param4 > 0 &&
             param0 > 0) {
             if (!param5) {
               return;
             }
-            var6_int = param1 + param2 * mi.field_a;
-            var7 = -param4 + mi.field_a;
+            var6_int = param1 + param2 * SoftwareRasterizer.field_a;
+            var7 = -param4 + SoftwareRasterizer.field_a;
             for (param2 = -param0; param2 < 0; param2++) {
               for (param1 = -param4; param1 < 0; param1++) {
-                var8 = mi.field_f[var6_int];
+                var8 = SoftwareRasterizer.field_f[var6_int];
                 if (param3 < (255 & var8 >> 8) &&
                   (16711680 & var8) >> 16 <= (255 & var8 >> 8)) {
                   var9 = ((16711680 & var8) >> 15) - 60;
@@ -106,7 +106,7 @@ final class IterableNodeHashTable implements Iterable {
                   var10 = var8 & 65280;
                   var10 = 65280 & (var10 >> 1) - (var10 >> 5);
                   var11 = var8 >> 3 & 31;
-                  mi.field_f[var6_int] = ProxySocketConnector.a(var11, ProxySocketConnector.a(var10, var9 << 16));
+                  SoftwareRasterizer.field_f[var6_int] = ProxySocketConnector.a(var11, ProxySocketConnector.a(var10, var9 << 16));
                 }
                 var6_int++;
               }
@@ -161,7 +161,7 @@ final class IterableNodeHashTable implements Iterable {
         java.awt.Frame var7 = null;
         int var9 = 0;
         uj[] var10 = null;
-        nj var11 = null;
+        PlatformTask var11 = null;
         var9 = SolKnight.field_L ? 1 : 0;
         try {
           if (!param0) {

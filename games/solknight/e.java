@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class e extends PcmStream {
-    private nc field_l;
-    private nc field_n;
+    private IntrusiveDeque field_l;
+    private IntrusiveDeque field_n;
     private int field_m;
     private int field_o;
 
@@ -157,8 +157,8 @@ final class e extends PcmStream {
     }
 
     public e() {
-        this.field_l = new nc();
-        this.field_n = new nc();
+        this.field_l = new IntrusiveDeque();
+        this.field_n = new IntrusiveDeque();
         this.field_m = 0;
         this.field_o = -1;
     }

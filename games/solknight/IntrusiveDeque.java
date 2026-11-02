@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nc {
+final class IntrusiveDeque {
     IntrusiveNode field_e;
     static String field_b;
     static int field_g;
@@ -75,7 +75,7 @@ final class nc {
         IntrusiveNode var2 = this.field_e.next;
         if (param0 != 96) {
           java.awt.Canvas var3 = (java.awt.Canvas) null;
-          nc.a((byte) 61, (java.awt.Canvas) null);
+          IntrusiveDeque.a((byte) 61, (java.awt.Canvas) null);
           if (var2 == this.field_e) {
             this.field_c = null;
             return null;
@@ -137,7 +137,7 @@ final class nc {
           ob.a(-1, (java.awt.Component) ((Object) param1));
           if (param0 != 86) {
             var3 = (java.awt.Canvas) null;
-            nc.a((java.awt.Canvas) null, 35, true);
+            IntrusiveDeque.a((java.awt.Canvas) null, 35, true);
           }
           sj.a((java.awt.Component) ((Object) param1), -122);
           if (ah.field_d == null) {
@@ -271,7 +271,7 @@ final class nc {
             return;
           }
           if (!uk.h(250)) {
-            mi.a();
+            SoftwareRasterizer.a();
             vg.b(240, 320, 18);
             uf.a((byte) 99, 0, 0, param0);
             return;
@@ -297,7 +297,7 @@ final class nc {
         }
     }
 
-    public nc() {
+    public IntrusiveDeque() {
         this.field_e = new IntrusiveNode();
         this.field_e.previous = this.field_e;
         this.field_e.next = this.field_e;

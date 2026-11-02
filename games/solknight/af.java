@@ -701,8 +701,8 @@ class af implements j, eg {
             var18 = new di();
             var18.field_h = param1.readUnsignedByte(255);
             var18.field_o = param1.readInt(true);
-            var18.field_k = new nj[var18.field_h];
-            var18.field_s = new nj[var18.field_h];
+            var18.field_k = new PlatformTask[var18.field_h];
+            var18.field_s = new PlatformTask[var18.field_h];
             var18.field_m = new int[var18.field_h];
             var18.field_q = new byte[var18.field_h][][];
             var18.field_p = new int[var18.field_h];

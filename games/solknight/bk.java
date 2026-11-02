@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class bk {
-    static nj field_a;
+    static PlatformTask field_a;
 
     final static int a(int param0, CharSequence param1) {
         int var4 = 0;
@@ -185,7 +185,7 @@ final class bk {
 
     final static String a(int param0) {
         if (param0 != 0) {
-          field_a = (nj) null;
+          field_a = (PlatformTask) null;
           return te.field_N.readString(param0 + 109);
         }
         return te.field_N.readString(param0 + 109);

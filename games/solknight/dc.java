@@ -87,7 +87,7 @@ final class dc extends a {
         int var5 = 0;
         uj var6 = null;
         int var7 = 0;
-        nj var8 = null;
+        PlatformTask var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         int var5Lifetime1;

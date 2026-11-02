@@ -6,7 +6,7 @@ final class lh extends PcmStream {
     static int field_p;
     private mf field_n;
     static int field_q;
-    nc field_m;
+    IntrusiveDeque field_m;
     static Archive field_o;
     e field_r;
     static int field_s;
@@ -235,7 +235,7 @@ final class lh extends PcmStream {
           if (param5 == -117) {
             return;
           }
-          this.field_m = (nc) null;
+          this.field_m = (IntrusiveDeque) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -303,7 +303,7 @@ final class lh extends PcmStream {
     }
 
     lh(mf param0) {
-        this.field_m = new nc();
+        this.field_m = new IntrusiveDeque();
         this.field_r = new e();
         try {
           this.field_n = param0;

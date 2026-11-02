@@ -17,9 +17,9 @@ final class CachedArchiveSource extends ArchiveSource {
     static PlatformTaskDispatcher field_l;
     private boolean field_s;
     static String field_r;
-    private nc field_e;
+    private IntrusiveDeque field_e;
     private boolean field_y;
-    private nc field_m;
+    private IntrusiveDeque field_m;
     private int field_q;
     private long field_g;
     private boolean field_i;
@@ -474,7 +474,7 @@ final class CachedArchiveSource extends ArchiveSource {
         }
         this.field_y = true;
         if (this.field_m == null) {
-          this.field_m = new nc();
+          this.field_m = new IntrusiveDeque();
         }
         if (param0 != 0) {
           this.e(-121);
@@ -506,7 +506,7 @@ final class CachedArchiveSource extends ArchiveSource {
         RuntimeException var10 = null;
         this.field_w = new qd(16);
         this.field_q = 0;
-        this.field_e = new nc();
+        this.field_e = new IntrusiveDeque();
         this.field_g = 0L;
         try {
           this.field_o = param0;
@@ -515,7 +515,7 @@ final class CachedArchiveSource extends ArchiveSource {
             this.field_s = false;
           } else {
             this.field_s = true;
-            this.field_m = new nc();
+            this.field_m = new IntrusiveDeque();
           }
           this.field_f = param2;
           this.field_t = param6;

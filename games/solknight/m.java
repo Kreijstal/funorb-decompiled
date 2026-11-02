@@ -6,7 +6,7 @@ import java.io.*;
 final class m extends IntrusiveNode {
     int field_i;
     int field_j;
-    static nc field_h;
+    static IntrusiveDeque field_h;
 
     final static int a(int param0, char param1, CharSequence param2) {
         int var5 = 0;
@@ -63,7 +63,7 @@ final class m extends IntrusiveNode {
           pk.a((byte) 32, var6);
           return var6;
         }
-        field_h = (nc) null;
+        field_h = (IntrusiveDeque) null;
         var6Lifetime1 = new Asteroid(param0, param2, param1, param5, param4);
         pk.a((byte) 32, var6Lifetime1);
         return var6Lifetime1;
@@ -123,6 +123,6 @@ final class m extends IntrusiveNode {
     }
 
     static {
-        field_h = new nc();
+        field_h = new IntrusiveDeque();
     }
 }

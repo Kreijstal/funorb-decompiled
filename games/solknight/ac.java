@@ -27,8 +27,8 @@ final class ac {
         int var3Lifetime1;
         var4 = SolKnight.field_L ? 1 : 0;
         try {
-          mi.g(243, 197, 369, 143, 16777215);
-          mi.b(244, 198, 367, 141, 0);
+          SoftwareRasterizer.g(243, 197, 369, 143, 16777215);
+          SoftwareRasterizer.b(244, 198, 367, 141, 0);
           if (null == jb.field_d) {
             if (sk.field_n != null) {
               sk.field_n.a(te.field_J, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);

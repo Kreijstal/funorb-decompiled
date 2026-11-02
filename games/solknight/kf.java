@@ -46,11 +46,11 @@ abstract class kf extends WidgetContainer {
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
         fl.b((byte) 91);
         if (param0 == 97) {
-          mi.d(param1, param2, param3, param4);
+          SoftwareRasterizer.d(param1, param2, param3, param4);
           return;
         }
         field_G = (Asteroid[]) null;
-        mi.d(param1, param2, param3, param4);
+        SoftwareRasterizer.d(param1, param2, param3, param4);
     }
 
     final void b(int param0, int param1, int param2) {
@@ -173,7 +173,7 @@ abstract class kf extends WidgetContainer {
         if (jj.field_x == null) {
           jj.field_x = new Sprite(this.field_t, this.field_x);
           cl.a(-100, jj.field_x);
-          mi.a();
+          SoftwareRasterizer.a();
           this.a(param3, (byte) 94, 0);
           super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
           mf.e(4096);
@@ -183,7 +183,7 @@ abstract class kf extends WidgetContainer {
         if (jj.field_x.field_p < this.field_t) {
           jj.field_x = new Sprite(this.field_t, this.field_x);
           cl.a(-100, jj.field_x);
-          mi.a();
+          SoftwareRasterizer.a();
           this.a(param3, (byte) 94, 0);
           super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
           mf.e(4096);
@@ -193,7 +193,7 @@ abstract class kf extends WidgetContainer {
         if (jj.field_x.field_t < this.field_x) {
           jj.field_x = new Sprite(this.field_t, this.field_x);
           cl.a(-100, jj.field_x);
-          mi.a();
+          SoftwareRasterizer.a();
           this.a(param3, (byte) 94, 0);
           super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
           mf.e(4096);
@@ -201,7 +201,7 @@ abstract class kf extends WidgetContainer {
           return;
         }
         cl.a(-100, jj.field_x);
-        mi.a();
+        SoftwareRasterizer.a();
         this.a(param3, (byte) 94, 0);
         super.a(-this.field_j - param0, param1, -this.field_m - param2, 0);
         mf.e(4096);

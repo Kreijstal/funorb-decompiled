@@ -34,16 +34,16 @@ final class sj implements j {
           var12 = (hh) (stackIn_4_0);
           if (var12 == null) {
           }
-          mi.b(param3 + param4.field_m, param4.field_j + param1, param4.field_t, param4.field_x, this.field_c);
+          SoftwareRasterizer.b(param3 + param4.field_m, param4.field_j + param1, param4.field_t, param4.field_x, this.field_c);
           var7 = -(var12.field_I * 2) + param4.field_t;
           if (param0 < 113) {
             this.field_e = (BitmapFont) null;
           }
           var8 = param3 + param4.field_m + var12.field_I;
           var9 = param1 + param4.field_j + var12.field_L;
-          mi.e(var8, var9, var8 + var7, var9, this.field_g);
+          SoftwareRasterizer.e(var8, var9, var8 + var7, var9, this.field_g);
           for (var10 = var12.i(-85) - 1; var10 >= 0; var10--) {
-            mi.e(var8 + var12.b(var10, -96) * var7 / var12.a(-3), var9, this.field_b, this.field_f);
+            SoftwareRasterizer.e(var8 + var12.b(var10, -96) * var7 / var12.a(-3), var9, this.field_b, this.field_f);
           }
           if (this.field_e == null) {
             return;

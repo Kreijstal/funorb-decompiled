@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vb extends il {
-    static nc field_h;
+    static IntrusiveDeque field_h;
     static String field_i;
     static String field_f;
     static wg field_j;
@@ -10,7 +10,7 @@ final class vb extends il {
 
     final wb a(int param0) {
         if (param0 < 30) {
-          field_h = (nc) null;
+          field_h = (IntrusiveDeque) null;
         }
         return og.field_a;
     }
@@ -93,7 +93,7 @@ final class vb extends il {
                 var11_ref_StringLifetime2 = "";
               }
               id.field_c.a(var11_ref_StringLifetime2, 0);
-              al.a(ic.field_z, id.field_c, (byte) 76, nc.field_d, qa.field_p);
+              al.a(ic.field_z, id.field_c, (byte) 76, IntrusiveDeque.field_d, qa.field_p);
               id.field_c.a(id.field_c.position - var10, true);
             } else {
               ic.field_z.position = 0;
@@ -118,7 +118,7 @@ final class vb extends il {
               id.field_c.c(-110, 16);
               id.field_c.position = id.field_c.position + 1;
               var9 = id.field_c.position;
-              al.a(ic.field_z, id.field_c, (byte) 75, nc.field_d, qa.field_p);
+              al.a(ic.field_z, id.field_c, (byte) 75, IntrusiveDeque.field_d, qa.field_p);
               id.field_c.b(param6 + 21761, id.field_c.position - var9);
             }
             qf.a(0, -1);

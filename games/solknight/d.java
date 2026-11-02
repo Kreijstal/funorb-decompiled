@@ -33,7 +33,7 @@ final class d {
               dc.field_n = new Sprite(256, 1 + (BufferedSocket.field_b.field_F + BufferedSocket.field_b.field_s));
             }
             dc.field_n.a();
-            mi.a();
+            SoftwareRasterizer.a();
             BufferedSocket.field_b.a(bb.a(ma.field_m, new String[]{Integer.toString(ob.field_j)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
             hj.field_e.a(true);
             dc.field_n.a(ProxyAuthenticationRequiredException.field_a, 46, 107, 0, 125);
@@ -44,7 +44,7 @@ final class d {
               dc.field_n = new Sprite(256, 1 + BufferedSocket.field_b.field_s + BufferedSocket.field_b.field_F);
             }
             dc.field_n.a();
-            mi.a();
+            SoftwareRasterizer.a();
             BufferedSocket.field_b.a(bb.a(ArchiveIndex.field_p, new String[]{Integer.toString(lk.field_e)}, -63), 128, BufferedSocket.field_b.field_F, 16777215, 8421504);
             hj.field_e.a(true);
             dc.field_n.a(ci.field_ib, 46, 109, 0, 475);

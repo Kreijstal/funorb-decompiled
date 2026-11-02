@@ -48,7 +48,7 @@ final class de {
     }
 
     final static void a(PlatformTaskDispatcher param0, java.awt.Frame param1, byte param2) {
-        nj var3 = null;
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;

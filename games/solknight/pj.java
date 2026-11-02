@@ -11,7 +11,7 @@ class pj extends UiWidget {
     static int field_A;
     private boolean field_E;
     private boolean field_C;
-    static hb field_D;
+    static BufferedCacheFile field_D;
 
     final boolean b(boolean param0) {
         if (!param0) {

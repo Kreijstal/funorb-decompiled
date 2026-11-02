@@ -1277,7 +1277,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("warning_ifyouquit", 4);
                 if (null != var2) {
-                  hb.field_j = Archive.a(true, var2);
+                  BufferedCacheFile.field_j = Archive.a(true, var2);
                 }
                 var2 = vd.a("warning_ifyouquitorleavepage", 4);
                 if (var2 != null) {
@@ -2830,7 +2830,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("fs_focus_or_resolution", 4);
                 if (null != var2) {
-                  nc.field_b = Archive.a(true, var2);
+                  IntrusiveDeque.field_b = Archive.a(true, var2);
                 }
                 var2 = vd.a("fs_timeout", 4);
                 if (var2 != null) {
@@ -2866,7 +2866,7 @@ final class lj extends WidgetContainer implements ka {
                 }
                 var2 = vd.a("mb_achievement_count_2", param0 ^ 26704);
                 if (var2 != null) {
-                  hb.field_l = Archive.a(true, var2);
+                  BufferedCacheFile.field_l = Archive.a(true, var2);
                 }
                 var2 = vd.a("mb_exclusive_1", 4);
                 if (var2 != null) {
@@ -3241,7 +3241,7 @@ final class lj extends WidgetContainer implements ka {
           si.field_A = param0;
           kb.field_f = param3;
           ke.field_H = param2;
-          ProxySocketConnector.a(mi.field_a / 2, mi.field_d / 2, -120);
+          ProxySocketConnector.a(SoftwareRasterizer.field_a / 2, SoftwareRasterizer.field_d / 2, -120);
           rj.a(param3.field_s + param3.field_m, param3.field_m, (byte) 81, param2.field_s + param2.field_m, param2.field_m);
           if (param1 < 124) {
             lj.a(40, (byte) -107, (BitmapFont) null, (BitmapFont) null);

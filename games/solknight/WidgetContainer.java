@@ -6,7 +6,7 @@ import java.util.*;
 class WidgetContainer extends UiWidget implements oh {
     static int field_C;
     static String field_A;
-    nc field_B;
+    IntrusiveDeque field_B;
 
     private final void c(boolean param0) {
         int var4 = SolKnight.field_L ? 1 : 0;
@@ -40,7 +40,7 @@ class WidgetContainer extends UiWidget implements oh {
 
     WidgetContainer(int param0, int param1, int param2, int param3, j param4) {
         super(param0, param1, param2, param3, param4, (dg) null);
-        this.field_B = new nc();
+        this.field_B = new IntrusiveDeque();
     }
 
     final void a(UiWidget param0, int param1) {
@@ -245,7 +245,7 @@ class WidgetContainer extends UiWidget implements oh {
             return false;
           }
           if (param0 <= 89) {
-            this.field_B = (nc) null;
+            this.field_B = (IntrusiveDeque) null;
           }
           var8 = new ck(this.field_B);
           var4 = (UiWidget) (var8.a((byte) 112));
@@ -505,7 +505,7 @@ class WidgetContainer extends UiWidget implements oh {
               if (param0 == -1463) {
                 return false;
               }
-              this.field_B = (nc) null;
+              this.field_B = (IntrusiveDeque) null;
               return false;
             }
             if (!var4.a(-1463, param1)) {
@@ -674,7 +674,7 @@ class WidgetContainer extends UiWidget implements oh {
         int var4;
         var4 = SolKnight.field_L ? 1 : 0;
         if (param0 != -48) {
-          this.field_B = (nc) null;
+          this.field_B = (IntrusiveDeque) null;
         }
         var2 = new ck(this.field_B);
         var3 = (UiWidget) (var2.a((byte) -119));

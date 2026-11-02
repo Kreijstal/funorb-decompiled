@@ -12,7 +12,7 @@ final class lc extends IntrusiveNode {
     static PacketBuffer field_k;
     static volatile long field_s;
     int field_j;
-    static nc field_t;
+    static IntrusiveDeque field_t;
     static boolean field_u;
     static int field_p;
     int field_r;
@@ -233,6 +233,6 @@ final class lc extends IntrusiveNode {
     static {
         field_s = 0L;
         field_h = 2621440;
-        field_t = new nc();
+        field_t = new IntrusiveDeque();
     }
 }

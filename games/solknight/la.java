@@ -4,7 +4,7 @@
 final class la extends IntrusiveNode {
     static af field_i;
     static String field_m;
-    static nc field_j;
+    static IntrusiveDeque field_j;
     static boolean field_n;
     int field_h;
     static ff field_l;

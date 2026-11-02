@@ -174,7 +174,7 @@ final class qb extends vg implements wj {
                     return;
                   }
                   var9_int = var9_int + var11;
-                  var16Lifetime2 = var16Lifetime2 + mi.field_a;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_a;
                   var10 = var10 + var12;
                 }
               } else if (param8 >= 0) {
@@ -208,7 +208,7 @@ final class qb extends vg implements wj {
                     return;
                   }
                   var9_int = var9_int + var11;
-                  var16Lifetime2 = var16Lifetime2 + mi.field_a;
+                  var16Lifetime2 = var16Lifetime2 + SoftwareRasterizer.field_a;
                   var10 = var10 + var12;
                 }
               } else {
@@ -295,7 +295,7 @@ final class qb extends vg implements wj {
               }
               var10 = var10 + var12;
               var9_int = var9_int + var11;
-              var15Lifetime1 = var15Lifetime1 + mi.field_a;
+              var15Lifetime1 = var15Lifetime1 + SoftwareRasterizer.field_a;
             }
             return;
           }

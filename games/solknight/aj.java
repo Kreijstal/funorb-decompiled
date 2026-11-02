@@ -28,7 +28,7 @@ final class aj {
         if (param4 != 1) {
           return;
         }
-        mi.a(param6, param0, param2, param5, param3, param1);
+        SoftwareRasterizer.a(param6, param0, param2, param5, param3, param1);
     }
 
     private final void a(int param0, String param1, int param2, int param3) {
@@ -59,7 +59,7 @@ final class aj {
           if (var7 == -1) {
             var7 = this.field_k.field_s + this.field_k.field_F;
           }
-          var8 = mi.field_a >> 2;
+          var8 = SoftwareRasterizer.field_a >> 2;
           var9 = this.field_k.b(param1);
           var10 = this.field_k.field_F + this.field_k.field_s;
           var11 = 1;
@@ -85,18 +85,18 @@ final class aj {
             }
           }
           var12 = param2;
-          if (var5_int + (var9 + var12) > mi.field_a) {
-            var12 = -var9 + mi.field_a - var5_int;
+          if (var5_int + (var9 + var12) > SoftwareRasterizer.field_a) {
+            var12 = -var9 + SoftwareRasterizer.field_a - var5_int;
           }
           if (param3 != 5101) {
             field_m = (int[]) null;
           }
           var13Lifetime1 = -this.field_k.field_m + param0 + 32;
-          if (mi.field_d < var13Lifetime1 - (-var10 - var6)) {
+          if (SoftwareRasterizer.field_d < var13Lifetime1 - (-var10 - var6)) {
             var13Lifetime1 = -var6 + (param0 - var10);
           }
-          mi.g(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_b);
-          mi.b(1 + var12, 1 + var13Lifetime1, var5_int + (var9 - 2), -2 + (var6 + var10), this.field_n);
+          SoftwareRasterizer.g(var12, var13Lifetime1, var9 + var5_int, var10 + var6, this.field_b);
+          SoftwareRasterizer.b(1 + var12, 1 + var13Lifetime1, var5_int + (var9 - 2), -2 + (var6 + var10), this.field_n);
           this.field_k.a(param1, var12 + this.field_j, this.field_e + var13Lifetime1, var9, var10, this.field_l, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,18 +127,18 @@ final class aj {
           var5_int = this.field_k.b(param2);
           var6 = this.field_k.field_m + this.field_k.field_s;
           var7 = param3;
-          if (mi.field_a < var7 + (var5_int + 6)) {
-            var7 = -6 - var5_int + mi.field_a;
+          if (SoftwareRasterizer.field_a < var7 + (var5_int + 6)) {
+            var7 = -6 - var5_int + SoftwareRasterizer.field_a;
           }
           var8 = -this.field_k.field_m + (param1 + 32);
-          if (var8 + (var6 + 6) > mi.field_d) {
-            var8 = -var6 + mi.field_d - 6;
+          if (var8 + (var6 + 6) > SoftwareRasterizer.field_d) {
+            var8 = -var6 + SoftwareRasterizer.field_d - 6;
           }
           if (param0 > -99) {
             return;
           }
-          mi.g(var7, var8, 6 + var5_int, var6 + 6, this.field_l);
-          mi.b(var7 + 1, 1 + var8, var5_int + 4, 4 + var6, this.field_n);
+          SoftwareRasterizer.g(var7, var8, 6 + var5_int, var6 + 6, this.field_l);
+          SoftwareRasterizer.b(var7 + 1, 1 + var8, var5_int + 4, 4 + var6, this.field_n);
           this.field_k.c(param2, var7 + 3, this.field_k.field_m + var8 + 3, this.field_l, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -186,7 +186,7 @@ final class aj {
 
     final void a(byte param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = 126 % ((param0 - 40) / 51);
-        mi.e(param3, param1, param5, param2, param4);
+        SoftwareRasterizer.e(param3, param1, param5, param2, param4);
     }
 
     final void a(int param0, BitmapFont param1) {

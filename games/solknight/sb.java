@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sb implements Runnable {
-    static nc field_c;
+    static IntrusiveDeque field_c;
     PlatformTaskDispatcher field_b;
     volatile PcmPlayerService[] field_a;
     volatile boolean field_e;
@@ -118,7 +118,7 @@ final class sb implements Runnable {
     }
 
     static {
-        field_c = new nc();
+        field_c = new IntrusiveDeque();
     }
 
     @SuppressWarnings("unchecked")

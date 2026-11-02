@@ -52,18 +52,18 @@ final class c extends UiWidget {
             stackIn_7_0 = var8 | var9;
           }
           var12 = stackIn_7_0;
-          mi.b(var7, var6, this.field_N, var12);
+          SoftwareRasterizer.b(var7, var6, this.field_N, var12);
           var9Lifetime1 = param2 & 65280;
           var8Lifetime1 = param2 & 16711935;
-          mi.b(var7 - 2 * this.field_N, var6, this.field_N, var12);
+          SoftwareRasterizer.b(var7 - 2 * this.field_N, var6, this.field_N, var12);
           if (var11 >= 256) {
             stackIn_10_0 = var9Lifetime1 | var8Lifetime1;
           } else {
             stackIn_10_0 = (var9Lifetime1 * var11 & 16711680 | var11 * var8Lifetime1 & -16711936) >>> 8;
           }
           var12Lifetime1 = stackIn_10_0;
-          mi.b(this.field_N + var7, var6, this.field_N, var12Lifetime1);
-          mi.b(var7 - this.field_N, var6, this.field_N, var12Lifetime1);
+          SoftwareRasterizer.b(this.field_N + var7, var6, this.field_N, var12Lifetime1);
+          SoftwareRasterizer.b(var7 - this.field_N, var6, this.field_N, var12Lifetime1);
         }
         if (param1 != 16711935) {
           this.field_O = 56;
@@ -159,7 +159,7 @@ final class c extends UiWidget {
             discarded$0 = this.a((byte) 120);
           }
           mf.e(4096);
-          if (mi.field_b <= this.field_P.field_p + param3) {
+          if (SoftwareRasterizer.field_b <= this.field_P.field_p + param3) {
             cl.a(param0 ^ -100, this.field_G);
             param2.d(-this.field_D, 0);
             param2.d(-this.field_D + 2 * this.field_N, 0);
@@ -167,7 +167,7 @@ final class c extends UiWidget {
             mf.e(param0 ^ 4096);
             this.field_G.d(param3, param1);
           }
-          if (mi.field_k >= -this.field_P.field_p + var5_int) {
+          if (SoftwareRasterizer.field_k >= -this.field_P.field_p + var5_int) {
             cl.a(param0 - 119, this.field_G);
             for (var7 = this.field_D + (-this.field_P.field_p + this.field_t); var7 > 2 * this.field_N; var7 = var7 - this.field_N * 2) {
             }
@@ -280,7 +280,7 @@ final class c extends UiWidget {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(1.0 <= var6) ? (int)(var6 * 255.0) : 255;
             }
-            mi.a(var5, var4, var8 << 8 | var8 | var8 << 16);
+            SoftwareRasterizer.a(var5, var4, var8 << 8 | var8 | var8 << 16);
           }
         }
         mf.e(4096);
