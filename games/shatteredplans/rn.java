@@ -32,7 +32,7 @@ final class rn implements Runnable {
         w.field_D.e();
         ne.a(0, gf.field_b, (byte) 24, 0, 0, 128, gf.field_k);
         vm.field_Jb.e();
-        ib.a(0, 0, gf.field_k, 0, gf.field_b, param0 + 24024);
+        MouseWheelInput.a(0, 0, gf.field_k, 0, gf.field_b, param0 + 24024);
         id.a(2, hp.field_n, "intro", "intro2_glow");
         ac.field_s = id.a(2, hp.field_n, "intro", "intro2_earth");
         oe.field_c = id.a(2, hp.field_n, "intro", "intro2_clouds");
@@ -219,7 +219,7 @@ final class rn implements Runnable {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref = (Exception) (Object) decompiledCaughtException;
               var6 = (String) null;
-              jq.a(-29901, (Throwable) ((Object) var2_ref), (String) null);
+              GameKeyHandler.a(-29901, (Throwable) ((Object) var2_ref), (String) null);
               var7.field_u = false;
             }
           }
@@ -301,7 +301,7 @@ final class rn implements Runnable {
         }
         if (uo.field_e) {
           tq.field_b = null;
-          jq.field_a = new IntrusiveDeque();
+          GameKeyHandler.field_a = new IntrusiveDeque();
           vq.field_a = 0;
           uo.field_e = false;
         }
@@ -446,7 +446,7 @@ final class rn implements Runnable {
         }
     }
 
-    rn(qb param0) {
+    rn(PlatformTaskDispatcher param0) {
         pb var2 = null;
         this.field_c = new db();
         this.field_f = false;

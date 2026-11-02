@@ -574,7 +574,7 @@ final class ej {
                 return;
               }
             }
-            jq.a(-29901, (Throwable) null, "LR1: " + w.a(16738));
+            GameKeyHandler.a(-29901, (Throwable) null, "LR1: " + w.a(16738));
             q.g(-113);
             if (var8 == 0) {
               return;

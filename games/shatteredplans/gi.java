@@ -141,9 +141,9 @@ final class gi {
             if (var1_int != 0) {
               var2 = ol.field_g.field_l;
               if (var2 == null &&
-                ge.field_i > 0) {
-                fieldTemp$1 = ge.field_i - 1;
-                ge.field_i = ge.field_i - 1;
+                ImageProducerRasterBuffer.field_i > 0) {
+                fieldTemp$1 = ImageProducerRasterBuffer.field_i - 1;
+                ImageProducerRasterBuffer.field_i = ImageProducerRasterBuffer.field_i - 1;
                 var2 = js.field_b[fieldTemp$1];
               }
               if (!is.field_b) {
@@ -151,7 +151,7 @@ final class gi {
                 return;
               }
               is.field_b = false;
-              var3 = js.field_b[ge.field_i];
+              var3 = js.field_b[ImageProducerRasterBuffer.field_i];
               if (var3 != null &&
                 var3 != ol.field_g) {
                 lp.a(1546006977, var3);

@@ -6,7 +6,7 @@ final class nj {
 
     final static void a(int param0) {
         int var1 = (kh.field_Mb - 640) / 2;
-        int var2 = ed.field_f * ed.field_f;
+        int var2 = MouseInputHandler.field_f * MouseInputHandler.field_f;
         int var3 = var2 - qa.field_t * qa.field_t;
         ia.field_j.a(199, -124 + (gf.field_k - 90), (byte) 49, 90, -(199 * var3 / var2) + var1);
         se.field_i.a(param0, gf.field_k - 124, (byte) 56, 0, var1 + (202 + var3 * 438 / var2));

@@ -96,7 +96,7 @@ final class ck {
           NodeHashTableIterator.field_b = var22[0];
           je.field_f = var22[4];
           us.field_a = var22[3];
-          jq.field_b = var22[1];
+          GameKeyHandler.field_b = var22[1];
           ci.field_p = var22[2];
           fs.field_a = va.a("icon_circles", param6 + 8, "", param0);
           dm.field_d = va.a("production_icons", 0, "", param0);
@@ -223,14 +223,14 @@ final class ck {
               }
             }
           }
-          ge.field_k = va.a("defnet_anim_large", param6 ^ -8, "", param0);
-          for (var13_intLifetime5 = 0; ge.field_k[0].field_B.length > var13_intLifetime5; var13_intLifetime5++) {
-            if (ge.field_k[0].field_B[var13_intLifetime5] != 0) {
-              ge.field_k[0].field_B[var13_intLifetime5] = ((ge.field_k[0].field_B[var13_intLifetime5] >>> 24) / 4 << 24) + 6006988;
+          ImageProducerRasterBuffer.field_k = va.a("defnet_anim_large", param6 ^ -8, "", param0);
+          for (var13_intLifetime5 = 0; ImageProducerRasterBuffer.field_k[0].field_B.length > var13_intLifetime5; var13_intLifetime5++) {
+            if (ImageProducerRasterBuffer.field_k[0].field_B[var13_intLifetime5] != 0) {
+              ImageProducerRasterBuffer.field_k[0].field_B[var13_intLifetime5] = ((ImageProducerRasterBuffer.field_k[0].field_B[var13_intLifetime5] >>> 24) / 4 << 24) + 6006988;
             }
           }
           for (var13_intLifetime6 = 1; var13_intLifetime6 < 13; var13_intLifetime6++) {
-            var29 = ge.field_k[var13_intLifetime6];
+            var29 = ImageProducerRasterBuffer.field_k[var13_intLifetime6];
             var15 = var29;
             var15Lifetime2 = var29;
             for (var15_intLifetime2 = 0; var29.field_B.length > var15_intLifetime2; var15_intLifetime2++) {
@@ -299,8 +299,8 @@ final class ck {
           gf.g(0, -1, 5, 0);
           gf.g(0, 20, 5, 0);
           var15Lifetime1 = id.a(2, param0, "", "menu_pip");
-          jq.field_e = new Sprite(2 + var15Lifetime1.field_z, 2 + var15Lifetime1.field_w);
-          jq.field_e.e();
+          GameKeyHandler.field_e = new Sprite(2 + var15Lifetime1.field_z, 2 + var15Lifetime1.field_w);
+          GameKeyHandler.field_e.e();
           var15Lifetime1.e(1, 1, 65793);
           bg.field_a = new Sprite(21, 22);
           bg.field_a.e();
@@ -309,7 +309,7 @@ final class ck {
             gf.f(11 - var17, 1 + var16, 2 * var17, 65793);
           }
           cg.i(0);
-          jq.field_e.f(2458760);
+          GameKeyHandler.field_e.f(2458760);
           bg.field_a.f(2458760);
           o.field_k = bg.field_a.g();
           o.field_k.b();

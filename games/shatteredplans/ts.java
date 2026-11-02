@@ -150,7 +150,7 @@ class ts extends kg {
             cs.field_j = oa.field_a;
           } else {
             try {
-              wg.field_f = new ke((java.net.Socket) (da.field_e.field_e), nr.field_l);
+              wg.field_f = new BufferedSocket((java.net.Socket) (da.field_e.field_e), nr.field_l);
               var4 = sa.field_a;
               var5 = var4;
               js.field_f.position = 0;

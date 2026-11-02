@@ -20,7 +20,7 @@ final class tc extends qs {
         if (param0 <= 77) {
           return;
         }
-        on var2 = new on(this.field_H);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         w var3 = (w) (var2.a(2));
         while (var3 != null) {
           var3.field_E = false;
@@ -31,7 +31,7 @@ final class tc extends qs {
 
     final void i(int param0) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        on var2 = new on(this.field_H);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         w var3 = (w) (var2.a(2));
         while (var3 != null) {
           if (var3.a((byte) 92)) {
@@ -44,12 +44,12 @@ final class tc extends qs {
     }
 
     final w g(byte param0) {
-        on var2;
+        IntrusiveDequeCursor var2;
         w var3;
         int var4;
         int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        var2 = new on(this.field_H);
+        var2 = new IntrusiveDequeCursor(this.field_H);
         var3 = (w) (var2.a(2));
         var4 = 98 % ((param0 - 64) / 35);
         while (var3 != null) {
@@ -124,7 +124,7 @@ final class tc extends qs {
         if (null != this.field_p) {
           this.field_p.a((UiWidget) (this), param3, true, param2, (byte) 12);
         }
-        on var5 = new on(this.field_H);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_H);
         UiWidget var6 = (UiWidget) (var5.c(105));
         while (var6 != null) {
           var6.a(param0, -11857, this.field_q + param2, param3 + this.field_m);
@@ -149,7 +149,7 @@ final class tc extends qs {
 
     final void h(byte param0) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        on var2 = new on(this.field_H);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_H);
         int var4 = 71 % ((param0 + 34) / 44);
         w var3 = (w) (var2.a(2));
         while (var3 != null) {
@@ -442,11 +442,11 @@ final class tc extends qs {
     }
 
     final UiWidget a(int param0) {
-        on var2;
+        IntrusiveDequeCursor var2;
         w var3;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        var2 = new on(this.field_H);
+        var2 = new IntrusiveDequeCursor(this.field_H);
         var3 = (w) (var2.a(param0));
         while (var3 != null) {
           if (var3.field_E) {
@@ -462,13 +462,13 @@ final class tc extends qs {
         am.field_xb = new qr(0L, (qr) null);
         am.field_xb.a(4, n.field_h.field_d);
         am.field_xb.a(4, i.field_g);
-        ed.field_d = new qr(0L, ho.field_j);
+        MouseInputHandler.field_d = new qr(0L, ho.field_j);
         if (!param0) {
           tc.a('x', 117);
         }
         jo.field_a = new qr(0L, (qr) null);
-        ed.field_d.a(4, hl.field_K);
-        ed.field_d.a(4, jo.field_a);
+        MouseInputHandler.field_d.a(4, hl.field_K);
+        MouseInputHandler.field_d.a(4, jo.field_a);
         jo.field_a.a(4, lp.field_v);
         jo.field_a.a(4, oo.field_c);
         en.a(15471, param1);

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class jq implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static Sprite field_b;
     static Sprite field_c;
     static IntrusiveDeque field_a;
@@ -151,7 +151,7 @@ final class jq implements java.awt.event.KeyListener, java.awt.event.FocusListen
           field_a = null;
           return;
         }
-        jq.a(115, 98, 0, 80, -77, 117, false, 103);
+        GameKeyHandler.a(115, 98, 0, 80, -77, 117, false, 103);
         field_d = null;
         field_a = null;
     }
@@ -161,13 +161,13 @@ final class jq implements java.awt.event.KeyListener, java.awt.event.FocusListen
           ch.a(20, param1, param0, param2, param4, param3, 0, param6);
           return;
         }
-        jq.a(-32, 98, 121, 31, -39, (byte) -98, 83);
+        GameKeyHandler.a(-32, 98, 121, 31, -39, (byte) -98, 83);
         ch.a(20, param1, param0, param2, param4, param3, 0, param6);
     }
 
     final static void a(int param0, Throwable param1, String param2) {
         try {
-          qb stackIn_13_0;
+          PlatformTaskDispatcher stackIn_13_0;
           java.net.URL stackIn_13_1;
           java.net.URL stackIn_13_2;
           java.net.URL stackIn_13_3;
@@ -219,7 +219,7 @@ final class jq implements java.awt.event.KeyListener, java.awt.event.FocusListen
               stackIn_14_2 = null;
               stackIn_14_5 = bj.field_E;
             }
-            var4 = ((qb) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(qb.field_r).append("&v2=").append(qb.field_i).append("&e=").append(var10).toString()), false);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformTaskDispatcher.field_r).append("&v2=").append(PlatformTaskDispatcher.field_i).append("&e=").append(var10).toString()), false);
             while (0 == var4.field_d) {
               jb.a((byte) -106, 1L);
             }
@@ -229,7 +229,7 @@ final class jq implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var5.close();
             }
             if (param0 != -29901) {
-              jq.a(-48, 12, 85, -13, -5, -119, true, 2);
+              GameKeyHandler.a(-48, 12, 85, -13, -5, -119, true, 2);
               return;
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -322,7 +322,7 @@ final class jq implements java.awt.event.KeyListener, java.awt.event.FocusListen
     public final void focusGained(java.awt.event.FocusEvent param0) {
     }
 
-    final static void a(int param0, qb param1, int param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, int param9, int param10, int param11, String param12, long param13) {
+    final static void a(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5, boolean param6, int param7, boolean param8, int param9, int param10, int param11, String param12, long param13) {
         try {
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -340,7 +340,7 @@ final class jq implements java.awt.event.KeyListener, java.awt.event.FocusListen
             of.field_f = param3;
             nr.field_l = param1;
             if (param0 != 0) {
-              jq.a((byte) 38);
+              GameKeyHandler.a((byte) 38);
             }
             be.field_l = param13;
             bb.field_c = param5;

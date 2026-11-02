@@ -567,7 +567,7 @@ final class er {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_h[var3Lifetime1] = bg.a(this.field_h[var3Lifetime1], ke.field_l[var4][we.a(255, (int)(this.field_e[we.a(7, -var4 + var3Lifetime1)] >>> var5))]);
+              this.field_h[var3Lifetime1] = bg.a(this.field_h[var3Lifetime1], BufferedSocket.field_l[var4][we.a(255, (int)(this.field_e[we.a(7, -var4 + var3Lifetime1)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -575,14 +575,14 @@ final class er {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_e[var3Lifetime1Lifetime1] = this.field_h[var3Lifetime1Lifetime1];
           }
-          this.field_e[0] = bg.a(this.field_e[0], ke.field_k[var2Lifetime2]);
+          this.field_e[0] = bg.a(this.field_e[0], BufferedSocket.field_k[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_h[var3Lifetime1Lifetime2] = this.field_e[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_h[var3Lifetime1Lifetime2] = bg.a(this.field_h[var3Lifetime1Lifetime2], ke.field_l[var7][we.a((int)(this.field_f[we.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
+              this.field_h[var3Lifetime1Lifetime2] = bg.a(this.field_h[var3Lifetime1Lifetime2], BufferedSocket.field_l[var7][we.a((int)(this.field_f[we.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1), 255)]);
               var5Lifetime1 -= 8;
               var7++;
             }

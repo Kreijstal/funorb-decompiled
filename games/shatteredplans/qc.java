@@ -7,7 +7,7 @@ final class qc extends ar {
     static String field_s;
     static qf field_w;
     static String field_t;
-    private ke field_v;
+    private BufferedSocket field_v;
     static String field_u;
 
     final static void a(int param0, int param1, int[] param2, int param3) {
@@ -296,7 +296,7 @@ final class qc extends ar {
               }
               this.field_v = null;
             }
-            this.field_v = (ke) (param2);
+            this.field_v = (BufferedSocket) (param2);
             this.g(-20189);
             this.a(param1, 3);
             this.field_l = null;

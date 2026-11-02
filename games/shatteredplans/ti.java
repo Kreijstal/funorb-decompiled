@@ -111,7 +111,7 @@ final class ti {
         return var1;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, qb param6, String param7, int param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, PlatformTaskDispatcher param6, String param7, int param8) {
         try {
           ae.field_h = param3;
           dh.field_a = param6;

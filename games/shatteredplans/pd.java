@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pd extends hb {
-    static ed field_j;
+    static MouseInputHandler field_j;
     private el field_i;
     static u field_h;
     static qf field_m;
@@ -114,7 +114,7 @@ final class pd extends hb {
     }
 
     static {
-        field_j = new ed();
+        field_j = new MouseInputHandler();
         field_h = new u();
         field_k = 0;
         field_f = new IntrusiveDeque();

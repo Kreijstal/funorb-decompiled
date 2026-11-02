@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cq extends f implements bp {
+final class cq extends WidgetContainer implements bp {
     private kg field_G;
     private kg field_J;
     private kg field_H;
@@ -81,8 +81,8 @@ final class cq extends f implements bp {
           le.field_e.h((byte) 121);
         }
         if (param0 == -50) {
-          if (ed.field_h != null) {
-            ed.field_h.p(8305);
+          if (MouseInputHandler.field_h != null) {
+            MouseInputHandler.field_h.p(8305);
           }
           ga.g(param0 + 14795);
           return;

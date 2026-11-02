@@ -197,7 +197,7 @@ class ns extends il implements bp {
                   this.b(var6, 110);
                   return;
                 }
-                var6.a((ko) (this), 126, ib.field_d);
+                var6.a((ko) (this), 126, MouseWheelInput.field_d);
               }
             } else {
               var6.a(IntrusiveDeque.field_f, (byte) 122, 8);

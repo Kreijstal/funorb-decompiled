@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class af extends java.awt.Canvas {
+final class DelegatingCanvas extends java.awt.Canvas {
     static String field_b;
     static String field_e;
     static qr field_f;
@@ -58,7 +58,7 @@ final class af extends java.awt.Canvas {
           field_c = null;
           return;
         }
-        af.a(-3);
+        DelegatingCanvas.a(-3);
         field_c = null;
     }
 
@@ -75,7 +75,7 @@ final class af extends java.awt.Canvas {
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           try {
-            if (!qb.field_b.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_b.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&
@@ -120,7 +120,7 @@ final class af extends java.awt.Canvas {
         }
     }
 
-    af(java.awt.Component param0) {
+    DelegatingCanvas(java.awt.Component param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {

@@ -1108,7 +1108,7 @@ final class dc {
         }
     }
 
-    final static gl[] a(qb param0, byte param1) {
+    final static gl[] a(PlatformTaskDispatcher param0, byte param1) {
         int var5 = 0;
         gl[] stackIn_3_0 = null;
         gl[] stackIn_10_0 = null;

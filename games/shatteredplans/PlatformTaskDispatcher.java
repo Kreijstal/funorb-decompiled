@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class qb implements Runnable {
+final class PlatformTaskDispatcher implements Runnable {
     ra[] field_p;
     private static int field_h;
     java.awt.EventQueue field_q;
@@ -67,7 +67,7 @@ final class qb implements Runnable {
     final boolean a(boolean param0) {
         if (param0) {
           String var3 = (String) null;
-          qb.a((String) null, -128, (String) null, true);
+          PlatformTaskDispatcher.a((String) null, -128, (String) null, true);
         }
         if (!this.field_w) {
           return false;
@@ -248,7 +248,7 @@ final class qb implements Runnable {
                   case 16:
                   default:
                     if (!this.field_w) {
-                      throw qb.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                     }
                     switch (var2_int) {
                       case 3:
@@ -313,21 +313,21 @@ final class qb implements Runnable {
                           Class.forName("lj").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_o, new Object[]{var12[0], var12[1], new Integer(var8.field_g), new Integer(var8.field_a), var12[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw qb.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                           }
                           try {
                             if (!field_b.startsWith("win")) {
-                              throw qb.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var11 = (String) (var8.field_b);
                             if (!var11.startsWith("http://") &&
                               !var11.startsWith("https://")) {
-                              throw qb.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var5 < var11.length(); var5++) {
                               if (var4_ref_String.indexOf((int) var11.charAt(var5)) == -1) {
-                                throw qb.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var11 + "\"");
@@ -336,16 +336,16 @@ final class qb implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter2;
                             var3_ref2 = (Exception) (Object) decompiledCaughtException;
                             var8.field_e = var3_ref2;
-                            throw qb.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
                           }
                         }
                         break;
                       case 13:
-                        var3_ref3 = qb.a((String) (var8.field_b), field_h, "", true);
+                        var3_ref3 = PlatformTaskDispatcher.a((String) (var8.field_b), field_h, "", true);
                         var8.field_e = var3_ref3;
                         break;
                       case 12:
-                        var3_ref3 = qb.a((String) (var8.field_b), field_h, field_s, true);
+                        var3_ref3 = PlatformTaskDispatcher.a((String) (var8.field_b), field_h, field_s, true);
                         var8.field_e = var3_ref3;
                         break;
                       case 21:
@@ -493,7 +493,7 @@ final class qb implements Runnable {
         return this.a(0, 9, new Object[]{param0, param2}, (byte) -110, 0);
     }
 
-    qb(int param0, String param1, int param2, boolean param3) throws Exception {
+    PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
         int var5_int = 0;
         Exception exception = null;
         Throwable throwable = null;

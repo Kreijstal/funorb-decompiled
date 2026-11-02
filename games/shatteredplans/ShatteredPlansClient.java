@@ -86,7 +86,7 @@ public final class ShatteredPlansClient extends tl {
         ae.field_a[73] = 3;
         ae.field_a[66] = 15;
         ae.field_a[68] = param0;
-        NodeHashTableIterator.field_h = ed.field_f;
+        NodeHashTableIterator.field_h = MouseInputHandler.field_f;
         ae.field_a[62] = 1;
         ae.field_a[61] = 1;
         ae.field_a[65] = 1;
@@ -267,7 +267,7 @@ public final class ShatteredPlansClient extends tl {
           }
           if (!w.d(true)) {
             while (true) {
-              var3_ref_lq = (lq) (jq.field_a.h(54));
+              var3_ref_lq = (lq) (GameKeyHandler.field_a.h(54));
               if (var3_ref_lq == null) {
                 break;
               }
@@ -366,7 +366,7 @@ public final class ShatteredPlansClient extends tl {
                 gr.field_o = -2;
                 cs.field_i = false;
                 kc.field_d = false;
-                ge.field_n = true;
+                ImageProducerRasterBuffer.field_n = true;
                 wm.a(0);
               }
               is.field_a = false;
@@ -410,19 +410,19 @@ public final class ShatteredPlansClient extends tl {
             } catch (jn decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var15 = (jn) (Object) decompiledCaughtException;
-              jq.a(-29901, (Throwable) ((Object) var15), "Map Generation failed when receiving initial game state from server.");
+              GameKeyHandler.a(-29901, (Throwable) ((Object) var15), "Map Generation failed when receiving initial game state from server.");
               q.g(-96);
               decompiledRegionSelector0 = 1;
             } catch (kr decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var15_ref = (kr) (Object) decompiledCaughtException;
-              jq.a(-29901, (Throwable) ((Object) var15_ref), "Gamestate received from server is invalid.");
+              GameKeyHandler.a(-29901, (Throwable) ((Object) var15_ref), "Gamestate received from server is invalid.");
               q.g(-96);
               decompiledRegionSelector0 = 1;
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var15_ref2 = (Exception) (Object) decompiledCaughtException;
-              jq.a(-29901, (Throwable) ((Object) var15_ref2), "Error receiving gamestate from server.");
+              GameKeyHandler.a(-29901, (Throwable) ((Object) var15_ref2), "Error receiving gamestate from server.");
               q.g(-119);
               decompiledRegionSelector0 = 1;
             }
@@ -444,7 +444,7 @@ public final class ShatteredPlansClient extends tl {
               kc.field_d = true;
             }
             ta.a(0, -1, (byte) 96, false);
-            ge.field_n = false;
+            ImageProducerRasterBuffer.field_n = false;
             cs.field_i = true;
             is.field_a = false;
           }
@@ -460,9 +460,9 @@ public final class ShatteredPlansClient extends tl {
           }
           if (vr.field_c == -2 &&
             gr.field_o != -1) {
-            ge.field_n = true;
+            ImageProducerRasterBuffer.field_n = true;
           }
-          if (ge.field_n) {
+          if (ImageProducerRasterBuffer.field_n) {
           }
           boolean decompiledFrameRemainder0 = true;
           if (!se.field_g && ((ce.field_x == null ||
@@ -558,7 +558,7 @@ public final class ShatteredPlansClient extends tl {
         wg.field_e.a(field_L, 27275, "territories");
         wg.field_e.a(dm.field_c, 27275, "uioptions");
         wg.field_e.a(ba.field_a, 27275, "fleetinfo");
-        wg.field_e.a(ib.field_c, param0 ^ 27274, "projects");
+        wg.field_e.a(MouseWheelInput.field_c, param0 ^ 27274, "projects");
         wg.field_e.a(vj.field_B, 27275, "diplomacy");
         wg.field_e.a(uq.field_l, 27275, "messages");
         wg.field_e.a(Integer.toString(gm.field_k[0], 16), 27275, "colmetal");
@@ -683,13 +683,13 @@ public final class ShatteredPlansClient extends tl {
                                   u.c(122);
                                   return false;
                                 }
-                                nj.a(75.0f, 2, nc.a(ed.field_e, la.field_k, param0 ^ 118, jh.field_v));
+                                nj.a(75.0f, 2, nc.a(MouseInputHandler.field_e, la.field_k, param0 ^ 118, jh.field_v));
                                 return false;
                               }
-                              nj.a(75.0f, 2, bh.a("", oi.field_h, (byte) 77, ed.field_e, jh.field_v));
+                              nj.a(75.0f, 2, bh.a("", oi.field_h, (byte) 77, MouseInputHandler.field_e, jh.field_v));
                               return false;
                             }
-                            nj.a(75.0f, 2, bh.a("", ai.field_c, (byte) 39, ed.field_e, jh.field_v));
+                            nj.a(75.0f, 2, bh.a("", ai.field_c, (byte) 39, MouseInputHandler.field_e, jh.field_v));
                             return false;
                           }
                           nj.a(75.0f, 2, bh.a("", ti.field_g, (byte) 12, fa.field_J, SpriteState.field_r));
@@ -713,7 +713,7 @@ public final class ShatteredPlansClient extends tl {
               nj.a(20.0f, 2, bh.a("", cm.field_a, (byte) 117, kh.field_Db, k.field_e));
               return false;
             }
-            nj.a(17.0f, 2, bh.a("lobby", rl.field_f, (byte) 94, rq.field_h, on.field_h));
+            nj.a(17.0f, 2, bh.a("lobby", rl.field_f, (byte) 94, rq.field_h, IntrusiveDequeCursor.field_h));
             return false;
           }
           nj.a(13.0f, 2, bh.a("lobby", kl.field_s, (byte) 19, fa.field_J, SpriteState.field_r));
@@ -738,7 +738,7 @@ public final class ShatteredPlansClient extends tl {
         vr.a(true);
         l.a((byte) -98);
         rl.a(param0 ^ -24069);
-        jq.a((byte) -102);
+        GameKeyHandler.a((byte) -102);
         uo.a(true);
         jf.a((byte) -23);
         wo.a((byte) -103);
@@ -747,8 +747,8 @@ public final class ShatteredPlansClient extends tl {
         ClientException.b(108);
         GameApplet.b(param0 ^ -24187);
         r.a(0);
-        ed.a(param0 ^ -24150);
-        ib.a(param0 ^ -24163);
+        MouseInputHandler.a(param0 ^ -24150);
+        MouseWheelInput.a(param0 ^ -24163);
         gf.c();
         bc.b(-466);
         gg.a(param0 + 24069);
@@ -771,7 +771,7 @@ public final class ShatteredPlansClient extends tl {
         rn.a(true);
         tj.a((byte) 124);
         ej.a(false);
-        ke.b((byte) -127);
+        BufferedSocket.b((byte) -127);
         um.a((byte) -17);
         ui.c(-26088);
         IntrusiveNode.a(true);
@@ -948,7 +948,7 @@ public final class ShatteredPlansClient extends tl {
         im.a(-27153);
         oe.a(param0 ^ -24069);
         uk.a((byte) 91);
-        af.a(param0 ^ 24068);
+        DelegatingCanvas.a(param0 ^ 24068);
         bb.b((byte) 26);
         cm.a((byte) -26);
         le.a(124);
@@ -966,8 +966,8 @@ public final class ShatteredPlansClient extends tl {
         qs.a((byte) 109);
         jl.o(-123);
         w.m(-1);
-        f.j(param0 ^ -24192);
-        on.b(22256);
+        WidgetContainer.j(param0 ^ -24192);
+        IntrusiveDequeCursor.b(22256);
         wl.a((byte) 85);
         kn.a();
         ab.a((byte) -121);
@@ -983,7 +983,7 @@ public final class ShatteredPlansClient extends tl {
         SocketConnector.a((byte) 23);
         lg.b(101);
         gs.b((byte) 78);
-        ge.a(6);
+        ImageProducerRasterBuffer.a(6);
         us.a(param0 ^ -24069);
         gl.a(param0 + 24155);
         er.a(0);
@@ -1271,18 +1271,18 @@ public final class ShatteredPlansClient extends tl {
           }
           stackIn_47_0Lifetime1 = mf.field_p;
           if (!stackIn_47_0Lifetime1) {
-            af.b(0);
+            DelegatingCanvas.b(0);
           }
-          if (!ge.field_n) {
+          if (!ImageProducerRasterBuffer.field_n) {
             if (NodeHashTableIterator.field_h > 0) {
               NodeHashTableIterator.field_h = NodeHashTableIterator.field_h - 1;
             }
           } else {
-            if (NodeHashTableIterator.field_h < ed.field_f) {
+            if (NodeHashTableIterator.field_h < MouseInputHandler.field_f) {
               NodeHashTableIterator.field_h = NodeHashTableIterator.field_h + 1;
             }
           }
-          var5 = ed.field_f * ed.field_f;
+          var5 = MouseInputHandler.field_f * MouseInputHandler.field_f;
           var6 = -(NodeHashTableIterator.field_h * NodeHashTableIterator.field_h) + var5;
           var7 = 120 * var6 / var5 + fs.field_z;
           fa.a(var7, (byte) -47);

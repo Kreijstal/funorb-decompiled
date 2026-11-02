@@ -3,7 +3,7 @@
  */
 final class so extends qe {
     static qr field_v;
-    static qd field_q;
+    static RasterBuffer field_q;
     int field_u;
     static int field_m;
     static byte[] field_r;
@@ -62,7 +62,7 @@ final class so extends qe {
           }
           if (0 < var7 &&
             var6 > 0) {
-            ge.a(param3.field_B, var5, gf.field_h, 0, param0 - 28646, var7, var4_int, var9, var6, var8);
+            ImageProducerRasterBuffer.a(param3.field_B, var5, gf.field_h, 0, param0 - 28646, var7, var4_int, var9, var6, var8);
             return;
           }
           return;

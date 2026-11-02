@@ -33,8 +33,8 @@ final class vn extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         var3 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          ke.a(-6187, 640, 480, 372, 0);
-          var1_int = -qd.field_a + 480;
+          BufferedSocket.a(-6187, 640, 480, 372, 0);
+          var1_int = -RasterBuffer.field_a + 480;
           for (var2 = 0; hj.field_l.length > var2; var2++) {
             if (null != hj.field_l[var2]) {
               hj.field_l[var2].a(-208410008, var1_int);

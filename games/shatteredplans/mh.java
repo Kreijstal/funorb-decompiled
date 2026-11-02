@@ -52,7 +52,7 @@ final class mh {
               }
             }
             if (gb.field_i == 2) {
-              js.field_a = new ke((java.net.Socket) (oj.field_Gb.field_e), dh.field_a);
+              js.field_a = new BufferedSocket((java.net.Socket) (oj.field_Gb.field_e), dh.field_a);
               var2 = new PacketBuffer(13);
               hq.a(ae.field_h, si.field_u, var2, (byte) 20, sr.field_q);
               var2.c(15, (byte) -69);

@@ -339,19 +339,19 @@ final class qg extends me {
         field_m = new int[14];
         field_r = new int[14];
         field_k = "This password is part of your Player Name, and would be easy to guess";
-        qd.a(25, 0, 400, new int[]{26, 0, 1, 5, 31, 4, 23, 20}, (byte) -5, 200, 0);
-        qd.a(25, 0, 320, new int[]{2, 21, 22, 6, 10}, (byte) -5, 150, 1);
-        qd.a(25, 0, 320, new int[]{2, 21, 22, 6, 11, 12, 14}, (byte) -5, 150, 2);
-        qd.a(25, 0, 370, new int[]{2, 21, 22, 6, 13, 14}, (byte) -5, 150, 3);
-        qd.a(25, 0, 320, new int[]{2, 21, 22, 6, 14}, (byte) -5, 150, 4);
-        qd.a(25, 0, 400, new int[]{24, 9}, (byte) -5, 380, 5);
-        qd.a(25, 320, 500, new int[]{26, 9}, (byte) -5, 70, 6);
-        qd.a(25, 320, 500, new int[]{9}, (byte) -5, 50, 7);
-        qd.a(25, 0, 500, new int[]{24, 9}, (byte) -5, 400, 8);
-        qd.a(25, 0, 500, new int[]{24, 25}, (byte) -5, 200, 9);
-        qd.a(25, 0, 320, new int[]{8}, (byte) -5, 400, 10);
-        qd.a(25, 0, 0, new int[]{}, (byte) -5, 200, 11);
-        qd.a(25, 0, 500, new int[]{30, 28, 29, 9}, (byte) -5, 200, 12);
-        qd.a(25, 0, 400, new int[]{21, 22, 32, 7, 27, 9}, (byte) -5, 200, 13);
+        RasterBuffer.a(25, 0, 400, new int[]{26, 0, 1, 5, 31, 4, 23, 20}, (byte) -5, 200, 0);
+        RasterBuffer.a(25, 0, 320, new int[]{2, 21, 22, 6, 10}, (byte) -5, 150, 1);
+        RasterBuffer.a(25, 0, 320, new int[]{2, 21, 22, 6, 11, 12, 14}, (byte) -5, 150, 2);
+        RasterBuffer.a(25, 0, 370, new int[]{2, 21, 22, 6, 13, 14}, (byte) -5, 150, 3);
+        RasterBuffer.a(25, 0, 320, new int[]{2, 21, 22, 6, 14}, (byte) -5, 150, 4);
+        RasterBuffer.a(25, 0, 400, new int[]{24, 9}, (byte) -5, 380, 5);
+        RasterBuffer.a(25, 320, 500, new int[]{26, 9}, (byte) -5, 70, 6);
+        RasterBuffer.a(25, 320, 500, new int[]{9}, (byte) -5, 50, 7);
+        RasterBuffer.a(25, 0, 500, new int[]{24, 9}, (byte) -5, 400, 8);
+        RasterBuffer.a(25, 0, 500, new int[]{24, 25}, (byte) -5, 200, 9);
+        RasterBuffer.a(25, 0, 320, new int[]{8}, (byte) -5, 400, 10);
+        RasterBuffer.a(25, 0, 0, new int[]{}, (byte) -5, 200, 11);
+        RasterBuffer.a(25, 0, 500, new int[]{30, 28, 29, 9}, (byte) -5, 200, 12);
+        RasterBuffer.a(25, 0, 400, new int[]{21, 22, 32, 7, 27, 9}, (byte) -5, 200, 13);
     }
 }

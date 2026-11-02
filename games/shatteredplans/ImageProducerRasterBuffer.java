@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ge extends qd implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     static hh field_p;
     static int field_i;
     static String field_m;
@@ -138,7 +138,7 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
             param6 = param6 + param9;
           }
           if (param4 != -28646) {
-            ge.a(69);
+            ImageProducerRasterBuffer.a(69);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -244,7 +244,7 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
           }
           if (param0 != -134) {
             var3 = (java.awt.Color) null;
-            ge.a((String) null, -93, true, -3, (java.awt.Color) null);
+            ImageProducerRasterBuffer.a((String) null, -93, true, -3, (java.awt.Color) null);
           }
           if (param1.equals("I")) {
             stackIn_9_0 = Integer.TYPE;
@@ -293,7 +293,7 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
     public static void a(int param0) {
         if (param0 != 6) {
           int[] var2 = (int[]) null;
-          ge.a((int[]) null, -98, (int[]) null, -45, 88, 3, -20, 17, 70, -82);
+          ImageProducerRasterBuffer.a((int[]) null, -98, (int[]) null, -45, 88, 3, -20, 17, 70, -82);
         }
         field_p = null;
         field_l = null;
@@ -350,7 +350,7 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
         try {
           this.b(101);
           if (param2 >= -56) {
-            ge.a(-40);
+            ImageProducerRasterBuffer.a(-40);
           }
           param0.drawImage(this.field_b, param1, param3, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
@@ -358,7 +358,7 @@ final class ge extends qd implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    ge() {
+    ImageProducerRasterBuffer() {
     }
 
     static {

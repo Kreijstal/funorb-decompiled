@@ -4,7 +4,7 @@
 final class wg {
     static rl field_e;
     static String field_g;
-    static ke field_f;
+    static BufferedSocket field_f;
     static boolean field_d;
     static String field_b;
     static am field_a;

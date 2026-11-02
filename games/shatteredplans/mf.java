@@ -208,7 +208,7 @@ final class mf extends ml {
                 ti.field_e = false;
                 if (bc.field_b <= 0) {
                   if (0 >= ee.field_k) {
-                    if (ed.field_f > qa.field_t) {
+                    if (MouseInputHandler.field_f > qa.field_t) {
                       if (qa.field_t == 0) {
                         in.a((byte) -83);
                       }
@@ -223,7 +223,7 @@ final class mf extends ml {
               } else {
                 if (qa.field_t <= 0) {
                   if (ee.field_k <= 0) {
-                    if (ed.field_f > bc.field_b) {
+                    if (MouseInputHandler.field_f > bc.field_b) {
                       if (0 == bc.field_b) {
                         tc.a(true, true);
                       }
@@ -243,7 +243,7 @@ final class mf extends ml {
                 if (bc.field_b > 0) {
                   bc.field_b = bc.field_b - 1;
                 } else {
-                  if (ee.field_k < ed.field_f) {
+                  if (ee.field_k < MouseInputHandler.field_f) {
                     if (0 == ee.field_k) {
                       tc.a(true, false);
                     }

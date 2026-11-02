@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cf extends f implements bp {
+final class cf extends WidgetContainer implements bp {
     static String field_M;
     private ns field_K;
     static int field_D;

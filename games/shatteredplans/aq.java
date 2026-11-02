@@ -33,8 +33,8 @@ final class aq extends IntrusiveNode {
           if (dc.field_c[param2] > dc.field_c[param0]) {
             return false;
           }
-          var4 = aj.field_d[param2] + fb.field_zb[param2] + f.field_y[param2];
-          var5 = f.field_y[param0] + fb.field_zb[param0] + aj.field_d[param0];
+          var4 = aj.field_d[param2] + fb.field_zb[param2] + WidgetContainer.field_y[param2];
+          var5 = WidgetContainer.field_y[param0] + fb.field_zb[param0] + aj.field_d[param0];
           if (var4 < var5) {
             return true;
           }
@@ -55,8 +55,8 @@ final class aq extends IntrusiveNode {
         if (GameApplet.field_f[param2] > GameApplet.field_f[param0]) {
           return false;
         }
-        var4Lifetime1 = aj.field_d[param2] + fb.field_zb[param2] + f.field_y[param2];
-        var5Lifetime1 = f.field_y[param0] + fb.field_zb[param0] + aj.field_d[param0];
+        var4Lifetime1 = aj.field_d[param2] + fb.field_zb[param2] + WidgetContainer.field_y[param2];
+        var5Lifetime1 = WidgetContainer.field_y[param0] + fb.field_zb[param0] + aj.field_d[param0];
         if (var4Lifetime1 < var5Lifetime1) {
           return true;
         }

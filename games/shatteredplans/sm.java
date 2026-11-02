@@ -538,7 +538,7 @@ final class sm {
     private final void e(byte param0) {
         gf.a(kc.field_m);
         gf.a();
-        int var2 = re.a(0, 32, on.field_c, 320, 0);
+        int var2 = re.a(0, 32, IntrusiveDequeCursor.field_c, 320, 0);
         int var3 = 200;
         int var4 = this.b(false) - (var2 - this.c(32) >> 1);
         int var5 = -48 + this.h(-104) - var3;
@@ -548,7 +548,7 @@ final class sm {
         if (var2 > 20) {
           ga.a(var3, var5, var4, (byte) -112, var2);
         }
-        if (on.field_c == 32) {
+        if (IntrusiveDequeCursor.field_c == 32) {
           gf.d(var4 + 8, 8 + var5, var2 + (var4 - 8), var3 + (var5 - 8));
           mp.field_b.c(wc.field_b, (var2 >> 1) + var4, mp.field_b.field_J + 10 + var5, 2805974, -1);
           rs.field_Cb.a(oi.field_c, 10 + var4, mp.field_b.field_J + (var5 + 10), -20 + var2, -mp.field_b.field_J + (-30 + var3), 2805974, -1, 1, 1, rs.field_Cb.field_J);
@@ -870,7 +870,7 @@ final class sm {
         if (param1 <= 14) {
           this.e((byte) -50);
         }
-        qd.field_e = -1;
+        RasterBuffer.field_e = -1;
         this.field_g = -1;
         qg.field_q = cl.field_n;
         for (var4 = 1; 6 > var4; var4++) {
@@ -953,7 +953,7 @@ final class sm {
           field_c = (String) null;
         }
         for (var2 = 0; jd.field_j.length > var2; var2++) {
-          if (var2 != qd.field_e &&
+          if (var2 != RasterBuffer.field_e &&
             an.field_c != var2) {
             ql.field_o[var2] = null;
             tr.field_sb[var2] = null;
@@ -968,7 +968,7 @@ final class sm {
           }
         }
         if (an.field_c == -1) {
-          stackIn_21_0 = qd.field_e;
+          stackIn_21_0 = RasterBuffer.field_e;
         } else {
           stackIn_21_0 = an.field_c;
         }
@@ -1644,10 +1644,10 @@ final class sm {
         }
         this.field_h = this.field_h + 1;
         if (this.field_a == 10) {
-          fieldTemp$0 = on.field_c + 1;
-          on.field_c = on.field_c + 1;
+          fieldTemp$0 = IntrusiveDequeCursor.field_c + 1;
+          IntrusiveDequeCursor.field_c = IntrusiveDequeCursor.field_c + 1;
           if (32 < fieldTemp$0) {
-            on.field_c = 32;
+            IntrusiveDequeCursor.field_c = 32;
           }
         }
         if (this.field_a == 5) {
@@ -1662,7 +1662,7 @@ final class sm {
     private final void a(int param0) {
         int discarded$0 = 0;
         int var2 = 0;
-        qd.field_e = this.d(param0 + 16191, pd.field_k, bb.field_b);
+        RasterBuffer.field_e = this.d(param0 + 16191, pd.field_k, bb.field_b);
         if (param0 != -16084) {
           discarded$0 = this.b(true);
         }
@@ -1921,7 +1921,7 @@ final class sm {
           if (var5 != 0) {
             stackIn_8_0 = DualLinkNode.a(var6, 32);
           } else {
-            stackIn_8_0 = ed.field_b;
+            stackIn_8_0 = MouseInputHandler.field_b;
           }
           var28 = stackIn_8_0;
           var8 = var28;
@@ -1954,7 +1954,7 @@ final class sm {
               var8Lifetime2.c(var4 - 32, var3 - 32, 96, 96, var7_int << 1);
               var10_ref_bi.c(var4 - 8, -8 + var3, 256);
             } else {
-              if (qd.field_e == var6) {
+              if (RasterBuffer.field_e == var6) {
                 if (-1 == an.field_c) {
                   var28.c(-16 + var4, var3 - 16, var7_int);
                   var29.c(var4, var3, 256);
@@ -1990,7 +1990,7 @@ final class sm {
           il.field_gb = new Sprite(256, 256);
         }
         if (an.field_c == -1) {
-          stackIn_42_0 = qd.field_e;
+          stackIn_42_0 = RasterBuffer.field_e;
         } else {
           stackIn_42_0 = an.field_c;
         }
@@ -2041,7 +2041,7 @@ final class sm {
         if (-1 != var6 &&
           var6 != 24) {
           mp.field_b.d(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, var20 + (6 + mp.field_b.field_J), 2805974, -1);
-          var21_ref_String = "(" + re.a(af.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
+          var21_ref_String = "(" + re.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
           var22 = rs.field_Cb.a(var21_ref_String, 10 + var2Lifetime1, 14 + (var20 + rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
           var22 = var22 + (1 + rs.field_Cb.a(ul.field_Qb[var6], 10 + var2Lifetime1, rs.field_Cb.field_J / 2 + var20 + (14 + (1 + var22) * rs.field_Cb.field_J), -20 + var18, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J));
           rs.field_Cb.a(a.field_i, 10 + var2Lifetime1, var20 - (-14 - (var22 + 1) * rs.field_Cb.field_J), var18 - 20, var19, 2805974, -1, 0, 0, rs.field_Cb.field_J);
@@ -2049,7 +2049,7 @@ final class sm {
           if (var6 == 24) {
             mp.field_b.d(ud.field_a[var6].toUpperCase(), var2Lifetime1 + 10, 6 + var20 + mp.field_b.field_J, 2805974, -1);
             if (var5Lifetime1 != 0) {
-              var21_ref_String = "(" + re.a(af.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
+              var21_ref_String = "(" + re.a(DelegatingCanvas.field_e, 4371, new String[]{Integer.toString(ei.field_g[var6])}) + ")";
               var22_ref_String = ul.field_Qb[var6];
             } else {
               var21_ref_String = "(" + kj.field_i + "???)";
@@ -2198,7 +2198,7 @@ final class sm {
         int var8 = 20;
         int var9 = 5;
         int var10 = -77 % ((param1 - 63) / 63);
-        jq.a(2 + var9, param5, 4 + var8, -2 + param6 + (param2 - param4), -2 + param0, (byte) -126, 4 + param4);
+        GameKeyHandler.a(2 + var9, param5, 4 + var8, -2 + param6 + (param2 - param4), -2 + param0, (byte) -126, 4 + param4);
         if (0 < param3) {
           var11 = param2 * param3 / 15 + 2 * var9;
           gf.a(param0, param2 + (param6 - var11), var8, var11, var9, param5);
@@ -2495,8 +2495,8 @@ final class sm {
           return fieldTemp$1 <= 0 ? true : false;
         }
         if (this.field_a == 10) {
-          fieldTemp$2 = on.field_c - 1;
-          on.field_c = on.field_c - 1;
+          fieldTemp$2 = IntrusiveDequeCursor.field_c - 1;
+          IntrusiveDequeCursor.field_c = IntrusiveDequeCursor.field_c - 1;
           return 0 >= fieldTemp$2 ? true : false;
         }
         return true;

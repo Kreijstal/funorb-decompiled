@@ -315,7 +315,7 @@ final class vm extends qr {
             var14 = null;
             if (this.field_yb[var13] != null ||
               this.field_Hb[var13] == -1) {
-              var14 = jq.field_c;
+              var14 = GameKeyHandler.field_c;
             }
             this.field_Kb[var13] = new sg(0L, param2, (qr) null, param3, (Sprite) (var14), param6[var13]);
             this.a(4, this.field_Kb[var13]);
@@ -324,7 +324,7 @@ final class vm extends qr {
               this.field_Ib = var15;
             }
           }
-          this.field_Ib = this.field_Ib + (jq.field_c.field_o + 10);
+          this.field_Ib = this.field_Ib + (GameKeyHandler.field_c.field_o + 10);
           this.c(false, 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

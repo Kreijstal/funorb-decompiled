@@ -17,7 +17,7 @@ abstract class bq {
         qr var6 = null;
         qr var3 = null;
         try {
-          ke.field_i = id.a(2, param1, "basic", "display_name_changed");
+          BufferedSocket.field_i = id.a(2, param1, "basic", "display_name_changed");
           d.field_a = new am(0L, ih.field_g, ld.field_k, qc.field_u);
           wg.field_a = new am(0L, ih.field_g, vf.field_f, qg.field_o);
           cg.field_A = new qr(0L, (qr) null);
@@ -49,7 +49,7 @@ abstract class bq {
     }
 
     final static void a(int param0) {
-        int var1 = ed.field_f * ed.field_f;
+        int var1 = MouseInputHandler.field_f * MouseInputHandler.field_f;
         int var3 = 30 / ((param0 - 69) / 54);
         int var2 = var1 - pg.field_J * pg.field_J;
         int var4 = NodeHashTableIterator.field_f + var2 * (-NodeHashTableIterator.field_f + pc.field_m) / var1;

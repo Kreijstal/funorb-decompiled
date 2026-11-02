@@ -104,7 +104,7 @@ final class s {
               return;
             }
             if (var2 != 4) {
-              jq.a(-29901, (Throwable) null, "F1: " + w.a(16738));
+              GameKeyHandler.a(-29901, (Throwable) null, "F1: " + w.a(16738));
               q.g(-101);
               return;
             }

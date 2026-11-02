@@ -5,7 +5,7 @@ final class fa extends go implements ki {
     static String field_T;
     static String field_J;
     static String field_Y;
-    static qb field_W;
+    static PlatformTaskDispatcher field_W;
     static String field_S;
     static int[][] field_Z;
     private gk field_V;
@@ -69,8 +69,8 @@ final class fa extends go implements ki {
         int var2 = 0;
         int var3 = 0;
         NodeHashTableIterator.field_f = param0;
-        if (pg.field_J != ed.field_f) {
-          var2 = ed.field_f * ed.field_f;
+        if (pg.field_J != MouseInputHandler.field_f) {
+          var2 = MouseInputHandler.field_f * MouseInputHandler.field_f;
           var3 = -(pg.field_J * pg.field_J) + var2;
           param0 = param0 + (-param0 + pc.field_m) * var3 / var2;
         }

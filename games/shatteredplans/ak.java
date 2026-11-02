@@ -81,7 +81,7 @@ final class ak extends jc {
           jf.field_d[1] = gm.field_o;
           jf.field_d[0] = bf.field_b;
           jf.field_d[2] = ue.field_d;
-          ne.a(param0, (byte) -64, ge.field_p);
+          ne.a(param0, (byte) -64, ImageProducerRasterBuffer.field_p);
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "ak.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

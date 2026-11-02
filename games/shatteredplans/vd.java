@@ -156,9 +156,9 @@ class vd extends IntrusiveNode {
               !(param1 <= aj.field_d.length)) {
               aj.field_d = new int[2 * param1];
             }
-            if (f.field_y == null ||
-              !(param1 <= f.field_y.length)) {
-              f.field_y = new int[2 * param1];
+            if (WidgetContainer.field_y == null ||
+              !(param1 <= WidgetContainer.field_y.length)) {
+              WidgetContainer.field_y = new int[2 * param1];
             }
             if (null == dc.field_c ||
               !(dc.field_c.length >= param1)) {
@@ -186,9 +186,9 @@ class vd extends IntrusiveNode {
               !(param1 <= aj.field_d.length)) {
               aj.field_d = new int[2 * param1];
             }
-            if (f.field_y == null ||
-              !(param1 <= f.field_y.length)) {
-              f.field_y = new int[2 * param1];
+            if (WidgetContainer.field_y == null ||
+              !(param1 <= WidgetContainer.field_y.length)) {
+              WidgetContainer.field_y = new int[2 * param1];
             }
             if (null == dc.field_c ||
               !(dc.field_c.length >= param1)) {
@@ -227,9 +227,9 @@ class vd extends IntrusiveNode {
               !(param1 <= aj.field_d.length)) {
               aj.field_d = new int[2 * param1];
             }
-            if (f.field_y == null ||
-              !(param1 <= f.field_y.length)) {
-              f.field_y = new int[2 * param1];
+            if (WidgetContainer.field_y == null ||
+              !(param1 <= WidgetContainer.field_y.length)) {
+              WidgetContainer.field_y = new int[2 * param1];
             }
             if (null == dc.field_c ||
               !(dc.field_c.length >= param1)) {
@@ -254,9 +254,9 @@ class vd extends IntrusiveNode {
                 !(param1 <= aj.field_d.length)) {
                 aj.field_d = new int[2 * param1];
               }
-              if (f.field_y == null ||
-                !(param1 <= f.field_y.length)) {
-                f.field_y = new int[2 * param1];
+              if (WidgetContainer.field_y == null ||
+                !(param1 <= WidgetContainer.field_y.length)) {
+                WidgetContainer.field_y = new int[2 * param1];
               }
               if (null == dc.field_c ||
                 !(dc.field_c.length >= param1)) {
@@ -279,9 +279,9 @@ class vd extends IntrusiveNode {
                 !(param1 <= aj.field_d.length)) {
                 aj.field_d = new int[2 * param1];
               }
-              if (f.field_y == null ||
-                !(param1 <= f.field_y.length)) {
-                f.field_y = new int[2 * param1];
+              if (WidgetContainer.field_y == null ||
+                !(param1 <= WidgetContainer.field_y.length)) {
+                WidgetContainer.field_y = new int[2 * param1];
               }
               if (null == dc.field_c ||
                 !(dc.field_c.length >= param1)) {

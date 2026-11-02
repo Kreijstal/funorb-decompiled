@@ -112,7 +112,7 @@ final class ch implements wr {
             return null;
           }
           if (param1 < -104) {
-            stackIn_7_0 = ed.a(true);
+            stackIn_7_0 = MouseInputHandler.a(true);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite) null;

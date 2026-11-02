@@ -224,7 +224,7 @@ final class ec extends ml {
           var5 = 1;
           var4 = 1;
         }
-        ib.field_a = mq.a(var4 * var2, (byte) 80, var5 * var2);
+        MouseWheelInput.field_a = mq.a(var4 * var2, (byte) 80, var5 * var2);
     }
 
     ec(go param0) {

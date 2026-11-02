@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aa extends f implements op, bp, dl {
+final class aa extends WidgetContainer implements op, bp, dl {
     private fa field_J;
     private fa field_Q;
     private lk field_K;
@@ -290,7 +290,7 @@ final class aa extends f implements op, bp, dl {
         this.field_J.field_p = (iq) ((Object) dupTemp$1);
         String var2 = re.a(bo.field_Y, 4371, new String[]{this.l(-63), this.k(15)});
         int var3 = 20;
-        var3 = var3 + this.a(on.field_i, 21760, this.field_F, var3, 170);
+        var3 = var3 + this.a(IntrusiveDequeCursor.field_i, 21760, this.field_F, var3, 170);
         var3 = var3 + (5 + this.a(127, 170, var3, this.field_M, "", ec.field_u, 20));
         var3 = var3 + this.a(co.field_t, 21760, this.field_J, var3, 170);
         var3 = var3 + (5 + this.a(170, ab.field_a, var3, (byte) -127, this.field_H, qq.field_l));

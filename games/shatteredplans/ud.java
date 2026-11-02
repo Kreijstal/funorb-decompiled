@@ -17,7 +17,7 @@ final class ud {
         }
     }
 
-    final static void a(int param0, qb param1, Object param2) {
+    final static void a(int param0, PlatformTaskDispatcher param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;

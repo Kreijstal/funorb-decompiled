@@ -3,10 +3,10 @@
  */
 import java.io.*;
 
-final class ke implements Runnable {
+final class BufferedSocket implements Runnable {
     private int field_a;
     private pb field_p;
-    private qb field_m;
+    private PlatformTaskDispatcher field_m;
     static int[] field_q;
     private java.net.Socket field_o;
     private int field_g;
@@ -99,7 +99,7 @@ final class ke implements Runnable {
           }
           this.field_p = null;
           if (param0 < 83) {
-            ke.a(52, 12, -47, -94, 64);
+            BufferedSocket.a(52, 12, -47, -94, 64);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -149,7 +149,7 @@ final class ke implements Runnable {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         wh.a(false);
         if (param0 != -6187) {
-          ke.b((byte) 13);
+          BufferedSocket.b((byte) 13);
         }
         gf.i(param4, param3, param1, param2);
     }
@@ -250,7 +250,7 @@ final class ke implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter4;
             var1_ref = (Exception) (Object) decompiledCaughtException;
             var7 = (String) null;
-            jq.a(-29901, (Throwable) ((Object) var1_ref), (String) null);
+            GameKeyHandler.a(-29901, (Throwable) ((Object) var1_ref), (String) null);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -297,7 +297,7 @@ final class ke implements Runnable {
         }
     }
 
-    ke(java.net.Socket param0, qb param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -313,7 +313,7 @@ final class ke implements Runnable {
         }
     }
 
-    private ke(java.net.Socket param0, qb param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_a = 0;
         this.field_b = 0;
         this.field_d = false;

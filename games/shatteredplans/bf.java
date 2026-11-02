@@ -88,7 +88,7 @@ final class bf {
         int var4 = 0;
         int var5 = 0;
         try {
-          on.field_b = true;
+          IntrusiveDequeCursor.field_b = true;
           if (param0 < 56) {
             bf.a((byte) -76);
           }

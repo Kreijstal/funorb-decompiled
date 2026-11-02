@@ -203,7 +203,7 @@ final class rq implements iq {
           }
           if (decompiledFrameRemainder0) {
             cg.field_A.field_s = true;
-            rj.field_p.field_z = re.a(af.field_b, 4371, new String[]{jo.field_d});
+            rj.field_p.field_z = re.a(DelegatingCanvas.field_b, 4371, new String[]{jo.field_d});
             d.field_a.field_Db.field_zb.field_z = null;
             var6 = null;
             var7 = (ve) (var4.d(0));
@@ -237,9 +237,9 @@ final class rq implements iq {
                   var12 = 0;
                   if (var7.field_Bb != null &&
                     !var7.field_Bb.equals("")) {
-                    var7.field_Db.field_pb = ke.field_i;
+                    var7.field_Db.field_pb = BufferedSocket.field_i;
                     var7.field_Db.field_jb = var11;
-                    var7.field_Db.a(ke.field_i.field_o + 3, cr.field_c, (byte) 88, var9, 0);
+                    var7.field_Db.a(BufferedSocket.field_i.field_o + 3, cr.field_c, (byte) 88, var9, 0);
                     var12 = 1;
                   }
                   var7.field_Fb.field_x = var10;
@@ -253,7 +253,7 @@ final class rq implements iq {
                   var13 = 0;
                   var14 = -2 + var7.field_K - 80;
                   if (var12 != 0) {
-                    var13 = 3 + ke.field_i.field_o;
+                    var13 = 3 + BufferedSocket.field_i.field_o;
                     var14 = var14 - var13;
                   }
                   stackIn_46_0 = var7.field_Cb;
@@ -319,7 +319,7 @@ final class rq implements iq {
               if (0 == d.field_a.field_yb.field_rb) {
                 break;
               }
-              lg.field_e = new jp(d.field_a.field_yb.field_B, d.field_a.field_yb.field_N, d.field_a.field_yb.field_K, d.field_a.field_yb.field_mb, on.field_f, h.field_v, SpriteState.field_u, SpriteState.field_u);
+              lg.field_e = new jp(d.field_a.field_yb.field_B, d.field_a.field_yb.field_N, d.field_a.field_yb.field_K, d.field_a.field_yb.field_mb, IntrusiveDequeCursor.field_f, h.field_v, SpriteState.field_u, SpriteState.field_u);
               ia.field_b = 1;
               break;
             }

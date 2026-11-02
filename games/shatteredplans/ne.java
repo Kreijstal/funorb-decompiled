@@ -150,7 +150,7 @@ final class ne extends IntrusiveNode {
           ua.field_f = new qr(0L, (qr) null);
           if (param0 == null) {
             var10 = (Throwable) null;
-            jq.a(-29901, (Throwable) null, "QC1");
+            GameKeyHandler.a(-29901, (Throwable) null, "QC1");
             return;
           }
           param0.field_k = 0;
@@ -159,10 +159,10 @@ final class ne extends IntrusiveNode {
           dh.field_c = new re(var3_int, param0, param0, new ch());
           var4 = hc.a(false);
           if (var4 == null) {
-            jq.a(-29901, (Throwable) null, "QC2");
+            GameKeyHandler.a(-29901, (Throwable) null, "QC2");
             return;
           }
-          ke.a(param1 - 5, var4);
+          BufferedSocket.a(param1 - 5, var4);
           kh.field_Nb = rd.a(65793, 5138823, 65793, 65793, 4020342, (byte) 99, 1127256, 1513239, (nq) null, 0, 2245737, 1513239, 8947848);
           nl.field_d = rd.a(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16764006, 0, 0, 0);
           hl.field_I = rd.a(0, 0, 0, 0, 0, (byte) 99, 0, 0, param2, 16777215, 0, 0, 0);
@@ -172,8 +172,8 @@ final class ne extends IntrusiveNode {
           var5 = gf.field_b;
           var6 = gf.field_k;
           var14 = gf.field_h;
-          jq.field_c = new Sprite(10, 14);
-          jq.field_c.e();
+          GameKeyHandler.field_c = new Sprite(10, 14);
+          GameKeyHandler.field_c.e();
           for (var8 = 2; 7 > var8; var8++) {
             gf.j(var8, var8 + 1, -(var8 << 1) + 14, 16777215);
           }

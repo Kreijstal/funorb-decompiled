@@ -78,7 +78,7 @@ final class cc extends ml {
         nf var9 = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          if (ed.field_f > pg.field_J) {
+          if (MouseInputHandler.field_f > pg.field_J) {
             pg.field_J = pg.field_J + 1;
           }
           if (pc.field_m != so.field_q.field_d) {

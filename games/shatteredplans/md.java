@@ -140,7 +140,7 @@ final class md extends UiWidget {
             this.field_S = (Sprite) null;
           }
           var5_int = param2 + this.field_x;
-          ke.a(-6187, var5_int - this.field_R.field_z, this.field_n + param1, param1, param2 + this.field_R.field_z);
+          BufferedSocket.a(-6187, var5_int - this.field_R.field_z, this.field_n + param1, param1, param2 + this.field_R.field_z);
           for (var6 = -this.field_P + param2; var5_int > var6; var6 = var6 + param0.field_z) {
             param0.f(var6, param1);
           }
@@ -222,7 +222,7 @@ final class md extends UiWidget {
         int var6 = this.field_q + param2;
         this.a(this.field_z[0], var6, var5, -1);
         if (this.field_y < 65536) {
-          ke.a(-6187, var5 + this.field_x, var6 + this.field_n, var6, var5 + (this.field_y * this.field_x >> 16));
+          BufferedSocket.a(-6187, var5 + this.field_x, var6 + this.field_n, var6, var5 + (this.field_y * this.field_x >> 16));
           this.a(this.field_z[1], var6, var5, -1);
           ln.f((byte) -78);
         }

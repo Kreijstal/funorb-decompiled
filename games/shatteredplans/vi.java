@@ -1006,7 +1006,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("mu_gamelist_options", 511);
                 if (var2 != null) {
-                  f.field_z = IterableNodeHashTable.a(var2, 17746);
+                  WidgetContainer.field_z = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("mu_gamelist_elapsed_time", 511);
                 if (null != var2) {
@@ -1198,7 +1198,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("you_are_on_x_server", 511);
                 if (var2 != null) {
-                  af.field_b = IterableNodeHashTable.a(var2, 17746);
+                  DelegatingCanvas.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("rated_game", 511);
                 if (null != var2) {
@@ -1410,7 +1410,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("multiconst_friends", 511);
                 if (var2 != null) {
-                  ib.field_e = IterableNodeHashTable.a(var2, 17746);
+                  MouseWheelInput.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("multiconst_similar_rating", 511);
                 if (null != var2) {
@@ -1594,7 +1594,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("gameopt_playersdontqualify", 511);
                 if (null != var2) {
-                  on.field_a = IterableNodeHashTable.a(var2, 17746);
+                  IntrusiveDequeCursor.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("gameopt_playersdontqualify_selectgametab", 511);
                 if (var2 != null) {
@@ -1776,7 +1776,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("changedisplayname", 511);
                 if (null != var2) {
-                  ib.field_d = IterableNodeHashTable.a(var2, 17746);
+                  MouseWheelInput.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("returntohomepage", 511);
                 if (var2 != null) {
@@ -1872,7 +1872,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("warning_ifyouquit", 511);
                 if (null != var2) {
-                  ed.field_a = IterableNodeHashTable.a(var2, 17746);
+                  MouseInputHandler.field_a = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("warning_ifyouquitorleavepage", 511);
                 if (var2 != null) {
@@ -2136,7 +2136,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("create_email", 511);
                 if (null != var2) {
-                  on.field_i = IterableNodeHashTable.a(var2, 17746);
+                  IntrusiveDequeCursor.field_i = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("create_email_confirm", 511);
                 if (var2 != null) {
@@ -2436,7 +2436,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("ignorenotfound", 511);
                 if (var2 != null) {
-                  af.field_d = IterableNodeHashTable.a(var2, 17746);
+                  DelegatingCanvas.field_d = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("removeignorefirst", 511);
                 if (var2 != null) {
@@ -2452,7 +2452,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("enterfriend_del", 511);
                 if (var2 != null) {
-                  on.field_f = IterableNodeHashTable.a(var2, 17746);
+                  IntrusiveDequeCursor.field_f = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("enterignore_add", 511);
                 if (null != var2) {
@@ -2512,7 +2512,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("waitingfor_extradata", 511);
                 if (null != var2) {
-                  ed.field_e = IterableNodeHashTable.a(var2, 17746);
+                  MouseInputHandler.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("waitingfor_languages", 511);
                 if (null != var2) {
@@ -2536,7 +2536,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("loading_fonts", 511);
                 if (null != var2) {
-                  on.field_h = IterableNodeHashTable.a(var2, 17746);
+                  IntrusiveDequeCursor.field_h = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("loading_soundeffects", 511);
                 if (var2 != null) {
@@ -2994,7 +2994,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("orbpoints", 511);
                 if (null != var2) {
-                  af.field_e = IterableNodeHashTable.a(var2, 17746);
+                  DelegatingCanvas.field_e = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("orbcoins", 511);
                 if (null != var2) {
@@ -3102,7 +3102,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("mp_youofferrematch", 511);
                 if (null != var2) {
-                  f.field_B = IterableNodeHashTable.a(var2, 17746);
+                  WidgetContainer.field_B = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("mp_youofferrematch_unrated", 511);
                 if (null != var2) {
@@ -3386,7 +3386,7 @@ final class vi extends hs {
                 }
                 var2 = vp.a("fs_accept_aftercancel", 511);
                 if (null != var2) {
-                  ge.field_m = IterableNodeHashTable.a(var2, 17746);
+                  ImageProducerRasterBuffer.field_m = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = vp.a("fs_accept_countdown_sing", 511);
                 if (null != var2) {

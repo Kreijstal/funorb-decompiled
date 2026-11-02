@@ -148,7 +148,7 @@ final class na {
           jo.field_g[10] = w.field_H;
           jo.field_g[12] = am.field_zb;
           jo.field_g[2] = rq.field_c;
-          jo.field_g[15] = af.field_c;
+          jo.field_g[15] = DelegatingCanvas.field_c;
           jo.field_g[13] = kh.field_Eb;
           jo.field_g[1] = gq.field_g;
           bk.field_b[6] = en.field_e;

@@ -272,7 +272,7 @@ class ap {
         this.field_k = param0;
     }
 
-    final static ap a(qb param0, java.awt.Component param1, int param2, int param3) {
+    final static ap a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           oc var4 = null;
           Throwable var4_ref = null;

@@ -529,13 +529,13 @@ final class kr extends Exception {
     }
 
     final static ik b(byte param0) {
-        if (ed.field_c.g(69)) {
+        if (MouseInputHandler.field_c.g(69)) {
           return new ik();
         }
         if (param0 != -103) {
           kr.b((byte) -5);
         }
-        return (ik) (ed.field_c.h(44));
+        return (ik) (MouseInputHandler.field_c.h(44));
     }
 
     static {

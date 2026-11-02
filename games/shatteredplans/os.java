@@ -170,7 +170,7 @@ final class os extends vd {
           }
           var7 = di.a(param2, param0 ^ 12);
           if (var7 == null) {
-            stackIn_10_0 = re.a(af.field_d, param0 + 4254, new String[]{param2});
+            stackIn_10_0 = re.a(DelegatingCanvas.field_d, param0 + 4254, new String[]{param2});
             return stackIn_10_0;
           }
           var7.b((byte) -74);

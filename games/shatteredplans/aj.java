@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class aj {
-    static ib field_b;
+    static MouseWheelInput field_b;
     static ap field_e;
     static int field_c;
     static volatile int field_f;

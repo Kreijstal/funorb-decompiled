@@ -708,9 +708,9 @@ final class tr extends ia {
           if (param1 <= 43) {
             return;
           }
-          qd.field_f = cl.field_n % 64 * 8;
-          if (256 < qd.field_f) {
-            qd.field_f = -qd.field_f + 512;
+          RasterBuffer.field_f = cl.field_n % 64 * 8;
+          if (256 < RasterBuffer.field_f) {
+            RasterBuffer.field_f = -RasterBuffer.field_f + 512;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -983,7 +983,7 @@ final class tr extends ia {
             return;
           }
           var6Lifetime1 = this.field_xb[0].field_o;
-          ge.field_k[0].b(-var3_int + (this.field_i[param0.field_p] - var6Lifetime1 / 2), -var4 + this.field_J[param0.field_p] - var6Lifetime1 / 2, var6Lifetime1, var6Lifetime1);
+          ImageProducerRasterBuffer.field_k[0].b(-var3_int + (this.field_i[param0.field_p] - var6Lifetime1 / 2), -var4 + this.field_J[param0.field_p] - var6Lifetime1 / 2, var6Lifetime1, var6Lifetime1);
           if (4 < var5 &&
             var5 <= 48) {
             this.field_xb[var5 / 4].c(-var3_int - var6Lifetime1 / 2 + this.field_i[param0.field_p], -(var6Lifetime1 / 2) + this.field_J[param0.field_p] - var4, 128);
@@ -1585,7 +1585,7 @@ final class tr extends ia {
                 if (!tl.field_u) {
                   return;
                 }
-                this.field_Ib.a((int)((double)(this.field_i[var3_int] + 1) - 345.0 * this.field_wb / 2.0), (int)((double)(this.field_J[var3_int] + 1) - 400.0 * this.field_wb / 2.0), qd.field_f);
+                this.field_Ib.a((int)((double)(this.field_i[var3_int] + 1) - 345.0 * this.field_wb / 2.0), (int)((double)(this.field_J[var3_int] + 1) - 400.0 * this.field_wb / 2.0), RasterBuffer.field_f);
               }
             } else {
               this.field_Ib.b((int)(-(345.0 * this.field_wb / 2.0) + (double)(this.field_i[var3_int] + 1)), (int)((double)(this.field_J[var3_int] + 1) - this.field_wb * 400.0 / 2.0), var4.field_s);
@@ -1836,16 +1836,16 @@ final class tr extends ia {
               this.field_qb[3][param0.field_G[3]].b(this.field_Hb + (this.field_i[var3_int] + (int)(var5_double * 4.0)), -((int)(var5_double * (double)this.field_qb[3][0].field_w) / 2) + this.field_J[var3_int], (int)(var5_double * (double)this.field_qb[3][0].field_z), (int)((double)this.field_qb[3][0].field_w * var5_double));
               if (this.field_X &&
                 td.field_L) {
-                mj.field_Nb[param0.field_G[0]].b(-(int)(var5_double * 35.0) - this.field_Hb + this.field_i[var3_int], -((int)(var5_double * (double)this.field_qb[0][0].field_w) / 2) + this.field_J[var3_int], (int)((double)this.field_qb[0][0].field_z * var5_double), (int)(var5_double * (double)this.field_qb[0][0].field_w), qd.field_f);
-                ts.field_L[param0.field_G[1]].b(this.field_i[var3_int] + (-this.field_Hb - (int)(rh.field_e * (32.0 * var5_double))), this.field_J[var3_int] + (int)(33.0 * var5_double), (int)(var5_double * (double)this.field_qb[1][0].field_z), (int)((double)this.field_qb[1][0].field_w * var5_double), qd.field_f);
+                mj.field_Nb[param0.field_G[0]].b(-(int)(var5_double * 35.0) - this.field_Hb + this.field_i[var3_int], -((int)(var5_double * (double)this.field_qb[0][0].field_w) / 2) + this.field_J[var3_int], (int)((double)this.field_qb[0][0].field_z * var5_double), (int)(var5_double * (double)this.field_qb[0][0].field_w), RasterBuffer.field_f);
+                ts.field_L[param0.field_G[1]].b(this.field_i[var3_int] + (-this.field_Hb - (int)(rh.field_e * (32.0 * var5_double))), this.field_J[var3_int] + (int)(33.0 * var5_double), (int)(var5_double * (double)this.field_qb[1][0].field_z), (int)((double)this.field_qb[1][0].field_w * var5_double), RasterBuffer.field_f);
                 var10 = (ArgbSprite) (ts.field_L[param0.field_G[2]]);
                 var11 = var10.h();
                 var11.a();
-                var11.b((int)(rh.field_e * (var5_double * 62.0)) + (this.field_i[var3_int] - this.field_Hb - 2), this.field_J[var3_int] + (int)(var5_double * 33.0), (int)((double)this.field_qb[2][0].field_z * var5_double), (int)(var5_double * (double)this.field_qb[2][0].field_w), qd.field_f);
+                var11.b((int)(rh.field_e * (var5_double * 62.0)) + (this.field_i[var3_int] - this.field_Hb - 2), this.field_J[var3_int] + (int)(var5_double * 33.0), (int)((double)this.field_qb[2][0].field_z * var5_double), (int)(var5_double * (double)this.field_qb[2][0].field_w), RasterBuffer.field_f);
                 var12 = (ArgbSprite) (mj.field_Nb[param0.field_G[3]]);
                 var13 = var12.h();
                 var13.a();
-                var13.b((int)(var5_double * 4.0) + this.field_i[var3_int] + this.field_Hb, -((int)(var5_double * (double)this.field_qb[3][0].field_w) / 2) + this.field_J[var3_int], (int)(var5_double * (double)this.field_qb[3][0].field_z), (int)((double)this.field_qb[3][0].field_w * var5_double), qd.field_f);
+                var13.b((int)(var5_double * 4.0) + this.field_i[var3_int] + this.field_Hb, -((int)(var5_double * (double)this.field_qb[3][0].field_w) / 2) + this.field_J[var3_int], (int)(var5_double * (double)this.field_qb[3][0].field_z), (int)((double)this.field_qb[3][0].field_w * var5_double), RasterBuffer.field_f);
               }
             }
             return;
@@ -2174,7 +2174,7 @@ final class tr extends ia {
             ek.field_z.d(-(ek.field_z.field_z / 2) + this.field_i[param0.field_p], -(7 * this.field_n / 10) + this.field_J[param0.field_p] - 63, var5);
             if (this.field_X &&
               me.field_j) {
-              ek.field_z.a(-(ek.field_z.field_z / 2) + this.field_i[param0.field_p], -(7 * this.field_n / 10) + this.field_J[param0.field_p] - 63, qd.field_f);
+              ek.field_z.a(-(ek.field_z.field_z / 2) + this.field_i[param0.field_p], -(7 * this.field_n / 10) + this.field_J[param0.field_p] - 63, RasterBuffer.field_f);
             }
             SpriteState.field_y.f(-(SpriteState.field_y.field_z / 2) + this.field_i[param0.field_p], -72 + (-(this.field_n * 7 / 10) + this.field_J[param0.field_p]));
             rs.field_Cb.c(Integer.toString(this.field_eb[var3_int]), this.field_i[var3_int], -41 + this.field_J[var3_int] - 7 * this.field_n / 10, 16777215, -1);
@@ -2492,7 +2492,7 @@ final class tr extends ia {
             param6.field_o.field_u) {
             gf.f(-(var10 / 2) + param2 / 2 + param5 - 2, param1 - var13 - 2, 4 + var10, var13 + 4, 2 + var11, gm.field_k[0]);
           } else {
-            jq.a(2 + var11, var14, 4 + var10, param1 - var13 - 2, -2 + (param2 / 2 + param5 - var10 / 2), (byte) -126, 4 + var13);
+            GameKeyHandler.a(2 + var11, var14, 4 + var10, param1 - var13 - 2, -2 + (param2 / 2 + param5 - var10 / 2), (byte) -126, 4 + var13);
           }
           var15 = var12 * var9 / param6.field_z;
           if (var15 == 0) {
@@ -2623,7 +2623,7 @@ final class tr extends ia {
             }
             ra.a(-125);
             for (var12 = 0; var12 < this.field_xb.length; var12++) {
-              var13 = (int)(this.field_Jb * (double)ge.field_k[var12].field_o);
+              var13 = (int)(this.field_Jb * (double)ImageProducerRasterBuffer.field_k[var12].field_o);
               if (!(var13 >= 20 + UiWidget.field_t.field_w)) {
                 var13 = UiWidget.field_t.field_w + 20;
               }
@@ -2633,7 +2633,7 @@ final class tr extends ia {
               }
               this.field_xb[var12] = new Sprite(var13, var13);
               this.field_xb[var12].e();
-              ge.field_k[var12].b(0, 0, var13, var13);
+              ImageProducerRasterBuffer.field_k[var12].b(0, 0, var13, var13);
               var13Lifetime1 = (int)(0.8 * (this.field_Jb * (double)qa.field_p[var12].field_o));
               if (!(var13Lifetime1 >= 20 + UiWidget.field_t.field_w)) {
                 var13Lifetime1 = UiWidget.field_t.field_w + 20;

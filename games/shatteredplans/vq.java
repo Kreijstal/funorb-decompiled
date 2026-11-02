@@ -4,7 +4,7 @@
 final class vq {
     static int field_a;
 
-    final static void a(PacketBuffer param0, qb param1, int param2, int param3) {
+    final static void a(PacketBuffer param0, PlatformTaskDispatcher param1, int param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -81,10 +81,10 @@ final class vq {
                     var17 = 0;
                     var13Lifetime1 = var17;
                     while (var17 < var9) {
-                      var12[var17] = ge.a(-134, var10[var17]);
+                      var12[var17] = ImageProducerRasterBuffer.a(-134, var10[var17]);
                       var17++;
                     }
-                    var18.field_n[var5] = param1.a(var12, var8, param3 + 83, ge.a(-134, var20));
+                    var18.field_n[var5] = param1.a(var12, var8, param3 + 83, ImageProducerRasterBuffer.a(-134, var20));
                     var18.field_h[var5] = var21;
                   }
                 } else {
@@ -98,7 +98,7 @@ final class vq {
                   }
                   var18.field_m[var5] = var6_int;
                   var18.field_r[var5] = var9;
-                  var18.field_q[var5] = param1.a(ge.a(-134, var15), (byte) 77, var16);
+                  var18.field_q[var5] = param1.a(ImageProducerRasterBuffer.a(-134, var15), (byte) 77, var16);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

@@ -314,7 +314,7 @@ final class hi implements uj {
           return;
         }
         bk.field_a.a(0);
-        ed.field_g.a(0);
+        MouseInputHandler.field_g.a(0);
         vj.field_E.a(0);
         km.field_u = null;
         no.field_b = false;
@@ -350,9 +350,9 @@ final class hi implements uj {
               this.b((byte) 56);
             }
             this.e((byte) -44);
-            if (this.field_m.a(ed.field_g, this.field_w, -6, bk.field_a, vj.field_E)) {
+            if (this.field_m.a(MouseInputHandler.field_g, this.field_w, -6, bk.field_a, vj.field_E)) {
             }
-            this.field_m.a(ed.field_g, 0, bk.field_a, vj.field_E);
+            this.field_m.a(MouseInputHandler.field_g, 0, bk.field_a, vj.field_E);
             return;
           }
           this.b(false, 0);
@@ -841,13 +841,13 @@ final class hi implements uj {
           nm.field_c.field_z = null;
         }
         stackIn_11_0 = ia.field_j;
-        stackIn_12_1 = (param0) && (!param2) && (!on.field_b) && (np.field_a == null) && (he.field_p == null);
+        stackIn_12_1 = (param0) && (!param2) && (!IntrusiveDequeCursor.field_b) && (np.field_a == null) && (he.field_p == null);
         ((qr) (Object) stackIn_11_0).a(stackIn_12_1, -20429);
         stackIn_18_0 = se.field_i;
-        stackIn_19_1 = (param0) && (!param2) && (!on.field_b) && (null == np.field_a) && (null == he.field_p);
+        stackIn_19_1 = (param0) && (!param2) && (!IntrusiveDequeCursor.field_b) && (null == np.field_a) && (null == he.field_p);
         ((qr) (Object) stackIn_18_0).a(stackIn_19_1, -20429);
         stackIn_23_0 = so.field_v;
-        stackIn_24_1 = (param0) && (!param2) && (on.field_b);
+        stackIn_24_1 = (param0) && (!param2) && (IntrusiveDequeCursor.field_b);
         ((qr) (Object) stackIn_23_0).a(stackIn_24_1, param1 ^ 10210);
         bc.field_g.field_d.f(false);
         if (0 != vm.field_Ab.field_rb) {
@@ -873,7 +873,7 @@ final class hi implements uj {
           ei.a(param3, qk.field_x, mk.field_d, true, false, 0);
         }
         if (SocketConnector.field_d.field_rb != 0) {
-          on.field_b = false;
+          IntrusiveDequeCursor.field_b = false;
         }
     }
 
@@ -1003,14 +1003,14 @@ final class hi implements uj {
               throw new RuntimeException("Trying to move " + param0 + " fleets from " + param3.field_I + " to " + param2.field_I + " but garrison_next is only " + param3.field_J + ".");
             }
             param3.field_J = param3.field_J - param0;
-            var5Lifetime1 = (mg) (ed.field_g.d(0));
+            var5Lifetime1 = (mg) (MouseInputHandler.field_g.d(0));
             while (var5Lifetime1 != null) {
               stackIn_37_0 = this.field_w;
               stackIn_37_1 = var5Lifetime1.field_G;
               if (stackIn_37_0 != stackIn_37_1 ||
                 var5Lifetime1.field_y != param3 ||
                 param2 != var5Lifetime1.field_B) {
-                var5Lifetime1 = (mg) (ed.field_g.a((byte) -71));
+                var5Lifetime1 = (mg) (MouseInputHandler.field_g.a((byte) -71));
                 continue;
               }
               break;
@@ -1020,7 +1020,7 @@ final class hi implements uj {
               return;
             }
             var5Lifetime2 = new mg(param3, param2, param0);
-            ed.field_g.a((byte) -113, var5Lifetime2);
+            MouseInputHandler.field_g.a((byte) -113, var5Lifetime2);
             return;
           }
           throw new RuntimeException();

@@ -2303,7 +2303,7 @@ final class kq {
           var5Lifetime1 = ui.a(16777215, 16711680, -125, var4Lifetime1);
           if (this.field_e.field_A &&
             this.field_mb.field_s) {
-            jq.field_b.b(this.field_mb.field_k, this.field_mb.field_t, var5Lifetime1);
+            GameKeyHandler.field_b.b(this.field_mb.field_k, this.field_mb.field_t, var5Lifetime1);
           }
           if (null != this.field_j &&
             this.field_j.field_A &&
@@ -2375,7 +2375,7 @@ final class kq {
             var8 = field_L;
           }
           if (null != var8) {
-            mp.field_b.a((String) (var8), 320, 240, var10, -1, qd.field_f);
+            mp.field_b.a((String) (var8), 320, 240, var10, -1, RasterBuffer.field_f);
             var11 = rs.field_Cb.field_J + 245;
             if (var8 == m.field_v) {
               if (this.field_s.field_P.field_w != 0) {
@@ -2384,13 +2384,13 @@ final class kq {
                 stackIn_163_0 = ad.field_b;
               }
               var8 = stackIn_163_0;
-              rs.field_Cb.a((String) (var8), 320, var11, var10, -1, qd.field_f);
+              rs.field_Cb.a((String) (var8), 320, var11, var10, -1, RasterBuffer.field_f);
               var11 = var11 + (3 + rs.field_Cb.field_J);
             }
-            rs.field_Cb.a(er.field_p, 320, var11, var10, -1, qd.field_f);
+            rs.field_Cb.a(er.field_p, 320, var11, var10, -1, RasterBuffer.field_f);
             if (var9 != 0) {
               var11 = var11 + (rs.field_Cb.field_J + 3);
-              rs.field_Cb.a(vn.field_i, 320, var11, var10, -1, qd.field_f);
+              rs.field_Cb.a(vn.field_i, 320, var11, var10, -1, RasterBuffer.field_f);
             }
           }
           if (this.field_u != 0) {
@@ -2416,7 +2416,7 @@ final class kq {
         RuntimeException var2 = null;
         try {
           if (qa.field_t > 0 &&
-            on.field_b) {
+            IntrusiveDequeCursor.field_b) {
             gf.h(0, 0, gf.field_b, tg.field_c.field_N);
             so.field_v.b(param1, -66);
           }
@@ -2429,7 +2429,7 @@ final class kq {
           }
           if (ti.field_e) {
             gf.h(0, 0, gf.field_b, tg.field_c.field_N);
-            ed.field_d.b(param1, -83);
+            MouseInputHandler.field_d.b(param1, -83);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2758,8 +2758,8 @@ final class kq {
             stackIn_55_0 = -67;
           }
           if (stackIn_55_0 == ~oq.field_j) {
-            stackIn_62_0 = !(ge.field_n);
-            ge.field_n = stackIn_62_0;
+            stackIn_62_0 = !(ImageProducerRasterBuffer.field_n);
+            ImageProducerRasterBuffer.field_n = stackIn_62_0;
             this.field_f.e((byte) 20);
           }
           if (param0 != -1) {
@@ -3437,8 +3437,8 @@ final class kq {
               return stackIn_152_0 != 0;
             }
             if (this.field_f == dn.field_h) {
-              stackIn_160_0 = !(ge.field_n);
-              ge.field_n = stackIn_160_0;
+              stackIn_160_0 = !(ImageProducerRasterBuffer.field_n);
+              ImageProducerRasterBuffer.field_n = stackIn_160_0;
               this.field_f.e((byte) 33);
               stackIn_161_0 = var3_int;
               return stackIn_161_0 != 0;
@@ -3838,7 +3838,7 @@ final class kq {
                   }
                   if ((1 << var5 & var3.field_e) != 0) {
                     if (!this.field_s.field_M) {
-                      var6_ref = f.field_B;
+                      var6_ref = WidgetContainer.field_B;
                     } else {
                       var6_ref = ae.field_d;
                     }
@@ -3970,7 +3970,7 @@ final class kq {
             gf.d(0, 0, fj.field_r.field_z, fj.field_r.field_w, 0);
             if (se.field_k) {
               aq.field_i.f(10, 10);
-              var5Lifetime1 = ui.a(0, 16777215, -96, qd.field_f);
+              var5Lifetime1 = ui.a(0, 16777215, -96, RasterBuffer.field_f);
               fj.field_r.f(var5Lifetime1);
               fj.field_r.f(var5Lifetime1);
               fj.field_r.e();
@@ -3980,7 +3980,7 @@ final class kq {
             gf.d(0, 0, kb.field_w.field_z, kb.field_w.field_w, 0);
             if (ph.field_g) {
               rk.field_j.f(10, 10);
-              var5Lifetime1Lifetime1 = ui.a(0, 16777215, -103, qd.field_f);
+              var5Lifetime1Lifetime1 = ui.a(0, 16777215, -103, RasterBuffer.field_f);
               kb.field_w.f(var5Lifetime1Lifetime1);
               kb.field_w.f(var5Lifetime1Lifetime1);
               kb.field_w.e();
@@ -4222,7 +4222,7 @@ final class kq {
         int var9Lifetime1;
         var11 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var2_int = ed.field_f * ed.field_f;
+          var2_int = MouseInputHandler.field_f * MouseInputHandler.field_f;
           var3 = var2_int - NodeHashTableIterator.field_h * NodeHashTableIterator.field_h;
           var4 = 360 + 120 * var3 / var2_int;
           this.field_O.a(640, 120, (byte) 112, var4, 0);
@@ -5184,7 +5184,7 @@ final class kq {
               var4_ref.a(4, this.field_E);
               var5 = -5 + var4_ref.field_mb;
               this.field_E.a(624, 5, 5, 2, -125, -5 + var5, 15);
-              ge.field_n = false;
+              ImageProducerRasterBuffer.field_n = false;
             }
             cq.a(rs.field_Cb, true);
             this.field_ob = new int[]{82, 52, 52, 52};

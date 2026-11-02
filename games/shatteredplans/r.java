@@ -5,7 +5,7 @@ import java.io.*;
 
 final class r implements Runnable {
     private PacketBuffer field_k;
-    private qb field_l;
+    private PlatformTaskDispatcher field_l;
     static String field_f;
     static int field_c;
     private pb field_b;
@@ -94,9 +94,9 @@ final class r implements Runnable {
               var8[0][4 * var11] = GameApplet.field_f[var12];
               var8[0][var11 * 4 + 1] = fb.field_zb[var12];
               var8[0][2 + var11 * 4] = aj.field_d[var12];
-              var8[0][var11 * 4 + 3] = f.field_y[var12];
+              var8[0][var11 * 4 + 3] = WidgetContainer.field_y[var12];
               if (jp.a(wb.field_a[var12], (byte) -105) &&
-                f.field_y[var12] + aj.field_d[var12] + fb.field_zb[var12] == 0) {
+                WidgetContainer.field_y[var12] + aj.field_d[var12] + fb.field_zb[var12] == 0) {
                 var7[0][var11] = null;
                 var11--;
               }
@@ -112,9 +112,9 @@ final class r implements Runnable {
               var8[1][4 * var14] = GameApplet.field_f[var12Lifetime1];
               var8[1][4 * var14 + 1] = fb.field_zb[var12Lifetime1];
               var8[1][var14 * 4 + 2] = aj.field_d[var12Lifetime1];
-              var8[1][var14 * 4 + 3] = f.field_y[var12Lifetime1];
+              var8[1][var14 * 4 + 3] = WidgetContainer.field_y[var12Lifetime1];
               if (jp.a(wb.field_a[var12Lifetime1], (byte) -105) &&
-                0 == fb.field_zb[var12Lifetime1] + aj.field_d[var12Lifetime1] + f.field_y[var12Lifetime1]) {
+                0 == fb.field_zb[var12Lifetime1] + aj.field_d[var12Lifetime1] + WidgetContainer.field_y[var12Lifetime1]) {
                 var7[1][var14] = null;
                 var14--;
               }
@@ -388,7 +388,7 @@ final class r implements Runnable {
         return var2;
     }
 
-    r(qb param0, java.net.URL param1, int param2) {
+    r(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_e = param1;
           this.field_l = param0;

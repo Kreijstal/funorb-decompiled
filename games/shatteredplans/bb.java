@@ -204,7 +204,7 @@ final class bb {
               wg.field_d = true;
               if (null != pe.field_D) {
                 wg.field_d = false;
-                qd.field_h = false;
+                RasterBuffer.field_h = false;
                 if (lr.field_c == null) {
                   lr.field_c = new byte[em.field_k];
                   ek.field_F = new boolean[em.field_k];
@@ -225,7 +225,7 @@ final class bb {
                 aq.field_j.field_s = false;
                 if (aq.field_j.field_v) {
                   var9 = null;
-                  if (qd.field_h) {
+                  if (RasterBuffer.field_h) {
                     var9 = "<col=A00000>" + wl.field_b + "</col>";
                     var11 = var9;
                     var9 = var11;
@@ -255,7 +255,7 @@ final class bb {
           stackIn_75_0 = IntrusiveDeque.field_g;
           stackIn_76_1 = (param1) && (!param0) && (!ti.field_e);
           ((qr) (Object) stackIn_75_0).a(stackIn_76_1, -20429);
-          stackIn_80_0 = ed.field_d;
+          stackIn_80_0 = MouseInputHandler.field_d;
           stackIn_81_1 = (param1) && (!param0) && (ti.field_e);
           ((qr) (Object) stackIn_80_0).a(stackIn_81_1, -20429);
           n.field_h.field_d.f(false);

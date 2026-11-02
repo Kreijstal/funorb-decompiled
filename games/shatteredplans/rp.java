@@ -239,7 +239,7 @@ final class rp extends kg {
               stackIn_19_0.field_Ub = stackIn_20_1;
               var8_ref_mj.field_Lb = ((PacketBuffer) ((Object) var1)).j(-122);
               var8_ref_mj.field_Wb = ((PacketBuffer) ((Object) var1)).j(-109);
-              f.a((byte) -60, var8_ref_mj);
+              WidgetContainer.a((byte) -60, var8_ref_mj);
               return;
             }
             if (var2 == 6) {
@@ -391,7 +391,7 @@ final class rp extends kg {
                     ec.field_p = ((PacketBuffer) ((Object) var1)).d(65);
                     return;
                   }
-                  jq.a(-29901, (Throwable) null, "L1: " + w.a(16738));
+                  GameKeyHandler.a(-29901, (Throwable) null, "L1: " + w.a(16738));
                   q.g(-115);
                   return;
                 }
@@ -414,7 +414,7 @@ final class rp extends kg {
                   var25.field_Gb = ks.field_i;
                   var25.field_Eb = var5Lifetime1Lifetime1;
                 }
-                f.a((byte) -60, var25);
+                WidgetContainer.a((byte) -60, var25);
                 return;
               }
               var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).d(127);
@@ -428,7 +428,7 @@ final class rp extends kg {
                 } else {
                   var29.field_Tb = true;
                 }
-                f.a((byte) -60, var29);
+                WidgetContainer.a((byte) -60, var29);
               }
               return;
             }
@@ -461,7 +461,7 @@ final class rp extends kg {
                 ah.field_X = ah.field_X - 1;
                 var3_ref_mjLifetime1.field_Vb = false;
               }
-              f.a((byte) -60, var3_ref_mjLifetime1);
+              WidgetContainer.a((byte) -60, var3_ref_mjLifetime1);
             }
             var3_ref_mjLifetime1 = (mj) (ShatteredPlansClient.field_H.b((byte) -107));
           }

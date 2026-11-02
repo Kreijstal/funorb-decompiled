@@ -25,11 +25,11 @@ final class rh implements jk {
             no.a(hs.field_j, 1);
             hs.field_j = var1;
           }
-          if (qd.field_a < 18) {
-            qd.field_a = qd.field_a + 1;
+          if (RasterBuffer.field_a < 18) {
+            RasterBuffer.field_a = RasterBuffer.field_a + 1;
           }
-          if (qd.field_a >= 18) {
-            qd.field_a = 18;
+          if (RasterBuffer.field_a >= 18) {
+            RasterBuffer.field_a = 18;
             var2_ref_tm = (tm) (ld.field_p.h(35));
             if (var2_ref_tm != null) {
               gs.a(var2_ref_tm, true);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dh {
-    static qb field_a;
+    static PlatformTaskDispatcher field_a;
     static String field_d;
     static String field_b;
     static re field_c;

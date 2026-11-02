@@ -1433,7 +1433,7 @@ final class ga extends tn {
         if (param0 != 14745) {
           field_L = (String) null;
         }
-        jq.field_d = null;
+        GameKeyHandler.field_d = null;
         rs.field_Fb = -1;
         sc.field_q = false;
         ra.field_g = -1;

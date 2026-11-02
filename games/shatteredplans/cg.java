@@ -185,16 +185,16 @@ final class cg extends qs {
         gf.field_f = da.field_d[ra.field_k];
     }
 
-    final static ib e(boolean param0) {
+    final static MouseWheelInput e(boolean param0) {
         try {
           Throwable var1 = null;
-          ib stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           if (!param0) {
             field_E = (StringBuilder) null;
           }
           try {
-            stackIn_3_0 = (ib) (Class.forName("rb").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

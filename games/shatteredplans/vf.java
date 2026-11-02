@@ -228,7 +228,7 @@ final class vf extends hb {
               var4.b((byte) -122);
               return;
             }
-            jq.a(-29901, (Throwable) null, "A1: " + w.a(16738));
+            GameKeyHandler.a(-29901, (Throwable) null, "A1: " + w.a(16738));
             q.g(-108);
           } else {
             var3_ref_ld = (ld) (ua.field_d.d(0));

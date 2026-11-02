@@ -6,7 +6,7 @@ abstract class jl extends w {
     private int field_K;
     private int field_T;
     private int field_R;
-    static qb field_S;
+    static PlatformTaskDispatcher field_S;
     private int field_P;
     private int field_Q;
     static java.math.BigInteger field_V;
@@ -284,14 +284,14 @@ abstract class jl extends w {
               if (~param0.field_p != ~ec.field_p) {
                 var2_intLifetime1 = hd.field_l[param0.field_n];
               } else {
-                var2_intLifetime1 = ke.field_q[param0.field_n];
+                var2_intLifetime1 = BufferedSocket.field_q[param0.field_n];
               }
             }
           } else {
             if (!param0.field_h) {
               if (param0.field_l == 0 &&
                 param0.field_e == 0) {
-                var2_intLifetime1 = ke.field_q[param0.field_n];
+                var2_intLifetime1 = BufferedSocket.field_q[param0.field_n];
               } else {
                 var2_intLifetime1 = hd.field_l[param0.field_n];
               }

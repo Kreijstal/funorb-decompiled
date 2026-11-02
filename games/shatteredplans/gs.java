@@ -177,7 +177,7 @@ final class gs extends fp {
             hj.field_l[var2_int] = hj.field_l[-1 + var2_int];
             var2_int--;
           }
-          qd.field_a = 0;
+          RasterBuffer.field_a = 0;
           hj.field_l[0] = param0;
         } catch (RuntimeException runtimeException) {
           throw r.a((Throwable) ((Object) runtimeException), "gs.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

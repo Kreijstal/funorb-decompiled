@@ -22,8 +22,8 @@ final class si extends DualLinkNode {
         wk.a(false, true);
         gm.field_i = 0;
         if (param0 != -91) {
-          qb var2 = (qb) null;
-          si.a(-82, (qb) null, -122, (byte) -43, -19, -109);
+          PlatformTaskDispatcher var2 = (PlatformTaskDispatcher) null;
+          si.a(-82, (PlatformTaskDispatcher) null, -122, (byte) -43, -19, -109);
         }
     }
 
@@ -147,7 +147,7 @@ final class si extends DualLinkNode {
                 ce.a(kq.f((byte) 125), true);
                 nl.field_c = dh.field_b;
                 q.g(-125);
-                ke.field_j = false;
+                BufferedSocket.field_j = false;
                 stackIn_34_0 = var9Lifetime1;
                 return stackIn_34_0;
               }
@@ -173,7 +173,7 @@ final class si extends DualLinkNode {
                   ae.field_e[var12] = sa.field_a.e((byte) -126);
                 }
                 q.g(-113);
-                ke.field_j = false;
+                BufferedSocket.field_j = false;
                 stackIn_47_0 = 100 + var11;
                 return stackIn_47_0;
               }
@@ -190,25 +190,25 @@ final class si extends DualLinkNode {
               nl.field_c = sa.field_a.e(-1);
             }
             q.g(-99);
-            ke.field_j = false;
+            BufferedSocket.field_j = false;
             stackIn_56_0 = ej.field_e;
             return stackIn_56_0;
           }
           if (null == wg.field_f) {
-            if (ke.field_j) {
+            if (BufferedSocket.field_j) {
               if (wh.a(18) > 30000L) {
                 nl.field_c = gq.field_f;
               } else {
                 nl.field_c = wb.field_d;
               }
-              ke.field_j = false;
+              BufferedSocket.field_j = false;
               stackIn_63_0 = 249;
               return stackIn_63_0;
             }
             var9Lifetime3 = of.field_f;
             of.field_f = bb.field_c;
             bb.field_c = var9Lifetime3;
-            ke.field_j = true;
+            BufferedSocket.field_j = true;
           }
           stackIn_66_0 = -1;
           return stackIn_66_0;
@@ -344,7 +344,7 @@ final class si extends DualLinkNode {
         }
     }
 
-    final static eb a(int param0, qb param1, int param2, byte param3, int param4, int param5) {
+    final static eb a(int param0, PlatformTaskDispatcher param1, int param2, byte param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         eb var7 = null;

@@ -436,7 +436,7 @@ final class ui extends me {
                 }
                 else {
                   q.g(-118);
-                  ke.field_j = false;
+                  BufferedSocket.field_j = false;
                   stackIn_32_0 = var6_intLifetime1;
                   return stackIn_32_0;
                 }
@@ -493,7 +493,7 @@ final class ui extends me {
               } else {
                 og.field_b.a(kq.f((byte) 127), true);
               }
-              ke.field_j = false;
+              BufferedSocket.field_j = false;
               if (var6 != null) {
                 jf.a(-25602, var6, kq.f((byte) 125));
               }
@@ -528,8 +528,8 @@ final class ui extends me {
               uc.d((byte) -33)) {
               q.g(-114);
               if (ej.field_e == 7 &&
-                !ke.field_j) {
-                ke.field_j = true;
+                !BufferedSocket.field_j) {
+                BufferedSocket.field_j = true;
                 stackIn_87_0 = -1;
                 return stackIn_87_0;
               }
@@ -537,7 +537,7 @@ final class ui extends me {
                 ej.field_e = 3;
               }
               nl.field_c = sa.field_a.e(-1);
-              ke.field_j = false;
+              BufferedSocket.field_j = false;
               stackIn_92_0 = ej.field_e;
               return stackIn_92_0;
             }
@@ -545,19 +545,19 @@ final class ui extends me {
               ui.a(-26, -48, -112, -53);
             }
             if (wg.field_f == null) {
-              if (ke.field_j) {
+              if (BufferedSocket.field_j) {
                 if (wh.a(18) <= 30000L) {
                   nl.field_c = wb.field_d;
                 } else {
                   nl.field_c = gq.field_f;
                 }
-                ke.field_j = false;
+                BufferedSocket.field_j = false;
                 stackIn_102_0 = 3;
                 return stackIn_102_0;
               }
               var6_intLifetime2 = of.field_f;
               of.field_f = bb.field_c;
-              ke.field_j = true;
+              BufferedSocket.field_j = true;
               bb.field_c = var6_intLifetime2;
             }
             stackIn_104_0 = -1;

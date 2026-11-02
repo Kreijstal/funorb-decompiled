@@ -218,16 +218,16 @@ final class di extends IntrusiveNode {
         boolean stackIn_25_1 = false;
         qr stackIn_28_0 = null;
         boolean stackIn_29_1 = false;
-        ke.a(-6187, gf.field_b + 640 >> 1, gf.field_k, 0, -640 + gf.field_b >> 1);
+        BufferedSocket.a(-6187, gf.field_b + 640 >> 1, gf.field_k, 0, -640 + gf.field_b >> 1);
         if (qa.field_t > 0) {
           if (gn.field_y != null) {
             gn.field_y.c(ia.field_j.field_hb, 0);
           }
           stackIn_7_0 = ia.field_j;
-          stackIn_8_1 = (param1) && (!on.field_b);
+          stackIn_8_1 = (param1) && (!IntrusiveDequeCursor.field_b);
           ((qr) (Object) stackIn_7_0).b(stackIn_8_1, 102);
           stackIn_11_0 = se.field_i;
-          stackIn_12_1 = (param1) && (!on.field_b);
+          stackIn_12_1 = (param1) && (!IntrusiveDequeCursor.field_b);
           ((qr) (Object) stackIn_11_0).b(stackIn_12_1, 119);
         }
         if (param0) {
@@ -314,14 +314,14 @@ final class di extends IntrusiveNode {
             if (var6.field_Bb != null &&
               !var6.field_Bb.equals("")) {
               var6.field_Db.field_jb = 16737894;
-              var6.field_Db.field_pb = ke.field_i;
+              var6.field_Db.field_pb = BufferedSocket.field_i;
               var8 = 1;
-              var6.field_Db.a(3 + ke.field_i.field_o, cr.field_c, (byte) 126, 0, 0);
+              var6.field_Db.a(3 + BufferedSocket.field_i.field_o, cr.field_c, (byte) 126, 0, 0);
             }
             var9 = 0;
             var10 = var6.field_K;
             if (var8 != 0) {
-              var9 = ke.field_i.field_o + 3;
+              var9 = BufferedSocket.field_i.field_o + 3;
               var10 = var10 - var9;
             }
             stackIn_20_0 = var6.field_Cb;

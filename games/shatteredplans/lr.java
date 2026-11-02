@@ -384,7 +384,7 @@ final class lr {
               var16_ref.field_l = true;
               var16_ref.b((byte) -89);
             } else {
-              jq.a(-29901, (Throwable) null, "A1: " + w.a(16738));
+              GameKeyHandler.a(-29901, (Throwable) null, "A1: " + w.a(16738));
               q.g(-125);
             }
           }

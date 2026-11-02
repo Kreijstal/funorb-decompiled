@@ -243,7 +243,7 @@ final class nf {
           this.field_f = null;
         }
         this.field_b = em.field_a;
-        this.field_k = ke.field_h;
+        this.field_k = BufferedSocket.field_h;
         this.field_c = nj.field_a;
         this.field_h = kr.field_b;
         this.field_o = mc.field_q;

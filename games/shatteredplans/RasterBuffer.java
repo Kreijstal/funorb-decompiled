@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class qd {
+abstract class RasterBuffer {
     static int field_e;
     static int field_f;
     int[] field_c;

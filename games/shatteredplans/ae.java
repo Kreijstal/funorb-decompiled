@@ -169,7 +169,7 @@ final class ae {
               }
             }
             if (decompiledFrameRemainder0) {
-              jq.a(-29901, (Throwable) null, "HS1: " + w.a(16738));
+              GameKeyHandler.a(-29901, (Throwable) null, "HS1: " + w.a(16738));
               q.g(-100);
             }
           }

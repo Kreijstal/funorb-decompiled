@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ir extends f implements dl, bp {
+final class ir extends WidgetContainer implements dl, bp {
     static int field_D;
     private fa field_H;
     static int field_E;

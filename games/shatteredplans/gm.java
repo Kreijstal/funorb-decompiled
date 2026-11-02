@@ -218,7 +218,7 @@ final class gm extends IntrusiveNode {
             ShatteredPlansClient.field_E[1] = 2;
             ShatteredPlansClient.field_E[0] = 5;
             kr.field_f[3] = dd.field_a;
-            kr.field_f[4] = ge.field_m;
+            kr.field_f[4] = ImageProducerRasterBuffer.field_m;
             for (var8Lifetime2 = 0; var8Lifetime2 < var5; var8Lifetime2++) {
               stackIn_47_0 = kr.field_f;
               stackIn_47_1 = var8Lifetime2 + 6;

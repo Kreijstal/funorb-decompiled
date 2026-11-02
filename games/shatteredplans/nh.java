@@ -35,12 +35,12 @@ final class nh extends me {
             go.a(0, (CharSequence) ((Object) var6))) {
             ma.a((CharSequence) ((Object) var6), param3 + 5);
           }
-          ge.field_l = new Sprite[param4.length];
+          ImageProducerRasterBuffer.field_l = new Sprite[param4.length];
           if (param3 != -3) {
             nh.b((byte) -94);
           }
           for (var7 = 0; var7 < param4.length; var7++) {
-            ge.field_l[var7] = new Sprite(317, 34);
+            ImageProducerRasterBuffer.field_l[var7] = new Sprite(317, 34);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

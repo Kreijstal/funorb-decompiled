@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class on {
+final class IntrusiveDequeCursor {
     static String field_i;
     private IntrusiveDeque field_d;
     static boolean field_b;
@@ -25,7 +25,7 @@ final class on {
 
     final static String a(boolean param0) {
         if (param0) {
-          on.a(false);
+          IntrusiveDequeCursor.a(false);
           if (sc.field_q) {
             return null;
           }
@@ -33,7 +33,7 @@ final class on {
             return null;
           }
           if (!((ri.field_F + de.field_i) <= rq.field_e)) {
-            return jq.field_d;
+            return GameKeyHandler.field_d;
           }
           return null;
         }
@@ -44,7 +44,7 @@ final class on {
           return null;
         }
         if (!((ri.field_F + de.field_i) <= rq.field_e)) {
-          return jq.field_d;
+          return GameKeyHandler.field_d;
         }
         return null;
     }
@@ -140,7 +140,7 @@ final class on {
         }
     }
 
-    on(IntrusiveDeque param0) {
+    IntrusiveDequeCursor(IntrusiveDeque param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
@@ -195,7 +195,7 @@ final class on {
         }
         this.field_e = var2.next;
         if (param0 < 44) {
-          on.a(-53, false);
+          IntrusiveDequeCursor.a(-53, false);
           return var2;
         }
         return var2;

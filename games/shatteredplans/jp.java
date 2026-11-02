@@ -513,11 +513,11 @@ final class jp extends qr {
 
     final static void a(String param0, float param1, byte param2, boolean param3) {
         try {
-          if (ed.field_h == null) {
-            ed.field_h = new eo(le.field_e, tl.field_z);
-            le.field_e.a(true, ed.field_h);
+          if (MouseInputHandler.field_h == null) {
+            MouseInputHandler.field_h = new eo(le.field_e, tl.field_z);
+            le.field_e.a(true, MouseInputHandler.field_h);
           }
-          ed.field_h.a(param3, param0, 65536, param1);
+          MouseInputHandler.field_h.a(param3, param0, 65536, param1);
           if (param2 <= 118) {
             jp.g(-100);
           }

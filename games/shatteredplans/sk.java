@@ -60,14 +60,14 @@ final class sk extends IntrusiveNode {
           mc.field_q = var8.e(param1 + 0);
         }
         if (!param0) {
-          ke.field_h = pe.a(var8, param1 + 1, 80);
+          BufferedSocket.field_h = pe.a(var8, param1 + 1, 80);
           mb.field_p = null;
           return new nf(param0);
         }
         var5 = var8.f(-20976);
         try {
           var9 = dh.field_c.a((byte) 47, var5);
-          ke.field_h = var9.f(80);
+          BufferedSocket.field_h = var9.f(80);
           if (em.field_a.equals(ln.field_o)) {
             stackIn_22_0 = null;
           } else {
@@ -77,8 +77,8 @@ final class sk extends IntrusiveNode {
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
-          jq.a(param1 - 29900, (Throwable) ((Object) var6), "CC1");
-          ke.field_h = null;
+          GameKeyHandler.a(param1 - 29900, (Throwable) ((Object) var6), "CC1");
+          BufferedSocket.field_h = null;
           mb.field_p = null;
           return new nf(param0);
         }

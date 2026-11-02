@@ -7,7 +7,7 @@ final class js {
     static int field_g;
     static gh field_i;
     static String field_h;
-    static ke field_a;
+    static BufferedSocket field_a;
     static sl field_f;
     static int field_j;
     static sq[] field_b;
@@ -224,7 +224,7 @@ final class js {
                   for (var12 = 0; var19.length > var12; var12 += 2) {
                     var13 = var19[var12];
                     if (var13 == -1) {
-                      qd.field_h = true;
+                      RasterBuffer.field_h = true;
                     } else {
                       if (var13 < param0) {
                         ek.field_F[var13] = true;
@@ -408,7 +408,7 @@ final class js {
             }
           }
           if (ol.field_g.field_h) {
-            ge.field_i = 0;
+            ImageProducerRasterBuffer.field_i = 0;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

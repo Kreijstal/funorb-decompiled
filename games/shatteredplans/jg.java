@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jg implements Runnable {
-    qb field_c;
+    PlatformTaskDispatcher field_c;
     static String field_e;
     static String field_f;
     volatile ap[] field_d;
@@ -160,7 +160,7 @@ final class jg implements Runnable {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (Exception) (Object) decompiledCaughtException;
             var6 = (String) null;
-            jq.a(-29901, (Throwable) ((Object) var1), (String) null);
+            GameKeyHandler.a(-29901, (Throwable) ((Object) var1), (String) null);
             decompiledRegionSelector0 = 1;
           }
           if (decompiledRegionSelector0 == 0) {

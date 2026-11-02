@@ -161,9 +161,9 @@ final class en {
               }
             }
           }
-          ed.field_d.a(360, -10 + gf.field_k - 120 - 4 - 10, (byte) 122, 10, -360 + gf.field_b >> 1);
-          hl.field_K.a(ed.field_d.field_K, 24, (byte) 80, 0, 0);
-          jo.field_a.a(ed.field_d.field_K, -24 + ed.field_d.field_mb, (byte) 106, 24, 0);
+          MouseInputHandler.field_d.a(360, -10 + gf.field_k - 120 - 4 - 10, (byte) 122, 10, -360 + gf.field_b >> 1);
+          hl.field_K.a(MouseInputHandler.field_d.field_K, 24, (byte) 80, 0, 0);
+          jo.field_a.a(MouseInputHandler.field_d.field_K, -24 + MouseInputHandler.field_d.field_mb, (byte) 106, 24, 0);
           jo.field_a.field_F = cs.a(16, 3, jo.field_a.field_mb, 11579568, 8421504, 1);
           lp.field_v.a(jo.field_a.field_K - 10, -2 + jo.field_a.field_mb - 10 - 24, (byte) 115, 5, 5);
           oo.field_c.a(80, 24, (byte) 108, -5 + jo.field_a.field_mb - 24, (jo.field_a.field_K - 80) / 2);

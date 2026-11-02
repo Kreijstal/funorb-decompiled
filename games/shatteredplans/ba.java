@@ -60,16 +60,16 @@ final class ba {
         int var20 = 0;
         var20 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          ke.field_q[4] = 16711935;
-          ke.field_q[1] = 6356832;
+          BufferedSocket.field_q[4] = 16711935;
+          BufferedSocket.field_q[1] = 6356832;
           ho.field_f = param9;
-          ke.field_q[0] = 16764000;
+          BufferedSocket.field_q[0] = 16764000;
           bh.field_k = param11;
           je.field_e = param8;
-          ke.field_q[2] = 9474303;
-          ke.field_q[3] = 16736511;
+          BufferedSocket.field_q[2] = 9474303;
+          BufferedSocket.field_q[3] = 16736511;
           hd.field_l[1] = 6356832;
-          ke.field_q[4] = 16711935;
+          BufferedSocket.field_q[4] = 16711935;
           ho.field_c = 8421504;
           if (param2 <= 122) {
             field_a = (String) null;

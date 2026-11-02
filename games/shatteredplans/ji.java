@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ji extends f implements ki {
+abstract class ji extends WidgetContainer implements ki {
     static ns field_G;
     static ub field_I;
     static String field_F;

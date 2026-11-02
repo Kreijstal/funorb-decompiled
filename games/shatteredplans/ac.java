@@ -25,8 +25,8 @@ final class ac extends wf {
             var3 = !hm.field_q.field_k ? hm.field_q : hm.field_q.field_l;
             var2 = var3;
             if (var2 != null) {
-              fieldTemp$0 = ge.field_i;
-              ge.field_i = ge.field_i + 1;
+              fieldTemp$0 = ImageProducerRasterBuffer.field_i;
+              ImageProducerRasterBuffer.field_i = ImageProducerRasterBuffer.field_i + 1;
               js.field_b[fieldTemp$0] = var3;
             }
           }

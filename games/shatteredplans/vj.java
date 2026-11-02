@@ -30,9 +30,9 @@ final class vj extends qs {
           boolean decompiledFrameRemainder0 = true;
           rq.field_e = rq.field_e + 1;
           if (param0 == null) {
-            decompiledFrameRemainder0 = (jq.field_d == null);
+            decompiledFrameRemainder0 = (GameKeyHandler.field_d == null);
           } else {
-            decompiledFrameRemainder0 = !(param0.equals(jq.field_d));
+            decompiledFrameRemainder0 = !(param0.equals(GameKeyHandler.field_d));
           }
           if (decompiledFrameRemainder0) {
             if (!sc.field_q) {
@@ -68,7 +68,7 @@ final class vj extends qs {
             rs.field_Fb = cb.field_n;
             ra.field_g = s.field_c;
           }
-          jq.field_d = param0;
+          GameKeyHandler.field_d = param0;
           if (!sc.field_q &&
             rq.field_e < ri.field_F &&
             r.field_d) {
@@ -122,11 +122,11 @@ final class vj extends qs {
           return rq.field_h;
         }
         if (!tq.field_f.a("commonui", -91)) {
-          return on.field_h + " - " + tq.field_f.a("commonui", (byte) 28) + "%";
+          return IntrusiveDequeCursor.field_h + " - " + tq.field_f.a("commonui", (byte) 28) + "%";
         }
         int var1 = 32 % ((param0 - 15) / 52);
         if (!l.field_g.b((byte) -2)) {
-          return ed.field_e;
+          return MouseInputHandler.field_e;
         }
         if (!l.field_g.a(-1)) {
           return jh.field_v + " - " + l.field_g.d(100) + "%";

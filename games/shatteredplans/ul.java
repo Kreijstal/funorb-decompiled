@@ -54,7 +54,7 @@ final class ul extends qr {
         }
         fb.field_zb[wm.field_c] = param2;
         aj.field_d[wm.field_c] = param3;
-        f.field_y[wm.field_c] = param5;
+        WidgetContainer.field_y[wm.field_c] = param5;
         int var6 = param5 + param3 + param2;
         int var7 = param0 != var6 ? 1000 * param2 / var6 : 0;
         dc.field_c[wm.field_c] = var7;

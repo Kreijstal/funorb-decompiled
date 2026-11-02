@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class im {
-    static jq field_c;
+    static GameKeyHandler field_c;
     static String field_a;
     static int[] field_b;
 
@@ -105,6 +105,6 @@ final class im {
 
     static {
         field_a = "Withdraw request to join <%0>'s game";
-        field_c = new jq();
+        field_c = new GameKeyHandler();
     }
 }

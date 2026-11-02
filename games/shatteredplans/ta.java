@@ -79,7 +79,7 @@ final class ta {
           param0 = false;
         }
         di.a(false, param0);
-        if (f.field_C) {
+        if (WidgetContainer.field_C) {
           gf.h(n.field_h.field_d.field_hb, n.field_h.field_d.field_db, n.field_h.field_d.field_K, n.field_h.field_d.field_mb);
           n.field_h.field_d.b(param0, -68);
           ml.a((byte) 99, param0);

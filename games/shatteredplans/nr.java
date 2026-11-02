@@ -13,7 +13,7 @@ final class nr extends IntrusiveNode {
     int[] field_i;
     static v field_h;
     static Sprite[] field_r;
-    static qb field_l;
+    static PlatformTaskDispatcher field_l;
 
     public static void a(byte param0) {
         field_r = null;

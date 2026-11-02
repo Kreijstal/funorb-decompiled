@@ -77,7 +77,7 @@ final class dn extends hb {
 
     final static gq[] a(int param0) {
         if (param0 == 4) {
-          return new gq[]{on.field_g, nd.field_c, td.field_O, ss.field_c, cl.field_p, GameApplet.field_c, tf.field_j, na.field_I, ld.field_h, lc.field_b, m.field_A, mc.field_r, ks.field_a, ro.field_c};
+          return new gq[]{IntrusiveDequeCursor.field_g, nd.field_c, td.field_O, ss.field_c, cl.field_p, GameApplet.field_c, tf.field_j, na.field_I, ld.field_h, lc.field_b, m.field_A, mc.field_r, ks.field_a, ro.field_c};
         }
         return (gq[]) null;
     }

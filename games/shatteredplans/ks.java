@@ -165,7 +165,7 @@ final class ks {
           if (param0 > -86) {
             field_c = (String) null;
           }
-          if (qd.field_a >= 18) {
+          if (RasterBuffer.field_a >= 18) {
             gs.a(var3, true);
           } else {
             ld.field_p.a((byte) -113, var3);

@@ -380,7 +380,7 @@ class UiWidget extends IntrusiveNode {
         for (var5_int = 0; var5_int <= var4; var5_int++) {
           this.a(var5_int, -11857, param0, param1);
         }
-        String var5 = on.a(false);
+        String var5 = IntrusiveDequeCursor.a(false);
         if (var5 != null) {
           qq.field_I.a(rs.field_Fb, ra.field_g, 106, var5);
         }

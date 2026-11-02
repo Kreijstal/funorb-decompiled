@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pe extends f implements op, bp {
+final class pe extends WidgetContainer implements op, bp {
     private kg field_H;
     private ts field_G;
     static String[] field_J;
@@ -448,7 +448,7 @@ final class pe extends f implements op, bp {
                   var25Lifetime1 = param6.field_D[var23Lifetime2];
                   var26Lifetime1 = param6.field_H[var23Lifetime2];
                   kr.field_e[var23Lifetime2] = var9 + (var26Lifetime1 * var18 + var12 * var24Lifetime1 + var15 * var25Lifetime1 >> 16);
-                  ib.field_f[var23Lifetime2] = (var24Lifetime1 * var13 - (-(var16 * var25Lifetime1) - var19 * var26Lifetime1) >> 16) + var10;
+                  MouseWheelInput.field_f[var23Lifetime2] = (var24Lifetime1 * var13 - (-(var16 * var25Lifetime1) - var19 * var26Lifetime1) >> 16) + var10;
                   dc.field_s[var23Lifetime2] = (var26Lifetime1 * var20 + var24Lifetime1 * var14 + var25Lifetime1 * var17 >> 16) + var11;
                   var24Lifetime1 = param6.field_a[var23Lifetime2];
                   var25Lifetime1 = param6.field_c[var23Lifetime2];

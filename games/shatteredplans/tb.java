@@ -81,7 +81,7 @@ final class tb {
           mk.field_e[4] = si.field_q;
           mk.field_e[3] = ls.field_b;
           mk.field_e[1] = id.field_a;
-          mk.field_e[2] = ib.field_e;
+          mk.field_e[2] = MouseWheelInput.field_e;
           lp.field_v = new qr(0L, (qr) null);
           gm.field_m = new qr(0L, td.field_N, gd.field_c);
           sf.field_f = new qr(0L, vm.field_Cb, mk.field_b);
@@ -105,7 +105,7 @@ final class tb {
           km.field_e = new qr(0L, jr.field_h, di.field_j);
           mc.field_t = new qr(0L, jr.field_h, vm.field_Lb);
           ta.field_d = new qr(0L, jr.field_h, fa.field_T);
-          ea.field_c = new qr(0L, jr.field_h, f.field_z);
+          ea.field_c = new qr(0L, jr.field_h, WidgetContainer.field_z);
           hq.field_b = new qr(0L, vm.field_Cb, pc.field_o);
           qs.field_y = new ub(0L, new qr(0L, (qr) null), me.field_d, se.field_m);
           gb.field_m = new qr(0L, ea.field_a, GameApplet.field_a.toUpperCase());
@@ -143,7 +143,7 @@ final class tb {
           io.field_c = new qr(0L, SpriteState.field_u);
           io.field_c.field_G = 0;
           io.field_c.field_y = 1;
-          SocketConnector.field_d = new qr(0L, af.field_f, ck.field_c.toUpperCase());
+          SocketConnector.field_d = new qr(0L, DelegatingCanvas.field_f, ck.field_c.toUpperCase());
           so.field_v = new qr(0L, ho.field_j);
           so.field_v.a(4, io.field_c);
           so.field_v.a(4, SocketConnector.field_d);
@@ -265,7 +265,7 @@ final class tb {
           IntrusiveDeque.field_g.a(param13 + 7970, aq.field_j);
           IntrusiveDeque.field_g.a(4, dn.field_f);
           hl.field_K = new qr(0L, un.field_g, ph.field_c.toUpperCase());
-          oo.field_c = new qr(0L, af.field_f, uq.field_n.toUpperCase());
+          oo.field_c = new qr(0L, DelegatingCanvas.field_f, uq.field_n.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

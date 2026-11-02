@@ -132,8 +132,8 @@ abstract class jc extends DualLinkNode {
           n.field_k.e();
           pc.field_n.f(64, 64);
           gf.b(12, 12, 0, 0, 256, 256);
-          ed.field_b = new Sprite(64, 64);
-          ed.field_b.e();
+          MouseInputHandler.field_b = new Sprite(64, 64);
+          MouseInputHandler.field_b.e();
           lq.field_o.f(16, 16);
           gf.b(3, 3, 0, 0, 64, 64);
           cg.i(0);

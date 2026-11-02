@@ -768,7 +768,7 @@ abstract class ia {
                     var5 = param1.a((byte) -71);
                   }
                 }
-                this.field_o.a(10, 0, ib.field_b);
+                this.field_o.a(10, 0, MouseWheelInput.field_b);
               }
             }
           }

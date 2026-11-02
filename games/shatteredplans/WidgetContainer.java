@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class f extends UiWidget implements ni {
+class WidgetContainer extends UiWidget implements ni {
     static String field_z;
     static boolean field_C;
     static int[] field_y;
@@ -15,7 +15,7 @@ class f extends UiWidget implements ni {
         UiWidget var9 = null;
         int var10 = 0;
         UiWidget var11 = null;
-        on var12 = null;
+        IntrusiveDequeCursor var12 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -26,7 +26,7 @@ class f extends UiWidget implements ni {
             var11 = (UiWidget) null;
             this.a(118, -43, -76, (UiWidget) null, 87, 88, 5);
           }
-          var12 = new on(this.field_A);
+          var12 = new IntrusiveDequeCursor(this.field_A);
           var9 = (UiWidget) (var12.a(2));
           while (var9 != null) {
             if (var9.c(param0 + 2048)) {
@@ -59,14 +59,14 @@ class f extends UiWidget implements ni {
         UiWidget var9 = null;
         int var10 = 0;
         UiWidget var11 = null;
-        on var12 = null;
+        IntrusiveDequeCursor var12 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         var10 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var12 = new on(this.field_A);
+          var12 = new IntrusiveDequeCursor(this.field_A);
           if (param2 < 95) {
             var11 = (UiWidget) null;
             this.a((UiWidget) null, -47);
@@ -102,7 +102,7 @@ class f extends UiWidget implements ni {
         UiWidget var6_ref_vg = null;
         int var6 = 0;
         int var7 = 0;
-        on var8 = null;
+        IntrusiveDequeCursor var8 = null;
         boolean stackIn_18_0 = false;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -110,7 +110,7 @@ class f extends UiWidget implements ni {
         RuntimeException decompiledCaughtException = null;
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var8 = new on(this.field_A);
+          var8 = new IntrusiveDequeCursor(this.field_A);
           var6_ref_vg = (UiWidget) (var8.a(param2 ^ 15));
           while (var6_ref_vg != null) {
             if (var6_ref_vg.c(param2 ^ 2061)) {
@@ -151,11 +151,11 @@ class f extends UiWidget implements ni {
     }
 
     UiWidget i(int param0) {
-        on var2;
+        IntrusiveDequeCursor var2;
         UiWidget var3;
         int var4;
         var4 = ShatteredPlansClient.field_F ? 1 : 0;
-        var2 = new on(this.field_A);
+        var2 = new IntrusiveDequeCursor(this.field_A);
         if (param0 != 1) {
           field_C = true;
         }
@@ -181,7 +181,7 @@ class f extends UiWidget implements ni {
         StringBuilder discarded$3 = null;
         int var7 = 0;
         StringBuilder discarded$4 = null;
-        on var5 = null;
+        IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
         int var8 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -193,7 +193,7 @@ class f extends UiWidget implements ni {
         RuntimeException var5_ref = null;
         var8 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var5 = new on(this.field_A);
+          var5 = new IntrusiveDequeCursor(this.field_A);
           if (param2 >= -21) {
             field_B = (String) null;
           }
@@ -231,7 +231,7 @@ class f extends UiWidget implements ni {
         int var5 = 0;
         int var6 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = 0;
-        on var3 = new on(this.field_A);
+        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_A);
         UiWidget var4 = (UiWidget) (var3.a(2));
         while (var4 != null) {
           var5 = var4.e(param0 ^ 0);
@@ -247,7 +247,7 @@ class f extends UiWidget implements ni {
     }
 
     final boolean a(byte param0, UiWidget param1) {
-        on var3 = null;
+        IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
@@ -258,7 +258,7 @@ class f extends UiWidget implements ni {
         RuntimeException decompiledCaughtException = null;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var3 = new on(this.field_A);
+          var3 = new IntrusiveDequeCursor(this.field_A);
           var6 = (UiWidget) (var3.a(2));
           while (true) {
             if (var6 == null) {
@@ -289,10 +289,10 @@ class f extends UiWidget implements ni {
     final boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         UiWidget var4 = null;
-        on var5 = null;
+        IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
         int var7 = 0;
-        on var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -302,14 +302,14 @@ class f extends UiWidget implements ni {
           if (this.field_A.g(-86)) {
             return false;
           }
-          var8 = new on(this.field_A);
+          var8 = new IntrusiveDequeCursor(this.field_A);
           if (!param1) {
             field_B = (String) null;
           }
           var4 = (UiWidget) (var8.c(-30));
           while (var4 != null) {
             if (var4.f(1)) {
-              var5 = new on(this.field_A);
+              var5 = new IntrusiveDequeCursor(this.field_A);
               var5.a((byte) 109, var4);
               var6 = (UiWidget) (var5.b((byte) -124));
               while (var6 != null) {
@@ -341,10 +341,10 @@ class f extends UiWidget implements ni {
         RuntimeException var3 = null;
         int var4 = 0;
         UiWidget var5 = null;
-        on var6 = null;
+        IntrusiveDequeCursor var6 = null;
         UiWidget var7 = null;
         int var8 = 0;
-        on var9 = null;
+        IntrusiveDequeCursor var9 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -355,11 +355,11 @@ class f extends UiWidget implements ni {
             return false;
           }
           var4 = 70 % ((5 - param1) / 50);
-          var9 = new on(this.field_A);
+          var9 = new IntrusiveDequeCursor(this.field_A);
           var5 = (UiWidget) (var9.a(2));
           while (var5 != null) {
             if (var5.f(1)) {
-              var6 = new on(this.field_A);
+              var6 = new IntrusiveDequeCursor(this.field_A);
               var6.a(false, var5);
               var7 = (UiWidget) (var6.a((byte) 54));
               while (var7 != null) {
@@ -392,7 +392,7 @@ class f extends UiWidget implements ni {
           null != this.field_p) {
           this.field_p.a((UiWidget) (this), param3, true, param2, (byte) 12);
         }
-        on var5 = new on(this.field_A);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_A);
         if (param1 != -11857) {
           return;
         }
@@ -498,7 +498,7 @@ class f extends UiWidget implements ni {
           UiWidget var5 = (UiWidget) null;
           this.a((byte) -71, (UiWidget) null);
         }
-        on var2 = new on(this.field_A);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_A);
         UiWidget var3 = (UiWidget) (var2.a(2));
         while (var3 != null) {
           var3.d((byte) 90);
@@ -519,7 +519,7 @@ class f extends UiWidget implements ni {
 
     final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         RuntimeException runtimeException = null;
-        on var7 = null;
+        IntrusiveDequeCursor var7 = null;
         UiWidget var8 = null;
         int var9 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -528,7 +528,7 @@ class f extends UiWidget implements ni {
         RuntimeException decompiledCaughtException = null;
         var9 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
-          var7 = new on(this.field_A);
+          var7 = new IntrusiveDequeCursor(this.field_A);
           var8 = (UiWidget) (var7.a(param4 + 600269857));
           if (param4 != -600269855) {
             return;
@@ -559,7 +559,7 @@ class f extends UiWidget implements ni {
     final void e(byte param0) {
         int var5 = ShatteredPlansClient.field_F ? 1 : 0;
         int var2 = -104 / ((param0 + 84) / 33);
-        on var3 = new on(this.field_A);
+        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_A);
         UiWidget var4 = (UiWidget) (var3.a(2));
         while (var4 != null) {
           var4.e((byte) -121);
@@ -568,12 +568,12 @@ class f extends UiWidget implements ni {
     }
 
     String c(boolean param0) {
-        on var2;
+        IntrusiveDequeCursor var2;
         UiWidget var3;
         String var4;
         int var5;
         var5 = ShatteredPlansClient.field_F ? 1 : 0;
-        var2 = new on(this.field_A);
+        var2 = new IntrusiveDequeCursor(this.field_A);
         if (!param0) {
           return (String) null;
         }
@@ -588,14 +588,14 @@ class f extends UiWidget implements ni {
         return null;
     }
 
-    f(int param0, int param1, int param2, int param3, iq param4) {
+    WidgetContainer(int param0, int param1, int param2, int param3, iq param4) {
         super(param0, param1, param2, param3, param4, (ko) null);
         this.field_A = new IntrusiveDeque();
     }
 
     void a(int param0, int param1, UiWidget param2, byte param3) {
         RuntimeException runtimeException = null;
-        on var5 = null;
+        IntrusiveDequeCursor var5 = null;
         UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -605,7 +605,7 @@ class f extends UiWidget implements ni {
         var7 = ShatteredPlansClient.field_F ? 1 : 0;
         try {
           super.a(param0, param1, param2, param3);
-          var5 = new on(this.field_A);
+          var5 = new IntrusiveDequeCursor(this.field_A);
           var6 = (UiWidget) (var5.a(2));
           while (var6 != null) {
             if (var6.c(2048)) {

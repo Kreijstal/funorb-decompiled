@@ -390,7 +390,7 @@ final class uo {
                     aq.field_j.field_s = false;
                     if (!(!aq.field_j.field_v)) {
                       if (n.field_h.field_d.field_zb == 0) {
-                        dn.field_k = on.field_a;
+                        dn.field_k = IntrusiveDequeCursor.field_a;
                       } else {
                         dn.field_k = re.a(jr.field_l, param0 ^ 4356, new String[]{jo.field_c});
                       }
@@ -450,7 +450,7 @@ final class uo {
           stackIn_164_0 = IntrusiveDeque.field_g;
           stackIn_165_1 = (param1) && (!param4) && (!ti.field_e);
           ((qr) (Object) stackIn_164_0).a(stackIn_165_1, -20429);
-          stackIn_169_0 = ed.field_d;
+          stackIn_169_0 = MouseInputHandler.field_d;
           stackIn_170_1 = (param1) && (!param4) && (ti.field_e);
           ((qr) (Object) stackIn_169_0).a(stackIn_170_1, -20429);
           n.field_h.field_d.f(false);

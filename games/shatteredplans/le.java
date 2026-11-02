@@ -73,7 +73,7 @@ abstract class le {
             qq.c(param2);
           } else {
             var4_ref_String = cg.field_E.toString();
-            if (af.a(var4_ref_String, 0)) {
+            if (DelegatingCanvas.a(var4_ref_String, 0)) {
               var13 = (String) null;
               var12 = (String) null;
               md.a(2, pr.field_e, 0, (String) null, (String) null, -16169);

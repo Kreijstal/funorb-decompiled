@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ri extends f implements od, bp {
+final class ri extends WidgetContainer implements od, bp {
     private boolean field_L;
     private kg field_K;
     private String field_J;
@@ -280,7 +280,7 @@ final class ri extends f implements od, bp {
             this.field_Q.field_v = nc.field_m;
           }
           if (this.field_L) {
-            this.field_P.field_v = ed.field_a;
+            this.field_P.field_v = MouseInputHandler.field_a;
           } else {
             if (this.field_D) {
               this.field_P.field_v = bs.field_c;

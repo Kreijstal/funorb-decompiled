@@ -76,12 +76,12 @@ final class ig {
         if (param0 != 7655) {
           return;
         }
-        if (ed.field_h != null) {
-          le.field_e.a(true, ed.field_h);
+        if (MouseInputHandler.field_h != null) {
+          le.field_e.a(true, MouseInputHandler.field_h);
           return;
         }
-        ed.field_h = new eo(le.field_e, tl.field_z);
-        le.field_e.a(true, ed.field_h);
+        MouseInputHandler.field_h = new eo(le.field_e, tl.field_z);
+        le.field_e.a(true, MouseInputHandler.field_h);
     }
 
     static {

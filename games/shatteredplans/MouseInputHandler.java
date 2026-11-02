@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static eo field_h;
     static qr field_d;
     static IntrusiveDeque field_g;
@@ -136,7 +136,7 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           pd.a(0);
           return (Sprite) (var3);
         }
-        ed.a(79);
+        MouseInputHandler.a(79);
         byte[] var18 = hd.field_q[0];
         if (ua.field_h[0]) {
           var19 = kc.field_l[0];
@@ -401,7 +401,7 @@ final class ed implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           field_h = null;
           return;
         }
-        ed.a(7, -49, -44);
+        MouseInputHandler.a(7, -49, -44);
         field_c = null;
         field_h = null;
     }

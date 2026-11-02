@@ -1248,7 +1248,7 @@ final class km implements mn {
             break;
           }
           if (stackIn_94_0 != 0) {
-            jq.a(-29901, (Throwable) null, var6.toString());
+            GameKeyHandler.a(-29901, (Throwable) null, var6.toString());
             q.g(-118);
           }
           stackIn_98_0Lifetime1 = -13;
@@ -2665,7 +2665,7 @@ final class km implements mn {
           if (this.field_f) {
             if (0 > this.field_h) {
               stackIn_11_0 = (oq.field_j != 13);
-              stackIn_12_0 = stackIn_11_0 & ge.field_n;
+              stackIn_12_0 = stackIn_11_0 & ImageProducerRasterBuffer.field_n;
             } else {
               stackIn_12_0 = sr.field_h;
             }
@@ -3599,7 +3599,7 @@ final class km implements mn {
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var2_ref = (Exception) (Object) decompiledCaughtException;
-                jq.a(-29901, (Throwable) ((Object) var2_ref), "AI has errored in single player game");
+                GameKeyHandler.a(-29901, (Throwable) ((Object) var2_ref), "AI has errored in single player game");
               }
               this.a(this.field_n, -84);
               this.d((byte) -81);

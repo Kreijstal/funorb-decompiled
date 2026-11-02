@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class w extends f {
+abstract class w extends WidgetContainer {
     static long field_I;
     boolean field_E;
     static String[][] field_J;

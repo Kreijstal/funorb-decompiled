@@ -201,9 +201,9 @@ final class gq {
             var8 = nc.field_p[9] >> 2;
             var9 = nc.field_p[10] >> 2;
             var10_int = nc.field_p[11] >> 2;
-            var11 = ib.field_a[3] * var8 + (ib.field_a[4] * var9 + ib.field_a[5] * var10_int) >> 14;
-            var12 = var8 * ib.field_a[6] + (var9 * ib.field_a[7] + var10_int * ib.field_a[8]) >> 14;
-            var13 = ib.field_a[11] * var10_int + (var9 * ib.field_a[10] + ib.field_a[9] * var8) >> 14;
+            var11 = MouseWheelInput.field_a[3] * var8 + (MouseWheelInput.field_a[4] * var9 + MouseWheelInput.field_a[5] * var10_int) >> 14;
+            var12 = var8 * MouseWheelInput.field_a[6] + (var9 * MouseWheelInput.field_a[7] + var10_int * MouseWheelInput.field_a[8]) >> 14;
+            var13 = MouseWheelInput.field_a[11] * var10_int + (var9 * MouseWheelInput.field_a[10] + MouseWheelInput.field_a[9] * var8) >> 14;
             var2[var3] = var13 * var7 + var11 * var5 + var6 * var12 >> 16;
           }
           var3Lifetime1 = nc.field_p[9] >> 8;
@@ -241,9 +241,9 @@ final class gq {
             var17 = vc.field_d[var16];
             ec.a(-1, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              ib.field_a[var18] = ib.field_a[var18] + fa.field_Z[var15][var18];
+              MouseWheelInput.field_a[var18] = MouseWheelInput.field_a[var18] + fa.field_Z[var15][var18];
             }
-            pe.a(true, nc.field_p, false, 80, ib.field_a, false, var17);
+            pe.a(true, nc.field_p, false, 80, MouseWheelInput.field_a, false, var17);
             er.a(var7Lifetime1, var13Lifetime1, false, var8Lifetime1, var14, var17, var12Lifetime1, var9Lifetime1);
           }
           var16Lifetime1 = -47 / ((47 - param0) / 46);

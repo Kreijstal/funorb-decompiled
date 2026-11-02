@@ -631,7 +631,7 @@ final class sc extends ka {
                   lr.field_c = new byte[em.field_k];
                   ek.field_F = new boolean[em.field_k];
                 }
-                qd.field_h = false;
+                RasterBuffer.field_h = false;
                 for (var18_int = 0; var18_int < var8; var18_int++) {
                   ek.field_F[var18_int] = false;
                 }
@@ -751,7 +751,7 @@ final class sc extends ka {
                   !wg.field_d) {
                   var23 = null;
                   var24 = 0;
-                  if (qd.field_h) {
+                  if (RasterBuffer.field_h) {
                     var23 = "</col>" + wl.field_b + "<col=A00000>";
                     var26Lifetime1 = var23;
                     var23 = var26Lifetime1;

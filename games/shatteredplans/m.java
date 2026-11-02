@@ -303,10 +303,10 @@ final class m extends mc {
           cr.field_c = 15;
           qo.field_b = 2;
           var7 = go.a(115, "largefont", param4, param2, "lobby");
-          ge.field_p = go.a(117, "generalfont", param4, param2, "lobby");
+          ImageProducerRasterBuffer.field_p = go.a(117, "generalfont", param4, param2, "lobby");
           ul.field_xb = go.a(123, "chatfont", param4, param2, "lobby");
           var7.a(var5, var24);
-          ge.field_p.a(var5, var24);
+          ImageProducerRasterBuffer.field_p.a(var5, var24);
           ul.field_xb.a(var5, var24);
           var8 = new qr(0L, (qr) null);
           var8.field_nb = (nq) ((Object) var7);
@@ -318,7 +318,7 @@ final class m extends mc {
           var10 = new qr(0L, (qr) null);
           var10.field_x = 16777215;
           var10.field_Y = cr.field_c;
-          var10.field_nb = (nq) ((Object) ge.field_p);
+          var10.field_nb = (nq) ((Object) ImageProducerRasterBuffer.field_p);
           var10.field_G = 1;
           var11 = var10;
           var11.field_y = 1;
@@ -353,7 +353,7 @@ final class m extends mc {
           SpriteState.field_u.field_x = 13421772;
           SpriteState.field_u.field_Y = cr.field_c;
           SpriteState.field_u.field_G = 1;
-          SpriteState.field_u.field_nb = (nq) ((Object) ge.field_p);
+          SpriteState.field_u.field_nb = (nq) ((Object) ImageProducerRasterBuffer.field_p);
           gn.field_w = new qr(0L, SpriteState.field_u);
           gn.field_w.field_ab = 16777215;
           gn.field_w.field_W = 8421504;
@@ -405,7 +405,7 @@ final class m extends mc {
           ea.field_a.field_J = 1;
           ea.field_a.field_t = 1;
           ea.field_a.field_V = 1;
-          af.field_f = new qr(0L, ea.field_a);
+          DelegatingCanvas.field_f = new qr(0L, ea.field_a);
           jf.field_b = new qr(0L, gn.field_w);
           jf.field_b.field_V = 1;
           jf.field_b.field_t = 1;
@@ -424,9 +424,9 @@ final class m extends mc {
           jf.field_b.field_sb = dupTemp$0;
           jf.field_b.field_vb = dupTemp$0;
           jf.field_b.field_wb = re.a(ae.a(109, "lobby", param4, "smallbutton_disabled"), 65);
-          af.field_f.field_F = re.a(ae.a(-99, "lobby", param4, "mediumbutton"), 41);
-          af.field_f.field_lb = re.a(ae.a(80, "lobby", param4, "mediumbutton_mouseover"), 126);
-          af.field_f.field_vb = re.a(ae.a(113, "lobby", param4, "mediumbutton_mouseheld"), 95);
+          DelegatingCanvas.field_f.field_F = re.a(ae.a(-99, "lobby", param4, "mediumbutton"), 41);
+          DelegatingCanvas.field_f.field_lb = re.a(ae.a(80, "lobby", param4, "mediumbutton_mouseover"), 126);
+          DelegatingCanvas.field_f.field_vb = re.a(ae.a(113, "lobby", param4, "mediumbutton_mouseheld"), 95);
           ea.field_a.field_F = re.a(ae.a(-121, "lobby", param4, "bigbutton"), 53);
           ea.field_a.field_lb = re.a(ae.a(92, "lobby", param4, "bigbutton_mouseover"), 76);
           ea.field_a.field_vb = re.a(ae.a(-108, "lobby", param4, "bigbutton_mouseheld"), 127);

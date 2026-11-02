@@ -1179,7 +1179,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_animating_results", 115);
                 if (var2 != null) {
-                  ib.field_b = IterableNodeHashTable.a(var2, 17746);
+                  MouseWheelInput.field_b = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_animating_collapse", 96);
                 if (var2 != null) {
@@ -1471,7 +1471,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("tabname_projects", 110);
                 if (null != var2) {
-                  ib.field_c = IterableNodeHashTable.a(var2, 17746);
+                  MouseWheelInput.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("tabname_messages", 98);
                 if (null != var2) {
@@ -1668,7 +1668,7 @@ final class ee extends ms {
                 }
                 var2 = nb.a("text_stat_solidity", 106);
                 if (var2 != null) {
-                  af.field_c = IterableNodeHashTable.a(var2, 17746);
+                  DelegatingCanvas.field_c = IterableNodeHashTable.a(var2, 17746);
                 }
                 var2 = nb.a("text_stat_desc_max_total_fleet_size", 109);
                 if (null != var2) {

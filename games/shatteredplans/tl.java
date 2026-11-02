@@ -158,7 +158,7 @@ abstract class tl extends GameApplet {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5 = (Exception) (Object) decompiledCaughtException;
-              jq.a(-29901, (Throwable) ((Object) var5), "S1");
+              GameKeyHandler.a(-29901, (Throwable) ((Object) var5), "S1");
               var10 = (String) null;
               aa.a((String) null, true);
               va.field_g = null;
@@ -191,7 +191,7 @@ abstract class tl extends GameApplet {
         this.setBackground(java.awt.Color.black);
         ai.field_e = this.field_v;
         dm.a(0, ai.field_e);
-        jq.a(0, fa.field_W, 5000, this.field_q, 5000, this.field_x, param4, param3, this.field_w, ai.field_e, this.field_r, this.field_A, this.field_s, this.field_t);
+        GameKeyHandler.a(0, fa.field_W, 5000, this.field_q, 5000, this.field_x, param4, param3, this.field_w, ai.field_e, this.field_r, this.field_A, this.field_s, this.field_t);
         ti.a(param3, this.field_q, this.field_r, this.field_A, ai.field_e, 1491341222, fa.field_W, this.field_s, this.field_x);
         lm.a((byte) 100);
         aj.field_b = cg.e(true);
@@ -260,7 +260,7 @@ abstract class tl extends GameApplet {
                                 sh.a(-1);
                                 return;
                               }
-                              jq.a(-29901, (Throwable) null, "MGS1: " + w.a(16738));
+                              GameKeyHandler.a(-29901, (Throwable) null, "MGS1: " + w.a(16738));
                               q.g(-107);
                               return;
                             }
@@ -286,7 +286,7 @@ abstract class tl extends GameApplet {
           }
           return;
         }
-        jq.a(-29901, (Throwable) null, "MGS2: " + w.a(16738));
+        GameKeyHandler.a(-29901, (Throwable) null, "MGS2: " + w.a(16738));
         q.g(-127);
     }
 
@@ -747,7 +747,7 @@ abstract class tl extends GameApplet {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             var10 = (String) null;
-            jq.a(-29901, (Throwable) ((Object) var6_ref), (String) null);
+            GameKeyHandler.a(-29901, (Throwable) ((Object) var6_ref), (String) null);
             this.a((byte) -95, "crash");
           }
           return;
@@ -781,7 +781,7 @@ abstract class tl extends GameApplet {
         }
     }
 
-    final static java.awt.Frame a(boolean param0, qb param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(boolean param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_8_0 = null;

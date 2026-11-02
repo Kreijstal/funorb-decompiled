@@ -87,7 +87,7 @@ final class eb extends java.awt.Canvas implements java.awt.event.FocusListener {
     public final void paint(java.awt.Graphics param0) {
     }
 
-    final void a(qb param0, int param1) {
+    final void a(PlatformTaskDispatcher param0, int param1) {
         try {
           if (param1 != -17115) {
             field_b = 54;
