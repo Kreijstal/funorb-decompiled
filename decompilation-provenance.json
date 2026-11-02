@@ -10521,17 +10521,17 @@
       "inputTreeSha256": "14fdf7de6f9637c72d4ea046e941bc190e6b0245efbdc109791500ac47474a65",
       "sources": {
         "files": 300,
-        "sha256": "d42c6ec5956b53a47be7ed19d4b7d8282aff8d7308163beff8510ab43f86e5c3"
+        "sha256": "6645e684a700ea314cf0e6864834075c96d7c798f6e59686816db39191620d79"
       },
       "dictionary": {
         "path": "decompilation/torchallenge-naming.json",
-        "sha256": "3e618557fe8acdadfb101dc2de38bc811236aa18f38d10060e473d672fd18510"
+        "sha256": "b0fad492bdb416bf23e2cd28e149b77c0dc1f59d880aa3de5c8cee13c9663186"
       },
       "readingGuide": {
         "path": "games/torchallenge/README.md",
         "sha256": "2a70e5f690e05f5a337667fbe87342ebf2707a3f643954a26c5f6b6d75b5ea57"
       },
-      "rulesSha256": "a5e8826a4d0227f0175109ea722885529179e79340b6b9cae08b9b6c2e6d6773",
+      "rulesSha256": "233491c0a9c82f5913ffcf459fcfe7b1bd4d7bc7ad29fcfeb41be04ffa06d85d",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -12363,7 +12363,7 @@
         },
         "publishedSources": {
           "files": 300,
-          "sha256": "d42c6ec5956b53a47be7ed19d4b7d8282aff8d7308163beff8510ab43f86e5c3"
+          "sha256": "6645e684a700ea314cf0e6864834075c96d7c798f6e59686816db39191620d79"
         }
       },
       "torquing": {

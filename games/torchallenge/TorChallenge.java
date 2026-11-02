@@ -592,7 +592,7 @@ public final class TorChallenge extends GameClientBase {
         }
     }
 
-    final void f(int param0) {
+    final void drawFrame(int param0) {
         boolean stackIn_82_0 = false;
         RuntimeException decompiledCaughtException = null;
         java.awt.Canvas var2 = null;
@@ -725,7 +725,7 @@ public final class TorChallenge extends GameClientBase {
         }
     }
 
-    final void d(int param0) {
+    final void initializeGame(int param0) {
         RuntimeException runtimeException = null;
         kb var2 = null;
         int var3 = 0;
@@ -933,7 +933,7 @@ public final class TorChallenge extends GameClientBase {
         }
     }
 
-    final void d(byte param0) {
+    final void tickGame(byte param0) {
         boolean discarded$0 = false;
         int stackIn_11_1 = 0;
         boolean stackIn_12_2 = false;
@@ -1199,7 +1199,7 @@ public final class TorChallenge extends GameClientBase {
                               return false;
                             }
                             bi.a(124);
-                            this.f(7808);
+                            this.drawFrame(7808);
                             ub.field_d = new u(DelegatingCanvas.field_d, SpriteLoader.field_f);
                             cg.field_a[0] = q.a(DelegatingCanvas.field_d, "", "Btn_Chime").b();
                             cg.field_a[1] = q.a(DelegatingCanvas.field_d, "", "menu_change_character").b();
@@ -1355,7 +1355,7 @@ public final class TorChallenge extends GameClientBase {
           }
           if (null != SpriteLoader.field_f) {
             mh.a(DelegatingCanvas.field_a, (byte) -125, 70.0f);
-            this.f(7808);
+            this.drawFrame(7808);
             cg.field_a[3] = VorbisSample.a(SpriteLoader.field_f, "", "Henhui_character_select").c();
             cg.field_a[4] = VorbisSample.a(SpriteLoader.field_f, "", "Ziren_character_select").c();
             cg.field_a[5] = VorbisSample.a(SpriteLoader.field_f, "", "Damen_character_select").c();
@@ -1409,7 +1409,7 @@ public final class TorChallenge extends GameClientBase {
           }
           if (null != fh.field_f) {
             mh.a(wc.field_a, (byte) -125, 75.0f);
-            this.f(7808);
+            this.drawFrame(7808);
             al.field_x[0] = ej.a(fh.field_f, "", "TOR_Lvl_1");
             al.field_x[1] = ej.a(fh.field_f, "", "TOR_Lvl_2");
             al.field_x[2] = ej.a(fh.field_f, "", "TOR_Lvl_3");
@@ -1466,7 +1466,7 @@ public final class TorChallenge extends GameClientBase {
           }
           if (ic.field_C != null) {
             mh.a(vb.field_e, (byte) -125, 90.0f);
-            this.f(7808);
+            this.drawFrame(7808);
             this.t(1);
             ic.field_C = null;
             bh.field_q = null;
@@ -1725,7 +1725,7 @@ public final class TorChallenge extends GameClientBase {
           re.field_x[dg.field_T[7]] = SpriteLoader.a(-127, "spittle", "", ic.field_C);
           qb.a((byte) 85, re.field_x[dg.field_T[7]]);
           if (!param0) {
-            this.d((byte) 102);
+            this.tickGame((byte) 102);
           }
           re.field_x[dg.field_T[3]] = SpriteLoader.a(-127, "thudder", "", ic.field_C);
           qb.a((byte) 46, re.field_x[dg.field_T[3]]);

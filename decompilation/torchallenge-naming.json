@@ -25,7 +25,7 @@
       "to": "regionExit1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:TorChallenge.d(B)V#0"
+      "renamedSymbol": "B:TorChallenge.tickGame(B)V#0"
     },
     {
       "symbol": "B:TorChallenge.t(I)V#0",
@@ -1068,6 +1068,30 @@
       "renamedSymbol": "F:DualLinkNode.secondaryNext:LDualLinkNode;"
     },
     {
+      "symbol": "M:TorChallenge.d(B)V",
+      "originalName": "d",
+      "to": "tickGame",
+      "evidence": "The private per-tick method records the tick time then calls this. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TorChallenge.tickGame(B)V"
+    },
+    {
+      "symbol": "M:TorChallenge.d(I)V",
+      "originalName": "d",
+      "to": "initializeGame",
+      "evidence": "Called once from run after the canvas is created and before the tick loop. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TorChallenge.initializeGame(I)V"
+    },
+    {
+      "symbol": "M:TorChallenge.f(I)V",
+      "originalName": "f",
+      "to": "drawFrame",
+      "evidence": "The private per-frame method records the frame time then calls this. Resolved override family.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TorChallenge.drawFrame(I)V"
+    },
+    {
       "symbol": "M:ak.a(Lw;I)V",
       "originalName": "a",
       "to": "addLast",
@@ -1708,6 +1732,46 @@
       "renamedSymbol": "M:GameApplet.redirectToErrorPage(BLjava/lang/String;)V"
     },
     {
+      "symbol": "M:ug.c(I)V",
+      "originalName": "c",
+      "to": "runTick",
+      "evidence": "Samples the tick clock into a 32-entry ring and calls tickGame.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.runTick(I)V"
+    },
+    {
+      "symbol": "M:ug.d(B)V",
+      "originalName": "d",
+      "to": "tickGame",
+      "evidence": "The private per-tick method records the tick time then calls this.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.tickGame(B)V"
+    },
+    {
+      "symbol": "M:ug.d(I)V",
+      "originalName": "d",
+      "to": "initializeGame",
+      "evidence": "Called once from run after the canvas is created and before the tick loop.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.initializeGame(I)V"
+    },
+    {
+      "symbol": "M:ug.f(I)V",
+      "originalName": "f",
+      "to": "drawFrame",
+      "evidence": "The private per-frame method records the frame time then calls this.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.drawFrame(I)V"
+    },
+    {
+      "symbol": "M:ug.g(I)V",
+      "originalName": "g",
+      "to": "runFrame",
+      "evidence": "Samples the frame clock into a 32-entry ring and draws the frame.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GameApplet.runFrame(I)V"
+    },
+    {
       "symbol": "M:uj.a(BLjava/lang/String;Ljava/lang/Class;)Lmi;",
       "originalName": "a",
       "to": "requestField",
@@ -1781,7 +1845,7 @@
     },
     {
       "symbol": "B:TorChallenge.d(B)V#0",
-      "renamedSymbol": "B:TorChallenge.d(B)V#0",
+      "renamedSymbol": "B:TorChallenge.tickGame(B)V#0",
       "originalName": "L22",
       "renamedName": "regionExit1",
       "declaration": {
@@ -34572,7 +34636,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#0",
-      "renamedSymbol": "L:TorChallenge.d(B)V#0",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -34583,7 +34647,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#1",
-      "renamedSymbol": "L:TorChallenge.d(B)V#1",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#1",
       "originalName": "stackIn_11_1",
       "renamedName": "stackIn_11_1",
       "declaration": {
@@ -34594,7 +34658,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#10",
-      "renamedSymbol": "L:TorChallenge.d(B)V#10",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#10",
       "originalName": "var3_ref_eh",
       "renamedName": "var3_ref_eh",
       "declaration": {
@@ -34605,7 +34669,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#11",
-      "renamedSymbol": "L:TorChallenge.d(B)V#11",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#11",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -34616,7 +34680,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#12",
-      "renamedSymbol": "L:TorChallenge.d(B)V#12",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#12",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -34627,7 +34691,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#13",
-      "renamedSymbol": "L:TorChallenge.d(B)V#13",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#13",
       "originalName": "decompiledFrameCompleted1",
       "renamedName": "decompiledFrameCompleted1",
       "declaration": {
@@ -34638,7 +34702,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#14",
-      "renamedSymbol": "L:TorChallenge.d(B)V#14",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#14",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -34649,7 +34713,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#15",
-      "renamedSymbol": "L:TorChallenge.d(B)V#15",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#15",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -34660,7 +34724,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#2",
-      "renamedSymbol": "L:TorChallenge.d(B)V#2",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#2",
       "originalName": "stackIn_12_2",
       "renamedName": "stackIn_12_2",
       "declaration": {
@@ -34671,7 +34735,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#3",
-      "renamedSymbol": "L:TorChallenge.d(B)V#3",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#3",
       "originalName": "stackIn_51_1",
       "renamedName": "stackIn_51_1",
       "declaration": {
@@ -34682,7 +34746,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#4",
-      "renamedSymbol": "L:TorChallenge.d(B)V#4",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -34693,7 +34757,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#5",
-      "renamedSymbol": "L:TorChallenge.d(B)V#5",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#5",
       "originalName": "var2_int",
       "renamedName": "var2_int",
       "declaration": {
@@ -34704,7 +34768,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#6",
-      "renamedSymbol": "L:TorChallenge.d(B)V#6",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#6",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -34715,7 +34779,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#7",
-      "renamedSymbol": "L:TorChallenge.d(B)V#7",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#7",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -34726,7 +34790,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#8",
-      "renamedSymbol": "L:TorChallenge.d(B)V#8",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#8",
       "originalName": "var3_ref_rd",
       "renamedName": "var3_ref_rd",
       "declaration": {
@@ -34737,7 +34801,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(B)V#9",
-      "renamedSymbol": "L:TorChallenge.d(B)V#9",
+      "renamedSymbol": "L:TorChallenge.tickGame(B)V#9",
       "originalName": "var3_ref_bk",
       "renamedName": "var3_ref_bk",
       "declaration": {
@@ -34748,7 +34812,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(I)V#0",
-      "renamedSymbol": "L:TorChallenge.d(I)V#0",
+      "renamedSymbol": "L:TorChallenge.initializeGame(I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -34759,7 +34823,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(I)V#1",
-      "renamedSymbol": "L:TorChallenge.d(I)V#1",
+      "renamedSymbol": "L:TorChallenge.initializeGame(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -34770,7 +34834,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(I)V#2",
-      "renamedSymbol": "L:TorChallenge.d(I)V#2",
+      "renamedSymbol": "L:TorChallenge.initializeGame(I)V#2",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -34781,7 +34845,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(I)V#3",
-      "renamedSymbol": "L:TorChallenge.d(I)V#3",
+      "renamedSymbol": "L:TorChallenge.initializeGame(I)V#3",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -34792,7 +34856,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(I)V#4",
-      "renamedSymbol": "L:TorChallenge.d(I)V#4",
+      "renamedSymbol": "L:TorChallenge.initializeGame(I)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -34803,7 +34867,7 @@
     },
     {
       "symbol": "L:TorChallenge.d(I)V#5",
-      "renamedSymbol": "L:TorChallenge.d(I)V#5",
+      "renamedSymbol": "L:TorChallenge.initializeGame(I)V#5",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -35023,7 +35087,7 @@
     },
     {
       "symbol": "L:TorChallenge.f(I)V#0",
-      "renamedSymbol": "L:TorChallenge.f(I)V#0",
+      "renamedSymbol": "L:TorChallenge.drawFrame(I)V#0",
       "originalName": "stackIn_82_0",
       "renamedName": "stackIn_82_0",
       "declaration": {
@@ -35034,7 +35098,7 @@
     },
     {
       "symbol": "L:TorChallenge.f(I)V#1",
-      "renamedSymbol": "L:TorChallenge.f(I)V#1",
+      "renamedSymbol": "L:TorChallenge.drawFrame(I)V#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -35045,7 +35109,7 @@
     },
     {
       "symbol": "L:TorChallenge.f(I)V#10",
-      "renamedSymbol": "L:TorChallenge.f(I)V#10",
+      "renamedSymbol": "L:TorChallenge.drawFrame(I)V#10",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -35056,7 +35120,7 @@
     },
     {
       "symbol": "L:TorChallenge.f(I)V#11",
-      "renamedSymbol": "L:TorChallenge.f(I)V#11",
+      "renamedSymbol": "L:TorChallenge.drawFrame(I)V#11",
       "originalName": "decompiledSharedTail0",
       "renamedName": "decompiledSharedTail0",
       "declaration": {
@@ -35067,7 +35131,7 @@
     },
     {
       "symbol": "L:TorChallenge.f(I)V#12",
-      "renamedSymbol": "L:TorChallenge.f(I)V#12",
+      "renamedSymbol": "L:TorChallenge.drawFrame(I)V#12",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -35078,7 +35142,7 @@
     },
     {
       "symbol": "L:TorChallenge.f(I)V#2",
-      "renamedSymbol": "L:TorChallenge.f(I)V#2",
+      "renamedSymbol": "L:TorChallenge.drawFrame(I)V#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -35089,7 +35153,7 @@
     },
     {
       "symbol": "L:TorChallenge.f(I)V#3",
-      "renamedSymbol": "L:TorChallenge.f(I)V#3",
+      "renamedSymbol": "L:TorChallenge.drawFrame(I)V#3",
       "originalName": "var2_ref",
       "renamedName": "var2_ref",
       "declaration": {
@@ -35100,7 +35164,7 @@
     },
     {
       "symbol": "L:TorChallenge.f(I)V#4",
-      "renamedSymbol": "L:TorChallenge.f(I)V#4",
+      "renamedSymbol": "L:TorChallenge.drawFrame(I)V#4",
       "originalName": "var3_ref_ka",
       "renamedName": "var3_ref_ka",
       "declaration": {
@@ -35111,7 +35175,7 @@
     },
     {
       "symbol": "L:TorChallenge.f(I)V#5",
-      "renamedSymbol": "L:TorChallenge.f(I)V#5",
+      "renamedSymbol": "L:TorChallenge.drawFrame(I)V#5",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -35122,7 +35186,7 @@
     },
     {
       "symbol": "L:TorChallenge.f(I)V#6",
-      "renamedSymbol": "L:TorChallenge.f(I)V#6",
+      "renamedSymbol": "L:TorChallenge.drawFrame(I)V#6",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -35133,7 +35197,7 @@
     },
     {
       "symbol": "L:TorChallenge.f(I)V#7",
-      "renamedSymbol": "L:TorChallenge.f(I)V#7",
+      "renamedSymbol": "L:TorChallenge.drawFrame(I)V#7",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -35144,7 +35208,7 @@
     },
     {
       "symbol": "L:TorChallenge.f(I)V#8",
-      "renamedSymbol": "L:TorChallenge.f(I)V#8",
+      "renamedSymbol": "L:TorChallenge.drawFrame(I)V#8",
       "originalName": "var3_ref_kaLifetime1",
       "renamedName": "var3_ref_kaLifetime1",
       "declaration": {
@@ -35155,7 +35219,7 @@
     },
     {
       "symbol": "L:TorChallenge.f(I)V#9",
-      "renamedSymbol": "L:TorChallenge.f(I)V#9",
+      "renamedSymbol": "L:TorChallenge.drawFrame(I)V#9",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -183589,7 +183653,7 @@
     },
     {
       "symbol": "L:ug.c(I)V#0",
-      "renamedSymbol": "L:GameApplet.c(I)V#0",
+      "renamedSymbol": "L:GameApplet.runTick(I)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -183600,7 +183664,7 @@
     },
     {
       "symbol": "L:ug.c(I)V#1",
-      "renamedSymbol": "L:GameApplet.c(I)V#1",
+      "renamedSymbol": "L:GameApplet.runTick(I)V#1",
       "originalName": "var2_long",
       "renamedName": "var2_long",
       "declaration": {
@@ -183611,7 +183675,7 @@
     },
     {
       "symbol": "L:ug.c(I)V#2",
-      "renamedSymbol": "L:GameApplet.c(I)V#2",
+      "renamedSymbol": "L:GameApplet.runTick(I)V#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -183622,7 +183686,7 @@
     },
     {
       "symbol": "L:ug.c(I)V#3",
-      "renamedSymbol": "L:GameApplet.c(I)V#3",
+      "renamedSymbol": "L:GameApplet.runTick(I)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -183633,7 +183697,7 @@
     },
     {
       "symbol": "L:ug.c(I)V#4",
-      "renamedSymbol": "L:GameApplet.c(I)V#4",
+      "renamedSymbol": "L:GameApplet.runTick(I)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -183644,7 +183708,7 @@
     },
     {
       "symbol": "L:ug.c(I)V#5",
-      "renamedSymbol": "L:GameApplet.c(I)V#5",
+      "renamedSymbol": "L:GameApplet.runTick(I)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -183655,7 +183719,7 @@
     },
     {
       "symbol": "L:ug.c(I)V#6",
-      "renamedSymbol": "L:GameApplet.c(I)V#6",
+      "renamedSymbol": "L:GameApplet.runTick(I)V#6",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -183897,7 +183961,7 @@
     },
     {
       "symbol": "L:ug.g(I)V#0",
-      "renamedSymbol": "L:GameApplet.g(I)V#0",
+      "renamedSymbol": "L:GameApplet.runFrame(I)V#0",
       "originalName": "fieldTemp$0",
       "renamedName": "fieldTemp$0",
       "declaration": {
@@ -183908,7 +183972,7 @@
     },
     {
       "symbol": "L:ug.g(I)V#1",
-      "renamedSymbol": "L:GameApplet.g(I)V#1",
+      "renamedSymbol": "L:GameApplet.runFrame(I)V#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -183919,7 +183983,7 @@
     },
     {
       "symbol": "L:ug.g(I)V#2",
-      "renamedSymbol": "L:GameApplet.g(I)V#2",
+      "renamedSymbol": "L:GameApplet.runFrame(I)V#2",
       "originalName": "var2_long",
       "renamedName": "var2_long",
       "declaration": {
@@ -183930,7 +183994,7 @@
     },
     {
       "symbol": "L:ug.g(I)V#3",
-      "renamedSymbol": "L:GameApplet.g(I)V#3",
+      "renamedSymbol": "L:GameApplet.runFrame(I)V#3",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -183941,7 +184005,7 @@
     },
     {
       "symbol": "L:ug.g(I)V#4",
-      "renamedSymbol": "L:GameApplet.g(I)V#4",
+      "renamedSymbol": "L:GameApplet.runFrame(I)V#4",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -183952,7 +184016,7 @@
     },
     {
       "symbol": "L:ug.g(I)V#5",
-      "renamedSymbol": "L:GameApplet.g(I)V#5",
+      "renamedSymbol": "L:GameApplet.runFrame(I)V#5",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -183963,7 +184027,7 @@
     },
     {
       "symbol": "L:ug.g(I)V#6",
-      "renamedSymbol": "L:GameApplet.g(I)V#6",
+      "renamedSymbol": "L:GameApplet.runFrame(I)V#6",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -183974,7 +184038,7 @@
     },
     {
       "symbol": "L:ug.g(I)V#7",
-      "renamedSymbol": "L:GameApplet.g(I)V#7",
+      "renamedSymbol": "L:GameApplet.runFrame(I)V#7",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -197251,9 +197315,9 @@
     },
     {
       "symbol": "M:TorChallenge.d(B)V",
-      "renamedSymbol": "M:TorChallenge.d(B)V",
+      "renamedSymbol": "M:TorChallenge.tickGame(B)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "tickGame",
       "declaration": {
         "file": "TorChallenge.java",
         "start": 38659,
@@ -197262,9 +197326,9 @@
     },
     {
       "symbol": "M:TorChallenge.d(I)V",
-      "renamedSymbol": "M:TorChallenge.d(I)V",
+      "renamedSymbol": "M:TorChallenge.initializeGame(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "initializeGame",
       "declaration": {
         "file": "TorChallenge.java",
         "start": 31675,
@@ -197284,9 +197348,9 @@
     },
     {
       "symbol": "M:TorChallenge.f(I)V",
-      "renamedSymbol": "M:TorChallenge.f(I)V",
+      "renamedSymbol": "M:TorChallenge.drawFrame(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "drawFrame",
       "declaration": {
         "file": "TorChallenge.java",
         "start": 26805,
@@ -221374,9 +221438,9 @@
     },
     {
       "symbol": "M:ug.c(I)V",
-      "renamedSymbol": "M:GameApplet.c(I)V",
+      "renamedSymbol": "M:GameApplet.runTick(I)V",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "runTick",
       "declaration": {
         "file": "ug.java",
         "start": 23352,
@@ -221385,9 +221449,9 @@
     },
     {
       "symbol": "M:ug.d(B)V",
-      "renamedSymbol": "M:GameApplet.d(B)V",
+      "renamedSymbol": "M:GameApplet.tickGame(B)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "tickGame",
       "declaration": {
         "file": "ug.java",
         "start": 19149,
@@ -221396,9 +221460,9 @@
     },
     {
       "symbol": "M:ug.d(I)V",
-      "renamedSymbol": "M:GameApplet.d(I)V",
+      "renamedSymbol": "M:GameApplet.initializeGame(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "initializeGame",
       "declaration": {
         "file": "ug.java",
         "start": 24513,
@@ -221429,9 +221493,9 @@
     },
     {
       "symbol": "M:ug.f(I)V",
-      "renamedSymbol": "M:GameApplet.f(I)V",
+      "renamedSymbol": "M:GameApplet.drawFrame(I)V",
       "originalName": "f",
-      "renamedName": "f",
+      "renamedName": "drawFrame",
       "declaration": {
         "file": "ug.java",
         "start": 19184,
@@ -221462,9 +221526,9 @@
     },
     {
       "symbol": "M:ug.g(I)V",
-      "renamedSymbol": "M:GameApplet.g(I)V",
+      "renamedSymbol": "M:GameApplet.runFrame(I)V",
       "originalName": "g",
-      "renamedName": "g",
+      "renamedName": "runFrame",
       "declaration": {
         "file": "ug.java",
         "start": 10504,
@@ -224256,7 +224320,7 @@
     },
     {
       "symbol": "P:TorChallenge.d(B)V#0",
-      "renamedSymbol": "P:TorChallenge.d(B)V#0",
+      "renamedSymbol": "P:TorChallenge.tickGame(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -224267,7 +224331,7 @@
     },
     {
       "symbol": "P:TorChallenge.d(I)V#0",
-      "renamedSymbol": "P:TorChallenge.d(I)V#0",
+      "renamedSymbol": "P:TorChallenge.initializeGame(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -224300,7 +224364,7 @@
     },
     {
       "symbol": "P:TorChallenge.f(I)V#0",
-      "renamedSymbol": "P:TorChallenge.f(I)V#0",
+      "renamedSymbol": "P:TorChallenge.drawFrame(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -286307,7 +286371,7 @@
     },
     {
       "symbol": "P:ug.c(I)V#0",
-      "renamedSymbol": "P:GameApplet.c(I)V#0",
+      "renamedSymbol": "P:GameApplet.runTick(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -286318,7 +286382,7 @@
     },
     {
       "symbol": "P:ug.d(B)V#0",
-      "renamedSymbol": "P:GameApplet.d(B)V#0",
+      "renamedSymbol": "P:GameApplet.tickGame(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -286329,7 +286393,7 @@
     },
     {
       "symbol": "P:ug.d(I)V#0",
-      "renamedSymbol": "P:GameApplet.d(I)V#0",
+      "renamedSymbol": "P:GameApplet.initializeGame(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -286351,7 +286415,7 @@
     },
     {
       "symbol": "P:ug.f(I)V#0",
-      "renamedSymbol": "P:GameApplet.f(I)V#0",
+      "renamedSymbol": "P:GameApplet.drawFrame(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -286384,7 +286448,7 @@
     },
     {
       "symbol": "P:ug.g(I)V#0",
-      "renamedSymbol": "P:GameApplet.g(I)V#0",
+      "renamedSymbol": "P:GameApplet.runFrame(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -291591,7 +291655,7 @@
       "original": "TorChallenge.java",
       "renamed": "TorChallenge.java",
       "inputSha256": "75ee103948c5b44b7d6c6b36d6bd8d90cc0cbf95e347b07e992ad199fc73c86c",
-      "outputSha256": "66024ac51b50882a1bb36ade250e4dca3fec115bbc7aa18a5c780fe264fcf96d",
+      "outputSha256": "0ab6a0a8bae3fa555e530b5c13a2ab9f251f1bb2fb5147608359d910c4b0b3a7",
       "edits": [
         {
           "start": 78,
@@ -292515,6 +292579,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 26805,
+          "end": 26806,
+          "symbol": "M:TorChallenge.f(I)V",
+          "original": "f",
+          "renamed": "drawFrame"
+        },
+        {
           "start": 27005,
           "end": 27007,
           "symbol": "C:ka",
@@ -292851,6 +292922,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 31675,
+          "end": 31676,
+          "symbol": "M:TorChallenge.d(I)V",
+          "original": "d",
+          "renamed": "initializeGame"
+        },
+        {
           "start": 32762,
           "end": 32763,
           "symbol": "M:oj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ljd;",
@@ -293068,6 +293146,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 38659,
+          "end": 38660,
+          "symbol": "M:TorChallenge.d(B)V",
+          "original": "d",
+          "renamed": "tickGame"
+        },
+        {
           "start": 41233,
           "end": 41235,
           "symbol": "C:og",
@@ -293229,6 +293314,13 @@
           "symbol": "C:pk",
           "original": "pk",
           "renamed": "DelegatingCanvas"
+        },
+        {
+          "start": 48126,
+          "end": 48127,
+          "symbol": "M:TorChallenge.f(I)V",
+          "original": "f",
+          "renamed": "drawFrame"
         },
         {
           "start": 48182,
@@ -294001,6 +294093,13 @@
           "renamed": "DelegatingCanvas"
         },
         {
+          "start": 60528,
+          "end": 60529,
+          "symbol": "M:TorChallenge.f(I)V",
+          "original": "f",
+          "renamed": "drawFrame"
+        },
+        {
           "start": 60565,
           "end": 60567,
           "symbol": "C:wg",
@@ -294666,6 +294765,13 @@
           "renamed": "SpriteLoader"
         },
         {
+          "start": 64134,
+          "end": 64135,
+          "symbol": "M:TorChallenge.f(I)V",
+          "original": "f",
+          "renamed": "drawFrame"
+        },
+        {
           "start": 65513,
           "end": 65515,
           "symbol": "C:la",
@@ -294706,6 +294812,13 @@
           "symbol": "C:ad",
           "original": "ad",
           "renamed": "FullscreenFocusCanvas"
+        },
+        {
+          "start": 66623,
+          "end": 66624,
+          "symbol": "M:TorChallenge.f(I)V",
+          "original": "f",
+          "renamed": "drawFrame"
         },
         {
           "start": 66934,
@@ -294951,6 +295064,13 @@
           "symbol": "C:lk",
           "original": "lk",
           "renamed": "SpriteLoader"
+        },
+        {
+          "start": 74737,
+          "end": 74738,
+          "symbol": "M:TorChallenge.d(B)V",
+          "original": "d",
+          "renamed": "tickGame"
         },
         {
           "start": 74802,
@@ -358714,7 +358834,7 @@
       "original": "ug.java",
       "renamed": "GameApplet.java",
       "inputSha256": "5f5c429dde965ab96783b40625cc09cf14a04614b8eaec61214a9f3be0603f29",
-      "outputSha256": "67a7bee38f3a1afa483cb1d74df8f8257d0a23a465a6297e391e4c8302e212e6",
+      "outputSha256": "da00bcdc82a17b4ee88087ca80acebbd9ebf8d9c4e69dce3f52025b4fb631280",
       "edits": [
         {
           "start": 60,
@@ -358871,11 +358991,32 @@
           "renamed": "SectorCacheStore"
         },
         {
+          "start": 8504,
+          "end": 8505,
+          "symbol": "M:ug.d(I)V",
+          "original": "d",
+          "renamed": "initializeGame"
+        },
+        {
+          "start": 9299,
+          "end": 9300,
+          "symbol": "M:ug.g(I)V",
+          "original": "g",
+          "renamed": "runFrame"
+        },
+        {
           "start": 9332,
           "end": 9334,
           "symbol": "C:hd",
           "original": "hd",
           "renamed": "GzipDecoder"
+        },
+        {
+          "start": 9443,
+          "end": 9444,
+          "symbol": "M:ug.c(I)V",
+          "original": "c",
+          "renamed": "runTick"
         },
         {
           "start": 9847,
@@ -358890,6 +359031,20 @@
           "symbol": "M:oj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ljd;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 10504,
+          "end": 10505,
+          "symbol": "M:ug.g(I)V",
+          "original": "g",
+          "renamed": "runFrame"
+        },
+        {
+          "start": 11936,
+          "end": 11937,
+          "symbol": "M:ug.f(I)V",
+          "original": "f",
+          "renamed": "drawFrame"
         },
         {
           "start": 12177,
@@ -358997,11 +359152,32 @@
           "renamed": "callWithoutArguments"
         },
         {
+          "start": 18154,
+          "end": 18155,
+          "symbol": "M:ug.d(B)V",
+          "original": "d",
+          "renamed": "tickGame"
+        },
+        {
           "start": 18734,
           "end": 18735,
           "symbol": "M:oj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ljd;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 19149,
+          "end": 19150,
+          "symbol": "M:ug.d(B)V",
+          "original": "d",
+          "renamed": "tickGame"
+        },
+        {
+          "start": 19184,
+          "end": 19185,
+          "symbol": "M:ug.f(I)V",
+          "original": "f",
+          "renamed": "drawFrame"
         },
         {
           "start": 20087,
@@ -359074,11 +359250,32 @@
           "renamed": "wrapException"
         },
         {
+          "start": 23352,
+          "end": 23353,
+          "symbol": "M:ug.c(I)V",
+          "original": "c",
+          "renamed": "runTick"
+        },
+        {
+          "start": 23973,
+          "end": 23974,
+          "symbol": "M:ug.d(B)V",
+          "original": "d",
+          "renamed": "tickGame"
+        },
+        {
           "start": 24249,
           "end": 24250,
           "symbol": "M:oj.a(Ljava/lang/Throwable;Ljava/lang/String;)Ljd;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 24513,
+          "end": 24514,
+          "symbol": "M:ug.d(I)V",
+          "original": "d",
+          "renamed": "initializeGame"
         },
         {
           "start": 25334,
@@ -364179,10 +364376,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/torchallenge"
     },
-    "rulesSha256": "a5e8826a4d0227f0175109ea722885529179e79340b6b9cae08b9b6c2e6d6773",
+    "rulesSha256": "233491c0a9c82f5913ffcf459fcfe7b1bd4d7bc7ad29fcfeb41be04ffa06d85d",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "14fdf7de6f9637c72d4ea046e941bc190e6b0245efbdc109791500ac47474a65",
-    "outputTreeSha256": "d42c6ec5956b53a47be7ed19d4b7d8282aff8d7308163beff8510ab43f86e5c3",
+    "outputTreeSha256": "6645e684a700ea314cf0e6864834075c96d7c798f6e59686816db39191620d79",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {
