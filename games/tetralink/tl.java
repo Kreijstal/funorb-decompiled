@@ -35,7 +35,7 @@ final class tl extends gn implements ih, dm {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, na param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -75,7 +75,7 @@ final class tl extends gn implements ih, dm {
           od.field_S.a(this.field_K, 20 + param1 + this.field_t, this.field_w + param2 + 15, this.field_F - 40, this.field_u, 16777215, -1, 1, 0, od.field_S.field_N);
         }
         if (null != this.field_W) {
-          ra.g(param1 + 10, 134 + param2, -20 + this.field_F, 4210752);
+          SoftwareRasterizer.g(param1 + 10, 134 + param2, -20 + this.field_F, 4210752);
         }
         super.a(param0, param1, param2, param3);
     }
@@ -92,7 +92,7 @@ final class tl extends gn implements ih, dm {
         if (param0 != 8) {
           return (String) null;
         }
-        if (fl.field_s) {
+        if (BufferedSocket.field_s) {
           return null;
         }
         if (ec.field_i < gd.field_Mb) {
@@ -158,7 +158,7 @@ final class tl extends gn implements ih, dm {
         RuntimeException var3 = null;
         try {
           if (param0 == this.field_ab) {
-            this.field_S.a((na) (this), -384169950);
+            this.field_S.a((UiWidget) (this), -384169950);
           }
           if (param0 == this.field_S) {
             this.a(false);
@@ -207,7 +207,7 @@ final class tl extends gn implements ih, dm {
 
     private final void a(boolean param0) {
         ae var3;
-        if (wd.b((byte) -101) ||
+        if (RasterBuffer.b((byte) -101) ||
           !(0 >= this.field_ab.field_A.length()) &&
           !(this.field_S.field_A.length() <= 0)) {
           nl.a(this.field_S.field_A, 39, this.field_ab.field_A);
@@ -275,7 +275,7 @@ final class tl extends gn implements ih, dm {
         RuntimeException decompiledCaughtException = null;
         uj var6 = null;
         RuntimeException var6_ref = null;
-        jb var7 = null;
+        BitmapFont var7 = null;
         String var8 = null;
         dk var9 = null;
         rc var12 = null;
@@ -334,7 +334,7 @@ final class tl extends gn implements ih, dm {
             if (!this.field_R) {
               this.field_cb.field_H = (kg) ((Object) new q());
             } else {
-              this.field_cb.field_C = rk.field_a;
+              this.field_cb.field_C = SecondaryNodeDeque.field_a;
               this.field_cb.field_H = (kg) ((Object) new q());
             }
           } else {
@@ -346,7 +346,7 @@ final class tl extends gn implements ih, dm {
             this.field_w = this.field_w + (5 + var7.b(this.field_K, this.field_F - 40, var7.field_N));
           }
           var8 = oa.field_n;
-          var9 = gb.a((byte) 91, lk.q(13));
+          var9 = DualLinkNode.a((byte) 91, lk.q(13));
           if (var9 == lh.field_s) {
             var8 = co.field_t;
           } else {
@@ -357,11 +357,11 @@ final class tl extends gn implements ih, dm {
           dupTemp$0 = new rc(10, this.field_w, -20 + this.field_F, 25, this.field_ab, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.c(dupTemp$0, 10);
-          this.field_w = this.field_w + (((na) ((Object) var12)).field_u + 5);
+          this.field_w = this.field_w + (((UiWidget) ((Object) var12)).field_u + 5);
           dupTemp$1 = new rc(10, this.field_w, -20 + this.field_F, 25, this.field_S, false, 80, 3, var7, 16777215, gj.field_a);
           var13 = dupTemp$1;
           this.c(dupTemp$1, 10);
-          this.field_w = this.field_w + (((na) ((Object) var13)).field_u + 5);
+          this.field_w = this.field_w + (((UiWidget) ((Object) var13)).field_u + 5);
           this.field_U.field_s = (dn) (this);
           if (null != this.field_W) {
             this.field_W.field_s = (dn) (this);

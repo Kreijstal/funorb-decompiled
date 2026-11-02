@@ -30,7 +30,7 @@ final class da {
 
     final static String a(byte param0, Throwable param1) throws IOException {
         String var2 = null;
-        cn var14_ref = null;
+        ClientException var14_ref = null;
         String var11 = null;
         StringWriter var15 = null;
         PrintWriter var4 = null;
@@ -50,7 +50,7 @@ final class da {
         String var2Lifetime1;
         String var2Lifetime2;
         String var2Lifetime3;
-        cn var14_refLifetime1;
+        ClientException var14_refLifetime1;
         String var11Lifetime1;
         String var11Lifetime2;
         String var11Lifetime3;
@@ -81,11 +81,11 @@ final class da {
         int var10Lifetime1;
         int var12Lifetime1;
         if (param0 == 118) {
-          if (!(param1 instanceof cn)) {
+          if (!(param1 instanceof ClientException)) {
             var2 = "";
           } else {
-            var14_ref = (cn) ((Object) param1);
-            param1 = var14_ref.field_a;
+            var14_ref = (ClientException) ((Object) param1);
+            param1 = var14_ref.cause;
             var2 = var14_ref.field_d + " | ";
             var11 = var2;
             var2 = var11;
@@ -147,11 +147,11 @@ final class da {
           return var2Lifetime5;
         }
         field_h = (String) null;
-        if (!(param1 instanceof cn)) {
+        if (!(param1 instanceof ClientException)) {
           var2Lifetime1 = "";
         } else {
-          var14_refLifetime1 = (cn) ((Object) param1);
-          param1 = var14_refLifetime1.field_a;
+          var14_refLifetime1 = (ClientException) ((Object) param1);
+          param1 = var14_refLifetime1.cause;
           var2Lifetime1 = var14_refLifetime1.field_d + " | ";
           var11Lifetime1 = var2Lifetime1;
           var2Lifetime1 = var11Lifetime1;
@@ -213,7 +213,7 @@ final class da {
         return var2Lifetime3;
     }
 
-    final static boolean a(ah param0, ah param1, int param2, ah param3) {
+    final static boolean a(Archive param0, Archive param1, int param2, Archive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_19_0 = null;

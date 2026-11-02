@@ -16,7 +16,7 @@ final class tn {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          bh var2 = null;
+          PacketBuffer var2 = null;
           if (4 <= vh.field_e.field_h) {
             if (-1 == vh.field_e.field_d) {
               return 3;
@@ -28,7 +28,7 @@ final class tn {
           }
           try {
             if (on.field_b == 0) {
-              hd.field_x = ug.field_ab.a(ud.field_Nb, ji.field_Lb, (byte) 107);
+              hd.field_x = ug.field_ab.requestSocket(ud.field_Nb, ji.field_Lb, (byte) 107);
               on.field_b = on.field_b + 1;
             }
             if (on.field_b == 1) {
@@ -41,12 +41,12 @@ final class tn {
               }
             }
             if (on.field_b == 2) {
-              li.field_g = new fl((java.net.Socket) (hd.field_x.field_f), ug.field_ab);
-              var2 = new bh(13);
-              je.a(-94, dh.field_l, var2, je.field_f, ui.field_g);
+              li.field_g = new BufferedSocket((java.net.Socket) (hd.field_x.field_f), ug.field_ab);
+              var2 = new PacketBuffer(13);
+              IntrusiveDeque.a(-94, dh.field_l, var2, IntrusiveDeque.field_f, ui.field_g);
               var2.a(15, false);
               var2.d(c.field_f, (byte) -124);
-              li.field_g.a(true, 13, var2.field_u, 0);
+              li.field_g.a(true, 13, var2.payload, 0);
               on.field_b = on.field_b + 1;
               od.field_T = k.a(0) + 30000L;
             }
@@ -54,8 +54,8 @@ final class tn {
               tn.b(-79);
             }
             if (on.field_b == 3) {
-              if (li.field_g.f(0) > 0) {
-                var1_int = li.field_g.c(3);
+              if (li.field_g.available(0) > 0) {
+                var1_int = li.field_g.readByte(3);
                 if (var1_int != 0) {
                   stackIn_30_0 = qk.a(var1_int, true);
                   return stackIn_30_0;

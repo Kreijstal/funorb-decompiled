@@ -10,12 +10,12 @@ final class dg {
     private int field_b;
     private boolean field_a;
     static float field_j;
-    oh[] field_k;
+    Sprite[] field_k;
     private int field_c;
     static int field_e;
     static String field_l;
     private int field_h;
-    oh field_n;
+    Sprite field_n;
 
     final static boolean c(int param0) {
         int var1 = -62 % ((param0 + 11) / 57);
@@ -32,9 +32,9 @@ final class dg {
         field_m = null;
     }
 
-    final dg a(oh[] param0, boolean param1) {
+    final dg a(Sprite[] param0, boolean param1) {
         RuntimeException var3 = null;
-        oh[] var4 = null;
+        Sprite[] var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -42,8 +42,8 @@ final class dg {
         try {
           this.field_k = param0;
           if (!param1) {
-            var4 = (oh[]) null;
-            this.a((oh[]) null, true);
+            var4 = (Sprite[]) null;
+            this.a((Sprite[]) null, true);
           }
           return this;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,8 +60,8 @@ final class dg {
         }
     }
 
-    final void a(int param0, int param1, int param2, qn param3, na param4) {
-        jb stackIn_17_0;
+    final void a(int param0, int param1, int param2, qn param3, UiWidget param4) {
+        BitmapFont stackIn_17_0;
         String stackIn_17_1;
         int stackIn_17_2;
         int stackIn_17_3;
@@ -84,7 +84,7 @@ final class dg {
         String var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
-        na var8 = null;
+        UiWidget var8 = null;
         try {
           qj.a(param4.field_F, (byte) -36, this.field_k, param2 + param4.field_t, param4.field_u, param1 + param4.field_w);
           if (this.field_n != null) {
@@ -106,8 +106,8 @@ final class dg {
           }
           var6 = param3.c(param4, 4373);
           if (param0 != 46) {
-            var8 = (na) null;
-            this.a(-111, 99, -82, (qn) null, (na) null);
+            var8 = (UiWidget) null;
+            this.a(-111, 99, -82, (qn) null, (UiWidget) null);
           }
           if (var6 != null &&
             null != param3.field_b &&
@@ -137,7 +137,7 @@ final class dg {
             } else {
               stackIn_24_8 = this.field_h;
             }
-            ((jb) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_20_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, stackIn_23_6, stackIn_23_7, stackIn_24_8, param3.field_k, param3.field_d, param3.field_c);
+            ((BitmapFont) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_20_2, stackIn_23_3, stackIn_23_4, stackIn_23_5, stackIn_23_6, stackIn_23_7, stackIn_24_8, param3.field_k, param3.field_d, param3.field_c);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -183,13 +183,13 @@ final class dg {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        bc var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         eh var11 = null;
-        bc var12 = null;
+        BitPacketBuffer var12 = null;
         int[] var13 = null;
         cf var14 = null;
         cf var15 = null;
@@ -197,7 +197,7 @@ final class dg {
         var8 = TetraLink.field_J;
         try {
           var12 = kb.field_q;
-          var2 = var12.d((byte) -99);
+          var2 = var12.readUnsignedByte((byte) -99);
           if (param0 == ~var2) {
             var10 = lh.h(-7990);
             var16 = var10;
@@ -206,11 +206,11 @@ final class dg {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((bh) ((Object) var5)).d((byte) -99);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte((byte) -99);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((bh) ((Object) var5)).f(122);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).f(122);
             }
-            var14 = (cf) (sf.field_a.c(false));
+            var14 = (cf) (SecondaryNodeDequeIterator.field_a.c(false));
             if (var14 == null) {
               mk.a(false);
               return;
@@ -218,7 +218,7 @@ final class dg {
             var14.field_u = var3;
             var14.field_s = true;
             var14.field_t = var16[0];
-            var14.b(false);
+            var14.unlink(false);
             return;
           }
           if (var2 != 1) {
@@ -226,7 +226,7 @@ final class dg {
               fk.a(-93, (Throwable) null, "A1: " + hc.a(false));
               mk.a(false);
             } else {
-              var15 = (cf) (sf.field_a.c(false));
+              var15 = (cf) (SecondaryNodeDequeIterator.field_a.c(false));
               if (var15 == null) {
                 mk.a(false);
                 return;
@@ -234,7 +234,7 @@ final class dg {
               var15.field_u = lh.h(param0 - 7989);
               var15.field_t = var15.field_u[0];
               var15.field_s = true;
-              var15.b(false);
+              var15.unlink(false);
             }
           } else {
             var11 = (eh) (qn.field_t.c(false));
@@ -242,7 +242,7 @@ final class dg {
               mk.a(false);
               return;
             }
-            var11.b(false);
+            var11.unlink(false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -260,7 +260,7 @@ final class dg {
         return this;
     }
 
-    final void a(int param0, na param1, dg param2, boolean param3, int param4, qn param5) {
+    final void a(int param0, UiWidget param1, dg param2, boolean param3, int param4, qn param5) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -270,7 +270,7 @@ final class dg {
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        wf var8 = null;
+        PcmSample var8 = null;
         try {
           if (this.field_a) {
             param2.a(46, param0, param4, param5, param1);
@@ -295,8 +295,8 @@ final class dg {
             param2.field_n = this.field_n;
           }
           if (!param3) {
-            var8 = (wf) null;
-            dg.a(-102, (byte) 68, (wf) null);
+            var8 = (PcmSample) null;
+            dg.a(-102, (byte) 68, (PcmSample) null);
           }
           if (this.field_b != -2147483648) {
             param2.field_b = this.field_b;
@@ -347,7 +347,7 @@ final class dg {
         }
         vd.b(param0, 0);
         if (wl.field_d) {
-          ra.e(we.field_e.field_g.field_M, we.field_e.field_g.field_yb, we.field_e.field_g.field_Hb, we.field_e.field_g.field_R);
+          SoftwareRasterizer.e(we.field_e.field_g.field_M, we.field_e.field_g.field_yb, we.field_e.field_g.field_Hb, we.field_e.field_g.field_R);
           we.field_e.field_g.a(param0, param1 + 344);
         }
         if (param1 != -88) {
@@ -358,8 +358,8 @@ final class dg {
 
     final dg a(byte param0, boolean param1) {
         if (param0 != -77) {
-          oh[] var4 = (oh[]) null;
-          this.a((oh[]) null, true);
+          Sprite[] var4 = (Sprite[]) null;
+          this.a((Sprite[]) null, true);
         }
         this.field_a = param1 ? true : false;
         return this;
@@ -421,7 +421,7 @@ final class dg {
         var12 = TetraLink.field_J;
         try {
           nb.a(ng.field_t, (byte) 89);
-          if (null != qe.field_a) {
+          if (null != GameKeyHandler.field_a) {
             var15 = nm.field_n;
             var17 = var15;
             nm.field_n.field_R = 0;
@@ -466,11 +466,11 @@ final class dg {
               }
             }
             rn.field_c.field_S = true;
-            if (kl.field_a) {
+            if (FullscreenFocusCanvas.field_a) {
               eh.field_q.field_jb = kk.field_R;
               qi.field_n.field_S = false;
               if (var8 != 0) {
-                stackIn_57_0 = md.field_I;
+                stackIn_57_0 = SpriteState.field_I;
               } else {
                 stackIn_57_0 = ni.field_i;
               }
@@ -524,7 +524,7 @@ final class dg {
                   rh.field_G[var13] = false;
                   var13++;
                 }
-                lk.a(true, (byte) -119, -1, qe.field_a, 0, -1, hg.field_k, -1);
+                lk.a(true, (byte) -119, -1, GameKeyHandler.field_a, 0, -1, hg.field_k, -1);
                 if (!(dd.field_c < 2) &&
                   sn.field_a[12]) {
                   nn.field_R = true;
@@ -574,18 +574,18 @@ final class dg {
           stackIn_82_2 = (param0) && (!param2) && (lg.field_S);
           ((hl) (Object) stackIn_81_0).a(stackIn_81_1, stackIn_82_2);
           we.field_e.field_g.c(true);
-          if (qe.field_a != null) {
+          if (GameKeyHandler.field_a != null) {
             if (qi.field_n.field_F != 0) {
               tb.a(param3, -15289);
             }
             if (rn.field_c.field_F != 0) {
-              if (!kl.field_a) {
+              if (!FullscreenFocusCanvas.field_a) {
                 l.a(0, param3);
               } else {
                 oi.a((byte) 126, param3);
               }
             }
-            hg.a(param3, qe.field_a, 30544, true);
+            hg.a(param3, GameKeyHandler.field_a, 30544, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -606,7 +606,7 @@ final class dg {
         this.field_c = -2;
     }
 
-    final static bf a(int param0, byte param1, wf param2) {
+    final static bf a(int param0, byte param1, PcmSample param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         bf stackIn_1_0 = null;

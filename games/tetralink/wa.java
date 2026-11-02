@@ -10,20 +10,20 @@ final class wa {
     static hl field_a;
     static int field_d;
     static wk field_c;
-    static fl field_e;
+    static BufferedSocket field_e;
 
     final static hl a(int param0) {
         if (param0 <= 24) {
           field_f = (id[]) null;
         }
-        return fl.field_n.field_Kb;
+        return BufferedSocket.field_n.field_Kb;
     }
 
     final static void a(int param0, boolean param1) {
         if (!param1) {
           field_g = (String) null;
         }
-        pb.field_b = wm.field_n[param0];
+        pb.field_b = ImageProducerRasterBuffer.field_n[param0];
         eg.field_N = bb.field_a[param0];
         nj.field_e = hb.field_c[param0];
     }
@@ -185,7 +185,7 @@ final class wa {
                   var29 = var29 + var31;
                   var30 = var30 + var32;
                   var22 = var22 + var24;
-                  var36Lifetime2 = var36Lifetime2 + ra.field_f;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer.field_f;
                   var21 = var21 + var23;
                   var25 = var25 + var27;
                 }
@@ -341,7 +341,7 @@ final class wa {
               var22 = var22 + var24;
               var18 = var18 + var20;
               var26 = var26 + var28;
-              var35Lifetime1 = var35Lifetime1 + ra.field_f;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer.field_f;
               var17_int = var17_int + var19;
               var30 = var30 + var32;
             }

@@ -3,11 +3,11 @@
  */
 final class s {
     static int field_d;
-    static oh[] field_e;
+    static Sprite[] field_e;
     static String field_b;
     static boolean field_f;
     static float field_c;
-    static wf[] field_a;
+    static PcmSample[] field_a;
 
     final static void a(int param0, qa param1) {
         try {
@@ -32,13 +32,13 @@ final class s {
 
     final static boolean b(int param0) {
         if (param0 == 63) {
-          return ~qb.field_N.field_cc == ~oj.field_c ? true : false;
+          return ~qb.field_N.field_cc == ~IsaacCipher.field_c ? true : false;
         }
-        field_a = (wf[]) null;
-        return ~qb.field_N.field_cc == ~oj.field_c ? true : false;
+        field_a = (PcmSample[]) null;
+        return ~qb.field_N.field_cc == ~IsaacCipher.field_c ? true : false;
     }
 
-    final static void a(int param0, oh[] param1, byte param2, int param3, boolean param4, int param5, int param6, int param7, int param8, int param9, jb param10, oh[] param11) {
+    final static void a(int param0, Sprite[] param1, byte param2, int param3, boolean param4, int param5, int param6, int param7, int param8, int param9, BitmapFont param10, Sprite[] param11) {
         try {
           if (param2 != 7) {
             field_b = (String) null;

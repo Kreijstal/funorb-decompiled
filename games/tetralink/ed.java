@@ -15,7 +15,7 @@ final class ed extends en {
     static String field_P;
     private int field_S;
 
-    final boolean a(na param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_5_0 = 0;
@@ -117,7 +117,7 @@ final class ed extends en {
         }
         var3 = stackIn_5_0;
         if (var3 != 0) {
-          stackIn_8_0 = oj.field_a.field_z;
+          stackIn_8_0 = IsaacCipher.field_a.field_z;
         } else {
           stackIn_8_0 = 480;
         }
@@ -146,7 +146,7 @@ final class ed extends en {
         return hk.field_a;
     }
 
-    private ed(int param0, int param1, int param2, int param3, kg param4, dn param5, na param6, boolean param7, boolean param8) {
+    private ed(int param0, int param1, int param2, int param3, kg param4, dn param5, UiWidget param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_N = 2147483647;
         this.field_W = 2147483647;
@@ -159,7 +159,7 @@ final class ed extends en {
         }
     }
 
-    final void a(int param0, boolean param1, na param2, int param3, int param4, int param5) {
+    final void a(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           super.a(param0, param1, param2, param3, param4, param5);
           this.field_x = 0;
@@ -178,16 +178,16 @@ final class ed extends en {
         }
     }
 
-    final static se e(byte param0) {
+    final static MouseWheelInput e(byte param0) {
         try {
           Throwable var1 = null;
-          se stackIn_3_0 = null;
+          MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 < 111) {
               ed.f((byte) -107);
             }
-            stackIn_3_0 = (se) (Class.forName("tj").newInstance());
+            stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -201,7 +201,7 @@ final class ed extends en {
         }
     }
 
-    final void a(na param0, int param1, int param2, boolean param3) {
+    final void a(UiWidget param0, int param1, int param2, boolean param3) {
         int stackIn_16_1 = 0;
         int stackIn_17_2 = 0;
         int stackIn_22_1 = 0;
@@ -320,7 +320,7 @@ final class ed extends en {
         int var4Lifetime1;
         var6 = TetraLink.field_J;
         try {
-          if (qe.field_g != va.field_p) {
+          if (GameKeyHandler.field_g != va.field_p) {
             var1_int = 1;
             if (!cd.field_d.field_c &&
               wk.field_i.field_c) {
@@ -382,7 +382,7 @@ final class ed extends en {
               var1_int = 0;
             }
             if (var1_int != 0) {
-              va.field_p = qe.field_g;
+              va.field_p = GameKeyHandler.field_g;
               wk.field_i = cd.field_d;
             }
           }
@@ -454,7 +454,7 @@ final class ed extends en {
             fieldTemp$4 = var1.field_n - 1;
             var1.field_n = var1.field_n - 1;
             if (0 == fieldTemp$4) {
-              var1.b(false);
+              var1.unlink(false);
             }
             var1 = (ko) (eg.field_J.a((byte) -70));
           }
@@ -463,7 +463,7 @@ final class ed extends en {
             fieldTemp$3 = var2.field_r + 1;
             var2.field_r = var2.field_r + 1;
             if (83 < fieldTemp$3) {
-              var2.b(false);
+              var2.unlink(false);
             }
             var2 = (kb) (tb.field_d.a((byte) -70));
           }
@@ -490,7 +490,7 @@ final class ed extends en {
               break;
             }
             if (var3 == null) {
-              tb.field_d.a(var7, false);
+              tb.field_d.addLast(var7, false);
             } else {
               cl.a(var3, 98, var7);
             }
@@ -523,7 +523,7 @@ final class ed extends en {
                 vh.field_d = true;
                 var3_int = ki.field_b - bl.field_Xb & 65535;
                 stackIn_102_0 = ((var3_int & 32768) != 0);
-                jo.field_a = stackIn_102_0;
+                DualLinkDeque.field_a = stackIn_102_0;
               }
             }
             ac.field_a.a((byte) -125);
@@ -536,7 +536,7 @@ final class ed extends en {
             fieldTemp$2 = var3_ref.field_s - 1;
             var3_ref.field_s = var3_ref.field_s - 1;
             if (fieldTemp$2 <= 0) {
-              var3_ref.b(false);
+              var3_ref.unlink(false);
             } else {
               var3_ref.field_v = var3_ref.field_v + var3_ref.field_r;
               var3_ref.field_t = var3_ref.field_t + var3_ref.field_x;
@@ -556,7 +556,7 @@ final class ed extends en {
               break;
             }
             var3_refLifetime1 = new qi(0, 1638400, 0, var4, -8192, var5, 150);
-            nd.field_Sb.a(var3_refLifetime1, false);
+            nd.field_Sb.addLast(var3_refLifetime1, false);
           }
           if (field_O != -4 &&
             field_O != -2) {
@@ -566,12 +566,12 @@ final class ed extends en {
             wk.field_u = 0;
           }
           if (wk.field_u == ml.field_ab) {
-            wd.field_i = 0;
+            RasterBuffer.field_i = 0;
           } else {
-            fieldTemp$1 = wd.field_i + 8;
-            wd.field_i = wd.field_i + 8;
+            fieldTemp$1 = RasterBuffer.field_i + 8;
+            RasterBuffer.field_i = RasterBuffer.field_i + 8;
             if (fieldTemp$1 >= 256) {
-              wd.field_i = 0;
+              RasterBuffer.field_i = 0;
               ml.field_ab = wk.field_u;
             }
           }

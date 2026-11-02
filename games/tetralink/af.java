@@ -3,10 +3,10 @@
  */
 final class af {
     static long field_f;
-    static un field_g;
+    static UrlFetchTask field_g;
     static int field_h;
     static String field_b;
-    static kc field_c;
+    static ModelData field_c;
     static int[] field_e;
     static String field_d;
     static int[] field_a;
@@ -113,27 +113,27 @@ final class af {
         var4Lifetime1 = new v();
         var4Lifetime1.field_n = param0;
         var4Lifetime1.field_q = param3;
-        tc.field_p.a(var4Lifetime1, false);
+        tc.field_p.addLast(var4Lifetime1, false);
         fd.a(-68, param2, var4Lifetime1);
         return var4Lifetime1;
     }
 
     final static void b(int param0) {
-        oh var1 = null;
-        oh var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = TetraLink.field_J;
         try {
-          var1 = new oh(540, 140);
+          var1 = new Sprite(540, 140);
           sk.a((byte) 110, var1);
           vn.b();
-          ra.a();
+          SoftwareRasterizer.a();
           en.field_K = 0;
           ni.a((byte) 71);
           var2 = var1.d();
           for (var3 = 0; var3 < 15; var3++) {
             var2.c(-2, -2, 16777215);
-            ra.a(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.a(4, 4, 0, 0, 540, 140);
           }
           oi.field_e.c();
           var1.d(0, 0);

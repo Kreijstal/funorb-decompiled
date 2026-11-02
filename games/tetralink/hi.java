@@ -206,7 +206,7 @@ abstract class hi {
 
     final static void b(int param0) {
         io.field_h.setLength(0);
-        sf.field_d = 0;
+        SecondaryNodeDequeIterator.field_d = 0;
         if (param0 >= -33) {
           field_d = (double[]) null;
         }

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tc extends mc {
+final class tc extends IntrusiveNode {
     long field_r;
     int field_u;
-    static je field_p;
+    static IntrusiveDeque field_p;
     byte[] field_o;
     static String field_n;
     static String field_q;
@@ -41,7 +41,7 @@ final class tc extends mc {
     static {
         field_q = "Accept rematch";
         field_n = "<%0> is already on your friend list.";
-        field_p = new je();
+        field_p = new IntrusiveDeque();
         field_v = 0;
         field_t = "Names can only contain letters, numbers, spaces and underscores";
     }

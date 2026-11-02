@@ -5,7 +5,7 @@ final class mm extends um {
     static om field_y;
     static int field_w;
     static sd field_u;
-    static je field_s;
+    static IntrusiveDeque field_s;
     private nn field_r;
     static String field_q;
     private nn field_t;
@@ -179,7 +179,7 @@ final class mm extends um {
             stackIn_9_0 = ic.field_d;
             return stackIn_9_0;
           }
-          if (ha.a(var5, -78)) {
+          if (MouseInputHandler.a(var5, -78)) {
             stackIn_13_0 = ac.field_d;
             return stackIn_13_0;
           }
@@ -196,7 +196,7 @@ final class mm extends um {
             return stackIn_21_0;
           }
           if (jd.a(var5, -6270, var7)) {
-            stackIn_25_0 = oj.field_f;
+            stackIn_25_0 = IsaacCipher.field_f;
             return stackIn_25_0;
           }
           if (mf.a((byte) -28, var7, var5)) {
@@ -206,7 +206,7 @@ final class mm extends um {
           if (!qa.a(16732, var5, var7)) {
             return ka.field_i;
           }
-          stackIn_32_0 = oj.field_f;
+          stackIn_32_0 = IsaacCipher.field_f;
           return stackIn_32_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

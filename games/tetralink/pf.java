@@ -29,7 +29,7 @@ final class pf {
 
     private final boolean b(int param0, int param1, int param2) {
         if (param2 == 17) {
-          mm.field_y = new om(this.field_h.field_eb, this.field_h.field_z, this.field_h.field_Hb, this.field_h.field_R, param0, sa.field_h, hl.field_gb, sn.field_c, bk.field_i, vd.field_c, ek.field_n, this.field_b, this.field_e);
+          mm.field_y = new om(this.field_h.field_eb, this.field_h.field_z, this.field_h.field_Hb, this.field_h.field_R, param0, RandomAccessCacheFile.field_h, hl.field_gb, sn.field_c, bk.field_i, vd.field_c, NotificationToast.field_n, this.field_b, this.field_e);
           return true;
         }
         if (param1 == -20991) {
@@ -80,7 +80,7 @@ final class pf {
                     ei.d(-4210768);
                   } else {
                     if (20 == param2) {
-                      em.d(-20715);
+                      MatchSetup.d(-20715);
                     } else {
                       if (19 != param2) {
                         return false;
@@ -102,7 +102,7 @@ final class pf {
     final void a(boolean param0) {
         String var3 = null;
         if (null != this.field_b &&
-          ~this.field_e != ~oj.field_c) {
+          ~this.field_e != ~IsaacCipher.field_c) {
           var3 = this.b(2);
           String var2 = var3;
           this.field_j.a(sk.a(new String[]{var3}, qm.field_a, 125), 1, 17);
@@ -209,13 +209,13 @@ final class pf {
             if (me.field_b == 0) {
               this.field_j.a(kf.field_a, param1 - 11, 12);
             }
-            this.field_j.a(md.field_H, 1, 13);
+            this.field_j.a(SpriteState.field_H, 1, 13);
           }
           if (param0.field_i == 2) {
-            if (mc.field_f == 0) {
+            if (IntrusiveNode.field_f == 0) {
               this.field_j.a(jn.field_a, param1 - 11, 12);
             }
-            this.field_j.a(mc.field_a, 1, 13);
+            this.field_j.a(IntrusiveNode.field_a, 1, 13);
           }
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "pf.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -272,7 +272,7 @@ final class pf {
         var3 = var5.field_ec;
         if (var5.field_Vb) {
           this.field_j.a(sk.a(new String[]{var3}, cm.field_b, 123), 1, 2);
-          this.field_j.a(sk.a(new String[]{var3}, ca.field_b, 122), param0 - 78, 3);
+          this.field_j.a(sk.a(new String[]{var3}, SocketConnector.field_b, 122), param0 - 78, 3);
         } else {
           if (var5.field_xc) {
             this.field_j.a(sk.a(new String[]{var3}, oa.field_o, 127), 1, 2);
@@ -312,7 +312,7 @@ final class pf {
           pf.a((String) null, -98, -98, 115L, (byte) 47);
           return;
         }
-        if (oj.field_c == this.field_e) {
+        if (IsaacCipher.field_c == this.field_e) {
           if (param0 == 19) {
             return;
           }
@@ -334,7 +334,7 @@ final class pf {
           return;
         }
         var7 = tm.a(this.field_e, -26778);
-        var4 = sf.a(-18701, this.field_e);
+        var4 = SecondaryNodeDequeIterator.a(-18701, this.field_e);
         var5 = this.b(2);
         if (var4 != null) {
           if (!qb.field_N.field_Kb) {
@@ -411,7 +411,7 @@ final class pf {
             return;
           }
           if (this.field_b != null) {
-            if (oj.field_c == this.field_e &&
+            if (IsaacCipher.field_c == this.field_e &&
               param0 != 2) {
               return;
             }
@@ -475,7 +475,7 @@ final class pf {
           q.a(param2, (byte) -118, this.field_e);
         } else {
           if (param0 == 1) {
-            qe.a(47, param2, this.field_e);
+            GameKeyHandler.a(47, param2, this.field_e);
           } else {
             if (param0 == 2) {
               uf.a(param2, (byte) 110, this.field_c);

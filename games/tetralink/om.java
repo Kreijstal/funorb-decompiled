@@ -304,7 +304,7 @@ final class om extends hl {
             rd.a(kn.field_f, 0, fi.field_Ab, 0, var4);
             qc.field_db = new String[-var4 + var3_int - 1];
             rd.a(kn.field_f, 1 + var4, qc.field_db, 0, -1 + (var3_int - var4));
-            var3_int = t.a(uf.field_f, param1 ^ -125, sk.a(new String[]{"<br><%0><br>"}, gb.field_p, 124), kn.field_f, dk.field_d);
+            var3_int = t.a(uf.field_f, param1 ^ -125, sk.a(new String[]{"<br><%0><br>"}, DualLinkNode.field_p, 124), kn.field_f, dk.field_d);
             var4 = -1;
             for (var5 = 0; var3_int > var5; var5++) {
               if (!"<%0>".equals(kn.field_f[var5])) {
@@ -318,18 +318,18 @@ final class om extends hl {
             }
             jl.field_b = new String[var4];
             rd.a(kn.field_f, 0, jl.field_b, 0, var4);
-            ah.field_j = new String[-1 + (-var4 + var3_int)];
-            rd.a(kn.field_f, var4 + 1, ah.field_j, 0, -var4 + (var3_int - 1));
+            Archive.field_j = new String[-1 + (-var4 + var3_int)];
+            rd.a(kn.field_f, var4 + 1, Archive.field_j, 0, -var4 + (var3_int - 1));
             if (fi.field_Ab.length < jl.field_b.length) {
               stackIn_50_0 = jl.field_b.length;
             } else {
               stackIn_50_0 = fi.field_Ab.length;
             }
             var5 = stackIn_50_0;
-            if (qc.field_db.length >= ah.field_j.length) {
+            if (qc.field_db.length >= Archive.field_j.length) {
               stackIn_53_0 = qc.field_db.length;
             } else {
-              stackIn_53_0 = ah.field_j.length;
+              stackIn_53_0 = Archive.field_j.length;
             }
             var6 = stackIn_53_0;
             var7 = var6 + var5 + 7;
@@ -364,16 +364,16 @@ final class om extends hl {
             for (var8Lifetime3 = 0; var8Lifetime3 < var6; var8Lifetime3++) {
               stackIn_65_0 = pj.field_h;
               stackIn_65_1 = var5 + 7 + var8Lifetime3;
-              stackIn_65_2 = ~ah.field_j.length;
+              stackIn_65_2 = ~Archive.field_j.length;
               stackIn_65_3 = ~var8Lifetime3;
               if (stackIn_65_2 >= stackIn_65_3) {
                 stackIn_68_2 = "";
               } else {
-                stackIn_68_2 = ah.field_j[var8Lifetime3];
+                stackIn_68_2 = Archive.field_j[var8Lifetime3];
               }
               stackIn_65_0[stackIn_65_1] = stackIn_68_2;
             }
-            tg.field_a = k.a(param1 ^ 10);
+            IntrusiveDequeCursor.field_a = k.a(param1 ^ 10);
           }
           gm.field_h.field_g = io.field_g.length;
           var3_intLifetime1 = 0;
@@ -549,7 +549,7 @@ final class om extends hl {
             this.field_bc.field_O = "|";
             if (!(5 > mb.field_z) ||
               !(dd.field_c < 2)) {
-              L3: {
+              regionExit1: {
                 stackIn_7_0 = this;
                 stackIn_7_1 = null;
                 stackIn_7_2 = null;
@@ -563,7 +563,7 @@ final class om extends hl {
                     stackIn_9_1 = null;
                     stackIn_9_2 = null;
                     stackIn_9_5 = lg.field_I;
-                    break L3;
+                    break regionExit1;
                   }
                 }
                 stackIn_9_0Lifetime1 = this;
@@ -666,23 +666,23 @@ final class om extends hl {
             this.field_Ub.a((byte) -111, 13 + var19 + 13, 0, 24, 0);
             this.field_Wb.a((byte) -109, 15, 5, 15, -20 + this.field_Ub.field_Hb);
             var21 = 10;
-            this.field_Vb.a((byte) -125, var19, var21, qe.field_d * 2, 13);
-            var21 = var21 + qe.field_d * 2;
-            this.field_Sb.a((byte) -127, var19, var21, 2 * qe.field_d, 13);
-            var21 = var21 + (qe.field_d * 2 + 10);
-            this.field_bc.a((byte) -79, 0, var21, qe.field_d, 0);
-            var21 = var21 + (qe.field_d + 10);
+            this.field_Vb.a((byte) -125, var19, var21, GameKeyHandler.field_d * 2, 13);
+            var21 = var21 + GameKeyHandler.field_d * 2;
+            this.field_Sb.a((byte) -127, var19, var21, 2 * GameKeyHandler.field_d, 13);
+            var21 = var21 + (GameKeyHandler.field_d * 2 + 10);
+            this.field_bc.a((byte) -79, 0, var21, GameKeyHandler.field_d, 0);
+            var21 = var21 + (GameKeyHandler.field_d + 10);
             if (this.field_ac != null) {
               var20Lifetime3 = this.field_ac.e(-127, 4);
-              this.field_ac.a((-var20Lifetime3 + var19) / 2 + 13, var20Lifetime3, 3, qe.field_d, 4, var21);
-              var21 = var21 + (10 + qe.field_d);
+              this.field_ac.a((-var20Lifetime3 + var19) / 2 + 13, var20Lifetime3, 3, GameKeyHandler.field_d, 4, var21);
+              var21 = var21 + (10 + GameKeyHandler.field_d);
             }
             var28[0].a((byte) -103, var16Lifetime2, var21, var17Lifetime5, 13);
             var28[1].a((byte) -92, var16Lifetime2, var21, var17Lifetime5, var16Lifetime2 + 13 + 13);
             var28[2].a((byte) -79, var16Lifetime2, var21, var17Lifetime5, 13 + var16Lifetime2 * 2 + 26);
             var22 = var21;
             this.field_Mb.a((byte) -90, var19 + 13 + 13, 24, 10 + (var22 + var17Lifetime5), 0);
-            this.field_Mb.field_Eb = ah.a(2105376, 3, 8421504, 16, 11579568, this.field_Mb.field_R);
+            this.field_Mb.field_Eb = Archive.a(2105376, 3, 8421504, 16, 11579568, this.field_Mb.field_R);
             var23 = 13 + var19 + 13;
             var24 = var17Lifetime5 + (var22 + 24 + 10);
             var25 = eo.a(var23, (byte) 97, param0, param2);
@@ -697,10 +697,10 @@ final class om extends hl {
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Vb.field_Ib.c(this.field_Vb.field_jb, var15_int);
-          this.field_Vb.a((byte) -114, var15_int, var16Lifetime1, qe.field_d * var17Lifetime1, 13);
-          var16Lifetime1 = var16Lifetime1 + qe.field_d * var17Lifetime1;
+          this.field_Vb.a((byte) -114, var15_int, var16Lifetime1, GameKeyHandler.field_d * var17Lifetime1, 13);
+          var16Lifetime1 = var16Lifetime1 + GameKeyHandler.field_d * var17Lifetime1;
           this.field_Mb.a((byte) -99, 13 + var15_int + 13, 24, var16Lifetime1 + 10, 0);
-          this.field_Mb.field_Eb = ah.a(2105376, 3, 8421504, 16, 11579568, this.field_Mb.field_R);
+          this.field_Mb.field_Eb = Archive.a(2105376, 3, 8421504, 16, 11579568, this.field_Mb.field_R);
           var18Lifetime1 = 13 + (var15_int + 13);
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = eo.a(var18Lifetime1, (byte) 89, param0, param2);
@@ -759,10 +759,10 @@ final class om extends hl {
 
     final static boolean a(boolean param0, byte param1) {
         try {
-          bc var4 = null;
-          bc var5 = null;
+          BitPacketBuffer var4 = null;
+          BitPacketBuffer var5 = null;
           if (cf.field_p == null) {
-            cf.field_p = oi.field_l.a(ko.field_t, pd.field_r, (byte) 104);
+            cf.field_p = oi.field_l.requestSocket(ko.field_t, pd.field_r, (byte) 104);
           }
           if (param1 > -37) {
             return true;
@@ -777,16 +777,16 @@ final class om extends hl {
             qi.field_p = hg.field_d;
           } else {
             try {
-              wa.field_e = new fl((java.net.Socket) (cf.field_p.field_f), oi.field_l);
+              wa.field_e = new BufferedSocket((java.net.Socket) (cf.field_p.field_f), oi.field_l);
               var4 = kb.field_q;
               var5 = var4;
-              nd.field_Lb.field_t = 0;
+              nd.field_Lb.position = 0;
               mh.field_g = param0 ? -2 : -1;
               lk.field_sb = param0 ? -2 : -1;
-              md.field_A = param0 ? -2 : -1;
-              var5.field_t = 0;
-              qi.field_p = bc.field_z;
-              je.a(-85, wg.field_c, nd.field_Lb, wc.field_I, rl.field_a);
+              SpriteState.field_A = param0 ? -2 : -1;
+              var5.position = 0;
+              qi.field_p = BitPacketBuffer.field_z;
+              IntrusiveDeque.a(-85, wg.field_c, nd.field_Lb, wc.field_I, rl.field_a);
               ak.a((byte) -60, -1);
             } catch (IOException iOException) {
               qi.field_p = hg.field_d;

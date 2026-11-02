@@ -7,7 +7,7 @@ final class ce {
     private static int[] field_a;
     int field_h;
     static int[] field_e;
-    static bh field_f;
+    static PacketBuffer field_f;
     static boolean[][] field_i;
     static String field_c;
     static int field_b;
@@ -23,11 +23,11 @@ final class ce {
         field_a = null;
     }
 
-    final static oh a(int param0, int param1, int param2) {
+    final static Sprite a(int param0, int param1, int param2) {
         int var4 = 0;
         int var5 = TetraLink.field_J;
-        oh var6 = new oh(param1, param1);
-        oh var3 = var6;
+        Sprite var6 = new Sprite(param1, param1);
+        Sprite var3 = var6;
         for (var4 = param2; var4 < var3.field_C.length; var4++) {
           var6.field_C[var4] = param0;
         }

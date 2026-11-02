@@ -16,38 +16,38 @@ final class wg {
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
         Throwable decompiledCaughtException = null;
-        bc var2 = null;
+        BitPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        bc var8 = null;
+        BitPacketBuffer var8 = null;
         j var9 = null;
         var7 = TetraLink.field_J;
         var8 = kb.field_q;
         var2 = var8;
-        var3 = var8.d((byte) -99);
+        var3 = var8.readUnsignedByte((byte) -99);
         stackIn_3_0 = ((var3 & 128) != 0);
         bo.field_s = stackIn_3_0;
         ng.field_u = var3 & 127;
-        og.field_i = var8.d((byte) -99);
+        og.field_i = var8.readUnsignedByte((byte) -99);
         if (param0 != 85) {
           return (fj) null;
         }
-        el.field_tc = var8.c(255);
+        el.field_tc = var8.readLong(255);
         if (ng.field_u == 2) {
-          hg.field_a = var8.e(127);
-          n.field_O = var8.d(-1);
+          hg.field_a = var8.readUnsignedShort(127);
+          n.field_O = var8.readMedium(-1);
         } else {
           hg.field_a = 0;
           n.field_O = 0;
         }
-        stackIn_11_0 = (1 != var8.d((byte) -99)) ? 0 : 1;
+        stackIn_11_0 = (1 != var8.readUnsignedByte((byte) -99)) ? 0 : 1;
         var4 = stackIn_11_0;
-        g.field_O = var8.g((byte) 81);
+        g.field_O = var8.readString((byte) 81);
         if (var4 != 0) {
-          TetraLink.field_M = var8.g((byte) 81);
+          TetraLink.field_M = var8.readString((byte) 81);
         } else {
           TetraLink.field_M = g.field_O;
         }
@@ -56,14 +56,14 @@ final class wg {
           vi.field_c = 0;
           ab.field_U = null;
         } else {
-          vi.field_c = var8.e(127);
-          ab.field_U = var8.g((byte) 81);
+          vi.field_c = var8.readUnsignedShort(127);
+          ab.field_U = var8.readString((byte) 81);
         }
         if (!param1) {
           ml.field_fb = rh.a(119, var8, 80);
-          ha.field_i = null;
+          MouseInputHandler.field_i = null;
         } else {
-          var5 = var8.e(127);
+          var5 = var8.readUnsignedShort(127);
           try {
             var9 = eh.field_p.a(var5, -128);
             ml.field_fb = var9.h(-15);
@@ -72,13 +72,13 @@ final class wg {
             } else {
               stackIn_24_0 = var9.field_v;
             }
-            ha.field_i = stackIn_24_0;
+            MouseInputHandler.field_i = stackIn_24_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             fk.a(param0 ^ -122, (Throwable) ((Object) var6), "CC1");
             ml.field_fb = null;
-            ha.field_i = null;
+            MouseInputHandler.field_i = null;
           }
         }
         return new fj(param1);
@@ -175,7 +175,7 @@ final class wg {
         if (!param0) {
           wg.a(123);
         }
-        return mc.field_f + ((me.field_b << 2) + (ik.field_e << 4));
+        return IntrusiveNode.field_f + ((me.field_b << 2) + (ik.field_e << 4));
     }
 
     static {
@@ -194,38 +194,38 @@ final class wg {
         int stackIn_11_0 = 0;
         int[] stackIn_24_0 = null;
         Throwable decompiledCaughtException = null;
-        bc var2 = null;
+        BitPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        bc var8 = null;
+        BitPacketBuffer var8 = null;
         j var9 = null;
         var7 = TetraLink.field_J;
         var8 = kb.field_q;
         var2 = var8;
-        var3 = var8.d((byte) -99);
+        var3 = var8.readUnsignedByte((byte) -99);
         stackIn_3_0 = ((var3 & 128) != 0);
         bo.field_s = stackIn_3_0;
         ng.field_u = var3 & 127;
-        og.field_i = var8.d((byte) -99);
+        og.field_i = var8.readUnsignedByte((byte) -99);
         if (param0 != 85) {
           return (fj) null;
         }
-        el.field_tc = var8.c(255);
+        el.field_tc = var8.readLong(255);
         if (ng.field_u == 2) {
-          hg.field_a = var8.e(127);
-          n.field_O = var8.d(-1);
+          hg.field_a = var8.readUnsignedShort(127);
+          n.field_O = var8.readMedium(-1);
         } else {
           hg.field_a = 0;
           n.field_O = 0;
         }
-        stackIn_11_0 = (1 != var8.d((byte) -99)) ? 0 : 1;
+        stackIn_11_0 = (1 != var8.readUnsignedByte((byte) -99)) ? 0 : 1;
         var4 = stackIn_11_0;
-        g.field_O = var8.g((byte) 81);
+        g.field_O = var8.readString((byte) 81);
         if (var4 != 0) {
-          TetraLink.field_M = var8.g((byte) 81);
+          TetraLink.field_M = var8.readString((byte) 81);
         } else {
           TetraLink.field_M = g.field_O;
         }
@@ -234,14 +234,14 @@ final class wg {
           vi.field_c = 0;
           ab.field_U = null;
         } else {
-          vi.field_c = var8.e(127);
-          ab.field_U = var8.g((byte) 81);
+          vi.field_c = var8.readUnsignedShort(127);
+          ab.field_U = var8.readString((byte) 81);
         }
         if (!param1) {
           ml.field_fb = rh.a(119, var8, 80);
-          ha.field_i = null;
+          MouseInputHandler.field_i = null;
         } else {
-          var5 = var8.e(127);
+          var5 = var8.readUnsignedShort(127);
           try {
             var9 = eh.field_p.a(var5, -128);
             ml.field_fb = var9.h(-15);
@@ -250,13 +250,13 @@ final class wg {
             } else {
               stackIn_24_0 = var9.field_v;
             }
-            ha.field_i = stackIn_24_0;
+            MouseInputHandler.field_i = stackIn_24_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             fk.a(param0 ^ -122, (Throwable) ((Object) var6), "CC1");
             ml.field_fb = null;
-            ha.field_i = null;
+            MouseInputHandler.field_i = null;
           }
         }
         return new fj(param1);

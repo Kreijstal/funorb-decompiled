@@ -6,7 +6,7 @@ final class bb {
     static String field_f;
     static String field_b;
     static String[] field_a;
-    static oh field_c;
+    static Sprite field_c;
     static int field_e;
     static String field_g;
 
@@ -42,14 +42,14 @@ final class bb {
           }
           if (10 > tc.field_v) {
             stackIn_7_0 = (tc.field_v < 15) ? 2 : 4;
-            qe.field_g = stackIn_7_0;
+            GameKeyHandler.field_g = stackIn_7_0;
             oi.field_c = stackIn_7_0;
           } else {
             if (20 > tc.field_v) {
               return;
             }
             stackIn_12_0 = (tc.field_v < 15) ? 2 : 4;
-            qe.field_g = stackIn_12_0;
+            GameKeyHandler.field_g = stackIn_12_0;
             oi.field_c = stackIn_12_0;
           }
         } else {
@@ -61,14 +61,14 @@ final class bb {
             }
             if (10 > tc.field_v) {
               stackIn_23_0 = (tc.field_v < 15) ? 2 : 4;
-              qe.field_g = stackIn_23_0;
+              GameKeyHandler.field_g = stackIn_23_0;
               oi.field_c = stackIn_23_0;
             } else {
               if (20 > tc.field_v) {
                 return;
               }
               stackIn_29_0 = (tc.field_v < 15) ? 2 : 4;
-              qe.field_g = stackIn_29_0;
+              GameKeyHandler.field_g = stackIn_29_0;
               oi.field_c = stackIn_29_0;
             }
           } else {
@@ -83,19 +83,19 @@ final class bb {
             }
             if (10 > tc.field_v) {
               stackIn_42_0 = (tc.field_v < 15) ? 2 : 4;
-              qe.field_g = stackIn_42_0;
+              GameKeyHandler.field_g = stackIn_42_0;
               oi.field_c = stackIn_42_0;
             } else {
               if (20 > tc.field_v) {
                 return;
               }
               stackIn_48_0 = (tc.field_v < 15) ? 2 : 4;
-              qe.field_g = stackIn_48_0;
+              GameKeyHandler.field_g = stackIn_48_0;
               oi.field_c = stackIn_48_0;
             }
           }
         }
-        wb.a(true, -7869);
+        DelegatingCanvas.a(true, -7869);
     }
 
     public static void b(int param0) {

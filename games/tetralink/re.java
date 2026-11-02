@@ -32,15 +32,15 @@ final class re extends ae {
         bm.a(-25676);
         if (!param0) {
           re.e((byte) -39);
-          if (wm.c(-14688)) {
-            nd.field_Lb.f(1, (byte) -92);
+          if (ImageProducerRasterBuffer.c(-14688)) {
+            nd.field_Lb.writeCipheredByte(1, (byte) -92);
             ak.a((byte) -86, 0);
           }
           mk.a(false);
           return;
         }
-        if (wm.c(-14688)) {
-          nd.field_Lb.f(1, (byte) -92);
+        if (ImageProducerRasterBuffer.c(-14688)) {
+          nd.field_Lb.writeCipheredByte(1, (byte) -92);
           ak.a((byte) -86, 0);
         }
         mk.a(false);
@@ -77,29 +77,29 @@ final class re extends ae {
         gd var2 = null;
         int var3 = TetraLink.field_J;
         try {
-          kl.field_a = false;
-          qe.field_a = null;
+          FullscreenFocusCanvas.field_a = false;
+          GameKeyHandler.field_a = null;
           qb.field_N = null;
           if (gl.field_p != null) {
-            gl.field_p.b(1);
+            gl.field_p.clear(1);
             gl.field_p = null;
           }
           db.field_a = null;
           if (null != jl.field_a) {
-            jl.field_a.b(1);
+            jl.field_a.clear(1);
             jl.field_a = null;
           }
           db.field_e = null;
           int var1_int = 39 / ((param0 - 14) / 42);
           if (ui.field_d != null) {
-            ui.field_d.b(1);
+            ui.field_d.clear(1);
             ui.field_d = null;
           }
           dg.field_g = null;
           if (null != db.field_a) {
             var2 = (gd) (db.field_a.b(-104));
             while (var2 != null) {
-              var2.e(0);
+              var2.unlinkSecondary(0);
               var2 = (gd) (db.field_a.d(-1));
             }
             db.field_a = null;

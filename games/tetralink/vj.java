@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vj extends mc {
+final class vj extends IntrusiveNode {
     int[] field_r;
     static boolean field_q;
     static int field_n;
@@ -156,9 +156,9 @@ final class vj extends mc {
             nl.a(107, param1);
             if (param0 != 1) {
               if (((param0 == 2)) &&
-                ((mc.field_f != param2))) {
+                ((IntrusiveNode.field_f != param2))) {
                 hg.field_c = true;
-                mc.field_f = param2;
+                IntrusiveNode.field_f = param2;
                 nl.a(108, param1);
               }
               decompiledFrameRemainder0 = false;
@@ -166,9 +166,9 @@ final class vj extends mc {
             else {
               if (param2 == me.field_b) {
                 if (((param0 == 2)) &&
-                  ((mc.field_f != param2))) {
+                  ((IntrusiveNode.field_f != param2))) {
                   hg.field_c = true;
-                  mc.field_f = param2;
+                  IntrusiveNode.field_f = param2;
                   nl.a(108, param1);
                 }
                 decompiledFrameRemainder0 = false;
@@ -182,9 +182,9 @@ final class vj extends mc {
           } else {
             if (param0 != 1) {
               if (((param0 == 2)) &&
-                ((mc.field_f != param2))) {
+                ((IntrusiveNode.field_f != param2))) {
                 hg.field_c = true;
-                mc.field_f = param2;
+                IntrusiveNode.field_f = param2;
                 nl.a(108, param1);
               }
               decompiledFrameRemainder0 = false;
@@ -192,9 +192,9 @@ final class vj extends mc {
             else {
               if (param2 == me.field_b) {
                 if (((param0 == 2)) &&
-                  ((mc.field_f != param2))) {
+                  ((IntrusiveNode.field_f != param2))) {
                   hg.field_c = true;
-                  mc.field_f = param2;
+                  IntrusiveNode.field_f = param2;
                   nl.a(108, param1);
                 }
                 decompiledFrameRemainder0 = false;
@@ -209,9 +209,9 @@ final class vj extends mc {
         } else {
           if (param0 != 1) {
             if (((param0 == 2)) &&
-              ((mc.field_f != param2))) {
+              ((IntrusiveNode.field_f != param2))) {
               hg.field_c = true;
-              mc.field_f = param2;
+              IntrusiveNode.field_f = param2;
               nl.a(108, param1);
             }
             decompiledFrameRemainder0 = false;
@@ -219,9 +219,9 @@ final class vj extends mc {
           else {
             if (param2 == me.field_b) {
               if (((param0 == 2)) &&
-                ((mc.field_f != param2))) {
+                ((IntrusiveNode.field_f != param2))) {
                 hg.field_c = true;
-                mc.field_f = param2;
+                IntrusiveNode.field_f = param2;
                 nl.a(108, param1);
               }
               decompiledFrameRemainder0 = false;
@@ -234,9 +234,9 @@ final class vj extends mc {
           }
         }
         if ((decompiledFrameRemainder0) && (param0 == 2 &&
-          mc.field_f != param2)) {
+          IntrusiveNode.field_f != param2)) {
           hg.field_c = true;
-          mc.field_f = param2;
+          IntrusiveNode.field_f = param2;
           nl.a(108, param1);
         }
 

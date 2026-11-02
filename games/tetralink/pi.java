@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pi {
-    static wf field_c;
+    static PcmSample field_c;
     static uf field_a;
     static String field_e;
     static String field_d;

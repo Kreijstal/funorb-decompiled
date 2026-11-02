@@ -184,7 +184,7 @@ final class of {
         }
     }
 
-    final static void a(int param0, ah param1) {
+    final static void a(int param0, Archive param1) {
         RuntimeException stackIn_237_0 = null;
         StringBuilder stackIn_237_1 = null;
         String stackIn_238_2 = null;
@@ -286,15 +286,15 @@ final class of {
           }
           var2Lifetime6 = sj.a("TEXT_DETAIL", -1);
           if (null != var2Lifetime6) {
-            md.field_z = ud.a(var2Lifetime6, -73);
+            SpriteState.field_z = ud.a(var2Lifetime6, -73);
           }
           var2Lifetime7 = sj.a("TEXT_OPTIONS", -1);
           if (var2Lifetime7 != null) {
-            fa.field_a = ud.a(var2Lifetime7, -79);
+            SoundEffectLibrary.field_a = ud.a(var2Lifetime7, -79);
           }
           var2Lifetime8 = sj.a("TEXT_YOURCOLOUR", -1);
           if (null != var2Lifetime8) {
-            fl.field_e = ud.a(var2Lifetime8, -45);
+            BufferedSocket.field_e = ud.a(var2Lifetime8, -45);
           }
           var2Lifetime9 = sj.a("TEXT_OPPONENT", -1);
           if (var2Lifetime9 != null) {
@@ -318,11 +318,11 @@ final class of {
           }
           var2Lifetime14 = sj.a("TEXT_COLOUR_WHITE", -1);
           if (var2Lifetime14 != null) {
-            ek.field_t = ud.a(var2Lifetime14, -89);
+            NotificationToast.field_t = ud.a(var2Lifetime14, -89);
           }
           var2Lifetime15 = sj.a("TEXT_COLOUR_RED", -1);
           if (var2Lifetime15 != null) {
-            bh.field_s = ud.a(var2Lifetime15, -117);
+            PacketBuffer.field_s = ud.a(var2Lifetime15, -117);
           }
           var2Lifetime16 = sj.a("TEXT_DRAWN", -1);
           if (var2Lifetime16 != null) {
@@ -716,7 +716,7 @@ final class of {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -94) {
-            of.a(-43, (ah) null);
+            of.a(-43, (Archive) null);
           }
           stackIn_7_0 = (this.field_c == 102);
           return stackIn_7_0;

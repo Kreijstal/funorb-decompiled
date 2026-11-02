@@ -95,29 +95,29 @@ final class gd extends hl {
 
     final boolean d(byte param0) {
         if (param0 == -1) {
-          return !this.a(2) ? true : false;
+          return !this.isSecondaryLinked(2) ? true : false;
         }
         this.field_Xb = -80;
-        return !this.a(2) ? true : false;
+        return !this.isSecondaryLinked(2) ? true : false;
     }
 
-    final static oh[] e(byte param0) {
+    final static Sprite[] e(byte param0) {
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var2 = 0;
         int var7 = TetraLink.field_J;
-        oh[] var1 = new oh[vj.field_n];
+        Sprite[] var1 = new Sprite[vj.field_n];
         int var2Lifetime1;
         for (var2 = 0; vj.field_n > var2; var2++) {
-          var3 = sn.field_e[var2] * je.field_h[var2];
+          var3 = sn.field_e[var2] * IntrusiveDeque.field_h[var2];
           var4 = ga.field_a[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = ti.field_c[pl.a((int) var4[var6], 255)];
           }
-          var1[var2] = new oh(wm.field_l, mm.field_w, qa.field_x[var2], i.field_t[var2], je.field_h[var2], sn.field_e[var2], var5);
+          var1[var2] = new Sprite(ImageProducerRasterBuffer.field_l, mm.field_w, qa.field_x[var2], i.field_t[var2], IntrusiveDeque.field_h[var2], sn.field_e[var2], var5);
         }
         var2Lifetime1 = 29 % ((param0 + 30) / 37);
         an.b(-104);
@@ -214,9 +214,9 @@ final class gd extends hl {
         if (!(me.field_b <= 2)) {
           me.field_b = 2;
         }
-        mc.field_f = param1 & param0;
-        if (!(mc.field_f <= 2)) {
-          mc.field_f = 2;
+        IntrusiveNode.field_f = param1 & param0;
+        if (!(IntrusiveNode.field_f <= 2)) {
+          IntrusiveNode.field_f = 2;
         }
     }
 

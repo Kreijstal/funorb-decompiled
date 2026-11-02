@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eh extends mc {
+final class eh extends IntrusiveNode {
     int field_y;
     int field_o;
     int field_u;
@@ -21,9 +21,9 @@ final class eh extends mc {
         if (th.field_g > 0) {
           th.field_g = th.field_g - 1;
         }
-        if (te.field_P != pk.field_O.field_j) {
-          ja.field_f = ja.field_f + (pk.field_O.field_j - te.field_P);
-          te.field_P = pk.field_O.field_j;
+        if (te.field_P != WidgetContainer.field_O.field_j) {
+          ja.field_f = ja.field_f + (WidgetContainer.field_O.field_j - te.field_P);
+          te.field_P = WidgetContainer.field_O.field_j;
         }
         if (th.field_g > 0) {
           lc.a((byte) -61);

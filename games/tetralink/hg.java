@@ -140,7 +140,7 @@ final class hg {
         var26 = TetraLink.field_J;
         try {
           if (param3) {
-            stackIn_12_0 = (kl.field_a) ? 0 : 1;
+            stackIn_12_0 = (FullscreenFocusCanvas.field_a) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
             if (s.b(63)) {
@@ -157,23 +157,23 @@ final class hg {
           if (!param3) {
             for (var6 = 0; var6 < 5; var6++) {
               if (var4_int != 0 &&
-                cn.field_e[0][var6 + 1].field_F != 0 &&
+                ClientException.field_e[0][var6 + 1].field_F != 0 &&
                 param1.field_ic != var6) {
                 param1.field_ic = var6;
                 var5 = 1;
               }
-              stackIn_25_0 = cn.field_e[0][var6 + 1];
+              stackIn_25_0 = ClientException.field_e[0][var6 + 1];
               stackIn_26_1 = (var4_int != 0);
               stackIn_25_0.field_S = stackIn_26_1;
               if (!kj.field_b &&
                 var6 == 3) {
-                cn.field_e[0][var6 + 1].field_S = false;
+                ClientException.field_e[0][var6 + 1].field_S = false;
               }
-              stackIn_32_0 = cn.field_e[0][var6 + 1];
+              stackIn_32_0 = ClientException.field_e[0][var6 + 1];
               stackIn_33_1 = (var6 == param1.field_ic);
               stackIn_32_0.field_zb = stackIn_33_1;
             }
-            if (cn.field_e[0][2].field_rb) {
+            if (ClientException.field_e[0][2].field_rb) {
               if (s.b(63)) {
                 re.field_P = bk.field_f;
               } else {
@@ -193,7 +193,7 @@ final class hg {
               for (var8_int = 0; km.field_o.length > var8_int; var8_int++) {
                 km.field_o[var8_int] = (byte) 0;
               }
-              km.field_o[var7 / 8] = (byte)mc.a((int) km.field_o[var7 / 8], 1 << var7 % 8);
+              km.field_o[var7 / 8] = (byte)IntrusiveNode.a((int) km.field_o[var7 / 8], 1 << var7 % 8);
             }
             stackIn_55_0 = (!param3) ? 0 : -1;
             for (var7 = stackIn_55_0; var7 < cl.field_f.length; var7++) {
@@ -202,31 +202,31 @@ final class hg {
               } else {
                 stackIn_63_0 = 0;
               }
-              L17: {
+              regionExit1: {
                 boolean decompiledFrameRemainder0 = true;
                 var8_intLifetime1 = stackIn_63_0;
                 if (var4_int != 0 &&
-                  cn.field_e[1][var7 + 1].field_F != 0) {
+                  ClientException.field_e[1][var7 + 1].field_F != 0) {
                   if (param3) {
                     if (var6Lifetime1 != 0) {
                       if (!param3) {
                         var9 = cl.field_f[var7];
-                        stackIn_72_0 = cn.field_e[1][var7 + 1];
+                        stackIn_72_0 = ClientException.field_e[1][var7 + 1];
                         stackIn_73_1 = (param1.field_rc == var9);
                         stackIn_72_0.field_zb = stackIn_73_1;
-                        break L17;
+                        break regionExit1;
                       }
                       decompiledFrameRemainder0 = (var7 == -1);
                       if (decompiledFrameRemainder0) {
-                        cn.field_e[1][var7 + 1].field_zb = true;
+                        ClientException.field_e[1][var7 + 1].field_zb = true;
                         for (var9 = 0; cl.field_f.length > var9; var9++) {
-                          dupTemp$0 = cn.field_e[1][var7 + 1];
+                          dupTemp$0 = ClientException.field_e[1][var7 + 1];
                           stackIn_79_0 = dupTemp$0;
                           stackIn_79_1 = dupTemp$0.field_zb;
                           stackIn_80_2 = ((km.field_o[var9 / 8] & 1 << (7 & var9)) == 0);
                           stackIn_79_0.field_zb = stackIn_79_1 & stackIn_80_2;
                         }
-                        break L17;
+                        break regionExit1;
                       }
                     }
                     if (decompiledFrameRemainder0) {
@@ -235,7 +235,7 @@ final class hg {
                           km.field_o[var9] = (byte) 0;
                         }
                       } else {
-                        km.field_o[var7 / 8] = (byte)oj.a((int) km.field_o[var7 / 8], 1 << pl.a(var7, 7));
+                        km.field_o[var7 / 8] = (byte)IsaacCipher.a((int) km.field_o[var7 / 8], 1 << pl.a(var7, 7));
                       }
                     }
                   } else {
@@ -249,38 +249,38 @@ final class hg {
                 if (decompiledFrameRemainder0) {
                   if (!param3) {
                     var9 = cl.field_f[var7];
-                    stackIn_89_0 = cn.field_e[1][var7 + 1];
+                    stackIn_89_0 = ClientException.field_e[1][var7 + 1];
                     stackIn_90_1 = (param1.field_rc == var9);
                     stackIn_89_0.field_zb = stackIn_90_1;
-                    break L17;
+                    break regionExit1;
                   }
                   if (var7 == -1) {
-                    cn.field_e[1][var7 + 1].field_zb = true;
+                    ClientException.field_e[1][var7 + 1].field_zb = true;
                     for (var9 = 0; cl.field_f.length > var9; var9++) {
-                      dupTemp$1 = cn.field_e[1][var7 + 1];
+                      dupTemp$1 = ClientException.field_e[1][var7 + 1];
                       stackIn_96_0 = dupTemp$1;
                       stackIn_96_1 = dupTemp$1.field_zb;
                       stackIn_97_2 = ((km.field_o[var9 / 8] & 1 << (7 & var9)) == 0);
                       stackIn_96_0.field_zb = stackIn_96_1 & stackIn_97_2;
                     }
-                    break L17;
+                    break regionExit1;
                   }
                 }
-                stackIn_100_0 = cn.field_e[1][var7 + 1];
+                stackIn_100_0 = ClientException.field_e[1][var7 + 1];
                 stackIn_100_1 = km.field_o[var7 / 8];
                 stackIn_100_2 = 1;
                 stackIn_100_3 = 7 & var7;
                 stackIn_103_1 = ((stackIn_100_1 & stackIn_100_2 << stackIn_100_3) != 0);
                 stackIn_100_0.field_zb = stackIn_103_1;
               }
-              stackIn_107_0 = cn.field_e[1][var7 + 1];
+              stackIn_107_0 = ClientException.field_e[1][var7 + 1];
               stackIn_108_1 = (var4_int != 0) && (var8_intLifetime1 == 0);
               stackIn_107_0.field_S = stackIn_108_1;
             }
           }
           stackIn_112_0 = (!param3) ? 1 : 0;
           for (var6Lifetime2 = stackIn_112_0; var6Lifetime2 < 3; var6Lifetime2++) {
-            var28 = cn.field_e[2][var6Lifetime2];
+            var28 = ClientException.field_e[2][var6Lifetime2];
             if (var4_int != 0 &&
               0 != var28.field_F) {
               if (!param3) {
@@ -318,7 +318,7 @@ final class hg {
           if (param3 &&
             1 < mk.field_e) {
             for (var6Lifetime3 = 0; var6Lifetime3 < 1 + mk.field_e; var6Lifetime3++) {
-              var29 = cn.field_e[3][var6Lifetime3];
+              var29 = ClientException.field_e[3][var6Lifetime3];
               if (var4_int != 0 &&
                 0 != var29.field_F) {
                 ni.field_c = var6Lifetime3;
@@ -345,7 +345,7 @@ final class hg {
           }
           var6Lifetime4 = 0;
           for (var7 = 0; field_k > var7; var7++) {
-            var30 = cn.field_e[var7 + 4];
+            var30 = ClientException.field_e[var7 + 4];
             var8_array = var30;
             stackIn_170_0 = (param3) ? -1 : 0;
             for (var9 = stackIn_170_0; var30.length - 1 > var9; var9++) {
@@ -360,7 +360,7 @@ final class hg {
                 if (null != ti.field_f &&
                   null != ti.field_f[var7] &&
                   (~fd.field_H & ti.field_f[var7][var9]) > 0) {
-                  var15 = fa.a(ti.field_f[var7][var9] & ~fd.field_H, param2 - 54882);
+                  var15 = SoundEffectLibrary.a(ti.field_f[var7][var9] & ~fd.field_H, param2 - 54882);
                   var14 = 1;
                 }
                 if (ba.field_S != null &&
@@ -400,7 +400,7 @@ final class hg {
                   bi.field_e[var7] != null) {
                   var16Lifetime2 = bi.field_e[var7][var9];
                   if (var16Lifetime2 > 0 &&
-                    mc.field_l < var16Lifetime2) {
+                    IntrusiveNode.field_l < var16Lifetime2) {
                     var11 = 1;
                   }
                   if (var16Lifetime2 != 0 &&
@@ -435,7 +435,7 @@ final class hg {
               if (var16Lifetime1 == 0 &&
                 var9 >= 0 &&
                 null != uj.field_s && (!param3 ||
-                !kl.field_a)) {
+                !FullscreenFocusCanvas.field_a)) {
                 nn.field_R = false;
                 n.field_P = false;
                 if (eg.field_K == null) {
@@ -469,7 +469,7 @@ final class hg {
                       lo.field_a[var18 / 8] = (byte)pl.a((int) lo.field_a[var18 / 8], ~(1 << pl.a(7, var18)));
                     }
                   } else {
-                    lo.field_a[(var9 + var6Lifetime4) / 8] = (byte)oj.a((int) lo.field_a[(var9 + var6Lifetime4) / 8], 1 << pl.a(var6Lifetime4 + var9, 7));
+                    lo.field_a[(var9 + var6Lifetime4) / 8] = (byte)IsaacCipher.a((int) lo.field_a[(var9 + var6Lifetime4) / 8], 1 << pl.a(var6Lifetime4 + var9, 7));
                   }
                 }
               }
@@ -506,7 +506,7 @@ final class hg {
                 if (var13 == 0) {
                   if (var10 == 0) {
                     if (var11 != 0) {
-                      var22_int = -mc.field_l + bi.field_e[var7][var9];
+                      var22_int = -IntrusiveNode.field_l + bi.field_e[var7][var9];
                       if (var22_int == 1) {
                         var21 = hc.field_r;
                       } else {
@@ -528,7 +528,7 @@ final class hg {
                       }
                     }
                     if (var14 != 0) {
-                      var22 = qe.field_f;
+                      var22 = GameKeyHandler.field_f;
                       if (var15 > 0 &&
                         pd.field_t != null &&
                         pd.field_t.length >= var15 &&
@@ -588,7 +588,7 @@ final class hg {
                   if (var23 != 0) {
                     var21 = kj.field_e + (String) (var22);
                   } else {
-                    var21 = sk.a(new String[]{(String) (var22)}, cn.field_c, 121);
+                    var21 = sk.a(new String[]{(String) (var22)}, ClientException.field_c, 121);
                   }
                 }
                 if (var21 != null) {
@@ -656,7 +656,7 @@ final class hg {
         }
     }
 
-    final static void a(oh param0, byte param1) {
+    final static void a(Sprite param0, byte param1) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -672,12 +672,12 @@ final class hg {
           bd.a(param0, 6);
           if (cf.a(0, (byte) 105) &&
             ui.a(100, 1692) != 0) {
-            ra.c(0, 0, 200, 400, 0);
+            SoftwareRasterizer.c(0, 0, 200, 400, 0);
             fh.a(true);
             return;
           }
           var2_int = -112 % ((param1 - 57) / 45);
-          ra.c(0, 0, 200, 400, 8421504);
+          SoftwareRasterizer.c(0, 0, 200, 400, 8421504);
           var3 = (kb) (tb.field_d.c(false));
           while (var3 != null) {
             if (var3.field_o == 0) {

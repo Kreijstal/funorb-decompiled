@@ -3,7 +3,7 @@
  */
 abstract class um extends d implements ih {
     static String field_m;
-    static ah field_k;
+    static Archive field_k;
     static hl field_n;
     static hl field_l;
     private nn field_p;

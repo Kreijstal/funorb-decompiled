@@ -3,7 +3,7 @@
  */
 final class aa extends hl {
     private int field_Mb;
-    private oh[] field_Zb;
+    private Sprite[] field_Zb;
     static ei field_bc;
     private int field_Yb;
     static int field_Pb;
@@ -61,7 +61,7 @@ final class aa extends hl {
           }
           return;
         }
-        this.field_Lb[this.field_Rb] = new nh(0L, (hl) null, (hl) null, this.field_Ob, (oh) null, field_Kb);
+        this.field_Lb[this.field_Rb] = new nh(0L, (hl) null, (hl) null, this.field_Ob, (Sprite) null, field_Kb);
         this.field_Lb[this.field_Rb].field_J = 1;
         this.a((byte) -95, this.field_Lb[this.field_Rb]);
         this.field_Sb[this.field_Rb] = -1;
@@ -88,7 +88,7 @@ final class aa extends hl {
         }
     }
 
-    final void a(int param0, oh param1, int param2, String param3) {
+    final void a(int param0, Sprite param1, int param2, String param3) {
         try {
           this.field_Lb[this.field_Rb] = new nh((long)param2, (hl) null, (hl) null, this.field_Ub, param1, param3);
           this.field_Lb[this.field_Rb].field_kb = this.field_Zb;
@@ -104,7 +104,7 @@ final class aa extends hl {
 
     final void a(String param0, int param1, int param2) {
         try {
-          this.field_Lb[this.field_Rb] = new nh(0L, (hl) null, (hl) null, this.field_Ub, (oh) null, param0);
+          this.field_Lb[this.field_Rb] = new nh(0L, (hl) null, (hl) null, this.field_Ub, (Sprite) null, param0);
           this.field_Lb[this.field_Rb].field_kb = this.field_Zb;
           this.field_Lb[this.field_Rb].field_Cb = true;
           this.field_Lb[this.field_Rb].field_J = param1;
@@ -144,22 +144,22 @@ final class aa extends hl {
         var9 = TetraLink.field_J;
         if (param3 <= param0) {
           if (param5 > param0) {
-            qi.a(param1, param4, (byte) 98, param2, param0, param5, ra.field_b, param3, param6);
+            qi.a(param1, param4, (byte) 98, param2, param0, param5, SoftwareRasterizer.field_b, param3, param6);
           } else {
             if (param3 >= param5) {
-              qi.a(param2, param1, (byte) 98, param4, param3, param0, ra.field_b, param5, param6);
+              qi.a(param2, param1, (byte) 98, param4, param3, param0, SoftwareRasterizer.field_b, param5, param6);
             } else {
-              qi.a(param2, param4, (byte) 98, param1, param5, param0, ra.field_b, param3, param6);
+              qi.a(param2, param4, (byte) 98, param1, param5, param0, SoftwareRasterizer.field_b, param3, param6);
             }
           }
         } else {
           if (param5 > param3) {
-            qi.a(param1, param2, (byte) 98, param4, param3, param5, ra.field_b, param0, param6);
+            qi.a(param1, param2, (byte) 98, param4, param3, param5, SoftwareRasterizer.field_b, param0, param6);
           } else {
             if (param5 <= param0) {
-              qi.a(param4, param1, (byte) 98, param2, param0, param3, ra.field_b, param5, param6);
+              qi.a(param4, param1, (byte) 98, param2, param0, param3, SoftwareRasterizer.field_b, param5, param6);
             } else {
-              qi.a(param4, param2, (byte) 98, param1, param5, param3, ra.field_b, param0, param6);
+              qi.a(param4, param2, (byte) 98, param1, param5, param3, SoftwareRasterizer.field_b, param0, param6);
             }
           }
         }
@@ -169,7 +169,7 @@ final class aa extends hl {
         field_Vb = -56;
     }
 
-    aa(hl param0, oh[] param1, hl param2, hl param3, int param4, int param5, int param6, int param7, int param8) {
+    aa(hl param0, Sprite[] param1, hl param2, hl param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
         this.field_Sb = new int[256];
         this.field_Lb = new nh[256];
@@ -207,7 +207,7 @@ final class aa extends hl {
 
     final static String a(String param0, int param1, int param2, String param3) {
         RuntimeException var4 = null;
-        bc var5 = null;
+        BitPacketBuffer var5 = null;
         int var6 = 0;
         ud var7 = null;
         CharSequence var8 = null;
@@ -236,16 +236,16 @@ final class aa extends hl {
             stackIn_9_0 = sk.a(new String[]{param3}, am.field_e, 121);
             return stackIn_9_0;
           }
-          var7.b(false);
-          var7.e(0);
-          ca.field_c = ca.field_c - 1;
+          var7.unlink(false);
+          var7.unlinkSecondary(0);
+          SocketConnector.field_c = SocketConnector.field_c - 1;
           var5 = nd.field_Lb;
-          var5.f(param1, (byte) -92);
-          var5.field_t = var5.field_t + 1;
-          var6 = var5.field_t;
+          var5.writeCipheredByte(param1, (byte) -92);
+          var5.position = var5.position + 1;
+          var6 = var5.position;
           var5.a(3, false);
           var5.a(param0, 0);
-          var5.b(-var6 + var5.field_t, param2 - 4);
+          var5.b(-var6 + var5.position, param2 - 4);
           stackIn_11_0 = null;
           return (String) (stackIn_11_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

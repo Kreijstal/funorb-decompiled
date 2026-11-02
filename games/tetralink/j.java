@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class j extends gb {
+final class j extends DualLinkNode {
     static int[] field_x;
     static int field_u;
     private int[] field_y;
@@ -18,7 +18,7 @@ final class j extends gb {
         field_t = null;
     }
 
-    private final void a(int param0, int param1, bh param2) {
+    private final void a(int param0, int param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -38,24 +38,24 @@ final class j extends gb {
           }
           if (1 != param0) {
             if (param0 == 2) {
-              var4_int = param2.d((byte) -99);
+              var4_int = param2.readUnsignedByte((byte) -99);
               this.field_v = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_v[var5] = param2.e(127);
+                this.field_v[var5] = param2.readUnsignedShort(127);
               }
             } else if (param0 == 3) {
-              var4_int = param2.d((byte) -99);
+              var4_int = param2.readUnsignedByte((byte) -99);
               this.field_y = new int[var4_int];
               this.field_z = new int[var4_int][];
               for (var5 = 0; var5 < var4_int; var5++) {
-                var6 = param2.e(127);
+                var6 = param2.readUnsignedShort(127);
                 var7 = bj.a(0, var6);
                 if (var7 != null) {
                   this.field_y[var5] = var6;
                   array$0 = new int[var7.field_c];
                   this.field_z[var5] = array$0;
                   for (var8 = 0; var8 < var7.field_c; var8++) {
-                    this.field_z[var5][var8] = param2.e(127);
+                    this.field_z[var5][var8] = param2.readUnsignedShort(127);
                   }
                 }
               }
@@ -65,7 +65,7 @@ final class j extends gb {
               }
             }
           } else {
-            this.field_w = hi.a(param2.g((byte) 81), '<', 783);
+            this.field_w = hi.a(param2.readString((byte) 81), '<', 783);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,7 +82,7 @@ final class j extends gb {
         }
     }
 
-    final void a(bh param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -96,7 +96,7 @@ final class j extends gb {
             return;
           }
           while (true) {
-            var3_int = param0.d((byte) -99);
+            var3_int = param0.readUnsignedByte((byte) -99);
             if (var3_int == 0) {
               return;
             }
@@ -144,12 +144,12 @@ final class j extends gb {
         int var2 = 0;
         int var3 = TetraLink.field_J;
         if (param0 != 25271) {
-          bh var4 = (bh) null;
-          this.a(0, 67, (bh) null);
+          PacketBuffer var4 = (PacketBuffer) null;
+          this.a(0, 67, (PacketBuffer) null);
         }
         if (null != this.field_v) {
           for (var2 = 0; this.field_v.length > var2; var2++) {
-            this.field_v[var2] = mc.a(this.field_v[var2], 32768);
+            this.field_v[var2] = IntrusiveNode.a(this.field_v[var2], 32768);
           }
         }
     }

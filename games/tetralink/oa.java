@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oa extends mc {
+final class oa extends IntrusiveNode {
     static boolean field_w;
     static rj field_y;
-    static ah field_p;
-    static je field_u;
+    static Archive field_p;
+    static IntrusiveDeque field_u;
     static String field_t;
     int field_s;
     int field_C;
     int field_z;
     static String field_A;
     static int[] field_q;
-    static wf field_x;
+    static PcmSample field_x;
     static boolean field_r;
     static a field_v;
     static String field_n;
@@ -30,7 +30,7 @@ final class oa extends mc {
             return;
           }
           mn.a((java.awt.Component) ((Object) param1), true);
-          vb.a(-51, (java.awt.Component) ((Object) param1));
+          ProxySocketConnector.a(-51, (java.awt.Component) ((Object) param1));
           if (null == qf.field_k) {
             return;
           }
@@ -141,7 +141,7 @@ final class oa extends mc {
 
     static {
         field_t = "Connection restored.";
-        field_u = new je();
+        field_u = new IntrusiveDeque();
         field_A = "Open";
         field_n = "Login: ";
         field_r = true;

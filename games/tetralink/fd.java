@@ -34,10 +34,10 @@ final class fd extends ll {
     }
 
     final static void a(int param0, int param1, v param2) {
-        bc var3 = null;
+        BitPacketBuffer var3 = null;
         try {
           var3 = nd.field_Lb;
-          var3.f(param1, (byte) -92);
+          var3.writeCipheredByte(param1, (byte) -92);
           int var4 = 76 % ((12 - param0) / 62);
           var3.a(param2.field_n, false);
           var3.a(param2.field_q, false);
@@ -46,7 +46,7 @@ final class fd extends ll {
         }
     }
 
-    final static kh[] a(boolean param0, int param1, int param2, ah param3) {
+    final static kh[] a(boolean param0, int param1, int param2, Archive param3) {
         RuntimeException var4 = null;
         kh[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;

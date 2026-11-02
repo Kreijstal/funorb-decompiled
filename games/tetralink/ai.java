@@ -14,12 +14,12 @@ final class ai {
     static int field_b;
     static int[] field_a;
 
-    final static ah a(boolean param0, int param1, boolean param2, int param3, byte param4, boolean param5) {
+    final static Archive a(boolean param0, int param1, boolean param2, int param3, byte param4, boolean param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           bo var8 = null;
-          ah stackIn_16_0 = null;
+          Archive stackIn_16_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
@@ -46,7 +46,7 @@ final class ai {
             if (param0) {
               var8.d(5127);
             }
-            stackIn_16_0 = new ah(var8, param5, param3);
+            stackIn_16_0 = new Archive(var8, param5, param3);
             return stackIn_16_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,7 +120,7 @@ final class ai {
     }
 
     final static boolean a(byte param0) {
-        fa.field_e = true;
+        SoundEffectLibrary.field_e = true;
         if (param0 != 105) {
           java.applet.Applet var2 = (java.applet.Applet) null;
           ai.a((java.net.URL) null, (byte) -1, (java.applet.Applet) null);
@@ -175,7 +175,7 @@ final class ai {
         if (param0 <= 85) {
           field_h = -20;
         }
-        kh var1 = new kh(wm.field_l, mm.field_w, qa.field_x[0], i.field_t[0], je.field_h[0], sn.field_e[0], ga.field_a[0], ti.field_c);
+        kh var1 = new kh(ImageProducerRasterBuffer.field_l, mm.field_w, qa.field_x[0], i.field_t[0], IntrusiveDeque.field_h[0], sn.field_e[0], ga.field_a[0], ti.field_c);
         an.b(-104);
         return var1;
     }

@@ -56,24 +56,24 @@ final class ak {
             if (param0 > -37) {
               ak.a(69);
             }
-            if (0 == nd.field_Lb.field_t &&
+            if (0 == nd.field_Lb.position &&
               (rj.field_n + 10000L) < k.a(0)) {
-              nd.field_Lb.f(param1, (byte) -92);
+              nd.field_Lb.writeCipheredByte(param1, (byte) -92);
             }
-            if (nd.field_Lb.field_t > 0) {
+            if (nd.field_Lb.position > 0) {
               try {
-                wa.field_e.a(true, nd.field_Lb.field_t, nd.field_Lb.field_u, 0);
+                wa.field_e.a(true, nd.field_Lb.position, nd.field_Lb.payload, 0);
                 rj.field_n = k.a(0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 mk.a(false);
               }
-              nd.field_Lb.field_t = 0;
+              nd.field_Lb.position = 0;
             }
             return;
           }
-          nd.field_Lb.field_t = 0;
+          nd.field_Lb.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -87,7 +87,7 @@ final class ak {
             field_b = (String) null;
           }
           bn.field_a = param1;
-          md.field_v = param2;
+          SpriteState.field_v = param2;
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "ak.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -99,7 +99,7 @@ final class ak {
           if (null != hd.field_s) {
             return true;
           }
-          if (vb.e(param0 - 34020)) {
+          if (ProxySocketConnector.e(param0 - 34020)) {
             return true;
           }
           if (null != mm.field_y) {
@@ -113,7 +113,7 @@ final class ak {
         if (null != hd.field_s) {
           return true;
         }
-        if (vb.e(param0 - 34020)) {
+        if (ProxySocketConnector.e(param0 - 34020)) {
           return true;
         }
         if (null != mm.field_y) {

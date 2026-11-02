@@ -16,7 +16,7 @@ final class ul implements kg {
         field_a = null;
     }
 
-    public final void a(na param0, int param1, int param2, boolean param3, boolean param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -24,7 +24,7 @@ final class ul implements kg {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        oh var8 = null;
+        Sprite var8 = null;
         gd var9 = null;
         try {
           if (!param3) {
@@ -70,7 +70,7 @@ final class ul implements kg {
         var4 = TetraLink.field_J;
         try {
           var3 = 114 / ((param0 - 0) / 52);
-          param1.b(false);
+          param1.unlink(false);
           var2 = (gd) (gl.field_p.c(false));
           while (var2 != null) {
             if (var2.a((byte) -115, param1)) {
@@ -83,7 +83,7 @@ final class ul implements kg {
             cl.a(var2, -94, param1);
             return;
           }
-          gl.field_p.a(param1, false);
+          gl.field_p.addLast(param1, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

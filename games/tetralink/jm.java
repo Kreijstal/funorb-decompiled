@@ -6,7 +6,7 @@ final class jm {
     static String field_c;
     static String field_f;
     static hl field_a;
-    static oh[][] field_g;
+    static Sprite[][] field_g;
     static String field_e;
     static boolean field_b;
     private static String field_z;
@@ -17,13 +17,13 @@ final class jm {
         field_f = null;
         if (param0 >= 1) {
           field_d = null;
-          field_g = (oh[][]) null;
+          field_g = (Sprite[][]) null;
           field_c = null;
           return;
         }
         jm.a(-29);
         field_d = null;
-        field_g = (oh[][]) null;
+        field_g = (Sprite[][]) null;
         field_c = null;
     }
 

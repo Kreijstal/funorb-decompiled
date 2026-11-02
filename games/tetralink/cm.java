@@ -14,7 +14,7 @@ final class cm {
     int field_A;
     static int[] field_q;
     static boolean field_n;
-    static oh field_F;
+    static Sprite field_F;
     byte[] field_J;
     int field_I;
     int[] field_m;
@@ -89,7 +89,7 @@ final class cm {
         if (param0 > -111) {
           return;
         }
-        sj.field_g = new nd(sa.field_h, hl.field_gb, sn.field_c, bk.field_i, vd.field_c, ek.field_n);
+        sj.field_g = new nd(RandomAccessCacheFile.field_h, hl.field_gb, sn.field_c, bk.field_i, vd.field_c, NotificationToast.field_n);
     }
 
     cm() {

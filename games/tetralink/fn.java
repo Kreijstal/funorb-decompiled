@@ -14,7 +14,7 @@ final class fn extends gn implements sh, dm {
     static int field_Q;
 
     final static void h(int param0) {
-        bc var2 = null;
+        BitPacketBuffer var2 = null;
         co var1 = (co) (pb.field_c.c(false));
         if (var1 == null) {
           mk.a(false);
@@ -26,7 +26,7 @@ final class fn extends gn implements sh, dm {
           var2.f(40);
           var2.f(-110);
           var2.f(-119);
-          var1.b(false);
+          var1.unlink(false);
           return;
         }
     }
@@ -84,10 +84,10 @@ final class fn extends gn implements sh, dm {
         super(0, 0, 496, 0, (kg) null);
         this.field_N = new fo("", (dn) null, 12);
         al var1 = new al(dh.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, od.field_S.field_N, -1, 2147483647, true);
-        na var2 = new na(fj.field_m, var1, (dn) null);
+        UiWidget var2 = new UiWidget(fj.field_m, var1, (dn) null);
         this.field_T = new ae(sc.field_b, (dn) null);
         this.field_S = new ae(rj.field_c, (dn) null);
-        this.field_N.field_C = sf.field_c;
+        this.field_N.field_C = SecondaryNodeDequeIterator.field_c;
         this.field_N.a((byte) -59, new tm(this.field_N));
         this.field_T.field_K = false;
         this.field_T.field_H = (kg) ((Object) new uj());
@@ -99,7 +99,7 @@ final class fn extends gn implements sh, dm {
         int var5 = 200;
         this.c(var2, 10);
         var3 += 50;
-        var3 = var3 + (this.a(170, var3, kl.field_e, this.field_N, jm.field_c, (byte) 96) + 5);
+        var3 = var3 + (this.a(170, var3, FullscreenFocusCanvas.field_e, this.field_N, jm.field_c, (byte) 96) + 5);
         this.field_T.a(40, var3, -112, 496 - var5 >> 1, var5);
         this.field_S.a(40, var3 + 15, -118, 3 + var4, 60);
         this.field_S.field_s = (dn) (this);
@@ -112,7 +112,7 @@ final class fn extends gn implements sh, dm {
         this.a(var4 + (var3 + 55), 0, -123, 0, 496);
     }
 
-    private final int a(int param0, int param1, String param2, na param3, String param4, byte param5) {
+    private final int a(int param0, int param1, String param2, UiWidget param3, String param4, byte param5) {
         RuntimeException var7 = null;
         String var8 = null;
         int stackIn_3_0 = 0;
@@ -127,7 +127,7 @@ final class fn extends gn implements sh, dm {
         try {
           if (param5 <= 56) {
             var8 = (String) null;
-            fn.a(62, (ah) null, (String) null, (String) null);
+            fn.a(62, (Archive) null, (String) null, (String) null);
           }
           stackIn_3_0 = this.a(126, param0, param4, param1, 35, param3, param2);
           return stackIn_3_0;
@@ -190,7 +190,7 @@ final class fn extends gn implements sh, dm {
         }
     }
 
-    private final int a(int param0, int param1, String param2, int param3, int param4, na param5, String param6) {
+    private final int a(int param0, int param1, String param2, int param3, int param4, UiWidget param5, String param6) {
         RuntimeException var8 = null;
         ck var9 = null;
         rc var10 = null;
@@ -250,7 +250,7 @@ final class fn extends gn implements sh, dm {
         }
     }
 
-    final static void a(int param0, int param1, ve param2, jb param3, jb param4, boolean param5, int param6, int param7, ve param8, ve param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
+    final static void a(int param0, int param1, ve param2, BitmapFont param3, BitmapFont param4, boolean param5, int param6, int param7, ve param8, ve param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16, int param17, int param18, int param19, int param20) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -267,7 +267,7 @@ final class fn extends gn implements sh, dm {
         try {
           jj.a(param6, param4, param3, 2);
           gd.a(param16, false, param13, param1, param14);
-          rk.a(param0, -33, param11);
+          SecondaryNodeDeque.a(param0, -33, param11);
           if (!param5) {
             field_O = 3;
           }
@@ -313,7 +313,7 @@ final class fn extends gn implements sh, dm {
         }
     }
 
-    final void a(na param0, int param1, int param2, boolean param3) {
+    final void a(UiWidget param0, int param1, int param2, boolean param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_T.field_K = this.f((byte) -33);
@@ -344,7 +344,7 @@ final class fn extends gn implements sh, dm {
         return true;
     }
 
-    final boolean a(int param0, char param1, int param2, na param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -379,7 +379,7 @@ final class fn extends gn implements sh, dm {
         }
     }
 
-    final static String a(int param0, ah param1, String param2, String param3) {
+    final static String a(int param0, Archive param1, String param2, String param3) {
         RuntimeException var4 = null;
         String stackIn_5_0 = null;
         String stackIn_7_0 = null;

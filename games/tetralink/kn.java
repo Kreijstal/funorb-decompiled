@@ -5,9 +5,9 @@ final class kn {
     static int field_a;
     static String[] field_f;
     static String field_b;
-    static oh field_d;
+    static Sprite field_d;
     static boolean field_e;
-    static ah field_c;
+    static Archive field_c;
 
     final static void a(int param0) {
         if (param0 != 16) {

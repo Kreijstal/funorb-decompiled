@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ch extends mc {
+final class ch extends IntrusiveNode {
     static int[] field_s;
     static String field_o;
     static p field_r;
@@ -11,7 +11,7 @@ final class ch extends mc {
 
     final static void a(boolean param0) {
         lc.a((byte) 103);
-        mn.a(-7, ha.field_e, fn.field_Q, qe.field_d, ec.field_n[0].field_t, wc.field_J);
+        mn.a(-7, MouseInputHandler.field_e, fn.field_Q, GameKeyHandler.field_d, ec.field_n[0].field_t, wc.field_J);
         if (param0) {
           field_o = (String) null;
         }

@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bf extends mc {
+final class bf extends IntrusiveNode {
     int field_u;
     static String field_o;
     static int field_n;
     static int[] field_p;
     ee field_t;
     static String field_s;
-    mc field_q;
-    static wf field_r;
+    IntrusiveNode field_q;
+    static PcmSample field_r;
 
-    final static oh[] a(byte param0, ah param1, String param2, String param3) {
+    final static Sprite[] a(byte param0, Archive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         String var6 = null;
-        oh[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -28,7 +28,7 @@ final class bf extends mc {
         try {
           if (param0 > -68) {
             var6 = (String) null;
-            bf.a((byte) -110, (ah) null, (String) null, (String) null);
+            bf.a((byte) -110, (Archive) null, (String) null, (String) null);
           }
           var4_int = param1.a(-1, param2);
           var5 = param1.a(var4_int, false, param3);
@@ -132,7 +132,7 @@ final class bf extends mc {
         try {
           var44 = param2;
           if (param0 != 65793) {
-            field_r = (wf) null;
+            field_r = (PcmSample) null;
           }
           if (var44.field_u != null &&
             1 < var44.field_Q) {
@@ -209,11 +209,11 @@ final class bf extends mc {
               stackIn_40_0 = null;
             }
             var21 = stackIn_40_0;
-            var22 = lj.field_b[var15Lifetime1];
+            var22 = NodeHashTableIterator.field_b[var15Lifetime1];
             var23 = pl.field_f[var15Lifetime1];
-            var24 = lj.field_b[var16];
+            var24 = NodeHashTableIterator.field_b[var16];
             var25 = pl.field_f[var16];
-            var26 = lj.field_b[var17];
+            var26 = NodeHashTableIterator.field_b[var17];
             var27 = pl.field_f[var17];
             if (var18 == var19 &&
               var20 == var19) {
@@ -269,12 +269,12 @@ final class bf extends mc {
         }
     }
 
-    bf(ee param0, mc param1) {
+    bf(ee param0, IntrusiveNode param1) {
         try {
           this.field_t = param0;
           this.field_u = param0.k();
           this.field_q = param1;
-          this.field_t.f(128 + this.field_u * wb.field_c >> 8);
+          this.field_t.f(128 + this.field_u * DelegatingCanvas.field_c >> 8);
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "bf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

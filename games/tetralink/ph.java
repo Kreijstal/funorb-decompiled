@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ph extends bg {
+abstract class ph extends GameApplet {
     static boolean field_s;
     static String field_A;
     private int field_q;
@@ -15,7 +15,7 @@ abstract class ph extends bg {
     private boolean field_r;
     private int field_v;
     private long field_E;
-    static je field_F;
+    static IntrusiveDeque field_F;
     static int field_z;
     static String field_D;
     static rb field_t;
@@ -93,7 +93,7 @@ abstract class ph extends bg {
     }
 
     private final void b(boolean param0) {
-        int var2 = kb.field_q.d((byte) -99);
+        int var2 = kb.field_q.readUnsignedByte((byte) -99);
         if (param0) {
           this.field_o = true;
         }
@@ -150,13 +150,13 @@ abstract class ph extends bg {
         wa.a(th.field_l, true);
         t.a(this.field_H, nd.field_Pb, this.field_E, th.field_l, 5000, this.field_G, this.field_B, 5000, this.field_v, (byte) 118, param0, this.field_y, param4, this.field_q);
         gi.a(this.field_B, this.field_q, 1, th.field_l, nd.field_Pb, this.field_v, this.field_y, this.field_G, param0);
-        wd.a(false);
+        RasterBuffer.a(false);
         qf.field_k = ed.e((byte) 124);
         da.a((byte) -70, uh.field_b);
         jg.field_a = param1;
         kd.field_l = param7;
         il.field_R = param2;
-        fl.field_g = param6;
+        BufferedSocket.field_g = param6;
         ai.field_b = param5;
         this.l(-6848);
         l.a(param3 ^ param3);
@@ -175,7 +175,7 @@ abstract class ph extends bg {
           int var4 = 0;
           int var5 = 0;
           Exception var6 = null;
-          bh var7 = null;
+          PacketBuffer var7 = null;
           String var8 = null;
           int var9 = 0;
           String var10 = null;
@@ -190,10 +190,10 @@ abstract class ph extends bg {
             throw new IllegalStateException();
           }
           if (1 == var4) {
-            var5 = a.a(cf.a(113), fl.e(1), (byte) -62);
+            var5 = a.a(cf.a(113), BufferedSocket.e(1), (byte) -62);
             if (var5 != -1) {
-              g.a(og.field_h, tg.field_d, var5, (byte) 3);
-              tg.field_d = null;
+              g.a(og.field_h, IntrusiveDequeCursor.field_d, var5, (byte) 3);
+              IntrusiveDequeCursor.field_d = null;
               og.field_h = null;
             }
             var12 = gh.a((byte) 116);
@@ -202,10 +202,10 @@ abstract class ph extends bg {
             }
           }
           if (var4 == 2) {
-            var5Lifetime1 = nd.a(this.field_p, rb.c(false), sa.a((byte) -68), i.e(122), ka.c((byte) -114), qa.c((byte) -97), -8769);
+            var5Lifetime1 = nd.a(this.field_p, rb.c(false), RandomAccessCacheFile.a((byte) -68), i.e(122), ka.c((byte) -114), qa.c((byte) -97), -8769);
             if (var5Lifetime1 != -1) {
-              ki.a(var5Lifetime1, tg.field_d, og.field_h, -106);
-              tg.field_d = null;
+              ki.a(var5Lifetime1, IntrusiveDequeCursor.field_d, og.field_h, -106);
+              IntrusiveDequeCursor.field_d = null;
               og.field_h = null;
             }
           }
@@ -218,16 +218,16 @@ abstract class ph extends bg {
             if (param2) {
               jm.field_b = false;
             } else {
-              var5Lifetime2 = hn.a(this.field_r, ka.c((byte) 22), -2472, false, this.field_p, sa.a((byte) -107));
+              var5Lifetime2 = hn.a(this.field_r, ka.c((byte) 22), -2472, false, this.field_p, RandomAccessCacheFile.a((byte) -107));
               if (var5Lifetime2 != -1) {
                 if (var5Lifetime2 == 0) {
                   kk.field_U = ua.field_g;
                   bk.a(1);
-                  bh.field_r = false;
+                  PacketBuffer.field_r = false;
                   fn.field_R = 10;
                 } else {
-                  fi.a(tg.field_d, var5Lifetime2, (byte) 20);
-                  tg.field_d = null;
+                  fi.a(IntrusiveDequeCursor.field_d, var5Lifetime2, (byte) 20);
+                  IntrusiveDequeCursor.field_d = null;
                 }
               }
             }
@@ -237,7 +237,7 @@ abstract class ph extends bg {
               ia.a(lk.q(13), false);
             } else {
               fn.field_R = 10;
-              bh.field_r = true;
+              PacketBuffer.field_r = true;
             }
           }
           if (var4 == 5) {
@@ -258,23 +258,23 @@ abstract class ph extends bg {
             el.a(16, lk.q(13));
           }
           if (var4 == 10) {
-            nd.field_Lb.f(17, (byte) -92);
+            nd.field_Lb.writeCipheredByte(17, (byte) -92);
           }
           if (11 == var4) {
             in.a(lk.q(13), 63);
           }
           if (12 == var4) {
-            ha.a(-119, sn.b(11137), lk.q(13));
+            MouseInputHandler.a(-119, sn.b(11137), lk.q(13));
           }
           if (var4 == 13) {
             try {
               if (null == af.field_g) {
-                af.field_g = new un(nd.field_Pb, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                af.field_g = new UrlFetchTask(nd.field_Pb, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
               if (af.field_g.b((byte) -75)) {
                 var7 = af.field_g.a((byte) 79);
                 if (var7 != null) {
-                  var8 = cl.a(-1095, var7.field_t, var7.field_u, 0);
+                  var8 = cl.a(-1095, var7.position, var7.payload, 0);
                   ci.a(var8, -14710);
                 } else {
                   var10 = (String) null;
@@ -326,23 +326,23 @@ abstract class ph extends bg {
         if (this.field_b) {
           return -1;
         }
-        if (!ca.c(-25945)) {
+        if (!SocketConnector.c(-25945)) {
           return -1;
         }
         if (jm.field_b) {
           return -1;
         }
-        var2 = hn.a(this.field_r, ka.c((byte) -80), -2472, true, this.field_p, sa.a((byte) -94));
+        var2 = hn.a(this.field_r, ka.c((byte) -80), -2472, true, this.field_p, RandomAccessCacheFile.a((byte) -94));
         if (var2 == -1) {
           return -1;
         }
         if (param0 != ~var2 &&
           var2 != 1) {
-          if (!fa.field_e) {
+          if (!SoundEffectLibrary.field_e) {
             this.a(24044, "reconnect");
           }
           sd.q(param0 + 27113);
-          fi.a(tg.field_d, var2, (byte) 20);
+          fi.a(IntrusiveDequeCursor.field_d, var2, (byte) 20);
           jm.field_b = true;
           hk.field_c = 15000L + k.a(0);
           return var2;
@@ -413,22 +413,22 @@ abstract class ph extends bg {
 
     private final void l(int param0) {
         if (param0 == -6848) {
-          je.field_b[18] = 1;
-          je.field_b[8] = -2;
-          je.field_b[3] = -1;
-          je.field_b[9] = -1;
-          je.field_b[2] = -2;
-          je.field_b[5] = -1;
-          je.field_b[17] = -1;
-          je.field_b[4] = -1;
-          je.field_b[1] = 16;
-          je.field_b[11] = -1;
-          je.field_b[12] = -1;
-          je.field_b[13] = -1;
-          je.field_b[7] = -1;
-          je.field_b[6] = -2;
-          je.field_b[10] = -1;
-          je.field_b[16] = -1;
+          IntrusiveDeque.field_b[18] = 1;
+          IntrusiveDeque.field_b[8] = -2;
+          IntrusiveDeque.field_b[3] = -1;
+          IntrusiveDeque.field_b[9] = -1;
+          IntrusiveDeque.field_b[2] = -2;
+          IntrusiveDeque.field_b[5] = -1;
+          IntrusiveDeque.field_b[17] = -1;
+          IntrusiveDeque.field_b[4] = -1;
+          IntrusiveDeque.field_b[1] = 16;
+          IntrusiveDeque.field_b[11] = -1;
+          IntrusiveDeque.field_b[12] = -1;
+          IntrusiveDeque.field_b[13] = -1;
+          IntrusiveDeque.field_b[7] = -1;
+          IntrusiveDeque.field_b[6] = -2;
+          IntrusiveDeque.field_b[10] = -1;
+          IntrusiveDeque.field_b[16] = -1;
           return;
         }
     }
@@ -451,7 +451,7 @@ abstract class ph extends bg {
           if (var2 == 0) {
             return;
           }
-          L1: {
+          regionExit1: {
             switch (var2) {
               case 1:
                 fn.h(-1);
@@ -471,14 +471,14 @@ abstract class ph extends bg {
                   switch (var2) {
                     case 13:
                       wc.h(1);
-                      break L1;
+                      break regionExit1;
                     case 17:
                       stackIn_26_1 = !(param0);
                       this.b(stackIn_26_1);
-                      break L1;
+                      break regionExit1;
                     case 18:
                       ua.a(-1);
-                      break L1;
+                      break regionExit1;
                     default:
                       stackIn_30_0 = -111;
                       stackIn_30_1 = null;
@@ -486,7 +486,7 @@ abstract class ph extends bg {
                       stackIn_31_3 = !(param0);
                       fk.a(stackIn_30_0, (Throwable) (stackIn_30_1), ((StringBuilder) (Object) stackIn_30_2).append(hc.a(stackIn_31_3)).toString());
                       mk.a(false);
-                      break L1;
+                      break regionExit1;
                   }
                 }
                 stackIn_36_0 = 85;
@@ -501,10 +501,10 @@ abstract class ph extends bg {
                 this.i(92);
                 break;
               case 6:
-                oj.b((byte) -122);
+                IsaacCipher.b((byte) -122);
                 break;
               case 5:
-                se.a(false);
+                MouseWheelInput.a(false);
                 break;
               case 4:
                 vg.d((byte) 78);
@@ -554,7 +554,7 @@ abstract class ph extends bg {
           }
           hn.field_M.b(29768);
         }
-        je.a(13397);
+        IntrusiveDeque.a(13397);
         qb.a(false);
         var3 = -117 / ((param0 - 84) / 32);
         if (!rm.a(false) &&
@@ -594,7 +594,7 @@ abstract class ph extends bg {
                 decompiledFrameRemainder1 = false;
               }
               else {
-                if (!ca.c(-25945)) {
+                if (!SocketConnector.c(-25945)) {
                   bk.a(1);
                 }
               }
@@ -636,7 +636,7 @@ abstract class ph extends bg {
               if (a.field_h != 3) {
                 if (4 != a.field_h) {
                   if (a.field_h == 2) {
-                    fi.a(je.field_g, 256, (byte) 20);
+                    fi.a(IntrusiveDeque.field_g, 256, (byte) 20);
                   } else {
                     if (a.field_h != 5) {
                       fi.a(ul.field_a, 256, (byte) 20);
@@ -648,7 +648,7 @@ abstract class ph extends bg {
                   fi.a(ej.field_p, 256, (byte) 20);
                 }
               } else {
-                fi.a(ea.field_c, 256, (byte) 20);
+                fi.a(IterableNodeHashTable.field_c, 256, (byte) 20);
               }
               jm.field_b = true;
             }
@@ -656,7 +656,7 @@ abstract class ph extends bg {
         }
         if ((-1 != a.field_h &&
           a.field_h != 0 ||
-          ca.c(-25945)) &&
+          SocketConnector.c(-25945)) &&
           k.a(0) >= hk.field_c) {
           jm.field_b = false;
           if (a.field_h != -1 &&
@@ -666,7 +666,7 @@ abstract class ph extends bg {
           }
         }
         if (a.field_h == 0 &&
-          !ca.c(-25945)) {
+          !SocketConnector.c(-25945)) {
           n.field_Q = false;
         }
         if (vd.field_a == 0 &&
@@ -677,7 +677,7 @@ abstract class ph extends bg {
           if (th.field_l != 0) {
             d.field_i = ve.b(57, il.field_R);
           }
-          rm.field_i = pl.a(fl.field_g, true, false, 1, (byte) -85);
+          rm.field_i = pl.a(BufferedSocket.field_g, true, false, 1, (byte) -85);
           ib.field_a = pl.a(jg.field_a, true, false, 1, (byte) -100);
           q.field_b = pl.a(kd.field_l, true, false, 1, (byte) -93);
           sb.field_a = ib.field_a;
@@ -693,7 +693,7 @@ abstract class ph extends bg {
               if (d.field_i.a("", (byte) -76)) {
                 gi.a(1, d.field_i);
                 d.field_i = null;
-                rk.c(-8243);
+                SecondaryNodeDeque.c(-8243);
               }
             }
           }
@@ -705,10 +705,10 @@ abstract class ph extends bg {
           da.a(rm.field_i, ib.field_a, 97, q.field_b) &&
           sd.a((byte) -68, q.field_b)) {
           rn.a(1);
-          bg.c(67);
-          bn.field_a = kl.field_f;
+          GameApplet.c(67);
+          bn.field_a = FullscreenFocusCanvas.field_f;
           k.field_c = false;
-          fa.a(rm.field_i, pg.field_m, q.field_b, ib.field_a, (byte) 91);
+          SoundEffectLibrary.a(rm.field_i, pg.field_m, q.field_b, ib.field_a, (byte) 91);
           if (nl.field_j ||
             null != vg.field_Pb) {
             stackIn_105_0 = !(nl.field_j);
@@ -722,14 +722,14 @@ abstract class ph extends bg {
           }
           if (null == rl.field_f) {
             rl.field_f = im.a(28357);
-            ci.field_z = fa.a(-116);
+            ci.field_z = SoundEffectLibrary.a(-116);
           }
           ni.a(q.field_b, rl.field_f, ci.field_z, (byte) -5);
           rm.field_i = null;
           q.field_b = null;
           ib.field_a = null;
-          pk.a(-73, (java.applet.Applet) (this));
-          rk.c(-8243);
+          WidgetContainer.a(-73, (java.applet.Applet) (this));
+          SecondaryNodeDeque.c(-8243);
           vd.field_a = 10;
         }
         if (10 == vd.field_a) {
@@ -766,7 +766,7 @@ abstract class ph extends bg {
           }
         }
         if (!param1 &&
-          ha.field_h) {
+          MouseInputHandler.field_h) {
           oa.a((byte) -117, uh.field_b);
           this.d(-66);
           da.a((byte) -118, uh.field_b);
@@ -795,7 +795,7 @@ abstract class ph extends bg {
 
     static {
         field_A = "Wins";
-        field_F = new je();
+        field_F = new IntrusiveDeque();
         field_D = "Not yet achieved";
         field_z = -1;
         field_x = "Achievements";

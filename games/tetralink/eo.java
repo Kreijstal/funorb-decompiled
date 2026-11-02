@@ -9,17 +9,17 @@ final class eo {
     static String field_d;
 
     final static int a(int param0, byte param1, int param2, int param3) {
-        if (!(ra.field_f < param2 + param0)) {
+        if (!(SoftwareRasterizer.field_f < param2 + param0)) {
           return param2;
         }
         if (0 <= -param0 + (param3 + param2)) {
           return -param0 + (param3 + param2);
         }
         if (param1 > 88) {
-          return ra.field_f - param0;
+          return SoftwareRasterizer.field_f - param0;
         }
         eo.a((byte) -127);
-        return ra.field_f - param0;
+        return SoftwareRasterizer.field_f - param0;
     }
 
     public static void a(byte param0) {
@@ -48,14 +48,14 @@ final class eo {
     }
 
     final static void a(int param0, int param1, int param2, String param3, int param4, String param5) {
-        bc var8 = null;
+        BitPacketBuffer var8 = null;
         int var7 = 0;
         try {
           var8 = nd.field_Lb;
-          bc var6 = var8;
-          var8.f(param2, (byte) -92);
-          var8.field_t = var8.field_t + 1;
-          var7 = var8.field_t;
+          BitPacketBuffer var6 = var8;
+          var8.writeCipheredByte(param2, (byte) -92);
+          var8.position = var8.position + 1;
+          var7 = var8.position;
           var8.a(param4, false);
           if (param0 == ~param4) {
             var8.a(param3, 0);
@@ -65,7 +65,7 @@ final class eo {
           } else {
             hn.a(false, param5, var8);
           }
-          var8.b(var8.field_t - var7, -2);
+          var8.b(var8.position - var7, -2);
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "eo.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

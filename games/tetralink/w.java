@@ -4,7 +4,7 @@
 final class w extends um {
     static String field_s;
     static String field_q;
-    static oh field_r;
+    static Sprite field_r;
 
     public static void g(int param0) {
         field_s = null;

@@ -46,7 +46,7 @@ final class sj {
     final static boolean a(long param0, String param1, int[] param2, int param3, int param4) {
         le var6 = null;
         RuntimeException var6_ref = null;
-        ah var7 = null;
+        Archive var7 = null;
         CharSequence var8 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -62,12 +62,12 @@ final class sj {
             param4 = 0;
           }
           ka.field_m = param1;
-          sf.field_d = param4;
+          SecondaryNodeDequeIterator.field_d = param4;
           var8 = (CharSequence) ((Object) param1);
           qj.field_a = cc.a(var8, (byte) 115);
           if (param3 < 55) {
-            var7 = (ah) null;
-            sj.a(-34, (ah) null, 19, 68);
+            var7 = (Archive) null;
+            sj.a(-34, (Archive) null, 19, 68);
           }
           vj.field_o = param0;
           var6 = lk.a(-29, ec.field_b, wa.field_a, hc.field_n, param2);
@@ -124,12 +124,12 @@ final class sj {
           }
           var8 = new fi(mf.field_s, param3);
           mf.field_s.a(var8, false);
-          if (wm.d(2)) {
+          if (ImageProducerRasterBuffer.d(2)) {
             var8.s(param5 + 45);
             return true;
           }
           ma.field_d = ll.field_C;
-          ek.field_s = param2;
+          NotificationToast.field_s = param2;
           wh.field_k = param0;
           jl.field_c = param4;
           vj.field_q = param6;
@@ -168,11 +168,11 @@ final class sj {
         }
     }
 
-    final static oh a(int param0, ah param1, int param2, int param3) {
+    final static Sprite a(int param0, Archive param1, int param2, int param3) {
         RuntimeException var4 = null;
         int[] var5 = null;
         Object stackIn_4_0 = null;
-        oh stackIn_6_0 = null;
+        Sprite stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -187,7 +187,7 @@ final class sj {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (oh) (stackIn_4_0);
+          return (Sprite) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -239,7 +239,7 @@ final class sj {
               return true;
             }
           }
-          var2Lifetime1 = bg.field_g;
+          var2Lifetime1 = GameApplet.field_g;
           var3Lifetime1 = 0;
           while (var3Lifetime1 < var2Lifetime1.length) {
             var4Lifetime1 = var2Lifetime1[var3Lifetime1];

@@ -9,7 +9,7 @@ final class rn {
     static int field_b;
 
     final static void a(int param0) {
-        wm.field_p = null;
+        ImageProducerRasterBuffer.field_p = null;
         gg.field_k = null;
         if (param0 != 1) {
           rn.a((byte) 67, 3);

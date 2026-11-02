@@ -81,7 +81,7 @@ final class i {
           this.field_u.a(var3, -13325, var2);
         }
         if (this.field_l > 0) {
-          sa.field_g = (this.field_l - n.field_M) / 2;
+          RandomAccessCacheFile.field_g = (this.field_l - n.field_M) / 2;
         }
     }
 
@@ -101,10 +101,10 @@ final class i {
     }
 
     final static void a(boolean param0, int param1) {
-        bc var2 = nd.field_Lb;
-        var2.f(param1, (byte) -92);
-        var2.field_t = var2.field_t + 1;
-        int var3 = var2.field_t;
+        BitPacketBuffer var2 = nd.field_Lb;
+        var2.writeCipheredByte(param1, (byte) -92);
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
         var2.a(5, !param0 ? true : false);
         if (!param0) {
           return;
@@ -113,7 +113,7 @@ final class i {
         int var4 = qb.field_N.field_ic + (qb.field_N.field_Zb << 6);
         var2.a(var4, false);
         var2.a(0, 128, qb.field_N.field_sc, qb.field_N.field_sc.length);
-        var2.b(-var3 + var2.field_t, -2);
+        var2.b(-var3 + var2.position, -2);
     }
 
     final static void c(int param0) {
@@ -146,7 +146,7 @@ final class i {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        bc var27 = null;
+        BitPacketBuffer var27 = null;
         long[][] var34 = null;
         int[][] var35 = null;
         int var3Lifetime1;
@@ -155,12 +155,12 @@ final class i {
         var26 = TetraLink.field_J;
         try {
           var27 = kb.field_q;
-          var2 = var27.d((byte) -99);
+          var2 = var27.readUnsignedByte((byte) -99);
           if (param0 != 1) {
             field_n = 56;
           }
           if (var2 == 0) {
-            var3 = var27.e(127);
+            var3 = var27.readUnsignedShort(127);
             var4_ref = (oa) (wc.field_E.c(false));
             while (var4_ref != null) {
               if (var4_ref.field_C != var3) {
@@ -173,9 +173,9 @@ final class i {
               mk.a(false);
               return;
             }
-            var5 = var27.d((byte) -99);
+            var5 = var27.readUnsignedByte((byte) -99);
             if (var5 == 0) {
-              var4_ref.b(false);
+              var4_ref.unlink(false);
               return;
             }
             var6 = var4_ref.field_z;
@@ -184,12 +184,12 @@ final class i {
             lh.field_v[0].field_a = false;
             lh.field_v[0].field_g = null;
             for (var8_int = 1; var8_int < var5; var8_int++) {
-              lh.field_v[var8_int].field_e = var27.g((byte) 81);
+              lh.field_v[var8_int].field_e = var27.readString((byte) 81);
               lh.field_v[var8_int].field_a = false;
-              if (var27.d((byte) -99) != 1) {
+              if (var27.readUnsignedByte((byte) -99) != 1) {
                 lh.field_v[var8_int].field_g = null;
               } else {
-                lh.field_v[var8_int].field_g = var27.g((byte) 81);
+                lh.field_v[var8_int].field_g = var27.readString((byte) 81);
               }
             }
             var8 = new String[3][var6];
@@ -202,16 +202,16 @@ final class i {
             var15 = 0;
             var16 = 0;
             var17 = 0;
-            var18 = var27.d((byte) -99);
+            var18 = var27.readUnsignedByte((byte) -99);
             if (var18 <= 0) {
-              var4_ref.b(false);
+              var4_ref.unlink(false);
               return;
             }
             for (var19 = 0; var19 < var18; var19++) {
-              var20 = var27.d((byte) -99);
+              var20 = var27.readUnsignedByte((byte) -99);
               var21 = lh.field_v[var20].field_e;
-              var22 = var27.c(255);
-              var24 = var27.field_t;
+              var22 = var27.readLong(255);
+              var24 = var27.position;
               if (var19 < var6) {
                 var8[0][var12] = var21;
                 var9[0][var12] = lh.field_v[var20].field_g;
@@ -229,7 +229,7 @@ final class i {
                 var9[1][var13] = null;
                 var34[1][var13] = var22;
                 var13++;
-                var27.field_t = var24;
+                var27.position = var24;
                 for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                   incrementValue$1 = var16;
                   var16++;
@@ -242,7 +242,7 @@ final class i {
                 var8[2][var14] = var21;
                 var9[2][var14] = lh.field_v[var20].field_g;
                 var34[2][var14] = var22;
-                var27.field_t = var24;
+                var27.position = var24;
                 var14++;
                 for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                   incrementValue$2 = var17;
@@ -251,12 +251,12 @@ final class i {
                 }
               }
             }
-            var4_ref.b(false);
+            var4_ref.unlink(false);
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var27.e(param0 ^ 126);
-            var27.c(255);
+            var3Lifetime1 = var27.readUnsignedShort(param0 ^ 126);
+            var27.readLong(255);
             var4 = (o) (pb.field_f.c(false));
             while (var4 != null) {
               if (var3Lifetime1 != var4.field_q) {
@@ -269,7 +269,7 @@ final class i {
               mk.a(false);
               return;
             }
-            var4.b(false);
+            var4.unlink(false);
             return;
           }
           fk.a(-104, (Throwable) null, "HS1: " + hc.a(false));
@@ -397,10 +397,10 @@ final class i {
         }
         if (this.field_l <= n.field_M) {
           if (this.field_l > 0) {
-            sa.field_g = 0;
+            RandomAccessCacheFile.field_g = 0;
           }
         } else {
-          sa.field_g = (-n.field_M + this.field_l) / 2;
+          RandomAccessCacheFile.field_g = (-n.field_M + this.field_l) / 2;
         }
         if (this.field_g != n.field_M ||
           this.field_m != d.field_h) {
@@ -408,12 +408,12 @@ final class i {
         }
     }
 
-    final kl b(boolean param0) {
+    final FullscreenFocusCanvas b(boolean param0) {
         this.field_d = n.field_M;
         this.field_x = d.field_h;
         this.field_u.a(this.field_o, -13325, this.field_r);
-        ha.field_h = param0 ? true : false;
-        kl var2 = bm.a(this.field_o, 0, 0, this.field_r, 0, nd.field_Pb);
+        MouseInputHandler.field_h = param0 ? true : false;
+        FullscreenFocusCanvas var2 = bm.a(this.field_o, 0, 0, this.field_r, 0, nd.field_Pb);
         if (var2 == null) {
           this.a((byte) 36);
         }
@@ -434,14 +434,14 @@ final class i {
 
     final static void a(int param0, eh param1, int param2) {
         int var4 = 0;
-        bc var5 = nd.field_Lb;
-        var5.f(param0, (byte) -92);
+        BitPacketBuffer var5 = nd.field_Lb;
+        var5.writeCipheredByte(param0, (byte) -92);
         if (param2 != 0) {
           return;
         }
         try {
-          var5.field_t = var5.field_t + 1;
-          var4 = var5.field_t;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.a(1, false);
           var5.a(param1.field_r, false);
           var5.a(param1.field_y, false);
@@ -450,7 +450,7 @@ final class i {
           var5.d(param1.field_u, (byte) -124);
           var5.d(param1.field_t, (byte) -124);
           var5.c(var4, param2 ^ -71);
-          var5.b(var5.field_t - var4, param2 ^ -2);
+          var5.b(var5.position - var4, param2 ^ -2);
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "i.M(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

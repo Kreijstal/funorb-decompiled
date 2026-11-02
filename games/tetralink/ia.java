@@ -17,7 +17,7 @@ final class ia extends gn implements ij, dm {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final boolean a(int param0, char param1, int param2, na param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_8_0 = false;
@@ -141,7 +141,7 @@ final class ia extends gn implements ij, dm {
         }
     }
 
-    final static boolean a(int param0, ah param1, int param2, int param3) {
+    final static boolean a(int param0, Archive param1, int param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -224,7 +224,7 @@ final class ia extends gn implements ij, dm {
 
     final static void a(String[] args, int param1) {
         RuntimeException var2 = null;
-        ah var3 = null;
+        Archive var3 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -234,8 +234,8 @@ final class ia extends gn implements ij, dm {
             rm.field_a.field_L.a(0, args);
           }
           if (param1 != 10532) {
-            var3 = (ah) null;
-            ia.a(34, (ah) null, -118, -29);
+            var3 = (Archive) null;
+            ia.a(34, (Archive) null, -118, -29);
           }
           if (null == ko.field_q) {
             return;

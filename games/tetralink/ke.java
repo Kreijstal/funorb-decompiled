@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ke implements Runnable {
-    private jo field_f;
+    private DualLinkDeque field_f;
     static String field_g;
     int field_d;
     static String field_e;
@@ -39,7 +39,7 @@ final class ke implements Runnable {
           synchronized (var5) {
             var6 = (fd) (this.field_f.a((byte) 97));
             while (var6 != null) {
-              if (~var6.field_n == ~(long)param2 &&
+              if (~var6.secondaryKey == ~(long)param2 &&
                 var6.field_K == param1 &&
                 var6.field_L == 2) {
                 var4.field_G = var6.field_G;
@@ -72,7 +72,7 @@ final class ke implements Runnable {
 
     private final void a(fd param0, int param1) {
         synchronized (this.field_f) {
-          this.field_f.a(param0, 0);
+          this.field_f.addLast(param0, 0);
           if (param1 > -49) {
             ke.a(21);
           }
@@ -98,7 +98,7 @@ final class ke implements Runnable {
         RuntimeException decompiledCaughtException = null;
         var5 = TetraLink.field_J;
         try {
-          if (wb.field_f == null) {
+          if (DelegatingCanvas.field_f == null) {
             return null;
           }
           if (param0 == null) {
@@ -113,7 +113,7 @@ final class ke implements Runnable {
           if (var2 == null) {
             return null;
           }
-          var3 = (ud) (wb.field_f.a((long)var2.hashCode(), 1));
+          var3 = (ud) (DelegatingCanvas.field_f.a((long)var2.hashCode(), 1));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_Mb);
             var4 = cc.a(var7, (byte) 119);
@@ -121,7 +121,7 @@ final class ke implements Runnable {
               stackIn_16_0 = var3;
               return stackIn_16_0;
             }
-            var3 = (ud) (wb.field_f.c(122));
+            var3 = (ud) (DelegatingCanvas.field_f.c(122));
           }
           if (!param1) {
             return null;
@@ -169,7 +169,7 @@ final class ke implements Runnable {
             return stackIn_2_0;
           }
           var4 = new fd();
-          var4.field_n = (long)param1;
+          var4.secondaryKey = (long)param1;
           var4.field_D = false;
           var4.field_K = param0;
           var4.field_L = 3;
@@ -205,7 +205,7 @@ final class ke implements Runnable {
           while (!this.field_a) {
             var2 = this.field_f;
             synchronized (var2) {
-              var7 = (fd) (this.field_f.c(-15464));
+              var7 = (fd) (this.field_f.removeFirst(-15464));
               if (var7 != null) {
                 this.field_d = this.field_d - 1;
                 decompiledRegionSelector0 = 1;
@@ -230,11 +230,11 @@ final class ke implements Runnable {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  var7.field_G = var7.field_K.a((byte) -30, (int)var7.field_n);
+                  var7.field_G = var7.field_K.a((byte) -30, (int)var7.secondaryKey);
                   var7.field_v = false;
                 }
               } else {
-                var7.field_K.a(var7.field_G, var7.field_G.length, 13061, (int)var7.field_n);
+                var7.field_K.a(var7.field_G, var7.field_G.length, 13061, (int)var7.secondaryKey);
                 var7.field_v = false;
               }
               if (decompiledFrameRemainder0) {
@@ -298,7 +298,7 @@ final class ke implements Runnable {
             return stackIn_2_0;
           }
           var5.field_G = param2;
-          var5.field_n = (long)param1;
+          var5.secondaryKey = (long)param1;
           var5.field_D = false;
           var5.field_K = param3;
           var5.field_L = 2;
@@ -325,13 +325,13 @@ final class ke implements Runnable {
         }
     }
 
-    ke(ie param0) {
-        vl var2 = null;
-        this.field_f = new jo();
+    ke(PlatformTaskDispatcher param0) {
+        AsyncRequest var2 = null;
+        this.field_f = new DualLinkDeque();
         this.field_d = 0;
         this.field_a = false;
         try {
-          var2 = param0.a((Runnable) (this), 126, 5);
+          var2 = param0.startThread((Runnable) (this), 126, 5);
           while (var2.field_d == 0) {
             tb.a(false, 10L);
           }

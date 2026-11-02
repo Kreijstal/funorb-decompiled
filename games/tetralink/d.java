@@ -4,7 +4,7 @@
 abstract class d implements vm {
     static int field_j;
     private long field_d;
-    static ah field_i;
+    static Archive field_i;
     static String field_g;
     static byte[][] field_f;
     static int field_h;

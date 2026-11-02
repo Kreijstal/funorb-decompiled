@@ -36,7 +36,7 @@ final class mn {
         }
     }
 
-    final static nl[] a(ie param0, int param1) {
+    final static nl[] a(PlatformTaskDispatcher param0, int param1) {
         int var5 = 0;
         nl[] stackIn_3_0 = null;
         nl[] stackIn_10_0 = null;
@@ -50,7 +50,7 @@ final class mn {
         nl[] var4 = null;
         nl var6 = null;
         int var7 = 0;
-        vl var8 = null;
+        AsyncRequest var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = TetraLink.field_J;
@@ -59,7 +59,7 @@ final class mn {
             stackIn_3_0 = new nl[]{};
             return stackIn_3_0;
           }
-          var8 = param0.a(false);
+          var8 = param0.requestDisplayModes(false);
           while (var8.field_d == 0) {
             tb.a(false, 10L);
           }
@@ -127,8 +127,8 @@ final class mn {
         var14 = TetraLink.field_J;
         try {
           var6_int = 485 + param2 + 8 - (-2 - param1 - 8);
-          ea.field_f.a((byte) -104, -6 + var6_int, 3, oj.field_a.field_R - 6, 3);
-          var7 = -5 + ea.field_f.field_R;
+          IterableNodeHashTable.field_f.a((byte) -104, -6 + var6_int, 3, IsaacCipher.field_a.field_R - 6, 3);
+          var7 = -5 + IterableNodeHashTable.field_f.field_R;
           pj.field_d.a((byte) -109, param1 + param2 + 487, var7 - param3, param3, 5);
           in.field_g.a((byte) -112, -param2 + (pj.field_d.field_Hb - ba.field_L.field_Hb), 0, param3, param2);
           ba.field_L.a((byte) -96, ba.field_L.field_Hb, 0, param3, param2 + in.field_g.field_Hb);
@@ -137,7 +137,7 @@ final class mn {
           if (null != bk.field_e) {
             bk.field_e.a(id.field_M.field_R, id.field_M.field_yb, -124, id.field_M.field_M, id.field_M.field_Hb);
           }
-          var8 = -var6_int + oj.field_a.field_Hb - param2;
+          var8 = -var6_int + IsaacCipher.field_a.field_Hb - param2;
           var9 = var8 / 2;
           var10 = param4 + var9 + param2;
           var11 = 0;
@@ -147,9 +147,9 @@ final class mn {
           for (var12 = 0; var12 < 6; var12++) {
             if (5 <= var12 ||
               null != nj.field_f[var12]) {
-              var13 = 3 + (2 + oj.field_a.field_R - 6) * var11 / (v.field_r + 1);
+              var13 = 3 + (2 + IsaacCipher.field_a.field_R - 6) * var11 / (v.field_r + 1);
               var11++;
-              var7Lifetime1 = (-6 + (oj.field_a.field_R + 2)) * var11 / (v.field_r + 1) + 3 + (-2 - var13);
+              var7Lifetime1 = (-6 + (IsaacCipher.field_a.field_R + 2)) * var11 / (v.field_r + 1) + 3 + (-2 - var13);
               if (var12 >= 5) {
                 nc.field_e.a((byte) -88, var8, var13, var7Lifetime1, var6_int);
               } else {

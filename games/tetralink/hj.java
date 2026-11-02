@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hj {
-    private ah field_d;
+    private Archive field_d;
     static int field_a;
     static String[] field_c;
-    private ah field_b;
+    private Archive field_b;
     static ve field_e;
     private ec field_f;
 
@@ -18,13 +18,13 @@ final class hj {
     }
 
     final static void b(byte param0) {
-        jo.a(gk.field_d, 6, -13850);
-        jo.a(il.field_T, 8, -13850);
+        DualLinkDeque.a(gk.field_d, 6, -13850);
+        DualLinkDeque.a(il.field_T, 8, -13850);
         if (!wk.a((byte) 122)) {
-          jo.a(in.field_c, 2, -13850);
-          jo.a(qj.field_b, 3, -13850);
-          jo.a(wg.field_f, 4, -13850);
-          jo.a(od.field_Y, 5, -13850);
+          DualLinkDeque.a(in.field_c, 2, -13850);
+          DualLinkDeque.a(qj.field_b, 3, -13850);
+          DualLinkDeque.a(wg.field_f, 4, -13850);
+          DualLinkDeque.a(od.field_Y, 5, -13850);
           if (param0 <= -45) {
             hg.field_b[8] = hg.field_b[8] + 32;
             return;
@@ -111,7 +111,7 @@ final class hj {
         }
         var3 = new qa();
         if (var4 != null) {
-          var3.a(new bh(var4), 0);
+          var3.a(new PacketBuffer(var4), 0);
           if (32768 <= param0) {
             var3.g(32768);
           }
@@ -125,7 +125,7 @@ final class hj {
         return var3;
     }
 
-    hj(int param0, ah param1, ah param2) {
+    hj(int param0, Archive param1, Archive param2) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;

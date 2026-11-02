@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qn extends al {
-    static je field_t;
+    static IntrusiveDeque field_t;
     private dg field_u;
     private dg[] field_q;
     static int[] field_s;
     static hl field_r;
     static String field_v;
 
-    final static void a(boolean param0, byte[] param1, byte[] param2, String[][] param3, oh[][] param4, boolean param5, oh[][] param6, String[][] param7, ah param8, ah param9, int[] param10, int param11, int param12, String[] param13, ah param14) {
+    final static void a(boolean param0, byte[] param1, byte[] param2, String[][] param3, Sprite[][] param4, boolean param5, Sprite[][] param6, String[][] param7, Archive param8, Archive param9, int[] param10, int param11, int param12, String[] param13, Archive param14) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -184,7 +184,7 @@ final class qn extends al {
         }
     }
 
-    final void a(oh[] param0, int param1) {
+    final void a(Sprite[] param0, int param1) {
         int var4 = 0;
         dg[] var3 = null;
         dg var5 = null;
@@ -225,7 +225,7 @@ final class qn extends al {
         }
     }
 
-    final void a(int param0, int param1, oh[] param2) {
+    final void a(int param0, int param1, Sprite[] param2) {
         int var4_int = param0;
         if (null == this.field_q[var4_int]) {
           this.field_q[var4_int] = new dg();
@@ -240,8 +240,8 @@ final class qn extends al {
         }
     }
 
-    public final void a(na param0, int param1, int param2, boolean param3, boolean param4) {
-        na stackIn_3_0 = null;
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -258,10 +258,10 @@ final class qn extends al {
           if (!(param0 instanceof ae)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (na) (param0);
+            stackIn_3_0 = (UiWidget) (param0);
           }
           var10 = (ae) (stackIn_3_0);
-          kl.a(param0.field_F + param0.field_t + param1, param2 + (param0.field_w + param0.field_u), param0.field_w + param2, (byte) -79, param0.field_t + param1);
+          FullscreenFocusCanvas.a(param0.field_F + param0.field_t + param1, param2 + (param0.field_w + param0.field_u), param0.field_w + param2, (byte) -79, param0.field_t + param1);
           if (var10 != null) {
             param4 = param4 & var10.field_K;
           }
@@ -329,27 +329,27 @@ final class qn extends al {
         bf var2Lifetime1;
         var3 = TetraLink.field_J;
         try {
-          wb.field_c = param0;
+          DelegatingCanvas.field_c = param0;
           if (param1 != 128) {
             return;
           }
-          var2 = (bf) (ha.field_b.c(false));
+          var2 = (bf) (MouseInputHandler.field_b.c(false));
           while (var2 != null) {
-            if (var2.field_q.a((byte) 95)) {
-              var2.field_t.f(128 + var2.field_u * wb.field_c >> 8);
+            if (var2.field_q.isLinked((byte) 95)) {
+              var2.field_t.f(128 + var2.field_u * DelegatingCanvas.field_c >> 8);
             } else {
-              var2.b(false);
+              var2.unlink(false);
             }
-            var2 = (bf) (ha.field_b.a((byte) -70));
+            var2 = (bf) (MouseInputHandler.field_b.a((byte) -70));
           }
           if (gi.field_d != null) {
             var2Lifetime1 = (bf) (gi.field_d.c(false));
             while (var2Lifetime1 != null) {
-              stackIn_14_0 = var2Lifetime1.field_q.a((byte) 95);
+              stackIn_14_0 = var2Lifetime1.field_q.isLinked((byte) 95);
               if (!stackIn_14_0) {
-                var2Lifetime1.b(false);
+                var2Lifetime1.unlink(false);
               } else {
-                var2Lifetime1.field_t.f(128 + wb.field_c * var2Lifetime1.field_u >> 8);
+                var2Lifetime1.field_t.f(128 + DelegatingCanvas.field_c * var2Lifetime1.field_u >> 8);
               }
               var2Lifetime1 = (bf) (gi.field_d.a((byte) -70));
             }
@@ -372,7 +372,7 @@ final class qn extends al {
         }
     }
 
-    final void a(oh param0, byte param1) {
+    final void a(Sprite param0, byte param1) {
         int var4 = 0;
         dg[] var3 = null;
         dg var5 = null;
@@ -430,7 +430,7 @@ final class qn extends al {
     }
 
     static {
-        field_t = new je();
+        field_t = new IntrusiveDeque();
         field_s = new int[]{2};
         field_v = "Set up new game";
     }

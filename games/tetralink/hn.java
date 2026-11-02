@@ -7,7 +7,7 @@ abstract class hn extends gn implements uc {
     static hl field_P;
     static boolean field_K;
     static rb field_Q;
-    static oh[] field_O;
+    static Sprite[] field_O;
     static String field_N;
 
     void a(int param0, qh param1) {
@@ -63,7 +63,7 @@ abstract class hn extends gn implements uc {
         field_N = null;
     }
 
-    final static int a(boolean param0, String param1, bh param2) {
+    final static int a(boolean param0, String param1, PacketBuffer param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -81,12 +81,12 @@ abstract class hn extends gn implements uc {
             var5 = (String) null;
             hn.a(false, (String) null, -28, true, -123, (String) null);
           }
-          var3_int = param2.field_t;
+          var3_int = param2.position;
           var6 = (CharSequence) ((Object) param1);
           var4 = q.a(65, var6);
-          param2.b(var4.length, (byte) -93);
-          param2.field_t = param2.field_t + ck.field_Z.a(0, param2.field_t, var4, var4.length, param2.field_u, 28677);
-          stackIn_3_0 = -var3_int + param2.field_t;
+          param2.writeSmart(var4.length, (byte) -93);
+          param2.position = param2.position + ck.field_Z.a(0, param2.position, var4, var4.length, param2.payload, 28677);
+          stackIn_3_0 = -var3_int + param2.position;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -158,14 +158,14 @@ abstract class hn extends gn implements uc {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
-            if (qi.field_p == bc.field_z) {
+            if (qi.field_p == BitPacketBuffer.field_z) {
               if (param3) {
                 var10 = (String) null;
                 c.field_a = ug.a(ua.field_g, (String) null, false, param1, -6336);
               } else {
                 c.field_a = sk.a((byte) -79, param5, false, param1);
               }
-              nd.field_Lb.field_t = 0;
+              nd.field_Lb.position = 0;
               nd.field_Lb.a(14, false);
               nd.field_Lb.a(c.field_a.a((byte) -95).field_d, false);
               ak.a((byte) -116, -1);
@@ -173,8 +173,8 @@ abstract class hn extends gn implements uc {
             }
             if (qi.field_p == qi.field_u &&
               en.b(109, 1)) {
-              var6_int = kb.field_q.d((byte) -99);
-              kb.field_q.field_t = 0;
+              var6_int = kb.field_q.readUnsignedByte((byte) -99);
+              kb.field_q.position = 0;
               if (var6_int == 0) {
                 qi.field_p = eh.field_v;
               } else {
@@ -185,17 +185,17 @@ abstract class hn extends gn implements uc {
             }
             if (qi.field_p == eh.field_v &&
               en.b(110, 8)) {
-              ca.field_g = kb.field_q.c(255);
-              kb.field_q.field_t = 0;
+              SocketConnector.field_g = kb.field_q.readLong(255);
+              kb.field_q.position = 0;
               ng.a((byte) -34, param4, param3, c.field_a, param0);
-              qi.field_p = vb.field_l;
+              qi.field_p = ProxySocketConnector.field_l;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (qi.field_p == vb.field_l &&
+            if (qi.field_p == ProxySocketConnector.field_l &&
               en.b(param2 ^ -2513, 1)) {
-              var6_intLifetime1 = kb.field_q.d((byte) -99);
+              var6_intLifetime1 = kb.field_q.readUnsignedByte((byte) -99);
               ua.field_c = var6_intLifetime1;
-              kb.field_q.field_t = 0;
+              kb.field_q.position = 0;
               cl.field_b = null;
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
@@ -206,25 +206,25 @@ abstract class hn extends gn implements uc {
                 }
                 else {
                   mk.a(false);
-                  vb.field_j = false;
+                  ProxySocketConnector.field_j = false;
                   stackIn_28_0 = var6_intLifetime1;
                   return stackIn_28_0;
                 }
               }
               if (decompiledFrameRemainder0) {
                 rl.field_d = -1;
-                qi.field_p = sa.field_f;
+                qi.field_p = RandomAccessCacheFile.field_f;
               }
             }
-            if (sa.field_f == qi.field_p &&
+            if (RandomAccessCacheFile.field_f == qi.field_p &&
               ua.b(46)) {
-              ua.field_g = kb.field_q.c(255);
+              ua.field_g = kb.field_q.readLong(255);
               fd.field_J = param1;
-              dd.field_c = kb.field_q.d((byte) -99);
-              mb.field_z = kb.field_q.d((byte) -99);
-              mb.field_C = kb.field_q.e(param2 + 2599);
+              dd.field_c = kb.field_q.readUnsignedByte((byte) -99);
+              mb.field_z = kb.field_q.readUnsignedByte((byte) -99);
+              mb.field_C = kb.field_q.readUnsignedShort(param2 + 2599);
               var6 = kb.field_q.i(-53);
-              var7 = kb.field_q.d((byte) -99);
+              var7 = kb.field_q.readUnsignedByte((byte) -99);
               if ((var7 & 1) != 0) {
                 qj.b((byte) 115);
               }
@@ -241,20 +241,20 @@ abstract class hn extends gn implements uc {
               }
               stackIn_52_0 = ((16 & var7) != 0);
               ef.field_n = stackIn_52_0;
-              if (mc.field_k) {
-                kb.field_q.d((byte) -99);
-                kb.field_q.d((byte) -99);
+              if (IntrusiveNode.field_k) {
+                kb.field_q.readUnsignedByte((byte) -99);
+                kb.field_q.readUnsignedByte((byte) -99);
                 kb.field_q.f(-117);
-                bf.field_n = kb.field_q.e(127);
+                bf.field_n = kb.field_q.readUnsignedShort(127);
                 ua.field_a = new byte[bf.field_n];
                 for (var8 = 0; bf.field_n > var8; var8++) {
-                  ua.field_a[var8] = kb.field_q.g(oj.a(param2, 1772090971));
+                  ua.field_a[var8] = kb.field_q.readSignedByte(IsaacCipher.a(param2, 1772090971));
                 }
               }
-              ph.field_w = kb.field_q.g((byte) 81);
+              ph.field_w = kb.field_q.readString((byte) 81);
               var11 = (CharSequence) ((Object) ph.field_w);
               ik.field_f = cc.a(var11, (byte) 119);
-              pg.field_a = kb.field_q.d((byte) -99);
+              pg.field_a = kb.field_q.readUnsignedByte((byte) -99);
               qi.field_p = li.field_a;
               if (c.field_a.a((byte) -106) == t.field_h) {
                 lh.field_s.a((byte) -86, lk.q(13));
@@ -263,7 +263,7 @@ abstract class hn extends gn implements uc {
                   lc.field_j.a((byte) -90, lk.q(13));
                 }
               }
-              vb.field_j = false;
+              ProxySocketConnector.field_j = false;
               if (var6 != null) {
                 qi.a(var6, -7011, lk.q(13));
               }
@@ -286,11 +286,11 @@ abstract class hn extends gn implements uc {
               if (mb.field_C > 0) {
                 pg.field_m = true;
               }
-              nd.field_Lb.a(ai.field_e, (byte) 33);
+              nd.field_Lb.setCipherSeed(ai.field_e, (byte) 33);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
                 ai.field_e[var8Lifetime1] = ai.field_e[var8Lifetime1] + 50;
               }
-              kb.field_q.a(ai.field_e, (byte) 33);
+              kb.field_q.setCipherSeed(ai.field_e, (byte) 33);
               stackIn_79_0 = ua.field_c;
               return stackIn_79_0;
             }
@@ -298,16 +298,16 @@ abstract class hn extends gn implements uc {
               ua.b(param2 + 2515)) {
               mk.a(false);
               if (ua.field_c == 7 &&
-                !vb.field_j) {
-                vb.field_j = true;
+                !ProxySocketConnector.field_j) {
+                ProxySocketConnector.field_j = true;
                 stackIn_91_0 = -1;
                 return stackIn_91_0;
               }
               if (7 == ua.field_c) {
                 ua.field_c = 3;
               }
-              tg.field_d = kb.field_q.g((byte) 81);
-              vb.field_j = false;
+              IntrusiveDequeCursor.field_d = kb.field_q.readString((byte) 81);
+              ProxySocketConnector.field_j = false;
               stackIn_89_0 = ua.field_c;
               return stackIn_89_0;
             }
@@ -316,19 +316,19 @@ abstract class hn extends gn implements uc {
               return stackIn_94_0;
             }
             if (null == wa.field_e) {
-              if (vb.field_j) {
+              if (ProxySocketConnector.field_j) {
                 if (ib.a((byte) 127) <= 30000L) {
-                  tg.field_d = ja.field_d;
+                  IntrusiveDequeCursor.field_d = ja.field_d;
                 } else {
-                  tg.field_d = wc.field_G;
+                  IntrusiveDequeCursor.field_d = wc.field_G;
                 }
-                vb.field_j = false;
+                ProxySocketConnector.field_j = false;
                 stackIn_102_0 = 3;
                 return stackIn_102_0;
               }
               var6_intLifetime2 = ko.field_t;
               ko.field_t = oi.field_m;
-              vb.field_j = true;
+              ProxySocketConnector.field_j = true;
               oi.field_m = var6_intLifetime2;
             }
             stackIn_104_0 = -1;

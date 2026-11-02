@@ -123,7 +123,7 @@ final class vd {
         boolean stackIn_62_1 = false;
         hl stackIn_65_0 = null;
         boolean stackIn_66_1 = false;
-        kl.a(640 + ra.field_f >> 1, ra.field_e, 0, (byte) -79, -640 + ra.field_f >> 1);
+        FullscreenFocusCanvas.a(640 + SoftwareRasterizer.field_f >> 1, SoftwareRasterizer.field_e, 0, (byte) -79, -640 + SoftwareRasterizer.field_f >> 1);
         if (qd.field_ab <= 0) {
           if (ng.field_t > param1) {
             if (hd.field_r != null) {
@@ -155,7 +155,7 @@ final class vd {
           stackIn_7_0 = hn.field_P;
           stackIn_8_1 = (param0) && (!hm.field_b);
           ((hl) (Object) stackIn_7_0).a(stackIn_8_1, 256);
-          stackIn_11_0 = qe.field_c;
+          stackIn_11_0 = GameKeyHandler.field_c;
           stackIn_12_1 = (param0) && (!hm.field_b);
           ((hl) (Object) stackIn_11_0).a(stackIn_12_1, 256);
           if (ng.field_t > param1) {

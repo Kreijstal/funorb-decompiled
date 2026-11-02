@@ -8,7 +8,7 @@ final class sk {
     private p field_i;
     static int field_c;
     static p field_f;
-    static wf field_a;
+    static PcmSample field_a;
     private int field_d;
     static int[] field_b;
     static hl field_h;
@@ -19,7 +19,7 @@ final class sk {
         RuntimeException var5_ref = null;
         int var6 = 0;
         Throwable var7 = null;
-        oh var8 = null;
+        Sprite var8 = null;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -27,8 +27,8 @@ final class sk {
         Throwable decompiledCaughtException = null;
         try {
           if (param2 != 13061) {
-            var8 = (oh) null;
-            sk.a((byte) 95, (oh) null);
+            var8 = (Sprite) null;
+            sk.a((byte) 95, (Sprite) null);
           }
           var5 = this.field_i;
           synchronized (var5) {
@@ -110,7 +110,7 @@ final class sk {
                 this.field_e.a(-19735, cf.field_q, 0, 6);
                 var8 = 0;
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (param1 > var8) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -126,7 +126,7 @@ final class sk {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var12 = (cf.field_q[5] & 255) + ((cf.field_q[4] & 255) << 8);
                         var13 = cf.field_q[9] & 255;
@@ -142,7 +142,7 @@ final class sk {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var13 = cf.field_q[7] & 255;
                         var12 = ((255 & cf.field_q[2]) << 8) + (255 & cf.field_q[3]);
@@ -250,17 +250,17 @@ final class sk {
         } else {
           uk.field_x = 3.1415927410125732f;
         }
-        sa.a(-90, true);
+        RandomAccessCacheFile.a(-90, true);
         ti.field_g[param0] = (double)rn.field_d * Math.sin((double)dj.field_h);
         ti.field_g[2] = (double)rn.field_d * Math.cos((double)dj.field_h);
         eo.a(-53);
-        wb.a(false, param0 - 7869);
+        DelegatingCanvas.a(false, param0 - 7869);
         lb.a(pi.field_c, 573509761);
         int var1 = ui.a(3, param0 + 1692);
-        if (var1 == se.field_b) {
-          var1 = (se.field_b + 1) % 3;
+        if (var1 == MouseWheelInput.field_b) {
+          var1 = (MouseWheelInput.field_b + 1) % 3;
         }
-        se.field_b = var1;
+        MouseWheelInput.field_b = var1;
         dl.a(27654, qc.field_bb[var1 + 1]);
     }
 
@@ -394,7 +394,7 @@ final class sk {
         }
     }
 
-    final static java.awt.Frame a(int param0, ie param1, int param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, PlatformTaskDispatcher param1, int param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_3_0 = null;
         Object stackIn_39_0 = null;
@@ -408,7 +408,7 @@ final class sk {
         java.awt.Frame var7 = null;
         int var9 = 0;
         nl[] var10 = null;
-        vl var11 = null;
+        AsyncRequest var11 = null;
         var9 = TetraLink.field_J;
         try {
           if (!param1.a((byte) -119)) {
@@ -439,7 +439,7 @@ final class sk {
           if (param2 != 10) {
             sk.a(78);
           }
-          var11 = param1.a(0, param4, param3, param5, param0);
+          var11 = param1.requestEnterFullscreen(0, param4, param3, param5, param0);
           while (var11.field_d == 0) {
             tb.a(false, 10L);
           }
@@ -467,13 +467,13 @@ final class sk {
         }
     }
 
-    final static void a(byte param0, oh param1) {
+    final static void a(byte param0, Sprite param1) {
         if (param0 < 104) {
           return;
         }
         try {
           nm.b((byte) 96);
-          ra.a(param1.field_C, param1.field_t, param1.field_F);
+          SoftwareRasterizer.a(param1.field_C, param1.field_t, param1.field_F);
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "sk.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -558,7 +558,7 @@ final class sk {
               if (var1.field_Sb == 0) {
                 var1.field_Xb = 0;
                 if (var1.d((byte) -1)) {
-                  var1.b(false);
+                  var1.unlink(false);
                 }
               }
             }
@@ -571,7 +571,7 @@ final class sk {
               if (var1_ref.field_Ub == 0) {
                 var1_ref.field_gc = 0;
                 if (var1_ref.h(-597)) {
-                  var1_ref.b(false);
+                  var1_ref.unlink(false);
                 }
               }
             }
@@ -587,7 +587,7 @@ final class sk {
               }
               var1Lifetime1.field_Xb = 0;
               if (var1Lifetime1.d((byte) -1)) {
-                var1Lifetime1.b(false);
+                var1Lifetime1.unlink(false);
               }
             }
             var1Lifetime1 = (gd) (ui.field_d.a((byte) -70));

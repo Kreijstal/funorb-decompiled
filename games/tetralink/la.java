@@ -3,7 +3,7 @@
  */
 final class la extends jd {
     static String field_k;
-    static ob field_g;
+    static Model field_g;
     static String[] field_h;
     static db field_i;
     static String field_f;
@@ -12,7 +12,7 @@ final class la extends jd {
     static int field_e;
     static String field_j;
 
-    final static void a(String param0, bk param1, jb param2, boolean param3, int param4) {
+    final static void a(String param0, bk param1, BitmapFont param2, boolean param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -198,7 +198,7 @@ final class la extends jd {
         co.field_p = new String[11];
         co.field_p[7] = am.field_d;
         co.field_p[3] = lf.field_c;
-        co.field_p[2] = bh.field_o;
+        co.field_p[2] = PacketBuffer.field_o;
         co.field_p[0] = pg.field_b;
         co.field_p[9] = jm.field_e;
         co.field_p[8] = ph.field_x;
@@ -209,9 +209,9 @@ final class la extends jd {
         cd.field_c[18] = qk.field_a;
         cd.field_c[5] = am.field_d;
         cd.field_c[6] = vd.field_g;
-        cd.field_c[15] = tg.field_c;
+        cd.field_c[15] = IntrusiveDequeCursor.field_c;
         cd.field_c[7] = pg.field_b;
-        cd.field_c[23] = fa.field_a;
+        cd.field_c[23] = SoundEffectLibrary.field_a;
         cd.field_c[0] = gl.field_q;
         cd.field_c[8] = ci.field_A;
         cd.field_c[16] = ec.field_f;
@@ -226,7 +226,7 @@ final class la extends jd {
         cd.field_c[10] = field_f;
         cd.field_c[14] = en.field_M;
         cd.field_c[1] = dl.field_n;
-        cd.field_c[17] = md.field_z;
+        cd.field_c[17] = SpriteState.field_z;
         cd.field_c[3] = ph.field_x;
         cd.field_c[13] = ng.field_E;
         cd.field_c[12] = sd.field_ob;

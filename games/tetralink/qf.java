@@ -11,7 +11,7 @@ final class qf {
     static int field_i;
     static String[] field_b;
     static boolean field_g;
-    static se field_k;
+    static MouseWheelInput field_k;
     static String field_d;
 
     final static String a(byte param0, String param1, int param2) {
@@ -29,8 +29,8 @@ final class qf {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        ie var5 = null;
-        bc var6 = null;
+        PlatformTaskDispatcher var5 = null;
+        BitPacketBuffer var6 = null;
         CharSequence var7 = null;
         try {
           var7 = (CharSequence) ((Object) param1);
@@ -47,20 +47,20 @@ final class qf {
             return stackIn_9_0;
           }
           if (param0 != 122) {
-            var5 = (ie) null;
-            qf.a(-37, -32, (bh) null, (ie) null);
+            var5 = (PlatformTaskDispatcher) null;
+            qf.a(-37, -32, (PacketBuffer) null, (PlatformTaskDispatcher) null);
           }
-          if (oj.a(1, param1)) {
+          if (IsaacCipher.a(1, param1)) {
             stackIn_15_0 = sk.a(new String[]{param1}, tc.field_n, 123);
             return stackIn_15_0;
           }
           if (qi.field_q >= 100 &&
             0 >= mb.field_C) {
-            stackIn_19_0 = ha.field_g;
+            stackIn_19_0 = MouseInputHandler.field_g;
             return stackIn_19_0;
           }
           if (qi.field_q >= 200) {
-            stackIn_22_0 = ha.field_g;
+            stackIn_22_0 = MouseInputHandler.field_g;
             return stackIn_22_0;
           }
           if (sb.a((byte) 2, param1)) {
@@ -68,12 +68,12 @@ final class qf {
             return stackIn_25_0;
           }
           var6 = nd.field_Lb;
-          var6.f(param2, (byte) -92);
-          var6.field_t = var6.field_t + 1;
-          var4 = var6.field_t;
+          var6.writeCipheredByte(param2, (byte) -92);
+          var6.position = var6.position + 1;
+          var4 = var6.position;
           var6.a(0, false);
           var6.a(param1, 0);
-          var6.b(var6.field_t - var4, param0 ^ -124);
+          var6.b(var6.position - var4, param0 ^ -124);
           stackIn_27_0 = null;
           return (String) (stackIn_27_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -91,13 +91,13 @@ final class qf {
     }
 
     final static void a(int param0, boolean param1) {
-        ra.a();
+        SoftwareRasterizer.a();
         if (param0 != 1) {
-          field_k = (se) null;
+          field_k = (MouseWheelInput) null;
         }
     }
 
-    final static void a(int param0, int param1, bh param2, ie param3) {
+    final static void a(int param0, int param1, PacketBuffer param2, PlatformTaskDispatcher param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -136,10 +136,10 @@ final class qf {
           var14 = TetraLink.field_J;
           try {
             var18 = new nm();
-            var18.field_r = param2.d((byte) -99);
+            var18.field_r = param2.readUnsignedByte((byte) -99);
             var18.field_s = param2.f(-118);
-            var18.field_u = new vl[var18.field_r];
-            var18.field_x = new vl[var18.field_r];
+            var18.field_u = new AsyncRequest[var18.field_r];
+            var18.field_x = new AsyncRequest[var18.field_r];
             if (param1 != 4) {
               qf.a(85, false);
             }
@@ -149,18 +149,18 @@ final class qf {
             var18.field_t = new byte[var18.field_r][][];
             for (var5 = 0; var18.field_r > var5; var5++) {
               try {
-                var6_int = param2.d((byte) -99);
+                var6_int = param2.readUnsignedByte((byte) -99);
                 if (var6_int != 0 &&
                   var6_int != 1 &&
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var20 = param2.g((byte) 81);
-                    var21 = param2.g((byte) 81);
-                    var9 = param2.d((byte) -99);
+                    var20 = param2.readString((byte) 81);
+                    var21 = param2.readString((byte) 81);
+                    var9 = param2.readUnsignedByte((byte) -99);
                     var10 = new String[var9];
                     for (var11_int = 0; var9 > var11_int; var11_int++) {
-                      var10[var11_int] = param2.g((byte) 81);
+                      var10[var11_int] = param2.readString((byte) 81);
                     }
                     var22 = new byte[var9][];
                     var19 = var22;
@@ -185,9 +185,9 @@ final class qf {
                     var18.field_t[var5] = var22;
                   }
                 } else {
-                  var16 = param2.g((byte) 81);
+                  var16 = param2.readString((byte) 81);
                   var7 = var16;
-                  var15 = param2.g((byte) 81);
+                  var15 = param2.readString((byte) 81);
                   var8 = var15;
                   var9 = 0;
                   if (1 == var6_int) {
@@ -195,7 +195,7 @@ final class qf {
                   }
                   var18.field_z[var5] = var6_int;
                   var18.field_q[var5] = var9;
-                  var18.field_x[var5] = param3.a(var15, 26298, hh.a(var16, -72));
+                  var18.field_x[var5] = param3.requestDeclaredField(var15, 26298, hh.a(var16, -72));
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -219,7 +219,7 @@ final class qf {
                 var18.field_w[var5] = -5;
               }
             }
-            bo.field_C.a(var18, false);
+            bo.field_C.addLast(var18, false);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

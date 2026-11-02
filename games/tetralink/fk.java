@@ -5,17 +5,17 @@ import java.io.*;
 
 class fk extends ae {
     private va field_X;
-    private je field_T;
+    private IntrusiveDeque field_T;
     static uf field_Q;
     private String[] field_P;
     static hl field_V;
     static int field_S;
     static String field_Y;
-    static ah field_U;
+    static Archive field_U;
     static int field_W;
     static String field_R;
 
-    boolean a(na param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -61,13 +61,13 @@ class fk extends ae {
         int var16;
         int var7Lifetime1;
         var16 = TetraLink.field_J;
-        this.field_T = new je();
+        this.field_T = new IntrusiveDeque();
         var2 = 0;
         var3 = (jh) ((Object) this.field_H);
         if (param0 != -1) {
           return;
         }
-        var4 = var3.a((na) (this), false);
+        var4 = var3.a((UiWidget) (this), false);
         while (true) {
           var5 = this.field_A.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -102,14 +102,14 @@ class fk extends ae {
             if (var10 != null) {
               ((va) (var10)).field_v = var15;
             }
-            this.field_T.a(var15, false);
+            this.field_T.addLast(var15, false);
             var10 = var15;
           }
         }
     }
 
     final void c(int param0, int param1, int param2, int param3) {
-        this.a(((jh) ((Object) this.field_H)).a((na) (this), 80), param2, 23, param1, param0);
+        this.a(((jh) ((Object) this.field_H)).a((UiWidget) (this), 80), param2, 23, param1, param0);
         if (param3 >= -13) {
           field_S = -14;
         }
@@ -160,8 +160,8 @@ class fk extends ae {
         va var6 = this.field_X;
         if (var6 == null) {
         } else {
-          var7 = var9.a(param1, param0 ^ 0, (na) (this));
-          var8 = var9.a((na) (this), param2, true);
+          var7 = var9.a(param1, param0 ^ 0, (UiWidget) (this));
+          var8 = var9.a((UiWidget) (this), param2, true);
           do {
             id.a(var6.field_r + 2, var6.field_s + var8 - 2, 0, var6.field_x + 2, -2 + (var6.field_o + var7));
             var6 = var6.field_v;
@@ -199,7 +199,7 @@ class fk extends ae {
           return false;
         }
         if (param2 >= 1 &&
-          oj.a(param3, param0, 10121) >= param2) {
+          IsaacCipher.a(param3, param0, 10121) >= param2) {
           if (param1 != -40) {
             field_R = (String) null;
           }
@@ -234,7 +234,7 @@ class fk extends ae {
         return new int[]{0, 0, 0, var6, 0, var5, var7, var4, -var8, -var9, var3, var10};
     }
 
-    void a(na param0, int param1, int param2, boolean param3) {
+    void a(UiWidget param0, int param1, int param2, boolean param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -335,7 +335,7 @@ class fk extends ae {
 
     final static void a(int param0, Throwable param1, String param2) {
         try {
-          ie stackIn_15_0;
+          PlatformTaskDispatcher stackIn_15_0;
           boolean stackIn_15_1;
           java.net.URL stackIn_15_2;
           java.net.URL stackIn_15_3;
@@ -347,7 +347,7 @@ class fk extends ae {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          vl var4 = null;
+          AsyncRequest var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -392,7 +392,7 @@ class fk extends ae {
               stackIn_16_3 = null;
               stackIn_16_6 = um.field_m;
             }
-            var4 = ((ie) (Object) stackIn_15_0).a(stackIn_15_1, new java.net.URL(stackIn_15_4, ((StringBuilder) (Object) stackIn_15_5).append(stackIn_16_6).append("&v1=").append(ie.field_v).append("&v2=").append(ie.field_x).append("&e=").append(var10).toString()));
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_15_0).a(stackIn_15_1, new java.net.URL(stackIn_15_4, ((StringBuilder) (Object) stackIn_15_5).append(stackIn_16_6).append("&v1=").append(PlatformTaskDispatcher.field_v).append("&v2=").append(PlatformTaskDispatcher.field_x).append("&e=").append(var10).toString()));
             while (var4.field_d == 0) {
               tb.a(false, 1L);
             }

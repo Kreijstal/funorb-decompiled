@@ -53,7 +53,7 @@ final class mk {
 
     final static void a(boolean param0) {
         if (null != wa.field_e) {
-          wa.field_e.d(-15488);
+          wa.field_e.close(-15488);
           wa.field_e = null;
           if (param0) {
             mk.a(-109);
@@ -70,9 +70,9 @@ final class mk {
     final static void a(int param0, String param1, int param2, boolean param3, long param4, int param5) {
         int var7_int = 0;
         try {
-          nd.field_Lb.f(param5, (byte) -92);
-          nd.field_Lb.field_t = nd.field_Lb.field_t + 1;
-          var7_int = nd.field_Lb.field_t;
+          nd.field_Lb.writeCipheredByte(param5, (byte) -92);
+          nd.field_Lb.position = nd.field_Lb.position + 1;
+          var7_int = nd.field_Lb.position;
           nd.field_Lb.a(-1, param4);
           nd.field_Lb.a(param1, 0);
           nd.field_Lb.a(param2, false);
@@ -80,7 +80,7 @@ final class mk {
             field_c = (db) null;
           }
           nd.field_Lb.a(param3 ? 1 : 0, false);
-          nd.field_Lb.b(-var7_int + nd.field_Lb.field_t, -2);
+          nd.field_Lb.b(-var7_int + nd.field_Lb.position, -2);
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "mk.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
@@ -90,12 +90,12 @@ final class mk {
         int var6 = 24;
         int var7 = 5;
         this.field_g.b(0, param2, param1, var7, param0, param4, var6);
-        mi.field_Kb.a((byte) -108, go.field_d.field_Hb, 0, qe.field_d, 0);
-        th.field_i.a((byte) -110, -2 + (-2 + go.field_d.field_Hb) - ha.field_e - 80, qe.field_d + 2, 18, 0);
-        eo.field_b.a((byte) -126, 82 + ha.field_e, qe.field_d + 2, 18, -80 + (go.field_d.field_Hb - ha.field_e - 2));
+        mi.field_Kb.a((byte) -108, go.field_d.field_Hb, 0, GameKeyHandler.field_d, 0);
+        th.field_i.a((byte) -110, -2 + (-2 + go.field_d.field_Hb) - MouseInputHandler.field_e - 80, GameKeyHandler.field_d + 2, 18, 0);
+        eo.field_b.a((byte) -126, 82 + MouseInputHandler.field_e, GameKeyHandler.field_d + 2, 18, -80 + (go.field_d.field_Hb - MouseInputHandler.field_e - 2));
         if (param3 > 52) {
-          pj.field_f.a(-2328, 0, 20, -20 + (-qe.field_d + (go.field_d.field_R - 2)), go.field_d.field_Hb, 2, 20 + (qe.field_d + 2), ha.field_e);
-          fl.field_n.a(20, 2, ha.field_e, 2);
+          pj.field_f.a(-2328, 0, 20, -20 + (-GameKeyHandler.field_d + (go.field_d.field_R - 2)), go.field_d.field_Hb, 2, 20 + (GameKeyHandler.field_d + 2), MouseInputHandler.field_e);
+          BufferedSocket.field_n.a(20, 2, MouseInputHandler.field_e, 2);
           return;
         }
     }
@@ -122,7 +122,7 @@ final class mk {
         hl[] var4 = null;
         try {
           var3 = new String[]{param0, am.field_a, ec.field_g};
-          var4 = new hl[]{param1, go.field_d, (hl) ((Object) fl.field_n)};
+          var4 = new hl[]{param1, go.field_d, (hl) ((Object) BufferedSocket.field_n)};
           this.field_g = new ad(0L, te.field_O, var3, rc.field_S, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "mk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

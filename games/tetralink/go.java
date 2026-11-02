@@ -37,7 +37,7 @@ final class go {
         field_g = (de) null;
     }
 
-    final static ng a(boolean param0, int param1, ah param2) {
+    final static ng a(boolean param0, int param1, Archive param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -80,15 +80,15 @@ final class go {
         if (null != gl.field_o) {
           gl.field_o.i(20424);
         }
-        if (0 != sf.field_d) {
+        if (0 != SecondaryNodeDequeIterator.field_d) {
           hi.b(-77);
         }
         d.field_e = 0;
         if (param0 == 42) {
           return;
         }
-        ah var2 = (ah) null;
-        go.a(false, 4, (ah) null);
+        Archive var2 = (Archive) null;
+        go.a(false, 4, (Archive) null);
     }
 
     final static void a(byte param0, String param1) {
@@ -99,27 +99,27 @@ final class go {
         try {
           dc.field_e.field_jb = param1;
           hm.field_b = true;
-          var2_int = pk.field_O.field_h;
-          var3 = pk.field_O.field_j;
+          var2_int = WidgetContainer.field_O.field_h;
+          var3 = WidgetContainer.field_O.field_j;
           if (param0 != -105) {
             field_e = (String) null;
           }
           var4 = dc.field_e.field_Ib.b(param1, 272, dc.field_e.field_Q);
           var5 = -(var4 / 2) + 7 + var3 / 2 - 110;
           t.field_q.a((byte) -117, 320, var5, -(2 * var5) - 120 + var3, (-320 + var2_int) / 2);
-          t.field_q.field_Eb = ah.a(2105376, 3, 8421504, param0 ^ -121, 11579568, t.field_q.field_R);
+          t.field_q.field_Eb = Archive.a(2105376, 3, 8421504, param0 ^ -121, 11579568, t.field_q.field_R);
           dc.field_e.a((byte) -92, -48 + t.field_q.field_Hb, 16, -24 + t.field_q.field_R - 20, 24);
-          wb.field_a.a((byte) -124, 80, -20 + (t.field_q.field_R - 24), 24, 120);
+          DelegatingCanvas.field_a.a((byte) -124, 80, -20 + (t.field_q.field_R - 24), 24, 120);
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "go.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(byte param0, byte[] param1, bh param2) {
+    final void a(byte param0, byte[] param1, PacketBuffer param2) {
         try {
           try {
-            if (param2.field_u[param2.field_t] != 31 ||
-              param2.field_u[1 + param2.field_t] != -117) {
+            if (param2.payload[param2.position] != 31 ||
+              param2.payload[1 + param2.position] != -117) {
               throw new RuntimeException("");
             }
             if (null == this.field_f) {
@@ -129,7 +129,7 @@ final class go {
               if (param0 < 70) {
                 field_g = (de) null;
               }
-              this.field_f.setInput(param2.field_u, param2.field_t + 10, -10 - param2.field_t + (-8 + param2.field_u.length));
+              this.field_f.setInput(param2.payload, param2.position + 10, -10 - param2.position + (-8 + param2.payload.length));
               this.field_f.inflate(param1);
             } catch (Exception exception) {
               this.field_f.reset();

@@ -11,7 +11,7 @@ final class p {
     private byte[] field_l;
     private long field_g;
     static String field_c;
-    private sa field_h;
+    private RandomAccessCacheFile field_h;
     private long field_a;
     private long field_b;
     private int field_f;
@@ -445,7 +445,7 @@ final class p {
         throw new IOException();
     }
 
-    p(sa param0, int param1, int param2) throws IOException {
+    p(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_b = -1L;
         this.field_f = 0;

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class bm extends mc {
+final class bm extends IntrusiveNode {
     static int field_q;
     int field_t;
     static String field_s;
@@ -20,12 +20,12 @@ final class bm extends mc {
         field_o = null;
     }
 
-    final static kl a(int param0, int param1, int param2, int param3, int param4, ie param5) {
+    final static FullscreenFocusCanvas a(int param0, int param1, int param2, int param3, int param4, PlatformTaskDispatcher param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
-        kl var7 = null;
+        FullscreenFocusCanvas var7 = null;
         java.awt.Frame var8 = null;
-        kl stackIn_4_0 = null;
+        FullscreenFocusCanvas stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -36,7 +36,7 @@ final class bm extends mc {
           if (var8 == null) {
             return null;
           }
-          var7 = new kl();
+          var7 = new FullscreenFocusCanvas();
           var7.field_d = var8;
           var7.field_d.add((java.awt.Component) ((Object) var7));
           var7.setBounds(0, param1, param3, param0);

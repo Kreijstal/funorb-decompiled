@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cf extends mc {
+final class cf extends IntrusiveNode {
     boolean field_s;
     int[] field_u;
     static boolean field_r;
     int field_t;
     static byte[] field_q;
     static int field_n;
-    static vl field_p;
-    static jb field_o;
+    static AsyncRequest field_p;
+    static BitmapFont field_o;
 
     public static void b(byte param0) {
         if (param0 != 6) {

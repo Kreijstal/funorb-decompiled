@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class va extends mc {
+final class va extends IntrusiveNode {
     int field_x;
     int field_r;
     int field_w;
@@ -9,7 +9,7 @@ final class va extends mc {
     static int field_z;
     static sj field_n;
     static volatile int field_y;
-    static kc field_q;
+    static ModelData field_q;
     int field_o;
     static int field_p;
     va field_v;

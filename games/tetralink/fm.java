@@ -6,7 +6,7 @@ final class fm {
     static float[] field_b;
     static String field_d;
     static char[] field_c;
-    static je field_a;
+    static IntrusiveDeque field_a;
     private static String field_z;
 
     public static void a(int param0) {
@@ -25,6 +25,6 @@ final class fm {
         field_e = "Confirm Password: ";
         field_c = new char[128];
         field_d = "Please enter a year between <%0> and <%1>";
-        field_a = new je();
+        field_a = new IntrusiveDeque();
     }
 }

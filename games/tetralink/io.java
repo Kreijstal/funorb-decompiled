@@ -6,7 +6,7 @@ final class io {
     int field_f;
     int field_j;
     int field_e;
-    static wf field_c;
+    static PcmSample field_c;
     int field_b;
     static StringBuilder field_h;
     static int field_i;

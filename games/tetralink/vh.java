@@ -16,7 +16,7 @@ abstract class vh {
     }
 
     final static void b(int param0) {
-        if (0 - cn.field_f == en.field_K) {
+        if (0 - ClientException.field_f == en.field_K) {
           if (param0 < -29) {
             en.field_K = en.field_K + 1;
             return;
@@ -25,7 +25,7 @@ abstract class vh {
           en.field_K = en.field_K + 1;
           return;
         }
-        if (250 - cn.field_f != en.field_K) {
+        if (250 - ClientException.field_f != en.field_K) {
           if (param0 < -29) {
             en.field_K = en.field_K + 1;
             return;

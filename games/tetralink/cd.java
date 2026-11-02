@@ -4,7 +4,7 @@
 final class cd {
     static int field_e;
     static c field_d;
-    static ah field_b;
+    static Archive field_b;
     static boolean field_a;
     static String[] field_c;
     private static String field_z;

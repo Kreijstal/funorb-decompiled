@@ -9,9 +9,9 @@ final class cc implements kg {
     static int field_f;
     private int field_h;
     private int field_i;
-    private jb field_g;
+    private BitmapFont field_g;
     private int field_b;
-    static oh field_a;
+    static Sprite field_a;
     private int field_d;
     static String field_e;
 
@@ -91,7 +91,7 @@ final class cc implements kg {
         }
     }
 
-    final static short[] a(short[] param0, bc param1, int param2, int param3) {
+    final static short[] a(short[] param0, BitPacketBuffer param1, int param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -108,7 +108,7 @@ final class cc implements kg {
         RuntimeException var4 = null;
         var8 = TetraLink.field_J;
         try {
-          var4_int = param1.e(param2, (byte) -112);
+          var4_int = param1.readBits(param2, (byte) -112);
           if (0 == var4_int) {
             stackIn_3_0 = null;
             return (short[]) (stackIn_3_0);
@@ -117,11 +117,11 @@ final class cc implements kg {
             var4_int != param0.length) {
             param0 = new short[var4_int];
           }
-          var5 = param1.e(4, (byte) -112);
-          var6 = (short)param1.e(16, (byte) -112);
+          var5 = param1.readBits(4, (byte) -112);
+          var6 = (short)param1.readBits(16, (byte) -112);
           if (param3 < var5) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param0[var7] = (short)(var6 + param1.e(var5, (byte) -112));
+              param0[var7] = (short)(var6 + param1.readBits(var5, (byte) -112));
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
@@ -173,7 +173,7 @@ final class cc implements kg {
         return 255 & param1;
     }
 
-    public final void a(na param0, int param1, int param2, boolean param3, boolean param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         qd var14 = null;
         int var7 = 0;
         int var8 = 0;
@@ -186,12 +186,12 @@ final class cc implements kg {
         int var12Lifetime1;
         try {
           var14 = !(param0 instanceof qd) ? null : (qd) (param0);
-          ra.c(param0.field_t + param1, param2 + param0.field_w, param0.field_F, param0.field_u, this.field_b);
+          SoftwareRasterizer.c(param0.field_t + param1, param2 + param0.field_w, param0.field_F, param0.field_u, this.field_b);
           if (var14 == null) {
           }
           var7 = param1 + (param0.field_t + var14.field_V);
           var8 = param2 - (-param0.field_w - var14.field_Z);
-          ra.f(var7, var8, var14.field_bb, this.field_h);
+          SoftwareRasterizer.f(var7, var8, var14.field_bb, this.field_h);
           if (!param3) {
             this.field_b = 42;
           }
@@ -199,13 +199,13 @@ final class cc implements kg {
             var9 = (double)var14.field_U * 3.141592653589793 * 2.0 / (double)var14.field_R;
             var11 = (int)(-Math.sin(var9) * (double)var14.field_bb);
             var12 = (int)(Math.cos(var9) * (double)var14.field_bb);
-            ra.f(var7 + var11, var12 + var8, 1, this.field_l);
+            SoftwareRasterizer.f(var7 + var11, var12 + var8, 1, this.field_l);
           }
-          ra.f(var7, var8, 2, 1);
+          SoftwareRasterizer.f(var7, var8, 2, 1);
           var9Lifetime1 = 2.0 * (3.141592653589793 * (double)var14.field_S) / (double)var14.field_R;
           var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var14.field_bb);
           var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var14.field_bb);
-          ra.d(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
+          SoftwareRasterizer.d(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (this.field_g != null) {
             var13 = var14.field_V + var14.field_bb + this.field_k;
             this.field_g.a(param0.field_A, param0.field_t + (param1 + var13), this.field_d + (param2 + param0.field_w), -var13 + (-this.field_k + param0.field_F), param0.field_u - (this.field_k << 1), this.field_i, this.field_c, 1, 1, 0);
@@ -219,7 +219,7 @@ final class cc implements kg {
         if (param0 <= 36) {
           return (db[]) null;
         }
-        return new db[]{rj.field_f, qj.field_c, ej.field_r, ni.field_h, e.field_e, mk.field_c, ji.field_Qb, la.field_i, dj.field_g, io.field_d, hh.field_b, uk.field_t, je.field_d, wd.field_e};
+        return new db[]{rj.field_f, qj.field_c, ej.field_r, ni.field_h, e.field_e, mk.field_c, ji.field_Qb, la.field_i, dj.field_g, io.field_d, hh.field_b, uk.field_t, IntrusiveDeque.field_d, RasterBuffer.field_e};
     }
 
     final static boolean a(String param0, byte param1) {
@@ -236,7 +236,7 @@ final class cc implements kg {
           if (!cl.field_e) {
             return false;
           }
-          if (sf.field_d == 2 &&
+          if (SecondaryNodeDequeIterator.field_d == 2 &&
             null != qj.field_a) {
             var3 = (CharSequence) ((Object) param0);
             if (qj.field_a.equals(cc.a(var3, (byte) 95))) {
@@ -265,7 +265,7 @@ final class cc implements kg {
         int var1 = 57 / ((param0 + 40) / 56);
     }
 
-    cc(jb param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    cc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         try {
           this.field_i = param3;
           this.field_d = param2;
@@ -331,8 +331,8 @@ final class cc implements kg {
         int var14 = 0;
         var13 = TetraLink.field_J;
         try {
-          cf.field_n = ra.field_f;
-          bk.field_c = ra.field_e;
+          cf.field_n = SoftwareRasterizer.field_f;
+          bk.field_c = SoftwareRasterizer.field_e;
           if (!param0) {
             stackIn_4_0 = am.field_f;
           } else {
@@ -340,18 +340,18 @@ final class cc implements kg {
           }
           nb.a(stackIn_4_0, (byte) 1);
           we.field_e.a(0, 0, -40 + tl.field_P.field_R - 2, 66, tl.field_P.field_Hb);
-          e.field_d.a((byte) -92, qd.field_Q.field_Hb, 0, qe.field_d, 0);
+          e.field_d.a((byte) -92, qd.field_Q.field_Hb, 0, GameKeyHandler.field_d, 0);
           stackIn_6_0 = ae.field_J;
           stackIn_6_1 = -92;
           stackIn_6_2 = qd.field_Q.field_Hb;
           if (!kj.field_b) {
             stackIn_7_3 = 0;
           } else {
-            stackIn_7_3 = 2 + ha.field_e + 42;
+            stackIn_7_3 = 2 + MouseInputHandler.field_e + 42;
           }
-          ((hl) (Object) stackIn_6_0).a((byte) stackIn_6_1, stackIn_6_2 - stackIn_7_3, qe.field_d + 2, 18, 0);
-          lh.field_q.a((byte) -97, ha.field_e + 42, qe.field_d + 2, 18, qd.field_Q.field_Hb - ha.field_e - 42);
-          v.field_x.a(qd.field_Q.field_Hb, ha.field_e, -qe.field_d + (qd.field_Q.field_R - 22), param1, 20 + (qe.field_d + 2), 0, 2);
+          ((hl) (Object) stackIn_6_0).a((byte) stackIn_6_1, stackIn_6_2 - stackIn_7_3, GameKeyHandler.field_d + 2, 18, 0);
+          lh.field_q.a((byte) -97, MouseInputHandler.field_e + 42, GameKeyHandler.field_d + 2, 18, qd.field_Q.field_Hb - MouseInputHandler.field_e - 42);
+          v.field_x.a(qd.field_Q.field_Hb, MouseInputHandler.field_e, -GameKeyHandler.field_d + (qd.field_Q.field_R - 22), param1, 20 + (GameKeyHandler.field_d + 2), 0, 2);
           qi.field_n.a((byte) -100, tl.field_P.field_Hb, -40 + tl.field_P.field_R, 40, 0);
           ua.field_d.a((byte) -95, fk.field_V.field_Hb, 0, 30, 0);
           bl.field_Qb.a((byte) -94, fk.field_V.field_Hb, 30, -30 + fk.field_V.field_R - 40 - 2, 0);
@@ -378,27 +378,27 @@ final class cc implements kg {
               !(mk.field_e <= 1))) {
               if (!param0 &&
                 3 == var6) {
-                var7 = em.field_m[var6];
-                em.field_m[var6].field_R = 0;
+                var7 = MatchSetup.field_m[var6];
+                MatchSetup.field_m[var6].field_R = 0;
                 var7.field_Hb = 0;
-                for (var8 = 0; var8 < cn.field_e[var6].length; var8++) {
-                  if (null != cn.field_e[var6][var8]) {
-                    var9 = cn.field_e[var6][var8];
-                    cn.field_e[var6][var8].field_R = 0;
+                for (var8 = 0; var8 < ClientException.field_e[var6].length; var8++) {
+                  if (null != ClientException.field_e[var6][var8]) {
+                    var9 = ClientException.field_e[var6][var8];
+                    ClientException.field_e[var6][var8].field_R = 0;
                     var9.field_Hb = 0;
                   }
                 }
               } else if (param0 &&
                 var6 == 0) {
-                var7 = em.field_m[var6];
-                em.field_m[var6].field_R = 0;
+                var7 = MatchSetup.field_m[var6];
+                MatchSetup.field_m[var6].field_R = 0;
                 var7.field_Hb = 0;
-                for (var8 = 0; var8 < cn.field_e[var6].length; var8++) {
+                for (var8 = 0; var8 < ClientException.field_e[var6].length; var8++) {
                   stackIn_32_0 = null;
-                  stackIn_32_1 = cn.field_e[var6][var8];
+                  stackIn_32_1 = ClientException.field_e[var6][var8];
                   if (stackIn_32_0 != stackIn_32_1) {
-                    var9 = cn.field_e[var6][var8];
-                    cn.field_e[var6][var8].field_R = 0;
+                    var9 = ClientException.field_e[var6][var8];
+                    ClientException.field_e[var6][var8].field_R = 0;
                     var9.field_Hb = 0;
                   }
                 }
@@ -418,49 +418,49 @@ final class cc implements kg {
                 }
                 var7_int = stackIn_47_0;
                 if (var7_int != 0) {
-                  var8_ref_hl = em.field_m[var6];
-                  em.field_m[var6].field_R = 0;
+                  var8_ref_hl = MatchSetup.field_m[var6];
+                  MatchSetup.field_m[var6].field_R = 0;
                   var8_ref_hl.field_Hb = 0;
                   var14 = 0;
                   var9_int = var14;
-                  while (var14 < cn.field_e[var6].length) {
-                    if (null != cn.field_e[var6][var14]) {
-                      var10 = cn.field_e[var6][var14];
-                      cn.field_e[var6][var14].field_R = 0;
+                  while (var14 < ClientException.field_e[var6].length) {
+                    if (null != ClientException.field_e[var6][var14]) {
+                      var10 = ClientException.field_e[var6][var14];
+                      ClientException.field_e[var6][var14].field_R = 0;
                       var10.field_Hb = 0;
                     }
                     var14++;
                   }
                 } else {
-                  em.field_m[var6].a((byte) -101, 103, var5, var3, 5);
+                  MatchSetup.field_m[var6].a((byte) -101, 103, var5, var3, 5);
                   var8 = 110;
                   if (param0) {
-                    cn.field_e[var6][0].b(0, 38, var5, eh.field_w, var8, 2, var3);
+                    ClientException.field_e[var6][0].b(0, 38, var5, eh.field_w, var8, 2, var3);
                     var8 += 40;
                   } else {
-                    if (null != cn.field_e[var6][0]) {
-                      var9 = cn.field_e[var6][0];
-                      cn.field_e[var6][0].field_R = 0;
+                    if (null != ClientException.field_e[var6][0]) {
+                      var9 = ClientException.field_e[var6][0];
+                      ClientException.field_e[var6][0].field_R = 0;
                       var9.field_Hb = 0;
                     }
                   }
                   var9_int = -var8 - 5 + fk.field_V.field_Hb + 2;
-                  var10_int = -1 + cn.field_e[var6].length;
+                  var10_int = -1 + ClientException.field_e[var6].length;
                   for (var11 = 0; var11 < var10_int; var11++) {
                     var12 = var11 * var9_int / var10_int;
-                    cn.field_e[var6][var11 + 1].b(0, (var11 + 1) * var9_int / var10_int - (2 + var12), var5, eh.field_w, var12 + var8, 2, var3);
+                    ClientException.field_e[var6][var11 + 1].b(0, (var11 + 1) * var9_int / var10_int - (2 + var12), var5, eh.field_w, var12 + var8, 2, var3);
                   }
                   var5 = var5 + (2 + var3);
                 }
               }
             }
           }
-          fj.field_b.a((byte) -127, 360, 10, -130 + ra.field_e - 4 - 10, -360 + ra.field_f >> 1);
+          fj.field_b.a((byte) -127, 360, 10, -130 + SoftwareRasterizer.field_e - 4 - 10, -360 + SoftwareRasterizer.field_f >> 1);
           dc.field_l.a((byte) -102, fj.field_b.field_Hb, 0, 24, 0);
-          wb.field_e.a((byte) -79, fj.field_b.field_Hb, 24, fj.field_b.field_R - 24, 0);
-          wb.field_e.field_Eb = ah.a(1, 3, 8421504, 16, 11579568, wb.field_e.field_R);
-          hh.field_c.a((byte) -105, wb.field_e.field_Hb - 10, 5, -12 + (wb.field_e.field_R - 24), 5);
-          c.field_b.a((byte) -118, 80, -29 + wb.field_e.field_R, 24, (wb.field_e.field_Hb - 80) / 2);
+          DelegatingCanvas.field_e.a((byte) -79, fj.field_b.field_Hb, 24, fj.field_b.field_R - 24, 0);
+          DelegatingCanvas.field_e.field_Eb = Archive.a(1, 3, 8421504, 16, 11579568, DelegatingCanvas.field_e.field_R);
+          hh.field_c.a((byte) -105, DelegatingCanvas.field_e.field_Hb - 10, 5, -12 + (DelegatingCanvas.field_e.field_R - 24), 5);
+          c.field_b.a((byte) -118, 80, -29 + DelegatingCanvas.field_e.field_R, 24, (DelegatingCanvas.field_e.field_Hb - 80) / 2);
           g.c(1753);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -471,7 +471,7 @@ final class cc implements kg {
     }
 
     static {
-        field_a = new oh(128, 128);
+        field_a = new Sprite(128, 128);
         field_e = "Players: ";
     }
 }

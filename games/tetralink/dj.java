@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dj {
-    private mc field_a;
+    private IntrusiveNode field_a;
     static db field_g;
-    private mc field_b;
+    private IntrusiveNode field_b;
     static String field_c;
     static float field_h;
     private int field_f;
     private int field_i;
-    private mc[] field_e;
+    private IntrusiveNode[] field_e;
     static String field_d;
 
     public static void a(byte param0) {
@@ -58,66 +58,66 @@ final class dj {
         }
     }
 
-    final mc a(long param0, byte param1) {
-        mc var5 = null;
+    final IntrusiveNode a(long param0, byte param1) {
+        IntrusiveNode var5 = null;
         int var6 = TetraLink.field_J;
-        mc var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_f))];
-        this.field_a = var4.field_j;
+        IntrusiveNode var4 = this.field_e[(int)(param0 & (long)(-1 + this.field_f))];
+        this.field_a = var4.next;
         while (var4 != this.field_a) {
-          if (~param0 == ~this.field_a.field_c) {
+          if (~param0 == ~this.field_a.key) {
             var5 = this.field_a;
-            this.field_a = this.field_a.field_j;
+            this.field_a = this.field_a.next;
             return var5;
           }
-          this.field_a = this.field_a.field_j;
+          this.field_a = this.field_a.next;
         }
         if (param1 == -43) {
           this.field_a = null;
           return null;
         }
-        return (mc) null;
+        return (IntrusiveNode) null;
     }
 
-    final mc b(int param0) {
+    final IntrusiveNode b(int param0) {
         this.field_i = 0;
         if (param0 < 21) {
-          return (mc) null;
+          return (IntrusiveNode) null;
         }
         return this.a(-1);
     }
 
-    final void a(long param0, int param1, mc param2) {
-        mc var5 = null;
+    final void a(long param0, int param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (param2.field_e != null) {
-            param2.b(false);
+          if (param2.previous != null) {
+            param2.unlink(false);
           }
           var5 = this.field_e[(int)((long)(this.field_f - 1) & param0)];
           if (param1 > -48) {
-            this.field_e = (mc[]) null;
+            this.field_e = (IntrusiveNode[]) null;
           }
-          param2.field_j = var5;
-          param2.field_e = var5.field_e;
-          param2.field_e.field_j = param2;
-          param2.field_c = param0;
-          param2.field_j.field_e = param2;
+          param2.next = var5;
+          param2.previous = var5.previous;
+          param2.previous.next = param2;
+          param2.key = param0;
+          param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "dj.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final mc a(int param0) {
+    final IntrusiveNode a(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$2 = 0;
         int fieldTemp$1 = 0;
-        mc var2;
+        IntrusiveNode var2;
         int var3;
         var3 = TetraLink.field_J;
         if (param0 == -1) {
           if (0 < this.field_i &&
             this.field_e[this.field_i - 1] != this.field_b) {
             var2 = this.field_b;
-            this.field_b = var2.field_j;
+            this.field_b = var2.next;
             return var2;
           }
           do {
@@ -126,9 +126,9 @@ final class dj {
             }
             fieldTemp$0 = this.field_i;
             this.field_i = this.field_i + 1;
-            var2 = this.field_e[fieldTemp$0].field_j;
+            var2 = this.field_e[fieldTemp$0].next;
           } while (this.field_e[-1 + this.field_i] == var2);
-          this.field_b = var2.field_j;
+          this.field_b = var2.next;
           return var2;
         }
         field_g = (db) null;
@@ -139,14 +139,14 @@ final class dj {
             }
             fieldTemp$2 = this.field_i;
             this.field_i = this.field_i + 1;
-            var2 = this.field_e[fieldTemp$2].field_j;
+            var2 = this.field_e[fieldTemp$2].next;
           } while (this.field_e[-1 + this.field_i] == var2);
-          this.field_b = var2.field_j;
+          this.field_b = var2.next;
           return var2;
         }
         if (this.field_e[this.field_i - 1] != this.field_b) {
           var2 = this.field_b;
-          this.field_b = var2.field_j;
+          this.field_b = var2.next;
           return var2;
         }
         do {
@@ -155,25 +155,25 @@ final class dj {
           }
           fieldTemp$1 = this.field_i;
           this.field_i = this.field_i + 1;
-          var2 = this.field_e[fieldTemp$1].field_j;
+          var2 = this.field_e[fieldTemp$1].next;
         } while (this.field_e[-1 + this.field_i] == var2);
-        this.field_b = var2.field_j;
+        this.field_b = var2.next;
         return var2;
     }
 
     dj(int param0) {
         int var2 = 0;
-        mc dupTemp$1 = null;
-        mc var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_i = 0;
-        this.field_e = new mc[param0];
+        this.field_e = new IntrusiveNode[param0];
         this.field_f = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new mc();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_e[var2] = dupTemp$1;
-          var3.field_j = var3;
-          var3.field_e = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 

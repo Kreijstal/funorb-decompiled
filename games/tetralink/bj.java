@@ -21,18 +21,18 @@ final class bj {
           if (th.field_g < ma.field_f) {
             th.field_g = th.field_g + 1;
           }
-          if (te.field_P != pk.field_O.field_j) {
-            ja.field_f = ja.field_f + (-te.field_P + pk.field_O.field_j);
-            te.field_P = pk.field_O.field_j;
+          if (te.field_P != WidgetContainer.field_O.field_j) {
+            ja.field_f = ja.field_f + (-te.field_P + WidgetContainer.field_O.field_j);
+            te.field_P = WidgetContainer.field_O.field_j;
           }
           if (0 >= th.field_g) {
             return;
           }
           lc.a((byte) 85);
-          oj.field_a.a(0, param0);
+          IsaacCipher.field_a.a(0, param0);
           if (null != bk.field_e) {
             if (cd.field_a) {
-              bk.field_e.a(oj.field_a.field_eb, param0, oj.field_a.field_z, false);
+              bk.field_e.a(IsaacCipher.field_a.field_eb, param0, IsaacCipher.field_a.field_z, false);
             } else {
               bk.field_e = null;
             }
@@ -49,9 +49,9 @@ final class bj {
             }
           }
           if (nc.field_e.field_F != 0) {
-            mm.field_y = new om(nc.field_e.field_eb, nc.field_e.field_z, nc.field_e.field_Hb, nc.field_e.field_R, param1, sa.field_h, hl.field_gb, sn.field_c, bk.field_i, vd.field_c, ek.field_n, (String) null, 0L);
+            mm.field_y = new om(nc.field_e.field_eb, nc.field_e.field_z, nc.field_e.field_Hb, nc.field_e.field_R, param1, RandomAccessCacheFile.field_h, hl.field_gb, sn.field_c, bk.field_i, vd.field_c, NotificationToast.field_n, (String) null, 0L);
           }
-          var9 = r.a(fn.field_Q, param3, qe.field_d, 0);
+          var9 = r.a(fn.field_Q, param3, GameKeyHandler.field_d, 0);
           if (var9 != null) {
             n.a((byte) 111, var9);
           }
@@ -94,7 +94,7 @@ final class bj {
           }
         }
         if (0 < qd.field_ab) {
-          lj.a((byte) -112);
+          NodeHashTableIterator.a((byte) -112);
         }
         if (0 < ng.field_t) {
           nb.a(ng.field_t, (byte) 80);

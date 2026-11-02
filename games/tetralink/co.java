@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class co extends mc {
+final class co extends IntrusiveNode {
     static String field_t;
     static String field_s;
     static java.util.zip.CRC32 field_r;
@@ -16,25 +16,25 @@ final class co extends mc {
         throw new Error();
     }
 
-    final static ca a(int param0, String param1, byte param2) {
-        vb var3 = null;
+    final static SocketConnector a(int param0, String param1, byte param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        vb stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new vb();
-          ((ca) ((Object) var3)).field_a = param1;
-          ((ca) ((Object) var3)).field_e = param0;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).host = param1;
+          ((SocketConnector) ((Object) var3)).port = param0;
           if (param2 != 118) {
             var4 = (String) null;
             co.a(101, (String) null, (byte) -45);
           }
           stackIn_3_0 = var3;
-          return (ca) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;

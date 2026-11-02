@@ -7,9 +7,9 @@ final class dc implements kg {
     private int field_g;
     private int field_a;
     private int field_j;
-    private jb field_c;
+    private BitmapFont field_c;
     static hl field_e;
-    static ah field_k;
+    static Archive field_k;
     private int field_b;
     private int field_f;
     static String field_i;
@@ -52,7 +52,7 @@ final class dc implements kg {
           var1_int = pj.field_e;
           var2 = 0;
           if (f.field_z == 2) {
-            var3_long = -tg.field_a + k.a(0);
+            var3_long = -IntrusiveDequeCursor.field_a + k.a(0);
             var2 = (int)((10999L - var3_long) / 1000L);
             if (var2 < 0) {
               var2 = 0;
@@ -62,7 +62,7 @@ final class dc implements kg {
             var4 = ml.field_mb[var3];
             if (0 <= var4) {
               if (gm.field_h.field_b == var4) {
-                var5 = mc.field_b;
+                var5 = IntrusiveNode.field_b;
               } else {
                 var5 = lk.field_wb;
               }
@@ -87,8 +87,8 @@ final class dc implements kg {
                 }
                 var6 = stackIn_26_0;
               }
-              if (qc.field_db.length < ah.field_j.length) {
-                stackIn_30_0 = ah.field_j.length;
+              if (qc.field_db.length < Archive.field_j.length) {
+                stackIn_30_0 = Archive.field_j.length;
               } else {
                 stackIn_30_0 = qc.field_db.length;
               }
@@ -137,7 +137,7 @@ final class dc implements kg {
         }
     }
 
-    dc(jb param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    dc(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         try {
           this.field_c = param0;
           this.field_a = param6;
@@ -158,9 +158,9 @@ final class dc implements kg {
         return -lb.field_V + ia.field_K;
     }
 
-    public final void a(na param0, int param1, int param2, boolean param3, boolean param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         int var10 = 0;
-        na stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -174,7 +174,7 @@ final class dc implements kg {
         var11 = TetraLink.field_J;
         try {
           if (param0 instanceof kk) {
-            stackIn_4_0 = (na) (param0);
+            stackIn_4_0 = (UiWidget) (param0);
           } else {
             stackIn_4_0 = null;
           }
@@ -184,13 +184,13 @@ final class dc implements kg {
           }
           if (var12 != null) {
           }
-          ra.c(param1 + param0.field_t, param0.field_w + param2, param0.field_F, param0.field_u, this.field_b);
+          SoftwareRasterizer.c(param1 + param0.field_t, param0.field_w + param2, param0.field_F, param0.field_u, this.field_b);
           var7 = -(var12.field_W * 2) + param0.field_F;
           var8 = param1 - (-param0.field_t - var12.field_W);
           var9 = param2 + param0.field_w + var12.field_V;
-          ra.d(var8, var9, var8 + var7, var9, this.field_g);
+          SoftwareRasterizer.d(var8, var9, var8 + var7, var9, this.field_g);
           for (var10 = var12.e((byte) -116) - 1; 0 <= var10; var10--) {
-            ra.f(var7 * var12.a(var10, (byte) 119) / var12.a(23329) + var8, var9, this.field_h, this.field_a);
+            SoftwareRasterizer.f(var7 * var12.a(var10, (byte) 119) / var12.a(23329) + var8, var9, this.field_h, this.field_a);
           }
           if (null == this.field_c) {
             return;

@@ -7,11 +7,11 @@ final class l {
     byte[] field_k;
     static String field_i;
     byte[] field_f;
-    private em field_b;
+    private MatchSetup field_b;
     int field_h;
     private int field_a;
-    static oh[] field_c;
-    je field_g;
+    static Sprite[] field_c;
+    IntrusiveDeque field_g;
     int field_l;
     bi field_d;
     byte[] field_e;
@@ -80,11 +80,11 @@ final class l {
           var4 = (byte)(15 << var3);
           for (var2 = 0; 6 > var2; var2++) {
             if (~(var4 & this.field_e[var2]) == ~var4) {
-              this.field_f[var2] = (byte)mc.a((int) this.field_f[var2], var4);
+              this.field_f[var2] = (byte)IntrusiveNode.a((int) this.field_f[var2], var4);
               this.field_h = 0;
             }
             if (var4 == (var4 & this.field_k[var2])) {
-              this.field_f[var2] = (byte)mc.a((int) this.field_f[var2], var4);
+              this.field_f[var2] = (byte)IntrusiveNode.a((int) this.field_f[var2], var4);
               this.field_h = 1;
             }
           }
@@ -96,20 +96,20 @@ final class l {
               var4Lifetime1 == (this.field_e[1 + var2Lifetime1] & var4Lifetime1) &&
               var4Lifetime1 == (this.field_e[var2Lifetime1 + 2] & var4Lifetime1) &&
               (this.field_e[var2Lifetime1 + 3] & var4Lifetime1) == var4Lifetime1) {
-              this.field_f[var2Lifetime1] = (byte)mc.a((int) this.field_f[var2Lifetime1], var4Lifetime1);
-              this.field_f[var2Lifetime1 + 1] = (byte)mc.a((int) this.field_f[var2Lifetime1 + 1], var4Lifetime1);
-              this.field_f[var2Lifetime1 + 2] = (byte)mc.a((int) this.field_f[var2Lifetime1 + 2], var4Lifetime1);
-              this.field_f[3 + var2Lifetime1] = (byte)mc.a((int) this.field_f[3 + var2Lifetime1], var4Lifetime1);
+              this.field_f[var2Lifetime1] = (byte)IntrusiveNode.a((int) this.field_f[var2Lifetime1], var4Lifetime1);
+              this.field_f[var2Lifetime1 + 1] = (byte)IntrusiveNode.a((int) this.field_f[var2Lifetime1 + 1], var4Lifetime1);
+              this.field_f[var2Lifetime1 + 2] = (byte)IntrusiveNode.a((int) this.field_f[var2Lifetime1 + 2], var4Lifetime1);
+              this.field_f[3 + var2Lifetime1] = (byte)IntrusiveNode.a((int) this.field_f[3 + var2Lifetime1], var4Lifetime1);
               this.field_h = 0;
             }
             if (var4Lifetime1 == (var4Lifetime1 & this.field_k[var2Lifetime1]) &&
               var4Lifetime1 == (this.field_k[var2Lifetime1 + 1] & var4Lifetime1) &&
               var4Lifetime1 == (this.field_k[var2Lifetime1 + 2] & var4Lifetime1) &&
               var4Lifetime1 == (this.field_k[3 + var2Lifetime1] & var4Lifetime1)) {
-              this.field_f[var2Lifetime1] = (byte)mc.a((int) this.field_f[var2Lifetime1], var4Lifetime1);
-              this.field_f[1 + var2Lifetime1] = (byte)mc.a((int) this.field_f[1 + var2Lifetime1], var4Lifetime1);
-              this.field_f[2 + var2Lifetime1] = (byte)mc.a((int) this.field_f[2 + var2Lifetime1], var4Lifetime1);
-              this.field_f[3 + var2Lifetime1] = (byte)mc.a((int) this.field_f[3 + var2Lifetime1], var4Lifetime1);
+              this.field_f[var2Lifetime1] = (byte)IntrusiveNode.a((int) this.field_f[var2Lifetime1], var4Lifetime1);
+              this.field_f[1 + var2Lifetime1] = (byte)IntrusiveNode.a((int) this.field_f[1 + var2Lifetime1], var4Lifetime1);
+              this.field_f[2 + var2Lifetime1] = (byte)IntrusiveNode.a((int) this.field_f[2 + var2Lifetime1], var4Lifetime1);
+              this.field_f[3 + var2Lifetime1] = (byte)IntrusiveNode.a((int) this.field_f[3 + var2Lifetime1], var4Lifetime1);
               this.field_h = 1;
             }
           }
@@ -124,40 +124,40 @@ final class l {
               var5 == (var5 & this.field_e[var2Lifetime2 + 1]) &&
               var6 == (this.field_e[2 + var2Lifetime2] & var6) &&
               var7 == (this.field_e[var2Lifetime2 + 3] & var7)) {
-              this.field_f[var2Lifetime2] = (byte)mc.a((int) this.field_f[var2Lifetime2], var4Lifetime2);
-              this.field_f[1 + var2Lifetime2] = (byte)mc.a((int) this.field_f[1 + var2Lifetime2], var5);
-              this.field_f[var2Lifetime2 + 2] = (byte)mc.a((int) this.field_f[var2Lifetime2 + 2], var6);
-              this.field_f[3 + var2Lifetime2] = (byte)mc.a((int) this.field_f[3 + var2Lifetime2], var7);
+              this.field_f[var2Lifetime2] = (byte)IntrusiveNode.a((int) this.field_f[var2Lifetime2], var4Lifetime2);
+              this.field_f[1 + var2Lifetime2] = (byte)IntrusiveNode.a((int) this.field_f[1 + var2Lifetime2], var5);
+              this.field_f[var2Lifetime2 + 2] = (byte)IntrusiveNode.a((int) this.field_f[var2Lifetime2 + 2], var6);
+              this.field_f[3 + var2Lifetime2] = (byte)IntrusiveNode.a((int) this.field_f[3 + var2Lifetime2], var7);
               this.field_h = 0;
             }
             if (var7 == (this.field_e[var2Lifetime2] & var7) &&
               var6 == (this.field_e[1 + var2Lifetime2] & var6) &&
               (var5 & this.field_e[var2Lifetime2 + 2]) == var5 &&
               var4Lifetime2 == (this.field_e[var2Lifetime2 + 3] & var4Lifetime2)) {
-              this.field_f[var2Lifetime2] = (byte)mc.a((int) this.field_f[var2Lifetime2], var7);
-              this.field_f[var2Lifetime2 + 1] = (byte)mc.a((int) this.field_f[var2Lifetime2 + 1], var6);
-              this.field_f[var2Lifetime2 + 2] = (byte)mc.a((int) this.field_f[var2Lifetime2 + 2], var5);
-              this.field_f[var2Lifetime2 + 3] = (byte)mc.a((int) this.field_f[var2Lifetime2 + 3], var4Lifetime2);
+              this.field_f[var2Lifetime2] = (byte)IntrusiveNode.a((int) this.field_f[var2Lifetime2], var7);
+              this.field_f[var2Lifetime2 + 1] = (byte)IntrusiveNode.a((int) this.field_f[var2Lifetime2 + 1], var6);
+              this.field_f[var2Lifetime2 + 2] = (byte)IntrusiveNode.a((int) this.field_f[var2Lifetime2 + 2], var5);
+              this.field_f[var2Lifetime2 + 3] = (byte)IntrusiveNode.a((int) this.field_f[var2Lifetime2 + 3], var4Lifetime2);
               this.field_h = 0;
             }
             if (var4Lifetime2 == (var4Lifetime2 & this.field_k[var2Lifetime2]) &&
               (var5 & this.field_k[var2Lifetime2 + 1]) == var5 &&
               (var6 & this.field_k[var2Lifetime2 + 2]) == var6 &&
               (this.field_k[3 + var2Lifetime2] & var7) == var7) {
-              this.field_f[var2Lifetime2] = (byte)mc.a((int) this.field_f[var2Lifetime2], var4Lifetime2);
-              this.field_f[1 + var2Lifetime2] = (byte)mc.a((int) this.field_f[1 + var2Lifetime2], var5);
-              this.field_f[2 + var2Lifetime2] = (byte)mc.a((int) this.field_f[2 + var2Lifetime2], var6);
-              this.field_f[var2Lifetime2 + 3] = (byte)mc.a((int) this.field_f[var2Lifetime2 + 3], var7);
+              this.field_f[var2Lifetime2] = (byte)IntrusiveNode.a((int) this.field_f[var2Lifetime2], var4Lifetime2);
+              this.field_f[1 + var2Lifetime2] = (byte)IntrusiveNode.a((int) this.field_f[1 + var2Lifetime2], var5);
+              this.field_f[2 + var2Lifetime2] = (byte)IntrusiveNode.a((int) this.field_f[2 + var2Lifetime2], var6);
+              this.field_f[var2Lifetime2 + 3] = (byte)IntrusiveNode.a((int) this.field_f[var2Lifetime2 + 3], var7);
               this.field_h = 1;
             }
             if (var7 == (var7 & this.field_k[var2Lifetime2]) &&
               var6 == (this.field_k[1 + var2Lifetime2] & var6) &&
               var5 == (var5 & this.field_k[var2Lifetime2 + 2]) &&
               (this.field_k[3 + var2Lifetime2] & var4Lifetime2) == var4Lifetime2) {
-              this.field_f[var2Lifetime2] = (byte)mc.a((int) this.field_f[var2Lifetime2], var7);
-              this.field_f[1 + var2Lifetime2] = (byte)mc.a((int) this.field_f[1 + var2Lifetime2], var6);
-              this.field_f[2 + var2Lifetime2] = (byte)mc.a((int) this.field_f[2 + var2Lifetime2], var5);
-              this.field_f[3 + var2Lifetime2] = (byte)mc.a((int) this.field_f[3 + var2Lifetime2], var4Lifetime2);
+              this.field_f[var2Lifetime2] = (byte)IntrusiveNode.a((int) this.field_f[var2Lifetime2], var7);
+              this.field_f[1 + var2Lifetime2] = (byte)IntrusiveNode.a((int) this.field_f[1 + var2Lifetime2], var6);
+              this.field_f[2 + var2Lifetime2] = (byte)IntrusiveNode.a((int) this.field_f[2 + var2Lifetime2], var5);
+              this.field_f[3 + var2Lifetime2] = (byte)IntrusiveNode.a((int) this.field_f[3 + var2Lifetime2], var4Lifetime2);
               this.field_h = 1;
             }
           }
@@ -172,7 +172,7 @@ final class l {
         if (param2 > -63) {
           field_j = -41;
         }
-        int var3 = null != qe.field_a ? 1 : 0;
+        int var3 = null != GameKeyHandler.field_a ? 1 : 0;
         if (9 == dg.field_e &&
           fi.a(ml.field_jb, vf.field_b, vd.field_h, (byte) -86, ba.field_N)) {
           if (vf.field_b != 2 &&
@@ -185,7 +185,7 @@ final class l {
           if (var3 != 0) {
             return false;
           }
-          em.d(-20715);
+          MatchSetup.d(-20715);
           return true;
         }
         if (dg.field_e == 11) {
@@ -209,7 +209,7 @@ final class l {
         return false;
     }
 
-    final static void a(java.awt.Component param0, int param1, g param2, int param3, boolean param4, ie param5) {
+    final static void a(java.awt.Component param0, int param1, g param2, int param3, boolean param4, PlatformTaskDispatcher param5) {
         try {
           ll.a(param4, param0, param1, param5, param2, param3, (byte) 127, param1);
         } catch (RuntimeException runtimeException) {
@@ -225,7 +225,7 @@ final class l {
           this.field_k[var2] = this.field_b.field_e[var2];
         }
         this.field_d = null;
-        this.field_g.b(1);
+        this.field_g.clear(1);
         this.d(115);
         this.a(this.field_l, (byte) -96);
         if (param0 <= 12) {
@@ -257,11 +257,11 @@ final class l {
                   lb.a(ti.field_a[ui.a(5, 1692)], 573509761);
                   var3 = 1 << var2.field_u;
                   if (var2.field_x) {
-                    this.field_e[var2.field_n] = (byte)mc.a((int) this.field_e[var2.field_n], var3);
+                    this.field_e[var2.field_n] = (byte)IntrusiveNode.a((int) this.field_e[var2.field_n], var3);
                   } else {
-                    this.field_k[var2.field_n] = (byte)mc.a((int) this.field_k[var2.field_n], var3);
+                    this.field_k[var2.field_n] = (byte)IntrusiveNode.a((int) this.field_k[var2.field_n], var3);
                   }
-                  var2.b(false);
+                  var2.unlink(false);
                   this.d(-85);
                 }
                 if (var2.field_y < 0) {
@@ -330,10 +330,10 @@ final class l {
                   !this.a(true, var4, var2, -14933)) {
                   if (this.field_a == 0 &&
                     this.a((byte) -75, var4, var2)) {
-                    this.field_g.a(new ej(this.field_d, true), false);
+                    this.field_g.addLast(new ej(this.field_d, true), false);
                     this.field_d = null;
                   } else {
-                    this.field_g.a(new ej(var2, var4, true), false);
+                    this.field_g.addLast(new ej(var2, var4, true), false);
                     lb.a(s.field_a[ui.a(5, 1692)], 573509761);
                   }
                 }
@@ -350,10 +350,10 @@ final class l {
                     !this.a(false, var5Lifetime1, var2, param0 ^ -14957)) {
                     if (this.field_a == 1 &&
                       this.a((byte) -75, var5Lifetime1, var2)) {
-                      this.field_g.a(new ej(this.field_d, false), false);
+                      this.field_g.addLast(new ej(this.field_d, false), false);
                       this.field_d = null;
                     } else {
-                      this.field_g.a(new ej(var2, var5Lifetime1, false), false);
+                      this.field_g.addLast(new ej(var2, var5Lifetime1, false), false);
                       lb.a(s.field_a[ui.a(5, 1692)], param0 ^ 573509817);
                     }
                   }
@@ -375,16 +375,16 @@ final class l {
     }
 
     final static void a(int param0, int param1) {
-        bc var2 = nd.field_Lb;
-        var2.f(param1, (byte) -92);
-        var2.field_t = var2.field_t + 1;
-        int var3 = var2.field_t;
+        BitPacketBuffer var2 = nd.field_Lb;
+        var2.writeCipheredByte(param1, (byte) -92);
+        var2.position = var2.position + 1;
+        int var3 = var2.position;
         var2.a(2, false);
         var2.a(0, 128, km.field_o, km.field_o.length);
         var2.a(ni.field_c, false);
         var2.a(qa.field_A, false);
         var2.a(param0, param0 + 128, lo.field_a, lo.field_a.length);
-        var2.b(var2.field_t - var3, -2);
+        var2.b(var2.position - var3, -2);
     }
 
     public static void b(int param0) {
@@ -394,11 +394,11 @@ final class l {
     }
 
     private final boolean a(byte param0, int param1, int param2) {
-        ie var5;
+        PlatformTaskDispatcher var5;
         boolean stackIn_7_0 = false;
         if (param0 != -75) {
-          var5 = (ie) null;
-          l.a((java.awt.Component) null, 34, (g) null, 1, false, (ie) null);
+          var5 = (PlatformTaskDispatcher) null;
+          l.a((java.awt.Component) null, 34, (g) null, 1, false, (PlatformTaskDispatcher) null);
         }
         stackIn_7_0 = (this.field_d != null) && (this.field_d.field_b == param2) && (this.field_d.field_f == param1);
         return stackIn_7_0;
@@ -416,12 +416,12 @@ final class l {
         }
     }
 
-    l(em param0, int param1) {
+    l(MatchSetup param0, int param1) {
         try {
           this.field_a = param1;
           this.field_l = -1;
           this.field_b = param0;
-          this.field_g = new je();
+          this.field_g = new IntrusiveDeque();
           this.field_k = new byte[6];
           this.field_h = -1;
           this.field_f = null;

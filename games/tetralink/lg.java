@@ -1,35 +1,35 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lg extends na {
+final class lg extends UiWidget {
     int field_bb;
     static String field_I;
     private int field_T;
-    private oh field_L;
+    private Sprite field_L;
     private int field_U;
-    private oh field_P;
+    private Sprite field_P;
     static boolean field_S;
     private int field_M;
     private int field_W;
     static int field_X;
     static String field_O;
     private int field_N;
-    private oh[] field_Q;
+    private Sprite[] field_Q;
     static String field_Z;
     boolean field_K;
     static int[] field_ab;
     private int field_J;
-    private oh field_Y;
+    private Sprite field_Y;
     static String field_V;
 
-    private final oh a(int param0) {
+    private final Sprite a(int param0) {
         int var4 = 0;
         int var6 = 0;
         double var7 = 0.0;
         int var9 = 0;
         int var10 = TetraLink.field_J;
         int var2 = this.field_u >> 1;
-        oh var3 = new oh(var2, this.field_u);
+        Sprite var3 = new Sprite(var2, this.field_u);
         sk.a((byte) 117, var3);
         int var5 = -120 % ((2 - param0) / 39);
         for (var4 = 0; var4 < this.field_u; var4++) {
@@ -40,7 +40,7 @@ final class lg extends na {
               var7 = Math.sqrt(-var7 + 1.0);
               var9 = !(1.0 <= var7) ? (int)(var7 * 255.0) : 255;
             }
-            ra.a(var6, var4, var9 << 8 | var9 | var9 << 16);
+            SoftwareRasterizer.a(var6, var4, var9 << 8 | var9 | var9 << 16);
           }
         }
         dh.a(-581);
@@ -58,7 +58,7 @@ final class lg extends na {
         field_Z = null;
     }
 
-    private final oh a(int param0, byte param1, int param2) {
+    private final Sprite a(int param0, byte param1, int param2) {
         int var6 = 0;
         int var5;
         int var7;
@@ -68,14 +68,14 @@ final class lg extends na {
         int var11;
         int var12;
         int var13;
-        oh var14;
+        Sprite var14;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         var13 = TetraLink.field_J;
-        var14 = new oh(this.field_U * 2, this.field_u);
+        var14 = new Sprite(this.field_U * 2, this.field_u);
         sk.a((byte) 112, var14);
         var5 = this.field_u >> 1;
         for (var6 = 0; this.field_u > var6; var6++) {
@@ -90,21 +90,21 @@ final class lg extends na {
             stackIn_7_0 = var8 | var9;
           }
           var12 = stackIn_7_0;
-          ra.g(var7, var6, this.field_U, var12);
+          SoftwareRasterizer.g(var7, var6, this.field_U, var12);
           var8Lifetime1 = param0 & 16711935;
           var9Lifetime1 = 65280 & param0;
-          ra.g(-(2 * this.field_U) + var7, var6, this.field_U, var12);
+          SoftwareRasterizer.g(-(2 * this.field_U) + var7, var6, this.field_U, var12);
           if (var11 < 256) {
             stackIn_10_0 = (-16711936 & var8Lifetime1 * var11 | 16711680 & var9Lifetime1 * var11) >>> 8;
           } else {
             stackIn_10_0 = var8Lifetime1 | var9Lifetime1;
           }
           var12Lifetime1 = stackIn_10_0;
-          ra.g(this.field_U + var7, var6, this.field_U, var12Lifetime1);
-          ra.g(var7 - this.field_U, var6, this.field_U, var12Lifetime1);
+          SoftwareRasterizer.g(this.field_U + var7, var6, this.field_U, var12Lifetime1);
+          SoftwareRasterizer.g(var7 - this.field_U, var6, this.field_U, var12Lifetime1);
         }
         if (param1 >= -15) {
-          return (oh) null;
+          return (Sprite) null;
         }
         dh.a(-581);
         return var14;
@@ -112,9 +112,9 @@ final class lg extends na {
 
     final static void a(boolean param0, int param1, boolean param2) {
         if (!param2) {
-          ra.a();
+          SoftwareRasterizer.a();
         } else {
-          ra.d(0, 0, ra.field_f, ra.field_e, 0, 192);
+          SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_f, SoftwareRasterizer.field_e, 0, 192);
         }
         if (param1 != 1) {
           field_X = 111;
@@ -127,11 +127,11 @@ final class lg extends na {
     }
 
     private final void g(int param0) {
-        oh discarded$0 = null;
-        this.field_Q = new oh[]{this.a(this.field_W, (byte) -55, this.field_T), this.a(this.field_N, (byte) -77, this.field_J)};
+        Sprite discarded$0 = null;
+        this.field_Q = new Sprite[]{this.a(this.field_W, (byte) -55, this.field_T), this.a(this.field_N, (byte) -77, this.field_J)};
         this.field_L = this.a(param0 - 308991302);
         this.field_P = this.field_L.a();
-        this.field_Y = new oh(this.field_u >> 1, this.field_u);
+        this.field_Y = new Sprite(this.field_u >> 1, this.field_u);
         if (param0 != 308991265) {
           discarded$0 = this.a(-5);
         }
@@ -144,7 +144,7 @@ final class lg extends na {
         return String.valueOf(param1);
     }
 
-    private final void a(int param0, oh param1, int param2, byte param3) {
+    private final void a(int param0, Sprite param1, int param2, byte param3) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -158,7 +158,7 @@ final class lg extends na {
         var9 = TetraLink.field_J;
         try {
           var5_int = this.field_F + param0;
-          kl.a(-this.field_L.field_u + var5_int, param2 + this.field_u, param2, (byte) -79, this.field_L.field_u + param0);
+          FullscreenFocusCanvas.a(-this.field_L.field_u + var5_int, param2 + this.field_u, param2, (byte) -79, this.field_L.field_u + param0);
           var6 = param0 - this.field_M;
           var7 = 10 % ((param3 - 44) / 63);
           while (var5_int > var6) {
@@ -166,7 +166,7 @@ final class lg extends na {
             var6 = var6 + param1.field_u;
           }
           dh.a(-581);
-          if (param0 + this.field_L.field_u >= ra.field_j) {
+          if (param0 + this.field_L.field_u >= SoftwareRasterizer.field_j) {
             sk.a((byte) 118, this.field_Y);
             param1.c(-this.field_M, 0);
             param1.c(2 * this.field_U - this.field_M, 0);
@@ -174,7 +174,7 @@ final class lg extends na {
             dh.a(-581);
             this.field_Y.c(param0, param2);
           }
-          if (ra.field_l >= -this.field_L.field_u + var5_int) {
+          if (SoftwareRasterizer.field_l >= -this.field_L.field_u + var5_int) {
             sk.a((byte) 116, this.field_Y);
             for (var8 = this.field_M - this.field_L.field_u + this.field_F; var8 > 2 * this.field_U; var8 = var8 - 2 * this.field_U) {
             }
@@ -200,7 +200,7 @@ final class lg extends na {
         }
     }
 
-    final void a(na param0, int param1, int param2, boolean param3) {
+    final void a(UiWidget param0, int param1, int param2, boolean param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -249,7 +249,7 @@ final class lg extends na {
         int var6 = this.field_w + param2;
         this.a(var5, this.field_Q[0], var6, (byte) 124);
         if (65536 > this.field_bb) {
-          kl.a(var5 + this.field_F, this.field_u + var6, var6, (byte) -79, (this.field_bb * this.field_F >> 16) + var5);
+          FullscreenFocusCanvas.a(var5 + this.field_F, this.field_u + var6, var6, (byte) -79, (this.field_bb * this.field_F >> 16) + var5);
           this.a(var5, this.field_Q[1], var6, (byte) 119);
           dh.a(-581);
         }

@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class li {
-    static fl field_g;
+    static BufferedSocket field_g;
     private byte[] field_f;
     private long[] field_k;
-    static oh[] field_l;
+    static Sprite[] field_l;
     static int field_b;
     private long[] field_h;
     private int field_j;
@@ -21,13 +21,13 @@ final class li {
     final static void a(int param0, int param1, int param2, int param3, boolean param4, boolean param5, boolean param6, boolean param7, int param8, boolean param9) {
         int var11;
         var11 = TetraLink.field_J;
-        if (!param6 && (ra.field_f != cf.field_n ||
-          ra.field_e != bk.field_c) && (pk.field_O.field_j == ra.field_e &&
-          pk.field_O.field_h == ra.field_f)) {
+        if (!param6 && (SoftwareRasterizer.field_f != cf.field_n ||
+          SoftwareRasterizer.field_e != bk.field_c) && (WidgetContainer.field_O.field_j == SoftwareRasterizer.field_e &&
+          WidgetContainer.field_O.field_h == SoftwareRasterizer.field_f)) {
           if (null != qb.field_N) {
             cc.a(false, true);
           } else {
-            if (null == qe.field_a) {
+            if (null == GameKeyHandler.field_a) {
               db.a(5);
             } else {
               cc.a(true, true);
@@ -39,9 +39,9 @@ final class li {
         } else {
           vi.field_d = (cf.field_n - 640) / 2;
         }
-        ca.a(param6, (byte) 16);
+        SocketConnector.a(param6, (byte) 16);
         if (qd.field_ab > 0) {
-          cn.a(param6, param8, 21485, param9);
+          ClientException.a(param6, param8, 21485, param9);
         }
         if (param0 >= -33) {
           return;
@@ -64,7 +64,7 @@ final class li {
           hh.field_c.field_S = true;
           ci.a(param3, hn.field_Q, param7, -1, param8);
         }
-        md.a(param8, param2, param7, param3, (byte) -73, param1, param4);
+        SpriteState.a(param8, param2, param7, param3, (byte) -73, param1, param4);
         ci.a(param3, v.field_x, param7, -1, param8);
         cb.field_u = cb.field_u + 1;
     }
@@ -108,7 +108,7 @@ final class li {
             var8 = param0[var5_int] << var6 & 255 | (param0[var5_int + 1] & 255) >>> 8 - var6;
             if (var8 >= 0 &&
               256 > var8) {
-              this.field_n[this.field_e] = (byte)mc.a((int) this.field_n[this.field_e], var8 >>> var7);
+              this.field_n[this.field_e] = (byte)IntrusiveNode.a((int) this.field_n[this.field_e], var8 >>> var7);
               this.field_e = this.field_e + 1;
               this.field_j = this.field_j + (8 - var7);
               if (this.field_j == 512) {
@@ -128,7 +128,7 @@ final class li {
             stackIn_17_0 = param0[var5_int] << var6;
             stackIn_17_1 = 255;
             var8Lifetime1 = stackIn_17_0 & stackIn_17_1;
-            this.field_n[this.field_e] = (byte)mc.a((int) this.field_n[this.field_e], var8Lifetime1 >>> var7);
+            this.field_n[this.field_e] = (byte)IntrusiveNode.a((int) this.field_n[this.field_e], var8Lifetime1 >>> var7);
           } else {
             var8Lifetime1 = 0;
           }
@@ -235,7 +235,7 @@ final class li {
         field_g = null;
         field_a = null;
         if (param0 != 255) {
-          field_g = (fl) null;
+          field_g = (BufferedSocket) null;
         }
         field_m = null;
         field_l = null;
@@ -244,7 +244,7 @@ final class li {
     final static String a(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
-        bc var5 = null;
+        BitPacketBuffer var5 = null;
         CharSequence var6 = null;
         String stackIn_2_0 = null;
         String stackIn_5_0 = null;
@@ -275,21 +275,21 @@ final class li {
             stackIn_12_0 = sk.a(new String[]{param1}, hl.field_B, 127);
             return stackIn_12_0;
           }
-          if (100 <= ca.field_c) {
+          if (100 <= SocketConnector.field_c) {
             stackIn_16_0 = da.field_c;
             return stackIn_16_0;
           }
-          if (oj.a(1, param1)) {
+          if (IsaacCipher.a(1, param1)) {
             stackIn_19_0 = sk.a(new String[]{param1}, ji.field_Vb, param2 + 119);
             return stackIn_19_0;
           }
           var5 = nd.field_Lb;
-          var5.f(param0, (byte) -92);
-          var5.field_t = var5.field_t + 1;
-          var4 = var5.field_t;
+          var5.writeCipheredByte(param0, (byte) -92);
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.a(param2, false);
           var5.a(param1, 0);
-          var5.b(-var4 + var5.field_t, param2 ^ -4);
+          var5.b(-var4 + var5.position, param2 ^ -4);
           stackIn_21_0 = null;
           return (String) (stackIn_21_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -324,7 +324,7 @@ final class li {
         }
     }
 
-    final static void a(int param0, oh[] param1, int param2, boolean param3, int param4, int param5, int param6, oh[] param7, int param8, int param9, jb param10, int param11, jb param12, int param13, int param14) {
+    final static void a(int param0, Sprite[] param1, int param2, boolean param3, int param4, int param5, int param6, Sprite[] param7, int param8, int param9, BitmapFont param10, int param11, BitmapFont param12, int param13, int param14) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -336,11 +336,11 @@ final class li {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15 = null;
-        oh[] var16 = null;
+        Sprite[] var16 = null;
         try {
-          var16 = (oh[]) null;
-          ll.a(param13, (oh[]) null, param10, lk.field_wb, mc.field_b, -11319, param5, 0, param2, param14, 0, param8, param9, param7, ve.field_b, param6, param12, param0, param11, param1, 480);
-          gb.a((byte) -75, param3);
+          var16 = (Sprite[]) null;
+          ll.a(param13, (Sprite[]) null, param10, lk.field_wb, IntrusiveNode.field_b, -11319, param5, 0, param2, param14, 0, param8, param9, param7, ve.field_b, param6, param12, param0, param11, param1, 480);
+          DualLinkNode.a((byte) -75, param3);
           if (param4 >= -72) {
             li.a(4, 80, -105, 93, true, true, true, true, 64, false);
           }
@@ -377,7 +377,7 @@ final class li {
         }
     }
 
-    final static void a(ie param0, Object param1, byte param2) {
+    final static void a(PlatformTaskDispatcher param0, Object param1, byte param2) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -446,7 +446,7 @@ final class li {
         int var8 = 0;
         var8 = TetraLink.field_J;
         try {
-          this.field_n[this.field_e] = (byte)mc.a((int) this.field_n[this.field_e], 128 >>> pl.a(this.field_j, 7));
+          this.field_n[this.field_e] = (byte)IntrusiveNode.a((int) this.field_n[this.field_e], 128 >>> pl.a(this.field_j, 7));
           this.field_e = this.field_e + 1;
           if (this.field_e > 32) {
             while (this.field_e < 64) {

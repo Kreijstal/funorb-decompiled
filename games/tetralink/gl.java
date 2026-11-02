@@ -3,7 +3,7 @@
  */
 final class gl extends ka {
     static String field_q;
-    static je field_p;
+    static IntrusiveDeque field_p;
     static int[] field_n;
     static le field_o;
 
@@ -20,7 +20,7 @@ final class gl extends ka {
 
     final static void a(boolean param0, byte param1) {
         if (null != sj.field_g) {
-          ra.e(ra.field_j, ra.field_i, -ra.field_j + ra.field_l, -ra.field_i + ra.field_g);
+          SoftwareRasterizer.e(SoftwareRasterizer.field_j, SoftwareRasterizer.field_i, -SoftwareRasterizer.field_j + SoftwareRasterizer.field_l, -SoftwareRasterizer.field_i + SoftwareRasterizer.field_g);
           sj.field_g.a(param0, 256);
           if (param1 != 24) {
             gl.a(true, (byte) -84);
@@ -49,7 +49,7 @@ final class gl extends ka {
     final static void a(byte param0, int param1) {
         mb.field_B = 1000000000L / (long)param1;
         if (param0 <= 121) {
-          field_p = (je) null;
+          field_p = (IntrusiveDeque) null;
         }
     }
 

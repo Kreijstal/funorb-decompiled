@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-abstract class eg extends na implements nf {
-    na[] field_I;
-    static je field_J;
+abstract class eg extends UiWidget implements nf {
+    UiWidget[] field_I;
+    static IntrusiveDeque field_J;
     static String field_M;
     static String field_L;
     private static long[] field_O;
@@ -23,7 +23,7 @@ abstract class eg extends na implements nf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -372494750) {
-            field_J = (je) null;
+            field_J = (IntrusiveDeque) null;
           }
           if (this.a(param0, param2, 105, param1)) {
             this.a(param3 ^ 372494831, param1, param0, param2);
@@ -51,13 +51,13 @@ abstract class eg extends na implements nf {
         }
     }
 
-    final boolean a(na param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         int var4 = 0;
-        na[] var3 = null;
+        UiWidget[] var3 = null;
         RuntimeException var3_ref = null;
-        na var5 = null;
+        UiWidget var5 = null;
         int var6 = 0;
-        na[] var7 = null;
+        UiWidget[] var7 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -110,8 +110,8 @@ abstract class eg extends na implements nf {
     final int d(int param0) {
         int var4 = 0;
         int var2;
-        na[] var3;
-        na var5;
+        UiWidget[] var3;
+        UiWidget var5;
         int var7;
         int var6;
         var7 = TetraLink.field_J;
@@ -138,9 +138,9 @@ abstract class eg extends na implements nf {
         int var8 = 0;
         StringBuilder discarded$6 = null;
         StringBuilder discarded$5 = null;
-        na var7 = null;
+        UiWidget var7 = null;
         int var9 = 0;
-        na[] var10 = null;
+        UiWidget[] var10 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -187,12 +187,12 @@ abstract class eg extends na implements nf {
         }
     }
 
-    private final na a(int param0) {
+    private final UiWidget a(int param0) {
         int var3 = 0;
-        na[] var2;
-        na var4;
+        UiWidget[] var2;
+        UiWidget var4;
         int var5;
-        na[] var6;
+        UiWidget[] var6;
         var5 = TetraLink.field_J;
         if (this.field_I == null) {
           return null;
@@ -200,7 +200,7 @@ abstract class eg extends na implements nf {
         var6 = this.field_I;
         var2 = var6;
         if (param0 != 18305) {
-          return (na) null;
+          return (UiWidget) null;
         }
         for (var3 = 0; var6.length > var3; var3++) {
           var4 = var6[var3];
@@ -229,8 +229,8 @@ abstract class eg extends na implements nf {
 
     final String e(int param0) {
         int var3 = 0;
-        na[] var2;
-        na var4;
+        UiWidget[] var2;
+        UiWidget var4;
         int var6;
         String var5;
         var6 = TetraLink.field_J;
@@ -250,13 +250,13 @@ abstract class eg extends na implements nf {
         return null;
     }
 
-    final boolean a(na param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(UiWidget param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var9 = 0;
-        na[] var8 = null;
+        UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
-        na var10 = null;
+        UiWidget var10 = null;
         int var11 = 0;
-        na[] var12 = null;
+        UiWidget[] var12 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -293,11 +293,11 @@ abstract class eg extends na implements nf {
         }
     }
 
-    private final boolean a(int param0, na param1, int param2) {
+    private final boolean a(int param0, UiWidget param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        na var5 = null;
-        na var6 = null;
+        UiWidget var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -340,9 +340,9 @@ abstract class eg extends na implements nf {
         }
     }
 
-    private final boolean a(int param0, na param1) {
+    private final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        na var4 = null;
+        UiWidget var4 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -350,8 +350,8 @@ abstract class eg extends na implements nf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 1) {
-            var4 = (na) null;
-            this.a((na) null, -49);
+            var4 = (UiWidget) null;
+            this.a((UiWidget) null, -49);
           }
           stackIn_3_0 = this.a(true, 1, param1);
           return stackIn_3_0;
@@ -369,13 +369,13 @@ abstract class eg extends na implements nf {
         }
     }
 
-    final boolean a(int param0, na param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         int var9 = 0;
-        na[] var8 = null;
+        UiWidget[] var8 = null;
         RuntimeException var8_ref = null;
-        na var10 = null;
+        UiWidget var10 = null;
         int var11 = 0;
-        na[] var12 = null;
+        UiWidget[] var12 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -413,11 +413,11 @@ abstract class eg extends na implements nf {
         }
     }
 
-    private final boolean a(boolean param0, int param1, na param2) {
+    private final boolean a(boolean param0, int param1, UiWidget param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        na var5 = null;
-        na var6 = null;
+        UiWidget var5 = null;
+        UiWidget var6 = null;
         int var7 = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -463,12 +463,12 @@ abstract class eg extends na implements nf {
 
     void a(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        na var6;
+        UiWidget var6;
         int var7;
         var7 = TetraLink.field_J;
         if (param3 == 0 &&
           this.field_H != null) {
-          this.field_H.a((na) (this), param1, param2, true, true);
+          this.field_H.a((UiWidget) (this), param1, param2, true, true);
         }
         if (param0 != 0) {
           field_N = (String) null;
@@ -485,10 +485,10 @@ abstract class eg extends na implements nf {
 
     final void f(int param0) {
         int var3 = 0;
-        na[] var2;
-        na var4;
+        UiWidget[] var2;
+        UiWidget var4;
         int var5;
-        na[] var6;
+        UiWidget[] var6;
         var5 = TetraLink.field_J;
         if (param0 >= -63) {
           this.a(80, 112, -68, 77, -76);
@@ -503,7 +503,7 @@ abstract class eg extends na implements nf {
         }
     }
 
-    private final boolean a(na param0, byte param1) {
+    private final boolean a(UiWidget param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -530,12 +530,12 @@ abstract class eg extends na implements nf {
         }
     }
 
-    void a(na param0, int param1, int param2, boolean param3) {
+    void a(UiWidget param0, int param1, int param2, boolean param3) {
         int var6 = 0;
-        na[] var5 = null;
-        na var7 = null;
+        UiWidget[] var5 = null;
+        UiWidget var7 = null;
         int var8 = 0;
-        na[] var9 = null;
+        UiWidget[] var9 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -570,14 +570,14 @@ abstract class eg extends na implements nf {
         }
     }
 
-    final boolean a(int param0, char param1, int param2, na param3) {
+    final boolean a(int param0, char param1, int param2, UiWidget param3) {
         int var6 = 0;
-        na[] var5 = null;
+        UiWidget[] var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
-        na var7 = null;
+        UiWidget var7 = null;
         int var8 = 0;
-        na[] var9 = null;
+        UiWidget[] var9 = null;
         boolean stackIn_21_0 = false;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -625,12 +625,12 @@ abstract class eg extends na implements nf {
         }
     }
 
-    final void a(int param0, boolean param1, na param2, int param3, int param4, int param5) {
+    final void a(int param0, boolean param1, UiWidget param2, int param3, int param4, int param5) {
         int var8 = 0;
-        na[] var7 = null;
-        na var9 = null;
+        UiWidget[] var7 = null;
+        UiWidget var9 = null;
         int var10 = 0;
-        na[] var11 = null;
+        UiWidget[] var11 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -671,7 +671,7 @@ abstract class eg extends na implements nf {
         int var2 = 0;
         int var3 = 0;
         long var0;
-        field_J = new je();
+        field_J = new IntrusiveDeque();
         field_M = "<%0> has resigned.";
         field_L = "This private message is prefixed with \"<col=9090FF>To <%1>:</col>\" on your screen.<br>On <%1>'s screen, it will be prefixed with \"<col=FF6060>From <%0>:</col>\", which is<br>a different length and may leave less room for the message itself.<br><br>This shading covers the area which is not available on <%1>'s screen.<br>Provided your message fits to the left of the shaded area,<br><%1> should be able to see it in full.<br><br>(Note: this may be inaccurate if <%1> is playing in a different<br>language from you.)";
         field_O = new long[256];

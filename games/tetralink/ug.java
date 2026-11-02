@@ -5,15 +5,15 @@ final class ug extends nb {
     private lg field_db;
     private String field_Y;
     private boolean field_gb;
-    static bh field_hb;
-    static wf field_ib;
+    static PacketBuffer field_hb;
+    static PcmSample field_ib;
     static String field_X;
     static int[] field_bb;
     private boolean field_Z;
     static int field_eb;
     static jk field_cb;
     private String field_fb;
-    static ie field_ab;
+    static PlatformTaskDispatcher field_ab;
 
     final static boolean c(int param0, int param1, int param2) {
         StringBuilder discarded$0 = null;
@@ -62,17 +62,17 @@ final class ug extends nb {
           gn.field_I == null) {
           var3 = 0;
         }
-        if (sf.field_d == 0 &&
-          qe.field_a != null) {
+        if (SecondaryNodeDequeIterator.field_d == 0 &&
+          GameKeyHandler.field_a != null) {
           var3 = 0;
         }
-        if (sf.field_d == 2 &&
+        if (SecondaryNodeDequeIterator.field_d == 2 &&
           !k.a(true)) {
           var3 = 0;
         }
         if (dg.field_e == 84) {
           if (var3 == 0) {
-            if (sf.field_d == 0) {
+            if (SecondaryNodeDequeIterator.field_d == 0) {
               return true;
             }
             hi.b(-113);
@@ -86,10 +86,10 @@ final class ug extends nb {
               fi.a(0, 0, (String) null, 2, kj.field_c, (String) null);
               var15 = (String) null;
               var14 = (String) null;
-              fi.a(0, 0, (String) null, 2, sa.field_a, (String) null);
+              fi.a(0, 0, (String) null, 2, RandomAccessCacheFile.field_a, (String) null);
               hi.b(-82);
             } else {
-              var5 = sf.field_d;
+              var5 = SecondaryNodeDequeIterator.field_d;
               if (var5 == 0 &&
                 qb.field_N != null) {
                 var5 = 1;
@@ -97,7 +97,7 @@ final class ug extends nb {
               if (fh.a((byte) 79, var5) == 2) {
                 vj.a(var5, param2, 1, 127);
               }
-              eo.a(-3, -1, param1, ka.field_m, sf.field_d, var4_ref_String);
+              eo.a(-3, -1, param1, ka.field_m, SecondaryNodeDequeIterator.field_d, var4_ref_String);
               hi.b(-82);
             }
           } else {
@@ -129,9 +129,9 @@ final class ug extends nb {
         var17 = ph.field_w;
         var16 = rh.a(var17, param0 ^ -125);
         var19 = var16;
-        if (sf.field_d != 2) {
+        if (SecondaryNodeDequeIterator.field_d != 2) {
           var7 = "";
-          if (sf.field_d != 0) {
+          if (SecondaryNodeDequeIterator.field_d != 0) {
             var23 = var7 + var19 + ": ";
             var5Lifetime1 = var5Lifetime1 - we.field_k.b(var23);
             if (we.field_k.b(io.field_h.toString()) > var5Lifetime1) {
@@ -150,7 +150,7 @@ final class ug extends nb {
                 return true;
               }
               if (!nh.field_Sb) {
-                var26 = "[" + sk.a(new String[]{qb.field_N.field_ec}, qe.field_e, 120) + "] ";
+                var26 = "[" + sk.a(new String[]{qb.field_N.field_ec}, GameKeyHandler.field_e, 120) + "] ";
                 var27 = var26 + var19 + ": ";
                 var5Lifetime1 = var5Lifetime1 - we.field_k.b(var27);
                 if (we.field_k.b(io.field_h.toString()) > var5Lifetime1) {
@@ -167,7 +167,7 @@ final class ug extends nb {
                 }
                 return true;
               }
-              var28 = "[" + sk.a(new String[]{qb.field_N.field_ec}, qe.field_e, 120) + "] ";
+              var28 = "[" + sk.a(new String[]{qb.field_N.field_ec}, GameKeyHandler.field_e, 120) + "] ";
               var7 = var28;
               var29 = var28 + var19 + ": ";
               var5Lifetime1 = var5Lifetime1 - we.field_k.b(var29);
@@ -180,7 +180,7 @@ final class ug extends nb {
           }
           if (null != qb.field_N) {
             if (!nh.field_Sb) {
-              var33 = "[" + sk.a(new String[]{qb.field_N.field_ec}, qe.field_e, 120) + "] ";
+              var33 = "[" + sk.a(new String[]{qb.field_N.field_ec}, GameKeyHandler.field_e, 120) + "] ";
               var34 = var33 + var19 + ": ";
               var5Lifetime1 = var5Lifetime1 - we.field_k.b(var34);
               if (we.field_k.b(io.field_h.toString()) > var5Lifetime1) {
@@ -197,7 +197,7 @@ final class ug extends nb {
               }
               return true;
             }
-            var35 = "[" + sk.a(new String[]{qb.field_N.field_ec}, qe.field_e, 120) + "] ";
+            var35 = "[" + sk.a(new String[]{qb.field_N.field_ec}, GameKeyHandler.field_e, 120) + "] ";
             var7 = var35;
             var36 = var35 + var19 + ": ";
             var5Lifetime1 = var5Lifetime1 - we.field_k.b(var36);
@@ -211,7 +211,7 @@ final class ug extends nb {
         } else {
           var39 = (CharSequence) ((Object) ka.field_m);
           var18 = sk.a(new String[]{p.a(var39, (byte) 43)}, vd.field_b, param0 ^ 94);
-          var8 = sk.a(new String[]{var16}, mc.field_h, 127);
+          var8 = sk.a(new String[]{var16}, IntrusiveNode.field_h, 127);
           var9 = we.field_k.b(var18);
           var10 = we.field_k.b(var8);
           if (var9 > var10) {
@@ -227,7 +227,7 @@ final class ug extends nb {
         return true;
     }
 
-    ug(pk param0, String param1) {
+    ug(WidgetContainer param0, String param1) {
         super(param0, 300, 120);
         int var3_int = 0;
         try {
@@ -311,7 +311,7 @@ final class ug extends nb {
 
     final static boolean o(int param0) {
         int var1 = 95 / ((param0 + 24) / 43);
-        return bh.field_r;
+        return PacketBuffer.field_r;
     }
 
     public static void f(boolean param0) {
@@ -331,11 +331,11 @@ final class ug extends nb {
         field_cb = null;
     }
 
-    final static oh a(ah param0, byte param1, String param2, String param3) {
+    final static Sprite a(Archive param0, byte param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        oh stackIn_3_0 = null;
+        Sprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -380,7 +380,7 @@ final class ug extends nb {
 
     final void a(String param0, byte param1, float param2, boolean param3) {
         RuntimeException runtimeException = null;
-        ah var6 = null;
+        Archive var6 = null;
         boolean stackIn_2_0 = false;
         int stackIn_3_1 = 0;
         boolean stackIn_8_1 = false;
@@ -409,8 +409,8 @@ final class ug extends nb {
             }
           }
           if (param1 >= -102) {
-            var6 = (ah) null;
-            ug.a(104, (ah) null);
+            var6 = (Archive) null;
+            ug.a(104, (Archive) null);
           }
           this.field_db.field_bb = (int)(param2 / 100.0f * 65536.0f);
           this.field_fb = param0;
@@ -434,7 +434,7 @@ final class ug extends nb {
         this.field_db.field_K = false;
     }
 
-    final static void a(int param0, ah param1) {
+    final static void a(int param0, Archive param1) {
         ag var2 = null;
         try {
           ag.a(param1.a("headers.packvorbis", "", true));
@@ -501,7 +501,7 @@ final class ug extends nb {
         ab.field_V.a(this.field_fb, (this.field_F >> 1) + param2, 103 + param0, 16777215, -1);
         if (param1 >= 66) {
           if (null != this.field_Y) {
-            ra.g(20 + param2, param0 + 113, 260, 8421504);
+            SoftwareRasterizer.g(20 + param2, param0 + 113, 260, 8421504);
             ab.field_V.a(this.field_Y, param2 + 20, 8 + (param0 + 120), 260, 100, 16777215, -1, 1, 0, ab.field_V.field_N);
           }
           return;

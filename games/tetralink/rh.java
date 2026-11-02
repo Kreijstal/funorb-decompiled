@@ -4,13 +4,13 @@
 final class rh extends ll {
     byte field_H;
     static String field_L;
-    static oh field_M;
+    static Sprite field_M;
     int field_I;
     static hl field_N;
     static le field_F;
     static String field_J;
     static boolean[] field_G;
-    bh field_K;
+    PacketBuffer field_K;
 
     final static mh b(int param0, String param1) {
         int var5 = 0;
@@ -104,10 +104,10 @@ final class rh extends ll {
               param0 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (wm.field_p == null) {
-                wm.field_p = uh.field_b.createImage(304, 34);
+              if (ImageProducerRasterBuffer.field_p == null) {
+                ImageProducerRasterBuffer.field_p = uh.field_b.createImage(304, 34);
               }
-              var11 = wm.field_p.getGraphics();
+              var11 = ImageProducerRasterBuffer.field_p.getGraphics();
               var11.setColor(param0);
               var11.drawRect(0, 0, 303, 33);
               var11.fillRect(2, 2, param1 * 3, 30);
@@ -117,7 +117,7 @@ final class rh extends ll {
               var11.setFont(gg.field_k);
               var11.setColor(java.awt.Color.white);
               var11.drawString(param2, (-(param2.length() * 6) + 304) / 2, 22);
-              var10.drawImage(wm.field_p, n.field_M / 2 - 152, d.field_h / 2 - 18, (java.awt.image.ImageObserver) null);
+              var10.drawImage(ImageProducerRasterBuffer.field_p, n.field_M / 2 - 152, d.field_h / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
@@ -675,7 +675,7 @@ final class rh extends ll {
         field_G = null;
     }
 
-    final static String a(int param0, bh param1, int param2) {
+    final static String a(int param0, PacketBuffer param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -690,7 +690,7 @@ final class rh extends ll {
         Throwable decompiledCaughtException = null;
         try {
           try {
-            var3_int = param1.f((byte) 110);
+            var3_int = param1.readSmart((byte) 110);
             if (var3_int > param2) {
               var3_int = param2;
             }
@@ -699,7 +699,7 @@ final class rh extends ll {
               return stackIn_4_0;
             }
             var4 = new byte[var3_int];
-            param1.field_t = param1.field_t + ck.field_Z.a(param1.field_u, 0, param1.field_t, var3_int, false, var4);
+            param1.position = param1.position + ck.field_Z.a(param1.payload, 0, param1.position, var3_int, false, var4);
             var5 = cl.a(-1095, var3_int, var4, 0);
             stackIn_6_0 = var5;
             return stackIn_6_0;
@@ -729,23 +729,23 @@ final class rh extends ll {
           if (null == this.field_K) {
             return 0;
           }
-          return 100 * this.field_K.field_t / (this.field_K.field_u.length - this.field_H);
+          return 100 * this.field_K.position / (this.field_K.payload.length - this.field_H);
         }
         if (null == this.field_K) {
           return 0;
         }
-        return 100 * this.field_K.field_t / (this.field_K.field_u.length - this.field_H);
+        return 100 * this.field_K.position / (this.field_K.payload.length - this.field_H);
     }
 
     final byte[] c(boolean param0) {
         if (this.field_v) {
           throw new RuntimeException();
         }
-        if (this.field_K.field_t < this.field_K.field_u.length - this.field_H) {
+        if (this.field_K.position < this.field_K.payload.length - this.field_H) {
           throw new RuntimeException();
         }
         if (param0) {
-          return this.field_K.field_u;
+          return this.field_K.payload;
         }
         return (byte[]) null;
     }

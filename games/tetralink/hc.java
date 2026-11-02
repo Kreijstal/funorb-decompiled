@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hc extends mc {
+final class hc extends IntrusiveNode {
     static int field_p;
     static nk field_v;
     static boolean[] field_u;
@@ -12,7 +12,7 @@ final class hc extends mc {
     static hl field_n;
     int field_t;
 
-    final static de a(int param0, byte param1, ah param2, int param3, ah param4) {
+    final static de a(int param0, byte param1, Archive param2, int param3, Archive param4) {
         RuntimeException var5 = null;
         de stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -79,13 +79,13 @@ final class hc extends mc {
         if (param0) {
           hc.a(false);
         }
-        String var6 = "(" + mh.field_g + " " + lk.field_sb + " " + md.field_A + ") " + ua.field_c;
+        String var6 = "(" + mh.field_g + " " + lk.field_sb + " " + SpriteState.field_A + ") " + ua.field_c;
         String var1 = var6;
         if (0 < rl.field_d) {
           var1 = var6 + ":";
           for (var2 = 0; var2 < rl.field_d; var2++) {
             var7 = var1 + ' ';
-            var3 = kb.field_q.field_u[var2] & 255;
+            var3 = kb.field_q.payload[var2] & 255;
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 >= 10) {

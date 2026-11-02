@@ -66,7 +66,7 @@ final class ud extends hl {
     }
 
     final static void d(byte param0) {
-        om.a(true, false, ek.field_s, pl.field_e);
+        om.a(true, false, NotificationToast.field_s, pl.field_e);
         int var1 = -70 / ((-60 - param0) / 40);
         sn.field_b = true;
     }

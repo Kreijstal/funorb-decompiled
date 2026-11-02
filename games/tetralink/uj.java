@@ -6,7 +6,7 @@ final class uj extends al {
     private int field_t;
     private int field_v;
     private int field_r;
-    private oh[] field_u;
+    private Sprite[] field_u;
     static int[] field_q;
     static int field_w;
 
@@ -39,7 +39,7 @@ final class uj extends al {
         }
     }
 
-    public final void a(na param0, int param1, int param2, boolean param3, boolean param4) {
+    public final void a(UiWidget param0, int param1, int param2, boolean param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -72,7 +72,7 @@ final class uj extends al {
           }
           var7 = stackIn_14_0;
           if (!param3) {
-            this.field_u = (oh[]) null;
+            this.field_u = (Sprite[]) null;
           }
           stackIn_19_0 = (!param4) ? 7105644 : 16777215;
           var8 = stackIn_19_0;

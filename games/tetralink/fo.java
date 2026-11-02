@@ -7,7 +7,7 @@ final class fo extends nn implements uc {
     static String field_eb;
     private int field_gb;
 
-    final void a(na param0, int param1, int param2, boolean param3) {
+    final void a(UiWidget param0, int param1, int param2, boolean param3) {
         super.a(param0, param1, param2, param3);
         if (!param3) {
           return;

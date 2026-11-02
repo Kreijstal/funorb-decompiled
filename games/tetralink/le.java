@@ -43,8 +43,8 @@ final class le extends hl {
         String var12 = null;
         Object var14 = null;
         int var15 = 0;
-        jb var17 = null;
-        jb var18 = null;
+        BitmapFont var17 = null;
+        BitmapFont var18 = null;
         this.field_Zb = -1;
         try {
           this.field_Wb = param7;
@@ -68,7 +68,7 @@ final class le extends hl {
               -1 == this.field_Ub[var13]) {
               var14 = ab.field_R;
             }
-            this.field_Qb[var13] = new nh(0L, param2, (hl) null, param3, (oh) (var14), param6[var13]);
+            this.field_Qb[var13] = new nh(0L, param2, (hl) null, param3, (Sprite) (var14), param6[var13]);
             this.a((byte) 97, this.field_Qb[var13]);
             var15 = var17.b(param6[var13]);
             if (this.field_Mb < var15) {
@@ -209,7 +209,7 @@ final class le extends hl {
           } else {
             if (this.field_Ub[param0] != -1) {
               var5 = 32768 | this.field_Ub[param0];
-              var6 = sf.field_d;
+              var6 = SecondaryNodeDequeIterator.field_d;
               if (0 == var6 &&
                 qb.field_N != null) {
                 var6 = 1;
@@ -218,8 +218,8 @@ final class le extends hl {
                 vj.a(var6, param3, 1, 90);
               }
               var8 = (String) null;
-              eo.a(-3, var5, param1, ka.field_m, sf.field_d, (String) null);
-              pf.a(ka.field_m, sf.field_d, var5, vj.field_o, (byte) 88);
+              eo.a(-3, var5, param1, ka.field_m, SecondaryNodeDequeIterator.field_d, (String) null);
+              pf.a(ka.field_m, SecondaryNodeDequeIterator.field_d, var5, vj.field_o, (byte) 88);
               go.c((byte) 42);
               kj.a((byte) 45);
             } else {
@@ -369,7 +369,7 @@ final class le extends hl {
         }
         if (null != this.field_Yb) {
           this.field_Yb.i(20424);
-          this.field_Yb.b(false);
+          this.field_Yb.unlink(false);
         }
         this.field_Yb = null;
         this.field_Zb = -1;

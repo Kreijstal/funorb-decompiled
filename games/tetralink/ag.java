@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ag extends mc {
+final class ag extends IntrusiveNode {
     private static float[] field_E;
     private int field_U;
     private byte[][] field_n;
@@ -39,7 +39,7 @@ final class ag extends mc {
     private static int[] field_B;
     private static byte[] field_M;
 
-    final wf a(int[] param0) {
+    final PcmSample a(int[] param0) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int var3;
@@ -89,7 +89,7 @@ final class ag extends mc {
         this.field_u = null;
         var12 = this.field_N;
         this.field_N = null;
-        return new wf(this.field_T, var12, this.field_U, this.field_S, this.field_w);
+        return new PcmSample(this.field_T, var12, this.field_U, this.field_S, this.field_w);
     }
 
     private final void b(byte[] param0) throws IOException {
@@ -97,7 +97,7 @@ final class ag extends mc {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        bh var2 = new bh(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_T = var2.f(0);
         this.field_C = var2.f(51);
         this.field_U = var2.f(-127);
@@ -114,7 +114,7 @@ final class ag extends mc {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.d((byte) -99);
+            var6_int = var2.readUnsignedByte((byte) -99);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
@@ -123,7 +123,7 @@ final class ag extends mc {
         }
     }
 
-    final static ag a(ah param0, String param1, String param2) {
+    final static ag a(Archive param0, String param1, String param2) {
         try {
           ag var4_ref = null;
           if (!ag.a(param0)) {
@@ -156,7 +156,7 @@ final class ag extends mc {
         return var0;
     }
 
-    final wf b() {
+    final PcmSample b() {
         int var3 = 0;
         int var6 = 0;
         int incrementValue$0 = 0;
@@ -188,7 +188,7 @@ final class ag extends mc {
           }
         }
         this.field_u = null;
-        return new wf(this.field_T, var1, this.field_U, this.field_S, this.field_w);
+        return new PcmSample(this.field_T, var1, this.field_U, this.field_S, this.field_w);
     }
 
     final static void a(byte[] param0) {
@@ -659,7 +659,7 @@ final class ag extends mc {
         return (float[]) (var17);
     }
 
-    final static ag a(ah param0, int param1, int param2) {
+    final static ag a(Archive param0, int param1, int param2) {
         try {
           ag var4_ref = null;
           if (!ag.a(param0)) {
@@ -746,7 +746,7 @@ final class ag extends mc {
         this.b(param0);
     }
 
-    private final static boolean a(ah param0) {
+    private final static boolean a(Archive param0) {
         byte[] var1 = null;
         if (!field_G) {
           var1 = param0.a(42, 0, 0);

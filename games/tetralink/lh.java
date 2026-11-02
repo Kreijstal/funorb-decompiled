@@ -6,7 +6,7 @@ final class lh extends um {
     static pb[] field_v;
     static String field_x;
     static hl field_q;
-    static ob field_t;
+    static Model field_t;
     static String field_u;
     static String field_r;
     static String field_w;

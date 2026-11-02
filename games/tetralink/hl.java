@@ -3,21 +3,21 @@
  */
 class hl extends uk {
     int field_Hb;
-    oh[] field_H;
+    Sprite[] field_H;
     int field_Fb;
     boolean field_qb;
-    oh field_Ab;
+    Sprite field_Ab;
     int field_K;
     private int field_I;
     int field_R;
     int field_Q;
-    oh field_vb;
+    Sprite field_vb;
     private boolean field_bb;
     boolean field_Y;
-    oh[] field_Eb;
+    Sprite[] field_Eb;
     int field_Db;
     private int field_ab;
-    oh field_X;
+    Sprite field_X;
     int field_yb;
     int field_N;
     int field_L;
@@ -27,21 +27,21 @@ class hl extends uk {
     private int field_Bb;
     static String field_ub;
     boolean field_Cb;
-    static oh[] field_G;
+    static Sprite[] field_G;
     static String field_B;
     static String field_C;
     int field_Jb;
     int field_M;
     private int field_U;
-    oh[] field_kb;
-    je field_fb;
+    Sprite[] field_kb;
+    IntrusiveDeque field_fb;
     private boolean field_tb;
     private int field_ob;
-    oh[] field_Gb;
+    Sprite[] field_Gb;
     int field_P;
     private boolean field_hb;
     int field_D;
-    jb field_Ib;
+    BitmapFont field_Ib;
     private int field_W;
     static int field_cb;
     private int field_lb;
@@ -52,15 +52,15 @@ class hl extends uk {
     int field_eb;
     String field_O;
     boolean field_zb;
-    oh field_sb;
+    Sprite field_sb;
     static int field_wb;
     int field_V;
-    oh[] field_pb;
+    Sprite[] field_pb;
     int field_xb;
     private int field_db;
     int field_nb;
     static String field_A;
-    oh field_y;
+    Sprite field_y;
     int field_T;
     String field_jb;
     int field_Z;
@@ -254,19 +254,19 @@ class hl extends uk {
         this.field_R = this.field_R + var7Lifetime3;
         this.field_z = this.field_yb + param4;
         this.field_eb = this.field_M + param5;
-        var8 = ra.field_j;
-        var9 = ra.field_i;
-        var10 = ra.field_l;
-        var11 = ra.field_g;
-        ra.b(this.field_eb, this.field_z, this.field_eb + this.field_Hb, this.field_z + this.field_R);
+        var8 = SoftwareRasterizer.field_j;
+        var9 = SoftwareRasterizer.field_i;
+        var10 = SoftwareRasterizer.field_l;
+        var11 = SoftwareRasterizer.field_g;
+        SoftwareRasterizer.b(this.field_eb, this.field_z, this.field_eb + this.field_Hb, this.field_z + this.field_R);
         var12 = 0;
         if (!tk.field_b &&
           param0 &&
           tm.field_t != 0 &&
-          ra.field_j <= ci.field_B &&
-          ra.field_l > ci.field_B &&
-          li.field_o >= ra.field_i &&
-          ra.field_g > li.field_o) {
+          SoftwareRasterizer.field_j <= ci.field_B &&
+          SoftwareRasterizer.field_l > ci.field_B &&
+          li.field_o >= SoftwareRasterizer.field_i &&
+          SoftwareRasterizer.field_g > li.field_o) {
           this.field_F = tm.field_t;
           this.field_lb = li.field_o - this.field_z;
           this.field_Z = ci.field_B - this.field_eb;
@@ -278,7 +278,7 @@ class hl extends uk {
             this.field_T = 0;
           }
         }
-        stackIn_31_1 = (!hn.field_K) && (aa.field_Nb >= ra.field_j) && (aa.field_Nb < ra.field_l) && (a.field_a >= ra.field_i) && (a.field_a < ra.field_g);
+        stackIn_31_1 = (!hn.field_K) && (aa.field_Nb >= SoftwareRasterizer.field_j) && (aa.field_Nb < SoftwareRasterizer.field_l) && (a.field_a >= SoftwareRasterizer.field_i) && (a.field_a < SoftwareRasterizer.field_g);
         this.field_rb = stackIn_31_1;
         if (0 == ho.field_X) {
           this.field_T = 0;
@@ -298,7 +298,7 @@ class hl extends uk {
         if (var12 != 0) {
           tk.field_b = true;
         }
-        ra.a(var8, var9, var10, var11);
+        SoftwareRasterizer.a(var8, var9, var10, var11);
         if (this.field_T != 0 &&
           this.field_qb) {
           this.field_M = aa.field_Nb - (this.field_Z + param5);
@@ -389,8 +389,8 @@ class hl extends uk {
         int var13;
         int var14;
         int var15;
-        oh[] var16;
-        oh var17;
+        Sprite[] var16;
+        Sprite var17;
         int var18;
         int var19;
         int var20;
@@ -407,11 +407,11 @@ class hl extends uk {
         var25 = TetraLink.field_J;
         this.field_z = param0 + this.field_yb;
         this.field_eb = param2 + this.field_M;
-        var12 = ra.field_j;
-        var13 = ra.field_i;
-        var14 = ra.field_l;
-        var15 = ra.field_g;
-        ra.b(this.field_eb, this.field_z, this.field_Hb + this.field_eb, this.field_R + this.field_z);
+        var12 = SoftwareRasterizer.field_j;
+        var13 = SoftwareRasterizer.field_i;
+        var14 = SoftwareRasterizer.field_l;
+        var15 = SoftwareRasterizer.field_g;
+        SoftwareRasterizer.b(this.field_eb, this.field_z, this.field_Hb + this.field_eb, this.field_R + this.field_z);
         param3 = param3 & this.field_S;
         if (!this.field_tb) {
           stackIn_5_0 = (this.field_T != 0);
@@ -563,7 +563,7 @@ class hl extends uk {
             var23_ref = (hl) (this.field_fb.a((byte) -70));
           }
         }
-        ra.a(var12, var13, var14, var15);
+        SoftwareRasterizer.a(var12, var13, var14, var15);
     }
 
     hl(long param0, hl param1) {
@@ -581,9 +581,9 @@ class hl extends uk {
     final void a(byte param0, hl param1) {
         try {
           if (this.field_fb == null) {
-            this.field_fb = new je();
+            this.field_fb = new IntrusiveDeque();
           }
-          this.field_fb.a(param1, false);
+          this.field_fb.addLast(param1, false);
           int var3_int = 56 % ((param0 + 38) / 47);
         } catch (RuntimeException runtimeException) {
           throw oi.a((Throwable) ((Object) runtimeException), "hl.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -593,7 +593,7 @@ class hl extends uk {
     final void a(int param0, boolean param1) {
         hn.field_K = !param1 ? true : false;
         tk.field_b = !param1 ? true : false;
-        this.a(true, param0 ^ 0, ra.field_e, ra.field_f, param0, 0);
+        this.a(true, param0 ^ 0, SoftwareRasterizer.field_e, SoftwareRasterizer.field_f, param0, 0);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
@@ -604,21 +604,21 @@ class hl extends uk {
         int var9 = 0;
         var9 = TetraLink.field_J;
         try {
-          if (param5 < ra.field_j) {
-            param4 = param4 + (-ra.field_j + param5);
-            param5 = ra.field_j;
+          if (param5 < SoftwareRasterizer.field_j) {
+            param4 = param4 + (-SoftwareRasterizer.field_j + param5);
+            param5 = SoftwareRasterizer.field_j;
           }
-          if (ra.field_i > param1) {
-            param3 = param3 + (param1 - ra.field_i);
-            param1 = ra.field_i;
+          if (SoftwareRasterizer.field_i > param1) {
+            param3 = param3 + (param1 - SoftwareRasterizer.field_i);
+            param1 = SoftwareRasterizer.field_i;
           }
-          if (ra.field_l < param4 + param5) {
-            param4 = ra.field_l - param5;
+          if (SoftwareRasterizer.field_l < param4 + param5) {
+            param4 = SoftwareRasterizer.field_l - param5;
           }
-          if (param1 + param3 > ra.field_g) {
-            param3 = -param1 + ra.field_g;
+          if (param1 + param3 > SoftwareRasterizer.field_g) {
+            param3 = -param1 + SoftwareRasterizer.field_g;
           }
-          var7_int = param1 * ra.field_f + param5;
+          var7_int = param1 * SoftwareRasterizer.field_f + param5;
           var8 = param4;
           if (param0 != -8759) {
             hl.a(false);
@@ -626,12 +626,12 @@ class hl extends uk {
           param3--;
           while (param3 >= 0) {
             for (param4 = var8; 0 < param4; param4--) {
-              if (~param2 == ~ra.field_b[var7_int]) {
-                ra.field_b[var7_int] = param6;
+              if (~param2 == ~SoftwareRasterizer.field_b[var7_int]) {
+                SoftwareRasterizer.field_b[var7_int] = param6;
               }
               var7_int++;
             }
-            var7_int = var7_int + (-var8 + ra.field_f);
+            var7_int = var7_int + (-var8 + SoftwareRasterizer.field_f);
             param3--;
           }
           return;
@@ -761,7 +761,7 @@ class hl extends uk {
         if (param1 != 256) {
           return;
         }
-        this.a(0, ra.field_e, 0, true, false, false, false, false, false, param0, ra.field_f);
+        this.a(0, SoftwareRasterizer.field_e, 0, true, false, false, false, false, false, param0, SoftwareRasterizer.field_f);
     }
 
     protected hl() {
@@ -800,7 +800,7 @@ class hl extends uk {
         this.field_S = true;
         try {
           this.field_yb = param3;
-          this.field_c = param0;
+          this.key = param0;
           this.field_M = param2;
           this.field_Hb = param4;
           this.field_R = param5;

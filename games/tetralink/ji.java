@@ -15,7 +15,7 @@ final class ji extends hl {
     static int field_Tb;
     static String field_Lb;
 
-    final static String a(String param0, ah param1, String param2, String param3, int param4) {
+    final static String a(String param0, Archive param1, String param2, String param3, int param4) {
         RuntimeException var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -108,21 +108,21 @@ final class ji extends hl {
         this.field_M = param1;
         if (param0 != -2328) {
           String var10 = (String) null;
-          ji.a((String) null, (ah) null, (String) null, (String) null, 48);
+          ji.a((String) null, (Archive) null, (String) null, (String) null, 48);
         }
         this.field_Hb = param4;
         this.a(param2, param5, param7, 2);
     }
 
-    final static void a(ah param0, int param1) {
+    final static void a(Archive param0, int param1) {
         int var3 = 0;
         int var4 = 0;
         id var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        bc var8 = null;
+        BitPacketBuffer var8 = null;
         int var9 = 0;
-        bc var10 = null;
+        BitPacketBuffer var10 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -131,20 +131,20 @@ final class ji extends hl {
         int var4Lifetime1;
         var7 = TetraLink.field_J;
         try {
-          var8 = new bc(param0.a("logo.fo3d", "", true));
+          var8 = new BitPacketBuffer(param0.a("logo.fo3d", "", true));
           var10 = var8;
-          var3 = var10.d((byte) -99);
-          var10.e(true);
-          dh.field_n = lj.a(var10, 0);
+          var3 = var10.readUnsignedByte((byte) -99);
+          var10.beginBitAccess(true);
+          dh.field_n = NodeHashTableIterator.a(var10, 0);
           wa.field_f = new id[var3];
           da.field_b = new int[var3][];
           if (param1 != 1) {
             field_Nb = false;
           }
           for (var4 = 0; var4 < var3; var4++) {
-            wa.field_f[var4] = lj.a(param1 - 16484, var8);
+            wa.field_f[var4] = NodeHashTableIterator.a(param1 - 16484, var8);
           }
-          var10.i((byte) 123);
+          var10.endBitAccess((byte) 123);
           var9 = 0;
           var4Lifetime1 = var9;
           while (var3 > var9) {
@@ -205,23 +205,23 @@ final class ji extends hl {
     }
 
     final static void h(int param0) {
-        gb var1 = null;
+        DualLinkNode var1 = null;
         int var2 = TetraLink.field_J;
-        gb var1Lifetime1;
+        DualLinkNode var1Lifetime1;
         try {
           ul.field_e = null;
           qi.field_q = 0;
-          ca.field_c = param0;
-          og.field_j.b(1);
-          mm.field_s.b(1);
-          var1 = wb.field_f.b(107);
+          SocketConnector.field_c = param0;
+          og.field_j.clear(1);
+          mm.field_s.clear(1);
+          var1 = DelegatingCanvas.field_f.b(107);
           while (var1 != null) {
-            var1.e(param0 ^ 0);
-            var1 = wb.field_f.d(-1);
+            var1.unlinkSecondary(param0 ^ 0);
+            var1 = DelegatingCanvas.field_f.d(-1);
           }
           var1Lifetime1 = sd.field_nb.b(-127);
           while (var1Lifetime1 != null) {
-            var1Lifetime1.e(param0 + 0);
+            var1Lifetime1.unlinkSecondary(param0 + 0);
             var1Lifetime1 = sd.field_nb.d(-1);
           }
           field_Tb = 0;

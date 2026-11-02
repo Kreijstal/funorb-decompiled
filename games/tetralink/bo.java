@@ -10,19 +10,19 @@ final class bo extends hk {
     private sk field_r;
     static String field_h;
     private sk field_k;
-    static wf field_A;
-    static je field_C;
+    static PcmSample field_A;
+    static IntrusiveDeque field_C;
     private int field_i;
     private th field_u;
     private int field_B;
     private dj field_m;
     private int field_j;
-    static ah field_e;
+    static Archive field_e;
     static float field_y;
     private t field_q;
-    private je field_v;
+    private IntrusiveDeque field_v;
     private boolean field_l;
-    private je field_w;
+    private IntrusiveDeque field_w;
     private int field_o;
     private boolean field_p;
     private long field_x;
@@ -31,7 +31,7 @@ final class bo extends hk {
     final void b(byte param0) {
         ll discarded$0 = null;
         ll discarded$1 = null;
-        mc var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         int var5;
@@ -45,11 +45,11 @@ final class bo extends hk {
         var2 = this.field_w.c(false);
         var3 = 77 / ((param0 - 66) / 36);
         while (var2 != null) {
-          var4 = (int)var2.field_c;
+          var4 = (int)var2.key;
           if (var4 >= 0) {
             if (this.field_q.field_i > var4) {
               if (this.field_q.field_m[var4] == 0) {
-                var2.b(false);
+                var2.unlink(false);
               } else {
                 if (0 == this.field_f[var4]) {
                   discarded$0 = this.a(1, var4, 121);
@@ -58,14 +58,14 @@ final class bo extends hk {
                   discarded$1 = this.a(2, var4, 120);
                 }
                 if (1 == this.field_f[var4]) {
-                  var2.b(false);
+                  var2.unlink(false);
                 }
               }
             } else {
-              var2.b(false);
+              var2.unlink(false);
             }
           } else {
-            var2.b(false);
+            var2.unlink(false);
           }
           var2 = this.field_w.a((byte) -70);
         }
@@ -78,10 +78,10 @@ final class bo extends hk {
         }
         this.field_p = true;
         if (param0 != 5127) {
-          field_C = (je) null;
+          field_C = (IntrusiveDeque) null;
         }
         if (this.field_v == null) {
-          this.field_v = new je();
+          this.field_v = new IntrusiveDeque();
         }
     }
 
@@ -120,14 +120,14 @@ final class bo extends hk {
         ll discarded$0 = null;
         int var2_int;
         ll var2;
-        mc var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        mc var6;
-        mc var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        mc var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = TetraLink.field_J;
         if (this.field_v != null) {
@@ -138,32 +138,32 @@ final class bo extends hk {
             var2_int = 1;
             var3 = this.field_v.c(false);
             while (var3 != null) {
-              var4 = (int)var3.field_c;
+              var4 = (int)var3.key;
               if (this.field_f[var4] == 0) {
                 discarded$3 = this.a(1, var4, 123);
               }
               if (this.field_f[var4] == 0) {
                 var2_int = 0;
               } else {
-                var3.b(false);
+                var3.unlink(false);
               }
               var3 = this.field_v.a((byte) -70);
             }
-            L10: while (true) {
+            scanLoop1: while (true) {
               if (this.field_o < this.field_q.field_m.length) {
                 if (this.field_q.field_m[this.field_o] != 0) {
                   if (this.field_t.field_d >= 250) {
                     var2_int = 0;
-                    break L10;
+                    break scanLoop1;
                   }
                   if (this.field_f[this.field_o] == 0) {
                     discarded$2 = this.a(1, this.field_o, 124);
                   }
                   if (this.field_f[this.field_o] == 0) {
-                    var6 = new mc();
-                    var6.field_c = (long)this.field_o;
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_o;
                     var2_int = 0;
-                    this.field_v.a(var6, false);
+                    this.field_v.addLast(var6, false);
                   }
                 }
                 this.field_o = this.field_o + 1;
@@ -182,31 +182,31 @@ final class bo extends hk {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_v.c(false);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_c;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_f[var4Lifetime1] != 1) {
                   discarded$1 = this.a(2, var4Lifetime1, 125);
                 }
                 if (this.field_f[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.b(false);
+                  var3Lifetime1.unlink(false);
                 }
                 var3Lifetime1 = this.field_v.a((byte) -70);
               }
-              L3: while (true) {
+              scanLoop2: while (true) {
                 if (this.field_q.field_m.length > this.field_o) {
                   if (0 != this.field_q.field_m[this.field_o]) {
                     if (this.field_u.c(-7614)) {
                       var2_intLifetime1 = 0;
-                      break L3;
+                      break scanLoop2;
                     }
                     if (this.field_f[this.field_o] != 1) {
                       discarded$0 = this.a(2, this.field_o, 126);
                     }
                     if (this.field_f[this.field_o] != 1) {
-                      var7 = new mc();
-                      var7.field_c = (long)this.field_o;
-                      this.field_v.a(var7, false);
+                      var7 = new IntrusiveNode();
+                      var7.key = (long)this.field_o;
+                      this.field_v.addLast(var7, false);
                       var2_intLifetime1 = 0;
                     }
                   }
@@ -227,7 +227,7 @@ final class bo extends hk {
           }
         }
         if (param0 != 2) {
-          this.field_v = (je) null;
+          this.field_v = (IntrusiveDeque) null;
         }
         if (!this.field_n) {
           return;
@@ -244,7 +244,7 @@ final class bo extends hk {
               if (!var2.field_D) {
                 throw new RuntimeException();
               }
-              var2.b(false);
+              var2.unlink(false);
             }
           }
           var2 = (ll) (this.field_m.a(param0 - 3));
@@ -262,7 +262,7 @@ final class bo extends hk {
         }
         if (var3 != null) {
           var4 = var3.c(true);
-          var3.b(false);
+          var3.unlink(false);
           return var4;
         }
         return null;
@@ -356,7 +356,7 @@ final class bo extends hk {
         try {
           try {
             var4 = param2.getGraphics();
-            pk.field_O.a(10, param0, param1, var4);
+            WidgetContainer.field_O.a(10, param0, param1, var4);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -364,7 +364,7 @@ final class bo extends hk {
             param2.repaint();
           }
           if (param3 != -2) {
-            field_A = (wf) null;
+            field_A = (PcmSample) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -381,7 +381,7 @@ final class bo extends hk {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, jb param5, int param6, int param7, ve param8, ve param9, int param10, int param11, ve param12, int param13, jb param14, int param15, int param16, int param17, int param18, int param19) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, BitmapFont param5, int param6, int param7, ve param8, ve param9, int param10, int param11, ve param12, int param13, BitmapFont param14, int param15, int param16, int param17, int param18, int param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -471,7 +471,7 @@ final class bo extends hk {
           param0 == 0 &&
           !var12.field_D &&
           var12.field_v) {
-          var12.b(false);
+          var12.unlink(false);
           var4 = null;
         }
         if (var4 == null) {
@@ -507,7 +507,7 @@ final class bo extends hk {
               var4 = this.field_u.a(false, this.field_i, (byte) 2, param1, true);
             }
           }
-          this.field_m.a((long)param1, -110, (mc) (var4));
+          this.field_m.a((long)param1, -110, (IntrusiveNode) (var4));
         }
         if (param2 <= 117) {
           return (ll) null;
@@ -551,7 +551,7 @@ final class bo extends hk {
                 this.field_f[param1] = (byte) 1;
               }
               if (!((ll) (var4)).field_D) {
-                ((ll) (var4)).b(false);
+                ((ll) (var4)).unlink(false);
               }
               stackIn_90_0 = var4;
               return (ll) (stackIn_90_0);
@@ -561,7 +561,7 @@ final class bo extends hk {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_f[param1] = (byte)-1;
-            ((ll) (var4)).b(false);
+            ((ll) (var4)).unlink(false);
             if (!((ll) (var4)).field_D) {
               return null;
             }
@@ -569,7 +569,7 @@ final class bo extends hk {
               return null;
             }
             var4 = this.field_u.a(false, this.field_i, (byte) 2, param1, true);
-            this.field_m.a((long)param1, -76, (mc) (var4));
+            this.field_m.a((long)param1, -76, (IntrusiveNode) (var4));
             return null;
           }
         }
@@ -601,7 +601,7 @@ final class bo extends hk {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_u.b(0);
-          ((ll) (var4)).b(false);
+          ((ll) (var4)).unlink(false);
           if (!((ll) (var4)).field_D) {
             return null;
           }
@@ -609,7 +609,7 @@ final class bo extends hk {
             return null;
           }
           var4 = this.field_u.a(false, this.field_i, (byte) 2, param1, true);
-          this.field_m.a((long)param1, -118, (mc) (var4));
+          this.field_m.a((long)param1, -118, (IntrusiveNode) (var4));
           return null;
         }
         var5[var18.length - 2] = (byte)(this.field_q.field_k[param1] >>> 8);
@@ -621,7 +621,7 @@ final class bo extends hk {
           }
         }
         if (!((ll) (var4)).field_D) {
-          ((ll) (var4)).b(false);
+          ((ll) (var4)).unlink(false);
         }
         return (ll) (var4);
     }
@@ -643,7 +643,7 @@ final class bo extends hk {
         RuntimeException var10 = null;
         this.field_m = new dj(16);
         this.field_o = 0;
-        this.field_w = new je();
+        this.field_w = new IntrusiveDeque();
         this.field_x = 0L;
         try {
           this.field_i = param0;
@@ -652,7 +652,7 @@ final class bo extends hk {
             this.field_l = false;
           } else {
             this.field_l = true;
-            this.field_v = new je();
+            this.field_v = new IntrusiveDeque();
           }
           this.field_z = param6;
           this.field_B = param5;
@@ -706,7 +706,7 @@ final class bo extends hk {
 
     static {
         field_h = "Next";
-        field_C = new je();
+        field_C = new IntrusiveDeque();
         field_y = 0.0f;
     }
 }

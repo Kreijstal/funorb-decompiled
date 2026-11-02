@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oc extends mc {
+final class oc extends IntrusiveNode {
     int field_H;
     ng field_B;
     int field_C;
     int field_n;
-    wf field_y;
+    PcmSample field_y;
     int field_D;
     int field_J;
     int field_s;
@@ -53,7 +53,7 @@ final class oc extends mc {
             rh.a(th.field_e, ai.c((byte) -63), vi.a(-31307), (byte) 84, var3_int != 0);
           } else {
             if (!me.a((byte) -99)) {
-              ra.a();
+              SoftwareRasterizer.a();
               ef.a(320, 240, -109);
               bo.a(0, 0, param0, -2);
             } else {
@@ -84,11 +84,11 @@ final class oc extends mc {
         }
     }
 
-    final static oh[] a(String param0, boolean param1, ah param2, String param3) {
-        oh[] var4 = null;
+    final static Sprite[] a(String param0, boolean param1, Archive param2, String param3) {
+        Sprite[] var4 = null;
         RuntimeException var4_ref = null;
-        oh[] var5 = null;
-        oh[] stackIn_3_0 = null;
+        Sprite[] var5 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

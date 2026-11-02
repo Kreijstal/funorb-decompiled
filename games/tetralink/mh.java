@@ -97,7 +97,7 @@ final class mh {
         int var15 = 0;
         int var16 = 0;
         int var17_int = 0;
-        je var17 = null;
+        IntrusiveDeque var17 = null;
         Object var18 = null;
         gd var18_ref = null;
         int var18_int = 0;
@@ -148,7 +148,7 @@ final class mh {
                 if (ja.field_g != 1) {
                   var10_ref_String = sk.a(new String[]{Integer.toString(ja.field_g)}, field_e, 121);
                 } else {
-                  var10_ref_String = ca.field_d;
+                  var10_ref_String = SocketConnector.field_d;
                 }
                 if ((16 & cb.field_u) == 0 &&
                   !lg.field_S) {
@@ -160,7 +160,7 @@ final class mh {
               rn.field_c.field_jb = lk.field_pb.toUpperCase();
               var8 = rn.field_c;
               stackIn_19_0 = rn.field_c;
-              stackIn_20_1 = (param0) && (un.field_f == 0L);
+              stackIn_20_1 = (param0) && (UrlFetchTask.field_f == 0L);
               stackIn_19_0.field_S = stackIn_20_1;
               var10 = 2;
               if (null != uj.field_s) {
@@ -172,23 +172,23 @@ final class mh {
                   rh.field_G[var11_int] = false;
                 }
                 var10 = 0;
-                L11: while (true) {
+                scanLoop1: while (true) {
                   if (var10 < 2) {
                     var11_intLifetime2 = 0;
                     var12 = 0;
                     while (true) {
                       if (uj.field_s.length <= var12) {
                         if (var11_intLifetime2 != 0) {
-                          break L11;
+                          break scanLoop1;
                         }
                         var10++;
-                        continue L11;
+                        continue scanLoop1;
                       }
                       var22 = uj.field_s[var12];
                       var20 = var22;
                       var13 = var20;
                       var14_int = 0;
-                      L15: while (true) {
+                      scanLoop2: while (true) {
                         if (var14_int >= var22.length) {
                           var11_intLifetime2 = 1;
                           var14_int = -1;
@@ -204,7 +204,7 @@ final class mh {
                           var16 = var13[var14_int + 1];
                           if (var15 != -1) {
                             if (var16 != (qb.field_N.field_sc[var15] & 255)) {
-                              break L15;
+                              break scanLoop2;
                             }
                           } else {
                             if (var10 == 0) {
@@ -214,7 +214,7 @@ final class mh {
                             }
                             var17_int = stackIn_36_0;
                             if (var16 != var17_int) {
-                              break L15;
+                              break scanLoop2;
                             }
                           }
                           var14_int += 2;
@@ -260,14 +260,14 @@ final class mh {
                         var13_int = var18_int;
                       }
                     }
-                    L32: {
+                    regionExit3: {
                       if (null != bi.field_e) {
                         if (bi.field_e[var16Lifetime1] == null) {
                           if (((null != ti.field_f)) &&
                             ((null != ti.field_f[var16Lifetime1]))) {
                             var15Lifetime1 = var15Lifetime1 | ti.field_f[var16Lifetime1][var17_intLifetime1];
                           }
-                          break L32;
+                          break regionExit3;
                         }
                         var18_intLifetime1 = bi.field_e[var16Lifetime1][var17_intLifetime1];
                         if (var18_intLifetime1 != 0 &&
@@ -324,7 +324,7 @@ final class mh {
                     rn.field_c.field_S = false;
                     if (!(!rn.field_c.field_rb)) {
                       if (we.field_e.field_g.field_Lb != 0) {
-                        re.field_P = sk.a(new String[]{rl.field_e}, cn.field_b, 119);
+                        re.field_P = sk.a(new String[]{rl.field_e}, ClientException.field_b, 119);
                       } else {
                         re.field_P = af.field_b;
                       }
@@ -357,11 +357,11 @@ final class mh {
                       var14 = sk.a(new String[]{(String) (var11)}, hb.field_f, 119);
                     }
                   } else {
-                    var13_ref = gb.field_q;
+                    var13_ref = DualLinkNode.field_q;
                     if (var12Lifetime2 != 0) {
                       var14 = o.field_p + (String) (var11);
                     } else {
-                      var14 = sk.a(new String[]{(String) (var11)}, mc.field_d, 127);
+                      var14 = sk.a(new String[]{(String) (var11)}, IntrusiveNode.field_d, 127);
                     }
                   }
                   re.field_P = "<col=A00000>" + var13_ref + "<br>" + var14;
@@ -369,13 +369,13 @@ final class mh {
               }
             } else {
               var9_ref_String = qb.field_N.field_ec;
-              ua.field_d.field_jb = sk.a(new String[]{var9_ref_String}, qe.field_e, 127).toUpperCase();
+              ua.field_d.field_jb = sk.a(new String[]{var9_ref_String}, GameKeyHandler.field_e, 127).toUpperCase();
               tn.field_a.a((byte) -110, fk.field_V.field_Hb, fk.field_V.field_R - 40, 40, 0);
               tn.field_a.field_jb = sk.a(new String[]{var9_ref_String}, om.field_Xb, 123);
               var8 = tn.field_a;
             }
-            if (un.field_f != 0L) {
-              var9 = (int)(-k.a(0) + un.field_f);
+            if (UrlFetchTask.field_f != 0L) {
+              var9 = (int)(-k.a(0) + UrlFetchTask.field_f);
               var9 = (999 + var9) / 1000;
               if (1 > var9) {
                 var9 = 1;
@@ -421,7 +421,7 @@ final class mh {
         }
     }
 
-    final static void a(int param0, bh param1) {
+    final static void a(int param0, PacketBuffer param1) {
         try {
           int var4 = 0;
           RuntimeException runtimeException = null;
@@ -490,7 +490,7 @@ final class mh {
     }
 
     final static int a(int param0, int param1, int param2, int param3) {
-        if (param1 + param0 + param2 <= ra.field_e) {
+        if (param1 + param0 + param2 <= SoftwareRasterizer.field_e) {
           return param0 + param1;
         }
         if (param3 != -8748) {
@@ -499,7 +499,7 @@ final class mh {
         if (-param2 + param1 >= 0) {
           return param1 - param2;
         }
-        return ra.field_e - param2;
+        return SoftwareRasterizer.field_e - param2;
     }
 
     public final String toString() {

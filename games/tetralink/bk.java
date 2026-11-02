@@ -70,7 +70,7 @@ final class bk {
         }
         wg.field_b = null;
         if (qa.field_v) {
-          fl.field_u.p(param0 ^ 129);
+          BufferedSocket.field_u.p(param0 ^ 129);
         } else {
           var1 = pg.field_a;
           if (var1 > 0) {
@@ -81,7 +81,7 @@ final class bk {
             }
             wg.field_b = kj.a((byte) 109, new CharSequence[]{(CharSequence) ((Object) wg.field_b), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) fo.field_eb)});
           }
-          fl.field_u.r(param0 - 126);
+          BufferedSocket.field_u.r(param0 - 126);
           of.b(true);
         }
     }

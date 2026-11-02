@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gf extends mc {
+final class gf extends IntrusiveNode {
     private int[] field_r;
     private int[] field_q;
     private int[] field_s;
@@ -28,7 +28,7 @@ final class gf extends mc {
         this.field_u = null;
     }
 
-    final boolean a(float param0, int param1, ah param2) {
+    final boolean a(float param0, int param1, Archive param2) {
         int var5 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -127,41 +127,41 @@ final class gf extends mc {
         return true;
     }
 
-    gf(bh param0) {
+    gf(PacketBuffer param0) {
         boolean stackIn_3_1 = false;
         int var2;
         int var3;
         int var3Lifetime1;
         int var3Lifetime2;
         int var3Lifetime3;
-        this.field_o = param0.e(127);
-        stackIn_3_1 = (param0.d((byte) -99) == 1);
+        this.field_o = param0.readUnsignedShort(127);
+        stackIn_3_1 = (param0.readUnsignedByte((byte) -99) == 1);
         this.field_p = stackIn_3_1;
-        var2 = param0.d((byte) -99);
+        var2 = param0.readUnsignedByte((byte) -99);
         if (var2 >= 1 &&
           var2 <= 4) {
           this.field_s = new int[var2];
           for (var3 = 0; var3 < var2; var3++) {
-            this.field_s[var3] = param0.e(127);
+            this.field_s[var3] = param0.readUnsignedShort(127);
           }
           if (var2 > 1) {
             this.field_r = new int[var2 - 1];
             for (var3Lifetime1 = 0; var3Lifetime1 < var2 - 1; var3Lifetime1++) {
-              this.field_r[var3Lifetime1] = param0.d((byte) -99);
+              this.field_r[var3Lifetime1] = param0.readUnsignedByte((byte) -99);
             }
           }
           if (var2 > 1) {
             this.field_q = new int[var2 - 1];
             for (var3Lifetime2 = 0; var3Lifetime2 < var2 - 1; var3Lifetime2++) {
-              this.field_q[var3Lifetime2] = param0.d((byte) -99);
+              this.field_q[var3Lifetime2] = param0.readUnsignedByte((byte) -99);
             }
           }
           this.field_t = new int[var2];
           for (var3Lifetime3 = 0; var3Lifetime3 < var2; var3Lifetime3++) {
             this.field_t[var3Lifetime3] = param0.f(119);
           }
-          param0.d((byte) -99);
-          param0.d((byte) -99);
+          param0.readUnsignedByte((byte) -99);
+          param0.readUnsignedByte((byte) -99);
           this.field_u = null;
           return;
         }

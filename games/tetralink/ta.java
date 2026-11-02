@@ -5,7 +5,7 @@ final class ta {
     static int field_b;
     static int field_a;
 
-    final static void a(double[] param0, double[] param1, double[] param2, double param3, double param4, oh param5, int param6, int param7, int param8, int param9, boolean param10) {
+    final static void a(double[] param0, double[] param1, double[] param2, double param3, double param4, Sprite param5, int param6, int param7, int param8, int param9, boolean param10) {
         double var17_double;
         double var19_double;
         double var21_double;
@@ -116,8 +116,8 @@ final class ta {
           var37 = var37 - (double)var17 * var39;
           var17 = 0;
         }
-        if (var18 > ra.field_f - 1) {
-          var18 = ra.field_f - 1;
+        if (var18 > SoftwareRasterizer.field_f - 1) {
+          var18 = SoftwareRasterizer.field_f - 1;
         }
         if (!param10) {
           for (var41Lifetime1 = var17; var41Lifetime1 <= var18; var41Lifetime1++) {
@@ -165,7 +165,7 @@ final class ta {
         param1[2] = 1.0 / var6;
     }
 
-    private final static void a(int param0, int param1, int param2, oh param3, int param4, int param5, int param6) {
+    private final static void a(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6) {
         int var10 = 0;
         if (param2 == 0) {
           return;
@@ -177,10 +177,10 @@ final class ta {
           var8 = var8 - param1 * var7;
           param1 = 0;
         }
-        if (param1 + param2 > ra.field_e) {
-          param2 = ra.field_e - param1;
+        if (param1 + param2 > SoftwareRasterizer.field_e) {
+          param2 = SoftwareRasterizer.field_e - param1;
         }
-        int var9 = ra.field_f * param1 + param0;
+        int var9 = SoftwareRasterizer.field_f * param1 + param0;
         while (true) {
           param2--;
           if (param2 < 0) {
@@ -190,15 +190,15 @@ final class ta {
           if (var10 != 0) {
             var10 = (var10 & 16579836) >> 2;
             var10 = var10 * 3;
-            var10 = var10 + ((ra.field_b[var9] & 16579836) >> 2);
-            ra.field_b[var9] = var10;
+            var10 = var10 + ((SoftwareRasterizer.field_b[var9] & 16579836) >> 2);
+            SoftwareRasterizer.field_b[var9] = var10;
           }
-          var9 = var9 + ra.field_f;
+          var9 = var9 + SoftwareRasterizer.field_f;
           var8 = var8 + var7;
         }
     }
 
-    private final static void b(int param0, int param1, int param2, oh param3, int param4, int param5, int param6) {
+    private final static void b(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6) {
         if (param2 == 0) {
           return;
         }
@@ -209,17 +209,17 @@ final class ta {
           var8 = var8 - param1 * var7;
           param1 = 0;
         }
-        if (param1 + param2 > ra.field_e) {
-          param2 = ra.field_e - param1;
+        if (param1 + param2 > SoftwareRasterizer.field_e) {
+          param2 = SoftwareRasterizer.field_e - param1;
         }
-        int var9 = ra.field_f * param1 + param0;
+        int var9 = SoftwareRasterizer.field_f * param1 + param0;
         while (true) {
           param2--;
           if (param2 < 0) {
             break;
           }
-          ra.field_b[var9] = param3.field_C[(var8 >> 16) * param3.field_u + param4];
-          var9 = var9 + ra.field_f;
+          SoftwareRasterizer.field_b[var9] = param3.field_C[(var8 >> 16) * param3.field_u + param4];
+          var9 = var9 + SoftwareRasterizer.field_f;
           var8 = var8 + var7;
         }
     }
@@ -302,7 +302,7 @@ final class ta {
         return;
     }
 
-    final static void a(double[] param0, double[] param1, double[] param2, double param3, double param4, oh param5, int param6, int param7, int param8, int param9, boolean param10, boolean param11) {
+    final static void a(double[] param0, double[] param1, double[] param2, double param3, double param4, Sprite param5, int param6, int param7, int param8, int param9, boolean param10, boolean param11) {
         double var18_double;
         double var20_double;
         double var22_double;
@@ -401,8 +401,8 @@ final class ta {
           var40 = var40 - (double)var18 * var32;
           var18 = 0;
         }
-        if (var19 > ra.field_f - 1) {
-          var19 = ra.field_f - 1;
+        if (var19 > SoftwareRasterizer.field_f - 1) {
+          var19 = SoftwareRasterizer.field_f - 1;
         }
         if (!param11) {
           if (!param10) {
@@ -508,7 +508,7 @@ final class ta {
         return var9 << 10 | var10 << 7 | var11;
     }
 
-    private final static void d(int param0, int param1, int param2, oh param3, int param4, int param5, int param6) {
+    private final static void d(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6) {
         int var10 = 0;
         if (param2 == 0) {
           return;
@@ -520,10 +520,10 @@ final class ta {
           var8 = var8 - param1 * var7;
           param1 = 0;
         }
-        if (param1 + param2 > ra.field_e) {
-          param2 = ra.field_e - param1;
+        if (param1 + param2 > SoftwareRasterizer.field_e) {
+          param2 = SoftwareRasterizer.field_e - param1;
         }
-        int var9 = ra.field_f * param1 + param0;
+        int var9 = SoftwareRasterizer.field_f * param1 + param0;
         while (true) {
           param2--;
           if (param2 < 0) {
@@ -532,15 +532,15 @@ final class ta {
           var10 = param3.field_C[(var8 >> 16) * param3.field_u + param4];
           if (var10 != 0) {
             var10 = (var10 & 16711422) >> 1;
-            var10 = var10 + ((ra.field_b[var9] & 16711422) >> 1);
-            ra.field_b[var9] = var10;
+            var10 = var10 + ((SoftwareRasterizer.field_b[var9] & 16711422) >> 1);
+            SoftwareRasterizer.field_b[var9] = var10;
           }
-          var9 = var9 + ra.field_f;
+          var9 = var9 + SoftwareRasterizer.field_f;
           var8 = var8 + var7;
         }
     }
 
-    private final static void e(int param0, int param1, int param2, oh param3, int param4, int param5, int param6) {
+    private final static void e(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6) {
         int var16 = 0;
         int var17 = 0;
         int var20 = 0;
@@ -564,12 +564,12 @@ final class ta {
           var8 = var8 - param1 * var7;
           param1 = 0;
         }
-        if (param1 + param2 > ra.field_e) {
-          param2 = ra.field_e - param1;
+        if (param1 + param2 > SoftwareRasterizer.field_e) {
+          param2 = SoftwareRasterizer.field_e - param1;
         }
         int var13 = (var8 >> 16) * var12 + var9;
         int var14 = var13 + var12;
-        int var15 = ra.field_f * param1 + param0;
+        int var15 = SoftwareRasterizer.field_f * param1 + param0;
         while (true) {
           param2--;
           if (param2 < 0) {
@@ -591,10 +591,10 @@ final class ta {
               var21 = (var21 * var19 & 16711680) + (var23 * var18 & 16711680) >>> 8;
             }
             var16 = var20 | var21;
-            var16 = var16 + ((ra.field_b[var15] & 16711422) >> 1);
-            ra.field_b[var15] = var16;
+            var16 = var16 + ((SoftwareRasterizer.field_b[var15] & 16711422) >> 1);
+            SoftwareRasterizer.field_b[var15] = var16;
           }
-          var15 = var15 + ra.field_f;
+          var15 = var15 + SoftwareRasterizer.field_f;
           var8 = var8 + var7;
           var13 = (var8 >> 16) * var12 + var9;
           var14 = var13 + var12;
@@ -633,7 +633,7 @@ final class ta {
         param0[2] = var5 / var7;
     }
 
-    private final static void c(int param0, int param1, int param2, oh param3, int param4, int param5, int param6) {
+    private final static void c(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6) {
         int var7;
         int var8;
         int var9;
@@ -666,10 +666,10 @@ final class ta {
           var8 = var8 - param1 * var7;
           param1 = 0;
         }
-        if (param1 + param2 > ra.field_e) {
-          param2 = ra.field_e - param1;
+        if (param1 + param2 > SoftwareRasterizer.field_e) {
+          param2 = SoftwareRasterizer.field_e - param1;
         }
-        var9 = ra.field_f * param1 + param0;
+        var9 = SoftwareRasterizer.field_f * param1 + param0;
         var13 = param4 >> 16;
         var14 = param4 >> 12 & 15;
         var15 = 16 - var14;
@@ -725,9 +725,9 @@ final class ta {
           var10Lifetime1 = var11 | var12;
           var10Lifetime1 = (var10Lifetime1 & 16579836) >> 2;
           var10Lifetime1 = var10Lifetime1 * 3;
-          var10Lifetime1 = var10Lifetime1 + ((ra.field_b[var9] & 16579836) >> 2);
-          ra.field_b[var9] = var10Lifetime1;
-          var9 = var9 + ra.field_f;
+          var10Lifetime1 = var10Lifetime1 + ((SoftwareRasterizer.field_b[var9] & 16579836) >> 2);
+          SoftwareRasterizer.field_b[var9] = var10Lifetime1;
+          var9 = var9 + SoftwareRasterizer.field_f;
           var8 = var8 + var7;
         }
     }
@@ -736,7 +736,7 @@ final class ta {
         return new double[]{param0[2] * param1[1] - param0[1] * param1[2], param0[0] * param1[2] - param0[2] * param1[0], param0[1] * param1[0] - param0[0] * param1[1]};
     }
 
-    private final static void f(int param0, int param1, int param2, oh param3, int param4, int param5, int param6) {
+    private final static void f(int param0, int param1, int param2, Sprite param3, int param4, int param5, int param6) {
         int var16 = 0;
         int var17 = 0;
         int var19 = 0;
@@ -766,12 +766,12 @@ final class ta {
           var8 = var8 - param1 * var7;
           param1 = 0;
         }
-        if (param1 + param2 > ra.field_e) {
-          param2 = ra.field_e - param1;
+        if (param1 + param2 > SoftwareRasterizer.field_e) {
+          param2 = SoftwareRasterizer.field_e - param1;
         }
         int var13 = (var8 >> 16) * var12 + var9;
         int var14 = var13 + var12;
-        int var15 = ra.field_f * param1 + param0;
+        int var15 = SoftwareRasterizer.field_f * param1 + param0;
         while (true) {
           param2--;
           if (param2 < 0) {
@@ -830,8 +830,8 @@ final class ta {
             var20 = var20 >>> 8;
           }
           var16Lifetime1 = var19 | var20;
-          ra.field_b[var15] = var16Lifetime1;
-          var15 = var15 + ra.field_f;
+          SoftwareRasterizer.field_b[var15] = var16Lifetime1;
+          var15 = var15 + SoftwareRasterizer.field_f;
           var8 = var8 + var7;
           var13 = (var8 >> 16) * var12 + var9;
           var14 = var13 + var12;

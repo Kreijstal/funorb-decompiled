@@ -6,15 +6,15 @@ final class gm {
     static int[] field_b;
     static String field_c;
     static String field_f;
-    static je field_a;
+    static IntrusiveDeque field_a;
     static hl field_d;
     static of field_h;
     static String field_e;
 
-    final static void a(boolean param0, byte param1, oh[] param2, int param3, oh[] param4, int param5, int param6, jb param7, int param8, String param9, boolean param10, int param11, int param12, int param13, int param14) {
+    final static void a(boolean param0, byte param1, Sprite[] param2, int param3, Sprite[] param4, int param5, int param6, BitmapFont param7, int param8, String param9, boolean param10, int param11, int param12, int param13, int param14) {
         try {
-          bo.a(param3, param6, fl.field_b, param14, -1, param7, ng.field_D, param11, new ve(param2), nm.field_o, uj.field_w, param11, new ve(param4), param12, param7, param5, wa.field_d, param8, param8, bm.field_n);
-          je.a(param0, param13, param9, param10, -1381732671);
+          bo.a(param3, param6, BufferedSocket.field_b, param14, -1, param7, ng.field_D, param11, new ve(param2), nm.field_o, uj.field_w, param11, new ve(param4), param12, param7, param5, wa.field_d, param8, param8, bm.field_n);
+          IntrusiveDeque.a(param0, param13, param9, param10, -1381732671);
           if (param1 != 33) {
             field_c = (String) null;
           }
@@ -115,7 +115,7 @@ final class gm {
             for (var15 = 0; var15 < param2.field_t.length; var15++) {
               var16 = param2.field_t[var15];
               if (var16 == -1) {
-                var8[var13Lifetime1 + var15] = vb.field_m;
+                var8[var13Lifetime1 + var15] = ProxySocketConnector.field_m;
                 var9[var15 + var13Lifetime1] = param2.field_u[var15];
                 var10[var13Lifetime1 + var15] = param2.field_t[var15];
               } else {
@@ -167,7 +167,7 @@ final class gm {
     static {
         field_c = "Disruptive behaviour";
         field_f = "Clan";
-        field_a = new je();
+        field_a = new IntrusiveDeque();
         field_h = new of(1);
         field_e = "Type your password again to make sure it's correct";
     }

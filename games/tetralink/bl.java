@@ -14,8 +14,8 @@ final class bl extends hl {
     static int[][] field_Ob;
     static int field_Xb;
     static int field_Kb;
-    static oh field_Lb;
-    static ah field_Nb;
+    static Sprite field_Lb;
+    static Archive field_Nb;
     static hl field_Qb;
 
     final boolean e(boolean param0) {
@@ -57,7 +57,7 @@ final class bl extends hl {
         return false;
     }
 
-    final static void a(int[] param0, oh[][] param1, String[] param2, ah param3, int[] param4, int param5, byte[] param6, String[][] param7, String[] param8, String[] param9, oh[][] param10, boolean param11, byte[] param12, String[][] param13, kh[] param14, int param15, int param16, int param17, ah param18, ah param19) {
+    final static void a(int[] param0, Sprite[][] param1, String[] param2, Archive param3, int[] param4, int param5, byte[] param6, String[][] param7, String[] param8, String[] param9, Sprite[][] param10, boolean param11, byte[] param12, String[][] param13, kh[] param14, int param15, int param16, int param17, Archive param18, Archive param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -97,7 +97,7 @@ final class bl extends hl {
           }
           ti.a(param19, (byte) 63, param14, param4, param18);
           vg.a((byte) 53, param18);
-          em.a(param9, param16, param5, param8, param1, param2, param0, param18, param6, param10, 109, param7, param15, param13, param12);
+          MatchSetup.a(param9, param16, param5, param8, param1, param2, param0, param18, param6, param10, 109, param7, param15, param13, param12);
           r.a(param18, param3, true, param11);
           ma.c(param17 ^ -19985);
           pd.b(false);
@@ -427,7 +427,7 @@ final class bl extends hl {
 
     final boolean i(int param0) {
         if (param0 >= -12) {
-          field_Lb = (oh) null;
+          field_Lb = (Sprite) null;
         }
         if (this.field_Yb.field_F != 0) {
           this.field_Tb = 20;

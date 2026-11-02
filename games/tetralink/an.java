@@ -13,7 +13,7 @@ final class an {
 
     final static void b(int param0) {
         ga.field_a = (byte[][]) null;
-        je.field_h = null;
+        IntrusiveDeque.field_h = null;
         sn.field_e = null;
         if (param0 < -77) {
           qa.field_x = null;

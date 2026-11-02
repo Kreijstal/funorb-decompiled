@@ -4,13 +4,13 @@
 final class pj {
     static kh[] field_a;
     static hl field_d;
-    static pk field_i;
+    static WidgetContainer field_i;
     static ji field_f;
     static String[] field_h;
     static String[] field_g;
     static int field_e;
     static String field_c;
-    static ie field_b;
+    static PlatformTaskDispatcher field_b;
 
     final static boolean b(byte param0) {
         if (param0 < 28) {
@@ -24,8 +24,8 @@ final class pj {
         if (param0 > -15) {
           return (java.awt.Container) null;
         }
-        if (null != ea.field_h) {
-          return (java.awt.Container) ((Object) ea.field_h);
+        if (null != IterableNodeHashTable.field_h) {
+          return (java.awt.Container) ((Object) IterableNodeHashTable.field_h);
         }
         return (java.awt.Container) ((Object) lk.q(13));
     }

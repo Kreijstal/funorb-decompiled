@@ -93,7 +93,7 @@ final class fh {
             var2_int = me.field_b;
           }
           if (param1 == 2) {
-            var2_int = mc.field_f;
+            var2_int = IntrusiveNode.field_f;
           }
           stackIn_16_0 = var2_int;
           return stackIn_16_0;
@@ -120,11 +120,11 @@ final class fh {
     final static void a(boolean param0) {
         try {
           vc.field_c = vc.field_c - 1;
-          ra.a(sc.field_a[vc.field_c], gh.field_a[vc.field_c], hc.field_s[vc.field_c]);
-          ra.field_j = qd.field_Y[vc.field_c];
-          ra.field_l = ea.field_b[vc.field_c];
-          ra.field_i = ca.field_f[vc.field_c];
-          ra.field_g = ml.field_ib[vc.field_c];
+          SoftwareRasterizer.a(sc.field_a[vc.field_c], gh.field_a[vc.field_c], hc.field_s[vc.field_c]);
+          SoftwareRasterizer.field_j = qd.field_Y[vc.field_c];
+          SoftwareRasterizer.field_l = IterableNodeHashTable.field_b[vc.field_c];
+          SoftwareRasterizer.field_i = SocketConnector.field_f[vc.field_c];
+          SoftwareRasterizer.field_g = ml.field_ib[vc.field_c];
           if (!param0) {
             field_f = (hl[]) null;
           }
@@ -153,13 +153,13 @@ final class fh {
           var2 = 55 % ((param0 - 21) / 59);
           var1 = null;
           var3 = null;
-          if (sf.field_d == 0 &&
-            null != qe.field_a) {
+          if (SecondaryNodeDequeIterator.field_d == 0 &&
+            null != GameKeyHandler.field_a) {
             var3 = dd.field_b;
           }
-          if (2 == sf.field_d &&
+          if (2 == SecondaryNodeDequeIterator.field_d &&
             !k.a(true)) {
-            if (oj.a(1, qj.field_a)) {
+            if (IsaacCipher.a(1, qj.field_a)) {
               var3 = sk.a(new String[]{ka.field_m}, sb.field_c, 119);
               if (var11 != 0) {
                 var3 = sk.a(new String[]{ka.field_m}, tl.field_Z, 119);
@@ -184,11 +184,11 @@ final class fh {
             var4 = rh.a(var4, -62);
             var5 = "";
             var6 = "|";
-            var7 = sf.field_d;
+            var7 = SecondaryNodeDequeIterator.field_d;
             var8 = 0;
             if (var7 == 2) {
               var5 = sk.a(new String[]{ka.field_m}, vd.field_b, 126);
-              var9 = sk.a(new String[]{var4}, mc.field_h, 119);
+              var9 = sk.a(new String[]{var4}, IntrusiveNode.field_h, 119);
               var8 = -485 + ba.field_L.field_Hb + (in.field_g.field_Hb + we.field_k.b(var9)) - we.field_k.b(var5);
               if (0 > var8) {
                 var8 = 0;
@@ -207,7 +207,7 @@ final class fh {
                     decompiledSharedTail1 = (var11 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var5 = "[" + sk.a(new String[]{qb.field_N.field_ec}, qe.field_e, 126) + "] ";
+                    var5 = "[" + sk.a(new String[]{qb.field_N.field_ec}, GameKeyHandler.field_e, 126) + "] ";
                   }
                   var7 = 1;
                 }
@@ -228,7 +228,7 @@ final class fh {
               if ((decompiledSharedTail0) &&
                 (fn.field_K)) {
                 var6 = "";
-                var5 = "<col=999999>" + var5 + bh.field_n + "</col>";
+                var5 = "<col=999999>" + var5 + PacketBuffer.field_n + "</col>";
               }
               var10 = we.field_k.b(var5);
               if (!gg.b((byte) 87)) {
@@ -237,17 +237,17 @@ final class fh {
                   if (cd.field_a) {
                     var1 = "Broken!";
                   } else {
-                    var1 = bh.field_n;
+                    var1 = PacketBuffer.field_n;
                   }
                 }
                 if (in.field_g.field_F != 0 &&
                   var10 > in.field_g.field_Z &&
                   !cd.field_a) {
-                  em.d(-20715);
+                  MatchSetup.d(-20715);
                 }
               }
             }
-            nj.a(var5 + jb.c(io.field_h.toString()), (byte) -48, var6, pg.field_f[var7], var8);
+            nj.a(var5 + BitmapFont.c(io.field_h.toString()), (byte) -48, var6, pg.field_f[var7], var8);
             if (!cl.field_e) {
               ba.field_L.field_Y = false;
             }
@@ -316,7 +316,7 @@ final class fh {
           param3 = param3 + param1;
           var7_int = 0;
           var8 = param2;
-          L3: while (true) {
+          scanLoop1: while (true) {
             var9 = param0[var8];
             if (var9 >= 0) {
               var7_int++;
@@ -333,7 +333,7 @@ final class fh {
               param5[incrementValue$1] = (byte)(~var10);
               if (param3 <= param1 &&
                 var11 == 0) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -352,7 +352,7 @@ final class fh {
               param5[incrementValue$3] = (byte)(~var10Lifetime1);
               if (param1 >= param3 &&
                 var11 == 0) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -370,7 +370,7 @@ final class fh {
               param1++;
               param5[incrementValue$5] = (byte)(~var10Lifetime2);
               if (param3 <= param1) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -388,7 +388,7 @@ final class fh {
               param1++;
               param5[incrementValue$7] = (byte)(~var10Lifetime3);
               if (param3 <= param1) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -407,7 +407,7 @@ final class fh {
               param5[incrementValue$9] = (byte)(~var10Lifetime4);
               if (param3 <= param1 &&
                 var11 == 0) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -425,7 +425,7 @@ final class fh {
               param1++;
               param5[incrementValue$11] = (byte)(~var10Lifetime5);
               if (param3 <= param1) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -443,7 +443,7 @@ final class fh {
               param1++;
               param5[incrementValue$13] = (byte)(~var10Lifetime6);
               if (param3 <= param1) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -462,7 +462,7 @@ final class fh {
               param5[incrementValue$15] = (byte)(~var10Lifetime7);
               if (param3 <= param1 &&
                 var11 == 0) {
-                break L3;
+                break scanLoop1;
               }
               var7_int = 0;
             }
@@ -536,7 +536,7 @@ final class fh {
               var7_int = var7_int & -var13 >> 31;
               var14 = var12 + (var11 + var13 - 1 >> 3);
               var13 += 24;
-              dupTemp$0 = mc.a(var7_int, var10 >>> var13);
+              dupTemp$0 = IntrusiveNode.a(var7_int, var10 >>> var13);
               var7_int = dupTemp$0;
               param4[var12] = (byte)dupTemp$0;
               if (var12 < var14) {
@@ -641,7 +641,7 @@ final class fh {
           var3 = new int[33];
           var4 = 0;
           var5 = 0;
-          L0: while (true) {
+          scanLoop1: while (true) {
             stackIn_3_0 = ~var5;
             stackIn_3_1 = ~var2_int;
             if (stackIn_3_0 > stackIn_3_1) {
@@ -656,7 +656,7 @@ final class fh {
                 this.field_e[var5] = var8;
                 if (0 == (var8 & var7)) {
                   var10 = -1 + var6;
-                  L9: while (true) {
+                  scanLoop2: while (true) {
                     if (var10 >= 1) {
                       var11 = var3[var10];
                       stackIn_26_0 = var11;
@@ -664,10 +664,10 @@ final class fh {
                       if (stackIn_26_0 == stackIn_26_1) {
                         var12 = 1 << -var10 + 32;
                         if (0 == (var12 & var11)) {
-                          var3[var10] = mc.a(var11, var12);
+                          var3[var10] = IntrusiveNode.a(var11, var12);
                         } else {
                           var3[var10] = var3[-1 + var10];
-                          break L9;
+                          break scanLoop2;
                         }
                         var10--;
                         continue;
@@ -732,7 +732,7 @@ final class fh {
                 }
               }
               var5++;
-              continue L0;
+              continue scanLoop1;
             }
             break;
           }

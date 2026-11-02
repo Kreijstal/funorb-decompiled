@@ -3,13 +3,13 @@
  */
 final class tb {
     static String field_h;
-    static je field_d;
+    static IntrusiveDeque field_d;
     boolean field_i;
     int field_k;
     private int[][] field_a;
     int field_b;
     int[] field_l;
-    static bh field_j;
+    static PacketBuffer field_j;
     int[] field_f;
     static boolean field_e;
     private int[] field_c;
@@ -20,7 +20,7 @@ final class tb {
         CharSequence var5 = null;
         try {
           ka.field_m = param1;
-          sf.field_d = 2;
+          SecondaryNodeDequeIterator.field_d = 2;
           var5 = (CharSequence) ((Object) param1);
           qj.field_a = cc.a(var5, (byte) 114);
           vj.field_o = param2;
@@ -33,10 +33,10 @@ final class tb {
         }
     }
 
-    private final void a(boolean param0, bh param1) {
+    private final void a(boolean param0, PacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
-        bh var5 = null;
+        PacketBuffer var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -45,11 +45,11 @@ final class tb {
         var4 = TetraLink.field_J;
         try {
           if (!param0) {
-            var5 = (bh) null;
-            this.a(-64, (byte) 59, (bh) null);
+            var5 = (PacketBuffer) null;
+            this.a(-64, (byte) 59, (PacketBuffer) null);
           }
           while (true) {
-            var3_int = param1.d((byte) -99);
+            var3_int = param1.readUnsignedByte((byte) -99);
             if (0 == var3_int) {
               return;
             }
@@ -69,21 +69,21 @@ final class tb {
         }
     }
 
-    tb(ah param0, String param1, String param2) {
+    tb(Archive param0, String param1, String param2) {
         this(param0, param0.a(-1, param1), param2);
     }
 
     final static void a(int param0, int param1) {
-        bc var2 = nd.field_Lb;
-        var2.f(param0, (byte) -92);
+        BitPacketBuffer var2 = nd.field_Lb;
+        var2.writeCipheredByte(param0, (byte) -92);
         var2.a(1, false);
         if (param1 != -15289) {
-          field_j = (bh) null;
+          field_j = (PacketBuffer) null;
         }
         var2.a(1, false);
     }
 
-    private tb(ah param0, int param1, String param2) {
+    private tb(Archive param0, int param1, String param2) {
         this(param0, param1, param0.a(param1, false, param2));
     }
 
@@ -92,11 +92,11 @@ final class tb {
         field_j = null;
         field_h = null;
         if (param0 >= -112) {
-          field_d = (je) null;
+          field_d = (IntrusiveDeque) null;
         }
     }
 
-    private final void a(int param0, byte param1, bh param2) {
+    private final void a(int param0, byte param1, PacketBuffer param2) {
         int[] array$0 = null;
         int var7 = 0;
         RuntimeException stackIn_59_0 = null;
@@ -114,80 +114,80 @@ final class tb {
             return;
           }
           if (param0 == 1) {
-            var4_int = param2.e(param1 + 132);
+            var4_int = param2.readUnsignedShort(param1 + 132);
             this.field_l = new int[var4_int];
             for (var5 = 0; var5 < var4_int; var5++) {
-              this.field_l[var5] = param2.e(127);
+              this.field_l[var5] = param2.readUnsignedShort(127);
             }
             this.field_f = new int[var4_int];
             for (var5 = 0; var5 < var4_int; var5++) {
-              this.field_f[var5] = param2.e(127);
+              this.field_f[var5] = param2.readUnsignedShort(127);
             }
             for (var5 = 0; var5 < var4_int; var5++) {
-              this.field_f[var5] = (param2.e(127) << 16) + this.field_f[var5];
+              this.field_f[var5] = (param2.readUnsignedShort(127) << 16) + this.field_f[var5];
             }
           } else {
             if (param0 == 2) {
-              this.field_k = param2.e(127);
+              this.field_k = param2.readUnsignedShort(127);
               return;
             }
             if (param0 == 3) {
-              var4_int = param2.d((byte) -99);
+              var4_int = param2.readUnsignedByte((byte) -99);
               this.field_c = new int[var4_int + 1];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_c[var5] = param2.d((byte) -99);
+                this.field_c[var5] = param2.readUnsignedByte((byte) -99);
               }
               this.field_c[var4_int] = 9999999;
               return;
             }
             if (param0 == 5) {
-              param2.d((byte) -99);
+              param2.readUnsignedByte((byte) -99);
               return;
             }
             if (param0 == 6) {
-              param2.e(127);
+              param2.readUnsignedShort(127);
               return;
             }
             if (param0 == 7) {
-              param2.e(127);
+              param2.readUnsignedShort(127);
               return;
             }
             if (8 == param0) {
-              this.field_b = param2.d((byte) -99);
+              this.field_b = param2.readUnsignedByte((byte) -99);
               this.field_i = false;
               return;
             }
             if (param0 == 9) {
-              param2.d((byte) -99);
+              param2.readUnsignedByte((byte) -99);
               return;
             }
             if (param0 == 10) {
-              param2.d((byte) -99);
+              param2.readUnsignedByte((byte) -99);
               return;
             }
             if (param0 == 11) {
-              param2.d((byte) -99);
+              param2.readUnsignedByte((byte) -99);
               return;
             }
             if (12 == param0) {
-              var4_int = param2.d((byte) -99);
+              var4_int = param2.readUnsignedByte((byte) -99);
               for (var5 = 0; var5 < var4_int; var5++) {
-                param2.e(127);
+                param2.readUnsignedShort(127);
               }
               for (var5 = 0; var5 < var4_int; var5++) {
-                param2.e(param1 ^ -124);
+                param2.readUnsignedShort(param1 ^ -124);
               }
             } else if (13 == param0) {
-              var4_int = param2.e(127);
+              var4_int = param2.readUnsignedShort(127);
               this.field_a = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
-                var6 = param2.d((byte) -99);
+                var6 = param2.readUnsignedByte((byte) -99);
                 if (var6 > 0) {
                   array$0 = new int[var6];
                   this.field_a[var5] = array$0;
-                  this.field_a[var5][0] = param2.d(-1);
+                  this.field_a[var5][0] = param2.readMedium(-1);
                   for (var7 = 1; var6 > var7; var7++) {
-                    this.field_a[var5][var7] = param2.e(127);
+                    this.field_a[var5][var7] = param2.readUnsignedShort(127);
                   }
                 }
               }
@@ -241,7 +241,7 @@ final class tb {
         return stackIn_6_0;
     }
 
-    private tb(ah param0, int param1, int param2) {
+    private tb(Archive param0, int param1, int param2) {
         int var7 = 0;
         byte[] var4 = null;
         int var5 = 0;
@@ -264,7 +264,7 @@ final class tb {
           var9 = var10;
           var4 = var9;
           if (var9 != null) {
-            this.a(true, new bh(var11));
+            this.a(true, new PacketBuffer(var11));
           }
           var5 = 0;
           for (var6 = 0; this.field_f.length > var6; var6++) {
@@ -295,8 +295,8 @@ final class tb {
 
     static {
         field_h = "Email is valid";
-        field_d = new je();
-        field_j = new bh(256);
+        field_d = new IntrusiveDeque();
+        field_j = new PacketBuffer(256);
         field_e = true;
     }
 }

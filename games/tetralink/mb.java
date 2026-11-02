@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mb extends gb {
+abstract class mb extends DualLinkNode {
     static String field_A;
     static int field_z;
-    static wf[] field_y;
+    static PcmSample[] field_y;
     int field_t;
     static ni field_u;
     static long field_B;

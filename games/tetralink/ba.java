@@ -6,7 +6,7 @@ final class ba extends gn implements dm {
     static String field_M;
     static int[] field_N;
     static hl field_L;
-    private jb field_R;
+    private BitmapFont field_R;
     private int[] field_U;
     static boolean[][] field_S;
     private int field_V;
@@ -193,7 +193,7 @@ final class ba extends gn implements dm {
         }
     }
 
-    ba(lk param0, jb param1, String param2) {
+    ba(lk param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (kg) null);
         int var4_int = 0;
         this.field_V = 0;

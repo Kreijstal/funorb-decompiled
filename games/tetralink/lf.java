@@ -13,14 +13,14 @@ final class lf {
         return new dk[]{lh.field_s, lc.field_j, vc.field_b};
     }
 
-    final static oh[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, byte param7, int param8) {
         int var14 = 0;
         int var9;
-        oh[] var10;
-        oh[] var11_ref_oh__;
+        Sprite[] var10;
+        Sprite[] var11_ref_oh__;
         int var11;
         int var12;
-        oh var13;
+        Sprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -31,7 +31,7 @@ final class lf {
         int var12Lifetime4;
         var15 = TetraLink.field_J;
         var9 = param4 + param5 + param0;
-        var10 = new oh[]{new oh(var9, var9), new oh(param6, var9), new oh(var9, var9), new oh(var9, param6), new oh(64, 64), new oh(var9, param6), new oh(var9, var9), new oh(param6, var9), new oh(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9), new Sprite(var9, param6), new Sprite(64, 64), new Sprite(var9, param6), new Sprite(var9, var9), new Sprite(param6, var9), new Sprite(var9, var9)};
         var11_ref_oh__ = var10;
         for (var12 = 0; var12 < var11_ref_oh__.length; var12++) {
           var13 = var11_ref_oh__[var12];

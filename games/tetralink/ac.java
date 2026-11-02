@@ -6,7 +6,7 @@ final class ac {
     static ma field_a;
     static int[] field_b;
     static String field_d;
-    static oh field_c;
+    static Sprite field_c;
 
     final static boolean a(byte param0, char param1) {
         if (param0 >= -90) {
@@ -101,7 +101,7 @@ final class ac {
         field_a = null;
     }
 
-    final static void a(byte param0, byte[] param1, int param2, bh param3, int param4, java.math.BigInteger param5, java.math.BigInteger param6) {
+    final static void a(byte param0, byte[] param1, int param2, PacketBuffer param3, int param4, java.math.BigInteger param5, java.math.BigInteger param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -136,18 +136,18 @@ final class ac {
             var8[var10] = re.field_R.nextInt();
           }
           if (null == ug.field_hb ||
-            !(var7_int <= ug.field_hb.field_u.length)) {
-            ug.field_hb = new bh(var7_int);
+            !(var7_int <= ug.field_hb.payload.length)) {
+            ug.field_hb = new PacketBuffer(var7_int);
           }
-          ug.field_hb.field_t = 0;
+          ug.field_hb.position = 0;
           ug.field_hb.a(param4, 128, param1, param2);
           ug.field_hb.b((byte) -71, var7_int);
           ug.field_hb.a(10830, var14);
           if (null == ce.field_f ||
-            !(100 <= ce.field_f.field_u.length)) {
-            ce.field_f = new bh(100);
+            !(100 <= ce.field_f.payload.length)) {
+            ce.field_f = new PacketBuffer(100);
           }
-          ce.field_f.field_t = 0;
+          ce.field_f.position = 0;
           ce.field_f.a(10, false);
           var12 = 0;
           var10Lifetime1 = var12;
@@ -157,8 +157,8 @@ final class ac {
           }
           ce.field_f.b(param2, false);
           ce.field_f.a(param5, param6, -25035);
-          param3.a(0, 128, ce.field_f.field_u, ce.field_f.field_t);
-          param3.a(0, 128, ug.field_hb.field_u, ug.field_hb.field_t);
+          param3.a(0, 128, ce.field_f.payload, ce.field_f.position);
+          param3.a(0, 128, ug.field_hb.payload, ug.field_hb.position);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

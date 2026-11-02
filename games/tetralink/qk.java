@@ -63,25 +63,25 @@ final class qk {
         int var16 = 62 / ((param1 - 71) / 49);
         if (param0 < param11) {
           if (param11 < param14) {
-            wa.a(-1979588528, param8, param10, param13, param7, param12, param3, param5, param2, param14, param4, param0, param15, param6, param9, param11, ra.field_b);
+            wa.a(-1979588528, param8, param10, param13, param7, param12, param3, param5, param2, param14, param4, param0, param15, param6, param9, param11, SoftwareRasterizer.field_b);
             return;
           }
           if (param0 < param14) {
-            wa.a(-1979588528, param10, param8, param15, param3, param5, param7, param12, param2, param11, param4, param0, param13, param6, param9, param14, ra.field_b);
+            wa.a(-1979588528, param10, param8, param15, param3, param5, param7, param12, param2, param11, param4, param0, param13, param6, param9, param14, SoftwareRasterizer.field_b);
             return;
           }
-          wa.a(-1979588528, param2, param8, param6, param3, param5, param9, param4, param10, param11, param12, param14, param13, param15, param7, param0, ra.field_b);
+          wa.a(-1979588528, param2, param8, param6, param3, param5, param9, param4, param10, param11, param12, param14, param13, param15, param7, param0, SoftwareRasterizer.field_b);
           return;
         }
         if (param14 > param0) {
-          wa.a(-1979588528, param2, param10, param6, param7, param12, param9, param4, param8, param14, param5, param11, param15, param13, param3, param0, ra.field_b);
+          wa.a(-1979588528, param2, param10, param6, param7, param12, param9, param4, param8, param14, param5, param11, param15, param13, param3, param0, SoftwareRasterizer.field_b);
           return;
         }
         if (param14 <= param11) {
-          wa.a(-1979588528, param8, param2, param13, param9, param4, param3, param5, param10, param0, param12, param14, param6, param15, param7, param11, ra.field_b);
+          wa.a(-1979588528, param8, param2, param13, param9, param4, param3, param5, param10, param0, param12, param14, param6, param15, param7, param11, SoftwareRasterizer.field_b);
           return;
         }
-        wa.a(-1979588528, param10, param2, param15, param9, param4, param7, param12, param8, param0, param5, param11, param6, param13, param3, param14, ra.field_b);
+        wa.a(-1979588528, param10, param2, param15, param9, param4, param7, param12, param8, param0, param5, param11, param6, param13, param3, param14, SoftwareRasterizer.field_b);
     }
 
     public static void a(int param0) {
@@ -103,15 +103,15 @@ final class qk {
         int stackIn_6_3 = 0;
         ei stackIn_30_0;
         int stackIn_30_1;
-        oh stackIn_30_2;
-        oh stackIn_30_3;
+        Sprite stackIn_30_2;
+        Sprite stackIn_30_3;
         boolean stackIn_31_4 = false;
         ei stackIn_37_0 = null;
         boolean stackIn_38_1 = false;
         ei stackIn_45_0;
         int stackIn_45_1;
-        oh stackIn_45_2;
-        oh stackIn_45_3;
+        Sprite stackIn_45_2;
+        Sprite stackIn_45_3;
         boolean stackIn_46_4 = false;
         ei stackIn_52_0 = null;
         boolean stackIn_53_1 = false;
@@ -175,7 +175,7 @@ final class qk {
         field_c = (String) null;
     }
 
-    final static kh a(byte param0, ah param1, String param2, String param3) {
+    final static kh a(byte param0, Archive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;

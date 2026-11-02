@@ -7,7 +7,7 @@ final class ui {
     static int field_g;
     static hl field_e;
     static Boolean field_b;
-    static je field_d;
+    static IntrusiveDeque field_d;
     static ok field_f;
     static long[] field_c;
     static String[] field_a;
@@ -48,7 +48,7 @@ final class ui {
         return true;
     }
 
-    final static void a(ob param0, int param1, int param2, ob param3, int param4, int param5, int param6, ob param7, int param8, int param9) {
+    final static void a(Model param0, int param1, int param2, Model param3, int param4, int param5, int param6, Model param7, int param8, int param9) {
         byte fieldTemp$0 = 0;
         RuntimeException stackIn_86_0 = null;
         StringBuilder stackIn_86_1 = null;
@@ -58,14 +58,14 @@ final class ui {
         StringBuilder stackIn_92_1 = null;
         String stackIn_93_2 = null;
         RuntimeException decompiledCaughtException = null;
-        ob var10 = null;
+        Model var10 = null;
         int var10_int = 0;
         RuntimeException var10_ref = null;
         int var11 = 0;
-        ob var10Lifetime1;
-        ob var10Lifetime2;
-        ob var10Lifetime3;
-        ob var10Lifetime4;
+        Model var10Lifetime1;
+        Model var10Lifetime2;
+        Model var10Lifetime3;
+        Model var10Lifetime4;
         int var10_intLifetime1;
         int var10_intLifetime2;
         int var10_intLifetime3;
@@ -90,26 +90,26 @@ final class ui {
           ch.field_s = param3.field_Y;
           ic.field_c = param3.field_t;
           ga.field_b = param0.field_hb;
-          gb.field_r = param3.field_I;
+          DualLinkNode.field_r = param3.field_I;
           am.field_b = param0.field_t;
           kj.field_d = param0.field_p;
           db.field_f = param3.field_A;
-          bg.field_f = param3.field_k;
+          GameApplet.field_f = param3.field_k;
           gd.field_Zb = param0.field_V;
           li.field_m = param0.field_I;
           ja.field_l = param3.field_kb;
-          mc.field_m = param3.field_hb;
-          rk.field_b = param3.field_j;
+          IntrusiveNode.field_m = param3.field_hb;
+          SecondaryNodeDeque.field_b = param3.field_j;
           bd.field_a = param3.field_gb;
-          bn.a(param4, param2, param7.field_kb, param8, param9, param7.field_V, (kc) null, param7.field_ob, param7.field_M, param5, param7.field_E, param7.field_gb, param7.field_t, 118, param1, param7.field_Y, param7.field_I, param7.field_j, param7.field_hb, param7.field_k, param7.field_p, param7.field_ib, (byte[]) null, param7.field_A);
+          bn.a(param4, param2, param7.field_kb, param8, param9, param7.field_V, (ModelData) null, param7.field_ob, param7.field_M, param5, param7.field_E, param7.field_gb, param7.field_t, 118, param1, param7.field_Y, param7.field_I, param7.field_j, param7.field_hb, param7.field_k, param7.field_p, param7.field_ib, (byte[]) null, param7.field_A);
           param3.field_V = nn.field_S;
           param3.field_ib = k.field_e;
-          param3.field_j = rk.field_b;
+          param3.field_j = SecondaryNodeDeque.field_b;
           param3.field_A = db.field_f;
-          param3.field_I = gb.field_r;
-          param3.field_k = bg.field_f;
+          param3.field_I = DualLinkNode.field_r;
+          param3.field_k = GameApplet.field_f;
           param3.field_kb = ja.field_l;
-          param3.field_nb = ea.field_e;
+          param3.field_nb = IterableNodeHashTable.field_e;
           param3.field_t = ic.field_c;
           param3.field_gb = bd.field_a;
           param3.field_ob = fh.field_g;
@@ -117,7 +117,7 @@ final class ui {
           param3.field_Y = ch.field_s;
           param3.field_p = wk.field_b;
           param3.field_E = hb.field_d;
-          param3.field_hb = mc.field_m;
+          param3.field_hb = IntrusiveNode.field_m;
           param0.field_A = hd.field_D;
           param0.field_kb = ve.field_a;
           param0.field_Y = gk.field_c;

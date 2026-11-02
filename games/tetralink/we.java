@@ -10,8 +10,8 @@ final class we extends hi {
     static String field_n;
     private int field_h;
     private int field_p;
-    private jb field_g;
-    static jb field_k;
+    private BitmapFont field_g;
+    static BitmapFont field_k;
     private int field_l;
     private boolean field_o;
 
@@ -100,7 +100,7 @@ final class we extends hi {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new bf(param1, param1);
-          ha.field_b.a(var2, false);
+          MouseInputHandler.field_b.addLast(var2, false);
           u.field_g.a(param1);
           if (param0 != -11040) {
             field_e = (mk) null;
@@ -121,7 +121,7 @@ final class we extends hi {
         }
     }
 
-    final void a(String param0, int param1, int param2, boolean param3, jb param4) {
+    final void a(String param0, int param1, int param2, boolean param3, BitmapFont param4) {
         bk var8 = null;
         bk var9 = null;
         if (param0 == null) {
@@ -150,7 +150,7 @@ final class we extends hi {
         }
     }
 
-    final void a(String param0, byte param1, jb param2, int param3, int param4) {
+    final void a(String param0, byte param1, BitmapFont param2, int param3, int param4) {
         bk var8 = null;
         int var7 = 0;
         if (param0 == null) {
@@ -189,7 +189,7 @@ final class we extends hi {
         hj.a(param0, param3, param1, false);
     }
 
-    final void a(int param0, jb param1, int param2, int param3, String param4) {
+    final void a(int param0, BitmapFont param1, int param2, int param3, String param4) {
         bk var7 = null;
         bk var8 = null;
         if (param4 == null) {
@@ -215,7 +215,7 @@ final class we extends hi {
         }
     }
 
-    final void a(int param0, int param1, String param2, int param3, jb param4, int param5, int param6, int param7) {
+    final void a(int param0, int param1, String param2, int param3, BitmapFont param4, int param5, int param6, int param7) {
         bk stackIn_38_0;
         bk stackIn_38_1;
         int stackIn_38_2;
@@ -225,7 +225,7 @@ final class we extends hi {
         int stackIn_39_4 = 0;
         String stackIn_43_0;
         bk stackIn_43_1;
-        jb stackIn_43_2;
+        BitmapFont stackIn_43_2;
         boolean stackIn_43_3;
         int stackIn_44_4;
         RuntimeException stackIn_49_0 = null;
@@ -322,7 +322,7 @@ final class we extends hi {
               var14.field_j[var13.length()] = param4.b(var13);
               stackIn_43_0 = var13;
               stackIn_43_1 = var14;
-              stackIn_43_2 = (jb) (param4);
+              stackIn_43_2 = (BitmapFont) (param4);
               stackIn_43_3 = false;
               if (param5 == 3) {
                 stackIn_44_4 = this.a(param4.b(var13), (byte) -126, param3, var13);
@@ -365,7 +365,7 @@ final class we extends hi {
         field_n = null;
     }
 
-    private final bk a(String param0, int param1, int param2, jb param3) {
+    private final bk a(String param0, int param1, int param2, BitmapFont param3) {
         bk var5 = null;
         RuntimeException var5_ref = null;
         bk var6 = null;
@@ -431,12 +431,12 @@ final class we extends hi {
               stackIn_6_0 = -(var11 * 5) + 239;
             }
             var12 = stackIn_6_0;
-            ra.c(var11 + var7_int, var8, var10, var12);
-            ra.c(-var11 + (-1 + var7_int) + var9, var8, var10, var12);
+            SoftwareRasterizer.c(var11 + var7_int, var8, var10, var12);
+            SoftwareRasterizer.c(-var11 + (-1 + var7_int) + var9, var8, var10, var12);
           }
           stackIn_10_0 = (param6) ? 244 : 4;
           var11Lifetime1 = stackIn_10_0;
-          ra.c(48 + var7_int, var8, var9 - 96, var10, var11Lifetime1);
+          SoftwareRasterizer.c(48 + var7_int, var8, var9 - 96, var10, var11Lifetime1);
           qj.a(param2, (byte) -36, li.field_l, param5, param3, param0);
           if (param4 <= 39) {
             field_e = (mk) null;

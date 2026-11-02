@@ -22,8 +22,8 @@ final class gg extends hm {
         if (param0 > -5) {
           return;
         }
-        if (null != fl.field_u) {
-          fl.field_u.r(-124);
+        if (null != BufferedSocket.field_u) {
+          BufferedSocket.field_u.r(-124);
         }
         String var1 = hb.c(-8927);
         ao.field_c = new tl(var1, (String) null, true, false, false);
@@ -45,18 +45,18 @@ final class gg extends hm {
           ok.field_a = ok.field_a - 1;
           if (ok.field_a == 0) {
             ok.field_a = 200;
-            var1 = (bf) (ha.field_b.c(false));
+            var1 = (bf) (MouseInputHandler.field_b.c(false));
             while (var1 != null) {
-              if (!var1.field_q.a((byte) 95)) {
-                var1.b(false);
+              if (!var1.field_q.isLinked((byte) 95)) {
+                var1.unlink(false);
               }
-              var1 = (bf) (ha.field_b.a((byte) -70));
+              var1 = (bf) (MouseInputHandler.field_b.a((byte) -70));
             }
             if (gi.field_d != null) {
               var1Lifetime1 = (bf) (gi.field_d.c(false));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_q.a((byte) 95)) {
-                  var1Lifetime1.b(false);
+                if (!var1Lifetime1.field_q.isLinked((byte) 95)) {
+                  var1Lifetime1.unlink(false);
                 }
                 var1Lifetime1 = (bf) (gi.field_d.a((byte) -70));
               }
@@ -131,7 +131,7 @@ final class gg extends hm {
         return al.field_i != null ? true : false;
     }
 
-    final void a(int param0, bh param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           if (param0 != -22017) {
             this.a((byte) 84);
@@ -144,8 +144,8 @@ final class gg extends hm {
     }
 
     final static void a(int param0, int param1) {
-        bc var2 = nd.field_Lb;
-        var2.f(param0, (byte) -92);
+        BitPacketBuffer var2 = nd.field_Lb;
+        var2.writeCipheredByte(param0, (byte) -92);
         var2.a(1, false);
         var2.a(param1, false);
     }

@@ -94,7 +94,7 @@ final class qc extends nb implements dm {
         }
     }
 
-    qc(pk param0, af param1) {
+    qc(WidgetContainer param0, af param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -103,7 +103,7 @@ final class qc extends nb implements dm {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        na var4 = null;
+        UiWidget var4 = null;
         try {
           var3 = null;
           if (param1 == ka.field_l) {
@@ -117,13 +117,13 @@ final class qc extends nb implements dm {
             } else {
               var3 = am.field_c;
               this.field_u = this.field_u + 10;
-              if (jo.b(0)) {
+              if (DualLinkDeque.b(0)) {
                 this.field_u = this.field_u + 20;
                 var3 = w.field_s;
               }
             }
           }
-          var4 = new na((String) (var3), (dn) null);
+          var4 = new UiWidget((String) (var3), (dn) null);
           var4.field_F = this.field_F;
           var4.field_w = 50;
           var4.field_u = 80;

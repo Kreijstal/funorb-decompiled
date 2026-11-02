@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rm {
-    static oh[] field_b;
+    static Sprite[] field_b;
     static String field_d;
     static hl field_g;
-    static ah field_i;
+    static Archive field_i;
     static ho field_a;
     static boolean field_f;
     static String field_e;
@@ -33,7 +33,7 @@ final class rm {
           if (pg.field_a <= 0) {
             return false;
           }
-          if (!wm.b(0)) {
+          if (!ImageProducerRasterBuffer.b(0)) {
             return true;
           }
           return false;
@@ -47,7 +47,7 @@ final class rm {
         if (pg.field_a <= 0) {
           return false;
         }
-        if (!wm.b(0)) {
+        if (!ImageProducerRasterBuffer.b(0)) {
           return true;
         }
         return false;
@@ -67,49 +67,49 @@ final class rm {
 
     final static void a(int param0, hl param1, int param2) {
         pf var8 = null;
-        oh var9 = null;
+        Sprite var9 = null;
         String var10 = null;
         pf var11 = null;
-        oh var12 = null;
+        Sprite var12 = null;
         String var13 = null;
         pf var14 = null;
-        oh var15 = null;
+        Sprite var15 = null;
         String var16 = null;
         pf var17 = null;
-        oh var18 = null;
+        Sprite var18 = null;
         String var19 = null;
         pf var20 = null;
-        oh var21 = null;
+        Sprite var21 = null;
         String var22 = null;
         pf var23 = null;
-        oh var24 = null;
+        Sprite var24 = null;
         String var25 = null;
         pf var26 = null;
         String var28 = null;
         pf var29 = null;
-        oh var30 = null;
+        Sprite var30 = null;
         String var31 = null;
         pf var32 = null;
-        oh var33 = null;
+        Sprite var33 = null;
         String var34 = null;
         pf var35 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        oh var27 = null;
-        oh var27Lifetime1;
-        oh var27Lifetime2;
-        oh var27Lifetime3;
-        oh var27Lifetime4;
-        oh var27Lifetime5;
-        oh var27Lifetime6;
-        oh var27Lifetime7;
-        oh var27Lifetime1Lifetime1;
-        oh var27Lifetime1Lifetime2;
-        oh var27Lifetime1Lifetime3;
-        oh var27Lifetime1Lifetime4;
-        oh var27Lifetime1Lifetime5;
+        Sprite var27 = null;
+        Sprite var27Lifetime1;
+        Sprite var27Lifetime2;
+        Sprite var27Lifetime3;
+        Sprite var27Lifetime4;
+        Sprite var27Lifetime5;
+        Sprite var27Lifetime6;
+        Sprite var27Lifetime7;
+        Sprite var27Lifetime1Lifetime1;
+        Sprite var27Lifetime1Lifetime2;
+        Sprite var27Lifetime1Lifetime3;
+        Sprite var27Lifetime1Lifetime4;
+        Sprite var27Lifetime1Lifetime5;
         try {
           gd.a((String) null, 255, (String) null, param0, (rb) null, (int[]) null, (long)param2, param1, -1);
           if (param0 == 0) {
@@ -149,7 +149,7 @@ final class rm {
             var24 = ec.field_n[2];
             var27Lifetime1Lifetime4 = var24;
             var27Lifetime1Lifetime5 = var24;
-            var25 = md.field_H;
+            var25 = SpriteState.field_H;
             var23.field_j.a(13, var24, 0, var25);
           }
           if (param0 == 2) {
@@ -163,7 +163,7 @@ final class rm {
             var29.field_j.a(12, var30, param2 ^ 0, var31);
             var32 = hd.field_s;
             var33 = ec.field_n[2];
-            var34 = mc.field_a;
+            var34 = IntrusiveNode.field_a;
             var32.field_j.a(13, var33, param2 + 0, var34);
           }
           var35 = hd.field_s;
