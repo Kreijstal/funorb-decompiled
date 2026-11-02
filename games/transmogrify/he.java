@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class he extends IntrusiveNode {
-    static String field_h;
-    static String field_g;
+    static String endGameLabel;
+    static String skipRoundPrompt;
 
     public static void a(byte param0) {
         if (param0 < 12) {
           he.b((byte) 57);
-          field_g = null;
-          field_h = null;
+          skipRoundPrompt = null;
+          endGameLabel = null;
           return;
         }
-        field_g = null;
-        field_h = null;
+        skipRoundPrompt = null;
+        endGameLabel = null;
     }
 
     final static void a(String[] args, byte param1, String param2, int param3) {
@@ -496,7 +496,7 @@ final class he extends IntrusiveNode {
     }
 
     static {
-        field_h = "End Game";
-        field_g = "Are you sure you want to skip this round, scoring 0 for it?";
+        endGameLabel = "End Game";
+        skipRoundPrompt = "Are you sure you want to skip this round, scoring 0 for it?";
     }
 }

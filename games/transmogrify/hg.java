@@ -45,14 +45,14 @@ final class hg {
     final static void a(int param0) {
         RuntimeException var1 = null;
         int var2 = 0;
-        sj var3 = null;
+        LetterTile var3 = null;
         RuntimeException decompiledCaughtException = null;
         var2 = Transmogrify.field_A ? 1 : 0;
         try {
-          var3 = (sj) (ch.field_e.a((byte) -95));
+          var3 = (LetterTile) (ch.field_e.a((byte) -95));
           while (var3 != null) {
             var3.a((byte) 75);
-            var3 = (sj) (ch.field_e.a(true));
+            var3 = (LetterTile) (ch.field_e.a(true));
           }
           if (param0 > 40) {
             return;

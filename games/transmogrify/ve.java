@@ -41,8 +41,8 @@ final class ve extends lj {
 
     final String f(int param0) {
         if (param0 != 4) {
-          qg var3 = (qg) null;
-          this.a((qg) null, 58);
+          UiWidget var3 = (UiWidget) null;
+          this.a((UiWidget) null, 58);
           if (this.field_g) {
             return this.field_A.c(param0 + 30519);
           }
@@ -142,7 +142,7 @@ final class ve extends lj {
           vh.field_l.c(-var17.field_r + var5, var6 - var17.field_s, 256);
           return;
         }
-        if (var8 == ec.field_d) {
+        if (var8 == SocketConnector.field_d) {
           var14 = ai.field_b[2];
           var14.c(var5 - (var14.field_n >> 1), var6 - (var14.field_m >> 1), 256);
           return;
@@ -192,7 +192,7 @@ final class ve extends lj {
         }
     }
 
-    final boolean a(qg param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String[] var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -228,7 +228,7 @@ final class ve extends lj {
         }
     }
 
-    final void a(int param0, byte param1, qg param2, int param3) {
+    final void a(int param0, byte param1, UiWidget param2, int param3) {
         try {
           this.field_C = this.field_C + 1;
           super.a(param0, param1, param2, param3);

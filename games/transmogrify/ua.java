@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ua {
-    static String[] field_a;
+    static String[] bonusWords;
     static long field_e;
     static int field_c;
     static int field_d;
@@ -12,7 +12,7 @@ final class ua {
     public static void a(int param0) {
         int var1 = 122 % ((-70 - param0) / 50);
         field_b = null;
-        field_a = null;
+        bonusWords = null;
         field_f = null;
     }
 
@@ -29,26 +29,26 @@ final class ua {
 
     final static void b(byte param0) {
         int stackIn_12_0 = 0;
-        sj stackIn_17_0 = null;
+        LetterTile stackIn_17_0 = null;
         int stackIn_18_1 = 0;
         int stackIn_20_1 = 0;
         int stackIn_20_2 = 0;
         int stackIn_21_3;
-        sj stackIn_31_0 = null;
+        LetterTile stackIn_31_0 = null;
         int stackIn_31_1 = 0;
         int stackIn_31_2 = 0;
         int stackIn_33_3;
-        sj stackIn_42_0 = null;
+        LetterTile stackIn_42_0 = null;
         int stackIn_44_1 = 0;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        sj var4 = null;
+        LetterTile var4 = null;
         int var5 = 0;
-        sj var4Lifetime1;
-        sj var4Lifetime1Lifetime1;
+        LetterTile var4Lifetime1;
+        LetterTile var4Lifetime1Lifetime1;
         int var3Lifetime1;
         int var3Lifetime1Lifetime1;
         var5 = Transmogrify.field_A ? 1 : 0;
@@ -60,17 +60,17 @@ final class ua {
             wl.field_K.field_m + 114 > bk.field_a) {
             var1_int = (-34 + oa.field_j) / wl.field_K.field_n;
           }
-          if (od.field_g.field_e[11] != null) {
+          if (od.submissionRack.tiles[11] != null) {
             var1_int = 12;
           }
-          if (od.field_g == sg.field_d.field_o) {
-            stackIn_12_0 = sg.field_d.field_t;
+          if (od.submissionRack == sg.field_d.rack) {
+            stackIn_12_0 = sg.field_d.slot;
           } else {
             stackIn_12_0 = 12;
           }
           var2 = stackIn_12_0;
           for (var3 = 0; var3 < 12; var3++) {
-            var4 = od.field_g.field_e[var3];
+            var4 = od.submissionRack.tiles[var3];
             if (var4 != null) {
               stackIn_17_0 = var4;
               if (var1_int > var3) {
@@ -85,7 +85,7 @@ final class ua {
               } else {
                 stackIn_21_3 = -32;
               }
-              stackIn_17_0.field_g = stackIn_20_1 + (stackIn_20_2 + stackIn_21_3);
+              stackIn_17_0.destinationX = stackIn_20_1 + (stackIn_20_2 + stackIn_21_3);
               continue;
             }
             break;
@@ -97,7 +97,7 @@ final class ua {
           boolean decompiledFrameCompleted0 = true;
           if (var2 > var1_int) {
             for (var3Lifetime1 = 0; var3Lifetime1 < 12; var3Lifetime1++) {
-              var4Lifetime1 = od.field_g.field_e[var3Lifetime1];
+              var4Lifetime1 = od.submissionRack.tiles[var3Lifetime1];
               if (var4Lifetime1 == null) {
                 decompiledFrameCompleted0 = false;
                 break;
@@ -109,14 +109,14 @@ final class ua {
               } else {
                 stackIn_44_1 = 0;
               }
-              stackIn_42_0.field_g = stackIn_44_1 + (34 + 32 * var3Lifetime1);
+              stackIn_42_0.destinationX = stackIn_44_1 + (34 + 32 * var3Lifetime1);
             }
             decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
           }
           if ((decompiledFrameRemainder0) &&
             (decompiledFrameCompleted0)) {
             for (var3Lifetime1Lifetime1 = 0; 12 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
-              var4Lifetime1Lifetime1 = od.field_g.field_e[var3Lifetime1Lifetime1];
+              var4Lifetime1Lifetime1 = od.submissionRack.tiles[var3Lifetime1Lifetime1];
               if (var4Lifetime1Lifetime1 == null) {
                 break;
               }
@@ -129,18 +129,18 @@ final class ua {
               } else {
                 stackIn_33_3 = 0;
               }
-              stackIn_31_0.field_g = stackIn_31_1 + (stackIn_31_2 + stackIn_33_3);
+              stackIn_31_0.destinationX = stackIn_31_1 + (stackIn_31_2 + stackIn_33_3);
             }
           }
           if (sg.field_d != null) {
-            sg.field_d.field_j = oa.field_j + rk.field_p;
-            sg.field_d.field_q = bk.field_a + ek.field_e;
-            if (sg.field_d.field_j != sg.field_d.field_g ||
-              sg.field_d.field_q != sg.field_d.field_p) {
+            sg.field_d.x = oa.field_j + rk.field_p;
+            sg.field_d.y = bk.field_a + ek.field_e;
+            if (sg.field_d.x != sg.field_d.destinationX ||
+              sg.field_d.y != sg.field_d.destinationY) {
               nc.field_s = null;
             }
-            sg.field_d.field_p = sg.field_d.field_q;
-            sg.field_d.field_g = sg.field_d.field_j;
+            sg.field_d.destinationY = sg.field_d.y;
+            sg.field_d.destinationX = sg.field_d.x;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -233,7 +233,7 @@ final class ua {
         }
     }
 
-    final static void a(int param0, fe param1, int param2, oa param3) {
+    final static void a(int param0, PlatformTaskDispatcher param1, int param2, oa param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -275,11 +275,11 @@ final class ua {
             var18 = new ba();
             var18.field_p = param3.d((byte) 101);
             var18.field_i = param3.c((byte) -127);
-            var18.field_o = new ib[var18.field_p];
+            var18.field_o = new PlatformTask[var18.field_p];
             var18.field_j = new int[var18.field_p];
             var18.field_k = new int[var18.field_p];
             var18.field_h = new int[var18.field_p];
-            var18.field_m = new ib[var18.field_p];
+            var18.field_m = new PlatformTask[var18.field_p];
             var18.field_g = new byte[var18.field_p][][];
             for (var5 = 0; var18.field_p > var5; var5++) {
               try {
@@ -379,7 +379,7 @@ final class ua {
     }
 
     static {
-        field_a = new String[]{"mummy", "skeleton", "pumpkin", "vampire"};
+        bonusWords = new String[]{"mummy", "skeleton", "pumpkin", "vampire"};
         field_b = "As you are under 13, we won't save your email address on our systems. Your email address will still be used to log in, but you won't recieve any emails from Jagex. For more information, please check the relevant parts of our <%0><hotspot=0>Terms and Conditions</hotspot><%1> and <%0><hotspot=1>Privacy Policy</hotspot><%1>.";
     }
 }

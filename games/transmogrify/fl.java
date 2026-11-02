@@ -76,8 +76,8 @@ final class fl {
           this.field_f = 0;
           return this.a(71);
         }
-        ag var3 = (ag) null;
-        fl.a((ag) null, 122, -2);
+        PcmStream var3 = (PcmStream) null;
+        fl.a((PcmStream) null, 122, -2);
         this.field_f = 0;
         return this.a(71);
     }
@@ -100,7 +100,7 @@ final class fl {
         }
     }
 
-    final static nd a(ag param0, int param1, int param2) {
+    final static nd a(PcmStream param0, int param1, int param2) {
         RuntimeException var3 = null;
         nd stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

@@ -3,16 +3,16 @@
  */
 import java.io.*;
 
-final class gj implements Runnable {
+final class BufferedSocket implements Runnable {
     private int field_o;
     private boolean field_i;
-    private ib field_b;
+    private PlatformTask field_b;
     private int field_n;
     private OutputStream field_k;
     static java.awt.Color field_a;
     private byte[] field_h;
     private boolean field_e;
-    private fe field_c;
+    private PlatformTaskDispatcher field_c;
     private int field_g;
     private java.net.Socket field_m;
     private InputStream field_d;
@@ -82,7 +82,7 @@ final class gj implements Runnable {
         }
     }
 
-    gj(java.net.Socket param0, fe param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -256,7 +256,7 @@ final class gj implements Runnable {
     final static void a(boolean param0, int param1) {
         IntrusiveNode.a(-1);
         if (!param0) {
-          gj.b(-59);
+          BufferedSocket.b(-59);
         }
     }
 
@@ -318,7 +318,7 @@ final class gj implements Runnable {
     final static void e(int param0) {
         if (param0 != 0) {
           String var2 = (String) null;
-          gj.a((byte) -24, (String) null, true);
+          BufferedSocket.a((byte) -24, (String) null, true);
         }
         ha.field_a = null;
         hk.field_c = null;
@@ -442,7 +442,7 @@ final class gj implements Runnable {
 
     final static String a(int param0) {
         if (param0 > -100) {
-          gj.a(false, 74);
+          BufferedSocket.a(false, 74);
         }
         if (NodeHashTableIterator.field_a == null) {
           return "";
@@ -551,7 +551,7 @@ final class gj implements Runnable {
         return this.field_d.available();
     }
 
-    private gj(java.net.Socket param0, fe param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_i = false;
         this.field_n = 0;
         this.field_e = false;

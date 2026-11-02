@@ -3,63 +3,63 @@
  */
 import java.util.*;
 
-final class j {
+final class TileRack {
     static int field_b;
     static String field_a;
-    int field_c;
-    int field_d;
-    sj[] field_e;
+    int originY;
+    int originX;
+    LetterTile[] tiles;
 
     public static void a(byte param0) {
         field_a = null;
         if (param0 > -117) {
-          j.a((byte) 18);
+          TileRack.a((byte) 18);
         }
     }
 
-    final void a(int param0) {
+    final void shuffle(int param0) {
         int incrementValue$1 = 0;
         int var2;
         int var3;
-        sj var4;
+        LetterTile var4;
         int var5;
         int var2Lifetime1;
         var5 = Transmogrify.field_A ? 1 : 0;
         if (param0 != -10874) {
           field_a = (String) null;
         }
-        var2 = this.field_e.length;
+        var2 = this.tiles.length;
         while (var2 > 1) {
           incrementValue$1 = var2;
           var2--;
           var3 = li.a(incrementValue$1, o.field_o, false);
-          var4 = this.field_e[var3];
-          this.field_e[var3] = this.field_e[var2];
-          this.field_e[var2] = var4;
+          var4 = this.tiles[var3];
+          this.tiles[var3] = this.tiles[var2];
+          this.tiles[var2] = var4;
         }
-        for (var2Lifetime1 = 0; var2Lifetime1 < this.field_e.length; var2Lifetime1++) {
-          if (this.field_e[var2Lifetime1] != null) {
-            this.field_e[var2Lifetime1].field_t = var2Lifetime1;
-            this.field_e[var2Lifetime1].field_g = var2Lifetime1 * 32 + this.field_d;
-            if (this.field_e[var2Lifetime1].field_k == this) {
-              this.field_e[var2Lifetime1].field_s = var2Lifetime1;
+        for (var2Lifetime1 = 0; var2Lifetime1 < this.tiles.length; var2Lifetime1++) {
+          if (this.tiles[var2Lifetime1] != null) {
+            this.tiles[var2Lifetime1].slot = var2Lifetime1;
+            this.tiles[var2Lifetime1].destinationX = var2Lifetime1 * 32 + this.originX;
+            if (this.tiles[var2Lifetime1].previousRack == this) {
+              this.tiles[var2Lifetime1].previousSlot = var2Lifetime1;
             }
           }
         }
     }
 
-    final void a(boolean param0) {
+    final void clear(boolean param0) {
         int var2;
         int var3;
         var3 = Transmogrify.field_A ? 1 : 0;
         var2 = 0;
         if (!param0) {
-          this.a(false);
+          this.clear(false);
         }
-        while (this.field_e.length > var2) {
-          if (this.field_e[var2] != null) {
-            this.field_e[var2].d(1);
-            this.field_e[var2] = null;
+        while (this.tiles.length > var2) {
+          if (this.tiles[var2] != null) {
+            this.tiles[var2].d(1);
+            this.tiles[var2] = null;
           }
           var2++;
         }
@@ -77,29 +77,29 @@ final class j {
         int[][] var6 = null;
         RuntimeException var6_ref = null;
         int[] var8 = null;
-        sj[] var9 = null;
-        sj var11 = null;
+        LetterTile[] var9 = null;
+        LetterTile var11 = null;
         int var12 = 0;
         int[][] var13 = null;
         var12 = Transmogrify.field_A ? 1 : 0;
         try {
           sb.a(nc.field_p);
           if (param2 != 3) {
-            this.a(false);
+            this.clear(false);
           }
           var13 = param3;
           var6 = var13;
           for (var7 = 0; var13.length > var7; var7++) {
             var8 = var13[var7];
             sb.g(var8[0], var8[1], var8[2], var8[3]);
-            var9 = this.field_e;
+            var9 = this.tiles;
             for (var10 = 0; var9.length > var10; var10++) {
               var11 = var9[var10];
               if (var11 != null) {
                 stackIn_13_0 = param0;
-                stackIn_14_1 = (var11.field_g == var11.field_j) && (var11.field_q == var11.field_p);
+                stackIn_14_1 = (var11.destinationX == var11.x) && (var11.y == var11.destinationY);
                 if (stackIn_13_0 ^ stackIn_14_1) {
-                  var11.a(param1, param4, param2 - 2, 0);
+                  var11.draw(param1, param4, param2 - 2, 0);
                 }
               }
             }
@@ -120,10 +120,10 @@ final class j {
         }
     }
 
-    j(int param0, int param1, int param2) {
-        this.field_c = param2;
-        this.field_d = param1;
-        this.field_e = new sj[param0];
+    TileRack(int param0, int param1, int param2) {
+        this.originY = param2;
+        this.originX = param1;
+        this.tiles = new LetterTile[param0];
     }
 
     static {

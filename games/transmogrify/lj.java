@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-class lj extends qg {
+class lj extends UiWidget {
     private boolean field_v;
-    static bb field_u;
+    static PcmSampleStream field_u;
     boolean field_t;
     static double field_x;
     static hi field_z;
@@ -62,7 +62,7 @@ class lj extends qg {
         field_u = null;
     }
 
-    boolean a(qg param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -75,7 +75,7 @@ class lj extends qg {
             this.field_w = true;
             if (this.field_m != null &&
               this.field_m instanceof la) {
-              ((la) (this.field_m)).a((qg) (this), (byte) -73, this.field_w);
+              ((la) (this.field_m)).a((UiWidget) (this), (byte) -73, this.field_w);
             }
             if (param1 < -11) {
               return true;
@@ -103,7 +103,7 @@ class lj extends qg {
         tb.a(ha.b(119), true);
     }
 
-    lj(String param0, ui param1, ma param2) {
+    lj(String param0, WidgetListener param1, ma param2) {
         super(param0, param1, param2);
         this.field_t = true;
         this.field_w = false;
@@ -114,7 +114,7 @@ class lj extends qg {
         this(param0, IterableNodeHashTable.field_e.field_d, param1);
     }
 
-    boolean a(int param0, qg param1, byte param2, char param3) {
+    boolean a(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -200,7 +200,7 @@ class lj extends qg {
         }
     }
 
-    void a(int param0, byte param1, qg param2, int param3) {
+    void a(int param0, byte param1, UiWidget param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
           if (0 != this.field_s) {
@@ -218,7 +218,7 @@ class lj extends qg {
         }
     }
 
-    boolean b(int param0, int param1, qg param2, int param3, int param4, int param5, int param6) {
+    boolean b(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -259,7 +259,7 @@ class lj extends qg {
         return this.field_w;
     }
 
-    final void a(int param0, int param1, qg param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           if (param3 != -1) {
             lj.d((byte) 20);
@@ -291,7 +291,7 @@ class lj extends qg {
           return;
         }
         if (this.field_m instanceof la) {
-          ((la) (this.field_m)).a((qg) (this), (byte) -42, this.field_w);
+          ((la) (this.field_m)).a((UiWidget) (this), (byte) -42, this.field_w);
           if (param0 == -29113) {
             return;
           }

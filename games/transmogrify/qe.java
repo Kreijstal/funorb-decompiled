@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qe extends qg {
+final class qe extends UiWidget {
     private ti field_y;
     static String field_H;
     private ti field_C;
@@ -105,7 +105,7 @@ final class qe extends qg {
         return var14;
     }
 
-    final void a(int param0, byte param1, qg param2, int param3) {
+    final void a(int param0, byte param1, UiWidget param2, int param3) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;

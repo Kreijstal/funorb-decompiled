@@ -80,7 +80,7 @@ final class bc {
             for (var6 = 0; var6 < var3; var6++) {
               var10[var6] = rg.field_D[vg.c(255, (int) var21[var6])];
             }
-            var1[var2] = new ti(pj.field_y, ll.field_U, gj.field_j[var2], re.field_a[var2], ql.field_b[var2], wk.field_b[var2], var22);
+            var1[var2] = new ti(pj.field_y, ll.field_U, BufferedSocket.field_j[var2], re.field_a[var2], ql.field_b[var2], wk.field_b[var2], var22);
           } else {
             var16 = ld.field_e[var2];
             var12 = var16;
@@ -92,7 +92,7 @@ final class bc {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = cl.b(rg.field_D[vg.c((int) var21[var7], 255)], vg.c(var16[var7] << 24, -16777216));
             }
-            var1[var2] = (ti) ((Object) new jf(pj.field_y, ll.field_U, gj.field_j[var2], re.field_a[var2], ql.field_b[var2], wk.field_b[var2], var17));
+            var1[var2] = (ti) ((Object) new jf(pj.field_y, ll.field_U, BufferedSocket.field_j[var2], re.field_a[var2], ql.field_b[var2], wk.field_b[var2], var17));
           }
         }
         wd.d(127);

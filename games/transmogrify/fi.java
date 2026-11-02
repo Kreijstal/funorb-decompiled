@@ -3,16 +3,16 @@
  */
 import java.util.*;
 
-abstract class fi extends qg implements pb {
+abstract class fi extends UiWidget implements pb {
     static int field_x;
     static sh field_w;
-    qg field_v;
+    UiWidget field_v;
     static int[] field_t;
     static rc field_u;
 
-    boolean b(int param0, int param1, qg param2, int param3, int param4, int param5, int param6) {
+    boolean b(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
-        qg var9 = null;
+        UiWidget var9 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -20,8 +20,8 @@ abstract class fi extends qg implements pb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 != -30386) {
-            var9 = (qg) null;
-            this.b(113, -82, (qg) null, -14, -67, 9, 85);
+            var9 = (UiWidget) null;
+            this.b(113, -82, (UiWidget) null, -14, -67, 9, 85);
           }
           stackIn_6_0 = (this.field_v != null) && (this.field_v.b(param0, param1, param2, param3 + this.field_p, -30386, param5, this.field_n + param6));
           return stackIn_6_0;
@@ -39,7 +39,7 @@ abstract class fi extends qg implements pb {
         }
     }
 
-    fi(int param0, int param1, int param2, int param3, ui param4, ma param5) {
+    fi(int param0, int param1, int param2, int param3, WidgetListener param4, ma param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
@@ -51,7 +51,7 @@ abstract class fi extends qg implements pb {
         this.field_v.c((byte) 85);
     }
 
-    private final boolean b(qg param0, int param1) {
+    private final boolean b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -133,7 +133,7 @@ abstract class fi extends qg implements pb {
         int var6 = 67 % ((-29 - param0) / 53);
     }
 
-    final boolean a(int param0, int param1, qg param2, int param3, int param4, int param5, int param6) {
+    final boolean a(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -213,8 +213,8 @@ abstract class fi extends qg implements pb {
 
     final void e(int param0) {
         if (param0 != -29113) {
-          qg var3 = (qg) null;
-          this.a(101, (byte) 111, (qg) null, 40);
+          UiWidget var3 = (UiWidget) null;
+          this.a(101, (byte) 111, (UiWidget) null, 40);
           if (this.field_v != null) {
             this.field_v.e(-29113);
             return;
@@ -227,7 +227,7 @@ abstract class fi extends qg implements pb {
         }
     }
 
-    final boolean a(qg param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -312,7 +312,7 @@ abstract class fi extends qg implements pb {
         }
     }
 
-    final boolean a(int param0, qg param1, byte param2, char param3) {
+    final boolean a(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_10_0 = false;
@@ -406,7 +406,7 @@ abstract class fi extends qg implements pb {
         return this.d((byte) 104) != null ? true : false;
     }
 
-    void a(int param0, int param1, qg param2, int param3, int param4, int param5) {
+    void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         RuntimeException var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -448,13 +448,13 @@ abstract class fi extends qg implements pb {
         rh.field_n = rh.field_n | var3;
         hc.field_u = hc.field_u | var3;
         oj.field_u.a(new pi(param2), -99);
-        if (qj.b((byte) 78)) {
+        if (IntrusiveDeque.b((byte) 78)) {
           rh.field_n = rh.field_n | var3;
         }
         if (dk.field_b) {
           return true;
         }
-        if (!qj.b((byte) 74)) {
+        if (!IntrusiveDeque.b((byte) 74)) {
           nh.a(jk.field_B, ud.field_b, param1, nc.field_t, param2, gh.field_l, 4, 75);
           return true;
         }
@@ -462,7 +462,7 @@ abstract class fi extends qg implements pb {
         return true;
     }
 
-    void a(int param0, byte param1, qg param2, int param3) {
+    void a(int param0, byte param1, UiWidget param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
           if (null != this.field_v) {
@@ -473,7 +473,7 @@ abstract class fi extends qg implements pb {
         }
     }
 
-    private final boolean a(qg param0, byte param1) {
+    private final boolean a(UiWidget param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_5_0 = false;
@@ -499,9 +499,9 @@ abstract class fi extends qg implements pb {
         }
     }
 
-    qg d(byte param0) {
+    UiWidget d(byte param0) {
         int var2 = 47 / ((51 - param0) / 48);
-        qg var3 = this.field_v;
+        UiWidget var3 = this.field_v;
         if (var3 == null) {
           return null;
         }
@@ -523,7 +523,7 @@ abstract class fi extends qg implements pb {
           return;
         }
         if (null != this.field_q) {
-          this.field_q.a(param0, param1, true, (byte) 99, (qg) (this));
+          this.field_q.a(param0, param1, true, (byte) 99, (UiWidget) (this));
           if (null != this.field_v) {
             this.field_v.a(this.field_p + param0, param1 + this.field_n, param2, (byte) 112);
           }

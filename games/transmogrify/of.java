@@ -39,7 +39,7 @@ final class of {
         de.field_c[18] = ob.field_M;
         de.field_c[2] = dl.field_m;
         de.field_c[9] = se.field_q;
-        de.field_c[7] = he.field_h;
+        de.field_c[7] = he.endGameLabel;
         de.field_c[14] = aa.field_h;
         de.field_c[1] = IntrusiveNode.field_e;
         de.field_c[param0] = i.field_e;

@@ -19,8 +19,8 @@ final class ki extends h {
         return si.field_l > 250 ? true : false;
     }
 
-    public final void a(int param0, int param1, boolean param2, byte param3, qg param4) {
-        qg stackIn_3_0 = null;
+    public final void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -38,7 +38,7 @@ final class ki extends h {
           if (!(param4 instanceof lj)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (qg) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           }
           var10 = (lj) (stackIn_3_0);
           c.a(param4.field_p + (param0 + param4.field_l), param4.field_p + param0, (byte) -50, param4.field_n + (param1 + param4.field_h), param4.field_n + param1);

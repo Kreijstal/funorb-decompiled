@@ -11,7 +11,7 @@ final class ob extends le {
     private ti field_H;
     static String field_F;
 
-    final void a(int param0, byte param1, qg param2, int param3) {
+    final void a(int param0, byte param1, UiWidget param2, int param3) {
         try {
           this.field_K = this.field_K + 1;
           super.a(param0, param1, param2, param3);
@@ -72,10 +72,10 @@ final class ob extends le {
         var6Lifetime1 = this.field_L.a(27835);
         var9 = (m) ((Object) this.field_q);
         var10 = param0 + this.field_p;
-        var11 = var9.a((qg) (this), 68, param1) + (var9.a((qg) (this), -2).a(126) >> 1);
+        var11 = var9.a((UiWidget) (this), 68, param1) + (var9.a((UiWidget) (this), -2).a(126) >> 1);
         if (ek.field_a != var6Lifetime1 &&
           fi.field_u != var6Lifetime1) {
-          if (ec.field_d == var6Lifetime1) {
+          if (SocketConnector.field_d == var6Lifetime1) {
             var16 = ai.field_b[2];
             var16.c(var10, var11 - (var16.field_m >> 1), 256);
           } else if (hi.field_b == var6Lifetime1) {
@@ -112,7 +112,7 @@ final class ob extends le {
         }
     }
 
-    final static void a(int param0, int param1, sj param2, int param3) {
+    final static void a(int param0, int param1, LetterTile param2, int param3) {
         int var6 = 0;
         int var9 = 0;
         int incrementValue$0 = 0;
@@ -138,7 +138,7 @@ final class ob extends le {
           }
           tj.field_s.e();
           sb.c();
-          param2.a(param3, -param2.field_q, 1, -param2.field_j);
+          param2.draw(param3, -param2.y, 1, -param2.x);
           var11 = ue.field_c[param1];
           var12 = var11;
           var11.field_j[0] = 0;
@@ -177,7 +177,7 @@ final class ob extends le {
         }
     }
 
-    final boolean a(qg param0, int param1) {
+    final boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -267,7 +267,7 @@ final class ob extends le {
 
     final static void l(int param0) {
         int var1 = -55 / ((16 - param0) / 35);
-        SecondaryNodeDequeIterator.field_f = new qj();
+        SecondaryNodeDequeIterator.field_f = new IntrusiveDeque();
     }
 
     static {

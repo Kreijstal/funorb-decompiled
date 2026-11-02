@@ -10,12 +10,12 @@ final class gl extends fi {
     int field_A;
 
     public gl() {
-        super(0, 0, 0, 0, (ui) null, (ma) null);
+        super(0, 0, 0, 0, (WidgetListener) null, (ma) null);
         this.field_A = 256;
     }
 
-    gl(qg param0) {
-        super(param0.field_p, param0.field_n, param0.field_l, param0.field_h, (ui) null, (ma) null);
+    gl(UiWidget param0) {
+        super(param0.field_p, param0.field_n, param0.field_l, param0.field_h, (WidgetListener) null, (ma) null);
         try {
           param0.a(-128, 0, 0, this.field_l, this.field_h);
           this.field_v = param0;

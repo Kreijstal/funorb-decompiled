@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pa implements ui {
+final class pa implements WidgetListener {
     private int field_i;
     private int field_j;
     private kg field_g;
@@ -13,7 +13,7 @@ final class pa implements ui {
     private int field_e;
     static String field_a;
 
-    public final void a(int param0, int param1, boolean param2, byte param3, qg param4) {
+    public final void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -23,7 +23,7 @@ final class pa implements ui {
         int var13 = 0;
         int var14 = 0;
         wh var15 = null;
-        qg stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -33,7 +33,7 @@ final class pa implements ui {
         int var13Lifetime1;
         try {
           if (param4 instanceof wh) {
-            stackIn_3_0 = (qg) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           } else {
             stackIn_3_0 = null;
           }

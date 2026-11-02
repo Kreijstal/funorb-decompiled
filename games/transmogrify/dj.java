@@ -90,7 +90,7 @@ abstract class dj {
         int var3;
         var3 = Transmogrify.field_A ? 1 : 0;
         if (wj.field_o <= 0) {
-          if (!qj.b((byte) 73)) {
+          if (!IntrusiveDeque.b((byte) 73)) {
             var2 = 1;
           } else {
             var2 = 0;

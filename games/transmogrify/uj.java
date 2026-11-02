@@ -11,7 +11,7 @@ final class uj {
     static int[] field_d;
     boolean field_f;
     int field_g;
-    static qj field_c;
+    static IntrusiveDeque field_c;
 
     final static ti[] a(int param0) {
         int var2 = 0;
@@ -28,7 +28,7 @@ final class uj {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = rg.field_D[vg.c((int) var4[var6], 255)];
           }
-          var1[var2] = new ti(pj.field_y, ll.field_U, gj.field_j[var2], re.field_a[var2], ql.field_b[var2], wk.field_b[var2], var5);
+          var1[var2] = new ti(pj.field_y, ll.field_U, BufferedSocket.field_j[var2], re.field_a[var2], ql.field_b[var2], wk.field_b[var2], var5);
         }
         wd.d(-9);
         if (param0 == 31151) {
@@ -58,6 +58,6 @@ final class uj {
 
     static {
         field_i = -1;
-        field_c = new qj();
+        field_c = new IntrusiveDeque();
     }
 }

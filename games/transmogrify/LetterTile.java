@@ -3,30 +3,30 @@
  */
 import java.util.*;
 
-final class sj extends IntrusiveNode {
+final class LetterTile extends IntrusiveNode {
     static String[] field_w;
-    int field_v;
+    int baseValue;
     int field_l;
-    j field_k;
-    int field_h;
-    int field_q;
+    TileRack previousRack;
+    int carryoverFlag;
+    int y;
     static wb field_u;
     boolean field_x;
-    j field_o;
-    int field_t;
-    int field_p;
-    int field_j;
-    int field_s;
+    TileRack rack;
+    int slot;
+    int destinationY;
+    int x;
+    int previousSlot;
     static String field_r;
     nf field_n;
-    int field_g;
+    int destinationX;
     static long field_m;
-    char field_i;
+    char letter;
 
     public static void b(byte param0) {
         field_r = null;
         if (param0 != -15) {
-          sj.e(91);
+          LetterTile.e(91);
           field_w = null;
           field_u = null;
           return;
@@ -35,7 +35,7 @@ final class sj extends IntrusiveNode {
         field_u = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void draw(int param0, int param1, int param2, int param3) {
         String var14 = null;
         String var12 = null;
         int var6 = 0;
@@ -53,10 +53,10 @@ final class sj extends IntrusiveNode {
         int var9Lifetime2;
         int var10Lifetime1;
         int var10Lifetime2;
-        wl.field_K.b(param3 + this.field_j, param1 + this.field_q, ff.field_H[this.field_h]);
+        wl.field_K.b(param3 + this.x, param1 + this.y, ff.field_H[this.carryoverFlag]);
         if (!this.field_x) {
-          var14 = Integer.toString(this.field_v + (this.field_h << 1));
-          var6 = this.field_n.field_c.a(this.field_i);
+          var14 = Integer.toString(this.baseValue + (this.carryoverFlag << 1));
+          var6 = this.field_n.field_c.a(this.letter);
           var7 = hk.field_a.a(var14);
           var8 = -var7 + 31;
           var9 = var8 - var6;
@@ -68,17 +68,17 @@ final class sj extends IntrusiveNode {
           if (var9 < 1) {
             var9 = 1;
           }
-          this.field_n.field_c.a(this.field_i, var9 + (this.field_j + param3), param1 + this.field_n.field_c.field_D + this.field_q + 8, param2);
-          hk.field_a.b(var14, param3 + this.field_j + var8, param1 + 28 + this.field_q, 1, -1);
+          this.field_n.field_c.a(this.letter, var9 + (this.x + param3), param1 + this.field_n.field_c.field_D + this.y + 8, param2);
+          hk.field_a.b(var14, param3 + this.x + var8, param1 + 28 + this.y, 1, -1);
           return;
         }
         param0 = param0 >> 3;
         if ((param0 & 31) == 31) {
-          wl.field_K.b(this.field_j + param3, this.field_q + param1, 10539762);
+          wl.field_K.b(this.x + param3, this.y + param1, 10539762);
         } else {
-          MouseWheelInput.field_a[param0 % MouseWheelInput.field_a.length].c(this.field_j + param3, param1 + this.field_q);
-          var12 = Integer.toString(this.field_v + (this.field_h << 1));
-          var6Lifetime1 = this.field_n.field_c.a(this.field_i);
+          MouseWheelInput.field_a[param0 % MouseWheelInput.field_a.length].c(this.x + param3, param1 + this.y);
+          var12 = Integer.toString(this.baseValue + (this.carryoverFlag << 1));
+          var6Lifetime1 = this.field_n.field_c.a(this.letter);
           var7Lifetime1 = hk.field_a.a(var12);
           var8Lifetime1 = -var7Lifetime1 + 31;
           var9Lifetime1 = var8Lifetime1 - var6Lifetime1;
@@ -90,13 +90,13 @@ final class sj extends IntrusiveNode {
           if (var9Lifetime1 < 1) {
             var9Lifetime1 = 1;
           }
-          this.field_n.field_c.a(this.field_i, var9Lifetime1 + (this.field_j + param3), param1 + this.field_n.field_c.field_D + this.field_q + 8, param2);
-          hk.field_a.b(var12, param3 + this.field_j + var8Lifetime1, param1 + 28 + this.field_q, 1, -1);
+          this.field_n.field_c.a(this.letter, var9Lifetime1 + (this.x + param3), param1 + this.field_n.field_c.field_D + this.y + 8, param2);
+          hk.field_a.b(var12, param3 + this.x + var8Lifetime1, param1 + 28 + this.y, 1, -1);
           return;
         }
-        MouseWheelInput.field_a[param0 % MouseWheelInput.field_a.length].c(this.field_j + param3, param1 + this.field_q);
-        String var13 = Integer.toString(this.field_v + (this.field_h << 1));
-        var6Lifetime2 = this.field_n.field_c.a(this.field_i);
+        MouseWheelInput.field_a[param0 % MouseWheelInput.field_a.length].c(this.x + param3, param1 + this.y);
+        String var13 = Integer.toString(this.baseValue + (this.carryoverFlag << 1));
+        var6Lifetime2 = this.field_n.field_c.a(this.letter);
         var7Lifetime2 = hk.field_a.a(var13);
         var8Lifetime2 = -var7Lifetime2 + 31;
         var9Lifetime2 = var8Lifetime2 - var6Lifetime2;
@@ -108,33 +108,33 @@ final class sj extends IntrusiveNode {
         if (var9Lifetime2 < 1) {
           var9Lifetime2 = 1;
         }
-        this.field_n.field_c.a(this.field_i, var9Lifetime2 + (this.field_j + param3), param1 + this.field_n.field_c.field_D + this.field_q + 8, param2);
-        hk.field_a.b(var13, param3 + this.field_j + var8Lifetime2, param1 + 28 + this.field_q, 1, -1);
+        this.field_n.field_c.a(this.letter, var9Lifetime2 + (this.x + param3), param1 + this.field_n.field_c.field_D + this.y + 8, param2);
+        hk.field_a.b(var13, param3 + this.x + var8Lifetime2, param1 + 28 + this.y, 1, -1);
     }
 
-    final void a(int param0, int param1, j param2) {
+    final void moveToRack(int param0, int param1, TileRack param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_o.field_e[this.field_t] == this) {
-            this.field_o.field_e[this.field_t] = null;
+          if (this.rack.tiles[this.slot] == this) {
+            this.rack.tiles[this.slot] = null;
           }
-          if (od.field_g != this.field_o) {
-            this.field_k = this.field_o;
-            this.field_s = this.field_t;
+          if (od.submissionRack != this.rack) {
+            this.previousRack = this.rack;
+            this.previousSlot = this.slot;
           }
-          this.field_t = param0;
-          this.field_o = param2;
-          this.field_o.field_e[this.field_t] = this;
-          this.field_p = param2.field_c;
-          this.field_g = 32 * param0 + param2.field_d;
+          this.slot = param0;
+          this.rack = param2;
+          this.rack.tiles[this.slot] = this;
+          this.destinationY = param2.originY;
+          this.destinationX = 32 * param0 + param2.originX;
           if (param1 == 28) {
             return;
           }
-          this.a(-53, -35, -125, 103);
+          this.draw(-53, -35, -125, 103);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -167,103 +167,103 @@ final class sj extends IntrusiveNode {
         double var3Lifetime3;
         int var2Lifetime3;
         if (param0 != 75) {
-          this.field_o = (j) null;
-          if (this.field_j != this.field_g) {
-            var2 = (-this.field_j + this.field_g) * (-this.field_j + this.field_g) + (this.field_p - this.field_q) * (this.field_p - this.field_q);
+          this.rack = (TileRack) null;
+          if (this.x != this.destinationX) {
+            var2 = (-this.x + this.destinationX) * (-this.x + this.destinationX) + (this.destinationY - this.y) * (this.destinationY - this.y);
             if (var2 > 144) {
               var3 = 12.0 / Math.sqrt((double)var2);
-              this.field_j = this.field_j + (int)((double)(-this.field_j + this.field_g) * var3);
-              this.field_q = this.field_q + (int)((double)(-this.field_q + this.field_p) * var3);
+              this.x = this.x + (int)((double)(-this.x + this.destinationX) * var3);
+              this.y = this.y + (int)((double)(-this.y + this.destinationY) * var3);
             } else {
-              this.field_j = this.field_g;
-              this.field_q = this.field_p;
+              this.x = this.destinationX;
+              this.y = this.destinationY;
             }
-            if (this.field_j != this.field_g) {
+            if (this.x != this.destinationX) {
               return;
             }
-            if (this.field_q == this.field_p) {
+            if (this.y == this.destinationY) {
               vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
               return;
             }
             return;
           }
-          if (this.field_p == this.field_q) {
+          if (this.destinationY == this.y) {
             return;
           }
-          var2Lifetime3 = (-this.field_j + this.field_g) * (-this.field_j + this.field_g) + (this.field_p - this.field_q) * (this.field_p - this.field_q);
+          var2Lifetime3 = (-this.x + this.destinationX) * (-this.x + this.destinationX) + (this.destinationY - this.y) * (this.destinationY - this.y);
           if (var2Lifetime3 > 144) {
             var3Lifetime3 = 12.0 / Math.sqrt((double)var2Lifetime3);
-            this.field_j = this.field_j + (int)((double)(-this.field_j + this.field_g) * var3Lifetime3);
-            this.field_q = this.field_q + (int)((double)(-this.field_q + this.field_p) * var3Lifetime3);
-            if (this.field_j != this.field_g) {
+            this.x = this.x + (int)((double)(-this.x + this.destinationX) * var3Lifetime3);
+            this.y = this.y + (int)((double)(-this.y + this.destinationY) * var3Lifetime3);
+            if (this.x != this.destinationX) {
               return;
             }
-            if (this.field_q == this.field_p) {
+            if (this.y == this.destinationY) {
               vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
               return;
             }
             return;
           }
-          this.field_j = this.field_g;
-          this.field_q = this.field_p;
-          if (this.field_j != this.field_g) {
+          this.x = this.destinationX;
+          this.y = this.destinationY;
+          if (this.x != this.destinationX) {
             return;
           }
-          if (this.field_q == this.field_p) {
+          if (this.y == this.destinationY) {
             vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
             return;
           }
           return;
         }
-        if (this.field_j != this.field_g) {
-          var2Lifetime1 = (-this.field_j + this.field_g) * (-this.field_j + this.field_g) + (this.field_p - this.field_q) * (this.field_p - this.field_q);
+        if (this.x != this.destinationX) {
+          var2Lifetime1 = (-this.x + this.destinationX) * (-this.x + this.destinationX) + (this.destinationY - this.y) * (this.destinationY - this.y);
           if (var2Lifetime1 > 144) {
             var3Lifetime1 = 12.0 / Math.sqrt((double)var2Lifetime1);
-            this.field_j = this.field_j + (int)((double)(-this.field_j + this.field_g) * var3Lifetime1);
-            this.field_q = this.field_q + (int)((double)(-this.field_q + this.field_p) * var3Lifetime1);
-            if (this.field_j != this.field_g) {
+            this.x = this.x + (int)((double)(-this.x + this.destinationX) * var3Lifetime1);
+            this.y = this.y + (int)((double)(-this.y + this.destinationY) * var3Lifetime1);
+            if (this.x != this.destinationX) {
               return;
             }
-            if (this.field_q == this.field_p) {
+            if (this.y == this.destinationY) {
               vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
               return;
             }
             return;
           }
-          this.field_j = this.field_g;
-          this.field_q = this.field_p;
-          if (this.field_j != this.field_g) {
+          this.x = this.destinationX;
+          this.y = this.destinationY;
+          if (this.x != this.destinationX) {
             return;
           }
-          if (this.field_q != this.field_p) {
+          if (this.y != this.destinationY) {
             return;
           }
           vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
           return;
         }
-        if (this.field_p == this.field_q) {
+        if (this.destinationY == this.y) {
           return;
         }
-        var2Lifetime2 = (-this.field_j + this.field_g) * (-this.field_j + this.field_g) + (this.field_p - this.field_q) * (this.field_p - this.field_q);
+        var2Lifetime2 = (-this.x + this.destinationX) * (-this.x + this.destinationX) + (this.destinationY - this.y) * (this.destinationY - this.y);
         if (var2Lifetime2 > 144) {
           var3Lifetime2 = 12.0 / Math.sqrt((double)var2Lifetime2);
-          this.field_j = this.field_j + (int)((double)(-this.field_j + this.field_g) * var3Lifetime2);
-          this.field_q = this.field_q + (int)((double)(-this.field_q + this.field_p) * var3Lifetime2);
-          if (this.field_j != this.field_g) {
+          this.x = this.x + (int)((double)(-this.x + this.destinationX) * var3Lifetime2);
+          this.y = this.y + (int)((double)(-this.y + this.destinationY) * var3Lifetime2);
+          if (this.x != this.destinationX) {
             return;
           }
-          if (this.field_q == this.field_p) {
+          if (this.y == this.destinationY) {
             vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
             return;
           }
           return;
         }
-        this.field_j = this.field_g;
-        this.field_q = this.field_p;
-        if (this.field_j != this.field_g) {
+        this.x = this.destinationX;
+        this.y = this.destinationY;
+        if (this.x != this.destinationX) {
           return;
         }
-        if (this.field_q == this.field_p) {
+        if (this.y == this.destinationY) {
           vk.a((byte) 108, FullscreenFocusCanvas.field_d[3 + li.a(3, o.field_o, false)]);
           return;
         }
@@ -301,7 +301,7 @@ final class sj extends IntrusiveNode {
         return we.field_j.b(false);
     }
 
-    sj() {
+    LetterTile() {
     }
 
     static {

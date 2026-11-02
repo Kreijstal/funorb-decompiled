@@ -23,12 +23,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             } else {
               var2_int = -1;
             }
-            if (j.field_b >= 0 &&
+            if (TileRack.field_b >= 0 &&
               var2_int >= 0) {
-              se.field_p[j.field_b] = ~var2_int;
-              j.field_b = 127 & j.field_b + 1;
-              if (sc.field_a == j.field_b) {
-                j.field_b = -1;
+              se.field_p[TileRack.field_b] = ~var2_int;
+              TileRack.field_b = 127 & TileRack.field_b + 1;
+              if (sc.field_a == TileRack.field_b) {
+                TileRack.field_b = -1;
               }
             }
           }
@@ -73,7 +73,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
     public final synchronized void focusLost(java.awt.event.FocusEvent param0) {
         try {
           if (el.field_n != null) {
-            j.field_b = -1;
+            TileRack.field_b = -1;
           }
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "ce.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
@@ -127,12 +127,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             } else {
               var2_int = -1;
             }
-            if (j.field_b >= 0 &&
+            if (TileRack.field_b >= 0 &&
               var2_int >= 0) {
-              se.field_p[j.field_b] = var2_int;
-              j.field_b = j.field_b + 1 & 127;
-              if (j.field_b == sc.field_a) {
-                j.field_b = -1;
+              se.field_p[TileRack.field_b] = var2_int;
+              TileRack.field_b = TileRack.field_b + 1 & 127;
+              if (TileRack.field_b == sc.field_a) {
+                TileRack.field_b = -1;
               }
             }
             if (var2_int >= 0) {

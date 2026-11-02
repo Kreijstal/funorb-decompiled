@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek implements ui {
+final class ek implements WidgetListener {
     static int field_g;
     static int[] field_c;
     private kg field_f;
@@ -175,7 +175,7 @@ final class ek implements ui {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, byte param3, qg param4) {
+    public final void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;

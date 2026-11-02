@@ -297,8 +297,8 @@ final class cd implements Runnable {
         }
     }
 
-    cd(fe param0) {
-        ib var2 = null;
+    cd(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_c = new bk();
         this.field_d = false;
         this.field_e = 0;

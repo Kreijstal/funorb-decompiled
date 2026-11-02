@@ -4,7 +4,7 @@
 abstract class a extends bi {
     private int field_X;
     private wk field_W;
-    private qg field_V;
+    private UiWidget field_V;
     static al field_S;
     private int field_ab;
     static int[] field_T;
@@ -67,7 +67,7 @@ abstract class a extends bi {
         return super.m(0);
     }
 
-    a(da param0, qg param1, int param2, int param3, int param4) {
+    a(da param0, UiWidget param1, int param2, int param3, int param4) {
         super(param0, 12 + param1.field_l, param1.field_h + 12 + param2);
         try {
           this.field_U = param2;
@@ -80,7 +80,7 @@ abstract class a extends bi {
         }
     }
 
-    private final void a(byte param0, qg param1) {
+    private final void a(byte param0, UiWidget param1) {
         if (null != this.field_Z) {
           this.field_Z.c(5);
         }
@@ -94,7 +94,7 @@ abstract class a extends bi {
           } else {
             this.field_Z = new gl();
           }
-          this.a((qg) (this.field_Z), (byte) -88);
+          this.a((UiWidget) (this.field_Z), (byte) -88);
           this.field_V = null;
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "a.SB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -111,8 +111,8 @@ abstract class a extends bi {
         this.field_Z.field_A = 0;
         this.field_V = null;
         if (param0 != -2) {
-          qg var3 = (qg) null;
-          this.b(-120, (qg) null);
+          UiWidget var3 = (UiWidget) null;
+          this.b(-120, (UiWidget) null);
         }
     }
 
@@ -141,7 +141,7 @@ abstract class a extends bi {
         return super.a((byte) -97);
     }
 
-    void b(int param0, qg param1) {
+    void b(int param0, UiWidget param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
@@ -180,7 +180,7 @@ abstract class a extends bi {
         try {
           param1.removeKeyListener(el.field_n);
           param1.removeFocusListener(el.field_n);
-          j.field_b = -1;
+          TileRack.field_b = -1;
           if (param0 < 36) {
             field_S = (al) null;
           }
@@ -198,7 +198,7 @@ abstract class a extends bi {
         }
     }
 
-    boolean a(int param0, qg param1, byte param2, char param3) {
+    boolean a(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;

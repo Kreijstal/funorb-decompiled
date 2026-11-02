@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jc extends ag {
-    private qj field_n;
-    private qj field_m;
+final class jc extends PcmStream {
+    private IntrusiveDeque field_n;
+    private IntrusiveDeque field_m;
     private int field_l;
     private int field_k;
 
@@ -32,10 +32,10 @@ final class jc extends ag {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        ag var4 = (ag) (this.field_n.a((byte) -95));
+        PcmStream var4 = (PcmStream) (this.field_n.a((byte) -95));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (ag) (this.field_n.a(true));
+          var4 = (PcmStream) (this.field_n.a(true));
         }
     }
 
@@ -94,19 +94,19 @@ final class jc extends ag {
         return;
     }
 
-    final ag d() {
-        return (ag) (this.field_n.a((byte) -95));
+    final PcmStream d() {
+        return (PcmStream) (this.field_n.a((byte) -95));
     }
 
-    final synchronized void a(ag param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_n.a((IntrusiveNode) (param0), (byte) 33);
     }
 
     private final void e(int param0) {
-        ag var2 = (ag) (this.field_n.a((byte) -95));
+        PcmStream var2 = (PcmStream) (this.field_n.a((byte) -95));
         while (var2 != null) {
           var2.d(param0);
-          var2 = (ag) (this.field_n.a(true));
+          var2 = (PcmStream) (this.field_n.a(true));
         }
     }
 
@@ -148,8 +148,8 @@ final class jc extends ag {
         return;
     }
 
-    final ag a() {
-        return (ag) (this.field_n.a(true));
+    final PcmStream a() {
+        return (PcmStream) (this.field_n.a(true));
     }
 
     final int b() {
@@ -157,8 +157,8 @@ final class jc extends ag {
     }
 
     public jc() {
-        this.field_n = new qj();
-        this.field_m = new qj();
+        this.field_n = new IntrusiveDeque();
+        this.field_m = new IntrusiveDeque();
         this.field_l = 0;
         this.field_k = -1;
     }

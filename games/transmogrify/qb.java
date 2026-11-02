@@ -4,16 +4,16 @@
 import java.io.*;
 
 final class qb implements Runnable {
-    private ib field_d;
+    private PlatformTask field_d;
     static long field_k;
     private oa field_h;
     private DataInputStream field_g;
-    private ib field_e;
-    private ib field_j;
+    private PlatformTask field_e;
+    private PlatformTask field_j;
     private int field_c;
     static String[] field_f;
     static String field_a;
-    private fe field_i;
+    private PlatformTaskDispatcher field_i;
     private java.net.URL field_b;
 
     protected final void finalize() {
@@ -208,7 +208,7 @@ final class qb implements Runnable {
         }
     }
 
-    qb(fe param0, java.net.URL param1, int param2) {
+    qb(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_b = param1;
           this.field_i = param0;

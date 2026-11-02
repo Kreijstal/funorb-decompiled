@@ -29,7 +29,7 @@ final class ug {
           sh.field_c = null;
           return;
         }
-        if (qj.b((byte) 92)) {
+        if (IntrusiveDeque.b((byte) 92)) {
           sh.field_c = null;
           return;
         }

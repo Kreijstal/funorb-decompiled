@@ -5,7 +5,7 @@ import java.io.*;
 
 final class tj extends uh {
     static int[] field_w;
-    private gj field_x;
+    private BufferedSocket field_x;
     static String field_t;
     static String field_A;
     static int field_u;
@@ -257,7 +257,7 @@ final class tj extends uh {
               }
               this.field_x = null;
             }
-            this.field_x = (gj) (param1);
+            this.field_x = (BufferedSocket) (param1);
             this.a(false);
             this.a(3, param0);
             this.field_e = null;
@@ -385,7 +385,7 @@ final class tj extends uh {
     private final void a(boolean param0) {
         try {
           IOException iOException = null;
-          gj stackIn_10_0 = null;
+          BufferedSocket stackIn_10_0 = null;
           boolean stackIn_11_1 = false;
           Throwable decompiledCaughtException = null;
           Exception var3 = null;
@@ -407,7 +407,7 @@ final class tj extends uh {
             try {
               stackIn_10_0 = this.field_x;
               stackIn_11_1 = !(param0);
-              ((gj) (Object) stackIn_10_0).a(stackIn_11_1);
+              ((BufferedSocket) (Object) stackIn_10_0).a(stackIn_11_1);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;

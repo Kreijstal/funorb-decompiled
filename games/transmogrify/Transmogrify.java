@@ -77,19 +77,19 @@ public final class Transmogrify extends SessionGameApplet {
               }
               return;
             }
-            if (!qj.b((byte) 99)) {
+            if (!IntrusiveDeque.b((byte) 99)) {
               sh.field_c = pj.a(29, (byte) -76, 3, 10, 1);
             }
           }
           boolean decompiledFrameRemainder0 = true;
           if (!IterableNodeHashTable.field_h) {
-            gj.a(true, f.field_a);
+            BufferedSocket.a(true, f.field_a);
             if (this.a((byte) -96, true)) {
               this.n(32198);
               IterableNodeHashTable.field_h = true;
             }
           } else {
-            if (!qj.b((byte) 95) &&
+            if (!IntrusiveDeque.b((byte) 95) &&
               !ud.field_a &&
               lb.field_i != 2) {
               if (kb.field_n != null &&
@@ -164,7 +164,7 @@ public final class Transmogrify extends SessionGameApplet {
               }
             }
           }
-          if (!qj.b((byte) 122)) {
+          if (!IntrusiveDeque.b((byte) 122)) {
             while (true) {
               var5 = (gd) (mc.field_c.c(-128));
               if (var5 == null) {
@@ -173,7 +173,7 @@ public final class Transmogrify extends SessionGameApplet {
               te.a(var5, (byte) -10, 4);
             }
           }
-          while (gj.a(ek.field_c, (byte) 114)) {
+          while (BufferedSocket.a(ek.field_c, (byte) 114)) {
             this.g(-89);
           }
           rb.a(0, -377);
@@ -294,7 +294,7 @@ public final class Transmogrify extends SessionGameApplet {
           if (lb.field_i != 0) {
             if (1 != lb.field_i) {
               if (2 == lb.field_i) {
-                if (qj.b((byte) 104)) {
+                if (IntrusiveDeque.b((byte) 104)) {
                   be.field_q = hf.field_i;
                 } else {
                   kb.field_n = l.a((byte) 12, 4);
@@ -320,7 +320,7 @@ public final class Transmogrify extends SessionGameApplet {
                 if (ll.c(true)) {
                   ImageProducerRasterBuffer.d((byte) 91);
                 } else {
-                  qg.b(false);
+                  UiWidget.b(false);
                 }
                 lb.field_i = 2;
               }
@@ -437,7 +437,7 @@ public final class Transmogrify extends SessionGameApplet {
                   sh.field_c = null;
                 }
                 if (be.field_q == 5 &&
-                  qj.b((byte) 99)) {
+                  IntrusiveDeque.b((byte) 99)) {
                   rh.field_n = 0;
                   hc.field_u = 0;
                   mc.field_c.g(-1);
@@ -511,7 +511,7 @@ public final class Transmogrify extends SessionGameApplet {
             ng.a(false, (java.awt.Canvas) (var11));
             return;
           }
-          if (!qj.b((byte) 119) &&
+          if (!IntrusiveDeque.b((byte) 119) &&
             !ud.field_a) {
             ng.a(false, (java.awt.Canvas) (var11));
             return;
@@ -644,7 +644,7 @@ public final class Transmogrify extends SessionGameApplet {
         int var9_int = 0;
         int incrementValue$0 = 0;
         int incrementValue$2 = 0;
-        sj dupTemp$1 = null;
+        LetterTile dupTemp$1 = null;
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -653,18 +653,18 @@ public final class Transmogrify extends SessionGameApplet {
         ad[] var5 = null;
         int var6_int = 0;
         nf var6 = null;
-        sj var7 = null;
+        LetterTile var7 = null;
         int var7_int = 0;
-        sj var8 = null;
-        sj var9 = null;
+        LetterTile var8 = null;
+        LetterTile var9 = null;
         int var10 = 0;
         ti var12 = null;
         ti[] var13 = null;
         ti var14 = null;
         ad[] var15 = null;
         ad[] var16 = null;
-        sj var17 = null;
-        sj var18 = null;
+        LetterTile var17 = null;
+        LetterTile var18 = null;
         byte[] var21 = null;
         int var3_intLifetime1;
         int var3_intLifetime2;
@@ -731,7 +731,7 @@ public final class Transmogrify extends SessionGameApplet {
                             FullscreenFocusCanvas.field_d[5] = r.a(pc.field_a, "", "trans05_place_tile_3").a();
                             FullscreenFocusCanvas.field_d[6] = r.a(pc.field_a, "", "trans06_incorrect_letter").a();
                             FullscreenFocusCanvas.field_d[7] = r.a(pc.field_a, "", "trans07_popup_warning").a();
-                            lj.field_u = bb.a(FullscreenFocusCanvas.field_d[1], 100, 255);
+                            lj.field_u = PcmSampleStream.a(FullscreenFocusCanvas.field_d[1], 100, 255);
                             pc.field_a = null;
                             el.b(-6491);
                             return false;
@@ -767,9 +767,9 @@ public final class Transmogrify extends SessionGameApplet {
             FullscreenFocusCanvas.field_d[11] = ml.a(di.field_h, "", "trans15_crowd_cheer_short").b();
             var3_int = 95190;
             var4 = 275371;
-            FullscreenFocusCanvas.field_d[9] = ec.a(var4, 0, var3_int, FullscreenFocusCanvas.field_d[10]);
-            FullscreenFocusCanvas.field_d[8] = ec.a(FullscreenFocusCanvas.field_d[10].field_l.length, 0, var4, FullscreenFocusCanvas.field_d[10]);
-            FullscreenFocusCanvas.field_d[12] = ec.a(FullscreenFocusCanvas.field_d[10].field_l.length, 0, var3_int, FullscreenFocusCanvas.field_d[10]);
+            FullscreenFocusCanvas.field_d[9] = SocketConnector.a(var4, 0, var3_int, FullscreenFocusCanvas.field_d[10]);
+            FullscreenFocusCanvas.field_d[8] = SocketConnector.a(FullscreenFocusCanvas.field_d[10].field_l.length, 0, var4, FullscreenFocusCanvas.field_d[10]);
+            FullscreenFocusCanvas.field_d[12] = SocketConnector.a(FullscreenFocusCanvas.field_d[10].field_l.length, 0, var3_int, FullscreenFocusCanvas.field_d[10]);
             di.field_h = null;
             el.b(-6491);
             return false;
@@ -840,12 +840,12 @@ public final class Transmogrify extends SessionGameApplet {
             SecondaryNodeDeque.field_h = ContextualRuntimeException.a(oi.field_g, (byte) 125, "", "button_frame");
             eh.field_c = ContextualRuntimeException.a(oi.field_g, (byte) 121, "", "button_frame_hi");
             jk.field_x = new mg(ej.a((byte) -43, oi.field_g, "var_button", ""));
-            var5_int = IntrusiveNode.field_d.a(mc.field_a[0]);
-            var6_int = IntrusiveNode.field_d.a(mc.field_a[1]);
+            var5_int = IntrusiveNode.field_d.a(mc.countdownLabels[0]);
+            var6_int = IntrusiveNode.field_d.a(mc.countdownLabels[1]);
             if (var5_int < var6_int) {
               var5_int = var6_int;
             }
-            var6_intLifetime3 = IntrusiveNode.field_d.a(mc.field_a[2]);
+            var6_intLifetime3 = IntrusiveNode.field_d.a(mc.countdownLabels[2]);
             tb.field_b = new ti[3];
             if (var6_intLifetime3 > var5_int) {
               var5_int = var6_intLifetime3;
@@ -862,7 +862,7 @@ public final class Transmogrify extends SessionGameApplet {
                   sb.field_h[var9_int] = 7500402;
                 }
               }
-              IntrusiveNode.field_d.c(mc.field_a[var8_int], var5_int >> 1, IntrusiveNode.field_d.field_y + 2, 1, -1);
+              IntrusiveNode.field_d.c(mc.countdownLabels[var8_int], var5_int >> 1, IntrusiveNode.field_d.field_y + 2, 1, -1);
             }
             DualLinkNode.field_k.a(param0 + 199);
             el.b(-6491);
@@ -1012,9 +1012,9 @@ public final class Transmogrify extends SessionGameApplet {
           }
           var6 = we.field_l[am.field_n];
           var17 = NodeHashTableIterator.a(de.field_d, 1, var6, (byte) 60, var6.field_d.charAt(0));
-          var17.field_g = 1000;
+          var17.destinationX = 1000;
           var8 = var17;
-          var8.field_j = 1000;
+          var8.x = 1000;
           ob.a(1, 1, var17, 0);
           ue.field_c[1].field_h = var6.field_c.field_D + 8;
           var17.d(1);
@@ -1022,9 +1022,9 @@ public final class Transmogrify extends SessionGameApplet {
           sg.field_p = dupTemp$1;
           var18 = dupTemp$1;
           var7 = var18;
-          var7.field_g = 1000;
+          var7.destinationX = 1000;
           var9 = var7;
-          var9.field_j = 1000;
+          var9.x = 1000;
           var7.field_x = true;
           ob.a(1, 2, var18, 0);
           oi.field_g = null;
@@ -1064,7 +1064,7 @@ public final class Transmogrify extends SessionGameApplet {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if (!qj.b((byte) 126) &&
+          if (!IntrusiveDeque.b((byte) 126) &&
             kb.field_n == null) {
             kb.field_n = l.a((byte) 12, 4);
           }
@@ -1135,7 +1135,7 @@ public final class Transmogrify extends SessionGameApplet {
     final void c(int param0) {
         try {
           Transmogrify.l(0);
-          qj.c((byte) -115);
+          IntrusiveDeque.c((byte) -115);
           ai.a((byte) 67);
           kb.b(false);
           ub.a(-31455);
@@ -1144,7 +1144,7 @@ public final class Transmogrify extends SessionGameApplet {
           cd.a(107);
           dk.a((byte) 127);
           we.a(-11509);
-          gj.b(-102);
+          BufferedSocket.b(-102);
           ci.d(-120);
           SessionGameApplet.i((byte) -49);
           ContextualRuntimeException.a(6);
@@ -1218,9 +1218,9 @@ public final class Transmogrify extends SessionGameApplet {
           se.c((byte) 99);
           id.a((byte) 92);
           ei.a((byte) -110);
-          j.a((byte) -119);
+          TileRack.a((byte) -119);
           ld.a(102);
-          sj.b((byte) -15);
+          LetterTile.b((byte) -15);
           ua.a(-124);
           hj.m(param0 ^ 252);
           d.a(1);
@@ -1242,7 +1242,7 @@ public final class Transmogrify extends SessionGameApplet {
           di.b(54);
           eg.a((byte) 66);
           rh.b(true);
-          ec.c(0);
+          SocketConnector.c(0);
           rl.b(7);
           db.a(8192);
           dj.a(48);
@@ -1313,7 +1313,7 @@ public final class Transmogrify extends SessionGameApplet {
           jg.a();
           pi.a((byte) -110);
           mf.a(true);
-          nl.d(-114);
+          ProxySocketConnector.d(-114);
           hf.a((byte) 118);
           jh.c(-1);
           te.a((byte) 41);

@@ -80,7 +80,7 @@ final class gb {
         }
     }
 
-    final static nb[] a(fe param0, byte param1) {
+    final static nb[] a(PlatformTaskDispatcher param0, byte param1) {
         int var5 = 0;
         nb[] stackIn_3_0 = null;
         nb[] stackIn_10_0 = null;
@@ -95,7 +95,7 @@ final class gb {
         nb var6 = null;
         int var7 = 0;
         String var8 = null;
-        ib var9 = null;
+        PlatformTask var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var7 = Transmogrify.field_A ? 1 : 0;

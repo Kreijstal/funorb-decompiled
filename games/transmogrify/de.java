@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class de {
-    static j field_d;
+    static TileRack field_d;
     static int[] field_b;
     static String[] field_c;
     static uj field_a;
@@ -628,7 +628,7 @@ final class de {
     }
 
     static {
-        field_d = new j(2, 1000, 1000);
+        field_d = new TileRack(2, 1000, 1000);
         field_c = new String[23];
     }
 }

@@ -46,7 +46,7 @@ abstract class uh {
           return;
         }
         lc var2 = (lc) null;
-        uh.a((java.awt.Component) null, 16, -39, (fe) null, (lc) null, true);
+        uh.a((java.awt.Component) null, 16, -39, (PlatformTaskDispatcher) null, (lc) null, true);
         field_d = null;
         field_o = null;
         field_r = null;
@@ -60,7 +60,7 @@ abstract class uh {
         return this.a((byte) 72) >= 20 ? true : false;
     }
 
-    final static void a(java.awt.Component param0, int param1, int param2, fe param3, lc param4, boolean param5) {
+    final static void a(java.awt.Component param0, int param1, int param2, PlatformTaskDispatcher param3, lc param4, boolean param5) {
         try {
           aj.a(param0, param1, 22290, param4, param5, param1, param3, 1024);
           if (param2 != -21) {
@@ -99,7 +99,7 @@ abstract class uh {
           return var8;
         }
         var9 = (lc) null;
-        uh.a((java.awt.Component) null, -79, 112, (fe) null, (lc) null, false);
+        uh.a((java.awt.Component) null, -79, 112, (PlatformTaskDispatcher) null, (lc) null, false);
         var8.field_j = var6;
         if (param2) {
           if (this.a((byte) -110) >= 20) {

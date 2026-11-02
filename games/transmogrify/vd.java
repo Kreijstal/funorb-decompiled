@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vd {
-    ui field_d;
+    WidgetListener field_d;
     private int field_k;
-    ui field_q;
+    WidgetListener field_q;
     int field_c;
     int field_l;
     int field_e;
     int field_g;
-    ui field_o;
-    ui field_f;
+    WidgetListener field_o;
+    WidgetListener field_f;
     kg field_m;
-    ui field_b;
+    WidgetListener field_b;
     static volatile int field_a;
     int field_i;
     int field_j;
@@ -423,7 +423,7 @@ final class vd {
                     }
                   }
                   if (var21 != null &&
-                    qg.a(var21, (byte) 78)) {
+                    UiWidget.a(var21, (byte) 78)) {
                     var8[1][var13] = NodeHashTableIterator.field_a;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
@@ -457,10 +457,10 @@ final class vd {
           } else if (var2 == 1) {
             var3 = var28.a((byte) -96);
             var4_long = var28.e((byte) 110);
-            var6_ref_am = (am) (ec.field_b.a((byte) -95));
+            var6_ref_am = (am) (SocketConnector.field_b.a((byte) -95));
             while (var6_ref_am != null) {
               if (~var3 != ~var6_ref_am.field_p) {
-                var6_ref_am = (am) (ec.field_b.a(true));
+                var6_ref_am = (am) (SocketConnector.field_b.a(true));
                 continue;
               }
               break;
@@ -515,7 +515,7 @@ final class vd {
         h var17 = new h(param1, 2, 2, 2236962, 1, 1, 1, 2 + (param1.field_t + param1.field_y));
         ki var14Lifetime1;
         ki var14Lifetime2;
-        this.field_q = (ui) ((Object) var17);
+        this.field_q = (WidgetListener) ((Object) var17);
         var17.field_f = 16777215;
         ki var4 = new ki();
         var17.a((byte) -106, var4);
@@ -546,21 +546,21 @@ final class vd {
           var5[4] = (ti) ((Object) var18);
           var4.a((byte) -21, 4).a(true, 256).a(var5, (byte) 32);
           var4.a((byte) -21, 5).a(bh.a(65793, -118, 0, 0, 0), (byte) 32).a(true, 256).a(-116, -1);
-          this.field_d = (ui) ((Object) var4);
+          this.field_d = (WidgetListener) ((Object) var4);
           var6 = new ki(var4, true);
           var6.field_b = 0;
           var7 = new ki(var4, true);
           var7.field_b = 0;
           var7.a(qa.a(68, 8947848), -114);
           var7.a((byte) -21, 1).a(qa.a(64, 11184810), (byte) 32).a(-81, 2236962);
-          this.field_b = (ui) ((Object) new wi(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_b = (WidgetListener) ((Object) new wi(param1, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new pa(param1, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new ij(param1, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new ki();
           var17.a((byte) -106, var8);
           var8.a((byte) -21, 0).a(we.a(15658734, 116, 10066329, 7829367), (byte) 32).a(-62, 1118481).b(-1, (byte) -102);
           var8.a((byte) -21, 4).a(true, 256).a(var5, (byte) 32);
-          this.field_f = (ui) ((Object) var8);
+          this.field_f = (WidgetListener) ((Object) var8);
           var9 = new ti[9];
           var10 = new ti[9];
           var9[4] = new ti(2, 1);
@@ -603,7 +603,7 @@ final class vd {
             this.a(param0, (byte) 125, param3, param2);
           }
           if (param1 < 6) {
-            this.field_f = (ui) null;
+            this.field_f = (WidgetListener) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

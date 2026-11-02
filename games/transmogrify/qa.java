@@ -64,7 +64,7 @@ final class qa extends h {
         this(2188450, 2591221, 9543);
     }
 
-    public final void a(int param0, int param1, boolean param2, byte param3, qg param4) {
+    public final void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;

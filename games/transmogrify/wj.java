@@ -3,7 +3,7 @@
  */
 class wj extends kk {
     static String field_i;
-    static ib field_j;
+    static PlatformTask field_j;
     static String field_k;
     private long field_m;
     static String field_l;
@@ -42,7 +42,7 @@ class wj extends kk {
           field_j = null;
           return;
         }
-        field_j = (ib) null;
+        field_j = (PlatformTask) null;
         field_l = null;
         field_i = null;
         field_j = null;

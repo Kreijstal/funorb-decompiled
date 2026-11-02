@@ -14,10 +14,10 @@ final class tf {
         RuntimeException var2 = null;
         var3 = Transmogrify.field_A ? 1 : 0;
         try {
-          var4 = (am) (ec.field_b.a((byte) -95));
+          var4 = (am) (SocketConnector.field_b.a((byte) -95));
           while (var4 != null) {
             ei.a(true, param0, var4);
-            var4 = (am) (ec.field_b.a(true));
+            var4 = (am) (SocketConnector.field_b.a(true));
           }
           if (param1) {
             tf.a(-55, false);

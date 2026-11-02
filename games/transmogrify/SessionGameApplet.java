@@ -52,7 +52,7 @@ abstract class SessionGameApplet extends GameApplet {
                             if (var2 != 11 &&
                               var2 != 12) {
                               if (var2 == 13) {
-                                nl.a((byte) -7);
+                                ProxySocketConnector.a((byte) -7);
                                 return;
                               }
                               if (var2 == 17) {
@@ -150,7 +150,7 @@ abstract class SessionGameApplet extends GameApplet {
               if (gl.field_y == 0) {
                 discarded$6 = this.a(2625, false, false);
               } else {
-                gj.a(true, f.field_a);
+                BufferedSocket.a(true, f.field_a);
               }
             }
           }
@@ -369,7 +369,7 @@ abstract class SessionGameApplet extends GameApplet {
             if (var9 != null) {
               this.field_n = Integer.parseInt(var9);
             }
-            nl.field_h = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
+            ProxySocketConnector.field_h = Boolean.valueOf(this.getParameter("simplemode")).booleanValue();
             this.a((byte) 79, param0, param3, this.field_w, param1, 32, param2);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -437,7 +437,7 @@ abstract class SessionGameApplet extends GameApplet {
           var3 = 1200 * wi.b(-70);
           if (this.field_t ||
             !(il.b((byte) -20) <= var3) &&
-            !(var3 >= qg.d(param0 ^ -30510))) {
+            !(var3 >= UiWidget.d(param0 ^ -30510))) {
             this.field_t = false;
             pc.a(1);
             je.a(-11);
@@ -523,16 +523,16 @@ abstract class SessionGameApplet extends GameApplet {
           g.field_A = false;
         }
         if (0 == bi.field_L &&
-          sj.e(31)) {
+          LetterTile.e(31)) {
           bi.field_L = 1;
         }
         if (bi.field_L == 1) {
           if (NodeHashTableIterator.field_f != 0) {
             hg.field_a = cg.a((byte) -82, uh.field_q);
           }
-          RasterBuffer.field_c = ec.a(true, (byte) 77, 1, ic.field_a, false);
-          wi.field_e = ec.a(true, (byte) 77, 1, q.field_d, false);
-          nd.field_n = ec.a(true, (byte) 77, 1, rd.field_a, false);
+          RasterBuffer.field_c = SocketConnector.a(true, (byte) 77, 1, ic.field_a, false);
+          wi.field_e = SocketConnector.a(true, (byte) 77, 1, q.field_d, false);
+          nd.field_n = SocketConnector.a(true, (byte) 77, 1, rd.field_a, false);
           li.field_k = RasterBuffer.field_c;
           bi.field_L = 2;
           field_y = wi.field_e;
@@ -557,10 +557,10 @@ abstract class SessionGameApplet extends GameApplet {
         if (bi.field_L == 3 &&
           ud.a(nd.field_n, true, RasterBuffer.field_c, wi.field_e) &&
           qd.a(nd.field_n, (byte) -109)) {
-          gj.e(0);
+          BufferedSocket.e(0);
           wl.p(121);
           bg.field_n = false;
-          ea.field_n = j.field_a;
+          ea.field_n = TileRack.field_a;
           cf.a(nd.field_n, wi.field_e, RasterBuffer.field_c, wd.field_g, (byte) 122);
           if (di.field_b ||
             null != lb.field_h) {
@@ -570,7 +570,7 @@ abstract class SessionGameApplet extends GameApplet {
             stackIn_107_3 = !(di.field_b);
             td.a(stackIn_103_0, stackIn_104_1, stackIn_106_2, stackIn_107_3);
           }
-          if (nl.field_h) {
+          if (ProxySocketConnector.field_h) {
             gg.b(4);
           }
           if (null == lf.field_d) {
@@ -681,7 +681,7 @@ abstract class SessionGameApplet extends GameApplet {
             }
           }
           if (var4 == 2) {
-            var5_intLifetime1 = nl.a(this.field_n, le.h(44), mc.a((byte) 102), 2, wk.a((byte) -124), el.a(param0 ^ 2616), cd.b(76));
+            var5_intLifetime1 = ProxySocketConnector.a(this.field_n, le.h(44), mc.a((byte) 102), 2, wk.a((byte) -124), el.a(param0 ^ 2616), cd.b(76));
             if (var5_intLifetime1 != -1) {
               el.a(var5_intLifetime1, (byte) 33, Transmogrify.field_B, wh.field_F);
               Transmogrify.field_B = null;

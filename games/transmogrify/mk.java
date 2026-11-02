@@ -76,7 +76,7 @@ abstract class mk extends aj {
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
           var2_int = 30 / ((param0 - 46) / 38);
-          if (null == sj.field_u) {
+          if (null == LetterTile.field_u) {
             return null;
           }
           if (param1 == null) {
@@ -90,7 +90,7 @@ abstract class mk extends aj {
           if (var3 == null) {
             return null;
           }
-          var4 = (uk) (sj.field_u.a((long)var3.hashCode(), (byte) -72));
+          var4 = (uk) (LetterTile.field_u.a((long)var3.hashCode(), (byte) -72));
           while (var4 != null) {
             var8 = (CharSequence) ((Object) var4.field_eb);
             var5 = hj.a((byte) -128, var8);
@@ -98,7 +98,7 @@ abstract class mk extends aj {
               stackIn_17_0 = var4;
               return stackIn_17_0;
             }
-            var4 = (uk) (sj.field_u.a(-91));
+            var4 = (uk) (LetterTile.field_u.a(-91));
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -147,7 +147,7 @@ abstract class mk extends aj {
     }
 
     mk(da param0, int param1, int param2) {
-        super(-param1 + cd.field_b >> 1, wj.field_h - param2 >> 1, param1, param2, (ui) null);
+        super(-param1 + cd.field_b >> 1, wj.field_h - param2 >> 1, param1, param2, (WidgetListener) null);
         try {
           this.field_D = 0;
           this.field_A = false;
@@ -217,16 +217,16 @@ abstract class mk extends aj {
 
     abstract void a(int param0, byte param1, int param2);
 
-    final qg i(int param0) {
-        qg var2 = super.i(-120);
+    final UiWidget i(int param0) {
+        UiWidget var2 = super.i(-120);
         if (var2 != null) {
           return var2;
         }
         if (param0 <= -112) {
-          return (qg) (this);
+          return (UiWidget) (this);
         }
         field_w = (int[]) null;
-        return (qg) (this);
+        return (UiWidget) (this);
     }
 
     public static void n(int param0) {

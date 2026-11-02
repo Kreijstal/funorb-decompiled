@@ -5,7 +5,7 @@ final class tl {
     static boolean field_a;
     static int field_c;
     private IntrusiveNode field_b;
-    private qj field_e;
+    private IntrusiveDeque field_e;
     static int field_d;
 
     final IntrusiveNode a(IntrusiveNode param0, boolean param1) {
@@ -267,7 +267,7 @@ final class tl {
         RuntimeException decompiledCaughtException = null;
         try {
           var9 = new am(param7, param6, param8, param0, param4, param5, param2);
-          ec.field_b.a(var9, -104);
+          SocketConnector.field_b.a(var9, -104);
           ei.a(true, param3, var9);
           if (param1 <= 31) {
             field_a = true;
@@ -295,7 +295,7 @@ final class tl {
           return null;
         }
         if (param0 != 405142401) {
-          this.field_e = (qj) null;
+          this.field_e = (IntrusiveDeque) null;
         }
         this.field_b = var2.next;
         return var2;
@@ -314,7 +314,7 @@ final class tl {
         return var2;
     }
 
-    tl(qj param0) {
+    tl(IntrusiveDeque param0) {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {

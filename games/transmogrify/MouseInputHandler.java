@@ -3,7 +3,7 @@
  */
 final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static nf field_c;
-    static fe field_a;
+    static PlatformTaskDispatcher field_a;
     static int field_d;
     static String field_b;
 
@@ -39,7 +39,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
           if (hi.field_e != null) {
-            gj.field_l = 0;
+            BufferedSocket.field_l = 0;
             fc.field_g = -1;
             uj.field_i = -1;
             li.field_j = true;
@@ -84,7 +84,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != hi.field_e) {
-            gj.field_l = 0;
+            BufferedSocket.field_l = 0;
             dh.field_w = param0.getX();
             ga.field_b = param0.getY();
             lk.a(0);
@@ -126,7 +126,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
           if (hi.field_e != null) {
-            gj.field_l = 0;
+            BufferedSocket.field_l = 0;
             fc.field_g = param0.getX();
             uj.field_i = param0.getY();
             li.field_j = true;
@@ -139,7 +139,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
           if (null != hi.field_e) {
-            gj.field_l = 0;
+            BufferedSocket.field_l = 0;
             fc.field_g = param0.getX();
             uj.field_i = param0.getY();
             li.field_j = true;
@@ -159,7 +159,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           if (null == hi.field_e) {
             return;
           }
-          gj.field_l = 0;
+          BufferedSocket.field_l = 0;
           fc.field_g = param0.getX();
           uj.field_i = param0.getY();
           li.field_j = true;
@@ -187,7 +187,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != hi.field_e) {
-            gj.field_l = 0;
+            BufferedSocket.field_l = 0;
             cg.field_k = 0;
             li.field_j = true;
             var2_int = param0.getModifiers();
@@ -223,7 +223,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         Object var1 = null;
         int var2 = 0;
         int var3 = 0;
-        sj var4 = null;
+        LetterTile var4 = null;
         int var4_int = 0;
         int var5 = 0;
         int var3Lifetime1;
@@ -231,29 +231,29 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         var5 = Transmogrify.field_A ? 1 : 0;
         try {
           var1 = null;
-          if (null == od.field_g.field_e[11] &&
+          if (null == od.submissionRack.tiles[11] &&
             oa.field_j >= 34 &&
             oa.field_j < 34 + wl.field_K.field_n * 12 &&
             bk.field_a >= 114 &&
             wl.field_K.field_m + 114 > bk.field_a) {
-            var1 = od.field_g;
+            var1 = od.submissionRack;
             var2 = (-34 + oa.field_j) / wl.field_K.field_n;
           } else {
             var2 = (oa.field_j - 34) / wl.field_K.field_n;
             if (var2 >= 0 &&
               var2 < 12 &&
-              wk.field_a.field_e[var2] == null &&
+              wk.carryoverRack.tiles[var2] == null &&
               bk.field_a >= 190 &&
               bk.field_a < 190 + wl.field_K.field_m) {
-              var1 = wk.field_a;
+              var1 = wk.carryoverRack;
             } else {
               var2 = (-161 + oa.field_j) / wl.field_K.field_n;
               if (var2 >= 0 &&
                 var2 < 8 &&
-                null == si.field_i.field_e[var2] &&
+                null == si.newRack.tiles[var2] &&
                 bk.field_a >= 247 &&
                 wl.field_K.field_m + 247 > bk.field_a) {
-                var1 = si.field_i;
+                var1 = si.newRack;
               } else {
                 var2 = -1;
               }
@@ -265,74 +265,74 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
-          if (od.field_g == var1) {
+          if (od.submissionRack == var1) {
             while (0 < var2) {
-              if (od.field_g.field_e[-1 + var2] == null) {
+              if (od.submissionRack.tiles[-1 + var2] == null) {
                 var2--;
                 continue;
               }
               break;
             }
-            if (od.field_g == sg.field_d.field_o &&
-              null == od.field_g.field_e[var2]) {
+            if (od.submissionRack == sg.field_d.rack &&
+              null == od.submissionRack.tiles[var2]) {
               var2--;
             }
-            if (sg.field_d.field_o == od.field_g) {
-              stackIn_34_0 = sg.field_d.field_t;
+            if (sg.field_d.rack == od.submissionRack) {
+              stackIn_34_0 = sg.field_d.slot;
             } else {
               stackIn_34_0 = 12;
             }
             var3 = stackIn_34_0;
             if (var3 > var2) {
               for (var4_int = var3 - 1; var2 <= var4_int; var4_int--) {
-                if (od.field_g.field_e[var4_int] != null) {
-                  od.field_g.field_e[var4_int].a(var4_int + 1, 28, od.field_g);
+                if (od.submissionRack.tiles[var4_int] != null) {
+                  od.submissionRack.tiles[var4_int].moveToRack(var4_int + 1, 28, od.submissionRack);
                 }
               }
-              sg.field_d.a(var2, 28, od.field_g);
+              sg.field_d.moveToRack(var2, 28, od.submissionRack);
             } else {
               for (var4_intLifetime1 = 1 + var3; var2 >= var4_intLifetime1; var4_intLifetime1++) {
-                if (null != od.field_g.field_e[var4_intLifetime1]) {
-                  od.field_g.field_e[var4_intLifetime1].a(-1 + var4_intLifetime1, 28, od.field_g);
+                if (null != od.submissionRack.tiles[var4_intLifetime1]) {
+                  od.submissionRack.tiles[var4_intLifetime1].moveToRack(-1 + var4_intLifetime1, 28, od.submissionRack);
                 }
               }
-              sg.field_d.a(var2, 28, od.field_g);
+              sg.field_d.moveToRack(var2, 28, od.submissionRack);
             }
             decompiledFrameRemainder0 = false;
           }
           else {
             if (var1 != null) {
-              if (sg.field_d.field_o == od.field_g) {
-                var3Lifetime1 = sg.field_d.field_t + 1;
+              if (sg.field_d.rack == od.submissionRack) {
+                var3Lifetime1 = sg.field_d.slot + 1;
                 while (12 > var3Lifetime1) {
-                  if (od.field_g.field_e[var3Lifetime1] != null) {
-                    od.field_g.field_e[var3Lifetime1].a(-1 + var3Lifetime1, 28, od.field_g);
+                  if (od.submissionRack.tiles[var3Lifetime1] != null) {
+                    od.submissionRack.tiles[var3Lifetime1].moveToRack(-1 + var3Lifetime1, 28, od.submissionRack);
                     var3Lifetime1++;
                     continue;
                   }
-                  sg.field_d.a(var2, 28, (j) (var1));
+                  sg.field_d.moveToRack(var2, 28, (TileRack) (var1));
                   decompiledFrameCompleted1 = false;
                   break;
                 }
               }
               if (decompiledFrameCompleted1) {
-                sg.field_d.a(var2, 28, (j) (var1));
+                sg.field_d.moveToRack(var2, 28, (TileRack) (var1));
               }
             } else {
-              if (sg.field_d.field_o == od.field_g) {
+              if (sg.field_d.rack == od.submissionRack) {
                 for (var3Lifetime1 = 0; var3Lifetime1 < 12; var3Lifetime1++) {
-                  var4 = od.field_g.field_e[var3Lifetime1];
+                  var4 = od.submissionRack.tiles[var3Lifetime1];
                   if (var4 == null) {
                     decompiledFrameCompleted0 = false;
                     break;
                   }
-                  var4.a(var4.field_t, 28, var4.field_o);
+                  var4.moveToRack(var4.slot, 28, var4.rack);
                 }
                 decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
               }
               if ((decompiledFrameRemainder0) &&
                 (decompiledFrameCompleted0)) {
-                sg.field_d.a(sg.field_d.field_t, 28, sg.field_d.field_o);
+                sg.field_d.moveToRack(sg.field_d.slot, 28, sg.field_d.rack);
               }
             }
           }

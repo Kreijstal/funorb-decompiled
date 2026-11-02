@@ -37,7 +37,7 @@ abstract class td {
           ci.field_f.k(31410);
           ok.field_a = new ff(ob.field_F, (String) null, lb.field_d, param3, param1);
           l.field_d = new rf(ci.field_f, ok.field_a);
-          ci.field_f.b((qg) (l.field_d), (byte) -71);
+          ci.field_f.b((UiWidget) (l.field_d), (byte) -71);
           int var4_int = 70 % ((param0 - 41) / 32);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "td.K(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

@@ -40,7 +40,7 @@ final class wh extends lj {
         field_I = null;
     }
 
-    final boolean b(int param0, int param1, qg param2, int param3, int param4, int param5, int param6) {
+    final boolean b(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -111,7 +111,7 @@ final class wh extends lj {
 
     final static void f(byte param0) {
         int var2 = 0;
-        sj dupTemp$1 = null;
+        LetterTile dupTemp$1 = null;
         Object var1 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -122,14 +122,14 @@ final class wh extends lj {
             wh.h(86);
           }
           for (var2 = 11; var2 >= 0; var2--) {
-            dupTemp$1 = od.field_g.field_e[var2];
+            dupTemp$1 = od.submissionRack.tiles[var2];
             var1 = dupTemp$1;
             if (dupTemp$1 == null) {
               continue;
             }
             break;
           }
-          eh.a((sj) (var1), 67);
+          eh.returnTileToRack((LetterTile) (var1), 67);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

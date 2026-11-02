@@ -713,7 +713,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("loading", (byte) 117);
                 if (null != var2) {
-                  j.field_a = eg.a(83, var2);
+                  TileRack.field_a = eg.a(83, var2);
                 }
                 var2 = kb.a("offline", (byte) 126);
                 if (var2 != null) {
@@ -1670,7 +1670,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("create_alert_passcontainsname_partial", (byte) 110);
                 if (null != var2) {
-                  qj.field_c = eg.a(87, var2);
+                  IntrusiveDeque.field_c = eg.a(87, var2);
                 }
                 var2 = kb.a("create_alert_checkname", (byte) 108);
                 if (null != var2) {
@@ -2064,7 +2064,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("endgame", (byte) 120);
                 if (var2 != null) {
-                  he.field_h = eg.a(param0 + 101, var2);
+                  he.endGameLabel = eg.a(param0 + 101, var2);
                 }
                 var2 = kb.a("endtutorial", (byte) 108);
                 if (null != var2) {
@@ -2316,7 +2316,7 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("orbpoints", (byte) 108);
                 if (null != var2) {
-                  gj.field_f = eg.a(111, var2);
+                  BufferedSocket.field_f = eg.a(111, var2);
                 }
                 var2 = kb.a("orbcoins", (byte) 124);
                 if (null != var2) {
@@ -3014,55 +3014,55 @@ final class ContextualRuntimeException extends RuntimeException {
                 }
                 var2 = kb.a("subscription_cost_monthly,0", (byte) 116);
                 if (null != var2) {
-                  sj.field_w[0] = eg.a(90, var2);
+                  LetterTile.field_w[0] = eg.a(90, var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,1", (byte) 109);
                 if (null != var2) {
-                  sj.field_w[1] = eg.a(83, var2);
+                  LetterTile.field_w[1] = eg.a(83, var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,2", (byte) 117);
                 if (null != var2) {
-                  sj.field_w[2] = eg.a(107, var2);
+                  LetterTile.field_w[2] = eg.a(107, var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,3", (byte) 126);
                 if (var2 != null) {
-                  sj.field_w[3] = eg.a(108, var2);
+                  LetterTile.field_w[3] = eg.a(108, var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,4", (byte) 118);
                 if (var2 != null) {
-                  sj.field_w[4] = eg.a(ak.a(param0, 83), var2);
+                  LetterTile.field_w[4] = eg.a(ak.a(param0, 83), var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,5", (byte) 107);
                 if (var2 != null) {
-                  sj.field_w[5] = eg.a(91, var2);
+                  LetterTile.field_w[5] = eg.a(91, var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,6", (byte) 114);
                 if (var2 != null) {
-                  sj.field_w[6] = eg.a(104, var2);
+                  LetterTile.field_w[6] = eg.a(104, var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,7", (byte) 105);
                 if (var2 != null) {
-                  sj.field_w[7] = eg.a(95, var2);
+                  LetterTile.field_w[7] = eg.a(95, var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,8", (byte) 106);
                 if (null != var2) {
-                  sj.field_w[8] = eg.a(99, var2);
+                  LetterTile.field_w[8] = eg.a(99, var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,9", (byte) 117);
                 if (var2 != null) {
-                  sj.field_w[9] = eg.a(117, var2);
+                  LetterTile.field_w[9] = eg.a(117, var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,10", (byte) 109);
                 if (null != var2) {
-                  sj.field_w[10] = eg.a(114, var2);
+                  LetterTile.field_w[10] = eg.a(114, var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,11", (byte) 116);
                 if (var2 != null) {
-                  sj.field_w[11] = eg.a(ak.a(param0, 83), var2);
+                  LetterTile.field_w[11] = eg.a(ak.a(param0, 83), var2);
                 }
                 var2 = kb.a("subscription_cost_monthly,12", (byte) 110);
                 if (var2 != null) {
-                  sj.field_w[12] = eg.a(110, var2);
+                  LetterTile.field_w[12] = eg.a(110, var2);
                 }
                 var2 = kb.a("sentence_separator", (byte) 127);
                 if (null != var2) {
@@ -3111,7 +3111,7 @@ final class ContextualRuntimeException extends RuntimeException {
         field_d = null;
     }
 
-    final static java.awt.Frame a(int param0, int param1, fe param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, int param5) {
         Object stackIn_3_0 = null;
         Object stackIn_7_0 = null;
         int stackIn_32_0 = 0;
@@ -3124,7 +3124,7 @@ final class ContextualRuntimeException extends RuntimeException {
         String stackIn_55_2 = null;
         RuntimeException decompiledCaughtException = null;
         nb[] var6 = null;
-        ib var6_ref = null;
+        PlatformTask var6_ref = null;
         RuntimeException var6_ref2 = null;
         int var7_int = 0;
         java.awt.Frame var7 = null;
@@ -3232,7 +3232,7 @@ final class ContextualRuntimeException extends RuntimeException {
           }
           var4_int = param0.b(65, param2);
           var5 = param0.a(-1, param3, var4_int);
-          stackIn_4_0 = qj.a(var4_int, var5, param0, (byte) -57);
+          stackIn_4_0 = IntrusiveDeque.a(var4_int, var5, param0, (byte) -57);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

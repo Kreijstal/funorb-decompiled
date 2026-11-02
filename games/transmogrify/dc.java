@@ -19,11 +19,11 @@ final class dc {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        sj var11 = null;
+        LetterTile var11 = null;
         int var12 = 0;
         byte[] var13 = null;
-        sj var14 = null;
-        sj var15 = null;
+        LetterTile var14 = null;
+        LetterTile var15 = null;
         byte[] var16 = null;
         int var6Lifetime1;
         int var10Lifetime1;
@@ -44,8 +44,8 @@ final class dc {
           }
           if (var2_int >= 0) {
             if (wl.a(false, 0)) {
-              for (var3_int = 0; var3_int < ua.field_a.length; var3_int++) {
-                if (ua.field_a[var3_int].equalsIgnoreCase(of.field_e.toString())) {
+              for (var3_int = 0; var3_int < ua.bonusWords.length; var3_int++) {
+                if (ua.bonusWords[var3_int].equalsIgnoreCase(of.field_e.toString())) {
                   fi.b(0, 240, 15);
                 }
               }
@@ -72,7 +72,7 @@ final class dc {
                 break;
               }
               wk.field_d = wk.field_d + var6;
-              var7 = gj.a((byte) -39, IterableNodeHashTable.field_g[n.field_a].toString(), true);
+              var7 = BufferedSocket.a((byte) -39, IterableNodeHashTable.field_g[n.field_a].toString(), true);
               if (!(0 >= n.field_a)) {
                 eh.field_a = eh.field_a + var7;
                 var5 = var5 + var7;
@@ -126,10 +126,10 @@ final class dc {
                 }
                 var9 = 0;
                 for (var10 = 0; var10 < 12; var10++) {
-                  var11 = od.field_g.field_e[var10];
+                  var11 = od.submissionRack.tiles[var10];
                   if (var11 != null) {
                     if (var11.field_l == 9 &&
-                      MouseInputHandler.field_c.field_d.indexOf((int) var11.field_i) == -1) {
+                      MouseInputHandler.field_c.field_d.indexOf((int) var11.letter) == -1) {
                       var9++;
                     }
                     continue;
@@ -193,7 +193,7 @@ final class dc {
                   var8 = 2147483647;
                   var9 = 0;
                   for (var7 = 0; var7 < 12; var7++) {
-                    var14 = od.field_g.field_e[var7];
+                    var14 = od.submissionRack.tiles[var7];
                     if (var14 == null) {
                       decompiledFrameCompleted0 = false;
                       break;
@@ -201,8 +201,8 @@ final class dc {
                     if (var14.field_l > 0) {
                       var9++;
                     }
-                    if (var14.field_h < var8) {
-                      var8 = var14.field_h;
+                    if (var14.carryoverFlag < var8) {
+                      var8 = var14.carryoverFlag;
                     }
                   }
                   if (decompiledFrameCompleted0) {
@@ -245,15 +245,15 @@ final class dc {
                 var8 = 2147483647;
                 var9 = 0;
                 for (var7 = 0; var7 < 12; var7++) {
-                  var15 = od.field_g.field_e[var7];
+                  var15 = od.submissionRack.tiles[var7];
                   if (var15 == null) {
                     break;
                   }
                   if (var15.field_l > 0) {
                     var9++;
                   }
-                  if (var15.field_h < var8) {
-                    var8 = var15.field_h;
+                  if (var15.carryoverFlag < var8) {
+                    var8 = var15.carryoverFlag;
                   }
                 }
               }

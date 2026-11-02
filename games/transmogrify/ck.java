@@ -57,7 +57,7 @@ final class ck extends aj implements tc, df {
         return true;
     }
 
-    private final int a(int param0, int param1, String param2, qg param3, String param4, byte param5) {
+    private final int a(int param0, int param1, String param2, UiWidget param3, String param4, byte param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -111,7 +111,7 @@ final class ck extends aj implements tc, df {
         try {
           if (param1 != 17) {
             var7 = (String) null;
-            discarded$1 = this.a(21, 119, (String) null, (qg) null, (String) null, (byte) 74);
+            discarded$1 = this.a(21, 119, (String) null, (UiWidget) null, (String) null, (byte) 74);
           }
           if (param0 == this.field_w) {
             bl.a(param1 + 841);
@@ -136,7 +136,7 @@ final class ck extends aj implements tc, df {
         }
     }
 
-    final boolean a(int param0, qg param1, byte param2, char param3) {
+    final boolean a(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
@@ -174,18 +174,18 @@ final class ck extends aj implements tc, df {
     }
 
     public ck() {
-        super(0, 0, 496, 0, (ui) null);
+        super(0, 0, 496, 0, (WidgetListener) null);
         this.field_D = new vc("", (ma) null, 12);
         h var1 = new h(al.field_i, 0, 0, 0, 0, 16777215, -1, 3, 0, vd.field_h.field_y, -1, 2147483647, true);
-        qg var2 = new qg(bj.field_P, var1, (ma) null);
+        UiWidget var2 = new UiWidget(bj.field_P, var1, (ma) null);
         this.field_x = new lj(Transmogrify.field_E, (ma) null);
         this.field_w = new lj(fk.field_D, (ma) null);
         this.field_D.field_j = mf.field_a;
         this.field_D.a(-65, new li(this.field_D));
         this.field_x.field_t = false;
-        this.field_x.field_q = (ui) ((Object) new qa());
-        this.field_w.field_q = (ui) ((Object) new ek());
-        this.field_D.field_q = (ui) ((Object) new ni(10000536));
+        this.field_x.field_q = (WidgetListener) ((Object) new qa());
+        this.field_w.field_q = (WidgetListener) ((Object) new ek());
+        this.field_D.field_q = (WidgetListener) ((Object) new ni(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
@@ -197,15 +197,15 @@ final class ck extends aj implements tc, df {
         this.field_w.a(-116, 15 + var3, 3 + var4, 60, 40);
         this.field_w.field_m = (ma) (this);
         this.field_x.field_m = (ma) (this);
-        this.a((qg) (this.field_x), (byte) -111);
-        this.a((qg) (this.field_w), (byte) -95);
+        this.a((UiWidget) (this.field_x), (byte) -111);
+        this.a((UiWidget) (this.field_w), (byte) -95);
         this.field_B = new dh((tc) (this));
         this.field_B.a(-110, 20, 60 + (this.field_D.field_p + this.field_D.field_l), -60 - this.field_D.field_p + (this.field_l - this.field_D.field_l), 150);
-        this.a((qg) (this.field_B), (byte) -104);
+        this.a((UiWidget) (this.field_B), (byte) -104);
         this.a(109, 0, 0, 496, 55 + (var3 + var4));
     }
 
-    final void a(int param0, byte param1, qg param2, int param3) {
+    final void a(int param0, byte param1, UiWidget param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_x.field_t = this.m(10494);
@@ -250,11 +250,11 @@ final class ck extends aj implements tc, df {
     public final void a(byte param0) {
         ((li) (this.field_D.a((byte) 120))).g(-80);
         if (param0 != -69) {
-          this.a(-52, (qg) null, (byte) 25, 'ￚ');
+          this.a(-52, (UiWidget) null, (byte) 25, 'ￚ');
         }
     }
 
-    private final int a(qg param0, String param1, int param2, String param3, int param4, byte param5, int param6) {
+    private final int a(UiWidget param0, String param1, int param2, String param3, int param4, byte param5, int param6) {
         RuntimeException var8 = null;
         ob var9 = null;
         oc var10 = null;
@@ -272,10 +272,10 @@ final class ck extends aj implements tc, df {
             field_I = (hi) null;
           }
           var10 = new oc(20, param2, param4 + 120, 25, param0, false, 120, 3, vd.field_h, 16777215, param3);
-          this.a((qg) (var10), (byte) -80);
+          this.a((UiWidget) (var10), (byte) -80);
           var9 = new ob(((ie) ((Object) param0)).a((byte) 117), param1, 126, var10.field_h + param2, 25 + param4, param6);
           var9.field_m = (ma) (this);
-          this.a((qg) (var9), (byte) -113);
+          this.a((UiWidget) (var9), (byte) -113);
           stackIn_3_0 = var9.field_h + var10.field_h;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

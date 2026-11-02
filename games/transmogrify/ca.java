@@ -231,7 +231,7 @@ abstract class ca implements wa {
             if (param1 != 2117267440) {
               field_g = (ck) null;
             }
-            if (!fe.field_k.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_k.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

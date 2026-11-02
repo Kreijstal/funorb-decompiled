@@ -15,9 +15,9 @@ final class be extends ih {
     private byte[] field_k;
     private el field_v;
     private int field_A;
-    private qj field_y;
+    private IntrusiveDeque field_y;
     private int field_e;
-    private qj field_s;
+    private IntrusiveDeque field_s;
     private boolean field_h;
     private boolean field_u;
     private boolean field_j;
@@ -403,7 +403,7 @@ final class be extends ih {
         }
         this.field_h = param0 ? true : false;
         if (null == this.field_s) {
-          this.field_s = new qj();
+          this.field_s = new IntrusiveDeque();
         }
     }
 
@@ -645,14 +645,14 @@ final class be extends ih {
         RuntimeException var10 = null;
         this.field_m = new fl(16);
         this.field_e = 0;
-        this.field_y = new qj();
+        this.field_y = new IntrusiveDeque();
         this.field_l = 0L;
         try {
           this.field_r = param0;
           this.field_p = param1;
           if (null != this.field_p) {
             this.field_u = true;
-            this.field_s = new qj();
+            this.field_s = new IntrusiveDeque();
           } else {
             this.field_u = false;
           }

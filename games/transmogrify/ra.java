@@ -4,8 +4,8 @@
 final class ra {
     static int field_a;
 
-    final static void a(fe param0, java.awt.Frame param1, int param2) {
-        ib var3 = null;
+    final static void a(PlatformTaskDispatcher param0, java.awt.Frame param1, int param2) {
+        PlatformTask var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -31,7 +31,7 @@ final class ra {
           param1.setVisible(false);
           if (param2 != 100) {
             var5 = (java.awt.Frame) null;
-            ra.a((fe) null, (java.awt.Frame) null, 29);
+            ra.a((PlatformTaskDispatcher) null, (java.awt.Frame) null, 29);
           }
           param1.dispose();
           return;

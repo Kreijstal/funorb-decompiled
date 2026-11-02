@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ub {
-    static String field_e;
+    static String timeBonusLabel;
     static String field_b;
     static int field_a;
     static FullscreenFocusCanvas field_c;
@@ -14,7 +14,7 @@ final class ub {
         if (param0 != -31455) {
           return;
         }
-        field_e = null;
+        timeBonusLabel = null;
     }
 
     final static void a(int param0, int param1, byte param2) {
@@ -211,7 +211,7 @@ final class ub {
     }
 
     static {
-        field_e = "Time bonus:";
+        timeBonusLabel = "Time bonus:";
         field_a = 0;
         field_b = "Data server full or too many connections from your address. Please try again in a few minutes.";
         field_d = true;

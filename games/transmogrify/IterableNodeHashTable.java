@@ -116,7 +116,7 @@ final class IterableNodeHashTable implements Iterable {
         var2 = hi.field_e;
         synchronized (var2) {
           b.field_k = cg.field_k;
-          gj.field_l = gj.field_l + 1;
+          BufferedSocket.field_l = BufferedSocket.field_l + 1;
           oa.field_j = fc.field_g;
           bk.field_a = uj.field_i;
           tl.field_a = li.field_j;

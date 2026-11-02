@@ -74,12 +74,12 @@ final class cg extends me {
             var3 = ((ie) ((Object) this.field_j)).a((byte) 113);
             if (var3 != null &&
               var3.a(27835) != hi.field_b) {
-              stackIn_7_0 = ec.field_d;
+              stackIn_7_0 = SocketConnector.field_d;
               return stackIn_7_0;
             }
           }
           if (!param1.equals(this.field_j.field_k)) {
-            stackIn_11_0 = ec.field_d;
+            stackIn_11_0 = SocketConnector.field_d;
           } else {
             stackIn_11_0 = hi.field_b;
           }

@@ -65,14 +65,14 @@ final class jk extends aj implements df {
     }
 
     public jk() {
-        super(0, 0, 476, 225, (ui) null);
+        super(0, 0, 476, 225, (WidgetListener) null);
         this.field_w = new lj(je.field_c, (ma) null);
         this.field_z = new lj(el.field_a, (ma) null);
         this.field_C = new lj(gl.field_z, (ma) null);
         qa var1 = new qa();
-        this.field_w.field_q = (ui) ((Object) var1);
-        this.field_z.field_q = (ui) ((Object) var1);
-        this.field_C.field_q = (ui) ((Object) var1);
+        this.field_w.field_q = (WidgetListener) ((Object) var1);
+        this.field_z.field_q = (WidgetListener) ((Object) var1);
+        this.field_C.field_q = (WidgetListener) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
@@ -84,9 +84,9 @@ final class jk extends aj implements df {
         this.field_w.field_j = uf.field_b;
         this.field_C.field_m = (ma) (this);
         this.field_C.field_j = pa.field_a;
-        this.a((qg) (this.field_z), (byte) -81);
-        this.a((qg) (this.field_w), (byte) -92);
-        this.a((qg) (this.field_C), (byte) -125);
+        this.a((UiWidget) (this.field_z), (byte) -81);
+        this.a((UiWidget) (this.field_w), (byte) -92);
+        this.a((UiWidget) (this.field_C), (byte) -125);
     }
 
     final static int l(int param0) {
@@ -395,10 +395,10 @@ final class jk extends aj implements df {
               var10.setColor(java.awt.Color.white);
               var10.drawString(param3, var7 + (304 - 6 * param3.length()) / 2, 22 + var8);
             }
-            if (sj.field_r != null) {
+            if (LetterTile.field_r != null) {
               var10.setFont(ha.field_a);
               var10.setColor(java.awt.Color.white);
-              var10.drawString(sj.field_r, fk.field_E / 2 - sj.field_r.length() * 6 / 2, mk.field_x / 2 - 26);
+              var10.drawString(LetterTile.field_r, fk.field_E / 2 - LetterTile.field_r.length() * 6 / 2, mk.field_x / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -426,7 +426,7 @@ final class jk extends aj implements df {
         }
     }
 
-    final boolean a(int param0, qg param1, byte param2, char param3) {
+    final boolean a(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;

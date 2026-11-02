@@ -77,7 +77,7 @@ final class vc extends rg implements ie {
         return this.field_j;
     }
 
-    final void a(int param0, byte param1, qg param2, int param3) {
+    final void a(int param0, byte param1, UiWidget param2, int param3) {
         try {
           super.a(param0, param1, param2, param3);
           this.field_P = -param3 + (oa.field_j - this.field_p);

@@ -45,7 +45,7 @@ final class ai {
               }
             }
             if (cl.field_A == param0) {
-              re.field_y = new gj((java.net.Socket) (wj.field_j.field_g), MouseInputHandler.field_a);
+              re.field_y = new BufferedSocket((java.net.Socket) (wj.field_j.field_g), MouseInputHandler.field_a);
               var2 = new oa(13);
               qb.a(116, of.field_c, var2, uh.field_f, tl.field_c);
               var2.f(param0 + 6387, 15);
@@ -113,7 +113,7 @@ final class ai {
         if (null == SecondaryNodeDequeIterator.field_d) {
           var1 = lb.a(true);
           ok.field_a = new ff(var1, (String) null, true, false, false);
-          ci.field_f.b((qg) (l.field_d), (byte) -71);
+          ci.field_f.b((UiWidget) (l.field_d), (byte) -71);
           l.field_d.b(-122, ok.field_a);
           l.field_d.p(27830);
           return;
@@ -121,7 +121,7 @@ final class ai {
         SecondaryNodeDequeIterator.field_d.r(77);
         var1Lifetime1 = lb.a(true);
         ok.field_a = new ff(var1Lifetime1, (String) null, true, false, false);
-        ci.field_f.b((qg) (l.field_d), (byte) -71);
+        ci.field_f.b((UiWidget) (l.field_d), (byte) -71);
         l.field_d.b(-122, ok.field_a);
         l.field_d.p(27830);
     }

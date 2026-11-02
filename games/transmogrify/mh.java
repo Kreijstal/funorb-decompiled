@@ -5,16 +5,16 @@ import java.io.*;
 
 final class mh {
     static int[] field_b;
-    static qj field_e;
+    static IntrusiveDeque field_e;
     static String field_c;
     static String field_d;
-    static qj field_a;
+    static IntrusiveDeque field_a;
 
     final static void a(int param0, String param1) {
         try {
           ql.field_a = param1;
           if (param0 != 11207) {
-            field_e = (qj) null;
+            field_e = (IntrusiveDeque) null;
           }
           ba.a(108, 12);
         } catch (RuntimeException runtimeException) {
@@ -64,7 +64,7 @@ final class mh {
               return stackIn_18_0;
             }
             var6 = var4[var5];
-            var7 = gj.a(param1 - 46, var6);
+            var7 = BufferedSocket.a(param1 - 46, var6);
             if (var7 == null) {
               var5++;
               continue;
@@ -247,8 +247,8 @@ final class mh {
 
     static {
         field_b = new int[1024];
-        field_e = new qj();
+        field_e = new IntrusiveDeque();
         field_d = "Please wait...";
-        field_a = new qj();
+        field_a = new IntrusiveDeque();
     }
 }

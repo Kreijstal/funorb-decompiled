@@ -48,7 +48,7 @@ final class sd extends bi {
           this.field_R.field_w = true;
           this.field_T = false;
           this.field_S = false;
-          this.a((qg) (this.field_R), (byte) -120);
+          this.a((UiWidget) (this.field_R), (byte) -120);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "sd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

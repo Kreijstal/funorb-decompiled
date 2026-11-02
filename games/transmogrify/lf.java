@@ -197,12 +197,12 @@ final class lf {
         int var1Lifetime1;
         int var1Lifetime2;
         if (kc.field_g >= 224) {
-          ec.a(256, 9956);
+          SocketConnector.a(256, 9956);
           var1 = 4 / ((param0 - 58) / 47);
           return;
         }
         var1Lifetime1 = kc.field_g % 32;
-        ec.a(kc.field_g + (32 - var1Lifetime1), 9956);
+        SocketConnector.a(kc.field_g + (32 - var1Lifetime1), 9956);
         var1Lifetime2 = 4 / ((param0 - 58) / 47);
     }
 

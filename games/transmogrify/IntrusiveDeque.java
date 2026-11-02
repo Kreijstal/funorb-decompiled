@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qj {
+final class IntrusiveDeque {
     static String[] field_a;
     IntrusiveNode field_d;
     static String field_c;
@@ -24,7 +24,7 @@ final class qj {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != -9424) {
-          qj.c((byte) 97);
+          IntrusiveDeque.c((byte) 97);
           var2 = this.field_d.previous;
           if (this.field_d != var2) {
             var2.c(5);
@@ -187,7 +187,7 @@ final class qj {
           this.field_b = null;
           return;
         }
-        qj.b((byte) 115);
+        IntrusiveDeque.b((byte) 115);
         while (true) {
           var5 = this.field_d.next;
           if (this.field_d != var5) {
@@ -255,12 +255,12 @@ final class qj {
           return var2;
         }
         CharSequence var3 = (CharSequence) null;
-        qj.a((CharSequence) null, 11);
+        IntrusiveDeque.a((CharSequence) null, 11);
         var2.c(5);
         return var2;
     }
 
-    public qj() {
+    public IntrusiveDeque() {
         this.field_d = new IntrusiveNode();
         this.field_d.previous = this.field_d;
         this.field_d.next = this.field_d;
@@ -272,25 +272,25 @@ final class qj {
         if (param0 > -65) {
           field_a = (String[]) null;
           if (kc.field_g <= 32) {
-            ec.a(0, 9956);
+            SocketConnector.a(0, 9956);
           } else {
             var1 = kc.field_g % 32;
             if (var1 == 0) {
               var1 = 32;
             }
-            ec.a(-var1 + kc.field_g, 9956);
+            SocketConnector.a(-var1 + kc.field_g, 9956);
             return;
           }
           return;
         }
         if (kc.field_g <= 32) {
-          ec.a(0, 9956);
+          SocketConnector.a(0, 9956);
         } else {
           var1Lifetime1 = kc.field_g % 32;
           if (var1Lifetime1 == 0) {
             var1Lifetime1 = 32;
           }
-          ec.a(-var1Lifetime1 + kc.field_g, 9956);
+          SocketConnector.a(-var1Lifetime1 + kc.field_g, 9956);
           return;
         }
     }

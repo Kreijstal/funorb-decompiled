@@ -9,7 +9,7 @@ final class eg {
         int var3 = 0;
         jl var4 = null;
         oi var5 = null;
-        qj stackIn_9_0 = null;
+        IntrusiveDeque stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
@@ -17,7 +17,7 @@ final class eg {
         try {
           var4 = (jl) (ll.field_T.a((byte) -95));
           while (var4 != null) {
-            sj.a(-7812, param1, var4);
+            LetterTile.a(-7812, param1, var4);
             var4 = (jl) (ll.field_T.a(true));
           }
           var5 = (oi) (qd.field_d.a((byte) -95));
@@ -28,7 +28,7 @@ final class eg {
             de.a(var5, param1, 2);
             stackIn_9_0 = qd.field_d;
             stackIn_10_1 = !(param0);
-            var5 = (oi) (((qj) (Object) stackIn_9_0).a(stackIn_10_1));
+            var5 = (oi) (((IntrusiveDeque) (Object) stackIn_9_0).a(stackIn_10_1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

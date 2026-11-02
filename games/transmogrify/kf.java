@@ -8,7 +8,7 @@ final class kf extends td {
     private long[] field_n;
     private int field_j;
     private int field_m;
-    static qj field_o;
+    static IntrusiveDeque field_o;
     static String[] field_k;
     static ii[] field_h;
     static int[] field_g;
@@ -57,7 +57,7 @@ final class kf extends td {
           if (null != ub.field_c &&
             ub.field_c.field_c) {
             qd.b(param0 + 3);
-            oi.field_k.b((qg) (new ll(oi.field_k, fi.field_w)), (byte) -71);
+            oi.field_k.b((UiWidget) (new ll(oi.field_k, fi.field_w)), (byte) -71);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -113,7 +113,7 @@ final class kf extends td {
           wk.field_b = new int[ih.field_b];
           ld.field_e = new byte[ih.field_b][];
           ql.field_b = new int[ih.field_b];
-          gj.field_j = new int[ih.field_b];
+          BufferedSocket.field_j = new int[ih.field_b];
           re.field_a = new int[ih.field_b];
           cc.field_e = new boolean[ih.field_b];
           re.field_K = new byte[ih.field_b][];
@@ -122,7 +122,7 @@ final class kf extends td {
           ll.field_U = var17.a((byte) -100);
           var3 = (var17.d((byte) 102) & 255) + 1;
           for (var4 = 0; ih.field_b > var4; var4++) {
-            gj.field_j[var4] = var16.a((byte) -93);
+            BufferedSocket.field_j[var4] = var16.a((byte) -93);
           }
           var4Lifetime1 = 0;
           var5 = 22 % ((param1 - 19) / 47);
@@ -418,7 +418,7 @@ final class kf extends td {
 
     static {
         field_k = new String[255];
-        field_o = new qj();
+        field_o = new IntrusiveDeque();
         field_g = new int[8192];
     }
 }

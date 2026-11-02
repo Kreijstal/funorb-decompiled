@@ -16,7 +16,7 @@ abstract class RasterBuffer {
         if (param1 != 793) {
           return;
         }
-        ec.a(true, param0, 106);
+        SocketConnector.a(true, param0, 106);
     }
 
     public static void a(byte param0) {

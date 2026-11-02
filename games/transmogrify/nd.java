@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nd extends ag {
-    private ag field_o;
+final class nd extends PcmStream {
+    private PcmStream field_o;
     private int field_k;
     static int field_m;
     static ci field_n;
@@ -63,7 +63,7 @@ final class nd extends ag {
         return 0;
     }
 
-    final ag d() {
+    final PcmStream d() {
         return null;
     }
 
@@ -92,11 +92,11 @@ final class nd extends ag {
         return param1 == (-param1 & param1) ? true : false;
     }
 
-    final ag a() {
+    final PcmStream a() {
         return null;
     }
 
-    nd(ag param0, int param1) {
+    nd(PcmStream param0, int param1) {
         try {
           this.field_o = param0;
           this.field_g = this.field_o.field_g;

@@ -86,7 +86,7 @@ final class vh extends me {
             stackIn_10_0 = hi.field_b;
             return stackIn_10_0;
           }
-          stackIn_8_0 = ec.field_d;
+          stackIn_8_0 = SocketConnector.field_d;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -111,7 +111,7 @@ final class vh extends me {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(95, param1) == ec.field_d) {
+          if (this.a(95, param1) == SocketConnector.field_d) {
             stackIn_3_0 = uc.field_c;
             return stackIn_3_0;
           }

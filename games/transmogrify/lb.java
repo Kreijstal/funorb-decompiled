@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lb {
-    static qj field_f;
+    static IntrusiveDeque field_f;
     static long field_b;
     static hi field_e;
     static int field_a;
@@ -92,7 +92,7 @@ final class lb {
           var1 = ok.field_a.e((byte) 28);
         }
         if (var1.length() == 0) {
-          var1 = gj.a(-113);
+          var1 = BufferedSocket.a(-113);
         }
         if (!param0) {
           field_g = (int[][]) null;
@@ -201,7 +201,7 @@ final class lb {
 
     static {
         field_b = 0L;
-        field_f = new qj();
+        field_f = new IntrusiveDeque();
         field_a = 256;
         field_e = new hi();
         field_i = 0;

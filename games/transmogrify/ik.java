@@ -50,7 +50,7 @@ class ik extends a implements df {
         return var1;
     }
 
-    final boolean a(int param0, qg param1, byte param2, char param3) {
+    final boolean a(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -165,7 +165,7 @@ class ik extends a implements df {
           this.field_hb = param1;
           this.field_fb = new qe(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_fb.field_w = true;
-          this.a((qg) (this.field_fb), (byte) -88);
+          this.a((UiWidget) (this.field_fb), (byte) -88);
         } catch (RuntimeException runtimeException) {
           throw ch.a((Throwable) ((Object) runtimeException), "ik.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sg {
-    static sj field_p;
+    static LetterTile field_p;
     int field_f;
     static String field_o;
-    static sj field_d;
+    static LetterTile field_d;
     int field_i;
     static char field_n;
     String field_h;
-    static String field_k;
+    static String varietyBonusLabel;
     static int field_e;
     private String field_m;
     private int field_b;
@@ -102,14 +102,14 @@ final class sg {
         field_p = null;
         field_o = null;
         if (param0 <= -87) {
-          field_k = null;
+          varietyBonusLabel = null;
           field_a = null;
           field_d = null;
           return;
         }
         byte[] var2 = (byte[]) null;
         sg.a(27, (byte) 105, -29, (byte[]) null);
-        field_k = null;
+        varietyBonusLabel = null;
         field_a = null;
         field_d = null;
     }
@@ -126,14 +126,14 @@ final class sg {
         }
         this.field_f = jd.field_b;
         this.field_h = l.field_c;
-        this.field_c = sj.field_m;
+        this.field_c = LetterTile.field_m;
         this.field_b = sh.field_b;
     }
 
     static {
         field_o = "Friends can be added in multiplayer<nbsp>games";
         field_e = -1;
-        field_k = "Variety bonus:";
+        varietyBonusLabel = "Variety bonus:";
         field_a = new int[8192];
     }
 }

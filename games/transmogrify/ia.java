@@ -86,61 +86,61 @@ final class ia extends IntrusiveNode {
 
     final static void d(int param0) {
         int fieldTemp$0 = 0;
-        sj dupTemp$1 = null;
-        sj dupTemp$2 = null;
+        LetterTile dupTemp$1 = null;
+        LetterTile dupTemp$2 = null;
         int stackIn_23_0 = 0;
         int stackIn_32_0 = 0;
         int stackIn_112_0 = 0;
-        sj stackIn_151_0 = null;
+        LetterTile stackIn_151_0 = null;
         boolean stackIn_152_1 = false;
-        sj stackIn_157_0 = null;
+        LetterTile stackIn_157_0 = null;
         boolean stackIn_158_1 = false;
         boolean stackIn_205_0 = false;
         int stackIn_216_0 = 0;
         Object stackIn_334_0 = null;
-        sj stackIn_334_1 = null;
-        sj stackIn_375_0 = null;
+        LetterTile stackIn_334_1 = null;
+        LetterTile stackIn_375_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
         pl var2 = null;
         pl var3 = null;
         int var4 = 0;
-        sj var4_ref_sj = null;
-        j var4_ref_j = null;
+        LetterTile var4_ref_sj = null;
+        TileRack var4_ref_j = null;
         int var5 = 0;
         Object var5_ref = null;
         int var6 = 0;
-        j var6_ref_j = null;
+        TileRack var6_ref_j = null;
         Object var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        j var13 = null;
-        sj[] var14 = null;
-        sj var15 = null;
-        sj[] var16 = null;
-        sj var17 = null;
-        sj[] var18 = null;
-        sj var19 = null;
-        sj[] var21 = null;
-        sj var22 = null;
-        sj[] var23 = null;
-        sj var24 = null;
-        sj var25 = null;
-        sj var26 = null;
+        TileRack var13 = null;
+        LetterTile[] var14 = null;
+        LetterTile var15 = null;
+        LetterTile[] var16 = null;
+        LetterTile var17 = null;
+        LetterTile[] var18 = null;
+        LetterTile var19 = null;
+        LetterTile[] var21 = null;
+        LetterTile var22 = null;
+        LetterTile[] var23 = null;
+        LetterTile var24 = null;
+        LetterTile var25 = null;
+        LetterTile var26 = null;
         String var27 = null;
-        sj var28 = null;
+        LetterTile var28 = null;
         char[] var31 = null;
         Object var5_refLifetime1;
         Object var7Lifetime1;
-        sj var26Lifetime1;
-        sj var28Lifetime1;
-        sj var28Lifetime2;
-        sj var26Lifetime2;
-        sj var28Lifetime2Lifetime1;
+        LetterTile var26Lifetime1;
+        LetterTile var28Lifetime1;
+        LetterTile var28Lifetime2;
+        LetterTile var26Lifetime2;
+        LetterTile var28Lifetime2Lifetime1;
         int var4Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
@@ -250,19 +250,19 @@ final class ia extends IntrusiveNode {
             }
             if (re.field_A == 0) {
               var4 = 1;
-              var23 = si.field_i.field_e;
+              var23 = si.newRack.tiles;
               var6 = 0;
               scanLoop1: while (true) {
                 if (var23.length > var6) {
                   var24 = var23[var6];
                   if (var24 != null) {
-                    if (var24.field_q != var24.field_p) {
+                    if (var24.y != var24.destinationY) {
                       var4 = 0;
                       break scanLoop1;
                     }
-                    if (var24.field_p == 247) {
+                    if (var24.destinationY == 247) {
                       var4 = 0;
-                      var24.field_p = var24.field_p + wl.field_K.field_m;
+                      var24.destinationY = var24.destinationY + wl.field_K.field_m;
                       break scanLoop1;
                     }
                   }
@@ -279,18 +279,18 @@ final class ia extends IntrusiveNode {
             }
             if (re.field_A == 1) {
               var4Lifetime2 = 1;
-              var14 = wk.field_a.field_e;
+              var14 = wk.carryoverRack.tiles;
               var6Lifetime2 = 0;
               scanLoop2: while (true) {
                 if (var6Lifetime2 < var14.length) {
                   var15 = var14[var6Lifetime2];
                   if (var15 != null) {
-                    if (var15.field_p != var15.field_q) {
+                    if (var15.destinationY != var15.y) {
                       var4Lifetime2 = 0;
                       break scanLoop2;
                     }
-                    if (var15.field_p == 190) {
-                      var15.field_p = var15.field_p + wl.field_K.field_m;
+                    if (var15.destinationY == 190) {
+                      var15.destinationY = var15.destinationY + wl.field_K.field_m;
                       var4Lifetime2 = 0;
                       break scanLoop2;
                     }
@@ -319,19 +319,19 @@ final class ia extends IntrusiveNode {
               if (n.field_a != 10 && (!mg.field_d ||
                 2 != n.field_a)) {
                 var4Lifetime3 = 1;
-                var16 = od.field_g.field_e;
+                var16 = od.submissionRack.tiles;
                 var6Lifetime3 = 0;
                 scanLoop3: while (true) {
                   if (var6Lifetime3 < var16.length) {
                     var17 = var16[var6Lifetime3];
                     if (var17 != null) {
-                      if (var17.field_q != var17.field_p) {
+                      if (var17.y != var17.destinationY) {
                         var4Lifetime3 = 0;
                         break scanLoop3;
                       }
-                      if (var17.field_p == 114) {
+                      if (var17.destinationY == 114) {
                         var4Lifetime3 = 0;
-                        var17.field_p = 190;
+                        var17.destinationY = 190;
                         break scanLoop3;
                       }
                     }
@@ -382,7 +382,7 @@ final class ia extends IntrusiveNode {
               }
               if (var4Lifetime3 != 0) {
                 if (!mg.field_d) {
-                  if (!qj.b((byte) 97)) {
+                  if (!IntrusiveDeque.b((byte) 97)) {
                     stackIn_112_0 = (0 != hc.field_u) ? 6 : 2;
                     qf.field_d = stackIn_112_0;
                   } else {
@@ -398,18 +398,18 @@ final class ia extends IntrusiveNode {
             if (3 != re.field_A) {
               if (4 == re.field_A) {
                 var4Lifetime4 = 1;
-                var21 = si.field_i.field_e;
+                var21 = si.newRack.tiles;
                 var6Lifetime4 = 0;
                 scanLoop4: while (true) {
                   if (var21.length > var6Lifetime4) {
                     var22 = var21[var6Lifetime4];
                     if (var22 != null) {
-                      if (var22.field_p != var22.field_q) {
+                      if (var22.destinationY != var22.y) {
                         var4Lifetime4 = 0;
                         break scanLoop4;
                       }
-                      if (var22.field_p != 247) {
-                        var22.field_p = 247;
+                      if (var22.destinationY != 247) {
+                        var22.destinationY = 247;
                         var4Lifetime4 = 0;
                         break scanLoop4;
                       }
@@ -435,32 +435,32 @@ final class ia extends IntrusiveNode {
                 return;
               }
               if (re.field_A == 5) {
-                var13 = wk.field_a;
+                var13 = wk.carryoverRack;
                 var4_ref_j = var13;
-                wk.field_a = od.field_g;
-                wk.field_a.field_d = 34;
-                od.field_g = var13;
-                wk.field_a.field_c = 190;
+                wk.carryoverRack = od.submissionRack;
+                wk.carryoverRack.originX = 34;
+                od.submissionRack = var13;
+                wk.carryoverRack.originY = 190;
                 re.field_A = 6;
-                od.field_g.field_c = 114;
+                od.submissionRack.originY = 114;
                 if (jl.field_j == 3) {
                   jl.field_j = jl.field_j + 1;
                 }
-                od.field_g.field_d = 34;
+                od.submissionRack.originX = 34;
               }
             } else {
-              wk.field_a.a(true);
-              si.field_i.a(true);
+              wk.carryoverRack.clear(true);
+              si.newRack.clear(true);
               if (n.field_a != 10 && (!mg.field_d ||
                 2 != n.field_a)) {
-                var18 = od.field_g.field_e;
+                var18 = od.submissionRack.tiles;
                 for (var5 = 0; var5 < var18.length; var5++) {
                   var19 = var18[var5];
                   if (var19 != null) {
                     var19.field_x = false;
                     var19.field_l = var19.field_l + 1;
-                    if (var19.field_h < 3) {
-                      var19.field_h = var19.field_h + 1;
+                    if (var19.carryoverFlag < 3) {
+                      var19.carryoverFlag = var19.carryoverFlag + 1;
                     }
                   }
                 }
@@ -469,29 +469,29 @@ final class ia extends IntrusiveNode {
                   n.field_a == 1 &&
                   null != MouseInputHandler.field_c.field_n) {
                   for (var5Lifetime2 = 0; var5Lifetime2 < MouseInputHandler.field_c.field_n.length(); var5Lifetime2++) {
-                    si.field_i.field_e[var5Lifetime2] = NodeHashTableIterator.a(si.field_i, var5Lifetime2, MouseInputHandler.field_c, (byte) 105, MouseInputHandler.field_c.field_n.charAt(var5Lifetime2));
-                    stackIn_157_0 = si.field_i.field_e[var5Lifetime2];
+                    si.newRack.tiles[var5Lifetime2] = NodeHashTableIterator.a(si.newRack, var5Lifetime2, MouseInputHandler.field_c, (byte) 105, MouseInputHandler.field_c.field_n.charAt(var5Lifetime2));
+                    stackIn_157_0 = si.newRack.tiles[var5Lifetime2];
                     stackIn_158_1 = (var5Lifetime2 == 1);
                     stackIn_157_0.field_x = stackIn_158_1;
-                    dupTemp$1 = si.field_i.field_e[var5Lifetime2];
-                    dupTemp$1.field_p = 247 - wl.field_K.field_m;
-                    si.field_i.field_e[var5Lifetime2].field_q = 247 - wl.field_K.field_m;
+                    dupTemp$1 = si.newRack.tiles[var5Lifetime2];
+                    dupTemp$1.destinationY = 247 - wl.field_K.field_m;
+                    si.newRack.tiles[var5Lifetime2].y = 247 - wl.field_K.field_m;
                   }
                 } else {
                   MouseInputHandler.field_c.a((byte) 92, var31);
                   var5Lifetime2 = li.a(8, o.field_o, false);
                   for (var6Lifetime4 = 0; var31.length > var6Lifetime4; var6Lifetime4++) {
-                    si.field_i.field_e[var6Lifetime4] = NodeHashTableIterator.a(si.field_i, var6Lifetime4, MouseInputHandler.field_c, (byte) 30, var31[var6Lifetime4]);
-                    stackIn_151_0 = si.field_i.field_e[var6Lifetime4];
+                    si.newRack.tiles[var6Lifetime4] = NodeHashTableIterator.a(si.newRack, var6Lifetime4, MouseInputHandler.field_c, (byte) 30, var31[var6Lifetime4]);
+                    stackIn_151_0 = si.newRack.tiles[var6Lifetime4];
                     stackIn_152_1 = (var5Lifetime2 == var6Lifetime4);
                     stackIn_151_0.field_x = stackIn_152_1;
-                    dupTemp$2 = si.field_i.field_e[var6Lifetime4];
-                    dupTemp$2.field_p = 247 - wl.field_K.field_m;
-                    si.field_i.field_e[var6Lifetime4].field_q = 247 - wl.field_K.field_m;
+                    dupTemp$2 = si.newRack.tiles[var6Lifetime4];
+                    dupTemp$2.destinationY = 247 - wl.field_K.field_m;
+                    si.newRack.tiles[var6Lifetime4].y = 247 - wl.field_K.field_m;
                   }
                 }
-                wk.field_a.field_c = 114;
-                wk.field_a.field_d = 34;
+                wk.carryoverRack.originY = 114;
+                wk.carryoverRack.originX = 34;
                 re.field_A = 4;
                 return;
               }
@@ -544,26 +544,26 @@ final class ia extends IntrusiveNode {
                   bk.field_a >= 376 &&
                   407 > bk.field_a) {
                   vk.a((byte) 85, FullscreenFocusCanvas.field_d[0]);
-                  wk.field_a.a(-10874);
-                  si.field_i.a(-10874);
+                  wk.carryoverRack.shuffle(-10874);
+                  si.newRack.shuffle(-10874);
                   return;
                 }
                 if (bk.field_a >= 114 &&
                   bk.field_a < 114 + wl.field_K.field_m &&
                   oa.field_j >= 34) {
                   var4Lifetime1 = (-34 + oa.field_j) / wl.field_K.field_n;
-                  if (!(var4Lifetime1 >= od.field_g.field_e.length)) {
+                  if (!(var4Lifetime1 >= od.submissionRack.tiles.length)) {
                     rk.field_p = -(-(var4Lifetime1 * wl.field_K.field_n) - 34 + oa.field_j);
-                    sg.field_d = od.field_g.field_e[var4Lifetime1];
+                    sg.field_d = od.submissionRack.tiles[var4Lifetime1];
                     ek.field_e = 114 - bk.field_a;
                   }
                 } else if (bk.field_a >= 190 &&
                   bk.field_a < 190 + wl.field_K.field_m &&
                   oa.field_j >= 34) {
                   var4Lifetime1 = (-34 + oa.field_j) / wl.field_K.field_n;
-                  if (!(var4Lifetime1 >= wk.field_a.field_e.length)) {
+                  if (!(var4Lifetime1 >= wk.carryoverRack.tiles.length)) {
                     rk.field_p = -(oa.field_j - (34 + wl.field_K.field_n * var4Lifetime1));
-                    sg.field_d = wk.field_a.field_e[var4Lifetime1];
+                    sg.field_d = wk.carryoverRack.tiles[var4Lifetime1];
                     ek.field_e = -bk.field_a + 190;
                   }
                 } else {
@@ -571,9 +571,9 @@ final class ia extends IntrusiveNode {
                     247 + wl.field_K.field_m > bk.field_a &&
                     161 <= oa.field_j) {
                     var4Lifetime1 = (-161 + oa.field_j) / wl.field_K.field_n;
-                    if (var4Lifetime1 < si.field_i.field_e.length) {
+                    if (var4Lifetime1 < si.newRack.tiles.length) {
                       rk.field_p = -(-(var4Lifetime1 * wl.field_K.field_n) + (oa.field_j - 161));
-                      sg.field_d = si.field_i.field_e[var4Lifetime1];
+                      sg.field_d = si.newRack.tiles[var4Lifetime1];
                       ek.field_e = 247 - bk.field_a;
                     }
                   }
@@ -581,17 +581,17 @@ final class ia extends IntrusiveNode {
                 if (va.field_j >= 2 &&
                   0 < SessionGameApplet.field_l &&
                   sg.field_d != null) {
-                  sg.field_d.field_i = (char)SessionGameApplet.field_l;
+                  sg.field_d.letter = (char)SessionGameApplet.field_l;
                   if (!dk.field_b) {
                     hf.field_j = hf.field_j + 1;
                     nc.field_t = nc.field_t + 1;
                     dk.field_b = true;
                   }
-                  sg.field_d.field_v = MouseInputHandler.field_c.field_p[255 & sg.field_d.field_i];
+                  sg.field_d.baseValue = MouseInputHandler.field_c.field_p[255 & sg.field_d.letter];
                   var4_ref_sj = sg.field_d;
                   sg.field_d.field_l = 0;
                   SessionGameApplet.field_l = -1;
-                  var4_ref_sj.field_h = 0;
+                  var4_ref_sj.carryoverFlag = 0;
                 }
                 if (null == sg.field_d) {
                   return;
@@ -602,10 +602,10 @@ final class ia extends IntrusiveNode {
                   boolean decompiledFrameRemainder0 = true;
                   boolean decompiledFrameCompleted0 = true;
                   sg.field_d = null;
-                  if (od.field_g != nc.field_s.field_o) {
+                  if (od.submissionRack != nc.field_s.rack) {
                     for (var4Lifetime1 = 0; 12 > var4Lifetime1; var4Lifetime1++) {
-                      if (od.field_g.field_e[var4Lifetime1] == null) {
-                        nc.field_s.a(var4Lifetime1, 28, od.field_g);
+                      if (od.submissionRack.tiles[var4Lifetime1] == null) {
+                        nc.field_s.moveToRack(var4Lifetime1, 28, od.submissionRack);
                         decompiledFrameCompleted0 = false;
                         break;
                       }
@@ -614,7 +614,7 @@ final class ia extends IntrusiveNode {
                   }
                   if ((decompiledFrameRemainder0) &&
                     (decompiledFrameCompleted0)) {
-                    eh.a(nc.field_s, 55);
+                    eh.returnTileToRack(nc.field_s, 55);
                   }
                   nc.field_s = null;
                   return;
@@ -676,23 +676,23 @@ final class ia extends IntrusiveNode {
             if (va.field_j >= 2 &&
               ch.field_d == 35 &&
               ve.field_B[82]) {
-              ue.b(31370);
+              ue.dumpRackState(31370);
               continue;
             }
             if (ch.field_d == 83) {
               vk.a((byte) 78, FullscreenFocusCanvas.field_d[0]);
-              wk.field_a.a(-10874);
-              si.field_i.a(-10874);
+              wk.carryoverRack.shuffle(-10874);
+              si.newRack.shuffle(-10874);
               continue;
             }
             if (85 == ch.field_d &&
-              od.field_g.field_e[0] != null) {
+              od.submissionRack.tiles[0] != null) {
               wh.f((byte) 104);
               continue;
             }
             if (i.a(sg.field_n, 160) &&
               sg.field_n != 32 &&
-              od.field_g.field_e[11] == null) {
+              od.submissionRack.tiles[11] == null) {
               sg.field_n = MouseInputHandler.field_c.a(0, sg.field_n);
               if (0 != SessionGameApplet.field_l) {
                 SessionGameApplet.field_l = sg.field_n & 255;
@@ -704,8 +704,8 @@ final class ia extends IntrusiveNode {
               }
               var5Lifetime1 = 0;
               while (var5Lifetime1 < 12) {
-                if (null == od.field_g.field_e[var5Lifetime1]) {
-                  var28.a(var5Lifetime1, 28, od.field_g);
+                if (null == od.submissionRack.tiles[var5Lifetime1]) {
+                  var28.moveToRack(var5Lifetime1, 28, od.submissionRack);
                   continue scanLoop5;
                 }
                 var5Lifetime1++;
@@ -718,46 +718,46 @@ final class ia extends IntrusiveNode {
               continue;
             }
             for (var4Lifetime1Lifetime1 = 0; var4Lifetime1Lifetime1 < 12; var4Lifetime1Lifetime1++) {
-              var25 = od.field_g.field_e[var4Lifetime1Lifetime1];
+              var25 = od.submissionRack.tiles[var4Lifetime1Lifetime1];
               var26 = var25;
               var28Lifetime1 = var26;
               var26Lifetime2 = var25;
               var5_ref = var26Lifetime2;
               if (var25 != null) {
-                if (var25.field_k != null &&
-                  od.field_g != var25.field_k &&
-                  null == var25.field_k.field_e[var25.field_s]) {
-                  var25.a(var25.field_s, 28, var25.field_k);
+                if (var25.previousRack != null &&
+                  od.submissionRack != var25.previousRack &&
+                  null == var25.previousRack.tiles[var25.previousSlot]) {
+                  var25.moveToRack(var25.previousSlot, 28, var25.previousRack);
                 }
                 continue;
               }
               break;
             }
             for (var4Lifetime1Lifetime2 = 0; 12 > var4Lifetime1Lifetime2; var4Lifetime1Lifetime2++) {
-              var26Lifetime1 = od.field_g.field_e[var4Lifetime1Lifetime2];
+              var26Lifetime1 = od.submissionRack.tiles[var4Lifetime1Lifetime2];
               var28Lifetime2 = var26Lifetime1;
               var28Lifetime2Lifetime1 = var26Lifetime1;
               var5_refLifetime1 = var26Lifetime1;
               if (var26Lifetime1 != null) {
-                if (var26Lifetime1.field_h != 0) {
-                  var7 = si.field_i;
-                  var6_ref_j = wk.field_a;
+                if (var26Lifetime1.carryoverFlag != 0) {
+                  var7 = si.newRack;
+                  var6_ref_j = wk.carryoverRack;
                 } else {
-                  var6_ref_j = si.field_i;
-                  var7 = wk.field_a;
+                  var6_ref_j = si.newRack;
+                  var7 = wk.carryoverRack;
                 }
-                for (var8 = 0; var6_ref_j.field_e.length > var8; var8++) {
-                  if (var6_ref_j.field_e[var8] != null) {
+                for (var8 = 0; var6_ref_j.tiles.length > var8; var8++) {
+                  if (var6_ref_j.tiles[var8] != null) {
                     continue;
                   }
-                  var26Lifetime1.a(var8, 28, var6_ref_j);
+                  var26Lifetime1.moveToRack(var8, 28, var6_ref_j);
                   var5_refLifetime1 = null;
                   break;
                 }
                 if (var5_refLifetime1 != null) {
-                  for (var8Lifetime2 = 0; var8Lifetime2 < ((j) (var7)).field_e.length; var8Lifetime2++) {
-                    if (((j) (var7)).field_e[var8Lifetime2] == null) {
-                      ((sj) (var5_refLifetime1)).a(var8Lifetime2, 28, (j) (var7));
+                  for (var8Lifetime2 = 0; var8Lifetime2 < ((TileRack) (var7)).tiles.length; var8Lifetime2++) {
+                    if (((TileRack) (var7)).tiles[var8Lifetime2] == null) {
+                      ((LetterTile) (var5_refLifetime1)).moveToRack(var8Lifetime2, 28, (TileRack) (var7));
                       break;
                     }
                   }
@@ -774,27 +774,27 @@ final class ia extends IntrusiveNode {
               var8Lifetime1 = -1;
               var9 = -1;
               for (var10 = 0; 12 > var10; var10++) {
-                if (wk.field_a.field_e[var10] != null &&
-                  var6Lifetime1 == wk.field_a.field_e[var10].field_i &&
-                  wk.field_a.field_e[var10].field_l > var9) {
+                if (wk.carryoverRack.tiles[var10] != null &&
+                  var6Lifetime1 == wk.carryoverRack.tiles[var10].letter &&
+                  wk.carryoverRack.tiles[var10].field_l > var9) {
                   var8Lifetime1 = var10;
-                  var7Lifetime1 = wk.field_a;
-                  var9 = wk.field_a.field_e[var10].field_l;
+                  var7Lifetime1 = wk.carryoverRack;
+                  var9 = wk.carryoverRack.tiles[var10].field_l;
                 }
               }
               var12 = 0;
               var10Lifetime1 = var12;
               while (var12 < 8) {
-                if (si.field_i.field_e[var12] != null &&
-                  var6Lifetime1 == si.field_i.field_e[var12].field_i &&
-                  var9 < si.field_i.field_e[var12].field_l) {
-                  var7Lifetime1 = si.field_i;
-                  var9 = si.field_i.field_e[var12].field_l;
+                if (si.newRack.tiles[var12] != null &&
+                  var6Lifetime1 == si.newRack.tiles[var12].letter &&
+                  var9 < si.newRack.tiles[var12].field_l) {
+                  var7Lifetime1 = si.newRack;
+                  var9 = si.newRack.tiles[var12].field_l;
                   var8Lifetime1 = var12;
                 }
                 var12++;
               }
-              ((j) (var7Lifetime1)).field_e[var8Lifetime1].a(var5Lifetime1Lifetime1, 28, od.field_g);
+              ((TileRack) (var7Lifetime1)).tiles[var8Lifetime1].moveToRack(var5Lifetime1Lifetime1, 28, od.submissionRack);
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

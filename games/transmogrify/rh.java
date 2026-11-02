@@ -4,7 +4,7 @@
 abstract class rh extends DualLinkNode {
     static am field_t;
     volatile boolean field_m;
-    static qj field_r;
+    static IntrusiveDeque field_r;
     boolean field_o;
     private static tf field_u;
     boolean field_p;
@@ -51,7 +51,7 @@ abstract class rh extends DualLinkNode {
 
     static {
         field_t = null;
-        field_r = new qj();
+        field_r = new IntrusiveDeque();
         field_u = new tf(4, 1, 1, 1);
     }
 }

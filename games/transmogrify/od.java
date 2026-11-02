@@ -6,10 +6,10 @@ final class od extends IntrusiveNode {
     static String field_h;
     IntrusiveNode field_i;
     static ta[] field_l;
-    bb field_j;
-    static j field_g;
+    PcmSampleStream field_j;
+    static TileRack submissionRack;
 
-    od(bb param0, IntrusiveNode param1) {
+    od(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_j = param0;
           this.field_k = param0.h();
@@ -21,7 +21,7 @@ final class od extends IntrusiveNode {
     }
 
     public static void b(boolean param0) {
-        field_g = null;
+        submissionRack = null;
         field_h = null;
         if (!param0) {
           return;
@@ -35,6 +35,6 @@ final class od extends IntrusiveNode {
         for (var0 = 0; var0 < field_l.length; var0++) {
           field_l[var0] = new ta();
         }
-        field_g = new j(12, 34, 114);
+        submissionRack = new TileRack(12, 34, 114);
     }
 }

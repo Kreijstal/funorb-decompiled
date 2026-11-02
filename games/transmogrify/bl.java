@@ -4,7 +4,7 @@
 final class bl {
     static int[] field_d;
     private ci field_f;
-    static String[] field_b;
+    static String[] achievementDescriptions;
     private ci field_c;
     private fl field_a;
     private fl field_e;
@@ -50,7 +50,7 @@ final class bl {
             return null;
           }
           if (param3 != 79289964) {
-            field_b = (String[]) null;
+            achievementDescriptions = (String[]) null;
           }
           var9.c(5);
           this.field_e.a(var6, (byte) 74, var8Lifetime1);
@@ -74,7 +74,7 @@ final class bl {
         if (param0 != 858) {
           return;
         }
-        ec.a("", param0 ^ 815, (String) null);
+        SocketConnector.a("", param0 ^ 815, (String) null);
     }
 
     final hb a(int param0, int param1, int[] param2) {
@@ -160,7 +160,7 @@ final class bl {
         try {
           var4 = (cf) (mh.field_e.a((byte) -95));
           while (var4 != null) {
-            gj.a((byte) 83, var4, param1);
+            BufferedSocket.a((byte) 83, var4, param1);
             var4 = (cf) (mh.field_e.a(true));
           }
           if (!param0) {
@@ -180,7 +180,7 @@ final class bl {
           return;
         }
         field_d = null;
-        field_b = null;
+        achievementDescriptions = null;
     }
 
     private final hb a(int param0, int param1, int[] param2, int param3) {
@@ -253,6 +253,6 @@ final class bl {
 
     static {
         field_d = new int[8192];
-        field_b = new String[]{"Score 600+ points", "Score 1,000+ points", "Submit a 6+ letter word that uses exactly the same tiles as the previous word", "Submit a 9+ letter word that uses exactly the same tiles as the previous word", "Submit a word where every tile has already been used at least twice", "Submit a word where every tile has already been used at least three times", "Reuse any one consonant tile in every word", "Reuse any two consonant tiles in every word", "Submit a word of 10+ letters", "Submit a 12-letter word", "Extend a 4+ letter word by using every one of its tiles plus 3 new ones", "Submit a 100-point word", "Get a time bonus of 100+ points", "Get a time bonus of 150+ points", "Score 600+ points, including a time bonus of 100+", "Spell 'pumpkin', 'mummy', 'skeleton' or 'vampire'!"};
+        achievementDescriptions = new String[]{"Score 600+ points", "Score 1,000+ points", "Submit a 6+ letter word that uses exactly the same tiles as the previous word", "Submit a 9+ letter word that uses exactly the same tiles as the previous word", "Submit a word where every tile has already been used at least twice", "Submit a word where every tile has already been used at least three times", "Reuse any one consonant tile in every word", "Reuse any two consonant tiles in every word", "Submit a word of 10+ letters", "Submit a 12-letter word", "Extend a 4+ letter word by using every one of its tiles plus 3 new ones", "Submit a 100-point word", "Get a time bonus of 100+ points", "Get a time bonus of 150+ points", "Score 600+ points, including a time bonus of 100+", "Spell 'pumpkin', 'mummy', 'skeleton' or 'vampire'!"};
     }
 }

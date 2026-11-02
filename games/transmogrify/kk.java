@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class kk {
-    static qj field_f;
+    static IntrusiveDeque field_f;
     static ti[] field_d;
     static ci field_a;
     static we field_b;
@@ -87,6 +87,6 @@ abstract class kk {
 
     static {
         field_e = "Music: ";
-        field_f = new qj();
+        field_f = new IntrusiveDeque();
     }
 }

@@ -7,7 +7,7 @@ final class pj extends rh {
     oa field_B;
     static int field_y;
     byte field_z;
-    static qj field_A;
+    static IntrusiveDeque field_A;
     static int[] field_x;
 
     final byte[] e(int param0) {
@@ -81,7 +81,7 @@ final class pj extends rh {
     static {
         int var0 = 0;
         field_w = new hi();
-        field_A = new qj();
+        field_A = new IntrusiveDeque();
         field_x = new int[256];
         for (var0 = 0; var0 < 256; var0++) {
           field_x[var0] = vg.c(var0 * 143, -2063532288) << 8;

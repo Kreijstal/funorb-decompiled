@@ -13,7 +13,7 @@ final class ql {
         }
     }
 
-    final static FullscreenFocusCanvas a(int param0, int param1, fe param2, int param3, int param4, int param5) {
+    final static FullscreenFocusCanvas a(int param0, int param1, PlatformTaskDispatcher param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         FullscreenFocusCanvas var7 = null;
@@ -54,7 +54,7 @@ final class ql {
     }
 
     final static od a(int param0, int param1, int param2, hb param3, int param4) {
-        bb var5 = null;
+        PcmSampleStream var5 = null;
         RuntimeException var5_ref = null;
         nd var6 = null;
         od var7 = null;
@@ -64,7 +64,7 @@ final class ql {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = bb.b(param3, 100, param2, param4);
+          var5 = PcmSampleStream.b(param3, 100, param2, param4);
           var6 = fl.a(var5, -11039, param1);
           var7 = new od(var5, var6);
           if (param0 <= 100) {

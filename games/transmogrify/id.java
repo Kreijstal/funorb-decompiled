@@ -30,7 +30,7 @@ final class id {
         stackIn_3_0 = ((128 & var3) != 0);
         a.field_bb = stackIn_3_0;
         sh.field_b = var8.d((byte) 106);
-        sj.field_m = var8.e((byte) -51);
+        LetterTile.field_m = var8.e((byte) -51);
         if (kd.field_a != 2) {
           jd.field_b = 0;
           u.field_d = 0;

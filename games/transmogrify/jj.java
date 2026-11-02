@@ -26,7 +26,7 @@ final class jj {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > 69) {
-            stackIn_4_0 = ic.a(bb.b(param2, 100, 96, param1), 4);
+            stackIn_4_0 = ic.a(PcmSampleStream.b(param2, 100, 96, param1), 4);
             return stackIn_4_0;
           }
           stackIn_2_0 = (od) null;
@@ -75,7 +75,7 @@ final class jj {
           hd.field_b = param0;
           aa.field_g = true;
           SecondaryNodeDequeIterator.field_d = new ik(ci.field_f, rh.field_q, param1, lb.field_d, hd.field_b);
-          ci.field_f.b((qg) (SecondaryNodeDequeIterator.field_d), (byte) -71);
+          ci.field_f.b((UiWidget) (SecondaryNodeDequeIterator.field_d), (byte) -71);
           if (param2 != 1702) {
             field_c = (int[][]) null;
           }

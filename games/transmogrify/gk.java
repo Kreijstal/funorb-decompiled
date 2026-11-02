@@ -33,7 +33,7 @@ final class gk {
             lj.field_z = ng.field_j;
           } else {
             try {
-              nk.field_b = new gj((java.net.Socket) (fk.field_F.field_g), l.field_b);
+              nk.field_b = new BufferedSocket((java.net.Socket) (fk.field_F.field_g), l.field_b);
               ff.field_D.field_h = 0;
               var2_ref_hj = nf.field_l;
               var2_ref_hj.field_h = 0;

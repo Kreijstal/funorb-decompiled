@@ -22,7 +22,7 @@ final class vg {
           this.field_i = 39;
         }
         if (this.field_i == 2 &&
-          !qj.b((byte) 112)) {
+          !IntrusiveDeque.b((byte) 112)) {
           if (param0 >= 3) {
             return fd.field_b[this.field_i] + fd.field_a[this.field_i];
           }
@@ -100,7 +100,7 @@ final class vg {
 
     private final int a(int param0, byte param1) {
         if (this.field_i == 2 &&
-          !qj.b((byte) 80)) {
+          !IntrusiveDeque.b((byte) 80)) {
           if (param0 < 3) {
             return fd.field_e[this.field_i] + param0 * 200;
           }
@@ -149,7 +149,7 @@ final class vg {
         var6 = stackIn_3_0;
         var7 = 0;
         var8 = -1;
-        for (var9 = 0; qj.field_a.length > var9; var9++) {
+        for (var9 = 0; IntrusiveDeque.field_a.length > var9; var9++) {
           regionExit1: {
             if (wl.a(false, 0) ||
               var9 != 15 ||
@@ -202,7 +202,7 @@ final class vg {
         }
         if (var8 != -1) {
           var9Lifetime1 = IntrusiveNode.field_d.field_t + (IntrusiveNode.field_d.field_D + 2);
-          IntrusiveNode.field_d.c(qj.field_a[var8], 438, param2 + 206, 0, -1);
+          IntrusiveNode.field_d.c(IntrusiveDeque.field_a[var8], 438, param2 + 206, 0, -1);
           stackIn_46_0 = ((var6 & 1 << var8) == 0) ? 0 : 1;
           var10 = stackIn_46_0;
           if (var10 != 0) {
@@ -217,7 +217,7 @@ final class vg {
           }
           var11 = 4 + (IntrusiveNode.field_d.field_y * 2 + (206 + param2));
           var12 = new String[16];
-          var13 = IntrusiveNode.field_d.a(bl.field_b[var8], new int[]{219}, var12);
+          var13 = IntrusiveNode.field_d.a(bl.achievementDescriptions[var8], new int[]{219}, var12);
           var11 = var11 + ((-var13 + 4) * var9Lifetime1 >> 1);
           for (var14 = 0; var14 < var13; var14++) {
             IntrusiveNode.field_d.b(var12[var14], 394, var11, 0, -1);
@@ -226,7 +226,7 @@ final class vg {
           if (var13 < 3) {
             var11 = var11 + var9Lifetime1;
           }
-          IntrusiveNode.field_d.b(gj.field_f + rg.field_B[var8], 394, var11, 0, -1);
+          IntrusiveNode.field_d.b(BufferedSocket.field_f + rg.field_B[var8], 394, var11, 0, -1);
           var4Lifetime1 = 394;
           var11 = var11 + var9Lifetime1;
           IntrusiveNode.field_d.b(ck.field_F, var4Lifetime1, var11, 0, -1);
@@ -240,7 +240,7 @@ final class vg {
           var9Lifetime1 = IntrusiveNode.field_d.field_t + IntrusiveNode.field_d.field_y;
           var5Lifetime1 = var5Lifetime1 + var9Lifetime1 * IntrusiveNode.field_d.a(aj.field_v, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
           var5Lifetime1 = var5Lifetime1 + var9Lifetime1;
-          if (qj.b((byte) 95)) {
+          if (IntrusiveDeque.b((byte) 95)) {
             IntrusiveNode.field_d.a(tj.field_t, 283, var5Lifetime1, 310, 1000, 0, -1, 1, 0, var9Lifetime1);
           }
         }
@@ -292,7 +292,7 @@ final class vg {
         boolean decompiledFrameRemainder0 = true;
         if (var5 == 0 &&
           uc.field_d) {
-          if (!qj.b((byte) 120)) {
+          if (!IntrusiveDeque.b((byte) 120)) {
             if (null == sh.field_c) {
               uc.field_d = false;
               decompiledFrameRemainder0 = false;
@@ -376,26 +376,26 @@ final class vg {
                     var6 = kc.field_g;
                     var7 = 0;
                     if (this.field_j.e(0)) {
-                      ec.a(0, 9956);
+                      SocketConnector.a(0, 9956);
                     }
                     if (this.field_j.c(-4135)) {
                       var7 = 1;
-                      ec.a(256, 9956);
+                      SocketConnector.a(256, 9956);
                     }
                     if (this.field_j.b((byte) 78)) {
                       var9 = 256 * (oa.field_j - this.field_c) / 80;
                       if (var9 <= 0) {
-                        ec.a(0, 9956);
+                        SocketConnector.a(0, 9956);
                       } else {
                         if (var9 >= 256) {
-                          ec.a(256, 9956);
+                          SocketConnector.a(256, 9956);
                         } else {
-                          ec.a(var9, 9956);
+                          SocketConnector.a(var9, 9956);
                         }
                       }
                     }
                     if (this.field_j.c(param2)) {
-                      qj.e(-127);
+                      IntrusiveDeque.e(-127);
                     }
                     if (this.field_j.c((byte) -72)) {
                       lf.a((byte) -125);
@@ -470,7 +470,7 @@ final class vg {
                         SecondaryNodeDeque.field_g == 0) {
                         qf.field_d = 0;
                       } else {
-                        if (qj.b((byte) 82)) {
+                        if (IntrusiveDeque.b((byte) 82)) {
                           qf.field_d = 5;
                         } else {
                           ug.b(true);
@@ -772,7 +772,7 @@ final class vg {
 
     private final int a(int param0, int param1) {
         if (this.field_i == 2 &&
-          !qj.b((byte) 94)) {
+          !IntrusiveDeque.b((byte) 94)) {
           return 180 + this.a(param0, (byte) 123);
         }
         if (this.field_i == 3) {
@@ -808,7 +808,7 @@ final class vg {
         regionExit1: {
           var19 = Transmogrify.field_A ? 1 : 0;
           var4 = -66 / ((param0 - 41) / 60);
-          if (qj.b((byte) 93)) {
+          if (IntrusiveDeque.b((byte) 93)) {
             var3 = tj.field_t;
           } else {
             if (sh.field_c == null) {
@@ -831,7 +831,7 @@ final class vg {
                     var15 = var26[var13_int] >> 6;
                     var16 = 63 & var26[var13_int];
                     var17 = var9[var13_int];
-                    if (qg.a(var17, (byte) 106) &&
+                    if (UiWidget.a(var17, (byte) 106) &&
                       var8 == 0 &&
                       rh.field_t != null &&
                       var27[var13_int] == rh.field_t.field_o &&
@@ -963,7 +963,7 @@ final class vg {
         int var3;
         var3 = Transmogrify.field_A ? 1 : 0;
         if (2 == this.field_i &&
-          !qj.b((byte) 114)) {
+          !IntrusiveDeque.b((byte) 114)) {
           if (!this.field_j.b((byte) 117)) {
             if (ch.field_d == 96) {
               this.field_j.field_f = false;

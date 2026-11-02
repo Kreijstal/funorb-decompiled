@@ -15,7 +15,7 @@ final class re {
     byte[] field_e;
     int[][] field_v;
     byte field_z;
-    static gj field_y;
+    static BufferedSocket field_y;
     int field_c;
     int[] field_B;
     byte[] field_o;
@@ -29,7 +29,7 @@ final class re {
     static int field_A;
     byte[] field_M;
     int field_k;
-    static qj field_C;
+    static IntrusiveDeque field_C;
     int[][] field_H;
     byte[] field_b;
     int field_J;

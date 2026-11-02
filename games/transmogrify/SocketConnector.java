@@ -3,10 +3,10 @@
  */
 import java.io.*;
 
-abstract class ec {
+abstract class SocketConnector {
     static rc field_d;
     int field_e;
-    static qj field_b;
+    static IntrusiveDeque field_b;
     static int[] field_c;
     String field_a;
 
@@ -29,7 +29,7 @@ abstract class ec {
             var2 = (od) (lb.field_f.a(true));
           }
           if (param1 != 9956) {
-            ec.a(true, true, 47);
+            SocketConnector.a(true, true, 47);
           }
           if (null != nc.field_q) {
             var2Lifetime1 = (od) (nc.field_q.a((byte) -95));
@@ -109,7 +109,7 @@ abstract class ec {
         if (param1 == 77) {
           return mh.a(-26159, param4, param0, false, param2, param3);
         }
-        ec.a(true, (byte) 79, -120, 125, true);
+        SocketConnector.a(true, (byte) 79, -120, 125, true);
         return mh.a(-26159, param4, param0, false, param2, param3);
     }
 
@@ -137,6 +137,6 @@ abstract class ec {
     static {
         field_d = new rc();
         field_c = new int[8192];
-        field_b = new qj();
+        field_b = new IntrusiveDeque();
     }
 }

@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class nl extends ec {
+final class ProxySocketConnector extends SocketConnector {
     private java.net.ProxySelector field_f;
     static String field_g;
     static boolean field_h;
@@ -56,7 +56,7 @@ final class nl extends ec {
         }
     }
 
-    nl() {
+    ProxySocketConnector() {
         try {
           this.field_f = java.net.ProxySelector.getDefault();
         } catch (RuntimeException runtimeException) {
@@ -271,7 +271,7 @@ final class nl extends ec {
           var1 = nf.field_l;
           var2 = var1.d((byte) 29);
           if (param0 != -7) {
-            nl.d(-7);
+            ProxySocketConnector.d(-7);
           }
           if (var2 == 0) {
             if (rb.field_b == null) {
@@ -332,8 +332,8 @@ final class nl extends ec {
             wc.a(param0 + 9, var4);
             return;
           }
-          if (sj.field_u == null) {
-            sj.field_u = new wb(128);
+          if (LetterTile.field_u == null) {
+            LetterTile.field_u = new wb(128);
             vl.field_A = 0;
           }
           var3Lifetime1 = var1.g(12248);
@@ -346,12 +346,12 @@ final class nl extends ec {
           if (var6 == null) {
             var6 = mk.a(param0 ^ -111, var5);
             if (null != var6) {
-              sj.field_u.a(19200, (long)hj.a((byte) -128, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6);
+              LetterTile.field_u.a(19200, (long)hj.a((byte) -128, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6);
             }
           }
           if (null == var6) {
             var6 = new uk();
-            sj.field_u.a(19200, (long)hj.a((byte) -128, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6);
+            LetterTile.field_u.a(19200, (long)hj.a((byte) -128, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6);
             fieldTemp$0 = vl.field_A;
             vl.field_A = vl.field_A + 1;
             var6.field_hb = fieldTemp$0;
@@ -511,7 +511,7 @@ final class nl extends ec {
               }
             }
             if (var7 != null) {
-              throw nl.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+              throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
             }
             stackIn_41_0 = this.b(-9008);
             break;

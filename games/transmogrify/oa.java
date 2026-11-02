@@ -7,7 +7,7 @@ class oa extends IntrusiveNode {
     static tf field_l;
     static int field_j;
     byte[] field_g;
-    static qj field_k;
+    static IntrusiveDeque field_k;
     static we[] field_m;
 
     final int i(int param0) {
@@ -45,7 +45,7 @@ class oa extends IntrusiveNode {
         var6 = Transmogrify.field_A ? 1 : 0;
         try {
           if (param0 >= -3) {
-            field_k = (qj) null;
+            field_k = (IntrusiveDeque) null;
           }
           for (var5_int = param3; param2 + param3 > var5_int; var5_int++) {
             fieldTemp$0 = this.field_h;
@@ -614,7 +614,7 @@ class oa extends IntrusiveNode {
         this.field_h = this.field_h + 1;
         this.field_g[fieldTemp$0] = (byte)(param1 >> 24);
         if (param0 >= -94) {
-          field_k = (qj) null;
+          field_k = (IntrusiveDeque) null;
         }
         int fieldTemp$1 = this.field_h;
         this.field_h = this.field_h + 1;
@@ -676,7 +676,7 @@ class oa extends IntrusiveNode {
         var13 = Transmogrify.field_A ? 1 : 0;
         try {
           if (param1) {
-            field_k = (qj) null;
+            field_k = (IntrusiveDeque) null;
           }
           var5_int = this.field_h;
           this.field_h = param2;

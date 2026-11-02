@@ -535,11 +535,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (null != fe.field_w) {
-                var1 = fe.field_w.toLowerCase();
+              if (null != PlatformTaskDispatcher.field_w) {
+                var1 = PlatformTaskDispatcher.field_w.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = fe.field_c;
+                  var2 = PlatformTaskDispatcher.field_c;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -571,7 +571,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
-                      if (qj.a((CharSequence) ((Object) var4), 110) &&
+                      if (IntrusiveDeque.a((CharSequence) ((Object) var4), 110) &&
                         !(aa.a(-97, (CharSequence) ((Object) var4)) >= 10)) {
                         this.a((byte) -127, "wrongjava");
                         decompiledFrameRemainder3 = (var5 != 0);
@@ -581,8 +581,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (null != fe.field_c))) {
-                stackIn_70_0 = fe.field_c.startsWith("1.");
+                (decompiledFrameRemainder2 = (null != PlatformTaskDispatcher.field_c))) {
+                stackIn_70_0 = PlatformTaskDispatcher.field_c.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -591,8 +591,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (fe.field_c.length() > var1_int) {
-                    var3 = fe.field_c.charAt(var1_int);
+                  if (PlatformTaskDispatcher.field_c.length() > var1_int) {
+                    var3 = PlatformTaskDispatcher.field_c.charAt(var1_int);
                     stackIn_86_0 = ~var3;
                     stackIn_86_1 = -49;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -619,7 +619,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 if (null != i.field_f) {
                   var1 = i.field_f;
                 }
-                var2_ref = fe.field_x;
+                var2_ref = PlatformTaskDispatcher.field_x;
                 if (null != var2_ref) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -813,12 +813,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     final void a(byte param0, int param1, String param2, int param3, int param4, int param5, int param6) {
         try {
-          fe dupTemp$0 = null;
+          PlatformTaskDispatcher dupTemp$0 = null;
           RuntimeException stackIn_24_0 = null;
           StringBuilder stackIn_24_1 = null;
           String stackIn_25_2 = null;
           Throwable decompiledCaughtException = null;
-          ib var8 = null;
+          PlatformTask var8 = null;
           Throwable var8_ref = null;
           RuntimeException var8_ref2 = null;
           int var9 = 0;
@@ -843,7 +843,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               ch.field_b = param6;
               gh.field_h = param3;
               re.field_i = ha.b(108);
-              dupTemp$0 = new fe(param5, param2, param4, true);
+              dupTemp$0 = new PlatformTaskDispatcher(param5, param2, param4, true);
               lk.field_b = dupTemp$0;
               f.field_b = dupTemp$0;
               var8 = lk.field_b.a((Runnable) (this), 1, 65535);

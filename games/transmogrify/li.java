@@ -79,25 +79,25 @@ final class li extends me {
         }
     }
 
-    final static ec a(boolean param0, String param1, int param2) {
-        nl var3 = null;
+    final static SocketConnector a(boolean param0, String param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        ec stackIn_2_0 = null;
-        nl stackIn_4_0 = null;
+        SocketConnector stackIn_2_0 = null;
+        ProxySocketConnector stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new nl();
+          var3 = new ProxySocketConnector();
           if (param0) {
-            stackIn_2_0 = (ec) null;
+            stackIn_2_0 = (SocketConnector) null;
             return stackIn_2_0;
           }
-          ((ec) ((Object) var3)).field_a = param1;
-          ((ec) ((Object) var3)).field_e = param2;
+          ((SocketConnector) ((Object) var3)).field_a = param1;
+          ((SocketConnector) ((Object) var3)).field_e = param2;
           stackIn_4_0 = var3;
-          return (ec) ((Object) stackIn_4_0);
+          return (SocketConnector) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -131,7 +131,7 @@ final class li extends me {
         try {
           var4 = (CharSequence) ((Object) param1);
           if (!ck.a(var4, (byte) -114)) {
-            stackIn_3_0 = ec.field_d;
+            stackIn_3_0 = SocketConnector.field_d;
             return stackIn_3_0;
           }
           if (param0 != 95) {
@@ -151,7 +151,7 @@ final class li extends me {
           if (this.field_l) {
             stackIn_16_0 = hi.field_b;
           } else {
-            stackIn_16_0 = ec.field_d;
+            stackIn_16_0 = SocketConnector.field_d;
           }
           return stackIn_16_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class lc extends ag {
+final class lc extends PcmStream {
     private int[] field_y;
     private int[] field_r;
     private kc[][] field_l;
@@ -498,7 +498,7 @@ final class lc extends ag {
         }
     }
 
-    final synchronized ag a() {
+    final synchronized PcmStream a() {
         return null;
     }
 
@@ -683,8 +683,8 @@ final class lc extends ag {
         }
     }
 
-    final synchronized ag d() {
-        return (ag) ((Object) this.field_m);
+    final synchronized PcmStream d() {
+        return (PcmStream) ((Object) this.field_m);
     }
 
     private final void e(int param0, int param1, int param2) {
@@ -1164,9 +1164,9 @@ final class lc extends ag {
         var7.field_p = -1;
         var7.field_z = 0;
         if (this.field_P[param0] == 0) {
-          var7.field_y = bb.a(var6, this.a(var7, (byte) 106), this.b(var7, (byte) -77), this.a(var7, 1135851910));
+          var7.field_y = PcmSampleStream.a(var6, this.a(var7, (byte) 106), this.b(var7, (byte) -77), this.a(var7, 1135851910));
         } else {
-          var7.field_y = bb.a(var6, this.a(var7, (byte) 123), 0, this.a(var7, 1135851910));
+          var7.field_y = PcmSampleStream.a(var6, this.a(var7, (byte) 123), 0, this.a(var7, 1135851910));
           stackIn_19_1 = false;
           stackIn_20_2 = !(var10.field_k[param1] >= 0);
           this.a(stackIn_19_1, stackIn_20_2, var7);

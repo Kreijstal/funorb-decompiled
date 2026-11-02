@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nc extends ni {
-    static qj field_q;
-    static sj field_s;
+    static IntrusiveDeque field_q;
+    static LetterTile field_s;
     static int field_t;
     static int[] field_p;
     static String[] field_r;
 
-    final String c(qg param0, int param1) {
+    final String c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -46,7 +46,7 @@ final class nc extends ni {
         field_p = null;
         field_q = null;
         if (param0 <= 93) {
-          field_s = (sj) null;
+          field_s = (LetterTile) null;
           field_r = null;
           return;
         }

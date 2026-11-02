@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class qg extends IntrusiveNode {
+class UiWidget extends IntrusiveNode {
     boolean field_g;
     int field_p;
     String field_k;
@@ -14,15 +14,15 @@ class qg extends IntrusiveNode {
     int field_l;
     int field_r;
     int field_h;
-    ui field_q;
+    WidgetListener field_q;
     int field_s;
     ma field_m;
 
-    qg(String param0, ma param1) {
+    UiWidget(String param0, ma param1) {
         this(param0, IterableNodeHashTable.field_e.field_q, param1);
     }
 
-    boolean b(int param0, int param1, qg param2, int param3, int param4, int param5, int param6) {
+    boolean b(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -84,7 +84,7 @@ class qg extends IntrusiveNode {
           }
           if (null != this.field_q) {
             discarded$4 = param0.append(" renderer=");
-            if (!(this.field_q instanceof qg)) {
+            if (!(this.field_q instanceof UiWidget)) {
               discarded$5 = param0.append(this.field_q);
             } else {
               param0 = this.a(param2 + 1, -109, param0, param3);
@@ -92,7 +92,7 @@ class qg extends IntrusiveNode {
           }
           if (this.field_m != null) {
             discarded$6 = param0.append(" listener=");
-            if (!(this.field_m instanceof qg)) {
+            if (!(this.field_m instanceof UiWidget)) {
               discarded$7 = param0.append(this.field_m);
               return;
             }
@@ -132,7 +132,7 @@ class qg extends IntrusiveNode {
         if (param0 != -20493) {
           return 104;
         }
-        return gj.field_l;
+        return BufferedSocket.field_l;
     }
 
     final void c(byte param0) {
@@ -164,7 +164,7 @@ class qg extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, qg param1, byte param2, char param3) {
+    boolean a(int param0, UiWidget param1, byte param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_4_0 = null;
@@ -229,7 +229,7 @@ class qg extends IntrusiveNode {
 
     int g(int param0) {
         if (param0 >= -41) {
-          qg.a((byte) 106, -11);
+          UiWidget.a((byte) 106, -11);
           return 0;
         }
         return 0;
@@ -243,7 +243,7 @@ class qg extends IntrusiveNode {
         this.field_p = param2;
     }
 
-    boolean a(int param0, int param1, qg param2, int param3, int param4, int param5, int param6) {
+    boolean a(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -269,7 +269,7 @@ class qg extends IntrusiveNode {
         }
     }
 
-    void a(int param0, byte param1, qg param2, int param3) {
+    void a(int param0, byte param1, UiWidget param2, int param3) {
         int var5_int = 0;
         int stackIn_5_0 = 0;
         boolean stackIn_9_1 = false;
@@ -316,7 +316,7 @@ class qg extends IntrusiveNode {
         return !this.field_g ? null : this.field_j;
     }
 
-    void a(int param0, int param1, qg param2, int param3, int param4, int param5) {
+    void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           this.field_s = 0;
           if (param3 != -1) {
@@ -336,7 +336,7 @@ class qg extends IntrusiveNode {
         return false;
     }
 
-    boolean a(qg param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -538,12 +538,12 @@ class qg extends IntrusiveNode {
         }
     }
 
-    protected qg() {
+    protected UiWidget() {
         this.field_r = 0;
         this.field_o = 0;
     }
 
-    qg(String param0, ui param1, ma param2) {
+    UiWidget(String param0, WidgetListener param1, ma param2) {
         RuntimeException runtimeException = null;
         m var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -592,7 +592,7 @@ class qg extends IntrusiveNode {
         }
     }
 
-    qg(int param0, int param1, int param2, int param3, ui param4, ma param5) {
+    UiWidget(int param0, int param1, int param2, int param3, WidgetListener param4, ma param5) {
         this.field_r = 0;
         this.field_o = 0;
         try {

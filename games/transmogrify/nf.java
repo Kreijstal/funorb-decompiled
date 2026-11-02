@@ -40,7 +40,7 @@ final class nf {
         }
     }
 
-    final boolean a(int param0, sj[] param1) {
+    final boolean a(int param0, LetterTile[] param1) {
         int var5 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -66,7 +66,7 @@ final class nf {
           }
           var4 = new char[var3_int];
           for (var5 = 0; var3_int > var5; var5++) {
-            var4[var5] = param1[var5].field_i;
+            var4[var5] = param1[var5].letter;
           }
           stackIn_10_0 = this.field_f.a((byte) 109, var4);
           return stackIn_10_0;

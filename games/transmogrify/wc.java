@@ -411,7 +411,7 @@ final class wc {
               var20[0][1 + var11 * 4] = bh.field_a[var12];
               var20[0][2 + 4 * var11] = pd.field_a[var12];
               var20[0][var11 * 4 + 3] = bg.field_j[var12];
-              if (qg.a(kf.field_k[var12], (byte) -128) &&
+              if (UiWidget.a(kf.field_k[var12], (byte) -128) &&
                 pd.field_a[var12] + bh.field_a[var12] + bg.field_j[var12] == 0) {
                 var7[0][var11] = null;
                 var11--;
@@ -429,7 +429,7 @@ final class wc {
               var20[1][var15 * 4 + 1] = bh.field_a[var12Lifetime1];
               var20[1][2 + var15 * 4] = pd.field_a[var12Lifetime1];
               var20[1][3 + var15 * 4] = bg.field_j[var12Lifetime1];
-              if (qg.a(kf.field_k[var12Lifetime1], (byte) -111) &&
+              if (UiWidget.a(kf.field_k[var12Lifetime1], (byte) -111) &&
                 bg.field_j[var12Lifetime1] + (bh.field_a[var12Lifetime1] + pd.field_a[var12Lifetime1]) == 0) {
                 var7[1][var15] = null;
                 var15--;

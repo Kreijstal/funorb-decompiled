@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oj extends ag {
+final class oj extends PcmStream {
     private int field_v;
     private lc field_k;
     private lc field_l;
@@ -15,7 +15,7 @@ final class oj extends ag {
     private int[] field_q;
     private boolean field_t;
     private int field_z;
-    static qj field_u;
+    static IntrusiveDeque field_u;
     private pl field_y;
     private pl field_n;
 
@@ -172,7 +172,7 @@ final class oj extends ag {
     public static void e(int param0) {
         field_m = null;
         if (param0 <= 35) {
-          field_u = (qj) null;
+          field_u = (IntrusiveDeque) null;
         }
         field_u = null;
     }
@@ -300,7 +300,7 @@ final class oj extends ag {
         }
     }
 
-    final ag a() {
+    final PcmStream a() {
         return null;
     }
 
@@ -387,7 +387,7 @@ final class oj extends ag {
         }
     }
 
-    final ag d() {
+    final PcmStream d() {
         return null;
     }
 
@@ -416,6 +416,6 @@ final class oj extends ag {
 
     static {
         field_m = new tf(11, 0, 1, 2);
-        field_u = new qj();
+        field_u = new IntrusiveDeque();
     }
 }

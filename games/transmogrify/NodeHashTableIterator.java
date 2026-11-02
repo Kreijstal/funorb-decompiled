@@ -63,42 +63,42 @@ final class NodeHashTableIterator implements Iterator {
         this.field_e = null;
     }
 
-    final static sj a(j param0, int param1, nf param2, byte param3, char param4) {
-        sj stackIn_6_0 = null;
+    final static LetterTile a(TileRack param0, int param1, nf param2, byte param3, char param4) {
+        LetterTile stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
-        sj var5 = null;
+        LetterTile var5 = null;
         RuntimeException var5_ref = null;
-        sj var6 = null;
+        LetterTile var6 = null;
         nf var7 = null;
         try {
           if (param3 <= 24) {
             var7 = (nf) null;
-            NodeHashTableIterator.a((j) null, -111, (nf) null, (byte) -120, '￬');
+            NodeHashTableIterator.a((TileRack) null, -111, (nf) null, (byte) -120, '￬');
           }
-          var5 = (sj) (ab.field_c.c(-126));
+          var5 = (LetterTile) (ab.field_c.c(-126));
           if (var5 == null) {
-            var5 = new sj();
+            var5 = new LetterTile();
           }
           ch.field_e.a(var5, -112);
-          var5.field_i = param4;
+          var5.letter = param4;
           var5.field_n = param2;
-          var5.field_v = param2.field_p[param4 & 255];
+          var5.baseValue = param2.field_p[param4 & 255];
           var6 = var5;
           var5.field_l = 0;
-          var5.field_p = param0.field_c;
-          var5.field_g = param0.field_d + 32 * param1;
-          var5.field_q = param0.field_c;
-          var6.field_h = 0;
-          var5.field_k = param0;
-          var5.field_o = param0;
-          var5.field_j = param1 * 32 + param0.field_d;
-          var5.field_s = param1;
-          var5.field_t = param1;
+          var5.destinationY = param0.originY;
+          var5.destinationX = param0.originX + 32 * param1;
+          var5.y = param0.originY;
+          var6.carryoverFlag = 0;
+          var5.previousRack = param0;
+          var5.rack = param0;
+          var5.x = param1 * 32 + param0.originX;
+          var5.previousSlot = param1;
+          var5.slot = param1;
           stackIn_6_0 = var5;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -129,7 +129,7 @@ final class NodeHashTableIterator implements Iterator {
         this.field_e = null;
     }
 
-    final static sj a(byte param0, boolean param1) {
+    final static LetterTile a(byte param0, boolean param1) {
         Object var2;
         int var3;
         int var4;
@@ -145,40 +145,40 @@ final class NodeHashTableIterator implements Iterator {
         var3 = -1;
         var4 = -1;
         for (var5 = 0; 12 > var5; var5++) {
-          if (null != wk.field_a.field_e[var5] &&
-            wk.field_a.field_e[var5].field_i == param0) {
-            if (var4 < wk.field_a.field_e[var5].field_l) {
+          if (null != wk.carryoverRack.tiles[var5] &&
+            wk.carryoverRack.tiles[var5].letter == param0) {
+            if (var4 < wk.carryoverRack.tiles[var5].field_l) {
               var3 = var5;
-              var2 = wk.field_a;
-              var4 = wk.field_a.field_e[var5].field_l;
+              var2 = wk.carryoverRack;
+              var4 = wk.carryoverRack.tiles[var5].field_l;
             }
-            if (wk.field_a.field_e[var5].field_x) {
+            if (wk.carryoverRack.tiles[var5].field_x) {
               var3 = var5;
               var4 = 2147483647;
-              var2 = wk.field_a;
+              var2 = wk.carryoverRack;
             }
           }
         }
         var7 = 0;
         var5Lifetime1 = var7;
         while (var7 < 8) {
-          if (si.field_i.field_e[var7] != null &&
-            param0 == si.field_i.field_e[var7].field_i) {
-            if (si.field_i.field_e[var7].field_l > var4) {
+          if (si.newRack.tiles[var7] != null &&
+            param0 == si.newRack.tiles[var7].letter) {
+            if (si.newRack.tiles[var7].field_l > var4) {
               var3 = var7;
-              var2 = si.field_i;
-              var4 = si.field_i.field_e[var7].field_l;
+              var2 = si.newRack;
+              var4 = si.newRack.tiles[var7].field_l;
             }
-            if (si.field_i.field_e[var7].field_x) {
+            if (si.newRack.tiles[var7].field_x) {
               var3 = var7;
               var4 = 2147483647;
-              var2 = si.field_i;
+              var2 = si.newRack;
             }
           }
           var7++;
         }
         if (var2 != null) {
-          return ((j) (var2)).field_e[var3];
+          return ((TileRack) (var2)).tiles[var3];
         }
         return null;
     }

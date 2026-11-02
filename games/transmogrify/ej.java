@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ej extends ag {
+final class ej extends PcmStream {
     static boolean field_n;
     static boolean field_k;
     static vg[] field_l;
     static String field_p;
-    qj field_q;
+    IntrusiveDeque field_q;
     private lc field_o;
     jc field_m;
 
@@ -128,10 +128,10 @@ final class ej extends ag {
         }
     }
 
-    final ag a() {
+    final PcmStream a() {
         kc var1 = null;
         Object stackIn_4_0 = null;
-        bb stackIn_9_0 = null;
+        PcmSampleStream stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         try {
@@ -139,11 +139,11 @@ final class ej extends ag {
             var1 = (kc) (this.field_q.a(true));
             if (var1 == null) {
               stackIn_4_0 = null;
-              return (ag) (stackIn_4_0);
+              return (PcmStream) (stackIn_4_0);
             }
           } while (null == var1.field_y);
           stackIn_9_0 = var1.field_y;
-          return (ag) ((Object) stackIn_9_0);
+          return (PcmStream) ((Object) stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
@@ -198,11 +198,11 @@ final class ej extends ag {
             if (var5 <= param2) {
               boolean decompiledSharedTail0 = (0 != this.field_o.field_P[param1.field_u]);
               if (!decompiledSharedTail0) {
-                param1.field_y = bb.a(param1.field_t, param1.field_y.i(), param1.field_y.h(), param1.field_y.f());
+                param1.field_y = PcmSampleStream.a(param1.field_t, param1.field_y.i(), param1.field_y.h(), param1.field_y.f());
                 decompiledSharedTail0 = (Transmogrify.field_A);
               }
               if (decompiledSharedTail0) {
-                param1.field_y = bb.a(param1.field_t, param1.field_y.i(), 0, param1.field_y.f());
+                param1.field_y = PcmSampleStream.a(param1.field_t, param1.field_y.i(), 0, param1.field_y.f());
                 stackIn_18_0 = this.field_o;
                 stackIn_18_1 = false;
                 stackIn_19_2 = !(0 <= param1.field_h.field_k[param1.field_i]);
@@ -245,7 +245,7 @@ final class ej extends ag {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        bb var11 = null;
+        PcmSampleStream var11 = null;
         int var12 = 0;
         var12 = Transmogrify.field_A ? 1 : 0;
         try {
@@ -272,11 +272,11 @@ final class ej extends ag {
               var11 = param3.field_y;
               boolean decompiledSharedTail0 = (this.field_o.field_P[param3.field_u] != 0);
               if (!decompiledSharedTail0) {
-                param3.field_y = bb.a(param3.field_t, var11.i(), var11.h(), var11.f());
+                param3.field_y = PcmSampleStream.a(param3.field_t, var11.i(), var11.h(), var11.f());
                 decompiledSharedTail0 = (var12 != 0);
               }
               if (decompiledSharedTail0) {
-                param3.field_y = bb.a(param3.field_t, var11.i(), 0, var11.f());
+                param3.field_y = PcmSampleStream.a(param3.field_t, var11.i(), 0, var11.f());
                 stackIn_23_0 = this.field_o;
                 stackIn_23_1 = false;
                 stackIn_24_2 = !(param3.field_h.field_k[param3.field_i] >= 0);
@@ -417,7 +417,7 @@ final class ej extends ag {
             return false;
           }
           var7 = new sf(ci.field_f, param0);
-          ci.field_f.b((qg) (var7), (byte) -71);
+          ci.field_f.b((UiWidget) (var7), (byte) -71);
           if (!oa.f((byte) 105)) {
             rh.field_v = of.field_d;
             q.field_h = null;
@@ -503,7 +503,7 @@ final class ej extends ag {
         int var13Lifetime1;
         var19 = Transmogrify.field_A ? 1 : 0;
         try {
-          var5_int = qg.a((byte) 108, (param0 - param4) * 3);
+          var5_int = UiWidget.a((byte) 108, (param0 - param4) * 3);
           var6 = param4 * 3;
           vf.b(true);
           var7 = -10 + var5_int;
@@ -616,22 +616,22 @@ final class ej extends ag {
         }
     }
 
-    final ag d() {
+    final PcmStream d() {
         kc var1 = null;
         RuntimeException var1_ref = null;
         Object stackIn_2_0 = null;
-        bb stackIn_7_0 = null;
-        ag stackIn_9_0 = null;
+        PcmSampleStream stackIn_7_0 = null;
+        PcmStream stackIn_9_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var1 = (kc) (this.field_q.a((byte) -95));
           if (var1 == null) {
             stackIn_2_0 = null;
-            return (ag) (stackIn_2_0);
+            return (PcmStream) (stackIn_2_0);
           }
           if (var1.field_y != null) {
             stackIn_7_0 = var1.field_y;
-            return (ag) ((Object) stackIn_7_0);
+            return (PcmStream) ((Object) stackIn_7_0);
           }
           stackIn_9_0 = this.a();
           return stackIn_9_0;
@@ -686,7 +686,7 @@ final class ej extends ag {
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_q = new qj();
+        this.field_q = new IntrusiveDeque();
         this.field_m = new jc();
         try {
           this.field_o = param0;
@@ -750,7 +750,7 @@ final class ej extends ag {
         int var13Lifetime1;
         var19 = Transmogrify.field_A ? 1 : 0;
         try {
-          var5_int = qg.a((byte) 108, (param0 - param4) * 3);
+          var5_int = UiWidget.a((byte) 108, (param0 - param4) * 3);
           var6 = param4 * 3;
           vf.b(true);
           var7 = -10 + var5_int;

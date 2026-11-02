@@ -79,9 +79,9 @@ final class ac extends kk {
         return wh.field_I;
     }
 
-    final static String a(int param0, j param1) {
+    final static String rackName(int param0, TileRack param1) {
         RuntimeException var2 = null;
-        j var3 = null;
+        TileRack var3 = null;
         String stackIn_4_0 = null;
         String stackIn_8_0 = null;
         String stackIn_10_0 = null;
@@ -92,18 +92,18 @@ final class ac extends kk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 13) {
-            var3 = (j) null;
-            ac.a(-41, (j) null);
+            var3 = (TileRack) null;
+            ac.rackName(-41, (TileRack) null);
           }
-          if (param1 == od.field_g) {
+          if (param1 == od.submissionRack) {
             stackIn_4_0 = "submission_rack";
             return stackIn_4_0;
           }
-          if (wk.field_a == param1) {
+          if (wk.carryoverRack == param1) {
             stackIn_12_0 = "carryover_rack";
             return stackIn_12_0;
           }
-          if (param1 == si.field_i) {
+          if (param1 == si.newRack) {
             stackIn_10_0 = "new_rack";
             return stackIn_10_0;
           }

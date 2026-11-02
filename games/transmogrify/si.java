@@ -6,7 +6,7 @@ final class si extends IntrusiveNode {
     static int field_l;
     byte[] field_p;
     hb[] field_j;
-    static j field_i;
+    static TileRack newRack;
     nh[] field_m;
     short[] field_k;
     int field_h;
@@ -15,15 +15,15 @@ final class si extends IntrusiveNode {
 
     final void d(int param0) {
         if (param0 <= 56) {
-          field_i = (j) null;
+          newRack = (TileRack) null;
         }
         this.field_o = null;
     }
 
     public static void a(byte param0) {
-        field_i = null;
+        newRack = null;
         if (param0 < 74) {
-          field_i = (j) null;
+          newRack = (TileRack) null;
         }
     }
 
@@ -619,6 +619,6 @@ final class si extends IntrusiveNode {
     }
 
     static {
-        field_i = new j(8, 161, 247);
+        newRack = new TileRack(8, 161, 247);
     }
 }

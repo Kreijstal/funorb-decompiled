@@ -5,7 +5,7 @@ import java.util.*;
 
 final class qd {
     private java.util.zip.Inflater field_b;
-    static qj field_d;
+    static IntrusiveDeque field_d;
     static String[] field_e;
     static int[] field_a;
     static String field_c;
@@ -146,7 +146,7 @@ final class qd {
     }
 
     static {
-        field_d = new qj();
+        field_d = new IntrusiveDeque();
         field_e = new String[]{"Showing by rating", "Showing by win percentage"};
         field_c = "Please try again in a few minutes.";
     }

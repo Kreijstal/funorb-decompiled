@@ -5,8 +5,8 @@ class le extends lj {
     static sa field_A;
     private String[] field_D;
     private nj field_B;
-    private qj field_E;
-    static qj field_C;
+    private IntrusiveDeque field_E;
+    static IntrusiveDeque field_C;
 
     final void a(int param0, int param1, int param2, int param3, int param4) {
         super.a(-109, param1, param2, param3, param4);
@@ -58,7 +58,7 @@ class le extends lj {
         }
     }
 
-    boolean a(qg param0, int param1) {
+    boolean a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -104,13 +104,13 @@ class le extends lj {
         int var16;
         int var7Lifetime1;
         var16 = Transmogrify.field_A ? 1 : 0;
-        this.field_E = new qj();
+        this.field_E = new IntrusiveDeque();
         if (param0 > -39) {
           return;
         }
         var2 = 0;
         var3 = (m) ((Object) this.field_q);
-        var4 = var3.a((qg) (this), -2);
+        var4 = var3.a((UiWidget) (this), -2);
         while (true) {
           var5 = this.field_k.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -193,7 +193,7 @@ class le extends lj {
         return var1;
     }
 
-    void a(int param0, byte param1, qg param2, int param3) {
+    void a(int param0, byte param1, UiWidget param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         try {
@@ -242,19 +242,19 @@ class le extends lj {
     public static void i(int param0) {
         field_A = null;
         if (param0 != -1) {
-          field_C = (qj) null;
+          field_C = (IntrusiveDeque) null;
         }
         field_C = null;
     }
 
     final void a(int param0, int param1, int param2, int param3) {
-        this.a(26, param3, param0, param1, ((m) ((Object) this.field_q)).b((qg) (this), 228));
+        this.a(26, param3, param0, param1, ((m) ((Object) this.field_q)).b((UiWidget) (this), 228));
         if (param2 != -1) {
-          field_C = (qj) null;
+          field_C = (IntrusiveDeque) null;
         }
     }
 
-    le(String param0, ui param1) {
+    le(String param0, WidgetListener param1) {
         super(param0, (ma) null);
         this.field_B = null;
         try {
@@ -275,8 +275,8 @@ class le extends lj {
         m var10 = (m) ((Object) this.field_q);
         nj var7 = this.field_B;
         if (var7 != null) {
-          var8 = var10.a(9112, (qg) (this), param0);
-          var9 = var10.a((qg) (this), 62, param1);
+          var8 = var10.a(9112, (UiWidget) (this), param0);
+          var9 = var10.a((UiWidget) (this), 62, param1);
           do {
             DualLinkNode.a(2 + var7.field_q, var7.field_i + (var8 - 2), -2 + var9 + var7.field_h, (byte) -120, var7.field_o + 2);
             var7 = var7.field_s;

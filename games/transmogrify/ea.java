@@ -322,7 +322,7 @@ final class ea {
           java.net.MalformedURLException var4 = null;
           RuntimeException var4_ref = null;
           try {
-            if (fe.field_k.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_k.startsWith("win") &&
               ca.a(param3, param0 + 2117267372)) {
               return;
             }
@@ -381,7 +381,7 @@ final class ea {
             stackIn_5_0 = (mi) null;
             return stackIn_5_0;
           }
-          var2 = new mi(param0, gj.field_j, re.field_a, ql.field_b, wk.field_b, re.field_K);
+          var2 = new mi(param0, BufferedSocket.field_j, re.field_a, ql.field_b, wk.field_b, re.field_K);
           wd.d(-109);
           stackIn_7_0 = var2;
           return stackIn_7_0;

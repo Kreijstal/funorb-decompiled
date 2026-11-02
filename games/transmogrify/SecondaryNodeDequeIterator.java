@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class SecondaryNodeDequeIterator implements Iterator {
-    static qj field_f;
+    static IntrusiveDeque field_f;
     private DualLinkNode field_a;
     static ik field_d;
     private SecondaryNodeDeque field_c;
@@ -125,6 +125,6 @@ final class SecondaryNodeDequeIterator implements Iterator {
 
     static {
         field_e = "Service unavailable";
-        field_f = new qj();
+        field_f = new IntrusiveDeque();
     }
 }

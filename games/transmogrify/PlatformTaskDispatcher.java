@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class fe implements Runnable {
+final class PlatformTaskDispatcher implements Runnable {
     private Thread field_l;
     static String field_c;
     static String field_k;
@@ -11,7 +11,7 @@ final class fe implements Runnable {
     private boolean field_r;
     private static String field_u;
     java.awt.EventQueue field_m;
-    private ib field_p;
+    private PlatformTask field_p;
     private t field_o;
     private Object field_t;
     private static int field_g;
@@ -26,7 +26,7 @@ final class fe implements Runnable {
     di[] field_s;
     private static String field_f;
     private Object field_d;
-    private ib field_j;
+    private PlatformTask field_j;
     private boolean field_i;
 
     final boolean b(int param0) {
@@ -107,7 +107,7 @@ final class fe implements Runnable {
         }
     }
 
-    final ib a(Class param0, byte param1, Class[] param2, String param3) {
+    final PlatformTask a(Class param0, byte param1, Class[] param2, String param3) {
         if (param1 <= 51) {
           java.net.URL var6 = (java.net.URL) null;
           this.a(-46, (java.net.URL) null);
@@ -132,7 +132,7 @@ final class fe implements Runnable {
           int var4 = 0;
           String var4_ref_String = null;
           java.awt.datatransfer.Transferable var7 = null;
-          ib var8 = null;
+          PlatformTask var8 = null;
           Thread var9 = null;
           Object[] var10 = null;
           java.awt.datatransfer.Clipboard var11 = null;
@@ -203,7 +203,7 @@ final class fe implements Runnable {
                   case 16:
                   default:
                     if (!this.field_e) {
-                      throw fe.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                     }
                     switch (var2_int) {
                       case 3:
@@ -227,7 +227,7 @@ final class fe implements Runnable {
                         }
                         break;
                       case 13:
-                        var3_ref2 = fe.a("", (String) (var8.field_f), field_g, -7);
+                        var3_ref2 = PlatformTaskDispatcher.a("", (String) (var8.field_f), field_g, -7);
                         var8.field_g = var3_ref2;
                         break;
                       case 16:
@@ -261,21 +261,21 @@ final class fe implements Runnable {
                           Class.forName("na").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_t, new Object[]{var16[0], var16[1], new Integer(var8.field_b), new Integer(var8.field_e), var16[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw fe.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                           }
                           try {
                             if (!field_k.startsWith("win")) {
-                              throw fe.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var15 = (String) (var8.field_f);
                             if (!var15.startsWith("http://") &&
                               !var15.startsWith("https://")) {
-                              throw fe.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var5 < var15.length(); var5++) {
                               if (var4_ref_String.indexOf((int) var15.charAt(var5)) == -1) {
-                                throw fe.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var15 + "\"");
@@ -284,12 +284,12 @@ final class fe implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter2;
                             var3_ref3 = (Exception) (Object) decompiledCaughtException;
                             var8.field_g = var3_ref3;
-                            throw fe.<RuntimeException>$cfr$sneakyThrow(var3_ref3);
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref3);
                           }
                         }
                         break;
                       case 12:
-                        var3_ref2 = fe.a(field_u, (String) (var8.field_f), field_g, -7);
+                        var3_ref2 = PlatformTaskDispatcher.a(field_u, (String) (var8.field_f), field_g, -7);
                         var8.field_g = var3_ref2;
                         break;
                       case 7:
@@ -365,7 +365,7 @@ final class fe implements Runnable {
         }
     }
 
-    final ib a(java.awt.Frame param0, int param1) {
+    final PlatformTask a(java.awt.Frame param0, int param1) {
         if (param1 < 44) {
           Class var4 = (Class) null;
           this.a(57, (String) null, (Class) null);
@@ -373,29 +373,29 @@ final class fe implements Runnable {
         return this.a(7, 0, (byte) -92, 0, param0);
     }
 
-    final ib a(int param0, java.net.URL param1) {
+    final PlatformTask a(int param0, java.net.URL param1) {
         if (param0 != -21377) {
           field_a = 73L;
         }
         return this.a(4, 0, (byte) -110, 0, param1);
     }
 
-    final ib a(int param0, int param1, int param2, int param3, int param4) {
+    final PlatformTask a(int param0, int param1, int param2, int param3, int param4) {
         if (param2 != -7573) {
           this.a(127);
         }
         return this.a(6, param4 + (param1 << 16), (byte) -65, (param3 << 16) + param0, (Object) null);
     }
 
-    final ib a(Runnable param0, int param1, int param2) {
+    final PlatformTask a(Runnable param0, int param1, int param2) {
         if (param2 != 65535) {
-          return (ib) null;
+          return (PlatformTask) null;
         }
         return this.a(2, 0, (byte) -72, param1, param0);
     }
 
-    final ib a(int param0) {
-        ib discarded$0 = null;
+    final PlatformTask a(int param0) {
+        PlatformTask discarded$0 = null;
         if (param0 != -1) {
           String var3 = (String) null;
           discarded$0 = this.a(115, true, 98, (String) null);
@@ -448,21 +448,21 @@ final class fe implements Runnable {
         }
     }
 
-    final ib a(int param0, String param1, Class param2) {
+    final PlatformTask a(int param0, String param1, Class param2) {
         if (param0 >= -107) {
-          return (ib) null;
+          return (PlatformTask) null;
         }
         return this.a(9, 0, (byte) -62, 0, new Object[]{param2, param1});
     }
 
-    private final ib a(int param0, int param1, byte param2, int param3, Object param4) {
-        ib var6 = null;
+    private final PlatformTask a(int param0, int param1, byte param2, int param3, Object param4) {
+        PlatformTask var6 = null;
         Throwable decompiledCaughtException = null;
         Object var7 = null;
         if (param2 > -48) {
           this.a(-23);
         }
-        var6 = new ib();
+        var6 = new PlatformTask();
         var6.field_f = param4;
         var6.field_e = param1;
         var6.field_d = param0;
@@ -481,14 +481,14 @@ final class fe implements Runnable {
         return var6;
     }
 
-    private final ib a(int param0, boolean param1, int param2, String param3) {
+    private final PlatformTask a(int param0, boolean param1, int param2, String param3) {
         if (param2 != 18832) {
           field_f = (String) null;
         }
         return this.a(param1 ? 22 : 1, 0, (byte) -118, param0, param3);
     }
 
-    final ib a(int param0, String param1, int param2) {
+    final PlatformTask a(int param0, String param1, int param2) {
         if (param0 < 9) {
           Class var5 = (Class) null;
           this.a(-86, (String) null, (Class) null);
@@ -496,7 +496,7 @@ final class fe implements Runnable {
         return this.a(param2, false, 18832, param1);
     }
 
-    fe(int param0, String param1, int param2, boolean param3) throws Exception {
+    PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
         int var5_int = 0;
         Exception exception = null;
         Throwable throwable = null;

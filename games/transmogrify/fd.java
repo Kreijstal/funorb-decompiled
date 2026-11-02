@@ -53,13 +53,13 @@ final class fd {
             }
             bg.field_l = bf.field_B;
             vd.field_a = vd.field_a + 1;
-            if (0 > j.field_b) {
+            if (0 > TileRack.field_b) {
               for (var2 = 0; 112 > var2; var2++) {
                 ve.field_B[var2] = false;
               }
-              j.field_b = sc.field_a;
+              TileRack.field_b = sc.field_a;
             } else {
-              while (sc.field_a != j.field_b) {
+              while (sc.field_a != TileRack.field_b) {
                 var2 = se.field_p[sc.field_a];
                 sc.field_a = 127 & sc.field_a + 1;
                 if (var2 < 0) {

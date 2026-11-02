@@ -4,13 +4,13 @@
 final class lk {
     static int[] field_d;
     static boolean field_c;
-    static fe field_b;
+    static PlatformTaskDispatcher field_b;
     static int[] field_e;
     static String field_a;
 
     final synchronized static long a(int param0) {
         if (param0 != 0) {
-          field_b = (fe) null;
+          field_b = (PlatformTaskDispatcher) null;
         }
         long var1 = System.currentTimeMillis();
         if (var1 < cl.field_y) {
@@ -125,7 +125,7 @@ final class lk {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = rg.field_D[vg.c(255, (int) var2[var4_int])];
         }
-        ti var4 = new ti(pj.field_y, ll.field_U, gj.field_j[0], re.field_a[0], ql.field_b[0], wk.field_b[0], var3);
+        ti var4 = new ti(pj.field_y, ll.field_U, BufferedSocket.field_j[0], re.field_a[0], ql.field_b[0], wk.field_b[0], var3);
         wd.d(126);
         return var4;
     }

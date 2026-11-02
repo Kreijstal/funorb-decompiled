@@ -163,7 +163,7 @@ final class sl {
           var2 = 0;
           var3_int = ml.f(5) + 1;
           while (var2 < this.field_e) {
-            var4_int = ml.f(qg.a((byte) 80, this.field_e - var2));
+            var4_int = ml.f(UiWidget.a((byte) 80, this.field_e - var2));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;

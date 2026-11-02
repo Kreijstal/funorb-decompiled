@@ -29,17 +29,17 @@ final class bg extends me {
           var3 = this.field_o.field_k.toLowerCase();
           var4 = param1.toLowerCase();
           if (var4.length() == 0) {
-            stackIn_5_0 = ec.field_d;
+            stackIn_5_0 = SocketConnector.field_d;
             return stackIn_5_0;
           }
           if (!be.a(var4, param0 - 95, var3)) {
-            stackIn_9_0 = ec.field_d;
+            stackIn_9_0 = SocketConnector.field_d;
             return stackIn_9_0;
           }
           if (!this.b(param1, param0 ^ -8680)) {
             return hi.field_b;
           }
-          stackIn_13_0 = ec.field_d;
+          stackIn_13_0 = SocketConnector.field_d;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -168,7 +168,7 @@ final class bg extends me {
             return stackIn_22_0;
           }
           if (fk.a(var6, (byte) 34, var5)) {
-            stackIn_26_0 = qj.field_c;
+            stackIn_26_0 = IntrusiveDeque.field_c;
             return stackIn_26_0;
           }
           if (!me.a(var6, (byte) 119, var5)) {

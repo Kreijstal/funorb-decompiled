@@ -10,11 +10,11 @@ class ni extends h {
         RuntimeException var1 = null;
         int var2 = 0;
         int var4 = 0;
-        sj var5 = null;
+        LetterTile var5 = null;
         int var6 = 0;
         String var7 = null;
         int var8 = 0;
-        sj[] var9 = null;
+        LetterTile[] var9 = null;
         int stackIn_3_0 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
@@ -29,23 +29,23 @@ class ni extends h {
             stackIn_3_0 = 87;
             return stackIn_3_0;
           }
-          if (null == od.field_g.field_e[0]) {
+          if (null == od.submissionRack.tiles[0]) {
             stackIn_24_0 = 0;
             return stackIn_24_0;
           }
-          if (!MouseInputHandler.field_c.a(-1, od.field_g.field_e)) {
+          if (!MouseInputHandler.field_c.a(-1, od.submissionRack.tiles)) {
             stackIn_22_0 = -1;
             return stackIn_22_0;
           }
           var1_int = 0;
           var2 = 0;
-          var9 = od.field_g.field_e;
+          var9 = od.submissionRack.tiles;
           for (var4 = 0; var4 < var9.length; var4++) {
             var5 = var9[var4];
             if (var5 != null) {
-              discarded$1 = of.field_e.append((char)(255 & var5.field_i));
+              discarded$1 = of.field_e.append((char)(255 & var5.letter));
               var2 = var2 != 0 | var5.field_x ? 1 : 0;
-              var1_int = var1_int + (var5.field_v + (var5.field_h << 1));
+              var1_int = var1_int + (var5.baseValue + (var5.carryoverFlag << 1));
               continue;
             }
             break;
@@ -76,7 +76,7 @@ class ni extends h {
         }
     }
 
-    public final void a(int param0, int param1, boolean param2, byte param3, qg param4) {
+    public final void a(int param0, int param1, boolean param2, byte param3, UiWidget param4) {
         try {
           int var6_int = -104 / ((param3 - 51) / 47);
           if (param2) {
