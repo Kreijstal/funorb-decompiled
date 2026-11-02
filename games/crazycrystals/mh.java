@@ -44,7 +44,7 @@ final class mh extends ik {
         field_l = null;
     }
 
-    final static short[] a(byte param0, md param1, int param2, short[] param3) {
+    final static short[] a(byte param0, CipherPacketBuffer param1, int param2, short[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -179,7 +179,7 @@ final class mh extends ik {
     final static void a(int param0, int param1, int param2) {
         if (param1 != -20) {
           short[] var4 = (short[]) null;
-          mh.a((byte) -79, (md) null, 13, (short[]) null);
+          mh.a((byte) -79, (CipherPacketBuffer) null, 13, (short[]) null);
         }
         oa.field_b = param0;
         rn.field_n = param2;

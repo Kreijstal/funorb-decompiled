@@ -19,7 +19,7 @@ final class tc extends rl {
           }
           this.field_k = this.field_k + param3;
           this.field_l = this.field_l + 1;
-          stackIn_3_0 = new jo(bm.field_g, 0);
+          stackIn_3_0 = new jo(IsaacRandom.field_g, 0);
           return (f) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

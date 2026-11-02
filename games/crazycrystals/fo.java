@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fo extends jb {
+final class fo extends IntrusiveNode {
     int field_f;
     int field_l;
     static dl[] field_g;

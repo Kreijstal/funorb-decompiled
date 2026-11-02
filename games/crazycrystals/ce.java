@@ -31,14 +31,14 @@ final class ce extends dj {
           var1 = qh.field_o.size();
           for (var3 = 0; var3 < var1; var3++) {
             var15 = (fq) (qh.field_o.elementAt(var3));
-            ii.a(var2, var15, (byte) 118);
+            NodeHashTableIterator.a(var2, var15, (byte) 118);
           }
         } else {
           for (var3 = 0; var3 < 3; var3++) {
             var16 = oe.field_a[var3];
             if (var16 != null) {
               var1++;
-              ii.a(var2, var16, (byte) 118);
+              NodeHashTableIterator.a(var2, var16, (byte) 118);
             }
           }
           if (0 == var1) {

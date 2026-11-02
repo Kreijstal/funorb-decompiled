@@ -52,7 +52,7 @@ final class ti extends rd {
             field_j = (String) null;
           }
           ph.a(100, (byte) 107, param1, param4);
-          stackIn_3_0 = bm.field_g;
+          stackIn_3_0 = IsaacRandom.field_g;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

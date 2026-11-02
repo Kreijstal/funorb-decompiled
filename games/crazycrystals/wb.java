@@ -3,12 +3,12 @@
  */
 final class wb {
     static String field_b;
-    jb field_a;
+    IntrusiveNode field_a;
     static int field_d;
     static wb field_e;
-    private jb field_c;
+    private IntrusiveNode field_c;
 
-    final void a(int param0, jb param1) {
+    final void a(int param0, IntrusiveNode param1) {
         try {
           if (null != param1.field_d) {
             param1.a(false);
@@ -26,7 +26,7 @@ final class wb {
     }
 
     final void a(int param0) {
-        jb var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = CrazyCrystals.field_B;
         while (true) {
           var2 = this.field_a.field_b;
@@ -39,12 +39,12 @@ final class wb {
         if (param0 == 22800) {
           return;
         }
-        jb var4 = (jb) null;
-        this.b(44, (jb) null);
+        IntrusiveNode var4 = (IntrusiveNode) null;
+        this.b(44, (IntrusiveNode) null);
     }
 
-    final jb a(byte param0) {
-        jb var2 = this.field_a.field_d;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_a.field_d;
         if (this.field_a == var2) {
           this.field_c = null;
           return null;
@@ -66,10 +66,10 @@ final class wb {
         field_b = null;
     }
 
-    final jb a(boolean param0) {
-        jb var2 = this.field_c;
+    final IntrusiveNode a(boolean param0) {
+        IntrusiveNode var2 = this.field_c;
         if (param0) {
-          return (jb) null;
+          return (IntrusiveNode) null;
         }
         if (var2 != this.field_a) {
           this.field_c = var2.field_b;
@@ -79,8 +79,8 @@ final class wb {
         return null;
     }
 
-    final jb g(int param0) {
-        jb var2 = this.field_a.field_b;
+    final IntrusiveNode g(int param0) {
+        IntrusiveNode var2 = this.field_a.field_b;
         if (var2 == this.field_a) {
           this.field_c = null;
           return null;
@@ -89,7 +89,7 @@ final class wb {
           this.field_c = var2.field_b;
           return var2;
         }
-        this.field_a = (jb) null;
+        this.field_a = (IntrusiveNode) null;
         this.field_c = var2.field_b;
         return var2;
     }
@@ -107,9 +107,9 @@ final class wb {
         }
     }
 
-    final jb d(int param0) {
+    final IntrusiveNode d(int param0) {
         int var3 = -76 % ((-55 - param0) / 57);
-        jb var2 = this.field_a.field_d;
+        IntrusiveNode var2 = this.field_a.field_d;
         if (var2 != this.field_a) {
           var2.a(false);
           return var2;
@@ -117,7 +117,7 @@ final class wb {
         return null;
     }
 
-    final void b(int param0, jb param1) {
+    final void b(int param0, IntrusiveNode param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -158,8 +158,8 @@ final class wb {
         return this.field_a.field_b == this.field_a ? true : false;
     }
 
-    final jb e(int param0) {
-        jb var2 = this.field_c;
+    final IntrusiveNode e(int param0) {
+        IntrusiveNode var2 = this.field_c;
         if (var2 == this.field_a) {
           this.field_c = null;
           return null;
@@ -168,15 +168,15 @@ final class wb {
         if (param0 == 0) {
           return var2;
         }
-        return (jb) null;
+        return (IntrusiveNode) null;
     }
 
-    final jb c(int param0) {
-        jb var2 = null;
-        jb var2Lifetime1;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 0) {
-          jb var3 = (jb) null;
-          this.a(4, (jb) null);
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          this.a(4, (IntrusiveNode) null);
           var2 = this.field_a.field_b;
           if (var2 != this.field_a) {
             var2.a(false);
@@ -193,7 +193,7 @@ final class wb {
     }
 
     public wb() {
-        this.field_a = new jb();
+        this.field_a = new IntrusiveNode();
         this.field_a.field_b = this.field_a;
         this.field_a.field_d = this.field_a;
     }

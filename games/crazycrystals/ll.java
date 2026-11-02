@@ -98,7 +98,7 @@ final class ll {
             rl.field_h = 0;
             qh.field_o = new Vector();
             tm.field_e = 0;
-            km.field_d = 0;
+            SecondaryIntrusiveDeque.field_d = 0;
             for (var5 = 0; var5 < 3; var5++) {
               q.field_a[var5].a((byte) 118);
             }
@@ -112,7 +112,7 @@ final class ll {
             to.field_c = 0;
             gl.field_e = 0;
             gm.field_c = new int[2];
-            tm.field_d = md.a(var8, false, var7, -93, var4);
+            tm.field_d = CipherPacketBuffer.a(var8, false, var7, -93, var4);
             no.a(var8, -8383, var7, tm.field_d);
             if (null == rn.field_q ||
               !rn.field_q.equals(hf.field_b[var10.field_d])) {
@@ -140,12 +140,12 @@ final class ll {
                 mi.i(22075);
               }
             }
-            md.field_k[2] = 0;
-            md.field_k[1] = 0;
+            CipherPacketBuffer.field_k[2] = 0;
+            CipherPacketBuffer.field_k[1] = 0;
             qp.field_f = false;
             mo.field_f = 0;
             va.field_c = 0;
-            md.field_k[0] = 32;
+            CipherPacketBuffer.field_k[0] = 32;
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

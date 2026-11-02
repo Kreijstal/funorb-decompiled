@@ -99,11 +99,11 @@ final class vn extends ue {
         for (var10 = 0; 17 > var10; var10++) {
           if (this.a(var10, (byte) -92) && (!this.field_n ||
             0 != (var6 & 1 << var10))) {
-            L26: {
+            regionExit1: {
               if (this.field_o != var10 && (!(var8 <= qh.field_i) ||
                 !(32 + var8 > qh.field_i) ||
-                !(bm.field_h >= var9) ||
-                !(bm.field_h < var9 + 32))) {
+                !(IsaacRandom.field_h >= var9) ||
+                !(IsaacRandom.field_h < var9 + 32))) {
                 var11 = oj.field_B;
                 if (mo.field_l <= 0 &&
                   (1 << var10 & 769) == 0) {
@@ -113,7 +113,7 @@ final class vn extends ue {
                   var11 = cn.field_c[var10];
                 }
                 var11.a(var8, var9);
-                break L26;
+                break regionExit1;
               }
               var11Lifetime2 = ro.field_q;
               if (mo.field_l <= 0 &&
@@ -180,7 +180,7 @@ final class vn extends ue {
           if (var10Lifetime1 == 0) {
             stackIn_80_1 = fl.field_l;
           } else {
-            stackIn_80_1 = bm.field_j;
+            stackIn_80_1 = IsaacRandom.field_j;
           }
           stackIn_82_2 = 241;
           stackIn_82_3 = var9Lifetime1Lifetime1;
@@ -371,7 +371,7 @@ final class vn extends ue {
             qb.field_a = qb.field_a - 1;
           }
           if (0 == qb.field_a) {
-            a.field_b = (ue) ((Object) this.field_g);
+            MouseInputHandler.field_b = (ue) ((Object) this.field_g);
             this.field_g.a(this.field_b.field_i, -13880);
           }
           this.field_g.a(param0);
@@ -506,12 +506,12 @@ final class vn extends ue {
           }
           if (qb.field_a == 0) {
             if (!this.field_r) {
-              a.field_b = (ue) ((Object) this.field_t);
+              MouseInputHandler.field_b = (ue) ((Object) this.field_t);
               this.field_t.a(this.field_b.field_i, -13880);
               decompiledFrameRemainder0 = false;
             }
             else {
-              a.field_b = (ue) ((Object) new rb(this.field_g, this.field_b.field_i));
+              MouseInputHandler.field_b = (ue) ((Object) new rb(this.field_g, this.field_b.field_i));
             }
           }
           if (decompiledFrameRemainder0) {
@@ -525,7 +525,7 @@ final class vn extends ue {
         super(3);
         this.field_o = -1;
         try {
-          if (!(a.field_b instanceof vn)) {
+          if (!(MouseInputHandler.field_b instanceof vn)) {
             qb.field_a = 0;
           }
           this.field_g = param1;

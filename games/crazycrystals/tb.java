@@ -68,7 +68,7 @@ abstract class tb {
         }
     }
 
-    final static void a(int param0, ng param1) {
+    final static void a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
@@ -95,8 +95,8 @@ abstract class tb {
     }
 
     final static void a(int param0, hp param1, byte param2) {
-        md var8 = null;
-        md var9 = null;
+        CipherPacketBuffer var8 = null;
+        CipherPacketBuffer var9 = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = CrazyCrystals.field_B;
@@ -299,7 +299,7 @@ abstract class tb {
             }
             var2 = 1;
           }
-          lb.field_l.a(0, be.a(-1013410975, to.field_a, dp.field_h), be.a(-1013410975, qh.field_i, bm.field_h));
+          lb.field_l.a(0, be.a(-1013410975, to.field_a, dp.field_h), be.a(-1013410975, qh.field_i, IsaacRandom.field_h));
           if (lb.field_l.a(param0)) {
             var1_int = 1;
           }
@@ -323,7 +323,7 @@ abstract class tb {
             var6 = (int)((10999L - var4) / 1000L);
             if (0 >= var6) {
               var3 = 2;
-              a.a(108, 5, true);
+              MouseInputHandler.a(108, 5, true);
             }
           }
           stackIn_26_0 = var3;

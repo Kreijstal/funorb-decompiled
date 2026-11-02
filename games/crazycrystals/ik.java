@@ -68,7 +68,7 @@ abstract class ik {
         if (param0 != 0) {
           return false;
         }
-        stackIn_8_0 = (qh.field_i >= this.field_a) && (qh.field_i < this.field_a + this.field_b) && (bm.field_h >= this.field_d) && (bm.field_h < this.field_c + this.field_d);
+        stackIn_8_0 = (qh.field_i >= this.field_a) && (qh.field_i < this.field_a + this.field_b) && (IsaacRandom.field_h >= this.field_d) && (IsaacRandom.field_h < this.field_c + this.field_d);
         return stackIn_8_0;
     }
 

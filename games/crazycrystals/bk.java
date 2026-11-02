@@ -16,7 +16,7 @@ final class bk {
         field_g = (int[][]) null;
     }
 
-    final void a(ng param0, ml param1) {
+    final void a(PacketBuffer param0, ml param1) {
         int var3;
         int var4;
         int var5;

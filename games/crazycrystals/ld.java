@@ -4,7 +4,7 @@
 final class ld extends wl {
     static String field_r;
     static String[] field_x;
-    ng field_s;
+    PacketBuffer field_s;
     byte field_u;
     int field_t;
     static dl[] field_v;

@@ -46,7 +46,7 @@ final class lg {
         }
         mp var5 = new mp();
         if (var4 != null) {
-          var5.a(new ng(var4), (byte) 48);
+          var5.a(new PacketBuffer(var4), (byte) 48);
           if (param0 > 21) {
             if (param1 < 32768) {
               this.field_d.a(var5, 1, (long)param1);

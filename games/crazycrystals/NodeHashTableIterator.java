@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class ii implements Iterator {
+final class NodeHashTableIterator implements Iterator {
     private int field_d;
-    private ug field_c;
-    private jb field_b;
+    private IntrusiveNodeHashTable field_c;
+    private IntrusiveNode field_b;
     static String field_e;
-    private jb field_a;
+    private IntrusiveNode field_a;
 
     public final void remove() {
         if (null == this.field_a) {
@@ -25,7 +25,7 @@ final class ii implements Iterator {
           this.field_d = 1;
           return;
         }
-        ii.a(-107);
+        NodeHashTableIterator.a(-107);
         this.field_a = null;
         this.field_b = this.field_c.field_c[0].field_b;
         this.field_d = 1;
@@ -93,7 +93,7 @@ final class ii implements Iterator {
         }
     }
 
-    ii(ug param0) {
+    NodeHashTableIterator(IntrusiveNodeHashTable param0) {
         this.field_a = null;
         try {
           this.field_c = param0;
@@ -124,7 +124,7 @@ final class ii implements Iterator {
 
     public final Object next() {
         int fieldTemp$0 = 0;
-        jb var1;
+        IntrusiveNode var1;
         int var2;
         var2 = CrazyCrystals.field_B;
         if (this.field_b != this.field_c.field_c[-1 + this.field_d]) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ng extends jb {
+class PacketBuffer extends IntrusiveNode {
     int field_f;
     static boolean field_j;
     static byte[][] field_g;
@@ -12,7 +12,7 @@ class ng extends jb {
         field_i = null;
         if (param0 > -54) {
           String var2 = (String) null;
-          ng.a((String) null, (nj) null, (f) null, (byte) -17, (String) null);
+          PacketBuffer.a((String) null, (nj) null, (f) null, (byte) -17, (String) null);
         }
         field_g = (byte[][]) null;
     }
@@ -151,7 +151,7 @@ class ng extends jb {
     final static void a(String param0, int param1) {
         try {
           if (param1 != 21815) {
-            ng.e((byte) 24);
+            PacketBuffer.e((byte) 24);
           }
           ld.field_r = param0;
         } catch (RuntimeException runtimeException) {
@@ -458,7 +458,7 @@ class ng extends jb {
     final int c(boolean param0) {
         if (param0) {
           String var3 = (String) null;
-          ng.a((String) null, 16);
+          PacketBuffer.a((String) null, 16);
         }
         int var2 = 255 & this.field_h[this.field_f];
         if (128 > var2) {
@@ -804,12 +804,12 @@ class ng extends jb {
         }
     }
 
-    ng(int param0) {
+    PacketBuffer(int param0) {
         this.field_f = 0;
         this.field_h = h.a((byte) 26, param0);
     }
 
-    ng(byte[] param0) {
+    PacketBuffer(byte[] param0) {
         try {
           this.field_f = 0;
           this.field_h = param0;

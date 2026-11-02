@@ -171,8 +171,8 @@ final class qe extends ln {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            kd.field_n = new md(param6);
-            tp.field_f = new md(param4);
+            kd.field_n = new CipherPacketBuffer(param6);
+            tp.field_f = new CipherPacketBuffer(param4);
             gj.field_l = param13;
             gf.field_b = param3;
             kl.field_T = param8;

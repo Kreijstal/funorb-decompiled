@@ -73,7 +73,7 @@ final class j implements Runnable {
     }
 
     final static void a(ak param0, int param1, boolean param2) {
-        md var3 = tp.field_f;
+        CipherPacketBuffer var3 = tp.field_f;
         if (param2) {
           return;
         }

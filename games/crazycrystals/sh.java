@@ -34,7 +34,7 @@ final class sh extends qc {
             field_m = (String) null;
           }
           this.field_k = this.field_k + 1;
-          stackIn_3_0 = new cj(bm.field_g, 0, 0, 0);
+          stackIn_3_0 = new cj(IsaacRandom.field_g, 0, 0, 0);
           return (f) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

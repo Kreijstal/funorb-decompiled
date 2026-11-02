@@ -90,14 +90,14 @@ final class hl extends l {
         int stackIn_9_0 = 0;
         int[] stackIn_24_0 = null;
         Throwable decompiledCaughtException = null;
-        md var2 = null;
+        CipherPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
         java.applet.Applet var8 = null;
-        md var9 = null;
+        CipherPacketBuffer var9 = null;
         mp var10 = null;
         var7 = CrazyCrystals.field_B;
         var9 = kd.field_n;
@@ -107,7 +107,7 @@ final class hl extends l {
         stackIn_3_0 = ((128 & var3) != 0);
         om.field_u = stackIn_3_0;
         dd.field_b = var9.h(255);
-        vf.field_d = var9.d(true);
+        KeyboardInputHandler.field_d = var9.d(true);
         if (lj.field_b == 2) {
           na.field_kb = var9.c((byte) -7);
           ca.field_m = var9.b(false);
@@ -119,9 +119,9 @@ final class hl extends l {
         var4 = stackIn_9_0;
         pc.field_w = var9.i(110);
         if (var4 == 0) {
-          md.field_s = pc.field_w;
+          CipherPacketBuffer.field_s = pc.field_w;
         } else {
-          md.field_s = var9.i(121);
+          CipherPacketBuffer.field_s = var9.i(121);
         }
         if (param0 != 16) {
           var8 = (java.applet.Applet) null;
@@ -144,7 +144,7 @@ final class hl extends l {
           try {
             var10 = bn.field_g.a(127, var5);
             fb.field_b = var10.e(60);
-            if (md.field_s.equals(je.field_g)) {
+            if (CipherPacketBuffer.field_s.equals(je.field_g)) {
               stackIn_24_0 = null;
             } else {
               stackIn_24_0 = var10.field_o;

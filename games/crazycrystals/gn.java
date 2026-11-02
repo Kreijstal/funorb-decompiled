@@ -106,14 +106,14 @@ final class gn extends en implements vd {
         qm var4 = null;
         try {
           var3 = null;
-          if (eb.field_w == param1) {
+          if (NetworkGameClient.field_w == param1) {
             var3 = field_U;
           } else {
             if (ab.field_A == param1) {
               this.field_f = this.field_f + 10;
               var3 = nh.field_C;
               if (jl.a(100)) {
-                var3 = md.field_n;
+                var3 = CipherPacketBuffer.field_n;
                 this.field_f = this.field_f + 20;
               }
             } else {

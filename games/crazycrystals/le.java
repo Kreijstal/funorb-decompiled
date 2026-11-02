@@ -11,13 +11,13 @@ final class le extends ln {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        md var5 = null;
+        CipherPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         ca var11 = null;
-        md var12 = null;
+        CipherPacketBuffer var12 = null;
         dp var13 = null;
         int[] var14 = null;
         dp var15 = null;
@@ -37,9 +37,9 @@ final class le extends ln {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((ng) ((Object) var5)).h(255);
+            var6 = ((PacketBuffer) ((Object) var5)).h(255);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((ng) ((Object) var5)).b((byte) -75);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).b((byte) -75);
             }
             var15 = (dp) (pm.field_c.g(32073));
             if (var15 == null) {
@@ -71,7 +71,7 @@ final class le extends ln {
               var13.field_f = var13.field_g[0];
               var13.a(false);
             } else {
-              wp.a((Throwable) null, "A1: " + ug.a(-1815), 21862);
+              wp.a((Throwable) null, "A1: " + IntrusiveNodeHashTable.a(-1815), 21862);
               jj.a(4);
             }
           }

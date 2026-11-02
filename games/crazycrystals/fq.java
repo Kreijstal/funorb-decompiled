@@ -527,16 +527,16 @@ final class fq extends ea implements Cloneable {
               this.field_v = 0;
             }
           } else {
-            if (cp.field_k[bm.field_e[this.field_u][0]]) {
+            if (cp.field_k[IsaacRandom.field_e[this.field_u][0]]) {
               var5_int--;
             }
-            if (cp.field_k[bm.field_e[this.field_u][2]]) {
+            if (cp.field_k[IsaacRandom.field_e[this.field_u][2]]) {
               var6--;
             }
-            if (cp.field_k[bm.field_e[this.field_u][1]]) {
+            if (cp.field_k[IsaacRandom.field_e[this.field_u][1]]) {
               var5_int++;
             }
-            if (cp.field_k[bm.field_e[this.field_u][3]]) {
+            if (cp.field_k[IsaacRandom.field_e[this.field_u][3]]) {
               var6++;
             }
           }
@@ -694,7 +694,7 @@ final class fq extends ea implements Cloneable {
               var5 = p.field_h;
             }
           }
-          stackIn_17_0 = ng.a(var4, param1, new fq(new kp(-1), this.field_u, 0, 0), (byte) -83, var5 + "<br><br>" + var6);
+          stackIn_17_0 = PacketBuffer.a(var4, param1, new fq(new kp(-1), this.field_u, 0, 0), (byte) -83, var5 + "<br><br>" + var6);
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

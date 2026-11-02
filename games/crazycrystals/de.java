@@ -191,11 +191,11 @@ final class de extends f implements Cloneable {
           }
           var3 = new de(this.field_i);
           if (null == this.field_j) {
-            stackIn_5_0 = ng.a(mg.field_h, param1, var3, (byte) -83, hl.field_e);
+            stackIn_5_0 = PacketBuffer.a(mg.field_h, param1, var3, (byte) -83, hl.field_e);
             return stackIn_5_0;
           }
           var3.field_j = (ea) (this.field_j.clone());
-          stackIn_7_0 = ng.a(mg.field_h, param1, var3, (byte) -83, wa.field_j);
+          stackIn_7_0 = PacketBuffer.a(mg.field_h, param1, var3, (byte) -83, GameAppletShell.field_j);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

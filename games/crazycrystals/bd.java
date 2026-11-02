@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class bd extends ij {
+class bd extends DualLinkNode {
     static dl[] field_n;
     static String field_l;
     static volatile long field_m;

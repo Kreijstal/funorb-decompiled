@@ -3,9 +3,9 @@
  */
 final class ek extends l {
     static mk field_h;
-    static ng field_g;
+    static PacketBuffer field_g;
     static int[] field_f;
-    static ng field_e;
+    static PacketBuffer field_e;
 
     final l a(int param0) {
         jj.field_b = jj.field_b + 16;

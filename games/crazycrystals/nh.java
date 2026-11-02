@@ -81,7 +81,7 @@ final class nh extends og implements vd {
         }
     }
 
-    final static jg a(int param0, md param1) {
+    final static jg a(int param0, CipherPacketBuffer param1) {
         int var7 = 0;
         jg stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
@@ -230,7 +230,7 @@ final class nh extends og implements vd {
     }
 
     final static void a(int param0, byte param1, ca param2) {
-        md var5 = null;
+        CipherPacketBuffer var5 = null;
         int var4 = 0;
         if (param1 > -13) {
           return;

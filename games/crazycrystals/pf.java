@@ -474,7 +474,7 @@ final class pf extends pn implements Cloneable {
         we var5_ref_we = null;
         int[] var6 = null;
         int var8 = 0;
-        md var9 = null;
+        CipherPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = CrazyCrystals.field_B;
@@ -523,7 +523,7 @@ final class pf extends pn implements Cloneable {
             jj.a(4);
             return;
           }
-          wp.a((Throwable) null, "LR1: " + ug.a(-1815), 21862);
+          wp.a((Throwable) null, "LR1: " + IntrusiveNodeHashTable.a(-1815), 21862);
           jj.a(4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -604,7 +604,7 @@ final class pf extends pn implements Cloneable {
           }
           var4 = new pf(this.field_o, this.field_s, new kp(-1));
           var4.field_q = 1024;
-          stackIn_5_0 = ng.a(tn.field_m, param1, var4, (byte) -83, ae.field_C);
+          stackIn_5_0 = PacketBuffer.a(tn.field_m, param1, var4, (byte) -83, ae.field_C);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

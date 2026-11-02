@@ -217,7 +217,7 @@ final class ma extends pn {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        md var27 = null;
+        CipherPacketBuffer var27 = null;
         int var3Lifetime1;
         int var25Lifetime1;
         int var25Lifetime2;
@@ -345,7 +345,7 @@ final class ma extends pn {
             var6_ref_hp.a(false);
             return;
           }
-          wp.a((Throwable) null, "HS1: " + ug.a(-1815), 21862);
+          wp.a((Throwable) null, "HS1: " + IntrusiveNodeHashTable.a(-1815), 21862);
           jj.a(4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -373,7 +373,7 @@ final class ma extends pn {
             return stackIn_4_0;
           }
           var4 = (ma) null;
-          stackIn_6_0 = ng.a(ah.field_f, param1, new ma(ac.field_j, new kp(-1), (ma) null), (byte) -83, gg.field_e);
+          stackIn_6_0 = PacketBuffer.a(ah.field_f, param1, new ma(ac.field_j, new kp(-1), (ma) null), (byte) -83, gg.field_e);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

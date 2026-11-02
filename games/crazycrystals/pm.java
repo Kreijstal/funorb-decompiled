@@ -25,7 +25,7 @@ final class pm {
     }
 
     final static void a(int param0, we param1, byte param2) {
-        md var5 = tp.field_f;
+        CipherPacketBuffer var5 = tp.field_f;
         var5.d(8, param0);
         var5.field_f = var5.field_f + 1;
         int var4 = var5.field_f;

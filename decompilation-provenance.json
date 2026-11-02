@@ -10674,6 +10674,30 @@
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
+    },
+    "crazycrystals": {
+      "source": {
+        "repository": "Kreijstal/funorb-decompiled",
+        "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
+        "subdirectory": "games/crazycrystals"
+      },
+      "inputTreeSha256": "c4a9de6b68d19ad0c441027083fcbb2078e0fa00013f1b1c46169002fef73404",
+      "sources": {
+        "files": 394,
+        "sha256": "1f2f421c7f69e897bf7116465383dac42ff9278f3509648f913e8e7aa688a607"
+      },
+      "dictionary": {
+        "path": "decompilation/crazycrystals-naming.json",
+        "sha256": "984963496c40bc413ccafcc10ceb5be5f087b7f4552f06f279dc71a315d7a757"
+      },
+      "readingGuide": {
+        "path": "games/crazycrystals/README.md",
+        "sha256": "6c40eb66ff5c12271780cd2516db6b7aa225666d6060422768b743d03add3265"
+      },
+      "rulesSha256": "543b71f72261209f3783790f5df66fb1c6950931267229fed6b59a5b0326dd0e",
+      "compiler": {
+        "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
+      }
     }
   },
   "publication": {
@@ -11246,6 +11270,10 @@
             "-classpath",
             "batch-stubs"
           ]
+        },
+        "publishedSources": {
+          "files": 394,
+          "sha256": "1f2f421c7f69e897bf7116465383dac42ff9278f3509648f913e8e7aa688a607"
         }
       },
       "dekobloko": {

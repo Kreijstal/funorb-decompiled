@@ -326,7 +326,7 @@ abstract class tl {
           }
           var2Lifetime2 = we.a("keycode_map", 1);
           if (var2Lifetime2 != null) {
-            vf.field_c = var2Lifetime2[0] & 255;
+            KeyboardInputHandler.field_c = var2Lifetime2[0] & 255;
           }
           var2Lifetime3 = we.a("keycode_p1left", 1);
           if (var2Lifetime3 != null) {
@@ -681,51 +681,51 @@ abstract class tl {
           }
           var2Lifetime90 = we.a("puzzle2p_levelnames,0", 1);
           if (var2Lifetime90 != null) {
-            pg.field_e[0] = fa.a((byte) -124, var2Lifetime90);
+            GameCanvas.field_e[0] = fa.a((byte) -124, var2Lifetime90);
           }
           var2Lifetime91 = we.a("puzzle2p_levelnames,1", 1);
           if (null != var2Lifetime91) {
-            pg.field_e[1] = fa.a((byte) -79, var2Lifetime91);
+            GameCanvas.field_e[1] = fa.a((byte) -79, var2Lifetime91);
           }
           var2Lifetime92 = we.a("puzzle2p_levelnames,2", 1);
           if (null != var2Lifetime92) {
-            pg.field_e[2] = fa.a((byte) -121, var2Lifetime92);
+            GameCanvas.field_e[2] = fa.a((byte) -121, var2Lifetime92);
           }
           var2Lifetime93 = we.a("puzzle2p_levelnames,3", 1);
           if (null != var2Lifetime93) {
-            pg.field_e[3] = fa.a((byte) -86, var2Lifetime93);
+            GameCanvas.field_e[3] = fa.a((byte) -86, var2Lifetime93);
           }
           var2Lifetime94 = we.a("puzzle2p_levelnames,4", 1);
           if (null != var2Lifetime94) {
-            pg.field_e[4] = fa.a((byte) -66, var2Lifetime94);
+            GameCanvas.field_e[4] = fa.a((byte) -66, var2Lifetime94);
           }
           var2Lifetime95 = we.a("puzzle2p_levelnames,5", 1);
           if (var2Lifetime95 != null) {
-            pg.field_e[5] = fa.a((byte) -82, var2Lifetime95);
+            GameCanvas.field_e[5] = fa.a((byte) -82, var2Lifetime95);
           }
           var2Lifetime96 = we.a("puzzle2p_levelnames,6", 1);
           if (var2Lifetime96 != null) {
-            pg.field_e[6] = fa.a((byte) -95, var2Lifetime96);
+            GameCanvas.field_e[6] = fa.a((byte) -95, var2Lifetime96);
           }
           var2Lifetime97 = we.a("puzzle2p_levelnames,7", 1);
           if (null != var2Lifetime97) {
-            pg.field_e[7] = fa.a((byte) -104, var2Lifetime97);
+            GameCanvas.field_e[7] = fa.a((byte) -104, var2Lifetime97);
           }
           var2Lifetime98 = we.a("puzzle2p_levelnames,8", 1);
           if (var2Lifetime98 != null) {
-            pg.field_e[8] = fa.a((byte) -93, var2Lifetime98);
+            GameCanvas.field_e[8] = fa.a((byte) -93, var2Lifetime98);
           }
           var2Lifetime99 = we.a("puzzle2p_levelnames,9", 1);
           if (var2Lifetime99 != null) {
-            pg.field_e[9] = fa.a((byte) -64, var2Lifetime99);
+            GameCanvas.field_e[9] = fa.a((byte) -64, var2Lifetime99);
           }
           var2Lifetime100 = we.a("puzzle2p_levelnames,10", 1);
           if (null != var2Lifetime100) {
-            pg.field_e[10] = fa.a((byte) -106, var2Lifetime100);
+            GameCanvas.field_e[10] = fa.a((byte) -106, var2Lifetime100);
           }
           var2Lifetime101 = we.a("puzzle2p_levelnames,11", 1);
           if (var2Lifetime101 != null) {
-            pg.field_e[11] = fa.a((byte) -66, var2Lifetime101);
+            GameCanvas.field_e[11] = fa.a((byte) -66, var2Lifetime101);
           }
           var2Lifetime102 = we.a("puzzle3p_levelnames,0", 1);
           if (var2Lifetime102 != null) {
@@ -897,19 +897,19 @@ abstract class tl {
           }
           var2Lifetime144 = we.a("puzzle1p_subsections,0", 1);
           if (var2Lifetime144 != null) {
-            md.field_t[0] = fa.a((byte) -91, var2Lifetime144);
+            CipherPacketBuffer.field_t[0] = fa.a((byte) -91, var2Lifetime144);
           }
           var2Lifetime145 = we.a("puzzle1p_subsections,1", 1);
           if (null != var2Lifetime145) {
-            md.field_t[1] = fa.a((byte) -103, var2Lifetime145);
+            CipherPacketBuffer.field_t[1] = fa.a((byte) -103, var2Lifetime145);
           }
           var2Lifetime146 = we.a("puzzle1p_subsections,2", 1);
           if (var2Lifetime146 != null) {
-            md.field_t[2] = fa.a((byte) -123, var2Lifetime146);
+            CipherPacketBuffer.field_t[2] = fa.a((byte) -123, var2Lifetime146);
           }
           var2Lifetime147 = we.a("puzzle1p_subsections,3", 1);
           if (null != var2Lifetime147) {
-            md.field_t[3] = fa.a((byte) -100, var2Lifetime147);
+            CipherPacketBuffer.field_t[3] = fa.a((byte) -100, var2Lifetime147);
           }
           var2Lifetime148 = we.a("levelscomplete_proceeding", 1);
           if (null != var2Lifetime148) {
@@ -1101,7 +1101,7 @@ abstract class tl {
           }
           var2Lifetime195 = we.a("hole_information_filled", 1);
           if (null != var2Lifetime195) {
-            wa.field_j = fa.a((byte) -97, var2Lifetime195);
+            GameAppletShell.field_j = fa.a((byte) -97, var2Lifetime195);
           }
           var2Lifetime196 = we.a("key_name", 1);
           if (null != var2Lifetime196) {
@@ -1113,7 +1113,7 @@ abstract class tl {
           }
           var2Lifetime198 = we.a("laserhub_name", 1);
           if (var2Lifetime198 != null) {
-            eb.field_m = fa.a((byte) -95, var2Lifetime198);
+            NetworkGameClient.field_m = fa.a((byte) -95, var2Lifetime198);
           }
           var2Lifetime199 = we.a("laserhub_information", 1);
           if (var2Lifetime199 != null) {
@@ -1193,7 +1193,7 @@ abstract class tl {
           }
           var2Lifetime218 = we.a("rock_name", 1);
           if (null != var2Lifetime218) {
-            ii.field_e = fa.a((byte) -104, var2Lifetime218);
+            NodeHashTableIterator.field_e = fa.a((byte) -104, var2Lifetime218);
           }
           var2Lifetime219 = we.a("rock_information", 1);
           if (null != var2Lifetime219) {
@@ -1385,7 +1385,7 @@ abstract class tl {
           }
           var2Lifetime266 = we.a("tutorial_5_28", 1);
           if (var2Lifetime266 != null) {
-            wa.field_f = fa.a((byte) -98, var2Lifetime266);
+            GameAppletShell.field_f = fa.a((byte) -98, var2Lifetime266);
           }
           var2Lifetime267 = we.a("developerquote", 1);
           if (null != var2Lifetime267) {
@@ -1472,7 +1472,7 @@ abstract class tl {
           }
           throw dn.a((Throwable) ((Object) stackIn_1007_0), ((StringBuilder) (Object) stackIn_1007_1).append(stackIn_1008_2).append(')').toString());
         }
-        if (wa.field_e != 0) {
+        if (GameAppletShell.field_e != 0) {
           var3++;
           CrazyCrystals.field_B = var3;
         }

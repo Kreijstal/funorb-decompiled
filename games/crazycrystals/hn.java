@@ -6,7 +6,7 @@ final class hn extends se {
         super(param0);
     }
 
-    final static void a(int param0, int param1, int param2, ng param3, int param4) {
+    final static void a(int param0, int param1, int param2, PacketBuffer param3, int param4) {
         try {
           param3.a(true, param2);
           param3.c(-161478600, 17);

@@ -12,7 +12,7 @@ class na extends ud implements vd {
     private boolean field_hb;
     private co field_cb;
 
-    final static int a(eb param0, boolean param1, int param2) {
+    final static int a(NetworkGameClient param0, boolean param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -66,7 +66,7 @@ class na extends ud implements vd {
           var6 = new jd(this, this.field_jb, param2);
           var4 = var6;
           if (param0 == 5) {
-            var6.a(ng.field_i, (byte) -124, 11);
+            var6.a(PacketBuffer.field_i, (byte) -124, 11);
             var6.a(dn.field_c, (byte) -124, 17);
           } else {
             if (param0 == 256) {
@@ -83,7 +83,7 @@ class na extends ud implements vd {
           }
           if (param0 != 3) {
             if (4 == param0) {
-              var6.a(pg.field_b, (byte) -124, 8);
+              var6.a(GameCanvas.field_b, (byte) -124, 8);
             } else {
               if (6 != param0) {
                 if (param0 == 9) {
@@ -230,7 +230,7 @@ class na extends ud implements vd {
     }
 
     final void i(byte param0) {
-        eb var3;
+        NetworkGameClient var3;
         if (!this.field_C) {
           return;
         }
@@ -245,8 +245,8 @@ class na extends ud implements vd {
         if (param0 <= -9) {
           return;
         }
-        var3 = (eb) null;
-        na.a((eb) null, false, 44);
+        var3 = (NetworkGameClient) null;
+        na.a((NetworkGameClient) null, false, 44);
     }
 
     static {

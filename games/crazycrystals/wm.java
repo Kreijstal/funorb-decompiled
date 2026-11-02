@@ -15,7 +15,7 @@ final class wm {
         int var3 = CrazyCrystals.field_B;
         wj[] var1 = new wj[mg.field_a];
         for (var2 = 0; var2 < mg.field_a; var2++) {
-          var1[var2] = new wj(km.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], ui.field_c[var2], gh.field_z);
+          var1[var2] = new wj(SecondaryIntrusiveDeque.field_c, bo.field_o, uo.field_k[var2], jm.field_a[var2], uo.field_l[var2], je.field_c[var2], ui.field_c[var2], gh.field_z);
         }
         if (param0 >= -44) {
           wm.b(97);

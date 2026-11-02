@@ -4,11 +4,11 @@
 import java.util.*;
 
 final class wk implements Iterator {
-    private ij field_e;
+    private DualLinkNode field_e;
     private be field_d;
     static int field_b;
     static String[] field_c;
-    private ij field_a;
+    private DualLinkNode field_a;
 
     public final boolean hasNext() {
         return this.field_e != this.field_d.field_f;
@@ -49,12 +49,12 @@ final class wk implements Iterator {
     public final Object next() {
         Object var1 = this.field_e;
         if (var1 != this.field_d.field_f) {
-          this.field_e = ((ij) (var1)).field_j;
+          this.field_e = ((DualLinkNode) (var1)).field_j;
         } else {
           var1 = null;
           this.field_e = null;
         }
-        this.field_a = (ij) (var1);
+        this.field_a = (DualLinkNode) (var1);
         return var1;
     }
 

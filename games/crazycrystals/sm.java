@@ -153,7 +153,7 @@ final class sm extends l {
           return (l) (this);
         }
         nj.field_k = kk.field_a[0].length;
-        ij.a(0, param0, 0, kk.field_a);
+        DualLinkNode.a(0, param0, 0, kk.field_a);
         nj.field_k = 0;
         if (this.field_g >= 60) {
           jj.field_b = jj.field_b - (~jj.field_b >> 3);

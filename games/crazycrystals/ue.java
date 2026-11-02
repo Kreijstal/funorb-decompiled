@@ -75,9 +75,9 @@ abstract class ue {
         if (null != jd.field_D) {
           fq.a(-65, jd.field_D);
         }
-        vf.a(-1);
+        KeyboardInputHandler.a(-1);
         ub.b(0);
-        ug.a((byte) -127);
+        IntrusiveNodeHashTable.a((byte) -127);
         if (b.b(0)) {
           tp.field_f.d(8, 1);
           ak.a(0, (byte) -48);
