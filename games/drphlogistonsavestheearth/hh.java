@@ -5,7 +5,7 @@ final class hh {
     static bb field_b;
     static he[] field_d;
     static he[] field_c;
-    static li field_e;
+    static GameAppletShell field_e;
     static int[] field_a;
 
     public static void a(boolean param0) {
@@ -44,7 +44,7 @@ final class hh {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

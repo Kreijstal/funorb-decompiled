@@ -64,7 +64,7 @@ final class fm implements cg {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -117,9 +117,9 @@ final class fm implements cg {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               qg.a(var14, (byte) 104);
               if (var6_intLifetime1 != 0) {
-                ai.a(ah.field_K, (byte) -62, j.field_e, var6_intLifetime1, d.field_b, oh.field_d);
+                ai.a(ah.field_K, (byte) -62, LevelSession.field_e, var6_intLifetime1, d.field_b, oh.field_d);
               } else {
-                ai.a(ah.field_K, (byte) -128, j.field_e, var6_intLifetime1, d.field_b, oh.field_d);
+                ai.a(ah.field_K, (byte) -128, LevelSession.field_e, var6_intLifetime1, d.field_b, oh.field_d);
               }
             }
             mk.a(-91, var5);
@@ -163,12 +163,12 @@ final class fm implements cg {
             }
           }
           var5Lifetime1 = -96 / ((param0 - 11) / 43);
-          var3.a(-16175);
+          var3.unlink(-16175);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "fm.A(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "fm.A(" + param0 + ')');
         }
     }
 
@@ -190,7 +190,7 @@ final class fm implements cg {
           this.field_h = param5;
           this.field_g = param2;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "fm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "fm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

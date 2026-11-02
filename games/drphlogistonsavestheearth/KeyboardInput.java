@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fe implements java.awt.event.KeyListener, java.awt.event.FocusListener {
+final class KeyboardInput implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static int field_a;
     static String field_b;
 
@@ -11,7 +11,7 @@ final class fe implements java.awt.event.KeyListener, java.awt.event.FocusListen
             gm.field_O = -1;
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "fe.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "fe.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -34,7 +34,7 @@ final class fe implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           param0.consume();
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "fe.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "fe.keyTyped(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -111,7 +111,7 @@ final class fe implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class fe implements java.awt.event.KeyListener, java.awt.event.FocusListen
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

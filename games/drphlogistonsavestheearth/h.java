@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class h extends gi {
+final class h extends IntrusiveNode {
     int field_h;
     int[] field_j;
     boolean field_i;

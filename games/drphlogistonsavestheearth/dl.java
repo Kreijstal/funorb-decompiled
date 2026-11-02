@@ -16,7 +16,7 @@ final class dl extends si {
           this.field_z = param0;
           this.field_K = 256;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "dl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dl.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class dl extends si {
             }
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "dl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dl.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -168,7 +168,7 @@ final class dl extends si {
         }
         if (this.field_K != 256) {
           var5 = new nh(this.field_z.field_w, this.field_z.field_k);
-          aj.a(var5, (byte) 47);
+          MouseInput.a(var5, (byte) 47);
           this.field_z.a(0, param1, param2, 0);
           cl.d((byte) -81);
           var5.e(this.field_o + param0, this.field_m + param3, this.field_K);
@@ -196,7 +196,7 @@ final class dl extends si {
           ul.field_e[param3] = param1;
           ul.field_f[param3] = param5;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "dl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dl.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 

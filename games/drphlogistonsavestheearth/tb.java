@@ -13,7 +13,7 @@ final class tb {
           param1.removeFocusListener(ji.field_c);
           gm.field_O = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "tb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "tb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

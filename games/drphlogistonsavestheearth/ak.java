@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ak extends gi {
+abstract class ak extends IntrusiveNode {
     int field_h;
 
     private ak() throws Throwable {

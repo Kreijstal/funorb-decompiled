@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fk extends gi {
+final class fk extends IntrusiveNode {
     static he field_m;
     int field_o;
     int field_s;
@@ -64,7 +64,7 @@ final class fk extends gi {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -112,7 +112,7 @@ final class fk extends gi {
                   var11 = 65280 & var9;
                   var11 = 65280 & (var11 >> 1) - (var11 >> 5);
                   var12 = (255 & var9) >> 3;
-                  wj.field_l[var6_int] = li.a(li.a(var10 << 16, var11), var12);
+                  wj.field_l[var6_int] = GameAppletShell.a(GameAppletShell.a(var10 << 16, var11), var12);
                 }
                 var6_int++;
               }
@@ -124,7 +124,7 @@ final class fk extends gi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var6), "fk.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var6), "fk.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

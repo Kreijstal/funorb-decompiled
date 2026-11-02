@@ -67,7 +67,7 @@ final class fg {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -75,7 +75,7 @@ final class fg {
         if (param0 == 1) {
           if (null == th.field_c) {
             th.field_c = new sf();
-            th.field_c.a(42, uh.field_i);
+            th.field_c.a(42, DualLinkNode.field_i);
             th.field_c.field_n = 5;
             th.field_c.field_g = u.field_d;
             th.field_c.field_s = 6;
@@ -91,7 +91,7 @@ final class fg {
         fg.a((CharSequence) null, 84);
         if (null == th.field_c) {
           th.field_c = new sf();
-          th.field_c.a(42, uh.field_i);
+          th.field_c.a(42, DualLinkNode.field_i);
           th.field_c.field_n = 5;
           th.field_c.field_g = u.field_d;
           th.field_c.field_s = 6;

@@ -50,7 +50,7 @@ final class la {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ final class la {
             la.a((rf) null, -9, true, -84, (byte) -88, -64, -25, (nh[]) null, 62, (nh[]) null, -111, 124, -88, -112, (rf) null, -41);
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "la.A(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "la.A(" + param0 + ')');
         }
     }
 
@@ -99,7 +99,7 @@ final class la {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ final class la {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param15).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param15).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class la {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "la.C(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "la.C(" + param0 + ')');
         }
     }
 
@@ -294,9 +294,9 @@ final class la {
           }
           var6_ref.field_V = var4_ref_StringLifetime1;
           var6_ref.field_qb = (String) (var3Lifetime1);
-          var6_ref.a(param0 - 16176);
+          var6_ref.unlink(param0 - 16176);
           var7_ref = (hg) (sh.field_a.h(param0 ^ -11152));
-          L15: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var7_ref != null) {
               stackIn_58_0 = var7_ref;
@@ -311,7 +311,7 @@ final class la {
             }
             if (decompiledFrameRemainder0) {
               if (var7_ref == null) {
-                break L15;
+                break scanLoop1;
               }
               stackIn_58_0 = var6_ref;
               stackIn_58_1 = 16709;
@@ -328,7 +328,7 @@ final class la {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1_ref), "la.E(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1_ref), "la.E(" + param0 + ')');
         }
     }
 

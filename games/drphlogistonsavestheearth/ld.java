@@ -43,7 +43,7 @@ final class ld {
             }
           }
         }
-        cb.field_b.a(aj.field_f, 285, -cb.field_b.field_x + 122 + (var2 + 64), 200, 140, 0, -1, param0, 0, cb.field_b.field_x);
+        cb.field_b.a(MouseInput.field_f, 285, -cb.field_b.field_x + 122 + (var2 + 64), 200, 140, 0, -1, param0, 0, cb.field_b.field_x);
     }
 
     private final void f(byte param0) {
@@ -63,8 +63,8 @@ final class ld {
         var8 = var9;
         var2 = var8;
         for (var3 = -1 + v.field_W.length; var3 >= 0; var3--) {
-          var4 = l.field_n[sd.field_a.field_q][var3];
-          var5 = kc.field_o[sd.field_a.field_q][var3];
+          var4 = l.field_n[sd.field_a.levelNumber][var3];
+          var5 = kc.field_o[sd.field_a.levelNumber][var3];
           if (ul.field_d > var4) {
             var2[var3] = -var4 + ul.field_d;
           }
@@ -81,7 +81,7 @@ final class ld {
           var6 = (int)(2.55 * (double)var9[var3]);
           if (0 < var6) {
             v.field_W[var3].a(-50 + var9[var3] / 2, var9[var3] / 2 - 50, var6);
-            cb.field_b.a(mg.field_a[sd.field_a.field_q][var3], 225, kj.field_f[sd.field_a.field_q][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
+            cb.field_b.a(mg.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
           }
         }
     }
@@ -104,7 +104,7 @@ final class ld {
           ph.field_h.a(0, param2 + param1);
           wj.a();
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ld.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ld.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -124,8 +124,8 @@ final class ld {
         var8 = var9;
         var2 = var8;
         for (var3 = mk.field_g.length + param0; var3 >= 0; var3--) {
-          var4 = l.field_n[sd.field_a.field_q][var3];
-          var5 = kc.field_o[sd.field_a.field_q][var3];
+          var4 = l.field_n[sd.field_a.levelNumber][var3];
+          var5 = kc.field_o[sd.field_a.levelNumber][var3];
           if (var4 < ul.field_d) {
             var8[var3] = -var4 + ul.field_d;
           }
@@ -144,11 +144,11 @@ final class ld {
           var6 = (int)((double)var10[var3] * 2.55);
           if (var6 > 0) {
             mk.field_g[var3].a(-50 + var10[var3] / 2, var10[var3] / 2 - 50, var6);
-            cb.field_b.a(mg.field_a[sd.field_a.field_q][var3], 225, kj.field_f[sd.field_a.field_q][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
+            cb.field_b.a(mg.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
           }
         }
-        if (l.field_n[sd.field_a.field_q][7] < ul.field_d &&
-          kc.field_o[sd.field_a.field_q][7] > ul.field_d) {
+        if (l.field_n[sd.field_a.levelNumber][7] < ul.field_d &&
+          kc.field_o[sd.field_a.levelNumber][7] > ul.field_d) {
           wj.d(0, 0, 640, 480, 16777215, 255 - (int)(2.5 * (double)var10[7]));
         }
     }
@@ -226,7 +226,7 @@ final class ld {
             return;
           }
           var3_int = 255;
-          var4 = td.field_g[sd.field_a.field_q];
+          var4 = td.field_g[sd.field_a.levelNumber];
           if (ul.field_d < 100) {
             var3_int = (int)(2.55 * (double)ul.field_d);
           } else {
@@ -246,7 +246,7 @@ final class ld {
             var6 = 0;
           }
           param1[0].a(var5, var6, var3_int);
-          cb.field_b.a(mg.field_a[sd.field_a.field_q][0], 225, kj.field_f[sd.field_a.field_q][0], 405, 640, var3_int * 65793, -1, 0, 0, cb.field_b.field_x);
+          cb.field_b.a(mg.field_a[sd.field_a.levelNumber][0], 225, kj.field_f[sd.field_a.levelNumber][0], 405, 640, var3_int * 65793, -1, 0, 0, cb.field_b.field_x);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -258,7 +258,7 @@ final class ld {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -300,17 +300,17 @@ final class ld {
         int var3Lifetime1;
         var5 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         var2 = -122 / ((param0 + 76) / 50);
-        if (8 == sd.field_a.field_q) {
+        if (8 == sd.field_a.levelNumber) {
           sc.a(-1, true, ml.field_l);
         }
         var3 = 0;
         if (r.field_d != this.field_c) {
-          var3Lifetime1 = -1 + sd.field_a.field_q;
+          var3Lifetime1 = -1 + sd.field_a.levelNumber;
         } else {
-          var3Lifetime1 = sd.field_a.field_q;
+          var3Lifetime1 = sd.field_a.levelNumber;
         }
         if (hh.field_d[var3Lifetime1] == null) {
-          if (sd.field_a.field_q != 8) {
+          if (sd.field_a.levelNumber != 8) {
             mf.h(-8372);
           }
         } else {
@@ -333,7 +333,7 @@ final class ld {
         int var2Lifetime1;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         ul.field_d = ul.field_d + 1;
-        var2 = sd.field_a.field_q;
+        var2 = sd.field_a.levelNumber;
         if (var2 == 0) {
           this.b((byte) -114);
         } else {
@@ -474,7 +474,7 @@ final class ld {
           this.a((he) null, 32, 19, -17);
         }
         if (hl.field_d ||
-          td.field_g[sd.field_a.field_q] < ul.field_d) {
+          td.field_g[sd.field_a.levelNumber] < ul.field_d) {
           ek.a(-80, false, -1);
           ul.field_d = 0;
         }
@@ -505,7 +505,7 @@ final class ld {
         stackIn_3_0 = (ej.field_h != 0);
         stackIn_6_1 = (sd.field_a.field_H == 0) ? false : true;
         stackIn_8_2 = -125;
-        stackIn_9_3 = (sd.field_a.field_q == 0) ? false : true;
+        stackIn_9_3 = (sd.field_a.levelNumber == 0) ? false : true;
         var4 = nj.a(stackIn_3_0, stackIn_6_1, stackIn_8_2, stackIn_9_3);
         if (var4 == null) {
           var4 = tf.field_nb[7];
@@ -515,7 +515,7 @@ final class ld {
           return;
         }
         stackIn_16_0 = (0 != ej.field_h);
-        stackIn_19_1 = (0 == sd.field_a.field_q) ? false : true;
+        stackIn_19_1 = (0 == sd.field_a.levelNumber) ? false : true;
         stackIn_22_2 = (sd.field_a.field_H == 0) ? false : true;
         stackIn_25_3 = (param0) ? false : true;
         var4Lifetime1 = jl.a(stackIn_16_0, stackIn_19_1, stackIn_22_2, stackIn_25_3);
@@ -580,13 +580,13 @@ final class ld {
         if (param0 <= 71) {
           this.field_a = 105;
         }
-        var2 = sd.field_a.field_q;
+        var2 = sd.field_a.levelNumber;
         if (var2 != 0) {
           if (var2 == 1) {
             this.a(false, wb.field_a);
           } else {
             if (2 == var2) {
-              this.a(false, gl.field_b);
+              this.a(false, ClientException.field_b);
             } else {
               if (3 == var2) {
                 this.c(true);
@@ -689,7 +689,7 @@ final class ld {
               stackIn_43_0 = (oh.a(0)) ? 13 : 5;
               var3 = stackIn_43_0;
               stackIn_46_0 = (!oh.a(0)) ? 1 : 0;
-              L11: {
+              regionExit1: {
                 var4 = stackIn_46_0;
                 var5 = var2;
                 if (var5 == 5) {
@@ -712,17 +712,17 @@ final class ld {
                       this.field_e.field_f = this.field_e.field_f + (this.field_g + (1 + var4));
                     }
                   } else {
-                    L14: {
+                    regionExit2: {
                       switch (var5) {
                         case 28:
-                          break L14;
+                          break regionExit2;
                         default:
                           if (var5 != 29 &&
                             var5 != 30 &&
                             var5 != 31) {
                             switch (var5) {
                               default:
-                                break L11;
+                                break regionExit1;
                               case 34:
                                 break;
                               case 32:
@@ -742,16 +742,16 @@ final class ld {
                             if ((di.field_c == 99)) {
                               this.field_e.field_f = 0;
                             }
-                            break L11;
+                            break regionExit1;
                           }
                           if (di.field_c == 98) {
                             this.field_e.field_f = this.field_e.field_f - 3;
                           }
                           if (di.field_c != 99) {
-                            break L11;
+                            break regionExit1;
                           }
                           this.field_e.field_f = this.field_e.field_f + 3;
-                          break L11;
+                          break regionExit1;
                         case 26:
                           this.field_g = 0;
                         case 27:
@@ -838,7 +838,7 @@ final class ld {
         } else {
           bf.field_h = null;
           ob.field_b = null;
-          sd.field_a = new j(param0);
+          sd.field_a = new LevelSession(param0);
           mf.h(-8372);
         }
     }
@@ -953,7 +953,7 @@ final class ld {
           field_f = (he[]) null;
         }
         if (0 == (!hl.field_d ? 1 : 0) ||
-          td.field_g[sd.field_a.field_q] < ul.field_d) {
+          td.field_g[sd.field_a.levelNumber] < ul.field_d) {
           ek.a(-63, false, -1);
           ul.field_d = 0;
         }
@@ -984,8 +984,8 @@ final class ld {
           return;
         }
         while (var3 >= 0) {
-          var4 = l.field_n[sd.field_a.field_q][var3];
-          var5 = kc.field_o[sd.field_a.field_q][var3];
+          var4 = l.field_n[sd.field_a.levelNumber][var3];
+          var5 = kc.field_o[sd.field_a.levelNumber][var3];
           if (ul.field_d > var4) {
             var2[var3] = ul.field_d - var4;
           }
@@ -1002,7 +1002,7 @@ final class ld {
           var6 = (int)((double)var9[var3] * 2.55);
           if (var6 > 0) {
             pc.field_b[var3].a(-50 + var9[var3] / 2, -50 + var9[var3] / 2, var6);
-            cb.field_b.a(mg.field_a[sd.field_a.field_q][var3], 225, kj.field_f[sd.field_a.field_q][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
+            cb.field_b.a(mg.field_a[sd.field_a.levelNumber][var3], 225, kj.field_f[sd.field_a.levelNumber][var3], 405, 640, var6 * 65793, -1, 0, 0, cb.field_b.field_x);
           }
           var3--;
         }
@@ -1331,7 +1331,7 @@ final class ld {
         }
         stackIn_5_0 = !(hl.field_d);
         if (!stackIn_5_0 ||
-          !(ul.field_d <= td.field_g[sd.field_a.field_q])) {
+          !(ul.field_d <= td.field_g[sd.field_a.levelNumber])) {
           ek.a(-125, true, -1);
           ul.field_d = 0;
         }
@@ -1342,7 +1342,7 @@ final class ld {
           this.field_g = -103;
         }
         if (hl.field_d ||
-          ul.field_d > td.field_g[sd.field_a.field_q]) {
+          ul.field_d > td.field_g[sd.field_a.levelNumber]) {
           ek.a(-79, false, -1);
           ul.field_d = 0;
         }
@@ -1382,7 +1382,7 @@ final class ld {
               if (null == nb.field_a) {
                 nb.field_a = vj.a((byte) 74);
               }
-              sd.field_a = new j(7);
+              sd.field_a = new LevelSession(7);
               sd.field_a.field_G = nb.field_a;
               ek.a(-57, param2, -1);
             } else {
@@ -1443,7 +1443,7 @@ final class ld {
                                         if (var7 != 15) {
                                           if (var7 == 16) {
                                             if (this.field_e.e(-748)) {
-                                              var7 = sd.field_a.field_q;
+                                              var7 = sd.field_a.levelNumber;
                                               var8 = l.field_n[var7].length;
                                               if (this.field_c == 6) {
                                                 if (l.field_n[var7][-1 + var8] >= ul.field_d) {
@@ -1642,7 +1642,7 @@ final class ld {
                                                             }
                                                           }
                                                           if (this.field_e.h(76)) {
-                                                            jd.g((byte) -104);
+                                                            LoginMenuScreen.g((byte) -104);
                                                           }
                                                           if (this.field_e.b(93)) {
                                                             pk.e(60);
@@ -1680,8 +1680,8 @@ final class ld {
                                           }
                                         } else {
                                           if (this.field_e.e(-748)) {
-                                            if (8 == sd.field_a.field_q) {
-                                              sd.field_a.field_q = sd.field_a.field_q + 1;
+                                            if (8 == sd.field_a.levelNumber) {
+                                              sd.field_a.levelNumber = sd.field_a.levelNumber + 1;
                                               ek.a(-72, param2, 2);
                                             } else {
                                               mf.h(param1 - 8452);
@@ -1898,12 +1898,12 @@ final class ld {
         var12 = 0;
         var13 = -1;
         for (var14 = 0; sc.field_b.length > var14; var14++) {
-          L15: {
+          regionExit1: {
             if ((1 << var14 & var11) != 0) {
               di.field_b[var14].b(var9, var10);
             } else {
               if (param0) {
-                break L15;
+                break regionExit1;
               }
               if (!ie.field_u[var14]) {
                 if (hb.field_g <= 0) {
@@ -1956,7 +1956,7 @@ final class ld {
         var14Lifetime1 = stackIn_51_0;
         if (var14Lifetime1 != -1) {
           if (oh.a(0)) {
-            ni.field_q.b(gl.field_f, 320, 116 + (var4 + var6), 1, -1);
+            ni.field_q.b(ClientException.field_f, 320, 116 + (var4 + var6), 1, -1);
           }
           wj.d(166, 163 + (var25.field_E + var4), 128, 128, 0);
           var25.c("<u>" + sc.field_b[var14Lifetime1] + "</u>", 166, var4 + 150, 0, -1);
@@ -1994,7 +1994,7 @@ final class ld {
         } else {
           var25.a(re.field_j, 166, -var25.field_x + var4 + 150, 500, 200, 0, -1, 0, 0, var25.field_x);
           if (oh.a(0)) {
-            ni.field_q.a(gl.field_f, 213, 116 + (var4 + var6 / 2), 300, 200, 1, -1, 1, 0, ni.field_q.field_x);
+            ni.field_q.a(ClientException.field_f, 213, 116 + (var4 + var6 / 2), 300, 200, 1, -1, 1, 0, ni.field_q.field_x);
           }
         }
         if (5 == this.field_c) {
@@ -2009,7 +2009,7 @@ final class ld {
         this.field_c = param0;
         this.field_e = new ql(ul.field_j[param0].length);
         if (eg.field_a == null) {
-          eg.field_a = ag.a(nl.field_r[0], 256, 256);
+          eg.field_a = PcmSampleStream.a(nl.field_r[0], 256, 256);
           eg.field_a.i(-1);
         }
     }
@@ -2052,7 +2052,7 @@ final class ld {
         stackIn_3_0 = (!tc.field_i) ? 0 : 1;
         var7Lifetime1 = stackIn_3_0;
         if (null != sd.field_a) {
-          var6 = sd.field_a.field_q;
+          var6 = sd.field_a.levelNumber;
         }
         if (l.field_f.length > var6) {
           var9 = rc.field_a[var6][var7Lifetime1];
@@ -2126,7 +2126,7 @@ final class ld {
         if (!oh.a(0)) {
           stackIn_38_0 = mi.field_h;
         } else {
-          stackIn_38_0 = gl.field_f;
+          stackIn_38_0 = ClientException.field_f;
         }
         var3Lifetime1 = stackIn_38_0;
         var11Lifetime1 = var4.field_x + (140 + var10) + var5 * 10;

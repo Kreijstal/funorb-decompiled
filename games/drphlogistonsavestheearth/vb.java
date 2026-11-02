@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vb extends gi {
+final class vb extends IntrusiveNode {
     long[][] field_j;
     static sa field_q;
     static int field_k;

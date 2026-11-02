@@ -70,12 +70,12 @@ final class ub {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 
     final static void a(int param0) {
-        ae.field_hb = new nh[]{hb.field_a, ad.field_t, oi.field_d, cl.field_p, li.field_i, al.field_b, kc.field_p, rk.field_e, hj.field_e, cl.field_s, kc.field_q, qa.field_M, nd.field_L, sa.field_c, mh.field_c, DrPhlogistonSavesTheEarth.field_J, jj.field_c, am.field_o, ik.field_b, bd.field_P, nc.field_K, null, lh.field_p, f.field_i[param0], le.field_d, qf.field_b, cj.field_d, kc.field_p, db.field_e, lh.field_p};
+        ae.field_hb = new nh[]{hb.field_a, ad.field_t, oi.field_d, cl.field_p, GameAppletShell.field_i, al.field_b, kc.field_p, rk.field_e, hj.field_e, cl.field_s, kc.field_q, qa.field_M, nd.field_L, sa.field_c, mh.field_c, DrPhlogistonSavesTheEarth.field_J, jj.field_c, am.field_o, ik.field_b, bd.field_P, nc.field_K, null, lh.field_p, f.field_i[param0], le.field_d, qf.field_b, cj.field_d, kc.field_p, db.field_e, lh.field_p};
     }
 
     static {

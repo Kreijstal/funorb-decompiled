@@ -6,11 +6,11 @@ import java.util.*;
 final class tc implements Iterable {
     static int field_d;
     static int[] field_a;
-    private gi field_g;
+    private IntrusiveNode field_g;
     static boolean field_i;
     static double[] field_f;
     int field_c;
-    gi[] field_h;
+    IntrusiveNode[] field_h;
     static il field_e;
     static String[] field_b;
 
@@ -62,7 +62,7 @@ final class tc implements Iterable {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class tc implements Iterable {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -126,7 +126,7 @@ final class tc implements Iterable {
           }
           jj.field_b = 0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "tc.C(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "tc.C(" + param0 + ')');
         }
     }
 
@@ -138,38 +138,38 @@ final class tc implements Iterable {
         return (Iterator) ((Object) new re(this));
     }
 
-    final void a(long param0, gi param1, int param2) {
-        gi var5 = null;
+    final void a(long param0, IntrusiveNode param1, int param2) {
+        IntrusiveNode var5 = null;
         try {
-          if (param1.field_b != null) {
-            param1.a(-16175);
+          if (param1.previous != null) {
+            param1.unlink(-16175);
           }
           var5 = this.field_h[(int)((long)(this.field_c - 1) & param0)];
           if (param2 <= 25) {
-            this.field_h = (gi[]) null;
+            this.field_h = (IntrusiveNode[]) null;
           }
-          param1.field_b = var5.field_b;
-          param1.field_e = var5;
-          param1.field_b.field_e = param1;
-          param1.field_e.field_b = param1;
-          param1.field_g = param0;
+          param1.previous = var5.previous;
+          param1.next = var5;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
+          param1.key = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "tc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "tc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final gi a(long param0, int param1) {
-        gi var5 = null;
+    final IntrusiveNode a(long param0, int param1) {
+        IntrusiveNode var5 = null;
         int var6 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
-        gi var4 = this.field_h[(int)(param0 & (long)(this.field_c + param1))];
-        this.field_g = var4.field_e;
+        IntrusiveNode var4 = this.field_h[(int)(param0 & (long)(this.field_c + param1))];
+        this.field_g = var4.next;
         while (var4 != this.field_g) {
-          if (this.field_g.field_g == param0) {
+          if (this.field_g.key == param0) {
             var5 = this.field_g;
-            this.field_g = this.field_g.field_e;
+            this.field_g = this.field_g.next;
             return var5;
           }
-          this.field_g = this.field_g.field_e;
+          this.field_g = this.field_g.next;
         }
         this.field_g = null;
         return null;

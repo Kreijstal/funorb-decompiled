@@ -178,7 +178,7 @@ class hc extends of {
           } else {
             stackIn_99_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_98_0), ((StringBuilder) (Object) stackIn_98_1).append(stackIn_99_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ class hc extends of {
     final static void b(byte param0) {
         int var1 = 0;
         if (!oh.a(param0 ^ -51)) {
-          if (!aj.field_e) {
+          if (!MouseInput.field_e) {
             if (ri.field_f == null) {
               ri.field_f = ge.a(4, (byte) -109);
             }
@@ -209,7 +209,7 @@ class hc extends of {
               ej.field_h = ej.field_h & ~ri.field_f.field_j;
               hi.field_j = hi.field_j | ri.field_f.field_j;
               ri.field_f = null;
-              aj.field_e = true;
+              MouseInput.field_e = true;
             }
           }
           if (null != vi.field_c) {
@@ -260,7 +260,7 @@ class hc extends of {
         this.field_P = -2147483648;
         this.field_C = true;
         try {
-          this.field_g = param0;
+          this.key = param0;
           this.a(param1, -103);
           if (param6 != null) {
             this.field_fb = param6;
@@ -282,7 +282,7 @@ class hc extends of {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 

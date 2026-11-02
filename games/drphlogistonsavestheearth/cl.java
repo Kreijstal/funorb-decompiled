@@ -55,7 +55,7 @@ final class cl extends gb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -140,7 +140,7 @@ final class cl extends gb {
             } else {
               stackIn_25_2 = "{...}";
             }
-            throw ie.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+            throw ie.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -229,7 +229,7 @@ final class cl extends gb {
             while (var2 != null) {
               this.field_l.field_j = 0;
               this.field_l.c(1, (byte) -117);
-              this.field_l.a(1992910808, var2.field_t);
+              this.field_l.a(1992910808, var2.secondaryKey);
               this.field_r.a(this.field_l.field_h.length, -30537, this.field_l.field_h, 0);
               this.field_m.a(var2, 0);
               var2 = (cm) (this.field_i.c(91));
@@ -238,7 +238,7 @@ final class cl extends gb {
             while (var2Lifetime1 != null) {
               this.field_l.field_j = 0;
               this.field_l.c(0, (byte) -90);
-              this.field_l.a(1992910808, var2Lifetime1.field_t);
+              this.field_l.a(1992910808, var2Lifetime1.secondaryKey);
               this.field_r.a(this.field_l.field_h.length, -30537, this.field_l.field_h, 0);
               this.field_b.a(var2Lifetime1, 0);
               var2Lifetime1 = (cm) (this.field_f.c(-124));
@@ -301,7 +301,7 @@ final class cl extends gb {
                       if (var11 != 0) {
                         var14_ref = (cm) (this.field_b.a(true));
                         while (var14_ref != null) {
-                          if (var12 == var14_ref.field_t) {
+                          if (var12 == var14_ref.secondaryKey) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
@@ -315,7 +315,7 @@ final class cl extends gb {
                         stackIn_69_1 = !(param0);
                         var14_ref = (cm) (((hl) (Object) stackIn_68_0).a(stackIn_69_1));
                         while (var14_ref != null) {
-                          if (var14_ref.field_t == var12) {
+                          if (var14_ref.secondaryKey == var12) {
                             break;
                           }
                           var14_ref = (cm) (this.field_m.c(89));
@@ -356,7 +356,7 @@ final class cl extends gb {
                       this.field_d.field_O = 0;
                     }
                   } else {
-                    this.field_d.f(64);
+                    this.field_d.unlinkSecondary(64);
                     this.field_d.field_u = false;
                     this.field_d = null;
                   }

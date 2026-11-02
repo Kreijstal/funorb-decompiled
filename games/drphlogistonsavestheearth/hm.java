@@ -2,27 +2,27 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hm {
-    private uh field_b;
+    private DualLinkNode field_b;
     private long field_c;
     private int field_a;
-    private uh[] field_d;
+    private DualLinkNode[] field_d;
     static boolean field_f;
     static od field_e;
 
-    final uh b(int param0) {
-        uh var3 = null;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var3 = null;
         int var4 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (this.field_b == null) {
           return null;
         }
-        uh var2 = this.field_d[(int)((long)(param0 + this.field_a) & this.field_c)];
+        DualLinkNode var2 = this.field_d[(int)((long)(param0 + this.field_a) & this.field_c)];
         while (var2 != this.field_b) {
-          if (~this.field_c == ~this.field_b.field_t) {
+          if (~this.field_c == ~this.field_b.secondaryKey) {
             var3 = this.field_b;
-            this.field_b = this.field_b.field_p;
+            this.field_b = this.field_b.secondaryNext;
             return var3;
           }
-          this.field_b = this.field_b.field_p;
+          this.field_b = this.field_b.secondaryNext;
         }
         this.field_b = null;
         return null;
@@ -91,40 +91,40 @@ final class hm {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(',').append(param16).append(',').append(param17).append(',').append(param18).append(',').append(param19).append(',').append(param20).append(')').toString());
         }
     }
 
     hm(int param0) {
         int var2 = 0;
-        uh dupTemp$0 = null;
-        uh var3 = null;
-        this.field_d = new uh[param0];
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
+        this.field_d = new DualLinkNode[param0];
         this.field_a = param0;
         for (var2 = 0; var2 < param0; var2++) {
-          dupTemp$0 = new uh();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_d[var2] = dupTemp$0;
-          var3.field_n = var3;
-          var3.field_p = var3;
+          var3.secondaryPrevious = var3;
+          var3.secondaryNext = var3;
         }
     }
 
-    final void a(long param0, int param1, uh param2) {
-        uh var5 = null;
+    final void a(long param0, int param1, DualLinkNode param2) {
+        DualLinkNode var5 = null;
         try {
-          if (param2.field_n != null) {
-            param2.f(64);
+          if (param2.secondaryPrevious != null) {
+            param2.unlinkSecondary(64);
           }
           int var6 = 8 % ((70 - param1) / 48);
           var5 = this.field_d[(int)((long)(-1 + this.field_a) & param0)];
-          param2.field_p = var5;
-          param2.field_n = var5.field_n;
-          param2.field_n.field_p = param2;
-          param2.field_p.field_n = param2;
-          param2.field_t = param0;
+          param2.secondaryNext = var5;
+          param2.secondaryPrevious = var5.secondaryPrevious;
+          param2.secondaryPrevious.secondaryNext = param2;
+          param2.secondaryNext.secondaryPrevious = param2;
+          param2.secondaryKey = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "hm.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "hm.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -135,20 +135,20 @@ final class hm {
         }
     }
 
-    final uh a(long param0, int param1) {
-        uh var6 = null;
+    final DualLinkNode a(long param0, int param1) {
+        DualLinkNode var6 = null;
         int var7 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         this.field_c = param0;
-        uh var4 = this.field_d[(int)((long)(this.field_a - 1) & param0)];
+        DualLinkNode var4 = this.field_d[(int)((long)(this.field_a - 1) & param0)];
         int var5 = -33 % ((26 - param1) / 45);
-        this.field_b = var4.field_p;
+        this.field_b = var4.secondaryNext;
         while (var4 != this.field_b) {
-          if (~param0 == ~this.field_b.field_t) {
+          if (~param0 == ~this.field_b.secondaryKey) {
             var6 = this.field_b;
-            this.field_b = this.field_b.field_p;
+            this.field_b = this.field_b.secondaryNext;
             return var6;
           }
-          this.field_b = this.field_b.field_p;
+          this.field_b = this.field_b.secondaryNext;
         }
         this.field_b = null;
         return null;

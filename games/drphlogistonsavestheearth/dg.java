@@ -6,7 +6,7 @@ import java.util.*;
 final class dg implements Iterable {
     static int field_c;
     static int field_e;
-    uh field_b;
+    DualLinkNode field_b;
     static String field_a;
     static int field_d;
 
@@ -49,16 +49,16 @@ final class dg implements Iterable {
         return param1 < 6144 ? -tc.field_a[param1 - 4096] : -tc.field_a[-param1 + 8192];
     }
 
-    final uh b(boolean param0) {
-        uh var2 = this.field_b.field_p;
+    final DualLinkNode b(boolean param0) {
+        DualLinkNode var2 = this.field_b.secondaryNext;
         if (this.field_b == var2) {
           return null;
         }
-        var2.f(64);
+        var2.unlinkSecondary(64);
         if (!param0) {
           return var2;
         }
-        return (uh) null;
+        return (DualLinkNode) null;
     }
 
     final static void a(byte param0, java.awt.Component param1) {
@@ -70,22 +70,22 @@ final class dg implements Iterable {
             field_d = -106;
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "dg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(uh param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         try {
           int var3_int = -94 % ((10 - param1) / 40);
-          if (param0.field_n != null) {
-            param0.f(64);
+          if (param0.secondaryPrevious != null) {
+            param0.unlinkSecondary(64);
           }
-          param0.field_n = this.field_b.field_n;
-          param0.field_p = this.field_b;
-          param0.field_n.field_p = param0;
-          param0.field_p.field_n = param0;
+          param0.secondaryPrevious = this.field_b.secondaryPrevious;
+          param0.secondaryNext = this.field_b;
+          param0.secondaryPrevious.secondaryNext = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "dg.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dg.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class dg implements Iterable {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 

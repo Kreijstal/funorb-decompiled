@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ec extends ic {
+final class ec extends PcmStream {
     private vd field_o;
     private vd field_m;
     private int field_n;
@@ -35,7 +35,7 @@ final class ec extends ic {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_h = var7;
-              this.a(var5.field_e, var5);
+              this.a(var5.next, var5);
             } else {
               var5.field_h = 0;
               this.a(var5);
@@ -45,15 +45,15 @@ final class ec extends ic {
         return;
     }
 
-    final ic c() {
-        return (ic) (this.field_o.e(0));
+    final PcmStream c() {
+        return (PcmStream) (this.field_o.e(0));
     }
 
     final int d() {
         return 0;
     }
 
-    final synchronized void a(ic param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_o.a(79, param0);
     }
 
@@ -70,22 +70,22 @@ final class ec extends ic {
         }
     }
 
-    final ic a() {
-        return (ic) (this.field_o.h(-11151));
+    final PcmStream a() {
+        return (PcmStream) (this.field_o.h(-11151));
     }
 
     private final void e(int param0) {
-        ic var2 = (ic) (this.field_o.h(-11151));
+        PcmStream var2 = (PcmStream) (this.field_o.h(-11151));
         while (var2 != null) {
           var2.d(param0);
-          var2 = (ic) (this.field_o.e(0));
+          var2 = (PcmStream) (this.field_o.e(0));
         }
     }
 
     private final void a(ak param0) {
-        param0.a(-16175);
+        param0.unlink(-16175);
         param0.a();
-        gi var2 = this.field_m.field_c.field_e;
+        IntrusiveNode var2 = this.field_m.field_c.next;
         if (var2 == this.field_m.field_c) {
           this.field_n = -1;
         } else {
@@ -94,32 +94,32 @@ final class ec extends ic {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        ic var4 = (ic) (this.field_o.h(-11151));
+        PcmStream var4 = (PcmStream) (this.field_o.h(-11151));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (ic) (this.field_o.e(0));
+          var4 = (PcmStream) (this.field_o.e(0));
         }
     }
 
-    final synchronized void b(ic param0) {
-        param0.a(-16175);
+    final synchronized void b(PcmStream param0) {
+        param0.unlink(-16175);
     }
 
-    private final void a(gi param0, ak param1) {
+    private final void a(IntrusiveNode param0, ak param1) {
         while (true) {
           if (param0 == this.field_m.field_c) {
             tf.a(param1, 16709, param0);
-            this.field_n = ((ak) (this.field_m.field_c.field_e)).field_h;
+            this.field_n = ((ak) (this.field_m.field_c.next)).field_h;
             return;
           }
           if (((ak) (param0)).field_h <= param1.field_h) {
-            param0 = param0.field_e;
+            param0 = param0.next;
             continue;
           }
           break;
         }
         tf.a(param1, 16709, param0);
-        this.field_n = ((ak) (this.field_m.field_c.field_e)).field_h;
+        this.field_n = ((ak) (this.field_m.field_c.next)).field_h;
         return;
     }
 
@@ -150,7 +150,7 @@ final class ec extends ic {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_h = var5;
-              this.a(var3.field_e, var3);
+              this.a(var3.next, var3);
             } else {
               var3.field_h = 0;
               this.a(var3);

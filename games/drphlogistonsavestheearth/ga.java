@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ga extends gi {
+final class ga extends IntrusiveNode {
     static String[] field_i;
     static int[] field_j;
     byte[] field_h;
@@ -18,7 +18,7 @@ final class ga extends gi {
         try {
           this.field_h = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ga.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -16,7 +16,7 @@ final class q extends java.awt.Canvas implements java.awt.event.FocusListener {
           eb.a((String) null, param1, param2, 10);
           int var3_int = 57 / ((param0 - 23) / 43);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "q.D(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "q.D(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -39,7 +39,7 @@ final class q extends java.awt.Canvas implements java.awt.event.FocusListener {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -704,7 +704,7 @@ final class q extends java.awt.Canvas implements java.awt.event.FocusListener {
           }
           var2Lifetime128 = re.a("LEVEL_MOUSEOVER_TO_SELECT", 122);
           if (var2Lifetime128 != null) {
-            aj.field_f = mj.a((byte) -13, var2Lifetime128);
+            MouseInput.field_f = mj.a((byte) -13, var2Lifetime128);
           }
           var2Lifetime129 = re.a("LOGIN_OR_CREATE_FREE_ACCOUNT", 122);
           if (var2Lifetime129 != null) {
@@ -746,7 +746,7 @@ final class q extends java.awt.Canvas implements java.awt.event.FocusListener {
           } else {
             stackIn_490_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_489_0), ((StringBuilder) (Object) stackIn_489_1).append(stackIn_490_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_489_0), ((StringBuilder) (Object) stackIn_489_1).append(stackIn_490_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -772,7 +772,7 @@ final class q extends java.awt.Canvas implements java.awt.event.FocusListener {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -805,7 +805,7 @@ final class q extends java.awt.Canvas implements java.awt.event.FocusListener {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -831,7 +831,7 @@ final class q extends java.awt.Canvas implements java.awt.event.FocusListener {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "q.B(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "q.B(" + param0 + ')');
         }
     }
 

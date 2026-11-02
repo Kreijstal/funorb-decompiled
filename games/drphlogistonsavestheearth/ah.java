@@ -8,12 +8,12 @@ final class ah extends pj implements fh, ke {
     private qg field_M;
     static int field_K;
     private hf field_P;
-    jd field_O;
+    LoginMenuScreen field_O;
 
     public ah() {
         super(0, 0, 496, 0, (cg) null);
         this.field_M = new qg("", (fd) null, 12);
-        l var1 = new l(u.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, uh.field_i.field_x, -1, 2147483647, true);
+        l var1 = new l(u.field_d, 0, 0, 0, 0, 16777215, -1, 3, 0, DualLinkNode.field_i.field_x, -1, 2147483647, true);
         vg var2 = new vg(ue.field_c, var1, (fd) null);
         this.field_P = new hf(dc.field_b, (fd) null);
         this.field_N = new hf(vi.field_f, (fd) null);
@@ -36,7 +36,7 @@ final class ah extends pj implements fh, ke {
         this.field_P.field_u = (fd) (this);
         this.b(this.field_P, (byte) 92);
         this.b(this.field_N, (byte) 115);
-        this.field_O = new jd((fh) (this));
+        this.field_O = new LoginMenuScreen((fh) (this));
         this.field_O.a(20, 150, 60 + (this.field_M.field_w + this.field_M.field_o), 16535, -60 + (this.field_w - this.field_M.field_o - this.field_M.field_w));
         this.b(this.field_O, (byte) 77);
         this.a(0, var4 + var3 + 55, 0, 16535, 496);
@@ -60,7 +60,7 @@ final class ah extends pj implements fh, ke {
           }
           this.field_P.field_E = this.j(737797090);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ah.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ah.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -169,7 +169,7 @@ final class ah extends pj implements fh, ke {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "ah.F(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "ah.F(" + param0 + ')');
         }
     }
 
@@ -207,7 +207,7 @@ final class ah extends pj implements fh, ke {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -240,7 +240,7 @@ final class ah extends pj implements fh, ke {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -260,7 +260,7 @@ final class ah extends pj implements fh, ke {
           }
           var4 = var3.a(-12317);
           if (param1 != 11) {
-            this.field_O = (jd) null;
+            this.field_O = (LoginMenuScreen) null;
           }
           stackIn_8_0 = (ce.field_e == var4);
           return stackIn_8_0;
@@ -274,7 +274,7 @@ final class ah extends pj implements fh, ke {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -293,7 +293,7 @@ final class ah extends pj implements fh, ke {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new dh(20, param2, 120 + param3, 25, param0, false, 120, 3, uh.field_i, 16777215, param6);
+          var10 = new dh(20, param2, 120 + param3, 25, param0, false, 120, 3, DualLinkNode.field_i, 16777215, param6);
           this.b(var10, (byte) 35);
           var9 = new ci(((ud) ((Object) param0)).a((byte) 120), param1, 126, param2 + var10.field_k, 25 + param3, param4);
           var9.field_u = (fd) (this);
@@ -326,7 +326,7 @@ final class ah extends pj implements fh, ke {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -342,12 +342,12 @@ final class ah extends pj implements fh, ke {
           return;
         }
         try {
-          od.a(-1630758008, ag.a(param0, 100, 96, param1));
+          od.a(-1630758008, PcmSampleStream.a(param0, 100, 96, param1));
           if (param2 != -1321705304) {
             field_L = (he[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ah.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ah.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -381,7 +381,7 @@ final class ah extends pj implements fh, ke {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -431,7 +431,7 @@ final class ah extends pj implements fh, ke {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

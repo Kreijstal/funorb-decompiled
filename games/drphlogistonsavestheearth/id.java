@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class id {
-    private ic field_l;
+    private PcmStream field_l;
     private int field_c;
     private boolean field_e;
     static int field_d;
@@ -15,9 +15,9 @@ class id {
     private int field_s;
     private int field_n;
     private int field_q;
-    private ic[] field_i;
+    private PcmStream[] field_i;
     private int field_k;
-    private ic[] field_b;
+    private PcmStream[] field_b;
     private int field_h;
     private int field_r;
     private long field_t;
@@ -161,21 +161,21 @@ class id {
         }
     }
 
-    private final static void b(ic param0) {
+    private final static void b(PcmStream param0) {
         param0.field_h = false;
         if (param0.field_i != null) {
           param0.field_i.field_h = 0;
         }
-        ic var1 = param0.a();
+        PcmStream var1 = param0.a();
         while (var1 != null) {
           id.b(var1);
           var1 = param0.c();
         }
     }
 
-    private final void a(ic param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        ic var4 = this.field_i[var3];
+        PcmStream var4 = this.field_i[var3];
         if (var4 == null) {
           this.field_b[var3] = param0;
         } else {
@@ -193,20 +193,20 @@ class id {
         int var7_int;
         Object var7;
         int var8_int;
-        ic[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        ic var11;
+        PcmStream var11;
         me var12;
         int var13;
-        ic var14;
+        PcmStream var14;
         int var15_int;
-        ic var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        ic var14Lifetime1;
-        ic var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_f) {
           var3 = var3 << 1;
@@ -221,7 +221,7 @@ class id {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -254,7 +254,7 @@ class id {
                       var12.field_h = var12.field_h + var13;
                     }
                     if (var4 >= this.field_c) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.a();
                     if (var14Lifetime2 != null) {
@@ -267,12 +267,12 @@ class id {
                     var15 = var11.field_j;
                     var11.field_j = null;
                     if (var10 != null) {
-                      ((ic) (var10)).field_j = var15;
+                      ((PcmStream) (var10)).field_j = var15;
                     } else {
                       this.field_b[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_i[var7_int] = (ic) (var10);
+                      this.field_i[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -293,8 +293,8 @@ class id {
             this.field_i[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((ic) (var7)).field_j;
-              ((ic) (var7)).field_j = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_j;
+              ((PcmStream) (var7)).field_j = null;
               var7 = var10Lifetime1;
             }
           }
@@ -349,7 +349,7 @@ class id {
         return this.field_h;
     }
 
-    final synchronized void a(ic param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_l = param0;
     }
 
@@ -427,8 +427,8 @@ class id {
         this.field_q = 0;
         this.field_k = 0;
         this.field_n = 0;
-        this.field_b = new ic[8];
-        this.field_i = new ic[8];
+        this.field_b = new PcmStream[8];
+        this.field_i = new PcmStream[8];
         this.field_m = true;
         this.field_j = 0L;
         this.field_u = 0;

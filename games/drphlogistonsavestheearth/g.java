@@ -37,7 +37,7 @@ final class g extends ei {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -61,10 +61,10 @@ final class g extends ei {
         int var3 = 0;
         var3 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         try {
-          if (gl.field_c == -1 &&
+          if (ClientException.field_c == -1 &&
             oc.field_B == -1) {
             oc.field_B = ob.field_g;
-            gl.field_c = ck.field_c;
+            ClientException.field_c = ck.field_c;
           }
           boolean decompiledFrameRemainder0 = true;
           dd.field_l = dd.field_l + 1;
@@ -100,7 +100,7 @@ final class g extends ei {
             if (decompiledFrameRemainder1) {
               dd.field_l = 0;
             }
-            oh.field_e = gl.field_c;
+            oh.field_e = ClientException.field_c;
             pi.field_Q = oc.field_B;
             if (param0 != null) {
               em.field_c = false;
@@ -117,11 +117,11 @@ final class g extends ei {
           if (!em.field_c &&
             dd.field_l < qe.field_c &&
             df.field_o) {
-            oh.field_e = gl.field_c;
+            oh.field_e = ClientException.field_c;
             pi.field_Q = oc.field_B;
             dd.field_l = 0;
           }
-          gl.field_c = -1;
+          ClientException.field_c = -1;
           if (em.field_c &&
             dd.field_l == cd.field_d) {
             dd.field_l = 0;
@@ -139,7 +139,7 @@ final class g extends ei {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -174,7 +174,7 @@ final class g extends ei {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -216,7 +216,7 @@ final class g extends ei {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

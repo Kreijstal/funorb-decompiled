@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lc extends gi {
+final class lc extends IntrusiveNode {
     il[] field_o;
     static he field_s;
     il[] field_n;
@@ -286,10 +286,10 @@ final class lc extends gi {
           }
           var2 = (ml) (ff.field_O.h(-11151));
           while (var2 != null) {
-            if (var2.field_o.c(-1387)) {
+            if (var2.field_o.isLinked(-1387)) {
               var2.field_i.e(var2.field_k * dg.field_e / 80);
             } else {
-              var2.a(-16175);
+              var2.unlink(-16175);
             }
             var2 = (ml) (ff.field_O.e(0));
           }
@@ -297,7 +297,7 @@ final class lc extends gi {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2_ref), "lc.A(" + param0 + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2_ref), "lc.A(" + param0 + ',' + param1 + ')');
         }
     }
 

@@ -44,7 +44,7 @@ abstract class wd {
         try {
           wj.d(243, 197, 369, 143, 16777215);
           wj.f(244, 198, 367, 141, 0);
-          if (null == gl.field_e) {
+          if (null == ClientException.field_e) {
             if (sc.field_f != null) {
               sc.field_f.a(ha.field_e, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
@@ -53,7 +53,7 @@ abstract class wd {
           if (param0 != 139) {
             return;
           }
-          var6 = gl.field_e[ig.field_k];
+          var6 = ClientException.field_e[ig.field_k];
           var1 = var6;
           if (var6 != null) {
             var6.d(245, 199);
@@ -63,7 +63,7 @@ abstract class wd {
             }
           }
           if (la.field_b < rd.field_F) {
-            var7 = gl.field_e[bd.field_L];
+            var7 = ClientException.field_e[bd.field_L];
             if (var7 != null) {
               var2_int = la.field_b * (60 + var7.field_z) / rd.field_F;
               var3 = var2_int - 30;
@@ -78,8 +78,8 @@ abstract class wd {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
-            while (var5 < gl.field_e.length) {
-              var8 = gl.field_e[var5];
+            while (var5 < ClientException.field_e.length) {
+              var8 = ClientException.field_e[var5];
               if (var8 != null && (var8.field_z != 365 ||
                 var8.field_C != 139)) {
                 if (var2 == null) {
@@ -100,7 +100,7 @@ abstract class wd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1_ref), "wd.L(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1_ref), "wd.L(" + param0 + ')');
         }
     }
 

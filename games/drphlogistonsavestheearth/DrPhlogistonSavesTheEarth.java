@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-public final class DrPhlogistonSavesTheEarth extends sl {
+public final class DrPhlogistonSavesTheEarth extends GameClientShell {
     static nh field_J;
     static vd field_F;
     static long field_I;
@@ -19,7 +19,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         try {
           this.a(12, "drphlogistonsavestheearth", (byte) 12);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.init()");
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.init()");
         }
     }
 
@@ -49,7 +49,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -76,8 +76,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           oi.field_d.c();
           wj.b(9, 9, 6, 61568);
           lb.field_C.a(119);
-          li.field_i = new nh(10, 10);
-          li.field_i.c();
+          GameAppletShell.field_i = new nh(10, 10);
+          GameAppletShell.field_i.c();
           wj.b(5, 5, 5, 8421504);
           lb.field_C.a(122);
           al.field_b = new nh(800, 32);
@@ -156,7 +156,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.GB(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.GB(" + param0 + ')');
         }
     }
 
@@ -201,7 +201,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -383,7 +383,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2_ref), "DrPhlogistonSavesTheEarth.BA(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2_ref), "DrPhlogistonSavesTheEarth.BA(" + param0 + ')');
         }
     }
 
@@ -471,7 +471,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.VA(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.VA(" + param0 + ')');
         }
     }
 
@@ -488,12 +488,12 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           gd.a(-27770);
           ld.e((byte) 39);
           ij.a(15596);
-          sl.j(26395);
-          gl.a(false);
-          li.c(-1);
+          GameClientShell.j(26395);
+          ClientException.a(false);
+          GameAppletShell.c(-1);
           fi.a(125);
-          fe.a((byte) 119);
-          aj.a(45);
+          KeyboardInput.a((byte) 119);
+          MouseInput.a(45);
           oi.a((byte) 86);
           wj.d();
           vj.c(0);
@@ -520,7 +520,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           ng.a(0);
           cf.a(-127);
           mk.a(0);
-          j.h(24342);
+          LevelSession.h(24342);
           nb.a((byte) 76);
           i.a((byte) -118);
           gb.b(6);
@@ -535,7 +535,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           bf.c((byte) -114);
           td.a(869637800);
           ck.a(7268);
-          gi.b(10589);
+          IntrusiveNode.b(10589);
           ug.h(-921185753);
           tg.a(0);
           cc.a((byte) -8);
@@ -574,7 +574,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           fb.a(256);
           cb.a((byte) 122);
           mf.g(-62);
-          uh.d(-24338);
+          DualLinkNode.d(-24338);
           lh.p(0);
           jj.a(111);
           nk.a();
@@ -662,7 +662,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           kl.j((byte) 78);
           jf.h((byte) 127);
           hd.b(false);
-          jd.a((byte) 108);
+          LoginMenuScreen.a((byte) 108);
           qa.a((byte) 122);
           gm.h(-112);
           ci.i(-76);
@@ -733,7 +733,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.W(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.W(" + param0 + ')');
         }
     }
 
@@ -750,7 +750,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1), "DrPhlogistonSavesTheEarth.IB(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1), "DrPhlogistonSavesTheEarth.IB(" + param0 + ')');
         }
     }
 
@@ -778,7 +778,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.RA(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.RA(" + param0 + ')');
         }
     }
 
@@ -799,7 +799,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var3), "DrPhlogistonSavesTheEarth.SA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var3), "DrPhlogistonSavesTheEarth.SA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -845,7 +845,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -884,7 +884,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -1019,7 +1019,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2_ref), "DrPhlogistonSavesTheEarth.LA(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2_ref), "DrPhlogistonSavesTheEarth.LA(" + param0 + ')');
         }
     }
 
@@ -1092,7 +1092,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             }
             hl.field_f = hg.field_sb;
             eb.a((byte) 20);
-            li.b(param0 + 8638);
+            GameAppletShell.b(param0 + 8638);
             if (hl.field_f == -2) {
               hl.field_f = 0;
               s.a(false, (byte) -122);
@@ -1109,7 +1109,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.LB(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.LB(" + param0 + ')');
         }
     }
 
@@ -1131,7 +1131,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           mk.field_g[6] = eh.a("", (byte) -23, kf.field_d, "act_screen_intro_1_part_7");
           mk.field_g[7] = eh.a("", (byte) -65, kf.field_d, "act_screen_intro_1_part_8");
           wb.field_a[0] = eh.a("", (byte) -92, kf.field_d, "act_screen_intro_2");
-          gl.field_b[0] = eh.a("", (byte) -127, kf.field_d, "act_screen_intro_3");
+          ClientException.field_b[0] = eh.a("", (byte) -127, kf.field_d, "act_screen_intro_3");
           pc.field_b[0] = eh.a("", (byte) -35, kf.field_d, "act_screen_intro_4_part_1");
           pc.field_b[1] = eh.a("", (byte) -102, kf.field_d, "act_screen_intro_4_part_2");
           pc.field_b[2] = eh.a("", (byte) -61, kf.field_d, "act_screen_intro_4_part_3");
@@ -1190,7 +1190,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.TA(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.TA(" + param0 + ')');
         }
     }
 
@@ -1234,7 +1234,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -1270,7 +1270,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1331,7 +1331,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         kb var2Lifetime50;
         kb var2Lifetime51;
         try {
-          we.a(sl.field_s, -79, 50.0f);
+          we.a(GameClientShell.field_s, -79, 50.0f);
           this.h(0);
           nl.field_r[0] = kb.a(aa.field_b, "", "menu_select").a().a(qk.field_g);
           var2 = kb.a(aa.field_b, "", "DrP_1_gatling_gun_fire");
@@ -1570,7 +1570,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2_ref), "DrPhlogistonSavesTheEarth.KB(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2_ref), "DrPhlogistonSavesTheEarth.KB(" + param0 + ')');
         }
     }
 
@@ -1606,7 +1606,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
             } else {
               stackIn_11_2 = "{...}";
             }
-            throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+            throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1626,7 +1626,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           ji.field_d = kc.a(ff.field_P, kf.field_d, "", -101, "bottomheavy32");
           cb.field_b = kc.a(ff.field_P, kf.field_d, "", -95, "scriptfont");
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.NB(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.NB(" + param0 + ')');
         }
     }
 
@@ -1664,7 +1664,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.EB(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.EB(" + param0 + ')');
         }
     }
 
@@ -1685,7 +1685,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.AA(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "DrPhlogistonSavesTheEarth.AA(" + param0 + ')');
         }
     }
 
@@ -1710,7 +1710,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2_ref), "DrPhlogistonSavesTheEarth.MA(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2_ref), "DrPhlogistonSavesTheEarth.MA(" + param0 + ')');
         }
     }
 
@@ -1755,7 +1755,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -1770,7 +1770,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           field_L = null;
           field_G = null;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.QA(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.QA(" + param0 + ')');
         }
     }
 
@@ -1829,7 +1829,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           ch.field_z = la.a("", kf.field_d, "frame_button", -53);
           ee.field_c = la.a("", kf.field_d, "frame_button_dn", -54);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.BB(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.BB(" + param0 + ')');
         }
     }
 
@@ -1857,7 +1857,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
               od.field_i = ij.a("alienspacemine", (byte) 101, kf.field_d, "");
               uf.field_j = ij.a("alienspacemineseeking", (byte) 89, kf.field_d, "");
               ng.field_f = ij.a("alienparamine", (byte) 112, kf.field_d, "");
-              jd.field_M = ij.a("alienminer", (byte) 77, kf.field_d, "");
+              LoginMenuScreen.field_M = ij.a("alienminer", (byte) 77, kf.field_d, "");
               vd.field_g = ij.a("alienminer_door", (byte) 63, kf.field_d, "");
               we.field_b = be.b(eh.a("", (byte) -36, kf.field_d, "alienasteroid_1"), 64);
               ee.field_b = be.b(eh.a("", (byte) -92, kf.field_d, "alienasteroid_2"), 64);
@@ -1898,14 +1898,14 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           this.a(85, qb.field_a);
           uk.field_b = be.a(eh.a("", (byte) -34, kf.field_d, "alienbunker_big_fire_mask"), wk.field_m.length);
           this.a(99, uk.field_b);
-          j.field_db = ij.a("aliencombattank", (byte) 105, kf.field_d, "");
+          LevelSession.field_db = ij.a("aliencombattank", (byte) 105, kf.field_d, "");
           var2_int = 0;
           do {
-            if (!(j.field_db.length > var2_int)) {
-              jj.field_a = be.a(eh.a("", (byte) -110, kf.field_d, "aliencombattank_rubble"), j.field_db.length);
+            if (!(LevelSession.field_db.length > var2_int)) {
+              jj.field_a = be.a(eh.a("", (byte) -110, kf.field_d, "aliencombattank_rubble"), LevelSession.field_db.length);
               break;
             }
-            j.field_db[var2_int].c();
+            LevelSession.field_db[var2_int].c();
             var2_int++;
           } while (var3 == 0);
           var2_int = 0;
@@ -2018,7 +2018,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.DB(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.DB(" + param0 + ')');
         }
     }
 
@@ -2182,7 +2182,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           var7 = -2;
           var8 = v.field_Y.field_y - 20;
           var9 = v.field_Y.field_w - 20;
-          gl.a(var9, var8, (byte) -96, var5, var4, v.field_Y, var7, var6, var3_int);
+          ClientException.a(var9, var8, (byte) -96, var5, var4, v.field_Y, var7, var6, var3_int);
           gg.a(1000, cm.field_R);
           bi.a(ml.field_j, 121, nc.field_M);
           if (param1 > -91) {
@@ -2201,7 +2201,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var3), "DrPhlogistonSavesTheEarth.FB(" + param0 + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var3), "DrPhlogistonSavesTheEarth.FB(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2314,7 +2314,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           vg.field_h = this.a(eh.a("", (byte) -55, kf.field_d, "scenery_tile_earth_6"), (byte) -124);
           rg.field_a = this.a(eh.a("", (byte) -29, kf.field_d, "scenery_tile_earth_7"), (byte) 120);
           fi.field_e = this.a(eh.a("", (byte) -127, kf.field_d, "scenery_tile_earth_8"), (byte) -29);
-          jd.field_Q = this.a(eh.a("", (byte) -82, kf.field_d, "scenery_tile_earth_9"), (byte) 118);
+          LoginMenuScreen.field_Q = this.a(eh.a("", (byte) -82, kf.field_d, "scenery_tile_earth_9"), (byte) 118);
           r.field_e = this.a(eh.a("", (byte) -49, kf.field_d, "scenery_tile_earth_10"), (byte) 127);
           nf.field_s = ij.a("scenery_tile_earth_11", (byte) 99, kf.field_d, "");
           nf.field_s[0].c();
@@ -2367,8 +2367,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           lk.field_m = new he[1];
           lk.field_m[0] = hh.field_c[0].e();
           lk.field_m[0].g();
-          gi.field_d = ij.a("scenery_tile_earth_bath_01_broken", (byte) 108, kf.field_d, "");
-          gi.field_d[0].c();
+          IntrusiveNode.field_d = ij.a("scenery_tile_earth_bath_01_broken", (byte) 108, kf.field_d, "");
+          IntrusiveNode.field_d[0].c();
           lc.field_q = ij.a("scenery_tile_earth_bath_02_broken", (byte) 92, kf.field_d, "");
           lc.field_q[0].c();
           ca.field_V = ij.a("scenery_tile_earth_bath_03_broken", (byte) 86, kf.field_d, "");
@@ -2376,8 +2376,8 @@ public final class DrPhlogistonSavesTheEarth extends sl {
           ac.field_g = ij.a("scenery_tile_earth_bath_04_broken", (byte) 109, kf.field_d, "");
           ac.field_g[0].c();
           df.field_k = this.a(eh.a("", (byte) -59, kf.field_d, "scenery_tile_earth_bath_05_broken"), (byte) -88);
-          sl.field_x = ij.a("scenery_tile_earth_bath_06_broken", (byte) 80, kf.field_d, "");
-          sl.field_x[0].c();
+          GameClientShell.field_x = ij.a("scenery_tile_earth_bath_06_broken", (byte) 80, kf.field_d, "");
+          GameClientShell.field_x[0].c();
           qj.field_a = this.a(eh.a("", (byte) -81, kf.field_d, "scenery_tile_earth_bath_07_broken"), (byte) 102);
           og.field_c = ij.a("scenery_tile_earth_bath_08_broken", (byte) 120, kf.field_d, "");
           og.field_c[0].c();
@@ -2421,7 +2421,7 @@ public final class DrPhlogistonSavesTheEarth extends sl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.HB(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "DrPhlogistonSavesTheEarth.HB(" + param0 + ')');
         }
     }
 

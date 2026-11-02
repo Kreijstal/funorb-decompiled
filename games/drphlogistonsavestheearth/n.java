@@ -27,7 +27,7 @@ final class n implements Runnable {
             if (!this.field_a) {
               var2_ref = this.field_b;
               synchronized (var2_ref) {
-                L3: {
+                regionExit1: {
                   var6 = (bi) (this.field_b.d(5518));
                   if (var5 != 0) {
                     decompiledRegionSelector0 = 0;
@@ -42,7 +42,7 @@ final class n implements Runnable {
                         interruptedException = (InterruptedException) (Object) decompiledCaughtException;
                       }
                       decompiledRegionSelector0 = 1;
-                      break L3;
+                      break regionExit1;
                     }
                     decompiledRegionSelector0 = 2;
                   }
@@ -57,13 +57,13 @@ final class n implements Runnable {
               try {
                 if (var6.field_G != 2) {
                   if (var6.field_G == 3) {
-                    var6.field_F = var6.field_H.a((int)var6.field_t, 3);
+                    var6.field_F = var6.field_H.a((int)var6.secondaryKey, 3);
                     if (var5 != 0) {
-                      var6.field_H.a((byte) 107, var6.field_F.length, var6.field_F, (int)var6.field_t);
+                      var6.field_H.a((byte) 107, var6.field_F.length, var6.field_F, (int)var6.secondaryKey);
                     }
                   }
                 } else {
-                  var6.field_H.a((byte) 107, var6.field_F.length, var6.field_F, (int)var6.field_t);
+                  var6.field_H.a((byte) 107, var6.field_F.length, var6.field_F, (int)var6.secondaryKey);
                 }
               } catch (java.lang.Exception decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
@@ -111,12 +111,12 @@ final class n implements Runnable {
         var10 = new nh[]{new nh(var9, var9), new nh(param1, var9), new nh(var9, var9), new nh(var9, param1), new nh(64, 64), new nh(var9, param1), new nh(var9, var9), new nh(param1, var9), new nh(var9, var9)};
         var11_ref_nh__ = var10;
         var12 = 0;
-        L0: while (true) {
+        scanLoop1: while (true) {
           if (var11_ref_nh__.length > var12) {
             var13_ref_nh = var11_ref_nh__[var12];
             stackIn_11_0 = 0;
             if (var15 != 0) {
-              break L0;
+              break scanLoop1;
             }
             var14 = stackIn_11_0;
             while (var13_ref_nh.field_B.length > var14) {
@@ -124,17 +124,17 @@ final class n implements Runnable {
               var14++;
             }
             var12++;
-            continue L0;
+            continue scanLoop1;
           }
           stackIn_11_0 = 0;
           break;
         }
         var11 = stackIn_11_0;
-        L6: while (true) {
+        scanLoop2: while (true) {
           if (var11 < param7) {
             stackIn_22_0 = 0;
             if (var15 != 0) {
-              break L6;
+              break scanLoop2;
             }
             var12Lifetime1 = stackIn_22_0;
             while (var12Lifetime1 < var9) {
@@ -145,7 +145,7 @@ final class n implements Runnable {
               var12Lifetime1++;
             }
             var11++;
-            continue L6;
+            continue scanLoop2;
           }
           stackIn_22_0 = 0;
           break;
@@ -177,11 +177,11 @@ final class n implements Runnable {
             stackIn_34_0 = 0;
           }
           var12Lifetime2Lifetime1 = stackIn_34_0;
-          L19: while (true) {
+          scanLoop3: while (true) {
             if (var12Lifetime2Lifetime1 < param1) {
               stackIn_45_0 = 0;
               if (var15 != 0) {
-                break L19;
+                break scanLoop3;
               }
               var13 = stackIn_45_0;
               while (param7 > var13) {
@@ -192,13 +192,13 @@ final class n implements Runnable {
                 var13++;
               }
               var12Lifetime2Lifetime1++;
-              continue L19;
+              continue scanLoop3;
             }
             stackIn_45_0 = 0;
             break;
           }
           var11Lifetime1 = stackIn_45_0;
-          L25: while (var11Lifetime1 < param1 >> 1) {
+          scanLoop4: while (var11Lifetime1 < param1 >> 1) {
             var12Lifetime2Lifetime2 = 0;
             while (true) {
               if (param5 > var12Lifetime2Lifetime2) {
@@ -216,7 +216,7 @@ final class n implements Runnable {
               break;
             }
             if (var15 == 0) {
-              continue L25;
+              continue scanLoop4;
             }
             break;
           }
@@ -252,7 +252,7 @@ final class n implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -280,7 +280,7 @@ final class n implements Runnable {
             field_g = (java.awt.Canvas) null;
           }
           var4.field_y = false;
-          var4.field_t = (long)param1;
+          var4.secondaryKey = (long)param1;
           var4.field_G = 3;
           this.a(var4, (byte) -117);
           stackIn_3_0 = var4;
@@ -295,7 +295,7 @@ final class n implements Runnable {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -331,7 +331,7 @@ final class n implements Runnable {
             boolean decompiledFrameCompleted0 = true;
             var6 = (bi) (this.field_b.a(true));
             while (var6 != null) {
-              stackIn_17_0 = $cfr$lcmp(~var6.field_t, ~(long)param1);
+              stackIn_17_0 = $cfr$lcmp(~var6.secondaryKey, ~(long)param1);
               if (var8 != 0) {
                 decompiledRegionSelector0 = 0;
                 decompiledFrameCompleted0 = false;
@@ -372,7 +372,7 @@ final class n implements Runnable {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(')').toString());
         }
     }
 
@@ -413,7 +413,7 @@ final class n implements Runnable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
@@ -430,7 +430,7 @@ final class n implements Runnable {
         RuntimeException decompiledCaughtException = null;
         try {
           var5 = new bi();
-          var5.field_t = (long)param0;
+          var5.secondaryKey = (long)param0;
           var6 = -73 % ((-42 - param3) / 51);
           var5.field_H = param1;
           var5.field_y = false;
@@ -455,7 +455,7 @@ final class n implements Runnable {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -518,7 +518,7 @@ final class n implements Runnable {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 

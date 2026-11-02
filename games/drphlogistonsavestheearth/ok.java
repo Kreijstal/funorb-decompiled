@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ok extends gi {
+final class ok extends IntrusiveNode {
     tg field_i;
     byte[] field_h;
 

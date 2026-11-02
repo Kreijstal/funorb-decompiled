@@ -62,7 +62,7 @@ final class ue implements cg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2_ref), "ue.D(" + param0 + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2_ref), "ue.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -96,7 +96,7 @@ final class ue implements cg {
           }
           var6_int = param2.field_o + param4;
           var7 = param2.field_m + param3;
-          aj.a(param2.field_w, var6_int, var7, param2.field_k, 106);
+          MouseInput.a(param2.field_w, var6_int, var7, param2.field_k, 106);
           var8 = ja.field_n[1];
           if (param2 instanceof hf &&
             ((hf) (param2)).field_A) {
@@ -116,7 +116,7 @@ final class ue implements cg {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

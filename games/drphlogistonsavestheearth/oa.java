@@ -4,30 +4,30 @@
 import java.util.*;
 
 final class oa implements Iterator {
-    private uh field_a;
+    private DualLinkNode field_a;
     static String field_c;
     static String field_d;
     private dg field_f;
     static int field_b;
-    private uh field_e;
+    private DualLinkNode field_e;
 
     public final void remove() {
         if (null == this.field_a) {
           throw new IllegalStateException();
         }
-        this.field_a.f(64);
+        this.field_a.unlinkSecondary(64);
         this.field_a = null;
     }
 
     public final Object next() {
         Object var1 = this.field_e;
         if (this.field_f.field_b != var1) {
-          this.field_e = ((uh) (var1)).field_p;
+          this.field_e = ((DualLinkNode) (var1)).secondaryNext;
         } else {
           this.field_e = null;
           var1 = null;
         }
-        this.field_a = (uh) (var1);
+        this.field_a = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -110,10 +110,10 @@ final class oa implements Iterator {
         this.field_a = null;
         try {
           this.field_f = param0;
-          this.field_e = this.field_f.field_b.field_p;
+          this.field_e = this.field_f.field_b.secondaryNext;
           this.field_a = null;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "oa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "oa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

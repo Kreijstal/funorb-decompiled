@@ -20,7 +20,7 @@ final class gm extends hf {
             gm.h(-80);
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "gm.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "gm.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -37,7 +37,7 @@ final class gm extends hf {
           wj.c();
           a.a((byte) -121, true);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "gm.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "gm.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class gm extends hf {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class gm extends hf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -158,11 +158,11 @@ final class gm extends hf {
           if (null != mj.field_v &&
             var9 <= mj.field_v.field_y &&
             mj.field_v.field_w >= var10) {
-            aj.a(mj.field_v, (byte) 91);
+            MouseInput.a(mj.field_v, (byte) 91);
             wj.c();
           } else {
             mj.field_v = new nh(var9, var10);
-            aj.a(mj.field_v, (byte) 125);
+            MouseInput.a(mj.field_v, (byte) 125);
           }
           var12.b(112, 144, var12.field_z << 4, var12.field_C << 4, -this.field_N << 10, 4096);
           cl.d((byte) -80);
@@ -174,7 +174,7 @@ final class gm extends hf {
         try {
           this.field_I = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -251,7 +251,7 @@ final class gm extends hf {
               continue;
             }
             var12--;
-            var11[var15Lifetime1] = li.a(param4, hi.a(255, 4, jf.field_nb) * param1);
+            var11[var15Lifetime1] = GameAppletShell.a(param4, hi.a(255, 4, jf.field_nb) * param1);
           }
           var15Lifetime2 = var6_int + 1;
           for (var16 = -var7 + 2; 0 > var16; var16++) {
@@ -299,7 +299,7 @@ final class gm extends hf {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

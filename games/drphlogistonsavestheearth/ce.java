@@ -53,7 +53,7 @@ final class ce {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -166,7 +166,7 @@ final class ce {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var5), "ce.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var5), "ce.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -213,8 +213,8 @@ final class ce {
           }
           var3 = var9.l(31760);
           var4 = var9.h(-4);
-          if (var4 >= 0 && (0 == aj.field_d ||
-            !(aj.field_d < var4))) {
+          if (var4 >= 0 && (0 == MouseInput.field_d ||
+            !(MouseInput.field_d < var4))) {
             if (var3 == 0) {
               var12 = new byte[var4];
               var10 = var12;
@@ -224,8 +224,8 @@ final class ce {
               return stackIn_9_0;
             }
             var5 = var9.h(-9);
-            if (var5 >= 0 && (aj.field_d == 0 ||
-              !(var5 > aj.field_d))) {
+            if (var5 >= 0 && (MouseInput.field_d == 0 ||
+              !(var5 > MouseInput.field_d))) {
               var13 = new byte[var5];
               var11 = var13;
               var6 = var11;
@@ -253,7 +253,7 @@ final class ce {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

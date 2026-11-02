@@ -29,7 +29,7 @@ abstract class bd extends pj {
           this.field_R = param0;
           this.field_J = 0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "bd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "bd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -76,7 +76,7 @@ abstract class bd extends pj {
         }
         if (uk.field_f == null) {
           uk.field_f = new nh(this.field_w, this.field_k);
-          aj.a(uk.field_f, (byte) 79);
+          MouseInput.a(uk.field_f, (byte) 79);
           wj.c();
           this.c(0, param2 ^ -68, 0);
           super.a(-param0 - this.field_o, param1, param2, -this.field_m - param3);
@@ -86,7 +86,7 @@ abstract class bd extends pj {
         }
         if (this.field_w > uk.field_f.field_y) {
           uk.field_f = new nh(this.field_w, this.field_k);
-          aj.a(uk.field_f, (byte) 79);
+          MouseInput.a(uk.field_f, (byte) 79);
           wj.c();
           this.c(0, param2 ^ -68, 0);
           super.a(-param0 - this.field_o, param1, param2, -this.field_m - param3);
@@ -96,7 +96,7 @@ abstract class bd extends pj {
         }
         if (uk.field_f.field_w < this.field_k) {
           uk.field_f = new nh(this.field_w, this.field_k);
-          aj.a(uk.field_f, (byte) 79);
+          MouseInput.a(uk.field_f, (byte) 79);
           wj.c();
           this.c(0, param2 ^ -68, 0);
           super.a(-param0 - this.field_o, param1, param2, -this.field_m - param3);
@@ -104,7 +104,7 @@ abstract class bd extends pj {
           uk.field_f.e(param0 + this.field_o, param3 + this.field_m, this.field_J);
           return;
         }
-        aj.a(uk.field_f, (byte) 79);
+        MouseInput.a(uk.field_f, (byte) 79);
         wj.c();
         this.c(0, param2 ^ -68, 0);
         super.a(-param0 - this.field_o, param1, param2, -this.field_m - param3);

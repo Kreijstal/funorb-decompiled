@@ -43,7 +43,7 @@ final class wa extends pj implements kd, ke {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class wa extends pj implements kd, ke {
             field_O = (he[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "wa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "wa.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -136,7 +136,7 @@ final class wa extends pj implements kd, ke {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw ie.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+            throw ie.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -147,7 +147,7 @@ final class wa extends pj implements kd, ke {
 
     final void a(int param0, int param1, byte param2, int param3) {
         if (null != this.field_J) {
-          uh.field_i.a(this.field_J, 20 + (param0 + this.field_o), this.field_m + (param3 + 15), this.field_w - 40, this.field_k, 16777215, -1, 1, 0, uh.field_i.field_x);
+          DualLinkNode.field_i.a(this.field_J, 20 + (param0 + this.field_o), this.field_m + (param3 + 15), this.field_w - 40, this.field_k, 16777215, -1, 1, 0, DualLinkNode.field_i.field_x);
         }
         if (null != this.field_K) {
           wj.g(10 + param0, param3 + 134, -20 + this.field_w, 4210752);
@@ -241,7 +241,7 @@ final class wa extends pj implements kd, ke {
             this.field_P.field_v = ka.field_l;
           }
           this.field_m = 15;
-          var7 = uh.field_i;
+          var7 = DualLinkNode.field_i;
           if (this.field_J != null) {
             this.field_m = this.field_m + (var7.a(this.field_J, -40 + this.field_w, var7.field_x) + 5);
           }
@@ -315,7 +315,7 @@ final class wa extends pj implements kd, ke {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -353,7 +353,7 @@ final class wa extends pj implements kd, ke {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -401,7 +401,7 @@ final class wa extends pj implements kd, ke {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -433,8 +433,8 @@ final class wa extends pj implements kd, ke {
             nf.field_w = nf.field_w - rd.field_G;
           }
           var2_int = -1;
-          if (null != gl.field_e) {
-            var2_int = gl.field_e.length;
+          if (null != ClientException.field_e) {
+            var2_int = ClientException.field_e.length;
           } else {
             if (bh.field_c != null) {
               var2_int = bh.field_c.length;
@@ -445,14 +445,14 @@ final class wa extends pj implements kd, ke {
             boolean decompiledFrameRemainder0 = true;
             if (rd.field_D > la.field_b) {
               la.field_b = la.field_b + 1;
-              if (rd.field_F < la.field_b && (null == gl.field_e ||
-                null == gl.field_e[ig.field_k])) {
+              if (rd.field_F < la.field_b && (null == ClientException.field_e ||
+                null == ClientException.field_e[ig.field_k])) {
                 la.field_b = la.field_b - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (rd.field_D <= la.field_b &&
-                  gl.field_e[(1 + ig.field_k) % var2_int] == null) {
+                  ClientException.field_e[(1 + ig.field_k) % var2_int] == null) {
                   la.field_b = la.field_b - 1;
                 }
               }
@@ -545,7 +545,7 @@ final class wa extends pj implements kd, ke {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "wa.E(" + param0 + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "wa.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -561,7 +561,7 @@ final class wa extends pj implements kd, ke {
           var3.a(false, var4, -19116);
           this.field_M.h((byte) 88);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "wa.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "wa.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -592,8 +592,8 @@ final class wa extends pj implements kd, ke {
             nf.field_w = nf.field_w - rd.field_G;
           }
           var2_int = -1;
-          if (null != gl.field_e) {
-            var2_int = gl.field_e.length;
+          if (null != ClientException.field_e) {
+            var2_int = ClientException.field_e.length;
           } else {
             if (bh.field_c != null) {
               var2_int = bh.field_c.length;
@@ -604,14 +604,14 @@ final class wa extends pj implements kd, ke {
             boolean decompiledFrameRemainder0 = true;
             if (rd.field_D > la.field_b) {
               la.field_b = la.field_b + 1;
-              if (rd.field_F < la.field_b && (null == gl.field_e ||
-                null == gl.field_e[ig.field_k])) {
+              if (rd.field_F < la.field_b && (null == ClientException.field_e ||
+                null == ClientException.field_e[ig.field_k])) {
                 la.field_b = la.field_b - 1;
                 decompiledFrameRemainder0 = false;
               }
               else {
                 if (rd.field_D <= la.field_b &&
-                  gl.field_e[(1 + ig.field_k) % var2_int] == null) {
+                  ClientException.field_e[(1 + ig.field_k) % var2_int] == null) {
                   la.field_b = la.field_b - 1;
                 }
               }
@@ -704,7 +704,7 @@ final class wa extends pj implements kd, ke {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var2), "wa.E(" + param0 + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var2), "wa.E(" + param0 + ',' + param1 + ')');
         }
     }
 }

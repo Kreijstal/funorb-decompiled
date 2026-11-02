@@ -4,7 +4,7 @@
 final class eg {
     static int field_i;
     static bb field_h;
-    static ag field_a;
+    static PcmSampleStream field_a;
     static int field_e;
     static vd field_c;
     static String field_b;
@@ -58,7 +58,7 @@ final class eg {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

@@ -24,7 +24,7 @@ final class af {
           if (param1 == null) {
             return null;
           }
-          var3 = new bm(param1, kh.field_i, vi.field_b, gf.field_o, qa.field_J, aj.field_a, a.field_e);
+          var3 = new bm(param1, kh.field_i, vi.field_b, gf.field_o, qa.field_J, MouseInput.field_a, a.field_e);
           oc.a((byte) -21);
           stackIn_4_0 = var3;
           return stackIn_4_0;
@@ -38,7 +38,7 @@ final class af {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -96,12 +96,12 @@ final class af {
         var2.h(-104);
         if (param0 == 59) {
           var2.h(param0 ^ 74);
-          var1.a(-16175);
+          var1.unlink(-16175);
           return;
         }
         field_c = (String) null;
         var2.h(param0 ^ 74);
-        var1.a(-16175);
+        var1.unlink(-16175);
     }
 
     final static nh[] a(int param0, int param1, int param2, byte param3, int param4) {

@@ -6,8 +6,8 @@ import java.util.*;
 final class re implements Iterator {
     static String field_j;
     static he field_d;
-    private gi field_a;
-    private gi field_f;
+    private IntrusiveNode field_a;
+    private IntrusiveNode field_f;
     static he[] field_h;
     static int field_g;
     static he[] field_i;
@@ -20,7 +20,7 @@ final class re implements Iterator {
         int var2 = -6 / ((-2 - param0) / 38);
         this.field_f = null;
         this.field_k = 1;
-        this.field_a = this.field_b.field_h[0].field_e;
+        this.field_a = this.field_b.field_h[0].next;
     }
 
     public static void b(int param0) {
@@ -44,8 +44,8 @@ final class re implements Iterator {
         while (this.field_b.field_c > this.field_k) {
           fieldTemp$0 = this.field_k;
           this.field_k = this.field_k + 1;
-          if (this.field_b.field_h[fieldTemp$0].field_e != this.field_b.field_h[-1 + this.field_k]) {
-            this.field_a = this.field_b.field_h[-1 + this.field_k].field_e;
+          if (this.field_b.field_h[fieldTemp$0].next != this.field_b.field_h[-1 + this.field_k]) {
+            this.field_a = this.field_b.field_h[-1 + this.field_k].next;
             return true;
           }
           this.field_a = this.field_b.field_h[-1 + this.field_k];
@@ -56,13 +56,13 @@ final class re implements Iterator {
     public final Object next() {
         int fieldTemp$0 = 0;
         int var2;
-        gi var3;
-        gi var4;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
         var2 = DrPhlogistonSavesTheEarth.field_D ? 1 : 0;
         if (this.field_b.field_h[-1 + this.field_k] != this.field_a) {
           var4 = this.field_a;
           this.field_f = var4;
-          this.field_a = var4.field_e;
+          this.field_a = var4.next;
           return var4;
         }
         do {
@@ -71,10 +71,10 @@ final class re implements Iterator {
           }
           fieldTemp$0 = this.field_k;
           this.field_k = this.field_k + 1;
-          var3 = this.field_b.field_h[fieldTemp$0].field_e;
+          var3 = this.field_b.field_h[fieldTemp$0].next;
         } while (this.field_b.field_h[this.field_k - 1] == var3);
         this.field_f = var3;
-        this.field_a = var3.field_e;
+        this.field_a = var3.next;
         return var3;
     }
 
@@ -90,7 +90,7 @@ final class re implements Iterator {
         if (null == this.field_f) {
           throw new IllegalStateException();
         }
-        this.field_f.a(-16175);
+        this.field_f.unlink(-16175);
         this.field_f = null;
     }
 
@@ -117,7 +117,7 @@ final class re implements Iterator {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class re implements Iterator {
           this.field_b = param0;
           this.a(-116);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "re.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

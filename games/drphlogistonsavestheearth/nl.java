@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nl extends gi {
+final class nl extends IntrusiveNode {
     int field_p;
     static vk[] field_r;
     int field_h;
@@ -22,14 +22,14 @@ final class nl extends gi {
         if (param0 == -1321745375) {
           var1 = ie.a(false);
           var2 = ig.a((byte) 115);
-          cb.field_a.a(var2 + (di.field_d << 1), -df.field_h + si.field_B, var1 + (df.field_h << 1), jd.field_N - di.field_d, 7453);
+          cb.field_a.a(var2 + (di.field_d << 1), -df.field_h + si.field_B, var1 + (df.field_h << 1), LoginMenuScreen.field_N - di.field_d, 7453);
           tf.n(17077);
           return;
         }
         nl.a((byte) -105);
         var1Lifetime1 = ie.a(false);
         var2Lifetime1 = ig.a((byte) 115);
-        cb.field_a.a(var2Lifetime1 + (di.field_d << 1), -df.field_h + si.field_B, var1Lifetime1 + (df.field_h << 1), jd.field_N - di.field_d, 7453);
+        cb.field_a.a(var2Lifetime1 + (di.field_d << 1), -df.field_h + si.field_B, var1Lifetime1 + (df.field_h << 1), LoginMenuScreen.field_N - di.field_d, 7453);
         tf.n(17077);
     }
 
@@ -105,7 +105,7 @@ final class nl extends gi {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 

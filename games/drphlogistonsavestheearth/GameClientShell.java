@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sl extends li {
+abstract class GameClientShell extends GameAppletShell {
     private int field_m;
     String field_z;
     static String field_s;
@@ -40,7 +40,7 @@ abstract class sl extends li {
           }
           pi.field_V.a((byte) 123);
         }
-        li.b((byte) -81);
+        GameAppletShell.b((byte) -81);
         ia.a(-116);
         if (!kh.a(false) &&
           af.field_b != 11) {
@@ -151,7 +151,7 @@ abstract class sl extends li {
           }
           qd.field_Jb = lk.a(false, true, hb.field_q, 1, 8);
           sb.field_i = lk.a(false, true, field_q, 1, 8);
-          ig.field_t = lk.a(false, true, jd.field_O, 1, 8);
+          ig.field_t = lk.a(false, true, LoginMenuScreen.field_O, 1, 8);
           si.field_E = sb.field_i;
           hj.field_f = 2;
           ph.field_b = qd.field_Jb;
@@ -161,7 +161,7 @@ abstract class sl extends li {
             bi.field_I.a(0)) {
             if (bi.field_I.a((byte) 12, "")) {
               if (bi.field_I.a(255, "")) {
-                jd.a(7, bi.field_I);
+                LoginMenuScreen.a(7, bi.field_I);
                 bi.field_I = null;
                 tc.a((byte) 86);
               }
@@ -253,7 +253,7 @@ abstract class sl extends li {
         var10.dispose();
         this.setBackground(java.awt.Color.black);
         ob.field_c = this.field_n;
-        jd.a((byte) 119, ob.field_c);
+        LoginMenuScreen.a((byte) 119, ob.field_c);
         ua.a(this.field_t, this.field_A, (byte) 34, this.field_v, 5000, sb.field_d, ob.field_c, 5000, this.field_z, this.field_m, this.field_p, param2, this.field_w, param1);
         wi.a(this.field_v, param1, ob.field_c, this.field_m, this.field_z, this.field_p, sb.field_d, this.field_A, 111);
         rg.a(param3 ^ -11603);
@@ -264,7 +264,7 @@ abstract class sl extends li {
         if (param3 != 7320) {
           this.field_m = -76;
         }
-        jd.field_O = param5;
+        LoginMenuScreen.field_O = param5;
         hb.field_q = param4;
         field_q = param0;
         this.l(param3 ^ -7321);
@@ -369,7 +369,7 @@ abstract class sl extends li {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -533,7 +533,7 @@ abstract class sl extends li {
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -590,7 +590,7 @@ abstract class sl extends li {
             this.field_r = true;
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "sl.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "sl.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -610,7 +610,7 @@ abstract class sl extends li {
         int var2 = dh.field_N.l(31760);
         if (param0 != 28586) {
           byte[] var6 = (byte[]) null;
-          sl.a((byte) 74, (byte[]) null);
+          GameClientShell.a((byte) 74, (byte[]) null);
         }
         int var3 = (1 & var2) != 0 ? 1 : 0;
         int var4 = gf.field_C - 1;
@@ -779,7 +779,7 @@ abstract class sl extends li {
         }
     }
 
-    protected sl() {
+    protected GameClientShell() {
     }
 
     static {

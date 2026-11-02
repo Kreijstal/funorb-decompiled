@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ug extends ic {
+final class ug extends PcmStream {
     private int[] field_n;
     private rl field_R;
     private int[] field_z;
@@ -57,7 +57,7 @@ final class ug extends ic {
           if (param1.field_k < 0) {
             return true;
           }
-          param1.a(-16175);
+          param1.unlink(-16175);
           if (param1.field_z > 0 &&
             this.field_G[param1.field_u][param1.field_z] == param1) {
             this.field_G[param1.field_u][param1.field_z] = null;
@@ -73,7 +73,7 @@ final class ug extends ic {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -107,12 +107,12 @@ final class ug extends ic {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final synchronized ic a() {
-        return (ic) ((Object) this.field_H);
+    final synchronized PcmStream a() {
+        return (PcmStream) ((Object) this.field_H);
     }
 
     final boolean a(int param0, int[] param1, int param2, cc param3, int param4) {
@@ -138,7 +138,7 @@ final class ug extends ic {
           if (param3.field_k >= 0 && (null == param3.field_D ||
             param3.field_D.m())) {
             param3.d(param2 ^ 9);
-            param3.a(-16175);
+            param3.unlink(-16175);
             if (param3.field_z > 0) {
               if (param3 != this.field_G[param3.field_u][param3.field_z]) {
                 return true;
@@ -265,7 +265,7 @@ final class ug extends ic {
           }
           param3.d(-101);
           if (0 <= param3.field_k) {
-            param3.a(-16175);
+            param3.unlink(-16175);
             if (param3.field_z > 0 &&
               param3 == this.field_G[param3.field_u][param3.field_z]) {
               this.field_G[param3.field_u][param3.field_z] = null;
@@ -288,7 +288,7 @@ final class ug extends ic {
           } else {
             stackIn_83_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(param4).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_82_1).append(stackIn_83_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -382,7 +382,7 @@ final class ug extends ic {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -426,7 +426,7 @@ final class ug extends ic {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -440,7 +440,7 @@ final class ug extends ic {
           di.field_d = param1;
           nl.d(-1321745375);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ug.KA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ug.KA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -599,7 +599,7 @@ final class ug extends ic {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -626,7 +626,7 @@ final class ug extends ic {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -653,13 +653,13 @@ final class ug extends ic {
         while (true) {
           stackIn_5_0 = var3;
           stackIn_5_1 = this.field_v;
-          L3: {
+          regionExit1: {
             if (stackIn_5_0 == stackIn_5_1) {
-              L6: while (true) {
+              scanLoop2: while (true) {
                 stackIn_28_0 = this.field_R.field_h[var2];
                 stackIn_28_1 = var3;
                 if (var7 != 0) {
-                  break L3;
+                  break regionExit1;
                 }
                 if (stackIn_28_0 == stackIn_28_1) {
                   this.field_R.f(var2);
@@ -671,7 +671,7 @@ final class ug extends ic {
                     this.field_R.c(var2);
                     if (!this.field_R.e() &&
                       var7 == 0) {
-                      break L6;
+                      break scanLoop2;
                     }
                     if (null != this.field_K) {
                       this.a(this.field_K, this.field_w, (byte) 120);
@@ -681,7 +681,7 @@ final class ug extends ic {
                     if (this.field_w &&
                       var3 != 0) {
                       this.field_R.a(var4);
-                      break L6;
+                      break scanLoop2;
                     }
                     this.a(false, true);
                     this.field_R.a();
@@ -755,7 +755,7 @@ final class ug extends ic {
           this.a((byte) 91, var5, var4, var6);
           return;
         }
-        L1: {
+        regionExit1: {
           if (var3 == 144) {
             var4Lifetime1 = param0 & 15;
             var5Lifetime1 = (32547 & param0) >> 8;
@@ -763,7 +763,7 @@ final class ug extends ic {
             if (0 >= var6Lifetime1) {
               this.a((byte) 91, var5Lifetime1, var4Lifetime1, 64);
               if (var8 == 0) {
-                break L1;
+                break regionExit1;
               }
             }
             this.b((byte) 15, var6Lifetime1, var5Lifetime1, var4Lifetime1);
@@ -846,10 +846,10 @@ final class ug extends ic {
               if (var6Lifetime1Lifetime2 < 64) {
                 this.field_C[var4Lifetime1Lifetime3] = rk.a(this.field_C[var4Lifetime1Lifetime3], -2);
                 if (var8 != 0) {
-                  this.field_C[var4Lifetime1Lifetime3] = li.a(this.field_C[var4Lifetime1Lifetime3], 1);
+                  this.field_C[var4Lifetime1Lifetime3] = GameAppletShell.a(this.field_C[var4Lifetime1Lifetime3], 1);
                 }
               } else {
-                this.field_C[var4Lifetime1Lifetime3] = li.a(this.field_C[var4Lifetime1Lifetime3], 1);
+                this.field_C[var4Lifetime1Lifetime3] = GameAppletShell.a(this.field_C[var4Lifetime1Lifetime3], 1);
               }
               break;
             case 65:
@@ -857,10 +857,10 @@ final class ug extends ic {
                 this.c(var4Lifetime1Lifetime3, -16596);
                 this.field_C[var4Lifetime1Lifetime3] = rk.a(this.field_C[var4Lifetime1Lifetime3], -3);
                 if (var8 != 0) {
-                  this.field_C[var4Lifetime1Lifetime3] = li.a(this.field_C[var4Lifetime1Lifetime3], 2);
+                  this.field_C[var4Lifetime1Lifetime3] = GameAppletShell.a(this.field_C[var4Lifetime1Lifetime3], 2);
                 }
               } else {
-                this.field_C[var4Lifetime1Lifetime3] = li.a(this.field_C[var4Lifetime1Lifetime3], 2);
+                this.field_C[var4Lifetime1Lifetime3] = GameAppletShell.a(this.field_C[var4Lifetime1Lifetime3], 2);
               }
               break;
             case 99:
@@ -904,7 +904,7 @@ final class ug extends ic {
               break;
             case 81:
               if (64 <= var6Lifetime1Lifetime2) {
-                this.field_C[var4Lifetime1Lifetime3] = li.a(this.field_C[var4Lifetime1Lifetime3], 4);
+                this.field_C[var4Lifetime1Lifetime3] = GameAppletShell.a(this.field_C[var4Lifetime1Lifetime3], 4);
                 if (var8 != 0) {
                   this.b(var4Lifetime1Lifetime3, 6798);
                   this.field_C[var4Lifetime1Lifetime3] = rk.a(this.field_C[var4Lifetime1Lifetime3], -5);
@@ -977,11 +977,11 @@ final class ug extends ic {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final synchronized ic c() {
+    final synchronized PcmStream c() {
         return null;
     }
 
@@ -1007,7 +1007,7 @@ final class ug extends ic {
               if (var3.field_k < 0) {
                 this.field_s[var3.field_u][var3.field_F] = null;
               }
-              var3.a(-16175);
+              var3.unlink(-16175);
             }
             var3 = (cc) (this.field_H.field_q.e(0));
             continue;
@@ -1172,7 +1172,7 @@ final class ug extends ic {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1246,7 +1246,7 @@ final class ug extends ic {
         try {
           this.a(true, param1, param0, -1);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "ug.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "ug.T(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -1355,15 +1355,15 @@ final class ug extends ic {
         var7.field_E = 0;
         var7.field_m = 0;
         if (this.field_E[param3] == 0) {
-          var7.field_D = ag.b(var6, this.b(950080514, var7), this.a(var7, 15), this.b(var7, -16385));
+          var7.field_D = PcmSampleStream.b(var6, this.b(950080514, var7), this.a(var7, 15), this.b(var7, -16385));
           if (var9 != 0) {
-            var7.field_D = ag.b(var6, this.b(950080514, var7), 0, this.b(var7, -16385));
+            var7.field_D = PcmSampleStream.b(var6, this.b(950080514, var7), 0, this.b(var7, -16385));
             stackIn_19_1 = var7;
             stackIn_20_2 = !(var10.field_p[param2] >= 0);
             this.a(stackIn_19_1, stackIn_20_2, (byte) 101);
           }
         } else {
-          var7.field_D = ag.b(var6, this.b(950080514, var7), 0, this.b(var7, -16385));
+          var7.field_D = PcmSampleStream.b(var6, this.b(950080514, var7), 0, this.b(var7, -16385));
           stackIn_19_1 = var7;
           stackIn_20_2 = !(var10.field_p[param2] >= 0);
           this.a(stackIn_19_1, stackIn_20_2, (byte) 101);
@@ -1458,9 +1458,9 @@ final class ug extends ic {
             var7 = new int[]{param0};
           }
           var8 = (ga) (param3.field_i.b(-1));
-          L2: while (true) {
+          scanLoop1: while (true) {
             if (var8 != null) {
-              var9 = (int)var8.field_g;
+              var9 = (int)var8.key;
               var10 = (ig) (this.field_O.a(true, (long)var9));
               if (var11 == 0) {
                 boolean decompiledFrameRemainder0 = true;
@@ -1483,7 +1483,7 @@ final class ug extends ic {
               }
             } else {
               if (var6_int == 0) {
-                break L2;
+                break scanLoop1;
               }
             }
             param3.b();
@@ -1513,7 +1513,7 @@ final class ug extends ic {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 

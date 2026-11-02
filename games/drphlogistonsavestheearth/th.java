@@ -16,9 +16,9 @@ final class th {
           return;
         }
         try {
-          od.a(-1630758008, ag.a(param3, 100, param1, param2));
+          od.a(-1630758008, PcmSampleStream.a(param3, 100, param1, param2));
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "th.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "th.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -150,7 +150,7 @@ final class th {
             } else {
               stackIn_53_2 = "{...}";
             }
-            throw ie.a((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
+            throw ie.wrapClientException((Throwable) ((Object) stackIn_46_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -184,7 +184,7 @@ final class th {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -212,7 +212,7 @@ final class th {
             var4_ref_wk = (wk) (og.field_f.h(-11151));
             if (var4_ref_wk != null &&
               var4_ref_wk.field_k < var2_long) {
-              var4_ref_wk.a(-16175);
+              var4_ref_wk.unlink(-16175);
               gf.field_C = var4_ref_wk.field_j.length;
               dh.field_N.field_j = 0;
               for (var5_int = 0; var5_int < gf.field_C; var5_int++) {
@@ -228,14 +228,14 @@ final class th {
           while (true) {
             if (dj.field_N < 0) {
               dh.field_N.field_j = 0;
-              if (!jd.a(1, 5929)) {
+              if (!LoginMenuScreen.a(1, 5929)) {
                 return false;
               }
               dj.field_N = dh.field_N.e((byte) 121);
               dh.field_N.field_j = 0;
               gf.field_C = param1[dj.field_N];
             }
-            if (!li.d(-29427)) {
+            if (!GameAppletShell.d(-29427)) {
               return false;
             }
             if (lc.field_v == 0) {
@@ -270,7 +270,7 @@ final class th {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(')').toString());
         }
     }
 

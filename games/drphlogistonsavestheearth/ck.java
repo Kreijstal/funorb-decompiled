@@ -64,7 +64,7 @@ final class ck {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw ie.a((Throwable) ((Object) var1_ref), "ck.D(" + param0 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) var1_ref), "ck.D(" + param0 + ')');
         }
     }
 

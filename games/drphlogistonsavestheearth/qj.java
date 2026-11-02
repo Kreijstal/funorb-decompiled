@@ -20,7 +20,7 @@ final class qj {
             field_f = (he) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "qj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "qj.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -35,21 +35,21 @@ final class qj {
 
     final static void a(boolean param0, int param1, int param2, boolean param3) {
         int var4 = 0;
-        uh.field_r.d(param2, param1);
+        DualLinkNode.field_r.d(param2, param1);
         if (!param0) {
         } else {
-          var4 = k.field_L % uh.field_r.field_y * 2;
-          if (!(var4 < uh.field_r.field_y)) {
-            var4 = uh.field_r.field_y - var4 + uh.field_r.field_y;
+          var4 = k.field_L % DualLinkNode.field_r.field_y * 2;
+          if (!(var4 < DualLinkNode.field_r.field_y)) {
+            var4 = DualLinkNode.field_r.field_y - var4 + DualLinkNode.field_r.field_y;
           }
           if (var4 < 10) {
             var4 = 10;
           } else {
-            if (var4 > -40 + uh.field_r.field_y) {
-              var4 = uh.field_r.field_y - 40;
+            if (var4 > -40 + DualLinkNode.field_r.field_y) {
+              var4 = DualLinkNode.field_r.field_y - 40;
             }
           }
-          ee.a(80, 0, param1, param2, -99, 0, 30, var4, uh.field_r);
+          ee.a(80, 0, param1, param2, -99, 0, 30, var4, DualLinkNode.field_r);
         }
         if (!param3) {
           qj.a(-67, -81);

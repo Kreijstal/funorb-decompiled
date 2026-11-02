@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class lb extends uh {
+abstract class lb extends DualLinkNode {
     boolean field_E;
     static int[] field_B;
     boolean field_y;

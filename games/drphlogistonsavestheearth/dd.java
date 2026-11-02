@@ -38,7 +38,7 @@ final class dd extends u {
           }
           param0.b(1, this.field_i);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "dd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dd.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -50,13 +50,13 @@ final class dd extends u {
           if (param0 < 44) {
             dd.a(false);
           }
-          aj.field_c = true;
+          MouseInput.field_c = true;
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
           jk.a(0, var3, var4, param1, var2);
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "dd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dd.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class dd extends u {
           this.field_i = param1;
           this.field_m = param0;
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "dd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "dd.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class dd extends u {
           if (var44.field_O != null &&
             var44.field_G > 1) {
             var60 = var44.field_O;
-            li.a(var60, 63, uh.field_h, 0, 0);
+            GameAppletShell.a(var60, 63, DualLinkNode.field_h, 0, 0);
           } else {
             qb.a(0);
           }
@@ -142,7 +142,7 @@ final class dd extends u {
           var41 = var49;
           var8 = var41;
           var64 = new int[param7.field_H];
-          var62 = jd.field_L;
+          var62 = LoginMenuScreen.field_L;
           if (param6 != -81) {
             field_g = (ah) null;
           }
@@ -180,19 +180,19 @@ final class dd extends u {
             var15Lifetime1 = param7.field_h[var14Lifetime1];
             var16 = param7.field_a[var14Lifetime1];
             var17 = param7.field_K[var14Lifetime1];
-            if (jd.field_L.length <= param7.field_A[var14Lifetime1]) {
+            if (LoginMenuScreen.field_L.length <= param7.field_A[var14Lifetime1]) {
               stackIn_26_0 = -1;
             } else {
               stackIn_26_0 = param7.field_A[var14Lifetime1];
             }
             var18 = stackIn_26_0;
-            if (jd.field_L.length <= param7.field_l[var14Lifetime1]) {
+            if (LoginMenuScreen.field_L.length <= param7.field_l[var14Lifetime1]) {
               stackIn_29_0 = -1;
             } else {
               stackIn_29_0 = param7.field_l[var14Lifetime1];
             }
             var19 = stackIn_29_0;
-            if (jd.field_L.length > param7.field_e[var14Lifetime1]) {
+            if (LoginMenuScreen.field_L.length > param7.field_e[var14Lifetime1]) {
               stackIn_32_0 = param7.field_e[var14Lifetime1];
             } else {
               stackIn_32_0 = -1;
@@ -264,7 +264,7 @@ final class dd extends u {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw ie.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
+          throw ie.wrapClientException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(')').toString());
         }
     }
 

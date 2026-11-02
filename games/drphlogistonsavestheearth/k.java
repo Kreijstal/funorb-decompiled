@@ -72,7 +72,7 @@ final class k extends si {
         }
         while (var3 != null) {
           if (var3.k(2968)) {
-            var3.a(-16175);
+            var3.unlink(-16175);
           }
           var3 = (bd) (var2.a((byte) -103));
         }
@@ -88,7 +88,7 @@ final class k extends si {
         bd var3 = (bd) (var2.c(-1));
         while (var3 != null) {
           if (var3.j(0)) {
-            var3.a(-16175);
+            var3.unlink(-16175);
           }
           var3 = (bd) (var2.a((byte) -100));
         }
@@ -131,7 +131,7 @@ final class k extends si {
           var3.field_Q = true;
           var3.a(false, (vg) (this));
         } catch (RuntimeException runtimeException) {
-          throw ie.a((Throwable) ((Object) runtimeException), "k.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw ie.wrapClientException((Throwable) ((Object) runtimeException), "k.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
