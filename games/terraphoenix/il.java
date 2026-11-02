@@ -17,7 +17,7 @@ final class il {
             Sprite var3 = (Sprite) null;
             il.a(74, (Sprite) null);
           }
-          SoftwareRasterizer.a(param1.field_z, param1.field_q, param1.field_u);
+          SoftwareRasterizer.a(param1.pixels, param1.field_q, param1.field_u);
         } catch (RuntimeException runtimeException) {
           throw qk.wrapException((Throwable) ((Object) runtimeException), "il.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

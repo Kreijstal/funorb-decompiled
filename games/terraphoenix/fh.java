@@ -185,8 +185,8 @@ final class fh {
         Sprite[] var5 = new Sprite[9];
         ArgbSprite var16 = new ArgbSprite(32, 32);
         ArgbSprite var18 = var16;
-        for (var7_int = 0; var7_int < var18.field_z.length; var7_int++) {
-          var16.field_z[var7_int] = 1077952576;
+        for (var7_int = 0; var7_int < var18.pixels.length; var7_int++) {
+          var16.pixels[var7_int] = 1077952576;
         }
         if (param1 >= -84) {
           return;
@@ -215,14 +215,14 @@ final class fh {
           var10 = new Sprite[9];
           var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
-          dupTemp$2.field_z = new int[]{6710886, 7829367};
-          var10[4].field_z = new int[]{6710886, 7829367};
+          dupTemp$2.pixels = new int[]{6710886, 7829367};
+          var10[4].pixels = new int[]{6710886, 7829367};
           var11 = new hf();
           var12 = new hf();
           var11.a(-26108, 0, var9);
           var12.a(-26108, 0, var10);
           var13 = new Sprite(7, 4);
-          var13.field_z = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new hf(var4, true);
           var14.a(0, var13.d());
           var13.b();

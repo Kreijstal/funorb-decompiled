@@ -2,27 +2,27 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class IntrusiveDeque {
-    IntrusiveNode field_a;
+    IntrusiveNode sentinel;
     static String field_e;
     static Archive field_c;
     static int field_f;
     static String field_d;
-    private IntrusiveNode field_b;
+    private IntrusiveNode cursor;
 
     final IntrusiveNode c(byte param0) {
         int var2 = 31 % ((param0 - 36) / 56);
-        IntrusiveNode var3 = this.field_a.next;
-        if (this.field_a == var3) {
-          this.field_b = null;
+        IntrusiveNode var3 = this.sentinel.next;
+        if (this.sentinel == var3) {
+          this.cursor = null;
           return null;
         }
-        this.field_b = var3.next;
+        this.cursor = var3.next;
         return var3;
     }
 
     final IntrusiveNode d(byte param0) {
-        IntrusiveNode var2 = this.field_a.previous;
-        if (var2 != this.field_a) {
+        IntrusiveNode var2 = this.sentinel.previous;
+        if (var2 != this.sentinel) {
           var2.unlink((byte) 12);
           int var3 = -85 / ((param0 + 37) / 50);
           return var2;
@@ -53,7 +53,7 @@ final class IntrusiveDeque {
         if (obfuscationGuard > -34) {
           return false;
         }
-        return this.field_a == this.field_a.previous ? true : false;
+        return this.sentinel == this.sentinel.previous ? true : false;
     }
 
     final void clear(int obfuscationGuard) {
@@ -63,23 +63,23 @@ final class IntrusiveDeque {
         if (obfuscationGuard != 21480) {
           this.beginBackward(-102);
           while (true) {
-            var5 = this.field_a.previous;
-            if (var5 == this.field_a) {
+            var5 = this.sentinel.previous;
+            if (var5 == this.sentinel) {
               break;
             }
             var5.unlink((byte) 12);
           }
-          this.field_b = null;
+          this.cursor = null;
           return;
         }
         while (true) {
-          var4 = this.field_a.previous;
-          if (var4 == this.field_a) {
+          var4 = this.sentinel.previous;
+          if (var4 == this.sentinel) {
             break;
           }
           var4.unlink((byte) 12);
         }
-        this.field_b = null;
+        this.cursor = null;
     }
 
     final static IndexedSprite a(Archive param0, int param1, byte param2, int param3) {
@@ -117,30 +117,30 @@ final class IntrusiveDeque {
         IntrusiveNode var2Lifetime1;
         if (obfuscationGuard != -119) {
           this.b((byte) -7);
-          var2 = this.field_b;
-          if (var2 != this.field_a) {
-            this.field_b = var2.previous;
+          var2 = this.cursor;
+          if (var2 != this.sentinel) {
+            this.cursor = var2.previous;
             return var2;
           }
-          this.field_b = null;
+          this.cursor = null;
           return null;
         }
-        var2Lifetime1 = this.field_b;
-        if (var2Lifetime1 != this.field_a) {
-          this.field_b = var2Lifetime1.previous;
+        var2Lifetime1 = this.cursor;
+        if (var2Lifetime1 != this.sentinel) {
+          this.cursor = var2Lifetime1.previous;
           return var2Lifetime1;
         }
-        this.field_b = null;
+        this.cursor = null;
         return null;
     }
 
     final IntrusiveNode nextForward(int obfuscationGuard) {
-        IntrusiveNode var2 = this.field_b;
-        if (var2 == this.field_a) {
-          this.field_b = null;
+        IntrusiveNode var2 = this.cursor;
+        if (var2 == this.sentinel) {
+          this.cursor = null;
           return null;
         }
-        this.field_b = var2.next;
+        this.cursor = var2.next;
         if (obfuscationGuard <= -67) {
           return var2;
         }
@@ -154,20 +154,20 @@ final class IntrusiveDeque {
         IntrusiveNode var2Lifetime1;
         if (obfuscationGuard != 9272) {
           field_f = 56;
-          var2 = this.field_a.previous;
-          if (var2 == this.field_a) {
-            this.field_b = null;
+          var2 = this.sentinel.previous;
+          if (var2 == this.sentinel) {
+            this.cursor = null;
             return null;
           }
-          this.field_b = var2.previous;
+          this.cursor = var2.previous;
           return var2;
         }
-        var2Lifetime1 = this.field_a.previous;
-        if (var2Lifetime1 == this.field_a) {
-          this.field_b = null;
+        var2Lifetime1 = this.sentinel.previous;
+        if (var2Lifetime1 == this.sentinel) {
+          this.cursor = null;
           return null;
         }
-        this.field_b = var2Lifetime1.previous;
+        this.cursor = var2Lifetime1.previous;
         return var2Lifetime1;
     }
 
@@ -176,8 +176,8 @@ final class IntrusiveDeque {
           if (param0.next != null) {
             param0.unlink((byte) 12);
           }
-          param0.previous = this.field_a.previous;
-          param0.next = this.field_a;
+          param0.previous = this.sentinel.previous;
+          param0.next = this.sentinel;
           if (param1 != 0) {
             this.clear(-11);
           }
@@ -190,8 +190,8 @@ final class IntrusiveDeque {
 
     final IntrusiveNode b(byte param0) {
         int var2 = -86 % ((53 - param0) / 47);
-        IntrusiveNode var3 = this.field_a.next;
-        if (this.field_a != var3) {
+        IntrusiveNode var3 = this.sentinel.next;
+        if (this.sentinel != var3) {
           var3.unlink((byte) 12);
           return var3;
         }
@@ -202,8 +202,8 @@ final class IntrusiveDeque {
         if (null != param0.next) {
           param0.unlink((byte) 12);
         }
-        param0.next = this.field_a.next;
-        param0.previous = this.field_a;
+        param0.next = this.sentinel.next;
+        param0.previous = this.sentinel;
         param0.next.previous = param0;
         if (param1 != -16611) {
           return;
@@ -216,9 +216,9 @@ final class IntrusiveDeque {
     }
 
     public IntrusiveDeque() {
-        this.field_a = new IntrusiveNode();
-        this.field_a.previous = this.field_a;
-        this.field_a.next = this.field_a;
+        this.sentinel = new IntrusiveNode();
+        this.sentinel.previous = this.sentinel;
+        this.sentinel.next = this.sentinel;
     }
 
     static {

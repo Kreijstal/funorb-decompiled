@@ -235,8 +235,8 @@ final class oh {
               break scanLoop1;
             }
             var14 = stackIn_13_0;
-            while (var13.field_z.length > var14) {
-              var13.field_z[var14] = param7;
+            while (var13.pixels.length > var14) {
+              var13.pixels[var14] = param7;
               var14++;
             }
             var12++;
@@ -254,10 +254,10 @@ final class oh {
             }
             var12Lifetime1 = stackIn_24_0;
             while (var9 > var12Lifetime1) {
-              var10[6].field_z[(var9 - var11 - 1) * var9 + var12Lifetime1] = param4;
-              var10[8].field_z[var12Lifetime1 + (-var11 + (var9 - 1)) * var9] = param4;
-              var10[2].field_z[var12Lifetime1 * var9 - 1 + (var9 - var11)] = param4;
-              var10[8].field_z[var12Lifetime1 * var9 - (var11 + (1 - var9))] = param4;
+              var10[6].pixels[(var9 - var11 - 1) * var9 + var12Lifetime1] = param4;
+              var10[8].pixels[var12Lifetime1 + (-var11 + (var9 - 1)) * var9] = param4;
+              var10[2].pixels[var12Lifetime1 * var9 - 1 + (var9 - var11)] = param4;
+              var10[8].pixels[var12Lifetime1 * var9 - (var11 + (1 - var9))] = param4;
               var12Lifetime1++;
             }
             var11++;
@@ -275,13 +275,13 @@ final class oh {
             if (var15 == 0) {
               var12Lifetime2 = stackIn_36_0;
               while (var12Lifetime2 < var9) {
-                var10[0].field_z[var12Lifetime2 + var11Lifetime1 * var9] = param0;
-                var10[0].field_z[var12Lifetime2 * var9 + var11Lifetime1] = param0;
+                var10[0].pixels[var12Lifetime2 + var11Lifetime1 * var9] = param0;
+                var10[0].pixels[var12Lifetime2 * var9 + var11Lifetime1] = param0;
                 stackIn_26_0 = var12Lifetime2;
                 stackIn_26_1 = -var11Lifetime1 + var9;
                 if (stackIn_26_0 < stackIn_26_1) {
-                  var10[2].field_z[var9 * var11Lifetime1 + var12Lifetime2] = param0;
-                  var10[6].field_z[var9 * var12Lifetime2 + var11Lifetime1] = param0;
+                  var10[2].pixels[var9 * var11Lifetime1 + var12Lifetime2] = param0;
+                  var10[6].pixels[var9 * var12Lifetime2 + var11Lifetime1] = param0;
                 }
                 var12Lifetime2++;
               }
@@ -300,10 +300,10 @@ final class oh {
               }
               var12Lifetime2Lifetime1 = stackIn_47_0;
               while (var12Lifetime2Lifetime1 < param6) {
-                var10[7].field_z[var11Lifetime1 + param3 * (var9 + (-var12Lifetime2Lifetime1 - 1))] = param4;
-                var10[5].field_z[var9 * var11Lifetime1 - var12Lifetime2Lifetime1 + var9 - 1] = param4;
-                var10[1].field_z[param3 * var12Lifetime2Lifetime1 + var11Lifetime1] = param0;
-                var10[3].field_z[var12Lifetime2Lifetime1 + var11Lifetime1 * var9] = param0;
+                var10[7].pixels[var11Lifetime1 + param3 * (var9 + (-var12Lifetime2Lifetime1 - 1))] = param4;
+                var10[5].pixels[var9 * var11Lifetime1 - var12Lifetime2Lifetime1 + var9 - 1] = param4;
+                var10[1].pixels[param3 * var12Lifetime2Lifetime1 + var11Lifetime1] = param0;
+                var10[3].pixels[var12Lifetime2Lifetime1 + var11Lifetime1 * var9] = param0;
                 var12Lifetime2Lifetime1++;
               }
               var11Lifetime1++;
@@ -317,10 +317,10 @@ final class oh {
             var12Lifetime2Lifetime2 = 0;
             while (true) {
               if (param5 > var12Lifetime2Lifetime2) {
-                var10[1].field_z[param3 * (-1 + (-var12Lifetime2Lifetime2 + var9)) + var11Lifetime1] = param8;
-                var10[3].field_z[-var12Lifetime2Lifetime2 + (-1 + (var9 + var11Lifetime1 * var9))] = param8;
-                var10[7].field_z[var12Lifetime2Lifetime2 * param3 + var11Lifetime1] = param8;
-                var10[5].field_z[var12Lifetime2Lifetime2 + var11Lifetime1 * var9] = param8;
+                var10[1].pixels[param3 * (-1 + (-var12Lifetime2Lifetime2 + var9)) + var11Lifetime1] = param8;
+                var10[3].pixels[-var12Lifetime2Lifetime2 + (-1 + (var9 + var11Lifetime1 * var9))] = param8;
+                var10[7].pixels[var12Lifetime2Lifetime2 * param3 + var11Lifetime1] = param8;
+                var10[5].pixels[var12Lifetime2Lifetime2 + var11Lifetime1 * var9] = param8;
                 var12Lifetime2Lifetime2++;
                 if (var15 == 0) {
                   continue;

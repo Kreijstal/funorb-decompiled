@@ -495,7 +495,7 @@ final class MapTile {
           }
           if (var9 > 0 &&
             0 < var8) {
-            qc.a(SoftwareRasterizer.field_i, var10, param2.field_z, var7, param4, var11, var8, param3 ^ 16729015, 0, var9, var6_int);
+            qc.a(SoftwareRasterizer.field_i, var10, param2.pixels, var7, param4, var11, var8, param3 ^ 16729015, 0, var9, var6_int);
             return;
           }
           return;

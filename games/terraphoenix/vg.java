@@ -50,9 +50,9 @@ final class vg extends PcmStream {
 
     private final void a(IntrusiveNode param0, we param1) {
         while (true) {
-          if (param0 == this.field_o.field_a) {
+          if (param0 == this.field_o.sentinel) {
             ha.a(127, param0, param1);
-            this.field_l = ((we) (this.field_o.field_a.previous)).field_h;
+            this.field_l = ((we) (this.field_o.sentinel.previous)).field_h;
             return;
           }
           if (((we) (param0)).field_h <= param1.field_h) {
@@ -62,7 +62,7 @@ final class vg extends PcmStream {
           break;
         }
         ha.a(127, param0, param1);
-        this.field_l = ((we) (this.field_o.field_a.previous)).field_h;
+        this.field_l = ((we) (this.field_o.sentinel.previous)).field_h;
         return;
     }
 
@@ -82,8 +82,8 @@ final class vg extends PcmStream {
     private final void a(we param0) {
         param0.unlink((byte) 12);
         param0.a();
-        IntrusiveNode var2 = this.field_o.field_a.previous;
-        if (var2 == this.field_o.field_a) {
+        IntrusiveNode var2 = this.field_o.sentinel.previous;
+        if (var2 == this.field_o.sentinel) {
           this.field_l = -1;
         } else {
           this.field_l = ((we) (var2)).field_h;

@@ -211,7 +211,7 @@ final class BattleState {
               while (0 > var8Lifetime1) {
                 incrementValue$0 = var10;
                 var10++;
-                var19Lifetime3 = param5.field_z[incrementValue$0];
+                var19Lifetime3 = param5.pixels[incrementValue$0];
                 stackIn_66_0 = ~var19Lifetime3;
                 stackIn_66_1 = -1;
                 if (stackIn_66_0 == stackIn_66_1) {
@@ -222,11 +222,11 @@ final class BattleState {
                   var20++;
                   incrementValue$2 = var17;
                   var17++;
-                  gd.field_a[incrementValue$1][var21] = 144 * param0 + (var21 + var7.field_z[incrementValue$2] / 5);
+                  gd.field_a[incrementValue$1][var21] = 144 * param0 + (var21 + var7.pixels[incrementValue$2] / 5);
                 }
                 incrementValue$3 = var10;
                 var10++;
-                var19Lifetime3 = param5.field_z[incrementValue$3];
+                var19Lifetime3 = param5.pixels[incrementValue$3];
                 if (var19Lifetime3 == 0) {
                   var20++;
                   var17++;
@@ -235,11 +235,11 @@ final class BattleState {
                   var20++;
                   incrementValue$5 = var17;
                   var17++;
-                  gd.field_a[incrementValue$4][var21] = param0 * 144 + (var21 + var7.field_z[incrementValue$5] / 5);
+                  gd.field_a[incrementValue$4][var21] = param0 * 144 + (var21 + var7.pixels[incrementValue$5] / 5);
                 }
                 incrementValue$6 = var10;
                 var10++;
-                var19Lifetime3 = param5.field_z[incrementValue$6];
+                var19Lifetime3 = param5.pixels[incrementValue$6];
                 if (0 == var19Lifetime3) {
                   var20++;
                   var17++;
@@ -248,11 +248,11 @@ final class BattleState {
                   var20++;
                   incrementValue$8 = var17;
                   var17++;
-                  gd.field_a[incrementValue$7][var21] = var21 + (param0 * 144 + var7.field_z[incrementValue$8] / 5);
+                  gd.field_a[incrementValue$7][var21] = var21 + (param0 * 144 + var7.pixels[incrementValue$8] / 5);
                 }
                 incrementValue$9 = var10;
                 var10++;
-                var19Lifetime3 = param5.field_z[incrementValue$9];
+                var19Lifetime3 = param5.pixels[incrementValue$9];
                 if (var19Lifetime3 == 0) {
                   var20++;
                   var17++;
@@ -261,7 +261,7 @@ final class BattleState {
                   var20++;
                   incrementValue$11 = var17;
                   var17++;
-                  gd.field_a[incrementValue$10][var21] = var21 + param0 * 144 + var7.field_z[incrementValue$11] / 5;
+                  gd.field_a[incrementValue$10][var21] = var21 + param0 * 144 + var7.pixels[incrementValue$11] / 5;
                 }
                 var8Lifetime1++;
               }
@@ -269,7 +269,7 @@ final class BattleState {
               while (var8Lifetime1Lifetime1 < 0) {
                 incrementValue$12 = var10;
                 var10++;
-                var19Lifetime3Lifetime1 = param5.field_z[incrementValue$12];
+                var19Lifetime3Lifetime1 = param5.pixels[incrementValue$12];
                 stackIn_66_0Lifetime1 = -1;
                 stackIn_66_1Lifetime1 = ~var19Lifetime3Lifetime1;
                 if (stackIn_66_0Lifetime1 == stackIn_66_1Lifetime1) {
@@ -280,7 +280,7 @@ final class BattleState {
                   var20++;
                   incrementValue$14 = var17;
                   var17++;
-                  gd.field_a[incrementValue$13][var21] = 144 * param0 + (var21 + var7.field_z[incrementValue$14] / 5);
+                  gd.field_a[incrementValue$13][var21] = 144 * param0 + (var21 + var7.pixels[incrementValue$14] / 5);
                 }
                 var8Lifetime1Lifetime1++;
               }
@@ -2741,7 +2741,7 @@ final class BattleState {
                 while (var7_intLifetime2 < 0) {
                   incrementValue$0 = var9;
                   var9++;
-                  var15Lifetime4 = param3.field_z[incrementValue$0];
+                  var15Lifetime4 = param3.pixels[incrementValue$0];
                   stackIn_59_0 = ~var15Lifetime4;
                   stackIn_59_1 = -1;
                   if (stackIn_59_0 != stackIn_59_1) {
@@ -2753,7 +2753,7 @@ final class BattleState {
                   }
                   incrementValue$4 = var9;
                   var9++;
-                  var15Lifetime4 = param3.field_z[incrementValue$4];
+                  var15Lifetime4 = param3.pixels[incrementValue$4];
                   if (var15Lifetime4 != 0) {
                     incrementValue$5 = var16;
                     var16++;
@@ -2763,7 +2763,7 @@ final class BattleState {
                   }
                   incrementValue$6 = var9;
                   var9++;
-                  var15Lifetime4 = param3.field_z[incrementValue$6];
+                  var15Lifetime4 = param3.pixels[incrementValue$6];
                   if (var15Lifetime4 != 0) {
                     incrementValue$7 = var16;
                     var16++;
@@ -2773,7 +2773,7 @@ final class BattleState {
                   }
                   incrementValue$8 = var9;
                   var9++;
-                  var15Lifetime4 = param3.field_z[incrementValue$8];
+                  var15Lifetime4 = param3.pixels[incrementValue$8];
                   if (0 == var15Lifetime4) {
                     var16++;
                   } else {
@@ -2792,7 +2792,7 @@ final class BattleState {
                   }
                   incrementValue$1 = var9;
                   var9++;
-                  var15Lifetime4 = param3.field_z[incrementValue$1];
+                  var15Lifetime4 = param3.pixels[incrementValue$1];
                   stackIn_71_0 = 0;
                   stackIn_71_1 = var15Lifetime4;
                   if (stackIn_71_0 == stackIn_71_1) {
@@ -2874,7 +2874,7 @@ final class BattleState {
                 while (0 > var8Lifetime2) {
                   incrementValue$10 = var10Lifetime1;
                   var10Lifetime1++;
-                  var16Lifetime4 = param3.field_z[incrementValue$10];
+                  var16Lifetime4 = param3.pixels[incrementValue$10];
                   stackIn_128_0 = ~var16Lifetime4;
                   stackIn_128_1 = -1;
                   if (stackIn_128_0 != stackIn_128_1) {
@@ -2883,20 +2883,20 @@ final class BattleState {
                   var17Lifetime1++;
                   incrementValue$11 = var10Lifetime1;
                   var10Lifetime1++;
-                  var16Lifetime4 = param3.field_z[incrementValue$11];
+                  var16Lifetime4 = param3.pixels[incrementValue$11];
                   if (var16Lifetime4 != 0) {
                     gd.field_a[var17Lifetime1][var18Lifetime1] = Math.abs(-param3.field_q + (var17Lifetime1 - param0)) / 2 + (var7_intLifetime1 + param1);
                   }
                   incrementValue$12 = var10Lifetime1;
                   var10Lifetime1++;
-                  var16Lifetime4 = param3.field_z[incrementValue$12];
+                  var16Lifetime4 = param3.pixels[incrementValue$12];
                   var17Lifetime1++;
                   if (var16Lifetime4 != 0) {
                     gd.field_a[var17Lifetime1][var18Lifetime1] = param1 + var7_intLifetime1 + Math.abs(var17Lifetime1 - (param0 + param3.field_q)) / 2;
                   }
                   incrementValue$13 = var10Lifetime1;
                   var10Lifetime1++;
-                  var16Lifetime4 = param3.field_z[incrementValue$13];
+                  var16Lifetime4 = param3.pixels[incrementValue$13];
                   var17Lifetime1++;
                   if (var16Lifetime4 != 0) {
                     gd.field_a[var17Lifetime1][var18Lifetime1] = Math.abs(-param0 + (var17Lifetime1 - param3.field_q)) / 2 + param1 + var7_intLifetime1;
@@ -2908,7 +2908,7 @@ final class BattleState {
                 while (var8Lifetime2 < 0) {
                   incrementValue$14 = var10Lifetime1;
                   var10Lifetime1++;
-                  var16Lifetime4 = param3.field_z[incrementValue$14];
+                  var16Lifetime4 = param3.pixels[incrementValue$14];
                   stackIn_128_0Lifetime1 = 0;
                   stackIn_128_1Lifetime1 = var16Lifetime4;
                   if (stackIn_128_0Lifetime1 != stackIn_128_1Lifetime1) {
@@ -2940,7 +2940,7 @@ final class BattleState {
                 while (var8Lifetime2Lifetime1 < 0) {
                   incrementValue$15 = var10Lifetime1;
                   var10Lifetime1++;
-                  var16Lifetime4Lifetime1 = param3.field_z[incrementValue$15];
+                  var16Lifetime4Lifetime1 = param3.pixels[incrementValue$15];
                   stackIn_158_0 = -1;
                   stackIn_158_1 = ~var16Lifetime4Lifetime1;
                   if (stackIn_158_0 != stackIn_158_1) {
@@ -2949,21 +2949,21 @@ final class BattleState {
                   var17Lifetime1++;
                   incrementValue$17 = var10Lifetime1;
                   var10Lifetime1++;
-                  var16Lifetime4Lifetime1 = param3.field_z[incrementValue$17];
+                  var16Lifetime4Lifetime1 = param3.pixels[incrementValue$17];
                   if (var16Lifetime4Lifetime1 != 0) {
                     gd.field_a[var17Lifetime1][var18Lifetime1] = param1 + var7_intLifetime1 - (var17Lifetime1 - param0) / 2;
                   }
                   var17Lifetime1++;
                   incrementValue$18 = var10Lifetime1;
                   var10Lifetime1++;
-                  var16Lifetime4Lifetime1 = param3.field_z[incrementValue$18];
+                  var16Lifetime4Lifetime1 = param3.pixels[incrementValue$18];
                   if (0 != var16Lifetime4Lifetime1) {
                     gd.field_a[var17Lifetime1][var18Lifetime1] = var7_intLifetime1 + (param1 - (-param0 + var17Lifetime1) / 2);
                   }
                   var17Lifetime1++;
                   incrementValue$19 = var10Lifetime1;
                   var10Lifetime1++;
-                  var16Lifetime4Lifetime1 = param3.field_z[incrementValue$19];
+                  var16Lifetime4Lifetime1 = param3.pixels[incrementValue$19];
                   if (var16Lifetime4Lifetime1 != 0) {
                     gd.field_a[var17Lifetime1][var18Lifetime1] = var7_intLifetime1 + param1 - (-param0 + var17Lifetime1) / 2;
                   }
@@ -2979,7 +2979,7 @@ final class BattleState {
                   }
                   incrementValue$16 = var10Lifetime1;
                   var10Lifetime1++;
-                  var16Lifetime4Lifetime1 = param3.field_z[incrementValue$16];
+                  var16Lifetime4Lifetime1 = param3.pixels[incrementValue$16];
                   stackIn_167_0 = -1;
                   stackIn_167_1 = ~var16Lifetime4Lifetime1;
                   if (stackIn_167_0 != stackIn_167_1) {
@@ -3013,7 +3013,7 @@ final class BattleState {
               while (var8Lifetime2Lifetime2 < 0) {
                 incrementValue$20 = var10Lifetime1;
                 var10Lifetime1++;
-                var16Lifetime4Lifetime2 = param3.field_z[incrementValue$20];
+                var16Lifetime4Lifetime2 = param3.pixels[incrementValue$20];
                 stackIn_203_0 = var16Lifetime4Lifetime2;
                 if (stackIn_203_0 != 0) {
                   incrementValue$21 = var17Lifetime1;
@@ -3024,7 +3024,7 @@ final class BattleState {
                 }
                 incrementValue$22 = var10Lifetime1;
                 var10Lifetime1++;
-                var16Lifetime4Lifetime2 = param3.field_z[incrementValue$22];
+                var16Lifetime4Lifetime2 = param3.pixels[incrementValue$22];
                 if (var16Lifetime4Lifetime2 != 0) {
                   incrementValue$23 = var17Lifetime1;
                   var17Lifetime1++;
@@ -3034,7 +3034,7 @@ final class BattleState {
                 }
                 incrementValue$24 = var10Lifetime1;
                 var10Lifetime1++;
-                var16Lifetime4Lifetime2 = param3.field_z[incrementValue$24];
+                var16Lifetime4Lifetime2 = param3.pixels[incrementValue$24];
                 if (var16Lifetime4Lifetime2 == 0) {
                   var17Lifetime1++;
                 } else {
@@ -3044,7 +3044,7 @@ final class BattleState {
                 }
                 incrementValue$26 = var10Lifetime1;
                 var10Lifetime1++;
-                var16Lifetime4Lifetime2 = param3.field_z[incrementValue$26];
+                var16Lifetime4Lifetime2 = param3.pixels[incrementValue$26];
                 if (var16Lifetime4Lifetime2 != 0) {
                   incrementValue$27 = var17Lifetime1;
                   var17Lifetime1++;
@@ -3059,7 +3059,7 @@ final class BattleState {
               while (var8Lifetime2Lifetime2 < 0) {
                 incrementValue$28 = var10Lifetime1;
                 var10Lifetime1++;
-                var16Lifetime4Lifetime2 = param3.field_z[incrementValue$28];
+                var16Lifetime4Lifetime2 = param3.pixels[incrementValue$28];
                 stackIn_216_0 = var16Lifetime4Lifetime2;
                 if (stackIn_216_0 == 0) {
                   var17Lifetime1++;
@@ -5075,7 +5075,7 @@ final class BattleState {
               while (var6Lifetime1 < 0) {
                 incrementValue$0 = var8;
                 var8++;
-                var14Lifetime3 = param3.field_z[incrementValue$0];
+                var14Lifetime3 = param3.pixels[incrementValue$0];
                 stackIn_69_0 = 0;
                 stackIn_69_1 = var14Lifetime3;
                 if (stackIn_69_0 != stackIn_69_1) {
@@ -5084,13 +5084,13 @@ final class BattleState {
                 var15++;
                 incrementValue$1 = var8;
                 var8++;
-                var14Lifetime3 = param3.field_z[incrementValue$1];
+                var14Lifetime3 = param3.pixels[incrementValue$1];
                 if (var14Lifetime3 != 0) {
                   gd.field_a[var15][var16] = param1 + var5_int + Math.abs(var15 - var9) / 2;
                 }
                 incrementValue$2 = var8;
                 var8++;
-                var14Lifetime3 = param3.field_z[incrementValue$2];
+                var14Lifetime3 = param3.pixels[incrementValue$2];
                 var15++;
                 if (var14Lifetime3 != 0) {
                   gd.field_a[var15][var16] = Math.abs(var15 - var9) / 2 + (param1 + var5_int);
@@ -5098,7 +5098,7 @@ final class BattleState {
                 var15++;
                 incrementValue$3 = var8;
                 var8++;
-                var14Lifetime3 = param3.field_z[incrementValue$3];
+                var14Lifetime3 = param3.pixels[incrementValue$3];
                 if (var14Lifetime3 != 0) {
                   gd.field_a[var15][var16] = Math.abs(-var9 + var15) / 2 + param1 + var5_int;
                 }
@@ -5109,7 +5109,7 @@ final class BattleState {
               while (var6Lifetime1Lifetime1 < 0) {
                 incrementValue$4 = var8;
                 var8++;
-                var14Lifetime3Lifetime1 = param3.field_z[incrementValue$4];
+                var14Lifetime3Lifetime1 = param3.pixels[incrementValue$4];
                 stackIn_69_0Lifetime1 = -1;
                 stackIn_69_1Lifetime1 = ~var14Lifetime3Lifetime1;
                 if (stackIn_69_0Lifetime1 != stackIn_69_1Lifetime1) {
@@ -5118,21 +5118,21 @@ final class BattleState {
                 var15++;
                 incrementValue$5 = var8;
                 var8++;
-                var14Lifetime3Lifetime1 = param3.field_z[incrementValue$5];
+                var14Lifetime3Lifetime1 = param3.pixels[incrementValue$5];
                 if (var14Lifetime3Lifetime1 != 0) {
                   gd.field_a[var15][var16] = var5_int + param1 + Math.abs(var17 * 8 + (var15 - var9)) / 2;
                 }
                 var15++;
                 incrementValue$6 = var8;
                 var8++;
-                var14Lifetime3Lifetime1 = param3.field_z[incrementValue$6];
+                var14Lifetime3Lifetime1 = param3.pixels[incrementValue$6];
                 if (0 != var14Lifetime3Lifetime1) {
                   gd.field_a[var15][var16] = Math.abs(8 * var17 + var15 - var9) / 2 + (param1 + var5_int);
                 }
                 var15++;
                 incrementValue$7 = var8;
                 var8++;
-                var14Lifetime3Lifetime1 = param3.field_z[incrementValue$7];
+                var14Lifetime3Lifetime1 = param3.pixels[incrementValue$7];
                 if (var14Lifetime3Lifetime1 != 0) {
                   gd.field_a[var15][var16] = param1 + var5_int + Math.abs(var17 * 8 + var15 - var9) / 2;
                 }
@@ -5148,7 +5148,7 @@ final class BattleState {
                 }
                 incrementValue$8 = var8;
                 var8++;
-                var14Lifetime3Lifetime2 = param3.field_z[incrementValue$8];
+                var14Lifetime3Lifetime2 = param3.pixels[incrementValue$8];
                 stackIn_78_0 = 0;
                 stackIn_78_1 = var14Lifetime3Lifetime2;
                 if (stackIn_78_0 != stackIn_78_1) {

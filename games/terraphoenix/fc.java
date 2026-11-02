@@ -224,7 +224,7 @@ final class fc {
               for (var17 = var15; var17 < 0; var17++) {
                 incrementValue$2 = var6;
                 var6++;
-                var14 = param1.field_z[incrementValue$2];
+                var14 = param1.pixels[incrementValue$2];
                 if (var14 != 0 &&
                   gd.field_a[var7][var8] <= param0) {
                   incrementValue$3 = var7;
@@ -239,7 +239,7 @@ final class fc {
                 }
                 incrementValue$5 = var6;
                 var6++;
-                var14Lifetime2 = param1.field_z[incrementValue$5];
+                var14Lifetime2 = param1.pixels[incrementValue$5];
                 if (var14Lifetime2 != 0 &&
                   gd.field_a[var7][var8] <= param0) {
                   incrementValue$6 = var7;
@@ -254,7 +254,7 @@ final class fc {
                 }
                 incrementValue$8 = var6;
                 var6++;
-                var14Lifetime3 = param1.field_z[incrementValue$8];
+                var14Lifetime3 = param1.pixels[incrementValue$8];
                 if (var14Lifetime3 != 0 &&
                   param0 >= gd.field_a[var7][var8]) {
                   incrementValue$9 = var7;
@@ -269,7 +269,7 @@ final class fc {
                 }
                 incrementValue$11 = var6;
                 var6++;
-                var14Lifetime4 = param1.field_z[incrementValue$11];
+                var14Lifetime4 = param1.pixels[incrementValue$11];
                 if (0 != var14Lifetime4 &&
                   param0 >= gd.field_a[var7][var8]) {
                   incrementValue$12 = var7;
@@ -286,7 +286,7 @@ final class fc {
               for (var17Lifetime1 = var10; 0 > var17Lifetime1; var17Lifetime1++) {
                 incrementValue$0 = var6;
                 var6++;
-                var14Lifetime1 = param1.field_z[incrementValue$0];
+                var14Lifetime1 = param1.pixels[incrementValue$0];
                 if (var14Lifetime1 != 0) {
                   incrementValue$1 = var5_int;
                   var5_int++;

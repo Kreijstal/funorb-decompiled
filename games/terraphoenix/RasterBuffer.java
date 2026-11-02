@@ -6,7 +6,7 @@ abstract class RasterBuffer {
     static String field_e;
     int field_f;
     static String[] field_a;
-    int[] field_c;
+    int[] pixels;
     java.awt.Image field_d;
     static kf field_g;
 
@@ -306,7 +306,7 @@ abstract class RasterBuffer {
         if (param0 != 0) {
           return;
         }
-        SoftwareRasterizer.a(this.field_c, this.field_b, this.field_f);
+        SoftwareRasterizer.a(this.pixels, this.field_b, this.field_f);
     }
 
     abstract void a(int param0, int param1, byte param2, java.awt.Component param3);

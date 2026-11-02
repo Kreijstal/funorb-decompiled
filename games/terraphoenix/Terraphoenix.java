@@ -5880,8 +5880,8 @@ public final class Terraphoenix extends GameShell {
                 rk.field_c = 32;
                 di.field_k = new Sprite(640, 480);
                 var2_intLifetime1Lifetime1 = 0;
-                while (var2_intLifetime1Lifetime1 < di.field_k.field_z.length) {
-                  di.field_k.field_z[var2_intLifetime1Lifetime1] = k.field_f.field_c[var2_intLifetime1Lifetime1];
+                while (var2_intLifetime1Lifetime1 < di.field_k.pixels.length) {
+                  di.field_k.pixels[var2_intLifetime1Lifetime1] = k.field_f.pixels[var2_intLifetime1Lifetime1];
                   var2_intLifetime1Lifetime1++;
                 }
                 k.field_f.a(0);
@@ -5940,8 +5940,8 @@ public final class Terraphoenix extends GameShell {
                   di.field_k = new Sprite(640, 480);
                   var2_intLifetime1Lifetime2 = 0;
                   while (true) {
-                    if (di.field_k.field_z.length > var2_intLifetime1Lifetime2) {
-                      di.field_k.field_z[var2_intLifetime1Lifetime2] = k.field_f.field_c[var2_intLifetime1Lifetime2];
+                    if (di.field_k.pixels.length > var2_intLifetime1Lifetime2) {
+                      di.field_k.pixels[var2_intLifetime1Lifetime2] = k.field_f.pixels[var2_intLifetime1Lifetime2];
                       var2_intLifetime1Lifetime2++;
                       if (var6 == 0) {
                         continue;
@@ -9648,8 +9648,8 @@ public final class Terraphoenix extends GameShell {
             if (TutorialText.field_c != 1) {
               di.field_k = new Sprite(640, 480);
               var2_int = 0;
-              while (var2_int < di.field_k.field_z.length) {
-                di.field_k.field_z[var2_int] = k.field_f.field_c[var2_int];
+              while (var2_int < di.field_k.pixels.length) {
+                di.field_k.pixels[var2_int] = k.field_f.pixels[var2_int];
                 var2_int++;
                 if (var3 != 0) {
                   decompiledFrameCompleted0 = false;

@@ -16,8 +16,8 @@ abstract class nb {
         Sprite var6 = new Sprite(param0, param0);
         Sprite var3 = var6;
         if (param2 >= 117) {
-          for (var4 = 0; var3.field_z.length > var4; var4++) {
-            var6.field_z[var4] = param1;
+          for (var4 = 0; var3.pixels.length > var4; var4++) {
+            var6.pixels[var4] = param1;
           }
           return var3;
         }

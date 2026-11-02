@@ -78,7 +78,7 @@ class wa extends DualLinkNode {
             SoftwareRasterizer.i(var29[0], var29[1], var29[2], var29[3]);
             var13 = param1 + param0.field_r * param5;
             var14 = -param7 + param0.field_r;
-            var25 = var21.field_z;
+            var25 = var21.pixels;
             var22 = var25;
             var15 = var22;
             for (var16 = param5; param5 + param2 > var16; var16++) {

@@ -36,7 +36,7 @@ final class NodeHashTableIterator implements Iterator {
         int var6Lifetime2;
         var7 = Terraphoenix.field_V;
         try {
-          var10 = param1.field_z;
+          var10 = param1.pixels;
           var9 = var10;
           var3 = var9;
           var4 = 0;

@@ -15,7 +15,7 @@ final class k {
         if (param0 < 1) {
           return (IntrusiveNode) null;
         }
-        if (var2 == this.field_c.field_a) {
+        if (var2 == this.field_c.sentinel) {
           this.field_g = null;
           return null;
         }
@@ -102,9 +102,9 @@ final class k {
           if (param1 != null) {
             var4 = param1;
           } else {
-            var4 = this.field_c.field_a.previous;
+            var4 = this.field_c.sentinel.previous;
           }
-          if (var4 == this.field_c.field_a) {
+          if (var4 == this.field_c.sentinel) {
             this.field_g = null;
             stackIn_6_0 = null;
             return (IntrusiveNode) (stackIn_6_0);
@@ -143,8 +143,8 @@ final class k {
     }
 
     final IntrusiveNode b(int param0) {
-        IntrusiveNode var2 = this.field_c.field_a.next;
-        if (var2 == this.field_c.field_a) {
+        IntrusiveNode var2 = this.field_c.sentinel.next;
+        if (var2 == this.field_c.sentinel) {
           this.field_g = null;
           return null;
         }
@@ -173,11 +173,11 @@ final class k {
             return stackIn_2_0;
           }
           if (param1 == null) {
-            var3 = this.field_c.field_a.next;
+            var3 = this.field_c.sentinel.next;
           } else {
             var3 = param1;
           }
-          if (this.field_c.field_a != var3) {
+          if (this.field_c.sentinel != var3) {
             this.field_g = var3.next;
             stackIn_10_0 = var3;
             return stackIn_10_0;
@@ -200,17 +200,17 @@ final class k {
     }
 
     final IntrusiveNode a(byte param0) {
-        IntrusiveNode var2 = this.field_c.field_a.previous;
+        IntrusiveNode var2 = this.field_c.sentinel.previous;
         if (param0 != -13) {
           field_b = (og) null;
-          if (this.field_c.field_a != var2) {
+          if (this.field_c.sentinel != var2) {
             this.field_g = var2.previous;
             return var2;
           }
           this.field_g = null;
           return null;
         }
-        if (this.field_c.field_a != var2) {
+        if (this.field_c.sentinel != var2) {
           this.field_g = var2.previous;
           return var2;
         }
@@ -232,7 +232,7 @@ final class k {
         if (param0 > -78) {
           field_a = (String) null;
           var2 = this.field_g;
-          if (var2 == this.field_c.field_a) {
+          if (var2 == this.field_c.sentinel) {
             this.field_g = null;
             return null;
           }
@@ -240,7 +240,7 @@ final class k {
           return var2;
         }
         var2Lifetime1 = this.field_g;
-        if (var2Lifetime1 == this.field_c.field_a) {
+        if (var2Lifetime1 == this.field_c.sentinel) {
           this.field_g = null;
           return null;
         }

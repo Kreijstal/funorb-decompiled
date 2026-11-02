@@ -37,7 +37,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
         if (null == this.field_j) {
           return;
         }
-        this.field_j.setPixels(0, 0, this.field_b, this.field_f, this.field_l, this.field_c, 0, this.field_b);
+        this.field_j.setPixels(0, 0, this.field_b, this.field_f, this.field_l, this.pixels, 0, this.field_b);
         if (!param0) {
           field_n = (String) null;
         }
@@ -80,7 +80,7 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
 
     final void a(int param0, int param1, byte param2, java.awt.Component param3) {
         try {
-          this.field_c = new int[1 + param1 * param0];
+          this.pixels = new int[1 + param1 * param0];
           this.field_b = param0;
           this.field_f = param1;
           this.field_l = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));

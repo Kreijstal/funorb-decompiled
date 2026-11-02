@@ -2137,7 +2137,7 @@ final class BattleUnit {
             if (param2 != 25317) {
               return;
             }
-            kb.a(var11, param3.field_z, var8, 0, var6_int, var10, SoftwareRasterizer.field_i, 0, 0, param0, var9, true, var7);
+            kb.a(var11, param3.pixels, var8, 0, var6_int, var10, SoftwareRasterizer.field_i, 0, 0, param0, var9, true, var7);
             return;
           }
           return;

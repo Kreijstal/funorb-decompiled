@@ -277,7 +277,7 @@ final class qg {
               for (var18 = var16; 0 > var18; var18++) {
                 incrementValue$2 = var7;
                 var7++;
-                var15 = param0.field_z[incrementValue$2];
+                var15 = param0.pixels[incrementValue$2];
                 if (var15 != 0 &&
                   gd.field_a[var8][var9] <= param5) {
                   incrementValue$3 = var8;
@@ -292,7 +292,7 @@ final class qg {
                 }
                 incrementValue$5 = var7;
                 var7++;
-                var15Lifetime2 = param0.field_z[incrementValue$5];
+                var15Lifetime2 = param0.pixels[incrementValue$5];
                 if (var15Lifetime2 != 0 &&
                   param5 >= gd.field_a[var8][var9]) {
                   incrementValue$6 = var8;
@@ -307,7 +307,7 @@ final class qg {
                 }
                 incrementValue$8 = var7;
                 var7++;
-                var15Lifetime3 = param0.field_z[incrementValue$8];
+                var15Lifetime3 = param0.pixels[incrementValue$8];
                 if (var15Lifetime3 != 0 &&
                   param5 >= gd.field_a[var8][var9]) {
                   incrementValue$9 = var8;
@@ -322,7 +322,7 @@ final class qg {
                 }
                 incrementValue$11 = var7;
                 var7++;
-                var15Lifetime4 = param0.field_z[incrementValue$11];
+                var15Lifetime4 = param0.pixels[incrementValue$11];
                 if (0 != var15Lifetime4 &&
                   param5 >= gd.field_a[var8][var9]) {
                   incrementValue$12 = var8;
@@ -340,7 +340,7 @@ final class qg {
               for (var18Lifetime1 = var11; var18Lifetime1 < 0; var18Lifetime1++) {
                 incrementValue$0 = var7;
                 var7++;
-                var15Lifetime1 = param0.field_z[incrementValue$0];
+                var15Lifetime1 = param0.pixels[incrementValue$0];
                 if (0 == var15Lifetime1) {
                   var6_int++;
                 } else {

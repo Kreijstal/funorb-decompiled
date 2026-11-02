@@ -5,8 +5,8 @@ final class ClientException extends RuntimeException {
     static int field_e;
     static String field_c;
     static int field_d;
-    String field_b;
-    Throwable field_a;
+    String context;
+    Throwable cause;
 
     public static void a(int param0) {
         if (param0 != 0) {
@@ -18,8 +18,8 @@ final class ClientException extends RuntimeException {
     }
 
     ClientException(Throwable param0, String param1) {
-        this.field_b = param1;
-        this.field_a = param0;
+        this.context = param1;
+        this.cause = param0;
     }
 
     static {

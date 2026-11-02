@@ -199,7 +199,7 @@ final class ve {
               for (var17 = var15; 0 > var17; var17++) {
                 incrementValue$2 = var6;
                 var6++;
-                var14 = param0.field_z[incrementValue$2];
+                var14 = param0.pixels[incrementValue$2];
                 if (var14 != 0 &&
                   gd.field_a[var7][var8] <= param2) {
                   incrementValue$3 = var7;
@@ -214,7 +214,7 @@ final class ve {
                 }
                 incrementValue$5 = var6;
                 var6++;
-                var14Lifetime2 = param0.field_z[incrementValue$5];
+                var14Lifetime2 = param0.pixels[incrementValue$5];
                 if (0 != var14Lifetime2 &&
                   param2 >= gd.field_a[var7][var8]) {
                   incrementValue$6 = var7;
@@ -229,7 +229,7 @@ final class ve {
                 }
                 incrementValue$8 = var6;
                 var6++;
-                var14Lifetime3 = param0.field_z[incrementValue$8];
+                var14Lifetime3 = param0.pixels[incrementValue$8];
                 if (0 != var14Lifetime3 &&
                   param2 >= gd.field_a[var7][var8]) {
                   incrementValue$9 = var7;
@@ -244,7 +244,7 @@ final class ve {
                 }
                 incrementValue$11 = var6;
                 var6++;
-                var14Lifetime4 = param0.field_z[incrementValue$11];
+                var14Lifetime4 = param0.pixels[incrementValue$11];
                 if (0 != var14Lifetime4 &&
                   param2 >= gd.field_a[var7][var8]) {
                   incrementValue$12 = var7;
@@ -262,7 +262,7 @@ final class ve {
               for (var17Lifetime1 = var10; var17Lifetime1 < 0; var17Lifetime1++) {
                 incrementValue$0 = var6;
                 var6++;
-                var14Lifetime1 = param0.field_z[incrementValue$0];
+                var14Lifetime1 = param0.pixels[incrementValue$0];
                 if (var14Lifetime1 == 0) {
                   var5_int++;
                 } else {

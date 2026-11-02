@@ -129,7 +129,7 @@ final class qk {
         ClientException var2 = null;
         if (cause instanceof ClientException) {
           var2 = (ClientException) ((Object) cause);
-          var2.field_b = var2.field_b + ' ' + context;
+          var2.context = var2.context + ' ' + context;
         } else {
           var2 = new ClientException(cause, context);
         }

@@ -79,8 +79,8 @@ final class pc {
           var2 = "";
         } else {
           var14 = (ClientException) ((Object) param0);
-          param0 = var14.field_a;
-          var2 = var14.field_b + " | ";
+          param0 = var14.cause;
+          var2 = var14.context + " | ";
           var11 = var2;
           var2 = var11;
           var11Lifetime11 = var2;

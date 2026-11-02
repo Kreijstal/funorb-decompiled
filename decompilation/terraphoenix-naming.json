@@ -1452,6 +1452,14 @@
       "renamedSymbol": "F:ch.mouseY:I"
     },
     {
+      "symbol": "F:ci.field_z:[I",
+      "originalName": "field_z",
+      "to": "pixels",
+      "evidence": "Every Sprite blit kernel indexes this int array.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:Sprite.pixels:[I"
+    },
+    {
       "symbol": "F:dh.field_i:[B",
       "originalName": "field_i",
       "to": "payload",
@@ -1532,6 +1540,22 @@
       "renamedSymbol": "F:BattleState.map:LLevelMap;"
     },
     {
+      "symbol": "F:el.field_a:Ljava/lang/Throwable;",
+      "originalName": "field_a",
+      "to": "cause",
+      "evidence": "ClientException constructor stores its Throwable argument here.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ClientException.cause:Ljava/lang/Throwable;"
+    },
+    {
+      "symbol": "F:el.field_b:Ljava/lang/String;",
+      "originalName": "field_b",
+      "to": "context",
+      "evidence": "ClientException constructor stores its String argument here and wrapException appends to it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ClientException.context:Ljava/lang/String;"
+    },
+    {
       "symbol": "F:gl.field_l:Lcj;",
       "originalName": "field_l",
       "to": "listener",
@@ -1596,6 +1620,22 @@
       "renamedSymbol": "F:MouseWheelHandler.wheelDelta:I"
     },
     {
+      "symbol": "F:jj.field_a:Luf;",
+      "originalName": "field_a",
+      "to": "sentinel",
+      "evidence": "IntrusiveDeque methods start every traversal from this node and stop when they return to it.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntrusiveDeque.sentinel:LIntrusiveNode;"
+    },
+    {
+      "symbol": "F:jj.field_b:Luf;",
+      "originalName": "field_b",
+      "to": "cursor",
+      "evidence": "IntrusiveDeque traversal methods read and advance this node.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IntrusiveDeque.cursor:LIntrusiveNode;"
+    },
+    {
       "symbol": "F:mf.field_d:I",
       "originalName": "field_d",
       "to": "status",
@@ -1642,6 +1682,14 @@
       "evidence": "BattleUnit current MapTile.",
       "confidence": "reviewed",
       "renamedSymbol": "F:BattleUnit.tile:LMapTile;"
+    },
+    {
+      "symbol": "F:te.field_c:[I",
+      "originalName": "field_c",
+      "to": "pixels",
+      "evidence": "RasterBuffer int pixel array handed to the rasterizer and image producer.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:RasterBuffer.pixels:[I"
     },
     {
       "symbol": "F:uf.field_a:Luf;",
@@ -10964,9 +11012,9 @@
     },
     {
       "symbol": "F:ci.field_z:[I",
-      "renamedSymbol": "F:Sprite.field_z:[I",
+      "renamedSymbol": "F:Sprite.pixels:[I",
       "originalName": "field_z",
-      "renamedName": "field_z",
+      "renamedName": "pixels",
       "declaration": {
         "file": "ci.java",
         "start": 70,
@@ -14451,9 +14499,9 @@
     },
     {
       "symbol": "F:el.field_a:Ljava/lang/Throwable;",
-      "renamedSymbol": "F:ClientException.field_a:Ljava/lang/Throwable;",
+      "renamedSymbol": "F:ClientException.cause:Ljava/lang/Throwable;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "cause",
       "declaration": {
         "file": "el.java",
         "start": 189,
@@ -14462,9 +14510,9 @@
     },
     {
       "symbol": "F:el.field_b:Ljava/lang/String;",
-      "renamedSymbol": "F:ClientException.field_b:Ljava/lang/String;",
+      "renamedSymbol": "F:ClientException.context:Ljava/lang/String;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "context",
       "declaration": {
         "file": "el.java",
         "start": 166,
@@ -21106,9 +21154,9 @@
     },
     {
       "symbol": "F:jj.field_a:Luf;",
-      "renamedSymbol": "F:IntrusiveDeque.field_a:LIntrusiveNode;",
+      "renamedSymbol": "F:IntrusiveDeque.sentinel:LIntrusiveNode;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "sentinel",
       "declaration": {
         "file": "jj.java",
         "start": 62,
@@ -21117,9 +21165,9 @@
     },
     {
       "symbol": "F:jj.field_b:Luf;",
-      "renamedSymbol": "F:IntrusiveDeque.field_b:LIntrusiveNode;",
+      "renamedSymbol": "F:IntrusiveDeque.cursor:LIntrusiveNode;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "cursor",
       "declaration": {
         "file": "jj.java",
         "start": 187,
@@ -32447,9 +32495,9 @@
     },
     {
       "symbol": "F:te.field_c:[I",
-      "renamedSymbol": "F:RasterBuffer.field_c:[I",
+      "renamedSymbol": "F:RasterBuffer.pixels:[I",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "pixels",
       "declaration": {
         "file": "te.java",
         "start": 158,
@@ -276167,7 +276215,7 @@
       "original": "Terraphoenix.java",
       "renamed": "Terraphoenix.java",
       "inputSha256": "349e199da98705d0f4a247977c761e72f7c25d599cfe9cae413e517590c0e5bb",
-      "outputSha256": "6f7a7fa411a0c5a983f3dcbb6ba4806fcc8b28ff80411b0c8c89985a5885cd68",
+      "outputSha256": "a7f357613840ec5e5d70ed6d42032502c7c857615917ea34691d4c48c8577426",
       "edits": [
         {
           "start": 78,
@@ -279742,6 +279790,27 @@
           "renamed": "Sprite"
         },
         {
+          "start": 221588,
+          "end": 221595,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 221635,
+          "end": 221642,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 221683,
+          "end": 221690,
+          "symbol": "F:te.field_c:[I",
+          "original": "field_c",
+          "renamed": "pixels"
+        },
+        {
           "start": 222088,
           "end": 222090,
           "symbol": "C:tf",
@@ -279789,6 +279858,27 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "Sprite"
+        },
+        {
+          "start": 224027,
+          "end": 224034,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 224107,
+          "end": 224114,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 224155,
+          "end": 224162,
+          "symbol": "F:te.field_c:[I",
+          "original": "field_c",
+          "renamed": "pixels"
         },
         {
           "start": 225118,
@@ -282314,6 +282404,27 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "Sprite"
+        },
+        {
+          "start": 371929,
+          "end": 371936,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 371974,
+          "end": 371981,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 372004,
+          "end": 372011,
+          "symbol": "F:te.field_c:[I",
+          "original": "field_c",
+          "renamed": "pixels"
         },
         {
           "start": 372769,
@@ -289937,7 +290048,7 @@
       "original": "c.java",
       "renamed": "NodeHashTableIterator.java",
       "inputSha256": "28beab2d79caaf0ee3e1dbb5de05f54b3106025232ccf2fdf12cc0bb7cd3ca5f",
-      "outputSha256": "2b7dd1aa76c59132217bc792fa1300e6bf91ae8be6ca1f0c6f352f9448091173",
+      "outputSha256": "c92d01fe89ddb6ce167a5ab583f51bde5e88ae7b94866c4eaf52badb97602c31",
       "edits": [
         {
           "start": 71,
@@ -289973,6 +290084,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "Sprite"
+        },
+        {
+          "start": 1064,
+          "end": 1071,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 3044,
@@ -291875,7 +291993,7 @@
       "original": "ci.java",
       "renamed": "Sprite.java",
       "inputSha256": "976f95828c4386bc9b70410cdea474df12401536285d5ac2fc649158ff42de82",
-      "outputSha256": "b39d57dc79432af9ba0c2fe2c708c6d9a03318528563543c705b3de68eede7b2",
+      "outputSha256": "fe29aae548e7b43bc02ed74e0480958bade200cd096c09458d13b0875066ffda",
       "edits": [
         {
           "start": 44,
@@ -291890,6 +292008,13 @@
           "symbol": "C:oj",
           "original": "oj",
           "renamed": "SpriteState"
+        },
+        {
+          "start": 70,
+          "end": 77,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 3688,
@@ -291997,6 +292122,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 4820,
+          "end": 4827,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 5149,
           "end": 5150,
           "symbol": "C:l",
@@ -292102,6 +292234,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 6337,
+          "end": 6344,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 6420,
           "end": 6422,
           "symbol": "C:ci",
@@ -292114,6 +292253,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 6450,
+          "end": 6457,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 7348,
@@ -292135,6 +292281,20 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "Sprite"
+        },
+        {
+          "start": 7760,
+          "end": 7767,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 7803,
+          "end": 7810,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 12377,
@@ -292263,6 +292423,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 15557,
+          "end": 15564,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 16825,
           "end": 16826,
           "symbol": "C:l",
@@ -292368,6 +292535,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 17971,
+          "end": 17978,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 19858,
           "end": 19859,
           "symbol": "C:l",
@@ -292452,6 +292626,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 20828,
+          "end": 20835,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 20837,
           "end": 20838,
           "symbol": "C:l",
@@ -292466,6 +292647,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 20977,
+          "end": 20984,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 20986,
           "end": 20987,
           "symbol": "C:l",
@@ -292478,6 +292666,13 @@
           "symbol": "M:ci.<init>(IIIIII[I)V",
           "original": "ci",
           "renamed": "Sprite"
+        },
+        {
+          "start": 21419,
+          "end": 21426,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 22931,
@@ -292571,6 +292766,27 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 23864,
+          "end": 23871,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 26632,
+          "end": 26639,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 26704,
+          "end": 26711,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 28240,
           "end": 28242,
           "symbol": "C:ci",
@@ -292592,11 +292808,53 @@
           "renamed": "Sprite"
         },
         {
+          "start": 28497,
+          "end": 28504,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 28574,
+          "end": 28581,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 28595,
+          "end": 28602,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 29082,
+          "end": 29089,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 29154,
+          "end": 29161,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 30436,
           "end": 30437,
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 30445,
+          "end": 30452,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 31955,
@@ -292690,6 +292948,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 32888,
+          "end": 32895,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 38451,
           "end": 38452,
           "symbol": "C:l",
@@ -292760,6 +293025,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 39870,
+          "end": 39877,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 40112,
           "end": 40113,
           "symbol": "C:l",
@@ -292772,6 +293044,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 41379,
+          "end": 41386,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 41675,
@@ -292795,6 +293074,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 43250,
+          "end": 43257,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 43534,
           "end": 43535,
           "symbol": "C:l",
@@ -292807,6 +293093,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 44982,
+          "end": 44989,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 45278,
@@ -292823,6 +293116,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 47868,
+          "end": 47875,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 48206,
           "end": 48207,
           "symbol": "C:l",
@@ -292835,6 +293135,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 50911,
+          "end": 50918,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 51237,
@@ -292851,6 +293158,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 52784,
+          "end": 52791,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 53068,
           "end": 53069,
           "symbol": "C:l",
@@ -292865,6 +293179,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 55158,
+          "end": 55165,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 55430,
           "end": 55431,
           "symbol": "C:l",
@@ -292877,6 +293198,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 57550,
+          "end": 57557,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 57810,
@@ -292998,12 +293326,26 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 59553,
+          "end": 59560,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 60033,
           "end": 60035,
           "symbol": "B:ci.c()V#0",
           "original": "L1",
           "renamed": "scanLoop1",
           "kind": "label"
+        },
+        {
+          "start": 60200,
+          "end": 60207,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 60251,
@@ -293022,6 +293364,13 @@
           "kind": "label"
         },
         {
+          "start": 60597,
+          "end": 60604,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 60657,
           "end": 60659,
           "symbol": "B:ci.c()V#1",
@@ -293036,6 +293385,13 @@
           "original": "L7",
           "renamed": "scanLoop3",
           "kind": "label"
+        },
+        {
+          "start": 60999,
+          "end": 61006,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 61083,
@@ -293054,12 +293410,33 @@
           "kind": "label"
         },
         {
+          "start": 61395,
+          "end": 61402,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 61470,
           "end": 61473,
           "symbol": "B:ci.c()V#3",
           "original": "L10",
           "renamed": "scanLoop4",
           "kind": "label"
+        },
+        {
+          "start": 62076,
+          "end": 62083,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 62184,
+          "end": 62191,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 66086,
@@ -293237,11 +293614,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 78721,
+          "end": 78728,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 78806,
           "end": 78808,
           "symbol": "M:ci.<init>(II)V",
           "original": "ci",
           "renamed": "Sprite"
+        },
+        {
+          "start": 78848,
+          "end": 78855,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 80337,
@@ -293349,11 +293740,60 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 81483,
+          "end": 81490,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 81579,
           "end": 81581,
           "symbol": "M:ci.<init>([BLjava/awt/Component;)V",
           "original": "ci",
           "renamed": "Sprite"
+        },
+        {
+          "start": 82386,
+          "end": 82393,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 82528,
+          "end": 82535,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 83626,
+          "end": 83633,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 83976,
+          "end": 83983,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 84460,
+          "end": 84467,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 84821,
+          "end": 84828,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 85782,
@@ -293475,6 +293915,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 87795,
+          "end": 87802,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 88132,
           "end": 88133,
           "symbol": "C:l",
@@ -293580,6 +294027,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 89278,
+          "end": 89285,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 91951,
           "end": 91952,
           "symbol": "C:l",
@@ -293641,6 +294095,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 93097,
+          "end": 93104,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 93222,
@@ -293718,6 +294179,13 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "Sprite"
+        },
+        {
+          "start": 94071,
+          "end": 94078,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 94133,
@@ -293888,7 +294356,7 @@
       "original": "cl.java",
       "renamed": "cl.java",
       "inputSha256": "983178c951386c8b14c2b76a3fd2deb67801876e456bfc0eb88422aff2036c97",
-      "outputSha256": "bc3e817f5598b8843e0108d15ba8b36ef1b79bfae3a9f9627c37f7ddbb6960bb",
+      "outputSha256": "4b4db5c3f7e0e1730eb60d85f4eb4efb9512a8ac1e834fc2b3615f7a45668be4",
       "edits": [
         {
           "start": 61,
@@ -294120,6 +294588,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 8207,
+          "end": 8214,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 8331,
@@ -303341,7 +303816,7 @@
       "original": "dl.java",
       "renamed": "MapTile.java",
       "inputSha256": "1353f12b18181b21b08651ec179eacd19cd9a33c89c563b3febfb2d605992df4",
-      "outputSha256": "7070076b7735e5600eb18b42f1d70d003ca94f3502d2167106cab3c2aa2b408b",
+      "outputSha256": "379d797c054c18f633c4382da6fc78997fbf175b0e86ce2547a8de7e28658f51",
       "edits": [
         {
           "start": 50,
@@ -303755,6 +304230,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 14915,
+          "end": 14922,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 15524,
@@ -305922,7 +306404,7 @@
       "original": "e.java",
       "renamed": "BattleState.java",
       "inputSha256": "f4936e9bc7cb412874672987d7c7df6b2d63f94bfe5655340b5391c177dcc333",
-      "outputSha256": "713dd46f4265d363e4487b6417ee93922ac90eab160acf180110ef9fcaa48f71",
+      "outputSha256": "d4ab6bb1f91015d172d833798f147dd8d8bb71e939b3adcb91a1a08d9eda650e",
       "edits": [
         {
           "start": 50,
@@ -306126,6 +306608,76 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 6785,
+          "end": 6792,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 7253,
+          "end": 7260,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 7410,
+          "end": 7417,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 7786,
+          "end": 7793,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 7943,
+          "end": 7950,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 8319,
+          "end": 8326,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 8476,
+          "end": 8483,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 8854,
+          "end": 8861,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 9167,
+          "end": 9174,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 9684,
+          "end": 9691,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 10708,
@@ -310099,6 +310651,41 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 107845,
+          "end": 107852,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 108355,
+          "end": 108362,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 108769,
+          "end": 108776,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 109183,
+          "end": 109190,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 109955,
+          "end": 109962,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 111532,
           "end": 111533,
           "symbol": "C:l",
@@ -310167,6 +310754,111 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 113409,
+          "end": 113416,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 113920,
+          "end": 113927,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 114300,
+          "end": 114307,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 114713,
+          "end": 114720,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 115308,
+          "end": 115315,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 116782,
+          "end": 116789,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 117286,
+          "end": 117293,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 117690,
+          "end": 117697,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 118097,
+          "end": 118104,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 118886,
+          "end": 118893,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 120326,
+          "end": 120333,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 120893,
+          "end": 120900,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 121411,
+          "end": 121418,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 121926,
+          "end": 121933,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 122673,
+          "end": 122680,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 123965,
@@ -313543,6 +314235,69 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 216767,
+          "end": 216774,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 217170,
+          "end": 217177,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 217456,
+          "end": 217463,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 217794,
+          "end": 217801,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 218261,
+          "end": 218268,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 218730,
+          "end": 218737,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 219073,
+          "end": 219080,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 219416,
+          "end": 219423,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 220112,
+          "end": 220119,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 221304,
@@ -329115,7 +329870,7 @@
       "original": "el.java",
       "renamed": "ClientException.java",
       "inputSha256": "b911664d348d21356775083ac6c8109da39d809e4520f2b202204a93d5fd70d8",
-      "outputSha256": "1e0a487945e3fee382c0d311cdf82416aa088ef7424b57eba037d64932a9da3e",
+      "outputSha256": "737b22bfd15ff8118e79540632971694325e4835d7d5088d3b1573e14ba9d1db",
       "edits": [
         {
           "start": 50,
@@ -329125,11 +329880,39 @@
           "renamed": "ClientException"
         },
         {
+          "start": 166,
+          "end": 173,
+          "symbol": "F:el.field_b:Ljava/lang/String;",
+          "original": "field_b",
+          "renamed": "context"
+        },
+        {
+          "start": 189,
+          "end": 196,
+          "symbol": "F:el.field_a:Ljava/lang/Throwable;",
+          "original": "field_a",
+          "renamed": "cause"
+        },
+        {
           "start": 378,
           "end": 380,
           "symbol": "M:el.<init>(Ljava/lang/Throwable;Ljava/lang/String;)V",
           "original": "el",
           "renamed": "ClientException"
+        },
+        {
+          "start": 429,
+          "end": 436,
+          "symbol": "F:el.field_b:Ljava/lang/String;",
+          "original": "field_b",
+          "renamed": "context"
+        },
+        {
+          "start": 460,
+          "end": 467,
+          "symbol": "F:el.field_a:Ljava/lang/Throwable;",
+          "original": "field_a",
+          "renamed": "cause"
         }
       ]
     },
@@ -329750,7 +330533,7 @@
       "original": "fc.java",
       "renamed": "fc.java",
       "inputSha256": "e133597471f73858a3fb87bf9447ce68d2ee93ecc3a7a8665947bc2e36ea1a5f",
-      "outputSha256": "2bd1517ceebfd99c074d063b0a3c52de688acd3a79bd164048dee519b164dab8",
+      "outputSha256": "bd50dfc29676fafa625127bb7223198d209ee5a8de0c0e5277cf7b1f2e90c070",
       "edits": [
         {
           "start": 120,
@@ -329900,11 +330683,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 7449,
+          "end": 7456,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 7791,
           "end": 7792,
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 8028,
+          "end": 8035,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 8379,
@@ -329914,6 +330711,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 8616,
+          "end": 8623,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 8968,
           "end": 8969,
           "symbol": "C:l",
@@ -329921,11 +330725,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 9207,
+          "end": 9214,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 9562,
           "end": 9563,
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 9899,
+          "end": 9906,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 10064,
@@ -330607,7 +331425,7 @@
       "original": "fh.java",
       "renamed": "fh.java",
       "inputSha256": "cfb0723320e7b6ffd7fa0aa5868d2c8dc6b6a17784b7b224854e98000934e4f7",
-      "outputSha256": "818494569a19a74d995a3047ac27cb7aac9ba2bae654b1d40c1c3ea64d80d48c",
+      "outputSha256": "aae41df42433603458f0b9e9caca0e1e9336f938c64b252c24e82f7c931b1520",
       "edits": [
         {
           "start": 59,
@@ -330848,6 +331666,20 @@
           "renamed": "ArgbSprite"
         },
         {
+          "start": 6645,
+          "end": 6652,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 6691,
+          "end": 6698,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 6825,
           "end": 6827,
           "symbol": "C:ci",
@@ -330918,11 +331750,32 @@
           "renamed": "Sprite"
         },
         {
+          "start": 8026,
+          "end": 8033,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 8084,
+          "end": 8091,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 8274,
           "end": 8276,
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "Sprite"
+        },
+        {
+          "start": 8300,
+          "end": 8307,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 9041,
@@ -339561,7 +340414,7 @@
       "original": "il.java",
       "renamed": "il.java",
       "inputSha256": "a0b174a077ab8a6f6df595494f085596cc3b30aa21a691d887537c47bbde420a",
-      "outputSha256": "161242dab4f542a34ef7445d70a0dc935563e14a0a4d269bc5e9ebf72d1ce4d7",
+      "outputSha256": "ffb1721339c4a4b63db2db52b21ac4f2454d4c9f621d5f247245803f15018c9e",
       "edits": [
         {
           "start": 158,
@@ -339618,6 +340471,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 465,
+          "end": 472,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 580,
@@ -341656,7 +342516,7 @@
       "original": "jj.java",
       "renamed": "IntrusiveDeque.java",
       "inputSha256": "e8bf26b9661514dded974f67b9529bf14cdadf4927cab83bd9426920549f5180",
-      "outputSha256": "3bca90bf1b6b86749249afc0a59bdd4d8de6a23c738e3c3e92f45dbabac81fc3",
+      "outputSha256": "60156408082259272847329c21e5b97db412d40da31649f2bec73a2a8aa63ae5",
       "edits": [
         {
           "start": 50,
@@ -341673,6 +342533,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 62,
+          "end": 69,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 109,
           "end": 111,
           "symbol": "C:fa",
@@ -341685,6 +342552,13 @@
           "symbol": "C:uf",
           "original": "uf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 187,
+          "end": 194,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
         },
         {
           "start": 207,
@@ -341701,11 +342575,39 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 296,
+          "end": 303,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 304,
           "end": 311,
           "symbol": "F:uf.field_a:Luf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 330,
+          "end": 337,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 364,
+          "end": 371,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
+        },
+        {
+          "start": 426,
+          "end": 433,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
         },
         {
           "start": 441,
@@ -341729,11 +342631,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 531,
+          "end": 538,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 539,
           "end": 546,
           "symbol": "F:uf.field_d:Luf;",
           "original": "field_d",
           "renamed": "previous"
+        },
+        {
+          "start": 573,
+          "end": 580,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 599,
@@ -341762,6 +342678,20 @@
           "symbol": "P:jj.a(B)Z#0",
           "original": "param0",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1236,
+          "end": 1243,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 1252,
+          "end": 1259,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 1260,
@@ -341813,11 +342743,25 @@
           "renamed": "beginBackward"
         },
         {
+          "start": 1515,
+          "end": 1522,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 1523,
           "end": 1530,
           "symbol": "F:uf.field_d:Luf;",
           "original": "field_d",
           "renamed": "previous"
+        },
+        {
+          "start": 1561,
+          "end": 1568,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 1624,
@@ -341827,6 +342771,20 @@
           "renamed": "unlink"
         },
         {
+          "start": 1665,
+          "end": 1672,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
+        },
+        {
+          "start": 1754,
+          "end": 1761,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 1762,
           "end": 1769,
           "symbol": "F:uf.field_d:Luf;",
@@ -341834,11 +342792,25 @@
           "renamed": "previous"
         },
         {
+          "start": 1798,
+          "end": 1805,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 1855,
           "end": 1856,
           "symbol": "M:uf.b(B)V",
           "original": "b",
           "renamed": "unlink"
+        },
+        {
+          "start": 1892,
+          "end": 1899,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
         },
         {
           "start": 1932,
@@ -341925,6 +342897,27 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 3304,
+          "end": 3311,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
+        },
+        {
+          "start": 3340,
+          "end": 3347,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 3368,
+          "end": 3375,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
+        },
+        {
           "start": 3383,
           "end": 3390,
           "symbol": "F:uf.field_d:Luf;",
@@ -341932,11 +342925,46 @@
           "renamed": "previous"
         },
         {
+          "start": 3444,
+          "end": 3451,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
+        },
+        {
+          "start": 3522,
+          "end": 3529,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
+        },
+        {
+          "start": 3565,
+          "end": 3572,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 3591,
+          "end": 3598,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
+        },
+        {
           "start": 3615,
           "end": 3622,
           "symbol": "F:uf.field_d:Luf;",
           "original": "field_d",
           "renamed": "previous"
+        },
+        {
+          "start": 3679,
+          "end": 3686,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
         },
         {
           "start": 3733,
@@ -341965,6 +342993,34 @@
           "symbol": "C:uf",
           "original": "uf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 3775,
+          "end": 3782,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
+        },
+        {
+          "start": 3809,
+          "end": 3816,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 3835,
+          "end": 3842,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
+        },
+        {
+          "start": 3897,
+          "end": 3904,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
         },
         {
           "start": 3912,
@@ -342051,11 +343107,39 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 4239,
+          "end": 4246,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 4247,
           "end": 4254,
           "symbol": "F:uf.field_d:Luf;",
           "original": "field_d",
           "renamed": "previous"
+        },
+        {
+          "start": 4283,
+          "end": 4290,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 4311,
+          "end": 4318,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
+        },
+        {
+          "start": 4379,
+          "end": 4386,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
         },
         {
           "start": 4394,
@@ -342065,11 +343149,39 @@
           "renamed": "previous"
         },
         {
+          "start": 4465,
+          "end": 4472,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 4473,
           "end": 4480,
           "symbol": "F:uf.field_d:Luf;",
           "original": "field_d",
           "renamed": "previous"
+        },
+        {
+          "start": 4516,
+          "end": 4523,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 4542,
+          "end": 4549,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
+        },
+        {
+          "start": 4604,
+          "end": 4611,
+          "symbol": "F:jj.field_b:Luf;",
+          "original": "field_b",
+          "renamed": "cursor"
         },
         {
           "start": 4628,
@@ -342107,6 +343219,13 @@
           "renamed": "previous"
         },
         {
+          "start": 4848,
+          "end": 4855,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 4856,
           "end": 4863,
           "symbol": "F:uf.field_d:Luf;",
@@ -342119,6 +343238,13 @@
           "symbol": "F:uf.field_a:Luf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 4897,
+          "end": 4904,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 4952,
@@ -342177,11 +343303,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 5360,
+          "end": 5367,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 5368,
           "end": 5375,
           "symbol": "F:uf.field_a:Luf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 5394,
+          "end": 5401,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 5428,
@@ -342219,6 +343359,13 @@
           "renamed": "next"
         },
         {
+          "start": 5654,
+          "end": 5661,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 5662,
           "end": 5669,
           "symbol": "F:uf.field_a:Luf;",
@@ -342231,6 +343378,13 @@
           "symbol": "F:uf.field_d:Luf;",
           "original": "field_d",
           "renamed": "previous"
+        },
+        {
+          "start": 5701,
+          "end": 5708,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 5725,
@@ -342275,11 +343429,25 @@
           "renamed": "IntrusiveDeque"
         },
         {
+          "start": 6101,
+          "end": 6108,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 6115,
           "end": 6117,
           "symbol": "C:uf",
           "original": "uf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 6134,
+          "end": 6141,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 6142,
@@ -342289,11 +343457,32 @@
           "renamed": "previous"
         },
         {
+          "start": 6157,
+          "end": 6164,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 6179,
+          "end": 6186,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 6187,
           "end": 6194,
           "symbol": "F:uf.field_a:Luf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 6202,
+          "end": 6209,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         }
       ]
     },
@@ -342892,7 +344081,7 @@
       "original": "k.java",
       "renamed": "k.java",
       "inputSha256": "66a7e4e8d3287d731aece0f570acac96233829c8faf9015aa6734a77632d46be",
-      "outputSha256": "b745b0327d63f5c1eccf214a9fe52b732fa8ff9248747b41a5c4b2ada15fcb84",
+      "outputSha256": "14851988317557a6b39668009e6d1b5bb29454d66b123309b68f4c962dddbd23",
       "edits": [
         {
           "start": 171,
@@ -342935,6 +344124,13 @@
           "symbol": "C:uf",
           "original": "uf",
           "renamed": "IntrusiveNode"
+        },
+        {
+          "start": 389,
+          "end": 396,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 492,
@@ -342986,11 +344182,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 2919,
+          "end": 2926,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 2927,
           "end": 2934,
           "symbol": "F:uf.field_d:Luf;",
           "original": "field_d",
           "renamed": "previous"
+        },
+        {
+          "start": 2983,
+          "end": 2990,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 3079,
@@ -343028,11 +344238,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 4337,
+          "end": 4344,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 4345,
           "end": 4352,
           "symbol": "F:uf.field_a:Luf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 4387,
+          "end": 4394,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 4519,
@@ -343091,11 +344315,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 5231,
+          "end": 5238,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 5239,
           "end": 5246,
           "symbol": "F:uf.field_a:Luf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 5333,
+          "end": 5340,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 5384,
@@ -343133,6 +344371,13 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 6236,
+          "end": 6243,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 6244,
           "end": 6251,
           "symbol": "F:uf.field_d:Luf;",
@@ -343140,11 +344385,25 @@
           "renamed": "previous"
         },
         {
+          "start": 6340,
+          "end": 6347,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 6391,
           "end": 6398,
           "symbol": "F:uf.field_d:Luf;",
           "original": "field_d",
           "renamed": "previous"
+        },
+        {
+          "start": 6526,
+          "end": 6533,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 6575,
@@ -343189,11 +344448,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 7139,
+          "end": 7146,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 7250,
           "end": 7257,
           "symbol": "F:uf.field_a:Luf;",
           "original": "field_a",
           "renamed": "next"
+        },
+        {
+          "start": 7372,
+          "end": 7379,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 7484,
@@ -349351,7 +350624,7 @@
       "original": "nb.java",
       "renamed": "nb.java",
       "inputSha256": "8c3f978a4b3aa443d9a452f8bcc6d3d59642ea13fde689447a044658da70371e",
-      "outputSha256": "e902b50999fff8aa5e93cfca88032f8c49e9477e3382ed354ad6edd974d7e0f0",
+      "outputSha256": "167d516425c3b54323c9cfa65fa6a04f1642097a20b342724b63905cd0bbc455",
       "edits": [
         {
           "start": 93,
@@ -349394,6 +350667,20 @@
           "symbol": "C:ci",
           "original": "ci",
           "renamed": "Sprite"
+        },
+        {
+          "start": 481,
+          "end": 488,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 531,
+          "end": 538,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 616,
@@ -350960,7 +352247,7 @@
       "original": "of.java",
       "renamed": "ImageProducerRasterBuffer.java",
       "inputSha256": "9ff3e80fe8e66537f650abb3dcae21e88fe19e5d754228d21b4dc8e1a6700911",
-      "outputSha256": "a46cf2e55c5569fbd8ae74b5f6328079c6ebfd34387fb4a8a4f95eb6cb4182d5",
+      "outputSha256": "fcd3a10ab70503b6599ec7b3ba031729df3b9be3934c83ef710bc76bb171b9de",
       "edits": [
         {
           "start": 71,
@@ -350991,6 +352278,13 @@
           "renamed": "wrapException"
         },
         {
+          "start": 1411,
+          "end": 1418,
+          "symbol": "F:te.field_c:[I",
+          "original": "field_c",
+          "renamed": "pixels"
+        },
+        {
           "start": 1945,
           "end": 1946,
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
@@ -351003,6 +352297,13 @@
           "symbol": "M:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;",
           "original": "a",
           "renamed": "wrapException"
+        },
+        {
+          "start": 3269,
+          "end": 3276,
+          "symbol": "F:te.field_c:[I",
+          "original": "field_c",
+          "renamed": "pixels"
         },
         {
           "start": 4199,
@@ -351102,7 +352403,7 @@
       "original": "oh.java",
       "renamed": "oh.java",
       "inputSha256": "9b365c38c31990ea4cace85a035feaa1aab9dbdc68f49e3f5ff5c7e29ce797c5",
-      "outputSha256": "71dd77a2ec3872887131dc6fa5ac7398db086b214a2bc5551c71e38736646051",
+      "outputSha256": "4e3cd7ecaaa9b938b3d49ba5c61241b7340964ff0f8db558aeb48e85c7b7c76d",
       "edits": [
         {
           "start": 1630,
@@ -351240,6 +352541,20 @@
           "kind": "label"
         },
         {
+          "start": 8768,
+          "end": 8775,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 8814,
+          "end": 8821,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 8918,
           "end": 8920,
           "symbol": "B:oh.a(IIIIIIIII)[Lci;#0",
@@ -351264,12 +352579,68 @@
           "kind": "label"
         },
         {
+          "start": 9286,
+          "end": 9293,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 9371,
+          "end": 9378,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 9459,
+          "end": 9466,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 9544,
+          "end": 9551,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 9696,
           "end": 9698,
           "symbol": "B:oh.a(IIIIIIIII)[Lci;#1",
           "original": "L6",
           "renamed": "scanLoop2",
           "kind": "label"
+        },
+        {
+          "start": 10124,
+          "end": 10131,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 10207,
+          "end": 10214,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 10445,
+          "end": 10452,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 10530,
+          "end": 10537,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 10838,
@@ -351288,6 +352659,34 @@
           "kind": "label"
         },
         {
+          "start": 11144,
+          "end": 11151,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 11254,
+          "end": 11261,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 11357,
+          "end": 11364,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 11451,
+          "end": 11458,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 11632,
           "end": 11635,
           "symbol": "B:oh.a(IIIIIIIII)[Lci;#2",
@@ -351302,6 +352701,34 @@
           "original": "L25",
           "renamed": "scanLoop4",
           "kind": "label"
+        },
+        {
+          "start": 11954,
+          "end": 11961,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 12065,
+          "end": 12072,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 12174,
+          "end": 12181,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 12268,
+          "end": 12275,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 12619,
@@ -351694,7 +353121,7 @@
       "original": "pc.java",
       "renamed": "pc.java",
       "inputSha256": "9671738c868d9dd7f02a956fefd261cbe3041a53964207534189d995d1e11c33",
-      "outputSha256": "df1034e35204626cf34ee3a0bed3e550f3b06ac69dea0f62f3bc3dc47ae72227",
+      "outputSha256": "7974e1195599ea8bda3d9735e1a9d991ab30e5b4291d382aecb1ade0f82bfa85",
       "edits": [
         {
           "start": 117,
@@ -351758,6 +353185,20 @@
           "symbol": "C:el",
           "original": "el",
           "renamed": "ClientException"
+        },
+        {
+          "start": 2390,
+          "end": 2397,
+          "symbol": "F:el.field_a:Ljava/lang/Throwable;",
+          "original": "field_a",
+          "renamed": "cause"
+        },
+        {
+          "start": 2422,
+          "end": 2429,
+          "symbol": "F:el.field_b:Ljava/lang/String;",
+          "original": "field_b",
+          "renamed": "context"
         }
       ]
     },
@@ -353824,7 +355265,7 @@
       "original": "qg.java",
       "renamed": "qg.java",
       "inputSha256": "e6250b3f749d65c00475bfae531edc1cfb0f7bb1af3f85379c362c6d1f103eb0",
-      "outputSha256": "a750cb9b00a344fb7271b80579ed1de1f95ca1a34df98fd77b5f5316499c5d14",
+      "outputSha256": "189f9bf8974d32f2bbd980e7efe9cc76bb294dd3ff7481ff768ba68be07880e8",
       "edits": [
         {
           "start": 307,
@@ -354000,6 +355441,41 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 9863,
+          "end": 9870,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 10465,
+          "end": 10472,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 11085,
+          "end": 11092,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 11708,
+          "end": 11715,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
+          "start": 12469,
+          "end": 12476,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 13485,
@@ -354500,7 +355976,7 @@
       "original": "qk.java",
       "renamed": "qk.java",
       "inputSha256": "a0499a68f4c87d898c9450d099bb9823c876e6b61cd3d52467a695abedec14b0",
-      "outputSha256": "8429eb4b4abd29a8c1640e03157066b47939c39a3d3fbbd08a17f8fc8f7edbb7",
+      "outputSha256": "c04f87055fadad91e6eee67fd924c72079cf3293c13eb3b423a1b70303005d90",
       "edits": [
         {
           "start": 66,
@@ -354732,6 +356208,20 @@
           "symbol": "P:qk.a(Ljava/lang/Throwable;Ljava/lang/String;)Lel;#0",
           "original": "param0",
           "renamed": "cause"
+        },
+        {
+          "start": 4028,
+          "end": 4035,
+          "symbol": "F:el.field_b:Ljava/lang/String;",
+          "original": "field_b",
+          "renamed": "context"
+        },
+        {
+          "start": 4043,
+          "end": 4050,
+          "symbol": "F:el.field_b:Ljava/lang/String;",
+          "original": "field_b",
+          "renamed": "context"
         },
         {
           "start": 4059,
@@ -355265,7 +356755,7 @@
       "original": "r.java",
       "renamed": "BattleUnit.java",
       "inputSha256": "7dfea2088071e2f72e52479af3b9924819bc78df1e44249690d922513fbdd4ae",
-      "outputSha256": "9325e62cb0cfb2c1003e77b4a88c2904836a330d394b110f05080087d3b4d503",
+      "outputSha256": "26f6ec19b257be2a70d7b7fcef00d3db399b5bd63e53531f271938a8fd6fcd19",
       "edits": [
         {
           "start": 50,
@@ -357430,6 +358920,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 70394,
+          "end": 70401,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 70429,
           "end": 70430,
           "symbol": "C:l",
@@ -359459,7 +360956,7 @@
       "original": "ri.java",
       "renamed": "ri.java",
       "inputSha256": "4e8cd9ed6dc0394bf7aa28622bfdf03885ddb7f5de7cc8f3e58759b9ad1ffd6b",
-      "outputSha256": "4587b19bc9ec539b2308f0a9d61c6d7a72a95a20fe47d85bc751cf884814caa7",
+      "outputSha256": "ff5daabb97b4a368678338255af08ca77b465bd1284c5cb85f7bf3abee845c51",
       "edits": [
         {
           "start": 82,
@@ -359467,6 +360964,27 @@
           "symbol": "C:te",
           "original": "te",
           "renamed": "RasterBuffer"
+        },
+        {
+          "start": 359,
+          "end": 366,
+          "symbol": "F:te.field_c:[I",
+          "original": "field_c",
+          "renamed": "pixels"
+        },
+        {
+          "start": 512,
+          "end": 519,
+          "symbol": "F:te.field_c:[I",
+          "original": "field_c",
+          "renamed": "pixels"
+        },
+        {
+          "start": 526,
+          "end": 533,
+          "symbol": "F:te.field_c:[I",
+          "original": "field_c",
+          "renamed": "pixels"
         }
       ]
     },
@@ -360295,7 +361813,7 @@
       "original": "sg.java",
       "renamed": "ArgbSprite.java",
       "inputSha256": "3f527494e29849b0c816debc5fe8c30f303b6207089813e6ddeb4bd7dcb49b5b",
-      "outputSha256": "1979b251992f643e18b6a46d7268804678fad066051ee7700b77488a62372a42",
+      "outputSha256": "f4af452dff47439da4fa3a4ab81bead1574d62eab9e2b23ff2949ec92764db18",
       "edits": [
         {
           "start": 50,
@@ -360375,6 +361893,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 11214,
+          "end": 11221,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 11295,
           "end": 11296,
           "symbol": "C:l",
@@ -360394,6 +361919,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 12863,
+          "end": 12870,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 12971,
@@ -360417,6 +361949,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 14810,
+          "end": 14817,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 14916,
           "end": 14917,
           "symbol": "C:l",
@@ -360436,6 +361975,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 16783,
+          "end": 16790,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 16891,
@@ -360459,6 +362005,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 19908,
+          "end": 19915,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 20041,
           "end": 20042,
           "symbol": "C:l",
@@ -360478,6 +362031,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 23291,
+          "end": 23298,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 23422,
@@ -360501,6 +362061,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 25506,
+          "end": 25513,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 25612,
           "end": 25613,
           "symbol": "C:l",
@@ -360522,6 +362089,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 28121,
+          "end": 28128,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 28225,
           "end": 28226,
           "symbol": "C:l",
@@ -360541,6 +362115,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 30756,
+          "end": 30763,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 30858,
@@ -360669,6 +362250,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 33121,
+          "end": 33128,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 34099,
           "end": 34100,
           "symbol": "C:l",
@@ -360730,6 +362318,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 35273,
+          "end": 35280,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 36241,
@@ -360851,6 +362446,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 37840,
+          "end": 37847,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 37928,
           "end": 37930,
           "symbol": "M:sg.<init>(IIIIII[I)V",
@@ -360963,6 +362565,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 39465,
+          "end": 39472,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 41814,
           "end": 41815,
           "symbol": "C:l",
@@ -361066,6 +362675,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 42960,
+          "end": 42967,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 43303,
@@ -361173,6 +362789,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 44449,
+          "end": 44456,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 47197,
           "end": 47198,
           "symbol": "C:l",
@@ -361278,6 +362901,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 48343,
+          "end": 48350,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 50328,
           "end": 50329,
           "symbol": "C:l",
@@ -361339,6 +362969,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 51487,
+          "end": 51494,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 52356,
@@ -361453,6 +363090,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 55131,
+          "end": 55138,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 55501,
           "end": 55502,
           "symbol": "C:l",
@@ -361556,6 +363200,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 56656,
+          "end": 56663,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         }
       ]
     },
@@ -362968,7 +364619,7 @@
       "original": "te.java",
       "renamed": "RasterBuffer.java",
       "inputSha256": "f368bc84b13abc0a2b2908d3102cb132c7f87b94216c6b155437143e4eb22776",
-      "outputSha256": "b9bc988fc21b372048f51774e2a77f09aa1c78e012957419dfacc5dbf8151e72",
+      "outputSha256": "a76f231780bc1c99eb5fd65a7c2bd822503fd4dfc0e7a59b3b739ea5798ffe73",
       "edits": [
         {
           "start": 53,
@@ -362976,6 +364627,13 @@
           "symbol": "C:te",
           "original": "te",
           "renamed": "RasterBuffer"
+        },
+        {
+          "start": 158,
+          "end": 165,
+          "symbol": "F:te.field_c:[I",
+          "original": "field_c",
+          "renamed": "pixels"
         },
         {
           "start": 801,
@@ -363263,6 +364921,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 10608,
+          "end": 10615,
+          "symbol": "F:te.field_c:[I",
+          "original": "field_c",
+          "renamed": "pixels"
         }
       ]
     },
@@ -368159,7 +369824,7 @@
       "original": "ve.java",
       "renamed": "ve.java",
       "inputSha256": "78707def76e7ff2423bec97628c2bf286c51fcf8c34dc7be297940c507f5f82f",
-      "outputSha256": "9b9e2263bdd7dc7387e488172963931e28fa42593e3ca43ee6b27863e1d00dc1",
+      "outputSha256": "2a33181837d83f079cf57afcda39483cc7cdf2b3864efc11cf5c6bebbc1c99fe",
       "edits": [
         {
           "start": 94,
@@ -368281,11 +369946,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 6691,
+          "end": 6698,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 7033,
           "end": 7034,
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 7274,
+          "end": 7281,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 7625,
@@ -368295,6 +369974,13 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 7875,
+          "end": 7882,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 8227,
           "end": 8228,
           "symbol": "C:l",
@@ -368302,11 +369988,25 @@
           "renamed": "SoftwareRasterizer"
         },
         {
+          "start": 8479,
+          "end": 8486,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
+        },
+        {
           "start": 8834,
           "end": 8835,
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 9221,
+          "end": 9228,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 9441,
@@ -368392,7 +370092,7 @@
       "original": "vg.java",
       "renamed": "vg.java",
       "inputSha256": "2d7c9d0e1bc8edda21c55f18773cee9708774904a91668b8a8e9ce856efdcc13",
-      "outputSha256": "3231f0500c7cac372c13eeab9e8c69dad87fb372a7fefcb6c9b9e9f23c10d2c9",
+      "outputSha256": "57ada07aecf175d9098e842ca26e82aad13e02e77b5a1bbc91c1d5dadba30c54",
       "edits": [
         {
           "start": 61,
@@ -368458,6 +370158,20 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 1385,
+          "end": 1392,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
+          "start": 1482,
+          "end": 1489,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 1490,
           "end": 1497,
           "symbol": "F:uf.field_d:Luf;",
@@ -368470,6 +370184,13 @@
           "symbol": "F:uf.field_d:Luf;",
           "original": "field_d",
           "renamed": "previous"
+        },
+        {
+          "start": 1776,
+          "end": 1783,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 1784,
@@ -368507,11 +370228,25 @@
           "renamed": "IntrusiveNode"
         },
         {
+          "start": 2330,
+          "end": 2337,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
+        },
+        {
           "start": 2338,
           "end": 2345,
           "symbol": "F:uf.field_d:Luf;",
           "original": "field_d",
           "renamed": "previous"
+        },
+        {
+          "start": 2380,
+          "end": 2387,
+          "symbol": "F:jj.field_a:Luf;",
+          "original": "field_a",
+          "renamed": "sentinel"
         },
         {
           "start": 2532,
@@ -369996,7 +371731,7 @@
       "original": "wa.java",
       "renamed": "wa.java",
       "inputSha256": "e6ee1bf0b719ee6685403a7c1d5217bd289c84e2ab5c18bc8a49d2352d3d981f",
-      "outputSha256": "5e715f9736527425d0b36250e491aa1fcfea34c600f86f3ceeb81f7f55c569fb",
+      "outputSha256": "686653a0e11cd6f6e2586a9bfe48588021c9c28d252337680680e5728488f484",
       "edits": [
         {
           "start": 55,
@@ -370151,6 +371886,13 @@
           "symbol": "C:l",
           "original": "l",
           "renamed": "SoftwareRasterizer"
+        },
+        {
+          "start": 2518,
+          "end": 2525,
+          "symbol": "F:ci.field_z:[I",
+          "original": "field_z",
+          "renamed": "pixels"
         },
         {
           "start": 3157,
@@ -371537,10 +373279,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/terraphoenix"
     },
-    "rulesSha256": "faa4733e2f98e709e9894ff90d53c986b50c83a459d0691ad27a007b747c9562",
+    "rulesSha256": "26edf206676e04b318ad6f4157a86edb0277a46040a46832c6b7bdc20072e0d8",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "c87cb76980b5660673683e3e6e734c7a7bd5e4225fdcd94f7681879dc46c9d00",
-    "outputTreeSha256": "1713239b76082d685984af8c5bec8850f84640faa586a8509681fc0969ae60f0",
+    "outputTreeSha256": "cded4ffd8e6b9db3fc4834e5125b72bd94762046827ae3ee0b58481544b945d7",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

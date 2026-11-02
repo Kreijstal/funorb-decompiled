@@ -10,9 +10,9 @@ final class ri extends RasterBuffer {
         java.awt.image.WritableRaster var7 = null;
         java.awt.image.WritableRaster var7Lifetime1;
         this.field_b = param0;
-        this.field_c = new int[1 + param0 * param1];
+        this.pixels = new int[1 + param0 * param1];
         this.field_f = param1;
-        java.awt.image.DataBufferInt var5 = new java.awt.image.DataBufferInt(this.field_c, this.field_c.length);
+        java.awt.image.DataBufferInt var5 = new java.awt.image.DataBufferInt(this.pixels, this.pixels.length);
         java.awt.image.DirectColorModel var6 = new java.awt.image.DirectColorModel(32, 16711680, 65280, 255);
         if (param2 == -36) {
           var7 = java.awt.image.Raster.createWritableRaster(((java.awt.image.ColorModel) ((Object) var6)).createCompatibleSampleModel(this.field_b, this.field_f), (java.awt.image.DataBuffer) ((Object) var5), (java.awt.Point) null);

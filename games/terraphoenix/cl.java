@@ -222,7 +222,7 @@ final class cl extends WidgetContainer implements jf, n {
                 if (var16 >= 0) {
                   incrementValue$0 = var9;
                   var9++;
-                  var18 = param3.field_z[incrementValue$0];
+                  var18 = param3.pixels[incrementValue$0];
                   if (var18 != 0) {
                     if (var16 > 255) {
                       SoftwareRasterizer.field_i[var8] = var18;
