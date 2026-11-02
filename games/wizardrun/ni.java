@@ -25,11 +25,11 @@ final class ni {
         }
         var6 = "(" + l.field_P + " " + wizardrun.field_E + " " + me.field_c + ") " + ra.field_k;
         var1 = var6;
-        if (gd.field_c > 0) {
+        if (DelegatingCanvas.field_c > 0) {
           var1 = var6 + ":";
-          for (var2 = 0; gd.field_c > var2; var2++) {
+          for (var2 = 0; DelegatingCanvas.field_c > var2; var2++) {
             var7 = var1 + ' ';
-            var3 = nk.field_N.field_k[var2] & 255;
+            var3 = nk.field_N.payload[var2] & 255;
             var4 = var3 >> 4;
             if (var4 >= 10) {
               var4 += 55;

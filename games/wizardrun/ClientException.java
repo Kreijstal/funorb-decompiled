@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eb extends RuntimeException {
+final class ClientException extends RuntimeException {
     String field_b;
     Throwable field_c;
     static boolean field_a;
@@ -16,9 +16,9 @@ final class eb extends RuntimeException {
 
     final static void a(int param0) {
         ic.field_b = null;
-        tf.field_b = null;
+        MouseInputHandler.field_b = null;
         mf.field_j = (byte[][]) null;
-        cg.field_k = null;
+        ImageProducerRasterBuffer.field_k = null;
         if (param0 == 0) {
           ne.field_h = null;
           ph.field_q = null;
@@ -29,7 +29,7 @@ final class eb extends RuntimeException {
         ph.field_q = null;
     }
 
-    eb(Throwable param0, String param1) {
+    ClientException(Throwable param0, String param1) {
         this.field_c = param0;
         this.field_b = param1;
     }

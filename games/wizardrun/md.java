@@ -34,9 +34,9 @@ abstract class md {
     }
 
     final static db c(byte param0) {
-        db var1 = new db(hk.field_bb, eg.field_v, ph.field_q[0], ne.field_h[0], cg.field_k[0], tf.field_b[0], mf.field_j[0], ic.field_b);
+        db var1 = new db(hk.field_bb, eg.field_v, ph.field_q[0], ne.field_h[0], ImageProducerRasterBuffer.field_k[0], MouseInputHandler.field_b[0], mf.field_j[0], ic.field_b);
         if (param0 == -92) {
-          eb.a(0);
+          ClientException.a(0);
           return var1;
         }
         return (db) null;

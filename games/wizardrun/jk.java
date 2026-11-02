@@ -41,8 +41,8 @@ final class jk {
           var1 = nk.field_N;
           var2 = var1.f(255);
           if (0 == var2) {
-            if (wl.field_f == null) {
-              wl.field_f = new jd(128);
+            if (IntrusiveNode.field_f == null) {
+              IntrusiveNode.field_f = new jd(128);
               hj.field_e = 0;
             }
             stackIn_14_0 = (var1.f(255) != 1) ? 0 : 1;
@@ -51,21 +51,21 @@ final class jk {
             if (var3_int != 0) {
               var1.d(0);
             }
-            var5 = gj.a(var4_ref_String, -30782);
+            var5 = IterableNodeHashTable.a(var4_ref_String, -30782);
             var6 = var1.d(0);
-            var7 = ta.a(-127, (CharSequence) ((Object) var4_ref_String));
+            var7 = MouseWheelInput.a(-127, (CharSequence) ((Object) var4_ref_String));
             if (var7 == null) {
               var7 = var4_ref_String;
             }
             if (var5 == null) {
-              var5 = gj.a(var6, -30782);
+              var5 = IterableNodeHashTable.a(var6, -30782);
               if (null != var5) {
-                wl.field_f.a(var5, (long)var7.hashCode(), 122);
+                IntrusiveNode.field_f.a(var5, (long)var7.hashCode(), 122);
               }
             }
             if (null == var5) {
               var5 = new aa();
-              wl.field_f.a(var5, (long)var7.hashCode(), 112);
+              IntrusiveNode.field_f.a(var5, (long)var7.hashCode(), 112);
               fieldTemp$0 = hj.field_e;
               hj.field_e = hj.field_e + 1;
               var5.field_ob = fieldTemp$0;
@@ -109,16 +109,16 @@ final class jk {
           }
           var4_ref_StringLifetime1 = var1.d(0);
           var5_ref = var1.d(0);
-          var6_ref = gj.a((byte) -116, var4_ref_StringLifetime1);
+          var6_ref = IterableNodeHashTable.a((byte) -116, var4_ref_StringLifetime1);
           if (var6_ref == null) {
-            var6_ref = gj.a((byte) -116, var5_ref);
+            var6_ref = IterableNodeHashTable.a((byte) -116, var5_ref);
             if (var6_ref != null) {
-              lj.field_f.a(var6_ref, (long)ta.a(-78, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), 125);
+              lj.field_f.a(var6_ref, (long)MouseWheelInput.a(-78, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), 125);
             }
           }
           if (null == var6_ref) {
             var6_ref = new aa();
-            lj.field_f.a(var6_ref, (long)ta.a(-57, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), 107);
+            lj.field_f.a(var6_ref, (long)MouseWheelInput.a(-57, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), 107);
             fieldTemp$1 = kh.field_h;
             kh.field_h = kh.field_h + 1;
             var6_ref.field_ob = fieldTemp$1;
@@ -131,7 +131,7 @@ final class jk {
           var6_ref.field_mb = var4_ref_StringLifetime1;
           var6_ref.a(false);
           var7_ref = (aa) (qk.field_g.b((byte) 80));
-          L15: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (null != var7_ref) {
               stackOut_52_0 = tl.a(var6_ref, var7_ref, -1);
@@ -146,7 +146,7 @@ final class jk {
             }
             if (decompiledFrameRemainder0) {
               if (var7_ref == null) {
-                break L15;
+                break scanLoop1;
               }
               stackIn_60_0 = 74;
             }

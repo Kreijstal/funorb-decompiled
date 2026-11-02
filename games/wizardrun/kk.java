@@ -20,7 +20,7 @@ final class kk extends mh implements qd {
     }
 
     kk(wi param0, nk param1) {
-        super(param0, va.field_i, sc.field_o, false, false);
+        super(param0, PacketBuffer.field_i, sc.field_o, false, false);
         try {
           this.field_wb = param1;
         } catch (RuntimeException runtimeException) {
@@ -59,13 +59,13 @@ final class kk extends mh implements qd {
               }
             }
           }
-          var5 = new vc((mh) (this), va.field_i, var4);
+          var5 = new vc((mh) (this), PacketBuffer.field_i, var4);
           if (!param1.field_i) {
             if (!this.field_Ab) {
               if (param1.field_b != 5) {
-                var5.a((byte) -31, ti.field_h, -1);
+                var5.a((byte) -31, IsaacRandom.field_h, -1);
               } else {
-                var5.a((byte) -31, da.field_j, 11);
+                var5.a((byte) -31, GameApplet.field_j, 11);
                 var5.a((byte) -31, pk.field_q, 17);
               }
             } else {
@@ -180,10 +180,10 @@ final class kk extends mh implements qd {
               var6[0][var10] = ld.field_c[var11];
               var18[0][4 * var10] = ug.field_I[var11];
               var18[0][1 + 4 * var10] = sk.field_B[var11];
-              var18[0][var10 * 4 + 2] = tf.field_c[var11];
+              var18[0][var10 * 4 + 2] = MouseInputHandler.field_c[var11];
               var18[0][3 + var10 * 4] = mk.field_c[var11];
               if (qj.a(ld.field_c[var11], 110) &&
-                mk.field_c[var11] + (sk.field_B[var11] + tf.field_c[var11]) == 0) {
+                mk.field_c[var11] + (sk.field_B[var11] + MouseInputHandler.field_c[var11]) == 0) {
                 var6[0][var10] = null;
                 var10--;
               }
@@ -198,10 +198,10 @@ final class kk extends mh implements qd {
               var6[1][var13] = ld.field_c[var11Lifetime1];
               var18[1][4 * var13] = ug.field_I[var11Lifetime1];
               var18[1][1 + var13 * 4] = sk.field_B[var11Lifetime1];
-              var18[1][4 * var13 + 2] = tf.field_c[var11Lifetime1];
+              var18[1][4 * var13 + 2] = MouseInputHandler.field_c[var11Lifetime1];
               var18[1][4 * var13 + 3] = mk.field_c[var11Lifetime1];
               if (qj.a(ld.field_c[var11Lifetime1], 81) &&
-                0 == mk.field_c[var11Lifetime1] + sk.field_B[var11Lifetime1] + tf.field_c[var11Lifetime1]) {
+                0 == mk.field_c[var11Lifetime1] + sk.field_B[var11Lifetime1] + MouseInputHandler.field_c[var11Lifetime1]) {
                 var6[1][var13] = null;
                 var13--;
               }
@@ -251,7 +251,7 @@ final class kk extends mh implements qd {
           kk.j((byte) -27);
           return super.g(1);
         }
-        wd var2 = ti.a((byte) -123);
+        wd var2 = IsaacRandom.a((byte) -123);
         if (var2 != null) {
           this.a(false, var2, 3899);
           if (param0 == 1) {

@@ -12,7 +12,7 @@ final class tk implements bf {
     final static void a(int param0, o param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         try {
           r.field_a = param7;
-          ta.field_a = param2;
+          MouseWheelInput.field_a = param2;
           ka.field_i = param3;
           cb.field_a = param8;
           uk.field_b = param1;

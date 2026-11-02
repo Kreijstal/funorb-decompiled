@@ -89,14 +89,14 @@ final class kd {
             if (w.field_c != 0 &&
               dh.field_b > var3 &&
               var3 + ra.field_p.field_p > dh.field_b) {
-              if (tf.field_e > -ra.field_p.field_z + 269 &&
-                tf.field_e < 269) {
+              if (MouseInputHandler.field_e > -ra.field_p.field_z + 269 &&
+                MouseInputHandler.field_e < 269) {
                 od.field_j = fl.field_u;
                 var4 = 1;
                 ei.field_j = false;
               }
-              if (tf.field_e > 586 &&
-                586 + ra.field_p.field_z > tf.field_e) {
+              if (MouseInputHandler.field_e > 586 &&
+                586 + ra.field_p.field_z > MouseInputHandler.field_e) {
                 ei.field_j = true;
                 var4 = 1;
                 od.field_j = fl.field_u;
@@ -117,7 +117,7 @@ final class kd {
             }
           }
           if (param1) {
-            jj.field_d.a(wc.a(29292, fi.field_B, pg.field_n), param0 - 668, wc.a(29292, dh.field_b, tf.field_e));
+            jj.field_d.a(wc.a(29292, fi.field_B, pg.field_n), param0 - 668, wc.a(29292, dh.field_b, MouseInputHandler.field_e));
             if (jj.field_d.b(param0 ^ -587)) {
               if (jj.field_d.field_g == 0) {
                 stackIn_66_0 = 3;

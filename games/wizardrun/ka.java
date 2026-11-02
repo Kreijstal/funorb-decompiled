@@ -55,7 +55,7 @@ final class ka extends uh {
         if (param3) {
           var4++;
         }
-        return oi.field_e[var4];
+        return IntrusiveDeque.field_e[var4];
     }
 
     public static void b(int param0) {
@@ -79,7 +79,7 @@ final class ka extends uh {
         return pc.field_v;
     }
 
-    final void a(int param0, va param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           if (param0 != 4) {
             field_h = (String) null;

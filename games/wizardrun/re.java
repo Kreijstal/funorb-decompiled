@@ -6,7 +6,7 @@ final class re extends pe implements ng, qd {
     private kk field_F;
     private ff field_J;
     static wk field_I;
-    static va field_G;
+    static PacketBuffer field_G;
     static String field_E;
 
     private final String a(int param0) {
@@ -30,7 +30,7 @@ final class re extends pe implements ng, qd {
           if (param0 == -18905) {
             return;
           }
-          field_G = (va) null;
+          field_G = (PacketBuffer) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -203,7 +203,7 @@ final class re extends pe implements ng, qd {
 
     static {
         field_I = new wk();
-        field_G = new va(256);
+        field_G = new PacketBuffer(256);
         field_E = "Player Name: ";
     }
 }

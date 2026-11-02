@@ -22,7 +22,7 @@ abstract class rg extends tj {
 
     final static void a(Throwable param0, String param1, int param2) {
         try {
-          vh stackIn_16_0;
+          PlatformTaskDispatcher stackIn_16_0;
           java.net.URL stackIn_16_1;
           java.net.URL stackIn_16_2;
           java.net.URL stackIn_16_3;
@@ -77,7 +77,7 @@ abstract class rg extends tj {
               stackIn_17_2 = null;
               stackIn_17_5 = "" + h.field_m;
             }
-            var4 = ((vh) (Object) stackIn_16_0).a(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(vh.field_p).append("&v2=").append(vh.field_b).append("&e=").append(var10).toString()), 123);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_16_0).a(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(PlatformTaskDispatcher.field_p).append("&v2=").append(PlatformTaskDispatcher.field_b).append("&e=").append(var10).toString()), 123);
             while (var4.field_a == 0) {
               tg.a(1L, false);
             }

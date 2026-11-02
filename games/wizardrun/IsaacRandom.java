@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ti {
+final class IsaacRandom {
     private int field_e;
     private int[] field_f;
     private int[] field_b;
@@ -268,7 +268,7 @@ final class ti {
         }
     }
 
-    ti(int[] param0) {
+    IsaacRandom(int[] param0) {
         int var2_int = 0;
         try {
           this.field_b = new int[256];

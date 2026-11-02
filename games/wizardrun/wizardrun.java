@@ -70,9 +70,9 @@ public final class wizardrun extends u {
                         }
                         cf.a((byte) 79);
                         this.f(-98);
-                        a.field_a = ti.a(800863586, "", mi.field_E, "b12", bc.field_a);
-                        hj.field_g = ti.a(800863586, "", mi.field_E, "wizfont", bc.field_a);
-                        jj.field_b = ti.a(param1 + 800863540, "", mi.field_E, "wizfont2", bc.field_a);
+                        a.field_a = IsaacRandom.a(800863586, "", mi.field_E, "b12", bc.field_a);
+                        hj.field_g = IsaacRandom.a(800863586, "", mi.field_E, "wizfont", bc.field_a);
+                        jj.field_b = IsaacRandom.a(param1 + 800863540, "", mi.field_E, "wizfont2", bc.field_a);
                         lk.field_b = new o[16];
                         bc.field_a = null;
                         field_D = pe.a("", mi.field_E, "numbers", param1 + 45);
@@ -97,7 +97,7 @@ public final class wizardrun extends u {
                         mg.field_s = vg.a(15, "bosshealth2", mi.field_E, "");
                         ve.field_c = pe.a("", mi.field_E, "wizard", 95);
                         ra.field_m = pe.a("", mi.field_E, "wizardnohat", param1 + 42);
-                        rk.field_m = vg.a(param1 ^ 33, "explosion", mi.field_E, "");
+                        DualLinkNode.field_m = vg.a(param1 ^ 33, "explosion", mi.field_E, "");
                         ui.field_a = pe.a("", mi.field_E, "achievements", 108);
                         sk.field_z = vg.a(15, "unachieved", bb.field_h, "basic");
                         wc.field_f = vg.a(15, "orbcoin", bb.field_h, "basic");
@@ -122,20 +122,20 @@ public final class wizardrun extends u {
                         ld.field_d = vg.a(param1 - 31, "selector", mi.field_E, "");
                         u.field_x = vg.a(param1 - 31, "bosshealth", mi.field_E, "");
                         jl.field_w = vg.a(param1 - 31, "title", mi.field_E, "");
-                        wh.field_d = vg.a(15, "highscorescreen", mi.field_E, "");
+                        NodeHashTableIterator.field_d = vg.a(15, "highscorescreen", mi.field_E, "");
                         l.field_M = vg.a(param1 ^ 33, "achievementscreen", mi.field_E, "");
                         bk.field_b = vg.a(param1 ^ 33, "controlscreen", mi.field_E, "");
                         bk.field_b.b();
                         var5_int = param1;
-                        var13 = di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 112, og.field_P);
+                        var13 = di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 112, og.field_P);
                         this.b(param1 ^ -12884, var13, 15583488, jj.field_b.b(var13) / 2 + 165, 180 + var5_int);
-                        var14 = di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 49, qj.field_a);
+                        var14 = di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 49, qj.field_a);
                         this.b(-12926, var14, 15583488, jj.field_b.b(var14) / 2 + 165, var5_int * 2 + 180);
-                        var15 = di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 94, kj.field_e);
+                        var15 = di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 94, kj.field_e);
                         this.b(-12926, var15, 15583488, 165 + jj.field_b.b(var15) / 2, 180 + 3 * var5_int);
-                        var16 = di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 124, oi.field_d);
+                        var16 = di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 124, IntrusiveDeque.field_d);
                         this.b(-12926, var16, 15583488, jj.field_b.b(var16) / 2 + 165, -15 + var5_int * 4 + 180);
-                        var17 = di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 97, sk.field_C);
+                        var17 = di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 97, sk.field_C);
                         this.b(-12926, var17, 15583488, jj.field_b.b(var17) / 2 + 165, 5 * var5_int + 180);
                         hl.field_b.b(106);
                         kb.field_jb = vg.a(15, "optionscreen", mi.field_E, "");
@@ -224,7 +224,7 @@ public final class wizardrun extends u {
                         ka.field_l = ji.a(md.field_b, "", "wizard_run_swamp");
                         ml.field_u = ji.a(md.field_b, "", "wizard_run_caves");
                         ne.field_b = ji.a(md.field_b, "", "wizard_run_mountains");
-                        va.field_j = ji.a(md.field_b, "", "wizard_run_volcano");
+                        PacketBuffer.field_j = ji.a(md.field_b, "", "wizard_run_volcano");
                         ec.field_d = ji.a(md.field_b, "", "wizard_run_lair");
                         fb.field_a = ji.a(md.field_b, "", "wizard_run_boss");
                         kh.field_j = ji.a(md.field_b, "", "wizard_run_intro");
@@ -234,7 +234,7 @@ public final class wizardrun extends u {
                         sl.field_q = new ji[7];
                         sl.field_q[3] = ne.field_b;
                         sl.field_q[5] = ec.field_d;
-                        sl.field_q[4] = va.field_j;
+                        sl.field_q[4] = PacketBuffer.field_j;
                         sl.field_q[2] = ml.field_u;
                         sl.field_q[6] = kh.field_j;
                         sl.field_q[0] = pj.field_G;
@@ -283,45 +283,45 @@ public final class wizardrun extends u {
                         jj.b(0);
                         return;
                       }
-                      ok.a(de.a(-40, mj.field_d, bc.field_a, hj.field_d), 95.0f, 0);
+                      ok.a(SecondaryNodeDeque.a(-40, mj.field_d, bc.field_a, hj.field_d), 95.0f, 0);
                       return;
                     }
                     ok.a(oh.a(qb.field_q, tk.field_e, bb.field_h, param1 ^ -90, "basic"), 85.0f, param1 ^ 46);
                     return;
                   }
-                  ok.a(de.a(-40, ej.field_e, md.field_b, lj.field_d), 80.0f, 0);
+                  ok.a(SecondaryNodeDeque.a(-40, ej.field_e, md.field_b, lj.field_d), 80.0f, 0);
                   return;
                 }
-                ok.a(de.a(-40, pa.field_d, eg.field_u, jf.field_g), 70.0f, 0);
+                ok.a(SecondaryNodeDeque.a(-40, pa.field_d, eg.field_u, jf.field_g), 70.0f, 0);
                 return;
               }
-              ok.a(de.a(-40, ge.field_i, jl.field_u, il.field_d), 60.0f, 0);
+              ok.a(SecondaryNodeDeque.a(-40, ge.field_i, jl.field_u, il.field_d), 60.0f, 0);
               return;
             }
-            ok.a(de.a(-40, ge.field_i, mi.field_y, il.field_d), 50.0f, param1 - 46);
+            ok.a(SecondaryNodeDeque.a(-40, ge.field_i, mi.field_y, il.field_d), 50.0f, param1 - 46);
             return;
           }
-          ok.a(de.a(-40, qk.field_e, mh.field_jb, aa.field_gb), 40.0f, 0);
+          ok.a(SecondaryNodeDeque.a(-40, qk.field_e, mh.field_jb, aa.field_gb), 40.0f, 0);
           return;
         }
-        ok.a(de.a(-40, tk.field_e, mi.field_E, qb.field_q), 30.0f, param1 ^ 46);
+        ok.a(SecondaryNodeDeque.a(-40, tk.field_e, mi.field_E, qb.field_q), 30.0f, param1 ^ 46);
     }
 
     private final void s(int param0) {
         boolean stackIn_6_1 = false;
         if (5 < ql.field_c) {
-          hi.field_c = hi.field_c - ql.field_c;
+          BufferedSocket.field_c = BufferedSocket.field_c - ql.field_c;
           me.field_f = me.field_f - 5;
           ql.field_c = 5;
         }
-        da.a(7775, 64 * sg.field_f + (ql.field_c + 6 * qh.field_l));
+        GameApplet.a(7775, 64 * sg.field_f + (ql.field_c + 6 * qh.field_l));
         rc.field_a = 0;
         sf.field_h = 2;
         stackIn_6_1 = !(0 >= hl.field_a);
         this.field_J = stackIn_6_1;
         rf.field_b = 0;
         tc.field_j = false;
-        wg.field_e = wh.field_d;
+        wg.field_e = NodeHashTableIterator.field_d;
         if (0 < qf.field_l) {
           sf.field_h = 5;
           wg.field_e = l.field_M;
@@ -339,17 +339,17 @@ public final class wizardrun extends u {
           ke.field_u.f(8192)) {
           sf.field_h = 0;
           this.field_J = true;
-          hi.field_a = -350;
+          BufferedSocket.field_a = -350;
         }
         if (!e.a(-90)) {
-          hi.field_c = hi.field_c - (ql.field_c - 6);
+          BufferedSocket.field_c = BufferedSocket.field_c - (ql.field_c - 6);
           wg.field_b = wg.field_b - (sg.field_f << 6);
           me.field_f = me.field_f + (qh.field_l * 6 + 6);
           qh.field_l = -1;
           sg.field_f = 0;
           ql.field_c = 6;
         }
-        hi.field_c = hi.field_c + qh.field_g;
+        BufferedSocket.field_c = BufferedSocket.field_c + qh.field_g;
         wg.field_b = wg.field_b - 5;
         od.field_k = 0;
         ga.field_e = sl.field_q[6];
@@ -360,7 +360,7 @@ public final class wizardrun extends u {
           mi.field_D.a(true, param0 - 314, ga.field_e);
         }
         tj.field_I = 255;
-        hi.field_a = -350;
+        BufferedSocket.field_a = -350;
     }
 
     final void i(int param0) {
@@ -375,7 +375,7 @@ public final class wizardrun extends u {
         pg var6;
         int var2Lifetime1;
         var4 = field_H;
-        wh.field_k.e();
+        NodeHashTableIterator.field_k.e();
         pc.field_d.e();
         if (null != ki.field_E &&
           ki.field_E.field_b) {
@@ -389,18 +389,18 @@ public final class wizardrun extends u {
           this.u(-51);
           f.field_c = false;
         }
-        if (ta.a((byte) 60)) {
+        if (MouseWheelInput.a((byte) 60)) {
           this.d((byte) -122);
           if (!th.field_h &&
             ph.a((byte) 123)) {
             this.a(false, 46);
           }
-          if (ta.a((byte) 60)) {
+          if (MouseWheelInput.a((byte) 60)) {
             return;
           }
         }
         if (th.field_h) {
-          if (!cg.c((byte) 54)) {
+          if (!ImageProducerRasterBuffer.c((byte) 54)) {
             hc.c(true);
           } else {
             if (oa.a(-25231)) {
@@ -486,7 +486,7 @@ public final class wizardrun extends u {
           param2 != 3) {
           param1 = 0;
         }
-        L1: {
+        regionExit1: {
           var4 = 43 % ((-44 - param0) / 58);
           var5 = param2;
           if (var5 != 0) {
@@ -496,47 +496,47 @@ public final class wizardrun extends u {
                   switch (var5) {
                     case 4:
                       if (param1 != 0) {
-                        break L1;
+                        break regionExit1;
                       }
                       if (null == ki.field_E) {
                         pd.a(false, false);
-                        break L1;
+                        break regionExit1;
                       }
                       di.a((byte) 60);
-                      break L1;
+                      break regionExit1;
                     case 5:
                       if (param1 != 0) {
-                        break L1;
+                        break regionExit1;
                       }
                       th.field_i = 3;
                       pa.field_c = 32;
                       if (!pk.field_s) {
-                        break L1;
+                        break regionExit1;
                       }
                       tl.field_a.a(si.field_j[0], 100, 256 * ee.field_p / 100);
-                      break L1;
+                      break regionExit1;
                     case 6:
                       if (param1 != 0) {
-                        break L1;
+                        break regionExit1;
                       }
                       th.field_i = 4;
                       pa.field_c = 32;
                       if (!pk.field_s) {
-                        break L1;
+                        break regionExit1;
                       }
                       tl.field_a.a(si.field_j[0], 100, ee.field_p * 256 / 100);
-                      break L1;
+                      break regionExit1;
                     default:
-                      break L1;
+                      break regionExit1;
                     case 7:
                       if (param1 != 0) {
-                        break L1;
+                        break regionExit1;
                       }
                       if (pk.field_s) {
                         tl.field_a.a(si.field_j[0], 100, ee.field_p * 256 / 100);
                       }
                       bc.a(124, jg.f(1));
-                      break L1;
+                      break regionExit1;
                   }
                 }
                 if (-1 == param1) {
@@ -855,8 +855,8 @@ public final class wizardrun extends u {
         int var14Lifetime1Lifetime1;
         var33 = null;
         var18 = field_H;
-        var19 = hi.d((byte) 72);
-        if (ta.a((byte) 60)) {
+        var19 = BufferedSocket.d((byte) 72);
+        if (MouseWheelInput.a((byte) 60)) {
           ud.a((byte) 38, dh.a(255), var19);
           return;
         }
@@ -864,7 +864,7 @@ public final class wizardrun extends u {
           uc.a(false, var19);
           return;
         }
-        if (!cg.c((byte) 54)) {
+        if (!ImageProducerRasterBuffer.c((byte) 54)) {
           ok.a(od.field_s, 100.0f, 0);
           uc.a(false, var19);
           return;
@@ -1015,7 +1015,7 @@ public final class wizardrun extends u {
             stackIn_378_0Lifetime1 = ~sg.field_f;
             stackIn_378_1Lifetime1 = -1;
             if (stackIn_378_0Lifetime1 < stackIn_378_1Lifetime1) {
-              var27 = tf.field_d + sg.field_f;
+              var27 = MouseInputHandler.field_d + sg.field_f;
               jj.field_b.c(var27, 8, jj.field_b.field_M - 1, 0, -1);
               jj.field_b.c(var27, 8, jj.field_b.field_M + 1, 0, -1);
               jj.field_b.c(var27, 7, jj.field_b.field_M, 0, -1);
@@ -1367,13 +1367,13 @@ public final class wizardrun extends u {
             jj.field_b.b(uh.field_b, 320, jj.field_b.field_M + 169, 16777215, -1);
             var3 = 96;
             if (qh.field_l < 0) {
-              hi.field_c = hi.field_c - qh.field_l * 6;
+              BufferedSocket.field_c = BufferedSocket.field_c - qh.field_l * 6;
               qh.field_l = 0;
             }
             var4_int = var3 * 96 / 128;
             if (qh.field_l > 5) {
               wg.field_b = wg.field_b + 30;
-              hi.field_c = hi.field_c - qh.field_l * 6;
+              BufferedSocket.field_c = BufferedSocket.field_c - qh.field_l * 6;
               qh.field_l = 5;
             }
             var5 = 0;
@@ -1410,7 +1410,7 @@ public final class wizardrun extends u {
                   (var7 + var4_int) > fi.field_B) {
                   ed.a(var3 * var5 + 32, 208, var3, var4_int, 16777215);
                   if (sh.field_c == 1) {
-                    hi.field_c = hi.field_c - qh.field_l * 6;
+                    BufferedSocket.field_c = BufferedSocket.field_c - qh.field_l * 6;
                     wg.field_b = wg.field_b + var5 * 6;
                     qh.field_l = var5;
                   }
@@ -1441,7 +1441,7 @@ public final class wizardrun extends u {
                 var6_ref_String = ra.field_l;
               }
               if (qh.field_l == 3) {
-                var6_ref_String = de.field_c;
+                var6_ref_String = SecondaryNodeDeque.field_c;
               }
               if (4 == qh.field_l) {
                 var6_ref_String = wi.field_H;
@@ -1455,7 +1455,7 @@ public final class wizardrun extends u {
                 jj.field_b.b(si.field_g, 320, 192 + var4_int + 16 + 3 * jj.field_b.field_M, var5, -1);
               }
               if (16711680 == var5) {
-                jj.field_b.b(oj.field_a, 320, 192 - (-var4_int - 16 - 3 * jj.field_b.field_M), var5, -1);
+                jj.field_b.b(GameKeyHandler.field_a, 320, 192 - (-var4_int - 16 - 3 * jj.field_b.field_M), var5, -1);
               }
               if (!e.a(-109)) {
                 if (var5 == 16777215 &&
@@ -1466,8 +1466,8 @@ public final class wizardrun extends u {
                   qh.field_g = 0;
                   nk.field_T = 0;
                   if (0 < qh.field_l) {
-                    hi.field_c = hi.field_c - 5;
-                    gd.field_b = false;
+                    BufferedSocket.field_c = BufferedSocket.field_c - 5;
+                    DelegatingCanvas.field_b = false;
                     qh.field_g = 5;
                   }
                   od.field_k = 0;
@@ -1499,7 +1499,7 @@ public final class wizardrun extends u {
                     qh.field_g = 0;
                     tj.field_I = 5;
                     if (qh.field_l > 0) {
-                      gd.field_b = false;
+                      DelegatingCanvas.field_b = false;
                       me.field_f = me.field_f + 5;
                       qh.field_g = 5;
                     }
@@ -1535,7 +1535,7 @@ public final class wizardrun extends u {
             var3 = 345;
             var4_int = 130;
             if (0 >= qf.field_l) {
-              stackIn_148_0 = ti.field_a;
+              stackIn_148_0 = IsaacRandom.field_a;
             } else {
               stackIn_148_0 = qf.field_l;
             }
@@ -1713,7 +1713,7 @@ public final class wizardrun extends u {
                       var13Lifetime1 = 16777215;
                       var9 = 1;
                     }
-                    L140: {
+                    regionExit1: {
                       if ((var12Lifetime1 >= 10 ||
                         null == var22[var12Lifetime1]) &&
                         (var12Lifetime1 != 10 ||
@@ -1758,7 +1758,7 @@ public final class wizardrun extends u {
                             }
                           }
                         }
-                        break L140;
+                        break regionExit1;
                       }
                       var11Lifetime1 = 1;
                       if (var12Lifetime1 == 0) {
@@ -1805,7 +1805,7 @@ public final class wizardrun extends u {
                         decompiledFrameRemainder1 = (var9 == 0);
                         if ((decompiledFrameRemainder1) &&
                           (ei.field_k <= 0)) {
-                          break L140;
+                          break regionExit1;
                         }
                       }
                       if (decompiledFrameRemainder1) {
@@ -1856,22 +1856,22 @@ public final class wizardrun extends u {
             ed.d(0, 0, 640, 480, 0, -tj.field_I + 510);
           }
         }
-        if (!(-350 >= hi.field_a) ||
+        if (!(-350 >= BufferedSocket.field_a) ||
           qh.field_l == 0) {
-          var3Lifetime1 = hi.field_a;
+          var3Lifetime1 = BufferedSocket.field_a;
           if (qh.field_l == 0) {
             stackIn_524_0 = (pg.field_q) ? 0 : 1;
             if (stackIn_524_0 != 1) {
             }
           }
-          if (hi.field_a < 240) {
-            hi.field_a = hi.field_a + 250;
-            if (hi.field_a > 240) {
-              hi.field_a = 240;
+          if (BufferedSocket.field_a < 240) {
+            BufferedSocket.field_a = BufferedSocket.field_a + 250;
+            if (BufferedSocket.field_a > 240) {
+              BufferedSocket.field_a = 240;
             }
           }
-          var4_intLifetime1 = (-240 + hi.field_a) * (-240 + hi.field_a) / 120;
-          if (hi.field_a < 240) {
+          var4_intLifetime1 = (-240 + BufferedSocket.field_a) * (-240 + BufferedSocket.field_a) / 120;
+          if (BufferedSocket.field_a < 240) {
             var4_intLifetime1 = -var4_intLifetime1;
           }
           var4_intLifetime1 += 240;
@@ -1888,18 +1888,18 @@ public final class wizardrun extends u {
               ig.a(pd.field_H, -16 + (320 - var6Lifetime1 / 2), (byte) -110, hj.field_g.field_M + 128, var6Lifetime1 + 32, var5Lifetime1 - jj.field_b.field_M - 16);
               this.a(var5Lifetime1, r.field_c, 16777215, 123, 319);
               var5Lifetime1 += 32;
-              this.a(var5Lifetime1, di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 45, i.field_c), 16777215, -83, 319);
+              this.a(var5Lifetime1, di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 45, i.field_c), 16777215, -83, 319);
               var5Lifetime1 += 32;
-              this.a(var5Lifetime1, di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 126, pb.field_i), 16777215, -91, 319);
+              this.a(var5Lifetime1, di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, pb.field_i), 16777215, -91, 319);
               var5Lifetime1 += 32;
             }
             if (1 == ql.field_c) {
               var6Lifetime1Lifetime1 = 500;
               ed.c(304 - var6Lifetime1Lifetime1 / 2 + 5, -jj.field_b.field_M + (var5Lifetime1 - 16 + 5), -10 + var6Lifetime1Lifetime1 + 32, 96 + (hj.field_g.field_M - 10), 13158);
               ig.a(pd.field_H, -16 + (-(var6Lifetime1Lifetime1 / 2) + 320), (byte) -110, hj.field_g.field_M + 96, var6Lifetime1Lifetime1 + 32, -16 + (var5Lifetime1 - jj.field_b.field_M));
-              jj.field_b.a(fa.field_d + " " + ta.field_f, -(var6Lifetime1Lifetime1 / 2) + 320 - 1, 5 + (-16 + var5Lifetime1 - (-4 - (-jj.field_b.field_M - 1))), var6Lifetime1Lifetime1, 480, 0, 0, 1, 0, jj.field_b.field_M);
-              jj.field_b.a(fa.field_d + " " + ta.field_f, -(var6Lifetime1Lifetime1 / 2) + 320 - 1, 5 - jj.field_b.field_M + 4 + (var5Lifetime1 - 16) - 1, var6Lifetime1Lifetime1, 480, 0, 0, 1, 0, jj.field_b.field_M);
-              jj.field_b.a(fa.field_d + " " + ta.field_f, 320 - var6Lifetime1Lifetime1 / 2, -16 - jj.field_b.field_M + 4 + (var5Lifetime1 + 5), var6Lifetime1Lifetime1, 480, 16777215, -1, 1, 0, jj.field_b.field_M);
+              jj.field_b.a(fa.field_d + " " + MouseWheelInput.field_f, -(var6Lifetime1Lifetime1 / 2) + 320 - 1, 5 + (-16 + var5Lifetime1 - (-4 - (-jj.field_b.field_M - 1))), var6Lifetime1Lifetime1, 480, 0, 0, 1, 0, jj.field_b.field_M);
+              jj.field_b.a(fa.field_d + " " + MouseWheelInput.field_f, -(var6Lifetime1Lifetime1 / 2) + 320 - 1, 5 - jj.field_b.field_M + 4 + (var5Lifetime1 - 16) - 1, var6Lifetime1Lifetime1, 480, 0, 0, 1, 0, jj.field_b.field_M);
+              jj.field_b.a(fa.field_d + " " + MouseWheelInput.field_f, 320 - var6Lifetime1Lifetime1 / 2, -16 - jj.field_b.field_M + 4 + (var5Lifetime1 + 5), var6Lifetime1Lifetime1, 480, 16777215, -1, 1, 0, jj.field_b.field_M);
               var5Lifetime1 += 64;
             }
             if (2 == ql.field_c) {
@@ -1938,9 +1938,9 @@ public final class wizardrun extends u {
               var6Lifetime1Lifetime3 = 600;
               ed.c(-11 + (-(var6Lifetime1Lifetime3 / 2) + 320), -11 + (-jj.field_b.field_M + var5Lifetime1), 22 + var6Lifetime1Lifetime3, 160 + (hj.field_g.field_M - 10), 13158);
               ig.a(pd.field_H, -16 - var6Lifetime1Lifetime3 / 2 + 320, (byte) -110, 160 + hj.field_g.field_M, 32 + var6Lifetime1Lifetime3, -16 + var5Lifetime1 - jj.field_b.field_M);
-              jj.field_b.a(di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 102, ag.field_w), -(var6Lifetime1Lifetime3 / 2) + 319, var5Lifetime1 - 24, var6Lifetime1Lifetime3, 480, 0, 0, 0, 0, 20);
-              jj.field_b.a(di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 61, ag.field_w), -(var6Lifetime1Lifetime3 / 2) + 320, -25 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 0, 0, 0, 0, 20);
-              jj.field_b.a(di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 107, ag.field_w), -(var6Lifetime1Lifetime3 / 2) + 320, -24 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 16777215, -1, 0, 0, 20);
+              jj.field_b.a(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 102, ag.field_w), -(var6Lifetime1Lifetime3 / 2) + 319, var5Lifetime1 - 24, var6Lifetime1Lifetime3, 480, 0, 0, 0, 0, 20);
+              jj.field_b.a(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 61, ag.field_w), -(var6Lifetime1Lifetime3 / 2) + 320, -25 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 0, 0, 0, 0, 20);
+              jj.field_b.a(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 107, ag.field_w), -(var6Lifetime1Lifetime3 / 2) + 320, -24 + var5Lifetime1, var6Lifetime1Lifetime3, 480, 16777215, -1, 0, 0, 20);
               var5Lifetime1 += 32;
               var5Lifetime1 -= 24;
               var29 = new String[9];
@@ -2013,10 +2013,10 @@ public final class wizardrun extends u {
               this.a(var5Lifetime1, ol.field_d, 16777215, -74, 319);
             }
           }
-          hi.field_a = var3Lifetime1;
+          BufferedSocket.field_a = var3Lifetime1;
         }
-        if (da.field_e != null) {
-          da.field_e.c(40);
+        if (GameApplet.field_e != null) {
+          GameApplet.field_e.c(40);
         }
         if (1 == sf.field_h ||
           sf.field_h == 2 ||
@@ -2031,14 +2031,14 @@ public final class wizardrun extends u {
               (!(fi.field_B < 436))) {
               var4_intLifetime2 = 16777215;
               if ((sh.field_c == 1 ||
-                hi.field_p[84]) && pa.field_c < 32) {
+                BufferedSocket.field_p[84]) && pa.field_c < 32) {
                 pa.field_c = 32;
               }
             }
           } else {
             var4_intLifetime2 = 16777215;
             if ((sh.field_c == 1 ||
-              hi.field_p[84]) && pa.field_c < 32) {
+              BufferedSocket.field_p[84]) && pa.field_c < 32) {
               pa.field_c = 32;
             }
           }
@@ -2056,7 +2056,7 @@ public final class wizardrun extends u {
               !(436 > fi.field_B) &&
               this.field_N == -1) {
               if ((sh.field_c != 0 ||
-                hi.field_p[84]) &&
+                BufferedSocket.field_p[84]) &&
                 0 == pa.field_c) {
                 th.field_i = 3;
                 pa.field_c = 32;
@@ -2071,7 +2071,7 @@ public final class wizardrun extends u {
             for (var5Lifetime2Lifetime1 = 0; var5Lifetime2Lifetime1 <= 2; var5Lifetime2Lifetime1++) {
               var4_intLifetime2Lifetime2 += 8;
               var6Lifetime2 = 176;
-              var3_ref_String = wh.field_l[var5Lifetime2Lifetime1];
+              var3_ref_String = NodeHashTableIterator.field_l[var5Lifetime2Lifetime1];
               ig.a(qc.field_E, var4_intLifetime2Lifetime2, (byte) -110, 44, var6Lifetime2, 436);
               var7Lifetime1 = 16776960;
               stackIn_651_0 = ~cd.field_c;
@@ -2085,7 +2085,7 @@ public final class wizardrun extends u {
                 !(pg.field_n >= var6Lifetime2 + var4_intLifetime2Lifetime2) &&
                 !(fi.field_B < 436)) {
                 if (sh.field_c != 0 ||
-                  hi.field_p[84]) {
+                  BufferedSocket.field_p[84]) {
                   cd.field_c = var5Lifetime2Lifetime1;
                 }
                 var7Lifetime1 = (var7Lifetime1 != 16711680) ? 16777215 : 16744576;
@@ -2105,7 +2105,7 @@ public final class wizardrun extends u {
               !(fi.field_B < 436) &&
               -1 == this.field_N) {
               if (sh.field_c != 0 ||
-                hi.field_p[84]) {
+                BufferedSocket.field_p[84]) {
                 sl.a(sf.field_h, sf.field_h, -128);
               }
               var4_intLifetime2Lifetime3 = 16777215;
@@ -2158,7 +2158,7 @@ public final class wizardrun extends u {
             } else {
               sf.field_h = hk.field_Y;
               if (sf.field_h == 10) {
-                da.a(7775, ql.field_c + qh.field_l * 6 + sg.field_f * 64);
+                GameApplet.a(7775, ql.field_c + qh.field_l * 6 + sg.field_f * 64);
                 ic.field_a = ic.field_a + (sg.field_f << 6);
                 me.field_f = me.field_f + (-6 + ql.field_c);
                 wg.field_b = wg.field_b - (6 * qh.field_l + 1);
@@ -2176,7 +2176,7 @@ public final class wizardrun extends u {
           }
         }
         if (this.field_I > 0 &&
-          da.field_e == null) {
+          GameApplet.field_e == null) {
           ed.c(0, 0, 640, 480, 0);
         }
         if (se.field_a > 0) {
@@ -2200,7 +2200,7 @@ public final class wizardrun extends u {
             !(88 <= pg.field_n) &&
             !(436 > fi.field_B)) {
             if (sh.field_c == 1 ||
-              hi.field_p[84]) {
+              BufferedSocket.field_p[84]) {
               pl.field_D = true;
             }
             var5Lifetime4 = 16777215;
@@ -2230,7 +2230,7 @@ public final class wizardrun extends u {
           }
         } else {
           ed.d(0, 0, 640, 480, 0, 128);
-          ed.c(-3 - pf.c((byte) -117) / 2 + 320, 240 - (lb.a((byte) 47) / 2 + 5), 6 + pf.c((byte) 84), 10 + lb.a((byte) 47), 0);
+          ed.c(-3 - IntrusiveDequeCursor.c((byte) -117) / 2 + 320, 240 - (lb.a((byte) 47) / 2 + 5), 6 + IntrusiveDequeCursor.c((byte) 84), 10 + lb.a((byte) 47), 0);
           of.a(72);
         }
         if (ke.field_w) {
@@ -2454,7 +2454,7 @@ public final class wizardrun extends u {
               qf.field_l = 0;
               ke.field_u.a(false);
               ie.field_l.a(false);
-              hi.field_a = -350;
+              BufferedSocket.field_a = -350;
               sf.field_h = 9;
               pl.field_A = 0;
               tb.a(0, true);
@@ -2515,29 +2515,29 @@ public final class wizardrun extends u {
             }
             while (ae.a(param0 ^ 706)) {
               if (vk.field_r != 13 &&
-                !hi.field_p[84]) {
+                !BufferedSocket.field_p[84]) {
                 continue;
               }
               pl.field_D = true;
             }
           } else {
-            if (hi.field_a >= 240) {
-              hi.field_a = hi.field_a - 8;
-              if (hi.field_a < 240) {
+            if (BufferedSocket.field_a >= 240) {
+              BufferedSocket.field_a = BufferedSocket.field_a - 8;
+              if (BufferedSocket.field_a < 240) {
                 if (qh.field_l == 0 &&
                   !pg.field_q &&
                   qh.field_g >= 0) {
-                  hi.field_a = 240;
+                  BufferedSocket.field_a = 240;
                 }
-                if (hi.field_p[84] ||
-                  hi.field_p[13] ||
+                if (BufferedSocket.field_p[84] ||
+                  BufferedSocket.field_p[13] ||
                   sh.field_c != 0) {
-                  hi.field_a = -10;
+                  BufferedSocket.field_a = -10;
                 }
               }
             } else {
-              if (hi.field_a > -1000) {
-                hi.field_a = hi.field_a - 8;
+              if (BufferedSocket.field_a > -1000) {
+                BufferedSocket.field_a = BufferedSocket.field_a - 8;
               }
             }
             if (uc.field_b.b((byte) 55) != null) {
@@ -2594,7 +2594,7 @@ public final class wizardrun extends u {
               }
             } else {
               if (sf.field_h == 0 &&
-                null == da.field_e &&
+                null == GameApplet.field_e &&
                 2 != wi.field_K) {
                 if (og.field_R.length > rc.field_a) {
                   rf.field_b = rf.field_b - 1;
@@ -2642,7 +2642,7 @@ public final class wizardrun extends u {
                   var2 = 1;
                 }
                 if (qh.field_g >= 0) {
-                  L45: {
+                  regionExit1: {
                     if (var2 != 0) {
                       si.field_h = -1;
                       var3 = 208;
@@ -2666,15 +2666,15 @@ public final class wizardrun extends u {
                         pg.field_n >= 144) {
                         if (sh.field_c == 1) {
                           this.a(-123, 2, si.field_h);
-                          break L45;
+                          break regionExit1;
                         }
                       } else {
                         if (w.field_c != 1) {
-                          break L45;
+                          break regionExit1;
                         }
                         this.a(54, 2, si.field_h);
                       }
-                      break L45;
+                      break regionExit1;
                     }
                     if ((2 == si.field_h ||
                       si.field_h == 3) && (pg.field_n > 144 &&
@@ -2713,8 +2713,8 @@ public final class wizardrun extends u {
                 }
               }
             }
-            if ((da.field_e == null ||
-              !da.field_e.field_p) &&
+            if ((GameApplet.field_e == null ||
+              !GameApplet.field_e.field_p) &&
               !this.field_P) {
               if (0 < se.field_a) {
                 se.field_a = se.field_a / 2;
@@ -2733,7 +2733,7 @@ public final class wizardrun extends u {
                 if (this.field_P &&
                   wi.field_K != 1) {
                   this.field_P = false;
-                  da.field_e = new ph();
+                  GameApplet.field_e = new ph();
                   rf.field_b = 0;
                   rc.field_a = 0;
                   return;
@@ -2742,7 +2742,7 @@ public final class wizardrun extends u {
                 if (sf.field_h == 2) {
                   th.field_g = null;
                 }
-                da.field_e = null;
+                GameApplet.field_e = null;
                 sf.field_h = 0;
               }
             }
@@ -2865,7 +2865,7 @@ public final class wizardrun extends u {
                     tc.field_l.field_f[var2 + var3 * 20] = 0;
                   }
                   if (vk.field_r == 43) {
-                    hi.field_c = hi.field_c + 1;
+                    BufferedSocket.field_c = BufferedSocket.field_c + 1;
                     ql.field_c = ql.field_c + 1;
                     if (ql.field_c == 5) {
                       ga.field_e = fb.field_a;
@@ -2874,7 +2874,7 @@ public final class wizardrun extends u {
                       }
                     }
                     if (ql.field_c >= 6) {
-                      hi.field_c = hi.field_c - ql.field_c;
+                      BufferedSocket.field_c = BufferedSocket.field_c - ql.field_c;
                       wg.field_b = wg.field_b + 6;
                       qh.field_l = qh.field_l + 1;
                       ql.field_c = 0;
@@ -2896,7 +2896,7 @@ public final class wizardrun extends u {
                     continue;
                   }
                   ql.field_c = ql.field_c - 1;
-                  hi.field_c = hi.field_c + 1;
+                  BufferedSocket.field_c = BufferedSocket.field_c + 1;
                   if (ql.field_c == 4) {
                     vk.a((byte) -59);
                   }
@@ -2922,43 +2922,43 @@ public final class wizardrun extends u {
               if (stackIn_323_0Lifetime1 != stackIn_323_1Lifetime1) {
                 field_D = (o[]) null;
               }
-              if (null != da.field_e) {
+              if (null != GameApplet.field_e) {
                 this.field_I = 5;
                 sf.field_h = 3;
                 while (ae.a(-120)) {
                   if (vk.field_r == 13) {
-                    da.field_e.field_p = true;
+                    GameApplet.field_e.field_p = true;
                     continue;
                   }
                   if (vk.field_r == 102) {
-                    if (da.field_e.field_a == 2) {
+                    if (GameApplet.field_e.field_a == 2) {
                       this.a(19, -3, 2);
                     }
-                    if (da.field_e.field_a != 3) {
+                    if (GameApplet.field_e.field_a != 3) {
                       continue;
                     }
                     this.a(54, -3, 3);
                     continue;
                   }
                   if (vk.field_r != 103) {
-                    if (null == da.field_e) {
+                    if (null == GameApplet.field_e) {
                       continue;
                     }
-                    da.field_e.b(0);
+                    GameApplet.field_e.b(0);
                     continue;
                   }
-                  if (da.field_e.field_a == 2) {
+                  if (GameApplet.field_e.field_a == 2) {
                     this.a(-127, 3, 2);
                   }
-                  if (da.field_e.field_a != 3) {
+                  if (GameApplet.field_e.field_a != 3) {
                     continue;
                   }
                   this.a(93, 3, 3);
                 }
-                if (da.field_e != null) {
-                  da.field_e.a(param0 ^ -642);
+                if (GameApplet.field_e != null) {
+                  GameApplet.field_e.a(param0 ^ -642);
                 }
-                if (null != da.field_e) {
+                if (null != GameApplet.field_e) {
                   return;
                 }
                 sf.field_h = 0;
@@ -3111,19 +3111,19 @@ public final class wizardrun extends u {
                   if (tj.field_I >= 5) {
                     continue;
                   }
-                  hi.field_c = hi.field_c + qh.field_g;
+                  BufferedSocket.field_c = BufferedSocket.field_c + qh.field_g;
                   qh.field_g = 0;
                   nk.field_T = 0;
                   od.field_k = 0;
                   if (0 >= qh.field_l) {
-                    gd.field_b = false;
+                    DelegatingCanvas.field_b = false;
                   } else {
-                    gd.field_b = true;
+                    DelegatingCanvas.field_b = true;
                     me.field_f = me.field_f + 5;
                     qh.field_g = 5;
                   }
                   tj.field_I = 5;
-                  if ((4 & ti.field_a) > 0) {
+                  if ((4 & IsaacRandom.field_a) > 0) {
                     nk.field_T = 400;
                   }
                   sj.field_l = 0;
@@ -3135,7 +3135,7 @@ public final class wizardrun extends u {
                   wg.field_e = bk.field_b;
                 }
                 if (sf.field_h == 2) {
-                  wg.field_e = wh.field_d;
+                  wg.field_e = NodeHashTableIterator.field_d;
                 }
                 if (5 == sf.field_h) {
                   wg.field_e = l.field_M;
@@ -3152,21 +3152,21 @@ public final class wizardrun extends u {
                   if (pl.field_A < qh.field_l &&
                     qh.field_l > 1) {
                     wg.field_b = wg.field_b - 3 * qh.field_l;
-                    hi.field_c = hi.field_c - 3 * qh.field_l;
+                    BufferedSocket.field_c = BufferedSocket.field_c - 3 * qh.field_l;
                     qh.field_l = 0;
                   }
                   wi.field_K = 2;
                   fa.field_a = null;
-                  hi.field_c = hi.field_c - ql.field_c;
+                  BufferedSocket.field_c = BufferedSocket.field_c - ql.field_c;
                   ql.field_c = 0;
                   vk.a((byte) -43);
                   ni.b(param0 ^ 8170);
                   if (qh.field_l == 0 &&
                     ql.field_c == 0) {
-                    hi.field_a = 580;
+                    BufferedSocket.field_a = 580;
                     bb.field_j = ef.field_F;
                   } else {
-                    hi.field_a = 580;
+                    BufferedSocket.field_a = 580;
                     bb.field_j = wg.field_f + (1 + qh.field_l) + eh.field_i + (1 + ql.field_c);
                   }
                   var9 = new ob();
@@ -3180,7 +3180,7 @@ public final class wizardrun extends u {
                   ii.field_e[od.field_k].a(9147, 0, var13);
                   od.field_k = od.field_k + 1;
                   vj.c(param0 - 762);
-                  da.field_g = false;
+                  GameApplet.field_g = false;
                   if (qh.field_l == 0) {
                     this.field_Q = 0;
                     pg.field_q = true;
@@ -3188,7 +3188,7 @@ public final class wizardrun extends u {
                   } else {
                     pg.field_q = false;
                   }
-                  gd.field_b = false;
+                  DelegatingCanvas.field_b = false;
                   ia.field_n = 0;
                   cd.field_e = 100;
                   ol.field_e = false;
@@ -3279,36 +3279,36 @@ public final class wizardrun extends u {
                 stackIn_540_0Lifetime1 = dd.field_m;
                 stackIn_540_1Lifetime1 = 2;
                 if (stackIn_540_0Lifetime1 >= stackIn_540_1Lifetime1) {
-                  if (hi.field_p[66]) {
+                  if (BufferedSocket.field_p[66]) {
                     ke.field_w = true;
                   }
-                  if (hi.field_p[67]) {
+                  if (BufferedSocket.field_p[67]) {
                     ke.field_w = false;
                   }
                   if (ke.field_w) {
                     return;
                   }
-                  if (hi.field_p[55]) {
+                  if (BufferedSocket.field_p[55]) {
                     tc.field_j = true;
                     tj.field_I = 5;
                     pg.field_q = false;
                     ql.field_c = 4;
                   }
-                  if (hi.field_p[40]) {
+                  if (BufferedSocket.field_p[40]) {
                     pg.field_q = false;
                     tc.field_j = true;
                     tj.field_I = 5;
                   }
-                  if (hi.field_p[39] &&
+                  if (BufferedSocket.field_p[39] &&
                     5 > qh.field_l) {
                     pg.field_q = false;
                     tj.field_I = 5;
                     ql.field_c = 6;
                     tc.field_j = true;
                   }
-                  if (!hi.field_p[68]) {
+                  if (!BufferedSocket.field_p[68]) {
                   }
-                  if (hi.field_p[56]) {
+                  if (BufferedSocket.field_p[56]) {
                     if (qh.field_g > 50) {
                       qh.field_g = 5;
                       tc.field_j = true;
@@ -3317,7 +3317,7 @@ public final class wizardrun extends u {
                       tc.field_j = true;
                     }
                   }
-                  if (hi.field_p[38]) {
+                  if (BufferedSocket.field_p[38]) {
                     tc.field_j = false;
                     sg.field_f = (int)(Math.random() * 1000.0 + 500.0);
                   }
@@ -3416,7 +3416,7 @@ public final class wizardrun extends u {
                     if (this.field_Q == 75 &&
                       qh.field_g > 0) {
                       ic.field_a = ic.field_a - 64000;
-                      hi.field_c = hi.field_c + 1;
+                      BufferedSocket.field_c = BufferedSocket.field_c + 1;
                       qh.field_g = qh.field_g - 1;
                       sg.field_f = sg.field_f + 1000;
                       var2 = qh.field_g % 5;
@@ -3451,7 +3451,7 @@ public final class wizardrun extends u {
                     fieldTemp$16 = this.field_Q;
                     this.field_Q = this.field_Q + 1;
                     if (200 < fieldTemp$16) {
-                      hi.field_c = hi.field_c + (qh.field_g + 1);
+                      BufferedSocket.field_c = BufferedSocket.field_c + (qh.field_g + 1);
                       me.field_f = me.field_f - 36;
                       ic.field_a = ic.field_a + (ql.field_c + 6 * qh.field_l);
                       qh.field_g = -1;
@@ -3565,7 +3565,7 @@ public final class wizardrun extends u {
                   }
                   if (this.field_R == 10) {
                     pg.field_q = false;
-                    hi.field_a = 580;
+                    BufferedSocket.field_a = 580;
                     bb.field_j = l.field_Q;
                   }
                   for (var2 = 0; od.field_k > var2; var2++) {
@@ -3596,10 +3596,10 @@ public final class wizardrun extends u {
                       if (tl.field_e) {
                         mi.field_D.a(true, -127, ga.field_e);
                       }
-                      da.field_g = false;
+                      GameApplet.field_g = false;
                     }
                     if (ql.field_c >= 6) {
-                      if (!da.field_g) {
+                      if (!GameApplet.field_g) {
                         if (qh.field_l == 0) {
                           ql.a(1, 250, 5);
                         }
@@ -3616,7 +3616,7 @@ public final class wizardrun extends u {
                           ql.a(1, 246, 9);
                         }
                       }
-                      if (!gd.field_b) {
+                      if (!DelegatingCanvas.field_b) {
                         if (2 == qh.field_l) {
                           ql.a(param0 ^ 641, 252, 3);
                         }
@@ -3627,7 +3627,7 @@ public final class wizardrun extends u {
                       if (qh.field_l == 0) {
                         ql.a(1, 253, 2);
                       }
-                      hi.field_c = hi.field_c - (ql.field_c - 6);
+                      BufferedSocket.field_c = BufferedSocket.field_c - (ql.field_c - 6);
                       qh.field_l = qh.field_l + 1;
                       ql.field_c = 0;
                       if (pl.field_A < qh.field_l) {
@@ -3638,7 +3638,7 @@ public final class wizardrun extends u {
                         vk.a((byte) -71);
                       }
                     }
-                    hi.field_a = 580;
+                    BufferedSocket.field_a = 580;
                     bb.field_j = wg.field_f + (qh.field_l + 1) + eh.field_i + (1 + ql.field_c);
                     if (-1 < qh.field_g) {
                       if (qh.field_l < 6) {
@@ -3664,7 +3664,7 @@ public final class wizardrun extends u {
                   }
                 }
                 if (qh.field_g < 0 &&
-                  hi.field_a < -350) {
+                  BufferedSocket.field_a < -350) {
                   tj.field_I = 100;
                   this.s(208);
                 }
@@ -3683,7 +3683,7 @@ public final class wizardrun extends u {
                         continue;
                       }
                       bb.field_j = cc.field_b;
-                      hi.field_a = 580;
+                      BufferedSocket.field_a = 580;
                       pg.field_q = false;
                       if (tl.field_e) {
                         mi.field_D.a(true, -93, ga.field_e);
@@ -3700,7 +3700,7 @@ public final class wizardrun extends u {
                     }
                     pg.field_q = false;
                     me.field_f = me.field_f - qh.field_g;
-                    hi.field_a = 580;
+                    BufferedSocket.field_a = 580;
                     wg.field_b = wg.field_b - 5;
                     qh.field_g = 5;
                     bb.field_j = cc.field_b;
@@ -3752,7 +3752,7 @@ public final class wizardrun extends u {
                       }
                       return;
                     }
-                    stackIn_789_0Lifetime1 = hi.field_a;
+                    stackIn_789_0Lifetime1 = BufferedSocket.field_a;
                     stackIn_789_1Lifetime1 = -350;
                     if (stackIn_789_0Lifetime1 <= stackIn_789_1Lifetime1) {
                       if (nk.field_T < 300 &&
@@ -3760,7 +3760,7 @@ public final class wizardrun extends u {
                         sj.field_l = sj.field_l + 1;
                       }
                       uc.field_g = uc.field_g + 1;
-                      if (hi.field_p[96]) {
+                      if (BufferedSocket.field_p[96]) {
                         sc.field_m.field_b = -1;
                         if (nk.field_T < 25) {
                           nk.field_T = 50;
@@ -3771,7 +3771,7 @@ public final class wizardrun extends u {
                       if (uc.field_g > 40) {
                         uc.field_g = uc.field_g - 40;
                       }
-                      if (hi.field_p[97]) {
+                      if (BufferedSocket.field_p[97]) {
                         if (nk.field_T < 25) {
                           nk.field_T = 50;
                           nk.field_T = nk.field_T + 1;
@@ -3779,8 +3779,8 @@ public final class wizardrun extends u {
                         }
                         sc.field_m.field_b = 1;
                       }
-                      if (hi.field_p[nf.field_d] ||
-                        hi.field_p[98]) {
+                      if (BufferedSocket.field_p[nf.field_d] ||
+                        BufferedSocket.field_p[98]) {
                         sc.field_m.field_f = true;
                         if (nk.field_T >= 100 &&
                           nk.field_T < 150) {
@@ -3788,8 +3788,8 @@ public final class wizardrun extends u {
                           nk.field_T = 250;
                         }
                       }
-                      if (hi.field_p[hh.field_S] ||
-                        hi.field_p[83]) {
+                      if (BufferedSocket.field_p[hh.field_S] ||
+                        BufferedSocket.field_p[83]) {
                         sc.field_m.field_d = true;
                         if (50 <= nk.field_T &&
                           nk.field_T < 100) {
@@ -3809,14 +3809,14 @@ public final class wizardrun extends u {
                         44 != ii.field_e[var2].field_B) {
                         var3 = 1;
                       }
-                      if (!(hi.field_a > -350) ||
+                      if (!(BufferedSocket.field_a > -350) ||
                         !(0 <= qh.field_g)) {
                         ii.field_e[var2].a((byte) -123, tc.field_l);
                       }
                       var2++;
                     }
                     if (il.field_e) {
-                      if (0 >= hi.field_a) {
+                      if (0 >= BufferedSocket.field_a) {
                         ge.field_f = ge.field_f + 1;
                       }
                       if (ql.field_c == 5 &&
@@ -3825,7 +3825,7 @@ public final class wizardrun extends u {
                         ge.field_f == 370) {
                         ge.field_f = ge.field_f + 1;
                         bb.field_j = i.field_d;
-                        hi.field_a = 580;
+                        BufferedSocket.field_a = 580;
                       }
                       if (375 < ge.field_f) {
                         var4 = od.field_k;
@@ -3996,15 +3996,15 @@ public final class wizardrun extends u {
         int var3 = field_H;
         this.a(11, false, 8, 10, false, 9, param0, 0);
         c.a(22050, false, 10);
-        wh.field_k = c.a(ld.field_g, (java.awt.Component) ((Object) field_G), 0, 512);
+        NodeHashTableIterator.field_k = c.a(ld.field_g, (java.awt.Component) ((Object) field_G), 0, 512);
         pc.field_d = c.a(ld.field_g, (java.awt.Component) ((Object) field_G), 1, 22050);
         tl.field_a = new vi();
-        wh.field_k.a(tl.field_a);
+        NodeHashTableIterator.field_k.a(tl.field_a);
         mi.field_D = new fl();
         mi.field_D.a(128, 9, (byte) 108);
         pc.field_d.a(mi.field_D);
         hg.field_a = 500;
-        hi.field_c = hi.field_c - sg.field_f * 64;
+        BufferedSocket.field_c = BufferedSocket.field_c - sg.field_f * 64;
         wg.field_b = wg.field_b - ql.field_c;
         me.field_f = me.field_f + qh.field_l * 6;
         qh.field_l = 0;
@@ -4055,8 +4055,8 @@ public final class wizardrun extends u {
         if (ki.field_E != null) {
           di.a((byte) 60);
         }
-        if (wh.field_k != null) {
-          wh.field_k.f();
+        if (NodeHashTableIterator.field_k != null) {
+          NodeHashTableIterator.field_k.f();
         }
         if (null != pc.field_d) {
           pc.field_d.f();
@@ -4074,9 +4074,9 @@ public final class wizardrun extends u {
         }
         wizardrun.c(true);
         ra.c(114);
-        oi.e(param0 - 6962);
+        IntrusiveDeque.e(param0 - 6962);
         lk.a(param0 ^ -7070);
-        oj.a((byte) 100);
+        GameKeyHandler.a((byte) 100);
         mk.a(-7241);
         mj.a(13214);
         oa.a(true);
@@ -4087,15 +4087,15 @@ public final class wizardrun extends u {
         id.a(0);
         u.n(-18084);
         sb.a(param0 - 6516);
-        da.b(113);
+        GameApplet.b(113);
         ud.a(240);
-        tf.b(4286);
-        ta.b(param0 ^ -7070);
+        MouseInputHandler.b(4286);
+        MouseWheelInput.b(param0 ^ -7070);
         ed.a();
         kl.a(param0 + 15706);
         t.a((byte) 102);
         rl.b(param0 ^ -32304);
-        va.g((byte) 118);
+        PacketBuffer.g((byte) 118);
         d.a(-5309);
         me.a((byte) -31);
         bl.a(false);
@@ -4118,7 +4118,7 @@ public final class wizardrun extends u {
         cd.a(false);
         ad.a(-111);
         si.a((byte) -92);
-        hi.b(param0 - 37603);
+        BufferedSocket.b(param0 - 37603);
         fl.c(91);
         ol.a(false);
         eg.a(param0 - 7133);
@@ -4127,7 +4127,7 @@ public final class wizardrun extends u {
         tg.a(true);
         c.d();
         ph.e(0);
-        wl.b((byte) 81);
+        IntrusiveNode.b((byte) 81);
         gi.a(false);
         ne.c(-1);
         bd.c(1);
@@ -4163,7 +4163,7 @@ public final class wizardrun extends u {
         pc.b(1);
         hl.a(true);
         nl.d(110);
-        rk.a(param0 - 7070);
+        DualLinkNode.a(param0 - 7070);
         jf.a(false);
         ge.a(true);
         ee.d(-21880);
@@ -4183,7 +4183,7 @@ public final class wizardrun extends u {
         fh.b((byte) -8);
         lc.a(param0 ^ -7105);
         ml.e(-86);
-        ti.c((byte) -80);
+        IsaacRandom.c((byte) -80);
         lj.a((byte) -60);
         rd.a((byte) -63);
         ll.a(param0 - 3055);
@@ -4192,7 +4192,7 @@ public final class wizardrun extends u {
         qa.b(param0 - 17128);
         wb.a(param0 ^ -7141);
         eh.b(param0 - 7067);
-        pf.a(91);
+        IntrusiveDequeCursor.a(91);
         ub.f((byte) 31);
         mi.a(param0 ^ -7071);
         tj.d(true);
@@ -4241,10 +4241,10 @@ public final class wizardrun extends u {
         ql.b(110);
         fb.a(-106);
         dl.a(param0 ^ 12465);
-        ib.b((byte) -64);
+        SocketConnector.b((byte) -64);
         hf.a(3543);
         ia.b(false);
-        cg.d(0);
+        ImageProducerRasterBuffer.d(0);
         a.a(-331851056);
         rb.a(-1926289535);
         qk.a((byte) 58);
@@ -4262,12 +4262,12 @@ public final class wizardrun extends u {
         fc.a(param0 ^ 7063);
         kh.c(0);
         bh.a((byte) 21);
-        gj.a((byte) 94);
-        de.a((byte) 5);
+        IterableNodeHashTable.a((byte) 94);
+        SecondaryNodeDeque.a((byte) 5);
         ig.a((byte) -110);
         ag.f(param0 - 6950);
-        ea.b(4);
-        wh.a(339);
+        ProxySocketConnector.b(4);
+        NodeHashTableIterator.a(339);
         vf.b(false);
         te.a(10615);
         pg.e((byte) -73);

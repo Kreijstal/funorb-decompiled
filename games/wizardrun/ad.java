@@ -7,7 +7,7 @@ final class ad {
     private java.math.BigInteger field_g;
     private cd field_b;
     private fh[] field_i;
-    private va field_h;
+    private PacketBuffer field_h;
     private na field_a;
     private fi field_f;
     static java.math.BigInteger field_d;
@@ -16,7 +16,7 @@ final class ad {
         if (param3 != 72) {
           return -89;
         }
-        return tf.a(-20232);
+        return MouseInputHandler.a(-20232);
     }
 
     final void a(byte param0) {
@@ -54,7 +54,7 @@ final class ad {
         byte[] var5;
         java.math.BigInteger var7_ref_java_math_BigInteger;
         int var8;
-        va var10;
+        PacketBuffer var10;
         byte[] var11;
         java.math.BigInteger var12;
         byte[] var13;
@@ -72,11 +72,11 @@ final class ad {
         if (this.field_f.field_s) {
           return false;
         }
-        var10 = new va(this.field_f.d(95));
-        var10.field_m = 5;
+        var10 = new PacketBuffer(this.field_f.d(95));
+        var10.position = 5;
         var3 = var10.f(255);
-        var10.field_m = var10.field_m + 72 * var3;
-        var13 = new byte[var10.field_k.length - var10.field_m];
+        var10.position = var10.position + 72 * var3;
+        var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
         var10.a(true, var13.length, var13, 0);
@@ -91,7 +91,7 @@ final class ad {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = id.a(var10.field_k, 0, -5 + (-var13.length + var10.field_m), 5);
+        var15 = id.a(var10.payload, 0, -5 + (-var13.length + var10.position), 5);
         if (param0 != -17) {
           ad.a(-98);
         }
@@ -129,7 +129,7 @@ final class ad {
               stackIn_8_0 = this.field_i[param3];
               return stackIn_8_0;
             }
-            this.field_h.field_m = param1 * param3 + 6;
+            this.field_h.position = param1 * param3 + 6;
             var6_int = this.field_h.i(255);
             var7 = this.field_h.i(param1 + 183);
             var13 = new byte[64];

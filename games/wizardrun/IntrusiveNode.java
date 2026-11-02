@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class wl {
+class IntrusiveNode {
     static String field_d;
-    wl field_b;
-    long field_e;
+    IntrusiveNode next;
+    long key;
     static String field_a;
-    wl field_c;
+    IntrusiveNode previous;
     static byte[][] field_g;
     static jd field_f;
     static String[] field_h;
 
-    final boolean c(byte param0) {
+    final boolean isLinked(byte param0) {
         int var2 = 124 % ((18 - param0) / 36);
-        if (null != this.field_c) {
+        if (null != this.previous) {
           return true;
         }
         return false;
@@ -21,7 +21,7 @@ class wl {
 
     final static md b(int param0) {
         if (param0 != 250) {
-          wl.b(58);
+          IntrusiveNode.b(58);
           return (md) ((Object) new ia());
         }
         return (md) ((Object) new ia());
@@ -85,18 +85,18 @@ class wl {
     }
 
     final void a(boolean param0) {
-        if (this.field_c == null) {
+        if (this.previous == null) {
           return;
         }
-        this.field_c.field_b = this.field_b;
-        this.field_b.field_c = this.field_c;
-        this.field_b = null;
+        this.previous.next = this.next;
+        this.next.previous = this.previous;
+        this.next = null;
         if (!param0) {
-          this.field_c = null;
+          this.previous = null;
           return;
         }
         field_a = (String) null;
-        this.field_c = null;
+        this.previous = null;
     }
 
     public static void b(byte param0) {
@@ -108,7 +108,7 @@ class wl {
           field_g = (byte[][]) null;
           return;
         }
-        wl.b(-85);
+        IntrusiveNode.b(-85);
         field_a = null;
         field_d = null;
         field_g = (byte[][]) null;

@@ -161,11 +161,11 @@ abstract class ge {
           this.a(pg.field_n, var2Lifetime3, -this.field_d + (fi.field_B - this.field_c * var2Lifetime3), sh.field_c, true, false);
           return;
         }
-        var2Lifetime1 = this.a(tf.field_e, param0 - 57, dh.field_b);
+        var2Lifetime1 = this.a(MouseInputHandler.field_e, param0 - 57, dh.field_b);
         this.field_a = var2Lifetime1;
         if (var2Lifetime1 != -1) {
           this.field_m = true;
-          this.a(tf.field_e, var2Lifetime1, -(this.field_c * var2Lifetime1) + dh.field_b - this.field_d, w.field_c, false, false);
+          this.a(MouseInputHandler.field_e, var2Lifetime1, -(this.field_c * var2Lifetime1) + dh.field_b - this.field_d, w.field_c, false, false);
           return;
         }
         this.field_m = false;

@@ -15,7 +15,7 @@ final class ci {
         }
     }
 
-    final static void a(int param0, va param1) {
+    final static void a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;

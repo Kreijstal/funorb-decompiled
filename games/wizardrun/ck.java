@@ -72,7 +72,7 @@ final class ck {
         }
         if (wizardrun.field_G == null) {
           td.b(4);
-          wh.b((byte) -104);
+          NodeHashTableIterator.b((byte) -104);
           jl.b(1);
           if (ne.b(22845)) {
             n.field_b.c((byte) 88, 1);
@@ -83,7 +83,7 @@ final class ck {
         }
         ka.a(wizardrun.field_G, 8053);
         td.b(4);
-        wh.b((byte) -104);
+        NodeHashTableIterator.b((byte) -104);
         jl.b(1);
         if (ne.b(22845)) {
           n.field_b.c((byte) 88, 1);

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ub extends wl {
+class ub extends IntrusiveNode {
     static boolean field_m;
     int field_l;
     int field_i;
@@ -430,7 +430,7 @@ class ub extends wl {
         int var7 = 0;
         var7 = wizardrun.field_H;
         try {
-          if (wh.field_j != hi.field_l) {
+          if (NodeHashTableIterator.field_j != BufferedSocket.field_l) {
             return false;
           }
           if (param0 != 0) {
@@ -443,18 +443,18 @@ class ub extends wl {
             if (var4_ref_hb != null &&
               var2_long > var4_ref_hb.field_p) {
               var4_ref_hb.a(false);
-              gd.field_c = var4_ref_hb.field_l.length;
-              nk.field_N.field_m = 0;
+              DelegatingCanvas.field_c = var4_ref_hb.field_l.length;
+              nk.field_N.position = 0;
               var5_int = 0;
               do {
-                if (!(gd.field_c > var5_int)) {
+                if (!(DelegatingCanvas.field_c > var5_int)) {
                   l.field_P = wizardrun.field_E;
                   wizardrun.field_E = me.field_c;
                   me.field_c = ra.field_k;
                   ra.field_k = var4_ref_hb.field_j;
                   break;
                 }
-                nk.field_N.field_k[var5_int] = var4_ref_hb.field_l[var5_int];
+                nk.field_N.payload[var5_int] = var4_ref_hb.field_l[var5_int];
                 var5_int++;
               } while (var7 == 0);
               return true;
@@ -463,7 +463,7 @@ class ub extends wl {
           while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (p.field_W < 0) {
-              nk.field_N.field_m = 0;
+              nk.field_N.position = 0;
               stackIn_38_0 = hc.a(1, param0 ^ -28266);
               decompiledFrameRemainder0 = (var7 == 0);
               if (decompiledFrameRemainder0) {
@@ -471,8 +471,8 @@ class ub extends wl {
                   return false;
                 }
                 p.field_W = nk.field_N.m(45);
-                nk.field_N.field_m = 0;
-                gd.field_c = param1[p.field_W];
+                nk.field_N.position = 0;
+                DelegatingCanvas.field_c = param1[p.field_W];
               }
             }
             if (decompiledFrameRemainder0) {
@@ -491,20 +491,20 @@ class ub extends wl {
             }
             var4 = ge.field_j;
             if (0.0 != dc.field_j) {
-              var4 = (int)((double)var4 + oi.field_c.nextGaussian() * dc.field_j);
+              var4 = (int)((double)var4 + IntrusiveDeque.field_c.nextGaussian() * dc.field_j);
               if (0 > var4) {
                 var4 = 0;
               }
             }
-            var5 = new hb((long)var4 + var2_long, p.field_W, new byte[gd.field_c]);
+            var5 = new hb((long)var4 + var2_long, p.field_W, new byte[DelegatingCanvas.field_c]);
             var6 = 0;
             do {
-              if (!(var6 < gd.field_c)) {
+              if (!(var6 < DelegatingCanvas.field_c)) {
                 wg.field_c.a(var5, false);
                 p.field_W = -1;
                 break;
               }
-              var5.field_l[var6] = nk.field_N.field_k[var6];
+              var5.field_l[var6] = nk.field_N.payload[var6];
               var6++;
             } while (var7 == 0);
           }
@@ -649,7 +649,7 @@ class ub extends wl {
               this.a(this, -23023, param2, gi.field_c, fi.field_B, param3, pg.field_n);
             }
             if (w.field_c != 0) {
-              if (!this.a(param2, (byte) 93, tf.field_e, param3, w.field_c, dh.field_b, this)) {
+              if (!this.a(param2, (byte) 93, MouseInputHandler.field_e, param3, w.field_c, dh.field_b, this)) {
                 if (var5_int != 0) {
                   this.b(false);
                   if (var7 != 0) {
@@ -835,7 +835,7 @@ class ub extends wl {
         byte[] var2Lifetime101;
         byte[] var2Lifetime102;
         try {
-          va.field_n = param1;
+          PacketBuffer.field_n = param1;
           var2 = uf.a("achievement_names,0", 107);
           if (null != var2) {
             nl.field_t[0] = nf.a((byte) 100, var2);
@@ -958,7 +958,7 @@ class ub extends wl {
           }
           var2Lifetime30 = uf.a("holdtocharge", 118);
           if (var2Lifetime30 != null) {
-            oi.field_d = nf.a((byte) 120, var2Lifetime30);
+            IntrusiveDeque.field_d = nf.a((byte) 120, var2Lifetime30);
           }
           var2Lifetime31 = uf.a("firestars", 111);
           if (var2Lifetime31 != null) {
@@ -1070,7 +1070,7 @@ class ub extends wl {
           }
           var2Lifetime58 = uf.a("fallfromabove", 120);
           if (var2Lifetime58 != null) {
-            ta.field_f = nf.a((byte) 125, var2Lifetime58);
+            MouseWheelInput.field_f = nf.a((byte) 125, var2Lifetime58);
           }
           var2Lifetime59 = uf.a("jumpwithz", 125);
           if (var2Lifetime59 != null) {
@@ -1149,7 +1149,7 @@ class ub extends wl {
           }
           var2Lifetime77 = uf.a("levelonly", 121);
           if (var2Lifetime77 != null) {
-            oj.field_a = nf.a((byte) 117, var2Lifetime77);
+            GameKeyHandler.field_a = nf.a((byte) 117, var2Lifetime77);
           }
           var2Lifetime78 = uf.a("levelnotyet", 110);
           if (var2Lifetime78 != null) {
@@ -1169,7 +1169,7 @@ class ub extends wl {
           }
           var2Lifetime82 = uf.a("thetro", 109);
           if (var2Lifetime82 != null) {
-            de.field_c = nf.a((byte) 99, var2Lifetime82);
+            SecondaryNodeDeque.field_c = nf.a((byte) 99, var2Lifetime82);
           }
           var2Lifetime83 = uf.a("thepir", 109);
           if (null != var2Lifetime83) {
@@ -1189,7 +1189,7 @@ class ub extends wl {
           }
           var2Lifetime87 = uf.a("scorecolon", 115);
           if (var2Lifetime87 != null) {
-            tf.field_d = nf.a((byte) 111, var2Lifetime87);
+            MouseInputHandler.field_d = nf.a((byte) 111, var2Lifetime87);
           }
           var2Lifetime88 = uf.a("livescolon", 119);
           if (var2Lifetime88 != null) {
@@ -1251,7 +1251,7 @@ class ub extends wl {
           if (null != var2Lifetime102) {
             nf.field_d = var2Lifetime102[0] & 255;
           }
-          va.field_n = null;
+          PacketBuffer.field_n = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

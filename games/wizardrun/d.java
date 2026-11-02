@@ -23,7 +23,7 @@ final class d {
             ee.field_r = fi.field_B;
           }
           boolean decompiledFrameRemainder0 = true;
-          gj.field_b = gj.field_b + 1;
+          IterableNodeHashTable.field_b = IterableNodeHashTable.field_b + 1;
           if (param0 != null) {
             decompiledFrameRemainder0 = !(param0.equals(vb.field_I));
           } else {
@@ -31,8 +31,8 @@ final class d {
           }
           if (decompiledFrameRemainder0) {
             if (!ol.field_b) {
-              if (jc.field_I <= gj.field_b) {
-                stackIn_16_0 = (jc.field_I + ll.field_o > gj.field_b) ? 1 : 0;
+              if (jc.field_I <= IterableNodeHashTable.field_b) {
+                stackIn_16_0 = (jc.field_I + ll.field_o > IterableNodeHashTable.field_b) ? 1 : 0;
               } else {
                 stackIn_16_0 = 0;
               }
@@ -41,15 +41,15 @@ final class d {
             }
             var2_int = stackIn_16_0;
             if (param0 == null) {
-              gj.field_b = 0;
+              IterableNodeHashTable.field_b = 0;
             } else {
               if (ol.field_b) {
-                gj.field_b = jc.field_I;
+                IterableNodeHashTable.field_b = jc.field_I;
               } else {
                 if (var2_int == 0) {
-                  gj.field_b = 0;
+                  IterableNodeHashTable.field_b = 0;
                 } else {
-                  gj.field_b = jc.field_I;
+                  IterableNodeHashTable.field_b = jc.field_I;
                 }
               }
             }
@@ -64,11 +64,11 @@ final class d {
             ag.field_u = ee.field_r;
           }
           if (!ol.field_b &&
-            jc.field_I > gj.field_b &&
+            jc.field_I > IterableNodeHashTable.field_b &&
             ih.field_a) {
             ag.field_u = ee.field_r;
             uc.field_a = og.field_O;
-            gj.field_b = 0;
+            IterableNodeHashTable.field_b = 0;
           }
           vb.field_I = param0;
           ee.field_r = -1;
@@ -77,9 +77,9 @@ final class d {
             d.a(false, 'b');
           }
           if (ol.field_b &&
-            q.field_b == gj.field_b) {
+            q.field_b == IterableNodeHashTable.field_b) {
             ol.field_b = false;
-            gj.field_b = 0;
+            IterableNodeHashTable.field_b = 0;
             return;
           }
           return;

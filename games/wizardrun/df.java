@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class df {
-    static oi field_c;
+    static IntrusiveDeque field_c;
     int field_h;
     int[] field_f;
     int field_d;
@@ -152,14 +152,14 @@ abstract class df {
             pj.field_M.b(param0 + 17818) &&
             pj.field_M.a((byte) 29, "benefits")) {
             ab.field_c = vg.a(15, "headline", qk.field_j, "benefits");
-            ta.field_b = vg.a(15, "blurbpane", qk.field_j, "benefits");
+            MouseWheelInput.field_b = vg.a(15, "blurbpane", qk.field_j, "benefits");
             mj.field_b = vg.a(15, "button", qk.field_j, "benefits");
             ei.field_l = vg.a(15, "signup_text", qk.field_j, "benefits");
             ae.field_c = vg.a(15, "menu_text", qk.field_j, "benefits");
             ef.field_H = vg.a(15, "button_frame", qk.field_j, "benefits");
             ra.field_p = vg.a(param0 + 13, "arrow", qk.field_j, "benefits");
-            v.field_b = (vd) ((Object) ti.a(800863586, "benefits", qk.field_j, "large_font", pj.field_M));
-            bk.field_a = (vd) ((Object) ti.a(800863586, "benefits", qk.field_j, "small_font", pj.field_M));
+            v.field_b = (vd) ((Object) IsaacRandom.a(800863586, "benefits", qk.field_j, "large_font", pj.field_M));
+            bk.field_a = (vd) ((Object) IsaacRandom.a(800863586, "benefits", qk.field_j, "small_font", pj.field_M));
             var27 = ed.field_k;
             var2 = ed.field_h;
             var3 = ed.field_d;
@@ -169,7 +169,7 @@ abstract class df {
             ra.field_p.e(2, 2, ug.field_H);
             oh.a(var11.field_p, var11, 0, var11.field_z, 2, (byte) 45, 0, 1);
             ra.field_p = var11;
-            pf.field_b = ra.field_p.c();
+            IntrusiveDequeCursor.field_b = ra.field_p.c();
             var12 = new o(195, 221);
             var6 = var12.field_z / 2;
             var12.b();
@@ -180,8 +180,8 @@ abstract class df {
             v.field_b.b(jg.field_p, var6, 180, 16777215, -1);
             bk.field_a.b(ra.field_i, var6, 200, 16777215, -1);
             oh.a(var12.field_p, var12, 0, var12.field_z, 3, (byte) 82, 0, 1);
-            ta.field_b.b();
-            var12.e(18 - ta.field_b.field_u, -ta.field_b.field_v + 241);
+            MouseWheelInput.field_b.b();
+            var12.e(18 - MouseWheelInput.field_b.field_u, -MouseWheelInput.field_b.field_v + 241);
             for (var7 = 0; nl.field_w.length > var7; var7++) {
               dc.field_s[var7].b();
               bk.field_a.a(nl.field_w[var7], 3, 3, dc.field_s[var7].field_z - 6, -6 + dc.field_s[var7].field_p, ug.field_H, -1, 1, 1, bk.field_a.field_B + bk.field_a.field_M);
@@ -209,9 +209,9 @@ abstract class df {
             var3Lifetime1 = ed.field_d;
             ed.b(ld.field_b);
             var14 = di.a(new String[]{uc.field_d[bb.field_k]}, (byte) 49, si.field_b);
-            var5 = v.field_b.c(var14, ta.field_a);
-            var6Lifetime1 = v.field_b.a(var14, ta.field_a, v.field_b.field_B + v.field_b.field_M);
-            var7Lifetime1 = (ta.field_a - var5) / 2 + jg.field_m;
+            var5 = v.field_b.c(var14, MouseWheelInput.field_a);
+            var6Lifetime1 = v.field_b.a(var14, MouseWheelInput.field_a, v.field_b.field_B + v.field_b.field_M);
+            var7Lifetime1 = (MouseWheelInput.field_a - var5) / 2 + jg.field_m;
             var7Lifetime1 -= 3;
             var8 = cb.field_a + (r.field_a - var6Lifetime1) / 2;
             var5 += 6;
@@ -256,7 +256,7 @@ abstract class df {
             uk.field_b.d();
             var9 = new o(uk.field_b.field_x, uk.field_b.field_s);
             var9.b();
-            v.field_b.a(var14, jg.field_m, cb.field_a, ta.field_a, r.field_a, 16777215, -1, 1, 1, v.field_b.field_M + v.field_b.field_B);
+            v.field_b.a(var14, jg.field_m, cb.field_a, MouseWheelInput.field_a, r.field_a, 16777215, -1, 1, 1, v.field_b.field_M + v.field_b.field_B);
             oh.a(var9.field_s, var9, 0, var9.field_x, 3, (byte) 98, 0, 1);
             uk.field_b.b();
             var9.e(0, 0);
@@ -310,8 +310,8 @@ abstract class df {
           if (null != ab.field_c) {
             ab.field_c.e(0, 0);
           }
-          if (ta.field_b != null) {
-            ta.field_b.e(0, 0);
+          if (MouseWheelInput.field_b != null) {
+            MouseWheelInput.field_b.e(0, 0);
           }
           if (param0 != 2) {
             df.b((byte) -119);
@@ -348,7 +348,7 @@ abstract class df {
             }
             stackIn_56_0 = 2;
             stackIn_57_1 = (jj.field_d.field_g == 0);
-            de.a(stackIn_56_0, stackIn_57_1, wk.field_c, qc.field_L);
+            SecondaryNodeDeque.a(stackIn_56_0, stackIn_57_1, wk.field_c, qc.field_L);
           }
           if (mj.field_b != null &&
             null != ef.field_H) {
@@ -359,12 +359,12 @@ abstract class df {
             }
             stackIn_65_0 = 2;
             stackIn_66_1 = (1 == jj.field_d.field_g);
-            de.a(stackIn_65_0, stackIn_66_1, hj.field_f, hf.field_b);
+            SecondaryNodeDeque.a(stackIn_65_0, stackIn_66_1, hj.field_f, hf.field_b);
           }
           if (ra.field_p != null) {
             var1_int = -(ra.field_p.field_s / 2) + 357;
             ra.field_p.e(-ra.field_p.field_x + 269, var1_int);
-            pf.field_b.e(586, var1_int);
+            IntrusiveDequeCursor.field_b.e(586, var1_int);
             if (fi.field_B > var1_int &&
               var1_int + ra.field_p.field_p > fi.field_B) {
               var2Lifetime5 = 40 + (40 * hg.b(hj.field_c << 4, (byte) -89) >> 16);
@@ -378,10 +378,10 @@ abstract class df {
                 } else {
                   if (pg.field_n > 586 &&
                     pg.field_n < 586 + ra.field_p.field_z) {
-                    pf.field_b.a(585, var1_int - 1, var2Lifetime5);
-                    pf.field_b.a(587, var1_int - 1, var2Lifetime5);
-                    pf.field_b.a(585, var1_int + 1, var2Lifetime5);
-                    pf.field_b.a(587, var1_int + 1, var2Lifetime5);
+                    IntrusiveDequeCursor.field_b.a(585, var1_int - 1, var2Lifetime5);
+                    IntrusiveDequeCursor.field_b.a(587, var1_int - 1, var2Lifetime5);
+                    IntrusiveDequeCursor.field_b.a(585, var1_int + 1, var2Lifetime5);
+                    IntrusiveDequeCursor.field_b.a(587, var1_int + 1, var2Lifetime5);
                   }
                 }
               }
@@ -400,7 +400,7 @@ abstract class df {
     abstract void a(java.awt.Graphics param0, int param1, int param2, int param3);
 
     static {
-        field_c = new oi();
+        field_c = new IntrusiveDeque();
         field_b = "(Including <%0>)";
         field_e = "We closed the connection because the game was left unattended for 20 minutes. Please feel free to reconnect immediately if you are there.";
         field_i = "Confirm Password: ";

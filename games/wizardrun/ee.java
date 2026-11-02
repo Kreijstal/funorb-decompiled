@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ee extends rk {
+class ee extends DualLinkNode {
     static int field_p;
     static int field_r;
     static o field_q;

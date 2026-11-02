@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tc extends wl {
+final class tc extends IntrusiveNode {
     static boolean field_j;
     static tg field_l;
     static int field_k;
-    static tf field_m;
+    static MouseInputHandler field_m;
     static String field_n;
     static int field_i;
 
@@ -25,7 +25,7 @@ final class tc extends wl {
     static {
         field_k = 0;
         field_l = new tg();
-        field_m = new tf();
+        field_m = new MouseInputHandler();
         field_n = "Try again";
     }
 }

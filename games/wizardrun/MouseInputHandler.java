@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tf implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
+final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.event.MouseMotionListener, java.awt.event.FocusListener {
     static String field_d;
     static int field_e;
     static String field_a;
@@ -20,7 +20,7 @@ final class tf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           oc.field_a = 0;
           wizardrun.field_T = param0.getX();
-          gj.field_a = param0.getY();
+          IterableNodeHashTable.field_a = param0.getY();
           jf.field_i = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -59,7 +59,7 @@ final class tf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           oc.field_a = 0;
           wizardrun.field_T = -1;
-          gj.field_a = -1;
+          IterableNodeHashTable.field_a = -1;
           jf.field_i = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -194,7 +194,7 @@ final class tf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           if (tc.field_m != null) {
             oc.field_a = 0;
             wizardrun.field_T = param0.getX();
-            gj.field_a = param0.getY();
+            IterableNodeHashTable.field_a = param0.getY();
             jf.field_i = true;
           }
         } catch (RuntimeException runtimeException) {
@@ -240,7 +240,7 @@ final class tf implements java.awt.event.MouseListener, java.awt.event.MouseMoti
           }
           oc.field_a = 0;
           wizardrun.field_T = param0.getX();
-          gj.field_a = param0.getY();
+          IterableNodeHashTable.field_a = param0.getY();
           jf.field_i = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

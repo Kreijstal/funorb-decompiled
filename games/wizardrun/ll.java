@@ -252,7 +252,7 @@ class ll implements bf, qe {
         var13 = wizardrun.field_H;
         try {
           boolean decompiledFrameRemainder0 = true;
-          eb.a(0, param2 + param3.field_l + param3.field_n, param5 + param3.field_o, param3.field_l + param2, param3.field_r + param5 + param3.field_o);
+          ClientException.a(0, param2 + param3.field_l + param3.field_n, param5 + param3.field_o, param3.field_l + param2, param3.field_r + param5 + param3.field_o);
           var9_int = this.a(param3, -57);
           var10 = this.a(-119, param3);
           if (this.field_c) {
@@ -330,7 +330,7 @@ class ll implements bf, qe {
             var10 = this.a(param2, param1, var9, 31456);
             var11 = this.a(true, param0, param2) + Math.max(0, var8.field_a);
             var12 = this.a(true, param0, param2) + Math.min(this.a(-127, param2), Math.min(var8.field_b, var15.field_d.length > 1 + var7 ? var14.field_d[var7 + 1].field_a : var8.field_b));
-            eb.a(0, param2.field_n + (param0 + param2.field_l), param1 + param2.field_o, param2.field_l + param0, param2.field_r + param2.field_o + param1);
+            ClientException.a(0, param2.field_n + (param0 + param2.field_l), param1 + param2.field_o, param2.field_l + param0, param2.field_r + param2.field_o + param1);
             kc.field_H.a(var11, var12, var10, param3 + 0, this.field_e, var10);
             bb.b(4);
           }
@@ -484,7 +484,7 @@ class ll implements bf, qe {
             }
             var10 = var18.a((byte) 87, var8);
             var11 = var18.a((byte) 113, var9);
-            eb.a(0, param3 + param5.field_l + param5.field_n, param4 + param5.field_o, param5.field_l + param3, param5.field_r + param5.field_o + param4);
+            ClientException.a(0, param3 + param5.field_l + param5.field_n, param4 + param5.field_o, param5.field_l + param3, param5.field_r + param5.field_o + param4);
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.field_d[var12];
               if (var12 != var10) {

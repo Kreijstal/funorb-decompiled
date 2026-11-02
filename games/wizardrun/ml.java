@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ml extends rk {
+abstract class ml extends DualLinkNode {
     static String field_p;
     boolean field_r;
     boolean field_q;
@@ -68,7 +68,7 @@ abstract class ml extends rk {
           return;
         }
         try {
-          de.a(-14149, param1, param0);
+          SecondaryNodeDeque.a(-14149, param1, param0);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "ml.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

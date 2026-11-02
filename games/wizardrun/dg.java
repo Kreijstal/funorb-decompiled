@@ -194,13 +194,13 @@ final class dg {
         byte[] var5_ref_byte__ = null;
         byte[] var6 = null;
         Object var7 = null;
-        va var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new va(param0);
+          var9 = new PacketBuffer(param0);
           if (param1 != 31027) {
             stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;

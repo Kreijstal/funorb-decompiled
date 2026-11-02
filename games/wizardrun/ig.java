@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ig extends rk {
+abstract class ig extends DualLinkNode {
     int field_p;
     static cd field_q;
 

@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class gj implements Iterable {
+final class IterableNodeHashTable implements Iterable {
     static db[] field_f;
-    private wl field_e;
+    private IntrusiveNode field_e;
     static volatile int field_a;
     static int field_b;
     int field_d;
-    wl[] field_c;
+    IntrusiveNode[] field_c;
 
     final static aa a(byte param0, String param1) {
         String var2 = null;
@@ -42,7 +42,7 @@ final class gj implements Iterable {
             field_b = -125;
           }
           var6 = (CharSequence) ((Object) param1);
-          var2 = ta.a(-60, var6);
+          var2 = MouseWheelInput.a(-60, var6);
           if (var2 == null) {
             stackIn_12_0 = null;
             return (aa) (stackIn_12_0);
@@ -50,7 +50,7 @@ final class gj implements Iterable {
           var3 = (aa) (lj.field_f.a((long)var2.hashCode(), (byte) 104));
           while (var3 != null) {
             var7 = (CharSequence) ((Object) var3.field_mb);
-            var4 = ta.a(-51, var7);
+            var4 = MouseWheelInput.a(-51, var7);
             if (var4.equals(var2)) {
               stackIn_19_0 = var3;
               return stackIn_19_0;
@@ -73,7 +73,7 @@ final class gj implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new wh(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     final static void a(byte param0, int param1) {
@@ -143,7 +143,7 @@ final class gj implements Iterable {
               var4 = 1;
               var5 = 1;
             }
-            cg.field_m = f.a(var4 * var2, var5 * var2, 24268);
+            ImageProducerRasterBuffer.field_m = f.a(var4 * var2, var5 * var2, 24268);
             return;
           }
           if (var3 < 120) {
@@ -202,7 +202,7 @@ final class gj implements Iterable {
           var4Lifetime1 = 1;
           var5Lifetime1 = 1;
         }
-        cg.field_m = f.a(var4Lifetime1 * var2, var5Lifetime1 * var2, 24268);
+        ImageProducerRasterBuffer.field_m = f.a(var4Lifetime1 * var2, var5Lifetime1 * var2, 24268);
     }
 
     final static aa a(String param0, int param1) {
@@ -226,27 +226,27 @@ final class gj implements Iterable {
             stackIn_3_0 = (aa) null;
             return stackIn_3_0;
           }
-          if (null == wl.field_f) {
+          if (null == IntrusiveNode.field_f) {
             stackIn_6_0 = null;
             return (aa) (stackIn_6_0);
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = ta.a(-55, var6);
+          var2 = MouseWheelInput.a(-55, var6);
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (aa) (wl.field_f.a((long)var2.hashCode(), (byte) 124));
+          var3 = (aa) (IntrusiveNode.field_f.a((long)var2.hashCode(), (byte) 124));
           while (true) {
             if (var3 == null) {
               return null;
             }
             var7 = (CharSequence) ((Object) var3.field_mb);
-            var4 = ta.a(param1 + 30710, var7);
+            var4 = MouseWheelInput.a(param1 + 30710, var7);
             if (var4 == null) {
               var4 = var3.field_mb;
             }
             if (!var4.equals(var2)) {
-              var3 = (aa) (wl.field_f.a(false));
+              var3 = (aa) (IntrusiveNode.field_f.a(false));
               continue;
             }
             break;
@@ -273,47 +273,47 @@ final class gj implements Iterable {
           return;
         }
         String var2 = (String) null;
-        gj.a((byte) -10, (String) null);
+        IterableNodeHashTable.a((byte) -10, (String) null);
     }
 
-    final wl a(boolean param0, long param1) {
-        wl var4;
-        wl var5;
+    final IntrusiveNode a(boolean param0, long param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
-        wl var5Lifetime1;
+        IntrusiveNode var5Lifetime1;
         var6 = wizardrun.field_H;
         var4 = this.field_c[(int)(param1 & (long)(-1 + this.field_d))];
-        this.field_e = var4.field_b;
+        this.field_e = var4.next;
         if (!param0) {
           while (true) {
             if (var4 == this.field_e) {
               this.field_e = null;
               return null;
             }
-            if (param1 != this.field_e.field_e) {
-              this.field_e = this.field_e.field_b;
+            if (param1 != this.field_e.key) {
+              this.field_e = this.field_e.next;
               continue;
             }
             break;
           }
           var5 = this.field_e;
-          this.field_e = this.field_e.field_b;
+          this.field_e = this.field_e.next;
           return var5;
         }
-        gj.a((byte) 61, -95);
+        IterableNodeHashTable.a((byte) 61, -95);
         while (true) {
           if (var4 == this.field_e) {
             this.field_e = null;
             return null;
           }
-          if (param1 != this.field_e.field_e) {
-            this.field_e = this.field_e.field_b;
+          if (param1 != this.field_e.key) {
+            this.field_e = this.field_e.next;
             continue;
           }
           break;
         }
         var5Lifetime1 = this.field_e;
-        this.field_e = this.field_e.field_b;
+        this.field_e = this.field_e.next;
         return var5Lifetime1;
     }
 
@@ -330,26 +330,26 @@ final class gj implements Iterable {
         }
     }
 
-    final void a(long param0, wl param1, byte param2) {
-        if (null != param1.field_c) {
+    final void a(long param0, IntrusiveNode param1, byte param2) {
+        if (null != param1.previous) {
           param1.a(false);
         }
-        wl var5 = this.field_c[(int)((long)(-1 + this.field_d) & param0)];
-        param1.field_c = var5.field_c;
+        IntrusiveNode var5 = this.field_c[(int)((long)(-1 + this.field_d) & param0)];
+        param1.previous = var5.previous;
         if (param2 > -84) {
           return;
         }
         try {
-          param1.field_b = var5;
-          param1.field_c.field_b = param1;
-          param1.field_e = param0;
-          param1.field_b.field_c = param1;
+          param1.next = var5;
+          param1.previous.next = param1;
+          param1.key = param0;
+          param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "gj.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    private gj() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 

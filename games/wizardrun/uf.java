@@ -82,7 +82,7 @@ final class uf {
           if (param1 < 106) {
             uf.a(28, -119, 3);
           }
-          stackIn_3_0 = va.field_n.a(85, param0, "");
+          stackIn_3_0 = PacketBuffer.field_n.a(85, param0, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

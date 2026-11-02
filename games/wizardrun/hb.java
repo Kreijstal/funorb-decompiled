@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hb extends wl {
+final class hb extends IntrusiveNode {
     static String field_i;
     static int field_n;
     long field_p;
@@ -24,7 +24,7 @@ final class hb extends wl {
         field_o = null;
     }
 
-    final static ui a(int param0, int param1, int param2, int param3, int param4, vh param5) {
+    final static ui a(int param0, int param1, int param2, int param3, int param4, PlatformTaskDispatcher param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         ui var7 = null;
@@ -35,7 +35,7 @@ final class hb extends wl {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var8 = da.a(param3, param1, param0, param5, param2, param4);
+          var8 = GameApplet.a(param3, param1, param0, param5, param2, param4);
           var6 = var8;
           if (var8 == null) {
             return null;

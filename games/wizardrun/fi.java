@@ -5,7 +5,7 @@ final class fi extends ml {
     int field_z;
     static int field_B;
     static int field_A;
-    va field_C;
+    PacketBuffer field_C;
     static volatile int field_w;
     static String field_v;
     static int field_x;
@@ -72,11 +72,11 @@ final class fi extends ml {
           if (ub.field_t != null) {
             try {
               ub.field_t.a(0L, (byte) -64);
-              ub.field_t.a(18729, nk.field_N.field_k, 24, nk.field_N.field_m);
+              ub.field_t.a(18729, nk.field_N.payload, 24, nk.field_N.position);
             } catch (Exception exception) {
             }
           }
-          nk.field_N.field_m = nk.field_N.field_m + 24;
+          nk.field_N.position = nk.field_N.position + 24;
           if (param0 != 95) {
             field_A = 49;
           }
@@ -100,18 +100,18 @@ final class fi extends ml {
         if (null == this.field_C) {
           return 0;
         }
-        return this.field_C.field_m * 100 / (-this.field_D + this.field_C.field_k.length);
+        return this.field_C.position * 100 / (-this.field_D + this.field_C.payload.length);
     }
 
     final byte[] d(int param0) {
         if (this.field_s ||
-          this.field_C.field_m < -this.field_D + this.field_C.field_k.length) {
+          this.field_C.position < -this.field_D + this.field_C.payload.length) {
           throw new RuntimeException();
         }
         if (param0 != 95) {
           this.d(-58);
         }
-        return this.field_C.field_k;
+        return this.field_C.payload;
     }
 
     fi() {

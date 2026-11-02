@@ -55,8 +55,8 @@ final class ej {
             dj.field_d > 0) {
             fieldTemp$11 = dj.field_d - 1;
             dj.field_d = dj.field_d - 1;
-            var2_ref_byte__ = wl.field_g[fieldTemp$11];
-            wl.field_g[dj.field_d] = null;
+            var2_ref_byte__ = IntrusiveNode.field_g[fieldTemp$11];
+            IntrusiveNode.field_g[dj.field_d] = null;
             return var2_ref_byte__;
           }
           if (param0 == 30000 &&
@@ -113,8 +113,8 @@ final class ej {
           dj.field_d > 0) {
           fieldTemp$3 = dj.field_d - 1;
           dj.field_d = dj.field_d - 1;
-          var2_ref_byte__Lifetime2 = wl.field_g[fieldTemp$3];
-          wl.field_g[dj.field_d] = null;
+          var2_ref_byte__Lifetime2 = IntrusiveNode.field_g[fieldTemp$3];
+          IntrusiveNode.field_g[dj.field_d] = null;
           return var2_ref_byte__Lifetime2;
         }
         if (param0 == 30000 &&

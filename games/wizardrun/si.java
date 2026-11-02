@@ -14,7 +14,7 @@ final class si {
     static String field_g;
     static int field_f;
     private long field_d;
-    static hi field_q;
+    static BufferedSocket field_q;
     private int field_l;
     static je[] field_j;
     private int field_i;

@@ -4,7 +4,7 @@
 final class jc extends mi {
     int field_G;
     static int field_I;
-    static hi field_H;
+    static BufferedSocket field_H;
 
     public static void g(byte param0) {
         if (param0 != -19) {

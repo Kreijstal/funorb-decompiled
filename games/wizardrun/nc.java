@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class nc extends wl {
+final class nc extends IntrusiveNode {
     private static int field_H;
     private static int field_R;
     private static float[] field_M;
@@ -203,7 +203,7 @@ final class nc extends wl {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        va var2 = new va(param0);
+        PacketBuffer var2 = new PacketBuffer(param0);
         this.field_q = var2.i(255);
         this.field_m = var2.i(255);
         this.field_v = var2.i(255);

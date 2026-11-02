@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class u extends da {
+abstract class u extends GameApplet {
     private boolean field_B;
     String field_y;
     private int field_w;
@@ -178,9 +178,9 @@ abstract class u extends da {
         }
         t.a(-1);
         th.b((byte) -21);
-        if (!ta.a((byte) 60) &&
+        if (!MouseWheelInput.a((byte) 60) &&
           ml.field_t != 11) {
-          ti.a(param0 + 4122);
+          IsaacRandom.a(param0 + 4122);
         }
         if (null != vc.field_K) {
           gi.field_c = vc.field_K.a(-1);
@@ -287,7 +287,7 @@ abstract class u extends da {
           }
           ub.field_x = l.a(sf.field_g, param0 ^ 1784758027, false, 1, true);
           vj.field_b = l.a(jg.field_o, -1784753947, false, 1, true);
-          cc.field_a = l.a(rk.field_n, param0 - 1784749833, false, 1, true);
+          cc.field_a = l.a(DualLinkNode.field_n, param0 - 1784749833, false, 1, true);
           bb.field_h = ub.field_x;
           ri.field_a = 2;
           md.field_c = vj.field_b;
@@ -299,7 +299,7 @@ abstract class u extends da {
               qh.field_c = null;
             } else {
               if (qh.field_c.a((byte) 29, "")) {
-                ea.a(0, qh.field_c);
+                ProxySocketConnector.a(0, qh.field_c);
                 qh.field_c = null;
                 jj.b(param0 + 4114);
               }
@@ -316,7 +316,7 @@ abstract class u extends da {
           mi.d(3);
           vc.field_M = false;
           dg.field_a = wj.field_G;
-          dj.a(param0 ^ -6284, cc.field_a, ub.field_x, vj.field_b, pf.field_g);
+          dj.a(param0 ^ -6284, cc.field_a, ub.field_x, vj.field_b, IntrusiveDequeCursor.field_g);
           if (rf.field_c ||
             null != l.field_K) {
             stackIn_106_0 = !(rf.field_c);
@@ -350,7 +350,7 @@ abstract class u extends da {
         if (ri.field_a == 11) {
           if (null != oh.field_b && (!oh.field_b.b(17820) ||
             !oh.field_b.d(-111))) {
-            ok.a(de.a(param0 ^ 4150, td.field_e, oh.field_b, bl.field_c), 0.0f, 0);
+            ok.a(SecondaryNodeDeque.a(param0 ^ 4150, td.field_e, oh.field_b, bl.field_c), 0.0f, 0);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -384,18 +384,18 @@ abstract class u extends da {
         }
     }
 
-    final static void a(byte param0, wl param1, wl param2) {
+    final static void a(byte param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
-          if (null != param2.field_c) {
+          if (null != param2.previous) {
             param2.a(false);
           }
-          param2.field_c = param1.field_c;
-          param2.field_b = param1;
+          param2.previous = param1.previous;
+          param2.next = param1;
           if (param0 != 74) {
             u.n(-127);
           }
-          param2.field_c.field_b = param2;
-          param2.field_b.field_c = param2;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "u.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -422,7 +422,7 @@ abstract class u extends da {
     private final void q(int param0) {
         int var2 = nk.field_N.f(255);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
-        int var4 = -1 + gd.field_c;
+        int var4 = -1 + DelegatingCanvas.field_c;
         byte[] var5 = new byte[var4];
         if (param0 <= 3) {
           return;
@@ -431,7 +431,7 @@ abstract class u extends da {
         sh.a(var3 != 0, 122, nf.a((byte) 113, var5), jg.f(1));
     }
 
-    final static void a(va param0, int param1) {
+    final static void a(PacketBuffer param0, int param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -511,8 +511,8 @@ abstract class u extends da {
 
     private final static int r(int param0) {
         if (param0 != 8300) {
-          wl var2 = (wl) null;
-          u.$cfr$intArgs$a$894bb1585d61(86, (wl) null, (wl) null);
+          IntrusiveNode var2 = (IntrusiveNode) null;
+          u.$cfr$intArgs$a$894bb1585d61(86, (IntrusiveNode) null, (IntrusiveNode) null);
         }
         return sk.field_v;
     }
@@ -520,7 +520,7 @@ abstract class u extends da {
     private final void c(byte param0) {
         int var3 = -90 / ((-61 - param0) / 53);
         String var2 = vl.a(-106);
-        wl.a(var2, jg.f(1), (byte) -107);
+        IntrusiveNode.a(var2, jg.f(1), (byte) -107);
     }
 
     private final int a(int param0, boolean param1, boolean param2) {
@@ -533,7 +533,7 @@ abstract class u extends da {
           int var8 = 0;
           String var10 = null;
           Boolean var11 = null;
-          va var12 = null;
+          PacketBuffer var12 = null;
           int var5_intLifetime1;
           int var5_intLifetime2;
           var8 = wizardrun.field_H;
@@ -585,7 +585,7 @@ abstract class u extends da {
             }
           }
           if (var4 == 4) {
-            if (pf.field_g) {
+            if (IntrusiveDequeCursor.field_g) {
               cd.a(jg.f(param0 - 6497), (byte) -113);
             } else {
               qb.field_p = true;
@@ -630,7 +630,7 @@ abstract class u extends da {
                 if (var12 == null) {
                   gf.b(param0 ^ 6507, (String) null);
                 } else {
-                  var7 = bi.a(0, var12.field_m, var12.field_k, false);
+                  var7 = bi.a(0, var12.position, var12.payload, false);
                   gf.b(9, var7);
                 }
                 cb.field_b = null;
@@ -686,14 +686,14 @@ abstract class u extends da {
                   pj.f(-17144);
                 } else {
                   if (var2 == 5) {
-                    rk.c(-2);
+                    DualLinkNode.c(-2);
                   } else {
                     if (var2 == 6) {
                       kk.o(-114);
                     } else {
                       if (7 != var2) {
                         if (8 == var2) {
-                          mi.a(-21284, nk.field_N, ld.field_g, gd.field_c);
+                          mi.a(-21284, nk.field_N, ld.field_g, DelegatingCanvas.field_c);
                         } else {
                           if (16 != var2) {
                             if (var2 != 11 &&
@@ -767,7 +767,7 @@ abstract class u extends da {
         sf.field_g = param7;
         jg.field_o = param2;
         ni.field_b = param3;
-        rk.field_n = param0;
+        DualLinkNode.field_n = param0;
         hj.field_a = param5;
         this.j(-1);
         rl.a(-19);
@@ -943,18 +943,18 @@ abstract class u extends da {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$894bb1585d61(int param0, wl param1, wl param2) {
+    final static void $cfr$intArgs$a$894bb1585d61(int param0, IntrusiveNode param1, IntrusiveNode param2) {
         try {
-          if (null != param2.field_c) {
+          if (null != param2.previous) {
             param2.a(false);
           }
-          param2.field_c = param1.field_c;
-          param2.field_b = param1;
+          param2.previous = param1.previous;
+          param2.next = param1;
           if (param0 != 74) {
             u.n(-127);
           }
-          param2.field_c.field_b = param2;
-          param2.field_b.field_c = param2;
+          param2.previous.next = param2;
+          param2.next.previous = param2;
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "u.JA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

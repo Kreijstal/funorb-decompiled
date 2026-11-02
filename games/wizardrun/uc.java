@@ -9,7 +9,7 @@ final class uc {
     private int field_c;
     String field_i;
     private int field_f;
-    static oi field_b;
+    static IntrusiveDeque field_b;
     static int field_a;
     static int field_g;
     static String[] field_d;
@@ -111,7 +111,7 @@ final class uc {
 
     static {
         field_e = "That name is not available";
-        field_b = new oi();
+        field_b = new IntrusiveDeque();
         field_d = new String[]{"£3.20", "€4.25", "US$ 5.00", "Can$ 4.95", "Aus$ 6.50", "Krn 29.95", "", "Rp 160", "Rng 17.95", "NZ$ 7.95", "SG$ 6.95", "Krn 44.95", "R$ 7,00"};
         field_a = -1;
     }

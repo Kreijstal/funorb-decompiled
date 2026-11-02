@@ -3,15 +3,15 @@
  */
 final class bd {
     static rc field_b;
-    static oi field_a;
+    static IntrusiveDeque field_a;
     static o[] field_c;
 
-    final static eb a(Throwable param0, String param1) {
-        eb var2 = null;
-        if (!(param0 instanceof eb)) {
-          var2 = new eb(param0, param1);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (!(param0 instanceof ClientException)) {
+          var2 = new ClientException(param0, param1);
         } else {
-          var2 = (eb) ((Object) param0);
+          var2 = (ClientException) ((Object) param0);
           var2.field_b = var2.field_b + ' ' + param1;
         }
         return var2;
@@ -21,22 +21,22 @@ final class bd {
         if (param0 < 20) {
           return true;
         }
-        if (gd.field_c == -1) {
+        if (DelegatingCanvas.field_c == -1) {
           if (!hc.a(1, -28266)) {
             return false;
           }
-          gd.field_c = nk.field_N.f(255);
-          nk.field_N.field_m = 0;
+          DelegatingCanvas.field_c = nk.field_N.f(255);
+          nk.field_N.position = 0;
         }
-        if (gd.field_c == -2) {
+        if (DelegatingCanvas.field_c == -2) {
           if (hc.a(2, -28266)) {
-            gd.field_c = nk.field_N.j(-14477);
-            nk.field_N.field_m = 0;
-            return hc.a(gd.field_c, -28266);
+            DelegatingCanvas.field_c = nk.field_N.j(-14477);
+            nk.field_N.position = 0;
+            return hc.a(DelegatingCanvas.field_c, -28266);
           }
           return false;
         }
-        return hc.a(gd.field_c, -28266);
+        return hc.a(DelegatingCanvas.field_c, -28266);
     }
 
     public static void c(int param0) {

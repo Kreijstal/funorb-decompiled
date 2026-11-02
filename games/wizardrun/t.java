@@ -20,7 +20,7 @@ final class t {
             tg.field_i = ph.field_r;
             if (param0 < ~wk.field_b) {
               for (var2 = 0; var2 < 112; var2++) {
-                hi.field_p[var2] = false;
+                BufferedSocket.field_p[var2] = false;
               }
               wk.field_b = lk.field_a;
             } else {
@@ -28,10 +28,10 @@ final class t {
                 var2 = wd.field_a[lk.field_a];
                 lk.field_a = 127 & lk.field_a + 1;
                 if (var2 >= 0) {
-                  hi.field_p[var2] = true;
+                  BufferedSocket.field_p[var2] = true;
                   continue;
                 }
-                hi.field_p[~var2] = false;
+                BufferedSocket.field_p[~var2] = false;
               }
             }
             ph.field_r = qh.field_b;

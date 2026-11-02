@@ -4,7 +4,7 @@
 final class mk {
     static lg field_e;
     static int field_f;
-    static va field_a;
+    static PacketBuffer field_a;
     static boolean field_d;
     static int[] field_c;
     static int field_b;

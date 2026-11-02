@@ -3,31 +3,31 @@
  */
 import java.util.*;
 
-class rk extends wl {
+class DualLinkNode extends IntrusiveNode {
     static java.util.zip.CRC32 field_j;
-    rk field_l;
+    DualLinkNode secondaryPrevious;
     static nk field_k;
-    long field_o;
-    rk field_i;
+    long secondaryKey;
+    DualLinkNode secondaryNext;
     static o field_m;
     static int field_n;
 
-    final void b(boolean param0) {
-        if (null == this.field_l) {
+    final void unlink(boolean param0) {
+        if (null == this.secondaryPrevious) {
           return;
         }
         if (!param0) {
-          this.field_l.field_i = this.field_i;
-          this.field_i.field_l = this.field_l;
-          this.field_i = null;
-          this.field_l = null;
+          this.secondaryPrevious.secondaryNext = this.secondaryNext;
+          this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+          this.secondaryNext = null;
+          this.secondaryPrevious = null;
           return;
         }
-        this.field_o = -4L;
-        this.field_l.field_i = this.field_i;
-        this.field_i.field_l = this.field_l;
-        this.field_i = null;
-        this.field_l = null;
+        this.secondaryKey = -4L;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryNext = null;
+        this.secondaryPrevious = null;
     }
 
     final static void c(int param0) {
@@ -62,7 +62,7 @@ class rk extends wl {
             } else {
               var5 = null;
             }
-            var9.field_m = var9.field_m + 4;
+            var9.position = var9.position + 4;
             if (!var9.e(-6142)) {
               ql.a(-97);
               return;
@@ -97,7 +97,7 @@ class rk extends wl {
         }
     }
 
-    protected rk() {
+    protected DualLinkNode() {
     }
 
     public static void a(int param0) {

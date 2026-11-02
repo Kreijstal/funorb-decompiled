@@ -130,7 +130,7 @@ final class eg extends qh {
               if (this.field_B == 40) {
                 var4_intLifetime2 = 5;
                 var5 = 20;
-                if (!da.field_g) {
+                if (!GameApplet.field_g) {
                   ql.a(1, 245, 10);
                 }
               }
@@ -247,7 +247,7 @@ final class eg extends qh {
           j.a(this.field_q, var5.field_b, var4.field_a, ii.field_e[0].field_q, var3.field_b, var3.field_a)) {
           if (this.field_B == 21) {
             if (this.field_o == 0) {
-              hi.field_c = hi.field_c + 640;
+              BufferedSocket.field_c = BufferedSocket.field_c + 640;
               sg.field_f = sg.field_f + 10;
               if (qh.field_l == 5 &&
                 ve.a((byte) 110, 0)) {
@@ -272,7 +272,7 @@ final class eg extends qh {
             }
             if (this.field_o == 4) {
               sg.field_f = sg.field_f + 100;
-              hi.field_c = hi.field_c + 6400;
+              BufferedSocket.field_c = BufferedSocket.field_c + 6400;
             }
             if (this.field_o == 5) {
               wg.field_b = wg.field_b + 9600;
@@ -352,7 +352,7 @@ final class eg extends qh {
         if (!param0) {
           this.a(-46, -3, (byte) 15);
         }
-        L1: {
+        regionExit1: {
           var11 = this.field_B;
           if (var11 != 0) {
             if (var11 == 1) {
@@ -526,61 +526,61 @@ final class eg extends qh {
                             this.field_q = jj.field_a[this.field_o];
                             this.field_y = var2;
                             this.field_A = var3;
-                            break L1;
+                            break regionExit1;
                           case 22:
                             this.a(40, 0, (byte) 62);
-                            break L1;
+                            break regionExit1;
                           case 23:
                             this.a(80, 1, (byte) 62);
-                            break L1;
+                            break regionExit1;
                           case 24:
                             this.a(40, 2, (byte) 62);
-                            break L1;
+                            break regionExit1;
                           case 26:
                             this.a(96, 4, (byte) 62);
-                            break L1;
+                            break regionExit1;
                           case 27:
                             oc.field_b[4][37].e(var2, var3);
                             this.field_A = var3;
                             this.field_y = var2;
                             this.field_q = oc.field_b[4][37];
-                            break L1;
+                            break regionExit1;
                           case 28:
                             oc.field_b[4][36].e(var2, var3);
                             this.field_y = var2;
                             this.field_q = oc.field_b[4][36];
                             this.field_A = var3;
-                            break L1;
+                            break regionExit1;
                           case 29:
                             this.a(40, 0, (byte) 62);
-                            break L1;
+                            break regionExit1;
                           case 30:
                             this.a(40, 1, (byte) 62);
-                            break L1;
+                            break regionExit1;
                           case 31:
                             this.a(56, 2, (byte) 62);
-                            break L1;
+                            break regionExit1;
                           case 32:
                             this.a(56, 3, (byte) 62);
-                            break L1;
+                            break regionExit1;
                           case 33:
                             this.field_h = -this.field_h;
                             this.a(56, 4, (byte) 62);
                             this.field_h = -this.field_h;
-                            break L1;
+                            break regionExit1;
                           case 34:
                             if (-1 != this.field_h) {
                               oc.field_b[0][37].d(var2, var3);
                               this.field_q = oc.field_b[0][37].c();
                               this.field_y = var2;
                               this.field_A = var3;
-                              break L1;
+                              break regionExit1;
                             }
                             oc.field_b[0][37].e(var2, var3);
                             this.field_q = oc.field_b[0][37];
                             this.field_y = var2;
                             this.field_A = var3;
-                            break L1;
+                            break regionExit1;
                           case 43:
                           case 36:
                           case 37:
@@ -607,46 +607,46 @@ final class eg extends qh {
                                     this.field_q = oc.field_b[4][var9];
                                     this.field_y = var2;
                                     this.field_A = var3;
-                                    break L1;
+                                    break regionExit1;
                                   }
                                   oc.field_b[4][var9].d(var2, var3);
                                   this.field_q = oc.field_b[4][var9].c();
                                   this.field_y = var2;
                                   this.field_A = var3;
-                                  break L1;
+                                  break regionExit1;
                                 case 36:
                                   this.a(24, 0, (byte) 62);
-                                  break L1;
+                                  break regionExit1;
                                 case 37:
                                   this.a(56, 1, (byte) 62);
-                                  break L1;
+                                  break regionExit1;
                                 case 38:
                                   this.a(40, 2, (byte) 62);
-                                  break L1;
+                                  break regionExit1;
                                 case 39:
                                   this.a(40, 3, (byte) 62);
-                                  break L1;
+                                  break regionExit1;
                                 case 40:
                                   this.a(40, 4, (byte) 62);
-                                  break L1;
+                                  break regionExit1;
                                 case 41:
                                   if (this.field_h == -1) {
                                     h.field_j[this.field_n].e(var2, var3);
                                     this.field_q = h.field_j[this.field_n];
                                     this.field_A = var3;
                                     this.field_y = var2;
-                                    break L1;
+                                    break regionExit1;
                                   }
                                   h.field_j[this.field_n].d(var2, var3);
                                   this.field_q = h.field_j[this.field_n].c();
                                   this.field_A = var3;
                                   this.field_y = var2;
-                                  break L1;
+                                  break regionExit1;
                                 default:
-                                  break L1;
+                                  break regionExit1;
                                 case 45:
                                   this.a(40, 4, (byte) 62);
-                                  break L1;
+                                  break regionExit1;
                                 case 44:
                                   var10 = 0;
                                   if (this.field_o == 0) {
@@ -678,7 +678,7 @@ final class eg extends qh {
                                   a.field_a.b(Integer.toString(var10), var2 + 16 - 1, var3, 0, -1);
                                   a.field_a.b(Integer.toString(var10), 17 + var2, var3, 0, -1);
                                   a.field_a.b(Integer.toString(var10), var2 + 16, var3, 16777215, -1);
-                                  break L1;
+                                  break regionExit1;
                               }
                             }
                             var9 = 37;
@@ -693,20 +693,20 @@ final class eg extends qh {
                               this.field_q = oc.field_b[1][var9];
                               this.field_A = var3;
                               this.field_y = var2;
-                              break L1;
+                              break regionExit1;
                             }
                             oc.field_b[1][var9].d(var2, var3);
                             this.field_q = oc.field_b[1][var9].c();
                             this.field_A = var3;
                             this.field_y = var2;
-                            break L1;
+                            break regionExit1;
                         }
                       case 20:
                         this.field_w = this.field_w + 2;
                         var8 = this.field_w;
                         var4 = -this.field_w + 128;
                         if (var4 > 0) {
-                          rk.field_m.d(var2 - var8, var3 - var8, 2 * var8, var8 * 2, var4);
+                          DualLinkNode.field_m.d(var2 - var8, var3 - var8, 2 * var8, var8 * 2, var4);
                         }
                         if (this.field_w > 120) {
                           this.field_k = 1;
@@ -751,7 +751,7 @@ final class eg extends qh {
                 }
                 if (nk.field_T >= 50 &&
                   nk.field_T < 100) {
-                  var11 = jj.field_b.b(di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 126, ka.field_g));
+                  var11 = jj.field_b.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 126, ka.field_g));
                   var12 = var2 + ve.field_c[this.field_n].field_x / 2;
                   if (var12 < var11 / 2) {
                     var12 = var11 / 2;
@@ -764,11 +764,11 @@ final class eg extends qh {
                   } else {
                     stackIn_103_1 = 16776960;
                   }
-                  this.a(stackIn_103_1, var12, true, di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 107, ka.field_g), -4 + var3);
+                  this.a(stackIn_103_1, var12, true, di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 107, ka.field_g), -4 + var3);
                 }
                 if (nk.field_T >= 100 &&
                   nk.field_T < 150) {
-                  var11 = jj.field_b.b(di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 59, wb.field_a));
+                  var11 = jj.field_b.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 59, wb.field_a));
                   var12 = var2 + ve.field_c[this.field_n].field_x / 2;
                   if (var11 / 2 > var12) {
                     var12 = var11 / 2;
@@ -781,11 +781,11 @@ final class eg extends qh {
                   } else {
                     stackIn_115_1 = 16711680;
                   }
-                  this.a(stackIn_115_1, var12, true, di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 61, wb.field_a), var3 - 4);
+                  this.a(stackIn_115_1, var12, true, di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 61, wb.field_a), var3 - 4);
                 }
                 if (nk.field_T >= 150 &&
                   nk.field_T < 200) {
-                  var11 = jj.field_b.b(di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 66, ei.field_m));
+                  var11 = jj.field_b.b(di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 66, ei.field_m));
                   var12 = var2 + ve.field_c[this.field_n].field_x / 2;
                   if (var11 / 2 > var12) {
                     var12 = var11 / 2;
@@ -798,7 +798,7 @@ final class eg extends qh {
                   } else {
                     stackIn_125_1 = 16776960;
                   }
-                  this.a(stackIn_125_1, var12, true, di.a(new String[]{wl.field_h[hh.field_S], wl.field_h[nf.field_d]}, (byte) 46, ei.field_m), -4 + var3);
+                  this.a(stackIn_125_1, var12, true, di.a(new String[]{IntrusiveNode.field_h[hh.field_S], IntrusiveNode.field_h[nf.field_d]}, (byte) 46, ei.field_m), -4 + var3);
                 }
               }
               if (cd.field_e > 0 &&
@@ -1316,7 +1316,7 @@ final class eg extends qh {
           if (this.field_i.field_a < -2) {
             this.field_i.field_a = 17;
           }
-          L2: {
+          regionExit1: {
             var3_int = 15;
             var4 = this.field_B;
             if (var4 == 0) {
@@ -1485,7 +1485,7 @@ final class eg extends qh {
                       this.field_d = this.field_d * 2;
                       this.field_f.field_b = this.field_f.field_b - 120;
                       this.a((byte) 83);
-                      break L2;
+                      break regionExit1;
                     }
                     fi.field_x = 0;
                     p.field_V = 25;
@@ -1552,19 +1552,19 @@ final class eg extends qh {
                     ql.field_c == 5) {
                     this.field_i.field_b = this.field_i.field_b + 1;
                   }
-                  gd.field_b = true;
+                  DelegatingCanvas.field_b = true;
                   cd.field_e = 100;
                   this.field_f.field_a = 0;
                   this.field_s = 0;
-                  da.field_g = true;
+                  GameApplet.field_g = true;
                   qh.field_g = qh.field_g - 1;
-                  hi.field_c = hi.field_c + 1;
+                  BufferedSocket.field_c = BufferedSocket.field_c + 1;
                   this.field_h = 1;
                   this.field_e = 0;
                   this.field_f.field_b = 0;
                   if (qh.field_g < 0) {
                     bb.field_j = me.field_b;
-                    hi.field_a = 580;
+                    BufferedSocket.field_a = 580;
                   }
                 }
               }
@@ -1724,7 +1724,7 @@ final class eg extends qh {
                             this.e(false);
                           }
                         }
-                        break L2;
+                        break regionExit1;
                       }
                       if (6 == var4) {
                         if (this.field_p <= 0) {
@@ -1752,7 +1752,7 @@ final class eg extends qh {
                             w.field_b = w.field_b + 1;
                             if (250 >= w.field_b) {
                               this.e(false);
-                              break L2;
+                              break regionExit1;
                             }
                             this.field_o = 0;
                           } else {
@@ -1796,7 +1796,7 @@ final class eg extends qh {
                               }
                               if (this.field_p > 0) {
                                 this.e(false);
-                                break L2;
+                                break regionExit1;
                               }
                               this.c(false);
                               this.field_e = 80;
@@ -1804,7 +1804,7 @@ final class eg extends qh {
                           }
                           this.e(false);
                         }
-                        break L2;
+                        break regionExit1;
                       }
                       if (var4 != 7 &&
                         var4 != 8) {
@@ -1941,7 +1941,7 @@ final class eg extends qh {
                                   }
                                   if (0 >= this.field_s) {
                                     this.e(false);
-                                    break L2;
+                                    break regionExit1;
                                   }
                                   this.field_p = this.field_p - 1;
                                   this.field_s = this.field_s - 1;
@@ -2042,7 +2042,7 @@ final class eg extends qh {
                                       this.a(16, -91, false, param1);
                                       if (0 != this.field_x) {
                                         this.e(false);
-                                        break L2;
+                                        break regionExit1;
                                       }
                                       this.field_w = (int)(Math.random() * 100.0);
                                     }
@@ -2070,7 +2070,7 @@ final class eg extends qh {
                                       if (this.field_x == 1) {
                                         if (!this.a(false, param1, 25)) {
                                           this.e(false);
-                                          break L2;
+                                          break regionExit1;
                                         }
                                         this.field_w = 0;
                                         ii.field_e[od.field_k].a(9147, 18, this.field_i);
@@ -2352,7 +2352,7 @@ final class eg extends qh {
                                             if (!(this.field_z <= 300)) {
                                               this.field_k = 1;
                                             }
-                                            break L2;
+                                            break regionExit1;
                                           }
                                           if ((var4 != 20)) {
                                             if (var4 == 21) {
@@ -3119,21 +3119,21 @@ final class eg extends qh {
                                                                                     this.field_f.field_a = this.field_f.field_a + (-25 + this.field_w % 50) / 4;
                                                                                   }
                                                                                   this.e(false);
-                                                                                  break L2;
+                                                                                  break regionExit1;
                                                                                 case 42:
                                                                                   this.field_e = 2;
                                                                                   this.a(1, si.field_j, param1, 1, 50, 0, tl.field_a, pk.field_s, (byte) 126);
                                                                                   this.e(false);
-                                                                                  break L2;
+                                                                                  break regionExit1;
                                                                                 case 44:
                                                                                   this.field_w = this.field_w + 1;
                                                                                   if (this.field_w > 150) {
                                                                                     this.field_k = 1;
                                                                                   }
                                                                                   this.field_f.field_a = this.field_f.field_a + 4;
-                                                                                  break L2;
+                                                                                  break regionExit1;
                                                                                 default:
-                                                                                  break L2;
+                                                                                  break regionExit1;
                                                                                 case 45:
                                                                                   this.field_n = 36;
                                                                                   if (this.field_w % 10 > 5) {
@@ -3145,7 +3145,7 @@ final class eg extends qh {
                                                                                     this.field_k = 1;
                                                                                   }
                                                                                   this.e(false);
-                                                                                  break L2;
+                                                                                  break regionExit1;
                                                                               }
                                                                             }
                                                                             if (this.field_p <= 0) {
@@ -3153,7 +3153,7 @@ final class eg extends qh {
                                                                             } else {
                                                                               if (ql.field_c < 5) {
                                                                                 me.field_f = me.field_f - 5;
-                                                                                hi.field_c = hi.field_c - ql.field_c;
+                                                                                BufferedSocket.field_c = BufferedSocket.field_c - ql.field_c;
                                                                                 ql.field_c = 5;
                                                                               }
                                                                               if (this.field_s > 0) {
@@ -3292,7 +3292,7 @@ final class eg extends qh {
                                                                                       this.field_f.field_a = 0;
                                                                                       me.field_f = me.field_f + ql.field_c;
                                                                                       w.field_b = 0;
-                                                                                      hi.field_c = hi.field_c + 7;
+                                                                                      BufferedSocket.field_c = BufferedSocket.field_c + 7;
                                                                                       this.field_x = 0;
                                                                                       this.field_d = 128;
                                                                                       this.field_w = 0;
@@ -3544,7 +3544,7 @@ final class eg extends qh {
                             }
                           }
                         }
-                        break L2;
+                        break regionExit1;
                       }
                       if (0 >= this.field_p) {
                         this.a(false, 120, param1);
@@ -3603,11 +3603,11 @@ final class eg extends qh {
                           if (this.field_x == 4) {
                             if (!this.a(false, param1, 25)) {
                               this.e(false);
-                              break L2;
+                              break regionExit1;
                             }
                             if (od.field_k >= 100) {
                               this.e(false);
-                              break L2;
+                              break regionExit1;
                             }
                             stackIn_401_0 = (pk.field_s) ? 0 : 1;
                             if (stackIn_401_0 != 1) {
@@ -3624,7 +3624,7 @@ final class eg extends qh {
                           this.e(false);
                         }
                       }
-                      break L2;
+                      break regionExit1;
                     }
                     if (this.field_p > 0) {
                       if (0 == this.field_r) {
@@ -3742,14 +3742,14 @@ final class eg extends qh {
           te.field_k = pc.a((byte) 125, "commonui", param3, "validation");
           e.field_b = (vd) ((Object) oc.a(param3, "commonui", "arezzo12", 67, param0));
           gh.field_b = (vd) ((Object) oc.a(param3, "commonui", "arezzo14", 93, param0));
-          va.field_i = (vd) ((Object) oc.a(param3, "commonui", "arezzo14bold", 118, param0));
+          PacketBuffer.field_i = (vd) ((Object) oc.a(param3, "commonui", "arezzo14bold", 118, param0));
           var16 = new o(param2.a(122, "", "button.gif"), (java.awt.Component) ((Object) wizardrun.field_G));
           mf.a("commonui", "dropdown", param3, (byte) -108);
           var5 = re.a(param3, "commonui", "screen_options", 112);
-          gj.field_f = new db[4];
+          IterableNodeHashTable.field_f = new db[4];
           s.field_c = new db[4];
           nj.field_k = new db[4];
-          var6 = new db[][]{gj.field_f, s.field_c, nj.field_k};
+          var6 = new db[][]{IterableNodeHashTable.field_f, s.field_c, nj.field_k};
           var17 = new int[4][];
           var15 = var17;
           var7 = var15;
@@ -3764,7 +3764,7 @@ final class eg extends qh {
           for (var9 = 0; var9 < 3; var9++) {
             var10_ref_db__ = var6[var9];
             for (var11_int = 0; var11_int < var10_ref_db__.length; var11_int++) {
-              var10_ref_db__[var11_int] = eb.a(var5[var9], (byte) -105, var17[var11_int]);
+              var10_ref_db__[var11_int] = ClientException.a(var5[var9], (byte) -105, var17[var11_int]);
             }
           }
           var9Lifetime1 = var16.field_p;

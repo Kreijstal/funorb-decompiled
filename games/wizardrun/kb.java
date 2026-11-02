@@ -95,7 +95,7 @@ final class kb extends gf {
             if (var3 != 0) {
               return;
             }
-            var4 = param1.field_m;
+            var4 = param1.position;
             param1.f(var17.field_i, 613003928);
             var5 = 0;
             if (param0 < 17) {

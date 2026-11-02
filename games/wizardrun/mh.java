@@ -253,14 +253,14 @@ class mh extends gf implements qd {
               if (this.field_rb) {
                 stackIn_13_2 = me.field_a;
               } else {
-                stackIn_13_2 = ti.field_h;
+                stackIn_13_2 = IsaacRandom.field_h;
               }
               ((vc) (Object) stackIn_12_0).a((byte) stackIn_12_1, stackIn_13_2, -1);
             } else {
               var6.a(0, me.field_a, (ce) (this));
             }
           } else {
-            var6.a((byte) -31, da.field_j, 11);
+            var6.a((byte) -31, GameApplet.field_j, 11);
             var6.a((byte) -31, pk.field_q, 17);
           }
           if (param1 <= 12) {
@@ -270,13 +270,13 @@ class mh extends gf implements qd {
             var6.a((byte) -31, vl.field_g, 7);
           } else {
             if (param2 == 4) {
-              var6.a((byte) -31, wh.field_b, 8);
+              var6.a((byte) -31, NodeHashTableIterator.field_b, 8);
             } else {
               if (param2 == 6) {
                 var6.a((byte) -31, ka.field_h, 9);
               } else {
                 if (param2 == 9) {
-                  var6.a(0, de.field_a, (ce) (this));
+                  var6.a(0, SecondaryNodeDeque.field_a, (ce) (this));
                 }
               }
             }

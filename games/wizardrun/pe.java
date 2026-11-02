@@ -5,7 +5,7 @@ import java.util.*;
 
 class pe extends ub implements bg {
     static String[] field_z;
-    oi field_A;
+    IntrusiveDeque field_A;
     static int field_B;
     static long field_D;
     static md field_y;
@@ -26,7 +26,7 @@ class pe extends ub implements bg {
         StringBuilder discarded$3 = null;
         int var8 = 0;
         StringBuilder discarded$4 = null;
-        pf var5 = null;
+        IntrusiveDequeCursor var5 = null;
         int var6 = 0;
         ub var7 = null;
         int var9 = 0;
@@ -40,7 +40,7 @@ class pe extends ub implements bg {
         var9 = wizardrun.field_H;
         try {
           var6 = -90 % ((param1 - 30) / 43);
-          var5 = new pf(this.field_A);
+          var5 = new IntrusiveDequeCursor(this.field_A);
           var7 = (ub) (var5.a((byte) 31));
           while (var7 != null) {
             discarded$3 = param3.append('\n');
@@ -82,7 +82,7 @@ class pe extends ub implements bg {
 
     final void b(boolean param0) {
         int var4 = wizardrun.field_H;
-        pf var2 = new pf(this.field_A);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_A);
         if (param0) {
           field_B = -77;
         }
@@ -99,7 +99,7 @@ class pe extends ub implements bg {
           this.field_w != null) {
           this.field_w.a(param0, param3, (ub) (this), true, true);
         }
-        pf var5 = new pf(this.field_A);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_A);
         ub var6 = (ub) (var5.b((byte) 103));
         while (var6 != null) {
           var6.a(param0 + this.field_o, 0, param2, param3 + this.field_l);
@@ -201,10 +201,10 @@ class pe extends ub implements bg {
     final boolean b(ub param0, int param1) {
         RuntimeException var3 = null;
         ub var4 = null;
-        pf var5 = null;
+        IntrusiveDequeCursor var5 = null;
         ub var6 = null;
         int var7 = 0;
-        pf var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -217,11 +217,11 @@ class pe extends ub implements bg {
           if (param1 != 1) {
             field_D = -109L;
           }
-          var8 = new pf(this.field_A);
+          var8 = new IntrusiveDequeCursor(this.field_A);
           var4 = (ub) (var8.a((byte) 31));
           while (var4 != null) {
             if (var4.d((byte) 53)) {
-              var5 = new pf(this.field_A);
+              var5 = new IntrusiveDequeCursor(this.field_A);
               var5.a(var4, -79);
               var6 = (ub) (var5.b(35));
               while (var6 != null) {
@@ -253,7 +253,7 @@ class pe extends ub implements bg {
         RuntimeException var5 = null;
         int var6 = 0;
         int var7 = 0;
-        pf var8 = null;
+        IntrusiveDequeCursor var8 = null;
         ub var9 = null;
         boolean stackIn_15_0 = false;
         RuntimeException stackIn_20_0 = null;
@@ -262,13 +262,13 @@ class pe extends ub implements bg {
         RuntimeException decompiledCaughtException = null;
         var7 = wizardrun.field_H;
         try {
-          var8 = new pf(this.field_A);
+          var8 = new IntrusiveDequeCursor(this.field_A);
           var9 = (ub) (var8.a((byte) 31));
           if (param2 > -96) {
             field_z = (String[]) null;
           }
           while (var9 != null) {
-            if (var9.c((byte) 72)) {
+            if (var9.isLinked((byte) 72)) {
               if (var9.d((byte) 53) &&
                 var9.a(param0, param1, (byte) -126, param3)) {
                 return true;
@@ -282,7 +282,7 @@ class pe extends ub implements bg {
           if (var6 != 80) {
             return false;
           }
-          if (!hi.field_p[81]) {
+          if (!BufferedSocket.field_p[81]) {
             stackIn_15_0 = this.b(param3, 1);
           } else {
             stackIn_15_0 = this.a((byte) -117, param3);
@@ -304,7 +304,7 @@ class pe extends ub implements bg {
 
     void a(int param0, int param1, int param2, ub param3) {
         RuntimeException runtimeException = null;
-        pf var5 = null;
+        IntrusiveDequeCursor var5 = null;
         ub var6 = null;
         int var7 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -314,10 +314,10 @@ class pe extends ub implements bg {
         var7 = wizardrun.field_H;
         try {
           super.a(param0, param1, param2, param3);
-          var5 = new pf(this.field_A);
+          var5 = new IntrusiveDequeCursor(this.field_A);
           var6 = (ub) (var5.a((byte) 31));
           while (var6 != null) {
-            if (var6.c((byte) -50)) {
+            if (var6.isLinked((byte) -50)) {
               var6.a(10000536, this.field_l + param1, this.field_o + param2, param3);
               var6 = (ub) (var5.b(35));
               continue;
@@ -342,10 +342,10 @@ class pe extends ub implements bg {
     final boolean a(byte param0, ub param1) {
         RuntimeException var3 = null;
         ub var4 = null;
-        pf var5 = null;
+        IntrusiveDequeCursor var5 = null;
         ub var6 = null;
         int var7 = 0;
-        pf var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -355,14 +355,14 @@ class pe extends ub implements bg {
           if (this.field_A.f(8192)) {
             return false;
           }
-          var8 = new pf(this.field_A);
+          var8 = new IntrusiveDequeCursor(this.field_A);
           if (param0 != -117) {
             return false;
           }
           var4 = (ub) (var8.b((byte) 51));
           while (var4 != null) {
             if (var4.d((byte) 53)) {
-              var5 = new pf(this.field_A);
+              var5 = new IntrusiveDequeCursor(this.field_A);
               var5.a(-80, var4);
               var6 = (ub) (var5.a(true));
               while (var6 != null) {
@@ -439,11 +439,11 @@ class pe extends ub implements bg {
 
     pe(int param0, int param1, int param2, int param3, bf param4) {
         super(param0, param1, param2, param3, param4, (ce) null);
-        this.field_A = new oi();
+        this.field_A = new IntrusiveDeque();
     }
 
     final boolean a(int param0, byte param1, int param2, int param3, int param4, int param5, ub param6) {
-        pf var8 = null;
+        IntrusiveDequeCursor var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
         ub var10 = null;
@@ -454,11 +454,11 @@ class pe extends ub implements bg {
         RuntimeException decompiledCaughtException = null;
         var11 = wizardrun.field_H;
         try {
-          var8 = new pf(this.field_A);
+          var8 = new IntrusiveDequeCursor(this.field_A);
           var9 = 18 % ((param1 - 12) / 36);
           var10 = (ub) (var8.a((byte) 31));
           while (var10 != null) {
-            if (var10.c((byte) -76)) {
+            if (var10.isLinked((byte) -76)) {
               if (var10.a(this.field_o + param0, (byte) 83, param2, this.field_l + param3, param4, param5, param6)) {
                 return true;
               }
@@ -483,7 +483,7 @@ class pe extends ub implements bg {
     }
 
     final String c(boolean param0) {
-        pf var2;
+        IntrusiveDequeCursor var2;
         ub var3;
         String var4;
         int var5;
@@ -491,7 +491,7 @@ class pe extends ub implements bg {
         if (param0) {
           return (String) null;
         }
-        var2 = new pf(this.field_A);
+        var2 = new IntrusiveDequeCursor(this.field_A);
         var3 = (ub) (var2.a((byte) 31));
         while (var3 != null) {
           var4 = var3.c(false);
@@ -505,7 +505,7 @@ class pe extends ub implements bg {
 
     final void a(int param0, int param1, int param2, int param3, ub param4, int param5) {
         RuntimeException runtimeException = null;
-        pf var7 = null;
+        IntrusiveDequeCursor var7 = null;
         ub var8 = null;
         int var9 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -514,13 +514,13 @@ class pe extends ub implements bg {
         RuntimeException decompiledCaughtException = null;
         var9 = wizardrun.field_H;
         try {
-          var7 = new pf(this.field_A);
+          var7 = new IntrusiveDequeCursor(this.field_A);
           if (param5 != 0) {
-            this.field_A = (oi) null;
+            this.field_A = (IntrusiveDeque) null;
           }
           var8 = (ub) (var7.a((byte) 31));
           while (var8 != null) {
-            if (var8.c((byte) 110)) {
+            if (var8.isLinked((byte) 110)) {
               var8.a(this.field_o + param0, param1, this.field_l + param2, param3, param4, param5 ^ 0);
               var8 = (ub) (var7.b(35));
               continue;
@@ -544,7 +544,7 @@ class pe extends ub implements bg {
 
     private final void f(int param0) {
         int var4 = wizardrun.field_H;
-        pf var2 = new pf(this.field_A);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_A);
         ub var3 = (ub) (var2.a((byte) 31));
         while (var3 != null) {
           var3.c(param0 ^ 124);
@@ -557,11 +557,11 @@ class pe extends ub implements bg {
     }
 
     ub d(int param0) {
-        pf var2;
+        IntrusiveDequeCursor var2;
         ub var3;
         int var4;
         var4 = wizardrun.field_H;
-        var2 = new pf(this.field_A);
+        var2 = new IntrusiveDequeCursor(this.field_A);
         if (param0 != -16) {
           field_z = (String[]) null;
         }
@@ -580,17 +580,17 @@ class pe extends ub implements bg {
         ub var9 = null;
         int var10 = 0;
         StringBuilder var11 = null;
-        pf var12 = null;
+        IntrusiveDequeCursor var12 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         var10 = wizardrun.field_H;
         try {
-          var12 = new pf(this.field_A);
+          var12 = new IntrusiveDequeCursor(this.field_A);
           var9 = (ub) (var12.a((byte) 31));
           while (var9 != null) {
-            if (var9.c((byte) -109)) {
+            if (var9.isLinked((byte) -109)) {
               if (var9.d((byte) 53) &&
                 var9.a(param0, -23023, param2, param3, param4, param5, param6)) {
                 return true;
@@ -621,7 +621,7 @@ class pe extends ub implements bg {
     }
 
     final boolean a(ub param0, int param1) {
-        pf var3 = null;
+        IntrusiveDequeCursor var3 = null;
         RuntimeException var3_ref = null;
         ub var4 = null;
         int var5 = 0;
@@ -631,7 +631,7 @@ class pe extends ub implements bg {
         RuntimeException decompiledCaughtException = null;
         var5 = wizardrun.field_H;
         try {
-          var3 = new pf(this.field_A);
+          var3 = new IntrusiveDequeCursor(this.field_A);
           if (param1 != 8) {
             field_C = (int[]) null;
           }
@@ -669,7 +669,7 @@ class pe extends ub implements bg {
         int var5 = 0;
         int var6 = wizardrun.field_H;
         int var2 = 0;
-        pf var3 = new pf(this.field_A);
+        IntrusiveDequeCursor var3 = new IntrusiveDequeCursor(this.field_A);
         ub var4 = (ub) (var3.a((byte) 31));
         while (var4 != null) {
           var5 = var4.e((byte) 93);

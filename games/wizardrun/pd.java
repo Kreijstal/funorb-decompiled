@@ -111,9 +111,9 @@ final class pd extends mi {
             var9 = var10;
             var4 = var9;
             var5 = var12;
-            var6 = ((va) ((Object) var5)).f(255);
+            var6 = ((PacketBuffer) ((Object) var5)).f(255);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((va) ((Object) var5)).i(255);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).i(255);
             }
             var14 = (te) (bk.field_d.b((byte) 97));
             if (var14 == null) {

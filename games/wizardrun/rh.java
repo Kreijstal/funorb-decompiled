@@ -154,7 +154,7 @@ final class rh extends mf {
             return stackIn_15_0;
           }
           if (this.a((byte) 38, param0)) {
-            stackIn_18_0 = wh.field_c;
+            stackIn_18_0 = NodeHashTableIterator.field_c;
             return stackIn_18_0;
           }
           if (0 >= var7.length()) {

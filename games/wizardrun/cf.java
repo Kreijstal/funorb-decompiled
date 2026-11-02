@@ -103,7 +103,7 @@ final class cf extends af {
         if (param0 != 79) {
           field_n = (bh) null;
         }
-        da.h(0);
+        GameApplet.h(0);
     }
 
     final void a(vd param0, String param1, int param2, boolean param3, int param4) {
@@ -157,11 +157,11 @@ final class cf extends af {
         il.field_a = var8.f(255);
         ug.field_N = var8.e((byte) 0);
         if (dj.field_e == 2) {
-          wh.field_g = var8.j(-14477);
+          NodeHashTableIterator.field_g = var8.j(-14477);
           ac.field_r = var8.d((byte) 80);
         } else {
           ac.field_r = 0;
-          wh.field_g = 0;
+          NodeHashTableIterator.field_g = 0;
         }
         stackIn_11_0 = (var8.f(param0 + 257) != 1) ? 0 : 1;
         var4 = stackIn_11_0;

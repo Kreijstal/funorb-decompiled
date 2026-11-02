@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class te extends wl {
+final class te extends IntrusiveNode {
     boolean field_i;
     int field_j;
     int[] field_l;

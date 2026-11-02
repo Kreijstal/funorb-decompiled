@@ -5,7 +5,7 @@ final class sf {
     private String field_c;
     private boolean field_e;
     static String field_a;
-    static oi field_j;
+    static IntrusiveDeque field_j;
     static rc field_i;
     private boolean field_f;
     static int field_g;
@@ -333,7 +333,7 @@ final class sf {
     final static void a(byte param0) {
         jc.a((byte) 43, 4);
         if (param0 != -89) {
-          field_j = (oi) null;
+          field_j = (IntrusiveDeque) null;
         }
     }
 
@@ -346,7 +346,7 @@ final class sf {
     }
 
     static {
-        field_j = new oi();
+        field_j = new IntrusiveDeque();
         field_i = new rc();
     }
 }

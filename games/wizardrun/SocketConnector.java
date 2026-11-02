@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class ib {
+abstract class SocketConnector {
     static String field_d;
     String field_a;
     int field_c;
@@ -82,7 +82,7 @@ abstract class ib {
         field_b = null;
         if (param0 != -64) {
           java.applet.Applet var2 = (java.applet.Applet) null;
-          ib.a((byte) -62, (java.applet.Applet) null);
+          SocketConnector.a((byte) -62, (java.applet.Applet) null);
         }
     }
 

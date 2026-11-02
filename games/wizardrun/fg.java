@@ -107,7 +107,7 @@ final class fg {
                   var20 = var27.f(255);
                   var21 = f.field_a[var20].field_g;
                   var22 = var27.e((byte) 0);
-                  var24 = var27.field_m;
+                  var24 = var27.position;
                   if (var19 < var6_int) {
                     var8[0][var12] = var21;
                     var9[0][var12] = f.field_a[var20].field_d;
@@ -125,7 +125,7 @@ final class fg {
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;
-                    var27.field_m = var24;
+                    var27.position = var24;
                     for (var25Lifetime1 = 0; var7 > var25Lifetime1; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
@@ -138,7 +138,7 @@ final class fg {
                     var8[2][var14] = var21;
                     var9[2][var14] = f.field_a[var20].field_d;
                     var10[2][var14] = var22;
-                    var27.field_m = var24;
+                    var27.position = var24;
                     var14++;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$5 = var17;
@@ -233,7 +233,7 @@ final class fg {
             }
             return true;
           }
-          var2Lifetime1 = pf.field_e;
+          var2Lifetime1 = IntrusiveDequeCursor.field_e;
           for (var3Lifetime1 = 0; var3Lifetime1 < var2Lifetime1.length; var3Lifetime1++) {
             var4Lifetime1 = var2Lifetime1[var3Lifetime1];
             if (param0 == var4Lifetime1) {

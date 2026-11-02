@@ -6,7 +6,7 @@ final class wg {
     String field_g;
     String field_d;
     static int field_b;
-    static oi field_c;
+    static IntrusiveDeque field_c;
     boolean field_h;
     static String[] field_a;
     static o field_e;

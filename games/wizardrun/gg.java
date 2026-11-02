@@ -11,7 +11,7 @@ final class gg {
     private static float field_f;
     private int[] field_g;
 
-    final void a(va param0, ek param1) {
+    final void a(PacketBuffer param0, ek param1) {
         int var3;
         int var4;
         int var5;

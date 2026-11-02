@@ -82,7 +82,7 @@ final class tb extends pe implements ha, qd {
         super(0, 0, 496, 0, (bf) null);
         this.field_E = new p("", (ce) null, 12);
         ll var1 = new ll(e.field_b, 0, 0, 0, 0, 16777215, -1, 3, 0, gh.field_b.field_M, -1, 2147483647, true);
-        ub var2 = new ub(ta.field_d, var1, (ce) null);
+        ub var2 = new ub(MouseWheelInput.field_d, var1, (ce) null);
         this.field_F = new pl(td.field_b, (ce) null);
         this.field_G = new pl(oa.field_a, (ce) null);
         this.field_E.field_p = cd.field_a;
@@ -113,8 +113,8 @@ final class tb extends pe implements ha, qd {
     final static void a(int param0, int param1, ie param2) {
         mg var5 = n.field_b;
         var5.c((byte) 77, param0);
-        var5.field_m = var5.field_m + 1;
-        int var4 = var5.field_m;
+        var5.position = var5.position + 1;
+        int var4 = var5.position;
         if (param1 != -17932) {
           return;
         }
@@ -127,9 +127,9 @@ final class tb extends pe implements ha, qd {
             var5.a(param2.field_i, 0, param2.field_i.length, param1 ^ -17983);
           }
           var5.e(var4, param1 - 1182869092);
-          var5.field_m = var5.field_m - 4;
+          var5.position = var5.position - 4;
           param2.field_k = var5.i(255);
-          var5.a(var5.field_m - var4, -88);
+          var5.a(var5.position - var4, -88);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "tb.CA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

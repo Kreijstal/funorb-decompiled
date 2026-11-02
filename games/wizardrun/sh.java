@@ -30,7 +30,7 @@ final class sh {
           String stackIn_14_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (vh.field_k.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_k.startsWith("win") &&
               tj.a(99, param2)) {
               return;
             }

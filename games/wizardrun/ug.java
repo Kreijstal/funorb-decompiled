@@ -189,7 +189,7 @@ final class ug extends pl {
             null != param4.field_x) {
             of.c(45);
           }
-          kg.field_c = 0;
+          SecondaryNodeDequeIterator.field_c = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param4.field_N > var8)))) {
@@ -246,7 +246,7 @@ final class ug extends pl {
                           dupTemp$0 = param4.field_x[var8];
                           t.field_a[dupTemp$0] = t.field_a[dupTemp$0] + 1;
                         }
-                        kg.field_c = kg.field_c + 1;
+                        SecondaryNodeDequeIterator.field_c = SecondaryNodeDequeIterator.field_c + 1;
                         break;
                       }
                     }
@@ -466,7 +466,7 @@ final class ug extends pl {
             null != param4.field_x) {
             of.c(45);
           }
-          kg.field_c = 0;
+          SecondaryNodeDequeIterator.field_c = 0;
           var8 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(param4.field_N > var8)))) {
@@ -523,7 +523,7 @@ final class ug extends pl {
                           dupTemp$0 = param4.field_x[var8];
                           t.field_a[dupTemp$0] = t.field_a[dupTemp$0] + 1;
                         }
-                        kg.field_c = kg.field_c + 1;
+                        SecondaryNodeDequeIterator.field_c = SecondaryNodeDequeIterator.field_c + 1;
                         break;
                       }
                     }

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class hi implements Runnable {
+final class BufferedSocket implements Runnable {
     private int field_b;
     private jh field_e;
     private byte[] field_i;
@@ -16,7 +16,7 @@ final class hi implements Runnable {
     private InputStream field_m;
     private boolean field_f;
     private int field_d;
-    private vh field_j;
+    private PlatformTaskDispatcher field_j;
     static rc field_l;
     static long field_k;
     static int field_a;
@@ -31,7 +31,7 @@ final class hi implements Runnable {
         return this.field_m.read();
     }
 
-    hi(java.net.Socket param0, vh param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1) throws IOException {
         this(param0, param1, 5000);
     }
 
@@ -129,7 +129,7 @@ final class hi implements Runnable {
           var2_ref = this;
           synchronized (var2_ref) {
             if (param0 != 76) {
-              hi.d((byte) 8);
+              BufferedSocket.d((byte) 8);
             }
             this.field_g = true;
             this.notifyAll();
@@ -322,7 +322,7 @@ final class hi implements Runnable {
         }
     }
 
-    private hi(java.net.Socket param0, vh param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformTaskDispatcher param1, int param2) throws IOException {
         this.field_g = false;
         this.field_b = 0;
         this.field_f = false;

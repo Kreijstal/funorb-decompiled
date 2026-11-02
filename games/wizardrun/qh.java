@@ -56,50 +56,50 @@ class qh {
               stackIn_9_0 = -113;
               return stackIn_9_0;
             }
-            if (wh.field_j == tj.field_G) {
+            if (NodeHashTableIterator.field_j == tj.field_G) {
               if (!param5) {
                 eh.field_e = qb.a(param0, false, (byte) -90, param4);
               } else {
                 var10 = (String) null;
                 eh.field_e = uk.a((String) null, 8355711, pe.field_D, false, param0);
               }
-              n.field_b.field_m = 0;
+              n.field_b.position = 0;
               n.field_b.b((byte) 11, 14);
               n.field_b.b((byte) 11, eh.field_e.a(true).field_a);
               id.a((byte) -67, -1);
-              wh.field_j = pj.field_P;
+              NodeHashTableIterator.field_j = pj.field_P;
             }
-            if (wh.field_j == pj.field_P &&
+            if (NodeHashTableIterator.field_j == pj.field_P &&
               hc.a(1, param3 ^ 28257)) {
               var6_int = nk.field_N.f(255);
               if (var6_int == 0) {
-                wh.field_j = bd.field_b;
+                NodeHashTableIterator.field_j = bd.field_b;
               } else {
-                wh.field_j = ta.field_c;
+                NodeHashTableIterator.field_j = MouseWheelInput.field_c;
                 ra.field_k = var6_int;
-                gd.field_c = -1;
+                DelegatingCanvas.field_c = -1;
               }
-              nk.field_N.field_m = 0;
+              nk.field_N.position = 0;
             }
-            if (bd.field_b == wh.field_j &&
+            if (bd.field_b == NodeHashTableIterator.field_j &&
               hc.a(8, -28266)) {
               tg.field_g = nk.field_N.e((byte) 0);
-              nk.field_N.field_m = 0;
+              nk.field_N.position = 0;
               gi.a(param2, eh.field_e, true, param5, param1);
-              wh.field_j = vb.field_F;
+              NodeHashTableIterator.field_j = vb.field_F;
             }
             boolean decompiledFrameRemainder0 = true;
-            if (wh.field_j == vb.field_F &&
+            if (NodeHashTableIterator.field_j == vb.field_F &&
               hc.a(1, -28266)) {
               var6_intLifetime1 = nk.field_N.f(255);
               sf.field_b = null;
               ra.field_k = var6_intLifetime1;
-              nk.field_N.field_m = 0;
+              nk.field_N.position = 0;
               if (var6_intLifetime1 != 0 &&
                 1 != var6_intLifetime1) {
                 if (var6_intLifetime1 != 8) {
-                  gd.field_c = -1;
-                  wh.field_j = ta.field_c;
+                  DelegatingCanvas.field_c = -1;
+                  NodeHashTableIterator.field_j = MouseWheelInput.field_c;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -110,11 +110,11 @@ class qh {
                 }
               }
               if (decompiledFrameRemainder0) {
-                gd.field_c = -1;
-                wh.field_j = fc.field_b;
+                DelegatingCanvas.field_c = -1;
+                NodeHashTableIterator.field_j = fc.field_b;
               }
             }
-            if (fc.field_b == wh.field_j &&
+            if (fc.field_b == NodeHashTableIterator.field_j &&
               bd.b(param3 + 71)) {
               pe.field_D = nk.field_N.e((byte) 0);
               dd.field_m = nk.field_N.f(255);
@@ -145,9 +145,9 @@ class qh {
               }
               d.field_a = nk.field_N.d(0);
               var12 = (CharSequence) ((Object) d.field_a);
-              wl.field_a = ta.a(-124, var12);
+              IntrusiveNode.field_a = MouseWheelInput.a(-124, var12);
               ei.field_t = nk.field_N.f(255);
-              wh.field_j = hi.field_l;
+              NodeHashTableIterator.field_j = BufferedSocket.field_l;
               if (eh.field_e.a(true) == pc.field_v) {
                 hd.field_C.a(jg.f(param3 + 10), 8910);
               } else {
@@ -176,7 +176,7 @@ class qh {
                 }
               }
               if (hl.field_a > 0) {
-                pf.field_g = true;
+                IntrusiveDequeCursor.field_g = true;
               }
               n.field_b.a(uh.field_d, (byte) 109);
               for (var8Lifetime1 = 0; var8Lifetime1 < 4; var8Lifetime1++) {
@@ -186,7 +186,7 @@ class qh {
               stackIn_79_0 = ra.field_k;
               return stackIn_79_0;
             }
-            if (wh.field_j == ta.field_c &&
+            if (NodeHashTableIterator.field_j == MouseWheelInput.field_c &&
               bd.b(param3 + 85)) {
               ql.a(-77);
               if (ra.field_k == 7 &&

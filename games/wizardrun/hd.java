@@ -88,7 +88,7 @@ final class hd extends ub {
         var8 = wizardrun.field_H;
         try {
           var5_int = param2 + this.field_r;
-          eb.a(param3, param1 + this.field_n, param2 + this.field_D.field_z, param1, var5_int - this.field_D.field_z);
+          ClientException.a(param3, param1 + this.field_n, param2 + this.field_D.field_z, param1, var5_int - this.field_D.field_z);
           for (var6 = param2 - this.field_A; var5_int > var6; var6 = var6 + param0.field_z) {
             param0.e(var6, param1);
           }
@@ -203,7 +203,7 @@ final class hd extends ub {
         int var6 = param3 + this.field_l;
         this.a(this.field_G[param1], var6, var5, param1 ^ 0);
         if (this.field_z < 65536) {
-          eb.a(0, this.field_n + var6, var5 + (this.field_r * this.field_z >> 16), var6, var5 + this.field_r);
+          ClientException.a(0, this.field_n + var6, var5 + (this.field_r * this.field_z >> 16), var6, var5 + this.field_r);
           this.a(this.field_G[1], var6, var5, 0);
           bb.b(4);
         }

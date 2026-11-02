@@ -27,7 +27,7 @@ final class rb {
         var8 = wizardrun.field_H;
         try {
           var3_int = 0;
-          var4 = pf.field_f;
+          var4 = IntrusiveDequeCursor.field_f;
           if (param0 != -578629823) {
             stackIn_3_0 = -85;
             return stackIn_3_0;
@@ -77,7 +77,7 @@ final class rb {
             rb.a(57, (byte) -120);
           }
           while (var4 != null) {
-            oj.a(param0, var4, -22);
+            GameKeyHandler.a(param0, var4, -22);
             var4 = (vf) (r.field_d.d(8192));
           }
           return;

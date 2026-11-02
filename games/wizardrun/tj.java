@@ -54,7 +54,7 @@ abstract class tj extends pe {
         var4 = wizardrun.field_H;
         try {
           try {
-            if (!vh.field_k.startsWith("win")) {
+            if (!PlatformTaskDispatcher.field_k.startsWith("win")) {
               return false;
             }
             if (param0 <= 81) {

@@ -119,21 +119,21 @@ final class id {
           String var3 = null;
           Throwable decompiledCaughtException = null;
           if (jc.field_H != null && (0 > param1 ||
-            wh.field_j == hi.field_l)) {
-            if (n.field_b.field_m == 0 &&
-              hi.field_k + 10000L < d.a((byte) 44)) {
+            NodeHashTableIterator.field_j == BufferedSocket.field_l)) {
+            if (n.field_b.position == 0 &&
+              BufferedSocket.field_k + 10000L < d.a((byte) 44)) {
               n.field_b.c((byte) 65, param1);
             }
-            if (n.field_b.field_m > 0) {
+            if (n.field_b.position > 0) {
               try {
-                jc.field_H.a(n.field_b.field_m, n.field_b.field_k, 1, 0);
-                hi.field_k = d.a((byte) 29);
+                jc.field_H.a(n.field_b.position, n.field_b.payload, 1, 0);
+                BufferedSocket.field_k = d.a((byte) 29);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 ql.a(param0 ^ 17);
               }
-              n.field_b.field_m = 0;
+              n.field_b.position = 0;
             }
             if (param0 != -67) {
               var3 = (String) null;
@@ -141,7 +141,7 @@ final class id {
             }
             return;
           }
-          n.field_b.field_m = 0;
+          n.field_b.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

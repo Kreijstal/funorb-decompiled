@@ -6,7 +6,7 @@ final class qa extends ll {
     static lg field_r;
     private la field_p;
     private la[] field_t;
-    static oi field_q;
+    static IntrusiveDeque field_q;
 
     final void a(byte param0, o[] param1) {
         int var4 = 0;
@@ -69,7 +69,7 @@ final class qa extends ll {
         field_r = null;
         field_q = null;
         if (param0 != -10059) {
-          field_q = (oi) null;
+          field_q = (IntrusiveDeque) null;
         }
     }
 
@@ -78,7 +78,7 @@ final class qa extends ll {
           250 - pe.field_B != jd.field_f) {
         }
         if (param0 != 250) {
-          field_q = (oi) null;
+          field_q = (IntrusiveDeque) null;
         }
         jd.field_f = jd.field_f + 1;
     }
@@ -221,7 +221,7 @@ final class qa extends ll {
             stackIn_3_0 = (ub) (param2);
           }
           var10 = (pl) (stackIn_3_0);
-          eb.a(0, param1 - (-param2.field_l - param2.field_n), param0 + param2.field_o, param2.field_l + param1, param0 + param2.field_o + param2.field_r);
+          ClientException.a(0, param1 - (-param2.field_l - param2.field_n), param0 + param2.field_o, param2.field_l + param1, param0 + param2.field_o + param2.field_r);
           if (var10 != null) {
             param4 = param4 & var10.field_B;
           }
@@ -285,6 +285,6 @@ final class qa extends ll {
 
     static {
         field_r = new lg();
-        field_q = new oi();
+        field_q = new IntrusiveDeque();
     }
 }

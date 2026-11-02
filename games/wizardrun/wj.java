@@ -163,7 +163,7 @@ final class wj extends pe implements qd {
           var2 = (CharSequence) null;
           wj.a((CharSequence) null, -18);
         }
-        stackIn_6_0 = (null != jc.field_H) && (wh.field_j == hi.field_l);
+        stackIn_6_0 = (null != jc.field_H) && (NodeHashTableIterator.field_j == BufferedSocket.field_l);
         return stackIn_6_0;
     }
 

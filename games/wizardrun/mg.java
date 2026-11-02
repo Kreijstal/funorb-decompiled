@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mg extends va {
+final class mg extends PacketBuffer {
     static String[] field_q;
     private int field_p;
     static o field_s;
-    private ti field_r;
+    private IsaacRandom field_r;
 
     final static ai a(int param0, int[] param1, int param2, int param3, byte param4, int param5, int param6, int param7, int param8) {
         ai var9 = null;
@@ -56,8 +56,8 @@ final class mg extends va {
             stackIn_2_0 = null;
             return (ua) (stackIn_2_0);
           }
-          var3 = new ua(param1, ph.field_q, ne.field_h, cg.field_k, tf.field_b, ic.field_b, mf.field_j);
-          eb.a(0);
+          var3 = new ua(param1, ph.field_q, ne.field_h, ImageProducerRasterBuffer.field_k, MouseInputHandler.field_b, ic.field_b, mf.field_j);
+          ClientException.a(0);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -90,7 +90,7 @@ final class mg extends va {
     }
 
     final void i(byte param0) {
-        this.field_m = (this.field_p + 7) / 8;
+        this.position = (this.field_p + 7) / 8;
         if (param0 != -31) {
           field_q = (String[]) null;
         }
@@ -98,23 +98,23 @@ final class mg extends va {
 
     final int m(int param0) {
         int var2 = -128 % ((param0 + 9) / 54);
-        int fieldTemp$0 = this.field_m;
-        this.field_m = this.field_m + 1;
-        return 255 & this.field_k[fieldTemp$0] - this.field_r.b((byte) 73);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$0] - this.field_r.b((byte) 73);
     }
 
     final void c(byte param0, int param1) {
         int var3 = -41 / ((-1 - param0) / 44);
-        int fieldTemp$0 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$0] = (byte)(this.field_r.b((byte) 60) + param1);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(this.field_r.b((byte) 60) + param1);
     }
 
     final void l(int param0) {
         if (param0 != 19967) {
           return;
         }
-        this.field_p = this.field_m * 8;
+        this.field_p = this.position * 8;
     }
 
     mg(byte[] param0) {
@@ -133,9 +133,9 @@ final class mg extends va {
         var6 = wizardrun.field_H;
         try {
           for (var5_int = param2; var5_int < param1; var5_int++) {
-            fieldTemp$0 = this.field_m;
-            this.field_m = this.field_m + 1;
-            param3[var5_int + param0] = (byte)(this.field_k[fieldTemp$0] - this.field_r.b((byte) 125));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param3[var5_int + param0] = (byte)(this.payload[fieldTemp$0] - this.field_r.b((byte) 125));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -157,7 +157,7 @@ final class mg extends va {
           return;
         }
         try {
-          this.field_r = new ti(param0);
+          this.field_r = new IsaacRandom(param0);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "mg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -176,14 +176,14 @@ final class mg extends va {
         while (param0 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.field_k[incrementValue$0] & lj.field_b[var4]) << param0 - var4);
+          var5 = var5 + ((this.payload[incrementValue$0] & lj.field_b[var4]) << param0 - var4);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (var4 == param0) {
-          var5 = var5 + (lj.field_b[var4] & this.field_k[var3]);
+          var5 = var5 + (lj.field_b[var4] & this.payload[var3]);
         } else {
-          var5 = var5 + (this.field_k[var3] >> var4 - param0 & lj.field_b[param0]);
+          var5 = var5 + (this.payload[var3] >> var4 - param0 & lj.field_b[param0]);
         }
         return var5;
     }

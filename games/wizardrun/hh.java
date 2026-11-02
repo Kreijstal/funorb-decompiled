@@ -219,7 +219,7 @@ class hh extends ee {
         this.field_ab = -1;
         this.field_x = -2147483648;
         try {
-          this.field_e = param0;
+          this.key = param0;
           this.a(-2147483648, param1);
           if (param6 != null) {
             this.field_y = param6;

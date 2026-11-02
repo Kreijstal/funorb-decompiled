@@ -3,33 +3,33 @@
  */
 import java.util.*;
 
-final class oi {
+final class IntrusiveDeque {
     static Random field_c;
-    wl field_a;
+    IntrusiveNode field_a;
     static int[] field_f;
-    private wl field_b;
+    private IntrusiveNode field_b;
     static String[] field_e;
     static String field_d;
 
-    final void a(wl param0, int param1) {
+    final void a(IntrusiveNode param0, int param1) {
         try {
-          if (param0.field_c != null) {
+          if (param0.previous != null) {
             param0.a(false);
           }
           if (param1 != -5441) {
             field_d = (String) null;
           }
-          param0.field_b = this.field_a.field_b;
-          param0.field_c = this.field_a;
-          param0.field_c.field_b = param0;
-          param0.field_b.field_c = param0;
+          param0.next = this.field_a.next;
+          param0.previous = this.field_a;
+          param0.previous.next = param0;
+          param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "oi.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final wl b(int param0) {
-        wl var2 = this.field_a.field_b;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = this.field_a.next;
         if (var2 != this.field_a) {
           int var3 = -45 % ((param0 - 32) / 56);
           var2.a(false);
@@ -38,8 +38,8 @@ final class oi {
         return null;
     }
 
-    final wl c(int param0) {
-        wl var2 = this.field_a.field_c;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_a.previous;
         if (param0 != 8192) {
           field_f = (int[]) null;
           if (this.field_a != var2) {
@@ -57,17 +57,17 @@ final class oi {
 
     final boolean f(int param0) {
         if (param0 == 8192) {
-          return this.field_a.field_b == this.field_a ? true : false;
+          return this.field_a.next == this.field_a ? true : false;
         }
-        this.field_b = (wl) null;
-        return this.field_a.field_b == this.field_a ? true : false;
+        this.field_b = (IntrusiveNode) null;
+        return this.field_a.next == this.field_a ? true : false;
     }
 
     final void a(boolean param0) {
-        wl var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = wizardrun.field_H;
         while (true) {
-          var2 = this.field_a.field_b;
+          var2 = this.field_a.next;
           if (var2 == this.field_a) {
             break;
           }
@@ -79,20 +79,20 @@ final class oi {
         }
     }
 
-    final void a(wl param0, boolean param1) {
+    final void a(IntrusiveNode param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (null != param0.field_c) {
+          if (null != param0.previous) {
             param0.a(param1);
           }
-          param0.field_b = this.field_a;
-          param0.field_c = this.field_a.field_c;
-          param0.field_c.field_b = param0;
-          param0.field_b.field_c = param0;
+          param0.next = this.field_a;
+          param0.previous = this.field_a.previous;
+          param0.previous.next = param0;
+          param0.next.previous = param0;
           if (!param1) {
             return;
           }
@@ -112,38 +112,38 @@ final class oi {
         }
     }
 
-    final wl d(int param0) {
-        wl var2 = this.field_b;
+    final IntrusiveNode d(int param0) {
+        IntrusiveNode var2 = this.field_b;
         if (var2 == this.field_a) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_b;
+        this.field_b = var2.next;
         if (param0 == 8192) {
           return var2;
         }
-        return (wl) null;
+        return (IntrusiveNode) null;
     }
 
-    final wl a(byte param0) {
-        wl var2 = null;
-        wl var2Lifetime1;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 11) {
-          this.field_a = (wl) null;
-          var2 = this.field_a.field_c;
+          this.field_a = (IntrusiveNode) null;
+          var2 = this.field_a.previous;
           if (this.field_a == var2) {
             this.field_b = null;
             return null;
           }
-          this.field_b = var2.field_c;
+          this.field_b = var2.previous;
           return var2;
         }
-        var2Lifetime1 = this.field_a.field_c;
+        var2Lifetime1 = this.field_a.previous;
         if (this.field_a == var2Lifetime1) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2Lifetime1.field_c;
+        this.field_b = var2Lifetime1.previous;
         return var2Lifetime1;
     }
 
@@ -157,39 +157,39 @@ final class oi {
         field_f = null;
     }
 
-    final wl a(int param0) {
-        wl var2 = this.field_b;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = this.field_b;
         if (this.field_a == var2) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_c;
+        this.field_b = var2.previous;
         int var3 = -110 % ((param0 - 17) / 47);
         return var2;
     }
 
-    public oi() {
-        this.field_a = new wl();
-        this.field_a.field_b = this.field_a;
-        this.field_a.field_c = this.field_a;
+    public IntrusiveDeque() {
+        this.field_a = new IntrusiveNode();
+        this.field_a.next = this.field_a;
+        this.field_a.previous = this.field_a;
     }
 
-    final wl b(byte param0) {
-        wl var2 = null;
-        wl var2Lifetime1;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 < 45) {
           field_f = (int[]) null;
-          var2 = this.field_a.field_b;
+          var2 = this.field_a.next;
           if (var2 != this.field_a) {
-            this.field_b = var2.field_b;
+            this.field_b = var2.next;
             return var2;
           }
           this.field_b = null;
           return null;
         }
-        var2Lifetime1 = this.field_a.field_b;
+        var2Lifetime1 = this.field_a.next;
         if (var2Lifetime1 != this.field_a) {
-          this.field_b = var2Lifetime1.field_b;
+          this.field_b = var2Lifetime1.next;
           return var2Lifetime1;
         }
         this.field_b = null;

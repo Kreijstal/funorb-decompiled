@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class ea extends ib {
+final class ProxySocketConnector extends SocketConnector {
     static bh field_f;
     static hk field_e;
     private java.net.ProxySelector field_g;
@@ -102,7 +102,7 @@ final class ea extends ib {
                 }
                 var2 = ra.a("ticketing_oneunread", (byte) -121);
                 if (var2 != null) {
-                  ib.field_d = nf.a((byte) 97, var2);
+                  SocketConnector.field_d = nf.a((byte) 97, var2);
                 }
                 var2 = ra.a("ticketing_xunread", (byte) -115);
                 if (var2 != null) {
@@ -110,7 +110,7 @@ final class ea extends ib {
                 }
                 var2 = ra.a("ticketing_gotowebsite", (byte) -111);
                 if (null != var2) {
-                  pf.field_c = nf.a((byte) 113, var2);
+                  IntrusiveDequeCursor.field_c = nf.a((byte) 113, var2);
                 }
                 var2 = ra.a("ticketing_waitingformessages", (byte) -118);
                 if (null != var2) {
@@ -1035,11 +1035,11 @@ final class ea extends ib {
                 }
                 var2 = ra.a("playfreeversion", (byte) -113);
                 if (var2 != null) {
-                  wh.field_b = nf.a((byte) 96, var2);
+                  NodeHashTableIterator.field_b = nf.a((byte) 96, var2);
                 }
                 var2 = ra.a("reloadgame", (byte) -116);
                 if (null != var2) {
-                  da.field_j = nf.a((byte) 97, var2);
+                  GameApplet.field_j = nf.a((byte) 97, var2);
                 }
                 var2 = ra.a("toserverlist", (byte) -109);
                 if (var2 != null) {
@@ -1051,7 +1051,7 @@ final class ea extends ib {
                 }
                 var2 = ra.a("changedisplayname", (byte) -120);
                 if (var2 != null) {
-                  de.field_a = nf.a((byte) 84, var2);
+                  SecondaryNodeDeque.field_a = nf.a((byte) 84, var2);
                 }
                 var2 = ra.a("returntohomepage", (byte) -104);
                 if (null != var2) {
@@ -1131,7 +1131,7 @@ final class ea extends ib {
                 }
                 var2 = ra.a("back", (byte) -104);
                 if (null != var2) {
-                  ti.field_h = nf.a((byte) 93, var2);
+                  IsaacRandom.field_h = nf.a((byte) 93, var2);
                 }
                 var2 = ra.a("exitfullscreenmode", (byte) -95);
                 if (var2 != null) {
@@ -1483,7 +1483,7 @@ final class ea extends ib {
                 }
                 var2 = ra.a("login_username_tooltip", (byte) -121);
                 if (null != var2) {
-                  tf.field_a = nf.a((byte) 102, var2);
+                  MouseInputHandler.field_a = nf.a((byte) 102, var2);
                 }
                 var2 = ra.a("login_password_tooltip", (byte) -128);
                 if (var2 != null) {
@@ -1507,7 +1507,7 @@ final class ea extends ib {
                 }
                 var2 = ra.a("login_no_displayname", (byte) -112);
                 if (null != var2) {
-                  ta.field_d = nf.a((byte) 116, var2);
+                  MouseWheelInput.field_d = nf.a((byte) 116, var2);
                 }
                 var2 = ra.a("create_username_tooltip", (byte) -127);
                 if (null != var2) {
@@ -1583,7 +1583,7 @@ final class ea extends ib {
                 }
                 var2 = ra.a("create_username_available", (byte) -105);
                 if (var2 != null) {
-                  oj.field_d = nf.a((byte) 115, var2);
+                  GameKeyHandler.field_d = nf.a((byte) 115, var2);
                 }
                 var2 = ra.a("create_alert_namelength", (byte) -118);
                 if (var2 != null) {
@@ -1619,7 +1619,7 @@ final class ea extends ib {
                 }
                 var2 = ra.a("create_alert_passcontainsemail", (byte) -98);
                 if (var2 != null) {
-                  wh.field_c = nf.a((byte) 120, var2);
+                  NodeHashTableIterator.field_c = nf.a((byte) 120, var2);
                 }
                 var2 = ra.a("create_alert_passcontainsname_partial", (byte) -119);
                 if (null != var2) {
@@ -1635,7 +1635,7 @@ final class ea extends ib {
                 }
                 var2 = ra.a("create_alert_email_unavailable", (byte) -113);
                 if (var2 != null) {
-                  wl.field_d = nf.a((byte) 126, var2);
+                  IntrusiveNode.field_d = nf.a((byte) 126, var2);
                 }
                 var2 = ra.a("create_alert_invaliddate", (byte) -95);
                 if (null != var2) {
@@ -2497,27 +2497,27 @@ final class ea extends ib {
                 }
                 var2 = ra.a("quickchat_shortcut_keys,0", (byte) -119);
                 if (null != var2) {
-                  cg.field_o[0] = nf.a((byte) 101, var2);
+                  ImageProducerRasterBuffer.field_o[0] = nf.a((byte) 101, var2);
                 }
                 var2 = ra.a("quickchat_shortcut_keys,1", (byte) -122);
                 if (null != var2) {
-                  cg.field_o[1] = nf.a((byte) 127, var2);
+                  ImageProducerRasterBuffer.field_o[1] = nf.a((byte) 127, var2);
                 }
                 var2 = ra.a("quickchat_shortcut_keys,2", (byte) -119);
                 if (var2 != null) {
-                  cg.field_o[2] = nf.a((byte) 119, var2);
+                  ImageProducerRasterBuffer.field_o[2] = nf.a((byte) 119, var2);
                 }
                 var2 = ra.a("quickchat_shortcut_keys,3", (byte) -117);
                 if (var2 != null) {
-                  cg.field_o[3] = nf.a((byte) 100, var2);
+                  ImageProducerRasterBuffer.field_o[3] = nf.a((byte) 100, var2);
                 }
                 var2 = ra.a("quickchat_shortcut_keys,4", (byte) -120);
                 if (var2 != null) {
-                  cg.field_o[4] = nf.a((byte) 100, var2);
+                  ImageProducerRasterBuffer.field_o[4] = nf.a((byte) 100, var2);
                 }
                 var2 = ra.a("quickchat_shortcut_keys,5", (byte) -106);
                 if (null != var2) {
-                  cg.field_o[5] = nf.a((byte) 119, var2);
+                  ImageProducerRasterBuffer.field_o[5] = nf.a((byte) 119, var2);
                 }
                 var2 = ra.a("keychar_the_character_under_questionmark", (byte) -117);
                 if (null != var2) {
@@ -2681,7 +2681,7 @@ final class ea extends ib {
                 }
                 var2 = ra.a("fs_button_members", (byte) -106);
                 if (null != var2) {
-                  ta.field_e = nf.a((byte) 107, var2);
+                  MouseWheelInput.field_e = nf.a((byte) 107, var2);
                 }
                 var2 = ra.a("fs_unavailable", (byte) -103);
                 if (var2 != null) {
@@ -2693,7 +2693,7 @@ final class ea extends ib {
                 }
                 var2 = ra.a("fs_focus", (byte) -95);
                 if (var2 != null) {
-                  ib.field_b = nf.a((byte) 122, var2);
+                  SocketConnector.field_b = nf.a((byte) 122, var2);
                 }
                 var2 = ra.a("fs_focus_or_resolution", (byte) -107);
                 if (var2 != null) {
@@ -2759,15 +2759,15 @@ final class ea extends ib {
                 }
                 var2 = ra.a("hs_mode_name,0", (byte) -112);
                 if (var2 != null) {
-                  wh.field_l[0] = nf.a((byte) 109, var2);
+                  NodeHashTableIterator.field_l[0] = nf.a((byte) 109, var2);
                 }
                 var2 = ra.a("hs_mode_name,1", (byte) -111);
                 if (var2 != null) {
-                  wh.field_l[1] = nf.a((byte) 119, var2);
+                  NodeHashTableIterator.field_l[1] = nf.a((byte) 119, var2);
                 }
                 var2 = ra.a("hs_mode_name,2", (byte) -120);
                 if (null != var2) {
-                  wh.field_l[2] = nf.a((byte) 125, var2);
+                  NodeHashTableIterator.field_l[2] = nf.a((byte) 125, var2);
                 }
                 var2 = ra.a("rating_mode_name,0", (byte) -107);
                 if (null != var2) {
@@ -2875,31 +2875,31 @@ final class ea extends ib {
                 }
                 var2 = ra.a("mustlogin3,1", (byte) -120);
                 if (null != var2) {
-                  oi.field_e[1] = nf.a((byte) 98, var2);
+                  IntrusiveDeque.field_e[1] = nf.a((byte) 98, var2);
                 }
                 var2 = ra.a("mustlogin3,2", (byte) -120);
                 if (null != var2) {
-                  oi.field_e[2] = nf.a((byte) 96, var2);
+                  IntrusiveDeque.field_e[2] = nf.a((byte) 96, var2);
                 }
                 var2 = ra.a("mustlogin3,3", (byte) -114);
                 if (null != var2) {
-                  oi.field_e[3] = nf.a((byte) 94, var2);
+                  IntrusiveDeque.field_e[3] = nf.a((byte) 94, var2);
                 }
                 var2 = ra.a("mustlogin3,4", (byte) -120);
                 if (var2 != null) {
-                  oi.field_e[4] = nf.a((byte) 86, var2);
+                  IntrusiveDeque.field_e[4] = nf.a((byte) 86, var2);
                 }
                 var2 = ra.a("mustlogin3,5", (byte) -105);
                 if (var2 != null) {
-                  oi.field_e[5] = nf.a((byte) 93, var2);
+                  IntrusiveDeque.field_e[5] = nf.a((byte) 93, var2);
                 }
                 var2 = ra.a("mustlogin3,6", (byte) -125);
                 if (var2 != null) {
-                  oi.field_e[6] = nf.a((byte) 108, var2);
+                  IntrusiveDeque.field_e[6] = nf.a((byte) 108, var2);
                 }
                 var2 = ra.a("mustlogin3,7", (byte) -113);
                 if (var2 != null) {
-                  oi.field_e[7] = nf.a((byte) 112, var2);
+                  IntrusiveDeque.field_e[7] = nf.a((byte) 112, var2);
                 }
                 var2 = ra.a("discard", (byte) -109);
                 if (null != var2) {
@@ -3047,8 +3047,8 @@ final class ea extends ib {
                   throw bd.a((Throwable) ((Object) stackIn_2617_0), ((StringBuilder) (Object) stackIn_2617_1).append(stackIn_2618_2).append(')').toString());
                 }
                 if (var3 != 0) {
-                  stackIn_2626_0 = (!da.field_h);
-                  da.field_h = stackIn_2626_0;
+                  stackIn_2626_0 = (!GameApplet.field_h);
+                  GameApplet.field_h = stackIn_2626_0;
                 }
             }
         }
@@ -3061,7 +3061,7 @@ final class ea extends ib {
           field_f = null;
           field_e = null;
           if (param0 != 4) {
-            ea.c(14);
+            ProxySocketConnector.c(14);
           }
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "ea.F(" + param0 + ')');
@@ -3158,7 +3158,7 @@ final class ea extends ib {
           var7 = null;
           var8 = var6_array;
           var9 = 0;
-          L6: while (true) {
+          scanLoop1: while (true) {
             if (var9 < var8.length) {
               var10 = var8[var9];
               var11 = (java.net.Proxy) (var10);
@@ -3185,7 +3185,7 @@ final class ea extends ib {
                 decompiledRegionSelector0 = 1;
               }
               if (decompiledRegionSelector0 == 0) {
-                break L6;
+                break scanLoop1;
               }
               var9++;
               if (var13 == 0) {
@@ -3193,7 +3193,7 @@ final class ea extends ib {
               }
             }
             if (var7 != null) {
-              throw ea.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+              throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
             }
             stackIn_42_0 = this.a(-14394);
             break;
@@ -3399,7 +3399,7 @@ final class ea extends ib {
         }
     }
 
-    ea() {
+    ProxySocketConnector() {
         try {
           this.field_g = java.net.ProxySelector.getDefault();
         } catch (RuntimeException runtimeException) {

@@ -63,7 +63,7 @@ final class wc {
         this.field_i = dj.field_e;
         this.field_g = il.field_a;
         this.field_a = rb.field_a;
-        this.field_c = wh.field_g;
+        this.field_c = NodeHashTableIterator.field_g;
         this.field_h = vl.field_f;
         this.field_d = ac.field_r;
         this.field_b = tg.field_b;

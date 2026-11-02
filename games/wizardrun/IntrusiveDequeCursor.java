@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pf {
+final class IntrusiveDequeCursor {
     static int field_f;
-    private oi field_d;
+    private IntrusiveDeque field_d;
     static String field_c;
     static boolean field_g;
     static o field_b;
-    private wl field_a;
+    private IntrusiveNode field_a;
     static char[] field_e;
 
     final static int c(byte param0) {
@@ -15,30 +15,30 @@ final class pf {
         return -fe.field_l + sj.field_n;
     }
 
-    final wl b(int param0) {
-        wl var2 = this.field_a;
+    final IntrusiveNode b(int param0) {
+        IntrusiveNode var2 = this.field_a;
         if (param0 != 35) {
           field_c = (String) null;
           if (this.field_d.field_a != var2) {
-            this.field_a = var2.field_b;
+            this.field_a = var2.next;
             return var2;
           }
           this.field_a = null;
           return null;
         }
         if (this.field_d.field_a != var2) {
-          this.field_a = var2.field_b;
+          this.field_a = var2.next;
           return var2;
         }
         this.field_a = null;
         return null;
     }
 
-    final wl a(wl param0, int param1) {
-        wl var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
-        wl stackIn_10_0 = null;
+        IntrusiveNode stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -50,14 +50,14 @@ final class pf {
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_d.field_a.field_b;
+            var3 = this.field_d.field_a.next;
           }
           if (var3 == this.field_d.field_a) {
             this.field_a = null;
             stackIn_8_0 = null;
-            return (wl) (stackIn_8_0);
+            return (IntrusiveNode) (stackIn_8_0);
           }
-          this.field_a = var3.field_b;
+          this.field_a = var3.next;
           stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -82,43 +82,43 @@ final class pf {
         return (param0 + var3) / param2 - var3;
     }
 
-    final wl a(byte param0) {
-        wl var2 = this.field_d.field_a.field_b;
+    final IntrusiveNode a(byte param0) {
+        IntrusiveNode var2 = this.field_d.field_a.next;
         if (this.field_d.field_a == var2) {
           this.field_a = null;
           return null;
         }
-        this.field_a = var2.field_b;
+        this.field_a = var2.next;
         if (param0 == 31) {
           return var2;
         }
-        this.field_a = (wl) null;
+        this.field_a = (IntrusiveNode) null;
         return var2;
     }
 
-    final wl a(int param0, wl param1) {
-        wl var3 = null;
+    final IntrusiveNode a(int param0, IntrusiveNode param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         Object stackIn_6_0 = null;
-        wl stackIn_8_0 = null;
+        IntrusiveNode stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == null) {
-            var3 = this.field_d.field_a.field_c;
+            var3 = this.field_d.field_a.previous;
           } else {
             var3 = param1;
           }
           if (var3 == this.field_d.field_a) {
             this.field_a = null;
             stackIn_6_0 = null;
-            return (wl) (stackIn_6_0);
+            return (IntrusiveNode) (stackIn_6_0);
           }
           var4 = -120 % ((param0 - 11) / 37);
-          this.field_a = var3.field_c;
+          this.field_a = var3.previous;
           stackIn_8_0 = var3;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -135,13 +135,13 @@ final class pf {
         }
     }
 
-    final wl a(boolean param0) {
-        wl var2 = this.field_a;
+    final IntrusiveNode a(boolean param0) {
+        IntrusiveNode var2 = this.field_a;
         if (var2 == this.field_d.field_a) {
           this.field_a = null;
           return null;
         }
-        this.field_a = var2.field_c;
+        this.field_a = var2.previous;
         if (param0) {
           return var2;
         }
@@ -149,14 +149,14 @@ final class pf {
         return var2;
     }
 
-    final wl b(byte param0) {
-        wl var2 = this.field_d.field_a.field_c;
+    final IntrusiveNode b(byte param0) {
+        IntrusiveNode var2 = this.field_d.field_a.previous;
         int var3 = -75 / ((-15 - param0) / 61);
         if (this.field_d.field_a == var2) {
           this.field_a = null;
           return null;
         }
-        this.field_a = var2.field_c;
+        this.field_a = var2.previous;
         return var2;
     }
 
@@ -172,7 +172,7 @@ final class pf {
         field_b = null;
     }
 
-    pf(oi param0) {
+    IntrusiveDequeCursor(IntrusiveDeque param0) {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {

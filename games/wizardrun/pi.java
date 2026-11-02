@@ -113,7 +113,7 @@ final class pi {
           }
           var44 = 0;
           var13Lifetime1 = var44;
-          while (var44 < kg.field_c) {
+          while (var44 < SecondaryNodeDequeIterator.field_c) {
             var14Lifetime1 = cb.field_e[var44];
             var15Lifetime1 = param5.field_p[var14Lifetime1];
             var16 = param5.field_C[var14Lifetime1];
@@ -216,15 +216,15 @@ final class pi {
         int var7 = wizardrun.field_H;
         o[] var1 = new o[wb.field_f];
         for (var2 = param0; var2 < wb.field_f; var2++) {
-          var3 = tf.field_b[var2] * cg.field_k[var2];
+          var3 = MouseInputHandler.field_b[var2] * ImageProducerRasterBuffer.field_k[var2];
           var4 = mf.field_j[var2];
           var5 = new int[var3];
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = ic.field_b[kl.b(255, (int) var4[var6])];
           }
-          var1[var2] = new o(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], cg.field_k[var2], tf.field_b[var2], var5);
+          var1[var2] = new o(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var5);
         }
-        eb.a(param0 ^ 0);
+        ClientException.a(param0 ^ 0);
         return var1;
     }
 

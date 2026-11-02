@@ -25,9 +25,9 @@ final class hj {
         db[] var1 = new db[wb.field_f];
         if (param0 >= 48) {
           for (var2 = 0; wb.field_f > var2; var2++) {
-            var1[var2] = new db(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], cg.field_k[var2], tf.field_b[var2], mf.field_j[var2], ic.field_b);
+            var1[var2] = new db(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], mf.field_j[var2], ic.field_b);
           }
-          eb.a(0);
+          ClientException.a(0);
           return var1;
         }
         return (db[]) null;

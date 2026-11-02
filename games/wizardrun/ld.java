@@ -8,7 +8,7 @@ final class ld {
     static String field_a;
     static si field_e;
     static int[] field_b;
-    static vh field_g;
+    static PlatformTaskDispatcher field_g;
 
     public static void a(byte param0) {
         field_g = null;

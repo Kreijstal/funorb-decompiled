@@ -9,14 +9,14 @@ final class ud implements Runnable {
     private java.net.URL field_d;
     static sd field_c;
     private DataInputStream field_f;
-    private vh field_k;
+    private PlatformTaskDispatcher field_k;
     private jh field_j;
     private jh field_e;
     static String field_a;
-    static va field_b;
-    private va field_i;
+    static PacketBuffer field_b;
+    private PacketBuffer field_i;
 
-    final va b(int param0) {
+    final PacketBuffer b(int param0) {
         if (~this.field_g != param0) {
           return null;
         }
@@ -92,16 +92,16 @@ final class ud implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = wizardrun.field_H;
           try {
-            while (this.field_i.field_m < this.field_i.field_k.length) {
-              var1_int = this.field_f.read(this.field_i.field_k, this.field_i.field_m, this.field_i.field_k.length - this.field_i.field_m);
+            while (this.field_i.position < this.field_i.payload.length) {
+              var1_int = this.field_f.read(this.field_i.payload, this.field_i.position, this.field_i.payload.length - this.field_i.position);
               if (0 <= var1_int) {
-                this.field_i.field_m = this.field_i.field_m + var1_int;
+                this.field_i.position = this.field_i.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_i.field_m == this.field_i.field_k.length) {
-              throw ud.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_i.field_k.length + " " + this.field_d));
+            if (this.field_i.position == this.field_i.payload.length) {
+              throw ud.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_i.payload.length + " " + this.field_d));
             }
             var1 = this;
             synchronized (var1) {
@@ -137,7 +137,7 @@ final class ud implements Runnable {
         try {
           var5 = (dc) (v.field_d.b((byte) 111));
           while (var5 != null) {
-            de.a(-14149, param0, var5);
+            SecondaryNodeDeque.a(-14149, param0, var5);
             var5 = (dc) (v.field_d.d(8192));
           }
           var3 = 105 % ((param1 + 34) / 40);
@@ -245,10 +245,10 @@ final class ud implements Runnable {
             var3 = var4.getOutputStream();
             var3.write(17);
             var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_d.getFile() + "\n\n"));
-            var3.write(wh.a((byte) -111, var5));
+            var3.write(NodeHashTableIterator.a((byte) -111, var5));
             this.field_f = new DataInputStream(var4.getInputStream());
           }
-          this.field_i.field_m = 0;
+          this.field_i.position = 0;
         } catch (java.io.IOException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (IOException) (Object) decompiledCaughtException;
@@ -302,11 +302,11 @@ final class ud implements Runnable {
         }
     }
 
-    ud(vh param0, java.net.URL param1, int param2) {
+    ud(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_d = param1;
           this.field_k = param0;
-          this.field_i = new va(param2);
+          this.field_i = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "ud.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

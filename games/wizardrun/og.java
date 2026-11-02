@@ -133,7 +133,7 @@ class og extends pl {
                 if (96 == param1) {
                   if (0 < this.field_L) {
                     stackIn_70_1 = 27;
-                    if (hi.field_p[82]) {
+                    if (BufferedSocket.field_p[82]) {
                       stackIn_71_2 = this.d(31823);
                     } else {
                       stackIn_71_2 = -1 + this.field_L;
@@ -155,17 +155,17 @@ class og extends pl {
                       this.h(0);
                       return true;
                     }
-                    if (hi.field_p[82] &&
+                    if (BufferedSocket.field_p[82] &&
                       param1 == 65) {
                       this.j((byte) 75);
                       return true;
                     }
-                    if (hi.field_p[82] &&
+                    if (BufferedSocket.field_p[82] &&
                       param1 == 66) {
                       this.f(false);
                       return true;
                     }
-                    if (hi.field_p[82] &&
+                    if (BufferedSocket.field_p[82] &&
                       param1 == 67) {
                       this.h((byte) 126);
                       return true;
@@ -173,7 +173,7 @@ class og extends pl {
                   } else {
                     if (this.field_L < this.field_k.length()) {
                       stackIn_41_1 = -127;
-                      if (!hi.field_p[82]) {
+                      if (!BufferedSocket.field_p[82]) {
                         stackIn_42_2 = 1 + this.field_L;
                       } else {
                         stackIn_42_2 = this.g((byte) 24);
@@ -282,8 +282,8 @@ class og extends pl {
           var8 = n.field_b;
           var9 = var8;
           var9.c((byte) -105, param1);
-          var9.field_m = var9.field_m + 1;
-          var4 = var9.field_m;
+          var9.position = var9.position + 1;
+          var4 = var9.position;
           var9.b((byte) 11, 1);
           var9.b(-1947079288, param0.field_i);
           var9.b(-1947079288, param0.field_t);
@@ -300,7 +300,7 @@ class og extends pl {
             var5++;
           }
           var9.e(var4, -1182887024);
-          var9.a(-var4 + var9.field_m, -87);
+          var9.a(-var4 + var9.position, -87);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "og.UA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -438,7 +438,7 @@ class og extends pl {
     private final void a(byte param0, int param1) {
         int var3 = 10 % ((-48 - param0) / 44);
         this.field_L = param1;
-        if (!hi.field_p[81]) {
+        if (!BufferedSocket.field_p[81]) {
           this.field_J = this.field_L;
         }
     }

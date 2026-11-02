@@ -165,7 +165,7 @@ final class le {
         int var7Lifetime1Lifetime1;
         var9 = wizardrun.field_H;
         try {
-          eb.field_a = true;
+          ClientException.field_a = true;
           oc.field_d = param1;
           if (oc.field_d == 0) {
             var3_int = bl.a((byte) 59, field_j, pe.field_z, kc.field_I, qb.field_s);
@@ -180,7 +180,7 @@ final class le {
               a.field_b[var5] = pe.field_z[var5];
             }
             a.field_b[-3 + var4] = "";
-            a.field_b[-2 + var4] = ta.field_e;
+            a.field_b[-2 + var4] = MouseWheelInput.field_e;
             ec.field_g[-2 + var4] = 0;
             h.field_s[0] = 4;
             a.field_b[var4 - 1] = wizardrun.field_F;
@@ -224,7 +224,7 @@ final class le {
               ec.field_g[-1 + var4] = 0;
               h.field_s[0] = 5;
             } else if (oc.field_d == 4) {
-              var3_int = bl.a((byte) 125, field_j, pe.field_z, kc.field_I, ib.field_b);
+              var3_int = bl.a((byte) 125, field_j, pe.field_z, kc.field_I, SocketConnector.field_b);
               var4 = var3_int + 2;
               ec.field_g = new int[var4];
               a.field_b = new String[var4];
@@ -390,21 +390,21 @@ final class le {
             }
             fh.field_f = stackIn_115_0 + stackIn_116_1;
           }
-          pf.field_f = ii.field_a - (fh.field_f >> 1);
-          wh.field_m = new int[a.field_b.length][];
+          IntrusiveDequeCursor.field_f = ii.field_a - (fh.field_f >> 1);
+          NodeHashTableIterator.field_m = new int[a.field_b.length][];
           var4Lifetime3 = 0;
-          var5Lifetime3 = pf.field_f;
+          var5Lifetime3 = IntrusiveDequeCursor.field_f;
           while (var4Lifetime3 < a.field_b.length) {
             var6Lifetime1 = ec.field_g[var4Lifetime3];
             if (var6Lifetime1 >= 0) {
               var7Lifetime2 = sf.a(true, 110, a.field_b[var4Lifetime3]);
               var8Lifetime1 = -(var7Lifetime2 >> 1) + id.field_c;
               var5Lifetime3 = var5Lifetime3 + na.field_e;
-              wh.field_m[var4Lifetime3] = new int[4];
-              wh.field_m[var4Lifetime3][0] = var8Lifetime1 - vl.field_h;
-              wh.field_m[var4Lifetime3][1] = var5Lifetime3;
-              wh.field_m[var4Lifetime3][2] = (vl.field_h << 1) + var7Lifetime2;
-              wh.field_m[var4Lifetime3][3] = ec.field_c + (e.field_d << 1);
+              NodeHashTableIterator.field_m[var4Lifetime3] = new int[4];
+              NodeHashTableIterator.field_m[var4Lifetime3][0] = var8Lifetime1 - vl.field_h;
+              NodeHashTableIterator.field_m[var4Lifetime3][1] = var5Lifetime3;
+              NodeHashTableIterator.field_m[var4Lifetime3][2] = (vl.field_h << 1) + var7Lifetime2;
+              NodeHashTableIterator.field_m[var4Lifetime3][3] = ec.field_c + (e.field_d << 1);
               var5Lifetime3 = var5Lifetime3 + (na.field_e + (e.field_d << 1) + ec.field_c);
             } else {
               var5Lifetime3 = var5Lifetime3 + si.field_f;
@@ -495,7 +495,7 @@ final class le {
         field_f[0] = 0L;
         for (var0 = 1; var0 <= 10; var0++) {
             var1 = 8 * (-1 + var0);
-            field_f[var0] = da.a(da.a(da.a(gf.a(16711680L, field_A[5][var1 + 5]), da.a(gf.a(field_A[4][4 + var1], 4278190080L), da.a(da.a(gf.a(field_A[2][2 + var1], 280375465082880L), da.a(gf.a(field_A[0][var1], -72057594037927936L), gf.a(71776119061217280L, field_A[1][var1 + 1]))), gf.a(1095216660480L, field_A[3][var1 + 3])))), gf.a(field_A[6][var1 + 6], 65280L)), gf.a(field_A[7][var1 + 7], 255L));
+            field_f[var0] = GameApplet.a(GameApplet.a(GameApplet.a(gf.a(16711680L, field_A[5][var1 + 5]), GameApplet.a(gf.a(field_A[4][4 + var1], 4278190080L), GameApplet.a(GameApplet.a(gf.a(field_A[2][2 + var1], 280375465082880L), GameApplet.a(gf.a(field_A[0][var1], -72057594037927936L), gf.a(71776119061217280L, field_A[1][var1 + 1]))), gf.a(1095216660480L, field_A[3][var1 + 3])))), gf.a(field_A[6][var1 + 6], 65280L)), gf.a(field_A[7][var1 + 7], 255L));
         }
     }
 }

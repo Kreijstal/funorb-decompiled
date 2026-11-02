@@ -23,7 +23,7 @@ final class uk {
         }
         var3 = new ac();
         if (var4 != null) {
-          var3.a(new va(var4), 72);
+          var3.a(new PacketBuffer(var4), 72);
         }
         if (param1 >= 32768) {
           var3.d((byte) -127);

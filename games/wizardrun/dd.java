@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dd extends wl {
+final class dd extends IntrusiveNode {
     int field_k;
     int field_o;
     int field_j;

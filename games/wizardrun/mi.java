@@ -178,7 +178,7 @@ abstract class mi extends ub implements bg {
         }
     }
 
-    final static void a(int param0, va param1, vh param2, int param3) {
+    final static void a(int param0, PacketBuffer param1, PlatformTaskDispatcher param2, int param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -520,7 +520,7 @@ abstract class mi extends ub implements bg {
           if (var5_int != 80) {
             return false;
           }
-          if (!hi.field_p[81]) {
+          if (!BufferedSocket.field_p[81]) {
             stackIn_11_0 = this.a(param3, (byte) 80);
           } else {
             stackIn_11_0 = this.b(param3, 125);

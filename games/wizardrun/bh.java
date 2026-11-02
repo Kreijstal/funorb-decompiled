@@ -4,7 +4,7 @@
 final class bh {
     int field_h;
     int field_f;
-    static oi field_b;
+    static IntrusiveDeque field_b;
     static String field_a;
     static String field_c;
     static String field_g;
@@ -71,9 +71,9 @@ final class bh {
           Class var5 = null;
           Throwable var5_ref = null;
           df var6 = null;
-          cg var6_ref = null;
+          ImageProducerRasterBuffer var6_ref = null;
           df stackIn_2_0 = null;
-          cg stackIn_4_0 = null;
+          ImageProducerRasterBuffer stackIn_4_0 = null;
           RuntimeException stackIn_7_0 = null;
           StringBuilder stackIn_7_1 = null;
           String stackIn_8_2 = null;
@@ -89,7 +89,7 @@ final class bh {
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5_ref = decompiledCaughtException;
-              var6_ref = new cg();
+              var6_ref = new ImageProducerRasterBuffer();
               ((df) ((Object) var6_ref)).a((byte) -9, param3, param0, param2);
               stackIn_4_0 = var6_ref;
               return (df) ((Object) stackIn_4_0);
@@ -129,7 +129,7 @@ final class bh {
     }
 
     static {
-        field_b = new oi();
+        field_b = new IntrusiveDeque();
         field_c = "Click";
         field_a = null;
         field_d = "Passwords must be between 5 and 20 characters long";

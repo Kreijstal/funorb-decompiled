@@ -91,15 +91,15 @@ final class w {
     final static void a(String param0, String param1, int param2) {
         try {
           int var3_int = -81 / ((35 - param2) / 44);
-          de.a((byte) -52, param1, param0, false);
+          SecondaryNodeDeque.a((byte) -52, param1, param0, false);
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "w.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
     final static void b(int param0) {
-        rk.field_k = new nk();
-        td.field_f.c(rk.field_k, -125);
+        DualLinkNode.field_k = new nk();
+        td.field_f.c(DualLinkNode.field_k, -125);
         if (param0 != -1) {
           field_a = -36;
         }

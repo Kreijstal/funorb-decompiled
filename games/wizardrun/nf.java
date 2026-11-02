@@ -533,7 +533,7 @@ final class nf {
         int var8Lifetime1;
         var10 = wizardrun.field_H;
         try {
-          var1_int = pf.field_f;
+          var1_int = IntrusiveDequeCursor.field_f;
           var2 = 0;
           if (oc.field_d == 2) {
             var3_long = -kh.field_g + d.a((byte) 63);

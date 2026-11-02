@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dc extends wl {
+final class dc extends IntrusiveNode {
     int field_m;
     int field_i;
     static String field_n;
@@ -29,8 +29,8 @@ final class dc extends wl {
             stackIn_2_0 = null;
             return (gb) (stackIn_2_0);
           }
-          var2 = new gb(param0, ph.field_q, ne.field_h, cg.field_k, tf.field_b, mf.field_j);
-          eb.a(param1);
+          var2 = new gb(param0, ph.field_q, ne.field_h, ImageProducerRasterBuffer.field_k, MouseInputHandler.field_b, mf.field_j);
+          ClientException.a(param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -65,7 +65,7 @@ final class dc extends wl {
         var8 = wizardrun.field_H;
         var1 = new o[wb.field_f];
         for (var2 = 0; wb.field_f > var2; var2++) {
-          var3 = cg.field_k[var2] * tf.field_b[var2];
+          var3 = ImageProducerRasterBuffer.field_k[var2] * MouseInputHandler.field_b[var2];
           var21 = mf.field_j[var2];
           if (!v.field_e[var2]) {
             var10 = new int[var3];
@@ -73,7 +73,7 @@ final class dc extends wl {
             for (var6_int = 0; var3 > var6_int; var6_int++) {
               var10[var6_int] = ic.field_b[kl.b((int) var21[var6_int], 255)];
             }
-            var1[var2] = new o(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], cg.field_k[var2], tf.field_b[var2], var22);
+            var1[var2] = new o(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var22);
           } else {
             var23 = ue.field_e[var2];
             var17 = new int[var3];
@@ -82,10 +82,10 @@ final class dc extends wl {
             for (var7 = 0; var3 > var7; var7++) {
               var6[var7] = sd.a(ic.field_b[kl.b((int) var21[var7], 255)], kl.b(255, (int) var23[var7]) << 24);
             }
-            var1[var2] = (o) ((Object) new be(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], cg.field_k[var2], tf.field_b[var2], var17));
+            var1[var2] = (o) ((Object) new be(hk.field_bb, eg.field_v, ph.field_q[var2], ne.field_h[var2], ImageProducerRasterBuffer.field_k[var2], MouseInputHandler.field_b[var2], var17));
           }
         }
-        eb.a(0);
+        ClientException.a(0);
         if (param0 == 19999) {
           return var1;
         }

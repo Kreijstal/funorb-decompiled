@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei extends wl {
+final class ei extends IntrusiveNode {
     static int field_t;
     int field_u;
     static String field_m;
@@ -79,7 +79,7 @@ final class ei extends wl {
     }
 
     final static void a(byte param0, int param1) {
-        wl var2 = null;
+        IntrusiveNode var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         pg var4 = null;

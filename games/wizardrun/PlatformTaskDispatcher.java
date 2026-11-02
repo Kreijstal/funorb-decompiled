@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class vh implements Runnable {
+final class PlatformTaskDispatcher implements Runnable {
     static String field_k;
     private static String field_l;
     static java.lang.reflect.Method field_q;
@@ -121,7 +121,7 @@ final class vh implements Runnable {
                   case 16:
                   default:
                     if (!this.field_s) {
-                      throw vh.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                      throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                     }
                     switch (var2_int) {
                       case 3:
@@ -162,11 +162,11 @@ final class vh implements Runnable {
                         }
                         break;
                       case 12:
-                        var3_ref = vh.a(0, field_w, (String) (var9.field_g), field_v);
+                        var3_ref = PlatformTaskDispatcher.a(0, field_w, (String) (var9.field_g), field_v);
                         var9.field_e = var3_ref;
                         break;
                       case 13:
-                        var3_ref = vh.a(0, field_w, (String) (var9.field_g), "");
+                        var3_ref = PlatformTaskDispatcher.a(0, field_w, (String) (var9.field_g), "");
                         var9.field_e = var3_ref;
                         break;
                       case 16:
@@ -200,21 +200,21 @@ final class vh implements Runnable {
                           Class.forName("ak").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.field_h, new Object[]{var12[0], var12[1], new Integer(var9.field_d), new Integer(var9.field_f), var12[2]});
                         } else {
                           if (var2_int != 16) {
-                            throw vh.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception(""));
                           }
                           try {
                             if (!field_k.startsWith("win")) {
-                              throw vh.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var7 = (String) (var9.field_g);
                             if (!var7.startsWith("http://") &&
                               !var7.startsWith("https://")) {
-                              throw vh.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                              throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                             }
                             var4_ref_String = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789?&=,.%+-_#:/*";
                             for (var5 = 0; var7.length() > var5; var5++) {
                               if (var4_ref_String.indexOf((int) var7.charAt(var5)) == -1) {
-                                throw vh.<RuntimeException>$cfr$sneakyThrow(new Exception());
+                                throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(new Exception());
                               }
                             }
                             Runtime.getRuntime().exec("cmd /c start \"j\" \"" + var7 + "\"");
@@ -223,7 +223,7 @@ final class vh implements Runnable {
                             decompiledCaughtException = decompiledCaughtParameter1;
                             var3_ref2 = (Exception) (Object) decompiledCaughtException;
                             var9.field_e = var3_ref2;
-                            throw vh.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
+                            throw PlatformTaskDispatcher.<RuntimeException>$cfr$sneakyThrow(var3_ref2);
                           }
                         }
                         break;
@@ -493,7 +493,7 @@ final class vh implements Runnable {
         return var6;
     }
 
-    vh(int param0, String param1, int param2, boolean param3) throws Exception {
+    PlatformTaskDispatcher(int param0, String param1, int param2, boolean param3) throws Exception {
         int var5_int = 0;
         Exception exception = null;
         Throwable throwable = null;

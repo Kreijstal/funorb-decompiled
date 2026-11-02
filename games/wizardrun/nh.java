@@ -369,7 +369,7 @@ final class nh extends bb {
     }
 
     final static void c(byte param0) {
-        gj.field_b = 0;
+        IterableNodeHashTable.field_b = 0;
         ag.field_u = -1;
         vb.field_I = null;
         uc.field_a = -1;

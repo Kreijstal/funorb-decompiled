@@ -28,11 +28,11 @@ final class gi {
         int var6 = 0;
         String var7 = null;
         try {
-          uh.field_d[0] = oi.field_c.nextInt();
-          uh.field_d[1] = oi.field_c.nextInt();
+          uh.field_d[0] = IntrusiveDeque.field_c.nextInt();
+          uh.field_d[1] = IntrusiveDeque.field_c.nextInt();
           uh.field_d[2] = (int)(tg.field_g >> 32);
           uh.field_d[3] = (int)tg.field_g;
-          re.field_G.field_m = 0;
+          re.field_G.position = 0;
           re.field_G.f(uh.field_d[0], 613003928);
           re.field_G.f(uh.field_d[1], 613003928);
           re.field_G.f(uh.field_d[2], 613003928);
@@ -40,18 +40,18 @@ final class gi {
           u.a(re.field_G, -18);
           re.field_G.b(-1947079288, param4);
           param1.a(4, re.field_G);
-          n.field_b.field_m = 0;
+          n.field_b.position = 0;
           if (!param3) {
             n.field_b.b((byte) 11, 16);
           } else {
             n.field_b.b((byte) 11, 18);
           }
-          n.field_b.field_m = n.field_b.field_m + 2;
-          var5_int = n.field_b.field_m;
+          n.field_b.position = n.field_b.position + 2;
+          var5_int = n.field_b.position;
           n.field_b.f(vk.field_G, 613003928);
           n.field_b.b(1290648728, bl.field_d);
           var6 = 0;
-          if (pf.field_g) {
+          if (IntrusiveDequeCursor.field_g) {
             var6 = var6 | 1;
           }
           if (cb.field_g) {
@@ -76,7 +76,7 @@ final class gi {
             n.field_b.b(0, sf.field_b);
           }
           pa.a(ag.field_s, 0, ad.field_d, re.field_G, n.field_b);
-          n.field_b.a(n.field_b.field_m - var5_int, (byte) -67);
+          n.field_b.a(n.field_b.position - var5_int, (byte) -67);
           id.a((byte) -67, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

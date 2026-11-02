@@ -263,7 +263,7 @@ final class pj extends mi {
               ql.a(-64);
               return;
             }
-            var5 = -var9.field_m + gd.field_c;
+            var5 = -var9.position + DelegatingCanvas.field_c;
             var11 = var4.field_n;
             var10 = var11;
             var6 = var10;

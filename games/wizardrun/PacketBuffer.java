@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class va extends wl {
+class PacketBuffer extends IntrusiveNode {
     static rc field_l;
     static ok field_o;
-    byte[] field_k;
-    int field_m;
+    byte[] payload;
+    int position;
     static vd field_i;
     static kl field_n;
     static ji field_j;
 
     final void a(int param0, boolean param1) {
-        int fieldTemp$0 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$0] = (byte)(param0 >> 16);
-        int fieldTemp$1 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$1] = (byte)(param0 >> 8);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param0 >> 16);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param0 >> 8);
         if (param1) {
           field_l = (rc) null;
         }
-        int fieldTemp$2 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$2] = (byte)param0;
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)param0;
     }
 
     final void a(String param0, int param1) {
@@ -102,9 +102,9 @@ class va extends wl {
         try {
           var5_int = -119 % ((-47 - param3) / 41);
           for (var6 = param1; param2 + param1 > var6; var6++) {
-            fieldTemp$0 = this.field_m;
-            this.field_m = this.field_m + 1;
-            this.field_k[fieldTemp$0] = param0[var6];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            this.payload[fieldTemp$0] = param0[var6];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -128,56 +128,56 @@ class va extends wl {
         if (param0 != 0) {
           this.c(44, -40);
         }
-        var2 = this.field_m;
+        var2 = this.position;
         do {
-          fieldTemp$0 = this.field_m;
-          this.field_m = this.field_m + 1;
-        } while (this.field_k[fieldTemp$0] != 0);
-        var3 = this.field_m - var2 - 1;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+        } while (this.payload[fieldTemp$0] != 0);
+        var3 = this.position - var2 - 1;
         if (var3 == 0) {
           return "";
         }
-        return bi.a(var2, var3, this.field_k, false);
+        return bi.a(var2, var3, this.payload, false);
     }
 
     final void b(byte param0, int param1) {
-        int fieldTemp$0 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$0] = (byte)param1;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)param1;
         if (param0 != 11) {
           field_i = (vd) null;
         }
     }
 
     final void b(int param0, long param1) {
-        int fieldTemp$0 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$0] = (byte)(int)(param1 >> 56);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param1 >> 56);
         if (param0 != 1290648728) {
           byte[] var5 = (byte[]) null;
           this.a(true, -58, (byte[]) null, 44);
         }
-        int fieldTemp$1 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$1] = (byte)(int)(param1 >> 48);
-        int fieldTemp$2 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$2] = (byte)(int)(param1 >> 40);
-        int fieldTemp$3 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$3] = (byte)(int)(param1 >> 32);
-        int fieldTemp$4 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$4] = (byte)(int)(param1 >> 24);
-        int fieldTemp$5 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$5] = (byte)(int)(param1 >> 16);
-        int fieldTemp$6 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$6] = (byte)(int)(param1 >> 8);
-        int fieldTemp$7 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$7] = (byte)(int)param1;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param1 >> 48);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param1 >> 40);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param1 >> 32);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(param1 >> 24);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(param1 >> 16);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)(param1 >> 8);
+        int fieldTemp$7 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$7] = (byte)(int)param1;
     }
 
     final void a(boolean param0, int[] param1, int param2, int param3) {
@@ -198,8 +198,8 @@ class va extends wl {
         int var13 = 0;
         var13 = wizardrun.field_H;
         try {
-          var5_int = this.field_m;
-          this.field_m = param2;
+          var5_int = this.position;
+          this.position = param2;
           if (param0) {
             return;
           }
@@ -207,7 +207,7 @@ class va extends wl {
           var7 = 0;
           while (true) {
             if (var7 >= var6) {
-              this.field_m = var5_int;
+              this.position = var5_int;
               return;
             }
             var8 = this.i(255);
@@ -226,7 +226,7 @@ class va extends wl {
               }
               break;
             }
-            this.field_m = this.field_m - 8;
+            this.position = this.position - 8;
             this.f(var8, 613003928);
             this.f(var9, 613003928);
             var7++;
@@ -276,7 +276,7 @@ class va extends wl {
           this.b((byte) 11, (16440 | param1) >>> 7);
         }
         if (param0 != -117) {
-          this.field_k = (byte[]) null;
+          this.payload = (byte[]) null;
         }
         this.b((byte) 11, param1 & 127);
     }
@@ -291,7 +291,7 @@ class va extends wl {
     }
 
     final int a(int param0) {
-        int var2 = 255 & this.field_k[this.field_m];
+        int var2 = 255 & this.payload[this.position];
         if (param0 != 20479) {
           return -111;
         }
@@ -302,8 +302,8 @@ class va extends wl {
     }
 
     final String c(int param0) {
-        if (param0 == ~this.field_k[this.field_m]) {
-          this.field_m = this.field_m + 1;
+        if (param0 == ~this.payload[this.position]) {
+          this.position = this.position + 1;
           return null;
         }
         return this.d(0);
@@ -313,17 +313,17 @@ class va extends wl {
         if (param0 <= 73) {
           return 26;
         }
-        this.field_m = this.field_m + 3;
-        return ((255 & this.field_k[-3 + this.field_m]) << 16) + (this.field_k[-2 + this.field_m] << 8 & 65280) + (255 & this.field_k[this.field_m - 1]);
+        this.position = this.position + 3;
+        return ((255 & this.payload[-3 + this.position]) << 16) + (this.payload[-2 + this.position] << 8 & 65280) + (255 & this.payload[this.position - 1]);
     }
 
     final void b(int param0, int param1) {
-        int fieldTemp$0 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$0] = (byte)(param1 >> 8);
-        int fieldTemp$1 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$1] = (byte)param1;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 >> 8);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)param1;
         if (param0 != -1947079288) {
           field_j = (ji) null;
         }
@@ -333,9 +333,9 @@ class va extends wl {
         if (param0 != 255) {
           field_l = (rc) null;
         }
-        int fieldTemp$0 = this.field_m;
-        this.field_m = this.field_m + 1;
-        return 255 & this.field_k[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return 255 & this.payload[fieldTemp$0];
     }
 
     final void a(boolean param0, int param1, byte[] param2, int param3) {
@@ -353,9 +353,9 @@ class va extends wl {
             return;
           }
           for (var5_int = param3; var5_int < param3 + param1; var5_int++) {
-            fieldTemp$0 = this.field_m;
-            this.field_m = this.field_m + 1;
-            param2[var5_int] = this.field_k[fieldTemp$0];
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param2[var5_int] = this.payload[fieldTemp$0];
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -379,14 +379,14 @@ class va extends wl {
           throw new IllegalArgumentException("");
         }
         CharSequence var4 = (CharSequence) ((Object) param0);
-        this.field_m = this.field_m + pg.a(8220, this.field_k, 0, var4, this.field_m, param0.length());
+        this.position = this.position + pg.a(8220, this.payload, 0, var4, this.position, param0.length());
         if (param1) {
           return;
         }
         try {
-          fieldTemp$0 = this.field_m;
-          this.field_m = this.field_m + 1;
-          this.field_k[fieldTemp$0] = (byte) 0;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "va.QA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -397,25 +397,25 @@ class va extends wl {
         int var2;
         int var3;
         int var4;
-        int fieldTemp$0 = this.field_m;
-        this.field_m = this.field_m + 1;
-        var2 = this.field_k[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        var2 = this.payload[fieldTemp$0];
         if (param0 != 727059944) {
           return (String) null;
         }
         if (var2 != 0) {
           throw new IllegalStateException("");
         }
-        var3 = this.field_m;
+        var3 = this.position;
         do {
-          fieldTemp$1 = this.field_m;
-          this.field_m = this.field_m + 1;
-        } while (this.field_k[fieldTemp$1] != 0);
-        var4 = -1 - var3 + this.field_m;
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+        } while (this.payload[fieldTemp$1] != 0);
+        var4 = -1 - var3 + this.position;
         if (0 == var4) {
           return "";
         }
-        return bi.a(var3, var4, this.field_k, false);
+        return bi.a(var3, var4, this.payload, false);
     }
 
     final static void a(int param0, String param1) {
@@ -430,7 +430,7 @@ class va extends wl {
     }
 
     final void a(int param0, int param1) {
-        this.field_k[this.field_m - (param0 + 1)] = (byte)param0;
+        this.payload[this.position - (param0 + 1)] = (byte)param0;
         if (param1 >= -43) {
           this.e(108, -51);
         }
@@ -449,16 +449,16 @@ class va extends wl {
         if (param0 != 11681) {
           field_j = (ji) null;
         }
-        int var2 = this.field_k[this.field_m] & 255;
+        int var2 = this.payload[this.position] & 255;
         if (var2 >= 128) {
           return -32768 + this.j(param0 ^ -5422);
         }
         return this.f(255);
     }
 
-    va(int param0) {
-        this.field_m = 0;
-        this.field_k = ej.a(param0, 1);
+    PacketBuffer(int param0) {
+        this.position = 0;
+        this.payload = ej.a(param0, 1);
     }
 
     final void c(int param0, int param1) {
@@ -468,19 +468,19 @@ class va extends wl {
         if (param1 <= 122) {
           this.d(-54);
         }
-        while (this.field_m < param0) {
-          fieldTemp$0 = this.field_m;
-          this.field_m = this.field_m + 1;
-          this.field_k[fieldTemp$0] = (byte) 0;
+        while (this.position < param0) {
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
         }
     }
 
     final int i(int param0) {
-        this.field_m = this.field_m + 4;
+        this.position = this.position + 4;
         if (param0 != 255) {
-          this.field_k = (byte[]) null;
+          this.payload = (byte[]) null;
         }
-        return (this.field_k[-1 + this.field_m] & 255) + (((this.field_k[this.field_m - 3] & 255) << 16) + (-16777216 & this.field_k[this.field_m - 4] << 24) + ((255 & this.field_k[this.field_m - 2]) << 8));
+        return (this.payload[-1 + this.position] & 255) + (((this.payload[this.position - 3] & 255) << 16) + (-16777216 & this.payload[this.position - 4] << 24) + ((255 & this.payload[this.position - 2]) << 8));
     }
 
     final void b(int param0, String param1) {
@@ -493,35 +493,35 @@ class va extends wl {
           if (param0 <= var3_int) {
             throw new IllegalArgumentException("");
           }
-          fieldTemp$0 = this.field_m;
-          this.field_m = this.field_m + 1;
-          this.field_k[fieldTemp$0] = (byte) 0;
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$0] = (byte) 0;
           var4 = (CharSequence) ((Object) param1);
-          this.field_m = this.field_m + pg.a(8220, this.field_k, 0, var4, this.field_m, param1.length());
-          fieldTemp$1 = this.field_m;
-          this.field_m = this.field_m + 1;
-          this.field_k[fieldTemp$1] = (byte) 0;
+          this.position = this.position + pg.a(8220, this.payload, 0, var4, this.position, param1.length());
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          this.payload[fieldTemp$1] = (byte) 0;
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "va.BB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final void f(int param0, int param1) {
-        int fieldTemp$0 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$0] = (byte)(param0 >> 24);
-        int fieldTemp$1 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$1] = (byte)(param0 >> 16);
-        int fieldTemp$2 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$2] = (byte)(param0 >> 8);
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param0 >> 24);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(param0 >> 16);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(param0 >> 8);
         if (param1 != 613003928) {
           return;
         }
-        int fieldTemp$3 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$3] = (byte)param0;
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)param0;
     }
 
     final void a(boolean param0, int[] param1) {
@@ -544,8 +544,8 @@ class va extends wl {
           if (param0) {
             this.e((byte) -74);
           }
-          var3_int = this.field_m / 8;
-          this.field_m = 0;
+          var3_int = this.position / 8;
+          this.position = 0;
           var4 = 0;
           while (true) {
             if (var4 >= var3_int) {
@@ -567,7 +567,7 @@ class va extends wl {
               }
               break;
             }
-            this.field_m = this.field_m - 8;
+            this.position = this.position - 8;
             this.f(var5, 613003928);
             this.f(var6, 613003928);
             var4++;
@@ -590,39 +590,39 @@ class va extends wl {
         if (param0 != -88) {
           return -55;
         }
-        if (this.field_k[this.field_m] >= 0) {
+        if (this.payload[this.position] >= 0) {
           return this.j(-14477);
         }
         return 2147483647 & this.i(255);
     }
 
     final void b(int param0, byte param1) {
-        this.field_k[-4 + (this.field_m - param0)] = (byte)(param0 >> 24);
-        this.field_k[-3 + (this.field_m - param0)] = (byte)(param0 >> 16);
-        this.field_k[-param0 + (this.field_m - 2)] = (byte)(param0 >> 8);
+        this.payload[-4 + (this.position - param0)] = (byte)(param0 >> 24);
+        this.payload[-3 + (this.position - param0)] = (byte)(param0 >> 16);
+        this.payload[-param0 + (this.position - 2)] = (byte)(param0 >> 8);
         if (param1 > -20) {
           String var4 = (String) null;
-          va.a(27, (String) null);
+          PacketBuffer.a(27, (String) null);
         }
-        this.field_k[-1 + (-param0 + this.field_m)] = (byte)param0;
+        this.payload[-1 + (-param0 + this.position)] = (byte)param0;
     }
 
     final void a(long param0, byte param1) {
-        int fieldTemp$0 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$0] = (byte)(int)(param0 >> 32);
-        int fieldTemp$1 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$1] = (byte)(int)(param0 >> 24);
-        int fieldTemp$2 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$2] = (byte)(int)(param0 >> 16);
-        int fieldTemp$3 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$3] = (byte)(int)(param0 >> 8);
-        int fieldTemp$4 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$4] = (byte)(int)param0;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param0 >> 32);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param0 >> 24);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param0 >> 16);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param0 >> 8);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)param0;
         if (param1 <= 101) {
           field_j = (ji) null;
         }
@@ -630,33 +630,33 @@ class va extends wl {
 
     final byte k(int param0) {
         if (param0 != 0) {
-          this.field_m = 10;
+          this.position = 10;
         }
-        int fieldTemp$0 = this.field_m;
-        this.field_m = this.field_m + 1;
-        return this.field_k[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$0];
     }
 
     final int j(int param0) {
         if (param0 != -14477) {
           return -34;
         }
-        this.field_m = this.field_m + 2;
-        return (255 & this.field_k[-1 + this.field_m]) + (this.field_k[-2 + this.field_m] << 8 & 65280);
+        this.position = this.position + 2;
+        return (255 & this.payload[-1 + this.position]) + (this.payload[-2 + this.position] << 8 & 65280);
     }
 
     final int e(int param0, int param1) {
         if (param1 != -1182887024) {
           this.d(-77);
         }
-        int var3 = gh.a(this.field_k, 107, param0, this.field_m);
+        int var3 = gh.a(this.payload, 107, param0, this.position);
         this.f(var3, 613003928);
         return var3;
     }
 
     final void a(int param0, byte param1) {
-        this.field_k[-2 - param0 + this.field_m] = (byte)(param0 >> 8);
-        this.field_k[-1 + (this.field_m - param0)] = (byte)param0;
+        this.payload[-2 - param0 + this.position] = (byte)(param0 >> 8);
+        this.payload[-1 + (this.position - param0)] = (byte)param0;
         if (param1 != -67) {
           this.d(73);
         }
@@ -666,27 +666,27 @@ class va extends wl {
         if (param0 != -17729) {
           return;
         }
-        int fieldTemp$0 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$0] = (byte)(int)(param1 >> 48);
-        int fieldTemp$1 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$1] = (byte)(int)(param1 >> 40);
-        int fieldTemp$2 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$2] = (byte)(int)(param1 >> 32);
-        int fieldTemp$3 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$3] = (byte)(int)(param1 >> 24);
-        int fieldTemp$4 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$4] = (byte)(int)(param1 >> 16);
-        int fieldTemp$5 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$5] = (byte)(int)(param1 >> 8);
-        int fieldTemp$6 = this.field_m;
-        this.field_m = this.field_m + 1;
-        this.field_k[fieldTemp$6] = (byte)(int)param1;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(int)(param1 >> 48);
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$1] = (byte)(int)(param1 >> 40);
+        int fieldTemp$2 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$2] = (byte)(int)(param1 >> 32);
+        int fieldTemp$3 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$3] = (byte)(int)(param1 >> 24);
+        int fieldTemp$4 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$4] = (byte)(int)(param1 >> 16);
+        int fieldTemp$5 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$5] = (byte)(int)(param1 >> 8);
+        int fieldTemp$6 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$6] = (byte)(int)param1;
     }
 
     final void a(java.math.BigInteger param0, int param1, java.math.BigInteger param2) {
@@ -696,8 +696,8 @@ class va extends wl {
         java.math.BigInteger var7 = null;
         byte[] var8 = null;
         try {
-          var4_int = this.field_m;
-          this.field_m = 0;
+          var4_int = this.position;
+          this.position = 0;
           var5 = new byte[var4_int];
           this.a(true, var4_int, var5, 0);
           var6 = new java.math.BigInteger(var5);
@@ -706,7 +706,7 @@ class va extends wl {
           }
           var7 = var6.modPow(param2, param0);
           var8 = var7.toByteArray();
-          this.field_m = 0;
+          this.position = 0;
           this.b(-1947079288, var8.length);
           this.a(var8, 0, var8.length, -3);
         } catch (RuntimeException runtimeException) {
@@ -720,18 +720,18 @@ class va extends wl {
         int var3;
         int var4;
         var4 = wizardrun.field_H;
-        int fieldTemp$0 = this.field_m;
-        this.field_m = this.field_m + 1;
-        var2 = this.field_k[fieldTemp$0];
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        var2 = this.payload[fieldTemp$0];
         if (param0 != -90) {
           field_l = (rc) null;
         }
         var3 = 0;
         while (var2 < 0) {
           var3 = (var2 & 127 | var3) << 7;
-          fieldTemp$1 = this.field_m;
-          this.field_m = this.field_m + 1;
-          var2 = this.field_k[fieldTemp$1];
+          fieldTemp$1 = this.position;
+          this.position = this.position + 1;
+          var2 = this.payload[fieldTemp$1];
         }
         return var3 | var2;
     }
@@ -741,8 +741,8 @@ class va extends wl {
           byte[] var4 = (byte[]) null;
           this.a((byte[]) null, 113, 122, -33);
         }
-        this.field_m = this.field_m - 4;
-        int var2 = gh.a(this.field_k, 116, 0, this.field_m);
+        this.position = this.position - 4;
+        int var2 = gh.a(this.payload, 116, 0, this.position);
         int var3 = this.i(255);
         if (var3 == var2) {
           return true;
@@ -750,10 +750,10 @@ class va extends wl {
         return false;
     }
 
-    va(byte[] param0) {
+    PacketBuffer(byte[] param0) {
         try {
-          this.field_k = param0;
-          this.field_m = 0;
+          this.payload = param0;
+          this.position = 0;
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "va.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

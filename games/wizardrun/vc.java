@@ -7,7 +7,7 @@ final class vc extends pe implements qd {
     static boolean field_M;
     private mh field_L;
     private int[] field_E;
-    static ta field_K;
+    static MouseWheelInput field_K;
     private vd field_J;
     private int field_H;
     private pl[] field_F;
@@ -75,7 +75,7 @@ final class vc extends pe implements qd {
     public static void d(boolean param0) {
         field_K = null;
         if (param0) {
-          field_K = (ta) null;
+          field_K = (MouseWheelInput) null;
         }
     }
 
@@ -149,11 +149,11 @@ final class vc extends pe implements qd {
           var1 = ei.field_t;
           if (var1 > 0) {
             if (var1 == 1) {
-              bh.field_a = ib.field_d;
+              bh.field_a = SocketConnector.field_d;
             } else {
               bh.field_a = di.a(new String[]{Integer.toString(var1)}, (byte) 46, of.field_m);
             }
-            bh.field_a = ol.a(new CharSequence[]{(CharSequence) ((Object) bh.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) pf.field_c)}, 550);
+            bh.field_a = ol.a(new CharSequence[]{(CharSequence) ((Object) bh.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) IntrusiveDequeCursor.field_c)}, 550);
           }
           aa.field_lb.l(-27697);
           uh.a((byte) 125);
@@ -181,7 +181,7 @@ final class vc extends pe implements qd {
 
     final static void a(int param0, String param1) {
         try {
-          va.a(-2, param1);
+          PacketBuffer.a(-2, param1);
           if (param0 >= -67) {
             field_G = -79;
           }

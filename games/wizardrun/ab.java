@@ -4,25 +4,25 @@
 final class ab {
     static jh field_h;
     private int field_g;
-    private wl field_e;
+    private IntrusiveNode field_e;
     static String field_b;
     private int field_a;
-    private wl[] field_d;
-    private wl field_f;
+    private IntrusiveNode[] field_d;
+    private IntrusiveNode field_f;
     static o field_c;
 
-    final wl b(int param0) {
+    final IntrusiveNode b(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int var3;
-        wl var4;
-        wl var5;
-        wl var8;
-        wl var9;
+        IntrusiveNode var4;
+        IntrusiveNode var5;
+        IntrusiveNode var8;
+        IntrusiveNode var9;
         var3 = wizardrun.field_H;
         if (0 >= this.field_g) {
           if (param0 != 1) {
-            return (wl) null;
+            return (IntrusiveNode) null;
           }
           do {
             if (this.field_g >= this.field_a) {
@@ -30,19 +30,19 @@ final class ab {
             }
             fieldTemp$0 = this.field_g;
             this.field_g = this.field_g + 1;
-            var4 = this.field_d[fieldTemp$0].field_b;
+            var4 = this.field_d[fieldTemp$0].next;
             var9 = var4;
           } while (var4 == this.field_d[-1 + this.field_g]);
-          this.field_e = var9.field_b;
+          this.field_e = var9.next;
           return var9;
         }
         if (this.field_e != this.field_d[this.field_g - 1]) {
           var8 = this.field_e;
-          this.field_e = var8.field_b;
+          this.field_e = var8.next;
           return var8;
         }
         if (param0 != 1) {
-          return (wl) null;
+          return (IntrusiveNode) null;
         }
         do {
           if (this.field_g >= this.field_a) {
@@ -50,33 +50,33 @@ final class ab {
           }
           fieldTemp$1 = this.field_g;
           this.field_g = this.field_g + 1;
-          var4 = this.field_d[fieldTemp$1].field_b;
+          var4 = this.field_d[fieldTemp$1].next;
           var5 = var4;
         } while (var4 == this.field_d[-1 + this.field_g]);
-        this.field_e = var5.field_b;
+        this.field_e = var5.next;
         return var5;
     }
 
-    final wl a(int param0, long param1) {
-        wl var4;
-        wl var5;
+    final IntrusiveNode a(int param0, long param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
         var6 = wizardrun.field_H;
         var4 = this.field_d[(int)((long)(this.field_a - param0) & param1)];
-        this.field_f = var4.field_b;
+        this.field_f = var4.next;
         while (true) {
           if (this.field_f == var4) {
             this.field_f = null;
             return null;
           }
-          if (this.field_f.field_e != param1) {
-            this.field_f = this.field_f.field_b;
+          if (this.field_f.key != param1) {
+            this.field_f = this.field_f.next;
             continue;
           }
           break;
         }
         var5 = this.field_f;
-        this.field_f = this.field_f.field_b;
+        this.field_f = this.field_f.next;
         return var5;
     }
 
@@ -134,7 +134,7 @@ final class ab {
         return wi.field_L.b((byte) -17);
     }
 
-    final wl b(byte param0) {
+    final IntrusiveNode b(byte param0) {
         this.field_g = 0;
         int var2 = -80 / ((-5 - param0) / 33);
         return this.b(1);
@@ -142,34 +142,34 @@ final class ab {
 
     ab(int param0) {
         int var2 = 0;
-        wl dupTemp$1 = null;
-        wl var3;
+        IntrusiveNode dupTemp$1 = null;
+        IntrusiveNode var3;
         this.field_g = 0;
         this.field_a = param0;
-        this.field_d = new wl[param0];
+        this.field_d = new IntrusiveNode[param0];
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$1 = new wl();
+          dupTemp$1 = new IntrusiveNode();
           var3 = dupTemp$1;
           this.field_d[var2] = dupTemp$1;
-          var3.field_c = var3;
-          var3.field_b = var3;
+          var3.previous = var3;
+          var3.next = var3;
         }
     }
 
-    final void a(wl param0, int param1, long param2) {
-        if (null != param0.field_c) {
+    final void a(IntrusiveNode param0, int param1, long param2) {
+        if (null != param0.previous) {
           param0.a(false);
         }
-        wl var5 = this.field_d[(int)((long)(this.field_a - 1) & param2)];
+        IntrusiveNode var5 = this.field_d[(int)((long)(this.field_a - 1) & param2)];
         if (param1 >= -1) {
           return;
         }
         try {
-          param0.field_c = var5.field_c;
-          param0.field_b = var5;
-          param0.field_c.field_b = param0;
-          param0.field_b.field_c = param0;
-          param0.field_e = param2;
+          param0.previous = var5.previous;
+          param0.next = var5;
+          param0.previous.next = param0;
+          param0.next.previous = param0;
+          param0.key = param2;
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "ab.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

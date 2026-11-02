@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vf extends wl {
+final class vf extends IntrusiveNode {
     int field_i;
     int field_k;
     static o[] field_j;

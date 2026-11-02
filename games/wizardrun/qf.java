@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qf extends mf {
-    static vh field_m;
+    static PlatformTaskDispatcher field_m;
     static int field_l;
     static String field_k;
 

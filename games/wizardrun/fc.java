@@ -120,7 +120,7 @@ final class fc {
     final static void a(String param0, boolean param1, int param2) {
         ga.field_a = param1;
         cf.field_i = true;
-        aa.field_lb = new mh(u.field_A, va.field_i, param0, wi.field_J, ga.field_a);
+        aa.field_lb = new mh(u.field_A, PacketBuffer.field_i, param0, wi.field_J, ga.field_a);
         if (param2 > -119) {
           return;
         }

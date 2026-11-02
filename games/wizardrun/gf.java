@@ -199,16 +199,16 @@ abstract class gf extends rg {
           for (var3 = 0; var1_int > var3; var3++) {
             var4_ref_le = ia.field_f[var3];
             var4_ref_le.b(-119);
-            gj.a((byte) 115, var3);
+            IterableNodeHashTable.a((byte) 115, var3);
             var5 = var4_ref_le.field_r + var4_ref_le.field_g >> 1;
             var6 = var4_ref_le.field_D + var4_ref_le.field_K >> 1;
             var7 = var4_ref_le.field_E + var4_ref_le.field_M >> 1;
             var8 = ci.field_a[9] >> 2;
             var9 = ci.field_a[10] >> 2;
             var10_int = ci.field_a[11] >> 2;
-            var11 = var10_int * cg.field_m[5] + (var9 * cg.field_m[4] + var8 * cg.field_m[3]) >> 14;
-            var12 = var9 * cg.field_m[7] + (var8 * cg.field_m[6] + var10_int * cg.field_m[8]) >> 14;
-            var13 = var10_int * cg.field_m[11] + cg.field_m[9] * var8 + var9 * cg.field_m[10] >> 14;
+            var11 = var10_int * ImageProducerRasterBuffer.field_m[5] + (var9 * ImageProducerRasterBuffer.field_m[4] + var8 * ImageProducerRasterBuffer.field_m[3]) >> 14;
+            var12 = var9 * ImageProducerRasterBuffer.field_m[7] + (var8 * ImageProducerRasterBuffer.field_m[6] + var10_int * ImageProducerRasterBuffer.field_m[8]) >> 14;
+            var13 = var10_int * ImageProducerRasterBuffer.field_m[11] + ImageProducerRasterBuffer.field_m[9] * var8 + var9 * ImageProducerRasterBuffer.field_m[10] >> 14;
             var2[var3] = var7 * var13 + var11 * var5 + var12 * var6 >> 16;
           }
           var3Lifetime1 = ci.field_a[9] >> 8;
@@ -247,11 +247,11 @@ abstract class gf extends rg {
             }
             var2[var16] = -2147483648;
             var17 = ia.field_f[var16];
-            gj.a((byte) 115, var16);
+            IterableNodeHashTable.a((byte) 115, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              cg.field_m[var18] = cg.field_m[var18] + cb.field_d[var15][var18];
+              ImageProducerRasterBuffer.field_m[var18] = ImageProducerRasterBuffer.field_m[var18] + cb.field_d[var15][var18];
             }
-            ae.a(false, (byte) 106, var17, true, cg.field_m, false, ci.field_a);
+            ae.a(false, (byte) 106, var17, true, ImageProducerRasterBuffer.field_m, false, ci.field_a);
             pi.a(var14, var12Lifetime1, var8Lifetime1, false, var9Lifetime1, var17, var7Lifetime1, var13Lifetime1);
           }
           return;

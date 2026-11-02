@@ -6,11 +6,11 @@ final class th {
     static boolean field_h;
     static bh field_d;
     static int field_i;
-    private rk field_c;
+    private DualLinkNode field_c;
     static String field_e;
     static nj field_g;
     static String field_b;
-    private rk field_f;
+    private DualLinkNode field_f;
 
     final static void b(byte param0) {
         Throwable decompiledCaughtException = null;
@@ -20,47 +20,47 @@ final class th {
           sh.field_c = ve.field_d;
           oc.field_a = oc.field_a + 1;
           pg.field_n = wizardrun.field_T;
-          fi.field_B = gj.field_a;
+          fi.field_B = IterableNodeHashTable.field_a;
           ih.field_a = jf.field_i;
           if (param0 != -21) {
             th.a((byte) 88);
           }
           jf.field_i = false;
           w.field_c = fi.field_w;
-          tf.field_e = mh.field_pb;
+          MouseInputHandler.field_e = mh.field_pb;
           dh.field_b = dc.field_t;
           fi.field_w = 0;
         }
     }
 
-    final rk d(int param0) {
-        rk var2 = this.field_f;
+    final DualLinkNode d(int param0) {
+        DualLinkNode var2 = this.field_f;
         if (this.field_c == var2) {
           this.field_f = null;
           return null;
         }
         if (param0 > 3) {
-          this.field_f = var2.field_i;
+          this.field_f = var2.secondaryNext;
           return var2;
         }
-        this.field_f = (rk) null;
-        this.field_f = var2.field_i;
+        this.field_f = (DualLinkNode) null;
+        this.field_f = var2.secondaryNext;
         return var2;
     }
 
-    final rk a(int param0) {
-        rk var2 = this.field_c.field_i;
+    final DualLinkNode a(int param0) {
+        DualLinkNode var2 = this.field_c.secondaryNext;
         if (param0 != 0) {
           this.b(68);
           if (this.field_c != var2) {
-            this.field_f = var2.field_i;
+            this.field_f = var2.secondaryNext;
             return var2;
           }
           this.field_f = null;
           return null;
         }
         if (this.field_c != var2) {
-          this.field_f = var2.field_i;
+          this.field_f = var2.secondaryNext;
           return var2;
         }
         this.field_f = null;
@@ -70,9 +70,9 @@ final class th {
     final int c(int param0) {
         int var4 = wizardrun.field_H;
         int var2 = 0;
-        rk var3 = this.field_c.field_i;
+        DualLinkNode var3 = this.field_c.secondaryNext;
         while (this.field_c != var3) {
-          var3 = var3.field_i;
+          var3 = var3.secondaryNext;
           var2++;
         }
         if (param0 == 4) {
@@ -132,44 +132,44 @@ final class th {
         field_d = null;
     }
 
-    final void a(rk param0, int param1) {
+    final void a(DualLinkNode param0, int param1) {
         try {
           if (param1 != 14) {
             this.a(-10);
           }
-          if (param0.field_l != null) {
-            param0.b(false);
+          if (param0.secondaryPrevious != null) {
+            param0.unlink(false);
           }
-          param0.field_i = this.field_c;
-          param0.field_l = this.field_c.field_l;
-          param0.field_l.field_i = param0;
-          param0.field_i.field_l = param0;
+          param0.secondaryNext = this.field_c;
+          param0.secondaryPrevious = this.field_c.secondaryPrevious;
+          param0.secondaryPrevious.secondaryNext = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "th.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final rk b(int param0) {
-        rk var2 = this.field_c.field_i;
+    final DualLinkNode b(int param0) {
+        DualLinkNode var2 = this.field_c.secondaryNext;
         if (param0 < 33) {
           field_g = (nj) null;
           if (this.field_c != var2) {
-            var2.b(false);
+            var2.unlink(false);
             return var2;
           }
           return null;
         }
         if (this.field_c != var2) {
-          var2.b(false);
+          var2.unlink(false);
           return var2;
         }
         return null;
     }
 
     public th() {
-        this.field_c = new rk();
-        this.field_c.field_l = this.field_c;
-        this.field_c.field_i = this.field_c;
+        this.field_c = new DualLinkNode();
+        this.field_c.secondaryPrevious = this.field_c;
+        this.field_c.secondaryNext = this.field_c;
     }
 
     static {

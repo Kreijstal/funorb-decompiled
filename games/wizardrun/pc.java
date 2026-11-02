@@ -24,7 +24,7 @@ final class pc {
     static bh field_a;
     static long[] field_k;
     static sd field_m;
-    static oi field_l;
+    static IntrusiveDeque field_l;
     static c field_d;
 
     private final void a(byte[] param0, int param1) {
@@ -57,7 +57,7 @@ final class pc {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        va var17 = null;
+        PacketBuffer var17 = null;
         byte[] var21 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -74,7 +74,7 @@ final class pc {
         int var13Lifetime1Lifetime1;
         var16 = wizardrun.field_H;
         try {
-          var17 = new va(dg.a(param0, 31027));
+          var17 = new PacketBuffer(dg.a(param0, 31027));
           var4 = var17.f(param1 + 255);
           if (var4 >= 5 &&
             var4 <= 7) {
@@ -340,6 +340,6 @@ final class pc {
         field_a = new bh(9, 0, 4, 1);
         field_k = new long[32];
         field_m = new sd(0);
-        field_l = new oi();
+        field_l = new IntrusiveDeque();
     }
 }

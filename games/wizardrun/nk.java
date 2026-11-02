@@ -409,7 +409,7 @@ final class nk extends pe implements ng, qd, ha {
             var5 = (String) null;
             this.a((String) null, (byte) -6);
           }
-          if (va.field_o != var4) {
+          if (PacketBuffer.field_o != var4) {
             return true;
           }
           return false;

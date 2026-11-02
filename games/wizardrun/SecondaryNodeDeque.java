@@ -3,8 +3,8 @@
  */
 import java.util.*;
 
-final class de implements Iterable {
-    rk field_b;
+final class SecondaryNodeDeque implements Iterable {
+    DualLinkNode field_b;
     static String field_c;
     static String field_a;
 
@@ -21,13 +21,13 @@ final class de implements Iterable {
         }
     }
 
-    final rk b(byte param0) {
-        rk var2 = this.field_b.field_i;
+    final DualLinkNode b(byte param0) {
+        DualLinkNode var2 = this.field_b.secondaryNext;
         if (param0 > -15) {
-          return (rk) null;
+          return (DualLinkNode) null;
         }
         if (this.field_b != var2) {
-          var2.b(false);
+          var2.unlink(false);
           return var2;
         }
         return null;
@@ -92,8 +92,8 @@ final class de implements Iterable {
         try {
           var5 = n.field_b;
           var5.c((byte) -61, param1);
-          var5.field_m = var5.field_m + 1;
-          var4 = var5.field_m;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.b((byte) 11, 1);
           var5.b((byte) 11, param2.field_k);
           var5.d(1710370149, param2.field_m);
@@ -102,11 +102,11 @@ final class de implements Iterable {
           var5.f(param2.field_i, 613003928);
           var5.f(param2.field_p, 613003928);
           var5.e(var4, param0 ^ 1182882603);
-          var5.a(-var4 + var5.field_m, -127);
+          var5.a(-var4 + var5.position, -127);
           if (param0 == -14149) {
             return;
           }
-          de.a(54, false, 105, -87);
+          SecondaryNodeDeque.a(54, false, 105, -87);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,35 +123,35 @@ final class de implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new kg(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    private de() throws Throwable {
+    private SecondaryNodeDeque() throws Throwable {
         throw new Error();
     }
 
     public static void a(byte param0) {
         field_a = null;
         if (param0 != 5) {
-          de.a(-86, true, -78, -105);
+          SecondaryNodeDeque.a(-86, true, -78, -105);
           field_c = null;
           return;
         }
         field_c = null;
     }
 
-    final void a(rk param0, int param1) {
-        if (null != param0.field_l) {
-          param0.b(false);
+    final void a(DualLinkNode param0, int param1) {
+        if (null != param0.secondaryPrevious) {
+          param0.unlink(false);
         }
-        param0.field_l = this.field_b.field_l;
-        param0.field_i = this.field_b;
-        param0.field_l.field_i = param0;
+        param0.secondaryPrevious = this.field_b.secondaryPrevious;
+        param0.secondaryNext = this.field_b;
+        param0.secondaryPrevious.secondaryNext = param0;
         if (param1 != 10) {
           return;
         }
         try {
-          param0.field_i.field_l = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "de.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

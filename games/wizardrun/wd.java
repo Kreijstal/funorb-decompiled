@@ -47,7 +47,7 @@ final class wd {
           if (var3_int > 12) {
             return false;
           }
-          var4 = ta.a(-77, param1);
+          var4 = MouseWheelInput.a(-77, param1);
           if (var4 != null &&
             1 <= var4.length()) {
             if (!d.a(true, var4.charAt(0)) &&

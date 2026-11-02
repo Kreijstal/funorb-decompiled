@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pk extends wl {
+final class pk extends IntrusiveNode {
     int field_i;
     int field_r;
     static boolean field_s;

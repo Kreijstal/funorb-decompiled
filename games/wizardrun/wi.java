@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wi extends mi {
-    private oi field_I;
+    private IntrusiveDeque field_I;
     static String field_H;
     static boolean field_J;
     static ad field_L;
@@ -11,15 +11,15 @@ final class wi extends mi {
 
     public wi() {
         super(0, 0, dh.field_a, ik.field_K, (bf) null, (ce) null);
-        this.field_I = new oi();
+        this.field_I = new IntrusiveDeque();
     }
 
     final ub a(byte param0) {
-        pf var2;
+        IntrusiveDequeCursor var2;
         tj var3;
         int var4;
         var4 = wizardrun.field_H;
-        var2 = new pf(this.field_I);
+        var2 = new IntrusiveDequeCursor(this.field_I);
         var3 = (tj) (var2.a((byte) 31));
         if (param0 >= -29) {
           this.a((byte) -88);
@@ -38,7 +38,7 @@ final class wi extends mi {
         if (param0 != -5903) {
           this.a(86, 9, -39, -76);
         }
-        pf var2 = new pf(this.field_I);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_I);
         tj var3 = (tj) (var2.a((byte) 31));
         while (var3 != null) {
           if (var3.a(16)) {
@@ -53,7 +53,7 @@ final class wi extends mi {
         if (param0) {
           return;
         }
-        pf var2 = new pf(this.field_I);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_I);
         tj var3 = (tj) (var2.a((byte) 31));
         while (var3 != null) {
           var3.field_H = false;
@@ -63,11 +63,11 @@ final class wi extends mi {
     }
 
     final tj f(int param0) {
-        pf var2;
+        IntrusiveDequeCursor var2;
         tj var3;
         int var4;
         var4 = wizardrun.field_H;
-        var2 = new pf(this.field_I);
+        var2 = new IntrusiveDequeCursor(this.field_I);
         if (param0 != 0) {
           return (tj) null;
         }
@@ -104,7 +104,7 @@ final class wi extends mi {
         if (this.field_w != null) {
           this.field_w.a(param0, param3, (ub) (this), true, true);
         }
-        pf var5 = new pf(this.field_I);
+        IntrusiveDequeCursor var5 = new IntrusiveDequeCursor(this.field_I);
         if (param1 != 0) {
           return;
         }
@@ -126,7 +126,7 @@ final class wi extends mi {
 
     final void g(byte param0) {
         int var4 = wizardrun.field_H;
-        pf var2 = new pf(this.field_I);
+        IntrusiveDequeCursor var2 = new IntrusiveDequeCursor(this.field_I);
         tj var3 = (tj) (var2.a((byte) 31));
         while (var3 != null) {
           if (var3.g(1)) {

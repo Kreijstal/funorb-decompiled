@@ -95,7 +95,7 @@ final class jl extends ll {
           if (param0 > -60) {
             jl.d(-41);
           }
-          stackIn_11_0 = da.a(121, -1, (String) (var4), param1, (String) (var3));
+          stackIn_11_0 = GameApplet.a(121, -1, (String) (var4), param1, (String) (var3));
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -218,7 +218,7 @@ final class jl extends ll {
     }
 
     private jl(int param0, int param1, int param2) {
-        this.field_k = va.field_i;
+        this.field_k = PacketBuffer.field_i;
         this.field_t = param2;
         this.field_p = param0;
         this.field_q = param1;

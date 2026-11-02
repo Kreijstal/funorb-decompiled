@@ -307,7 +307,7 @@ final class od {
         if (param0 <= 106) {
           od.a(64, false);
         }
-        return new bh[]{nh.field_p, ea.field_f, cf.field_n, jk.field_a, oa.field_b, ue.field_h, jg.field_q, pc.field_a, mi.field_A, gi.field_a, nk.field_U, rl.field_a, th.field_d, lh.field_a};
+        return new bh[]{nh.field_p, ProxySocketConnector.field_f, cf.field_n, jk.field_a, oa.field_b, ue.field_h, jg.field_q, pc.field_a, mi.field_A, gi.field_a, nk.field_U, rl.field_a, th.field_d, lh.field_a};
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {

@@ -218,7 +218,7 @@ final class qc extends pe implements fj, qd {
             if (this.field_M != param1) {
               if (this.field_G == param1) {
                 if (this.field_J) {
-                  ea.c(param0 ^ 12849);
+                  ProxySocketConnector.c(param0 ^ 12849);
                 } else {
                   if (!this.field_O) {
                     sf.a((byte) -89);
@@ -298,7 +298,7 @@ final class qc extends pe implements fj, qd {
             if (!this.field_O) {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
-              stackIn_19_3 = ti.field_h;
+              stackIn_19_3 = IsaacRandom.field_h;
             } else {
               stackIn_19_1 = null;
               stackIn_19_2 = null;
@@ -323,7 +323,7 @@ final class qc extends pe implements fj, qd {
           if (this.field_M != null) {
             this.field_M.field_w = (bf) ((Object) var6);
           }
-          this.field_K.field_p = tf.field_a;
+          this.field_K.field_p = MouseInputHandler.field_a;
           if (this.field_M != null) {
             this.field_M.field_p = hb.field_i;
           }
@@ -416,7 +416,7 @@ final class qc extends pe implements fj, qd {
         }
     }
 
-    final static void a(int param0, int param1, int param2, vh param3, int param4, String param5, boolean param6, int param7, int param8) {
+    final static void a(int param0, int param1, int param2, PlatformTaskDispatcher param3, int param4, String param5, boolean param6, int param7, int param8) {
         he.field_q = param1;
         ej.field_d = param8;
         fg.field_c = param4;

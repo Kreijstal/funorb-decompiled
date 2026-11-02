@@ -19,9 +19,9 @@ final class bc {
             !(sk.field_B.length >= param2)) {
             sk.field_B = new int[param2 * 2];
           }
-          if (tf.field_c == null ||
-            !(tf.field_c.length >= param2)) {
-            tf.field_c = new int[param2 * 2];
+          if (MouseInputHandler.field_c == null ||
+            !(MouseInputHandler.field_c.length >= param2)) {
+            MouseInputHandler.field_c = new int[param2 * 2];
           }
           if (mk.field_c != null &&
             param2 <= mk.field_c.length) {
@@ -102,9 +102,9 @@ final class bc {
               !(sk.field_B.length >= param2)) {
               sk.field_B = new int[param2 * 2];
             }
-            if (tf.field_c == null ||
-              !(tf.field_c.length >= param2)) {
-              tf.field_c = new int[param2 * 2];
+            if (MouseInputHandler.field_c == null ||
+              !(MouseInputHandler.field_c.length >= param2)) {
+              MouseInputHandler.field_c = new int[param2 * 2];
             }
             if (mk.field_c != null &&
               param2 <= mk.field_c.length) {
@@ -185,9 +185,9 @@ final class bc {
               !(sk.field_B.length >= param2)) {
               sk.field_B = new int[param2 * 2];
             }
-            if (tf.field_c == null ||
-              !(tf.field_c.length >= param2)) {
-              tf.field_c = new int[param2 * 2];
+            if (MouseInputHandler.field_c == null ||
+              !(MouseInputHandler.field_c.length >= param2)) {
+              MouseInputHandler.field_c = new int[param2 * 2];
             }
             if (mk.field_c != null &&
               param2 <= mk.field_c.length) {

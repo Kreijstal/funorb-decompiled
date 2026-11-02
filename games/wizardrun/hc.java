@@ -14,7 +14,7 @@ final class hc extends mf {
         if (param0 != 92682) {
           field_l = (int[]) null;
         }
-        de.a((byte) -52, we.field_a, sf.field_a, true);
+        SecondaryNodeDeque.a((byte) -52, we.field_a, sf.field_a, true);
         ga.field_a = true;
     }
 
@@ -27,7 +27,7 @@ final class hc extends mf {
 
     final static boolean a(int param0, int param1) {
         try {
-          if (!(nk.field_N.field_m < param0)) {
+          if (!(nk.field_N.position < param0)) {
             return true;
           }
           if (jc.field_H == null) {
@@ -38,16 +38,16 @@ final class hc extends mf {
             hc.f(-28);
           }
           if (var2_int > 0) {
-            if (-nk.field_N.field_m + param0 < var2_int) {
-              var2_int = -nk.field_N.field_m + param0;
+            if (-nk.field_N.position + param0 < var2_int) {
+              var2_int = -nk.field_N.position + param0;
             }
-            jc.field_H.a(nk.field_N.field_k, 114, var2_int, nk.field_N.field_m);
+            jc.field_H.a(nk.field_N.payload, 114, var2_int, nk.field_N.position);
             eg.field_C = d.a((byte) 29);
-            nk.field_N.field_m = nk.field_N.field_m + var2_int;
-            if (param0 > nk.field_N.field_m) {
+            nk.field_N.position = nk.field_N.position + var2_int;
+            if (param0 > nk.field_N.position) {
               return false;
             }
-            nk.field_N.field_m = 0;
+            nk.field_N.position = 0;
             return true;
           }
           try {
@@ -86,7 +86,7 @@ final class hc extends mf {
             stackIn_7_0 = eh.field_h;
             return stackIn_7_0;
           }
-          stackIn_5_0 = wl.field_d;
+          stackIn_5_0 = IntrusiveNode.field_d;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -112,7 +112,7 @@ final class hc extends mf {
           }
           if (ok.field_c.field_i) {
             qf.field_l = qf.field_l & ~ok.field_c.field_j;
-            ti.field_a = ti.field_a | ok.field_c.field_j;
+            IsaacRandom.field_a = IsaacRandom.field_a | ok.field_c.field_j;
             ok.field_c = null;
             f.field_e = true;
           }

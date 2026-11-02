@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ke extends qb {
-    static oi field_u;
+    static IntrusiveDeque field_u;
     static boolean field_w;
     static String field_v;
     static String[] field_t;
@@ -33,7 +33,7 @@ final class ke extends qb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -57) {
-            field_u = (oi) null;
+            field_u = (IntrusiveDeque) null;
           }
           stackIn_3_0 = oa.a((byte) -95, '*', param0.field_k.length());
           return stackIn_3_0;
@@ -53,6 +53,6 @@ final class ke extends qb {
 
     static {
         field_v = "Checking";
-        field_u = new oi();
+        field_u = new IntrusiveDeque();
     }
 }

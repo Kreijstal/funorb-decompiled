@@ -28,7 +28,7 @@ final class vg extends rg implements qd {
               }
             } else {
               this.field_n = this.field_n + 10;
-              var3 = ib.field_b;
+              var3 = SocketConnector.field_b;
               if (ql.a(false)) {
                 var3 = ad.field_c;
                 this.field_n = this.field_n + 20;

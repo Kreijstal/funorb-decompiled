@@ -110,13 +110,13 @@ class bb extends uh {
         bb.b((byte) -18);
     }
 
-    final void a(int param0, va param1) {
+    final void a(int param0, PacketBuffer param1) {
         try {
           param1.b(param0 + 1290648724, this.field_m);
           param1.a(this.field_i, -66);
           if (param0 != 4) {
-            va var4 = (va) null;
-            this.a(-43, (va) null);
+            PacketBuffer var4 = (PacketBuffer) null;
+            this.a(-43, (PacketBuffer) null);
           }
         } catch (RuntimeException runtimeException) {
           throw bd.a((Throwable) ((Object) runtimeException), "bb.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

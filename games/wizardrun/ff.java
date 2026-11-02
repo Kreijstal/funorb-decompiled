@@ -3,8 +3,8 @@
  */
 class ff extends pl {
     private String[] field_I;
-    static oj field_H;
-    private oi field_G;
+    static GameKeyHandler field_H;
+    private IntrusiveDeque field_G;
     private dd field_F;
     static int field_J;
 
@@ -73,7 +73,7 @@ class ff extends pl {
         try {
           super.a(param0 ^ 0, param1, param2, param3);
           if (param0 != 10000536) {
-            this.field_G = (oi) null;
+            this.field_G = (IntrusiveDeque) null;
           }
           this.field_F = null;
           if (this.field_v) {
@@ -99,7 +99,7 @@ class ff extends pl {
     final void a(int param0, byte param1, int param2, int param3) {
         this.a(127, param0, ((qe) ((Object) this.field_w)).a((byte) 89, (ub) (this)), param2, param3);
         if (param1 != 61) {
-          field_H = (oj) null;
+          field_H = (GameKeyHandler) null;
         }
     }
 
@@ -166,7 +166,7 @@ class ff extends pl {
         int var16;
         int var7Lifetime1;
         var16 = wizardrun.field_H;
-        this.field_G = new oi();
+        this.field_G = new IntrusiveDeque();
         var2 = param0;
         var3 = (qe) ((Object) this.field_w);
         var4 = var3.a((ub) (this), (byte) 116);
@@ -296,6 +296,6 @@ class ff extends pl {
     }
 
     static {
-        field_H = new oj();
+        field_H = new GameKeyHandler();
     }
 }

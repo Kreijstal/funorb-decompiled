@@ -279,8 +279,8 @@ final class ph extends ge {
             }
             else {
               if (2 == wi.field_K) {
-                hi.field_c = hi.field_c + (qh.field_g + 1);
-                hi.field_a = -350;
+                BufferedSocket.field_c = BufferedSocket.field_c + (qh.field_g + 1);
+                BufferedSocket.field_a = -350;
                 qh.field_g = -1;
               }
               this.field_p = true;

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class cg extends df implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerRasterBuffer extends df implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     static int[] field_k;
     private java.awt.image.ColorModel field_l;
     static int[] field_m;
@@ -133,7 +133,7 @@ final class cg extends df implements java.awt.image.ImageProducer, java.awt.imag
         }
     }
 
-    cg() {
+    ImageProducerRasterBuffer() {
     }
 
     public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {

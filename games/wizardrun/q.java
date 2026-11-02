@@ -98,7 +98,7 @@ final class q {
         }
     }
 
-    final static void a(int param0, java.awt.Frame param1, vh param2) {
+    final static void a(int param0, java.awt.Frame param1, PlatformTaskDispatcher param2) {
         jh var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;

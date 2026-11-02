@@ -5,7 +5,7 @@ abstract class r implements dk {
     static qc field_b;
     private long field_f;
     static int field_e;
-    static oi field_d;
+    static IntrusiveDeque field_d;
     static String field_c;
     static int field_a;
 
@@ -45,7 +45,7 @@ abstract class r implements dk {
 
     public final ok a(boolean param0) {
         if (this.b(7245)) {
-          return va.field_o;
+          return PacketBuffer.field_o;
         }
         if (!(d.a((byte) 25) >= this.field_f + 350L)) {
           return nf.field_c;
@@ -118,7 +118,7 @@ abstract class r implements dk {
     }
 
     static {
-        field_d = new oi();
+        field_d = new IntrusiveDeque();
         field_c = "Use the arrow keys to move.";
     }
 }
