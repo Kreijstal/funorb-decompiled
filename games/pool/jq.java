@@ -13,7 +13,7 @@ final class jq {
 
     final static void a(byte param0) {
         int var1 = -75 / ((-64 - param0) / 62);
-        jk.a(120, w.field_b);
+        CueStick.a(120, w.field_b);
     }
 
     public static void a(boolean param0) {

@@ -174,7 +174,7 @@ abstract class BallSkin {
         int var28;
         eg var29;
         var28 = Pool.field_O;
-        var29 = new eg((3 + ne.field_v) * (hr.field_b + 1), 2 * (hr.field_b * ne.field_v), ne.field_v);
+        var29 = new eg((3 + MatchingTextValidator.field_v) * (ViewportController.field_b + 1), 2 * (ViewportController.field_b * MatchingTextValidator.field_v), MatchingTextValidator.field_v);
         if (param0 != -930305852) {
           field_h = (cd) null;
         }
@@ -182,16 +182,16 @@ abstract class BallSkin {
         var4 = var29.a(384, -383, 384);
         var5 = var29.a(-383, 384, 384);
         var29.a((short)var3, (short)var4, (short)var5);
-        for (var6 = 0; var6 < hr.field_b; var6++) {
-          var7 = Math.cos((double)var6 * 3.141592653589793 / (double)hr.field_b) * 8.0;
-          var9 = 8.0 * Math.sin(3.141592653589793 * (double)var6 / (double)hr.field_b);
-          var11 = 8.0 * Math.cos((double)(1 + var6) * 3.141592653589793 / (double)hr.field_b);
-          var13 = Math.sin((double)(var6 + 1) * 3.141592653589793 / (double)hr.field_b) * 8.0;
-          for (var15 = 0; var15 < ne.field_v; var15++) {
-            var16 = Math.cos(3.141592653589793 * (double)(2 * var15) / (double)ne.field_v);
-            var18 = Math.sin(3.141592653589793 * (double)(var15 * 2) / (double)ne.field_v);
-            var20 = Math.cos(3.141592653589793 * (double)(2 + var15 * 2) / (double)ne.field_v);
-            var22 = Math.sin((double)(2 * (var15 + 1)) * 3.141592653589793 / (double)ne.field_v);
+        for (var6 = 0; var6 < ViewportController.field_b; var6++) {
+          var7 = Math.cos((double)var6 * 3.141592653589793 / (double)ViewportController.field_b) * 8.0;
+          var9 = 8.0 * Math.sin(3.141592653589793 * (double)var6 / (double)ViewportController.field_b);
+          var11 = 8.0 * Math.cos((double)(1 + var6) * 3.141592653589793 / (double)ViewportController.field_b);
+          var13 = Math.sin((double)(var6 + 1) * 3.141592653589793 / (double)ViewportController.field_b) * 8.0;
+          for (var15 = 0; var15 < MatchingTextValidator.field_v; var15++) {
+            var16 = Math.cos(3.141592653589793 * (double)(2 * var15) / (double)MatchingTextValidator.field_v);
+            var18 = Math.sin(3.141592653589793 * (double)(var15 * 2) / (double)MatchingTextValidator.field_v);
+            var20 = Math.cos(3.141592653589793 * (double)(2 + var15 * 2) / (double)MatchingTextValidator.field_v);
+            var22 = Math.sin((double)(2 * (var15 + 1)) * 3.141592653589793 / (double)MatchingTextValidator.field_v);
             var24 = var29.a(PotEvent.a(4885, var16 * var9), PotEvent.a(4885, var9 * var18), PotEvent.a(4885, var7));
             var25 = var29.a(PotEvent.a(4885, var20 * var9), PotEvent.a(param0 + 930310737, var9 * var22), PotEvent.a(param0 ^ -930300975, var7));
             var26 = var29.a(PotEvent.a(4885, var13 * var16), PotEvent.a(4885, var13 * var18), PotEvent.a(4885, var11));

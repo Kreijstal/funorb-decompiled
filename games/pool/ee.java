@@ -8,7 +8,7 @@ final class ee {
     static String playerListAreOfferingRematch;
     private di field_c;
     static int[] field_b;
-    private fg field_d;
+    private WeightedLruCache field_d;
 
     final static void a(int param0, int param1) {
         if (param1 > -37) {
@@ -216,12 +216,12 @@ final class ee {
         }
         stackIn_9_0 = (var8.readUnsignedByte(param0 ^ 94) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        n.field_S = var8.j(-105);
+        LabeledChildWidget.field_S = var8.j(-105);
         if (param0 != -31) {
           ee.b((byte) -81);
         }
         if (var4 == 0) {
-          lh.field_f = n.field_S;
+          lh.field_f = LabeledChildWidget.field_S;
         } else {
           lh.field_f = var8.j(param0 ^ 82);
         }
@@ -264,7 +264,7 @@ final class ee {
 
     final sf a(byte param0, int param1) {
         byte[] var4 = null;
-        sf var3 = (sf) (this.field_d.a((long)param1, true));
+        sf var3 = (sf) (this.field_d.get((long)param1, true));
         if (param0 != -55) {
           return (sf) null;
         }
@@ -283,7 +283,7 @@ final class ee {
         if (32768 <= param1) {
           var3.f(0);
         }
-        this.field_d.a(121, var3, (long)param1);
+        this.field_d.put(121, var3, (long)param1);
         return var3;
     }
 
@@ -295,7 +295,7 @@ final class ee {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        this.field_d = new fg(64);
+        this.field_d = new WeightedLruCache(64);
         try {
           this.field_e = param2;
           this.field_c = param1;
@@ -363,12 +363,12 @@ final class ee {
         }
         stackIn_9_0 = (var8.readUnsignedByte(param0 ^ 94) != 1) ? 0 : 1;
         var4 = stackIn_9_0;
-        n.field_S = var8.j(-105);
+        LabeledChildWidget.field_S = var8.j(-105);
         if (param0 != -31) {
           ee.b((byte) -81);
         }
         if (var4 == 0) {
-          lh.field_f = n.field_S;
+          lh.field_f = LabeledChildWidget.field_S;
         } else {
           lh.field_f = var8.j(param0 ^ 82);
         }

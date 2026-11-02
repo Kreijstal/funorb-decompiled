@@ -18,7 +18,7 @@ final class ek {
         if (param0 >= 60) {
           return p.a(param0 % 60, param1, 45, param0 / 60);
         }
-        String var7 = lq.timerMinutesSeconds;
+        String var7 = DialogLayer.timerMinutesSeconds;
         char[] var9 = var7.toCharArray();
         char[] var8 = var9;
         char[] var4 = var8;

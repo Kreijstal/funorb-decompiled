@@ -8,7 +8,7 @@ final class bk extends IntrusiveNode {
     static String ratedGameTipsSetupSingular;
     private IntrusiveDeque field_r;
     int field_l;
-    gi field_q;
+    TextHotspotRegion field_q;
     int field_o;
     int field_u;
     private int field_t;
@@ -39,7 +39,7 @@ final class bk extends IntrusiveNode {
 
     final void c(int param0) {
         try {
-          this.field_q = ag.a(-PoolGameModel.field_k.field_eb + gg.field_f, this.field_r, wn.field_i - PoolGameModel.field_k.field_qb, 15395);
+          this.field_q = ag.a(-PoolGameModel.field_k.field_eb + DebouncedValidationProvider.field_f, this.field_r, wn.field_i - PoolGameModel.field_k.field_qb, 15395);
           int var2_int = 25 % ((param0 - 39) / 62);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "bk.A(" + param0 + ')');
@@ -48,7 +48,7 @@ final class bk extends IntrusiveNode {
 
     final void a(int param0, int param1, int param2) {
         try {
-          this.field_q.a(param0, PoolGameModel.field_k.field_qb, param1, -1, true, PoolGameModel.field_k.field_eb);
+          this.field_q.drawOutline(param0, PoolGameModel.field_k.field_qb, param1, -1, true, PoolGameModel.field_k.field_eb);
           if (param2 != 9750) {
             this.field_u = -125;
           }
@@ -73,7 +73,7 @@ final class bk extends IntrusiveNode {
         }
     }
 
-    final void a(hq param0, int param1) {
+    final void a(TutorialController param0, int param1) {
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
         String stackIn_55_2 = null;
@@ -126,10 +126,10 @@ final class bk extends IntrusiveNode {
           }
           this.field_z = new Sprite(PoolGameModel.field_k.field_gb, this.field_t + 10);
           this.field_z.e();
-          sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
+          sa.field_h.setInlineSprites(AccountCreationForm.field_Z, bi.field_d);
           sa.field_h.drawParagraph(ef.a("</col>", this.field_p, (byte) 4, "<col=ccccff>"), 10, 7, this.field_n, this.field_t, 16777215, 3355443, 0, 1, this.field_y);
           this.field_r = ug.a(new int[]{this.field_y}, this.field_n, this.field_p, 7, sa.field_h, true, 10);
-          sh.field_P.b(15100);
+          OpacityWidget.field_P.bindAsRenderTarget(15100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

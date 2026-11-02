@@ -66,7 +66,7 @@ final class el extends ob {
           }
         }
         var4Lifetime1 = 0;
-        var5 = -ua.field_r.field_w + td.field_g.field_w >> 3;
+        var5 = -UsernameAvailabilityValidator.field_r.field_w + td.field_g.field_w >> 3;
         for (var6 = 0; var6 < NineBallRules.c((byte) -9); var6++) {
           var7 = this.g(-45, var6);
           var8 = this.d(var6, true);
@@ -78,7 +78,7 @@ final class el extends ob {
             }
           }
           regionExit1: {
-            if (fe.a(var15, -13671, var6)) {
+            if (ButtonWidget.a(var15, -13671, var6)) {
               IsaacCipher.field_f[var6].drawQuarterSize(var7, var8);
             } else {
               if (var2 != 0) {
@@ -104,13 +104,13 @@ final class el extends ob {
         var6Lifetime1 = stackIn_37_0;
         if (var6Lifetime1 != -1) {
           ModernTableScene.field_Z.d(md.achievementNames[var6Lifetime1], 225, ModernTableScene.field_Z.maxAscent + 215, 16777215, -1);
-          stackIn_41_0 = (!fe.a(var15, -13671, var6Lifetime1)) ? 0 : 1;
+          stackIn_41_0 = (!ButtonWidget.a(var15, -13671, var6Lifetime1)) ? 0 : 1;
           var7Lifetime1 = stackIn_41_0;
           stackIn_46_0 = sa.field_h;
           if (var7Lifetime1 != 0) {
             stackIn_47_1 = np.achieved;
           } else {
-            if (mp.field_V <= 0 &&
+            if (UsernameSuggestionsPanel.field_V <= 0 &&
               ap.field_w[var6Lifetime1]) {
               stackIn_47_1 = cl.memberslevelName;
             } else {
@@ -147,32 +147,32 @@ final class el extends ob {
           if (var9 != 0) {
             stackIn_65_1 = vm.field_g;
           } else {
-            stackIn_65_1 = kb.secretachievement;
+            stackIn_65_1 = TickClock.secretachievement;
           }
           ((BinaryBitmapFont) (Object) stackIn_64_0).drawParagraph(stackIn_65_1, 225, 260, 260, 70, 13421772, -1, 0, 1, var8);
-          sa.field_h.d(sd.orbpointsColon + ch.field_J[var6Lifetime1] * 100, 225, 340 + sa.field_h.maxAscent, 13421772, -1);
-          sa.field_h.d(ri.orbcoinsColon, 345, sa.field_h.maxAscent + 340, 13421772, -1);
-          var10 = 345 + sa.field_h.b(ri.orbcoinsColon);
+          sa.field_h.d(Under13NoticePanel.orbpointsColon + WidgetContainer.field_J[var6Lifetime1] * 100, 225, 340 + sa.field_h.maxAscent, 13421772, -1);
+          sa.field_h.d(CheckboxWidget.orbcoinsColon, 345, sa.field_h.maxAscent + 340, 13421772, -1);
+          var10 = 345 + sa.field_h.b(CheckboxWidget.orbcoinsColon);
           var11 = (-dq.field_k.field_A + sa.field_h.maxDescent + sa.field_h.maxAscent >> 1) + 340;
-          for (var12 = 0; ch.field_J[var6Lifetime1] > var12; var12++) {
+          for (var12 = 0; WidgetContainer.field_J[var6Lifetime1] > var12; var12++) {
             dq.field_k.c(var10, var11);
             var10 = var10 + dq.field_k.field_z / 3;
           }
         } else {
-          FreePlayRules.field_e.drawCentered(fd.mouseoveranicon, SoftwareRasterizer.width >> 1, 215 + FreePlayRules.field_e.maxAscent, 4, -1);
-          if (hk.b(-107)) {
+          FreePlayRules.field_e.drawCentered(StrongCacheEntry.mouseoveranicon, SoftwareRasterizer.width >> 1, 215 + FreePlayRules.field_e.maxAscent, 4, -1);
+          if (NanoTickClock.b(-107)) {
             var7Lifetime1 = 215 + this.field_x >> 1;
             FreePlayRules.field_e.drawParagraph(ra.createtouse, SoftwareRasterizer.width >> 2, -FreePlayRules.field_e.baselineHeight + var7Lifetime1, SoftwareRasterizer.width >> 1, 240, 4, -1, 0, 0, 0);
           }
         }
-        if (this.field_B.field_e == 1) {
+        if (this.field_B.itemCount == 1) {
           sa.field_h.drawParagraph(ab.achievementsOnlyInRated, 220, 390, 360, 36, 15658734, -1, 1, 1, 0);
         }
         var7Lifetime2 = dp.a(104);
         if (-1 != var7Lifetime2) {
           qa.a((byte) 71, SoftwareRasterizer.width >> 1, sa.field_h, re.field_e[var7Lifetime2], 15658734, 4144959);
           if (this.field_G != null) {
-            this.field_G.a(15658734, 0, 128, -1, true, 70 - qi.field_b >> 1);
+            this.field_G.drawOutline(15658734, 0, 128, -1, true, 70 - qi.field_b >> 1);
           }
         }
         return;
@@ -222,7 +222,7 @@ final class el extends ob {
     }
 
     final int d(int param0, int param1) {
-        if (this.field_B.field_e == 1) {
+        if (this.field_B.itemCount == 1) {
           return 60;
         }
         if (param1 == param0) {
@@ -235,7 +235,7 @@ final class el extends ob {
     }
 
     final int a(boolean param0, int param1) {
-        if (this.field_B.field_e == 1) {
+        if (this.field_B.itemCount == 1) {
           return 210;
         }
         if (param1 == 0) {
@@ -277,10 +277,10 @@ final class el extends ob {
 
     private final void a(boolean param0, byte param1) {
         int var3;
-        kh.field_Gc = this.a(wn.field_i, param0, gg.field_f, false);
-        if (ne.field_s == 1) {
+        kh.field_Gc = this.a(wn.field_i, param0, DebouncedValidationProvider.field_f, false);
+        if (MatchingTextValidator.field_s == 1) {
           vj.a((byte) -27, il.field_c[0]);
-          var3 = this.a(lq.field_W, param0, ua.field_o, false);
+          var3 = this.a(DialogLayer.field_W, param0, UsernameAvailabilityValidator.field_o, false);
           if (uk.field_j == var3) {
             uk.field_j = -1;
           } else {
@@ -336,7 +336,7 @@ final class el extends ob {
         super.d(param0);
         if (this.field_E != 17) {
           if (this.field_E == 18 ||
-            ne.field_w == 19) {
+            MatchingTextValidator.field_w == 19) {
             this.a(true, (byte) -98);
           }
         } else {
@@ -345,7 +345,7 @@ final class el extends ob {
         if (ao.field_Lb != null &&
           null != vm.field_g &&
           -1 != uo.field_Qb) {
-          this.field_G = ag.a(-(70 - qi.field_b >> 1) + gg.field_f, ao.field_Lb, wn.field_i, param0 ^ -15396);
+          this.field_G = ag.a(-(70 - qi.field_b >> 1) + DebouncedValidationProvider.field_f, ao.field_Lb, wn.field_i, param0 ^ -15396);
           se.field_l = 12;
           eo.field_Vb = 12;
           stackIn_12_0 = 0;
@@ -368,14 +368,14 @@ final class el extends ob {
         var4 = this.field_h[param2];
         if (var4 != 48) {
           if (var4 == 23) {
-            if (this.field_B.b((byte) 108)) {
+            if (this.field_B.isPressActivated((byte) 108)) {
               TranslatedUiText.a(pl.pleaselogin, this.field_E, (byte) 81);
             }
           } else {
             super.b(-16470, param1, param2);
           }
         } else {
-          if (this.field_B.b((byte) 106)) {
+          if (this.field_B.isPressActivated((byte) 106)) {
             var4 = param1 ? 1 : 0;
             stackIn_8_0 = -3405;
             stackIn_8_1 = 16;

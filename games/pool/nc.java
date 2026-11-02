@@ -957,7 +957,7 @@ final class nc extends fa {
           }
         }
         if (field_k) {
-          hq.a(0, field_C, field_m, var7 - 1, (byte) 80);
+          TutorialController.sortParallelArrays(0, field_C, field_m, var7 - 1, (byte) 80);
           if (this.field_M == null) {
             for (var8Lifetime2 = 0; var8Lifetime2 < var7; var8Lifetime2++) {
               this.b(field_m[var8Lifetime2]);

@@ -189,11 +189,11 @@ final class od extends java.awt.Canvas implements java.awt.event.FocusListener {
 
     final static void a(boolean param0) {
         if (param0) {
-          tn.field_n.d(new nr(), 30);
+          tn.field_n.replaceContent(new AccountWelcomePanel(), 30);
           return;
         }
         field_c = true;
-        tn.field_n.d(new nr(), 30);
+        tn.field_n.replaceContent(new AccountWelcomePanel(), 30);
     }
 
     static {

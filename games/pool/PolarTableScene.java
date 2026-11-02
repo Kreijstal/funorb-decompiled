@@ -138,7 +138,7 @@ final class PolarTableScene extends ModelTableScene {
           var5[2] = rb.b(var37[2], -4);
           var5[1] = rb.b(var37[1], -4);
           var5[0] = rb.b(var37[0], -4);
-          hn.a(-3143);
+          hn.fillScreenWhite(-3143);
           this.a(true, param1);
           this.a();
           this.a(oh.field_d, param1.field_eb.b(param0 - 72));
@@ -146,7 +146,7 @@ final class PolarTableScene extends ModelTableScene {
           if ((pd.field_i & 1073741824L) == 0L) {
             this.a(var37, (byte) 122, false, var4, false);
           }
-          var15 = me.field_y;
+          var15 = EmailAvailabilityValidator.field_y;
           var61 = oh.field_d;
           var15.b((byte) 111, 0, var15.field_j.length, var61);
           var17 = gf.field_e;
@@ -188,13 +188,13 @@ final class PolarTableScene extends ModelTableScene {
           var20 = sa.field_s;
           var63 = oh.field_d;
           var20.b((byte) 104, 0, var20.field_j.length, var63);
-          var22 = oe.field_U;
+          var22 = FadingDialog.field_U;
           var64 = oh.field_d;
           var22.b((byte) 119, 0, var22.field_j.length, var64);
-          var24 = me.field_y;
+          var24 = EmailAvailabilityValidator.field_y;
           var65 = oh.field_d;
           var24.a((byte) -65, 0, var24.field_j.length, var65);
-          var26 = oe.field_U;
+          var26 = FadingDialog.field_U;
           var66 = oh.field_d;
           var26.a((byte) -96, 0, var26.field_j.length, var66);
           var28 = sa.field_s;
@@ -217,7 +217,7 @@ final class PolarTableScene extends ModelTableScene {
             stackIn_37_2 = 112;
             stackIn_37_3 = true;
             stackIn_37_4 = var4;
-            if (param1.field_I.currentShot(83).field_q != 0) {
+            if (param1.field_I.currentShot(83).phase != 0) {
               stackIn_38_0 = this;
               stackIn_38_5 = false;
             } else {
@@ -231,7 +231,7 @@ final class PolarTableScene extends ModelTableScene {
           var71 = bc.field_j;
           var33.a(true, 0, var33.field_j.length, (byte) 117, var70, var71);
           if ((pd.field_i & 256L) != 0L) {
-            oe.field_U.a(oh.field_d, 0);
+            FadingDialog.field_U.a(oh.field_d, 0);
             gf.field_e.a(oh.field_d, 0);
           }
           if ((1073741824L & pd.field_i) == 0L) {
@@ -327,7 +327,7 @@ final class PolarTableScene extends ModelTableScene {
         int var18Lifetime2;
         var20 = Pool.field_O;
         var2 = 0;
-        this.field_U = new vm[-gk.field_hb + ClassicBallSkin.field_m];
+        this.field_U = new vm[-FullscreenErrorDialog.field_hb + ClassicBallSkin.field_m];
         var3 = new IntrusiveDeque();
         var4 = new IntrusiveDeque();
         var5 = new IntrusiveDeque();
@@ -337,7 +337,7 @@ final class PolarTableScene extends ModelTableScene {
         var9 = new so(hj.field_a - vq.field_Ob);
         so dupTemp$489 = new so(co.field_db - kg.field_n);
         var10 = dupTemp$489;
-        so dupTemp$490 = new so((ol.field_d - er.field_S) * 4);
+        so dupTemp$490 = new so((ol.field_d - DialWidget.field_S) * 4);
         var11 = dupTemp$490;
         so dupTemp$491 = new so(new so[]{dupTemp$489, var6, dupTemp$490});
         gf.field_e = dupTemp$491;
@@ -346,18 +346,18 @@ final class PolarTableScene extends ModelTableScene {
         so dupTemp$493 = new so(4 * (mb.field_e - tg.field_g) + (hf.field_c - rl.field_f) * 2);
         var13 = dupTemp$493;
         so dupTemp$494 = new so(new so[]{dupTemp$492, var7, dupTemp$493});
-        oe.field_U = dupTemp$494;
-        so dupTemp$495 = new so(4 * (wj.field_V - fr.field_t));
+        FadingDialog.field_U = dupTemp$494;
+        so dupTemp$495 = new so(4 * (DraggableWidget.field_V - fr.field_t));
         sa.field_s = dupTemp$495;
         so dupTemp$496 = new so(new so[]{var8, var9});
-        me.field_y = dupTemp$496;
+        EmailAvailabilityValidator.field_y = dupTemp$496;
         var14 = new so(new so[]{dupTemp$491, dupTemp$494, dupTemp$495, dupTemp$496});
         for (var2Lifetime1 = kg.field_n; co.field_db > var2Lifetime1; var2Lifetime1++) {
           if (ec.field_f < this.field_O[var2Lifetime1].field_x + this.field_M[var2Lifetime1][2]) {
             ec.field_f = this.field_M[var2Lifetime1][2] + this.field_O[var2Lifetime1].field_x;
           }
-          var23 = hq.b((byte) 122);
-          var22 = hq.b((byte) 121);
+          var23 = TutorialController.b((byte) 122);
+          var22 = TutorialController.b((byte) 121);
           ej.a(0, var23, 0, false, -this.field_M[var2Lifetime1][2], 0, 0, 1, var22, this.field_O[var2Lifetime1]);
           var12.field_b[var2Lifetime1 - kg.field_n] = hc.a(var22, this.field_M[var2Lifetime1], (byte) 101);
           var10.field_b[-kg.field_n + var2Lifetime1] = hc.a(var23, this.field_M[var2Lifetime1], (byte) 101);
@@ -365,7 +365,7 @@ final class PolarTableScene extends ModelTableScene {
         for (var2Lifetime2 = vq.field_Ob; hj.field_a > var2Lifetime2; var2Lifetime2++) {
           var9.field_b[-vq.field_Ob + var2Lifetime2] = hc.a(this.field_O[var2Lifetime2], this.field_M[var2Lifetime2], (byte) 101);
         }
-        for (var2Lifetime3 = gk.field_hb; ClassicBallSkin.field_m > var2Lifetime3; var2Lifetime3++) {
+        for (var2Lifetime3 = FullscreenErrorDialog.field_hb; ClassicBallSkin.field_m > var2Lifetime3; var2Lifetime3++) {
           var24 = this.field_O[var2Lifetime3];
           var33 = new IntrusiveDeque();
           var24.e();
@@ -376,8 +376,8 @@ final class PolarTableScene extends ModelTableScene {
             var33.b((byte) -39, new pm(var30));
           } else {
             if (-this.field_M[var2Lifetime3][2] <= var24.field_x) {
-              var28 = hq.b((byte) 121);
-              var26 = hq.b((byte) 122);
+              var28 = TutorialController.b((byte) 121);
+              var26 = TutorialController.b((byte) 122);
               stackIn_15_0 = 0;
               stackIn_15_1 = var28;
               stackIn_15_2 = 0;
@@ -398,14 +398,14 @@ final class PolarTableScene extends ModelTableScene {
               var33.b((byte) 90, new pm(var25));
             }
           }
-          var31 = this.field_O[mp.field_W + (var2Lifetime3 - gk.field_hb)];
+          var31 = this.field_O[UsernameSuggestionsPanel.field_W + (var2Lifetime3 - FullscreenErrorDialog.field_hb)];
           var15_ref_eg = var31;
           var31.e();
-          dupTemp$501 = hc.a(var15_ref_eg, this.field_M[mp.field_W - gk.field_hb + var2Lifetime3], (byte) 101);
+          dupTemp$501 = hc.a(var15_ref_eg, this.field_M[UsernameSuggestionsPanel.field_W - FullscreenErrorDialog.field_hb + var2Lifetime3], (byte) 101);
           var32 = dupTemp$501;
           var5.b((byte) 108, new pm(dupTemp$501));
           var33.b((byte) 84, new pm(var32));
-          this.field_U[-gk.field_hb + var2Lifetime3] = new vm(new so(var33));
+          this.field_U[-FullscreenErrorDialog.field_hb + var2Lifetime3] = new vm(new so(var33));
         }
         var6.a((byte) -120, var3);
         var7.a((byte) 38, var4);
@@ -415,7 +415,7 @@ final class PolarTableScene extends ModelTableScene {
         }
         var8.a((byte) 72, var5);
         var15 = 0;
-        for (var2Lifetime4 = er.field_S; var2Lifetime4 < ol.field_d; var2Lifetime4++) {
+        for (var2Lifetime4 = DialWidget.field_S; var2Lifetime4 < ol.field_d; var2Lifetime4++) {
           var36 = this.field_O[var2Lifetime4];
           var47 = this.field_M[var2Lifetime4];
           var34 = var11.field_b;
@@ -440,7 +440,7 @@ final class PolarTableScene extends ModelTableScene {
           var15Lifetime1 += 2;
         }
         var15Lifetime2 = 0;
-        for (var2Lifetime7 = fr.field_t; var2Lifetime7 < wj.field_V; var2Lifetime7++) {
+        for (var2Lifetime7 = fr.field_t; var2Lifetime7 < DraggableWidget.field_V; var2Lifetime7++) {
           var16Lifetime2 = var2Lifetime7;
           var17 = sa.field_s.field_b;
           var18Lifetime2 = var15Lifetime2;
@@ -456,9 +456,9 @@ final class PolarTableScene extends ModelTableScene {
         var14.a(this.field_q, this.field_e, this.field_F, (byte) -79, this.field_u, this.field_C);
         gf.field_e.d(115);
         bc.field_j = new boolean[gf.field_e.field_j.length];
-        oe.field_U.d(101);
+        FadingDialog.field_U.d(101);
         sa.field_s.d(97);
-        me.field_y.d(92);
+        EmailAvailabilityValidator.field_y.d(92);
     }
 
     private final void a(int[] param0, int param1) {
@@ -645,7 +645,7 @@ final class PolarTableScene extends ModelTableScene {
         try {
           var3_int = 0;
           this.field_O = new eg[61];
-          mp.field_W = var3_int;
+          UsernameSuggestionsPanel.field_W = var3_int;
           incrementValue$61 = var3_int;
           var3_int++;
           this.field_O[incrementValue$61] = eg.a(param0, "", "polar_table/ice_isle_us_a");
@@ -676,7 +676,7 @@ final class PolarTableScene extends ModelTableScene {
           incrementValue$70 = var3_int;
           var3_int++;
           this.field_O[incrementValue$70] = eg.a(param0, "", "polar_table/ice_isle_us_j");
-          gk.field_hb = var3_int;
+          FullscreenErrorDialog.field_hb = var3_int;
           incrementValue$71 = var3_int;
           var3_int++;
           this.field_O[incrementValue$71] = eg.a(param0, "", "polar_table/ice_isle_a");
@@ -821,7 +821,7 @@ final class PolarTableScene extends ModelTableScene {
           var3_int++;
           this.field_O[incrementValue$115] = eg.a(param0, "", "polar_table/ice_hole_b");
           hf.field_c = var3_int;
-          er.field_S = var3_int;
+          DialWidget.field_S = var3_int;
           incrementValue$116 = var3_int;
           var3_int++;
           this.field_O[incrementValue$116] = eg.a(param0, "", "polar_table/ice_corner");
@@ -842,8 +842,8 @@ final class PolarTableScene extends ModelTableScene {
           incrementValue$121 = var3_int;
           var3_int++;
           this.field_O[incrementValue$121] = eg.a(param0, "", "polar_table/ice_top_b");
-          wj.field_V = var3_int;
-          this.field_A = new jk();
+          DraggableWidget.field_V = var3_int;
+          this.field_A = new CueStick();
           this.field_A.a(eg.a(param0, "", "cues/ice_cue"), (byte) -105);
           for (var4 = 0; this.field_O.length > var4; var4++) {
             db.a(0, this.field_O[var4]);
@@ -854,7 +854,7 @@ final class PolarTableScene extends ModelTableScene {
           var8 = -2147483648;
           var9 = 2147483647;
           var10 = -2147483648;
-          for (var4Lifetime1 = fr.field_t; wj.field_V > var4Lifetime1; var4Lifetime1++) {
+          for (var4Lifetime1 = fr.field_t; DraggableWidget.field_V > var4Lifetime1; var4Lifetime1++) {
             d.a(this.field_O[var4Lifetime1], -23109);
             if (this.field_O[var4Lifetime1].field_D < var5) {
               var5 = this.field_O[var4Lifetime1].field_D;
@@ -963,7 +963,7 @@ final class PolarTableScene extends ModelTableScene {
           var5 = -125 / ((-44 - param2) / 56);
           var6 = param0;
           if (var6 == 5) {
-            var6 = ga.a(3, true, ea.field_r);
+            var6 = ga.nextRandomInt(3, true, ea.field_r);
             switch (var6) {
               case 1:
                 kp.a(100, this.field_cb, param3, param1);

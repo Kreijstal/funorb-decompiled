@@ -121,7 +121,7 @@ final class uk implements Iterable {
             var22 = (java.applet.Applet) null;
             uk.a(-48, (java.applet.Applet) null);
           }
-          wk.a(param9, param5, param13, param8, param20, param4, param15, new nm(param11), param3, param17, new nm(param19), param10, param0, param2, param1, param7, 255, param6, new nm(param18), param16, param14);
+          MessageDialogContent.a(param9, param5, param13, param8, param20, param4, param15, new nm(param11), param3, param17, new nm(param19), param10, param0, param2, param1, param7, 255, param6, new nm(param18), param16, param14);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -199,7 +199,7 @@ final class uk implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new hb(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     final static pn a(int param0, byte param1, int param2, int param3) {
@@ -232,7 +232,7 @@ final class uk implements Iterable {
             var5 < ap.field_E) {
             var10_int = f.a(5, var8_ref_pn.field_p);
             if (var8_ref_pn.b(14842) >= var10_int && (var8_ref_pn.field_g ||
-              !ia.a(var8_ref_pn.field_q, 24552))) {
+              !MenuSelection.a(var8_ref_pn.field_q, 24552))) {
               var9 = 1;
             }
           }
@@ -241,16 +241,16 @@ final class uk implements Iterable {
             if (null == var8_ref_pn.field_u ||
               lf.field_c) {
               if (null == var8_ref_pn.field_u) {
-                ib.field_r = ib.field_r + 1;
+                MidiNoteMixer.field_r = MidiNoteMixer.field_r + 1;
               }
               var10 = PacketBuffer.a((byte) -24, var8_ref_pn);
               var11 = var10 + BitmapFont.escapeMarkup(var8_ref_pn.field_f);
               var12 = fn.a(var8_ref_pn, -55);
-              var8_ref_pn.field_u = new vh(0L, kb.field_h, var11);
-              var8_ref_pn.field_u.field_P = -(var12 >> 1 & 8355711) + (var12 + ((16711423 & kb.field_h.field_P) >> 1));
+              var8_ref_pn.field_u = new vh(0L, TickClock.field_h, var11);
+              var8_ref_pn.field_u.field_P = -(var12 >> 1 & 8355711) + (var12 + ((16711423 & TickClock.field_h.field_P) >> 1));
               var8_ref_pn.field_u.field_I = m.field_c;
               var8_ref_pn.field_u.field_N = var12;
-              var8_ref_pn.field_u.field_K = var12 - (var12 >> 1 & 8355711) + ((kb.field_h.field_K & 16711423) >> 1);
+              var8_ref_pn.field_u.field_K = var12 - (var12 >> 1 & 8355711) + ((TickClock.field_h.field_K & 16711423) >> 1);
               var6 = var6 + param2;
             }
           } else {

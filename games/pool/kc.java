@@ -11,7 +11,7 @@ final class kc {
     static int[] field_e;
     static vh field_b;
 
-    final static void a(java.awt.Canvas param0, int param1) {
+    final static void attachInputListeners(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
         java.awt.Canvas var3 = null;
         RuntimeException stackIn_7_0 = null;
@@ -19,12 +19,12 @@ final class kc {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          jc.a(0, (java.awt.Component) ((Object) param0));
+          jc.attachKeyListeners(0, (java.awt.Component) ((Object) param0));
           if (param1 != 2) {
             var3 = (java.awt.Canvas) null;
-            kc.a((java.awt.Canvas) null, -76);
+            kc.attachInputListeners((java.awt.Canvas) null, -76);
           }
-          hi.a((java.awt.Component) ((Object) param0), param1 ^ -14764);
+          hi.attachMouseListeners((java.awt.Component) ((Object) param0), param1 ^ -14764);
           if (null == ClientException.field_a) {
             return;
           }

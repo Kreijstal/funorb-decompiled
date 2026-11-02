@@ -7,7 +7,7 @@ final class of extends vh {
     db field_Mb;
     static hj field_Tb;
     static String playerX2AreGroupName;
-    static wa field_Nb;
+    static ProgressDialog field_Nb;
     static int field_Pb;
     static String ratedGame;
     static int field_Ob;
@@ -168,10 +168,10 @@ final class of extends vh {
         Sprite var9 = null;
         int var5Lifetime1;
         try {
-          if (ne.field_r.c(0)) {
+          if (MatchingTextValidator.field_r.c(0)) {
             return;
           }
-          var9 = ((lk) (ne.field_r.c((byte) 104))).field_n;
+          var9 = ((lk) (MatchingTextValidator.field_r.c((byte) 104))).field_n;
           if (var9 == null) {
             return;
           }
@@ -180,7 +180,7 @@ final class of extends vh {
           param2 = param2 - (var4 >> 1);
           SoftwareRasterizer.setClip(param0, param2, param0 + 230, var4 + param2);
           var5 = 0;
-          var6 = new aa(ne.field_r);
+          var6 = new aa(MatchingTextValidator.field_r);
           if (param1) {
             return;
           }

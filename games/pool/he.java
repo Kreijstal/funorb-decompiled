@@ -7,7 +7,7 @@ final class he {
     static di field_b;
     static String[] plusungoodShot;
 
-    final static void a(java.awt.Canvas param0, int param1) {
+    final static void detachInputListeners(java.awt.Canvas param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -15,7 +15,7 @@ final class he {
         RuntimeException decompiledCaughtException = null;
         try {
           em.a((java.awt.Component) ((Object) param0), (byte) -39);
-          hj.a((java.awt.Component) ((Object) param0), false);
+          hj.detachMouseListeners((java.awt.Component) ((Object) param0), false);
           if (param1 != 0) {
             return;
           }
@@ -46,7 +46,7 @@ final class he {
         int var5Lifetime1;
         if (param3 != 0) {
           var6 = (java.awt.Canvas) null;
-          he.a((java.awt.Canvas) null, -1);
+          he.detachInputListeners((java.awt.Canvas) null, -1);
         }
         if (!param1) {
           if (ah.field_c[param0] < ah.field_c[param2]) {
@@ -55,10 +55,10 @@ final class he {
           if (ah.field_c[param2] < ah.field_c[param0]) {
             return false;
           }
-          if (kb.field_g[param2] > kb.field_g[param0]) {
+          if (TickClock.field_g[param2] > TickClock.field_g[param0]) {
             return true;
           }
-          if (kb.field_g[param2] < kb.field_g[param0]) {
+          if (TickClock.field_g[param2] < TickClock.field_g[param0]) {
             return false;
           }
           var4 = gd.field_d[param0] + (ob.field_y[param0] + om.field_s[param0]);
@@ -71,10 +71,10 @@ final class he {
           }
           return !(param0 >= param2);
         }
-        if (kb.field_g[param2] > kb.field_g[param0]) {
+        if (TickClock.field_g[param2] > TickClock.field_g[param0]) {
           return true;
         }
-        if (kb.field_g[param2] < kb.field_g[param0]) {
+        if (TickClock.field_g[param2] < TickClock.field_g[param0]) {
           return false;
         }
         if (ah.field_c[param2] > ah.field_c[param0]) {
@@ -107,7 +107,7 @@ final class he {
         }
     }
 
-    final static boolean a(char param0, CharSequence param1, int param2) {
+    final static boolean canAppendNameCharacter(char param0, CharSequence param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_23_0 = null;

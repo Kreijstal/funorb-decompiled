@@ -49,7 +49,7 @@ final class fn extends vh {
           return true;
         }
         this.a(true, false);
-        if (ne.field_s != 0) {
+        if (MatchingTextValidator.field_s != 0) {
           if (this.field_R == 0) {
             return true;
           }
@@ -76,7 +76,7 @@ final class fn extends vh {
             return (BinaryBitmapFont) (stackIn_2_0);
           }
           var2 = new BinaryBitmapFont(param1, el.field_I, ih.field_d, pd.field_a, rc.field_f, v.field_b);
-          sh.h(-1);
+          OpacityWidget.h(-1);
           if (param0 < 119) {
             fn.f(-82);
           }
@@ -153,7 +153,7 @@ final class fn extends vh {
     }
 
     final static void b(int param0, int param1) {
-        int var2 = ir.field_h * ir.field_h;
+        int var2 = BufferedFile.field_h * BufferedFile.field_h;
         int var3 = -(param1 * param1) + var2;
         ff.a(-24, SoftwareRasterizer.height - 120 + var3 * 120 / var2);
         if (param0 == 5938) {
@@ -180,9 +180,9 @@ final class fn extends vh {
     }
 
     final static int a(String param0, int param1, String param2, int param3, boolean param4, String param5, int param6) {
-        ke var7 = null;
+        LoginTextValue var7 = null;
         RuntimeException var7_ref = null;
-        ke var8 = null;
+        LoginTextValue var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -196,8 +196,8 @@ final class fn extends vh {
           if (param3 != 50) {
             addXToFriends = (String) null;
           }
-          var7 = new ke(param2);
-          var8 = new ke(param0);
+          var7 = new LoginTextValue(param2);
+          var8 = new LoginTextValue(param0);
           stackIn_3_0 = ih.a(param5, (byte) 87, param1, param4, var7, var8, param6);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

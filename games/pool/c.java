@@ -30,7 +30,7 @@ final class c {
         int[] var16 = null;
         var9 = Pool.field_O;
         try {
-          var3_int = gj.field_S;
+          var3_int = ProgressBarWidget.field_S;
           e.field_a = new vh(0L, (vh) null);
           if (param2 == null) {
             var10 = (Throwable) null;
@@ -41,7 +41,7 @@ final class c {
           stackIn_8_1 = (param1);
           stackIn_7_0.field_i = stackIn_8_1;
           param2.field_k = 0;
-          jp.field_N = new ee(var3_int, param2, param2);
+          DisplayNamePanel.field_N = new ee(var3_int, param2, param2);
           o.field_x = new wh(var3_int, param2, param2, new wp());
           var4 = TranslatedUiText.c(2);
           if (var4 == null) {
@@ -63,7 +63,7 @@ final class c {
             SoftwareRasterizer.drawVerticalLine(var8, var8 + 1, 14 - (var8 << 1), 16777215);
           }
           SoftwareRasterizer.setTarget(var16, var5, var6);
-          w.field_b = hk.a(br.field_J, CushionSegment.field_c, var4, tp.field_i, (byte) 112);
+          w.field_b = NanoTickClock.a(br.field_J, CushionSegment.field_c, var4, tp.field_i, (byte) 112);
           e.field_a.field_T = new IntrusiveDeque();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

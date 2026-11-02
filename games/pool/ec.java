@@ -37,7 +37,7 @@ final class ec implements eb {
           }
           var6 = param4.getParameter("currency");
           if (var6 != null &&
-            ka.a(10, (CharSequence) ((Object) var6))) {
+            AgeValidator.a(10, (CharSequence) ((Object) var6))) {
             qg.field_e = GameApplet.a((byte) 63, (CharSequence) ((Object) var6));
           } else {
             qg.field_e = 2;
@@ -47,7 +47,7 @@ final class ec implements eb {
           }
           ModelTableScene.field_L = param1;
           TableScene.field_k = param0;
-          er.field_X = param5;
+          DialWidget.field_X = param5;
           TikiBallSkin.field_m = new Sprite[param3.length];
           for (var7 = 0; var7 < param3.length; var7++) {
             TikiBallSkin.field_m[var7] = new Sprite(317, 34);

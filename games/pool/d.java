@@ -3,7 +3,7 @@
  */
 final class d {
     static eg field_b;
-    static qq field_d;
+    static MessageDialog field_d;
     static Sprite[] field_a;
     static vh field_e;
     static vh field_c;
@@ -188,11 +188,11 @@ final class d {
               }
               if (var6.field_Ob != null &&
                 var6.field_Ob.field_W) {
-                kk.field_B = var6.field_Sb;
+                CacheEntry.field_B = var6.field_Sb;
               } else {
                 if (var6.field_Pb.field_W &&
                   var11 != 0) {
-                  kk.field_B = var6.field_Zb;
+                  CacheEntry.field_B = var6.field_Zb;
                 }
               }
               if (0 != var6.field_R) {
@@ -201,20 +201,20 @@ final class d {
                 var13_ref_String = tp.muLobbyNameRm;
                 var16.field_n.a(var13_ref_String, 17130, 7);
                 var17 = PlasmaBallSkin.field_m;
-                var13 = lq.field_W;
-                var14 = ua.field_o;
+                var13 = DialogLayer.field_W;
+                var14 = UsernameAvailabilityValidator.field_o;
                 var17.field_n.c(0, 0, var13, 0, var14);
               }
               var5_ref = var6;
               var6 = (eo) (var4.f((byte) -5));
             }
             if (0 != cp.field_c.field_Ob.field_R) {
-              sm.field_C = new aj(cp.field_c.field_Ob.field_sb, cp.field_c.field_Ob.field_ib, cp.field_c.field_Ob.field_gb, cp.field_c.field_Ob.field_Db, qf.enterignoreAdd, wa.field_qb, uo.field_Lb, uo.field_Lb);
-              ne.field_m = 2;
+              sm.field_C = new aj(cp.field_c.field_Ob.field_sb, cp.field_c.field_Ob.field_ib, cp.field_c.field_Ob.field_gb, cp.field_c.field_Ob.field_Db, qf.enterignoreAdd, ProgressDialog.field_qb, uo.field_Lb, uo.field_Lb);
+              MatchingTextValidator.field_m = 2;
             }
             if (cp.field_c.field_Qb.field_R != 0) {
-              sm.field_C = new aj(cp.field_c.field_Qb.field_sb, cp.field_c.field_Qb.field_ib, cp.field_c.field_Qb.field_gb, cp.field_c.field_Qb.field_Db, jj.enterignoreDel, wa.field_qb, uo.field_Lb, uo.field_Lb);
-              ne.field_m = 3;
+              sm.field_C = new aj(cp.field_c.field_Qb.field_sb, cp.field_c.field_Qb.field_ib, cp.field_c.field_Qb.field_gb, cp.field_c.field_Qb.field_Db, jj.enterignoreDel, ProgressDialog.field_qb, uo.field_Lb, uo.field_Lb);
+              MatchingTextValidator.field_m = 3;
             }
           }
           var5 = 46 / ((-55 - param1) / 44);

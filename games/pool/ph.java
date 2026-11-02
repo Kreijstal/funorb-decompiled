@@ -28,10 +28,10 @@ final class ph {
         var3 = Pool.field_O;
         try {
           var1_int = -124 / ((param0 - 38) / 54);
-          wd.field_Ub.a(-120, qr.field_b, true, sm.field_D);
-          wd.field_Ub.h((byte) 126);
-          while (n.h(127)) {
-            wd.field_Ub.a(-81, qi.field_a, ml.field_b);
+          wd.field_Ub.processPointerFrame(-120, qr.field_b, true, sm.field_D);
+          wd.field_Ub.advanceDialogAnimations((byte) 126);
+          while (LabeledChildWidget.h(127)) {
+            wd.field_Ub.dispatchKeyInputOrRequestFocus(-81, qi.field_a, ml.field_b);
           }
           if (jd.field_b != -1) {
             var2 = jd.field_b;
@@ -47,7 +47,7 @@ final class ph {
             stackIn_13_0 = 1;
             return stackIn_13_0;
           }
-          if (!ig.field_j.a(112)) {
+          if (!TextInputValidator.field_j.a(112)) {
             stackIn_16_0 = 1;
             return stackIn_16_0;
           }

@@ -32,16 +32,16 @@ final class hj {
           if (param0 == 1) {
             param0 = 0;
           }
-          fm.field_I = param3;
+          ArrayWidgetGroup.field_I = param3;
           hn.field_b = param0;
           if (param4 != 76) {
             field_f = -23;
           }
           var7 = (CharSequence) ((Object) param3);
-          di.field_a = hq.a(62, var7);
+          di.field_a = TutorialController.normalizeDisplayName(62, var7);
           c.field_d = param2;
           var6 = ld.a((byte) 92, br.field_J, param1, tp.field_i, CushionSegment.field_c);
-          jk.a(111, var6);
+          CueStick.a(111, var6);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -77,7 +77,7 @@ final class hj {
           return;
         }
         java.awt.Component var2 = (java.awt.Component) null;
-        hj.a((java.awt.Component) null, true);
+        hj.detachMouseListeners((java.awt.Component) null, true);
         field_d = (int[][]) null;
         definitionDefinitions = null;
         field_j = null;
@@ -85,7 +85,7 @@ final class hj {
         inviteDeclineXsGame = null;
     }
 
-    final static void a(java.awt.Component param0, boolean param1) {
+    final static void detachMouseListeners(java.awt.Component param0, boolean param1) {
         try {
           param0.removeMouseListener(wp.field_g);
           param0.removeMouseMotionListener(wp.field_g);

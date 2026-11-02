@@ -10,7 +10,7 @@ final class da {
           da.a(false);
         }
         d.field_f.b(0, 2147483647, 0, -(tq.field_p ? 40 + (TranslatedUiText.field_n + 2 + 2) : 0) + c.field_e.field_gb, 18);
-        kj.field_a.b(0, 2147483647, -40 - TranslatedUiText.field_n + c.field_e.field_gb - 2, TranslatedUiText.field_n + 42, 18);
+        CueAim.field_a.b(0, 2147483647, -40 - TranslatedUiText.field_n + c.field_e.field_gb - 2, TranslatedUiText.field_n + 42, 18);
         ci.field_c.a(TranslatedUiText.field_n, -20 + c.field_e.field_Db, (byte) -112, 2, c.field_e.field_gb, 0, 20);
     }
 
@@ -91,7 +91,7 @@ final class da {
             while (var8 > var9) {
               var11 = NetworkGameClient.field_H[var9];
               var6[0][var10] = sa.field_e[var11];
-              var7[0][var10 * 4] = kb.field_g[var11];
+              var7[0][var10 * 4] = TickClock.field_g[var11];
               var7[0][1 + 4 * var10] = ob.field_y[var11];
               var7[0][2 + var10 * 4] = om.field_s[var11];
               var7[0][var10 * 4 + 3] = gd.field_d[var11];
@@ -109,7 +109,7 @@ final class da {
             while (var8 > var9Lifetime1) {
               var11Lifetime1 = NetworkGameClient.field_H[var5 + var9Lifetime1];
               var6[1][var14] = sa.field_e[var11Lifetime1];
-              var7[1][4 * var14] = kb.field_g[var11Lifetime1];
+              var7[1][4 * var14] = TickClock.field_g[var11Lifetime1];
               var7[1][4 * var14 + 1] = ob.field_y[var11Lifetime1];
               var7[1][2 + var14 * 4] = om.field_s[var11Lifetime1];
               var7[1][var14 * 4 + 3] = gd.field_d[var11Lifetime1];
@@ -151,11 +151,11 @@ final class da {
           TranslatedUiText.field_f[11] = IntrusiveDeque.resign;
           TranslatedUiText.field_f[0] = tg.hotseatmultiplayer;
           TranslatedUiText.field_f[9] = IterableNodeHashTable.endgame;
-          TranslatedUiText.field_f[1] = gr.entermultiplayerlobby;
+          TranslatedUiText.field_f[1] = ArchiveRequest.entermultiplayerlobby;
           TranslatedUiText.field_f[48] = un.highscores;
-          TranslatedUiText.field_f[5] = hb.instructions;
+          TranslatedUiText.field_f[5] = NodeHashTableIterator.instructions;
           TranslatedUiText.field_f[23] = NetworkGameClient.loginCreateaccount;
-          TranslatedUiText.field_f[49] = th.field_h ? hb.mouseYAxisInverted : PoolMatchController.mouseYAxisNormal;
+          TranslatedUiText.field_f[49] = th.field_h ? NodeHashTableIterator.mouseYAxisInverted : PoolMatchController.mouseYAxisNormal;
           TranslatedUiText.field_f[38] = s.gameoptlabels[1];
           TranslatedUiText.field_f[59] = wm.textGameName;
           TranslatedUiText.field_f[19] = qd.quit;
@@ -171,9 +171,9 @@ final class da {
           TranslatedUiText.field_f[39] = sa.tutorial;
           TranslatedUiText.field_f[52] = ShotRecord.menuTimeTrialWithGuides;
           TranslatedUiText.field_f[55] = cb.themeNames[1];
-          TranslatedUiText.field_f[65] = ua.startgame;
-          TranslatedUiText.field_f[40] = sl.tutorialOptionBasics;
-          TranslatedUiText.field_f[41] = fd.tutorialOptionEightBall;
+          TranslatedUiText.field_f[65] = UsernameAvailabilityValidator.startgame;
+          TranslatedUiText.field_f[40] = TextInputWidget.tutorialOptionBasics;
+          TranslatedUiText.field_f[41] = StrongCacheEntry.tutorialOptionEightBall;
           TranslatedUiText.field_f[43] = TableScene.timeTrial;
           TranslatedUiText.field_f[26] = ue.next;
           TranslatedUiText.field_f[51] = pl.menuTimeTrialWithoutGuides;
@@ -199,25 +199,25 @@ final class da {
           for (var2Lifetime1 = 0; cb.themeNames.length > var2Lifetime1; var2Lifetime1++) {
             PoolUiText.field_c[2][var2Lifetime1] = cb.themeNames[var2Lifetime1];
           }
-          PoolUiText.field_c[2][cb.themeNames.length] = sn.themeRandom;
-          wj.field_S = new String[22];
+          PoolUiText.field_c[2][cb.themeNames.length] = BirthDateValidator.themeRandom;
+          DraggableWidget.field_S = new String[22];
           ve.field_q[1] = im.rulesetNames;
-          ve.field_q[3] = ke.guideNames;
-          wj.field_S[6] = wa.tooltipExtraVisit;
-          wj.field_S[0] = ll.tutorialPrev;
-          wj.field_S[1] = aj.tutorialNext;
-          wj.field_S[4] = jq.tooltipBallInHand;
-          wj.field_S[3] = ml.tutorialShow;
-          wj.field_S[2] = ln.tutorialHide;
-          wj.field_S[8] = tq.tooltipSnookered;
-          wj.field_S[5] = bo.tooltipBreak;
-          wj.field_S[11] = PolarTableScene.ballsetUsa8Group1;
-          wj.field_S[2] = ln.tutorialHide;
-          wj.field_S[9] = DualLinkNode.targetOpenTable;
-          wj.field_S[12] = oq.targetBlackBall;
-          wj.field_S[10] = me.ballsetUsa8Group0;
+          ve.field_q[3] = LoginTextValue.guideNames;
+          DraggableWidget.field_S[6] = ProgressDialog.tooltipExtraVisit;
+          DraggableWidget.field_S[0] = ll.tutorialPrev;
+          DraggableWidget.field_S[1] = aj.tutorialNext;
+          DraggableWidget.field_S[4] = jq.tooltipBallInHand;
+          DraggableWidget.field_S[3] = ml.tutorialShow;
+          DraggableWidget.field_S[2] = ln.tutorialHide;
+          DraggableWidget.field_S[8] = tq.tooltipSnookered;
+          DraggableWidget.field_S[5] = bo.tooltipBreak;
+          DraggableWidget.field_S[11] = PolarTableScene.ballsetUsa8Group1;
+          DraggableWidget.field_S[2] = ln.tutorialHide;
+          DraggableWidget.field_S[9] = DualLinkNode.targetOpenTable;
+          DraggableWidget.field_S[12] = oq.targetBlackBall;
+          DraggableWidget.field_S[10] = EmailAvailabilityValidator.ballsetUsa8Group0;
           for (var2Lifetime2 = 1; 9 >= var2Lifetime2; var2Lifetime2++) {
-            wj.field_S[var2Lifetime2 + 12] = or.nineBallNumbers[var2Lifetime2];
+            DraggableWidget.field_S[var2Lifetime2 + 12] = or.nineBallNumbers[var2Lifetime2];
           }
           hf.a(Pocket.field_e, hj.definitionDefinitions, (byte) -96);
         } catch (RuntimeException runtimeException) {

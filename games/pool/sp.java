@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sp extends gr {
+final class sp extends ArchiveRequest {
     byte field_L;
     PacketBuffer field_K;
     int field_J;
@@ -20,7 +20,7 @@ final class sp extends gr {
         RuntimeException var2 = null;
         var3 = Pool.field_O;
         try {
-          bb.a(gr.field_z, jh.field_c, 0, q.field_a, param1, (byte) -63, param0);
+          bb.a(ArchiveRequest.field_z, jh.field_c, 0, q.field_a, param1, (byte) -63, param0);
           for (var2_int = 0; var2_int < jh.field_c; var2_int++) {
             NetworkGameClient.field_H[var2_int + param1] = var2_int;
           }
@@ -36,11 +36,11 @@ final class sp extends gr {
         }
     }
 
-    final byte[] b(boolean param0) {
+    final byte[] getBytes(boolean param0) {
         if (param0) {
           return (byte[]) null;
         }
-        if (!this.field_F &&
+        if (!this.pending &&
           this.field_K.position >= this.field_K.payload.length - this.field_L) {
           return this.field_K.payload;
         }
@@ -50,7 +50,7 @@ final class sp extends gr {
     sp() {
     }
 
-    final int e(int param0) {
+    final int getProgress(int param0) {
         if (null == this.field_K) {
           return 0;
         }

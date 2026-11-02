@@ -718,7 +718,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     PacketBuffer(int capacity) {
-        this.payload = ja.a(capacity, -1);
+        this.payload = ja.acquireByteArray(capacity, -1);
         this.position = 0;
     }
 
@@ -789,18 +789,18 @@ class PacketBuffer extends IntrusiveNode {
             if (!param1.field_g) {
               if (param1.field_m == 0 &&
                 param1.field_e == 0) {
-                var3Lifetime1 = nr.a(new String[]{(String) (var2)}, -1, jl.privatequickchatToX);
+                var3Lifetime1 = AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var2)}, -1, jl.privatequickchatToX);
               } else {
-                var3Lifetime1 = nr.a(new String[]{(String) (var2)}, -1, vh.privatequickchatFromX);
+                var3Lifetime1 = AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var2)}, -1, vh.privatequickchatFromX);
               }
             }
           } else {
             if (param1.field_p == 0 &&
               ej.field_l) {
-              var3Lifetime1 = "[" + sn.muChatLobby + "] ";
+              var3Lifetime1 = "[" + BirthDateValidator.muChatLobby + "] ";
             }
             if (param1.field_p == 1) {
-              var3Lifetime1 = "[" + nr.a(new String[]{param1.field_n}, -1, th.xsGame) + "] ";
+              var3Lifetime1 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{param1.field_n}, -1, th.xsGame) + "] ";
             }
             if (param1.field_p == 4 &&
               null != kn.field_g) {

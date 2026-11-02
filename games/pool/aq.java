@@ -35,7 +35,7 @@ final class aq {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < -52) {
-            stackIn_4_0 = hq.a(0, (byte) -112, param1, param1.length);
+            stackIn_4_0 = TutorialController.a(0, (byte) -112, param1, param1.length);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -72,7 +72,7 @@ final class aq {
 
     final static void b(int param0) {
         of.field_Ob = -no.field_q.field_w + SoftwareRasterizer.width >> 1;
-        fm.field_M = -no.field_q.field_A;
+        ArrayWidgetGroup.field_M = -no.field_q.field_A;
         vk.field_H = of.field_Ob + 224;
         KillerBallSkin.b(param0, (byte) -94);
     }

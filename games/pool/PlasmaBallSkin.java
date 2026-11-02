@@ -379,9 +379,9 @@ final class PlasmaBallSkin extends BallSkin {
             regionExit2: {
               if (var19Lifetime2 < hj.field_d[param2].length) {
                 var20Lifetime2 = 2 + (128 * var19Lifetime2 / hj.field_d[param2].length - 64);
-                kp.field_i[param2][var19Lifetime2] = var20Lifetime2 * var15 + var12 * tj.field_ab[param2][var19Lifetime2] + hj.field_d[param2][var19Lifetime2] * var9 >> 16;
-                field_n[param2][var19Lifetime2] = var13 * tj.field_ab[param2][var19Lifetime2] + (var10 * hj.field_d[param2][var19Lifetime2] + var16 * var20Lifetime2) >> 16;
-                var20Lifetime2 = var14 * tj.field_ab[param2][var19Lifetime2] + hj.field_d[param2][var19Lifetime2] * var11 + var20Lifetime2 * var17 >> 16;
+                kp.field_i[param2][var19Lifetime2] = var20Lifetime2 * var15 + var12 * ResizableDialog.field_ab[param2][var19Lifetime2] + hj.field_d[param2][var19Lifetime2] * var9 >> 16;
+                field_n[param2][var19Lifetime2] = var13 * ResizableDialog.field_ab[param2][var19Lifetime2] + (var10 * hj.field_d[param2][var19Lifetime2] + var16 * var20Lifetime2) >> 16;
+                var20Lifetime2 = var14 * ResizableDialog.field_ab[param2][var19Lifetime2] + hj.field_d[param2][var19Lifetime2] * var11 + var20Lifetime2 * var17 >> 16;
                 dupTemp$2 = kp.field_i[param2];
                 dupTemp$2[var19Lifetime2] = dupTemp$2[var19Lifetime2] + var6_int;
                 dupTemp$3 = field_n[param2];
@@ -462,7 +462,7 @@ final class PlasmaBallSkin extends BallSkin {
           var4 = hj.field_d[0].length;
           for (var5 = 0; hj.field_d.length > var5; var5++) {
             dupTemp$2 = ie.field_a[var5];
-            dupTemp$2[1] = dupTemp$2[1] + (-3 + ga.a(5, true, ea.field_r));
+            dupTemp$2[1] = dupTemp$2[1] + (-3 + ga.nextRandomInt(5, true, ea.field_r));
             ie.field_a[var5][hj.field_d[var5].length - 1] = 0;
             if (48 >= ie.field_a[var5][1]) {
               if (ie.field_a[var5][1] < 16) {
@@ -481,11 +481,11 @@ final class PlasmaBallSkin extends BallSkin {
             for (var7 = 0; var7 < hj.field_d.length; var7++) {
               if (var6Lifetime1 > 0) {
                 hj.field_d[var7][var5Lifetime1] = hj.field_d[var7][var5Lifetime1] + hj.field_d[var7][-1 + var5Lifetime1] >> 1;
-                tj.field_ab[var7][var5Lifetime1] = tj.field_ab[var7][var5Lifetime1] + tj.field_ab[var7][var5Lifetime1 - 1] >> 1;
+                ResizableDialog.field_ab[var7][var5Lifetime1] = ResizableDialog.field_ab[var7][var5Lifetime1] + ResizableDialog.field_ab[var7][var5Lifetime1 - 1] >> 1;
                 dupTemp$0 = hj.field_d[var7];
-                dupTemp$0[var5Lifetime1] = dupTemp$0[var5Lifetime1] + (ga.a(5, true, ea.field_r) - 2);
-                dupTemp$1 = tj.field_ab[var7];
-                dupTemp$1[var5Lifetime1] = dupTemp$1[var5Lifetime1] + (ga.a(5, true, ea.field_r) - 2);
+                dupTemp$0[var5Lifetime1] = dupTemp$0[var5Lifetime1] + (ga.nextRandomInt(5, true, ea.field_r) - 2);
+                dupTemp$1 = ResizableDialog.field_ab[var7];
+                dupTemp$1[var5Lifetime1] = dupTemp$1[var5Lifetime1] + (ga.nextRandomInt(5, true, ea.field_r) - 2);
                 if (var6Lifetime1 >= hj.field_d[var7][var5Lifetime1]) {
                   if (-var6Lifetime1 > hj.field_d[var7][var5Lifetime1]) {
                     hj.field_d[var7][var5Lifetime1] = -var6Lifetime1;
@@ -493,12 +493,12 @@ final class PlasmaBallSkin extends BallSkin {
                 } else {
                   hj.field_d[var7][var5Lifetime1] = var6Lifetime1;
                 }
-                if (tj.field_ab[var7][var5Lifetime1] <= var6Lifetime1) {
-                  if (tj.field_ab[var7][var5Lifetime1] < -var6Lifetime1) {
-                    tj.field_ab[var7][var5Lifetime1] = -var6Lifetime1;
+                if (ResizableDialog.field_ab[var7][var5Lifetime1] <= var6Lifetime1) {
+                  if (ResizableDialog.field_ab[var7][var5Lifetime1] < -var6Lifetime1) {
+                    ResizableDialog.field_ab[var7][var5Lifetime1] = -var6Lifetime1;
                   }
                 } else {
-                  tj.field_ab[var7][var5Lifetime1] = var6Lifetime1;
+                  ResizableDialog.field_ab[var7][var5Lifetime1] = var6Lifetime1;
                 }
               }
             }
@@ -539,7 +539,7 @@ final class PlasmaBallSkin extends BallSkin {
         var5 = Pool.field_O;
         try {
           hj.field_d = new int[param1.balls.length][12];
-          tj.field_ab = new int[param1.balls.length][12];
+          ResizableDialog.field_ab = new int[param1.balls.length][12];
           ie.field_a = new int[param1.balls.length][12];
           kp.field_i = new int[hj.field_d.length][hj.field_d[0].length];
           field_n = new int[hj.field_d.length][hj.field_d[0].length];
@@ -554,7 +554,7 @@ final class PlasmaBallSkin extends BallSkin {
               var4 = stackIn_13_0;
               while (var4 < hj.field_d[var3_int].length) {
                 hj.field_d[var3_int][var4] = 0;
-                tj.field_ab[var3_int][var4] = 0;
+                ResizableDialog.field_ab[var3_int][var4] = 0;
                 ie.field_a[var3_int][var4] = 16;
                 var4++;
               }
@@ -600,7 +600,7 @@ final class PlasmaBallSkin extends BallSkin {
           if (param0 != 1) {
             throw new IllegalStateException("Invalid group number");
           }
-          stackIn_12_0 = oe.ballsetPlasmaGroup1Nocolour;
+          stackIn_12_0 = FadingDialog.ballsetPlasmaGroup1Nocolour;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -676,10 +676,10 @@ final class PlasmaBallSkin extends BallSkin {
             if (var3_int != -2) {
               if (var3_int != -1) {
                 var4 = fc.field_b.g(-10459) ? 1 : 0;
-                lc.a(var4 != 0, fc.field_b.h(1), var3_int, param1, fc.field_b.field_Lb, -121);
+                ValidationIconWidget.a(var4 != 0, fc.field_b.h(1), var3_int, param1, fc.field_b.field_Lb, -121);
               }
               fc.field_b = null;
-              wa.m(8421504);
+              ProgressDialog.m(8421504);
             }
           }
           return;
@@ -1017,7 +1017,7 @@ final class PlasmaBallSkin extends BallSkin {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = kk.ballsetPlasmaGroup0;
+            stackIn_4_0 = CacheEntry.ballsetPlasmaGroup0;
             return stackIn_4_0;
           }
           if (param0 <= 9) {

@@ -99,7 +99,7 @@ final class ii {
         }
     }
 
-    final static long a(byte[] param0, int param1, int param2, int param3) {
+    final static long crc64(byte[] param0, int param1, int param2, int param3) {
         int var6 = 0;
         long var4_long = 0L;
         RuntimeException var4 = null;
@@ -112,11 +112,11 @@ final class ii {
         try {
           var4_long = -1L;
           for (var6 = param2; var6 < param1; var6++) {
-            var4_long = var4_long >>> 8 ^ hb.field_f[(int)(((long)param0[var6] ^ var4_long) & 255L)];
+            var4_long = var4_long >>> 8 ^ NodeHashTableIterator.field_f[(int)(((long)param0[var6] ^ var4_long) & 255L)];
           }
           if (param3 != 154302664) {
             var7 = (byte[]) null;
-            ii.a((byte[]) null, -86, 117, -25);
+            ii.crc64((byte[]) null, -86, 117, -25);
           }
           var4_long = ~var4_long;
           stackIn_6_0 = var4_long;
@@ -153,36 +153,36 @@ final class ii {
               !sm.field_C.field_nb.equals("")) {
               if (sm.field_C.field_nb.charAt(0) != 91) {
                 var7 = (CharSequence) ((Object) sm.field_C.field_nb);
-                var4 = hq.a(85, var7);
+                var4 = TutorialController.normalizeDisplayName(85, var7);
               } else {
                 var4 = sm.field_C.field_nb;
               }
               var5 = null;
-              if (ne.field_m == 0) {
-                var5 = va.a(var4, param1, 51);
+              if (MatchingTextValidator.field_m == 0) {
+                var5 = MultiHandleSliderWidget.a(var4, param1, 51);
               }
-              if (ne.field_m == 1) {
+              if (MatchingTextValidator.field_m == 1) {
                 var5 = HalloweenBallSkin.a((byte) 83, var4, param1);
               }
-              if (ne.field_m == 2) {
+              if (MatchingTextValidator.field_m == 2) {
                 var5 = jd.a(param1, var4, param0 ^ -31666);
               }
-              if (ne.field_m == 3) {
+              if (MatchingTextValidator.field_m == 3) {
                 var5 = ae.a(-3266, var4, var4, param1);
               }
               if (var5 == null) {
-                ne.field_m = -1;
+                MatchingTextValidator.field_m = -1;
                 sm.field_C = null;
               } else {
                 var6 = (String) null;
                 jh.a(0, (String) (var5), (String) null, 2, var4, true);
-                ne.field_m = -1;
+                MatchingTextValidator.field_m = -1;
                 sm.field_C = null;
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              ne.field_m = -1;
+              MatchingTextValidator.field_m = -1;
               sm.field_C = null;
             }
           }

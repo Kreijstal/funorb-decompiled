@@ -30,8 +30,8 @@ final class be extends ob {
             var2 = var6;
             if (nl.field_c != null) {
               try {
-                nl.field_c.a(0, 0L);
-                nl.field_c.a(param1 + 114, var6);
+                nl.field_c.seek(0, 0L);
+                nl.field_c.readFully(param1 + 114, var6);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (var2[var3_int] == 0) {
                     continue;

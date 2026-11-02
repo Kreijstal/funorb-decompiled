@@ -13,10 +13,10 @@ final class gf {
     final static void a(int param0, String[] param1) {
         try {
           if (lh.field_c != null) {
-            lh.field_c.field_P.a(false, param1);
+            lh.field_c.suggestionsPanel.setSuggestions(false, param1);
           }
           if (null != tg.field_a) {
-            tg.field_a.field_S.a(false, param1);
+            tg.field_a.suggestionsPanel.setSuggestions(false, param1);
           }
           int var2_int = 25 % ((param0 + 8) / 53);
         } catch (RuntimeException runtimeException) {
@@ -80,7 +80,7 @@ final class gf {
           }
           var3 = 53 / ((-16 - param0) / 62);
           var6 = (CharSequence) ((Object) param1);
-          var2 = hq.a(83, var6);
+          var2 = TutorialController.normalizeDisplayName(83, var6);
           if (var2 == null) {
             stackIn_9_0 = null;
             return (eo) (stackIn_9_0);
@@ -88,7 +88,7 @@ final class gf {
           var4 = (eo) (df.field_b.a((long)var2.hashCode(), false));
           while (var4 != null) {
             var7 = (CharSequence) ((Object) var4.field_Zb);
-            var5 = hq.a(84, var7);
+            var5 = TutorialController.normalizeDisplayName(84, var7);
             if (var5.equals(var2)) {
               stackIn_16_0 = var4;
               return stackIn_16_0;

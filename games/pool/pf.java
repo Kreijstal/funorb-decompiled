@@ -162,12 +162,12 @@ final class pf {
         try {
           if (param0 ||
             em.field_L == null) {
-            nr.field_bb = false;
+            AccountWelcomePanel.field_bb = false;
           }
           var2_int = 110 % ((74 - param1) / 32);
           if (param0) {
-            if (hb.field_a > 0) {
-              hb.field_a = hb.field_a - 1;
+            if (NodeHashTableIterator.field_a > 0) {
+              NodeHashTableIterator.field_a = NodeHashTableIterator.field_a - 1;
               return;
             }
             if (PoolMatchController.field_z > 0) {
@@ -181,15 +181,15 @@ final class pf {
             return;
           }
           if (em.field_L != null) {
-            if (hb.field_a > 0) {
-              hb.field_a = hb.field_a - 1;
+            if (NodeHashTableIterator.field_a > 0) {
+              NodeHashTableIterator.field_a = NodeHashTableIterator.field_a - 1;
               return;
             }
             if (PoolMatchController.field_z > 0) {
               PoolMatchController.field_z = PoolMatchController.field_z - 1;
               return;
             }
-            if (ir.field_h > nj.field_b) {
+            if (BufferedFile.field_h > nj.field_b) {
               if (nj.field_b == 0) {
                 db.a(27194, false);
               }
@@ -198,7 +198,7 @@ final class pf {
             }
           } else {
             if (tp.field_e == null) {
-              nr.field_bb = false;
+              AccountWelcomePanel.field_bb = false;
               if (0 < PoolMatchController.field_z) {
                 PoolMatchController.field_z = PoolMatchController.field_z - 1;
                 return;
@@ -207,24 +207,24 @@ final class pf {
                 nj.field_b = nj.field_b - 1;
                 return;
               }
-              if (hb.field_a >= ir.field_h) {
+              if (NodeHashTableIterator.field_a >= BufferedFile.field_h) {
                 return;
               }
-              if (hb.field_a == 0) {
+              if (NodeHashTableIterator.field_a == 0) {
                 cn.a(-128);
               }
-              hb.field_a = hb.field_a + 1;
+              NodeHashTableIterator.field_a = NodeHashTableIterator.field_a + 1;
               return;
             }
-            if (hb.field_a > 0) {
-              hb.field_a = hb.field_a - 1;
+            if (NodeHashTableIterator.field_a > 0) {
+              NodeHashTableIterator.field_a = NodeHashTableIterator.field_a - 1;
               return;
             }
             if (nj.field_b > 0) {
               nj.field_b = nj.field_b - 1;
               return;
             }
-            if (PoolMatchController.field_z < ir.field_h) {
+            if (PoolMatchController.field_z < BufferedFile.field_h) {
               if (PoolMatchController.field_z == 0) {
                 db.a(27194, true);
               }
@@ -255,7 +255,7 @@ final class pf {
         }
     }
 
-    final void a(lg param0, int param1, pf param2, int param3, ei param4, int param5) {
+    final void a(lg param0, int param1, pf param2, int param3, UiWidget param4, int param5) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -500,7 +500,7 @@ final class pf {
         this.field_l = -2;
     }
 
-    final void a(int param0, int param1, ei param2, lg param3, int param4) {
+    final void a(int param0, int param1, UiWidget param2, lg param3, int param4) {
         BitmapFont stackIn_25_0 = null;
         String stackIn_25_1 = null;
         int stackIn_26_2 = 0;
@@ -536,21 +536,21 @@ final class pf {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          nj.a(this.field_j, (byte) -112, param2.field_l, param1 + param2.field_C, param0 + param2.field_D, param2.field_y);
+          nj.a(this.field_j, (byte) -112, param2.widgetWidth, param1 + param2.widgetX, param0 + param2.widgetY, param2.widgetHeight);
           if (null != this.field_b) {
-            var6_int = param2.field_C + param1 + this.field_g;
+            var6_int = param2.widgetX + param1 + this.field_g;
             if (param3.field_m == 1) {
-              var6_int = var6_int + (param2.field_l - this.field_b.field_w) / 2;
+              var6_int = var6_int + (param2.widgetWidth - this.field_b.field_w) / 2;
             }
-            var7 = param0 + (param2.field_D + this.field_f);
+            var7 = param0 + (param2.widgetY + this.field_f);
             if (param3.field_p == 1) {
-              var7 = var7 + (param2.field_y - this.field_b.field_y) / 2;
+              var7 = var7 + (param2.widgetHeight - this.field_b.field_y) / 2;
             }
             if (2 == param3.field_m) {
-              var6_int = var6_int + (param2.field_l - this.field_b.field_w);
+              var6_int = var6_int + (param2.widgetWidth - this.field_b.field_w);
             }
             if (2 == param3.field_p) {
-              var7 = var7 + (-this.field_b.field_y + param2.field_y);
+              var7 = var7 + (-this.field_b.field_y + param2.widgetHeight);
             }
             this.field_b.c(var6_int, var7);
           }
@@ -572,8 +572,8 @@ final class pf {
             }
             stackIn_29_0 = stackIn_25_0;
             stackIn_29_1 = stackIn_25_1;
-            stackIn_29_2 = stackIn_26_2 + param3.field_i + (param2.field_C + param1);
-            stackIn_29_3 = param3.field_f + param2.field_D + param0;
+            stackIn_29_2 = stackIn_26_2 + param3.field_i + (param2.widgetX + param1);
+            stackIn_29_3 = param3.field_f + param2.widgetY + param0;
             if (-2147483648 != this.field_f) {
               stackIn_30_0 = stackIn_29_0;
               stackIn_30_1 = stackIn_29_1;
@@ -587,8 +587,8 @@ final class pf {
             stackIn_33_1 = stackIn_30_1;
             stackIn_33_2 = stackIn_29_2;
             stackIn_33_3 = stackIn_29_3 + stackIn_30_4;
-            stackIn_33_4 = -param3.field_i + (param2.field_l - param3.field_g);
-            stackIn_33_5 = -param3.field_j + param2.field_y - param3.field_f;
+            stackIn_33_4 = -param3.field_i + (param2.widgetWidth - param3.field_g);
+            stackIn_33_5 = -param3.field_j + param2.widgetHeight - param3.field_f;
             stackIn_33_6 = this.field_l;
             stackIn_33_7 = this.field_h;
             if (this.field_d != -2147483648) {

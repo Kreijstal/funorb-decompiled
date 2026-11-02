@@ -15,7 +15,7 @@ final class wb {
           if (param0) {
             wb.a((byte) 31);
           }
-          gg.a(param1, (byte) -85);
+          DebouncedValidationProvider.a(param1, (byte) -85);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "wb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

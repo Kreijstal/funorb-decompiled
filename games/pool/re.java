@@ -36,7 +36,7 @@ abstract class re {
           try {
             try {
               var3 = (String) (mo.a((byte) 126, "getcookies", param2));
-              var4 = jc.a(param0 ^ -9075, var3, ';');
+              var4 = jc.splitString(param0 ^ -9075, var3, ';');
               if (param0 != -21721) {
                 re.a(38);
               }
@@ -148,7 +148,7 @@ abstract class re {
               return;
             }
             for (var2Lifetime1 = 0; 10 > var2Lifetime1; var2Lifetime1++) {
-              if (var2Lifetime1 < ok.field_pb.length) {
+              if (var2Lifetime1 < ContentTransitionDialog.field_pb.length) {
                 stackIn_16_0 = 160 + 32 * var2Lifetime1;
                 stackIn_16_1 = 60;
                 stackIn_16_2 = 30;
@@ -165,7 +165,7 @@ abstract class re {
               break;
             }
             for (var2Lifetime2 = 10; var2Lifetime2 < 20; var2Lifetime2++) {
-              if (var2Lifetime2 < ok.field_pb.length) {
+              if (var2Lifetime2 < ContentTransitionDialog.field_pb.length) {
                 stackIn_23_0 = -320 + 32 * var2Lifetime2 + 160;
                 stackIn_23_1 = 70;
                 stackIn_23_2 = 30;
@@ -182,7 +182,7 @@ abstract class re {
               break;
             }
             for (var2Lifetime3 = 20; var2Lifetime3 < 30; var2Lifetime3++) {
-              if (var2Lifetime3 < ok.field_pb.length) {
+              if (var2Lifetime3 < ContentTransitionDialog.field_pb.length) {
                 stackIn_30_0 = 32 * var2Lifetime3 - 640 + 160;
                 stackIn_30_1 = 80;
                 stackIn_30_2 = 30;
@@ -199,7 +199,7 @@ abstract class re {
               break;
             }
             for (var2Lifetime4 = 30; var2Lifetime4 < 40; var2Lifetime4++) {
-              if (ok.field_pb.length <= var2Lifetime4) {
+              if (ContentTransitionDialog.field_pb.length <= var2Lifetime4) {
                 break;
               }
               stackIn_37_0 = (-30 + var2Lifetime4) * 32 + 160;
@@ -241,7 +241,7 @@ abstract class re {
           DualLinkDeque.field_c = false;
           NetworkGameClient.field_z = false;
           if (null != d.field_d &&
-            d.field_d.field_R) {
+            d.field_d.dialogOpen) {
             if (8 == param2) {
               if (ro.field_e) {
                 param1 = ng.invalidpass;
@@ -249,7 +249,7 @@ abstract class re {
                 param1 = eh.invaliduserorpass;
               }
               param2 = 2;
-              vj.field_j.a(8, SpriteState.field_x);
+              vj.field_j.prefillUsername(8, SpriteState.field_x);
             }
             var3_int = 1;
             if (param2 == 10) {
@@ -258,19 +258,19 @@ abstract class re {
             }
             if (var3_int != 0) {
               if (DualLinkDeque.field_c) {
-                param1 = nr.a(new String[]{param1}, -1, lq.connectionlostWithreason);
+                param1 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1}, -1, DialogLayer.connectionlostWithreason);
               }
               if (PolarBallSkin.field_q) {
-                param1 = ir.pleasetryagain;
+                param1 = BufferedFile.pleasetryagain;
               }
-              d.field_d.a(param1, param2, -257);
+              d.field_d.installErrorContent(param1, param2, -257);
             }
             if (param2 != 256 &&
               param2 != 10) {
               if (ro.field_e) {
                 return;
               }
-              vj.field_j.g((byte) -108);
+              vj.field_j.clearInputs((byte) -108);
             }
           }
           return;

@@ -142,23 +142,23 @@ final class ef {
           String var2 = (String) null;
           ef.a(20, (Sprite) null, (String) null);
         }
-        cm.field_L[6] = eq.rule00;
+        cm.field_L[6] = DateInputWidget.rule00;
         cm.field_L[21] = il.rule21;
-        cm.field_L[7] = ri.rule03;
+        cm.field_L[7] = CheckboxWidget.rule03;
         cm.field_L[13] = nm.rule20;
         cm.field_L[16] = MouseHandler.rule10;
-        cm.field_L[19] = sd.rule13;
+        cm.field_L[19] = Under13NoticePanel.rule13;
         cm.field_L[5] = o.rule02;
-        cm.field_L[17] = hk.rule11;
+        cm.field_L[17] = NanoTickClock.rule11;
     }
 
     final static void a(int param0, Sprite param1, String param2) {
         try {
-          nr.field_N = param2;
+          AccountWelcomePanel.field_N = param2;
           if (param0 != -2107) {
             ef.a(3, 47, -112);
           }
-          wa.field_gb = param1;
+          ProgressDialog.field_gb = param1;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ef.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

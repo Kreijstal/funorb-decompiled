@@ -93,7 +93,7 @@ final class qp extends vh {
           return false;
         }
         if (param3 >= 1 &&
-          hq.a(param2, param1, 1) >= param3) {
+          TutorialController.a(param2, param1, 1) >= param3) {
           if (param0 <= 103) {
             playerYouX2AreOfferingDraw = (String) null;
           }
@@ -117,7 +117,7 @@ final class qp extends vh {
         if (this.field_Qb == null &&
           im.field_Ub == this &&
           var4 != 0) {
-          lq.i(15975);
+          DialogLayer.i(15975);
           return true;
         }
         int var5 = ml.field_b;
@@ -207,13 +207,13 @@ final class qp extends vh {
                 om.a(1, var6, param2, (byte) -89);
               }
               var7 = (String) null;
-              ub.a((byte) 117, (String) null, param3, fm.field_I, hn.field_b, var5);
-              uq.a(var5, fm.field_I, hn.field_b, (byte) -76, c.field_d);
-              lq.i(15975);
+              ub.a((byte) 117, (String) null, param3, ArrayWidgetGroup.field_I, hn.field_b, var5);
+              uq.a(var5, ArrayWidgetGroup.field_I, hn.field_b, (byte) -76, c.field_d);
+              DialogLayer.i(15975);
               cp.a(false);
             } else {
               ClassicBallSkin.j(1);
-              lq.i(15975);
+              DialogLayer.i(15975);
             }
           }
         } else {

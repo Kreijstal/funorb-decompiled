@@ -23,15 +23,15 @@ final class FreePlayRules extends GameRules {
           kh.field_Vb.field_gb = 320;
           kh.field_Vb.field_V = kh.field_Vb.field_F[3].field_z;
           var1 = kh.field_Vb.field_I.measureWrappedHeight(kh.field_Vb.field_nb, -kh.field_Vb.field_F[3].field_z + (kh.field_Vb.field_gb - kh.field_Vb.field_F[5].field_z), 2 + kh.field_Vb.field_I.baselineHeight);
-          hk.field_t.field_gb = hk.field_t.field_I.b(hk.field_t.field_nb) + hk.field_t.field_F[3].field_z + hk.field_t.field_F[5].field_z;
-          hk.field_t.field_qb = kh.field_Vb.field_F[3].field_z;
-          hk.field_t.field_Db = 20;
-          hk.field_t.field_eb = var1 + kh.field_Vb.field_F[1].field_A + 3;
+          NanoTickClock.field_t.field_gb = NanoTickClock.field_t.field_I.b(NanoTickClock.field_t.field_nb) + NanoTickClock.field_t.field_F[3].field_z + NanoTickClock.field_t.field_F[5].field_z;
+          NanoTickClock.field_t.field_qb = kh.field_Vb.field_F[3].field_z;
+          NanoTickClock.field_t.field_Db = 20;
+          NanoTickClock.field_t.field_eb = var1 + kh.field_Vb.field_F[1].field_A + 3;
           rl.field_b.field_gb = rl.field_b.field_I.b(rl.field_b.field_nb) - (-rl.field_b.field_F[3].field_z - rl.field_b.field_F[5].field_z);
-          rl.field_b.field_Db = hk.field_t.field_Db;
+          rl.field_b.field_Db = NanoTickClock.field_t.field_Db;
           rl.field_b.field_eb = 3 + var1 + kh.field_Vb.field_F[1].field_A;
           rl.field_b.field_qb = -kh.field_Vb.field_F[5].field_z + (kh.field_Vb.field_gb - rl.field_b.field_gb);
-          kh.field_Vb.field_Db = 3 + var1 + (kh.field_Vb.field_F[1].field_A + (hk.field_t.field_Db + kh.field_Vb.field_F[7].field_A));
+          kh.field_Vb.field_Db = 3 + var1 + (kh.field_Vb.field_F[1].field_A + (NanoTickClock.field_t.field_Db + kh.field_Vb.field_F[7].field_A));
           return;
         }
     }

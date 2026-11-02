@@ -35,7 +35,7 @@ final class qa extends IntrusiveNode {
         Ball[] var4Lifetime1;
         int var5Lifetime1;
         try {
-          hb.field_s = -1;
+          NodeHashTableIterator.field_s = -1;
           td.field_b = 0;
           or.field_l = 0;
           var6 = param2;
@@ -45,7 +45,7 @@ final class qa extends IntrusiveNode {
           }
           var4_int = 0;
           do {
-            dupTemp$1 = oe.a(param1, var4_int, param2, param0, param3 + 0);
+            dupTemp$1 = FadingDialog.detectAndApplyBallCollisions(param1, var4_int, param2, param0, param3 + 0);
             var4_int = dupTemp$1;
           } while (dupTemp$1 != -1);
           var7 = param2;
@@ -100,7 +100,7 @@ final class qa extends IntrusiveNode {
         try {
           SpriteState.field_x = param1;
           qg.field_a = param3;
-          wf.a(param0, gg.loggingIn, -126);
+          wf.a(param0, DebouncedValidationProvider.loggingIn, -126);
           int var4_int = -110 % ((param2 + 30) / 57);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "qa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

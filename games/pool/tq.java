@@ -41,7 +41,7 @@ final class tq extends IntrusiveNode {
         }
         var3.e();
         SoftwareRasterizer.fillRectangleAlpha(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, param0, param1);
-        sh.field_P.b(15100);
+        OpacityWidget.field_P.bindAsRenderTarget(15100);
         return var3.field_D;
     }
 
@@ -97,12 +97,12 @@ final class tq extends IntrusiveNode {
         CharSequence var5 = null;
         try {
           hn.field_b = 2;
-          fm.field_I = param2;
+          ArrayWidgetGroup.field_I = param2;
           if (param1 != -104) {
             tooltipSnookered = (String) null;
           }
           var5 = (CharSequence) ((Object) param2);
-          di.field_a = hq.a(117, var5);
+          di.field_a = TutorialController.normalizeDisplayName(117, var5);
           c.field_d = param0;
           jq.a((byte) 11);
         } catch (RuntimeException runtimeException) {
@@ -111,15 +111,15 @@ final class tq extends IntrusiveNode {
     }
 
     final static void d(byte param0) {
-        if (null == ne.field_u) {
+        if (null == MatchingTextValidator.field_u) {
           return;
         }
-        he.a(ne.field_u, 0);
+        he.detachInputListeners(MatchingTextValidator.field_u, 0);
         if (param0 > -100) {
           return;
         }
-        ne.field_u.a(lg.field_s, -1);
-        ne.field_u = null;
+        MatchingTextValidator.field_u.a(lg.field_s, -1);
+        MatchingTextValidator.field_u = null;
         if (null != PlasmaTableScene.field_gb) {
           PlasmaTableScene.field_gb.d(22472);
         }
@@ -143,7 +143,7 @@ final class tq extends IntrusiveNode {
             ratedMembersonly = (String) null;
           }
           for (var4 = 0; var4 < var5.length; var4++) {
-            var5[var4] = ud.a(param2[var4], param0, 1);
+            var5[var4] = SingleChildWidget.a(param2[var4], param0, 1);
           }
           stackIn_6_0 = var5;
           return stackIn_6_0;

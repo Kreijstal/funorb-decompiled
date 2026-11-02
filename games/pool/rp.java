@@ -37,7 +37,7 @@ final class rp {
           }
           cf.field_k = param0.field_T;
           jq.field_c = param1.field_T;
-          lq.l(-65);
+          DialogLayer.l(-65);
           int var3_int = 107 / ((param2 - 50) / 36);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "rp.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

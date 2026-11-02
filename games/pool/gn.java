@@ -43,9 +43,9 @@ final class gn {
     final static void a(int param0, int param1, boolean param2) {
         if (wg.field_Nb == null) {
           wg.field_Nb = new int[param0 * 2];
-          if (kb.field_g == null ||
-            !(param0 <= kb.field_g.length)) {
-            kb.field_g = new int[param0 * 2];
+          if (TickClock.field_g == null ||
+            !(param0 <= TickClock.field_g.length)) {
+            TickClock.field_g = new int[param0 * 2];
           }
           if (null == ob.field_y ||
             !(ob.field_y.length >= param0)) {
@@ -79,7 +79,7 @@ final class gn {
               q.field_a = -2147483648;
               jl.field_c = -2147483648;
               jh.field_c = 0;
-              gr.field_z = 2147483647;
+              ArchiveRequest.field_z = 2147483647;
               return;
             }
           }
@@ -132,9 +132,9 @@ final class gn {
           }
         } else {
           if (param0 <= wg.field_Nb.length) {
-            if (kb.field_g == null ||
-              !(param0 <= kb.field_g.length)) {
-              kb.field_g = new int[param0 * 2];
+            if (TickClock.field_g == null ||
+              !(param0 <= TickClock.field_g.length)) {
+              TickClock.field_g = new int[param0 * 2];
             }
             if (null == ob.field_y ||
               !(ob.field_y.length >= param0)) {
@@ -168,7 +168,7 @@ final class gn {
                 q.field_a = -2147483648;
                 jl.field_c = -2147483648;
                 jh.field_c = 0;
-                gr.field_z = 2147483647;
+                ArchiveRequest.field_z = 2147483647;
                 return;
               }
             }
@@ -221,9 +221,9 @@ final class gn {
             }
           } else {
             wg.field_Nb = new int[param0 * 2];
-            if (kb.field_g == null ||
-              !(param0 <= kb.field_g.length)) {
-              kb.field_g = new int[param0 * 2];
+            if (TickClock.field_g == null ||
+              !(param0 <= TickClock.field_g.length)) {
+              TickClock.field_g = new int[param0 * 2];
             }
             if (null == ob.field_y ||
               !(ob.field_y.length >= param0)) {
@@ -257,7 +257,7 @@ final class gn {
                 q.field_a = -2147483648;
                 jl.field_c = -2147483648;
                 jh.field_c = 0;
-                gr.field_z = 2147483647;
+                ArchiveRequest.field_z = 2147483647;
                 return;
               }
             }
@@ -316,7 +316,7 @@ final class gn {
         q.field_a = -2147483648;
         jl.field_c = -2147483648;
         jh.field_c = 0;
-        gr.field_z = 2147483647;
+        ArchiveRequest.field_z = 2147483647;
     }
 
     final static eg a(eg param0, int param1) {
@@ -338,7 +338,7 @@ final class gn {
             stackIn_6_0 = (eg) null;
             return stackIn_6_0;
           }
-          jf.a(param0, (byte) 38);
+          ImageProducerRasterBuffer.a(param0, (byte) 38);
           param0.a();
           stackIn_8_0 = (eg) (param0);
           return stackIn_8_0;

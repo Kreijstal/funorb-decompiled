@@ -50,7 +50,7 @@ final class e {
         int var8Lifetime1;
         var10 = Pool.field_O;
         try {
-          var1_int = uh.field_n;
+          var1_int = PasswordValidator.field_n;
           var2 = 0;
           if (2 == ClientException.field_h) {
             var3_long = -ap.field_y + rl.a((byte) -112);
@@ -68,34 +68,34 @@ final class e {
             if (var4 < 0) {
               var5 = BallSkin.field_f;
             } else {
-              if (var4 != n.field_W.field_h) {
+              if (var4 != LabeledChildWidget.field_W.selectedIndex) {
                 var5 = vn.field_c;
               } else {
-                var5 = ch.field_H;
+                var5 = WidgetContainer.field_H;
               }
             }
             var6 = dq.field_j[var3];
             if (ClientException.field_h == 2 &&
               var2 == 1) {
-              if (va.field_W.length <= hk.field_n.length) {
-                stackIn_18_0 = hk.field_n.length;
+              if (MultiHandleSliderWidget.field_W.length <= NanoTickClock.field_n.length) {
+                stackIn_18_0 = NanoTickClock.field_n.length;
               } else {
-                stackIn_18_0 = va.field_W.length;
+                stackIn_18_0 = MultiHandleSliderWidget.field_W.length;
               }
               var7 = stackIn_18_0;
               if (6 <= var3 &&
                 var3 < 6 + var7) {
-                if (-var7 + (hk.field_n.length - 6) + var3 < 0) {
+                if (-var7 + (NanoTickClock.field_n.length - 6) + var3 < 0) {
                   stackIn_24_0 = "";
                 } else {
-                  stackIn_24_0 = hk.field_n[var3 - (6 - hk.field_n.length + var7)];
+                  stackIn_24_0 = NanoTickClock.field_n[var3 - (6 - NanoTickClock.field_n.length + var7)];
                 }
                 var6 = stackIn_24_0;
               }
-              if (rq.field_H.length >= fo.field_a.length) {
+              if (rq.field_H.length >= KeyHandler.field_a.length) {
                 stackIn_28_0 = rq.field_H.length;
               } else {
-                stackIn_28_0 = fo.field_a.length;
+                stackIn_28_0 = KeyHandler.field_a.length;
               }
               var8 = stackIn_28_0;
               if (var7 + 7 <= var3 &&
@@ -113,18 +113,18 @@ final class e {
             }
             stackIn_38_0 = var6;
             stackIn_39_1 = !(var4 < 0);
-            var7Lifetime1 = ch.a(stackIn_38_0, stackIn_39_1, false);
+            var7Lifetime1 = WidgetContainer.a(stackIn_38_0, stackIn_39_1, false);
             var8Lifetime1 = -(var7Lifetime1 >> 1) + nn.field_c;
             if (var4 >= 0) {
               var1_int = var1_int + qi.field_e;
-              if (var4 != n.field_W.field_h) {
+              if (var4 != LabeledChildWidget.field_W.selectedIndex) {
                 stackIn_44_0 = bk.field_m;
               } else {
                 stackIn_44_0 = td.field_e;
               }
               var9 = stackIn_44_0;
               if (var9 != null) {
-                var9.a(var7Lifetime1 + (rm.field_b << 1), var1_int, -6316, var8Lifetime1 - rm.field_b, (NineBallRules.field_h << 1) + ch.field_I);
+                var9.a(var7Lifetime1 + (rm.field_b << 1), var1_int, -6316, var8Lifetime1 - rm.field_b, (NineBallRules.field_h << 1) + WidgetContainer.field_I);
               }
               var1_int = var1_int + NineBallRules.field_h;
             }
@@ -132,8 +132,8 @@ final class e {
               dq.field_f.d(var6, var8Lifetime1, ModelTableScene.field_K + var1_int, var5, -1);
               var1_int = var1_int + ShotRecord.field_y;
             } else {
-              gj.field_R.d(var6, var8Lifetime1, var1_int + mm.field_b, var5, -1);
-              var1_int = var1_int + (ch.field_I + qi.field_e + NineBallRules.field_h);
+              ProgressBarWidget.field_R.d(var6, var8Lifetime1, var1_int + mm.field_b, var5, -1);
+              var1_int = var1_int + (WidgetContainer.field_I + qi.field_e + NineBallRules.field_h);
             }
             var3++;
           }
@@ -156,14 +156,14 @@ final class e {
           if (oh.field_h) {
             var2 = param1.field_I.currentShot(60);
             kh.field_Vb.a(true, false);
-            if (hk.field_t.field_R == 1) {
+            if (NanoTickClock.field_t.field_R == 1) {
               var2.a(ag.field_a, true);
               oh.field_h = false;
               tn.a(param1, -16813);
               return true;
             }
             if (rl.field_b.field_R == 1) {
-              var2.a(me.field_n, true);
+              var2.a(EmailAvailabilityValidator.field_n, true);
               oh.field_h = false;
               tn.a(param1, -16813);
               return true;

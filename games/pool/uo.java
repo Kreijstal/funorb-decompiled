@@ -124,7 +124,7 @@ final class uo extends vh {
             for (var7 = 0; var7 < var6; var7++) {
               var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(true);
             }
-            var11 = (tq) (hb.field_j.c((byte) 77));
+            var11 = (tq) (NodeHashTableIterator.field_j.c((byte) 77));
             if (var11 == null) {
               dn.c(-107);
               return;
@@ -143,7 +143,7 @@ final class uo extends vh {
             var12.unlink((byte) -117);
           } else {
             if (2 == var2) {
-              var14 = (tq) (hb.field_j.c((byte) -112));
+              var14 = (tq) (NodeHashTableIterator.field_j.c((byte) -112));
               if (var14 == null) {
                 dn.c(-81);
                 return;
@@ -228,10 +228,10 @@ final class uo extends vh {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         try {
-          if (ne.field_r.c(0)) {
+          if (MatchingTextValidator.field_r.c(0)) {
             return;
           }
-          var1 = new aa(ne.field_r);
+          var1 = new aa(MatchingTextValidator.field_r);
           var2 = (lk) (var1.b((byte) -92));
           if (var2.field_v) {
             var2.field_q = 16;

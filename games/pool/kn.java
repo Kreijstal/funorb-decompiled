@@ -42,7 +42,7 @@ final class kn {
             if (di.field_e == 0) {
               this.field_n.a(FreePlayRules.muChatPmFriendsOnly, 17130, 12);
             }
-            this.field_n.a(me.muChatInvisibleAndSilentMode, 17130, 13);
+            this.field_n.a(EmailAvailabilityValidator.muChatInvisibleAndSilentMode, 17130, 13);
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "kn.J(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -66,7 +66,7 @@ final class kn {
           if (param2 != 1) {
             if (2 != param2) {
               if (param2 == 3) {
-                nf.a(this.field_b, true, param1);
+                AccountCreationForm.a(this.field_b, true, param1);
               } else {
                 if (param2 == 10) {
                   ef.a(this.field_b, 3, param1);
@@ -85,10 +85,10 @@ final class kn {
               em.a(this.field_b, (byte) -125, param1);
             }
           } else {
-            jk.a(this.field_l, param1, param0 - 98);
+            CueStick.a(this.field_l, param1, param0 - 98);
           }
         } else {
-          k.a(param1, (byte) 97, this.field_l);
+          DropTargetWidget.a(param1, (byte) 97, this.field_l);
         }
         return true;
     }
@@ -110,34 +110,34 @@ final class kn {
             var7 = this.a(3);
             var4 = var7;
             var5 = gf.a(-103, this.field_m);
-            var6 = ia.a(this.field_m, 24552) ? 1 : 0;
+            var6 = MenuSelection.a(this.field_m, 24552) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_n.a(nr.a(new String[]{var7}, -1, fn.addXToFriends), 17130, 4);
-              this.field_n.a(nr.a(new String[]{var7}, -1, jh.addXToIgnore), 17130, 6);
+              this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, fn.addXToFriends), 17130, 4);
+              this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, jh.addXToIgnore), 17130, 6);
               if (param1 != null &&
                 param0 != 2 &&
                 !ea.field_z) {
                 this.field_h = param1;
-                this.field_n.a(nr.a(new String[]{var7}, -1, TranslatedUiText.field_k), 17130, 19);
+                this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, TranslatedUiText.field_k), 17130, 19);
               }
             }
             if (var5 != null) {
               if (!NineBallRules.a(this.field_m, (byte) -101) &&
                 !ea.field_z) {
-                if (!hr.field_y) {
-                  this.field_n.a(nr.a(new String[]{var7}, -1, rp.sendPmToX), 17130, 8);
+                if (!ViewportController.field_y) {
+                  this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, rp.sendPmToX), 17130, 8);
                 }
-                this.field_n.a(nr.a(new String[]{var7}, -1, hq.sendQcToX), 17130, 18);
+                this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, TutorialController.sendQcToX), 17130, 18);
                 if (param1 != null) {
                   this.field_h = param1;
-                  this.field_n.a(nr.a(new String[]{var7}, -1, TranslatedUiText.field_k), 17130, 19);
+                  this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, TranslatedUiText.field_k), 17130, 19);
                 }
               }
-              this.field_n.a(nr.a(new String[]{var7}, -1, ef.rmXFromFriends), 17130, 5);
+              this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, ef.rmXFromFriends), 17130, 5);
             }
             if (var6 != 0) {
-              this.field_n.a(nr.a(new String[]{var7}, -1, ph.rmXFromIgnore), 17130, 7);
+              this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var7}, -1, ph.rmXFromIgnore), 17130, 7);
             }
           }
           if (param2 < 43) {
@@ -165,7 +165,7 @@ final class kn {
           this.field_l != ve.field_m) {
           var3 = this.a(3);
           String var2 = var3;
-          this.field_n.a(nr.a(new String[]{var3}, -1, NetworkGameClient.reportXForAbuse), 17130, 17);
+          this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, -1, NetworkGameClient.reportXForAbuse), 17130, 17);
         }
         if (param0 < 8) {
           discarded$0 = this.b((byte) -22, -119, 104);
@@ -186,7 +186,7 @@ final class kn {
                     pf.a(true);
                   } else {
                     if (param2 == 20) {
-                      r.c((byte) 41);
+                      EmailValidator.c((byte) 41);
                     } else {
                       if (param2 != 19) {
                         return false;
@@ -221,7 +221,7 @@ final class kn {
         if (17 != param2) {
           return false;
         }
-        fc.field_b = new wm(this.field_i.field_sb, this.field_i.field_ib, this.field_i.field_gb, this.field_i.field_Db, param1, tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, ei.field_A, this.field_m, this.field_l);
+        fc.field_b = new wm(this.field_i.field_sb, this.field_i.field_ib, this.field_i.field_gb, this.field_i.field_Db, param1, tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, UiWidget.field_A, this.field_m, this.field_l);
         return true;
     }
 
@@ -250,11 +250,11 @@ final class kn {
     }
 
     final static void c(int param0) {
-        db.field_Nb.field_hb = dq.a(1, 0, nr.a(new String[]{Integer.toString(wn.field_f[la.field_a] / 50)}, -1, vm.timerSecs));
+        db.field_Nb.field_hb = dq.a(1, 0, AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(wn.field_f[la.field_a] / 50)}, -1, vm.timerSecs));
         if (param0 != 13) {
           kn.c(-82);
         }
-        kb.field_i.field_pb = la.field_a > 0 ? true : false;
+        TickClock.field_i.field_pb = la.field_a > 0 ? true : false;
         tk.field_f.field_pb = la.field_a < -1 + te.field_p[0] ? true : false;
     }
 
@@ -264,7 +264,7 @@ final class kn {
         String var5;
         var4 = null;
         if (param0 == 4) {
-          var4_ref = va.a(this.field_m, param1, 88);
+          var4_ref = MultiHandleSliderWidget.a(this.field_m, param1, 88);
         } else {
           if (param0 == 5) {
             var4_ref = HalloweenBallSkin.a((byte) 91, this.field_m, param1);
@@ -303,7 +303,7 @@ final class kn {
           if (var4 != null) {
             if (!em.field_L.field_ec ||
               !(em.field_L.field_qc < 0)) {
-              this.field_n.a(nr.a(new String[]{var5}, -1, th.muGameoptKickXFromThisGame), 17130, 1);
+              this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var5}, -1, th.muGameoptKickXFromThisGame), 17130, 1);
             }
           } else {
             if (var6 != null &&
@@ -312,13 +312,13 @@ final class kn {
               if (!var6.field_mc) {
                 if (param1 &&
                   var6.field_Yb) {
-                  this.field_n.a(nr.a(new String[]{var5}, -1, gf.muGameoptAcceptXIntoGame), param0 + 17006, 0);
-                  this.field_n.a(nr.a(new String[]{var5}, param0 - 125, ro.muGameoptRejectXFromGame), 17130, 1);
+                  this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var5}, -1, gf.muGameoptAcceptXIntoGame), param0 + 17006, 0);
+                  this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var5}, param0 - 125, ro.muGameoptRejectXFromGame), 17130, 1);
                 } else {
-                  this.field_n.a(nr.a(new String[]{var5}, -1, qi.muGameoptInviteXToGame), 17130, 0);
+                  this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var5}, -1, qi.muGameoptInviteXToGame), 17130, 0);
                 }
               } else {
-                this.field_n.a(nr.a(new String[]{var5}, -1, jh.muGameoptWithdrawInviteToX), param0 + 17006, 1);
+                this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var5}, -1, jh.muGameoptWithdrawInviteToX), param0 + 17006, 1);
               }
             }
           }
@@ -402,20 +402,20 @@ final class kn {
           if (var4 != null) {
             var3 = var4.field_Ob;
             if (var4.field_Xb) {
-              this.field_n.a(nr.a(new String[]{var3}, -1, or.inviteAcceptXsGame), param0 ^ 18642, 2);
-              this.field_n.a(nr.a(new String[]{var3}, -1, hj.inviteDeclineXsGame), 17130, 3);
+              this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, -1, or.inviteAcceptXsGame), param0 ^ 18642, 2);
+              this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, -1, hj.inviteDeclineXsGame), 17130, 3);
             } else {
               if (var4.field_ic) {
-                this.field_n.a(nr.a(new String[]{var3}, param0 ^ -2617, se.joinXsGame), param0 ^ 18642, 2);
+                this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, param0 ^ -2617, se.joinXsGame), param0 ^ 18642, 2);
               } else {
                 if (!var4.field_fc &&
                   var4.field_Dc && (!var4.field_ec ||
                   var4.field_ic)) {
-                  this.field_n.a(nr.a(new String[]{var3}, -1, dn.joinRequestXsGame), param0 ^ 18642, 2);
+                  this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, -1, dn.joinRequestXsGame), param0 ^ 18642, 2);
                 }
               }
               if (var4.field_fc) {
-                this.field_n.a(nr.a(new String[]{var3}, -1, nd.joinWithdrawRequestXsGame), 17130, 3);
+                this.field_n.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, -1, nd.joinWithdrawRequestXsGame), 17130, 3);
               }
             }
           }

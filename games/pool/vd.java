@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vd implements fp {
+final class vd implements WidgetPainter {
     static int field_c;
     static int field_g;
     private int field_e;
@@ -41,8 +41,8 @@ final class vd implements fp {
         vd.a(111, (byte) -79, -26);
     }
 
-    public final void a(boolean param0, int param1, byte param2, int param3, ei param4) {
-        er var15 = null;
+    public final void paintWidget(boolean param0, int param1, byte param2, int param3, UiWidget param4) {
+        DialWidget var15 = null;
         int var7 = 0;
         int var8 = 0;
         int var14 = 0;
@@ -53,28 +53,28 @@ final class vd implements fp {
         int var11Lifetime1;
         int var12Lifetime1;
         try {
-          var15 = !(param4 instanceof er) ? null : (er) (param4);
+          var15 = !(param4 instanceof DialWidget) ? null : (DialWidget) (param4);
           if (var15 != null) {
           }
-          SoftwareRasterizer.fillRectangle(param1 + param4.field_C, param4.field_D + param3, param4.field_l, param4.field_y, this.field_k);
-          var7 = var15.field_U + (param4.field_C + param1);
-          var8 = var15.field_P + param3 + param4.field_D;
-          SoftwareRasterizer.fillCircle(var7, var8, var15.field_O, this.field_i);
+          SoftwareRasterizer.fillRectangle(param1 + param4.widgetX, param4.widgetY + param3, param4.widgetWidth, param4.widgetHeight, this.field_k);
+          var7 = var15.centerOffsetX + (param4.widgetX + param1);
+          var8 = var15.centerOffsetY + param3 + param4.widgetY;
+          SoftwareRasterizer.fillCircle(var7, var8, var15.radius, this.field_i);
           if (-1 != var15.field_V) {
-            var9 = 2.0 * (3.141592653589793 * (double)var15.field_V) / (double)var15.field_Z;
-            var11 = (int)(-Math.sin(var9) * (double)var15.field_O);
-            var12 = (int)(Math.cos(var9) * (double)var15.field_O);
+            var9 = 2.0 * (3.141592653589793 * (double)var15.field_V) / (double)var15.stepCount;
+            var11 = (int)(-Math.sin(var9) * (double)var15.radius);
+            var12 = (int)(Math.cos(var9) * (double)var15.radius);
             SoftwareRasterizer.fillCircle(var11 + var7, var8 + var12, 1, this.field_a);
           }
           SoftwareRasterizer.fillCircle(var7, var8, 2, 1);
-          var9Lifetime1 = 2.0 * ((double)var15.field_Y * 3.141592653589793) / (double)var15.field_Z;
+          var9Lifetime1 = 2.0 * ((double)var15.selectedStep * 3.141592653589793) / (double)var15.stepCount;
           int var13 = 63 % ((param2 - 2) / 41);
-          var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.field_O);
-          var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.field_O);
+          var11Lifetime1 = (int)(-Math.sin(var9Lifetime1) * (double)var15.radius);
+          var12Lifetime1 = (int)(Math.cos(var9Lifetime1) * (double)var15.radius);
           SoftwareRasterizer.drawLine(var7, var8, var11Lifetime1 + var7, var8 + var12Lifetime1, 1);
           if (this.field_h != null) {
-            var14 = this.field_b + var15.field_O + var15.field_U;
-            this.field_h.drawParagraph(param4.field_m, var14 + (param1 + param4.field_C), this.field_j + (param3 + param4.field_D), -var14 + (-this.field_b + param4.field_l), param4.field_y - (this.field_b << 1), this.field_e, this.field_d, 1, 1, 0);
+            var14 = this.field_b + var15.radius + var15.centerOffsetX;
+            this.field_h.drawParagraph(param4.widgetText, var14 + (param1 + param4.widgetX), this.field_j + (param3 + param4.widgetY), -var14 + (-this.field_b + param4.widgetWidth), param4.widgetHeight - (this.field_b << 1), this.field_e, this.field_d, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vd.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

@@ -24,21 +24,21 @@ final class wf {
             Sprite var12 = (Sprite) null;
             wf.a(39, -40, -90, (Sprite) null, 42, 37, -34, 83, 88);
           }
-          SoftwareRasterizer.restoreClip(ka.field_o);
+          SoftwareRasterizer.restoreClip(AgeValidator.field_o);
           SoftwareRasterizer.intersectClip(var9_int + 1, 0, var10 + 1, var11 + param2);
           param3.drawAdditive(param6 + 1, param8 - 1, param1);
           param3.drawAdditive(1 + param6, 1 + param8, param1);
-          SoftwareRasterizer.restoreClip(ka.field_o);
+          SoftwareRasterizer.restoreClip(AgeValidator.field_o);
           var10Lifetime1 = -param5 + param6 + param3.field_G + (param3.field_z - param4);
           var9_intLifetime1 = param3.field_G - (-param3.field_z - param6 + (param4 + param7));
           SoftwareRasterizer.intersectClip(var9_intLifetime1, var11 - param2, var10Lifetime1, 480);
           param3.drawAdditive(-1 + param6, param8 - 1, param1);
           param3.drawAdditive(param6 - 1, param8 + 1, param1);
-          SoftwareRasterizer.restoreClip(ka.field_o);
+          SoftwareRasterizer.restoreClip(AgeValidator.field_o);
           SoftwareRasterizer.intersectClip(1 + var9_intLifetime1, var11 - param2, var10Lifetime1 + 1, 480);
           param3.drawAdditive(param6 + 1, -1 + param8, param1);
           param3.drawAdditive(param6 + 1, 1 + param8, param1);
-          SoftwareRasterizer.restoreClip(ka.field_o);
+          SoftwareRasterizer.restoreClip(AgeValidator.field_o);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "wf.D(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
@@ -48,8 +48,8 @@ final class wf {
         try {
           NetworkGameClient.field_z = true;
           PolarBallSkin.field_q = param0 ? true : false;
-          d.field_d = new qq(wd.field_Ub, bi.field_e, param1, ro.field_e, PolarBallSkin.field_q);
-          wd.field_Ub.b(d.field_d, 30000);
+          d.field_d = new MessageDialog(wd.field_Ub, bi.field_e, param1, ro.field_e, PolarBallSkin.field_q);
+          wd.field_Ub.showDialog(d.field_d, 30000);
           if (param2 > -122) {
             field_a = (Sprite) null;
           }
@@ -69,24 +69,24 @@ final class wf {
 
     final static boolean a(byte param0) {
         if (-1 == of.field_Pb) {
-          if (!lq.b((byte) 114, 1)) {
+          if (!DialogLayer.b((byte) 114, 1)) {
             return false;
           }
           of.field_Pb = kn.field_e.readUnsignedByte(-86);
           kn.field_e.position = 0;
         }
         if (of.field_Pb == -2) {
-          if (!lq.b((byte) 76, 2)) {
+          if (!DialogLayer.b((byte) 76, 2)) {
             return false;
           }
           of.field_Pb = kn.field_e.readUnsignedShort(-1034);
           kn.field_e.position = 0;
         }
         if (param0 == 39) {
-          return lq.b((byte) 67, of.field_Pb);
+          return DialogLayer.b((byte) 67, of.field_Pb);
         }
         field_a = (Sprite) null;
-        return lq.b((byte) 67, of.field_Pb);
+        return DialogLayer.b((byte) 67, of.field_Pb);
     }
 
     final static void a(byte param0, boolean param1, kh param2, String param3) {
@@ -109,20 +109,20 @@ final class wf {
         try {
           dr.a((String) null, -1, 0L, param2.g(20872), BufferedSocket.field_m, (String) null, 32540, param2, (int[]) null);
           if (param2.field_ec && (param2.field_Yb == 2 ||
-            !(hq.field_i < 2))) {
+            !(TutorialController.field_i < 2))) {
             var9 = PlasmaBallSkin.field_m;
-            var10 = nr.a(new String[]{param3}, param0 + 109, PacketBuffer.spectateXsGame);
+            var10 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param3}, param0 + 109, PacketBuffer.spectateXsGame);
             var9.field_n.a(var10, 17130, 10);
           }
           PlasmaBallSkin.field_m.b(2616);
           if (param1) {
-            if (ka.field_r != PlasmaBallSkin.field_m.field_b) {
+            if (AgeValidator.field_r != PlasmaBallSkin.field_m.field_b) {
               var13 = PlasmaBallSkin.field_m;
-              var14 = nr.a(new String[]{param3}, param0 + 109, bi.showPlayersInXsGame);
+              var14 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param3}, param0 + 109, bi.showPlayersInXsGame);
               var13.field_n.a(var14, param0 + 17240, 15);
             } else {
               var11 = PlasmaBallSkin.field_m;
-              var12 = nr.a(new String[]{param3}, -1, jj.hidePlayersInXsGame);
+              var12 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param3}, -1, jj.hidePlayersInXsGame);
               var11.field_n.a(var12, 17130, 16);
             }
           }
@@ -130,8 +130,8 @@ final class wf {
           if (param0 != -110) {
             field_a = (Sprite) null;
           }
-          var5 = lq.field_W;
-          var6 = ua.field_o;
+          var5 = DialogLayer.field_W;
+          var6 = UsernameAvailabilityValidator.field_o;
           var15.field_n.c(0, 0, var5, 0, var6);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

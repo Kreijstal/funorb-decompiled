@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ck extends mh {
+final class ck extends HotspotTextWidget {
     static IntrusiveDeque field_W;
     private Sprite field_U;
     private String field_X;
     private int field_V;
     static String[] field_R;
     static String[] quickchatShortcutKeys;
-    private ip field_S;
+    private ValidationProvider field_S;
     static IntrusiveDeque[] field_Y;
 
-    final boolean a(ei param0, byte param1) {
+    final boolean requestKeyboardFocus(UiWidget param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -35,27 +35,27 @@ final class ck extends mh {
         }
     }
 
-    final void a(ei param0, int param1, int param2, int param3) {
+    final void updatePointerState(UiWidget param0, int param1, int param2, int param3) {
         try {
           this.field_V = this.field_V + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointerState(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ck.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    ck(ip param0, String param1, int param2, int param3, int param4, int param5) {
+    ck(ValidationProvider param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, ub.c(4));
         try {
           this.field_S = param0;
           this.field_X = param1;
-          this.a(param4, param2, param5, false, param3);
+          this.setWidgetBounds(param4, param2, param5, false, param3);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ck.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void renderWidget(int param0, byte param1, int param2, int param3) {
         String var5;
         na var6;
         int var9;
@@ -105,37 +105,37 @@ final class ck extends mh {
         var25 = null;
         var30 = null;
         var14 = Pool.field_O;
-        var6 = this.field_S.c(-31873);
+        var6 = this.field_S.getDebouncedValidationState(-31873);
         if (var6 == ji.field_h) {
           var18 = oi.checking;
-          if (!var18.equals(this.field_m)) {
-            this.field_m = var18;
-            this.g((byte) 33);
+          if (!var18.equals(this.widgetText)) {
+            this.widgetText = var18;
+            this.rebuildHotspotBounds((byte) 33);
           }
-          super.a(param0, (byte) 112, param2, param3);
-          var6 = this.field_S.c(-31873);
-          var35 = (io) ((Object) this.field_z);
+          super.renderWidget(param0, (byte) 112, param2, param3);
+          var6 = this.field_S.getDebouncedValidationState(-31873);
+          var35 = (io) ((Object) this.renderer);
           var10 = -91 % ((-42 - param1) / 53);
-          var9 = this.field_C + param2;
-          var11 = var35.a(param3, (ei) (this), (byte) -7) + (var35.b(0, (ei) (this)).a((byte) 66) >> 1);
+          var9 = this.widgetX + param2;
+          var11 = var35.a(param3, (UiWidget) (this), (byte) -7) + (var35.b(0, (UiWidget) (this)).a((byte) 66) >> 1);
           if (ji.field_h == var6) {
             var21 = bo.field_a[0];
             var12 = var21.field_w << 1;
             var13 = var21.field_y << 1;
             if (this.field_U == null) {
               this.field_U = new Sprite(var12, var13);
-              kj.a(81, this.field_U);
+              CueAim.a(81, this.field_U);
             } else {
               if (this.field_U.field_z < var12) {
                 this.field_U = new Sprite(var12, var13);
-                kj.a(81, this.field_U);
+                CueAim.a(81, this.field_U);
               } else {
                 if (var13 <= this.field_U.field_A) {
-                  kj.a(53, this.field_U);
+                  CueAim.a(53, this.field_U);
                   SoftwareRasterizer.clear();
                 } else {
                   this.field_U = new Sprite(var12, var13);
-                  kj.a(81, this.field_U);
+                  CueAim.a(81, this.field_U);
                 }
               }
             }
@@ -163,11 +163,11 @@ final class ck extends mh {
           if (this.field_U != null &&
             this.field_U.field_z >= var12Lifetime4 &&
             var13Lifetime4 <= this.field_U.field_A) {
-            kj.a(53, this.field_U);
+            CueAim.a(53, this.field_U);
             SoftwareRasterizer.clear();
           } else {
             this.field_U = new Sprite(var12Lifetime4, var13Lifetime4);
-            kj.a(81, this.field_U);
+            CueAim.a(81, this.field_U);
           }
           var20.b(112, 144, var20.field_w << 4, var20.field_y << 4, -this.field_V << 10, 4096);
           oc.a(126);
@@ -176,34 +176,34 @@ final class ck extends mh {
         }
         if (var6 == no.field_k) {
           var24 = oi.checking;
-          if (!var24.equals(this.field_m)) {
-            this.field_m = var24;
-            this.g((byte) 33);
+          if (!var24.equals(this.widgetText)) {
+            this.widgetText = var24;
+            this.rebuildHotspotBounds((byte) 33);
           }
-          super.a(param0, (byte) 112, param2, param3);
-          var6 = this.field_S.c(-31873);
-          var36 = (io) ((Object) this.field_z);
+          super.renderWidget(param0, (byte) 112, param2, param3);
+          var6 = this.field_S.getDebouncedValidationState(-31873);
+          var36 = (io) ((Object) this.renderer);
           var10Lifetime1 = -91 % ((-42 - param1) / 53);
-          var9Lifetime1 = this.field_C + param2;
-          var11Lifetime1 = var36.a(param3, (ei) (this), (byte) -7) + (var36.b(0, (ei) (this)).a((byte) 66) >> 1);
+          var9Lifetime1 = this.widgetX + param2;
+          var11Lifetime1 = var36.a(param3, (UiWidget) (this), (byte) -7) + (var36.b(0, (UiWidget) (this)).a((byte) 66) >> 1);
           if (ji.field_h == var6) {
             var27 = bo.field_a[0];
             var12Lifetime1 = var27.field_w << 1;
             var13Lifetime1 = var27.field_y << 1;
             if (this.field_U == null) {
               this.field_U = new Sprite(var12Lifetime1, var13Lifetime1);
-              kj.a(81, this.field_U);
+              CueAim.a(81, this.field_U);
             } else {
               if (this.field_U.field_z < var12Lifetime1) {
                 this.field_U = new Sprite(var12Lifetime1, var13Lifetime1);
-                kj.a(81, this.field_U);
+                CueAim.a(81, this.field_U);
               } else {
                 if (var13Lifetime1 <= this.field_U.field_A) {
-                  kj.a(53, this.field_U);
+                  CueAim.a(53, this.field_U);
                   SoftwareRasterizer.clear();
                 } else {
                   this.field_U = new Sprite(var12Lifetime1, var13Lifetime1);
-                  kj.a(81, this.field_U);
+                  CueAim.a(81, this.field_U);
                 }
               }
             }
@@ -231,48 +231,48 @@ final class ck extends mh {
           if (this.field_U != null &&
             this.field_U.field_z >= var12Lifetime1Lifetime1 &&
             var13Lifetime1Lifetime1 <= this.field_U.field_A) {
-            kj.a(53, this.field_U);
+            CueAim.a(53, this.field_U);
             SoftwareRasterizer.clear();
           } else {
             this.field_U = new Sprite(var12Lifetime1Lifetime1, var13Lifetime1Lifetime1);
-            kj.a(81, this.field_U);
+            CueAim.a(81, this.field_U);
           }
           var26.b(112, 144, var26.field_w << 4, var26.field_y << 4, -this.field_V << 10, 4096);
           oc.a(126);
           this.field_U.drawAdditive(var9Lifetime1 - (var26.field_w >> 1), var11Lifetime1 - var26.field_y, 256);
           return;
         }
-        var5 = this.field_S.a(126);
+        var5 = this.field_S.getDebouncedValidationMessage(126);
         if (var5 == null) {
           var5 = this.field_X;
         }
-        if (!var5.equals(this.field_m)) {
-          this.field_m = var5;
-          this.g((byte) 33);
+        if (!var5.equals(this.widgetText)) {
+          this.widgetText = var5;
+          this.rebuildHotspotBounds((byte) 33);
         }
-        super.a(param0, (byte) 112, param2, param3);
-        var6Lifetime1 = this.field_S.c(-31873);
-        var37 = (io) ((Object) this.field_z);
+        super.renderWidget(param0, (byte) 112, param2, param3);
+        var6Lifetime1 = this.field_S.getDebouncedValidationState(-31873);
+        var37 = (io) ((Object) this.renderer);
         var10Lifetime2 = -91 % ((-42 - param1) / 53);
-        var9Lifetime2 = this.field_C + param2;
-        var11Lifetime2 = var37.a(param3, (ei) (this), (byte) -7) + (var37.b(0, (ei) (this)).a((byte) 66) >> 1);
+        var9Lifetime2 = this.widgetX + param2;
+        var11Lifetime2 = var37.a(param3, (UiWidget) (this), (byte) -7) + (var37.b(0, (UiWidget) (this)).a((byte) 66) >> 1);
         if (ji.field_h == var6Lifetime1) {
           var32 = bo.field_a[0];
           var12Lifetime2 = var32.field_w << 1;
           var13Lifetime2 = var32.field_y << 1;
           if (this.field_U == null) {
             this.field_U = new Sprite(var12Lifetime2, var13Lifetime2);
-            kj.a(81, this.field_U);
+            CueAim.a(81, this.field_U);
           } else {
             if (this.field_U.field_z < var12Lifetime2) {
               this.field_U = new Sprite(var12Lifetime2, var13Lifetime2);
-              kj.a(81, this.field_U);
+              CueAim.a(81, this.field_U);
             } else {
               if (var13Lifetime2 > this.field_U.field_A) {
                 this.field_U = new Sprite(var12Lifetime2, var13Lifetime2);
-                kj.a(81, this.field_U);
+                CueAim.a(81, this.field_U);
               } else {
-                kj.a(53, this.field_U);
+                CueAim.a(53, this.field_U);
                 SoftwareRasterizer.clear();
               }
             }
@@ -301,11 +301,11 @@ final class ck extends mh {
         if (this.field_U != null &&
           this.field_U.field_z >= var12Lifetime3 &&
           var13Lifetime3 <= this.field_U.field_A) {
-          kj.a(53, this.field_U);
+          CueAim.a(53, this.field_U);
           SoftwareRasterizer.clear();
         } else {
           this.field_U = new Sprite(var12Lifetime3, var13Lifetime3);
-          kj.a(81, this.field_U);
+          CueAim.a(81, this.field_U);
         }
         var31.b(112, 144, var31.field_w << 4, var31.field_y << 4, -this.field_V << 10, 4096);
         oc.a(126);
@@ -330,12 +330,12 @@ final class ck extends mh {
         return -104;
     }
 
-    final String e(int param0) {
+    final String getHoverText(int param0) {
         if (param0 <= -10) {
           return null;
         }
-        ei var3 = (ei) null;
-        this.a((ei) null, (byte) -51);
+        UiWidget var3 = (UiWidget) null;
+        this.requestKeyboardFocus((UiWidget) null, (byte) -51);
         return null;
     }
 

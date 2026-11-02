@@ -7,7 +7,7 @@ final class so {
     private nc field_a;
     int[] field_j;
     so[] field_b;
-    static hq[] field_g;
+    static TutorialController[] field_g;
     static BitmapFont field_h;
     eg field_i;
     int[][] field_c;
@@ -331,7 +331,7 @@ final class so {
           for (var15 = 0; var15 < 24; var15 += 2) {
             if (0 <= var13[var15] &&
               var13[1 + var15] >= 0 &&
-              !hk.a(101, var11[var15 + 1], var11[var15], var12[var15 + 1], var13[1 + var15], var13[var15], var12[var15])) {
+              !NanoTickClock.a(101, var11[var15 + 1], var11[var15], var12[var15 + 1], var13[1 + var15], var13[var15], var12[var15])) {
               var18 = (int[]) null;
               ic.a(var12, var15, var11, (int[]) null, var13, 4);
               if (var13[var15] == 0) {
@@ -494,7 +494,7 @@ final class so {
         int var7 = 0;
         int var8 = Pool.field_O;
         if (param3 > -33) {
-          field_g = (hq[]) null;
+          field_g = (TutorialController[]) null;
         }
         if (null != this.field_i) {
           this.field_a = (nc) (this.field_i.a(param5, param2, param0, param1, param4, this.field_d));
@@ -721,7 +721,7 @@ final class so {
         field_k = null;
         field_g = null;
         if (param0 != 9933) {
-          field_g = (hq[]) null;
+          field_g = (TutorialController[]) null;
         }
     }
 
@@ -733,7 +733,7 @@ final class so {
         this.field_c = (int[][]) null;
         this.field_e = null;
         this.field_i = null;
-        this.field_d = hp.a(ln.field_m, (byte) 88);
+        this.field_d = hp.copyIntArray(ln.field_m, (byte) 88);
     }
 
     so(int param0) {
@@ -744,7 +744,7 @@ final class so {
         this.field_c = (int[][]) null;
         this.field_e = null;
         this.field_i = null;
-        this.field_d = hp.a(ln.field_m, (byte) 94);
+        this.field_d = hp.copyIntArray(ln.field_m, (byte) 94);
         this.field_b = new so[param0];
     }
 

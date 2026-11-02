@@ -161,7 +161,7 @@ final class PolarBallSkin extends BallSkin {
     }
 
     final static void a(byte param0, boolean param1) {
-        wd.field_Ub.a(0, (byte) 92, 0);
+        wd.field_Ub.renderWidgetPassesAndTooltip(0, (byte) 92, 0);
         int var2 = -32 % ((37 - param0) / 60);
     }
 

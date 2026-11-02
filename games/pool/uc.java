@@ -48,7 +48,7 @@ final class uc {
           var1 = new tn();
         }
         var1.a(SoftwareRasterizer.width, SoftwareRasterizer.height, SoftwareRasterizer.clipLeft, SoftwareRasterizer.clipBottom, -95, SoftwareRasterizer.clipRight, SoftwareRasterizer.pixels, SoftwareRasterizer.clipTop);
-        nf.field_S.b((byte) 83, var1);
+        AccountCreationForm.field_S.b((byte) 83, var1);
     }
 
     final static double[][] a(boolean param0, double[][][] param1) {

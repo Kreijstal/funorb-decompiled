@@ -36,7 +36,7 @@ final class PoolUiText {
                 this.var4 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                ib.field_u = param0;
+                MidiNoteMixer.field_u = param0;
                 var2 = cm.a("text_game_name", (byte) 29);
                 if (null != var2) {
                   wm.textGameName = a.a(var2, 127);
@@ -347,15 +347,15 @@ final class PoolUiText {
                 }
                 var2 = cm.a("theme_random", (byte) 121);
                 if (null != var2) {
-                  sn.themeRandom = a.a(var2, 123);
+                  BirthDateValidator.themeRandom = a.a(var2, 123);
                 }
                 var2 = cm.a("guide_names,0", (byte) 83);
                 if (var2 != null) {
-                  ke.guideNames[0] = a.a(var2, -120);
+                  LoginTextValue.guideNames[0] = a.a(var2, -120);
                 }
                 var2 = cm.a("guide_names,1", (byte) 39);
                 if (null != var2) {
-                  ke.guideNames[1] = a.a(var2, 126);
+                  LoginTextValue.guideNames[1] = a.a(var2, 126);
                 }
                 var2 = cm.a("timer_secs", (byte) 107);
                 if (null != var2) {
@@ -523,7 +523,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("n_second_time_penalty", (byte) 92);
                 if (var2 != null) {
-                  iq.nSecondTimePenalty = a.a(var2, -18);
+                  RasterBuffer.nSecondTimePenalty = a.a(var2, -18);
                 }
                 var2 = cm.a("nine_ball_numbers,0", (byte) 75);
                 if (null != var2) {
@@ -659,11 +659,11 @@ final class PoolUiText {
                 }
                 var2 = cm.a("ballset_plasma_group_1_nocolour", (byte) 113);
                 if (var2 != null) {
-                  oe.ballsetPlasmaGroup1Nocolour = a.a(var2, -67);
+                  FadingDialog.ballsetPlasmaGroup1Nocolour = a.a(var2, -67);
                 }
                 var2 = cm.a("ballset_plasma_group_0", (byte) 90);
                 if (var2 != null) {
-                  kk.ballsetPlasmaGroup0 = a.a(var2, 126);
+                  CacheEntry.ballsetPlasmaGroup0 = a.a(var2, 126);
                 }
                 var2 = cm.a("ballset_plasma_group_1", (byte) 98);
                 if (null != var2) {
@@ -671,7 +671,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("ballset_usa8_group_0", (byte) 113);
                 if (null != var2) {
-                  me.ballsetUsa8Group0 = a.a(var2, 123);
+                  EmailAvailabilityValidator.ballsetUsa8Group0 = a.a(var2, 123);
                 }
                 var2 = cm.a("ballset_usa8_group_1", (byte) 49);
                 if (var2 != null) {
@@ -687,7 +687,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("ballset_space_group_0", (byte) 65);
                 if (var2 != null) {
-                  sn.ballsetSpaceGroup0 = a.a(var2, 123);
+                  BirthDateValidator.ballsetSpaceGroup0 = a.a(var2, 123);
                 }
                 var2 = cm.a("ballset_space_group_1", (byte) 77);
                 var3 = 50 % ((param1 - 58) / 42);
@@ -1050,11 +1050,11 @@ final class PoolUiText {
                 }
                 var2 = cm.a("tutorial_option_basics", (byte) 20);
                 if (null != var2) {
-                  sl.tutorialOptionBasics = a.a(var2, 125);
+                  TextInputWidget.tutorialOptionBasics = a.a(var2, 125);
                 }
                 var2 = cm.a("tutorial_option_eight_ball", (byte) 58);
                 if (null != var2) {
-                  fd.tutorialOptionEightBall = a.a(var2, 126);
+                  StrongCacheEntry.tutorialOptionEightBall = a.a(var2, 126);
                 }
                 var2 = cm.a("tutorial_option_nine_ball", (byte) 100);
                 if (null != var2) {
@@ -1098,7 +1098,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("tutorial_camera_zoom", (byte) 80);
                 if (null != var2) {
-                  tj.tutorialCameraZoom = a.a(var2, 126);
+                  ResizableDialog.tutorialCameraZoom = a.a(var2, 126);
                 }
                 var2 = cm.a("tutorial_camera_recentre", (byte) 20);
                 if (null != var2) {
@@ -1130,7 +1130,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("tutorial_eight_ball_start_place_cueball", (byte) 26);
                 if (null != var2) {
-                  qq.tutorialEightBallStartPlaceCueball = a.a(var2, -89);
+                  MessageDialog.tutorialEightBallStartPlaceCueball = a.a(var2, -89);
                 }
                 var2 = cm.a("tutorial_eight_ball_break", (byte) 66);
                 if (null != var2) {
@@ -1150,7 +1150,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("tutorial_eight_ball_complete", (byte) 81);
                 if (null != var2) {
-                  g.tutorialEightBallComplete = a.a(var2, -98);
+                  MusicPatch.tutorialEightBallComplete = a.a(var2, -98);
                 }
                 var2 = cm.a("potting_ball_for_you", (byte) 41);
                 if (var2 != null) {
@@ -1158,7 +1158,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("potting_the_rest_of_your_group", (byte) 75);
                 if (var2 != null) {
-                  kj.pottingTheRestOfYourGroup = a.a(var2, -61);
+                  CueAim.pottingTheRestOfYourGroup = a.a(var2, -61);
                 }
                 var2 = cm.a("tutorial_nine_ball_start_place_cueball", (byte) 55);
                 if (null != var2) {
@@ -1170,7 +1170,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("tutorial_nine_ball_afterbreak", (byte) 28);
                 if (null != var2) {
-                  eq.tutorialNineBallAfterbreak = a.a(var2, 127);
+                  DateInputWidget.tutorialNineBallAfterbreak = a.a(var2, 127);
                 }
                 var2 = cm.a("tutorial_nine_ball_potting_a_ball", (byte) 74);
                 if (var2 != null) {
@@ -1178,7 +1178,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("tutorial_nine_ball_potting_nine", (byte) 77);
                 if (null != var2) {
-                  ui.tutorialNineBallPottingNine = a.a(var2, 124);
+                  LoginForm.tutorialNineBallPottingNine = a.a(var2, 124);
                 }
                 var2 = cm.a("tutorial_nine_ball_final", (byte) 35);
                 if (null != var2) {
@@ -1198,7 +1198,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("ticker_hint_set_power", (byte) 87);
                 if (null != var2) {
-                  gk.tickerHintSetPower = a.a(var2, -110);
+                  FullscreenErrorDialog.tickerHintSetPower = a.a(var2, -110);
                 }
                 var2 = cm.a("ticker_hint_zoom", (byte) 27);
                 if (var2 != null) {
@@ -1242,7 +1242,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("player_name_two_shots", (byte) 59);
                 if (var2 != null) {
-                  gr.playerNameTwoShots = a.a(var2, 125);
+                  ArchiveRequest.playerNameTwoShots = a.a(var2, 125);
                 }
                 var2 = cm.a("player_name_ball_in_hand", (byte) 44);
                 if (null != var2) {
@@ -1262,11 +1262,11 @@ final class PoolUiText {
                 }
                 var2 = cm.a("status_resigned", (byte) 78);
                 if (var2 != null) {
-                  n.statusResigned = a.a(var2, 123);
+                  LabeledChildWidget.statusResigned = a.a(var2, 123);
                 }
                 var2 = cm.a("status_wants_to_draw", (byte) 79);
                 if (var2 != null) {
-                  sh.statusWantsToDraw = a.a(var2, 123);
+                  OpacityWidget.statusWantsToDraw = a.a(var2, 123);
                 }
                 var2 = cm.a("status_wants_a_rematch", (byte) 30);
                 if (var2 != null) {
@@ -1282,7 +1282,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("player_list_last", (byte) 43);
                 if (var2 != null) {
-                  lq.playerListLast = a.a(var2, 124);
+                  DialogLayer.playerListLast = a.a(var2, 124);
                 }
                 var2 = cm.a("you_are_group_name", (byte) 31);
                 if (null != var2) {
@@ -1290,7 +1290,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("player_is_group_name", (byte) 87);
                 if (var2 != null) {
-                  sd.playerIsGroupName = a.a(var2, -39);
+                  Under13NoticePanel.playerIsGroupName = a.a(var2, -39);
                 }
                 var2 = cm.a("player_x2_are_group_name", (byte) 32);
                 if (var2 != null) {
@@ -1302,7 +1302,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("player_you_x2_are_group_name", (byte) 116);
                 if (null != var2) {
-                  qq.playerYouX2AreGroupName = a.a(var2, 127);
+                  MessageDialog.playerYouX2AreGroupName = a.a(var2, 127);
                 }
                 var2 = cm.a("player_you_first_list_are_group_name", (byte) 75);
                 if (var2 != null) {
@@ -1310,7 +1310,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("player_x2_have_won", (byte) 78);
                 if (null != var2) {
-                  gk.playerX2HaveWon = a.a(var2, 126);
+                  FullscreenErrorDialog.playerX2HaveWon = a.a(var2, 126);
                 }
                 var2 = cm.a("player_list_have_won", (byte) 61);
                 if (var2 != null) {
@@ -1318,7 +1318,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("player_you_x2_have_won", (byte) 97);
                 if (null != var2) {
-                  nf.playerYouX2HaveWon = a.a(var2, 123);
+                  AccountCreationForm.playerYouX2HaveWon = a.a(var2, 123);
                 }
                 var2 = cm.a("player_you_first_list_have_won", (byte) 88);
                 if (var2 != null) {
@@ -1354,7 +1354,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("player_list_are_offering_draw", (byte) 83);
                 if (var2 != null) {
-                  fd.playerListAreOfferingDraw = a.a(var2, 126);
+                  StrongCacheEntry.playerListAreOfferingDraw = a.a(var2, 126);
                 }
                 var2 = cm.a("player_you_x2_are_offering_draw", (byte) 108);
                 if (var2 != null) {
@@ -1362,7 +1362,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("player_you_first_list_are_offering_draw", (byte) 107);
                 if (var2 != null) {
-                  jk.playerYouFirstListAreOfferingDraw = a.a(var2, -36);
+                  CueStick.playerYouFirstListAreOfferingDraw = a.a(var2, -36);
                 }
                 var2 = cm.a("player_you_are_out", (byte) 70);
                 if (null != var2) {
@@ -1382,7 +1382,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("player_you_x2_are_out", (byte) 95);
                 if (var2 != null) {
-                  sl.playerYouX2AreOut = a.a(var2, -96);
+                  TextInputWidget.playerYouX2AreOut = a.a(var2, -96);
                 }
                 var2 = cm.a("player_you_first_list_are_out", (byte) 29);
                 if (var2 != null) {
@@ -1406,7 +1406,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("player_you_first_list_have_resigned", (byte) 51);
                 if (null != var2) {
-                  wj.playerYouFirstListHaveResigned = a.a(var2, 124);
+                  DraggableWidget.playerYouFirstListHaveResigned = a.a(var2, 124);
                 }
                 var2 = cm.a("player_vs_player", (byte) 121);
                 if (var2 != null) {
@@ -1446,7 +1446,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("player_x_lost_a_life", (byte) 124);
                 if (var2 != null) {
-                  jk.playerXLostALife = a.a(var2, -55);
+                  CueStick.playerXLostALife = a.a(var2, -55);
                 }
                 var2 = cm.a("player_x_lost_two_lives", (byte) 49);
                 if (var2 != null) {
@@ -1462,7 +1462,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("you_lost_two_lives", (byte) 85);
                 if (var2 != null) {
-                  jk.youLostTwoLives = a.a(var2, 124);
+                  CueStick.youLostTwoLives = a.a(var2, 124);
                 }
                 var2 = cm.a("player_x_now_has_n_lives", (byte) 68);
                 if (null != var2) {
@@ -1474,7 +1474,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("you_now_have_n_lives", (byte) 30);
                 if (var2 != null) {
-                  hk.youNowHaveNLives = a.a(var2, -47);
+                  NanoTickClock.youNowHaveNLives = a.a(var2, -47);
                 }
                 var2 = cm.a("you_are_on_your_last_life", (byte) 34);
                 if (null != var2) {
@@ -1558,7 +1558,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("which_group_do_you_want", (byte) 77);
                 if (var2 != null) {
-                  ka.whichGroupDoYouWant = a.a(var2, -31);
+                  AgeValidator.whichGroupDoYouWant = a.a(var2, -31);
                 }
                 var2 = cm.a("would_you_like_to_play_or_pass", (byte) 126);
                 if (null != var2) {
@@ -1566,7 +1566,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("decision_button_play", (byte) 71);
                 if (null != var2) {
-                  jf.decisionButtonPlay = a.a(var2, 127);
+                  ImageProducerRasterBuffer.decisionButtonPlay = a.a(var2, 127);
                 }
                 var2 = cm.a("decision_button_pass", (byte) 59);
                 if (null != var2) {
@@ -1582,7 +1582,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("tooltip_extra_visit", (byte) 104);
                 if (null != var2) {
-                  wa.tooltipExtraVisit = a.a(var2, -1);
+                  ProgressDialog.tooltipExtraVisit = a.a(var2, -1);
                 }
                 var2 = cm.a("tooltip_snookered", (byte) 73);
                 if (var2 != null) {
@@ -1590,7 +1590,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("chat_button", (byte) 85);
                 if (null != var2) {
-                  ua.chatButton = a.a(var2, 125);
+                  UsernameAvailabilityValidator.chatButton = a.a(var2, 125);
                 }
                 var2 = cm.a("end_of_game_press_escape_to_continue", (byte) 48);
                 if (var2 != null) {
@@ -1598,7 +1598,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("press_escape_for_options_menu", (byte) 19);
                 if (var2 != null) {
-                  ke.pressEscapeForOptionsMenu = a.a(var2, 123);
+                  LoginTextValue.pressEscapeForOptionsMenu = a.a(var2, 123);
                 }
                 var2 = cm.a("time_trial", (byte) 19);
                 if (null != var2) {
@@ -1634,11 +1634,11 @@ final class PoolUiText {
                 }
                 var2 = cm.a("timer_seconds_fractions", (byte) 70);
                 if (var2 != null) {
-                  mp.timerSecondsFractions = a.a(var2, 126);
+                  UsernameSuggestionsPanel.timerSecondsFractions = a.a(var2, 126);
                 }
                 var2 = cm.a("timer_minutes_seconds", (byte) 39);
                 if (null != var2) {
-                  lq.timerMinutesSeconds = a.a(var2, -56);
+                  DialogLayer.timerMinutesSeconds = a.a(var2, -56);
                 }
                 var2 = cm.a("timer_minutes_seconds_fractions", (byte) 23);
                 if (var2 != null) {
@@ -1646,7 +1646,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("timer_hours_minutes_seconds", (byte) 28);
                 if (var2 != null) {
-                  jk.timerHoursMinutesSeconds = a.a(var2, 126);
+                  CueStick.timerHoursMinutesSeconds = a.a(var2, 126);
                 }
                 var2 = cm.a("timer_hours_minutes_seconds_fractions", (byte) 76);
                 if (null != var2) {
@@ -1658,7 +1658,7 @@ final class PoolUiText {
                 }
                 var2 = cm.a("mouse_y_axis_inverted", (byte) 82);
                 if (null != var2) {
-                  hb.mouseYAxisInverted = a.a(var2, -103);
+                  NodeHashTableIterator.mouseYAxisInverted = a.a(var2, -103);
                 }
                 var2 = cm.a("menu_time_trial_with_guides", (byte) 94);
                 if (null != var2) {
@@ -1732,7 +1732,7 @@ final class PoolUiText {
                 if (null != var2) {
                   bc.menuOptionEndTutorial = a.a(var2, 126);
                 }
-                ib.field_u = null;
+                MidiNoteMixer.field_u = null;
             }
             void run() {
                 var4 = Pool.field_O;

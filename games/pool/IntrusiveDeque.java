@@ -250,10 +250,10 @@ final class IntrusiveDeque {
             return;
           }
           while (true) {
-            if (var5_int >= lq.field_T.length) {
+            if (var5_int >= DialogLayer.field_T.length) {
               return;
             }
-            param3 = lq.field_T[var5_int];
+            param3 = DialogLayer.field_T[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param3;

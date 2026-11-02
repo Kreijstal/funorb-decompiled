@@ -115,7 +115,7 @@ final class rl {
               var9_ref_im.field_Xb = var11 >> 1;
               var9_ref_im.field_bc = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-68);
               var9_ref_im.field_Nb = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-75);
-              er.a(var9_ref_im, -93);
+              DialWidget.a(var9_ref_im, -93);
               return;
             }
             if (6 == var2) {
@@ -253,10 +253,10 @@ final class rl {
                   if (var2 == 21) {
                     var4Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-1034);
                     if (var4Lifetime5 != 0) {
-                      fd.field_K = rl.a((byte) -124) + (long)var4Lifetime5;
+                      StrongCacheEntry.field_K = rl.a((byte) -124) + (long)var4Lifetime5;
                       return;
                     }
-                    fd.field_K = 0L;
+                    StrongCacheEntry.field_K = 0L;
                     return;
                   }
                   if (var2 == 22) {
@@ -290,7 +290,7 @@ final class rl {
                     var30.field_Yb = false;
                   }
                 }
-                er.a(var30, -94);
+                DialWidget.a(var30, -94);
                 return;
               }
               var4_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(-412303328);
@@ -306,7 +306,7 @@ final class rl {
                   PoolMatchController.field_jb = PoolMatchController.field_jb + 1;
                 }
               }
-              er.a(var31, -118);
+              DialWidget.a(var31, -118);
               return;
             }
             var4Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(-1034);
@@ -337,7 +337,7 @@ final class rl {
                 PoolMatchController.field_jb = PoolMatchController.field_jb - 1;
               }
               var4_ref_imLifetime1.field_mc = false;
-              er.a(var4_ref_imLifetime1, -111);
+              DialWidget.a(var4_ref_imLifetime1, -111);
             }
             var4_ref_imLifetime1 = (im) (ln.field_n.b(127));
           }
@@ -352,7 +352,7 @@ final class rl {
             em.field_L = new kh(dr.field_c);
             em.field_L.a((long)var4Lifetime1, 45);
             d.a(em.field_L, 119, var1, false);
-            fd.field_K = 0L;
+            StrongCacheEntry.field_K = 0L;
           }
           if (var2 != 2 &&
             var2 != 3) {
@@ -372,8 +372,8 @@ final class rl {
           }
           pm.field_l = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-67);
           FreePlayRules.field_l = ((PacketBuffer) ((Object) var1)).readUnsignedByte(-108);
-          for (var4Lifetime3 = 0; ka.field_s.length > var4Lifetime3; var4Lifetime3++) {
-            ka.field_s[var4Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte((byte) 105);
+          for (var4Lifetime3 = 0; AgeValidator.field_s.length > var4Lifetime3; var4Lifetime3++) {
+            AgeValidator.field_s[var4Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte((byte) 105);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -389,10 +389,10 @@ final class rl {
         }
         long var1 = System.currentTimeMillis();
         if (var1 < ProxySocketConnector.field_g) {
-          ri.field_S = ri.field_S + (-var1 + ProxySocketConnector.field_g);
+          CheckboxWidget.field_S = CheckboxWidget.field_S + (-var1 + ProxySocketConnector.field_g);
         }
         ProxySocketConnector.field_g = var1;
-        return var1 + ri.field_S;
+        return var1 + CheckboxWidget.field_S;
     }
 
     public static void a(int param0) {

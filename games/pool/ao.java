@@ -118,8 +118,8 @@ final class ao extends vh {
 
     final static void a(byte param0, int param1, BitmapFont param2, BitmapFont param3) {
         try {
-          wj.field_T = param1;
-          gj.field_R = param3;
+          DraggableWidget.field_T = param1;
+          ProgressBarWidget.field_R = param3;
           dq.field_f = param2;
           nj.a(SoftwareRasterizer.height / 2, SoftwareRasterizer.width / 2, 97);
           if (param0 != -83) {

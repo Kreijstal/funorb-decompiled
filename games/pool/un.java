@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class un {
-    static ia field_f;
+    static MenuSelection field_f;
     static int field_e;
     static Sprite field_c;
     static int field_h;
@@ -40,7 +40,7 @@ final class un {
             field_h = 77;
           }
           var3_int = 0;
-          var4 = ba.field_wb;
+          var4 = AccountContentDialog.field_wb;
           while (qp.field_Sb.length > var3_int) {
             var5 = ll.field_a[var3_int];
             if (var5 < 0) {
@@ -49,7 +49,7 @@ final class un {
               var6 = wm.a(true, param0 ^ -35, qp.field_Sb[var3_int]);
               var7 = ad.field_u - (var6 >> 1);
               var4 = var4 + bj.field_m;
-              if (tj.a(param2, -59, kh.field_yc + (oc.field_B << 1), param1, var6 + (qi.field_g << 1), var4, -qi.field_g + var7)) {
+              if (ResizableDialog.a(param2, -59, kh.field_yc + (oc.field_B << 1), param1, var6 + (qi.field_g << 1), var4, -qi.field_g + var7)) {
                 stackIn_7_0 = var5;
                 return stackIn_7_0;
               }
@@ -82,10 +82,10 @@ final class un {
     final static void a(int param0) {
         if (param0 != 676) {
           field_b = true;
-          ne.field_r.d((byte) 47);
+          MatchingTextValidator.field_r.d((byte) 47);
           return;
         }
-        ne.field_r.d((byte) 47);
+        MatchingTextValidator.field_r.d((byte) 47);
     }
 
     final static void a(int param0, bj param1, byte param2) {
@@ -120,7 +120,7 @@ final class un {
     }
 
     static {
-        field_f = new ia(1);
+        field_f = new MenuSelection(1);
         field_b = true;
         field_g = 0;
         field_c = new Sprite(540, 140);

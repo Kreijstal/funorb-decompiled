@@ -12,7 +12,7 @@ final class pa extends ob {
     final static boolean a(boolean param0, int param1, int param2, int param3) {
         if (null != PlasmaBallSkin.field_m) {
           if (PlasmaBallSkin.field_m.b((byte) 111)) {
-            wa.m(8421504);
+            ProgressDialog.m(8421504);
             return true;
           }
           if (param0) {
@@ -21,10 +21,10 @@ final class pa extends ob {
           if (null != fc.field_b &&
             fc.field_b.f(13)) {
             fc.field_b = null;
-            wa.m(8421504);
+            ProgressDialog.m(8421504);
             return true;
           }
-          if (sn.h(-3)) {
+          if (BirthDateValidator.h(-3)) {
             return true;
           }
           if (Pool.a(param3, param2, param1, -80)) {
@@ -36,10 +36,10 @@ final class pa extends ob {
           if (null != fc.field_b &&
             fc.field_b.f(13)) {
             fc.field_b = null;
-            wa.m(8421504);
+            ProgressDialog.m(8421504);
             return true;
           }
-          if (sn.h(-3)) {
+          if (BirthDateValidator.h(-3)) {
             return true;
           }
           if (Pool.a(param3, param2, param1, -80)) {
@@ -49,7 +49,7 @@ final class pa extends ob {
         }
         pa.f(118);
         if (null == fc.field_b) {
-          if (sn.h(-3)) {
+          if (BirthDateValidator.h(-3)) {
             return true;
           }
           if (Pool.a(param3, param2, param1, -80)) {
@@ -59,10 +59,10 @@ final class pa extends ob {
         }
         if (fc.field_b.f(13)) {
           fc.field_b = null;
-          wa.m(8421504);
+          ProgressDialog.m(8421504);
           return true;
         }
-        if (sn.h(-3)) {
+        if (BirthDateValidator.h(-3)) {
           return true;
         }
         if (!Pool.a(param3, param2, param1, -80)) {

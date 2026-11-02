@@ -30,7 +30,7 @@ final class en {
             return stackIn_32_0;
           }
           if (1 == var3) {
-            stackIn_37_0 = (param0 == er.field_W);
+            stackIn_37_0 = (param0 == DialWidget.field_W);
             return stackIn_37_0;
           }
           if (var3 == 2) {
@@ -54,7 +54,7 @@ final class en {
           return stackIn_5_0;
         }
         if (1 == var3Lifetime1) {
-          stackIn_10_0 = (param0 == er.field_W);
+          stackIn_10_0 = (param0 == DialWidget.field_W);
           return stackIn_10_0;
         }
         if (var3Lifetime1 == 2) {
@@ -76,7 +76,7 @@ final class en {
         if (param0 != 0) {
           return;
         }
-        if (ne.field_w != GameRules.field_b) {
+        if (MatchingTextValidator.field_w != GameRules.field_b) {
           SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 0);
           return;
         }

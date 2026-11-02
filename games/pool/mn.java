@@ -49,10 +49,10 @@ final class mn implements Iterator {
 
     final static boolean a(boolean param0) {
         if (param0) {
-          return !ig.field_j.a(114) ? true : false;
+          return !TextInputValidator.field_j.a(114) ? true : false;
         }
         mn.a(69);
-        return !ig.field_j.a(114) ? true : false;
+        return !TextInputValidator.field_j.a(114) ? true : false;
     }
 
     public final void remove() {

@@ -60,7 +60,7 @@ final class pn {
           if (param3 != 120) {
             field_i = (String[]) null;
           }
-          stackIn_6_0 = me.h(0);
+          stackIn_6_0 = EmailAvailabilityValidator.h(0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -98,7 +98,7 @@ final class pn {
             if (th.field_a != 2) {
               return 0;
             }
-            if (lq.a(this.field_q, -1)) {
+            if (DialogLayer.a(this.field_q, -1)) {
               return 1;
             }
             return 0;
@@ -108,7 +108,7 @@ final class pn {
         if (th.field_a != 2) {
           return 0;
         }
-        if (!lq.a(this.field_q, -1)) {
+        if (!DialogLayer.a(this.field_q, -1)) {
           return 0;
         }
         return 1;
@@ -120,12 +120,12 @@ final class pn {
         int var5 = 0;
         tf.field_d = true;
         t.field_b.field_nb = param1;
-        int var2_int = sh.field_P.field_e;
+        int var2_int = OpacityWidget.field_P.width;
         if (param0 != 75) {
           return;
         }
         try {
-          var3 = sh.field_P.field_k;
+          var3 = OpacityWidget.field_P.height;
           var4 = t.field_b.field_I.measureWrappedHeight(param1, 272, t.field_b.field_M);
           var5 = -(var4 / 2) + var3 / 2 - 103;
           ln.field_q.b(var5, param0 ^ 2147483572, (-320 + var2_int) / 2, 320, -(var5 * 2) - 120 + var3);
@@ -146,7 +146,7 @@ final class pn {
           this.field_d = ci.field_p;
         }
         this.field_f = np.field_a;
-        this.field_j = n.field_S;
+        this.field_j = LabeledChildWidget.field_S;
         this.field_g = qg.field_d;
         this.field_q = lh.field_f;
         this.field_h = df.field_e;

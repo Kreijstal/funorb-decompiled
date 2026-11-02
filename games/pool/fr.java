@@ -103,14 +103,14 @@ final class fr extends IntrusiveNode {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param0 <= -21) {
-          var3 = ir.field_h * ir.field_h;
+          var3 = BufferedFile.field_h * BufferedFile.field_h;
           var4 = var3 - param1 * param1;
           so.field_k.b(90, 2147483647, var2 - 199 * var4 / var3, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
           uq.field_f.b(0, 2147483647, 202 + (var2 + 438 * var4 / var3), 438, -120 + SoftwareRasterizer.height - 4);
           return;
         }
         field_s = -62;
-        var3Lifetime1 = ir.field_h * ir.field_h;
+        var3Lifetime1 = BufferedFile.field_h * BufferedFile.field_h;
         var4Lifetime1 = var3Lifetime1 - param1 * param1;
         so.field_k.b(90, 2147483647, var2 - 199 * var4Lifetime1 / var3Lifetime1, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
         uq.field_f.b(0, 2147483647, 202 + (var2 + 438 * var4Lifetime1 / var3Lifetime1), 438, -120 + SoftwareRasterizer.height - 4);
@@ -149,14 +149,14 @@ final class fr extends IntrusiveNode {
         int var3Lifetime1;
         int var4Lifetime1;
         if (param0 <= -21) {
-          var3 = ir.field_h * ir.field_h;
+          var3 = BufferedFile.field_h * BufferedFile.field_h;
           var4 = var3 - param1 * param1;
           so.field_k.b(90, 2147483647, var2 - 199 * var4 / var3, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
           uq.field_f.b(0, 2147483647, 202 + (var2 + 438 * var4 / var3), 438, -120 + SoftwareRasterizer.height - 4);
           return;
         }
         field_s = -62;
-        var3Lifetime1 = ir.field_h * ir.field_h;
+        var3Lifetime1 = BufferedFile.field_h * BufferedFile.field_h;
         var4Lifetime1 = var3Lifetime1 - param1 * param1;
         so.field_k.b(90, 2147483647, var2 - 199 * var4Lifetime1 / var3Lifetime1, 199, -90 + (-4 + (-120 + SoftwareRasterizer.height)));
         uq.field_f.b(0, 2147483647, 202 + (var2 + 438 * var4Lifetime1 / var3Lifetime1), 438, -120 + SoftwareRasterizer.height - 4);

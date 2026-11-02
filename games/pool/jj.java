@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jj extends fm implements tb {
-    private fe field_O;
+final class jj extends ArrayWidgetGroup implements ButtonActivationListener {
+    private ButtonWidget field_O;
     private co field_N;
     static String hidePlayersInXsGame;
     static Sprite[] field_S;
@@ -40,7 +40,7 @@ final class jj extends fm implements tb {
             stackIn_8_0 = la.field_h;
             return stackIn_8_0;
           }
-          var3 = jc.a(30634, param1, '.');
+          var3 = jc.splitString(30634, param1, '.');
           if (var3.length < 2) {
             stackIn_12_0 = uj.field_e;
             return stackIn_12_0;
@@ -78,13 +78,13 @@ final class jj extends fm implements tb {
     }
 
     jj(int param0, int param1, int param2, int param3) {
-        super(param0, param1, param2, param3, (fp) null);
+        super(param0, param1, param2, param3, (WidgetPainter) null);
         this.field_N = new co(new om(10000536), nm.field_b, 0, 0, 140, 25);
-        this.field_N.a(-15309, new sn());
-        this.field_O = new fe(fg.cont, (cc) (this));
-        this.field_L = new ei[]{(ei) ((Object) this.field_N), (ei) ((Object) this.field_O)};
-        this.field_O.field_z = (fp) ((Object) new ng());
-        this.e((byte) -72);
+        this.field_N.setBirthDateValidator(-15309, new BirthDateValidator());
+        this.field_O = new ButtonWidget(WeightedLruCache.cont, (WidgetListener) (this));
+        this.children = new UiWidget[]{(UiWidget) ((Object) this.field_N), (UiWidget) ((Object) this.field_O)};
+        this.field_O.renderer = (WidgetPainter) ((Object) new ng());
+        this.refreshLayout((byte) -72);
     }
 
     final static void h(int param0) {
@@ -103,21 +103,21 @@ final class jj extends fm implements tb {
         nm var9 = null;
         byte[] var10 = null;
         try {
-          var1_int = -kk.field_z + gp.field_c;
-          kk.field_z = -(var1_int >> 1) + ad.field_u;
-          gp.field_c = kk.field_z + var1_int;
-          ba.field_wb = m.field_f - (er.field_R >> 1);
-          var2 = ba.field_wb;
+          var1_int = -CacheEntry.field_z + gp.field_c;
+          CacheEntry.field_z = -(var1_int >> 1) + ad.field_u;
+          gp.field_c = CacheEntry.field_z + var1_int;
+          AccountContentDialog.field_wb = m.field_f - (DialWidget.field_R >> 1);
+          var2 = AccountContentDialog.field_wb;
           for (var3 = 0; var3 < qp.field_Sb.length; var3++) {
             var4 = ll.field_a[var3];
             if (var4 >= 0) {
-              if (un.field_f.field_h == var4) {
+              if (un.field_f.selectedIndex == var4) {
                 var5 = SocketConnector.field_d;
               } else {
                 var5 = hd.field_H;
               }
             } else {
-              var5 = lq.field_V;
+              var5 = DialogLayer.field_V;
             }
             var6 = qp.field_Sb[var3];
             stackIn_10_0 = !(var4 < 0);
@@ -125,7 +125,7 @@ final class jj extends fm implements tb {
             var8 = ad.field_u - (var7 >> 1);
             if (var4 >= 0) {
               var2 = var2 + bj.field_m;
-              if (un.field_f.field_h == var4) {
+              if (un.field_f.selectedIndex == var4) {
                 stackIn_15_0 = uk.field_d;
               } else {
                 stackIn_15_0 = rm.field_e;
@@ -156,10 +156,10 @@ final class jj extends fm implements tb {
         }
     }
 
-    final void a(ei param0, int param1, int param2, int param3) {
+    final void updatePointerState(UiWidget param0, int param1, int param2, int param3) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_O.field_I = this.field_N.a(param1 - 997).c(-31873) == ProxySocketConnector.field_e ? true : false;
+          super.updatePointerState(param0, param1, param2, param3);
+          this.field_O.enabled = this.field_N.getValidationProvider(param1 - 997).getDebouncedValidationState(-31873) == ProxySocketConnector.field_e ? true : false;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "jj.S(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -175,15 +175,15 @@ final class jj extends fm implements tb {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, fe param3, int param4) {
-        if (this.field_N.a(-41).c(-31873) != ProxySocketConnector.field_e) {
+    public final void onButtonActivated(boolean param0, int param1, int param2, ButtonWidget param3, int param4) {
+        if (this.field_N.getValidationProvider(-41).getDebouncedValidationState(-31873) != ProxySocketConnector.field_e) {
           return;
         }
         try {
           if (!param0) {
             jj.i(82);
           }
-          wm.a(-121, this.field_N.h(37), this.field_N.j(25), this.field_N.h((byte) -119));
+          wm.a(-121, this.field_N.getYear(37), this.field_N.getMonthIndex(25), this.field_N.getDay((byte) -119));
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "jj.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
@@ -221,19 +221,19 @@ final class jj extends fm implements tb {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
+    final void renderWidget(int param0, byte param1, int param2, int param3) {
         int var5 = 17 % ((-42 - param1) / 53);
-        super.a(param0, (byte) 110, param2, param3);
-        PoolUiText.field_a.d(bl.dobEnterforchat, this.field_C + (param2 + 4), 4 + (param3 + this.field_D) + PoolUiText.field_a.maxAscent, 16777215, -1);
+        super.renderWidget(param0, (byte) 110, param2, param3);
+        PoolUiText.field_a.d(bl.dobEnterforchat, this.widgetX + (param2 + 4), 4 + (param3 + this.widgetY) + PoolUiText.field_a.maxAscent, 16777215, -1);
     }
 
     final void f(byte param0) {
         int var2 = 250;
-        this.field_N.a(140, -var2 + this.field_l >> 1, 25, false, -25 + (20 + this.field_y) >> 1);
-        this.field_O.a(100, (this.field_l - var2 >> 1) + 140 + 10, 30, false, 2 + (this.field_y + 20 - 30 >> 1));
+        this.field_N.setWidgetBounds(140, -var2 + this.widgetWidth >> 1, 25, false, -25 + (20 + this.widgetHeight) >> 1);
+        this.field_O.setWidgetBounds(100, (this.widgetWidth - var2 >> 1) + 140 + 10, 30, false, 2 + (this.widgetHeight + 20 - 30 >> 1));
         if (param0 > -68) {
-          ei var3 = (ei) null;
-          this.a((ei) null, 99, -2, 11);
+          UiWidget var3 = (UiWidget) null;
+          this.updatePointerState((UiWidget) null, 99, -2, 11);
         }
     }
 

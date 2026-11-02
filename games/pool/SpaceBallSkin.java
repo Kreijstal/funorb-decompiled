@@ -12,11 +12,11 @@ final class SpaceBallSkin extends BallSkin {
         try {
           var1 = new Sprite(540, 140);
           int var2 = -31 / ((79 - param0) / 34);
-          kj.a(62, var1);
+          CueAim.a(62, var1);
           TriangleRasterizer.useRasterClip();
           SoftwareRasterizer.clear();
           im.field_fc = 0;
-          gi.a(-21818);
+          TextHotspotRegion.a(-21818);
           var3 = var1.d();
           for (var4 = 0; 15 > var4; var4++) {
             var3.f(-2, -2, 16777215);
@@ -94,11 +94,11 @@ final class SpaceBallSkin extends BallSkin {
 
     final String a(byte param0, int param1) {
         if (param0 >= 9) {
-          return param1 == 0 ? sn.ballsetSpaceGroup0 : dq.field_g;
+          return param1 == 0 ? BirthDateValidator.ballsetSpaceGroup0 : dq.field_g;
         }
         String var4 = (String) null;
         SpaceBallSkin.a(-24, 10, -99, 68, -80, 113, (String) null, 109, 92);
-        return param1 == 0 ? sn.ballsetSpaceGroup0 : dq.field_g;
+        return param1 == 0 ? BirthDateValidator.ballsetSpaceGroup0 : dq.field_g;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, String param6, int param7, int param8) {
@@ -138,7 +138,7 @@ final class SpaceBallSkin extends BallSkin {
 
     final static hj[] a(byte param0) {
         if (param0 == -32) {
-          return new hj[]{gr.field_G, lb.field_N, TranslatedUiText.field_g, kk.field_A, en.field_c, jk.field_i, no.field_g, of.field_Tb, mj.field_d, pf.field_e, Ball.field_J, ch.field_K, bq.field_r, pn.field_k};
+          return new hj[]{ArchiveRequest.field_G, lb.field_N, TranslatedUiText.field_g, CacheEntry.field_A, en.field_c, CueStick.field_i, no.field_g, of.field_Tb, mj.field_d, pf.field_e, Ball.field_J, WidgetContainer.field_K, bq.field_r, pn.field_k};
         }
         return (hj[]) null;
     }

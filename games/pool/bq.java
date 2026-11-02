@@ -66,12 +66,12 @@ final class bq extends IntrusiveNode {
           boolean decompiledFrameRemainder0 = true;
           boolean decompiledFrameCompleted0 = true;
           if ((param1 != 0 && (param1 <= 0 ||
-            !(kj.field_g[0].field_u > param6))) &&
-            (decompiledFrameRemainder0 = (kj.field_g[-1 + param1].field_u == param6))) {
+            !(CueAim.field_g[0].field_u > param6))) &&
+            (decompiledFrameRemainder0 = (CueAim.field_g[-1 + param1].field_u == param6))) {
             var7_int = 0;
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (var7_int >= param1))) {
-              var8_ref_sa = kj.field_g[var7_int];
+              var8_ref_sa = CueAim.field_g[var7_int];
               if (~var8_ref_sa.field_n != ~param5 &&
                 ~var8_ref_sa.field_i != ~param5 && (-1 == param3 ||
                 param3 != var8_ref_sa.field_n &&
@@ -88,7 +88,7 @@ final class bq extends IntrusiveNode {
               var10 = param3;
               var11 = param4;
               var12_int = param2;
-              var13 = kj.field_g[var7_int];
+              var13 = CueAim.field_g[var7_int];
               var13.field_n = (byte)var9;
               var13.field_u = var8;
               var13.field_i = (byte)var10;
@@ -106,7 +106,7 @@ final class bq extends IntrusiveNode {
                 var12_intLifetime1 = param3;
                 var13_int = param4;
                 var14 = param2;
-                var15 = kj.field_g[var9Lifetime2];
+                var15 = CueAim.field_g[var9Lifetime2];
                 var15.field_n = (byte)var11Lifetime2;
                 var15.field_i = (byte)var12_intLifetime1;
                 var15.field_x = (byte)var13_int;
@@ -121,7 +121,7 @@ final class bq extends IntrusiveNode {
                 var12_intLifetime1Lifetime1 = param3;
                 var13_intLifetime1 = param4;
                 var14Lifetime1 = param2;
-                var15Lifetime1 = kj.field_g[var9Lifetime2];
+                var15Lifetime1 = CueAim.field_g[var9Lifetime2];
                 var15Lifetime1.field_x = (byte)var13_intLifetime1;
                 var15Lifetime1.field_u = var10Lifetime2;
                 var15Lifetime1.field_n = (byte)var11Lifetime2;
@@ -140,7 +140,7 @@ final class bq extends IntrusiveNode {
             var9Lifetime1 = param3;
             var10Lifetime1 = param4;
             var11Lifetime1 = param2;
-            var12 = kj.field_g[0];
+            var12 = CueAim.field_g[0];
             var12.field_a = (byte)var11Lifetime1;
             var12.field_n = (byte)var8Lifetime1;
             var12.field_i = (byte)var9Lifetime1;

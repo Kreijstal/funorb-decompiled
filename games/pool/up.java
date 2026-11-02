@@ -23,7 +23,7 @@ final class up extends lh {
     private np field_n;
     private rn field_D;
     static String menuRematchGame;
-    private gr field_H;
+    private ArchiveRequest field_H;
     private byte[] field_o;
     private int field_x;
     private boolean field_B;
@@ -35,8 +35,8 @@ final class up extends lh {
 
     final void c(int param0) {
         int var3 = 0;
-        gr discarded$0 = null;
-        gr discarded$1 = null;
+        ArchiveRequest discarded$0 = null;
+        ArchiveRequest discarded$1 = null;
         int var4 = Pool.field_O;
         if (this.field_s == null) {
           return;
@@ -93,11 +93,11 @@ final class up extends lh {
         if (param0 != -18600) {
           this.a(100, (byte) -43);
         }
-        gr var3 = (gr) (this.field_G.a(false, (long)param1));
+        ArchiveRequest var3 = (ArchiveRequest) (this.field_G.a(false, (long)param1));
         if (var3 == null) {
           return 0;
         }
-        return var3.e(54);
+        return var3.getProgress(54);
     }
 
     final static String a(boolean param0, CharSequence param1, byte param2) {
@@ -127,7 +127,7 @@ final class up extends lh {
           var3_int = param1.length();
           if (var3_int >= 1 &&
             12 >= var3_int) {
-            var4 = hq.a(91, param1);
+            var4 = TutorialController.normalizeDisplayName(91, param1);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!qd.a(0, var4.charAt(0)) &&
@@ -240,12 +240,12 @@ final class up extends lh {
           if (this.field_r.b((byte) -125)) {
             return null;
           }
-          this.field_H = (gr) ((Object) this.field_r.a(this.field_k, 255, (byte) 0, true, -154018400));
+          this.field_H = (ArchiveRequest) ((Object) this.field_r.a(this.field_k, 255, (byte) 0, true, -154018400));
         }
-        if (this.field_H.field_F) {
+        if (this.field_H.pending) {
           return null;
         }
-        var7 = this.field_H.b(false);
+        var7 = this.field_H.getBytes(false);
         var6 = var7;
         var5 = var6;
         var2 = var5;
@@ -261,7 +261,7 @@ final class up extends lh {
             this.field_r.a((byte) -123);
             this.field_z = null;
             if (!this.field_r.b((byte) -125)) {
-              this.field_H = (gr) ((Object) this.field_r.a(this.field_k, 255, (byte) 0, true, -154018400));
+              this.field_H = (ArchiveRequest) ((Object) this.field_r.a(this.field_k, 255, (byte) 0, true, -154018400));
             } else {
               this.field_H = null;
             }
@@ -286,7 +286,7 @@ final class up extends lh {
             if (this.field_r.b((byte) -125)) {
               this.field_H = null;
             } else {
-              this.field_H = (gr) ((Object) this.field_r.a(this.field_k, 255, (byte) 0, true, -154018400));
+              this.field_H = (ArchiveRequest) ((Object) this.field_r.a(this.field_k, 255, (byte) 0, true, -154018400));
             }
             return null;
           }
@@ -315,7 +315,7 @@ final class up extends lh {
         }
     }
 
-    private final gr a(int param0, int param1, byte param2) {
+    private final ArchiveRequest a(int param0, int param1, byte param2) {
         Object stackIn_88_0 = null;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -327,7 +327,7 @@ final class up extends lh {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        gr var12 = null;
+        ArchiveRequest var12 = null;
         byte[] var13 = null;
         byte[] var18 = null;
         byte[] var27 = null;
@@ -335,15 +335,15 @@ final class up extends lh {
         byte[] var29 = null;
         byte[] var30 = null;
         var10 = Pool.field_O;
-        var12 = (gr) (this.field_G.a(false, (long)param0));
+        var12 = (ArchiveRequest) (this.field_G.a(false, (long)param0));
         var4 = var12;
         if (param2 != 25) {
-          return (gr) null;
+          return (ArchiveRequest) null;
         }
         if (var12 != null &&
           param1 == 0 &&
           !var12.field_x &&
-          var12.field_F) {
+          var12.pending) {
           var12.unlink((byte) -117);
           var4 = null;
         }
@@ -382,10 +382,10 @@ final class up extends lh {
           }
           this.field_G.a((byte) -114, (IntrusiveNode) (var4), (long)param0);
         }
-        if (((gr) (var4)).field_F) {
+        if (((ArchiveRequest) (var4)).pending) {
           return null;
         }
-        var18 = ((gr) (var4)).b(false);
+        var18 = ((ArchiveRequest) (var4)).getBytes(false);
         var13 = var18;
         var5 = var13;
         if (var4 instanceof dg) {
@@ -420,19 +420,19 @@ final class up extends lh {
                 }
                 this.field_E[param0] = (byte) 1;
               }
-              if (!((gr) (var4)).field_x) {
-                ((gr) (var4)).unlink((byte) -117);
+              if (!((ArchiveRequest) (var4)).field_x) {
+                ((ArchiveRequest) (var4)).unlink((byte) -117);
               }
               stackIn_88_0 = var4;
-              return (gr) (stackIn_88_0);
+              return (ArchiveRequest) (stackIn_88_0);
             }
             throw new RuntimeException();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_E[param0] = (byte)-1;
-            ((gr) (var4)).unlink((byte) -117);
-            if (!((gr) (var4)).field_x) {
+            ((ArchiveRequest) (var4)).unlink((byte) -117);
+            if (!((ArchiveRequest) (var4)).field_x) {
               return null;
             }
             if (!this.field_r.b((byte) -125)) {
@@ -470,8 +470,8 @@ final class up extends lh {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_r.a((byte) -53);
-          ((gr) (var4)).unlink((byte) -117);
-          if (!((gr) (var4)).field_x) {
+          ((ArchiveRequest) (var4)).unlink((byte) -117);
+          if (!((ArchiveRequest) (var4)).field_x) {
             return null;
           }
           if (this.field_r.b((byte) -125)) {
@@ -489,19 +489,19 @@ final class up extends lh {
             this.field_E[param0] = (byte) 1;
           }
         }
-        if (!((gr) (var4)).field_x) {
-          ((gr) (var4)).unlink((byte) -117);
+        if (!((ArchiveRequest) (var4)).field_x) {
+          ((ArchiveRequest) (var4)).unlink((byte) -117);
         }
-        return (gr) (var4);
+        return (ArchiveRequest) (var4);
     }
 
     final void c(byte param0) {
-        gr discarded$1 = null;
-        gr discarded$0 = null;
-        gr discarded$3 = null;
-        gr discarded$2 = null;
+        ArchiveRequest discarded$1 = null;
+        ArchiveRequest discarded$0 = null;
+        ArchiveRequest discarded$3 = null;
+        ArchiveRequest discarded$2 = null;
         int var2_int;
-        gr var2;
+        ArchiveRequest var2;
         IntrusiveNode var3;
         int var4;
         int var5;
@@ -618,9 +618,9 @@ final class up extends lh {
           var2_intLifetime2 = 86 % ((param0 - 82) / 40);
           return;
         }
-        var2 = (gr) (this.field_G.a(0));
+        var2 = (ArchiveRequest) (this.field_G.a(0));
         while (var2 != null) {
-          if (!var2.field_F) {
+          if (!var2.pending) {
             if (!var2.field_C) {
               var2.field_C = true;
             } else {
@@ -630,7 +630,7 @@ final class up extends lh {
               var2.unlink((byte) -117);
             }
           }
-          var2 = (gr) (this.field_G.b(-1));
+          var2 = (ArchiveRequest) (this.field_G.b(-1));
         }
         this.field_F = rl.a((byte) -107) + 1000L;
         var2_intLifetime3 = 86 % ((param0 - 82) / 40);
@@ -639,12 +639,12 @@ final class up extends lh {
 
     final byte[] a(int param0, byte param1) {
         byte[] var4 = null;
-        gr var3 = this.a(param0, 0, (byte) 25);
+        ArchiveRequest var3 = this.a(param0, 0, (byte) 25);
         if (var3 == null) {
           return null;
         }
         if (param1 == 19) {
-          var4 = var3.b(false);
+          var4 = var3.getBytes(false);
           var3.unlink((byte) -117);
           return var4;
         }
@@ -688,7 +688,7 @@ final class up extends lh {
           this.field_r = param3;
           this.field_D = param4;
           if (this.field_n != null) {
-            this.field_H = (gr) ((Object) this.field_D.a(92, this.field_n, this.field_k));
+            this.field_H = (ArchiveRequest) ((Object) this.field_D.a(92, this.field_n, this.field_k));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

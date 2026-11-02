@@ -408,11 +408,11 @@ final class rk {
               var12.field_lc.field_K = var24_int;
               if (DualLinkDeque.field_f != param2) {
                 if (var12.field_mc) {
-                  var12.field_ac.field_nb = nr.a(new String[]{var20}, -1, IntrusiveNode.invitingX);
+                  var12.field_ac.field_nb = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20}, -1, IntrusiveNode.invitingX);
                   var12.field_Zb.field_nb = be.cancel;
                 } else {
                   if (var12.field_Yb) {
-                    var12.field_ac.field_nb = nr.a(new String[]{var20}, -1, dj.xWantsToJoin);
+                    var12.field_ac.field_nb = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20}, -1, dj.xWantsToJoin);
                     var12.field_lc.field_nb = ie.accept;
                     var12.field_Zb.field_nb = qa.reject;
                   } else {
@@ -429,7 +429,7 @@ final class rk {
                 TikiTableScene.e((byte) 85) &&
                 var12.field_Sb != ve.field_m) {
                 if (null != var12.field_lc.field_nb) {
-                  var26 = var12.field_lc.b(true) + kj.field_j * 2;
+                  var26 = var12.field_lc.b(true) + CueAim.field_j * 2;
                   var12.field_lc.b(var19, 2147483647, var25_int, var26, ad.field_x);
                   var25_int = var25_int + var26;
                 }
@@ -437,7 +437,7 @@ final class rk {
                   if (param2 == DualLinkDeque.field_f) {
                     var26Lifetime2 = 40;
                   } else {
-                    var26Lifetime2 = var12.field_Zb.b(true) + kj.field_j * 2;
+                    var26Lifetime2 = var12.field_Zb.b(true) + CueAim.field_j * 2;
                   }
                   var12.field_Zb.b(var19, 2147483647, var25_int, var26Lifetime2, ad.field_x);
                   var25_int = var25_int + var26Lifetime2;
@@ -457,16 +457,16 @@ final class rk {
               var12.field_Tb.b(var19, param4 - 2147483566, -40 + var12.field_gb, 40, ad.field_x);
               if (var12.field_ac.field_W &&
                 var22 != 0) {
-                kk.field_B = var12.field_jc;
+                CacheEntry.field_B = var12.field_jc;
                 if (null != lo.field_c &&
                   null != lo.field_c[var12.field_bc]) {
-                  kk.field_B = kk.field_B + " - " + lo.field_c[var12.field_bc];
+                  CacheEntry.field_B = CacheEntry.field_B + " - " + lo.field_c[var12.field_bc];
                 }
               } else {
                 if (var12.field_ac.field_W &&
                   null != lo.field_c &&
                   lo.field_c[var12.field_bc] != null) {
-                  kk.field_B = lo.field_c[var12.field_bc];
+                  CacheEntry.field_B = lo.field_c[var12.field_bc];
                 }
               }
               var19 = var19 + ad.field_x;
@@ -477,10 +477,10 @@ final class rk {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_kc.field_I.countWrappedLines(var23, -kj.field_j + (var12.field_gb - kj.field_j));
+              var24_intLifetime1 = var12.field_kc.field_I.countWrappedLines(var23, -CueAim.field_j + (var12.field_gb - CueAim.field_j));
               var12.field_kc.field_Eb = var12.field_gc * 256 / mq.field_f;
               var12.field_kc.field_nb = var23;
-              var12.field_kc.b(var19, 2147483647, kj.field_j, -(2 * kj.field_j) + var12.field_gb, ad.field_x * var24_intLifetime1);
+              var12.field_kc.b(var19, 2147483647, CueAim.field_j, -(2 * CueAim.field_j) + var12.field_gb, ad.field_x * var24_intLifetime1);
               var19 = var19 + ad.field_x * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {
@@ -492,12 +492,12 @@ final class rk {
             if (var12.field_R != 0 &&
               !var12.c(true)) {
               if (0 != var12.field_lc.field_R) {
-                k.a(param3, (byte) -127, var12.field_Sb);
+                DropTargetWidget.a(param3, (byte) -127, var12.field_Sb);
               } else {
                 if (0 == var12.field_Zb.field_R) {
-                  ob.a(0, param2, 0, param4 ^ -9770, ua.field_o, lq.field_W, var12);
+                  ob.a(0, param2, 0, param4 ^ -9770, UsernameAvailabilityValidator.field_o, DialogLayer.field_W, var12);
                 } else {
-                  jk.a(var12.field_Sb, param3, 0);
+                  CueStick.a(var12.field_Sb, param3, 0);
                 }
               }
             }
@@ -511,7 +511,7 @@ final class rk {
               if (var12.field_Sb == ve.field_m) {
                 if (var5_int != 0 &&
                   !var12.field_Pb) {
-                  var24Lifetime2 = nr.gameoptYounotmember;
+                  var24Lifetime2 = AccountWelcomePanel.gameoptYounotmember;
                   var30Lifetime1 = var24Lifetime2;
                   var25 = var30Lifetime1;
                   var24Lifetime2 = var25;
@@ -523,19 +523,19 @@ final class rk {
                     if (var25_int == 1) {
                       var24Lifetime2 = rf.gameoptYouneed1ratedgame;
                     }
-                    var24Lifetime2 = nr.a(new String[]{null, Integer.toString(var25_int)}, -1, vm.gameoptYouneedratedgames);
+                    var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{null, Integer.toString(var25_int)}, -1, vm.gameoptYouneedratedgames);
                   } else {
                     if (var12.field_Rb < var6) {
-                      var24Lifetime2 = nr.a(new String[]{null, Integer.toString(var6)}, -1, ld.gameoptYouneedrating);
+                      var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{null, Integer.toString(var6)}, -1, ld.gameoptYouneedrating);
                     } else {
                       if ((var8 & ~var12.field_Nb) != 0) {
                         var25_int = s.a(~var12.field_Nb & var8, (byte) 111);
                         var24Lifetime2 = Pocket.gameoptYouhaventunlocked;
                         if (var25_int > 0 &&
-                          null != fg.field_f &&
-                          fg.field_f.length >= var25_int &&
-                          fg.field_f[var25_int - 1] != null) {
-                          var24Lifetime2 = fg.field_f[var25_int - 1][1];
+                          null != WeightedLruCache.field_f &&
+                          WeightedLruCache.field_f.length >= var25_int &&
+                          WeightedLruCache.field_f[var25_int - 1] != null) {
+                          var24Lifetime2 = WeightedLruCache.field_f[var25_int - 1][1];
                         }
                       }
                     }
@@ -544,29 +544,29 @@ final class rk {
               } else {
                 if (var5_int != 0 &&
                   !var12.field_Pb) {
-                  var24Lifetime2 = nr.a(new String[]{var20}, -1, dq.gameoptPlayernotmember);
+                  var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20}, -1, dq.gameoptPlayernotmember);
                 } else {
                   if (var7 <= var12.field_Xb) {
                     if (var6 <= var12.field_Rb) {
                       if ((var8 & ~var12.field_Nb) != 0) {
                         var25_int = s.a(~var12.field_Nb & var8, (byte) 100);
-                        var24Lifetime2 = nr.a(new String[]{var20}, -1, en.gameoptPlayerhasntunlocked);
+                        var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20}, -1, en.gameoptPlayerhasntunlocked);
                         if (var25_int > 0 &&
-                          fg.field_f != null &&
-                          var25_int <= fg.field_f.length &&
-                          null != fg.field_f[-1 + var25_int]) {
-                          var24Lifetime2 = nr.a(new String[]{var20}, -1, fg.field_f[var25_int - 1][2]);
+                          WeightedLruCache.field_f != null &&
+                          var25_int <= WeightedLruCache.field_f.length &&
+                          null != WeightedLruCache.field_f[-1 + var25_int]) {
+                          var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20}, -1, WeightedLruCache.field_f[var25_int - 1][2]);
                         }
                       }
                     } else {
-                      var24Lifetime2 = nr.a(new String[]{var20, Integer.toString(var6)}, -1, jq.gameoptPlayerneedsrating);
+                      var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20, Integer.toString(var6)}, -1, jq.gameoptPlayerneedsrating);
                     }
                   } else {
                     var25_int = -var12.field_Xb + var7;
                     if (1 == var25_int) {
-                      var24Lifetime2 = nr.a(new String[]{var20}, -1, jd.gameoptPlayerneeds1ratedgame);
+                      var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20}, -1, jd.gameoptPlayerneeds1ratedgame);
                     }
-                    var24Lifetime2 = nr.a(new String[]{var20, Integer.toString(var25_int)}, -1, sm.gameoptPlayerneedsratedgames);
+                    var24Lifetime2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var20, Integer.toString(var25_int)}, -1, sm.gameoptPlayerneedsratedgames);
                   }
                 }
               }
@@ -635,13 +635,13 @@ final class rk {
                 if (param2 == DualLinkDeque.field_f &&
                   TikiTableScene.e((byte) 85)) {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var35 + "<br>" + nr.a(new String[]{(String) (var25)}, -1, ii.gameoptTrychanging1);
+                    var24Lifetime2 = var35 + "<br>" + AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var25)}, -1, ii.gameoptTrychanging1);
                   } else {
                     var24Lifetime2 = var35 + "<br>" + Quaternion.gameoptTrychanging2 + (String) (var25);
                   }
                 } else {
                   if (var26Lifetime1 == 0) {
-                    var24Lifetime2 = var35 + "<br>" + nr.a(new String[]{(String) (var25)}, -1, sf.gameoptNeedchanging1);
+                    var24Lifetime2 = var35 + "<br>" + AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var25)}, -1, sf.gameoptNeedchanging1);
                   } else {
                     var24Lifetime2 = var35 + "<br>" + tp.gameoptNeedchanging2 + (String) (var25);
                   }
@@ -649,9 +649,9 @@ final class rk {
                 if (param2 == DualLinkDeque.field_f &&
                   !TikiTableScene.e((byte) 85)) {
                   var27 = em.field_L.field_Ob;
-                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + nr.a(new String[]{var27}, param4 ^ 82, ke.gameoptMightchange);
+                  var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + AccountWelcomePanel.substituteTemplateArguments(new String[]{var27}, param4 ^ 82, LoginTextValue.gameoptMightchange);
                 }
-                kk.field_B = (String) (var24Lifetime2);
+                CacheEntry.field_B = (String) (var24Lifetime2);
               }
             }
             var11 = var12;
@@ -1000,9 +1000,9 @@ final class rk {
               for (var5_int = 0; var5_int < of.field_Pb; var5_int++) {
                 kn.field_e.payload[var5_int] = var4_ref_fr.field_l[var5_int];
               }
-              hb.field_e = vd.field_g;
-              vd.field_g = ia.field_l;
-              ia.field_l = uq.field_c;
+              NodeHashTableIterator.field_e = vd.field_g;
+              vd.field_g = MenuSelection.field_l;
+              MenuSelection.field_l = uq.field_c;
               uq.field_c = var4_ref_fr.field_r;
               return true;
             }
@@ -1024,7 +1024,7 @@ final class rk {
           while (true) {
             if (stackIn_17_0 < 0) {
               kn.field_e.position = 0;
-              if (!lq.b((byte) 107, 1)) {
+              if (!DialogLayer.b((byte) 107, 1)) {
                 return false;
               }
               wq.field_b = kn.field_e.q(param0 + 107);
@@ -1035,16 +1035,16 @@ final class rk {
               return false;
             }
             if (ii.field_d == 0) {
-              hb.field_e = vd.field_g;
-              vd.field_g = ia.field_l;
-              ia.field_l = uq.field_c;
+              NodeHashTableIterator.field_e = vd.field_g;
+              vd.field_g = MenuSelection.field_l;
+              MenuSelection.field_l = uq.field_c;
               uq.field_c = wq.field_b;
               wq.field_b = -1;
               return true;
             }
             var4 = ii.field_d;
             if (hn.field_a != 0.0) {
-              var4 = (int)((double)var4 + lc.field_P.nextGaussian() * hn.field_a);
+              var4 = (int)((double)var4 + ValidationIconWidget.field_P.nextGaussian() * hn.field_a);
               if (var4 < 0) {
                 var4 = 0;
               }

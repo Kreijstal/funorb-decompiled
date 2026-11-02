@@ -85,7 +85,7 @@ final class ar implements eb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         try {
-          var4 = lq.field_T;
+          var4 = DialogLayer.field_T;
           var1 = var4;
           var2 = 0;
           var3 = var4.length;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dg extends gr {
+final class dg extends ArchiveRequest {
     int field_N;
     static int[] field_K;
     np field_R;
@@ -30,8 +30,8 @@ final class dg extends gr {
         statusPlaying = null;
     }
 
-    final byte[] b(boolean param0) {
-        if (this.field_F) {
+    final byte[] getBytes(boolean param0) {
+        if (this.pending) {
           throw new RuntimeException();
         }
         if (!param0) {
@@ -70,8 +70,8 @@ final class dg extends gr {
         return param2;
     }
 
-    final int e(int param0) {
-        if (this.field_F) {
+    final int getProgress(int param0) {
+        if (this.pending) {
           return 0;
         }
         if (param0 <= 6) {

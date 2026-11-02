@@ -29,7 +29,7 @@ class vh extends o {
     int field_eb;
     int field_Eb;
     boolean field_J;
-    static hq field_Ab;
+    static TutorialController field_Ab;
     private int field_vb;
     Sprite field_xb;
     String field_kb;
@@ -637,18 +637,18 @@ class vh extends o {
         var13 = 0;
         if (!rc.field_d &&
           param1 &&
-          0 != ne.field_s &&
-          SoftwareRasterizer.clipLeft <= lq.field_W &&
-          lq.field_W < SoftwareRasterizer.clipRight &&
-          SoftwareRasterizer.clipTop <= ua.field_o &&
-          SoftwareRasterizer.clipBottom > ua.field_o) {
-          this.field_Hb = ua.field_o - this.field_ib;
+          0 != MatchingTextValidator.field_s &&
+          SoftwareRasterizer.clipLeft <= DialogLayer.field_W &&
+          DialogLayer.field_W < SoftwareRasterizer.clipRight &&
+          SoftwareRasterizer.clipTop <= UsernameAvailabilityValidator.field_o &&
+          SoftwareRasterizer.clipBottom > UsernameAvailabilityValidator.field_o) {
+          this.field_Hb = UsernameAvailabilityValidator.field_o - this.field_ib;
           var13 = 1;
-          this.field_R = ne.field_s;
-          this.field_mb = lq.field_W - this.field_sb;
-          this.field_jb = ne.field_s;
+          this.field_R = MatchingTextValidator.field_s;
+          this.field_mb = DialogLayer.field_W - this.field_sb;
+          this.field_jb = MatchingTextValidator.field_s;
         } else {
-          if (0 != ne.field_s) {
+          if (0 != MatchingTextValidator.field_s) {
             this.field_jb = 0;
           }
           this.field_R = 0;
@@ -656,7 +656,7 @@ class vh extends o {
         if (0 == cd.field_b) {
           this.field_jb = 0;
         }
-        stackIn_33_1 = (!cl.field_f) && (SoftwareRasterizer.clipLeft <= wn.field_i) && (wn.field_i < SoftwareRasterizer.clipRight) && (gg.field_f >= SoftwareRasterizer.clipTop) && (SoftwareRasterizer.clipBottom > gg.field_f);
+        stackIn_33_1 = (!cl.field_f) && (SoftwareRasterizer.clipLeft <= wn.field_i) && (wn.field_i < SoftwareRasterizer.clipRight) && (DebouncedValidationProvider.field_f >= SoftwareRasterizer.clipTop) && (SoftwareRasterizer.clipBottom > DebouncedValidationProvider.field_f);
         this.field_db = stackIn_33_1;
         stackIn_38_1 = (this.field_db) && (this.field_jb == cd.field_b) && (param1);
         this.field_W = stackIn_38_1;
@@ -677,7 +677,7 @@ class vh extends o {
         if (this.field_jb != 0 &&
           this.field_Jb) {
           this.field_qb = -param5 + (wn.field_i - this.field_mb);
-          this.field_eb = -param0 + (gg.field_f - this.field_Hb);
+          this.field_eb = -param0 + (DebouncedValidationProvider.field_f - this.field_Hb);
           if (this.field_qb < 0) {
             this.field_qb = 0;
           }
@@ -742,7 +742,7 @@ class vh extends o {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 >= -28) {
-            field_Ab = (hq) null;
+            field_Ab = (TutorialController) null;
           }
           if (vj.a(param0, param1, param3, (byte) 121)) {
             stackIn_6_0 = aj.f((byte) 89);

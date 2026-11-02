@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class co extends eq {
-    private sl field_bb;
-    private sl field_eb;
-    private sl field_Z;
+final class co extends DateInputWidget {
+    private TextInputWidget field_bb;
+    private TextInputWidget field_eb;
+    private TextInputWidget field_Z;
     static int field_db;
     private boolean field_cb;
     static int[] field_ab;
@@ -90,15 +90,15 @@ final class co extends eq {
         field_ab = null;
     }
 
-    final int j(int param0) {
+    final int getMonthIndex(int param0) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
         if (param0 != 25) {
-          this.h((byte) 122);
+          this.getDay((byte) 122);
         }
         try {
-          stackIn_3_0 = Integer.parseInt(this.field_bb.field_m) - 1;
+          stackIn_3_0 = Integer.parseInt(this.field_bb.widgetText) - 1;
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,23 +107,23 @@ final class co extends eq {
         }
     }
 
-    final boolean g(byte param0) {
-        if (null == this.field_Z.field_m) {
+    final boolean isDateIncomplete(byte param0) {
+        if (null == this.field_Z.widgetText) {
           return true;
         }
-        if (this.field_Z.field_m.length() == 0) {
+        if (this.field_Z.widgetText.length() == 0) {
           return true;
         }
-        if (null == this.field_bb.field_m) {
+        if (null == this.field_bb.widgetText) {
           return true;
         }
-        if (this.field_bb.field_m.length() == 0) {
+        if (this.field_bb.widgetText.length() == 0) {
           return true;
         }
-        if (null == this.field_eb.field_m) {
+        if (null == this.field_eb.widgetText) {
           return true;
         }
-        if (this.field_eb.field_m.length() == 0) {
+        if (this.field_eb.widgetText.length() == 0) {
           return true;
         }
         if (param0 == 114) {
@@ -133,52 +133,52 @@ final class co extends eq {
         return false;
     }
 
-    final String e(int param0) {
+    final String getHoverText(int param0) {
         if (param0 > -10) {
           return (String) null;
         }
-        String var2 = this.field_bb.e(-122);
+        String var2 = this.field_bb.getHoverText(-122);
         if (var2 != null) {
           return var2;
         }
-        if (this.field_s) {
-          return this.field_p == null ? this.field_m : this.field_p;
+        if (this.pointerInside) {
+          return this.hoverText == null ? this.widgetText : this.hoverText;
         }
         return null;
     }
 
-    co(fp param0, boolean param1, int param2, int param3, int param4, int param5) {
+    co(WidgetPainter param0, boolean param1, int param2, int param3, int param4, int param5) {
         this(param0, param1);
         try {
-          this.a(param4, param2, param5, false, param3);
+          this.setWidgetBounds(param4, param2, param5, false, param3);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "co.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, boolean param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setWidgetBounds(int param0, int param1, int param2, boolean param3, int param4) {
+        super.setWidgetBounds(param0, param1, param2, param3, param4);
         int var6 = -130 + param0 >> 1;
         if (!this.field_cb) {
-          this.field_Z.a(25, var6, param2, false, 0);
-          this.field_bb.a(25, var6 + 45, param2, false, 0);
-          this.field_eb.a(40, var6 + 90, param2, false, 0);
+          this.field_Z.setWidgetBounds(25, var6, param2, false, 0);
+          this.field_bb.setWidgetBounds(25, var6 + 45, param2, false, 0);
+          this.field_eb.setWidgetBounds(40, var6 + 90, param2, false, 0);
           return;
         }
-        this.field_bb.a(25, var6, param2, false, 0);
-        this.field_Z.a(25, 45 + var6, param2, param3, 0);
-        this.field_eb.a(40, var6 + 90, param2, false, 0);
+        this.field_bb.setWidgetBounds(25, var6, param2, false, 0);
+        this.field_Z.setWidgetBounds(25, 45 + var6, param2, param3, 0);
+        this.field_eb.setWidgetBounds(40, var6 + 90, param2, false, 0);
     }
 
-    final int h(int param0) {
+    final int getYear(int param0) {
         NumberFormatException var2 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
         try {
           if (param0 <= 13) {
-            this.field_Z = (sl) null;
+            this.field_Z = (TextInputWidget) null;
           }
-          stackIn_3_0 = Integer.parseInt(this.field_eb.field_m);
+          stackIn_3_0 = Integer.parseInt(this.field_eb.widgetText);
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -187,51 +187,51 @@ final class co extends eq {
         }
     }
 
-    final void a(int param0, sn param1) {
+    final void setBirthDateValidator(int param0, BirthDateValidator param1) {
         try {
-          super.a(param0, param1);
-          this.field_Z.field_t = (cc) ((Object) param1);
-          this.field_bb.field_t = (cc) ((Object) param1);
-          this.field_eb.field_t = (cc) ((Object) param1);
+          super.setBirthDateValidator(param0, param1);
+          this.field_Z.listener = (WidgetListener) ((Object) param1);
+          this.field_bb.listener = (WidgetListener) ((Object) param1);
+          this.field_eb.listener = (WidgetListener) ((Object) param1);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "co.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private co(fp param0, boolean param1) {
-        super(0, 0, 0, 0, (fp) null);
+    private co(WidgetPainter param0, boolean param1) {
+        super(0, 0, 0, 0, (WidgetPainter) null);
         try {
-          this.field_Z = (sl) ((Object) new ga("", (cc) null, 2));
-          this.field_bb = (sl) ((Object) new ga("", (cc) null, 2));
-          this.field_eb = (sl) ((Object) new ga("", (cc) null, 4));
+          this.field_Z = (TextInputWidget) ((Object) new ga("", (WidgetListener) null, 2));
+          this.field_bb = (TextInputWidget) ((Object) new ga("", (WidgetListener) null, 2));
+          this.field_eb = (TextInputWidget) ((Object) new ga("", (WidgetListener) null, 4));
           this.field_cb = param1 ? true : false;
-          this.field_eb.field_z = param0;
-          this.field_bb.field_z = param0;
-          this.field_Z.field_z = param0;
+          this.field_eb.renderer = param0;
+          this.field_bb.renderer = param0;
+          this.field_Z.renderer = param0;
           if (!this.field_cb) {
-            this.a(true, this.field_Z);
-            this.a(true, this.field_bb);
+            this.addChild(true, this.field_Z);
+            this.addChild(true, this.field_bb);
           } else {
-            this.a(true, this.field_bb);
-            this.a(true, this.field_Z);
+            this.addChild(true, this.field_bb);
+            this.addChild(true, this.field_Z);
           }
-          this.a(true, this.field_eb);
+          this.addChild(true, this.field_eb);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "co.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final int h(byte param0) {
+    final int getDay(byte param0) {
         NumberFormatException var2 = null;
-        sn var3 = null;
+        BirthDateValidator var3 = null;
         int stackIn_3_0 = 0;
         Throwable decompiledCaughtException = null;
         if (param0 != -119) {
-          var3 = (sn) null;
-          this.a(-106, (sn) null);
+          var3 = (BirthDateValidator) null;
+          this.setBirthDateValidator(-106, (BirthDateValidator) null);
         }
         try {
-          stackIn_3_0 = Integer.parseInt(this.field_Z.field_m);
+          stackIn_3_0 = Integer.parseInt(this.field_Z.widgetText);
           return stackIn_3_0;
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -240,25 +240,25 @@ final class co extends eq {
         }
     }
 
-    final void a(int param0, byte param1, int param2, int param3) {
-        super.a(param0, (byte) -104, param2, param3);
+    final void renderWidget(int param0, byte param1, int param2, int param3) {
+        super.renderWidget(param0, (byte) -104, param2, param3);
         if (param0 != 0) {
           return;
         }
-        param3 = param3 + this.field_D;
-        param2 = param2 + this.field_C;
+        param3 = param3 + this.widgetY;
+        param2 = param2 + this.widgetX;
         int var5 = 30 % ((-42 - param1) / 53);
         this.a(param2, param3, 75, this.field_Z, dp.day);
         this.a(param2, param3, 114, this.field_bb, pc.month);
         this.a(param2, param3, 91, this.field_eb, bb.year);
     }
 
-    private final void a(int param0, int param1, int param2, ei param3, String param4) {
+    private final void a(int param0, int param1, int param2, UiWidget param3, String param4) {
         if (param2 <= 65) {
           return;
         }
         try {
-          PoolUiText.field_a.drawCentered(param4, (param3.field_l >> 1) + param0 + param3.field_C, -5 + (param3.field_D + param1), 16777215, -1);
+          PoolUiText.field_a.drawCentered(param4, (param3.widgetWidth >> 1) + param0 + param3.widgetX, -5 + (param3.widgetY + param1), 16777215, -1);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "co.N(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

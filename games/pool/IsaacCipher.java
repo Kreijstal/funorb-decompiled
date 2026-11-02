@@ -251,7 +251,7 @@ final class IsaacCipher {
               var2_int++;
             }
           }
-          param0.field_o = sh.a((byte) 60, param0.field_o, var2_int);
+          param0.field_o = OpacityWidget.a((byte) 60, param0.field_o, var2_int);
           param0.field_p = ap.a(param0.field_p, (byte) -73, var2_int * 3);
           param0.field_H = ap.a(param0.field_H, (byte) -73, var2_int * 3);
           param0.field_C = ap.a(param0.field_C, (byte) -73, var2_int * 3);
@@ -384,22 +384,22 @@ final class IsaacCipher {
           }
           var4 = (ShotRecord) (var3.b((byte) -92));
           while (var4 != null) {
-            var5.a(true, var4.field_v);
-            var5.a(var4.field_L, false);
-            var5.writeShort((byte) -81, var4.field_M);
-            var5.a(true, var4.field_P);
-            var5.a(true, var4.field_Q);
-            var5.writeShort((byte) -81, (int) var4.field_C);
-            var5.writeShort((byte) -81, (int) var4.field_A);
-            var5.writeShort((byte) -81, (int) var4.field_V);
+            var5.a(true, var4.shotNumber);
+            var5.a(var4.playerIndex, false);
+            var5.writeShort((byte) -81, var4.breakSeed);
+            var5.a(true, var4.cueBallX);
+            var5.a(true, var4.cueBallY);
+            var5.writeShort((byte) -81, (int) var4.aimAngle);
+            var5.writeShort((byte) -81, (int) var4.elevation);
+            var5.writeShort((byte) -81, (int) var4.power);
             var5.a((int) var4.field_D, false);
             var5.a((int) var4.field_H, false);
-            var5.a(var4.field_q, false);
-            if (var4.field_q >= 2) {
-              var4.b(var5, (byte) -122);
+            var5.a(var4.phase, false);
+            if (var4.phase >= 2) {
+              var4.writeEndResolution(var5, (byte) -122);
               var5.writeLong(var4.field_x, (byte) -122);
             }
-            if (var4.field_q >= 3) {
+            if (var4.phase >= 3) {
               var4.a(var5, (byte) 0);
             }
             var4 = (ShotRecord) (var3.b(-126));

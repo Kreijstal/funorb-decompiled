@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class ga extends sl implements sc {
-    private ip field_ab;
+final class ga extends TextInputWidget implements ValidationProviderSource {
+    private ValidationProvider field_ab;
     private int field_bb;
 
-    final void i(int param0) {
+    final void notifyTextInputChanged(int param0) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.i(-74);
+          super.notifyTextInputChanged(-74);
           var2_int = 101 % ((28 - param0) / 49);
           if (null != this.field_ab) {
-            this.field_ab.b(11755);
+            this.field_ab.resetValidationDelay(11755);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -25,7 +25,7 @@ final class ga extends sl implements sc {
         }
     }
 
-    final void a(byte param0, ip param1) {
+    final void a(byte param0, ValidationProvider param1) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -51,19 +51,19 @@ final class ga extends sl implements sc {
         }
     }
 
-    final String e(int param0) {
+    final String getHoverText(int param0) {
         RuntimeException var2 = null;
         Object stackIn_5_0 = null;
         String stackIn_10_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_s &&
-            null != this.field_p) {
+          if (this.pointerInside &&
+            null != this.hoverText) {
             if (param0 > -10) {
-              this.e(39);
+              this.getHoverText(39);
             }
-            te.a((byte) -39, gg.field_f, wn.field_i - this.field_bb + this.field_l);
-            stackIn_10_0 = this.field_p;
+            te.a((byte) -39, DebouncedValidationProvider.field_f, wn.field_i - this.field_bb + this.widgetWidth);
+            stackIn_10_0 = this.hoverText;
             return stackIn_10_0;
           }
           stackIn_5_0 = null;
@@ -80,7 +80,7 @@ final class ga extends sl implements sc {
           be.f(-1);
           DualLinkDeque.field_c = true;
           ro.field_e = true;
-          wd.field_Ub.k(-22216);
+          wd.field_Ub.hideAllDialogs(-22216);
           wf.a(param0, na.connectionlostReconnecting, -127);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ga.LA(" + param0 + ')');
@@ -114,7 +114,7 @@ final class ga extends sl implements sc {
           if (var2 == 0) {
             if (gd.field_c == null) {
               gd.field_c = new tk(128);
-              gi.field_t = 0;
+              TextHotspotRegion.field_t = 0;
             }
             stackIn_10_0 = (1 != var1.readUnsignedByte(-91)) ? 0 : 1;
             var3_int = stackIn_10_0;
@@ -124,14 +124,14 @@ final class ga extends sl implements sc {
             } else {
               var5 = var4_ref_String;
             }
-            var6 = hl.a(var4_ref_String, 1);
+            var6 = CheckboxPainter.a(var4_ref_String, 1);
             var7 = var1.j(-17);
-            var8 = hq.a(117, (CharSequence) ((Object) var4_ref_String));
+            var8 = TutorialController.normalizeDisplayName(117, (CharSequence) ((Object) var4_ref_String));
             if (var8 == null) {
               var8 = var4_ref_String;
             }
             if (null == var6) {
-              var6 = hl.a(var7, 1);
+              var6 = CheckboxPainter.a(var7, 1);
               if (var6 != null) {
                 gd.field_c.a(-6946, (long)var8.hashCode(), var6);
               }
@@ -139,8 +139,8 @@ final class ga extends sl implements sc {
             if (null == var6) {
               var6 = new eo();
               gd.field_c.a(param0 ^ -28521, (long)var8.hashCode(), var6);
-              fieldTemp$0 = gi.field_t;
-              gi.field_t = gi.field_t + 1;
+              fieldTemp$0 = TextHotspotRegion.field_t;
+              TextHotspotRegion.field_t = TextHotspotRegion.field_t + 1;
               var6.field_Mb = fieldTemp$0;
               jq.field_c.b((byte) -31, var6);
             }
@@ -179,7 +179,7 @@ final class ga extends sl implements sc {
           }
           if (df.field_b == null) {
             df.field_b = new tk(128);
-            nr.field_S = 0;
+            AccountWelcomePanel.field_S = 0;
           }
           var3Lifetime1 = var1.j(-101);
           if (((String) (var3Lifetime1)).equals("")) {
@@ -191,14 +191,14 @@ final class ga extends sl implements sc {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = gf.a(92, var5Lifetime1);
             if (null != var6Lifetime1) {
-              df.field_b.a(-6946, (long)hq.a(123, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6Lifetime1);
+              df.field_b.a(-6946, (long)TutorialController.normalizeDisplayName(123, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6Lifetime1);
             }
           }
           if (null == var6Lifetime1) {
             var6Lifetime1 = new eo();
-            df.field_b.a(-6946, (long)hq.a(param0 ^ 29715, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6Lifetime1);
-            fieldTemp$1 = nr.field_S;
-            nr.field_S = nr.field_S + 1;
+            df.field_b.a(-6946, (long)TutorialController.normalizeDisplayName(param0 ^ 29715, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode(), var6Lifetime1);
+            fieldTemp$1 = AccountWelcomePanel.field_S;
+            AccountWelcomePanel.field_S = AccountWelcomePanel.field_S + 1;
             var6Lifetime1.field_Mb = fieldTemp$1;
             cf.field_k.b((byte) -24, var6Lifetime1);
           }
@@ -211,7 +211,7 @@ final class ga extends sl implements sc {
           var6Lifetime1.unlink((byte) -117);
           var7_ref = (eo) (cf.field_k.c((byte) -125));
           while (var7_ref != null) {
-            if (wk.a(var6Lifetime1, var7_ref, 83)) {
+            if (MessageDialogContent.a(var6Lifetime1, var7_ref, 83)) {
               var7_ref = (eo) (cf.field_k.f((byte) -5));
               continue;
             }
@@ -230,7 +230,7 @@ final class ga extends sl implements sc {
         }
     }
 
-    final static int a(int param0, boolean param1, Random param2) {
+    final static int nextRandomInt(int param0, boolean param1, Random param2) {
         int var3_int = 0;
         int var4 = 0;
         int stackIn_2_0 = 0;
@@ -273,8 +273,8 @@ final class ga extends sl implements sc {
         }
     }
 
-    public final ip a(int param0) {
-        ip stackIn_1_0 = null;
+    public final ValidationProvider getValidationProvider(int param0) {
+        ValidationProvider stackIn_1_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -289,7 +289,7 @@ final class ga extends sl implements sc {
         }
     }
 
-    ga(String param0, cc param1, int param2) {
+    ga(String param0, WidgetListener param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -339,18 +339,18 @@ final class ga extends sl implements sc {
         }
     }
 
-    final void a(ei param0, int param1, int param2, int param3) {
+    final void updatePointerState(UiWidget param0, int param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.a(param0, param1 + 0, param2, param3);
+          super.updatePointerState(param0, param1 + 0, param2, param3);
           if (param1 != 958) {
             return;
           }
-          this.field_bb = wn.field_i - (this.field_C + param2);
+          this.field_bb = wn.field_i - (this.widgetX + param2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -367,13 +367,13 @@ final class ga extends sl implements sc {
     }
 
     final static void m(int param0) {
-        jc.field_e = new Quaternion(ga.a(262144, true, ea.field_r) - 131072, -131072 + ga.a(262144, true, ea.field_r), -131072 + ga.a(262144, true, ea.field_r), -131072 + ga.a(262144, true, ea.field_r));
+        jc.field_e = new Quaternion(ga.nextRandomInt(262144, true, ea.field_r) - 131072, -131072 + ga.nextRandomInt(262144, true, ea.field_r), -131072 + ga.nextRandomInt(262144, true, ea.field_r), -131072 + ga.nextRandomInt(262144, true, ea.field_r));
         jc.field_e.normalise(true);
         tf.field_a = dq.field_a;
         if (tf.field_a == null) {
           tf.field_a = PoolGameModel.field_B[0];
         }
-        vn.field_e = ga.a(tf.field_a.b(param0 + 23883), true, ea.field_r);
+        vn.field_e = ga.nextRandomInt(tf.field_a.b(param0 + 23883), true, ea.field_r);
         tp.field_h[1] = 0;
         tp.field_h[0] = -140;
         CushionSegment.field_i = new int[]{0, 0, 0, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};

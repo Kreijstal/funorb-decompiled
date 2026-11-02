@@ -142,7 +142,7 @@ final class ve extends op {
         try {
           boolean decompiledSharedTail0 = !(ec.field_b <= 32);
           if (!decompiledSharedTail0) {
-            ka.a(true, 0);
+            AgeValidator.a(true, 0);
             decompiledSharedTail0 = (Pool.field_O != 0);
           }
           if (decompiledSharedTail0) {
@@ -150,7 +150,7 @@ final class ve extends op {
             if (var1_int == 0) {
               var1_int = 32;
             }
-            ka.a(true, ec.field_b - var1_int);
+            AgeValidator.a(true, ec.field_b - var1_int);
           }
           var1_intLifetime1 = -10 / ((74 - param0) / 42);
           return;
@@ -172,7 +172,7 @@ final class ve extends op {
             field_p = -70;
           }
           if (null != vj.field_j) {
-            var1 = vj.field_j.h(-103);
+            var1 = vj.field_j.getEnteredName(-103);
           }
           if (var1.length() == 0) {
             var1 = rf.a((byte) -119);
@@ -555,9 +555,9 @@ final class ve extends op {
             var28Lifetime1 = (var26Lifetime1 * var19 + (var16 * var25Lifetime1 + var24Lifetime1 * var13) >> -ob.field_i + 16) + var10;
             var29Lifetime1 = (var20 * var26Lifetime1 + var24Lifetime1 * var14 + var17 * var25Lifetime1 >> 16) + var11;
             if (var29Lifetime1 < 50) {
-              fe.field_L[var23Lifetime2] = -2147483648;
+              ButtonWidget.field_L[var23Lifetime2] = -2147483648;
             } else {
-              ch.field_M[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
+              WidgetContainer.field_M[var23Lifetime2] = var21Lifetime2 + var27Lifetime1 / var29Lifetime1;
               IsaacCipher.field_h[var23Lifetime2] = var22Lifetime2 + var28Lifetime1 / var29Lifetime1;
               if (var29Lifetime1 > var8) {
                 var8 = var29Lifetime1;
@@ -565,7 +565,7 @@ final class ve extends op {
               if (var29Lifetime1 < var7_int) {
                 var7_int = var29Lifetime1;
               }
-              fe.field_L[var23Lifetime2] = var29Lifetime1;
+              ButtonWidget.field_L[var23Lifetime2] = var29Lifetime1;
             }
             if (param1) {
               ie.field_d[var23Lifetime2] = var27Lifetime1 >> ob.field_i;
@@ -598,9 +598,9 @@ final class ve extends op {
               var24Lifetime2Lifetime2 = param6.field_J[var23Lifetime3];
               var25Lifetime2Lifetime2 = param6.field_A[var23Lifetime3];
               var26Lifetime2Lifetime2 = param6.field_E[var23Lifetime3];
-              sl.field_P[var23Lifetime3] = var9 + (var18 * var26Lifetime2Lifetime2 + var24Lifetime2Lifetime2 * var12 + var25Lifetime2Lifetime2 * var15 >> 16);
+              TextInputWidget.field_P[var23Lifetime3] = var9 + (var18 * var26Lifetime2Lifetime2 + var24Lifetime2Lifetime2 * var12 + var25Lifetime2Lifetime2 * var15 >> 16);
               oi.field_w[var23Lifetime3] = (var26Lifetime2Lifetime2 * var19 + var25Lifetime2Lifetime2 * var16 + var24Lifetime2Lifetime2 * var13 >> 16) + var10;
-              mp.field_P[var23Lifetime3] = var11 + (var17 * var25Lifetime2Lifetime2 + var14 * var24Lifetime2Lifetime2 + var26Lifetime2Lifetime2 * var20 >> 16);
+              UsernameSuggestionsPanel.field_P[var23Lifetime3] = var11 + (var17 * var25Lifetime2Lifetime2 + var14 * var24Lifetime2Lifetime2 + var26Lifetime2Lifetime2 * var20 >> 16);
             }
           }
           if (param4) {
@@ -621,7 +621,7 @@ final class ve extends op {
               var20Lifetime1 = param6.field_p[var18Lifetime1];
               var21Lifetime3 = param6.field_j[var18Lifetime1];
               oj.field_r[var18Lifetime1] = var15Lifetime1 * var21Lifetime3 + (var12Lifetime1 * var20Lifetime1 + var19Lifetime1 * var9Lifetime1) >> 16;
-              wa.field_mb[var18Lifetime1] = var16Lifetime1 * var21Lifetime3 + var20Lifetime1 * var13Lifetime1 + var10Lifetime1 * var19Lifetime1 >> 16;
+              ProgressDialog.field_mb[var18Lifetime1] = var16Lifetime1 * var21Lifetime3 + var20Lifetime1 * var13Lifetime1 + var10Lifetime1 * var19Lifetime1 >> 16;
               PoolGameModel.field_g[var18Lifetime1] = var21Lifetime3 * var17Lifetime1 + var19Lifetime1 * var11Lifetime1 + var20Lifetime1 * var14Lifetime1 >> 16;
             }
           }

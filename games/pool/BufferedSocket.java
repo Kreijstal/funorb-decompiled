@@ -198,7 +198,7 @@ final class BufferedSocket implements Runnable {
         }
     }
 
-    final static boolean a(boolean param0, String param1, byte param2, nf param3, int param4, String param5, String param6) {
+    final static boolean a(boolean param0, String param1, byte param2, AccountCreationForm param3, int param4, String param5, String param6) {
         RuntimeException var7 = null;
         int var8 = 0;
         fq var9 = null;
@@ -218,13 +218,13 @@ final class BufferedSocket implements Runnable {
           }
           var9 = new fq(wd.field_Ub, param3);
           var8 = 91 / ((48 - param2) / 53);
-          wd.field_Ub.b(var9, 30000);
+          wd.field_Ub.showDialog(var9, 30000);
           if (GameRules.k(0)) {
             var9.p((byte) -52);
             return true;
           }
           qi.field_c = param0;
-          j.field_b = param4;
+          ButtonPainter.field_b = param4;
           re.field_d = param5;
           vq.field_Xb = param6;
           wd.field_Lb = ra.field_e;
@@ -335,7 +335,7 @@ final class BufferedSocket implements Runnable {
         try {
           if (param0 != -6584) {
             var3 = (String) null;
-            BufferedSocket.a(false, (String) null, (byte) 126, (nf) null, -39, (String) null, (String) null);
+            BufferedSocket.a(false, (String) null, (byte) 126, (AccountCreationForm) null, -39, (String) null, (String) null);
           }
           dupTemp$1 = new or(0, (or) null);
           param1.field_q = dupTemp$1;

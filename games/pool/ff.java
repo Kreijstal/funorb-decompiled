@@ -40,14 +40,14 @@ final class ff {
     final static void a(int param0, int param1) {
         int var2 = 0;
         int var3 = 0;
-        fd.field_J = param1;
-        if (em.field_P != ir.field_h) {
-          var2 = ir.field_h * ir.field_h;
+        StrongCacheEntry.field_J = param1;
+        if (em.field_P != BufferedFile.field_h) {
+          var2 = BufferedFile.field_h * BufferedFile.field_h;
           var3 = -(em.field_P * em.field_P) + var2;
           param1 = param1 + var3 * (-param1 + cb.field_g) / var2;
         }
         fl.field_q.b(param1, param0 - 2147483625, tn.field_u, 640, 120);
-        mm.a(ja.field_b, param0 + cb.field_g, 0, 640, 5, 125, kj.field_j);
+        mm.a(ja.field_b, param0 + cb.field_g, 0, 640, 5, 125, CueAim.field_j);
     }
 
     static {

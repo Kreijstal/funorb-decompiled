@@ -40,10 +40,10 @@ final class mg {
         if (!param0) {
           return false;
         }
-        if (hk.b(-18)) {
+        if (NanoTickClock.b(-18)) {
           stackIn_7_0 = true;
         } else {
-          if (0 >= mp.field_V) {
+          if (0 >= UsernameSuggestionsPanel.field_V) {
             return true;
           }
           stackIn_7_0 = false;

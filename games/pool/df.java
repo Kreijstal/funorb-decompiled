@@ -57,9 +57,9 @@ final class df {
         }
         if (null != wh.field_a) {
           if (!wh.field_a.d(84)) {
-            return ir.field_b;
+            return BufferedFile.field_b;
           }
-          return ud.field_F;
+          return SingleChildWidget.field_F;
         }
         if (!uj.field_d.d(101)) {
           return rp.waitingforGraphics;
@@ -74,7 +74,7 @@ final class df {
           return (String) null;
         }
         if (!PolarTableScene.field_nb.a("commonui", 0)) {
-          return kb.loadingFonts + " - " + PolarTableScene.field_nb.a(100, "commonui") + "%";
+          return TickClock.loadingFonts + " - " + PolarTableScene.field_nb.a(100, "commonui") + "%";
         }
         if (!DualLinkNode.field_r.d(66)) {
           return de.waitingforExtradata;
@@ -191,12 +191,12 @@ final class df {
           }
           if (this.field_h) {
             var6 = param0.balls[this.field_g];
-            stackIn_4_0 = 8191 & tj.c(var6.positionX - param1.positionX >> 10, var6.positionY - param1.positionY >> 10, 4096);
+            stackIn_4_0 = 8191 & ResizableDialog.c(var6.positionX - param1.positionX >> 10, var6.positionY - param1.positionY >> 10, 4096);
             return stackIn_4_0;
           }
           var5 = param0.field_e[this.field_g];
           var4 = var5;
-          stackIn_6_0 = 8191 & tj.c(var5[0] - param1.positionX >> 10, -param1.positionY + var5[1] >> 10, 4096);
+          stackIn_6_0 = 8191 & ResizableDialog.c(var5[0] - param1.positionX >> 10, -param1.positionY + var5[1] >> 10, 4096);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

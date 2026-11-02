@@ -212,22 +212,22 @@ final class qf {
         this.field_o = null;
         try {
           this.field_n = param0;
-          var2_int = ga.a(8192, true, ea.field_r);
+          var2_int = ga.nextRandomInt(8192, true, ea.field_r);
           var3 = 1024;
-          dupTemp$0 = -134217728 + ga.a(268435456, true, ea.field_r);
+          dupTemp$0 = -134217728 + ga.nextRandomInt(268435456, true, ea.field_r);
           this.field_q = dupTemp$0;
           dupTemp$1 = EightBallRules.c((byte) -128, var2_int) * var3;
           this.field_m = dupTemp$1;
           dupTemp$2 = o.a(var2_int, (byte) 77) * var3;
           this.field_a = dupTemp$2;
           this.field_g = new int[]{dupTemp$0 >> 13, dupTemp$1 >> 13, dupTemp$2 >> 13, 65536, 0, 0, 0, 65536, 0, 0, 0, 65536};
-          this.field_b = -(65536 + ga.a(131072, true, ea.field_r));
-          this.field_c = ga.a(9, true, ea.field_r) - 5;
-          this.field_h = -5 + ga.a(9, true, ea.field_r);
-          this.field_p = new Quaternion(ga.a(32768, true, ea.field_r) - 16384, ga.a(32768, true, ea.field_r) - 16384, ga.a(32768, true, ea.field_r) - 16384, -16384 + ga.a(32768, true, ea.field_r));
+          this.field_b = -(65536 + ga.nextRandomInt(131072, true, ea.field_r));
+          this.field_c = ga.nextRandomInt(9, true, ea.field_r) - 5;
+          this.field_h = -5 + ga.nextRandomInt(9, true, ea.field_r);
+          this.field_p = new Quaternion(ga.nextRandomInt(32768, true, ea.field_r) - 16384, ga.nextRandomInt(32768, true, ea.field_r) - 16384, ga.nextRandomInt(32768, true, ea.field_r) - 16384, -16384 + ga.nextRandomInt(32768, true, ea.field_r));
           this.field_p.normalise(true);
           this.field_e = new Quaternion();
-          this.field_e.setFromAxisAngle(60, ga.a(32768, true, ea.field_r) - 16384, -16384 + ga.a(32768, true, ea.field_r), -16384 + ga.a(32768, true, ea.field_r), 1 + ga.a(8, true, ea.field_r));
+          this.field_e.setFromAxisAngle(60, ga.nextRandomInt(32768, true, ea.field_r) - 16384, -16384 + ga.nextRandomInt(32768, true, ea.field_r), -16384 + ga.nextRandomInt(32768, true, ea.field_r), 1 + ga.nextRandomInt(8, true, ea.field_r));
           this.field_e.normalise(true);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "qf.<init>(" + (param0 != null ? "{...}" : "null") + ')');

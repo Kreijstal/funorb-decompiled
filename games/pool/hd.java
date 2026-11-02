@@ -109,16 +109,16 @@ final class hd extends ob {
     final void d(int param0) {
         int var2 = 0;
         if (param0 == -1) {
-          var2 = fd.a(!ue.a(11) ? true : false, (byte) 65);
+          var2 = StrongCacheEntry.a(!ue.a(11) ? true : false, (byte) 65);
         } else {
           hd.b(false);
-          var2 = fd.a(!ue.a(11) ? true : false, (byte) 65);
+          var2 = StrongCacheEntry.a(!ue.a(11) ? true : false, (byte) 65);
         }
         if (3 == var2) {
-          if (ne.field_u != null) {
+          if (MatchingTextValidator.field_u != null) {
             tq.d((byte) -106);
           }
-          s.a(hk.d(58), 2056898529);
+          s.a(NanoTickClock.getApplet(58), 2056898529);
         }
         if (var2 == 1) {
           fq.a(-3405, 0, GameRules.field_b, false);

@@ -19,15 +19,15 @@ final class NineBallRules extends GameRules {
         if (param0 != -1) {
           return -103;
         }
-        var3 = var2.field_u;
+        var3 = var2.ballInHandMode;
         if (var3 == 2) {
-          return this.q(10) & ~nr.field_Y | nr.field_Q;
+          return this.q(10) & ~AccountWelcomePanel.field_Y | AccountWelcomePanel.field_Q;
         }
         if (3 == var3) {
-          return this.q(10) & ~nr.field_Y | nr.field_V;
+          return this.q(10) & ~AccountWelcomePanel.field_Y | AccountWelcomePanel.field_V;
         }
         if (var3 == 1) {
-          return this.q(10) & ~nr.field_Y | nr.field_R;
+          return this.q(10) & ~AccountWelcomePanel.field_Y | AccountWelcomePanel.field_R;
         }
         if (var3 != 0) {
         }
@@ -56,7 +56,7 @@ final class NineBallRules extends GameRules {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -96 / ((-32 - param1) / 40);
-          stackIn_1_0 = 12 + param0.field_z;
+          stackIn_1_0 = 12 + param0.groupBefore;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,7 +101,7 @@ final class NineBallRules extends GameRules {
         if (param0 != 10) {
           field_j = (vh) null;
         }
-        return nr.field_Q | ll.field_f;
+        return AccountWelcomePanel.field_Q | ll.field_f;
     }
 
     final boolean a(int param0, byte param1, ShotRecord param2) {
@@ -151,7 +151,7 @@ final class NineBallRules extends GameRules {
           if (hn.field_b == 2 &&
             di.field_a != null) {
             var3 = (CharSequence) ((Object) param0);
-            if (!di.field_a.equals(hq.a(91, var3))) {
+            if (!di.field_a.equals(TutorialController.normalizeDisplayName(91, var3))) {
               return false;
             }
             if (param1 == -101) {
@@ -190,7 +190,7 @@ final class NineBallRules extends GameRules {
           if (param1 >= -33) {
             NineBallRules.a(67, 8, 86, true);
           }
-          stackIn_5_0 = (param0.field_n == param0.field_z);
+          stackIn_5_0 = (param0.field_n == param0.groupBefore);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -220,8 +220,8 @@ final class NineBallRules extends GameRules {
             stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
-          if (param0.field_z != -1) {
-            stackIn_7_0 = d.field_a[param0.field_z];
+          if (param0.groupBefore != -1) {
+            stackIn_7_0 = d.field_a[param0.groupBefore];
             return stackIn_7_0;
           }
           stackIn_5_0 = ClassicBallSkin.field_n;
@@ -301,15 +301,15 @@ final class NineBallRules extends GameRules {
             var9.field_t = true;
           }
         } else {
-          var9.a(7, -14, new int[]{var8.field_L});
+          var9.a(7, -14, new int[]{var8.playerIndex});
           var9.field_t = true;
           var3 = var3 | this.p(75);
           var9.field_w = (byte)(var9.field_w - 1);
         }
         var4 = 74 % ((-37 - param0) / 60);
         if (var3 != 0) {
-          if (!var9.field_m.c(0)) {
-            var11 = new aa(var9.field_m);
+          if (!var9.pottedBalls.c(0)) {
+            var11 = new aa(var9.pottedBalls);
             var6_ref = (PotEvent) (var11.b((byte) -92));
             while (var6_ref != null) {
               if (9 != var6_ref.ballIndex) {
@@ -322,8 +322,8 @@ final class NineBallRules extends GameRules {
             }
           }
         } else {
-          if (!var9.field_m.c(0)) {
-            var10 = new aa(var9.field_m);
+          if (!var9.pottedBalls.c(0)) {
+            var10 = new aa(var9.pottedBalls);
             var6_ref = (PotEvent) (var10.b((byte) -92));
             while (var6_ref != null) {
               if (var6_ref.ballIndex == 9) {
@@ -336,11 +336,11 @@ final class NineBallRules extends GameRules {
             }
           }
           if (this.field_d.a(false, (byte) 81, var9)) {
-            if (this.a((var9.field_L + 1) % this.field_d.playerCount, -102)) {
+            if (this.a((var9.playerIndex + 1) % this.field_d.playerCount, -102)) {
               var9.field_w = (byte)(var9.field_w + 1);
             }
           } else {
-            if (this.a(var9.field_L % this.field_d.playerCount, -41)) {
+            if (this.a(var9.playerIndex % this.field_d.playerCount, -41)) {
               var9.field_w = (byte)(var9.field_w - 1);
             }
           }
@@ -414,7 +414,7 @@ final class NineBallRules extends GameRules {
           up.field_M[var4] = var4 + 2;
           dj.field_a[var4] = var6.a(23165, 2048);
         }
-        fd.a(dj.field_a, up.field_M, (byte) -54);
+        StrongCacheEntry.a(dj.field_a, up.field_M, (byte) -54);
         no.field_s[1] = 1;
         no.field_s[0] = 0;
         no.field_s[3] = up.field_M[1];

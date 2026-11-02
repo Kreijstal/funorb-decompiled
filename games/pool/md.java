@@ -24,8 +24,8 @@ final class md {
         TriangleRasterizer.b(0.6000000238418579f);
         TriangleRasterizer.useRasterClip();
         TriangleRasterizer.setProjectionCenter(320, 240);
-        hr.field_q.field_k = 0;
-        TriangleRasterizer.a(new dp(NetworkGameClient.field_F, hr.field_q, param0, 128));
+        ViewportController.field_q.field_k = 0;
+        TriangleRasterizer.a(new dp(NetworkGameClient.field_F, ViewportController.field_q, param0, 128));
         di.a(0);
     }
 

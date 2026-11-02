@@ -72,7 +72,7 @@ final class rn implements Runnable {
               if (var7.field_m == (long)param2 &&
                 param1 == var7.field_R &&
                 2 == var7.field_N) {
-                var4.field_F = false;
+                var4.pending = false;
                 var4.field_Q = var7.field_Q;
                 stackIn_9_0 = var4;
                 return stackIn_9_0;
@@ -81,7 +81,7 @@ final class rn implements Runnable {
             }
           }
           var4.field_Q = param1.a((byte) -110, param2);
-          var4.field_F = false;
+          var4.pending = false;
           var4.field_x = true;
           stackIn_16_0 = var4;
           return stackIn_16_0;
@@ -172,11 +172,11 @@ final class rn implements Runnable {
                 }
                 else {
                   var7.field_Q = var7.field_R.a((byte) -110, (int)var7.field_m);
-                  var7.field_F = false;
+                  var7.pending = false;
                 }
               } else {
                 var7.field_R.a((int)var7.field_m, -12875, var7.field_Q.length, var7.field_Q);
-                var7.field_F = false;
+                var7.pending = false;
               }
               if (decompiledFrameRemainder0) {
                 decompiledRegionSelector1 = 0;
@@ -191,7 +191,7 @@ final class rn implements Runnable {
             if (decompiledRegionSelector1 == 0) {
               continue;
             }
-            var7.field_F = false;
+            var7.pending = false;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -201,13 +201,13 @@ final class rn implements Runnable {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, boolean param4, boolean param5, boolean param6, boolean param7, int param8, int param9, int param10, int param11, int param12, int param13) {
-        kk.field_B = null;
+        CacheEntry.field_B = null;
         or.c((byte) 4);
         param6 = wi.a(param0, param3, param11, param9, param6, (byte) 33, param10);
-        mp.a(param1, param6, param8, param13, param5, 13375, param2, param4, param7, param3);
+        UsernameSuggestionsPanel.a(param1, param6, param8, param13, param5, 13375, param2, param4, param7, param3);
         int var14 = 36 / ((param12 + 84) / 37);
-        hr.a(param4, -108, param1);
-        lq.a(param1, param6, 0, param11);
+        ViewportController.a(param4, -108, param1);
+        DialogLayer.a(param1, param6, 0, param11);
     }
 
     final static void a(String[][] param0, String[] param1, String[] param2, int param3, byte param4, byte[] param5, Sprite[][] param6, Sprite[][] param7, int param8, int param9, String[] param10, int[] param11, String[][] param12, byte[] param13, di param14) {
@@ -265,37 +265,37 @@ final class rn implements Runnable {
         var21 = Pool.field_O;
         try {
           ln.field_r = param1;
-          ir.field_p = param12;
+          BufferedFile.field_p = param12;
           tq.field_u = param13;
           dg.field_T = param11;
           ck.field_R = param10;
           mj.field_c = param0;
           wp.field_f = param2;
           ta.field_d = param7;
-          gr.field_E = param5;
+          ArchiveRequest.field_E = param5;
           ji.field_g = param8;
           jl.field_d = param6;
           PotEvent.field_l = param9;
           uk.field_i = aj.a(0, "lobby", param14, "gameprivacy");
           c.field_c = aj.a(0, "lobby", param14, "ratedgame");
-          iq.field_a = aj.a(0, "lobby", param14, "opentome");
+          RasterBuffer.field_a = aj.a(0, "lobby", param14, "opentome");
           hh.field_f = aj.a(0, "lobby", param14, "allowspectators");
           pn.field_i = new String[5];
           pn.field_i[4] = oq.multiconstOpen;
-          pn.field_i[2] = lq.multiconstFriends;
+          pn.field_i[2] = DialogLayer.multiconstFriends;
           pn.field_i[0] = ab.multiconstInviteOnly;
-          pn.field_i[1] = ua.multiconstClan;
+          pn.field_i[1] = UsernameAvailabilityValidator.multiconstClan;
           pn.field_i[3] = hf.multiconstSimilarRating;
           c.field_e = new vh(0L, (vh) null);
           d.field_f = new vh(0L, lf.field_d, jh.muLobbyName);
           if (param4 <= 59) {
             return;
           }
-          kj.field_a = new vh(0L, sd.field_Q, wi.muLobbyRating);
-          ci.field_c = new of(0L, new vh(0L, (vh) null), ub.field_n, iq.field_f);
+          CueAim.field_a = new vh(0L, Under13NoticePanel.field_Q, wi.muLobbyRating);
+          ci.field_c = new of(0L, new vh(0L, (vh) null), ub.field_n, RasterBuffer.field_f);
           c.field_e.a(116, d.field_f);
           if (tq.field_p) {
-            c.field_e.a(-94, kj.field_a);
+            c.field_e.a(-94, CueAim.field_a);
           }
           c.field_e.a(-113, ci.field_c);
           ci.field_c.field_Sb.a((byte) -87, uo.field_Lb);
@@ -305,16 +305,16 @@ final class rn implements Runnable {
           var24.field_Fb = 1;
           pm.field_m = new vh(0L, uo.field_Lb);
           pm.field_m.field_Fb = 1;
-          gj.field_K = new vh(0L, tg.field_d, wp.returntomainmenu.toUpperCase());
+          ProgressBarWidget.field_K = new vh(0L, tg.field_d, wp.returntomainmenu.toUpperCase());
           ll.field_d = new vh(0L, rl.field_d, PlasmaBallSkin.muGamelistAllGames.toUpperCase());
-          pk.field_a = new vh(0L, ri.field_P);
-          wk.field_N = new vh(0L, lf.field_d, wi.muGamelistStatus);
+          pk.field_a = new vh(0L, CheckboxWidget.field_P);
+          MessageDialogContent.field_N = new vh(0L, lf.field_d, wi.muGamelistStatus);
           pp.field_c = new vh(0L, f.field_e, mb.muGamelistOwner);
           KillerBallSkin.field_p = new vh(0L, f.field_e, a.muGamelistPlayers);
           mm.field_g = new vh(0L, f.field_e, ol.muGamelistAvgRating);
-          mn.field_e = new vh(0L, f.field_e, n.muGamelistOptions);
-          l.field_f = new vh(0L, sd.field_Q, ml.muGamelistElapsedTime);
-          BufferedSocket.field_m = new of(0L, new vh(0L, (vh) null), ub.field_n, iq.field_f);
+          mn.field_e = new vh(0L, f.field_e, LabeledChildWidget.muGamelistOptions);
+          l.field_f = new vh(0L, Under13NoticePanel.field_Q, ml.muGamelistElapsedTime);
+          BufferedSocket.field_m = new of(0L, new vh(0L, (vh) null), ub.field_n, RasterBuffer.field_f);
           field_f = new vh(0L, mg.field_c, fc.muPlayRated.toUpperCase());
           field_f.field_pb = tq.field_p;
           stackIn_8_0 = null;
@@ -328,13 +328,13 @@ final class rn implements Runnable {
           } else {
             stackIn_9_0 = null;
             stackIn_9_1 = null;
-            stackIn_9_4 = ch.newgame;
+            stackIn_9_4 = WidgetContainer.newgame;
           }
           uc.field_b = new vh(stackIn_8_2, stackIn_8_3, ((String) (Object) stackIn_9_4).toUpperCase());
           oi.field_n = new vh(0L, (vh) null);
           oi.field_n.a(65, ll.field_d);
           oi.field_n.a(-93, pk.field_a);
-          pk.field_a.a(78, wk.field_N);
+          pk.field_a.a(78, MessageDialogContent.field_N);
           pk.field_a.a(-106, pp.field_c);
           pk.field_a.a(19, KillerBallSkin.field_p);
           if (tq.field_p) {
@@ -363,51 +363,51 @@ final class rn implements Runnable {
           nd.field_c = new vh(0L, uo.field_Lb);
           nd.field_c.field_Fb = 1;
           br.field_M = new vh(0L, lf.field_d, jh.muLobbyName);
-          jh.field_a = new vh(0L, sd.field_Q, wi.muLobbyRating);
-          DualLinkDeque.field_f = new of(0L, new vh(0L, (vh) null), ub.field_n, iq.field_f);
+          jh.field_a = new vh(0L, Under13NoticePanel.field_Q, wi.muLobbyRating);
+          DualLinkDeque.field_f = new of(0L, new vh(0L, (vh) null), ub.field_n, RasterBuffer.field_f);
           cl.field_d.a(-119, nd.field_c);
           cl.field_d.a(-104, br.field_M);
           if (tq.field_p) {
             cl.field_d.a(9, jh.field_a);
           }
           cl.field_d.a(-109, DualLinkDeque.field_f);
-          ok.field_ob = new vh(0L, tg.field_d, dk.returntolobby.toUpperCase());
+          ContentTransitionDialog.field_ob = new vh(0L, tg.field_d, dk.returntolobby.toUpperCase());
           ii.field_e = new vh(0L, rl.field_d);
-          rq.field_x = new vh(0L, ri.field_P);
-          oi.field_q = new vh(0L, bh.field_b, gr.muOptions.toUpperCase());
+          rq.field_x = new vh(0L, CheckboxWidget.field_P);
+          oi.field_q = new vh(0L, bh.field_b, ArchiveRequest.muOptions.toUpperCase());
           oi.field_v = new vh[4 + param3];
           FreePlayRules.field_f = new uo[param3 + 4][];
           oi.field_v[0] = new vh(0L, GameApplet.field_a, fr.muOptionsWhocanjoin);
           FreePlayRules.field_f[0] = new uo[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            FreePlayRules.field_f[0][1 + var17_int] = new uo(0L, ef.field_c, (vh) null, ei.field_A, uk.field_i[var17_int], pn.field_i[var17_int]);
+            FreePlayRules.field_f[0][1 + var17_int] = new uo(0L, ef.field_c, (vh) null, UiWidget.field_A, uk.field_i[var17_int], pn.field_i[var17_int]);
           }
           if (dg.field_T.length >= 2) {
             oi.field_v[1] = new vh(0L, GameApplet.field_a, ab.muOptionsPlayers);
             array$0 = new uo[dg.field_T.length + 1];
             FreePlayRules.field_f[1] = array$0;
-            FreePlayRules.field_f[1][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.muOptionsDontmind);
+            FreePlayRules.field_f[1][0] = new uo(0L, ef.field_c, (vh) null, UiWidget.field_A, (Sprite) null, mq.muOptionsDontmind);
             for (var17_intLifetime1 = 0; dg.field_T.length > var17_intLifetime1; var17_intLifetime1++) {
-              FreePlayRules.field_f[1][1 + var17_intLifetime1] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, Integer.toString(dg.field_T[var17_intLifetime1]));
+              FreePlayRules.field_f[1][1 + var17_intLifetime1] = new uo(0L, ef.field_c, (vh) null, UiWidget.field_A, (Sprite) null, Integer.toString(dg.field_T[var17_intLifetime1]));
             }
           }
           oi.field_v[2] = new vh(0L, GameApplet.field_a, ve.muOptionsAllowSpectate);
-          FreePlayRules.field_f[2] = new uo[]{new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.muOptionsDontmind), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[0], mb.no), new uo(0L, ef.field_c, (vh) null, ei.field_A, hh.field_f[1], rm.yes)};
+          FreePlayRules.field_f[2] = new uo[]{new uo(0L, ef.field_c, (vh) null, UiWidget.field_A, (Sprite) null, mq.muOptionsDontmind), new uo(0L, ef.field_c, (vh) null, UiWidget.field_A, hh.field_f[0], mb.no), new uo(0L, ef.field_c, (vh) null, UiWidget.field_A, hh.field_f[1], rm.yes)};
           if (1 < ji.field_g) {
             oi.field_v[3] = new vh(0L, GameApplet.field_a, pk.muOptionsRatedgametype);
             array$1 = new uo[1 + ji.field_g];
             FreePlayRules.field_f[3] = array$1;
-            FreePlayRules.field_f[3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.muOptionsDontmind);
+            FreePlayRules.field_f[3][0] = new uo(0L, ef.field_c, (vh) null, UiWidget.field_A, (Sprite) null, mq.muOptionsDontmind);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < ji.field_g; var17_intLifetime2++) {
-              FreePlayRules.field_f[3][var17_intLifetime2 + 1] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, ln.field_r[var17_intLifetime2]);
+              FreePlayRules.field_f[3][var17_intLifetime2 + 1] = new uo(0L, ef.field_c, (vh) null, UiWidget.field_A, (Sprite) null, ln.field_r[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param3 > var17_intLifetime3; var17_intLifetime3++) {
             oi.field_v[var17_intLifetime3 + 4] = new vh(0L, GameApplet.field_a, ck.field_R[var17_intLifetime3]);
-            array$2 = new uo[rb.b(255, (int) gr.field_E[var17_intLifetime3]) + 1];
+            array$2 = new uo[rb.b(255, (int) ArchiveRequest.field_E[var17_intLifetime3]) + 1];
             FreePlayRules.field_f[4 + var17_intLifetime3] = array$2;
-            FreePlayRules.field_f[4 + var17_intLifetime3][0] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) null, mq.muOptionsDontmind);
-            for (var18 = 0; var18 < (255 & gr.field_E[var17_intLifetime3]); var18++) {
+            FreePlayRules.field_f[4 + var17_intLifetime3][0] = new uo(0L, ef.field_c, (vh) null, UiWidget.field_A, (Sprite) null, mq.muOptionsDontmind);
+            for (var18 = 0; var18 < (255 & ArchiveRequest.field_E[var17_intLifetime3]); var18++) {
               if (null == jl.field_d) {
                 var19_ref = null;
               } else {
@@ -426,7 +426,7 @@ final class rn implements Runnable {
               } else {
                 var20 = null;
               }
-              FreePlayRules.field_f[4 + var17_intLifetime3][1 + var18] = new uo(0L, ef.field_c, (vh) null, ei.field_A, (Sprite) (var19_ref), (String) (var20));
+              FreePlayRules.field_f[4 + var17_intLifetime3][1 + var18] = new uo(0L, ef.field_c, (vh) null, UiWidget.field_A, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; 4 + param3 > var17_intLifetime4; var17_intLifetime4++) {
@@ -444,10 +444,10 @@ final class rn implements Runnable {
           }
           kc.field_b = new vh(0L, mg.field_c);
           d.field_c = new vh(0L, mg.field_c);
-          gi.field_o = new vh(0L, pa.field_M);
-          gi.field_o.a((byte) -87, uo.field_Lb);
-          var17 = gi.field_o;
-          gi.field_o.field_cb = 1;
+          TextHotspotRegion.field_o = new vh(0L, pa.field_M);
+          TextHotspotRegion.field_o.a((byte) -87, uo.field_Lb);
+          var17 = TextHotspotRegion.field_o;
+          TextHotspotRegion.field_o.field_cb = 1;
           var17.field_Fb = 1;
           uq.field_f = new vh(0L, (vh) null);
           uq.field_f.a(65, ii.field_e);
@@ -467,9 +467,9 @@ final class rn implements Runnable {
           }
           uq.field_f.a(-120, kc.field_b);
           uq.field_f.a(-117, d.field_c);
-          uq.field_f.a(-121, gi.field_o);
+          uq.field_f.a(-121, TextHotspotRegion.field_o);
           Pool.field_P = new vh(0L, dg.field_J, v.muInvitePlayers.toUpperCase());
-          ba.field_vb = new vh(0L, rp.field_d, th.close.toUpperCase());
+          AccountContentDialog.field_vb = new vh(0L, rp.field_d, th.close.toUpperCase());
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -60,7 +60,7 @@ final class hc {
               if (var5[var7Lifetime1].field_K > 0) {
                 incrementValue$0 = var6Lifetime1;
                 var6Lifetime1++;
-                var10.field_b[incrementValue$0] = nd.a(109, var5[var7Lifetime1], hp.a(var10.field_d, (byte) 32));
+                var10.field_b[incrementValue$0] = nd.a(109, var5[var7Lifetime1], hp.copyIntArray(var10.field_d, (byte) 32));
               }
             }
           }

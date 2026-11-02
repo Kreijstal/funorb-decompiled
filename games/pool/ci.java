@@ -37,8 +37,8 @@ final class ci {
           field_k = 111;
           return false;
         }
-        if (gg.field_f >= this.field_e) {
-          if (this.field_q >= gg.field_f) {
+        if (DebouncedValidationProvider.field_f >= this.field_e) {
+          if (this.field_q >= DebouncedValidationProvider.field_f) {
             this.a(-wp.field_d, false);
             return true;
           }
@@ -110,8 +110,8 @@ final class ci {
             return;
           }
           if (var3 == 7) {
-            uh.field_q = param1;
-            uh.field_w = uh.field_q * 128 / 5;
+            PasswordValidator.field_q = param1;
+            PasswordValidator.field_w = PasswordValidator.field_q * 128 / 5;
             return;
           }
           if (var3 == 8) {
@@ -119,7 +119,7 @@ final class ci {
             return;
           }
           if (var3 == 9) {
-            kj.field_f = param1;
+            CueAim.field_f = param1;
             return;
           }
           if (var3 != 10) {
@@ -163,8 +163,8 @@ final class ci {
           return;
         }
         if (var3Lifetime1 == 7) {
-          uh.field_q = param1;
-          uh.field_w = uh.field_q * 128 / 5;
+          PasswordValidator.field_q = param1;
+          PasswordValidator.field_w = PasswordValidator.field_q * 128 / 5;
           return;
         }
         if (var3Lifetime1 == 8) {
@@ -172,7 +172,7 @@ final class ci {
           return;
         }
         if (var3Lifetime1 == 9) {
-          kj.field_f = param1;
+          CueAim.field_f = param1;
           return;
         }
         if (var3Lifetime1 != 10) {
@@ -182,17 +182,17 @@ final class ci {
     }
 
     final static void d(byte param0) {
-        wd.field_Ub.k(-22216);
+        wd.field_Ub.hideAllDialogs(-22216);
         if (of.field_Nb == null) {
-          of.field_Nb = new wa(wd.field_Ub, ClientException.field_d);
+          of.field_Nb = new ProgressDialog(wd.field_Ub, ClientException.field_d);
         }
         if (param0 <= -108) {
-          wd.field_Ub.b(of.field_Nb, 30000);
+          wd.field_Ub.showDialog(of.field_Nb, 30000);
           return;
         }
         String var2 = (String) null;
         ci.a((String) null, -115);
-        wd.field_Ub.b(of.field_Nb, 30000);
+        wd.field_Ub.showDialog(of.field_Nb, 30000);
     }
 
     final static void a(String param0, int param1) {
@@ -219,13 +219,13 @@ final class ci {
           if (wn.field_i > this.field_l) {
             return false;
           }
-          if (gg.field_f < this.field_e) {
+          if (DebouncedValidationProvider.field_f < this.field_e) {
             return false;
           }
-          if (this.field_q < gg.field_f) {
+          if (this.field_q < DebouncedValidationProvider.field_f) {
             return false;
           }
-          this.a(true, this.field_b + (-this.field_b + this.field_o) * (-gg.field_f + this.field_q) / 80);
+          this.a(true, this.field_b + (-this.field_b + this.field_o) * (-DebouncedValidationProvider.field_f + this.field_q) / 80);
           return true;
         }
         discarded$0 = this.b((byte) 118);
@@ -238,13 +238,13 @@ final class ci {
         if (wn.field_i > this.field_l) {
           return false;
         }
-        if (gg.field_f < this.field_e) {
+        if (DebouncedValidationProvider.field_f < this.field_e) {
           return false;
         }
-        if (this.field_q < gg.field_f) {
+        if (this.field_q < DebouncedValidationProvider.field_f) {
           return false;
         }
-        this.a(true, this.field_b + (-this.field_b + this.field_o) * (-gg.field_f + this.field_q) / 80);
+        this.a(true, this.field_b + (-this.field_b + this.field_o) * (-DebouncedValidationProvider.field_f + this.field_q) / 80);
         return true;
     }
 
@@ -308,13 +308,13 @@ final class ci {
           return bl.field_g;
         }
         if (7 == var2) {
-          return uh.field_q;
+          return PasswordValidator.field_q;
         }
         if (var2 == 8) {
           return wn.field_l;
         }
         if (var2 == 9) {
-          return kj.field_f;
+          return CueAim.field_f;
         }
         if (var2 == 10) {
           return pr.field_l;

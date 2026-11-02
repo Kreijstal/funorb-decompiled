@@ -178,7 +178,7 @@ final class or {
             field_a = 37;
           }
           var3 = (CharSequence) ((Object) param1);
-          stackIn_3_0 = oj.field_y.equals(hq.a(73, var3));
+          stackIn_3_0 = oj.field_y.equals(TutorialController.normalizeDisplayName(73, var3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -249,7 +249,7 @@ final class or {
         if (null != nl.field_d) {
           var2 = nl.field_d;
           String var1 = var2;
-          pn.a((byte) 75, nr.a(new String[]{var2}, -1, lf.youHaveBeenRemovedFromXsGame));
+          pn.a((byte) 75, AccountWelcomePanel.substituteTemplateArguments(new String[]{var2}, -1, lf.youHaveBeenRemovedFromXsGame));
           nl.field_d = null;
         }
         if (param0 == 4) {

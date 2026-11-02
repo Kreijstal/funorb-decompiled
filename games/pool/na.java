@@ -48,7 +48,7 @@ final class na {
             !tq.c((byte) -75) &&
             em.field_L == null &&
             tp.field_e == null) {
-            if (!hr.field_y) {
+            if (!ViewportController.field_y) {
               var6 = PlasmaBallSkin.field_m;
               var7 = jo.messageLobby;
               var6.field_n.a(var7, 17130, 14);
@@ -61,7 +61,7 @@ final class na {
             !tq.c((byte) -75) &&
             em.field_L != null &&
             param0.field_o == em.field_L.g(20872)) {
-            if (!hr.field_y) {
+            if (!ViewportController.field_y) {
               var10 = PlasmaBallSkin.field_m;
               var11 = vd.messageGame;
               var10.field_n.a(var11, 17130, 14);
@@ -79,8 +79,8 @@ final class na {
           PlasmaBallSkin.field_m.a((byte) 95);
           PlasmaBallSkin.field_m.a(param0, false);
           var14 = PlasmaBallSkin.field_m;
-          var3 = lq.field_W;
-          var4 = ua.field_o;
+          var3 = DialogLayer.field_W;
+          var4 = UsernameAvailabilityValidator.field_o;
           var14.field_n.c(0, 0, var3, param1 - 122, var4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -182,7 +182,7 @@ final class na {
 
     final static void a(int param0, String param1) {
         try {
-          ri.field_N = param1;
+          CheckboxWidget.field_N = param1;
           if (param0 != -58) {
             na.a((byte) -95);
           }

@@ -191,8 +191,8 @@ final class lg extends am {
         }
     }
 
-    public final void a(boolean param0, int param1, byte param2, int param3, ei param4) {
-        ei stackIn_3_0 = null;
+    public final void paintWidget(boolean param0, int param1, byte param2, int param3, UiWidget param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -201,36 +201,36 @@ final class lg extends am {
         pf var7 = null;
         int var8 = 0;
         pf var10 = null;
-        fe var11 = null;
+        ButtonWidget var11 = null;
         pf var12 = null;
         pf var13 = null;
         pf var14 = null;
         pf var15 = null;
         try {
-          if (!(param4 instanceof fe)) {
+          if (!(param4 instanceof ButtonWidget)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (ei) (param4);
+            stackIn_3_0 = (UiWidget) (param4);
           }
-          var11 = (fe) (stackIn_3_0);
-          wh.a(param1 + param4.field_C, param4.field_D + param3, param4.field_l + (param4.field_C + param1), (byte) 85, param4.field_y + (param4.field_D + param3));
+          var11 = (ButtonWidget) (stackIn_3_0);
+          wh.a(param1 + param4.widgetX, param4.widgetY + param3, param4.widgetWidth + (param4.widgetX + param1), (byte) 85, param4.widgetHeight + (param4.widgetY + param3));
           if (var11 != null) {
-            param0 = param0 & var11.field_I;
+            param0 = param0 & var11.enabled;
           }
           var8 = -10 / ((param2 - 2) / 41);
           var7 = this.field_u[0];
           this.field_t.a(-107);
           var7.a(this, param3, this.field_t, -116, param4, param1);
           if (var11 != null) {
-            if (var11.field_G) {
+            if (var11.active) {
               var12 = this.field_u[1];
               if (var12 != null) {
                 var12.a(this, param3, this.field_t, -103, param4, param1);
               }
             }
-            if (var11.field_s) {
+            if (var11.pointerInside) {
               var13 = this.field_u[3];
-              if (var11.field_n != 0 &&
+              if (var11.pressedPointerButton != 0 &&
                 var13 != null) {
                 var13.a(this, param3, this.field_t, -113, param4, param1);
               } else {
@@ -241,7 +241,7 @@ final class lg extends am {
               }
             }
           }
-          if (param4.d(66)) {
+          if (param4.hasKeyboardFocus(66)) {
             var14 = this.field_u[5];
             if (var14 != null) {
               var14.a(this, param3, this.field_t, -128, param4, param1);
@@ -279,11 +279,11 @@ final class lg extends am {
         }
     }
 
-    final static ke c(int param0) {
+    final static LoginTextValue c(int param0) {
         if (param0 != 5) {
           lg.c(-37);
         }
-        return new ke(gd.a(true), mn.a(true));
+        return new LoginTextValue(gd.a(true), mn.a(true));
     }
 
     static {

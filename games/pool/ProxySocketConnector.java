@@ -321,13 +321,13 @@ final class ProxySocketConnector extends SocketConnector {
         String var1 = null;
         if (ro.field_e) {
           if (d.field_d != null) {
-            d.field_d.k(17);
+            d.field_d.dismissDialog(17);
           }
           var1 = ve.d(120);
-          vj.field_j = new ui(var1, (String) null, true, false, param0);
-          wd.field_Ub.b(tn.field_n, 30000);
-          tn.field_n.d(vj.field_j, 30);
-          tn.field_n.b(param0);
+          vj.field_j = new LoginForm(var1, (String) null, true, false, param0);
+          wd.field_Ub.showDialog(tn.field_n, 30000);
+          tn.field_n.replaceContent(vj.field_j, 30);
+          tn.field_n.finishTransition(param0);
           return;
         }
         throw new IllegalStateException();
@@ -339,10 +339,10 @@ final class ProxySocketConnector extends SocketConnector {
           if (param0 >= -58) {
             field_e = (na) null;
           }
-          fm.field_I = param2;
+          ArrayWidgetGroup.field_I = param2;
           hn.field_b = 2;
           var5 = (CharSequence) ((Object) param2);
-          di.field_a = hq.a(88, var5);
+          di.field_a = TutorialController.normalizeDisplayName(88, var5);
           c.field_d = param1;
           DualLinkNode.field_p = true;
         } catch (RuntimeException runtimeException) {

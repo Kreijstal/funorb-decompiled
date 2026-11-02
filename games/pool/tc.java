@@ -173,14 +173,14 @@ final class tc {
             var7 = dg.a(124, "%40", var6, "@");
             var8 = dg.a(123, "%26", var7, "&");
             var9 = dg.a(-61, "%23", var8, "#");
-            if (null == gj.field_W) {
+            if (null == ProgressBarWidget.field_W) {
               return;
             }
             stackIn_14_0 = wh.field_c;
             stackIn_14_1 = null;
             stackIn_14_2 = null;
-            stackIn_14_3 = gj.field_W.getCodeBase();
-            stackIn_14_4 = new StringBuilder().append("clienterror.ws?c=").append(ok.field_rb).append("&u=");
+            stackIn_14_3 = ProgressBarWidget.field_W.getCodeBase();
+            stackIn_14_4 = new StringBuilder().append("clienterror.ws?c=").append(ContentTransitionDialog.field_rb).append("&u=");
             if (IntrusiveNode.field_j == null) {
               stackIn_15_1 = null;
               stackIn_15_2 = null;

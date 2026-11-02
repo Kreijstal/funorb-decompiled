@@ -104,7 +104,7 @@ final class wi {
           if (PlasmaBallSkin.field_m != null &&
             PlasmaBallSkin.field_m.a(param2, param1, param4, 25427, param3)) {
             param4 = false;
-            wa.m(8421504);
+            ProgressDialog.m(8421504);
           }
           ii.a(-31668, param3, param4);
           PlasmaBallSkin.a(true, param0, param4);

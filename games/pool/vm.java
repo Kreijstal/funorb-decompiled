@@ -71,22 +71,22 @@ final class vm {
             if (0.0f == this.field_i &&
               this.field_a == 0.0f &&
               this.field_c == 0.0f) {
-              if ((0 == ga.a(1500, true, ea.field_r))) {
+              if ((0 == ga.nextRandomInt(1500, true, ea.field_r))) {
                 stackIn_20_1 = this.field_i;
                 if (this.field_k[0][0] <= 0) {
-                  stackIn_21_2 = (float)(-ga.a(256, true, ea.field_r)) / 256.0f;
+                  stackIn_21_2 = (float)(-ga.nextRandomInt(256, true, ea.field_r)) / 256.0f;
                 } else {
-                  stackIn_21_2 = (float)ga.a(256, true, ea.field_r) / 256.0f;
+                  stackIn_21_2 = (float)ga.nextRandomInt(256, true, ea.field_r) / 256.0f;
                 }
                 this.field_i = stackIn_20_1 + stackIn_21_2;
                 stackIn_23_1 = this.field_a;
                 if (0 < this.field_k[0][1]) {
-                  stackIn_24_2 = (float)ga.a(256, true, ea.field_r) / 256.0f;
+                  stackIn_24_2 = (float)ga.nextRandomInt(256, true, ea.field_r) / 256.0f;
                 } else {
-                  stackIn_24_2 = (float)(-ga.a(256, true, ea.field_r)) / 256.0f;
+                  stackIn_24_2 = (float)(-ga.nextRandomInt(256, true, ea.field_r)) / 256.0f;
                 }
                 this.field_a = stackIn_23_1 + stackIn_24_2;
-                this.field_c = this.field_c + ((float)ga.a(256, true, ea.field_r) / 32.0f - 0.5f);
+                this.field_c = this.field_c + ((float)ga.nextRandomInt(256, true, ea.field_r) / 32.0f - 0.5f);
               }
               decompiledFrameRemainder0 = false;
             }
@@ -222,7 +222,7 @@ final class vm {
           for (var2_int = 0; param0.field_b.length > var2_int; var2_int++) {
             this.field_k[var2_int] = new int[]{param0.field_b[var2_int].field_d[0], param0.field_b[var2_int].field_d[1], param0.field_b[var2_int].field_d[2]};
           }
-          this.field_l = 32 + ga.a(32, true, ea.field_r);
+          this.field_l = 32 + ga.nextRandomInt(32, true, ea.field_r);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vm.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

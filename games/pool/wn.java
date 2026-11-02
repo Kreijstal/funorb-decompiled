@@ -6,7 +6,7 @@ import java.io.*;
 final class wn {
     static volatile int field_k;
     static vh field_g;
-    static fo field_a;
+    static KeyHandler field_a;
     static int field_h;
     static int field_j;
     static String ok;
@@ -279,7 +279,7 @@ final class wn {
           var9 = param3[1] - param3[0];
           if (var8_int != 0 ||
             var9 != 0) {
-            var12 = ke.a(false, var9 * var9 + var8_int * var8_int);
+            var12 = LoginTextValue.a(false, var9 * var9 + var8_int * var8_int);
             if (0 != var12) {
               var8_int = (var8_int << 16) / var12;
               var9 = (var9 << 16) / var12;
@@ -297,14 +297,14 @@ final class wn {
               var10 = -param6[var15] + param6[var15 + 1];
               if (0 != var10 ||
                 0 != var11) {
-                var13 = ke.a(false, var11 * var11 + var10 * var10);
+                var13 = LoginTextValue.a(false, var11 * var11 + var10 * var10);
                 if (var13 != 0) {
                   var11 = (var11 << 16) / var13;
                   var10 = (var10 << 16) / var13;
                 }
               }
             }
-            ne.field_q = var8_int + var10 >> 1;
+            MatchingTextValidator.field_q = var8_int + var10 >> 1;
             di.field_h = var11 + var9 >> 1;
             stackIn_18_0 = param3[var15 - 1];
             stackIn_18_1 = param4;
@@ -326,7 +326,7 @@ final class wn {
               stackIn_22_10 = param1;
             }
             bo.$cfr$intArgs$a$29f688675a86(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_19_7, stackIn_21_8, stackIn_21_9, stackIn_22_10);
-            ng.field_w = ne.field_q;
+            ng.field_w = MatchingTextValidator.field_q;
             var9 = var11;
             fr.field_u = di.field_h;
             var8_int = var10;
@@ -369,7 +369,7 @@ final class wn {
         field_k = -1;
         ok = "OK";
         field_l = 62259;
-        field_a = new fo();
+        field_a = new KeyHandler();
         field_i = 0;
         field_f = new int[]{3000, 2250, 1500, 1000, 750, 500};
     }
@@ -413,7 +413,7 @@ final class wn {
           var9 = param3[1] - param3[0];
           if (var8_int != 0 ||
             var9 != 0) {
-            var12 = ke.a(false, var9 * var9 + var8_int * var8_int);
+            var12 = LoginTextValue.a(false, var9 * var9 + var8_int * var8_int);
             if (0 != var12) {
               var8_int = (var8_int << 16) / var12;
               var9 = (var9 << 16) / var12;
@@ -431,14 +431,14 @@ final class wn {
               var10 = -param6[var15] + param6[var15 + 1];
               if (0 != var10 ||
                 0 != var11) {
-                var13 = ke.a(false, var11 * var11 + var10 * var10);
+                var13 = LoginTextValue.a(false, var11 * var11 + var10 * var10);
                 if (var13 != 0) {
                   var11 = (var11 << 16) / var13;
                   var10 = (var10 << 16) / var13;
                 }
               }
             }
-            ne.field_q = var8_int + var10 >> 1;
+            MatchingTextValidator.field_q = var8_int + var10 >> 1;
             di.field_h = var11 + var9 >> 1;
             stackIn_18_0 = param3[var15 - 1];
             stackIn_18_1 = param4;
@@ -460,7 +460,7 @@ final class wn {
               stackIn_22_10 = param1;
             }
             bo.$cfr$intArgs$a$29f688675a86(stackIn_18_0, stackIn_18_1, stackIn_18_2, stackIn_18_3, stackIn_18_4, stackIn_18_5, stackIn_18_6, stackIn_19_7, stackIn_21_8, stackIn_21_9, stackIn_22_10);
-            ng.field_w = ne.field_q;
+            ng.field_w = MatchingTextValidator.field_q;
             var9 = var11;
             fr.field_u = di.field_h;
             var8_int = var10;

@@ -87,13 +87,13 @@ final class ld {
         if (em.field_P > 0) {
           em.field_P = em.field_P - 1;
         }
-        if (sh.field_P.field_k != cb.field_g) {
-          fd.field_J = fd.field_J + (sh.field_P.field_k - cb.field_g);
-          cb.field_g = sh.field_P.field_k;
+        if (OpacityWidget.field_P.height != cb.field_g) {
+          StrongCacheEntry.field_J = StrongCacheEntry.field_J + (OpacityWidget.field_P.height - cb.field_g);
+          cb.field_g = OpacityWidget.field_P.height;
         }
         int var1 = 37 / ((param0 + 53) / 53);
         if (0 < em.field_P) {
-          wa.l(23323);
+          ProgressDialog.l(23323);
         }
     }
 
@@ -329,7 +329,7 @@ final class ld {
             var4 = 0;
             var5 = 56;
             while (8 > var4) {
-              this.field_e[var3Lifetime1] = im.a(this.field_e[var3Lifetime1], n.field_N[var4][rb.b((int)(this.field_m[rb.b(7, var3Lifetime1 - var4)] >>> var5), 255)]);
+              this.field_e[var3Lifetime1] = im.a(this.field_e[var3Lifetime1], LabeledChildWidget.field_N[var4][rb.b((int)(this.field_m[rb.b(7, var3Lifetime1 - var4)] >>> var5), 255)]);
               var5 -= 8;
               var4++;
             }
@@ -337,14 +337,14 @@ final class ld {
           for (var3Lifetime1Lifetime1 = 0; 8 > var3Lifetime1Lifetime1; var3Lifetime1Lifetime1++) {
             this.field_m[var3Lifetime1Lifetime1] = this.field_e[var3Lifetime1Lifetime1];
           }
-          this.field_m[0] = im.a(this.field_m[0], n.field_Z[var2Lifetime2]);
+          this.field_m[0] = im.a(this.field_m[0], LabeledChildWidget.field_Z[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; 8 > var3Lifetime1Lifetime2; var3Lifetime1Lifetime2++) {
             this.field_e[var3Lifetime1Lifetime2] = this.field_m[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_e[var3Lifetime1Lifetime2] = im.a(this.field_e[var3Lifetime1Lifetime2], n.field_N[var7][rb.b(255, (int)(this.field_l[rb.b(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
+              this.field_e[var3Lifetime1Lifetime2] = im.a(this.field_e[var3Lifetime1Lifetime2], LabeledChildWidget.field_N[var7][rb.b(255, (int)(this.field_l[rb.b(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
               var7++;
               var5Lifetime1 -= 8;
             }

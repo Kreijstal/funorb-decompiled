@@ -3,8 +3,8 @@
  */
 class ob extends jh {
     int field_s;
-    gi field_G;
-    ia field_B;
+    TextHotspotRegion field_G;
+    MenuSelection field_B;
     Sprite field_z;
     boolean field_p;
     private int field_A;
@@ -135,18 +135,18 @@ class ob extends jh {
         if (jq.field_e[param1] != var4 ||
           var9Lifetime1 != FreePlayRules.field_h[param1]) {
           var10_ref_dd = this.a(var4, var9Lifetime1, 0, param1);
-          fm.field_G[param1] = var10_ref_dd;
+          ArrayWidgetGroup.field_G[param1] = var10_ref_dd;
           jq.field_e[param1] = var4;
           FreePlayRules.field_h[param1] = var9Lifetime1;
         }
-        var10Lifetime1 = fm.field_G[param1].field_z;
+        var10Lifetime1 = ArrayWidgetGroup.field_G[param1].field_z;
         if (20 == var3 ||
           var3 == 21) {
           var10Lifetime1 = Ball.field_H + 120;
         }
         var11 = -var10Lifetime1 + (var6 + var5) >> 1;
         var12 = this.a((byte) 69, param1);
-        fm.field_G[param1].c(var11, var7 + this.a(param1, 6402));
+        ArrayWidgetGroup.field_G[param1].c(var11, var7 + this.a(param1, 6402));
         this.a(param1, var6, var5, var12, -24267, var7);
         if (var3 != 20 &&
           var3 != 21) {
@@ -205,7 +205,7 @@ class ob extends jh {
 
     Sprite[] b(int param0, int param1) {
         int var3;
-        if (param0 == this.field_B.field_h) {
+        if (param0 == this.field_B.selectedIndex) {
           return ln.field_s;
         }
         if (param1 != -34) {
@@ -225,20 +225,20 @@ class ob extends jh {
         var3 = Pool.field_O;
         if (!ub.field_p &&
           !br.field_H) {
-          while (n.h(param0 + 128)) {
+          while (LabeledChildWidget.h(param0 + 128)) {
             if (qi.field_a == 13) {
               this.a((byte) -30);
               continue;
             }
             this.e(-34);
-            if (this.field_B.field_h == -1) {
+            if (this.field_B.selectedIndex == -1) {
               continue;
             }
-            this.b(-16470, false, this.field_B.field_h);
+            this.b(-16470, false, this.field_B.selectedIndex);
           }
-          this.field_B.a(this.b(-6564, ua.field_o, lq.field_W), this.b(-6564, gg.field_f, wn.field_i), param0 ^ -109);
-          if (-1 != this.field_B.field_h) {
-            this.b(-16470, true, this.field_B.field_h);
+          this.field_B.a(this.b(-6564, UsernameAvailabilityValidator.field_o, DialogLayer.field_W), this.b(-6564, DebouncedValidationProvider.field_f, wn.field_i), param0 ^ -109);
+          if (-1 != this.field_B.selectedIndex) {
+            this.b(-16470, true, this.field_B.selectedIndex);
           }
         }
         if (param0 != -1) {
@@ -259,7 +259,7 @@ class ob extends jh {
         if (param0 != 12) {
           return;
         }
-        if (1 == er.field_W) {
+        if (1 == DialWidget.field_W) {
           this.a(0, param1, 0);
         } else {
           fq.a(-3405, 7, 0, param1);
@@ -386,17 +386,17 @@ class ob extends jh {
             if (var6 != 0 &&
               var6 != 38) {
               if (37 == var6) {
-                if (!(!this.field_B.b((byte) 72))) {
+                if (!(!this.field_B.isPressActivated((byte) 72))) {
                   fq.a(-3405, 7, 0, param1);
                 }
               } else {
                 if (39 == var6) {
-                  if (!(!this.field_B.b((byte) 74))) {
+                  if (!(!this.field_B.isPressActivated((byte) 74))) {
                     fq.a(-3405, 1, 0, param1);
                   }
                 } else {
                   if (var6 == 49) {
-                    if (!this.field_B.b((byte) 78)) {
+                    if (!this.field_B.isPressActivated((byte) 78)) {
                       break regionExit2;
                     }
                     stackIn_82_0 = !(th.field_h);
@@ -404,103 +404,103 @@ class ob extends jh {
                     stackIn_84_0 = TranslatedUiText.field_f;
                     stackIn_84_1 = 49;
                     if (th.field_h) {
-                      stackIn_85_2 = hb.mouseYAxisInverted;
+                      stackIn_85_2 = NodeHashTableIterator.mouseYAxisInverted;
                     } else {
                       stackIn_85_2 = PoolMatchController.mouseYAxisNormal;
                     }
                     stackIn_84_0[stackIn_84_1] = stackIn_85_2;
                   } else {
                     if (var6 == 29) {
-                      if (!this.field_B.b((byte) 58)) {
+                      if (!this.field_B.isPressActivated((byte) 58)) {
                         break regionExit2;
                       }
                       this.a(0, param1, 0);
                     } else {
                       if (var6 == 30) {
-                        if (!this.field_B.b((byte) 63)) {
+                        if (!this.field_B.isPressActivated((byte) 63)) {
                           break regionExit2;
                         }
                         this.a(1, param1, param0 ^ -16470);
                       } else {
                         if (var6 == 31) {
-                          if (!(!this.field_B.b((byte) 82))) {
+                          if (!(!this.field_B.isPressActivated((byte) 82))) {
                             this.a(2, param1, 0);
                           }
                         } else {
                           if (32 == var6) {
-                            if (!(!this.field_B.b((byte) 61))) {
+                            if (!(!this.field_B.isPressActivated((byte) 61))) {
                               this.a(3, param1, 0);
                             }
                           } else {
                             if (var6 == 33) {
-                              if (!this.field_B.b((byte) 73)) {
+                              if (!this.field_B.isPressActivated((byte) 73)) {
                                 break regionExit2;
                               }
                               this.a(4, param1, 0);
                             } else {
                               if (var6 == 34) {
-                                if (!this.field_B.b((byte) 86)) {
+                                if (!this.field_B.isPressActivated((byte) 86)) {
                                   break regionExit2;
                                 }
                                 this.a(5, param1, param0 + 16470);
                               } else {
                                 if (var6 == 35) {
-                                  if (!this.field_B.b((byte) 125)) {
+                                  if (!this.field_B.isPressActivated((byte) 125)) {
                                     break regionExit2;
                                   }
                                   this.a(6, param1, 0);
                                 } else {
                                   if (var6 == 36) {
-                                    if (!(!this.field_B.b((byte) 108))) {
+                                    if (!(!this.field_B.isPressActivated((byte) 108))) {
                                       this.a(7, param1, 0);
                                     }
                                   } else {
                                     if (var6 == 40) {
-                                      if (!(!this.field_B.b((byte) 99))) {
+                                      if (!(!this.field_B.isPressActivated((byte) 99))) {
                                         vh.field_Ab = so.field_g[0];
-                                        er.field_W = 3;
+                                        DialWidget.field_W = 3;
                                         GameRules.field_b = -6;
                                       }
                                     } else {
                                       if (var6 == 41) {
-                                        if (!(!this.field_B.b((byte) 101))) {
-                                          er.field_W = 3;
+                                        if (!(!this.field_B.isPressActivated((byte) 101))) {
+                                          DialWidget.field_W = 3;
                                           vh.field_Ab = so.field_g[1];
                                           GameRules.field_b = -6;
                                         }
                                       } else {
                                         if (var6 == 42) {
-                                          if (!this.field_B.b((byte) 84)) {
+                                          if (!this.field_B.isPressActivated((byte) 84)) {
                                             break regionExit2;
                                           }
                                           GameRules.field_b = -6;
                                           vh.field_Ab = so.field_g[2];
-                                          er.field_W = 3;
+                                          DialWidget.field_W = 3;
                                         } else {
                                           if (43 == var6) {
-                                            if (!(!this.field_B.b((byte) 81))) {
+                                            if (!(!this.field_B.isPressActivated((byte) 81))) {
                                               var6 = param1 ? 1 : 0;
                                               fq.a(param0 ^ 19737, 2, GameRules.field_b, var6 != 0);
                                             }
                                           } else {
                                             if (var6 == 50) {
-                                              if (!this.field_B.b((byte) 90)) {
+                                              if (!this.field_B.isPressActivated((byte) 90)) {
                                                 break regionExit2;
                                               }
                                               un.field_e = 0;
                                               GameRules.field_b = -8;
                                             } else {
                                               if (var6 == 51) {
-                                                if (!(!this.field_B.b((byte) 83))) {
+                                                if (!(!this.field_B.isPressActivated((byte) 83))) {
                                                   un.field_e = 1;
                                                   GameRules.field_b = -8;
                                                 }
                                               } else {
                                                 if (1 == var6) {
-                                                  if (!this.field_B.b((byte) 76)) {
+                                                  if (!this.field_B.isPressActivated((byte) 76)) {
                                                     break regionExit2;
                                                   }
-                                                  if (hk.b(107)) {
+                                                  if (NanoTickClock.b(107)) {
                                                     bl.field_x = true;
                                                     TranslatedUiText.a(pl.pleaselogin, -4, (byte) 82);
                                                   } else {
@@ -511,39 +511,39 @@ class ob extends jh {
                                                   if (var6 != 62 &&
                                                     var6 != 2) {
                                                     if (var6 == 7) {
-                                                      if (!(!this.field_B.b((byte) 50))) {
+                                                      if (!(!this.field_B.isPressActivated((byte) 50))) {
                                                         var6 = param1 ? 1 : 0;
                                                         fq.a(-3405, 0, GameRules.field_b, var6 != 0);
                                                         jc.field_c = false;
                                                       }
                                                     } else {
                                                       if (var6 == 24) {
-                                                        if (!(!this.field_B.b((byte) 95))) {
+                                                        if (!(!this.field_B.isPressActivated((byte) 95))) {
                                                           var6 = param1 ? 1 : 0;
                                                           fq.a(-3405, 21, GameRules.field_b, var6 != 0);
                                                           lo.field_a = true;
                                                         }
                                                       } else {
                                                         if (var6 == 22) {
-                                                          if (!(!this.field_B.b((byte) 109))) {
+                                                          if (!(!this.field_B.isPressActivated((byte) 109))) {
                                                             var6 = param1 ? 1 : 0;
                                                             fq.a(-3405, 17, GameRules.field_b, var6 != 0);
                                                           }
                                                         } else {
                                                           if (var6 == 5) {
-                                                            if (!(!this.field_B.b((byte) 67))) {
+                                                            if (!(!this.field_B.isPressActivated((byte) 67))) {
                                                               var6 = param1 ? 1 : 0;
                                                               fq.a(-3405, 13, GameRules.field_b, var6 != 0);
                                                             }
                                                           } else {
                                                             if (47 == var6) {
-                                                              if (!(!this.field_B.b((byte) 81))) {
+                                                              if (!(!this.field_B.isPressActivated((byte) 81))) {
                                                                 var6 = param1 ? 1 : 0;
                                                                 fq.a(-3405, 14, GameRules.field_b, var6 != 0);
                                                               }
                                                             } else {
                                                               if (8 == var6) {
-                                                                if (!this.field_B.b((byte) 89)) {
+                                                                if (!this.field_B.isPressActivated((byte) 89)) {
                                                                   break regionExit2;
                                                                 }
                                                                 if ((GameRules.field_b != this.field_w)) {
@@ -559,13 +559,13 @@ class ob extends jh {
                                                                 }
                                                               } else {
                                                                 if (var6 == 4) {
-                                                                  if (!(!this.field_B.b((byte) 52))) {
+                                                                  if (!(!this.field_B.isPressActivated((byte) 52))) {
                                                                     var6 = param1 ? 1 : 0;
                                                                     fq.a(-3405, 15, GameRules.field_b, var6 != 0);
                                                                   }
                                                                 } else {
                                                                   if (var6 == 48) {
-                                                                    if (!this.field_B.b((byte) 89)) {
+                                                                    if (!this.field_B.isPressActivated((byte) 89)) {
                                                                       break regionExit2;
                                                                     }
                                                                     var6 = param1 ? 1 : 0;
@@ -573,39 +573,39 @@ class ob extends jh {
                                                                   } else {
                                                                     if (var6 == 20) {
                                                                       var5 = 0;
-                                                                      if (this.field_B.d(123) &&
+                                                                      if (this.field_B.isHomeKey(123) &&
                                                                         ec.field_b > 0) {
-                                                                        ka.a(true, 0);
+                                                                        AgeValidator.a(true, 0);
                                                                         var5 = 1;
                                                                       }
-                                                                      if (this.field_B.a(103) &&
+                                                                      if (this.field_B.isEndKey(103) &&
                                                                         256 > ec.field_b) {
                                                                         var5 = 1;
-                                                                        ka.a(true, 256);
+                                                                        AgeValidator.a(true, 256);
                                                                       }
                                                                       if (this.field_B.c((byte) 111)) {
                                                                         var6 = this.d(0, param2) + (this.a(false, param2) + Ball.field_H) - 120 >> 1;
                                                                         var7 = -var6 + wn.field_i;
                                                                         var8 = 256 * var7 / 120;
                                                                         if (0 >= var8) {
-                                                                          ka.a(true, 0);
+                                                                          AgeValidator.a(true, 0);
                                                                         } else {
                                                                           if (var8 < 256) {
-                                                                            ka.a(true, var8);
+                                                                            AgeValidator.a(true, var8);
                                                                           } else {
-                                                                            ka.a(true, 256);
+                                                                            AgeValidator.a(true, 256);
                                                                           }
                                                                         }
                                                                         var5 = 1;
                                                                       }
-                                                                      if (this.field_B.f(-20421) &&
+                                                                      if (this.field_B.isLeftArrow(-20421) &&
                                                                         ec.field_b > 0) {
                                                                         var5 = 1;
                                                                         ve.b((byte) -14);
                                                                       }
-                                                                      if (this.field_B.c(-1) &&
+                                                                      if (this.field_B.isRightArrow(-1) &&
                                                                         ec.field_b < 256) {
-                                                                        ud.f(param0 + 16245);
+                                                                        SingleChildWidget.f(param0 + 16245);
                                                                         var5 = 1;
                                                                       }
                                                                       if ((var5 != 0)) {
@@ -618,10 +618,10 @@ class ob extends jh {
                                                                       }
                                                                     } else {
                                                                       if (var6 == 21) {
-                                                                        if (this.field_B.d(121)) {
+                                                                        if (this.field_B.isHomeKey(121)) {
                                                                           ap.a(0, 3815994);
                                                                         }
-                                                                        if (this.field_B.a(103)) {
+                                                                        if (this.field_B.isEndKey(103)) {
                                                                           ap.a(256, 3815994);
                                                                         }
                                                                         if (this.field_B.c((byte) 105)) {
@@ -638,18 +638,18 @@ class ob extends jh {
                                                                             ap.a(0, 3815994);
                                                                           }
                                                                         }
-                                                                        if (this.field_B.f(-20421)) {
+                                                                        if (this.field_B.isLeftArrow(-20421)) {
                                                                           pd.a(param0 ^ -16470);
                                                                         }
-                                                                        if (!(!this.field_B.c(-1))) {
+                                                                        if (!(!this.field_B.isRightArrow(-1))) {
                                                                           oq.n(param0 + 4941);
                                                                         }
                                                                       } else {
                                                                         if (var6 == 6) {
-                                                                          if (!this.field_B.b((byte) 112)) {
+                                                                          if (!this.field_B.isPressActivated((byte) 112)) {
                                                                             break regionExit2;
                                                                           }
-                                                                          if (ne.field_u != null) {
+                                                                          if (MatchingTextValidator.field_u != null) {
                                                                             tq.d((byte) -124);
                                                                           } else {
                                                                             var6 = param1 ? 1 : 0;
@@ -660,8 +660,8 @@ class ob extends jh {
                                                                           if (var6 != 61 &&
                                                                             var6 != 9) {
                                                                             if (10 == var6) {
-                                                                              if (!(!this.field_B.b((byte) 104))) {
-                                                                                ba.field_ub.k((byte) -97);
+                                                                              if (!(!this.field_B.isPressActivated((byte) 104))) {
+                                                                                AccountContentDialog.field_ub.k((byte) -97);
                                                                                 var6 = param1 ? 1 : 0;
                                                                                 stackIn_212_0 = -3405;
                                                                                 stackIn_212_1 = -1;
@@ -674,8 +674,8 @@ class ob extends jh {
                                                                               }
                                                                             } else {
                                                                               if (var6 == 11) {
-                                                                                if (!(!this.field_B.b((byte) 113))) {
-                                                                                  ba.field_ub.F(1791);
+                                                                                if (!(!this.field_B.isPressActivated((byte) 113))) {
+                                                                                  AccountContentDialog.field_ub.F(1791);
                                                                                   var6 = param1 ? 1 : 0;
                                                                                   stackIn_218_0 = -3405;
                                                                                   stackIn_218_1 = -1;
@@ -688,11 +688,11 @@ class ob extends jh {
                                                                                 }
                                                                               } else {
                                                                                 if (12 == var6) {
-                                                                                  if (!this.field_B.b((byte) 120)) {
+                                                                                  if (!this.field_B.isPressActivated((byte) 120)) {
                                                                                     break regionExit2;
                                                                                   }
-                                                                                  if ((ba.field_ub.field_L & hq.field_c) != 0) {
-                                                                                    ba.field_ub.o((byte) -17);
+                                                                                  if ((AccountContentDialog.field_ub.field_L & TutorialController.field_c) != 0) {
+                                                                                    AccountContentDialog.field_ub.o((byte) -17);
                                                                                   } else {
                                                                                     var6 = param1 ? 1 : 0;
                                                                                     stackIn_224_0 = -3405;
@@ -707,9 +707,9 @@ class ob extends jh {
                                                                                 } else {
                                                                                   if (var6 != 3) {
                                                                                     if (var6 == 13) {
-                                                                                      if (!(!this.field_B.b((byte) 122))) {
-                                                                                        if (ib.field_v) {
-                                                                                          ba.field_ub.F(1791);
+                                                                                      if (!(!this.field_B.isPressActivated((byte) 122))) {
+                                                                                        if (MidiNoteMixer.field_v) {
+                                                                                          AccountContentDialog.field_ub.F(1791);
                                                                                           var6 = param1 ? 1 : 0;
                                                                                           fq.a(param0 ^ 19737, -5, GameRules.field_b, var6 != 0);
                                                                                         }
@@ -721,13 +721,13 @@ class ob extends jh {
                                                                                     }
                                                                                     switch (var6) {
                                                                                       case 17:
-                                                                                        if (!this.field_B.b((byte) 94)) {
+                                                                                        if (!this.field_B.isPressActivated((byte) 94)) {
                                                                                           break regionExit2;
                                                                                         }
                                                                                         eo.field_Lb = 0;
                                                                                         break regionExit1;
                                                                                       case 18:
-                                                                                        if (!this.field_B.b((byte) 86)) {
+                                                                                        if (!this.field_B.isPressActivated((byte) 86)) {
                                                                                           break regionExit2;
                                                                                         }
                                                                                         eo.field_Lb = 1;
@@ -735,17 +735,17 @@ class ob extends jh {
                                                                                       default:
                                                                                         break regionExit1;
                                                                                       case 19:
-                                                                                        if (!this.field_B.b((byte) 83)) {
+                                                                                        if (!this.field_B.isPressActivated((byte) 83)) {
                                                                                           break regionExit2;
                                                                                         }
-                                                                                        tk.a(-1, hk.d(99));
+                                                                                        tk.a(-1, NanoTickClock.getApplet(99));
                                                                                         break regionExit1;
                                                                                     }
                                                                                   }
-                                                                                  if (!this.field_B.b((byte) 78)) {
+                                                                                  if (!this.field_B.isPressActivated((byte) 78)) {
                                                                                     break regionExit2;
                                                                                   }
-                                                                                  if ((ba.field_ub.field_L & f.field_f) != 0) {
+                                                                                  if ((AccountContentDialog.field_ub.field_L & f.field_f) != 0) {
                                                                                     var6 = param1 ? 1 : 0;
                                                                                     stackIn_240_0 = -3405;
                                                                                     stackIn_240_1 = -8;
@@ -756,7 +756,7 @@ class ob extends jh {
                                                                                     }
                                                                                     fq.a(stackIn_240_0, stackIn_240_1, stackIn_241_2, var6 != 0);
                                                                                   } else {
-                                                                                    if ((ba.field_ub.field_L & sk.field_d) != 0) {
+                                                                                    if ((AccountContentDialog.field_ub.field_L & sk.field_d) != 0) {
                                                                                       var6 = param1 ? 1 : 0;
                                                                                       stackIn_236_0 = -3405;
                                                                                       stackIn_236_1 = -6;
@@ -782,10 +782,10 @@ class ob extends jh {
                                                                               }
                                                                             }
                                                                           } else {
-                                                                            if (!this.field_B.b((byte) 75)) {
+                                                                            if (!this.field_B.isPressActivated((byte) 75)) {
                                                                               break regionExit2;
                                                                             }
-                                                                            ba.field_ub.c(256, param1);
+                                                                            AccountContentDialog.field_ub.c(256, param1);
                                                                             vq.field_Sb = true;
                                                                             jc.field_c = false;
                                                                           }
@@ -801,7 +801,7 @@ class ob extends jh {
                                                       }
                                                     }
                                                   } else {
-                                                    if (!(!this.field_B.b((byte) 51))) {
+                                                    if (!(!this.field_B.isPressActivated((byte) 51))) {
                                                       var6 = param1 ? 1 : 0;
                                                       stackIn_129_0 = -3405;
                                                       stackIn_129_1 = -1;
@@ -833,7 +833,7 @@ class ob extends jh {
               }
               break regionExit1;
             }
-            if (this.field_B.b((byte) 97)) {
+            if (this.field_B.isPressActivated((byte) 97)) {
               fq.a(-3405, 6, 0, param1);
             }
           }
@@ -872,8 +872,8 @@ class ob extends jh {
           if (param3 != -16097) {
             this.c(38);
           }
-          if (param4 != hq.field_m) {
-            if (param4.equals(hq.field_m)) {
+          if (param4 != TutorialController.field_m) {
+            if (param4.equals(TutorialController.field_m)) {
               return;
             }
             var18 = new String[32];
@@ -882,13 +882,13 @@ class ob extends jh {
             for (var11 = 0; var9 > var11; var11++) {
               var10 = var10 + param1[var11 % param1.length];
             }
-            uh.field_p = new Sprite(param5, var10 + param0.maxDescent);
+            PasswordValidator.field_p = new Sprite(param5, var10 + param0.maxDescent);
             var25 = new int[4];
             var26 = SoftwareRasterizer.pixels;
             var13 = SoftwareRasterizer.width;
             var14 = SoftwareRasterizer.height;
             SoftwareRasterizer.saveClip(var25);
-            uh.field_p.e();
+            PasswordValidator.field_p.e();
             var15 = 0;
             var16 = param0.maxAscent;
             while (var15 < var9) {
@@ -896,7 +896,7 @@ class ob extends jh {
               var15++;
               var16 = var16 + param1[var15 % param1.length];
             }
-            sh.field_P.b(15100);
+            OpacityWidget.field_P.bindAsRenderTarget(15100);
             SoftwareRasterizer.setTarget(var26, var13, var14);
             SoftwareRasterizer.restoreClip(var25);
           }
@@ -951,7 +951,7 @@ class ob extends jh {
     final void a(int[] param0, boolean param1) {
         try {
           this.field_h = param0;
-          this.field_B = new ia(this.field_h.length);
+          this.field_B = new MenuSelection(this.field_h.length);
           if (!param1) {
             this.b(5, true);
           }
@@ -961,15 +961,15 @@ class ob extends jh {
     }
 
     void a(int param0, int param1, boolean param2) {
-        if (param0 != ~this.field_B.field_h) {
-          param1 = this.field_B.field_h;
+        if (param0 != ~this.field_B.selectedIndex) {
+          param1 = this.field_B.selectedIndex;
         }
-        this.field_B.a(param2, param1, this.b(-6564, gg.field_f, wn.field_i), true);
+        this.field_B.initializeSelection(param2, param1, this.b(-6564, DebouncedValidationProvider.field_f, wn.field_i), true);
         field_D = eo.field_Tb;
     }
 
     final void b(int param0, boolean param1) {
-        uh.field_p.c(SoftwareRasterizer.width - uh.field_p.field_z >> 1, param0);
+        PasswordValidator.field_p.c(SoftwareRasterizer.width - PasswordValidator.field_p.field_z >> 1, param0);
         if (param1) {
           this.a(-32, 52, true);
         }
@@ -1015,9 +1015,9 @@ class ob extends jh {
           this.field_n = false;
         }
         if (!this.a(param0, true)) {
-          return this.field_B.field_h != param0 ? 1 : 2;
+          return this.field_B.selectedIndex != param0 ? 1 : 2;
         }
-        return this.field_B.field_h == param0 ? 3 : 4;
+        return this.field_B.selectedIndex == param0 ? 3 : 4;
     }
 
     void c(int param0) {
@@ -1025,16 +1025,16 @@ class ob extends jh {
         int var3;
         var3 = Pool.field_O;
         this.a(false);
-        if (fm.field_G == null ||
-          !(fm.field_G.length >= this.field_B.field_e)) {
-          fm.field_G = new Sprite[this.field_B.field_e];
-          FreePlayRules.field_h = new int[this.field_B.field_e];
-          jq.field_e = new String[this.field_B.field_e];
+        if (ArrayWidgetGroup.field_G == null ||
+          !(ArrayWidgetGroup.field_G.length >= this.field_B.itemCount)) {
+          ArrayWidgetGroup.field_G = new Sprite[this.field_B.itemCount];
+          FreePlayRules.field_h = new int[this.field_B.itemCount];
+          jq.field_e = new String[this.field_B.itemCount];
         }
         if (param0 < 36) {
           return;
         }
-        for (var2 = 0; var2 < this.field_B.field_e; var2++) {
+        for (var2 = 0; var2 < this.field_B.itemCount; var2++) {
           if (this.e(var2, -126)) {
             this.b(true, var2);
           }
@@ -1218,7 +1218,7 @@ class ob extends jh {
     }
 
     void e(int param0) {
-        this.field_B.e(-15525);
+        this.field_B.navigateVertical(-15525);
         if (param0 != -34) {
           ob.d((byte) 126);
         }

@@ -74,7 +74,7 @@ final class oc {
     }
 
     final static void a(int param0) {
-        tn var1 = (tn) (nf.field_S.b(-1));
+        tn var1 = (tn) (AccountCreationForm.field_S.b(-1));
         if (var1 == null) {
           throw new IllegalStateException();
         }

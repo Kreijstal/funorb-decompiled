@@ -85,7 +85,7 @@ abstract class bb {
             for (var11 = param2; var11 < param1; var11++) {
               var12 = NetworkGameClient.field_H[var11];
               if (param6) {
-                stackIn_27_0 = kb.field_g[var12];
+                stackIn_27_0 = TickClock.field_g[var12];
               } else {
                 stackIn_27_0 = ah.field_c[var12];
               }

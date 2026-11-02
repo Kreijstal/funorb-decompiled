@@ -104,7 +104,7 @@ final class TikiTableScene extends ModelTableScene {
           }
           if (500 > ln.field_t) {
             this.a(128, 50, (byte) 71, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
-            if (ga.a(400, true, ea.field_r) == 0) {
+            if (ga.nextRandomInt(400, true, ea.field_r) == 0) {
               this.c(-4577, 32);
             }
           } else {
@@ -112,7 +112,7 @@ final class TikiTableScene extends ModelTableScene {
               if (ln.field_t < 2000) {
                 var3_int = (128 * ln.field_t - 64000) / 1500;
                 this.a(128 - var3_int * 7 / 8, 50, (byte) 34, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
-                if (ga.a(800, true, ea.field_r) == 0) {
+                if (ga.nextRandomInt(800, true, ea.field_r) == 0) {
                   this.c(-4577, 128 - 7 * var3_int / 8 >> 2);
                 }
                 tl.field_N.a((byte) 77, -1, var3_int);
@@ -129,7 +129,7 @@ final class TikiTableScene extends ModelTableScene {
                   } else {
                     var3_int = 128 * (12200 - ln.field_t) / 1000;
                     this.a(128 - 7 * var3_int / 8, 50, (byte) -126, new PcmSample[]{this.field_R, this.field_hb, this.field_lb, this.field_qb}, FreePlayRules.field_j);
-                    if (ga.a(800, true, ea.field_r) == 0) {
+                    if (ga.nextRandomInt(800, true, ea.field_r) == 0) {
                       this.c(-4577, 128 - var3_int * 7 / 8 >> 2);
                     }
                     tl.field_N.a((byte) 32, -1, var3_int);
@@ -239,17 +239,17 @@ final class TikiTableScene extends ModelTableScene {
           var3_int++;
           this.field_O[incrementValue$25] = eg.a(param0, "", "tiki_table/tiki_extra_4");
           kp.field_f = var3_int;
-          nf.field_T = var3_int;
+          AccountCreationForm.field_T = var3_int;
           incrementValue$26 = var3_int;
           var3_int++;
           this.field_O[incrementValue$26] = eg.a(param0, "", "tiki_table/tiki_totnew");
-          hr.field_t = var3_int;
+          ViewportController.field_t = var3_int;
           mn.field_a = var3_int;
           incrementValue$27 = var3_int;
           var3_int++;
           this.field_O[incrementValue$27] = eg.a(param0, "", "tiki_table/tiki_steps_extend");
           ec.field_c = var3_int;
-          gk.field_ib = var3_int;
+          FullscreenErrorDialog.field_ib = var3_int;
           incrementValue$28 = var3_int;
           var3_int++;
           this.field_O[incrementValue$28] = eg.a(param0, "", "tiki_table/tiki_leg_a");
@@ -303,7 +303,7 @@ final class TikiTableScene extends ModelTableScene {
           incrementValue$41 = var3_int;
           var3_int++;
           this.field_O[incrementValue$41] = eg.a(param0, "", "tiki_table/tiki_side_c");
-          ka.field_q = var3_int;
+          AgeValidator.field_q = var3_int;
           ca.field_h = var3_int;
           incrementValue$42 = var3_int;
           var3_int++;
@@ -312,7 +312,7 @@ final class TikiTableScene extends ModelTableScene {
           var3_int++;
           this.field_O[incrementValue$43] = eg.a(param0, "", "tiki_table/tiki_top_b");
           om.field_x = var3_int;
-          this.field_A = new jk();
+          this.field_A = new CueStick();
           this.field_A.a(eg.a(param0, "", "cues/jungle_cue"), (byte) -115);
           for (var4 = 0; var4 < this.field_O.length; var4++) {
             db.a(0, this.field_O[var4]);
@@ -323,7 +323,7 @@ final class TikiTableScene extends ModelTableScene {
           var8 = -2147483648;
           var9 = 2147483647;
           var10 = -2147483648;
-          for (var4Lifetime1 = ka.field_q; om.field_x > var4Lifetime1; var4Lifetime1++) {
+          for (var4Lifetime1 = AgeValidator.field_q; om.field_x > var4Lifetime1; var4Lifetime1++) {
             d.a(this.field_O[var4Lifetime1], -23109);
             if (this.field_O[var4Lifetime1].field_S > var8) {
               var8 = this.field_O[var4Lifetime1].field_S;
@@ -361,7 +361,7 @@ final class TikiTableScene extends ModelTableScene {
             }
           }
           var14 = new eg[4];
-          for (var4Lifetime4 = mn.field_a; gk.field_ib > var4Lifetime4; var4Lifetime4++) {
+          for (var4Lifetime4 = mn.field_a; FullscreenErrorDialog.field_ib > var4Lifetime4; var4Lifetime4++) {
             var15 = var4Lifetime4;
             var16 = var14;
             var17 = this.field_O[var15];
@@ -479,8 +479,8 @@ final class TikiTableScene extends ModelTableScene {
               if (jd.field_h[var7] <= var6) {
                 if (jd.field_h[var7] < var6 &&
                   jd.field_h[var7] > var5_int) {
-                  var8 = hq.b((byte) 125);
-                  var9 = hq.b((byte) 127);
+                  var8 = TutorialController.b((byte) 125);
+                  var9 = TutorialController.b((byte) 127);
                   ej.a(0, var9, 0, false, jd.field_h[var7] - param0[2], 0, 0, 1, var8, var11);
                   if (var9.field_K > 0) {
                     var9.a();
@@ -575,7 +575,7 @@ final class TikiTableScene extends ModelTableScene {
             kp.a(100, this.field_bb, param3, param1);
           }
         } else {
-          var6 = ga.a(3, true, ea.field_r);
+          var6 = ga.nextRandomInt(3, true, ea.field_r);
           if (var6 != 0) {
             if (var6 != 1) {
               if (var6 == 2) {
@@ -639,24 +639,24 @@ final class TikiTableScene extends ModelTableScene {
           for (var3 = 0; sg.field_K > var3; var3++) {
             ck.field_Y[var3] = new IntrusiveDeque();
           }
-          kj.field_m = 80;
+          CueAim.field_m = 80;
           hf.field_a = 4000;
         }
         var2 = ml.field_j;
         var3Lifetime1 = 1 + ml.field_j;
         var4 = ml.field_j + 2;
         var5 = ml.field_j + 3;
-        var6 = nf.field_T;
+        var6 = AccountCreationForm.field_T;
         var9 = this.field_H;
         if (var9 != 1) {
           if (var9 == 2) {
-            fieldTemp$0 = kj.field_m - 150;
-            kj.field_m = kj.field_m - 150;
+            fieldTemp$0 = CueAim.field_m - 150;
+            CueAim.field_m = CueAim.field_m - 150;
             this.a(ck.field_Y, fieldTemp$0, (byte) 103, this.field_O[var4], 0, hf.field_a);
           } else {
             if (3 == var9) {
-              fieldTemp$1 = kj.field_m - 170;
-              kj.field_m = kj.field_m - 170;
+              fieldTemp$1 = CueAim.field_m - 170;
+              CueAim.field_m = CueAim.field_m - 170;
               this.a(ck.field_Y, fieldTemp$1, (byte) 124, this.field_O[var2], 0, hf.field_a);
             } else {
               if (4 != var9) {
@@ -664,35 +664,35 @@ final class TikiTableScene extends ModelTableScene {
                   if (6 != var9) {
                     if (var9 != 7) {
                       if (8 == var9) {
-                        fieldTemp$2 = kj.field_m - 45;
-                        kj.field_m = kj.field_m - 45;
+                        fieldTemp$2 = CueAim.field_m - 45;
+                        CueAim.field_m = CueAim.field_m - 45;
                         this.a(ck.field_Y, fieldTemp$2, (byte) 111, this.field_O[var4], 800, hf.field_a + 600);
                       } else {
                         if (var9 == 9) {
-                          fieldTemp$3 = kj.field_m - 130;
-                          kj.field_m = kj.field_m - 130;
+                          fieldTemp$3 = CueAim.field_m - 130;
+                          CueAim.field_m = CueAim.field_m - 130;
                           this.a(ck.field_Y, fieldTemp$3, (byte) 110, this.field_O[var3Lifetime1], 968, -700 + hf.field_a);
                         } else {
                           if (var9 != 10) {
                             if (var9 == 11) {
-                              fieldTemp$4 = kj.field_m - 80;
-                              kj.field_m = kj.field_m - 80;
+                              fieldTemp$4 = CueAim.field_m - 80;
+                              CueAim.field_m = CueAim.field_m - 80;
                               this.a(ck.field_Y, fieldTemp$4, (byte) 109, this.field_O[var2], 0, hf.field_a);
                             } else {
                               if (12 == var9) {
                                 var8 = this.field_O[var5];
                                 var7 = ck.field_Y;
-                                kj.field_m = -1536;
+                                CueAim.field_m = -1536;
                                 this.a(var7, -1536, (byte) 82, var8, 0, -400 + hf.field_a);
                               } else {
                                 if (var9 == 13) {
-                                  fieldTemp$5 = kj.field_m - 200;
-                                  kj.field_m = kj.field_m - 200;
+                                  fieldTemp$5 = CueAim.field_m - 200;
+                                  CueAim.field_m = CueAim.field_m - 200;
                                   this.a(ck.field_Y, fieldTemp$5, (byte) 125, this.field_O[var4], 0, hf.field_a - 200);
                                 } else {
                                   if (var9 == 14) {
-                                    fieldTemp$6 = kj.field_m - 125;
-                                    kj.field_m = kj.field_m - 125;
+                                    fieldTemp$6 = CueAim.field_m - 125;
+                                    CueAim.field_m = CueAim.field_m - 125;
                                     this.a(ck.field_Y, fieldTemp$6, (byte) 98, this.field_O[var6], 0, hf.field_a);
                                     this.field_l = mn.progressJungleFinishing;
                                   } else {
@@ -708,30 +708,30 @@ final class TikiTableScene extends ModelTableScene {
                               }
                             }
                           } else {
-                            fieldTemp$7 = kj.field_m - 170;
-                            kj.field_m = kj.field_m - 170;
+                            fieldTemp$7 = CueAim.field_m - 170;
+                            CueAim.field_m = CueAim.field_m - 170;
                             this.a(ck.field_Y, fieldTemp$7, (byte) 71, this.field_O[var6], 0, hf.field_a - 700);
                           }
                         }
                       }
                     } else {
-                      fieldTemp$8 = kj.field_m - 170;
-                      kj.field_m = kj.field_m - 170;
+                      fieldTemp$8 = CueAim.field_m - 170;
+                      CueAim.field_m = CueAim.field_m - 170;
                       this.a(ck.field_Y, fieldTemp$8, (byte) 80, this.field_O[var6], 0, hf.field_a);
                     }
                   } else {
-                    fieldTemp$9 = kj.field_m - 170;
-                    kj.field_m = kj.field_m - 170;
+                    fieldTemp$9 = CueAim.field_m - 170;
+                    CueAim.field_m = CueAim.field_m - 170;
                     this.a(ck.field_Y, fieldTemp$9, (byte) 107, this.field_O[var5], 0, hf.field_a);
                   }
                 } else {
-                  fieldTemp$10 = kj.field_m - 50;
-                  kj.field_m = kj.field_m - 50;
+                  fieldTemp$10 = CueAim.field_m - 50;
+                  CueAim.field_m = CueAim.field_m - 50;
                   this.a(ck.field_Y, fieldTemp$10, (byte) 108, this.field_O[var3Lifetime1], 0, hf.field_a - 50);
                 }
               } else {
-                fieldTemp$11 = kj.field_m - 100;
-                kj.field_m = kj.field_m - 100;
+                fieldTemp$11 = CueAim.field_m - 100;
+                CueAim.field_m = CueAim.field_m - 100;
                 this.a(ck.field_Y, fieldTemp$11, (byte) 109, this.field_O[var6], 0, hf.field_a + 500);
               }
             }
@@ -875,19 +875,19 @@ final class TikiTableScene extends ModelTableScene {
           var17 = var29;
           var14 = var17;
           var5_ref_int__Lifetime1 = var14;
-          gr.field_w[0] = var29[0] - sb.a(288.0f, true) >> 4;
-          gr.field_w[1] = var29[1] - sb.a(144.0f, true) >> 4;
-          gr.field_w[2] = var29[2] >> 4;
-          if (gr.field_w != var5_ref_int__Lifetime1) {
-            gr.field_w[7] = var29[7];
-            gr.field_w[3] = var29[3];
-            gr.field_w[10] = var29[10];
-            gr.field_w[9] = var29[9];
-            gr.field_w[8] = var29[8];
-            gr.field_w[5] = var29[5];
-            gr.field_w[4] = var29[4];
-            gr.field_w[11] = var29[11];
-            gr.field_w[6] = var29[6];
+          ArchiveRequest.field_w[0] = var29[0] - sb.a(288.0f, true) >> 4;
+          ArchiveRequest.field_w[1] = var29[1] - sb.a(144.0f, true) >> 4;
+          ArchiveRequest.field_w[2] = var29[2] >> 4;
+          if (ArchiveRequest.field_w != var5_ref_int__Lifetime1) {
+            ArchiveRequest.field_w[7] = var29[7];
+            ArchiveRequest.field_w[3] = var29[3];
+            ArchiveRequest.field_w[10] = var29[10];
+            ArchiveRequest.field_w[9] = var29[9];
+            ArchiveRequest.field_w[8] = var29[8];
+            ArchiveRequest.field_w[5] = var29[5];
+            ArchiveRequest.field_w[4] = var29[4];
+            ArchiveRequest.field_w[11] = var29[11];
+            ArchiveRequest.field_w[6] = var29[6];
           }
           var4[1] = rb.b(var30[1], -4);
           var4[0] = rb.b(var30[0], -4);
@@ -895,26 +895,26 @@ final class TikiTableScene extends ModelTableScene {
           this.e(true);
           for (var5 = 0; ln.field_u.length > var5; var5++) {
             var19 = ln.field_u[var5];
-            var39 = gr.field_w;
+            var39 = ArchiveRequest.field_w;
             var19.b((byte) 112, 0, var19.field_j.length, var39);
           }
           this.a(false, var30, var21);
           kf.a(ta.field_c, (byte) -104, pa.field_L, ph.field_g, cq.field_c);
           kf.a(am.field_h, (byte) -104, pa.field_L, ph.field_g, c.field_b);
-          kf.a(gf.field_d, (byte) -104, pa.field_L, ph.field_g, hl.field_n);
+          kf.a(gf.field_d, (byte) -104, pa.field_L, ph.field_g, CheckboxPainter.field_n);
           kf.a(cn.field_d, (byte) -104, pa.field_L, ph.field_g, ClientException.field_e);
           kf.a(wn.field_j, (byte) -104, pa.field_L, ph.field_g, ue.field_a);
           this.a(param1, 9291);
-          pr.a(gr.field_w, false);
+          pr.a(ArchiveRequest.field_w, false);
           this.a(256, 3, 256, (byte) -86);
           var6 = TriangleRasterizer.colorPalette;
           for (var5Lifetime1 = ln.field_u.length - 1; 1 < var5Lifetime1; var5Lifetime1--) {
             TriangleRasterizer.colorPalette = dn.field_m[-1 + var5Lifetime1];
             var22 = ln.field_u[var5Lifetime1];
-            var40 = gr.field_w;
+            var40 = ArchiveRequest.field_w;
             var22.a((byte) -122, 0, var22.field_j.length, var40);
             if (0L != (256L & pd.field_i)) {
-              ln.field_u[var5Lifetime1].a(gr.field_w, 0);
+              ln.field_u[var5Lifetime1].a(ArchiveRequest.field_w, 0);
             }
           }
           TriangleRasterizer.colorPalette = dn.field_m[0];
@@ -923,17 +923,17 @@ final class TikiTableScene extends ModelTableScene {
             this.a((int[]) null, (IntrusiveDeque[]) null, (eg) null, -92);
           }
           var24 = ln.field_u[1];
-          var41 = gr.field_w;
+          var41 = ArchiveRequest.field_w;
           var24.a((byte) -115, 0, var24.field_j.length, var41);
           if ((pd.field_i & 256L) != 0L) {
-            ln.field_u[1].a(gr.field_w, 0);
+            ln.field_u[1].a(ArchiveRequest.field_w, 0);
           }
           TriangleRasterizer.colorPalette = var6;
           var26 = ln.field_u[0];
-          var42 = gr.field_w;
+          var42 = ArchiveRequest.field_w;
           var26.a((byte) -98, 0, var26.field_j.length, var42);
           if ((256L & pd.field_i) != 0L) {
-            ln.field_u[0].a(gr.field_w, 0);
+            ln.field_u[0].a(ArchiveRequest.field_w, 0);
           }
           if ((4194304L & pd.field_i) != 0L) {
             return;
@@ -944,7 +944,7 @@ final class TikiTableScene extends ModelTableScene {
           for (var5Lifetime3 = -1 + am.field_h; c.field_b <= var5Lifetime3; var5Lifetime3--) {
             th.field_l[ph.field_g[var5Lifetime3]].c(6710886, oh.field_d);
           }
-          for (var5Lifetime4 = gf.field_d - 1; var5Lifetime4 >= hl.field_n; var5Lifetime4--) {
+          for (var5Lifetime4 = gf.field_d - 1; var5Lifetime4 >= CheckboxPainter.field_n; var5Lifetime4--) {
             th.field_l[ph.field_g[var5Lifetime4]].c(6710886, oh.field_d);
           }
           if ((1073741824L & pd.field_i) == 0L) {
@@ -964,7 +964,7 @@ final class TikiTableScene extends ModelTableScene {
           var8 = cn.field_d;
           for (var10 = var8 - 1; var7 <= var10; var10--) {
             var9 = ph.field_g[var10];
-            if (!sh.field_Q[var9]) {
+            if (!OpacityWidget.field_Q[var9]) {
               th.field_l[var9].c(param0 ^ -6710865, oh.field_d);
             }
           }
@@ -974,7 +974,7 @@ final class TikiTableScene extends ModelTableScene {
             stackIn_53_2 = 102;
             stackIn_53_3 = true;
             stackIn_53_4 = var3;
-            if (param1.field_I.currentShot(29).field_q != 0) {
+            if (param1.field_I.currentShot(29).phase != 0) {
               stackIn_54_0 = this;
               stackIn_54_5 = false;
             } else {
@@ -989,7 +989,7 @@ final class TikiTableScene extends ModelTableScene {
           var10Lifetime1 = var15;
           while (var15 >= var7Lifetime1) {
             var9Lifetime1 = ph.field_g[var15];
-            if (sh.field_Q[var9Lifetime1]) {
+            if (OpacityWidget.field_Q[var9Lifetime1]) {
               th.field_l[var9Lifetime1].c(6710886, oh.field_d);
             }
             var15--;
@@ -1021,15 +1021,15 @@ final class TikiTableScene extends ModelTableScene {
     }
 
     private final void a(int param0, int param1, int param2, byte param3) {
-        if (fo.field_c[param1][0][0] != fo.field_c[param1][1][1]) {
-          TikiTableScene.a(fo.field_c[param1][0][1], fo.field_c[param1][1][1], 13421772, 0, param0);
+        if (KeyHandler.field_c[param1][0][0] != KeyHandler.field_c[param1][1][1]) {
+          TikiTableScene.a(KeyHandler.field_c[param1][0][1], KeyHandler.field_c[param1][1][1], 13421772, 0, param0);
         }
         int var5 = 64 % ((-24 - param3) / 59);
-        if (fo.field_c[param1][1][0] != fo.field_c[param1][2][1]) {
-          TikiTableScene.a(fo.field_c[param1][1][1], fo.field_c[param1][2][1], 13421772, param0, param2);
+        if (KeyHandler.field_c[param1][1][0] != KeyHandler.field_c[param1][2][1]) {
+          TikiTableScene.a(KeyHandler.field_c[param1][1][1], KeyHandler.field_c[param1][2][1], 13421772, param0, param2);
         }
-        if (fo.field_c[param1][3][1] != fo.field_c[param1][2][0]) {
-          SoftwareRasterizer.fillRectangleAlpha(0, fo.field_c[param1][2][1], SoftwareRasterizer.width, fo.field_c[param1][3][1] - fo.field_c[param1][2][1], 13421772, param2);
+        if (KeyHandler.field_c[param1][3][1] != KeyHandler.field_c[param1][2][0]) {
+          SoftwareRasterizer.fillRectangleAlpha(0, KeyHandler.field_c[param1][2][1], SoftwareRasterizer.width, KeyHandler.field_c[param1][3][1] - KeyHandler.field_c[param1][2][1], 13421772, param2);
         }
     }
 
@@ -1121,7 +1121,7 @@ final class TikiTableScene extends ModelTableScene {
         var4Lifetime1 = var4Lifetime1 >> 2;
         var9 = mn.field_a;
         var2Lifetime1 = var9;
-        while (var9 < gk.field_ib) {
+        while (var9 < FullscreenErrorDialog.field_ib) {
           this.field_O[var9].e();
           var5 = -this.field_O[var9].field_V + var4Lifetime1;
           this.a(new int[]{0, 0, var5}, var3, this.field_O[var9], -116);
@@ -1224,59 +1224,59 @@ final class TikiTableScene extends ModelTableScene {
             FreePlayRules.field_j[var3].field_o.i() ||
             !FreePlayRules.field_j[var3].field_o.b(param0 ^ 4492)) {
             stackIn_11_0 = (FreePlayRules.field_j[var3] == null) ? 11 : 22;
-            var4 = ga.a(stackIn_11_0, true, ea.field_r);
+            var4 = ga.nextRandomInt(stackIn_11_0, true, ea.field_r);
             var6 = var4;
             if (var6 == 0) {
-              FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_db, 100, param1, ga.a(128, true, ea.field_r)));
+              FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_db, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
             } else {
               if (var6 != 1) {
                 if (2 == var6) {
-                  FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_kb, 100, param1, ga.a(128, true, ea.field_r)));
+                  FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_kb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                 } else {
                   if (var6 != 3) {
                     if (4 != var6) {
                       if (var6 == 5) {
-                        FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_Z, 100, param1, ga.a(128, true, ea.field_r)));
+                        FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_Z, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                       } else {
                         if (var6 != 6) {
                           if (var6 != 7) {
                             if (var6 != 8) {
                               if (var6 != 9) {
                                 if (var6 == 10) {
-                                  FreePlayRules.field_j[var3] = rq.a(126, PcmSampleStream.a(this.field_gb, 100, param1, ga.a(128, true, ea.field_r)));
+                                  FreePlayRules.field_j[var3] = rq.a(126, PcmSampleStream.a(this.field_gb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                                 } else {
                                   var5 = (PcmSample) (FreePlayRules.field_j[var3].field_o.field_n);
                                   if (var5 != this.field_X &&
                                     this.field_cb != var5 &&
                                     var5 != this.field_Y &&
                                     this.field_gb != var5) {
-                                    FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(var5, 100, param1, ga.a(128, true, ea.field_r)));
+                                    FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(var5, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                                   } else {
-                                    FreePlayRules.field_j[var3] = rq.a(126, PcmSampleStream.a(var5, 100, param1, ga.a(128, true, ea.field_r)));
+                                    FreePlayRules.field_j[var3] = rq.a(126, PcmSampleStream.a(var5, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                                   }
                                 }
                               } else {
-                                FreePlayRules.field_j[var3] = rq.a(101, PcmSampleStream.a(this.field_Y, 100, param1, ga.a(128, true, ea.field_r)));
+                                FreePlayRules.field_j[var3] = rq.a(101, PcmSampleStream.a(this.field_Y, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                               }
                             } else {
-                              FreePlayRules.field_j[var3] = rq.a(124, PcmSampleStream.a(this.field_cb, 100, param1, ga.a(128, true, ea.field_r)));
+                              FreePlayRules.field_j[var3] = rq.a(124, PcmSampleStream.a(this.field_cb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                             }
                           } else {
-                            FreePlayRules.field_j[var3] = rq.a(126, PcmSampleStream.a(this.field_X, 100, param1, ga.a(128, true, ea.field_r)));
+                            FreePlayRules.field_j[var3] = rq.a(126, PcmSampleStream.a(this.field_X, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                           }
                         } else {
-                          FreePlayRules.field_j[var3] = mn.a(param0 - 19719, PcmSampleStream.a(this.field_ab, 100, param1, ga.a(128, true, ea.field_r)));
+                          FreePlayRules.field_j[var3] = mn.a(param0 - 19719, PcmSampleStream.a(this.field_ab, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                         }
                       }
                     } else {
-                      FreePlayRules.field_j[var3] = mn.a(param0 - 19719, PcmSampleStream.a(this.field_T, 100, param1, ga.a(128, true, ea.field_r)));
+                      FreePlayRules.field_j[var3] = mn.a(param0 - 19719, PcmSampleStream.a(this.field_T, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                     }
                   } else {
-                    FreePlayRules.field_j[var3] = mn.a(cq.a(param0, 20231), PcmSampleStream.a(this.field_pb, 100, param1, ga.a(128, true, ea.field_r)));
+                    FreePlayRules.field_j[var3] = mn.a(cq.a(param0, 20231), PcmSampleStream.a(this.field_pb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
                   }
                 }
               } else {
-                FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_nb, 100, param1, ga.a(128, true, ea.field_r)));
+                FreePlayRules.field_j[var3] = mn.a(-24296, PcmSampleStream.a(this.field_nb, 100, param1, ga.nextRandomInt(128, true, ea.field_r)));
               }
             }
           }
@@ -1377,7 +1377,7 @@ final class TikiTableScene extends ModelTableScene {
         int var6Lifetime4;
         int var6Lifetime5;
         var7 = Pool.field_O;
-        th.field_l = new p[-sg.field_S + nd.field_l + (mn.field_a - gk.field_ib + (-hr.field_t + nf.field_T) + (this.field_O.length - kp.field_f + (ml.field_j - ec.field_c))) - (-im.field_Wb - vh.field_L + (qf.field_i - 3 * (-ka.field_q + om.field_x)) + (-((-or.field_h + mm.field_i) * 3) - 3 * (ca.field_h - nm.field_e)))];
+        th.field_l = new p[-sg.field_S + nd.field_l + (mn.field_a - FullscreenErrorDialog.field_ib + (-ViewportController.field_t + AccountCreationForm.field_T) + (this.field_O.length - kp.field_f + (ml.field_j - ec.field_c))) - (-im.field_Wb - vh.field_L + (qf.field_i - 3 * (-AgeValidator.field_q + om.field_x)) + (-((-or.field_h + mm.field_i) * 3) - 3 * (ca.field_h - nm.field_e)))];
         var3 = 0;
         cq.field_c = var3;
         var2 = ec.field_c;
@@ -1404,7 +1404,7 @@ final class TikiTableScene extends ModelTableScene {
         }
         ue.field_a = var3;
         am.field_h = var3;
-        for (var2Lifetime2 = ka.field_q; var2Lifetime2 < om.field_x; var2Lifetime2++) {
+        for (var2Lifetime2 = AgeValidator.field_q; var2Lifetime2 < om.field_x; var2Lifetime2++) {
           var4Lifetime2 = var2Lifetime2;
           var11 = th.field_l;
           var6Lifetime2 = var3;
@@ -1420,7 +1420,7 @@ final class TikiTableScene extends ModelTableScene {
           this.a(var12, 0, 0, false, this.field_O[var4Lifetime3], var6Lifetime3, this.field_M[var4Lifetime3], 0);
           var3 += 4;
         }
-        hl.field_n = var3;
+        CheckboxPainter.field_n = var3;
         cn.field_d = var3;
         for (var2Lifetime4 = or.field_h; var2Lifetime4 < mm.field_i; var2Lifetime4++) {
           var4Lifetime4 = var2Lifetime4;

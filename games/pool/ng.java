@@ -14,7 +14,7 @@ final class ng extends am {
     static int[] field_A;
     private int field_u;
 
-    public final void a(boolean param0, int param1, byte param2, int param3, ei param4) {
+    public final void paintWidget(boolean param0, int param1, byte param2, int param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_16_0 = 0;
@@ -28,14 +28,14 @@ final class ng extends am {
         int var8 = 0;
         int var9 = 0;
         try {
-          if (!param4.field_s) {
-            stackIn_6_0 = (param4.d(-73)) ? 1 : 0;
+          if (!param4.pointerInside) {
+            stackIn_6_0 = (param4.hasKeyboardFocus(-73)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param4 instanceof fe) {
-            param0 = param0 & ((fe) (param4)).field_I;
+          if (param4 instanceof ButtonWidget) {
+            param0 = param0 & ((ButtonWidget) (param4)).enabled;
           }
           var7 = -98 % ((2 - param2) / 41);
           if (!param0) {
@@ -50,8 +50,8 @@ final class ng extends am {
           var8 = stackIn_13_0;
           stackIn_16_0 = (!param0) ? 7105644 : 16777215;
           var9 = stackIn_16_0;
-          qf.a((param4.field_y - this.field_y[0].field_y >> 1) + (param3 + param4.field_D), var8, param4.field_C + param1, (byte) 18, param4.field_l, this.field_y);
-          this.field_a.drawParagraph(param4.field_m, param1 + param4.field_C, -2 + (param3 + param4.field_D), param4.field_l, param4.field_y, var9, -1, 1, 1, this.field_a.maxAscent);
+          qf.a((param4.widgetHeight - this.field_y[0].field_y >> 1) + (param3 + param4.widgetY), var8, param4.widgetX + param1, (byte) 18, param4.widgetWidth, this.field_y);
+          this.field_a.drawParagraph(param4.widgetText, param1 + param4.widgetX, -2 + (param3 + param4.widgetY), param4.widgetWidth, param4.widgetHeight, var9, -1, 1, 1, this.field_a.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,7 +71,7 @@ final class ng extends am {
         if (param0 != 12854) {
           return 100;
         }
-        return j.field_b;
+        return ButtonPainter.field_b;
     }
 
     final static void a(int param0, int param1, int param2, int param3, byte param4, int param5, int param6, int param7, int[] param8, int param9) {

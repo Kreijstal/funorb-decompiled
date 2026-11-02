@@ -99,7 +99,7 @@ final class vq extends vh {
         var6 = var6 + 2 * this.field_Mb;
         var7Lifetime1 = this.field_Nb * this.field_ac + this.field_Lb + this.field_Lb;
         var8Lifetime1 = de.a(var6, param0, param2, 0);
-        var9 = sh.a(var7Lifetime1, param4, param3 - 1, param1);
+        var9 = OpacityWidget.a(var7Lifetime1, param4, param3 - 1, param1);
         this.b(var9, 2147483647, var8Lifetime1, var6, var7Lifetime1);
         for (var10 = param3; this.field_Nb > var10; var10++) {
           this.field_Rb[var10].a(this.field_Mb, true, this.field_Vb, this.field_ac, this.field_cc, var6 - this.field_Mb * 2, this.field_Lb + this.field_ac * var10);
@@ -140,7 +140,7 @@ final class vq extends vh {
             return this.field_dc[var3];
           }
         }
-        if (ne.field_s != 0) {
+        if (MatchingTextValidator.field_s != 0) {
           return -1;
         }
         return this.field_Qb;

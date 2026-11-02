@@ -40,8 +40,8 @@ final class mq implements Runnable {
     }
 
     final static void a(int param0, boolean param1) {
-        if (null != kk.field_B) {
-          pp.a(kk.field_B, 1259627265);
+        if (null != CacheEntry.field_B) {
+          pp.a(CacheEntry.field_B, 1259627265);
         }
         if (PlasmaBallSkin.field_m != null) {
           PlasmaBallSkin.field_m.a(param1, 12887);

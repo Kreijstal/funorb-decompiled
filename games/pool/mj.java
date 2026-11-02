@@ -31,11 +31,11 @@ final class mj {
         if (!param0) {
           mj.a(-35);
           ld.a((byte) -120);
-          ia.h(-13953);
+          MenuSelection.h(-13953);
           return;
         }
         ld.a((byte) -120);
-        ia.h(-13953);
+        MenuSelection.h(-13953);
     }
 
     final static void b(int param0) {

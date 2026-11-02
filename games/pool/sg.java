@@ -146,7 +146,7 @@ final class sg extends ob {
           }
           var1[var2] = new Sprite(vd.field_c, tq.field_r, el.field_I[var2], ih.field_d[var2], pd.field_a[var2], rc.field_f[var2], var11);
         }
-        sh.h(-1);
+        OpacityWidget.h(-1);
         return var1;
     }
 
@@ -154,7 +154,7 @@ final class sg extends ob {
         Sprite var7 = null;
         int var8 = 0;
         if (!(this.g(1) <= param0)) {
-          var7 = !this.a(param0, true) ? ne.field_t[param0] : og.field_K[param0];
+          var7 = !this.a(param0, true) ? MatchingTextValidator.field_t[param0] : og.field_K[param0];
           var8 = -var7.field_z + (-param2 + param1) >> 1;
           var7.a(param2 + var8, var8 + param5);
         }

@@ -26,7 +26,7 @@ final class ClassicBallSkin extends BallSkin {
         if (param0 != 16) {
           return -57;
         }
-        return ud.a(param1, 16, 1);
+        return SingleChildWidget.a(param1, 16, 1);
     }
 
     final void a(di param0, byte param1) {
@@ -84,10 +84,10 @@ final class ClassicBallSkin extends BallSkin {
         if (param0 != 1) {
           nm var2 = (nm) null;
           ClassicBallSkin.a((byte) -32, 29, (nm) null, (nm) null, -126, -60);
-          sa.field_f = new fn(tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, ei.field_A);
+          sa.field_f = new fn(tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, UiWidget.field_A);
           return;
         }
-        sa.field_f = new fn(tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, ei.field_A);
+        sa.field_f = new fn(tq.field_m, dg.field_J, qg.field_f, uo.field_Lb, e.field_e, UiWidget.field_A);
     }
 
     ClassicBallSkin() {
@@ -98,7 +98,7 @@ final class ClassicBallSkin extends BallSkin {
         if (param0 <= 9) {
           return (String) null;
         }
-        return 0 == param1 ? me.ballsetUsa8Group0 : PolarTableScene.ballsetUsa8Group1;
+        return 0 == param1 ? EmailAvailabilityValidator.ballsetUsa8Group0 : PolarTableScene.ballsetUsa8Group1;
     }
 
     final static void a(byte param0, int param1, nm param2, nm param3, int param4, int param5) {

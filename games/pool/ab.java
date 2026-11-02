@@ -66,7 +66,7 @@ final class ab {
             gameoptInviteplayersOrTrychanging2 = (String) null;
           }
           try {
-            mo.a("resizing", new Object[]{new Integer(param1)}, param0 ^ 25619, hk.d(116));
+            mo.a("resizing", new Object[]{new Integer(param1)}, param0 ^ 25619, NanoTickClock.getApplet(116));
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2 = decompiledCaughtException;
@@ -79,7 +79,7 @@ final class ab {
     }
 
     final static void a(int param0) {
-        if (!gk.field_kb) {
+        if (!FullscreenErrorDialog.field_kb) {
           throw new IllegalStateException();
         }
         ClassicBallSkin.field_o = true;
@@ -134,19 +134,19 @@ final class ab {
           stackIn_11_1 = "gv shot+1|";
         }
         stackIn_13_0 = ((StringBuilder) (Object) stackIn_10_0).append(stackIn_11_1);
-        if ((param0 & nr.field_Q) != 0) {
+        if ((param0 & AccountWelcomePanel.field_Q) != 0) {
           stackIn_14_1 = "gv BiH anywhere|";
         } else {
           stackIn_14_1 = "";
         }
         stackIn_16_0 = ((StringBuilder) (Object) stackIn_13_0).append(stackIn_14_1);
-        if ((param0 & nr.field_R) != 0) {
+        if ((param0 & AccountWelcomePanel.field_R) != 0) {
           stackIn_17_1 = "gv BiH kitchen|";
         } else {
           stackIn_17_1 = "";
         }
         stackIn_19_0 = ((StringBuilder) (Object) stackIn_16_0).append(stackIn_17_1);
-        if ((param0 & nr.field_V) != 0) {
+        if ((param0 & AccountWelcomePanel.field_V) != 0) {
           stackIn_20_1 = "gv BiH in D|";
         } else {
           stackIn_20_1 = "";

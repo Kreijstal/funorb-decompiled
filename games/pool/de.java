@@ -43,7 +43,7 @@ final class de {
         if (param0 != 11) {
           de.a(48, 16, -49);
         }
-        uh.field_o = true;
+        PasswordValidator.field_o = true;
     }
 
     final static void a(int param0) {
@@ -113,12 +113,12 @@ final class de {
             if (param0 >= 0) {
               decompiledFrameRemainder0 = (tl.field_J == ta.field_a);
               if ((decompiledFrameRemainder0) && (ej.field_j.position == 0 &&
-                rl.a((byte) -108) > nf.field_Q + 10000L)) {
+                rl.a((byte) -108) > AccountCreationForm.field_Q + 10000L)) {
                 ej.field_j.b(false, param0);
               }
             } else {
               if (ej.field_j.position == 0 &&
-                rl.a((byte) -108) > nf.field_Q + 10000L) {
+                rl.a((byte) -108) > AccountCreationForm.field_Q + 10000L) {
                 ej.field_j.b(false, param0);
               }
             }
@@ -126,7 +126,7 @@ final class de {
               if (ej.field_j.position > 0) {
                 try {
                   jd.field_c.a(ej.field_j.payload, (byte) 70, ej.field_j.position, 0);
-                  nf.field_Q = rl.a((byte) -111);
+                  AccountCreationForm.field_Q = rl.a((byte) -111);
                 } catch (java.io.IOException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var2 = (IOException) (Object) decompiledCaughtException;

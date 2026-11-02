@@ -11,7 +11,7 @@ final class cd {
     final static void a(byte param0) {
         tq.d((byte) -128);
         if (pa.field_K != null) {
-          he.a(pa.field_K, 0);
+          he.detachInputListeners(pa.field_K, 0);
         }
         v.a(-22444);
         int var1 = 8 / ((param0 + 12) / 55);

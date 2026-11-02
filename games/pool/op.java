@@ -209,27 +209,27 @@ abstract class op {
         int var11_intLifetime2;
         int var12Lifetime1;
         try {
-          if (hr.field_c == null ||
-            !(param1 <= hr.field_c.length)) {
+          if (ViewportController.field_c == null ||
+            !(param1 <= ViewportController.field_c.length)) {
             kg.a(param1, (byte) 49);
           }
           for (var11_int = 0; param1 > var11_int; var11_int++) {
-            hr.field_c[var11_int].a(param8[var11_int], param10[var11_int], param2[var11_int], param0[var11_int], (byte) 120, param4);
+            ViewportController.field_c[var11_int].a(param8[var11_int], param10[var11_int], param2[var11_int], param0[var11_int], (byte) 120, param4);
           }
           var11_intLifetime1 = 0;
           var12 = 0;
           var13 = null;
-          var18 = hr.field_c[0];
+          var18 = ViewportController.field_c[0];
           var15 = var18;
           var15Lifetime1 = var18;
           var14 = var18;
-          var19 = hr.field_c[1];
+          var19 = ViewportController.field_c[1];
           var15Lifetime2 = var19;
           var15Lifetime3 = var19;
           var18.a((byte) 60, var19);
           if (param9 == 0 &&
             param5 == 0) {
-            var20 = hr.field_c[-1 + param1];
+            var20 = ViewportController.field_c[-1 + param1];
             var13 = var20;
             var20.a((byte) 60, var18);
             var18.a(var20, -16875);
@@ -243,17 +243,17 @@ abstract class op {
           var16 = stackIn_15_0;
           for (var17 = param3; var17 < var16; var17++) {
             if (param1 > var17) {
-              var15Lifetime4 = hr.field_c[var17];
+              var15Lifetime4 = ViewportController.field_c[var17];
             } else {
-              var15Lifetime4 = hr.field_c[var17 % param1];
+              var15Lifetime4 = ViewportController.field_c[var17 % param1];
             }
             if (param1 > 1 + var17) {
-              var15Lifetime4.a((byte) 60, hr.field_c[1 + var17]);
+              var15Lifetime4.a((byte) 60, ViewportController.field_c[1 + var17]);
               var15Lifetime4.a(var14, -16875);
             } else {
               if (0 == param9 &&
                 param5 == 0) {
-                var15Lifetime4.a((byte) 60, hr.field_c[0]);
+                var15Lifetime4.a((byte) 60, ViewportController.field_c[0]);
                 var15Lifetime4.a(var14, param3 ^ -16876);
               }
             }
@@ -261,10 +261,10 @@ abstract class op {
               if ((var14.field_r & 240) == 0) {
                 if (var15Lifetime4.field_i == 0 &&
                   0 == var15Lifetime4.field_k) {
-                  ne.field_q = var14.field_f;
+                  MatchingTextValidator.field_q = var14.field_f;
                   di.field_h = var14.field_m;
                 } else {
-                  ne.field_q = var15Lifetime4.field_i;
+                  MatchingTextValidator.field_q = var15Lifetime4.field_i;
                   di.field_h = var15Lifetime4.field_k;
                 }
                 var12Lifetime1 = 0;

@@ -8,7 +8,7 @@ final class jc {
     static String pleaseloginMember;
     static String fsButtonAccept;
     static boolean field_c;
-    static ia field_j;
+    static MenuSelection field_j;
     static int[] field_i;
     static String youAreInvitedToXsGame;
     static di field_a;
@@ -27,7 +27,7 @@ final class jc {
         }
     }
 
-    final static void a(int param0, java.applet.Applet param1, String param2, boolean param3) {
+    final static void openUrl(int param0, java.applet.Applet param1, String param2, boolean param3) {
         try {
           java.net.MalformedURLException var4 = null;
           RuntimeException var4_ref = null;
@@ -49,7 +49,7 @@ final class jc {
                 return;
               }
               var5 = (String) null;
-              jc.a(113, (String) null, 'h');
+              jc.splitString(113, (String) null, 'h');
               return;
             } catch (java.net.MalformedURLException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,21 +82,21 @@ final class jc {
         }
     }
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void attachKeyListeners(int param0, java.awt.Component param1) {
         try {
           param1.setFocusTraversalKeysEnabled(false);
           param1.addKeyListener(wn.field_a);
           param1.addFocusListener(wn.field_a);
           if (param0 != 0) {
             String var3 = (String) null;
-            jc.a(-84, (java.applet.Applet) null, (String) null, false);
+            jc.openUrl(-84, (java.applet.Applet) null, (String) null, false);
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "jc.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static String[] a(int param0, String param1, char param2) {
+    final static String[] splitString(int param0, String param1, char param2) {
         int incrementValue$1 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -121,7 +121,7 @@ final class jc {
           var7 = 0;
           if (param0 != 30634) {
             var9 = (String) null;
-            jc.a(111, (java.applet.Applet) null, (String) null, false);
+            jc.openUrl(111, (java.applet.Applet) null, (String) null, false);
           }
           while (var3_int > var7) {
             for (var8 = var6; param2 != param1.charAt(var8); var8++) {

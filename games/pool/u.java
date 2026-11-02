@@ -182,30 +182,30 @@ final class u {
           if (wh.field_j == null ||
             !(wh.field_j.length >= param22)) {
             var24_int = 100 + param22;
-            va.field_T = new int[var24_int];
+            MultiHandleSliderWidget.field_T = new int[var24_int];
             wh.field_j = new int[var24_int];
           }
-          if (null == hr.field_n ||
-            !(param12 * 2 <= hr.field_n.length)) {
+          if (null == ViewportController.field_n ||
+            !(param12 * 2 <= ViewportController.field_n.length)) {
             var24_intLifetime1 = 100 + param12 * 2;
-            gr.field_B = new int[var24_intLifetime1];
-            hr.field_n = new int[var24_intLifetime1];
+            ArchiveRequest.field_B = new int[var24_intLifetime1];
+            ViewportController.field_n = new int[var24_intLifetime1];
           }
           var24 = wh.field_j;
           if (cd.field_d == null) {
             cd.field_d = new int[16];
           }
-          var25 = va.field_T;
+          var25 = MultiHandleSliderWidget.field_T;
           var26 = cd.field_d;
           if (!param3) {
             u.a((byte) 100, -4, 66, true, 88);
           }
-          var27 = hr.field_n;
+          var27 = ViewportController.field_n;
           TranslatedUiText.field_a = 0;
           PoolMatchController.field_W = 0;
           de.field_a = 0;
-          var28 = gr.field_B;
-          eq.field_R = 0;
+          var28 = ArchiveRequest.field_B;
+          DateInputWidget.field_R = 0;
           if (qp.field_Yb == null ||
             !(qp.field_Yb.length >= param22)) {
             sa.field_r = new int[100 + param22];
@@ -214,7 +214,7 @@ final class u {
           }
           if (null == hi.field_k ||
             !(param12 <= hi.field_k.length)) {
-            nr.field_P = new int[100 + param12];
+            AccountWelcomePanel.field_P = new int[100 + param12];
             hi.field_k = new int[100 + param12];
             vn.field_h = new int[param12 + 100];
           }
@@ -238,7 +238,7 @@ final class u {
           }
           if (param5 != null && (la.field_d == null ||
             !(la.field_d.length >= param12))) {
-            sl.field_V = new int[param12 + 100];
+            TextInputWidget.field_V = new int[param12 + 100];
             la.field_d = new int[100 + param12];
             rb.field_b = new int[param12 + 100];
           }
@@ -524,8 +524,8 @@ final class u {
                     ArrayOperations.copy(vn.field_h, 0, var54Lifetime2Lifetime1, 0, var33Lifetime2);
                     vn.field_h = var54Lifetime2Lifetime1;
                     var54Lifetime2Lifetime2 = new int[98 + (var30 + param12) + var57];
-                    ArrayOperations.copy(nr.field_P, 0, var54Lifetime2Lifetime2, 0, var33Lifetime2);
-                    nr.field_P = var54Lifetime2Lifetime2;
+                    ArrayOperations.copy(AccountWelcomePanel.field_P, 0, var54Lifetime2Lifetime2, 0, var33Lifetime2);
+                    AccountWelcomePanel.field_P = var54Lifetime2Lifetime2;
                     if (null != param5) {
                       var54Lifetime2Lifetime3 = new int[param12 + var30 + var57 + 98];
                       ArrayOperations.copy(gp.field_e, 0, var54Lifetime2Lifetime3, 0, var33Lifetime2);
@@ -540,7 +540,7 @@ final class u {
                   }
                   hi.field_k[var33Lifetime2] = var26[0];
                   vn.field_h[var33Lifetime2] = var26[1];
-                  nr.field_P[var33Lifetime2] = var26[2];
+                  AccountWelcomePanel.field_P[var33Lifetime2] = var26[2];
                   if (null != param5) {
                     if (var64 != 0) {
                       gp.field_e[var33Lifetime2] = var26[8];
@@ -555,7 +555,7 @@ final class u {
                   if (4 == var57) {
                     hi.field_k[var33Lifetime2] = var26[2];
                     vn.field_h[var33Lifetime2] = var26[3];
-                    nr.field_P[var33Lifetime2] = var26[0];
+                    AccountWelcomePanel.field_P[var33Lifetime2] = var26[0];
                     if (null != param5) {
                       if (var64 == 0) {
                         gp.field_e[var33Lifetime2] = var35;
@@ -572,7 +572,7 @@ final class u {
                   var31 = var31 + (var56 - de.field_a);
                   PoolMatchController.field_W = var33Lifetime2;
                   de.field_a = var56;
-                  var33Lifetime2 = eq.field_R;
+                  var33Lifetime2 = DateInputWidget.field_R;
                   if (wn.field_d.length < (-2 + var58 + param12 + var32)) {
                     var54Lifetime3 = new int[param12 + (var32 + var58 + 98)];
                     ArrayOperations.copy(wn.field_d, 0, var54Lifetime3, 0, var33Lifetime2);
@@ -588,8 +588,8 @@ final class u {
                       ArrayOperations.copy(la.field_d, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
                       la.field_d = var54Lifetime3Lifetime3;
                       var54Lifetime3Lifetime3 = new int[98 + var58 + (var32 + param12)];
-                      ArrayOperations.copy(sl.field_V, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
-                      sl.field_V = var54Lifetime3Lifetime3;
+                      ArrayOperations.copy(TextInputWidget.field_V, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
+                      TextInputWidget.field_V = var54Lifetime3Lifetime3;
                       var54Lifetime3Lifetime3 = new int[98 + var58 + (var32 + param12)];
                       ArrayOperations.copy(rb.field_b, 0, var54Lifetime3Lifetime3, 0, var33Lifetime2);
                       rb.field_b = var54Lifetime3Lifetime3;
@@ -601,7 +601,7 @@ final class u {
                   if (null != param5) {
                     if (var64 != 0) {
                       la.field_d[var33Lifetime2] = var26[12];
-                      sl.field_V[var33Lifetime2] = var26[13];
+                      TextInputWidget.field_V[var33Lifetime2] = var26[13];
                       rb.field_b[var33Lifetime2] = var26[14];
                     } else {
                       la.field_d[var33Lifetime2] = var35;
@@ -619,17 +619,17 @@ final class u {
                         rb.field_b[var33Lifetime2] = var37;
                       } else {
                         la.field_d[var33Lifetime2] = var26[14];
-                        sl.field_V[var33Lifetime2] = var26[15];
+                        TextInputWidget.field_V[var33Lifetime2] = var26[15];
                         rb.field_b[var33Lifetime2] = var26[12];
                       }
                     }
                     var28[var33Lifetime2++] = var38;
                     var32++;
                   }
-                  eq.field_R = var33Lifetime2;
+                  DateInputWidget.field_R = var33Lifetime2;
                 } else {
-                  fieldTemp$16 = eq.field_R;
-                  eq.field_R = eq.field_R + 1;
+                  fieldTemp$16 = DateInputWidget.field_R;
+                  DateInputWidget.field_R = DateInputWidget.field_R + 1;
                   var33Lifetime2 = fieldTemp$16;
                   var34 = var25[var39];
                   if (var34 < 0) {
@@ -666,7 +666,7 @@ final class u {
                   TranslatedUiText.field_b[var33Lifetime2] = var34;
                   if (null != param5) {
                     la.field_d[var33Lifetime2] = param5[var38];
-                    sl.field_V[var33Lifetime2] = param23[var38];
+                    TextInputWidget.field_V[var33Lifetime2] = param23[var38];
                     rb.field_b[var33Lifetime2] = param20[var38];
                   }
                   var28[var33Lifetime2] = var38;
@@ -707,7 +707,7 @@ final class u {
                   sa.field_r[var34] = var49;
                   ro.field_d[var34] = var50;
                 }
-                nr.field_P[var33Lifetime2] = var34;
+                AccountWelcomePanel.field_P[var33Lifetime2] = var34;
                 if (param5 != null) {
                   gp.field_e[var33Lifetime2] = param5[var38];
                   te.field_o[var33Lifetime2] = param23[var38];
@@ -867,7 +867,7 @@ final class u {
             }
             if (ve.field_w == null ||
               !(param19 <= ve.field_w.length)) {
-              jk.field_h = new int[param19];
+              CueStick.field_h = new int[param19];
               kc.field_e = new int[param19];
               ve.field_w = new int[param19];
             }
@@ -939,7 +939,7 @@ final class u {
                 sa.field_r[var34Lifetime1Lifetime1] = param13[var33Lifetime3Lifetime1];
                 ro.field_d[var34Lifetime1Lifetime1] = param10[var33Lifetime3Lifetime1];
               }
-              jk.field_h[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
+              CueStick.field_h[var38Lifetime1Lifetime1] = var34Lifetime1Lifetime1;
               var34Lifetime1Lifetime1 = var25[var33Lifetime3Lifetime1];
               if (var34Lifetime1Lifetime1 < 0) {
                 fieldTemp$47 = de.field_a;
@@ -1072,7 +1072,7 @@ final class u {
           var6.field_hb = var5;
           stackIn_10_0 = var6;
           if (!param3) {
-            stackIn_11_1 = gj.field_T;
+            stackIn_11_1 = ProgressBarWidget.field_T;
           } else {
             stackIn_11_1 = ag.field_b;
           }

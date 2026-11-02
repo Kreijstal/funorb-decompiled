@@ -68,7 +68,7 @@ final class bc {
             var11[var4] = var4;
             var2[var4] = var10[var4];
           }
-          fd.a(var12, var11, (byte) -54);
+          StrongCacheEntry.a(var12, var11, (byte) -54);
           FreePlayRules.field_e.field_U[2] = dn.a(var3, (byte) 36, ta.a(new int[]{0, 10066329, var12.length, 15658734}, param0 + 11));
           FreePlayRules.field_e.field_U[1] = dn.a(var3, (byte) 94, ta.a(new int[]{0, 13421772, var12.length, 16777215}, param0 - 14));
           FreePlayRules.field_e.field_U[4] = dn.a(var3, (byte) 53, ta.a(new int[]{0, 16744192, var12.length, 16777087}, -120));

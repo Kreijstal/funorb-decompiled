@@ -113,7 +113,7 @@ class o extends DualLinkNode {
     }
 
     final static void c(byte param0) {
-        if (gk.field_kb) {
+        if (FullscreenErrorDialog.field_kb) {
           ClassicBallSkin.field_o = true;
           ii.a(true, 0);
           PlasmaTableScene.field_ab = 0;

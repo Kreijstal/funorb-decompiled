@@ -22,7 +22,7 @@ final class ho extends IntrusiveNode {
         if (param0 > 0) {
           return -12;
         }
-        if (ir.field_n > param1) {
+        if (BufferedFile.field_n > param1) {
           if (param1 < tn.field_o) {
             return -1;
           }
@@ -37,7 +37,7 @@ final class ho extends IntrusiveNode {
           }
           return 1;
         }
-        if (ir.field_n + o.field_C.field_z <= param1) {
+        if (BufferedFile.field_n + o.field_C.field_z <= param1) {
           if (param1 < tn.field_o) {
             return -1;
           }
@@ -72,9 +72,9 @@ final class ho extends IntrusiveNode {
     }
 
     final static void c(byte param0) {
-        wa.l(23323);
+        ProgressDialog.l(23323);
         int var1 = 95 / ((param0 - 47) / 60);
-        EightBallRules.a(sg.field_M[0].field_w, kj.field_j, ad.field_x, TranslatedUiText.field_n, (byte) 36, tk.field_i);
+        EightBallRules.a(sg.field_M[0].field_w, CueAim.field_j, ad.field_x, TranslatedUiText.field_n, (byte) 36, tk.field_i);
     }
 
     public static void a(boolean param0) {

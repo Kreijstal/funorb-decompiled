@@ -53,7 +53,7 @@ final class t {
         String var1Lifetime2;
         String var1Lifetime3;
         if (param0 > 81) {
-          var14 = "(" + hb.field_e + " " + vd.field_g + " " + ia.field_l + ") " + uq.field_c;
+          var14 = "(" + NodeHashTableIterator.field_e + " " + vd.field_g + " " + MenuSelection.field_l + ") " + uq.field_c;
           var1 = var14;
           if (of.field_Pb <= 0) {
             return var1;
@@ -80,7 +80,7 @@ final class t {
           return var1Lifetime3;
         }
         field_b = (vh) null;
-        var8 = "(" + hb.field_e + " " + vd.field_g + " " + ia.field_l + ") " + uq.field_c;
+        var8 = "(" + NodeHashTableIterator.field_e + " " + vd.field_g + " " + MenuSelection.field_l + ") " + uq.field_c;
         var1Lifetime1 = var8;
         if (of.field_Pb <= 0) {
           return var1Lifetime1;
@@ -147,20 +147,20 @@ final class t {
         RuntimeException var1 = null;
         try {
           if (!MouseHandler.a(param0 - 6709)) {
-            if (ne.field_u != null &&
-              ne.field_u.field_e) {
+            if (MatchingTextValidator.field_u != null &&
+              MatchingTextValidator.field_u.field_e) {
               tq.d((byte) -124);
-              PlasmaTableScene.field_cb.b(new gk(PlasmaTableScene.field_cb, el.field_K), 30000);
+              PlasmaTableScene.field_cb.showDialog(new FullscreenErrorDialog(PlasmaTableScene.field_cb, el.field_K), 30000);
             }
             return;
           }
           if (param0 != -11) {
             t.b(-62);
           }
-          PlasmaTableScene.field_cb.a(-122, sa.field_p, true, tl.field_M);
-          PlasmaTableScene.field_cb.h((byte) 122);
-          while (n.h(127)) {
-            PlasmaTableScene.field_cb.a(-81, qi.field_a, ml.field_b);
+          PlasmaTableScene.field_cb.processPointerFrame(-122, sa.field_p, true, tl.field_M);
+          PlasmaTableScene.field_cb.advanceDialogAnimations((byte) 122);
+          while (LabeledChildWidget.h(127)) {
+            PlasmaTableScene.field_cb.dispatchKeyInputOrRequestFocus(-81, qi.field_a, ml.field_b);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

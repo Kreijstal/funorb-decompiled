@@ -239,13 +239,13 @@ final class Quaternion {
         if (oj.c(-26)) {
           param0 = false;
         }
-        wj.a(-114, param0);
+        DraggableWidget.a(-114, param0);
         if (param1 == -19213) {
-          ka.b((byte) -97);
+          AgeValidator.b((byte) -97);
           return;
         }
         keycodeDefaultDown1 = -59;
-        ka.b((byte) -97);
+        AgeValidator.b((byte) -97);
     }
 
     public Quaternion() {

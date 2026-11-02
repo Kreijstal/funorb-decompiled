@@ -35,7 +35,7 @@ final class a {
             var4 = (String) null;
             a.a((String) null, false, false, -0.28095385432243347f);
           }
-          jf.a(param1, (byte) 38);
+          ImageProducerRasterBuffer.a(param1, (byte) 38);
           param1.a();
           stackIn_7_0 = (eg) (param1);
           return stackIn_7_0;
@@ -82,10 +82,10 @@ final class a {
     final static void a(String param0, boolean param1, boolean param2, float param3) {
         try {
           if (of.field_Nb == null) {
-            of.field_Nb = new wa(wd.field_Ub, ClientException.field_d);
-            wd.field_Ub.b(of.field_Nb, 30000);
+            of.field_Nb = new ProgressDialog(wd.field_Ub, ClientException.field_d);
+            wd.field_Ub.showDialog(of.field_Nb, 30000);
           }
-          of.field_Nb.a(param0, 2113632, param3, param2);
+          of.field_Nb.updateProgress(param0, 2113632, param3, param2);
           SoftwareRasterizer.clear();
           PolarBallSkin.a((byte) -118, param1);
         } catch (RuntimeException runtimeException) {

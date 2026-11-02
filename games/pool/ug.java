@@ -83,8 +83,8 @@ final class ug extends no {
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
-        gi var19 = null;
-        gi var20 = null;
+        TextHotspotRegion var19 = null;
+        TextHotspotRegion var20 = null;
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
@@ -122,7 +122,7 @@ final class ug extends no {
                       !vq.a(var10.charAt(var16 + var15), 22987))) {
                       var17 = var15 + var16;
                       var18 = 0;
-                      var19 = new gi(var11);
+                      var19 = new TextHotspotRegion(var11);
                       var20 = var19;
                       var21 = 0;
                       var22 = param3;
@@ -142,8 +142,8 @@ final class ug extends no {
                               break scanLoop1;
                             }
                             var20.field_l = param4.b(var8[var21].substring(var16 - var18));
-                            var20.field_s = new gi(var20.field_p);
-                            var20 = var20.field_s;
+                            var20.next = new TextHotspotRegion(var20.field_p);
+                            var20 = var20.next;
                           } else {
                             if (var18 <= var17 &&
                               var17 < var23 + var18) {
@@ -160,8 +160,8 @@ final class ug extends no {
                               var20.field_m = param6;
                               var20.field_r = var24;
                               var20.field_q = var22;
-                              var20.field_s = new gi(var20.field_p);
-                              var20 = var20.field_s;
+                              var20.next = new TextHotspotRegion(var20.field_p);
+                              var20 = var20.next;
                             }
                           }
                           if (var8[var21].endsWith("<br>")) {
@@ -211,11 +211,11 @@ final class ug extends no {
         }
     }
 
-    final static kb e(int param0) {
+    final static TickClock e(int param0) {
         if (param0 != 0) {
-          return (kb) null;
+          return (TickClock) null;
         }
-        return (kb) ((Object) new hk());
+        return (TickClock) ((Object) new NanoTickClock());
     }
 
     private final void a(byte param0, boolean param1) {
@@ -472,7 +472,7 @@ final class ug extends no {
                   this.field_i.field_J = this.field_i.field_J + var6;
                   if (this.field_i.field_K.position == var5) {
                     this.field_i.a(false);
-                    this.field_i.field_F = false;
+                    this.field_i.pending = false;
                     this.field_i = null;
                   } else {
                     if (this.field_i.field_J == 512) {
@@ -699,12 +699,12 @@ final class ug extends no {
           }
           try {
             if (rl.field_e == 0) {
-              mq.field_c = fe.field_M.a(nr.field_X, na.field_a, 0);
+              mq.field_c = ButtonWidget.field_M.a(AccountWelcomePanel.field_X, na.field_a, 0);
               rl.field_e = rl.field_e + 1;
             }
             if (rl.field_e == 1) {
               if (mq.field_c.field_f == 2) {
-                stackIn_14_0 = sd.a(false, -1);
+                stackIn_14_0 = Under13NoticePanel.a(false, -1);
                 return stackIn_14_0;
               }
               if (mq.field_c.field_f == 1) {
@@ -712,9 +712,9 @@ final class ug extends no {
               }
             }
             if (2 == rl.field_e) {
-              dq.field_h = new BufferedSocket((java.net.Socket) (mq.field_c.field_e), fe.field_M);
+              dq.field_h = new BufferedSocket((java.net.Socket) (mq.field_c.field_e), ButtonWidget.field_M);
               var2 = new PacketBuffer(13);
-              fm.a(var2, true, ci.field_k, om.field_v, ei.field_B);
+              ArrayWidgetGroup.a(var2, true, ci.field_k, om.field_v, UiWidget.field_B);
               var2.a(15, false);
               var2.a(true, qf.field_f);
               dq.field_h.a(var2.payload, (byte) 72, 13, 0);
@@ -725,13 +725,13 @@ final class ug extends no {
               if (0 < dq.field_h.d(72)) {
                 var1_int = dq.field_h.a(14528);
                 if (var1_int != 0) {
-                  stackIn_27_0 = sd.a(false, var1_int);
+                  stackIn_27_0 = Under13NoticePanel.a(false, var1_int);
                   return stackIn_27_0;
                 }
                 rl.field_e = rl.field_e + 1;
               } else {
                 if (rl.a((byte) -110) > ae.field_d) {
-                  stackIn_24_0 = sd.a(false, -2);
+                  stackIn_24_0 = Under13NoticePanel.a(false, -2);
                   return stackIn_24_0;
                 }
               }
@@ -753,7 +753,7 @@ final class ug extends no {
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return sd.a(false, -3);
+            return Under13NoticePanel.a(false, -3);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

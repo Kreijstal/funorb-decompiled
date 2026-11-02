@@ -30,7 +30,7 @@ final class vk extends PcmStream {
     static String enterfriendDel;
     private boolean field_M;
     private int field_t;
-    private ib field_u;
+    private MidiNoteMixer field_u;
     private long field_D;
     private long field_ab;
     private int field_X;
@@ -65,7 +65,7 @@ final class vk extends PcmStream {
         Object var7 = null;
         te var8 = null;
         int var9 = 0;
-        g var10 = null;
+        MusicPatch var10 = null;
         int var11 = 0;
         var11 = Pool.field_O;
         try {
@@ -82,9 +82,9 @@ final class vk extends PcmStream {
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
             var9 = (int)var8.key;
-            var10 = (g) (this.field_z.a(false, (long)var9));
+            var10 = (MusicPatch) (this.field_z.a(false, (long)var9));
             if (var10 == null) {
-              var10 = hk.a(param1, (byte) 127, var9);
+              var10 = NanoTickClock.a(param1, (byte) 127, var9);
               if (var10 == null) {
                 var6_int = 0;
                 decompiledFrameRemainder0 = false;
@@ -94,7 +94,7 @@ final class vk extends PcmStream {
               }
             }
             if ((decompiledFrameRemainder0) &&
-              (!var10.a(23605, var8.field_l, (int[]) (var7), param0))) {
+              (!var10.prepareSamples(23605, var8.field_l, (int[]) (var7), param0))) {
               var6_int = 0;
             }
             var8 = (te) (param2.field_m.b(-1));
@@ -262,50 +262,50 @@ final class vk extends PcmStream {
         RuntimeException var3 = null;
         try {
           if (param1 == 1) {
-            stackIn_3_0 = nr.a(new String[]{param0}, -1, th.muXEnteredGame);
+            stackIn_3_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, th.muXEnteredGame);
             return stackIn_3_0;
           }
           var3_int = 23 / ((param2 + 71) / 45);
           if (param1 == 2) {
-            stackIn_7_0 = nr.a(new String[]{param0}, -1, up.muXJoinedYourGame);
+            stackIn_7_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, up.muXJoinedYourGame);
             return stackIn_7_0;
           }
           if (3 == param1) {
-            stackIn_11_0 = nr.a(new String[]{param0}, -1, da.muXEnteredOtherGame);
+            stackIn_11_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, da.muXEnteredOtherGame);
             return stackIn_11_0;
           }
           if (param1 == 4) {
-            stackIn_15_0 = nr.a(new String[]{param0}, -1, s.muXLeftLobby);
+            stackIn_15_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, s.muXLeftLobby);
             return stackIn_15_0;
           }
           if (param1 == 5) {
-            stackIn_18_0 = nr.a(new String[]{param0}, -1, lh.muXLostCon);
+            stackIn_18_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, lh.muXLostCon);
             return stackIn_18_0;
           }
           if (param1 == 6) {
-            stackIn_22_0 = nr.a(new String[]{param0}, -1, hr.muXCannotJoinFull);
+            stackIn_22_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, ViewportController.muXCannotJoinFull);
             return stackIn_22_0;
           }
           if (param1 == 7) {
-            stackIn_25_0 = nr.a(new String[]{param0}, -1, ii.muXCannotJoinInprogress);
+            stackIn_25_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, ii.muXCannotJoinInprogress);
             return stackIn_25_0;
           }
           if (param1 == 8) {
-            stackIn_29_0 = nr.a(new String[]{param0}, -1, fd.muXDeclinedInvite);
+            stackIn_29_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, StrongCacheEntry.muXDeclinedInvite);
             return stackIn_29_0;
           }
           if (param1 == 11) {
-            stackIn_33_0 = nr.a(new String[]{param0}, -1, sg.muXWithdrewRequest);
+            stackIn_33_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, sg.muXWithdrewRequest);
             return stackIn_33_0;
           }
           if (param1 == 12) {
-            stackIn_36_0 = nr.a(new String[]{param0}, -1, sd.muXRemoved);
+            stackIn_36_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, Under13NoticePanel.muXRemoved);
             return stackIn_36_0;
           }
           if (param1 != 13) {
             return null;
           }
-          stackIn_40_0 = nr.a(new String[]{param0}, -1, np.muXDroppedOut);
+          stackIn_40_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, np.muXDroppedOut);
           return stackIn_40_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -751,10 +751,10 @@ final class vk extends PcmStream {
         if (!param0) {
           field_H = -40;
         }
-        g var4 = (g) (this.field_z.a(0));
+        MusicPatch var4 = (MusicPatch) (this.field_z.a(0));
         while (var4 != null) {
-          var4.c(23478);
-          var4 = (g) (this.field_z.b(-1));
+          var4.releaseSampleIds(23478);
+          var4 = (MusicPatch) (this.field_z.b(-1));
         }
     }
 
@@ -807,8 +807,8 @@ final class vk extends PcmStream {
         pr var7;
         pr var8;
         int var9;
-        g var10;
-        g var11;
+        MusicPatch var10;
+        MusicPatch var11;
         var9 = Pool.field_O;
         this.c(param3, param1, 104, 64);
         if (0 != (this.field_F[param3] & 2)) {
@@ -828,12 +828,12 @@ final class vk extends PcmStream {
             var5 = (pr) (this.field_u.field_t.b((byte) -46));
           }
         }
-        var10 = (g) (this.field_z.a(false, (long)this.field_v[param3]));
+        var10 = (MusicPatch) (this.field_z.a(false, (long)this.field_v[param3]));
         var11 = var10;
         if (var11 == null) {
           return;
         }
-        var6 = var10.field_u[param1];
+        var6 = var10.samples[param1];
         if (var6 == null) {
           return;
         }
@@ -841,7 +841,7 @@ final class vk extends PcmStream {
         var7.field_u = var11;
         var7.field_C = var6;
         var7.field_t = param3;
-        var7.field_x = var10.field_t[param1];
+        var7.field_x = var10.envelopes[param1];
         var7.field_n = var10.field_p[param1];
         var7.field_A = param1;
         var7.field_E = 1024 + param2 * param2 * var11.field_q * var10.field_n[param1] >> 11;
@@ -1325,7 +1325,7 @@ final class vk extends PcmStream {
         this.field_I = new pr[16][128];
         this.field_A = new int[16];
         this.field_Z = new MidiFileReader();
-        this.field_u = new ib(this);
+        this.field_u = new MidiNoteMixer(this);
         this.field_z = new IterableNodeHashTable(128);
         this.a((byte) -127, -1, 256);
         this.b(true, 123);

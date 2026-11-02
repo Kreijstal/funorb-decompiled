@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fq extends qq implements tb {
+final class fq extends MessageDialog implements ButtonActivationListener {
     static boolean field_Gb;
     static String muChatOn;
     static String mpRematchnewgame;
     private boolean field_Fb;
     private boolean field_Eb;
     static int[] field_Hb;
-    private nf field_Cb;
+    private AccountCreationForm field_Cb;
 
     final static boolean m(int param0) {
         if (param0 == 0) {
-          return null == ne.field_u ? um.field_e : true;
+          return null == MatchingTextValidator.field_u ? um.field_e : true;
         }
         fq.m(71);
-        return null == ne.field_u ? um.field_e : true;
+        return null == MatchingTextValidator.field_u ? um.field_e : true;
     }
 
     public static void l(int param0) {
@@ -34,7 +34,7 @@ final class fq extends qq implements tb {
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        wk var5 = null;
+        MessageDialogContent var5 = null;
         int var6 = 0;
         var6 = Pool.field_O;
         try {
@@ -49,47 +49,47 @@ final class fq extends qq implements tb {
                 if (!param2) {
                   PoolMatchController.r((byte) -80);
                 }
-                var4 = hb.createIneligible;
+                var4 = NodeHashTableIterator.createIneligible;
                 this.field_Eb = true;
               }
             } else {
-              var4 = gi.createUsernameUnavailable;
+              var4 = TextHotspotRegion.createUsernameUnavailable;
               if (null != this.field_Cb) {
-                this.field_Cb.a(param1 ^ 16777210);
+                this.field_Cb.onMoreSuggestionsRequested(param1 ^ 16777210);
               }
             }
           } else {
-            var4 = ud.createAccountSuccess;
+            var4 = SingleChildWidget.createAccountSuccess;
           }
-          var5 = new wk((qq) (this), bi.field_e, var4);
+          var5 = new MessageDialogContent((MessageDialog) (this), bi.field_e, var4);
           if (param0.field_f) {
             if (param0.field_e) {
-              this.d(new sd(this), 30);
+              this.replaceContent(new Under13NoticePanel(this), 30);
               return;
             }
-            var5.a(fg.cont, param1 - 88, (cc) (this));
+            var5.addButton(WeightedLruCache.cont, param1 - 88, (WidgetListener) (this));
           } else {
             if (this.field_Eb) {
-              var5.a(fg.cont, -123, (cc) (this));
+              var5.addButton(WeightedLruCache.cont, -123, (WidgetListener) (this));
             } else {
               if (param0.field_g == 5) {
-                var5.a(11, hb.reloadgame, param1 ^ 4);
-                var5.a(17, dj.quittowebsite, 1);
+                var5.addActionButton(11, NodeHashTableIterator.reloadgame, param1 ^ 4);
+                var5.addActionButton(17, dj.quittowebsite, 1);
               } else {
-                var5.a(-1, jk.back, param1 ^ 4);
+                var5.addActionButton(-1, CueStick.back, param1 ^ 4);
               }
             }
             if (3 == param0.field_g) {
-              var5.a(7, o.toserverlist, param1 ^ 4);
+              var5.addActionButton(7, o.toserverlist, param1 ^ 4);
             } else {
               if (param0.field_g != 6) {
-                this.d(var5, 30);
+                this.replaceContent(var5, 30);
                 return;
               }
-              var5.a(9, e.tocustomersupport, 1);
+              var5.addActionButton(9, e.tocustomersupport, 1);
             }
           }
-          this.d(var5, 30);
+          this.replaceContent(var5, 30);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -105,7 +105,7 @@ final class fq extends qq implements tb {
         }
     }
 
-    public final void a(boolean param0, int param1, int param2, fe param3, int param4) {
+    public final void onButtonActivated(boolean param0, int param1, int param2, ButtonWidget param3, int param4) {
         if (this.field_Eb) {
           t.a(115, false, true);
           return;
@@ -115,45 +115,45 @@ final class fq extends qq implements tb {
           return;
         }
         try {
-          this.k(17);
+          this.dismissDialog(17);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "fq.P(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    final boolean g(byte param0) {
+    final boolean advanceDialogAnimation(byte param0) {
         wc var2 = null;
         wc var2Lifetime1;
         if (param0 != -20) {
           mpRematchnewgame = (String) null;
-          if (!this.field_R) {
-            return super.g((byte) -20);
+          if (!this.dialogOpen) {
+            return super.advanceDialogAnimation((byte) -20);
           }
           if (this.field_Fb) {
-            return super.g((byte) -20);
+            return super.advanceDialogAnimation((byte) -20);
           }
           var2 = hi.a(true);
           if (var2 != null) {
             this.a(var2, param0 + 25, false);
-            return super.g((byte) -20);
+            return super.advanceDialogAnimation((byte) -20);
           }
-          return super.g((byte) -20);
+          return super.advanceDialogAnimation((byte) -20);
         }
-        if (!this.field_R) {
-          return super.g((byte) -20);
+        if (!this.dialogOpen) {
+          return super.advanceDialogAnimation((byte) -20);
         }
         if (this.field_Fb) {
-          return super.g((byte) -20);
+          return super.advanceDialogAnimation((byte) -20);
         }
         var2Lifetime1 = hi.a(true);
         if (var2Lifetime1 != null) {
           this.a(var2Lifetime1, param0 + 25, false);
-          return super.g((byte) -20);
+          return super.advanceDialogAnimation((byte) -20);
         }
-        return super.g((byte) -20);
+        return super.advanceDialogAnimation((byte) -20);
     }
 
-    fq(lq param0, nf param1) {
+    fq(DialogLayer param0, AccountCreationForm param1) {
         super(param0, bi.field_e, tk.creatingyouraccount, false, false);
         try {
           this.field_Cb = param1;
@@ -163,7 +163,7 @@ final class fq extends qq implements tb {
     }
 
     final void p(byte param0) {
-        this.a(gg.a(248, true, hb.createIneligible), 5, true);
+        this.a(DebouncedValidationProvider.a(248, true, NodeHashTableIterator.createIneligible), 5, true);
         if (param0 > -44) {
           field_Gb = true;
         }

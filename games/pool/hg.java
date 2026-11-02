@@ -9,7 +9,7 @@ final class hg {
     final static void a(String param0, boolean param1) {
         try {
           if (!param1) {
-            hg.a(true);
+            hg.getTopLevelContainer(true);
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "hg.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -57,19 +57,19 @@ final class hg {
         wf.a(-68, 80, 0, o.field_C, var4Lifetime1, 0, param1, 30, param3);
     }
 
-    final static java.awt.Container a(boolean param0) {
+    final static java.awt.Container getTopLevelContainer(boolean param0) {
         if (param0) {
           String var2 = (String) null;
           hg.a((String) null, true);
           if (null != op.field_e) {
             return (java.awt.Container) ((Object) op.field_e);
           }
-          return (java.awt.Container) ((Object) hk.d(95));
+          return (java.awt.Container) ((Object) NanoTickClock.getApplet(95));
         }
         if (null != op.field_e) {
           return (java.awt.Container) ((Object) op.field_e);
         }
-        return (java.awt.Container) ((Object) hk.d(95));
+        return (java.awt.Container) ((Object) NanoTickClock.getApplet(95));
     }
 
     public static void b(boolean param0) {

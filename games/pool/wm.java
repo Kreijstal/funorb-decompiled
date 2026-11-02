@@ -108,7 +108,7 @@ final class wm extends vh {
           return -1;
         }
         if (param0 &&
-          ne.field_s != 0 &&
+          MatchingTextValidator.field_s != 0 &&
           this.field_R == 0) {
           return -1;
         }
@@ -220,7 +220,7 @@ final class wm extends vh {
             this.field_Tb.a(112, this.field_Rb);
             this.field_Rb.field_kb = "|";
             if (!(ta.field_f < 5) ||
-              !(hq.field_i < 2)) {
+              !(TutorialController.field_i < 2)) {
               regionExit1: {
                 stackIn_6_0 = this;
                 stackIn_6_1 = null;
@@ -230,7 +230,7 @@ final class wm extends vh {
                 if (ta.field_f < 7) {
                   stackIn_7_0 = this;
                   stackIn_6_0Lifetime1 = stackIn_7_0;
-                  if (hq.field_i < 2) {
+                  if (TutorialController.field_i < 2) {
                     stackIn_8_0 = this;
                     stackIn_8_1 = null;
                     stackIn_8_2 = null;
@@ -241,7 +241,7 @@ final class wm extends vh {
                 stackIn_8_0Lifetime1 = this;
                 stackIn_8_1Lifetime1 = null;
                 stackIn_8_2Lifetime1 = null;
-                stackIn_8_5 = er.raMutethisplayer;
+                stackIn_8_5 = DialWidget.raMutethisplayer;
               }
               this.field_dc = new wg(stackIn_6_3, stackIn_6_4, stackIn_8_5);
               this.field_Tb.a(-121, this.field_dc);
@@ -358,7 +358,7 @@ final class wm extends vh {
             var23 = 13 + var19 + 13;
             var24 = 10 + var17Lifetime5 + (var22 + 24);
             var25 = de.a(var23, param2, param0, 0);
-            var26 = sh.a(var24, param1, -1, param3);
+            var26 = OpacityWidget.a(var24, param1, -1, param3);
             this.b(var26, 2147483647, var25, var23, var24);
             return;
           }
@@ -376,7 +376,7 @@ final class wm extends vh {
           var18Lifetime1 = var15_int + 13 + 13;
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = de.a(var18Lifetime1, param2, param0, 0);
-          var21Lifetime1 = sh.a(var19Lifetime1, param1, -1, param3);
+          var21Lifetime1 = OpacityWidget.a(var19Lifetime1, param1, -1, param3);
           this.b(var21Lifetime1, 2147483647, var20Lifetime1, var18Lifetime1, var19Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -443,15 +443,15 @@ final class wm extends vh {
     final static void a(int param0, int param1, int param2, int param3) {
         bc.field_b.position = 0;
         bc.field_b.a(12, false);
-        bc.field_b.a(true, lc.field_P.nextInt());
+        bc.field_b.a(true, ValidationIconWidget.field_P.nextInt());
         if (param0 >= -116) {
           field_Wb = (char[]) null;
         }
-        bc.field_b.a(true, lc.field_P.nextInt());
+        bc.field_b.a(true, ValidationIconWidget.field_P.nextInt());
         bc.field_b.a(param3, false);
         bc.field_b.a(param2, false);
         bc.field_b.writeShort((byte) -81, param1);
-        bc.field_b.a(rb.field_l, 124, ei.field_q);
+        bc.field_b.a(rb.field_l, 124, UiWidget.field_q);
         ej.field_j.b(false, 18);
         int fieldTemp$0 = ej.field_j.position + 1;
         ej.field_j.position = ej.field_j.position + 1;

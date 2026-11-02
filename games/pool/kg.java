@@ -37,12 +37,12 @@ final class kg extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          hr.field_c = new ro[param0];
+          ViewportController.field_c = new ro[param0];
           if (param1 != 49) {
             kg.d((byte) -107);
           }
-          for (var2_int = 0; hr.field_c.length > var2_int; var2_int++) {
-            hr.field_c[var2_int] = new ro();
+          for (var2_int = 0; ViewportController.field_c.length > var2_int; var2_int++) {
+            ViewportController.field_c[var2_int] = new ro();
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,13 +60,13 @@ final class kg extends IntrusiveNode {
         ShotRecord.field_y = param2;
         if (param1) {
           ModelTableScene.field_K = param4;
-          ch.field_I = param3;
+          WidgetContainer.field_I = param3;
           mm.field_b = param0;
           return;
         }
         kg.a(-104, true, -107, 21, 17);
         ModelTableScene.field_K = param4;
-        ch.field_I = param3;
+        WidgetContainer.field_I = param3;
         mm.field_b = param0;
     }
 

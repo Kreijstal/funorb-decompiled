@@ -15,9 +15,9 @@ final class PotEvent extends IntrusiveNode {
     final static int a(int param0, double param1) {
         if (param0 != 4885) {
           PotEvent.a((byte) -24, 59L);
-          return ud.a(param1, 3, 1);
+          return SingleChildWidget.a(param1, 3, 1);
         }
-        return ud.a(param1, 3, 1);
+        return SingleChildWidget.a(param1, 3, 1);
     }
 
     final static void a(int param0, java.applet.Applet param1) {
@@ -25,7 +25,7 @@ final class PotEvent extends IntrusiveNode {
         String var3 = null;
         long var4 = 0L;
         try {
-          iq.field_j = true;
+          RasterBuffer.field_j = true;
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           if (param0 != 16) {

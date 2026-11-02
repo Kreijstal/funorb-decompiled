@@ -18,7 +18,7 @@ final class HalloweenBallSkin extends BallSkin {
           return;
         }
         ea.field_z = false;
-        hr.field_y = 0 == kn.field_e.readUnsignedByte(-83) ? true : false;
+        ViewportController.field_y = 0 == kn.field_e.readUnsignedByte(-83) ? true : false;
     }
 
     final int a(int param0, boolean param1) {
@@ -64,7 +64,7 @@ final class HalloweenBallSkin extends BallSkin {
             }
             return true;
           }
-          var6 = g.field_o;
+          var6 = MusicPatch.field_o;
           var2Lifetime1 = var6;
           var7 = 0;
           var3Lifetime1 = var7;
@@ -113,7 +113,7 @@ final class HalloweenBallSkin extends BallSkin {
             if (param0 == var5) {
               stackIn_7_0 = sf.field_E;
             } else {
-              stackIn_7_0 = jp.field_P;
+              stackIn_7_0 = DisplayNamePanel.field_P;
             }
             var6 = stackIn_7_0;
             if (this.field_a[var5] != var6) {
@@ -154,7 +154,7 @@ final class HalloweenBallSkin extends BallSkin {
         CharSequence var10 = null;
         try {
           var10 = (CharSequence) ((Object) param1);
-          if (!gj.a(-25908, var10)) {
+          if (!ProgressBarWidget.a(-25908, var10)) {
             stackIn_3_0 = p.invalidName;
             return stackIn_3_0;
           }
@@ -164,7 +164,7 @@ final class HalloweenBallSkin extends BallSkin {
           }
           var8 = gf.a(-83, param1);
           if (var8 == null) {
-            stackIn_10_0 = nr.a(new String[]{param1}, -1, aa.friendnotfound);
+            stackIn_10_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1}, -1, aa.friendnotfound);
             return stackIn_10_0;
           }
           cf.field_k.a(var8, 0);
@@ -178,7 +178,7 @@ final class HalloweenBallSkin extends BallSkin {
           }
           var8.unlink((byte) -117);
           var8.a(false);
-          nr.field_S = nr.field_S - 1;
+          AccountWelcomePanel.field_S = AccountWelcomePanel.field_S - 1;
           var9 = ej.field_j;
           var9.b(false, param2);
           var9.position = var9.position + 1;
@@ -229,26 +229,26 @@ final class HalloweenBallSkin extends BallSkin {
           return;
         }
         try {
-          jp.field_P = eg.a(param0, "", "balls/TIKI/tiki_ball_halloween");
+          DisplayNamePanel.field_P = eg.a(param0, "", "balls/TIKI/tiki_ball_halloween");
           sf.field_E = eg.a(param0, "", "balls/TIKI/tiki_ball_halloween_lit");
-          jp.field_P.a(8, 8, 8, 8);
+          DisplayNamePanel.field_P.a(8, 8, 8, 8);
           sf.field_E.a(8, 8, 8, 8);
           this.field_a = new eg[16];
           this.field_a[0] = PoolGameModel.field_B[2].field_a[0];
-          this.field_a[15] = jp.field_P;
-          this.field_a[14] = jp.field_P;
-          this.field_a[13] = jp.field_P;
-          this.field_a[12] = jp.field_P;
-          this.field_a[11] = jp.field_P;
-          this.field_a[10] = jp.field_P;
-          this.field_a[9] = jp.field_P;
-          this.field_a[7] = jp.field_P;
-          this.field_a[6] = jp.field_P;
-          this.field_a[5] = jp.field_P;
-          this.field_a[4] = jp.field_P;
-          this.field_a[3] = jp.field_P;
-          this.field_a[2] = jp.field_P;
-          this.field_a[1] = jp.field_P;
+          this.field_a[15] = DisplayNamePanel.field_P;
+          this.field_a[14] = DisplayNamePanel.field_P;
+          this.field_a[13] = DisplayNamePanel.field_P;
+          this.field_a[12] = DisplayNamePanel.field_P;
+          this.field_a[11] = DisplayNamePanel.field_P;
+          this.field_a[10] = DisplayNamePanel.field_P;
+          this.field_a[9] = DisplayNamePanel.field_P;
+          this.field_a[7] = DisplayNamePanel.field_P;
+          this.field_a[6] = DisplayNamePanel.field_P;
+          this.field_a[5] = DisplayNamePanel.field_P;
+          this.field_a[4] = DisplayNamePanel.field_P;
+          this.field_a[3] = DisplayNamePanel.field_P;
+          this.field_a[2] = DisplayNamePanel.field_P;
+          this.field_a[1] = DisplayNamePanel.field_P;
           this.field_a[8] = PoolGameModel.field_B[2].field_a[8];
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ul.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

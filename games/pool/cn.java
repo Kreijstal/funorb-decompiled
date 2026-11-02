@@ -48,15 +48,15 @@ final class cn extends java.awt.Canvas {
     }
 
     final static void a(int param0) {
-        sn.field_m = new vh(0L, (vh) null);
+        BirthDateValidator.field_m = new vh(0L, (vh) null);
         if (tq.field_p) {
-          sn.field_m.a(21, pm.field_m);
+          BirthDateValidator.field_m.a(21, pm.field_m);
         }
-        sn.field_m.a(39, c.field_e);
-        kg.field_l = new vn(sn.muChatLobby, sn.field_m);
-        ir.field_a = new vh(0L, (vh) null);
-        ir.field_a.a(-117, kg.field_l.field_i);
-        ir.field_a.a(-120, gj.field_K);
+        BirthDateValidator.field_m.a(39, c.field_e);
+        kg.field_l = new vn(BirthDateValidator.muChatLobby, BirthDateValidator.field_m);
+        BufferedFile.field_a = new vh(0L, (vh) null);
+        BufferedFile.field_a.a(-117, kg.field_l.field_i);
+        BufferedFile.field_a.a(-120, ProgressBarWidget.field_K);
         f.a(48);
         int var1 = 106 / ((-83 - param0) / 35);
     }

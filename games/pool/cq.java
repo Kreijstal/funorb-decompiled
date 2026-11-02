@@ -22,7 +22,7 @@ final class cq {
     }
 
     final static void a(boolean param0, int param1) {
-        ig.field_j.a(param0, (byte) 118);
+        TextInputValidator.field_j.a(param0, (byte) 118);
         if (param1 < 27) {
           field_a = -63;
         }
@@ -109,10 +109,10 @@ final class cq {
 
     final static void a(int param0) {
         PoolGameModel.i(-27397);
-        so.field_g = new hq[3];
-        so.field_g[0] = new hq(jj.tutorialTitleBasics, -1, 3);
+        so.field_g = new TutorialController[3];
+        so.field_g[0] = new TutorialController(jj.tutorialTitleBasics, -1, 3);
         so.field_g[0].field_d.b((byte) 110, new bk(fn.tutorialCameraRotate, 100, 0));
-        so.field_g[0].field_d.b((byte) -114, new bk(tj.tutorialCameraZoom, 50, 1, so.field_g[0].field_d));
+        so.field_g[0].field_d.b((byte) -114, new bk(ResizableDialog.tutorialCameraZoom, 50, 1, so.field_g[0].field_d));
         so.field_g[0].field_d.b((byte) -80, new bk(ie.tutorialCameraRecentre, 3, 2, so.field_g[0].field_d));
         so.field_g[0].field_d.b((byte) -50, new bk(je.tutorialShotModeEnter, 1, 3, so.field_g[0].field_d));
         so.field_g[0].field_d.b((byte) 91, new bk(en.tutorialShotModeRotate, 300, 4, so.field_g[0].field_d));
@@ -121,26 +121,26 @@ final class cq {
         so.field_g[0].field_d.b((byte) -110, new bk(om.tutorialShotModeLeave, 1, 6, so.field_g[0].field_d));
         so.field_g[0].field_d.b((byte) -74, new bk(vj.tutorialBasicComplete, 1, -1, so.field_g[0].field_d));
         so.field_g[0].a(false);
-        hq dupTemp$0 = new hq(fc.tutorialTitleEightBall, 2, 0);
-        hq arrayValue$1 = so.field_g[0];
+        TutorialController dupTemp$0 = new TutorialController(fc.tutorialTitleEightBall, 2, 0);
+        TutorialController arrayValue$1 = so.field_g[0];
         so.field_g[1] = dupTemp$0;
         arrayValue$1.field_j = dupTemp$0;
         if (param0 != 4313) {
           return;
         }
-        so.field_g[1].field_d.b((byte) -59, new bk(qq.tutorialEightBallStartPlaceCueball, 40, 13, 128));
+        so.field_g[1].field_d.b((byte) -59, new bk(MessageDialog.tutorialEightBallStartPlaceCueball, 40, 13, 128));
         so.field_g[1].field_d.b((byte) -43, new bk(dr.tutorialEightBallBreak, 1, 8, 0));
         so.field_g[1].field_d.b((byte) 99, new bk(ea.tutorialEightBallAfterbreak, 1, 9, 0));
         so.field_g[1].field_d.b((byte) 87, new bk(gn.tutorialEightBallAfterfirstpot, 7, 11, 0));
         so.field_g[1].field_d.b((byte) 99, new bk(lk.tutorialEightBallAftergrouppot, 1, 12, 0));
-        so.field_g[1].field_d.b((byte) -6, new bk(g.tutorialEightBallComplete, 1, -1, 0));
+        so.field_g[1].field_d.b((byte) -6, new bk(MusicPatch.tutorialEightBallComplete, 1, -1, 0));
         so.field_g[1].a(false);
-        so.field_g[2] = new hq(NetworkGameClient.tutorialTitleNineBall, 2, 1);
+        so.field_g[2] = new TutorialController(NetworkGameClient.tutorialTitleNineBall, 2, 1);
         so.field_g[2].field_d.b((byte) -90, new bk(ca.tutorialNineBallStartPlaceCueball, 40, 13, 128));
         so.field_g[2].field_d.b((byte) -99, new bk(cf.tutorialNineBallBreak, 1, 8, 0));
-        so.field_g[2].field_d.b((byte) -21, new bk(eq.tutorialNineBallAfterbreak, 1, 14, 0));
+        so.field_g[2].field_d.b((byte) -21, new bk(DateInputWidget.tutorialNineBallAfterbreak, 1, 14, 0));
         so.field_g[2].field_d.b((byte) -9, new bk(pl.tutorialNineBallPottingABall, 1, 15, 0));
-        so.field_g[2].field_d.b((byte) -62, new bk(ui.tutorialNineBallPottingNine, 1, 16, 0));
+        so.field_g[2].field_d.b((byte) -62, new bk(LoginForm.tutorialNineBallPottingNine, 1, 16, 0));
         so.field_g[2].field_d.b((byte) 92, new bk(rc.tutorialNineBallFinal, 1, -1, 0));
         so.field_g[2].a(false);
     }

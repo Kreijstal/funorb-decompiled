@@ -149,7 +149,7 @@ final class qd {
           }
           this.field_d = this.field_i.a(255, 255, (byte) 0, true, -154018400);
         }
-        if (this.field_d.field_F) {
+        if (this.field_d.pending) {
           return false;
         }
         stackIn_13_0 = null;
@@ -164,7 +164,7 @@ final class qd {
           stackIn_14_1 = null;
           stackIn_14_3 = true;
         }
-        var10 = new PacketBuffer(((sp) (Object) stackIn_13_2).b(stackIn_14_3));
+        var10 = new PacketBuffer(((sp) (Object) stackIn_13_2).getBytes(stackIn_14_3));
         var10.position = 5;
         var3 = var10.readUnsignedByte(-62);
         var10.position = var10.position + var3 * 72;
@@ -204,7 +204,7 @@ final class qd {
         var2.a(md.field_c, (byte) 0, 0, md.field_c.length);
         var2.a(pm.field_l, false);
         var2.a(FreePlayRules.field_l, false);
-        var2.a(ka.field_s, (byte) 0, 0, ka.field_s.length);
+        var2.a(AgeValidator.field_s, (byte) 0, 0, AgeValidator.field_s.length);
         var2.b(var2.position - var4, true);
     }
 

@@ -43,7 +43,7 @@ final class bo {
         tq var2 = null;
         if (param1 >= 9) {
           var2 = new tq();
-          hb.field_j.b((byte) 127, var2);
+          NodeHashTableIterator.field_j.b((byte) 127, var2);
           kp.a(1, param0);
           return var2;
         }
@@ -80,7 +80,7 @@ final class bo {
           param6 = param6 & -4;
           param0 = param0 & -4;
           param4 = param4 & -4;
-          kk.a(param8, param6, param0, param4, param5, param3, 1727215554);
+          CacheEntry.a(param8, param6, param0, param4, param5, param3, 1727215554);
           var12 = -na.field_f + la.field_f;
           var13 = wm.field_Nb - or.field_a;
           var14 = var13 * var13 + var12 * var12 >> 2;
@@ -99,7 +99,7 @@ final class bo {
               var24 = var22 * var12 + var19 >> 2;
               if ((0 != param7 ||
                 !(0 > var22 * ng.field_w + fr.field_u * var17)) && (param10 != 0 ||
-                !(0 <= var23 * ne.field_q + var18 * di.field_h))) {
+                !(0 <= var23 * MatchingTextValidator.field_q + var18 * di.field_h))) {
                 if (2 != param7 &&
                   var24 < 0) {
                   var25 = (int)Math.sqrt((double)(var22 * var22 + var17 * var17));
@@ -149,13 +149,13 @@ final class bo {
           cd.field_b = ho.field_v;
           PoolUiText.field_g = PoolUiText.field_g + 1;
           wn.field_i = we.field_l;
-          gg.field_f = wn.field_k;
+          DebouncedValidationProvider.field_f = wn.field_k;
           re.field_c = m.field_d;
           m.field_d = false;
-          ne.field_s = kj.field_c;
-          lq.field_W = Ball.field_f;
-          ua.field_o = ne.field_o;
-          kj.field_c = 0;
+          MatchingTextValidator.field_s = CueAim.field_c;
+          DialogLayer.field_W = Ball.field_f;
+          UsernameAvailabilityValidator.field_o = MatchingTextValidator.field_o;
+          CueAim.field_c = 0;
         }
         if (param0 >= 86) {
           return;
@@ -216,12 +216,12 @@ final class bo {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
-          var1_int = lq.field_T[0];
+          var1_int = DialogLayer.field_T[0];
           if (param0 >= -85) {
             bo.a(53, (byte) 68);
           }
-          for (var2 = 1; lq.field_T.length > var2; var2++) {
-            var3 = lq.field_T[var2];
+          for (var2 = 1; DialogLayer.field_T.length > var2; var2++) {
+            var3 = DialogLayer.field_T[var2];
             ArrayOperations.copy(tl.field_I, var2 << 4, tl.field_I, var1_int, var3);
             var1_int = var1_int + var3;
           }
@@ -268,7 +268,7 @@ final class bo {
           param6 = param6 & -4;
           param0 = param0 & -4;
           param4 = param4 & -4;
-          kk.a(param8, param6, param0, param4, param5, param3, 1727215554);
+          CacheEntry.a(param8, param6, param0, param4, param5, param3, 1727215554);
           var12 = -na.field_f + la.field_f;
           var13 = wm.field_Nb - or.field_a;
           var14 = var13 * var13 + var12 * var12 >> 2;
@@ -287,7 +287,7 @@ final class bo {
               var24 = var22 * var12 + var19 >> 2;
               if ((0 != param7 ||
                 !(0 > var22 * ng.field_w + fr.field_u * var17)) && (param10 != 0 ||
-                !(0 <= var23 * ne.field_q + var18 * di.field_h))) {
+                !(0 <= var23 * MatchingTextValidator.field_q + var18 * di.field_h))) {
                 if (2 != param7 &&
                   var24 < 0) {
                   var25 = (int)Math.sqrt((double)(var22 * var22 + var17 * var17));

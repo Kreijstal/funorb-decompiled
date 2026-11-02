@@ -31,7 +31,7 @@ final class jd {
         RuntimeException decompiledCaughtException = null;
         try {
           var6 = (CharSequence) ((Object) param1);
-          if (!gj.a(param2 ^ -25906, var6)) {
+          if (!ProgressBarWidget.a(param2 ^ -25906, var6)) {
             stackIn_2_0 = p.invalidName;
             return stackIn_2_0;
           }
@@ -43,16 +43,16 @@ final class jd {
             stackIn_10_0 = rl.unableToAddIgnore;
             return stackIn_10_0;
           }
-          if (ia.a(param1, 24552)) {
-            stackIn_13_0 = nr.a(new String[]{param1}, -1, mg.ignorelistdupe);
+          if (MenuSelection.a(param1, 24552)) {
+            stackIn_13_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1}, -1, mg.ignorelistdupe);
             return stackIn_13_0;
           }
-          if (gi.field_t >= 100) {
+          if (TextHotspotRegion.field_t >= 100) {
             stackIn_17_0 = ci.ignorelistfull;
             return stackIn_17_0;
           }
-          if (lq.a(param1, -1)) {
-            stackIn_21_0 = nr.a(new String[]{param1}, -1, gf.removefriendfirst);
+          if (DialogLayer.a(param1, -1)) {
+            stackIn_21_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param1}, -1, gf.removefriendfirst);
             return stackIn_21_0;
           }
           var5 = ej.field_j;
@@ -142,7 +142,7 @@ final class jd {
           if (0 == param1.length()) {
             return true;
           }
-          if (hq.a(param2, param1, 17924)) {
+          if (TutorialController.a(param2, param1, 17924)) {
             return false;
           }
           if (co.a(param1, (byte) -111, param2)) {

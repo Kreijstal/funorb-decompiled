@@ -14,21 +14,21 @@ final class ja {
         nj.a(cq.field_b, (byte) -125, param0, param3, param4, param1);
         if (param0 > param1) {
           mj.field_b.c(param3 + (-mj.field_b.field_w + param0 >> 1), param4);
-          jp.field_T.c(param3 + (-jp.field_T.field_w + param0 >> 1), -jp.field_T.field_y + (param1 + param4));
+          DisplayNamePanel.field_T.c(param3 + (-DisplayNamePanel.field_T.field_w + param0 >> 1), -DisplayNamePanel.field_T.field_y + (param1 + param4));
         } else {
           bi.field_a.c(param3, (param1 - bi.field_a.field_y >> 1) + param4);
-          wk.field_T.c(param3 + param0 - wk.field_T.field_w, param4 + (-wk.field_T.field_y + param1 >> 1));
+          MessageDialogContent.field_T.c(param3 + param0 - MessageDialogContent.field_T.field_w, param4 + (-MessageDialogContent.field_T.field_y + param1 >> 1));
         }
     }
 
     public static void a(int param0) {
         if (param0 != 726237729) {
-          ja.a(50, -94);
+          ja.acquireByteArray(50, -94);
         }
         field_d = null;
     }
 
-    final synchronized static byte[] a(int param0, int param1) {
+    final synchronized static byte[] acquireByteArray(int param0, int param1) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
@@ -84,7 +84,7 @@ final class ja {
 
     final static void a(boolean param0) {
         jo.field_J = 0;
-        ne.field_n = -1;
+        MatchingTextValidator.field_n = -1;
         if (!param0) {
           return;
         }

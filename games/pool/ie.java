@@ -26,29 +26,29 @@ final class ie {
         aa var7 = null;
         lk var8 = null;
         try {
-          if (ne.field_r.c(0)) {
+          if (MatchingTextValidator.field_r.c(0)) {
             return;
           }
           var3_int = param0 ? 1 : 0;
           var4 = 0;
           var5 = 0;
-          var6 = ((lk) (ne.field_r.c((byte) 63))).field_n;
+          var6 = ((lk) (MatchingTextValidator.field_r.c((byte) 63))).field_n;
           if (var6 != null) {
             param1 = param1 - (var6.field_A >> 1);
-            if (gg.field_f >= param1 &&
+            if (DebouncedValidationProvider.field_f >= param1 &&
               wn.field_i >= param2 &&
               230 + param2 >= wn.field_i &&
-              gg.field_f <= param1 + var6.field_A) {
-              if (eq.field_W != -1) {
-                var5 = -wn.field_i + eq.field_W;
+              DebouncedValidationProvider.field_f <= param1 + var6.field_A) {
+              if (DateInputWidget.field_W != -1) {
+                var5 = -wn.field_i + DateInputWidget.field_W;
               }
-              eq.field_W = wn.field_i;
+              DateInputWidget.field_W = wn.field_i;
               var3_int = 1;
             } else {
-              eq.field_W = -1;
+              DateInputWidget.field_W = -1;
             }
           }
-          var7 = new aa(ne.field_r);
+          var7 = new aa(MatchingTextValidator.field_r);
           var8 = (lk) (var7.b((byte) -92));
           while (var8 != null &&
             var4 < 230) {
@@ -99,7 +99,7 @@ final class ie {
           Throwable var2_ref = null;
           RuntimeException var2_ref2 = null;
           try {
-            if (iq.field_j) {
+            if (RasterBuffer.field_j) {
               return true;
             }
             try {
@@ -108,7 +108,7 @@ final class ie {
               }
               var2 = "tuhstatbut";
               var3 = (String) (mo.a((byte) -88, "getcookies", param1));
-              var4 = jc.a(30634, var3, ';');
+              var4 = jc.splitString(30634, var3, ';');
               for (var5 = 0; var4.length > var5; var5++) {
                 var6 = var4[var5].indexOf('=');
                 if (var6 >= 0 &&
@@ -205,7 +205,7 @@ final class ie {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3) {
-        DualLinkNode.a(tk.field_i, kj.field_j, param0, param1, param2 + 21166, ad.field_x, param3);
+        DualLinkNode.a(tk.field_i, CueAim.field_j, param0, param1, param2 + 21166, ad.field_x, param3);
         if (param2 != -17156) {
           accept = (String) null;
         }
@@ -220,11 +220,11 @@ final class ie {
         boolean stackIn_22_1 = false;
         qi.a((byte) -100);
         if (mg.field_d >= 0) {
-          pm.field_m.field_nb = nr.a(new String[]{Integer.toString(mg.field_d)}, -1, m.yourRatingIsX);
+          pm.field_m.field_nb = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(mg.field_d)}, -1, m.yourRatingIsX);
         } else {
           pm.field_m.field_nb = null;
         }
-        stackIn_9_0 = ir.field_a;
+        stackIn_9_0 = BufferedFile.field_a;
         stackIn_10_1 = (param1) && (!param0) && (!tf.field_d) && (em.field_L == null) && (tp.field_e == null);
         ((vh) (Object) stackIn_9_0).a(stackIn_10_1, false);
         stackIn_16_0 = oi.field_n;
@@ -234,13 +234,13 @@ final class ie {
         stackIn_22_1 = (param1) && (!param0) && (tf.field_d);
         ((vh) (Object) stackIn_21_0).a(stackIn_22_1, false);
         kg.field_l.field_i.c(true);
-        if (gj.field_K.field_R != 0) {
+        if (ProgressBarWidget.field_K.field_R != 0) {
           jo.field_H = true;
         }
         boolean decompiledFrameRemainder0 = true;
         if (rn.field_f.field_R != 0) {
           if (!DualLinkNode.field_s &&
-            mp.field_V <= 0 && (!(hq.field_i >= 2) ||
+            UsernameSuggestionsPanel.field_V <= 0 && (!(TutorialController.field_i >= 2) ||
             !vj.field_c[12])) {
             gn.field_f = true;
             decompiledFrameRemainder0 = false;

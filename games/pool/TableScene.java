@@ -20,7 +20,7 @@ abstract class TableScene {
     private p[] field_y;
     private int[][] field_a;
     int field_v;
-    jk field_A;
+    CueStick field_A;
     int field_m;
     double field_j;
     float field_z;
@@ -237,10 +237,10 @@ abstract class TableScene {
           var26 = var18.a(-var23 + var20, -var24 + var22, 0);
           var27 = var18.a(var19 - var23, var21 - var24, sb.a(-16.0f, true));
           var28 = var18.a(var20 - var23, var22 - var24, sb.a(-16.0f, true));
-          var18.a(var25, var27, var26, (byte) 1, hh.a((byte) -123, this.e(31761)), this.c(99));
-          var18.a(var28, var26, var27, (byte) 1, hh.a((byte) 94, this.e(31761)), this.c(97));
-          var18.a(var25, var26, var27, (byte) 1, hh.a((byte) 93, this.e(31761)), this.c(100));
-          var18.a(var28, var27, var26, (byte) 1, hh.a((byte) 42, this.e(31761)), this.c(95));
+          var18.a(var25, var27, var26, (byte) 1, hh.rgbToPackedHsl((byte) -123, this.e(31761)), this.c(99));
+          var18.a(var28, var26, var27, (byte) 1, hh.rgbToPackedHsl((byte) 94, this.e(31761)), this.c(97));
+          var18.a(var25, var26, var27, (byte) 1, hh.rgbToPackedHsl((byte) 93, this.e(31761)), this.c(100));
+          var18.a(var28, var27, var26, (byte) 1, hh.rgbToPackedHsl((byte) 42, this.e(31761)), this.c(95));
           var12[var16] = var18;
           var13[var16] = new p((nc) (var12[var16].a(this.field_C, this.field_x, this.field_q, this.field_e, this.field_u)), new int[]{var23, var24, 0});
         }
@@ -254,8 +254,8 @@ abstract class TableScene {
           this.h(-49);
         }
         id.field_c.field_g = true;
-        if (null != ba.field_ub) {
-          ba.field_ub.K(0);
+        if (null != AccountContentDialog.field_ub) {
+          AccountContentDialog.field_ub.K(0);
         }
         if (null != am.field_e) {
           am.field_e.K(0);
@@ -540,12 +540,12 @@ abstract class TableScene {
         var34 = var31;
         var35 = -var30;
         var36 = var30 * var30 + var31 * var31;
-        var37 = ke.a(false, var36) << 2;
+        var37 = LoginTextValue.a(false, var36) << 2;
         var38 = var28Lifetime4 * var28Lifetime4 + var29 * var29;
         if (var38 == 0) {
           return;
         }
-        var39 = ke.a(false, var38) << 2;
+        var39 = LoginTextValue.a(false, var38) << 2;
         var32 = (var32 << 12) / var39;
         var33 = (var33 << 12) / var39;
         var34 = (var34 << 12) / var37;
@@ -982,10 +982,10 @@ abstract class TableScene {
               if (var8 > var6_int) {
                 var9 = var6_int - var8;
               }
-              param4[var7].a(var9 + ga.a(64, true, ea.field_r) + var8, 441, 128);
+              param4[var7].a(var9 + ga.nextRandomInt(64, true, ea.field_r) + var8, 441, 128);
             } else if ((param4[var7] == null ||
-              param4[var7].field_o.i()) && ga.a(param1, true, ea.field_r) == 0) {
-              param4[var7] = mn.a(-24296, PcmSampleStream.c(param3[ga.a(param3.length, true, ea.field_r)], 100, var6_int, 8192 * var7 + 4096));
+              param4[var7].field_o.i()) && ga.nextRandomInt(param1, true, ea.field_r) == 0) {
+              param4[var7] = mn.a(-24296, PcmSampleStream.c(param3[ga.nextRandomInt(param3.length, true, ea.field_r)], 100, var6_int, 8192 * var7 + 4096));
             }
           }
           var7Lifetime1 = -14 % ((-11 - param2) / 44);
@@ -1202,7 +1202,7 @@ abstract class TableScene {
               param2[var4_int].updateRenderTransform(2);
               dq.field_a.a(false, param2[var4_int].renderTransform, var4_int);
             }
-            w.field_a[var4_int] = (eb) ((Object) k.field_O[var4_int]);
+            w.field_a[var4_int] = (eb) ((Object) DropTargetWidget.field_O[var4_int]);
             pd.field_f[var4_int] = var4_int;
             tc.field_d[var4_int] = w.field_a[var4_int].b(param1, -111);
           }
@@ -1296,11 +1296,11 @@ abstract class TableScene {
         int var3_int = 0;
         int var3_intLifetime1;
         try {
-          k.field_O = new ec[param0.balls.length];
+          DropTargetWidget.field_O = new ec[param0.balls.length];
           w.field_a = new eb[rb.field_e.length + param0.balls.length];
           var3_int = param1;
           for (var3_intLifetime1 = 0; var3_intLifetime1 < param0.balls.length; var3_intLifetime1++) {
-            k.field_O[var3_intLifetime1] = new ec(var3_intLifetime1, param0);
+            DropTargetWidget.field_O[var3_intLifetime1] = new ec(var3_intLifetime1, param0);
           }
           tc.field_d = new int[w.field_a.length];
           pd.field_f = new int[w.field_a.length];
@@ -1504,14 +1504,14 @@ abstract class TableScene {
         int var12 = this.field_s.a(var9, -var10, 0);
         int var13 = this.field_s.a(-var9, var10, 0);
         int var14 = this.field_s.a(var9, var10, 0);
-        this.field_s.a(var11, var13, var12, (byte) 1, hh.a((byte) -105, this.h(684)), this.g(-56));
-        this.field_s.a(var14, var12, var13, (byte) 1, hh.a((byte) -127, this.h(684)), this.g(91));
+        this.field_s.a(var11, var13, var12, (byte) 1, hh.rgbToPackedHsl((byte) -105, this.h(684)), this.g(-56));
+        this.field_s.a(var14, var12, var13, (byte) 1, hh.rgbToPackedHsl((byte) -127, this.h(684)), this.g(91));
         nc var15 = (nc) (this.a(103, this.field_s));
         for (var16 = 0; var16 < var4; var16++) {
           var17 = var7 * (double)(1 + 2 * var16) / 2.0;
           for (var19 = 0; var3 > var19; var19++) {
             var20 = var5 * (double)(1 + var19 * 2) / 2.0;
-            this.field_y[var16 * var3 + var19] = new p(var15, ib.a(new double[]{var20, var17, 0.0}, -30100));
+            this.field_y[var16 * var3 + var19] = new p(var15, MidiNoteMixer.a(new double[]{var20, var17, 0.0}, -30100));
           }
         }
     }

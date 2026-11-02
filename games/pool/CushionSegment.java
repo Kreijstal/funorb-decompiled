@@ -37,107 +37,107 @@ final class CushionSegment {
         int var6Lifetime2;
         int var7Lifetime1;
         int var7Lifetime2;
-        uh.field_t[0] = (var1 >> 1) - ml.field_l[0];
-        uh.field_t[1] = -ml.field_l[1];
-        uh.field_t[2] = -ml.field_l[2] + var1;
-        int var2 = uh.field_t[1] * ml.field_l[4] + ml.field_l[3] * uh.field_t[0] + ml.field_l[5] * uh.field_t[2] >> 7;
-        int var3 = uh.field_t[2] * ml.field_l[8] + (ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6]) >> 7;
-        uh.field_t[2] = ml.field_l[10] * uh.field_t[1] + uh.field_t[0] * ml.field_l[9] + ml.field_l[11] * uh.field_t[2] >> 16;
-        if (uh.field_t[2] == 0) {
-          uh.field_t[2] = -1;
-          uh.field_t[1] = var3 / uh.field_t[2] + 240;
+        PasswordValidator.field_t[0] = (var1 >> 1) - ml.field_l[0];
+        PasswordValidator.field_t[1] = -ml.field_l[1];
+        PasswordValidator.field_t[2] = -ml.field_l[2] + var1;
+        int var2 = PasswordValidator.field_t[1] * ml.field_l[4] + ml.field_l[3] * PasswordValidator.field_t[0] + ml.field_l[5] * PasswordValidator.field_t[2] >> 7;
+        int var3 = PasswordValidator.field_t[2] * ml.field_l[8] + (ml.field_l[7] * PasswordValidator.field_t[1] + PasswordValidator.field_t[0] * ml.field_l[6]) >> 7;
+        PasswordValidator.field_t[2] = ml.field_l[10] * PasswordValidator.field_t[1] + PasswordValidator.field_t[0] * ml.field_l[9] + ml.field_l[11] * PasswordValidator.field_t[2] >> 16;
+        if (PasswordValidator.field_t[2] == 0) {
+          PasswordValidator.field_t[2] = -1;
+          PasswordValidator.field_t[1] = var3 / PasswordValidator.field_t[2] + 240;
           if (param0 < 75) {
             field_c = (vh) null;
           }
-          uh.field_t[0] = var2 / uh.field_t[2] + 320;
-          if (!(0 < uh.field_t[2])) {
+          PasswordValidator.field_t[0] = var2 / PasswordValidator.field_t[2] + 320;
+          if (!(0 < PasswordValidator.field_t[2])) {
             return;
           }
-          var4 = uh.field_t[0];
-          uh.field_t[0] = -ml.field_l[0];
-          var5 = uh.field_t[1];
-          uh.field_t[2] = var1 - ml.field_l[2];
-          uh.field_t[1] = -ml.field_l[1];
-          var6 = ml.field_l[4] * uh.field_t[1] + (ml.field_l[3] * uh.field_t[0] + uh.field_t[2] * ml.field_l[5]) >> 7;
-          var7 = ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6] + ml.field_l[8] * uh.field_t[2] >> 7;
-          uh.field_t[2] = uh.field_t[2] * ml.field_l[11] + (uh.field_t[0] * ml.field_l[9] + uh.field_t[1] * ml.field_l[10]) >> 16;
-          if (uh.field_t[2] != 0) {
-            uh.field_t[0] = 320 + var6 / uh.field_t[2];
-            uh.field_t[1] = var7 / uh.field_t[2] + 240;
-            if (uh.field_t[2] > 0) {
-              PoolUiText.field_d = tj.c(uh.field_t[0] - var4, var5 - uh.field_t[1], 4096) << 3;
+          var4 = PasswordValidator.field_t[0];
+          PasswordValidator.field_t[0] = -ml.field_l[0];
+          var5 = PasswordValidator.field_t[1];
+          PasswordValidator.field_t[2] = var1 - ml.field_l[2];
+          PasswordValidator.field_t[1] = -ml.field_l[1];
+          var6 = ml.field_l[4] * PasswordValidator.field_t[1] + (ml.field_l[3] * PasswordValidator.field_t[0] + PasswordValidator.field_t[2] * ml.field_l[5]) >> 7;
+          var7 = ml.field_l[7] * PasswordValidator.field_t[1] + PasswordValidator.field_t[0] * ml.field_l[6] + ml.field_l[8] * PasswordValidator.field_t[2] >> 7;
+          PasswordValidator.field_t[2] = PasswordValidator.field_t[2] * ml.field_l[11] + (PasswordValidator.field_t[0] * ml.field_l[9] + PasswordValidator.field_t[1] * ml.field_l[10]) >> 16;
+          if (PasswordValidator.field_t[2] != 0) {
+            PasswordValidator.field_t[0] = 320 + var6 / PasswordValidator.field_t[2];
+            PasswordValidator.field_t[1] = var7 / PasswordValidator.field_t[2] + 240;
+            if (PasswordValidator.field_t[2] > 0) {
+              PoolUiText.field_d = ResizableDialog.c(PasswordValidator.field_t[0] - var4, var5 - PasswordValidator.field_t[1], 4096) << 3;
               return;
             }
             return;
           }
-          uh.field_t[2] = -1;
-          uh.field_t[0] = 320 + var6 / uh.field_t[2];
-          uh.field_t[1] = var7 / uh.field_t[2] + 240;
-          if (uh.field_t[2] > 0) {
-            PoolUiText.field_d = tj.c(uh.field_t[0] - var4, var5 - uh.field_t[1], 4096) << 3;
+          PasswordValidator.field_t[2] = -1;
+          PasswordValidator.field_t[0] = 320 + var6 / PasswordValidator.field_t[2];
+          PasswordValidator.field_t[1] = var7 / PasswordValidator.field_t[2] + 240;
+          if (PasswordValidator.field_t[2] > 0) {
+            PoolUiText.field_d = ResizableDialog.c(PasswordValidator.field_t[0] - var4, var5 - PasswordValidator.field_t[1], 4096) << 3;
             return;
           }
           return;
         }
-        uh.field_t[1] = var3 / uh.field_t[2] + 240;
+        PasswordValidator.field_t[1] = var3 / PasswordValidator.field_t[2] + 240;
         if (param0 < 75) {
           field_c = (vh) null;
-          uh.field_t[0] = var2 / uh.field_t[2] + 320;
-          if (!(0 < uh.field_t[2])) {
+          PasswordValidator.field_t[0] = var2 / PasswordValidator.field_t[2] + 320;
+          if (!(0 < PasswordValidator.field_t[2])) {
             return;
           }
-          var4Lifetime1 = uh.field_t[0];
-          uh.field_t[0] = -ml.field_l[0];
-          var5Lifetime1 = uh.field_t[1];
-          uh.field_t[2] = var1 - ml.field_l[2];
-          uh.field_t[1] = -ml.field_l[1];
-          var6Lifetime1 = ml.field_l[4] * uh.field_t[1] + (ml.field_l[3] * uh.field_t[0] + uh.field_t[2] * ml.field_l[5]) >> 7;
-          var7Lifetime1 = ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6] + ml.field_l[8] * uh.field_t[2] >> 7;
-          uh.field_t[2] = uh.field_t[2] * ml.field_l[11] + (uh.field_t[0] * ml.field_l[9] + uh.field_t[1] * ml.field_l[10]) >> 16;
-          if (uh.field_t[2] != 0) {
-            uh.field_t[0] = 320 + var6Lifetime1 / uh.field_t[2];
-            uh.field_t[1] = var7Lifetime1 / uh.field_t[2] + 240;
-            if (uh.field_t[2] > 0) {
-              PoolUiText.field_d = tj.c(uh.field_t[0] - var4Lifetime1, var5Lifetime1 - uh.field_t[1], 4096) << 3;
+          var4Lifetime1 = PasswordValidator.field_t[0];
+          PasswordValidator.field_t[0] = -ml.field_l[0];
+          var5Lifetime1 = PasswordValidator.field_t[1];
+          PasswordValidator.field_t[2] = var1 - ml.field_l[2];
+          PasswordValidator.field_t[1] = -ml.field_l[1];
+          var6Lifetime1 = ml.field_l[4] * PasswordValidator.field_t[1] + (ml.field_l[3] * PasswordValidator.field_t[0] + PasswordValidator.field_t[2] * ml.field_l[5]) >> 7;
+          var7Lifetime1 = ml.field_l[7] * PasswordValidator.field_t[1] + PasswordValidator.field_t[0] * ml.field_l[6] + ml.field_l[8] * PasswordValidator.field_t[2] >> 7;
+          PasswordValidator.field_t[2] = PasswordValidator.field_t[2] * ml.field_l[11] + (PasswordValidator.field_t[0] * ml.field_l[9] + PasswordValidator.field_t[1] * ml.field_l[10]) >> 16;
+          if (PasswordValidator.field_t[2] != 0) {
+            PasswordValidator.field_t[0] = 320 + var6Lifetime1 / PasswordValidator.field_t[2];
+            PasswordValidator.field_t[1] = var7Lifetime1 / PasswordValidator.field_t[2] + 240;
+            if (PasswordValidator.field_t[2] > 0) {
+              PoolUiText.field_d = ResizableDialog.c(PasswordValidator.field_t[0] - var4Lifetime1, var5Lifetime1 - PasswordValidator.field_t[1], 4096) << 3;
               return;
             }
             return;
           }
-          uh.field_t[2] = -1;
-          uh.field_t[0] = 320 + var6Lifetime1 / uh.field_t[2];
-          uh.field_t[1] = var7Lifetime1 / uh.field_t[2] + 240;
-          if (uh.field_t[2] > 0) {
-            PoolUiText.field_d = tj.c(uh.field_t[0] - var4Lifetime1, var5Lifetime1 - uh.field_t[1], 4096) << 3;
+          PasswordValidator.field_t[2] = -1;
+          PasswordValidator.field_t[0] = 320 + var6Lifetime1 / PasswordValidator.field_t[2];
+          PasswordValidator.field_t[1] = var7Lifetime1 / PasswordValidator.field_t[2] + 240;
+          if (PasswordValidator.field_t[2] > 0) {
+            PoolUiText.field_d = ResizableDialog.c(PasswordValidator.field_t[0] - var4Lifetime1, var5Lifetime1 - PasswordValidator.field_t[1], 4096) << 3;
             return;
           }
           return;
         }
-        uh.field_t[0] = var2 / uh.field_t[2] + 320;
-        if (!(0 < uh.field_t[2])) {
+        PasswordValidator.field_t[0] = var2 / PasswordValidator.field_t[2] + 320;
+        if (!(0 < PasswordValidator.field_t[2])) {
           return;
         }
-        var4Lifetime2 = uh.field_t[0];
-        uh.field_t[0] = -ml.field_l[0];
-        var5Lifetime2 = uh.field_t[1];
-        uh.field_t[2] = var1 - ml.field_l[2];
-        uh.field_t[1] = -ml.field_l[1];
-        var6Lifetime2 = ml.field_l[4] * uh.field_t[1] + (ml.field_l[3] * uh.field_t[0] + uh.field_t[2] * ml.field_l[5]) >> 7;
-        var7Lifetime2 = ml.field_l[7] * uh.field_t[1] + uh.field_t[0] * ml.field_l[6] + ml.field_l[8] * uh.field_t[2] >> 7;
-        uh.field_t[2] = uh.field_t[2] * ml.field_l[11] + (uh.field_t[0] * ml.field_l[9] + uh.field_t[1] * ml.field_l[10]) >> 16;
-        if (uh.field_t[2] == 0) {
-          uh.field_t[2] = -1;
-          uh.field_t[0] = 320 + var6Lifetime2 / uh.field_t[2];
-          uh.field_t[1] = var7Lifetime2 / uh.field_t[2] + 240;
-          if (uh.field_t[2] > 0) {
-            PoolUiText.field_d = tj.c(uh.field_t[0] - var4Lifetime2, var5Lifetime2 - uh.field_t[1], 4096) << 3;
+        var4Lifetime2 = PasswordValidator.field_t[0];
+        PasswordValidator.field_t[0] = -ml.field_l[0];
+        var5Lifetime2 = PasswordValidator.field_t[1];
+        PasswordValidator.field_t[2] = var1 - ml.field_l[2];
+        PasswordValidator.field_t[1] = -ml.field_l[1];
+        var6Lifetime2 = ml.field_l[4] * PasswordValidator.field_t[1] + (ml.field_l[3] * PasswordValidator.field_t[0] + PasswordValidator.field_t[2] * ml.field_l[5]) >> 7;
+        var7Lifetime2 = ml.field_l[7] * PasswordValidator.field_t[1] + PasswordValidator.field_t[0] * ml.field_l[6] + ml.field_l[8] * PasswordValidator.field_t[2] >> 7;
+        PasswordValidator.field_t[2] = PasswordValidator.field_t[2] * ml.field_l[11] + (PasswordValidator.field_t[0] * ml.field_l[9] + PasswordValidator.field_t[1] * ml.field_l[10]) >> 16;
+        if (PasswordValidator.field_t[2] == 0) {
+          PasswordValidator.field_t[2] = -1;
+          PasswordValidator.field_t[0] = 320 + var6Lifetime2 / PasswordValidator.field_t[2];
+          PasswordValidator.field_t[1] = var7Lifetime2 / PasswordValidator.field_t[2] + 240;
+          if (PasswordValidator.field_t[2] > 0) {
+            PoolUiText.field_d = ResizableDialog.c(PasswordValidator.field_t[0] - var4Lifetime2, var5Lifetime2 - PasswordValidator.field_t[1], 4096) << 3;
             return;
           }
           return;
         }
-        uh.field_t[0] = 320 + var6Lifetime2 / uh.field_t[2];
-        uh.field_t[1] = var7Lifetime2 / uh.field_t[2] + 240;
-        if (uh.field_t[2] > 0) {
-          PoolUiText.field_d = tj.c(uh.field_t[0] - var4Lifetime2, var5Lifetime2 - uh.field_t[1], 4096) << 3;
+        PasswordValidator.field_t[0] = 320 + var6Lifetime2 / PasswordValidator.field_t[2];
+        PasswordValidator.field_t[1] = var7Lifetime2 / PasswordValidator.field_t[2] + 240;
+        if (PasswordValidator.field_t[2] > 0) {
+          PoolUiText.field_d = ResizableDialog.c(PasswordValidator.field_t[0] - var4Lifetime2, var5Lifetime2 - PasswordValidator.field_t[1], 4096) << 3;
           return;
         }
     }

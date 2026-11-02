@@ -22,8 +22,8 @@ final class ue {
             ue.a((byte) 11);
           }
           if (ci.field_i == -1 &&
-            -1 == gg.field_g) {
-            gg.field_g = gg.field_f;
+            -1 == DebouncedValidationProvider.field_g) {
+            DebouncedValidationProvider.field_g = DebouncedValidationProvider.field_f;
             ci.field_i = wn.field_i;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -67,13 +67,13 @@ final class ue {
               nn.field_d = false;
             }
             id.field_b = ci.field_i;
-            ne.field_n = gg.field_g;
+            MatchingTextValidator.field_n = DebouncedValidationProvider.field_g;
           }
           pj.field_I = param1;
           if (!nn.field_d &&
             jo.field_J < wp.field_c &&
             re.field_c) {
-            ne.field_n = gg.field_g;
+            MatchingTextValidator.field_n = DebouncedValidationProvider.field_g;
             id.field_b = ci.field_i;
             jo.field_J = 0;
           }
@@ -83,7 +83,7 @@ final class ue {
             jo.field_J = 0;
           }
           ci.field_i = -1;
-          gg.field_g = -1;
+          DebouncedValidationProvider.field_g = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -101,10 +101,10 @@ final class ue {
 
     final static void a(boolean param0) {
         if (wd.field_Ub != null) {
-          wd.field_Ub.h(11741);
+          wd.field_Ub.settleDialogAnimations(11741);
         }
         if (null != of.field_Nb) {
-          of.field_Nb.k(0);
+          of.field_Nb.stopNormalAnimation(0);
           ja.a(param0);
           return;
         }
@@ -114,7 +114,7 @@ final class ue {
     final static boolean a(int param0) {
         if (param0 == 11) {
           bi.field_f = true;
-          ia.field_k = rl.a((byte) -110) + 15000L;
+          MenuSelection.field_k = rl.a((byte) -110) + 15000L;
           return 11 == PlasmaTableScene.field_ab ? true : false;
         }
         return false;
@@ -136,7 +136,7 @@ final class ue {
           if (sf.field_y < 20) {
             return true;
           }
-          if (!gg.a(true)) {
+          if (!DebouncedValidationProvider.a(true)) {
             return true;
           }
           if (0 >= no.field_l) {
@@ -150,7 +150,7 @@ final class ue {
         if (sf.field_y < 20) {
           return true;
         }
-        if (!gg.a(true)) {
+        if (!DebouncedValidationProvider.a(true)) {
           return true;
         }
         if (0 >= no.field_l) {

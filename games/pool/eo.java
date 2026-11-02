@@ -37,10 +37,10 @@ final class eo extends vh {
         kh var7 = null;
         oq var4 = null;
         oq var4Lifetime1;
-        if (param1 != ka.field_r) {
-          var6 = (kh) (lf.field_a.a((long)ka.field_r, false));
+        if (param1 != AgeValidator.field_r) {
+          var6 = (kh) (lf.field_a.a((long)AgeValidator.field_r, false));
           var7 = var6;
-          ka.field_r = param1;
+          AgeValidator.field_r = param1;
           if (var7 != null) {
             var7.field_bc = null;
           } else {

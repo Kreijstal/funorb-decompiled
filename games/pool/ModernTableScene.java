@@ -58,27 +58,27 @@ final class ModernTableScene extends ModelTableScene {
             mn.a(-24296, dupTemp$0);
             this.field_ab = null;
           }
-          ei.field_u = ei.field_u + 1;
-          if (ne.field_s == 1) {
-            if (mp.field_V <= 0) {
+          UiWidget.field_u = UiWidget.field_u + 1;
+          if (MatchingTextValidator.field_s == 1) {
+            if (UsernameSuggestionsPanel.field_V <= 0) {
               return;
             }
             var3_int = 0;
             var4 = 128 + param1.field_eb.b(-128);
             if (var4 > 0) {
               var5 = -this.field_B.field_A + var4 + 111;
-              if (ua.field_o > var5 &&
-                68 + var5 > ua.field_o) {
+              if (UsernameAvailabilityValidator.field_o > var5 &&
+                68 + var5 > UsernameAvailabilityValidator.field_o) {
                 var6 = (int)(-param1.field_eb.a(true) * (double)this.field_B.field_z / 2.0 / 3.141592653589793);
                 var7 = -this.field_B.field_z + var6 + 1289;
-                if (var7 < lq.field_W &&
-                  54 + var7 > lq.field_W) {
+                if (var7 < DialogLayer.field_W &&
+                  54 + var7 > DialogLayer.field_W) {
                   var3_int = 1;
                 } else {
                   if (-SoftwareRasterizer.width + this.field_B.field_z > var6) {
                     var7 = 1289 + var6;
-                    if (lq.field_W > var7 &&
-                      54 + var7 > lq.field_W) {
+                    if (DialogLayer.field_W > var7 &&
+                      54 + var7 > DialogLayer.field_W) {
                       var3_int = 1;
                     }
                   }
@@ -86,7 +86,7 @@ final class ModernTableScene extends ModelTableScene {
               }
             }
             if (var3_int != 0) {
-              e.field_c[la.field_b % e.field_c.length] = ei.field_u;
+              e.field_c[la.field_b % e.field_c.length] = UiWidget.field_u;
               la.field_b = la.field_b + 1;
               if (la.field_b < 5) {
                 return;
@@ -233,7 +233,7 @@ final class ModernTableScene extends ModelTableScene {
           this.a(false, var36, var20);
           kf.a(ag.field_c, (byte) -104, pa.field_L, ph.field_g, lk.field_m);
           kf.a(ol.field_a, (byte) -104, pa.field_L, ph.field_g, w.field_h);
-          kf.a(CushionSegment.field_k, (byte) -104, pa.field_L, ph.field_g, hb.field_l);
+          kf.a(CushionSegment.field_k, (byte) -104, pa.field_L, ph.field_g, NodeHashTableIterator.field_l);
           var21 = this.field_bb;
           var54 = oh.field_d;
           var21.b((byte) -123, 0, var21.field_j.length, var54);
@@ -276,7 +276,7 @@ final class ModernTableScene extends ModelTableScene {
           en.b(param0 + 55);
           this.a(false, param1);
           var56 = new int[3];
-          hr.a(th.field_l[PolarTableScene.field_lb].field_l[0], var56, oh.field_d, th.field_l[PolarTableScene.field_lb].field_l[1], th.field_l[PolarTableScene.field_lb].field_l[2], (byte) 9);
+          ViewportController.a(th.field_l[PolarTableScene.field_lb].field_l[0], var56, oh.field_d, th.field_l[PolarTableScene.field_lb].field_l[1], th.field_l[PolarTableScene.field_lb].field_l[2], (byte) 9);
           dupTemp$0 = var56[1];
           var9 = dupTemp$0;
           var8Lifetime1 = dupTemp$0;
@@ -285,7 +285,7 @@ final class ModernTableScene extends ModelTableScene {
           var6 = dupTemp$1;
           for (var5Lifetime1 = IntrusiveNode.field_g - 1; var5Lifetime1 >= PolarTableScene.field_lb; var5Lifetime1--) {
             th.field_l[var5Lifetime1].c(6710886, oh.field_d);
-            hr.a((int) th.field_l[var5Lifetime1].field_h, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_a, (int) th.field_l[var5Lifetime1].field_o, (byte) 9);
+            ViewportController.a((int) th.field_l[var5Lifetime1].field_h, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_a, (int) th.field_l[var5Lifetime1].field_o, (byte) 9);
             if (var6 <= var56[0]) {
               if (var7Lifetime1 < var56[0]) {
                 var7Lifetime1 = var56[0];
@@ -300,7 +300,7 @@ final class ModernTableScene extends ModelTableScene {
             } else {
               var8Lifetime1 = var56[1];
             }
-            hr.a((int) th.field_l[var5Lifetime1].field_p, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_a, (int) th.field_l[var5Lifetime1].field_o, (byte) 9);
+            ViewportController.a((int) th.field_l[var5Lifetime1].field_p, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_a, (int) th.field_l[var5Lifetime1].field_o, (byte) 9);
             if (var56[0] >= var6) {
               if (var7Lifetime1 < var56[0]) {
                 var7Lifetime1 = var56[0];
@@ -315,7 +315,7 @@ final class ModernTableScene extends ModelTableScene {
             } else {
               var8Lifetime1 = var56[1];
             }
-            hr.a((int) th.field_l[var5Lifetime1].field_h, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_m, (int) th.field_l[var5Lifetime1].field_o, (byte) 9);
+            ViewportController.a((int) th.field_l[var5Lifetime1].field_h, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_m, (int) th.field_l[var5Lifetime1].field_o, (byte) 9);
             if (var6 > var56[0]) {
               var6 = var56[0];
             } else {
@@ -330,7 +330,7 @@ final class ModernTableScene extends ModelTableScene {
                 var9 = var56[1];
               }
             }
-            hr.a((int) th.field_l[var5Lifetime1].field_p, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_m, (int) th.field_l[var5Lifetime1].field_o, (byte) 9);
+            ViewportController.a((int) th.field_l[var5Lifetime1].field_p, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_m, (int) th.field_l[var5Lifetime1].field_o, (byte) 9);
             if (var8Lifetime1 <= var56[1]) {
               if (var9 < var56[1]) {
                 var9 = var56[1];
@@ -345,7 +345,7 @@ final class ModernTableScene extends ModelTableScene {
                 var7Lifetime1 = var56[0];
               }
             }
-            hr.a((int) th.field_l[var5Lifetime1].field_h, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_a, (int) th.field_l[var5Lifetime1].field_f, (byte) 9);
+            ViewportController.a((int) th.field_l[var5Lifetime1].field_h, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_a, (int) th.field_l[var5Lifetime1].field_f, (byte) 9);
             if (var8Lifetime1 <= var56[1]) {
               if (var9 < var56[1]) {
                 var9 = var56[1];
@@ -360,7 +360,7 @@ final class ModernTableScene extends ModelTableScene {
                 var7Lifetime1 = var56[0];
               }
             }
-            hr.a((int) th.field_l[var5Lifetime1].field_p, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_a, (int) th.field_l[var5Lifetime1].field_f, (byte) 9);
+            ViewportController.a((int) th.field_l[var5Lifetime1].field_p, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_a, (int) th.field_l[var5Lifetime1].field_f, (byte) 9);
             if (var6 > var56[0]) {
               var6 = var56[0];
             } else {
@@ -375,7 +375,7 @@ final class ModernTableScene extends ModelTableScene {
                 var9 = var56[1];
               }
             }
-            hr.a((int) th.field_l[var5Lifetime1].field_h, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_m, (int) th.field_l[var5Lifetime1].field_f, (byte) 9);
+            ViewportController.a((int) th.field_l[var5Lifetime1].field_h, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_m, (int) th.field_l[var5Lifetime1].field_f, (byte) 9);
             if (var6 <= var56[0]) {
               if (var56[0] > var7Lifetime1) {
                 var7Lifetime1 = var56[0];
@@ -390,7 +390,7 @@ final class ModernTableScene extends ModelTableScene {
             } else {
               var8Lifetime1 = var56[1];
             }
-            hr.a((int) th.field_l[var5Lifetime1].field_p, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_m, (int) th.field_l[var5Lifetime1].field_f, (byte) 9);
+            ViewportController.a((int) th.field_l[var5Lifetime1].field_p, var56, oh.field_d, (int) th.field_l[var5Lifetime1].field_m, (int) th.field_l[var5Lifetime1].field_f, (byte) 9);
             if (var56[1] >= var8Lifetime1) {
               if (var9 < var56[1]) {
                 var9 = var56[1];
@@ -441,7 +441,7 @@ final class ModernTableScene extends ModelTableScene {
           if ((1073741824L & pd.field_i) == 0L) {
             this.a(var36, (byte) 65, false, var20, false);
           }
-          var11Lifetime2 = hb.field_l;
+          var11Lifetime2 = NodeHashTableIterator.field_l;
           var12Lifetime2 = CushionSegment.field_k;
           for (var13Lifetime2 = var12Lifetime2 - 1; var13Lifetime2 >= var11Lifetime2; var13Lifetime2--) {
             th.field_l[ph.field_g[var13Lifetime2]].c(param0 ^ -6710865, oh.field_d);
@@ -466,7 +466,7 @@ final class ModernTableScene extends ModelTableScene {
             stackIn_136_2 = 115;
             stackIn_136_3 = true;
             stackIn_136_4 = var3;
-            if (param1.field_I.currentShot(param0 ^ -45).field_q != 0) {
+            if (param1.field_I.currentShot(param0 ^ -45).phase != 0) {
               stackIn_137_0 = this;
               stackIn_137_5 = false;
             } else {
@@ -624,18 +624,18 @@ final class ModernTableScene extends ModelTableScene {
         int var18Lifetime1;
         int var19Lifetime1;
         var20 = Pool.field_O;
-        var3 = -kj.field_b + eh.field_t;
+        var3 = -CueAim.field_b + eh.field_t;
         var4 = new eg[var3][];
         var38 = new int[var3][][];
         var21 = var38;
         var5 = var21;
-        var6 = this.a(kj.field_b, var4, var38, -57, eh.field_t);
-        var7 = -tj.field_fb + nd.field_m;
+        var6 = this.a(CueAim.field_b, var4, var38, -57, eh.field_t);
+        var7 = -ResizableDialog.field_fb + nd.field_m;
         var8 = new eg[var7][];
         var39 = new int[var7][][];
         var22 = var39;
         var9 = var22;
-        var10 = this.a(tj.field_fb, var8, var39, -58, nd.field_m);
+        var10 = this.a(ResizableDialog.field_fb, var8, var39, -58, nd.field_m);
         for (var11 = 0; var11 < var4.length; var11++) {
           for (var12_int = 0; var12_int < var4[var11].length; var12_int++) {
             nd.a(var4[var11][var12_int], (byte) -37);
@@ -646,32 +646,32 @@ final class ModernTableScene extends ModelTableScene {
             nd.a(var8[var11Lifetime1][var12_intLifetime1], (byte) -37);
           }
         }
-        th.field_l = new p[-1 * (-ch.field_G + EightBallRules.field_e) + -1 * (pf.field_k - fc.field_c) + (TableScene.field_I - uk.field_l) * 3 + (dp.field_l - qr.field_d) * 3 + (-var3 + (var6 + this.field_O.length + var10 + (-var7 + -1 * (-rb.field_a + DualLinkNode.field_u))))];
+        th.field_l = new p[-1 * (-WidgetContainer.field_G + EightBallRules.field_e) + -1 * (pf.field_k - fc.field_c) + (TableScene.field_I - uk.field_l) * 3 + (dp.field_l - qr.field_d) * 3 + (-var3 + (var6 + this.field_O.length + var10 + (-var7 + -1 * (-rb.field_a + DualLinkNode.field_u))))];
         var11Lifetime2 = 0;
         PolarTableScene.field_lb = var11Lifetime2;
-        for (var2 = kj.field_b; var2 < eh.field_t; var2++) {
+        for (var2 = CueAim.field_b; var2 < eh.field_t; var2++) {
           var12_intLifetime2 = var11Lifetime2;
-          var23 = var4[var2 - kj.field_b];
-          var24 = var5[var2 - kj.field_b];
+          var23 = var4[var2 - CueAim.field_b];
+          var24 = var5[var2 - CueAim.field_b];
           for (var15 = 0; var15 < var23.length; var15++) {
             incrementValue$10 = var12_intLifetime2;
             var12_intLifetime2++;
             th.field_l[incrementValue$10] = new p((nc) (this.a(108, var23[var15])), new int[]{var24[var15][0], var24[var15][1], var24[var15][2]});
           }
-          var11Lifetime2 = var11Lifetime2 + var4[-kj.field_b + var2].length;
+          var11Lifetime2 = var11Lifetime2 + var4[-CueAim.field_b + var2].length;
         }
         sb.field_d = var11Lifetime2;
         IntrusiveNode.field_g = var11Lifetime2;
-        for (var2Lifetime1 = tj.field_fb; nd.field_m > var2Lifetime1; var2Lifetime1++) {
+        for (var2Lifetime1 = ResizableDialog.field_fb; nd.field_m > var2Lifetime1; var2Lifetime1++) {
           var12_intLifetime3 = var11Lifetime2;
-          var25 = var8[var2Lifetime1 - tj.field_fb];
-          var26 = var9[-tj.field_fb + var2Lifetime1];
+          var25 = var8[var2Lifetime1 - ResizableDialog.field_fb];
+          var26 = var9[-ResizableDialog.field_fb + var2Lifetime1];
           for (var15 = 0; var15 < var25.length; var15++) {
             incrementValue$9 = var12_intLifetime3;
             var12_intLifetime3++;
             th.field_l[incrementValue$9] = new p((nc) (this.a(0, var25[var15])), new int[]{var26[var15][0], var26[var15][1], var26[var15][2]});
           }
-          var11Lifetime2 = var11Lifetime2 + var8[-tj.field_fb + var2Lifetime1].length;
+          var11Lifetime2 = var11Lifetime2 + var8[-ResizableDialog.field_fb + var2Lifetime1].length;
         }
         if (!param0) {
           return;
@@ -686,7 +686,7 @@ final class ModernTableScene extends ModelTableScene {
           var11Lifetime2 += 4;
         }
         ag.field_c = var11Lifetime2;
-        hb.field_l = var11Lifetime2;
+        NodeHashTableIterator.field_l = var11Lifetime2;
         for (var2Lifetime3 = uk.field_l; TableScene.field_I > var2Lifetime3; var2Lifetime3++) {
           var12_intLifetime5 = var2Lifetime3;
           var13_array = th.field_l;
@@ -706,11 +706,11 @@ final class ModernTableScene extends ModelTableScene {
           var11Lifetime2 += 4;
         }
         CushionSegment.field_k = var11Lifetime2;
-        dupTemp$0 = new so(4 * (EightBallRules.field_e - ch.field_G));
+        dupTemp$0 = new so(4 * (EightBallRules.field_e - WidgetContainer.field_G));
         this.field_jb = dupTemp$0;
         dupTemp$1 = new so(new so[]{dupTemp$0});
         this.field_bb = dupTemp$1;
-        dupTemp$2 = new so(4 * (EightBallRules.field_e - ch.field_G));
+        dupTemp$2 = new so(4 * (EightBallRules.field_e - WidgetContainer.field_G));
         this.field_U = dupTemp$2;
         dupTemp$3 = new so(4 * (-fc.field_c + pf.field_k) + (DualLinkNode.field_u - rb.field_a) * 2);
         this.field_gb = dupTemp$3;
@@ -718,21 +718,21 @@ final class ModernTableScene extends ModelTableScene {
         this.field_R = dupTemp$4;
         var12 = new so(new so[]{dupTemp$1, dupTemp$4});
         var13 = new so(new so[]{this.field_jb, this.field_U});
-        var14 = new eg[EightBallRules.field_e - ch.field_G][2];
-        for (var2Lifetime4 = ch.field_G; var2Lifetime4 < EightBallRules.field_e; var2Lifetime4++) {
-          dupTemp$5 = var14[var2Lifetime4 - ch.field_G];
-          dupTemp$6 = hq.b((byte) 125);
+        var14 = new eg[EightBallRules.field_e - WidgetContainer.field_G][2];
+        for (var2Lifetime4 = WidgetContainer.field_G; var2Lifetime4 < EightBallRules.field_e; var2Lifetime4++) {
+          dupTemp$5 = var14[var2Lifetime4 - WidgetContainer.field_G];
+          dupTemp$6 = TutorialController.b((byte) 125);
           dupTemp$5[0] = dupTemp$6;
           var15_ref_eg = dupTemp$6;
-          dupTemp$7 = var14[-ch.field_G + var2Lifetime4];
-          dupTemp$8 = hq.b((byte) 127);
+          dupTemp$7 = var14[-WidgetContainer.field_G + var2Lifetime4];
+          dupTemp$8 = TutorialController.b((byte) 127);
           dupTemp$7[1] = dupTemp$8;
           var28 = dupTemp$8;
           ej.a(0, var15_ref_eg, 0, false, -this.field_M[var2Lifetime4][2], 0, 0, 1, var28, this.field_O[var2Lifetime4]);
         }
         var15 = 0;
-        for (var2Lifetime5 = ch.field_G; EightBallRules.field_e > var2Lifetime5; var2Lifetime5++) {
-          var31 = var14[var2Lifetime5 - ch.field_G][1];
+        for (var2Lifetime5 = WidgetContainer.field_G; EightBallRules.field_e > var2Lifetime5; var2Lifetime5++) {
+          var31 = var14[var2Lifetime5 - WidgetContainer.field_G][1];
           var46 = this.field_M[var2Lifetime5];
           var29 = this.field_U.field_b;
           var19 = var15;
@@ -740,8 +740,8 @@ final class ModernTableScene extends ModelTableScene {
           var15 += 4;
         }
         var15 = 0;
-        for (var2Lifetime6 = ch.field_G; var2Lifetime6 < EightBallRules.field_e; var2Lifetime6++) {
-          var34 = var14[var2Lifetime6 - ch.field_G][0];
+        for (var2Lifetime6 = WidgetContainer.field_G; var2Lifetime6 < EightBallRules.field_e; var2Lifetime6++) {
+          var34 = var14[var2Lifetime6 - WidgetContainer.field_G][0];
           var47 = this.field_M[var2Lifetime6];
           var32 = this.field_jb.field_b;
           var19Lifetime1 = var15;
@@ -947,12 +947,12 @@ final class ModernTableScene extends ModelTableScene {
         try {
           this.field_O = new eg[11];
           var3_int = 0;
-          kj.field_b = var3_int;
+          CueAim.field_b = var3_int;
           incrementValue$11 = var3_int;
           var3_int++;
           this.field_O[incrementValue$11] = eg.a(param0, "", "new_classic_table/floor_texture");
           eh.field_t = var3_int;
-          tj.field_fb = var3_int;
+          ResizableDialog.field_fb = var3_int;
           incrementValue$12 = var3_int;
           var3_int++;
           this.field_O[incrementValue$12] = eg.a(param0, "", "new_classic_table/floor_shadow");
@@ -971,7 +971,7 @@ final class ModernTableScene extends ModelTableScene {
           incrementValue$15 = var3_int;
           var3_int++;
           this.field_O[incrementValue$15] = eg.a(param0, "", "new_classic_table/class_hole_b");
-          ch.field_G = var3_int;
+          WidgetContainer.field_G = var3_int;
           DualLinkNode.field_u = var3_int;
           incrementValue$16 = var3_int;
           var3_int++;
@@ -997,7 +997,7 @@ final class ModernTableScene extends ModelTableScene {
           var3_int++;
           this.field_O[incrementValue$21] = eg.a(param0, "", "new_classic_table/classic_top_b");
           TableScene.field_I = var3_int;
-          this.field_A = new jk();
+          this.field_A = new CueStick();
           this.field_A.a(eg.a(param0, "", "cues/classic_cue"), (byte) -121);
           for (var4 = 0; var4 < this.field_O.length; var4++) {
             db.a(0, this.field_O[var4]);
@@ -1041,7 +1041,7 @@ final class ModernTableScene extends ModelTableScene {
           for (var4Lifetime3 = 0; this.field_O.length > var4Lifetime3; var4Lifetime3++) {
             ln.a(this.field_M[var4Lifetime3], 0, this.field_O[var4Lifetime3]);
           }
-          for (var4Lifetime4 = kj.field_b; var4Lifetime4 < eh.field_t; var4Lifetime4++) {
+          for (var4Lifetime4 = CueAim.field_b; var4Lifetime4 < eh.field_t; var4Lifetime4++) {
             var31 = new eg[4];
             var14 = var31;
             var15 = var4Lifetime4;
@@ -1087,7 +1087,7 @@ final class ModernTableScene extends ModelTableScene {
             var25[3].a(var45);
             this.field_O[var4Lifetime4] = new eg(var31, 4);
           }
-          for (var4Lifetime5 = tj.field_fb; nd.field_m > var4Lifetime5; var4Lifetime5++) {
+          for (var4Lifetime5 = ResizableDialog.field_fb; nd.field_m > var4Lifetime5; var4Lifetime5++) {
             var40 = new eg[4];
             var14Lifetime1 = var40;
             var15Lifetime1 = var4Lifetime5;
@@ -1169,21 +1169,21 @@ final class ModernTableScene extends ModelTableScene {
         if (param0 != -119) {
           field_eb = (he) null;
         }
-        if ((ba.field_ub.field_I.field_b & 1 << ba.field_ub.field_db) != 0) {
-          TranslatedUiText.field_f[12] = ba.field_ub.field_r ? w.mpCancelrematchUnrated : df.mpCancelrematch;
+        if ((AccountContentDialog.field_ub.field_I.field_b & 1 << AccountContentDialog.field_ub.field_db) != 0) {
+          TranslatedUiText.field_f[12] = AccountContentDialog.field_ub.field_r ? w.mpCancelrematchUnrated : df.mpCancelrematch;
         } else {
-          if (ba.field_ub.field_I.field_b != 0) {
-            TranslatedUiText.field_f[12] = ba.field_ub.field_r ? hb.mpAcceptrematchUnrated : er.mpAcceptrematch;
+          if (AccountContentDialog.field_ub.field_I.field_b != 0) {
+            TranslatedUiText.field_f[12] = AccountContentDialog.field_ub.field_r ? NodeHashTableIterator.mpAcceptrematchUnrated : DialWidget.mpAcceptrematch;
           } else {
-            if (-1 + (1 << ba.field_ub.field_I.playerCount) == (ba.field_ub.field_cb | 1 << ba.field_ub.field_db)) {
-              TranslatedUiText.field_f[12] = ba.field_ub.field_r ? e.mpRematchnewgameUnrated : fq.mpRematchnewgame;
+            if (-1 + (1 << AccountContentDialog.field_ub.field_I.playerCount) == (AccountContentDialog.field_ub.field_cb | 1 << AccountContentDialog.field_ub.field_db)) {
+              TranslatedUiText.field_f[12] = AccountContentDialog.field_ub.field_r ? e.mpRematchnewgameUnrated : fq.mpRematchnewgame;
             } else {
-              TranslatedUiText.field_f[12] = !ba.field_ub.field_r ? ia.mpOfferrematch : og.mpOfferrematchUnrated;
+              TranslatedUiText.field_f[12] = !AccountContentDialog.field_ub.field_r ? MenuSelection.mpOfferrematch : og.mpOfferrematchUnrated;
             }
           }
         }
-        if (ne.field_w >= 0) {
-          s.field_c[ne.field_w].c((byte) -126);
+        if (MatchingTextValidator.field_w >= 0) {
+          s.field_c[MatchingTextValidator.field_w].c((byte) -126);
         }
     }
 

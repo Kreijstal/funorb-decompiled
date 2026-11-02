@@ -21,7 +21,7 @@ final class fl extends IntrusiveNode {
         quickchatLobby = null;
     }
 
-    final static void a(boolean param0) {
+    final static void registerPunctuationKeyCodes(boolean param0) {
         el.field_H[44] = 71;
         el.field_H[47] = 73;
         el.field_H[222] = 58;

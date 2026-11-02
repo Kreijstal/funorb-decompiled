@@ -6,7 +6,7 @@ final class ih {
     static vh field_e;
     static String[] hsModeName;
     static int[] field_d;
-    static ir field_a;
+    static BufferedFile field_a;
     static String[] field_c;
 
     public static void a(int param0) {
@@ -21,7 +21,7 @@ final class ih {
         field_c = null;
     }
 
-    final static int a(String param0, byte param1, int param2, boolean param3, ke param4, ke param5, int param6) {
+    final static int a(String param0, byte param1, int param2, boolean param3, LoginTextValue param4, LoginTextValue param5, int param6) {
         int var12 = 0;
         int stackIn_4_0 = 0;
         PacketBuffer stackIn_17_0 = null;
@@ -57,8 +57,8 @@ final class ih {
         int var9Lifetime2;
         int var9Lifetime3;
         try {
-          var13 = param4.a((byte) 104);
-          var8 = param5.a((byte) 104);
+          var13 = param4.getText((byte) 104);
+          var8 = param5.getText((byte) 104);
           if (null == jd.field_c &&
             !sa.a((byte) 65, false)) {
             stackIn_4_0 = -1;
@@ -69,11 +69,11 @@ final class ih {
             bq.field_q = null;
             if (param0 == null) {
               bc.field_b.position = 0;
-              bc.field_b.a(true, lc.field_P.nextInt());
-              bc.field_b.a(true, lc.field_P.nextInt());
+              bc.field_b.a(true, ValidationIconWidget.field_P.nextInt());
+              bc.field_b.a(true, ValidationIconWidget.field_P.nextInt());
               stackIn_17_0 = bc.field_b;
               stackIn_17_1 = false;
-              if (param4.b(true)) {
+              if (param4.isIncludedInLookupRequest(true)) {
                 stackIn_18_2 = var13;
               } else {
                 stackIn_18_2 = "";
@@ -81,7 +81,7 @@ final class ih {
               ((PacketBuffer) (Object) stackIn_17_0).a(stackIn_17_1, stackIn_18_2);
               stackIn_20_0 = bc.field_b;
               stackIn_20_1 = false;
-              if (!param5.b(true)) {
+              if (!param5.isIncludedInLookupRequest(true)) {
                 stackIn_21_2 = "";
               } else {
                 stackIn_21_2 = var8;
@@ -90,7 +90,7 @@ final class ih {
               ej.field_j.a(16, false);
               ej.field_j.position = ej.field_j.position + 1;
               var9 = ej.field_j.position;
-              ad.a((byte) 93, rb.field_l, bc.field_b, ei.field_q, ej.field_j);
+              ad.a((byte) 93, rb.field_l, bc.field_b, UiWidget.field_q, ej.field_j);
               ej.field_j.b(-var9 + ej.field_j.position, true);
             } else {
               var9 = 0;
@@ -98,8 +98,8 @@ final class ih {
                 var9 = var9 | 1;
               }
               bc.field_b.position = 0;
-              bc.field_b.a(true, lc.field_P.nextInt());
-              bc.field_b.a(true, lc.field_P.nextInt());
+              bc.field_b.a(true, ValidationIconWidget.field_P.nextInt());
+              bc.field_b.a(true, ValidationIconWidget.field_P.nextInt());
               bc.field_b.a(false, var13);
               bc.field_b.a(false, var8);
               var14 = (CharSequence) ((Object) param0);
@@ -110,19 +110,19 @@ final class ih {
               ej.field_j.a(18, false);
               ej.field_j.position = ej.field_j.position + 2;
               var10 = ej.field_j.position;
-              var11_ref_String = eq.a(hk.d(79), (byte) 112);
+              var11_ref_String = DateInputWidget.a(NanoTickClock.getApplet(79), (byte) 112);
               if (var11_ref_String == null) {
                 var11_ref_String = "";
               }
               ej.field_j.a(-9946, var11_ref_String);
-              ad.a((byte) 93, rb.field_l, bc.field_b, ei.field_q, ej.field_j);
+              ad.a((byte) 93, rb.field_l, bc.field_b, UiWidget.field_q, ej.field_j);
               ej.field_j.c(-var10 + ej.field_j.position, (byte) -92);
             }
             de.a(-1, 0);
             tl.field_J = dr.field_a;
           }
           if (tl.field_J == dr.field_a &&
-            lq.b((byte) 118, 1)) {
+            DialogLayer.b((byte) 118, 1)) {
             var9Lifetime1 = kn.field_e.readUnsignedByte(-80);
             kn.field_e.position = 0;
             if (var9Lifetime1 >= 100 &&
@@ -131,15 +131,15 @@ final class ih {
               tl.field_J = og.field_L;
             } else {
               if (var9Lifetime1 == 248) {
-                PotEvent.a(16, hk.d(71));
-                ke.field_g = oe.createUnable;
+                PotEvent.a(16, NanoTickClock.getApplet(71));
+                LoginTextValue.field_g = FadingDialog.createUnable;
                 dn.c(-70);
                 we.field_e = false;
                 stackIn_33_0 = var9Lifetime1;
                 return stackIn_33_0;
               }
               if (99 == var9Lifetime1) {
-                lq.b((byte) 63, ld.a(0));
+                DialogLayer.b((byte) 63, ld.a(0));
                 bq.field_q = new Boolean(de.a((byte) 104, kn.field_e));
                 kn.field_e.position = 0;
               } else {
@@ -151,10 +151,10 @@ final class ih {
           }
           if (tl.field_J == og.field_L) {
             var9Lifetime2 = 2;
-            if (lq.b((byte) 44, var9Lifetime2)) {
+            if (DialogLayer.b((byte) 44, var9Lifetime2)) {
               var10Lifetime1 = kn.field_e.readUnsignedShort(-1034);
               kn.field_e.position = 0;
-              if (lq.b((byte) 49, var10Lifetime1)) {
+              if (DialogLayer.b((byte) 49, var10Lifetime1)) {
                 var11 = bi.field_b.length;
                 for (var12 = 0; var11 > var12; var12++) {
                   bi.field_b[var12] = kn.field_e.a(10762);
@@ -169,11 +169,11 @@ final class ih {
           if (tl.field_J == eh.field_l &&
             wf.a((byte) 39)) {
             if (uq.field_c != 255) {
-              ke.field_g = kn.field_e.j(-122);
+              LoginTextValue.field_g = kn.field_e.j(-122);
             } else {
               var9_ref_String = kn.field_e.m(110);
               if (var9_ref_String != null) {
-                fg.a(hk.d(86), -128, var9_ref_String);
+                WeightedLruCache.writeSettingsCookie(NanoTickClock.getApplet(86), -128, var9_ref_String);
               }
             }
             dn.c(55);
@@ -187,9 +187,9 @@ final class ih {
           if (null == jd.field_c) {
             if (we.field_e) {
               if (CushionSegment.d((byte) 123) <= 30000L) {
-                ke.field_g = er.loginm2;
+                LoginTextValue.field_g = DialWidget.loginm2;
               } else {
-                ke.field_g = wd.loginm3;
+                LoginTextValue.field_g = wd.loginm3;
               }
               we.field_e = false;
               stackIn_62_0 = 249;
@@ -232,8 +232,8 @@ final class ih {
         Quaternion var1 = new Quaternion();
         var1.setFromAxisAngle(86, 0, 0, 65536, 64);
         if (param0 != 46) {
-          ke var2 = (ke) null;
-          ih.a((String) null, (byte) -72, 28, true, (ke) null, (ke) null, 104);
+          LoginTextValue var2 = (LoginTextValue) null;
+          ih.a((String) null, (byte) -72, 28, true, (LoginTextValue) null, (LoginTextValue) null, 104);
         }
         var1.normalise(true);
         jc.field_e.multiplyBy(param0 ^ 45, var1);

@@ -39,7 +39,7 @@ final class mm {
           if (!param1) {
             return;
           }
-          n.a(-126, var8);
+          LabeledChildWidget.a(-126, var8);
           var9 = new double[]{-this.field_f + this.field_d, -this.field_m + this.field_a, 0.0};
           var6 = var9;
           if (var4 < 0.04908738521234052) {
@@ -52,8 +52,8 @@ final class mm {
               var6[1] = 1.0 - var4 + var9[1] * var4;
             }
           }
-          var16 = n.a(-128, lf.a(2, var8, var9));
-          var17 = n.a(-126, lf.a(2, var16, var8));
+          var16 = LabeledChildWidget.a(-128, lf.a(2, var8, var9));
+          var17 = LabeledChildWidget.a(-126, lf.a(2, var16, var8));
           param0[3] = ClassicBallSkin.a(16, var16[0]);
           param0[4] = ClassicBallSkin.a(16, var16[1]);
           param0[5] = ClassicBallSkin.a(16, var16[2]);
@@ -172,7 +172,7 @@ final class mm {
             field_j = (Sprite) null;
           }
           this.field_m = (double)pf.b(param1 ^ 126, param0.field_I.balls[0].positionY);
-          this.b(3.141592653589793 * (double)param0.field_G.field_h / 1024.0, 3.141592653589793 * (double)(param0.field_G.field_k + 32) / 1024.0, 192.0, -6861);
+          this.b(3.141592653589793 * (double)param0.field_G.azimuth / 1024.0, 3.141592653589793 * (double)(param0.field_G.polarAngle + 32) / 1024.0, 192.0, -6861);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "mm.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -220,7 +220,7 @@ final class mm {
             stackIn_11_0 = var5;
             return stackIn_11_0;
           }
-          stackIn_4_0 = hl.field_a;
+          stackIn_4_0 = CheckboxPainter.field_a;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -286,7 +286,7 @@ final class mm {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         e.field_a.b(param2, 2147483647, param4, param3, param1);
         if (im.field_Ub != null) {
-          im.field_Ub.a(param0, param6, -gj.field_G + param6, (byte) 127, param1, param1);
+          im.field_Ub.a(param0, param6, -ProgressBarWidget.field_G + param6, (byte) 127, param1, param1);
         }
         if (param5 < 69) {
           mm.c(49);
@@ -505,7 +505,7 @@ final class mm {
           qp.field_ec = param14;
           qa.field_t = param4;
           el.b(84, param1, param7, param6, param12);
-          mp.a(param18, param0, param13, -92);
+          UsernameSuggestionsPanel.a(param18, param0, param13, -92);
           if (param16 != 2) {
             return;
           }

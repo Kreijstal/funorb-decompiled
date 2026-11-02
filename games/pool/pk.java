@@ -16,7 +16,7 @@ final class pk {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 1 % ((param1 - 27) / 33);
-          stackIn_1_0 = fe.a(false, (byte) 70, param0);
+          stackIn_1_0 = ButtonWidget.a(false, (byte) 70, param0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -45,7 +45,7 @@ final class pk {
           if (PlasmaTableScene.field_ab < 10) {
             return false;
           }
-          if (!gk.field_kb) {
+          if (!FullscreenErrorDialog.field_kb) {
             return !mg.a(-114) ? true : false;
           }
           return false;
@@ -53,7 +53,7 @@ final class pk {
         if (PlasmaTableScene.field_ab < 10) {
           return false;
         }
-        if (!gk.field_kb) {
+        if (!FullscreenErrorDialog.field_kb) {
           return !mg.a(-114) ? true : false;
         }
         return false;

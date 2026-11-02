@@ -61,7 +61,7 @@ final class IterableNodeHashTable {
           if (param0 != 524288) {
             field_c = (int[]) null;
           }
-          var2_int = nj.b(hq.field_i, ta.field_f, -21223);
+          var2_int = nj.b(TutorialController.field_i, ta.field_f, -21223);
           if (1 == var2_int) {
             param1 = "<img=0>" + param1;
           }
@@ -90,11 +90,11 @@ final class IterableNodeHashTable {
         if (param0) {
           return;
         }
-        if ((1 << ba.field_ub.field_db & ba.field_ub.field_I.field_x) != 0) {
+        if ((1 << AccountContentDialog.field_ub.field_db & AccountContentDialog.field_ub.field_I.field_x) != 0) {
           TranslatedUiText.field_f[10] = dj.canceldraw;
         } else {
-          if (ba.field_ub.field_I.field_x == 0) {
-            TranslatedUiText.field_f[10] = eq.offerdraw;
+          if (AccountContentDialog.field_ub.field_I.field_x == 0) {
+            TranslatedUiText.field_f[10] = DateInputWidget.offerdraw;
           } else {
             TranslatedUiText.field_f[10] = ff.acceptdraw;
           }

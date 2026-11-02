@@ -4,7 +4,7 @@
 final class pj extends ob {
     static IntrusiveDeque field_H;
     static ie field_K;
-    static kb field_J;
+    static TickClock field_J;
     static String field_I;
 
     final static Object a(boolean param0, int param1, byte[] param2) {
@@ -60,8 +60,8 @@ final class pj extends ob {
         int var6 = 0;
         String var7 = null;
         try {
-          Pool.field_L[0] = lc.field_P.nextInt();
-          Pool.field_L[1] = lc.field_P.nextInt();
+          Pool.field_L[0] = ValidationIconWidget.field_P.nextInt();
+          Pool.field_L[1] = ValidationIconWidget.field_P.nextInt();
           Pool.field_L[2] = (int)(Pool.field_Q >> 32);
           Pool.field_L[3] = (int)Pool.field_Q;
           bc.field_b.position = 0;
@@ -86,25 +86,25 @@ final class pj extends ob {
           if (CushionSegment.field_g) {
             var6 = var6 | 1;
           }
-          if (hk.field_s) {
+          if (NanoTickClock.field_s) {
             var6 = var6 | 4;
           }
           if (param2) {
             var6 = var6 | 8;
           }
-          if (ri.field_N != null) {
+          if (CheckboxWidget.field_N != null) {
             var6 = var6 | 16;
           }
           ej.field_j.a(var6, false);
-          var7 = eq.a(hk.d(90), (byte) 120);
+          var7 = DateInputWidget.a(NanoTickClock.getApplet(90), (byte) 120);
           if (var7 == null) {
             var7 = "";
           }
           ej.field_j.a(-9946, var7);
-          if (null != ri.field_N) {
-            ej.field_j.a(false, ri.field_N);
+          if (null != CheckboxWidget.field_N) {
+            ej.field_j.a(false, CheckboxWidget.field_N);
           }
-          ad.a((byte) 93, rb.field_l, bc.field_b, ei.field_q, ej.field_j);
+          ad.a((byte) 93, rb.field_l, bc.field_b, UiWidget.field_q, ej.field_j);
           ej.field_j.c(ej.field_j.position - var5_int, (byte) -92);
           de.a(-1, 0);
           if (param3 != -98300704) {
@@ -164,13 +164,13 @@ final class pj extends ob {
         try {
           SoftwareRasterizer.drawRectangle(243, 197, 369, 143, 16777215);
           SoftwareRasterizer.fillRectangle(244, 198, 367, 141, 0);
-          if (nf.field_V == null) {
+          if (AccountCreationForm.field_V == null) {
             if (null != so.field_h) {
               so.field_h.drawParagraph(o.loading, 245, 199, 365, 139, 16777215, -1, 1, 1, 0);
             }
             return;
           }
-          var6 = nf.field_V[KillerRules.field_f];
+          var6 = AccountCreationForm.field_V[KillerRules.field_f];
           if (param0 != -1) {
             field_K = (ie) null;
           }
@@ -182,7 +182,7 @@ final class pj extends ob {
             }
           }
           if (ug.field_u < hj.field_l) {
-            var7 = nf.field_V[cf.field_b];
+            var7 = AccountCreationForm.field_V[cf.field_b];
             if (var7 != null) {
               var2_int = (var7.field_w + 60) * ug.field_u / hj.field_l;
               var3 = var2_int - 30;
@@ -197,8 +197,8 @@ final class pj extends ob {
             var2 = null;
             var5 = 0;
             var3Lifetime1 = var5;
-            while (var5 < nf.field_V.length) {
-              var8 = nf.field_V[var5];
+            while (var5 < AccountCreationForm.field_V.length) {
+              var8 = AccountCreationForm.field_V[var5];
               if (var8 != null && (365 != var8.field_w ||
                 var8.field_y != 139)) {
                 if (var2 != null) {

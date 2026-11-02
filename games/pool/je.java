@@ -9,19 +9,19 @@ final class je {
     final static void a(PlatformTaskDispatcher param0, int param1, int param2, int param3, String param4, byte param5, int param6, int param7, int param8) {
         try {
           na.field_a = param6;
-          nr.field_X = param4;
-          ei.field_B = param8;
+          AccountWelcomePanel.field_X = param4;
+          UiWidget.field_B = param8;
           qf.field_f = param2;
           ci.field_k = param1;
           om.field_v = param7;
-          fe.field_M = param0;
+          ButtonWidget.field_M = param0;
           wn.field_h = param3;
           if (param5 >= -61) {
             muChatTips = (String) null;
           }
           GameRules.field_c = (no) ((Object) new ug());
-          ri.field_U = new rn(param0);
-          TranslatedUiText.field_m = new qd(GameRules.field_c, ri.field_U);
+          CheckboxWidget.field_U = new rn(param0);
+          TranslatedUiText.field_m = new qd(GameRules.field_c, CheckboxWidget.field_U);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "je.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }

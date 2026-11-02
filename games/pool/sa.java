@@ -39,7 +39,7 @@ final class sa {
           if (pa.field_I == ra.field_e) {
             return l.field_c;
           }
-          if (ig.field_j.a(88)) {
+          if (TextInputValidator.field_j.a(88)) {
             return SpriteState.field_x;
           }
           return l.field_c;
@@ -47,7 +47,7 @@ final class sa {
         if (pa.field_I == ra.field_e) {
           return l.field_c;
         }
-        if (ig.field_j.a(88)) {
+        if (TextInputValidator.field_j.a(88)) {
           return SpriteState.field_x;
         }
         return l.field_c;
@@ -62,13 +62,13 @@ final class sa {
           int stackIn_8_0 = 0;
           Throwable decompiledCaughtException = null;
           if (PacketBuffer.field_u == null) {
-            PacketBuffer.field_u = nd.field_a.a(mp.field_S, vj.field_d, 0);
+            PacketBuffer.field_u = nd.field_a.a(UsernameSuggestionsPanel.field_S, vj.field_d, 0);
           }
           if (PacketBuffer.field_u.field_f == 0) {
             return false;
           }
           dupTemp$1 = rl.a((byte) -95);
-          nf.field_Q = dupTemp$1;
+          AccountCreationForm.field_Q = dupTemp$1;
           ob.field_v = dupTemp$1;
           if (PacketBuffer.field_u.field_f != 1) {
             tl.field_J = vk.field_V;
@@ -80,11 +80,11 @@ final class sa {
               ej.field_j.position = 0;
               var5.position = 0;
               stackIn_8_0 = (!param1) ? -1 : -2;
-              hb.field_e = stackIn_8_0;
+              NodeHashTableIterator.field_e = stackIn_8_0;
               vd.field_g = stackIn_8_0;
-              ia.field_l = stackIn_8_0;
+              MenuSelection.field_l = stackIn_8_0;
               tl.field_J = no.field_h;
-              fm.a(ej.field_j, true, kc.field_c, kh.field_uc, lf.field_b);
+              ArrayWidgetGroup.a(ej.field_j, true, kc.field_c, kh.field_uc, lf.field_b);
               de.a(-1, 0);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

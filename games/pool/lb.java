@@ -42,7 +42,7 @@ final class lb extends jo {
           var5 = 27 / ((29 - param1) / 34);
           var4_int = param0.b(param2, -1);
           var6 = param0.a(var4_int, 0, param3);
-          stackIn_1_0 = jp.a(var6, (byte) 119, param0, var4_int);
+          stackIn_1_0 = DisplayNamePanel.a(var6, (byte) 119, param0, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

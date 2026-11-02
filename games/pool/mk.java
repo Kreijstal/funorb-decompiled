@@ -168,7 +168,7 @@ final class mk {
                 var12.field_Sb.a(73, var12.field_Ec);
               }
               var12.field_hc = new vh(0L, (vh) null);
-              if (0 != (var14 & 1 << kk.field_F)) {
+              if (0 != (var14 & 1 << CacheEntry.field_F)) {
                 var12.field_Sb.a(param1 - 116, var12.field_hc);
               }
               var12.field_lc = new vh(0L, (vh) null);
@@ -211,9 +211,9 @@ final class mk {
               var12.field_dc.field_Fb = 2;
               var12.field_jc = new vh(0L, PacketBuffer.field_s);
               var12.a(-100, var12.field_jc);
-              var12.field_Rb = new vh(0L, ei.field_A);
+              var12.field_Rb = new vh(0L, UiWidget.field_A);
               var12.a(40, var12.field_Rb);
-              var12.field_zc = new vh(0L, ei.field_A);
+              var12.field_zc = new vh(0L, UiWidget.field_A);
               var12.a(param1 + 87, var12.field_zc);
               var12.field_Cc = new vh(0L, uo.field_Lb);
               var12.a(-109, var12.field_Cc);
@@ -339,7 +339,7 @@ final class mk {
               var12.field_cc.b(var31, 2147483647, 70, 78, ad.field_x);
               if (var12.field_cc.field_W &&
                 !var12.field_cc.field_nb.equals(var32)) {
-                kk.field_B = var32;
+                CacheEntry.field_B = var32;
               }
               var12.field_Lb.field_nb = Integer.toString(var12.field_mc);
               if (var12.field_Dc) {
@@ -364,14 +364,14 @@ final class mk {
                 var12.field_Ec.b(0, 2147483647, var34_int, var51_ref.field_w, var12.field_Sb.field_Db);
                 var34_int = var34_int + (ja.field_b + var51_ref.field_w);
               }
-              if (0 != (1 << kk.field_F & var14Lifetime1)) {
+              if (0 != (1 << CacheEntry.field_F & var14Lifetime1)) {
                 if (!var12.field_ic) {
                   stackIn_81_0 = (var12.field_Xb) ? 1 : 0;
                 } else {
                   stackIn_81_0 = 1;
                 }
                 var36 = stackIn_81_0;
-                stackIn_83_0 = iq.field_a;
+                stackIn_83_0 = RasterBuffer.field_a;
                 if (var36 != 0) {
                   stackIn_84_1 = 1;
                 } else {
@@ -444,7 +444,7 @@ final class mk {
               if (var12.field_bc != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
-                discarded$1 = var37.append(tj.playersInGame);
+                discarded$1 = var37.append(ResizableDialog.playersInGame);
                 discarded$2 = var37.append(var12.field_bc[0]);
                 for (var38_intLifetime1 = 1; var38_intLifetime1 < var12.field_mc; var38_intLifetime1++) {
                   discarded$3 = var37.append(", ");
@@ -457,13 +457,13 @@ final class mk {
                 var31 = var31 + var39Lifetime1 * ad.field_x;
               }
               if (var12.field_Xb) {
-                var12.field_Rb.field_nb = nr.a(new String[]{var32}, -1, jc.youAreInvitedToXsGame);
-                var12.field_Rb.b(var31, param1 ^ 2147483647, kj.field_j, var12.field_gb - kj.field_j * 2, ad.field_x);
+                var12.field_Rb.field_nb = AccountWelcomePanel.substituteTemplateArguments(new String[]{var32}, -1, jc.youAreInvitedToXsGame);
+                var12.field_Rb.b(var31, param1 ^ 2147483647, CueAim.field_j, var12.field_gb - CueAim.field_j * 2, ad.field_x);
                 var31 = var31 + ad.field_x;
               }
               if (var12.field_fc) {
-                var12.field_zc.field_nb = nr.a(new String[]{var32}, ~param1, op.askingToJoinXsGame);
-                var12.field_zc.b(var31, param1 + 2147483647, kj.field_j, -(kj.field_j * 2) + var12.field_gb, ad.field_x);
+                var12.field_zc.field_nb = AccountWelcomePanel.substituteTemplateArguments(new String[]{var32}, ~param1, op.askingToJoinXsGame);
+                var12.field_zc.b(var31, param1 + 2147483647, CueAim.field_j, -(CueAim.field_j * 2) + var12.field_gb, ad.field_x);
                 var31 = var31 + ad.field_x;
               }
             }
@@ -471,10 +471,10 @@ final class mk {
             var34 = var33;
             var34Lifetime1 = var33;
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_Cc.field_I.countWrappedLines(var33, -kj.field_j - kj.field_j + var12.field_gb);
+              var34_intLifetime1 = var12.field_Cc.field_I.countWrappedLines(var33, -CueAim.field_j - CueAim.field_j + var12.field_gb);
               var12.field_Cc.field_Eb = var12.field_Mb * 256 / mq.field_f;
               var12.field_Cc.field_nb = var33;
-              var12.field_Cc.b(var31, 2147483647, kj.field_j, var12.field_gb - 2 * kj.field_j, ad.field_x * var34_intLifetime1);
+              var12.field_Cc.b(var31, 2147483647, CueAim.field_j, var12.field_gb - 2 * CueAim.field_j, ad.field_x * var34_intLifetime1);
               var31 = var31 + var34_intLifetime1 * ad.field_x;
             }
             if (var7_int == 0) {
@@ -485,19 +485,19 @@ final class mk {
             }
             for (var34_intLifetime2 = 0; dr.field_c > var34_intLifetime2; var34_intLifetime2++) {
               if (var12.field_Ub[var34_intLifetime2].field_W) {
-                if (null == ir.field_p) {
+                if (null == BufferedFile.field_p) {
                   var35 = null;
                 } else {
-                  if (null != ir.field_p[var34_intLifetime2]) {
-                    var35 = ir.field_p[var34_intLifetime2][255 & var12.field_tc[var34_intLifetime2]];
+                  if (null != BufferedFile.field_p[var34_intLifetime2]) {
+                    var35 = BufferedFile.field_p[var34_intLifetime2][255 & var12.field_tc[var34_intLifetime2]];
                   } else {
                     var35 = null;
                   }
                 }
                 if (var35 != null) {
-                  kk.field_B = ck.field_R[var34_intLifetime2] + " - " + (String) (var35);
+                  CacheEntry.field_B = ck.field_R[var34_intLifetime2] + " - " + (String) (var35);
                 } else {
-                  kk.field_B = ck.field_R[var34_intLifetime2];
+                  CacheEntry.field_B = ck.field_R[var34_intLifetime2];
                 }
               }
             }
@@ -507,7 +507,7 @@ final class mk {
               } else {
                 var34Lifetime2 = th.runescapeclan;
               }
-              kk.field_B = ic.whoCanJoin + " - " + var34Lifetime2;
+              CacheEntry.field_B = ic.whoCanJoin + " - " + var34Lifetime2;
             }
             if (var12.field_kc.field_W) {
               if (!var12.field_wc) {
@@ -515,7 +515,7 @@ final class mk {
               } else {
                 stackIn_157_0 = of.ratedGame;
               }
-              kk.field_B = stackIn_157_0;
+              CacheEntry.field_B = stackIn_157_0;
             }
             if (var12.field_hc.field_W) {
               if (!var12.field_ic &&
@@ -526,17 +526,17 @@ final class mk {
                   stackIn_166_0 = im.youCanAskToJoin;
                 }
               } else {
-                stackIn_166_0 = gg.youCanJoin;
+                stackIn_166_0 = DebouncedValidationProvider.youCanJoin;
               }
-              kk.field_B = stackIn_166_0;
+              CacheEntry.field_B = stackIn_166_0;
             }
             if (var12.field_lc.field_W) {
               if (2 != var12.field_Yb) {
                 stackIn_172_0 = bh.youCanNotSpectate;
               } else {
-                stackIn_172_0 = sh.youCanSpectate;
+                stackIn_172_0 = OpacityWidget.youCanSpectate;
               }
-              kk.field_B = stackIn_172_0;
+              CacheEntry.field_B = stackIn_172_0;
             }
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_R != 0) {
@@ -601,7 +601,7 @@ final class mk {
             field_c = -6;
           }
           var10_int = (var10_int + 7) / 8;
-          ka.field_s = new byte[var10_int];
+          AgeValidator.field_s = new byte[var10_int];
           if (null == param7.field_T) {
             param7.field_T = new IntrusiveDeque();
           }
@@ -611,7 +611,7 @@ final class mk {
           PoolMatchController.field_jb = 0;
           og.field_I = -1;
           mg.field_d = -1;
-          ka.field_r = 0;
+          AgeValidator.field_r = 0;
           if (param0.field_T == null) {
             param0.field_T = new IntrusiveDeque();
           }
@@ -625,7 +625,7 @@ final class mk {
           ck.field_W.d((byte) 36);
           im.field_Qb = new tk(param5);
           mq.field_f = param3;
-          fd.field_K = 0L;
+          StrongCacheEntry.field_K = 0L;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

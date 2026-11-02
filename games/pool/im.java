@@ -39,7 +39,7 @@ final class im extends vh {
           this.field_dc = param0;
           this.field_Sb = param2;
           var6 = (CharSequence) ((Object) this.field_dc);
-          hq.a(103, var6);
+          TutorialController.normalizeDisplayName(103, var6);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -60,7 +60,7 @@ final class im extends vh {
             return (Sprite[]) (stackIn_2_0);
           }
           if (param2 == 0) {
-            stackIn_7_0 = ok.l((byte) 65);
+            stackIn_7_0 = ContentTransitionDialog.l((byte) 65);
             return stackIn_7_0;
           }
           stackIn_5_0 = (Sprite[]) null;
@@ -97,7 +97,7 @@ final class im extends vh {
           }
           this.field_jc = param2;
           var6 = (CharSequence) ((Object) this.field_dc);
-          hq.a(param1 + 100, var6);
+          TutorialController.normalizeDisplayName(param1 + 100, var6);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "im.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -187,7 +187,7 @@ final class im extends vh {
           }
           var3_int = param0.position;
           var5 = (CharSequence) ((Object) param2);
-          var4 = hi.a(-66, var5);
+          var4 = hi.encodeWindows1252(-66, var5);
           param0.b((byte) -49, var4.length);
           param0.position = param0.position + Pool.field_J.a(0, var4.length, param0.payload, param0.position, var4, true);
           stackIn_4_0 = -var3_int + param0.position;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class id {
-    static jk field_c;
+    static CueStick field_c;
     static int field_b;
     static String menuOptionReturnToTutorial;
     static Sprite[] field_a;
@@ -42,15 +42,15 @@ abstract class id {
         }
     }
 
-    final static iq a(int param0, int param1, int param2, java.awt.Component param3) {
+    final static RasterBuffer createRasterBuffer(int param0, int param1, int param2, java.awt.Component param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          iq var5 = null;
-          jf var5_ref = null;
-          iq stackIn_3_0 = null;
-          jf stackIn_5_0 = null;
+          RasterBuffer var5 = null;
+          ImageProducerRasterBuffer var5_ref = null;
+          RasterBuffer stackIn_3_0 = null;
+          ImageProducerRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
@@ -58,20 +58,20 @@ abstract class id {
           try {
             try {
               var4 = Class.forName("vo");
-              var5 = (iq) (var4.newInstance());
+              var5 = (RasterBuffer) (var4.newInstance());
               if (param2 >= -41) {
-                field_c = (jk) null;
+                field_c = (CueStick) null;
               }
-              var5.a(param1, param0, -6980, param3);
+              var5.initialize(param1, param0, -6980, param3);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new jf();
-              ((iq) ((Object) var5_ref)).a(param1, param0, -6980, param3);
+              var5_ref = new ImageProducerRasterBuffer();
+              ((RasterBuffer) ((Object) var5_ref)).initialize(param1, param0, -6980, param3);
               stackIn_5_0 = var5_ref;
-              return (iq) ((Object) stackIn_5_0);
+              return (RasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -100,8 +100,8 @@ abstract class id {
         PoolMatchController.field_X = 0;
         KillerRules.field_f = 0;
         IsaacCipher.field_d = 0;
-        jc.field_j = new ia(2);
-        jc.field_j.a(param1, -1, ho.a((byte) -84, wn.field_i, gg.field_f), true);
+        jc.field_j = new MenuSelection(2);
+        jc.field_j.initializeSelection(param1, -1, ho.a((byte) -84, wn.field_i, DebouncedValidationProvider.field_f), true);
     }
 
     final static void c(int param0) {
@@ -295,14 +295,14 @@ abstract class id {
           synchronized (var1) {
             bl.field_s = ja.field_c;
             ti.field_e = ti.field_e + 1;
-            if (0 > qq.field_xb) {
+            if (0 > MessageDialog.field_xb) {
               for (var2 = 0; var2 < 112; var2++) {
                 vj.field_c[var2] = false;
               }
-              qq.field_xb = jq.field_g;
+              MessageDialog.field_xb = jq.field_g;
             } else {
-              while (jq.field_g != qq.field_xb) {
-                var2 = fo.field_b[jq.field_g];
+              while (jq.field_g != MessageDialog.field_xb) {
+                var2 = KeyHandler.field_b[jq.field_g];
                 jq.field_g = 127 & 1 + jq.field_g;
                 if (0 > var2) {
                   vj.field_c[~var2] = false;

@@ -25,7 +25,7 @@ final class TimeTrialRules extends GameRules {
           if (param1 != 9) {
             field_f = 88;
           }
-          stackIn_5_0 = (param2.field_z == this.b(param0, 30554));
+          stackIn_5_0 = (param2.groupBefore == this.b(param0, 30554));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ final class TimeTrialRules extends GameRules {
           if (param1 > -33) {
             field_f = -113;
           }
-          stackIn_5_0 = (param0.field_z == this.b(param0.field_n, 30554));
+          stackIn_5_0 = (param0.groupBefore == this.b(param0.field_n, 30554));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -197,15 +197,15 @@ final class TimeTrialRules extends GameRules {
             }
             cq.field_a = param5;
             kc.field_c = param12;
-            hk.field_s = param6;
+            NanoTickClock.field_s = param6;
             kn.field_j = param13;
-            mp.field_S = param7;
+            UsernameSuggestionsPanel.field_S = param7;
             CushionSegment.field_g = param3;
             lf.field_b = param10;
             im.field_ec = param1;
             if (nd.field_a.field_b != null) {
               try {
-                nl.field_c = new ir(nd.field_a.field_b, 64, 0);
+                nl.field_c = new BufferedFile(nd.field_a.field_b, 64, 0);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var15 = (IOException) (Object) decompiledCaughtException;
@@ -258,7 +258,7 @@ final class TimeTrialRules extends GameRules {
             stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
-          if (param0.field_z != -1) {
+          if (param0.groupBefore != -1) {
             stackIn_6_0 = dq.field_a.field_e[2];
           } else {
             stackIn_6_0 = dq.field_a.field_e[0];
@@ -316,39 +316,39 @@ final class TimeTrialRules extends GameRules {
         if (var11 == null) {
           throw new IllegalStateException("Couldn't get the last shot to examine!");
         }
-        if (var11.field_q != 2) {
+        if (var11.phase != 2) {
           throw new IllegalStateException("Shot not finished yet, foo!");
         }
-        var4 = var11.field_z;
+        var4 = var11.groupBefore;
         var5 = 0;
         if (this.field_d.d((byte) 74)) {
-          var11.a(3, -14, new int[]{var10.field_L});
+          var11.a(3, -14, new int[]{var10.playerIndex});
           var11.field_w = (byte)(var11.field_w - 1);
           var11.field_t = true;
-          var5 = var5 | (nr.field_R | (um.field_c | be.field_I));
+          var5 = var5 | (AccountWelcomePanel.field_R | (um.field_c | be.field_I));
         }
         if (8 == var11.field_n &&
           var4 != 2) {
-          var11.a(2, -14, new int[]{var10.field_L});
+          var11.a(2, -14, new int[]{var10.playerIndex});
           var5 = var5 | be.field_I;
           var11.field_w = (byte)(var11.field_w - 1);
           var11.field_t = true;
         } else {
           if (var11.field_n == -1) {
-            var11.a(7, -14, new int[]{var10.field_L});
+            var11.a(7, -14, new int[]{var10.playerIndex});
             var11.field_t = true;
             var11.field_w = (byte)(var11.field_w - 1);
             var5 = var5 | be.field_I;
           }
         }
-        var6 = var11.field_m.a(30);
+        var6 = var11.pottedBalls.a(30);
         if (var5 == 0 &&
           var6 == 1 &&
-          ((PotEvent) (var11.field_m.c((byte) 62))).ballIndex == 8 &&
+          ((PotEvent) (var11.pottedBalls.c((byte) 62))).ballIndex == 8 &&
           var4 == 2) {
           return ag.field_e;
         }
-        var7 = new aa(var11.field_m);
+        var7 = new aa(var11.pottedBalls);
         var8 = (PotEvent) (var7.b((byte) -92));
         while (var8 != null) {
           if (var8.ballIndex == 8) {

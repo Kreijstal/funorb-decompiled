@@ -178,7 +178,7 @@ class jo extends ob {
             if (!ClientException.field_j &&
               hh.field_a < se.field_l &&
               re.field_c) {
-              pm.field_p = gg.field_f;
+              pm.field_p = DebouncedValidationProvider.field_f;
               pa.field_H = wn.field_i;
               hh.field_a = 0;
             }
@@ -203,7 +203,7 @@ class jo extends ob {
               } else {
                 ClientException.field_j = false;
               }
-              pm.field_p = gg.field_f;
+              pm.field_p = DebouncedValidationProvider.field_f;
             } else {
               if (hh.field_a < se.field_l) {
                 var2 = 0;
@@ -228,9 +228,9 @@ class jo extends ob {
                 } else {
                   ClientException.field_j = false;
                 }
-                pm.field_p = gg.field_f;
+                pm.field_p = DebouncedValidationProvider.field_f;
               } else {
-                stackIn_52_0 = (oe.field_Q + se.field_l <= hh.field_a) ? 0 : 1;
+                stackIn_52_0 = (FadingDialog.field_Q + se.field_l <= hh.field_a) ? 0 : 1;
                 boolean decompiledFrameRemainder1 = true;
                 var2 = stackIn_52_0;
                 if (param1 != -1) {
@@ -253,21 +253,21 @@ class jo extends ob {
                 if (param1 == -1) {
                   if (var2 != 0) {
                     ClientException.field_j = true;
-                    pm.field_p = gg.field_f;
+                    pm.field_p = DebouncedValidationProvider.field_f;
                     decompiledFrameRemainder0 = false;
                   }
                 } else {
                   ClientException.field_j = false;
                 }
                 if (decompiledFrameRemainder0) {
-                  pm.field_p = gg.field_f;
+                  pm.field_p = DebouncedValidationProvider.field_f;
                 }
               }
             }
             if (!ClientException.field_j &&
               hh.field_a < se.field_l &&
               re.field_c) {
-              pm.field_p = gg.field_f;
+              pm.field_p = DebouncedValidationProvider.field_f;
               pa.field_H = wn.field_i;
               hh.field_a = 0;
             }
@@ -284,7 +284,7 @@ class jo extends ob {
           if (!ClientException.field_j &&
             hh.field_a < se.field_l &&
             re.field_c) {
-            pm.field_p = gg.field_f;
+            pm.field_p = DebouncedValidationProvider.field_f;
             pa.field_H = wn.field_i;
             hh.field_a = 0;
           }
@@ -299,7 +299,7 @@ class jo extends ob {
         }
         if (!ClientException.field_j) {
           if (hh.field_a >= se.field_l) {
-            stackIn_128_0 = (oe.field_Q + se.field_l > hh.field_a) ? 1 : 0;
+            stackIn_128_0 = (FadingDialog.field_Q + se.field_l > hh.field_a) ? 1 : 0;
           } else {
             stackIn_128_0 = 0;
           }
@@ -312,11 +312,11 @@ class jo extends ob {
           pa.field_H = wn.field_i;
           if (param1 != -1) {
             ClientException.field_j = false;
-            pm.field_p = gg.field_f;
+            pm.field_p = DebouncedValidationProvider.field_f;
             if (!ClientException.field_j &&
               hh.field_a < se.field_l &&
               re.field_c) {
-              pm.field_p = gg.field_f;
+              pm.field_p = DebouncedValidationProvider.field_f;
               pa.field_H = wn.field_i;
               hh.field_a = 0;
               KillerBallSkin.field_m = param1;
@@ -330,11 +330,11 @@ class jo extends ob {
           } else {
             if (var2Lifetime1 != 0) {
               ClientException.field_j = true;
-              pm.field_p = gg.field_f;
+              pm.field_p = DebouncedValidationProvider.field_f;
               if (!ClientException.field_j &&
                 hh.field_a < se.field_l &&
                 re.field_c) {
-                pm.field_p = gg.field_f;
+                pm.field_p = DebouncedValidationProvider.field_f;
                 pa.field_H = wn.field_i;
                 hh.field_a = 0;
                 KillerBallSkin.field_m = param1;
@@ -346,11 +346,11 @@ class jo extends ob {
                 return;
               }
             } else {
-              pm.field_p = gg.field_f;
+              pm.field_p = DebouncedValidationProvider.field_f;
               if (!ClientException.field_j &&
                 hh.field_a < se.field_l &&
                 re.field_c) {
-                pm.field_p = gg.field_f;
+                pm.field_p = DebouncedValidationProvider.field_f;
                 pa.field_H = wn.field_i;
                 hh.field_a = 0;
               }
@@ -367,11 +367,11 @@ class jo extends ob {
             } else {
               ClientException.field_j = false;
             }
-            pm.field_p = gg.field_f;
+            pm.field_p = DebouncedValidationProvider.field_f;
             if (!ClientException.field_j &&
               hh.field_a < se.field_l &&
               re.field_c) {
-              pm.field_p = gg.field_f;
+              pm.field_p = DebouncedValidationProvider.field_f;
               pa.field_H = wn.field_i;
               hh.field_a = 0;
             }
@@ -391,11 +391,11 @@ class jo extends ob {
             } else {
               ClientException.field_j = false;
             }
-            pm.field_p = gg.field_f;
+            pm.field_p = DebouncedValidationProvider.field_f;
             if (!ClientException.field_j &&
               hh.field_a < se.field_l &&
               re.field_c) {
-              pm.field_p = gg.field_f;
+              pm.field_p = DebouncedValidationProvider.field_f;
               pa.field_H = wn.field_i;
               hh.field_a = 0;
             }
@@ -413,11 +413,11 @@ class jo extends ob {
           if (param1 != -1) {
             ClientException.field_j = false;
           } else {
-            pm.field_p = gg.field_f;
+            pm.field_p = DebouncedValidationProvider.field_f;
             if (!ClientException.field_j &&
               hh.field_a < se.field_l &&
               re.field_c) {
-              pm.field_p = gg.field_f;
+              pm.field_p = DebouncedValidationProvider.field_f;
               pa.field_H = wn.field_i;
               hh.field_a = 0;
             }
@@ -430,11 +430,11 @@ class jo extends ob {
             }
             return;
           }
-          pm.field_p = gg.field_f;
+          pm.field_p = DebouncedValidationProvider.field_f;
           if (!ClientException.field_j &&
             hh.field_a < se.field_l &&
             re.field_c) {
-            pm.field_p = gg.field_f;
+            pm.field_p = DebouncedValidationProvider.field_f;
             pa.field_H = wn.field_i;
             hh.field_a = 0;
             KillerBallSkin.field_m = param1;
@@ -481,27 +481,27 @@ class jo extends ob {
         var5 = Pool.field_O;
         var4 = this.field_h[param2];
         if (var4 == 54) {
-          if (this.field_B.b((byte) 54)) {
+          if (this.field_B.isPressActivated((byte) 54)) {
             KillerBallSkin.a(param0 ^ -16726, true, true, nn.field_b[0].field_b);
           }
         } else {
           if (var4 == 55) {
-            if (this.field_B.b((byte) 115)) {
+            if (this.field_B.isPressActivated((byte) 115)) {
               KillerBallSkin.a(256, true, true, nn.field_b[1].field_b);
             }
           } else {
             if (56 == var4) {
-              if (this.field_B.b((byte) 54)) {
+              if (this.field_B.isPressActivated((byte) 54)) {
                 KillerBallSkin.a(param0 ^ -16726, true, true, nn.field_b[2].field_b);
               }
             } else {
               if (var4 == 57) {
-                if (this.field_B.b((byte) 56)) {
+                if (this.field_B.isPressActivated((byte) 56)) {
                   KillerBallSkin.a(param0 ^ -16726, true, true, nn.field_b[3].field_b);
                 }
               } else {
                 if (58 == var4) {
-                  if (this.field_B.b((byte) 62)) {
+                  if (this.field_B.isPressActivated((byte) 62)) {
                     KillerBallSkin.a(param0 + 16726, true, true, nn.field_b[4].field_b);
                   }
                 } else {
@@ -509,12 +509,12 @@ class jo extends ob {
                     if (var4 != 60) {
                       super.b(-16470, param1, param2);
                     } else {
-                      if (this.field_B.b((byte) 125)) {
+                      if (this.field_B.isPressActivated((byte) 125)) {
                         KillerBallSkin.a(256, true, true, jh.field_d);
                       }
                     }
                   } else {
-                    if (this.field_B.b((byte) 73)) {
+                    if (this.field_B.isPressActivated((byte) 73)) {
                       KillerBallSkin.a(256, true, true, HalloweenBallSkin.field_m);
                     }
                   }

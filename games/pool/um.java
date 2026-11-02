@@ -24,10 +24,10 @@ abstract class um {
           if (param0 != 10) {
             field_e = false;
           }
-          var2 = ke.field_f.c((byte) -34);
+          var2 = LoginTextValue.field_f.c((byte) -34);
           while (var2 != null) {
             hi.a(1, param1);
-            var2 = ke.field_f.f((byte) -5);
+            var2 = LoginTextValue.field_f.f((byte) -5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

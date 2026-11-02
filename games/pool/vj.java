@@ -4,7 +4,7 @@
 final class vj {
     int field_i;
     int field_e;
-    static ui field_j;
+    static LoginForm field_j;
     static int[] field_a;
     static String ratingWon;
     static int field_d;
@@ -47,7 +47,7 @@ final class vj {
         if (param0 > -34) {
           return (java.awt.Canvas) null;
         }
-        return null == ne.field_u ? pa.field_K : (java.awt.Canvas) ((Object) ne.field_u);
+        return null == MatchingTextValidator.field_u ? pa.field_K : (java.awt.Canvas) ((Object) MatchingTextValidator.field_u);
     }
 
     final static void a(IntrusiveNode param0, byte param1, IntrusiveNode param2) {
@@ -83,7 +83,7 @@ final class vj {
             vj.a((byte) -44);
           }
           if (nd.field_i.c(0)) {
-            stackIn_12_0 = gi.a(true, param3, param2, param0);
+            stackIn_12_0 = TextHotspotRegion.a(true, param3, param2, param0);
             return stackIn_12_0;
           }
           var4 = (ij) (nd.field_i.c((byte) -88));

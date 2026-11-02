@@ -71,14 +71,14 @@ abstract class ModelTableScene extends TableScene {
         if (this.field_h) {
           for (var2 = 0; ph.field_g.length > var2; var2++) {
             pa.field_L[var2] = th.field_l[ph.field_g[var2]].b(-13025, oh.field_d);
-            sh.field_Q[var2] = th.field_l[var2].a(param0, oh.field_d);
+            OpacityWidget.field_Q[var2] = th.field_l[var2].a(param0, oh.field_d);
           }
         } else {
           var5 = 0;
           var2 = var5;
           while (ph.field_g.length > var5) {
             pa.field_L[var5] = th.field_l[ph.field_g[var5]].b(oh.field_d, -31);
-            sh.field_Q[var5] = th.field_l[var5].a(true, oh.field_d);
+            OpacityWidget.field_Q[var5] = th.field_l[var5].a(true, oh.field_d);
             var5++;
           }
         }
@@ -96,7 +96,7 @@ abstract class ModelTableScene extends TableScene {
         if (th.field_l != null) {
           ph.field_g = new int[th.field_l.length];
           pa.field_L = new int[th.field_l.length];
-          sh.field_Q = new boolean[th.field_l.length];
+          OpacityWidget.field_Q = new boolean[th.field_l.length];
           for (var2 = 0; var2 < ph.field_g.length; var2++) {
             ph.field_g[var2] = var2;
           }
@@ -147,11 +147,11 @@ abstract class ModelTableScene extends TableScene {
           if (PlasmaTableScene.field_ab == 11) {
             bi.b(-125);
           }
-          a.a(am.field_n, param0, uh.field_o, kk.field_w);
+          a.a(am.field_n, param0, PasswordValidator.field_o, CacheEntry.field_w);
           if (!param0) {
             optionsmenuNotpaused = (String) null;
           }
-          fe.a(0, 0, (byte) -118, param1);
+          ButtonWidget.a(0, 0, (byte) -118, param1);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vc.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -265,10 +265,10 @@ abstract class ModelTableScene extends TableScene {
               var9.setColor(java.awt.Color.white);
               var9.drawString(param2, (-(6 * param2.length()) + 304) / 2 + var7, 22 + var8);
             }
-            if (null != jf.field_o) {
+            if (null != ImageProducerRasterBuffer.field_o) {
               var9.setFont(cl.field_c);
               var9.setColor(java.awt.Color.white);
-              var9.drawString(jf.field_o, ml.field_d / 2 - jf.field_o.length() * 6 / 2, ad.field_c / 2 - 26);
+              var9.drawString(ImageProducerRasterBuffer.field_o, ml.field_d / 2 - ImageProducerRasterBuffer.field_o.length() * 6 / 2, ad.field_c / 2 - 26);
             }
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

@@ -23,14 +23,14 @@ final class KillerRules extends GameRules {
           return true;
         }
         if (!DualLinkNode.field_p) {
-          if (!fm.field_H &&
+          if (!ArrayWidgetGroup.field_H &&
             qi.field_a != 9 &&
             10 != qi.field_a &&
             qi.field_a != 11) {
             if (qi.field_a != 80) {
               return false;
             }
-            if (!mp.g((byte) -108)) {
+            if (!UsernameSuggestionsPanel.g((byte) -108)) {
               return false;
             }
             DualLinkNode.field_p = true;
@@ -38,7 +38,7 @@ final class KillerRules extends GameRules {
           }
           return tf.a(param2 + 15586, param0, param3);
         }
-        if (!mp.g((byte) -121)) {
+        if (!UsernameSuggestionsPanel.g((byte) -121)) {
           return false;
         }
         stackIn_22_0 = (!th.a(param3, -103, param1)) ? 0 : 1;
@@ -84,23 +84,23 @@ final class KillerRules extends GameRules {
           throw new IllegalStateException("Couldn't get the last shot to examine!");
         }
         var3 = 69 % ((-37 - param0) / 60);
-        if (2 != var10.field_q) {
+        if (2 != var10.phase) {
           throw new IllegalStateException("Shot not finished yet, foo!");
         }
         var4 = ll.field_f;
         if (this.field_d.d((byte) 125)) {
-          var4 = var4 | (nr.field_R | um.field_c);
+          var4 = var4 | (AccountWelcomePanel.field_R | um.field_c);
           var10.field_t = true;
           var10.field_w = (byte)(var10.field_w - 1);
-          var10.a(3, -14, new int[]{var9.field_L});
+          var10.a(3, -14, new int[]{var9.playerIndex});
         }
         if (var10.field_n == -1) {
           var10.field_w = (byte)(var10.field_w - 1);
           var10.field_t = true;
-          var10.a(7, -14, new int[]{var9.field_L});
+          var10.a(7, -14, new int[]{var9.playerIndex});
         }
         var5 = 0;
-        var6_ref_aa = new aa(var10.field_m);
+        var6_ref_aa = new aa(var10.pottedBalls);
         var7_ref_cr = (PotEvent) (var6_ref_aa.b((byte) -92));
         while (var7_ref_cr != null) {
           if (0 == var7_ref_cr.ballIndex) {
@@ -108,23 +108,23 @@ final class KillerRules extends GameRules {
           } else {
             if (var7_ref_cr.ballIndex == 8 &&
               !var10.field_t) {
-              var10.a(20, -14, new int[]{var9.field_L});
-              this.d(var10.field_L, 165);
+              var10.a(20, -14, new int[]{var9.playerIndex});
+              this.d(var10.playerIndex, 165);
             }
             var5++;
           }
           var7_ref_cr = (PotEvent) (var6_ref_aa.b(-95));
         }
-        if (var10.field_M < 0) {
+        if (var10.breakSeed < 0) {
           if (var5 == 0) {
-            var10.a(18, -14, new int[]{var10.field_L});
-            this.f(var10.field_L, 8640);
+            var10.a(18, -14, new int[]{var10.playerIndex});
+            this.f(var10.playerIndex, 8640);
           } else {
             var10.field_w = (byte)(var10.field_w + var5);
           }
           if (var10.field_t) {
             var10.a(19, -14, new int[]{});
-            this.f(var10.field_L, 8640);
+            this.f(var10.playerIndex, 8640);
           }
         } else {
           if (!var10.field_t) {
@@ -132,9 +132,9 @@ final class KillerRules extends GameRules {
               var4 = nd.field_j;
             }
           } else {
-            var10.a(22, -14, new int[]{var9.field_L});
-            this.f(var10.field_L, 8640);
-            var4 = var4 | (nr.field_R | ob.field_F);
+            var10.a(22, -14, new int[]{var9.playerIndex});
+            this.f(var10.playerIndex, 8640);
+            var4 = var4 | (AccountWelcomePanel.field_R | ob.field_F);
           }
         }
         if (this.e((byte) -91) > 1) {
@@ -147,10 +147,10 @@ final class KillerRules extends GameRules {
             break;
           }
           if (var6 == 0) {
-            var4 = var4 | (ob.field_F | nr.field_R);
+            var4 = var4 | (ob.field_F | AccountWelcomePanel.field_R);
           }
         } else {
-          if (this.a((byte) 36, var10.field_L)) {
+          if (this.a((byte) 36, var10.playerIndex)) {
             var4 = var4 | ag.field_e;
           } else {
             var4 = var4 | Quaternion.field_e;
@@ -208,7 +208,7 @@ final class KillerRules extends GameRules {
     final void a(ShotRecord param0, boolean param1) {
         try {
           super.a(param0, param1);
-          param0.field_N = this.field_e[param0.field_L];
+          param0.field_N = this.field_e[param0.playerIndex];
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "rj.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -367,27 +367,27 @@ final class KillerRules extends GameRules {
         var5 = Pool.field_O;
         var6 = this.field_d.currentShot(45);
         var3 = 0;
-        var4 = var6.field_u;
+        var4 = var6.ballInHandMode;
         if (var4 != 2) {
           if (var4 != 3) {
             if (var4 == 1) {
-              var3Lifetime1 = ll.field_f | nr.field_R;
+              var3Lifetime1 = ll.field_f | AccountWelcomePanel.field_R;
             } else {
               var3Lifetime1 = ll.field_f;
             }
           } else {
-            var3Lifetime1 = nr.field_V | ll.field_f;
+            var3Lifetime1 = AccountWelcomePanel.field_V | ll.field_f;
           }
         } else {
-          var3Lifetime1 = ll.field_f | nr.field_Q;
+          var3Lifetime1 = ll.field_f | AccountWelcomePanel.field_Q;
         }
         var6.field_t = true;
-        if (~var6.field_M <= param0) {
+        if (~var6.breakSeed <= param0) {
           var3Lifetime1 = var3Lifetime1 | ob.field_F;
         }
-        this.f(var6.field_L, 8640);
+        this.f(var6.playerIndex, 8640);
         if (this.e((byte) -125) <= 1) {
-          if (this.a((byte) -99, var6.field_L)) {
+          if (this.a((byte) -99, var6.playerIndex)) {
             var3Lifetime1 = var3Lifetime1 | ag.field_e;
           } else {
             var3Lifetime1 = var3Lifetime1 | Quaternion.field_e;
@@ -427,7 +427,7 @@ final class KillerRules extends GameRules {
         int var2 = 0;
         if (IntrusiveDeque.a(param0, (byte) 99) &&
           this.field_d.field_s == 2) {
-          var2 = ga.a(14, true, ea.field_r);
+          var2 = ga.nextRandomInt(14, true, ea.field_r);
           return var2 - (-1 - var2 / 7);
         }
         return -1;

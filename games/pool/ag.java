@@ -41,14 +41,14 @@ final class ag {
         }
     }
 
-    final static gi a(int param0, IntrusiveDeque param1, int param2, int param3) {
+    final static TextHotspotRegion a(int param0, IntrusiveDeque param1, int param2, int param3) {
         RuntimeException var4 = null;
-        gi var5 = null;
-        gi var6 = null;
+        TextHotspotRegion var5 = null;
+        TextHotspotRegion var6 = null;
         int var7 = 0;
         IntrusiveDeque var8 = null;
         aa var9 = null;
-        gi stackIn_12_0 = null;
+        TextHotspotRegion stackIn_12_0 = null;
         Object stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -57,7 +57,7 @@ final class ag {
         var7 = Pool.field_O;
         try {
           var9 = new aa(param1);
-          var5 = (gi) (var9.b((byte) -92));
+          var5 = (TextHotspotRegion) (var9.b((byte) -92));
           while (var5 != null) {
             var6 = var5;
             while (var5 != null) {
@@ -68,9 +68,9 @@ final class ag {
                 stackIn_12_0 = var5;
                 return stackIn_12_0;
               }
-              var5 = var5.field_s;
+              var5 = var5.next;
             }
-            var5 = (gi) (var9.b(-81));
+            var5 = (TextHotspotRegion) (var9.b(-81));
           }
           if (param3 == 15395) {
             return null;
@@ -78,7 +78,7 @@ final class ag {
           var8 = (IntrusiveDeque) null;
           ag.a(15, (IntrusiveDeque) null, 110, 38);
           stackIn_18_0 = null;
-          return (gi) (stackIn_18_0);
+          return (TextHotspotRegion) (stackIn_18_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

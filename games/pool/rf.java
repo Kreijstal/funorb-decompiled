@@ -93,10 +93,10 @@ final class rf {
             field_g = (Sprite) null;
           }
           if (d.field_d != null) {
-            d.field_d.k(17);
+            d.field_d.dismissDialog(17);
           }
-          vj.field_j = new ui(param2, param0, false, true, true);
-          tn.field_n.d(vj.field_j, 30);
+          vj.field_j = new LoginForm(param2, param0, false, true, true);
+          tn.field_n.replaceContent(vj.field_j, 30);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "rf.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

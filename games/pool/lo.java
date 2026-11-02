@@ -12,7 +12,7 @@ final class lo extends IOException {
     final static nq b(int param0) {
         if (null == ae.field_c) {
           ae.field_c = new nq();
-          ae.field_c.a(lc.field_O, -76);
+          ae.field_c.a(ValidationIconWidget.field_O, -76);
           ae.field_c.field_m = 6;
           ae.field_c.field_b = 4;
           ae.field_c.field_i = PoolUiText.field_a;

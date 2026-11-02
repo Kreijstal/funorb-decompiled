@@ -15,7 +15,7 @@ final class hp {
         return tq.a(false, c.field_d, di.field_a);
     }
 
-    final static void a(byte param0, java.applet.Applet param1) {
+    final static void openSupportPage(byte param0, java.applet.Applet param1) {
         try {
           java.net.URL var2 = null;
           String var3 = null;
@@ -58,7 +58,7 @@ final class hp {
         }
     }
 
-    final static int[] a(int[] param0, byte param1) {
+    final static int[] copyIntArray(int[] param0, byte param1) {
         int var3 = 0;
         int[] var2 = null;
         RuntimeException var2_ref = null;
@@ -114,7 +114,7 @@ final class hp {
           }
           if (param2 != -641) {
             var5 = (int[]) null;
-            hp.a((int[]) null, (byte) 39);
+            hp.copyIntArray((int[]) null, (byte) 39);
           }
           stackIn_7_0 = param3 + " - " + param0.b(0) + "%";
           return stackIn_7_0;
@@ -158,13 +158,13 @@ final class hp {
         int var4;
         int var5;
         int var6;
-        if (!fm.field_H) {
+        if (!ArrayWidgetGroup.field_H) {
           return;
         }
         e.field_a.a(param1, false);
         var5 = -29 / ((param3 + 12) / 33);
         var4 = im.field_Ub.i(-1) ? 1 : 0;
-        if (ne.field_s != 0 &&
+        if (MatchingTextValidator.field_s != 0 &&
           var4 == 0) {
           param1 = false;
           th.b(-1);
@@ -177,11 +177,11 @@ final class hp {
         }
         var6 = im.field_Ub.g(-1) + im.field_Ub.field_sb;
         if (var6 > 640) {
-          gj.field_G = gj.field_G + 5;
+          ProgressBarWidget.field_G = ProgressBarWidget.field_G + 5;
         } else {
           if (635 > var6 &&
-            gj.field_G > 0) {
-            gj.field_G = gj.field_G - 5;
+            ProgressBarWidget.field_G > 0) {
+            ProgressBarWidget.field_G = ProgressBarWidget.field_G - 5;
           }
         }
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pd implements fp {
+final class pd implements WidgetPainter {
     private int field_h;
     static int[] field_a;
     static int[] field_f;
@@ -46,7 +46,7 @@ final class pd implements fp {
         field_a = null;
     }
 
-    public final void a(boolean param0, int param1, byte param2, int param3, ei param4) {
+    public final void paintWidget(boolean param0, int param1, byte param2, int param3, UiWidget param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -62,32 +62,32 @@ final class pd implements fp {
         int var7Lifetime1;
         var11 = Pool.field_O;
         try {
-          if (!param4.field_s &&
-            !param4.d(-60)) {
+          if (!param4.pointerInside &&
+            !param4.hasKeyboardFocus(-60)) {
             stackIn_6_0 = 2188450;
           } else {
             stackIn_6_0 = 3249872;
           }
           var6_int = stackIn_6_0;
-          this.field_b.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.field_m + "</u>", param1 + param4.field_C, param3 + param4.field_D, param4.field_l, param4.field_y, var6_int, -1, this.field_h, this.field_c, this.field_b.maxDescent + this.field_b.maxAscent);
-          if (param4.d(-52)) {
-            var7 = this.field_b.b(param4.field_m);
+          this.field_b.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param4.widgetText + "</u>", param1 + param4.widgetX, param3 + param4.widgetY, param4.widgetWidth, param4.widgetHeight, var6_int, -1, this.field_h, this.field_c, this.field_b.maxDescent + this.field_b.maxAscent);
+          if (param4.hasKeyboardFocus(-52)) {
+            var7 = this.field_b.b(param4.widgetText);
             var8 = this.field_b.maxAscent + this.field_b.maxDescent;
-            var9 = param4.field_C + param1;
-            var10 = param3 + param4.field_D;
+            var9 = param4.widgetX + param1;
+            var10 = param3 + param4.widgetY;
             if (this.field_h == 2) {
-              var9 = var9 + (-var7 + param4.field_l);
+              var9 = var9 + (-var7 + param4.widgetWidth);
             } else {
               if (1 == this.field_h) {
-                var9 = var9 + (param4.field_l - var7 >> 1);
+                var9 = var9 + (param4.widgetWidth - var7 >> 1);
               }
             }
             if (2 != this.field_c) {
               if (this.field_c == 1) {
-                var10 = var10 + (param4.field_y - var8 >> 1);
+                var10 = var10 + (param4.widgetHeight - var8 >> 1);
               }
             } else {
-              var10 = var10 + (-var8 + param4.field_y);
+              var10 = var10 + (-var8 + param4.widgetHeight);
             }
             bj.a(var10 + 2, var8, var7 + 4, -2 + var9, 2187);
           }
@@ -110,7 +110,7 @@ final class pd implements fp {
     public pd() {
         this.field_h = 1;
         this.field_c = 1;
-        this.field_b = lc.field_O;
+        this.field_b = ValidationIconWidget.field_O;
     }
 
     pd(BitmapFont param0, int param1, int param2) {

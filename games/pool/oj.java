@@ -54,7 +54,7 @@ final class oj extends IntrusiveNode {
           ShotRecord.field_S = new oc[var3];
           qp.field_gc = new int[var3][];
           for (var4 = 0; var4 < var3; var4++) {
-            ShotRecord.field_S[var4] = fm.a(-16336, var7);
+            ShotRecord.field_S[var4] = ArrayWidgetGroup.a(-16336, var7);
           }
           if (param1 >= -104) {
             loadingGraphics = (String) null;
@@ -90,7 +90,7 @@ final class oj extends IntrusiveNode {
         int var1;
         boolean stackIn_7_0 = false;
         var1 = 38 / ((param0 - 45) / 37);
-        stackIn_7_0 = (null != PlasmaBallSkin.field_m) || (sh.h((byte) 86)) || (fc.field_b != null) || (wj.i(-1));
+        stackIn_7_0 = (null != PlasmaBallSkin.field_m) || (OpacityWidget.h((byte) 86)) || (fc.field_b != null) || (DraggableWidget.i(-1));
         return stackIn_7_0;
     }
 
@@ -108,11 +108,11 @@ final class oj extends IntrusiveNode {
           if (var3 != 0) {
             return false;
           }
-          r.c((byte) -65);
+          EmailValidator.c((byte) -65);
           return true;
         }
         if (11 == qi.field_a) {
-          if (!nr.field_T) {
+          if (!AccountWelcomePanel.field_T) {
             return false;
           }
           if (tq.field_t == 2 &&
@@ -125,7 +125,7 @@ final class oj extends IntrusiveNode {
           }
           if (PlasmaBallSkin.j(param2 + 12010)) {
             String var4 = (String) null;
-            ub.a((byte) -127, (String) null, param1, ie.field_e, tq.field_t, uh.field_x);
+            ub.a((byte) -127, (String) null, param1, ie.field_e, tq.field_t, PasswordValidator.field_x);
           }
           return true;
         }

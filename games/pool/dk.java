@@ -162,15 +162,15 @@ final class dk {
           }
           if (hn.field_b == 2 &&
             !hp.a(false)) {
-            boolean decompiledSharedTail2 = !(!lq.a(di.field_a, -1));
+            boolean decompiledSharedTail2 = !(!DialogLayer.a(di.field_a, -1));
             if (!decompiledSharedTail2) {
-              var2 = nr.a(new String[]{fm.field_I}, param0 ^ -2, tp.privatechatFriendNotlisted);
+              var2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{ArrayWidgetGroup.field_I}, param0 ^ -2, tp.privatechatFriendNotlisted);
               decompiledSharedTail2 = (var10 != 0);
             }
             if (decompiledSharedTail2) {
-              var2 = nr.a(new String[]{fm.field_I}, -1, IterableNodeHashTable.privatechatFriendOffline);
+              var2 = AccountWelcomePanel.substituteTemplateArguments(new String[]{ArrayWidgetGroup.field_I}, -1, IterableNodeHashTable.privatechatFriendOffline);
             }
-            if (fm.field_H) {
+            if (ArrayWidgetGroup.field_H) {
               jh.a(0, (String) (var2), (String) null, 2, (String) null, true);
               th.b(-1);
             }
@@ -190,8 +190,8 @@ final class dk {
             var6 = hn.field_b;
             var7 = 0;
             if (var6 == 2) {
-              var4 = nr.a(new String[]{fm.field_I}, -1, jl.privatequickchatToX);
-              var8 = nr.a(new String[]{var3}, -1, vh.privatequickchatFromX);
+              var4 = AccountWelcomePanel.substituteTemplateArguments(new String[]{ArrayWidgetGroup.field_I}, -1, jl.privatequickchatToX);
+              var8 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var3}, -1, vh.privatequickchatFromX);
               var7 = pa.field_J.field_gb - (-NineBallRules.field_j.field_gb + (485 - m.field_c.b(var8) + m.field_c.b(var4)));
               if (var7 < 0) {
                 var7 = 0;
@@ -200,7 +200,7 @@ final class dk {
               if (var6 == 0) {
                 if (null == em.field_L &&
                   ej.field_l) {
-                  var4 = "[" + sn.muChatLobby + "] ";
+                  var4 = "[" + BirthDateValidator.muChatLobby + "] ";
                 }
                 if (null != em.field_L) {
                   boolean decompiledSharedTail1 = (!(sa.field_c) ||
@@ -210,12 +210,12 @@ final class dk {
                     decompiledSharedTail1 = (var10 != 0);
                   }
                   if (decompiledSharedTail1) {
-                    var4 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, th.xsGame) + "] ";
+                    var4 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{em.field_L.field_Ob}, -1, th.xsGame) + "] ";
                   }
                   var6 = 1;
                 }
               }
-              if (ia.b(-1)) {
+              if (MenuSelection.b(-1)) {
                 stackIn_59_0 = ": ";
               } else {
                 stackIn_59_0 = "<img=3>: ";
@@ -225,16 +225,16 @@ final class dk {
               boolean decompiledSharedTail0 = !(ea.field_z);
               if (!decompiledSharedTail0) {
                 var5 = "";
-                var4 = "<col=999999>" + var4 + fg.dobChatdisabled + "</col>";
+                var4 = "<col=999999>" + var4 + WeightedLruCache.dobChatdisabled + "</col>";
                 decompiledSharedTail0 = (var10 != 0);
               }
               if ((decompiledSharedTail0) &&
-                (hr.field_y)) {
+                (ViewportController.field_y)) {
                 var5 = "";
                 var4 = "<col=999999>" + var4 + je.clickToQuickchat + "</col>";
               }
               var9 = m.field_c.b(var4);
-              if (!ia.b(param0 ^ -2)) {
+              if (!MenuSelection.b(param0 ^ -2)) {
                 if (pa.field_J.field_W &&
                   -pa.field_J.field_sb + wn.field_i < var9) {
                   if (ea.field_z) {
@@ -246,7 +246,7 @@ final class dk {
                 if (pa.field_J.field_R != 0 &&
                   var9 > pa.field_J.field_mb &&
                   !ea.field_z) {
-                  r.c((byte) 68);
+                  EmailValidator.c((byte) 68);
                 }
               }
             }
@@ -255,7 +255,7 @@ final class dk {
               NineBallRules.field_j.field_W = false;
             }
             if (NineBallRules.field_j.field_W) {
-              var1 = nr.a(new String[]{var3, fm.field_I}, -1, wb.privatechatBlankareaExplanation);
+              var1 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var3, ArrayWidgetGroup.field_I}, -1, wb.privatechatBlankareaExplanation);
             }
           }
           stackIn_97_0 = var1;

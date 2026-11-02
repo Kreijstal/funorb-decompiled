@@ -30,7 +30,7 @@ final class TranslatedUiText {
           try {
             var1_int = 0;
             while (true) {
-              var2 = jp.field_N.a((byte) -55, var1_int);
+              var2 = DisplayNamePanel.field_N.a((byte) -55, var1_int);
               if (var2.field_C) {
                 stackIn_5_0 = var2;
                 return stackIn_5_0;
@@ -71,7 +71,7 @@ final class TranslatedUiText {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          me.field_s = th.field_b;
+          EmailAvailabilityValidator.field_s = th.field_b;
           eo.field_Ub = param1;
           if (param2 <= 74) {
             field_h = -97;
@@ -117,2993 +117,2993 @@ final class TranslatedUiText {
                 this.var3 = 0;
             }
             void runChunk0() throws java.lang.RuntimeException {
-                me.field_r = param0;
-                var2 = gg.a((byte) 123, "loginm3");
+                EmailAvailabilityValidator.field_r = param0;
+                var2 = DebouncedValidationProvider.a((byte) 123, "loginm3");
                 if (var2 != null) {
                   wd.loginm3 = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -99, "loginm2");
+                var2 = DebouncedValidationProvider.a((byte) -99, "loginm2");
                 if (null != var2) {
-                  er.loginm2 = a.a(var2, 124);
+                  DialWidget.loginm2 = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 118, "loginm1");
+                var2 = DebouncedValidationProvider.a((byte) 118, "loginm1");
                 if (var2 != null) {
                   a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 96, "idlemessage20min");
+                var2 = DebouncedValidationProvider.a((byte) 96, "idlemessage20min");
                 if (var2 != null) {
                   IterableNodeHashTable.idlemessage20min = a.a(var2, -125);
                 }
-                var2 = gg.a((byte) 95, "error_js5crc");
+                var2 = DebouncedValidationProvider.a((byte) 95, "error_js5crc");
                 if (null != var2) {
                   br.errorJs5crc = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -41, "error_js5io");
+                var2 = DebouncedValidationProvider.a((byte) -41, "error_js5io");
                 if (var2 != null) {
                   cm.errorJs5io = a.a(var2, -71);
                 }
-                var2 = gg.a((byte) -109, "error_js5connect_full");
+                var2 = DebouncedValidationProvider.a((byte) -109, "error_js5connect_full");
                 if (null != var2) {
                   hh.errorJs5connectFull = a.a(var2, param1 + 20942);
                 }
-                var2 = gg.a((byte) 97, "error_js5connect");
+                var2 = DebouncedValidationProvider.a((byte) 97, "error_js5connect");
                 if (var2 != null) {
                   bc.errorJs5connect = a.a(var2, -68);
                 }
-                var2 = gg.a((byte) -55, "login_gameupdated");
+                var2 = DebouncedValidationProvider.a((byte) -55, "login_gameupdated");
                 if (null != var2) {
                   dk.loginGameupdated = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -119, "create_unable");
+                var2 = DebouncedValidationProvider.a((byte) -119, "create_unable");
                 if (var2 != null) {
-                  oe.createUnable = a.a(var2, param1 ^ -21104);
+                  FadingDialog.createUnable = a.a(var2, param1 ^ -21104);
                 }
-                var2 = gg.a((byte) 99, "create_ineligible");
+                var2 = DebouncedValidationProvider.a((byte) 99, "create_ineligible");
                 if (var2 != null) {
-                  hb.createIneligible = a.a(var2, 14);
+                  NodeHashTableIterator.createIneligible = a.a(var2, 14);
                 }
-                var2 = gg.a((byte) -59, "usernameprompt");
+                var2 = DebouncedValidationProvider.a((byte) -59, "usernameprompt");
                 if (var2 != null) {
                   a.a(var2, -77);
                 }
-                var2 = gg.a((byte) 106, "passwordprompt");
+                var2 = DebouncedValidationProvider.a((byte) 106, "passwordprompt");
                 if (null != var2) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -34, "andagainprompt");
+                var2 = DebouncedValidationProvider.a((byte) -34, "andagainprompt");
                 if (var2 != null) {
                   a.a(var2, -11);
                 }
-                var2 = gg.a((byte) 126, "ticketing_read");
+                var2 = DebouncedValidationProvider.a((byte) 126, "ticketing_read");
                 if (var2 != null) {
                   a.a(var2, param1 ^ 21023);
                 }
-                var2 = gg.a((byte) 117, "ticketing_ignore");
+                var2 = DebouncedValidationProvider.a((byte) 117, "ticketing_ignore");
                 if (null != var2) {
                   a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -80, "ticketing_oneunread");
+                var2 = DebouncedValidationProvider.a((byte) -80, "ticketing_oneunread");
                 if (null != var2) {
                   vd.ticketingOneunread = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -53, "ticketing_xunread");
+                var2 = DebouncedValidationProvider.a((byte) -53, "ticketing_xunread");
                 if (null != var2) {
                   sa.ticketingXunread = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 97, "ticketing_gotowebsite");
+                var2 = DebouncedValidationProvider.a((byte) 97, "ticketing_gotowebsite");
                 if (var2 != null) {
-                  kk.ticketingGotowebsite = a.a(var2, 126);
+                  CacheEntry.ticketingGotowebsite = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -68, "ticketing_waitingformessages");
+                var2 = DebouncedValidationProvider.a((byte) -68, "ticketing_waitingformessages");
                 if (var2 != null) {
                   a.a(var2, -59);
                 }
-                var2 = gg.a((byte) -79, "mu_chat_on");
+                var2 = DebouncedValidationProvider.a((byte) -79, "mu_chat_on");
                 if (var2 != null) {
                   fq.muChatOn = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -87, "mu_chat_friends");
+                var2 = DebouncedValidationProvider.a((byte) -87, "mu_chat_friends");
                 if (var2 != null) {
                   cl.muChatFriends = a.a(var2, param1 + 21136);
                 }
-                var2 = gg.a((byte) 108, "mu_chat_off");
+                var2 = DebouncedValidationProvider.a((byte) 108, "mu_chat_off");
                 if (var2 != null) {
                   KillerRules.muChatOff = a.a(var2, -20);
                 }
-                var2 = gg.a((byte) 95, "mu_chat_lobby");
+                var2 = DebouncedValidationProvider.a((byte) 95, "mu_chat_lobby");
                 if (var2 != null) {
-                  sn.muChatLobby = a.a(var2, param1 + 20950);
+                  BirthDateValidator.muChatLobby = a.a(var2, param1 + 20950);
                 }
-                var2 = gg.a((byte) -116, "mu_chat_public");
+                var2 = DebouncedValidationProvider.a((byte) -116, "mu_chat_public");
                 if (var2 != null) {
-                  ud.muChatPublic = a.a(var2, 10);
+                  SingleChildWidget.muChatPublic = a.a(var2, 10);
                 }
-                var2 = gg.a((byte) -73, "mu_chat_ignore");
+                var2 = DebouncedValidationProvider.a((byte) -73, "mu_chat_ignore");
                 if (null != var2) {
                   ll.muChatIgnore = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 126, "mu_chat_tips");
+                var2 = DebouncedValidationProvider.a((byte) 126, "mu_chat_tips");
                 if (var2 != null) {
                   je.muChatTips = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -30, "mu_chat_game");
+                var2 = DebouncedValidationProvider.a((byte) -30, "mu_chat_game");
                 if (null != var2) {
                   mm.muChatGame = a.a(var2, -79);
                 }
-                var2 = gg.a((byte) -44, "mu_chat_private");
+                var2 = DebouncedValidationProvider.a((byte) -44, "mu_chat_private");
                 if (null != var2) {
                   vk.muChatPrivate = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -110, "mu_x_entered_game");
+                var2 = DebouncedValidationProvider.a((byte) -110, "mu_x_entered_game");
                 if (var2 != null) {
                   th.muXEnteredGame = a.a(var2, param1 + 21006);
                 }
-                var2 = gg.a((byte) -100, "mu_x_joined_your_game");
+                var2 = DebouncedValidationProvider.a((byte) -100, "mu_x_joined_your_game");
                 if (var2 != null) {
                   up.muXJoinedYourGame = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 106, "mu_x_entered_other_game");
+                var2 = DebouncedValidationProvider.a((byte) 106, "mu_x_entered_other_game");
                 if (var2 != null) {
                   da.muXEnteredOtherGame = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 121, "mu_x_left_lobby");
+                var2 = DebouncedValidationProvider.a((byte) 121, "mu_x_left_lobby");
                 if (null != var2) {
                   s.muXLeftLobby = a.a(var2, param1 ^ 21054);
                 }
-                var2 = gg.a((byte) 100, "mu_x_lost_con");
+                var2 = DebouncedValidationProvider.a((byte) 100, "mu_x_lost_con");
                 if (null != var2) {
                   lh.muXLostCon = a.a(var2, param1 + 20888);
                 }
-                var2 = gg.a((byte) 125, "mu_x_cannot_join_full");
+                var2 = DebouncedValidationProvider.a((byte) 125, "mu_x_cannot_join_full");
                 if (null != var2) {
-                  hr.muXCannotJoinFull = a.a(var2, -109);
+                  ViewportController.muXCannotJoinFull = a.a(var2, -109);
                 }
-                var2 = gg.a((byte) 118, "mu_x_cannot_join_inprogress");
+                var2 = DebouncedValidationProvider.a((byte) 118, "mu_x_cannot_join_inprogress");
                 if (null != var2) {
                   ii.muXCannotJoinInprogress = a.a(var2, -27);
                 }
-                var2 = gg.a((byte) -123, "mu_x_declined_invite");
+                var2 = DebouncedValidationProvider.a((byte) -123, "mu_x_declined_invite");
                 if (var2 != null) {
-                  fd.muXDeclinedInvite = a.a(var2, 125);
+                  StrongCacheEntry.muXDeclinedInvite = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 94, "mu_x_withdrew_request");
+                var2 = DebouncedValidationProvider.a((byte) 94, "mu_x_withdrew_request");
                 if (var2 != null) {
                   sg.muXWithdrewRequest = a.a(var2, -77);
                 }
-                var2 = gg.a((byte) -103, "mu_x_removed");
+                var2 = DebouncedValidationProvider.a((byte) -103, "mu_x_removed");
                 if (null != var2) {
-                  sd.muXRemoved = a.a(var2, 127);
+                  Under13NoticePanel.muXRemoved = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -33, "mu_x_dropped_out");
+                var2 = DebouncedValidationProvider.a((byte) -33, "mu_x_dropped_out");
                 if (var2 != null) {
                   np.muXDroppedOut = a.a(var2, -96);
                 }
-                var2 = gg.a((byte) 100, "mu_entered_other_game");
+                var2 = DebouncedValidationProvider.a((byte) 100, "mu_entered_other_game");
                 if (null != var2) {
                   ti.muEnteredOtherGame = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 123, "mu_game_is_full");
+                var2 = DebouncedValidationProvider.a((byte) 123, "mu_game_is_full");
                 if (var2 != null) {
                   MouseHandler.muGameIsFull = a.a(var2, -56);
                 }
-                var2 = gg.a((byte) 106, "mu_game_has_started");
+                var2 = DebouncedValidationProvider.a((byte) 106, "mu_game_has_started");
                 if (var2 != null) {
                   wb.muGameHasStarted = a.a(var2, -110);
                 }
-                var2 = gg.a((byte) 126, "mu_you_declined_invite");
+                var2 = DebouncedValidationProvider.a((byte) 126, "mu_you_declined_invite");
                 if (null != var2) {
                   EightBallRules.muYouDeclinedInvite = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 122, "mu_invite_withdrawn");
+                var2 = DebouncedValidationProvider.a((byte) 122, "mu_invite_withdrawn");
                 if (null != var2) {
                   up.muInviteWithdrawn = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -123, "mu_request_declined");
+                var2 = DebouncedValidationProvider.a((byte) -123, "mu_request_declined");
                 if (var2 != null) {
-                  hr.muRequestDeclined = a.a(var2, -31);
+                  ViewportController.muRequestDeclined = a.a(var2, -31);
                 }
-                var2 = gg.a((byte) 108, "mu_request_withdrawn");
+                var2 = DebouncedValidationProvider.a((byte) 108, "mu_request_withdrawn");
                 if (null != var2) {
                   PlasmaBallSkin.muRequestWithdrawn = a.a(var2, param1 + 21140);
                 }
-                var2 = gg.a((byte) -102, "mu_all_players_have_left");
+                var2 = DebouncedValidationProvider.a((byte) -102, "mu_all_players_have_left");
                 if (null != var2) {
                   PacketBuffer.muAllPlayersHaveLeft = a.a(var2, -58);
                 }
-                var2 = gg.a((byte) -77, "mu_lobby_name");
+                var2 = DebouncedValidationProvider.a((byte) -77, "mu_lobby_name");
                 if (null != var2) {
                   jh.muLobbyName = a.a(var2, -104);
                 }
-                var2 = gg.a((byte) -114, "mu_lobby_rating");
+                var2 = DebouncedValidationProvider.a((byte) -114, "mu_lobby_rating");
                 if (null != var2) {
                   wi.muLobbyRating = a.a(var2, param1 + 20892);
                 }
-                var2 = gg.a((byte) -117, "mu_lobby_friend_add");
+                var2 = DebouncedValidationProvider.a((byte) -117, "mu_lobby_friend_add");
                 if (var2 != null) {
                   wg.muLobbyFriendAdd = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 109, "mu_lobby_friend_rm");
+                var2 = DebouncedValidationProvider.a((byte) 109, "mu_lobby_friend_rm");
                 if (var2 != null) {
                   PacketBuffer.muLobbyFriendRm = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -81, "mu_lobby_name_add");
+                var2 = DebouncedValidationProvider.a((byte) -81, "mu_lobby_name_add");
                 if (null != var2) {
                   ag.muLobbyNameAdd = a.a(var2, -63);
                 }
-                var2 = gg.a((byte) 98, "mu_lobby_name_rm");
+                var2 = DebouncedValidationProvider.a((byte) 98, "mu_lobby_name_rm");
                 if (var2 != null) {
                   tp.muLobbyNameRm = a.a(var2, -74);
                 }
-                var2 = gg.a((byte) -76, "mu_lobby_location");
+                var2 = DebouncedValidationProvider.a((byte) -76, "mu_lobby_location");
                 if (null != var2) {
                   f.muLobbyLocation = a.a(var2, -41);
                 }
-                var2 = gg.a((byte) 121, "mu_gamelist_all_games");
+                var2 = DebouncedValidationProvider.a((byte) 121, "mu_gamelist_all_games");
                 if (var2 != null) {
                   PlasmaBallSkin.muGamelistAllGames = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -48, "mu_gamelist_status");
+                var2 = DebouncedValidationProvider.a((byte) -48, "mu_gamelist_status");
                 if (null != var2) {
                   wi.muGamelistStatus = a.a(var2, -77);
                 }
-                var2 = gg.a((byte) 96, "mu_gamelist_owner");
+                var2 = DebouncedValidationProvider.a((byte) 96, "mu_gamelist_owner");
                 if (var2 != null) {
                   mb.muGamelistOwner = a.a(var2, -29);
                 }
-                var2 = gg.a((byte) 94, "mu_gamelist_players");
+                var2 = DebouncedValidationProvider.a((byte) 94, "mu_gamelist_players");
                 if (var2 != null) {
                   a.muGamelistPlayers = a.a(var2, param1 + 21140);
                 }
-                var2 = gg.a((byte) 115, "mu_gamelist_avg_rating");
+                var2 = DebouncedValidationProvider.a((byte) 115, "mu_gamelist_avg_rating");
                 if (null != var2) {
                   ol.muGamelistAvgRating = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 109, "mu_gamelist_options");
+                var2 = DebouncedValidationProvider.a((byte) 109, "mu_gamelist_options");
                 if (var2 != null) {
-                  n.muGamelistOptions = a.a(var2, 126);
+                  LabeledChildWidget.muGamelistOptions = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -49, "mu_gamelist_elapsed_time");
+                var2 = DebouncedValidationProvider.a((byte) -49, "mu_gamelist_elapsed_time");
                 if (var2 != null) {
                   ml.muGamelistElapsedTime = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 121, "mu_play_rated");
+                var2 = DebouncedValidationProvider.a((byte) 121, "mu_play_rated");
                 if (var2 != null) {
                   fc.muPlayRated = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 117, "mu_create_unrated");
+                var2 = DebouncedValidationProvider.a((byte) 117, "mu_create_unrated");
                 if (var2 != null) {
                   lh.muCreateUnrated = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -95, "mu_options");
+                var2 = DebouncedValidationProvider.a((byte) -95, "mu_options");
                 if (var2 != null) {
-                  gr.muOptions = a.a(var2, 126);
+                  ArchiveRequest.muOptions = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -123, "mu_options_whocanjoin");
+                var2 = DebouncedValidationProvider.a((byte) -123, "mu_options_whocanjoin");
                 if (var2 != null) {
                   fr.muOptionsWhocanjoin = a.a(var2, param1 ^ 21119);
                 }
-                var2 = gg.a((byte) 108, "mu_options_players");
+                var2 = DebouncedValidationProvider.a((byte) 108, "mu_options_players");
                 if (null != var2) {
                   ab.muOptionsPlayers = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -85, "mu_options_dontmind");
+                var2 = DebouncedValidationProvider.a((byte) -85, "mu_options_dontmind");
                 if (null != var2) {
                   mq.muOptionsDontmind = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 123, "mu_options_allow_spectate");
+                var2 = DebouncedValidationProvider.a((byte) 123, "mu_options_allow_spectate");
                 if (null != var2) {
                   ve.muOptionsAllowSpectate = a.a(var2, -18);
                 }
-                var2 = gg.a((byte) 112, "mu_options_ratedgametype");
+                var2 = DebouncedValidationProvider.a((byte) 112, "mu_options_ratedgametype");
                 if (var2 != null) {
                   pk.muOptionsRatedgametype = a.a(var2, -50);
                 }
-                var2 = gg.a((byte) -103, "yes");
+                var2 = DebouncedValidationProvider.a((byte) -103, "yes");
                 if (null != var2) {
                   rm.yes = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -78, "no");
+                var2 = DebouncedValidationProvider.a((byte) -78, "no");
                 if (null != var2) {
                   mb.no = a.a(var2, -41);
                 }
-                var2 = gg.a((byte) 119, "mu_invite_players");
+                var2 = DebouncedValidationProvider.a((byte) 119, "mu_invite_players");
                 if (var2 != null) {
                   v.muInvitePlayers = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -71, "close");
+                var2 = DebouncedValidationProvider.a((byte) -71, "close");
                 if (var2 != null) {
                   th.close = a.a(var2, param1 ^ -21104);
                 }
-                var2 = gg.a((byte) 113, "add_x_to_friends");
+                var2 = DebouncedValidationProvider.a((byte) 113, "add_x_to_friends");
                 if (var2 != null) {
                   fn.addXToFriends = a.a(var2, -99);
                 }
-                var2 = gg.a((byte) 95, "add_x_to_ignore");
+                var2 = DebouncedValidationProvider.a((byte) 95, "add_x_to_ignore");
                 if (null != var2) {
                   jh.addXToIgnore = a.a(var2, param1 ^ 21087);
                 }
-                var2 = gg.a((byte) -70, "rm_x_from_friends");
+                var2 = DebouncedValidationProvider.a((byte) -70, "rm_x_from_friends");
                 if (null != var2) {
                   ef.rmXFromFriends = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 98, "rm_x_from_ignore");
+                var2 = DebouncedValidationProvider.a((byte) 98, "rm_x_from_ignore");
                 if (var2 != null) {
                   ph.rmXFromIgnore = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 125, "send_pm_to_x");
+                var2 = DebouncedValidationProvider.a((byte) 125, "send_pm_to_x");
                 if (var2 != null) {
                   rp.sendPmToX = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -65, "send_qc_to_x");
+                var2 = DebouncedValidationProvider.a((byte) -65, "send_qc_to_x");
                 if (null != var2) {
-                  hq.sendQcToX = a.a(var2, 127);
+                  TutorialController.sendQcToX = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 126, "send_pm");
+                var2 = DebouncedValidationProvider.a((byte) 126, "send_pm");
                 if (null != var2) {
                   wb.sendPm = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 98, "invite_accept_xs_game");
+                var2 = DebouncedValidationProvider.a((byte) 98, "invite_accept_xs_game");
                 if (var2 != null) {
                   or.inviteAcceptXsGame = a.a(var2, -103);
                 }
-                var2 = gg.a((byte) 121, "invite_decline_xs_game");
+                var2 = DebouncedValidationProvider.a((byte) 121, "invite_decline_xs_game");
                 if (null != var2) {
                   hj.inviteDeclineXsGame = a.a(var2, param1 ^ 21037);
                 }
-                var2 = gg.a((byte) -56, "join_xs_game");
+                var2 = DebouncedValidationProvider.a((byte) -56, "join_xs_game");
                 if (var2 != null) {
                   se.joinXsGame = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 116, "join_request_xs_game");
+                var2 = DebouncedValidationProvider.a((byte) 116, "join_request_xs_game");
                 if (var2 != null) {
                   dn.joinRequestXsGame = a.a(var2, -4);
                 }
-                var2 = gg.a((byte) 127, "join_withdraw_request_xs_game");
+                var2 = DebouncedValidationProvider.a((byte) 127, "join_withdraw_request_xs_game");
                 if (null != var2) {
                   nd.joinWithdrawRequestXsGame = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -75, "mu_gameopt_kick_x_from_this_game");
+                var2 = DebouncedValidationProvider.a((byte) -75, "mu_gameopt_kick_x_from_this_game");
                 if (var2 != null) {
                   th.muGameoptKickXFromThisGame = a.a(var2, -9);
                 }
-                var2 = gg.a((byte) 125, "mu_gameopt_withdraw_invite_to_x");
+                var2 = DebouncedValidationProvider.a((byte) 125, "mu_gameopt_withdraw_invite_to_x");
                 if (null != var2) {
                   jh.muGameoptWithdrawInviteToX = a.a(var2, -7);
                 }
-                var2 = gg.a((byte) 105, "mu_gameopt_accept_x_into_game");
+                var2 = DebouncedValidationProvider.a((byte) 105, "mu_gameopt_accept_x_into_game");
                 if (null != var2) {
                   gf.muGameoptAcceptXIntoGame = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -95, "mu_gameopt_reject_x_from_game");
+                var2 = DebouncedValidationProvider.a((byte) -95, "mu_gameopt_reject_x_from_game");
                 if (var2 != null) {
                   ro.muGameoptRejectXFromGame = a.a(var2, -53);
                 }
-                var2 = gg.a((byte) -29, "mu_gameopt_invite_x_to_game");
+                var2 = DebouncedValidationProvider.a((byte) -29, "mu_gameopt_invite_x_to_game");
                 if (var2 != null) {
                   qi.muGameoptInviteXToGame = a.a(var2, param1 + 21025);
                 }
-                var2 = gg.a((byte) -41, "report_x_for_abuse");
+                var2 = DebouncedValidationProvider.a((byte) -41, "report_x_for_abuse");
                 if (var2 != null) {
                   NetworkGameClient.reportXForAbuse = a.a(var2, param1 + 20951);
                 }
-                var2 = gg.a((byte) 126, "unable_to_send_message_password_a");
+                var2 = DebouncedValidationProvider.a((byte) 126, "unable_to_send_message_password_a");
                 if (var2 != null) {
                   hj.unableToSendMessagePasswordA = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -70, "unable_to_send_message_password_b");
+                var2 = DebouncedValidationProvider.a((byte) -70, "unable_to_send_message_password_b");
                 if (null != var2) {
                   ci.unableToSendMessagePasswordB = a.a(var2, param1 ^ -21097);
                 }
-                var2 = gg.a((byte) -78, "mu_chat_lobby_show_all");
+                var2 = DebouncedValidationProvider.a((byte) -78, "mu_chat_lobby_show_all");
                 if (var2 != null) {
                   IntrusiveDeque.muChatLobbyShowAll = a.a(var2, -2);
                 }
-                var2 = gg.a((byte) 124, "mu_chat_lobby_friends_only");
+                var2 = DebouncedValidationProvider.a((byte) 124, "mu_chat_lobby_friends_only");
                 if (var2 != null) {
                   cl.muChatLobbyFriendsOnly = a.a(var2, -106);
                 }
-                var2 = gg.a((byte) -90, "mu_chat_lobby_friends");
+                var2 = DebouncedValidationProvider.a((byte) -90, "mu_chat_lobby_friends");
                 if (null != var2) {
                   sa.muChatLobbyFriends = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -114, "mu_chat_lobby_hide");
+                var2 = DebouncedValidationProvider.a((byte) -114, "mu_chat_lobby_hide");
                 if (var2 != null) {
                   Pool.muChatLobbyHide = a.a(var2, param1 ^ 20995);
                 }
-                var2 = gg.a((byte) -106, "mu_chat_game_show_all");
+                var2 = DebouncedValidationProvider.a((byte) -106, "mu_chat_game_show_all");
                 if (var2 != null) {
                   ra.muChatGameShowAll = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -97, "mu_chat_game_friends_only");
+                var2 = DebouncedValidationProvider.a((byte) -97, "mu_chat_game_friends_only");
                 if (var2 != null) {
                   wi.muChatGameFriendsOnly = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -88, "mu_chat_game_friends");
+                var2 = DebouncedValidationProvider.a((byte) -88, "mu_chat_game_friends");
                 if (null != var2) {
                   md.muChatGameFriends = a.a(var2, param1 + 21138);
                 }
-                var2 = gg.a((byte) 107, "mu_chat_game_hide");
+                var2 = DebouncedValidationProvider.a((byte) 107, "mu_chat_game_hide");
                 if (var2 != null) {
                   op.muChatGameHide = a.a(var2, param1 + 20979);
                 }
-                var2 = gg.a((byte) -68, "mu_chat_pm_show_all");
+                var2 = DebouncedValidationProvider.a((byte) -68, "mu_chat_pm_show_all");
                 if (var2 != null) {
                   kp.muChatPmShowAll = a.a(var2, -71);
                 }
-                var2 = gg.a((byte) -63, "mu_chat_pm_friends_only");
+                var2 = DebouncedValidationProvider.a((byte) -63, "mu_chat_pm_friends_only");
                 if (null != var2) {
                   FreePlayRules.muChatPmFriendsOnly = a.a(var2, -13);
                 }
-                var2 = gg.a((byte) -68, "mu_chat_pm_friends");
+                var2 = DebouncedValidationProvider.a((byte) -68, "mu_chat_pm_friends");
                 if (var2 != null) {
                   rm.muChatPmFriends = a.a(var2, 2);
                 }
-                var2 = gg.a((byte) 103, "mu_chat_invisible_and_silent_mode");
+                var2 = DebouncedValidationProvider.a((byte) 103, "mu_chat_invisible_and_silent_mode");
                 if (var2 != null) {
-                  me.muChatInvisibleAndSilentMode = a.a(var2, param1 ^ -21104);
+                  EmailAvailabilityValidator.muChatInvisibleAndSilentMode = a.a(var2, param1 ^ -21104);
                 }
-                var2 = gg.a((byte) 95, "you_have_been_removed_from_xs_game");
+                var2 = DebouncedValidationProvider.a((byte) 95, "you_have_been_removed_from_xs_game");
                 if (var2 != null) {
                   lf.youHaveBeenRemovedFromXsGame = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 95, "your_rating_is_x");
+                var2 = DebouncedValidationProvider.a((byte) 95, "your_rating_is_x");
                 if (null != var2) {
                   m.yourRatingIsX = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 107, "you_are_on_x_server");
+                var2 = DebouncedValidationProvider.a((byte) 107, "you_are_on_x_server");
                 if (var2 != null) {
-                  ei.youAreOnXServer = a.a(var2, 124);
+                  UiWidget.youAreOnXServer = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -80, "rated_game");
+                var2 = DebouncedValidationProvider.a((byte) -80, "rated_game");
                 if (null != var2) {
                   of.ratedGame = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -73, "unrated_game");
+                var2 = DebouncedValidationProvider.a((byte) -73, "unrated_game");
                 if (var2 != null) {
                   hh.unratedGame = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 117, "rated_game_tips");
+                var2 = DebouncedValidationProvider.a((byte) 117, "rated_game_tips");
                 if (null != var2) {
-                  hl.ratedGameTips = a.a(var2, 125);
+                  CheckboxPainter.ratedGameTips = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -88, "searching_for_opponent_singular");
+                var2 = DebouncedValidationProvider.a((byte) -88, "searching_for_opponent_singular");
                 if (var2 != null) {
                   or.searchingForOpponentSingular = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -121, "searching_for_opponents_plural");
+                var2 = DebouncedValidationProvider.a((byte) -121, "searching_for_opponents_plural");
                 if (null != var2) {
                   vi.searchingForOpponentsPlural = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -93, "find_opponent_singular");
+                var2 = DebouncedValidationProvider.a((byte) -93, "find_opponent_singular");
                 if (null != var2) {
-                  fo.findOpponentSingular = a.a(var2, -10);
+                  KeyHandler.findOpponentSingular = a.a(var2, -10);
                 }
-                var2 = gg.a((byte) 93, "find_opponents_plural");
+                var2 = DebouncedValidationProvider.a((byte) 93, "find_opponents_plural");
                 if (null != var2) {
-                  hq.findOpponentsPlural = a.a(var2, param1 ^ 21069);
+                  TutorialController.findOpponentsPlural = a.a(var2, param1 ^ 21069);
                 }
-                var2 = gg.a((byte) 105, "rated_game_tips_setup_singular");
+                var2 = DebouncedValidationProvider.a((byte) 105, "rated_game_tips_setup_singular");
                 if (null != var2) {
                   bk.ratedGameTipsSetupSingular = a.a(var2, param1 + 21139);
                 }
-                var2 = gg.a((byte) -42, "rated_game_tips_setup_plural");
+                var2 = DebouncedValidationProvider.a((byte) -42, "rated_game_tips_setup_plural");
                 if (null != var2) {
-                  n.ratedGameTipsSetupPlural = a.a(var2, 123);
+                  LabeledChildWidget.ratedGameTipsSetupPlural = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 105, "waiting_to_start_hint");
+                var2 = DebouncedValidationProvider.a((byte) 105, "waiting_to_start_hint");
                 if (var2 != null) {
                   la.waitingToStartHint = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 95, "your_game");
+                var2 = DebouncedValidationProvider.a((byte) 95, "your_game");
                 if (var2 != null) {
                   rf.yourGame = a.a(var2, -126);
                 }
-                var2 = gg.a((byte) 103, "game_full");
+                var2 = DebouncedValidationProvider.a((byte) 103, "game_full");
                 if (null != var2) {
                   ro.gameFull = a.a(var2, -116);
                 }
-                var2 = gg.a((byte) -33, "join_requests_one");
+                var2 = DebouncedValidationProvider.a((byte) -33, "join_requests_one");
                 if (null != var2) {
                   lo.joinRequestsOne = a.a(var2, -56);
                 }
-                var2 = gg.a((byte) 114, "join_requests_many");
+                var2 = DebouncedValidationProvider.a((byte) 114, "join_requests_many");
                 if (var2 != null) {
-                  hq.joinRequestsMany = a.a(var2, param1 + 21139);
+                  TutorialController.joinRequestsMany = a.a(var2, param1 + 21139);
                 }
-                var2 = gg.a((byte) 110, "xs_game");
+                var2 = DebouncedValidationProvider.a((byte) 110, "xs_game");
                 if (var2 != null) {
                   th.xsGame = a.a(var2, 2);
                 }
-                var2 = gg.a((byte) -95, "waiting_for_x_to_start_game");
+                var2 = DebouncedValidationProvider.a((byte) -95, "waiting_for_x_to_start_game");
                 if (var2 != null) {
-                  uh.waitingForXToStartGame = a.a(var2, param1 ^ 21070);
+                  PasswordValidator.waitingForXToStartGame = a.a(var2, param1 ^ 21070);
                 }
-                var2 = gg.a((byte) 98, "game_options_changed");
+                var2 = DebouncedValidationProvider.a((byte) 98, "game_options_changed");
                 if (var2 != null) {
                   bl.gameOptionsChanged = a.a(var2, -94);
                 }
-                var2 = gg.a((byte) -66, "players_x_of_y");
+                var2 = DebouncedValidationProvider.a((byte) -66, "players_x_of_y");
                 if (null != var2) {
                   qa.playersXOfY = a.a(var2, 13);
                 }
-                var2 = gg.a((byte) -92, "message_lobby");
+                var2 = DebouncedValidationProvider.a((byte) -92, "message_lobby");
                 if (null != var2) {
                   jo.messageLobby = a.a(var2, param1 + 20958);
                 }
-                var2 = gg.a((byte) -31, "quickchat_lobby");
+                var2 = DebouncedValidationProvider.a((byte) -31, "quickchat_lobby");
                 if (null != var2) {
                   fl.quickchatLobby = a.a(var2, -60);
                 }
-                var2 = gg.a((byte) -66, "message_game");
+                var2 = DebouncedValidationProvider.a((byte) -66, "message_game");
                 if (null != var2) {
                   vd.messageGame = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -94, "message_team");
+                var2 = DebouncedValidationProvider.a((byte) -94, "message_team");
                 if (null != var2) {
                   a.a(var2, 7);
                 }
-                var2 = gg.a((byte) -96, "quickchat_game");
+                var2 = DebouncedValidationProvider.a((byte) -96, "quickchat_game");
                 if (null != var2) {
                   br.quickchatGame = a.a(var2, -115);
                 }
-                var2 = gg.a((byte) -100, "kick");
+                var2 = DebouncedValidationProvider.a((byte) -100, "kick");
                 if (null != var2) {
                   bl.kick = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 93, "inviting_x");
+                var2 = DebouncedValidationProvider.a((byte) 93, "inviting_x");
                 if (null != var2) {
                   IntrusiveNode.invitingX = a.a(var2, param1 ^ -21100);
                 }
-                var2 = gg.a((byte) -80, "x_wants_to_join");
+                var2 = DebouncedValidationProvider.a((byte) -80, "x_wants_to_join");
                 if (var2 != null) {
                   dj.xWantsToJoin = a.a(var2, -61);
                 }
-                var2 = gg.a((byte) 93, "accept");
+                var2 = DebouncedValidationProvider.a((byte) 93, "accept");
                 if (null != var2) {
                   ie.accept = a.a(var2, 13);
                 }
-                var2 = gg.a((byte) -35, "reject");
+                var2 = DebouncedValidationProvider.a((byte) -35, "reject");
                 if (var2 != null) {
                   qa.reject = a.a(var2, -47);
                 }
-                var2 = gg.a((byte) -94, "invite");
+                var2 = DebouncedValidationProvider.a((byte) -94, "invite");
                 if (null != var2) {
                   kn.invite = a.a(var2, -92);
                 }
-                var2 = gg.a((byte) -105, "status_concluded");
+                var2 = DebouncedValidationProvider.a((byte) -105, "status_concluded");
                 if (null != var2) {
                   pn.statusConcluded = a.a(var2, -34);
                 }
-                var2 = gg.a((byte) -93, "status_spectate");
+                var2 = DebouncedValidationProvider.a((byte) -93, "status_spectate");
                 if (null != var2) {
                   KillerRules.statusSpectate = a.a(var2, param1 + 21138);
                 }
-                var2 = gg.a((byte) 127, "status_playing");
+                var2 = DebouncedValidationProvider.a((byte) 127, "status_playing");
                 if (null != var2) {
                   dg.statusPlaying = a.a(var2, -4);
                 }
-                var2 = gg.a((byte) 115, "status_join");
+                var2 = DebouncedValidationProvider.a((byte) 115, "status_join");
                 if (null != var2) {
                   vk.statusJoin = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 123, "status_private");
+                var2 = DebouncedValidationProvider.a((byte) 123, "status_private");
                 if (var2 != null) {
                   sg.statusPrivate = a.a(var2, param1 ^ -21098);
                 }
-                var2 = gg.a((byte) 96, "status_full");
+                var2 = DebouncedValidationProvider.a((byte) 96, "status_full");
                 if (var2 != null) {
                   Pocket.statusFull = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -78, "players_in_game");
+                var2 = DebouncedValidationProvider.a((byte) -78, "players_in_game");
                 if (var2 != null) {
-                  tj.playersInGame = a.a(var2, 126);
+                  ResizableDialog.playersInGame = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 126, "you_are_invited_to_xs_game");
+                var2 = DebouncedValidationProvider.a((byte) 126, "you_are_invited_to_xs_game");
                 if (var2 != null) {
                   jc.youAreInvitedToXsGame = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 109, "asking_to_join_xs_game");
+                var2 = DebouncedValidationProvider.a((byte) 109, "asking_to_join_xs_game");
                 if (null != var2) {
                   op.askingToJoinXsGame = a.a(var2, param1 + 21017);
                 }
-                var2 = gg.a((byte) 111, "who_can_join");
+                var2 = DebouncedValidationProvider.a((byte) 111, "who_can_join");
                 if (null != var2) {
                   ic.whoCanJoin = a.a(var2, -18);
                 }
-                var2 = gg.a((byte) -123, "you_can_join");
+                var2 = DebouncedValidationProvider.a((byte) -123, "you_can_join");
                 if (null != var2) {
-                  gg.youCanJoin = a.a(var2, -12);
+                  DebouncedValidationProvider.youCanJoin = a.a(var2, -12);
                 }
-                var2 = gg.a((byte) 118, "you_can_ask_to_join");
+                var2 = DebouncedValidationProvider.a((byte) 118, "you_can_ask_to_join");
                 if (null != var2) {
                   im.youCanAskToJoin = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -120, "you_cannot_join_in_progress");
+                var2 = DebouncedValidationProvider.a((byte) -120, "you_cannot_join_in_progress");
                 if (var2 != null) {
                   a.youCannotJoinInProgress = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -126, "you_can_spectate");
+                var2 = DebouncedValidationProvider.a((byte) -126, "you_can_spectate");
                 if (null != var2) {
-                  sh.youCanSpectate = a.a(var2, param1 ^ 21076);
+                  OpacityWidget.youCanSpectate = a.a(var2, param1 ^ 21076);
                 }
-                var2 = gg.a((byte) 95, "you_can_not_spectate");
+                var2 = DebouncedValidationProvider.a((byte) 95, "you_can_not_spectate");
                 if (null != var2) {
                   bh.youCanNotSpectate = a.a(var2, 11);
                 }
-                var2 = gg.a((byte) 108, "spectate_xs_game");
+                var2 = DebouncedValidationProvider.a((byte) 108, "spectate_xs_game");
                 if (null != var2) {
                   PacketBuffer.spectateXsGame = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -100, "hide_players_in_xs_game");
+                var2 = DebouncedValidationProvider.a((byte) -100, "hide_players_in_xs_game");
                 if (var2 != null) {
                   jj.hidePlayersInXsGame = a.a(var2, -8);
                 }
-                var2 = gg.a((byte) 126, "show_players_in_xs_game");
+                var2 = DebouncedValidationProvider.a((byte) 126, "show_players_in_xs_game");
                 if (null != var2) {
                   bi.showPlayersInXsGame = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -56, "connecting_to_friend_server_twoline");
+                var2 = DebouncedValidationProvider.a((byte) -56, "connecting_to_friend_server_twoline");
                 if (var2 != null) {
-                  ri.connectingToFriendServerTwoline = a.a(var2, -4);
+                  CheckboxWidget.connectingToFriendServerTwoline = a.a(var2, -4);
                 }
-                var2 = gg.a((byte) -98, "loading");
+                var2 = DebouncedValidationProvider.a((byte) -98, "loading");
                 if (null != var2) {
                   o.loading = a.a(var2, -78);
                 }
-                var2 = gg.a((byte) 104, "offline");
+                var2 = DebouncedValidationProvider.a((byte) 104, "offline");
                 if (null != var2) {
                   we.offline = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -41, "multiconst_invite_only");
+                var2 = DebouncedValidationProvider.a((byte) -41, "multiconst_invite_only");
                 if (var2 != null) {
                   ab.multiconstInviteOnly = a.a(var2, param1 + 21138);
                 }
-                var2 = gg.a((byte) -51, "multiconst_clan");
+                var2 = DebouncedValidationProvider.a((byte) -51, "multiconst_clan");
                 if (null != var2) {
-                  ua.multiconstClan = a.a(var2, param1 + 21139);
+                  UsernameAvailabilityValidator.multiconstClan = a.a(var2, param1 + 21139);
                 }
-                var2 = gg.a((byte) -60, "multiconst_friends");
+                var2 = DebouncedValidationProvider.a((byte) -60, "multiconst_friends");
                 if (null != var2) {
-                  lq.multiconstFriends = a.a(var2, param1 ^ 21088);
+                  DialogLayer.multiconstFriends = a.a(var2, param1 ^ 21088);
                 }
-                var2 = gg.a((byte) 121, "multiconst_similar_rating");
+                var2 = DebouncedValidationProvider.a((byte) 121, "multiconst_similar_rating");
                 if (var2 != null) {
                   hf.multiconstSimilarRating = a.a(var2, 9);
                 }
-                var2 = gg.a((byte) -36, "multiconst_open");
+                var2 = DebouncedValidationProvider.a((byte) -36, "multiconst_open");
                 if (null != var2) {
                   oq.multiconstOpen = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -81, "no_options_available");
+                var2 = DebouncedValidationProvider.a((byte) -81, "no_options_available");
                 if (var2 != null) {
                   np.noOptionsAvailable = a.a(var2, 14);
                 }
-                var2 = gg.a((byte) -92, "reportabuse");
+                var2 = DebouncedValidationProvider.a((byte) -92, "reportabuse");
                 if (null != var2) {
                   rk.reportabuse = a.a(var2, param1 + 21003);
                 }
-                var2 = gg.a((byte) 110, "presstabtochat");
+                var2 = DebouncedValidationProvider.a((byte) 110, "presstabtochat");
                 if (null != var2) {
                   ModelTableScene.presstabtochat = a.a(var2, -73);
                 }
-                var2 = gg.a((byte) -47, "pressf10toquickchat");
+                var2 = DebouncedValidationProvider.a((byte) -47, "pressf10toquickchat");
                 if (null != var2) {
                   sk.pressf10toquickchat = a.a(var2, param1 + 21140);
                 }
-                var2 = gg.a((byte) -30, "dob_chatdisabled");
+                var2 = DebouncedValidationProvider.a((byte) -30, "dob_chatdisabled");
                 if (null != var2) {
-                  fg.dobChatdisabled = a.a(var2, 125);
+                  WeightedLruCache.dobChatdisabled = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 116, "dob_enterforchat");
+                var2 = DebouncedValidationProvider.a((byte) 116, "dob_enterforchat");
                 if (var2 != null) {
                   bl.dobEnterforchat = a.a(var2, param1 + 21023);
                 }
-                var2 = gg.a((byte) 101, "tab_hidechattemporarily");
+                var2 = DebouncedValidationProvider.a((byte) 101, "tab_hidechattemporarily");
                 if (null != var2) {
                   ra.tabHidechattemporarily = a.a(var2, -84);
                 }
-                var2 = gg.a((byte) 97, "esc_cancelprivatemessage");
+                var2 = DebouncedValidationProvider.a((byte) 97, "esc_cancelprivatemessage");
                 if (null != var2) {
                   IsaacCipher.escCancelprivatemessage = a.a(var2, -32);
                 }
-                var2 = gg.a((byte) 125, "esc_cancelthisline");
+                var2 = DebouncedValidationProvider.a((byte) 125, "esc_cancelthisline");
                 if (null != var2) {
                   ff.escCancelthisline = a.a(var2, -1);
                 }
-                var2 = gg.a((byte) 119, "privatequickchat_from_x");
+                var2 = DebouncedValidationProvider.a((byte) 119, "privatequickchat_from_x");
                 if (var2 != null) {
                   vh.privatequickchatFromX = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 127, "privatequickchat_to_x");
+                var2 = DebouncedValidationProvider.a((byte) 127, "privatequickchat_to_x");
                 if (var2 != null) {
                   jl.privatequickchatToX = a.a(var2, param1 + 20987);
                 }
-                var2 = gg.a((byte) -104, "privatechat_blankarea_explanation");
+                var2 = DebouncedValidationProvider.a((byte) -104, "privatechat_blankarea_explanation");
                 if (null != var2) {
                   wb.privatechatBlankareaExplanation = a.a(var2, -48);
                 }
-                var2 = gg.a((byte) 94, "publicchat_unavailable_ratedgame");
+                var2 = DebouncedValidationProvider.a((byte) 94, "publicchat_unavailable_ratedgame");
                 if (null != var2) {
                   cl.publicchatUnavailableRatedgame = a.a(var2, param1 + 20970);
                 }
-                var2 = gg.a((byte) 117, "privatechat_friend_offline");
+                var2 = DebouncedValidationProvider.a((byte) 117, "privatechat_friend_offline");
                 if (null != var2) {
                   IterableNodeHashTable.privatechatFriendOffline = a.a(var2, param1 ^ -21023);
                 }
-                var2 = gg.a((byte) -51, "privatechat_friend_notlisted");
+                var2 = DebouncedValidationProvider.a((byte) -51, "privatechat_friend_notlisted");
                 if (null != var2) {
                   tp.privatechatFriendNotlisted = a.a(var2, param1 + 21136);
                 }
-                var2 = gg.a((byte) 95, "chatviewscrolledup");
+                var2 = DebouncedValidationProvider.a((byte) 95, "chatviewscrolledup");
                 if (var2 != null) {
                   NineBallRules.chatviewscrolledup = a.a(var2, -34);
                 }
-                var2 = gg.a((byte) -69, "thisisrunescapeclan");
+                var2 = DebouncedValidationProvider.a((byte) -69, "thisisrunescapeclan");
                 if (null != var2) {
                   rq.thisisrunescapeclan = a.a(var2, param1 ^ 21084);
                 }
-                var2 = gg.a((byte) 114, "thisisrunescapeclan_notowner");
+                var2 = DebouncedValidationProvider.a((byte) 114, "thisisrunescapeclan_notowner");
                 if (var2 != null) {
                   NetworkGameClient.thisisrunescapeclanNotowner = a.a(var2, param1 + 21139);
                 }
-                var2 = gg.a((byte) -53, "runescapeclan");
+                var2 = DebouncedValidationProvider.a((byte) -53, "runescapeclan");
                 if (var2 != null) {
                   th.runescapeclan = a.a(var2, -55);
                 }
-                var2 = gg.a((byte) 105, "rated_membersonly");
+                var2 = DebouncedValidationProvider.a((byte) 105, "rated_membersonly");
                 if (var2 != null) {
                   a.a(var2, param1 + 20958);
                 }
-                var2 = gg.a((byte) 122, "gameopt_membersonly");
+                var2 = DebouncedValidationProvider.a((byte) 122, "gameopt_membersonly");
                 if (var2 != null) {
                   lk.gameoptMembersonly = a.a(var2, -62);
                 }
-                var2 = gg.a((byte) 119, "gameopt_1moreratedgame");
+                var2 = DebouncedValidationProvider.a((byte) 119, "gameopt_1moreratedgame");
                 if (null != var2) {
-                  kb.gameopt1moreratedgame = a.a(var2, param1 + 21004);
+                  TickClock.gameopt1moreratedgame = a.a(var2, param1 + 21004);
                 }
-                var2 = gg.a((byte) 98, "gameopt_moreratedgames");
+                var2 = DebouncedValidationProvider.a((byte) 98, "gameopt_moreratedgames");
                 if (var2 != null) {
                   PotEvent.gameoptMoreratedgames = a.a(var2, -59);
                 }
-                var2 = gg.a((byte) -86, "gameopt_needrating");
+                var2 = DebouncedValidationProvider.a((byte) -86, "gameopt_needrating");
                 if (null != var2) {
                   sm.gameoptNeedrating = a.a(var2, -89);
                 }
-                var2 = gg.a((byte) -65, "gameopt_unratedonly");
+                var2 = DebouncedValidationProvider.a((byte) -65, "gameopt_unratedonly");
                 if (null != var2) {
                   he.gameoptUnratedonly = a.a(var2, param1 + 21136);
                 }
-                var2 = gg.a((byte) -66, "gameopt_notunlocked");
+                var2 = DebouncedValidationProvider.a((byte) -66, "gameopt_notunlocked");
                 if (null != var2) {
                   dk.gameoptNotunlocked = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 105, "gameopt_cannotbecombined1");
+                var2 = DebouncedValidationProvider.a((byte) 105, "gameopt_cannotbecombined1");
                 if (var2 != null) {
-                  ka.gameoptCannotbecombined1 = a.a(var2, 126);
+                  AgeValidator.gameoptCannotbecombined1 = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 94, "gameopt_cannotbecombined2");
+                var2 = DebouncedValidationProvider.a((byte) 94, "gameopt_cannotbecombined2");
                 if (null != var2) {
                   SocketConnector.gameoptCannotbecombined2 = a.a(var2, -49);
                 }
-                var2 = gg.a((byte) 98, "gameopt_playernotmember");
+                var2 = DebouncedValidationProvider.a((byte) 98, "gameopt_playernotmember");
                 if (var2 != null) {
                   dq.gameoptPlayernotmember = a.a(var2, param1 ^ 21085);
                 }
-                var2 = gg.a((byte) -41, "gameopt_younotmember");
+                var2 = DebouncedValidationProvider.a((byte) -41, "gameopt_younotmember");
                 if (var2 != null) {
-                  nr.gameoptYounotmember = a.a(var2, 127);
+                  AccountWelcomePanel.gameoptYounotmember = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -118, "gameopt_playerneedsrating");
+                var2 = DebouncedValidationProvider.a((byte) -118, "gameopt_playerneedsrating");
                 if (null != var2) {
                   jq.gameoptPlayerneedsrating = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -86, "gameopt_youneedrating");
+                var2 = DebouncedValidationProvider.a((byte) -86, "gameopt_youneedrating");
                 if (null != var2) {
                   ld.gameoptYouneedrating = a.a(var2, -93);
                 }
-                var2 = gg.a((byte) -45, "gameopt_playerneedsratedgames");
+                var2 = DebouncedValidationProvider.a((byte) -45, "gameopt_playerneedsratedgames");
                 if (var2 != null) {
                   sm.gameoptPlayerneedsratedgames = a.a(var2, param1 + 21138);
                 }
-                var2 = gg.a((byte) -29, "gameopt_youneedratedgames");
+                var2 = DebouncedValidationProvider.a((byte) -29, "gameopt_youneedratedgames");
                 if (null != var2) {
                   vm.gameoptYouneedratedgames = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -87, "gameopt_playerneeds1ratedgame");
+                var2 = DebouncedValidationProvider.a((byte) -87, "gameopt_playerneeds1ratedgame");
                 if (null != var2) {
                   jd.gameoptPlayerneeds1ratedgame = a.a(var2, param1 ^ 20993);
                 }
-                var2 = gg.a((byte) -119, "gameopt_youneed1ratedgame");
+                var2 = DebouncedValidationProvider.a((byte) -119, "gameopt_youneed1ratedgame");
                 if (null != var2) {
                   rf.gameoptYouneed1ratedgame = a.a(var2, -61);
                 }
-                var2 = gg.a((byte) -32, "gameopt_playerhasntunlocked");
+                var2 = DebouncedValidationProvider.a((byte) -32, "gameopt_playerhasntunlocked");
                 if (null != var2) {
                   en.gameoptPlayerhasntunlocked = a.a(var2, -41);
                 }
-                var2 = gg.a((byte) -106, "gameopt_youhaventunlocked");
+                var2 = DebouncedValidationProvider.a((byte) -106, "gameopt_youhaventunlocked");
                 if (var2 != null) {
                   Pocket.gameoptYouhaventunlocked = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 105, "gameopt_trychanging1");
+                var2 = DebouncedValidationProvider.a((byte) 105, "gameopt_trychanging1");
                 if (null != var2) {
                   ii.gameoptTrychanging1 = a.a(var2, -37);
                 }
-                var2 = gg.a((byte) 94, "gameopt_trychanging2");
+                var2 = DebouncedValidationProvider.a((byte) 94, "gameopt_trychanging2");
                 if (var2 != null) {
                   Quaternion.gameoptTrychanging2 = a.a(var2, param1 + 20890);
                 }
-                var2 = gg.a((byte) -116, "gameopt_needchanging1");
+                var2 = DebouncedValidationProvider.a((byte) -116, "gameopt_needchanging1");
                 if (null != var2) {
                   sf.gameoptNeedchanging1 = a.a(var2, -97);
                 }
-                var2 = gg.a((byte) -43, "gameopt_needchanging2");
+                var2 = DebouncedValidationProvider.a((byte) -43, "gameopt_needchanging2");
                 if (null != var2) {
                   tp.gameoptNeedchanging2 = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 116, "gameopt_mightchange");
+                var2 = DebouncedValidationProvider.a((byte) 116, "gameopt_mightchange");
                 if (var2 != null) {
-                  ke.gameoptMightchange = a.a(var2, -47);
+                  LoginTextValue.gameoptMightchange = a.a(var2, -47);
                 }
-                var2 = gg.a((byte) -102, "gameopt_playersdontqualify");
+                var2 = DebouncedValidationProvider.a((byte) -102, "gameopt_playersdontqualify");
                 if (var2 != null) {
                   fn.gameoptPlayersdontqualify = a.a(var2, param1 + 20919);
                 }
-                var2 = gg.a((byte) -108, "gameopt_playersdontqualify_selectgametab");
+                var2 = DebouncedValidationProvider.a((byte) -108, "gameopt_playersdontqualify_selectgametab");
                 if (var2 != null) {
                   t.gameoptPlayersdontqualifySelectgametab = a.a(var2, param1 + 20885);
                 }
-                var2 = gg.a((byte) -73, "gameopt_unselectedoptions");
+                var2 = DebouncedValidationProvider.a((byte) -73, "gameopt_unselectedoptions");
                 if (null != var2) {
                   ah.gameoptUnselectedoptions = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -123, "gameopt_pleaseselectoption1");
+                var2 = DebouncedValidationProvider.a((byte) -123, "gameopt_pleaseselectoption1");
                 if (null != var2) {
-                  fm.gameoptPleaseselectoption1 = a.a(var2, 124);
+                  ArrayWidgetGroup.gameoptPleaseselectoption1 = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 116, "gameopt_pleaseselectoption2");
+                var2 = DebouncedValidationProvider.a((byte) 116, "gameopt_pleaseselectoption2");
                 if (null != var2) {
-                  ud.gameoptPleaseselectoption2 = a.a(var2, -96);
+                  SingleChildWidget.gameoptPleaseselectoption2 = a.a(var2, -96);
                 }
-                var2 = gg.a((byte) 99, "gameopt_badnumplayers");
+                var2 = DebouncedValidationProvider.a((byte) 99, "gameopt_badnumplayers");
                 if (var2 != null) {
                   aj.gameoptBadnumplayers = a.a(var2, -100);
                 }
-                var2 = gg.a((byte) 124, "gameopt_inviteplayers_or_trychanging1");
+                var2 = DebouncedValidationProvider.a((byte) 124, "gameopt_inviteplayers_or_trychanging1");
                 if (null != var2) {
-                  me.gameoptInviteplayersOrTrychanging1 = a.a(var2, -53);
+                  EmailAvailabilityValidator.gameoptInviteplayersOrTrychanging1 = a.a(var2, -53);
                 }
-                var2 = gg.a((byte) -92, "gameopt_inviteplayers_or_trychanging2");
+                var2 = DebouncedValidationProvider.a((byte) -92, "gameopt_inviteplayers_or_trychanging2");
                 if (var2 != null) {
                   ab.gameoptInviteplayersOrTrychanging2 = a.a(var2, param1 ^ -21097);
                 }
-                var2 = gg.a((byte) -98, "gameopt_novalidcombos");
+                var2 = DebouncedValidationProvider.a((byte) -98, "gameopt_novalidcombos");
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (null != var2) {
                   wc.field_a = a.a(var2, param1 ^ -21098);
                 }
-                var2 = gg.a((byte) 93, "gameopt_pleasetrychanging");
+                var2 = DebouncedValidationProvider.a((byte) 93, "gameopt_pleasetrychanging");
                 if (null != var2) {
                   m.gameoptPleasetrychanging = a.a(var2, -116);
                 }
-                var2 = gg.a((byte) 116, "ra_title");
+                var2 = DebouncedValidationProvider.a((byte) 116, "ra_title");
                 if (var2 != null) {
                   oh.raTitle = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -71, "ra_mutethisplayer");
+                var2 = DebouncedValidationProvider.a((byte) -71, "ra_mutethisplayer");
                 if (var2 != null) {
-                  er.raMutethisplayer = a.a(var2, -23);
+                  DialWidget.raMutethisplayer = a.a(var2, -23);
                 }
-                var2 = gg.a((byte) 122, "ra_suggestmute");
+                var2 = DebouncedValidationProvider.a((byte) 122, "ra_suggestmute");
                 if (null != var2) {
                   tq.raSuggestmute = a.a(var2, -24);
                 }
-                var2 = gg.a((byte) 117, "ra_intro");
+                var2 = DebouncedValidationProvider.a((byte) 117, "ra_intro");
                 if (null != var2) {
                   dq.raIntro = a.a(var2, -6);
                 }
-                var2 = gg.a((byte) -85, "ra_intro_no_name");
+                var2 = DebouncedValidationProvider.a((byte) -85, "ra_intro_no_name");
                 if (null != var2) {
                   th.raIntroNoName = a.a(var2, param1 ^ -21097);
                 }
-                var2 = gg.a((byte) 125, "ra_explanation");
+                var2 = DebouncedValidationProvider.a((byte) 125, "ra_explanation");
                 if (var2 != null) {
                   Ball.raExplanation = a.a(var2, param1 ^ -21104);
                 }
-                var2 = gg.a((byte) -83, "rule_pillar_0");
+                var2 = DebouncedValidationProvider.a((byte) -83, "rule_pillar_0");
                 if (var2 != null) {
                   ShotRecord.rulePillar0 = a.a(var2, -5);
                 }
-                var2 = gg.a((byte) -105, "rule_0_0");
+                var2 = DebouncedValidationProvider.a((byte) -105, "rule_0_0");
                 if (null != var2) {
-                  eq.rule00 = a.a(var2, 126);
+                  DateInputWidget.rule00 = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 111, "rule_0_1");
+                var2 = DebouncedValidationProvider.a((byte) 111, "rule_0_1");
                 if (var2 != null) {
                   ab.rule01 = a.a(var2, -127);
                 }
-                var2 = gg.a((byte) -43, "rule_0_2");
+                var2 = DebouncedValidationProvider.a((byte) -43, "rule_0_2");
                 if (var2 != null) {
                   o.rule02 = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 115, "rule_0_3");
+                var2 = DebouncedValidationProvider.a((byte) 115, "rule_0_3");
                 if (var2 != null) {
-                  ri.rule03 = a.a(var2, -23);
+                  CheckboxWidget.rule03 = a.a(var2, -23);
                 }
-                var2 = gg.a((byte) 98, "rule_0_4");
+                var2 = DebouncedValidationProvider.a((byte) 98, "rule_0_4");
                 if (var2 != null) {
                   jd.rule04 = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 107, "rule_0_5");
+                var2 = DebouncedValidationProvider.a((byte) 107, "rule_0_5");
                 if (var2 != null) {
                   kf.rule05 = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 108, "rule_pillar_1");
+                var2 = DebouncedValidationProvider.a((byte) 108, "rule_pillar_1");
                 if (var2 != null) {
                   qa.rulePillar1 = a.a(var2, -37);
                 }
-                var2 = gg.a((byte) -39, "rule_1_0");
+                var2 = DebouncedValidationProvider.a((byte) -39, "rule_1_0");
                 if (null != var2) {
                   MouseHandler.rule10 = a.a(var2, param1 ^ -21098);
                 }
-                var2 = gg.a((byte) 98, "rule_1_1");
+                var2 = DebouncedValidationProvider.a((byte) 98, "rule_1_1");
                 if (var2 != null) {
-                  hk.rule11 = a.a(var2, param1 + 21137);
+                  NanoTickClock.rule11 = a.a(var2, param1 + 21137);
                 }
-                var2 = gg.a((byte) -67, "rule_1_2");
+                var2 = DebouncedValidationProvider.a((byte) -67, "rule_1_2");
                 if (null != var2) {
                   vq.rule12 = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -108, "rule_1_3");
+                var2 = DebouncedValidationProvider.a((byte) -108, "rule_1_3");
                 if (null != var2) {
-                  sd.rule13 = a.a(var2, 125);
+                  Under13NoticePanel.rule13 = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 110, "rule_1_4");
+                var2 = DebouncedValidationProvider.a((byte) 110, "rule_1_4");
                 if (var2 != null) {
                   p.rule14 = a.a(var2, -56);
                 }
-                var2 = gg.a((byte) -75, "rule_pillar_2");
+                var2 = DebouncedValidationProvider.a((byte) -75, "rule_pillar_2");
                 if (var2 != null) {
                   hd.rulePillar2 = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -54, "rule_2_0");
+                var2 = DebouncedValidationProvider.a((byte) -54, "rule_2_0");
                 if (null != var2) {
                   nm.rule20 = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -93, "rule_2_1");
+                var2 = DebouncedValidationProvider.a((byte) -93, "rule_2_1");
                 if (null != var2) {
                   il.rule21 = a.a(var2, -126);
                 }
-                var2 = gg.a((byte) 115, "rule_2_2");
+                var2 = DebouncedValidationProvider.a((byte) 115, "rule_2_2");
                 if (null != var2) {
                   wc.rule22 = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 125, "createafreeaccount");
+                var2 = DebouncedValidationProvider.a((byte) 125, "createafreeaccount");
                 if (null != var2) {
                   a.a(var2, -46);
                 }
-                var2 = gg.a((byte) 99, "cancel");
+                var2 = DebouncedValidationProvider.a((byte) 99, "cancel");
                 if (null != var2) {
                   be.cancel = a.a(var2, param1 ^ -21098);
                 }
-                var2 = gg.a((byte) 119, "pleaselogintoplay");
+                var2 = DebouncedValidationProvider.a((byte) 119, "pleaselogintoplay");
                 if (null != var2) {
                   a.a(var2, -61);
                 }
-                var2 = gg.a((byte) -30, "pleaselogin");
+                var2 = DebouncedValidationProvider.a((byte) -30, "pleaselogin");
                 if (null != var2) {
                   pl.pleaselogin = a.a(var2, param1 + 20910);
                 }
-                var2 = gg.a((byte) 108, "pleaselogin_member");
+                var2 = DebouncedValidationProvider.a((byte) 108, "pleaselogin_member");
                 if (null != var2) {
                   jc.pleaseloginMember = a.a(var2, param1 + 21138);
                 }
-                var2 = gg.a((byte) 114, "invaliduserorpass");
+                var2 = DebouncedValidationProvider.a((byte) 114, "invaliduserorpass");
                 if (var2 != null) {
                   eh.invaliduserorpass = a.a(var2, -108);
                 }
-                var2 = gg.a((byte) 107, "pleasetryagain");
+                var2 = DebouncedValidationProvider.a((byte) 107, "pleasetryagain");
                 if (null != var2) {
-                  ir.pleasetryagain = a.a(var2, 126);
+                  BufferedFile.pleasetryagain = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 97, "pleasereenterpass");
+                var2 = DebouncedValidationProvider.a((byte) 97, "pleasereenterpass");
                 if (null != var2) {
                   a.a(var2, param1 + 20929);
                 }
-                var2 = gg.a((byte) 110, "playfreeversion");
+                var2 = DebouncedValidationProvider.a((byte) 110, "playfreeversion");
                 if (null != var2) {
                   lg.playfreeversion = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 103, "reloadgame");
+                var2 = DebouncedValidationProvider.a((byte) 103, "reloadgame");
                 if (null != var2) {
-                  hb.reloadgame = a.a(var2, 125);
+                  NodeHashTableIterator.reloadgame = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -95, "toserverlist");
+                var2 = DebouncedValidationProvider.a((byte) -95, "toserverlist");
                 if (null != var2) {
                   o.toserverlist = a.a(var2, -84);
                 }
-                var2 = gg.a((byte) 97, "tocustomersupport");
+                var2 = DebouncedValidationProvider.a((byte) 97, "tocustomersupport");
                 if (var2 != null) {
                   e.tocustomersupport = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -44, "changedisplayname");
+                var2 = DebouncedValidationProvider.a((byte) -44, "changedisplayname");
                 if (null != var2) {
                   lg.changedisplayname = a.a(var2, -40);
                 }
-                var2 = gg.a((byte) 94, "returntohomepage");
+                var2 = DebouncedValidationProvider.a((byte) 94, "returntohomepage");
                 if (null != var2) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -109, "justplay");
+                var2 = DebouncedValidationProvider.a((byte) -109, "justplay");
                 if (var2 != null) {
-                  va.justplay = a.a(var2, 8);
+                  MultiHandleSliderWidget.justplay = a.a(var2, 8);
                 }
-                var2 = gg.a((byte) 109, "justplay_excl");
+                var2 = DebouncedValidationProvider.a((byte) 109, "justplay_excl");
                 if (null != var2) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 101, "login");
+                var2 = DebouncedValidationProvider.a((byte) 101, "login");
                 if (null != var2) {
                   sa.login = a.a(var2, 1);
                 }
-                var2 = gg.a((byte) 114, "goback");
+                var2 = DebouncedValidationProvider.a((byte) 114, "goback");
                 if (var2 != null) {
-                  lc.goback = a.a(var2, 123);
+                  ValidationIconWidget.goback = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 125, "otheroptions");
+                var2 = DebouncedValidationProvider.a((byte) 125, "otheroptions");
                 if (null != var2) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 114, "proceed");
+                var2 = DebouncedValidationProvider.a((byte) 114, "proceed");
                 if (null != var2) {
                   a.a(var2, -106);
                 }
-                var2 = gg.a((byte) -86, "connectingtoserver");
+                var2 = DebouncedValidationProvider.a((byte) -86, "connectingtoserver");
                 if (var2 != null) {
                   a.a(var2, param1 + 20992);
                 }
-                var2 = gg.a((byte) -38, "pleasewait");
+                var2 = DebouncedValidationProvider.a((byte) -38, "pleasewait");
                 if (var2 != null) {
                   a.a(var2, 3);
                 }
-                var2 = gg.a((byte) -49, "logging_in");
+                var2 = DebouncedValidationProvider.a((byte) -49, "logging_in");
                 if (var2 != null) {
-                  gg.loggingIn = a.a(var2, 126);
+                  DebouncedValidationProvider.loggingIn = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 116, "reconnect");
+                var2 = DebouncedValidationProvider.a((byte) 116, "reconnect");
                 if (var2 != null) {
                   a.a(var2, -81);
                 }
-                var2 = gg.a((byte) -28, "backtoerror");
+                var2 = DebouncedValidationProvider.a((byte) -28, "backtoerror");
                 if (null != var2) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 101, "pleasecheckinternet");
+                var2 = DebouncedValidationProvider.a((byte) 101, "pleasecheckinternet");
                 if (null != var2) {
                   a.a(var2, -108);
                 }
-                var2 = gg.a((byte) 115, "attemptingtoreconnect");
+                var2 = DebouncedValidationProvider.a((byte) 115, "attemptingtoreconnect");
                 if (var2 != null) {
                   a.a(var2, -60);
                 }
-                var2 = gg.a((byte) 118, "connectionlost_reconnecting");
+                var2 = DebouncedValidationProvider.a((byte) 118, "connectionlost_reconnecting");
                 if (var2 != null) {
                   na.connectionlostReconnecting = a.a(var2, -25);
                 }
-                var2 = gg.a((byte) -114, "connectionlost_withreason");
+                var2 = DebouncedValidationProvider.a((byte) -114, "connectionlost_withreason");
                 if (var2 != null) {
-                  lq.connectionlostWithreason = a.a(var2, -65);
+                  DialogLayer.connectionlostWithreason = a.a(var2, -65);
                 }
-                var2 = gg.a((byte) -86, "passwordverificationrequired");
+                var2 = DebouncedValidationProvider.a((byte) -86, "passwordverificationrequired");
                 if (null != var2) {
                   a.a(var2, -128);
                 }
-                var2 = gg.a((byte) -93, "invalidpass");
+                var2 = DebouncedValidationProvider.a((byte) -93, "invalidpass");
                 if (var2 != null) {
                   ng.invalidpass = a.a(var2, -23);
                 }
-                var2 = gg.a((byte) 123, "retry");
+                var2 = DebouncedValidationProvider.a((byte) 123, "retry");
                 if (null != var2) {
                   ap.retry = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 103, "back");
+                var2 = DebouncedValidationProvider.a((byte) 103, "back");
                 if (null != var2) {
-                  jk.back = a.a(var2, -80);
+                  CueStick.back = a.a(var2, -80);
                 }
-                var2 = gg.a((byte) -65, "exitfullscreenmode");
+                var2 = DebouncedValidationProvider.a((byte) -65, "exitfullscreenmode");
                 if (null != var2) {
                   a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -125, "quittowebsite");
+                var2 = DebouncedValidationProvider.a((byte) -125, "quittowebsite");
                 if (null != var2) {
                   dj.quittowebsite = a.a(var2, param1 + 21140);
                 }
-                var2 = gg.a((byte) 126, "connectionrestored");
+                var2 = DebouncedValidationProvider.a((byte) 126, "connectionrestored");
                 if (null != var2) {
                   ag.connectionrestored = a.a(var2, param1 + 21136);
                 }
-                var2 = gg.a((byte) 107, "warning_ifyouquit");
+                var2 = DebouncedValidationProvider.a((byte) 107, "warning_ifyouquit");
                 if (var2 != null) {
                   wg.warningIfyouquit = a.a(var2, 13);
                 }
-                var2 = gg.a((byte) 122, "warning_ifyouquitorleavepage");
+                var2 = DebouncedValidationProvider.a((byte) 122, "warning_ifyouquitorleavepage");
                 if (null != var2) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -109, "resubscribe_withoutlosing_fs");
+                var2 = DebouncedValidationProvider.a((byte) -109, "resubscribe_withoutlosing_fs");
                 if (var2 != null) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -50, "resubscribe_withoutlosing");
+                var2 = DebouncedValidationProvider.a((byte) -50, "resubscribe_withoutlosing");
                 if (null != var2) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 106, "customersupport_withoutlosing_fs");
+                var2 = DebouncedValidationProvider.a((byte) 106, "customersupport_withoutlosing_fs");
                 if (null != var2) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -72, "customersupport_withoutlosing");
+                var2 = DebouncedValidationProvider.a((byte) -72, "customersupport_withoutlosing");
                 if (var2 != null) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -80, "js5help_withoutlosing_fs");
+                var2 = DebouncedValidationProvider.a((byte) -80, "js5help_withoutlosing_fs");
                 if (null != var2) {
                   a.a(var2, param1 + 21138);
                 }
-                var2 = gg.a((byte) 112, "js5help_withoutlosing");
+                var2 = DebouncedValidationProvider.a((byte) 112, "js5help_withoutlosing");
                 if (var2 != null) {
                   a.a(var2, param1 ^ -21100);
                 }
-                var2 = gg.a((byte) -88, "checkinternet_withoutlosing_fs");
+                var2 = DebouncedValidationProvider.a((byte) -88, "checkinternet_withoutlosing_fs");
                 if (var2 != null) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -48, "checkinternet_withoutlosing");
+                var2 = DebouncedValidationProvider.a((byte) -48, "checkinternet_withoutlosing");
                 if (var2 != null) {
                   a.a(var2, -78);
                 }
-                var2 = gg.a((byte) -81, "create_intro");
+                var2 = DebouncedValidationProvider.a((byte) -81, "create_intro");
                 if (var2 != null) {
                   a.a(var2, param1 + 20986);
                 }
-                var2 = gg.a((byte) 104, "create_sameaccounttip_unnamed");
+                var2 = DebouncedValidationProvider.a((byte) 104, "create_sameaccounttip_unnamed");
                 if (null != var2) {
                   a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 112, "dateofbirthprompt");
+                var2 = DebouncedValidationProvider.a((byte) 112, "dateofbirthprompt");
                 if (null != var2) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 121, "fetchingcountrylist");
+                var2 = DebouncedValidationProvider.a((byte) 121, "fetchingcountrylist");
                 if (null != var2) {
                   a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 127, "countryprompt");
+                var2 = DebouncedValidationProvider.a((byte) 127, "countryprompt");
                 if (null != var2) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -122, "countrylisterror");
+                var2 = DebouncedValidationProvider.a((byte) -122, "countrylisterror");
                 if (null != var2) {
                   a.a(var2, param1 ^ 21043);
                 }
-                var2 = gg.a((byte) 119, "theonlypersonalquestions");
+                var2 = DebouncedValidationProvider.a((byte) 119, "theonlypersonalquestions");
                 if (var2 != null) {
                   a.a(var2, -26);
                 }
-                var2 = gg.a((byte) 110, "create_submittingdata");
+                var2 = DebouncedValidationProvider.a((byte) 110, "create_submittingdata");
                 if (var2 != null) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 115, "check");
+                var2 = DebouncedValidationProvider.a((byte) 115, "check");
                 if (var2 != null) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -76, "create_pleasechooseausername");
+                var2 = DebouncedValidationProvider.a((byte) -76, "create_pleasechooseausername");
                 if (null != var2) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 116, "create_usernameblurb");
+                var2 = DebouncedValidationProvider.a((byte) 116, "create_usernameblurb");
                 if (var2 != null) {
                   a.a(var2, -85);
                 }
-                var2 = gg.a((byte) -110, "checkingavailability");
+                var2 = DebouncedValidationProvider.a((byte) -110, "checkingavailability");
                 if (var2 != null) {
                   a.a(var2, -6);
                 }
-                var2 = gg.a((byte) 104, "checking");
+                var2 = DebouncedValidationProvider.a((byte) 104, "checking");
                 if (var2 != null) {
                   oi.checking = a.a(var2, 10);
                 }
-                var2 = gg.a((byte) 96, "create_namealreadytaken");
+                var2 = DebouncedValidationProvider.a((byte) 96, "create_namealreadytaken");
                 if (var2 != null) {
                   a.a(var2, 127);
                 }
                 if (param1 != -21013) {
                   TranslatedUiText.a((di) null, -20);
                 }
-                var2 = gg.a((byte) -70, "create_sameaccounttip_named");
+                var2 = DebouncedValidationProvider.a((byte) -70, "create_sameaccounttip_named");
                 if (var2 != null) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 125, "create_nosuggestions");
+                var2 = DebouncedValidationProvider.a((byte) 125, "create_nosuggestions");
                 if (null != var2) {
                   a.a(var2, -97);
                 }
-                var2 = gg.a((byte) -103, "create_alternativelygoback");
+                var2 = DebouncedValidationProvider.a((byte) -103, "create_alternativelygoback");
                 if (null != var2) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 105, "create_available");
+                var2 = DebouncedValidationProvider.a((byte) 105, "create_available");
                 if (var2 != null) {
                   a.a(var2, param1 ^ 21107);
                 }
-                var2 = gg.a((byte) -41, "create_willnowshowtermsandconditions");
+                var2 = DebouncedValidationProvider.a((byte) -41, "create_willnowshowtermsandconditions");
                 if (null != var2) {
                   a.a(var2, -26);
                 }
-                var2 = gg.a((byte) 105, "fetchingterms");
+                var2 = DebouncedValidationProvider.a((byte) 105, "fetchingterms");
                 if (var2 != null) {
                   a.a(var2, param1 + 21140);
                 }
-                var2 = gg.a((byte) -79, "termserror");
+                var2 = DebouncedValidationProvider.a((byte) -79, "termserror");
                 if (var2 != null) {
                   a.a(var2, param1 + 20895);
                 }
-                var2 = gg.a((byte) -34, "create_iagree");
+                var2 = DebouncedValidationProvider.a((byte) -34, "create_iagree");
                 if (var2 != null) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -31, "create_idisagree");
+                var2 = DebouncedValidationProvider.a((byte) -31, "create_idisagree");
                 if (null != var2) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -94, "create_pleasescrolldowntoaccept");
+                var2 = DebouncedValidationProvider.a((byte) -94, "create_pleasescrolldowntoaccept");
                 if (var2 != null) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -127, "create_linkaddress");
+                var2 = DebouncedValidationProvider.a((byte) -127, "create_linkaddress");
                 if (null != var2) {
                   a.a(var2, -89);
                 }
-                var2 = gg.a((byte) 123, "openinpopupwindow");
+                var2 = DebouncedValidationProvider.a((byte) 123, "openinpopupwindow");
                 if (var2 != null) {
                   cn.openinpopupwindow = a.a(var2, param1 + 21138);
                 }
-                var2 = gg.a((byte) -82, "create");
+                var2 = DebouncedValidationProvider.a((byte) -82, "create");
                 if (var2 != null) {
                   SpriteState.create = a.a(var2, -59);
                 }
-                var2 = gg.a((byte) 122, "create_pleasechooseapassword");
+                var2 = DebouncedValidationProvider.a((byte) 122, "create_pleasechooseapassword");
                 if (var2 != null) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 107, "create_passwordblurb");
+                var2 = DebouncedValidationProvider.a((byte) 107, "create_passwordblurb");
                 if (var2 != null) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 93, "create_nevergivepassword");
+                var2 = DebouncedValidationProvider.a((byte) 93, "create_nevergivepassword");
                 if (null != var2) {
                   a.a(var2, -57);
                 }
-                var2 = gg.a((byte) -110, "creatingyouraccount");
+                var2 = DebouncedValidationProvider.a((byte) -110, "creatingyouraccount");
                 if (var2 != null) {
                   tk.creatingyouraccount = a.a(var2, param1 ^ -21097);
                 }
-                var2 = gg.a((byte) -61, "create_youmustaccept");
+                var2 = DebouncedValidationProvider.a((byte) -61, "create_youmustaccept");
                 if (var2 != null) {
                   a.a(var2, param1 + 21140);
                 }
-                var2 = gg.a((byte) 109, "create_passwordsdifferent");
+                var2 = DebouncedValidationProvider.a((byte) 109, "create_passwordsdifferent");
                 if (null != var2) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 120, "create_success");
+                var2 = DebouncedValidationProvider.a((byte) 120, "create_success");
                 if (var2 != null) {
                   a.a(var2, param1 + 20913);
                 }
-                var2 = gg.a((byte) -108, "day");
+                var2 = DebouncedValidationProvider.a((byte) -108, "day");
                 if (null != var2) {
                   dp.day = a.a(var2, param1 ^ -21104);
                 }
-                var2 = gg.a((byte) 102, "month");
+                var2 = DebouncedValidationProvider.a((byte) 102, "month");
                 if (var2 != null) {
                   pc.month = a.a(var2, -121);
                 }
-                var2 = gg.a((byte) -85, "year");
+                var2 = DebouncedValidationProvider.a((byte) -85, "year");
                 if (var2 != null) {
                   bb.year = a.a(var2, -21);
                 }
-                var2 = gg.a((byte) 113, "monthnames,0");
+                var2 = DebouncedValidationProvider.a((byte) 113, "monthnames,0");
                 if (null != var2) {
                   TikiTableScene.monthnames[0] = a.a(var2, -43);
                 }
-                var2 = gg.a((byte) -85, "monthnames,1");
+                var2 = DebouncedValidationProvider.a((byte) -85, "monthnames,1");
                 if (null != var2) {
                   TikiTableScene.monthnames[1] = a.a(var2, param1 + 21139);
                 }
-                var2 = gg.a((byte) 93, "monthnames,2");
+                var2 = DebouncedValidationProvider.a((byte) 93, "monthnames,2");
                 if (null != var2) {
                   TikiTableScene.monthnames[2] = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -103, "monthnames,3");
+                var2 = DebouncedValidationProvider.a((byte) -103, "monthnames,3");
                 if (var2 != null) {
                   TikiTableScene.monthnames[3] = a.a(var2, -98);
                 }
-                var2 = gg.a((byte) 101, "monthnames,4");
+                var2 = DebouncedValidationProvider.a((byte) 101, "monthnames,4");
                 if (var2 != null) {
                   TikiTableScene.monthnames[4] = a.a(var2, -60);
                 }
-                var2 = gg.a((byte) -27, "monthnames,5");
+                var2 = DebouncedValidationProvider.a((byte) -27, "monthnames,5");
                 if (var2 != null) {
                   TikiTableScene.monthnames[5] = a.a(var2, param1 + 20939);
                 }
-                var2 = gg.a((byte) 98, "monthnames,6");
+                var2 = DebouncedValidationProvider.a((byte) 98, "monthnames,6");
                 if (null != var2) {
                   TikiTableScene.monthnames[6] = a.a(var2, -106);
                 }
-                var2 = gg.a((byte) 114, "monthnames,7");
+                var2 = DebouncedValidationProvider.a((byte) 114, "monthnames,7");
                 if (null != var2) {
                   TikiTableScene.monthnames[7] = a.a(var2, -54);
                 }
-                var2 = gg.a((byte) 94, "monthnames,8");
+                var2 = DebouncedValidationProvider.a((byte) 94, "monthnames,8");
                 if (var2 != null) {
                   TikiTableScene.monthnames[8] = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -30, "monthnames,9");
+                var2 = DebouncedValidationProvider.a((byte) -30, "monthnames,9");
                 if (null != var2) {
                   TikiTableScene.monthnames[9] = a.a(var2, -119);
                 }
-                var2 = gg.a((byte) -86, "monthnames,10");
+                var2 = DebouncedValidationProvider.a((byte) -86, "monthnames,10");
                 if (null != var2) {
                   TikiTableScene.monthnames[10] = a.a(var2, cq.a(param1, 21071));
                 }
-                var2 = gg.a((byte) -42, "monthnames,11");
+                var2 = DebouncedValidationProvider.a((byte) -42, "monthnames,11");
                 if (null != var2) {
                   TikiTableScene.monthnames[11] = a.a(var2, -109);
                 }
-                var2 = gg.a((byte) -61, "create_welcome");
+                var2 = DebouncedValidationProvider.a((byte) -61, "create_welcome");
                 if (var2 != null) {
                   vm.createWelcome = a.a(var2, param1 + 21137);
                 }
-                var2 = gg.a((byte) -127, "create_u13_welcome");
+                var2 = DebouncedValidationProvider.a((byte) -127, "create_u13_welcome");
                 if (var2 != null) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -115, "create_createanaccount");
+                var2 = DebouncedValidationProvider.a((byte) -115, "create_createanaccount");
                 if (null != var2) {
                   ad.createCreateanaccount = a.a(var2, param1 + 20978);
                 }
-                var2 = gg.a((byte) 107, "create_username");
+                var2 = DebouncedValidationProvider.a((byte) 107, "create_username");
                 if (var2 != null) {
                   a.a(var2, -127);
                 }
-                var2 = gg.a((byte) 107, "create_displayname");
+                var2 = DebouncedValidationProvider.a((byte) 107, "create_displayname");
                 if (null != var2) {
                   KillerBallSkin.createDisplayname = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 124, "create_password");
+                var2 = DebouncedValidationProvider.a((byte) 124, "create_password");
                 if (null != var2) {
                   PolarBallSkin.createPassword = a.a(var2, param1 + 20909);
                 }
-                var2 = gg.a((byte) 111, "create_password_confirm");
+                var2 = DebouncedValidationProvider.a((byte) 111, "create_password_confirm");
                 if (null != var2) {
                   e.createPasswordConfirm = a.a(var2, -64);
                 }
-                var2 = gg.a((byte) 114, "create_email");
+                var2 = DebouncedValidationProvider.a((byte) 114, "create_email");
                 if (null != var2) {
                   ng.createEmail = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -42, "create_email_confirm");
+                var2 = DebouncedValidationProvider.a((byte) -42, "create_email_confirm");
                 if (null != var2) {
                   lo.createEmailConfirm = a.a(var2, 15);
                 }
-                var2 = gg.a((byte) 123, "create_age");
+                var2 = DebouncedValidationProvider.a((byte) 123, "create_age");
                 if (null != var2) {
-                  g.createAge = a.a(var2, -123);
+                  MusicPatch.createAge = a.a(var2, -123);
                 }
-                var2 = gg.a((byte) -109, "create_u13_email");
+                var2 = DebouncedValidationProvider.a((byte) -109, "create_u13_email");
                 if (null != var2) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -49, "create_u13_email_confirm");
+                var2 = DebouncedValidationProvider.a((byte) -49, "create_u13_email_confirm");
                 if (var2 != null) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 116, "create_dob");
+                var2 = DebouncedValidationProvider.a((byte) 116, "create_dob");
                 if (null != var2) {
                   a.a(var2, -57);
                 }
-                var2 = gg.a((byte) 121, "create_country");
+                var2 = DebouncedValidationProvider.a((byte) 121, "create_country");
                 if (var2 != null) {
                   a.a(var2, -60);
                 }
-                var2 = gg.a((byte) 102, "create_alternatives_header");
+                var2 = DebouncedValidationProvider.a((byte) 102, "create_alternatives_header");
                 if (var2 != null) {
                   a.a(var2, -77);
                 }
-                var2 = gg.a((byte) -73, "create_alternatives_select");
+                var2 = DebouncedValidationProvider.a((byte) -73, "create_alternatives_select");
                 if (var2 != null) {
                   a.a(var2, param1 + 21024);
                 }
-                var2 = gg.a((byte) 103, "create_suggestions");
+                var2 = DebouncedValidationProvider.a((byte) 103, "create_suggestions");
                 if (var2 != null) {
                   oc.createSuggestions = a.a(var2, -27);
                 }
-                var2 = gg.a((byte) 121, "create_more_suggestions");
+                var2 = DebouncedValidationProvider.a((byte) 121, "create_more_suggestions");
                 if (var2 != null) {
                   be.createMoreSuggestions = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -48, "create_select_alternative");
+                var2 = DebouncedValidationProvider.a((byte) -48, "create_select_alternative");
                 if (null != var2) {
                   ab.createSelectAlternative = a.a(var2, param1 ^ -21099);
                 }
-                var2 = gg.a((byte) -57, "create_optin_news");
+                var2 = DebouncedValidationProvider.a((byte) -57, "create_optin_news");
                 if (null != var2) {
                   ab.createOptinNews = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 127, "create_agreeterms");
+                var2 = DebouncedValidationProvider.a((byte) 127, "create_agreeterms");
                 if (var2 != null) {
                   lh.createAgreeterms = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 124, "create_u13terms");
+                var2 = DebouncedValidationProvider.a((byte) 124, "create_u13terms");
                 if (var2 != null) {
-                  hb.createU13terms = a.a(var2, param1 ^ -21100);
+                  NodeHashTableIterator.createU13terms = a.a(var2, param1 ^ -21100);
                 }
-                var2 = gg.a((byte) 105, "login_username_email");
+                var2 = DebouncedValidationProvider.a((byte) 105, "login_username_email");
                 if (null != var2) {
                   vi.loginUsernameEmail = a.a(var2, -124);
                 }
-                var2 = gg.a((byte) -36, "login_username");
+                var2 = DebouncedValidationProvider.a((byte) -36, "login_username");
                 if (null != var2) {
                   qp.loginUsername = a.a(var2, -102);
                 }
-                var2 = gg.a((byte) -86, "login_email");
+                var2 = DebouncedValidationProvider.a((byte) -86, "login_email");
                 if (null != var2) {
                   wm.loginEmail = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -89, "login_username_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) -89, "login_username_tooltip");
                 if (var2 != null) {
                   pn.loginUsernameTooltip = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -45, "login_password_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) -45, "login_password_tooltip");
                 if (var2 != null) {
                   a.a(var2, 8);
                 }
-                var2 = gg.a((byte) -99, "login_login_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) -99, "login_login_tooltip");
                 if (null != var2) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -115, "login_create_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) -115, "login_create_tooltip");
                 if (null != var2) {
                   fc.loginCreateTooltip = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 107, "login_justplay_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) 107, "login_justplay_tooltip");
                 if (var2 != null) {
                   lh.loginJustplayTooltip = a.a(var2, -63);
                 }
-                var2 = gg.a((byte) 103, "login_back_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) 103, "login_back_tooltip");
                 if (null != var2) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 127, "login_no_displayname");
+                var2 = DebouncedValidationProvider.a((byte) 127, "login_no_displayname");
                 if (var2 != null) {
                   ij.loginNoDisplayname = a.a(var2, -118);
                 }
-                var2 = gg.a((byte) 103, "create_username_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) 103, "create_username_tooltip");
                 if (var2 != null) {
                   a.a(var2, -125);
                 }
-                var2 = gg.a((byte) -83, "create_username_hint");
+                var2 = DebouncedValidationProvider.a((byte) -83, "create_username_hint");
                 if (null != var2) {
                   a.a(var2, -107);
                 }
-                var2 = gg.a((byte) 115, "create_displayname_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) 115, "create_displayname_tooltip");
                 if (null != var2) {
                   sg.createDisplaynameTooltip = a.a(var2, param1 + 21139);
                 }
-                var2 = gg.a((byte) 93, "create_displayname_hint");
+                var2 = DebouncedValidationProvider.a((byte) 93, "create_displayname_hint");
                 if (var2 != null) {
                   se.createDisplaynameHint = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 103, "create_password_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) 103, "create_password_tooltip");
                 if (null != var2) {
                   kc.createPasswordTooltip = a.a(var2, param1 + 21140);
                 }
-                var2 = gg.a((byte) -54, "create_password_hint");
+                var2 = DebouncedValidationProvider.a((byte) -54, "create_password_hint");
                 if (var2 != null) {
                   df.createPasswordHint = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -125, "create_password_confirm_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) -125, "create_password_confirm_tooltip");
                 if (var2 != null) {
                   ii.createPasswordConfirmTooltip = a.a(var2, param1 + 20969);
                 }
-                var2 = gg.a((byte) -99, "create_email_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) -99, "create_email_tooltip");
                 if (var2 != null) {
-                  ri.createEmailTooltip = a.a(var2, -8);
+                  CheckboxWidget.createEmailTooltip = a.a(var2, -8);
                 }
-                var2 = gg.a((byte) -58, "create_email_confirm_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) -58, "create_email_confirm_tooltip");
                 if (null != var2) {
                   wp.createEmailConfirmTooltip = a.a(var2, param1 + 21140);
                 }
-                var2 = gg.a((byte) 126, "create_age_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) 126, "create_age_tooltip");
                 if (var2 != null) {
                   PoolMatchController.createAgeTooltip = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -107, "create_optin_news_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) -107, "create_optin_news_tooltip");
                 if (var2 != null) {
-                  ui.createOptinNewsTooltip = a.a(var2, 126);
+                  LoginForm.createOptinNewsTooltip = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 101, "create_u13_email_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) 101, "create_u13_email_tooltip");
                 if (null != var2) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -76, "create_u13_email_confirm_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) -76, "create_u13_email_confirm_tooltip");
                 if (var2 != null) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 112, "create_dob_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) 112, "create_dob_tooltip");
                 if (var2 != null) {
                   a.a(var2, param1 + 20912);
                 }
-                var2 = gg.a((byte) -82, "create_country_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) -82, "create_country_tooltip");
                 if (null != var2) {
                   a.a(var2, -31);
                 }
-                var2 = gg.a((byte) -75, "create_optin_tooltip");
+                var2 = DebouncedValidationProvider.a((byte) -75, "create_optin_tooltip");
                 if (null != var2) {
                   a.a(var2, param1 ^ 21042);
                 }
-                var2 = gg.a((byte) 100, "create_continue");
+                var2 = DebouncedValidationProvider.a((byte) 100, "create_continue");
                 if (var2 != null) {
                   a.a(var2, -36);
                 }
-                var2 = gg.a((byte) 120, "create_username_unavailable");
+                var2 = DebouncedValidationProvider.a((byte) 120, "create_username_unavailable");
                 if (var2 != null) {
-                  gi.createUsernameUnavailable = a.a(var2, -67);
+                  TextHotspotRegion.createUsernameUnavailable = a.a(var2, -67);
                 }
-                var2 = gg.a((byte) -112, "create_username_available");
+                var2 = DebouncedValidationProvider.a((byte) -112, "create_username_available");
                 if (null != var2) {
                   lb.createUsernameAvailable = a.a(var2, param1 + 20924);
                 }
-                var2 = gg.a((byte) -39, "create_alert_namelength");
+                var2 = DebouncedValidationProvider.a((byte) -39, "create_alert_namelength");
                 if (null != var2) {
                   gp.createAlertNamelength = a.a(var2, -103);
                 }
-                var2 = gg.a((byte) -41, "create_alert_namechars");
+                var2 = DebouncedValidationProvider.a((byte) -41, "create_alert_namechars");
                 if (var2 != null) {
-                  iq.createAlertNamechars = a.a(var2, param1 + 20950);
+                  RasterBuffer.createAlertNamechars = a.a(var2, param1 + 20950);
                 }
-                var2 = gg.a((byte) 107, "create_alert_nameleadingspace");
+                var2 = DebouncedValidationProvider.a((byte) 107, "create_alert_nameleadingspace");
                 if (null != var2) {
                   lg.createAlertNameleadingspace = a.a(var2, -90);
                 }
-                var2 = gg.a((byte) -40, "create_alert_doublespace");
+                var2 = DebouncedValidationProvider.a((byte) -40, "create_alert_doublespace");
                 if (null != var2) {
                   oh.createAlertDoublespace = a.a(var2, -11);
                 }
-                var2 = gg.a((byte) -27, "create_alert_passchars");
+                var2 = DebouncedValidationProvider.a((byte) -27, "create_alert_passchars");
                 if (var2 != null) {
                   IterableNodeHashTable.createAlertPasschars = a.a(var2, param1 ^ 21092);
                 }
-                var2 = gg.a((byte) -122, "create_alert_passrepeated");
+                var2 = DebouncedValidationProvider.a((byte) -122, "create_alert_passrepeated");
                 if (null != var2) {
                   lh.createAlertPassrepeated = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 114, "create_alert_passlength");
+                var2 = DebouncedValidationProvider.a((byte) 114, "create_alert_passlength");
                 if (null != var2) {
                   uq.createAlertPasslength = a.a(var2, param1 + 21137);
                 }
-                var2 = gg.a((byte) 116, "create_alert_passcontainsname");
+                var2 = DebouncedValidationProvider.a((byte) 116, "create_alert_passcontainsname");
                 if (null != var2) {
                   field_o = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 114, "create_alert_passcontainsemail");
+                var2 = DebouncedValidationProvider.a((byte) 114, "create_alert_passcontainsemail");
                 if (var2 != null) {
                   l.createAlertPasscontainsemail = a.a(var2, -46);
                 }
-                var2 = gg.a((byte) 102, "create_alert_passcontainsname_partial");
+                var2 = DebouncedValidationProvider.a((byte) 102, "create_alert_passcontainsname_partial");
                 if (null != var2) {
-                  ka.createAlertPasscontainsnamePartial = a.a(var2, -26);
+                  AgeValidator.createAlertPasscontainsnamePartial = a.a(var2, -26);
                 }
-                var2 = gg.a((byte) 99, "create_alert_checkname");
+                var2 = DebouncedValidationProvider.a((byte) 99, "create_alert_checkname");
                 if (var2 != null) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 106, "create_alert_invalidemail");
+                var2 = DebouncedValidationProvider.a((byte) 106, "create_alert_invalidemail");
                 if (null != var2) {
                   fr.createAlertInvalidemail = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -127, "create_alert_email_unavailable");
+                var2 = DebouncedValidationProvider.a((byte) -127, "create_alert_email_unavailable");
                 if (var2 != null) {
                   Quaternion.createAlertEmailUnavailable = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 97, "create_alert_invaliddate");
+                var2 = DebouncedValidationProvider.a((byte) 97, "create_alert_invaliddate");
                 if (var2 != null) {
                   ij.createAlertInvaliddate = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -49, "create_alert_invalidage");
+                var2 = DebouncedValidationProvider.a((byte) -49, "create_alert_invalidage");
                 if (null != var2) {
                   sg.createAlertInvalidage = a.a(var2, param1 + 21138);
                 }
-                var2 = gg.a((byte) 110, "create_alert_yearrange");
+                var2 = DebouncedValidationProvider.a((byte) 110, "create_alert_yearrange");
                 if (var2 != null) {
                   ej.createAlertYearrange = a.a(var2, param1 + 21138);
                 }
-                var2 = gg.a((byte) -103, "create_alert_mismatch");
+                var2 = DebouncedValidationProvider.a((byte) -103, "create_alert_mismatch");
                 if (null != var2) {
                   rk.createAlertMismatch = a.a(var2, 12);
                 }
-                var2 = gg.a((byte) 127, "create_passwordvalid");
+                var2 = DebouncedValidationProvider.a((byte) 127, "create_passwordvalid");
                 if (null != var2) {
-                  hb.createPasswordvalid = a.a(var2, 124);
+                  NodeHashTableIterator.createPasswordvalid = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 110, "create_emailvalid");
+                var2 = DebouncedValidationProvider.a((byte) 110, "create_emailvalid");
                 if (null != var2) {
-                  hb.createEmailvalid = a.a(var2, -34);
+                  NodeHashTableIterator.createEmailvalid = a.a(var2, -34);
                 }
-                var2 = gg.a((byte) -71, "create_account_success");
+                var2 = DebouncedValidationProvider.a((byte) -71, "create_account_success");
                 if (var2 != null) {
-                  ud.createAccountSuccess = a.a(var2, -13);
+                  SingleChildWidget.createAccountSuccess = a.a(var2, -13);
                 }
-                var2 = gg.a((byte) 113, "invalid_name");
+                var2 = DebouncedValidationProvider.a((byte) 113, "invalid_name");
                 if (var2 != null) {
                   p.invalidName = a.a(var2, param1 ^ -21099);
                 }
-                var2 = gg.a((byte) -116, "cannot_add_yourself");
+                var2 = DebouncedValidationProvider.a((byte) -116, "cannot_add_yourself");
                 if (null != var2) {
                   fn.cannotAddYourself = a.a(var2, param1 + 20894);
                 }
-                var2 = gg.a((byte) -62, "unable_to_add_friend");
+                var2 = DebouncedValidationProvider.a((byte) -62, "unable_to_add_friend");
                 if (var2 != null) {
-                  ka.unableToAddFriend = a.a(var2, -58);
+                  AgeValidator.unableToAddFriend = a.a(var2, -58);
                 }
-                var2 = gg.a((byte) 110, "unable_to_add_ignore");
+                var2 = DebouncedValidationProvider.a((byte) 110, "unable_to_add_ignore");
                 if (var2 != null) {
                   rl.unableToAddIgnore = a.a(var2, -80);
                 }
-                var2 = gg.a((byte) -33, "unable_to_delete_friend");
+                var2 = DebouncedValidationProvider.a((byte) -33, "unable_to_delete_friend");
                 if (var2 != null) {
                   ShotRecord.unableToDeleteFriend = a.a(var2, param1 + 21015);
                 }
-                var2 = gg.a((byte) -118, "unable_to_delete_ignore");
+                var2 = DebouncedValidationProvider.a((byte) -118, "unable_to_delete_ignore");
                 if (null != var2) {
-                  ig.unableToDeleteIgnore = a.a(var2, 126);
+                  TextInputValidator.unableToDeleteIgnore = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -41, "friendlistfull");
+                var2 = DebouncedValidationProvider.a((byte) -41, "friendlistfull");
                 if (null != var2) {
-                  wk.friendlistfull = a.a(var2, param1 + 20970);
+                  MessageDialogContent.friendlistfull = a.a(var2, param1 + 20970);
                 }
-                var2 = gg.a((byte) 94, "friendlistdupe");
+                var2 = DebouncedValidationProvider.a((byte) 94, "friendlistdupe");
                 if (null != var2) {
                   tl.friendlistdupe = a.a(var2, -44);
                 }
-                var2 = gg.a((byte) -45, "friendnotfound");
+                var2 = DebouncedValidationProvider.a((byte) -45, "friendnotfound");
                 if (var2 != null) {
                   aa.friendnotfound = a.a(var2, param1 + 21137);
                 }
-                var2 = gg.a((byte) 113, "ignorelistfull");
+                var2 = DebouncedValidationProvider.a((byte) 113, "ignorelistfull");
                 if (null != var2) {
                   ci.ignorelistfull = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 112, "ignorelistdupe");
+                var2 = DebouncedValidationProvider.a((byte) 112, "ignorelistdupe");
                 if (null != var2) {
                   mg.ignorelistdupe = a.a(var2, -39);
                 }
-                var2 = gg.a((byte) -90, "ignorenotfound");
+                var2 = DebouncedValidationProvider.a((byte) -90, "ignorenotfound");
                 if (var2 != null) {
                   sg.ignorenotfound = a.a(var2, param1 ^ 21081);
                 }
-                var2 = gg.a((byte) -28, "removeignorefirst");
+                var2 = DebouncedValidationProvider.a((byte) -28, "removeignorefirst");
                 if (var2 != null) {
-                  jp.removeignorefirst = a.a(var2, -100);
+                  DisplayNamePanel.removeignorefirst = a.a(var2, -100);
                 }
-                var2 = gg.a((byte) -43, "removefriendfirst");
+                var2 = DebouncedValidationProvider.a((byte) -43, "removefriendfirst");
                 if (null != var2) {
                   gf.removefriendfirst = a.a(var2, -62);
                 }
-                var2 = gg.a((byte) 108, "enterfriend_add");
+                var2 = DebouncedValidationProvider.a((byte) 108, "enterfriend_add");
                 if (var2 != null) {
                   cq.enterfriendAdd = a.a(var2, param1 ^ 21110);
                 }
-                var2 = gg.a((byte) 99, "enterfriend_del");
+                var2 = DebouncedValidationProvider.a((byte) 99, "enterfriend_del");
                 if (var2 != null) {
                   vk.enterfriendDel = a.a(var2, -4);
                 }
-                var2 = gg.a((byte) -79, "enterignore_add");
+                var2 = DebouncedValidationProvider.a((byte) -79, "enterignore_add");
                 if (null != var2) {
                   qf.enterignoreAdd = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 115, "enterignore_del");
+                var2 = DebouncedValidationProvider.a((byte) 115, "enterignore_del");
                 if (var2 != null) {
                   jj.enterignoreDel = a.a(var2, -76);
                 }
-                var2 = gg.a((byte) 105, "text_removed_from_game");
+                var2 = DebouncedValidationProvider.a((byte) 105, "text_removed_from_game");
                 if (var2 != null) {
-                  ui.textRemovedFromGame = a.a(var2, param1 ^ 21103);
+                  LoginForm.textRemovedFromGame = a.a(var2, param1 ^ 21103);
                 }
-                var2 = gg.a((byte) 119, "text_lobby_pleaselogin_free");
+                var2 = DebouncedValidationProvider.a((byte) 119, "text_lobby_pleaselogin_free");
                 if (var2 != null) {
                   a.a(var2, param1 ^ -21100);
                 }
-                var2 = gg.a((byte) -63, "opengl");
+                var2 = DebouncedValidationProvider.a((byte) -63, "opengl");
                 if (null != var2) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 112, "sse");
+                var2 = DebouncedValidationProvider.a((byte) 112, "sse");
                 if (var2 != null) {
                   a.a(var2, param1 ^ -21100);
                 }
-                var2 = gg.a((byte) 95, "purejava");
+                var2 = DebouncedValidationProvider.a((byte) 95, "purejava");
                 if (var2 != null) {
                   a.a(var2, param1 + 20922);
                 }
-                var2 = gg.a((byte) -111, "waitingfor_graphics");
+                var2 = DebouncedValidationProvider.a((byte) -111, "waitingfor_graphics");
                 if (null != var2) {
                   rp.waitingforGraphics = a.a(var2, param1 ^ 21104);
                 }
-                var2 = gg.a((byte) 100, "waitingfor_models");
+                var2 = DebouncedValidationProvider.a((byte) 100, "waitingfor_models");
                 if (null != var2) {
                   a.a(var2, -90);
                 }
-                var2 = gg.a((byte) -71, "waitingfor_fonts");
+                var2 = DebouncedValidationProvider.a((byte) -71, "waitingfor_fonts");
                 if (null != var2) {
                   SpaceTableScene.waitingforFonts = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -92, "waitingfor_soundeffects");
+                var2 = DebouncedValidationProvider.a((byte) -92, "waitingfor_soundeffects");
                 if (null != var2) {
                   rk.waitingforSoundeffects = a.a(var2, param1 ^ -21097);
                 }
-                var2 = gg.a((byte) 97, "waitingfor_music");
+                var2 = DebouncedValidationProvider.a((byte) 97, "waitingfor_music");
                 if (var2 != null) {
                   aj.waitingforMusic = a.a(var2, -94);
                 }
-                var2 = gg.a((byte) -104, "waitingfor_instruments");
+                var2 = DebouncedValidationProvider.a((byte) -104, "waitingfor_instruments");
                 if (null != var2) {
                   a.a(var2, 1);
                 }
-                var2 = gg.a((byte) -115, "waitingfor_levels");
+                var2 = DebouncedValidationProvider.a((byte) -115, "waitingfor_levels");
                 if (var2 != null) {
                   a.a(var2, -107);
                 }
-                var2 = gg.a((byte) -39, "waitingfor_extradata");
+                var2 = DebouncedValidationProvider.a((byte) -39, "waitingfor_extradata");
                 if (null != var2) {
                   de.waitingforExtradata = a.a(var2, -7);
                 }
-                var2 = gg.a((byte) 106, "waitingfor_languages");
+                var2 = DebouncedValidationProvider.a((byte) 106, "waitingfor_languages");
                 if (var2 != null) {
                   a.a(var2, -84);
                 }
-                var2 = gg.a((byte) 126, "waitingfor_textures");
+                var2 = DebouncedValidationProvider.a((byte) 126, "waitingfor_textures");
                 if (null != var2) {
                   a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 96, "waitingfor_animations");
+                var2 = DebouncedValidationProvider.a((byte) 96, "waitingfor_animations");
                 if (var2 != null) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -74, "loading_graphics");
+                var2 = DebouncedValidationProvider.a((byte) -74, "loading_graphics");
                 if (null != var2) {
                   oj.loadingGraphics = a.a(var2, -87);
                 }
-                var2 = gg.a((byte) -53, "loading_models");
+                var2 = DebouncedValidationProvider.a((byte) -53, "loading_models");
             }
             void runChunk2() throws java.lang.RuntimeException {
                 if (null != var2) {
                   a.a(var2, -44);
                 }
-                var2 = gg.a((byte) 108, "loading_fonts");
+                var2 = DebouncedValidationProvider.a((byte) 108, "loading_fonts");
                 if (var2 != null) {
-                  kb.loadingFonts = a.a(var2, param1 ^ 21004);
+                  TickClock.loadingFonts = a.a(var2, param1 ^ 21004);
                 }
-                var2 = gg.a((byte) 123, "loading_soundeffects");
+                var2 = DebouncedValidationProvider.a((byte) 123, "loading_soundeffects");
                 if (null != var2) {
                   mq.loadingSoundeffects = a.a(var2, 6);
                 }
-                var2 = gg.a((byte) -122, "loading_music");
+                var2 = DebouncedValidationProvider.a((byte) -122, "loading_music");
                 if (null != var2) {
                   mm.loadingMusic = a.a(var2, -49);
                 }
-                var2 = gg.a((byte) -48, "loading_instruments");
+                var2 = DebouncedValidationProvider.a((byte) -48, "loading_instruments");
                 if (null != var2) {
                   a.a(var2, param1 ^ 21037);
                 }
-                var2 = gg.a((byte) -80, "loading_levels");
+                var2 = DebouncedValidationProvider.a((byte) -80, "loading_levels");
                 if (null != var2) {
                   a.a(var2, 14);
                 }
-                var2 = gg.a((byte) 122, "loading_extradata");
+                var2 = DebouncedValidationProvider.a((byte) 122, "loading_extradata");
                 if (null != var2) {
                   cf.loadingExtradata = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -108, "loading_languages");
+                var2 = DebouncedValidationProvider.a((byte) -108, "loading_languages");
                 if (var2 != null) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -67, "loading_textures");
+                var2 = DebouncedValidationProvider.a((byte) -67, "loading_textures");
                 if (var2 != null) {
                   a.a(var2, -81);
                 }
-                var2 = gg.a((byte) -103, "loading_animations");
+                var2 = DebouncedValidationProvider.a((byte) -103, "loading_animations");
                 if (null != var2) {
                   a.a(var2, -109);
                 }
-                var2 = gg.a((byte) 127, "unpacking_graphics");
+                var2 = DebouncedValidationProvider.a((byte) 127, "unpacking_graphics");
                 if (var2 != null) {
                   NineBallRules.unpackingGraphics = a.a(var2, -11);
                 }
-                var2 = gg.a((byte) 122, "unpacking_models");
+                var2 = DebouncedValidationProvider.a((byte) 122, "unpacking_models");
                 if (var2 != null) {
-                  lc.unpackingModels = a.a(var2, 125);
+                  ValidationIconWidget.unpackingModels = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -100, "unpacking_soundeffects");
+                var2 = DebouncedValidationProvider.a((byte) -100, "unpacking_soundeffects");
                 if (var2 != null) {
                   cq.unpackingSoundeffects = a.a(var2, param1 ^ 21063);
                 }
-                var2 = gg.a((byte) 114, "unpacking_music");
+                var2 = DebouncedValidationProvider.a((byte) 114, "unpacking_music");
                 if (var2 != null) {
                   KillerBallSkin.unpackingMusic = a.a(var2, -44);
                 }
-                var2 = gg.a((byte) 102, "unpacking_levels");
+                var2 = DebouncedValidationProvider.a((byte) 102, "unpacking_levels");
                 if (var2 != null) {
                   a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -72, "unpacking_languages");
+                var2 = DebouncedValidationProvider.a((byte) -72, "unpacking_languages");
                 if (var2 != null) {
                   a.a(var2, -41);
                 }
-                var2 = gg.a((byte) -65, "unpacking_animations");
+                var2 = DebouncedValidationProvider.a((byte) -65, "unpacking_animations");
                 if (var2 != null) {
                   a.a(var2, param1 + 21136);
                 }
-                var2 = gg.a((byte) 93, "unpacking_toolkit");
+                var2 = DebouncedValidationProvider.a((byte) 93, "unpacking_toolkit");
                 if (var2 != null) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 99, "instructions");
+                var2 = DebouncedValidationProvider.a((byte) 99, "instructions");
                 if (null != var2) {
-                  hb.instructions = a.a(var2, param1 ^ -21100);
+                  NodeHashTableIterator.instructions = a.a(var2, param1 ^ -21100);
                 }
-                var2 = gg.a((byte) -70, "tutorial");
+                var2 = DebouncedValidationProvider.a((byte) -70, "tutorial");
                 if (null != var2) {
                   sa.tutorial = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 108, "playtutorial");
+                var2 = DebouncedValidationProvider.a((byte) 108, "playtutorial");
                 if (null != var2) {
                   a.a(var2, -104);
                 }
-                var2 = gg.a((byte) 99, "sound_colon");
+                var2 = DebouncedValidationProvider.a((byte) 99, "sound_colon");
                 if (null != var2) {
                   up.soundColon = a.a(var2, param1 + 21139);
                 }
-                var2 = gg.a((byte) 100, "music_colon");
+                var2 = DebouncedValidationProvider.a((byte) 100, "music_colon");
                 if (null != var2) {
                   fn.musicColon = a.a(var2, -89);
                 }
-                var2 = gg.a((byte) -78, "fullscreen");
+                var2 = DebouncedValidationProvider.a((byte) -78, "fullscreen");
                 if (null != var2) {
                   wd.fullscreen = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -46, "screensize");
+                var2 = DebouncedValidationProvider.a((byte) -46, "screensize");
                 if (var2 != null) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 115, "highscores");
+                var2 = DebouncedValidationProvider.a((byte) 115, "highscores");
                 if (var2 != null) {
                   un.highscores = a.a(var2, -69);
                 }
-                var2 = gg.a((byte) -72, "rankings");
+                var2 = DebouncedValidationProvider.a((byte) -72, "rankings");
                 if (var2 != null) {
                   uj.rankings = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -62, "achievements");
+                var2 = DebouncedValidationProvider.a((byte) -62, "achievements");
                 if (null != var2) {
                   PacketBuffer.achievements = a.a(var2, -20);
                 }
-                var2 = gg.a((byte) 98, "achievementsthisgame");
+                var2 = DebouncedValidationProvider.a((byte) 98, "achievementsthisgame");
                 if (null != var2) {
                   a.a(var2, -23);
                 }
-                var2 = gg.a((byte) -41, "achievementsthissession");
+                var2 = DebouncedValidationProvider.a((byte) -41, "achievementsthissession");
                 if (null != var2) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -80, "watchintroduction");
+                var2 = DebouncedValidationProvider.a((byte) -80, "watchintroduction");
                 if (null != var2) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -42, "quit");
+                var2 = DebouncedValidationProvider.a((byte) -42, "quit");
                 if (null != var2) {
                   qd.quit = a.a(var2, -101);
                 }
-                var2 = gg.a((byte) 123, "login_createaccount");
+                var2 = DebouncedValidationProvider.a((byte) 123, "login_createaccount");
                 if (var2 != null) {
                   NetworkGameClient.loginCreateaccount = a.a(var2, -117);
                 }
-                var2 = gg.a((byte) 116, "tohighscores");
+                var2 = DebouncedValidationProvider.a((byte) 116, "tohighscores");
                 if (null != var2) {
                   a.a(var2, -71);
                 }
-                var2 = gg.a((byte) -32, "returntomainmenu");
+                var2 = DebouncedValidationProvider.a((byte) -32, "returntomainmenu");
                 if (var2 != null) {
                   wp.returntomainmenu = a.a(var2, -124);
                 }
-                var2 = gg.a((byte) 112, "returntopausemenu");
+                var2 = DebouncedValidationProvider.a((byte) 112, "returntopausemenu");
                 if (null != var2) {
                   a.a(var2, param1 ^ -21021);
                 }
-                var2 = gg.a((byte) 101, "returntooptionsmenu_notpaused");
+                var2 = DebouncedValidationProvider.a((byte) 101, "returntooptionsmenu_notpaused");
                 if (var2 != null) {
                   a.a(var2, -15);
                 }
-                var2 = gg.a((byte) -116, "mainmenu");
+                var2 = DebouncedValidationProvider.a((byte) -116, "mainmenu");
                 if (var2 != null) {
                   a.a(var2, param1 + 20975);
                 }
-                var2 = gg.a((byte) 97, "pausemenu");
+                var2 = DebouncedValidationProvider.a((byte) 97, "pausemenu");
                 if (var2 != null) {
                   ld.pausemenu = a.a(var2, -71);
                 }
-                var2 = gg.a((byte) 117, "optionsmenu_notpaused");
+                var2 = DebouncedValidationProvider.a((byte) 117, "optionsmenu_notpaused");
                 if (var2 != null) {
                   ModelTableScene.optionsmenuNotpaused = a.a(var2, param1 ^ -21100);
                 }
-                var2 = gg.a((byte) 122, "menu");
+                var2 = DebouncedValidationProvider.a((byte) 122, "menu");
                 if (null != var2) {
                   ShotRecord.menu = a.a(var2, -19);
                 }
-                var2 = gg.a((byte) 124, "selectlevel");
+                var2 = DebouncedValidationProvider.a((byte) 124, "selectlevel");
                 if (null != var2) {
                   a.a(var2, -91);
                 }
-                var2 = gg.a((byte) -93, "nextlevel");
+                var2 = DebouncedValidationProvider.a((byte) -93, "nextlevel");
                 if (null != var2) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 111, "startgame");
+                var2 = DebouncedValidationProvider.a((byte) 111, "startgame");
                 if (null != var2) {
-                  ua.startgame = a.a(var2, param1 ^ -21098);
+                  UsernameAvailabilityValidator.startgame = a.a(var2, param1 ^ -21098);
                 }
-                var2 = gg.a((byte) 124, "newgame");
+                var2 = DebouncedValidationProvider.a((byte) 124, "newgame");
                 if (null != var2) {
-                  ch.newgame = a.a(var2, -20);
+                  WidgetContainer.newgame = a.a(var2, -20);
                 }
-                var2 = gg.a((byte) 116, "resumegame");
+                var2 = DebouncedValidationProvider.a((byte) 116, "resumegame");
                 if (var2 != null) {
                   a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -113, "resumetutorial");
+                var2 = DebouncedValidationProvider.a((byte) -113, "resumetutorial");
                 if (var2 != null) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 104, "skip");
+                var2 = DebouncedValidationProvider.a((byte) 104, "skip");
                 if (var2 != null) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -94, "skiptutorial");
+                var2 = DebouncedValidationProvider.a((byte) -94, "skiptutorial");
                 if (null != var2) {
                   a.a(var2, -15);
                 }
-                var2 = gg.a((byte) -55, "skipending");
+                var2 = DebouncedValidationProvider.a((byte) -55, "skipending");
                 if (var2 != null) {
                   a.a(var2, -68);
                 }
-                var2 = gg.a((byte) 113, "restartlevel");
+                var2 = DebouncedValidationProvider.a((byte) 113, "restartlevel");
                 if (var2 != null) {
                   a.a(var2, param1 ^ 21028);
                 }
-                var2 = gg.a((byte) -33, "endtest");
+                var2 = DebouncedValidationProvider.a((byte) -33, "endtest");
                 if (var2 != null) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -102, "endgame");
+                var2 = DebouncedValidationProvider.a((byte) -102, "endgame");
                 if (null != var2) {
                   IterableNodeHashTable.endgame = a.a(var2, 11);
                 }
-                var2 = gg.a((byte) -85, "endtutorial");
+                var2 = DebouncedValidationProvider.a((byte) -85, "endtutorial");
                 if (var2 != null) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 116, "ok");
+                var2 = DebouncedValidationProvider.a((byte) 116, "ok");
                 if (var2 != null) {
                   wn.ok = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 118, "on");
+                var2 = DebouncedValidationProvider.a((byte) 118, "on");
                 if (var2 != null) {
                   jc.on = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -117, "off");
+                var2 = DebouncedValidationProvider.a((byte) -117, "off");
                 if (null != var2) {
                   il.off = a.a(var2, -60);
                 }
-                var2 = gg.a((byte) 108, "previous");
+                var2 = DebouncedValidationProvider.a((byte) 108, "previous");
                 if (var2 != null) {
                   cb.previous = a.a(var2, -66);
                 }
-                var2 = gg.a((byte) 111, "prev");
+                var2 = DebouncedValidationProvider.a((byte) 111, "prev");
                 if (null != var2) {
                   a.a(var2, -98);
                 }
-                var2 = gg.a((byte) 111, "next");
+                var2 = DebouncedValidationProvider.a((byte) 111, "next");
                 if (var2 != null) {
                   ue.next = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -69, "graphics_colon");
+                var2 = DebouncedValidationProvider.a((byte) -69, "graphics_colon");
                 if (null != var2) {
                   a.a(var2, -109);
                 }
-                var2 = gg.a((byte) -104, "hotseatmultiplayer");
+                var2 = DebouncedValidationProvider.a((byte) -104, "hotseatmultiplayer");
                 if (var2 != null) {
                   tg.hotseatmultiplayer = a.a(var2, param1 + 21137);
                 }
-                var2 = gg.a((byte) 110, "entermultiplayerlobby");
+                var2 = DebouncedValidationProvider.a((byte) 110, "entermultiplayerlobby");
                 if (var2 != null) {
-                  gr.entermultiplayerlobby = a.a(var2, 126);
+                  ArchiveRequest.entermultiplayerlobby = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -29, "singleplayergame");
+                var2 = DebouncedValidationProvider.a((byte) -29, "singleplayergame");
                 if (null != var2) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -121, "returntogame");
+                var2 = DebouncedValidationProvider.a((byte) -121, "returntogame");
                 if (null != var2) {
                   ti.returntogame = a.a(var2, param1 ^ -21104);
                 }
-                var2 = gg.a((byte) -37, "endgameresign");
+                var2 = DebouncedValidationProvider.a((byte) -37, "endgameresign");
                 if (var2 != null) {
                   a.a(var2, -41);
                 }
-                var2 = gg.a((byte) -77, "offerdraw");
+                var2 = DebouncedValidationProvider.a((byte) -77, "offerdraw");
                 if (var2 != null) {
-                  eq.offerdraw = a.a(var2, param1 ^ -21097);
+                  DateInputWidget.offerdraw = a.a(var2, param1 ^ -21097);
                 }
-                var2 = gg.a((byte) -76, "canceldraw");
+                var2 = DebouncedValidationProvider.a((byte) -76, "canceldraw");
                 if (var2 != null) {
                   dj.canceldraw = a.a(var2, -95);
                 }
-                var2 = gg.a((byte) 112, "acceptdraw");
+                var2 = DebouncedValidationProvider.a((byte) 112, "acceptdraw");
                 if (var2 != null) {
                   ff.acceptdraw = a.a(var2, param1 + 21139);
                 }
-                var2 = gg.a((byte) 126, "resign");
+                var2 = DebouncedValidationProvider.a((byte) 126, "resign");
                 if (null != var2) {
                   IntrusiveDeque.resign = a.a(var2, -62);
                 }
-                var2 = gg.a((byte) 119, "returntolobby");
+                var2 = DebouncedValidationProvider.a((byte) 119, "returntolobby");
                 if (null != var2) {
                   dk.returntolobby = a.a(var2, 15);
                 }
-                var2 = gg.a((byte) -74, "cont");
+                var2 = DebouncedValidationProvider.a((byte) -74, "cont");
                 if (null != var2) {
-                  fg.cont = a.a(var2, param1 + 21138);
+                  WeightedLruCache.cont = a.a(var2, param1 + 21138);
                 }
-                var2 = gg.a((byte) 98, "continue_spectating");
+                var2 = DebouncedValidationProvider.a((byte) 98, "continue_spectating");
                 if (var2 != null) {
                   a.a(var2, -43);
                 }
-                var2 = gg.a((byte) 95, "messages");
+                var2 = DebouncedValidationProvider.a((byte) 95, "messages");
                 if (null != var2) {
                   a.a(var2, param1 ^ -21099);
                 }
-                var2 = gg.a((byte) 100, "graphics_fastest");
+                var2 = DebouncedValidationProvider.a((byte) 100, "graphics_fastest");
                 if (var2 != null) {
                   a.a(var2, -12);
                 }
-                var2 = gg.a((byte) -89, "graphics_medium");
+                var2 = DebouncedValidationProvider.a((byte) -89, "graphics_medium");
                 if (var2 != null) {
                   a.a(var2, param1 ^ 21044);
                 }
-                var2 = gg.a((byte) 119, "graphics_best");
+                var2 = DebouncedValidationProvider.a((byte) 119, "graphics_best");
                 if (var2 != null) {
                   a.a(var2, -118);
                 }
-                var2 = gg.a((byte) -115, "graphics_directx");
+                var2 = DebouncedValidationProvider.a((byte) -115, "graphics_directx");
                 if (var2 != null) {
                   a.a(var2, param1 + 20903);
                 }
-                var2 = gg.a((byte) -78, "graphics_opengl");
+                var2 = DebouncedValidationProvider.a((byte) -78, "graphics_opengl");
                 if (var2 != null) {
                   a.a(var2, param1 + 20982);
                 }
-                var2 = gg.a((byte) 112, "graphics_java");
+                var2 = DebouncedValidationProvider.a((byte) 112, "graphics_java");
                 if (var2 != null) {
                   a.a(var2, 1);
                 }
-                var2 = gg.a((byte) 123, "graphics_quality_high");
+                var2 = DebouncedValidationProvider.a((byte) 123, "graphics_quality_high");
                 if (null != var2) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 126, "graphics_quality_low");
+                var2 = DebouncedValidationProvider.a((byte) 126, "graphics_quality_low");
                 if (null != var2) {
                   a.a(var2, param1 + 20968);
                 }
-                var2 = gg.a((byte) 104, "graphics_mode");
+                var2 = DebouncedValidationProvider.a((byte) 104, "graphics_mode");
                 if (null != var2) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -66, "graphics_quality");
+                var2 = DebouncedValidationProvider.a((byte) -66, "graphics_quality");
                 if (var2 != null) {
                   a.a(var2, 11);
                 }
-                var2 = gg.a((byte) -88, "mode");
+                var2 = DebouncedValidationProvider.a((byte) -88, "mode");
                 if (null != var2) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -61, "quality");
+                var2 = DebouncedValidationProvider.a((byte) -61, "quality");
                 if (var2 != null) {
                   a.a(var2, -51);
                 }
-                var2 = gg.a((byte) 127, "keys");
+                var2 = DebouncedValidationProvider.a((byte) 127, "keys");
                 if (null != var2) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 127, "objective");
+                var2 = DebouncedValidationProvider.a((byte) 127, "objective");
                 if (null != var2) {
                   a.a(var2, param1 + 20894);
                 }
-                var2 = gg.a((byte) 121, "currentobjective");
+                var2 = DebouncedValidationProvider.a((byte) 121, "currentobjective");
                 if (var2 != null) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -35, "pressescforpausemenu");
+                var2 = DebouncedValidationProvider.a((byte) -35, "pressescforpausemenu");
                 if (null != var2) {
                   a.a(var2, param1 + 21137);
                 }
-                var2 = gg.a((byte) -107, "pressescforpausemenuortoskiptutorial");
+                var2 = DebouncedValidationProvider.a((byte) -107, "pressescforpausemenuortoskiptutorial");
                 if (null != var2) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 105, "pressescforoptionsmenu_doesntpause");
+                var2 = DebouncedValidationProvider.a((byte) 105, "pressescforoptionsmenu_doesntpause");
                 if (null != var2) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -94, "pressescforoptionsmenu_doesntpause_short");
+                var2 = DebouncedValidationProvider.a((byte) -94, "pressescforoptionsmenu_doesntpause_short");
                 if (var2 != null) {
                   a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 98, "powerups");
+                var2 = DebouncedValidationProvider.a((byte) 98, "powerups");
                 if (null != var2) {
                   a.a(var2, -26);
                 }
-                var2 = gg.a((byte) -114, "latestlevel_suffix");
+                var2 = DebouncedValidationProvider.a((byte) -114, "latestlevel_suffix");
                 if (null != var2) {
                   a.a(var2, param1 + 21140);
                 }
-                var2 = gg.a((byte) -49, "unreachedlevel_name");
+                var2 = DebouncedValidationProvider.a((byte) -49, "unreachedlevel_name");
                 if (var2 != null) {
                   a.a(var2, param1 ^ -21097);
                 }
-                var2 = gg.a((byte) 124, "unreachedlevel_cannotplayreason");
+                var2 = DebouncedValidationProvider.a((byte) 124, "unreachedlevel_cannotplayreason");
                 if (null != var2) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -62, "unreachedlevel_cannotplayreason_shorter");
+                var2 = DebouncedValidationProvider.a((byte) -62, "unreachedlevel_cannotplayreason_shorter");
                 if (null != var2) {
                   a.a(var2, param1 + 20998);
                 }
-                var2 = gg.a((byte) -121, "unreachedworld_cannotplayreason");
+                var2 = DebouncedValidationProvider.a((byte) -121, "unreachedworld_cannotplayreason");
                 if (var2 != null) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 98, "memberslevel_name");
+                var2 = DebouncedValidationProvider.a((byte) 98, "memberslevel_name");
                 if (null != var2) {
                   cl.memberslevelName = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 105, "memberslevel_cannotplayreason");
+                var2 = DebouncedValidationProvider.a((byte) 105, "memberslevel_cannotplayreason");
                 if (var2 != null) {
                   a.a(var2, param1 + 21139);
                 }
-                var2 = gg.a((byte) -75, "membersworld_cannotplayreason");
+                var2 = DebouncedValidationProvider.a((byte) -75, "membersworld_cannotplayreason");
                 if (var2 != null) {
                   a.a(var2, -44);
                 }
-                var2 = gg.a((byte) -104, "unreachedlevel_createtip");
+                var2 = DebouncedValidationProvider.a((byte) -104, "unreachedlevel_createtip");
                 if (var2 != null) {
                   a.a(var2, -116);
                 }
-                var2 = gg.a((byte) 95, "unreachedlevel_createtip_line1");
+                var2 = DebouncedValidationProvider.a((byte) 95, "unreachedlevel_createtip_line1");
                 if (null != var2) {
                   a.a(var2, -59);
                 }
-                var2 = gg.a((byte) 107, "unreachedlevel_createtip_line2");
+                var2 = DebouncedValidationProvider.a((byte) 107, "unreachedlevel_createtip_line2");
                 if (null != var2) {
                   a.a(var2, -89);
                 }
-                var2 = gg.a((byte) -124, "unreachedlevel_logintip");
+                var2 = DebouncedValidationProvider.a((byte) -124, "unreachedlevel_logintip");
                 if (var2 != null) {
                   a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -128, "memberslevel_logintip");
+                var2 = DebouncedValidationProvider.a((byte) -128, "memberslevel_logintip");
                 if (var2 != null) {
                   a.a(var2, -106);
                 }
-                var2 = gg.a((byte) -120, "displayname_none");
+                var2 = DebouncedValidationProvider.a((byte) -120, "displayname_none");
                 if (var2 != null) {
                   a.a(var2, param1 + 20965);
                 }
-                var2 = gg.a((byte) 93, "levelxofy1");
+                var2 = DebouncedValidationProvider.a((byte) 93, "levelxofy1");
                 if (var2 != null) {
                   a.a(var2, -110);
                 }
-                var2 = gg.a((byte) -36, "levelxofy2");
+                var2 = DebouncedValidationProvider.a((byte) -36, "levelxofy2");
                 if (var2 != null) {
                   a.a(var2, param1 ^ -21104);
                 }
-                var2 = gg.a((byte) -103, "levelxofy");
+                var2 = DebouncedValidationProvider.a((byte) -103, "levelxofy");
                 if (var2 != null) {
                   a.a(var2, param1 + 20969);
                 }
-                var2 = gg.a((byte) 103, "ingame_level");
+                var2 = DebouncedValidationProvider.a((byte) 103, "ingame_level");
                 if (null != var2) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 103, "mouseoveranicon");
+                var2 = DebouncedValidationProvider.a((byte) 103, "mouseoveranicon");
                 if (var2 != null) {
-                  fd.mouseoveranicon = a.a(var2, 125);
+                  StrongCacheEntry.mouseoveranicon = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 114, "notyetachieved");
+                var2 = DebouncedValidationProvider.a((byte) 114, "notyetachieved");
                 if (var2 != null) {
                   bc.notyetachieved = a.a(var2, -25);
                 }
-                var2 = gg.a((byte) -121, "achieved");
+                var2 = DebouncedValidationProvider.a((byte) -121, "achieved");
                 if (null != var2) {
                   np.achieved = a.a(var2, -49);
                 }
-                var2 = gg.a((byte) 114, "orbpoints");
+                var2 = DebouncedValidationProvider.a((byte) 114, "orbpoints");
                 if (null != var2) {
                   a.a(var2, param1 + 21136);
                 }
-                var2 = gg.a((byte) -33, "orbcoins");
+                var2 = DebouncedValidationProvider.a((byte) -33, "orbcoins");
                 if (var2 != null) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -44, "orbpoints_colon");
+                var2 = DebouncedValidationProvider.a((byte) -44, "orbpoints_colon");
                 if (var2 != null) {
-                  sd.orbpointsColon = a.a(var2, -107);
+                  Under13NoticePanel.orbpointsColon = a.a(var2, -107);
                 }
-                var2 = gg.a((byte) 106, "orbcoins_colon");
+                var2 = DebouncedValidationProvider.a((byte) 106, "orbcoins_colon");
                 if (var2 != null) {
-                  ri.orbcoinsColon = a.a(var2, param1 + 21138);
+                  CheckboxWidget.orbcoinsColon = a.a(var2, param1 + 21138);
                 }
-                var2 = gg.a((byte) -98, "achieved_colon_description");
+                var2 = DebouncedValidationProvider.a((byte) -98, "achieved_colon_description");
                 if (null != var2) {
                   a.a(var2, -109);
                 }
-                var2 = gg.a((byte) 98, "secretachievement");
+                var2 = DebouncedValidationProvider.a((byte) 98, "secretachievement");
                 if (null != var2) {
-                  kb.secretachievement = a.a(var2, 127);
+                  TickClock.secretachievement = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -61, "no_highscores");
+                var2 = DebouncedValidationProvider.a((byte) -61, "no_highscores");
                 if (var2 != null) {
                   ModernTableScene.noHighscores = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 114, "hs_name");
+                var2 = DebouncedValidationProvider.a((byte) 114, "hs_name");
                 if (null != var2) {
                   a.a(var2, -49);
                 }
-                var2 = gg.a((byte) -123, "hs_level");
+                var2 = DebouncedValidationProvider.a((byte) -123, "hs_level");
                 if (null != var2) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 96, "hs_fromlevel");
+                var2 = DebouncedValidationProvider.a((byte) 96, "hs_fromlevel");
                 if (null != var2) {
                   a.a(var2, -117);
                 }
-                var2 = gg.a((byte) -112, "hs_tolevel");
+                var2 = DebouncedValidationProvider.a((byte) -112, "hs_tolevel");
                 if (var2 != null) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -44, "hs_score");
+                var2 = DebouncedValidationProvider.a((byte) -44, "hs_score");
                 if (var2 != null) {
                   a.a(var2, param1 ^ -21098);
                 }
-                var2 = gg.a((byte) -95, "hs_end");
+                var2 = DebouncedValidationProvider.a((byte) -95, "hs_end");
                 if (var2 != null) {
                   a.a(var2, -76);
                 }
-                var2 = gg.a((byte) 118, "ingame_score");
+                var2 = DebouncedValidationProvider.a((byte) 118, "ingame_score");
                 if (null != var2) {
                   a.a(var2, param1 ^ 21046);
                 }
-                var2 = gg.a((byte) 93, "score_colon");
+                var2 = DebouncedValidationProvider.a((byte) 93, "score_colon");
                 if (var2 != null) {
                   a.a(var2, -80);
                 }
-                var2 = gg.a((byte) 102, "mp_leavegame");
+                var2 = DebouncedValidationProvider.a((byte) 102, "mp_leavegame");
                 if (var2 != null) {
                   a.a(var2, -36);
                 }
-                var2 = gg.a((byte) 102, "mp_offerrematch");
+                var2 = DebouncedValidationProvider.a((byte) 102, "mp_offerrematch");
                 if (null != var2) {
-                  ia.mpOfferrematch = a.a(var2, param1 ^ 21068);
+                  MenuSelection.mpOfferrematch = a.a(var2, param1 ^ 21068);
                 }
-                var2 = gg.a((byte) 95, "mp_offerrematch_unrated");
+                var2 = DebouncedValidationProvider.a((byte) 95, "mp_offerrematch_unrated");
                 if (var2 != null) {
                   og.mpOfferrematchUnrated = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 112, "mp_acceptrematch");
+                var2 = DebouncedValidationProvider.a((byte) 112, "mp_acceptrematch");
                 if (var2 != null) {
-                  er.mpAcceptrematch = a.a(var2, 124);
+                  DialWidget.mpAcceptrematch = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -83, "mp_acceptrematch_unrated");
+                var2 = DebouncedValidationProvider.a((byte) -83, "mp_acceptrematch_unrated");
                 if (null != var2) {
-                  hb.mpAcceptrematchUnrated = a.a(var2, 5);
+                  NodeHashTableIterator.mpAcceptrematchUnrated = a.a(var2, 5);
                 }
-                var2 = gg.a((byte) -127, "mp_cancelrematch");
+                var2 = DebouncedValidationProvider.a((byte) -127, "mp_cancelrematch");
                 if (null != var2) {
                   df.mpCancelrematch = a.a(var2, -68);
                 }
-                var2 = gg.a((byte) 122, "mp_cancelrematch_unrated");
+                var2 = DebouncedValidationProvider.a((byte) 122, "mp_cancelrematch_unrated");
                 if (var2 != null) {
                   w.mpCancelrematchUnrated = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 120, "mp_rematchnewgame");
+                var2 = DebouncedValidationProvider.a((byte) 120, "mp_rematchnewgame");
                 if (var2 != null) {
                   fq.mpRematchnewgame = a.a(var2, -22);
                 }
-                var2 = gg.a((byte) 124, "mp_rematchnewgame_unrated");
+                var2 = DebouncedValidationProvider.a((byte) 124, "mp_rematchnewgame_unrated");
                 if (null != var2) {
                   e.mpRematchnewgameUnrated = a.a(var2, -92);
                 }
-                var2 = gg.a((byte) 115, "mp_x_wantstodraw");
+                var2 = DebouncedValidationProvider.a((byte) 115, "mp_x_wantstodraw");
                 if (var2 != null) {
                   rn.mpXWantstodraw = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 120, "mp_x_offersrematch");
+                var2 = DebouncedValidationProvider.a((byte) 120, "mp_x_offersrematch");
                 if (var2 != null) {
                   p.mpXOffersrematch = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -105, "mp_x_offersrematch_unrated");
+                var2 = DebouncedValidationProvider.a((byte) -105, "mp_x_offersrematch_unrated");
                 if (null != var2) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -70, "mp_youofferrematch");
+                var2 = DebouncedValidationProvider.a((byte) -70, "mp_youofferrematch");
                 if (null != var2) {
-                  kb.mpYouofferrematch = a.a(var2, param1 + 20917);
+                  TickClock.mpYouofferrematch = a.a(var2, param1 + 20917);
                 }
-                var2 = gg.a((byte) 112, "mp_youofferrematch_unrated");
+                var2 = DebouncedValidationProvider.a((byte) 112, "mp_youofferrematch_unrated");
                 if (null != var2) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -94, "mp_youofferdraw");
+                var2 = DebouncedValidationProvider.a((byte) -94, "mp_youofferdraw");
                 if (null != var2) {
                   ae.mpYouofferdraw = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 117, "mp_youresigned");
+                var2 = DebouncedValidationProvider.a((byte) 117, "mp_youresigned");
                 if (null != var2) {
                   cd.mpYouresigned = a.a(var2, -107);
                 }
-                var2 = gg.a((byte) 123, "mp_youresigned_rematch");
+                var2 = DebouncedValidationProvider.a((byte) 123, "mp_youresigned_rematch");
                 if (var2 != null) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -98, "mp_x_hasresignedandleft");
+                var2 = DebouncedValidationProvider.a((byte) -98, "mp_x_hasresignedandleft");
                 if (var2 != null) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 117, "mp_x_hasresigned_rematch");
+                var2 = DebouncedValidationProvider.a((byte) 117, "mp_x_hasresigned_rematch");
                 if (null != var2) {
                   a.a(var2, -87);
                 }
-                var2 = gg.a((byte) 108, "mp_x_hasresigned");
+                var2 = DebouncedValidationProvider.a((byte) 108, "mp_x_hasresigned");
                 if (var2 != null) {
                   ah.mpXHasresigned = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 93, "mp_x_hasleft");
+                var2 = DebouncedValidationProvider.a((byte) 93, "mp_x_hasleft");
                 if (null != var2) {
                   a.a(var2, param1 + 21139);
                 }
-                var2 = gg.a((byte) 96, "mp_x_haswon");
+                var2 = DebouncedValidationProvider.a((byte) 96, "mp_x_haswon");
                 if (null != var2) {
                   PacketBuffer.mpXHaswon = a.a(var2, param1 + 20900);
                 }
-                var2 = gg.a((byte) 106, "mp_youhavewon");
+                var2 = DebouncedValidationProvider.a((byte) 106, "mp_youhavewon");
                 if (null != var2) {
                   il.mpYouhavewon = a.a(var2, -66);
                 }
-                var2 = gg.a((byte) -90, "mp_gamedrawn");
+                var2 = DebouncedValidationProvider.a((byte) -90, "mp_gamedrawn");
                 if (null != var2) {
                   no.mpGamedrawn = a.a(var2, -27);
                 }
-                var2 = gg.a((byte) -102, "mp_timeremaining");
+                var2 = DebouncedValidationProvider.a((byte) -102, "mp_timeremaining");
                 if (var2 != null) {
                   p.mpTimeremaining = a.a(var2, param1 + 21136);
                 }
-                var2 = gg.a((byte) 109, "mp_x_turn");
+                var2 = DebouncedValidationProvider.a((byte) 109, "mp_x_turn");
                 if (var2 != null) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 120, "mp_yourturn");
+                var2 = DebouncedValidationProvider.a((byte) 120, "mp_yourturn");
                 if (null != var2) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 109, "gameover");
+                var2 = DebouncedValidationProvider.a((byte) 109, "gameover");
                 if (var2 != null) {
                   a.a(var2, param1 ^ -21099);
                 }
-                var2 = gg.a((byte) 116, "mp_hidechat");
+                var2 = DebouncedValidationProvider.a((byte) 116, "mp_hidechat");
                 if (var2 != null) {
                   a.a(var2, -71);
                 }
-                var2 = gg.a((byte) -87, "mp_showchat_nounread");
+                var2 = DebouncedValidationProvider.a((byte) -87, "mp_showchat_nounread");
                 if (null != var2) {
                   a.a(var2, -98);
                 }
-                var2 = gg.a((byte) 127, "mp_showchat_unread1");
+                var2 = DebouncedValidationProvider.a((byte) 127, "mp_showchat_unread1");
                 if (null != var2) {
                   a.a(var2, -69);
                 }
-                var2 = gg.a((byte) -125, "mp_showchat_unread2");
+                var2 = DebouncedValidationProvider.a((byte) -125, "mp_showchat_unread2");
                 if (null != var2) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 103, "click_to_quickchat");
+                var2 = DebouncedValidationProvider.a((byte) 103, "click_to_quickchat");
                 if (var2 != null) {
                   je.clickToQuickchat = a.a(var2, -111);
                 }
-                var2 = gg.a((byte) -33, "autorespond");
+                var2 = DebouncedValidationProvider.a((byte) -33, "autorespond");
                 if (null != var2) {
                   field_k = a.a(var2, param1 + 20957);
                 }
-                var2 = gg.a((byte) 109, "quickchat_help");
+                var2 = DebouncedValidationProvider.a((byte) 109, "quickchat_help");
                 if (null != var2) {
                   w.quickchatHelp = a.a(var2, param1 + 21140);
                 }
-                var2 = gg.a((byte) -105, "quickchat_help_title");
+                var2 = DebouncedValidationProvider.a((byte) -105, "quickchat_help_title");
                 if (null != var2) {
                   jd.quickchatHelpTitle = a.a(var2, -105);
                 }
-                var2 = gg.a((byte) -61, "quickchat_shortcut_help,0");
+                var2 = DebouncedValidationProvider.a((byte) -61, "quickchat_shortcut_help,0");
                 if (var2 != null) {
                   bj.quickchatShortcutHelp[0] = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -76, "quickchat_shortcut_help,1");
+                var2 = DebouncedValidationProvider.a((byte) -76, "quickchat_shortcut_help,1");
                 if (null != var2) {
                   bj.quickchatShortcutHelp[1] = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 103, "quickchat_shortcut_help,2");
+                var2 = DebouncedValidationProvider.a((byte) 103, "quickchat_shortcut_help,2");
                 if (var2 != null) {
                   bj.quickchatShortcutHelp[2] = a.a(var2, param1 + 21139);
                 }
-                var2 = gg.a((byte) 120, "quickchat_shortcut_help,3");
+                var2 = DebouncedValidationProvider.a((byte) 120, "quickchat_shortcut_help,3");
                 if (var2 != null) {
                   bj.quickchatShortcutHelp[3] = a.a(var2, param1 + 21136);
                 }
-                var2 = gg.a((byte) -112, "quickchat_shortcut_help,4");
+                var2 = DebouncedValidationProvider.a((byte) -112, "quickchat_shortcut_help,4");
                 if (null != var2) {
                   bj.quickchatShortcutHelp[4] = a.a(var2, param1 + 20967);
                 }
-                var2 = gg.a((byte) 110, "quickchat_shortcut_help,5");
+                var2 = DebouncedValidationProvider.a((byte) 110, "quickchat_shortcut_help,5");
                 if (null != var2) {
                   bj.quickchatShortcutHelp[5] = a.a(var2, -75);
                 }
-                var2 = gg.a((byte) -53, "quickchat_shortcut_keys,0");
+                var2 = DebouncedValidationProvider.a((byte) -53, "quickchat_shortcut_keys,0");
                 if (null != var2) {
                   ck.quickchatShortcutKeys[0] = a.a(var2, -35);
                 }
-                var2 = gg.a((byte) -51, "quickchat_shortcut_keys,1");
+                var2 = DebouncedValidationProvider.a((byte) -51, "quickchat_shortcut_keys,1");
                 if (null != var2) {
                   ck.quickchatShortcutKeys[1] = a.a(var2, -5);
                 }
-                var2 = gg.a((byte) 119, "quickchat_shortcut_keys,2");
+                var2 = DebouncedValidationProvider.a((byte) 119, "quickchat_shortcut_keys,2");
                 if (null != var2) {
                   ck.quickchatShortcutKeys[2] = a.a(var2, -45);
                 }
-                var2 = gg.a((byte) -33, "quickchat_shortcut_keys,3");
+                var2 = DebouncedValidationProvider.a((byte) -33, "quickchat_shortcut_keys,3");
                 if (var2 != null) {
                   ck.quickchatShortcutKeys[3] = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 95, "quickchat_shortcut_keys,4");
+                var2 = DebouncedValidationProvider.a((byte) 95, "quickchat_shortcut_keys,4");
                 if (null != var2) {
                   ck.quickchatShortcutKeys[4] = a.a(var2, -113);
                 }
-                var2 = gg.a((byte) -101, "quickchat_shortcut_keys,5");
+                var2 = DebouncedValidationProvider.a((byte) -101, "quickchat_shortcut_keys,5");
                 if (var2 != null) {
                   ck.quickchatShortcutKeys[5] = a.a(var2, -57);
                 }
-                var2 = gg.a((byte) 108, "keychar_the_character_under_questionmark");
+                var2 = DebouncedValidationProvider.a((byte) 108, "keychar_the_character_under_questionmark");
                 if (null != var2) {
                   we.keycharTheCharacterUnderQuestionmark = s.a(var2[0], 8);
                 }
-                var2 = gg.a((byte) 113, "rating_noratings");
+                var2 = DebouncedValidationProvider.a((byte) 113, "rating_noratings");
                 if (var2 != null) {
                   mm.ratingNoratings = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -89, "rating_rating");
+                var2 = DebouncedValidationProvider.a((byte) -89, "rating_rating");
                 if (null != var2) {
-                  eq.ratingRating = a.a(var2, -72);
+                  DateInputWidget.ratingRating = a.a(var2, -72);
                 }
-                var2 = gg.a((byte) -31, "rating_played");
+                var2 = DebouncedValidationProvider.a((byte) -31, "rating_played");
                 if (null != var2) {
-                  jf.ratingPlayed = a.a(var2, param1 + 21026);
+                  ImageProducerRasterBuffer.ratingPlayed = a.a(var2, param1 + 21026);
                 }
-                var2 = gg.a((byte) -33, "rating_won");
+                var2 = DebouncedValidationProvider.a((byte) -33, "rating_won");
                 if (null != var2) {
                   vj.ratingWon = a.a(var2, -20);
                 }
-                var2 = gg.a((byte) -118, "rating_lost");
+                var2 = DebouncedValidationProvider.a((byte) -118, "rating_lost");
                 if (var2 != null) {
                   ShotRecord.ratingLost = a.a(var2, param1 + 20990);
                 }
-                var2 = gg.a((byte) -113, "rating_drawn");
+                var2 = DebouncedValidationProvider.a((byte) -113, "rating_drawn");
                 if (var2 != null) {
                   um.ratingDrawn = a.a(var2, 4);
                 }
-                var2 = gg.a((byte) -101, "benefits_fullscreen");
+                var2 = DebouncedValidationProvider.a((byte) -101, "benefits_fullscreen");
                 if (null != var2) {
                   a.a(var2, -67);
                 }
-                var2 = gg.a((byte) -67, "benefits_noadverts");
+                var2 = DebouncedValidationProvider.a((byte) -67, "benefits_noadverts");
                 if (var2 != null) {
                   a.a(var2, param1 ^ 21014);
                 }
-                var2 = gg.a((byte) -101, "benefits_price");
+                var2 = DebouncedValidationProvider.a((byte) -101, "benefits_price");
                 if (null != var2) {
-                  sh.benefitsPrice = a.a(var2, 6);
+                  OpacityWidget.benefitsPrice = a.a(var2, 6);
                 }
-                var2 = gg.a((byte) 106, "members_expansion_benefits,0");
+                var2 = DebouncedValidationProvider.a((byte) 106, "members_expansion_benefits,0");
                 if (null != var2) {
                   vn.membersExpansionBenefits[0] = a.a(var2, 4);
                 }
-                var2 = gg.a((byte) -84, "members_expansion_benefits,1");
+                var2 = DebouncedValidationProvider.a((byte) -84, "members_expansion_benefits,1");
                 if (var2 != null) {
                   vn.membersExpansionBenefits[1] = a.a(var2, param1 + 21137);
                 }
-                var2 = gg.a((byte) 118, "members_expansion_benefits,2");
+                var2 = DebouncedValidationProvider.a((byte) 118, "members_expansion_benefits,2");
                 if (var2 != null) {
                   vn.membersExpansionBenefits[2] = a.a(var2, cq.a(param1, -21100));
                 }
-                var2 = gg.a((byte) -78, "members_expansion_price_top");
+                var2 = DebouncedValidationProvider.a((byte) -78, "members_expansion_price_top");
                 if (var2 != null) {
                   a.a(var2, -45);
                 }
-                var2 = gg.a((byte) -127, "members_expansion_price_bottom");
+                var2 = DebouncedValidationProvider.a((byte) -127, "members_expansion_price_bottom");
                 if (var2 != null) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -86, "reconnect_lost_seq,0");
+                var2 = DebouncedValidationProvider.a((byte) -86, "reconnect_lost_seq,0");
                 if (var2 != null) {
                   rf.reconnectLostSeq[0] = a.a(var2, -3);
                 }
-                var2 = gg.a((byte) -126, "reconnect_lost_seq,1");
+                var2 = DebouncedValidationProvider.a((byte) -126, "reconnect_lost_seq,1");
                 if (null != var2) {
                   rf.reconnectLostSeq[1] = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -63, "reconnect_lost_seq,2");
+                var2 = DebouncedValidationProvider.a((byte) -63, "reconnect_lost_seq,2");
                 if (var2 != null) {
                   rf.reconnectLostSeq[2] = a.a(var2, cq.a(param1, 21092));
                 }
-                var2 = gg.a((byte) 127, "reconnect_lost_seq,3");
+                var2 = DebouncedValidationProvider.a((byte) 127, "reconnect_lost_seq,3");
                 if (var2 != null) {
                   rf.reconnectLostSeq[3] = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 117, "reconnect_lost");
+                var2 = DebouncedValidationProvider.a((byte) 117, "reconnect_lost");
                 if (null != var2) {
                   a.a(var2, -72);
                 }
-                var2 = gg.a((byte) -27, "reconnect_restored");
+                var2 = DebouncedValidationProvider.a((byte) -27, "reconnect_restored");
                 if (var2 != null) {
                   a.a(var2, -60);
                 }
-                var2 = gg.a((byte) -64, "reconnect_please_check");
+                var2 = DebouncedValidationProvider.a((byte) -64, "reconnect_please_check");
                 if (var2 != null) {
                   a.a(var2, -121);
                 }
-                var2 = gg.a((byte) -118, "reconnect_wait");
+                var2 = DebouncedValidationProvider.a((byte) -118, "reconnect_wait");
                 if (var2 != null) {
                   a.a(var2, 123);
                 }
-                var2 = gg.a((byte) -97, "reconnect_retry");
+                var2 = DebouncedValidationProvider.a((byte) -97, "reconnect_retry");
                 if (var2 != null) {
                   a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -107, "reconnect_resume");
+                var2 = DebouncedValidationProvider.a((byte) -107, "reconnect_resume");
                 if (null != var2) {
                   a.a(var2, -80);
                 }
-                var2 = gg.a((byte) 108, "reconnect_or");
+                var2 = DebouncedValidationProvider.a((byte) 108, "reconnect_or");
                 if (var2 != null) {
                   a.a(var2, -54);
                 }
-                var2 = gg.a((byte) 123, "reconnect_exitfs");
+                var2 = DebouncedValidationProvider.a((byte) 123, "reconnect_exitfs");
                 if (null != var2) {
                   a.a(var2, -22);
                 }
-                var2 = gg.a((byte) -40, "reconnect_exitfs_quit");
+                var2 = DebouncedValidationProvider.a((byte) -40, "reconnect_exitfs_quit");
                 if (var2 != null) {
                   a.a(var2, -112);
                 }
-                var2 = gg.a((byte) 108, "reconnect_quit");
+                var2 = DebouncedValidationProvider.a((byte) 108, "reconnect_quit");
                 if (var2 != null) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -117, "reconnect_check_fs");
+                var2 = DebouncedValidationProvider.a((byte) -117, "reconnect_check_fs");
                 if (null != var2) {
                   a.a(var2, -67);
                 }
-                var2 = gg.a((byte) -79, "reconnect_check_nonfs");
+                var2 = DebouncedValidationProvider.a((byte) -79, "reconnect_check_nonfs");
                 if (null != var2) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 111, "fs_accept_beforeaccept");
+                var2 = DebouncedValidationProvider.a((byte) 111, "fs_accept_beforeaccept");
                 if (var2 != null) {
                   cl.fsAcceptBeforeaccept = a.a(var2, -75);
                 }
-                var2 = gg.a((byte) 109, "fs_button_accept");
+                var2 = DebouncedValidationProvider.a((byte) 109, "fs_button_accept");
                 if (var2 != null) {
                   jc.fsButtonAccept = a.a(var2, param1 ^ -21100);
                 }
-                var2 = gg.a((byte) 98, "fs_accept_afteraccept");
+                var2 = DebouncedValidationProvider.a((byte) 98, "fs_accept_afteraccept");
                 if (var2 != null) {
-                  jp.fsAcceptAfteraccept = a.a(var2, param1 + 20951);
+                  DisplayNamePanel.fsAcceptAfteraccept = a.a(var2, param1 + 20951);
                 }
-                var2 = gg.a((byte) -45, "fs_button_cancel");
+                var2 = DebouncedValidationProvider.a((byte) -45, "fs_button_cancel");
                 if (var2 != null) {
                   ad.fsButtonCancel = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 122, "fs_accept_aftercancel");
+                var2 = DebouncedValidationProvider.a((byte) 122, "fs_accept_aftercancel");
                 if (var2 != null) {
                   field_c = a.a(var2, param1 ^ 21075);
                 }
-                var2 = gg.a((byte) -39, "fs_accept_countdown_sing");
+                var2 = DebouncedValidationProvider.a((byte) -39, "fs_accept_countdown_sing");
                 if (var2 != null) {
                   rl.fsAcceptCountdownSing = a.a(var2, -95);
                 }
-                var2 = gg.a((byte) -38, "fs_accept_countdown_pl");
+                var2 = DebouncedValidationProvider.a((byte) -38, "fs_accept_countdown_pl");
                 if (null != var2) {
                   cf.fsAcceptCountdownPl = a.a(var2, -77);
                 }
-                var2 = gg.a((byte) 94, "fs_nonmember");
+                var2 = DebouncedValidationProvider.a((byte) 94, "fs_nonmember");
                 if (null != var2) {
                   lg.fsNonmember = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 118, "fs_button_close");
+                var2 = DebouncedValidationProvider.a((byte) 118, "fs_button_close");
                 if (var2 != null) {
                   hi.fsButtonClose = a.a(var2, -5);
                 }
-                var2 = gg.a((byte) 98, "fs_button_members");
+                var2 = DebouncedValidationProvider.a((byte) 98, "fs_button_members");
                 if (null != var2) {
                   wp.fsButtonMembers = a.a(var2, param1 + 20991);
                 }
-                var2 = gg.a((byte) -54, "fs_unavailable");
+                var2 = DebouncedValidationProvider.a((byte) -54, "fs_unavailable");
                 if (null != var2) {
                   ih.fsUnavailable = a.a(var2, param1 ^ -21097);
                 }
-                var2 = gg.a((byte) 100, "fs_unavailable_try_signed_applet");
+                var2 = DebouncedValidationProvider.a((byte) 100, "fs_unavailable_try_signed_applet");
                 if (null != var2) {
-                  lc.fsUnavailableTrySignedApplet = a.a(var2, param1 ^ 21012);
+                  ValidationIconWidget.fsUnavailableTrySignedApplet = a.a(var2, param1 ^ 21012);
                 }
-                var2 = gg.a((byte) -119, "fs_focus");
+                var2 = DebouncedValidationProvider.a((byte) -119, "fs_focus");
                 if (var2 != null) {
                   wh.fsFocus = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -32, "fs_focus_or_resolution");
+                var2 = DebouncedValidationProvider.a((byte) -32, "fs_focus_or_resolution");
                 if (var2 != null) {
                   rk.fsFocusOrResolution = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 96, "fs_timeout");
+                var2 = DebouncedValidationProvider.a((byte) 96, "fs_timeout");
                 if (null != var2) {
                   de.fsTimeout = a.a(var2, param1 ^ -21098);
                 }
-                var2 = gg.a((byte) -38, "fs_button_tryagain");
+                var2 = DebouncedValidationProvider.a((byte) -38, "fs_button_tryagain");
                 if (null != var2) {
                   hg.fsButtonTryagain = a.a(var2, param1 ^ 21061);
                 }
-                var2 = gg.a((byte) -77, "graphics_ui_fs_countdown");
+                var2 = DebouncedValidationProvider.a((byte) -77, "graphics_ui_fs_countdown");
                 if (null != var2) {
                   a.a(var2, -85);
                 }
-                var2 = gg.a((byte) 114, "mb_caption_title");
+                var2 = DebouncedValidationProvider.a((byte) 114, "mb_caption_title");
                 if (null != var2) {
                   PlasmaTableScene.mbCaptionTitle = a.a(var2, param1 ^ 21043);
                 }
-                var2 = gg.a((byte) -64, "mb_including_gamename");
+                var2 = DebouncedValidationProvider.a((byte) -64, "mb_including_gamename");
                 if (var2 != null) {
                   wm.mbIncludingGamename = a.a(var2, param1 + 21138);
                 }
-                var2 = gg.a((byte) -57, "mb_full_access_1");
+                var2 = DebouncedValidationProvider.a((byte) -57, "mb_full_access_1");
                 if (null != var2) {
                   HalloweenBallSkin.mbFullAccess1 = a.a(var2, -8);
                 }
-                var2 = gg.a((byte) 100, "mb_full_access_2");
+                var2 = DebouncedValidationProvider.a((byte) 100, "mb_full_access_2");
                 if (var2 != null) {
                   BufferedSocket.mbFullAccess2 = a.a(var2, -17);
                 }
-                var2 = gg.a((byte) 94, "mb_achievement_count_1");
+                var2 = DebouncedValidationProvider.a((byte) 94, "mb_achievement_count_1");
                 if (var2 != null) {
                   up.mbAchievementCount1 = a.a(var2, -43);
                 }
-                var2 = gg.a((byte) 115, "mb_achievement_count_2");
+                var2 = DebouncedValidationProvider.a((byte) 115, "mb_achievement_count_2");
                 if (null != var2) {
                   PotEvent.mbAchievementCount2 = a.a(var2, param1 + 20933);
                 }
-                var2 = gg.a((byte) -32, "mb_exclusive_1");
+                var2 = DebouncedValidationProvider.a((byte) -32, "mb_exclusive_1");
             }
             void runChunk3() throws java.lang.RuntimeException {
                 if (var2 != null) {
-                  mp.field_X = a.a(var2, 127);
+                  UsernameSuggestionsPanel.field_X = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 115, "mb_exclusive_2");
+                var2 = DebouncedValidationProvider.a((byte) 115, "mb_exclusive_2");
                 if (var2 != null) {
                   cp.mbExclusive2 = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -64, "me_extra_benefits");
+                var2 = DebouncedValidationProvider.a((byte) -64, "me_extra_benefits");
                 if (var2 != null) {
                   a.a(var2, -90);
                 }
-                var2 = gg.a((byte) -113, "hs_friend_tip");
+                var2 = DebouncedValidationProvider.a((byte) -113, "hs_friend_tip");
                 if (var2 != null) {
-                  va.hsFriendTip = a.a(var2, param1 + 20980);
+                  MultiHandleSliderWidget.hsFriendTip = a.a(var2, param1 + 20980);
                 }
-                var2 = gg.a((byte) -85, "hs_friend_tip_multi");
+                var2 = DebouncedValidationProvider.a((byte) -85, "hs_friend_tip_multi");
                 if (var2 != null) {
                   a.a(var2, -62);
                 }
-                var2 = gg.a((byte) -79, "hs_mode_name,0");
+                var2 = DebouncedValidationProvider.a((byte) -79, "hs_mode_name,0");
                 if (var2 != null) {
                   ih.hsModeName[0] = a.a(var2, -77);
                 }
-                var2 = gg.a((byte) -59, "hs_mode_name,1");
+                var2 = DebouncedValidationProvider.a((byte) -59, "hs_mode_name,1");
                 if (null != var2) {
                   ih.hsModeName[1] = a.a(var2, -52);
                 }
-                var2 = gg.a((byte) -95, "hs_mode_name,2");
+                var2 = DebouncedValidationProvider.a((byte) -95, "hs_mode_name,2");
                 if (null != var2) {
                   ih.hsModeName[2] = a.a(var2, -106);
                 }
-                var2 = gg.a((byte) 116, "rating_mode_name,0");
+                var2 = DebouncedValidationProvider.a((byte) 116, "rating_mode_name,0");
                 if (null != var2) {
                   mm.ratingModeName[0] = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -41, "rating_mode_name,1");
+                var2 = DebouncedValidationProvider.a((byte) -41, "rating_mode_name,1");
                 if (null != var2) {
                   mm.ratingModeName[1] = a.a(var2, cq.a(param1, -21097));
                 }
-                var2 = gg.a((byte) -115, "rating_mode_long_name,0");
+                var2 = DebouncedValidationProvider.a((byte) -115, "rating_mode_long_name,0");
                 if (null != var2) {
                   GameApplet.ratingModeLongName[0] = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -128, "rating_mode_long_name,1");
+                var2 = DebouncedValidationProvider.a((byte) -128, "rating_mode_long_name,1");
                 if (null != var2) {
                   GameApplet.ratingModeLongName[1] = a.a(var2, -44);
                 }
-                var2 = gg.a((byte) 109, "graphics_config_fixed_size");
+                var2 = DebouncedValidationProvider.a((byte) 109, "graphics_config_fixed_size");
                 if (var2 != null) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 127, "graphics_config_resizable");
+                var2 = DebouncedValidationProvider.a((byte) 127, "graphics_config_resizable");
                 if (null != var2) {
                   a.a(var2, param1 ^ -21100);
                 }
-                var2 = gg.a((byte) 101, "graphics_config_fullscreen");
+                var2 = DebouncedValidationProvider.a((byte) 101, "graphics_config_fullscreen");
                 if (var2 != null) {
                   a.a(var2, param1 + 21136);
                 }
-                var2 = gg.a((byte) 105, "graphics_config_done");
+                var2 = DebouncedValidationProvider.a((byte) 105, "graphics_config_done");
                 if (var2 != null) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -27, "graphics_config_apply");
+                var2 = DebouncedValidationProvider.a((byte) -27, "graphics_config_apply");
                 if (null != var2) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 101, "graphics_config_title");
+                var2 = DebouncedValidationProvider.a((byte) 101, "graphics_config_title");
                 if (null != var2) {
                   a.a(var2, -31);
                 }
-                var2 = gg.a((byte) 124, "graphics_config_instruction");
+                var2 = DebouncedValidationProvider.a((byte) 124, "graphics_config_instruction");
                 if (null != var2) {
                   a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -80, "graphics_config_need_memory");
+                var2 = DebouncedValidationProvider.a((byte) -80, "graphics_config_need_memory");
                 if (null != var2) {
                   a.a(var2, -94);
                 }
-                var2 = gg.a((byte) 106, "pleasewait_dotdotdot");
+                var2 = DebouncedValidationProvider.a((byte) 106, "pleasewait_dotdotdot");
                 if (var2 != null) {
                   cl.pleasewaitDotdotdot = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -31, "serviceunavailable");
+                var2 = DebouncedValidationProvider.a((byte) -31, "serviceunavailable");
                 if (var2 != null) {
                   fh.serviceunavailable = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 93, "createtouse");
+                var2 = DebouncedValidationProvider.a((byte) 93, "createtouse");
                 if (var2 != null) {
                   ra.createtouse = a.a(var2, param1 ^ -21100);
                 }
-                var2 = gg.a((byte) 111, "achievementsoffline");
+                var2 = DebouncedValidationProvider.a((byte) 111, "achievementsoffline");
                 if (null != var2) {
                   a.a(var2, param1 + 20994);
                 }
-                var2 = gg.a((byte) -113, "warning");
+                var2 = DebouncedValidationProvider.a((byte) -113, "warning");
                 if (var2 != null) {
                   a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -69, "DEFAULT_PLAYER_NAME");
+                var2 = DebouncedValidationProvider.a((byte) -69, "DEFAULT_PLAYER_NAME");
                 if (null != var2) {
                   tf.dEFAULTPLAYERNAME = a.a(var2, -14);
                 }
-                var2 = gg.a((byte) 103, "mustlogin1");
+                var2 = DebouncedValidationProvider.a((byte) 103, "mustlogin1");
                 if (null != var2) {
                   a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -88, "mustlogin2,1");
+                var2 = DebouncedValidationProvider.a((byte) -88, "mustlogin2,1");
                 if (var2 != null) {
-                  ib.mustlogin2[1] = a.a(var2, 126);
+                  MidiNoteMixer.mustlogin2[1] = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 119, "mustlogin2,2");
+                var2 = DebouncedValidationProvider.a((byte) 119, "mustlogin2,2");
                 if (null != var2) {
-                  ib.mustlogin2[2] = a.a(var2, -51);
+                  MidiNoteMixer.mustlogin2[2] = a.a(var2, -51);
                 }
-                var2 = gg.a((byte) -30, "mustlogin2,3");
+                var2 = DebouncedValidationProvider.a((byte) -30, "mustlogin2,3");
                 if (var2 != null) {
-                  ib.mustlogin2[3] = a.a(var2, 127);
+                  MidiNoteMixer.mustlogin2[3] = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 111, "mustlogin2,4");
+                var2 = DebouncedValidationProvider.a((byte) 111, "mustlogin2,4");
                 if (var2 != null) {
-                  ib.mustlogin2[4] = a.a(var2, 127);
+                  MidiNoteMixer.mustlogin2[4] = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -86, "mustlogin2,5");
+                var2 = DebouncedValidationProvider.a((byte) -86, "mustlogin2,5");
                 if (null != var2) {
-                  ib.mustlogin2[5] = a.a(var2, 126);
+                  MidiNoteMixer.mustlogin2[5] = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -85, "mustlogin2,6");
+                var2 = DebouncedValidationProvider.a((byte) -85, "mustlogin2,6");
                 if (null != var2) {
-                  ib.mustlogin2[6] = a.a(var2, 125);
+                  MidiNoteMixer.mustlogin2[6] = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) 96, "mustlogin2,7");
+                var2 = DebouncedValidationProvider.a((byte) 96, "mustlogin2,7");
                 if (var2 != null) {
-                  ib.mustlogin2[7] = a.a(var2, -97);
+                  MidiNoteMixer.mustlogin2[7] = a.a(var2, -97);
                 }
-                var2 = gg.a((byte) -46, "mustlogin3,1");
+                var2 = DebouncedValidationProvider.a((byte) -46, "mustlogin3,1");
                 if (var2 != null) {
                   qd.mustlogin3[1] = a.a(var2, -14);
                 }
-                var2 = gg.a((byte) -51, "mustlogin3,2");
+                var2 = DebouncedValidationProvider.a((byte) -51, "mustlogin3,2");
                 if (null != var2) {
                   qd.mustlogin3[2] = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 95, "mustlogin3,3");
+                var2 = DebouncedValidationProvider.a((byte) 95, "mustlogin3,3");
                 if (null != var2) {
                   qd.mustlogin3[3] = a.a(var2, -111);
                 }
-                var2 = gg.a((byte) 117, "mustlogin3,4");
+                var2 = DebouncedValidationProvider.a((byte) 117, "mustlogin3,4");
                 if (null != var2) {
                   qd.mustlogin3[4] = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -126, "mustlogin3,5");
+                var2 = DebouncedValidationProvider.a((byte) -126, "mustlogin3,5");
                 if (null != var2) {
                   qd.mustlogin3[5] = a.a(var2, cq.a(param1, -21023));
                 }
-                var2 = gg.a((byte) 110, "mustlogin3,6");
+                var2 = DebouncedValidationProvider.a((byte) 110, "mustlogin3,6");
                 if (var2 != null) {
                   qd.mustlogin3[6] = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -98, "mustlogin3,7");
+                var2 = DebouncedValidationProvider.a((byte) -98, "mustlogin3,7");
                 if (null != var2) {
                   qd.mustlogin3[7] = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -41, "discard");
+                var2 = DebouncedValidationProvider.a((byte) -41, "discard");
                 if (var2 != null) {
                   de.discard = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 114, "mustlogin4,1");
+                var2 = DebouncedValidationProvider.a((byte) 114, "mustlogin4,1");
                 if (null != var2) {
                   nl.mustlogin4[1] = a.a(var2, param1 + 21138);
                 }
-                var2 = gg.a((byte) -73, "mustlogin4,2");
+                var2 = DebouncedValidationProvider.a((byte) -73, "mustlogin4,2");
                 if (var2 != null) {
                   nl.mustlogin4[2] = a.a(var2, -52);
                 }
-                var2 = gg.a((byte) 96, "mustlogin4,3");
+                var2 = DebouncedValidationProvider.a((byte) 96, "mustlogin4,3");
                 if (var2 != null) {
                   nl.mustlogin4[3] = a.a(var2, -43);
                 }
-                var2 = gg.a((byte) -106, "mustlogin4,4");
+                var2 = DebouncedValidationProvider.a((byte) -106, "mustlogin4,4");
                 if (var2 != null) {
                   nl.mustlogin4[4] = a.a(var2, -13);
                 }
-                var2 = gg.a((byte) -111, "mustlogin4,5");
+                var2 = DebouncedValidationProvider.a((byte) -111, "mustlogin4,5");
                 if (var2 != null) {
                   nl.mustlogin4[5] = a.a(var2, 123);
                 }
-                var2 = gg.a((byte) 100, "mustlogin4,6");
+                var2 = DebouncedValidationProvider.a((byte) 100, "mustlogin4,6");
                 if (var2 != null) {
                   nl.mustlogin4[6] = a.a(var2, -97);
                 }
-                var2 = gg.a((byte) -97, "mustlogin4,7");
+                var2 = DebouncedValidationProvider.a((byte) -97, "mustlogin4,7");
                 if (var2 != null) {
                   nl.mustlogin4[7] = a.a(var2, -42);
                 }
-                var2 = gg.a((byte) 98, "mustlogin_notloggedin");
+                var2 = DebouncedValidationProvider.a((byte) 98, "mustlogin_notloggedin");
                 if (var2 != null) {
-                  oe.mustloginNotloggedin = a.a(var2, 127);
+                  FadingDialog.mustloginNotloggedin = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) 127, "mustlogin_alternate,1");
+                var2 = DebouncedValidationProvider.a((byte) 127, "mustlogin_alternate,1");
                 if (null != var2) {
                   ml.mustloginAlternate[1] = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -93, "mustlogin_alternate,2");
+                var2 = DebouncedValidationProvider.a((byte) -93, "mustlogin_alternate,2");
                 if (var2 != null) {
                   ml.mustloginAlternate[2] = a.a(var2, -106);
                 }
-                var2 = gg.a((byte) -54, "mustlogin_alternate,3");
+                var2 = DebouncedValidationProvider.a((byte) -54, "mustlogin_alternate,3");
                 if (null != var2) {
                   ml.mustloginAlternate[3] = a.a(var2, -123);
                 }
-                var2 = gg.a((byte) -41, "mustlogin_alternate,4");
+                var2 = DebouncedValidationProvider.a((byte) -41, "mustlogin_alternate,4");
                 if (var2 != null) {
                   ml.mustloginAlternate[4] = a.a(var2, -36);
                 }
-                var2 = gg.a((byte) 108, "mustlogin_alternate,5");
+                var2 = DebouncedValidationProvider.a((byte) 108, "mustlogin_alternate,5");
                 if (var2 != null) {
                   ml.mustloginAlternate[5] = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) 126, "mustlogin_alternate,6");
+                var2 = DebouncedValidationProvider.a((byte) 126, "mustlogin_alternate,6");
                 if (null != var2) {
                   ml.mustloginAlternate[6] = a.a(var2, param1 + 21138);
                 }
-                var2 = gg.a((byte) 120, "mustlogin_alternate,7");
+                var2 = DebouncedValidationProvider.a((byte) 120, "mustlogin_alternate,7");
                 if (var2 != null) {
                   ml.mustloginAlternate[7] = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -99, "subscription_cost_monthly,0");
+                var2 = DebouncedValidationProvider.a((byte) -99, "subscription_cost_monthly,0");
                 if (var2 != null) {
                   bc.subscriptionCostMonthly[0] = a.a(var2, 125);
                 }
-                var2 = gg.a((byte) -123, "subscription_cost_monthly,1");
+                var2 = DebouncedValidationProvider.a((byte) -123, "subscription_cost_monthly,1");
                 if (null != var2) {
                   bc.subscriptionCostMonthly[1] = a.a(var2, param1 + 20921);
                 }
-                var2 = gg.a((byte) -75, "subscription_cost_monthly,2");
+                var2 = DebouncedValidationProvider.a((byte) -75, "subscription_cost_monthly,2");
                 if (null != var2) {
                   bc.subscriptionCostMonthly[2] = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -50, "subscription_cost_monthly,3");
+                var2 = DebouncedValidationProvider.a((byte) -50, "subscription_cost_monthly,3");
                 if (null != var2) {
                   bc.subscriptionCostMonthly[3] = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -30, "subscription_cost_monthly,4");
+                var2 = DebouncedValidationProvider.a((byte) -30, "subscription_cost_monthly,4");
                 if (null != var2) {
                   bc.subscriptionCostMonthly[4] = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -95, "subscription_cost_monthly,5");
+                var2 = DebouncedValidationProvider.a((byte) -95, "subscription_cost_monthly,5");
                 if (var2 != null) {
                   bc.subscriptionCostMonthly[5] = a.a(var2, 127);
                 }
-                var2 = gg.a((byte) -54, "subscription_cost_monthly,6");
+                var2 = DebouncedValidationProvider.a((byte) -54, "subscription_cost_monthly,6");
                 if (null != var2) {
                   bc.subscriptionCostMonthly[6] = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 95, "subscription_cost_monthly,7");
+                var2 = DebouncedValidationProvider.a((byte) 95, "subscription_cost_monthly,7");
                 if (null != var2) {
                   bc.subscriptionCostMonthly[7] = a.a(var2, cq.a(param1, 21031));
                 }
-                var2 = gg.a((byte) 95, "subscription_cost_monthly,8");
+                var2 = DebouncedValidationProvider.a((byte) 95, "subscription_cost_monthly,8");
                 if (var2 != null) {
                   bc.subscriptionCostMonthly[8] = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) 112, "subscription_cost_monthly,9");
+                var2 = DebouncedValidationProvider.a((byte) 112, "subscription_cost_monthly,9");
                 if (null != var2) {
                   bc.subscriptionCostMonthly[9] = a.a(var2, 126);
                 }
-                var2 = gg.a((byte) -75, "subscription_cost_monthly,10");
+                var2 = DebouncedValidationProvider.a((byte) -75, "subscription_cost_monthly,10");
                 if (var2 != null) {
                   bc.subscriptionCostMonthly[10] = a.a(var2, -94);
                 }
-                var2 = gg.a((byte) -116, "subscription_cost_monthly,11");
+                var2 = DebouncedValidationProvider.a((byte) -116, "subscription_cost_monthly,11");
                 if (null != var2) {
                   bc.subscriptionCostMonthly[11] = a.a(var2, -39);
                 }
-                var2 = gg.a((byte) -127, "subscription_cost_monthly,12");
+                var2 = DebouncedValidationProvider.a((byte) -127, "subscription_cost_monthly,12");
                 if (null != var2) {
                   bc.subscriptionCostMonthly[12] = a.a(var2, 124);
                 }
-                var2 = gg.a((byte) -59, "sentence_separator");
+                var2 = DebouncedValidationProvider.a((byte) -59, "sentence_separator");
                 if (var2 != null) {
                   a.a(var2, 124);
                 }
-                me.field_r = null;
+                EmailAvailabilityValidator.field_r = null;
             }
             void run() {
                 var3 = Pool.field_O;
@@ -3217,7 +3217,7 @@ final class TranslatedUiText {
               return;
             }
           }
-          var3 = (ln) (ke.field_f.c((byte) -101));
+          var3 = (ln) (LoginTextValue.field_f.c((byte) -101));
           if (var3 == null) {
             dn.c(116);
             return;

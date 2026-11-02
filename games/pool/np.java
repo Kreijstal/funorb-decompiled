@@ -5,11 +5,11 @@ import java.io.*;
 
 final class np {
     private int field_h;
-    private ir field_i;
+    private BufferedFile field_i;
     static String field_a;
     static int field_d;
     static String muXDroppedOut;
-    private ir field_f;
+    private BufferedFile field_f;
     static String noOptionsAvailable;
     private int field_b;
     static String achieved;
@@ -57,16 +57,16 @@ final class np {
           var3_ref = this.field_i;
           synchronized (var3_ref) {
             try {
-              if (this.field_f.d((byte) 17) < (long)(6 + param1 * 6)) {
+              if (this.field_f.length((byte) 17) < (long)(6 + param1 * 6)) {
                 stackIn_3_0 = null;
                 return (byte[]) (stackIn_3_0);
               }
-              this.field_f.a(0, (long)(param1 * 6));
+              this.field_f.seek(0, (long)(param1 * 6));
               if (param0 != -110) {
                 stackIn_7_0 = (byte[]) null;
                 return stackIn_7_0;
               }
-              this.field_f.a((byte) -111, 6, 0, dg.field_S);
+              this.field_f.readFully((byte) -111, 6, 0, dg.field_S);
               var4_int = (dg.field_S[2] & 255) + (16711680 & dg.field_S[0] << 16) + (dg.field_S[1] << 8 & 65280);
               var5 = (255 & dg.field_S[5]) + (dg.field_S[3] << 16 & 16711680) + (dg.field_S[4] << 8 & 65280);
               if (var4_int < 0) {
@@ -78,7 +78,7 @@ final class np {
               if (var5 <= 0) {
                 return null;
               }
-              if (this.field_i.d((byte) 17) / 520L < (long)var5) {
+              if (this.field_i.length((byte) 17) / 520L < (long)var5) {
                 stackIn_19_0 = null;
                 return (byte[]) (stackIn_19_0);
               }
@@ -89,14 +89,14 @@ final class np {
                 if (var5 == 0) {
                   return null;
                 }
-                this.field_i.a(param0 ^ -110, (long)(520 * var5));
+                this.field_i.seek(param0 ^ -110, (long)(520 * var5));
                 var9 = var4_int - var7;
                 if (65535 >= param1) {
                   if (var9 > 512) {
                     var9 = 512;
                   }
                   var14 = 8;
-                  this.field_i.a((byte) -115, var14 + var9, 0, dg.field_S);
+                  this.field_i.readFully((byte) -115, var14 + var9, 0, dg.field_S);
                   var12 = (dg.field_S[5] << 8 & 65280) + (dg.field_S[4] << 16 & 16711680) + (dg.field_S[6] & 255);
                   var11 = ((dg.field_S[2] & 255) << 8) + (dg.field_S[3] & 255);
                   var13 = dg.field_S[7] & 255;
@@ -106,7 +106,7 @@ final class np {
                     var9 = 510;
                   }
                   var14 = 10;
-                  this.field_i.a((byte) -126, var9 + var14, 0, dg.field_S);
+                  this.field_i.readFully((byte) -126, var9 + var14, 0, dg.field_S);
                   var12 = (dg.field_S[7] << 8 & 65280) + (16711680 & dg.field_S[6] << 16) + (255 & dg.field_S[8]);
                   var13 = dg.field_S[9] & 255;
                   var11 = (255 & dg.field_S[5]) + (dg.field_S[4] << 8 & 65280);
@@ -124,7 +124,7 @@ final class np {
                 if (var12 < 0) {
                   return null;
                 }
-                if ((long)var12 > this.field_i.d((byte) 17) / 520L) {
+                if ((long)var12 > this.field_i.length((byte) 17) / 520L) {
                   stackIn_47_0 = null;
                   return (byte[]) (stackIn_47_0);
                 }
@@ -263,18 +263,18 @@ final class np {
             synchronized (var6) {
               try {
                 if (param2) {
-                  if ((long)(6 + param0 * 6) > this.field_f.d((byte) 17)) {
+                  if ((long)(6 + param0 * 6) > this.field_f.length((byte) 17)) {
                     return false;
                   }
-                  this.field_f.a(0, (long)(param0 * 6));
-                  this.field_f.a((byte) -110, 6, 0, dg.field_S);
+                  this.field_f.seek(0, (long)(param0 * 6));
+                  this.field_f.readFully((byte) -110, 6, 0, dg.field_S);
                   var7_int = (dg.field_S[5] & 255) + (16711680 & dg.field_S[3] << 16) + (dg.field_S[4] << 8 & 65280);
                   if (var7_int <= 0 ||
-                    !((long)var7_int <= this.field_i.d((byte) 17) / 520L)) {
+                    !((long)var7_int <= this.field_i.length((byte) 17) / 520L)) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((519L + this.field_i.d((byte) 17)) / 520L);
+                  var7_int = (int)((519L + this.field_i.length((byte) 17)) / 520L);
                   if (var7_int == 0) {
                     var7_int = 1;
                   }
@@ -285,8 +285,8 @@ final class np {
                 dg.field_S[1] = (byte)(param1 >> 8);
                 dg.field_S[4] = (byte)(var7_int >> 8);
                 dg.field_S[5] = (byte)var7_int;
-                this.field_f.a(0, (long)(param0 * 6));
-                this.field_f.a(6, dg.field_S, 0, -1);
+                this.field_f.seek(0, (long)(param0 * 6));
+                this.field_f.write(6, dg.field_S, 0, -1);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -294,10 +294,10 @@ final class np {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
                     if (param2) {
-                      this.field_i.a(param4 ^ 93, (long)(520 * var7_int));
+                      this.field_i.seek(param4 ^ 93, (long)(520 * var7_int));
                       if (65535 >= param0) {
                         try {
-                          this.field_i.a((byte) -110, 8, 0, dg.field_S);
+                          this.field_i.readFully((byte) -110, 8, 0, dg.field_S);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -313,7 +313,7 @@ final class np {
                         var13 = dg.field_S[7] & 255;
                       } else {
                         try {
-                          this.field_i.a((byte) -118, 10, 0, dg.field_S);
+                          this.field_i.readFully((byte) -118, 10, 0, dg.field_S);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -332,7 +332,7 @@ final class np {
                         var12 == var9 &&
                         var13 == this.field_h) &&
                         (decompiledFrameRemainder0 = (!(0 <= var10) ||
-                        !(this.field_i.d((byte) 17) / 520L >= (long)var10)))) {
+                        !(this.field_i.length((byte) 17) / 520L >= (long)var10)))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
@@ -341,7 +341,7 @@ final class np {
                     }
                     if (var10 == 0) {
                       param2 = false;
-                      var10 = (int)((this.field_i.d((byte) 17) + 519L) / 520L);
+                      var10 = (int)((this.field_i.length((byte) 17) + 519L) / 520L);
                       if (var10 == 0) {
                         var10++;
                       }
@@ -361,13 +361,13 @@ final class np {
                       dg.field_S[3] = (byte)var9;
                       dg.field_S[7] = (byte)this.field_h;
                       dg.field_S[4] = (byte)(var10 >> 16);
-                      this.field_i.a(0, (long)(520 * var7_int));
-                      this.field_i.a(8, dg.field_S, 0, -1);
+                      this.field_i.seek(0, (long)(520 * var7_int));
+                      this.field_i.write(8, dg.field_S, 0, -1);
                       var11 = -var8 + param1;
                       if (var11 > 512) {
                         var11 = 512;
                       }
-                      this.field_i.a(var11, param3, var8, -1);
+                      this.field_i.write(var11, param3, var8, -1);
                       var8 = var8 + var11;
                     } else {
                       dg.field_S[7] = (byte)(var10 >> 8);
@@ -380,13 +380,13 @@ final class np {
                       dg.field_S[1] = (byte)(param0 >> 16);
                       dg.field_S[6] = (byte)(var10 >> 16);
                       dg.field_S[5] = (byte)var9;
-                      this.field_i.a(0, (long)(520 * var7_int));
-                      this.field_i.a(10, dg.field_S, 0, param4 - 94);
+                      this.field_i.seek(0, (long)(520 * var7_int));
+                      this.field_i.write(10, dg.field_S, 0, param4 - 94);
                       var11 = -var8 + param1;
                       if (var11 > 510) {
                         var11 = 510;
                       }
-                      this.field_i.a(var11, param3, var8, -1);
+                      this.field_i.write(var11, param3, var8, -1);
                       var8 = var8 + var11;
                     }
                     var7_int = var10;
@@ -468,7 +468,7 @@ final class np {
             }
             if (tl.field_J == no.field_h) {
               if (!param2) {
-                hn.field_c = kb.a(false, param1, -5790, param5);
+                hn.field_c = TickClock.a(false, param1, -5790, param5);
               } else {
                 var11 = (String) null;
                 hn.field_c = bi.a(Quaternion.field_a, -16595, param5, false, (String) null);
@@ -480,7 +480,7 @@ final class np {
               tl.field_J = vn.field_d;
             }
             if (vn.field_d == tl.field_J &&
-              lq.b((byte) 87, 1)) {
+              DialogLayer.b((byte) 87, 1)) {
               var6_int = kn.field_e.readUnsignedByte(-82);
               if (var6_int == 0) {
                 tl.field_J = fr.field_o;
@@ -492,7 +492,7 @@ final class np {
               kn.field_e.position = 0;
             }
             if (fr.field_o == tl.field_J &&
-              lq.b((byte) 43, 8)) {
+              DialogLayer.b((byte) 43, 8)) {
               Pool.field_Q = kn.field_e.readLong(-412303328);
               kn.field_e.position = 0;
               pj.a(param2, hn.field_c, param3, -98300704, param4);
@@ -500,10 +500,10 @@ final class np {
             }
             boolean decompiledFrameRemainder0 = true;
             if (tl.field_J == DualLinkDeque.field_g &&
-              lq.b((byte) 79, 1)) {
+              DialogLayer.b((byte) 79, 1)) {
               var6_intLifetime1 = kn.field_e.readUnsignedByte(-110);
               kn.field_e.position = 0;
-              ri.field_N = null;
+              CheckboxWidget.field_N = null;
               uq.field_c = var6_intLifetime1;
               if (var6_intLifetime1 != 0 &&
                 1 != var6_intLifetime1) {
@@ -527,14 +527,14 @@ final class np {
             if (ff.field_b == tl.field_J &&
               wf.a((byte) 39)) {
               Quaternion.field_a = kn.field_e.readLong(-412303328);
-              ei.field_E = param5;
-              hq.field_i = kn.field_e.readUnsignedByte(-68);
+              UiWidget.field_E = param5;
+              TutorialController.field_i = kn.field_e.readUnsignedByte(-68);
               ta.field_f = kn.field_e.readUnsignedByte(-105);
-              mp.field_V = kn.field_e.readUnsignedShort(-1034);
+              UsernameSuggestionsPanel.field_V = kn.field_e.readUnsignedShort(-1034);
               var12 = kn.field_e.m(108);
               var7 = kn.field_e.readUnsignedByte(-76);
               if (0 != (1 & var7)) {
-                ke.a(100);
+                LoginTextValue.a(100);
               }
               stackIn_44_0 = ((16 & var7) != 0);
               nm.field_b = stackIn_44_0;
@@ -544,57 +544,57 @@ final class np {
                 stackIn_51_0 = ((4 & var7) != 0);
                 fq.field_Gb = stackIn_51_0;
                 stackIn_54_0 = ((2 & var7) != 0);
-                hr.field_y = stackIn_54_0;
+                ViewportController.field_y = stackIn_54_0;
                 if (ea.field_z) {
-                  hr.field_y = true;
+                  ViewportController.field_y = true;
                 }
               }
-              if (hk.field_s) {
+              if (NanoTickClock.field_s) {
                 kn.field_e.readUnsignedByte(-114);
                 kn.field_e.readUnsignedByte(-99);
                 kn.field_e.readInt(true);
-                va.field_X = kn.field_e.readUnsignedShort(-1034);
-                sn.field_n = new byte[va.field_X];
-                for (var8 = 0; va.field_X > var8; var8++) {
-                  sn.field_n[var8] = kn.field_e.readByte((byte) 105);
+                MultiHandleSliderWidget.field_X = kn.field_e.readUnsignedShort(-1034);
+                BirthDateValidator.field_n = new byte[MultiHandleSliderWidget.field_X];
+                for (var8 = 0; MultiHandleSliderWidget.field_X > var8; var8++) {
+                  BirthDateValidator.field_n[var8] = kn.field_e.readByte((byte) 105);
                 }
               }
               di.field_j = kn.field_e.j(-22);
               var13 = (CharSequence) ((Object) di.field_j);
-              oj.field_y = hq.a(101, var13);
+              oj.field_y = TutorialController.normalizeDisplayName(101, var13);
               no.field_l = kn.field_e.readUnsignedByte(-126);
               tl.field_J = ta.field_a;
               if (hn.field_c.b((byte) -110) == dg.field_L) {
                 stackIn_67_0 = eo.field_Xb;
-                stackIn_67_1 = hk.d(78);
+                stackIn_67_1 = NanoTickClock.getApplet(78);
                 stackIn_68_2 = !(param0);
                 ((ml) (Object) stackIn_67_0).a(stackIn_67_1, stackIn_68_2);
               } else {
                 if (hn.field_c.b((byte) 37) == rp.field_b) {
-                  ug.field_v.a(hk.d(105), true);
+                  ug.field_v.a(NanoTickClock.getApplet(105), true);
                 }
               }
               we.field_e = false;
               if (var12 != null) {
-                fg.a(hk.d(100), -124, var12);
+                WeightedLruCache.writeSettingsCookie(NanoTickClock.getApplet(100), -124, var12);
               }
-              if (mp.field_V <= 0 &&
+              if (UsernameSuggestionsPanel.field_V <= 0 &&
                 !fq.field_Gb) {
                 try {
-                  mo.a((byte) 126, "unzap", hk.d(125));
+                  mo.a((byte) 126, "unzap", NanoTickClock.getApplet(125));
                 } catch (java.lang.Throwable decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               } else {
                 try {
-                  mo.a("zap", new Object[]{sl.a(false, Quaternion.field_a)}, 105, hk.d(107));
+                  mo.a("zap", new Object[]{TextInputWidget.decodeBase37Name(false, Quaternion.field_a)}, 105, NanoTickClock.getApplet(107));
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;
                 }
               }
-              if (mp.field_V > 0) {
+              if (UsernameSuggestionsPanel.field_V > 0) {
                 CushionSegment.field_g = true;
               }
               ej.field_j.b(32, Pool.field_L);
@@ -621,7 +621,7 @@ final class np {
               if (uq.field_c == 7) {
                 uq.field_c = 3;
               }
-              ke.field_g = kn.field_e.j(-51);
+              LoginTextValue.field_g = kn.field_e.j(-51);
               we.field_e = false;
               stackIn_98_0 = uq.field_c;
               return stackIn_98_0;
@@ -629,9 +629,9 @@ final class np {
             if (null == jd.field_c) {
               if (we.field_e) {
                 if (30000L >= CushionSegment.d((byte) 118)) {
-                  ke.field_g = er.loginm2;
+                  LoginTextValue.field_g = DialWidget.loginm2;
                 } else {
-                  ke.field_g = wd.loginm3;
+                  LoginTextValue.field_g = wd.loginm3;
                 }
                 we.field_e = false;
                 stackIn_107_0 = 3;
@@ -673,7 +673,7 @@ final class np {
         return "" + this.field_h;
     }
 
-    np(int param0, ir param1, ir param2, int param3) {
+    np(int param0, BufferedFile param1, BufferedFile param2, int param3) {
         this.field_f = null;
         this.field_i = null;
         this.field_b = 65000;

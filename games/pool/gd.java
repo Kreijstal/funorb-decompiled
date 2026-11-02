@@ -31,11 +31,11 @@ final class gd {
         if (wd.field_Lb == ra.field_e) {
           return re.field_d;
         }
-        if (!ig.field_j.a(98)) {
-          return ig.field_j.b(2);
+        if (!TextInputValidator.field_j.a(98)) {
+          return TextInputValidator.field_j.b(2);
         }
         if (pa.field_I == ra.field_e) {
-          return ig.field_j.b(2);
+          return TextInputValidator.field_j.b(2);
         }
         if (param0) {
           return SpriteState.field_x;

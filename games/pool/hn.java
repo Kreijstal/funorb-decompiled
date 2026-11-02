@@ -10,14 +10,14 @@ final class hn {
 
     public static void b(int param0) {
         if (param0 != 11) {
-          hn.a(-88);
+          hn.fillScreenWhite(-88);
           field_c = null;
           return;
         }
         field_c = null;
     }
 
-    final static String a(long param0, boolean param1) {
+    final static String formatCookieDate(long param0, boolean param1) {
         aq.field_b.setTime(new Date(param0));
         int var3 = aq.field_b.get(7);
         int var4 = aq.field_b.get(5);
@@ -90,7 +90,7 @@ final class hn {
         }
     }
 
-    final static void a(int param0) {
+    final static void fillScreenWhite(int param0) {
         int incrementValue$11 = 0;
         int incrementValue$12 = 0;
         int incrementValue$13 = 0;

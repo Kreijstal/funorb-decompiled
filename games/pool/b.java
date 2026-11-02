@@ -26,7 +26,7 @@ final class b extends ob {
             var3 += 5;
             if (bq.field_p != this.field_I ||
               null == cm.field_K) {
-              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.instructionsPages[this.field_I], var3 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
+              ao.field_Lb = ug.a(aj.field_Ob[ProgressBarWidget.field_S][this.field_I], var2, rb.instructionsPages[this.field_I], var3 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
               cm.field_K = ef.a("</col>", rb.instructionsPages[this.field_I], (byte) 4, "<col=aaaaff>");
               bq.field_p = this.field_I;
             }
@@ -38,13 +38,13 @@ final class b extends ob {
             var3 += 5;
             if (bq.field_p != this.field_I ||
               null == cm.field_K) {
-              ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.instructionsPages[this.field_I], var3 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
+              ao.field_Lb = ug.a(aj.field_Ob[ProgressBarWidget.field_S][this.field_I], var2, rb.instructionsPages[this.field_I], var3 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
               cm.field_K = ef.a("</col>", rb.instructionsPages[this.field_I], (byte) 4, "<col=aaaaff>");
               bq.field_p = this.field_I;
             }
           }
-          sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
-          this.a(sa.field_h, aj.field_Ob[gj.field_S][this.field_I], 10 + var3, -16097, cm.field_K, var2, 13421772);
+          sa.field_h.setInlineSprites(AccountCreationForm.field_Z, bi.field_d);
+          this.a(sa.field_h, aj.field_Ob[ProgressBarWidget.field_S][this.field_I], 10 + var3, -16097, cm.field_K, var2, 13421772);
           nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (SoftwareRasterizer.width - var2 >> 1), var3, 190);
           this.b(10 + var3, false);
           if (this.field_I != qd.field_k) {
@@ -60,7 +60,7 @@ final class b extends ob {
           if (null == this.field_G) {
             return;
           }
-          this.field_G.a(15658734, 0, 128, -1, true, 0);
+          this.field_G.drawOutline(15658734, 0, 128, -1, true, 0);
           return;
         }
         this.b((byte) -57, -26);
@@ -70,12 +70,12 @@ final class b extends ob {
           var3Lifetime1 += 5;
           if (bq.field_p != this.field_I ||
             null == cm.field_K) {
-            ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.instructionsPages[this.field_I], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
+            ao.field_Lb = ug.a(aj.field_Ob[ProgressBarWidget.field_S][this.field_I], var2, rb.instructionsPages[this.field_I], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
             cm.field_K = ef.a("</col>", rb.instructionsPages[this.field_I], (byte) 4, "<col=aaaaff>");
             bq.field_p = this.field_I;
           }
-          sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
-          this.a(sa.field_h, aj.field_Ob[gj.field_S][this.field_I], 10 + var3Lifetime1, -16097, cm.field_K, var2, 13421772);
+          sa.field_h.setInlineSprites(AccountCreationForm.field_Z, bi.field_d);
+          this.a(sa.field_h, aj.field_Ob[ProgressBarWidget.field_S][this.field_I], 10 + var3Lifetime1, -16097, cm.field_K, var2, 13421772);
           nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (SoftwareRasterizer.width - var2 >> 1), var3Lifetime1, 190);
           this.b(10 + var3Lifetime1, false);
           if (this.field_I != qd.field_k) {
@@ -87,7 +87,7 @@ final class b extends ob {
           if (var4Lifetime1 != -1) {
             qa.a((byte) 71, SoftwareRasterizer.width >> 1, sa.field_h, re.field_e[var4Lifetime1], 15658734, 4144959);
             if (null != this.field_G) {
-              this.field_G.a(15658734, 0, 128, -1, true, 0);
+              this.field_G.drawOutline(15658734, 0, 128, -1, true, 0);
             }
           }
           return;
@@ -98,11 +98,11 @@ final class b extends ob {
         pl.field_a.c(SoftwareRasterizer.width - pl.field_a.field_z >> 1, -FreePlayRules.field_e.maxAscent + var3Lifetime1);
         var3Lifetime1 += 5;
         if (bq.field_p != this.field_I) {
-          ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.instructionsPages[this.field_I], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
+          ao.field_Lb = ug.a(aj.field_Ob[ProgressBarWidget.field_S][this.field_I], var2, rb.instructionsPages[this.field_I], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
           cm.field_K = ef.a("</col>", rb.instructionsPages[this.field_I], (byte) 4, "<col=aaaaff>");
           bq.field_p = this.field_I;
-          sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
-          this.a(sa.field_h, aj.field_Ob[gj.field_S][this.field_I], 10 + var3Lifetime1, -16097, cm.field_K, var2, 13421772);
+          sa.field_h.setInlineSprites(AccountCreationForm.field_Z, bi.field_d);
+          this.a(sa.field_h, aj.field_Ob[ProgressBarWidget.field_S][this.field_I], 10 + var3Lifetime1, -16097, cm.field_K, var2, 13421772);
           nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (SoftwareRasterizer.width - var2 >> 1), var3Lifetime1, 190);
           this.b(10 + var3Lifetime1, false);
           if (this.field_I != qd.field_k) {
@@ -114,18 +114,18 @@ final class b extends ob {
           if (var4Lifetime2 != -1) {
             qa.a((byte) 71, SoftwareRasterizer.width >> 1, sa.field_h, re.field_e[var4Lifetime2], 15658734, 4144959);
             if (null != this.field_G) {
-              this.field_G.a(15658734, 0, 128, -1, true, 0);
+              this.field_G.drawOutline(15658734, 0, 128, -1, true, 0);
             }
           }
           return;
         }
         if (null == cm.field_K) {
-          ao.field_Lb = ug.a(aj.field_Ob[gj.field_S][this.field_I], var2, rb.instructionsPages[this.field_I], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
+          ao.field_Lb = ug.a(aj.field_Ob[ProgressBarWidget.field_S][this.field_I], var2, rb.instructionsPages[this.field_I], var3Lifetime1 + 10, sa.field_h, true, SoftwareRasterizer.width - var2 >> 1);
           cm.field_K = ef.a("</col>", rb.instructionsPages[this.field_I], (byte) 4, "<col=aaaaff>");
           bq.field_p = this.field_I;
         }
-        sa.field_h.setInlineSprites(nf.field_Z, bi.field_d);
-        this.a(sa.field_h, aj.field_Ob[gj.field_S][this.field_I], 10 + var3Lifetime1, -16097, cm.field_K, var2, 13421772);
+        sa.field_h.setInlineSprites(AccountCreationForm.field_Z, bi.field_d);
+        this.a(sa.field_h, aj.field_Ob[ProgressBarWidget.field_S][this.field_I], 10 + var3Lifetime1, -16097, cm.field_K, var2, 13421772);
         nj.a(vk.field_y, (byte) 21, 20 + var2, -10 + (SoftwareRasterizer.width - var2 >> 1), var3Lifetime1, 190);
         this.b(10 + var3Lifetime1, false);
         if (this.field_I != qd.field_k) {
@@ -141,7 +141,7 @@ final class b extends ob {
         if (null == this.field_G) {
           return;
         }
-        this.field_G.a(15658734, 0, 128, -1, true, 0);
+        this.field_G.drawOutline(15658734, 0, 128, -1, true, 0);
         return;
     }
 
@@ -161,20 +161,20 @@ final class b extends ob {
           var3 = stackIn_7_0;
           if (!this.field_B.c((byte) 102)) {
             if (qi.field_a == 96) {
-              if (this.field_B.field_h <= var2) {
+              if (this.field_B.selectedIndex <= var2) {
                 this.field_B.a(var3, (byte) 1);
               } else {
-                this.field_B.a(-1 + this.field_B.field_h, (byte) 1);
+                this.field_B.a(-1 + this.field_B.selectedIndex, (byte) 1);
               }
             }
             if (qi.field_a == 97) {
-              if (0 > this.field_B.field_h) {
+              if (0 > this.field_B.selectedIndex) {
                 this.field_B.a(var2, (byte) 1);
               } else {
-                if (var3 <= this.field_B.field_h) {
+                if (var3 <= this.field_B.selectedIndex) {
                   this.field_B.a(var2, (byte) 1);
                 } else {
-                  this.field_B.a(this.field_B.field_h + 1, (byte) 1);
+                  this.field_B.a(this.field_B.selectedIndex + 1, (byte) 1);
                 }
               }
             }
@@ -187,20 +187,20 @@ final class b extends ob {
         var3Lifetime1 = stackIn_48_0;
         if (!this.field_B.c((byte) 102)) {
           if (qi.field_a == 96) {
-            if (this.field_B.field_h <= var2) {
+            if (this.field_B.selectedIndex <= var2) {
               this.field_B.a(var3Lifetime1, (byte) 1);
             } else {
-              this.field_B.a(-1 + this.field_B.field_h, (byte) 1);
+              this.field_B.a(-1 + this.field_B.selectedIndex, (byte) 1);
             }
           }
           if (qi.field_a == 97) {
-            if (0 > this.field_B.field_h) {
+            if (0 > this.field_B.selectedIndex) {
               this.field_B.a(var2, (byte) 1);
             } else {
-              if (var3Lifetime1 <= this.field_B.field_h) {
+              if (var3Lifetime1 <= this.field_B.selectedIndex) {
                 this.field_B.a(var2, (byte) 1);
               } else {
-                this.field_B.a(this.field_B.field_h + 1, (byte) 1);
+                this.field_B.a(this.field_B.selectedIndex + 1, (byte) 1);
               }
             }
           }
@@ -215,7 +215,7 @@ final class b extends ob {
         var5 = Pool.field_O;
         var4 = this.field_h[param2];
         if (var4 == 25) {
-          if (!this.field_B.b((byte) 66)) {
+          if (!this.field_B.isPressActivated((byte) 66)) {
             return;
           }
           if (!this.e(param2, -92)) {
@@ -233,7 +233,7 @@ final class b extends ob {
             }
             return;
           }
-          if (!this.field_B.b((byte) 127)) {
+          if (!this.field_B.isPressActivated((byte) 127)) {
             return;
           }
           if (!this.e(param2, -109)) {
@@ -247,7 +247,7 @@ final class b extends ob {
         if (param1) {
           return;
         }
-        this.field_B.field_h = 1;
+        this.field_B.selectedIndex = 1;
     }
 
     final int d(int param0, int param1) {
@@ -325,7 +325,7 @@ final class b extends ob {
           return;
         }
         if (bq.field_p != -1) {
-          this.field_G = ag.a(gg.field_f, ao.field_Lb, wn.field_i, 15395);
+          this.field_G = ag.a(DebouncedValidationProvider.field_f, ao.field_Lb, wn.field_i, 15395);
           se.field_l = 12;
           eo.field_Vb = 12;
           jo.g(0, null == this.field_G ? -1 : this.field_G.field_p);

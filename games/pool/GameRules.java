@@ -21,7 +21,7 @@ abstract class GameRules {
           String var2 = (String) null;
           GameRules.a((String[]) null, false, -52, (String) null);
         }
-        return ie.a((byte) 28, hk.d(71));
+        return ie.a((byte) 28, NanoTickClock.getApplet(71));
     }
 
     void a(ShotRecord param0, boolean param1) {
@@ -33,9 +33,9 @@ abstract class GameRules {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0.field_z = this.a(-1);
+          param0.groupBefore = this.a(-1);
           stackIn_3_0 = (ShotRecord) (param0);
-          stackIn_4_1 = (0 == param0.field_u) && (this.a(param0.field_L, -35));
+          stackIn_4_1 = (0 == param0.ballInHandMode) && (this.a(param0.playerIndex, -35));
           stackIn_3_0.field_E = stackIn_4_1;
           if (param1) {
             this.field_d = (PoolGameModel) null;
@@ -76,9 +76,9 @@ abstract class GameRules {
 
     final void l(int param0) {
         ShotRecord var2 = this.field_d.currentShot(45);
-        var2.field_u = this.b(-120);
+        var2.ballInHandMode = this.b(-120);
         int var3 = -67 % ((param0 + 14) / 58);
-        if (!(0 > var2.field_L)) {
+        if (!(0 > var2.playerIndex)) {
           this.a(var2, false);
         }
     }
@@ -139,10 +139,10 @@ abstract class GameRules {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = (1 + param0.field_L) % this.field_d.playerCount;
+          var3_int = (1 + param0.playerIndex) % this.field_d.playerCount;
           var4 = 1;
           while (var4 <= this.field_d.playerCount) {
-            var3_int = (var4 + param0.field_L) % this.field_d.playerCount;
+            var3_int = (var4 + param0.playerIndex) % this.field_d.playerCount;
             if (!this.a((byte) -112, var3_int) ||
               (this.field_d.field_p & 1 << var3_int) != 0) {
               var4++;
@@ -202,9 +202,9 @@ abstract class GameRules {
               PoolMatchController.field_gb = jo.a(args, 57);
               return;
             }
-            PoolMatchController.field_gb = gg.a(param2, true, param3);
+            PoolMatchController.field_gb = DebouncedValidationProvider.a(param2, true, param3);
           } else {
-            stackIn_6_0 = !(j.field_b >= 13);
+            stackIn_6_0 = !(ButtonPainter.field_b >= 13);
             PoolMatchController.field_gb = ta.a(stackIn_6_0, -30914);
             var5 = (String[]) null;
             gf.a(108, (String[]) null);
@@ -276,7 +276,7 @@ abstract class GameRules {
             return null;
           }
           if (this.field_d.playerCount == 2) {
-            stackIn_6_0 = nr.a(param1, param0 ^ -2, w.playerVsPlayer);
+            stackIn_6_0 = AccountWelcomePanel.substituteTemplateArguments(param1, param0 ^ -2, w.playerVsPlayer);
             return stackIn_6_0;
           }
           var3_int = 0;

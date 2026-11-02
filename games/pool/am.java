@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-class am implements fp, io {
+class am implements WidgetPainter, io {
     static String field_n;
     private int field_l;
     int field_d;
@@ -29,7 +29,7 @@ class am implements fp, io {
         return param1 != 0 ? param1 == 1 ? "animating" : 2 != param1 ? param1 != 3 ? "illegal state" : "finished with end choice" : "finished" : "waiting";
     }
 
-    String c(int param0, ei param1) {
+    String c(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -39,7 +39,7 @@ class am implements fp, io {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -1) {
-            stackIn_4_0 = param1.field_m;
+            stackIn_4_0 = param1.widgetText;
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -58,10 +58,10 @@ class am implements fp, io {
         }
     }
 
-    public final int a(int param0, ei param1) {
+    public final int a(int param0, UiWidget param1) {
         int discarded$1 = 0;
         RuntimeException var3 = null;
-        ei var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -69,8 +69,8 @@ class am implements fp, io {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 1) {
-            var4 = (ei) null;
-            discarded$1 = this.a((ei) null, -35, -25, (byte) -43);
+            var4 = (UiWidget) null;
+            discarded$1 = this.a((UiWidget) null, -35, -25, (byte) -43);
           }
           this.b(0, param1);
           stackIn_3_0 = param1.field_x.a((byte) 66) + this.field_f + this.field_j;
@@ -95,7 +95,7 @@ class am implements fp, io {
         field_n = null;
     }
 
-    public final void a(int param0, int param1, int param2, int param3, int param4, ei param5) {
+    public final void a(int param0, int param1, int param2, int param3, int param4, UiWidget param5) {
         int var12 = 0;
         int stackIn_14_0 = 0;
         int stackIn_19_0 = 0;
@@ -122,7 +122,7 @@ class am implements fp, io {
           if (param0 == param1) {
             return;
           }
-          if (param5.d(55)) {
+          if (param5.hasKeyboardFocus(55)) {
             var17 = this.b(0, param5);
             var18 = var17;
             if (param1 >= param0) {
@@ -134,7 +134,7 @@ class am implements fp, io {
             }
             var10 = var18.a(var8, param4 ^ 154888568);
             var11 = var18.a(var9, 0);
-            wh.a(param2 + param5.field_C, param5.field_D + param3, param5.field_C + (param2 + param5.field_l), (byte) -118, param5.field_D + (param3 + param5.field_y));
+            wh.a(param2 + param5.widgetX, param5.widgetY + param3, param5.widgetX + (param2 + param5.widgetWidth), (byte) -118, param5.widgetY + (param3 + param5.widgetHeight));
             for (var12 = var10; var12 <= var11; var12++) {
               var13 = var17.field_b[var12];
               if (var10 != var12) {
@@ -153,7 +153,7 @@ class am implements fp, io {
                 stackIn_19_0 = var18.a(var9, (byte) -102);
               }
               var15 = stackIn_19_0;
-              db.field_Sb.a(var15 - var14, this.field_c >>> 24, var13.field_i, var13.field_e + this.field_f + (param5.field_D + (param3 + param5.field_r)), this.field_c, (byte) 124, this.a(var14, (byte) 11, param2, param5));
+              db.field_Sb.a(var15 - var14, this.field_c >>> 24, var13.field_i, var13.field_e + this.field_f + (param5.widgetY + (param3 + param5.textOffsetY)), this.field_c, (byte) 124, this.a(var14, (byte) 11, param2, param5));
             }
             oc.a(121);
             return;
@@ -173,7 +173,7 @@ class am implements fp, io {
         }
     }
 
-    public final int a(byte param0, ei param1) {
+    public final int a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -183,7 +183,7 @@ class am implements fp, io {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 26) {
-            stackIn_4_0 = -this.field_g + (-this.field_i + param1.field_l);
+            stackIn_4_0 = -this.field_g + (-this.field_i + param1.widgetWidth);
             return stackIn_4_0;
           }
           stackIn_2_0 = 65;
@@ -202,7 +202,7 @@ class am implements fp, io {
         }
     }
 
-    private final int a(int param0, byte param1, int param2, ei param3) {
+    private final int a(int param0, byte param1, int param2, UiWidget param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -213,7 +213,7 @@ class am implements fp, io {
           if (param1 != 11) {
             field_h = 21;
           }
-          stackIn_3_0 = param3.field_v + this.field_i + param2 + (param3.field_C + param0);
+          stackIn_3_0 = param3.textOffsetX + this.field_i + param2 + (param3.widgetX + param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -233,7 +233,7 @@ class am implements fp, io {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    public final op b(int param0, ei param1) {
+    public final op b(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         op stackIn_8_0 = null;
         op stackIn_10_0 = null;
@@ -270,7 +270,7 @@ class am implements fp, io {
         }
     }
 
-    public void a(boolean param0, int param1, byte param2, int param3, ei param4) {
+    public void paintWidget(boolean param0, int param1, byte param2, int param3, UiWidget param4) {
         int var6_int = 4 % ((param2 - 2) / 41);
         if (null == this.field_a) {
           return;
@@ -282,7 +282,7 @@ class am implements fp, io {
         }
     }
 
-    public final int a(ei param0, int param1) {
+    public final int a(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -312,7 +312,7 @@ class am implements fp, io {
         }
     }
 
-    public final int a(int param0, int param1, int param2, ei param3, int param4, int param5) {
+    public final int a(int param0, int param1, int param2, UiWidget param3, int param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -340,7 +340,7 @@ class am implements fp, io {
         }
     }
 
-    private final void a(ei param0, boolean param1) {
+    private final void a(UiWidget param0, boolean param1) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -351,7 +351,7 @@ class am implements fp, io {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        ei var8 = null;
+        UiWidget var8 = null;
         int var6Lifetime1;
         var7 = Pool.field_O;
         try {
@@ -374,8 +374,8 @@ class am implements fp, io {
             var5 = this.field_a.maxAscent;
           }
           if (param1) {
-            var8 = (ei) null;
-            this.a(116, 45, -107, -47, -40, (ei) null);
+            var8 = (UiWidget) null;
+            this.a(116, 45, -107, -47, -40, (UiWidget) null);
           }
           var6Lifetime1 = this.field_m;
           if (var6Lifetime1 != 0 &&
@@ -445,20 +445,20 @@ class am implements fp, io {
           if (GameRules.field_c != null) {
             GameRules.field_c.c((byte) -80);
           }
-          if (null != ri.field_U) {
-            ri.field_U.a(-11307);
+          if (null != CheckboxWidget.field_U) {
+            CheckboxWidget.field_U.a(-11307);
           }
           if (ih.field_a != null) {
             try {
-              ih.field_a.b((byte) 86);
+              ih.field_a.close((byte) 86);
             } catch (IOException iOException) {
             }
           }
-          if (null != ia.field_d) {
-            for (var1_int = 0; ia.field_d.length > var1_int; var1_int++) {
-              if (ia.field_d[var1_int] != null) {
+          if (null != MenuSelection.field_d) {
+            for (var1_int = 0; MenuSelection.field_d.length > var1_int; var1_int++) {
+              if (MenuSelection.field_d[var1_int] != null) {
                 try {
-                  ia.field_d[var1_int].b((byte) 86);
+                  MenuSelection.field_d[var1_int].close((byte) 86);
                 } catch (IOException var2_ref) {
                 }
               }
@@ -521,7 +521,7 @@ class am implements fp, io {
         }
     }
 
-    private final int a(ei param0, int param1, int param2, byte param3) {
+    private final int a(UiWidget param0, int param1, int param2, byte param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -532,7 +532,7 @@ class am implements fp, io {
           if (param3 <= 68) {
             this.field_f = -82;
           }
-          stackIn_3_0 = param2 + (param0.field_D + this.field_f) - (-param0.field_r - param1);
+          stackIn_3_0 = param2 + (param0.widgetY + this.field_f) - (-param0.textOffsetY - param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -548,9 +548,9 @@ class am implements fp, io {
         }
     }
 
-    public final int a(int param0, ei param1, int param2) {
+    public final int a(int param0, UiWidget param1, int param2) {
         RuntimeException var4 = null;
-        ei var5 = null;
+        UiWidget var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -558,8 +558,8 @@ class am implements fp, io {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 5286) {
-            var5 = (ei) null;
-            this.a(51, (ei) null, 122);
+            var5 = (UiWidget) null;
+            this.a(51, (UiWidget) null, 122);
           }
           stackIn_3_0 = this.a(0, (byte) 11, param2, param1);
           return stackIn_3_0;
@@ -577,7 +577,7 @@ class am implements fp, io {
         }
     }
 
-    public final void a(int param0, int param1, int param2, int param3, ei param4) {
+    public final void a(int param0, int param1, int param2, int param3, UiWidget param4) {
         int discarded$1 = 0;
         int var7 = 0;
         vj var8 = null;
@@ -585,7 +585,7 @@ class am implements fp, io {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        ei var13 = null;
+        UiWidget var13 = null;
         op var14 = null;
         op var15 = null;
         int stackIn_3_0 = 0;
@@ -598,7 +598,7 @@ class am implements fp, io {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
         try {
-          if (param4.d(66)) {
+          if (param4.hasKeyboardFocus(66)) {
             var14 = this.b(param0 - 1, param4);
             var15 = var14;
             var7 = var15.a(param2, 0);
@@ -615,13 +615,13 @@ class am implements fp, io {
               stackIn_4_3 = var14.field_b[var7 + 1].field_e;
             }
             var12 = stackIn_3_0 + Math.min(stackIn_3_1, Math.min(stackIn_3_2, stackIn_4_3));
-            wh.a(param4.field_C + param3, param4.field_D + param1, param4.field_C + param3 + param4.field_l, (byte) -125, param4.field_y + param4.field_D + param1);
+            wh.a(param4.widgetX + param3, param4.widgetY + param1, param4.widgetX + param3 + param4.widgetWidth, (byte) -125, param4.widgetHeight + param4.widgetY + param1);
             db.field_Sb.a(-1, var10, var12, this.field_k, var10, var11);
             oc.a(param0 + 114);
           }
           if (param0 != 1) {
-            var13 = (ei) null;
-            discarded$1 = this.a((ei) null, 37, -42, (byte) -76);
+            var13 = (UiWidget) null;
+            discarded$1 = this.a((UiWidget) null, 37, -42, (byte) -76);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -638,7 +638,7 @@ class am implements fp, io {
         }
     }
 
-    public final int a(int param0, ei param1, byte param2) {
+    public final int a(int param0, UiWidget param1, byte param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -672,9 +672,9 @@ class am implements fp, io {
         v.b((byte) -60);
     }
 
-    private final int b(ei param0, int param1) {
+    private final int b(UiWidget param0, int param1) {
         RuntimeException var3 = null;
-        ei var4 = null;
+        UiWidget var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -682,10 +682,10 @@ class am implements fp, io {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -3) {
-            var4 = (ei) null;
-            this.a((byte) -37, (ei) null, 11, -127);
+            var4 = (UiWidget) null;
+            this.a((byte) -37, (UiWidget) null, 11, -127);
           }
-          stackIn_3_0 = param0.field_y - this.field_f - this.field_j;
+          stackIn_3_0 = param0.widgetHeight - this.field_f - this.field_j;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -701,7 +701,7 @@ class am implements fp, io {
         }
     }
 
-    private final void a(int param0, int param1, ei param2, int param3, int param4, int param5, int param6, byte param7) {
+    private final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5, int param6, byte param7) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -715,7 +715,7 @@ class am implements fp, io {
         int var12Lifetime1;
         var13 = Pool.field_O;
         try {
-          wh.a(param2.field_C + param6, param5 + param2.field_D, param2.field_l + param2.field_C + param6, (byte) 85, param2.field_D + param5 + param2.field_y);
+          wh.a(param2.widgetX + param6, param5 + param2.widgetY, param2.widgetWidth + param2.widgetX + param6, (byte) 85, param2.widgetY + param5 + param2.widgetHeight);
           var9_int = this.a((byte) 26, param2);
           var10 = this.b(param2, param7 + 19);
           if (param7 != -22) {
@@ -770,7 +770,7 @@ class am implements fp, io {
         }
     }
 
-    private final void a(byte param0, ei param1, int param2, int param3) {
+    private final void a(byte param0, UiWidget param1, int param2, int param3) {
         try {
           int var5_int = -52 / ((param0 + 10) / 61);
           this.a(0, this.field_d, param1, 0, this.field_l, param3, param2, (byte) -22);

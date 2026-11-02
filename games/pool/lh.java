@@ -8,7 +8,7 @@ abstract class lh {
     static String muXLostCon;
     static String loginJustplayTooltip;
     static String createAgreeterms;
-    static nf field_c;
+    static AccountCreationForm field_c;
     static String muCreateUnrated;
     static String field_f;
 
@@ -258,7 +258,7 @@ abstract class lh {
           var4 = var4 % 60;
           if (var5 <= 0) {
             if (var4 <= 0) {
-              var6 = mp.timerSecondsFractions;
+              var6 = UsernameSuggestionsPanel.timerSecondsFractions;
             } else {
               var6 = ShotRecord.timerMinutesSecondsFractions;
             }
@@ -467,7 +467,7 @@ abstract class lh {
           return new String(var10Lifetime1);
         }
         if (var4 <= 0) {
-          var13 = mp.timerSecondsFractions;
+          var13 = UsernameSuggestionsPanel.timerSecondsFractions;
           var10Lifetime2 = var13.toCharArray();
           var9Lifetime2 = var10Lifetime2;
           var7Lifetime2 = var9Lifetime2;

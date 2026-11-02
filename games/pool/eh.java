@@ -19,17 +19,17 @@ final class eh extends IntrusiveNode {
     static int[] field_p;
     static int[] field_w;
 
-    final static ke c(int param0) {
+    final static LoginTextValue c(int param0) {
         String var1 = sa.a(false);
         if (var1 != null &&
           var1.indexOf('@') >= 0) {
           var1 = "";
         }
         if (param0 == 8388) {
-          return new ke(sa.a(false), sp.h(0));
+          return new LoginTextValue(sa.a(false), sp.h(0));
         }
         eh.a(115, true);
-        return new ke(sa.a(false), sp.h(0));
+        return new LoginTextValue(sa.a(false), sp.h(0));
     }
 
     final static void a(int param0, boolean param1) {
@@ -42,7 +42,7 @@ final class eh extends IntrusiveNode {
         try {
           var4 = (oj) (ta.field_i.c((byte) 81));
           while (var4 != null) {
-            ch.a(!param1, var4, param0);
+            WidgetContainer.a(!param1, var4, param0);
             var4 = (oj) (ta.field_i.f((byte) -5));
           }
           if (!param1) {

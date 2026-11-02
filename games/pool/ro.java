@@ -51,7 +51,7 @@ final class ro {
           var3 = param1.e(12, 82);
           var4 = new nj[var3];
           for (var5 = 0; var3 > var5; var5++) {
-            if (!gk.a((byte) 118, param1)) {
+            if (!FullscreenErrorDialog.a((byte) 118, param1)) {
               var6 = param1.e(fr.a(16, -1 + var5), 105);
               var4[var5] = var4[var6];
             } else {
@@ -134,12 +134,12 @@ final class ro {
             return;
           }
           if (em.field_K) {
-            kk.g(47);
-            if (ne.field_w == 18) {
-              if (oe.a(false, hp.field_c)) {
+            CacheEntry.g(47);
+            if (MatchingTextValidator.field_w == 18) {
+              if (FadingDialog.a(false, hp.field_c)) {
                 s.field_c[18].a(0, 0, false);
               } else {
-                ne.field_w = 16;
+                MatchingTextValidator.field_w = 16;
                 fq.a(-3405, 16, GameRules.field_b, false);
               }
             }
@@ -194,7 +194,7 @@ final class ro {
             this.field_k == 0) {
             return;
           }
-          var3_int = ke.a(false, this.field_k * this.field_k + this.field_i * this.field_i);
+          var3_int = LoginTextValue.a(false, this.field_k * this.field_k + this.field_i * this.field_i);
           if (var3_int != 0) {
             this.field_i = (this.field_i << 8) / var3_int;
             this.field_k = (this.field_k << 8) / var3_int;
@@ -227,7 +227,7 @@ final class ro {
             var4 = (ro) null;
             this.b((ro) null, -17);
           }
-          stackIn_3_0 = hk.a(99, param0.field_n, this.field_n, param0.field_u, param0.field_a, this.field_a, this.field_u);
+          stackIn_3_0 = NanoTickClock.a(99, param0.field_n, this.field_n, param0.field_u, param0.field_a, this.field_a, this.field_u);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -296,7 +296,7 @@ final class ro {
           this.field_f = this.field_q[1] - this.field_q[0];
           if (0 != this.field_f ||
             this.field_m != 0) {
-            var3_int = ke.a(false, this.field_m * this.field_m + this.field_f * this.field_f);
+            var3_int = LoginTextValue.a(false, this.field_m * this.field_m + this.field_f * this.field_f);
             if (var3_int != 0) {
               this.field_m = (this.field_m << 8) / var3_int;
               this.field_f = (this.field_f << 8) / var3_int;

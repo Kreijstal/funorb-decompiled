@@ -136,7 +136,7 @@ final class ij extends IntrusiveNode {
             stackIn_16_8 = 3;
           }
           ((BinaryBitmapFont) (Object) stackIn_15_0).drawParagraph(stackIn_15_1, stackIn_15_2, stackIn_15_3, stackIn_15_4, stackIn_15_5, stackIn_15_6, stackIn_15_7, stackIn_16_8, 0, 3 + sa.field_h.baselineHeight);
-          sh.field_P.b(15100);
+          OpacityWidget.field_P.bindAsRenderTarget(15100);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

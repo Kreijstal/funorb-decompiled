@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class wh {
-    private fg field_d;
+    private WeightedLruCache field_d;
     static String fsFocus;
     private di field_h;
     static PlatformTaskDispatcher field_c;
@@ -195,7 +195,7 @@ final class wh {
         ap var3Lifetime1;
         if (param0 <= 125) {
           wh.a(54, 63, 5, -67, 84, -31, 70, -27, -99, 108);
-          var3 = (ap) (this.field_d.a((long)param1, true));
+          var3 = (ap) (this.field_d.get((long)param1, true));
           if (var3 != null) {
             return var3;
           }
@@ -208,23 +208,23 @@ final class wh {
           ap var5 = var6;
           if (var4 == null) {
             if (param1 < 32768) {
-              this.field_d.a(90, var6, (long)param1);
+              this.field_d.put(90, var6, (long)param1);
               return var6;
             }
             var6.b(true);
-            this.field_d.a(90, var6, (long)param1);
+            this.field_d.put(90, var6, (long)param1);
             return var6;
           }
           var6.a(-20678, new PacketBuffer(var4));
           if (param1 >= 32768) {
             var6.b(true);
-            this.field_d.a(90, var6, (long)param1);
+            this.field_d.put(90, var6, (long)param1);
             return var6;
           }
-          this.field_d.a(90, var6, (long)param1);
+          this.field_d.put(90, var6, (long)param1);
           return var6;
         }
-        var3Lifetime1 = (ap) (this.field_d.a((long)param1, true));
+        var3Lifetime1 = (ap) (this.field_d.get((long)param1, true));
         if (var3Lifetime1 != null) {
           return var3Lifetime1;
         }
@@ -237,19 +237,19 @@ final class wh {
         if (var4Lifetime1 != null) {
           var7.a(-20678, new PacketBuffer(var4Lifetime1));
           if (param1 < 32768) {
-            this.field_d.a(90, var7, (long)param1);
+            this.field_d.put(90, var7, (long)param1);
             return var7;
           }
           var7.b(true);
-          this.field_d.a(90, var7, (long)param1);
+          this.field_d.put(90, var7, (long)param1);
           return var7;
         }
         if (param1 < 32768) {
-          this.field_d.a(90, var7, (long)param1);
+          this.field_d.put(90, var7, (long)param1);
           return var7;
         }
         var7.b(true);
-        this.field_d.a(90, var7, (long)param1);
+        this.field_d.put(90, var7, (long)param1);
         return var7;
     }
 
@@ -279,7 +279,7 @@ final class wh {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        this.field_d = new fg(64);
+        this.field_d = new WeightedLruCache(64);
         try {
           this.field_e = param1;
           this.field_h = param2;

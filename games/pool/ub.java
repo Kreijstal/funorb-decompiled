@@ -111,7 +111,7 @@ final class ub extends se {
             return stackIn_23_0;
           }
           if (param1 == 10) {
-            stackIn_28_0 = hr.muRequestDeclined;
+            stackIn_28_0 = ViewportController.muRequestDeclined;
             return stackIn_28_0;
           }
           if (param1 == 11) {
@@ -122,7 +122,7 @@ final class ub extends se {
             stackIn_38_0 = null;
             return (String) (stackIn_38_0);
           }
-          stackIn_36_0 = nr.a(new String[]{param0}, -1, PacketBuffer.muAllPlayersHaveLeft);
+          stackIn_36_0 = AccountWelcomePanel.substituteTemplateArguments(new String[]{param0}, -1, PacketBuffer.muAllPlayersHaveLeft);
           return stackIn_36_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -194,10 +194,10 @@ final class ub extends se {
           if (param0 != 4) {
             field_p = false;
           }
-          if (ok.field_mb == null) {
-            ok.field_mb = new am(PoolUiText.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, PoolUiText.field_a.maxAscent, -1, 2147483647, true);
+          if (ContentTransitionDialog.field_mb == null) {
+            ContentTransitionDialog.field_mb = new am(PoolUiText.field_a, 20, 0, 0, 0, 11579568, -1, 0, 0, PoolUiText.field_a.maxAscent, -1, 2147483647, true);
           }
-          stackIn_8_0 = ok.field_mb;
+          stackIn_8_0 = ContentTransitionDialog.field_mb;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -220,7 +220,7 @@ final class ub extends se {
         var8 = Pool.field_O;
         try {
           var3_int = param2;
-          var4 = uh.field_n;
+          var4 = PasswordValidator.field_n;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var3_int < dq.field_j.length)))) {
             var5 = IterableNodeHashTable.field_c[var3_int];
@@ -229,14 +229,14 @@ final class ub extends se {
               if (stackIn_16_0 > -1) {
                 var4 = var4 + ShotRecord.field_y;
               } else {
-                var6 = ch.a(dq.field_j[var3_int], true, false);
+                var6 = WidgetContainer.a(dq.field_j[var3_int], true, false);
                 var7 = nn.field_c - (var6 >> 1);
                 var4 = var4 + qi.field_e;
-                if (tj.a(param0, -23, (NineBallRules.field_h << 1) + ch.field_I, param1, (rm.field_b << 1) + var6, var4, var7 - rm.field_b)) {
+                if (ResizableDialog.a(param0, -23, (NineBallRules.field_h << 1) + WidgetContainer.field_I, param1, (rm.field_b << 1) + var6, var4, var7 - rm.field_b)) {
                   stackIn_12_0 = var5;
                   return stackIn_12_0;
                 }
-                var4 = var4 + ((NineBallRules.field_h << 1) + qi.field_e + ch.field_I);
+                var4 = var4 + ((NineBallRules.field_h << 1) + qi.field_e + WidgetContainer.field_I);
               }
               var3_int++;
               continue;
@@ -295,7 +295,7 @@ final class ub extends se {
         try {
           Ball.field_F[0] = 16764000;
           m.field_c = param1;
-          kb.field_h = param5;
+          TickClock.field_h = param5;
           Ball.field_F[2] = 9474303;
           Ball.field_F[3] = 16736511;
           ej.field_l = param8;
@@ -318,14 +318,14 @@ final class ub extends se {
           var16 = new Sprite[9];
           var16[4] = var12;
           fl.field_q = new vh(0L, param0);
-          wa.field_hb = new vh(0L, param10);
-          fl.field_q.a(-1, wa.field_hb);
+          ProgressDialog.field_hb = new vh(0L, param10);
+          fl.field_q.a(-1, ProgressDialog.field_hb);
           var17 = new vh(0L, (vh) null);
           var17.field_T = new IntrusiveDeque();
           qd.field_b = new of(0L, var17, param9, param3);
-          wa.field_hb.a(15, qd.field_b);
+          ProgressDialog.field_hb.a(15, qd.field_b);
           ph.field_d = new vh(0L, param6);
-          wa.field_hb.a(-3, ph.field_d);
+          ProgressDialog.field_hb.a(-3, ph.field_d);
           pa.field_J = new vh(0L, param4);
           pa.field_J.field_I = m.field_c;
           ph.field_d.a(-125, pa.field_J);
@@ -346,9 +346,9 @@ final class ub extends se {
               boolean decompiledFrameRemainder0 = true;
               if (stackIn_35_0 == stackIn_35_1) {
                 if (ej.field_l) {
-                  stackIn_13_0 = sn.muChatLobby;
+                  stackIn_13_0 = BirthDateValidator.muChatLobby;
                 } else {
-                  stackIn_13_0 = ud.muChatPublic;
+                  stackIn_13_0 = SingleChildWidget.muChatPublic;
                 }
                 var19 = stackIn_13_0;
               } else if (var18 == 1 &&
@@ -362,10 +362,10 @@ final class ub extends se {
               }
               if (decompiledFrameRemainder0) {
                 il.field_g[var18] = new vh(0L, param2);
-                ln.field_v[var18] = new vh(0L, kb.field_h, var19);
+                ln.field_v[var18] = new vh(0L, TickClock.field_h, var19);
                 uo.field_Mb[var18] = new vh(0L, (vh) null);
                 uo.field_Mb[var18].field_cb = 1;
-                ta.field_b[var18] = new vh(0L, kb.field_h);
+                ta.field_b[var18] = new vh(0L, TickClock.field_h);
                 ta.field_b[var18].field_cb = 1;
                 il.field_g[var18].a(-98, ln.field_v[var18]);
                 il.field_g[var18].a(68, uo.field_Mb[var18]);

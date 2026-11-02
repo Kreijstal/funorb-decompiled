@@ -146,29 +146,29 @@ final class PoolGameModel {
         } else {
           var4_ref = new ShotRecord();
         }
-        var4_ref.field_v = var8.field_v + 1;
-        var4_ref.field_q = 0;
+        var4_ref.shotNumber = var8.shotNumber + 1;
+        var4_ref.phase = 0;
         if (var3 != 0) {
-          var4_ref.field_L = this.rules.a(var8, (byte) 117);
+          var4_ref.playerIndex = this.rules.a(var8, (byte) 117);
         } else {
-          var4_ref.field_L = var8.field_L;
+          var4_ref.playerIndex = var8.playerIndex;
         }
         this.shots.b((byte) -14, var4_ref);
-        this.field_A = var4_ref.field_L;
+        this.field_A = var4_ref.playerIndex;
         if (var3 != 0) {
           this.field_y = 0;
           this.field_z = 0;
         }
-        if ((ob.field_F & var8.field_s) != 0) {
-          this.b(ga.a(512, true, ea.field_r) + 1, 456);
+        if ((ob.field_F & var8.endResolution) != 0) {
+          this.b(ga.nextRandomInt(512, true, ea.field_r) + 1, 456);
         }
         if (param0 < 30) {
           this.field_z = -45;
         }
-        if ((um.field_c & var8.field_s) != 0) {
-          if (var4_ref.field_P != -1) {
-            if (var4_ref.field_Q != -1) {
-              this.a(var4_ref.field_Q, (IsaacCipher) null, (byte) -118, var4_ref.field_P, 0);
+        if ((um.field_c & var8.endResolution) != 0) {
+          if (var4_ref.cueBallX != -1) {
+            if (var4_ref.cueBallY != -1) {
+              this.a(var4_ref.cueBallY, (IsaacCipher) null, (byte) -118, var4_ref.cueBallX, 0);
             } else {
               this.n(-16739);
             }
@@ -176,48 +176,48 @@ final class PoolGameModel {
             this.n(-16739);
           }
         }
-        if (var4_ref.field_P == -1 &&
-          var4_ref.field_Q == -1) {
+        if (var4_ref.cueBallX == -1 &&
+          var4_ref.cueBallY == -1) {
           var5_ref_qe = var4_ref;
           var6 = this;
           var7 = ((PoolGameModel) (var6)).balls[0];
-          var5_ref_qe.field_P = var7.positionX;
-          var5_ref_qe.field_Q = var7.positionY;
+          var5_ref_qe.cueBallX = var7.positionX;
+          var5_ref_qe.cueBallY = var7.positionY;
         } else {
-          this.a(var4_ref.field_Q, var4_ref.field_P, -91, 0, false);
+          this.a(var4_ref.cueBallY, var4_ref.cueBallX, -91, 0, false);
         }
         for (var5 = 0; var5 < this.pockets.length; var5++) {
           this.pockets[var5].keepOnlyPottedBalls(this.balls, -80);
         }
-        if ((var8.field_s & be.field_I) != 0) {
+        if ((var8.endResolution & be.field_I) != 0) {
           this.field_z = 1;
         }
-        if ((var8.field_s & nr.field_Y) == 0) {
-          var4_ref.field_u = 0;
+        if ((var8.endResolution & AccountWelcomePanel.field_Y) == 0) {
+          var4_ref.ballInHandMode = 0;
         } else {
-          if ((nr.field_V & var8.field_s) == 0) {
-            if ((var8.field_s & nr.field_R) != 0) {
-              var4_ref.field_u = 1;
+          if ((AccountWelcomePanel.field_V & var8.endResolution) == 0) {
+            if ((var8.endResolution & AccountWelcomePanel.field_R) != 0) {
+              var4_ref.ballInHandMode = 1;
             } else {
-              if ((var8.field_s & nr.field_Q) != 0) {
-                var4_ref.field_u = 2;
+              if ((var8.endResolution & AccountWelcomePanel.field_Q) != 0) {
+                var4_ref.ballInHandMode = 2;
               }
             }
           } else {
-            var4_ref.field_u = 3;
+            var4_ref.ballInHandMode = 3;
           }
         }
-        if (0 != (var8.field_s & sg.field_O)) {
+        if (0 != (var8.endResolution & sg.field_O)) {
           this.field_y = 1;
         }
-        if ((ClientException.field_b & var8.field_s) != 0) {
+        if ((ClientException.field_b & var8.endResolution) != 0) {
           var5Lifetime1 = var8.field_l & 3;
           if (var5Lifetime1 != 1) {
             if (var5Lifetime1 == 2) {
-              this.rules.a(1, -1, var8.field_L);
+              this.rules.a(1, -1, var8.playerIndex);
             }
           } else {
-            this.rules.a(0, -1, var8.field_L);
+            this.rules.a(0, -1, var8.playerIndex);
           }
         }
         this.rules.a(var4_ref, false);
@@ -236,9 +236,9 @@ final class PoolGameModel {
     final void e(byte param0) {
         int var3 = 110 % ((-57 - param0) / 53);
         ShotRecord var2 = this.currentShot(20);
-        var2.field_T = this.writeStateSnapshot((byte) 91);
+        var2.stateBefore = this.writeStateSnapshot((byte) 91);
         var2.c(2, this.rules.h(-1));
-        var2.field_q = 2;
+        var2.phase = 2;
     }
 
     private final PacketBuffer writeStateSnapshot(byte param0) {
@@ -287,13 +287,13 @@ final class PoolGameModel {
               for (var5 = 0; var5 < this.pockets.length; var5++) {
                 var6 = -this.pockets[var5].centerX + param1[var4_int].positionX;
                 var7 = -this.pockets[var5].centerY + param1[var4_int].positionY;
-                if (od.a((long)var6, (long)var6, false) + od.a((long)var7, (long)var7, false) < (long)ui.a(324, (byte) 90)) {
+                if (od.a((long)var6, (long)var6, false) + od.a((long)var7, (long)var7, false) < (long)LoginForm.a(324, (byte) 90)) {
                   param1[var4_int].inPlay = false;
                   param1[var4_int].motionState = 0;
                   if (param1[var4_int].field_q != null) {
                     param1[var4_int].field_q.a(23655, param1[var4_int], var5);
                   }
-                  param2.field_m.b((byte) -23, new PotEvent(var4_int, var5));
+                  param2.pottedBalls.b((byte) -23, new PotEvent(var4_int, var5));
                 }
               }
             }
@@ -337,7 +337,7 @@ final class PoolGameModel {
           var5 = 119 / ((param1 + 1) / 48);
           var4_int = 1;
           if (0 >= this.field_z) {
-            if ((param2.field_s & nd.field_j) != 0) {
+            if ((param2.endResolution & nd.field_j) != 0) {
               var4_int = 0;
             } else {
               if (this.field_y > 0) {
@@ -353,10 +353,10 @@ final class PoolGameModel {
             }
             var4_int = 0;
           }
-          if ((param2.field_s & ll.field_f) != 0) {
+          if ((param2.endResolution & ll.field_f) != 0) {
             var4_int = 1;
           }
-          if ((ab.field_g & param2.field_s) != 0) {
+          if ((ab.field_g & param2.endResolution) != 0) {
             var6 = param2.field_l & 24;
             if (var6 != 8) {
               if (16 == var6) {
@@ -366,7 +366,7 @@ final class PoolGameModel {
               var4_int = 0;
             }
           }
-          if ((a.field_d & param2.field_s) != 0) {
+          if ((a.field_d & param2.endResolution) != 0) {
             var6Lifetime1 = param2.field_l & 96;
             if (32 == var6Lifetime1) {
               var4_int = 1;
@@ -415,8 +415,8 @@ final class PoolGameModel {
                 var4 = od.a(var4, var4, false);
                 var6 = od.a(var6, var6, false);
                 if (var4 + var6 < 16777216L) {
-                  k.field_N[hh.field_e][0] = var2;
-                  k.field_N[hh.field_e][1] = var3;
+                  DropTargetWidget.field_N[hh.field_e][0] = var2;
+                  DropTargetWidget.field_N[hh.field_e][1] = var3;
                   hh.field_e = hh.field_e + 1;
                 }
               }
@@ -476,40 +476,40 @@ final class PoolGameModel {
           var3_int = param1.readInt(true);
           for (var4_int = 0; var3_int > var4_int; var4_int++) {
             var5 = new ShotRecord();
-            var5.field_v = param1.readInt(true);
-            var5.field_M = param1.readShort((byte) -86);
+            var5.shotNumber = param1.readInt(true);
+            var5.breakSeed = param1.readShort((byte) -86);
             var6 = param1.readUnsignedByte(param0 ^ -85);
-            var5.field_q = 15 & var6 >> 4;
+            var5.phase = 15 & var6 >> 4;
             stackIn_5_0 = var5;
             stackIn_6_1 = (8 == (8 & var6));
             stackIn_5_0.field_t = stackIn_6_1;
-            var5.field_L = var6 & 7;
+            var5.playerIndex = var6 & 7;
             var6Lifetime1 = param1.readUnsignedByte(-120);
-            var5.field_z = 15 & var6Lifetime1;
+            var5.groupBefore = 15 & var6Lifetime1;
             stackIn_8_0 = var5;
             stackIn_9_1 = ((var6Lifetime1 & 64) != 0);
             stackIn_8_0.field_E = stackIn_9_1;
-            var5.field_u = 3 & var6Lifetime1 >> 4;
-            if (var5.field_z == 15) {
-              var5.field_z = -1;
+            var5.ballInHandMode = 3 & var6Lifetime1 >> 4;
+            if (var5.groupBefore == 15) {
+              var5.groupBefore = -1;
             }
-            var5.field_P = param1.readInt(true);
-            var5.field_Q = param1.readInt(true);
-            if (var5.field_q >= 1) {
-              var5.field_C = (short)param1.readUnsignedShort(-1034);
-              var5.field_A = (short)param1.readUnsignedShort(-1034);
-              var5.field_V = (short)param1.readUnsignedShort(-1034);
+            var5.cueBallX = param1.readInt(true);
+            var5.cueBallY = param1.readInt(true);
+            if (var5.phase >= 1) {
+              var5.aimAngle = (short)param1.readUnsignedShort(-1034);
+              var5.elevation = (short)param1.readUnsignedShort(-1034);
+              var5.power = (short)param1.readUnsignedShort(-1034);
               var5.field_D = (byte)param1.readUnsignedByte(-77);
               var5.field_H = (byte)param1.readUnsignedByte(param0 ^ -101);
             }
-            if (var5.field_q >= 2) {
-              var6Lifetime2 = var5.field_m.a(68);
+            if (var5.phase >= 2) {
+              var6Lifetime2 = var5.pottedBalls.a(68);
               var6Lifetime2Lifetime1 = param1.readUnsignedByte(-97);
               if (var6Lifetime2Lifetime1 > 0) {
-                var5.field_m = new IntrusiveDeque();
+                var5.pottedBalls = new IntrusiveDeque();
                 for (var7 = 0; var7 < var6Lifetime2Lifetime1; var7++) {
                   var8 = param1.readUnsignedByte(param0 ^ -125);
-                  var5.field_m.b((byte) 97, new PotEvent(31 & var8, var8 >> 5));
+                  var5.pottedBalls.b((byte) 97, new PotEvent(31 & var8, var8 >> 5));
                 }
               }
               var7Lifetime1 = param1.readUnsignedByte(-123);
@@ -526,16 +526,16 @@ final class PoolGameModel {
                   var5.field_R.b((byte) -70, new dn(var9, var14));
                 }
               }
-              var5.field_s = param1.readUnsignedMedium(81);
+              var5.endResolution = param1.readUnsignedMedium(81);
             }
-            if (var5.field_q >= 3) {
+            if (var5.phase >= 3) {
               var5.field_l = (byte)param1.readUnsignedByte(param0 - 130);
             }
             this.shots.b((byte) 94, var5);
           }
           var4 = this.currentShot(81);
-          this.field_A = var4.field_L;
-          if (param0 <= var4.field_q) {
+          this.field_A = var4.playerIndex;
+          if (param0 <= var4.phase) {
             this.h(22042);
           }
           return;
@@ -567,17 +567,17 @@ final class PoolGameModel {
     final boolean h(int param0) {
         ShotRecord var2;
         var2 = this.currentShot(param0 ^ 22081);
-        if (var2.field_q < 2) {
+        if (var2.phase < 2) {
           throw new IllegalStateException("");
         }
         if (param0 != 22042) {
           return true;
         }
-        if (0 != (var2.field_s & Quaternion.field_e)) {
+        if (0 != (var2.endResolution & Quaternion.field_e)) {
           this.field_A = this.rules.a(var2, (byte) 94);
           return true;
         }
-        if ((ag.field_e & var2.field_s) != 0) {
+        if ((ag.field_e & var2.endResolution) != 0) {
           return true;
         }
         if (var2.d(116)) {
@@ -625,8 +625,8 @@ final class PoolGameModel {
             if (hh.field_e > 0) {
               var12 = 0;
               for (var13 = 0; var13 < hh.field_e; var13++) {
-                if (param4 == k.field_N[var13][0] ||
-                  param4 == k.field_N[var13][1]) {
+                if (param4 == DropTargetWidget.field_N[var13][0] ||
+                  param4 == DropTargetWidget.field_N[var13][1]) {
                   var12++;
                 }
               }
@@ -758,18 +758,18 @@ final class PoolGameModel {
                   }
                   if (var20 >= -1048576 &&
                     var20 <= 0) {
-                    if (ba.field_ub != null) {
+                    if (AccountContentDialog.field_ub != null) {
                       if (0L == (pd.field_i & 16L)) {
                         return false;
                       }
-                      hr.a(ol.a(new int[]{var18, var19_int, var20}, (byte) 1), 16724753, -128, ba.field_ub.field_ab);
+                      ViewportController.a(ol.a(new int[]{var18, var19_int, var20}, (byte) 1), 16724753, -128, AccountContentDialog.field_ub.field_ab);
                     }
                     return false;
                   }
                 }
-                if (((ba.field_ub != null)) &&
+                if (((AccountContentDialog.field_ub != null)) &&
                   ((0L != (16L & pd.field_i)))) {
-                  hr.a(ol.a(new int[]{var18, var19_int, var20}, (byte) 1), 16764057, -79, ba.field_ub.field_ab);
+                  ViewportController.a(ol.a(new int[]{var18, var19_int, var20}, (byte) 1), 16764057, -79, AccountContentDialog.field_ub.field_ab);
                 }
               }
               decompiledFrameRemainder0 = false;
@@ -800,9 +800,9 @@ final class PoolGameModel {
                     var25 = (long)s.field_e[9] * var23 + (long)s.field_e[0];
                     var27 = (long)s.field_e[1] + var23 * (long)s.field_e[10];
                     var29 = (long)s.field_e[2] + var23 * (long)s.field_e[11];
-                    if (null != ba.field_ub &&
+                    if (null != AccountContentDialog.field_ub &&
                       (pd.field_i & 16L) != 0L) {
-                      hr.a(ol.a(new int[]{(int)var25, (int)var27, (int)var29}, (byte) 1), 16724753, 112, ba.field_ub.field_ab);
+                      ViewportController.a(ol.a(new int[]{(int)var25, (int)var27, (int)var29}, (byte) 1), 16724753, 112, AccountContentDialog.field_ub.field_ab);
                     }
                     return false;
                   }
@@ -816,9 +816,9 @@ final class PoolGameModel {
                   var27 = (long)s.field_e[0] + var25 * (long)s.field_e[9];
                   var29 = (long)s.field_e[10] * var25 + (long)s.field_e[1];
                   var31 = (long)s.field_e[11] * var25 + (long)s.field_e[2];
-                  if (null != ba.field_ub &&
+                  if (null != AccountContentDialog.field_ub &&
                     (pd.field_i & 16L) != 0L) {
-                    hr.a(ol.a(new int[]{(int)var27, (int)var29, (int)var31}, (byte) 1), 16724753, param3 ^ -272, ba.field_ub.field_ab);
+                    ViewportController.a(ol.a(new int[]{(int)var27, (int)var29, (int)var31}, (byte) 1), 16724753, param3 ^ -272, AccountContentDialog.field_ub.field_ab);
                   }
                   return false;
                 }
@@ -845,7 +845,7 @@ final class PoolGameModel {
         if (0L != (524288L & pd.field_i)) {
           return;
         }
-        var9 = this.currentShot(param1 ^ -23).field_u;
+        var9 = this.currentShot(param1 ^ -23).ballInHandMode;
         if (var9 == 1) {
           if (524544 <= var10.positionY) {
             if (18349824 < var10.positionY) {
@@ -913,8 +913,8 @@ final class PoolGameModel {
             dupTemp$3 = this.currentShot(49);
             var7 = dupTemp$3;
             var6 = var7;
-            if ((param2 & 255) == (dupTemp$3.field_v & 255)) {
-              var7.field_L = param3;
+            if ((param2 & 255) == (dupTemp$3.shotNumber & 255)) {
+              var7.playerIndex = param3;
               break regionExit1;
             }
           }
@@ -925,12 +925,12 @@ final class PoolGameModel {
           this.rules.a(var8, false);
         }
         this.field_A = param3;
-        var6.field_M = param0;
-        if (var6.field_M >= 0) {
+        var6.breakSeed = param0;
+        if (var6.breakSeed >= 0) {
           this.c(-95);
         }
         var6.field_I = param1;
-        var6.field_T = this.writeStateSnapshot((byte) 98);
+        var6.stateBefore = this.writeStateSnapshot((byte) 98);
     }
 
     final void a(int param0, PacketBuffer param1) {
@@ -953,7 +953,7 @@ final class PoolGameModel {
     }
 
     final void b(int param0, int param1) {
-        this.currentShot(30).field_M = param0;
+        this.currentShot(30).breakSeed = param0;
         this.c(-116);
         if (param1 != 456) {
           this.field_x = -45;
@@ -1043,7 +1043,7 @@ final class PoolGameModel {
           this.field_a[var5_int] = this.field_r[var5_int].field_l;
           this.field_t[var5_int] = var5_int;
         }
-        fd.a(this.field_a, this.field_t, (byte) -54);
+        StrongCacheEntry.a(this.field_a, this.field_t, (byte) -54);
         for (var3Lifetime4 = 0; this.field_r.length > var3Lifetime4; var3Lifetime4++) {
           var5 = this.field_r[this.field_t[var3Lifetime4]];
           if (var5.a((byte) -8, param1, this)) {
@@ -1157,13 +1157,13 @@ final class PoolGameModel {
         int var3_int = 0;
         int var23 = Pool.field_O;
         ShotRecord var24 = this.currentShot(102);
-        if (var24.field_q != 1) {
+        if (var24.phase != 1) {
           throw new IllegalStateException("Starting new shot, but not animating?");
         }
         if (null != var24.field_R) {
           var24.field_R.d((byte) 106);
         }
-        var24.field_T = this.writeStateSnapshot((byte) 115);
+        var24.stateBefore = this.writeStateSnapshot((byte) 115);
         for (var3_int = 0; var3_int < this.balls.length; var3_int++) {
           this.balls[var3_int].field_c = 0;
           this.balls[var3_int].field_q = null;
@@ -1172,7 +1172,7 @@ final class PoolGameModel {
           PoolGameModel.a(true, 13);
         }
         this.rules.n(param0 ^ -11783);
-        this.a(var24.field_Q, var24.field_P, 72, 0, false);
+        this.a(var24.cueBallY, var24.cueBallX, 72, 0, false);
         ShotRecord var3 = var24;
         Ball var4 = this.balls[0];
         int var5 = var3.field_D * var3.field_D + var3.field_H * var3.field_H;
@@ -1180,10 +1180,10 @@ final class PoolGameModel {
           throw new IllegalStateException("Strike point out of range! " + var3.field_D + "," + var3.field_H);
         }
         int var6 = -rf.a(-(var5 << 2) + 65536, -121) >> 9;
-        int var7 = ao.a((int) var3.field_A, true);
-        int var8 = hc.a(2047, (int) var3.field_A);
-        int var9 = ao.a((int) var3.field_C, true);
-        int var10 = hc.a(2047, (int) var3.field_C);
+        int var7 = ao.a((int) var3.elevation, true);
+        int var8 = hc.a(2047, (int) var3.elevation);
+        int var9 = ao.a((int) var3.aimAngle, true);
+        int var10 = hc.a(2047, (int) var3.aimAngle);
         int var11 = var9;
         int var12 = -var10;
         int var13 = aj.a(var7, false, -var12);
@@ -1195,10 +1195,10 @@ final class PoolGameModel {
         int var19 = var6 * var13 + var3.field_D * var11 + var3.field_H * var16 >> 9;
         int var20 = var12 * var3.field_D + (var14 * var6 + var3.field_H * var17) >> 9;
         int var21 = 0 * var3.field_D + var6 * var15 + var18 * var3.field_H >> 9;
-        var4.velocityX = lh.a(uh.field_q, (byte) -73, (long)(int)(od.a((long)(var3.field_V * var13), (long)kj.field_f, false) / 4096L));
-        var4.velocityY = lh.a(uh.field_q, (byte) -108, (long)(int)(od.a((long)(var3.field_V * var14), (long)kj.field_f, false) / 4096L));
+        var4.velocityX = lh.a(PasswordValidator.field_q, (byte) -73, (long)(int)(od.a((long)(var3.power * var13), (long)CueAim.field_f, false) / 4096L));
+        var4.velocityY = lh.a(PasswordValidator.field_q, (byte) -108, (long)(int)(od.a((long)(var3.power * var14), (long)CueAim.field_f, false) / 4096L));
         var4.motionState = 1;
-        int var22 = lh.a(uh.field_w, (byte) -116, (long)(int)(od.a((long)(var3.field_V * bl.field_g), (long)kj.field_f, false) / 4096L));
+        int var22 = lh.a(PasswordValidator.field_w, (byte) -116, (long)(int)(od.a((long)(var3.power * bl.field_g), (long)CueAim.field_f, false) / 4096L));
         var4.angularVelocityX = aj.a(-aj.a(var14, false, var21), false, var22);
         var4.angularVelocityY = aj.a(aj.a(var13, false, var21), false, var22);
         var4.angularVelocityZ = aj.a(aj.a(var14, false, var19) - aj.a(var13, false, var20), false, var22);
@@ -1206,15 +1206,15 @@ final class PoolGameModel {
     }
 
     final static void l(int param0) {
-        if (GameRules.field_b == ne.field_w) {
+        if (GameRules.field_b == MatchingTextValidator.field_w) {
           return;
         }
-        if (dn.a(true, ne.field_w)) {
-          s.field_c[ne.field_w].e((byte) -6);
+        if (dn.a(true, MatchingTextValidator.field_w)) {
+          s.field_c[MatchingTextValidator.field_w].e((byte) -6);
         }
-        ne.field_w = GameRules.field_b;
+        MatchingTextValidator.field_w = GameRules.field_b;
         if (vq.field_Sb) {
-          ba.field_ub = null;
+          AccountContentDialog.field_ub = null;
           am.field_e = null;
           vq.field_Sb = false;
         }
@@ -1229,9 +1229,9 @@ final class PoolGameModel {
           lo.field_a = false;
         }
         if (l.field_a) {
-          lq.a(true);
+          DialogLayer.a(true);
           mj.b(0);
-          lq.l(-121);
+          DialogLayer.l(-121);
           l.field_a = false;
         }
     }
@@ -1359,11 +1359,11 @@ final class PoolGameModel {
         if (param0 > -76) {
           return;
         }
-        var21 = this.rules.a(var4.field_M, (byte) -32);
-        if (var4.field_M < 0) {
-          var4.field_M = ga.a(512, true, ea.field_r);
+        var21 = this.rules.a(var4.breakSeed, (byte) -32);
+        if (var4.breakSeed < 0) {
+          var4.breakSeed = ga.nextRandomInt(512, true, ea.field_r);
         }
-        var6 = new IsaacCipher(new int[]{var4.field_M});
+        var6 = new IsaacCipher(new int[]{var4.breakSeed});
         var7 = 1;
         var8 = 1;
         var9 = 1;
@@ -1411,8 +1411,8 @@ final class PoolGameModel {
           this.pockets[var17].keepOnlyPottedBalls(this.balls, -94);
           var17++;
         }
-        if (-1 == var4.field_P ||
-          var4.field_Q == -1) {
+        if (-1 == var4.cueBallX ||
+          var4.cueBallY == -1) {
           this.a(63, var6);
         }
         this.rules.l(-127);
@@ -1453,12 +1453,12 @@ final class PoolGameModel {
           var5Lifetime1 = (ShotRecord) (stackIn_10_0);
           while (var5Lifetime1 != null) {
             var3 += 16;
-            if (1 <= var5Lifetime1.field_q) {
+            if (1 <= var5Lifetime1.phase) {
               var3 += 8;
             }
-            if (var5Lifetime1.field_q >= 2) {
+            if (var5Lifetime1.phase >= 2) {
               var3++;
-              var3 = var3 + var5Lifetime1.field_m.a(param0 ^ 12801);
+              var3 = var3 + var5Lifetime1.pottedBalls.a(param0 ^ 12801);
               var3++;
               if (var5Lifetime1.field_R != null &&
                 !var5Lifetime1.field_R.c(0)) {
@@ -1472,7 +1472,7 @@ final class PoolGameModel {
               }
               var3 += 3;
             }
-            if (var5Lifetime1.field_q >= 3) {
+            if (var5Lifetime1.phase >= 3) {
               var3++;
             }
             var5Lifetime1 = (ShotRecord) (var4.b(-84));
@@ -1490,8 +1490,8 @@ final class PoolGameModel {
         }
         stackIn_5_0 = this.o(param0 + 12851);
         stackIn_5_1 = this.rules.m(param0 + 1) + 1;
-        if (this.currentShot(81).field_M >= 0 &&
-          this.currentShot(65).field_q == 0) {
+        if (this.currentShot(81).breakSeed >= 0 &&
+          this.currentShot(65).phase == 0) {
           stackIn_7_2 = 2;
         } else {
           stackIn_7_2 = this.f(param0 + 1);
@@ -1556,7 +1556,7 @@ final class PoolGameModel {
           ((vh) (Object) stackIn_6_0).b(stackIn_6_1, stackIn_6_2, stackIn_6_3, stackIn_6_4 - stackIn_7_5, 18);
           jh.field_a.b(ad.field_x + 2, 2147483647, -2 + (-TranslatedUiText.field_n + cl.field_d.field_gb - 40), TranslatedUiText.field_n + 42, 18);
           DualLinkDeque.field_f.a(TranslatedUiText.field_n, -22 + (cl.field_d.field_Db - ad.field_x), (byte) -112, 2, cl.field_d.field_gb, 0, ad.field_x + 22);
-          ok.field_ob.b(so.field_k.field_Db - 40, 2147483647, 0, so.field_k.field_gb, 40);
+          ContentTransitionDialog.field_ob.b(so.field_k.field_Db - 40, 2147483647, 0, so.field_k.field_gb, 40);
           ii.field_e.b(0, param1 ^ 2147483647, 0, uq.field_f.field_gb, 30);
           rq.field_x.b(30, 2147483647, 0, uq.field_f.field_gb, -30 + (-2 + uq.field_f.field_Db) - 40);
           var2_int = dr.field_c + 3;
@@ -1664,7 +1664,7 @@ final class PoolGameModel {
           aa.field_b.b(24, 2147483647, 0, de.field_b.field_gb, -24 + de.field_b.field_Db);
           aa.field_b.field_F = rp.a(32450, 3, 1, aa.field_b.field_Db, 11579568, 8421504);
           c.field_e.b(5, 2147483647, 5, -10 + aa.field_b.field_gb, -2 + (-24 + (-10 + aa.field_b.field_Db)));
-          ba.field_vb.b(-24 + (aa.field_b.field_Db - 5), param1 ^ 2147483647, (-80 + aa.field_b.field_gb) / 2, 80, 24);
+          AccountContentDialog.field_vb.b(-24 + (aa.field_b.field_Db - 5), param1 ^ 2147483647, (-80 + aa.field_b.field_gb) / 2, 80, 24);
           da.a(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1693,7 +1693,7 @@ final class PoolGameModel {
         int var10;
         int var5Lifetime1;
         var10 = Pool.field_O;
-        if (this.currentShot(41).field_q != 0) {
+        if (this.currentShot(41).phase != 0) {
           return;
         }
         if (this.shots.c((byte) 113) == this.shots.a((byte) -127)) {
@@ -1701,8 +1701,8 @@ final class PoolGameModel {
         }
         var2 = (ShotRecord) (this.shots.b(-1));
         var3 = (ShotRecord) (this.shots.a((byte) -127));
-        var3.field_T.position = 0;
-        var4 = var3.field_T;
+        var3.stateBefore.position = 0;
+        var4 = var3.stateBefore;
         this.allocateBalls(-14894, var4.readUnsignedByte(-65));
         for (var5 = 0; var5 < this.balls.length; var5++) {
           this.balls[var5].readState(var4, -1285);
@@ -1720,9 +1720,9 @@ final class PoolGameModel {
             }
           }
         }
-        var3.field_q = 0;
-        var3.field_m.d((byte) 83);
-        var3.field_s = uk.field_a;
+        var3.phase = 0;
+        var3.pottedBalls.d((byte) 83);
+        var3.endResolution = uk.field_a;
         if (null == this.field_i) {
           this.field_i = new IntrusiveDeque();
         }
@@ -1745,16 +1745,16 @@ final class PoolGameModel {
           return;
         }
         if (var7.field_n == -1) {
-          var7.field_n = hb.field_s;
+          var7.field_n = NodeHashTableIterator.field_s;
         }
         this.potBallsInPockets(6582, this.balls, this.currentShot(110));
         stackIn_7_0 = var7;
         stackIn_8_1 = (!this.allBallsStopped(0)) ? 1 : 2;
-        stackIn_7_0.field_q = stackIn_8_1;
+        stackIn_7_0.phase = stackIn_8_1;
         var3 = this.currentShot(60);
         this.field_j = 0;
-        if (!var3.field_m.c(0)) {
-          var4_ref_aa = new aa(var3.field_m);
+        if (!var3.pottedBalls.c(0)) {
+          var4_ref_aa = new aa(var3.pottedBalls);
           var5 = (PotEvent) (var4_ref_aa.a(0));
           while (var5 != null) {
             var6 = this.pockets[var5.pocketIndex];
@@ -1766,7 +1766,7 @@ final class PoolGameModel {
             var5 = (PotEvent) (var4_ref_aa.c((byte) -71));
           }
         }
-        var4 = var7.field_q;
+        var4 = var7.phase;
         if (0 == var4) {
           throw new IllegalStateException();
         }
@@ -1806,8 +1806,8 @@ final class PoolGameModel {
         var6Lifetime1 = 0;
         this.findOverlappingBalls((byte) 77);
         for (var10 = 0; hh.field_e > var10; var10++) {
-          if (param3 != k.field_N[var10][0]) {
-            if (param3 == k.field_N[var10][1]) {
+          if (param3 != DropTargetWidget.field_N[var10][0]) {
+            if (param3 == DropTargetWidget.field_N[var10][1]) {
               var6Lifetime1++;
             }
           } else {
@@ -1837,12 +1837,12 @@ final class PoolGameModel {
         try {
           this.a(9437184, 28311552, param1, -30896, 0, 4096);
           var3 = this.currentShot(97);
-          var3.field_u = this.rules.a(false);
+          var3.ballInHandMode = this.rules.a(false);
           var4 = var3;
           var5 = this;
           var6 = ((PoolGameModel) (var5)).balls[0];
-          var4.field_P = var6.positionX;
-          var4.field_Q = var6.positionY;
+          var4.cueBallX = var6.positionX;
+          var4.cueBallY = var6.positionY;
           if (param0 < 34) {
             this.k(50);
           }
@@ -1863,7 +1863,7 @@ final class PoolGameModel {
 
     final static void i(int param0) {
         field_k = new vh(0L, (vh) null, SoftwareRasterizer.width - ff.field_e[4].field_z >> 1, -120 + SoftwareRasterizer.height, ff.field_e[4].field_z, SoftwareRasterizer.height, (String) null);
-        ia.a(true, field_k);
+        MenuSelection.a(true, field_k);
         field_k.field_F = ff.field_e;
         qa.field_v = new vh("tut_close", (vh) null);
         vh dupTemp$0 = new vh("tut_skip", (vh) null);
@@ -1948,8 +1948,8 @@ final class PoolGameModel {
           this.createPockets(10571);
           var5 = new ShotRecord();
           this.shots.b((byte) -60, var5);
-          var5.field_L = this.field_A;
-          this.b(ga.a(512, true, ea.field_r) + 1, 456);
+          var5.playerIndex = this.field_A;
+          this.b(ga.nextRandomInt(512, true, ea.field_r) + 1, 456);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "al.<init>(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

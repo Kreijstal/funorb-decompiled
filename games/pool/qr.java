@@ -67,35 +67,35 @@ final class qr {
         int var2;
         int var3;
         var3 = Pool.field_O;
-        if (mp.field_V <= 0) {
-          if (!hk.b(-120)) {
+        if (UsernameSuggestionsPanel.field_V <= 0) {
+          if (!NanoTickClock.b(-120)) {
             var2 = 1;
           } else {
             var2 = 0;
           }
         } else {
           if (PlasmaTableScene.field_gb == null) {
-            ne.field_u = wp.a(640, lg.field_s, (byte) 0, 480, 0, 0);
-            if (null != ne.field_u) {
+            MatchingTextValidator.field_u = wp.a(640, lg.field_s, (byte) 0, 480, 0, 0);
+            if (null != MatchingTextValidator.field_u) {
               var2 = 2;
-              kc.a(ne.field_u, param0 ^ -28040);
+              kc.attachInputListeners(MatchingTextValidator.field_u, param0 ^ -28040);
             } else {
               var2 = 3;
             }
           } else {
-            ne.field_u = PlasmaTableScene.field_gb.b(-71);
+            MatchingTextValidator.field_u = PlasmaTableScene.field_gb.b(-71);
             ab.a(25692, 2);
-            if (null != ne.field_u) {
+            if (null != MatchingTextValidator.field_u) {
               var2 = 2;
-              kc.a(ne.field_u, param0 ^ -28040);
+              kc.attachInputListeners(MatchingTextValidator.field_u, param0 ^ -28040);
             } else {
               var2 = 3;
             }
           }
         }
         if (PlasmaTableScene.field_gb == null &&
-          fe.field_J) {
-          kk.a(param1, 4, var2);
+          ButtonWidget.field_J) {
+          CacheEntry.a(param1, 4, var2);
         }
         if (param0 == -28038) {
           return;

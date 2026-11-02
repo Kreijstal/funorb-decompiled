@@ -221,7 +221,7 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
         if (null == PlasmaTableScene.field_cb) {
           return false;
         }
-        if (PlasmaTableScene.field_cb.j(103) == null) {
+        if (PlasmaTableScene.field_cb.getTopOpenDialog(103) == null) {
           return false;
         }
         return true;
@@ -238,13 +238,13 @@ final class MouseHandler implements java.awt.event.MouseListener, java.awt.event
           if (null != wp.field_g) {
             PoolUiText.field_g = 0;
             Ball.field_f = param0.getX();
-            ne.field_o = param0.getY();
+            MatchingTextValidator.field_o = param0.getY();
             rl.a((byte) -115);
             if (javax.swing.SwingUtilities.isRightMouseButton(param0)) {
-              kj.field_c = 2;
+              CueAim.field_c = 2;
               ho.field_v = 2;
             } else {
-              kj.field_c = 1;
+              CueAim.field_c = 1;
               ho.field_v = 1;
             }
             var2_int = param0.getModifiers();

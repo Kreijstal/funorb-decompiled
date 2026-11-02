@@ -125,11 +125,11 @@ final class kh extends vh {
             if (1 == var2) {
               ClientException.field_d = vd.ticketingOneunread;
             } else {
-              ClientException.field_d = nr.a(new String[]{Integer.toString(var2)}, -1, sa.ticketingXunread);
+              ClientException.field_d = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(var2)}, -1, sa.ticketingXunread);
             }
-            ClientException.field_d = aq.a(-54, new CharSequence[]{(CharSequence) ((Object) ClientException.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) kk.ticketingGotowebsite)});
+            ClientException.field_d = aq.a(-54, new CharSequence[]{(CharSequence) ((Object) ClientException.field_d), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) CacheEntry.ticketingGotowebsite)});
           }
-          d.field_d.k(17);
+          d.field_d.dismissDialog(17);
           ci.d((byte) -126);
         } else {
           d.field_d.m((byte) -33);
@@ -391,7 +391,7 @@ final class kh extends vh {
         try {
           var4_int = -89 / ((-33 - param2) / 51);
           if (vj.a(param1, param3, param0, (byte) 121)) {
-            return fo.a((byte) -23);
+            return KeyHandler.a((byte) -23);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

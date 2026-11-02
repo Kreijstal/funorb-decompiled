@@ -107,7 +107,7 @@ final class dp implements in {
           if (hh.field_a < se.field_l) {
             return -1;
           }
-          if (!(oe.field_Q + se.field_l <= hh.field_a)) {
+          if (!(FadingDialog.field_Q + se.field_l <= hh.field_a)) {
             return KillerBallSkin.field_m;
           }
           return -1;
@@ -118,7 +118,7 @@ final class dp implements in {
         if (hh.field_a < se.field_l) {
           return -1;
         }
-        if (oe.field_Q + se.field_l <= hh.field_a) {
+        if (FadingDialog.field_Q + se.field_l <= hh.field_a) {
           return -1;
         }
         return KillerBallSkin.field_m;

@@ -18,7 +18,7 @@ final class nn {
           tf.field_a.field_j[vn.field_e] = (nc) (tf.field_a.field_a[vn.field_e].a(96, 1031, -1024, -1024, -10240, tp.field_h));
         }
         tf.field_a.a(tp.field_h, CushionSegment.field_i, vn.field_e, -3637);
-        PoolMatchController var3 = ba.field_ub;
+        PoolMatchController var3 = AccountContentDialog.field_ub;
         if (var3 == null) {
           var3 = am.field_e;
         }
@@ -42,7 +42,7 @@ final class nn {
           int[] var2 = var4;
           param0.field_q = param0.field_g;
           param0.field_g = var4;
-          jf.a(param0, (byte) 38);
+          ImageProducerRasterBuffer.a(param0, (byte) 38);
           param0.a();
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "nn.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -91,7 +91,7 @@ final class nn {
               if (param0 < 0L) {
                 var7Lifetime4 = var9 + "; Discard;";
               } else {
-                var7Lifetime4 = var9 + "; Expires=" + hn.a(rl.a((byte) -120) + param0 * 1000L, false) + "; Max-Age=" + param0;
+                var7Lifetime4 = var9 + "; Expires=" + hn.formatCookieDate(rl.a((byte) -120) + param0 * 1000L, false) + "; Max-Age=" + param0;
               }
               mo.a("document.cookie=\"" + var7Lifetime4 + "\"", param2, (byte) 35);
               return;

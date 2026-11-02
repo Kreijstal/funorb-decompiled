@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nd implements fp {
+final class nd implements WidgetPainter {
     static String youhavelost;
     private int field_o;
     private int field_n;
@@ -70,9 +70,9 @@ final class nd implements fp {
         field_a = null;
     }
 
-    public final void a(boolean param0, int param1, byte param2, int param3, ei param4) {
+    public final void paintWidget(boolean param0, int param1, byte param2, int param3, UiWidget param4) {
         int var11 = 0;
-        ei stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -83,28 +83,28 @@ final class nd implements fp {
         int var9 = 0;
         int var10 = 0;
         int var12 = 0;
-        va var13 = null;
+        MultiHandleSliderWidget var13 = null;
         var12 = Pool.field_O;
         try {
-          if (param4 instanceof va) {
-            stackIn_4_0 = (ei) (param4);
+          if (param4 instanceof MultiHandleSliderWidget) {
+            stackIn_4_0 = (UiWidget) (param4);
           } else {
             stackIn_4_0 = null;
           }
-          var13 = (va) (stackIn_4_0);
+          var13 = (MultiHandleSliderWidget) (stackIn_4_0);
           if (var13 != null) {
           }
-          SoftwareRasterizer.fillRectangle(param1 + param4.field_C, param3 + param4.field_D, param4.field_l, param4.field_y, this.field_n);
-          var7 = -(2 * var13.field_Q) + param4.field_l;
-          var8 = var13.field_Q + (param4.field_C + param1);
-          var9 = param3 - (-param4.field_D - var13.field_R);
+          SoftwareRasterizer.fillRectangle(param1 + param4.widgetX, param3 + param4.widgetY, param4.widgetWidth, param4.widgetHeight, this.field_n);
+          var7 = -(2 * var13.railInset) + param4.widgetWidth;
+          var8 = var13.railInset + (param4.widgetX + param1);
+          var9 = param3 - (-param4.widgetY - var13.field_R);
           SoftwareRasterizer.drawLine(var8, var9, var7 + var8, var9, this.field_p);
           var10 = 87 % ((param2 - 2) / 41);
-          for (var11 = var13.g(0) - 1; var11 >= 0; var11--) {
-            SoftwareRasterizer.fillCircle(var7 * var13.b((byte) -37, var11) / var13.f(0) + var8, var9, this.field_f, this.field_d);
+          for (var11 = var13.getHandleCount(0) - 1; var11 >= 0; var11--) {
+            SoftwareRasterizer.fillCircle(var7 * var13.getHandleValueAt((byte) -37, var11) / var13.getMaximumValue(0) + var8, var9, this.field_f, this.field_d);
           }
           if (null != this.field_h) {
-            this.field_h.drawCentered(var13.field_m, var7 / 2 + var8, var9 + (this.field_h.baselineHeight + var13.field_R), this.field_o, this.field_k);
+            this.field_h.drawCentered(var13.widgetText, var7 / 2 + var8, var9 + (this.field_h.baselineHeight + var13.field_R), this.field_o, this.field_k);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -123,7 +123,7 @@ final class nd implements fp {
 
     final static void b(byte param0) {
         db.field_Sb = lo.b(14);
-        wd.field_Ub = new lq();
+        wd.field_Ub = new DialogLayer();
         if (param0 > -82) {
           field_i = (IntrusiveDeque) null;
         }

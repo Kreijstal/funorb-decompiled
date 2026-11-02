@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class nq {
-    fp field_l;
+    WidgetPainter field_l;
     int field_m;
-    fp field_k;
+    WidgetPainter field_k;
     int field_d;
     int field_b;
-    fp field_j;
+    WidgetPainter field_j;
     int field_g;
-    fp field_c;
-    fp field_o;
+    WidgetPainter field_c;
+    WidgetPainter field_o;
     int field_a;
     private boolean field_f;
     private int field_n;
@@ -244,7 +244,7 @@ final class nq {
         int var15 = Pool.field_O;
         am var17 = new am(param0, 2, 2, 2236962, 1, 1, 1, param0.maxDescent + param0.maxAscent + 2);
         var17.field_d = 16777215;
-        this.field_c = (fp) ((Object) var17);
+        this.field_c = (WidgetPainter) ((Object) var17);
         lg var4 = new lg();
         var17.a(-1177150015, var4);
         this.field_d = 3;
@@ -270,21 +270,21 @@ final class nq {
         var5[4] = (Sprite) ((Object) var18);
         var4.b(4, 0).a(-15359, true).a(var5, (byte) 126);
         var4.b(5, 0).a(DualLinkNode.a(0, 0, -119, 65793, 0), (byte) 90).a(-15359, true).c(-1, 71);
-        this.field_l = (fp) ((Object) var4);
+        this.field_l = (WidgetPainter) ((Object) var4);
         lg var6 = new lg(var4, true);
         var6.field_m = 0;
         lg var7 = new lg(var4, true);
         var7.field_m = 0;
-        var7.a(ei.a((byte) 83, 8947848), 6);
-        var7.b(1, 0).a(ei.a((byte) 32, 11184810), (byte) 120).c(2236962, 51);
-        this.field_o = (fp) ((Object) new hl(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+        var7.a(UiWidget.a((byte) 83, 8947848), 6);
+        var7.b(1, 0).a(UiWidget.a((byte) 32, 11184810), (byte) 120).c(2236962, 51);
+        this.field_o = (WidgetPainter) ((Object) new CheckboxPainter(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
         vd discarded$0 = new vd(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
         nd discarded$1 = new nd(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
         lg var8 = new lg();
         var17.a(-1177150015, var8);
         var8.b(0, 0).a(NineBallRules.a(15658734, 7829367, 10066329, false), (byte) 74).c(1118481, 72).b(true, -1);
         var8.b(4, 0).a(-15359, true).a(var5, (byte) 77);
-        this.field_j = (fp) ((Object) var8);
+        this.field_j = (WidgetPainter) ((Object) var8);
         Sprite[] var9 = new Sprite[9];
         var9[4] = new Sprite(2, 1);
         Sprite[] var10 = new Sprite[9];
@@ -321,14 +321,14 @@ final class nq {
     final static void a(vk param0, PlatformTaskDispatcher param1, java.awt.Component param2, int param3, boolean param4, int param5, boolean param6, int param7) {
         try {
           AudioOutput.a(param7, param6, 10);
-          ib.field_s = AudioOutput.a(param1, param2, 0, param3);
-          kk.field_D = AudioOutput.a(param1, param2, 1, param5);
+          MidiNoteMixer.field_s = AudioOutput.a(param1, param2, 0, param3);
+          CacheEntry.field_D = AudioOutput.a(param1, param2, 1, param5);
           qf.field_d = new ai();
           or.field_b = param5 * 1000 / param7;
-          kk.field_D.a(qf.field_d);
+          CacheEntry.field_D.a(qf.field_d);
           tl.field_N = param0;
           tl.field_N.a(TranslatedUiText.field_h, (byte) -26);
-          ib.field_s.a(tl.field_N);
+          MidiNoteMixer.field_s.a(tl.field_N);
           if (param4) {
             nq.a('`', (byte) -1);
           }

@@ -90,7 +90,7 @@ final class p implements eb {
         char[] var9;
         int var5Lifetime1;
         int var5Lifetime2;
-        var7 = new String(jk.timerHoursMinutesSeconds);
+        var7 = new String(CueStick.timerHoursMinutesSeconds);
         if (param2 != 45) {
           return (String) null;
         }
@@ -349,7 +349,7 @@ final class p implements eb {
           if (var3_int > 12) {
             return false;
           }
-          var4 = hq.a(param1 ^ -12, param0);
+          var4 = TutorialController.normalizeDisplayName(param1 ^ -12, param0);
           if (var4 != null &&
             var4.length() >= 1) {
             if (!qd.a(0, var4.charAt(0)) &&

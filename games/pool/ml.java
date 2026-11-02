@@ -19,7 +19,7 @@ final class ml {
         if (param0 < 6) {
           tutorialShow = (String) null;
         }
-        return -kk.field_z + gp.field_c;
+        return -CacheEntry.field_z + gp.field_c;
     }
 
     final boolean a(String param0, byte param1) {
@@ -203,7 +203,7 @@ final class ml {
           return;
         }
         try {
-          ch.a(false, param1, param2);
+          WidgetContainer.a(false, param1, param2);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "ml.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

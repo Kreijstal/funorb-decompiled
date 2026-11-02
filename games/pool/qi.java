@@ -96,16 +96,16 @@ final class qi implements Iterable {
         int var2Lifetime1;
         int var3Lifetime1;
         if (param0 < -71) {
-          var2 = ir.field_h * ir.field_h;
-          var3 = -(hb.field_a * hb.field_a) + var2;
-          ir.field_a.b(90, 2147483647, -(199 * var3 / var2) + var1, 199, -90 + (SoftwareRasterizer.height - 120) - 4);
+          var2 = BufferedFile.field_h * BufferedFile.field_h;
+          var3 = -(NodeHashTableIterator.field_a * NodeHashTableIterator.field_a) + var2;
+          BufferedFile.field_a.b(90, 2147483647, -(199 * var3 / var2) + var1, 199, -90 + (SoftwareRasterizer.height - 120) - 4);
           oi.field_n.b(0, 2147483647, var1 + (202 + var3 * 438 / var2), 438, SoftwareRasterizer.height - 120 - 4);
           return;
         }
         field_b = 3;
-        var2Lifetime1 = ir.field_h * ir.field_h;
-        var3Lifetime1 = -(hb.field_a * hb.field_a) + var2Lifetime1;
-        ir.field_a.b(90, 2147483647, -(199 * var3Lifetime1 / var2Lifetime1) + var1, 199, -90 + (SoftwareRasterizer.height - 120) - 4);
+        var2Lifetime1 = BufferedFile.field_h * BufferedFile.field_h;
+        var3Lifetime1 = -(NodeHashTableIterator.field_a * NodeHashTableIterator.field_a) + var2Lifetime1;
+        BufferedFile.field_a.b(90, 2147483647, -(199 * var3Lifetime1 / var2Lifetime1) + var1, 199, -90 + (SoftwareRasterizer.height - 120) - 4);
         oi.field_n.b(0, 2147483647, var1 + (202 + var3Lifetime1 * 438 / var2Lifetime1), 438, SoftwareRasterizer.height - 120 - 4);
     }
 
@@ -115,7 +115,7 @@ final class qi implements Iterable {
         }
         try {
           na.a(-58, param1);
-          wf.a(false, gg.loggingIn, -128);
+          wf.a(false, DebouncedValidationProvider.loggingIn, -128);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "qi.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

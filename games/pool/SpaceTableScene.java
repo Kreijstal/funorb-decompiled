@@ -53,11 +53,11 @@ final class SpaceTableScene extends ModelTableScene {
           var4 = 24 / ((-64 - param0) / 52);
           var3_int = 0;
           var5 = 0;
-          while (kk.field_C[0].length > var3_int) {
-            if (var5 < kk.field_C[0].length) {
-              var6 = -ml.field_l[0] + kk.field_C[0][var3_int];
-              var7 = -ml.field_l[1] + kk.field_C[1][var3_int];
-              var8 = kk.field_C[2][var3_int] - ml.field_l[2];
+          while (CacheEntry.field_C[0].length > var3_int) {
+            if (var5 < CacheEntry.field_C[0].length) {
+              var6 = -ml.field_l[0] + CacheEntry.field_C[0][var3_int];
+              var7 = -ml.field_l[1] + CacheEntry.field_C[1][var3_int];
+              var8 = CacheEntry.field_C[2][var3_int] - ml.field_l[2];
               var9 = ml.field_l[3] * var6 - (-(var7 * ml.field_l[4]) - var8 * ml.field_l[5]) >> 3;
               var10 = var8 * ml.field_l[8] + var7 * ml.field_l[7] + ml.field_l[6] * var6 >> 3;
               var8 = var8 * ml.field_l[11] + ml.field_l[9] * var6 + ml.field_l[10] * var7 >> 16;
@@ -198,10 +198,10 @@ final class SpaceTableScene extends ModelTableScene {
     final void d(boolean param0) {
         super.d(param0);
         ra.field_f = null;
-        ig.field_h = null;
-        lq.field_R = null;
+        TextInputValidator.field_h = null;
+        DialogLayer.field_R = null;
         s.field_b = (int[][]) null;
-        kk.field_C = (int[][]) null;
+        CacheEntry.field_C = (int[][]) null;
     }
 
     final void b(int param0, di param1) {
@@ -228,7 +228,7 @@ final class SpaceTableScene extends ModelTableScene {
           super.a(param0, param1);
           ra.field_f = new qf[32];
           wm.field_Ub = new int[ra.field_f.length];
-          va.field_N = new int[ra.field_f.length];
+          MultiHandleSliderWidget.field_N = new int[ra.field_f.length];
           for (var3_int = 0; var3_int < ra.field_f.length; var3_int++) {
             ra.field_f[var3_int] = new qf(this.field_O[om.field_w]);
             wm.field_Ub[var3_int] = var3_int;
@@ -251,7 +251,7 @@ final class SpaceTableScene extends ModelTableScene {
     final void b(boolean param0) {
         super.b(param0);
         int var2 = -220 - gd.field_g;
-        ig.field_h.a(0, (byte) -97, var2, 0);
+        TextInputValidator.field_h.a(0, (byte) -97, var2, 0);
         gd.field_g = gd.field_g + var2;
     }
 
@@ -270,7 +270,7 @@ final class SpaceTableScene extends ModelTableScene {
             ra.field_f[var3_int].a(2115785453);
           }
           if (gd.field_g < 0) {
-            ig.field_h.a(0, (byte) -96, 1, 0);
+            TextInputValidator.field_h.a(0, (byte) -96, 1, 0);
             gd.field_g = gd.field_g + 1;
           }
           return;
@@ -313,7 +313,7 @@ final class SpaceTableScene extends ModelTableScene {
         var6 = param0;
         if (var6 != 5) {
           if (2 == var6) {
-            var6 = ga.a(2, true, ea.field_r);
+            var6 = ga.nextRandomInt(2, true, ea.field_r);
             if (var6 == 0) {
               kp.a(100, ie.field_f, param3, param1);
             } else {
@@ -323,7 +323,7 @@ final class SpaceTableScene extends ModelTableScene {
             }
           } else {
             if (var6 == 3) {
-              var6 = ga.a(2, true, ea.field_r);
+              var6 = ga.nextRandomInt(2, true, ea.field_r);
               if (var6 != 0) {
                 if (var6 == 1) {
                   kp.a(100, hj.field_j, param3, param1);
@@ -350,7 +350,7 @@ final class SpaceTableScene extends ModelTableScene {
             }
           }
         } else {
-          var6 = ga.a(4, true, ea.field_r);
+          var6 = ga.nextRandomInt(4, true, ea.field_r);
           if (var6 == 0) {
             kp.a(100, wn.field_b, param3, param1);
           } else {
@@ -527,11 +527,11 @@ final class SpaceTableScene extends ModelTableScene {
           var4[2] = rb.b(var57[2], -4);
           this.a(false, var57, var25);
           for (var5 = 0; var5 < ra.field_f.length; var5++) {
-            va.field_N[var5] = ra.field_f[wm.field_Ub[var5]].a(var57, (byte) 91);
+            MultiHandleSliderWidget.field_N[var5] = ra.field_f[wm.field_Ub[var5]].a(var57, (byte) 91);
           }
-          k.a(wm.field_Ub, (byte) -121, va.field_N);
+          DropTargetWidget.a(wm.field_Ub, (byte) -121, MultiHandleSliderWidget.field_N);
           PacketBuffer.field_l = var57[11] * -var57[2] + -var57[1] * var57[10] + -var57[0] * var57[9];
-          var26 = ig.field_h;
+          var26 = TextInputValidator.field_h;
           var88 = oh.field_d;
           if (param0 != -55) {
             waitingforFonts = (String) null;
@@ -580,24 +580,24 @@ final class SpaceTableScene extends ModelTableScene {
           var35.b((byte) -116, 0, var35.field_j.length, var93);
           SoftwareRasterizer.fillRectangle(0, 0, SoftwareRasterizer.width, SoftwareRasterizer.height, 51);
           this.a(param1, param0 ^ -61);
-          for (var5Lifetime2 = 0; var5Lifetime2 < kk.field_C[0].length; var5Lifetime2++) {
+          for (var5Lifetime2 = 0; var5Lifetime2 < CacheEntry.field_C[0].length; var5Lifetime2++) {
             if (s.field_b[2][var5Lifetime2] >= 0) {
               SoftwareRasterizer.a(s.field_b[0][var5Lifetime2], s.field_b[1][var5Lifetime2], var5Lifetime2 % ng.field_t.length + 2 << 3, 255, dg.field_K);
             }
           }
-          hb.field_k.a(PoolUiText.field_d, uh.field_t[1], 4096, (byte) 113, uh.field_t[0]);
+          NodeHashTableIterator.field_k.a(PoolUiText.field_d, PasswordValidator.field_t[1], 4096, (byte) 113, PasswordValidator.field_t[0]);
           var16 = f.a((byte) -68, var57);
           var94 = var16;
           var16[0] = var16[0] - 2304;
           var16[1] = var16[1] - 1152;
           for (var6 = ra.field_f.length - 1; 0 <= var6; var6--) {
-            if (PacketBuffer.field_l <= va.field_N[var6]) {
+            if (PacketBuffer.field_l <= MultiHandleSliderWidget.field_N[var6]) {
               ra.field_f[wm.field_Ub[var6]].a(var94, this, 126);
               continue;
             }
             break;
           }
-          var38 = ig.field_h;
+          var38 = TextInputValidator.field_h;
           var95 = oh.field_d;
           var38.a((byte) -105, 0, var38.field_j.length, var95);
           var40 = ij.field_o;
@@ -622,7 +622,7 @@ final class SpaceTableScene extends ModelTableScene {
             stackIn_47_2 = 73;
             stackIn_47_3 = true;
             stackIn_47_4 = var3;
-            if (param1.field_I.currentShot(76).field_q != 0) {
+            if (param1.field_I.currentShot(76).phase != 0) {
               stackIn_48_0 = this;
               stackIn_48_5 = false;
             } else {
@@ -636,7 +636,7 @@ final class SpaceTableScene extends ModelTableScene {
           var102 = kh.field_rc;
           var49.a(true, 0, var49.field_j.length, (byte) -83, var101, var102);
           if ((256L & pd.field_i) != 0L) {
-            ig.field_h.a(oh.field_d, 0);
+            TextInputValidator.field_h.a(oh.field_d, 0);
           }
           if ((pd.field_i & 1073741824L) == 0L) {
             param1.q(-1);
@@ -663,7 +663,7 @@ final class SpaceTableScene extends ModelTableScene {
 
     final void c(int param0, di param1) {
         ng.field_t = aj.a(0, "", param1, "space_stars");
-        hb.field_k = pf.a("", (byte) 103, "shuttle_planet", param1);
+        NodeHashTableIterator.field_k = pf.a("", (byte) 103, "shuttle_planet", param1);
         if (param0 != -23569) {
           return;
         }
@@ -766,7 +766,7 @@ final class SpaceTableScene extends ModelTableScene {
           incrementValue$17 = var3_int;
           var3_int++;
           this.field_O[incrementValue$17] = eg.a(param0, "", "space_table/space_table_post");
-          nr.field_eb = var3_int;
+          AccountWelcomePanel.field_eb = var3_int;
           incrementValue$18 = var3_int;
           var3_int++;
           this.field_O[incrementValue$18] = eg.a(param0, "", "space_table/space_hole_a");
@@ -798,7 +798,7 @@ final class SpaceTableScene extends ModelTableScene {
           var3_int++;
           this.field_O[incrementValue$25] = eg.a(param0, "", "space_table/space_top_b");
           pc.field_b = var3_int;
-          this.field_A = new jk();
+          this.field_A = new CueStick();
           this.field_A.a(eg.a(param0, "", "cues/space_cue"), (byte) -115);
           for (var4 = 0; this.field_O.length > var4; var4++) {
             db.a(0, this.field_O[var4]);
@@ -842,7 +842,7 @@ final class SpaceTableScene extends ModelTableScene {
           for (var4Lifetime3 = 0; var4Lifetime3 < this.field_O.length; var4Lifetime3++) {
             ln.a(this.field_M[var4Lifetime3], 0, this.field_O[var4Lifetime3]);
           }
-          pp.a(this.field_O[da.field_b], (short) -8246, true, this.field_M[da.field_b], ud.field_I);
+          pp.a(this.field_O[da.field_b], (short) -8246, true, this.field_M[da.field_b], SingleChildWidget.field_I);
           if (param1 >= -43) {
             this.c(false);
           }
@@ -892,7 +892,7 @@ final class SpaceTableScene extends ModelTableScene {
         int var8 = 0;
         int var11 = Pool.field_O;
         int var3 = 0;
-        so dupTemp$0 = new so((TimeTrialRules.field_f - nr.field_eb) * 4 + 2 * (-ShotRecord.field_J + up.field_l));
+        so dupTemp$0 = new so((TimeTrialRules.field_f - AccountWelcomePanel.field_eb) * 4 + 2 * (-ShotRecord.field_J + up.field_l));
         int var2Lifetime1;
         int var2Lifetime2;
         int var2Lifetime3;
@@ -905,9 +905,9 @@ final class SpaceTableScene extends ModelTableScene {
         tq.field_o = dupTemp$2;
         so dupTemp$3 = hc.a(this.field_O[ph.field_e], this.field_M[ph.field_e], (byte) 101);
         ij.field_o = dupTemp$3;
-        lq.field_R = new so(new so[]{dupTemp$0, dupTemp$1, dupTemp$2, dupTemp$3});
+        DialogLayer.field_R = new so(new so[]{dupTemp$0, dupTemp$1, dupTemp$2, dupTemp$3});
         var3 = 0;
-        for (var2 = nr.field_eb; var2 < TimeTrialRules.field_f; var2++) {
+        for (var2 = AccountWelcomePanel.field_eb; var2 < TimeTrialRules.field_f; var2++) {
           var4 = var2;
           var12 = wb.field_c.field_b;
           var6 = var3;
@@ -943,33 +943,33 @@ final class SpaceTableScene extends ModelTableScene {
           bh.a(var17, false, var27[1], var27[2], this.field_O[var4], var27[0], var6);
           var3Lifetime2 += 4;
         }
-        ig.field_h = new so(new so[]{hc.a(this.field_O[np.field_d], this.field_M[np.field_d], (byte) 101), hc.a(this.field_O[da.field_b], this.field_M[da.field_b], (byte) 101), hc.a(this.field_O[lg.field_x], this.field_M[lg.field_x], (byte) 101)});
-        ig.field_h.a(false);
-        ig.field_h.a(0);
-        ig.field_h.a(this.field_q, this.field_e, this.field_F, (byte) -101, this.field_u, this.field_C);
-        ig.field_h.d(118);
-        lq.field_R.a(false);
-        lq.field_R.a(0);
-        lq.field_R.a(this.field_q, this.field_e, this.field_F, (byte) -124, this.field_u, this.field_C);
+        TextInputValidator.field_h = new so(new so[]{hc.a(this.field_O[np.field_d], this.field_M[np.field_d], (byte) 101), hc.a(this.field_O[da.field_b], this.field_M[da.field_b], (byte) 101), hc.a(this.field_O[lg.field_x], this.field_M[lg.field_x], (byte) 101)});
+        TextInputValidator.field_h.a(false);
+        TextInputValidator.field_h.a(0);
+        TextInputValidator.field_h.a(this.field_q, this.field_e, this.field_F, (byte) -101, this.field_u, this.field_C);
+        TextInputValidator.field_h.d(118);
+        DialogLayer.field_R.a(false);
+        DialogLayer.field_R.a(0);
+        DialogLayer.field_R.a(this.field_q, this.field_e, this.field_F, (byte) -124, this.field_u, this.field_C);
         ij.field_o.d(109);
         ff.field_d.d(97);
         wb.field_c.d(118);
         tq.field_o.d(90);
         kh.field_rc = new boolean[tq.field_o.field_j.length];
-        kk.field_C = new int[3][4096];
-        s.field_b = new int[3][kk.field_C[0].length];
-        for (var9 = 0; var9 < kk.field_C[0].length; var9++) {
+        CacheEntry.field_C = new int[3][4096];
+        s.field_b = new int[3][CacheEntry.field_C[0].length];
+        for (var9 = 0; var9 < CacheEntry.field_C[0].length; var9++) {
           do {
-            var4 = ga.a(255, param0, ea.field_r) - 127;
-            var5 = ga.a(255, param0, ea.field_r) - 127;
-            var6 = ga.a(255, param0, ea.field_r) - 127;
+            var4 = ga.nextRandomInt(255, param0, ea.field_r) - 127;
+            var5 = ga.nextRandomInt(255, param0, ea.field_r) - 127;
+            var6 = ga.nextRandomInt(255, param0, ea.field_r) - 127;
             var7 = 256;
             var10 = var4 * var4 + (var5 * var5 + var6 * var6);
             var8 = rf.a(var10, -121);
           } while (var8 == 0);
-          kk.field_C[0][var9] = (var7 * var4 << 8) / var8;
-          kk.field_C[1][var9] = (var5 * var7 << 8) / var8;
-          kk.field_C[2][var9] = (var7 * var6 << 8) / var8;
+          CacheEntry.field_C[0][var9] = (var7 * var4 << 8) / var8;
+          CacheEntry.field_C[1][var9] = (var5 * var7 << 8) / var8;
+          CacheEntry.field_C[2][var9] = (var7 * var6 << 8) / var8;
         }
     }
 
@@ -1025,9 +1025,9 @@ final class SpaceTableScene extends ModelTableScene {
         try {
           var1_int = 0;
           var2 = 0;
-          while (n.h(127)) {
-            n.field_W.e(-15525);
-            if (n.field_W.b((byte) 126)) {
+          while (LabeledChildWidget.h(127)) {
+            LabeledChildWidget.field_W.navigateVertical(-15525);
+            if (LabeledChildWidget.field_W.isPressActivated((byte) 126)) {
               var1_int = 1;
             }
             if (qi.field_a != 13) {
@@ -1035,17 +1035,17 @@ final class SpaceTableScene extends ModelTableScene {
             }
             var2 = 1;
           }
-          n.field_W.a(ub.a(lq.field_W, ua.field_o, 0), ub.a(wn.field_i, gg.field_f, ~param0), -41);
-          if (n.field_W.b((byte) 93)) {
+          LabeledChildWidget.field_W.a(ub.a(DialogLayer.field_W, UsernameAvailabilityValidator.field_o, 0), ub.a(wn.field_i, DebouncedValidationProvider.field_f, ~param0), -41);
+          if (LabeledChildWidget.field_W.isPressActivated((byte) 93)) {
             var1_int = 1;
           }
           var3 = 0;
           if (var1_int != 0 &&
-            n.field_W.field_h >= 0) {
-            var3 = mb.field_c[n.field_W.field_h];
+            LabeledChildWidget.field_W.selectedIndex >= 0) {
+            var3 = mb.field_c[LabeledChildWidget.field_W.selectedIndex];
             if (2 == var3 ||
               var3 == 5) {
-              gr.g(param0 + 127);
+              ArchiveRequest.g(param0 + 127);
             }
           } else {
             if (var2 != 0) {
@@ -1056,12 +1056,12 @@ final class SpaceTableScene extends ModelTableScene {
                   var6 = (int)((10999L - var4) / 1000L);
                   if (var6 <= 0) {
                     var3 = 2;
-                    kk.a(true, 4, 5);
+                    CacheEntry.a(true, 4, 5);
                   }
                 }
                 return var3;
               }
-              gr.g(116);
+              ArchiveRequest.g(116);
             }
           }
           if (param0 == ~var3 &&
@@ -1070,7 +1070,7 @@ final class SpaceTableScene extends ModelTableScene {
             var6Lifetime1 = (int)((10999L - var4Lifetime1) / 1000L);
             if (var6Lifetime1 <= 0) {
               var3 = 2;
-              kk.a(true, 4, 5);
+              CacheEntry.a(true, 4, 5);
             }
           }
           stackIn_31_0 = var3;

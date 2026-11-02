@@ -595,7 +595,7 @@ final class PlatformTaskDispatcher implements Runnable {
           }
           if (this.field_i) {
             try {
-              Class.forName("fi").newInstance();
+              Class.forName("MicrosoftDirectSoundInitializer").newInstance();
             } catch (java.lang.Throwable decompiledCaughtParameter8) {
               decompiledCaughtException = decompiledCaughtParameter8;
               throwable = decompiledCaughtException;

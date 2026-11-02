@@ -48,7 +48,7 @@ final class cp {
             var4 = (byte[]) null;
             cp.a((byte[]) null, (byte) 105, 91);
           }
-          stackIn_3_0 = ii.a(param0, param2, 0, 154302664);
+          stackIn_3_0 = ii.crc64(param0, param2, 0, 154302664);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

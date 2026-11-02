@@ -148,7 +148,7 @@ final class cf {
           pk.field_b = pf.a("", (byte) 50, "select_table_thumbnail_jungle_locked", param1);
           tq.field_n = pf.a("", (byte) 87, "select_table_thumbnail_polar_locked", param1);
           uk.field_g = pf.a("", (byte) 62, "select_table_thumbnail_shuttle_locked", param1);
-          ne.field_t = new Sprite[]{null, null, pk.field_b, tq.field_n, uk.field_g};
+          MatchingTextValidator.field_t = new Sprite[]{null, null, pk.field_b, tq.field_n, uk.field_g};
           og.field_K = new Sprite[]{uj.field_c, nm.field_d, sk.field_b, im.field_Vb, wn.field_e};
           nn.field_a[0] = aj.a(cq.a(param0, 0), "", param1, "gameopt_listicons_turntime");
           nn.field_a[2] = aj.a(param0 + 0, "", param1, "gameopt_listicons_theme");
@@ -160,18 +160,18 @@ final class cf {
           ff.field_f[1] = nn.field_a[1];
           rm.field_g = gn.a(aj.a(0, "", param1, "frame"), (byte) -29);
           vk.field_y = gn.a(aj.a(0, "", param1, "frame_dark"), (byte) -29);
-          mp.field_N = gn.a(aj.a(param0 + 0, "", param1, "frame_black"), (byte) -29);
+          UsernameSuggestionsPanel.field_N = gn.a(aj.a(param0 + 0, "", param1, "frame_black"), (byte) -29);
           ln.field_s = gn.a(aj.a(0, "", param1, "frame_selected"), (byte) -29);
           cq.field_b = gn.a(aj.a(0, "", param1, "menu_main_frame"), (byte) -29);
-          jp.field_T = pf.a("", (byte) 109, "menu_main_frame_pocket_bottom", param1);
+          DisplayNamePanel.field_T = pf.a("", (byte) 109, "menu_main_frame_pocket_bottom", param1);
           mj.field_b = pf.a("", (byte) 104, "menu_main_frame_pocket_top", param1);
           bi.field_a = pf.a("", (byte) 47, "menu_main_frame_pocket_left", param1);
-          wk.field_T = pf.a("", (byte) 123, "menu_main_frame_pocket_right", param1);
+          MessageDialogContent.field_T = pf.a("", (byte) 123, "menu_main_frame_pocket_right", param1);
           od.field_a = lb.a(param1, -45, "", "title_corner_ball8");
           cl.field_k = lb.a(param1, param0 ^ 101, "", "title_corner_ball9");
           IsaacCipher.field_f = aj.a(0, "", param1, "achievements");
           for (var2_intLifetime2 = 0; IsaacCipher.field_f.length > var2_intLifetime2; var2_intLifetime2++) {
-            ig.a(IsaacCipher.field_f[var2_intLifetime2], (byte) -12);
+            TextInputValidator.a(IsaacCipher.field_f[var2_intLifetime2], (byte) -12);
           }
           te.field_n = lb.a(param1, 99, "", "achievement_highlight_hover");
           td.field_g = lb.a(param1, 109, "", "achievement_highlight_selected");
@@ -184,7 +184,7 @@ final class cf {
           for (var5_int = 0; var5_int < var25.length; var5_int++) {
             var23[var5_int] = var5_int;
           }
-          fd.a(var25, var23, (byte) -54);
+          StrongCacheEntry.a(var25, var23, (byte) -54);
           var5 = dn.a(var4_ref_int__, (byte) 117, ta.a(new int[]{0, 16744192, var25.length, 16777087}, param0 ^ -126));
           var6 = dn.a(var4_ref_int__, (byte) 10, ta.a(new int[]{0, 16776960, var25.length, 16777023}, 18));
           var7 = dn.a(var4_ref_int__, (byte) 7, ta.a(new int[]{0, 8355711, var25.length, 16777215}, param0 ^ 70));
@@ -208,7 +208,7 @@ final class cf {
           var8Lifetime1.field_B = 0;
           var11.field_i = var7;
           dupTemp$2 = ii.a(param0 + 2, var11);
-          gj.field_T = dupTemp$2;
+          ProgressBarWidget.field_T = dupTemp$2;
           var16 = dupTemp$2;
           var8Lifetime2 = var16;
           var8Lifetime2.field_G = 0;
@@ -271,7 +271,7 @@ final class cf {
           FreePlayRules.field_k = var3[incrementValue$13];
           incrementValue$14 = var2_intLifetime3;
           var2_intLifetime3++;
-          lq.field_Q = var3[incrementValue$14];
+          DialogLayer.field_Q = var3[incrementValue$14];
           il.field_f = pf.a("", (byte) 84, "side_power_bar", param1);
           v.field_c = pf.a("", (byte) 94, "side_power_bar_fill", param1);
           bq.field_n = pf.a("", (byte) 102, "top_bar_inner", param1);
@@ -280,22 +280,22 @@ final class cf {
           Quaternion.field_l = aj.a(0, "", param1, "hud_chat_tab_frame_empty");
           lb.field_O = aj.a(0, "", param1, "hud_chat_tab_frame");
           dr.field_d = pf.a("", (byte) 95, "hud_chat_star", param1);
-          var2_intLifetime4 = sa.field_h.b(ua.chatButton);
+          var2_intLifetime4 = sa.field_h.b(UsernameAvailabilityValidator.chatButton);
           ta.field_e = new Sprite(var2_intLifetime4, sa.field_h.maxAscent + sa.field_h.maxDescent + 1);
           ta.field_e.e();
-          sa.field_h.d(ua.chatButton, 0, sa.field_h.maxAscent, 16777215, 1);
+          sa.field_h.d(UsernameAvailabilityValidator.chatButton, 0, sa.field_h.maxAscent, 16777215, 1);
           jh.field_e = new Sprite(dr.field_d.field_z + ta.field_e.field_z + 2, ta.field_e.field_A);
           jh.field_e.e();
-          sa.field_h.d(ua.chatButton, 0, sa.field_h.maxAscent, 16777215, 1);
+          sa.field_h.d(UsernameAvailabilityValidator.chatButton, 0, sa.field_h.maxAscent, 16777215, 1);
           dr.field_d.c(2 + var2_intLifetime4, jh.field_e.field_A - dr.field_d.field_A >> 1);
-          sh.field_P.b(15100);
+          OpacityWidget.field_P.bindAsRenderTarget(15100);
           wp.field_a = pf.a("", (byte) 60, "slider", param1);
           pf.a("", (byte) 35, "flash_foul", param1);
           pf.a("", (byte) 91, "hud_hbar_inner", param1);
-          gg.field_b = gn.a(aj.a(0, "", param1, "hud_hbar_frame"), (byte) -29);
+          DebouncedValidationProvider.field_b = gn.a(aj.a(0, "", param1, "hud_hbar_frame"), (byte) -29);
           id.field_a = gn.a(aj.a(0, "", param1, "hud_vbar_frame"), (byte) -29);
-          eq.field_Q = aj.a(0, "", param1, "top_bar_frame");
-          iq.field_d = pf.a("", (byte) 73, "icon_break", param1);
+          DateInputWidget.field_Q = aj.a(0, "", param1, "top_bar_frame");
+          RasterBuffer.field_d = pf.a("", (byte) 73, "icon_break", param1);
           il.field_a = pf.a("", (byte) 73, "icon_ball_in_hand", param1);
           pf.a("", (byte) 98, "icon_extra_shot", param1);
           gd.field_e = pf.a("", (byte) 101, "icon_extra_visit", param1);
@@ -310,11 +310,11 @@ final class cf {
           dq.field_e = aj.a(0, "", param1, "playerlist_button");
           vm.field_d = aj.a(0, "", param1, "tutorial_controls");
           qg.field_b = pf.a("", (byte) 52, "tutorial_box_progress", param1);
-          nf.field_Z = gr.a(param1, "", -24155, "controls");
-          bi.field_d = new int[nf.field_Z.length];
+          AccountCreationForm.field_Z = ArchiveRequest.a(param1, "", -24155, "controls");
+          bi.field_d = new int[AccountCreationForm.field_Z.length];
           op.field_f = 0;
-          for (var4 = 0; nf.field_Z.length > var4; var4++) {
-            var21 = nf.field_Z[var4];
+          for (var4 = 0; AccountCreationForm.field_Z.length > var4; var4++) {
+            var21 = AccountCreationForm.field_Z[var4];
             var21.field_e = 0;
             var21.field_b = var21.field_g;
             var21.field_h = var21.field_f;

@@ -158,7 +158,7 @@ final class pp {
         if (!param0) {
           return true;
         }
-        stackIn_6_0 = (fe.a(ClientException.field_g, -13671, 26)) || (IntrusiveDeque.a(0, (byte) -127));
+        stackIn_6_0 = (ButtonWidget.a(ClientException.field_g, -13671, 26)) || (IntrusiveDeque.a(0, (byte) -127));
         return stackIn_6_0;
     }
 
@@ -169,7 +169,7 @@ final class pp {
         int var7 = 0;
         int var8 = 0;
         int var2_int = wn.field_i;
-        int var3 = gg.field_f;
+        int var3 = DebouncedValidationProvider.field_f;
         if (param1 != 1259627265) {
           return;
         }
@@ -178,7 +178,7 @@ final class pp {
           var5 = 6 + uo.field_Lb.field_I.a(param0, 500);
           var6 = 2 + var4 * ad.field_x;
           var7 = de.a(var5, 12, var2_int, 0);
-          var8 = sh.a(var6, var3, -1, 20);
+          var8 = OpacityWidget.a(var6, var3, -1, 20);
           SoftwareRasterizer.drawRectangle(var7, var8, var5, var6, 0);
           SoftwareRasterizer.fillRectangle(1 + var7, 1 + var8, var5 - 2, -2 + var6, 16777088);
           uo.field_Lb.field_I.drawParagraph(param0, 3 + var7, wh.field_b + (var8 + 1 - uo.field_Lb.field_I.maxAscent), 500, 1000, 0, -1, 0, 0, ad.field_x);

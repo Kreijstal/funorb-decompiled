@@ -24,7 +24,7 @@ final class ea extends IntrusiveNode {
         int var1 = 27 / ((param0 - 59) / 62);
         di.field_j = kn.field_e.j(-100);
         CharSequence var2 = (CharSequence) ((Object) di.field_j);
-        oj.field_y = hq.a(110, var2);
+        oj.field_y = TutorialController.normalizeDisplayName(110, var2);
     }
 
     public static void d(byte param0) {

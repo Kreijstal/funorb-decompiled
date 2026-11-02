@@ -10,21 +10,21 @@ final class tf {
     final static Sprite a(int param0, int param1) {
         if (param0 != -17104) {
           field_a = (BallSkin) null;
-          if (mp.field_V > 0) {
-            return ua.field_r;
+          if (UsernameSuggestionsPanel.field_V > 0) {
+            return UsernameAvailabilityValidator.field_r;
           }
           if (ap.field_w[param1]) {
             return mm.field_j;
           }
-          return ua.field_r;
+          return UsernameAvailabilityValidator.field_r;
         }
-        if (mp.field_V > 0) {
-          return ua.field_r;
+        if (UsernameSuggestionsPanel.field_V > 0) {
+          return UsernameAvailabilityValidator.field_r;
         }
         if (ap.field_w[param1]) {
           return mm.field_j;
         }
-        return ua.field_r;
+        return UsernameAvailabilityValidator.field_r;
     }
 
     final static boolean a(int param0, int param1, int param2) {

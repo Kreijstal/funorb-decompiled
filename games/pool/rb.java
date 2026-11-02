@@ -122,12 +122,12 @@ final class rb {
     final static void a(String param0, String param1, String param2, int param3, int param4, int param5) {
         try {
           if (null == kh.field_Vb) {
-            qq.o((byte) -125);
+            MessageDialog.o((byte) -125);
           }
           int var6_int = 102 % ((-49 - param3) / 58);
           ag.field_a = param5;
-          hk.field_t.field_nb = param2;
-          me.field_n = param4;
+          NanoTickClock.field_t.field_nb = param2;
+          EmailAvailabilityValidator.field_n = param4;
           rl.field_b.field_nb = param1;
           kh.field_Vb.field_nb = param0;
           FreePlayRules.c((byte) -86);

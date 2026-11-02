@@ -4,7 +4,7 @@
 final class tn extends IntrusiveNode {
     static int field_u;
     static String cannotPositionCueThere;
-    static ba field_n;
+    static AccountContentDialog field_n;
     int field_s;
     int field_v;
     static int field_o;
@@ -35,13 +35,13 @@ final class tn extends IntrusiveNode {
             field_w = (vh) null;
           }
           var3 = param0.i(-1) ? 1 : 0;
-          if ((hq.field_c & param0.field_L) != 0) {
+          if ((TutorialController.field_c & param0.field_L) != 0) {
             stackIn_8_0 = (var3 != 0) ? 1 : 0;
           } else {
             stackIn_8_0 = 1;
           }
           var4 = stackIn_8_0;
-          if ((hq.field_c & param0.field_L) != 0) {
+          if ((TutorialController.field_c & param0.field_L) != 0) {
             stackIn_14_0 = (var3 == 0) ? 1 : 0;
           } else {
             stackIn_14_0 = 1;
@@ -49,19 +49,19 @@ final class tn extends IntrusiveNode {
           var5 = stackIn_14_0;
           if (var4 != 0 &&
             var7.c(true)) {
-            rb.a(nr.a(new String[]{param0.field_I.field_h[var6.field_L]}, -1, ka.whichGroupDoYouWant), dq.field_a.a((byte) 99, 1), dq.field_a.a((byte) 120, 0), 40, 2, 1);
+            rb.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{param0.field_I.field_h[var6.playerIndex]}, -1, AgeValidator.whichGroupDoYouWant), dq.field_a.a((byte) 99, 1), dq.field_a.a((byte) 120, 0), 40, 2, 1);
             return;
           }
           if (var4 != 0 &&
             var7.a(-110)) {
-            rb.a(nr.a(new String[]{param0.field_I.field_h[var6.field_L]}, -1, ml.wouldYouLikeToPlayOrPass), rl.decisionButtonPass, jf.decisionButtonPlay, param1 + 16877, 16, 8);
+            rb.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{param0.field_I.field_h[var6.playerIndex]}, -1, ml.wouldYouLikeToPlayOrPass), rl.decisionButtonPass, ImageProducerRasterBuffer.decisionButtonPlay, param1 + 16877, 16, 8);
             return;
           }
           if (var5 != 0) {
             if (!var7.c((byte) 91)) {
               return;
             }
-            rb.a(nr.a(new String[]{param0.field_I.field_h[(1 + var7.field_L) % param0.field_I.playerCount]}, -1, ml.wouldYouLikeToPlayOrPass), rl.decisionButtonPass, jf.decisionButtonPlay, -122, 64, 32);
+            rb.a(AccountWelcomePanel.substituteTemplateArguments(new String[]{param0.field_I.field_h[(1 + var7.playerIndex) % param0.field_I.playerCount]}, -1, ml.wouldYouLikeToPlayOrPass), rl.decisionButtonPass, ImageProducerRasterBuffer.decisionButtonPlay, -122, 64, 32);
             return;
           }
           return;

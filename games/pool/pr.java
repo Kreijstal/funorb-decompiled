@@ -10,7 +10,7 @@ final class pr extends IntrusiveNode {
     static int field_l;
     int field_B;
     int field_y;
-    g field_u;
+    MusicPatch field_u;
     int field_s;
     int field_v;
     int field_m;
@@ -30,7 +30,7 @@ final class pr extends IntrusiveNode {
           qf.field_d.a(ta.field_h);
         }
         ta.field_h = null;
-        mp.field_R = null;
+        UsernameSuggestionsPanel.field_R = null;
         int var1 = 107 / ((24 - param0) / 56);
         wm.field_Xb = null;
     }
@@ -85,7 +85,7 @@ final class pr extends IntrusiveNode {
         int var4Lifetime1;
         var6 = Pool.field_O;
         try {
-          fo.field_c = new int[jd.field_h.length][5][3];
+          KeyHandler.field_c = new int[jd.field_h.length][5][3];
           var2_int = param0[9] >> 2;
           var3 = param0[10] >> 2;
           var4 = var2_int * var2_int + var3 * var3 >> 16;
@@ -105,41 +105,41 @@ final class pr extends IntrusiveNode {
           var3 = var3 >> 3;
           var8 = 0;
           var4Lifetime1 = var8;
-          while (var8 < fo.field_c.length) {
-            fo.field_c[var8][0][0] = var2_int;
-            fo.field_c[var8][0][1] = var3;
-            fo.field_c[var8][0][2] = jd.field_h[var8];
-            fo.field_c[var8][1][0] = var2_int >> 1;
-            fo.field_c[var8][1][1] = var3 >> 1;
-            fo.field_c[var8][1][2] = jd.field_h[var8];
-            fo.field_c[var8][2][0] = 0;
-            fo.field_c[var8][2][1] = 0;
-            fo.field_c[var8][2][2] = jd.field_h[var8];
-            fo.field_c[var8][3][0] = -var2_int >> 1;
-            fo.field_c[var8][3][1] = -var3 >> 1;
-            fo.field_c[var8][3][2] = jd.field_h[var8];
-            fo.field_c[var8][4][0] = -var2_int;
-            fo.field_c[var8][4][1] = -var3;
-            fo.field_c[var8][4][2] = jd.field_h[var8];
-            ga.a(param0, fo.field_c[var8][0], false);
-            ga.a(param0, fo.field_c[var8][1], param1);
-            ga.a(param0, fo.field_c[var8][2], false);
-            ga.a(param0, fo.field_c[var8][3], false);
-            ga.a(param0, fo.field_c[var8][4], false);
-            if (fo.field_c[var8][0][2] < 0) {
-              fo.field_c[var8][0][1] = SoftwareRasterizer.height;
+          while (var8 < KeyHandler.field_c.length) {
+            KeyHandler.field_c[var8][0][0] = var2_int;
+            KeyHandler.field_c[var8][0][1] = var3;
+            KeyHandler.field_c[var8][0][2] = jd.field_h[var8];
+            KeyHandler.field_c[var8][1][0] = var2_int >> 1;
+            KeyHandler.field_c[var8][1][1] = var3 >> 1;
+            KeyHandler.field_c[var8][1][2] = jd.field_h[var8];
+            KeyHandler.field_c[var8][2][0] = 0;
+            KeyHandler.field_c[var8][2][1] = 0;
+            KeyHandler.field_c[var8][2][2] = jd.field_h[var8];
+            KeyHandler.field_c[var8][3][0] = -var2_int >> 1;
+            KeyHandler.field_c[var8][3][1] = -var3 >> 1;
+            KeyHandler.field_c[var8][3][2] = jd.field_h[var8];
+            KeyHandler.field_c[var8][4][0] = -var2_int;
+            KeyHandler.field_c[var8][4][1] = -var3;
+            KeyHandler.field_c[var8][4][2] = jd.field_h[var8];
+            ga.a(param0, KeyHandler.field_c[var8][0], false);
+            ga.a(param0, KeyHandler.field_c[var8][1], param1);
+            ga.a(param0, KeyHandler.field_c[var8][2], false);
+            ga.a(param0, KeyHandler.field_c[var8][3], false);
+            ga.a(param0, KeyHandler.field_c[var8][4], false);
+            if (KeyHandler.field_c[var8][0][2] < 0) {
+              KeyHandler.field_c[var8][0][1] = SoftwareRasterizer.height;
             }
-            if (fo.field_c[var8][1][2] < 0) {
-              fo.field_c[var8][1][1] = SoftwareRasterizer.height;
+            if (KeyHandler.field_c[var8][1][2] < 0) {
+              KeyHandler.field_c[var8][1][1] = SoftwareRasterizer.height;
             }
-            if (fo.field_c[var8][2][2] < 0) {
-              fo.field_c[var8][2][1] = SoftwareRasterizer.height;
+            if (KeyHandler.field_c[var8][2][2] < 0) {
+              KeyHandler.field_c[var8][2][1] = SoftwareRasterizer.height;
             }
-            if (fo.field_c[var8][3][2] < 0) {
-              fo.field_c[var8][3][1] = SoftwareRasterizer.height;
+            if (KeyHandler.field_c[var8][3][2] < 0) {
+              KeyHandler.field_c[var8][3][1] = SoftwareRasterizer.height;
             }
-            if (fo.field_c[var8][4][2] < 0) {
-              fo.field_c[var8][4][1] = SoftwareRasterizer.height;
+            if (KeyHandler.field_c[var8][4][2] < 0) {
+              KeyHandler.field_c[var8][4][1] = SoftwareRasterizer.height;
             }
             var8++;
           }

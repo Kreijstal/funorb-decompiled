@@ -32,7 +32,7 @@ final class cl {
             memberslevelName = (String) null;
           }
           var3 = param1.field_ib;
-          stackIn_8_0 = (wn.field_i >= var2_int) && (var2_int + param1.field_gb > wn.field_i) && (var3 <= gg.field_f) && (var3 + param1.field_Db > gg.field_f);
+          stackIn_8_0 = (wn.field_i >= var2_int) && (var2_int + param1.field_gb > wn.field_i) && (var3 <= DebouncedValidationProvider.field_f) && (var3 + param1.field_Db > DebouncedValidationProvider.field_f);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -79,7 +79,7 @@ final class cl {
             return (AlphaFont) (stackIn_2_0);
           }
           var2 = new AlphaFont(param0, el.field_I, ih.field_d, pd.field_a, rc.field_f, IntrusiveNode.field_h, v.field_b);
-          sh.h(-1);
+          OpacityWidget.h(-1);
           if (!param1) {
             pleasewaitDotdotdot = (String) null;
           }

@@ -17,13 +17,13 @@ final class th {
 
     final static void a(byte param0, int param1) {
         kg.field_q = kc.field_g[param1];
-        ir.field_b = kj.field_i[param1];
+        BufferedFile.field_b = CueAim.field_i[param1];
         if (param0 < -55) {
-          ud.field_F = cb.field_f[param1];
+          SingleChildWidget.field_F = cb.field_f[param1];
           return;
         }
         field_j = (byte[][]) null;
-        ud.field_F = cb.field_f[param1];
+        SingleChildWidget.field_F = cb.field_f[param1];
     }
 
     final static boolean a(int param0, int param1, int param2) {
@@ -94,7 +94,7 @@ final class th {
               var5_ref_String = td.field_c.toString();
               var8 = var5_ref_String;
               var8Lifetime2 = var5_ref_String;
-              if (ei.a((byte) -71, var5_ref_String)) {
+              if (UiWidget.a((byte) -71, var5_ref_String)) {
                 var13 = (String) null;
                 var12 = (String) null;
                 jh.a(0, hj.unableToSendMessagePasswordA, (String) null, 2, (String) null, true);
@@ -110,7 +110,7 @@ final class th {
                 if (f.a(5, var6) == 2) {
                   om.a(1, var6, param0, (byte) -4);
                 }
-                ub.a((byte) -116, var5_ref_String, param2, fm.field_I, hn.field_b, -1);
+                ub.a((byte) -116, var5_ref_String, param2, ArrayWidgetGroup.field_I, hn.field_b, -1);
               }
             }
           }
@@ -150,14 +150,14 @@ final class th {
                   boolean decompiledFrameRemainder0 = true;
                   if (em.field_L != null) {
                     if (!sa.field_c) {
-                      var70 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
+                      var70 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
                       var71 = var70 + var66 + ": ";
                       var6Lifetime1 = var6Lifetime1 - m.field_c.b(var71);
                       decompiledFrameRemainder0 = false;
                     }
                     else {
                       if (kn.field_g == null) {
-                        var68 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
+                        var68 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
                         var69 = var68 + var66 + ": ";
                         var6Lifetime1 = var6Lifetime1 - m.field_c.b(var69);
                         decompiledFrameRemainder0 = false;
@@ -174,20 +174,20 @@ final class th {
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  var8Lifetime1 = "[" + sn.muChatLobby + "] ";
+                  var8Lifetime1 = "[" + BirthDateValidator.muChatLobby + "] ";
                 }
               }
               if (decompiledFrameRemainder1) {
                 if (em.field_L != null) {
                   if (!sa.field_c) {
-                    var75 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
+                    var75 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
                     var76 = var75 + var66 + ": ";
                     var6Lifetime1 = var6Lifetime1 - m.field_c.b(var76);
                     decompiledFrameRemainder1 = false;
                   }
                   else {
                     if (kn.field_g == null) {
-                      var73 = "[" + nr.a(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
+                      var73 = "[" + AccountWelcomePanel.substituteTemplateArguments(new String[]{em.field_L.field_Ob}, -1, xsGame) + "] ";
                       var74 = var73 + var66 + ": ";
                       var6Lifetime1 = var6Lifetime1 - m.field_c.b(var74);
                       decompiledFrameRemainder1 = false;
@@ -208,9 +208,9 @@ final class th {
             }
             return true;
           }
-          var89 = (CharSequence) ((Object) fm.field_I);
-          var78 = nr.a(new String[]{ch.a(false, var89)}, -1, jl.privatequickchatToX);
-          var79 = nr.a(new String[]{var16}, -1, vh.privatequickchatFromX);
+          var89 = (CharSequence) ((Object) ArrayWidgetGroup.field_I);
+          var78 = AccountWelcomePanel.substituteTemplateArguments(new String[]{WidgetContainer.a(false, var89)}, -1, jl.privatequickchatToX);
+          var79 = AccountWelcomePanel.substituteTemplateArguments(new String[]{var16}, -1, vh.privatequickchatFromX);
           var10 = m.field_c.b(var78);
           var11 = m.field_c.b(var79);
           if (var10 <= var11) {
@@ -321,14 +321,14 @@ final class th {
 
     final static void b(int param0) {
         if (param0 == -1) {
-          if (fm.field_H) {
-            lq.i(param0 + 15976);
+          if (ArrayWidgetGroup.field_H) {
+            DialogLayer.i(param0 + 15976);
           }
           return;
         }
         th.a((byte) -3, 101);
-        if (fm.field_H) {
-          lq.i(param0 + 15976);
+        if (ArrayWidgetGroup.field_H) {
+          DialogLayer.i(param0 + 15976);
         }
     }
 

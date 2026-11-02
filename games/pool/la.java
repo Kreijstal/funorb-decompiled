@@ -55,10 +55,10 @@ final class la {
           if (ph.field_d.field_R == 0) {
           } else {
             if (!ea.field_z) {
-              if (!hr.field_y) {
+              if (!ViewportController.field_y) {
                 DualLinkNode.field_p = true;
               } else {
-                r.c((byte) 50);
+                EmailValidator.c((byte) 50);
               }
             }
           }

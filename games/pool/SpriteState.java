@@ -16,7 +16,7 @@ abstract class SpriteState extends DualLinkNode {
     abstract void rotateNearest(int param0, int param1, int param2, int param3, int param4, int param5);
 
     final static void a(byte param0, int param1, int param2, int param3) {
-        lq.field_V = param2;
+        DialogLayer.field_V = param2;
         if (param0 != -82) {
           return;
         }

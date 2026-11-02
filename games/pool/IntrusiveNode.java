@@ -77,7 +77,7 @@ class IntrusiveNode {
           if (var9 < 0) {
             var9 = -var9;
           }
-          br.field_I = 128 + (tj.c(var9, var6, param0 ^ 4098) >> 4);
+          br.field_I = 128 + (ResizableDialog.c(var9, var6, param0 ^ 4098) >> 4);
           var10 = IterableNodeHashTable.a(-112, (long)var7 * (long)var7 + ((long)var6 * (long)var6 + (long)var8 * (long)var8) >> 16);
           if (var10 > (long)re.field_a) {
             mn.field_g = (int)((long)(256 * ue.field_e) / ((long)ue.field_e + ((long)ap.field_G * (var10 - (long)re.field_a) >> 8)));

@@ -25,7 +25,7 @@ final class sm extends om {
     }
 
     sm(int param0) {
-        this(lc.field_O, param0);
+        this(ValidationIconWidget.field_O, param0);
     }
 
     final static boolean d(int param0) {
@@ -93,7 +93,7 @@ final class sm extends om {
         return true;
     }
 
-    final String c(int param0, ei param1) {
+    final String c(int param0, UiWidget param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -103,7 +103,7 @@ final class sm extends om {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -1) {
-            stackIn_4_0 = v.a(param1.field_m.length(), 0, '*');
+            stackIn_4_0 = v.a(param1.widgetText.length(), 0, '*');
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

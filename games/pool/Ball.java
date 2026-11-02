@@ -258,11 +258,11 @@ final class Ball {
     final static void a(float param0, float param1, float param2, float param3, float param4, float param5, int param6) {
         if (null == ta.field_h ||
           null == wm.field_Xb ||
-          null == mp.field_R) {
+          null == UsernameSuggestionsPanel.field_R) {
           wm.field_Xb = new ai();
           ta.field_h = new ReverbPcmStream(wm.field_Xb);
           qf.field_d.b(ta.field_h);
-          mp.field_R = new IntrusiveDeque();
+          UsernameSuggestionsPanel.field_R = new IntrusiveDeque();
         }
         ta.field_h.a(param1);
         ta.field_h.f(param4);
@@ -350,8 +350,8 @@ final class Ball {
               if (0 != var2_intLifetime1) {
                 this.field_l = lh.a(var2_intLifetime1, (byte) -100, (long)this.field_l);
                 this.field_h = lh.a(var2_intLifetime1, (byte) -107, (long)this.field_h);
-                this.field_a = -lh.a(uh.field_w, (byte) -117, (long)(vn.a(this.field_h * 8, 0, uh.field_q, l.field_g) / 50));
-                this.field_y = lh.a(uh.field_w, (byte) -118, (long)(vn.a(this.field_l * 8, 0, uh.field_q, l.field_g) / 50));
+                this.field_a = -lh.a(PasswordValidator.field_w, (byte) -117, (long)(vn.a(this.field_h * 8, 0, PasswordValidator.field_q, l.field_g) / 50));
+                this.field_y = lh.a(PasswordValidator.field_w, (byte) -118, (long)(vn.a(this.field_l * 8, 0, PasswordValidator.field_q, l.field_g) / 50));
                 this.field_d = aj.a(wn.field_l, false, this.angularVelocityZ) - this.angularVelocityZ;
                 this.angularVelocityZ = this.angularVelocityZ + this.field_d;
                 this.angularVelocityY = this.angularVelocityY + this.field_y;
@@ -395,8 +395,8 @@ final class Ball {
                       }
                       this.velocityX = this.velocityX + this.field_A;
                       this.velocityY = this.velocityY + this.field_u;
-                      this.field_a = -lh.a(uh.field_w, (byte) -87, (long)(vn.a(this.field_h * 8, 0, uh.field_q, dr.field_f) / 50));
-                      this.field_y = lh.a(uh.field_w, (byte) -122, (long)(vn.a(8 * this.field_l, 0, uh.field_q, dr.field_f) / 50));
+                      this.field_a = -lh.a(PasswordValidator.field_w, (byte) -87, (long)(vn.a(this.field_h * 8, 0, PasswordValidator.field_q, dr.field_f) / 50));
+                      this.field_y = lh.a(PasswordValidator.field_w, (byte) -122, (long)(vn.a(8 * this.field_l, 0, PasswordValidator.field_q, dr.field_f) / 50));
                       this.field_d = aj.a(wn.field_l, false, this.angularVelocityZ) - this.angularVelocityZ;
                       this.velocityX = this.velocityX + vn.a(this.angularVelocityZ, 0, -this.velocityY, pr.field_l);
                       this.velocityY = this.velocityY + vn.a(this.angularVelocityZ, 0, this.velocityX, pr.field_l);

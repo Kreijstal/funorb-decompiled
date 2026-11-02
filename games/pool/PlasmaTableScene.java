@@ -14,7 +14,7 @@ final class PlasmaTableScene extends TableScene {
     private PcmSample field_hb;
     private PcmSample field_fb;
     private PcmSample field_J;
-    static lq field_cb;
+    static DialogLayer field_cb;
     private PcmSample field_Y;
     static int field_ab;
     private ji[] field_K;
@@ -25,7 +25,7 @@ final class PlasmaTableScene extends TableScene {
     static String mbCaptionTitle;
     private int[] field_X;
     private int[] field_M;
-    static hr field_gb;
+    static ViewportController field_gb;
     private PcmSample field_T;
     private PcmSample field_U;
     private PcmSample field_P;
@@ -52,7 +52,7 @@ final class PlasmaTableScene extends TableScene {
           super.a(param0, param1);
           t.field_a = new int[3][17][33];
           ro.field_v = new int[3][17][33];
-          fm.field_K = new jd[16][32];
+          ArrayWidgetGroup.field_K = new jd[16][32];
           cn.field_a = new jd[16][32];
           for (var3_int = 0; var3_int <= 16; var3_int++) {
             var4_int = var3_int * 2304 / 16;
@@ -64,7 +64,7 @@ final class PlasmaTableScene extends TableScene {
           }
           for (var3_intLifetime1 = 0; var3_intLifetime1 < 16; var3_intLifetime1++) {
             for (var4_intLifetime1 = 0; var4_intLifetime1 < 32; var4_intLifetime1++) {
-              fm.field_K[var3_intLifetime1][var4_intLifetime1] = new jd();
+              ArrayWidgetGroup.field_K[var3_intLifetime1][var4_intLifetime1] = new jd();
               cn.field_a[var3_intLifetime1][var4_intLifetime1] = new jd();
             }
           }
@@ -103,7 +103,7 @@ final class PlasmaTableScene extends TableScene {
         super.a(param0, param1, (byte) -104, param3);
         var6 = param0;
         if (var6 == 5) {
-          var6 = ga.a(4, true, ea.field_r);
+          var6 = ga.nextRandomInt(4, true, ea.field_r);
           if (0 == var6) {
             kp.a(100, this.field_hb, param3, param1);
           } else {
@@ -210,7 +210,7 @@ final class PlasmaTableScene extends TableScene {
         param0[2] = param0[2] >> 8;
         var1 = 65536 / SoftwareRasterizer.width;
         ClassicBallSkin.field_l = ClassicBallSkin.field_l & 127;
-        me.field_x = -64 + ClassicBallSkin.field_l;
+        EmailAvailabilityValidator.field_x = -64 + ClassicBallSkin.field_l;
         gn.field_b = 0 + ClassicBallSkin.field_l;
         stackIn_2_0 = v.field_i;
         if (ClassicBallSkin.field_l >= 16) {
@@ -218,17 +218,17 @@ final class PlasmaTableScene extends TableScene {
         } else {
           stackIn_3_1 = (16 - ClassicBallSkin.field_l) * (v.field_i.length - 1) >> 4;
         }
-        ba.field_tb = stackIn_2_0[stackIn_3_1];
+        AccountContentDialog.field_tb = stackIn_2_0[stackIn_3_1];
         IterableNodeHashTable.field_h = 64 + ClassicBallSkin.field_l;
         rb.field_g = 128 + ClassicBallSkin.field_l;
         cl.field_g = v.field_i[64 + (ClassicBallSkin.field_l >> 1)];
-        eq.field_Y = 192 + ClassicBallSkin.field_l;
+        DateInputWidget.field_Y = 192 + ClassicBallSkin.field_l;
         gn.field_d = 256 + ClassicBallSkin.field_l;
         pn.field_s = v.field_i[128 + (ClassicBallSkin.field_l >> 1)];
-        mp.field_O = 320 + ClassicBallSkin.field_l;
+        UsernameSuggestionsPanel.field_O = 320 + ClassicBallSkin.field_l;
         ll.field_c = 384 + ClassicBallSkin.field_l;
         nm.field_f = v.field_i[192 + (ClassicBallSkin.field_l >> 1)];
-        jp.field_V = ll.field_c * ll.field_c;
+        DisplayNamePanel.field_V = ll.field_c * ll.field_c;
         var2 = SoftwareRasterizer.clipTop;
         var3 = 256 - var16[2];
         var4 = var16[8] * var3;
@@ -319,7 +319,7 @@ final class PlasmaTableScene extends TableScene {
         super.d(param0);
         v.field_i = null;
         t.field_a = (int[][][]) null;
-        fm.field_K = (jd[][]) null;
+        ArrayWidgetGroup.field_K = (jd[][]) null;
         ro.field_v = (int[][][]) null;
         IntrusiveNode.field_b = (bl[][][]) null;
         cn.field_a = (jd[][]) null;
@@ -340,15 +340,15 @@ final class PlasmaTableScene extends TableScene {
             var10 >= -ll.field_c) {
             var12 = var11 * var11 + var10 * var10;
             if (var12 >= 0 &&
-              var12 <= jp.field_V) {
-              param1 = ke.a(false, var12);
-              if (param1 > me.field_x &&
+              var12 <= DisplayNamePanel.field_V) {
+              param1 = LoginTextValue.a(false, var12);
+              if (param1 > EmailAvailabilityValidator.field_x &&
                 param1 < gn.field_b) {
-                param1 = (param1 - me.field_x - 32) * 255 >> 5;
+                param1 = (param1 - EmailAvailabilityValidator.field_x - 32) * 255 >> 5;
                 if (param1 < 0) {
                   param1 = -param1;
                 }
-                param0 = ba.field_tb;
+                param0 = AccountContentDialog.field_tb;
                 param1 = 255 - param1 >> 1;
                 param2 = (param0 & 16711935) * param1;
                 param0 = (param2 & -16711936) + (param0 * param1 - param2 & 16711680) >>> 8;
@@ -374,9 +374,9 @@ final class PlasmaTableScene extends TableScene {
                   param2 = (param0 & 16777472) + (param3 - param0 & 65536);
                   SoftwareRasterizer.pixels[param8] = param3 - param2 | param2 - (param2 >>> 8);
                 } else {
-                  if (param1 > eq.field_Y &&
+                  if (param1 > DateInputWidget.field_Y &&
                     param1 < gn.field_d) {
-                    param1 = (param1 - eq.field_Y - 32) * 255 >> 5;
+                    param1 = (param1 - DateInputWidget.field_Y - 32) * 255 >> 5;
                     if (param1 < 0) {
                       param1 = -param1;
                     }
@@ -390,9 +390,9 @@ final class PlasmaTableScene extends TableScene {
                     param2 = (param0 & 16777472) + (param3 - param0 & 65536);
                     SoftwareRasterizer.pixels[param8] = param3 - param2 | param2 - (param2 >>> 8);
                   } else {
-                    if (param1 > mp.field_O &&
+                    if (param1 > UsernameSuggestionsPanel.field_O &&
                       param1 < ll.field_c) {
-                      param1 = (param1 - mp.field_O - 32) * 255 >> 5;
+                      param1 = (param1 - UsernameSuggestionsPanel.field_O - 32) * 255 >> 5;
                       if (param1 < 0) {
                         param1 = -param1;
                       }
@@ -496,20 +496,20 @@ final class PlasmaTableScene extends TableScene {
               } else {
                 var5_int = 0;
               }
-              dupTemp$0 = fm.field_K[var5_int][var4_int];
-              dupTemp$0.field_g = dupTemp$0.field_g + (1024 + ga.a(256, true, ea.field_r));
+              dupTemp$0 = ArrayWidgetGroup.field_K[var5_int][var4_int];
+              dupTemp$0.field_g = dupTemp$0.field_g + (1024 + ga.nextRandomInt(256, true, ea.field_r));
             }
           }
-          var3 = fm.field_K[0];
+          var3 = ArrayWidgetGroup.field_K[0];
           var4 = var3;
           var5 = var4;
           var6_int = 0;
           if (param1 != -122) {
             return;
           }
-          while (fm.field_K.length > var6_int) {
-            if (var6_int + 1 < fm.field_K.length) {
-              var5 = fm.field_K[1 + var6_int];
+          while (ArrayWidgetGroup.field_K.length > var6_int) {
+            if (var6_int + 1 < ArrayWidgetGroup.field_K.length) {
+              var5 = ArrayWidgetGroup.field_K[1 + var6_int];
             }
             var7 = var3[0];
             var8 = var7;
@@ -545,8 +545,8 @@ final class PlasmaTableScene extends TableScene {
             var4 = var5;
             var6_int++;
           }
-          var6 = fm.field_K;
-          fm.field_K = cn.field_a;
+          var6 = ArrayWidgetGroup.field_K;
+          ArrayWidgetGroup.field_K = cn.field_a;
           cn.field_a = var6;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -652,7 +652,7 @@ final class PlasmaTableScene extends TableScene {
           }
           if (param2.k(-38)) {
             if (id.field_c.field_g) {
-              param2.field_I.a(id.field_c.field_l, param2.field_G.field_k, (byte) 47, param2.field_G.field_h, param2.field_G.field_e, param2.field_G.field_d);
+              param2.field_I.a(id.field_c.field_l, param2.field_G.polarAngle, (byte) 47, param2.field_G.azimuth, param2.field_G.field_e, param2.field_G.field_d);
               id.field_c.field_g = false;
             }
             var4_int = param2.field_f;
@@ -677,7 +677,7 @@ final class PlasmaTableScene extends TableScene {
               param2.D(-125);
               return;
             }
-            if (!hk.a(113, this.field_R[1], this.field_R[0], this.field_X[1], this.field_L[1], this.field_L[0], this.field_X[0])) {
+            if (!NanoTickClock.a(113, this.field_R[1], this.field_R[0], this.field_X[1], this.field_L[1], this.field_L[0], this.field_X[0])) {
               this.field_S = ic.a(this.field_X, 0, this.field_R, this.field_M, this.field_L, 4);
               var10 = 0;
               var5_intLifetime1 = var10;
@@ -748,7 +748,7 @@ final class PlasmaTableScene extends TableScene {
           this.field_i = cg.a(param1, "", "pool_plasma_win_jingle");
           this.field_n = cg.a(param1, "", "pool_plasma_lose_jingle");
           if (param0 != 1) {
-            field_gb = (hr) null;
+            field_gb = (ViewportController) null;
           }
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "fk.Q(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -796,14 +796,14 @@ final class PlasmaTableScene extends TableScene {
                 } else {
                   var7_ref_bl.field_E = var7_ref_bl.field_E + 2;
                   if (var7_ref_bl.field_E >= 256) {
-                    if (0 == ga.a(10, true, ea.field_r)) {
+                    if (0 == ga.nextRandomInt(10, true, ea.field_r)) {
                       var7_ref_bl.field_y = var7_ref_bl.field_y + 1;
                     }
                     var7_ref_bl.field_c = false;
                   }
                 }
               } else {
-                if (ga.a(2500, true, ea.field_r) == 0) {
+                if (ga.nextRandomInt(2500, true, ea.field_r) == 0) {
                   var7_ref_bl.field_E = 1;
                   var7_ref_bl.field_c = true;
                 } else {
@@ -842,20 +842,20 @@ final class PlasmaTableScene extends TableScene {
               if (128 < var12.field_E) {
                 boolean decompiledFrameRemainder1 = true;
                 if (var11.field_E == 0) {
-                  if (ga.a(250, true, ea.field_r) == 0) {
+                  if (ga.nextRandomInt(250, true, ea.field_r) == 0) {
                     var11.field_E = var11.field_E + 1;
                   }
                   if (var13.field_E != 0) {
                     if (((var9.field_E == 0)) &&
-                      ((ga.a(250, true, ea.field_r) == 0))) {
+                      ((ga.nextRandomInt(250, true, ea.field_r) == 0))) {
                       var9.field_E = var9.field_E + 1;
                     }
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    if (ga.a(250, true, ea.field_r) != 0) {
+                    if (ga.nextRandomInt(250, true, ea.field_r) != 0) {
                       if (((var9.field_E == 0)) &&
-                        ((ga.a(250, true, ea.field_r) == 0))) {
+                        ((ga.nextRandomInt(250, true, ea.field_r) == 0))) {
                         var9.field_E = var9.field_E + 1;
                       }
                       decompiledFrameRemainder1 = false;
@@ -867,15 +867,15 @@ final class PlasmaTableScene extends TableScene {
                 } else {
                   if (var13.field_E != 0) {
                     if (((var9.field_E == 0)) &&
-                      ((ga.a(250, true, ea.field_r) == 0))) {
+                      ((ga.nextRandomInt(250, true, ea.field_r) == 0))) {
                       var9.field_E = var9.field_E + 1;
                     }
                     decompiledFrameRemainder1 = false;
                   }
                   else {
-                    if (ga.a(250, true, ea.field_r) != 0) {
+                    if (ga.nextRandomInt(250, true, ea.field_r) != 0) {
                       if (((var9.field_E == 0)) &&
-                        ((ga.a(250, true, ea.field_r) == 0))) {
+                        ((ga.nextRandomInt(250, true, ea.field_r) == 0))) {
                         var9.field_E = var9.field_E + 1;
                       }
                       decompiledFrameRemainder1 = false;
@@ -886,11 +886,11 @@ final class PlasmaTableScene extends TableScene {
                   }
                 }
                 if ((decompiledFrameRemainder1) && (var9.field_E == 0 &&
-                  ga.a(250, true, ea.field_r) == 0)) {
+                  ga.nextRandomInt(250, true, ea.field_r) == 0)) {
                   var9.field_E = var9.field_E + 1;
                 }
                 if (var15.field_E == 0 &&
-                  0 == ga.a(250, true, ea.field_r)) {
+                  0 == ga.nextRandomInt(250, true, ea.field_r)) {
                   var15.field_E = var15.field_E + 1;
                 }
               }
@@ -1019,7 +1019,7 @@ final class PlasmaTableScene extends TableScene {
             this.field_L[var6_int] = var17[11] * var9 + (var17[9] * var7 + var8 * var17[10]) >> 16;
           }
           if ((this.field_L[0] > 0 ||
-            this.field_L[1] > 0) && !hk.a(59, this.field_R[1], this.field_R[0], this.field_X[1], this.field_L[1], this.field_L[0], this.field_X[0])) {
+            this.field_L[1] > 0) && !NanoTickClock.a(59, this.field_R[1], this.field_R[0], this.field_X[1], this.field_L[1], this.field_L[0], this.field_X[0])) {
             this.field_S = ic.a(this.field_X, 0, this.field_R, this.field_M, this.field_L, 4);
             var12 = 0;
             var6_intLifetime1 = var12;
@@ -1057,7 +1057,7 @@ final class PlasmaTableScene extends TableScene {
             stackIn_28_2 = 122;
             stackIn_28_3 = true;
             stackIn_28_4 = var3;
-            if (param1.field_I.currentShot(20).field_q != 0) {
+            if (param1.field_I.currentShot(20).phase != 0) {
               stackIn_29_0 = this;
               stackIn_29_5 = false;
             } else {
@@ -1164,7 +1164,7 @@ final class PlasmaTableScene extends TableScene {
             var13 = var36[0];
             var14 = var38[0];
             var15 = var37[0];
-            var16 = fm.field_K[-1 + var3_intLifetime1];
+            var16 = ArrayWidgetGroup.field_K[-1 + var3_intLifetime1];
             for (var17 = 1; 32 >= var17; var17++) {
               var18 = var4[var17];
               var19 = var5[var17];
@@ -1281,7 +1281,7 @@ final class PlasmaTableScene extends TableScene {
 
     final void a(boolean param0) {
         if (null != this.field_bb) {
-          kb.a((byte) -110, this.field_bb);
+          TickClock.a((byte) -110, this.field_bb);
           this.field_bb = null;
         }
         if (param0) {

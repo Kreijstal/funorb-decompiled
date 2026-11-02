@@ -24,13 +24,13 @@ final class hh {
           field_f = null;
           return;
         }
-        hh.a((byte) -23, -113);
+        hh.rgbToPackedHsl((byte) -23, -113);
         errorJs5connectFull = null;
         unratedGame = null;
         field_f = null;
     }
 
-    final static short a(byte param0, int param1) {
+    final static short rgbToPackedHsl(byte param0, int param1) {
         float stackIn_7_0 = 0.0f;
         float stackIn_14_0 = 0.0f;
         float stackIn_34_0 = 0.0f;

@@ -25,7 +25,7 @@ final class aj extends vh {
         if (param0 != 89) {
           aj.f((byte) 30);
         }
-        sh.h(-1);
+        OpacityWidget.h(-1);
         return var4;
     }
 
@@ -62,7 +62,7 @@ final class aj extends vh {
           var10 = 5 + (5 + var9_int);
           var11 = 3 + (2 * ad.field_x + 3);
           var12 = de.a(var10, param2, param0, 0);
-          var13 = sh.a(var11, param1, -1, param3);
+          var13 = OpacityWidget.a(var11, param1, -1, param3);
           this.b(var13, 2147483647, var12, var10, var11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -337,12 +337,12 @@ final class aj extends vh {
           return -46;
         }
         if (param0) {
-          while (n.h(127)) {
+          while (LabeledChildWidget.h(127)) {
             if (85 == qi.field_a &&
               this.field_Nb.length() > 0) {
               TikiTableScene.a(' ', -1 + this.field_Nb.length(), -2790, this.field_Nb);
             }
-            if (he.a(ml.field_b, (CharSequence) ((Object) this.field_Nb), 15692) ||
+            if (he.canAppendNameCharacter(ml.field_b, (CharSequence) ((Object) this.field_Nb), 15692) ||
               (this.field_Nb.length() == 0 &&
               ml.field_b == 91 ||
               1 == this.field_Nb.length() &&
@@ -365,7 +365,7 @@ final class aj extends vh {
         }
         this.field_Qb.field_nb = this.field_Nb.toString();
         if (param0 &&
-          0 != ne.field_s &&
+          0 != MatchingTextValidator.field_s &&
           this.field_R == 0) {
           this.field_Lb = 1;
         }

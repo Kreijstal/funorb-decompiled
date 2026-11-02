@@ -66,8 +66,8 @@ final class uq {
         int var2 = Pool.field_O;
         kf var1Lifetime1;
         try {
-          ib.field_s.d();
-          kk.field_D.d();
+          MidiNoteMixer.field_s.d();
+          CacheEntry.field_D.d();
           if (param0 >= -79) {
             createAlertPasslength = (String) null;
           }
@@ -81,13 +81,13 @@ final class uq {
               }
               var1 = (kf) (oj.field_o.f((byte) -5));
             }
-            if (mp.field_R != null) {
-              var1Lifetime1 = (kf) (mp.field_R.c((byte) -84));
+            if (UsernameSuggestionsPanel.field_R != null) {
+              var1Lifetime1 = (kf) (UsernameSuggestionsPanel.field_R.c((byte) -84));
               while (var1Lifetime1 != null) {
                 if (!var1Lifetime1.field_m.b(-117)) {
                   var1Lifetime1.unlink((byte) -117);
                 }
-                var1Lifetime1 = (kf) (mp.field_R.f((byte) -5));
+                var1Lifetime1 = (kf) (UsernameSuggestionsPanel.field_R.f((byte) -5));
               }
             }
           }
@@ -115,9 +115,9 @@ final class uq {
             field_i = (PcmSample) null;
           }
           hj.field_c = param4;
-          nr.field_T = true;
+          AccountWelcomePanel.field_T = true;
           ie.field_e = param1;
-          uh.field_x = param0;
+          PasswordValidator.field_x = param0;
           tq.field_t = param2;
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "uq.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');

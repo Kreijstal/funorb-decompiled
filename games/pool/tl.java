@@ -16,10 +16,10 @@ final class tl extends ob {
         if (param0 != -34) {
           field_J = (nl) null;
         }
-        if (!hk.b(10)) {
+        if (!NanoTickClock.b(10)) {
           if (qi.field_a == 96) {
-            if (this.field_B.field_h > 0) {
-              if (this.field_B.field_h != 2) {
+            if (this.field_B.selectedIndex > 0) {
+              if (this.field_B.selectedIndex != 2) {
                 this.field_B.a(0, (byte) 1);
               }
             } else {
@@ -27,24 +27,24 @@ final class tl extends ob {
             }
           }
           if (qi.field_a == 97) {
-            if (this.field_B.field_h == 1) {
+            if (this.field_B.selectedIndex == 1) {
               this.field_B.a(0, (byte) 1);
             } else {
-              if (this.field_B.field_h != 2) {
+              if (this.field_B.selectedIndex != 2) {
                 this.field_B.a(1, (byte) 1);
               }
             }
           }
           if (qi.field_a == 99) {
-            if (0 <= this.field_B.field_h &&
-              1 >= this.field_B.field_h) {
+            if (0 <= this.field_B.selectedIndex &&
+              1 >= this.field_B.selectedIndex) {
               this.field_B.a(2, (byte) 1);
             } else {
               this.field_B.a(eo.field_Lb, (byte) 1);
             }
           }
           if (qi.field_a == 98) {
-            if (this.field_B.field_h == 2) {
+            if (this.field_B.selectedIndex == 2) {
               this.field_B.a(eo.field_Lb, (byte) 1);
             } else {
               this.field_B.a(2, (byte) 1);
@@ -102,7 +102,7 @@ final class tl extends ob {
         if (param0 != 69) {
           field_N = (vk) null;
         }
-        if (!hk.b(-114) &&
+        if (!NanoTickClock.b(-114) &&
           param1 < 2) {
           return 24;
         }
@@ -117,15 +117,15 @@ final class tl extends ob {
         RuntimeException decompiledCaughtException = null;
         try {
           var1_int = 0;
-          while (n.h(param0 + 119)) {
-            un.field_f.e(-15525);
-            if (!un.field_f.b((byte) 119)) {
+          while (LabeledChildWidget.h(param0 + 119)) {
+            un.field_f.navigateVertical(-15525);
+            if (!un.field_f.isPressActivated((byte) 119)) {
               continue;
             }
             var1_int = 1;
           }
-          un.field_f.a(un.a(-49, ua.field_o, lq.field_W), un.a(-49, gg.field_f, wn.field_i), -30);
-          if (un.field_f.b((byte) 99)) {
+          un.field_f.a(un.a(-49, UsernameAvailabilityValidator.field_o, DialogLayer.field_W), un.a(-49, DebouncedValidationProvider.field_f, wn.field_i), -30);
+          if (un.field_f.isPressActivated((byte) 99)) {
             var1_int = 1;
           }
           var2 = 0;
@@ -133,8 +133,8 @@ final class tl extends ob {
             tl.d(-51, true);
           }
           if (var1_int != 0 &&
-            un.field_f.field_h >= 0) {
-            var2 = ui.field_V[un.field_f.field_h];
+            un.field_f.selectedIndex >= 0) {
+            var2 = LoginForm.field_V[un.field_f.selectedIndex];
             if (var2 == 2) {
               ra.a((byte) -108);
             }
@@ -629,9 +629,9 @@ final class tl extends ob {
             }
             if (FreePlayRules.field_f[0][2].field_db) {
               if (TikiTableScene.e((byte) 85)) {
-                kk.field_B = rq.thisisrunescapeclan;
+                CacheEntry.field_B = rq.thisisrunescapeclan;
               } else {
-                kk.field_B = nr.a(new String[]{em.field_L.field_Ob}, -1, NetworkGameClient.thisisrunescapeclanNotowner);
+                CacheEntry.field_B = AccountWelcomePanel.substituteTemplateArguments(new String[]{em.field_L.field_Ob}, -1, NetworkGameClient.thisisrunescapeclanNotowner);
               }
             }
           }
@@ -759,7 +759,7 @@ final class tl extends ob {
                 }
                 var8 = stackIn_141_0;
                 if (var8 != null) {
-                  kk.field_B = var8;
+                  CacheEntry.field_B = var8;
                 }
               }
               stackIn_146_0 = var29;
@@ -786,13 +786,13 @@ final class tl extends ob {
                 var9 >= 0) {
                 if (op.field_a != null &&
                   op.field_a[var7] != null &&
-                  (~eq.field_S & op.field_a[var7][var9]) > 0) {
+                  (~DateInputWidget.field_S & op.field_a[var7][var9]) > 0) {
                   var14 = 1;
-                  var15 = s.a(op.field_a[var7][var9] & ~eq.field_S, (byte) 87);
+                  var15 = s.a(op.field_a[var7][var9] & ~DateInputWidget.field_S, (byte) 87);
                 }
                 if (Pocket.field_j != null &&
                   null != Pocket.field_j[var7] &&
-                  mp.field_V <= 0 &&
+                  UsernameSuggestionsPanel.field_V <= 0 &&
                   Pocket.field_j[var7][var9]) {
                   var10 = 1;
                 }
@@ -805,7 +805,7 @@ final class tl extends ob {
                   }
                   if (var16 != 0 &&
                     !DualLinkNode.field_s &&
-                    0 >= mp.field_V) {
+                    0 >= UsernameSuggestionsPanel.field_V) {
                     var10 = 1;
                   }
                 }
@@ -828,7 +828,7 @@ final class tl extends ob {
                   var16Lifetime2 = w.field_j[var7][var9];
                   if (var16Lifetime2 != 0 &&
                     !DualLinkNode.field_s &&
-                    mp.field_V <= 0) {
+                    UsernameSuggestionsPanel.field_V <= 0) {
                     var10 = 1;
                   }
                   if (var16Lifetime2 > 0 &&
@@ -837,7 +837,7 @@ final class tl extends ob {
                   }
                 }
               }
-              if (2 <= hq.field_i &&
+              if (2 <= TutorialController.field_i &&
                 vj.field_c[12]) {
                 var12 = 0;
                 var11 = 0;
@@ -872,8 +872,8 @@ final class tl extends ob {
                 for (var17_int = 0; var7 > var17_int; var17_int++) {
                   gf.field_b[var17_int] = false;
                 }
-                sh.a(0, var7, var9, false, param1, -1, -1, param3);
-                if (2 <= hq.field_i &&
+                OpacityWidget.a(0, var7, var9, false, param1, -1, -1, param3);
+                if (2 <= TutorialController.field_i &&
                   vj.field_c[12]) {
                   PoolUiText.field_b = true;
                 }
@@ -887,10 +887,10 @@ final class tl extends ob {
                 if (param3) {
                   if (var9 == -1) {
                     for (var18 = var6Lifetime4; var18 < -1 + var6Lifetime4 + var30.length; var18++) {
-                      ka.field_s[var18 / 8] = (byte)rb.b((int) ka.field_s[var18 / 8], ~(1 << rb.b(7, var18)));
+                      AgeValidator.field_s[var18 / 8] = (byte)rb.b((int) AgeValidator.field_s[var18 / 8], ~(1 << rb.b(7, var18)));
                     }
                   } else {
-                    ka.field_s[(var9 + var6Lifetime4) / 8] = (byte)cq.a((int) ka.field_s[(var9 + var6Lifetime4) / 8], 1 << rb.b(var9 + var6Lifetime4, 7));
+                    AgeValidator.field_s[(var9 + var6Lifetime4) / 8] = (byte)cq.a((int) AgeValidator.field_s[(var9 + var6Lifetime4) / 8], 1 << rb.b(var9 + var6Lifetime4, 7));
                   }
                 } else {
                   if (var16Lifetime1 == 0 &&
@@ -902,7 +902,7 @@ final class tl extends ob {
               }
               if (param3 &&
                 var16Lifetime1 != 0) {
-                ka.field_s[(var9 + var6Lifetime4) / 8] = (byte)rb.b((int) ka.field_s[(var9 + var6Lifetime4) / 8], ~(1 << rb.b(var9 + var6Lifetime4, 7)));
+                AgeValidator.field_s[(var9 + var6Lifetime4) / 8] = (byte)rb.b((int) AgeValidator.field_s[(var9 + var6Lifetime4) / 8], ~(1 << rb.b(var9 + var6Lifetime4, 7)));
               }
               if (var9 >= 0 &&
                 var17.field_db) {
@@ -915,11 +915,11 @@ final class tl extends ob {
                     var18_ref = null;
                   }
                 }
-                if (null == ir.field_p) {
+                if (null == BufferedFile.field_p) {
                   var19 = null;
                 } else {
-                  if (null != ir.field_p[var7]) {
-                    var19 = ir.field_p[var7][var9];
+                  if (null != BufferedFile.field_p[var7]) {
+                    var19 = BufferedFile.field_p[var7][var9];
                   } else {
                     var19 = null;
                   }
@@ -947,13 +947,13 @@ final class tl extends ob {
                     if (var11 != 0) {
                       var22_int = -og.field_I + w.field_j[var7][var9];
                       if (var22_int == 1) {
-                        var21 = kb.gameopt1moreratedgame;
+                        var21 = TickClock.gameopt1moreratedgame;
                       } else {
-                        var21 = nr.a(new String[]{Integer.toString(var22_int)}, -1, PotEvent.gameoptMoreratedgames);
+                        var21 = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(var22_int)}, -1, PotEvent.gameoptMoreratedgames);
                       }
                     }
                     if (var12 != 0) {
-                      var31 = nr.a(new String[]{Integer.toString(mg.field_d), Integer.toString(ci.field_d[var7][var9])}, -1, sm.gameoptNeedrating);
+                      var31 = AccountWelcomePanel.substituteTemplateArguments(new String[]{Integer.toString(mg.field_d), Integer.toString(ci.field_d[var7][var9])}, -1, sm.gameoptNeedrating);
                       var22 = var31;
                       var25 = var22;
                       var22 = var25;
@@ -969,10 +969,10 @@ final class tl extends ob {
                     if (var14 != 0) {
                       var22 = dk.gameoptNotunlocked;
                       if (0 < var15 &&
-                        null != fg.field_f &&
-                        var15 <= fg.field_f.length &&
-                        null != fg.field_f[var15 - 1]) {
-                        var22 = fg.field_f[-1 + var15][0];
+                        null != WeightedLruCache.field_f &&
+                        var15 <= WeightedLruCache.field_f.length &&
+                        null != WeightedLruCache.field_f[var15 - 1]) {
+                        var22 = WeightedLruCache.field_f[-1 + var15][0];
                       }
                       if (var21 != null) {
                         var21 = (String) (var21) + "<br>" + (String) (var22);
@@ -1015,7 +1015,7 @@ final class tl extends ob {
                   if (var23 != 0) {
                     var21 = SocketConnector.gameoptCannotbecombined2 + (String) (var22);
                   } else {
-                    var21 = nr.a(new String[]{(String) (var22)}, ~param2, ka.gameoptCannotbecombined1);
+                    var21 = AccountWelcomePanel.substituteTemplateArguments(new String[]{(String) (var22)}, ~param2, AgeValidator.gameoptCannotbecombined1);
                   }
                 }
                 if (var21 != null) {
@@ -1028,7 +1028,7 @@ final class tl extends ob {
                   }
                 }
                 if (var20 != null) {
-                  kk.field_B = (String) (var20);
+                  CacheEntry.field_B = (String) (var20);
                 }
               }
               if (!param3) {
@@ -1055,13 +1055,13 @@ final class tl extends ob {
                   while (-1 + (var30.length + var6Lifetime4) > var27) {
                     stackIn_320_0 = var17;
                     stackIn_320_1 = var17.field_Ib;
-                    stackIn_321_2 = (0 == (ka.field_s[var27 / 8] & 1 << (var27 & 7)));
+                    stackIn_321_2 = (0 == (AgeValidator.field_s[var27 / 8] & 1 << (var27 & 7)));
                     stackIn_320_0.field_Ib = stackIn_320_1 & stackIn_321_2;
                     var27++;
                   }
                 } else {
                   stackIn_324_0 = var17;
-                  stackIn_325_1 = ((ka.field_s[(var6Lifetime4 + var9) / 8] & 1 << (7 & var9 + var6Lifetime4)) != 0);
+                  stackIn_325_1 = ((AgeValidator.field_s[(var6Lifetime4 + var9) / 8] & 1 << (7 & var9 + var6Lifetime4)) != 0);
                   stackIn_324_0.field_Ib = stackIn_325_1;
                 }
               }
@@ -1154,7 +1154,7 @@ final class tl extends ob {
             var6 = (String) null;
             this.a((String) null, 127, -77, -84);
           }
-          if (!hk.b(96) &&
+          if (!NanoTickClock.b(96) &&
             param3 < 2) {
             var7 = FreePlayRules.field_e.field_U[param1];
             var5 = var7;
@@ -1178,7 +1178,7 @@ final class tl extends ob {
     }
 
     final int a(boolean param0, int param1) {
-        if (!hk.b(-114)) {
+        if (!NanoTickClock.b(-114)) {
           return param1 < 2 ? param1 * 240 + 300 : 380;
         }
         if (param0) {
@@ -1202,7 +1202,7 @@ final class tl extends ob {
         if (var4 != 23) {
           super.b(param0 + 0, param1, param2);
         } else {
-          if (this.field_B.b((byte) 75)) {
+          if (this.field_B.isPressActivated((byte) 75)) {
             TranslatedUiText.a(pl.pleaselogin, this.field_E, (byte) 101);
           }
         }
@@ -1238,7 +1238,7 @@ final class tl extends ob {
         int var3Lifetime2Lifetime1;
         var10 = Pool.field_O;
         super.c(43);
-        if (hk.b(-128)) {
+        if (NanoTickClock.b(-128)) {
           this.f(320);
           return;
         }
@@ -1249,8 +1249,8 @@ final class tl extends ob {
         nj.a(vk.field_y, (byte) 65, 520, 60, 150, ModernTableScene.field_Z.baselineHeight + 176 + 16);
         var3 = 2;
         var3Lifetime1 = 15658734;
-        ModernTableScene.field_Z.drawCentered(eq.ratingRating, se.field_i[0], var2, var3Lifetime1, -1);
-        ModernTableScene.field_Z.drawCentered(jf.ratingPlayed, se.field_i[1], var2, var3Lifetime1, -1);
+        ModernTableScene.field_Z.drawCentered(DateInputWidget.ratingRating, se.field_i[0], var2, var3Lifetime1, -1);
+        ModernTableScene.field_Z.drawCentered(ImageProducerRasterBuffer.ratingPlayed, se.field_i[1], var2, var3Lifetime1, -1);
         ModernTableScene.field_Z.drawCentered(vj.ratingWon, se.field_i[2], var2, var3Lifetime1, -1);
         ModernTableScene.field_Z.drawCentered(ShotRecord.ratingLost, se.field_i[3], var2, var3Lifetime1, -1);
         ModernTableScene.field_Z.drawCentered(um.ratingDrawn, se.field_i[4], var2, var3Lifetime1, -1);
@@ -1367,7 +1367,7 @@ final class tl extends ob {
     }
 
     final int d(int param0, int param1) {
-        if (!hk.b(-117)) {
+        if (!NanoTickClock.b(-117)) {
           return 2 <= param1 ? 260 : param1 * 240 + 100;
         }
         if (param0 != 0) {
@@ -1387,7 +1387,7 @@ final class tl extends ob {
         if (param0 != 6) {
           this.c(120);
         }
-        if (!hk.b(-119)) {
+        if (!NanoTickClock.b(-119)) {
           if (param1 < 2) {
             return this.field_x;
           }
@@ -1400,7 +1400,7 @@ final class tl extends ob {
         fl.field_q.a((byte) -79, param1);
         jj var2 = sg.field_J;
         if (var2 != null) {
-          var2.a(fl.field_q.field_sb, (byte) 74, fl.field_q.field_ib);
+          var2.renderWidgetPassesAndTooltip(fl.field_q.field_sb, (byte) 74, fl.field_q.field_ib);
         }
         if (param0 >= -74) {
           field_I = (int[]) null;

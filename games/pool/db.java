@@ -273,7 +273,7 @@ final class db extends vh {
         if (this.field_Mb != 0) {
           return false;
         }
-        if (gg.field_f >= this.field_Rb.field_E + (this.field_Rb.field_ib + this.field_Rb.field_Db) + this.field_Rb.field_Cb) {
+        if (DebouncedValidationProvider.field_f >= this.field_Rb.field_E + (this.field_Rb.field_ib + this.field_Rb.field_Db) + this.field_Rb.field_Cb) {
           this.field_Mb = 3;
           return true;
         }
@@ -409,13 +409,13 @@ final class db extends vh {
           na.field_e = !param1 ? new vn(mm.muChatGame, cl.field_d) : new vn(je.muChatTips, v.field_j);
           so.field_k = new vh(0L, (vh) null);
           so.field_k.a(64, na.field_e.field_i);
-          so.field_k.a(-96, ok.field_ob);
+          so.field_k.a(-96, ContentTransitionDialog.field_ob);
           de.field_b = new vh(0L, tq.field_m);
           aa.field_b = new vh(0L, (vh) null);
           de.field_b.a(param0 ^ -27208, Pool.field_P);
           de.field_b.a(68, aa.field_b);
           aa.field_b.a(-96, c.field_e);
-          aa.field_b.a(90, ba.field_vb);
+          aa.field_b.a(90, AccountContentDialog.field_vb);
           PoolGameModel.a(param1, 0);
           return;
         }
@@ -423,13 +423,13 @@ final class db extends vh {
         na.field_e = !param1 ? new vn(mm.muChatGame, cl.field_d) : new vn(je.muChatTips, v.field_j);
         so.field_k = new vh(0L, (vh) null);
         so.field_k.a(64, na.field_e.field_i);
-        so.field_k.a(-96, ok.field_ob);
+        so.field_k.a(-96, ContentTransitionDialog.field_ob);
         de.field_b = new vh(0L, tq.field_m);
         aa.field_b = new vh(0L, (vh) null);
         de.field_b.a(param0 ^ -27208, Pool.field_P);
         de.field_b.a(68, aa.field_b);
         aa.field_b.a(-96, c.field_e);
-        aa.field_b.a(90, ba.field_vb);
+        aa.field_b.a(90, AccountContentDialog.field_vb);
         PoolGameModel.a(param1, 0);
     }
 
@@ -461,10 +461,10 @@ final class db extends vh {
             gp.a(param1, var4, -6725);
             var4 = (i) (ue.field_b.f((byte) -5));
           }
-          var2 = hb.field_j.c((byte) 87);
+          var2 = NodeHashTableIterator.field_j.c((byte) 87);
           while (var2 != null) {
             kp.a(param0 ^ 59, param1);
-            var2 = hb.field_j.f((byte) -5);
+            var2 = NodeHashTableIterator.field_j.f((byte) -5);
           }
           if (param0 == 58) {
             return;
@@ -511,7 +511,7 @@ final class db extends vh {
         if (this.field_Mb != 0) {
           return false;
         }
-        if (gg.field_f >= this.field_Rb.field_E + this.field_Rb.field_ib) {
+        if (DebouncedValidationProvider.field_f >= this.field_Rb.field_E + this.field_Rb.field_ib) {
           return false;
         }
         this.field_Mb = 3;
@@ -528,7 +528,7 @@ final class db extends vh {
             field_Vb = (nm) null;
           }
           param1.field_q = var3;
-          jf.a(param1, (byte) 38);
+          ImageProducerRasterBuffer.a(param1, (byte) 38);
           param1.a();
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "db.DA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

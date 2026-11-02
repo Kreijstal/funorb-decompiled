@@ -93,10 +93,10 @@ final class vn {
                     var18 = 0;
                     var14Lifetime1 = var18;
                     while (var18 < var10) {
-                      var13[var18] = fm.a(true, var11[var18]);
+                      var13[var18] = ArrayWidgetGroup.a(true, var11[var18]);
                       var18++;
                     }
-                    var19.field_p[var6] = param2.a((byte) 16, fm.a(true, var21), var13, var22);
+                    var19.field_p[var6] = param2.a((byte) 16, ArrayWidgetGroup.a(true, var21), var13, var22);
                     var19.field_w[var6] = var23;
                   }
                 } else {
@@ -110,7 +110,7 @@ final class vn {
                   }
                   var19.field_m[var6] = var7_int;
                   var19.field_r[var6] = var10;
-                  var19.field_n[var6] = param2.a(fm.a(true, var16), var17, (byte) -88);
+                  var19.field_n[var6] = param2.a(ArrayWidgetGroup.a(true, var16), var17, (byte) -88);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -172,10 +172,10 @@ final class vn {
         int var6 = 24;
         int var7 = 5;
         this.field_i.a(param2, param1, -82, param0, param3, var7, var6);
-        ba.field_sb.b(0, 2147483647, 0, ud.field_J.field_gb, ad.field_x);
-        PoolUiText.field_e.b(2 + ad.field_x, 2147483647, 0, -80 + (-2 - TranslatedUiText.field_n) + (ud.field_J.field_gb - 2), 18);
-        mb.field_f.b(ad.field_x + 2, 2147483647, -2 + ud.field_J.field_gb + (-TranslatedUiText.field_n - 80), 82 + TranslatedUiText.field_n, 18);
-        aj.field_Mb.a(0, ud.field_J.field_gb, 8, 2, TranslatedUiText.field_n, 20, -22 - ad.field_x + ud.field_J.field_Db, 20 + (2 + ad.field_x));
+        AccountContentDialog.field_sb.b(0, 2147483647, 0, SingleChildWidget.field_J.field_gb, ad.field_x);
+        PoolUiText.field_e.b(2 + ad.field_x, 2147483647, 0, -80 + (-2 - TranslatedUiText.field_n) + (SingleChildWidget.field_J.field_gb - 2), 18);
+        mb.field_f.b(ad.field_x + 2, 2147483647, -2 + SingleChildWidget.field_J.field_gb + (-TranslatedUiText.field_n - 80), 82 + TranslatedUiText.field_n, 18);
+        aj.field_Mb.a(0, SingleChildWidget.field_J.field_gb, 8, 2, TranslatedUiText.field_n, 20, -22 - ad.field_x + SingleChildWidget.field_J.field_Db, 20 + (2 + ad.field_x));
         cp.field_c.a(20, TranslatedUiText.field_n, 0, 2);
         int var8 = 111 % ((param4 + 58) / 45);
     }
@@ -185,7 +185,7 @@ final class vn {
         vh[] var4 = null;
         try {
           var3 = new String[]{param0, cl.muChatFriends, ll.muChatIgnore};
-          var4 = new vh[]{param1, ud.field_J, (vh) ((Object) cp.field_c)};
+          var4 = new vh[]{param1, SingleChildWidget.field_J, (vh) ((Object) cp.field_c)};
           this.field_i = new wd(0L, bb.field_c, var3, ea.field_u, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "vn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');

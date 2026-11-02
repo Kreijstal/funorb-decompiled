@@ -4,7 +4,7 @@
 final class nl {
     static String field_d;
     static String[] mustlogin4;
-    static ir field_c;
+    static BufferedFile field_c;
     static en field_b;
 
     final boolean b(int param0) {

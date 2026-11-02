@@ -10,9 +10,9 @@ final class sb {
     final static int a(float param0, boolean param1) {
         if (!param1) {
           sb.a((byte) -61);
-          return j.a(3, param0, (byte) 126);
+          return ButtonPainter.a(3, param0, (byte) 126);
         }
-        return j.a(3, param0, (byte) 126);
+        return ButtonPainter.a(3, param0, (byte) 126);
     }
 
     final static IndexedSprite a(int param0, di param1, int param2) {
@@ -26,7 +26,7 @@ final class sb {
             sb.a(0.49575117230415344f, true);
           }
           if (jl.a((byte) 81, param1, param2)) {
-            return fo.a((byte) 108);
+            return KeyHandler.a((byte) 108);
           }
           return null;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

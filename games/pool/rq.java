@@ -196,7 +196,7 @@ final class rq extends PcmStream {
             stackIn_2_0 = (kf) null;
             return stackIn_2_0;
           }
-          mp.field_R.b((byte) -108, var2);
+          UsernameSuggestionsPanel.field_R.b((byte) -108, var2);
           wm.field_Xb.b(param1);
           stackIn_4_0 = var2;
           return stackIn_4_0;
@@ -228,12 +228,12 @@ final class rq extends PcmStream {
         if (param0 != 0) {
           rq.c(-63);
         }
-        if (ok.field_pb.length > param1 &&
+        if (ContentTransitionDialog.field_pb.length > param1 &&
           0L != (1L << param1 & pd.field_i)) {
-          if (null == ba.field_ub) {
+          if (null == AccountContentDialog.field_ub) {
             stackIn_8_0 = am.field_e;
           } else {
-            stackIn_8_0 = ba.field_ub;
+            stackIn_8_0 = AccountContentDialog.field_ub;
           }
           var2 = stackIn_8_0;
           if (var2 != null) {
@@ -255,7 +255,7 @@ final class rq extends PcmStream {
             dupTemp$0 = ((StringBuilder) (Object) stackIn_15_0).append(stackIn_16_1).toString();
             var5 = dupTemp$0;
             var3Lifetime1 = dupTemp$0;
-            gj.a(true, 0, var5 + ": " + ok.field_pb[param1][0], ok.field_pb[param1][1]);
+            ProgressBarWidget.a(true, 0, var5 + ": " + ContentTransitionDialog.field_pb[param1][0], ContentTransitionDialog.field_pb[param1][1]);
           }
         }
     }
@@ -275,11 +275,11 @@ final class rq extends PcmStream {
     final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5) {
         wg.field_Nb[jh.field_c] = param1;
         NetworkGameClient.field_H[jh.field_c] = jh.field_c;
-        kb.field_g[jh.field_c] = param3;
+        TickClock.field_g[jh.field_c] = param3;
         if (q.field_a < param3) {
           jl.field_c = param3;
         }
-        if (!(gr.field_z <= param3)) {
+        if (!(ArchiveRequest.field_z <= param3)) {
           rn.field_d = param3;
         }
         ob.field_y[jh.field_c] = param4;
@@ -491,7 +491,7 @@ final class rq extends PcmStream {
             var2_long = rl.a((byte) -94);
             var4 = ld.field_c;
             if (u.field_b != 0.0) {
-              var4 = (int)((double)var4 + lc.field_P.nextGaussian() * u.field_b);
+              var4 = (int)((double)var4 + ValidationIconWidget.field_P.nextGaussian() * u.field_b);
               if (var4 < 0) {
                 var4 = 0;
               }

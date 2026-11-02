@@ -3,8 +3,8 @@
  */
 final class ShotRecord extends IntrusiveNode {
     byte field_H;
-    int field_P;
-    int field_M;
+    int cueBallX;
+    int breakSeed;
     int field_N;
     static String timerMinutesSecondsFractions;
     byte field_D;
@@ -12,39 +12,39 @@ final class ShotRecord extends IntrusiveNode {
     static String unableToDeleteFriend;
     static int field_y;
     int field_n;
-    PacketBuffer field_T;
+    PacketBuffer stateBefore;
     static String menu;
     static String rulePillar0;
-    int field_u;
-    short field_C;
+    int ballInHandMode;
+    short aimAngle;
     int field_I;
-    IntrusiveDeque field_m;
+    IntrusiveDeque pottedBalls;
     byte field_w;
     int[] field_U;
     static String ratingLost;
     static String menuTimeTrialWithGuides;
-    int field_v;
+    int shotNumber;
     boolean field_t;
-    int field_L;
+    int playerIndex;
     static int field_o;
     static oc[] field_S;
-    int field_Q;
-    int field_z;
-    int field_q;
+    int cueBallY;
+    int groupBefore;
+    int phase;
     static int field_J;
-    short field_A;
+    short elevation;
     boolean field_E;
-    short field_V;
+    short power;
     byte field_l;
     IntrusiveDeque field_R;
     long field_x;
-    int field_s;
+    int endResolution;
 
-    final boolean a(byte param0, int param1) {
+    final boolean hasPotted(byte param0, int param1) {
         aa var3;
         int var4;
         PotEvent var5;
-        var3 = new aa(this.field_m);
+        var3 = new aa(this.pottedBalls);
         var4 = 105 / ((param0 + 53) / 59);
         var5 = (PotEvent) (var3.b((byte) -92));
         while (var5 != null) {
@@ -64,7 +64,7 @@ final class ShotRecord extends IntrusiveNode {
         return w.a(false, 1);
     }
 
-    final String a(int param0, PoolGameModel param1) {
+    final String describe(int param0, PoolGameModel param1) {
         String stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -82,14 +82,14 @@ final class ShotRecord extends IntrusiveNode {
           if (param0 != 1) {
             ShotRecord.b(false);
           }
-          var5 = "Shot " + this.field_v + " " + am.a(8, this.field_q) + " player " + param1.field_h[this.field_L];
+          var5 = "Shot " + this.shotNumber + " " + am.a(8, this.phase) + " player " + param1.field_h[this.playerIndex];
           var3 = var5;
           var3Lifetime1 = var5;
           var3Lifetime2 = var5;
-          if (0 <= this.field_M) {
-            var3Lifetime2 = var5 + " break seed " + this.field_M;
+          if (0 <= this.breakSeed) {
+            var3Lifetime2 = var5 + " break seed " + this.breakSeed;
           }
-          var4 = this.field_u;
+          var4 = this.ballInHandMode;
           if (var4 != 2) {
             if (var4 != 3) {
               if (var4 == 1) {
@@ -101,9 +101,9 @@ final class ShotRecord extends IntrusiveNode {
           } else {
             var3Lifetime2 = var3Lifetime2 + " BiH anywhere";
           }
-          var6 = var3Lifetime2 + " before_group_on=" + this.field_z;
+          var6 = var3Lifetime2 + " before_group_on=" + this.groupBefore;
           var3Lifetime3 = var6;
-          if (null == this.field_T) {
+          if (null == this.stateBefore) {
             var3Lifetime3 = var6 + " before state null!";
           }
           stackIn_17_0 = var3Lifetime3;
@@ -126,7 +126,7 @@ final class ShotRecord extends IntrusiveNode {
         if (param0 > -66) {
           return false;
         }
-        if (0 == (ab.field_g & this.field_s)) {
+        if (0 == (ab.field_g & this.endResolution)) {
           return false;
         }
         if ((24 & this.field_l) == 0) {
@@ -207,7 +207,7 @@ final class ShotRecord extends IntrusiveNode {
         try {
           this.a(param1.readUnsignedByte(-105), true);
           if (!this.d(117)) {
-            this.field_q = 3;
+            this.phase = 3;
           }
           if (param0 <= 13) {
             discarded$1 = this.a(30, -70);
@@ -458,7 +458,7 @@ final class ShotRecord extends IntrusiveNode {
         IsaacCipher.field_b = cf.a(var2 * var5, false, var2 * var4);
     }
 
-    final byte c(byte param0, PacketBuffer param1) {
+    final byte readMove(byte param0, PacketBuffer param1) {
         int stackIn_11_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_17_0 = 0;
@@ -475,15 +475,15 @@ final class ShotRecord extends IntrusiveNode {
         int var8 = 0;
         try {
           if (param0 != -28) {
-            this.field_T = (PacketBuffer) null;
+            this.stateBefore = (PacketBuffer) null;
           }
           var3_int = param1.readUnsignedByte(-78) & 255;
-          if ((this.field_v & 255) != var3_int) {
+          if ((this.shotNumber & 255) != var3_int) {
             param1.position = param1.position + 6;
-            if (var3_int >= this.field_v - 1) {
+            if (var3_int >= this.shotNumber - 1) {
               return (byte) 1;
             }
-            System.out.println("Read the wrong move packet. Wanted " + this.field_v + ", but got " + var3_int);
+            System.out.println("Read the wrong move packet. Wanted " + this.shotNumber + ", but got " + var3_int);
             stackIn_17_0 = 1;
             return (byte) stackIn_17_0;
           }
@@ -492,18 +492,18 @@ final class ShotRecord extends IntrusiveNode {
           var6 = param1.readShort((byte) -103);
           var7 = param1.readByte((byte) 105);
           var8 = param1.readByte((byte) 105);
-          if (this.field_q == 0) {
+          if (this.phase == 0) {
             this.field_D = (byte)var7;
             this.field_H = (byte)var8;
-            this.field_C = (short)var4;
-            this.field_V = (short)var6;
-            this.field_A = (short)var5;
+            this.aimAngle = (short)var4;
+            this.power = (short)var6;
+            this.elevation = (short)var5;
             stackIn_13_0 = 0;
             return (byte) stackIn_13_0;
           }
-          if (this.field_C == var4 &&
-            var5 == this.field_A &&
-            var6 == this.field_V &&
+          if (this.aimAngle == var4 &&
+            var5 == this.elevation &&
+            var6 == this.power &&
             this.field_D == var7 &&
             var8 == this.field_H) {
             stackIn_11_0 = 0;
@@ -525,18 +525,18 @@ final class ShotRecord extends IntrusiveNode {
         }
     }
 
-    final void b(PacketBuffer param0, byte param1) {
+    final void writeEndResolution(PacketBuffer param0, byte param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (this.field_q != 2 &&
-            3 != this.field_q) {
+          if (this.phase != 2 &&
+            3 != this.phase) {
             throw new IllegalStateException("Can't write an end resolution until the shot is finished");
           }
-          param0.b(this.field_s, 66);
+          param0.b(this.endResolution, 66);
           if (param1 >= -65) {
             ShotRecord.a(false, 'ﾨ');
           }
@@ -594,7 +594,7 @@ final class ShotRecord extends IntrusiveNode {
         return var2;
     }
 
-    final void a(PoolGameModel param0, PacketBuffer param1, int param2) {
+    final void writeCueBallPlacement(PoolGameModel param0, PacketBuffer param1, int param2) {
         PoolGameModel var6 = null;
         Ball var5 = null;
         PacketBuffer var4_ref = null;
@@ -602,14 +602,14 @@ final class ShotRecord extends IntrusiveNode {
           var6 = param0;
           PoolGameModel var4 = var6;
           var5 = var6.balls[0];
-          this.field_Q = var5.positionY;
-          this.field_P = var5.positionX;
+          this.cueBallY = var5.positionY;
+          this.cueBallX = var5.positionX;
           if (param2 != -7478) {
             this.field_t = false;
           }
           var4_ref = param1;
-          var4_ref.a(true, this.field_P);
-          var4_ref.a(true, this.field_Q);
+          var4_ref.a(true, this.cueBallX);
+          var4_ref.a(true, this.cueBallY);
         } catch (RuntimeException runtimeException) {
           throw wm.a((Throwable) ((Object) runtimeException), "qe.K(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -617,17 +617,17 @@ final class ShotRecord extends IntrusiveNode {
 
     final String c(int param0) {
         if (param0 == 26859) {
-          return "firstcontactid: " + this.field_n + ", pottings: " + this.field_m.a(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.a(this.field_s, (byte) 10);
+          return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.a(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.a(this.endResolution, (byte) 10);
         }
         menu = (String) null;
-        return "firstcontactid: " + this.field_n + ", pottings: " + this.field_m.a(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.a(this.field_s, (byte) 10);
+        return "firstcontactid: " + this.field_n + ", pottings: " + this.pottedBalls.a(45) + (!this.field_t ? "" : ", fouled") + ", resolution: " + ab.a(this.endResolution, (byte) 10);
     }
 
     final boolean c(boolean param0) {
         if (!param0) {
           return true;
         }
-        if (0 == (ClientException.field_b & this.field_s)) {
+        if (0 == (ClientException.field_b & this.endResolution)) {
           return false;
         }
         if ((3 & this.field_l) == 0) {
@@ -643,16 +643,16 @@ final class ShotRecord extends IntrusiveNode {
         if (param0 != 0) {
           return (String) null;
         }
-        stackIn_6_0 = new StringBuilder().append("ang=").append(this.field_C).append(",").append(this.field_A).append("; pow=").append(this.field_V).append("; strk=").append(this.field_D).append(",").append(this.field_H);
-        if (-1 == this.field_P) {
+        stackIn_6_0 = new StringBuilder().append("ang=").append(this.aimAngle).append(",").append(this.elevation).append("; pow=").append(this.power).append("; strk=").append(this.field_D).append(",").append(this.field_H);
+        if (-1 == this.cueBallX) {
           stackIn_5_0 = stackIn_6_0;
           stackIn_5_1 = "";
           return ((StringBuilder) (Object) stackIn_5_0).append(stackIn_5_1).toString();
         }
-        if (this.field_Q == -1) {
+        if (this.cueBallY == -1) {
           return ((StringBuilder) (Object) stackIn_6_0).append("").toString();
         }
-        return ((StringBuilder) (Object) stackIn_6_0).append(" cueball@" + this.field_P + "," + this.field_Q).toString();
+        return ((StringBuilder) (Object) stackIn_6_0).append(" cueball@" + this.cueBallX + "," + this.cueBallY).toString();
     }
 
     final void a(int param0, boolean param1) {
@@ -667,9 +667,9 @@ final class ShotRecord extends IntrusiveNode {
         PacketBuffer var5Lifetime3;
         int var3Lifetime4;
         var4 = Pool.field_O;
-        if ((ClientException.field_b & this.field_s) != 0) {
+        if ((ClientException.field_b & this.endResolution) != 0) {
           if ((3 & param0) == 0) {
-            if ((ab.field_g & this.field_s) != 0 &&
+            if ((ab.field_g & this.endResolution) != 0 &&
               (param0 & 24) != 0) {
               var3 = this.field_l & 24;
               if (var3 == 0) {
@@ -681,7 +681,7 @@ final class ShotRecord extends IntrusiveNode {
                 }
               }
             }
-            if ((a.field_d & this.field_s) != 0 &&
+            if ((a.field_d & this.endResolution) != 0 &&
               (96 & param0) != 0) {
               var3Lifetime4 = this.field_l & 96;
               if (var3Lifetime4 != 0) {
@@ -708,7 +708,7 @@ final class ShotRecord extends IntrusiveNode {
             if (var3Lifetime2 != param0) {
               throw new IllegalStateException("Already made another group choice!");
             }
-            if ((ab.field_g & this.field_s) != 0 &&
+            if ((ab.field_g & this.endResolution) != 0 &&
               (param0 & 24) != 0) {
               var3Lifetime2 = this.field_l & 24;
               if (var3Lifetime2 == 0) {
@@ -720,7 +720,7 @@ final class ShotRecord extends IntrusiveNode {
                 }
               }
             }
-            if ((a.field_d & this.field_s) != 0 &&
+            if ((a.field_d & this.endResolution) != 0 &&
               (96 & param0) != 0) {
               var3Lifetime2 = this.field_l & 96;
               if (var3Lifetime2 != 0) {
@@ -746,8 +746,8 @@ final class ShotRecord extends IntrusiveNode {
           var3Lifetime3 = param0;
           this.field_l = (byte)(this.field_l | param0);
         }
-        if ((ab.field_g & this.field_s) == 0) {
-          if ((a.field_d & this.field_s) != 0 &&
+        if ((ab.field_g & this.endResolution) == 0) {
+          if ((a.field_d & this.endResolution) != 0 &&
             (96 & param0) != 0) {
             var3Lifetime1 = this.field_l & 96;
             if (var3Lifetime1 == 0) {
@@ -761,7 +761,7 @@ final class ShotRecord extends IntrusiveNode {
           }
         } else {
           if ((param0 & 24) == 0) {
-            if ((a.field_d & this.field_s) != 0 &&
+            if ((a.field_d & this.endResolution) != 0 &&
               (96 & param0) != 0) {
               var3Lifetime1 = this.field_l & 96;
               if (var3Lifetime1 == 0) {
@@ -778,7 +778,7 @@ final class ShotRecord extends IntrusiveNode {
             if (var3Lifetime1 == 0) {
               var3Lifetime1 = param0;
               this.field_l = (byte)(this.field_l | param0);
-              if ((a.field_d & this.field_s) != 0 &&
+              if ((a.field_d & this.endResolution) != 0 &&
                 (96 & param0) != 0) {
                 var3Lifetime1 = this.field_l & 96;
                 if (var3Lifetime1 == 0) {
@@ -794,7 +794,7 @@ final class ShotRecord extends IntrusiveNode {
               if (param0 != var3Lifetime1) {
                 throw new IllegalStateException("Already made another play/pass choice!");
               }
-              if ((a.field_d & this.field_s) != 0 &&
+              if ((a.field_d & this.endResolution) != 0 &&
                 (96 & param0) != 0) {
                 var3Lifetime1 = this.field_l & 96;
                 if (var3Lifetime1 == 0) {
@@ -829,7 +829,7 @@ final class ShotRecord extends IntrusiveNode {
     }
 
     final boolean d(int param0) {
-        if (this.field_s == uk.field_a) {
+        if (this.endResolution == uk.field_a) {
           return false;
         }
         if (param0 < 105) {
@@ -847,7 +847,7 @@ final class ShotRecord extends IntrusiveNode {
         return true;
     }
 
-    final void a(byte param0, PacketBuffer param1) {
+    final void readEndShot(byte param0, PacketBuffer param1) {
         int var3_int = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -861,7 +861,7 @@ final class ShotRecord extends IntrusiveNode {
           }
           this.c(2, var3_int);
           if ((pd.field_i & 2097152L) != 0L) {
-            System.out.println("->S2C_END_SHOT: " + ab.a(this.field_s, (byte) 10));
+            System.out.println("->S2C_END_SHOT: " + ab.a(this.endResolution, (byte) 10));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -890,14 +890,14 @@ final class ShotRecord extends IntrusiveNode {
           if (param0 != 2) {
             return;
           }
-          if (uk.field_a == this.field_s) {
-            this.field_s = param1;
+          if (uk.field_a == this.endResolution) {
+            this.endResolution = param1;
             return;
           }
-          if (this.field_s == param1) {
+          if (this.endResolution == param1) {
             return;
           }
-          tc.a(new Throwable(), "New end resolution 0b" + Integer.toString(this.field_s, 2) + ": " + wd.b(param1, param0 ^ 87) + " does not match current one 0b" + Integer.toString(param1, 2) + ": " + wd.b(this.field_s, 77), -8555);
+          tc.a(new Throwable(), "New end resolution 0b" + Integer.toString(this.endResolution, 2) + ": " + wd.b(param1, param0 ^ 87) + " does not match current one 0b" + Integer.toString(param1, 2) + ": " + wd.b(this.endResolution, 77), -8555);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -908,8 +908,8 @@ final class ShotRecord extends IntrusiveNode {
     private final boolean a(int param0, int param1) {
         boolean stackIn_27_0 = false;
         boolean stackIn_101_0 = false;
-        if ((this.field_s & ClientException.field_b) == 0) {
-          if ((ab.field_g & this.field_s) != 0 &&
+        if ((this.endResolution & ClientException.field_b) == 0) {
+          if ((ab.field_g & this.endResolution) != 0 &&
             0 != (24 & param1)) {
             if ((24 & this.field_l) == 0) {
               return true;
@@ -920,8 +920,8 @@ final class ShotRecord extends IntrusiveNode {
             return false;
           }
           if (param0 != -28872) {
-            this.field_A = (short) 5;
-            if ((this.field_s & a.field_d) == 0) {
+            this.elevation = (short) 5;
+            if ((this.endResolution & a.field_d) == 0) {
               return (param1 == 0);
             }
             if ((param1 & 96) == 0) {
@@ -942,7 +942,7 @@ final class ShotRecord extends IntrusiveNode {
             }
             return stackIn_101_0;
           }
-          if ((ab.field_g & this.field_s) != 0 &&
+          if ((ab.field_g & this.endResolution) != 0 &&
             0 != (24 & param1)) {
             if ((24 & this.field_l) == 0) {
               return true;
@@ -953,7 +953,7 @@ final class ShotRecord extends IntrusiveNode {
             return true;
           }
           if (param0 == -28872) {
-            if ((this.field_s & a.field_d) == 0) {
+            if ((this.endResolution & a.field_d) == 0) {
               return (param1 == 0);
             }
             if ((param1 & 96) == 0) {
@@ -967,9 +967,9 @@ final class ShotRecord extends IntrusiveNode {
             }
             return true;
           }
-          this.field_A = (short) 5;
+          this.elevation = (short) 5;
         }
-        if ((this.field_s & a.field_d) == 0) {
+        if ((this.endResolution & a.field_d) == 0) {
           return (param1 == 0);
         }
         if ((param1 & 96) == 0) {
@@ -987,7 +987,7 @@ final class ShotRecord extends IntrusiveNode {
     final boolean c(byte param0) {
         if (param0 <= 73) {
           this.field_H = (byte) 46;
-          if ((this.field_s & a.field_d) == 0) {
+          if ((this.endResolution & a.field_d) == 0) {
             return false;
           }
           if ((this.field_l & 96) == 0) {
@@ -995,7 +995,7 @@ final class ShotRecord extends IntrusiveNode {
           }
           return false;
         }
-        if ((this.field_s & a.field_d) == 0) {
+        if ((this.endResolution & a.field_d) == 0) {
           return false;
         }
         if ((this.field_l & 96) == 0) {
@@ -1006,44 +1006,44 @@ final class ShotRecord extends IntrusiveNode {
 
     ShotRecord() {
         this.field_N = -1;
-        this.field_P = -1;
+        this.cueBallX = -1;
         this.field_w = (byte) 0;
         this.field_t = false;
-        this.field_M = -1;
-        this.field_u = 0;
-        this.field_Q = -1;
-        this.field_q = 0;
+        this.breakSeed = -1;
+        this.ballInHandMode = 0;
+        this.cueBallY = -1;
+        this.phase = 0;
         this.field_E = false;
         this.field_I = -1;
         this.field_n = -1;
-        this.field_V = (short) -1;
-        this.field_m = new IntrusiveDeque();
+        this.power = (short) -1;
+        this.pottedBalls = new IntrusiveDeque();
         this.field_x = 0L;
         this.field_l = (byte) 0;
         this.field_R = null;
-        this.field_s = uk.field_a;
+        this.endResolution = uk.field_a;
     }
 
     ShotRecord(int param0, int param1) {
         this.field_N = -1;
-        this.field_P = -1;
+        this.cueBallX = -1;
         this.field_w = (byte) 0;
         this.field_t = false;
-        this.field_M = -1;
-        this.field_u = 0;
-        this.field_Q = -1;
-        this.field_q = 0;
+        this.breakSeed = -1;
+        this.ballInHandMode = 0;
+        this.cueBallY = -1;
+        this.phase = 0;
         this.field_E = false;
         this.field_I = -1;
         this.field_n = -1;
-        this.field_V = (short) -1;
-        this.field_m = new IntrusiveDeque();
+        this.power = (short) -1;
+        this.pottedBalls = new IntrusiveDeque();
         this.field_x = 0L;
         this.field_l = (byte) 0;
         this.field_R = null;
-        this.field_s = uk.field_a;
-        this.field_L = param1;
-        this.field_v = param0;
+        this.endResolution = uk.field_a;
+        this.playerIndex = param1;
+        this.shotNumber = param0;
     }
 
     static {

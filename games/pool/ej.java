@@ -65,7 +65,7 @@ final class ej implements Runnable {
                 var3.setSoTimeout(10000);
                 var4 = var3.getOutputStream();
                 var4.write(17);
-                var4.write(hi.a(-98, (CharSequence) ((Object) ("JAGGRAB " + this.field_i.getFile() + "\n\n"))));
+                var4.write(hi.encodeWindows1252(-98, (CharSequence) ((Object) ("JAGGRAB " + this.field_i.getFile() + "\n\n"))));
                 this.field_h = new DataInputStream(var3.getInputStream());
               }
               this.field_d.position = 0;
@@ -117,7 +117,7 @@ final class ej implements Runnable {
           hi.field_k = param8.field_N;
           vn.field_h = param8.field_v;
           kp.field_h = param1;
-          nr.field_P = param8.field_X;
+          AccountWelcomePanel.field_P = param8.field_X;
           ro.field_d = param8.field_q;
           sa.field_r = param8.field_Y;
           eh.field_w = param1.field_g;
@@ -133,7 +133,7 @@ final class ej implements Runnable {
           var10.field_J = null;
           var11 = param8;
           param1.field_Z = null;
-          param8.field_X = nr.field_P;
+          param8.field_X = AccountWelcomePanel.field_P;
           param8.field_g = qp.field_Yb;
           param8.field_B = TranslatedUiText.field_a;
           param8.field_Y = sa.field_r;
@@ -151,7 +151,7 @@ final class ej implements Runnable {
           param1.field_g = eh.field_w;
           param1.field_M = vk.field_bb;
           param1.field_B = de.field_a;
-          param1.field_K = eq.field_R;
+          param1.field_K = DateInputWidget.field_R;
           param1.field_X = TranslatedUiText.field_b;
           param1.field_l = ja.field_a;
           if (param9.field_Q != null) {
@@ -166,7 +166,7 @@ final class ej implements Runnable {
             var12 = 0;
             while (true) {
               if (param8.field_K > var12) {
-                param8.field_Q[var12] = param9.field_Q[hr.field_n[var12]];
+                param8.field_Q[var12] = param9.field_Q[ViewportController.field_n[var12]];
                 var12++;
                 if (var13 == 0) {
                   continue;
@@ -177,7 +177,7 @@ final class ej implements Runnable {
               break;
             }
             while (var12 < param1.field_K) {
-              param1.field_Q[var12] = param9.field_Q[gr.field_B[var12]];
+              param1.field_Q[var12] = param9.field_Q[ArchiveRequest.field_B[var12]];
               var12++;
               if (var13 != 0) {
                 decompiledFrameCompleted4 = false;
@@ -228,11 +228,11 @@ final class ej implements Runnable {
                 var12 = 0;
                 break;
               }
-              param8.field_P[var12] = param9.field_P[hr.field_n[var12]];
+              param8.field_P[var12] = param9.field_P[ViewportController.field_n[var12]];
               var12++;
             } while (var13 == 0);
             while (!(param1.field_K <= var12)) {
-              param1.field_P[var12] = param9.field_P[gr.field_B[var12]];
+              param1.field_P[var12] = param9.field_P[ArchiveRequest.field_B[var12]];
               var12++;
               if (var13 != 0) {
                 decompiledFrameCompleted3 = false;
@@ -262,11 +262,11 @@ final class ej implements Runnable {
                 var12 = 0;
                 break;
               }
-              param8.field_f[var12] = param9.field_f[hr.field_n[var12]];
+              param8.field_f[var12] = param9.field_f[ViewportController.field_n[var12]];
               var12++;
             } while (var13 == 0);
             while (!(var12 >= param1.field_K)) {
-              param1.field_f[var12] = param9.field_f[gr.field_B[var12]];
+              param1.field_f[var12] = param9.field_f[ArchiveRequest.field_B[var12]];
               var12++;
               if (var13 != 0) {
                 decompiledFrameCompleted2 = false;
@@ -287,7 +287,7 @@ final class ej implements Runnable {
             var12 = 0;
             while (true) {
               if (param8.field_K > var12) {
-                param8.field_k[var12] = param9.field_k[hr.field_n[var12]];
+                param8.field_k[var12] = param9.field_k[ViewportController.field_n[var12]];
                 var12++;
                 if (var13 == 0) {
                   continue;
@@ -298,7 +298,7 @@ final class ej implements Runnable {
               break;
             }
             while (param1.field_K > var12) {
-              param1.field_k[var12] = param9.field_k[gr.field_B[var12]];
+              param1.field_k[var12] = param9.field_k[ArchiveRequest.field_B[var12]];
               var12++;
               if (var13 != 0) {
                 decompiledFrameCompleted1 = false;
@@ -328,7 +328,7 @@ final class ej implements Runnable {
             var12 = 0;
             while (true) {
               if (var12 < param8.field_K) {
-                param8.field_n[var12] = param9.field_n[hr.field_n[var12]];
+                param8.field_n[var12] = param9.field_n[ViewportController.field_n[var12]];
                 var12++;
                 if (var13 == 0) {
                   continue;
@@ -339,7 +339,7 @@ final class ej implements Runnable {
               break;
             }
             while (param1.field_K > var12) {
-              param1.field_n[var12] = param9.field_n[gr.field_B[var12]];
+              param1.field_n[var12] = param9.field_n[ArchiveRequest.field_B[var12]];
               var12++;
               if (var13 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -379,14 +379,14 @@ final class ej implements Runnable {
               var12 = 0;
               break;
             }
-            param8.field_L[var12] = param9.field_L[hr.field_n[var12]];
+            param8.field_L[var12] = param9.field_L[ViewportController.field_n[var12]];
             var12++;
           } while (var13 == 0);
           while (true) {
             if (param1.field_K <= var12) {
               return;
             }
-            param1.field_L[var12] = param9.field_L[gr.field_B[var12]];
+            param1.field_L[var12] = param9.field_L[ArchiveRequest.field_B[var12]];
             var12++;
             if (var13 != 0) {
               return;
@@ -534,13 +534,13 @@ final class ej implements Runnable {
         int var14Lifetime1;
         try {
           var7 = 101 / ((-47 - param3) / 46);
-          var5_int = gi.a(3 * (-param2 + param1), 0);
+          var5_int = TextHotspotRegion.a(3 * (-param2 + param1), 0);
           var6 = param2 * 3;
           var8 = -10 + var5_int;
           ar.a((byte) 48);
           if (0 < param4.field_I &&
             param4.field_K != null) {
-            ka.h(0);
+            AgeValidator.h(0);
           }
           eh.field_x = 0;
           for (var9 = 0; param4.field_d > var9; var9++) {
@@ -549,20 +549,20 @@ final class ej implements Runnable {
             var11 = param4.field_r[var9];
             var12 = param4.field_u[var9];
             if (param0) {
-              var13 = ch.field_M[var10];
+              var13 = WidgetContainer.field_M[var10];
               var14 = IsaacCipher.field_h[var10];
-              var15 = ch.field_M[var11] - var13;
-              var16 = -var13 + ch.field_M[var12];
+              var15 = WidgetContainer.field_M[var11] - var13;
+              var16 = -var13 + WidgetContainer.field_M[var12];
               var17 = -var14 + IsaacCipher.field_h[var11];
               var18 = IsaacCipher.field_h[var12] - var14;
             }
             if (!param0 ||
               !(var15 * var18 - var16 * var17 >= 0)) {
-              var13Lifetime1 = fe.field_L[var10];
+              var13Lifetime1 = ButtonWidget.field_L[var10];
               if (-2147483648 != var13Lifetime1) {
-                var14Lifetime1 = fe.field_L[var11];
+                var14Lifetime1 = ButtonWidget.field_L[var11];
                 if (var14Lifetime1 != -2147483648) {
-                  var15 = fe.field_L[var12];
+                  var15 = ButtonWidget.field_L[var12];
                   if (var15 != -2147483648) {
                     var16 = -var6 + (var14Lifetime1 + var13Lifetime1 + var15);
                     if (0 > var8) {
@@ -570,8 +570,8 @@ final class ej implements Runnable {
                     } else {
                       stackIn_25_0 = var16 >> var8;
                     }
-                    var17 = -stackIn_25_0 + (lq.field_T.length - 1);
-                    var18 = lq.field_T[var17];
+                    var17 = -stackIn_25_0 + (DialogLayer.field_T.length - 1);
+                    var18 = DialogLayer.field_T[var17];
                     while (var18 >> 4 != 0) {
                       var17--;
                       if (var17 < 0) {
@@ -579,16 +579,16 @@ final class ej implements Runnable {
                         decompiledFrameCompleted0 = false;
                         break;
                       }
-                      var18 = lq.field_T[var17];
+                      var18 = DialogLayer.field_T[var17];
                     }
                     if (decompiledFrameCompleted0) {
                       var19 = var18 + (var17 << 4);
                       tl.field_I[var19] = var9;
-                      lq.field_T[var17] = 1 + var18;
+                      DialogLayer.field_T[var17] = 1 + var18;
                       if (param4.field_I > 0 &&
                         null != param4.field_K) {
                         dupTemp$0 = param4.field_K[var9];
-                        wa.field_ib[dupTemp$0] = wa.field_ib[dupTemp$0] + 1;
+                        ProgressDialog.field_ib[dupTemp$0] = ProgressDialog.field_ib[dupTemp$0] + 1;
                       }
                       eh.field_x = eh.field_x + 1;
                     }
@@ -600,9 +600,9 @@ final class ej implements Runnable {
           if (0 < param4.field_I &&
             param4.field_K != null) {
             var9Lifetime1 = 0;
-            for (var10Lifetime1 = 0; wa.field_ib.length > var10Lifetime1; var10Lifetime1++) {
-              var11Lifetime1 = wa.field_ib[var10Lifetime1];
-              wa.field_ib[var10Lifetime1] = var9Lifetime1;
+            for (var10Lifetime1 = 0; ProgressDialog.field_ib.length > var10Lifetime1; var10Lifetime1++) {
+              var11Lifetime1 = ProgressDialog.field_ib[var10Lifetime1];
+              ProgressDialog.field_ib[var10Lifetime1] = var9Lifetime1;
               var9Lifetime1 = var9Lifetime1 + var11Lifetime1;
             }
             return;

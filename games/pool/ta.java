@@ -15,21 +15,21 @@ final class ta {
     final static void a(byte param0, int param1, int param2, int param3) {
         BallSkin.field_f = param3;
         vn.field_c = param2;
-        ch.field_H = param1;
+        WidgetContainer.field_H = param1;
         int var4 = 5 / ((param0 + 30) / 63);
     }
 
     final static void a(int param0) {
         if (d.field_d != null) {
-          d.field_d.k(17);
+          d.field_d.dismissDialog(17);
         }
-        tg.field_a = new jp();
+        tg.field_a = new DisplayNamePanel();
         if (param0 == -984040272) {
-          tn.field_n.d(tg.field_a, param0 + 984040302);
+          tn.field_n.replaceContent(tg.field_a, param0 + 984040302);
           return;
         }
         field_c = 99;
-        tn.field_n.d(tg.field_a, param0 + 984040302);
+        tn.field_n.replaceContent(tg.field_a, param0 + 984040302);
     }
 
     public static void b(int param0) {
@@ -148,7 +148,7 @@ final class ta {
           if (param0 != 16908) {
             field_f = -3;
           }
-          sh.h(-1);
+          OpacityWidget.h(-1);
           stackIn_6_0 = var2;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

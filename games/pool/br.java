@@ -19,16 +19,16 @@ final class br extends ob {
           super.b(param0, param1, param2);
           return;
         }
-        if (!this.field_B.b((byte) 61)) {
+        if (!this.field_B.isPressActivated((byte) 61)) {
           super.b(param0, param1, param2);
           return;
         }
-        TranslatedUiText.a((String) null, oe.a(false, hp.field_c) ? 18 : 16, (byte) 121);
+        TranslatedUiText.a((String) null, FadingDialog.a(false, hp.field_c) ? 18 : 16, (byte) 121);
     }
 
     final static void f(int param0) {
-        lh.field_c = new nf();
-        tn.field_n.d(lh.field_c, 30);
+        lh.field_c = new AccountCreationForm();
+        tn.field_n.replaceContent(lh.field_c, 30);
         if (param0 != 35) {
           field_J = (vh) null;
         }
@@ -58,11 +58,11 @@ final class br extends ob {
     final void c(int param0) {
         String var4 = null;
         super.c(91);
-        int var2 = oe.a(false, hp.field_c) ? 1 : 0;
+        int var2 = FadingDialog.a(false, hp.field_c) ? 1 : 0;
         int var3 = ti.field_d != null ? 1 : 0;
         if (param0 > 36) {
-          var4 = oe.mustloginNotloggedin;
-          var4 = var4 + " " + o.a('#', "<br><br>", nr.a(new String[]{de.discard}, -1, n.a(var2 != 0, var3 != 0, false, (byte) 39)), 1);
+          var4 = FadingDialog.mustloginNotloggedin;
+          var4 = var4 + " " + o.a('#', "<br><br>", AccountWelcomePanel.substituteTemplateArguments(new String[]{de.discard}, -1, LabeledChildWidget.a(var2 != 0, var3 != 0, false, (byte) 39)), 1);
           this.a(sa.field_h, new int[]{sa.field_h.baselineHeight}, 140, -16097, var4, 280, 15658734);
           this.b(140, false);
           return;

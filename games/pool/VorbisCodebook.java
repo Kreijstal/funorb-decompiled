@@ -15,7 +15,7 @@ final class VorbisCodebook {
 
     private final static int lookup1ValueCount(int param0, int param1) {
         int var2 = 0;
-        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; me.a(param1, var2, -1) > param0; var2--) {
+        for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; EmailAvailabilityValidator.a(param1, var2, -1) > param0; var2--) {
         }
         return var2;
     }
@@ -163,7 +163,7 @@ final class VorbisCodebook {
           var2 = 0;
           var3_int = VorbisSample.readBits(5) + 1;
           while (var2 < this.entryCount) {
-            var4_int = VorbisSample.readBits(gi.a(this.entryCount - var2, 0));
+            var4_int = VorbisSample.readBits(TextHotspotRegion.a(this.entryCount - var2, 0));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;
