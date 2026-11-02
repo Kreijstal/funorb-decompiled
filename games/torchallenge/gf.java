@@ -5,11 +5,11 @@ final class gf extends ma {
     static int field_u;
     private dj field_r;
     static ef field_w;
-    static ka field_n;
+    static Sprite field_n;
     static lj field_p;
     static int[][] field_m;
     static sl field_q;
-    static mi field_o;
+    static PlatformTask field_o;
     static String[] field_s;
     static String field_v;
     static byte[][] field_t;
@@ -19,7 +19,7 @@ final class gf extends ma {
         try {
           this.field_r = param1;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "gf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "gf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -88,7 +88,7 @@ final class gf extends ma {
           } else {
             stackIn_35_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class gf extends ma {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -158,7 +158,7 @@ final class gf extends ma {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "gf.E(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "gf.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -216,7 +216,7 @@ final class gf extends ma {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 

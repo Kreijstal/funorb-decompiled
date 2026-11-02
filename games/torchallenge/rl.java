@@ -3,7 +3,7 @@
  */
 final class rl {
     private int field_g;
-    static ka[] field_h;
+    static Sprite[] field_h;
     static int field_c;
     int field_b;
     int field_j;
@@ -20,9 +20,9 @@ final class rl {
         return 0 != this.field_i ? true : false;
     }
 
-    final static ka[] a(int param0, int param1, lj param2, byte param3) {
+    final static Sprite[] a(int param0, int param1, lj param2, byte param3) {
         RuntimeException var4 = null;
-        ka[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -46,7 +46,7 @@ final class rl {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -66,20 +66,20 @@ final class rl {
         return true;
     }
 
-    final static ka b(boolean param0) {
+    final static Sprite b(boolean param0) {
         int var4_int = 0;
-        ka var4 = null;
+        Sprite var4 = null;
         int var5 = TorChallenge.field_F ? 1 : 0;
         int var1 = pg.field_r[0] * lg.field_e[0];
         byte[] var7 = h.field_a[0];
         int[] var3 = new int[var1];
-        ka var4Lifetime1;
+        Sprite var4Lifetime1;
         int var4_intLifetime1;
         if (param0) {
           for (var4_int = 0; var1 > var4_int; var4_int++) {
             var3[var4_int] = td.field_m[jh.a((int) var7[var4_int], 255)];
           }
-          var4 = new ka(ij.field_B, le.field_g, ug.field_e[0], dd.field_t[0], pg.field_r[0], lg.field_e[0], var3);
+          var4 = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[0], ImageProducerRasterBuffer.field_t[0], pg.field_r[0], lg.field_e[0], var3);
           p.a(0);
           return var4;
         }
@@ -87,7 +87,7 @@ final class rl {
         for (var4_intLifetime1 = 0; var1 > var4_intLifetime1; var4_intLifetime1++) {
           var3[var4_intLifetime1] = td.field_m[jh.a((int) var7[var4_intLifetime1], 255)];
         }
-        var4Lifetime1 = new ka(ij.field_B, le.field_g, ug.field_e[0], dd.field_t[0], pg.field_r[0], lg.field_e[0], var3);
+        var4Lifetime1 = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[0], ImageProducerRasterBuffer.field_t[0], pg.field_r[0], lg.field_e[0], var3);
         p.a(0);
         return var4Lifetime1;
     }
@@ -174,7 +174,7 @@ final class rl {
 
     public static void b(byte param0) {
         if (param0 != -82) {
-          field_h = (ka[]) null;
+          field_h = (Sprite[]) null;
           field_h = null;
           return;
         }

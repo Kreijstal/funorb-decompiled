@@ -8,7 +8,7 @@ final class pf {
     static eg field_c;
     static int[] field_g;
     static dk field_f;
-    static ka[] field_a;
+    static Sprite[] field_a;
 
     final static int a(int param0, int param1, int param2) {
         if (null == ub.field_e) {

@@ -4,15 +4,15 @@
 import java.io.*;
 
 final class fl extends vb {
-    private wb field_u;
+    private BufferedSocket field_u;
     static int[][] field_t;
     static int field_v;
-    static ka[] field_s;
+    static Sprite[] field_s;
 
     public static void e(int param0) {
         field_s = null;
         if (param0 != -25984) {
-          field_s = (ka[]) null;
+          field_s = (Sprite[]) null;
         }
         field_t = (int[][]) null;
     }
@@ -20,7 +20,7 @@ final class fl extends vb {
     private final void a(boolean param0, byte param1) {
         try {
           IOException iOException = null;
-          uf stackIn_7_0 = null;
+          PacketBuffer stackIn_7_0 = null;
           int stackIn_8_1 = 0;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
@@ -31,16 +31,16 @@ final class fl extends vb {
             return;
           }
           try {
-            this.field_d.field_q = 0;
+            this.field_d.position = 0;
             stackIn_7_0 = this.field_d;
             if (!param0) {
               stackIn_8_1 = 3;
             } else {
               stackIn_8_1 = 2;
             }
-            ((uf) (Object) stackIn_7_0).d(stackIn_8_1, (byte) 122);
+            ((PacketBuffer) (Object) stackIn_7_0).writeByte(stackIn_8_1, (byte) 122);
             this.field_d.a(0L, -1709073240);
-            this.field_u.a(this.field_d.field_m.length, 0, (byte) 98, this.field_d.field_m);
+            this.field_u.a(this.field_d.payload.length, 0, (byte) 98, this.field_d.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -66,7 +66,7 @@ final class fl extends vb {
           this.field_u.a((byte) 111);
         }
         if (param0 != -19315) {
-          this.field_u = (wb) null;
+          this.field_u = (BufferedSocket) null;
         }
     }
 
@@ -95,10 +95,10 @@ final class fl extends vb {
               }
               this.field_u = null;
             }
-            this.field_u = (wb) (param1);
+            this.field_u = (BufferedSocket) (param1);
             this.d((byte) 2);
             this.a(param0, (byte) -71);
-            this.field_o.field_q = 0;
+            this.field_o.position = 0;
             this.field_p = null;
             if (param2 != 115) {
               var7 = (pa) null;
@@ -122,11 +122,11 @@ final class fl extends vb {
             }
             if (0 != this.field_f) {
               try {
-                this.field_d.field_q = 0;
-                this.field_d.d(4, (byte) 122);
-                this.field_d.d((int) this.field_f, (byte) 122);
-                this.field_d.a(0, false);
-                this.field_u.a(this.field_d.field_m.length, 0, (byte) 112, this.field_d.field_m);
+                this.field_d.position = 0;
+                this.field_d.writeByte(4, (byte) 122);
+                this.field_d.writeByte((int) this.field_f, (byte) 122);
+                this.field_d.writeInt(0, false);
+                this.field_u.a(this.field_d.payload.length, 0, (byte) 112, this.field_d.payload);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -154,7 +154,7 @@ final class fl extends vb {
             } else {
               stackIn_28_2 = "{...}";
             }
-            throw oj.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(')').toString());
+            throw oj.wrapException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -171,11 +171,11 @@ final class fl extends vb {
           lg.field_b = param2;
           ja.field_b = param3;
           if (param0 >= -57) {
-            field_s = (ka[]) null;
+            field_s = (Sprite[]) null;
           }
           gh.a((byte) -116, nk.field_c, param1);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "fl.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "fl.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -206,14 +206,14 @@ final class fl extends vb {
             return;
           }
           if (param0 != 2) {
-            field_s = (ka[]) null;
+            field_s = (Sprite[]) null;
           }
           try {
-            this.field_d.field_q = 0;
-            this.field_d.d(6, (byte) 122);
-            this.field_d.a((byte) -124, 3);
-            this.field_d.a(0, (byte) 106);
-            this.field_u.a(this.field_d.field_m.length, 0, (byte) 121, this.field_d.field_m);
+            this.field_d.position = 0;
+            this.field_d.writeByte(6, (byte) 122);
+            this.field_d.writeMedium((byte) -124, 3);
+            this.field_d.writeShort(0, (byte) 106);
+            this.field_u.a(this.field_d.payload.length, 0, (byte) 121, this.field_d.payload);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
@@ -257,7 +257,7 @@ final class fl extends vb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -317,10 +317,10 @@ final class fl extends vb {
             this.field_u.b(127);
             var2 = (db) (this.field_c.a(25777));
             while (var2 != null) {
-              this.field_d.field_q = 0;
-              this.field_d.d(1, (byte) 122);
+              this.field_d.position = 0;
+              this.field_d.writeByte(1, (byte) 122);
               this.field_d.a(var2.field_l, -1709073240);
-              this.field_u.a(this.field_d.field_m.length, 0, (byte) 101, this.field_d.field_m);
+              this.field_u.a(this.field_d.payload.length, 0, (byte) 101, this.field_d.payload);
               this.field_l.a(var2, 3329);
               var2 = (db) (this.field_c.d(49));
             }
@@ -329,10 +329,10 @@ final class fl extends vb {
             }
             var2Lifetime1 = (db) (this.field_k.a(25777));
             while (var2Lifetime1 != null) {
-              this.field_d.field_q = 0;
-              this.field_d.d(0, (byte) 122);
+              this.field_d.position = 0;
+              this.field_d.writeByte(0, (byte) 122);
               this.field_d.a(var2Lifetime1.field_l, -1709073240);
-              this.field_u.a(this.field_d.field_m.length, 0, (byte) 76, this.field_d.field_m);
+              this.field_u.a(this.field_d.payload.length, 0, (byte) 76, this.field_d.payload);
               this.field_i.a(var2Lifetime1, 3329);
               var2Lifetime1 = (db) (this.field_k.d(118));
             }
@@ -354,24 +354,24 @@ final class fl extends vb {
                 }
               }
               if (var4 > 0) {
-                var5 = var4 - this.field_o.field_q;
+                var5 = var4 - this.field_o.position;
                 if (var5 > var3_int) {
                   var5 = var3_int;
                 }
-                this.field_u.a(-1, this.field_o.field_q, var5, this.field_o.field_m);
+                this.field_u.a(-1, this.field_o.position, var5, this.field_o.payload);
                 if (0 != this.field_f) {
                   for (var6 = 0; var6 < var5; var6++) {
-                    this.field_o.field_m[var6 + this.field_o.field_q] = (byte)TorChallenge.a((int) this.field_o.field_m[var6 + this.field_o.field_q], (int) this.field_f);
+                    this.field_o.payload[var6 + this.field_o.position] = (byte)TorChallenge.a((int) this.field_o.payload[var6 + this.field_o.position], (int) this.field_f);
                   }
                 }
-                this.field_o.field_q = this.field_o.field_q + var5;
-                if (this.field_o.field_q >= var4) {
+                this.field_o.position = this.field_o.position + var5;
+                if (this.field_o.position >= var4) {
                   if (null == this.field_p) {
-                    this.field_o.field_q = 0;
-                    var6 = this.field_o.j(-101);
-                    var7 = this.field_o.i(39);
-                    var8 = this.field_o.j(-111);
-                    var9 = this.field_o.i(64);
+                    this.field_o.position = 0;
+                    var6 = this.field_o.readUnsignedByte(-101);
+                    var7 = this.field_o.readInt(39);
+                    var8 = this.field_o.readUnsignedByte(-111);
+                    var9 = this.field_o.readInt(64);
                     var10 = var8 & 127;
                     stackIn_63_0 = ((var8 & 128) == 0) ? 0 : 1;
                     boolean decompiledFrameRemainder0 = true;
@@ -406,41 +406,41 @@ final class fl extends vb {
                     stackIn_80_0 = (0 == var10) ? 5 : 9;
                     var15 = stackIn_80_0;
                     this.field_p = var14_ref;
-                    this.field_p.field_A = new uf(var15 + var9 + this.field_p.field_F);
-                    this.field_p.field_A.d(var10, (byte) 122);
-                    this.field_p.field_A.a(var9, false);
+                    this.field_p.field_A = new PacketBuffer(var15 + var9 + this.field_p.field_F);
+                    this.field_p.field_A.writeByte(var10, (byte) 122);
+                    this.field_p.field_A.writeInt(var9, false);
                     this.field_p.field_C = 10;
-                    this.field_o.field_q = 0;
+                    this.field_o.position = 0;
                   } else {
                     if (this.field_p.field_C != 0) {
                       throw new IOException();
                     }
-                    if (this.field_o.field_m[0] == -1) {
+                    if (this.field_o.payload[0] == -1) {
                       this.field_p.field_C = 1;
-                      this.field_o.field_q = 0;
+                      this.field_o.position = 0;
                     } else {
                       this.field_p = null;
                     }
                   }
                 }
               } else {
-                var5 = -this.field_p.field_F + this.field_p.field_A.field_m.length;
+                var5 = -this.field_p.field_F + this.field_p.field_A.payload.length;
                 var6 = -this.field_p.field_C + 512;
-                if (var5 - this.field_p.field_A.field_q < var6) {
-                  var6 = -this.field_p.field_A.field_q + var5;
+                if (var5 - this.field_p.field_A.position < var6) {
+                  var6 = -this.field_p.field_A.position + var5;
                 }
                 if (var6 > var3_int) {
                   var6 = var3_int;
                 }
-                this.field_u.a(-1, this.field_p.field_A.field_q, var6, this.field_p.field_A.field_m);
+                this.field_u.a(-1, this.field_p.field_A.position, var6, this.field_p.field_A.payload);
                 if (this.field_f != 0) {
                   for (var7 = 0; var6 > var7; var7++) {
-                    this.field_p.field_A.field_m[var7 + this.field_p.field_A.field_q] = (byte)TorChallenge.a((int) this.field_p.field_A.field_m[var7 + this.field_p.field_A.field_q], (int) this.field_f);
+                    this.field_p.field_A.payload[var7 + this.field_p.field_A.position] = (byte)TorChallenge.a((int) this.field_p.field_A.payload[var7 + this.field_p.field_A.position], (int) this.field_f);
                   }
                 }
                 this.field_p.field_C = this.field_p.field_C + var6;
-                this.field_p.field_A.field_q = this.field_p.field_A.field_q + var6;
-                if (this.field_p.field_A.field_q == var5) {
+                this.field_p.field_A.position = this.field_p.field_A.position + var6;
+                if (this.field_p.field_A.position == var5) {
                   this.field_p.a(12695);
                   this.field_p.field_v = false;
                   this.field_p = null;
@@ -481,7 +481,7 @@ final class fl extends vb {
         if (param0 != 0) {
           return -81;
         }
-        return sd.field_a - qe.field_R;
+        return sd.field_a - LevelEntity.field_R;
     }
 
     static {

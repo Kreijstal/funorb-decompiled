@@ -4,7 +4,7 @@
 final class vl {
     static String field_c;
     static int field_b;
-    static uj field_a;
+    static PlatformTaskDispatcher field_a;
     static boolean[][][] field_d;
 
     final static void a(byte param0) {
@@ -12,10 +12,10 @@ final class vl {
           throw new IllegalStateException();
         }
         if (param0 != -88) {
-          field_a = (uj) null;
+          field_a = (PlatformTaskDispatcher) null;
         }
         fh.field_g = true;
-        wb.a(false, (byte) -80);
+        BufferedSocket.a(false, (byte) -80);
         gj.field_c = 0;
     }
 
@@ -70,7 +70,7 @@ final class vl {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(')').toString());
         }
     }
 

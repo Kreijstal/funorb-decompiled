@@ -12,7 +12,7 @@ class df extends ng {
     static boolean field_O;
     static String field_P;
 
-    void a(ee param0, int param1, byte param2, int param3) {
+    void a(UiComponent param0, int param1, byte param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -27,7 +27,7 @@ class df extends ng {
           super.a(param0, param1, (byte) -105, param3);
           this.field_S = null;
           if (this.field_w) {
-            var5_int = -this.field_m + kc.field_u - param1;
+            var5_int = -this.field_m + LocalizedStrings.field_u - param1;
             var6 = -this.field_i + (ph.field_d - param3);
             this.field_S = this.b(var6, var5_int, 59);
           }
@@ -42,7 +42,7 @@ class df extends ng {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ class df extends ng {
         if (param1 != 2) {
           this.d(false);
         }
-        this.a((byte) 122, param3, ((gd) ((Object) this.field_q)).b((ee) (this), (byte) -117), param2, param0);
+        this.a((byte) 122, param3, ((gd) ((Object) this.field_q)).b((UiComponent) (this), (byte) -117), param2, param0);
     }
 
     void a(int param0, int param1, boolean param2, int param3) {
@@ -78,8 +78,8 @@ class df extends ng {
         gd var10 = (gd) ((Object) this.field_q);
         ia var6 = this.field_S;
         if (var6 != null) {
-          var7 = var10.a(param1, (ee) (this), false);
-          var8 = var10.a((ee) (this), 3, param0);
+          var7 = var10.a(param1, (UiComponent) (this), false);
+          var8 = var10.a((UiComponent) (this), 3, param0);
           do {
             jc.a((byte) -128, -2 + (var7 + var6.field_r), var6.field_m + 2, var6.field_n + 2, -2 + var6.field_o + var8);
             var6 = var6.field_k;
@@ -97,7 +97,7 @@ class df extends ng {
           Throwable decompiledCaughtException = null;
           int var1_int = 0;
           IOException var1 = null;
-          uf var2 = null;
+          PacketBuffer var2 = null;
           if (gb.field_d.field_h >= 4) {
             if (gb.field_d.field_b == -1) {
               return 3;
@@ -109,7 +109,7 @@ class df extends ng {
           }
           try {
             if (nh.field_jb == 0) {
-              n.field_cb = rc.field_t.a(wb.field_d, mc.field_o, 431890200);
+              n.field_cb = rc.field_t.a(BufferedSocket.field_d, mc.field_o, 431890200);
               nh.field_jb = nh.field_jb + 1;
             }
             if (nh.field_jb == 1) {
@@ -122,12 +122,12 @@ class df extends ng {
               }
             }
             if (nh.field_jb == 2) {
-              bl.field_V = new wb((java.net.Socket) (n.field_cb.field_g), rc.field_t);
-              var2 = new uf(13);
-              hl.a(var2, 12, vk.field_j, vf.field_d, vb.field_r);
-              var2.d(15, (byte) 122);
-              var2.a(mg.field_e, false);
-              bl.field_V.a(13, 0, (byte) 120, var2.field_m);
+              bl.field_V = new BufferedSocket((java.net.Socket) (n.field_cb.field_g), rc.field_t);
+              var2 = new PacketBuffer(13);
+              hl.a(var2, 12, vk.field_j, MouseInputHandler.field_d, vb.field_r);
+              var2.writeByte(15, (byte) 122);
+              var2.writeInt(mg.field_e, false);
+              bl.field_V.a(13, 0, (byte) 120, var2.payload);
               nh.field_jb = nh.field_jb + 1;
               il.field_m = 30000L + ol.a(256);
             }
@@ -153,7 +153,7 @@ class df extends ng {
             if (nh.field_jb != 4) {
               return -1;
             }
-            gb.field_d.a(md.field_f, bl.field_V, (byte) 115);
+            gb.field_d.a(NodeHashTableIterator.field_f, bl.field_V, (byte) 115);
             bl.field_V = null;
             nh.field_jb = 0;
             n.field_cb = null;
@@ -243,7 +243,7 @@ class df extends ng {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -280,7 +280,7 @@ class df extends ng {
         this.d(false);
     }
 
-    boolean a(ee param0, int param1) {
+    boolean a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -301,7 +301,7 @@ class df extends ng {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -311,7 +311,7 @@ class df extends ng {
         try {
           this.field_q = param1;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "df.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -331,7 +331,7 @@ class df extends ng {
           if (param0 != -2184) {
             field_R = -55;
           }
-          var3 = ug.a(param2, param1, -107);
+          var3 = GameApplet.a(param2, param1, -107);
           if (var3 != null) {
             stackIn_5_0 = var3;
             return stackIn_5_0;
@@ -359,7 +359,7 @@ class df extends ng {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -389,7 +389,7 @@ class df extends ng {
         }
         var2 = 0;
         var3 = (gd) ((Object) this.field_q);
-        var4 = var3.a(-97, (ee) (this));
+        var4 = var3.a(-97, (UiComponent) (this));
         while (true) {
           var5 = this.field_v.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -472,7 +472,7 @@ class df extends ng {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -532,7 +532,7 @@ class df extends ng {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

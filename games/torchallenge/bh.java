@@ -53,7 +53,7 @@ final class bh extends ma {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ final class bh extends ma {
         field_m = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, ka[] param4, int param5, int param6, ka[] param7, int param8, int param9, int param10, int param11, int param12, int param13, eg param14, int param15, int param16, int param17, ka[] param18, int param19, eg param20) {
+    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5, int param6, Sprite[] param7, int param8, int param9, int param10, int param11, int param12, int param13, eg param14, int param15, int param16, int param17, Sprite[] param18, int param19, eg param20) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -82,7 +82,7 @@ final class bh extends ma {
         int var21_int = 0;
         RuntimeException var21 = null;
         try {
-          ee.a(param10, param19, new h(param18), param2, param3, param0, 0, param1, param13, param11, param12, param17, param14, param5, param20, param6, param9, new h(param4), param8, new h(param7), param15);
+          UiComponent.a(param10, param19, new h(param18), param2, param3, param0, 0, param1, param13, param11, param12, param17, param14, param5, param20, param6, param9, new h(param4), param8, new h(param7), param15);
           var21_int = -19 / ((-15 - param16) / 38);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -119,7 +119,7 @@ final class bh extends ma {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class bh extends ma {
           this.field_n = param2;
           this.field_s = param1;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "bh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -175,7 +175,7 @@ final class bh extends ma {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -213,7 +213,7 @@ final class bh extends ma {
             var6 = var1_int;
             var1_int = var1_int + fa.field_m[rf.field_ib][var10];
             var7 = var1_int;
-            if (var1_int <= nd.field_e) {
+            if (var1_int <= RandomAccessCacheFile.field_e) {
               continue;
             }
             wj.field_e = var10;
@@ -223,7 +223,7 @@ final class bh extends ma {
           var9 = -var6 + var7;
           var3Lifetime1 = qk.field_nb[rf.field_ib][wj.field_e + 1][0];
           var4Lifetime1 = qk.field_nb[rf.field_ib][wj.field_e][1];
-          var8 = nd.field_e - var6;
+          var8 = RandomAccessCacheFile.field_e - var6;
           var2Lifetime1 = qk.field_nb[rf.field_ib][wj.field_e][0];
           if (var9 != 0) {
             cg.field_e[1] = (var4Lifetime1 << 4) + ((var5Lifetime1 - var4Lifetime1) * var8 << 4) / var9;
@@ -236,7 +236,7 @@ final class bh extends ma {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "bh.B(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "bh.B(" + param0 + ')');
         }
     }
 
@@ -290,7 +290,7 @@ final class bh extends ma {
             stackIn_35_0 = ol.field_i;
             return stackIn_35_0;
           }
-          if (kc.a(var6, (byte) 59, var5)) {
+          if (LocalizedStrings.a(var6, (byte) 59, var5)) {
             stackIn_25_0 = wc.field_f;
             return stackIn_25_0;
           }
@@ -314,7 +314,7 @@ final class bh extends ma {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(',').append(param1).append(')').toString());
         }
     }
 

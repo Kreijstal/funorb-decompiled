@@ -10,9 +10,9 @@ final class p {
     static int[][][] field_e;
 
     final static void a(int param0) {
-        dd.field_t = null;
+        ImageProducerRasterBuffer.field_t = null;
         h.field_a = (byte[][]) null;
-        ug.field_e = null;
+        GameApplet.field_e = null;
         td.field_m = null;
         lg.field_e = null;
         pg.field_r = null;
@@ -58,12 +58,12 @@ final class p {
         }
         var12 = wi.field_a[var8];
         var13 = wi.field_a[var9];
-        gl.field_l[param3][param2][0][0] = 320 + var10 * (fj.a(1870096848, var12, 23592960) >> 16);
-        gl.field_l[param3][param2][0][1] = 320 + var11 * (fj.a(1870096848, var13, 23592960) >> 16);
-        gl.field_l[param3][param2][1][0] = (fj.a(1870096848, var12, 19398656) >> 16) * var10 + 320;
-        gl.field_l[param3][param2][1][1] = 320 + var11 * (fj.a(1870096848, var13, 19398656) >> 16);
-        gl.field_l[param3][param2][2][0] = (fj.a(1870096848, var12, 18874368) >> 16) * var10 + 320;
-        gl.field_l[param3][param2][2][1] = 320 + var11 * (fj.a(1870096848, var13, 18874368) >> 16);
+        SocketConnector.field_l[param3][param2][0][0] = 320 + var10 * (fj.a(1870096848, var12, 23592960) >> 16);
+        SocketConnector.field_l[param3][param2][0][1] = 320 + var11 * (fj.a(1870096848, var13, 23592960) >> 16);
+        SocketConnector.field_l[param3][param2][1][0] = (fj.a(1870096848, var12, 19398656) >> 16) * var10 + 320;
+        SocketConnector.field_l[param3][param2][1][1] = 320 + var11 * (fj.a(1870096848, var13, 19398656) >> 16);
+        SocketConnector.field_l[param3][param2][2][0] = (fj.a(1870096848, var12, 18874368) >> 16) * var10 + 320;
+        SocketConnector.field_l[param3][param2][2][1] = 320 + var11 * (fj.a(1870096848, var13, 18874368) >> 16);
         vb.field_a[param3][param2] = param4 + param1 / 32;
         if (param6 > -5) {
           return;
@@ -115,36 +115,36 @@ final class p {
             var4_ref_lc = (lc) (ba.field_a.c((byte) -5));
             if (var4_ref_lc != null &&
               var2_long > var4_ref_lc.field_l) {
-              var4_ref_lc.a(true);
+              var4_ref_lc.unlink(true);
               bb.field_i = var4_ref_lc.field_q.length;
-              id.field_b.field_q = 0;
+              id.field_b.position = 0;
               for (var5_int = 0; var5_int < bb.field_i; var5_int++) {
-                id.field_b.field_m[var5_int] = var4_ref_lc.field_q[var5_int];
+                id.field_b.payload[var5_int] = var4_ref_lc.field_q[var5_int];
               }
               ul.field_j = uc.field_X;
-              uc.field_X = md.field_i;
-              md.field_i = cb.field_g;
+              uc.field_X = NodeHashTableIterator.field_i;
+              NodeHashTableIterator.field_i = cb.field_g;
               cb.field_g = var4_ref_lc.field_i;
               return true;
             }
           }
           while (true) {
             if (jf.field_tb < 0) {
-              id.field_b.field_q = 0;
+              id.field_b.position = 0;
               if (!pe.a((byte) 119, 1)) {
                 return false;
               }
               jf.field_tb = id.field_b.o(11650);
-              id.field_b.field_q = 0;
+              id.field_b.position = 0;
               bb.field_i = param1[jf.field_tb];
             }
-            if (!md.a((byte) 124)) {
+            if (!NodeHashTableIterator.a((byte) 124)) {
               return false;
             }
             if (sl.field_b == 0) {
               ul.field_j = uc.field_X;
-              uc.field_X = md.field_i;
-              md.field_i = cb.field_g;
+              uc.field_X = NodeHashTableIterator.field_i;
+              NodeHashTableIterator.field_i = cb.field_g;
               cb.field_g = jf.field_tb;
               jf.field_tb = -1;
               return true;
@@ -158,7 +158,7 @@ final class p {
             }
             var5 = new lc((long)var4 + var2_long, jf.field_tb, new byte[bb.field_i]);
             for (var6 = 0; var6 < bb.field_i; var6++) {
-              var5.field_q[var6] = id.field_b.field_m[var6];
+              var5.field_q[var6] = id.field_b.payload[var6];
             }
             ba.field_a.a(var5, -111);
             jf.field_tb = -1;
@@ -173,7 +173,7 @@ final class p {
           } else {
             stackIn_40_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_39_0), ((StringBuilder) (Object) stackIn_39_1).append(stackIn_40_2).append(')').toString());
         }
     }
 

@@ -4,7 +4,7 @@
 final class me implements j {
     static String[] field_a;
     static String field_d;
-    static ka field_e;
+    static Sprite field_e;
     private int field_h;
     static boolean field_b;
     static int field_g;
@@ -30,13 +30,13 @@ final class me implements j {
           if (cf.field_d != null) {
             try {
               cf.field_d.a(0L, 0);
-              cf.field_d.a(-4573, id.field_b.field_q, id.field_b.field_m, 24);
+              cf.field_d.a(-4573, id.field_b.position, id.field_b.payload, 24);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;
             }
           }
-          id.field_b.field_q = id.field_b.field_q + 24;
+          id.field_b.position = id.field_b.position + 24;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -45,7 +45,7 @@ final class me implements j {
     }
 
     public me() {
-        this.field_c = oe.field_g;
+        this.field_c = RasterBuffer.field_g;
         this.field_h = 1;
         this.field_f = 1;
     }
@@ -56,11 +56,11 @@ final class me implements j {
           this.field_f = param2;
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "me.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public final void a(ee param0, int param1, int param2, byte param3, boolean param4) {
+    public final void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
         int stackIn_6_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -118,7 +118,7 @@ final class me implements j {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

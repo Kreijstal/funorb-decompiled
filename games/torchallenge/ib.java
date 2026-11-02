@@ -5,7 +5,7 @@ final class ib extends kj implements tb, sg {
     li field_L;
     private ng field_J;
     static int[] field_O;
-    static ka[] field_M;
+    static Sprite[] field_M;
     static String field_N;
     private ng field_K;
     private rf field_P;
@@ -27,7 +27,7 @@ final class ib extends kj implements tb, sg {
           }
           if (10 <= li.field_K) {
             if (!eh.a(param1 ^ 43)) {
-              qg.b();
+              SoftwareRasterizer.b();
               v.e(240, 320, 101);
               nj.a(0, 0, param0, 0);
             } else {
@@ -57,11 +57,11 @@ final class ib extends kj implements tb, sg {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    private final int a(String param0, int param1, int param2, int param3, String param4, ee param5) {
+    private final int a(String param0, int param1, int param2, int param3, String param4, UiComponent param5) {
         RuntimeException var7 = null;
         java.applet.Applet var8 = null;
         int stackIn_3_0 = 0;
@@ -102,7 +102,7 @@ final class ib extends kj implements tb, sg {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -171,7 +171,7 @@ final class ib extends kj implements tb, sg {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class ib extends kj implements tb, sg {
               this.h(17945);
             }
           } else {
-            nd.b((byte) 116);
+            RandomAccessCacheFile.b((byte) 116);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -203,7 +203,7 @@ final class ib extends kj implements tb, sg {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -237,7 +237,7 @@ final class ib extends kj implements tb, sg {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -293,7 +293,7 @@ final class ib extends kj implements tb, sg {
             } else {
               stackIn_23_2 = "{...}";
             }
-            throw oj.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+            throw oj.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -302,7 +302,7 @@ final class ib extends kj implements tb, sg {
         }
     }
 
-    final void a(ee param0, int param1, byte param2, int param3) {
+    final void a(UiComponent param0, int param1, byte param2, int param3) {
         try {
           super.a(param0, param1, (byte) -101, param3);
           this.field_J.field_F = this.f((byte) 118);
@@ -310,7 +310,7 @@ final class ib extends kj implements tb, sg {
             field_N = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ib.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ib.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -340,7 +340,7 @@ final class ib extends kj implements tb, sg {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -356,8 +356,8 @@ final class ib extends kj implements tb, sg {
     public ib() {
         super(0, 0, 496, 0, (j) null);
         this.field_P = new rf("", (gg) null, 12);
-        bc var1 = new bc(ug.field_f, 0, 0, 0, 0, 16777215, -1, 3, 0, oe.field_g.field_x, -1, 2147483647, true);
-        ee var2 = new ee(kg.field_eb, var1, (gg) null);
+        bc var1 = new bc(GameApplet.field_f, 0, 0, 0, 0, 16777215, -1, 3, 0, RasterBuffer.field_g.field_x, -1, 2147483647, true);
+        UiComponent var2 = new UiComponent(kg.field_eb, var1, (gg) null);
         this.field_J = new ng(jl.field_g, (gg) null);
         this.field_K = new ng(nh.field_fb, (gg) null);
         this.field_P.field_r = ci.field_o;
@@ -403,13 +403,13 @@ final class ib extends kj implements tb, sg {
         if (!this.f((byte) 62)) {
           return;
         }
-        nd.a(true, this.field_P.field_v);
+        RandomAccessCacheFile.a(true, this.field_P.field_v);
         if (param0 != 17945) {
-          field_M = (ka[]) null;
+          field_M = (Sprite[]) null;
         }
     }
 
-    private final int a(int param0, String param1, ee param2, int param3, String param4, int param5, int param6) {
+    private final int a(int param0, String param1, UiComponent param2, int param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         dh var9 = null;
         bg var10 = null;
@@ -423,13 +423,13 @@ final class ib extends kj implements tb, sg {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new bg(20, param3, 120 + param0, 25, param2, false, 120, 3, oe.field_g, 16777215, param4);
+          var10 = new bg(20, param3, 120 + param0, 25, param2, false, 120, 3, RasterBuffer.field_g, 16777215, param4);
           this.a(0, var10);
           var9 = new dh(((uh) ((Object) param2)).a(-126), param1, 126, var10.field_l + param3, param0 + 25, param6);
           var9.field_k = (gg) (this);
           this.a(0, var9);
           if (param5 < 0) {
-            field_M = (ka[]) null;
+            field_M = (Sprite[]) null;
           }
           stackIn_3_0 = var10.field_l + var9.field_l;
           return stackIn_3_0;
@@ -455,11 +455,11 @@ final class ib extends kj implements tb, sg {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    final boolean a(int param0, char param1, byte param2, ee param3) {
+    final boolean a(int param0, char param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
         boolean stackIn_10_0 = false;
         boolean stackIn_13_0 = false;
@@ -493,7 +493,7 @@ final class ib extends kj implements tb, sg {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -511,23 +511,23 @@ final class ib extends kj implements tb, sg {
           wa.field_rb[1] = id.field_a.nextInt();
           wa.field_rb[2] = (int)(lh.field_u >> 32);
           wa.field_rb[3] = (int)lh.field_u;
-          pk.field_e.field_q = 0;
-          pk.field_e.a(wa.field_rb[0], param1);
-          pk.field_e.a(wa.field_rb[1], false);
-          pk.field_e.a(wa.field_rb[2], false);
-          pk.field_e.a(wa.field_rb[3], param1);
-          hc.a(pk.field_e, (byte) -13);
-          pk.field_e.a(param0, (byte) 106);
-          param3.a(pk.field_e, -76);
-          dk.field_s.field_q = 0;
+          DelegatingCanvas.field_e.position = 0;
+          DelegatingCanvas.field_e.writeInt(wa.field_rb[0], param1);
+          DelegatingCanvas.field_e.writeInt(wa.field_rb[1], false);
+          DelegatingCanvas.field_e.writeInt(wa.field_rb[2], false);
+          DelegatingCanvas.field_e.writeInt(wa.field_rb[3], param1);
+          hc.a(DelegatingCanvas.field_e, (byte) -13);
+          DelegatingCanvas.field_e.writeShort(param0, (byte) 106);
+          param3.a(DelegatingCanvas.field_e, -76);
+          dk.field_s.position = 0;
           if (param2) {
-            dk.field_s.d(18, (byte) 122);
+            dk.field_s.writeByte(18, (byte) 122);
           } else {
-            dk.field_s.d(16, (byte) 122);
+            dk.field_s.writeByte(16, (byte) 122);
           }
-          dk.field_s.field_q = dk.field_s.field_q + 2;
-          var5_int = dk.field_s.field_q;
-          dk.field_s.a(na.field_c, false);
+          dk.field_s.position = dk.field_s.position + 2;
+          var5_int = dk.field_s.position;
+          dk.field_s.writeInt(na.field_c, false);
           dk.field_s.a(true, wh.field_c);
           var6 = 0;
           if (fg.field_S) {
@@ -542,8 +542,8 @@ final class ib extends kj implements tb, sg {
           if (le.field_c != null) {
             var6 = var6 | 16;
           }
-          dk.field_s.d(var6, (byte) 122);
-          var7 = mj.a(gi.b(12476), 121);
+          dk.field_s.writeByte(var6, (byte) 122);
+          var7 = GameKeyHandler.a(gi.b(12476), 121);
           if (var7 == null) {
             var7 = "";
           }
@@ -551,8 +551,8 @@ final class ib extends kj implements tb, sg {
           if (le.field_c != null) {
             dk.field_s.a((byte) 27, le.field_c);
           }
-          ac.a(mb.field_a, (byte) -105, pk.field_e, jl.field_f, dk.field_s);
-          dk.field_s.b(-var5_int + dk.field_s.field_q, (byte) -40);
+          ac.a(mb.field_a, (byte) -105, DelegatingCanvas.field_e, jl.field_f, dk.field_s);
+          dk.field_s.b(-var5_int + dk.field_s.position, (byte) -40);
           nb.a(-1, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -565,7 +565,7 @@ final class ib extends kj implements tb, sg {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
         }
     }
 

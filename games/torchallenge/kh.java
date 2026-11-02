@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class kh {
-    private qd field_u;
+    private PcmStream field_u;
     private boolean field_k;
     static int field_p;
     private static int field_i;
@@ -13,10 +13,10 @@ class kh {
     private static bb field_n;
     private int field_r;
     private int field_e;
-    private qd[] field_f;
+    private PcmStream[] field_f;
     private boolean field_a;
     private int field_c;
-    private qd[] field_s;
+    private PcmStream[] field_s;
     private int field_t;
     private long field_j;
     private int field_q;
@@ -24,12 +24,12 @@ class kh {
     private int field_m;
     private int field_d;
 
-    private final static void a(qd param0) {
+    private final static void a(PcmStream param0) {
         param0.field_j = false;
         if (param0.field_k != null) {
           param0.field_k.field_i = 0;
         }
-        qd var1 = param0.c();
+        PcmStream var1 = param0.c();
         while (var1 != null) {
           kh.a(var1);
           var1 = param0.b();
@@ -76,7 +76,7 @@ class kh {
         field_i = param2;
     }
 
-    final static kh a(uj param0, java.awt.Component param1, int param2, int param3) {
+    final static kh a(PlatformTaskDispatcher param0, java.awt.Component param1, int param2, int param3) {
         try {
           sk var4 = null;
           Throwable var4_ref = null;
@@ -148,20 +148,20 @@ class kh {
         int var7_int;
         Object var7;
         int var8_int;
-        qd[] var8;
+        PcmStream[] var8;
         int var9;
         Object var10;
-        qd var11;
+        PcmStream var11;
         se var12;
         int var13;
-        qd var14;
+        PcmStream var14;
         int var15_int;
-        qd var15;
+        PcmStream var15;
         int var6Lifetime1;
         int var9Lifetime1;
         Object var10Lifetime1;
-        qd var14Lifetime1;
-        qd var14Lifetime2;
+        PcmStream var14Lifetime1;
+        PcmStream var14Lifetime2;
         var3 = param1;
         if (field_g) {
           var3 = var3 << 1;
@@ -176,7 +176,7 @@ class kh {
           var4 = 0;
           var5 = 255;
           var6 = 7;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var5 != 0) {
               if (var6 >= 0) {
                 var7_int = var6;
@@ -209,7 +209,7 @@ class kh {
                       var12.field_i = var12.field_i + var13;
                     }
                     if (var4 >= this.field_l) {
-                      break L3;
+                      break scanLoop1;
                     }
                     var14Lifetime2 = var11.c();
                     if (var14Lifetime2 != null) {
@@ -222,12 +222,12 @@ class kh {
                     var15 = var11.field_i;
                     var11.field_i = null;
                     if (var10 != null) {
-                      ((qd) (var10)).field_i = var15;
+                      ((PcmStream) (var10)).field_i = var15;
                     } else {
                       this.field_f[var7_int] = var15;
                     }
                     if (var15 == null) {
-                      this.field_s[var7_int] = (qd) (var10);
+                      this.field_s[var7_int] = (PcmStream) (var10);
                     }
                     var11 = var15;
                   }
@@ -248,8 +248,8 @@ class kh {
             this.field_s[var6Lifetime1] = null;
             var8[var9Lifetime1] = null;
             while (var7 != null) {
-              var10Lifetime1 = ((qd) (var7)).field_i;
-              ((qd) (var7)).field_i = null;
+              var10Lifetime1 = ((PcmStream) (var7)).field_i;
+              ((PcmStream) (var7)).field_i = null;
               var7 = var10Lifetime1;
             }
           }
@@ -266,7 +266,7 @@ class kh {
     void f() throws Exception {
     }
 
-    final synchronized void b(qd param0) {
+    final synchronized void b(PcmStream param0) {
         this.field_u = param0;
     }
 
@@ -296,9 +296,9 @@ class kh {
         this.field_k = true;
     }
 
-    private final void a(qd param0, int param1) {
+    private final void a(PcmStream param0, int param1) {
         int var3 = param1 >> 5;
-        qd var4 = this.field_s[var3];
+        PcmStream var4 = this.field_s[var3];
         if (var4 == null) {
           this.field_f[var3] = param0;
         } else {
@@ -429,8 +429,8 @@ class kh {
         this.field_q = 0;
         this.field_j = 0L;
         this.field_o = 0L;
-        this.field_f = new qd[8];
-        this.field_s = new qd[8];
+        this.field_f = new PcmStream[8];
+        this.field_s = new PcmStream[8];
         this.field_m = 0;
         this.field_d = 0;
     }

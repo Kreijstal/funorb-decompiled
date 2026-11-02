@@ -46,8 +46,8 @@ final class tk extends ng {
         var5 = vb.field_a[param3][param0];
         var6 = 1 + var5;
         var7 = var5 - 1;
-        var8 = gl.field_l[param3][param0][1][0];
-        var9 = gl.field_l[param3][param0][1][1];
+        var8 = SocketConnector.field_l[param3][param0][1][0];
+        var9 = SocketConnector.field_l[param3][param0][1][1];
         var10 = var9 - var8;
         if (var10 <= 0) {
           return;
@@ -95,7 +95,7 @@ final class tk extends ng {
         return;
     }
 
-    final boolean a(ee param0, int param1) {
+    final boolean a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -116,7 +116,7 @@ final class tk extends ng {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class tk extends ng {
           var7 = var8;
           var1 = var7;
           var2 = mh.a(122, ic.field_C, "font", "");
-          fc.field_p = id.a(var10, var2, 256);
+          ProxySocketConnector.field_p = id.a(var10, var2, 256);
           var3 = vh.a(var2, 2, 33, var10, 16301089, 8015912);
           tf.field_x = (eg) ((Object) var3);
           if (param0 < 101) {
@@ -170,11 +170,11 @@ final class tk extends ng {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1_ref), "tk.UA(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1_ref), "tk.UA(" + param0 + ')');
         }
     }
 
-    final void a(ee param0, int param1, byte param2, int param3) {
+    final void a(UiComponent param0, int param1, byte param2, int param3) {
         if (param2 > -97) {
           return;
         }
@@ -182,7 +182,7 @@ final class tk extends ng {
           this.field_S = this.field_S + 1;
           super.a(param0, param1, (byte) -112, param3);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "tk.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "tk.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -240,7 +240,7 @@ final class tk extends ng {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -251,9 +251,9 @@ final class tk extends ng {
         int var9;
         int var10;
         int var11;
-        ka var12;
-        ka var13;
-        ka var14;
+        Sprite var12;
+        Sprite var13;
+        Sprite var14;
         var11 = TorChallenge.field_F ? 1 : 0;
         super.a(param0, param1, param2, param3);
         if (param3 != 0) {
@@ -281,11 +281,11 @@ final class tk extends ng {
           if (lh.field_v != null &&
             var9 <= lh.field_v.field_u &&
             var10 <= lh.field_v.field_x) {
-            ad.a(-50, lh.field_v);
-            qg.b();
+            FullscreenFocusCanvas.a(-50, lh.field_v);
+            SoftwareRasterizer.b();
           } else {
-            lh.field_v = new ka(var9, var10);
-            ad.a(120, lh.field_v);
+            lh.field_v = new Sprite(var9, var10);
+            FullscreenFocusCanvas.a(120, lh.field_v);
           }
           var12.b(112, 144, var12.field_q << 4, var12.field_v << 4, -this.field_S << 10, 4096);
           ie.b((byte) -9);
@@ -297,7 +297,7 @@ final class tk extends ng {
         try {
           this.field_O = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "tk.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

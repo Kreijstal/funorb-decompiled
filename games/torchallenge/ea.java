@@ -4,8 +4,8 @@
 final class ea {
     static int field_f;
     static int field_c;
-    static qe[] field_g;
-    static ka field_h;
+    static LevelEntity[] field_g;
+    static Sprite field_h;
     static int field_e;
     static int[] field_a;
     static int[] field_d;

@@ -14,10 +14,10 @@ final class bm {
     private int field_b;
     private int[] field_j;
 
-    final void a(uf param0) {
-        this.field_h = param0.j(-122);
-        this.field_e = param0.i(50);
-        this.field_i = param0.i(37);
+    final void a(PacketBuffer param0) {
+        this.field_h = param0.readUnsignedByte(-122);
+        this.field_e = param0.readInt(50);
+        this.field_i = param0.readInt(37);
         this.b(param0);
     }
 
@@ -48,14 +48,14 @@ final class bm {
         this.field_c = 0;
     }
 
-    final void b(uf param0) {
+    final void b(PacketBuffer param0) {
         int var2 = 0;
-        this.field_g = param0.j(-122);
+        this.field_g = param0.readUnsignedByte(-122);
         this.field_j = new int[this.field_g];
         this.field_d = new int[this.field_g];
         for (var2 = 0; var2 < this.field_g; var2++) {
-          this.field_j[var2] = param0.c(false);
-          this.field_d[var2] = param0.c(false);
+          this.field_j[var2] = param0.readUnsignedShort(false);
+          this.field_d[var2] = param0.readUnsignedShort(false);
         }
     }
 

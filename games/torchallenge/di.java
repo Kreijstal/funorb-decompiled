@@ -4,7 +4,7 @@
 final class di extends kl {
     private rb field_y;
     private int field_s;
-    static ka[] field_t;
+    static Sprite[] field_t;
     private vb field_G;
     private la field_v;
     private sh field_u;
@@ -133,7 +133,7 @@ final class di extends kl {
           param1 == 0 &&
           !var12.field_s &&
           var12.field_v) {
-          var12.a(true);
+          var12.unlink(true);
           var4 = null;
         }
         if (var4 == null) {
@@ -169,7 +169,7 @@ final class di extends kl {
               var4 = this.field_G.a(true, this.field_z, param0, (byte) 2, 92);
             }
           }
-          this.field_j.a(-111, (da) (var4), (long)param0);
+          this.field_j.a(-111, (IntrusiveNode) (var4), (long)param0);
         }
         if (param2) {
           this.field_q = true;
@@ -210,7 +210,7 @@ final class di extends kl {
                 this.field_k[param0] = (byte) 1;
               }
               if (!((sh) (var4)).field_s) {
-                ((sh) (var4)).a(true);
+                ((sh) (var4)).unlink(true);
               }
               stackIn_60_0 = var4;
               return (sh) (stackIn_60_0);
@@ -220,13 +220,13 @@ final class di extends kl {
             decompiledCaughtException = decompiledCaughtParameter1;
             var6_ref = (Exception) (Object) decompiledCaughtException;
             this.field_k[param0] = (byte)-1;
-            ((sh) (var4)).a(true);
+            ((sh) (var4)).unlink(true);
             if (!((sh) (var4)).field_s) {
               return null;
             }
             if (!this.field_G.b((byte) 100)) {
               var4 = this.field_G.a(true, this.field_z, param0, (byte) 2, 79);
-              this.field_j.a(-100, (da) (var4), (long)param0);
+              this.field_j.a(-100, (IntrusiveNode) (var4), (long)param0);
             }
             return null;
           }
@@ -262,13 +262,13 @@ final class di extends kl {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (RuntimeException) (Object) decompiledCaughtException;
           this.field_G.c(-30317);
-          ((sh) (var4)).a(true);
+          ((sh) (var4)).unlink(true);
           if (((sh) (var4)).field_s) {
             if (this.field_G.b((byte) 100)) {
               return null;
             }
             var4 = this.field_G.a(true, this.field_z, param0, (byte) 2, 108);
-            this.field_j.a(47, (da) (var4), (long)param0);
+            this.field_j.a(47, (IntrusiveNode) (var4), (long)param0);
           }
           return null;
         }
@@ -281,7 +281,7 @@ final class di extends kl {
           }
         }
         if (!((sh) (var4)).field_s) {
-          ((sh) (var4)).a(true);
+          ((sh) (var4)).unlink(true);
         }
         return (sh) (var4);
     }
@@ -308,7 +308,7 @@ final class di extends kl {
           di.a(true);
         }
         byte[] var4 = var3.e(param1 + 74);
-        var3.a(true);
+        var3.unlink(true);
         return var4;
     }
 
@@ -319,14 +319,14 @@ final class di extends kl {
         sh discarded$0 = null;
         int var2_int;
         sh var2;
-        da var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        da var6;
-        da var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        da var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         var5 = TorChallenge.field_F ? 1 : 0;
         if (param0 > -43) {
           this.a(92, (byte) -25);
@@ -340,12 +340,12 @@ final class di extends kl {
             var2_int = 1;
             var3 = this.field_D.c((byte) 114);
             while (var3 != null) {
-              var4 = (int)var3.field_d;
+              var4 = (int)var3.key;
               if (0 == this.field_k[var4]) {
                 discarded$3 = this.a(var4, 1, false);
               }
               if (this.field_k[var4] != 0) {
-                var3.a(true);
+                var3.unlink(true);
               } else {
                 var2_int = 0;
               }
@@ -361,8 +361,8 @@ final class di extends kl {
                   discarded$2 = this.a(this.field_r, 1, false);
                 }
                 if (0 == this.field_k[this.field_r]) {
-                  var6 = new da();
-                  var6.field_d = (long)this.field_r;
+                  var6 = new IntrusiveNode();
+                  var6.key = (long)this.field_r;
                   var2_int = 0;
                   this.field_D.a(var6, -36);
                 }
@@ -383,30 +383,30 @@ final class di extends kl {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_D.c((byte) 123);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_d;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_k[var4Lifetime1] != 1) {
                   discarded$1 = this.a(var4Lifetime1, 2, false);
                 }
                 if (this.field_k[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.a(true);
+                  var3Lifetime1.unlink(true);
                 }
                 var3Lifetime1 = this.field_D.c(-270);
               }
-              L4: while (true) {
+              scanLoop1: while (true) {
                 if (this.field_C.field_e.length > this.field_r) {
                   if (this.field_C.field_e[this.field_r] != 0) {
                     if (this.field_G.a(true)) {
                       var2_intLifetime1 = 0;
-                      break L4;
+                      break scanLoop1;
                     }
                     if (this.field_k[this.field_r] != 1) {
                       discarded$0 = this.a(this.field_r, 2, false);
                     }
                     if (this.field_k[this.field_r] != 1) {
-                      var7 = new da();
-                      var7.field_d = (long)this.field_r;
+                      var7 = new IntrusiveNode();
+                      var7.key = (long)this.field_r;
                       this.field_D.a(var7, -62);
                       var2_intLifetime1 = 0;
                     }
@@ -438,7 +438,7 @@ final class di extends kl {
                 if (!var2.field_s) {
                   throw new RuntimeException();
                 }
-                var2.a(true);
+                var2.unlink(true);
               }
             }
             var2 = (sh) (this.field_j.a(-27377));
@@ -462,7 +462,7 @@ final class di extends kl {
     final void a(byte param0) {
         sh discarded$0 = null;
         sh discarded$1 = null;
-        da var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         var4 = TorChallenge.field_F ? 1 : 0;
@@ -477,11 +477,11 @@ final class di extends kl {
         }
         var2 = this.field_w.c((byte) -61);
         while (var2 != null) {
-          var3 = (int)var2.field_d;
+          var3 = (int)var2.key;
           if (var3 >= 0) {
             if (this.field_C.field_r > var3) {
               if (this.field_C.field_e[var3] == 0) {
-                var2.a(true);
+                var2.unlink(true);
               } else {
                 if (this.field_k[var3] == 0) {
                   discarded$0 = this.a(var3, 1, false);
@@ -490,14 +490,14 @@ final class di extends kl {
                   discarded$1 = this.a(var3, 2, false);
                 }
                 if (this.field_k[var3] == 1) {
-                  var2.a(true);
+                  var2.unlink(true);
                 }
               }
             } else {
-              var2.a(true);
+              var2.unlink(true);
             }
           } else {
-            var2.a(true);
+            var2.unlink(true);
           }
           var2 = this.field_w.c(-270);
         }
@@ -588,7 +588,7 @@ final class di extends kl {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 

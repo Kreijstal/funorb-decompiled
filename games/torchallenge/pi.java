@@ -23,8 +23,8 @@ final class pi {
     }
 
     final static void a(byte param0) {
-        mf.field_a = id.field_b.b(false);
-        CharSequence var2 = (CharSequence) ((Object) mf.field_a);
+        LevelDecoder.field_a = id.field_b.readString(false);
+        CharSequence var2 = (CharSequence) ((Object) LevelDecoder.field_a);
         td.field_i = il.a(var2, (byte) 21);
         if (param0 != 7) {
           field_b = -47;
@@ -159,7 +159,7 @@ final class pi {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(')').toString());
         }
     }
 

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-public final class TorChallenge extends d {
+public final class TorChallenge extends GameClientBase {
     static sl field_I;
     static si field_H;
     static int field_G;
@@ -12,15 +12,15 @@ public final class TorChallenge extends d {
         try {
           this.a((byte) 58, 12, "torchallenge");
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "TorChallenge.init()");
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "TorChallenge.init()");
         }
     }
 
     private final void t(int param0) {
-        ka[] array$0 = null;
-        ka[] array$1 = null;
-        ka[] array$2 = null;
-        ka[] array$3 = null;
+        Sprite[] array$0 = null;
+        Sprite[] array$1 = null;
+        Sprite[] array$2 = null;
+        Sprite[] array$3 = null;
         int stackIn_51_0 = 0;
         int stackIn_60_0 = 0;
         int stackIn_89_0 = 0;
@@ -40,30 +40,30 @@ public final class TorChallenge extends d {
         int stackIn_223_0 = 0;
         int stackIn_235_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ka[] var2 = null;
+        Sprite[] var2 = null;
         int var2_int = 0;
         RuntimeException var2_ref = null;
         int var3_int = 0;
-        ka[] var3 = null;
-        ka var4_ref_ka = null;
+        Sprite[] var3 = null;
+        Sprite var4_ref_ka = null;
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
         int[] var6 = null;
         int var7_int = 0;
-        ka var7 = null;
+        Sprite var7 = null;
         Object var7_ref = null;
         int var8 = 0;
         int var9 = 0;
         int var10_int = 0;
-        ka var10 = null;
-        ka var11 = null;
+        Sprite var10 = null;
+        Sprite var11 = null;
         int var12 = 0;
         var12 = field_F ? 1 : 0;
         try {
           tk.a(param0 + 101);
-          ag.field_e = ad.a(ic.field_C, bh.field_q, "", "small_font", false);
-          ph.field_o = new ka[7];
+          SecondaryNodeDequeIterator.field_e = FullscreenFocusCanvas.a(ic.field_C, bh.field_q, "", "small_font", false);
+          ph.field_o = new Sprite[7];
           ph.field_o[0] = qk.a("", "overlay_title", ic.field_C, TorChallenge.a(param0, 1));
           ph.field_o[1] = qk.a("", "overlay_pause", ic.field_C, 0);
           ph.field_o[2] = qk.a("", "overlay_highscores", ic.field_C, 0);
@@ -73,7 +73,7 @@ public final class TorChallenge extends d {
           ph.field_o[6] = qk.a("", "overlay_levels", ic.field_C, 0);
           ri.field_j = qk.a("", "overlay_title_tile", ic.field_C, param0 ^ 1);
           ui.field_i = v.a("frame", 26, "", ic.field_C);
-          dh.field_cb = new ka[2][];
+          dh.field_cb = new Sprite[2][];
           hd.field_a = v.a("main_menu_frame", param0 + 123, "", ic.field_C);
           dh.field_cb[0] = hd.field_a;
           dh.field_cb[1] = lk.a(-127, "char_select_frame_selected", "", ic.field_C);
@@ -91,7 +91,7 @@ public final class TorChallenge extends d {
           var3_int = 0;
           do {
             if (var3_int >= var2.length) {
-              fd.a((byte) -44, je.field_b);
+              IterableNodeHashTable.a((byte) -44, je.field_b);
               lj.field_o = lk.a(-127, "interface_clouds", "", ic.field_C);
               rd.field_i = lk.a(param0 ^ -127, "interface_border", "", ic.field_C);
               ng.field_L = lk.a(param0 - 128, "interface_score_health", "", ic.field_C);
@@ -105,7 +105,7 @@ public final class TorChallenge extends d {
               mb.field_d = lk.a(-128, "interface_health_icon", "", ic.field_C);
               rl.field_h = lk.a(param0 - 129, "boss_heads", "", ic.field_C);
               la.field_f.a(-63);
-              ie.field_f = new ka[3][2];
+              ie.field_f = new Sprite[3][2];
               ie.field_f[0][0] = rc.field_p[0];
               ie.field_f[0][1] = rc.field_p[1];
               ie.field_f[1][0] = ni.field_h[0];
@@ -118,45 +118,45 @@ public final class TorChallenge extends d {
               break;
             }
             var4_ref_ka = var2[var3_int];
-            fd.a((byte) -44, var4_ref_ka);
+            IterableNodeHashTable.a((byte) -44, var4_ref_ka);
             var3_int++;
           } while (var12 == 0);
           var2_int = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var2_int >= 5))) {
-            array$0 = new ka[s.field_l[var2_int]];
+            array$0 = new Sprite[s.field_l[var2_int]];
             ef.field_h[var2_int] = array$0;
             var3_int = var2_int;
             stackIn_51_0 = var3_int;
             if (var12 == 0) {
-              L6: {
-                L7: {
-                  L8: {
-                    L9: {
+              regionExit1: {
+                regionExit2: {
+                  regionExit3: {
+                    regionExit4: {
                       if (stackIn_51_0 == 0) {
                         ef.field_h[var2_int][0] = qk.a("", "intro1", ic.field_C, 0);
-                        break L6;
+                        break regionExit1;
                       } else if (var3_int != 1) {
                         switch (var3_int) {
                           case 2:
-                            break L9;
+                            break regionExit4;
                           case 3:
-                            break L8;
+                            break regionExit3;
                           case 4:
-                            break L7;
+                            break regionExit2;
                           default:
-                            break L6;
+                            break regionExit1;
                         }
                       }
                       ef.field_h[var2_int][0] = qk.a("", "intro2", ic.field_C, param0 - 1);
-                      break L6;
+                      break regionExit1;
                     }
                     ef.field_h[var2_int][0] = qk.a("", "intro3", ic.field_C, param0 - 1);
-                    break L6;
+                    break regionExit1;
                   }
                   ef.field_h[var2_int][0] = null;
                   ef.field_h[var2_int][1] = qk.a("", "intro4_enemies", ic.field_C, 0);
-                  break L6;
+                  break regionExit1;
                 }
                 ef.field_h[var2_int][0] = qk.a("", "intro5", ic.field_C, 0);
               }
@@ -168,30 +168,30 @@ public final class TorChallenge extends d {
           if (decompiledNaturalLoopExit0) {
             ef.field_h[3][0] = wa.field_xb.a();
             wa.field_xb = null;
-            we.field_m = new ka[4];
+            we.field_m = new Sprite[4];
             we.field_m[0] = null;
             qc.field_c = rb.a(ic.field_C, "", (byte) -116, "game_start_bg");
             we.field_m[1] = qk.a("", "game_start_henhui", ic.field_C, 0);
             we.field_m[2] = qk.a("", "game_start_ziren", ic.field_C, 0);
             we.field_m[3] = qk.a("", "game_start_damen", ic.field_C, 0);
-            eb.field_p = new ka[2];
+            eb.field_p = new Sprite[2];
             eb.field_p[0] = qk.a("", "level_start_heads", ic.field_C, param0 - 1);
             eb.field_p[1] = qk.a("", "level_start_tower_1", ic.field_C, 0);
-            pl.field_f = new ka[4];
+            pl.field_f = new Sprite[4];
             pl.field_f[0] = null;
-            ad.field_e = rb.a(ic.field_C, "", (byte) -115, "level_start_boss_bg");
-            hl.a(ad.field_e, false, 15245826);
+            FullscreenFocusCanvas.field_e = rb.a(ic.field_C, "", (byte) -115, "level_start_boss_bg");
+            hl.a(FullscreenFocusCanvas.field_e, false, 15245826);
             pl.field_f[1] = qk.a("", "level_start_boss_1", ic.field_C, param0 - 1);
             pl.field_f[2] = qk.a("", "level_start_boss_2", ic.field_C, 0);
             pl.field_f[3] = qk.a("", "level_start_boss_3", ic.field_C, 0);
-            ei.field_w = new ka[4];
+            ei.field_w = new Sprite[4];
             ei.field_w[0] = null;
             lb.field_t = rb.a(ic.field_C, "", (byte) -128, "game_over_scene_bg");
             hl.a(lb.field_t, false, 6831816);
             ei.field_w[1] = qk.a("", "game_over_scene_henhui", ic.field_C, 0);
             ei.field_w[2] = qk.a("", "game_over_scene_ziren", ic.field_C, param0 - 1);
             ei.field_w[3] = qk.a("", "game_over_scene_damen", ic.field_C, 0);
-            pf.field_a = new ka[5];
+            pf.field_a = new Sprite[5];
             pf.field_a[0] = null;
             mb.field_b = qc.field_c.b();
             hl.a(qc.field_c, false, 15245826);
@@ -207,16 +207,16 @@ public final class TorChallenge extends d {
           var3_int = stackIn_51_0;
           do {
             if (var2_int <= var3_int) {
-              dd.field_m = lk.a(param0 - 129, "rocket_trail", "", ic.field_C);
-              qb.a((byte) 49, dd.field_m);
+              ImageProducerRasterBuffer.field_m = lk.a(param0 - 129, "rocket_trail", "", ic.field_C);
+              qb.a((byte) 49, ImageProducerRasterBuffer.field_m);
               wh.field_f = lk.a(-127, "dust_cloud", "", ic.field_C);
               qb.a((byte) 45, wh.field_f);
               ve.field_b = lk.a(param0 - 128, "monk1", "", ic.field_C);
               qb.a((byte) 87, ve.field_b);
               tf.field_a = lk.a(param0 - 128, "monk2", "", ic.field_C);
               qb.a((byte) 81, tf.field_a);
-              oe.field_d = lk.a(param0 - 128, "monk3", "", ic.field_C);
-              qb.a((byte) 23, oe.field_d);
+              RasterBuffer.field_d = lk.a(param0 - 128, "monk3", "", ic.field_C);
+              qb.a((byte) 23, RasterBuffer.field_d);
               hc.field_T = lk.a(param0 ^ -127, "monk1_swooshes", "", ic.field_C);
               qb.a((byte) 57, hc.field_T);
               cg.field_d = lk.a(-127, "monk2_swooshes", "", ic.field_C);
@@ -233,7 +233,7 @@ public final class TorChallenge extends d {
               qb.a((byte) 126, hi.field_F);
               nk.field_a = lk.a(-128, "boss3_attacks", "", ic.field_C);
               qb.a((byte) 14, nk.field_a);
-              si.field_I = new ka[3][][];
+              si.field_I = new Sprite[3][][];
               break;
             }
             pe.field_eb[var3_int].g();
@@ -245,7 +245,7 @@ public final class TorChallenge extends d {
             if (stackIn_60_0 < ~var6_int) {
               var5 = oj.field_g[var6_int][1];
               var4 = oj.field_g[var6_int][0];
-              si.field_I[var6_int] = new ka[var4][var5];
+              si.field_I[var6_int] = new Sprite[var4][var5];
               if (var12 == 0) {
                 boolean decompiledFrameRemainder4 = true;
                 if (var6_int != 0) {
@@ -293,7 +293,7 @@ public final class TorChallenge extends d {
                   while (true) {
                     stackIn_93_0 = 20;
                     if (stackIn_93_0 > var7_int) {
-                      array$1 = new ka[db.field_x[var7_int][var6_int]];
+                      array$1 = new Sprite[db.field_x[var7_int][var6_int]];
                       c.field_c[var7_int][var6_int] = array$1;
                       stackIn_89_0 = 0;
                       var8 = stackIn_89_0;
@@ -306,7 +306,7 @@ public final class TorChallenge extends d {
                           c.field_c[var7_int][var6_int][var8] = tf.field_a[var8 + 6 * var7_int];
                         }
                         if (2 == var6_int) {
-                          c.field_c[var7_int][var6_int][var8] = oe.field_d[var8 + 6 * var7_int];
+                          c.field_c[var7_int][var6_int][var8] = RasterBuffer.field_d[var8 + 6 * var7_int];
                         }
                         var8++;
                       }
@@ -321,7 +321,7 @@ public final class TorChallenge extends d {
               }
               if (decompiledFrameRemainder3) {
                 ve.field_b = null;
-                oe.field_d = null;
+                RasterBuffer.field_d = null;
                 tf.field_a = null;
                 stackIn_113_0 = 0;
               }
@@ -338,18 +338,18 @@ public final class TorChallenge extends d {
                       stackIn_119_0 = ~var7_int;
                       stackIn_119_1 = -21;
                       if (stackIn_119_0 > stackIn_119_1) {
-                        array$2 = new ka[db.field_x[var7_int][var6_int]];
-                        uf.field_o[var7_int][var6_int] = array$2;
+                        array$2 = new Sprite[db.field_x[var7_int][var6_int]];
+                        PacketBuffer.field_o[var7_int][var6_int] = array$2;
                         stackIn_115_0 = 0;
                         var8 = stackIn_115_0;
                         while (var8 < db.field_x[var7_int][var6_int]) {
                           stackIn_119_0 = 0;
                           stackIn_119_1 = var6_int;
                           if (stackIn_119_0 == stackIn_119_1) {
-                            uf.field_o[var7_int][var6_int][var8] = hc.field_T[var8 + 6 * var7_int];
+                            PacketBuffer.field_o[var7_int][var6_int][var8] = hc.field_T[var8 + 6 * var7_int];
                           }
                           if (1 == var6_int) {
-                            uf.field_o[var7_int][var6_int][var8] = cg.field_d[var8 + 6 * var7_int];
+                            PacketBuffer.field_o[var7_int][var6_int][var8] = cg.field_d[var8 + 6 * var7_int];
                           }
                           var8++;
                         }
@@ -365,9 +365,9 @@ public final class TorChallenge extends d {
                 if (decompiledFrameRemainder2) {
                   cg.field_d = null;
                   hc.field_T = null;
-                  ak.field_a[0] = lk.a(-127, "henhui_puff", "", ic.field_C);
-                  ak.field_a[1] = lk.a(param0 - 129, "ziren_puff", "", ic.field_C);
-                  ak.field_a[2] = lk.a(-128, "damen_puff", "", ic.field_C);
+                  SecondaryNodeDeque.field_a[0] = lk.a(-127, "henhui_puff", "", ic.field_C);
+                  SecondaryNodeDeque.field_a[1] = lk.a(param0 - 129, "ziren_puff", "", ic.field_C);
+                  SecondaryNodeDeque.field_a[2] = lk.a(-128, "damen_puff", "", ic.field_C);
                   ra.field_b[0][0] = qk.a("", "damen_vert_swipe", ic.field_C, param0 - 1);
                   ra.field_b[0][1] = ra.field_b[0][0].i();
                   ra.field_b[1][0] = qk.a("", "damen_angled_swipe", ic.field_C, 0);
@@ -387,7 +387,7 @@ public final class TorChallenge extends d {
                         stackIn_140_0 = var7_int;
                         stackIn_140_1 = 16;
                         if (stackIn_140_0 < stackIn_140_1) {
-                          array$3 = new ka[kk.field_h[var7_int][var6_int]];
+                          array$3 = new Sprite[kk.field_h[var7_int][var6_int]];
                           g.field_i[var7_int][var6_int] = array$3;
                           stackIn_136_0 = 0;
                           var8 = stackIn_136_0;
@@ -435,15 +435,15 @@ public final class TorChallenge extends d {
                     stackIn_182_0 = 0;
                   }
                   var6_int = stackIn_182_0;
-                  L68: while (true) {
+                  scanLoop5: while (true) {
                     if (6 > var6_int) {
                       stackIn_194_0 = 0;
                       if (var12 != 0) {
-                        break L68;
+                        break scanLoop5;
                       }
                       var7_int = stackIn_194_0;
                       while (var7_int < 2) {
-                        we.field_e[var6_int][var7_int] = new ka(ic.field_D[0].field_u, ic.field_D[0].field_x);
+                        we.field_e[var6_int][var7_int] = new Sprite(ic.field_D[0].field_u, ic.field_D[0].field_x);
                         var7_int++;
                       }
                       var6_int++;
@@ -453,15 +453,15 @@ public final class TorChallenge extends d {
                     break;
                   }
                   var6_int = stackIn_194_0;
-                  L74: while (true) {
+                  scanLoop6: while (true) {
                     if (var6_int < 2) {
                       stackIn_206_0 = 0;
                       if (var12 != 0) {
-                        break L74;
+                        break scanLoop6;
                       }
                       var7_int = stackIn_206_0;
                       while (var7_int < 2) {
-                        re.field_v[var6_int][var7_int] = new ka(af.field_a[0].field_u, af.field_a[0].field_x);
+                        re.field_v[var6_int][var7_int] = new Sprite(af.field_a[0].field_u, af.field_a[0].field_x);
                         var7_int++;
                       }
                       var6_int++;
@@ -483,7 +483,7 @@ public final class TorChallenge extends d {
                           stackIn_208_0 = 0;
                           var8 = stackIn_208_0;
                           while (var8 < 2) {
-                            sf.field_d[var6_int][var7_int][var8] = new ka(be.field_f[ea.field_e * 6 + var8].field_u, be.field_f[var8 + 6 * ea.field_e].field_x);
+                            sf.field_d[var6_int][var7_int][var8] = new Sprite(be.field_f[ea.field_e * 6 + var8].field_u, be.field_f[var8 + 6 * ea.field_e].field_x);
                             var8++;
                           }
                           var7_int++;
@@ -499,27 +499,27 @@ public final class TorChallenge extends d {
                     }
                     var6 = new int[stackIn_223_0];
                     var8 = 90;
-                    var7 = new ka(var8, var8);
-                    je.field_g = new ka(kj.field_C[0].field_q, kj.field_C[0].field_v);
-                    cj.field_c = new ka(kj.field_C[0].field_q, kj.field_C[0].field_v);
+                    var7 = new Sprite(var8, var8);
+                    je.field_g = new Sprite(kj.field_C[0].field_q, kj.field_C[0].field_v);
+                    cj.field_c = new Sprite(kj.field_C[0].field_q, kj.field_C[0].field_v);
                     od.a(33, 30, 68, 90, 34, 45, je.field_g, var7, var6);
                     var6 = null;
                     var7_ref = null;
                     je.field_g.h();
                     c.field_b = qk.a("", "door_sign", ic.field_C, 0);
                     c.field_b.h();
-                    si.field_F = new ka(kj.field_C[0].field_q, kj.field_C[0].field_v);
+                    si.field_F = new Sprite(kj.field_C[0].field_q, kj.field_C[0].field_v);
                     si.field_F.d();
-                    qg.f(33, 30, 68, 90, param0);
+                    SoftwareRasterizer.f(33, 30, 68, 90, param0);
                     kj.field_C[1].g(0, 0);
                     la.field_f.a(101);
-                    dk.field_c = new ka[4][9];
+                    dk.field_c = new Sprite[4][9];
                     var9 = 0;
-                    L89: while (true) {
+                    scanLoop7: while (true) {
                       if (var9 < 4) {
                         stackIn_235_0 = 0;
                         if (var12 != 0) {
-                          break L89;
+                          break scanLoop7;
                         }
                         var10_int = stackIn_235_0;
                         while (9 > var10_int) {
@@ -533,7 +533,7 @@ public final class TorChallenge extends d {
                       lj.field_h = lk.a(param0 - 128, "clouds", "", ic.field_C);
                       qb.a((byte) 86, lj.field_h);
                       var9 = tf.field_x.field_x + tf.field_x.field_K;
-                      hh.field_b = new ka(var9, var9);
+                      hh.field_b = new Sprite(var9, var9);
                       hh.field_b.d();
                       bc.field_f.c(0, 0, var9, var9);
                       bc.field_f = null;
@@ -557,7 +557,7 @@ public final class TorChallenge extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2_ref), "TorChallenge.B(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2_ref), "TorChallenge.B(" + param0 + ')');
         }
     }
 
@@ -571,7 +571,7 @@ public final class TorChallenge extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "TorChallenge.E(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "TorChallenge.E(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -588,7 +588,7 @@ public final class TorChallenge extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "TorChallenge.L(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "TorChallenge.L(" + param0 + ')');
         }
     }
 
@@ -597,11 +597,11 @@ public final class TorChallenge extends d {
         RuntimeException decompiledCaughtException = null;
         java.awt.Canvas var2 = null;
         RuntimeException var2_ref = null;
-        ka var3_ref_ka = null;
+        Sprite var3_ref_ka = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ka var3_ref_kaLifetime1;
+        Sprite var3_ref_kaLifetime1;
         int var4Lifetime1;
         var5 = field_F ? 1 : 0;
         try {
@@ -623,38 +623,38 @@ public final class TorChallenge extends d {
           if (~bc.field_o != ~bb.field_h) {
             if (16 <= hk.field_e) {
               if (-1 != bb.field_h) {
-                ug.field_i[bb.field_h].e(param0 ^ 1014663489);
+                GameApplet.field_i[bb.field_h].e(param0 ^ 1014663489);
                 if (var5 != 0) {
                   ji.field_m.c(param0 ^ 7856);
                 }
               } else {
                 ji.field_m.c(param0 ^ 7856);
               }
-              var3_ref_ka = new ka(1, 1);
-              var3_ref_ka.field_y = qg.field_i;
-              var3_ref_ka.field_q = qg.field_g;
-              var3_ref_ka.field_u = qg.field_g;
-              var3_ref_ka.field_v = qg.field_f;
-              var3_ref_ka.field_x = qg.field_f;
+              var3_ref_ka = new Sprite(1, 1);
+              var3_ref_ka.field_y = SoftwareRasterizer.field_i;
+              var3_ref_ka.field_q = SoftwareRasterizer.field_g;
+              var3_ref_ka.field_u = SoftwareRasterizer.field_g;
+              var3_ref_ka.field_v = SoftwareRasterizer.field_f;
+              var3_ref_ka.field_x = SoftwareRasterizer.field_f;
               var4 = 256 * (hk.field_e + 1 - 16) / 16;
               var3_ref_ka.e(0, 0, var4);
               decompiledFrameRemainder0 = (var5 != 0);
             }
             if (decompiledFrameRemainder0) {
               if (bc.field_o != -1) {
-                ug.field_i[bc.field_o].e(param0 ^ 1014663489);
+                GameApplet.field_i[bc.field_o].e(param0 ^ 1014663489);
                 if (var5 != 0) {
                   ji.field_m.c(48);
                 }
               } else {
                 ji.field_m.c(48);
               }
-              var3_ref_kaLifetime1 = new ka(1, 1);
-              var3_ref_kaLifetime1.field_q = qg.field_g;
-              var3_ref_kaLifetime1.field_u = qg.field_g;
-              var3_ref_kaLifetime1.field_y = qg.field_i;
-              var3_ref_kaLifetime1.field_v = qg.field_f;
-              var3_ref_kaLifetime1.field_x = qg.field_f;
+              var3_ref_kaLifetime1 = new Sprite(1, 1);
+              var3_ref_kaLifetime1.field_q = SoftwareRasterizer.field_g;
+              var3_ref_kaLifetime1.field_u = SoftwareRasterizer.field_g;
+              var3_ref_kaLifetime1.field_y = SoftwareRasterizer.field_i;
+              var3_ref_kaLifetime1.field_v = SoftwareRasterizer.field_f;
+              var3_ref_kaLifetime1.field_x = SoftwareRasterizer.field_f;
               var4Lifetime1 = (-(255 * hk.field_e) + 3825) / 15;
               var3_ref_kaLifetime1.e(0, 0, var4Lifetime1);
               decompiledFrameRemainder0 = (var5 != 0);
@@ -668,29 +668,29 @@ public final class TorChallenge extends d {
             if (decompiledFrameRemainder0) {
               if (bc.field_o == 8 ||
                 9 == bc.field_o) {
-                ug.field_i[8].e(1014667201);
-                ug.field_i[9].e(1014667201);
+                GameApplet.field_i[8].e(1014667201);
+                GameApplet.field_i[9].e(1014667201);
                 if (var5 != 0) {
                   if (bc.field_o != 10 &&
                     11 != bc.field_o) {
-                    ug.field_i[bc.field_o].e(1014667201);
-                    ug.field_i[10].e(1014667201);
-                    ug.field_i[11].e(param0 + 1014659393);
+                    GameApplet.field_i[bc.field_o].e(1014667201);
+                    GameApplet.field_i[10].e(1014667201);
+                    GameApplet.field_i[11].e(param0 + 1014659393);
                   } else {
-                    ug.field_i[10].e(1014667201);
-                    ug.field_i[11].e(param0 + 1014659393);
+                    GameApplet.field_i[10].e(1014667201);
+                    GameApplet.field_i[11].e(param0 + 1014659393);
                   }
                 }
               } else {
                 boolean decompiledSharedTail0 = (bc.field_o == 10 ||
                   11 == bc.field_o);
                 if (!decompiledSharedTail0) {
-                  ug.field_i[bc.field_o].e(1014667201);
+                  GameApplet.field_i[bc.field_o].e(1014667201);
                   decompiledSharedTail0 = (var5 != 0);
                 }
                 if (decompiledSharedTail0) {
-                  ug.field_i[10].e(1014667201);
-                  ug.field_i[11].e(param0 + 1014659393);
+                  GameApplet.field_i[10].e(1014667201);
+                  GameApplet.field_i[11].e(param0 + 1014659393);
                 }
               }
             }
@@ -699,13 +699,13 @@ public final class TorChallenge extends d {
             field_G = -107;
           }
           if (vc.a(0)) {
-            qg.d(0, 0, qg.field_g, qg.field_f);
+            SoftwareRasterizer.d(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
             si.a(true, ui.field_i, ui.field_i[0].field_x + 16, 16 + ui.field_i[0].field_u);
           }
           if (rb.field_b != 0) {
             var3 = 256 * hk.field_e / 32;
             if (0 < var3) {
-              qg.a(0, 0, qg.field_g, qg.field_f, 0, var3);
+              SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, var3);
             }
           }
           if (lc.a(1)) {
@@ -721,7 +721,7 @@ public final class TorChallenge extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2_ref), "TorChallenge.C(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2_ref), "TorChallenge.C(" + param0 + ')');
         }
     }
 
@@ -757,7 +757,7 @@ public final class TorChallenge extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) runtimeException), "TorChallenge.H(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "TorChallenge.H(" + param0 + ')');
         }
     }
 
@@ -775,17 +775,17 @@ public final class TorChallenge extends d {
         int var16 = 0;
         var16 = field_F ? 1 : 0;
         try {
-          var8_int = gl.field_l[param5][param6][1][0];
-          var9 = gl.field_l[param5][param6][1][1];
-          var10 = gl.field_l[param5][param6][2][0];
-          var11 = gl.field_l[param5][param6][2][1];
+          var8_int = SocketConnector.field_l[param5][param6][1][0];
+          var9 = SocketConnector.field_l[param5][param6][1][1];
+          var10 = SocketConnector.field_l[param5][param6][2][0];
+          var11 = SocketConnector.field_l[param5][param6][2][1];
           var12 = vb.field_a[param5][param6];
           if (param3) {
             TorChallenge.q(123);
           }
-          qg.a(ae.field_y);
+          SoftwareRasterizer.a(ae.field_y);
           var13 = 64;
-          qg.a(var8_int, param1, var9, param4);
+          SoftwareRasterizer.a(var8_int, param1, var9, param4);
           var14 = var12 - 1;
           if (var14 < 0) {
             var14 += 64;
@@ -796,9 +796,9 @@ public final class TorChallenge extends d {
           }
           if (0 == param7 &&
             (64 & ic.field_E[var14][param2]) > 0) {
-            qg.f(var10, param1, var9, param4);
+            SoftwareRasterizer.f(var10, param1, var9, param4);
             re.field_v[1][param6].a(var10, param1);
-            qg.b(ae.field_y);
+            SoftwareRasterizer.b(ae.field_y);
             if (var16 == 0) {
               return;
             }
@@ -806,30 +806,30 @@ public final class TorChallenge extends d {
           if (param7 != 0) {
             if (param7 == 1 &&
               0 < (64 & ic.field_E[var15][param2])) {
-              qg.f(var8_int, param1, var11, param4);
+              SoftwareRasterizer.f(var8_int, param1, var11, param4);
               re.field_v[1][param6].a(var8_int, param1);
-              qg.b(ae.field_y);
+              SoftwareRasterizer.b(ae.field_y);
               if (var16 == 0) {
                 return;
               }
             }
-            qg.f(var11, param1, -var11 + var9, var13, 0);
-            qg.a(var8_int, param1, var11, param4);
+            SoftwareRasterizer.f(var11, param1, -var11 + var9, var13, 0);
+            SoftwareRasterizer.a(var8_int, param1, var11, param4);
             re.field_v[0][param6].a(var8_int, param1);
-            qg.b(ae.field_y);
+            SoftwareRasterizer.b(ae.field_y);
             if (var16 == 0) {
               return;
             }
           }
-          qg.f(var8_int, param1, var10 - var8_int, var13, 0);
-          qg.a(var10, param1, var9, param4);
+          SoftwareRasterizer.f(var8_int, param1, var10 - var8_int, var13, 0);
+          SoftwareRasterizer.a(var10, param1, var9, param4);
           re.field_v[0][param6].a(var10, param1);
-          qg.b(ae.field_y);
+          SoftwareRasterizer.b(ae.field_y);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var8), "TorChallenge.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw oj.wrapException((Throwable) ((Object) var8), "TorChallenge.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
@@ -837,14 +837,14 @@ public final class TorChallenge extends d {
         int stackIn_4_0 = 0;
         int stackIn_22_0 = 0;
         RuntimeException decompiledCaughtException = null;
-        ka[] var3 = null;
+        Sprite[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        ka[] var9 = null;
+        Sprite[] var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -861,7 +861,7 @@ public final class TorChallenge extends d {
             var6 = var3.length;
             var7 = var6 / var5;
             var8 = var4 * var6;
-            var9 = new ka[var8];
+            var9 = new Sprite[var8];
             var10 = 0;
             while (true) {
               stackIn_4_0 = ~var5;
@@ -907,14 +907,14 @@ public final class TorChallenge extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3_ref), "TorChallenge.K(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3_ref), "TorChallenge.K(" + param0 + ',' + param1 + ')');
         }
     }
 
     private final void s(int param0) {
-        if (jd.field_e != null) {
-          kc.a(jd.field_e, 0);
-          jd.field_e = null;
+        if (ClientException.field_e != null) {
+          LocalizedStrings.a(ClientException.field_e, 0);
+          ClientException.field_e = null;
           id.a(87);
         }
         if (param0 <= 111) {
@@ -923,13 +923,13 @@ public final class TorChallenge extends d {
         try {
           ic.field_C = pe.b(4, -1);
           bh.field_q = pe.b(5, -1);
-          pk.field_d = pe.b(6, -1);
+          DelegatingCanvas.field_d = pe.b(6, -1);
           lk.field_f = pe.b(7, -1);
           cl.field_y = pe.b(8, -1);
           fh.field_f = pe.b(9, -1);
           qh.field_M = pe.b(10, -1);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "TorChallenge.D(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "TorChallenge.D(" + param0 + ')');
         }
     }
 
@@ -1008,7 +1008,7 @@ public final class TorChallenge extends d {
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
                 if (decompiledFrameRemainder0) {
-                  var3 = og.a(false);
+                  var3 = MouseWheelInput.a(false);
                   switch (var3) {
                     default:
                       break;
@@ -1027,7 +1027,7 @@ public final class TorChallenge extends d {
                       break;
                   }
                   if (!vc.a(0)) {
-                    ug.field_i[bc.field_o].a(3, true);
+                    GameApplet.field_i[bc.field_o].a(3, true);
                   }
                   decompiledFrameRemainder0 = (var4 != 0);
                 }
@@ -1037,8 +1037,8 @@ public final class TorChallenge extends d {
               aj.b(3);
               if (jh.a((byte) 57)) {
                 bi.a(125);
-                mf.b(2);
-                if (ee.field_o <= 0) {
+                LevelDecoder.b(2);
+                if (UiComponent.field_o <= 0) {
                   cd.field_o = true;
                   if (var4 != 0) {
                     cd.field_o = false;
@@ -1056,12 +1056,12 @@ public final class TorChallenge extends d {
           }
           boolean decompiledFrameCompleted1 = true;
           boolean decompiledFrameCompleted0 = true;
-          L22: {
-            if (!d.p(-77)) {
+          regionExit1: {
+            if (!GameClientBase.p(-77)) {
               while (true) {
                 var3_ref_rd = (rd) (wc.field_g.a((byte) -100));
                 if (null != var3_ref_rd) {
-                  fc.a(var3_ref_rd, 4, false);
+                  ProxySocketConnector.a(var3_ref_rd, 4, false);
                   if (var4 == 0) {
                     continue;
                   }
@@ -1071,9 +1071,9 @@ public final class TorChallenge extends d {
                     if (null == var3_ref_bk) {
                       break;
                     }
-                    ee.a(var3_ref_bk, 5, (byte) -43);
+                    UiComponent.a(var3_ref_bk, 5, (byte) -43);
                     if (var4 != 0) {
-                      break L22;
+                      break regionExit1;
                     }
                   }
                 }
@@ -1107,14 +1107,14 @@ public final class TorChallenge extends d {
           if (nb.a(-26375)) {
             var3 = this.e((byte) 110);
             if (var3 == 2) {
-              kc.f(10);
+              LocalizedStrings.f(10);
             }
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "TorChallenge.N(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "TorChallenge.N(" + param0 + ')');
         }
     }
 
@@ -1161,7 +1161,7 @@ public final class TorChallenge extends d {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -1177,11 +1177,11 @@ public final class TorChallenge extends d {
         var4 = field_F ? 1 : 0;
         try {
           t.a(-67);
-          if (null != pk.field_d) {
+          if (null != DelegatingCanvas.field_d) {
             if (aj.field_f.b(-7957) &&
               aj.field_f.b(5, "basic")) {
-              if (pk.field_d.b(-7957) &&
-                pk.field_d.b((byte) 79)) {
+              if (DelegatingCanvas.field_d.b(-7957) &&
+                DelegatingCanvas.field_d.b((byte) 79)) {
                 if (lk.field_f.b(-7957) &&
                   lk.field_f.b((byte) 79)) {
                   if (cl.field_y.b(-7957) &&
@@ -1194,153 +1194,153 @@ public final class TorChallenge extends d {
                           bh.field_q.b((byte) 79)) {
                           if (qh.field_M.b(-7957) &&
                             qh.field_M.b((byte) 79)) {
-                            mh.a(pk.field_a, (byte) -125, 65.0f);
+                            mh.a(DelegatingCanvas.field_a, (byte) -125, 65.0f);
                             if (!param0) {
                               return false;
                             }
                             bi.a(124);
                             this.f(7808);
-                            ub.field_d = new u(pk.field_d, lk.field_f);
-                            cg.field_a[0] = q.a(pk.field_d, "", "Btn_Chime").b();
-                            cg.field_a[1] = q.a(pk.field_d, "", "menu_change_character").b();
-                            cg.field_a[2] = q.a(pk.field_d, "", "Slider").b();
-                            wl.field_c[0][0] = q.a(pk.field_d, "", "H_Jump").b();
-                            wl.field_c[0][1] = q.a(pk.field_d, "", "Z_Jump").b();
-                            wl.field_c[0][2] = q.a(pk.field_d, "", "D_Jump").b();
-                            wl.field_c[1][0] = q.a(pk.field_d, "", "H_Land").b();
-                            wl.field_c[1][1] = q.a(pk.field_d, "", "Z_Land").b();
-                            wl.field_c[1][2] = q.a(pk.field_d, "", "D_Land").b();
-                            wl.field_c[2][0] = q.a(pk.field_d, "", "H_Slide").b();
-                            wl.field_c[2][1] = q.a(pk.field_d, "", "Z_Slide").b();
-                            wl.field_c[2][2] = q.a(pk.field_d, "", "D_Slide").b();
-                            wl.field_c[3][0] = q.a(pk.field_d, "", "H_Step1").b();
-                            wl.field_c[3][1] = q.a(pk.field_d, "", "Z_Step1").b();
-                            wl.field_c[3][2] = q.a(pk.field_d, "", "D_Step1").b();
-                            wl.field_c[4][0] = q.a(pk.field_d, "", "H_Step2").b();
-                            wl.field_c[4][1] = q.a(pk.field_d, "", "Z_Step2").b();
-                            wl.field_c[4][2] = q.a(pk.field_d, "", "D_Step2").b();
-                            wl.field_c[5][0] = q.a(pk.field_d, "", "H_Weapon_Death_Impact").b();
-                            wl.field_c[5][1] = q.a(pk.field_d, "", "Z_Weapon_Death_Impact").b();
-                            wl.field_c[5][2] = q.a(pk.field_d, "", "D_Weapon_Death_Impact").b();
-                            ia.field_i[0][dg.field_T[1]][0] = q.a(pk.field_d, "", "Run_1_Death").b();
-                            ia.field_i[0][dg.field_T[1]][1] = q.a(pk.field_d, "", "Run_2_Death").b();
-                            ia.field_i[0][dg.field_T[1]][2] = q.a(pk.field_d, "", "Run_3_Death").b();
-                            ia.field_i[2][dg.field_T[1]][0] = q.a(pk.field_d, "", "Run_1_Step").b();
-                            ia.field_i[2][dg.field_T[1]][1] = q.a(pk.field_d, "", "Run_2_Step").b();
-                            ia.field_i[2][dg.field_T[1]][2] = q.a(pk.field_d, "", "Run_3_Step").b();
-                            ia.field_i[3][dg.field_T[1]][1] = q.a(pk.field_d, "", "Run_Jump").b();
+                            ub.field_d = new u(DelegatingCanvas.field_d, lk.field_f);
+                            cg.field_a[0] = q.a(DelegatingCanvas.field_d, "", "Btn_Chime").b();
+                            cg.field_a[1] = q.a(DelegatingCanvas.field_d, "", "menu_change_character").b();
+                            cg.field_a[2] = q.a(DelegatingCanvas.field_d, "", "Slider").b();
+                            wl.field_c[0][0] = q.a(DelegatingCanvas.field_d, "", "H_Jump").b();
+                            wl.field_c[0][1] = q.a(DelegatingCanvas.field_d, "", "Z_Jump").b();
+                            wl.field_c[0][2] = q.a(DelegatingCanvas.field_d, "", "D_Jump").b();
+                            wl.field_c[1][0] = q.a(DelegatingCanvas.field_d, "", "H_Land").b();
+                            wl.field_c[1][1] = q.a(DelegatingCanvas.field_d, "", "Z_Land").b();
+                            wl.field_c[1][2] = q.a(DelegatingCanvas.field_d, "", "D_Land").b();
+                            wl.field_c[2][0] = q.a(DelegatingCanvas.field_d, "", "H_Slide").b();
+                            wl.field_c[2][1] = q.a(DelegatingCanvas.field_d, "", "Z_Slide").b();
+                            wl.field_c[2][2] = q.a(DelegatingCanvas.field_d, "", "D_Slide").b();
+                            wl.field_c[3][0] = q.a(DelegatingCanvas.field_d, "", "H_Step1").b();
+                            wl.field_c[3][1] = q.a(DelegatingCanvas.field_d, "", "Z_Step1").b();
+                            wl.field_c[3][2] = q.a(DelegatingCanvas.field_d, "", "D_Step1").b();
+                            wl.field_c[4][0] = q.a(DelegatingCanvas.field_d, "", "H_Step2").b();
+                            wl.field_c[4][1] = q.a(DelegatingCanvas.field_d, "", "Z_Step2").b();
+                            wl.field_c[4][2] = q.a(DelegatingCanvas.field_d, "", "D_Step2").b();
+                            wl.field_c[5][0] = q.a(DelegatingCanvas.field_d, "", "H_Weapon_Death_Impact").b();
+                            wl.field_c[5][1] = q.a(DelegatingCanvas.field_d, "", "Z_Weapon_Death_Impact").b();
+                            wl.field_c[5][2] = q.a(DelegatingCanvas.field_d, "", "D_Weapon_Death_Impact").b();
+                            ia.field_i[0][dg.field_T[1]][0] = q.a(DelegatingCanvas.field_d, "", "Run_1_Death").b();
+                            ia.field_i[0][dg.field_T[1]][1] = q.a(DelegatingCanvas.field_d, "", "Run_2_Death").b();
+                            ia.field_i[0][dg.field_T[1]][2] = q.a(DelegatingCanvas.field_d, "", "Run_3_Death").b();
+                            ia.field_i[2][dg.field_T[1]][0] = q.a(DelegatingCanvas.field_d, "", "Run_1_Step").b();
+                            ia.field_i[2][dg.field_T[1]][1] = q.a(DelegatingCanvas.field_d, "", "Run_2_Step").b();
+                            ia.field_i[2][dg.field_T[1]][2] = q.a(DelegatingCanvas.field_d, "", "Run_3_Step").b();
+                            ia.field_i[3][dg.field_T[1]][1] = q.a(DelegatingCanvas.field_d, "", "Run_Jump").b();
                             ia.field_i[3][dg.field_T[1]][2] = ia.field_i[3][dg.field_T[1]][1];
-                            ia.field_i[4][dg.field_T[1]][1] = q.a(pk.field_d, "", "Run_land").b();
+                            ia.field_i[4][dg.field_T[1]][1] = q.a(DelegatingCanvas.field_d, "", "Run_land").b();
                             ia.field_i[4][dg.field_T[1]][2] = ia.field_i[4][dg.field_T[1]][2];
-                            ia.field_i[0][dg.field_T[2]][0] = q.a(pk.field_d, "", "Spitter_1_Death").b();
-                            ia.field_i[0][dg.field_T[2]][1] = q.a(pk.field_d, "", "Spitter_2_Death").b();
-                            ia.field_i[0][dg.field_T[2]][2] = q.a(pk.field_d, "", "Spitter_3_Death").b();
-                            ia.field_i[2][dg.field_T[2]][0] = q.a(pk.field_d, "", "Spitter_1_Step").b();
-                            ia.field_i[2][dg.field_T[2]][1] = q.a(pk.field_d, "", "Spitter_2_Step").b();
-                            ia.field_i[2][dg.field_T[2]][2] = q.a(pk.field_d, "", "Spitter_3_Step").b();
-                            ia.field_i[4][dg.field_T[2]][0] = q.a(pk.field_d, "", "Spitter_Land").b();
+                            ia.field_i[0][dg.field_T[2]][0] = q.a(DelegatingCanvas.field_d, "", "Spitter_1_Death").b();
+                            ia.field_i[0][dg.field_T[2]][1] = q.a(DelegatingCanvas.field_d, "", "Spitter_2_Death").b();
+                            ia.field_i[0][dg.field_T[2]][2] = q.a(DelegatingCanvas.field_d, "", "Spitter_3_Death").b();
+                            ia.field_i[2][dg.field_T[2]][0] = q.a(DelegatingCanvas.field_d, "", "Spitter_1_Step").b();
+                            ia.field_i[2][dg.field_T[2]][1] = q.a(DelegatingCanvas.field_d, "", "Spitter_2_Step").b();
+                            ia.field_i[2][dg.field_T[2]][2] = q.a(DelegatingCanvas.field_d, "", "Spitter_3_Step").b();
+                            ia.field_i[4][dg.field_T[2]][0] = q.a(DelegatingCanvas.field_d, "", "Spitter_Land").b();
                             ia.field_i[4][dg.field_T[2]][1] = ia.field_i[4][dg.field_T[2]][0];
                             ia.field_i[4][dg.field_T[2]][2] = ia.field_i[4][dg.field_T[2]][0];
-                            ia.field_i[6][dg.field_T[2]][0] = q.a(pk.field_d, "", "Spitter_1_Spit").b();
-                            ia.field_i[6][dg.field_T[2]][1] = q.a(pk.field_d, "", "Spitter_2_Spit").b();
-                            ia.field_i[6][dg.field_T[2]][2] = q.a(pk.field_d, "", "Spitter_3_Spit").b();
-                            ia.field_i[4][dg.field_T[7]][0] = q.a(pk.field_d, "", "Spitter_1_Spit_Impact").b();
-                            ia.field_i[4][dg.field_T[7]][1] = q.a(pk.field_d, "", "Spitter_2_Spit_Impact").b();
-                            ia.field_i[4][dg.field_T[7]][2] = q.a(pk.field_d, "", "Spitter_3_Spit_Impact").b();
-                            ia.field_i[0][dg.field_T[3]][0] = q.a(pk.field_d, "", "Thud_1_Death").b();
-                            ia.field_i[0][dg.field_T[3]][1] = q.a(pk.field_d, "", "Thud_2_Death").b();
-                            ia.field_i[0][dg.field_T[3]][2] = q.a(pk.field_d, "", "Thud_3_Death").b();
-                            ia.field_i[7][dg.field_T[3]][2] = q.a(pk.field_d, "", "Thud_3_Charge_Step").b();
-                            ia.field_i[4][dg.field_T[3]][0] = q.a(pk.field_d, "", "Thud_Land").b();
+                            ia.field_i[6][dg.field_T[2]][0] = q.a(DelegatingCanvas.field_d, "", "Spitter_1_Spit").b();
+                            ia.field_i[6][dg.field_T[2]][1] = q.a(DelegatingCanvas.field_d, "", "Spitter_2_Spit").b();
+                            ia.field_i[6][dg.field_T[2]][2] = q.a(DelegatingCanvas.field_d, "", "Spitter_3_Spit").b();
+                            ia.field_i[4][dg.field_T[7]][0] = q.a(DelegatingCanvas.field_d, "", "Spitter_1_Spit_Impact").b();
+                            ia.field_i[4][dg.field_T[7]][1] = q.a(DelegatingCanvas.field_d, "", "Spitter_2_Spit_Impact").b();
+                            ia.field_i[4][dg.field_T[7]][2] = q.a(DelegatingCanvas.field_d, "", "Spitter_3_Spit_Impact").b();
+                            ia.field_i[0][dg.field_T[3]][0] = q.a(DelegatingCanvas.field_d, "", "Thud_1_Death").b();
+                            ia.field_i[0][dg.field_T[3]][1] = q.a(DelegatingCanvas.field_d, "", "Thud_2_Death").b();
+                            ia.field_i[0][dg.field_T[3]][2] = q.a(DelegatingCanvas.field_d, "", "Thud_3_Death").b();
+                            ia.field_i[7][dg.field_T[3]][2] = q.a(DelegatingCanvas.field_d, "", "Thud_3_Charge_Step").b();
+                            ia.field_i[4][dg.field_T[3]][0] = q.a(DelegatingCanvas.field_d, "", "Thud_Land").b();
                             ia.field_i[4][dg.field_T[3]][1] = ia.field_i[4][dg.field_T[3]][0];
                             ia.field_i[4][dg.field_T[3]][2] = ia.field_i[4][dg.field_T[3]][0];
-                            ia.field_i[6][dg.field_T[3]][1] = q.a(pk.field_d, "", "Thud_Rock_Throw").b();
+                            ia.field_i[6][dg.field_T[3]][1] = q.a(DelegatingCanvas.field_d, "", "Thud_Rock_Throw").b();
                             ia.field_i[6][dg.field_T[3]][2] = ia.field_i[4][dg.field_T[3]][1];
-                            ia.field_i[2][dg.field_T[3]][0] = q.a(pk.field_d, "", "Thud_Step").b();
+                            ia.field_i[2][dg.field_T[3]][0] = q.a(DelegatingCanvas.field_d, "", "Thud_Step").b();
                             ia.field_i[2][dg.field_T[3]][1] = ia.field_i[2][dg.field_T[3]][0];
                             ia.field_i[2][dg.field_T[3]][2] = ia.field_i[2][dg.field_T[3]][0];
-                            ia.field_i[4][dg.field_T[22]][1] = q.a(pk.field_d, "", "Thud_Rock_Impact").b();
+                            ia.field_i[4][dg.field_T[22]][1] = q.a(DelegatingCanvas.field_d, "", "Thud_Rock_Impact").b();
                             ia.field_i[4][dg.field_T[22]][2] = ia.field_i[4][dg.field_T[22]][1];
-                            ia.field_i[0][dg.field_T[4]][0] = q.a(pk.field_d, "", "Rocket_1_Death").b();
-                            ia.field_i[0][dg.field_T[4]][1] = q.a(pk.field_d, "", "Rocket_2_Death").b();
-                            ia.field_i[0][dg.field_T[4]][2] = q.a(pk.field_d, "", "Rocket_3_Death").b();
-                            ia.field_i[1][dg.field_T[4]][0] = q.a(pk.field_d, "", "Rocket_Roar_Loop").b();
+                            ia.field_i[0][dg.field_T[4]][0] = q.a(DelegatingCanvas.field_d, "", "Rocket_1_Death").b();
+                            ia.field_i[0][dg.field_T[4]][1] = q.a(DelegatingCanvas.field_d, "", "Rocket_2_Death").b();
+                            ia.field_i[0][dg.field_T[4]][2] = q.a(DelegatingCanvas.field_d, "", "Rocket_3_Death").b();
+                            ia.field_i[1][dg.field_T[4]][0] = q.a(DelegatingCanvas.field_d, "", "Rocket_Roar_Loop").b();
                             ia.field_i[1][dg.field_T[4]][1] = ia.field_i[1][dg.field_T[4]][0];
                             ia.field_i[1][dg.field_T[4]][2] = ia.field_i[1][dg.field_T[4]][1];
-                            ia.field_i[0][dg.field_T[5]][0] = q.a(pk.field_d, "", "Slime_1_Death").b();
-                            ia.field_i[0][dg.field_T[5]][1] = q.a(pk.field_d, "", "Slime_2_Death").b();
-                            ia.field_i[0][dg.field_T[5]][2] = q.a(pk.field_d, "", "Slime_3_Death").b();
-                            ia.field_i[2][dg.field_T[5]][1] = q.a(pk.field_d, "", "Slime_2_Move").b();
-                            ia.field_i[2][dg.field_T[5]][2] = q.a(pk.field_d, "", "Slime_3_Move").b();
-                            ia.field_i[5][dg.field_T[5]][0] = q.a(pk.field_d, "", "Slime_Fall").b();
+                            ia.field_i[0][dg.field_T[5]][0] = q.a(DelegatingCanvas.field_d, "", "Slime_1_Death").b();
+                            ia.field_i[0][dg.field_T[5]][1] = q.a(DelegatingCanvas.field_d, "", "Slime_2_Death").b();
+                            ia.field_i[0][dg.field_T[5]][2] = q.a(DelegatingCanvas.field_d, "", "Slime_3_Death").b();
+                            ia.field_i[2][dg.field_T[5]][1] = q.a(DelegatingCanvas.field_d, "", "Slime_2_Move").b();
+                            ia.field_i[2][dg.field_T[5]][2] = q.a(DelegatingCanvas.field_d, "", "Slime_3_Move").b();
+                            ia.field_i[5][dg.field_T[5]][0] = q.a(DelegatingCanvas.field_d, "", "Slime_Fall").b();
                             ia.field_i[5][dg.field_T[5]][1] = ia.field_i[5][dg.field_T[5]][0];
                             ia.field_i[5][dg.field_T[5]][2] = ia.field_i[5][dg.field_T[5]][0];
-                            ia.field_i[4][dg.field_T[5]][0] = q.a(pk.field_d, "", "Slime_Impact").b();
+                            ia.field_i[4][dg.field_T[5]][0] = q.a(DelegatingCanvas.field_d, "", "Slime_Impact").b();
                             ia.field_i[4][dg.field_T[5]][1] = ia.field_i[4][dg.field_T[5]][0];
                             ia.field_i[4][dg.field_T[5]][2] = ia.field_i[4][dg.field_T[5]][0];
-                            ia.field_i[0][dg.field_T[6]][0] = q.a(pk.field_d, "", "Grinder_2_Death").b();
-                            ia.field_i[4][dg.field_T[6]][1] = q.a(pk.field_d, "", "Grinder_2_Wall_Impact").b();
-                            ia.field_i[4][dg.field_T[6]][2] = q.a(pk.field_d, "", "Grinder_3_Wall_Impact").b();
-                            bf.field_c[0][0] = q.a(pk.field_d, "", "Boss_1_Jump").b();
-                            bf.field_c[0][1] = q.a(pk.field_d, "", "Boss_1_Land").b();
-                            bf.field_c[0][2] = q.a(pk.field_d, "", "Boss_1_Miss_Combo").b();
-                            bf.field_c[0][3] = q.a(pk.field_d, "", "Boss_1_Step").b();
-                            bf.field_c[0][4] = q.a(pk.field_d, "", "Boss_1_Step2").b();
-                            bf.field_c[0][5] = q.a(pk.field_d, "", "Boss_1_Weapon_Impact").b();
-                            bf.field_c[1][0] = q.a(pk.field_d, "", "Boss_2_Jump").b();
-                            bf.field_c[1][1] = q.a(pk.field_d, "", "Boss_2_Land").b();
-                            bf.field_c[1][2] = q.a(pk.field_d, "", "Boss_2_Miss_Combo").b();
-                            bf.field_c[1][3] = q.a(pk.field_d, "", "Boss_2_Step").b();
-                            bf.field_c[1][5] = q.a(pk.field_d, "", "Boss_2_Weapon_Impact").b();
-                            bf.field_c[2][0] = q.a(pk.field_d, "", "Boss_3_Jump").b();
-                            bf.field_c[2][1] = q.a(pk.field_d, "", "Boss_3_Land").b();
-                            bf.field_c[2][2] = q.a(pk.field_d, "", "Boss_3_Miss_Combo").b();
-                            bf.field_c[2][3] = q.a(pk.field_d, "", "Boss_3_Step").b();
-                            bf.field_c[2][4] = q.a(pk.field_d, "", "Boss_3_Step2").b();
-                            bf.field_c[2][5] = q.a(pk.field_d, "", "Boss_3_Weapon_Impact").b();
-                            cj.field_h[0] = q.a(pk.field_d, "", "collect1").b();
-                            cj.field_h[1] = q.a(pk.field_d, "", "collect2").b();
-                            cj.field_h[2] = q.a(pk.field_d, "", "Exit_Door").b();
-                            cj.field_h[3] = q.a(pk.field_d, "", "Extra_HP").b();
-                            cj.field_h[4] = q.a(pk.field_d, "", "Extra_Life").b();
-                            cj.field_h[5] = q.a(pk.field_d, "", "Health_Drink").b();
-                            cj.field_h[6] = q.a(pk.field_d, "", "Help_Bubble").b();
-                            cj.field_h[7] = q.a(pk.field_d, "", "seal_active").b();
-                            cj.field_h[8] = q.a(pk.field_d, "", "seal_achieved").b();
-                            cj.field_h[9] = q.a(pk.field_d, "", "Timer").b();
-                            cj.field_h[10] = q.a(pk.field_d, "", "Timer_Ending").b();
+                            ia.field_i[0][dg.field_T[6]][0] = q.a(DelegatingCanvas.field_d, "", "Grinder_2_Death").b();
+                            ia.field_i[4][dg.field_T[6]][1] = q.a(DelegatingCanvas.field_d, "", "Grinder_2_Wall_Impact").b();
+                            ia.field_i[4][dg.field_T[6]][2] = q.a(DelegatingCanvas.field_d, "", "Grinder_3_Wall_Impact").b();
+                            bf.field_c[0][0] = q.a(DelegatingCanvas.field_d, "", "Boss_1_Jump").b();
+                            bf.field_c[0][1] = q.a(DelegatingCanvas.field_d, "", "Boss_1_Land").b();
+                            bf.field_c[0][2] = q.a(DelegatingCanvas.field_d, "", "Boss_1_Miss_Combo").b();
+                            bf.field_c[0][3] = q.a(DelegatingCanvas.field_d, "", "Boss_1_Step").b();
+                            bf.field_c[0][4] = q.a(DelegatingCanvas.field_d, "", "Boss_1_Step2").b();
+                            bf.field_c[0][5] = q.a(DelegatingCanvas.field_d, "", "Boss_1_Weapon_Impact").b();
+                            bf.field_c[1][0] = q.a(DelegatingCanvas.field_d, "", "Boss_2_Jump").b();
+                            bf.field_c[1][1] = q.a(DelegatingCanvas.field_d, "", "Boss_2_Land").b();
+                            bf.field_c[1][2] = q.a(DelegatingCanvas.field_d, "", "Boss_2_Miss_Combo").b();
+                            bf.field_c[1][3] = q.a(DelegatingCanvas.field_d, "", "Boss_2_Step").b();
+                            bf.field_c[1][5] = q.a(DelegatingCanvas.field_d, "", "Boss_2_Weapon_Impact").b();
+                            bf.field_c[2][0] = q.a(DelegatingCanvas.field_d, "", "Boss_3_Jump").b();
+                            bf.field_c[2][1] = q.a(DelegatingCanvas.field_d, "", "Boss_3_Land").b();
+                            bf.field_c[2][2] = q.a(DelegatingCanvas.field_d, "", "Boss_3_Miss_Combo").b();
+                            bf.field_c[2][3] = q.a(DelegatingCanvas.field_d, "", "Boss_3_Step").b();
+                            bf.field_c[2][4] = q.a(DelegatingCanvas.field_d, "", "Boss_3_Step2").b();
+                            bf.field_c[2][5] = q.a(DelegatingCanvas.field_d, "", "Boss_3_Weapon_Impact").b();
+                            cj.field_h[0] = q.a(DelegatingCanvas.field_d, "", "collect1").b();
+                            cj.field_h[1] = q.a(DelegatingCanvas.field_d, "", "collect2").b();
+                            cj.field_h[2] = q.a(DelegatingCanvas.field_d, "", "Exit_Door").b();
+                            cj.field_h[3] = q.a(DelegatingCanvas.field_d, "", "Extra_HP").b();
+                            cj.field_h[4] = q.a(DelegatingCanvas.field_d, "", "Extra_Life").b();
+                            cj.field_h[5] = q.a(DelegatingCanvas.field_d, "", "Health_Drink").b();
+                            cj.field_h[6] = q.a(DelegatingCanvas.field_d, "", "Help_Bubble").b();
+                            cj.field_h[7] = q.a(DelegatingCanvas.field_d, "", "seal_active").b();
+                            cj.field_h[8] = q.a(DelegatingCanvas.field_d, "", "seal_achieved").b();
+                            cj.field_h[9] = q.a(DelegatingCanvas.field_d, "", "Timer").b();
+                            cj.field_h[10] = q.a(DelegatingCanvas.field_d, "", "Timer_Ending").b();
                             cj.field_h[11] = cj.field_h[7];
-                            cj.field_h[12] = q.a(pk.field_d, "", "Exit_Door_active").b();
-                            pk.field_d = null;
+                            cj.field_h[12] = q.a(DelegatingCanvas.field_d, "", "Exit_Door_active").b();
+                            DelegatingCanvas.field_d = null;
                             id.a(62);
                             return false;
                           }
-                          mh.a(pk.a(256, "Loading Levels", "", qh.field_M, "Waiting for Levels"), (byte) -125, 60.0f);
+                          mh.a(DelegatingCanvas.a(256, "Loading Levels", "", qh.field_M, "Waiting for Levels"), (byte) -125, 60.0f);
                           return false;
                         }
-                        mh.a(pk.a(256, ij.field_x, "", bh.field_q, wf.field_a), (byte) -125, 60.0f);
+                        mh.a(DelegatingCanvas.a(256, ij.field_x, "", bh.field_q, wf.field_a), (byte) -125, 60.0f);
                         return false;
                       }
-                      mh.a(pk.a(256, ra.field_m, "", ic.field_C, uk.field_K), (byte) -125, 50.0f);
+                      mh.a(DelegatingCanvas.a(256, ra.field_m, "", ic.field_C, uk.field_K), (byte) -125, 50.0f);
                       return false;
                     }
-                    mh.a(pk.a(256, ui.field_e, "", fh.field_f, qh.field_L), (byte) -125, 40.0f);
+                    mh.a(DelegatingCanvas.a(256, ui.field_e, "", fh.field_f, qh.field_L), (byte) -125, 40.0f);
                     return false;
                   }
-                  mh.a(fc.a(qh.field_L, cl.field_y, 0, 89, ui.field_e), (byte) -125, 30.0f);
+                  mh.a(ProxySocketConnector.a(qh.field_L, cl.field_y, 0, 89, ui.field_e), (byte) -125, 30.0f);
                   return false;
                 }
-                mh.a(pk.a(256, ie.field_c, "", lk.field_f, cb.field_a), (byte) -125, 20.0f);
+                mh.a(DelegatingCanvas.a(256, ie.field_c, "", lk.field_f, cb.field_a), (byte) -125, 20.0f);
                 return false;
               }
-              mh.a(pk.a(256, ie.field_c, "", pk.field_d, cb.field_a), (byte) -125, 10.0f);
+              mh.a(DelegatingCanvas.a(256, ie.field_c, "", DelegatingCanvas.field_d, cb.field_a), (byte) -125, 10.0f);
               return false;
             }
-            mh.a(pk.a(256, ra.field_m, "basic", aj.field_f, uk.field_K), (byte) -125, 3.0f);
+            mh.a(DelegatingCanvas.a(256, ra.field_m, "basic", aj.field_f, uk.field_K), (byte) -125, 3.0f);
             return false;
           }
           if (qh.field_M != null) {
-            je.field_c = new byte[cg.field_c.length][];
+            je.field_c = new byte[cg.levelNames.length][];
             var3_int = 0;
             do {
               if (!(var3_int < je.field_c.length)) {
@@ -1348,13 +1348,13 @@ public final class TorChallenge extends d {
                 id.a(108);
                 break;
               }
-              je.field_c[var3_int] = qh.field_M.a(-2, cg.field_c[var3_int], "");
+              je.field_c[var3_int] = qh.field_M.a(-2, cg.levelNames[var3_int], "");
               var3_int++;
             } while (var4 == 0);
             return false;
           }
           if (null != lk.field_f) {
-            mh.a(pk.field_a, (byte) -125, 70.0f);
+            mh.a(DelegatingCanvas.field_a, (byte) -125, 70.0f);
             this.f(7808);
             cg.field_a[3] = wg.a(lk.field_f, "", "Henhui_character_select").c();
             cg.field_a[4] = wg.a(lk.field_f, "", "Ziren_character_select").c();
@@ -1456,10 +1456,10 @@ public final class TorChallenge extends d {
             je.field_b = qk.a("basic", "unachieved", aj.field_f, 0);
             bc.field_f = qk.a("basic", "orbcoin", aj.field_f, 0);
             hb.field_c = qk.a("basic", "locked", aj.field_f, 0);
-            fd.a((byte) -44, je.field_b);
-            fd.a((byte) -44, bc.field_f);
-            fd.a((byte) -44, hb.field_c);
-            ul.a(aj.field_f, -1656370552, ad.field_g);
+            IterableNodeHashTable.a((byte) -44, je.field_b);
+            IterableNodeHashTable.a((byte) -44, bc.field_f);
+            IterableNodeHashTable.a((byte) -44, hb.field_c);
+            ul.a(aj.field_f, -1656370552, FullscreenFocusCanvas.field_g);
             aj.field_f = null;
             id.a(51);
             return false;
@@ -1478,7 +1478,7 @@ public final class TorChallenge extends d {
             var3_int = 0;
             while (true) {
               if (16 > var3_int) {
-                ug.field_i[var3_int] = new pd(var3_int, this);
+                GameApplet.field_i[var3_int] = new pd(var3_int, this);
                 var3_int++;
                 if (var4 == 0) {
                   continue;
@@ -1486,12 +1486,12 @@ public final class TorChallenge extends d {
               } else {
                 bb.field_h = 12;
                 bc.field_o = 12;
-                ug.field_i[12].a(3, true);
+                GameApplet.field_i[12].a(3, true);
                 al.b(50, true);
                 u.a((byte) 102, 50);
                 o.a(-126, 50);
               }
-              if (d.p(-83)) {
+              if (GameClientBase.p(-83)) {
                 break;
               }
               qa.field_g = be.a(4, 31315);
@@ -1511,7 +1511,7 @@ public final class TorChallenge extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3), "TorChallenge.F(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3), "TorChallenge.F(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -1542,7 +1542,7 @@ public final class TorChallenge extends d {
                 }
               }
               boolean decompiledFrameRemainder0 = true;
-              if (d.p(-115)) {
+              if (GameClientBase.p(-115)) {
                 bc.field_o = m.field_h;
                 decompiledFrameRemainder0 = (var3 != 0);
               }
@@ -1554,7 +1554,7 @@ public final class TorChallenge extends d {
                 vh.field_d[2] = v.b(1, 256, 5, 2);
                 eb.field_l = kk.b(6, param0 - 6262);
                 if (null != ji.field_m) {
-                  gl.field_a = true;
+                  SocketConnector.field_a = true;
                   oi.a(true, true, false);
                 }
                 if (ji.field_m != null) {
@@ -1643,28 +1643,28 @@ public final class TorChallenge extends d {
           if (bc.field_o != -1) {
             if (8 == bc.field_o ||
               bc.field_o == 9) {
-              ug.field_i[8].f(9504);
-              ug.field_i[9].f(9504);
+              GameApplet.field_i[8].f(9504);
+              GameApplet.field_i[9].f(9504);
               if (var3 == 0) {
                 return;
               }
             }
             if (bc.field_o == 10 ||
               11 == bc.field_o) {
-              ug.field_i[10].f(9504);
-              ug.field_i[11].f(9504);
+              GameApplet.field_i[10].f(9504);
+              GameApplet.field_i[11].f(9504);
               if (var3 == 0) {
                 return;
               }
             }
             if (3 != bc.field_o) {
-              ug.field_i[bc.field_o].f(9504);
+              GameApplet.field_i[bc.field_o].f(9504);
               if (var3 == 0) {
                 return;
               }
             }
-            ug.field_i[3].f(9504);
-            ug.field_i[14].f(9504);
+            GameApplet.field_i[3].f(9504);
+            GameApplet.field_i[14].f(9504);
             if (var3 == 0) {
               return;
             }
@@ -1674,7 +1674,7 @@ public final class TorChallenge extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "TorChallenge.O(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "TorChallenge.O(" + param0 + ')');
         }
     }
 
@@ -1693,13 +1693,13 @@ public final class TorChallenge extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "TorChallenge.J(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "TorChallenge.J(" + param0 + ')');
         }
     }
 
     private final void b(boolean param0) {
-        ka[] array$0 = null;
-        ka[] array$1 = null;
+        Sprite[] array$0 = null;
+        Sprite[] array$1 = null;
         int stackIn_12_0 = 0;
         int stackIn_16_0 = 0;
         int stackIn_32_0 = 0;
@@ -1757,13 +1757,13 @@ public final class TorChallenge extends d {
               decompiledFrameRemainder0 = (var9 == 0);
               if (decompiledFrameRemainder0) {
                 var6 = stackIn_32_0;
-                L8: while (true) {
+                scanLoop1: while (true) {
                   stackIn_16_0 = ~var6;
                   if (stackIn_16_0 > -9) {
                     stackIn_12_0 = 0;
                     var7 = stackIn_12_0;
                     while (var7 < 3) {
-                      array$0 = new ka[h.field_b[var6][var5][var7]];
+                      array$0 = new Sprite[h.field_b[var6][var5][var7]];
                       ah.field_d[var5][var6][var7] = array$0;
                       stackIn_16_0 = 0;
                       var8 = stackIn_16_0;
@@ -1774,7 +1774,7 @@ public final class TorChallenge extends d {
                       var7++;
                     }
                     var6++;
-                    continue L8;
+                    continue scanLoop1;
                   }
                   break;
                 }
@@ -1786,7 +1786,7 @@ public final class TorChallenge extends d {
               stackIn_32_0 = 0;
             }
             var5 = stackIn_32_0;
-            L16: while (true) {
+            scanLoop2: while (true) {
               stackIn_34_0 = var5;
               if (stackIn_34_0 < 8) {
                 if (var9 != 0) {
@@ -1794,7 +1794,7 @@ public final class TorChallenge extends d {
                 }
                 var6Lifetime1 = 0;
                 while (var6Lifetime1 < 3) {
-                  array$1 = new ka[h.field_b[0][var5][var6Lifetime1]];
+                  array$1 = new Sprite[h.field_b[0][var5][var6Lifetime1]];
                   ah.field_d[var5][0][var6Lifetime1] = array$1;
                   stackIn_34_0 = 0;
                   var7Lifetime1 = stackIn_34_0;
@@ -1805,7 +1805,7 @@ public final class TorChallenge extends d {
                   var6Lifetime1++;
                 }
                 var5++;
-                continue L16;
+                continue scanLoop2;
               }
               break;
             }
@@ -1814,7 +1814,7 @@ public final class TorChallenge extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "TorChallenge.M(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "TorChallenge.M(" + param0 + ')');
         }
     }
 
@@ -1831,7 +1831,7 @@ public final class TorChallenge extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "TorChallenge.I(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "TorChallenge.I(" + param0 + ')');
         }
     }
 
@@ -1849,21 +1849,21 @@ public final class TorChallenge extends d {
           id.a(false);
           gb.a(123);
           kf.a((byte) -100);
-          d.h(127);
-          jd.a(640);
-          ug.a((byte) -57);
+          GameClientBase.h(127);
+          ClientException.a(640);
+          GameApplet.a((byte) -57);
           we.a(25910);
-          mj.a((byte) -36);
-          vf.a((byte) -79);
-          og.a(-117);
+          GameKeyHandler.a((byte) -36);
+          MouseInputHandler.a((byte) -79);
+          MouseWheelInput.a(-117);
           if (param0 < 103) {
             TorChallenge.a((String) null, true, -106, 32, (String) null, (String) null, -51);
           }
-          qg.c();
+          SoftwareRasterizer.c();
           eg.a();
           qc.a((byte) 26);
           nk.a(250);
-          uf.d(128);
+          PacketBuffer.d(128);
           ol.a((byte) -99);
           mb.a((byte) -116);
           ik.a(true);
@@ -1877,9 +1877,9 @@ public final class TorChallenge extends d {
           ve.a(-126);
           gi.a(10);
           jl.b(118);
-          oe.b(-15721);
+          RasterBuffer.b(-15721);
           r.a((byte) 96);
-          ad.a(0);
+          FullscreenFocusCanvas.a(0);
           cd.b((byte) 79);
           u.a(-26193);
           pd.k(1);
@@ -1891,8 +1891,8 @@ public final class TorChallenge extends d {
           rb.b(-98);
           oa.b(122);
           rk.b(true);
-          wb.a(true);
-          da.a((byte) -92);
+          BufferedSocket.a(true);
+          IntrusiveNode.a((byte) -92);
           kb.c(128);
           dl.b(false);
           pc.b();
@@ -1905,7 +1905,7 @@ public final class TorChallenge extends d {
           h.a(38);
           ec.a(-1);
           ck.b(255);
-          qe.d(true);
+          LevelEntity.d(true);
           ra.a((byte) 125);
           tf.a((byte) 106);
           hd.a((byte) 102);
@@ -1936,8 +1936,8 @@ public final class TorChallenge extends d {
           pa.n(6);
           bi.b(0);
           jc.a(-108);
-          tg.b(false);
-          w.b((byte) 68);
+          SpriteState.b(false);
+          DualLinkNode.b((byte) 68);
           fi.d();
           vl.a(0);
           jh.a(-14282);
@@ -1960,7 +1960,7 @@ public final class TorChallenge extends d {
           la.b((byte) -64);
           al.c((byte) 99);
           di.a(false);
-          nd.a(0);
+          RandomAccessCacheFile.a(0);
           ai.a(2048);
           sh.b(true);
           cb.b(-9386);
@@ -1978,17 +1978,17 @@ public final class TorChallenge extends d {
           af.a(-7604);
           kg.e(-8796);
           aa.a(2432);
-          pk.a(false);
+          DelegatingCanvas.a(false);
           vc.a(false);
           gh.a(-16742);
-          mf.a(3);
+          LevelDecoder.a(3);
           ob.a(887316838);
           mc.a(false);
           ga.b((byte) -79);
           g.a(28215);
           ph.a(2);
           lg.a(-27840);
-          ee.f(107);
+          UiComponent.f(107);
           ng.c(true);
           ic.g(1);
           v.c(false);
@@ -2005,10 +2005,10 @@ public final class TorChallenge extends d {
           ca.a(32);
           ba.a((byte) -5);
           ie.a((byte) 33);
-          gl.a(-26425);
+          SocketConnector.a(-26425);
           bj.b(-38);
           bd.b((byte) 126);
-          dd.d(15752);
+          ImageProducerRasterBuffer.d(15752);
           ja.a(75);
           s.a(2);
           ua.a(102);
@@ -2037,14 +2037,14 @@ public final class TorChallenge extends d {
           m.a(128);
           uk.d((byte) 50);
           k.a(true);
-          fd.b(0);
-          ak.a((byte) -103);
+          IterableNodeHashTable.b(0);
+          SecondaryNodeDeque.a((byte) -103);
           lb.d(18972);
           re.e((byte) -114);
-          fc.c(67);
+          ProxySocketConnector.c(67);
           qf.a((byte) 75);
-          md.b(-1);
-          ag.b(640);
+          NodeHashTableIterator.b(-1);
+          SecondaryNodeDequeIterator.b(640);
           ae.b(true);
           ji.a(65535);
           vk.a(68);
@@ -2082,7 +2082,7 @@ public final class TorChallenge extends d {
           i.g(-14298);
           bh.f(1);
           il.g(8);
-          kc.d((byte) 102);
+          LocalizedStrings.d((byte) 102);
           ci.f(68);
           gf.d((byte) -113);
           p.a(true);
@@ -2095,7 +2095,7 @@ public final class TorChallenge extends d {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "TorChallenge.P(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "TorChallenge.P(" + param0 + ')');
         }
     }
 

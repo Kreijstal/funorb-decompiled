@@ -82,7 +82,7 @@ final class cd {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -107,12 +107,12 @@ final class cd {
           var6 = stackIn_9_0;
           ub.field_i = false;
         }
-        ba.field_i.a(true, 18, true, (ka) null, 3, df.field_R, aa.field_g, kc.field_u, ph.field_d);
-        md.field_j = null;
-        ba.field_i.a(true, 18, true, (ka) null, 6, df.field_R, aa.field_g, kc.field_u, ph.field_d);
-        ba.field_i.a(true, 18, true, (ka) null, 2, df.field_R, aa.field_g, kc.field_u, ph.field_d);
-        wb.field_p.a(aa.field_g, df.field_R, wb.field_p.field_B, wb.field_p.field_H, wb.field_p.field_o, 0, 2657, wb.field_p.field_u);
-        wb.field_p.a((byte) 79, df.field_R, aa.field_g);
+        ba.field_i.a(true, 18, true, (Sprite) null, 3, df.field_R, aa.field_g, LocalizedStrings.field_u, ph.field_d);
+        NodeHashTableIterator.field_j = null;
+        ba.field_i.a(true, 18, true, (Sprite) null, 6, df.field_R, aa.field_g, LocalizedStrings.field_u, ph.field_d);
+        ba.field_i.a(true, 18, true, (Sprite) null, 2, df.field_R, aa.field_g, LocalizedStrings.field_u, ph.field_d);
+        BufferedSocket.field_p.a(aa.field_g, df.field_R, BufferedSocket.field_p.field_B, BufferedSocket.field_p.field_H, BufferedSocket.field_p.field_o, 0, 2657, BufferedSocket.field_p.field_u);
+        BufferedSocket.field_p.a((byte) 79, df.field_R, aa.field_g);
         if (param1 != -1) {
           if (ii.field_d) {
             qh.a(param1, true);
@@ -142,7 +142,7 @@ final class cd {
           if (this.field_m > ul.field_l) {
             return false;
           }
-          if (ee.field_o > 0) {
+          if (UiComponent.field_o > 0) {
             return true;
           }
           return false;
@@ -150,26 +150,26 @@ final class cd {
         if (this.field_m > ul.field_l) {
           return false;
         }
-        if (ee.field_o > 0) {
+        if (UiComponent.field_o > 0) {
           return true;
         }
         return false;
     }
 
-    final ad a(byte param0) {
-        ad var2 = null;
+    final FullscreenFocusCanvas a(byte param0) {
+        FullscreenFocusCanvas var2 = null;
         this.field_y = sd.field_c;
         this.field_r = fl.field_v;
         this.field_t.a(this.field_A, -77, this.field_u);
         if (param0 < -74) {
           sa.field_c = false;
-          var2 = dd.a(0, sh.field_u, 124, this.field_u, 0, this.field_A);
+          var2 = ImageProducerRasterBuffer.a(0, sh.field_u, 124, this.field_u, 0, this.field_A);
           if (var2 == null) {
             this.d(-1);
           }
           return var2;
         }
-        return (ad) null;
+        return (FullscreenFocusCanvas) null;
     }
 
     private final void b(int param0) {
@@ -343,7 +343,7 @@ final class cd {
         if (gi.field_d != null) {
           return;
         }
-        if (ee.field_o > 0) {
+        if (UiComponent.field_o > 0) {
           if (this.field_k) {
             fieldTemp$1 = this.field_w - 1;
             this.field_w = this.field_w - 1;

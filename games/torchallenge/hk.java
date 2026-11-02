@@ -30,9 +30,9 @@ final class hk {
             }
             boolean decompiledFrameRemainder0 = true;
             if (0 >= fh.field_h[var5]) {
-              if (tg.field_r[var5] != null &&
+              if (SpriteState.field_r[var5] != null &&
                 wh.field_d[var5]) {
-                je.a((byte) 15, tg.field_r[var5]);
+                je.a((byte) 15, SpriteState.field_r[var5]);
               }
               wh.field_d[var5] = false;
             } else {
@@ -41,7 +41,7 @@ final class hk {
                 var2 >= 0 &&
                 ea.field_g.length > var2) {
                 var1_int = fh.field_h[var5];
-                if (tg.field_r[var5] == null) {
+                if (SpriteState.field_r[var5] == null) {
                   if (var5 == 0) {
                     var4 = 11;
                   }
@@ -51,24 +51,24 @@ final class hk {
                   decompiledFrameRemainder0 = !(var4 < 0);
                   if (decompiledFrameRemainder0) {
                     var3 = cj.field_h[var4];
-                    tg.field_r[var5] = nc.a(var3, 100, var1_int);
-                    tg.field_r[var5].e(-1);
-                    tg.field_r[var5].e(0, var3.field_k.length);
-                    da.field_g[var5] = we.a(tg.field_r[var5], 6222);
+                    SpriteState.field_r[var5] = nc.a(var3, 100, var1_int);
+                    SpriteState.field_r[var5].e(-1);
+                    SpriteState.field_r[var5].e(0, var3.field_k.length);
+                    IntrusiveNode.field_g[var5] = we.a(SpriteState.field_r[var5], 6222);
                     wh.field_d[var5] = true;
                     fk.field_u[var5] = 25;
                   }
                 }
                 if (decompiledFrameRemainder0) {
                   if (!wh.field_d[var5]) {
-                    tg.field_r[var5].h(var1_int);
-                    da.field_g[var5] = we.a(tg.field_r[var5], 6222);
+                    SpriteState.field_r[var5].h(var1_int);
+                    IntrusiveNode.field_g[var5] = we.a(SpriteState.field_r[var5], 6222);
                     wh.field_d[var5] = true;
                     fk.field_u[var5] = 25;
                   }
                   if (wh.field_d[var5] &&
                     fk.field_u[var5] == 0) {
-                    tg.field_r[var5].f(25, var1_int);
+                    SpriteState.field_r[var5].f(25, var1_int);
                     fk.field_u[var5] = 25;
                   }
                 }
@@ -82,7 +82,7 @@ final class hk {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "hk.A(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "hk.A(" + param0 + ')');
         }
     }
 

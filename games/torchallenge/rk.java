@@ -13,7 +13,7 @@ final class rk {
     private long field_k;
     private byte[] field_r;
     private byte[] field_d;
-    private nd field_j;
+    private RandomAccessCacheFile field_j;
     private int field_f;
     private long field_m;
     private long field_o;
@@ -129,7 +129,7 @@ final class rk {
           } else {
             stackIn_53_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_52_0), ((StringBuilder) (Object) stackIn_52_1).append(stackIn_53_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -290,7 +290,7 @@ final class rk {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(')').toString());
         }
     }
 
@@ -341,7 +341,7 @@ final class rk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -430,7 +430,7 @@ final class rk {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -484,7 +484,7 @@ final class rk {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -621,7 +621,7 @@ final class rk {
             } else {
               stackIn_55_2 = "{...}";
             }
-            throw oj.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
+            throw oj.wrapException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -630,7 +630,7 @@ final class rk {
         }
     }
 
-    rk(nd param0, int param1, int param2) throws IOException {
+    rk(RandomAccessCacheFile param0, int param1, int param2) throws IOException {
         long dupTemp$0 = 0L;
         this.field_l = 0;
         this.field_i = -1L;
@@ -644,7 +644,7 @@ final class rk {
           this.field_q = 0L;
           this.field_r = new byte[param1];
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "rk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "rk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

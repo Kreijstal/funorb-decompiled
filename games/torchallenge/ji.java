@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ji extends da {
+final class ji extends IntrusiveNode {
     static sl field_q;
     int field_o;
     int field_l;
@@ -10,7 +10,7 @@ final class ji extends da {
     int field_s;
     int field_i;
     static String[] field_n;
-    static ka[] field_p;
+    static Sprite[] field_p;
     int field_j;
     static lj field_r;
     static vh field_k;
@@ -31,7 +31,7 @@ final class ji extends da {
           field_m = null;
           return;
         }
-        field_p = (ka[]) null;
+        field_p = (Sprite[]) null;
         field_p = null;
         field_q = null;
         field_n = null;
@@ -50,10 +50,10 @@ final class ji extends da {
             ue var4 = (ue) null;
             ji.a((byte) -117, 1, (ue) null);
           }
-          var3.d(param2.field_k, (byte) 122);
-          var3.d(param2.field_m, (byte) 122);
+          var3.writeByte(param2.field_k, (byte) 122);
+          var3.writeByte(param2.field_m, (byte) 122);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ji.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ji.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -71,7 +71,7 @@ final class ji extends da {
           this.field_o = param0;
           this.field_s = param2;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ji.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ji.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

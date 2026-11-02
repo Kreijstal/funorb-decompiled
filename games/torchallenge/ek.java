@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ek extends ee {
+final class ek extends UiComponent {
     int field_A;
     private int field_F;
-    private ka[] field_B;
+    private Sprite[] field_B;
     private int field_J;
     private int field_D;
     static k field_C;
-    private ka field_O;
-    private ka field_N;
+    private Sprite field_O;
+    private Sprite field_N;
     private int field_Q;
-    private ka field_E;
+    private Sprite field_E;
     private int field_I;
     boolean field_L;
     static int[] field_K;
@@ -29,7 +29,7 @@ final class ek extends ee {
     }
 
     final static void a(int param0, int param1) {
-        da var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         eh var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -53,7 +53,7 @@ final class ek extends ee {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2_ref), "ek.C(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2_ref), "ek.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -65,7 +65,7 @@ final class ek extends ee {
         this.g(483);
     }
 
-    private final void a(int param0, int param1, ka param2, int param3) {
+    private final void a(int param0, int param1, Sprite param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -86,16 +86,16 @@ final class ek extends ee {
             this.field_F = -127;
           }
           ie.b((byte) -9);
-          if (qg.field_a <= this.field_O.field_u + param0) {
-            ad.a(-86, this.field_E);
+          if (SoftwareRasterizer.field_a <= this.field_O.field_u + param0) {
+            FullscreenFocusCanvas.a(-86, this.field_E);
             param2.g(-this.field_F, 0);
             param2.g(-this.field_F + this.field_Q * 2, 0);
             this.field_N.c(0, 0);
             ie.b((byte) -9);
             this.field_E.g(param0, param3);
           }
-          if (qg.field_c >= -this.field_O.field_u + var5_int) {
-            ad.a(param1 - 13345, this.field_E);
+          if (SoftwareRasterizer.field_c >= -this.field_O.field_u + var5_int) {
+            FullscreenFocusCanvas.a(param1 - 13345, this.field_E);
             for (var7 = this.field_F + (this.field_p - this.field_O.field_u); 2 * this.field_Q < var7; var7 = var7 - this.field_Q * 2) {
             }
             param2.g(-var7, 0);
@@ -116,21 +116,21 @@ final class ek extends ee {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final ka a(int param0) {
+    private final Sprite a(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = TorChallenge.field_F ? 1 : 0;
         int var2 = this.field_l >> 1;
-        ka var3 = new ka(var2, this.field_l);
-        ad.a(param0 + 120, var3);
+        Sprite var3 = new Sprite(var2, this.field_l);
+        FullscreenFocusCanvas.a(param0 + 120, var3);
         if (param0 != 1) {
-          this.field_O = (ka) null;
+          this.field_O = (Sprite) null;
         }
         for (var4 = 0; var4 < this.field_l; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
@@ -140,7 +140,7 @@ final class ek extends ee {
               var6 = Math.sqrt(-var6 + 1.0);
               var8 = !(var6 >= 1.0) ? (int)(255.0 * var6) : 255;
             }
-            qg.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
+            SoftwareRasterizer.a(var5, var4, var8 << 16 | (var8 | var8 << 8));
           }
         }
         ie.b((byte) -9);
@@ -158,8 +158,8 @@ final class ek extends ee {
         this.g(param0 - 23444);
     }
 
-    final void a(ee param0, int param1, byte param2, int param3) {
-        ka discarded$1 = null;
+    final void a(UiComponent param0, int param1, byte param2, int param3) {
+        Sprite discarded$1 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -186,7 +186,7 @@ final class ek extends ee {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ final class ek extends ee {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -259,14 +259,14 @@ final class ek extends ee {
     }
 
     private final void g(int param0) {
-        this.field_B = new ka[]{this.a(false, this.field_H, this.field_D), this.a(false, this.field_I, this.field_J)};
+        this.field_B = new Sprite[]{this.a(false, this.field_H, this.field_D), this.a(false, this.field_I, this.field_J)};
         this.field_O = this.a(param0 ^ 482);
         this.field_N = this.field_O.i();
         if (param0 != 483) {
-          ka var3 = (ka) null;
-          this.a(-14, 14, (ka) null, 57);
+          Sprite var3 = (Sprite) null;
+          this.a(-14, 14, (Sprite) null, 57);
         }
-        this.field_E = new ka(this.field_l >> 1, this.field_l);
+        this.field_E = new Sprite(this.field_l >> 1, this.field_l);
     }
 
     final void a(int param0, int param1, boolean param2, int param3) {
@@ -295,7 +295,7 @@ final class ek extends ee {
         this.a((byte) 127, param0, param3, param2, param1);
     }
 
-    private final ka a(boolean param0, int param1, int param2) {
+    private final Sprite a(boolean param0, int param1, int param2) {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -308,10 +308,10 @@ final class ek extends ee {
         int var9Lifetime1;
         int var12Lifetime1;
         if (param0) {
-          return (ka) null;
+          return (Sprite) null;
         }
-        ka var14 = new ka(this.field_Q * 2, this.field_l);
-        ad.a(-126, var14);
+        Sprite var14 = new Sprite(this.field_Q * 2, this.field_l);
+        FullscreenFocusCanvas.a(-126, var14);
         int var5 = this.field_l >> 1;
         for (var6 = 0; this.field_l > var6; var6++) {
           var7 = (-1 + this.field_Q * 2) * (var6 >> 1) % (2 * this.field_Q);
@@ -320,13 +320,13 @@ final class ek extends ee {
           var10 = -var5 + var6;
           var11 = 128 + (int)(Math.sqrt((double)(var5 * var5 - var10 * var10)) / (double)var5 * 128.0);
           var12 = var11 >= 256 ? var9 | var8 : (-16711936 & var11 * var8 | 16711680 & var9 * var11) >>> 8;
-          qg.b(var7, var6, this.field_Q, var12);
+          SoftwareRasterizer.b(var7, var6, this.field_Q, var12);
           var9Lifetime1 = param1 & 65280;
-          qg.b(var7 - this.field_Q * 2, var6, this.field_Q, var12);
+          SoftwareRasterizer.b(var7 - this.field_Q * 2, var6, this.field_Q, var12);
           var8Lifetime1 = 16711935 & param1;
           var12Lifetime1 = 256 > var11 ? (var11 * var9Lifetime1 & 16711680 | -16711936 & var8Lifetime1 * var11) >>> 8 : var9Lifetime1 | var8Lifetime1;
-          qg.b(var7 + this.field_Q, var6, this.field_Q, var12Lifetime1);
-          qg.b(var7 - this.field_Q, var6, this.field_Q, var12Lifetime1);
+          SoftwareRasterizer.b(var7 + this.field_Q, var6, this.field_Q, var12Lifetime1);
+          SoftwareRasterizer.b(var7 - this.field_Q, var6, this.field_Q, var12Lifetime1);
         }
         ie.b((byte) -9);
         return var14;

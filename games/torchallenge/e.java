@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class e extends da {
+final class e extends IntrusiveNode {
     nc field_n;
     int field_l;
     static int[][] field_p;
-    da field_k;
+    IntrusiveNode field_k;
     static int field_m;
     static String field_i;
     static volatile int field_o;
@@ -20,9 +20,9 @@ final class e extends da {
         return oa.a((byte) -126, param1, pl.field_d);
     }
 
-    final static ka a(int param0, int param1, byte param2) {
+    final static Sprite a(int param0, int param1, byte param2) {
         int var5 = TorChallenge.field_F ? 1 : 0;
-        ka var3 = new ka(param1, param1);
+        Sprite var3 = new Sprite(param1, param1);
         int var4 = 0;
         if (param2 > -44) {
           e.b((byte) -104, 50);
@@ -43,14 +43,14 @@ final class e extends da {
         int var5 = 0;
         var5 = TorChallenge.field_F ? 1 : 0;
         try {
-          vj.field_d = new ka[3];
+          vj.field_d = new Sprite[3];
           if (param0 > -20) {
             e.b((byte) 64);
           }
           var2_int = 0;
           var3 = 0;
           for (var4 = 0; var4 < 3; var4++) {
-            vj.field_d[var4] = new ka(we.field_m[1 + var4].field_q + param1 * 2, 2 * param1 + we.field_m[var4 + 1].field_v);
+            vj.field_d[var4] = new Sprite(we.field_m[1 + var4].field_q + param1 * 2, 2 * param1 + we.field_m[var4 + 1].field_v);
             if (we.field_m[1 + var4].field_q > var2_int) {
               var2_int = we.field_m[var4 + 1].field_q;
             }
@@ -59,34 +59,34 @@ final class e extends da {
             }
             vj.field_d[var4].d();
             if (0 == var4) {
-              qg.a(ui.field_f);
-              qg.a(0, 0, -(2 * param1) + qg.field_g, qg.field_f);
+              SoftwareRasterizer.a(ui.field_f);
+              SoftwareRasterizer.a(0, 0, -(2 * param1) + SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
             }
             we.field_m[1 + var4].a(param1, param1, 16777215);
             if (var4 == 0) {
-              qg.b(ui.field_f);
+              SoftwareRasterizer.b(ui.field_f);
             }
-            qg.d(param1, param1, 0, 0, qg.field_g, qg.field_f);
+            SoftwareRasterizer.d(param1, param1, 0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
             la.field_f.a(-32);
             vj.field_d[var4].h();
           }
-          cg.field_g = new ka(var2_int, var3);
+          cg.field_g = new Sprite(var2_int, var3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "e.C(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "e.C(" + param0 + ',' + param1 + ')');
         }
     }
 
-    e(nc param0, da param1) {
+    e(nc param0, IntrusiveNode param1) {
         try {
           this.field_n = param0;
           this.field_l = param0.f();
           this.field_k = param1;
           this.field_n.f(128 + this.field_l * sh.field_r >> 8);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "e.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "e.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -109,18 +109,18 @@ final class e extends da {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "e.E(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "e.E(" + param0 + ',' + param1 + ')');
         }
     }
 
-    final static ka[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var14 = 0;
         int var9;
-        ka[] var10;
-        ka[] var11_ref_ka__;
+        Sprite[] var10;
+        Sprite[] var11_ref_ka__;
         int var11;
         int var12;
-        ka var13;
+        Sprite var13;
         int var15;
         int var11Lifetime1;
         int var11Lifetime2;
@@ -131,7 +131,7 @@ final class e extends da {
         int var12Lifetime4;
         var15 = TorChallenge.field_F ? 1 : 0;
         var9 = param4 + param2 + param8;
-        var10 = new ka[]{new ka(var9, var9), new ka(param0, var9), new ka(var9, var9), new ka(var9, param0), new ka(64, 64), new ka(var9, param0), new ka(var9, var9), new ka(param0, var9), new ka(var9, var9)};
+        var10 = new Sprite[]{new Sprite(var9, var9), new Sprite(param0, var9), new Sprite(var9, var9), new Sprite(var9, param0), new Sprite(64, 64), new Sprite(var9, param0), new Sprite(var9, var9), new Sprite(param0, var9), new Sprite(var9, var9)};
         var11_ref_ka__ = var10;
         for (var12 = 0; var11_ref_ka__.length > var12; var12++) {
           var13 = var11_ref_ka__[var12];

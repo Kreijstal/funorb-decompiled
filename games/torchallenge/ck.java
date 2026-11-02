@@ -27,7 +27,7 @@ final class ck {
         String var8;
         String var1Lifetime1;
         var5 = TorChallenge.field_F ? 1 : 0;
-        var6 = "(" + ul.field_j + " " + uc.field_X + " " + md.field_i + ") " + cb.field_g;
+        var6 = "(" + ul.field_j + " " + uc.field_X + " " + NodeHashTableIterator.field_i + ") " + cb.field_g;
         var1 = var6;
         if (bb.field_i <= 0) {
           if (param0 != -13299) {
@@ -39,7 +39,7 @@ final class ck {
         for (var2 = 0; bb.field_i > var2; var2++) {
           var7 = var1Lifetime1 + ' ';
           var1Lifetime1 = var7;
-          var3 = 255 & id.field_b.field_m[var2];
+          var3 = 255 & id.field_b.payload[var2];
           var4 = var3 >> 4;
           if (var4 < 10) {
             var4 += 48;

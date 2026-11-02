@@ -12,8 +12,8 @@ final class ik {
         int var2;
         int var3;
         var3 = TorChallenge.field_F ? 1 : 0;
-        if (ee.field_o <= 0) {
-          if (d.p(-110)) {
+        if (UiComponent.field_o <= 0) {
+          if (GameClientBase.p(-110)) {
             var2 = 0;
             if (param1 != -27055) {
               ik.a(false);
@@ -29,7 +29,7 @@ final class ik {
           var2 = 1;
         } else {
           if (tf.field_h == null) {
-            gi.field_d = dd.a(0, sh.field_u, param1 + 27137, 640, 0, 480);
+            gi.field_d = ImageProducerRasterBuffer.a(0, sh.field_u, param1 + 27137, 640, 0, 480);
           } else {
             gi.field_d = tf.field_h.a((byte) -88);
             nb.a(2, true);
@@ -87,8 +87,8 @@ final class ik {
           }
           var2_int = -1;
           if (gi.field_f == null) {
-            if (null != ak.field_i) {
-              var2_int = ak.field_i.length;
+            if (null != SecondaryNodeDeque.field_i) {
+              var2_int = SecondaryNodeDeque.field_i.length;
             }
           } else {
             var2_int = gi.field_f.length;
@@ -151,18 +151,18 @@ final class ik {
               ll.field_d > eh.field_k &&
               ph.field_d > var3 &&
               ph.field_d < var3 + le.field_e.field_x) {
-              if (-le.field_e.field_u + 269 < kc.field_u &&
-                269 > kc.field_u) {
+              if (-le.field_e.field_u + 269 < LocalizedStrings.field_u &&
+                269 > LocalizedStrings.field_u) {
                 ll.field_d = eh.field_k;
               }
-              if (kc.field_u > 586 &&
-                586 + le.field_e.field_u > kc.field_u) {
+              if (LocalizedStrings.field_u > 586 &&
+                586 + le.field_e.field_u > LocalizedStrings.field_u) {
                 ll.field_d = eh.field_k;
               }
             }
           }
           if (param1) {
-            of.field_c.a((byte) 34, pf.a(ph.field_d, -19503, kc.field_u), pf.a(ci.field_m, -19503, field_a));
+            of.field_c.a((byte) 34, pf.a(ph.field_d, -19503, LocalizedStrings.field_u), pf.a(ci.field_m, -19503, field_a));
             if (of.field_c.c((byte) 49)) {
               if (of.field_c.field_j == 0) {
                 stackIn_58_0 = 3;
@@ -197,7 +197,7 @@ final class ik {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "ik.C(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "ik.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -234,8 +234,8 @@ final class ik {
           }
           var2_int = -1;
           if (gi.field_f == null) {
-            if (null != ak.field_i) {
-              var2_int = ak.field_i.length;
+            if (null != SecondaryNodeDeque.field_i) {
+              var2_int = SecondaryNodeDeque.field_i.length;
             }
           } else {
             var2_int = gi.field_f.length;
@@ -298,18 +298,18 @@ final class ik {
               ll.field_d > eh.field_k &&
               ph.field_d > var3 &&
               ph.field_d < var3 + le.field_e.field_x) {
-              if (-le.field_e.field_u + 269 < kc.field_u &&
-                269 > kc.field_u) {
+              if (-le.field_e.field_u + 269 < LocalizedStrings.field_u &&
+                269 > LocalizedStrings.field_u) {
                 ll.field_d = eh.field_k;
               }
-              if (kc.field_u > 586 &&
-                586 + le.field_e.field_u > kc.field_u) {
+              if (LocalizedStrings.field_u > 586 &&
+                586 + le.field_e.field_u > LocalizedStrings.field_u) {
                 ll.field_d = eh.field_k;
               }
             }
           }
           if (param1) {
-            of.field_c.a((byte) 34, pf.a(ph.field_d, -19503, kc.field_u), pf.a(ci.field_m, -19503, field_a));
+            of.field_c.a((byte) 34, pf.a(ph.field_d, -19503, LocalizedStrings.field_u), pf.a(ci.field_m, -19503, field_a));
             if (of.field_c.c((byte) 49)) {
               if (of.field_c.field_j == 0) {
                 stackIn_58_0 = 3;
@@ -344,7 +344,7 @@ final class ik {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "ik.C(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "ik.C(" + param0 + ',' + param1 + ')');
         }
     }
 }

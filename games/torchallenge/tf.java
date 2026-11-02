@@ -4,7 +4,7 @@
 final class tf {
     int[] field_e;
     int[] field_y;
-    static ka[] field_a;
+    static Sprite[] field_a;
     int[][] field_A;
     static double field_i;
     static cd field_h;
@@ -17,7 +17,7 @@ final class tf {
     private int field_m;
     int[] field_d;
     private int[][] field_v;
-    static ka[] field_j;
+    static Sprite[] field_j;
     static int field_o;
     wi field_p;
     wi[] field_s;
@@ -76,7 +76,7 @@ final class tf {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        uf var18 = null;
+        PacketBuffer var18 = null;
         byte[] var22 = null;
         int var8Lifetime1;
         int var10Lifetime1;
@@ -92,22 +92,22 @@ final class tf {
         int var14Lifetime1Lifetime1;
         var17 = TorChallenge.field_F ? 1 : 0;
         try {
-          var18 = new uf(pg.a(-1048576, param1));
-          var4 = var18.j(-101);
+          var18 = new PacketBuffer(pg.a(-1048576, param1));
+          var4 = var18.readUnsignedByte(-101);
           if (5 <= var4 &&
             7 >= var4) {
             if (var4 < 6) {
               this.field_b = 0;
             } else {
-              this.field_b = var18.i(40);
+              this.field_b = var18.readInt(40);
             }
-            var5 = var18.j(-128);
+            var5 = var18.readUnsignedByte(-128);
             stackIn_11_0 = ((1 & var5) == 0) ? 0 : 1;
             var6 = stackIn_11_0;
             stackIn_14_0 = ((2 & var5) == 0) ? 0 : 1;
             var7 = stackIn_14_0;
             if (var4 < 7) {
-              this.field_m = var18.c(false);
+              this.field_m = var18.readUnsignedShort(false);
             } else {
               this.field_m = var18.h(78);
             }
@@ -125,7 +125,7 @@ final class tf {
               }
             } else {
               for (var10 = 0; this.field_m > var10; var10++) {
-                dupTemp$1 = var8 + var18.c(false);
+                dupTemp$1 = var8 + var18.readUnsignedShort(false);
                 var8 = dupTemp$1;
                 this.field_y[var10] = dupTemp$1;
                 if (this.field_y[var10] > var9) {
@@ -149,16 +149,16 @@ final class tf {
                 this.field_c[var11] = -1;
               }
               for (var11Lifetime5 = 0; var11Lifetime5 < this.field_m; var11Lifetime5++) {
-                this.field_c[this.field_y[var11Lifetime5]] = var18.i(124);
+                this.field_c[this.field_y[var11Lifetime5]] = var18.readInt(124);
               }
               this.field_p = new wi(this.field_c);
             }
             for (var11Lifetime1 = 0; this.field_m > var11Lifetime1; var11Lifetime1++) {
-              this.field_t[this.field_y[var11Lifetime1]] = var18.i(50);
+              this.field_t[this.field_y[var11Lifetime1]] = var18.readInt(50);
             }
             if (var7 == 0) {
               for (var11Lifetime2 = 0; this.field_m > var11Lifetime2; var11Lifetime2++) {
-                this.field_d[this.field_y[var11Lifetime2]] = var18.i(116);
+                this.field_d[this.field_y[var11Lifetime2]] = var18.readInt(116);
               }
             } else {
               for (var11Lifetime2 = 0; var11Lifetime2 < this.field_m; var11Lifetime2++) {
@@ -167,7 +167,7 @@ final class tf {
                 this.field_n[this.field_y[var11Lifetime2]] = var22;
               }
               for (var11Lifetime2 = 0; this.field_m > var11Lifetime2; var11Lifetime2++) {
-                this.field_d[this.field_y[var11Lifetime2]] = var18.i(116);
+                this.field_d[this.field_y[var11Lifetime2]] = var18.readInt(116);
               }
             }
             if (var4 >= 7) {
@@ -198,7 +198,7 @@ final class tf {
               }
             } else {
               for (var11Lifetime3 = 0; var11Lifetime3 < this.field_m; var11Lifetime3++) {
-                this.field_e[this.field_y[var11Lifetime3]] = var18.c(false);
+                this.field_e[this.field_y[var11Lifetime3]] = var18.readUnsignedShort(false);
               }
               for (var11Lifetime3 = 0; this.field_m > var11Lifetime3; var11Lifetime3++) {
                 var12 = this.field_y[var11Lifetime3];
@@ -208,7 +208,7 @@ final class tf {
                 this.field_A[var12] = array$5;
                 var14 = -1;
                 for (var15 = 0; var15 < var13; var15++) {
-                  dupTemp$6 = var8Lifetime1 + var18.c(false);
+                  dupTemp$6 = var8Lifetime1 + var18.readUnsignedShort(false);
                   var8Lifetime1 = dupTemp$6;
                   dupTemp$7 = this.field_A[var12];
                   dupTemp$7[var15] = dupTemp$6;
@@ -240,7 +240,7 @@ final class tf {
                   } else {
                     var15Lifetime1 = this.field_A[var12Lifetime1][var14Lifetime1Lifetime1];
                   }
-                  this.field_v[var12Lifetime1][var15Lifetime1] = var18.i(50);
+                  this.field_v[var12Lifetime1][var15Lifetime1] = var18.readInt(50);
                 }
                 this.field_s[var12Lifetime1] = new wi(this.field_v[var12Lifetime1]);
               }
@@ -259,7 +259,7 @@ final class tf {
           } else {
             stackIn_104_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_103_0), ((StringBuilder) (Object) stackIn_103_1).append(stackIn_104_2).append(')').toString());
         }
     }
 
@@ -283,7 +283,7 @@ final class tf {
           }
           this.a((byte) -123, param0);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "tf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "tf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

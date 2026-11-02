@@ -8,7 +8,7 @@ final class bb implements Runnable {
     static sl field_d;
     static int[] field_g;
     volatile boolean field_f;
-    uj field_b;
+    PlatformTaskDispatcher field_b;
     static int field_h;
     volatile kh[] field_a;
     volatile boolean field_e;
@@ -20,7 +20,7 @@ final class bb implements Runnable {
         if (param0 != 6) {
           field_g = (int[]) null;
         }
-        return id.field_b.b(false);
+        return id.field_b.readString(false);
     }
 
     final static lj a(int param0, boolean param1, int param2, byte param3, boolean param4, boolean param5) {

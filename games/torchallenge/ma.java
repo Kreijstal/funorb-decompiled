@@ -21,17 +21,17 @@ abstract class ma extends ui implements cc {
           var1 = dk.field_s;
           while (de.a(-1)) {
             var1.d(25, 8);
-            fieldTemp$0 = var1.field_q + 1;
-            var1.field_q = var1.field_q + 1;
+            fieldTemp$0 = var1.position + 1;
+            var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             hb.a(var1, -95);
-            dk.field_s.a(var1.field_q - var2, -111);
+            dk.field_s.a(var1.position - var2, -111);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1_ref), "ma.T(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1_ref), "ma.T(" + param0 + ')');
         }
     }
 
@@ -88,7 +88,7 @@ abstract class ma extends ui implements cc {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -116,23 +116,23 @@ abstract class ma extends ui implements cc {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static ka[] a(int param0, int param1, int param2, int param3, boolean param4) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, boolean param4) {
         if (!param4) {
-          return (ka[]) null;
+          return (Sprite[]) null;
         }
-        ka[] var6 = new ka[9];
-        ka[] var5 = var6;
-        ka dupTemp$0 = e.a(param1, param2, (byte) -113);
+        Sprite[] var6 = new Sprite[9];
+        Sprite[] var5 = var6;
+        Sprite dupTemp$0 = e.a(param1, param2, (byte) -113);
         var6[6] = dupTemp$0;
         var5[3] = dupTemp$0;
         var5[2] = dupTemp$0;
         var5[1] = dupTemp$0;
         var5[0] = dupTemp$0;
-        ka dupTemp$1 = e.a(param0, param2, (byte) -100);
+        Sprite dupTemp$1 = e.a(param0, param2, (byte) -100);
         var6[8] = dupTemp$1;
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
@@ -146,7 +146,7 @@ abstract class ma extends ui implements cc {
         try {
           this.field_l = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -174,7 +174,7 @@ abstract class ma extends ui implements cc {
             this.field_l = (dj) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ma.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ma.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

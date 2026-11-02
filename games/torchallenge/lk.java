@@ -3,7 +3,7 @@
  */
 final class lk {
     static rj field_c;
-    static ka field_e;
+    static Sprite field_e;
     static lj field_f;
     static k field_a;
     static k field_d;
@@ -36,15 +36,15 @@ final class lk {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final static ka[] a(int param0, String param1, String param2, lj param3) {
+    final static Sprite[] a(int param0, String param1, String param2, lj param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ka[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -83,7 +83,7 @@ final class lk {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -110,7 +110,7 @@ final class lk {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -133,7 +133,7 @@ final class lk {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ad.a((java.awt.Component) ((Object) param0), 0);
+          FullscreenFocusCanvas.a((java.awt.Component) ((Object) param0), 0);
           kj.a((byte) 54, (java.awt.Component) ((Object) param0));
           if (null != ef.field_l) {
             ef.field_l.a((java.awt.Component) ((Object) param0), (byte) 112);
@@ -153,13 +153,13 @@ final class lk {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
     static {
         field_c = new rj();
-        field_e = new ka(160, 160);
+        field_e = new Sprite(160, 160);
         field_a = new k(12, 0, 1, 0);
         field_d = new k(11, 0, 1, 2);
     }

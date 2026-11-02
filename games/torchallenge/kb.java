@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kb extends qd {
+final class kb extends PcmStream {
     int[] field_J;
     private int[] field_n;
     private int field_m;
@@ -42,7 +42,7 @@ final class kb extends qd {
         try {
           fl.a(-125, false, param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "kb.LA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "kb.LA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class kb extends qd {
           }
           this.a(true, param2, param1, 28050);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "kb.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "kb.OA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class kb extends qd {
         try {
           if (param0 != 256) {
             var7 = (kb) null;
-            kb.a(-76, -111, (uj) null, true, (java.awt.Component) null, (kb) null);
+            kb.a(-76, -111, (PlatformTaskDispatcher) null, true, (java.awt.Component) null, (kb) null);
           }
           var4_int = param2.field_k.field_k.length;
           if (param1 &&
@@ -97,7 +97,7 @@ final class kb extends qd {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -147,7 +147,7 @@ final class kb extends qd {
           param1.removeFocusListener(te.field_b);
           jc.field_h = 0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "kb.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "kb.NA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -419,7 +419,7 @@ final class kb extends qd {
         }
     }
 
-    final static void a(int param0, int param1, uj param2, boolean param3, java.awt.Component param4, kb param5) {
+    final static void a(int param0, int param1, PlatformTaskDispatcher param2, boolean param3, java.awt.Component param4, kb param5) {
         try {
           if (param1 != 16239) {
             java.awt.Component var7 = (java.awt.Component) null;
@@ -427,7 +427,7 @@ final class kb extends qd {
           }
           bg.a(param5, param0, 1024, param0, param4, param2, -118, param3);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "kb.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "kb.H(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -487,7 +487,7 @@ final class kb extends qd {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -513,7 +513,7 @@ final class kb extends qd {
           this.field_K = this.field_P.field_f[this.field_M];
           this.field_x = this.field_P.b(this.field_K);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "kb.SA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "kb.SA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -565,7 +565,7 @@ final class kb extends qd {
             if (!(var3.field_F >= 0)) {
               this.field_r[var3.field_G][var3.field_p] = null;
             }
-            var3.a(true);
+            var3.unlink(true);
           }
           var3 = (dl) (this.field_I.field_o.c(-270));
         }
@@ -740,7 +740,7 @@ final class kb extends qd {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -778,7 +778,7 @@ final class kb extends qd {
           }
           var8 = (s) (param2.field_j.a((byte) -73));
           while (var8 != null) {
-            var9 = (int)var8.field_d;
+            var9 = (int)var8.key;
             var12 = (fb) (this.field_A.a((byte) 92, (long)var9));
             if (var12 == null) {
               stackIn_13_0 = var9;
@@ -829,7 +829,7 @@ final class kb extends qd {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -879,7 +879,7 @@ final class kb extends qd {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -916,7 +916,7 @@ final class kb extends qd {
           if (param4.field_F >= 0 && (null == param4.field_K ||
             param4.field_K.j())) {
             param4.a(1047574608);
-            param4.a(true);
+            param4.unlink(true);
             if (param4.field_i > 0 &&
               param4 == this.field_v[param4.field_G][param4.field_i]) {
               this.field_v[param4.field_G][param4.field_i] = null;
@@ -1002,7 +1002,7 @@ final class kb extends qd {
           }
           param4.a(1047574608);
           if (0 <= param4.field_F) {
-            param4.a(true);
+            param4.unlink(true);
             if (param4.field_i > 0 &&
               this.field_v[param4.field_G][param4.field_i] == param4) {
               this.field_v[param4.field_G][param4.field_i] = null;
@@ -1025,7 +1025,7 @@ final class kb extends qd {
           } else {
             stackIn_71_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_70_1).append(stackIn_71_2).append(')').toString());
         }
     }
 
@@ -1056,7 +1056,7 @@ final class kb extends qd {
           }
           if (!param1) {
             var9 = (kb) null;
-            kb.a(-89, -61, (uj) null, false, (java.awt.Component) null, (kb) null);
+            kb.a(-89, -61, (PlatformTaskDispatcher) null, false, (java.awt.Component) null, (kb) null);
           }
           var10 = param0.field_I;
           var11 = var10;
@@ -1101,7 +1101,7 @@ final class kb extends qd {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1121,12 +1121,12 @@ final class kb extends qd {
         }
     }
 
-    final synchronized qd b() {
+    final synchronized PcmStream b() {
         return null;
     }
 
-    final synchronized qd c() {
-        return (qd) ((Object) this.field_I);
+    final synchronized PcmStream c() {
+        return (PcmStream) ((Object) this.field_I);
     }
 
     private final void b(int param0, int param1, int param2, int param3) {
@@ -1256,7 +1256,7 @@ final class kb extends qd {
     public static void c(int param0) {
         if (param0 != 128) {
           kb var2 = (kb) null;
-          kb.a(116, 24, (uj) null, true, (java.awt.Component) null, (kb) null);
+          kb.a(116, 24, (PlatformTaskDispatcher) null, true, (java.awt.Component) null, (kb) null);
         }
         field_O = null;
     }
@@ -1277,7 +1277,7 @@ final class kb extends qd {
           if (0 > param0.field_F) {
             return true;
           }
-          param0.a(true);
+          param0.unlink(true);
           if (param0.field_i > 0 &&
             param0 == this.field_v[param0.field_G][param0.field_i]) {
             this.field_v[param0.field_G][param0.field_i] = null;
@@ -1293,7 +1293,7 @@ final class kb extends qd {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 

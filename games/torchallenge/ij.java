@@ -9,7 +9,7 @@ final class ij extends fk {
     static int field_B;
     static rk[] field_y;
 
-    final String a(ee param0, int param1) {
+    final String a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -32,12 +32,12 @@ final class ij extends fk {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
     ij(int param0) {
-        this(oe.field_g, param0);
+        this(RasterBuffer.field_g, param0);
     }
 
     private ij(eg param0, int param1) {

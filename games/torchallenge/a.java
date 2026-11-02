@@ -19,7 +19,7 @@ final class a {
 
     final static String a(byte param0) {
         if (gj.field_a == qc.field_i) {
-          return uf.field_j;
+          return PacketBuffer.field_j;
         }
         if (param0 < 124) {
           a.a((byte) -113);

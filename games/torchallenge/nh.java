@@ -8,7 +8,7 @@ final class nh extends v implements sg {
     static String field_fb;
     static String field_ib;
     static sl field_cb;
-    static uf field_eb;
+    static PacketBuffer field_eb;
     static int[] field_db;
     static int field_bb;
 
@@ -52,7 +52,7 @@ final class nh extends v implements sg {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -172,14 +172,14 @@ final class nh extends v implements sg {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
     nh(si param0, ll param1) {
         super(param0, 200, 150);
         Object var3 = null;
-        ee var4 = null;
+        UiComponent var4 = null;
         Object stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -198,19 +198,19 @@ final class nh extends v implements sg {
               }
             } else {
               if (tj.field_d == param1) {
-                var3 = jd.field_d;
+                var3 = ClientException.field_d;
                 this.field_l = this.field_l + 30;
               }
             }
           } else {
-            var3 = d.field_z;
+            var3 = GameClientBase.field_z;
           }
-          var4 = new ee((String) (var3), (gg) null);
+          var4 = new UiComponent((String) (var3), (gg) null);
           var4.field_m = 0;
           var4.field_i = 50;
           var4.field_p = this.field_p;
           var4.field_l = 80;
-          var4.field_q = (j) ((Object) new bc(ug.field_f, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.field_q = (j) ((Object) new bc(GameApplet.field_f, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.a(0, var4);
           this.field_gb = this.a(ab.field_n, 2, (gg) (this));
           return;
@@ -230,7 +230,7 @@ final class nh extends v implements sg {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw oj.wrapException((Throwable) (stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -244,7 +244,7 @@ final class nh extends v implements sg {
           field_db = null;
           return;
         }
-        field_eb = (uf) null;
+        field_eb = (PacketBuffer) null;
         field_fb = null;
         field_db = null;
     }

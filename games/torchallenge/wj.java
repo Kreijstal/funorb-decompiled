@@ -42,15 +42,15 @@ final class wj {
             return;
           }
           var10 = id.field_b;
-          var2 = var10.j(-123);
-          var3 = var10.j(param0 ^ -361);
+          var2 = var10.readUnsignedByte(-123);
+          var3 = var10.readUnsignedByte(param0 ^ -361);
           if (0 == var2) {
             var4_ref_tc = (tc) (gf.field_q.c((byte) -79));
             if (var4_ref_tc == null) {
               ob.b(-100);
               return;
             }
-            var5_int = bb.field_i - var10.field_q;
+            var5_int = bb.field_i - var10.position;
             var12 = var4_ref_tc.field_n;
             var11 = var12;
             var6 = var11;
@@ -58,10 +58,10 @@ final class wj {
               var5_int = var12.length << 2;
             }
             for (var7 = 0; var5_int > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var10.j(-103) << jh.a(var7 << 8, 768));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var10.readUnsignedByte(-103) << jh.a(var7 << 8, 768));
             }
             var4_ref_tc.field_i = true;
-            var4_ref_tc.a(true);
+            var4_ref_tc.unlink(true);
             return;
           }
           if (1 != var2) {
@@ -83,12 +83,12 @@ final class wj {
             ob.b(param0 ^ -357);
             return;
           }
-          var5.a(true);
+          var5.unlink(true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "wj.B(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "wj.B(" + param0 + ')');
         }
     }
 

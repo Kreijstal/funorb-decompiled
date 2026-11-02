@@ -12,10 +12,10 @@ final class bl extends ng {
     static int field_P;
     static boolean field_U;
     static int field_X;
-    static wb field_V;
+    static BufferedSocket field_V;
     static String field_Q;
 
-    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ee param6) {
+    final boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
         int var12 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -76,15 +76,15 @@ final class bl extends ng {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_28_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
-    final static ka[] a(int param0, int param1, lj param2, int param3) {
+    final static Sprite[] a(int param0, int param1, lj param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
-        ka[] stackIn_5_0 = null;
-        ka[] stackIn_7_0 = null;
+        Sprite[] stackIn_5_0 = null;
+        Sprite[] stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -92,13 +92,13 @@ final class bl extends ng {
         try {
           if (!lk.a(160, param2, param1, param0)) {
             stackIn_2_0 = null;
-            return (ka[]) (stackIn_2_0);
+            return (Sprite[]) (stackIn_2_0);
           }
           if (param3 == 2147483647) {
             stackIn_7_0 = de.a(true);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (ka[]) null;
+          stackIn_5_0 = (Sprite[]) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -110,7 +110,7 @@ final class bl extends ng {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -165,7 +165,7 @@ final class bl extends ng {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3), "bl.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3), "bl.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

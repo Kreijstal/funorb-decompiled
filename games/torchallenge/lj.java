@@ -9,16 +9,16 @@ final class lj {
     private tf field_l;
     static int[][][] field_g;
     private boolean field_i;
-    static qe[] field_n;
+    static LevelEntity[] field_n;
     private int field_m;
     private Object[][] field_p;
     static String field_k;
     static int field_e;
     static cf field_r;
-    static ka[] field_h;
+    static Sprite[] field_h;
     static String field_d;
-    static ka[] field_o;
-    static ka field_f;
+    static Sprite[] field_o;
+    static Sprite field_f;
     static boolean field_q;
 
     final synchronized int a(int param0, byte param1) {
@@ -66,7 +66,7 @@ final class lj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -167,7 +167,7 @@ final class lj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -224,7 +224,7 @@ final class lj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -246,13 +246,13 @@ final class lj {
     }
 
     final static String a(byte param0) {
-        if (mf.field_a == null) {
+        if (LevelDecoder.field_a == null) {
           return "";
         }
         if (param0 > -70) {
           field_r = (cf) null;
         }
-        return mf.field_a;
+        return LevelDecoder.field_a;
     }
 
     final synchronized byte[] a(int param0, String param1, String param2) {
@@ -306,7 +306,7 @@ final class lj {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -381,7 +381,7 @@ final class lj {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
@@ -418,7 +418,7 @@ final class lj {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -457,10 +457,10 @@ final class lj {
         byte[] var23 = null;
         int[] var24 = null;
         byte[] var25 = null;
-        uf var26 = null;
+        PacketBuffer var26 = null;
         byte[] var27 = null;
-        uf var29 = null;
-        uf var31 = null;
+        PacketBuffer var29 = null;
+        PacketBuffer var31 = null;
         int[] var32 = null;
         byte[][] var33 = null;
         int[] var34 = null;
@@ -512,8 +512,8 @@ final class lj {
             var35 = of.a((byte) 125, true, this.field_c[param3]);
             var25 = var35;
             var9 = var25;
-            var26 = new uf(var35);
-            var26.a(false, param2, var26.field_m.length, 5);
+            var26 = new PacketBuffer(var35);
+            var26.a(false, param2, var26.payload.length, 5);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -530,7 +530,7 @@ final class lj {
             stackIn_34_0 = var11_ref_RuntimeException;
             stackIn_34_1 = new StringBuilder();
             stackIn_35_2 = (param2 != null);
-            throw oj.a((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(k.a(var9, var9.length, 0)).append(" ").append(k.a(var9, -2 + var9.length, 0)).append(" ").append(this.field_l.field_t[param3]).append(" ").append(this.field_l.field_k).toString());
+            throw oj.wrapException((Throwable) ((Object) stackIn_34_0), ((StringBuilder) (Object) stackIn_34_1).append(stackIn_35_2).append(" ").append(param3).append(" ").append(var9.length).append(" ").append(k.a(var9, var9.length, 0)).append(" ").append(k.a(var9, -2 + var9.length, 0)).append(" ").append(this.field_l.field_t[param3]).append(" ").append(this.field_l.field_k).toString());
           }
           if (this.field_i) {
             this.field_c[param3] = null;
@@ -541,14 +541,14 @@ final class lj {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * (var12 * var5_int);
-              var29 = new uf(var43);
+              var29 = new PacketBuffer(var43);
               var14_int = 0;
-              var29.field_q = var11;
+              var29.position = var11;
               var15_int = 0;
               for (var16 = 0; var16 < var12; var16++) {
                 var17 = 0;
                 for (var18 = 0; var5_int > var18; var18++) {
-                  var17 = var17 + var29.i(param1 ^ -126);
+                  var17 = var17 + var29.readInt(param1 ^ -126);
                   if (var6 == null) {
                     var19 = var18;
                   } else {
@@ -565,12 +565,12 @@ final class lj {
               }
               var44 = new byte[var14_int];
               var14_intLifetime1 = 0;
-              var29.field_q = var11;
+              var29.position = var11;
               var17 = 0;
               for (var18 = 0; var18 < var12; var18++) {
                 var19 = 0;
                 for (var20 = 0; var5_int > var20; var20++) {
-                  var19 = var19 + var29.i(28);
+                  var19 = var19 + var29.readInt(28);
                   if (var6 == null) {
                     var21 = var20;
                   } else {
@@ -589,15 +589,15 @@ final class lj {
               var11--;
               var12 = var23[var11] & 255;
               var11 = var11 - 4 * (var12 * var5_int);
-              var31 = new uf(var43);
+              var31 = new PacketBuffer(var43);
               var39 = new int[var5_int];
               var32 = var39;
               var14 = var32;
-              var31.field_q = var11;
+              var31.position = var11;
               for (var15_int = 0; var12 > var15_int; var15_int++) {
                 var16 = 0;
                 for (var17 = 0; var5_int > var17; var17++) {
-                  var16 = var16 + var31.i(param1 + 69);
+                  var16 = var16 + var31.readInt(param1 + 69);
                   var14[var17] = var14[var17] + var16;
                 }
               }
@@ -609,12 +609,12 @@ final class lj {
                 var15[var16] = array$1;
                 var39[var16] = 0;
               }
-              var31.field_q = var11;
+              var31.position = var11;
               var16 = 0;
               for (var17 = 0; var17 < var12; var17++) {
                 var18 = 0;
                 for (var19 = 0; var5_int > var19; var19++) {
-                  var18 = var18 + var31.i(42);
+                  var18 = var18 + var31.readInt(42);
                   he.a(var43, var16, var40[var19], var39[var19], var18);
                   var16 = var16 + var18;
                   var14[var19] = var14[var19] + var18;
@@ -659,7 +659,7 @@ final class lj {
           } else {
             stackIn_106_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_105_1).append(stackIn_106_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -748,7 +748,7 @@ final class lj {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -812,7 +812,7 @@ final class lj {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw oj.a((Throwable) (stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) (stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -855,7 +855,7 @@ final class lj {
           this.field_m = param2;
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "lj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "lj.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

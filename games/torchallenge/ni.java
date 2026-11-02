@@ -8,7 +8,7 @@ final class ni {
     static boolean field_b;
     static int field_i;
     static int field_f;
-    static ka[] field_h;
+    static Sprite[] field_h;
     lj field_a;
     static bc field_d;
     String field_g;
@@ -119,7 +119,7 @@ final class ni {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -231,14 +231,14 @@ final class ni {
                         var19 = oc.field_d + (-var18 - 1);
                       }
                       if (var18 < 0) {
-                        kc.a(param3, param6, (byte) -39, var17Lifetime2, var18 + var19);
+                        LocalizedStrings.a(param3, param6, (byte) -39, var17Lifetime2, var18 + var19);
                       } else {
-                        kc.a(param3, param6, (byte) -39, var18 + var17Lifetime2, var19);
+                        LocalizedStrings.a(param3, param6, (byte) -39, var18 + var17Lifetime2, var19);
                       }
                     } else {
                       if (0 <= var18 &&
                         var18 < oc.field_d) {
-                        kc.a(param3, param6, (byte) -39, var17Lifetime2 + var18, var19);
+                        LocalizedStrings.a(param3, param6, (byte) -39, var17Lifetime2 + var18, var19);
                       }
                     }
                   }
@@ -248,7 +248,7 @@ final class ni {
                   }
                   var9_int = var9_int + var11;
                   var10 = var10 + var13;
-                  var17Lifetime2 = var17Lifetime2 + qg.field_g;
+                  var17Lifetime2 = var17Lifetime2 + SoftwareRasterizer.field_g;
                 }
               }
               var17Lifetime3 = param2 - param5;
@@ -280,16 +280,16 @@ final class ni {
                 if (0 == var18Lifetime1) {
                   if (0 <= var17Lifetime1 &&
                     oc.field_d > var17Lifetime1) {
-                    kc.a(param3, param6, (byte) -39, var16Lifetime1 + var17Lifetime1, var18Lifetime1);
+                    LocalizedStrings.a(param3, param6, (byte) -39, var16Lifetime1 + var17Lifetime1, var18Lifetime1);
                   }
                 } else {
                   if (oc.field_d <= var18Lifetime1 + var17Lifetime1) {
                     var18Lifetime1 = -var17Lifetime1 + (oc.field_d - 1);
                   }
                   if (var17Lifetime1 >= 0) {
-                    kc.a(param3, param6, (byte) -39, var16Lifetime1 + var17Lifetime1, var18Lifetime1);
+                    LocalizedStrings.a(param3, param6, (byte) -39, var16Lifetime1 + var17Lifetime1, var18Lifetime1);
                   } else {
-                    kc.a(param3, param6, (byte) -39, var16Lifetime1, var18Lifetime1 + var17Lifetime1);
+                    LocalizedStrings.a(param3, param6, (byte) -39, var16Lifetime1, var18Lifetime1 + var17Lifetime1);
                   }
                 }
               }
@@ -298,7 +298,7 @@ final class ni {
                 return;
               }
               var10 = var10 + var13;
-              var16Lifetime1 = var16Lifetime1 + qg.field_g;
+              var16Lifetime1 = var16Lifetime1 + SoftwareRasterizer.field_g;
               var9_int = var9_int + var11;
             }
             return;
@@ -314,7 +314,7 @@ final class ni {
           } else {
             stackIn_76_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param7).append(',').append(param8).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_75_0), ((StringBuilder) (Object) stackIn_75_1).append(stackIn_76_2).append(',').append(param7).append(',').append(param8).append(')').toString());
         }
     }
 
@@ -342,7 +342,7 @@ final class ni {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "ni.B(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "ni.B(" + param0 + ',' + param1 + ')');
         }
     }
 

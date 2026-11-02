@@ -9,7 +9,7 @@ abstract class jc {
     int field_b;
     int field_g;
     int field_e;
-    static ka field_i;
+    static Sprite field_i;
     static int field_c;
     static volatile int field_h;
 
@@ -23,7 +23,7 @@ abstract class jc {
           field_j = (String[]) null;
         }
         for (var2 = 0; var2 < vl.field_b; var2++) {
-          var1[var2] = new ge(ij.field_B, le.field_g, ug.field_e[var2], dd.field_t[var2], pg.field_r[var2], lg.field_e[var2], h.field_a[var2], td.field_m);
+          var1[var2] = new ge(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], pg.field_r[var2], lg.field_e[var2], h.field_a[var2], td.field_m);
         }
         p.a(0);
         return var1;
@@ -55,84 +55,84 @@ abstract class jc {
         try {
           var5_int = param3 + param1;
           var6 = param4 + param2;
-          if (param1 <= qg.field_a) {
-            stackIn_4_0 = qg.field_a;
+          if (param1 <= SoftwareRasterizer.field_a) {
+            stackIn_4_0 = SoftwareRasterizer.field_a;
           } else {
             stackIn_4_0 = param1;
           }
           var7 = stackIn_4_0;
-          if (param4 <= qg.field_k) {
-            stackIn_7_0 = qg.field_k;
+          if (param4 <= SoftwareRasterizer.field_k) {
+            stackIn_7_0 = SoftwareRasterizer.field_k;
           } else {
             stackIn_7_0 = param4;
           }
           var8 = stackIn_7_0;
-          if (var5_int >= qg.field_c) {
-            stackIn_10_0 = qg.field_c;
+          if (var5_int >= SoftwareRasterizer.field_c) {
+            stackIn_10_0 = SoftwareRasterizer.field_c;
           } else {
             stackIn_10_0 = var5_int;
           }
           var9 = stackIn_10_0;
-          if (var6 < qg.field_l) {
+          if (var6 < SoftwareRasterizer.field_l) {
             stackIn_13_0 = var6;
           } else {
-            stackIn_13_0 = qg.field_l;
+            stackIn_13_0 = SoftwareRasterizer.field_l;
           }
           var10 = stackIn_13_0;
           if (param0 >= -114) {
-            field_i = (ka) null;
+            field_i = (Sprite) null;
           }
-          if (param1 >= qg.field_a &&
-            param1 < qg.field_c) {
-            var11 = param1 + var8 * qg.field_g;
+          if (param1 >= SoftwareRasterizer.field_a &&
+            param1 < SoftwareRasterizer.field_c) {
+            var11 = param1 + var8 * SoftwareRasterizer.field_g;
             var12 = 1 - (-var10 + var8) >> 1;
             while (true) {
               var12--;
               if (var12 < 0) {
                 break;
               }
-              qg.field_i[var11] = 16777215;
-              var11 = var11 + 2 * qg.field_g;
+              SoftwareRasterizer.field_i[var11] = 16777215;
+              var11 = var11 + 2 * SoftwareRasterizer.field_g;
             }
           }
-          if (param4 >= qg.field_k &&
-            qg.field_l > var6) {
-            var11Lifetime1 = qg.field_g * param4 + var7;
+          if (param4 >= SoftwareRasterizer.field_k &&
+            SoftwareRasterizer.field_l > var6) {
+            var11Lifetime1 = SoftwareRasterizer.field_g * param4 + var7;
             var12Lifetime1 = -var7 + (1 + var9) >> 1;
             while (true) {
               var12Lifetime1--;
               if (var12Lifetime1 < 0) {
                 break;
               }
-              qg.field_i[var11Lifetime1] = 16777215;
+              SoftwareRasterizer.field_i[var11Lifetime1] = 16777215;
               var11Lifetime1 += 2;
             }
           }
-          if (qg.field_a <= var5_int &&
-            qg.field_c > var5_int) {
-            var11Lifetime2 = qg.field_g * ((var5_int - param1 & 1) + var8) + var5_int;
+          if (SoftwareRasterizer.field_a <= var5_int &&
+            SoftwareRasterizer.field_c > var5_int) {
+            var11Lifetime2 = SoftwareRasterizer.field_g * ((var5_int - param1 & 1) + var8) + var5_int;
             var12Lifetime2 = -var8 + (var10 + 1) >> 1;
             while (true) {
               var12Lifetime2--;
               if (var12Lifetime2 < 0) {
                 break;
               }
-              qg.field_i[var11Lifetime2] = 16777215;
-              var11Lifetime2 = var11Lifetime2 + qg.field_g * 2;
+              SoftwareRasterizer.field_i[var11Lifetime2] = 16777215;
+              var11Lifetime2 = var11Lifetime2 + SoftwareRasterizer.field_g * 2;
             }
           }
-          if (param4 >= qg.field_k) {
-            if (qg.field_l <= var6) {
+          if (param4 >= SoftwareRasterizer.field_k) {
+            if (SoftwareRasterizer.field_l <= var6) {
               return;
             }
-            var11Lifetime3 = var7 + (var6 * qg.field_g + (1 & -param4 + var6));
+            var11Lifetime3 = var7 + (var6 * SoftwareRasterizer.field_g + (1 & -param4 + var6));
             var12Lifetime3 = -var7 + (1 + var9) >> 1;
             while (true) {
               var12Lifetime3--;
               if (0 > var12Lifetime3) {
                 break;
               }
-              qg.field_i[var11Lifetime3] = 16777215;
+              SoftwareRasterizer.field_i[var11Lifetime3] = 16777215;
               var11Lifetime3 += 2;
             }
           }
@@ -140,7 +140,7 @@ abstract class jc {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var5), "jc.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.wrapException((Throwable) ((Object) var5), "jc.M(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -156,7 +156,7 @@ abstract class jc {
         int var3;
         int var4;
         if (param1 != 1) {
-          field_i = (ka) null;
+          field_i = (Sprite) null;
         }
         if (0 <= param2 &&
           param2 < 9) {
@@ -202,7 +202,7 @@ abstract class jc {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -210,7 +210,7 @@ abstract class jc {
 
     static {
         field_j = new String[]{"Collect every coin on a tower, including those dropped by defeated enemies", "Kill every enemy on any tower but the first", "Collect a jade coin", "Collect all 3 jade coins with one character", "Collect all 3 jade coins with all three characters", "Get a x2 score multiplier", "Get a x4 score multiplier", "Get a x6 score multiplier", "Defeat the first master monk", "Defeat 2 master monks with one character", "Defeat all 3 master monks with one character", "Defeat all 3 master monks with all three characters", "Collect 20 seals with one character", "Collect all 30 seals with one character", "Collect all 30 seals with all three characters", "Collect a seal without taking damage since the last seal, on any tower but the first", "Defeat 150 skull heads during Hallowe'en"};
-        field_i = new ka(96, 96);
+        field_i = new Sprite(96, 96);
         field_h = 0;
     }
 }

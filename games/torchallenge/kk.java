@@ -60,7 +60,7 @@ final class kk extends t {
 
     final static bc c(boolean param0) {
         if (ni.field_d == null) {
-          ni.field_d = new bc(ug.field_f, 20, 0, 0, 0, 11579568, -1, 0, 0, ug.field_f.field_x, -1, 2147483647, true);
+          ni.field_d = new bc(GameApplet.field_f, 20, 0, 0, 0, 11579568, -1, 0, 0, GameApplet.field_f.field_x, -1, 2147483647, true);
         }
         if (!param0) {
           return ni.field_d;
@@ -71,15 +71,15 @@ final class kk extends t {
     final static void a(int param0, int param1) {
         pa var2 = dk.field_s;
         var2.d(25, param0);
-        var2.d(1, (byte) 122);
-        var2.d(0, (byte) 122);
+        var2.writeByte(1, (byte) 122);
+        var2.writeByte(0, (byte) 122);
         if (param1 <= -106) {
           return;
         }
         field_j = 43;
     }
 
-    final void a(uf param0, int param1) {
+    final void a(PacketBuffer param0, int param1) {
         try {
           param0.a((byte) 28, this.field_f);
           param0.b(this.field_g, (byte) -110);
@@ -87,11 +87,11 @@ final class kk extends t {
             kk.c(true);
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "kk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "kk.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static String a(uf param0, int param1, int param2) {
+    final static String a(PacketBuffer param0, int param1, int param2) {
         int var3_int = 0;
         Exception var3 = null;
         RuntimeException var3_ref = null;
@@ -111,7 +111,7 @@ final class kk extends t {
               var3_int = param2;
             }
             var4 = new byte[var3_int];
-            param0.field_q = param0.field_q + ai.field_b.a(25790, param0.field_q, 0, var3_int, var4, param0.field_m);
+            param0.position = param0.position + ai.field_b.a(25790, param0.position, 0, var3_int, var4, param0.payload);
             if (param1 > -70) {
               stackIn_5_0 = (String) null;
               return stackIn_5_0;
@@ -135,11 +135,11 @@ final class kk extends t {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
-    final static void a(qe param0, int param1) {
+    final static void a(LevelEntity param0, int param1) {
         if (!g.a(105, param1)) {
           return;
         }
@@ -152,7 +152,7 @@ final class kk extends t {
         try {
           qh.field_J = qh.field_J + 1;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "kk.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "kk.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -161,7 +161,7 @@ final class kk extends t {
           this.field_g = param1;
           this.field_f = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "kk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "kk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

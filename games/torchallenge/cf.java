@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class cf {
-    static ka field_c;
+    static Sprite field_c;
     static Calendar field_e;
     static int field_f;
     static rk field_d;
@@ -112,7 +112,7 @@ final class cf {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

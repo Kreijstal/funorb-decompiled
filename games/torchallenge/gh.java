@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gh extends da {
-    mi[] field_q;
+final class gh extends IntrusiveNode {
+    PlatformTask[] field_q;
     static String field_z;
     int[] field_o;
     int field_p;
     byte[][][] field_s;
-    mi[] field_j;
+    PlatformTask[] field_j;
     static int[] field_n;
     static String field_v;
     int field_l;
@@ -42,13 +42,13 @@ final class gh extends da {
         try {
           ae.field_C = param2;
           hl.field_e = true;
-          da.field_c = new wa(t.field_b, dl.field_H, param1, eb.field_m, ae.field_C);
-          t.field_b.a((byte) 73, (ee) (da.field_c));
+          IntrusiveNode.field_c = new wa(t.field_b, dl.field_H, param1, eb.field_m, ae.field_C);
+          t.field_b.a((byte) 73, (UiComponent) (IntrusiveNode.field_c));
           if (param0 != -116) {
             field_y = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "gh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "gh.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

@@ -7,7 +7,7 @@ final class pd {
     private int field_g;
     static ef field_h;
     static String field_a;
-    static ka field_i;
+    static Sprite field_i;
     private int field_e;
     private int field_b;
     static int[] field_f;
@@ -21,7 +21,7 @@ final class pd {
         try {
           var3_int = 0;
           if (param0 != 3) {
-            this.a((ka) null, -82, 70, true, 62, (ge) null);
+            this.a((Sprite) null, -82, 70, true, 62, (ge) null);
           }
           if (this.field_e == 7) {
             var3_int = -1;
@@ -38,7 +38,7 @@ final class pd {
           if (this.field_e == 3) {
             var3_int = 2;
           }
-          this.field_k.a((byte) -121, param1, var3_int, this.a(param0 ^ -29803, ph.field_d, kc.field_u));
+          this.field_k.a((byte) -121, param1, var3_int, this.a(param0 ^ -29803, ph.field_d, LocalizedStrings.field_u));
           this.field_b = -1;
           if (this.field_e == 7) {
             sh.a(param0 + 84, param1);
@@ -47,16 +47,16 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) runtimeException), "pd.G(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "pd.G(" + param0 + ',' + param1 + ')');
         }
     }
 
     final static int a(qa param0, int param1, String param2, boolean param3, int param4, int param5, qa param6) {
         int stackIn_9_0 = 0;
-        uf stackIn_26_0 = null;
+        PacketBuffer stackIn_26_0 = null;
         int stackIn_26_1 = 0;
         String stackIn_27_2 = null;
-        uf stackIn_30_0 = null;
+        PacketBuffer stackIn_30_0 = null;
         int stackIn_30_1 = 0;
         String stackIn_31_2 = null;
         int stackIn_56_0 = 0;
@@ -99,58 +99,58 @@ final class pd {
           if (aj.field_c == ng.field_A) {
             boolean decompiledFrameRemainder1 = true;
             bd.field_k = null;
-            dk.field_s.field_q = 0;
+            dk.field_s.position = 0;
             if (null != param2) {
               var9 = 0;
               if (param3) {
                 var9 = var9 | 1;
               }
-              pk.field_e.field_q = 0;
-              pk.field_e.a(id.field_a.nextInt(), false);
-              pk.field_e.a(id.field_a.nextInt(), false);
-              pk.field_e.a((byte) 15, var7);
-              pk.field_e.a((byte) 70, var8);
-              pk.field_e.a((byte) 73, cd.a(-98, (CharSequence) ((Object) param2)));
-              pk.field_e.a(param4, (byte) 106);
-              pk.field_e.d(param1, (byte) 122);
-              pk.field_e.d(var9, (byte) 122);
-              dk.field_s.d(18, (byte) 122);
-              dk.field_s.field_q = dk.field_s.field_q + 2;
-              var10 = dk.field_s.field_q;
-              var11_ref_String = mj.a(gi.b(12476), 104);
+              DelegatingCanvas.field_e.position = 0;
+              DelegatingCanvas.field_e.writeInt(id.field_a.nextInt(), false);
+              DelegatingCanvas.field_e.writeInt(id.field_a.nextInt(), false);
+              DelegatingCanvas.field_e.a((byte) 15, var7);
+              DelegatingCanvas.field_e.a((byte) 70, var8);
+              DelegatingCanvas.field_e.a((byte) 73, cd.a(-98, (CharSequence) ((Object) param2)));
+              DelegatingCanvas.field_e.writeShort(param4, (byte) 106);
+              DelegatingCanvas.field_e.writeByte(param1, (byte) 122);
+              DelegatingCanvas.field_e.writeByte(var9, (byte) 122);
+              dk.field_s.writeByte(18, (byte) 122);
+              dk.field_s.position = dk.field_s.position + 2;
+              var10 = dk.field_s.position;
+              var11_ref_String = GameKeyHandler.a(gi.b(12476), 104);
               if (null == var11_ref_String) {
                 var11_ref_String = "";
               }
               dk.field_s.a(var11_ref_String, (byte) 97);
-              ac.a(mb.field_a, (byte) -105, pk.field_e, jl.field_f, dk.field_s);
-              dk.field_s.b(dk.field_s.field_q - var10, (byte) -40);
+              ac.a(mb.field_a, (byte) -105, DelegatingCanvas.field_e, jl.field_f, dk.field_s);
+              dk.field_s.b(dk.field_s.position - var10, (byte) -40);
               decompiledFrameRemainder1 = (var13 != 0);
             }
             if (decompiledFrameRemainder1) {
-              pk.field_e.field_q = 0;
-              pk.field_e.a(id.field_a.nextInt(), false);
-              pk.field_e.a(id.field_a.nextInt(), false);
-              stackIn_26_0 = pk.field_e;
+              DelegatingCanvas.field_e.position = 0;
+              DelegatingCanvas.field_e.writeInt(id.field_a.nextInt(), false);
+              DelegatingCanvas.field_e.writeInt(id.field_a.nextInt(), false);
+              stackIn_26_0 = DelegatingCanvas.field_e;
               stackIn_26_1 = 105;
               if (param6.b((byte) -29)) {
                 stackIn_27_2 = var7;
               } else {
                 stackIn_27_2 = "";
               }
-              ((uf) (Object) stackIn_26_0).a((byte) stackIn_26_1, stackIn_27_2);
-              stackIn_30_0 = pk.field_e;
+              ((PacketBuffer) (Object) stackIn_26_0).a((byte) stackIn_26_1, stackIn_27_2);
+              stackIn_30_0 = DelegatingCanvas.field_e;
               stackIn_30_1 = 26;
               if (!param0.b((byte) -29)) {
                 stackIn_31_2 = "";
               } else {
                 stackIn_31_2 = var8;
               }
-              ((uf) (Object) stackIn_30_0).a((byte) stackIn_30_1, stackIn_31_2);
-              dk.field_s.d(16, (byte) 122);
-              dk.field_s.field_q = dk.field_s.field_q + 1;
-              var9 = dk.field_s.field_q;
-              ac.a(mb.field_a, (byte) -105, pk.field_e, jl.field_f, dk.field_s);
-              dk.field_s.a(-var9 + dk.field_s.field_q, -111);
+              ((PacketBuffer) (Object) stackIn_30_0).a((byte) stackIn_30_1, stackIn_31_2);
+              dk.field_s.writeByte(16, (byte) 122);
+              dk.field_s.position = dk.field_s.position + 1;
+              var9 = dk.field_s.position;
+              ac.a(mb.field_a, (byte) -105, DelegatingCanvas.field_e, jl.field_f, dk.field_s);
+              dk.field_s.a(-var9 + dk.field_s.position, -111);
             }
             nb.a(-1, -1);
             aj.field_c = sh.field_t;
@@ -158,8 +158,8 @@ final class pd {
           boolean decompiledFrameRemainder0 = true;
           if (aj.field_c == sh.field_t &&
             pe.a((byte) 117, 1)) {
-            var9 = id.field_b.j(-89);
-            id.field_b.field_q = 0;
+            var9 = id.field_b.readUnsignedByte(-89);
+            id.field_b.position = 0;
             if (var9 >= 100 &&
               var9 <= 105) {
               aj.field_c = lj.field_r;
@@ -167,7 +167,7 @@ final class pd {
             } else {
               if (var9 != 248) {
                 if (var9 != 99) {
-                  aj.field_c = fc.field_q;
+                  aj.field_c = ProxySocketConnector.field_q;
                   cb.field_g = var9;
                   bb.field_i = -1;
                   decompiledFrameRemainder0 = (var13 != 0);
@@ -175,14 +175,14 @@ final class pd {
                 if (decompiledFrameRemainder0) {
                   pe.a((byte) 99, ra.c(-2));
                   bd.field_k = new Boolean(jh.a((byte) 58, id.field_b));
-                  id.field_b.field_q = 0;
+                  id.field_b.position = 0;
                 }
               }
               if ((decompiledFrameRemainder0) &&
                 (var9 == 248 ||
                 var13 != 0)) {
                 cj.a((byte) 117, gi.b(12476));
-                ag.field_c = ga.field_u;
+                SecondaryNodeDequeIterator.field_c = ga.field_u;
                 ob.b(-103);
                 ck.field_b = false;
                 stackIn_56_0 = var9;
@@ -193,8 +193,8 @@ final class pd {
           if (aj.field_c == lj.field_r) {
             var9 = 2;
             if (pe.a((byte) 113, var9)) {
-              var10 = id.field_b.c(false);
-              id.field_b.field_q = 0;
+              var10 = id.field_b.readUnsignedShort(false);
+              id.field_b.position = 0;
               if (pe.a((byte) 111, var10)) {
                 var11 = ra.field_d.length;
                 var12 = 0;
@@ -212,11 +212,11 @@ final class pd {
               }
             }
           }
-          if (fc.field_q == aj.field_c &&
-            md.a((byte) 113)) {
+          if (ProxySocketConnector.field_q == aj.field_c &&
+            NodeHashTableIterator.a((byte) 113)) {
             boolean decompiledSharedTail0 = (255 == cb.field_g);
             if (!decompiledSharedTail0) {
-              ag.field_c = id.field_b.b(false);
+              SecondaryNodeDequeIterator.field_c = id.field_b.readString(false);
               decompiledSharedTail0 = (var13 != 0);
             }
             if (decompiledSharedTail0) {
@@ -232,13 +232,13 @@ final class pd {
           }
           if (qf.field_a == null) {
             if (ck.field_b) {
-              if (fc.e(86) <= 30000L) {
-                ag.field_c = nh.field_ib;
+              if (ProxySocketConnector.e(86) <= 30000L) {
+                SecondaryNodeDequeIterator.field_c = nh.field_ib;
                 if (var13 != 0) {
-                  ag.field_c = aj.field_d;
+                  SecondaryNodeDequeIterator.field_c = aj.field_d;
                 }
               } else {
-                ag.field_c = aj.field_d;
+                SecondaryNodeDequeIterator.field_c = aj.field_d;
               }
               ck.field_b = false;
               stackIn_99_0 = 249;
@@ -273,7 +273,7 @@ final class pd {
           } else {
             stackIn_115_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_114_1).append(stackIn_115_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_106_0), ((StringBuilder) (Object) stackIn_114_1).append(stackIn_115_2).append(')').toString());
         }
     }
 
@@ -343,7 +343,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var5), "pd.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) var5), "pd.QA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -364,8 +364,8 @@ final class pd {
         int var2_intLifetime2;
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
-          if (oe.field_f >= 0) {
-            oe.field_f = oe.field_f - 1;
+          if (RasterBuffer.field_f >= 0) {
+            RasterBuffer.field_f = RasterBuffer.field_f - 1;
           }
           if (220 < nk.field_h) {
             nk.field_h = 220;
@@ -417,10 +417,10 @@ final class pd {
             return;
           }
           if (this.field_e == 12) {
-            nd.field_e = nd.field_e + 1;
-            if (nd.field_e >= gh.field_n[rf.field_ib]) {
+            RandomAccessCacheFile.field_e = RandomAccessCacheFile.field_e + 1;
+            if (RandomAccessCacheFile.field_e >= gh.field_n[rf.field_ib]) {
               rf.field_ib = rf.field_ib + 1;
-              nd.field_e = 0;
+              RandomAccessCacheFile.field_e = 0;
             }
             if (rf.field_ib == 5) {
               be.a(0, (byte) -127, false);
@@ -430,14 +430,14 @@ final class pd {
             this.field_e == 8) {
             ec.field_d = -1;
           }
-          L18: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (kj.e((byte) -109)) {
-              pk.field_f = true;
+              DelegatingCanvas.field_f = true;
               stackIn_167_0 = ~fa.field_g;
               stackIn_167_1 = -3;
               if (var4 != 0) {
-                break L18;
+                break scanLoop1;
               }
               stackIn_89_0 = (stackIn_167_0 > stackIn_167_1) ? 0 : 1;
               var2_intLifetime1 = stackIn_89_0;
@@ -468,16 +468,16 @@ final class pd {
                 if (13 != this.field_e) {
                   if (this.field_e != 6) {
                     if (!cd.field_o) {
-                      be.a(kc.field_v, (byte) -109, false);
+                      be.a(LocalizedStrings.field_v, (byte) -109, false);
                     } else {
-                      if (d.p(-91)) {
+                      if (GameClientBase.p(-91)) {
                         be.a(6, (byte) -127, false);
                         decompiledFrameRemainder0 = false;
                       }
                       else {
                         cd.field_o = false;
                         be.a(7, (byte) -118, false);
-                        if (d.p(-81)) {
+                        if (GameClientBase.p(-81)) {
                           this.g((byte) -97);
                         }
                       }
@@ -487,19 +487,19 @@ final class pd {
                   this.a(false);
                 }
               } else {
-                ad.field_j = false;
+                FullscreenFocusCanvas.field_j = false;
                 if (rj.field_g == -1) {
-                  ug.field_o = 0;
+                  GameApplet.field_o = 0;
                   df.field_O = true;
                   if (0 <= ea.field_e - 6) {
-                    ug.field_o = 1;
+                    GameApplet.field_o = 1;
                   }
                   be.a(-1, (byte) -106, false);
                 } else {
                   be.a(13, (byte) -104, false);
                 }
-                stackIn_164_0 = (ee.field_o > 0) ? 0 : 7;
-                kc.field_v = stackIn_164_0;
+                stackIn_164_0 = (UiComponent.field_o > 0) ? 0 : 7;
+                LocalizedStrings.field_v = stackIn_164_0;
               }
               if (decompiledFrameRemainder0) {
                 continue;
@@ -521,10 +521,10 @@ final class pd {
             }
           }
           var2_intLifetime2 = this.field_k.field_j;
-          this.field_k.a((byte) 2, this.a(-29802, ph.field_d, kc.field_u), this.a(param0 - 39306, ci.field_m, ik.field_a));
+          this.field_k.a((byte) 2, this.a(-29802, ph.field_d, LocalizedStrings.field_u), this.a(param0 - 39306, ci.field_m, ik.field_a));
           if (this.field_k.field_j >= 0 &&
             var2_intLifetime2 != this.field_k.field_j) {
-            pk.field_f = false;
+            DelegatingCanvas.field_f = false;
           }
           if (this.field_e == 10) {
             c.a(param0 - 9377);
@@ -546,7 +546,7 @@ final class pd {
           if (0 != vb.field_n) {
             this.field_j = ci.field_m;
             this.field_g = ik.field_a;
-            pk.field_f = false;
+            DelegatingCanvas.field_f = false;
           }
           if (this.field_e == 3 ||
             this.field_e == 8 ||
@@ -590,7 +590,7 @@ final class pd {
               rl.field_c = qb.field_h;
               of.field_e = 50;
               fa.field_j = -25;
-              ug.field_p = true;
+              GameApplet.field_p = true;
             }
           }
           if (1 == this.field_e &&
@@ -619,7 +619,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.L(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.L(" + param0 + ')');
         }
     }
 
@@ -634,7 +634,7 @@ final class pd {
           field_h = null;
           field_i = null;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "pd.AB(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "pd.AB(" + param0 + ')');
         }
     }
 
@@ -661,16 +661,16 @@ final class pd {
         int var19 = 0;
         int var20 = 0;
         int var21 = 0;
-        ka[] var22 = null;
+        Sprite[] var22 = null;
         int var23 = 0;
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
         int var27 = 0;
         int var28_int = 0;
-        ka var28 = null;
+        Sprite var28 = null;
         int var29 = 0;
-        ka[] var22Lifetime1;
+        Sprite[] var22Lifetime1;
         int stackIn_40_0Lifetime1;
         int var5_intLifetime1;
         int var5_intLifetime2;
@@ -712,22 +712,22 @@ final class pd {
               var23 = 0;
             }
           }
-          qg.a(pf.field_g);
-          qg.a(0, var19, 640, 480);
+          SoftwareRasterizer.a(pf.field_g);
+          SoftwareRasterizer.a(0, var19, 640, 480);
           hd.a(var22, var22[0].field_v + var21, var20 + 3, (byte) -74, var23 + (-var22[0].field_v + var19), var18);
-          qg.b(pf.field_g);
+          SoftwareRasterizer.b(pf.field_g);
           if (!vc.field_e) {
             ba.a(this.field_e, kk.field_d, param1, -128, cj.field_g);
           }
-          qg.a(pf.field_g);
-          qg.a(0, var19, 640, 480);
+          SoftwareRasterizer.a(pf.field_g);
+          SoftwareRasterizer.a(0, var19, 640, 480);
           var27 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (6 > var27) {
               stackIn_51_0 = ~this.field_k.field_j;
               stackIn_51_1 = ~var27;
               if (var29 != 0) {
-                break L3;
+                break scanLoop1;
               }
               if (stackIn_51_0 != stackIn_51_1) {
                 var17 = 0;
@@ -768,9 +768,9 @@ final class pd {
               }
               var6 = var6 + (var9 + var8);
               var27++;
-              continue L3;
+              continue scanLoop1;
             }
-            qg.b(pf.field_g);
+            SoftwareRasterizer.b(pf.field_g);
             var5_int = ue.field_j[0];
             stackIn_51_0 = 47;
             stackIn_51_1 = (-66 - param3) / 48;
@@ -787,8 +787,8 @@ final class pd {
           var6Lifetime2 = ue.field_j[1];
           var7Lifetime2 = ue.field_j[2];
           var28 = we.field_m[ok.field_b + 1];
-          qg.a(pf.field_g);
-          qg.f(var24 + var5_intLifetime1, var24 + var6Lifetime2, -var24 + (var7Lifetime2 + var5_intLifetime1), -var24 + var8Lifetime2 + var6Lifetime2);
+          SoftwareRasterizer.a(pf.field_g);
+          SoftwareRasterizer.f(var24 + var5_intLifetime1, var24 + var6Lifetime2, -var24 + (var7Lifetime2 + var5_intLifetime1), -var24 + var8Lifetime2 + var6Lifetime2);
           var5_intLifetime1 = var5_intLifetime1 + (var7Lifetime2 - var28.field_q >> 1);
           var6Lifetime2 = (var8Lifetime2 - var28.field_v >> 1) + var6Lifetime2;
           if (ok.field_b == 0) {
@@ -796,7 +796,7 @@ final class pd {
             var6Lifetime2 += 96;
           }
           var28.g(var5_intLifetime1, var6Lifetime2);
-          qg.b(pf.field_g);
+          SoftwareRasterizer.b(pf.field_g);
           var5_intLifetime2 = ue.field_j[0];
           var6Lifetime3 = ue.field_j[1];
           var22Lifetime1[0].g(var5_intLifetime2, var6Lifetime3);
@@ -807,7 +807,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var5), "pd.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) var5), "pd.FA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -826,8 +826,8 @@ final class pd {
           if (ji.field_m != null) {
             ji.field_m.a((byte) 88);
           }
-          if (!d.p(-94) &&
-            ee.field_o > 0) {
+          if (!GameClientBase.p(-94) &&
+            UiComponent.field_o > 0) {
             stackIn_12_0 = 0;
           } else {
             stackIn_12_0 = 1;
@@ -835,21 +835,21 @@ final class pd {
           boolean decompiledFrameRemainder2 = true;
           boolean decompiledFrameRemainder1 = true;
           var2_int = stackIn_12_0;
-          nd.field_e = nd.field_e + 1;
+          RandomAccessCacheFile.field_e = RandomAccessCacheFile.field_e + 1;
           if (rj.field_g != 0) {
             if (2 == rj.field_g) {
-              if (nd.field_e <= 450 &&
-                !md.field_a) {
+              if (RandomAccessCacheFile.field_e <= 450 &&
+                !NodeHashTableIterator.field_a) {
                 boolean decompiledFrameRemainder0 = true;
                 var3 = uk.field_J;
                 if (var3 < 6) {
-                  if ((nd.field_e == m.field_c[1][var3]) &&
+                  if ((RandomAccessCacheFile.field_e == m.field_c[1][var3]) &&
                     (decompiledFrameRemainder0 = !(6 <= var3))) {
                     h.a(8, 4);
                     decompiledFrameRemainder0 = (var5 != 0);
                   }
                   if ((decompiledFrameRemainder0) &&
-                    (~(25 + m.field_c[1][var3]) == ~nd.field_e)) {
+                    (~(25 + m.field_c[1][var3]) == ~RandomAccessCacheFile.field_e)) {
                     var4 = -1;
                     if (0 == var3) {
                       var4 = 9;
@@ -881,7 +881,7 @@ final class pd {
               }
               if ((decompiledFrameRemainder2) &&
                 (decompiledFrameRemainder1)) {
-                md.field_a = false;
+                NodeHashTableIterator.field_a = false;
                 o.a(4, true);
                 bc.field_o = -1;
                 bb.field_h = -1;
@@ -893,33 +893,33 @@ final class pd {
             if ((decompiledFrameRemainder2) &&
               (decompiledFrameRemainder1)) {
               if (rj.field_g == 4) {
-                if (nd.field_e <= bi.field_a[0][0] &&
-                  !md.field_a) {
-                  decompiledFrameRemainder2 = (~nd.field_e == ~m.field_c[0][0]);
+                if (RandomAccessCacheFile.field_e <= bi.field_a[0][0] &&
+                  !NodeHashTableIterator.field_a) {
+                  decompiledFrameRemainder2 = (~RandomAccessCacheFile.field_e == ~m.field_c[0][0]);
                   if (decompiledFrameRemainder2) {
                     h.a(15, 4);
                     decompiledFrameRemainder2 = (var5 != 0);
                   }
                 } else {
-                  md.field_a = false;
+                  NodeHashTableIterator.field_a = false;
                   o.a(-1, true);
                   df.field_O = true;
                   bb.field_h = -1;
                   bc.field_o = -1;
                   if (gh.field_x) {
-                    ug.field_o = 1;
+                    GameApplet.field_o = 1;
                     if (var5 == 0) {
                       return;
                     }
                   }
-                  ug.field_o = 0;
+                  GameApplet.field_o = 0;
                   return;
                 }
               }
               if (decompiledFrameRemainder2) {
                 if (rj.field_g == 1) {
-                  if (nd.field_e <= 450 &&
-                    !md.field_a) {
+                  if (RandomAccessCacheFile.field_e <= 450 &&
+                    !NodeHashTableIterator.field_a) {
                     var3Lifetime1 = ea.field_e;
                     if (var3Lifetime1 < 6) {
                       var3Lifetime1++;
@@ -930,8 +930,8 @@ final class pd {
                       var3Lifetime1 = (1 + (var3Lifetime1 - 6)) * 2;
                     }
                     if (var3Lifetime1 < 6) {
-                      if (nd.field_e != m.field_c[1][var3Lifetime1]) {
-                        if (~nd.field_e == ~(m.field_c[1][var3Lifetime1] + 25)) {
+                      if (RandomAccessCacheFile.field_e != m.field_c[1][var3Lifetime1]) {
+                        if (~RandomAccessCacheFile.field_e == ~(m.field_c[1][var3Lifetime1] + 25)) {
                           var4Lifetime1 = -1;
                           if (var3Lifetime1 == 0) {
                             var4Lifetime1 = 9;
@@ -964,37 +964,37 @@ final class pd {
                     }
                     decompiledFrameRemainder2 = (var5 != 0);
                   } else {
-                    md.field_a = false;
+                    NodeHashTableIterator.field_a = false;
                     o.a(4, true);
                     bc.field_o = -1;
                     cj.field_b = true;
                     bb.field_h = -1;
-                    dd.c(127);
+                    ImageProducerRasterBuffer.c(127);
                     return;
                   }
                 }
                 if (decompiledFrameRemainder2) {
                   if ((3 == rj.field_g) &&
-                    (decompiledFrameRemainder2 = (!(nd.field_e <= 350) ||
-                    md.field_a))) {
-                    md.field_a = false;
+                    (decompiledFrameRemainder2 = (!(RandomAccessCacheFile.field_e <= 350) ||
+                    NodeHashTableIterator.field_a))) {
+                    NodeHashTableIterator.field_a = false;
                     o.a(4, true);
                     bb.field_h = -1;
                     bc.field_o = -1;
                     cj.field_b = true;
-                    dd.c(123);
+                    ImageProducerRasterBuffer.c(123);
                     return;
                   }
                   if (decompiledFrameRemainder2) {
                     if ((rj.field_g == 5) &&
-                      (decompiledFrameRemainder2 = (!(nd.field_e <= bi.field_a[2][0]) ||
-                      md.field_a))) {
-                      md.field_a = false;
+                      (decompiledFrameRemainder2 = (!(RandomAccessCacheFile.field_e <= bi.field_a[2][0]) ||
+                      NodeHashTableIterator.field_a))) {
+                      NodeHashTableIterator.field_a = false;
                       if (!bh.field_p &&
                         var2_int != 0 &&
                         gh.field_x) {
                         o.a(7, true);
-                        if (ee.field_o > 0) {
+                        if (UiComponent.field_o > 0) {
                           cd.field_o = false;
                           if (var5 == 0) {
                             return;
@@ -1026,17 +1026,17 @@ final class pd {
                     }
                     if (decompiledFrameRemainder2) {
                       if (rj.field_g == 6) {
-                        if (nd.field_e <= 450 &&
-                          !md.field_a) {
-                          decompiledFrameRemainder2 = (m.field_c[4][0] == nd.field_e);
+                        if (RandomAccessCacheFile.field_e <= 450 &&
+                          !NodeHashTableIterator.field_a) {
+                          decompiledFrameRemainder2 = (m.field_c[4][0] == RandomAccessCacheFile.field_e);
                           if (decompiledFrameRemainder2) {
                             h.a(16, param0 + 22314);
                             decompiledFrameRemainder2 = (var5 != 0);
                           }
                         } else {
-                          md.field_a = false;
+                          NodeHashTableIterator.field_a = false;
                           o.a(-1, true);
-                          if (ee.field_o <= 0) {
+                          if (UiComponent.field_o <= 0) {
                             cd.field_o = true;
                             if (var5 != 0) {
                               cd.field_o = false;
@@ -1044,20 +1044,20 @@ final class pd {
                           } else {
                             cd.field_o = false;
                           }
-                          if (!d.p(-93) &&
+                          if (!GameClientBase.p(-93) &&
                             eh.field_l != 0) {
                             be.a(5, (byte) -113, false);
                             if (var5 == 0) {
                               return;
                             }
                           }
-                          if (!d.p(-76)) {
+                          if (!GameClientBase.p(-76)) {
                             be.a(2, (byte) -128, false);
                             if (var5 == 0) {
                               return;
                             }
                           }
-                          if (d.p(-105)) {
+                          if (GameClientBase.p(-105)) {
                             be.a(6, (byte) -122, false);
                           }
                           return;
@@ -1065,19 +1065,19 @@ final class pd {
                       }
                       if ((decompiledFrameRemainder2) &&
                         (decompiledFrameRemainder2 = (rj.field_g == 7))) {
-                        if (nd.field_e == 750) {
+                        if (RandomAccessCacheFile.field_e == 750) {
                           bc.field_o = 15;
                           bb.field_h = 15;
-                          ug.field_i[bb.field_h].a(param0 + 22313, true);
+                          GameApplet.field_i[bb.field_h].a(param0 + 22313, true);
                           return;
                         }
-                        decompiledFrameRemainder2 = (!(nd.field_e <= 800) ||
-                          md.field_a);
+                        decompiledFrameRemainder2 = (!(RandomAccessCacheFile.field_e <= 800) ||
+                          NodeHashTableIterator.field_a);
                         if (decompiledFrameRemainder2) {
-                          md.field_a = false;
+                          NodeHashTableIterator.field_a = false;
                           o.a(-1, true);
                           o.a(-1, true);
-                          if (ee.field_o > 0) {
+                          if (UiComponent.field_o > 0) {
                             cd.field_o = false;
                             if (var5 != 0) {
                               cd.field_o = true;
@@ -1085,15 +1085,15 @@ final class pd {
                           } else {
                             cd.field_o = true;
                           }
-                          if (!d.p(-116) &&
+                          if (!GameClientBase.p(-116) &&
                             0 != eh.field_l) {
                             be.a(5, (byte) -120, false);
                             if (var5 == 0) {
                               return;
                             }
                           }
-                          if (d.p(-115)) {
-                            if (!d.p(-78)) {
+                          if (GameClientBase.p(-115)) {
+                            if (!GameClientBase.p(-78)) {
                               return;
                             }
                             be.a(6, (byte) -109, false);
@@ -1112,18 +1112,18 @@ final class pd {
             }
           }
           if (decompiledFrameRemainder2) {
-            if (nd.field_e <= 250 &&
-              !md.field_a) {
-              if (nd.field_e == 50) {
+            if (RandomAccessCacheFile.field_e <= 250 &&
+              !NodeHashTableIterator.field_a) {
+              if (RandomAccessCacheFile.field_e == 50) {
                 h.a(7, 4);
               }
-              if ((nd.field_e == 100)) {
+              if ((RandomAccessCacheFile.field_e == 100)) {
                 wh.a(ok.field_b, 8, param0 ^ 22364);
               }
               decompiledFrameRemainder2 = false;
             }
             else {
-              md.field_a = false;
+              NodeHashTableIterator.field_a = false;
               o.a(2, true);
               vd.b(0);
               return;
@@ -1136,7 +1136,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.BA(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.BA(" + param0 + ')');
         }
     }
 
@@ -1233,10 +1233,10 @@ final class pd {
             (decompiledFrameRemainder7) &&
             (decompiledFrameRemainder6)) {
             var2_int = 7;
-            if (d.p(-85)) {
+            if (GameClientBase.p(-85)) {
               var2_int = 6;
             }
-            decompiledFrameRemainder8 = !(ee.field_o <= 0);
+            decompiledFrameRemainder8 = !(UiComponent.field_o <= 0);
             if (decompiledFrameRemainder8) {
               var2_int = 0;
               decompiledFrameRemainder8 = (var4 != 0);
@@ -1245,10 +1245,10 @@ final class pd {
           if ((decompiledFrameRemainder8) &&
             (decompiledFrameRemainder7)) {
             var2_int = 7;
-            if (d.p(-88)) {
+            if (GameClientBase.p(-88)) {
               var2_int = 6;
             }
-            decompiledFrameRemainder8 = !(ee.field_o <= 0);
+            decompiledFrameRemainder8 = !(UiComponent.field_o <= 0);
             if (decompiledFrameRemainder8) {
               var2_int = 0;
               decompiledFrameRemainder8 = (var4 != 0);
@@ -1260,17 +1260,17 @@ final class pd {
           if (var2_int != 1) {
             o.a(-1, true);
           }
-          qg.f(0, 0, 640, 480);
+          SoftwareRasterizer.f(0, 0, 640, 480);
           be.a(var2_int, (byte) -119, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.B(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.B(" + param0 + ')');
         }
     }
 
-    private final void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, byte param7, ka param8, ka param9, int[] param10, int param11, int param12, ge param13, int param14, boolean param15) {
+    private final void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, byte param7, Sprite param8, Sprite param9, int[] param10, int param11, int param12, ge param13, int param14, boolean param15) {
         RuntimeException stackIn_67_0 = null;
         StringBuilder stackIn_67_1 = null;
         String stackIn_68_2 = null;
@@ -1308,7 +1308,7 @@ final class pd {
           var19 = 0;
           var20 = 60;
           var21 = var20;
-          qg.a(pf.field_g);
+          SoftwareRasterizer.a(pf.field_g);
           if (param12 <= param5) {
             if (param5 > (param6 - param12)) {
               var21 = (-param5 + param6) * var20 / param12;
@@ -1329,10 +1329,10 @@ final class pd {
             var19Lifetime1 = param5 * 256 / param12;
             var21 = var20 * param5 / param12;
           }
-          qg.f(0, 0, 640, var21, 1);
-          qg.f(0, 479 - var21, 640, var21, 1);
+          SoftwareRasterizer.f(0, 0, 640, var21, 1);
+          SoftwareRasterizer.f(0, 479 - var21, 640, var21, 1);
           var22 = 35 / ((param7 + 3) / 59);
-          qg.f(0, var21, 640, -var21 + 480);
+          SoftwareRasterizer.f(0, var21, 640, -var21 + 480);
           var18 = -param0[1];
           var17_int = -param0[0];
           if (var19Lifetime1 < 0) {
@@ -1369,7 +1369,7 @@ final class pd {
             if (rj.field_g == 0) {
               if (vj.field_d == null) {
                 e.a((byte) -36, var25);
-                qg.f(0, var21, 640, 480 - var21);
+                SoftwareRasterizer.f(0, var21, 640, 480 - var21);
               }
               vj.field_d[ok.field_b].b(-8 + var17_intLifetime2, var18Lifetime2 - 8, 256);
             }
@@ -1381,7 +1381,7 @@ final class pd {
               if (0 == rj.field_g) {
                 if (null == vj.field_d) {
                   e.a((byte) -101, var25);
-                  qg.f(0, var21, 640, 480 - var21);
+                  SoftwareRasterizer.f(0, var21, 640, 480 - var21);
                 }
                 vj.field_d[ok.field_b].b(-8 + var17_intLifetime2, var18Lifetime2 - 8, 256);
               }
@@ -1390,7 +1390,7 @@ final class pd {
                 if (0 == rj.field_g) {
                   if (vj.field_d == null) {
                     e.a((byte) -116, var25);
-                    qg.f(0, var21, 640, -var21 + 480);
+                    SoftwareRasterizer.f(0, var21, 640, -var21 + 480);
                   }
                   vj.field_d[ok.field_b].b(-8 + var17_intLifetime2, var18Lifetime2 - 8, var19Lifetime1);
                 }
@@ -1400,14 +1400,14 @@ final class pd {
               if (0 == rj.field_g) {
                 if (vj.field_d == null) {
                   e.a((byte) -116, var25);
-                  qg.f(0, var21, 640, -var21 + 480);
+                  SoftwareRasterizer.f(0, var21, 640, -var21 + 480);
                 }
                 vj.field_d[ok.field_b].b(-8 + var17_intLifetime2, var18Lifetime2 - 8, var19Lifetime1);
               }
               param9.e(var17_intLifetime2, var18Lifetime2, var19Lifetime1);
             }
           }
-          qg.b(pf.field_g);
+          SoftwareRasterizer.b(pf.field_g);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1449,7 +1449,7 @@ final class pd {
           } else {
             stackIn_88_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(',').append(param14).append(',').append(param15).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_67_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(',').append(param14).append(',').append(param15).append(')').toString());
         }
     }
 
@@ -1458,8 +1458,8 @@ final class pd {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        ka var6 = null;
-        ka[] var7 = null;
+        Sprite var6 = null;
+        Sprite[] var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -1494,10 +1494,10 @@ final class pd {
             }
             hd.a(var7, var5, var4, (byte) 106, var3, var2_int);
             var6 = we.field_m[var9 + 1];
-            qg.a(pf.field_g);
+            SoftwareRasterizer.a(pf.field_g);
             var2_int = var2_int + var8;
             var3 = var8 + var3;
-            qg.a(var2_int, var3, var2_int + var4 - 2 * var8, -var8 + (var5 >> 1) + var3);
+            SoftwareRasterizer.a(var2_int, var3, var2_int + var4 - 2 * var8, -var8 + (var5 >> 1) + var3);
             var2_intLifetime1 = bg.field_I[var9][0];
             var2_intLifetime1 = (-(var6.field_q >> 1) + var4 >> 1) + var2_intLifetime1;
             var3Lifetime1 = bg.field_I[var9][1];
@@ -1507,7 +1507,7 @@ final class pd {
               var2_intLifetime1 -= 16;
             }
             od.a(var6, var2_intLifetime1, var3Lifetime1);
-            qg.b(pf.field_g);
+            SoftwareRasterizer.b(pf.field_g);
             var3Lifetime2 = bg.field_I[var9][1];
             var2_intLifetime2 = bg.field_I[var9][0];
             var7[0].g(var2_intLifetime2, var3Lifetime2);
@@ -1523,20 +1523,20 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.V(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.V(" + param0 + ')');
         }
     }
 
     private final void d(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        ka var3 = null;
+        Sprite var3 = null;
         int var4 = 0;
         int var5 = 0;
         RuntimeException decompiledCaughtException = null;
-        ka var3Lifetime1;
+        Sprite var3Lifetime1;
         try {
-          qg.f(0, 0, 640, 480);
+          SoftwareRasterizer.f(0, 0, 640, 480);
           var2_int = 8;
           if (vj.field_d == null) {
             e.a((byte) -24, var2_int);
@@ -1551,11 +1551,11 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.M(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.M(" + param0 + ')');
         }
     }
 
-    private final void a(byte param0, int[][] param1, int param2, ge param3, int param4, int param5, int[] param6, int[][] param7, int param8, ka param9, int param10, int[] param11, int param12, int param13, ka param14) {
+    private final void a(byte param0, int[][] param1, int param2, ge param3, int param4, int param5, int[] param6, int[][] param7, int param8, Sprite param9, int param10, int[] param11, int param12, int param13, Sprite param14) {
         int stackIn_33_0 = 0;
         int stackIn_33_1 = 0;
         RuntimeException stackIn_83_0 = null;
@@ -1784,7 +1784,7 @@ final class pd {
           } else {
             stackIn_108_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_83_0), ((StringBuilder) (Object) stackIn_107_1).append(stackIn_108_2).append(')').toString());
         }
     }
 
@@ -1832,7 +1832,7 @@ final class pd {
         var28 = TorChallenge.field_F ? 1 : 0;
         try {
           var3_int = g.a(104, 0) ? 1 : 0;
-          var4 = wb.field_n.length;
+          var4 = BufferedSocket.field_n.length;
           if (var3_int == 0) {
             var4 = var4 - ci.g(25);
           }
@@ -1872,7 +1872,7 @@ final class pd {
                   var3_int != 0))) {
                   if (v.a(var20, 5)) {
                     je.field_b.h(var15, var16);
-                  } else if (0 < ee.field_o) {
+                  } else if (0 < UiComponent.field_o) {
                     je.field_b.h(var15, var16);
                   } else {
                     hb.field_c.h(var15, var16);
@@ -1882,12 +1882,12 @@ final class pd {
                 tf.field_j[var20].h(var15, var16);
               }
               if (decompiledFrameRemainder0) {
-                if (var15 <= kc.field_u &&
-                  36 + var15 >= kc.field_u &&
+                if (var15 <= LocalizedStrings.field_u &&
+                  36 + var15 >= LocalizedStrings.field_u &&
                   ph.field_d >= var16 &&
                   var16 + 36 >= ph.field_d) {
                   var19 = var20;
-                  qg.e(var15 - 2, -2 + var16, 36, 36, 6, 8421504);
+                  SoftwareRasterizer.e(var15 - 2, -2 + var16, 36, 36, 6, 8421504);
                 }
                 if (this.field_g >= var15 &&
                   var15 + 32 >= this.field_g &&
@@ -1901,7 +1901,7 @@ final class pd {
                   }
                 }
                 if (~var20 == ~this.field_b) {
-                  qg.e(-2 + var15, var16 - 2, 36, 36, 6, 1);
+                  SoftwareRasterizer.e(-2 + var15, var16 - 2, 36, 36, 6, 1);
                 }
                 var18++;
                 if (var18 != var9) {
@@ -1943,10 +1943,10 @@ final class pd {
           }
           if (var19 == -1) {
             tf.field_x.a(kk.field_c, 320, -var7 + (var14Lifetime1 / 2 + var21 - (var20 - 18)), 0, -1);
-            if (!d.p(-99)) {
+            if (!GameClientBase.p(-99)) {
               return;
             }
-            ag.field_e.a(gb.field_e, 320, ag.field_e.field_x + (var21 - (-(var14Lifetime1 / 2) + var7) + 2), 0, -1);
+            SecondaryNodeDequeIterator.field_e.a(gb.field_e, 320, SecondaryNodeDequeIterator.field_e.field_x + (var21 - (-(var14Lifetime1 / 2) + var7) + 2), 0, -1);
             if (var28 == 0) {
               return;
             }
@@ -1961,7 +1961,7 @@ final class pd {
           var13 = 2 * var5 + var9 * (2 * var11 + var6Lifetime2);
           var6Lifetime3 = 128;
           if (var23 == 0) {
-            tf.field_x.a(da.field_a, 320, 4 + (var14Lifetime2 + var16), 0, -1);
+            tf.field_x.a(IntrusiveNode.field_a, 320, 4 + (var14Lifetime2 + var16), 0, -1);
           }
           if (var23 != 0 ||
             var28 != 0) {
@@ -1973,7 +1973,7 @@ final class pd {
           var21 += 18;
           if (var23 == 0) {
             if (!v.a(var19, 5)) {
-              if (ee.field_o > 0) {
+              if (UiComponent.field_o > 0) {
                 je.field_b.g(var15, var16);
                 if (var28 != 0) {
                   hb.field_c.g(var15, var16);
@@ -2001,11 +2001,11 @@ final class pd {
           if (kf.field_b == 3) {
             var13 += 10;
           }
-          var25 = ag.field_e.a(jc.field_j[var19], new int[]{var13}, var24);
+          var25 = SecondaryNodeDequeIterator.field_e.a(jc.field_j[var19], new int[]{var13}, var24);
           var15 = var22 + (var6Lifetime3 + var15);
-          tf.field_x.c(wb.field_n[var19], var15, var21, 0, -1);
+          tf.field_x.c(BufferedSocket.field_n[var19], var15, var21, 0, -1);
           var21 = var21 + var20;
-          var12Lifetime1 = ag.field_e.field_x + ag.field_e.field_K;
+          var12Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x + SecondaryNodeDequeIterator.field_e.field_K;
           var20 = var12Lifetime1 + 2;
           var26 = 0;
           do {
@@ -2013,7 +2013,7 @@ final class pd {
               var26 = 2;
               break;
             }
-            ag.field_e.c(var24[var26], var15, var21, 0, -1);
+            SecondaryNodeDequeIterator.field_e.c(var24[var26], var15, var21, 0, -1);
             var21 = var21 + var20;
             var26++;
           } while (var28 == 0);
@@ -2021,11 +2021,11 @@ final class pd {
           do {
             if (var26 <= var27) {
               var21 = var21 + (var20 >> 1);
-              ag.field_e.c(vj.field_a + 100 * re.field_w[var19], var15, var21, 0, -1);
+              SecondaryNodeDequeIterator.field_e.c(vj.field_a + 100 * re.field_w[var19], var15, var21, 0, -1);
               var21 = var21 + (var20 + (var20 >> 1));
-              ag.field_e.c(ca.field_c, var15, var21, 0, -1);
-              var15 = var15 + ag.field_e.a(ca.field_c);
-              var16 = -(hh.field_b.field_v - ag.field_e.field_x >> 1) - ag.field_e.field_x + var21;
+              SecondaryNodeDequeIterator.field_e.c(ca.field_c, var15, var21, 0, -1);
+              var15 = var15 + SecondaryNodeDequeIterator.field_e.a(ca.field_c);
+              var16 = -(hh.field_b.field_v - SecondaryNodeDequeIterator.field_e.field_x >> 1) - SecondaryNodeDequeIterator.field_e.field_x + var21;
               break;
             }
             var21 = var21 + var20;
@@ -2046,7 +2046,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3), "pd.IA(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3), "pd.IA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -2061,14 +2061,14 @@ final class pd {
           boolean decompiledFrameCompleted0 = true;
           var2_int = vj.field_c;
           if (!na.field_f) {
-            lj.field_n = new qe[3];
+            lj.field_n = new LevelEntity[3];
             na.field_f = true;
-            jj.field_a = new ka[3];
+            jj.field_a = new Sprite[3];
             var3 = 0;
             while (var3 < 3) {
               vj.field_c = var3;
-              lj.field_n[var3] = new qe(0, 0, 0, 0);
-              jj.field_a[var3] = new ka(192, 192);
+              lj.field_n[var3] = new LevelEntity(0, 0, 0, 0);
+              jj.field_a[var3] = new Sprite(192, 192);
               var3++;
               if (var4 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -2086,7 +2086,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.W(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.W(" + param0 + ')');
         }
     }
 
@@ -2119,7 +2119,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.JA(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.JA(" + param0 + ')');
         }
     }
 
@@ -2147,7 +2147,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1_ref), "pd.S(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1_ref), "pd.S(" + param0 + ')');
         }
     }
 
@@ -2185,7 +2185,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.DB(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.DB(" + param0 + ')');
         }
     }
 
@@ -2203,7 +2203,7 @@ final class pd {
         var6 = TorChallenge.field_F ? 1 : 0;
         try {
           if (this.field_e == 2 &&
-            !d.p(-91)) {
+            !GameClientBase.p(-91)) {
             if (b.field_J == 96) {
               boolean decompiledSharedTail0 = !(this.field_k.field_j <= 0);
               if (!decompiledSharedTail0) {
@@ -2356,11 +2356,11 @@ final class pd {
             if (ec.field_d == 98 ||
               ec.field_d == 99) {
               cf.field_b = var2_int;
-              ug.field_i[10].field_k.b(15275);
-              if (ug.field_i[10].field_k.field_j >= 0 &&
-                !pa.field_s[ok.field_b][ug.field_i[10].field_k.field_j]) {
+              GameApplet.field_i[10].field_k.b(15275);
+              if (GameApplet.field_i[10].field_k.field_j >= 0 &&
+                !pa.field_s[ok.field_b][GameApplet.field_i[10].field_k.field_j]) {
                 var3 = cj.a(94);
-                ug.field_i[10].field_k.field_j = var3;
+                GameApplet.field_i[10].field_k.field_j = var3;
               }
               ec.field_d = -1;
               return;
@@ -2411,7 +2411,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.EB(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.EB(" + param0 + ')');
         }
     }
 
@@ -2420,9 +2420,9 @@ final class pd {
         int var2_int = 0;
         RuntimeException var2 = null;
         ge var3 = null;
-        ka var4 = null;
+        Sprite var4 = null;
         int var5 = 0;
-        ka var6 = null;
+        Sprite var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -2439,7 +2439,7 @@ final class pd {
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
-        ka var23 = null;
+        Sprite var23 = null;
         int[] var24 = null;
         int var25 = 0;
         int var26 = 0;
@@ -2450,14 +2450,14 @@ final class pd {
         int var31 = 0;
         int var32 = 0;
         ge var3Lifetime1;
-        ka var6Lifetime1;
+        Sprite var6Lifetime1;
         int[] var12Lifetime1;
         int[] var13Lifetime1;
         int[][] var16Lifetime1;
         int[] var17Lifetime1;
         ge var3Lifetime2;
         ge var3Lifetime3;
-        ka var6Lifetime2;
+        Sprite var6Lifetime2;
         int[] var12Lifetime2;
         int[] var12Lifetime3;
         int[] var13Lifetime2;
@@ -2483,8 +2483,8 @@ final class pd {
         var32 = TorChallenge.field_F ? 1 : 0;
         try {
           var14 = -99 / ((param0 + 30) / 59);
-          if (nd.field_e <= 0) {
-            qg.b();
+          if (RandomAccessCacheFile.field_e <= 0) {
+            SoftwareRasterizer.b();
             return;
           }
           if (rj.field_g != 0) {
@@ -2495,16 +2495,16 @@ final class pd {
                   var2_int = 1 + ea.field_e;
                   var18 = var2_int / 2 - 1;
                   var5 = 15245826;
-                  var3 = ad.field_e;
+                  var3 = FullscreenFocusCanvas.field_e;
                   var9 = 50;
                   var6 = pl.field_f[var18 + 1];
                   var8 = 50;
                   var10 = 100;
-                  var11 = nd.field_e;
+                  var11 = RandomAccessCacheFile.field_e;
                   var13 = qb.field_a[var18];
-                  var12 = d.field_y;
+                  var12 = GameClientBase.field_y;
                   var7 = 350;
-                  this.a(var12, (int[]) null, var5, 0, var10, var11, var7, (byte) 110, (ka) null, var6, var13, var9, var8, var3, 0, false);
+                  this.a(var12, (int[]) null, var5, 0, var10, var11, var7, (byte) 110, (Sprite) null, var6, var13, var9, var8, var3, 0, false);
                   this.a(var2_int, (byte) -10, false, 5);
                   if (var32 == 0) {
                     return;
@@ -2528,7 +2528,7 @@ final class pd {
                   var12Lifetime2 = lc.field_n;
                   var24 = qc.field_g;
                   var13 = hf.field_f[var31];
-                  var11 = nd.field_e;
+                  var11 = RandomAccessCacheFile.field_e;
                   var6 = pf.field_a[var31 + 1];
                   var21 = 25;
                   var22 = 200;
@@ -2554,13 +2554,13 @@ final class pd {
                 var13 = ii.field_j[ok.field_b];
                 var7 = 450;
                 var20 = 425;
-                var11 = nd.field_e;
+                var11 = RandomAccessCacheFile.field_e;
                 var26 = 350;
                 var16 = td.field_j;
                 var5 = 6831816;
                 var19 = 25;
                 var8 = 50;
-                this.a((ka) null, var12Lifetime3, var25, var8, var3Lifetime3, var5, (int[]) null, var7, var6, 0, var11, var13, (byte) -116, false, 0, var26);
+                this.a((Sprite) null, var12Lifetime3, var25, var8, var3Lifetime3, var5, (int[]) null, var7, var6, 0, var11, var13, (byte) -116, false, 0, var26);
                 this.a(var2_int, (byte) 126, false, 4);
                 if (var32 == 0) {
                   return;
@@ -2591,7 +2591,7 @@ final class pd {
             if (gh.field_x) {
               var2_intLifetime2 = var2_intLifetime2 - 6 << 1;
             }
-            var11Lifetime2 = nd.field_e;
+            var11Lifetime2 = RandomAccessCacheFile.field_e;
             this.a((byte) 68, var30, var11Lifetime2, (ge) null, var8Lifetime2, var5Lifetime2, var13Lifetime2, var16Lifetime2, var15, var6Lifetime2, var7Lifetime2, var17Lifetime2, var20Lifetime1, var19Lifetime1, var4);
             this.a(var2_intLifetime2, (byte) 0, false, 1);
             if (var32 == 0) {
@@ -2601,7 +2601,7 @@ final class pd {
           var2_intLifetime1 = ea.field_e;
           var8Lifetime1 = 50;
           var9Lifetime1 = 50;
-          var11Lifetime1 = nd.field_e;
+          var11Lifetime1 = RandomAccessCacheFile.field_e;
           var13Lifetime1 = je.field_h[ok.field_b];
           var17Lifetime1 = u.field_c;
           var12Lifetime1 = sh.field_q;
@@ -2612,12 +2612,12 @@ final class pd {
           var3Lifetime1 = qc.field_c;
           var16Lifetime1 = wf.field_h;
           var7Lifetime1 = 250;
-          this.a(var12Lifetime1, (int[]) null, var5Lifetime1, 0, var10Lifetime1, var11Lifetime1, var7Lifetime1, (byte) -64, (ka) null, var6Lifetime1, var13Lifetime1, var9Lifetime1, var8Lifetime1, var3Lifetime1, 0, false);
+          this.a(var12Lifetime1, (int[]) null, var5Lifetime1, 0, var10Lifetime1, var11Lifetime1, var7Lifetime1, (byte) -64, (Sprite) null, var6Lifetime1, var13Lifetime1, var9Lifetime1, var8Lifetime1, var3Lifetime1, 0, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.K(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.K(" + param0 + ')');
         }
     }
 
@@ -2738,7 +2738,7 @@ final class pd {
                                   }
                                 }
                                 if (decompiledFrameRemainder1) {
-                                  jd.a((byte) 68);
+                                  ClientException.a((byte) 68);
                                   decompiledFrameRemainder1 = (var11 != 0);
                                 }
                               }
@@ -2747,7 +2747,7 @@ final class pd {
                                 var3_int = lg.field_d[1][3];
                                 var4_int = -var2_int + lg.field_d[1][2];
                                 var5 = -var3_int + lg.field_d[1][4];
-                                if (ee.field_o > 0 &&
+                                if (UiComponent.field_o > 0 &&
                                   ol.a((byte) -119, sh.field_u)) {
                                   var5 = var5 * 7 / 6;
                                 }
@@ -2885,7 +2885,7 @@ final class pd {
                     stackIn_187_0 = this;
                     stackIn_187_3 = true;
                   }
-                  this.a(stackIn_186_1, stackIn_186_2, stackIn_187_3, (ka) null);
+                  this.a(stackIn_186_1, stackIn_186_2, stackIn_187_3, (Sprite) null);
                 }
                 var3_intLifetime1++;
               }
@@ -2899,10 +2899,10 @@ final class pd {
                 return;
               }
               if (null == oj.field_d) {
-                oj.field_d = new ka(640, 480);
+                oj.field_d = new Sprite(640, 480);
               }
               oj.field_d.d();
-              qg.b();
+              SoftwareRasterizer.b();
               var3_intLifetime1Lifetime1 = 0;
               while (true) {
                 if (var3_intLifetime1Lifetime1 < this.field_k.field_b) {
@@ -2926,7 +2926,7 @@ final class pd {
                           stackIn_219_0 = this;
                           stackIn_219_3 = true;
                         }
-                        this.a(stackIn_218_1, stackIn_218_2, stackIn_219_3, (ka) null);
+                        this.a(stackIn_218_1, stackIn_218_2, stackIn_219_3, (Sprite) null);
                       }
                     }
                     var3_intLifetime1Lifetime1++;
@@ -2951,7 +2951,7 @@ final class pd {
           if (ii.field_h == null) {
             ue.b((byte) 123);
           }
-          ag.a(116);
+          SecondaryNodeDequeIterator.a(116);
           if (2 <= fa.field_g) {
             var3 = "FPS:" + oh.field_e;
             tf.field_x.b(var3, 636, 80, 0, -1);
@@ -2963,7 +2963,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.R(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.R(" + param0 + ')');
         }
     }
 
@@ -3017,7 +3017,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.RA(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.RA(" + param0 + ')');
         }
     }
 
@@ -3034,7 +3034,7 @@ final class pd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_e == 2 &&
-            !d.p(-67)) {
+            !GameClientBase.p(-67)) {
             stackIn_5_0 = this.a(param1 - 5933, param0) + 180;
             return stackIn_5_0;
           }
@@ -3058,7 +3058,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3), "pd.VA(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3), "pd.VA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3074,15 +3074,15 @@ final class pd {
           rc.field_r = null;
           ji.field_m = new wl(uk.field_J, ok.field_b, bl.field_U);
           bc.field_o = -1;
-          stackIn_7_0 = (0 < ee.field_o) ? 0 : 7;
-          kc.field_v = stackIn_7_0;
+          stackIn_7_0 = (0 < UiComponent.field_o) ? 0 : 7;
+          LocalizedStrings.field_v = stackIn_7_0;
           bb.field_h = -1;
           ch.b(false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.KA(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.KA(" + param0 + ')');
         }
     }
 
@@ -3098,7 +3098,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3), "pd.AA(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3), "pd.AA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3177,7 +3177,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3), "pd.T(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3), "pd.T(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -3225,13 +3225,13 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var9), "pd.DA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw oj.wrapException((Throwable) ((Object) var9), "pd.DA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
     private final void a(int param0, byte param1, boolean param2, int param3) {
         RuntimeException decompiledCaughtException = null;
-        ka var5 = null;
+        Sprite var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
         int var7 = 0;
@@ -3245,7 +3245,7 @@ final class pd {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        ka var5Lifetime1;
+        Sprite var5Lifetime1;
         int var8Lifetime1;
         int var9Lifetime1;
         int var16Lifetime1;
@@ -3259,11 +3259,11 @@ final class pd {
             var7 = bi.field_a[param3][param0];
           }
           if (param3 > 1) {
-            this.a(0, nd.field_e, var7, param3 + 6, var6, true, param2);
+            this.a(0, RandomAccessCacheFile.field_e, var7, param3 + 6, var6, true, param2);
           }
           if (param3 <= 1 ||
             var17 != 0) {
-            this.a(0, nd.field_e, var7, param3, var6, true, param2);
+            this.a(0, RandomAccessCacheFile.field_e, var7, param3, var6, true, param2);
           }
           var5 = pe.field_eb[param3];
           if (param3 > 1) {
@@ -3276,14 +3276,14 @@ final class pd {
             var12 = m.field_c[1][param0];
             var13 = hd.field_f[1][param0];
           }
-          var15 = nd.field_e - var12;
-          if (nd.field_e <= var12) {
+          var15 = RandomAccessCacheFile.field_e - var12;
+          if (RandomAccessCacheFile.field_e <= var12) {
             return;
           }
-          if (nd.field_e >= var13) {
+          if (RandomAccessCacheFile.field_e >= var13) {
             return;
           }
-          if (nd.field_e >= var7) {
+          if (RandomAccessCacheFile.field_e >= var7) {
             return;
           }
           var8 = m.field_g[0];
@@ -3293,31 +3293,31 @@ final class pd {
             var6 > var15) {
             var16Lifetime1 = var15 * 256 / var6;
             if (var17 != 0) {
-              if (-var6 + var13 >= nd.field_e) {
+              if (-var6 + var13 >= RandomAccessCacheFile.field_e) {
                 var16Lifetime1 = -1;
-                var16Lifetime1 = (-nd.field_e + var13) * 256 / var6;
+                var16Lifetime1 = (-RandomAccessCacheFile.field_e + var13) * 256 / var6;
               } else {
-                var16Lifetime1 = (-nd.field_e + var13) * 256 / var6;
+                var16Lifetime1 = (-RandomAccessCacheFile.field_e + var13) * 256 / var6;
               }
             }
           } else {
-            if (-var6 + var13 >= nd.field_e) {
+            if (-var6 + var13 >= RandomAccessCacheFile.field_e) {
               var16Lifetime1 = -1;
               if (var17 != 0) {
-                var16Lifetime1 = (-nd.field_e + var13) * 256 / var6;
+                var16Lifetime1 = (-RandomAccessCacheFile.field_e + var13) * 256 / var6;
               }
             } else {
-              var16Lifetime1 = (-nd.field_e + var13) * 256 / var6;
+              var16Lifetime1 = (-RandomAccessCacheFile.field_e + var13) * 256 / var6;
             }
           }
           var10 = m.field_g[2];
-          if (qe.field_E == null) {
-            qe.field_E = new ka(var10, var11);
+          if (LevelEntity.field_E == null) {
+            LevelEntity.field_E = new Sprite(var10, var11);
           }
           if (0 <= var16Lifetime1) {
-            qe.field_E.d();
+            LevelEntity.field_E.d();
             var8 = 0;
-            qg.b();
+            SoftwareRasterizer.b();
             var9 = 0;
           }
           hd.a(ui.field_i, var11, var10, (byte) -74, var9, var8);
@@ -3333,13 +3333,13 @@ final class pd {
             var9Lifetime1 = m.field_g[1];
             var8Lifetime1 = m.field_g[0];
             la.field_f.a(-54);
-            qe.field_E.d(var8Lifetime1, var9Lifetime1, var16Lifetime1);
+            LevelEntity.field_E.d(var8Lifetime1, var9Lifetime1, var16Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var5_ref), "pd.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) var5_ref), "pd.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -3377,7 +3377,7 @@ final class pd {
           var4_int = ia.field_p[this.field_e][param1];
           var5 = this.field_k.c((byte) 117) ? 1 : 0;
           if (param2 != 3) {
-            this.a(98, -95, 10, 73, -4, true, (ka[]) null);
+            this.a(98, -95, 10, 73, -4, true, (Sprite[]) null);
           }
           var6 = 0;
           var7 = 220;
@@ -3408,22 +3408,22 @@ final class pd {
           var8 = 256;
           var9 = var4_int;
           if (var9 != -1) {
-            L8: {
-              L9: {
-                L10: {
-                  L11: {
-                    L12: {
-                      L13: {
-                        L14: {
-                          L15: {
-                            L16: {
-                              L17: {
-                                L18: {
-                                  L19: {
-                                    L20: {
-                                      L21: {
-                                        L22: {
-                                          L23: {
+            regionExit1: {
+              regionExit2: {
+                regionExit3: {
+                  regionExit4: {
+                    regionExit5: {
+                      regionExit6: {
+                        regionExit7: {
+                          regionExit8: {
+                            regionExit9: {
+                              regionExit10: {
+                                regionExit11: {
+                                  regionExit12: {
+                                    regionExit13: {
+                                      regionExit14: {
+                                        regionExit15: {
+                                          regionExit16: {
                                             boolean decompiledFrameRemainder18 = true;
                                             boolean decompiledFrameRemainder17 = true;
                                             boolean decompiledFrameRemainder16 = true;
@@ -3474,68 +3474,68 @@ final class pd {
                                                 (decompiledFrameRemainder17 = (var9 != 11)) &&
                                                 (decompiledFrameRemainder18 = (var9 != 22))) {
                                                 if (var9 == 23) {
-                                                  break L23;
+                                                  break regionExit16;
                                                 }
                                                 if (var9 == 24 &&
                                                   var12 == 0) {
-                                                  break L22;
+                                                  break regionExit15;
                                                 }
                                                 if (var9 == 25 &&
                                                   var12 == 0) {
-                                                  break L21;
+                                                  break regionExit14;
                                                 }
                                                 if (26 == var9) {
-                                                  break L20;
+                                                  break regionExit13;
                                                 }
                                                 if (var9 == 27) {
-                                                  break L19;
+                                                  break regionExit12;
                                                 }
                                                 if (28 == var9) {
-                                                  break L18;
+                                                  break regionExit11;
                                                 }
                                                 if (var9 == 29 &&
                                                   var12 == 0) {
-                                                  break L17;
+                                                  break regionExit10;
                                                 }
                                                 if (var9 == 30) {
-                                                  break L16;
+                                                  break regionExit9;
                                                 }
                                                 if (var9 == 31) {
-                                                  break L15;
+                                                  break regionExit8;
                                                 }
                                                 if (var9 == 19 &&
                                                   var12 == 0) {
-                                                  break L14;
+                                                  break regionExit7;
                                                 }
                                                 if (var9 == 32 &&
                                                   var12 == 0) {
-                                                  break L13;
+                                                  break regionExit6;
                                                 }
                                                 if (21 == var9) {
-                                                  break L12;
+                                                  break regionExit5;
                                                 }
                                                 if (var9 == 33 &&
                                                   var12 == 0) {
-                                                  break L11;
+                                                  break regionExit4;
                                                 }
                                                 if (34 == var9) {
-                                                  break L10;
+                                                  break regionExit3;
                                                 }
                                                 if (var9 == 35 &&
                                                   var12 == 0) {
-                                                  break L9;
+                                                  break regionExit2;
                                                 }
                                                 if (var9 == 36) {
-                                                  break L8;
+                                                  break regionExit1;
                                                 }
                                                 return;
                                               }
                                             } else {
                                               if (this.field_k.c((byte) 90)) {
                                                 be.a(8, (byte) -125, param0);
-                                                ug.field_i[9].a(param2 + 0, param0);
-                                                stackIn_212_0 = (ee.field_o > 0) ? 0 : 7;
-                                                kc.field_v = stackIn_212_0;
+                                                GameApplet.field_i[9].a(param2 + 0, param0);
+                                                stackIn_212_0 = (UiComponent.field_o > 0) ? 0 : 7;
+                                                LocalizedStrings.field_v = stackIn_212_0;
                                               }
                                               if (ec.field_d != 84) {
                                                 return;
@@ -3544,9 +3544,9 @@ final class pd {
                                                 return;
                                               }
                                               be.a(8, (byte) -125, param0);
-                                              ug.field_i[9].a(3, param0);
-                                              stackIn_223_0 = (ee.field_o <= 0) ? 7 : 0;
-                                              kc.field_v = stackIn_223_0;
+                                              GameApplet.field_i[9].a(3, param0);
+                                              stackIn_223_0 = (UiComponent.field_o <= 0) ? 7 : 0;
+                                              LocalizedStrings.field_v = stackIn_223_0;
                                               ec.field_d = -1;
                                               if (var12 == 0) {
                                                 return;
@@ -3579,15 +3579,15 @@ final class pd {
                                                 decompiledSharedTail0 = (var12 != 0);
                                               }
                                               if (decompiledSharedTail0) {
-                                                ug.field_o = 0;
+                                                GameApplet.field_o = 0;
                                                 df.field_O = true;
                                                 if (ea.field_e - 6 >= 0) {
-                                                  ug.field_o = 1;
+                                                  GameApplet.field_o = 1;
                                                 }
                                                 be.a(-1, (byte) -126, param0);
                                               }
-                                              stackIn_243_0 = (0 >= ee.field_o) ? 7 : 0;
-                                              kc.field_v = stackIn_243_0;
+                                              stackIn_243_0 = (0 >= UiComponent.field_o) ? 7 : 0;
+                                              LocalizedStrings.field_v = stackIn_243_0;
                                               if (var12 == 0) {
                                                 return;
                                               }
@@ -3611,7 +3611,7 @@ final class pd {
                                               (decompiledFrameRemainder2)) {
                                               if (this.field_k.c((byte) 74)) {
                                                 if (cd.field_o) {
-                                                  if (d.p(-69)) {
+                                                  if (GameClientBase.p(-69)) {
                                                     be.a(6, (byte) -110, param0);
                                                     if (var12 == 0) {
                                                       return;
@@ -3681,7 +3681,7 @@ final class pd {
                                                 return;
                                               }
                                               be.a(4, (byte) -127, param0);
-                                              kc.field_v = this.field_e;
+                                              LocalizedStrings.field_v = this.field_e;
                                               if (var12 == 0) {
                                                 return;
                                               }
@@ -3705,7 +3705,7 @@ final class pd {
                                               }
                                               ma.field_j = 0;
                                               be.a(3, (byte) -103, param0);
-                                              kc.field_v = this.field_e;
+                                              LocalizedStrings.field_v = this.field_e;
                                               oi.field_g = true;
                                               kj.field_A = i.field_r;
                                               dj.field_Q = n.field_jb;
@@ -3729,7 +3729,7 @@ final class pd {
                                               if (!this.field_k.c((byte) 65)) {
                                                 return;
                                               }
-                                              be.a(kc.field_v, (byte) -104, param0);
+                                              be.a(LocalizedStrings.field_v, (byte) -104, param0);
                                               if (var12 == 0) {
                                                 return;
                                               }
@@ -3775,9 +3775,9 @@ final class pd {
                                                 var6Lifetime1 = 1;
                                               }
                                               if (this.field_k.a((byte) -79)) {
-                                                var9 = 9 + (128 + ee.field_s);
-                                                var10 = (this.a(23, param1) - (-this.b(param1, 5826) + var9) >> 1) + ee.field_s + 8;
-                                                var11 = var8 * (kc.field_u - var10 << 1) / 256;
+                                                var9 = 9 + (128 + UiComponent.field_s);
+                                                var10 = (this.a(23, param1) - (-this.b(param1, 5826) + var9) >> 1) + UiComponent.field_s + 8;
+                                                var11 = var8 * (LocalizedStrings.field_u - var10 << 1) / 256;
                                                 if (var11 <= 0) {
                                                   vk.a(0, (byte) 96);
                                                   if (var12 != 0) {
@@ -3836,9 +3836,9 @@ final class pd {
                                                 var6Lifetime1Lifetime1 = 1;
                                               }
                                               if (this.field_k.a((byte) -105)) {
-                                                var9 = 137 + ee.field_s;
-                                                var10Lifetime1 = (this.a(-113, param1) + this.b(param1, param2 + 5823) - var9 >> 1) + (ee.field_s + 8);
-                                                var11Lifetime1 = var7 * (kc.field_u - var10Lifetime1 << 1) / 256;
+                                                var9 = 137 + UiComponent.field_s;
+                                                var10Lifetime1 = (this.a(-113, param1) + this.b(param1, param2 + 5823) - var9 >> 1) + (UiComponent.field_s + 8);
+                                                var11Lifetime1 = var7 * (LocalizedStrings.field_u - var10Lifetime1 << 1) / 256;
                                                 var6Lifetime1Lifetime1 = 1;
                                                 if (var11Lifetime1 > 0) {
                                                   if (var7 > var11Lifetime1) {
@@ -3911,18 +3911,18 @@ final class pd {
                                               qh.d(true);
                                               sd.a(125);
                                               sd.b(106);
-                                              if (d.p(param2 - 86)) {
+                                              if (GameClientBase.p(param2 - 86)) {
                                                 be.a(6, (byte) -120, param0);
                                                 decompiledFrameRemainder0 = (var12 != 0);
                                               }
                                               if (decompiledFrameRemainder0) {
-                                                if (!d.p(-105) &&
+                                                if (!GameClientBase.p(-105) &&
                                                   null != ji.field_m) {
                                                   ji.field_m.c((byte) 107);
                                                 }
                                                 oi.a(true, true, true);
                                                 rc.c((byte) -82);
-                                                if (ee.field_o > 0) {
+                                                if (UiComponent.field_o > 0) {
                                                   cd.field_o = false;
                                                   if (var12 != 0) {
                                                     cd.field_o = true;
@@ -3931,11 +3931,11 @@ final class pd {
                                                   cd.field_o = true;
                                                 }
                                                 rc.field_r = null;
-                                                if (!d.p(-73) &&
+                                                if (!GameClientBase.p(-73) &&
                                                   eh.field_l != 0) {
                                                   be.a(5, (byte) -126, param0);
                                                   if (var12 != 0) {
-                                                    if (d.p(-103)) {
+                                                    if (GameClientBase.p(-103)) {
                                                       be.a(6, (byte) -112, param0);
                                                       be.a(2, (byte) -109, param0);
                                                     } else {
@@ -3943,7 +3943,7 @@ final class pd {
                                                     }
                                                   }
                                                 } else {
-                                                  if (d.p(-103)) {
+                                                  if (GameClientBase.p(-103)) {
                                                     be.a(6, (byte) -112, param0);
                                                     if (var12 != 0) {
                                                       be.a(2, (byte) -109, param0);
@@ -3953,8 +3953,8 @@ final class pd {
                                                   }
                                                 }
                                               }
-                                              stackIn_414_0 = (0 < ee.field_o) ? 0 : 7;
-                                              kc.field_v = stackIn_414_0;
+                                              stackIn_414_0 = (0 < UiComponent.field_o) ? 0 : 7;
+                                              LocalizedStrings.field_v = stackIn_414_0;
                                               if (var12 == 0) {
                                                 return;
                                               }
@@ -4036,7 +4036,7 @@ final class pd {
                                                 cj.field_j = 0;
                                                 ma.field_j = ma.field_j - 1;
                                                 if (ma.field_j == 4) {
-                                                  fd.field_h = null;
+                                                  IterableNodeHashTable.field_h = null;
                                                 }
                                                 if (ma.field_j == 5) {
                                                   qh.a(3, true);
@@ -4063,7 +4063,7 @@ final class pd {
                                                 ma.field_j = ma.field_j + 1;
                                                 cj.field_j = 0;
                                                 if (4 == ma.field_j) {
-                                                  fd.field_h = null;
+                                                  IterableNodeHashTable.field_h = null;
                                                 }
                                                 if (5 == ma.field_j) {
                                                   qh.a(3, true);
@@ -4190,10 +4190,10 @@ final class pd {
                                   cf.field_b = 10;
                                   ok.field_b = 0;
                                   wl.d(335);
-                                  ug.field_i[10].a(param2 + 0, param0);
-                                  ug.field_i[11].a(param2 ^ 0, param0);
-                                  stackIn_589_0 = (ee.field_o > 0) ? 0 : 7;
-                                  kc.field_v = stackIn_589_0;
+                                  GameApplet.field_i[10].a(param2 + 0, param0);
+                                  GameApplet.field_i[11].a(param2 ^ 0, param0);
+                                  stackIn_589_0 = (UiComponent.field_o > 0) ? 0 : 7;
+                                  LocalizedStrings.field_v = stackIn_589_0;
                                 }
                                 if (ec.field_d != 84) {
                                   return;
@@ -4204,10 +4204,10 @@ final class pd {
                                 ok.field_b = 0;
                                 cf.field_b = 10;
                                 wl.d(335);
-                                ug.field_i[10].a(3, param0);
-                                ug.field_i[11].a(param2 + 0, param0);
-                                stackIn_600_0 = (ee.field_o <= 0) ? 7 : 0;
-                                kc.field_v = stackIn_600_0;
+                                GameApplet.field_i[10].a(3, param0);
+                                GameApplet.field_i[11].a(param2 + 0, param0);
+                                stackIn_600_0 = (UiComponent.field_o <= 0) ? 7 : 0;
+                                LocalizedStrings.field_v = stackIn_600_0;
                                 ec.field_d = -1;
                                 if (var12 == 0) {
                                   return;
@@ -4217,10 +4217,10 @@ final class pd {
                                 cf.field_b = 10;
                                 ok.field_b = 1;
                                 wl.d(param2 + 332);
-                                ug.field_i[10].a(3, param0);
-                                ug.field_i[11].a(param2 + 0, param0);
-                                stackIn_610_0 = (0 >= ee.field_o) ? 7 : 0;
-                                kc.field_v = stackIn_610_0;
+                                GameApplet.field_i[10].a(3, param0);
+                                GameApplet.field_i[11].a(param2 + 0, param0);
+                                stackIn_610_0 = (0 >= UiComponent.field_o) ? 7 : 0;
+                                LocalizedStrings.field_v = stackIn_610_0;
                               }
                               if (ec.field_d != 84) {
                                 return;
@@ -4231,10 +4231,10 @@ final class pd {
                               cf.field_b = 10;
                               ok.field_b = 1;
                               wl.d(335);
-                              ug.field_i[10].a(3, param0);
-                              ug.field_i[11].a(3, param0);
-                              stackIn_621_0 = (ee.field_o > 0) ? 0 : 7;
-                              kc.field_v = stackIn_621_0;
+                              GameApplet.field_i[10].a(3, param0);
+                              GameApplet.field_i[11].a(3, param0);
+                              stackIn_621_0 = (UiComponent.field_o > 0) ? 0 : 7;
+                              LocalizedStrings.field_v = stackIn_621_0;
                               ec.field_d = -1;
                               if (var12 == 0) {
                                 return;
@@ -4244,10 +4244,10 @@ final class pd {
                               ok.field_b = 2;
                               cf.field_b = 10;
                               wl.d(335);
-                              ug.field_i[10].a(3, param0);
-                              ug.field_i[11].a(3, param0);
-                              stackIn_631_0 = (0 >= ee.field_o) ? 7 : 0;
-                              kc.field_v = stackIn_631_0;
+                              GameApplet.field_i[10].a(3, param0);
+                              GameApplet.field_i[11].a(3, param0);
+                              stackIn_631_0 = (0 >= UiComponent.field_o) ? 7 : 0;
+                              LocalizedStrings.field_v = stackIn_631_0;
                             }
                             if (84 != ec.field_d) {
                               return;
@@ -4258,11 +4258,11 @@ final class pd {
                             ok.field_b = 2;
                             cf.field_b = 10;
                             wl.d(335);
-                            ug.field_i[10].a(3, param0);
-                            ug.field_i[11].a(3, param0);
+                            GameApplet.field_i[10].a(3, param0);
+                            GameApplet.field_i[11].a(3, param0);
                             ec.field_d = -1;
-                            stackIn_642_0 = (ee.field_o > 0) ? 0 : 7;
-                            kc.field_v = stackIn_642_0;
+                            stackIn_642_0 = (UiComponent.field_o > 0) ? 0 : 7;
+                            LocalizedStrings.field_v = stackIn_642_0;
                             if (var12 == 0) {
                               return;
                             }
@@ -4302,7 +4302,7 @@ final class pd {
                       if (!this.field_k.c((byte) 92)) {
                         return;
                       }
-                      md.field_a = true;
+                      NodeHashTableIterator.field_a = true;
                       if (var12 == 0) {
                         return;
                       }
@@ -4311,8 +4311,8 @@ final class pd {
                       return;
                     }
                     be.a(10, (byte) -124, param0);
-                    stackIn_694_0 = (ee.field_o <= 0) ? 7 : 0;
-                    kc.field_v = stackIn_694_0;
+                    stackIn_694_0 = (UiComponent.field_o <= 0) ? 7 : 0;
+                    LocalizedStrings.field_v = stackIn_694_0;
                     if (var12 == 0) {
                       return;
                     }
@@ -4398,11 +4398,11 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var4), "pd.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) var4), "pd.CA(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    private final void a(ka param0, int[] param1, int param2, int param3, ge param4, int param5, int[] param6, int param7, ka param8, int param9, int param10, int[] param11, byte param12, boolean param13, int param14, int param15) {
+    private final void a(Sprite param0, int[] param1, int param2, int param3, ge param4, int param5, int[] param6, int param7, Sprite param8, int param9, int param10, int[] param11, byte param12, boolean param13, int param14, int param15) {
         RuntimeException stackIn_57_0 = null;
         StringBuilder stackIn_57_1 = null;
         String stackIn_58_2 = null;
@@ -4557,7 +4557,7 @@ final class pd {
           } else {
             stackIn_78_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_77_1).append(stackIn_78_2).append(',').append(param12).append(',').append(param13).append(',').append(param14).append(',').append(param15).append(')').toString());
         }
     }
 
@@ -4581,16 +4581,16 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3), "pd.A(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3), "pd.A(" + param0 + ',' + param1 + ')');
         }
     }
 
     private final void a(byte param0, int param1, int param2, int param3, int param4, boolean param5, int param6) {
-        qe dupTemp$0 = null;
-        qe dupTemp$1 = null;
-        qe dupTemp$2 = null;
-        qe dupTemp$3 = null;
-        qe dupTemp$4 = null;
+        LevelEntity dupTemp$0 = null;
+        LevelEntity dupTemp$1 = null;
+        LevelEntity dupTemp$2 = null;
+        LevelEntity dupTemp$3 = null;
+        LevelEntity dupTemp$4 = null;
         int stackIn_8_0 = 0;
         int stackIn_25_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -4612,7 +4612,7 @@ final class pd {
         var16 = TorChallenge.field_F ? 1 : 0;
         try {
           if (param5) {
-            qg.a(ui.field_f);
+            SoftwareRasterizer.a(ui.field_f);
           }
           this.c(false);
           var8_int = ja.a((byte) 109, lj.field_n[param4].field_L) ? 1 : 0;
@@ -4697,7 +4697,7 @@ final class pd {
             return;
           }
           la.field_f.a(-98);
-          qg.b(ui.field_f);
+          SoftwareRasterizer.b(ui.field_f);
           var11Lifetime1 = jj.field_a[param4].field_q;
           var12Lifetime1 = jj.field_a[param4].field_v;
           if (param0 != 42) {
@@ -4713,7 +4713,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var8), "pd.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw oj.wrapException((Throwable) ((Object) var8), "pd.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -4732,8 +4732,8 @@ final class pd {
         int var3 = 0;
         int var9 = 0;
         int var10 = 0;
-        ka var11 = null;
-        ka[] var12 = null;
+        Sprite var11 = null;
+        Sprite[] var12 = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -4800,8 +4800,8 @@ final class pd {
               var14 = var8 + var14;
               var16_int = ue.field_j[3];
               var16_int = var16_int - var8 * 2;
-              qg.a(pf.field_g);
-              qg.f(var13, var14, var15 + var13, var16_int + var14);
+              SoftwareRasterizer.a(pf.field_g);
+              SoftwareRasterizer.f(var13, var14, var15 + var13, var16_int + var14);
               var15 = ue.field_j[2];
               var14 = ue.field_j[1];
               var13 = ue.field_j[0];
@@ -4813,7 +4813,7 @@ final class pd {
                 var13 -= 32;
               }
               var11.g(var13, var14);
-              qg.b(pf.field_g);
+              SoftwareRasterizer.b(pf.field_g);
               var12[0].g(var2_int, var3);
               var12[2].g(var4 + var2_int - var12[2].field_q, var3);
               var12[6].g(var2_int, -var12[6].field_v + var5 + var3);
@@ -4863,10 +4863,10 @@ final class pd {
             var12 = dh.field_cb[0];
             var36 = -(2 * var8) + (var24 + (var28 - var24) * (-(aa.field_f >> 2) + cd.field_b) / (aa.field_f >> 2));
             hd.a(var12, var36 + 2 * var8, var8 * 2 + var35, (byte) 55, -var8 + var34, -var8 + var33);
-            qg.a(pf.field_g);
-            qg.f(var33, var34, var35 + var33, var36 + var34);
+            SoftwareRasterizer.a(pf.field_g);
+            SoftwareRasterizer.f(var33, var34, var35 + var33, var36 + var34);
             var11.d(var29, var30, var31, var32);
-            qg.b(pf.field_g);
+            SoftwareRasterizer.b(pf.field_g);
             var12[0].g(var33 - var8, var34 - var8);
             var12[2].g(var8 + var33 + var35 - var12[2].field_q, -var8 + var34);
             var12[6].g(var33 - var8, var36 + var34 + var8 - var12[6].field_v);
@@ -4897,15 +4897,15 @@ final class pd {
               var3 = var3 + var10;
               var7 = 255 * (-cd.field_b + (aa.field_f >> 2)) / (aa.field_f >> 2);
               if (oj.field_d == null) {
-                oj.field_d = new ka(640, 480);
+                oj.field_d = new Sprite(640, 480);
               }
               oj.field_d.d();
-              qg.b();
+              SoftwareRasterizer.b();
               hd.a(var12, var5, var4, (byte) -55, var3, var2_int);
               var3 = var8 + var3;
-              qg.a(pf.field_g);
+              SoftwareRasterizer.a(pf.field_g);
               var2_int = var8 + var2_int;
-              qg.a(var2_int, var3, -(2 * var8) + var4 + var2_int, (var5 >> 1) + (var3 - var8));
+              SoftwareRasterizer.a(var2_int, var3, -(2 * var8) + var4 + var2_int, (var5 >> 1) + (var3 - var8));
               var2_int = bg.field_I[var13][0];
               var3 = bg.field_I[var13][1];
               var2_int = (var4 - (var11.field_q >> 1) >> 1) + var2_int;
@@ -4916,7 +4916,7 @@ final class pd {
                 var3 += 48;
               }
               od.a(var11, var2_int, var3);
-              qg.b(pf.field_g);
+              SoftwareRasterizer.b(pf.field_g);
               var14 = ef.field_j[0];
               var2_int = lg.field_d[8][1] + (lg.field_d[8][7] + lg.field_d[8][5]) * var13;
               var3 = lg.field_d[8][3];
@@ -4925,9 +4925,9 @@ final class pd {
               var15 = ef.field_j[1];
               var2_int = -(-var4 + var14 >> 1) + var2_int;
               var3 = var3 - (-var5 + var15 >> 1);
-              qg.a(pf.field_g);
+              SoftwareRasterizer.a(pf.field_g);
               var3 = var3 + var10;
-              qg.a(0, var3, 640, var9 - var12[7].field_v);
+              SoftwareRasterizer.a(0, var3, 640, var9 - var12[7].field_v);
               de.field_a.g(var2_int, var3);
               var17 = var13;
               switch ((var37 == 0
@@ -4987,7 +4987,7 @@ final class pd {
               var12 = dh.field_cb[0];
               var11 = we.field_m[var13 + 1];
               if (oj.field_d == null) {
-                oj.field_d = new ka(640, 480);
+                oj.field_d = new Sprite(640, 480);
               }
               hd.a(var12, var5, var4, (byte) 69, var3, var2_int);
               var14 = ef.field_j[0];
@@ -4999,9 +4999,9 @@ final class pd {
               var2_int = var2_int - (-var4 + var14 >> 1);
               var10 = (-var3 + var9) * cd.field_b / (aa.field_f >> 2);
               var3 = var3 - (var15 - var5 >> 1);
-              qg.a(pf.field_g);
+              SoftwareRasterizer.a(pf.field_g);
               var3 = var3 + var10;
-              qg.a(0, var3, 640, -var12[7].field_v + var9);
+              SoftwareRasterizer.a(0, var3, 640, -var12[7].field_v + var9);
               de.field_a.g(var2_int, var3);
               var17 = var13;
               switch (var17) {
@@ -5031,17 +5031,17 @@ final class pd {
               var4 = bg.field_I[var13][2];
               var3 = var10 + var3;
               this.a((byte) 42, var4, var2_int, var5, var13, true, var3);
-              qg.b(pf.field_g);
+              SoftwareRasterizer.b(pf.field_g);
               oj.field_d.d();
-              qg.b();
+              SoftwareRasterizer.b();
               var4 = bg.field_I[var13][2];
               var5 = bg.field_I[var13][3];
               var2_int = bg.field_I[var13][0];
               var3 = bg.field_I[var13][1];
               var2_int = var8 + var2_int;
-              qg.a(pf.field_g);
+              SoftwareRasterizer.a(pf.field_g);
               var3 = var8 + var3;
-              qg.a(var2_int, var3, -(2 * var8) + (var2_int + var4), -lg.field_d[8][8] + ((var5 >> 1) + var3) + var10 - var8);
+              SoftwareRasterizer.a(var2_int, var3, -(2 * var8) + (var2_int + var4), -lg.field_d[8][8] + ((var5 >> 1) + var3) + var10 - var8);
               var2_int = bg.field_I[var13][0];
               var2_int = (var4 - (var11.field_q >> 1) >> 1) + var2_int;
               var3 = bg.field_I[var13][1];
@@ -5060,7 +5060,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) runtimeException), "pd.PA(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "pd.PA(" + param0 + ')');
         }
     }
 
@@ -5086,10 +5086,10 @@ final class pd {
         var20 = TorChallenge.field_F ? 1 : 0;
         try {
           if (param2 <= 54) {
-            this.a(false, false, 104, true, false, (ka) null);
+            this.a(false, false, 104, true, false, (Sprite) null);
           }
-          if (!d.p(-88) &&
-            ee.field_o > 0) {
+          if (!GameClientBase.p(-88) &&
+            UiComponent.field_o > 0) {
             stackIn_11_0 = 0;
           } else {
             stackIn_11_0 = 1;
@@ -5140,11 +5140,11 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var6), "pd.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.wrapException((Throwable) ((Object) var6), "pd.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    private final void a(boolean param0, boolean param1, int param2, boolean param3, boolean param4, ka param5) {
+    private final void a(boolean param0, boolean param1, int param2, boolean param3, boolean param4, Sprite param5) {
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
         String stackIn_77_2 = null;
@@ -5163,22 +5163,22 @@ final class pd {
         try {
           var7_int = 0;
           if (param2 != -15318) {
-            field_i = (ka) null;
+            field_i = (Sprite) null;
           }
           var8 = 0;
           var9 = 0;
           var10 = 0;
-          var11 = 1568 + ak.field_h * 256 - 1;
+          var11 = 1568 + SecondaryNodeDeque.field_h * 256 - 1;
           var12 = 0;
-          var13 = ak.field_h;
+          var13 = SecondaryNodeDeque.field_h;
           if (!param0) {
             var12 = ub.field_i ? 1 : 0;
             ub.field_i = false;
           }
           var14 = -1;
           if (this.field_e == 10) {
-            if (ug.field_p) {
-              ug.field_p = false;
+            if (GameApplet.field_p) {
+              GameApplet.field_p = false;
               if (rl.field_c >= 0 &&
                 6 > rl.field_c) {
                 var13 = rl.field_c;
@@ -5252,7 +5252,7 @@ final class pd {
           } else {
             stackIn_77_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_76_0), ((StringBuilder) (Object) stackIn_76_1).append(stackIn_77_2).append(')').toString());
         }
     }
 
@@ -5267,7 +5267,7 @@ final class pd {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = ak.field_b;
+          var5 = SecondaryNodeDeque.field_b;
           var6 = (param3.a("10. ") >> 1) + ui.field_i[0].field_q;
           hd.a(ui.field_i, ui.field_i[6].field_v + param0 * param1 + ui.field_i[0].field_v, var6 * 2 + 315, (byte) -81, 123 - ui.field_i[0].field_v, -var6 + 162);
           if (param2 == 6) {
@@ -5286,11 +5286,11 @@ final class pd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, boolean param5, ka[] param6) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, boolean param5, Sprite[] param6) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -5298,7 +5298,7 @@ final class pd {
         RuntimeException var8 = null;
         try {
           if (param5) {
-            this.a((ka) null, (int[]) null, -42, 68, (ge) null, -99, (int[]) null, 94, (ka) null, -113, 77, (int[]) null, (byte) -56, false, 38, 44);
+            this.a((Sprite) null, (int[]) null, -42, 68, (ge) null, -99, (int[]) null, 94, (Sprite) null, -113, 77, (int[]) null, (byte) -56, false, 38, 44);
           }
           if (param2 >= 0) {
             ch.a(param2, param1, param4, param0, true, param3, param6);
@@ -5318,7 +5318,7 @@ final class pd {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -5350,7 +5350,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.NA(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.NA(" + param0 + ')');
         }
     }
 
@@ -5362,19 +5362,19 @@ final class pd {
             return;
           }
           if (lg.field_d[param1][17] == 0) {
-            qg.c(0, 0, 25, 2048, 14022908, 10533565);
-            qg.c(615, 0, 25, 2048, 14022908, 10533565);
+            SoftwareRasterizer.c(0, 0, 25, 2048, 14022908, 10533565);
+            SoftwareRasterizer.c(615, 0, 25, 2048, 14022908, 10533565);
             if (null != kd.field_m) {
-              og.a(sj.field_N, eh.field_n, -15516);
+              MouseWheelInput.a(sj.field_N, eh.field_n, -15516);
             }
-            this.a(false, true, -15318, true, true, (ka) null);
+            this.a(false, true, -15318, true, true, (Sprite) null);
           }
           if (lg.field_d[param1][17] == 1) {
             if (-1 != rj.field_g &&
               rj.field_g != 4 &&
               rj.field_g != 5) {
               this.b((byte) 46);
-              qg.a();
+              SoftwareRasterizer.a();
               if (TorChallenge.field_F) {
                 cd.a(-1, -1, true, 119, false);
               }
@@ -5393,7 +5393,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3), "pd.WA(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3), "pd.WA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -5462,7 +5462,7 @@ final class pd {
         int var18Lifetime1Lifetime1;
         var21 = TorChallenge.field_F ? 1 : 0;
         try {
-          var8 = ag.field_e.field_K + ag.field_e.field_x;
+          var8 = SecondaryNodeDequeIterator.field_e.field_K + SecondaryNodeDequeIterator.field_e.field_x;
           var9 = (-(ui.field_i[0].field_q * 2) + 557) / 3;
           if (qf.field_e == null) {
             ui.c(-123);
@@ -5471,18 +5471,18 @@ final class pd {
           hd.a(dg.field_J, 298, 640, (byte) -98, 112, 0);
           hd.a(ui.field_i, 262, 557, (byte) -80, 129, 47);
           var5 = 26;
-          var10 = oe.field_j[ma.field_j];
+          var10 = RasterBuffer.field_j[ma.field_j];
           var2_int = ui.field_i[0].field_q + 63;
           var3 = 129 - (-var5 + 6) + (ui.field_i[0].field_v + 8);
           tf.field_x.c(var10, var2_int, var3, 0, -1);
           if (ol.field_b[ma.field_j] != null) {
             var11_ref_String__ = new String[16];
-            var12 = ag.field_e.a(ol.field_b[ma.field_j], new int[]{-32 - ui.field_i[2].field_q + (-ui.field_i[0].field_q + 557)}, var11_ref_String__);
+            var12 = SecondaryNodeDequeIterator.field_e.a(ol.field_b[ma.field_j], new int[]{-32 - ui.field_i[2].field_q + (-ui.field_i[0].field_q + 557)}, var11_ref_String__);
             var13 = 0;
             var14 = var3 + (var5 + 4);
             while (var13 < var12) {
               var3 = var14;
-              ag.field_e.c(var11_ref_String__[var13], var2_int, var14, 0, -1);
+              SecondaryNodeDequeIterator.field_e.c(var11_ref_String__[var13], var2_int, var14, 0, -1);
               var14 = var14 + var5 * 2 / 3;
               var13++;
               if (var21 != 0) {
@@ -5491,7 +5491,7 @@ final class pd {
               }
             }
             if (decompiledFrameCompleted1) {
-              var3 = var3 + ag.field_e.field_K;
+              var3 = var3 + SecondaryNodeDequeIterator.field_e.field_K;
             }
           }
           boolean decompiledFrameCompleted0 = true;
@@ -5504,7 +5504,7 @@ final class pd {
             ec.field_a[3].g(var2_intLifetime1, var3);
             var3 = var3 + (ec.field_a[3].field_v + 18 + 4);
             var2_intLifetime1 = ec.field_a[3].field_q / 2 + var2_intLifetime1;
-            fc.field_p.a(gh.field_y, var2_intLifetime1, var3, 8015912, -1);
+            ProxySocketConnector.field_p.a(gh.field_y, var2_intLifetime1, var3, 8015912, -1);
             decompiledFrameRemainder0 = (var21 != 0);
           }
           if (decompiledFrameRemainder0) {
@@ -5518,7 +5518,7 @@ final class pd {
                 var7 = var8 + 4 + var3 + 96;
                 this.a(-1, var3, 0, 0, var2_intLifetime1, 22158, 50, var11);
                 var2_intLifetime1 = var2_intLifetime1 + var9;
-                fc.field_p.a(me.field_a[var11], var6, var7, 8015912, -1);
+                ProxySocketConnector.field_p.a(me.field_a[var11], var6, var7, 8015912, -1);
                 var11++;
                 if (var21 != 0) {
                   return;
@@ -5536,15 +5536,15 @@ final class pd {
                 while (true) {
                   if (jf.field_ob.length > var16_int) {
                     var2_intLifetime1 = 16 + ui.field_i[0].field_q + 47;
-                    var3 = 38 * var16_int + (40 + ui.field_i[0].field_v) + (ag.field_e.field_x + 129) + 16;
+                    var3 = 38 * var16_int + (40 + ui.field_i[0].field_v) + (SecondaryNodeDequeIterator.field_e.field_x + 129) + 16;
                     stackIn_48_0 = var16_int;
                     stackIn_48_1 = var12Lifetime1;
                     if (var21 == 0) {
                       if (stackIn_48_0 == stackIn_48_1) {
                         this.b(50, true);
                       }
-                      var11Lifetime1 = ag.field_e.b(p.field_d[0][var16_int], var9, 0);
-                      ag.field_e.a(p.field_d[0][var16_int], var2_intLifetime1, var3 - ag.field_e.field_x, var9, var11Lifetime1, 0, -1, 0, 0, 0);
+                      var11Lifetime1 = SecondaryNodeDequeIterator.field_e.b(p.field_d[0][var16_int], var9, 0);
+                      SecondaryNodeDequeIterator.field_e.a(p.field_d[0][var16_int], var2_intLifetime1, var3 - SecondaryNodeDequeIterator.field_e.field_x, var9, var11Lifetime1, 0, -1, 0, 0, 0);
                       if (1 == jf.field_ob[var16_int].length) {
                         var15 = jf.field_ob[var16_int][0];
                       } else if (var13Lifetime1 != 2) {
@@ -5553,9 +5553,9 @@ final class pd {
                         var15 = jf.field_ob[var16_int][1];
                       }
                       var2_intLifetime1 = ui.field_i[0].field_q + (47 + var9);
-                      var3 = 129 + (ag.field_e.field_x + (ui.field_i[0].field_v + 40)) - (-(var16_int * 38) - 14);
-                      var11Lifetime1Lifetime1 = ag.field_e.b(var15, var9, 0);
-                      ag.field_e.a(var15, var2_intLifetime1, -ag.field_e.field_x + var3, var9, var11Lifetime1Lifetime1, 0, -1, 0, 0, 0);
+                      var3 = 129 + (SecondaryNodeDequeIterator.field_e.field_x + (ui.field_i[0].field_v + 40)) - (-(var16_int * 38) - 14);
+                      var11Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.b(var15, var9, 0);
+                      SecondaryNodeDequeIterator.field_e.a(var15, var2_intLifetime1, -SecondaryNodeDequeIterator.field_e.field_x + var3, var9, var11Lifetime1Lifetime1, 0, -1, 0, 0, 0);
                       if (var16_int == var12Lifetime1) {
                         this.a(97);
                       }
@@ -5564,7 +5564,7 @@ final class pd {
                     }
                   } else {
                     var16_int = vj.field_c;
-                    var3 = ui.field_i[0].field_v + ag.field_e.field_x + 169;
+                    var3 = ui.field_i[0].field_v + SecondaryNodeDequeIterator.field_e.field_x + 169;
                     vj.field_c = var13Lifetime1;
                     var2_intLifetime1 = -var9 + (-ui.field_i[0].field_q + 604) + (-64 + var9 >> 1);
                     stackIn_48_0 = ef.field_k;
@@ -5624,15 +5624,15 @@ final class pd {
                     var16_intLifetime1 = 0;
                     var17Lifetime1 = 0;
                     if (~var13Lifetime1Lifetime1 != ~uk.field_G ||
-                      fd.field_h == null) {
-                      fd.field_h = new ka(ie.field_f[var13Lifetime1Lifetime1][1].field_q, ie.field_f[var13Lifetime1Lifetime1][1].field_v);
-                      ac.field_a = new ka(ie.field_f[var13Lifetime1Lifetime1][1].field_q, ie.field_f[var13Lifetime1Lifetime1][1].field_v);
-                      fd.field_h.d();
+                      IterableNodeHashTable.field_h == null) {
+                      IterableNodeHashTable.field_h = new Sprite(ie.field_f[var13Lifetime1Lifetime1][1].field_q, ie.field_f[var13Lifetime1Lifetime1][1].field_v);
+                      ac.field_a = new Sprite(ie.field_f[var13Lifetime1Lifetime1][1].field_q, ie.field_f[var13Lifetime1Lifetime1][1].field_v);
+                      IterableNodeHashTable.field_h.d();
                       ie.field_f[var13Lifetime1Lifetime1][1].a(0, 0, 0, 47211);
                       la.field_f.a(105);
                       uk.field_G = var13Lifetime1Lifetime1;
                     }
-                    var3 = var3 - fd.field_h.field_v;
+                    var3 = var3 - IterableNodeHashTable.field_h.field_v;
                     if (var12Lifetime1Lifetime1 >= 100) {
                       var17Lifetime1 = 1;
                       var15_int = 4;
@@ -5643,7 +5643,7 @@ final class pd {
                       kj.field_D = 0;
                       var15_int = 4 * var12Lifetime1Lifetime1 / 100;
                     }
-                    var2_intLifetime1 = -(fd.field_h.field_q >> 1) + var2_intLifetime1;
+                    var2_intLifetime1 = -(IterableNodeHashTable.field_h.field_q >> 1) + var2_intLifetime1;
                     kj.field_D = be.a(var17Lifetime1 != 0, var15_int, var13Lifetime1Lifetime1, var3, var2_intLifetime1, param0 ^ 19, kj.field_D, var16_intLifetime1);
                     ie.field_f[var13Lifetime1Lifetime1][0].g(var2_intLifetime1, var3);
                     var3 = 10 + (129 + ui.field_i[0].field_v);
@@ -5659,36 +5659,36 @@ final class pd {
                       var11Lifetime2Lifetime1 = var2_intLifetime1;
                       var12Lifetime1Lifetime1 = var3;
                       var13Lifetime1Lifetime1 = -(2 * ui.field_i[0].field_q) + 557;
-                      qg.a(pf.field_g);
-                      qg.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 240 + var11Lifetime2Lifetime1, 64 + var12Lifetime1Lifetime1);
+                      SoftwareRasterizer.a(pf.field_g);
+                      SoftwareRasterizer.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 240 + var11Lifetime2Lifetime1, 64 + var12Lifetime1Lifetime1);
                       of.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, (byte) 107, false, 0);
                       var11Lifetime2Lifetime1 += 16;
-                      qg.b(pf.field_g);
-                      var12Lifetime1Lifetime1 = -ag.field_e.field_K + (af.field_f[3] + (var3 + 8 + var8));
-                      ag.field_e.c(sl.field_d[0], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 0, -1);
+                      SoftwareRasterizer.b(pf.field_g);
+                      var12Lifetime1Lifetime1 = -SecondaryNodeDequeIterator.field_e.field_K + (af.field_f[3] + (var3 + 8 + var8));
+                      SecondaryNodeDequeIterator.field_e.c(sl.field_d[0], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 0, -1);
                       var11Lifetime2Lifetime1 = var13Lifetime1Lifetime1 + var2_intLifetime1 - 240;
                       var12Lifetime1Lifetime1 = var3;
-                      qg.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, var11Lifetime2Lifetime1 + 240, var12Lifetime1Lifetime1 + 64);
+                      SoftwareRasterizer.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, var11Lifetime2Lifetime1 + 240, var12Lifetime1Lifetime1 + 64);
                       var11Lifetime2Lifetime1 = var11Lifetime2Lifetime1 - 400;
                       of.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, (byte) 93, false, 0);
-                      qg.b(pf.field_g);
-                      var12Lifetime1Lifetime1 = 16 + (var3 + af.field_f[3] + var8 - ag.field_e.field_K);
+                      SoftwareRasterizer.b(pf.field_g);
+                      var12Lifetime1Lifetime1 = 16 + (var3 + af.field_f[3] + var8 - SecondaryNodeDequeIterator.field_e.field_K);
                       var11Lifetime2Lifetime1 = -50 - nh.field_db[2] + (var13Lifetime1Lifetime1 + var2_intLifetime1);
-                      var14Lifetime1Lifetime1 = ag.field_e.b(sl.field_d[1], 220, 0);
-                      ag.field_e.a(sl.field_d[1], var11Lifetime2Lifetime1, -ag.field_e.field_x + var12Lifetime1Lifetime1, 220, var14Lifetime1Lifetime1, 0, -1, 0, 0, 0);
+                      var14Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.b(sl.field_d[1], 220, 0);
+                      SecondaryNodeDequeIterator.field_e.a(sl.field_d[1], var11Lifetime2Lifetime1, -SecondaryNodeDequeIterator.field_e.field_x + var12Lifetime1Lifetime1, 220, var14Lifetime1Lifetime1, 0, -1, 0, 0, 0);
                       var12Lifetime1Lifetime1 = -16 + (-ob.field_b[3] + 391 - ui.field_i[0].field_v);
                       var11Lifetime2Lifetime1 = var2_intLifetime1;
-                      qg.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, var11Lifetime2Lifetime1 + 360, ob.field_b[3] + (var12Lifetime1Lifetime1 + 16));
+                      SoftwareRasterizer.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, var11Lifetime2Lifetime1 + 360, ob.field_b[3] + (var12Lifetime1Lifetime1 + 16));
                       var12Lifetime1Lifetime1 = 16 + ob.field_b[3] + (-480 + var12Lifetime1Lifetime1);
                       of.a(var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, (byte) 80, false, 0);
                       var11Lifetime2Lifetime1 = var2_intLifetime1 + 16;
-                      qg.b(pf.field_g);
-                      var12Lifetime1Lifetime1 = ag.field_e.field_x + (-(var8 * 3) + (-16 - ui.field_i[0].field_v)) + (391 - ob.field_b[3]);
-                      var14Lifetime1Lifetime1 = ag.field_e.b(sl.field_d[2], 240, 0);
-                      ag.field_e.a(sl.field_d[2], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1 - ag.field_e.field_x, 240, var14Lifetime1Lifetime1, 0, -1, 0, 0, 0);
+                      SoftwareRasterizer.b(pf.field_g);
+                      var12Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x + (-(var8 * 3) + (-16 - ui.field_i[0].field_v)) + (391 - ob.field_b[3]);
+                      var14Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.b(sl.field_d[2], 240, 0);
+                      SecondaryNodeDequeIterator.field_e.a(sl.field_d[2], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1 - SecondaryNodeDequeIterator.field_e.field_x, 240, var14Lifetime1Lifetime1, 0, -1, 0, 0, 0);
                       var11Lifetime2Lifetime1 = var2_intLifetime1 + oj.field_e[0];
-                      var12Lifetime1Lifetime1 = ag.field_e.field_x - var8 + (391 + (-ui.field_i[0].field_v - ob.field_b[3] - 16));
-                      ag.field_e.c(sl.field_d[3], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 0, -1);
+                      var12Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x - var8 + (391 + (-ui.field_i[0].field_v - ob.field_b[3] - 16));
+                      SecondaryNodeDequeIterator.field_e.c(sl.field_d[3], var11Lifetime2Lifetime1, var12Lifetime1Lifetime1, 0, -1);
                       df.field_O = true;
                       decompiledFrameRemainder0 = (var21 != 0);
                     }
@@ -5700,23 +5700,23 @@ final class pd {
                         var3 = 16 + (var3 + (-dk.field_c[0][0].field_v + dk.field_c[3][0].field_v) / 2);
                         dk.field_c[0][0].g(var2_intLifetime1, var3);
                         var6Lifetime1 = var4 / 8 + var12Lifetime1Lifetime1;
-                        var7Lifetime1 = -ag.field_e.field_K + dk.field_c[3][0].field_v + (var3 + (4 + var8));
-                        fc.field_p.a(k.field_a[0], var6Lifetime1, var7Lifetime1, 8015912, -1);
+                        var7Lifetime1 = -SecondaryNodeDequeIterator.field_e.field_K + dk.field_c[3][0].field_v + (var3 + (4 + var8));
+                        ProxySocketConnector.field_p.a(k.field_a[0], var6Lifetime1, var7Lifetime1, 8015912, -1);
                         var3 = 16 + var11Lifetime2Lifetime2 + (-dk.field_c[1][0].field_v + dk.field_c[3][0].field_v) / 2;
                         var2_intLifetime1 = (var4 / 4 - dk.field_c[1][0].field_q) / 2 + (var4 / 4 + var12Lifetime1Lifetime1);
                         var6Lifetime1 = var4 / 8 + var12Lifetime1Lifetime1 + var4 / 4;
                         dk.field_c[1][0].g(var2_intLifetime1, var3);
-                        fc.field_p.a(k.field_a[1], var6Lifetime1, var7Lifetime1, 8015912, -1);
+                        ProxySocketConnector.field_p.a(k.field_a[1], var6Lifetime1, var7Lifetime1, 8015912, -1);
                         var3 = 16 + (var11Lifetime2Lifetime2 + (dk.field_c[3][0].field_v - dk.field_c[2][0].field_v) / 2);
                         var2_intLifetime1 = (-dk.field_c[2][0].field_q + var4 / 4) / 2 + (var12Lifetime1Lifetime1 + var4 / 2);
                         var6Lifetime1 = var4 / 8 + (var12Lifetime1Lifetime1 + var4 / 2);
                         dk.field_c[2][0].g(var2_intLifetime1, var3);
-                        fc.field_p.a(k.field_a[2], var6Lifetime1, var7Lifetime1, 8015912, -1);
+                        ProxySocketConnector.field_p.a(k.field_a[2], var6Lifetime1, var7Lifetime1, 8015912, -1);
                         var2_intLifetime1 = 3 * var4 / 4 + (var12Lifetime1Lifetime1 + (var4 / 4 - dk.field_c[3][0].field_q) / 2);
                         var3 = var11Lifetime2Lifetime2 + (16 + (dk.field_c[3][0].field_v - dk.field_c[3][0].field_v) / 2);
                         var6Lifetime1 = var12Lifetime1Lifetime1 + var4 * 3 / 4 + var4 / 8;
                         dk.field_c[3][0].g(var2_intLifetime1, var3);
-                        fc.field_p.a(k.field_a[3], var6Lifetime1, var7Lifetime1, 8015912, -1);
+                        ProxySocketConnector.field_p.a(k.field_a[3], var6Lifetime1, var7Lifetime1, 8015912, -1);
                         decompiledFrameRemainder0 = (var21 != 0);
                       }
                       if (decompiledFrameRemainder0) {
@@ -5725,8 +5725,8 @@ final class pd {
                           var3 = 16 + var3;
                           ec.field_a[0].g(var2_intLifetime1, var3);
                           var6Lifetime1Lifetime1 = 8 + (var2_intLifetime1 + ec.field_a[0].field_q);
-                          var7Lifetime1Lifetime1 = ag.field_e.field_x + ((ec.field_a[0].field_x - var8) / 2 + var3);
-                          fc.field_p.c(kl.field_d[0], var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, 8015912, -1);
+                          var7Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.field_x + ((ec.field_a[0].field_x - var8) / 2 + var3);
+                          ProxySocketConnector.field_p.c(kl.field_d[0], var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, 8015912, -1);
                           var3 = -ec.field_a[1].field_v + (-ec.field_a[1].field_x + ec.field_a[1].field_v) / 2 - 2 + (var3 + ec.field_a[0].field_v / 2);
                           var2_intLifetime1 = 32 + var4 / 2 + (16 + (ui.field_i[0].field_q + 47) - (-ec.field_a[1].field_u + ec.field_a[1].field_q) / 2);
                           if (kf.field_b == 3) {
@@ -5758,13 +5758,13 @@ final class pd {
                             var3 = 16 + var3;
                             var6Lifetime1Lifetime2 = (var4 / 4 - ec.field_a[6].field_q) / 2 + (var4 / 4 + var2_intLifetime1 - 16);
                             ec.field_a[6].g(var6Lifetime1Lifetime2, var3);
-                            var7Lifetime1Lifetime2 = ag.field_e.field_x + 8 + (ec.field_a[6].field_v + var3);
+                            var7Lifetime1Lifetime2 = SecondaryNodeDequeIterator.field_e.field_x + 8 + (ec.field_a[6].field_v + var3);
                             var6Lifetime1Lifetime2 = ec.field_a[6].field_v / 2 + var6Lifetime1Lifetime2;
-                            fc.field_p.a(kl.field_d[1], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
+                            ProxySocketConnector.field_p.a(kl.field_d[1], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
                             var6Lifetime1Lifetime2 = (-ec.field_a[7 + ok.field_b].field_q + var4 / 4) / 2 + var4 / 2 + (var2_intLifetime1 + 16);
                             ec.field_a[7 + ok.field_b].g(var6Lifetime1Lifetime2, var3);
                             var6Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + ec.field_a[7 + ok.field_b].field_v / 2;
-                            fc.field_p.a(kl.field_d[2], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
+                            ProxySocketConnector.field_p.a(kl.field_d[2], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
                             decompiledFrameRemainder0 = (var21 != 0);
                           }
                           if ((decompiledFrameRemainder0) &&
@@ -5774,8 +5774,8 @@ final class pd {
                             var3 = var3 + 16;
                             ec.field_a[5].g(var6Lifetime1Lifetime2, var3);
                             var6Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + ec.field_a[5].field_q / 2;
-                            var7Lifetime1Lifetime2 = 8 + (var3 + ec.field_a[5].field_v + ag.field_e.field_x);
-                            fc.field_p.a(kl.field_d[3], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
+                            var7Lifetime1Lifetime2 = 8 + (var3 + ec.field_a[5].field_v + SecondaryNodeDequeIterator.field_e.field_x);
+                            ProxySocketConnector.field_p.a(kl.field_d[3], var6Lifetime1Lifetime2, var7Lifetime1Lifetime2, 8015912, -1);
                             var11Lifetime2Lifetime4 = ef.field_k % 240;
                             if (119 <= var11Lifetime2Lifetime4) {
                               var6Lifetime1Lifetime2 = var4 / 2 + var2_intLifetime1;
@@ -5808,7 +5808,7 @@ final class pd {
                   var19Lifetime1 = 0;
                   while (true) {
                     if (p.field_c.length > var19Lifetime1) {
-                      var3 = 16 + (var19Lifetime1 * 38 + ui.field_i[0].field_v + 129 + (ag.field_e.field_x + 40));
+                      var3 = 16 + (var19Lifetime1 * 38 + ui.field_i[0].field_v + 129 + (SecondaryNodeDequeIterator.field_e.field_x + 40));
                       var2_intLifetime1 = 47 - (-ui.field_i[0].field_q - 16);
                       stackIn_155_0 = ~var14Lifetime1Lifetime2;
                       stackIn_155_1 = ~var19Lifetime1;
@@ -5820,8 +5820,8 @@ final class pd {
                         } else {
                           this.b(50, true);
                         }
-                        var18Lifetime1 = ag.field_e.b(p.field_d[1][var19Lifetime1], var9, 0);
-                        ag.field_e.a(p.field_d[1][var19Lifetime1], var2_intLifetime1, -ag.field_e.field_x + var3, var9, var18Lifetime1, 0, -1, 0, 0, 0);
+                        var18Lifetime1 = SecondaryNodeDequeIterator.field_e.b(p.field_d[1][var19Lifetime1], var9, 0);
+                        SecondaryNodeDequeIterator.field_e.a(p.field_d[1][var19Lifetime1], var2_intLifetime1, -SecondaryNodeDequeIterator.field_e.field_x + var3, var9, var18Lifetime1, 0, -1, 0, 0, 0);
                         if (var15_array[var19Lifetime1][var13Lifetime1Lifetime2]) {
                           if (p.field_c[var19Lifetime1].length != 1) {
                             var16 = p.field_c[var19Lifetime1][0] + p.field_c[var19Lifetime1][1];
@@ -5833,10 +5833,10 @@ final class pd {
                           var17Lifetime2 = 16711680;
                           var16 = p.field_c[var19Lifetime1][0] + di.field_B;
                         }
-                        var3 = 14 + var19Lifetime1 * 38 + (40 + ag.field_e.field_x) + 129 + ui.field_i[0].field_v;
+                        var3 = 14 + var19Lifetime1 * 38 + (40 + SecondaryNodeDequeIterator.field_e.field_x) + 129 + ui.field_i[0].field_v;
                         var2_intLifetime1 = var9 + (ui.field_i[0].field_q + 47);
-                        var18Lifetime1Lifetime1 = ag.field_e.b(var16, var9, 0);
-                        ag.field_e.a(var16, var2_intLifetime1, var3 - ag.field_e.field_x, var9, var18Lifetime1Lifetime1, var17Lifetime2, -1, 0, 0, 0);
+                        var18Lifetime1Lifetime1 = SecondaryNodeDequeIterator.field_e.b(var16, var9, 0);
+                        SecondaryNodeDequeIterator.field_e.a(var16, var2_intLifetime1, var3 - SecondaryNodeDequeIterator.field_e.field_x, var9, var18Lifetime1Lifetime1, var17Lifetime2, -1, 0, 0, 0);
                         if (~var14Lifetime1Lifetime2 == ~var19Lifetime1 ||
                           !var15_array[var19Lifetime1][var13Lifetime1Lifetime2]) {
                           this.a(param0 - 71);
@@ -5849,7 +5849,7 @@ final class pd {
                       vj.field_c = var13Lifetime1Lifetime2;
                       var2_intLifetime1 = (-64 + var9 >> 1) + 604 - (ui.field_i[0].field_q + var9);
                       stackIn_155_0 = 40 + ui.field_i[0].field_v + 129;
-                      stackIn_155_1 = -ag.field_e.field_x;
+                      stackIn_155_1 = -SecondaryNodeDequeIterator.field_e.field_x;
                     }
                     break;
                   }
@@ -5877,20 +5877,20 @@ final class pd {
             }
           }
           if (decompiledFrameCompleted0) {
-            var3 = -8 - ui.field_i[0].field_v + (391 + (-var8 + ag.field_e.field_x));
+            var3 = -8 - ui.field_i[0].field_v + (391 + (-var8 + SecondaryNodeDequeIterator.field_e.field_x));
             stackIn_169_0 = 588 - ui.field_i[0].field_q;
           }
           var2_intLifetime2 = stackIn_169_0;
-          ag.field_e.b(gj.a(param0, (byte) -123, 1 + ma.field_j), var2_intLifetime2, var3, 0, -1);
+          SecondaryNodeDequeIterator.field_e.b(gj.a(param0, (byte) -123, 1 + ma.field_j), var2_intLifetime2, var3, 0, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.U(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.U(" + param0 + ')');
         }
     }
 
-    private final void a(int param0, int param1, boolean param2, ka param3) {
+    private final void a(int param0, int param1, boolean param2, Sprite param3) {
         String[] stackIn_19_0 = null;
         int stackIn_20_1 = 0;
         String[] stackIn_27_0 = null;
@@ -5910,7 +5910,7 @@ final class pd {
         String var11 = null;
         int var12 = 0;
         int var13 = 0;
-        ka[] var14 = null;
+        Sprite[] var14 = null;
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
@@ -5967,7 +5967,7 @@ final class pd {
           }
           var12 = var9[this.field_e][7];
           if (2 == this.field_e &&
-            !d.p(-117)) {
+            !GameClientBase.p(-117)) {
             var12 = 180;
           }
           var13 = var9[this.field_e][8];
@@ -5999,7 +5999,7 @@ final class pd {
             var18 = lg.field_d[cf.field_b][20];
           }
           if (var18 >= 0 &&
-            pk.field_f &&
+            DelegatingCanvas.field_f &&
             ~this.field_e != ~cf.field_b) {
             var17 = 0;
           }
@@ -6009,11 +6009,11 @@ final class pd {
           var21 = -var20Lifetime1 - ba.field_b[6].field_x + (-ba.field_b[0].field_x + var13) - var19.field_K;
           if (12 == var10 ||
             var10 == 13) {
-            var22 = ee.field_s + 137;
+            var22 = UiComponent.field_s + 137;
             var23 = var6 + (-var22 + var12 >> 1);
             var19.c(var11, var23, (var21 >> 1) + var20Lifetime1 + (var5_int + ba.field_b[0].field_x), var17, -1);
-            var23 = var23 + (8 + ee.field_s);
-            qg.b(var23, var5_int + (var13 / 2 - 1), 129, 2, var17);
+            var23 = var23 + (8 + UiComponent.field_s);
+            SoftwareRasterizer.b(var23, var5_int + (var13 / 2 - 1), 129, 2, var17);
             if (var10 != 12) {
               stackIn_80_0 = nk.field_h;
             } else {
@@ -6045,7 +6045,7 @@ final class pd {
           } else {
             stackIn_91_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_90_1).append(stackIn_91_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_90_0), ((StringBuilder) (Object) stackIn_90_1).append(stackIn_91_2).append(')').toString());
         }
     }
 
@@ -6104,7 +6104,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3), "pd.TA(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3), "pd.TA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -6143,12 +6143,12 @@ final class pd {
         try {
           boolean decompiledFrameCompleted0 = true;
           boolean decompiledFrameRemainder1 = true;
-          var3 = 2 + ag.field_e.field_K + ag.field_e.field_x;
+          var3 = 2 + SecondaryNodeDequeIterator.field_e.field_K + SecondaryNodeDequeIterator.field_e.field_x;
           var4 = 13;
-          if (d.p(-91)) {
-            var5 = (ag.field_e.a("10. ") >> 1) + ui.field_i[0].field_q;
+          if (GameClientBase.p(-91)) {
+            var5 = (SecondaryNodeDequeIterator.field_e.a("10. ") >> 1) + ui.field_i[0].field_q;
             hd.a(ui.field_i, var3 * var4 + (ui.field_i[0].field_v + ui.field_i[6].field_v), var5 * 2 + 315, (byte) 61, -ui.field_i[0].field_v + 123, -var5 + 162);
-            var2 = vf.field_c;
+            var2 = MouseInputHandler.field_c;
             decompiledFrameRemainder1 = (var17 != 0);
           }
           if (decompiledFrameRemainder1) {
@@ -6158,7 +6158,7 @@ final class pd {
             var5_ref_ae = rc.field_r;
             if (!var5_ref_ae.field_n) {
               var2 = lh.field_y;
-              var6 = (ag.field_e.a("10. ") >> 1) + ui.field_i[0].field_q;
+              var6 = (SecondaryNodeDequeIterator.field_e.a("10. ") >> 1) + ui.field_i[0].field_q;
               hd.a(ui.field_i, ui.field_i[6].field_v + ui.field_i[0].field_v + var4 * var3, 2 * var6 + 315, (byte) -110, 123 - ui.field_i[0].field_v, -var6 + 162);
               decompiledFrameRemainder1 = (var17 != 0);
             }
@@ -6168,39 +6168,39 @@ final class pd {
               var7 = var5_ref_ae.field_l;
               var8 = tj.field_b;
               if (var6_ref_String____ == null) {
-                var2 = this.a(var4, var3, (byte) 6, ag.field_e);
+                var2 = this.a(var4, var3, (byte) 6, SecondaryNodeDequeIterator.field_e);
                 decompiledFrameRemainder0 = (var17 != 0);
               }
               if (decompiledFrameRemainder0) {
                 boolean decompiledSharedTail0 = (!(var8 < 0) &&
                   !(var8 >= var6_ref_String____.length));
                 if (!decompiledSharedTail0) {
-                  var2 = this.a(var4, var3, (byte) 6, ag.field_e);
+                  var2 = this.a(var4, var3, (byte) 6, SecondaryNodeDequeIterator.field_e);
                   decompiledSharedTail0 = (var17 != 0);
                 }
                 if ((decompiledSharedTail0) &&
                   (null == var6_ref_String____[var8])) {
-                  var2 = this.a(var4, var3, (byte) 6, ag.field_e);
+                  var2 = this.a(var4, var3, (byte) 6, SecondaryNodeDequeIterator.field_e);
                 }
               }
               if (var7 == null) {
-                var2 = this.a(var4, var3, (byte) 6, ag.field_e);
+                var2 = this.a(var4, var3, (byte) 6, SecondaryNodeDequeIterator.field_e);
                 decompiledFrameRemainder1 = (var17 != 0);
               }
               if (decompiledFrameRemainder1) {
                 if (0 > var8 ||
                   var7.length <= var8) {
-                  var2 = this.a(var4, var3, (byte) 6, ag.field_e);
+                  var2 = this.a(var4, var3, (byte) 6, SecondaryNodeDequeIterator.field_e);
                   decompiledFrameRemainder1 = (var17 != 0);
                 }
                 if (decompiledFrameRemainder1) {
                   if (var7[var8] != null) {
-                    var2 = vf.field_c;
+                    var2 = MouseInputHandler.field_c;
                     var9 = bg.a(var8, kf.field_a, 21179, var5_ref_ae);
-                    var10 = ag.field_e.a("10. ") >> 1;
-                    var11 = (ag.field_e.a("10. ") >> 1) + ui.field_i[0].field_q;
+                    var10 = SecondaryNodeDequeIterator.field_e.a("10. ") >> 1;
+                    var11 = (SecondaryNodeDequeIterator.field_e.a("10. ") >> 1) + ui.field_i[0].field_q;
                     hd.a(ui.field_i, ui.field_i[6].field_v + ui.field_i[0].field_v + var3 * var4, 2 * var11 + 315, (byte) 113, 123 - ui.field_i[0].field_v, -var11 + 162);
-                    var12 = ag.field_e.field_x + 123;
+                    var12 = SecondaryNodeDequeIterator.field_e.field_x + 123;
                     var13 = 0;
                     while (var13 < 10) {
                       stackIn_69_0 = ~var6_ref_String____[var8].length;
@@ -6219,9 +6219,9 @@ final class pd {
                           if (var9 == var13) {
                             var16 = 16711680;
                           }
-                          ag.field_e.b(var13 + 1 + ". ", 162 + var10, var12, var16, -1);
-                          ag.field_e.c(var14_ref_String, var10 + 162, var12, var16, -1);
-                          ag.field_e.b(Integer.toString(var15_int), 477, var12, var16, -1);
+                          SecondaryNodeDequeIterator.field_e.b(var13 + 1 + ". ", 162 + var10, var12, var16, -1);
+                          SecondaryNodeDequeIterator.field_e.c(var14_ref_String, var10 + 162, var12, var16, -1);
+                          SecondaryNodeDequeIterator.field_e.b(Integer.toString(var15_int), 477, var12, var16, -1);
                           var12 = var12 + var3;
                         }
                       }
@@ -6231,20 +6231,20 @@ final class pd {
                       var13Lifetime1 = 10;
                       if (ji.field_m != null &&
                         var9 == -1) {
-                        var12Lifetime1 = var13Lifetime1 * var3 + (ag.field_e.field_x + 123);
+                        var12Lifetime1 = var13Lifetime1 * var3 + (SecondaryNodeDequeIterator.field_e.field_x + 123);
                         var14 = 16711680;
-                        var15 = mf.field_a;
+                        var15 = LevelDecoder.field_a;
                         if (null != var15) {
-                          ag.field_e.c(var15, 162 + var10, var12Lifetime1, var14, -1);
+                          SecondaryNodeDequeIterator.field_e.c(var15, 162 + var10, var12Lifetime1, var14, -1);
                         }
-                        ag.field_e.b(Integer.toString(tf.field_o), 477, var12Lifetime1, var14, -1);
+                        SecondaryNodeDequeIterator.field_e.b(Integer.toString(tf.field_o), 477, var12Lifetime1, var14, -1);
                       }
                       if (var17 != 0) {
-                        var2 = this.a(var4, var3, (byte) 6, ag.field_e);
+                        var2 = this.a(var4, var3, (byte) 6, SecondaryNodeDequeIterator.field_e);
                       }
                     }
                   } else {
-                    var2 = this.a(var4, var3, (byte) 6, ag.field_e);
+                    var2 = this.a(var4, var3, (byte) 6, SecondaryNodeDequeIterator.field_e);
                   }
                 }
               }
@@ -6252,26 +6252,26 @@ final class pd {
           }
           if (decompiledFrameCompleted0) {
             stackIn_69_0 = 10 * var3 / 2 + 123;
-            stackIn_69_1 = -ag.field_e.field_x;
+            stackIn_69_1 = -SecondaryNodeDequeIterator.field_e.field_x;
           }
           var5Lifetime1 = stackIn_69_0 - stackIn_69_1;
           var6Lifetime1 = 6488064;
           if (param0 < 22) {
             this.field_b = 122;
           }
-          ag.field_e.a(var2, 320, var5Lifetime1, var6Lifetime1, -1);
-          if (!d.p(-107)) {
+          SecondaryNodeDequeIterator.field_e.a(var2, 320, var5Lifetime1, var6Lifetime1, -1);
+          if (!GameClientBase.p(-107)) {
             stackIn_76_0 = e.field_j;
           } else {
             stackIn_76_0 = gb.field_e;
           }
           var2Lifetime1 = stackIn_76_0;
-          ag.field_e.a(var2Lifetime1, 320, ag.field_e.field_x + (123 + var3 * (-1 + var4)), 6488064, -1);
+          SecondaryNodeDequeIterator.field_e.a(var2Lifetime1, 320, SecondaryNodeDequeIterator.field_e.field_x + (123 + var3 * (-1 + var4)), 6488064, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2_ref), "pd.LA(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2_ref), "pd.LA(" + param0 + ')');
         }
     }
 
@@ -6313,7 +6313,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.BB(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.BB(" + param0 + ')');
         }
     }
 
@@ -6328,12 +6328,12 @@ final class pd {
         int var12 = 0;
         var12 = TorChallenge.field_F ? 1 : 0;
         try {
-          stackIn_5_0 = (gl.field_g[param3] != 0) ? 0 : 1;
+          stackIn_5_0 = (SocketConnector.field_g[param3] != 0) ? 0 : 1;
           var8_int = stackIn_5_0;
           if (var8_int != 0) {
             return;
           }
-          var9 = gl.field_g[param3];
+          var9 = SocketConnector.field_g[param3];
           var10 = -1;
           if (var9 != 1) {
             if (var9 == 2) {
@@ -6383,7 +6383,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var8), "pd.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw oj.wrapException((Throwable) ((Object) var8), "pd.J(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -6503,7 +6503,7 @@ final class pd {
             jj.field_a[param7].d(param4, param1, var13);
             if (var15 != 0) {
               if (var10 == 0) {
-                lj.field_n[param7].a((ka) null, param1, lj.field_n[param7].field_I + param4, (int[]) null, 0, -20861, param4, 0);
+                lj.field_n[param7].a((Sprite) null, param1, lj.field_n[param7].field_I + param4, (int[]) null, 0, -20861, param4, 0);
                 this.a((byte) 42, lj.field_n[param7].field_I, param4, lj.field_n[param7].field_w, param7, true, 16 + param1);
               } else {
                 this.a((byte) 42, lj.field_n[param7].field_I, param4, lj.field_n[param7].field_w, param7, true, 16 + param1);
@@ -6512,7 +6512,7 @@ final class pd {
           } else {
             boolean decompiledSharedTail0 = (var10 != 0);
             if (!decompiledSharedTail0) {
-              lj.field_n[param7].a((ka) null, param1, lj.field_n[param7].field_I + param4, (int[]) null, 0, -20861, param4, 0);
+              lj.field_n[param7].a((Sprite) null, param1, lj.field_n[param7].field_I + param4, (int[]) null, 0, -20861, param4, 0);
               decompiledSharedTail0 = (var15 != 0);
             }
             if (decompiledSharedTail0) {
@@ -6525,11 +6525,11 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var9 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var9), "pd.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw oj.wrapException((Throwable) ((Object) var9), "pd.HA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    private final void a(ka param0, int param1, int param2, boolean param3, int param4, ge param5) {
+    private final void a(Sprite param0, int param1, int param2, boolean param3, int param4, ge param5) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -6591,7 +6591,7 @@ final class pd {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 
@@ -6606,7 +6606,7 @@ final class pd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.field_e == 2 &&
-            !d.p(-86)) {
+            !GameClientBase.p(-86)) {
             if (param0 >= 3) {
               stackIn_10_0 = il.field_q[this.field_e] + ea.field_d[this.field_e];
               return stackIn_10_0;
@@ -6631,7 +6631,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3), "pd.MA(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3), "pd.MA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -6661,7 +6661,7 @@ final class pd {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -6741,7 +6741,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var4), "pd.O(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) var4), "pd.O(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -6758,7 +6758,7 @@ final class pd {
         RuntimeException decompiledCaughtException = null;
         try {
           if (2 == this.field_e &&
-            !d.p(-73)) {
+            !GameClientBase.p(-73)) {
             if (param1 >= 3) {
               stackIn_10_0 = 228;
               return stackIn_10_0;
@@ -6782,7 +6782,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3), "pd.OA(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3), "pd.OA(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -6843,7 +6843,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.N(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.N(" + param0 + ')');
         }
     }
 
@@ -6877,11 +6877,11 @@ final class pd {
             vi.field_a = 0;
           }
           var2_intLifetime1 = 0;
-          L3: while (true) {
+          scanLoop1: while (true) {
             if (var2_intLifetime1 < 3) {
               stackIn_21_0 = 0;
               if (var4 != 0) {
-                break L3;
+                break scanLoop1;
               }
               var3 = stackIn_21_0;
               while (var3 < 6) {
@@ -6891,7 +6891,7 @@ final class pd {
               k.field_b[var2_intLifetime1] = 0;
               hk.field_c[var2_intLifetime1] = 0;
               var2_intLifetime1++;
-              continue L3;
+              continue scanLoop1;
             }
             bj.a((byte) 71);
             ab.field_d = 1;
@@ -6913,7 +6913,7 @@ final class pd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "pd.H(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "pd.H(" + param0 + ')');
         }
     }
 

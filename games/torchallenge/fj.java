@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fj extends qd {
+final class fj extends PcmStream {
     private int[] field_q;
     private kb field_B;
     private ej field_n;
@@ -32,7 +32,7 @@ final class fj extends qd {
         jl.field_c = null;
     }
 
-    final qd c() {
+    final PcmStream c() {
         return null;
     }
 
@@ -51,11 +51,11 @@ final class fj extends qd {
         try {
           param2.b((byte) 44, param3);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "fj.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "fj.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final qd b() {
+    final PcmStream b() {
         return null;
     }
 
@@ -178,7 +178,7 @@ final class fj extends qd {
           } else {
             stackIn_58_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_57_0), ((StringBuilder) (Object) stackIn_57_1).append(stackIn_58_2).append(')').toString());
         }
     }
 
@@ -403,7 +403,7 @@ final class fj extends qd {
           } else {
             stackIn_72_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_71_0), ((StringBuilder) (Object) stackIn_71_1).append(stackIn_72_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

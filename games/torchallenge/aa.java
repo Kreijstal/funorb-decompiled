@@ -4,29 +4,29 @@
 final class aa {
     static volatile int field_a;
     private int field_d;
-    private w[] field_i;
+    private DualLinkNode[] field_i;
     private long field_e;
-    static ka[] field_k;
+    static Sprite[] field_k;
     static String field_c;
     static int field_f;
     static String[][] field_h;
-    private w field_j;
+    private DualLinkNode field_j;
     static String field_b;
     static int field_g;
 
-    final w a(boolean param0, long param1) {
-        w var5 = null;
+    final DualLinkNode a(boolean param0, long param1) {
+        DualLinkNode var5 = null;
         int var6 = TorChallenge.field_F ? 1 : 0;
         this.field_e = param1;
-        w var4 = this.field_i[(int)((long)(this.field_d - 1) & param1)];
-        this.field_j = var4.field_k;
+        DualLinkNode var4 = this.field_i[(int)((long)(this.field_d - 1) & param1)];
+        this.field_j = var4.secondaryNext;
         while (this.field_j != var4) {
           if (param1 == this.field_j.field_l) {
             var5 = this.field_j;
-            this.field_j = this.field_j.field_k;
+            this.field_j = this.field_j.secondaryNext;
             return var5;
           }
-          this.field_j = this.field_j.field_k;
+          this.field_j = this.field_j.secondaryNext;
         }
         this.field_j = null;
         if (!param0) {
@@ -51,57 +51,57 @@ final class aa {
         if (param5 == 0) {
           if (param7 > param6) {
             if (param7 < param4) {
-              ni.a(param6, (byte) -55, param4, param3, param0, param7, qg.field_i, param1, param2);
+              ni.a(param6, (byte) -55, param4, param3, param0, param7, SoftwareRasterizer.field_i, param1, param2);
               return;
             }
             if (param6 < param4) {
-              ni.a(param6, (byte) -75, param7, param3, param2, param4, qg.field_i, param1, param0);
+              ni.a(param6, (byte) -75, param7, param3, param2, param4, SoftwareRasterizer.field_i, param1, param0);
               return;
             }
-            ni.a(param4, (byte) -126, param7, param3, param1, param6, qg.field_i, param2, param0);
+            ni.a(param4, (byte) -126, param7, param3, param1, param6, SoftwareRasterizer.field_i, param2, param0);
             return;
           }
           if (param6 < param4) {
-            ni.a(param7, (byte) 111, param4, param3, param1, param6, qg.field_i, param0, param2);
+            ni.a(param7, (byte) 111, param4, param3, param1, param6, SoftwareRasterizer.field_i, param0, param2);
             return;
           }
           if (param4 > param7) {
-            ni.a(param7, (byte) 91, param6, param3, param2, param4, qg.field_i, param0, param1);
+            ni.a(param7, (byte) 91, param6, param3, param2, param4, SoftwareRasterizer.field_i, param0, param1);
             return;
           }
-          ni.a(param4, (byte) -83, param6, param3, param0, param7, qg.field_i, param2, param1);
+          ni.a(param4, (byte) -83, param6, param3, param0, param7, SoftwareRasterizer.field_i, param2, param1);
           return;
         }
         field_a = 117;
         if (param7 > param6) {
           if (param7 < param4) {
-            ni.a(param6, (byte) -55, param4, param3, param0, param7, qg.field_i, param1, param2);
+            ni.a(param6, (byte) -55, param4, param3, param0, param7, SoftwareRasterizer.field_i, param1, param2);
             return;
           }
           if (param6 < param4) {
-            ni.a(param6, (byte) -75, param7, param3, param2, param4, qg.field_i, param1, param0);
+            ni.a(param6, (byte) -75, param7, param3, param2, param4, SoftwareRasterizer.field_i, param1, param0);
             return;
           }
-          ni.a(param4, (byte) -126, param7, param3, param1, param6, qg.field_i, param2, param0);
+          ni.a(param4, (byte) -126, param7, param3, param1, param6, SoftwareRasterizer.field_i, param2, param0);
           return;
         }
         if (param6 < param4) {
-          ni.a(param7, (byte) 111, param4, param3, param1, param6, qg.field_i, param0, param2);
+          ni.a(param7, (byte) 111, param4, param3, param1, param6, SoftwareRasterizer.field_i, param0, param2);
           return;
         }
         if (param4 > param7) {
-          ni.a(param7, (byte) 91, param6, param3, param2, param4, qg.field_i, param0, param1);
+          ni.a(param7, (byte) 91, param6, param3, param2, param4, SoftwareRasterizer.field_i, param0, param1);
           return;
         }
-        ni.a(param4, (byte) -83, param6, param3, param0, param7, qg.field_i, param2, param1);
+        ni.a(param4, (byte) -83, param6, param3, param0, param7, SoftwareRasterizer.field_i, param2, param1);
     }
 
-    final w a(byte param0) {
-        w var2;
-        w var3;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2;
+        DualLinkNode var3;
         int var4;
-        w var2Lifetime1;
-        w var3Lifetime1;
+        DualLinkNode var2Lifetime1;
+        DualLinkNode var3Lifetime1;
         var4 = TorChallenge.field_F ? 1 : 0;
         if (null == this.field_j) {
           return null;
@@ -114,13 +114,13 @@ final class aa {
               return null;
             }
             if (~this.field_e != ~this.field_j.field_l) {
-              this.field_j = this.field_j.field_k;
+              this.field_j = this.field_j.secondaryNext;
               continue;
             }
             break;
           }
           var3 = this.field_j;
-          this.field_j = this.field_j.field_k;
+          this.field_j = this.field_j.secondaryNext;
           return var3;
         }
         this.field_e = 17L;
@@ -131,46 +131,46 @@ final class aa {
             return null;
           }
           if (~this.field_e != ~this.field_j.field_l) {
-            this.field_j = this.field_j.field_k;
+            this.field_j = this.field_j.secondaryNext;
             continue;
           }
           break;
         }
         var3Lifetime1 = this.field_j;
-        this.field_j = this.field_j.field_k;
+        this.field_j = this.field_j.secondaryNext;
         return var3Lifetime1;
     }
 
     aa(int param0) {
         int var2 = 0;
-        w dupTemp$0 = null;
-        w var3 = null;
-        this.field_i = new w[param0];
+        DualLinkNode dupTemp$0 = null;
+        DualLinkNode var3 = null;
+        this.field_i = new DualLinkNode[param0];
         this.field_d = param0;
         for (var2 = 0; param0 > var2; var2++) {
-          dupTemp$0 = new w();
+          dupTemp$0 = new DualLinkNode();
           var3 = dupTemp$0;
           this.field_i[var2] = dupTemp$0;
-          var3.field_i = var3;
-          var3.field_k = var3;
+          var3.secondaryPrevious = var3;
+          var3.secondaryNext = var3;
         }
     }
 
-    final void a(long param0, w param1, int param2) {
-        w var5 = null;
+    final void a(long param0, DualLinkNode param1, int param2) {
+        DualLinkNode var5 = null;
         try {
-          if (param1.field_i != null) {
+          if (param1.secondaryPrevious != null) {
             param1.a(12695);
           }
           var5 = this.field_i[(int)(param0 & (long)(this.field_d - 1))];
-          param1.field_k = var5;
-          param1.field_i = var5.field_i;
-          param1.field_i.field_k = param1;
+          param1.secondaryNext = var5;
+          param1.secondaryPrevious = var5.secondaryPrevious;
+          param1.secondaryPrevious.secondaryNext = param1;
           param1.field_l = param0;
-          param1.field_k.field_i = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
           int var6 = 87 / ((35 - param2) / 63);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "aa.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

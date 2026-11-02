@@ -33,7 +33,7 @@ final class mc implements j {
         }
         jh.field_a = null;
         if (eb.field_m) {
-          da.field_c.m(13);
+          IntrusiveNode.field_c.m(13);
         } else {
           var1 = uk.field_H;
           if (0 < var1) {
@@ -44,7 +44,7 @@ final class mc implements j {
             }
             jh.field_a = qa.a(119, new CharSequence[]{(CharSequence) ((Object) jh.field_a), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) bd.field_j)});
           }
-          da.field_c.o(77);
+          IntrusiveNode.field_c.o(77);
           ba.c((byte) 15);
         }
     }
@@ -95,12 +95,12 @@ final class mc implements j {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw oj.a((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw oj.wrapException((Throwable) (stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
-    public final void a(ee param0, int param1, int param2, byte param3, boolean param4) {
-        ee stackIn_3_0 = null;
+    public final void a(UiComponent param0, int param1, int param2, byte param3, boolean param4) {
+        UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -113,7 +113,7 @@ final class mc implements j {
         hc var11 = null;
         try {
           if (param0 instanceof hc) {
-            stackIn_3_0 = (ee) (param0);
+            stackIn_3_0 = (UiComponent) (param0);
           } else {
             stackIn_3_0 = null;
           }
@@ -125,17 +125,17 @@ final class mc implements j {
           if (param4) {
             var7 = 16777215;
           }
-          qg.f(param0.field_m + param2, param0.field_i + param1, param0.field_p, param0.field_l, this.field_f);
+          SoftwareRasterizer.f(param0.field_m + param2, param0.field_i + param1, param0.field_p, param0.field_l, this.field_f);
           var8 = this.field_h + param0.field_m + param2;
           if (param3 != 97) {
             field_o = (String) null;
           }
           var9 = param1 + (param0.field_i + this.field_a);
-          qg.a(var8, var9, this.field_n, this.field_j, 5592405);
-          qg.f(var8, var9, this.field_n, this.field_j, var7);
+          SoftwareRasterizer.a(var8, var9, this.field_n, this.field_j, 5592405);
+          SoftwareRasterizer.f(var8, var9, this.field_n, this.field_j, var7);
           if (var11.field_D) {
-            qg.d(var8, var9, this.field_n + var8, var9 + this.field_j, 1);
-            qg.d(var8 + this.field_n, var9, var8, this.field_j + var9, 1);
+            SoftwareRasterizer.d(var8, var9, this.field_n + var8, var9 + this.field_j, 1);
+            SoftwareRasterizer.d(var8 + this.field_n, var9, var8, this.field_j + var9, 1);
           }
           if (this.field_b != null) {
             var10 = this.field_n + this.field_h + this.field_c;
@@ -152,7 +152,7 @@ final class mc implements j {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -180,7 +180,7 @@ final class mc implements j {
           this.field_b = param0;
           this.field_a = param6;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "mc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "mc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 

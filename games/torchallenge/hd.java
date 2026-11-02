@@ -8,9 +8,9 @@ final class hd {
     static String field_g;
     private java.util.zip.Inflater field_e;
     static int[] field_c;
-    static ka[] field_a;
+    static Sprite[] field_a;
     static int[][] field_f;
-    static ka field_b;
+    static Sprite field_b;
 
     final static void a(java.applet.Applet param0, int param1) {
         try {
@@ -43,7 +43,7 @@ final class hd {
             } else {
               stackIn_7_2 = "{...}";
             }
-            throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+            throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -52,7 +52,7 @@ final class hd {
         }
     }
 
-    final static void a(int param0, uj param1, Object param2) {
+    final static void a(int param0, PlatformTaskDispatcher param1, Object param2) {
         int var3_int = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -103,7 +103,7 @@ final class hd {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -121,7 +121,7 @@ final class hd {
     private hd(int param0, int param1, int param2) {
     }
 
-    final static void a(ka[] param0, int param1, int param2, byte param3, int param4, int param5) {
+    final static void a(Sprite[] param0, int param1, int param2, byte param3, int param4, int param5) {
         int var22 = 0;
         int stackIn_10_0 = 0;
         int stackIn_13_0 = 0;
@@ -199,75 +199,75 @@ final class hd {
             }
             var19 = var15;
             var20 = var16;
-            qg.a(hb.field_a);
+            SoftwareRasterizer.a(hb.field_a);
             if (var19 > var20) {
               var20 = param4 + param1 * var9 / (var9 + var10);
               var19 = param4 + param1 * var9 / (var9 + var10);
             }
             if (param0[0] != null) {
-              qg.a(param5, param4, var17, var19);
+              SoftwareRasterizer.a(param5, param4, var17, var19);
               param0[0].g(param5, param4);
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (param0[2] != null) {
-              qg.a(var18, param4, var11, var19);
+              SoftwareRasterizer.a(var18, param4, var11, var19);
               param0[2].g(var14, param4);
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (null != param0[6]) {
-              qg.a(param5, var20, var17, var12);
+              SoftwareRasterizer.a(param5, var20, var17, var12);
               param0[6].g(param5, var16);
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (param0[8] != null) {
-              qg.a(var18, var20, var11, var12);
+              SoftwareRasterizer.a(var18, var20, var11, var12);
               param0[8].g(var14, var16);
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (null != param0[1] &&
               0 != param0[1].field_q) {
-              qg.a(var17, param4, var18, var19);
+              SoftwareRasterizer.a(var17, param4, var18, var19);
               for (var21 = var13; var14 > var21; var21 = var21 + param0[1].field_q) {
                 param0[1].g(var21, param4);
               }
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (param0[7] != null &&
               param0[7].field_q != 0) {
-              qg.a(var17, var20, var18, var12);
+              SoftwareRasterizer.a(var17, var20, var18, var12);
               for (var21Lifetime1 = var13; var14 > var21Lifetime1; var21Lifetime1 = var21Lifetime1 + param0[7].field_q) {
                 param0[7].g(var21Lifetime1, var16);
               }
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (param0[3] != null &&
               param0[3].field_v != 0) {
-              qg.a(param5, var19, var17, var20);
+              SoftwareRasterizer.a(param5, var19, var17, var20);
               for (var21Lifetime2 = var15; var21Lifetime2 < var16; var21Lifetime2 = var21Lifetime2 + param0[3].field_v) {
                 param0[3].g(param5, var21Lifetime2);
               }
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (null != param0[5] &&
               0 != param0[5].field_v) {
-              qg.a(var18, var19, var11, var20);
+              SoftwareRasterizer.a(var18, var19, var11, var20);
               for (var21Lifetime3 = var15; var21Lifetime3 < var16; var21Lifetime3 = var21Lifetime3 + param0[5].field_v) {
                 param0[5].g(var14, var21Lifetime3);
               }
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             if (null != param0[4] &&
               0 != param0[4].field_q) {
               if (0 == param0[4].field_v) {
                 return;
               }
-              qg.a(var17, var19, var18, var20);
+              SoftwareRasterizer.a(var17, var19, var18, var20);
               for (var21Lifetime4 = var15; var21Lifetime4 < var16; var21Lifetime4 = var21Lifetime4 + param0[4].field_v) {
                 for (var22 = var13; var14 > var22; var22 = var22 + param0[4].field_q) {
                   param0[4].g(var22, var21Lifetime4);
                 }
               }
-              qg.b(hb.field_a);
+              SoftwareRasterizer.b(hb.field_a);
             }
             return;
           }
@@ -282,15 +282,15 @@ final class hd {
           } else {
             stackIn_73_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_72_0), ((StringBuilder) (Object) stackIn_72_1).append(stackIn_73_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 
-    final void a(byte[] param0, byte param1, uf param2) {
+    final void a(byte[] param0, byte param1, PacketBuffer param2) {
         try {
           try {
-            if (31 != param2.field_m[param2.field_q] ||
-              -117 != param2.field_m[param2.field_q + 1]) {
+            if (31 != param2.payload[param2.position] ||
+              -117 != param2.payload[param2.position + 1]) {
               throw new RuntimeException("");
             }
             if (param1 != -117) {
@@ -300,7 +300,7 @@ final class hd {
               this.field_e = new java.util.zip.Inflater(true);
             }
             try {
-              this.field_e.setInput(param2.field_m, param2.field_q + 10, param2.field_m.length + (-8 - param2.field_q) - 10);
+              this.field_e.setInput(param2.payload, param2.position + 10, param2.payload.length + (-8 - param2.position) - 10);
               this.field_e.inflate(param0);
             } catch (Exception exception) {
               this.field_e.reset();
@@ -308,7 +308,7 @@ final class hd {
             }
             this.field_e.reset();
           } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "hd.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw oj.wrapException((Throwable) ((Object) runtimeException), "hd.G(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -326,15 +326,15 @@ final class hd {
         return cj.field_d;
     }
 
-    final static void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, uj param8) {
+    final static void a(int param0, String param1, int param2, int param3, int param4, int param5, int param6, int param7, PlatformTaskDispatcher param8) {
         rc.field_t = param8;
         vb.field_r = param6;
         mg.field_e = param3;
         vk.field_j = param5;
         pg.field_m = param2;
         mc.field_o = param1;
-        vf.field_d = param7;
-        wb.field_d = param4;
+        MouseInputHandler.field_d = param7;
+        BufferedSocket.field_d = param4;
         gb.field_d = (vb) ((Object) new fl());
         if (param0 != 7) {
           return;
@@ -343,7 +343,7 @@ final class hd {
           gi.field_a = new rb(param8);
           wf.field_i = new oa(gb.field_d, gi.field_a);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "hd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "hd.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 

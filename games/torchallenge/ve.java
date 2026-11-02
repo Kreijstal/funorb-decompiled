@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ve {
-    static ka[] field_b;
+    static Sprite[] field_b;
     static wl field_a;
     static sl field_c;
 

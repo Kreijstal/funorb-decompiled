@@ -50,7 +50,7 @@ final class al extends sh {
 
     final static void c(boolean param0) {
         String var2 = (String) null;
-        wk.a((String) null, -105, mj.field_d);
+        wk.a((String) null, -105, GameKeyHandler.field_d);
         if (param0) {
           field_A = (int[][]) null;
         }
@@ -82,7 +82,7 @@ final class al extends sh {
             return (nf) (stackIn_2_0);
           }
           var5_int = 69 / ((param4 + 78) / 40);
-          stackIn_4_0 = gl.a(param3.c(param2, param1, 0), (byte) 110);
+          stackIn_4_0 = SocketConnector.a(param3.c(param2, param1, 0), (byte) 110);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -100,7 +100,7 @@ final class al extends sh {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param4).append(')').toString());
         }
     }
 

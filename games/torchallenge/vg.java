@@ -76,34 +76,34 @@ final class vg {
         this.a(param2);
     }
 
-    final static void a(int param0, int param1, ka param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void a(int param0, int param1, Sprite param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9_int = param2.field_s + (param3 + (param1 - param7));
         int var10 = param6 + param3 + (param2.field_s + param1);
         int var11 = (param2.field_x >> 1) + param2.field_p + param4;
-        qg.a(var9_int, 0, var10, param5 + var11);
+        SoftwareRasterizer.a(var9_int, 0, var10, param5 + var11);
         param2.b(param3 - 1, -1 + param4, param0);
         param2.b(param3 - 1, 1 + param4, param0);
-        qg.b(ck.field_c);
-        qg.a(var9_int + 1, 0, 1 + var10, var11 + param5);
+        SoftwareRasterizer.b(ck.field_c);
+        SoftwareRasterizer.a(var9_int + 1, 0, 1 + var10, var11 + param5);
         param2.b(param3 + 1, -1 + param4, param0);
         param2.b(param3 + 1, param4 + 1, param0);
-        qg.b(ck.field_c);
+        SoftwareRasterizer.b(ck.field_c);
         var9_int = -param6 + (param3 + param2.field_u) + (param2.field_s - param1);
         var10 = -param1 + (param3 + param2.field_s) - (-param2.field_u + param7);
-        qg.a(var9_int, var11 - param5, var10, 480);
+        SoftwareRasterizer.a(var9_int, var11 - param5, var10, 480);
         if (param8 <= 56) {
           return;
         }
         try {
           param2.b(-1 + param3, param4 - 1, param0);
           param2.b(param3 - 1, 1 + param4, param0);
-          qg.b(ck.field_c);
-          qg.a(1 + var9_int, var11 - param5, var10 + 1, 480);
+          SoftwareRasterizer.b(ck.field_c);
+          SoftwareRasterizer.a(1 + var9_int, var11 - param5, var10 + 1, 480);
           param2.b(1 + param3, param4 - 1, param0);
           param2.b(param3 + 1, param4 + 1, param0);
-          qg.b(ck.field_c);
+          SoftwareRasterizer.b(ck.field_c);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "vg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "vg.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ')');
         }
     }
 
@@ -133,7 +133,7 @@ final class vg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "vg.D(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "vg.D(" + param0 + ',' + param1 + ')');
         }
     }
 

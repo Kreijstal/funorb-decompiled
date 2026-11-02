@@ -5,8 +5,8 @@ import java.util.*;
 
 final class pl {
     static Random field_d;
-    static ka[] field_f;
-    static ka[] field_c;
+    static Sprite[] field_f;
+    static Sprite[] field_c;
     static int field_a;
     static int[] field_b;
     static int[] field_e;
@@ -77,7 +77,7 @@ final class pl {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -95,7 +95,7 @@ final class pl {
           if (param1 != -4346) {
             return false;
           }
-          for (var7 = 0; w.field_m > var7; var7++) {
+          for (var7 = 0; DualLinkNode.field_m > var7; var7++) {
             var3_int = cb.field_c[var7][0];
             var4 = cb.field_c[var7][2];
             var6 = cb.field_c[var7][3];
@@ -113,7 +113,7 @@ final class pl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3), "pl.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3), "pl.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -122,14 +122,14 @@ final class pl {
           pa.a("", 8, param1);
           ek.a((byte) -126, param1);
           if (param0 < 112) {
-            field_f = (ka[]) null;
+            field_f = (Sprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "pl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "pl.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(int param0, String param1, ka param2) {
+    final static void a(int param0, String param1, Sprite param2) {
         try {
           lj.field_f = param2;
           if (param0 != 13267) {
@@ -137,7 +137,7 @@ final class pl {
           }
           ia.field_l = param1;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "pl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "pl.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -192,7 +192,7 @@ final class pl {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 

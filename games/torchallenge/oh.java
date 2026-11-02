@@ -80,7 +80,7 @@ final class oh {
             } else {
               stackIn_16_2 = "{...}";
             }
-            throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+            throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -152,7 +152,7 @@ final class oh {
         var0 = var15;
         while (var15 <= 10) {
             var1 = -8 + var15 * 8;
-            field_f[var15] = d.a(d.a(ba.a(field_b[6][var1 + 6], 65280L), d.a(d.a(ba.a(4278190080L, field_b[4][var1 + 4]), d.a(ba.a(field_b[3][var1 + 3], 1095216660480L), d.a(ba.a(280375465082880L, field_b[2][2 + var1]), d.a(ba.a(field_b[1][var1 + 1], 71776119061217280L), ba.a(field_b[0][var1], -72057594037927936L))))), ba.a(field_b[5][5 + var1], 16711680L))), ba.a(field_b[7][7 + var1], 255L));
+            field_f[var15] = GameClientBase.a(GameClientBase.a(ba.a(field_b[6][var1 + 6], 65280L), GameClientBase.a(GameClientBase.a(ba.a(4278190080L, field_b[4][var1 + 4]), GameClientBase.a(ba.a(field_b[3][var1 + 3], 1095216660480L), GameClientBase.a(ba.a(280375465082880L, field_b[2][2 + var1]), GameClientBase.a(ba.a(field_b[1][var1 + 1], 71776119061217280L), ba.a(field_b[0][var1], -72057594037927936L))))), ba.a(field_b[5][5 + var1], 16711680L))), ba.a(field_b[7][7 + var1], 255L));
             var15++;
         }
         field_e = 0;

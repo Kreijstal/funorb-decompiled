@@ -63,7 +63,7 @@ final class oi extends of {
           }
           var7 = 0;
           for (var10 = 0; 4 > var10; var10++) {
-            L30: {
+            regionExit1: {
               var8 = 0;
               var9 = 0;
               if (var10 == 0) {
@@ -76,7 +76,7 @@ final class oi extends of {
                   default:
                     var8 = var8 | hf.field_d[var5 + var10];
                     var6 = var6 | (255 & var8) << 8 * var10 & var9;
-                    break L30;
+                    break regionExit1;
                   case 3:
                     var9 = -16777216;
                     break;
@@ -144,8 +144,8 @@ final class oi extends of {
                 var12 = var12 >> -uk.field_U[ea.field_e];
               }
               var10 = (b.field_N[ea.field_e] == 0) ? var6 : var7;
-              var12 = var12 & nd.field_h[ea.field_e];
-              var10 = var10 & nd.field_h[ea.field_e];
+              var12 = var12 & RandomAccessCacheFile.field_h[ea.field_e];
+              var10 = var10 & RandomAccessCacheFile.field_h[ea.field_e];
               if (0 != (var12 ^ var10)) {
                 var11 = 1;
               }
@@ -197,13 +197,13 @@ final class oi extends of {
               var12 = var12 << bj.field_a[var4];
             }
             var10 = var6;
-            var12 = oe.field_b[var4] & var12;
-            var10 = oe.field_b[var4] & var10;
+            var12 = RasterBuffer.field_b[var4] & var12;
+            var10 = RasterBuffer.field_b[var4] & var10;
             if ((var12 ^ var10) != 0) {
               var11 = 1;
             }
             if (var11 != 0) {
-              var5 = 4 * oe.field_a[var4] + 24;
+              var5 = 4 * RasterBuffer.field_a[var4] + 24;
               hf.field_d[0 + var5] = (byte)p.a((int) hf.field_d[0 + var5], jh.a(var12, 255));
               hf.field_d[1 + var5] = (byte)p.a((int) hf.field_d[1 + var5], jh.a(65506, jh.a(65280, var12)) >> 8);
               hf.field_d[2 + var5] = (byte)p.a((int) hf.field_d[2 + var5], jh.a(jh.a(var12 >> 16, 255), 255));
@@ -213,14 +213,14 @@ final class oi extends of {
           }
           if (param2 &&
             !bh.field_p &&
-            !d.p(-113)) {
+            !GameClientBase.p(-113)) {
             wj.field_b.a(new eh(hf.field_d), -50);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3), "oi.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3), "oi.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -276,7 +276,7 @@ final class oi extends of {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "oi.G(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "oi.G(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -289,7 +289,7 @@ final class oi extends of {
             oi.d(-112);
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "oi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "oi.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -12,7 +12,7 @@ final class ei {
     int field_l;
     static String field_y;
     int field_m;
-    static ka[] field_w;
+    static Sprite[] field_w;
     byte[] field_f;
     int field_D;
     byte[][] field_g;
@@ -52,7 +52,7 @@ final class ei {
             if (var3 >= 6) {
               return;
             }
-            var4 = kc.field_p[var3];
+            var4 = LocalizedStrings.field_p[var3];
             if (var4 < wa.field_sb[var3]) {
               wa.field_sb[var3] = var4;
             }
@@ -70,7 +70,7 @@ final class ei {
           if (var3Lifetime1 >= 6) {
             return;
           }
-          var4Lifetime1 = kc.field_p[var3Lifetime1];
+          var4Lifetime1 = LocalizedStrings.field_p[var3Lifetime1];
           if (var4Lifetime1 < wa.field_sb[var3Lifetime1]) {
             wa.field_sb[var3Lifetime1] = var4Lifetime1;
           }
@@ -105,7 +105,7 @@ final class ei {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 

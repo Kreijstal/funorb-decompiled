@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class eg extends w {
+abstract class eg extends DualLinkNode {
     private int[] field_H;
     int field_G;
     int field_t;
@@ -733,10 +733,10 @@ abstract class eg extends w {
               }
               param1 = param1 + this.field_M[var8];
               if (field_C != -1) {
-                qg.b(var11, param2 + (int)((double)this.field_G * 0.7), param1 - var11, field_C);
+                SoftwareRasterizer.b(var11, param2 + (int)((double)this.field_G * 0.7), param1 - var11, field_C);
               }
               if (field_B != -1) {
-                qg.b(var11, param2 + this.field_G + 1, param1 - var11, field_B);
+                SoftwareRasterizer.b(var11, param2 + this.field_G + 1, param1 - var11, field_B);
               }
               var5 = var8;
             }

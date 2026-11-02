@@ -30,9 +30,9 @@ final class bf {
         field_c = (fe[][]) null;
     }
 
-    final static ka[] a(int param0, byte param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 <= 30) {
-          return (ka[]) null;
+          return (Sprite[]) null;
         }
         return e.a(3, param2, 1, 1065, 1, param4, param3, param0, 1);
     }

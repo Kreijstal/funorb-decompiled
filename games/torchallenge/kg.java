@@ -6,14 +6,14 @@ class kg extends rc {
     private int field_C;
     private int field_y;
     private boolean field_J;
-    private ka field_Y;
+    private Sprite field_Y;
     private boolean field_kb;
     private int field_Z;
     private int field_jb;
     private eg field_S;
-    private ka[] field_A;
+    private Sprite[] field_A;
     private int field_z;
-    private ka field_X;
+    private Sprite field_X;
     private int field_bb;
     static String field_db;
     private int field_I;
@@ -23,24 +23,24 @@ class kg extends rc {
     private int field_V;
     private int field_M;
     private int field_B;
-    private ka[] field_gb;
+    private Sprite[] field_gb;
     private int field_x;
-    private ka[] field_G;
-    private ka[] field_O;
+    private Sprite[] field_G;
+    private Sprite[] field_O;
     private boolean field_K;
-    private ka field_fb;
+    private Sprite field_fb;
     private boolean field_w;
     private int field_Q;
     private String field_v;
     private String field_T;
     private int field_U;
-    private ka field_hb;
+    private Sprite field_hb;
     private boolean field_H;
     private int field_ib;
     private int field_E;
-    private ka field_L;
+    private Sprite field_L;
     static String field_eb;
-    private ka[] field_R;
+    private Sprite[] field_R;
     private boolean field_W;
     static String field_cb;
 
@@ -200,7 +200,7 @@ class kg extends rc {
           } else {
             stackIn_93_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_92_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_92_0), ((StringBuilder) (Object) stackIn_92_1).append(stackIn_93_2).append(')').toString());
         }
     }
 
@@ -219,13 +219,13 @@ class kg extends rc {
         this.field_C = 256;
         this.field_ib = -2147483648;
         try {
-          this.field_d = param0;
+          this.key = param0;
           this.a((byte) 122, param1);
           if (param6 != null) {
             this.field_T = param6;
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "kg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "kg.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

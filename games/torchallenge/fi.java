@@ -142,8 +142,8 @@ final class fi {
         }
         fi.b(0, field_d);
         int var0 = field_b[1];
-        if (var0 < qg.field_k) {
-          var0 = qg.field_k;
+        if (var0 < SoftwareRasterizer.field_k) {
+          var0 = SoftwareRasterizer.field_k;
         }
         int var1 = 0;
         for (var2 = 0; var2 < field_d; var2 += 4) {
@@ -194,7 +194,7 @@ final class fi {
           }
           var2++;
           field_h = var2;
-          if (var2 >= qg.field_l) {
+          if (var2 >= SoftwareRasterizer.field_l) {
             return false;
           }
           var3 = field_f;

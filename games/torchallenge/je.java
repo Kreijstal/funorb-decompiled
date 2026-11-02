@@ -3,16 +3,16 @@
  */
 final class je {
     static byte[][] field_c;
-    private fd field_d;
+    private IterableNodeHashTable field_d;
     static boolean field_i;
     static volatile boolean field_f;
     static int[][] field_h;
     private int field_e;
-    private ak field_k;
+    private SecondaryNodeDeque field_k;
     private int field_j;
     static long field_a;
-    static ka field_b;
-    static ka field_g;
+    static Sprite field_b;
+    static Sprite field_g;
 
     public static void a(int param0) {
         field_b = null;
@@ -43,11 +43,11 @@ final class je {
             this.a(var6, -27615);
           }
           var6_ref = new re(param1, param2);
-          this.field_d.a((byte) 31, var6_ref, param3);
+          this.field_d.put((byte) 31, var6_ref, param3);
           this.field_k.a(var6_ref, 2);
           ((lb) ((Object) var6_ref)).field_l = (long)param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "je.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "je.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -81,7 +81,7 @@ final class je {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -100,12 +100,12 @@ final class je {
 
     final static void a(byte param0, nc param1) {
         try {
-          mj.field_a.b(param1);
+          GameKeyHandler.field_a.b(param1);
           if (param0 != 15) {
             field_h = (int[][]) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "je.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "je.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -116,8 +116,8 @@ final class je {
         nh.field_jb = 0;
         n.field_cb = null;
         bl.field_V = null;
-        var2 = wb.field_d;
-        wb.field_d = pg.field_m;
+        var2 = BufferedSocket.field_d;
+        BufferedSocket.field_d = pg.field_m;
         if (param0 == 51) {
           gb.field_d.field_b = 2;
           gb.field_d.field_h = gb.field_d.field_h + 1;
@@ -206,7 +206,7 @@ final class je {
         try {
           if (kj.field_G == -1 &&
             sd.field_b == -1) {
-            kj.field_G = kc.field_u;
+            kj.field_G = LocalizedStrings.field_u;
             sd.field_b = ph.field_d;
           }
           bk.field_p = bk.field_p + 1;
@@ -281,7 +281,7 @@ final class je {
           } else {
             stackIn_45_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_44_0), ((StringBuilder) (Object) stackIn_44_1).append(stackIn_45_2).append(')').toString());
         }
     }
 
@@ -293,7 +293,7 @@ final class je {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != null) {
-            param0.a(true);
+            param0.unlink(true);
             param0.a(12695);
             this.field_j = this.field_j + param0.field_r;
           }
@@ -312,7 +312,7 @@ final class je {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -321,7 +321,7 @@ final class je {
           int var5_int = -44 % ((param1 - 24) / 43);
           this.a(0, param0, 1, param2);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "je.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "je.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -342,15 +342,15 @@ final class je {
               var7.field_l = 0L;
             } else {
               var6 = new re(var8, var7.field_r);
-              this.field_d.a((byte) 112, var6, var7.field_d);
+              this.field_d.put((byte) 112, var6, var7.key);
               this.field_k.a(var6, 2);
               ((lb) ((Object) var6)).field_l = 0L;
-              var7.a(true);
+              var7.unlink(true);
               var7.a(12695);
             }
             return var8;
           }
-          var7.a(true);
+          var7.unlink(true);
           var7.a(param1 ^ 12695);
           this.field_j = this.field_j + var7.field_r;
           return null;
@@ -362,15 +362,15 @@ final class je {
             var7.field_l = 0L;
           } else {
             var6Lifetime1 = new re(var9, var7.field_r);
-            this.field_d.a((byte) 112, var6Lifetime1, var7.field_d);
+            this.field_d.put((byte) 112, var6Lifetime1, var7.key);
             this.field_k.a(var6Lifetime1, 2);
             ((lb) ((Object) var6Lifetime1)).field_l = 0L;
-            var7.a(true);
+            var7.unlink(true);
             var7.a(12695);
           }
           return var9;
         }
-        var7.a(true);
+        var7.unlink(true);
         var7.a(param1 ^ 12695);
         this.field_j = this.field_j + var7.field_r;
         return null;

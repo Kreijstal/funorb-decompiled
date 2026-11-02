@@ -46,13 +46,13 @@ final class il extends ma {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
     final static String f(int param0) {
         if (qc.field_i == gj.field_a) {
-          return mj.field_d;
+          return GameKeyHandler.field_d;
         }
         if (!ji.field_k.b(param0 ^ param0)) {
           return ji.field_k.a(0);
@@ -81,7 +81,7 @@ final class il extends ma {
             stackIn_7_0 = rk.field_c;
             return stackIn_7_0;
           }
-          stackIn_5_0 = d.field_r;
+          stackIn_5_0 = GameClientBase.field_r;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -93,7 +93,7 @@ final class il extends ma {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -104,7 +104,7 @@ final class il extends ma {
         if (param1 != 0) {
           return;
         }
-        gb.a(2, -66, ag.field_e, 32, ji.field_p, ji.field_p, param0, ag.field_e.field_x, tf.field_x, 24, 24, 8, 18, 320, 240);
+        gb.a(2, -66, SecondaryNodeDequeIterator.field_e, 32, ji.field_p, ji.field_p, param0, SecondaryNodeDequeIterator.field_e.field_x, tf.field_x, 24, 24, 8, 18, 320, 240);
     }
 
     final static String a(CharSequence param0, byte param1) {
@@ -132,14 +132,14 @@ final class il extends ma {
           var2_int = 0;
           var3 = param0.length();
           while (var3 > var2_int) {
-            if (ak.a(95, param0.charAt(var2_int))) {
+            if (SecondaryNodeDeque.a(95, param0.charAt(var2_int))) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var2_int < var3) {
-            if (ak.a(95, param0.charAt(-1 + var3))) {
+            if (SecondaryNodeDeque.a(95, param0.charAt(-1 + var3))) {
               var3--;
               continue;
             }
@@ -179,13 +179,13 @@ final class il extends ma {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param1).append(')').toString());
         }
     }
 
     final static void a(int param0, java.awt.Canvas param1) {
         if (11 == gj.field_c) {
-          mf.c(-122);
+          LevelDecoder.c(-122);
         }
         if (param0 != -20895) {
           return;
@@ -194,7 +194,7 @@ final class il extends ma {
           c.a(sa.field_b, 127, hk.field_d, bg.field_G);
           nj.a(0, 0, param1, param0 + 20895);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "il.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "il.G(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

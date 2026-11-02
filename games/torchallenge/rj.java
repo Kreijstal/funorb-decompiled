@@ -4,32 +4,32 @@
 import java.io.*;
 
 final class rj {
-    static ka field_a;
+    static Sprite field_a;
     static int field_g;
-    static ka[] field_b;
+    static Sprite[] field_b;
     static int field_c;
     static lj field_f;
     static String field_d;
     static int[] field_e;
     static char[] field_h;
 
-    final static ka[] a(int param0, int param1) {
-        ka[] var2 = null;
+    final static Sprite[] a(int param0, int param1) {
+        Sprite[] var2 = null;
         RuntimeException var2_ref = null;
-        ka[] stackIn_4_0 = null;
+        Sprite[] stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 19) {
             rj.a((byte) -37, false, (int[]) null, (vg) null, false, true, (int[]) null);
           }
-          var2 = new ka[9];
+          var2 = new Sprite[9];
           var2[4] = e.a(param1, 64, (byte) -95);
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2_ref), "rj.A(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2_ref), "rj.A(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -116,20 +116,20 @@ final class rj {
           var21Lifetime1 = -param6[0] + param2[0];
           var22Lifetime1 = param2[1] - param6[1];
           var23Lifetime1 = -param6[2] + param2[2];
-          var9 = param6[4] * var22Lifetime1 + param6[3] * var21Lifetime1 + var23Lifetime1 * param6[5] >> -fd.field_g + 16;
-          var10 = param6[8] * var23Lifetime1 + (param6[6] * var21Lifetime1 + param6[7] * var22Lifetime1) >> 16 - fd.field_g;
+          var9 = param6[4] * var22Lifetime1 + param6[3] * var21Lifetime1 + var23Lifetime1 * param6[5] >> -IterableNodeHashTable.field_g + 16;
+          var10 = param6[8] * var23Lifetime1 + (param6[6] * var21Lifetime1 + param6[7] * var22Lifetime1) >> 16 - IterableNodeHashTable.field_g;
           var11 = var23Lifetime1 * param6[11] + var21Lifetime1 * param6[9] + param6[10] * var22Lifetime1 >> 16;
           var21Lifetime2 = oc.field_i;
           var22Lifetime2 = oc.field_c;
           var23Lifetime2 = 0;
-          L2: while (true) {
+          scanLoop1: while (true) {
             boolean decompiledFrameRemainder0 = true;
             if (var23Lifetime2 < param3.field_d) {
               var24Lifetime1 = param3.field_g[var23Lifetime2];
               var25Lifetime1 = param3.field_t[var23Lifetime2];
               var26Lifetime1 = param3.field_q[var23Lifetime2];
-              var27Lifetime1 = (var18 * var26Lifetime1 + (var12 * var24Lifetime1 + var15 * var25Lifetime1) >> 16 - fd.field_g) + var9;
-              var28Lifetime1 = (var25Lifetime1 * var16 + var13 * var24Lifetime1 + var26Lifetime1 * var19 >> 16 - fd.field_g) + var10;
+              var27Lifetime1 = (var18 * var26Lifetime1 + (var12 * var24Lifetime1 + var15 * var25Lifetime1) >> 16 - IterableNodeHashTable.field_g) + var9;
+              var28Lifetime1 = (var25Lifetime1 * var16 + var13 * var24Lifetime1 + var26Lifetime1 * var19 >> 16 - IterableNodeHashTable.field_g) + var10;
               var29Lifetime1 = var11 + (var20 * var26Lifetime1 + (var14 * var24Lifetime1 + var25Lifetime1 * var17) >> 16);
               stackIn_65_0 = 50;
               stackIn_65_1 = var29Lifetime1;
@@ -137,7 +137,7 @@ final class rj {
                 if (stackIn_65_0 > stackIn_65_1) {
                   stackIn_74_0 = var18;
                   stackIn_74_1 = sj.field_S.length;
-                  break L2;
+                  break scanLoop1;
                 }
                 decompiledFrameRemainder0 = false;
               }
@@ -156,8 +156,8 @@ final class rj {
                   bg.field_O[var23Lifetime2] = -2147483648;
                 }
                 if (param1) {
-                  bk.field_q[var23Lifetime2] = var27Lifetime1 >> fd.field_g;
-                  ad.field_h[var23Lifetime2] = var28Lifetime1 >> fd.field_g;
+                  bk.field_q[var23Lifetime2] = var27Lifetime1 >> IterableNodeHashTable.field_g;
+                  FullscreenFocusCanvas.field_h[var23Lifetime2] = var28Lifetime1 >> IterableNodeHashTable.field_g;
                   ek.field_K[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
@@ -194,7 +194,7 @@ final class rj {
                   var26Lifetime1Lifetime1 = param3.field_a[var23Lifetime2];
                   fa.field_h[var23Lifetime2] = var9 + (var18 * var26Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var12 + var15 * var25Lifetime1Lifetime1 >> 16);
                   qi.field_h[var23Lifetime2] = var10 + (var19 * var26Lifetime1Lifetime1 + var16 * var25Lifetime1Lifetime1 + var24Lifetime1Lifetime1 * var13 >> 16);
-                  kc.field_m[var23Lifetime2] = var11 + (var20 * var26Lifetime1Lifetime1 + (var14 * var24Lifetime1Lifetime1 + var17 * var25Lifetime1Lifetime1) >> 16);
+                  LocalizedStrings.field_m[var23Lifetime2] = var11 + (var20 * var26Lifetime1Lifetime1 + (var14 * var24Lifetime1Lifetime1 + var17 * var25Lifetime1Lifetime1) >> 16);
                   var23Lifetime2++;
                   if (var30 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -225,7 +225,7 @@ final class rj {
                   stackIn_74_0 = var18;
                   stackIn_74_1 = sj.field_S.length;
                   if (var30 != 0) {
-                    break L2;
+                    break scanLoop1;
                   }
                   if (stackIn_74_0 >= stackIn_74_1) {
                     break;
@@ -244,7 +244,7 @@ final class rj {
             stackIn_74_1 = param5 ? 1 : 0;
             break;
           }
-          md.a(stackIn_74_0, stackIn_74_1 != 0, var7_int, var8, param3);
+          NodeHashTableIterator.a(stackIn_74_0, stackIn_74_1 != 0, var7_int, var8, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -268,11 +268,11 @@ final class rj {
           } else {
             stackIn_88_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_87_1).append(stackIn_88_2).append(')').toString());
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, boolean param4, int param5, int param6, int param7, String param8, int param9, long param10, boolean param11, int param12, uj param13) {
+    final static void a(int param0, int param1, boolean param2, int param3, boolean param4, int param5, int param6, int param7, String param8, int param9, long param10, boolean param11, int param12, PlatformTaskDispatcher param13) {
         try {
           RuntimeException stackIn_13_0 = null;
           StringBuilder stackIn_13_1 = null;
@@ -325,7 +325,7 @@ final class rj {
             } else {
               stackIn_18_2 = "{...}";
             }
-            throw oj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+            throw oj.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -342,7 +342,7 @@ final class rj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "rj.toString()");
+          throw oj.wrapException((Throwable) ((Object) var1), "rj.toString()");
         }
     }
 
@@ -356,7 +356,7 @@ final class rj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var4), "rj.D(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var4), "rj.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -372,11 +372,11 @@ final class rj {
             field_f = (lj) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "rj.E(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "rj.E(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, ka[] param3, int param4) {
+    final static void a(int param0, int param1, int param2, Sprite[] param3, int param4) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         int var6 = 0;
@@ -411,7 +411,7 @@ final class rj {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -419,7 +419,7 @@ final class rj {
         field_g = 0;
         field_e = new int[]{60, 60, 60};
         field_d = null;
-        field_b = new ka[2];
+        field_b = new Sprite[2];
         field_h = new char[]{'_', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
     }
 }

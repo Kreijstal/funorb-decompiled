@@ -14,7 +14,7 @@ final class ti {
             field_d = 111;
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ti.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ti.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

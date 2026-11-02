@@ -15,12 +15,12 @@ final class dg extends kj implements tl, sg, tb {
     static int field_ab;
     private ng field_V;
     private rf field_S;
-    static ka[] field_J;
+    static Sprite[] field_J;
     private rf field_P;
     private hc field_W;
     private rf field_cb;
     static String field_Y;
-    static ka field_R;
+    static Sprite field_R;
 
     private final String i(int param0) {
         if (param0 != -19224) {
@@ -65,7 +65,7 @@ final class dg extends kj implements tl, sg, tb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -119,7 +119,7 @@ final class dg extends kj implements tl, sg, tb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -154,7 +154,7 @@ final class dg extends kj implements tl, sg, tb {
         lh.field_s = param5;
     }
 
-    private final int a(boolean param0, ee param1, int param2, String param3, int param4, String param5) {
+    private final int a(boolean param0, UiComponent param1, int param2, String param3, int param4, String param5) {
         RuntimeException var7 = null;
         lj var8 = null;
         int stackIn_3_0 = 0;
@@ -195,11 +195,11 @@ final class dg extends kj implements tl, sg, tb {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
-    final boolean a(int param0, char param1, byte param2, ee param3) {
+    final boolean a(int param0, char param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_11_0 = false;
@@ -222,7 +222,7 @@ final class dg extends kj implements tl, sg, tb {
           if (param2 > 9) {
             return false;
           }
-          field_J = (ka[]) null;
+          field_J = (Sprite[]) null;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -234,7 +234,7 @@ final class dg extends kj implements tl, sg, tb {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -247,7 +247,7 @@ final class dg extends kj implements tl, sg, tb {
         RuntimeException var6 = null;
         try {
           if (param0 == this.field_V) {
-            fd.a(-2068);
+            IterableNodeHashTable.a(-2068);
           } else {
             if (param0 == this.field_Z) {
               discarded$1 = this.l(-1);
@@ -267,11 +267,11 @@ final class dg extends kj implements tl, sg, tb {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
-    private final int a(int param0, ee param1, String param2, int param3, int param4) {
+    private final int a(int param0, UiComponent param1, String param2, int param3, int param4) {
         int discarded$1 = 0;
         RuntimeException var6 = null;
         tk var7 = null;
@@ -285,12 +285,12 @@ final class dg extends kj implements tl, sg, tb {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new bg(20, param0, param3 + 120, 25, param1, false, 120, 3, oe.field_g, 16777215, param2);
+          var9 = new bg(20, param0, param3 + 120, 25, param1, false, 120, 3, RasterBuffer.field_g, 16777215, param2);
           this.a(0, var9);
           var7 = new tk(((uh) ((Object) param1)).a(-127));
           if (param4 < 122) {
             var8 = (String) null;
-            discarded$1 = this.a(false, (ee) null, -75, (String) null, 70, (String) null);
+            discarded$1 = this.a(false, (UiComponent) null, -75, (String) null, 70, (String) null);
           }
           this.a(0, var7);
           var7.a((byte) 108, var9.field_p + var9.field_m + 3, 15, 15, (-15 + var9.field_l >> 1) + var9.field_i);
@@ -312,7 +312,7 @@ final class dg extends kj implements tl, sg, tb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -320,7 +320,7 @@ final class dg extends kj implements tl, sg, tb {
         if (param0 != 1) {
           return (hb[]) null;
         }
-        return new hb[]{sd.field_e, ee.field_x, ki.field_b};
+        return new hb[]{sd.field_e, UiComponent.field_x, ki.field_b};
     }
 
     private final String f(byte param0) {
@@ -357,11 +357,11 @@ final class dg extends kj implements tl, sg, tb {
           var4 = param0;
           ((dj) ((Object) var3)).a(var4, false, (byte) -21);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "dg.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "dg.AA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    private final int a(byte param0, int param1, String param2, int param3, ee param4) {
+    private final int a(byte param0, int param1, String param2, int param3, UiComponent param4) {
         bg var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
@@ -373,7 +373,7 @@ final class dg extends kj implements tl, sg, tb {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var6 = new bg(20, param1, 120 + param3, 25, param4, false, 120, 3, oe.field_g, 16777215, param2);
+          var6 = new bg(20, param1, 120 + param3, 25, param4, false, 120, 3, RasterBuffer.field_g, 16777215, param2);
           this.a(0, var6);
           var7 = 97 / ((param0 - 91) / 35);
           stackIn_1_0 = var6.field_l;
@@ -394,7 +394,7 @@ final class dg extends kj implements tl, sg, tb {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -435,7 +435,7 @@ final class dg extends kj implements tl, sg, tb {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(')').toString());
         }
     }
 
@@ -446,7 +446,7 @@ final class dg extends kj implements tl, sg, tb {
         ((i) (this.field_Q.a(-116))).f(0);
     }
 
-    final void a(ee param0, int param1, byte param2, int param3) {
+    final void a(UiComponent param0, int param1, byte param2, int param3) {
         try {
           super.a(param0, param1, (byte) -104, param3);
           this.field_Z.field_F = this.g((byte) -122);
@@ -454,7 +454,7 @@ final class dg extends kj implements tl, sg, tb {
             this.field_Z = (ng) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "dg.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "dg.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -471,15 +471,15 @@ final class dg extends kj implements tl, sg, tb {
         this.field_Z = new ng(id.field_c, (gg) null);
         this.field_V = new ng(uk.field_Q, (gg) null);
         this.field_Q.field_r = ci.field_o;
-        this.field_cb.field_r = ak.field_c;
+        this.field_cb.field_r = SecondaryNodeDeque.field_c;
         this.field_P.field_r = pd.field_d;
         this.field_X.field_r = vl.field_c;
         this.field_K.field_r = bi.field_c;
-        this.field_S.field_r = ak.field_d;
+        this.field_S.field_r = SecondaryNodeDeque.field_d;
         this.field_W.field_r = qa.field_c;
         this.field_Q.a(-27997, new i(this.field_Q));
         this.field_cb.a(-27997, new il(this.field_cb));
-        this.field_P.a(-27997, new kc(this.field_P, this.field_cb));
+        this.field_P.a(-27997, new LocalizedStrings(this.field_P, this.field_cb));
         this.field_X.a(-27997, new bh(this.field_X, this.field_Q, this.field_cb));
         this.field_K.a(-27997, new gf(this.field_K, this.field_X));
         this.field_S.a(-27997, new ci(this.field_S));
@@ -497,16 +497,16 @@ final class dg extends kj implements tl, sg, tb {
         this.field_X.field_q = (j) ((Object) dupTemp$1);
         String var2 = ni.a(new String[]{this.i(-19224), this.f((byte) 125)}, 0, vh.field_g);
         int var3 = 20;
-        var3 = var3 + this.a((byte) -110, var3, gl.field_j, 170, this.field_cb);
-        var3 = var3 + (5 + this.a(20, 60, "", var3, this.field_P, 170, ad.field_f));
+        var3 = var3 + this.a((byte) -110, var3, SocketConnector.field_j, 170, this.field_cb);
+        var3 = var3 + (5 + this.a(20, 60, "", var3, this.field_P, 170, FullscreenFocusCanvas.field_f));
         var3 = var3 + this.a((byte) 127, var3, bd.field_n, 170, this.field_X);
         var3 = var3 + (5 + this.a(false, this.field_K, var3, ri.field_k, 170, ua.field_b));
         var3 = var3 + (this.a(false, this.field_Q, var3, pa.field_t, 170, te.field_a) + 5);
         var3 = var3 + this.a(var3, this.field_S, ab.field_m, 170, 124);
-        bg var4 = new bg(46, var3, this.field_p - 90, 25, this.field_W, true, this.field_p - 120, 5, ug.field_f, 11579568, ti.field_a);
+        bg var4 = new bg(46, var3, this.field_p - 90, 25, this.field_W, true, this.field_p - 120, 5, GameApplet.field_f, 11579568, ti.field_a);
         this.a(0, var4);
         var3 = var3 + var4.field_l;
-        bc var5 = new bc(oe.field_g, 0, 0, 0, 0, 16777215, -1, 0, 0, oe.field_g.field_x, -1, 2147483647, true);
+        bc var5 = new bc(RasterBuffer.field_g, 0, 0, 0, 0, 16777215, -1, 0, 0, RasterBuffer.field_g.field_x, -1, 2147483647, true);
         this.field_U = new df(var2, var5);
         this.field_U.field_r = "";
         this.field_U.a(0, false, gh.field_z);
@@ -540,7 +540,7 @@ final class dg extends kj implements tl, sg, tb {
         var4 = TorChallenge.field_F ? 1 : 0;
         try {
           oc.c();
-          fd.field_g = 11;
+          IterableNodeHashTable.field_g = 11;
           ch.field_b = new int[260];
           if (param0 != -50) {
             return;
@@ -559,11 +559,11 @@ final class dg extends kj implements tl, sg, tb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "dg.BA(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "dg.BA(" + param0 + ')');
         }
     }
 
-    private final int a(int param0, int param1, String param2, int param3, ee param4, int param5, String param6) {
+    private final int a(int param0, int param1, String param2, int param3, UiComponent param4, int param5, String param6) {
         RuntimeException var8 = null;
         dh var9 = null;
         bg var10 = null;
@@ -582,7 +582,7 @@ final class dg extends kj implements tl, sg, tb {
             stackIn_2_0 = 73;
             return stackIn_2_0;
           }
-          var10 = new bg(20, param3, 120 + param5, 25, param4, false, 120, 3, oe.field_g, 16777215, param6);
+          var10 = new bg(20, param3, 120 + param5, 25, param4, false, 120, 3, RasterBuffer.field_g, 16777215, param6);
           this.a(0, var10);
           var9 = new dh(((uh) ((Object) param4)).a(-114), param2, 126, var10.field_l + param3, param5 + 50, param0);
           var9.field_k = (gg) (this);
@@ -611,27 +611,27 @@ final class dg extends kj implements tl, sg, tb {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
     final static void a(int param0, boolean param1) {
         if (null == fa.field_q) {
-          fa.field_q = new ka(1, 1);
+          fa.field_q = new Sprite(1, 1);
         }
-        fa.field_q.field_v = qg.field_f;
-        fa.field_q.field_x = qg.field_f;
+        fa.field_q.field_v = SoftwareRasterizer.field_f;
+        fa.field_q.field_x = SoftwareRasterizer.field_f;
         if (!param1) {
           field_M = (int[][][]) null;
         }
-        ka fieldTemp$0 = fa.field_q;
-        fa.field_q.field_q = qg.field_g;
-        fieldTemp$0.field_u = qg.field_g;
-        fa.field_q.field_y = qg.field_i;
-        qg.a(pf.field_g);
-        qg.f(0, 0, qg.field_g, qg.field_f);
+        Sprite fieldTemp$0 = fa.field_q;
+        fa.field_q.field_q = SoftwareRasterizer.field_g;
+        fieldTemp$0.field_u = SoftwareRasterizer.field_g;
+        fa.field_q.field_y = SoftwareRasterizer.field_i;
+        SoftwareRasterizer.a(pf.field_g);
+        SoftwareRasterizer.f(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f);
         fa.field_q.e(0, 0, param0);
-        qg.b(pf.field_g);
+        SoftwareRasterizer.b(pf.field_g);
     }
 
     static {

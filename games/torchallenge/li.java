@@ -32,7 +32,7 @@ final class li extends kj implements sg {
             for (var4_int = 0; var4_int < var3_int; var4_int++) {
               this.field_M[var4_int] = jl.a(TorChallenge.a(param0, 6625), (CharSequence) ((Object) param1[var4_int])).replace(' ', ' ');
             }
-            var4 = new me(oe.field_g, 0, 1);
+            var4 = new me(RasterBuffer.field_g, 0, 1);
             this.field_L = new ng[var3_int + 1];
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_L[var5] = new ng(this.field_M[var5], (gg) (this));
@@ -45,7 +45,7 @@ final class li extends kj implements sg {
               var7 = (String) null;
               li.a((byte) -109, (String) null);
             }
-            this.field_L[var3_int] = new ng(ee.field_y, (gg) (this));
+            this.field_L[var3_int] = new ng(UiComponent.field_y, (gg) (this));
             this.field_L[var3_int].field_q = (j) ((Object) var4);
             this.field_L[var3_int].a((byte) 118, 0, 15, 100, 16 + var3_int * 16 + 20);
             this.a(param0 + 6620, this.field_L[var3_int]);
@@ -63,7 +63,7 @@ final class li extends kj implements sg {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
@@ -101,7 +101,7 @@ final class li extends kj implements sg {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -137,7 +137,7 @@ final class li extends kj implements sg {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class li extends kj implements sg {
         if (param3 != 0) {
           return;
         }
-        eg var5 = oe.field_g;
+        eg var5 = RasterBuffer.field_g;
         if (this.field_M != null) {
           var5.a(dg.field_Y, this.field_m + param1, this.field_i + param0, this.field_p, 20, 16777215, -1, 0, 0, var5.field_K + var5.field_x);
         }
@@ -166,11 +166,11 @@ final class li extends kj implements sg {
         try {
           this.field_P = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "li.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(int param0, char param1, byte param2, ee param3) {
+    final boolean a(int param0, char param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -204,7 +204,7 @@ final class li extends kj implements sg {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 

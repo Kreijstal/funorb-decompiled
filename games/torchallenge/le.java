@@ -5,7 +5,7 @@ final class le {
     static String field_b;
     static String field_d;
     static int field_g;
-    static ka field_e;
+    static Sprite field_e;
     static cf field_a;
     static k field_f;
     static String field_c;

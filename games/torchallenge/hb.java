@@ -9,7 +9,7 @@ final class hb {
     static int[] field_a;
     static int field_f;
     static String field_h;
-    static ka field_c;
+    static Sprite field_c;
     private String field_e;
     static String[] field_g;
 
@@ -36,7 +36,7 @@ final class hb {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -74,7 +74,7 @@ final class hb {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -158,8 +158,8 @@ final class hb {
             if (var3 != 0) {
               return;
             }
-            var5 = param0.field_q;
-            param0.a(var19.field_l, false);
+            var5 = param0.position;
+            param0.writeInt(var19.field_l, false);
             for (var6 = 0; var6 < var19.field_p; var6++) {
               if (var19.field_o[var6] == 0) {
                 try {
@@ -167,21 +167,21 @@ final class hb {
                   if (var7_int == 0) {
                     var28 = (java.lang.reflect.Field) (var19.field_j[var6].field_g);
                     var9 = var28.getInt((Object) null);
-                    param0.d(0, (byte) 122);
-                    param0.a(var9, false);
+                    param0.writeByte(0, (byte) 122);
+                    param0.writeInt(var9, false);
                   } else {
                     if (var7_int != 1) {
                       if (var7_int == 2) {
                         var27 = (java.lang.reflect.Field) (var19.field_j[var6].field_g);
                         var9 = var27.getModifiers();
-                        param0.d(0, (byte) 122);
-                        param0.a(var9, false);
+                        param0.writeByte(0, (byte) 122);
+                        param0.writeInt(var9, false);
                       }
                     } else {
                       var18_ref = (java.lang.reflect.Field) (var19.field_j[var6].field_g);
                       var20 = var18_ref;
                       var20.setInt((Object) null, var19.field_u[var6]);
-                      param0.d(0, (byte) 122);
+                      param0.writeByte(0, (byte) 122);
                     }
                   }
                   if (var7_int == 3) {
@@ -194,79 +194,79 @@ final class hb {
                     }
                     var11 = var30.invoke((Object) null, var10);
                     if (var11 == null) {
-                      param0.d(0, (byte) 122);
+                      param0.writeByte(0, (byte) 122);
                     } else if (var11 instanceof Number) {
-                      param0.d(1, (byte) 122);
+                      param0.writeByte(1, (byte) 122);
                       param0.a(true, ((Number) (var11)).longValue());
                     } else if (!(var11 instanceof String)) {
-                      param0.d(4, (byte) 122);
+                      param0.writeByte(4, (byte) 122);
                     } else {
-                      param0.d(2, (byte) 122);
+                      param0.writeByte(2, (byte) 122);
                       param0.a((String) (var11), (byte) 123);
                     }
                   } else {
                     if (var7_int == 4) {
                       var29 = (java.lang.reflect.Method) (var19.field_q[var6].field_g);
                       var9Lifetime1 = var29.getModifiers();
-                      param0.d(0, (byte) 122);
-                      param0.a(var9Lifetime1, false);
+                      param0.writeByte(0, (byte) 122);
+                      param0.writeInt(var9Lifetime1, false);
                     }
                   }
                 } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                   decompiledCaughtException = decompiledCaughtParameter0;
                   var7 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                  param0.d(-10, (byte) 122);
+                  param0.writeByte(-10, (byte) 122);
                 } catch (java.io.InvalidClassException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var7_ref = (InvalidClassException) (Object) decompiledCaughtException;
-                  param0.d(-11, (byte) 122);
+                  param0.writeByte(-11, (byte) 122);
                 } catch (java.io.StreamCorruptedException decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var7_ref2 = (StreamCorruptedException) (Object) decompiledCaughtException;
-                  param0.d(-12, (byte) 122);
+                  param0.writeByte(-12, (byte) 122);
                 } catch (java.io.OptionalDataException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var7_ref3 = (OptionalDataException) (Object) decompiledCaughtException;
-                  param0.d(-13, (byte) 122);
+                  param0.writeByte(-13, (byte) 122);
                 } catch (java.lang.IllegalAccessException decompiledCaughtParameter4) {
                   decompiledCaughtException = decompiledCaughtParameter4;
                   var7_ref4 = (IllegalAccessException) (Object) decompiledCaughtException;
-                  param0.d(-14, (byte) 122);
+                  param0.writeByte(-14, (byte) 122);
                 } catch (java.lang.IllegalArgumentException decompiledCaughtParameter5) {
                   decompiledCaughtException = decompiledCaughtParameter5;
                   var7_ref5 = (IllegalArgumentException) (Object) decompiledCaughtException;
-                  param0.d(-15, (byte) 122);
+                  param0.writeByte(-15, (byte) 122);
                 } catch (java.lang.reflect.InvocationTargetException decompiledCaughtParameter6) {
                   decompiledCaughtException = decompiledCaughtParameter6;
                   var7_ref6 = (java.lang.reflect.InvocationTargetException) (Object) decompiledCaughtException;
-                  param0.d(-16, (byte) 122);
+                  param0.writeByte(-16, (byte) 122);
                 } catch (java.lang.SecurityException decompiledCaughtParameter7) {
                   decompiledCaughtException = decompiledCaughtParameter7;
                   var7_ref7 = (SecurityException) (Object) decompiledCaughtException;
-                  param0.d(-17, (byte) 122);
+                  param0.writeByte(-17, (byte) 122);
                 } catch (java.io.IOException decompiledCaughtParameter8) {
                   decompiledCaughtException = decompiledCaughtParameter8;
                   var7_ref8 = (IOException) (Object) decompiledCaughtException;
-                  param0.d(-18, (byte) 122);
+                  param0.writeByte(-18, (byte) 122);
                 } catch (java.lang.NullPointerException decompiledCaughtParameter9) {
                   decompiledCaughtException = decompiledCaughtParameter9;
                   var7_ref9 = (NullPointerException) (Object) decompiledCaughtException;
-                  param0.d(-19, (byte) 122);
+                  param0.writeByte(-19, (byte) 122);
                 } catch (java.lang.Exception decompiledCaughtParameter10) {
                   decompiledCaughtException = decompiledCaughtParameter10;
                   var7_ref10 = (Exception) (Object) decompiledCaughtException;
-                  param0.d(-20, (byte) 122);
+                  param0.writeByte(-20, (byte) 122);
                 } catch (java.lang.Throwable decompiledCaughtParameter11) {
                   decompiledCaughtException = decompiledCaughtParameter11;
                   var7_ref11 = decompiledCaughtException;
-                  param0.d(-21, (byte) 122);
+                  param0.writeByte(-21, (byte) 122);
                 }
               } else {
-                param0.d(var19.field_o[var6], (byte) 122);
+                param0.writeByte(var19.field_o[var6], (byte) 122);
               }
             }
             param0.b(var5, 14430);
-            var19.a(true);
+            var19.unlink(true);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;
@@ -278,7 +278,7 @@ final class hb {
             } else {
               stackIn_66_2 = "{...}";
             }
-            throw oj.a((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(')').toString());
+            throw oj.wrapException((Throwable) ((Object) stackIn_65_0), ((StringBuilder) (Object) stackIn_65_1).append(stackIn_66_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -294,7 +294,7 @@ final class hb {
             field_f = 78;
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "hb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "hb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -303,7 +303,7 @@ final class hb {
         field_h = null;
         field_c = null;
         if (param0) {
-          field_c = (ka) null;
+          field_c = (Sprite) null;
         }
         field_g = null;
         field_a = null;
@@ -317,7 +317,7 @@ final class hb {
         try {
           this.field_e = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "hb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

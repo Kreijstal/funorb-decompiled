@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pg extends qd {
+final class pg extends PcmStream {
     static int field_q;
     private kb field_t;
     static boolean field_s;
@@ -44,10 +44,10 @@ final class pg extends qd {
 
     final static int e(int param0) {
         int var1 = -60 % ((param0 + 80) / 42);
-        return vf.field_a;
+        return MouseInputHandler.field_a;
     }
 
-    final qd b() {
+    final PcmStream b() {
         dl var1;
         while (true) {
           var1 = (dl) (this.field_o.c(-270));
@@ -55,7 +55,7 @@ final class pg extends qd {
             return null;
           }
           if (var1.field_K != null) {
-            return (qd) ((Object) var1.field_K);
+            return (PcmStream) ((Object) var1.field_K);
           }
         }
     }
@@ -108,7 +108,7 @@ final class pg extends qd {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -126,18 +126,18 @@ final class pg extends qd {
         int var5_int = 0;
         byte[] var6 = null;
         Object var7 = null;
-        uf var9 = null;
+        PacketBuffer var9 = null;
         byte[] var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         byte[] var13 = null;
         try {
-          var9 = new uf(param1);
+          var9 = new PacketBuffer(param1);
           if (param0 != -1048576) {
             pg.c(38);
           }
-          var3 = var9.j(-107);
-          var4 = var9.i(29);
+          var3 = var9.readUnsignedByte(-107);
+          var4 = var9.readInt(29);
           if (var4 >= 0 && (ai.field_c == 0 ||
             !(ai.field_c < var4))) {
             if (var3 == 0) {
@@ -148,7 +148,7 @@ final class pg extends qd {
               stackIn_23_0 = var5;
               return stackIn_23_0;
             }
-            var5_int = var9.i(92);
+            var5_int = var9.readInt(92);
             if (var5_int >= 0 && (ai.field_c == 0 ||
               !(ai.field_c < var5_int))) {
               var12 = new byte[var5_int];
@@ -157,9 +157,9 @@ final class pg extends qd {
               if (var3 == 1) {
                 nl.a(var12, var5_int, param1, var4, 9);
               } else {
-                var7 = jd.field_b;
+                var7 = ClientException.field_b;
                 synchronized (var7) {
-                  jd.field_b.a(var12, (byte) -117, var9);
+                  ClientException.field_b.a(var12, (byte) -117, var9);
                 }
               }
               stackIn_21_0 = var6;
@@ -178,7 +178,7 @@ final class pg extends qd {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -234,7 +234,7 @@ final class pg extends qd {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -318,17 +318,17 @@ final class pg extends qd {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(',').append(param5).append(')').toString());
         }
     }
 
-    final qd c() {
+    final PcmStream c() {
         dl var1 = (dl) (this.field_o.c((byte) 112));
         if (var1 == null) {
           return null;
         }
         if (null != var1.field_K) {
-          return (qd) ((Object) var1.field_K);
+          return (PcmStream) ((Object) var1.field_K);
         }
         return this.b();
     }
@@ -355,7 +355,7 @@ final class pg extends qd {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "pg.C(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "pg.C(" + param0 + ')');
         }
     }
 
@@ -368,23 +368,23 @@ final class pg extends qd {
         field_p = null;
     }
 
-    final static gl a(int param0, String param1, int param2) {
-        fc var3 = null;
+    final static SocketConnector a(int param0, String param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        fc stackIn_3_0 = null;
+        ProxySocketConnector stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new fc();
-          ((gl) ((Object) var3)).field_d = param0;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).port = param0;
           if (param2 >= -16) {
             field_m = -121;
           }
-          ((gl) ((Object) var3)).field_i = param1;
+          ((SocketConnector) ((Object) var3)).host = param1;
           stackIn_3_0 = var3;
-          return (gl) ((Object) stackIn_3_0);
+          return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -395,7 +395,7 @@ final class pg extends qd {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -405,7 +405,7 @@ final class pg extends qd {
         try {
           this.field_t = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "pg.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

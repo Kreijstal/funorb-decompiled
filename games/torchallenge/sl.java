@@ -6,46 +6,46 @@ final class sl {
     static lj field_a;
     static int field_f;
     static String[] field_d;
-    da field_e;
-    private da field_c;
+    IntrusiveNode field_e;
+    private IntrusiveNode field_c;
 
-    final da a(byte param0) {
+    final IntrusiveNode a(byte param0) {
         int var2 = 46 / ((param0 + 1) / 60);
-        da var3 = this.field_e.field_f;
+        IntrusiveNode var3 = this.field_e.next;
         if (var3 != this.field_e) {
-          var3.a(true);
+          var3.unlink(true);
           return var3;
         }
         return null;
     }
 
-    final da c(int param0) {
-        da var2 = this.field_c;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = this.field_c;
         if (var2 != this.field_e) {
           if (param0 != -270) {
             field_b = 98;
           }
-          this.field_c = var2.field_f;
+          this.field_c = var2.next;
           return var2;
         }
         this.field_c = null;
         return null;
     }
 
-    final void a(da param0, int param1) {
+    final void a(IntrusiveNode param0, int param1) {
         try {
-          if (param0.field_h != null) {
-            param0.a(true);
+          if (param0.previous != null) {
+            param0.unlink(true);
           }
-          param0.field_h = this.field_e.field_h;
-          param0.field_f = this.field_e;
+          param0.previous = this.field_e.previous;
+          param0.next = this.field_e;
           if (param1 > -34) {
             field_f = 42;
           }
-          param0.field_h.field_f = param0;
-          param0.field_f.field_h = param0;
+          param0.previous.next = param0;
+          param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "sl.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "sl.N(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -57,11 +57,11 @@ final class sl {
         }
     }
 
-    final da c(byte param0) {
+    final IntrusiveNode c(byte param0) {
         int var3 = 29 / ((52 - param0) / 51);
-        da var2 = this.field_e.field_f;
+        IntrusiveNode var2 = this.field_e.next;
         if (var2 != this.field_e) {
-          this.field_c = var2.field_f;
+          this.field_c = var2.next;
           return var2;
         }
         this.field_c = null;
@@ -69,7 +69,7 @@ final class sl {
     }
 
     final static void a(boolean param0) {
-        ka var1 = null;
+        Sprite var1 = null;
         int var1_int = 0;
         int var2 = 0;
         int var3 = 0;
@@ -79,12 +79,12 @@ final class sl {
         int var7 = 0;
         int var8 = 0;
         int var9_int = 0;
-        ka var9 = null;
+        Sprite var9 = null;
         int var10 = 0;
-        ka var11 = null;
-        ka var12 = null;
+        Sprite var11 = null;
+        Sprite var12 = null;
         String var14 = null;
-        ka var16 = null;
+        Sprite var16 = null;
         String var17 = null;
         int[] var28 = null;
         int[] var29 = null;
@@ -120,73 +120,73 @@ final class sl {
           if (param0) {
             sl.a(92, 123, -107);
           }
-          if (fd.field_c != null &&
-            fd.field_c.b(-7957) &&
-            fd.field_c.b(5, "benefits") &&
+          if (IterableNodeHashTable.field_c != null &&
+            IterableNodeHashTable.field_c.b(-7957) &&
+            IterableNodeHashTable.field_c.b(5, "benefits") &&
             null != sf.field_a &&
             sf.field_a.b(-7957) &&
             sf.field_a.b(5, "benefits")) {
-            da.field_b = qk.a("benefits", "headline", fd.field_c, 0);
-            me.field_e = qk.a("benefits", "blurbpane", fd.field_c, 0);
-            md.field_b = qk.a("benefits", "button", fd.field_c, 0);
-            hd.field_b = qk.a("benefits", "signup_text", fd.field_c, 0);
-            gl.field_h = qk.a("benefits", "menu_text", fd.field_c, 0);
-            ub.field_e = qk.a("benefits", "button_frame", fd.field_c, 0);
-            le.field_e = qk.a("benefits", "arrow", fd.field_c, 0);
-            tk.field_R = (eg) ((Object) ad.a(fd.field_c, sf.field_a, "benefits", "large_font", false));
-            ek.field_G = (eg) ((Object) ad.a(fd.field_c, sf.field_a, "benefits", "small_font", false));
-            var28 = qg.field_i;
-            var2 = qg.field_g;
-            var3 = qg.field_f;
-            qg.a(ck.field_c);
-            var11 = new ka(4 + le.field_e.field_u, le.field_e.field_x + 4);
+            IntrusiveNode.field_b = qk.a("benefits", "headline", IterableNodeHashTable.field_c, 0);
+            me.field_e = qk.a("benefits", "blurbpane", IterableNodeHashTable.field_c, 0);
+            NodeHashTableIterator.field_b = qk.a("benefits", "button", IterableNodeHashTable.field_c, 0);
+            hd.field_b = qk.a("benefits", "signup_text", IterableNodeHashTable.field_c, 0);
+            SocketConnector.field_h = qk.a("benefits", "menu_text", IterableNodeHashTable.field_c, 0);
+            ub.field_e = qk.a("benefits", "button_frame", IterableNodeHashTable.field_c, 0);
+            le.field_e = qk.a("benefits", "arrow", IterableNodeHashTable.field_c, 0);
+            tk.field_R = (eg) ((Object) FullscreenFocusCanvas.a(IterableNodeHashTable.field_c, sf.field_a, "benefits", "large_font", false));
+            ek.field_G = (eg) ((Object) FullscreenFocusCanvas.a(IterableNodeHashTable.field_c, sf.field_a, "benefits", "small_font", false));
+            var28 = SoftwareRasterizer.field_i;
+            var2 = SoftwareRasterizer.field_g;
+            var3 = SoftwareRasterizer.field_f;
+            SoftwareRasterizer.a(ck.field_c);
+            var11 = new Sprite(4 + le.field_e.field_u, le.field_e.field_x + 4);
             var11.d();
             le.field_e.f(2, 2, vh.field_h);
             ih.a(var11.field_u, 0, 4, var11.field_x, 2, var11, 0, 1);
             le.field_e = var11;
             dh.field_ab = le.field_e.i();
-            var12 = new ka(195, 221);
+            var12 = new Sprite(195, 221);
             var6 = var12.field_u / 2;
             var12.d();
             tk.field_R.a(ni.a(new String[]{kg.field_db}, 0, gh.field_v), var6, 40, 16777215, -1);
             ek.field_G.a(ni.a(new String[]{kg.field_db}, 0, jl.field_d), var6, 60, 16777215, -1);
-            tk.field_R.a(ni.a(new String[]{qe.field_J}, 0, kc.field_t), var6, 110, 16777215, -1);
-            ek.field_G.a(ni.a(new String[]{qe.field_J}, 0, di.field_n), var6, 130, 16777215, -1);
+            tk.field_R.a(ni.a(new String[]{LevelEntity.field_J}, 0, LocalizedStrings.field_t), var6, 110, 16777215, -1);
+            ek.field_G.a(ni.a(new String[]{LevelEntity.field_J}, 0, di.field_n), var6, 130, 16777215, -1);
             tk.field_R.a(ub.field_m, var6, 180, 16777215, -1);
             ek.field_G.a(wi.field_b, var6, 200, 16777215, -1);
             ih.a(var12.field_u, 0, 4, var12.field_x, 3, var12, 0, 1);
             me.field_e.d();
             var12.g(-me.field_e.field_s + 18, -me.field_e.field_p + 241);
             for (var7 = 0; hb.field_g.length > var7; var7++) {
-              ak.field_i[var7].d();
-              ek.field_G.a(hb.field_g[var7], 3, 3, ak.field_i[var7].field_u - 6, ak.field_i[var7].field_x - 6, vh.field_h, -1, 1, 1, ek.field_G.field_x + ek.field_G.field_K);
-              ih.a(ak.field_i[var7].field_u, 0, 4, ak.field_i[var7].field_x, 3, ak.field_i[var7], 0, 1);
+              SecondaryNodeDeque.field_i[var7].d();
+              ek.field_G.a(hb.field_g[var7], 3, 3, SecondaryNodeDeque.field_i[var7].field_u - 6, SecondaryNodeDeque.field_i[var7].field_x - 6, vh.field_h, -1, 1, 1, ek.field_G.field_x + ek.field_G.field_K);
+              ih.a(SecondaryNodeDeque.field_i[var7].field_u, 0, 4, SecondaryNodeDeque.field_i[var7].field_x, 3, SecondaryNodeDeque.field_i[var7], 0, 1);
             }
             hb.field_g = null;
             dg.field_R = hd.field_b.c();
             dg.field_R.d();
-            ii.a(qg.field_g, 2 * qg.field_f / 3, 64, 4, 0, 0);
-            qg.a(var28, var2, var3);
-            qg.b(ck.field_c);
-            ii.field_a = 390 + (-ub.field_e.field_x + md.field_b.field_x) / 2;
-            wc.field_b = (md.field_b.field_u - ub.field_e.field_u) / 2 + 231;
-            fd.field_c = null;
-            pf.field_e = (-ub.field_e.field_u + md.field_b.field_u) / 2 + 434;
-            bi.field_i = 390 + (md.field_b.field_x - ub.field_e.field_x) / 2;
+            ii.a(SoftwareRasterizer.field_g, 2 * SoftwareRasterizer.field_f / 3, 64, 4, 0, 0);
+            SoftwareRasterizer.a(var28, var2, var3);
+            SoftwareRasterizer.b(ck.field_c);
+            ii.field_a = 390 + (-ub.field_e.field_x + NodeHashTableIterator.field_b.field_x) / 2;
+            wc.field_b = (NodeHashTableIterator.field_b.field_u - ub.field_e.field_u) / 2 + 231;
+            IterableNodeHashTable.field_c = null;
+            pf.field_e = (-ub.field_e.field_u + NodeHashTableIterator.field_b.field_u) / 2 + 434;
+            bi.field_i = 390 + (NodeHashTableIterator.field_b.field_x - ub.field_e.field_x) / 2;
           }
           if (lj.field_f == null) {
             return;
           }
           if (vk.field_d != null &&
             tk.field_R != null) {
-            var29 = qg.field_i;
-            var2Lifetime1 = qg.field_g;
-            var3Lifetime1 = qg.field_f;
-            qg.a(ck.field_c);
-            var14 = ni.a(new String[]{nk.field_g[di.field_A]}, 0, jd.field_f);
-            var5 = tk.field_R.b(var14, fd.field_f);
-            var6Lifetime1 = tk.field_R.b(var14, fd.field_f, tk.field_R.field_K + tk.field_R.field_x);
-            var7Lifetime1 = (fd.field_f - var5) / 2 + si.field_J;
+            var29 = SoftwareRasterizer.field_i;
+            var2Lifetime1 = SoftwareRasterizer.field_g;
+            var3Lifetime1 = SoftwareRasterizer.field_f;
+            SoftwareRasterizer.a(ck.field_c);
+            var14 = ni.a(new String[]{nk.field_g[di.field_A]}, 0, ClientException.field_f);
+            var5 = tk.field_R.b(var14, IterableNodeHashTable.field_f);
+            var6Lifetime1 = tk.field_R.b(var14, IterableNodeHashTable.field_f, tk.field_R.field_K + tk.field_R.field_x);
+            var7Lifetime1 = (IterableNodeHashTable.field_f - var5) / 2 + si.field_J;
             var5 += 6;
             var7Lifetime1 -= 3;
             var8 = vk.field_k + (pi.field_b - var6Lifetime1) / 2;
@@ -229,61 +229,61 @@ final class sl {
               vk.field_k = vk.field_k + var9_intLifetime3;
             }
             vk.field_d.g();
-            var9 = new ka(vk.field_d.field_q, vk.field_d.field_v);
+            var9 = new Sprite(vk.field_d.field_q, vk.field_d.field_v);
             var9.d();
-            tk.field_R.a(var14, si.field_J, vk.field_k, fd.field_f, pi.field_b, 16777215, -1, 1, 1, tk.field_R.field_x + tk.field_R.field_K);
+            tk.field_R.a(var14, si.field_J, vk.field_k, IterableNodeHashTable.field_f, pi.field_b, 16777215, -1, 1, 1, tk.field_R.field_x + tk.field_R.field_K);
             ih.a(var9.field_q, 0, 4, var9.field_v, 3, var9, 0, 1);
             vk.field_d.d();
             var9.g(0, 0);
-            cf.field_c = new ka(640, 480);
+            cf.field_c = new Sprite(640, 480);
             cf.field_c.d();
-            vk.field_d.b(rl.field_f + (vk.field_d.field_q >> 1), (vk.field_d.field_v >> 1) + bh.field_t, dd.field_u, 4096);
+            vk.field_d.b(rl.field_f + (vk.field_d.field_q >> 1), (vk.field_d.field_v >> 1) + bh.field_t, ImageProducerRasterBuffer.field_u, 4096);
             vk.field_d = null;
             cf.field_c.h();
-            qg.a(var29, var2Lifetime1, var3Lifetime1);
-            qg.b(ck.field_c);
+            SoftwareRasterizer.a(var29, var2Lifetime1, var3Lifetime1);
+            SoftwareRasterizer.b(ck.field_c);
           }
           if (null != ia.field_l &&
             ek.field_G != null) {
-            var30 = qg.field_i;
-            var2Lifetime2 = qg.field_g;
-            var3Lifetime2 = qg.field_f;
-            qg.a(ck.field_c);
-            var16 = new ka(412, 43);
-            var17 = ni.a(new String[]{ia.field_l}, 0, w.field_n);
+            var30 = SoftwareRasterizer.field_i;
+            var2Lifetime2 = SoftwareRasterizer.field_g;
+            var3Lifetime2 = SoftwareRasterizer.field_f;
+            SoftwareRasterizer.a(ck.field_c);
+            var16 = new Sprite(412, 43);
+            var17 = ni.a(new String[]{ia.field_l}, 0, DualLinkNode.field_n);
             ia.field_l = null;
             var16.d();
             ek.field_G.a(var17, 3, 3, var16.field_u - 6, var16.field_x - 6, 16777215, -1, 0, 1, ek.field_G.field_K + ek.field_G.field_x);
             ih.a(var16.field_u, 0, 4, var16.field_x, 3, var16, 0, 1);
             lj.field_f.d();
             var16.g(199 - lj.field_f.field_s, 83 - lj.field_f.field_p);
-            qg.a(var30, var2Lifetime2, var3Lifetime2);
-            qg.b(ck.field_c);
+            SoftwareRasterizer.a(var30, var2Lifetime2, var3Lifetime2);
+            SoftwareRasterizer.b(ck.field_c);
           }
-          if (fc.field_m != null &&
+          if (ProxySocketConnector.field_m != null &&
             null != ek.field_G) {
-            var31 = qg.field_i;
-            var2Lifetime3 = qg.field_g;
-            var3Lifetime3 = qg.field_f;
-            qg.a(ck.field_c);
-            var4 = ek.field_G.b(dd.field_r, 640) + 6;
-            var5Lifetime1 = var4 + (fc.field_m.field_q + 20);
+            var31 = SoftwareRasterizer.field_i;
+            var2Lifetime3 = SoftwareRasterizer.field_g;
+            var3Lifetime3 = SoftwareRasterizer.field_f;
+            SoftwareRasterizer.a(ck.field_c);
+            var4 = ek.field_G.b(ImageProducerRasterBuffer.field_r, 640) + 6;
+            var5Lifetime1 = var4 + (ProxySocketConnector.field_m.field_q + 20);
             var6Lifetime2 = -(var5Lifetime1 / 2) + 427;
-            var7Lifetime2 = 20 + (var6Lifetime2 + fc.field_m.field_q);
+            var7Lifetime2 = 20 + (var6Lifetime2 + ProxySocketConnector.field_m.field_q);
             lj.field_f.d();
-            ek.field_G.c(dd.field_r, -lj.field_f.field_s + var7Lifetime2, ek.field_G.field_x + (155 - lj.field_f.field_p + ek.field_G.field_K), 16777215, -1);
+            ek.field_G.c(ImageProducerRasterBuffer.field_r, -lj.field_f.field_s + var7Lifetime2, ek.field_G.field_x + (155 - lj.field_f.field_p + ek.field_G.field_K), 16777215, -1);
             ih.a(var4, -lj.field_f.field_s + (var7Lifetime2 - 4), 4, 50, 3, lj.field_f, -lj.field_f.field_p + 155, 1);
-            var8Lifetime1 = -((fc.field_m.field_v - (3 + ek.field_G.field_x + ek.field_G.field_K)) / 2) + (-lj.field_f.field_p + 155);
-            fc.field_m.g(var6Lifetime2 - lj.field_f.field_s, var8Lifetime1);
-            qg.a(var31, var2Lifetime3, var3Lifetime3);
-            qg.b(ck.field_c);
-            fc.field_m = null;
+            var8Lifetime1 = -((ProxySocketConnector.field_m.field_v - (3 + ek.field_G.field_x + ek.field_G.field_K)) / 2) + (-lj.field_f.field_p + 155);
+            ProxySocketConnector.field_m.g(var6Lifetime2 - lj.field_f.field_s, var8Lifetime1);
+            SoftwareRasterizer.a(var31, var2Lifetime3, var3Lifetime3);
+            SoftwareRasterizer.b(ck.field_c);
+            ProxySocketConnector.field_m = null;
           }
-          qg.a(ck.field_c);
-          qg.a(16, 16, 608, 112, 15, gf.field_u, ea.field_c);
-          qg.a(231, 144, 393, 232, 15, gf.field_u, ea.field_c);
-          if (da.field_b != null) {
-            da.field_b.g(0, 0);
+          SoftwareRasterizer.a(ck.field_c);
+          SoftwareRasterizer.a(16, 16, 608, 112, 15, gf.field_u, ea.field_c);
+          SoftwareRasterizer.a(231, 144, 393, 232, 15, gf.field_u, ea.field_c);
+          if (IntrusiveNode.field_b != null) {
+            IntrusiveNode.field_b.g(0, 0);
           }
           if (null != me.field_e) {
             me.field_e.g(0, 0);
@@ -292,9 +292,9 @@ final class sl {
           if (cf.field_c != null) {
             cf.field_c.g(0, 0);
           }
-          if (null != md.field_b &&
+          if (null != NodeHashTableIterator.field_b &&
             null != ub.field_e) {
-            md.field_b.g(231, 390);
+            NodeHashTableIterator.field_b.g(231, 390);
             var1 = hd.field_b;
             if (0 == of.field_c.field_j) {
               var1 = dg.field_R;
@@ -310,10 +310,10 @@ final class sl {
             }
             var2Lifetime4 = (stackIn_52_0 * ga.$cfr$intArgs$a$f0c91481eb80(stackIn_52_1, stackIn_52_2 << stackIn_53_3) >> 16) + 40;
             if (var2Lifetime4 > 0) {
-              md.field_b.b(230, 389, var2Lifetime4);
-              md.field_b.b(232, 389, var2Lifetime4);
-              md.field_b.b(232, 391, var2Lifetime4);
-              md.field_b.b(230, 391, var2Lifetime4);
+              NodeHashTableIterator.field_b.b(230, 389, var2Lifetime4);
+              NodeHashTableIterator.field_b.b(232, 389, var2Lifetime4);
+              NodeHashTableIterator.field_b.b(232, 391, var2Lifetime4);
+              NodeHashTableIterator.field_b.b(230, 391, var2Lifetime4);
               var1.b(1, 1, var2Lifetime4);
               var1.b(-1, 1, var2Lifetime4);
               var1.b(1, -1, var2Lifetime4);
@@ -322,12 +322,12 @@ final class sl {
             stackIn_59_0 = (of.field_c.field_j == 0);
             tj.a(stackIn_59_0, 5106, bi.field_i, wc.field_b);
           }
-          if (null != md.field_b &&
+          if (null != NodeHashTableIterator.field_b &&
             ub.field_e != null) {
-            md.field_b.g(434, 390);
-            gl.field_h.g(0, 0);
+            NodeHashTableIterator.field_b.g(434, 390);
+            SocketConnector.field_h.g(0, 0);
             if (of.field_c.field_j == 1) {
-              ii.a(md.field_b.field_u - 4, 7 * md.field_b.field_x / 12, 64, 4, 436, 392);
+              ii.a(NodeHashTableIterator.field_b.field_u - 4, 7 * NodeHashTableIterator.field_b.field_x / 12, 64, 4, 436, 392);
             }
             stackIn_68_0 = (1 == of.field_c.field_j);
             tj.a(stackIn_68_0, 5106, ii.field_a, pf.field_e);
@@ -340,15 +340,15 @@ final class sl {
               ph.field_d < le.field_e.field_x + var1_int) {
               var2Lifetime5 = (ga.$cfr$intArgs$a$f0c91481eb80(5, ub.field_h << 4) * 40 >> 16) + 40;
               if (var2Lifetime5 > 0) {
-                if (-le.field_e.field_u + 269 < kc.field_u &&
-                  kc.field_u < 269) {
+                if (-le.field_e.field_u + 269 < LocalizedStrings.field_u &&
+                  LocalizedStrings.field_u < 269) {
                   le.field_e.b(269 + (-le.field_e.field_q - 1), -1 + var1_int, var2Lifetime5);
                   le.field_e.b(1 - le.field_e.field_q + 269, -1 + var1_int, var2Lifetime5);
                   le.field_e.b(268 - le.field_e.field_q, 1 + var1_int, var2Lifetime5);
                   le.field_e.b(1 + (-le.field_e.field_q + 269), var1_int + 1, var2Lifetime5);
                 } else {
-                  if (586 < kc.field_u &&
-                    kc.field_u < le.field_e.field_u + 586) {
+                  if (586 < LocalizedStrings.field_u &&
+                    LocalizedStrings.field_u < le.field_e.field_u + 586) {
                     dh.field_ab.b(585, var1_int - 1, var2Lifetime5);
                     dh.field_ab.b(587, var1_int - 1, var2Lifetime5);
                     dh.field_ab.b(585, 1 + var1_int, var2Lifetime5);
@@ -357,17 +357,17 @@ final class sl {
                 }
               }
             }
-            w.c(-128);
-            ak.field_i[oi.field_j].g(269, 340);
+            DualLinkNode.c(-128);
+            SecondaryNodeDeque.field_i[oi.field_j].g(269, 340);
           } else {
-            w.c(-128);
-            ak.field_i[oi.field_j].g(269, 340);
+            DualLinkNode.c(-128);
+            SecondaryNodeDeque.field_i[oi.field_j].g(269, 340);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1_ref), "sl.F(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1_ref), "sl.F(" + param0 + ')');
         }
     }
 
@@ -375,16 +375,16 @@ final class sl {
         if (param0 != -944) {
           return (jk) null;
         }
-        return mj.field_a;
+        return GameKeyHandler.field_a;
     }
 
-    final da b(byte param0) {
+    final IntrusiveNode b(byte param0) {
         if (param0 != 65) {
           this.d((byte) 1);
         }
-        da var2 = this.field_e.field_h;
+        IntrusiveNode var2 = this.field_e.previous;
         if (this.field_e != var2) {
-          this.field_c = var2.field_h;
+          this.field_c = var2.previous;
           return var2;
         }
         this.field_c = null;
@@ -392,13 +392,13 @@ final class sl {
     }
 
     final void a(int param0) {
-        da var2;
+        IntrusiveNode var2;
         int var3;
         var3 = TorChallenge.field_F ? 1 : 0;
         while (true) {
-          var2 = this.field_e.field_f;
+          var2 = this.field_e.next;
           if (var2 != this.field_e) {
-            var2.a(true);
+            var2.unlink(true);
             continue;
           }
           break;
@@ -414,7 +414,7 @@ final class sl {
         if (param0 > -113) {
           return false;
         }
-        return this.field_e == this.field_e.field_f ? true : false;
+        return this.field_e == this.field_e.next ? true : false;
     }
 
     final static boolean a(int param0, int param1, int param2, int param3) {
@@ -457,13 +457,13 @@ final class sl {
         return var6 != 0;
     }
 
-    final da d(byte param0) {
-        da var2 = this.field_e.field_h;
+    final IntrusiveNode d(byte param0) {
+        IntrusiveNode var2 = this.field_e.previous;
         if (var2 != this.field_e) {
           if (param0 >= -103) {
             sl.a(false);
           }
-          var2.a(true);
+          var2.unlink(true);
           return var2;
         }
         return null;
@@ -477,38 +477,38 @@ final class sl {
         kj.field_G = param0;
     }
 
-    final void a(byte param0, da param1) {
+    final void a(byte param0, IntrusiveNode param1) {
         try {
           if (param0 < 76) {
             this.b((byte) 15);
           }
-          if (param1.field_h != null) {
-            param1.a(true);
+          if (param1.previous != null) {
+            param1.unlink(true);
           }
-          param1.field_h = this.field_e;
-          param1.field_f = this.field_e.field_f;
-          param1.field_h.field_f = param1;
-          param1.field_f.field_h = param1;
+          param1.previous = this.field_e;
+          param1.next = this.field_e.next;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "sl.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "sl.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final da e(byte param0) {
-        da var2 = this.field_c;
+    final IntrusiveNode e(byte param0) {
+        IntrusiveNode var2 = this.field_c;
         if (var2 == this.field_e) {
           this.field_c = null;
           return null;
         }
         int var3 = 91 % ((param0 + 42) / 61);
-        this.field_c = var2.field_h;
+        this.field_c = var2.previous;
         return var2;
     }
 
     public sl() {
-        this.field_e = new da();
-        this.field_e.field_f = this.field_e;
-        this.field_e.field_h = this.field_e;
+        this.field_e = new IntrusiveNode();
+        this.field_e.next = this.field_e;
+        this.field_e.previous = this.field_e;
     }
 
     static {

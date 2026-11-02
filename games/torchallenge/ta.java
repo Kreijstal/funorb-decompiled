@@ -11,7 +11,7 @@ final class ta extends wa implements sg {
 
     public final void a(ng param0, int param1, int param2, int param3, boolean param4) {
         if (this.field_Eb) {
-          ee.a(false, 1, true);
+          UiComponent.a(false, 1, true);
           return;
         }
         try {
@@ -21,7 +21,7 @@ final class ta extends wa implements sg {
           bj.a(30);
           this.o(77);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ta.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ta.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -48,7 +48,7 @@ final class ta extends wa implements sg {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ final class ta extends wa implements sg {
             }
             return true;
           }
-          var2 = uf.d(false);
+          var2 = PacketBuffer.d(false);
           if (var2 == null) {
             if (param0 == 1) {
               return super.j(1);
@@ -81,7 +81,7 @@ final class ta extends wa implements sg {
         try {
           this.field_Bb = param1;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ta.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ta.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class ta extends wa implements sg {
               }
             }
           } else {
-            var4 = ak.field_e;
+            var4 = SecondaryNodeDeque.field_e;
           }
           var5 = new sj((wa) (this), dl.field_H, var4);
           if (param2 < 41) {
@@ -174,7 +174,7 @@ final class ta extends wa implements sg {
           } else {
             stackIn_32_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_31_1).append(stackIn_32_2).append(',').append(param2).append(')').toString());
         }
     }
 

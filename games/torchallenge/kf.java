@@ -34,7 +34,7 @@ final class kf {
         try {
           ib.a(true, param1);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "kf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "kf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -46,7 +46,7 @@ final class kf {
         }
     }
 
-    final static int a(qe param0, int param1, int param2) {
+    final static int a(LevelEntity param0, int param1, int param2) {
         int stackIn_4_0 = 0;
         int stackIn_13_0 = 0;
         int stackIn_21_0 = 0;
@@ -125,7 +125,7 @@ final class kf {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 

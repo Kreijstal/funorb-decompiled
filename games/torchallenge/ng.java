@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class ng extends ee {
+class ng extends UiComponent {
     static cf field_A;
     boolean field_F;
     private boolean field_B;
@@ -15,11 +15,11 @@ class ng extends ee {
     static int field_I;
     private static int[] field_G;
     static int[] field_H;
-    static ka[] field_L;
+    static Sprite[] field_L;
     static int[] field_K;
     static String field_J;
 
-    boolean a(ee param0, int param1) {
+    boolean a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -37,7 +37,7 @@ class ng extends ee {
               if (!(this.field_k instanceof mk)) {
                 return true;
               }
-              ((mk) (this.field_k)).a((ee) (this), this.field_B, (byte) -74);
+              ((mk) (this.field_k)).a((UiComponent) (this), this.field_B, (byte) -74);
             }
             return true;
           }
@@ -52,11 +52,11 @@ class ng extends ee {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    boolean a(int param0, char param1, byte param2, ee param3) {
+    boolean a(int param0, char param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -85,7 +85,7 @@ class ng extends ee {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -97,12 +97,12 @@ class ng extends ee {
         if (param0 > 76) {
           return this.field_B;
         }
-        ee var3 = (ee) null;
-        this.a(54, -80, 117, 118, -114, 23, (ee) null);
+        UiComponent var3 = (UiComponent) null;
+        this.a(54, -80, 117, 118, -114, 23, (UiComponent) null);
         return this.field_B;
     }
 
-    void a(ee param0, int param1, byte param2, int param3) {
+    void a(UiComponent param0, int param1, byte param2, int param3) {
         super.a(param0, param1, (byte) -112, param3);
         if (param2 >= -97) {
           return;
@@ -110,18 +110,18 @@ class ng extends ee {
         try {
           if (this.field_z != 0 &&
             this.field_z != wh.field_e) {
-            if (this.a(ph.field_d, kc.field_u, param3, -29991, param1) &&
+            if (this.a(ph.field_d, LocalizedStrings.field_u, param3, -29991, param1) &&
               wh.field_e == 0) {
-              this.a(-param3 + ph.field_d, -13461, kc.field_u - param1, this.field_z);
+              this.a(-param3 + ph.field_d, -13461, LocalizedStrings.field_u - param1, this.field_z);
             }
-            this.a(param3, (byte) 119, param0, param1, kc.field_u, ph.field_d);
+            this.a(param3, (byte) 119, param0, param1, LocalizedStrings.field_u, ph.field_d);
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ng.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ng.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ee param6) {
+    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -154,11 +154,11 @@ class ng extends ee {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
-    final void a(int param0, byte param1, ee param2, int param3, int param4, int param5) {
+    final void a(int param0, byte param1, UiComponent param2, int param3, int param4, int param5) {
         try {
           if (null != this.field_k &&
             this.field_k instanceof pb) {
@@ -167,7 +167,7 @@ class ng extends ee {
           this.field_z = 0;
           int var7_int = 94 / ((-29 - param1) / 39);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ng.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ng.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -213,7 +213,7 @@ class ng extends ee {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -255,7 +255,7 @@ class ng extends ee {
             return;
           }
           if (this.field_k instanceof mk) {
-            ((mk) (this.field_k)).a((ee) (this), this.field_B, (byte) -54);
+            ((mk) (this.field_k)).a((UiComponent) (this), this.field_B, (byte) -54);
             return;
           }
           return;
@@ -268,7 +268,7 @@ class ng extends ee {
           return;
         }
         if (this.field_k instanceof mk) {
-          ((mk) (this.field_k)).a((ee) (this), this.field_B, (byte) -54);
+          ((mk) (this.field_k)).a((UiComponent) (this), this.field_B, (byte) -54);
           return;
         }
     }

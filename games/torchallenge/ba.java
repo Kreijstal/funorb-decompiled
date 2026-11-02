@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ba {
-    static ka[] field_d;
+    static Sprite[] field_d;
     static String[] field_c;
     static sl field_a;
-    static ka[] field_b;
+    static Sprite[] field_b;
     static boolean[][][] field_e;
     static int[][] field_j;
     static int[] field_g;
@@ -20,8 +20,8 @@ final class ba {
         int var8;
         int var9;
         int var10;
-        ka[] var11;
-        ka var12;
+        Sprite[] var11;
+        Sprite var12;
         int var13;
         int var6Lifetime1;
         int var6Lifetime2;
@@ -115,7 +115,7 @@ final class ba {
           field_h = (int[]) null;
         }
         na.field_e = false;
-        id.field_b.j(-117);
+        id.field_b.readUnsignedByte(-117);
     }
 
     final static void a(byte[] param0, int param1) {
@@ -145,8 +145,8 @@ final class ba {
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
-        uf var16 = null;
-        uf var17 = null;
+        PacketBuffer var16 = null;
+        PacketBuffer var17 = null;
         byte[] var18 = null;
         byte[] var19 = null;
         byte[] var20 = null;
@@ -158,42 +158,42 @@ final class ba {
         int var4Lifetime5;
         var15 = TorChallenge.field_F ? 1 : 0;
         try {
-          var16 = new uf(param0);
+          var16 = new PacketBuffer(param0);
           var17 = var16;
-          var17.field_q = param0.length - 2;
-          vl.field_b = var17.c(false);
-          ug.field_e = new int[vl.field_b];
+          var17.position = param0.length - 2;
+          vl.field_b = var17.readUnsignedShort(false);
+          GameApplet.field_e = new int[vl.field_b];
           vd.field_c = new boolean[vl.field_b];
           gf.field_t = new byte[vl.field_b][];
           h.field_a = new byte[vl.field_b][];
           lg.field_e = new int[vl.field_b];
           pg.field_r = new int[vl.field_b];
-          dd.field_t = new int[vl.field_b];
-          var17.field_q = param0.length - 7 - 8 * vl.field_b;
-          ij.field_B = var17.c(false);
-          le.field_g = var17.c(false);
-          var3 = 1 + (255 & var17.j(-94));
+          ImageProducerRasterBuffer.field_t = new int[vl.field_b];
+          var17.position = param0.length - 7 - 8 * vl.field_b;
+          ij.field_B = var17.readUnsignedShort(false);
+          le.field_g = var17.readUnsignedShort(false);
+          var3 = 1 + (255 & var17.readUnsignedByte(-94));
           for (var4 = 0; vl.field_b > var4; var4++) {
-            ug.field_e[var4] = var16.c(false);
+            GameApplet.field_e[var4] = var16.readUnsignedShort(false);
           }
           for (var4Lifetime1 = param1; var4Lifetime1 < vl.field_b; var4Lifetime1++) {
-            dd.field_t[var4Lifetime1] = var17.c(false);
+            ImageProducerRasterBuffer.field_t[var4Lifetime1] = var17.readUnsignedShort(false);
           }
           for (var4Lifetime2 = 0; var4Lifetime2 < vl.field_b; var4Lifetime2++) {
-            pg.field_r[var4Lifetime2] = var17.c(false);
+            pg.field_r[var4Lifetime2] = var17.readUnsignedShort(false);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < vl.field_b; var4Lifetime3++) {
-            lg.field_e[var4Lifetime3] = var17.c(false);
+            lg.field_e[var4Lifetime3] = var17.readUnsignedShort(false);
           }
-          var17.field_q = -(var3 * 3) + 3 + (-(8 * vl.field_b) + param0.length - 7);
+          var17.position = -(var3 * 3) + 3 + (-(8 * vl.field_b) + param0.length - 7);
           td.field_m = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            td.field_m[var4Lifetime4] = var17.g(0);
+            td.field_m[var4Lifetime4] = var17.readUnsignedMedium(0);
             if (0 == td.field_m[var4Lifetime4]) {
               td.field_m[var4Lifetime4] = 1;
             }
           }
-          var17.field_q = 0;
+          var17.position = 0;
           for (var4Lifetime5 = 0; var4Lifetime5 < vl.field_b; var4Lifetime5++) {
             var5 = pg.field_r[var4Lifetime5];
             var6 = lg.field_e[var4Lifetime5];
@@ -207,16 +207,16 @@ final class ba {
             var9 = var19;
             gf.field_t[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.j(-91);
+            var11 = var17.readUnsignedByte(-91);
             stackIn_22_0 = 0;
             stackIn_22_1 = var11 & 1;
             if (stackIn_22_0 == stackIn_22_1) {
               for (var12 = 0; var7 > var12; var12++) {
-                var8[var12] = var17.d((byte) 90);
+                var8[var12] = var17.readByte((byte) 90);
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var12 < var7; var12++) {
-                  dupTemp$0 = var17.d((byte) 102);
+                  dupTemp$0 = var17.readByte((byte) 102);
                   var9[var12] = dupTemp$0;
                   var13 = dupTemp$0;
                   stackIn_47_0 = var10;
@@ -231,13 +231,13 @@ final class ba {
             } else {
               for (var12 = 0; var12 < var5; var12++) {
                 for (var13 = 0; var6 > var13; var13++) {
-                  var8[var12 + var13 * var5] = var17.d((byte) 114);
+                  var8[var12 + var13 * var5] = var17.readByte((byte) 114);
                 }
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var12 < var5; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$1 = var17.d((byte) 98);
+                    dupTemp$1 = var17.readByte((byte) 98);
                     var9[var12 + var13 * var5] = dupTemp$1;
                     var14 = dupTemp$1;
                     stackIn_36_0 = var10;
@@ -264,7 +264,7 @@ final class ba {
           } else {
             stackIn_54_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_53_0), ((StringBuilder) (Object) stackIn_53_1).append(stackIn_54_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -273,7 +273,7 @@ final class ba {
         if (oa.field_k == null) {
           oa.field_k = new pe(t.field_b, jh.field_a);
         }
-        t.field_b.a((byte) 53, (ee) (oa.field_k));
+        t.field_b.a((byte) 53, (UiComponent) (oa.field_k));
         if (param0 != 15) {
           ba.a(-4, 102, 101, -116, -9);
         }

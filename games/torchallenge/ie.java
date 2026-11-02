@@ -4,10 +4,10 @@
 final class ie {
     static sl field_d;
     static int[][][] field_b;
-    static qe[] field_e;
+    static LevelEntity[] field_e;
     static String field_c;
     static String field_g;
-    static ka[][] field_f;
+    static Sprite[][] field_f;
     static sf field_a;
 
     final static void b(byte param0) {
@@ -15,8 +15,8 @@ final class ie {
         if (var1 == null) {
           throw new IllegalStateException();
         }
-        qg.a(var1.field_j, var1.field_p, var1.field_s);
-        qg.f(var1.field_l, var1.field_i, var1.field_n, var1.field_q);
+        SoftwareRasterizer.a(var1.field_j, var1.field_p, var1.field_s);
+        SoftwareRasterizer.f(var1.field_l, var1.field_i, var1.field_n, var1.field_q);
         if (param0 != -9) {
           field_c = (String) null;
         }
@@ -29,7 +29,7 @@ final class ie {
         field_b = (int[][][]) null;
         field_e = null;
         field_g = null;
-        field_f = (ka[][]) null;
+        field_f = (Sprite[][]) null;
         field_c = null;
         if (param0 != 33) {
           ie.a((byte) 0, 'K');
@@ -84,7 +84,7 @@ final class ie {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2_ref), "ie.C(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2_ref), "ie.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -92,6 +92,6 @@ final class ie {
         field_b = new int[][][]{new int[][]{new int[]{-7, 5, 5, 5, -7, -7}, new int[]{0}, new int[]{0}, new int[]{5, 3, 1, 3, 5, -7}, new int[]{0}, new int[]{0}, new int[]{0}}, new int[][]{new int[]{-7, 3, 5, 3, 1, -7}, new int[]{-7, 3, 5, 3, 5}, new int[]{3, -7, -7, -7}, new int[]{0}, new int[]{0}, new int[]{-7, -7, -7, -7, -7, -7, -7}, new int[]{0}}, new int[][]{new int[]{2, 2, 0, 0, 2, 2}, new int[]{0}, new int[]{0}, new int[]{0}, new int[]{5, 5, 5, 5, 5, 5}, new int[]{0}, new int[]{-7, -7, -7, 1, 3, -7}}};
         field_g = null;
         field_c = "Loading sound effects";
-        field_e = new qe[5];
+        field_e = new LevelEntity[5];
     }
 }

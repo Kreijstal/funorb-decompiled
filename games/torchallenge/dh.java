@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dh extends df {
-    private ka field_Z;
-    static ka[][] field_cb;
+    private Sprite field_Z;
+    static Sprite[][] field_cb;
     private String field_W;
-    static ka field_Y;
+    static Sprite field_Y;
     static am field_V;
     private wd field_bb;
     private int field_X;
-    static ka field_ab;
+    static Sprite field_ab;
 
     final static fb a(int param0, lj param1, boolean param2) {
         byte[] var3 = null;
@@ -43,7 +43,7 @@ final class dh extends df {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -54,7 +54,7 @@ final class dh extends df {
           this.field_bb = param0;
           this.a((byte) 118, param2, param5, param4, param3);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "dh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "dh.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class dh extends df {
         return 26;
     }
 
-    final void a(ee param0, int param1, byte param2, int param3) {
+    final void a(UiComponent param0, int param1, byte param2, int param3) {
         this.field_X = this.field_X + 1;
         if (param2 > -97) {
           return;
@@ -78,13 +78,13 @@ final class dh extends df {
         try {
           super.a(param0, param1, (byte) -103, param3);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "dh.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "dh.U(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     public static void g(int param0) {
         field_Y = null;
-        field_cb = (ka[][]) null;
+        field_cb = (Sprite[][]) null;
         if (param0 == 112) {
           field_ab = null;
           field_V = null;
@@ -102,24 +102,24 @@ final class dh extends df {
         int var13;
         String var17;
         Object var18;
-        ka var19;
-        ka var20;
+        Sprite var19;
+        Sprite var20;
         Object var24;
         Object var37;
         gd var41;
         String var5;
         int var11;
         int var12;
-        ka var16;
-        ka var21;
+        Sprite var16;
+        Sprite var21;
         String var23;
-        ka var25;
-        ka var27;
-        ka var30;
-        ka var32;
-        ka var38;
-        ka var39;
-        ka var40;
+        Sprite var25;
+        Sprite var27;
+        Sprite var30;
+        Sprite var32;
+        Sprite var38;
+        Sprite var39;
+        Sprite var40;
         gd var42;
         gd var43;
         int var9Lifetime1;
@@ -133,8 +133,8 @@ final class dh extends df {
         int var12Lifetime2;
         int var12Lifetime3;
         rj var6Lifetime1;
-        ka var16Lifetime1;
-        ka var16Lifetime2;
+        Sprite var16Lifetime1;
+        Sprite var16Lifetime2;
         var18 = null;
         var24 = null;
         var37 = null;
@@ -150,7 +150,7 @@ final class dh extends df {
           var6 = this.field_bb.b(-74);
           var41 = (gd) ((Object) this.field_q);
           var9 = this.field_m + param1;
-          var10 = var41.a((ee) (this), 3, param0) + (var41.a(102, (ee) (this)).a((byte) -63) >> 1);
+          var10 = var41.a((UiComponent) (this), 3, param0) + (var41.a(102, (UiComponent) (this)).a((byte) -63) >> 1);
           if (var6 != bl.field_S &&
             jh.field_c != var6) {
             if (lk.field_c == var6) {
@@ -172,11 +172,11 @@ final class dh extends df {
           if (this.field_Z != null &&
             this.field_Z.field_u >= var11 &&
             this.field_Z.field_x >= var12) {
-            ad.a(122, this.field_Z);
-            qg.b();
+            FullscreenFocusCanvas.a(122, this.field_Z);
+            SoftwareRasterizer.b();
           } else {
-            this.field_Z = new ka(var11, var12);
-            ad.a(-114, this.field_Z);
+            this.field_Z = new Sprite(var11, var12);
+            FullscreenFocusCanvas.a(-114, this.field_Z);
           }
           var21.b(112, 144, var21.field_q << 4, var21.field_v << 4, -this.field_X << 10, 4096);
           ie.b((byte) -9);
@@ -196,7 +196,7 @@ final class dh extends df {
           var6 = this.field_bb.b(-74);
           var43 = (gd) ((Object) this.field_q);
           var9Lifetime1 = this.field_m + param1;
-          var10Lifetime1 = var43.a((ee) (this), 3, param0) + (var43.a(102, (ee) (this)).a((byte) -63) >> 1);
+          var10Lifetime1 = var43.a((UiComponent) (this), 3, param0) + (var43.a(102, (UiComponent) (this)).a((byte) -63) >> 1);
           if (var6 != bl.field_S &&
             jh.field_c != var6) {
             if (lk.field_c == var6) {
@@ -215,19 +215,19 @@ final class dh extends df {
           var11Lifetime1 = var40.field_q << 1;
           var12Lifetime1 = var40.field_v << 1;
           if (this.field_Z == null) {
-            this.field_Z = new ka(var11Lifetime1, var12Lifetime1);
-            ad.a(-114, this.field_Z);
+            this.field_Z = new Sprite(var11Lifetime1, var12Lifetime1);
+            FullscreenFocusCanvas.a(-114, this.field_Z);
           } else {
             if (this.field_Z.field_u < var11Lifetime1) {
-              this.field_Z = new ka(var11Lifetime1, var12Lifetime1);
-              ad.a(-114, this.field_Z);
+              this.field_Z = new Sprite(var11Lifetime1, var12Lifetime1);
+              FullscreenFocusCanvas.a(-114, this.field_Z);
             } else {
               if (this.field_Z.field_x >= var12Lifetime1) {
-                ad.a(122, this.field_Z);
-                qg.b();
+                FullscreenFocusCanvas.a(122, this.field_Z);
+                SoftwareRasterizer.b();
               } else {
-                this.field_Z = new ka(var11Lifetime1, var12Lifetime1);
-                ad.a(-114, this.field_Z);
+                this.field_Z = new Sprite(var11Lifetime1, var12Lifetime1);
+                FullscreenFocusCanvas.a(-114, this.field_Z);
               }
             }
           }
@@ -245,7 +245,7 @@ final class dh extends df {
         var6Lifetime1 = this.field_bb.b(-74);
         var42 = (gd) ((Object) this.field_q);
         var9Lifetime2 = this.field_m + param1;
-        var10Lifetime2 = var42.a((ee) (this), 3, param0) + (var42.a(102, (ee) (this)).a((byte) -63) >> 1);
+        var10Lifetime2 = var42.a((UiComponent) (this), 3, param0) + (var42.a(102, (UiComponent) (this)).a((byte) -63) >> 1);
         if (var6Lifetime1 == bl.field_S) {
           var25 = ub.field_f[0];
           var16Lifetime1 = var25;
@@ -254,11 +254,11 @@ final class dh extends df {
           if (this.field_Z != null &&
             this.field_Z.field_u >= var11Lifetime2 &&
             this.field_Z.field_x >= var12Lifetime2) {
-            ad.a(122, this.field_Z);
-            qg.b();
+            FullscreenFocusCanvas.a(122, this.field_Z);
+            SoftwareRasterizer.b();
           } else {
-            this.field_Z = new ka(var11Lifetime2, var12Lifetime2);
-            ad.a(-114, this.field_Z);
+            this.field_Z = new Sprite(var11Lifetime2, var12Lifetime2);
+            FullscreenFocusCanvas.a(-114, this.field_Z);
           }
           var25.b(112, 144, var25.field_q << 4, var25.field_v << 4, -this.field_X << 10, 4096);
           ie.b((byte) -9);
@@ -283,19 +283,19 @@ final class dh extends df {
         var11Lifetime3 = var32.field_q << 1;
         var12Lifetime3 = var32.field_v << 1;
         if (this.field_Z == null) {
-          this.field_Z = new ka(var11Lifetime3, var12Lifetime3);
-          ad.a(-114, this.field_Z);
+          this.field_Z = new Sprite(var11Lifetime3, var12Lifetime3);
+          FullscreenFocusCanvas.a(-114, this.field_Z);
         } else {
           if (this.field_Z.field_u < var11Lifetime3) {
-            this.field_Z = new ka(var11Lifetime3, var12Lifetime3);
-            ad.a(-114, this.field_Z);
+            this.field_Z = new Sprite(var11Lifetime3, var12Lifetime3);
+            FullscreenFocusCanvas.a(-114, this.field_Z);
           } else {
             if (this.field_Z.field_x >= var12Lifetime3) {
-              ad.a(122, this.field_Z);
-              qg.b();
+              FullscreenFocusCanvas.a(122, this.field_Z);
+              SoftwareRasterizer.b();
             } else {
-              this.field_Z = new ka(var11Lifetime3, var12Lifetime3);
-              ad.a(-114, this.field_Z);
+              this.field_Z = new Sprite(var11Lifetime3, var12Lifetime3);
+              FullscreenFocusCanvas.a(-114, this.field_Z);
             }
           }
         }
@@ -305,7 +305,7 @@ final class dh extends df {
         return;
     }
 
-    final boolean a(ee param0, int param1) {
+    final boolean a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -327,7 +327,7 @@ final class dh extends df {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 

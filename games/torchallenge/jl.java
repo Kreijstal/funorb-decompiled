@@ -7,7 +7,7 @@ abstract class jl {
     static int field_e;
     static long field_h;
     static lj field_b;
-    static ka[] field_a;
+    static Sprite[] field_a;
     static java.math.BigInteger field_f;
     static String field_g;
 
@@ -158,7 +158,7 @@ abstract class jl {
             }
             var1_int = 0;
             for (var7 = 0; 4 > var7; var7++) {
-              L5: {
+              regionExit1: {
                 var4 = 0;
                 var3 = 0;
                 var3 = var3 | hf.field_d[var5 + var7];
@@ -171,7 +171,7 @@ abstract class jl {
                       break;
                     default:
                       var1_int = var1_int | var4 & (255 & var3) << var7 * 8;
-                      break L5;
+                      break regionExit1;
                     case 3:
                       var4 = -16777216;
                       break;
@@ -204,7 +204,7 @@ abstract class jl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "jl.F(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "jl.F(" + param0 + ')');
         }
     }
 
@@ -220,7 +220,7 @@ abstract class jl {
           if (param0 >= -57) {
             jl.a((byte) 92);
           }
-          var2 = vf.a(116, lg.a(param1, -1));
+          var2 = MouseInputHandler.a(116, lg.a(param1, -1));
           if (var2 == null) {
             var2 = "";
           }
@@ -236,13 +236,13 @@ abstract class jl {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
     static {
         field_d = "to over <%0> great games";
-        field_a = new ka[3];
+        field_a = new Sprite[3];
         field_g = "OK";
         field_f = new java.math.BigInteger("6757747274818513864204534133465045479284128469717186816691454417744823753827902036844748836683348383638677747113757906301249837209713747402067689777172847");
     }

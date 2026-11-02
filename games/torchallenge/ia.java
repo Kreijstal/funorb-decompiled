@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ia extends da {
+final class ia extends IntrusiveNode {
     static int[][] field_p;
     static int field_q;
     int field_n;

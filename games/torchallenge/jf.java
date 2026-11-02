@@ -4,20 +4,20 @@
 final class jf extends n {
     static int[] field_pb;
     static int field_sb;
-    static ka field_qb;
+    static Sprite field_qb;
     static int field_tb;
     static boolean field_rb;
     static String[][] field_ob;
 
-    final void c(int param0, ee param1) {
+    final void c(int param0, UiComponent param1) {
         try {
           super.c(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "jf.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "jf.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    jf(si param0, ee param1) {
+    jf(si param0, UiComponent param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -68,7 +68,7 @@ final class jf extends n {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "jf.R(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "jf.R(" + param0 + ')');
         }
     }
 
@@ -77,6 +77,6 @@ final class jf extends n {
         field_pb = new int[]{34, 34, 36};
         field_rb = false;
         field_ob = new String[][]{new String[]{"Move left and right"}, new String[]{"Jump"}, new String[]{"Hold to attack"}, new String[]{"Hold while not attacking to duck", "Hold while not attacking to block"}};
-        field_qb = new ka(0, 0);
+        field_qb = new Sprite(0, 0);
     }
 }

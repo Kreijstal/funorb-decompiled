@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ke extends oe {
+final class ke extends RasterBuffer {
     private java.awt.Component field_k;
 
     final void a(int param0, java.awt.Component param1, int param2, int param3) {

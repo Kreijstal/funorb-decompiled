@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jb extends da {
+abstract class jb extends IntrusiveNode {
     int field_i;
 
     abstract int a(jk param0);

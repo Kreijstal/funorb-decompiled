@@ -34,7 +34,7 @@ final class fg extends kj implements cc, sg {
     }
 
     final static void a(int param0, boolean param1) {
-        da var2 = null;
+        IntrusiveNode var2 = null;
         int var3 = 0;
         rd var4 = null;
         RuntimeException decompiledCaughtException = null;
@@ -58,7 +58,7 @@ final class fg extends kj implements cc, sg {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2_ref), "fg.J(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2_ref), "fg.J(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -79,7 +79,7 @@ final class fg extends kj implements cc, sg {
           var3.a(var4, false, (byte) -21);
           this.field_Q.i(-22617);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "fg.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "fg.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -137,7 +137,7 @@ final class fg extends kj implements cc, sg {
             }
             this.field_R = new ng(stackIn_19_3, (gg) null);
             if (this.field_L) {
-              this.field_O = new ng(nd.field_a, (gg) (this));
+              this.field_O = new ng(RandomAccessCacheFile.field_a, (gg) (this));
             }
           } else {
             this.field_J = new ng(qb.field_e, (gg) null);
@@ -169,7 +169,7 @@ final class fg extends kj implements cc, sg {
             this.field_R.field_r = ng.field_J;
           }
           this.field_i = 15;
-          var7 = oe.field_g;
+          var7 = RasterBuffer.field_g;
           if (this.field_U != null) {
             this.field_i = this.field_i + (5 + var7.b(this.field_U, -40 + this.field_p, var7.field_x));
           }
@@ -178,18 +178,18 @@ final class fg extends kj implements cc, sg {
           if (sd.field_e == var9) {
             var8 = wl.field_d;
           } else {
-            if (var9 == ee.field_x) {
+            if (var9 == UiComponent.field_x) {
               var8 = ib.field_N;
             }
           }
           dupTemp$0 = new bg(10, this.field_i, this.field_p - 20, 25, this.field_T, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.a(0, dupTemp$0);
-          this.field_i = this.field_i + (5 + ((ee) ((Object) var12)).field_l);
+          this.field_i = this.field_i + (5 + ((UiComponent) ((Object) var12)).field_l);
           dupTemp$1 = new bg(10, this.field_i, this.field_p - 20, 25, this.field_Q, false, 80, 3, var7, 16777215, bd.field_n);
           var13 = dupTemp$1;
           this.a(0, dupTemp$1);
-          this.field_i = this.field_i + (5 + ((ee) ((Object) var13)).field_l);
+          this.field_i = this.field_i + (5 + ((UiComponent) ((Object) var13)).field_l);
           this.field_J.field_k = (gg) (this);
           if (null != this.field_O) {
             this.field_O.field_k = (gg) (this);
@@ -243,7 +243,7 @@ final class fg extends kj implements cc, sg {
           } else {
             stackIn_63_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_59_0), ((StringBuilder) (Object) stackIn_62_1).append(stackIn_63_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -259,10 +259,10 @@ final class fg extends kj implements cc, sg {
 
     final void a(int param0, int param1, boolean param2, int param3) {
         if (null != this.field_U) {
-          oe.field_g.a(this.field_U, 20 + (param1 + this.field_m), 15 + this.field_i + param0, -40 + this.field_p, this.field_l, 16777215, -1, 1, 0, oe.field_g.field_x);
+          RasterBuffer.field_g.a(this.field_U, 20 + (param1 + this.field_m), 15 + this.field_i + param0, -40 + this.field_p, this.field_l, 16777215, -1, 1, 0, RasterBuffer.field_g.field_x);
         }
         if (this.field_O != null) {
-          qg.b(10 + param1, 134 + param0, this.field_p - 20, 4210752);
+          SoftwareRasterizer.b(10 + param1, 134 + param0, this.field_p - 20, 4210752);
         }
         super.a(param0, param1, param2, param3);
         if (param2) {
@@ -276,7 +276,7 @@ final class fg extends kj implements cc, sg {
             this.field_U = (String) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "fg.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "fg.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -288,7 +288,7 @@ final class fg extends kj implements cc, sg {
         RuntimeException var3 = null;
         try {
           if (param0 == this.field_T) {
-            this.field_Q.a((ee) (this), 0);
+            this.field_Q.a((UiComponent) (this), 0);
           }
           if (param0 == this.field_Q) {
             this.a(126);
@@ -307,7 +307,7 @@ final class fg extends kj implements cc, sg {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -321,7 +321,7 @@ final class fg extends kj implements cc, sg {
         return this.field_T.field_v;
     }
 
-    final boolean a(int param0, char param1, byte param2, ee param3) {
+    final boolean a(int param0, char param1, byte param2, UiComponent param3) {
         RuntimeException var5 = null;
         boolean stackIn_9_0 = false;
         boolean stackIn_13_0 = false;
@@ -355,7 +355,7 @@ final class fg extends kj implements cc, sg {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -377,7 +377,7 @@ final class fg extends kj implements cc, sg {
                   bj.a(!param4);
                 } else {
                   if (this.field_K) {
-                    fd.a(-2068);
+                    IterableNodeHashTable.a(-2068);
                   } else {
                     ek.h(1);
                   }
@@ -401,7 +401,7 @@ final class fg extends kj implements cc, sg {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class sh extends w {
+abstract class sh extends DualLinkNode {
     boolean field_s;
     volatile boolean field_v;
     boolean field_p;
     static int field_r;
     static cf field_t;
     static int[] field_w;
-    static uj field_u;
+    static PlatformTaskDispatcher field_u;
     static int[] field_q;
 
     final static void a(int param0, boolean param1) {
@@ -18,7 +18,7 @@ abstract class sh extends w {
         kk.field_i = 0;
         ll.field_d = eh.field_k;
         of.field_c = new rl(2);
-        of.field_c.a((byte) -123, param1, -1, pf.a(ph.field_d, -19503, kc.field_u));
+        of.field_c.a((byte) -123, param1, -1, pf.a(ph.field_d, -19503, LocalizedStrings.field_u));
     }
 
     final static void a(int param0, int param1, int[] param2, int param3, int[][] param4, int[][] param5, int param6) {
@@ -46,11 +46,11 @@ abstract class sh extends w {
           var9 = param2[var7_int - 1] + param2[0] >> 1;
           for (var10 = 0; var10 < 3; var10++) {
             we.field_e[var10][param3].d();
-            qg.a(ae.field_y);
+            SoftwareRasterizer.a(ae.field_y);
             if (var7_int > 0) {
-              qg.a(0, 0, var7_int, var8);
+              SoftwareRasterizer.a(0, 0, var7_int, var8);
               od.a(cg.field_b[var10][param0][var7_int - 1], param2);
-              qg.b(ae.field_y);
+              SoftwareRasterizer.b(ae.field_y);
               la.field_f.a(-106);
             }
           }
@@ -58,7 +58,7 @@ abstract class sh extends w {
           var10Lifetime1 = var12;
           while (var12 <= 1) {
             re.field_v[var12][param3].d();
-            qg.a(ae.field_y);
+            SoftwareRasterizer.a(ae.field_y);
             if (var12 == 0 &&
               param0 == 0) {
               var7_intLifetime1 = param5[param3][1] - param4[param3][0];
@@ -72,9 +72,9 @@ abstract class sh extends w {
               var7_intLifetime1 = param4[param3][1] - param5[param3][0];
             }
             if (var7_intLifetime1 > 0) {
-              qg.a(0, 0, var7_intLifetime1, var8);
+              SoftwareRasterizer.a(0, 0, var7_intLifetime1, var8);
               od.a(fh.field_a[param0][var7_intLifetime1 - 1], var9);
-              qg.b(ae.field_y);
+              SoftwareRasterizer.b(ae.field_y);
               la.field_f.a(-106);
             }
             var12++;
@@ -103,7 +103,7 @@ abstract class sh extends w {
           } else {
             stackIn_38_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param6).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_31_0), ((StringBuilder) (Object) stackIn_37_1).append(stackIn_38_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ abstract class sh extends w {
         if (param0 >= -121) {
           field_r = 30;
         }
-        ge var1 = new ge(ij.field_B, le.field_g, ug.field_e[0], dd.field_t[0], pg.field_r[0], lg.field_e[0], h.field_a[0], td.field_m);
+        ge var1 = new ge(ij.field_B, le.field_g, GameApplet.field_e[0], ImageProducerRasterBuffer.field_t[0], pg.field_r[0], lg.field_e[0], h.field_a[0], td.field_m);
         p.a(0);
         return var1;
     }

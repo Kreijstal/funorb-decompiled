@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class wg extends da {
+final class wg extends IntrusiveNode {
     private int field_u;
     private static float[] field_E;
     private static float[] field_C;
@@ -94,16 +94,16 @@ final class wg extends da {
         int var5 = 0;
         int var6_int = 0;
         byte[] var6 = null;
-        uf var2 = new uf(param0);
-        this.field_A = var2.i(103);
-        this.field_u = var2.i(28);
-        this.field_N = var2.i(32);
-        this.field_P = var2.i(105);
+        PacketBuffer var2 = new PacketBuffer(param0);
+        this.field_A = var2.readInt(103);
+        this.field_u = var2.readInt(28);
+        this.field_N = var2.readInt(32);
+        this.field_P = var2.readInt(105);
         if (this.field_P < 0) {
           this.field_P = ~this.field_P;
           this.field_H = true;
         }
-        int var3 = var2.i(56);
+        int var3 = var2.readInt(56);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -111,7 +111,7 @@ final class wg extends da {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.j(-103);
+            var6_int = var2.readUnsignedByte(-103);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
@@ -263,7 +263,7 @@ final class wg extends da {
           var9 = new int[var5];
           var10 = sa.a((byte) 104, var5 - 1);
           for (var11 = 0; var11 < var5; var11++) {
-            var9[var11] = og.a(var11, (byte) -126, var10);
+            var9[var11] = MouseWheelInput.a(var11, (byte) -126, var10);
           }
           if (var1 == 0) {
             field_E = var6_ref_float__;

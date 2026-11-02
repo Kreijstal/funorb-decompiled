@@ -17,7 +17,7 @@ final class td {
     static String[] field_c;
     static String field_i;
     static int[][] field_j;
-    static ka field_o;
+    static Sprite field_o;
     private byte[] field_d;
     private long[] field_h;
     static int field_n;
@@ -84,7 +84,7 @@ final class td {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -101,21 +101,21 @@ final class td {
     }
 
     final static void b(byte param0) {
-        ka var1 = null;
-        ka var2 = null;
+        Sprite var1 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = TorChallenge.field_F ? 1 : 0;
         try {
-          var1 = new ka(540, 140);
-          ad.a(-32, var1);
+          var1 = new Sprite(540, 140);
+          FullscreenFocusCanvas.a(-32, var1);
           oc.c();
-          qg.b();
+          SoftwareRasterizer.b();
           jc.field_c = 0;
           ef.a(3);
           var2 = var1.c();
           for (var3 = 0; 15 > var3; var3++) {
             var2.a(-2, -2, 16777215);
-            qg.d(4, 4, 0, 0, 540, 140);
+            SoftwareRasterizer.d(4, 4, 0, 0, 540, 140);
           }
           ul.field_k.d();
           var1.f(0, 0);
@@ -124,7 +124,7 @@ final class td {
           }
           ie.b((byte) -9);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "td.A(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "td.A(" + param0 + ')');
         }
     }
 
@@ -216,7 +216,7 @@ final class td {
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(')').toString());
         }
     }
 
@@ -242,7 +242,7 @@ final class td {
         var2 = 0;
         var3 = 0;
         while (var2 < 8) {
-          this.field_k[var2] = d.a(ba.a((long)this.field_b[var3 + 7], 255L), d.a(d.a(ba.a((long)this.field_b[var3 + 5] << 16, 16711680L), d.a(ba.a((long)this.field_b[var3 + 4] << 24, 4278190080L), d.a(ba.a(1095216660480L, (long)this.field_b[var3 + 3] << 32), d.a(d.a(ba.a(255L, (long)this.field_b[1 + var3]) << 48, (long)this.field_b[var3] << 56), ba.a(255L, (long)this.field_b[var3 + 2]) << 40)))), ba.a(65280L, (long)this.field_b[var3 + 6] << 8)));
+          this.field_k[var2] = GameClientBase.a(ba.a((long)this.field_b[var3 + 7], 255L), GameClientBase.a(GameClientBase.a(ba.a((long)this.field_b[var3 + 5] << 16, 16711680L), GameClientBase.a(ba.a((long)this.field_b[var3 + 4] << 24, 4278190080L), GameClientBase.a(ba.a(1095216660480L, (long)this.field_b[var3 + 3] << 32), GameClientBase.a(GameClientBase.a(ba.a(255L, (long)this.field_b[1 + var3]) << 48, (long)this.field_b[var3] << 56), ba.a(255L, (long)this.field_b[var3 + 2]) << 40)))), ba.a(65280L, (long)this.field_b[var3 + 6] << 8)));
           var3 += 8;
           var2++;
         }
@@ -253,7 +253,7 @@ final class td {
           dupTemp$0 = this.field_l[var2Lifetime1];
           arrayValue$1 = this.field_k[var2Lifetime1];
           this.field_h[var2Lifetime1] = dupTemp$0;
-          this.field_p[var2Lifetime1] = d.a(arrayValue$1, dupTemp$0);
+          this.field_p[var2Lifetime1] = GameClientBase.a(arrayValue$1, dupTemp$0);
         }
         for (var2Lifetime2 = 1; 10 >= var2Lifetime2; var2Lifetime2++) {
           for (var3Lifetime1 = 0; 8 > var3Lifetime1; var3Lifetime1++) {
@@ -261,7 +261,7 @@ final class td {
             var4 = 0;
             var5 = 56;
             while (var4 < 8) {
-              this.field_f[var3Lifetime1] = d.a(this.field_f[var3Lifetime1], oh.field_b[var4][jh.a(255, (int)(this.field_h[jh.a(7, var3Lifetime1 - var4)] >>> var5))]);
+              this.field_f[var3Lifetime1] = GameClientBase.a(this.field_f[var3Lifetime1], oh.field_b[var4][jh.a(255, (int)(this.field_h[jh.a(7, var3Lifetime1 - var4)] >>> var5))]);
               var5 -= 8;
               var4++;
             }
@@ -269,14 +269,14 @@ final class td {
           for (var3Lifetime1Lifetime1 = 0; var3Lifetime1Lifetime1 < 8; var3Lifetime1Lifetime1++) {
             this.field_h[var3Lifetime1Lifetime1] = this.field_f[var3Lifetime1Lifetime1];
           }
-          this.field_h[0] = d.a(this.field_h[0], oh.field_f[var2Lifetime2]);
+          this.field_h[0] = GameClientBase.a(this.field_h[0], oh.field_f[var2Lifetime2]);
           for (var3Lifetime1Lifetime2 = 0; var3Lifetime1Lifetime2 < 8; var3Lifetime1Lifetime2++) {
             this.field_f[var3Lifetime1Lifetime2] = this.field_h[var3Lifetime1Lifetime2];
             var7 = 0;
             var4Lifetime1 = var7;
             var5Lifetime1 = 56;
             while (var7 < 8) {
-              this.field_f[var3Lifetime1Lifetime2] = d.a(this.field_f[var3Lifetime1Lifetime2], oh.field_b[var7][jh.a(255, (int)(this.field_p[jh.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
+              this.field_f[var3Lifetime1Lifetime2] = GameClientBase.a(this.field_f[var3Lifetime1Lifetime2], oh.field_b[var7][jh.a(255, (int)(this.field_p[jh.a(var3Lifetime1Lifetime2 - var7, 7)] >>> var5Lifetime1))]);
               var7++;
               var5Lifetime1 -= 8;
             }
@@ -286,13 +286,13 @@ final class td {
           }
         }
         for (var2Lifetime3 = 0; var2Lifetime3 < 8; var2Lifetime3++) {
-          this.field_l[var2Lifetime3] = d.a(this.field_l[var2Lifetime3], d.a(this.field_k[var2Lifetime3], this.field_p[var2Lifetime3]));
+          this.field_l[var2Lifetime3] = GameClientBase.a(this.field_l[var2Lifetime3], GameClientBase.a(this.field_k[var2Lifetime3], this.field_p[var2Lifetime3]));
         }
     }
 
     final static void a(String param0, Throwable param1, byte param2) {
         try {
-          uj stackIn_16_0;
+          PlatformTaskDispatcher stackIn_16_0;
           java.net.URL stackIn_16_1;
           java.net.URL stackIn_16_2;
           java.net.URL stackIn_16_3;
@@ -303,7 +303,7 @@ final class td {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          mi var4 = null;
+          PlatformTask var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -344,7 +344,7 @@ final class td {
               stackIn_17_2 = null;
               stackIn_17_5 = ch.field_d;
             }
-            var4 = ((uj) (Object) stackIn_16_0).a(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(uj.field_j).append("&v2=").append(uj.field_n).append("&e=").append(var7).toString()), -123);
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_16_0).a(new java.net.URL(stackIn_16_3, ((StringBuilder) (Object) stackIn_16_4).append(stackIn_17_5).append("&v1=").append(PlatformTaskDispatcher.field_j).append("&v2=").append(PlatformTaskDispatcher.field_n).append("&e=").append(var7).toString()), -123);
             while (var4.field_d == 0) {
               c.a(51, 1L);
             }

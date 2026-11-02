@@ -5,9 +5,9 @@ final class cj {
     static long[] field_l;
     static boolean field_b;
     static int field_j;
-    static ka field_c;
+    static Sprite field_c;
     static String field_k;
-    static qe field_f;
+    static LevelEntity field_f;
     static long field_i;
     static boolean field_d;
     static String field_a;
@@ -29,7 +29,7 @@ final class cj {
           var4 = -1L;
           oh.a(var4, var3, param1, var2, 0);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "cj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "cj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -64,7 +64,7 @@ final class cj {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "cj.B(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "cj.B(" + param0 + ')');
         }
     }
 

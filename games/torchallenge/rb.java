@@ -31,14 +31,14 @@ final class rb implements Runnable {
     }
 
     final static void a(int param0, int param1, int param2) {
-        if (!(oe.field_f <= param1)) {
-          oe.field_f = param1;
+        if (!(RasterBuffer.field_f <= param1)) {
+          RasterBuffer.field_f = param1;
         }
         if (param0 < -49) {
-          oe.field_f = oe.field_f - 1;
-          if (0 > oe.field_f) {
+          RasterBuffer.field_f = RasterBuffer.field_f - 1;
+          if (0 > RasterBuffer.field_f) {
             h.a(param2, 4);
-            oe.field_f = param1;
+            RasterBuffer.field_f = param1;
           }
           return;
         }
@@ -94,7 +94,7 @@ final class rb implements Runnable {
           } else {
             stackIn_22_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_21_1).append(stackIn_22_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -128,7 +128,7 @@ final class rb implements Runnable {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) (stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oj.wrapException((Throwable) (stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -164,7 +164,7 @@ final class rb implements Runnable {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(')').toString());
         }
     }
 
@@ -245,7 +245,7 @@ final class rb implements Runnable {
           }
           var4_int = param0.a(param1, 50);
           var5 = param0.a(var4_int, param3, (byte) 86);
-          stackIn_3_0 = w.a((byte) 61, var4_int, var5, param0);
+          stackIn_3_0 = DualLinkNode.a((byte) 61, var4_int, var5, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -269,7 +269,7 @@ final class rb implements Runnable {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -312,12 +312,12 @@ final class rb implements Runnable {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    rb(uj param0) {
-        mi var2 = null;
+    rb(PlatformTaskDispatcher param0) {
+        PlatformTask var2 = null;
         this.field_a = new ii();
         this.field_e = 0;
         this.field_f = false;
@@ -331,7 +331,7 @@ final class rb implements Runnable {
           }
           this.field_d = (Thread) (var2.field_g);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "rb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

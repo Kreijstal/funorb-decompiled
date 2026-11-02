@@ -8,7 +8,7 @@ final class cb {
     static int field_g;
     static boolean[][][] field_b;
     static String field_a;
-    static ka field_f;
+    static Sprite field_f;
 
     final static void a(int param0) {
         Throwable decompiledCaughtException = null;
@@ -17,7 +17,7 @@ final class cb {
         synchronized (var1) {
           sj.field_L = sj.field_L + 1;
           wh.field_e = jc.field_h;
-          kc.field_u = bj.field_c;
+          LocalizedStrings.field_u = bj.field_c;
           ph.field_d = qb.field_g;
           ek.field_P = ua.field_c;
           ua.field_c = false;
@@ -50,9 +50,9 @@ final class cb {
         int var5 = 0;
         int var6 = 0;
         int var8 = 0;
-        qe var9 = null;
-        qe var10 = null;
-        qe var11 = null;
+        LevelEntity var9 = null;
+        LevelEntity var10 = null;
+        LevelEntity var11 = null;
         var8 = TorChallenge.field_F ? 1 : 0;
         try {
           var4 = null;
@@ -64,10 +64,10 @@ final class cb {
             var4 = ea.field_g[lh.field_s];
           }
           if (param2 <= 87) {
-            field_f = (ka) null;
+            field_f = (Sprite) null;
           }
           if (var4 != null) {
-            var5 = ue.a(((qe) (var4)).field_o, param3, ((qe) (var4)).field_H, param1, (byte) 79);
+            var5 = ue.a(((LevelEntity) (var4)).field_o, param3, ((LevelEntity) (var4)).field_H, param1, (byte) 79);
           }
           for (var7 = 0; ea.field_g.length > var7; var7++) {
             if (null != ea.field_g[var7]) {
@@ -112,8 +112,8 @@ final class cb {
           }
           var4 = ea.field_g[lh.field_s];
           if (var4 != null &&
-            ((qe) (var4)).field_F == 4) {
-            dg.a(((qe) (var4)).field_o, dg.field_T[((qe) (var4)).field_F], ((qe) (var4)).field_V, 1, param0, ((qe) (var4)).field_y, ((qe) (var4)).field_H, param1, (byte) -72, param3);
+            ((LevelEntity) (var4)).field_F == 4) {
+            dg.a(((LevelEntity) (var4)).field_o, dg.field_T[((LevelEntity) (var4)).field_F], ((LevelEntity) (var4)).field_V, 1, param0, ((LevelEntity) (var4)).field_y, ((LevelEntity) (var4)).field_H, param1, (byte) -72, param3);
             if (nj.field_g == 0) {
               sd.a(121);
             }
@@ -124,7 +124,7 @@ final class cb {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
-          throw oj.a((Throwable) (var4), "cb.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) (var4), "cb.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 

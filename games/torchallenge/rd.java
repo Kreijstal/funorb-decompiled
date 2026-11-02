@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rd extends da {
+final class rd extends IntrusiveNode {
     int field_m;
     static String field_j;
-    static ka[] field_i;
+    static Sprite[] field_i;
     int field_q;
     int field_k;
     int field_l;
@@ -15,9 +15,9 @@ final class rd extends da {
     final static void a(int param0, byte param1) {
         ta.field_Ab = ob.field_a[param0];
         ol.field_f = ik.field_c[param0];
-        sd.field_g = pk.field_c[param0];
+        sd.field_g = DelegatingCanvas.field_c[param0];
         if (param1 < 85) {
-          field_i = (ka[]) null;
+          field_i = (Sprite[]) null;
         }
     }
 
@@ -48,7 +48,7 @@ final class rd extends da {
               param0[var10_int][0] = e.b((byte) 57, param3 * param7 >> 2);
               param0[var10_int][1] = e.b((byte) 57, param2 * param5 >> 2);
             }
-            qg.a(param8 - (param7 >> 2) * (param3 - 4 >> 1) + param0[var10_int][0] << 4, -((param2 >> 2) * (-4 + param5 >> 1)) + (param1 + param0[var10_int][1]) << 4, 64, 128, qe.field_A);
+            SoftwareRasterizer.a(param8 - (param7 >> 2) * (param3 - 4 >> 1) + param0[var10_int][0] << 4, -((param2 >> 2) * (-4 + param5 >> 1)) + (param1 + param0[var10_int][1]) << 4, 64, 128, LevelEntity.field_A);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -61,7 +61,7 @@ final class rd extends da {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(',').append(param8).append(',').append(param9).append(')').toString());
         }
     }
 

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class s extends da {
+final class s extends IntrusiveNode {
     static boolean field_m;
     static int[] field_k;
     static String[] field_j;
@@ -12,13 +12,13 @@ final class s extends da {
     static int[] field_q;
     byte[] field_o;
     static int[] field_i;
-    static ka[] field_n;
+    static Sprite[] field_n;
 
-    final static ka[] a(lj param0, String param1, int param2, String param3) {
+    final static Sprite[] a(lj param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        ka[] stackIn_3_0 = null;
+        Sprite[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -57,7 +57,7 @@ final class s extends da {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -85,16 +85,16 @@ final class s extends da {
             aj.field_c = pf.field_b;
           } else {
             try {
-              qf.field_a = new wb((java.net.Socket) (gf.field_o.field_g), vl.field_a);
-              dk.field_s.field_q = 0;
+              qf.field_a = new BufferedSocket((java.net.Socket) (gf.field_o.field_g), vl.field_a);
+              dk.field_s.position = 0;
               var4 = id.field_b;
               var5 = var4;
               aj.field_c = ng.field_A;
-              var5.field_q = 0;
+              var5.position = 0;
               stackIn_11_0 = (param1) ? -2 : -1;
               ul.field_j = stackIn_11_0;
               uc.field_X = stackIn_11_0;
-              md.field_i = stackIn_11_0;
+              NodeHashTableIterator.field_i = stackIn_11_0;
               hl.a(dk.field_s, 12, ph.field_e, db.field_y, mh.field_a);
               nb.a(-1, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -131,7 +131,7 @@ final class s extends da {
         try {
           this.field_o = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "s.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "s.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

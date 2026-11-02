@@ -54,7 +54,7 @@ final class mh {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -66,7 +66,7 @@ final class mh {
         try {
           sa.field_b = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "mh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "mh.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -92,10 +92,10 @@ final class mh {
           }
           var5_int = 0;
           while (true) {
-            if (vf.field_b.length <= var5_int) {
+            if (MouseInputHandler.field_b.length <= var5_int) {
               return;
             }
-            param3 = vf.field_b[var5_int];
+            param3 = MouseInputHandler.field_b[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param3;
@@ -129,7 +129,7 @@ final class mh {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -155,7 +155,7 @@ final class mh {
           if (param0.length() == 0) {
             return true;
           }
-          if (kc.a(param0, (byte) -52, param2)) {
+          if (LocalizedStrings.a(param0, (byte) -52, param2)) {
             return false;
           }
           if (!param1) {
@@ -185,7 +185,7 @@ final class mh {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_30_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

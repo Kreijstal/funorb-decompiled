@@ -5,9 +5,9 @@ import java.util.*;
 
 final class oa {
     private di[] field_b;
-    private uf field_f;
+    private PacketBuffer field_f;
     private rb field_j;
-    static ka field_e;
+    static Sprite field_e;
     private java.math.BigInteger field_h;
     private java.math.BigInteger field_i;
     static int field_g;
@@ -47,9 +47,9 @@ final class oa {
             if (param3 != 15) {
               this.a(87);
             }
-            this.field_f.field_q = 6 + 72 * param0;
-            var6_int = this.field_f.i(param3 ^ 41);
-            var7 = this.field_f.i(97);
+            this.field_f.position = 6 + 72 * param0;
+            var6_int = this.field_f.readInt(param3 ^ 41);
+            var7 = this.field_f.readInt(97);
             var13 = new byte[64];
             this.field_f.a(84, var13, 64, 0);
             var9 = new di(param0, param1, param4, this.field_c, this.field_j, var6_int, var13, var7, param2);
@@ -74,7 +74,7 @@ final class oa {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -106,38 +106,38 @@ final class oa {
         lh var10 = null;
         var7 = TorChallenge.field_F ? 1 : 0;
         var9 = id.field_b;
-        var3 = var9.j(-98);
+        var3 = var9.readUnsignedByte(-98);
         stackIn_3_0 = (0 != (128 & var3));
         o.field_m = stackIn_3_0;
         uk.field_L = 127 & var3;
-        ih.field_K = var9.j(-85);
+        ih.field_K = var9.readUnsignedByte(-85);
         ik.field_b = var9.k(-123);
         if (uk.field_L != 2) {
           hc.field_O = 0;
           hf.field_e = 0;
         } else {
-          hc.field_O = var9.c(false);
-          hf.field_e = var9.g(0);
+          hc.field_O = var9.readUnsignedShort(false);
+          hf.field_e = var9.readUnsignedMedium(0);
         }
         if (!param1) {
           var8 = (Random) null;
           oa.a((byte) -112, 80, (Random) null);
         }
-        stackIn_11_0 = (1 != var9.j(-111)) ? 0 : 1;
+        stackIn_11_0 = (1 != var9.readUnsignedByte(-111)) ? 0 : 1;
         var4 = stackIn_11_0;
-        vc.field_f = var9.b(false);
+        vc.field_f = var9.readString(false);
         if (var4 == 0) {
           lk.field_b = vc.field_f;
         } else {
-          lk.field_b = var9.b(false);
+          lk.field_b = var9.readString(false);
         }
         if (uk.field_L == 1) {
-          var9.c(false);
-          var9.b(false);
+          var9.readUnsignedShort(false);
+          var9.readString(false);
         } else {
           if (uk.field_L == 4) {
-            var9.c(false);
-            var9.b(false);
+            var9.readUnsignedShort(false);
+            var9.readString(false);
           }
         }
         if (!param0) {
@@ -145,11 +145,11 @@ final class oa {
           eb.field_k = null;
           return new bf(param0);
         }
-        var5 = var9.c(false);
+        var5 = var9.readUnsignedShort(false);
         try {
           var10 = ie.field_a.a(var5, (byte) -104);
           td.field_q = var10.b(true);
-          if (lk.field_b.equals(mf.field_a)) {
+          if (lk.field_b.equals(LevelDecoder.field_a)) {
             stackIn_24_0 = null;
           } else {
             stackIn_24_0 = var10.field_x;
@@ -198,7 +198,7 @@ final class oa {
         int var7;
         int var8;
         byte[] var9;
-        uf var10;
+        PacketBuffer var10;
         byte[] var11;
         byte[] var13;
         byte[] var14;
@@ -224,11 +224,11 @@ final class oa {
         if (this.field_d.field_v) {
           return false;
         }
-        var10 = new uf(this.field_d.e(2));
-        var10.field_q = 5;
-        var3 = var10.j(-87);
-        var10.field_q = var10.field_q + 72 * var3;
-        var13 = new byte[-var10.field_q + var10.field_m.length];
+        var10 = new PacketBuffer(this.field_d.e(2));
+        var10.position = 5;
+        var3 = var10.readUnsignedByte(-87);
+        var10.position = var10.position + 72 * var3;
+        var13 = new byte[-var10.position + var10.payload.length];
         var11 = var13;
         var4 = var11;
         var10.a(param0 + 12048, var4, var13.length, 0);
@@ -237,7 +237,7 @@ final class oa {
           if (var5.length != 65) {
             throw new RuntimeException();
           }
-          var14 = qc.a(var10.field_m, -5 + (-var13.length + var10.field_q), (byte) -66, 5);
+          var14 = qc.a(var10.payload, -5 + (-var13.length + var10.position), (byte) -66, 5);
           var9 = var14;
           var7 = 0;
           if (param0 != -11982) {
@@ -258,7 +258,7 @@ final class oa {
           if (var5Lifetime1.length != 65) {
             throw new RuntimeException();
           }
-          var15 = qc.a(var10.field_m, -5 + (-var13.length + var10.field_q), (byte) -66, 5);
+          var15 = qc.a(var10.payload, -5 + (-var13.length + var10.position), (byte) -66, 5);
           var9Lifetime1 = var15;
           var7Lifetime1 = 0;
           if (param0 != -11982) {
@@ -280,7 +280,7 @@ final class oa {
         if (var5Lifetime2.length != 65) {
           throw new RuntimeException();
         }
-        var17 = qc.a(var10.field_m, -5 + (-var13.length + var10.field_q), (byte) -66, 5);
+        var17 = qc.a(var10.payload, -5 + (-var13.length + var10.position), (byte) -66, 5);
         var7Lifetime2 = 0;
         if (param0 != -11982) {
           return false;
@@ -335,7 +335,7 @@ final class oa {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -388,13 +388,13 @@ final class oa {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
     static {
         field_g = -1;
-        field_e = new ka(160, 160);
+        field_e = new Sprite(160, 160);
         field_a = new int[]{416, 433, 180, 39};
     }
 }

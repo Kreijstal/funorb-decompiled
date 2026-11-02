@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class hc extends ng {
-    static ka[] field_T;
+    static Sprite[] field_T;
     static boolean field_Q;
     static volatile long field_R;
     static int field_S;
@@ -16,7 +16,7 @@ final class hc extends ng {
         try {
           this.field_D = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -35,7 +35,7 @@ final class hc extends ng {
         ol.a(-120, var8, var9);
     }
 
-    final static void a(uf param0, byte param1) {
+    final static void a(PacketBuffer param0, byte param1) {
         try {
           int var4 = 0;
           byte[] var2 = null;
@@ -90,7 +90,7 @@ final class hc extends ng {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw oj.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+            throw oj.wrapException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -99,8 +99,8 @@ final class hc extends ng {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, ka param8) {
-        dd.field_u = param5;
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, Sprite param8) {
+        ImageProducerRasterBuffer.field_u = param5;
         vk.field_d = param8;
         rl.field_f = param3;
         pi.field_b = param6;
@@ -109,11 +109,11 @@ final class hc extends ng {
         }
         try {
           si.field_J = param0;
-          fd.field_f = param4;
+          IterableNodeHashTable.field_f = param4;
           vk.field_k = param7;
           bh.field_t = param2;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "hc.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "hc.EA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -160,12 +160,12 @@ final class hc extends ng {
         var26 = TorChallenge.field_F ? 1 : 0;
         try {
           var28 = id.field_b;
-          var2 = var28.j(-105);
+          var2 = var28.readUnsignedByte(-105);
           if (param0 != -117) {
             hc.c((byte) -46);
           }
           if (var2 == 0) {
-            var3 = var28.c(false);
+            var3 = var28.readUnsignedShort(false);
             var4_ref_ae = (ae) (bk.field_t.c((byte) -110));
             while (var4_ref_ae != null) {
               if (var4_ref_ae.field_o != var3) {
@@ -178,18 +178,18 @@ final class hc extends ng {
               ob.b(-127);
               return;
             }
-            var5 = var28.j(-127);
+            var5 = var28.readUnsignedByte(-127);
             if (var5 != 0) {
               var6_int = var4_ref_ae.field_r;
               ph.field_b[0].field_e = false;
               var7 = var4_ref_ae.field_q;
-              ph.field_b[0].field_g = mf.field_a;
+              ph.field_b[0].field_g = LevelDecoder.field_a;
               ph.field_b[0].field_a = null;
               for (var8_int = 1; var5 > var8_int; var8_int++) {
-                ph.field_b[var8_int].field_g = var28.b(false);
+                ph.field_b[var8_int].field_g = var28.readString(false);
                 ph.field_b[var8_int].field_e = false;
-                if (var28.j(-121) == 1) {
-                  ph.field_b[var8_int].field_a = var28.b(false);
+                if (var28.readUnsignedByte(-121) == 1) {
+                  ph.field_b[var8_int].field_a = var28.readString(false);
                 } else {
                   ph.field_b[var8_int].field_a = null;
                 }
@@ -210,13 +210,13 @@ final class hc extends ng {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var28.j(param0 + 25);
+              var18 = var28.readUnsignedByte(param0 + 25);
               if (0 < var18) {
                 for (var19 = 0; var19 < var18; var19++) {
-                  var20 = var28.j(-85);
+                  var20 = var28.readUnsignedByte(-85);
                   var21 = ph.field_b[var20].field_g;
                   var22 = var28.k(-120);
-                  var24 = var28.field_q;
+                  var24 = var28.position;
                   if (var19 < var6_int) {
                     var8[0][var12] = var21;
                     var9[0][var12] = ph.field_b[var20].field_a;
@@ -225,20 +225,20 @@ final class hc extends ng {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$3 = var15;
                       var15++;
-                      var11[0][incrementValue$3] = var28.i(51);
+                      var11[0][incrementValue$3] = var28.readInt(51);
                     }
                   }
                   if (var21 != null &&
                     jc.a(var21, 26691)) {
-                    var8[1][var13] = mf.field_a;
+                    var8[1][var13] = LevelDecoder.field_a;
                     var9[1][var13] = null;
                     var10[1][var13] = var22;
                     var13++;
-                    var28.field_q = var24;
+                    var28.position = var24;
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$4 = var16;
                       var16++;
-                      var11[1][incrementValue$4] = var28.i(46);
+                      var11[1][incrementValue$4] = var28.readInt(46);
                     }
                   }
                   if (var6_int > var14 &&
@@ -248,22 +248,22 @@ final class hc extends ng {
                     var9[2][var14] = ph.field_b[var20].field_a;
                     var10[2][var14] = var22;
                     var14++;
-                    var28.field_q = var24;
+                    var28.position = var24;
                     for (var25Lifetime2 = 0; var7 > var25Lifetime2; var25Lifetime2++) {
                       incrementValue$5 = var17;
                       var17++;
-                      var11[2][incrementValue$5] = var28.i(param0 + 158);
+                      var11[2][incrementValue$5] = var28.readInt(param0 + 158);
                     }
                   }
                 }
               }
             }
             var4_ref_ae.field_n = true;
-            var4_ref_ae.a(true);
+            var4_ref_ae.unlink(true);
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var28.c(false);
+            var3Lifetime1 = var28.readUnsignedShort(false);
             var4 = var28.k(param0 ^ 95);
             var6 = (ji) (wf.field_g.c((byte) 1));
             while (var6 != null) {
@@ -278,7 +278,7 @@ final class hc extends ng {
               return;
             }
             var6.field_x = var4;
-            var6.a(true);
+            var6.unlink(true);
             return;
           }
           td.a("HS1: " + ck.a(param0 - 13182), (Throwable) null, (byte) -92);
@@ -287,7 +287,7 @@ final class hc extends ng {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "hc.BA(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "hc.BA(" + param0 + ')');
         }
     }
 
@@ -296,7 +296,7 @@ final class hc extends ng {
         try {
           this.field_q = kl.field_e.field_l;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -315,7 +315,7 @@ final class hc extends ng {
         var1 = -73 % ((param0 + 52) / 54);
         if (li.field_K >= 20 &&
           ih.f((byte) -108) && (!(0 < uk.field_H) ||
-          mf.a((byte) -119))) {
+          LevelDecoder.a((byte) -119))) {
           stackIn_7_0 = false;
           decompiledFrameRemainder0 = false;
         }
@@ -330,7 +330,7 @@ final class hc extends ng {
         try {
           this.field_q = kl.field_e.field_l;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "hc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

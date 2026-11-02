@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-abstract class ic extends ee implements gk {
-    static ka[] field_D;
+abstract class ic extends UiComponent implements gk {
+    static Sprite[] field_D;
     static int[][] field_B;
-    ee field_A;
+    UiComponent field_A;
     static int[][] field_E;
     static lj field_C;
 
-    void a(ee param0, int param1, byte param2, int param3) {
+    void a(UiComponent param0, int param1, byte param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -36,11 +36,11 @@ abstract class ic extends ee implements gk {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
-    private final boolean b(ee param0, int param1) {
+    private final boolean b(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -63,7 +63,7 @@ abstract class ic extends ee implements gk {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -123,11 +123,11 @@ abstract class ic extends ee implements gk {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final boolean a(ee param0, int param1) {
+    final boolean a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -150,7 +150,7 @@ abstract class ic extends ee implements gk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -161,15 +161,15 @@ abstract class ic extends ee implements gk {
           }
           return;
         }
-        ee var3 = (ee) null;
-        boolean discarded$3 = this.a(-127, (ee) null);
+        UiComponent var3 = (UiComponent) null;
+        boolean discarded$3 = this.a(-127, (UiComponent) null);
         if (this.field_A != null) {
           this.field_A.d(param0 ^ 0);
         }
     }
 
-    ee c(byte param0) {
-        ee var2 = this.field_A;
+    UiComponent c(byte param0) {
+        UiComponent var2 = this.field_A;
         if (var2 == null) {
           if (param0 >= -24) {
             this.b(false);
@@ -187,7 +187,7 @@ abstract class ic extends ee implements gk {
         return null;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, ee param6) {
+    boolean a(int param0, int param1, int param2, int param3, int param4, int param5, UiComponent param6) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -196,7 +196,7 @@ abstract class ic extends ee implements gk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -81) {
-            this.field_A = (ee) null;
+            this.field_A = (UiComponent) null;
           }
           stackIn_6_0 = (this.field_A != null) && (this.field_A.a(param0, param1, param2 ^ 0, this.field_i + param3, param4 + this.field_m, param5, param6));
           return stackIn_6_0;
@@ -210,7 +210,7 @@ abstract class ic extends ee implements gk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -231,7 +231,7 @@ abstract class ic extends ee implements gk {
         try {
           discarded$11 = param1.append('\n');
           if (param0 <= 90) {
-            field_D = (ka[]) null;
+            field_D = (Sprite[]) null;
           }
           for (var5_int = 0; param3 >= var5_int; var5_int++) {
             discarded$13 = param1.append(' ');
@@ -258,7 +258,7 @@ abstract class ic extends ee implements gk {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -295,7 +295,7 @@ abstract class ic extends ee implements gk {
           if (param6 != 127) {
             ic.g(29);
           }
-          var9 = ag.field_e.field_K + ag.field_e.field_x;
+          var9 = SecondaryNodeDequeIterator.field_e.field_K + SecondaryNodeDequeIterator.field_e.field_x;
           var10 = var9 + 2;
           if (param7) {
             if (param4 == null &&
@@ -306,11 +306,11 @@ abstract class ic extends ee implements gk {
               param5 != null) {
               var8 = param5;
             }
-            var11 = ag.field_e.a(var8);
+            var11 = SecondaryNodeDequeIterator.field_e.a(var8);
             var12 = 1;
             if (var11 > param3) {
               var11 = param3;
-              var12 = ag.field_e.a(var8, var11);
+              var12 = SecondaryNodeDequeIterator.field_e.a(var8, var11);
             }
             var13 = var12 * var10;
             if (param1 <= 16) {
@@ -325,7 +325,7 @@ abstract class ic extends ee implements gk {
             if (16 >= param1) {
               return;
             }
-            ag.field_e.a(var8, var14, var15, var11, var13, 6488064, -1, 0, 0, var10);
+            SecondaryNodeDequeIterator.field_e.a(var8, var14, var15, var11, var13, 6488064, -1, 0, 0, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -344,7 +344,7 @@ abstract class ic extends ee implements gk {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -354,13 +354,13 @@ abstract class ic extends ee implements gk {
           this.a(25);
           return;
         }
-        ee var7 = (ee) null;
-        this.a(-124, -100, 56, -77, 47, 51, (ee) null);
+        UiComponent var7 = (UiComponent) null;
+        this.a(-124, -100, 56, -77, 47, 51, (UiComponent) null);
         super.a((byte) 105, param1, param2, param3, param4);
         this.a(25);
     }
 
-    final boolean a(int param0, char param1, byte param2, ee param3) {
+    final boolean a(int param0, char param1, byte param2, UiComponent param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_10_0 = false;
@@ -397,18 +397,18 @@ abstract class ic extends ee implements gk {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    void a(int param0, byte param1, ee param2, int param3, int param4, int param5) {
+    void a(int param0, byte param1, UiComponent param2, int param3, int param4, int param5) {
         try {
           if (this.field_A != null) {
             this.field_A.a(param0 + this.field_i, (byte) 35, param2, this.field_m + param3, param4, param5);
           }
           int var7_int = -37 % ((param1 + 29) / 39);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ic.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ic.Q(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -419,7 +419,7 @@ abstract class ic extends ee implements gk {
         return null != this.c((byte) -92) ? true : false;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, ee param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, UiComponent param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -442,11 +442,11 @@ abstract class ic extends ee implements gk {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
-    private final boolean a(int param0, ee param1) {
+    private final boolean a(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -469,7 +469,7 @@ abstract class ic extends ee implements gk {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 
@@ -505,7 +505,7 @@ abstract class ic extends ee implements gk {
     void a(int param0, int param1, boolean param2, int param3) {
         if (param3 != 0) {
           if (param2) {
-            field_D = (ka[]) null;
+            field_D = (Sprite[]) null;
             if (this.field_A == null) {
               return;
             }
@@ -520,7 +520,7 @@ abstract class ic extends ee implements gk {
         }
         if (this.field_q == null) {
           if (param2) {
-            field_D = (ka[]) null;
+            field_D = (Sprite[]) null;
             if (this.field_A == null) {
               return;
             }
@@ -533,9 +533,9 @@ abstract class ic extends ee implements gk {
           this.field_A.a(param0 + this.field_i, param1 + this.field_m, false, param3);
           return;
         }
-        this.field_q.a((ee) (this), param0, param1, (byte) 97, true);
+        this.field_q.a((UiComponent) (this), param0, param1, (byte) 97, true);
         if (param2) {
-          field_D = (ka[]) null;
+          field_D = (Sprite[]) null;
           if (this.field_A == null) {
             return;
           }
@@ -560,7 +560,7 @@ abstract class ic extends ee implements gk {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -47) {
-            field_D = (ka[]) null;
+            field_D = (Sprite[]) null;
           }
           var4 = (String) null;
           stackIn_3_0 = pd.a(param0, 0, (String) null, false, 0, -1, param1);
@@ -581,7 +581,7 @@ abstract class ic extends ee implements gk {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -637,7 +637,7 @@ abstract class ic extends ee implements gk {
           if (param6 != 127) {
             ic.g(29);
           }
-          var9 = ag.field_e.field_K + ag.field_e.field_x;
+          var9 = SecondaryNodeDequeIterator.field_e.field_K + SecondaryNodeDequeIterator.field_e.field_x;
           var10 = var9 + 2;
           if (param7) {
             if (param4 == null &&
@@ -648,11 +648,11 @@ abstract class ic extends ee implements gk {
               param5 != null) {
               var8 = param5;
             }
-            var11 = ag.field_e.a(var8);
+            var11 = SecondaryNodeDequeIterator.field_e.a(var8);
             var12 = 1;
             if (var11 > param3) {
               var11 = param3;
-              var12 = ag.field_e.a(var8, var11);
+              var12 = SecondaryNodeDequeIterator.field_e.a(var8, var11);
             }
             var13 = var12 * var10;
             if (param1 <= 16) {
@@ -667,7 +667,7 @@ abstract class ic extends ee implements gk {
             if (16 >= param1) {
               return;
             }
-            ag.field_e.a(var8, var14, var15, var11, var13, 6488064, -1, 0, 0, var10);
+            SecondaryNodeDequeIterator.field_e.a(var8, var14, var15, var11, var13, 6488064, -1, 0, 0, var10);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -686,7 +686,7 @@ abstract class ic extends ee implements gk {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 }

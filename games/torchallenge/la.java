@@ -6,7 +6,7 @@ import java.io.*;
 final class la {
     private rk field_c;
     private int field_b;
-    static oe field_f;
+    static RasterBuffer field_f;
     private rk field_e;
     static kb field_a;
     static fj field_d;
@@ -67,7 +67,7 @@ final class la {
                   return false;
                 }
                 var9 = 0;
-                L3: while (true) {
+                scanLoop1: while (true) {
                   if (var8 < param0) {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
@@ -83,7 +83,7 @@ final class la {
                           decompiledRegionSelector0 = 1;
                         }
                         if (decompiledRegionSelector0 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var12 = (wi.field_c[2] << 8 & 65280) + (255 & wi.field_c[3]);
                         var13 = 255 & wi.field_c[7];
@@ -99,7 +99,7 @@ final class la {
                           decompiledRegionSelector1 = 1;
                         }
                         if (decompiledRegionSelector1 != 0) {
-                          break L3;
+                          break scanLoop1;
                         }
                         var10 = (65280 & wi.field_c[7] << 8) + ((255 & wi.field_c[6]) << 16) + (255 & wi.field_c[8]);
                         var11 = (255 & wi.field_c[3]) + ((wi.field_c[2] & 255) << 8) + (wi.field_c[0] << 24 & -16777216) + (16711680 & wi.field_c[1] << 16);
@@ -190,7 +190,7 @@ final class la {
             } else {
               stackIn_75_2 = "{...}";
             }
-            throw oj.a((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param4).append(')').toString());
+            throw oj.wrapException((Throwable) ((Object) stackIn_74_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param4).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -323,7 +323,7 @@ final class la {
         }
     }
 
-    final static int a(qe param0, int param1) {
+    final static int a(LevelEntity param0, int param1) {
         int var12 = 0;
         int var13 = 0;
         int stackIn_3_0 = 0;
@@ -340,7 +340,7 @@ final class la {
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
-        qe var9 = null;
+        LevelEntity var9 = null;
         int var11 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -412,7 +412,7 @@ final class la {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -454,7 +454,7 @@ final class la {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -493,7 +493,7 @@ final class la {
           if (param0 >= -29) {
             la.a((byte) 70);
           }
-          var2 = var13.j(-126);
+          var2 = var13.readUnsignedByte(-126);
           if (var2 == 0) {
             var11 = jj.b((byte) -24);
             var17 = var11;
@@ -502,9 +502,9 @@ final class la {
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((uf) ((Object) var5)).j(-95);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte(-95);
             for (var7 = 0; var6 > var7; var7++) {
-              var10[var7] = ((uf) ((Object) var5)).i(38);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(38);
             }
             var15 = (ql) (ji.field_q.c((byte) 119));
             if (var15 == null) {
@@ -514,7 +514,7 @@ final class la {
             var15.field_m = var17[0];
             var15.field_o = var3;
             var15.field_i = true;
-            var15.a(true);
+            var15.unlink(true);
             return;
           }
           if (1 != var2) {
@@ -530,7 +530,7 @@ final class la {
               var16_ref.field_o = jj.b((byte) -24);
               var16_ref.field_i = true;
               var16_ref.field_m = var16_ref.field_o[0];
-              var16_ref.a(true);
+              var16_ref.unlink(true);
             }
           } else {
             var12 = (rd) (bb.field_d.c((byte) 113));
@@ -538,13 +538,13 @@ final class la {
               ob.b(-93);
               return;
             }
-            var12.a(true);
+            var12.unlink(true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "la.F(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "la.F(" + param0 + ')');
         }
     }
 
@@ -576,7 +576,7 @@ final class la {
           this.field_e = param2;
           this.field_c = param1;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "la.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "la.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

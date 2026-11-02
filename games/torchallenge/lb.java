@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class lb extends w {
+abstract class lb extends DualLinkNode {
     static int field_s;
     static boolean[] field_q;
     static String[] field_u;
@@ -9,7 +9,7 @@ abstract class lb extends w {
     int field_r;
     static int[] field_p;
 
-    final static ka[] f(int param0) {
+    final static Sprite[] f(int param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var10 = null;
@@ -18,7 +18,7 @@ abstract class lb extends w {
         int[] var5 = null;
         int var6 = 0;
         int var7 = TorChallenge.field_F ? 1 : 0;
-        ka[] var1 = new ka[vl.field_b];
+        Sprite[] var1 = new Sprite[vl.field_b];
         if (param0 != 204) {
           field_u = (String[]) null;
         }
@@ -31,7 +31,7 @@ abstract class lb extends w {
           for (var6 = 0; var6 < var3; var6++) {
             var5[var6] = td.field_m[jh.a((int) var10[var6], 255)];
           }
-          var1[var2] = new ka(ij.field_B, le.field_g, ug.field_e[var2], dd.field_t[var2], pg.field_r[var2], lg.field_e[var2], var11);
+          var1[var2] = new Sprite(ij.field_B, le.field_g, GameApplet.field_e[var2], ImageProducerRasterBuffer.field_t[var2], pg.field_r[var2], lg.field_e[var2], var11);
         }
         p.a(0);
         return var1;
@@ -65,12 +65,12 @@ abstract class lb extends w {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        ka var14 = null;
+        Sprite var14 = null;
         int var17 = 0;
         var17 = TorChallenge.field_F ? 1 : 0;
         try {
-          var9 = ak.field_a[0][0].field_q;
-          var10 = ak.field_a[0][0].field_v;
+          var9 = SecondaryNodeDeque.field_a[0][0].field_q;
+          var10 = SecondaryNodeDeque.field_a[0][0].field_v;
           var13 = 4;
           for (var15 = 0; var15 < 8; var15++) {
             for (var16 = 0; var16 < 3; var16++) {
@@ -91,7 +91,7 @@ abstract class lb extends w {
                   var5 = var5 + var6 / 256;
                   var6 = var6 % 256;
                   qb.a(var4, var5, param1, param0, var3_int, var6, -2140919664);
-                  var14 = ak.field_a[vj.field_c][var12];
+                  var14 = SecondaryNodeDeque.field_a[vj.field_c][var12];
                   var7 = dl.field_n[0];
                   var8 = dl.field_n[2];
                   var14.d(var7, var8, 160);
@@ -106,7 +106,7 @@ abstract class lb extends w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var3), "lb.E(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw oj.wrapException((Throwable) ((Object) var3), "lb.E(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -142,7 +142,7 @@ abstract class lb extends w {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "lb.C(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "lb.C(" + param0 + ')');
         }
     }
 

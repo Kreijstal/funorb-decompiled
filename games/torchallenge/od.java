@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class od {
-    final static void b(ka param0, int param1, int param2, int param3, int param4) {
+    final static void b(Sprite param0, int param1, int param2, int param3, int param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var5;
@@ -27,26 +27,26 @@ final class od {
         var7 = param3 << 8;
         var8 = (param4 - param3 << 8) / var5;
         var9 = 0;
-        if (param1 < qg.field_a) {
-          var6 = var6 - (qg.field_a - param1);
-          var9 = var9 + (qg.field_a - param1);
-          param1 = qg.field_a;
+        if (param1 < SoftwareRasterizer.field_a) {
+          var6 = var6 - (SoftwareRasterizer.field_a - param1);
+          var9 = var9 + (SoftwareRasterizer.field_a - param1);
+          param1 = SoftwareRasterizer.field_a;
         }
-        if (param2 < qg.field_k) {
-          var7 = var7 + (qg.field_k - param2) * var8;
-          var5 = var5 - (qg.field_k - param2);
-          var9 = var9 + (qg.field_k - param2) * qg.field_g;
-          param2 = qg.field_k;
+        if (param2 < SoftwareRasterizer.field_k) {
+          var7 = var7 + (SoftwareRasterizer.field_k - param2) * var8;
+          var5 = var5 - (SoftwareRasterizer.field_k - param2);
+          var9 = var9 + (SoftwareRasterizer.field_k - param2) * SoftwareRasterizer.field_g;
+          param2 = SoftwareRasterizer.field_k;
         }
-        if (param1 + var6 > qg.field_c) {
-          var6 = qg.field_c - param1;
+        if (param1 + var6 > SoftwareRasterizer.field_c) {
+          var6 = SoftwareRasterizer.field_c - param1;
         }
-        if (param2 + var5 > qg.field_l) {
-          var5 = qg.field_l - param2;
+        if (param2 + var5 > SoftwareRasterizer.field_l) {
+          var5 = SoftwareRasterizer.field_l - param2;
         }
-        var10 = qg.field_g - var6;
+        var10 = SoftwareRasterizer.field_g - var6;
         var11 = param0.field_u - var6;
-        var12 = param1 + param2 * qg.field_g;
+        var12 = param1 + param2 * SoftwareRasterizer.field_g;
         for (param2 = -var5; param2 < 0; param2++) {
           var13 = var7 >> 8;
           if (var13 >= 0) {
@@ -62,13 +62,13 @@ final class od {
               } else {
                 var15 = (var14 & 16711935) * var13;
                 var14 = (var15 & -16711936) + (var14 * var13 - var15 & 16711680) >>> 8;
-                var15Lifetime1 = qg.field_i[var12];
+                var15Lifetime1 = SoftwareRasterizer.field_i[var12];
                 var16 = var14 + var15Lifetime1;
                 var14 = (var14 & 16711935) + (var15Lifetime1 & 16711935);
                 var15Lifetime2 = (var14 & 16777472) + (var16 - var14 & 65536);
                 incrementValue$1 = var12;
                 var12++;
-                qg.field_i[incrementValue$1] = var16 - var15Lifetime2 | var15Lifetime2 - (var15Lifetime2 >>> 8);
+                SoftwareRasterizer.field_i[incrementValue$1] = var16 - var15Lifetime2 | var15Lifetime2 - (var15Lifetime2 >>> 8);
               }
             }
             var12 = var12 + var10;
@@ -79,8 +79,8 @@ final class od {
         return;
     }
 
-    final static void a(ka param0, int param1) {
-        od.a(qg.field_i, param0.field_y, 0, 0, 0, 0, 0, param0.field_u, param0.field_x, qg.field_g - param0.field_u, 0, param1);
+    final static void a(Sprite param0, int param1) {
+        od.a(SoftwareRasterizer.field_i, param0.field_y, 0, 0, 0, 0, 0, param0.field_u, param0.field_x, SoftwareRasterizer.field_g - param0.field_u, 0, param1);
     }
 
     private final static void a(int param0, int param1, int param2, int[] param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13) {
@@ -107,7 +107,7 @@ final class od {
         }
     }
 
-    final static void c(ka param0, int param1, int param2, int param3, int param4) {
+    final static void c(Sprite param0, int param1, int param2, int param3, int param4) {
         int var12 = 0;
         int var17 = 0;
         int var5;
@@ -138,22 +138,22 @@ final class od {
         var6 = param1 + ((param0.field_s + param0.field_u) * param3 + param0.field_q - 1) / param0.field_q;
         var7 = param2 + param0.field_p * param0.field_x / param0.field_v;
         var8 = param2 + ((param0.field_p + param0.field_x) * param0.field_x + param0.field_v - 1) / param0.field_v;
-        if (var5 < qg.field_a) {
-          var5 = qg.field_a;
+        if (var5 < SoftwareRasterizer.field_a) {
+          var5 = SoftwareRasterizer.field_a;
         }
-        if (var6 > qg.field_c) {
-          var6 = qg.field_c;
+        if (var6 > SoftwareRasterizer.field_c) {
+          var6 = SoftwareRasterizer.field_c;
         }
-        if (var7 < qg.field_k) {
-          var7 = qg.field_k;
+        if (var7 < SoftwareRasterizer.field_k) {
+          var7 = SoftwareRasterizer.field_k;
         }
-        if (var8 > qg.field_l) {
-          var8 = qg.field_l;
+        if (var8 > SoftwareRasterizer.field_l) {
+          var8 = SoftwareRasterizer.field_l;
         }
         if (var5 < var6 &&
           var7 < var8) {
-          var9 = var7 * qg.field_g + var5;
-          var10 = qg.field_g;
+          var9 = var7 * SoftwareRasterizer.field_g + var5;
+          var10 = SoftwareRasterizer.field_g;
           var11 = var9;
           for (var12 = var5; var12 < var6; var12++) {
             var11Lifetime1 = var9;
@@ -195,7 +195,7 @@ final class od {
                   var24 = 1;
                 }
                 if (var24 != 0) {
-                  qg.field_i[var9] = var24;
+                  SoftwareRasterizer.field_i[var9] = var24;
                 }
                 var9 = var9 + var10;
               }
@@ -269,11 +269,11 @@ final class od {
             param4 = param4 - param10;
           }
           param4 = param4 + (param10 + (param10 - param8 - 2));
-          param3 = param3 + (qg.field_g - (param8 + 2 >> 1) - param11);
+          param3 = param3 + (SoftwareRasterizer.field_g - (param8 + 2 >> 1) - param11);
         }
     }
 
-    final static void a(ka param0, int param1, int param2) {
+    final static void a(Sprite param0, int param1, int param2) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_9_0 = 0;
@@ -293,48 +293,48 @@ final class od {
         var4 = param0.field_x >> 1;
         param1 = param1 + param0.field_s / 2;
         param2 = param2 + param0.field_p / 2;
-        if (param1 >= qg.field_a) {
+        if (param1 >= SoftwareRasterizer.field_a) {
           stackIn_3_0 = 0;
         } else {
-          stackIn_3_0 = qg.field_a - param1 << 1;
+          stackIn_3_0 = SoftwareRasterizer.field_a - param1 << 1;
         }
         var5 = stackIn_3_0;
-        if (param1 + var3 <= qg.field_c) {
+        if (param1 + var3 <= SoftwareRasterizer.field_c) {
           stackIn_6_0 = param0.field_u - 2;
         } else {
-          stackIn_6_0 = (qg.field_c - param1 << 1) - 2;
+          stackIn_6_0 = (SoftwareRasterizer.field_c - param1 << 1) - 2;
         }
         var6 = stackIn_6_0;
-        if (param2 >= qg.field_k) {
+        if (param2 >= SoftwareRasterizer.field_k) {
           stackIn_9_0 = 0;
         } else {
-          stackIn_9_0 = qg.field_k - param2 << 1;
+          stackIn_9_0 = SoftwareRasterizer.field_k - param2 << 1;
         }
         var7 = stackIn_9_0;
-        if (param2 + var4 <= qg.field_l) {
+        if (param2 + var4 <= SoftwareRasterizer.field_l) {
           stackIn_12_0 = param0.field_x - 2;
         } else {
-          stackIn_12_0 = (qg.field_l - param2 << 1) - 2;
+          stackIn_12_0 = (SoftwareRasterizer.field_l - param2 << 1) - 2;
         }
         var8 = stackIn_12_0;
-        if (param1 < qg.field_a) {
-          param1 = qg.field_a;
+        if (param1 < SoftwareRasterizer.field_a) {
+          param1 = SoftwareRasterizer.field_a;
         }
-        if (param1 > qg.field_c) {
-          param1 = qg.field_c;
+        if (param1 > SoftwareRasterizer.field_c) {
+          param1 = SoftwareRasterizer.field_c;
         }
-        if (param2 < qg.field_k) {
-          param2 = qg.field_k;
+        if (param2 < SoftwareRasterizer.field_k) {
+          param2 = SoftwareRasterizer.field_k;
         }
-        if (param2 > qg.field_l) {
-          param2 = qg.field_l;
+        if (param2 > SoftwareRasterizer.field_l) {
+          param2 = SoftwareRasterizer.field_l;
         }
-        var9 = param2 * qg.field_g + param1;
+        var9 = param2 * SoftwareRasterizer.field_g + param1;
         var10 = var7 * param0.field_u + var5;
         var11 = var6 - var5;
         var12 = var8 - var7;
         var13 = var11 - (var11 >> 1 << 1);
-        od.b(qg.field_i, param0.field_y, 0, var9, var10, 0, 0, 0, var11, var12, param0.field_u, var13);
+        od.b(SoftwareRasterizer.field_i, param0.field_y, 0, var9, var10, 0, 0, 0, var11, var12, param0.field_u, var13);
     }
 
     private final static void a(int[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11) {
@@ -374,7 +374,7 @@ final class od {
         }
     }
 
-    final static void a(ka param0, int param1, int param2, int param3, int param4) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4) {
         param1 = param1 - param0.field_s;
         param2 = param2 - param0.field_p;
         int var5 = param2 * param0.field_u + param1;
@@ -396,7 +396,7 @@ final class od {
         od.a(param0.field_y, var5, var8, param3, param4);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, ka param5) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, Sprite param5) {
         int var6;
         int var7;
         int var8;
@@ -408,33 +408,33 @@ final class od {
         int var12Lifetime2;
         param0 = param0 + param5.field_s;
         param1 = param1 + param5.field_p;
-        var6 = param0 + param1 * qg.field_g;
+        var6 = param0 + param1 * SoftwareRasterizer.field_g;
         var7 = 0;
         var8 = param5.field_x;
         var9 = param5.field_u;
-        var10 = qg.field_g - var9;
+        var10 = SoftwareRasterizer.field_g - var9;
         var11 = 0;
-        if (param1 < qg.field_k) {
-          var12 = qg.field_k - param1;
+        if (param1 < SoftwareRasterizer.field_k) {
+          var12 = SoftwareRasterizer.field_k - param1;
           var8 = var8 - var12;
-          param1 = qg.field_k;
+          param1 = SoftwareRasterizer.field_k;
           var7 = var7 + var12 * var9;
-          var6 = var6 + var12 * qg.field_g;
+          var6 = var6 + var12 * SoftwareRasterizer.field_g;
         }
-        if (param1 + var8 > qg.field_l) {
-          var8 = var8 - (param1 + var8 - qg.field_l);
+        if (param1 + var8 > SoftwareRasterizer.field_l) {
+          var8 = var8 - (param1 + var8 - SoftwareRasterizer.field_l);
         }
-        if (param0 < qg.field_a) {
-          var12Lifetime1 = qg.field_a - param0;
+        if (param0 < SoftwareRasterizer.field_a) {
+          var12Lifetime1 = SoftwareRasterizer.field_a - param0;
           var9 = var9 - var12Lifetime1;
-          param0 = qg.field_a;
+          param0 = SoftwareRasterizer.field_a;
           var7 = var7 + var12Lifetime1;
           var6 = var6 + var12Lifetime1;
           var11 = var11 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
         }
-        if (param0 + var9 > qg.field_c) {
-          var12Lifetime2 = param0 + var9 - qg.field_c;
+        if (param0 + var9 > SoftwareRasterizer.field_c) {
+          var12Lifetime2 = param0 + var9 - SoftwareRasterizer.field_c;
           var9 = var9 - var12Lifetime2;
           var11 = var11 + var12Lifetime2;
           var10 = var10 + var12Lifetime2;
@@ -443,12 +443,12 @@ final class od {
           var8 > 0) {
           if (param2 != 0) {
             if (param3 != 256) {
-              od.a(0, 0, 0, qg.field_i, param5.field_y, var7, 0, var6, 0, var9, var8, var10, var11, param2, param3, param4);
+              od.a(0, 0, 0, SoftwareRasterizer.field_i, param5.field_y, var7, 0, var6, 0, var9, var8, var10, var11, param2, param3, param4);
             } else {
-              od.a(0, 0, 0, qg.field_i, param5.field_y, var7, 0, var6, 0, var9, var8, var10, var11);
+              od.a(0, 0, 0, SoftwareRasterizer.field_i, param5.field_y, var7, 0, var6, 0, var9, var8, var10, var11);
             }
           } else {
-            od.a(0, 0, 0, qg.field_i, param5.field_y, var7, 0, var6, 0, var9, var8, var10, var11, param3);
+            od.a(0, 0, 0, SoftwareRasterizer.field_i, param5.field_y, var7, 0, var6, 0, var9, var8, var10, var11, param3);
           }
           return;
         }
@@ -468,7 +468,7 @@ final class od {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, ka param6, ka param7, int[] param8) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, Sprite param6, Sprite param7, int[] param8) {
         int var24 = 0;
         int var25 = 0;
         int var9;
@@ -595,8 +595,8 @@ final class od {
             var21 = 270;
           }
           param7.d();
-          qg.b();
-          qg.c(0, 0, var19, var20, var15Lifetime1, var16Lifetime1);
+          SoftwareRasterizer.b();
+          SoftwareRasterizer.c(0, 0, var19, var20, var15Lifetime1, var16Lifetime1);
           la.field_f.a(-99);
           var22 = param0;
           var23 = param1;
@@ -615,7 +615,7 @@ final class od {
           la.field_f.a(-86);
         }
         param6.d();
-        qg.f(param0 + var10, param1 + var11, param4, param5 + 1, var9);
+        SoftwareRasterizer.f(param0 + var10, param1 + var11, param4, param5 + 1, var9);
         la.field_f.a(115);
     }
 
@@ -691,7 +691,7 @@ final class od {
         }
     }
 
-    final static void a(ka param0, int[] param1) {
-        od.a(qg.field_i, param0.field_y, 0, 0, 0, 0, 0, 0, param0.field_q, param0.field_v, qg.field_g - param0.field_q, 0, param1);
+    final static void a(Sprite param0, int[] param1) {
+        od.a(SoftwareRasterizer.field_i, param0.field_y, 0, 0, 0, 0, 0, 0, param0.field_q, param0.field_v, SoftwareRasterizer.field_g - param0.field_q, 0, param1);
     }
 }

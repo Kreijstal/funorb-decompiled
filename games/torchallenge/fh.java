@@ -6,7 +6,7 @@ final class fh {
     static int field_b;
     static lj field_f;
     static int field_d;
-    static ka[][] field_a;
+    static Sprite[][] field_a;
     static int field_e;
     static int field_c;
     static int[] field_h;
@@ -23,18 +23,18 @@ final class fh {
     public static void a(byte param0) {
         if (param0 <= -23) {
           field_h = null;
-          field_a = (ka[][]) null;
+          field_a = (Sprite[][]) null;
           field_f = null;
           return;
         }
         field_g = false;
         field_h = null;
-        field_a = (ka[][]) null;
+        field_a = (Sprite[][]) null;
         field_f = null;
     }
 
     static {
-        field_a = new ka[2][32];
+        field_a = new Sprite[2][32];
         field_h = new int[2];
         field_d = 0;
     }

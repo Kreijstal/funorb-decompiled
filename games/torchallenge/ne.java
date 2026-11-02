@@ -19,7 +19,7 @@ final class ne {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, ka[] param8, int param9, int param10, int param11, int param12, int param13) {
+    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, Sprite[] param8, int param9, int param10, int param11, int param12, int param13) {
         int var14_int = 0;
         int var15 = 0;
         int var16 = 0;
@@ -29,24 +29,24 @@ final class ne {
           var15 = ef.field_j[1];
           var16 = var14_int - param0 >> 1;
           if (null == de.field_a) {
-            de.field_a = new ka(var14_int, var15);
+            de.field_a = new Sprite(var14_int, var15);
           }
           var17 = -param4 + var15 >> 1;
           de.field_a.d();
-          qg.b();
+          SoftwareRasterizer.b();
           hd.a(param8, param4, param0, (byte) -96, var17, var16);
-          qg.a(param7 + var16, param6 + var17, param5, param12, param1, 9186335, 240);
+          SoftwareRasterizer.a(param7 + var16, param6 + var17, param5, param12, param1, 9186335, 240);
           if (gf.field_n == null) {
-            gf.field_n = new ka(var14_int, var15);
+            gf.field_n = new Sprite(var14_int, var15);
           }
           gf.field_n.d();
-          qg.b();
-          qg.b(param3 + var16, param2 + var17, param9, param10, param11, 16777215);
+          SoftwareRasterizer.b();
+          SoftwareRasterizer.b(param3 + var16, param2 + var17, param9, param10, param11, 16777215);
           de.field_a.d();
           od.b(gf.field_n, 0, 0, 0, param13);
           la.field_f.a(-97);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ne.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ne.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + (param8 != null ? "{...}" : "null") + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ',' + param13 + ')');
         }
     }
 

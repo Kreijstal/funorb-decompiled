@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class nb {
-    static ka field_a;
+    static Sprite field_a;
 
     final static void a(int param0, boolean param1) {
         try {
@@ -12,7 +12,7 @@ final class nb {
           Throwable var2 = null;
           try {
             if (!param1) {
-              field_a = (ka) null;
+              field_a = (Sprite) null;
             }
             ff.a("resizing", new Object[]{new Integer(param0)}, gi.b(12476), -29585);
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -29,7 +29,7 @@ final class nb {
     final static boolean a(int param0) {
         boolean stackIn_7_0 = false;
         if (param0 != -26375) {
-          field_a = (ka) null;
+          field_a = (Sprite) null;
         }
         stackIn_7_0 = (gj.field_c >= 10) && (!lj.field_q) && (!hf.a(4));
         return stackIn_7_0;
@@ -40,7 +40,7 @@ final class nb {
           return true;
         }
         if (param1 < 112) {
-          field_a = (ka) null;
+          field_a = (Sprite) null;
           return false;
         }
         return false;
@@ -68,7 +68,7 @@ final class nb {
         int var11 = 0;
         int var13 = 0;
         int var14 = 0;
-        qe var15 = null;
+        LevelEntity var15 = null;
         int var9Lifetime1;
         int var11Lifetime1;
         var13 = TorChallenge.field_F ? 1 : 0;
@@ -172,7 +172,7 @@ final class nb {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(')').toString());
         }
     }
 
@@ -195,24 +195,24 @@ final class nb {
           Throwable decompiledCaughtException = null;
           if (qf.field_a != null && (param0 < 0 ||
             qc.field_d == aj.field_c)) {
-            if (param1 == ~dk.field_s.field_q &&
+            if (param1 == ~dk.field_s.position &&
               ol.a(param1 + 257) > (i.field_q + 10000L)) {
               dk.field_s.d(25, param0);
             }
-            if (0 < dk.field_s.field_q) {
+            if (0 < dk.field_s.position) {
               try {
-                qf.field_a.a(dk.field_s.field_q, 0, (byte) 113, dk.field_s.field_m);
+                qf.field_a.a(dk.field_s.position, 0, (byte) 113, dk.field_s.payload);
                 i.field_q = ol.a(256);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
                 ob.b(-125);
               }
-              dk.field_s.field_q = 0;
+              dk.field_s.position = 0;
             }
             return;
           }
-          dk.field_s.field_q = 0;
+          dk.field_s.position = 0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

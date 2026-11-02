@@ -27,7 +27,7 @@ final class ll {
         int var13;
         int var14;
         int var15;
-        ka var16;
+        Sprite var16;
         int var17;
         int var18;
         int var19;
@@ -114,8 +114,8 @@ final class ll {
             la.field_f.a(119);
             je.field_i = true;
           }
-          qg.a(vd.field_e);
-          qg.a(var21, param0, var22, param9);
+          SoftwareRasterizer.a(vd.field_e);
+          SoftwareRasterizer.a(var21, param0, var22, param9);
           if (2 != param1) {
             var16.d(var20, param7, var18, var16.field_v);
           } else {
@@ -138,7 +138,7 @@ final class ll {
               }
             }
           }
-          qg.b(vd.field_e);
+          SoftwareRasterizer.b(vd.field_e);
           return;
         }
         if (!param6) {
@@ -191,8 +191,8 @@ final class ll {
             la.field_f.a(119);
             je.field_i = true;
           }
-          qg.a(vd.field_e);
-          qg.a(var21Lifetime1, param0, var22Lifetime1, param9);
+          SoftwareRasterizer.a(vd.field_e);
+          SoftwareRasterizer.a(var21Lifetime1, param0, var22Lifetime1, param9);
           if (2 != param1) {
             var16.d(var20Lifetime1, param7, var18Lifetime1, var16.field_v);
           } else {
@@ -215,7 +215,7 @@ final class ll {
               }
             }
           }
-          qg.b(vd.field_e);
+          SoftwareRasterizer.b(vd.field_e);
           return;
         }
         if (param6) {
@@ -268,8 +268,8 @@ final class ll {
           la.field_f.a(119);
           je.field_i = true;
         }
-        qg.a(vd.field_e);
-        qg.a(var21Lifetime2, param0, var22Lifetime2, param9);
+        SoftwareRasterizer.a(vd.field_e);
+        SoftwareRasterizer.a(var21Lifetime2, param0, var22Lifetime2, param9);
         if (2 != param1) {
           var16.d(var20Lifetime2, param7, var18Lifetime2, var16.field_v);
         } else {
@@ -292,7 +292,7 @@ final class ll {
             }
           }
         }
-        qg.b(vd.field_e);
+        SoftwareRasterizer.b(vd.field_e);
         return;
     }
 
@@ -317,7 +317,7 @@ final class ll {
 
     final static void a(int param0, boolean param1, boolean param2) {
         if (param1) {
-          qg.a(0, 0, qg.field_g, qg.field_f, 0, 192);
+          SoftwareRasterizer.a(0, 0, SoftwareRasterizer.field_g, SoftwareRasterizer.field_f, 0, 192);
           if (param0 != 0) {
             ll.a(80, true, false);
             c.a(param1, false);
@@ -326,7 +326,7 @@ final class ll {
           c.a(param1, false);
           return;
         }
-        qg.b();
+        SoftwareRasterizer.b();
         if (param0 != 0) {
           ll.a(80, true, false);
           c.a(param1, false);

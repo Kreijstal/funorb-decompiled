@@ -12,7 +12,7 @@ final class qb {
     static volatile int field_g;
     static int field_h;
 
-    final static void a(byte param0, ka[] param1) {
+    final static void a(byte param0, Sprite[] param1) {
         int var2_int = 0;
         int var3 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -41,7 +41,7 @@ final class qb {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

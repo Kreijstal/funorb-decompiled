@@ -3,7 +3,7 @@
  */
 final class hl {
     static boolean field_e;
-    static mj field_d;
+    static GameKeyHandler field_d;
     static jl field_b;
     static boolean[][] field_c;
     static String field_a;
@@ -54,7 +54,7 @@ final class hl {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "hl.B(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "hl.B(" + param0 + ')');
         }
     }
 
@@ -123,7 +123,7 @@ final class hl {
             }
             ok.a(param1, -1);
           } catch (RuntimeException runtimeException) {
-            throw oj.a((Throwable) ((Object) runtimeException), "hl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw oj.wrapException((Throwable) ((Object) runtimeException), "hl.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -166,7 +166,7 @@ final class hl {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var2), "hl.C(" + param0 + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) var2), "hl.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -218,19 +218,19 @@ final class hl {
           } else {
             stackIn_19_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(')').toString());
         }
     }
 
-    final static void a(uf param0, int param1, int param2, int param3, int param4) {
+    final static void a(PacketBuffer param0, int param1, int param2, int param3, int param4) {
         try {
-          param0.d(param1, (byte) 122);
-          param0.a(17, (byte) 106);
-          param0.a(param3, (byte) 106);
-          param0.a(param4, (byte) 106);
-          param0.d(param2, (byte) 122);
+          param0.writeByte(param1, (byte) 122);
+          param0.writeShort(17, (byte) 106);
+          param0.writeShort(param3, (byte) 106);
+          param0.writeShort(param4, (byte) 106);
+          param0.writeByte(param2, (byte) 122);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "hl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "hl.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
@@ -240,17 +240,17 @@ final class hl {
           ec.field_c = param1;
           pf.field_c = param0;
           aj.field_b = param3;
-          ok.a(qg.field_g / 2, qg.field_f / 2, (byte) -128);
+          ok.a(SoftwareRasterizer.field_g / 2, SoftwareRasterizer.field_f / 2, (byte) -128);
           qc.a((byte) -48, param0.field_t + param0.field_K, param0.field_t, param1.field_K + param1.field_t, param1.field_t);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "hl.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "hl.F(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
     static {
         field_e = false;
         field_c = new boolean[][]{new boolean[]{true, true, true}, new boolean[]{true, false, true}, new boolean[]{false, true, false}, new boolean[]{true, true, true}};
-        field_d = new mj();
+        field_d = new GameKeyHandler();
         field_a = "Next";
     }
 }

@@ -61,7 +61,7 @@ final class ob {
             } else {
               stackIn_12_2 = "{...}";
             }
-            throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+            throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -89,29 +89,29 @@ final class ob {
         }
     }
 
-    final static void a(int param0, uf param1) {
+    final static void a(int param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
         try {
-          ia.field_j = param1.c(false) << 5;
-          var2_int = param1.j(-109);
+          ia.field_j = param1.readUnsignedShort(false) << 5;
+          var2_int = param1.readUnsignedByte(-109);
           ti.field_e = 1835008 & var2_int << 18;
           if (param0 >= -30) {
             ob.a(127, -50, -88);
           }
           ia.field_j = ia.field_j + (var2_int >> 3);
-          ti.field_e = ti.field_e + (param1.c(false) << 2);
-          var2_intLifetime1 = param1.j(-86);
+          ti.field_e = ti.field_e + (param1.readUnsignedShort(false) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte(-86);
           ti.field_e = ti.field_e + (var2_intLifetime1 >> 6);
           uc.field_U = var2_intLifetime1 << 15 & 2064384;
-          uc.field_U = uc.field_U + (param1.j(-126) << 7);
-          var2_intLifetime2 = param1.j(-123);
+          uc.field_U = uc.field_U + (param1.readUnsignedByte(-126) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte(-123);
           jf.field_sb = var2_intLifetime2 << 16 & 65536;
           uc.field_U = uc.field_U + (var2_intLifetime2 >> 1);
-          jf.field_sb = jf.field_sb + param1.c(false);
+          jf.field_sb = jf.field_sb + param1.readUnsignedShort(false);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "ob.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "ob.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

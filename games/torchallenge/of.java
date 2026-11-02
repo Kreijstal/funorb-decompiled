@@ -3,7 +3,7 @@
  */
 abstract class of {
     static rl field_c;
-    static ka field_b;
+    static Sprite field_b;
     static boolean[][][] field_a;
     static int field_d;
     static int field_f;
@@ -55,19 +55,19 @@ abstract class of {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(')').toString());
         }
     }
 
     final static dk b(int param0) {
         if (pf.field_f == null) {
           pf.field_f = new dk();
-          pf.field_f.a(oe.field_g, -22373);
+          pf.field_f.a(RasterBuffer.field_g, -22373);
           pf.field_f.field_e = 7697781;
           pf.field_f.field_r = 5;
           pf.field_f.field_o = 4;
           pf.field_f.field_h = 0;
-          pf.field_f.field_t = ug.field_f;
+          pf.field_f.field_t = GameApplet.field_f;
           pf.field_f.field_k = 6;
           pf.field_f.field_n = 14;
           pf.field_f.field_p = 2763306;
@@ -118,7 +118,7 @@ abstract class of {
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
-        qe var19 = null;
+        LevelEntity var19 = null;
         int var20 = 0;
         int var21 = 0;
         int var22 = 0;
@@ -206,12 +206,12 @@ abstract class of {
           }
           var8 = stackIn_17_0;
           if (var8 != 0) {
-            qg.a(sh.field_w);
-            qg.a(0, 0, 320, 240);
+            SoftwareRasterizer.a(sh.field_w);
+            SoftwareRasterizer.a(0, 0, 320, 240);
           }
           od.a(param0, param1, 1, 7, 6, lj.field_o[0]);
           if (var8 != 0) {
-            qg.b(sh.field_w);
+            SoftwareRasterizer.b(sh.field_w);
           }
           od.a(param0, param1 + (479 - lj.field_o[1].field_v), 1, 7, 6, lj.field_o[1]);
           uk.field_N.g(param0, param1);
@@ -290,8 +290,8 @@ abstract class of {
             var22 = 0;
             var23 = -1;
             if (param3) {
-              var21Lifetime3 = wb.field_p.field_d;
-              var20Lifetime2Lifetime1 = wb.field_p.field_db;
+              var21Lifetime3 = BufferedSocket.field_p.field_d;
+              var20Lifetime2Lifetime1 = BufferedSocket.field_p.field_db;
               var22Lifetime3 = jj.a(255);
               if (ii.field_i > 0) {
                 var23 = 255 * ii.field_i / 50;
@@ -308,14 +308,14 @@ abstract class of {
             var10Lifetime1 = var10Lifetime1 + (-(9 * var12Lifetime1) + (-28 + ob.field_b[2])) / 2;
             var13 = ob.field_b[3] - 20;
             for (var24 = 0; var24 < var20Lifetime2Lifetime1; var24++) {
-              if (ad.field_b.length > var24) {
+              if (FullscreenFocusCanvas.field_b.length > var24) {
                 if (0 < var23 &&
                   var24 >= be.field_d) {
                   mb.field_d[0].a(var10Lifetime1 + param0, param1 + var11Lifetime1, var23, 16777215);
                 } else {
                   mb.field_d[0].g(var10Lifetime1 + param0, var11Lifetime1 + param1);
                 }
-                stackIn_82_0 = ad.field_b[var24];
+                stackIn_82_0 = FullscreenFocusCanvas.field_b[var24];
                 stackIn_82_1 = var11Lifetime1 + param1;
                 stackIn_82_2 = mb.field_d[0].field_v;
                 stackIn_82_3 = 4;
@@ -327,7 +327,7 @@ abstract class of {
               break;
             }
             for (var24Lifetime2 = var20Lifetime2Lifetime1; var21Lifetime3 > var24Lifetime2; var24Lifetime2++) {
-              if (ad.field_b.length > var24Lifetime2) {
+              if (FullscreenFocusCanvas.field_b.length > var24Lifetime2) {
                 mb.field_d[2].g(param0 + var10Lifetime1, param1 + var11Lifetime1);
                 var10Lifetime1 = var10Lifetime1 + (1 + var12Lifetime1);
                 continue;
@@ -385,12 +385,12 @@ abstract class of {
               }
             }
             var25 = var10Lifetime3Lifetime1;
-            qg.a(sh.field_w);
+            SoftwareRasterizer.a(sh.field_w);
             var26 = var22Lifetime1 + (var20Lifetime4 - 1 + var12Lifetime3Lifetime1) * var23Lifetime1 / var24Lifetime1;
-            qg.a(var25, var11Lifetime3Lifetime1, var26, var11Lifetime3Lifetime1 + var13Lifetime1);
+            SoftwareRasterizer.a(var25, var11Lifetime3Lifetime1, var26, var11Lifetime3Lifetime1 + var13Lifetime1);
             for (var27 = 0; var27 < var20Lifetime4; var27++) {
               mb.field_d[1].g(var22Lifetime1, var11Lifetime3Lifetime1);
-              stackIn_118_0 = ad.field_b[var27];
+              stackIn_118_0 = FullscreenFocusCanvas.field_b[var27];
               stackIn_118_1 = var11Lifetime3Lifetime1;
               stackIn_118_2 = mb.field_d[1].field_v;
               stackIn_118_3 = 4;
@@ -399,16 +399,16 @@ abstract class of {
               var22Lifetime1 = var22Lifetime1 + (1 + var21Lifetime1);
             }
             var25Lifetime1 = var26;
-            qg.b(sh.field_w);
+            SoftwareRasterizer.b(sh.field_w);
             var26Lifetime1 = var20Lifetime4 - 1 + (var12Lifetime3Lifetime1 + var22Lifetime1);
-            qg.a(sh.field_w);
-            qg.a(var25Lifetime1, var11Lifetime3Lifetime1, var26Lifetime1, var13Lifetime1 + var11Lifetime3Lifetime1);
+            SoftwareRasterizer.a(sh.field_w);
+            SoftwareRasterizer.a(var25Lifetime1, var11Lifetime3Lifetime1, var26Lifetime1, var13Lifetime1 + var11Lifetime3Lifetime1);
             var22Lifetime1Lifetime1 = var10Lifetime3Lifetime1 + 1;
             for (var27Lifetime1 = 0; var27Lifetime1 < var20Lifetime4; var27Lifetime1++) {
               mb.field_d[2].g(var22Lifetime1Lifetime1, var11Lifetime3Lifetime1);
               var22Lifetime1Lifetime1 = var22Lifetime1Lifetime1 + (var21Lifetime1 + 1);
             }
-            qg.b(sh.field_w);
+            SoftwareRasterizer.b(sh.field_w);
           }
           var12Lifetime4 = oj.field_e[2];
           var11Lifetime4 = oj.field_e[1];
@@ -422,7 +422,7 @@ abstract class of {
             var20Lifetime6 = var20Lifetime6 / 100;
             var20Lifetime6 = 3 - var20Lifetime6;
           } else {
-            var20Lifetime6 = gl.field_k;
+            var20Lifetime6 = SocketConnector.field_k;
           }
           tf.field_x.a(Integer.toString(var20Lifetime6), var10Lifetime4 + param0, param1 + var11Lifetime4 + ((var13Lifetime2 - var18Lifetime1 >> 1) + 18), 0, -1);
           if (param4 != 0 &&
@@ -430,7 +430,7 @@ abstract class of {
             if (param4 == 2) {
               var11Lifetime5 = af.field_f[1];
               var12Lifetime5 = af.field_f[2];
-              var9 = w.field_j + (o.field_l / 50 + 1);
+              var9 = DualLinkNode.field_j + (o.field_l / 50 + 1);
               var10Lifetime5 = af.field_f[0];
               var13Lifetime3 = af.field_f[3];
               tf.field_x.c(var9, 13 + var10Lifetime5, (var13Lifetime3 - var18Lifetime1 >> 1) + (var11Lifetime5 + 18), 0, -1);
@@ -452,30 +452,30 @@ abstract class of {
             var12Lifetime5 = af.field_f[2];
             tf.field_x.c(var9, 13 + var10Lifetime5 + param0, param1 + var11Lifetime5 + (var13Lifetime3 - var18Lifetime1 >> 1) + 18, 0, -1);
             if (1 < var22Lifetime2Lifetime1) {
-              var11Lifetime5 = ag.field_e.field_x + ((var13Lifetime3 - ag.field_e.field_K - ag.field_e.field_x >> 1) + var11Lifetime5);
+              var11Lifetime5 = SecondaryNodeDequeIterator.field_e.field_x + ((var13Lifetime3 - SecondaryNodeDequeIterator.field_e.field_K - SecondaryNodeDequeIterator.field_e.field_x >> 1) + var11Lifetime5);
               var29 = vj.field_b + var22Lifetime2Lifetime1;
               var10Lifetime5 = var12Lifetime5 + var10Lifetime5;
-              ag.field_e.b(var29, var10Lifetime5 + (param0 - 13), param1 + var11Lifetime5, 0, -1);
+              SecondaryNodeDequeIterator.field_e.b(var29, var10Lifetime5 + (param0 - 13), param1 + var11Lifetime5, 0, -1);
             }
           }
           if ((0 == param4 ||
             param4 == 2) &&
             param3) {
-            TorChallenge.field_E = be.a(mj.field_b, dk.field_a, vj.field_c, param1 + rf.field_eb[vj.field_c][1], rf.field_eb[vj.field_c][0] + param0, 25, TorChallenge.field_E, hf.field_c);
+            TorChallenge.field_E = be.a(GameKeyHandler.field_b, dk.field_a, vj.field_c, param1 + rf.field_eb[vj.field_c][1], rf.field_eb[vj.field_c][0] + param0, 25, TorChallenge.field_E, hf.field_c);
             return;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var5), "of.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.wrapException((Throwable) ((Object) var5), "of.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
     abstract byte[] c(int param0);
 
     static {
-        field_b = new ka(160, 160);
+        field_b = new Sprite(160, 160);
         field_a = new boolean[][][]{new boolean[][]{new boolean[]{false, false, false, false, false, true}, new boolean[]{false}, new boolean[]{false}, new boolean[]{false, false, false, false, true, true}, new boolean[]{false}, new boolean[]{false}, new boolean[]{false}}, new boolean[][]{new boolean[]{false, false, false, false, false, true}, new boolean[]{false, false, false, false, true}, new boolean[]{false, false, false, true}, new boolean[]{false}, new boolean[]{false}, new boolean[]{false, false, false, false, false, false, true}, new boolean[]{false}}, new boolean[][]{new boolean[]{false, false, false, false, false, true}, new boolean[]{false}, new boolean[]{false}, new boolean[]{false}, new boolean[]{false, false, false, false, false, true}, new boolean[]{false}, new boolean[]{false, false, false, false, false, true}}};
         field_d = 65;
     }

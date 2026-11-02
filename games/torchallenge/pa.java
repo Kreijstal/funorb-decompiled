@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class pa extends uf {
+final class pa extends PacketBuffer {
     static String field_t;
     static String field_u;
     private int field_y;
@@ -18,7 +18,7 @@ final class pa extends uf {
     }
 
     final void m(int param0) {
-        this.field_q = (this.field_y + 7) / param0;
+        this.position = (this.field_y + 7) / param0;
     }
 
     final void a(int param0, int param1, int param2, byte[] param3) {
@@ -37,9 +37,9 @@ final class pa extends uf {
             pa.n(-36);
           }
           while (param1 > var5_int) {
-            fieldTemp$0 = this.field_q;
-            this.field_q = this.field_q + 1;
-            param3[var5_int + param2] = (byte)(this.field_m[fieldTemp$0] - this.field_w.d(126));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param3[var5_int + param2] = (byte)(this.payload[fieldTemp$0] - this.field_w.d(126));
             var5_int++;
           }
           return;
@@ -53,7 +53,7 @@ final class pa extends uf {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -77,8 +77,8 @@ final class pa extends uf {
           }
           ok.a(param2, -1);
           if (param1 != 8) {
-            ka[] var6 = (ka[]) null;
-            pa.a(-68, (ka[]) null);
+            Sprite[] var6 = (Sprite[]) null;
+            pa.a(-68, (Sprite[]) null);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -87,7 +87,7 @@ final class pa extends uf {
         }
     }
 
-    final static void a(int param0, ka[] param1) {
+    final static void a(int param0, Sprite[] param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -113,7 +113,7 @@ final class pa extends uf {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -132,22 +132,22 @@ final class pa extends uf {
         if (param0 != 11650) {
           this.m(-112);
         }
-        int fieldTemp$0 = this.field_q;
-        this.field_q = this.field_q + 1;
-        return this.field_m[fieldTemp$0] - this.field_w.d(-102) & 255;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$0] - this.field_w.d(-102) & 255;
     }
 
     final void d(int param0, int param1) {
-        int fieldTemp$0 = this.field_q;
-        this.field_q = this.field_q + 1;
-        this.field_m[fieldTemp$0] = (byte)(param1 + this.field_w.d(127));
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 + this.field_w.d(127));
         if (param0 != 25) {
           field_z = (int[]) null;
         }
     }
 
     final void l(int param0) {
-        this.field_y = param0 * this.field_q;
+        this.field_y = param0 * this.position;
     }
 
     final int e(int param0, int param1) {
@@ -161,14 +161,14 @@ final class pa extends uf {
         while (param0 > var4) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((this.field_m[incrementValue$0] & ah.field_e[var4]) << -var4 + param0);
+          var5 = var5 + ((this.payload[incrementValue$0] & ah.field_e[var4]) << -var4 + param0);
           param0 = param0 - var4;
           var4 = 8;
         }
         if (param0 != var4) {
-          var5 = var5 + (this.field_m[var3] >> -param0 + var4 & ah.field_e[param0]);
+          var5 = var5 + (this.payload[var3] >> -param0 + var4 & ah.field_e[param0]);
         } else {
-          var5 = var5 + (this.field_m[var3] & ah.field_e[var4]);
+          var5 = var5 + (this.payload[var3] & ah.field_e[var4]);
         }
         return var5;
     }
@@ -184,7 +184,7 @@ final class pa extends uf {
           }
           this.field_w = new ed(param1);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "pa.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "pa.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -232,7 +232,7 @@ final class pa extends uf {
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var1 = (RuntimeException) (Object) decompiledCaughtException;
-            throw oj.a((Throwable) ((Object) var1), "pa.H(" + param0 + ')');
+            throw oj.wrapException((Throwable) ((Object) var1), "pa.H(" + param0 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

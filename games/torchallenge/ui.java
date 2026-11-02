@@ -3,7 +3,7 @@
  */
 abstract class ui implements wd {
     static String field_e;
-    static ka[] field_i;
+    static Sprite[] field_i;
     static boolean field_b;
     static rl field_c;
     private long field_a;
@@ -103,7 +103,7 @@ abstract class ui implements wd {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -140,12 +140,12 @@ abstract class ui implements wd {
               }
             }
           }
-          ag.field_e.a(qf.field_e, wc.field_d);
+          SecondaryNodeDequeIterator.field_e.a(qf.field_e, wc.field_d);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var1), "ui.R(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) var1), "ui.R(" + param0 + ')');
         }
     }
 

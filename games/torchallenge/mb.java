@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mb {
-    static ka field_e;
-    static ka field_c;
+    static Sprite field_e;
+    static Sprite field_c;
     static ge field_b;
     static java.math.BigInteger field_a;
-    static ka[] field_d;
+    static Sprite[] field_d;
     private static String field_z;
 
     public static void a(byte param0) {
@@ -27,8 +27,8 @@ final class mb {
 
     static {
         field_z = "mb.A(";
-        field_e = new ka(96, 96);
-        field_c = new ka(0, 0);
+        field_e = new Sprite(96, 96);
+        field_c = new Sprite(0, 0);
         field_a = new java.math.BigInteger("65537");
     }
 }

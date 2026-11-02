@@ -10,7 +10,7 @@ final class jh {
         return param0 & param1;
     }
 
-    final static boolean a(byte param0, uf param1) {
+    final static boolean a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -21,7 +21,7 @@ final class jh {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.j(-88);
+          var2_int = param1.readUnsignedByte(-88);
           stackIn_3_0 = (var2_int == 1) ? 1 : 0;
           var3 = stackIn_3_0;
           if (param0 < 39) {
@@ -39,7 +39,7 @@ final class jh {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -51,7 +51,7 @@ final class jh {
           if (null == eb.field_l) {
             return true;
           }
-          if (!d.p(-67)) {
+          if (!GameClientBase.p(-67)) {
             return false;
           }
           if (vh.field_d == null) {
@@ -59,7 +59,7 @@ final class jh {
           }
           return false;
         }
-        if (!d.p(-67)) {
+        if (!GameClientBase.p(-67)) {
           return false;
         }
         if (vh.field_d != null) {

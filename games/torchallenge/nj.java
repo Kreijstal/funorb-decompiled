@@ -3,44 +3,44 @@
  */
 final class nj {
     static boolean[] field_c;
-    static ka[][] field_e;
+    static Sprite[][] field_e;
     private sl field_d;
     static int field_g;
     private static k field_h;
-    private da field_f;
+    private IntrusiveNode field_f;
     static int[][] field_b;
     static boolean field_a;
 
-    final static void a(ka param0, int param1) {
+    final static void a(Sprite param0, int param1) {
         try {
           if (param1 != 2) {
-            field_e = (ka[][]) null;
+            field_e = (Sprite[][]) null;
           }
-          fc.field_m = param0;
+          ProxySocketConnector.field_m = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "nj.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "nj.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final da a(int param0) {
-        da var2 = null;
-        da var2Lifetime1;
+    final IntrusiveNode a(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 > -31) {
           this.a(-93);
-          var2 = this.field_d.field_e.field_h;
+          var2 = this.field_d.field_e.previous;
           if (this.field_d.field_e == var2) {
             this.field_f = null;
             return null;
           }
-          this.field_f = var2.field_h;
+          this.field_f = var2.previous;
           return var2;
         }
-        var2Lifetime1 = this.field_d.field_e.field_h;
+        var2Lifetime1 = this.field_d.field_e.previous;
         if (this.field_d.field_e == var2Lifetime1) {
           this.field_f = null;
           return null;
         }
-        this.field_f = var2Lifetime1.field_h;
+        this.field_f = var2Lifetime1.previous;
         return var2Lifetime1;
     }
 
@@ -57,29 +57,29 @@ final class nj {
         rf.n(19630);
     }
 
-    final da a(da param0, int param1) {
-        da var3 = null;
+    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         Object stackIn_5_0 = null;
-        da stackIn_7_0 = null;
+        IntrusiveNode stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == null) {
-            var3 = this.field_d.field_e.field_h;
+            var3 = this.field_d.field_e.previous;
           } else {
             var3 = param0;
           }
           if (this.field_d.field_e == var3) {
             this.field_f = null;
             stackIn_5_0 = null;
-            return (da) (stackIn_5_0);
+            return (IntrusiveNode) (stackIn_5_0);
           }
           var4 = 28 / ((49 - param1) / 58);
-          this.field_f = var3.field_h;
+          this.field_f = var3.previous;
           stackIn_7_0 = var3;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -92,16 +92,16 @@ final class nj {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final da b(da param0, int param1) {
-        da var3 = null;
+    final IntrusiveNode b(IntrusiveNode param0, int param1) {
+        IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         Object stackIn_6_0 = null;
-        da stackIn_8_0 = null;
+        IntrusiveNode stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -110,15 +110,15 @@ final class nj {
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_d.field_e.field_f;
+            var3 = this.field_d.field_e.next;
           }
           var4 = -98 % ((-42 - param1) / 45);
           if (this.field_d.field_e == var3) {
             this.field_f = null;
             stackIn_6_0 = null;
-            return (da) (stackIn_6_0);
+            return (IntrusiveNode) (stackIn_6_0);
           }
-          this.field_f = var3.field_f;
+          this.field_f = var3.next;
           stackIn_8_0 = var3;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -131,47 +131,47 @@ final class nj {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final da a(boolean param0) {
+    final IntrusiveNode a(boolean param0) {
         if (param0) {
-          return (da) null;
+          return (IntrusiveNode) null;
         }
-        da var2 = this.field_f;
+        IntrusiveNode var2 = this.field_f;
         if (var2 == this.field_d.field_e) {
           this.field_f = null;
           return null;
         }
-        this.field_f = var2.field_f;
+        this.field_f = var2.next;
         return var2;
     }
 
     public static void b(byte param0) {
-        field_e = (ka[][]) null;
+        field_e = (Sprite[][]) null;
         field_b = (int[][]) null;
         field_h = null;
         if (param0 == -40) {
           field_c = null;
           return;
         }
-        ka var2 = (ka) null;
-        nj.a((ka) null, 74);
+        Sprite var2 = (Sprite) null;
+        nj.a((Sprite) null, 74);
         field_c = null;
     }
 
-    final da c(byte param0) {
-        da var2 = null;
-        da var2Lifetime1;
+    final IntrusiveNode c(byte param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != -13) {
-          field_e = (ka[][]) null;
+          field_e = (Sprite[][]) null;
           var2 = this.field_f;
           if (this.field_d.field_e == var2) {
             this.field_f = null;
             return null;
           }
-          this.field_f = var2.field_h;
+          this.field_f = var2.previous;
           return var2;
         }
         var2Lifetime1 = this.field_f;
@@ -179,7 +179,7 @@ final class nj {
           this.field_f = null;
           return null;
         }
-        this.field_f = var2Lifetime1.field_h;
+        this.field_f = var2Lifetime1.previous;
         return var2Lifetime1;
     }
 
@@ -195,7 +195,7 @@ final class nj {
         try {
           this.field_d = param0;
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "nj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "nj.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -203,15 +203,15 @@ final class nj {
         java.awt.Graphics var4 = null;
         Exception var4_ref = null;
         RuntimeException var4_ref2 = null;
-        ka var5 = null;
+        Sprite var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         Throwable decompiledCaughtException = null;
         try {
           if (param3 != 0) {
-            var5 = (ka) null;
-            nj.a((ka) null, 63);
+            var5 = (Sprite) null;
+            nj.a((Sprite) null, 63);
           }
           try {
             var4 = param2.getGraphics();
@@ -234,30 +234,30 @@ final class nj {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param3).append(')').toString());
         }
     }
 
-    final da c(int param0) {
-        da var2 = null;
-        da var2Lifetime1;
+    final IntrusiveNode c(int param0) {
+        IntrusiveNode var2 = null;
+        IntrusiveNode var2Lifetime1;
         if (param0 != 0) {
-          da var3 = (da) null;
-          this.a((da) null, 103);
-          var2 = this.field_d.field_e.field_f;
+          IntrusiveNode var3 = (IntrusiveNode) null;
+          this.a((IntrusiveNode) null, 103);
+          var2 = this.field_d.field_e.next;
           if (this.field_d.field_e == var2) {
             this.field_f = null;
             return null;
           }
-          this.field_f = var2.field_f;
+          this.field_f = var2.next;
           return var2;
         }
-        var2Lifetime1 = this.field_d.field_e.field_f;
+        var2Lifetime1 = this.field_d.field_e.next;
         if (this.field_d.field_e == var2Lifetime1) {
           this.field_f = null;
           return null;
         }
-        this.field_f = var2Lifetime1.field_f;
+        this.field_f = var2Lifetime1.next;
         return var2Lifetime1;
     }
 
@@ -305,12 +305,12 @@ final class nj {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw oj.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
+          throw oj.wrapException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(param3).append(')').toString());
         }
     }
 
     static {
-        field_e = new ka[2][64];
+        field_e = new Sprite[2][64];
         field_c = new boolean[112];
         field_b = new int[64][2];
         field_h = new k(15, 0, 1, 0);

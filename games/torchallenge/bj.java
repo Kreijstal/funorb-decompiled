@@ -10,7 +10,7 @@ final class bj extends IOException {
     static int[] field_a;
 
     final static void a(int param0) {
-        fl.a(-128, true, mj.field_d, uf.field_j);
+        fl.a(-128, true, GameKeyHandler.field_d, PacketBuffer.field_j);
         int var1 = 25 / ((param0 + 28) / 48);
         ae.field_C = true;
     }
@@ -37,7 +37,7 @@ final class bj extends IOException {
           wj.field_a = 0;
           ih.a(param0 ^ 55);
         } catch (RuntimeException runtimeException) {
-          throw oj.a((Throwable) ((Object) runtimeException), "bj.B(" + param0 + ')');
+          throw oj.wrapException((Throwable) ((Object) runtimeException), "bj.B(" + param0 + ')');
         }
     }
 
@@ -128,7 +128,7 @@ final class bj extends IOException {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw oj.a((Throwable) ((Object) var5), "bj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw oj.wrapException((Throwable) ((Object) var5), "bj.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

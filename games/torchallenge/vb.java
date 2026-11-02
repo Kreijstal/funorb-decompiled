@@ -14,9 +14,9 @@ abstract class vb {
     ii field_i;
     int field_g;
     long field_j;
-    uf field_d;
+    PacketBuffer field_d;
     volatile int field_b;
-    uf field_o;
+    PacketBuffer field_o;
     byte field_f;
     volatile int field_h;
     db field_p;
@@ -177,11 +177,11 @@ abstract class vb {
         this.field_l = new ii();
         this.field_k = new ii();
         this.field_i = new ii();
-        this.field_d = new uf(6);
+        this.field_d = new PacketBuffer(6);
         this.field_f = (byte) 0;
         this.field_h = 0;
         this.field_b = 0;
-        this.field_o = new uf(10);
+        this.field_o = new PacketBuffer(10);
     }
 
     static {
