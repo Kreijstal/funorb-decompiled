@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class fh extends ug {
-    fh field_g;
-    jl field_e;
+abstract class PcmStream extends IntrusiveNode {
+    PcmStream field_g;
+    AbstractAudioSample field_e;
     volatile boolean field_h;
     int field_f;
 
@@ -17,11 +17,11 @@ abstract class fh extends ug {
         }
     }
 
-    abstract fh a();
+    abstract PcmStream a();
 
     abstract void b(int[] param0, int param1, int param2);
 
-    abstract fh b();
+    abstract PcmStream b();
 
     int c() {
         return 255;
@@ -29,7 +29,7 @@ abstract class fh extends ug {
 
     abstract int d();
 
-    fh() {
+    PcmStream() {
         this.field_h = true;
     }
 }

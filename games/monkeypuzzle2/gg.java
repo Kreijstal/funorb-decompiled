@@ -3,7 +3,7 @@
  */
 final class gg {
     static String field_b;
-    private le[] field_a;
+    private Sprite[] field_a;
 
     final static String a(String[] args, String param1, boolean param2) {
         StringBuilder discarded$0 = null;
@@ -193,7 +193,7 @@ final class gg {
     final void a(int param0, int param1, boolean param2, int param3, int param4) {
         lb.a(param1, param0, (byte) -123, this.field_a, param3, param4);
         if (param2) {
-          this.field_a = (le[]) null;
+          this.field_a = (Sprite[]) null;
         }
     }
 
@@ -210,7 +210,7 @@ final class gg {
         }
         if (null == ok.field_f) {
           ok.field_f = new dk();
-          ok.field_f.a(t.field_z, false);
+          ok.field_f.a(ButtonWidget.field_z, false);
           ok.field_f.field_m = pf.field_c;
           ok.field_f.field_p = 6;
           ok.field_f.field_f = 4;
@@ -223,7 +223,7 @@ final class gg {
         return ok.field_f;
     }
 
-    gg(le[] param0) {
+    gg(Sprite[] param0) {
         try {
           this.field_a = param0;
         } catch (RuntimeException runtimeException) {

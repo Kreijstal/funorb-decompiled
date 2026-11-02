@@ -5,7 +5,7 @@ abstract class hf implements kf {
     private long field_e;
     static kg field_g;
     static ad field_a;
-    static le field_d;
+    static Sprite field_d;
     static int[] field_c;
     static String field_b;
     static hj field_f;
@@ -32,7 +32,7 @@ abstract class hf implements kf {
           var1 = ka.c(10367);
         }
         if (param0 == var1.length()) {
-          var1 = pg.field_c;
+          var1 = ProxyAuthenticationRequiredException.field_c;
         }
         return var1;
     }

@@ -4,9 +4,9 @@
 final class af {
     static int field_d;
     static String field_b;
-    static le field_e;
+    static Sprite field_e;
     static int field_c;
-    static pj field_a;
+    static IntrusiveDeque field_a;
 
     public static void a(byte param0) {
         field_a = null;
@@ -15,8 +15,8 @@ final class af {
           field_b = null;
           return;
         }
-        le[] var2 = (le[]) null;
-        af.a(-67, (le[]) null, -37, -110);
+        Sprite[] var2 = (Sprite[]) null;
+        af.a(-67, (Sprite[]) null, -37, -110);
         field_e = null;
         field_b = null;
     }
@@ -54,7 +54,7 @@ final class af {
         }
     }
 
-    final static void a(int param0, le[] param1, int param2, int param3) {
+    final static void a(int param0, Sprite[] param1, int param2, int param3) {
         try {
           hh.field_u = new gg(param1);
           wg.field_h = param0;
@@ -69,6 +69,6 @@ final class af {
     static {
         field_d = 20;
         field_b = "Cancel";
-        field_a = new pj();
+        field_a = new IntrusiveDeque();
     }
 }

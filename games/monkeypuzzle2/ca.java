@@ -7,7 +7,7 @@ final class ca extends rf {
     private int field_u;
     private gf field_g;
     private wd field_c;
-    static le field_f;
+    static Sprite field_f;
     private gf field_p;
     private cg field_q;
     private int field_t;
@@ -16,8 +16,8 @@ final class ca extends rf {
     private uj field_v;
     static String field_n;
     private byte[] field_s;
-    private pj field_j;
-    private pj field_h;
+    private IntrusiveDeque field_j;
+    private IntrusiveDeque field_h;
     private boolean field_m;
     private boolean field_d;
     private int field_l;
@@ -31,14 +31,14 @@ final class ca extends rf {
         fb discarded$0 = null;
         int var2_int;
         fb var2;
-        ug var3;
+        IntrusiveNode var3;
         int var4;
         int var5;
-        ug var6;
-        ug var7;
+        IntrusiveNode var6;
+        IntrusiveNode var7;
         int var2_intLifetime1;
         int var4Lifetime1;
-        ug var3Lifetime1;
+        IntrusiveNode var3Lifetime1;
         boolean decompiledFrameRemainder0 = true;
         var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (null != this.field_h) {
@@ -49,30 +49,30 @@ final class ca extends rf {
             var2_int = 1;
             var3 = this.field_h.a((byte) -117);
             while (var3 != null) {
-              var4 = (int)var3.field_a;
+              var4 = (int)var3.key;
               if (this.field_s[var4] == 0) {
                 discarded$3 = this.a(2, 1, var4);
               }
               if (this.field_s[var4] == 0) {
                 var2_int = 0;
               } else {
-                var3.c(-19822);
+                var3.unlink(-19822);
               }
               var3 = this.field_h.d((byte) 63);
             }
-            L10: while (true) {
+            scanLoop1: while (true) {
               if (this.field_c.field_m.length > this.field_l) {
                 if (this.field_c.field_m[this.field_l] != 0) {
                   if (250 <= this.field_v.field_j) {
                     var2_int = 0;
-                    break L10;
+                    break scanLoop1;
                   }
                   if (0 == this.field_s[this.field_l]) {
                     discarded$2 = this.a(param0 ^ 16309, 1, this.field_l);
                   }
                   if (this.field_s[this.field_l] == 0) {
-                    var6 = new ug();
-                    var6.field_a = (long)this.field_l;
+                    var6 = new IntrusiveNode();
+                    var6.key = (long)this.field_l;
                     var2_int = 0;
                     this.field_h.a(-8212, var6);
                   }
@@ -93,12 +93,12 @@ final class ca extends rf {
               var2_intLifetime1 = 1;
               var3Lifetime1 = this.field_h.a((byte) -117);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_a;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (1 != this.field_s[var4Lifetime1]) {
                   discarded$1 = this.a(2, 2, var4Lifetime1);
                 }
                 if (this.field_s[var4Lifetime1] == 1) {
-                  var3Lifetime1.c(param0 - 36133);
+                  var3Lifetime1.unlink(param0 - 36133);
                 } else {
                   var2_intLifetime1 = 0;
                 }
@@ -114,8 +114,8 @@ final class ca extends rf {
                     discarded$0 = this.a(param0 - 16309, 2, this.field_l);
                   }
                   if (this.field_s[this.field_l] != 1) {
-                    var7 = new ug();
-                    var7.field_a = (long)this.field_l;
+                    var7 = new IntrusiveNode();
+                    var7.key = (long)this.field_l;
                     var2_intLifetime1 = 0;
                     this.field_h.a(-8212, var7);
                   }
@@ -150,7 +150,7 @@ final class ca extends rf {
                 if (!var2.field_m) {
                   throw new RuntimeException();
                 }
-                var2.c(param0 - 36133);
+                var2.unlink(param0 - 36133);
               }
             }
             var2 = (fb) (this.field_q.a((byte) -55));
@@ -438,7 +438,7 @@ final class ca extends rf {
           return null;
         }
         byte[] var4 = var3.e(-81);
-        var3.c(-19822);
+        var3.unlink(-19822);
         if (param0 >= -110) {
           return (byte[]) null;
         }
@@ -476,7 +476,7 @@ final class ca extends rf {
           param1 == 0 &&
           !var12.field_m &&
           var12.field_j) {
-          var12.c(param0 - 19824);
+          var12.unlink(param0 - 19824);
           var4 = null;
         }
         if (var4 == null) {
@@ -512,7 +512,7 @@ final class ca extends rf {
               var4 = this.field_r.a(this.field_u, param2, 82, false, (byte) 2);
             }
           }
-          this.field_q.a((ug) (var4), (long)param2, (byte) -36);
+          this.field_q.a((IntrusiveNode) (var4), (long)param2, (byte) -36);
         }
         if (((fb) (var4)).field_j) {
           return null;
@@ -553,7 +553,7 @@ final class ca extends rf {
                 this.field_s[param2] = (byte) 1;
               }
               if (!((fb) (var4)).field_m) {
-                ((fb) (var4)).c(-19822);
+                ((fb) (var4)).unlink(-19822);
               }
               stackIn_91_0 = var4;
               return (fb) (stackIn_91_0);
@@ -563,13 +563,13 @@ final class ca extends rf {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_s[param2] = (byte)-1;
-            ((fb) (var4)).c(-19822);
+            ((fb) (var4)).unlink(-19822);
             if (((fb) (var4)).field_m) {
               if (this.field_r.d(param0 + 18)) {
                 return null;
               }
               var4 = this.field_r.a(this.field_u, param2, 83, true, (byte) 2);
-              this.field_q.a((ug) (var4), (long)param2, (byte) -36);
+              this.field_q.a((IntrusiveNode) (var4), (long)param2, (byte) -36);
             }
             return null;
           }
@@ -602,11 +602,11 @@ final class ca extends rf {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_r.b(20);
-          ((fb) (var4)).c(-19822);
+          ((fb) (var4)).unlink(-19822);
           if (((fb) (var4)).field_m &&
             !this.field_r.d(param0 + 18)) {
             var4 = this.field_r.a(this.field_u, param2, param0 + 112, true, (byte) 2);
-            this.field_q.a((ug) (var4), (long)param2, (byte) -36);
+            this.field_q.a((IntrusiveNode) (var4), (long)param2, (byte) -36);
           }
           return null;
         }
@@ -621,7 +621,7 @@ final class ca extends rf {
           }
         }
         if (!((fb) (var4)).field_m) {
-          ((fb) (var4)).c(-19822);
+          ((fb) (var4)).unlink(-19822);
         }
         return (fb) (var4);
     }
@@ -629,7 +629,7 @@ final class ca extends rf {
     final void b(int param0) {
         fb discarded$0 = null;
         fb discarded$1 = null;
-        ug var2;
+        IntrusiveNode var2;
         int var3;
         int var4;
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -644,11 +644,11 @@ final class ca extends rf {
         }
         var2 = this.field_j.a((byte) -117);
         while (var2 != null) {
-          var3 = (int)var2.field_a;
+          var3 = (int)var2.key;
           if (var3 >= 0) {
             if (this.field_c.field_e > var3) {
               if (this.field_c.field_m[var3] == 0) {
-                var2.c(-19822);
+                var2.unlink(-19822);
               } else {
                 if (this.field_s[var3] == 0) {
                   discarded$0 = this.a(2, 1, var3);
@@ -657,14 +657,14 @@ final class ca extends rf {
                   discarded$1 = this.a(2, 2, var3);
                 }
                 if (this.field_s[var3] == 1) {
-                  var2.c(-19822);
+                  var2.unlink(-19822);
                 }
               }
             } else {
-              var2.c(-19822);
+              var2.unlink(-19822);
             }
           } else {
-            var2.c(-19822);
+            var2.unlink(-19822);
           }
           var2 = this.field_j.d((byte) 63);
         }
@@ -672,7 +672,7 @@ final class ca extends rf {
 
     public static void d(int param0) {
         if (param0 != -1) {
-          field_f = (le) null;
+          field_f = (Sprite) null;
         }
         field_n = null;
         field_f = null;
@@ -699,7 +699,7 @@ final class ca extends rf {
         }
         this.field_m = true;
         if (null == this.field_h) {
-          this.field_h = new pj();
+          this.field_h = new IntrusiveDeque();
         }
     }
 
@@ -720,7 +720,7 @@ final class ca extends rf {
         RuntimeException var10 = null;
         this.field_q = new cg(16);
         this.field_l = 0;
-        this.field_j = new pj();
+        this.field_j = new IntrusiveDeque();
         this.field_e = 0L;
         try {
           this.field_g = param1;
@@ -729,7 +729,7 @@ final class ca extends rf {
             this.field_d = false;
           } else {
             this.field_d = true;
-            this.field_h = new pj();
+            this.field_h = new IntrusiveDeque();
           }
           stackIn_7_1 = (param8);
           this.field_k = stackIn_7_1;
@@ -783,6 +783,6 @@ final class ca extends rf {
 
     static {
         field_n = "Play the game without logging in just yet";
-        field_f = new le(270, 70);
+        field_f = new Sprite(270, 70);
     }
 }

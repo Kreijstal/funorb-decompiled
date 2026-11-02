@@ -348,7 +348,7 @@ final class oi {
               }
               var19_ref = (ki) (ri.field_b.d(4011));
               if (!(Math.random() < 0.95) &&
-                dc.field_c >= 3 &&
+                IterableNodeHashTable.field_c >= 3 &&
                 var10 <= 1) {
                 var19_ref.a(6, var16, -1);
                 h.a(1, true);

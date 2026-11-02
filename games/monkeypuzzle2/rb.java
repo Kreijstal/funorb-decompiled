@@ -79,7 +79,7 @@ final class rb extends ii {
         RuntimeException decompiledCaughtException = null;
         byte[] var2 = null;
         RuntimeException var2_ref = null;
-        gk var3 = null;
+        PacketBuffer var3 = null;
         int var4 = 0;
         int var5 = 0;
         int[] var6 = null;
@@ -112,25 +112,25 @@ final class rb extends ii {
         var19 = null;
         var16 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          var22 = wc.field_d.a("level" + param0, "", param1 + 49);
+          var22 = NodeHashTableIterator.field_d.a("level" + param0, "", param1 + 49);
           var18 = var22;
           var17 = var18;
           var2 = var17;
           if (var17 == null) {
             return;
           }
-          var3 = new gk(var22);
-          stackIn_6_0 = (var3.a((byte) 114) != el.field_a) ? 0 : 1;
+          var3 = new PacketBuffer(var22);
+          stackIn_6_0 = (var3.readUnsignedByte((byte) 114) != el.field_a) ? 0 : 1;
           var4 = stackIn_6_0;
-          el.a(true, var3.a((byte) 114));
-          var5 = var3.j(17277);
+          el.a(true, var3.readUnsignedByte((byte) 114));
+          var5 = var3.readUnsignedShort(17277);
           if (var4 != 0) {
             for (var6_int = 0; var5 > var6_int; var6_int++) {
               var19_ref = (ki) (ri.field_b.d(param1 + 4069));
               var19_ref.a((byte) 126, var3);
               ri.field_b.a(-8212, var19_ref);
             }
-            var5 = var3.j(17277);
+            var5 = var3.readUnsignedShort(17277);
           }
           var23 = new int[var5];
           var20 = var23;

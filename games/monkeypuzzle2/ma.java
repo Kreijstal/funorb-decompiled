@@ -46,7 +46,7 @@ final class ma {
         int var6 = 0;
         int var8 = 0;
         int var9 = 0;
-        le var10 = null;
+        Sprite var10 = null;
         CharSequence var11 = null;
         String[] stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
@@ -58,8 +58,8 @@ final class ma {
           var11 = (CharSequence) ((Object) param2);
           var3_int = wg.a(false, var11, param1);
           if (param0 < 120) {
-            var10 = (le) null;
-            ma.a((le) null, -54, 47, -57, 64, -26);
+            var10 = (Sprite) null;
+            ma.a((Sprite) null, -54, 47, -57, 64, -26);
           }
           var4 = new String[1 + var3_int];
           var5 = 0;
@@ -199,8 +199,8 @@ final class ma {
           var4 += 2;
         }
         if (param1 <= 102) {
-          le var5 = (le) null;
-          ma.a((le) null, 33, -88, 56, 51, -105);
+          Sprite var5 = (Sprite) null;
+          ma.a((Sprite) null, 33, -88, 56, 51, -105);
         }
         if (param3) {
           var4++;
@@ -208,12 +208,12 @@ final class ma {
         return qh.field_c[var4];
     }
 
-    final static le a(ad param0, String param1, int param2, String param3) {
+    final static Sprite a(ad param0, String param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        le stackIn_2_0 = null;
-        le stackIn_4_0 = null;
+        Sprite stackIn_2_0 = null;
+        Sprite stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -224,7 +224,7 @@ final class ma {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 16711680) {
-            stackIn_2_0 = (le) null;
+            stackIn_2_0 = (Sprite) null;
             return stackIn_2_0;
           }
           var4_int = param0.c(param3, (byte) -105);
@@ -335,7 +335,7 @@ final class ma {
         }
     }
 
-    final static void a(le param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(Sprite param0, int param1, int param2, int param3, int param4, int param5) {
         int var9 = 0;
         int var6 = param5 - param4;
         int var7 = param2;
@@ -517,8 +517,8 @@ final class ma {
           var4 += 2;
         }
         if (param1 <= 102) {
-          le var5 = (le) null;
-          ma.a((le) null, 33, -88, 56, 51, -105);
+          Sprite var5 = (Sprite) null;
+          ma.a((Sprite) null, 33, -88, 56, 51, -105);
         }
         if (param3) {
           var4++;

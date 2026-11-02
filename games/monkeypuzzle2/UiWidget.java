@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-class we extends ug {
+class UiWidget extends IntrusiveNode {
     int field_i;
     aa field_q;
     String field_s;
@@ -19,7 +19,7 @@ class we extends ug {
     int field_k;
     int field_e;
     boolean field_g;
-    static le[] field_f;
+    static Sprite[] field_f;
 
     final void a(Hashtable param0, int param1, StringBuilder param2, int param3) {
         StringBuilder discarded$0 = null;
@@ -38,7 +38,7 @@ class we extends ug {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         int var6 = 0;
-        we var7 = null;
+        UiWidget var7 = null;
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           discarded$0 = param2.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_r).append(",").append(this.field_e).append(" ").append(this.field_l).append("x").append(this.field_p);
@@ -46,8 +46,8 @@ class we extends ug {
             discarded$1 = param2.append(" text=\"").append(this.field_s).append('"');
           }
           if (param3 >= -1) {
-            var7 = (we) null;
-            this.a((we) null, 84, -2, (byte) -23);
+            var7 = (UiWidget) null;
+            this.a((UiWidget) null, 84, -2, (byte) -23);
           }
           if (this.field_g) {
             discarded$2 = param2.append(" mouseover");
@@ -57,7 +57,7 @@ class we extends ug {
           }
           if (null != this.field_h) {
             discarded$4 = param2.append(" renderer=");
-            if (!(this.field_h instanceof we)) {
+            if (!(this.field_h instanceof UiWidget)) {
               discarded$5 = param2.append(this.field_h);
               if (var6 != 0) {
                 param2 = this.a(false, param2, param0, param1 + 1);
@@ -68,7 +68,7 @@ class we extends ug {
           }
           if (null != this.field_o) {
             discarded$6 = param2.append(" listener=");
-            if (this.field_o instanceof we) {
+            if (this.field_o instanceof UiWidget) {
               param2 = this.a(false, param2, param0, 1 + param1);
               if (var6 == 0) {
                 return;
@@ -154,7 +154,7 @@ class we extends ug {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -61) {
-            field_f = (le[]) null;
+            field_f = (Sprite[]) null;
           }
           if (ed.field_c == cf.field_b) {
             stackIn_4_0 = null;
@@ -189,7 +189,7 @@ class we extends ug {
         return this.a(false, new StringBuilder(), new Hashtable(), 0).toString();
     }
 
-    boolean a(we param0, boolean param1) {
+    boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -313,7 +313,7 @@ class we extends ug {
         return false;
     }
 
-    boolean a(int param0, we param1, int param2, int param3, int param4, int param5, int param6) {
+    boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -343,7 +343,7 @@ class we extends ug {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        we var7 = null;
+        UiWidget var7 = null;
         String var8 = null;
         String var9 = null;
         String var10 = null;
@@ -355,15 +355,15 @@ class we extends ug {
         while (true) {
           if (var5 > var4) {
             if (param2 >= 105) {
-              var12 = nd.a((byte) -128);
+              var12 = SecondaryNodeDequeIterator.a((byte) -128);
               if (var12 != null) {
                 hi.field_b.a(nj.field_a, 68, oa.field_G, var12);
               }
               return;
             }
-            var7 = (we) null;
-            this.a(88, 31, (we) null, -103, 118, -124);
-            var11 = nd.a((byte) -128);
+            var7 = (UiWidget) null;
+            this.a(88, 31, (UiWidget) null, -103, 118, -124);
+            var11 = SecondaryNodeDequeIterator.a((byte) -128);
             if (var11 != null) {
               hi.field_b.a(nj.field_a, 68, oa.field_G, var11);
             }
@@ -372,7 +372,7 @@ class we extends ug {
           this.a(30, var5, param0, param1);
           var5++;
           if (var6 != 0) {
-            var8 = nd.a((byte) -128);
+            var8 = SecondaryNodeDequeIterator.a((byte) -128);
             if (var8 != null) {
               hi.field_b.a(nj.field_a, 68, oa.field_G, var8);
             }
@@ -381,7 +381,7 @@ class we extends ug {
         }
     }
 
-    void a(int param0, int param1, we param2, int param3, int param4, int param5) {
+    void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           this.field_t = param4;
         } catch (RuntimeException runtimeException) {
@@ -395,7 +395,7 @@ class we extends ug {
         }
     }
 
-    we(String param0, of param1) {
+    UiWidget(String param0, of param1) {
         this(param0, hi.field_b.field_a, param1);
     }
 
@@ -407,7 +407,7 @@ class we extends ug {
         return !this.field_g ? null : this.field_m;
     }
 
-    void a(we param0, int param1, int param2, byte param3) {
+    void a(UiWidget param0, int param1, int param2, byte param3) {
         int var5_int = 0;
         StringBuilder var6 = null;
         boolean stackIn_6_1 = false;
@@ -446,7 +446,7 @@ class we extends ug {
         }
     }
 
-    boolean a(we param0, char param1, int param2, int param3) {
+    boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_4_0 = null;
@@ -519,7 +519,7 @@ class we extends ug {
         return false;
     }
 
-    boolean a(int param0, int param1, int param2, int param3, we param4, int param5, int param6) {
+    boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -547,12 +547,12 @@ class we extends ug {
         }
     }
 
-    protected we() {
+    protected UiWidget() {
         this.field_i = 0;
         this.field_k = 0;
     }
 
-    we(String param0, ml param1, of param2) {
+    UiWidget(String param0, ml param1, of param2) {
         RuntimeException runtimeException = null;
         ui var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -601,7 +601,7 @@ class we extends ug {
         }
     }
 
-    we(int param0, int param1, int param2, int param3, ml param4, of param5) {
+    UiWidget(int param0, int param1, int param2, int param3, ml param4, of param5) {
         this.field_i = 0;
         this.field_k = 0;
         try {
@@ -655,13 +655,13 @@ class we extends ug {
                 param3 = false;
               }
             }
-            if (ni.field_a != 0) {
-              q.field_a = ni.field_a;
+            if (SecondaryNodeDeque.field_a != 0) {
+              q.field_a = SecondaryNodeDeque.field_a;
               ef.a(107, this.a((byte) 54));
               return param3;
             }
             if (0 == q.field_a) {
-              q.field_a = ni.field_a;
+              q.field_a = SecondaryNodeDeque.field_a;
               ef.a(107, this.a((byte) 54));
               return param3;
             }
@@ -673,23 +673,23 @@ class we extends ug {
               }
               od.field_n = null;
             }
-            q.field_a = ni.field_a;
+            q.field_a = SecondaryNodeDeque.field_a;
             ef.a(107, this.a((byte) 54));
             return param3;
           }
           if (var5 == 0) {
-            q.field_a = ni.field_a;
+            q.field_a = SecondaryNodeDeque.field_a;
             ef.a(107, this.a((byte) 54));
             return param3;
           }
           if (kc.field_d == 0) {
-            q.field_a = ni.field_a;
+            q.field_a = SecondaryNodeDeque.field_a;
             ef.a(107, this.a((byte) 54));
             return param3;
           }
           this.e(13104);
           if (var7 == 0) {
-            q.field_a = ni.field_a;
+            q.field_a = SecondaryNodeDeque.field_a;
             ef.a(107, this.a((byte) 54));
             return param3;
           }
@@ -707,13 +707,13 @@ class we extends ug {
               param3 = false;
             }
           }
-          if (ni.field_a != 0) {
-            q.field_a = ni.field_a;
+          if (SecondaryNodeDeque.field_a != 0) {
+            q.field_a = SecondaryNodeDeque.field_a;
             ef.a(107, this.a((byte) 54));
             return param3;
           }
           if (0 == q.field_a) {
-            q.field_a = ni.field_a;
+            q.field_a = SecondaryNodeDeque.field_a;
             ef.a(107, this.a((byte) 54));
             return param3;
           }
@@ -725,25 +725,25 @@ class we extends ug {
             }
             od.field_n = null;
           }
-          q.field_a = ni.field_a;
+          q.field_a = SecondaryNodeDeque.field_a;
           ef.a(107, this.a((byte) 54));
           return param3;
         }
         var5Lifetime1 = this.b((byte) 74) ? 1 : 0;
         if (!param3) {
           if (var5Lifetime1 == 0) {
-            q.field_a = ni.field_a;
+            q.field_a = SecondaryNodeDeque.field_a;
             ef.a(107, this.a((byte) 54));
             return param3;
           }
           if (kc.field_d == 0) {
-            q.field_a = ni.field_a;
+            q.field_a = SecondaryNodeDeque.field_a;
             ef.a(107, this.a((byte) 54));
             return param3;
           }
           this.e(13104);
           if (var7 == 0) {
-            q.field_a = ni.field_a;
+            q.field_a = SecondaryNodeDeque.field_a;
             ef.a(107, this.a((byte) 54));
             return param3;
           }
@@ -757,13 +757,13 @@ class we extends ug {
             }
             param3 = false;
           }
-          if (ni.field_a != 0) {
-            q.field_a = ni.field_a;
+          if (SecondaryNodeDeque.field_a != 0) {
+            q.field_a = SecondaryNodeDeque.field_a;
             ef.a(107, this.a((byte) 54));
             return param3;
           }
           if (0 == q.field_a) {
-            q.field_a = ni.field_a;
+            q.field_a = SecondaryNodeDeque.field_a;
             ef.a(107, this.a((byte) 54));
             return param3;
           }
@@ -775,20 +775,20 @@ class we extends ug {
             }
             od.field_n = null;
           }
-          q.field_a = ni.field_a;
+          q.field_a = SecondaryNodeDeque.field_a;
           ef.a(107, this.a((byte) 54));
           return param3;
         }
         if (0 != ab.field_d) {
           if (var5Lifetime1 == 0) {
             if (kc.field_d == 0) {
-              if (ni.field_a != 0) {
-                q.field_a = ni.field_a;
+              if (SecondaryNodeDeque.field_a != 0) {
+                q.field_a = SecondaryNodeDeque.field_a;
                 ef.a(107, this.a((byte) 54));
                 return param3;
               }
               if (0 == q.field_a) {
-                q.field_a = ni.field_a;
+                q.field_a = SecondaryNodeDeque.field_a;
                 ef.a(107, this.a((byte) 54));
                 return param3;
               }
@@ -801,7 +801,7 @@ class we extends ug {
                 }
                 od.field_n = null;
               }
-              q.field_a = ni.field_a;
+              q.field_a = SecondaryNodeDeque.field_a;
               ef.a(107, this.a((byte) 54));
               return param3;
             }
@@ -809,13 +809,13 @@ class we extends ug {
               param3 = false;
             } else {
             }
-            if (ni.field_a != 0) {
-              q.field_a = ni.field_a;
+            if (SecondaryNodeDeque.field_a != 0) {
+              q.field_a = SecondaryNodeDeque.field_a;
               ef.a(107, this.a((byte) 54));
               return param3;
             }
             if (0 == q.field_a) {
-              q.field_a = ni.field_a;
+              q.field_a = SecondaryNodeDeque.field_a;
               ef.a(107, this.a((byte) 54));
               return param3;
             }
@@ -828,15 +828,15 @@ class we extends ug {
               }
               od.field_n = null;
             }
-            q.field_a = ni.field_a;
+            q.field_a = SecondaryNodeDeque.field_a;
             ef.a(107, this.a((byte) 54));
             return param3;
           }
           this.a(p.field_a, this, ei.field_a, param1, param0, ab.field_d, -118);
         }
-        sharedTailExit_2: {
+        regionExit1: {
           if (kc.field_d == 0) {
-            if (((ni.field_a == 0)) &&
+            if (((SecondaryNodeDeque.field_a == 0)) &&
               ((0 != q.field_a))) {
               this.a(param1, ei.field_a, this, p.field_a, 0, param0);
               var30 = od.field_n;
@@ -848,9 +848,9 @@ class we extends ug {
                 od.field_n = null;
               }
             }
-            break sharedTailExit_2;
+            break regionExit1;
           }
-          sharedTailExit_1: {
+          regionExit2: {
             if (this.a(param1, qg.field_c, kc.field_d, -1625, this, ab.field_e, param0)) {
               param3 = false;
             } else {
@@ -858,29 +858,29 @@ class we extends ug {
                 this.e(13104);
                 if (var7 != 0) {
                   param3 = false;
-                  if (ni.field_a == 0 &&
+                  if (SecondaryNodeDeque.field_a == 0 &&
                     0 != q.field_a) {
                     this.a(param1, ei.field_a, this, p.field_a, 0, param0);
                     var31 = od.field_n;
                     var6Lifetime1Lifetime1 = var31;
                     if (var31 == null) {
-                      break sharedTailExit_2;
+                      break regionExit1;
                     }
                     if (var31.field_o instanceof tc) {
                       ((tc) (var31.field_o)).a((oa) null, (byte) -27, var31);
                     }
                     od.field_n = null;
                   }
-                  break sharedTailExit_1;
+                  break regionExit2;
                 }
               }
             }
-            if (ni.field_a == 0 &&
+            if (SecondaryNodeDeque.field_a == 0 &&
               0 != q.field_a) {
               this.a(param1, ei.field_a, this, p.field_a, 0, param0);
               var32 = od.field_n;
               if (var32 == null) {
-                break sharedTailExit_2;
+                break regionExit1;
               }
               if (var32.field_o instanceof tc) {
                 ((tc) (var32.field_o)).a((oa) null, (byte) -27, var32);
@@ -889,7 +889,7 @@ class we extends ug {
             }
           }
         }
-        q.field_a = ni.field_a;
+        q.field_a = SecondaryNodeDeque.field_a;
         ef.a(107, this.a((byte) 54));
         return param3;
     }

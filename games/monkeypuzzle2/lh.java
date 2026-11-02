@@ -9,7 +9,7 @@ final class lh {
     static String[] field_d;
 
     final static void a(ad param0, ad param1, ad param2, int param3) {
-        le var18 = null;
+        Sprite var18 = null;
         ai[] var5 = null;
         ai[][] var6 = null;
         int[][] var20 = null;
@@ -17,10 +17,10 @@ final class lh {
         int[][] var7 = null;
         ai[] var15 = null;
         int var11_int = 0;
-        le var16 = null;
-        le var19 = null;
-        le var11 = null;
-        le var13 = null;
+        Sprite var16 = null;
+        Sprite var19 = null;
+        Sprite var11 = null;
+        Sprite var13 = null;
         int var8 = 0;
         int var9 = 0;
         int var14 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -33,9 +33,9 @@ final class lh {
           qj.field_C = lb.a(false, "commonui", param1, "button");
           hk.field_i = rd.a("validation", param1, 0, "commonui");
           pf.field_c = (ta) ((Object) cb.a("commonui", param0, -103, param1, "arezzo12"));
-          t.field_z = (ta) ((Object) cb.a("commonui", param0, -99, param1, "arezzo14"));
-          pj.field_c = (ta) ((Object) cb.a("commonui", param0, -75, param1, "arezzo14bold"));
-          var18 = new le(param2.a("", "button.gif", -128), (java.awt.Component) ((Object) ie.field_e));
+          ButtonWidget.field_z = (ta) ((Object) cb.a("commonui", param0, -99, param1, "arezzo14"));
+          IntrusiveDeque.field_c = (ta) ((Object) cb.a("commonui", param0, -75, param1, "arezzo14bold"));
+          var18 = new Sprite(param2.a("", "button.gif", -128), (java.awt.Component) ((Object) ie.field_e));
           df.a("commonui", param1, (byte) 118, "dropdown");
           var5 = uj.a("commonui", "screen_options", param1, false);
           vj.field_d = new ai[4];
@@ -64,19 +64,19 @@ final class lh {
           vf.a((byte) 34);
           var18.e();
           ge.g(0, 0, ge.field_h, ge.field_g);
-          var16 = new le(var9Lifetime1, var9Lifetime1);
+          var16 = new Sprite(var9Lifetime1, var9Lifetime1);
           var19 = var16;
           var19.e();
           var18.a(0, 0);
           int var12 = 16 % ((param3 - 39) / 53);
-          var11 = new le(var9Lifetime1, var9Lifetime1);
+          var11 = new Sprite(var9Lifetime1, var9Lifetime1);
           var11.e();
           var18.a(-var18.field_k + var9Lifetime1, 0);
-          var13 = new le(-(var9Lifetime1 * 2) + var18.field_k, var9Lifetime1);
+          var13 = new Sprite(-(var9Lifetime1 * 2) + var18.field_k, var9Lifetime1);
           var13.e();
           var18.a(-var9Lifetime1, 0);
           tj.b(653);
-          qj.field_C = new le[]{var16, var13, var11};
+          qj.field_C = new Sprite[]{var16, var13, var11};
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "lh.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

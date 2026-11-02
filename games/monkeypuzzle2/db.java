@@ -16,9 +16,9 @@ final class db implements ml {
     final static void a(int param0) {
         Throwable decompiledCaughtException = null;
         Object var1 = null;
-        var1 = we.field_n;
+        var1 = UiWidget.field_n;
         synchronized (var1) {
-          ni.field_a = lf.field_a;
+          SecondaryNodeDeque.field_a = lf.field_a;
           mg.field_s = mg.field_s + 1;
           ei.field_a = b.field_k;
           p.field_a = dh.field_b;
@@ -43,7 +43,7 @@ final class db implements ml {
           var1 = ue.field_G;
           if (var1 > 0) {
             if (var1 != 1) {
-              rc.field_i = gg.a(new String[]{Integer.toString(var1)}, pj.field_d, true);
+              rc.field_i = gg.a(new String[]{Integer.toString(var1)}, IntrusiveDeque.field_d, true);
             } else {
               rc.field_i = mc.field_i;
             }
@@ -66,7 +66,7 @@ final class db implements ml {
           var2_int = -108 % ((param1 + 28) / 61);
           var3 = (d) (wk.field_b.a((byte) -117));
           while (var3 != null) {
-            pj.a(param0, var3, true);
+            IntrusiveDeque.a(param0, var3, true);
             var3 = (d) (wk.field_b.d((byte) 63));
           }
           var5 = (de) (qa.field_d.a((byte) -117));
@@ -82,7 +82,7 @@ final class db implements ml {
         }
     }
 
-    public final void a(boolean param0, we param1, int param2, int param3, int param4) {
+    public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
@@ -91,7 +91,7 @@ final class db implements ml {
         int var12 = 0;
         int var13 = 0;
         fj var14 = null;
-        we stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -101,7 +101,7 @@ final class db implements ml {
         int var12Lifetime1;
         try {
           if (param1 instanceof fj) {
-            stackIn_3_0 = (we) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           } else {
             stackIn_3_0 = null;
           }

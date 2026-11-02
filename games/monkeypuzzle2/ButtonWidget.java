@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-class t extends we {
+class ButtonWidget extends UiWidget {
     boolean field_w;
     private boolean field_A;
     private boolean field_x;
     boolean field_u;
-    static pj field_v;
+    static IntrusiveDeque field_v;
     static String field_y;
     static ta field_z;
 
     final void e(int param0) {
         if (param0 != 13104) {
-          we var3 = (we) null;
-          this.a(-78, 95, 39, 80, (we) null, -32, 69);
+          UiWidget var3 = (UiWidget) null;
+          this.a(-78, 95, 39, 80, (UiWidget) null, -32, 69);
           if (!this.field_A) {
             return;
           }
@@ -26,7 +26,7 @@ class t extends we {
           if (!(this.field_o instanceof bj)) {
             return;
           }
-          ((bj) (this.field_o)).a(false, (we) (this), this.field_A);
+          ((bj) (this.field_o)).a(false, (UiWidget) (this), this.field_A);
           return;
         }
         if (!this.field_A) {
@@ -39,10 +39,10 @@ class t extends we {
         if (!(this.field_o instanceof bj)) {
           return;
         }
-        ((bj) (this.field_o)).a(false, (we) (this), this.field_A);
+        ((bj) (this.field_o)).a(false, (UiWidget) (this), this.field_A);
     }
 
-    boolean a(int param0, int param1, int param2, int param3, we param4, int param5, int param6) {
+    boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -79,7 +79,7 @@ class t extends we {
         }
     }
 
-    t(String param0, ml param1, of param2) {
+    ButtonWidget(String param0, ml param1, of param2) {
         super(param0, param1, param2);
         this.field_w = true;
         this.field_A = false;
@@ -93,11 +93,11 @@ class t extends we {
         return this.field_A;
     }
 
-    t(String param0, of param1) {
+    ButtonWidget(String param0, of param1) {
         this(param0, hi.field_b.field_i, param1);
     }
 
-    void a(we param0, int param1, int param2, byte param3) {
+    void a(UiWidget param0, int param1, int param2, byte param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -106,9 +106,9 @@ class t extends we {
         try {
           super.a(param0, param1, param2, (byte) -48);
           if (this.field_t != 0 &&
-            this.field_t != ni.field_a) {
+            this.field_t != SecondaryNodeDeque.field_a) {
             if (this.a(ei.field_a, param1, param2, p.field_a, (byte) 45) &&
-              0 == ni.field_a) {
+              0 == SecondaryNodeDeque.field_a) {
               this.b(-93, ei.field_a - param2, -param1 + p.field_a, this.field_t);
             }
             this.a(param1, ei.field_a, param0, p.field_a, 0, param2);
@@ -182,8 +182,8 @@ class t extends we {
 
     void b(int param0, int param1, int param2, int param3) {
         if (param0 > -23) {
-          we var6 = (we) null;
-          this.a((we) null, 14, 64, (byte) 66);
+          UiWidget var6 = (UiWidget) null;
+          this.a((UiWidget) null, 14, 64, (byte) 66);
           if (null == this.field_o) {
             return;
           }
@@ -202,7 +202,7 @@ class t extends we {
         }
     }
 
-    final void a(int param0, int param1, we param2, int param3, int param4, int param5) {
+    final void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         try {
           if (this.field_o != null &&
             this.field_o instanceof jb) {
@@ -220,14 +220,14 @@ class t extends we {
         int var2 = -29 % ((-53 - param0) / 58);
         if (var1 != null) {
           var3 = MonkeyPuzzle2.field_D;
-          var3.e(-86);
-          var3.e(126);
-          var3.e(-46);
-          var3.e(127);
-          var1.c(-19822);
+          var3.readInt(-86);
+          var3.readInt(126);
+          var3.readInt(-46);
+          var3.readInt(127);
+          var1.unlink(-19822);
           return;
         }
-        gk.a(-1);
+        PacketBuffer.a(-1);
     }
 
     public static void j(int param0) {
@@ -235,11 +235,11 @@ class t extends we {
         field_z = null;
         field_y = null;
         if (param0 > -26) {
-          t.i(28);
+          ButtonWidget.i(28);
         }
     }
 
-    boolean a(we param0, char param1, int param2, int param3) {
+    boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
@@ -268,7 +268,7 @@ class t extends we {
         }
     }
 
-    boolean a(we param0, boolean param1) {
+    boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -286,7 +286,7 @@ class t extends we {
               if (!(this.field_o instanceof bj)) {
                 return true;
               }
-              ((bj) (this.field_o)).a(false, (we) (this), this.field_A);
+              ((bj) (this.field_o)).a(false, (UiWidget) (this), this.field_A);
             }
             return true;
           }
@@ -305,7 +305,7 @@ class t extends we {
         }
     }
 
-    protected t() {
+    protected ButtonWidget() {
         this.field_w = true;
         this.field_A = false;
         this.field_x = true;
@@ -313,7 +313,7 @@ class t extends we {
     }
 
     static {
-        field_v = new pj();
+        field_v = new IntrusiveDeque();
         field_y = "Waiting for sound effects";
     }
 }

@@ -5,7 +5,7 @@ final class n {
     static String field_c;
     static float[][] field_d;
     static int field_a;
-    static li[] field_b;
+    static PcmSampleStream[] field_b;
 
     public static void a(int param0) {
         if (param0 != -6991) {
@@ -34,7 +34,7 @@ final class n {
           if (param2 <= 114) {
             field_d = (float[][]) null;
           }
-          stackIn_6_0 = pj.a((byte) 101, param1.b(255, param4, param3));
+          stackIn_6_0 = IntrusiveDeque.a((byte) 101, param1.b(255, param4, param3));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -97,6 +97,6 @@ final class n {
         field_c = "Names cannot start or end with space or underscore";
         field_d = new float[20][2];
         field_a = 3;
-        field_b = new li[field_a];
+        field_b = new PcmSampleStream[field_a];
     }
 }

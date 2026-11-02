@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bg extends ua implements u, ql, sh {
+final class bg extends WidgetContainer implements u, ql, sh {
     private em field_O;
-    private t field_z;
-    private t field_K;
+    private ButtonWidget field_z;
+    private ButtonWidget field_K;
     private jj field_C;
     static String[] field_B;
     static int[] field_L;
@@ -17,7 +17,7 @@ final class bg extends ua implements u, ql, sh {
     static int field_E;
     private qc field_H;
 
-    private final int a(byte param0, int param1, we param2, String param3, int param4, String param5) {
+    private final int a(byte param0, int param1, UiWidget param2, String param3, int param4, String param5) {
         RuntimeException var7 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -77,13 +77,13 @@ final class bg extends ua implements u, ql, sh {
           if (param0 != 0) {
             if (param0 != 1) {
               if (2 == param0) {
-                wc.a("conduct.ws", false);
+                NodeHashTableIterator.a("conduct.ws", false);
               }
             } else {
-              wc.a("privacy.ws", false);
+              NodeHashTableIterator.a("privacy.ws", false);
             }
           } else {
-            wc.a("terms.ws", false);
+            NodeHashTableIterator.a("terms.ws", false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -140,7 +140,7 @@ final class bg extends ua implements u, ql, sh {
         }
     }
 
-    private final int a(int param0, String param1, we param2, int param3, int param4) {
+    private final int a(int param0, String param1, UiWidget param2, int param3, int param4) {
         mh var6 = null;
         RuntimeException var6_ref = null;
         int stackIn_2_0 = 0;
@@ -156,7 +156,7 @@ final class bg extends ua implements u, ql, sh {
             stackIn_2_0 = 55;
             return stackIn_2_0;
           }
-          var6 = new mh(20, param4, 120 + param3, 25, param2, false, 120, 3, t.field_z, 16777215, param1);
+          var6 = new mh(20, param4, 120 + param3, 25, param2, false, 120, 3, ButtonWidget.field_z, 16777215, param1);
           this.b((byte) -78, var6);
           stackIn_4_0 = var6.field_p;
           return stackIn_4_0;
@@ -249,7 +249,7 @@ final class bg extends ua implements u, ql, sh {
             var4 = 1;
             var5 = 1;
           }
-          ik.field_i = sc.a(-124, var2 * var5, var4 * var2);
+          SpriteState.field_i = sc.a(-124, var2 * var5, var4 * var2);
           return;
         }
         if (var3 < 105) {
@@ -305,7 +305,7 @@ final class bg extends ua implements u, ql, sh {
             var4Lifetime1 = 1;
             var5Lifetime1 = 1;
           }
-          ik.field_i = sc.a(-124, var2 * var5Lifetime1, var4Lifetime1 * var2);
+          SpriteState.field_i = sc.a(-124, var2 * var5Lifetime1, var4Lifetime1 * var2);
           return;
         }
         if (var3 >= 120) {
@@ -356,7 +356,7 @@ final class bg extends ua implements u, ql, sh {
             var4Lifetime2 = 1;
             var5Lifetime2 = 1;
           }
-          ik.field_i = sc.a(-124, var2 * var5Lifetime2, var4Lifetime2 * var2);
+          SpriteState.field_i = sc.a(-124, var2 * var5Lifetime2, var4Lifetime2 * var2);
           return;
         }
         var3 = -var3 + 120;
@@ -408,7 +408,7 @@ final class bg extends ua implements u, ql, sh {
           var4Lifetime3 = 1;
           var5Lifetime3 = 1;
         }
-        ik.field_i = sc.a(-124, var2Lifetime1 * var5Lifetime3, var4Lifetime3 * var2Lifetime1);
+        SpriteState.field_i = sc.a(-124, var2Lifetime1 * var5Lifetime3, var4Lifetime3 * var2Lifetime1);
         return;
     }
 
@@ -448,7 +448,7 @@ final class bg extends ua implements u, ql, sh {
         }
     }
 
-    private final int a(int param0, int param1, String param2, int param3, we param4, int param5, String param6) {
+    private final int a(int param0, int param1, String param2, int param3, UiWidget param4, int param5, String param6) {
         RuntimeException var8 = null;
         vg var9 = null;
         mh var10 = null;
@@ -462,7 +462,7 @@ final class bg extends ua implements u, ql, sh {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var10 = new mh(20, param1, 120 + param3, 25, param4, false, 120, param5, t.field_z, 16777215, param2);
+          var10 = new mh(20, param1, 120 + param3, 25, param4, false, 120, param5, ButtonWidget.field_z, 16777215, param2);
           this.b((byte) -88, var10);
           var9 = new vg(((ag) ((Object) param4)).a(-121), param6, 126, var10.field_p + param1, param3 + 50, param0);
           var9.field_o = (of) (this);
@@ -501,7 +501,7 @@ final class bg extends ua implements u, ql, sh {
           return;
         }
         String var3 = (String) null;
-        int discarded$0 = this.a(-96, -126, (String) null, 71, (we) null, 63, (String) null);
+        int discarded$0 = this.a(-96, -126, (String) null, 71, (UiWidget) null, 63, (String) null);
         ((hh) (this.field_N.a(-114))).f((byte) -82);
     }
 
@@ -531,13 +531,13 @@ final class bg extends ua implements u, ql, sh {
         this.field_F = new qc("", (of) null, 3);
         int var1 = 1;
         this.field_O = new em("", (of) null, var1 != 0);
-        this.field_z = new t(pl.field_b, (of) null);
-        this.field_K = new t(aj.field_d, (of) null);
+        this.field_z = new ButtonWidget(pl.field_b, (of) null);
+        this.field_K = new ButtonWidget(aj.field_d, (of) null);
         this.field_N.field_m = oa.field_E;
         this.field_D.field_m = ad.field_f;
         this.field_I.field_m = rf.field_b;
         this.field_H.field_m = kd.field_d;
-        this.field_J.field_m = id.field_h;
+        this.field_J.field_m = BufferedSocket.field_h;
         this.field_F.field_m = ri.field_d;
         this.field_O.field_m = a.field_j;
         this.field_N.a(new hh(this.field_N), true);
@@ -566,10 +566,10 @@ final class bg extends ua implements u, ql, sh {
         var3 = var3 + (5 + this.a((byte) 98, 170, this.field_J, ce.field_a, var3, jj.field_B));
         var3 = var3 + (5 + this.a((byte) 122, 170, this.field_N, ke.field_e, var3, wj.field_l));
         var3 = var3 + this.a(var3, 93, 170, mg.field_v, this.field_F);
-        mh var4 = new mh(46, var3, -90 + this.field_l, 25, this.field_O, true, -120 + this.field_l, 5, pf.field_c, 11579568, je.field_f);
+        mh var4 = new mh(46, var3, -90 + this.field_l, 25, this.field_O, true, -120 + this.field_l, 5, pf.field_c, 11579568, WeightedObjectCache.field_f);
         this.b((byte) -52, var4);
         var3 = var3 + var4.field_p;
-        a var5 = new a(t.field_z, 0, 0, 0, 0, 16777215, -1, 0, 0, t.field_z.field_C, -1, 2147483647, true);
+        a var5 = new a(ButtonWidget.field_z, 0, 0, 0, 0, 16777215, -1, 0, 0, ButtonWidget.field_z.field_C, -1, 2147483647, true);
         this.field_C = new jj(var2, var5);
         this.field_C.field_m = "";
         this.field_C.a(false, 0, kg.field_a);
@@ -592,7 +592,7 @@ final class bg extends ua implements u, ql, sh {
         this.a(var6 + 55 + var3, 13361, 0, 496, 0);
     }
 
-    public final void a(int param0, int param1, int param2, int param3, t param4) {
+    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         boolean discarded$1 = false;
         jj var7 = null;
         RuntimeException stackIn_10_0 = null;
@@ -627,7 +627,7 @@ final class bg extends ua implements u, ql, sh {
         }
     }
 
-    final boolean a(we param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -664,7 +664,7 @@ final class bg extends ua implements u, ql, sh {
         }
     }
 
-    private final int a(int param0, int param1, int param2, String param3, we param4) {
+    private final int a(int param0, int param1, int param2, String param3, UiWidget param4) {
         RuntimeException var6 = null;
         vh var7 = null;
         int var8 = 0;
@@ -677,7 +677,7 @@ final class bg extends ua implements u, ql, sh {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var9 = new mh(20, param0, param2 + 120, 25, param4, false, 120, 3, t.field_z, 16777215, param3);
+          var9 = new mh(20, param0, param2 + 120, 25, param4, false, 120, 3, ButtonWidget.field_z, 16777215, param3);
           this.b((byte) -67, var9);
           var7 = new vh(((ag) ((Object) param4)).a(-107));
           this.b((byte) -82, var7);
@@ -759,7 +759,7 @@ final class bg extends ua implements u, ql, sh {
         return "<u=2164A2><col=2164A2>";
     }
 
-    final void a(we param0, int param1, int param2, byte param3) {
+    final void a(UiWidget param0, int param1, int param2, byte param3) {
         if (param3 > -13) {
           return;
         }

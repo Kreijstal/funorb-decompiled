@@ -4,9 +4,9 @@
 import java.io.*;
 
 final class kk {
-    private le field_a;
+    private Sprite field_a;
     private int field_g;
-    private le[] field_f;
+    private Sprite[] field_f;
     private boolean field_d;
     int field_e;
     static int field_b;
@@ -117,7 +117,7 @@ final class kk {
         int stackIn_93_2 = 0;
         boolean stackIn_94_3 = false;
         int var2_int = 0;
-        le var2 = null;
+        Sprite var2 = null;
         int var3 = 0;
         vk var3_ref_vk = null;
         int var4 = 0;
@@ -142,18 +142,18 @@ final class kk {
         var2_int = 0;
         do {
           if (var2_int >= 480) {
-            df.field_q[ob.field_r].f(-(df.field_q[0].field_m >> 1) + 560, dd.field_e);
+            df.field_q[ob.field_r].f(-(df.field_q[0].field_m >> 1) + 560, ClientException.field_e);
             break;
           }
           kj.field_F.c(560 - (kj.field_F.field_m >> 1), var2_int);
           var2_int = var2_int + kj.field_F.field_n;
         } while (var6 == 0);
         var2_int = 0;
-        L6: while (true) {
+        scanLoop1: while (true) {
           if (var2_int < dk.field_j) {
             stackIn_23_0 = 0;
             if (var6 != 0) {
-              break L6;
+              break scanLoop1;
             }
             var3 = stackIn_23_0;
             while (var3 < 5) {
@@ -162,7 +162,7 @@ final class kk {
             }
             ma.a(ve.field_x[var2_int][0] << 4, ve.field_x[var2_int][1] << 4, 128, 40000);
             var2_int++;
-            continue L6;
+            continue scanLoop1;
           }
           stackIn_23_0 = param0;
           break;
@@ -220,7 +220,7 @@ final class kk {
                 if (6 != this.field_g &&
                   this.field_g != 10) {
                   if (this.field_g == 7) {
-                    lb.a(120, 400, (byte) -119, wc.field_e, 180, 185);
+                    lb.a(120, 400, (byte) -119, NodeHashTableIterator.field_e, 180, 185);
                     var3_ref_vk = pl.field_e;
                     var4Lifetime1 = var3_ref_vk.field_C + 200;
                     var5Lifetime1 = 4 + (var3_ref_vk.field_j + var3_ref_vk.field_D);
@@ -330,7 +330,7 @@ final class kk {
         var3 = 380;
         var4 = 263;
         ge.d(3, 3, var3 - 6, -6 + var4, 16249775);
-        lb.a(0, var3, (byte) -124, wc.field_e, 0, var4);
+        lb.a(0, var3, (byte) -124, NodeHashTableIterator.field_e, 0, var4);
         var5 = pl.field_e;
         var6 = 0;
         var7_int = si.field_r / 8;
@@ -349,7 +349,7 @@ final class kk {
                 stackIn_12_0 = lg.field_I;
               }
               var7 = stackIn_12_0;
-              var5.a(gg.a(new String[]{var7}, je.field_a, true), 14, 53, var3 - 30, var4, 1, -1, 0, 0, 14);
+              var5.a(gg.a(new String[]{var7}, WeightedObjectCache.field_a, true), 14, 53, var3 - 30, var4, 1, -1, 0, 0, 14);
             }
             ac.field_a.a((byte) 118);
             var6 = this.field_i * var4 / 20;
@@ -441,12 +441,12 @@ final class kk {
           var15 = (Throwable) null;
           kk.a((String) null, (byte) -126, (Throwable) null);
         }
-        L2: {
+        regionExit1: {
           this.field_a.e();
           var2 = 380;
           var3 = 275;
           ge.d(3, 3, var2 - 6, var3 - 6, 16249775);
-          lb.a(0, var2, (byte) -12, wc.field_e, 0, var3);
+          lb.a(0, var2, (byte) -12, NodeHashTableIterator.field_e, 0, var3);
           sb.field_r.a(bg.field_B[ef.field_b], var2 >> 1, 30, 9330743, -1);
           var4 = pl.field_e;
           var5 = s.field_S;
@@ -454,16 +454,16 @@ final class kk {
             if (var5.field_g == null) {
               var6 = re.field_b;
               if (var14 == 0) {
-                break L2;
+                break regionExit1;
               }
             }
             var6 = qc.field_O;
             var7_ref_String__ = var5.field_g[ef.field_b];
             var19 = var5.field_i[ef.field_b];
-            var9 = ti.a(0, var5, ef.field_b, pg.field_b);
+            var9 = ti.a(0, var5, ef.field_b, ProxyAuthenticationRequiredException.field_b);
             var10 = var4.field_C + 40;
             var11 = 0;
-            L6: while (true) {
+            scanLoop2: while (true) {
               if (var11 < 10) {
                 stackIn_23_0 = ~(1 & var11);
                 stackIn_23_1 = -1;
@@ -490,7 +490,7 @@ final class kk {
                 }
               } else {
                 if (hf.field_f == null) {
-                  break L6;
+                  break scanLoop2;
                 }
                 stackIn_23_0 = var9;
                 stackIn_23_1 = -1;
@@ -541,7 +541,7 @@ final class kk {
               this.field_g == 8) {
               ee.field_F = -1;
             }
-            pg.field_d[this.field_e].c((byte) -122);
+            ProxyAuthenticationRequiredException.field_d[this.field_e].c((byte) -122);
             if (this.field_e == 2) {
               s.field_S = null;
             }
@@ -587,7 +587,7 @@ final class kk {
             if (-1 == this.field_e) {
               continue;
             }
-            pg.field_d[this.field_e].c((byte) -89);
+            ProxyAuthenticationRequiredException.field_d[this.field_e].c((byte) -89);
             if (var4 == 0) {
               continue;
             }
@@ -645,14 +645,14 @@ final class kk {
           if (this.field_e != qh.field_b) {
             this.field_i = 20;
             if (this.field_e != -1) {
-              pg.field_d[this.field_e].a(true, false);
+              ProxyAuthenticationRequiredException.field_d[this.field_e].a(true, false);
             }
             this.field_d = true;
           }
           return;
         }
         if (this.field_e != -1) {
-          pg.field_d[this.field_e].a(false, false);
+          ProxyAuthenticationRequiredException.field_d[this.field_e].a(false, false);
         }
         this.field_d = true;
         this.field_i = 20;
@@ -661,7 +661,7 @@ final class kk {
 
     final static void a(String param0, byte param1, Throwable param2) {
         try {
-          md stackIn_14_0;
+          PlatformTaskDispatcher stackIn_14_0;
           int stackIn_14_1;
           java.net.URL stackIn_14_2;
           java.net.URL stackIn_14_3;
@@ -684,7 +684,7 @@ final class kk {
           try {
             var3 = "";
             if (param2 != null) {
-              var3 = id.a(param2, (byte) 37);
+              var3 = BufferedSocket.a(param2, (byte) 37);
             }
             if (param0 != null) {
               if (param2 != null) {
@@ -697,26 +697,26 @@ final class kk {
             var8 = eg.a("%40", 4, "@", var7);
             var9 = eg.a("%26", 4, "&", var8);
             var10 = eg.a("%23", 4, "#", var9);
-            if (ni.field_e == null) {
+            if (SecondaryNodeDeque.field_e == null) {
               return;
             }
             stackIn_14_0 = fk.field_c;
             stackIn_14_1 = 101;
             stackIn_14_2 = null;
             stackIn_14_3 = null;
-            stackIn_14_4 = ni.field_e.getCodeBase();
+            stackIn_14_4 = SecondaryNodeDeque.field_e.getCodeBase();
             stackIn_14_5 = new StringBuilder().append("clienterror.ws?c=").append(kd.field_c).append("&u=");
-            if (null == ck.field_f) {
+            if (null == DequeCursor.field_f) {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
               stackIn_15_6 = "" + cc.field_b;
             } else {
               stackIn_15_2 = null;
               stackIn_15_3 = null;
-              stackIn_15_6 = ck.field_f;
+              stackIn_15_6 = DequeCursor.field_f;
             }
-            var4 = ((md) (Object) stackIn_14_0).a((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(md.field_l).append("&v2=").append(md.field_m).append("&e=").append(var10).toString()));
-            L6: while (true) {
+            var4 = ((PlatformTaskDispatcher) (Object) stackIn_14_0).a((byte) stackIn_14_1, new java.net.URL(stackIn_14_4, ((StringBuilder) (Object) stackIn_14_5).append(stackIn_15_6).append("&v1=").append(PlatformTaskDispatcher.field_l).append("&v2=").append(PlatformTaskDispatcher.field_m).append("&e=").append(var10).toString()));
+            scanLoop1: while (true) {
               if (0 == var4.field_g) {
                 em.a(1L, false);
                 if (var6 == 0) {
@@ -724,7 +724,7 @@ final class kk {
                 }
               } else {
                 if (var4.field_g != 1) {
-                  break L6;
+                  break scanLoop1;
                 }
               }
               var5 = (DataInputStream) (var4.field_b);
@@ -804,7 +804,7 @@ final class kk {
         stackIn_17_0 = (param2) ? 5683782 : 1;
         var9 = stackIn_17_0;
         if (this.field_g != 7) {
-          lb.a(0, var8, (byte) -33, wc.field_e, 0, 40);
+          lb.a(0, var8, (byte) -33, NodeHashTableIterator.field_e, 0, 40);
         }
         var10 = sb.field_r;
         if (var6 == 11 ||
@@ -849,7 +849,7 @@ final class kk {
         int var2 = 380;
         int var3 = 275;
         ge.d(3, 3, -6 + var2, -6 + var3, 16249775);
-        lb.a(0, var2, (byte) 64, wc.field_e, 0, var3);
+        lb.a(0, var2, (byte) 64, NodeHashTableIterator.field_e, 0, var3);
         int var5 = 86 % ((53 - param0) / 61);
         int var4 = 90;
         sb.field_r.a(el.field_c, 20, var4, -40 + var2, 200, 9330743, -1, 1, 0, 0);
@@ -912,14 +912,14 @@ final class kk {
             var2 = 0;
           }
         }
-        L7: {
+        regionExit1: {
           if (!this.field_c.a((byte) 10) &&
             oa.field_H == 98) {
             this.field_c.field_b = false;
             if (var2 < 0) {
               var2 = 2;
               if (var3 == 0) {
-                break L7;
+                break regionExit1;
               }
             }
             if (var2 < 2) {
@@ -1020,7 +1020,7 @@ final class kk {
                 if (!s.field_S.field_l) {
                   s.field_S = null;
                   lg.field_w = lg.field_w + 1;
-                  pg.field_b = null;
+                  ProxyAuthenticationRequiredException.field_b = null;
                   hf.field_f = new hj();
                   this.field_e = -1;
                   decompiledFrameRemainder0 = false;
@@ -1037,7 +1037,7 @@ final class kk {
             if (decompiledFrameRemainder0) {
               s.field_S = null;
               lg.field_w = lg.field_w + 1;
-              pg.field_b = null;
+              ProxyAuthenticationRequiredException.field_b = null;
               hf.field_f = new hj();
               this.field_e = -1;
             }
@@ -1140,10 +1140,10 @@ final class kk {
                     qb.a(256, var7);
                   }
                 }
-                fieldTemp$0 = we.field_j + 1;
-                we.field_j = we.field_j + 1;
+                fieldTemp$0 = UiWidget.field_j + 1;
+                UiWidget.field_j = UiWidget.field_j + 1;
                 if (fieldTemp$0 > 25) {
-                  we.field_j = 0;
+                  UiWidget.field_j = 0;
                   cj.a((byte) 109, ke.field_h[0]);
                 }
               }
@@ -1155,7 +1155,7 @@ final class kk {
                 break;
               }
               cj.a((byte) -18, ke.field_h[0]);
-              wc.a(-17076);
+              NodeHashTableIterator.a(-17076);
               if (var8 == 0) {
                 break;
               }
@@ -1257,18 +1257,18 @@ final class kk {
                 hf.field_f.a(-19921);
                 hf.field_f.field_I = -1;
               }
-              L53: {
+              regionExit1: {
                 if (ok.a(false)) {
                   if (hf.field_f.field_A <= 0 &&
                     0 >= fg.field_b) {
                     this.field_e = 0;
                     if (var8 == 0) {
-                      break L53;
+                      break regionExit1;
                     }
                   }
                   this.field_e = 7;
                   if (var8 == 0) {
-                    break L53;
+                    break regionExit1;
                   }
                 }
                 hf.field_f.c((byte) -108);
@@ -1277,7 +1277,7 @@ final class kk {
                   if (0 >= hf.field_f.field_A) {
                     this.field_e = 10;
                     if (var8 == 0) {
-                      break L53;
+                      break regionExit1;
                     }
                   }
                   this.field_e = 6;
@@ -1545,22 +1545,22 @@ final class kk {
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         this.field_g = param0;
         this.field_c = new sg(b.field_j[param0].length);
-        this.field_f = new le[b.field_j[param0].length];
+        this.field_f = new Sprite[b.field_j[param0].length];
         if (param0 != 2) {
           if (param0 != 3 &&
             param0 != 4) {
             if (param0 == 9) {
-              this.field_a = new le(380, 275);
+              this.field_a = new Sprite(380, 275);
               if (var3 != 0) {
-                this.field_a = new le(380, 263);
+                this.field_a = new Sprite(380, 263);
               }
             }
           } else {
-            this.field_a = new le(380, 263);
+            this.field_a = new Sprite(380, 263);
           }
           var2 = 0;
           while (b.field_j[param0].length > var2) {
-            this.field_f[var2] = new le(tj.field_c[param0] - fl.field_a[param0], 40);
+            this.field_f[var2] = new Sprite(tj.field_c[param0] - fl.field_a[param0], 40);
             var2++;
             if (var3 != 0) {
               decompiledFrameCompleted1 = false;
@@ -1573,7 +1573,7 @@ final class kk {
             var3 != 0) {
             var2Lifetime1 = 0;
             while (var2Lifetime1 < b.field_j[param0].length) {
-              this.field_f[var2Lifetime1] = new le((-fl.field_a[param0] + tj.field_c[param0] - 30) / 3, 40);
+              this.field_f[var2Lifetime1] = new Sprite((-fl.field_a[param0] + tj.field_c[param0] - 30) / 3, 40);
               var2Lifetime1++;
               if (var3 != 0) {
                 decompiledFrameCompleted0 = false;
@@ -1581,7 +1581,7 @@ final class kk {
               }
             }
             if (decompiledFrameCompleted0) {
-              this.field_a = new le(380, 275);
+              this.field_a = new Sprite(380, 275);
             }
           }
           if (decompiledFrameCompleted0) {

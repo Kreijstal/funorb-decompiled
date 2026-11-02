@@ -1,31 +1,31 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class bf extends ug {
-    bf field_g;
+class DualLinkNode extends IntrusiveNode {
+    DualLinkNode field_g;
     static int field_h;
-    bf field_e;
+    DualLinkNode field_e;
     long field_f;
 
-    final static al a(String param0, byte param1, int param2) {
-        ia var3 = null;
+    final static SocketConnector a(String param0, byte param1, int param2) {
+        ProxySocketConnector var3 = null;
         RuntimeException var3_ref = null;
-        al stackIn_2_0 = null;
-        ia stackIn_4_0 = null;
+        SocketConnector stackIn_2_0 = null;
+        ProxySocketConnector stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new ia();
-          ((al) ((Object) var3)).field_a = param2;
+          var3 = new ProxySocketConnector();
+          ((SocketConnector) ((Object) var3)).field_a = param2;
           if (param1 >= -52) {
-            stackIn_2_0 = (al) null;
+            stackIn_2_0 = (SocketConnector) null;
             return stackIn_2_0;
           }
-          ((al) ((Object) var3)).field_b = param0;
+          ((SocketConnector) ((Object) var3)).field_b = param0;
           stackIn_4_0 = var3;
-          return (al) ((Object) stackIn_4_0);
+          return (SocketConnector) ((Object) stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3_ref = decompiledCaughtException;
@@ -52,13 +52,13 @@ class bf extends ug {
           return;
         }
         String var3 = (String) null;
-        bf.a((String) null, (byte) 125, 81);
+        DualLinkNode.a((String) null, (byte) 125, 81);
         this.field_g.field_e = this.field_e;
         this.field_g = null;
         this.field_e = null;
     }
 
-    protected bf() {
+    protected DualLinkNode() {
     }
 
     static {

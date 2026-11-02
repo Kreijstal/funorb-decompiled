@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hb extends gk {
+final class hb extends PacketBuffer {
     private ol field_j;
     private int field_i;
-    static le[][] field_m;
+    static Sprite[][] field_m;
     static int field_n;
     static int[] field_k;
     static int[] field_l;
 
     final void b(boolean param0, int param1) {
-        int fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        this.field_g[fieldTemp$0] = (byte)(param1 + this.field_j.c(0));
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        this.payload[fieldTemp$0] = (byte)(param1 + this.field_j.c(0));
         if (!param0) {
           this.field_i = -91;
         }
@@ -30,7 +30,7 @@ final class hb extends gk {
     }
 
     final void p(int param0) {
-        this.field_i = param0 * this.field_h;
+        this.field_i = param0 * this.position;
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -63,9 +63,9 @@ final class hb extends gk {
 
     final int r(int param0) {
         int var2 = -21 % ((-81 - param0) / 36);
-        int fieldTemp$0 = this.field_h;
-        this.field_h = this.field_h + 1;
-        return this.field_g[fieldTemp$0] - this.field_j.c(0) & 255;
+        int fieldTemp$0 = this.position;
+        this.position = this.position + 1;
+        return this.payload[fieldTemp$0] - this.field_j.c(0) & 255;
     }
 
     final static int a(boolean param0) {
@@ -98,7 +98,7 @@ final class hb extends gk {
     public static void d(byte param0) {
         field_l = null;
         field_k = null;
-        field_m = (le[][]) null;
+        field_m = (Sprite[][]) null;
         if (param0 < 108) {
           hb.b(91, true);
         }
@@ -119,9 +119,9 @@ final class hb extends gk {
             return;
           }
           for (var5_int = 0; param2 > var5_int; var5_int++) {
-            fieldTemp$0 = this.field_h;
-            this.field_h = this.field_h + 1;
-            param3[var5_int + param1] = (byte)(this.field_g[fieldTemp$0] - this.field_j.c(0));
+            fieldTemp$0 = this.position;
+            this.position = this.position + 1;
+            param3[var5_int + param1] = (byte)(this.payload[fieldTemp$0] - this.field_j.c(0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -140,7 +140,7 @@ final class hb extends gk {
 
     final void q(int param0) {
         int var2 = -106 % ((param0 + 25) / 59);
-        this.field_h = (this.field_i + 7) / 8;
+        this.position = (this.field_i + 7) / 8;
     }
 
     hb(byte[] param0) {
@@ -224,14 +224,14 @@ final class hb extends gk {
         while (var4 < param1) {
           incrementValue$0 = var3;
           var3++;
-          var5 = var5 + ((nd.field_d[var4] & this.field_g[incrementValue$0]) << param1 - var4);
+          var5 = var5 + ((SecondaryNodeDequeIterator.field_d[var4] & this.payload[incrementValue$0]) << param1 - var4);
           param1 = param1 - var4;
           var4 = 8;
         }
         if (param1 != var4) {
-          var5 = var5 + (this.field_g[var3] >> var4 - param1 & nd.field_d[param1]);
+          var5 = var5 + (this.payload[var3] >> var4 - param1 & SecondaryNodeDequeIterator.field_d[param1]);
         } else {
-          var5 = var5 + (this.field_g[var3] & nd.field_d[var4]);
+          var5 = var5 + (this.payload[var3] & SecondaryNodeDequeIterator.field_d[var4]);
         }
         return var5;
     }
@@ -247,7 +247,7 @@ final class hb extends gk {
         int var0;
         field_k = new int[256];
         field_l = new int[1024];
-        field_m = new le[5][];
+        field_m = new Sprite[5][];
         for (var1 = 0; var1 < 256; var1++) {
           var0 = var1;
           for (var2 = 0; 8 > var2; var2++) {

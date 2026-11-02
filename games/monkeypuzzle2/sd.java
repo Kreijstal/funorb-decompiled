@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class sd {
-    static le field_f;
+    static Sprite field_f;
     static java.math.BigInteger field_a;
     static int field_b;
     static boolean field_c;

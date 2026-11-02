@@ -9,7 +9,7 @@ final class jc {
     static uj field_c;
     static int[] field_a;
 
-    final static le[] a(int param0, int param1, int param2, int param3, int param4) {
+    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4) {
         int var5 = -68 / ((-34 - param2) / 37);
         return c.a(param0, 3, param3, 1, param4, param1, 1, 1, true);
     }
@@ -25,7 +25,7 @@ final class jc {
         try {
           if (bb.field_a.a(0) &&
             !param1.equals(bb.field_a.a(true))) {
-            bb.field_a = ia.a(29, param1);
+            bb.field_a = ProxySocketConnector.a(29, param1);
           }
           var2_int = 9 / ((param0 - 35) / 62);
           stackIn_4_0 = bb.field_a;

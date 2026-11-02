@@ -39,14 +39,14 @@ final class pb implements ml {
         field_b = null;
     }
 
-    public final void a(boolean param0, we param1, int param2, int param3, int param4) {
+    public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
         em var11 = null;
-        we stackIn_3_0 = null;
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -55,7 +55,7 @@ final class pb implements ml {
           if (!(param1 instanceof em)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (we) (param1);
+            stackIn_3_0 = (UiWidget) (param1);
           }
           var11 = (em) (stackIn_3_0);
           if (var11 != null) {

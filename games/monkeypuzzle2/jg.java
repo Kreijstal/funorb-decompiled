@@ -11,7 +11,7 @@ final class jg extends ha implements ql {
     static int field_lb;
 
     jg(kj param0, bg param1) {
-        super(param0, pj.field_c, c.field_j, false, false);
+        super(param0, IntrusiveDeque.field_c, c.field_j, false, false);
         try {
           this.field_jb = param1;
         } catch (RuntimeException runtimeException) {
@@ -50,7 +50,7 @@ final class jg extends ha implements ql {
               }
             }
           }
-          var5 = new sk((ha) (this), pj.field_c, var4);
+          var5 = new sk((ha) (this), IntrusiveDeque.field_c, var4);
           if (param1 != 9) {
             return;
           }
@@ -63,7 +63,7 @@ final class jg extends ha implements ql {
           } else {
             if (!this.field_nb) {
               if (5 == param0.field_i) {
-                var5.a((byte) -9, 11, wc.field_g);
+                var5.a((byte) -9, 11, NodeHashTableIterator.field_g);
                 var5.a((byte) 119, 17, vh.field_L);
               } else {
                 var5.a((byte) -81, -1, nf.field_E);
@@ -78,7 +78,7 @@ final class jg extends ha implements ql {
               }
               var5.a((byte) -105, 9, uf.field_k);
             } else {
-              var5.a((byte) 115, 7, fc.field_m);
+              var5.a((byte) 115, 7, GameApplet.field_m);
             }
           }
           this.c((byte) 46, var5);
@@ -115,10 +115,10 @@ final class jg extends ha implements ql {
         field_kb = null;
     }
 
-    public final void a(int param0, int param1, int param2, int param3, t param4) {
+    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         if (param3 != 7) {
-          t var7 = (t) null;
-          this.a(63, -42, -38, 66, (t) null);
+          ButtonWidget var7 = (ButtonWidget) null;
+          this.a(63, -42, -38, 66, (ButtonWidget) null);
         }
         if (this.field_nb) {
           ll.a((byte) 91, true, false);
@@ -162,12 +162,12 @@ final class jg extends ha implements ql {
     final static void a(int param0, int param1) {
         MonkeyPuzzle2.field_E = d.field_h[param1];
         if (param0 == 3860) {
-          ug.field_b = he.field_f[param1];
+          IntrusiveNode.field_b = he.field_f[param1];
           tk.field_a = uk.field_o[param1];
           return;
         }
         jg.a(103, 94);
-        ug.field_b = he.field_f[param1];
+        IntrusiveNode.field_b = he.field_f[param1];
         tk.field_a = uk.field_o[param1];
     }
 

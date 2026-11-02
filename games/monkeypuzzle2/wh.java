@@ -4,7 +4,7 @@
 final class wh {
     private ad field_c;
     static ib field_b;
-    private je field_a;
+    private WeightedObjectCache field_a;
     private ad field_d;
     static int[] field_e;
 
@@ -64,7 +64,7 @@ final class wh {
         }
         var3 = new pi();
         if (var4 != null) {
-          var3.a(new gk(var4), true);
+          var3.a(new PacketBuffer(var4), true);
         }
         if (param0 < 32768) {
           this.field_a.a((long)param0, var3, -92);
@@ -75,7 +75,7 @@ final class wh {
         return var3;
     }
 
-    final static void a(byte param0, le param1) {
+    final static void a(byte param0, Sprite param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$1 = 0;

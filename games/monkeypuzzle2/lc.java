@@ -11,7 +11,7 @@ final class lc implements ml {
     static int[] field_b;
     private ta field_g;
 
-    public final void a(boolean param0, we param1, int param2, int param3, int param4) {
+    public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -145,7 +145,7 @@ final class lc implements ml {
           if (param3 != 3249872) {
             field_b = (int[]) null;
           }
-          bb.field_a = ia.a(-66, "");
+          bb.field_a = ProxySocketConnector.a(-66, "");
           bb.field_a.b(16564, false);
           lh.a(param2, param0, param4, param3 - 3249767);
           oi.a(-2);
@@ -159,7 +159,7 @@ final class lc implements ml {
     public lc() {
         this.field_a = 1;
         this.field_c = 1;
-        this.field_g = t.field_z;
+        this.field_g = ButtonWidget.field_z;
     }
 
     lc(ta param0, int param1, int param2) {

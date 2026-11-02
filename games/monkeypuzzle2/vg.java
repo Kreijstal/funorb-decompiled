@@ -6,9 +6,9 @@ final class vg extends jj {
     static int field_J;
     private String field_N;
     private int field_L;
-    private le field_I;
+    private Sprite field_I;
     static int[] field_K;
-    static le field_M;
+    static Sprite field_M;
 
     final static boolean c(boolean param0) {
         if (param0) {
@@ -31,11 +31,11 @@ final class vg extends jj {
         return null;
     }
 
-    final void a(we param0, int param1, int param2, byte param3) {
+    final void a(UiWidget param0, int param1, int param2, byte param3) {
         try {
           this.field_L = this.field_L + 1;
           if (param3 > -13) {
-            field_M = (le) null;
+            field_M = (Sprite) null;
           }
           super.a(param0, param1, param2, (byte) -89);
         } catch (RuntimeException runtimeException) {
@@ -43,7 +43,7 @@ final class vg extends jj {
         }
     }
 
-    final boolean a(we param0, boolean param1) {
+    final boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -87,21 +87,21 @@ final class vg extends jj {
         int var11;
         int var12;
         int var13;
-        le var16;
+        Sprite var16;
         String var17;
         Object var18;
-        le var19;
-        le var20;
-        le var21;
+        Sprite var19;
+        Sprite var20;
+        Sprite var21;
         Object var22;
-        le var23;
-        le var24;
-        le var25;
-        le var26;
+        Sprite var23;
+        Sprite var24;
+        Sprite var25;
+        Sprite var26;
         Object var28;
-        le var29;
-        le var30;
-        le var31;
+        Sprite var29;
+        Sprite var30;
+        Sprite var31;
         ui var32;
         ui var33;
         ui var34;
@@ -132,7 +132,7 @@ final class vg extends jj {
             var6 = this.field_H.b(false);
             var34 = (ui) ((Object) this.field_h);
             var9 = this.field_r + param3;
-            var10 = var34.a((we) (this), -73, param2) + (var34.a(-1, (we) (this)).b(62) >> 1);
+            var10 = var34.a((UiWidget) (this), -73, param2) + (var34.a(-1, (UiWidget) (this)).b(62) >> 1);
             if (var6 != ke.field_d &&
               var6 != f.field_g) {
               if (ol.field_h == var6) {
@@ -151,15 +151,15 @@ final class vg extends jj {
             var11 = var31.field_m << 1;
             var12 = var31.field_n << 1;
             if (this.field_I == null) {
-              this.field_I = new le(var11, var12);
+              this.field_I = new Sprite(var11, var12);
               mc.a(param0 ^ -8495, this.field_I);
             } else {
               if (this.field_I.field_k < var11) {
-                this.field_I = new le(var11, var12);
+                this.field_I = new Sprite(var11, var12);
                 mc.a(param0 ^ -8495, this.field_I);
               } else {
                 if (this.field_I.field_j < var12) {
-                  this.field_I = new le(var11, var12);
+                  this.field_I = new Sprite(var11, var12);
                   mc.a(param0 ^ -8495, this.field_I);
                 } else {
                   mc.a(-8497, this.field_I);
@@ -178,7 +178,7 @@ final class vg extends jj {
           var6 = this.field_H.b(false);
           var33 = (ui) ((Object) this.field_h);
           var9Lifetime2 = this.field_r + param3;
-          var10Lifetime2 = var33.a((we) (this), -73, param2) + (var33.a(-1, (we) (this)).b(62) >> 1);
+          var10Lifetime2 = var33.a((UiWidget) (this), -73, param2) + (var33.a(-1, (UiWidget) (this)).b(62) >> 1);
           if (var6 == ke.field_d) {
             var23 = hk.field_i[0];
             var11Lifetime2 = var23.field_m << 1;
@@ -189,7 +189,7 @@ final class vg extends jj {
               mc.a(-8497, this.field_I);
               ge.d();
             } else {
-              this.field_I = new le(var11Lifetime2, var12Lifetime2);
+              this.field_I = new Sprite(var11Lifetime2, var12Lifetime2);
               mc.a(param0 ^ -8495, this.field_I);
             }
             var23.b(112, 144, var23.field_m << 4, var23.field_n << 4, -this.field_L << 10, 4096);
@@ -215,15 +215,15 @@ final class vg extends jj {
           var11Lifetime3 = var26.field_m << 1;
           var12Lifetime3 = var26.field_n << 1;
           if (this.field_I == null) {
-            this.field_I = new le(var11Lifetime3, var12Lifetime3);
+            this.field_I = new Sprite(var11Lifetime3, var12Lifetime3);
             mc.a(param0 ^ -8495, this.field_I);
           } else {
             if (this.field_I.field_k < var11Lifetime3) {
-              this.field_I = new le(var11Lifetime3, var12Lifetime3);
+              this.field_I = new Sprite(var11Lifetime3, var12Lifetime3);
               mc.a(param0 ^ -8495, this.field_I);
             } else {
               if (this.field_I.field_j < var12Lifetime3) {
-                this.field_I = new le(var11Lifetime3, var12Lifetime3);
+                this.field_I = new Sprite(var11Lifetime3, var12Lifetime3);
                 mc.a(param0 ^ -8495, this.field_I);
               } else {
                 mc.a(-8497, this.field_I);
@@ -245,7 +245,7 @@ final class vg extends jj {
         var6Lifetime1 = this.field_H.b(false);
         var32 = (ui) ((Object) this.field_h);
         var9Lifetime1 = this.field_r + param3;
-        var10Lifetime1 = var32.a((we) (this), -73, param2) + (var32.a(-1, (we) (this)).b(62) >> 1);
+        var10Lifetime1 = var32.a((UiWidget) (this), -73, param2) + (var32.a(-1, (UiWidget) (this)).b(62) >> 1);
         if (var6Lifetime1 == ke.field_d) {
           var21 = hk.field_i[0];
           var11Lifetime1 = var21.field_m << 1;
@@ -256,7 +256,7 @@ final class vg extends jj {
             mc.a(-8497, this.field_I);
             ge.d();
           } else {
-            this.field_I = new le(var11Lifetime1, var12Lifetime1);
+            this.field_I = new Sprite(var11Lifetime1, var12Lifetime1);
             mc.a(param0 ^ -8495, this.field_I);
           }
         } else {
@@ -282,7 +282,7 @@ final class vg extends jj {
             mc.a(-8497, this.field_I);
             ge.d();
           } else {
-            this.field_I = new le(var11Lifetime1, var12Lifetime1);
+            this.field_I = new Sprite(var11Lifetime1, var12Lifetime1);
             mc.a(param0 ^ -8495, this.field_I);
           }
         }

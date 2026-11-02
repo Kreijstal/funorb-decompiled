@@ -7,9 +7,9 @@ final class od extends f {
     static byte[] field_m;
     static long field_l;
 
-    final static le b(int param0) {
+    final static Sprite b(int param0) {
         int var4_int = 0;
-        le var4 = null;
+        Sprite var4 = null;
         int var5 = MonkeyPuzzle2.field_F ? 1 : 0;
         int var1 = ra.field_ab[0] * da.field_c[0];
         byte[] var2 = cb.field_b[0];
@@ -18,11 +18,11 @@ final class od extends f {
           for (var4_int = 0; var1 > var4_int; var4_int++) {
             var3[var4_int] = fk.field_d[ch.a(255, (int) var2[var4_int])];
           }
-          var4 = new le(nj.field_d, qk.field_a, qc.field_P[0], mb.field_b[0], da.field_c[0], ra.field_ab[0], var3);
+          var4 = new Sprite(nj.field_d, qk.field_a, qc.field_P[0], mb.field_b[0], da.field_c[0], ra.field_ab[0], var3);
           gb.a(-112);
           return var4;
         }
-        return (le) null;
+        return (Sprite) null;
     }
 
     public static void c(byte param0) {

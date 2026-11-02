@@ -3,7 +3,7 @@
  */
 final class w {
     static cj field_c;
-    static le[] field_b;
+    static Sprite[] field_b;
     static String field_a;
 
     final static void a(int param0, int param1, int param2, int param3) {
@@ -22,7 +22,7 @@ final class w {
           var3 = gf.field_c;
           var3.b(true, param1);
           if (param0 > -69) {
-            field_b = (le[]) null;
+            field_b = (Sprite[]) null;
           }
           var3.b(5, -49152);
           var3.b(0, -49152);
@@ -38,7 +38,7 @@ final class w {
         field_a = null;
         field_b = null;
         if (param0 >= -8) {
-          field_b = (le[]) null;
+          field_b = (Sprite[]) null;
           field_c = null;
           return;
         }

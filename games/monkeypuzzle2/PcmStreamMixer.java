@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mj extends fh {
-    private pj field_l;
-    private pj field_i;
+final class PcmStreamMixer extends PcmStream {
+    private IntrusiveDeque field_l;
+    private IntrusiveDeque field_i;
     private int field_k;
     private int field_j;
 
-    final fh b() {
-        return (fh) (this.field_l.d((byte) 63));
+    final PcmStream b() {
+        return (PcmStream) (this.field_l.d((byte) 63));
     }
 
     final synchronized void b(int[] param0, int param1, int param2) {
@@ -39,7 +39,7 @@ final class mj extends fh {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_e = var7;
-              this.a(var5.field_d, var5);
+              this.a(var5.previous, var5);
             } else {
               var5.field_e = 0;
               this.a(var5);
@@ -49,23 +49,23 @@ final class mj extends fh {
         return;
     }
 
-    final fh a() {
-        return (fh) (this.field_l.a((byte) -117));
+    final PcmStream a() {
+        return (PcmStream) (this.field_l.a((byte) -117));
     }
 
     final int d() {
         return 0;
     }
 
-    final synchronized void b(fh param0) {
-        param0.c(-19822);
+    final synchronized void b(PcmStream param0) {
+        param0.unlink(-19822);
     }
 
     private final void e(int param0) {
-        fh var2 = (fh) (this.field_l.a((byte) -117));
+        PcmStream var2 = (PcmStream) (this.field_l.a((byte) -117));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (fh) (this.field_l.d((byte) 63));
+          var2 = (PcmStream) (this.field_l.d((byte) 63));
         }
     }
 
@@ -82,10 +82,10 @@ final class mj extends fh {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        fh var4 = (fh) (this.field_l.a((byte) -117));
+        PcmStream var4 = (PcmStream) (this.field_l.a((byte) -117));
         while (var4 != null) {
           var4.a(param0, param1, param2);
-          var4 = (fh) (this.field_l.d((byte) 63));
+          var4 = (PcmStream) (this.field_l.d((byte) 63));
         }
     }
 
@@ -116,7 +116,7 @@ final class mj extends fh {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_e = var5;
-              this.a(var3.field_d, var3);
+              this.a(var3.previous, var3);
             } else {
               var3.field_e = 0;
               this.a(var3);
@@ -127,10 +127,10 @@ final class mj extends fh {
     }
 
     private final void a(og param0) {
-        param0.c(-19822);
+        param0.unlink(-19822);
         param0.a();
         param0.field_f = null;
-        ug var2 = this.field_i.field_f.field_d;
+        IntrusiveNode var2 = this.field_i.field_f.previous;
         if (var2 == this.field_i.field_f) {
           this.field_j = -1;
         } else {
@@ -143,7 +143,7 @@ final class mj extends fh {
           this.e();
           param0.field_f = this;
           param0.b();
-          this.a(this.field_i.field_f.field_d, param0);
+          this.a(this.field_i.field_f.previous, param0);
           return;
         }
         throw new RuntimeException();
@@ -162,31 +162,31 @@ final class mj extends fh {
         }
     }
 
-    final synchronized void a(fh param0) {
+    final synchronized void a(PcmStream param0) {
         this.field_l.a(param0, (byte) 13);
     }
 
-    private final void a(ug param0, og param1) {
+    private final void a(IntrusiveNode param0, og param1) {
         while (true) {
           if (param0 == this.field_i.field_f) {
             ja.a(param0, param1, -123);
-            this.field_j = ((og) (this.field_i.field_f.field_d)).field_e;
+            this.field_j = ((og) (this.field_i.field_f.previous)).field_e;
             return;
           }
           if (((og) (param0)).field_e <= param1.field_e) {
-            param0 = param0.field_d;
+            param0 = param0.previous;
             continue;
           }
           break;
         }
         ja.a(param0, param1, -123);
-        this.field_j = ((og) (this.field_i.field_f.field_d)).field_e;
+        this.field_j = ((og) (this.field_i.field_f.previous)).field_e;
         return;
     }
 
-    public mj() {
-        this.field_l = new pj();
-        this.field_i = new pj();
+    public PcmStreamMixer() {
+        this.field_l = new IntrusiveDeque();
+        this.field_i = new IntrusiveDeque();
         this.field_j = -1;
         this.field_k = 0;
     }

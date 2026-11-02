@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class de extends ug {
+final class de extends IntrusiveNode {
     int field_e;
-    static pj field_n;
+    static IntrusiveDeque field_n;
     static gg field_j;
     String[][] field_g;
     int field_h;
     int[][] field_i;
     int field_k;
     long[][] field_p;
-    static le field_f;
+    static Sprite field_f;
     boolean field_l;
     static java.awt.Font field_o;
     static int field_m;
@@ -31,6 +31,6 @@ final class de extends ug {
 
     static {
         field_z = "de.A(";
-        field_n = new pj();
+        field_n = new IntrusiveDeque();
     }
 }

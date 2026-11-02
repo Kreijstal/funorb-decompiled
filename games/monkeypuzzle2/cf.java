@@ -26,11 +26,11 @@ final class cf {
         }
     }
 
-    final static le[] c(byte param0) {
+    final static Sprite[] c(byte param0) {
         int var2 = 0;
         int var6 = 0;
         int var7 = 0;
-        le[] var1;
+        Sprite[] var1;
         int var3;
         byte[] var5;
         int[] var6_ref_int__;
@@ -47,7 +47,7 @@ final class cf {
         if (param0 != 16) {
           cf.a((byte) 37);
         }
-        var1 = new le[eg.field_c];
+        var1 = new Sprite[eg.field_c];
         for (var2 = 0; var2 < eg.field_c; var2++) {
           var3 = da.field_c[var2] * ra.field_ab[var2];
           var21 = cb.field_b[var2];
@@ -57,7 +57,7 @@ final class cf {
             for (var6 = 0; var3 > var6; var6++) {
               var10[var6] = fk.field_d[ch.a(255, (int) var21[var6])];
             }
-            var1[var2] = new le(nj.field_d, qk.field_a, qc.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var22);
+            var1[var2] = new Sprite(nj.field_d, qk.field_a, qc.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var22);
           } else {
             var16 = jj.field_E[var2];
             var12 = var16;
@@ -69,7 +69,7 @@ final class cf {
             for (var7 = 0; var7 < var3; var7++) {
               var6_ref_int__[var7] = bd.a(fk.field_d[ch.a(255, (int) var21[var7])], ch.a(var16[var7] << 24, -16777216));
             }
-            var1[var2] = (le) ((Object) new ae(nj.field_d, qk.field_a, qc.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var17));
+            var1[var2] = (Sprite) ((Object) new ArgbSprite(nj.field_d, qk.field_a, qc.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var17));
           }
         }
         gb.a(-54);

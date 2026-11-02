@@ -129,7 +129,7 @@ final class pl {
           String stackIn_15_2 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (md.field_f.startsWith("win") &&
+            if (PlatformTaskDispatcher.field_f.startsWith("win") &&
               cg.a(param3, (byte) 30)) {
               return;
             }

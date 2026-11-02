@@ -2,10 +2,10 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dl {
-    private bf field_d;
+    private DualLinkNode field_d;
     static boolean[] field_c;
     static boolean field_b;
-    private bf field_e;
+    private DualLinkNode field_e;
     static String field_f;
     static long[] field_a;
 
@@ -21,7 +21,7 @@ final class dl {
     }
 
     final void c(int param0) {
-        bf var2;
+        DualLinkNode var2;
         int var3;
         String var4;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -42,8 +42,8 @@ final class dl {
         return;
     }
 
-    final bf a(boolean param0) {
-        bf var2 = this.field_d.field_g;
+    final DualLinkNode a(boolean param0) {
+        DualLinkNode var2 = this.field_d.field_g;
         if (this.field_d == var2) {
           this.field_e = null;
           return null;
@@ -52,12 +52,12 @@ final class dl {
           this.field_e = var2.field_g;
           return var2;
         }
-        return (bf) null;
+        return (DualLinkNode) null;
     }
 
-    final bf c(byte param0) {
-        bf var2 = null;
-        bf var2Lifetime1;
+    final DualLinkNode c(byte param0) {
+        DualLinkNode var2 = null;
+        DualLinkNode var2Lifetime1;
         if (param0 != -75) {
           this.c(82);
           var2 = this.field_e;
@@ -77,7 +77,7 @@ final class dl {
         return var2Lifetime1;
     }
 
-    final void a(bf param0, byte param1) {
+    final void a(DualLinkNode param0, byte param1) {
         try {
           if (param0.field_e != null) {
             param0.a(7847);
@@ -93,10 +93,10 @@ final class dl {
     }
 
     final int a(int param0) {
-        bf var3 = null;
+        DualLinkNode var3 = null;
         int var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         int var2 = 0;
-        bf var3Lifetime1;
+        DualLinkNode var3Lifetime1;
         if (param0 < -68) {
           var3 = this.field_d.field_g;
           while (var3 != this.field_d) {
@@ -196,15 +196,15 @@ final class dl {
     }
 
     public dl() {
-        this.field_d = new bf();
+        this.field_d = new DualLinkNode();
         this.field_d.field_e = this.field_d;
         this.field_d.field_g = this.field_d;
     }
 
-    final bf a(byte param0) {
-        bf var2 = this.field_d.field_g;
+    final DualLinkNode a(byte param0) {
+        DualLinkNode var2 = this.field_d.field_g;
         if (param0 != -120) {
-          return (bf) null;
+          return (DualLinkNode) null;
         }
         if (this.field_d != var2) {
           var2.a(7847);
@@ -213,7 +213,7 @@ final class dl {
         return null;
     }
 
-    final void a(int param0, bf param1) {
+    final void a(int param0, DualLinkNode param1) {
         try {
           if (null != param1.field_e) {
             param1.a(7847);
@@ -231,21 +231,21 @@ final class dl {
     }
 
     final static void a(int param0, ad param1) {
-        le var2 = null;
+        Sprite var2 = null;
         int var3 = 0;
         int var4 = 0;
         try {
           if (param0 != 11405) {
             field_b = false;
           }
-          var2 = new le(param1.a("", "final_frame.jpg", 25), (java.awt.Component) ((Object) ie.field_e));
+          var2 = new Sprite(param1.a("", "final_frame.jpg", 25), (java.awt.Component) ((Object) ie.field_e));
           var3 = var2.field_k;
           var4 = var2.field_j;
           vf.a((byte) 127);
-          ki.field_H = new le(var3, var4 * 3 / 4);
+          ki.field_H = new Sprite(var3, var4 * 3 / 4);
           ki.field_H.e();
           var2.a(0, 0);
-          dj.field_b = new le(var3, -ki.field_H.field_j + var4);
+          dj.field_b = new Sprite(var3, -ki.field_H.field_j + var4);
           dj.field_b.e();
           var2.a(0, -ki.field_H.field_j);
           dj.field_b.field_q = ki.field_H.field_j;

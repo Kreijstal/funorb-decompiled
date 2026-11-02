@@ -11,7 +11,7 @@ final class ud {
     static String[] field_e;
     private cg field_f;
 
-    final td a(int param0, int param1, int param2) {
+    final PcmSample a(int param0, int param1, int param2) {
         if (param0 == -18480) {
           return this.a((byte) -108, param2, (int[]) null, param1);
         }
@@ -26,12 +26,12 @@ final class ud {
         field_e = null;
     }
 
-    private final td a(int param0, int[] param1, String param2) {
-        td discarded$1 = null;
+    private final PcmSample a(int param0, int[] param1, String param2) {
+        PcmSample discarded$1 = null;
         RuntimeException var4 = null;
         String var5 = null;
-        td stackIn_3_0 = null;
-        td stackIn_7_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -69,27 +69,27 @@ final class ud {
         }
     }
 
-    private final td a(byte param0, int param1, int[] param2, int param3) {
+    private final PcmSample a(byte param0, int param1, int[] param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        td var8 = null;
+        PcmSample var8 = null;
         g var9 = null;
         int var10 = 0;
-        td var11 = null;
-        td stackIn_3_0 = null;
+        PcmSample var11 = null;
+        PcmSample stackIn_3_0 = null;
         Object stackIn_10_0 = null;
-        td stackIn_14_0 = null;
+        PcmSample stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        td var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param3 >>> 12 | param3 << 4 & 65528) ^ param1;
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int;
-          var8 = (td) (this.field_f.a((byte) 125, var6));
+          var8 = (PcmSample) (this.field_f.a((byte) 125, var6));
           if (var8 != null) {
             stackIn_3_0 = var8;
             return stackIn_3_0;
@@ -101,7 +101,7 @@ final class ud {
           var9 = g.a(this.field_c, param3, param1);
           if (var9 == null) {
             stackIn_10_0 = null;
-            return (td) (stackIn_10_0);
+            return (PcmSample) (stackIn_10_0);
           }
           var11 = var9.b();
           var8Lifetime1 = var11;
@@ -126,10 +126,10 @@ final class ud {
         }
     }
 
-    final td a(String param0, byte param1) {
+    final PcmSample a(String param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        td stackIn_1_0 = null;
+        PcmSample stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -152,7 +152,7 @@ final class ud {
         }
     }
 
-    final td a(int param0, int param1, boolean param2) {
+    final PcmSample a(int param0, int param1, boolean param2) {
         if (param2) {
           return this.a((int[]) null, 34, param0, param1);
         }
@@ -168,9 +168,9 @@ final class ud {
         }
     }
 
-    private final td a(int[] param0, int param1, int param2, int param3) {
-        td stackIn_2_0 = null;
-        td stackIn_19_0 = null;
+    private final PcmSample a(int[] param0, int param1, int param2, int param3) {
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -178,14 +178,14 @@ final class ud {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        td var8 = null;
+        PcmSample var8 = null;
         sf var9 = null;
-        td var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param3 << 4 & 65526 | param3 >>> 12) ^ param2;
           var5_int = var5_int | param3 << 16;
           var6 = 4294967296L ^ (long)var5_int;
-          var8 = (td) (this.field_f.a((byte) 114, var6));
+          var8 = (PcmSample) (this.field_f.a((byte) 114, var6));
           if (var8 != null) {
             stackIn_2_0 = var8;
             return stackIn_2_0;
@@ -209,7 +209,7 @@ final class ud {
           if (var8Lifetime1 == null) {
             return null;
           }
-          var9.c(-19822);
+          var9.unlink(-19822);
           this.field_f.a(var8Lifetime1, var6, (byte) -36);
           stackIn_19_0 = var8Lifetime1;
           return stackIn_19_0;
@@ -227,13 +227,13 @@ final class ud {
         }
     }
 
-    private final td a(int param0, String param1, int[] param2, String param3) {
+    private final PcmSample a(int param0, String param1, int[] param2, String param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         Object stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        td stackIn_9_0 = null;
+        PcmSample stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -246,12 +246,12 @@ final class ud {
           var5_int = this.field_c.c(param1, (byte) -105);
           if (var5_int < 0) {
             stackIn_2_0 = null;
-            return (td) (stackIn_2_0);
+            return (PcmSample) (stackIn_2_0);
           }
           var6 = this.field_c.a(param3, var5_int, -28459);
           if (var6 < 0) {
             stackIn_5_0 = null;
-            return (td) (stackIn_5_0);
+            return (PcmSample) (stackIn_5_0);
           }
           if (param0 != 1620678500) {
             this.field_f = (cg) null;

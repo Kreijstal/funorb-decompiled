@@ -17,12 +17,12 @@ final class h {
     final static void a(int param0, boolean param1) {
         if (!qb.field_b ||
           fd.field_o[param0] ||
-          ck.field_b >= 0) {
+          DequeCursor.field_b >= 0) {
           return;
         }
         fd.field_o[param0] = param1;
         uj.field_h = 1;
-        ck.field_b = param0;
+        DequeCursor.field_b = param0;
         jk.field_u = 0;
     }
 
@@ -36,8 +36,8 @@ final class h {
 
     final boolean a(int param0) {
         if (param0 != 0) {
-          le var3 = (le) null;
-          h.a(-89, 11, 65, false, -65, -84, -84, (le) null);
+          Sprite var3 = (Sprite) null;
+          h.a(-89, 11, 65, false, -65, -84, -84, (Sprite) null);
         }
         return this.field_d;
     }
@@ -104,7 +104,7 @@ final class h {
         return param0 & 255;
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, le param7) {
+    final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6, Sprite param7) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_46_0 = null;
@@ -119,7 +119,7 @@ final class h {
         int[] var15 = null;
         int var18 = 0;
         int var19 = 0;
-        le var21 = null;
+        Sprite var21 = null;
         int[] var22 = null;
         int[] var25 = null;
         int[] var29 = null;

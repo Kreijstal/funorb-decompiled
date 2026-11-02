@@ -15,7 +15,7 @@ final class gi {
     private long[] field_m;
     private long[] field_n;
     static int field_c;
-    static pj field_l;
+    static IntrusiveDeque field_l;
 
     final void a(byte param0) {
         int var2 = 0;
@@ -383,6 +383,6 @@ final class gi {
 
     static {
         field_j = new int[8192];
-        field_l = new pj();
+        field_l = new IntrusiveDeque();
     }
 }

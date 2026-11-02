@@ -3,19 +3,19 @@
  */
 import java.util.*;
 
-final class wc implements Iterator {
+final class NodeHashTableIterator implements Iterator {
     static String field_g;
-    private ug field_i;
+    private IntrusiveNode field_i;
     private int field_c;
-    static le[] field_e;
-    static le field_h;
+    static Sprite[] field_e;
+    static Sprite field_h;
     static ad field_d;
-    private dc field_b;
+    private IterableNodeHashTable field_b;
     static String field_a;
-    private ug field_f;
+    private IntrusiveNode field_f;
 
     private final void a(boolean param0) {
-        this.field_f = this.field_b.field_f[0].field_d;
+        this.field_f = this.field_b.field_f[0].previous;
         if (param0) {
           this.field_i = null;
           this.field_c = 1;
@@ -27,7 +27,7 @@ final class wc implements Iterator {
         if (null == this.field_i) {
           throw new IllegalStateException();
         }
-        this.field_i.c(-19822);
+        this.field_i.unlink(-19822);
         this.field_i = null;
     }
 
@@ -49,7 +49,7 @@ final class wc implements Iterator {
           hf.field_b = param0;
           qh.a(12, true);
           if (param1) {
-            field_e = (le[]) null;
+            field_e = (Sprite[]) null;
           }
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "wc.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -80,26 +80,26 @@ final class wc implements Iterator {
           }
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          if (this.field_b.field_f[fieldTemp$0].field_d == this.field_b.field_f[-1 + this.field_c]) {
+          if (this.field_b.field_f[fieldTemp$0].previous == this.field_b.field_f[-1 + this.field_c]) {
             this.field_f = this.field_b.field_f[-1 + this.field_c];
             continue;
           }
           break;
         }
-        this.field_f = this.field_b.field_f[-1 + this.field_c].field_d;
+        this.field_f = this.field_b.field_f[-1 + this.field_c].previous;
         return true;
     }
 
     public final Object next() {
         int fieldTemp$0 = 0;
         int var2;
-        ug var3;
-        ug var4;
+        IntrusiveNode var3;
+        IntrusiveNode var4;
         var2 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (this.field_f != this.field_b.field_f[this.field_c - 1]) {
           var4 = this.field_f;
           this.field_i = var4;
-          this.field_f = var4.field_d;
+          this.field_f = var4.previous;
           return var4;
         }
         do {
@@ -108,9 +108,9 @@ final class wc implements Iterator {
           }
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          var3 = this.field_b.field_f[fieldTemp$0].field_d;
+          var3 = this.field_b.field_f[fieldTemp$0].previous;
         } while (var3 == this.field_b.field_f[-1 + this.field_c]);
-        this.field_f = var3.field_d;
+        this.field_f = var3.previous;
         this.field_i = var3;
         return var3;
     }
@@ -119,19 +119,19 @@ final class wc implements Iterator {
         if (224 > re.field_e) {
           qb.a(param0 + 17332, re.field_e + 32);
           if (param0 != -17076) {
-            wc.a((byte) -100);
+            NodeHashTableIterator.a((byte) -100);
             return;
           }
           return;
         }
         qb.a(256, 256);
         if (param0 != -17076) {
-          wc.a((byte) -100);
+          NodeHashTableIterator.a((byte) -100);
           return;
         }
     }
 
-    wc(dc param0) {
+    NodeHashTableIterator(IterableNodeHashTable param0) {
         this.field_i = null;
         try {
           this.field_b = param0;

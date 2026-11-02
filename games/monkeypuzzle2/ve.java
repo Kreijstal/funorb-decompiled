@@ -22,10 +22,10 @@ final class ve extends mg {
     }
 
     ve(int param0) {
-        this(t.field_z, param0);
+        this(ButtonWidget.field_z, param0);
     }
 
-    final String c(we param0, int param1) {
+    final String c(UiWidget param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -36,7 +36,7 @@ final class ve extends mg {
           if (param1 != -775) {
             ve.a((byte) 94);
           }
-          stackIn_3_0 = al.a('*', param0.field_s.length(), 12663);
+          stackIn_3_0 = SocketConnector.a('*', param0.field_s.length(), 12663);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

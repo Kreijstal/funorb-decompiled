@@ -20,7 +20,7 @@ final class dk {
     ml field_g;
     int field_s;
     static ib field_h;
-    static mj field_e;
+    static PcmStreamMixer field_e;
 
     private final void a(int param0, String param1, int param2, int param3) {
         RuntimeException stackIn_28_0 = null;
@@ -57,8 +57,8 @@ final class dk {
           var11 = 1;
           if (var9 > var8 ||
             -1 != param1.indexOf("<br>")) {
-            if (nd.field_g == null) {
-              nd.field_g = new String[16];
+            if (SecondaryNodeDequeIterator.field_g == null) {
+              SecondaryNodeDequeIterator.field_g = new String[16];
             }
             if (var9 > var8) {
               var13 = var9 / var8;
@@ -66,11 +66,11 @@ final class dk {
             } else {
               var12 = var8;
             }
-            var11Lifetime1 = this.field_m.a(param1, new int[]{var12}, nd.field_g);
+            var11Lifetime1 = this.field_m.a(param1, new int[]{var12}, SecondaryNodeDequeIterator.field_g);
             var9 = 0;
             var10 = var10 + (var11Lifetime1 - 1) * var7;
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_m.a(nd.field_g[var13Lifetime2]);
+              var14 = this.field_m.a(SecondaryNodeDequeIterator.field_g[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
@@ -193,21 +193,21 @@ final class dk {
     final void a(ta param0, boolean param1) {
         a var17 = null;
         ak var4 = null;
-        le[] var5 = null;
-        ae var16 = null;
-        ae var18 = null;
+        Sprite[] var5 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         ak var6 = null;
         ak var7 = null;
         db discarded$0 = null;
         mc discarded$1 = null;
         ak var8 = null;
-        le[] var9 = null;
-        le[] var10 = null;
-        le dupTemp$2 = null;
+        Sprite[] var9 = null;
+        Sprite[] var10 = null;
+        Sprite dupTemp$2 = null;
         ak var11 = null;
         ak var12 = null;
-        le var13 = null;
+        Sprite var13 = null;
         ak var14 = null;
         ak var19 = null;
         int var15 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -233,13 +233,13 @@ final class dk {
           var4.a((byte) -102, 0).a(15658734, (byte) -3).a(-20433, vl.a(10066329, 7829367, 8947848, true));
           var4.a((byte) -102, 1).a(-20433, vl.a(10066329, 13421772, 11184810, true));
           var4.a((byte) -102, 3).a(-20433, vl.a(7829367, 10066329, 8947848, !param1 ? true : false)).b(122, 1).a(1, 215650672);
-          var5 = new le[9];
-          var16 = new ae(32, 32);
+          var5 = new Sprite[9];
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
           for (var7_int = 0; var18.field_s.length > var7_int; var7_int++) {
             var16.field_s[var7_int] = 1077952576;
           }
-          var5[4] = (le) ((Object) var18);
+          var5[4] = (Sprite) ((Object) var18);
           var4.a((byte) -102, 4).a((byte) -48, true).a(-20433, var5);
           var4.a((byte) -102, 5).a(-20433, jc.a(65793, 0, 64, 0, 0)).a((byte) -48, true).a(-1, (byte) -3);
           this.field_i = (ml) ((Object) var4);
@@ -247,8 +247,8 @@ final class dk {
           var6.field_l = 0;
           var7 = new ak(var4, true);
           var7.field_l = 0;
-          var7.a(ck.a(8947848, -14377), 250);
-          var7.a((byte) -102, 1).a(-20433, ck.a(11184810, -14377)).a(2236962, (byte) -3);
+          var7.a(DequeCursor.a(8947848, -14377), 250);
+          var7.a((byte) -102, 1).a(-20433, DequeCursor.a(11184810, -14377)).a(2236962, (byte) -3);
           this.field_l = (ml) ((Object) new pb(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new db(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new mc(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
@@ -257,10 +257,10 @@ final class dk {
           var8.a((byte) -102, 0).a(-20433, vl.a(7829367, 10066329, 15658734, true)).a(1118481, (byte) -3).a(true, -1);
           var8.a((byte) -102, 4).a((byte) -48, true).a(-20433, var5);
           this.field_o = (ml) ((Object) var8);
-          var9 = new le[9];
-          var9[4] = new le(2, 1);
-          var10 = new le[9];
-          var10[4] = new le(1, 2);
+          var9 = new Sprite[9];
+          var9[4] = new Sprite(2, 1);
+          var10 = new Sprite[9];
+          var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
           dupTemp$2.field_s = new int[]{6710886, 7829367};
           var10[4].field_s = new int[]{6710886, 7829367};
@@ -268,7 +268,7 @@ final class dk {
           var12 = new ak();
           var11.a(var9, 4986, 0);
           var12.a(var10, 4986, 0);
-          var13 = new le(7, 4);
+          var13 = new Sprite(7, 4);
           var13.field_s = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new ak(var4, true);
           var14.a((byte) 1, var13.d());

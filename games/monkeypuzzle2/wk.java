@@ -7,7 +7,7 @@ final class wk {
     static int field_a;
     static String field_d;
     static String field_c;
-    static pj field_b;
+    static IntrusiveDeque field_b;
 
     final static int a(int param0, CharSequence param1, int param2) {
         RuntimeException var3 = null;
@@ -137,6 +137,6 @@ final class wk {
         field_e = new int[8192];
         field_a = -1;
         field_c = "Orb points: <%0>";
-        field_b = new pj();
+        field_b = new IntrusiveDeque();
     }
 }

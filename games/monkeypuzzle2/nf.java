@@ -64,7 +64,7 @@ abstract class nf extends rh {
           var22 = null;
           var12 = MonkeyPuzzle2.field_F ? 1 : 0;
           try {
-            var13 = (i) (ua.field_v.a((byte) -117));
+            var13 = (i) (WidgetContainer.field_v.a((byte) -117));
             var17 = var13;
             if (var17 == null) {
               return;
@@ -91,7 +91,7 @@ abstract class nf extends rh {
             if (var3 != 0) {
               return;
             }
-            var4 = param1.field_h;
+            var4 = param1.position;
             param1.a(-803539344, var17.field_l);
             if (param0 > -79) {
               nf.a(116, (byte) 63, -58, 12);
@@ -202,7 +202,7 @@ abstract class nf extends rh {
               }
             }
             param1.a((byte) -66, var4);
-            var17.c(-19822);
+            var17.unlink(-19822);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter12) {
             decompiledCaughtException = decompiledCaughtParameter12;

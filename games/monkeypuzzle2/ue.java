@@ -58,14 +58,14 @@ final class ue extends jk {
           this.field_v.a(30, param1, param2 + this.field_e, this.field_r + param3);
           return;
         }
-        le var6 = new le(this.field_v.field_l, this.field_v.field_p);
+        Sprite var6 = new Sprite(this.field_v.field_l, this.field_v.field_p);
         mc.a(-8497, var6);
         this.field_v.a(param0, param1, 0, 0);
         tj.b(param0 ^ 659);
         var6.b(param3 + this.field_r, param2 + this.field_e, this.field_F);
     }
 
-    ue(we param0) {
+    ue(UiWidget param0) {
         super(param0.field_r, param0.field_e, param0.field_l, param0.field_p, (ml) null, (of) null);
         try {
           param0.a(this.field_p, 13361, 0, this.field_l, 0);
@@ -103,50 +103,50 @@ final class ue extends jk {
             if (!ok.a(false)) {
               var2 = 1;
               var3 = pl.field_e;
-              ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3)).field_j + ((ta) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2, param1, 240, ((ta) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
+              ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3)).field_j + ((ta) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2, param1, 240, ((ta) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
               return;
             }
             var2 = 0;
             var3 = pl.field_e;
-            ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3)).field_j + ((ta) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2, param1, 240, ((ta) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
+            ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3)).field_j + ((ta) ((Object) var3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2, param1, 240, ((ta) ((Object) var3)).field_j, sb.field_r.field_j, 8, 320, var3);
             return;
           }
           ba.field_f = qg.a(640, 480, 0, rc.field_k, (byte) -73, 0);
           if (null == ba.field_f) {
             var2Lifetime4 = 3;
             var3Lifetime4 = pl.field_e;
-            ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3Lifetime4)).field_j + ((ta) ((Object) var3Lifetime4)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2Lifetime4, param1, 240, ((ta) ((Object) var3Lifetime4)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime4);
+            ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3Lifetime4)).field_j + ((ta) ((Object) var3Lifetime4)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime4, param1, 240, ((ta) ((Object) var3Lifetime4)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime4);
             return;
           }
           af.a(20, ba.field_f);
           var2Lifetime5 = 2;
           var3Lifetime5 = pl.field_e;
-          ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3Lifetime5)).field_j + ((ta) ((Object) var3Lifetime5)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2Lifetime5, param1, 240, ((ta) ((Object) var3Lifetime5)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime5);
+          ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3Lifetime5)).field_j + ((ta) ((Object) var3Lifetime5)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime5, param1, 240, ((ta) ((Object) var3Lifetime5)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime5);
           return;
         }
         if (af.field_c <= 0) {
           if (!ok.a(false)) {
             var2Lifetime1 = 1;
             var3Lifetime1 = pl.field_e;
-            ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3Lifetime1)).field_j + ((ta) ((Object) var3Lifetime1)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2Lifetime1, param1, 240, ((ta) ((Object) var3Lifetime1)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime1);
+            ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3Lifetime1)).field_j + ((ta) ((Object) var3Lifetime1)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime1, param1, 240, ((ta) ((Object) var3Lifetime1)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime1);
             return;
           }
           var2Lifetime1Lifetime1 = 0;
           var3Lifetime1Lifetime1 = pl.field_e;
-          ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3Lifetime1Lifetime1)).field_j + ((ta) ((Object) var3Lifetime1Lifetime1)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2Lifetime1Lifetime1, param1, 240, ((ta) ((Object) var3Lifetime1Lifetime1)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime1Lifetime1);
+          ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3Lifetime1Lifetime1)).field_j + ((ta) ((Object) var3Lifetime1Lifetime1)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime1Lifetime1, param1, 240, ((ta) ((Object) var3Lifetime1Lifetime1)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime1Lifetime1);
           return;
         }
         ba.field_f = qg.a(640, 480, 0, rc.field_k, (byte) -73, 0);
         if (null == ba.field_f) {
           var2Lifetime2 = 3;
           var3Lifetime2 = pl.field_e;
-          ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3Lifetime2)).field_j + ((ta) ((Object) var3Lifetime2)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2Lifetime2, param1, 240, ((ta) ((Object) var3Lifetime2)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime2);
+          ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3Lifetime2)).field_j + ((ta) ((Object) var3Lifetime2)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime2, param1, 240, ((ta) ((Object) var3Lifetime2)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime2);
           return;
         }
         af.a(20, ba.field_f);
         var2Lifetime3 = 2;
         var3Lifetime3 = pl.field_e;
-        ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3Lifetime3)).field_j + ((ta) ((Object) var3Lifetime3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, ik.field_o, 8, 2, var2Lifetime3, param1, 240, ((ta) ((Object) var3Lifetime3)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime3);
+        ff.a(sb.field_r, ji.field_b, 480, ((ta) ((Object) var3Lifetime3)).field_j + ((ta) ((Object) var3Lifetime3)).field_D, (sb.field_r.field_C + sb.field_r.field_D) / 2, SpriteState.field_o, 8, 2, var2Lifetime3, param1, 240, ((ta) ((Object) var3Lifetime3)).field_j, sb.field_r.field_j, 8, 320, var3Lifetime3);
     }
 
     public static void j(int param0) {

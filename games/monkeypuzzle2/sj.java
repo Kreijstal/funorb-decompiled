@@ -83,15 +83,15 @@ final class sj {
 
     final static void a(ad param0, ad param1, ad param2, ad param3, int param4) {
         ai[] var13 = null;
-        le var14 = null;
-        le[] var6 = null;
+        Sprite var14 = null;
+        Sprite[] var6 = null;
         int var7 = 0;
-        le[] var15 = null;
-        le[] var16 = null;
-        le[] var8 = null;
-        le[] array$0 = null;
-        le[] var17 = null;
-        le var11_ref_le = null;
+        Sprite[] var15 = null;
+        Sprite[] var16 = null;
+        Sprite[] var8 = null;
+        Sprite[] array$0 = null;
+        Sprite[] var17 = null;
+        Sprite var11_ref_le = null;
         ai[] var18 = null;
         ai[] var9 = null;
         int[] var20 = null;
@@ -143,7 +143,7 @@ final class sj {
           j.field_f = lb.a(false, "", param3, "birds");
           qi.field_K = lb.a(false, "", param3, "blocks");
           for (var6_intLifetime2 = 0; dj.field_a.length > var6_intLifetime2; var6_intLifetime2++) {
-            var14 = new le(2 + dj.field_a[var6_intLifetime2].field_m, dj.field_a[var6_intLifetime2].field_n + 1);
+            var14 = new Sprite(2 + dj.field_a[var6_intLifetime2].field_m, dj.field_a[var6_intLifetime2].field_n + 1);
             var14.e();
             dj.field_a[var6_intLifetime2].c(1, 0);
             var14.e(1);
@@ -157,7 +157,7 @@ final class sj {
           ba.field_a[1] = lb.a(false, "", param3, "sprite_explorer_shoot");
           ba.field_a[5] = lb.a(false, "", param3, "sprite_explorer_lose");
           ba.field_a[6] = lb.a(false, "", param3, "sprite_explorer_idle_panic");
-          kb.field_a = new le[8];
+          kb.field_a = new Sprite[8];
           var6 = lb.a(false, "", param3, "menu_titles");
           kb.field_a[6] = var6[6];
           kb.field_a[2] = var6[2];
@@ -166,9 +166,9 @@ final class sj {
           kb.field_a[1] = var6[1];
           kb.field_a[0] = var6[0];
           kb.field_a[7] = var6[5];
-          cm.field_F = new le[ba.field_a[0].length];
+          cm.field_F = new Sprite[ba.field_a[0].length];
           for (var7 = 0; cm.field_F.length > var7; var7++) {
-            cm.field_F[var7] = new le(6 + ba.field_a[0][var7].field_m, ba.field_a[0][var7].field_n + 6);
+            cm.field_F[var7] = new Sprite(6 + ba.field_a[0][var7].field_m, ba.field_a[0][var7].field_n + 6);
             cm.field_F[var7].e();
             ba.field_a[0][var7].a(3, 3);
             h.a(3, 16777215, 0, false, cm.field_F[var7].field_j, 0, cm.field_F[var7].field_k, cm.field_F[var7]);
@@ -177,7 +177,7 @@ final class sj {
           wl.field_f = lb.a(false, "", param3, "catapult");
           hf.field_d = ma.a(param3, "sun", 16711680, "");
           qa.field_i = ma.a(param3, "moon", param4 ^ 16711680, "");
-          l.field_D = new le[5];
+          l.field_D = new Sprite[5];
           l.field_D[0] = ma.a(param3, "world_one_complete", 16711680, "");
           l.field_D[1] = ma.a(param3, "world_two_complete", 16711680, "");
           l.field_D[2] = ma.a(param3, "world_three_complete", 16711680, "");
@@ -188,11 +188,11 @@ final class sj {
           ph.field_d = ma.a(param3, "map", param4 ^ 16711680, "");
           var15 = lb.a(false, "", param3, "monkeys_idle");
           for (var8_int = 0; var8_int < 5; var8_int++) {
-            nh.field_f[0][var8_int] = new le[4];
+            nh.field_f[0][var8_int] = new Sprite[4];
             var9_int = var8_int;
             var10_int = 0;
             while (20 > var9_int) {
-              nh.field_f[0][var8_int][var10_int] = new le(var15[var9_int].field_m, var15[var9_int].field_n);
+              nh.field_f[0][var8_int][var10_int] = new Sprite(var15[var9_int].field_m, var15[var9_int].field_n);
               nh.field_f[0][var8_int][var10_int] = var15[var9_int];
               var10_int++;
               var9_int += 5;
@@ -200,57 +200,57 @@ final class sj {
           }
           var16 = lb.a(false, "", param3, "monkeys_falling");
           for (var8_intLifetime1 = 0; 5 > var8_intLifetime1; var8_intLifetime1++) {
-            nh.field_f[1][var8_intLifetime1] = new le[4];
+            nh.field_f[1][var8_intLifetime1] = new Sprite[4];
             var9_intLifetime1 = var8_intLifetime1;
             var10_intLifetime1 = 0;
             while (var9_intLifetime1 < 20) {
-              nh.field_f[1][var8_intLifetime1][var10_intLifetime1] = new le(var16[var9_intLifetime1].field_m, var16[var9_intLifetime1].field_n);
+              nh.field_f[1][var8_intLifetime1][var10_intLifetime1] = new Sprite(var16[var9_intLifetime1].field_m, var16[var9_intLifetime1].field_n);
               nh.field_f[1][var8_intLifetime1][var10_intLifetime1] = var16[var9_intLifetime1];
               var9_intLifetime1 += 5;
               var10_intLifetime1++;
             }
           }
-          ck.field_a = lb.a(false, "", param3, "basket");
+          DequeCursor.field_a = lb.a(false, "", param3, "basket");
           j.field_g = ma.a(param3, "raft", 16711680, "");
           ci.field_d = ma.a(param3, "arrow", 16711680, "");
           ak.field_t = lb.a(false, "", param3, "sprite_coconuts");
           qh.field_a = lb.a(false, "", param3, "gecko");
-          ik.field_p = lb.a(false, "", param3, "waterfall_central");
+          SpriteState.field_p = lb.a(false, "", param3, "waterfall_central");
           cl.field_c = lb.a(false, "", param3, "waterfall_bottom");
           cc.field_a[0] = lb.a(false, "", param3, "fish_a");
           cc.field_a[1] = lb.a(false, "", param3, "fish_b");
           cc.field_a[2] = lb.a(false, "", param3, "fish_c");
           pc.field_U = lb.a(false, "", param3, "eyes");
           ie.field_b = lb.a(false, "", param3, "achievements_large");
-          wc.field_e = lb.a(false, "", param3, "menu_frame");
+          NodeHashTableIterator.field_e = lb.a(false, "", param3, "menu_frame");
           df.field_q = lb.a(false, "", param3, "menu_monkey");
           kj.field_F = ma.a(param3, "menu_vine", 16711680, "");
           wg.field_g = ma.a(param3, "title_logo", 16711680, "");
-          we.field_f = lb.a(false, "", param3, "title_monkey");
+          UiWidget.field_f = lb.a(false, "", param3, "title_monkey");
           w.field_b = lb.a(false, "", param3, "title_flashes");
           j.field_c = ma.a(param3, "intro_screen", 16711680, "");
           uk.field_n = ma.a(param3, "title_2", 16711680, "");
           fe.field_f = lb.a(false, "", param3, "river");
           de.field_f = ma.a(param3, "slider", param4 ^ 16711680, "");
           sd.field_f = ma.a(param3, "bar", 16711680, "");
-          wc.field_h = ma.a(param3, "web", 16711680, "");
+          NodeHashTableIterator.field_h = ma.a(param3, "web", 16711680, "");
           tl.field_b = ma.a(param3, "heavy_nut", 16711680, "");
-          ni.field_c[0] = df.a("", param3, (byte) 118, "x1");
-          ni.field_c[1] = df.a("", param3, (byte) 118, "x2");
-          ni.field_c[2] = df.a("", param3, (byte) 118, "x3");
-          ni.field_c[3] = df.a("", param3, (byte) 118, "x4");
-          ik.field_o = lb.a(false, "", param3, "fs_frame");
+          SecondaryNodeDeque.field_c[0] = df.a("", param3, (byte) 118, "x1");
+          SecondaryNodeDeque.field_c[1] = df.a("", param3, (byte) 118, "x2");
+          SecondaryNodeDeque.field_c[2] = df.a("", param3, (byte) 118, "x3");
+          SecondaryNodeDeque.field_c[3] = df.a("", param3, (byte) 118, "x4");
+          SpriteState.field_o = lb.a(false, "", param3, "fs_frame");
           ji.field_b = lb.a(false, "", param3, "fs_frame_inv");
-          for (var8_intLifetime2 = 0; ni.field_c.length > var8_intLifetime2; var8_intLifetime2++) {
-            ni.field_c[var8_intLifetime2].b();
+          for (var8_intLifetime2 = 0; SecondaryNodeDeque.field_c.length > var8_intLifetime2; var8_intLifetime2++) {
+            SecondaryNodeDeque.field_c[var8_intLifetime2].b();
           }
           qc.field_L = lb.a(false, "", param3, "map_explorer");
           var8 = lb.a(false, "", param3, "spider");
           for (var9_intLifetime2 = 4; var9_intLifetime2 >= 0; var9_intLifetime2--) {
-            array$0 = new le[var8.length];
+            array$0 = new Sprite[var8.length];
             hb.field_m[var9_intLifetime2] = array$0;
             for (var10_intLifetime2 = 0; var8.length > var10_intLifetime2; var10_intLifetime2++) {
-              hb.field_m[var9_intLifetime2][var10_intLifetime2] = new le(var8[var10_intLifetime2].field_m, var8[var10_intLifetime2].field_n);
+              hb.field_m[var9_intLifetime2][var10_intLifetime2] = new Sprite(var8[var10_intLifetime2].field_m, var8[var10_intLifetime2].field_n);
               hb.field_m[var9_intLifetime2][var10_intLifetime2].e();
               var8[var10_intLifetime2].d(0, 0, vg.field_K[var9_intLifetime2]);
             }
@@ -286,13 +286,13 @@ final class sj {
         }
     }
 
-    final static le a(int param0, int param1, int param2) {
+    final static Sprite a(int param0, int param1, int param2) {
         int var5 = MonkeyPuzzle2.field_F ? 1 : 0;
-        le var6 = new le(param0, param0);
-        le var3 = var6;
+        Sprite var6 = new Sprite(param0, param0);
+        Sprite var3 = var6;
         int var4 = 0;
         if (param1 != 74) {
-          return (le) null;
+          return (Sprite) null;
         }
         while (var3.field_s.length > var4) {
           var6.field_s[var4] = param2;

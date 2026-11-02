@@ -4,15 +4,15 @@
 import java.io.*;
 
 final class qa implements Runnable {
-    private gk field_e;
+    private PacketBuffer field_e;
     private java.net.URL field_f;
-    static le field_i;
+    static Sprite field_i;
     private DataInputStream field_l;
     private int field_k;
     private ic field_g;
-    static pj field_d;
+    static IntrusiveDeque field_d;
     static String field_b;
-    private md field_h;
+    private PlatformTaskDispatcher field_h;
     private ic field_j;
     static int field_a;
     private ic field_c;
@@ -43,9 +43,9 @@ final class qa implements Runnable {
         field_b = null;
     }
 
-    final gk a(int param0) {
+    final PacketBuffer a(int param0) {
         if (param0 < 13) {
-          field_d = (pj) null;
+          field_d = (IntrusiveDeque) null;
           if (this.field_k == 3) {
             return this.field_e;
           }
@@ -105,10 +105,10 @@ final class qa implements Runnable {
               var4 = var5.getOutputStream();
               var4.write(17);
               var6 = (CharSequence) ((Object) ("JAGGRAB " + this.field_f.getFile() + "\n\n"));
-              var4.write(pj.a(3231, var6));
+              var4.write(IntrusiveDeque.a(3231, var6));
               this.field_l = new DataInputStream(var5.getInputStream());
             }
-            this.field_e.field_h = 0;
+            this.field_e.position = 0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = (IOException) (Object) decompiledCaughtException;
@@ -162,9 +162,9 @@ final class qa implements Runnable {
     final static int b(int param0) {
         if (param0 < 120) {
           field_a = -111;
-          return je.field_c;
+          return WeightedObjectCache.field_c;
         }
-        return je.field_c;
+        return WeightedObjectCache.field_c;
     }
 
     public final void run() {
@@ -177,16 +177,16 @@ final class qa implements Runnable {
           Throwable decompiledCaughtException = null;
           var4 = MonkeyPuzzle2.field_F ? 1 : 0;
           try {
-            while (this.field_e.field_h < this.field_e.field_g.length) {
-              var1_int = this.field_l.read(this.field_e.field_g, this.field_e.field_h, -this.field_e.field_h + this.field_e.field_g.length);
+            while (this.field_e.position < this.field_e.payload.length) {
+              var1_int = this.field_l.read(this.field_e.payload, this.field_e.position, -this.field_e.position + this.field_e.payload.length);
               if (var1_int >= 0) {
-                this.field_e.field_h = this.field_e.field_h + var1_int;
+                this.field_e.position = this.field_e.position + var1_int;
                 continue;
               }
               break;
             }
-            if (this.field_e.field_h == this.field_e.field_g.length) {
-              throw qa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_e.field_g.length + " " + this.field_f));
+            if (this.field_e.position == this.field_e.payload.length) {
+              throw qa.<RuntimeException>$cfr$sneakyThrow(new Exception("HG1: " + this.field_e.payload.length + " " + this.field_f));
             }
             var1 = this;
             synchronized (var1) {
@@ -211,11 +211,11 @@ final class qa implements Runnable {
         }
     }
 
-    qa(md param0, java.net.URL param1, int param2) {
+    qa(PlatformTaskDispatcher param0, java.net.URL param1, int param2) {
         try {
           this.field_h = param0;
           this.field_f = param1;
-          this.field_e = new gk(param2);
+          this.field_e = new PacketBuffer(param2);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "qa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -223,7 +223,7 @@ final class qa implements Runnable {
 
     static {
         field_b = "Change display name";
-        field_d = new pj();
+        field_d = new IntrusiveDeque();
     }
 
     @SuppressWarnings("unchecked")

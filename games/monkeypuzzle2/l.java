@@ -33,7 +33,7 @@ final class l {
     int field_m;
     int[] field_s;
     int field_A;
-    static le[] field_D;
+    static Sprite[] field_D;
     int[] field_r;
     int field_E;
     int[] field_e;

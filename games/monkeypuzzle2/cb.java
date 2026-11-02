@@ -6,7 +6,7 @@ import java.io.*;
 final class cb {
     static int[] field_c;
     static byte[][] field_b;
-    static pj field_a;
+    static IntrusiveDeque field_a;
 
     final static boolean a(int param0, boolean param1) {
         try {
@@ -17,7 +17,7 @@ final class cb {
           int stackIn_10_0 = 0;
           Throwable decompiledCaughtException = null;
           if (null == qg.field_a) {
-            qg.field_a = pj.field_g.a(di.field_d, 0, cg.field_g);
+            qg.field_a = IntrusiveDeque.field_g.a(di.field_d, 0, cg.field_g);
           }
           if (qg.field_a.field_g == 0) {
             return false;
@@ -29,17 +29,17 @@ final class cb {
             dk.field_h = ed.field_b;
           } else {
             try {
-              ol.field_g = new id((java.net.Socket) (qg.field_a.field_b), pj.field_g);
-              gf.field_c.field_h = 0;
+              ol.field_g = new BufferedSocket((java.net.Socket) (qg.field_a.field_b), IntrusiveDeque.field_g);
+              gf.field_c.position = 0;
               var2_ref_hb = MonkeyPuzzle2.field_D;
               stackIn_10_0 = (!param1) ? -1 : -2;
               bk.field_f = stackIn_10_0;
               il.field_e = stackIn_10_0;
               hk.field_l = stackIn_10_0;
               dk.field_h = ii.field_r;
-              var2_ref_hb.field_h = 0;
+              var2_ref_hb.position = 0;
               qi.a(j.field_a, gf.field_c, kc.field_c, false, rl.field_a);
-              al.a((byte) -71, -1);
+              SocketConnector.a((byte) -71, -1);
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref_IOException = (IOException) (Object) decompiledCaughtException;

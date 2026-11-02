@@ -3,7 +3,7 @@
  */
 final class ok {
     static dk field_f;
-    static pj field_a;
+    static IntrusiveDeque field_a;
     static boolean field_e;
     static boolean field_d;
     static int[] field_c;
@@ -106,6 +106,6 @@ final class ok {
         field_e = false;
         field_d = false;
         field_c = new int[256];
-        field_a = new pj();
+        field_a = new IntrusiveDeque();
     }
 }

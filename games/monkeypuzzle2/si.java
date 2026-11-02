@@ -35,23 +35,23 @@ final class si extends fb {
         var7 = MonkeyPuzzle2.field_F ? 1 : 0;
         var8 = MonkeyPuzzle2.field_D;
         var2 = var8;
-        var3 = var8.a((byte) 114);
+        var3 = var8.readUnsignedByte((byte) 114);
         stackIn_3_0 = ((128 & var3) != 0);
         eg.field_j = stackIn_3_0;
         lf.field_c = var3 & 127;
         if (param1 != 0) {
           si.f(78);
         }
-        o.field_c = var8.a((byte) 114);
-        bi.field_z = var8.i(66);
+        o.field_c = var8.readUnsignedByte((byte) 114);
+        bi.field_z = var8.readLong(66);
         if (2 == lf.field_c) {
-          sd.field_b = var8.j(param1 + 17277);
-          c.field_b = var8.c((byte) 115);
+          sd.field_b = var8.readUnsignedShort(param1 + 17277);
+          c.field_b = var8.readUnsignedMedium((byte) 115);
         } else {
           sd.field_b = 0;
           c.field_b = 0;
         }
-        stackIn_11_0 = (var8.a((byte) 114) != 1) ? 0 : 1;
+        stackIn_11_0 = (var8.readUnsignedByte((byte) 114) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
         lc.field_h = var8.f(-1);
         if (var4 != 0) {
@@ -60,11 +60,11 @@ final class si extends fb {
           i.field_h = lc.field_h;
         }
         if (lf.field_c == 1) {
-          var8.j(17277);
+          var8.readUnsignedShort(17277);
           var8.f(-1);
         } else {
           if (lf.field_c == 4) {
-            var8.j(17277);
+            var8.readUnsignedShort(17277);
             var8.f(-1);
           }
         }
@@ -73,7 +73,7 @@ final class si extends fb {
           wh.field_e = null;
           return new hl(param0);
         }
-        var5 = var8.j(17277);
+        var5 = var8.readUnsignedShort(17277);
         try {
           var9 = hi.field_a.a(var5, param1 ^ -32769);
           ba.field_h = var9.b((byte) -54);

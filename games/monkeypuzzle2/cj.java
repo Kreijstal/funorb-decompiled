@@ -8,7 +8,7 @@ final class cj {
     int field_i;
     boolean field_f;
     static int field_e;
-    static pj field_a;
+    static IntrusiveDeque field_a;
     boolean field_b;
     static int[] field_c;
 
@@ -30,9 +30,9 @@ final class cj {
         field_a = null;
     }
 
-    final static void a(byte param0, td param1) {
+    final static void a(byte param0, PcmSample param1) {
         try {
-          na.a((byte) 46, li.a(param1, 100, 96));
+          na.a((byte) 46, PcmSampleStream.a(param1, 100, 96));
           int var2_int = -91 % ((param0 - 43) / 57);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "cj.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -46,6 +46,6 @@ final class cj {
     static {
         field_d = 0;
         field_e = 50;
-        field_a = new pj();
+        field_a = new IntrusiveDeque();
     }
 }

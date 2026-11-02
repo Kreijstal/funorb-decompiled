@@ -3,7 +3,7 @@
  */
 final class ji extends java.awt.Canvas {
     private java.awt.Component field_a;
-    static le[] field_b;
+    static Sprite[] field_b;
 
     public static void a(int param0) {
         if (param0 >= -24) {

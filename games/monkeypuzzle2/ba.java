@@ -3,7 +3,7 @@
  */
 abstract class ba {
     int field_i;
-    static le[][] field_a;
+    static Sprite[][] field_a;
     static String field_d;
     static String field_c;
     static r field_f;
@@ -23,7 +23,7 @@ abstract class ba {
             return false;
           }
           oa.field_H = oi.field_e[o.field_b];
-          rd.field_p = ia.field_d[o.field_b];
+          rd.field_p = ProxySocketConnector.field_d[o.field_b];
           o.field_b = o.field_b - param0 & 127;
           stackIn_6_0 = true;
         }
@@ -34,7 +34,7 @@ abstract class ba {
 
     public static void a(boolean param0) {
         field_h = null;
-        field_a = (le[][]) null;
+        field_a = (Sprite[][]) null;
         if (param0) {
           return;
         }
@@ -57,6 +57,6 @@ abstract class ba {
     static {
         field_d = "Please check if address is correct";
         field_c = "Warning: if you quit, you will lose any game you are in the middle of!";
-        field_a = new le[7][];
+        field_a = new Sprite[7][];
     }
 }

@@ -9,8 +9,8 @@ final class v {
 
     final static void a(byte param0, ad param1) {
         try {
-          wc.field_d = param1;
-          rb.a(dc.field_c, (byte) -58);
+          NodeHashTableIterator.field_d = param1;
+          rb.a(IterableNodeHashTable.field_c, (byte) -58);
           if (param0 != -121) {
             field_c = false;
           }
@@ -19,15 +19,15 @@ final class v {
         }
     }
 
-    final static void a(int param0, boolean param1, int param2, md param3, java.awt.Component param4) {
+    final static void a(int param0, boolean param1, int param2, PlatformTaskDispatcher param3, java.awt.Component param4) {
         try {
           va.a(param0, param1, 10);
           vh.field_B = va.a(param3, param4, 1, param2);
-          fc.field_k = va.a(param3, param4, 0, 22050);
-          qb.field_c = new mj();
+          GameApplet.field_k = va.a(param3, param4, 0, 22050);
+          qb.field_c = new PcmStreamMixer();
           vh.field_B.b(qb.field_c);
-          i.field_p = new mj();
-          fc.field_k.b(i.field_p);
+          i.field_p = new PcmStreamMixer();
+          GameApplet.field_k.b(i.field_p);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "v.A(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

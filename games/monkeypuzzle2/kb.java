@@ -4,7 +4,7 @@
 final class kb {
     static int field_c;
     static int field_b;
-    static le[] field_a;
+    static Sprite[] field_a;
     static lg field_d;
     private static String field_z;
 

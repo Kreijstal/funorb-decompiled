@@ -3,20 +3,20 @@
  */
 final class gj {
     static String[] field_b;
-    static li field_a;
+    static PcmSampleStream field_a;
     static int[] field_c;
 
     final static void a(byte param0) {
-        ke.field_f = new le[3];
-        ke.field_f[0] = new le(410, 67);
+        ke.field_f = new Sprite[3];
+        ke.field_f[0] = new Sprite(410, 67);
         if (param0 == -31) {
-          ke.field_f[1] = new le(221, 190);
-          ke.field_f[2] = new le(178, 190);
+          ke.field_f[1] = new Sprite(221, 190);
+          ke.field_f[2] = new Sprite(178, 190);
           return;
         }
         field_c = (int[]) null;
-        ke.field_f[1] = new le(221, 190);
-        ke.field_f[2] = new le(178, 190);
+        ke.field_f[1] = new Sprite(221, 190);
+        ke.field_f[2] = new Sprite(178, 190);
     }
 
     public static void a(int param0) {

@@ -3,14 +3,14 @@
  */
 final class ke {
     static volatile int field_g;
-    static le field_i;
+    static Sprite field_i;
     static int field_c;
     static int[] field_b;
     static boolean field_a;
     static na field_d;
-    static le[] field_f;
+    static Sprite[] field_f;
     static String field_e;
-    static td[] field_h;
+    static PcmSample[] field_h;
 
     public static void a(boolean param0) {
         field_i = null;
@@ -59,7 +59,7 @@ final class ke {
         field_g = 0;
         field_b = new int[8192];
         field_e = "Player Name: ";
-        field_h = new td[32];
+        field_h = new PcmSample[32];
         field_d = new na();
     }
 }

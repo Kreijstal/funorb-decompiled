@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uh extends ug {
+final class uh extends IntrusiveNode {
     static lg field_e;
 
     final static float[] a(float[] param0, float param1, byte param2) {
@@ -40,18 +40,18 @@ final class uh extends ug {
     }
 
     final static void a(byte param0, int param1) {
-        if (!(pg.field_d.length > param1)) {
+        if (!(ProxyAuthenticationRequiredException.field_d.length > param1)) {
           return;
         }
         if (param1 < 0) {
           return;
         }
         if (param0 < -87) {
-          pg.field_d[param1].field_e = param1;
+          ProxyAuthenticationRequiredException.field_d[param1].field_e = param1;
           return;
         }
         field_e = (lg) null;
-        pg.field_d[param1].field_e = param1;
+        ProxyAuthenticationRequiredException.field_d[param1].field_e = param1;
     }
 
     public static void a(boolean param0) {

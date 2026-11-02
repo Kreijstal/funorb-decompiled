@@ -46,7 +46,7 @@ final class ab extends ka {
         return null;
     }
 
-    final static void a(int param0, int param1, le[] param2, int param3, int param4, byte param5) {
+    final static void a(int param0, int param1, Sprite[] param2, int param3, int param4, byte param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;

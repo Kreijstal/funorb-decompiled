@@ -4,7 +4,7 @@
 import java.io.*;
 import java.util.*;
 
-final class ia extends al {
+final class ProxySocketConnector extends SocketConnector {
     static long field_f;
     private java.net.ProxySelector field_e;
     static int[] field_g;
@@ -40,7 +40,7 @@ final class ia extends al {
         Object var10 = null;
         java.net.Proxy var11 = null;
         java.net.Socket var12 = null;
-        pg var12_ref = null;
+        ProxyAuthenticationRequiredException var12_ref = null;
         IOException var12_ref2 = null;
         int var13 = 0;
         var13 = MonkeyPuzzle2.field_F ? 1 : 0;
@@ -91,15 +91,15 @@ final class ia extends al {
           var10 = var8[var9];
           var11 = (java.net.Proxy) (var10);
           try {
-            if (false) throw (pg) null;
+            if (false) throw (ProxyAuthenticationRequiredException) null;
             var12 = this.a((byte) 126, var11);
             if (var12 != null) {
               stackIn_22_0 = var12;
               return stackIn_22_0;
             }
-          } catch (pg decompiledCaughtParameter1) {
+          } catch (ProxyAuthenticationRequiredException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
-            var12_ref = (pg) (Object) decompiledCaughtException;
+            var12_ref = (ProxyAuthenticationRequiredException) (Object) decompiledCaughtException;
             var7 = var12_ref;
           } catch (java.io.IOException decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
@@ -107,7 +107,7 @@ final class ia extends al {
           }
         }
         if (var7 != null) {
-          throw ia.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
+          throw ProxySocketConnector.<RuntimeException>$cfr$sneakyThrow((Throwable) var7);
         }
         return this.b((byte) 121);
     }
@@ -120,7 +120,7 @@ final class ia extends al {
         return vh.field_C[65535 & (int)((double)(32768.0f * param1) / 3.141592653589793)];
     }
 
-    ia() {
+    ProxySocketConnector() {
         this.field_e = java.net.ProxySelector.getDefault();
     }
 
@@ -180,11 +180,11 @@ final class ia extends al {
                   if (var11 != -1) {
                     var8 = var15.substring(0, var11);
                   }
-                  throw new pg(var8);
+                  throw new ProxyAuthenticationRequiredException(var8);
                 }
                 break;
               }
-              throw new pg("");
+              throw new ProxyAuthenticationRequiredException("");
             }
             if (decompiledFrameRemainder0) {
               stackIn_10_0 = var13;

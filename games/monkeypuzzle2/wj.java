@@ -33,10 +33,10 @@ abstract class wj extends hf implements vc {
         return this.a(1, this.field_m.field_s);
     }
 
-    final static le[] a(byte param0, int param1, ad param2, int param3) {
+    final static Sprite[] a(byte param0, int param1, ad param2, int param3) {
         RuntimeException var4 = null;
         ad var5 = null;
-        le[] stackIn_6_0 = null;
+        Sprite[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -73,8 +73,8 @@ abstract class wj extends hf implements vc {
         try {
           var5 = gf.field_c;
           var5.b(true, param2);
-          var5.field_h = var5.field_h + 1;
-          var4 = var5.field_h;
+          var5.position = var5.position + 1;
+          var4 = var5.position;
           var5.b(1, param0 - 74685);
           var5.b(param1.field_e, param0 - 74685);
           var5.a(param1.field_f, false);
@@ -86,7 +86,7 @@ abstract class wj extends hf implements vc {
           var5.a(-803539344, param1.field_l);
           var5.a(-803539344, param1.field_j);
           var5.a((byte) -59, var4);
-          var5.a(-var4 + var5.field_h, (byte) -113);
+          var5.a(-var4 + var5.position, (byte) -113);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "wj.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

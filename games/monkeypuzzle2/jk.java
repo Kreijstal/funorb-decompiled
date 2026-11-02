@@ -3,15 +3,15 @@
  */
 import java.util.*;
 
-abstract class jk extends we implements ga {
+abstract class jk extends UiWidget implements ga {
     static int field_B;
     static int field_A;
-    static gk field_z;
-    static li[] field_C;
+    static PacketBuffer field_z;
+    static PcmSampleStream[] field_C;
     static a field_x;
     static String[] field_y;
     static int field_u;
-    we field_v;
+    UiWidget field_v;
     static int field_w;
 
     String a(byte param0) {
@@ -26,7 +26,7 @@ abstract class jk extends we implements ga {
         return var2;
     }
 
-    final boolean a(we param0, boolean param1) {
+    final boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -53,8 +53,8 @@ abstract class jk extends we implements ga {
         }
     }
 
-    we a(int param0) {
-        we var2 = this.field_v;
+    UiWidget a(int param0) {
+        UiWidget var2 = this.field_v;
         if (var2 != null &&
           var2.b((byte) 72)) {
           return var2;
@@ -68,7 +68,7 @@ abstract class jk extends we implements ga {
 
     final boolean b(byte param0) {
         if (param0 < 38) {
-          field_C = (li[]) null;
+          field_C = (PcmSampleStream[]) null;
         }
         return null != this.a(-1) ? true : false;
     }
@@ -82,7 +82,7 @@ abstract class jk extends we implements ga {
         }
     }
 
-    private final boolean a(byte param0, we param1) {
+    private final boolean a(byte param0, UiWidget param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -91,7 +91,7 @@ abstract class jk extends we implements ga {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -18) {
-            field_C = (li[]) null;
+            field_C = (PcmSampleStream[]) null;
           }
           stackIn_7_0 = (this.field_v != null) && (!this.field_v.b((byte) 74)) && (this.field_v.a(param1, false));
           return stackIn_7_0;
@@ -148,9 +148,9 @@ abstract class jk extends we implements ga {
         }
     }
 
-    private final boolean a(int param0, we param1) {
+    private final boolean a(int param0, UiWidget param1) {
         RuntimeException var3 = null;
-        we var4 = null;
+        UiWidget var4 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -158,8 +158,8 @@ abstract class jk extends we implements ga {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -11) {
-            var4 = (we) null;
-            this.a(-19, -80, (we) null, 5, 102, 80);
+            var4 = (UiWidget) null;
+            this.a(-19, -80, (UiWidget) null, 5, 102, 80);
           }
           stackIn_7_0 = (null != this.field_v) && (!this.field_v.b((byte) 79)) && (this.field_v.a(param1, false));
           return stackIn_7_0;
@@ -181,7 +181,7 @@ abstract class jk extends we implements ga {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    boolean a(int param0, int param1, int param2, int param3, we param4, int param5, int param6) {
+    boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -211,7 +211,7 @@ abstract class jk extends we implements ga {
     void a(int param0, int param1, int param2, int param3) {
         if (param1 == 0 &&
           null != this.field_h) {
-          this.field_h.a(true, (we) (this), param2, param3, 20);
+          this.field_h.a(true, (UiWidget) (this), param2, param3, 20);
         }
         if (param0 != 30) {
           return;
@@ -279,7 +279,7 @@ abstract class jk extends we implements ga {
         field_C = null;
     }
 
-    void a(we param0, int param1, int param2, byte param3) {
+    void a(UiWidget param0, int param1, int param2, byte param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -329,7 +329,7 @@ abstract class jk extends we implements ga {
         }
     }
 
-    final boolean a(we param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_11_0 = false;
@@ -368,9 +368,9 @@ abstract class jk extends we implements ga {
         }
     }
 
-    void a(int param0, int param1, we param2, int param3, int param4, int param5) {
+    void a(int param0, int param1, UiWidget param2, int param3, int param4, int param5) {
         boolean discarded$1 = false;
-        we var8 = null;
+        UiWidget var8 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -381,8 +381,8 @@ abstract class jk extends we implements ga {
             this.field_v.a(param0 + this.field_e, param1, param2, param3, 0, this.field_r + param5);
           }
           if (param4 != 0) {
-            var8 = (we) null;
-            discarded$1 = this.a((byte) -34, (we) null);
+            var8 = (UiWidget) null;
+            discarded$1 = this.a((byte) -34, (UiWidget) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -601,7 +601,7 @@ abstract class jk extends we implements ga {
             gh.field_a[3] = 1;
             pl.field_k[4] = sk.field_F;
             bi.field_B[1] = 2;
-            pl.field_k[2] = ua.field_y;
+            pl.field_k[2] = WidgetContainer.field_y;
             bi.field_B[0] = 5;
             pl.field_k[3] = uf.field_c;
             pl.field_k[5] = "";
@@ -710,10 +710,10 @@ abstract class jk extends we implements ga {
         }
     }
 
-    final boolean a(int param0, we param1, int param2, int param3, int param4, int param5, int param6) {
+    final boolean a(int param0, UiWidget param1, int param2, int param3, int param4, int param5, int param6) {
         boolean discarded$1 = false;
         RuntimeException var8 = null;
-        we var9 = null;
+        UiWidget var9 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -721,8 +721,8 @@ abstract class jk extends we implements ga {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param6 >= -109) {
-            var9 = (we) null;
-            discarded$1 = this.a((byte) -23, (we) null);
+            var9 = (UiWidget) null;
+            discarded$1 = this.a((byte) -23, (UiWidget) null);
           }
           stackIn_7_0 = (null != this.field_v) && (this.field_v.b((byte) 43)) && (this.field_v.a(param0, param1, param2, param3, param4, param5, -127));
           return stackIn_7_0;
@@ -744,7 +744,7 @@ abstract class jk extends we implements ga {
         field_B = 0;
         field_A = 3;
         field_y = new String[]{"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
-        field_C = new li[field_A];
+        field_C = new PcmSampleStream[field_A];
         field_u = 0;
         field_w = 0;
     }

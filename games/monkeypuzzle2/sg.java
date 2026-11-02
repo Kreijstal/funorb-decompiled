@@ -157,7 +157,7 @@ final class sg {
           this.field_a = param1;
         }
         if (this.field_f != 0 &&
-          ni.field_a != 0) {
+          SecondaryNodeDeque.field_a != 0) {
           if (this.field_e <= 0) {
             this.field_e = aj.field_f;
             this.field_c = this.field_f;
@@ -165,7 +165,7 @@ final class sg {
           this.field_e = this.field_e - 1;
         }
         if (kc.field_d == 0 &&
-          ni.field_a == 0) {
+          SecondaryNodeDeque.field_a == 0) {
           this.field_f = 0;
         }
         if (this.field_f == 0 &&

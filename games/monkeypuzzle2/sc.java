@@ -84,10 +84,10 @@ final class sc {
             field_b = (String) null;
           }
           var9 = MonkeyPuzzle2.field_D;
-          var2 = var9.a((byte) 114);
+          var2 = var9.readUnsignedByte((byte) 114);
           if (var2 != 0) {
             if (1 == var2) {
-              var3 = var9.e(126);
+              var3 = var9.readInt(126);
               var4 = (mk) (eb.field_C.a((byte) -117));
               while (var4 != null) {
                 if (var3 != var4.field_e) {
@@ -97,33 +97,33 @@ final class sc {
                 break;
               }
               if (var4 != null) {
-                var4.c(-19822);
+                var4.unlink(-19822);
                 return;
               }
-              gk.a(-1);
+              PacketBuffer.a(-1);
               return;
             }
             kk.a("A1: " + bh.a((byte) -21), (byte) 126, (Throwable) null);
-            gk.a(-1);
+            PacketBuffer.a(-1);
           } else {
-            var3_ref_uh = (uh) (t.field_v.a((byte) -117));
+            var3_ref_uh = (uh) (ButtonWidget.field_v.a((byte) -117));
             if (var3_ref_uh == null) {
-              gk.a(-1);
+              PacketBuffer.a(-1);
               return;
             }
-            var4_int = var9.a((byte) 114);
+            var4_int = var9.readUnsignedByte((byte) 114);
             if (var4_int != 0) {
               var13 = new byte[var4_int];
               var9.a(var13, var4_int, -122, 0);
             } else {
               var5 = null;
             }
-            var9.field_h = var9.field_h + 4;
+            var9.position = var9.position + 4;
             if (!var9.l(-24685)) {
-              gk.a(-1);
+              PacketBuffer.a(-1);
               return;
             }
-            var3_ref_uh.c(-19822);
+            var3_ref_uh.unlink(-19822);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -46,7 +46,7 @@ final class hh extends wj {
             hh.f(-23);
           }
           if (!param0.equals(this.field_q)) {
-            var3 = we.b(param0, -84);
+            var3 = UiWidget.b(param0, -84);
             if (var3 != null &&
               null == var3.field_h) {
               this.field_q = param0;
@@ -152,7 +152,7 @@ final class hh extends wj {
             return stackIn_3_0;
           }
           if (!param1.equals(this.field_q)) {
-            var4 = we.b(param1, -75);
+            var4 = UiWidget.b(param1, -75);
             if (var4 == null) {
               return null;
             }
@@ -210,7 +210,7 @@ final class hh extends wj {
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           var13 = MonkeyPuzzle2.field_D;
-          var2 = var13.a((byte) 114);
+          var2 = var13.readUnsignedByte((byte) 114);
           if (!param0) {
             return;
           }
@@ -222,44 +222,44 @@ final class hh extends wj {
             var10 = var11;
             var4 = var10;
             var5 = var13;
-            var6 = ((gk) ((Object) var5)).a((byte) 114);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte((byte) 114);
             for (var7 = 0; var6 > var7; var7++) {
-              var10[var7] = ((gk) ((Object) var5)).e(-127);
+              var10[var7] = ((PacketBuffer) ((Object) var5)).readInt(-127);
             }
             var16_ref = (k) (cj.field_a.a((byte) -117));
             if (var16_ref == null) {
-              gk.a(-1);
+              PacketBuffer.a(-1);
               return;
             }
             var16_ref.field_e = var17[0];
             var16_ref.field_h = var3;
             var16_ref.field_j = true;
-            var16_ref.c(-19822);
+            var16_ref.unlink(-19822);
             return;
           }
           if (var2 == 1) {
             var12 = (vl) (ob.field_s.a((byte) -117));
             if (var12 == null) {
-              gk.a(-1);
+              PacketBuffer.a(-1);
               return;
             }
-            var12.c(-19822);
+            var12.unlink(-19822);
             return;
           }
           if (var2 != 2) {
             kk.a("A1: " + bh.a((byte) -31), (byte) 101, (Throwable) null);
-            gk.a(-1);
+            PacketBuffer.a(-1);
             return;
           }
           var14 = (k) (cj.field_a.a((byte) -117));
           if (var14 == null) {
-            gk.a(-1);
+            PacketBuffer.a(-1);
             return;
           }
           var14.field_h = cj.a((byte) 120);
           var14.field_e = var14.field_h[0];
           var14.field_j = true;
-          var14.c(-19822);
+          var14.unlink(-19822);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

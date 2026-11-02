@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class i extends ug {
+final class i extends IntrusiveNode {
     ic[] field_s;
-    static mj field_p;
+    static PcmStreamMixer field_p;
     static boolean field_i;
     ic[] field_k;
     byte[][][] field_f;

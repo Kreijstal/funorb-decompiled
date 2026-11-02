@@ -113,12 +113,12 @@ final class ec {
         var19 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           ma.field_c = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = ua.field_x.length;
+          var1_int = WidgetContainer.field_x.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var3 < var1_int; var3++) {
-            var4_ref_sj = ua.field_x[var3];
+            var4_ref_sj = WidgetContainer.field_x[var3];
             var4_ref_sj.c(74);
             bg.a(var3, 82);
             var5 = var4_ref_sj.field_q + var4_ref_sj.field_G >> 1;
@@ -127,9 +127,9 @@ final class ec {
             var8 = ma.field_c[9] >> 2;
             var9 = ma.field_c[10] >> 2;
             var10_int = ma.field_c[11] >> 2;
-            var11 = var9 * ik.field_i[4] + (var8 * ik.field_i[3] + ik.field_i[5] * var10_int) >> 14;
-            var12 = ik.field_i[6] * var8 + (ik.field_i[7] * var9 + var10_int * ik.field_i[8]) >> 14;
-            var13 = var10_int * ik.field_i[11] + (ik.field_i[9] * var8 + ik.field_i[10] * var9) >> 14;
+            var11 = var9 * SpriteState.field_i[4] + (var8 * SpriteState.field_i[3] + SpriteState.field_i[5] * var10_int) >> 14;
+            var12 = SpriteState.field_i[6] * var8 + (SpriteState.field_i[7] * var9 + var10_int * SpriteState.field_i[8]) >> 14;
+            var13 = var10_int * SpriteState.field_i[11] + (SpriteState.field_i[9] * var8 + SpriteState.field_i[10] * var9) >> 14;
             var2[var3] = var7 * var13 + var11 * var5 + var12 * var6 >> 16;
           }
           var3Lifetime1 = ma.field_c[9] >> 8;
@@ -159,20 +159,20 @@ final class ec {
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
           var14 = (int)((double)var14 * var10Lifetime1);
-          for (var15 = 0; ua.field_x.length > var15; var15++) {
+          for (var15 = 0; WidgetContainer.field_x.length > var15; var15++) {
             var16 = 0;
-            for (var17_int = 1; ua.field_x.length > var17_int; var17_int++) {
+            for (var17_int = 1; WidgetContainer.field_x.length > var17_int; var17_int++) {
               if (var21[var16] < var21[var17_int]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17 = ua.field_x[var16];
+            var17 = WidgetContainer.field_x[var16];
             bg.a(var16, param0 + 255);
             for (var18 = 0; var18 < 3; var18++) {
-              ik.field_i[var18] = ik.field_i[var18] + nl.field_a[var15][var18];
+              SpriteState.field_i[var18] = SpriteState.field_i[var18] + nl.field_a[var15][var18];
             }
-            b.a(ik.field_i, false, ma.field_c, false, var17, (byte) -91, true);
+            b.a(SpriteState.field_i, false, ma.field_c, false, var17, (byte) -91, true);
             ja.a(var14, var9Lifetime1, 46, var13Lifetime1, var8Lifetime1, var17, var12Lifetime1, var7Lifetime1);
           }
           return;

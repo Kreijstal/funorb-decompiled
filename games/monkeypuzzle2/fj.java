@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fj extends t {
+final class fj extends ButtonWidget {
     static java.math.BigInteger field_F;
     static k field_E;
     int field_C;
@@ -13,7 +13,7 @@ final class fj extends t {
     int field_G;
     int field_D;
 
-    final boolean a(int param0, int param1, int param2, int param3, we param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -88,7 +88,7 @@ final class fj extends t {
             }
           } else {
             stackIn_4_0 = -89;
-            stackIn_5_1 = !(dd.field_d >= 13);
+            stackIn_5_1 = !(ClientException.field_d >= 13);
             cg.field_a = hj.$cfr$intArgs$a$ae8766b723be(stackIn_4_0, stackIn_5_1);
           }
           if (param2 == -27967) {

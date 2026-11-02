@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wg extends ug {
+final class wg extends IntrusiveNode {
     float[] field_f;
     float[] field_e;
     float[] field_i;
-    static pj field_k;
+    static IntrusiveDeque field_k;
     static int field_h;
-    static le field_g;
+    static Sprite field_g;
     static kj field_j;
 
     final static void a(int param0) {
@@ -30,9 +30,9 @@ final class wg extends ug {
             }
             sl.field_k[var2] = -(m.field_e[var2] / 2) + 320;
             si.field_v[var2] = 240 - th.field_o[var2] / 2;
-            vh.field_E[var2] = new le(m.field_e[var2], th.field_o[var2]);
+            vh.field_E[var2] = new Sprite(m.field_e[var2], th.field_o[var2]);
             vh.field_E[var2].e();
-            lb.a(0, m.field_e[var2], (byte) -128, wc.field_e, 0, th.field_o[var2]);
+            lb.a(0, m.field_e[var2], (byte) -128, NodeHashTableIterator.field_e, 0, th.field_o[var2]);
             pl.field_e.a(th.field_n[var2], 57, 15, m.field_e[var2] - 72, th.field_o[var2] - 30, 1, -1, 0, 0, pl.field_e.field_C + pl.field_e.field_D);
             sb.field_r.b(lb.field_A, 57, th.field_o[var2] - 15, 1, 6579300);
             var3 = var2;
@@ -50,7 +50,7 @@ final class wg extends ug {
                   } else {
                     if (var3 == 2) {
                       ge.h(15, 15, 42, 106);
-                      wc.field_h.c(15, 15);
+                      NodeHashTableIterator.field_h.c(15, 15);
                       hb.field_m[4][0].c(15, 47);
                       ak.field_t[4].c(15, 79);
                     }
@@ -72,7 +72,7 @@ final class wg extends ug {
             var5 = (float[]) null;
             wg.a((float[]) null, (byte) -105);
           }
-          ck.field_b = -1;
+          DequeCursor.field_b = -1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -91,7 +91,7 @@ final class wg extends ug {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -3) {
-            field_g = (le) null;
+            field_g = (Sprite) null;
           }
           var5 = param2.b(255, param1, param0);
           var4 = var5;
@@ -341,6 +341,6 @@ final class wg extends ug {
     }
 
     static {
-        field_k = new pj();
+        field_k = new IntrusiveDeque();
     }
 }

@@ -6,7 +6,7 @@ final class ie {
     private int[] field_a;
     static java.awt.Canvas field_e;
     static String field_d;
-    static le[] field_b;
+    static Sprite[] field_b;
 
     final static void a(int param0, int param1) {
         int var2 = -59 % ((param1 - 43) / 50);
@@ -66,7 +66,7 @@ final class ie {
         int var4;
         int var5;
         if (!param0) {
-          field_b = (le[]) null;
+          field_b = (Sprite[]) null;
         }
         var3 = -1 + (this.field_a.length >> 1);
         var4 = var3 & param1;

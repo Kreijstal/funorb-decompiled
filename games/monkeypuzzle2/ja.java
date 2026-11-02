@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ja extends ua implements u, ql {
+final class ja extends WidgetContainer implements u, ql {
     private jj field_z;
     private jg field_C;
     static te field_B;
-    private t field_D;
+    private ButtonWidget field_D;
     static boolean field_F;
     static int[][] field_A;
 
@@ -85,14 +85,14 @@ final class ja extends ua implements u, ql {
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (param0 == 0) {
-            wc.a("terms.ws", false);
+            NodeHashTableIterator.a("terms.ws", false);
           } else {
             if (param0 != 1) {
               if (param0 == 2) {
-                wc.a("conduct.ws", false);
+                NodeHashTableIterator.a("conduct.ws", false);
               }
             } else {
-              wc.a("privacy.ws", false);
+              NodeHashTableIterator.a("privacy.ws", false);
             }
           }
           if (param1 != -21099) {
@@ -122,7 +122,7 @@ final class ja extends ua implements u, ql {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public final void a(int param0, int param1, int param2, int param3, t param4) {
+    public final void a(int param0, int param1, int param2, int param3, ButtonWidget param4) {
         jj var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -162,11 +162,11 @@ final class ja extends ua implements u, ql {
         int var6 = 0;
         try {
           this.field_C = param0;
-          this.field_D = new t(pi.field_i, (of) null);
+          this.field_D = new ButtonWidget(pi.field_i, (of) null);
           this.field_D.field_h = (ml) ((Object) new hd());
           var7 = gg.a(new String[]{this.a(1971849544), this.d((byte) 106)}, oi.field_i, true);
           var3 = 20;
-          var4 = new a(t.field_z, 0, 0, 0, 0, 16777215, -1, 3, 0, t.field_z.field_C, -1, 2147483647, true);
+          var4 = new a(ButtonWidget.field_z, 0, 0, 0, 0, 16777215, -1, 3, 0, ButtonWidget.field_z.field_C, -1, 2147483647, true);
           this.field_z = new jj(var7, var4);
           this.field_z.field_m = "";
           this.field_z.a(false, 0, kg.field_a);
@@ -187,7 +187,7 @@ final class ja extends ua implements u, ql {
         }
     }
 
-    final boolean a(we param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
@@ -435,18 +435,18 @@ final class ja extends ua implements u, ql {
         field_B = null;
     }
 
-    final static void a(ug param0, ug param1, int param2) {
-        if (param1.field_c != null) {
-          param1.c(-19822);
+    final static void a(IntrusiveNode param0, IntrusiveNode param1, int param2) {
+        if (param1.next != null) {
+          param1.unlink(-19822);
         }
         if (param2 > -97) {
           return;
         }
         try {
-          param1.field_c = param0.field_c;
-          param1.field_d = param0;
-          param1.field_c.field_d = param1;
-          param1.field_d.field_c = param1;
+          param1.next = param0.next;
+          param1.previous = param0;
+          param1.next.previous = param1;
+          param1.previous.next = param1;
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ja.J(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

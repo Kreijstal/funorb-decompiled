@@ -3,7 +3,7 @@
  */
 final class ph {
     static te field_b;
-    static le field_d;
+    static Sprite field_d;
     static String field_a;
     static int field_c;
 

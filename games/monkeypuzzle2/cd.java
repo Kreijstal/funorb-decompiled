@@ -104,7 +104,7 @@ final class cd {
           if (param0.field_g != 0 ||
             param0.field_k != 0) {
             for (var2_int = 0; var2_int < ea.field_c; var2_int++) {
-              var3 = pg.field_e[var2_int];
+              var3 = ProxyAuthenticationRequiredException.field_e[var2_int];
               if (var3.field_i == 2 &&
                 var3.field_g == param0.field_g &&
                 var3.field_k == param0.field_k) {

@@ -6,7 +6,7 @@ final class sb extends aa {
     private int field_g;
     private String field_o;
     private boolean field_h;
-    static le field_m;
+    static Sprite field_m;
     private int field_j;
     private int field_p;
     private int field_i;
@@ -395,7 +395,7 @@ final class sb extends aa {
             }
             var3 = param1.substring(0, var2_int);
             var4 = param1.substring(1 + var2_int);
-            var5 = dd.a(var3, false);
+            var5 = ClientException.a(var3, false);
             if (var5 != null) {
               stackIn_10_0 = var5;
               return stackIn_10_0;
@@ -677,7 +677,7 @@ final class sb extends aa {
     }
 
     static {
-        field_m = new le(480, 480);
+        field_m = new Sprite(480, 480);
         field_f = -1;
         field_l = new int[8192];
         field_q = "Unfortunately we are unable to create an account for you at this time.";

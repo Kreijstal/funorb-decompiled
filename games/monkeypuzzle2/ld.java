@@ -22,7 +22,7 @@ final class ld {
         int var2 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           vh.field_B.c();
-          fc.field_k.c();
+          GameApplet.field_k.c();
           vg.field_J = vg.field_J - 1;
           if (param0) {
             ld.a(126);
@@ -31,8 +31,8 @@ final class ld {
             vg.field_J = 200;
             var1 = (hk) (bd.field_c.a((byte) -117));
             while (var1 != null) {
-              if (!var1.field_h.d(-3548)) {
-                var1.c(-19822);
+              if (!var1.field_h.isLinked(-3548)) {
+                var1.unlink(-19822);
               }
               var1 = (hk) (bd.field_c.d((byte) 63));
             }

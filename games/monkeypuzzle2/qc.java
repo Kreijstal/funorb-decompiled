@@ -5,7 +5,7 @@ final class qc extends rj implements ag {
     private int field_Q;
     static int field_N;
     static String[] field_R;
-    static le[] field_L;
+    static Sprite[] field_L;
     private kf field_M;
     static int[] field_P;
     static String field_O;
@@ -13,8 +13,8 @@ final class qc extends rj implements ag {
     final void a(kf param0, boolean param1) {
         try {
           if (!param1) {
-            we var4 = (we) null;
-            this.a((we) null, 53, 72, (byte) 12);
+            UiWidget var4 = (UiWidget) null;
+            this.a((UiWidget) null, 53, 72, (byte) 12);
           }
           this.field_M = param0;
         } catch (RuntimeException runtimeException) {
@@ -64,7 +64,7 @@ final class qc extends rj implements ag {
         field_P = null;
     }
 
-    final void a(we param0, int param1, int param2, byte param3) {
+    final void a(UiWidget param0, int param1, int param2, byte param3) {
         try {
           super.a(param0, param1, param2, (byte) -24);
           if (param3 > -13) {

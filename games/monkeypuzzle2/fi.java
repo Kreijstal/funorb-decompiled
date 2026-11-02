@@ -5,7 +5,7 @@ final class fi {
     static String field_d;
     static int[] field_c;
     static ad field_b;
-    static le[] field_a;
+    static Sprite[] field_a;
 
     final static void b(int param0) {
         wl.e((byte) 102);
@@ -16,12 +16,12 @@ final class fi {
         rd.c(false);
         sc.b(param0);
         if (!bd.a(param0 + 25951)) {
-          gk.a(-1);
+          PacketBuffer.a(-1);
           return;
         }
         gf.field_c.b(true, 1);
-        al.a((byte) -71, 0);
-        gk.a(-1);
+        SocketConnector.a((byte) -71, 0);
+        PacketBuffer.a(-1);
     }
 
     public static void a(int param0) {

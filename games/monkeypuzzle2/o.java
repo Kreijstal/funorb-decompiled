@@ -26,14 +26,14 @@ final class o {
         return param0;
     }
 
-    final static le[] a(boolean param0) {
+    final static Sprite[] a(boolean param0) {
         int var2 = 0;
         int var3 = 0;
         byte[] var4 = null;
         int[] var5 = null;
         int var6 = 0;
         int var7 = MonkeyPuzzle2.field_F ? 1 : 0;
-        le[] var1 = new le[eg.field_c];
+        Sprite[] var1 = new Sprite[eg.field_c];
         for (var2 = 0; var2 < eg.field_c; var2++) {
           var3 = ra.field_ab[var2] * da.field_c[var2];
           var4 = cb.field_b[var2];
@@ -41,11 +41,11 @@ final class o {
           for (var6 = 0; var3 > var6; var6++) {
             var5[var6] = fk.field_d[ch.a((int) var4[var6], 255)];
           }
-          var1[var2] = new le(nj.field_d, qk.field_a, qc.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var5);
+          var1[var2] = new Sprite(nj.field_d, qk.field_a, qc.field_P[var2], mb.field_b[var2], da.field_c[var2], ra.field_ab[var2], var5);
         }
         gb.a(-85);
         if (!param0) {
-          return (le[]) null;
+          return (Sprite[]) null;
         }
         return var1;
     }
@@ -145,9 +145,9 @@ final class o {
           return;
         }
         try {
-          param0.addMouseListener(we.field_n);
-          param0.addMouseMotionListener(we.field_n);
-          param0.addFocusListener(we.field_n);
+          param0.addMouseListener(UiWidget.field_n);
+          param0.addMouseMotionListener(UiWidget.field_n);
+          param0.addFocusListener(UiWidget.field_n);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "o.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

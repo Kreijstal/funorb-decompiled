@@ -73,7 +73,7 @@ final class kl {
         var8 = 6.2831854820251465f / (float)param0;
         var9 = param3 + param5;
         for (var10 = param4 + (param6 - 1) * ge.field_h; var10 >= param4; var10 = var10 - ge.field_h) {
-          var11 = (int)((float)param1 * ia.a(true, var8 * (float)(var10 + param2)));
+          var11 = (int)((float)param1 * ProxySocketConnector.a(true, var8 * (float)(var10 + param2)));
           if (var11 > 0) {
             for (var12 = var9 - 1; var12 >= param3; var12--) {
               var7 = var12 - var11;

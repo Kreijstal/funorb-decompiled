@@ -14,7 +14,7 @@ final class eg {
     static String field_h;
     static ai[] field_d;
 
-    final static eg[] a(md param0, boolean param1) {
+    final static eg[] a(PlatformTaskDispatcher param0, boolean param1) {
         eg[] stackIn_4_0 = null;
         eg[] stackIn_13_0 = null;
         eg[] stackIn_22_0 = null;

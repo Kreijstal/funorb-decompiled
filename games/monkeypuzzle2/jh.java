@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jh extends we {
+final class jh extends UiWidget {
     static int[] field_y;
     boolean field_G;
     private int field_x;
@@ -9,12 +9,12 @@ final class jh extends we {
     private int field_E;
     static ra field_C;
     private int field_u;
-    private le field_w;
-    private le[] field_z;
-    private le field_B;
+    private Sprite field_w;
+    private Sprite[] field_z;
+    private Sprite field_B;
     private int field_v;
     private int field_F;
-    private le field_A;
+    private Sprite field_A;
     int field_D;
 
     final void a(byte param0, int param1, int param2) {
@@ -51,16 +51,16 @@ final class jh extends we {
     }
 
     private final void j(int param0) {
-        this.field_z = new le[]{this.b((byte) 86, this.field_x, this.field_F), this.b((byte) 86, this.field_E, this.field_H)};
+        this.field_z = new Sprite[]{this.b((byte) 86, this.field_x, this.field_F), this.b((byte) 86, this.field_E, this.field_H)};
         this.field_w = this.i(param0 ^ -40982079);
         this.field_A = this.field_w.a();
         if (param0 != 0) {
           this.field_F = 23;
         }
-        this.field_B = new le(this.field_p >> 1, this.field_p);
+        this.field_B = new Sprite(this.field_p >> 1, this.field_p);
     }
 
-    private final le b(byte param0, int param1, int param2) {
+    private final Sprite b(byte param0, int param1, int param2) {
         int var6 = 0;
         int var5;
         int var7;
@@ -70,14 +70,14 @@ final class jh extends we {
         int var11;
         int var12;
         int var13;
-        le var14;
+        Sprite var14;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         var13 = MonkeyPuzzle2.field_F ? 1 : 0;
-        var14 = new le(this.field_v * 2, this.field_p);
+        var14 = new Sprite(this.field_v * 2, this.field_p);
         mc.a(param0 ^ -8551, var14);
         var5 = this.field_p >> 1;
         for (var6 = 0; this.field_p > var6; var6++) {
@@ -116,7 +116,7 @@ final class jh extends we {
         this(param0, param1, param2, param3, param4, param5, param6, (param5 & 16711422) >> 1, (16711422 & param6) >> 1);
     }
 
-    private final void a(int param0, le param1, int param2, int param3) {
+    private final void a(int param0, Sprite param1, int param2, int param3) {
         int var6 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -126,13 +126,13 @@ final class jh extends we {
         RuntimeException var5 = null;
         int var7 = 0;
         int var8 = 0;
-        le var9 = null;
+        Sprite var9 = null;
         var8 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           var5_int = this.field_l + param2;
           if (param0 >= -37) {
-            var9 = (le) null;
-            this.a(118, (le) null, -87, 86);
+            var9 = (Sprite) null;
+            this.a(118, (Sprite) null, -87, 86);
           }
           qi.a(var5_int - this.field_w.field_k, true, this.field_p + param3, param2 + this.field_w.field_k, param3);
           for (var6 = param2 - this.field_u; var5_int > var6; var6 = var6 + param1.field_k) {
@@ -173,7 +173,7 @@ final class jh extends we {
         }
     }
 
-    final void a(we param0, int param1, int param2, byte param3) {
+    final void a(UiWidget param0, int param1, int param2, byte param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -205,17 +205,17 @@ final class jh extends we {
         }
     }
 
-    private final le i(int param0) {
+    private final Sprite i(int param0) {
         int var4 = 0;
         int var5 = 0;
         double var6 = 0.0;
         int var8 = 0;
         int var9 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (param0 != -40982079) {
-          this.field_B = (le) null;
+          this.field_B = (Sprite) null;
         }
         int var2 = this.field_p >> 1;
-        le var3 = new le(var2, this.field_p);
+        Sprite var3 = new Sprite(var2, this.field_p);
         mc.a(-8497, var3);
         for (var4 = 0; var4 < this.field_p; var4++) {
           for (var5 = 0; var2 > var5; var5++) {

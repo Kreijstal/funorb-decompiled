@@ -47,23 +47,23 @@ final class nc {
         try {
           var9 = new hb(param0.a("", "logo.fo3d", -127));
           var11 = var9;
-          var3 = var11.a((byte) 114);
+          var3 = var11.readUnsignedByte((byte) 114);
           var11.p(8);
-          ri.field_c = ni.a(12, var11);
+          ri.field_c = SecondaryNodeDeque.a(12, var11);
           nl.field_a = new int[var3][];
-          ua.field_x = new sj[var3];
+          WidgetContainer.field_x = new sj[var3];
           if (param1 != 2) {
             var8 = (ad) null;
             nc.a((ad) null, -50);
           }
           for (var4 = 0; var4 < var3; var4++) {
-            ua.field_x[var4] = gi.a(param1 - 114, var9);
+            WidgetContainer.field_x[var4] = gi.a(param1 - 114, var9);
           }
           var11.q(param1 ^ -110);
           var10 = 0;
           var4Lifetime1 = var10;
           while (var10 < var3) {
-            var5 = ua.field_x[var10];
+            var5 = WidgetContainer.field_x[var10];
             var5.a(6, 6, 6, 1, false);
             var5.c(74);
             var6 = new int[]{var5.field_G + var5.field_q >> 1, var5.field_b + var5.field_j >> 1, var5.field_t + var5.field_x >> 1};

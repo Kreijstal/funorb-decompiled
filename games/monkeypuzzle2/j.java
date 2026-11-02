@@ -3,11 +3,11 @@
  */
 final class j {
     static qi field_e;
-    static le field_g;
+    static Sprite field_g;
     static boolean[] field_d;
     static int field_a;
-    static le field_c;
-    static le[] field_f;
+    static Sprite field_c;
+    static Sprite[] field_f;
     static String field_b;
     static String field_h;
 

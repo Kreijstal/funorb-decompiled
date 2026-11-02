@@ -122,7 +122,7 @@ final class qg {
         }
     }
 
-    final static r a(int param0, int param1, int param2, md param3, byte param4, int param5) {
+    final static r a(int param0, int param1, int param2, PlatformTaskDispatcher param3, byte param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         r var7 = null;

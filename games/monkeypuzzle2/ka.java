@@ -3,7 +3,7 @@
  */
 abstract class ka {
     static int field_a;
-    static le field_b;
+    static Sprite field_b;
 
     final static void b(int param0) {
         eg.field_d[aa.field_a].b(param0, 0);

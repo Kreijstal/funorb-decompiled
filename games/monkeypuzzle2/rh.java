@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class rh extends ua {
+abstract class rh extends WidgetContainer {
     private int field_D;
     boolean field_z;
     static boolean field_B;
@@ -29,10 +29,10 @@ abstract class rh extends ua {
         }
     }
 
-    final we a(boolean param0) {
-        we var2 = null;
+    final UiWidget a(boolean param0) {
+        UiWidget var2 = null;
         RuntimeException var2_ref = null;
-        we stackIn_4_0 = null;
+        UiWidget stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = super.a(param0);
@@ -43,7 +43,7 @@ abstract class rh extends ua {
           if (!param0) {
             field_B = true;
           }
-          return (we) (this);
+          return (UiWidget) (this);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
@@ -134,7 +134,7 @@ abstract class rh extends ua {
           if (vg.field_M == null ||
             !(this.field_l <= vg.field_M.field_k) ||
             !(vg.field_M.field_j >= this.field_p)) {
-            vg.field_M = new le(this.field_l, this.field_p);
+            vg.field_M = new Sprite(this.field_l, this.field_p);
           }
           mc.a(param0 ^ -8495, vg.field_M);
           ge.d();
@@ -227,7 +227,7 @@ abstract class rh extends ua {
           }
           var2Lifetime2 = o.a((byte) 76, "instructions_2");
           if (null != var2Lifetime2) {
-            je.field_a = be.a(var2Lifetime2, (byte) -104);
+            WeightedObjectCache.field_a = be.a(var2Lifetime2, (byte) -104);
           }
           var2Lifetime3 = o.a((byte) 76, "tips,0");
           if (var2Lifetime3 != null) {
@@ -455,13 +455,13 @@ abstract class rh extends ua {
         try {
           var1 = MonkeyPuzzle2.field_D;
           var2 = -22 % ((param0 - 37) / 33);
-          var3 = var1.a((byte) 114);
+          var3 = var1.readUnsignedByte((byte) 114);
           if (var3 == 0) {
             if (null == ah.field_b) {
               ah.field_b = new vd(128);
               jj.field_F = 0;
             }
-            stackIn_11_0 = (var1.a((byte) 114) != 1) ? 0 : 1;
+            stackIn_11_0 = (var1.readUnsignedByte((byte) 114) != 1) ? 0 : 1;
             var4_int = stackIn_11_0;
             var5_ref_String = var1.f(-1);
             if (var4_int != 0) {
@@ -505,18 +505,18 @@ abstract class rh extends ua {
             }
             if (var3 != 4) {
               kk.a("F1: " + bh.a((byte) -109), (byte) 115, (Throwable) null);
-              gk.a(-1);
+              PacketBuffer.a(-1);
               return;
             }
             ci.field_b = 1;
             var4 = var1.f(-1);
             cm.field_G = ((String) (var4)).intern();
-            var5 = var1.a((byte) 114);
+            var5 = var1.readUnsignedByte((byte) 114);
             cm.a(var5, (byte) -117);
             return;
           }
-          if (null == pj.field_a) {
-            pj.field_a = new vd(128);
+          if (null == IntrusiveDeque.field_a) {
+            IntrusiveDeque.field_a = new vd(128);
             nc.field_f = 0;
           }
           var4Lifetime1 = var1.f(-1);
@@ -529,12 +529,12 @@ abstract class rh extends ua {
           if (var7 == null) {
             var7 = ch.a(var6, -1);
             if (var7 != null) {
-              pj.field_a.a(var7, (long)pl.a((byte) 123, (CharSequence) ((Object) var5_ref_StringLifetime1)).hashCode(), -101);
+              IntrusiveDeque.field_a.a(var7, (long)pl.a((byte) 123, (CharSequence) ((Object) var5_ref_StringLifetime1)).hashCode(), -101);
             }
           }
           if (null == var7) {
             var7 = new rb();
-            pj.field_a.a(var7, (long)pl.a((byte) 109, (CharSequence) ((Object) var5_ref_StringLifetime1)).hashCode(), -98);
+            IntrusiveDeque.field_a.a(var7, (long)pl.a((byte) 109, (CharSequence) ((Object) var5_ref_StringLifetime1)).hashCode(), -98);
             fieldTemp$0 = nc.field_f;
             nc.field_f = nc.field_f + 1;
             var7.field_gb = fieldTemp$0;
@@ -545,13 +545,13 @@ abstract class rh extends ua {
           }
           var7.field_bb = (String) (var4Lifetime1);
           var7.field_db = var5_ref_StringLifetime1;
-          var7.c(-19822);
+          var7.unlink(-19822);
           var8 = (rb) (kc.field_a.a((byte) -117));
-          L6: while (true) {
+          scanLoop1: while (true) {
             if (null != var8) {
               stackIn_57_0 = var8;
               if (var9 != 0) {
-                break L6;
+                break scanLoop1;
               }
               if (ld.a(stackIn_57_0, -24612, var7)) {
                 var8 = (rb) (kc.field_a.d((byte) 63));

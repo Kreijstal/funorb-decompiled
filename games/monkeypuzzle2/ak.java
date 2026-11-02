@@ -3,7 +3,7 @@
  */
 final class ak extends a {
     static int field_r;
-    static le[] field_t;
+    static Sprite[] field_t;
     static int field_v;
     static int[] field_u;
     private hc[] field_s;
@@ -27,7 +27,7 @@ final class ak extends a {
         }
     }
 
-    final void a(le[] param0, int param1, int param2) {
+    final void a(Sprite[] param0, int param1, int param2) {
         int var4_int = 0;
         try {
           if (param1 != 4986) {
@@ -43,7 +43,7 @@ final class ak extends a {
         }
     }
 
-    final void a(le[] param0, int param1) {
+    final void a(Sprite[] param0, int param1) {
         int var4 = 0;
         hc[] var3 = null;
         hc var5 = null;
@@ -184,7 +184,7 @@ final class ak extends a {
         field_t = null;
     }
 
-    final void a(byte param0, le param1) {
+    final void a(byte param0, Sprite param1) {
         hc[] var3 = null;
         int var4 = 0;
         hc var5 = null;
@@ -237,15 +237,15 @@ final class ak extends a {
 
     final hc a(byte param0, int param1) {
         if (param0 != -102) {
-          field_t = (le[]) null;
+          field_t = (Sprite[]) null;
         }
         hc dupTemp$0 = new hc();
         this.field_s[param1] = dupTemp$0;
         return dupTemp$0;
     }
 
-    public final void a(boolean param0, we param1, int param2, int param3, int param4) {
-        we stackIn_3_0 = null;
+    public final void a(boolean param0, UiWidget param1, int param2, int param3, int param4) {
+        UiWidget stackIn_3_0 = null;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
@@ -254,18 +254,18 @@ final class ak extends a {
         hc var7 = null;
         hc var9 = null;
         ak var10 = null;
-        t var11 = null;
+        ButtonWidget var11 = null;
         hc var12 = null;
         hc var13 = null;
         hc var14 = null;
         hc var15 = null;
         try {
-          if (param1 instanceof t) {
-            stackIn_3_0 = (we) (param1);
+          if (param1 instanceof ButtonWidget) {
+            stackIn_3_0 = (UiWidget) (param1);
           } else {
             stackIn_3_0 = null;
           }
-          var11 = (t) (stackIn_3_0);
+          var11 = (ButtonWidget) (stackIn_3_0);
           qi.a(param1.field_r + param3 + param1.field_l, true, param1.field_p + param1.field_e + param2, param1.field_r + param3, param2 + param1.field_e);
           if (var11 != null) {
             param0 = param0 & var11.field_w;

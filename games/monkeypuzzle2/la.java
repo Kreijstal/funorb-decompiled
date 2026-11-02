@@ -19,13 +19,13 @@ final class la extends b {
         return false;
     }
 
-    final static dd a(Throwable param0, String param1) {
-        dd var2 = null;
-        if (param0 instanceof dd) {
-          var2 = (dd) ((Object) param0);
+    final static ClientException a(Throwable param0, String param1) {
+        ClientException var2 = null;
+        if (param0 instanceof ClientException) {
+          var2 = (ClientException) ((Object) param0);
           var2.field_c = var2.field_c + ' ' + param1;
         } else {
-          var2 = new dd(param0, param1);
+          var2 = new ClientException(param0, param1);
         }
         return var2;
     }

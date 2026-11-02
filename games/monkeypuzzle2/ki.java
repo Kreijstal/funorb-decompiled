@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ki extends bf {
+final class ki extends DualLinkNode {
     private int field_i;
     int field_l;
     int field_m;
@@ -9,7 +9,7 @@ final class ki extends bf {
     int field_C;
     private int field_k;
     int field_p;
-    pj field_t;
+    IntrusiveDeque field_t;
     ki[] field_o;
     int field_w;
     int field_G;
@@ -19,10 +19,10 @@ final class ki extends bf {
     int field_u;
     int field_y;
     boolean field_A;
-    static le field_H;
+    static Sprite field_H;
     int field_F;
     float field_q;
-    le field_I;
+    Sprite field_I;
     int field_n;
     boolean field_x;
     static String[] field_r;
@@ -171,7 +171,7 @@ final class ki extends bf {
         }
     }
 
-    final void a(byte param0, gk param1) {
+    final void a(byte param0, PacketBuffer param1) {
         try {
           this.a(param1, true);
           this.a(false);
@@ -206,7 +206,7 @@ final class ki extends bf {
           e.field_b[1] = pi.field_l.nextInt();
           e.field_b[3] = (int)ld.field_a;
           e.field_b[2] = (int)(ld.field_a >> 32);
-          uc.field_a.field_h = 0;
+          uc.field_a.position = 0;
           uc.field_a.a(-803539344, e.field_b[0]);
           uc.field_a.a(-803539344, e.field_b[1]);
           uc.field_a.a(-803539344, e.field_b[2]);
@@ -217,14 +217,14 @@ final class ki extends bf {
             return;
           }
           param1.a(121, uc.field_a);
-          gf.field_c.field_h = 0;
+          gf.field_c.position = 0;
           if (param3) {
             gf.field_c.b(18, -49152);
           } else {
             gf.field_c.b(16, -49152);
           }
-          gf.field_c.field_h = gf.field_c.field_h + 2;
-          var5_int = gf.field_c.field_h;
+          gf.field_c.position = gf.field_c.position + 2;
+          var5_int = gf.field_c.position;
           gf.field_c.a(-803539344, mk.field_h);
           gf.field_c.a(od.field_l, (byte) -102);
           var6 = 0;
@@ -250,8 +250,8 @@ final class ki extends bf {
             gf.field_c.a(df.field_o, -57);
           }
           e.a(sd.field_a, fj.field_F, (byte) 92, gf.field_c, uc.field_a);
-          gf.field_c.d(6903, gf.field_c.field_h - var5_int);
-          al.a((byte) -71, -1);
+          gf.field_c.d(6903, gf.field_c.position - var5_int);
+          SocketConnector.a((byte) -71, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -303,21 +303,21 @@ final class ki extends bf {
     final void a(int param0, int param1, int param2) {
         this.field_l = param1;
         if (param2 != -1) {
-          this.field_t = (pj) null;
+          this.field_t = (IntrusiveDeque) null;
         }
         this.field_w = param0;
         this.a(false);
     }
 
-    private final void a(gk param0, boolean param1) {
+    private final void a(PacketBuffer param0, boolean param1) {
         try {
-          this.field_B = (float)param0.e(-46);
-          this.field_q = (float)param0.e(127);
-          this.field_l = param0.a((byte) 114);
+          this.field_B = (float)param0.readInt(-46);
+          this.field_q = (float)param0.readInt(127);
+          this.field_l = param0.readUnsignedByte((byte) 114);
           if (!param1) {
             this.field_y = 45;
           }
-          this.field_w = param0.a((byte) 114);
+          this.field_w = param0.readUnsignedByte((byte) 114);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "ki.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -360,7 +360,7 @@ final class ki extends bf {
 
     public static void h(int param0) {
         if (param0 != 12950) {
-          field_H = (le) null;
+          field_H = (Sprite) null;
         }
         field_H = null;
         field_r = null;
@@ -496,7 +496,7 @@ final class ki extends bf {
                     }
                   }
                 } else {
-                  this.field_I = wc.field_h;
+                  this.field_I = NodeHashTableIterator.field_h;
                 }
               } else {
                 this.field_I = qi.field_K[1];

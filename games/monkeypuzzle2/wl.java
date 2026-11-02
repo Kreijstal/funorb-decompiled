@@ -3,16 +3,16 @@
  */
 abstract class wl {
     dl field_n;
-    static le[] field_f;
+    static Sprite[] field_f;
     dl field_j;
-    static pj field_d;
+    static IntrusiveDeque field_d;
     dl field_i;
     dl field_c;
     long field_e;
     int field_h;
-    gk field_l;
+    PacketBuffer field_l;
     volatile int field_a;
-    gk field_g;
+    PacketBuffer field_g;
     byte field_m;
     volatile int field_b;
     ob field_k;
@@ -75,7 +75,7 @@ abstract class wl {
           this.field_i.a(var8, (byte) -105);
           return var8;
         }
-        field_d = (pj) null;
+        field_d = (IntrusiveDeque) null;
         var8Lifetime1 = new ob();
         var8Lifetime1.field_q = param4;
         stackIn_3_0 = var8Lifetime1;
@@ -102,7 +102,7 @@ abstract class wl {
         field_f = null;
         field_d = null;
         if (param0 < 99) {
-          field_d = (pj) null;
+          field_d = (IntrusiveDeque) null;
         }
     }
 
@@ -120,7 +120,7 @@ abstract class wl {
             return null;
           }
           if (param1 != -26348) {
-            field_f = (le[]) null;
+            field_f = (Sprite[]) null;
           }
           stackIn_6_0 = rl.a(param1 - 6118, param0.b(255, param3, param4));
           return stackIn_6_0;
@@ -173,11 +173,11 @@ abstract class wl {
         this.field_j = new dl();
         this.field_i = new dl();
         this.field_c = new dl();
-        this.field_l = new gk(6);
+        this.field_l = new PacketBuffer(6);
         this.field_b = 0;
         this.field_a = 0;
         this.field_m = (byte) 0;
-        this.field_g = new gk(10);
+        this.field_g = new PacketBuffer(10);
     }
 
     static {

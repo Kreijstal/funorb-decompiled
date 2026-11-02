@@ -4,7 +4,7 @@
 final class uc {
     static na field_e;
     static int field_b;
-    static gk field_a;
+    static PacketBuffer field_a;
     static String[] field_f;
     private static long[] field_c;
     static String field_d;
@@ -48,7 +48,7 @@ final class uc {
         if (var15 > ge.field_k) {
           var15 = ge.field_k;
         }
-        bf.field_h = 256 / param4;
+        DualLinkNode.field_h = 256 / param4;
         bh.field_j = param6 * 128 / param4;
         vh.field_I = (var13 - param1) * var8;
         nc.field_e = (var13 - param1) * var9;
@@ -98,7 +98,7 @@ final class uc {
                   stackIn_16_0 = (param0 + param2) * bh.field_j >> 8;
                 }
                 param4 = stackIn_16_0;
-                param5 = param1 * param4 * bf.field_h >> 8;
+                param5 = param1 * param4 * DualLinkNode.field_h >> 8;
                 if (param5 < 0) {
                   stackIn_19_0 = ak.field_u[param4 + param5];
                 } else {
@@ -136,7 +136,7 @@ final class uc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            field_a = (gk) null;
+            field_a = (PacketBuffer) null;
           }
           var2 = param0.getParameter("username");
           if (var2 != null) {
@@ -179,7 +179,7 @@ final class uc {
           uc.a('\026', false);
         }
         rh.field_B = false;
-        MonkeyPuzzle2.field_D.a((byte) 114);
+        MonkeyPuzzle2.field_D.readUnsignedByte((byte) 114);
     }
 
     static {
@@ -188,7 +188,7 @@ final class uc {
         long var0;
         field_b = 9;
         field_e = new na();
-        field_a = new gk(256);
+        field_a = new PacketBuffer(256);
         field_c = new long[256];
         field_f = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_d = "Unfortunately your configuration doesn't support fullscreen mode.";

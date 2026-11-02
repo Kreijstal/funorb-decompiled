@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class rj extends t {
+class rj extends ButtonWidget {
     private int field_E;
     private int field_J;
     private long field_K;
     private int field_D;
     static String field_B;
-    static le field_H;
+    static Sprite field_H;
     private boolean field_G;
     private int field_I;
     private long field_F;
@@ -29,7 +29,7 @@ class rj extends t {
         }
     }
 
-    final boolean a(we param0, char param1, int param2, int param3) {
+    final boolean a(UiWidget param0, char param1, int param2, int param3) {
         int dupTemp$0 = 0;
         int stackIn_39_1 = 0;
         int stackIn_68_1 = 0;
@@ -241,7 +241,7 @@ class rj extends t {
           }
           return;
         }
-        this.field_h.a(this.field_w, (we) (this), param2, param3, 110);
+        this.field_h.a(this.field_w, (UiWidget) (this), param2, param3, 110);
         if (!(this.field_h instanceof ui)) {
           if (param0 == 30) {
             return;
@@ -252,10 +252,10 @@ class rj extends t {
         }
         ui var9 = (ui) ((Object) this.field_h);
         if (this.field_D != this.field_E) {
-          var9.a(119, (we) (this), this.field_D, param3, this.field_E, param2);
+          var9.a(119, (UiWidget) (this), this.field_D, param3, this.field_E, param2);
           var6 = pf.a(param0 - 30);
           if ((-this.field_K + var6) % 1000L < 500L) {
-            var9.a((we) (this), param3, param2, this.field_E, 0);
+            var9.a((UiWidget) (this), param3, param2, this.field_E, 0);
             if (param0 == 30) {
               return;
             }
@@ -272,7 +272,7 @@ class rj extends t {
         }
         var6Lifetime1 = pf.a(param0 - 30);
         if ((-this.field_K + var6Lifetime1) % 1000L < 500L) {
-          var9.a((we) (this), param3, param2, this.field_E, 0);
+          var9.a((UiWidget) (this), param3, param2, this.field_E, 0);
           if (param0 == 30) {
             return;
           }
@@ -287,7 +287,7 @@ class rj extends t {
         this.a(false, 120, (String) null);
     }
 
-    void a(we param0, int param1, int param2, byte param3) {
+    void a(UiWidget param0, int param1, int param2, byte param3) {
         ui var7 = null;
         int var6 = 0;
         try {
@@ -299,7 +299,7 @@ class rj extends t {
           if (this.field_t == 1) {
             if (this.field_h instanceof ui) {
               var7 = (ui) ((Object) this.field_h);
-              var6 = var7.a(param2, p.field_a, (we) (this), ei.field_a, true, param1);
+              var6 = var7.a(param2, p.field_a, (UiWidget) (this), ei.field_a, true, param1);
               if (-1 != var6) {
                 if (this.field_C &&
                   var6 < this.field_J &&
@@ -564,7 +564,7 @@ class rj extends t {
         this.a(false);
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, we param4, int param5, int param6) {
+    final boolean a(int param0, int param1, int param2, int param3, UiWidget param4, int param5, int param6) {
         int stackIn_7_1 = 0;
         boolean stackIn_10_1 = false;
         RuntimeException stackIn_24_0 = null;
@@ -577,7 +577,7 @@ class rj extends t {
         try {
           if (super.a(param0, param1, param2, param3 ^ 0, param4, param5, param6) &&
             this.field_h instanceof ui) {
-            var8_int = ((ui) ((Object) this.field_h)).a(param6, p.field_a, (we) (this), ei.field_a, true, param0);
+            var8_int = ((ui) ((Object) this.field_h)).a(param6, p.field_a, (UiWidget) (this), ei.field_a, true, param0);
             if (var8_int == -1) {
               stackIn_7_1 = 0;
             } else {
@@ -652,9 +652,9 @@ class rj extends t {
           return;
         }
         var10 = (ui) ((Object) this.field_h);
-        var3 = var10.a(-1, (we) (this));
+        var3 = var10.a(-1, (UiWidget) (this));
         var4 = var3.a(true);
-        var5 = var10.b((we) (this), true);
+        var5 = var10.b((UiWidget) (this), true);
         var7 = -85 / ((27 - param0) / 63);
         var6 = var10.a(2) >> 1;
         if (-var6 + var5 > var4) {
@@ -702,6 +702,6 @@ class rj extends t {
 
     static {
         field_B = null;
-        field_H = new le(540, 140);
+        field_H = new Sprite(540, 140);
     }
 }

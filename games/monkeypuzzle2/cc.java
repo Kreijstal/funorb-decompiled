@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class cc {
-    static le[][] field_a;
+    static Sprite[][] field_a;
     static long field_b;
 
     abstract void a(int param0, java.awt.Component param1);
@@ -25,7 +25,7 @@ abstract class cc {
             r.field_a[var1_int] = (int)(Math.pow((double)((float)var1_int / 256.0f), var2) * 255.0);
           }
           if (!param0) {
-            field_a = (le[][]) null;
+            field_a = (Sprite[][]) null;
           }
           var5 = 256;
           var1_intLifetime1 = var5;
@@ -65,12 +65,12 @@ abstract class cc {
         if (param0 != 256) {
           return;
         }
-        field_a = (le[][]) null;
+        field_a = (Sprite[][]) null;
     }
 
     abstract void a(java.awt.Component param0, int param1);
 
     static {
-        field_a = new le[3][];
+        field_a = new Sprite[3][];
     }
 }

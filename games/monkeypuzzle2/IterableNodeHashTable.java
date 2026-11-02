@@ -3,9 +3,9 @@
  */
 import java.util.*;
 
-final class dc implements Iterable {
-    ug[] field_f;
-    private ug field_a;
+final class IterableNodeHashTable implements Iterable {
+    IntrusiveNode[] field_f;
+    private IntrusiveNode field_a;
     static int field_e;
     int field_d;
     static String field_b;
@@ -69,7 +69,7 @@ final class dc implements Iterable {
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new wc(this));
+        return (Iterator) ((Object) new NodeHashTableIterator(this));
     }
 
     final static void a(int param0) {
@@ -79,11 +79,11 @@ final class dc implements Iterable {
           return;
         }
         ad var2 = (ad) null;
-        dc.a(54, (String) null, (String) null, (ud) null, (ad) null);
+        IterableNodeHashTable.a(54, (String) null, (String) null, (ud) null, (ad) null);
         jh.field_C.c((byte) 121, nf.field_F);
     }
 
-    private dc() throws Throwable {
+    private IterableNodeHashTable() throws Throwable {
         throw new Error();
     }
 
@@ -126,69 +126,69 @@ final class dc implements Iterable {
     public static void b(int param0) {
         field_b = null;
         if (param0 < 16) {
-          dc.a(24);
+          IterableNodeHashTable.a(24);
         }
     }
 
-    final void a(long param0, boolean param1, ug param2) {
-        ug var5 = null;
+    final void a(long param0, boolean param1, IntrusiveNode param2) {
+        IntrusiveNode var5 = null;
         try {
           if (!param1) {
-            dc.a(27);
+            IterableNodeHashTable.a(27);
           }
-          if (param2.field_c != null) {
-            param2.c(-19822);
+          if (param2.next != null) {
+            param2.unlink(-19822);
           }
           var5 = this.field_f[(int)(param0 & (long)(this.field_d - 1))];
-          param2.field_c = var5.field_c;
-          param2.field_d = var5;
-          param2.field_c.field_d = param2;
-          param2.field_d.field_c = param2;
-          param2.field_a = param0;
+          param2.next = var5.next;
+          param2.previous = var5;
+          param2.next.previous = param2;
+          param2.previous.next = param2;
+          param2.key = param0;
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "dc.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final ug a(byte param0, long param1) {
-        ug var4;
-        ug var5;
+    final IntrusiveNode a(byte param0, long param1) {
+        IntrusiveNode var4;
+        IntrusiveNode var5;
         int var6;
-        ug var5Lifetime1;
+        IntrusiveNode var5Lifetime1;
         var6 = MonkeyPuzzle2.field_F ? 1 : 0;
         var4 = this.field_f[(int)((long)(-1 + this.field_d) & param1)];
         if (param0 <= -70) {
-          this.field_a = var4.field_d;
+          this.field_a = var4.previous;
           while (true) {
             if (this.field_a == var4) {
               this.field_a = null;
               return null;
             }
-            if (~this.field_a.field_a != ~param1) {
-              this.field_a = this.field_a.field_d;
+            if (~this.field_a.key != ~param1) {
+              this.field_a = this.field_a.previous;
               continue;
             }
             break;
           }
           var5 = this.field_a;
-          this.field_a = this.field_a.field_d;
+          this.field_a = this.field_a.previous;
           return var5;
         }
         this.iterator();
-        this.field_a = var4.field_d;
+        this.field_a = var4.previous;
         while (true) {
           if (this.field_a == var4) {
             this.field_a = null;
             return null;
           }
-          if (~this.field_a.field_a != ~param1) {
-            this.field_a = this.field_a.field_d;
+          if (~this.field_a.key != ~param1) {
+            this.field_a = this.field_a.previous;
             continue;
           }
           break;
         }
         var5Lifetime1 = this.field_a;
-        this.field_a = this.field_a.field_d;
+        this.field_a = this.field_a.previous;
         return var5Lifetime1;
     }
 

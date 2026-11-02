@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class k extends ug {
-    static pj field_l;
+final class k extends IntrusiveNode {
+    static IntrusiveDeque field_l;
     int[] field_h;
     static boolean field_i;
-    static mj field_f;
+    static PcmStreamMixer field_f;
     static String field_k;
     static int field_g;
     int field_e;
@@ -148,7 +148,7 @@ final class k extends ug {
     }
 
     static {
-        field_l = new pj();
+        field_l = new IntrusiveDeque();
         field_k = "Logging in...";
     }
 }

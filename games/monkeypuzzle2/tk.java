@@ -15,7 +15,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
               var3 = 1 + jk.field_w & 127;
               if (o.field_b != var3) {
                 oi.field_e[jk.field_w] = -1;
-                ia.field_d[jk.field_w] = (char)var2_int;
+                ProxySocketConnector.field_d[jk.field_w] = (char)var2_int;
                 jk.field_w = var3;
               }
             }
@@ -42,7 +42,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
           if (wj.field_k == null) {
             return;
           }
-          je.field_c = 0;
+          WeightedObjectCache.field_c = 0;
           var2_int = param0.getKeyCode();
           if (var2_int >= 0 &&
             var2_int < cb.field_c.length) {
@@ -55,7 +55,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
           }
           if (vf.field_a >= 0 &&
             var2_int >= 0) {
-            ia.field_g[vf.field_a] = var2_int;
+            ProxySocketConnector.field_g[vf.field_a] = var2_int;
             vf.field_a = 1 + vf.field_a & 127;
             if (vf.field_a == sl.field_j) {
               vf.field_a = -1;
@@ -65,7 +65,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
             var3 = jk.field_w + 1 & 127;
             if (o.field_b != var3) {
               oi.field_e[jk.field_w] = var2_int;
-              ia.field_d[jk.field_w] = (char)0;
+              ProxySocketConnector.field_d[jk.field_w] = (char)0;
               jk.field_w = var3;
             }
           }
@@ -100,7 +100,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
         RuntimeException var2 = null;
         try {
           if (null != wj.field_k) {
-            je.field_c = 0;
+            WeightedObjectCache.field_c = 0;
             var2_int = param0.getKeyCode();
             if (var2_int >= 0 &&
               var2_int < cb.field_c.length) {
@@ -110,7 +110,7 @@ final class tk implements java.awt.event.KeyListener, java.awt.event.FocusListen
             }
             if (vf.field_a >= 0 &&
               var2_int >= 0) {
-              ia.field_g[vf.field_a] = ~var2_int;
+              ProxySocketConnector.field_g[vf.field_a] = ~var2_int;
               vf.field_a = 127 & vf.field_a + 1;
               if (vf.field_a == sl.field_j) {
                 vf.field_a = -1;

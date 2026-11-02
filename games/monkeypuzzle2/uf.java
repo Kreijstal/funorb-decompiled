@@ -160,7 +160,7 @@ final class uf extends fg {
             !kd.field_e.equals(param0.getParameter("session"))) {
             var4Lifetime1 = kd.field_e;
           }
-          stackIn_12_0 = fc.a((String) (var3), param2, (String) (var4Lifetime1), -1, 35);
+          stackIn_12_0 = GameApplet.a((String) (var3), param2, (String) (var4Lifetime1), -1, 35);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

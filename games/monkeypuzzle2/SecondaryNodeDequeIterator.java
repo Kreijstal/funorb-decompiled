@@ -3,11 +3,11 @@
  */
 import java.util.*;
 
-final class nd implements Iterator {
-    private bf field_h;
-    static le field_b;
-    private ni field_c;
-    private bf field_f;
+final class SecondaryNodeDequeIterator implements Iterator {
+    private DualLinkNode field_h;
+    static Sprite field_b;
+    private SecondaryNodeDeque field_c;
+    private DualLinkNode field_f;
     static boolean field_a;
     static String[] field_g;
     static int[] field_d;
@@ -25,7 +25,7 @@ final class nd implements Iterator {
         field_d = null;
         field_b = null;
         if (param0 != 127) {
-          field_b = (le) null;
+          field_b = (Sprite) null;
           field_g = null;
           return;
         }
@@ -38,9 +38,9 @@ final class nd implements Iterator {
           var1 = null;
           this.field_f = null;
         } else {
-          this.field_f = ((bf) (var1)).field_g;
+          this.field_f = ((DualLinkNode) (var1)).field_g;
         }
-        this.field_h = (bf) (var1);
+        this.field_h = (DualLinkNode) (var1);
         return var1;
     }
 
@@ -61,7 +61,7 @@ final class nd implements Iterator {
           }
           return null;
         }
-        if (id.field_a + cj.field_e > ka.field_a) {
+        if (BufferedSocket.field_a + cj.field_e > ka.field_a) {
           return pf.field_b;
         }
         if (param0 > -125) {
@@ -87,7 +87,7 @@ final class nd implements Iterator {
         var16 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (param5 != -23487) {
-            field_b = (le) null;
+            field_b = (Sprite) null;
           }
           while (true) {
             param1--;
@@ -121,7 +121,7 @@ final class nd implements Iterator {
         }
     }
 
-    nd(ni param0) {
+    SecondaryNodeDequeIterator(SecondaryNodeDeque param0) {
         this.field_h = null;
         try {
           this.field_c = param0;
@@ -133,7 +133,7 @@ final class nd implements Iterator {
     }
 
     static {
-        field_b = new le(36, 36);
+        field_b = new Sprite(36, 36);
         field_d = new int[]{0, 1, 3, 7, 15, 31, 63, 127, 255, 511, 1023, 2047, 4095, 8191, 16383, 32767, 65535, 131071, 262143, 524287, 1048575, 2097151, 4194303, 8388607, 16777215, 33554431, 67108863, 134217727, 268435455, 536870911, 1073741823, 2147483647, -1};
     }
 }

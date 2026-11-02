@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qb {
-    static mj field_c;
+    static PcmStreamMixer field_c;
     static String field_d;
     static am field_a;
     static boolean field_b;
@@ -26,8 +26,8 @@ final class qb {
           re.field_e = param1;
           var2 = (hk) (bd.field_c.a((byte) -117));
           while (var2 != null) {
-            if (!var2.field_h.d(-3548)) {
-              var2.c(param0 - 20078);
+            if (!var2.field_h.isLinked(-3548)) {
+              var2.unlink(param0 - 20078);
             } else {
               var2.field_g.g(re.field_e * var2.field_j / 256);
             }
@@ -44,7 +44,7 @@ final class qb {
         }
     }
 
-    final static void a(int param0, le[] param1, byte param2, int param3, int param4) {
+    final static void a(int param0, Sprite[] param1, byte param2, int param3, int param4) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -95,7 +95,7 @@ final class qb {
     final static char a(char param0, int param1) {
         int var2;
         int var3;
-        le[] var4;
+        Sprite[] var4;
         int var2Lifetime1;
         var3 = MonkeyPuzzle2.field_F ? 1 : 0;
         if (param1 == -201) {
@@ -201,8 +201,8 @@ final class qb {
           }
           return param0;
         }
-        var4 = (le[]) null;
-        qb.a(-124, (le[]) null, (byte) -91, -104, 94);
+        var4 = (Sprite[]) null;
+        qb.a(-124, (Sprite[]) null, (byte) -91, -104, 94);
         var2Lifetime1 = param0;
         if (32 == var2Lifetime1) {
           return '_';
@@ -331,7 +331,7 @@ final class qb {
 
     static {
         field_d = "Click";
-        pj discarded$0 = new pj();
+        IntrusiveDeque discarded$0 = new IntrusiveDeque();
         field_a = new am();
         field_b = false;
     }

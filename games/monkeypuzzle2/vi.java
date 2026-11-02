@@ -24,7 +24,7 @@ final class vi {
           return;
         }
         try {
-          me.field_f = new ha(wg.field_j, pj.field_c, param0, fk.field_a, ja.field_F);
+          me.field_f = new ha(wg.field_j, IntrusiveDeque.field_c, param0, fk.field_a, ja.field_F);
           wg.field_j.b((byte) -63, me.field_f);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "vi.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

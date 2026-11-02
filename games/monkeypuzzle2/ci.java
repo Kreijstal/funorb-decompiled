@@ -5,7 +5,7 @@ final class ci {
     static oe field_a;
     static int[] field_c;
     static int field_b;
-    static le field_d;
+    static Sprite field_d;
 
     final static void a(int param0) {
         int var1_int = 0;

@@ -55,7 +55,7 @@ abstract class bh {
           var1Lifetime3 = var18 + ":";
           for (var2 = 0; rc.field_f > var2; var2++) {
             var19 = var1Lifetime3 + ' ';
-            var3 = 255 & MonkeyPuzzle2.field_D.field_g[var2];
+            var3 = 255 & MonkeyPuzzle2.field_D.payload[var2];
             var4 = var3 >> 4;
             var3 = var3 & 15;
             if (var4 >= 10) {
@@ -82,7 +82,7 @@ abstract class bh {
         var1Lifetime2 = var12 + ":";
         for (var2Lifetime1 = 0; rc.field_f > var2Lifetime1; var2Lifetime1++) {
           var16 = var1Lifetime2 + ' ';
-          var3Lifetime1 = 255 & MonkeyPuzzle2.field_D.field_g[var2Lifetime1];
+          var3Lifetime1 = 255 & MonkeyPuzzle2.field_D.payload[var2Lifetime1];
           var4Lifetime1 = var3Lifetime1 >> 4;
           var3Lifetime1 = var3Lifetime1 & 15;
           if (var4Lifetime1 >= 10) {

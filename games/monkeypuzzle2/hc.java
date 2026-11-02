@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hc {
-    le[] field_e;
+    Sprite[] field_e;
     private int field_i;
     private int field_c;
     private int field_b;
     private boolean field_d;
     static int[][] field_h;
     private int field_f;
-    le field_a;
+    Sprite field_a;
     private int field_g;
 
     public static void a(byte param0) {
@@ -21,7 +21,7 @@ final class hc {
         field_h = (int[][]) null;
     }
 
-    final void a(int param0, ak param1, int param2, int param3, we param4, hc param5) {
+    final void a(int param0, ak param1, int param2, int param3, UiWidget param4, hc param5) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -88,7 +88,7 @@ final class hc {
         }
     }
 
-    final static void a(byte param0, gk param1) {
+    final static void a(byte param0, PacketBuffer param1) {
         int var2_int = 0;
         int var2_intLifetime1;
         int var2_intLifetime2;
@@ -96,19 +96,19 @@ final class hc {
           return;
         }
         try {
-          qd.field_a = param1.j(param0 + 17195) << 5;
-          var2_int = param1.a((byte) 114);
+          qd.field_a = param1.readUnsignedShort(param0 + 17195) << 5;
+          var2_int = param1.readUnsignedByte((byte) 114);
           qd.field_a = qd.field_a + (var2_int >> 3);
           de.field_m = (7 & var2_int) << 18;
-          de.field_m = de.field_m + (param1.j(17277) << 2);
-          var2_intLifetime1 = param1.a((byte) 114);
+          de.field_m = de.field_m + (param1.readUnsignedShort(17277) << 2);
+          var2_intLifetime1 = param1.readUnsignedByte((byte) 114);
           lk.field_a = (var2_intLifetime1 & 63) << 15;
           de.field_m = de.field_m + (var2_intLifetime1 >> 6);
-          lk.field_a = lk.field_a + (param1.a((byte) 114) << 7);
-          var2_intLifetime2 = param1.a((byte) 114);
+          lk.field_a = lk.field_a + (param1.readUnsignedByte((byte) 114) << 7);
+          var2_intLifetime2 = param1.readUnsignedByte((byte) 114);
           mk.field_i = 65536 & var2_intLifetime2 << 16;
           lk.field_a = lk.field_a + (var2_intLifetime2 >> 1);
-          mk.field_i = mk.field_i + param1.j(17277);
+          mk.field_i = mk.field_i + param1.readUnsignedShort(17277);
         } catch (RuntimeException runtimeException) {
           throw la.a((Throwable) ((Object) runtimeException), "hc.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -154,7 +154,7 @@ final class hc {
         return this;
     }
 
-    final hc a(int param0, le[] param1) {
+    final hc a(int param0, Sprite[] param1) {
         RuntimeException var3 = null;
         hc var4 = null;
         RuntimeException stackIn_6_0 = null;
@@ -182,7 +182,7 @@ final class hc {
         }
     }
 
-    final void a(ak param0, we param1, byte param2, int param3, int param4) {
+    final void a(ak param0, UiWidget param1, byte param2, int param3, int param4) {
         ta stackIn_21_0;
         String stackIn_21_1;
         int stackIn_21_2;

@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class jj extends t {
+class jj extends ButtonWidget {
     static int field_F;
     static byte[][] field_E;
     private bl field_C;
     private String[] field_D;
     static String field_B;
-    private pj field_G;
+    private IntrusiveDeque field_G;
 
-    void a(we param0, int param1, int param2, byte param3) {
+    void a(UiWidget param0, int param1, int param2, byte param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -77,10 +77,10 @@ class jj extends t {
         if (param3 != -1) {
           this.a(-61, 36, 65, -22);
         }
-        this.a(((ui) ((Object) this.field_h)).a((we) (this), false), 13361, param0, param2, param1);
+        this.a(((ui) ((Object) this.field_h)).a((UiWidget) (this), false), 13361, param0, param2, param1);
     }
 
-    boolean a(we param0, boolean param1) {
+    boolean a(UiWidget param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -135,14 +135,14 @@ class jj extends t {
         String var17;
         int var7Lifetime1;
         var16 = MonkeyPuzzle2.field_F ? 1 : 0;
-        this.field_G = new pj();
+        this.field_G = new IntrusiveDeque();
         var2 = 0;
         if (!param0) {
           var17 = (String) null;
           this.a(true, 111, (String) null);
         }
         var3 = (ui) ((Object) this.field_h);
-        var4 = var3.a(-1, (we) (this));
+        var4 = var3.a(-1, (UiWidget) (this));
         while (true) {
           var5 = this.field_s.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -249,20 +249,20 @@ class jj extends t {
         int var32Lifetime1Lifetime1;
         var33 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
-          param3 = param3 - (-param1.field_I.field_n + nd.field_b.field_n) / 2;
-          param2 = param2 - (-param1.field_I.field_m + nd.field_b.field_m) / 2;
-          param2 = param2 + nd.field_b.field_r;
-          param3 = param3 + nd.field_b.field_q;
+          param3 = param3 - (-param1.field_I.field_n + SecondaryNodeDequeIterator.field_b.field_n) / 2;
+          param2 = param2 - (-param1.field_I.field_m + SecondaryNodeDequeIterator.field_b.field_m) / 2;
+          param2 = param2 + SecondaryNodeDequeIterator.field_b.field_r;
+          param3 = param3 + SecondaryNodeDequeIterator.field_b.field_q;
           var4_int = sb.field_m.field_r - param2;
           var5 = sb.field_m.field_q - param3;
-          var6 = nd.field_b.field_k;
+          var6 = SecondaryNodeDequeIterator.field_b.field_k;
           if (var4_int < var6) {
             stackIn_4_0 = sb.field_m.field_k;
           } else {
             stackIn_4_0 = 0;
           }
           var7 = stackIn_4_0;
-          var8 = nd.field_b.field_j;
+          var8 = SecondaryNodeDequeIterator.field_b.field_j;
           if (var5 < var8) {
             stackIn_7_0 = sb.field_m.field_j;
           } else {
@@ -290,7 +290,7 @@ class jj extends t {
           var15 = -var12 + var6;
           var16 = var10 + (-var4_int + (-var5 + var11) * var7);
           var17 = var7 - var12;
-          var40 = nd.field_b.field_s;
+          var40 = SecondaryNodeDequeIterator.field_b.field_s;
           var41 = sb.field_m.field_s;
           var20 = 0;
           var21 = 0;
@@ -545,8 +545,8 @@ class jj extends t {
         bl var6 = this.field_C;
         if (var6 == null) {
         } else {
-          var7 = var5.a(param3, (byte) 113, (we) (this));
-          var8 = var5.a((we) (this), -94, param2);
+          var7 = var5.a(param3, (byte) 113, (UiWidget) (this));
+          var8 = var5.a((UiWidget) (this), -94, param2);
           do {
             hk.a(var6.field_l + var7 - 2, -2 + var8 + var6.field_n, 53, 2 + var6.field_i, var6.field_j + 2);
             var6 = var6.field_e;
@@ -574,7 +574,7 @@ class jj extends t {
         if (param2 == 2) {
           return null;
         }
-        this.field_G = (pj) null;
+        this.field_G = (IntrusiveDeque) null;
         return null;
     }
 

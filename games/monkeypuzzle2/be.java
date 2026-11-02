@@ -28,7 +28,7 @@ final class be {
           !gj.field_a.h()) {
           return;
         }
-        gj.field_a = li.a(ke.field_h[5], 100, 96);
+        gj.field_a = PcmSampleStream.a(ke.field_h[5], 100, 96);
         int var1 = 39 / ((param0 + 87) / 39);
         na.a((byte) 125, gj.field_a);
     }
@@ -62,7 +62,7 @@ final class be {
         field_e = null;
     }
 
-    final static void a(gk param0, java.math.BigInteger param1, int param2, int param3, int param4, java.math.BigInteger param5, byte[] param6) {
+    final static void a(PacketBuffer param0, java.math.BigInteger param1, int param2, int param3, int param4, java.math.BigInteger param5, byte[] param6) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -96,18 +96,18 @@ final class be {
             var8[var9] = pb.field_b.nextInt();
           }
           if (jk.field_z == null ||
-            !(var7_int <= jk.field_z.field_g.length)) {
-            jk.field_z = new gk(var7_int);
+            !(var7_int <= jk.field_z.payload.length)) {
+            jk.field_z = new PacketBuffer(var7_int);
           }
-          jk.field_z.field_h = 0;
+          jk.field_z.position = 0;
           jk.field_z.b(param6, param4, -2, param3);
           jk.field_z.a(true, var7_int);
           jk.field_z.a(30350, var14);
           if (null == MonkeyPuzzle2.field_A ||
-            !(MonkeyPuzzle2.field_A.field_g.length >= 100)) {
-            MonkeyPuzzle2.field_A = new gk(100);
+            !(MonkeyPuzzle2.field_A.payload.length >= 100)) {
+            MonkeyPuzzle2.field_A = new PacketBuffer(100);
           }
-          MonkeyPuzzle2.field_A.field_h = 0;
+          MonkeyPuzzle2.field_A.position = 0;
           MonkeyPuzzle2.field_A.b(10, -49152);
           var12 = 0;
           var9Lifetime1 = var12;
@@ -117,12 +117,12 @@ final class be {
           }
           if (param2 >= -76) {
             var11 = (byte[]) null;
-            be.a((gk) null, (java.math.BigInteger) null, 116, -40, -47, (java.math.BigInteger) null, (byte[]) null);
+            be.a((PacketBuffer) null, (java.math.BigInteger) null, 116, -40, -47, (java.math.BigInteger) null, (byte[]) null);
           }
           MonkeyPuzzle2.field_A.c(param4, 83);
           MonkeyPuzzle2.field_A.a((byte) -127, param1, param5);
-          param0.b(MonkeyPuzzle2.field_A.field_g, MonkeyPuzzle2.field_A.field_h, -2, 0);
-          param0.b(jk.field_z.field_g, jk.field_z.field_h, -2, 0);
+          param0.b(MonkeyPuzzle2.field_A.payload, MonkeyPuzzle2.field_A.position, -2, 0);
+          param0.b(jk.field_z.payload, jk.field_z.position, -2, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -185,7 +185,7 @@ final class be {
     final static ad a(boolean param0, boolean param1, int param2, int param3, boolean param4) {
         if (param2 != 13271) {
           byte[] var6 = (byte[]) null;
-          be.a((gk) null, (java.math.BigInteger) null, -19, 70, -21, (java.math.BigInteger) null, (byte[]) null);
+          be.a((PacketBuffer) null, (java.math.BigInteger) null, -19, 70, -21, (java.math.BigInteger) null, (byte[]) null);
         }
         return em.a(false, param3, param4, param1, !param0 ? 0 : 1, 50);
     }

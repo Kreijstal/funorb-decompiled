@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class pi extends bf {
+final class pi extends DualLinkNode {
     private int[] field_k;
     int[] field_q;
     private int[][] field_j;
@@ -14,10 +14,10 @@ final class pi extends bf {
     static String field_i;
     static String field_m;
 
-    final void a(gk param0, boolean param1) {
+    final void a(PacketBuffer param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
-        gk var5 = null;
+        PacketBuffer var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -26,11 +26,11 @@ final class pi extends bf {
         var4 = MonkeyPuzzle2.field_F ? 1 : 0;
         try {
           if (!param1) {
-            var5 = (gk) null;
-            this.a((gk) null, -61, 68);
+            var5 = (PacketBuffer) null;
+            this.a((PacketBuffer) null, -61, 68);
           }
           while (true) {
-            var3_int = param0.a((byte) 114);
+            var3_int = param0.readUnsignedByte((byte) 114);
             if (0 == var3_int) {
               return;
             }
@@ -50,7 +50,7 @@ final class pi extends bf {
         }
     }
 
-    private final void a(gk param0, int param1, int param2) {
+    private final void a(PacketBuffer param0, int param1, int param2) {
         int[] array$0 = null;
         int var8 = 0;
         RuntimeException stackIn_22_0 = null;
@@ -67,25 +67,25 @@ final class pi extends bf {
         try {
           if (param2 != 1) {
             if (param2 == 2) {
-              var4_int = param0.a((byte) 114);
+              var4_int = param0.readUnsignedByte((byte) 114);
               this.field_q = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_q[var5] = param0.j(17277);
+                this.field_q[var5] = param0.readUnsignedShort(17277);
               }
             } else {
               if (param2 == 3) {
-                var4_int = param0.a((byte) 114);
+                var4_int = param0.readUnsignedByte((byte) 114);
                 this.field_j = new int[var4_int][];
                 this.field_k = new int[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  var6 = param0.j(param1 + 17582);
+                  var6 = param0.readUnsignedShort(param1 + 17582);
                   var7 = ab.a((byte) -65, var6);
                   if (var7 != null) {
                     this.field_k[var5] = var6;
                     array$0 = new int[var7.field_b];
                     this.field_j[var5] = array$0;
                     for (var8 = 0; var8 < var7.field_b; var8++) {
-                      this.field_j[var5][var8] = param0.j(17277);
+                      this.field_j[var5][var8] = param0.readUnsignedShort(17277);
                     }
                   }
                 }
@@ -191,8 +191,8 @@ final class pi extends bf {
                 m.field_h < 330) {
                 mg.field_q = 7;
               } else {
-                if (mg.field_q >= we.field_f.length) {
-                  mg.field_q = we.field_f.length - 1 - 3;
+                if (mg.field_q >= UiWidget.field_f.length) {
+                  mg.field_q = UiWidget.field_f.length - 1 - 3;
                 }
               }
             }
@@ -202,7 +202,7 @@ final class pi extends bf {
             var2Lifetime1 = var7;
             var3 = (ki) (bd.field_b.a((byte) -117));
             while (var3 != null) {
-              var4 = m.field_h - (102 + ck.field_g[var7]);
+              var4 = m.field_h - (102 + DequeCursor.field_g[var7]);
               stackIn_56_0 = ~var4;
               stackIn_56_1 = -1;
               if (stackIn_56_0 <= stackIn_56_1) {
